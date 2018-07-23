@@ -1,0 +1,1554 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "productId": {
+      "type": "string"
+    },
+    "store": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "skuId": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "availabilityDate": {
+              "type": "string"
+            },
+            "products": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "skuId",
+            "storeId",
+            "value",
+            "key",
+            "availabilityDate",
+            "products"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "productId",
+    "store"
+  ]
+}

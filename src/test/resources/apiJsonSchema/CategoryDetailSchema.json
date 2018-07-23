@@ -1,0 +1,3982 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "categories": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "categoryId": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "thumbnail": {
+              "type": "string"
+            },
+            "seoURL": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "subCategories": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                }
+              ]
+            },
+            "metaDescription": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "metaKeyword": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "categoryId",
+            "name",
+            "storeId",
+            "thumbnail",
+            "seoURL",
+            "shortDescription",
+            "subCategories",
+            "metaDescription",
+            "title",
+            "metaKeyword"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "categoryId": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "thumbnail": {
+              "type": "string"
+            },
+            "seoURL": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "subCategories": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                }
+              ]
+            },
+            "metaDescription": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "metaKeyword": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "categoryId",
+            "name",
+            "storeId",
+            "thumbnail",
+            "seoURL",
+            "shortDescription",
+            "subCategories",
+            "metaDescription",
+            "title",
+            "metaKeyword"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "categoryId": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "storeId": {
+              "type": "string"
+            },
+            "thumbnail": {
+              "type": "string"
+            },
+            "seoURL": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "subCategories": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "resourceId": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "shortDescription": {
+                      "type": "string"
+                    },
+                    "parentCatalogGroupID": {
+                      "type": "string"
+                    },
+                    "imageAltDescription": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "uniqueID": {
+                      "type": "string"
+                    },
+                    "storeID": {
+                      "type": "string"
+                    },
+                    "identifier": {
+                      "type": "string"
+                    },
+                    "seoURL": {
+                      "type": "string"
+                    },
+                    "metaData": {
+                      "type": "object",
+                      "properties": {
+                        "value": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
+                      ]
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "metaKeyword": {
+                      "type": "string"
+                    },
+                    "BreadCrumb": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "value"
+                      ]
+                    },
+                    "metaDescription": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "resourceId",
+                    "thumbnail",
+                    "shortDescription",
+                    "parentCatalogGroupID",
+                    "imageAltDescription",
+                    "name",
+                    "uniqueID",
+                    "storeID",
+                    "identifier",
+                    "seoURL",
+                    "metaData",
+                    "title",
+                    "metaKeyword",
+                    "BreadCrumb",
+                    "metaDescription"
+                  ]
+                }
+              ]
+            },
+            "metaDescription": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "metaKeyword": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "categoryId",
+            "name",
+            "storeId",
+            "thumbnail",
+            "seoURL",
+            "shortDescription",
+            "subCategories",
+            "metaDescription",
+            "title",
+            "metaKeyword"
+          ]
+        }
+      ]
+    },
+    "breadcrumb": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "label": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "seoURL": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "label",
+            "seoURL"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "label": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "seoURL": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "label",
+            "seoURL"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "categories",
+    "breadcrumb"
+  ]
+}
