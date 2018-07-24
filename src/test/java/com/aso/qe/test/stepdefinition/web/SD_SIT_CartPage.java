@@ -18,7 +18,7 @@ public class SD_SIT_CartPage extends CommonActionHelper
                 public GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
                 PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), PDP_PO.class);
                 public SIT_CartPageObject SITCommonFunction =   PageFactory.initElements(getDriver(), SIT_CartPageObject.class);
-
+/*
                 @Then("^user click on Add to cart button$")
             	public void user_click_on_Add_to_cart_button() throws Throwable {
             		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
@@ -43,7 +43,7 @@ public class SD_SIT_CartPage extends CommonActionHelper
             		assertTrue(clickOnButton(SITCommonFunction.btnBeginCheckout));
 
             	}
-            	
+            	*/
             	
             	@Then("^user validate the cart icon$")
             	public void user_validate_the_cart_icon() throws Throwable {

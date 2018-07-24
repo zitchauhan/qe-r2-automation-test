@@ -14,7 +14,7 @@ public class SD_SIT_SearchPredictiveResult extends CommonActionHelper {
 	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 	//public ShoppingCartViewPO shoppingCartViewPO =  PageFactory.initElements(driver, ShoppingCartViewPO.class);
 	public SearchProductPO searchProductPO =  PageFactory.initElements(driver, SearchProductPO.class);
-
+/*
 	@Then("^User should be able to view Search Box on Homepage$")
 	public void User_should_be_able_to_see_Search_Box_on_Homepage() throws Throwable {
 		globalElementHeader.validatingTxtSearchBox();
@@ -73,5 +73,5 @@ public class SD_SIT_SearchPredictiveResult extends CommonActionHelper {
 		globalElementHeader.clickClearAllButton();
 	}
 		
-					
+		*/			
 }

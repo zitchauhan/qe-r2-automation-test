@@ -14,7 +14,7 @@ public class SD_SIT_SearchNullResult extends CommonActionHelper {
 	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 	//public ShoppingCartViewPO shoppingCartViewPO =  PageFactory.initElements(driver, ShoppingCartViewPO.class);
 	public SearchProductPO searchProductPO =  PageFactory.initElements(driver, SearchProductPO.class);
-
+/*
 	@Then("^User should be able to see Search Box on Homepage$")
 	public void User_should_be_able_to_see_Search_Box_on_Homepage() throws Throwable {
 		globalElementHeader.validatingTxtSearchBox();
@@ -49,5 +49,6 @@ public class SD_SIT_SearchNullResult extends CommonActionHelper {
 	public void User_verify_the_product_name() throws Throwable{
 		searchProductPO.verifyProductName();
 	}
+	*/
 	
 }

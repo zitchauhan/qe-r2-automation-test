@@ -13,14 +13,14 @@ public class SD_SIT_FooterPage extends CommonActionHelper{
 	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 	//public ShoppingCartViewPO shoppingCartViewPO =  PageFactory.initElements(driver, ShoppingCartViewPO.class);
 
-
+/*
 	@Then("^User will click on expand button$")
 	public void user_will_click_on_expand_button() throws Throwable {
 		scrollPageToWebElement(globalElementHeader.expandall_Academy);
 		globalElementHeader.clickexpandall_academy();
 
 
-	}
+	}*/
 
 	@Then("^User will verify the presence of Our history in Footer$")
 	public void user_will_verify_the_presence_of_Our_history() throws Throwable {

@@ -17,7 +17,7 @@ public class SD_SIT_PDPPage extends CommonActionHelper {
 	PDP_PO pdp_po = PageFactory.initElements(getDriver(), PDP_PO.class);
 	public GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 	//public ShoppingCartViewPO shoppingCartViewPO =  PageFactory.initElements(driver, ShoppingCartViewPO.class);
-	
+	/*
 	@And("^user should be able to see PDP mention in the current url$")
 	public void user_should_be_able_to_see_PDP_mention_in_the_current_url() throws Throwable{
 
@@ -76,7 +76,7 @@ public class SD_SIT_PDPPage extends CommonActionHelper {
 		assertTrue(isDisplayed(pdp_po.txtDesiredQtyValue_1));
 
 	}
-	
+	*/
 	@Then("^user should verify the Product is not for sold online$")
 	public void user_should_verify_the_Product_is_not_for_sold_online() throws Throwable {
 		assertTrue(isDisplayed(pdp_po.txtNotsoldonline));

@@ -18,7 +18,7 @@ import cucumber.api.java.en.When;
 public class SD_SIT_SearchFilter extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(SD_SIT_SearchFilter.class);
 	SearchProductPO searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);
-
+/*
 	@When("^User enters in Required_Product with \"(.*?)\" and click on Go button$")
 	public void user_enters_in_Required_Product_with_and_click_on_Go_button(String arg1) throws Throwable {
 		logger.debug("Search Text ::"+arg1);
@@ -82,7 +82,7 @@ public class SD_SIT_SearchFilter extends CommonActionHelper{
 		String blackColourProductCount = getText(searchProductPO.blackColourProductCount);
 		logger.debug("blackColourProductCount::"+blackColourProductCount);
 		//searchProductPO.checkLoadedProductsPrices();
-	}
+	}*/
 
 	@Then("^Verify the selected filtered products \"(.*?)\"\"(.*?)\"are displayed in product grid$")
 	public void verify_the_selected_filtered_products_are_displayed_in_product_grid(String price, String color) throws Throwable {
@@ -99,7 +99,7 @@ public class SD_SIT_SearchFilter extends CommonActionHelper{
 		}else{
 			searchProductPO.checkedselectedfacet_containerClearAll(searchProductPO.selectedfacet_containerList);	
 		}
-		
+	}
 		
 		/*searchProductPO.clickAllPlusFilterOptions();
 		
@@ -112,7 +112,7 @@ public class SD_SIT_SearchFilter extends CommonActionHelper{
 		boolean colorflag = clickOnButton(getfindElementByXPath("//span[contains(text(),'"+color+"')]"));
 		logger.debug("priceflag:"+priceflag+"  brandNameflag:"+brandNameflag+"  colorflag:"+colorflag);
 		assertTrue((priceflag&&brandNameflag&&colorflag));*/
-		
+	/*	
 	}
 
 	@Then("^User should be able to unselect the same checkbox for all the filters$")
@@ -127,10 +127,10 @@ public class SD_SIT_SearchFilter extends CommonActionHelper{
 		/*scrollToElement(searchProductPO.genderBtn);
 		clickOnButton(searchProductPO.genderBtn);
 		clickOnButton(searchProductPO.genderFilterAdults);*/
-	}
+//	}
 	
 	//#######################################################################################################################################
-	
+	/*
 	@When("^User should be able to see the Number of items in each price range checkbox$")
 	public void user_should_be_able_to_see_the_Number_of_items_in_each_price_range_checkbox() throws Throwable {
 		String filterUnder10ProductCount = getText(searchProductPO.priceCheckBoxFrom10to20Count);
@@ -382,9 +382,9 @@ public class SD_SIT_SearchFilter extends CommonActionHelper{
 	}
 	
 	
-	
+	*/
 
 	
-}
+	}
 
 

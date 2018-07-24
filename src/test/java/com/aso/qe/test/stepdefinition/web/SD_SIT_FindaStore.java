@@ -21,7 +21,7 @@ public class SD_SIT_FindaStore extends CommonActionHelper{
 		assertTrue(clickOnButton(globalElementHeader.btnFindAStoreBurgerMenu));
 
 	}*/
-	
+	/*
 	@Then("^User should be able to click on Find Store$")
 	public void User_should_be_able_to_see_Find_Store() throws Throwable {
 		globalElementHeader.findAndClickStoreinGH();
@@ -64,7 +64,7 @@ public class SD_SIT_FindaStore extends CommonActionHelper{
 		globalElementHeader.validateStoreNameExist(selectedStoreName);
 		
 	}
-	
+	*/
 	
 		
 

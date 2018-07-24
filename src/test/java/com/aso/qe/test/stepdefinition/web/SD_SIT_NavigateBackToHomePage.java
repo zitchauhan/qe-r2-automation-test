@@ -17,7 +17,7 @@ public class SD_SIT_NavigateBackToHomePage extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(SD_SIT_NavigateBackToHomePage.class);
 	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 
-
+/*
 
 	@Then("^User is able to see the ASO_Logo$")
 	public void User_is_able_to_see_the_ASO_logo()  {
@@ -59,6 +59,6 @@ public class SD_SIT_NavigateBackToHomePage extends CommonActionHelper{
 	@Then("^User should be navigated to Home_Page$")
 	public void User_should_be_navigated_to_Home_Page() throws Throwable{
 		assertEquals("https://uat6www.academy.com", getCurrentPageURL());
-	}
+	}*/
 
 }

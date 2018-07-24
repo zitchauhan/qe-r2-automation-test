@@ -16,7 +16,7 @@ public class SD_SIT_Navigatingto_L1_L2_L3Page extends CommonActionHelper{
 	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 	PLP_PO plp_PO = PageFactory.initElements(getDriver(), PLP_PO.class);
 	
-	
+	/*
 	
 	@When("^user clicks on one of the category and navigates to LOne page$")
     public void user_clicks_on_one_of_the_category_and_navigates_to_LOne_page() throws Throwable {
@@ -55,7 +55,7 @@ public class SD_SIT_Navigatingto_L1_L2_L3Page extends CommonActionHelper{
 		}
 
 
-	}
+	}*/
 
 
 }

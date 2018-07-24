@@ -47,7 +47,7 @@ public class SD_SIT_HomePage extends CommonActionHelper {
 		 HomePagePo.clickOnLink(SIT_HomePagePageObject.BestSellerproduct);
 	 }*/
      
-     
+   /*  
      @Then("^user is able to scroll till Featured categroy component$")
  	public void user_is_able_to_scroll_till_Featured_categroy_component() throws Throwable {
  		scrollPageToWebElement(HomePagePo.secFeaturedCategory);
@@ -69,7 +69,7 @@ public class SD_SIT_HomePage extends CommonActionHelper {
  		String changedURL = getCurrentPageURL();
  		assertNotSame(currentURL, changedURL);
 
- 	}
+ 	}*/
      
      @Then("^Open browser$")
      public void Open_browser() throws Throwable 
