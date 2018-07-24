@@ -42,8 +42,8 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//a[text()=\"Father's Day Gifts\"]") public WebElement lnkMensClothing;
 	@FindBy(xpath="//span[text()=\"Father's Day Gifts\"]") public WebElement lnkMensClothingnotclickable;
 
-	@FindBy(xpath = "//a[@data-auid='signInCta-m']") public WebElement btnSignIn_mobile;
-	
+
+
 	@FindBy(xpath="//span[@class='facet-trigger']")public WebElement btnFilterFacet;
 
 	@FindBy(xpath="//a[@data-auid='findAStore_m']")public WebElement btnFindAStoreBurgerMenu;
@@ -61,7 +61,6 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 
 	@FindBy(id = "newUserSubmit")
 	public WebElement btnSignUp;
-	
 	@FindBy(xpath="//div[contains(@class,'mobile-search')]") public WebElement ovlySearchTextBarMobile;
 	@FindBy(xpath="//a[@data-auid='navigateTo-SHOP_m']") public WebElement txtToNavigateClothingBurgerMenuMobile;
 	@FindBy(xpath="//a[@data-auid='navigateTo-CLOTHING_m']") public WebElement txtToNavigateMensBurgerMenuMobile;
@@ -201,11 +200,11 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//span[text()=\"Magellan Outdoors Men's  Eagle Pass Deluxe  Long Sleeve Shirt\"]") public WebElement productnotclickable;;
 	//@FindBy(xpath="//span[text()=\"Magellan Outdoors Men's  Eagle Pass Deluxe  Long Sleeve Shirt\"]") public WebElement txtproductselected;
 	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[a and span[not(contains(@class,'line-separator'))]]") public WebElement txtproductselected;
-	@FindBy(xpath="(//input[@id='nav-search-form'])[2]") public WebElement txtSearchBox_mobile;
+	@FindBy(xpath="//button[@data-auid='submitSearchButton_m']") public WebElement txtSearchBox_mobile;
 
 	@FindBy(xpath=" //a[@data-auid='FOOTER_LINK_0_Privacy Policy']") public WebElement lnkprivatepolicy;
 	@FindBy(xpath="//a[@data-auid='FOOTER_LINK_1_Terms & Conditions']") public WebElement lnktermsandconditions;
-	@FindBy(xpath="//a[contains(@data-auid,'FOOTER_LINK_2_California Proposition 65 California Transparency in Supply Chains')]") public WebElement lnklegalpolicy;
+	@FindBy(xpath="//a[contains(@data-auid,'FOOTER_LINK_2_California Proposition 65')]") public WebElement lnklegalpolicy;
 
 	@FindBy(xpath="//button[text()='SERVICES']") public WebElement expandall_Academy_services;	
 	@FindBy(xpath="//button[text()='NEED HELP?']") public WebElement expandall_Academy_needhelp;
@@ -237,7 +236,7 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(linkText="Academy") public WebElement lnkbreadcrumbtext;
 	@FindBy(xpath="//div[@class='breadCrumbComponent offset-sm-1 px-4']") public WebElement lnkbreadcrumb;
 	@FindBy(xpath="//a[text()='< Prev']") public WebElement lnkL2Pagination;
-	@FindBy(xpath="//a[text()='Next >']") public WebElement lnkL3Pagination;
+	@FindBy(xpath="//a[text()='Next >']") public WebElement lnkNextPagePagination;
 	@FindBy(xpath="//a[text()='2']") public WebElement lnkPagination2;
 	@FindBy(xpath="//a[text()='3']") public WebElement lnkPagination3;
 	@FindBy(xpath="//button[@data-auid='submitSearchButton']") public WebElement btnSearch_Desktop;
@@ -293,11 +292,15 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//ol[@class='storeLocatorBreadcrumb z-list-inline']/li[5]//span[@itemprop='name']") public WebElement storeNameBreadcrumb; 
 	//***********************************************************************************************************************************************
 
-
+	@FindBy(xpath="//div[@class='row']//following-sibling::div[@class='my-3']") public WebElement lnkL2PaginationMobile;
 	@FindBy(xpath="//button[@data-auid='myAccountCta']") public WebElement btnMyAccount;
 	@FindBy(xpath="//a[@data-auid='Sign Out']") public WebElement btnSignOut;
 	
 	@FindBy(xpath="//*[@area-role='breadcrumb']") public WebElement lnkBreadcrumbLast;
+	
+	@FindBy(xpath = "//*[@data-auid='signInCta-m']") public WebElement btnSignIn_mobile;
+	@FindBy(xpath = "//*[@data-auid='Sign Out-m']") public WebElement btnSignOut_M;
+	@FindBy(xpath="//div[@data-auid='facetdrawer-level1Category-SHOP_m']//i") public WebElement btnSHOPBurgerMenuMinusIcon;
 
 	public void accountSummaryDeatils(String exceptedAccountSummaryTxt) throws Exception {
 		String actualAccountSummaryTxt = getText(accountSummaryTxt);
@@ -1325,7 +1328,6 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 			logger.debug("Find A store link is not displayed ");	
 
 	}
-	
 	public void findAndClickStoreinMobile() throws InterruptedException {
 		if(isDisplayed(txtFindAStoreMobile)) {	
 			scrollPageToWebElement(txtFindAStoreMobile);
@@ -1621,15 +1623,21 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	}
 
 	public void signOut() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)) {
+			scrollPageToWebElement(btnSignIn_mobile);
+			Thread.sleep(1000);
+			assertTrue(clickOnButton(btnSignOut_M));
+			
+		}else {
 		assertTrue(clickOnButton(btnMyAccount));
 		Thread.sleep(1000);
 		assertTrue(clickOnButton(btnSignOut));
 		Thread.sleep(1000);
 		signinPo.verifySigninpage();
-		
+		}
 	}	
+
 	public void clickSignupButton() throws Exception {
 		assertTrue(clickOnButton(btnSignUp));
 	}
-
 }

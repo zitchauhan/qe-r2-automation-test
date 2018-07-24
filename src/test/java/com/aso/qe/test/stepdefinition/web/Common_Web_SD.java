@@ -1,15 +1,12 @@
 package com.aso.qe.test.stepdefinition.web;
 import static org.junit.Assert.assertTrue;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.FindStorePO;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.SearchProductPO;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
@@ -43,7 +40,7 @@ public class Common_Web_SD extends CommonActionHelper{
 //		}else{
 //			getDriver().manage().window().setSize(new Dimension(1400,1500));	
 //		}
-//
+
 
 		if(url.equalsIgnoreCase("https://uat6www.academy.com/?debug=aso")) {
 			openBaseURL(url);
