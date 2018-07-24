@@ -1,13 +1,12 @@
 Feature: To Verify the Shop Collection to Home Page User Journeys
 
-  @SIT_User @KER-7055
+  @SIT_UserJourney @KER-7055 @KER-6809
   Scenario: Verify User Journey form Shop Collection to CTA to Home Page(through Brand Logo)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
     And user should be able to enter the signin details
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then user click on CTA in Shop Collection
-    And user should be able to see PDP mention in the current url
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
@@ -15,11 +14,11 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should able to see shipping Address page
+    #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
-    Then user should enter the shipping Address details
+    #Then user should enter the shipping Address details
     Then user click on continue to shipping method button
-    Then user click on continue checkout button
+    #Then user click on continue checkout button
     Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details
@@ -40,15 +39,14 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-  #############################################################################################
-  @SIT_User @KER-7057
+  
+  @SIT_UserJourney @KER-7057 @KER-6809
   Scenario: Verify User Journey form Shop Collection to CTA to Footer
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
     And user should be able to enter the signin details
     Then User clicks on ASO Logo and should be navigated to Home Page
-    Then user click on CTA in Shop Collection
-    And user should be able to see PDP mention in the current url
+   Then user click on CTA in Shop Collection
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
@@ -56,11 +54,11 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should able to see shipping Address page
+    #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
-    Then user should enter the shipping Address details
+    #Then user should enter the shipping Address details
     Then user click on continue to shipping method button
-    Then user click on continue checkout button
+    #Then user click on continue checkout button
     Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details
@@ -93,15 +91,13 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User will verify the presence of chat now in Footer
     Then User closes the web application
 
-  ##  ################################################################################################
-  @SIT_User @KER-7058
+  @SIT_UserJourney @KER-7058 @KER-6809
   Scenario Outline: : Verify User Journey form Shop Collection to CTA  to MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
     And user should be able to enter the signin details
     Then User clicks on ASO Logo and should be navigated to Home Page
-    Then user click on CTA in Shop Collection
-    And user should be able to see PDP mention in the current url
+   Then user click on CTA in Shop Collection
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
@@ -109,11 +105,11 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should able to see shipping Address page
+    #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
-    Then user should enter the shipping Address details
+    #Then user should enter the shipping Address details
     Then user click on continue to shipping method button
-    Then user click on continue checkout button
+    #Then user click on continue checkout button
     Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details
@@ -144,15 +140,14 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    | The Crosslands | Florida |
       | FL 32904    |                |         |
 
-  ##  ###############################################################################################
-  @SIT_User @KER-7059
+  
+  @SIT_UserJourney @KER-7059 @KER-6809
   Scenario Outline: : Verify User Journey form Shop Collection to CTA to HomePage(through Brand Logo)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
     And user should be able to enter the signin details
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then user click on CTA in Shop Collection
-    And user should be able to see PDP mention in the current url
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
@@ -160,18 +155,11 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should be able to click on Begin Checkout button
-    Then user should able to see shipping Address page
-    Then user should be able to see Image of the product
-    And user should be able to see the name of the product in title
-    Then user should see different attribute and size of the product
-    Then user click on continue to shipping method button
-    Then user click on continue checkout button
-    Then user should able to see shipping Address page
+    #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
-    Then user should enter the shipping Address details
+    #Then user should enter the shipping Address details
     Then user click on continue to shipping method button
-    Then user click on continue checkout button
+    #Then user click on continue checkout button
     Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details
@@ -205,15 +193,14 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    | The Crosslands | Florida |
       | FL 32904    |                |         |
 
-  ##  ########################################################################################################
-  @SIT_User @KER-7060
+  
+  @SIT_UserJourney @KER-7060 @KER-6809
   Scenario Outline: Verify User Journey form Shop Collection to CTA to Academy Credit
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
     And user should be able to enter the signin details
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then user click on CTA in Shop Collection
-    And user should be able to see PDP mention in the current url
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
@@ -221,17 +208,11 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should able to see shipping Address page
-    Then user should be able to see Image of the product
-    And user should be able to see the name of the product in title
-    Then user should see different attribute and size of the product
-    Then user click on continue to shipping method button
-    Then user click on continue checkout button
-    Then user should able to see shipping Address page
+    #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
-    Then user should enter the shipping Address details
+    #Then user should enter the shipping Address details
     Then user click on continue to shipping method button
-    Then user click on continue checkout button
+    #Then user click on continue checkout button
     Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details
@@ -262,15 +243,13 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    | The Crosslands | Florida |
       | FL 32904    |                |         |
 
-  # ##################################################################################################
-  @SIT_User @KER-7061
+    @SIT_UserJourney @KER-7061 @KER-6809
   Scenario Outline: Verify User Journey form Shop Collection to CTA to Header
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
     And user should be able to enter the signin details
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then user click on CTA in Shop Collection
-    And user should be able to see PDP mention in the current url
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
@@ -278,11 +257,11 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should able to see shipping Address page
+    #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
-    Then user should enter the shipping Address details
+    #Then user should enter the shipping Address details
     Then user click on continue to shipping method button
-    Then user click on continue checkout button
+    #Then user click on continue checkout button
     Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details
@@ -321,8 +300,9 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    | The Crosslands | Florida |
       | FL 32904    |                |         |
 
-  ## ####################################################################################################
-  @SIT_User @KER-7062
+
+
+    @SIT_UserJourney @KER-7062 @KER-6809
   Scenario: Verify User Journey form Shop Collection to ProductCard to Home Page(through Brand Logo)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -333,15 +313,15 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User is navigated to pdp page
     #Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
-    Then user should see different attribute and size of the product
+    #Then user should see different attribute and size of the product
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should able to see shipping Address page
+    #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
-    Then user should enter the shipping Address details
+    #Then user should enter the shipping Address details
     Then user click on continue to shipping method button
-    Then user click on continue checkout button
+    #Then user click on continue checkout button
     Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details
@@ -362,27 +342,26 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-  ## #####################################################################################################
-  @SIT_User @KER-7063
+    @SIT_UserJourney @KER-7063 @KER-6809
   Scenario: Verify User Journey form Shop Collection to ProductCard to Footer
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
     And user should be able to enter the signin details
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then user click on Product Card in Shop Collection
-    And user should be able to see PDP mention in the current url
+    #And user should be able to see PDP mention in the current url
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
-    Then user should see different attribute and size of the product
+    #Then user should see different attribute and size of the product
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should able to see shipping Address page
+     #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
-    Then user should enter the shipping Address details
+    #Then user should enter the shipping Address details
     Then user click on continue to shipping method button
-    Then user click on continue checkout button
+    #Then user click on continue checkout button
     Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details
@@ -415,25 +394,25 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User will verify the presence of chat now in Footer
     Then User closes the web application
 
-  @SIT_User @KER-7064
+  @SIT_UserJourney @KER-7064 @KER-6809
   Scenario Outline: : Verify User Journey form Shop Collection to ProductCard to FindaStore to MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
     And user should be able to enter the signin details
     Then user click on Product Card in Shop Collection
-    And user should be able to see PDP mention in the current url
+    #And user should be able to see PDP mention in the current url
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
-    Then user should see different attribute and size of the product
+    #Then user should see different attribute and size of the product
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should able to see shipping Address page
+     #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
-    Then user should enter the shipping Address details
+    #Then user should enter the shipping Address details
     Then user click on continue to shipping method button
-    Then user click on continue checkout button
+    #Then user click on continue checkout button
     Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details
@@ -464,27 +443,26 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    | The Crosslands | Florida |
       | FL 32904    |                |         |
 
-  ## ##############################################################################################################
-  @SIT_User @KER-7065
+    @SIT_UserJourney @KER-7065 @KER-6809
   Scenario Outline: Verify User Journey form Shop Collection to ProductCard to Find a Store to Home Page(through Brand Logo)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
     And user should be able to enter the signin details
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then user click on Product Card in Shop Collection
-    And user should be able to see PDP mention in the current url
+    #And user should be able to see PDP mention in the current url
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
-    Then user should see different attribute and size of the product
+    #Then user should see different attribute and size of the product
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should able to see shipping Address page
+    #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
-    Then user should enter the shipping Address details
+    #Then user should enter the shipping Address details
     Then user click on continue to shipping method button
-    Then user click on continue checkout button
+    #Then user click on continue checkout button
     Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details
@@ -518,27 +496,26 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    | The Crosslands | Florida |
       | FL 32904    |                |         |
 
-  ## #############################################################################################################
-  @SIT_User @KER-7066
+    @SIT_UserJourney @KER-7066 @KER-6809
   Scenario Outline: Verify User Journey form Shop Collection to ProductCard to Academy Credit
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
     And user should be able to enter the signin details
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then user click on Product Card in Shop Collection
-    And user should be able to see PDP mention in the current url
+    #And user should be able to see PDP mention in the current url
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
-    Then user should see different attribute and size of the product
+    #Then user should see different attribute and size of the product
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should able to see shipping Address page
+     #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
-    Then user should enter the shipping Address details
+    #Then user should enter the shipping Address details
     Then user click on continue to shipping method button
-    Then user click on continue checkout button
+    #Then user click on continue checkout button
     Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details
@@ -569,26 +546,26 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    | The Crosslands | Florida |
       | FL 32904    |                |         |
 
-  ## ######################################################################################################################
-  @SIT_User @KER-7067
+  
+  @SIT_UserJourney @KER-7067 @KER-6809
   Scenario Outline: Verify User Journey form Shop Collection to ProductCard to Header
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
     And user should be able to enter the signin details
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then user click on Product Card in Shop Collection
-    Then User is navigated to pdp page
+    #Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
-    Then user should see different attribute and size of the product
+    #Then user should see different attribute and size of the product
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should able to see shipping Address page
+     #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
-    Then user should enter the shipping Address details
+    #Then user should enter the shipping Address details
     Then user click on continue to shipping method button
-    Then user click on continue checkout button
+    #Then user click on continue checkout button
     Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details

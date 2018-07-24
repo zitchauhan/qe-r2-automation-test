@@ -1,9 +1,10 @@
 Feature: To Verify user is be able to filter the products based on Price Ranges
 
-  @SIT_User @KER-7079
+  @SIT_UserJourney @KER-7078 @KER-6809
   Scenario Outline: Verify user is able to select/unselect one or multiple filter by values from Home Page search
     Given user launches the browser and navigates to "ASO_HOME" page
     When User enters in Required_Product with "<SearchTerm>" and click on Go button
+    Then user should verify the Grid view
     And User expands PRICE Filter Option
     And user select the "<price>" in filter
     And User expands COLOR Filter Option
@@ -16,21 +17,9 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | SearchTerm | price        | color_name |
       | Nike Shoe  | $10 - $19.99 | Black      |
 
-  @SIT_User @KER-7079
-  Scenario Outline: Verify user is able to expand/collapse filter options in Search Page
-    Given user launches the browser and navigates to "ASO_HOME" page
-    When User enters in Required_Product with "<SearchTerm>" and click on Go button
-    And User expands all Filter Options
-    Then User should be able to see all Filter Options as expanded
-    And User collapses all Filter Options
-    Then User should be able to see all Filter Options as collapsed
-    Then User closes the web application
+ 
 
-    Examples: 
-      | SearchTerm |
-      | Nike Shoe  |
-
-  @SIT_User @KER-7079
+  @SIT_UserJourney @KER-7079 @KER-6809
   Scenario Outline: Verify As a User I should be able to select/deselect multiple price values in Search Page
     Given user launches the browser and navigates to "ASO_HOME" page
     When User enters in Required_Product with "<SearchTerm>" and click on Go button
@@ -45,37 +34,8 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | SearchTerm |
       | Nike Shoe  |
 
-  @SIT_User @KER-7079
-  Scenario Outline: Verify user is able to filter by price for search in Search Page
-    Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box
-    And User expands PRICE Filter Option
-    And user select the "<price>" in filter
-    Then Verify the selected price range product is "<price>" displayed in product grid
-    And user deselect the "<price>" filter
-    Then Verify the list of product is dispalyed are same as before filter
-    Then User closes the web application
 
-    Examples: 
-      | SearchTerm |  | price          |
-      | Nike Shoe  |  | $100 - $199.99 |
-
-  @SIT_User @KER-7079
-  Scenario Outline: Verify user is able to filter by price for search in Search Page
-    Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box
-    When User enters in Required_Product with "<search_Value>" and click on Go button
-    And User expands PRICE Filter Option
-    And user select the "<price>" in filter
-    Then Verify the selected price range product is "<price>" displayed in product grid
-    Then User closes the web application
-
-    Examples: 
-      | SearchTerm |  | search_Value | price          |
-      | Nike Shoe  |  | Nike Shoe    | $100 - $199.99 |
-
-  # ######################################################################################################################################################################
-  @SIT_User @KER-7081
+    @SIT_UserJourney @KER-7081 @KER-6809
   Scenario: Verify the user should be shown a Null results page when the search term returns no matching relevant results
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
@@ -84,55 +44,19 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User is navigated to null page
     Then User closes the web application
 
-  # #######################################################################################################################
-  @SIT_User @KER-7082
+    @SIT_UserJourney @KER-7082 @KER-6809
   Scenario: Verify the user enters two characters into the search box and see predictive suggestions for matching keyword
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
     Then User verifies the predictive suggestions for matching keyword
-    Then User closes the web application
-
-  @SIT_User @KER-7082
-  Scenario: Verify the user enters two characters into the search box and see predictive suggestions for matching categories
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then User should be able to see Search Box on Homepage
-    And User verifies the predictive suggestions for matching category
-    Then User closes the web application
-
-  @SIT_User @KER-7082
-  Scenario: Verify the user enters two characters into the search box and see predictive suggestions for matching brand
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then User should be able to see Search Box on Homepage
     And User verifies the predictive suggestions for matching brand
-    Then User closes the web application
-
-  @SIT_User @KER-7082
-  Scenario: Verify the user should not see duplicates within the predictive suggestions.
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then User should be able to see Search Box on Homepage
     Then User should not see duplicates within predictive suggestions
     Then User closes the web application
 
-  @SIT_User @KER-7082
-  Scenario: Verify the user can clear all the search
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then User should be able to view Search Box on Homepage
-    Then User enter the color for search
-    And User click on the search icon
-    Then User is navigated to pdp page
-    Then User closes the web application
+  
 
-  @SIT_User @KER-7082
-  Scenario: Verify the user should be able to click on a search result and navigate to PDP
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then User should be able to see Search Box on Homepage
-    Then User enter the search data
-    And User click on search icon
-    Then User is navigated to pdp page
-    Then User closes the web application
 
-  #  ########################################################################################################
-  @SIT_User @KER-7083
+    @SIT_UserJourney @KER-7083 @KER-6809
   Scenario Outline: Verify user is able to search for Product not sold
     Given user launches the browser and navigates to "ASO_HOME" page
     When User enters in Required_Product with "<SearchTerm>" and click on Go button
@@ -146,8 +70,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | SearchTerm                              |
       | GLOCK G17 Gen5 9mm Semiautomatic Pistol |
 
-  #  ##########################################################################################################
-  @SIT_User @KER-7084
+    @SIT_UserJourney @KER-7084 @KER-6809
   Scenario: Verify User Journey form Cart to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user validate the cart icon
@@ -159,8 +82,6 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then user clicks on one of the subcategory and navigates to LTwo page
     And user is able to see the product category name in section title.
     Then user clicks on one of the product category and navigates to LThree page
-    And user is able to see the product category name in section title.
-    And user should be able to see PDP mention in the current url
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
@@ -168,7 +89,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should be able to click on Begin Checkout button
+    #Then user should be able to click on Begin Checkout button
     Then user should verify the Guest checkout Page
     Then user click on Checkout as Guest button
     Then user should able to see shipping Address page
@@ -194,16 +115,16 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then User closes the web application
 
-  #   ####################################################################################################################
-  @SIT_User @KER-7085
+     
+  @SIT_UserJourney @KER-7085 @KER-6809
   Scenario: Verify the SignIn Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
     And user should be able to enter the signin details
     Then User closes the web application
 
-  #######################################################################################################################
-  @SIT_User @KER-7086
+  
+  @SIT_UserJourney @KER-7086 @KER-6809
   Scenario: Verify the SignUp Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -211,8 +132,8 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user should able to enter the Signup details
     Then User closes the web application
 
-  #####################################################################################################################
-  @SIT_User @KER-7087
+  
+  @SIT_UserJourney @KER-7087 @KER-6809
   Scenario: Verify the SignUp to WishList Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -224,8 +145,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then user should delete the created WishList
     Then User closes the web application
 
-  ##   #######################################################################################################################
-  @SIT_User @KER-7088
+    @SIT_UserJourney @KER-7088 @KER-6809
   Scenario: Verify the Signup to Account Summary page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -234,8 +154,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user should verify the Account Summary page
     Then User closes the web application
 
-  #   ################################################################################################################
-  @SIT_User @KER-7089
+    @SIT_UserJourney @KER-7089 @KER-6809
   Scenario: Verify the Signup to Address Book page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -251,8 +170,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user verify the delete address page and click on yes button
     Then User closes the web application
 
-  #   ################################################################################################################
-  @SIT_User @KER-7090
+    @SIT_UserJourney @KER-7090 @KER-6809
   Scenario: Verify User Journey form Shop to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user clicks on one of the category and navigates to LOne page
@@ -260,8 +178,6 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then user clicks on one of the subcategory and navigates to LTwo page
     And user is able to see the product category name in section title.
     Then user clicks on one of the product category and navigates to LThree page
-    And user is able to see the product category name in section title.
-    And user should be able to see PDP mention in the current url
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
@@ -269,11 +185,8 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should be able to click on Begin Checkout button
+    #Then user should be able to click on Begin Checkout button
     Then user should able to see shipping Address page
-    Then user should be able to see Image of the product
-    And user should be able to see the name of the product in title
-    Then user should see different attribute and size of the product
     Then user click on continue to shipping method button
     Then user click on continue checkout button
     Then user should able to see shipping Address page
@@ -301,14 +214,12 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-  #    #########################################################################################################
-  @SIT_User @KER-7094
+    @SIT_UserJourney @KER-7094 @KER-6809
   Scenario: Verify User Journey form Deals to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User will verify the presence of deals category
     Then User will click on Deals Link
     Then User will click on Daily Deals and click on product
-    And user should be able to see PDP mention in the current url
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
@@ -316,7 +227,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    Then user should be able to click on Begin Checkout button
+    #Then user should be able to click on Begin Checkout button
     Then user should verify the Guest checkout Page
     Then user click on Checkout as Guest button
     Then user should able to see shipping Address page
@@ -344,14 +255,12 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-  #  #####################################################################################################
-  @SIT_User @KER-7095
+    @SIT_UserJourney @KER-7095 @KER-6809
   Scenario: Verify User Journey form Deals to PDP Page Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User will verify the presence of deals category
     Then User will click on Deals Link
     Then User will click on Daily Deals and click on product
-    And user should be able to see PDP mention in the current url
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
@@ -368,8 +277,6 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then user clicks on one of the subcategory and navigates to LTwo page
     And user is able to see the product category name in section title.
     Then user clicks on one of the product category and navigates to LThree page
-    And user is able to see the product category name in section title.
-    And user should be able to see PDP mention in the current url
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title

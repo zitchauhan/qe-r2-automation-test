@@ -11,7 +11,7 @@ public class FindStorePO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(FindStorePO.class);
 
 	// @FindBy(xpath="//h2[@id='slModalTitle']//ancestor::div[@class='modal-content']")
-	@FindBy(xpath = "//h4[contains(text(), 'Find a Store')]")
+	@FindBy(xpath = "//*[contains(text(),'Find a Store')]")
 	public WebElement ovly_FindStore;
 
 	@FindBy(xpath = "//input[@placeholder='Enter Zip Code or City, State']")

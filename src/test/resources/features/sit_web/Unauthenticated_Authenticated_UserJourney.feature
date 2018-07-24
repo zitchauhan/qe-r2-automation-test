@@ -1,6 +1,6 @@
 Feature: To Verify Unauthenticated/Authenticated UserJourney
 
-  @SIT_User @KER-7068
+  @SIT_UserJourney @KER-7068 @KER-6809
   Scenario: Verify Unauthenticated User Journey form Home Page to Header
     Given user launches the browser and navigates to "ASO_HOME" page
     When user clicks on one of the category and navigates to LOne page
@@ -21,7 +21,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then user should be able verify the order summary details
     Then user should enter the shipping Address details
     Then user click on continue to shipping method button
-    #Then user click on continue checkout button
+    Then user click on continue checkout button
     Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details
@@ -47,8 +47,8 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User will verify the presence of deals category in Header
     Then User closes the web application
 
-  #############################################################################################
-  @SIT_User @KER-7069
+ 
+  @SIT_UserJourney @KER-7069 @KER-6809
   Scenario: Verify Unauthenticated User Journey form Home Page to Footer
     Given user launches the browser and navigates to "ASO_HOME" page
     When user clicks on one of the category and navigates to LOne page
@@ -57,10 +57,10 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     And user is able to see the product category name in section title.
     Then user clicks on one of the product category and navigates to LThree page
     Then User is navigated to pdp page
-    #Then user should be able to see Image of the product
+    Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
-    #Then user should see different attribute and size of the product
-    #And  user should be able to see Add to cart button and quantity section
+    Then user should see different attribute and size of the product
+    And  user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
     Then user should verify the Guest checkout Page
@@ -102,8 +102,8 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User will verify the presence of chat now in Footer
     Then User closes the web application
 
-  #  ##########################################################################################################
-  @SIT_User @KER-7070
+   
+  @SIT_UserJourney @KER-7070 @KER-6809
   Scenario: Verify Unauthenticated User Journey form Home Page to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     When user clicks on one of the category and navigates to LOne page
@@ -118,7 +118,6 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    #Then user should be able to click on Begin Checkout button
     Then user should verify the Guest checkout Page
     Then user click on Checkout as Guest button
     Then user should able to see shipping Address page
@@ -144,11 +143,10 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then User closes the web application
 
-  #   ####################################################################################################
-  @SIT_User @KER-7097
+     
+  @SIT_UserJourney @KER-7097 @KER-6809
   Scenario: Verify Unauthenticated User Journey form Home Page to Wishlist to Header
     Given user launches the browser and navigates to "ASO_HOME" page
-    #When user click on Best Sellers product
     Then user click on CTA in Shop Collection
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
@@ -168,11 +166,10 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User will verify the presence of deals category in Header
     Then User closes the web application
 
-  #  #############################################################################################
-  @SIT @KER-7072
+  
+  @SIT_UserJourney @KER-7072 @KER-6809
   Scenario: Verify Unauthenticated User Journey form Home Page to Wishlist to Footer
     Given user launches the browser and navigates to "ASO_HOME" page
-    #When user click on Best Sellers product
     Then user click on CTA in Shop Collection
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
@@ -199,8 +196,8 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User will verify the presence of chat now in Footer
     Then User closes the web application
 
-  #  ######################################################################################
-  @SIT_User @KER-7073
+   
+  @SIT_UserJourney @KER-7073 @KER-6809
   Scenario: Verify Unauthenticated User Journey form Home Page to Wishlist to HomePage
     Given user launches the browser and navigates to "ASO_HOME" page
     #When user click on Best Sellers product
@@ -217,8 +214,8 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then User closes the web application
 
-  #  #######################################################################################
-  @SIT_User @KER-7074
+ 
+  @SIT_UserJourney @KER-7074 @KER-6809
   Scenario: Verify Authenticated User Journey form Home Page to L1/L2/L3 to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -240,9 +237,8 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then User closes the web application
 
-  #
-  ##   #####################################################################################################
-  @SIT_User @KER-7075
+     
+  @SIT_UserJourney @KER-7075 @KER-6809
   Scenario: Verify Authenticated User Journey form Home Page to Footer
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -290,8 +286,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User will verify the presence of deals category in Header
     Then User closes the web application
 
-  #   #####################################################################################################
-  @SIT_User @KER-7076
+  @SIT_UserJourney @KER-7076 @KER-6809
   Scenario: Verify Authenticated User Journey form Home Page to Footer
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -339,8 +334,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User will verify the presence of deals category in Header
     Then User closes the web application
 
-  #   ###############################################################################################
-  @SIT_User @KER-7077
+    @SIT_UserJourney @KER-7077 @KER-6809
   Scenario: Verify Authenticated User Journey form Home Page to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
