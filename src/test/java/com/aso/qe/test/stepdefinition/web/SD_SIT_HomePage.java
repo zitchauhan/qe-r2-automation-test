@@ -1,32 +1,25 @@
 package com.aso.qe.test.stepdefinition.web;
 
-import static org.junit.Assert.assertNotSame;
-import static org.testng.Assert.assertTrue;
-
-import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.SIT_HomePagePageObject;
-import com.aso.qe.test.pageobject.SearchProductPO;
 
 import cucumber.api.java.en.Then;
 
 public class SD_SIT_HomePage extends CommonActionHelper {
 
-	 private static final Logger logger = Logger.getLogger(SD_SIT_HomePage.class);
+	// private static final Logger logger = Logger.getLogger(SD_SIT_HomePage.class);
 	 
-	 public SIT_HomePagePageObject HomePagePo= PageFactory.initElements(driver, SIT_HomePagePageObject.class);
-	 //public SIT_Cart_HomePage SITCommonFunction =  PageFactory.initElements(getDriver(), SIT_CartPageObject.class);
-	 SearchProductPO searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);
+	 public SIT_HomePagePageObject homePagePo= PageFactory.initElements(driver, SIT_HomePagePageObject.class);
 		
 	 
 	 @Then("^user click on CTA in Shop Collection$")
      public void user_click_on_CTA_in_Shop_Collection() throws Throwable
      {
          //Thread.sleep(3000);
-         HomePagePo.clickOnLink(SIT_HomePagePageObject.ShopCollectionCTA);
-         HomePagePo.clickOnLink(SIT_HomePagePageObject.ShopCollectionL3);
+         homePagePo.clickOnLink(SIT_HomePagePageObject.ShopCollectionCTA);
+         homePagePo.clickOnLink(SIT_HomePagePageObject.ShopCollectionL3);
          
          //Thread.sleep(3000);
          
@@ -37,7 +30,7 @@ public class SD_SIT_HomePage extends CommonActionHelper {
      public void user_click_on__Product_card_in_Shop_Collection() throws Throwable
      {
          //Thread.sleep(3000);
-         HomePagePo.clickOnLink(SIT_HomePagePageObject.ShopCollectionProductcard);
+         homePagePo.clickOnLink(SIT_HomePagePageObject.ShopCollectionProductcard);
          //Thread.sleep(3000);
          
      }
@@ -71,12 +64,12 @@ public class SD_SIT_HomePage extends CommonActionHelper {
 
  	}*/
      
-     @Then("^Open browser$")
+     /*@Then("^Open browser$")
      public void Open_browser() throws Throwable 
      {
                      Thread.sleep(3000);
                      
                      
      }
-
+*/
 }
