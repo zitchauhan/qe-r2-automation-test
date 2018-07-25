@@ -302,6 +302,8 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='Sign Out-m']") public WebElement btnSignOut_M;
 	@FindBy(xpath="//div[@data-auid='facetdrawer-level1Category-SHOP_m']//i") public WebElement btnSHOPBurgerMenuMinusIcon;
 
+	@FindBy(xpath="//*[(text()=\"Men's Shirts\")]") public WebElement txtMensShrit;
+	
 	public void accountSummaryDeatils(String exceptedAccountSummaryTxt) throws Exception {
 		String actualAccountSummaryTxt = getText(accountSummaryTxt);
 		logger.debug("accountSummaryTxt:: " + actualAccountSummaryTxt);
