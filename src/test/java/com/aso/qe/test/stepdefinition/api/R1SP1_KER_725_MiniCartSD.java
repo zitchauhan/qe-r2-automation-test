@@ -99,12 +99,11 @@ public class R1SP1_KER_725_MiniCartSD extends JSONValidationUtils{
 			CommonActionHelper webActionHelper = new CommonActionHelper();
 			webdriver = webActionHelper.launchChromeBrowser(webActionHelper.getWebDriverFolderPath("chromedriver"));
 			
-			
 			webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			webdriver.manage().window().maximize();
-			webdriver.get(loadProps.getConfigPropProperty("ASO"));
+			webdriver.get(loadProps.getConfigPropProperty("ASO_HOME"));
 			CommonActionHelper.waitForPageLoad(webdriver);
-			webActionHelper.getfindElementByXPath("//SPAN[text()='Sign In']").click();
+			webActionHelper.getfindElementByXPath("//li[@data-auid='MyAccount']").click();
 			webActionHelper.getfindElementByXPath("//INPUT[@id='logonId']").sendKeys(username);
 			webActionHelper.getfindElementByXPath("//INPUT[@id='logonPassword']").sendKeys(password);
 			webActionHelper.getfindElementByXPath("//BUTTON[@id='logonSubmit']").click();
