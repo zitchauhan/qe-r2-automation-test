@@ -18,9 +18,10 @@ public class R1SP1_KER_263_Web_SD extends CommonActionHelper{
 
 	@Then("^user clicks on one of the category and navigates to LOne page$")
 	public void user_clicks_on_one_of_the_category_and_navigates_to_LOne_page() throws Throwable {
+		Thread.sleep(2000);
 		assertTrue((clickOnButton(globalElementHeader_HomePO.btnShopCategory)));
 		assertTrue(clickOnButton(globalElementHeader_HomePO.btnClothingCategory));
-		Thread.sleep(20000);
+		Thread.sleep(2000);
 
 	}
 

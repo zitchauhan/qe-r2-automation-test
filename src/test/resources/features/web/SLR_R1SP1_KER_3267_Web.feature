@@ -1,16 +1,19 @@
 Feature: Verify the user search for Customer Keyword/SKU Search
 
-  @SLR @Web @All  @Regression @KER-3267 @ZYP-6329 @Rerun
-  Scenario: Verify the user search for Customer Keyword/SKU Search
+  @C-SLR @Web @All  @Regression @KER-3267  @ZYP_K3267-6329 @Rerun @1HR
+  Scenario Outline: Verify the user search for Customer Keyword/SKU Search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
     Then User enter the SKU search "<data>"
     And User click on search icon
-    Then User is navigated to pdp page
+    And user should be able to see PDP mention in the current url
     And user verifies the entered SKU id
     Then User closes the web application
+    Examples:
+    |data|
+    |112766238|
 
-  @SLR @Web @All @Regression  @KER-3267 @ZYP-6333 @Rerun
+  @C-SLR @Web @All @Regression  @KER-3267  @ZYP_K3267-6333 @Rerun @1HR
   Scenario: Verify the user search for invalid Customer Keyword/SKU Search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage

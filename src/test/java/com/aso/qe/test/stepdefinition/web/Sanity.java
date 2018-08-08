@@ -2,9 +2,6 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -101,7 +98,7 @@ public class Sanity extends CommonActionHelper{
 
 	@When("^User clicks on required category in L2 Page$")
 	public void user_clicks_on_required_category_in_L2_Page() throws Throwable {
-		assertTrue((clickOnButton(globalElementHeader.CategoryL2)));
+		assertTrue((clickOnButton(globalElementHeader.CategoryL1)));
 	}
 
 	@Then("^User should be navigated to L3 Page$")
@@ -152,20 +149,18 @@ public class Sanity extends CommonActionHelper{
 		Thread.sleep(2000);
 		assertTrue((clickOnButton(globalElementHeader.lnkPagination2)));
 		Thread.sleep(2000);
-		assertTrue((clickOnButton(globalElementHeader.lnkPagination3)));
+		assertTrue((clickOnButton(globalElementHeader.lnkNextPagePagination)));
 	}
 
 	@And("^User scroll to pagination$")
 	public void user_scroll_to_pagination() throws Throwable {
 
-		if("mobile".equalsIgnoreCase(testtype)) {
-			WebElement logo = driver.findElement(By.xpath("//a[@data-auid='logo_m']//parent::div[@class='nav-brand']//img"));
-				logo.sendKeys(Keys.ARROW_UP);
-				logo.sendKeys(Keys.ARROW_UP);
-				logo.sendKeys(Keys.ARROW_UP);
-	
-			scrollPageToWebElement(globalElementHeader.lnkL2PaginationMobile);
-			Thread.sleep(2000);
+		if("mobile".equalsIgnoreCase(testtype)) {	
+//			scrollPageToWebElement(globalElementHeader.lnkL2PaginationMobile);
+//			Thread.sleep(2000);
+//			globalElementHeader.lnkL2PaginationMobile.sendKeys(Keys.ARROW_UP);
+//			globalElementHeader.lnkL2PaginationMobile.sendKeys(Keys.ARROW_UP);
+//			globalElementHeader.lnkL2PaginationMobile.sendKeys(Keys.ARROW_UP);
 		}else {
 			Thread.sleep(2000);
 			scrollPageToWebElement(globalElementHeader.lnkL2Pagination);

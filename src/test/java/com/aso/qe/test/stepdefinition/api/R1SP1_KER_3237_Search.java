@@ -22,7 +22,7 @@ public class R1SP1_KER_3237_Search extends JSONValidationUtils{
 	
 	@Given("^\"(.*?)\" endpoint for Auto Suggestion$")
 	public void endpoint_for_Auto_Suggestion(String url) throws Throwable {
-		initiateRestAPICall(loadProps.getConfigPropProperty("api.baseURL")+url); 
+		initiateRestAPICall(apiEndpointIP+url); 
 	}
 
 	@Then("^Verify response status code as (\\d+) for Auto Suggestion$")
@@ -64,7 +64,7 @@ public class R1SP1_KER_3237_Search extends JSONValidationUtils{
 	
 	@Given("^\"(.*?)\" endpoint for Search Suggestion$")
 	public void endpoint_for_Search_Suggestion(String url) throws Throwable {
-		initiateRestAPICall(loadProps.getConfigPropProperty("api.baseURL")+url); 
+		initiateRestAPICall(apiEndpointIP+url); 
 	}
 
 	@Then("^Verify response status code as (\\d+) for Search Suggestion$")

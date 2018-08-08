@@ -1,6 +1,6 @@
 Feature: To verify the Inventory Specification API Services
 
-  @Regression @Sanity @All @api @KER-1926 @ZYP-6990
+  @Regression @Sanity @All @api @KER-1926 @ZYP-6990 @C-PDP 
   Scenario Outline: : Verify Inventory Specification for status code 200
     Given "<InventorySpecificationUrl>" endpoint for Inventory Specification
     Then Verify response status code as 200 for Inventory Specification
@@ -9,7 +9,7 @@ Feature: To verify the Inventory Specification API Services
       | InventorySpecificationUrl |
       | /api/inventory/4134286    |
 
-  @Regression @Sanity @All @api @KER-1926 @ZYP-6991
+  @Regression @Sanity @All @api @KER-1926 @ZYP-6991 @C-PDP 
   Scenario Outline: : validate the Inventory Specification json schema
     Given "<InventorySpecificationUrl>" endpoint for Inventory Specification
     And validate jsonSchema "KER_1926_InventorySpecificationSchema" for Inventory Specification
@@ -18,7 +18,7 @@ Feature: To verify the Inventory Specification API Services
       | InventorySpecificationUrl |
       | /api/inventory/4134286    |
 
-@Regression @Sanity @All @api @KER-1926 @ZYP-6992
+@Regression @Sanity @All @api @KER-1926 @ZYP-6992 @C-PDP 
   Scenario Outline: : Validate the Inventory Specification with inventory Requried Property Values are not null
     Given "<InventorySpecificationUrl>" endpoint for Inventory Specification
     Then read the API json response
@@ -33,7 +33,7 @@ Feature: To verify the Inventory Specification API Services
       | InventorySpecificationUrl |
       | /api/inventory/4134286    |
 
-  @Regression @Sanity @All @api @KER-1926 @ZYP-6993
+  @Regression @Sanity @All @api @KER-1926 @ZYP-6993 @C-PDP 
   Scenario Outline: : Verify Inventory Store Specification for status code 200
     Given "<InventoryStoreUrl>" endpoint for Inventory Store Specification
     Then Verify response status code as 200 for Inventory Store Specification
@@ -42,7 +42,7 @@ Feature: To verify the Inventory Specification API Services
       | InventoryStoreUrl                            |
       | /api/inventory/store/66209?productId=4134286 |
 
-  @Regression @Sanity @All @api @KER-1926 @ZYP-6994
+  @Regression @Sanity @All @api @KER-1926 @ZYP-6994 @C-PDP 
   Scenario Outline: : validate the Inventory Store Specification json schema
     Given "<InventoryStoreUrl>" endpoint for Inventory Store Specification
     And validate jsonSchema "KER_1926_InventoryStoreSchema" for Inventory Store Specification
@@ -51,7 +51,7 @@ Feature: To verify the Inventory Specification API Services
       | InventoryStoreUrl                            |
       | /api/inventory/store/66209?productId=4134286 |
 
-  @Regression @Sanity @All @api @KER-1926 @ZYP-6995
+  @Regression @Sanity @All @api @KER-1926 @ZYP-6995 @C-PDP 
   Scenario Outline: : Validate the Inventory Store Specification with inventory Requried Property Values are not null
     Given "<InventoryStoreUrl>" endpoint for Inventory Store Specification
     Then read the API json response
@@ -66,7 +66,7 @@ Feature: To verify the Inventory Specification API Services
       | InventoryStoreUrl                            |
       | /api/inventory/store/66209?productId=4134286 |
 
-  @Regression @Sanity @All @api @KER-1926 @ZYP-6996
+  @Regression @Sanity @All @api @KER-1926 @ZYP-6996 @C-PDP 
   Scenario Outline: : Verify Inventory Product Store Specification for status code 200
     Given "<InventoryProductStoreUrl>" endpoint for Inventory Product Store Specification
     Then Verify response status code as 200 for Inventory Product Store Specification
@@ -75,7 +75,7 @@ Feature: To verify the Inventory Specification API Services
       | InventoryProductStoreUrl                       |
       | /api/inventory?productId=4134286&storeId=66209 |
 
-  @Regression @Sanity @All @api @KER-1926 @ZYP-6998
+  @Regression @Sanity @All @api @KER-1926 @ZYP-6998 @C-PDP 
   Scenario Outline: : validate the Inventory Product Store Specification json schema
     Given "<InventoryProductStoreUrl>" endpoint for Inventory Product Store Specification
     And validate jsonSchema "KER_1926_InventoryProductStoreSchema" for Inventory Product Store Specification
@@ -84,7 +84,7 @@ Feature: To verify the Inventory Specification API Services
       | InventoryProductStoreUrl                       |
       | /api/inventory?productId=4134286&storeId=66209 |
 
-  @Regression @Sanity @All @api @KER-1926 @ZYP-6999
+  @Regression @Sanity @All @api @KER-1926 @ZYP-6999 @C-PDP 
   Scenario Outline: : Validate the Inventory Product Store Specification with inventory Requried Property Values are not null
     Given "<InventoryProductStoreUrl>" endpoint for Inventory Product Store Specification
     Then read the API json response

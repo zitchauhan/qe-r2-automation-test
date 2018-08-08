@@ -11,8 +11,8 @@ import com.aso.qe.framework.common.CommonActionHelper;
 public class SIT_ShippingAddressPageObject extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(SIT_ShippingAddressPageObject.class);
 	
-	@FindBy(xpath="//h1[text()='Shipping Address']") public WebElement address;
-	@FindBy(xpath="//button[contains(text(),'Continue to Shipping Method')]") public WebElement btnContiuneToMethod;
+	@FindBy(xpath="//*[@id='coShipAddr'] | //*[@id='editAddressModalLink']") public WebElement address;
+	@FindBy(xpath="//button[@class='form-continue-btn btn z-btn-checkout btn-lg btn-block'] | //*[@id='rwdGuestShippingContinue_Btn']") public WebElement btnContiuneToMethod;
 	@FindBy(xpath="//h3[text()='Order Summary']") public WebElement txtordersummary;
 	@FindBy(xpath="//h3/../div/ol/li/dl/dd[2]/a/div") public WebElement tltproduct;
 	@FindBy(xpath="//abbr[text()='SKU:']/..") public WebElement txtskuid;

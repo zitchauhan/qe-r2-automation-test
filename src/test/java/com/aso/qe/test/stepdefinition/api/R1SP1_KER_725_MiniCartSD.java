@@ -17,6 +17,7 @@ import com.aso.qe.framework.api.helpers.MiniCartJsonResponseHelper;
 import com.aso.qe.framework.api.json.JsonReaderCommon;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
+import com.aso.qe.test.common.CommonTestHelper;
 import com.github.fge.jsonschema.core.exceptions.ProcessingException;
 
 import cucumber.api.java.en.Given;
@@ -29,7 +30,7 @@ public class R1SP1_KER_725_MiniCartSD extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint for MiniCart with Sign-in user \"(.*?)\"\"(.*?)\"$")
 	public void endpoint_for_MiniCart_with_Sign_in_user(String url, String userName, String password) throws Throwable {
 		List<io.restassured.http.Cookie> restAssuredCookies = getSignInUserCookies(userName, password);
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+url;
+		String endpoints=CommonTestHelper.getAPIEndpointWebURL(apiEndpointWebURL)+url;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookies(endpoints, restAssuredCookies);
 	}
@@ -101,7 +102,7 @@ public class R1SP1_KER_725_MiniCartSD extends JSONValidationUtils{
 			
 			webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			webdriver.manage().window().maximize();
-			webdriver.get(loadProps.getConfigPropProperty("ASO_HOME"));
+			webdriver.get(apiEndpointWebURL);
 			CommonActionHelper.waitForPageLoad(webdriver);
 			webActionHelper.getfindElementByXPath("//li[@data-auid='MyAccount']").click();
 			webActionHelper.getfindElementByXPath("//INPUT[@id='logonId']").sendKeys(username);

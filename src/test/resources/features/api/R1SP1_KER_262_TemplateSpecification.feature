@@ -2,7 +2,7 @@ Feature: Template Specification
 
   Background: 
 
-  @api @Regression @Sanity @All @KER-262 @ZYP-3085
+  @api @Regression @Sanity @All @KER-262 @ZYP-3085 @C-HP
   Scenario Outline: : Verify status code 200 for success scenario for category SEO_Name
     Given "TemplateSpecifation" endpoint with SEO "<SEO_URL>"
     Then Verify response status code as 200
@@ -11,7 +11,7 @@ Feature: Template Specification
       | SEO_URL                                                 |
       | /shop/browse/apparel/mens-apparel/mens-shirts--t-shirts |
 
-  @api @Regression @Sanity @All @KER-262 @ZYP-5364
+  @api @Regression @Sanity @All @KER-262 @ZYP-5364 @C-HP
   Scenario Outline: : Validate RouteVariant json Schema for category SEO_Name
     Given "TemplateSpecifation" endpoint with SEO "<SEO_URL_Schema>"
     And validate jsonSchema "KER-262-RouteVariantSchema" with jsonResponse
@@ -31,7 +31,7 @@ Feature: Template Specification
       #| SEO_URL                                                 |
       #| /shop/browse/apparel/mens-apparel/mens-shirts--t-shirts |
 
-  @api @Regression @Sanity @All @KER-262 @ZYP-3086
+  @api @Regression @Sanity @All @KER-262 @ZYP-3086 @C-HP
   Scenario Outline: Verify for status code 404 for Non Found for category SEO_Name
     Given "TemplateSpecifation" endpoint with SEO "<SEO_URL>"
     Then Verify response status code as 404

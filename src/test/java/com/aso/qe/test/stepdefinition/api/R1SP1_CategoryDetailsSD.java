@@ -24,7 +24,7 @@ public class R1SP1_CategoryDetailsSD extends JSONValidationUtils
 	@Given("^\"(.*?)\" endpoint for Category \"(.*?)\"$")
 	public void endpoint_for_Category(String endpoint, String CategoryID)
 	{
-		String endpoints=loadProps.getConfigPropProperty("api.baseURL")+loadProps.getEndpointProProperty(endpoint)+CategoryID;
+		String endpoints=apiEndpointIP+loadProps.getEndpointProProperty(endpoint)+CategoryID;
 		initiateRestAPICall(endpoints);
 	
 	}
@@ -88,7 +88,7 @@ public class R1SP1_CategoryDetailsSD extends JSONValidationUtils
 	@Given("^\"(.*?)\" endpoint for Category$")
 	public void endpoint_for_Category(String endpoint)
 	{
-		String endpoints=loadProps.getConfigPropProperty("api.baseURL")+loadProps.getEndpointProProperty(endpoint);
+		String endpoints=apiEndpointIP+loadProps.getEndpointProProperty(endpoint);
 		logger.debug("For 400 endpoint:: "+endpoint);
 		String errorResp = initiateErrorRestAPICall(endpoints);
 		logger.debug("ERROR RESPONSE:: "+errorResp);

@@ -15,7 +15,7 @@ public class R1SP1_KER_2606_ProductPDP extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint for Product PDP Specification$")
 	public void endpoint_for_Product_PDP_Specification(String url) throws Throwable {
 		logger.debug("");
-		initiateRestAPICall(loadProps.getConfigPropProperty("api.baseURL")+url);
+		initiateRestAPICall(apiEndpointIP+url);
 	}
 
 	@Then("^Verify response status code as (\\d+) for Product PDP Specification$")
@@ -30,7 +30,7 @@ public class R1SP1_KER_2606_ProductPDP extends JSONValidationUtils{
 	
 	@Given("^\"(.*?)\" endpoint for BundleProduct PDP Specification$")
 	public void endpoint_for_BundleProduct_PDP_Specification(String url) throws Throwable {
-		initiateRestAPICall(loadProps.getConfigPropProperty("api.baseURL")+url);
+		initiateRestAPICall(apiEndpointIP+url);
 	}
 
 	@Then("^Verify response status code as (\\d+) for BundleProduct PDP Specification$")

@@ -15,7 +15,7 @@ public class R1SP1_KER_556_SearchFacetedSearch extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint for Search Faceted Search$")
 	public void endpoint_for_Search_Faceted_Search(String url) throws Throwable {
 		logger.debug("");
-		initiateRestAPICall(loadProps.getConfigPropProperty("api.baseURL")+loadProps.getEndpointProProperty(url));
+		initiateRestAPICall(apiEndpointIP+loadProps.getEndpointProProperty(url));
 	}
 
 	@Then("^Verify response status code as (\\d+) for Search Faceted Search$")

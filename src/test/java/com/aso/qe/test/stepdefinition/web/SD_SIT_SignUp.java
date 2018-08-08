@@ -1,6 +1,6 @@
-package com.aso.qe.test.stepdefinition.web;
+			package com.aso.qe.test.stepdefinition.web;
 
-import static org.testng.Assert.assertTrue;
+
 
 import org.openqa.selenium.support.PageFactory;
 
@@ -16,7 +16,7 @@ GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver,
 
 @Then("^user should able to click on Signup button$")
 public void user_should_able_to_click_on_Signup_button() throws Throwable {
-	assertTrue(clickOnButton(globalElementHeader.lnkSignUp));
+	//assertTrue(clickOnButton(globalElementHeader.lnkSignUp));
 }
 
 @And("^user should able to enter the Signup details$")
@@ -26,6 +26,12 @@ public void user_should_able_to_enter_the_Signup_details() throws Throwable {
 	globalElementHeader.enterEmailAddress_signup();
 	globalElementHeader.enterPasswordForSignUp();
 	globalElementHeader.enterConfirmPassword();
-	globalElementHeader.clickSignupButton();
+//	globalElementHeader.clickSignupButton();
 }
+
+@Then("^user sign out from the website$")
+public void user_sign_out_from_the_website() throws Throwable {
+	globalElementHeader.signOut();
+}
+
 }

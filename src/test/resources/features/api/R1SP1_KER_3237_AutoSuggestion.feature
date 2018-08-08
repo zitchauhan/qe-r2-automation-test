@@ -1,6 +1,6 @@
 Feature: To verify the Auto Suggestion API Services
 
-  @Regression @Sanity @All @api @KER-3237 @ZYP-6771
+  @Regression @Sanity @All @api @KER-3237 @ZYP-6771 @C-SLR
   Scenario Outline: : Verify Auto Suggestion for status code 200
     Given "<AutoSuggestionSummaryUrl>" endpoint for Auto Suggestion
     Then Verify response status code as 200 for Auto Suggestion
@@ -9,7 +9,7 @@ Feature: To verify the Auto Suggestion API Services
       | AutoSuggestionSummaryUrl      |
       | /api/search/autosuggest/shirt |
 
-  @Regression @Sanity @All @api @KER-3237 @ZYP-6772
+  @Regression @Sanity @All @api @KER-3237 @ZYP-6772 @C-SLR
   Scenario Outline: : validate the Auto Suggestion json schema
     Given "<AutoSuggestionSummaryUrl>" endpoint for Auto Suggestion
     And validate jsonSchema "KER-3237-AutoSuggestionSchema" for Auto Suggestion
@@ -18,7 +18,7 @@ Feature: To verify the Auto Suggestion API Services
       | AutoSuggestionSummaryUrl      |
       | /api/search/autosuggest/shirt |
 
-  @Regression @Sanity @All @api @KER-3237 @ZYP-6773
+  @Regression @Sanity @All @api @KER-3237 @ZYP-6773 @C-SLR
   Scenario Outline: : Validate the Auto Suggestion Requried Property Values contains with shirt
     Given "<AutoSuggestionSummaryUrl>" endpoint for Auto Suggestion
     Then Read the Auto Suggestion json response
@@ -28,7 +28,7 @@ Feature: To verify the Auto Suggestion API Services
       | AutoSuggestionSummaryUrl      | SuggestionText |
       | /api/search/autosuggest/shirt | shirt          |
 
-  @Regression @Sanity @All @api @KER-3237 @ZYP-6774
+  @Regression @Sanity @All @api @KER-3237 @ZYP-6774 @C-SLR
   Scenario Outline: : Validate the Auto Suggestion Requried Property Values contains with shoes
     Given "<AutoSuggestionSummaryUrl>" endpoint for Auto Suggestion
     Then Read the Auto Suggestion json response
@@ -38,7 +38,7 @@ Feature: To verify the Auto Suggestion API Services
       | AutoSuggestionSummaryUrl      | SuggestionText |
       | /api/search/autosuggest/shoes | shoes          |
 
-  @Regression @Sanity @All @api @KER-3237 @ZYP-6775
+  @Regression @Sanity @All @api @KER-3237 @ZYP-6775 @C-SLR
   Scenario Outline: : Validate the Auto Suggestion Requried Property Values contains with nike
     Given "<AutoSuggestionSummaryUrl>" endpoint for Auto Suggestion
     Then Read the Auto Suggestion json response

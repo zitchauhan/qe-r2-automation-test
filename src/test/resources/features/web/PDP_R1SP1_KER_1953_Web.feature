@@ -1,6 +1,6 @@
 Feature: To verify basic functionalities of PDP
 
-  @Sanity @Regression  @PDP  @Web @All @ZYP-3945 @KER-1953 @Rerun
+  @1HR @Regression  @C-PDP  @Web @All @ZYP_K1953-3945 @KER-1953 @Rerun
   Scenario: To verify product detail content section
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP of any product
@@ -14,7 +14,7 @@ Feature: To verify basic functionalities of PDP
     When user clicks on QandA tab
     Then user clicks should be able to see QandA section
 
-  @Sanity  @Regression @PDP  @Web @All @ZYP-3950 @KER-1953 @Rerun
+  @1HR  @Regression @C-PDP  @Web @All @ZYP_K1953-3950 @KER-1953 @Rerun
   Scenario: To verify sku and item value
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP of any product

@@ -1,6 +1,6 @@
 Feature: Categories - category details
 
-  @Regression @Sanity @All @api @KER-1603 @ZYP-3052
+  @Regression @Sanity @All @api @KER-1603 @ZYP-3052 @C-CLP
   Scenario Outline: : Verify for status code 200
     Given "CategoryDetail" endpoint for Category "<CategoryID>"
     Then Verify response status code as 200 for Category
@@ -9,7 +9,7 @@ Feature: Categories - category details
       | CategoryID        |
       | 15613,15157,15645 |
 
-  @Regression @Sanity @All @api @KER-1603 @ZYP-5381
+  @Regression @Sanity @All @api @KER-1603 @ZYP-5381 @C-CLP
   Scenario Outline: : validate CategoryDetails json schema
     Given "CategoryDetail" endpoint for Category "<CategoryID>"
     And validate jsonSchema "CategoryDetailSchema" for CategoryDetail
@@ -18,7 +18,7 @@ Feature: Categories - category details
       | CategoryID        |
       | 15613,15157,15645 |
 
-  @Regression @Sanity @All @api @KER-1603 @ZYP-5382
+  @Regression @Sanity @All @api @KER-1603 @ZYP-5382 @C-CLP
   Scenario Outline: : Validate the CategoryDetails Requried Property Values
     Given "CategoryDetail" endpoint for Category "<CategoryID>"
     Then Read the CategoryDetails json response
@@ -38,18 +38,21 @@ Feature: Categories - category details
       | CategoryID        |
       | 15613,15157,15645 |
 
-  @Regression @Sanity @All @api @KER-1603 @ZYP-3054
+  @Regression @Sanity @All @api @KER-1603 @ZYP-3054 @C-CLP
   Scenario Outline: Verify for status code 404 for Not Found
-    Given "CategoryDetailFor404" endpoint for Category "<CategoryID>"
+   Given "CategoryDetailFor404" endpoint for Category "<CategoryID>"
     Then Verify response status code as 404 for Category
     And Verify the response error "Not Found" for CategoryDetail
-    Then Verify the response message "No message available" for CategoryDetail
+    Then Verify the response message "No message available" for CategoryDetail 
+    #Then Verify response status code as 404 for Category
+    #And Verify the response error "Not Found" for CategoryDetail
+    #Then Verify the response message "No message available" for CategoryDetail
 
     Examples: 
       | CategoryID        |
       | 15613,15157,15645 |
 
-  @Regression @Sanity @All @api @KER-1603 @ZYP-3053
+  @Regression @Sanity @All @api @KER-1603 @ZYP-3053 @C-CLP
   Scenario: Verify for status code 400 for Bad Request
     Given "CategoryDetailFor400" endpoint for Category
     Then Verify Error response status code as 400 for Category

@@ -45,8 +45,8 @@ public class R1SP1_KER_3270_Web_SD extends CommonActionHelper{
 	@Then("^User verifes the last breadcrumb in the series of keyword$")
 	public void user_verifes_the_last_breadcrumb_in_the_series_of_keyword() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
-			waitForElement(globalElementHeader.specificSearchTitle_M);
-			assertTrue(isDisplayed(globalElementHeader.specificSearchTitle_M));
+			waitForElement(globalElementHeader.mobileBreadcrumb);
+			assertTrue(isDisplayed(globalElementHeader.mobileBreadcrumb));
 		}
 		else {
 			waitForElement(globalElementHeader.specificSearchTitle);
@@ -64,8 +64,8 @@ public class R1SP1_KER_3270_Web_SD extends CommonActionHelper{
 	@Then("^User verifes the last breadcrumb keyword$")
 	public void user_verifes_the_last_breadcrumb_keyword() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
-			waitForElement(globalElementHeader.searchTerm_M);
-			assertTrue(isDisplayed(globalElementHeader.searchTerm_M));
+			waitForElement(globalElementHeader.mobileBreadcrumb);
+			assertTrue(isDisplayed(globalElementHeader.mobileBreadcrumb));
 		}
 		else {
 		waitForElement(globalElementHeader.searchTerm);
@@ -80,8 +80,8 @@ public class R1SP1_KER_3270_Web_SD extends CommonActionHelper{
 	
 	@Then("^User is navigated to pdp page and verifies search result like disc$")
 	public void user_is_navigated_to_pdp_page_and_verifies_search_result_like_disc() throws Throwable {
-		waitForElement(globalElementHeader.txtSearchTerm);
-		assertTrue(isDisplayed(globalElementHeader.txtSearchTerm));
+		waitForElement(globalElementHeader.txtSearchFrisbeeProduct);
+		assertTrue(isDisplayed(globalElementHeader.txtSearchFrisbeeProduct));
 	}
 
 

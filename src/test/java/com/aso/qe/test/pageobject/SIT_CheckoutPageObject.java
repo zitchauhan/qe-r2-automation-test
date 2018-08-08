@@ -4,15 +4,15 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import com.aso.qe.framework.common.CommonActionHelper;
+
 
 public class SIT_CheckoutPageObject extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(SIT_CheckoutPageObject.class);
 	
 	@FindBy(xpath="//*[@id=\"orginalAddrChecked\"]/div/label/span[2]") public static WebElement txtAddressVerification;
-	@FindBy(xpath="//*[@id=\"continueChkPop\"]") public WebElement btnContinueCheckout ;
-	@FindBy(xpath="//*[@id=\"continuePaymentButton2\"]") public WebElement btnContinueCheckout_Mobile ;
+	@FindBy(xpath="//*[@id='continuePaymentButton'] | //*[text()='Continue To Payment'] | //*[@id='continueChkPop']") public WebElement btnContinueCheckout ;
+	
 	
 	
 	

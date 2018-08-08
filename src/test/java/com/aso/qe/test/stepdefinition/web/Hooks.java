@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
+import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.framework.web.helpers.WebDriverHelper;
 
 import cucumber.api.Scenario;
@@ -15,12 +16,16 @@ public class Hooks {
 	public Scenario scenario;
 	public String testType;
 	public String screenshortName;
+	public PropertiesHelper loadProps;
+	
 	public Hooks(){}
 
 	@Before
 	public void BeforeSteps(Scenario scenario) {
 		this.scenario = scenario;
+		loadProps = PropertiesHelper.getInstance();
 		Constants.screenShortTagNames ="";
+		
 		logger.debug("exection Start Scenario Name: "+scenario.getName());
 		testType = getTestType();
 		screenshortName = testType+"_"+getTagName("KER-")+"_"+getTagName("ZYP-");

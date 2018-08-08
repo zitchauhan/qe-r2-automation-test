@@ -8,9 +8,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import com.aso.qe.framework.api.helpers.APIJsonResponse;
 import com.aso.qe.framework.api.helpers.JSONValidationUtils;
 import com.aso.qe.framework.api.helpers.ProductsByCategoryResponse;
-import com.aso.qe.framework.api.helpers.APIJsonResponse;
 import com.aso.qe.framework.api.json.ErrorCode404Response;
 import com.aso.qe.framework.api.json.JsonReaderCommon;
 import com.aso.qe.framework.common.Constants;
@@ -26,7 +26,7 @@ public class R1SP1_Categories_ProductsByCategorySD extends JSONValidationUtils{
 	
 	@Given("^\"(.*?)\" endpoint for product \"(.*?)\"$")
 	public void endpoint_for_product(String endpoint, String CategoryID) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.baseURL")+loadProps.getEndpointProProperty(endpoint)+CategoryID+"/products";
+		String endpoints=apiEndpointIP+loadProps.getEndpointProProperty(endpoint)+CategoryID+"/products";
 		initiateRestAPICall(endpoints);
 
 	}
@@ -65,7 +65,7 @@ public class R1SP1_Categories_ProductsByCategorySD extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint for Facets \"(.*?)\"$")
 	public void endpoint_for_Facets(String endpoint, String CategoryID)
 	{
-		String endpoints=loadProps.getConfigPropProperty("api.baseURL")+loadProps.getEndpointProProperty(endpoint)+CategoryID+"/facets";
+		String endpoints=apiEndpointIP+loadProps.getEndpointProProperty(endpoint)+CategoryID+"/facets";
 		initiateRestAPICall(endpoints);
 
 	}
@@ -73,7 +73,7 @@ public class R1SP1_Categories_ProductsByCategorySD extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint for product and Facets with \"(.*?)\"$")
 	public void endpoint_for_product_and_Facets_with(String endpoint, String CategoryID)
 	{
-		String endpoints=loadProps.getConfigPropProperty("api.baseURL")+loadProps.getEndpointProProperty(endpoint)+CategoryID+"/products?displayFacets=true";
+		String endpoints=apiEndpointIP+loadProps.getEndpointProProperty(endpoint)+CategoryID+"/products?displayFacets=true";
 		initiateRestAPICall(endpoints);
 
 	}
@@ -81,7 +81,7 @@ public class R1SP1_Categories_ProductsByCategorySD extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint for product with \"(.*?)\"$")
 	public void endpoint_for_product_with(String endpoint, String CategoryID)
 	{
-		String endpoints=loadProps.getConfigPropProperty("api.baseURL")+loadProps.getEndpointProProperty(endpoint)+CategoryID+"/products"+1;
+		String endpoints=apiEndpointIP+loadProps.getEndpointProProperty(endpoint)+CategoryID+"/products"+1;
 		initiateRestAPICall(endpoints);
 
 	}
@@ -106,7 +106,7 @@ public class R1SP1_Categories_ProductsByCategorySD extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint for facets with \"(.*?)\"$")
 	public void endpoint_for_facets_with(String endpoint, String CategoryID)
 	{
-		String endpoints=loadProps.getConfigPropProperty("api.baseURL")+loadProps.getEndpointProProperty(endpoint)+CategoryID+"/facets"+1;
+		String endpoints=apiEndpointIP+loadProps.getEndpointProProperty(endpoint)+CategoryID+"/facets"+1;
 		initiateRestAPICall(endpoints);
 	}
 
@@ -182,6 +182,7 @@ public class R1SP1_Categories_ProductsByCategorySD extends JSONValidationUtils{
 	public void validate_the_Search_by_SearchTerm_Requried_Property_Values_contains_with(String searchTxt, List<String> propNameList) throws Throwable {
 		for(String propName:propNameList){
 			assertTrue(productsByCategoryResponse.isContainsPropertyValueNull(propName,searchTxt,productsByCategoryResponse.productinfoArray),Constants.API_ERROR_DESCRIPTION);
+			//assertTrue(productsByCategoryResponse.isContainsBreadcrumbPropertyValue("breadcrumb", searchTxt, propName),Constants.API_ERROR_DESCRIPTION);
 		}
 	}
 	
@@ -214,10 +215,25 @@ public class R1SP1_Categories_ProductsByCategorySD extends JSONValidationUtils{
 		}
 	}
 	
+	@Then("^Validate the \"(.*?)\" with \"(.*?)\" API Requried Property Value are not Null$")
+	public void validate_the_addToCart_inventory_store_API_Requried_Property_Value_are_not_Null(String rootElement, String type, List<String> propNameList) throws Throwable {
+		for(String propName:propNameList){
+			assertTrue(apiJsonResponse.verifyInventoryStoreOnline(propName,rootElement, type),Constants.API_ERROR_DESCRIPTION);
+		}
+	}
+	
+	
 	@Then("^Validate the Add to Cart API Requried Property Value are not Null$")
 	public void validate_the_AddToCart_API_Requried_Property_Value_are_not_Null(List<String> propNameList) throws Throwable {
 		for(String propName:propNameList){
 			assertTrue(apiJsonResponse.verifyAddtoCartProp(propName,"addToCart"),Constants.API_ERROR_DESCRIPTION);
+		}
+	}
+	
+	@Given("^Validate the Product PDP \"(.*?)\" API Requried Property Value are not Null$")
+	public void validate_the_Product_PDP_API_Requried_Property_Value_are_not_Null(String rootName, List<String> propNameList) throws Throwable {
+		for(String propName:propNameList){
+			assertTrue(apiJsonResponse.verifyAddtoCartProp(propName,rootName),Constants.API_ERROR_DESCRIPTION);
 		}
 	}
 }

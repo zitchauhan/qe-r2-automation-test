@@ -26,12 +26,15 @@
           "items": {}
         },
         "totalQuantityAdded": {
-          "type": "number"
+          "type": "string"
         },
         "totalCartQuantity": {
-          "type": "number"
+          "type": "string"
         },
         "cartURL": {
+          "type": "string"
+        },
+        "displayPrice": {
           "type": "string"
         },
         "checkoutURL": {
@@ -48,6 +51,7 @@
         "totalQuantityAdded",
         "totalCartQuantity",
         "cartURL",
+        "displayPrice",
         "checkoutURL"
       ]
     }

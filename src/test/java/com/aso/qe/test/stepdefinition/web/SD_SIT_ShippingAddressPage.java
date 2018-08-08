@@ -1,15 +1,13 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.testng.Assert.assertTrue;
-
 import org.openqa.selenium.support.PageFactory;
-
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.SIT_ShippingAddressPageObject;
-
 import cucumber.api.java.en.Then;
 
 public class SD_SIT_ShippingAddressPage extends CommonActionHelper{
+	
 	public SIT_ShippingAddressPageObject ShipAddPo= PageFactory.initElements(driver, SIT_ShippingAddressPageObject.class);
 	
 	

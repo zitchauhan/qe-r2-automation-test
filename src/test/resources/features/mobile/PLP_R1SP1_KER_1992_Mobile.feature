@@ -1,6 +1,6 @@
 Feature: To verify "Related Categories" as links and are clickable & navigates to new landing page
 
-  @Regression @Mobile @PLP @All @ZYP-5532 @KER-1992 @Rerun
+  @Regression @Mobile @C-PLP @All  @ZYP_K1992-5532 @KER-1992 @Rerun
   Scenario: To verify "Related Categories" as links and are clickable & navigates to new landing page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

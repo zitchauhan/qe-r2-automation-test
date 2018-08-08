@@ -19,6 +19,7 @@ public class R1SP1_KER_1920_Web_SD extends CommonActionHelper{
 
 	@Then("^user click on Add to cart button$")
 	public void user_click_on_Add_to_cart_button() throws Throwable {
+		pdpPageObj.addToCartAvailability();
 		waitForElement(pdpPageObj.btnAddToCart);
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 	}

@@ -8,7 +8,6 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.SIT_SigninPageObject;
 
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
 public class SD_SIT_SignIn extends CommonActionHelper{
@@ -19,11 +18,13 @@ public class SD_SIT_SignIn extends CommonActionHelper{
 	@Then("^user should able to click on Signin button$")
 	public void user_should_able_to_click_on_Signin_button() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
-			Thread.sleep(3000);
+			Thread.sleep(1000);
+			clickOnButton(globalElementHeader.btnSHOPBurgerMenuMinusIcon);
+			Thread.sleep(1000);
 			scrollPageToWebElement(globalElementHeader.btnSignIn_mobile);
 			waitForElement(globalElementHeader.btnSignIn_mobile);
 			clickOnButton(globalElementHeader.btnSignIn_mobile);
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 		}else {
 			assertTrue(clickOnButton(globalElementHeader.btnSignIn));
 		}
@@ -31,13 +32,20 @@ public class SD_SIT_SignIn extends CommonActionHelper{
 		
 		
 	}
-	@And("^user should be able to enter the signin details$")
+	@Then("^user should be able to enter the signin details<\"(.*?)\"><\"(.*?)\">$")
+	public void user_should_be_able_to_enter_the_signin_details(String arg1, String arg2) throws Throwable {
+		signinPo.verifySigninpage();
+		globalElementHeader.enterEmailAddressandPassword( arg1, arg2);
+		globalElementHeader.clickSubmitButton();
+	}
+	
+	@Then("^user should be able to enter the signin details$")
 	public void user_should_be_able_to_enter_the_signin_details() throws Throwable {
 		signinPo.verifySigninpage();
 		globalElementHeader.enterEmailAddressandPassword();
 		globalElementHeader.clickSubmitButton();
-		
 	}
+	
 	@Then("^User will verify the presence of ASO Logo and click on Logo$")
 	public void user_will_verify_the_presence_of_ASO_Logo() throws Throwable {
 		//scrollPageToWebElement(globalElementHeader.btnSignIn);

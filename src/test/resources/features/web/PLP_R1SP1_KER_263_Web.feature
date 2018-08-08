@@ -1,6 +1,6 @@
 Feature: [UI] To verify user able to see the Section title on L1, L2 & L3 page
 
-  @Web @All @Regression @Sanity  @PLP @KER-263 @ZYP-2813
+  @Web @All @Regression @1HR  @C-PLP @KER-263  @ZYP_K263-2813
   Scenario: To verify user able to see the Section title on L1, L2 & L3 page
      Given user launches the browser and navigates to "ASO_HOME" page
      Then user clicks on one of the category and navigates to LOne page

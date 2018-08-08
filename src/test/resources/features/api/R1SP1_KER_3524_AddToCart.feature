@@ -1,6 +1,6 @@
 Feature: To verify the Add to Cart API Services
 
-  @Regression @Sanity @All @api @KER-3524 @ZYP-7159
+  @Regression @Sanity @All @api @KER-3524 @ZYP-7159 @C-PDP 
   Scenario Outline: : Verify Add to Cart with sign-in user for status code 200
     Given "<AddToCartSummaryUrl>" and post request "<addtocartRequestJson>" endpoint for Add to Cart with Sign-in user "<UserName>""<Password>"
     Then Verify response status code as 200 for Add to Cart
@@ -9,16 +9,17 @@ Feature: To verify the Add to Cart API Services
       | AddToCartSummaryUrl | addtocartRequestJson | UserName                     | Password   |
       | /api/cart/sku       | AddToCartPostRequest | qaautomationtest@yopmail.com | Qwerty@123 |
 
-  @Regression @Sanity @All @api @KER-3524 @ZYP-7161
+  @Regression @Sanity @All @api @KER-3524 @ZYP-7161 @C-PDP 
   Scenario Outline: : validate the Add to Cart sign-in user json schema
     Given "<AddToCartSummaryUrl>" and post request "<addtocartRequestJson>" endpoint for Add to Cart with Sign-in user "<UserName>""<Password>"
     And validate jsonSchema "KER-3524-AddtoCartSchema" for Add to Cart with SignIn
+
 
     Examples: 
       | AddToCartSummaryUrl | addtocartRequestJson | UserName                     | Password   |
       | /api/cart/sku       | AddToCartPostRequest | qaautomationtest@yopmail.com | Qwerty@123 |
 
-  @Regression @Sanity @All @api @KER-3524 @ZYP-7162
+  @Regression @Sanity @All @api @KER-3524 @ZYP-7162 @C-PDP 
   Scenario Outline: : Validate the Add to Cart sign-in user Requried Property Values
     Given "<AddToCartSummaryUrl>" and post request "<addtocartRequestJson>" endpoint for Add to Cart with Sign-in user "<UserName>""<Password>"
     Then read the API json response
@@ -30,7 +31,7 @@ Feature: To verify the Add to Cart API Services
       | totalCartQuantity  |
       | checkoutURL        |
       | cartURL            |
-    And Validate the Product PDP "addToCart" with "items" API Requried Property Value are not Null
+    And Validate the "addToCart" with "items" API Requried Property Value are not Null
       | price       |
       | skuId       |
       | itemId      |
@@ -41,7 +42,7 @@ Feature: To verify the Add to Cart API Services
       | AddToCartSummaryUrl | addtocartRequestJson | UserName                     | Password   |
       | /api/cart/sku       | AddToCartPostRequest | qaautomationtest@yopmail.com | Qwerty@123 |
 
-  @Regression @Sanity @All @api @KER-3524 @ZYP-7163
+  @Regression @Sanity @All @api @KER-3524 @ZYP-7163 @C-PDP 
   Scenario Outline: Verify Add to Cart user for status code 503 for Not Found
     Given "<AddToCartSummaryUrl>" endpoint for Product PDP Specification
     Then Verify response status code as 503 for Add to Cart

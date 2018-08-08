@@ -1,5 +1,8 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -61,4 +64,73 @@ public class R1SP1_KER_262_Global_Header_SD extends CommonActionHelper{
 
 		globalElementHeader.validatingDealsCategory();
 	}
+	
+	@Then("^Verify signout from my account$")
+	public void verify_signout_from_my_account() throws Throwable {
+		assertTrue(clickOnButton(globalElementHeader.btnMyAccount));
+		Thread.sleep(1000);
+		assertTrue(clickOnButton(globalElementHeader.btnSignOut));
+	}
+
+	@Then("^verify account summary detail from my account$")
+	public void verify_account_summary_detail_from_my_account() throws Throwable {
+	 
+		assertTrue(isDisplayed(globalElementHeader.btmkAccountSummary_M));
+	}
+	
+	//###################
+	@Then("^User to verify serch option box is available$")
+	public void user_to_verify_serch_option_box_is_available() throws Throwable {
+	    assertTrue(isDisplayed(globalElementHeader.searchBox_M));
+		
+	}
+
+	@Then("^User to verify search for any requirement\"(.*?)\"$")
+	public void user_to_verify_search_for_any_requirement(String data) throws Throwable {
+		
+		waitForPageLoad(driver);
+		Thread.sleep(4000);
+		globalElementHeader.searchBox_M.sendKeys(data);
+		String actText=getText(globalElementHeader.verifyPantInSearch_M);
+	     assertEquals(actText, "pant");
+		
+	}
+	
+
+	@Then("^User to click on search button after putting data$")
+	public void user_to_click_on_search_button_after_putting_data() throws Throwable {
+	    
+	}
+	@Then("^User to click on search button after putting data\"(.*?)\"$")
+	public void user_to_click_on_search_button_after_putting_data(String data) throws Throwable {
+		waitForPageLoad(driver);
+		Thread.sleep(4000);
+		globalElementHeader.searchBox_M.sendKeys(data);
+		clickOnButton(globalElementHeader.searchbtn_M);
+		assertTrue(isDisplayed(globalElementHeader.searchResultText_M));
+		
+	}
+
+	@Then("^User to verify magnifying glass icon when scroll down$")
+	public void user_to_verify_magnifying_glass_icon_when_scroll_down() throws Throwable {
+	    assertTrue(isDisplayed(globalElementHeader.magnifying_M));
+	}
+	
+
+	@Then("^user to verify global search box functionality\"(.*?)\"$")
+	public void user_to_verify_global_search_box_functionality(String data) throws Throwable {
+		Thread.sleep(4000);
+		   globalElementHeader.searchBox_M.sendKeys(data);
+			clickOnButton(globalElementHeader.searchbtn_M);
+			assertTrue(isDisplayed(globalElementHeader.searchResultText_M));
+	}
+
+	
+	@Then("^user verify signup and signin$")
+	public void user_verify_signup_and_signin() throws Throwable {
+	    assertTrue(isDisplayed(globalElementHeader.btmSignIn));
+	    assertTrue(isDisplayed(globalElementHeader.linkSignUP ));
+	}
+	
+	
 }

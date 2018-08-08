@@ -1,6 +1,6 @@
 Feature: Verify presence of Socail Links
 
-  @Sanity  @HomePage @KER-720 @ZYP-4342 @Regression @All @Mobile
+  @1HR  @C-HP @KER-720  @ZYP_K720-4342 @Regression @All @Mobile
   Scenario: Verify presence of Socail Links from Homepage
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User will verify the presence of Facebook icon
@@ -10,7 +10,7 @@ Feature: Verify presence of Socail Links
     Then User will verify the presence of instagram icon
 
     
-     @Sanity @HomePage  @KER-720 @ZYP-5473 @Regression @All @Mobile
+      @C-HP  @KER-720  @ZYP_K720-5473 @Regression @All @Mobile
   Scenario: Verify presence of Socail Links from PLP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -20,7 +20,7 @@ Feature: Verify presence of Socail Links
     And User will verify the presence of youtube icon
     Then User will verify the presence of instagram icon
     
-     @Sanity @HomePage  @KER-720 @ZYP-5472 @Regression @All @Mobile
+      @C-HP  @KER-720  @ZYP_K720-5472 @Regression @All @Mobile
   Scenario: Verify presence of Socail Links from PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP

@@ -1,7 +1,10 @@
 package com.aso.qe.test.stepdefinition.api;
 import static org.testng.Assert.assertTrue;
+
 import org.apache.log4j.Logger;
+
 import com.aso.qe.framework.api.helpers.JSONValidationUtils;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
@@ -12,7 +15,7 @@ public class R1SP1_KER_3276_ProductSuggest extends JSONValidationUtils{
 @Given("^\"(.*?)\" endpoint for Product Suggest$")
 public void endpoint_for_Product_Suggest(String url) throws Throwable {
 	logger.debug("");
-	initiateRestAPICall(loadProps.getConfigPropProperty("api.baseURL")+url); 
+	initiateRestAPICall(apiEndpointIP+url); 
 }
 
 @Then("^Verify response status code as (\\d+) for Product Suggest$")

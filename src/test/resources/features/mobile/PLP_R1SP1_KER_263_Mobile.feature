@@ -1,6 +1,6 @@
 Feature: [UI] To verify user able to see the Section title on L1, L2 & L3 page
 
-  @Mobile @All @Sanity  @PLP @KER-263 @ZYP-5176 @Regression
+  @Mobile @All @1HR  @C-PLP @KER-263  @ZYP_K263-5176 @Regression
   Scenario: To verify user able to see the Section title on L1, L2 & L3 page
      Given user launches the browser and navigates to "ASO_HOME" page
      Then User clicks on the burger menu

@@ -20,7 +20,7 @@ public class R1SP1_KER_1959_SearchTerm extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint for Search by SearchTerm$")
 	public void endpoint_for_Search_by_SearchTerm(String url) throws Throwable {
 		logger.debug("");
-		initiateRestAPICall(loadProps.getConfigPropProperty("api.baseURL")+url); 
+		initiateRestAPICall(apiEndpointIP+url); 
 	}
 
 	@Then("^Verify response status code as (\\d+) for Search by SearchTerm$")
@@ -35,7 +35,7 @@ public class R1SP1_KER_1959_SearchTerm extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" endpoint for Search by SearchTerm by page size and page number$")
 	public void endpoint_for_Search_by_SearchTerm_by_page_size_and_page_number(String url) throws Throwable {
-		initiateRestAPICall(loadProps.getConfigPropProperty("api.baseURL")+url); 
+		initiateRestAPICall(apiEndpointIP+url); 
 	}
 
 	@Then("^Verify response status code as (\\d+) for Search by SearchTerm by page size and page number$")

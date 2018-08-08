@@ -1,13 +1,12 @@
 package com.aso.qe.test.pageobject;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+
 import com.aso.qe.framework.common.CommonActionHelper;
 
-public class SIT_GuestuserShippingAddressPageObject extends CommonActionHelper {
-	
-	
+
+public class SIT_GuestuserShippingAddressPageObject extends CommonActionHelper {	
 	@FindBy(xpath = "//input[@name='lastName']")
 	public WebElement txtLastName;
 	@FindBy(xpath = "//input[@name='firstName']")
@@ -37,13 +36,13 @@ public class SIT_GuestuserShippingAddressPageObject extends CommonActionHelper {
 	
 	public void enterFirstName() throws Exception {
 
-		setInputText(txtFirstName, "Danush");
+		setInputText(txtFirstName, "Test");
 		
 	}
 	
 	public void enterLastName() throws Exception {
 
-		setInputText(txtLastName, "Prasanna Kumar");
+		setInputText(txtLastName, "Academy");
 	
 	}
 	
@@ -54,7 +53,7 @@ public class SIT_GuestuserShippingAddressPageObject extends CommonActionHelper {
 
 	}
 	public void enterZipCode() throws Exception {
-
+		txtZipCode.clear();
 		setInputText(txtZipCode, "19020");
 		
 	}
@@ -76,7 +75,6 @@ public class SIT_GuestuserShippingAddressPageObject extends CommonActionHelper {
 		
 	}
 	public void enterEmail() throws Exception {
-
 		setInputText(txtEmail, "dan33.text@gmail.com");
 	
 	}

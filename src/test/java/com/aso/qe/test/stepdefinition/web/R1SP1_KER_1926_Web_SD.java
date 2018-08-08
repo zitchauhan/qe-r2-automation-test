@@ -57,7 +57,7 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 
 	@Then("^user should be able to see Add to cart button and quantity section$")
 	public void user_should_be_able_to_see_Add_to_cart_button_and_quantity_section() throws Throwable {
-
+		pdp_po.addToCartAvailability();
 		assertTrue(isDisplayed(pdp_po.btnAddToCart));
 		assertTrue(isDisplayed(pdp_po.btnQuantityDec));
 		assertTrue(isDisplayed(pdp_po.btnQuantityInc));
@@ -69,7 +69,7 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 	public void user_should_be_able_to_see_inventory_status_of_the_product() throws Throwable {
 
 
-		if(isDisplayed(pdp_po.txtInStock))
+		if(isDisplayed(pdp_po.txtNotifiedBack))
 		{
 			logger.debug("Product is in the stock");
 		}else {
@@ -79,7 +79,7 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 
 	@When("^user clicks on the Details and specs tab$")
 	public void user_clicks_on_the_Details_and_specs_tab() throws Throwable {
-		scrollPageToWebElement(pdp_po.txtInStock);
+		scrollPageToWebElement(pdp_po.txtNotifiedBack);
 		assertTrue(clickOnButton(pdp_po.tabDetailsSpecs));
 
 	}
@@ -89,7 +89,7 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 
 		assertTrue(isDisplayed(pdp_po.secLongDescription));
 		assertTrue(isDisplayed(pdp_po.textFeatureBenefits));
-		scrollPageToWebElement(pdp_po.txtInStock);
+		scrollPageToWebElement(pdp_po.txtNotifiedBack);
 		assertTrue(clickOnButton(pdp_po.tabDetailsSpecs));
 
 	}
@@ -116,7 +116,7 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 
 	@When("^user clicks on Reviews tab$")
 	public void user_clicks_on_Reviews_tab() throws Throwable {
-		scrollPageToWebElement(pdp_po.txtInStock);
+		scrollPageToWebElement(pdp_po.txtNotifiedBack);
 		assertTrue(clickOnButton(pdp_po.tabReviews));
 
 	}
@@ -132,7 +132,7 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 
 	@When("^user clicks on QandA tab$")
 	public void user_clicks_on_QandA_tab() throws Throwable {
-		scrollPageToWebElement(pdp_po.txtInStock);
+		scrollPageToWebElement(pdp_po.txtNotifiedBack);
 		assertTrue(clickOnButton(pdp_po.tabQA)); 
 	}
 
@@ -145,7 +145,7 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 
 	@Given("^user should be able to see the sku and item numbers for the given image$")
 	public String user_should_be_able_to_see_the_sku_and_item_numbers_for_the_given_image() throws Throwable {
-		scrollPageToWebElement(pdp_po.secSize1);
+		scrollPageToWebElement(pdp_po.btnAddToCart);
 		expectedSKU = getText(pdp_po.txtProductSKU);
 		String itemID = getText(pdp_po.txtProductItemNumber);
 
@@ -177,6 +177,8 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 	@Then("^user clicks on the product card and navigates to PDP of the product$")
 	public void user_clicks_on_the_product_card_and_navigates_to_PDP_of_the_product() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
+			scrollPageToWebElement(plp_po.drpdwnSortByScrollMobile);
+			Thread.sleep(1000);
 			assertTrue(clickOnButton(plp_po.productPLP1_Mobile));
 		}else {
 			assertTrue(clickOnButton(plp_po.productPLP1));
@@ -188,13 +190,21 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 	@When("^user enters \"(.*?)\" in the search box$")
 	public void user_enters_in_the_search_box(String searchText) throws Throwable {
 		searchKey=searchText;
-		if("mobile".equalsIgnoreCase(testtype)) {
-			SearchProductPO.searchTextBoxMobile.sendKeys(searchText);
+		if("mobile".equalsIgnoreCase(testtype)) 
+		{
+			//Thread.sleep(1000);
+			setInputText(SearchProductPO.searchTextBoxMobile, searchText); 
+			//SearchProductPO.searchTextBoxMobile.sendKeys(searchText);
 			assertTrue(clickOnButton(SearchProductPO.submitGOBtnMobile));
 			logger.debug("User entered search key :: " + searchText);
+			Thread.sleep(3000);
 		}else {
+			Thread.sleep(2000);
 			SearchProductPO.searchTextBox.sendKeys(searchText);
+			Thread.sleep(2000);
 			assertTrue(clickOnButton(SearchProductPO.submitGOBtn));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(SearchProductPO.submitGOBtn));//Due to existing defect clicking is required
 			logger.debug("User entered search key :: " + searchText);
 		}
 	}
@@ -234,6 +244,52 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 	public void user_navigates_to_PLP_of_any_product() throws Throwable {
 		globalElementHeader_HomePO.navigateToPLPViaClick_Desktop();
 	}
+
+	 @Then("^User refresh the page$")
+	public void User_refresh_the_page() throws Throwable {
+		 driver.navigate().refresh();
+	 }
+	 
+	 //KER-1926 Start CR-AKK
+	 @Then("^verfiy the Ask a question button$")
+	 public void verfiy_the_Ask_a_question_button() throws Throwable {
+		 assertTrue(isDisplayed(pdp_po.btnAskQuestion));
+		 
+	 }
+
+	 @Then("^verfiy the answer this question$")
+	 public void verfiy_the_answer_this_question() throws Throwable {
+		 assertTrue(isDisplayed(pdp_po.btnAnswerQuestion));
+		 pdp_po.cilckAnswerThisQuestion();
+	 }
+
+	 @Then("^close the answer this question popup$")
+	 public void close_the_answer_this_question_popup() throws Throwable {
+		 pdp_po.cilckOnCancel();
+	 }
+	//KER-1926 End CR-AKK
+	 
+	//KER-1937 Start CR-AKK	 
+	 @Then("^user to fill QuestionSummary \"(.*?)\" and Nickname \"(.*?)\" and Email \"(.*?)\"$")
+	 public void user_to_fill_QuestionSummary_and_Nickname_and_Email(String questionSumarry, String nickName, String email) throws Throwable {
+		 assertTrue(clickOnButton(pdp_po.btnAskQuestion));
+	     setInputText(pdp_po.inputQuestionSummary, questionSumarry);
+	     setInputText(pdp_po.inputNickname, nickName);
+	     setInputText(pdp_po.inputEmail, email);
+	     assertTrue(clickOnButton(pdp_po.btnChecbox));
+	 }
+
+	 @Then("^click on post question$")
+	 public void click_on_post_question() throws Throwable {
+		 assertTrue(clickOnButton(pdp_po.btnPostQuesdtion));
+	 }
+
+	 @Then("^verfiy the answer is helpful$")
+	 public void verfiy_the_answer_is_helpful() throws Throwable {
+		 assertTrue(isDisplayed(pdp_po.btnYes)); 
+		 assertTrue(isDisplayed(pdp_po.btnNo)); 
+	 }
+	//KER-1937 End CR-AKK
 
 }
 

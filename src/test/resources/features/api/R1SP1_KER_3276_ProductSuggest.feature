@@ -1,6 +1,6 @@
 Feature: To verify the Product Suggest API Services
 
-  @Regression @Sanity @All @api @KER-3276 @ZYP-6833
+  @Regression @Sanity @All @api @KER-3276 @ZYP-6833 @C-PDP
   Scenario Outline: : Verify Product Suggest for status code 200
     Given "<ProductSuggestUrl>" endpoint for Product Suggest
     Then Verify response status code as 200 for Product Suggest
@@ -9,7 +9,7 @@ Feature: To verify the Product Suggest API Services
       | ProductSuggestUrl            |
       | /api/search/productSuggestions/shirt |
 
-  @Regression @Sanity @All @api @KER-3276 @ZYP-6834
+  @Regression @Sanity @All @api @KER-3276 @ZYP-6834 @C-PDP
   Scenario Outline: : validate the Product Suggest json schema
     Given "<ProductSuggestUrl>" endpoint for Product Suggest
     And validate jsonSchema "KER_3276_ProductSuggestSchema" for Product Suggest
@@ -18,7 +18,7 @@ Feature: To verify the Product Suggest API Services
       | ProductSuggestUrl            |
       | /api/search/productSuggestions/shirt |
 
-  @Regression @Sanity @All @api @KER-3276 @ZYP-6835
+  @Regression @Sanity @All @api @KER-3276 @ZYP-6835 @C-PDP
   Scenario Outline: : Validate the Product Suggest with shirts Requried Property Values are not null
    Given "<ProductSuggestUrl>" endpoint for Product Suggest
     Then read the ProductsByCategory json response
@@ -41,7 +41,7 @@ Feature: To verify the Product Suggest API Services
       | ProductSuggestUrl                    | SearchProductText |
       | /api/search/productSuggestions/shirt | shirt             |
 
-  @Regression @Sanity @All @api @KER-3276 @ZYP-6836
+  @Regression @Sanity @All @api @KER-3276 @ZYP-6836 @C-PDP
   Scenario Outline: : Validate the Product Suggest with shoes Requried Property Values are not null
     Given "<ProductSuggestUrl>" endpoint for Product Suggest
     Then read the ProductsByCategory json response
@@ -64,7 +64,7 @@ Feature: To verify the Product Suggest API Services
       | ProductSuggestUrl                    | SearchProductText |
       | /api/search/productSuggestions/shoes | shoes             |
 
-  @Regression @Sanity @All @api @KER-3276 @ZYP-6837
+  @Regression @Sanity @All @api @KER-3276 @ZYP-6837 @C-PDP
   Scenario Outline: : Validate the Product Suggest with Nike Requried Property Values are not null
     Given "<ProductSuggestUrl>" endpoint for Product Suggest
     Then read the ProductsByCategory json response

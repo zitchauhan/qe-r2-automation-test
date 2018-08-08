@@ -1,6 +1,6 @@
 Feature: To verify all sorting options are available
 
-  @Sanity @Web @All @KER-615 @ZYP-2605 @Regression @PLP 
+  @1HR @Web @All @KER-615  @ZYP_K615-2605 @Regression @C-PLP 
     Scenario: Verify user is able to see all sorting option PLP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -15,7 +15,7 @@ Feature: To verify all sorting options are available
      |Best Selling|
      |New Arrivals|
      
-      @Web @All @KER-615 @ZYP-5603 @Regression @PLP 
+      @Web @All @KER-615  @ZYP_K615-5603 @Regression @C-PLP 
     Scenario: Verify user is able to see all sorting option CLP by navigation
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2
@@ -31,7 +31,7 @@ Feature: To verify all sorting options are available
      |New Arrivals|
      
        
-      @Web @All @KER-615 @ZYP-5605 @Regression @PLP 
+      @Web @All @KER-615  @ZYP_K615-5605 @Regression @C-PLP 
     Scenario Outline: Verify user is able to see all sorting option CLP by search
     Given user launches the browser and navigates to "ASO_HOME" page
     When user enters "<SearchTerm>" in the search box 

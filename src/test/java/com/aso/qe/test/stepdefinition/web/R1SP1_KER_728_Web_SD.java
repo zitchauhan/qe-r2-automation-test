@@ -46,18 +46,23 @@ public class R1SP1_KER_728_Web_SD extends CommonActionHelper{
 	public void User_clicks_on_ASO_Logo() throws Throwable{
 		if("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(globalElementHeader.imgAcademyLogoMobile)); 
-			
+			waitForPageLoad(driver);
+			Thread.sleep(5000);
 //			for(WebElement ele : globalElementHeader.academyLogoList){
 //				ele.click();
 //			}
 		}else {
 			assertTrue(clickOnButton(globalElementHeader.imgAcademyLogo));
+			waitForPageLoad(driver);
+			Thread.sleep(8000);
 		}
 	}
 
 	@Then("^User should be navigated to Home_Page$")
 	public void User_should_be_navigated_to_Home_Page() throws Throwable{
-		assertEquals("https://uat6www.academy.com/", getCurrentPageURL());
+		
+		String homePageCurrentURL=homeURL.replace("?debug=aso","");
+		assertEquals(homePageCurrentURL, getCurrentPageURL());
 	}
 
 }

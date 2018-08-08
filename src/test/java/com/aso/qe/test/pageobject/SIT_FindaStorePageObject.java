@@ -14,9 +14,9 @@ public class SIT_FindaStorePageObject extends CommonActionHelper{
 	@FindBy(xpath="//h2[@id='slModalTitle']//ancestor::div[@class='modal-content']") 
 	public WebElement ovly_FindStore;
 	
-	@FindBy(id="searchText") public WebElement ovly_searchTextBox;
-	@FindBy(id="slModalCloses") public WebElement ovly_btnCloseCross;
-	@FindBy(id="loadStores") public WebElement ovly_btnGO;
+	@FindBy(xpath="//*[@id='searchText']") public WebElement ovly_searchTextBox;
+	@FindBy(xpath="//*[@id='slModalCloses']") public WebElement ovly_btnCloseCross;
+	@FindBy(xpath="//*[@id='loadStores']") public WebElement ovly_btnGO;
 	
 	@FindBy(xpath="(//button[@class='z-btn z-btn-blue make-my-store'])[2]") public WebElement ovly_btnMakeMyStore_1;
 	

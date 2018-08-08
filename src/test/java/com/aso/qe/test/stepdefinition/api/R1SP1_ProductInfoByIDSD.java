@@ -13,7 +13,7 @@ public class R1SP1_ProductInfoByIDSD extends JSONValidationUtils
 	
 	@Given("^\"(.*?)\" endpoint with productId \"(.*?)\"$")
 	public void endpoint_with_productId(String endpoint, String ProductID) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.baseURL")+loadProps.getEndpointProProperty(endpoint)+ProductID;
+		String endpoints=apiEndpointIP+loadProps.getEndpointProProperty(endpoint)+ProductID;
 		initiateRestAPICall(endpoints);
 	
 	}

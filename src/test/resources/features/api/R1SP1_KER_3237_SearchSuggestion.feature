@@ -1,6 +1,6 @@
 Feature: To verify the Search Suggestion API Services
 
-  @Regression @Sanity @All @api @KER-3237 @ZYP-6777
+  @Regression @Sanity @All @api @KER-3237 @ZYP-6777 @C-SLR
   Scenario Outline: : Verify Search Suggestion for status code 200
     Given "<SearchSuggestionUrl>" endpoint for Search Suggestion
     Then Verify response status code as 200 for Search Suggestion
@@ -9,7 +9,7 @@ Feature: To verify the Search Suggestion API Services
       | SearchSuggestionUrl            |
       | /api/search/sitecontent/shirts |
 
-  @Regression @Sanity @All @api @KER-3237 @ZYP-6778
+  @Regression @Sanity @All @api @KER-3237 @ZYP-6778 @C-SLR
   Scenario Outline: : validate the Search Suggestion json schema
     Given "<SearchSuggestionUrl>" endpoint for Search Suggestion
     And validate jsonSchema "KER-3237-SearchSuggestion" for Search Suggestion
@@ -18,7 +18,7 @@ Feature: To verify the Search Suggestion API Services
       | SearchSuggestionUrl            |
       | /api/search/sitecontent/shirts |
 
-  @Regression @Sanity @All @api @KER-3237 @ZYP-6779
+  @Regression @Sanity @All @api @KER-3237 @ZYP-6779 @C-SLR
   Scenario Outline: : Validate the Search with shirts Suggestion Requried Property Values are not null
     Given "<SearchSuggestionUrl>" endpoint for Search Suggestion
     Then Read the Search Suggestion json response
@@ -32,7 +32,7 @@ Feature: To verify the Search Suggestion API Services
       | SearchSuggestionUrl            | suggestionType     | SuggestionText |
       | /api/search/sitecontent/shirts | categorysuggestion | shirts         |
 
-  @Regression @Sanity @All @api @KER-3237 @ZYP-6780
+  @Regression @Sanity @All @api @KER-3237 @ZYP-6780 @C-SLR
   Scenario Outline: : Validate the Search with shoes Suggestion Requried Property Values are not null
     Given "<SearchSuggestionUrl>" endpoint for Search Suggestion
     Then Read the Search Suggestion json response
@@ -46,7 +46,7 @@ Feature: To verify the Search Suggestion API Services
       | SearchSuggestionUrl           | suggestionType     | SuggestionText |
       | /api/search/sitecontent/shoes | categorysuggestion | shoes          |
 
-  @Regression @Sanity @All @api @KER-3237 @ZYP-6781
+  @Regression @Sanity @All @api @KER-3237 @ZYP-6781 @C-SLR
   Scenario Outline: : Validate the Search with nike brand Suggestion Requried Property Values are not null
     Given "<SearchSuggestionUrl>" endpoint for Search Suggestion
     Then Read the Search Suggestion json response

@@ -1,8 +1,10 @@
 package com.aso.qe.test.stepdefinition.web;
 
-import static org.testng.Assert.assertTrue;
+import static org.junit.Assert.assertTrue;
+
 
 import org.apache.log4j.Logger;
+
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -23,11 +25,19 @@ public class SD_SIT_AddtoWishList extends CommonActionHelper {
 			assertTrue(clickOnButton(WishlistPo.lnkaddtowishlist));
 		}
 		
+		@Then("^user click on MyAccount link$")
+		public void user_click_on_MyAccount_link() throws Throwable {
+			globalElementHeader.clickMyAccountDropDown();
+		}
+		
 		@Then("^user click on WishList link$")
 		public void user_click_on_WishList_link() throws Throwable {
-			globalElementHeader.clickOnWishListsFromMyAccount();
+						
+			
+				globalElementHeader.clickOnWishListsFromMyAccount();
+			
 		}
-
+		 
 		@Then("^user should verify the WishList page and create new Wishlist$")
 		public void user_should_verify_the_WishList_page_and_create_new_Wishlist() throws Throwable {
 			assertTrue(clickOnButton(WishlistPo.btnNewWishlist));
@@ -71,9 +81,9 @@ public class SD_SIT_AddtoWishList extends CommonActionHelper {
 		public void user_should_create_a_WishList() throws Throwable {
 			WishlistPo.txtcreatenewwishlist.sendKeys("Mywish");
 			assertTrue(clickOnButton(WishlistPo.btncreatenewwishlist));
-			assertTrue(clickOnButton(WishlistPo.lnkaddtowishlist));
-			assertTrue(clickOnButton(WishlistPo.lnkaddtowishlist));
-			assertTrue(isDisplayed(WishlistPo.txtcreatedwishlist));
+//			assertTrue(clickOnButton(WishlistPo.lnkaddtowishlist));
+//			assertTrue(clickOnButton(WishlistPo.lnkaddtowishlist));
+//			assertTrue(isDisplayed(WishlistPo.txtcreatedwishlist));
 			
 		}
 

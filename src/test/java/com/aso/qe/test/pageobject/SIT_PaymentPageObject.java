@@ -17,8 +17,6 @@ GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver,
 	
 	@FindBy(xpath="//h2[text()='Payment Method']") public WebElement payment;
 	@FindBy(xpath="//*[@id=\"coPaymentMethodCC\"]") public WebElement rdbntcreditcard;
-	@FindBy(xpath="//*[@id='applyGCToggle']") public WebElement bntApplyGiftcard;
-	@FindBy(xpath="//*[@id='coPaymentMethodPayPal']") public WebElement rdbntpaypal;
 	@FindBy(xpath="//input[@id='creditCardInput']") public WebElement cardnumber;
 	@FindBy(xpath="//input[@id='expInput']") public WebElement expiration;
 	@FindBy(xpath="//input[@id='CVVInput']") public WebElement cvv;
@@ -39,8 +37,7 @@ GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver,
 		}
 	}
 	public void validatecreditcarddetails() throws Exception {
-			assertTrue(isDisplayed(bntApplyGiftcard));
-			assertTrue(isDisplayed(rdbntpaypal));
+
 			assertTrue(isSelected(rdbntcreditcard));
 			//assertTrue(clickOnRadioButton(rdbntcreditcard));
 						

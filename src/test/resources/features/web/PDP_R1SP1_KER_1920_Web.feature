@@ -1,6 +1,6 @@
 Feature: To Verify the Add To Cart Functionality
 
-  @Regression @PDP @Web @All @KER-1920 @ZYP-5269 @Rerun
+  @Regression @C-PDP @Web @All @KER-1920 @ZYP_K1920-5269 @Rerun 
   Scenario: Verify the Add To Cart functionality
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -8,7 +8,7 @@ Feature: To Verify the Add To Cart Functionality
     Then user click on Add to cart button
     Then User closes the web application
 
-  @Regression @Sanity @PDP @Web @All @KER-1920 @ZYP-5263 @Rerun
+  @Regression @Sanity @C-PDP @Web @All @KER-1920 @ZYP_K1920-5263 @Rerun @1HR
   Scenario: Verify the view cart functionality
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -17,7 +17,7 @@ Feature: To Verify the Add To Cart Functionality
     And user click on view cart button
     Then User closes the web application
 
-  @Regression  @PDP @Web @All @KER-1920 @ZYP-5260 @Rerun
+  @Regression  @C-PDP @Web @All @KER-1920 @ZYP_K1920-5260 @Rerun
   Scenario: Verify the checkout functionality
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP

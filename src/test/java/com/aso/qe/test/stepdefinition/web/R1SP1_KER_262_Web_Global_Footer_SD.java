@@ -16,7 +16,8 @@ public class R1SP1_KER_262_Web_Global_Footer_SD extends CommonActionHelper{
 
 	@Then("^User will click on expand button$")
 	public void user_will_click_on_expand_button() throws Throwable {
-		//scrollPageToWebElement(globalElementHeader.expandall_Academy_academy);
+	//	scrollPageToWebElement(globalElementHeader.scrollingForFooterExpanding);
+		Thread.sleep(3000);
 		globalElementHeader.clickexpandall_academy();
 
 
@@ -31,7 +32,6 @@ public class R1SP1_KER_262_Web_Global_Footer_SD extends CommonActionHelper{
 	@Then("^User will verify the presence of Careers$")
 	public void user_will_verify_the_presence_of_Careers() throws Throwable {
 		globalElementHeader.validatingCareers();
-
 
 	}
 	@Then("^User will verify the presence of Press Room$")
@@ -50,7 +50,6 @@ public class R1SP1_KER_262_Web_Global_Footer_SD extends CommonActionHelper{
 	@Then("^User will verify the presence of Check Order$")
 	public void user_will_verify_the_presence_of_Check_Order() throws Throwable {
 		scrollPageToWebElement(globalElementHeader.expandall_Academy);
-		//globalElementHeader.va
 		globalElementHeader.validatingCheckOrder();
 
 
@@ -148,7 +147,7 @@ public class R1SP1_KER_262_Web_Global_Footer_SD extends CommonActionHelper{
 	
 	@Then("^User will click on expand button for services$")
 	public void user_will_click_on_expand_button_for_services() throws Throwable {
-		//scrollPageToWebElement(globalElementHeader.expandall_Academy_services);
+
 		globalElementHeader.clickexpandall_services();
 
 
@@ -156,9 +155,12 @@ public class R1SP1_KER_262_Web_Global_Footer_SD extends CommonActionHelper{
 	
 	@Then("^User will click on expand button for needhelp$")
 	public void user_will_click_on_expand_button_for_needhelp() throws Throwable {
-		//scrollPageToWebElement(globalElementHeader.expandall_Academy_needhelp);
+
 		globalElementHeader.clickexpandall_needhelp();
-
-
+	}
+	
+	@Then("^Scroll till footer of the page$")
+	public void Scroll_till_footer_of_the_page() throws Throwable {
+		scrollPageToWebElement(globalElementHeader.preFooterScroll);
 	}
 }

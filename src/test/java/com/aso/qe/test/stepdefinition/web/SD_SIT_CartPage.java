@@ -52,7 +52,14 @@ public class SD_SIT_CartPage extends CommonActionHelper
 
             	@Then("^user click on cart icon and verify the cart page$")
             	public void user_click_on_cart_icon_and_verify_the_cart_page() throws Throwable {
-            		assertTrue(clickOnButton(globalElementHeader.iconcart));
+            		if("mobile".equalsIgnoreCase(testtype)){
+            			assertTrue(clickOnButton(globalElementHeader.iconcart_m));
+            			
+            		}else {
+            			assertTrue(clickOnButton(globalElementHeader.iconcart));
+            			
+            		}
+            		
             	}
 
 

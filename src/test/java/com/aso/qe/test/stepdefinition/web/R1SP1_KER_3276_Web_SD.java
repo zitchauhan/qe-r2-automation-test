@@ -1,8 +1,6 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -28,9 +26,9 @@ public class R1SP1_KER_3276_Web_SD extends CommonActionHelper {
 	}*/
 	@Then("^user verifies the title of search results of 6 product card$")
 	public void user_verifies_the_title_of_search_of_6_product_card() throws Throwable {
-		waitForElement(globalElementHeader.characterSearhTitle);
-		assertTrue(isDisplayed(globalElementHeader.characterSearhTitle));
-		List<WebElement> countproduct = driver.findElements(By.xpath("(//div[@class='row mt-1 justify-content-center']/div)"));
+//		waitForElement(globalElementHeader.characterSearhTitle);
+//		assertTrue(isDisplayed(globalElementHeader.characterSearhTitle));
+		List<WebElement> countproduct = driver.findElements(By.xpath("//*[contains(@class,'search-visual-guided-suggestions')]/*"));
 		String sizeofCount = ""+countproduct.size();
 		assertEquals(sizeofCount,"6");
 		

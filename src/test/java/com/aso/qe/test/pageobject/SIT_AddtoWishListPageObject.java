@@ -21,8 +21,8 @@ public class SIT_AddtoWishListPageObject extends CommonActionHelper{
 	@FindBy(xpath="//h2[@id='deletewishListModalTitle']") public  WebElement tltDeletewishlist;
 	@FindBy(xpath="//input[@id='delete_save']") public  WebElement btndelete;
 	@FindBy(xpath="//button[@id='delete_cancel']") public  WebElement btndeletecancel;
-	@FindBy(xpath="//div[text()='Create a New Wish List']/../../..//tr[2]/td/input") public  WebElement txtcreatenewwishlist;
-	@FindBy(xpath="//button[@data-auid='btnwishListPopover_createList']") public  WebElement btncreatenewwishlist;
+	@FindBy(xpath="//div[text()='Create a New Wish List']/../../..//tr[2]/td/input | //div[text()='Create a New Wish List']/../input") public  WebElement txtcreatenewwishlist;
+	@FindBy(xpath="//button[@data-auid='btnwishListPopover_createList'] | //button[@data-auid='btnwishListPopover_createList_m'] ") public  WebElement btncreatenewwishlist;
 	@FindBy(xpath="//div[contains(text(),'Choose your list')]/following::ul/li") public  WebElement txtcreatedwishlist;
 	
 	

@@ -9,13 +9,19 @@ import com.aso.qe.framework.common.CommonActionHelper;
 
 public class ShoppingCartViewPO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(ShoppingCartViewPO.class);
-	@FindBy(xpath="//div[@class='col-1 a-pad-right0 a-text-right a-pos-inherit']//a[@data_auid='mini_cart']") WebElement cartIcon;
+	//@FindBy(xpath="//div[@class='col-1 a-pad-right0 a-text-right a-pos-inherit']//a[@data_auid='mini_cart']") WebElement cartIcon;/RKA 25 JuLY
+	@FindBy(xpath="(//a[@aria-label='mini cart icon'])[1]") public WebElement cartIcon;
+	
 	@FindBy(xpath="//h1[contains(text(),'Your Shopping Cart is Empty')]") WebElement cartEmptyTxt;
 	@FindBy(xpath="//.[@class='cont-shop-link']") WebElement continueShoppingLink;
 	@FindBy(xpath="//div[@class='cartitem-row-outer']") public WebElement secProductInCart;
-	@FindBy(xpath="//span[@id='rh-cart-count']")
-	public WebElement txtMinicartCount;
+	//@FindBy(xpath="//span[@id='rh-cart-count']")	public WebElement txtMinicartCount;/RKA 25 July
+    @FindBy(xpath="//*[@data-auid='miniCart']/*/following-sibling::*")public WebElement txtMinicartCount;
 
+   //KER 725
+	@FindBy(xpath="//*[@data-auid='miniCart_m']")public WebElement cartIcon_M;
+	
+	
 	public void clickOnCartIcon() throws Exception{
 
 		if(isDisplayed(cartIcon)) {

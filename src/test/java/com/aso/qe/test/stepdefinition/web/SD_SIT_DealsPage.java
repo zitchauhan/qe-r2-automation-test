@@ -1,6 +1,8 @@
 package com.aso.qe.test.stepdefinition.web;
 
-import static org.testng.Assert.assertTrue;
+import static org.junit.Assert.assertTrue;
+
+
 
 import org.openqa.selenium.support.PageFactory;
 
@@ -18,8 +20,12 @@ SIT_DealsPageObject DealsPo= PageFactory.initElements(driver, SIT_DealsPageObjec
 
 @Then("^User will click on Deals Link$")
 public void user_will_click_on_Deals_Link() throws Throwable {
+	if("mobile".equalsIgnoreCase(testtype)){
+		assertTrue(clickOnButton(globalElementHeader.btnDEALS_m));
+	}else{
+		assertTrue(clickOnButton(globalElementHeader.btnDEALS));
+	}
 	
-	assertTrue(clickOnButton(globalElementHeader.btnDEALS));
     
 }
 

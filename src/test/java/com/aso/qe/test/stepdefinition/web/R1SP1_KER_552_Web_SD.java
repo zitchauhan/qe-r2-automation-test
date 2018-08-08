@@ -33,7 +33,7 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 		//searchProductPO.expandFacetDrawer(searchProductPO.filterPricePlusBtnMobile);
 		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Color_CheckBox_ListMobile, arg1);
 		}else {
-		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_brand_CheckBox_List, arg1);
+		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_List, arg1);
 	}
 	}
 	
@@ -44,7 +44,7 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 		//searchProductPO.expandFacetDrawer(searchProductPO.filterPricePlusBtnMobile);
 		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_ListMobile, arg1);
 		}else {
-		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_brand_CheckBox_List, arg1);
+		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_List, arg1);
 	}
 	}
 
@@ -114,7 +114,7 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 		if("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(searchProductPO.selectAllUnselectFacetCheckBox(searchProductPO.facet_Price_CheckBox_ListMobile));
 		}else{
-			assertTrue(searchProductPO.selectAllUnselectFacetCheckBox(searchProductPO.facet_brand_CheckBox_List));
+			assertTrue(searchProductPO.selectAllUnselectFacetCheckBox(searchProductPO.facet_Price_CheckBox_List));
 		}
 		
 	}
@@ -122,7 +122,7 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 	@Then("^User should be able to see the selected PRICE filter Options in selected state$")
 	public void user_should_be_able_to_see_the_selected_PRICE_filter_Options_in_selected_state() throws Throwable {
 		assertTrue(Common_Web_SD.searchProductPO.isPriceOptionSelected());
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	}
 
 	@When("^User deselects multiple PRICE filter Options$")
@@ -131,7 +131,7 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 		if("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(searchProductPO.selectAllUnselectFacetCheckBox(searchProductPO.facet_Price_CheckBox_ListMobile));
 		}else{
-			assertTrue(searchProductPO.selectAllUnselectFacetCheckBox(searchProductPO.facet_brand_CheckBox_List));
+			assertTrue(searchProductPO.selectAllUnselectFacetCheckBox(searchProductPO.facet_Price_CheckBox_List));
 		}
 	}
 
@@ -238,7 +238,7 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 
 	@Given("^User expands \"(.*?)\"$")
 	public void user_expands(String arg1) throws Throwable {
-		searchProductPO.clickexpandFilterOption1(searchProductPO.facet_brand_CheckBox_List, arg1);
+		searchProductPO.clickexpandFilterOption1(searchProductPO.facet_Price_CheckBox_List, arg1);
 
 	}
 
@@ -250,12 +250,12 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 
 	@Then("^Verify all the price filters have checkbox product count should be gatherthan zero$")
 	public void verify_all_the_price_filters_have_checkbox_product_count_should_be_gatherthan_zero() throws Throwable {
-		assertTrue(searchProductPO.checkboxProductCount(searchProductPO.facet_brand_CheckBox_List));
+		assertTrue(searchProductPO.checkboxProductCount(searchProductPO.facet_Price_CheckBox_List));
 	}
 	
 	@Then("^Verify the price filters product count with checkboxs product count should be equal$")
 	public void verify_the_price_filters_product_count_with_checkboxs_product_count_should_be_equal() throws Throwable {
-		int filterCheckBoxsProductCount = searchProductPO.getFilterCheckBoxsProductCount(searchProductPO.facet_brand_CheckBox_List);
+		int filterCheckBoxsProductCount = searchProductPO.getFilterCheckBoxsProductCount(searchProductPO.facet_Price_CheckBox_List);
 		int facetProductCount = searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
 		logger.debug(filterCheckBoxsProductCount+"::ProductCountMatch::"+facetProductCount);
 		assertEquals(filterCheckBoxsProductCount, facetProductCount);
@@ -265,6 +265,7 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 	@And("^User Click on apply filter button$")
 	public void User_clicks_on_the_filter_ApplyBtn() throws Throwable{
 		assertTrue(clickOnButton(Common_Web_SD.searchProductPO.applyFilterfacet_containerMobile));
+		Thread.sleep(2000);
 		waitForPageLoad(getDriver());
 	}
 	@And ("^user scroll till filter flyout$")

@@ -1,6 +1,6 @@
 Feature: To Verify the functionality of "ASO - Logo" in the Global Header
 
-  @Mobile @All @Sanity  @HomePage  @Regression @KER-728 @ZYP-2811 @Rerun
+  @Mobile @All @1HR  @C-HP  @Regression @KER-728  @ZYP_K728-2811 @Rerun
   Scenario: As a user I want to navigate to Home page from PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -12,7 +12,7 @@ Feature: To Verify the functionality of "ASO - Logo" in the Global Header
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-  @Mobile @All @Sanity @Regression  @HomePage @KER-728 @ZYP-5618
+  @Mobile @All  @Regression  @C-HP @KER-728  @ZYP_K728-5618
   Scenario: As a user I want to navigate to Home page from PLP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -21,7 +21,7 @@ Feature: To Verify the functionality of "ASO - Logo" in the Global Header
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-  @Mobile @All  @Sanity  @Regression  @HomePage @KER-728 @ZYP-5619
+  @Mobile @All    @Regression  @C-HP @KER-728  @ZYP_K728-5619
   Scenario: As a user I want to navigate to Home page from CLP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -31,7 +31,7 @@ Feature: To Verify the functionality of "ASO - Logo" in the Global Header
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-  @Mobile @All   @Sanity @Regression  @HomePage @KER-728 @ZYP-5620
+  @Mobile @All    @Regression  @C-HP @KER-728  @ZYP_K728-5620
   Scenario: As a user I want to navigate to Home page from L1
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L1
@@ -40,7 +40,7 @@ Feature: To Verify the functionality of "ASO - Logo" in the Global Header
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-  @Mobile @All @Sanity @Regression  @HomePage @KER-728 @ZYP-2850
+  @Mobile @All @1HR @Regression  @C-HP @KER-728  @ZYP_K728-2850
   Scenario: As a user I want to navigate to Home page from Everypage
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User is able to see the ASO_Logo

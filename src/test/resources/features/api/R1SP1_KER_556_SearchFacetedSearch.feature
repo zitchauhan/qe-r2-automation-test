@@ -1,6 +1,6 @@
 Feature: To verify the Search Faceted Search API Services
 
-  @Regression @Sanity @All @api @KER-556 @ZYP-6900
+  @Regression @Sanity @All @api @KER-556 @ZYP-6900 @C-SLR
   Scenario Outline: : Verify Search Faceted Search for status code 200
     Given "<FacetedSearchUrl>" endpoint for Search Faceted Search
     Then Verify response status code as 200 for Search Faceted Search
@@ -9,7 +9,7 @@ Feature: To verify the Search Faceted Search API Services
       | FacetedSearchUrl                                                                                                                                          |
       | Faceted.Search.Url |
 
-  @Regression @Sanity @All @api @KER-556 @ZYP-6901
+  @Regression @Sanity @All @api @KER-556 @ZYP-6901 @C-SLR
   Scenario Outline: : validate the Search Faceted Search json schema
     Given "<FacetedSearchUrl>" endpoint for Search Faceted Search
     And validate jsonSchema "KER_556_SearchFacetedSearch" for Search Faceted Search
@@ -18,7 +18,7 @@ Feature: To verify the Search Faceted Search API Services
       | FacetedSearchUrl                                                                                                                                          |
       | Faceted.Search.Url |
 
-  @Regression @Sanity @All @api @KER-556 @ZYP-6902
+  @Regression @Sanity @All @api @KER-556 @ZYP-6902 @C-SLR
   Scenario Outline: : Validate the Search Faceted Search with Mens Clothing Requried Property Values are not null
     Given "<FacetedSearchUrl>" endpoint for Search Faceted Search
     Then read the ProductsByCategory json response

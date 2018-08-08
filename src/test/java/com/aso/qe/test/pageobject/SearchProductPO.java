@@ -15,228 +15,109 @@ import com.aso.qe.test.stepdefinition.web.Common_Web_SD;
 public class SearchProductPO extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(SearchProductPO.class);
 
-	@FindBy(xpath="//input[@placeholder='Search']") 
-	public static WebElement searchTextBox;
-
-	@FindBy(xpath="//h4[@data-auid='filtersTitle']") 
-	public WebElement filtersTitle;
-	
-	@FindBy(xpath="(//input[@placeholder='Search'])[2]") 
-	public static WebElement searchTextBoxMobile;
-
-	@FindBy(xpath="//span[contains(text(),'Filters')]") //"//H4[@data-auid='filtersTitle']") 
-	public WebElement filterTitleBtn;
-
-	//@FindBy(xpath="(//span[contains(@class,'academyicon icon-search icon a-search-icon')])[1]") 
-	@FindBy(xpath="//button[@data-auid='submitSearchButton']")
-	public static WebElement submitGOBtn;
-
-	@FindBy(xpath="//button[@data-auid='submitSearchButton_m']") 
-	public static WebElement submitGOBtnMobile;
-
-	@FindBy(xpath="//a[@title='Close Message']") 
-	public WebElement popupCloseBtn;
-
-	@FindBy(xpath="//div[@data-auid='shopByCategory_11']") 
-	public WebElement btnBuyNowHeroImage;
-
-	@FindBy(id="catalogEntry_img756331") 
-	public WebElement img_men_pant;
-
-
-	@FindBy(xpath="//div[contains(@data-auid,'facetdrawer_drawer_Category')]//i[@class='academyicon icon-minus']")
-	public WebElement txtCategoryFacetOpen;
-	
-	@FindBy(xpath="//div[contains(@data-auid,'facetdrawer_drawer_Category_m')]//i[@class='academyicon icon-minus']")
-	public WebElement txtCategoryFacetOpenMobile;
-	
+	@FindBy(xpath="//*[@data-auid='search-input']") public static WebElement searchTextBox;
+	@FindBy(xpath="//*[@data-auid='search-input_m']") public static WebElement searchTextBoxMobile;
+	@FindBy(xpath="//span[contains(text(),'Filters')]")public WebElement filterTitleBtn;	
+	@FindBy(xpath="//*[@data-auid='search-clear-button']/span | //*[@data-auid='submitSearchButton']")public static WebElement submitGOBtn;
+	@FindBy(xpath="//*[@data-auid='search-clear-button_m']") public static WebElement submitGOBtnMobile;
+	@FindBy(xpath="//a[@title='Close Message']") public WebElement popupCloseBtn;
+    @FindBy(xpath="//*[@data-auid='shopByCategory_11']") public WebElement btnBuyNowHeroImage;
+	@FindBy(xpath="//*[@id='catalogEntry_img756331']") public WebElement img_men_pant;
+	@FindBy(xpath="//*[contains(@data-auid,'facetdrawer_drawer_Category')]//i[@class='academyicon icon-minus']")public WebElement txtCategoryFacetOpen;
+	@FindBy(xpath="//*[contains(@data-auid,'facetdrawer_drawer_Category_m')]//i[@class='academyicon icon-minus']")	public WebElement txtCategoryFacetOpenMobile;
 	@FindBys( {
 		@FindBy(xpath="//div[@class='selectedfacet-container']")
-	} )
-	public List<WebElement> selectedfacet_containerList;
-
-	@FindBy(xpath="//button[contains(text(),'Clear All')]")
-	public WebElement clearAllfacet_containerMobile;
-
-	@FindBy(xpath="//button[contains(text(),'Apply')]")
-	public WebElement applyFilterfacet_containerMobile;
-
-	@FindBy(xpath="//div[starts-with(@id, 'offerPrice_')]") 
-	public WebElement productPrice;
-
+	} ) public List<WebElement> selectedfacet_containerList;
+	@FindBy(xpath="//*[contains(text(),'Clear All')]")public WebElement clearAllfacet_containerMobile;
+	@FindBy(xpath="//*[contains(text(),'Apply')]")public WebElement applyFilterfacet_containerMobile;
+	@FindBy(xpath="//div[starts-with(@id, 'offerPrice_')]") public WebElement productPrice;
 	@FindBys( {
-		@FindBy(xpath="//div[@class='css-13vdsd2']//following-sibling::span")//div[@data-auid='product-listing']//*")//div[@data-auid='product-listing']")
+		@FindBy(xpath="//div[@class='css-13vdsd2']//following-sibling::span")
 	} )
 	public List<WebElement> productPriceList;
-
 	@FindBys( {
 		@FindBy(xpath="//a[contains(@data-auid,'productCard_')]")
 	} )
 	public List<WebElement> productList;
-	//================================================
-
-	@FindBy(xpath="(//div[@data-auid='facetdrawer_drawer_Brand'])[2]")
-	public WebElement brandBtn;
-
-	@FindBy(xpath="//label[@for='-10026583736783']")
-	public WebElement brandCheckBoxASICS;
+	@FindBy(xpath="(//*[@data-auid='facetdrawer_drawer_Brand'])[2]")public WebElement brandBtn;
+	@FindBy(xpath="//label[@for='-10026583736783']")public WebElement brandCheckBoxASICS;
 	@FindBys( {
-		@FindBy(xpath="//div[@class='product-grid-container col-12']")//"//section[@id='facet_price']/ul/li")
+		@FindBy(xpath="//*[@class='product-grid-container col-12']")//"//section[@id='facet_price']/ul/li")
 	} )
 	public List<WebElement> facet_Brand_Names_List;
-
-
-	@FindBy(xpath="//div[@data-auid='facetdrawer_drawer_Brand']//i")
-	public WebElement filterBrandPlusBtn;
-
-	//========================PRICE Filter Start=========
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand']//i")	public WebElement filterBrandPlusBtn;
 	@FindBys( {
-		@FindBy(xpath="//ul[@class='filter-list-item']")//"//section[@id='facet_price']/ul/li")
+		@FindBy(xpath="//ul[@class='filter-list-item']")
 	} )
 	public List<WebElement> facet_price_CheckBox_List;
-
-	@FindBys({ @FindBy(xpath="//div[@data-auid='facetdrawer_drawer_Price_m']//li")
-	})	public List<WebElement> facet_Price_CheckBox_ListMobile;
-	
-	@FindBys({ @FindBy(xpath="//div[@data-auid='facetdrawer_drawer_Color_m']//li")
-	})	public List<WebElement> facet_Color_CheckBox_ListMobile;
-	
-	@FindBys({ @FindBy(xpath="//div[@data-auid='facetdrawer_drawer_Price']//li")
-	})	public List<WebElement> facet_brand_CheckBox_List;
-
-	@FindBy(xpath="//div[@data-auid='facetdrawer_drawer_Color']//i")
-	public WebElement filterColorPlusBtn;
-
-	@FindBy(xpath="//div[@data-auid='facetdrawer_drawer_Price']//i")
-	public WebElement filterPricePlusBtn;
-
-	@FindBy(xpath="//div[@data-auid='facetdrawer_drawer_Price_m']//span")
-	public WebElement filterPriceBtn;
-
-	@FindBy(xpath="//span[@data-facet-id='1000349']") 
-	public WebElement priceCheckBoxUnder10;
-	@FindBy(xpath="//span[@id='counter_1000349']") 
-	public WebElement priceCheckBoxUnder10Count;
-
-
-	@FindBy(xpath="//span[contains(text(),'$10 - $19.99')]")//"//span[@data-facet-id='1000350']") 
-	public WebElement priceCheckBoxFrom10to20;
-
-	@FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/section[1]/div[1]/div[7]/div[1]/section[1]/div[2]/div[1]/div[3]/div[2]/ul[1]/li[2]/label[1]/span[2]") //"//span[@id='counter_1000350']") 
-	public WebElement priceCheckBoxFrom10to20Count;
-
-	@FindBy(xpath="//span[@data-facet-id='1000351']") 
-	public WebElement priceCheckBoxFrom20to50;
-
-	@FindBy(xpath="//span[@data-facet-id='1000352']") 
-	public WebElement priceCheckBoxFrom100to200;
-	//========================PRICE Filter END=========
-
-	//========================GENDER Filter Start=========
-	@FindBy(xpath="//section[@id='facet_gender']//button[@type='button']") 
-	public WebElement genderBtn;
-
-	@FindBy(xpath="//span[@data-facet-id='-187376510011710811611539']") 
-	public WebElement genderFilterAdults;
-
-	@FindBy(xpath="//span[@id='counter_-187376510011710811611539']") 
-	public WebElement genderFilterAdultsCount;
-
-
-	//========================GENDER Filter END=========
-
-
-	@FindBy(xpath="//section[@id='facet_color']//button[@type='button']") 
-	public WebElement colorBtn;
-	@FindBy(xpath="//span[@data-facet-id='-3716661089799107']") 
-	public WebElement blackColour;
-	@FindBy(xpath="//span[@id='counter_-3716661089799107']") 
-	public WebElement blackColourProductCount;
-
-
+	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price_m']//ul")
+	})	public List<WebElement> facet_Price_CheckBox_ListMobile;	
+	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color_m']//ul")
+	})	public List<WebElement> facet_Color_CheckBox_ListMobile;	
+	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']//ul")
+	})	public List<WebElement> facet_Price_CheckBox_List;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color']//i")	public WebElement filterColorPlusBtn;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']//i")	public WebElement filterPricePlusBtn;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price_m']//span")	public WebElement filterPriceBtn;
+	@FindBy(xpath="//span[@data-facet-id='1000349']") 	public WebElement priceCheckBoxUnder10;
+	@FindBy(xpath="//span[@id='counter_1000349']") 	public WebElement priceCheckBoxUnder10Count;
+	@FindBy(xpath="//span[contains(text(),'$10 - $19.99')]")public WebElement priceCheckBoxFrom10to20;
+	@FindBy(xpath="/html[1]/body[1]/div[1]/div[1]/section[1]/div[1]/div[7]/div[1]/section[1]/div[2]/div[1]/div[3]/div[2]/ul[1]/li[2]/label[1]/span[2]")public WebElement priceCheckBoxFrom10to20Count;
+	@FindBy(xpath="//span[@data-facet-id='1000351']") public WebElement priceCheckBoxFrom20to50;
+	@FindBy(xpath="//span[@data-facet-id='1000352']") public WebElement priceCheckBoxFrom100to200;
+	@FindBy(xpath="//section[@id='facet_gender']//button[@type='button']") public WebElement genderBtn;
+	@FindBy(xpath="//span[@data-facet-id='-187376510011710811611539']") public WebElement genderFilterAdults;
+	@FindBy(xpath="//span[@id='counter_-187376510011710811611539']") public WebElement genderFilterAdultsCount;
+	@FindBy(xpath="//section[@id='facet_color']//button[@type='button']") public WebElement colorBtn;
+	@FindBy(xpath="//span[@data-facet-id='-3716661089799107']") public WebElement blackColour;
+	@FindBy(xpath="//span[@id='counter_-3716661089799107']") public WebElement blackColourProductCount;
 	@FindBys( {
 		@FindBy(xpath="//i[@class='academyicon icon-plus']")
 	} )
 	public List<WebElement> filterIconPlusList;
-
-
 	@FindBys( {
 		@FindBy(xpath="//i[@class='academyicon icon-minus']")
 	} )
 	public List<WebElement> filterIconMinusList;
-
-
 	@FindBys( {
 		@FindBy(xpath="//ui[@class='filter-list-item']")
 	} )
 	public List<WebElement> chkbox_price;
-
-
 	@FindBys( {
-		@FindBy(xpath="//div[@data-auid='facetdrawer_drawer_Price_m']//i[@class='academyicon icon-checkbox-active'] | //div[@data-auid='facetdrawer_drawer_Price']//i[@class='academyicon icon-checkbox-active']")
+		@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price_m']//label[contains(@class,'icon-checkbox-active')] | //*[@data-auid='facetdrawer_drawer_Price']//*[contains(@class,'checkbox-active')]")
 	} )
 	public List<WebElement> chkbox_price_selected;
-
-
 	@FindBys( {
-		@FindBy(xpath="//div[@data-auid='facetdrawer_drawer_Price_m']//i[@class='academyicon icon-checkbox-inactive']|//div[@data-auid='facetdrawer_drawer_Price']//i[@class='academyicon icon-checkbox-inactive']")
+		@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price_m']//label[contains(@class,'icon-checkbox-inactive')]|//*[@data-auid='facetdrawer_drawer_Price']//*[contains(@class,'checkbox-inactive')]")
 	} )
 	public List<WebElement> chkbox_price_deselected;
-
-
-	@FindBy(xpath="//li[@data-auid='drawer_$20 - $49.99']") public WebElement chkbox_PriceOption1;
-	@FindBy(xpath="//li[@data-auid='drawer_$50 - $99.99']") public WebElement chkbox_PriceOption2;
-	@FindBy(xpath="//li[@data-auid='drawer_$100 - $199.99']") public WebElement chkbox_PriceOption3;
-
-
-
+	@FindBy(xpath="//*[@data-auid='drawer_$20 - $49.99']") public WebElement chkbox_PriceOption1;
+	@FindBy(xpath="//*[@data-auid='drawer_$50 - $99.99']") public WebElement chkbox_PriceOption2;
+	@FindBy(xpath="//*[@data-auid='drawer_$100 - $199.99']") public WebElement chkbox_PriceOption3;
 	@FindBy(xpath="(//i[@class='academyicon icon-checkbox-active'])[1]") public WebElement 	chkbox_PriceOption1_Selected;
 	@FindBy(xpath="(//i[@class='academyicon icon-checkbox-active'])[2]") public WebElement 	chkbox_PriceOption2_Selected;
 	@FindBy(xpath="(//i[@class='academyicon icon-checkbox-active'])[1]") public WebElement 	chkbox_PriceOption3_Selected;
-
-
 	@FindBy(xpath="(//i[@class='academyicon icon-checkbox-inactive'])[1]") public WebElement chkbox_PriceOption1_deSelected;
 	@FindBy(xpath="(//i[@class='academyicon icon-checkbox-inactive'])[2]") public WebElement chkbox_PriceOption2_deSelected;
 	@FindBy(xpath="(//i[@class='academyicon icon-checkbox-inactive'])[1]") public WebElement chkbox_PriceOption3_deSelected;
-
-	@FindBy(xpath="//div[@data-auid='facetdrawerdrawer_-1000']") public WebElement chkbox_RelatedCategories;
-
-	//=======================================================================
+	@FindBy(xpath="//*[@data-auid='facetdrawerdrawer_-1000']") public WebElement chkbox_RelatedCategories;
 	@FindBy(xpath="//span[contains(text(),'Filters')]") public WebElement btnFilterFlyoutMobile;
-
-	@FindBy(xpath="(//div[@data-component='heroImage'])[2]") public WebElement imgHero_CLP;
-
+	@FindBy(xpath="//*[@data-auid='shopByCategory_tiles']") public WebElement imgHero_CLP;
 	@FindBys( {
-		@FindBy(xpath="//div[@data-auid='facetsModalContent_m']//div[contains(@data-auid,'facetdrawer_')]//i[contains(@class,'academyicon icon-plus')]")
+		@FindBy(xpath="//*[@data-auid='facetsModalContent_m']//div[contains(@data-auid,'facetdrawer_')]//i[contains(@class,'academyicon icon-plus')]")
 	} )
 	public List<WebElement> filterIconPlusListMobile;
-
 	@FindBys( {
-		@FindBy(xpath="//div[@data-auid='facetsModalContent_m']//div[contains(@data-auid,'facetdrawer_')]//i[contains(@class,'academyicon icon-minus')]")
+		@FindBy(xpath="//*[@data-auid='facetsModalContent_m']//div[contains(@data-auid,'facetdrawer_')]//i[contains(@class,'academyicon icon-minus')]")
 	} )
 	public List<WebElement> filterIconMinusListMobile;
-
-	@FindBy(xpath="//div[@data-auid='facetdrawer_drawer_Price_m']//i[@class='academyicon icon-plus']")
-	public WebElement filterPricePlusBtnMobile;
-
-	@FindBy(xpath="//span[contains(text(),'CATEGORY')]//ancestor::div[contains(@data-auid,'facetdrawerdrawer')]")
-	public WebElement filterCategoryPlusBtnMobile;
-
-	@FindBy(xpath="//div[@data-auid='facetdrawer_drawer_Brand_m']//i[@class='academyicon icon-plus']")
-	public WebElement filterBrandPlusBtnMobile;
-
-
-	@FindBy(xpath="//div[@data-auid='facetdrawer_drawer_Color_m']//i[@class='academyicon icon-plus']")
-	public WebElement filterColorPlusBtnMobile;
-
-	@FindBy(xpath="(//div[@data-auid='facetdrawer_drawer_Color_m']")
-	public WebElement filterColorBtnMobile;
-	//========================== Colour filter END
-
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price_m']//i[@class='academyicon icon-plus']")public WebElement filterPricePlusBtnMobile;
+	@FindBy(xpath="//span[contains(text(),'CATEGORY')]//ancestor::div[contains(@data-auid,'facetdrawerdrawer')]")public WebElement filterCategoryPlusBtnMobile;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand_m']//i[@class='academyicon icon-plus']")public WebElement filterBrandPlusBtnMobile;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color_m']//i[@class='academyicon icon-plus']")public WebElement filterColorPlusBtnMobile;
+	@FindBy(xpath="(//*[@data-auid='facetdrawer_drawer_Color_m']")	public WebElement filterColorBtnMobile;
 	@FindBy(xpath="(//p[contains(text(),'Red')])[1]") public WebElement productname;
 	@FindBy(xpath="(//p[contains(text(),'Red')])[1]") public WebElement productname_mobile;
-
-
 	@FindBy(xpath="(//div[@class='row mt-1 justify-content-center']/div)") public WebElement countProductCardSuggestion; //ProductCount 
 
 	public boolean checkLoadedProductsPrices(int min, int max){
@@ -440,7 +321,7 @@ public class SearchProductPO extends CommonActionHelper{
 
 	public boolean clickAllPlusFilterOptions() throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(100);
 		if("mobile".equalsIgnoreCase(testtype)) {
 			boolean flag = false;
 			for(WebElement plusElement: filterIconPlusListMobile) {
@@ -471,7 +352,7 @@ public class SearchProductPO extends CommonActionHelper{
 
 
 	public boolean checkAllfilterOptionsExpandedIsDisplayed() throws InterruptedException
-	{ Thread.sleep(2000);
+	{ Thread.sleep(100);
 		
 		if("mobile".equalsIgnoreCase(testtype)) {
 
@@ -583,6 +464,7 @@ public class SearchProductPO extends CommonActionHelper{
 		for(WebElement element: facet_price_CheckBox_List){
 			String checkBoxTxt = element.getText();
 			logger.debug("Text::"+checkBoxTxt);
+			//clickOnButton(element);
 			if(!clickOnButton(element)){
 				flag = false;
 				break;
@@ -702,7 +584,7 @@ public class SearchProductPO extends CommonActionHelper{
 
 
 	public boolean isPriceOptionSelected() throws InterruptedException  
-	{ Thread.sleep(2000);
+	{ Thread.sleep(1000);
 		boolean flag = false;
 		for(WebElement element: chkbox_price_selected) {
 			flag =isDisplayed(element);
@@ -724,7 +606,7 @@ public class SearchProductPO extends CommonActionHelper{
 
 
 	public boolean isPriceOptionDeSelected() throws InterruptedException  
-	{ Thread.sleep(2000);
+	{ Thread.sleep(1000);
 		boolean flag = false;
 		for(WebElement element: chkbox_price_deselected) {
 			flag =isDisplayed(element);

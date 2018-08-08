@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 
 import com.aso.qe.framework.api.helpers.JSONValidationUtils;
 import com.aso.qe.framework.api.helpers.MiniCartJsonResponseHelper;
+import com.aso.qe.test.common.CommonTestHelper;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -19,7 +20,7 @@ public class R1SP1_KER_3524_AddToCart extends JSONValidationUtils{
 	@Given("^\"(.*?)\" and post request \"(.*?)\" endpoint for Add to Cart with Sign-in user \"(.*?)\"\"(.*?)\"$")
 	public void endpoint_for_Add_to_Cart_with_Sign_in_user(String url, String requestJson, String userName, String password) throws Throwable {
 		List<io.restassured.http.Cookie> restAssuredCookies = new R1SP1_KER_725_MiniCartSD().getSignInUserCookies(userName, password);
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+url;
+		String endpoints=CommonTestHelper.getAPIEndpointWebURL(apiEndpointWebURL)+url;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithCookies(endpoints, restAssuredCookies,requestJson);
 	}
@@ -43,9 +44,9 @@ public class R1SP1_KER_3524_AddToCart extends JSONValidationUtils{
 	@Given("^\"(.*?)\" and post request \"(.*?)\" endpoint for Update to Cart with Sign-in user \"(.*?)\"\"(.*?)\"$")
 	public void and_post_request_endpoint_for_Update_to_Cart_with_Sign_in_user(String url, String requestJson, String userName, String password) throws Throwable {
 		List<io.restassured.http.Cookie> restAssuredCookies = new R1SP1_KER_725_MiniCartSD().getSignInUserCookies(userName, password);
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+url;
+		String endpoints=CommonTestHelper.getAPIEndpointWebURL(apiEndpointWebURL)+url;
 		logger.debug("END Point URL:"+endpoints);
-		initiateRestPutAPICallWithCookies(endpoints, restAssuredCookies,requestJson);
+		initiateRestPostAPICallWithCookies(endpoints, restAssuredCookies,requestJson);
 	}
 
 	@Then("^Verify response status code as (\\d+) for Update to Cart$")

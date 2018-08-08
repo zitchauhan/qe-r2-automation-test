@@ -35,14 +35,23 @@ public class R1SP1_KER_615_Web_SD extends CommonActionHelper{
 
 	@Then("^user able to see all sorting options after clicking on sort by filter$")
 	public void user_able_to_see_all_sorting_options_after_clicking_on_sort_by_filter(List<String> object) throws Throwable {
-		assertTrue(clickOnButton(PLP_PO.drpdwnSortBy));
-		Thread.sleep(3000);
+		if("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(PLP_PO.drpdwnSortByScrollMobile));
+			Thread.sleep(1000);
+			for(String str: object) {
+				Thread.sleep(300);
+				String xpath ="//div[@data-auid='sort_by_M']//option[contains(text(),'"+str+"')]"; 
+				assertTrue(isDisplayed(getfindElementByXPath(xpath)));
+			}
+		}else {
+		
 		Actions hover = new Actions(getDriver());
 		 hover.moveToElement(PLP_PO.drpdwnSortBy).build().perform();
+		 assertTrue(clickOnButton(PLP_PO.drpdwnSortBy));
 		for(String str: object) {
-			Thread.sleep(300);
-			String xpath ="//div[@class='Select-menu-outer']//div[text()='"+str+"']"; 
+			String xpath ="//*[@data-auid='sort_by']//*[text()='"+str+"']"; 
 			assertTrue(isDisplayed(getfindElementByXPath(xpath)));
+		}
 		}
 
 	}

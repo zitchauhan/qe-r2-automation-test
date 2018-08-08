@@ -15,7 +15,7 @@ public class R1SP1_KER_1926_InventorySpecification extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint for Inventory Specification$")
 	public void endpoint_for_Inventory_Specification(String url) throws Throwable {
 		logger.debug("");
-		initiateRestAPICall(loadProps.getConfigPropProperty("api.baseURL")+url);
+		initiateRestAPICall(apiEndpointIP+url);
 	}
 
 	@Then("^Verify response status code as (\\d+) for Inventory Specification$")
@@ -31,7 +31,7 @@ public class R1SP1_KER_1926_InventorySpecification extends JSONValidationUtils{
 	
 	@Given("^\"(.*?)\" endpoint for Inventory Store Specification$")
 	public void endpoint_for_Inventory_Store_Specification(String url) throws Throwable {
-		initiateRestAPICall(loadProps.getConfigPropProperty("api.baseURL")+url);
+		initiateRestAPICall(apiEndpointIP+url);
 	}
 
 	@Then("^Verify response status code as (\\d+) for Inventory Store Specification$")
@@ -46,7 +46,7 @@ public class R1SP1_KER_1926_InventorySpecification extends JSONValidationUtils{
 	
 	@Given("^\"(.*?)\" endpoint for Inventory Product Store Specification$")
 	public void endpoint_for_Inventory_Product_Store_Specification(String url) throws Throwable {
-		initiateRestAPICall(loadProps.getConfigPropProperty("api.baseURL")+url);
+		initiateRestAPICall(apiEndpointIP+url);
 	}
 
 	@Then("^Verify response status code as (\\d+) for Inventory Product Store Specification$")

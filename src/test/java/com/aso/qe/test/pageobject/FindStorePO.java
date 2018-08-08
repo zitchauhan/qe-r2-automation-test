@@ -10,34 +10,17 @@ import com.aso.qe.framework.common.CommonActionHelper;
 public class FindStorePO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(FindStorePO.class);
 
-	// @FindBy(xpath="//h2[@id='slModalTitle']//ancestor::div[@class='modal-content']")
-	@FindBy(xpath = "//*[contains(text(),'Find a Store')]")
-	public WebElement ovly_FindStore;
 
-	@FindBy(xpath = "//input[@placeholder='Enter Zip Code or City, State']")
-	public WebElement ovly_searchTextBox;
-	@FindBy(xpath = "//button[@data-auid='find-a-store-modal-close']/span")
-	public WebElement ovly_btnCloseCross;
-	@FindBy(xpath = "//a[@data-auid='submit-zip-code']/span")
-	public WebElement ovly_btnGO;
-
-	@FindBy(xpath = "(//button[@aria-label='Make My Store'])[1]")
-	public WebElement ovly_btnMakeMyStore_1;
-
-	@FindBy(xpath = "//input[@placeholder='Enter Zip Code or City, State']/../../../../following-sibling::div[1]/div/div/h6")
-	public WebElement ovly_secStore;
-
-	@FindBy(xpath = "(//div[@data-auid='find-a-store-modal'])[2]/div[3]/div/div[text()='0 Stores were found within 250 miles of your search']")
-	public WebElement txtNoStoreText;
-
-	@FindBy(xpath = "//button[@data-auid='find-a-store-modal-close']")
-	public WebElement ovly_btnCloseContainer;
-
-	@FindBy(xpath = "//a[@data-auid='findAStore']/span[2]")
-	public WebElement txtStroeText;
-
-	@FindBy(xpath = "//a[@data-auid='findAStore_m']/span[2]")
-	public WebElement txtStroeText_m;
+	@FindBy(xpath = "//*[contains(text(), 'Find a Store')]")public WebElement ovly_FindStore;
+	@FindBy(xpath = "//input[@placeholder='Enter Zip Code or City, State']")public WebElement ovly_searchTextBox;
+	@FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']/span")public WebElement ovly_btnCloseCross;
+	@FindBy(xpath = "//*[@data-auid='submit-zip-code']/span")public WebElement ovly_btnGO;
+    @FindBy(xpath = "(//button[@aria-label='Make My Store'])[1]")public WebElement ovly_btnMakeMyStore_1;
+	@FindBy(xpath = "//input[@placeholder='Enter Zip Code or City, State']/../../../../following-sibling::div[1]/div/div/h6")	public WebElement ovly_secStore;
+	@FindBy(xpath = "(//div[@data-auid='find-a-store-modal'])[2]/div[3]/div/div[text()='0 Stores were found within 250 miles of your search']")public WebElement txtNoStoreText;
+    @FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']")public WebElement ovly_btnCloseContainer;
+	@FindBy(xpath = "//*[@data-auid='findAStore']/span[2]")public WebElement txtStroeText;
+	@FindBy(xpath = "//*[@data-auid='findAStore_m']/span[2]")public WebElement txtStroeText_m;
 
 	public FindStorePO(WebDriver webDriver) {
 		super();

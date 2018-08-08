@@ -1,9 +1,15 @@
 package com.aso.qe.test.stepdefinition.web;
-import static org.junit.Assert.assertTrue;
+//import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertTrue;
+
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.web.helpers.ASOBrokenURLsLinks;
 import com.aso.qe.test.pageobject.FindStorePO;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.SearchProductPO;
@@ -15,39 +21,23 @@ public class Common_Web_SD extends CommonActionHelper{
 	public FindStorePO findStorePO;
 	public static GlobalElementHeader_HomePO globalElementHeader;
 	public static SearchProductPO searchProductPO;
-	@Given("^User launches the browser and navigates to Home page$")
-	public void user_launches_the_browser_and_navigates_to_ASO_page() throws Throwable
-	{
-		logger.debug("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& loading WebDriver");
-		initializeDriver();
-		homeURL = webPropHelper.getConfigPropProperty("ASO");
-		logger.debug("Open Chrome browser with URL::"+homeURL);
-		logger.debug("HomeURL:: "+homeURL);
-		driver.get(homeURL);
-		//openBaseURL("ASO");//webPropHelper.getConfigPropProperty("ASO"));
-		findStorePO= PageFactory.initElements(driver, FindStorePO.class);
-		globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
-		searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);
-		//logger.debug("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HOME Page Cart isDisplayed::"+isDisplayed(globalElementHeader.homePageCart));
-	}
+
+	
 
 
 	@Given("^user launches the browser and navigates to \"(.*?)\" page$")
 	public void user_launches_the_browser_and_navigates_to_page(String url) throws Throwable {
 		initializeDriver();
-//		if("mobile".equalsIgnoreCase(testtype)) {
-//			logger.debug("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Mobile Launched ");
-//		}else{
-//			getDriver().manage().window().setSize(new Dimension(1400,1500));	
-//		}
-
-
-		if(url.equalsIgnoreCase("https://uat6www.academy.com/?debug=aso")) {
-			openBaseURL(url);
-		}else {
-		openBaseURL("ASO");
-		openBaseURL(url);
+		if("mobile".equalsIgnoreCase(testtype)) {
+			logger.debug("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Mobile Launched ");
 		}
+		else
+		{
+			getDriver().manage().window().setSize(new Dimension(1500,1700));	
+		}
+		openBaseURL(url);
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		waitForPageLoad(driver);
 		findStorePO= PageFactory.initElements(driver, FindStorePO.class);
 		globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 		searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);
@@ -72,7 +62,13 @@ public class Common_Web_SD extends CommonActionHelper{
 
 	@Then("^User clicks on the burger menu$")
 	public void User_clicks_on_the_burger_menu() throws Throwable {
+		if(isDisplayed(globalElementHeader.btnBurgerMenu)) {
+		Thread.sleep(2000);
 		assertTrue(clickOnButton(globalElementHeader.btnBurgerMenu));
+		Thread.sleep(1000);}
+		else {
+			driver.navigate().refresh();
+		}
 	}
 
 	@Then("^User clicks on the filter option$")
@@ -92,8 +88,11 @@ public class Common_Web_SD extends CommonActionHelper{
 		}
 		else
 		{
+			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
+			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
+			Thread.sleep(2000);
 		}
 
 
@@ -108,13 +107,16 @@ public class Common_Web_SD extends CommonActionHelper{
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader. txtToNavigateMensBurgerMenuMobile));
 			Thread.sleep(2000);
-			
-		} else{
 
+		} else{
+			Thread.sleep(3000);
 			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
+			Thread.sleep(2000);
 			Actions hover = new Actions(getDriver());
 			hover.moveToElement(globalElementHeader.btnClothingCategory).build().perform();
-			assertTrue(clickOnButton(globalElementHeader.btnMens_Clothing_Shop));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(globalElementHeader.btnMen_Clothing_Shop));
+			Thread.sleep(2000);
 		}
 
 	}
@@ -128,13 +130,16 @@ public class Common_Web_SD extends CommonActionHelper{
 			assertTrue(clickOnButton(globalElementHeader.btnMen_Clothing_Shop));
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.btnMensShirt_Men_Clothing_Shop));
-			Thread.sleep(4000);
-			
+			Thread.sleep(2000);
+
 		}else{
+			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
 			Actions hover = new Actions(getDriver());
 			hover.moveToElement(globalElementHeader.btnClothingCategory).build().perform();
+			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.btnMensShirt_Men_Clothing_Shop));
+			Thread.sleep(2000);
 		}
 
 	}
@@ -147,5 +152,10 @@ public class Common_Web_SD extends CommonActionHelper{
 	@Then("^User should be able to see BreadCrumb on L1 Page$")
 	public void user_should_be_able_to_see_BreadCrumb_on_L1_Page() throws Throwable {
 
+	}
+	
+	@Then("^verfy all link url's status code is (\\d+)$")
+	public void verfy_all_link_url_s_status_code_is(int arg1) throws Throwable {
+		assertTrue(new ASOBrokenURLsLinks().getBrokenLinks(), ASOBrokenURLsLinks.errorText);
 	}
 }

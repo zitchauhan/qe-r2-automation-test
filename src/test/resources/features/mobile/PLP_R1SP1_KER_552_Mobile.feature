@@ -1,6 +1,6 @@
 Feature: To Verify user is be able to filter the products based on Price Ranges
 
-  @Sanity @Regression @PLP  @Mobile @All @KER-552 @ZYP-2894 @Rerun
+  @1HR @Regression @C-PLP  @Mobile @All @KER-552  @ZYP_K552-2894 @Rerun
   Scenario: Verify user is able to expand/collapse filter options
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -11,7 +11,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be able to see all Filter Options as collapsed
     Then User closes the web application
 
-  @Regression @Mobile  @PLP @All @KER-552 @ZYP-2899  @Sanity @Rerun
+  @Regression @Mobile  @C-PLP @All @KER-552  @ZYP_K552-2899  @1HR @Rerun
   Scenario: Verify As a User I should be able to select/deselect multiple price values
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -23,7 +23,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be able to see the deselected PRICE filter Options in deselected state
     Then User closes the web application
 
-  @Regression @Mobile @PLP  @All @KER-552 @ZYP-2904 @Rerun
+  @Regression @Mobile @C-PLP  @All @KER-552  @ZYP_K552-2904 @Rerun
   Scenario Outline: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -42,7 +42,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | price          |
       | $100 - $199.99 |
 
-  @Regression @Mobile  @PLP @All @KER-552 @ZYP-2901 @Rerun
+  @Regression @Mobile  @C-PLP @All @KER-552  @ZYP_K552-2901 @Rerun
   Scenario Outline: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -58,7 +58,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | price        |
       | $10 - $19.99 |
 
-  @Regression @Mobile @PLP  @All @KER-552 @ZYP-3997 @Rerun
+  @Regression @Mobile @C-PLP  @All @KER-552  @ZYP_K552-3997 @Rerun
   Scenario Outline: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -74,7 +74,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | search_Value | price          |
       | Nike Shoes   | $100 - $199.99 |
 
-  @Regression @Mobile @PLP  @All @KER-552 @ZYP-3995  @Sanity @Rerun 
+  @Regression @Mobile @C-PLP  @All @KER-552  @ZYP_K552-3995  @1HR @Rerun 
   Scenario Outline: As a customer I should also be able to see how many items will populate within each price value prior to selecting it
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -91,7 +91,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | $10 - $19.99 |
 
  
- @Regression @Mobile  @PLP @All @KER-552 @ZYP-6138 @Rerun
+ @Regression @Mobile  @C-PLP @All @KER-552  @ZYP_K552-6138 @Rerun
   Scenario: Verify user is able to expand/collapse filter options
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -104,7 +104,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be able to see all Filter Options as collapsed
     Then User closes the web application
 
-  @Regression @Mobile @PLP  @All @KER-552 @ZYP-6140 @Rerun
+  @Regression @Mobile @C-PLP  @All @KER-552  @ZYP_K552-6140 @Rerun
   Scenario: Verify As a User I should be able to select/deselect multiple price values
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -119,7 +119,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be able to see the deselected PRICE filter Options in deselected state
     Then User closes the web application
 
-  @Regression @Mobile  @PLP @All @KER-552 @ZYP-6142  @Sanity  @Rerun
+  @Regression @Mobile  @C-PLP @All @KER-552  @ZYP_K552-6142  @1HR  @Rerun
   Scenario Outline: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -138,7 +138,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | price        |
       | $10 - $19.99 |
 
-  @Regression @Mobile  @PLP @All @KER-552 @ZYP-6144 @Rerun
+  @Regression @Mobile  @C-PLP @All @KER-552  @ZYP_K552-6144 @Rerun
   Scenario Outline: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -156,7 +156,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | search_Value | price          |
       | Nike Shoe   | $100 - $199.99 |
 
-  @Regression @Mobile @PLP  @All @KER-552 @ZYP-6146  @Sanity  @Rerun
+  @Regression @Mobile @C-PLP  @All @KER-552  @ZYP_K552-6146  @1HR  @Rerun
   Scenario Outline: As a customer I should also be able to see how many items will populate within each price value prior to selecting it
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -176,7 +176,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | $10 - $19.99 |
 
 
-  @Regression @Mobile  @PLP @All @KER-552 @ZYP-6139  @Sanity @Rerun
+  @Regression @Mobile  @C-PLP @All @KER-552  @ZYP_K552-6139  @1HR @Rerun
   Scenario Outline: Verify user is able to expand/collapse filter options in Search Page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
     When user enters "<SearchTerm>" in the search box
@@ -191,7 +191,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | SearchTerm |
       | Nike Shoe |
 
-  @Regression @Mobile  @PLP @All @KER-552 @ZYP-6141 @Rerun
+  @Regression @Mobile  @C-PLP @All @KER-552  @ZYP_K552-6141 @Rerun
   Scenario Outline: Verify As a User I should be able to select/deselect multiple price values in Search Page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
     When user enters "<SearchTerm>" in the search box
@@ -207,7 +207,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | SearchTerm |
       | Nike Shoe |
 
-  @Regression @Mobile  @PLP @All @KER-552 @ZYP-6143 @Rerun
+  @Regression @Mobile  @C-PLP @All @KER-552  @ZYP_K552-6143 @Rerun
   Scenario Outline: Verify user is able to filter by price for search in Search Page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
     When user enters "<SearchTerm>" in the search box
@@ -223,7 +223,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | SearchTerm |  | price        |
       | Nike Shoe |  | $10 - $19.99 |
 
-  @Regression @Mobile @PLP  @All @KER-552 @ZYP-6145 @Rerun
+  @Regression @Mobile @C-PLP  @All @KER-552  @ZYP_K552-6145 @Rerun
   Scenario Outline: Verify user is able to filter by price for search in Search Page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
     #    When User enters in Required_Product with "<search_Value>" and click on Go button
@@ -238,7 +238,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | SearchTerm |  | search_Value | price          |
       | Nike Shoe |  | Nike Shoes   | $100 - $199.99 |
 
-  @Regression @Mobile @PLP  @All @KER-552 @ZYP-6147 @Rerun
+  @Regression @Mobile @C-PLP  @All @KER-552  @ZYP_K552-6147 @Rerun
   Scenario Outline: As a customer I should also be able to see how many items will populate within each price value prior to selecting it in Search Page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
     When user enters "<SearchTerm>" in the search box

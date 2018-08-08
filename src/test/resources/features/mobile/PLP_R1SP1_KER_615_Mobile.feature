@@ -1,6 +1,6 @@
 Feature: To verify all sorting options are available
 
-  @Mobile @PLP @All @KER-615 @ZYP-4749 @Regression @Sanity @Rerun
+  @Mobile @C-PLP @All @KER-615  @ZYP_K615-4749 @Regression @1HR @Rerun
     Scenario: Verify user is able to see all sorting option
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -15,7 +15,7 @@ Feature: To verify all sorting options are available
      |Best Selling|
      |New Arrivals|
   
-   @Mobile  @PLP @All @KER-615 @ZYP-5604 @Regression @Rerun
+   @Mobile  @C-PLP @All @KER-615  @ZYP_K615-5604 @Regression @Rerun
     Scenario: Verify user is able to see all sorting option CLP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -32,7 +32,7 @@ Feature: To verify all sorting options are available
      |New Arrivals|
      
        
-      @Mobile  @PLP @All @KER-615 @ZYP-5606 @Regression @Rerun
+      @Mobile  @C-PLP @All @KER-615  @ZYP_K615-5606 @Regression @Rerun
     Scenario Outline: Verify user is able to see all sorting option CLP by search
     Given user launches the browser and navigates to "ASO_HOME" page
     When user enters "<SearchTerm>" in the search box 

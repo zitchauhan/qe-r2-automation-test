@@ -14,6 +14,7 @@ public class SD_SIT_SearchFilter extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(SD_SIT_SearchFilter.class);
 	SearchProductPO searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);
 
+
 	@Then("^Verify the selected filtered products \"(.*?)\"\"(.*?)\"are displayed in product grid$")
 	public void verify_the_selected_filtered_products_are_displayed_in_product_grid(String price, String color) throws Throwable {
 
@@ -30,6 +31,7 @@ public class SD_SIT_SearchFilter extends CommonActionHelper{
 			searchProductPO.checkedselectedfacet_containerClearAll(searchProductPO.selectedfacet_containerList);	
 		}
 	}
+
 
 }
 

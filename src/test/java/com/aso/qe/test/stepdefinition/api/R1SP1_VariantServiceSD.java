@@ -15,7 +15,7 @@ public class R1SP1_VariantServiceSD extends JSONValidationUtils
 	
 	@Given("^\"(.*?)\" endpoint with SEO \"(.*?)\"$")
 	public void endpoint_with_SEO(String endpoint, String SEO_Name_Category) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.baseURL")+loadProps.getEndpointProProperty(endpoint)+SEO_Name_Category;
+		String endpoints=apiEndpointIP+loadProps.getEndpointProProperty(endpoint)+SEO_Name_Category;
 		logger.debug("endpoints URL::"+endpoints);
 		initiateRestAPICall(endpoints);
 	

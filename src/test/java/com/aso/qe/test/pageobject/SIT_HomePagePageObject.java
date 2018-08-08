@@ -31,11 +31,11 @@ public class SIT_HomePagePageObject extends CommonActionHelper {
 	@FindBy(xpath="//a[@data-auid='HP_FC_Anchor_2']/h6")public WebElement prdTileFeaturedCategory;
 
 	@FindBy(xpath="//div[@class='col-4 sc-product-card'][2]")public static WebElement ShopCollectionProductcard;
-	@FindBy(xpath="//div/button[@data-auid='btnbtn1']")public static WebElement ShopCollectionCTA;
-	@FindBy(xpath="//a[@id='catalogEntry_img3418544']")public static WebElement ShopCollectionL3;
+	@FindBy(xpath="//*[@data-auid='btnbtn1']")public static WebElement ShopCollectionCTA;
 	
 	//@FindBy(xpath="//div[text()='Clearance']//following-sibling::img")public static WebElement BestSellerproduct;
 	
+	@FindBy(xpath="//*[contains(@data-auid,'data-auiddata-auid')]/div/div[2]")public static WebElement ShopCollectionL3;
 	public int getCategoryTileCount(WebElement categoryTileCount){
 		int tileCount = 0;
 		try{

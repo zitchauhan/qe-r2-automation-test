@@ -1,6 +1,6 @@
 Feature: Product Variant Service
 
-  @api @Regression @Sanity @All @KER-262 @ZYP-3076
+  @api @Regression @Sanity @All @KER-262 @ZYP-3076 @C-CLP
   Scenario Outline: : Verify status code 200 for success scenario for category SEO_Name
     Given "CategoryVariant" endpoint with SEO "<SEO_Name_Category>"
     Then Verify response status code as 200
@@ -9,7 +9,7 @@ Feature: Product Variant Service
       | SEO_Name_Category |
       | apparel           |
 
-  @api @Regression @Sanity @All @KER-262 @ZYP-5358
+  @api @Regression @Sanity @All @KER-262 @ZYP-5358 @C-CLP
   Scenario Outline: : Validate Category SEO_Name json schema
     Given "CategoryVariant" endpoint with SEO "<SEO_Name_Category>"
     And validate jsonSchema "KER-262-CategoryVariantSchema" with jsonResponse
@@ -40,7 +40,7 @@ Feature: Product Variant Service
       #| SEO_Name_Product                                    |
       #| magellan-outdoors-womens-laguna-madre-fishing-shirt |
 
-  @api @Regression @Sanity @All @KER-262 @ZYP-5361
+  @api @Regression @Sanity @All @KER-262 @ZYP-5361 @C-CLP
   Scenario Outline: : Validate ProductVariant json Schema
     Given "ProductVariant" endpoint with SEO "<SEO_Name_Product>"
     And validate jsonSchema "KER-262-ProductVariantSchema" with jsonResponse

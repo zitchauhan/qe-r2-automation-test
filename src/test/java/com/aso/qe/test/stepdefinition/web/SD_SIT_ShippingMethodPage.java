@@ -1,13 +1,10 @@
 package com.aso.qe.test.stepdefinition.web;
 
-import static org.testng.Assert.assertTrue;
-
-import org.openqa.selenium.support.PageFactory;
-
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.SIT_ReviewPageObject;
 import com.aso.qe.test.pageobject.SIT_ShippingMethodPageObject;
-
+import static org.testng.Assert.assertTrue;
+import org.openqa.selenium.support.PageFactory;
 import cucumber.api.java.en.Then;
 
 public class SD_SIT_ShippingMethodPage extends CommonActionHelper{
@@ -28,7 +25,6 @@ public class SD_SIT_ShippingMethodPage extends CommonActionHelper{
 	@Then("^user should able to verify the shipping address$")
 	public void user_should_able_to_verify_the_shipping_address() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		Thread.sleep(2000);
 		shippingmethod.verifyShippingaddress();
 	}
 	
