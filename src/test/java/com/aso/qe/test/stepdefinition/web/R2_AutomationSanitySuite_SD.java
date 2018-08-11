@@ -9,7 +9,8 @@ import com.aso.qe.test.pageobject.SearchProductPO;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class R2_WebAutomationSanitySuite_SD extends CommonActionHelper{
+public class R2_AutomationSanitySuite_SD extends CommonActionHelper 
+{
 	
 	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 	public SearchProductPO searchProductPO =  PageFactory.initElements(driver, SearchProductPO.class);
