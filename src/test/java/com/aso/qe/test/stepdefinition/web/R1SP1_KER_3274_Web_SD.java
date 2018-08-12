@@ -20,7 +20,7 @@ public class R1SP1_KER_3274_Web_SD extends CommonActionHelper{
 	
 	@Then("^User enter the search \"(.*?)\"$")
 	public void User_enter_the_search(String str) throws Throwable {
-		globalElementHeader.entertheSearchData("Goolf");
+		globalElementHeader.entertheSearchData(str);
 
 	}
 	

@@ -23,8 +23,9 @@ GlobalElementHeader_HomePO g_hp=PageFactory.initElements(getDriver(), GlobalElem
 	
 	@Then("^User to navigate to bottom$")
 	public void user_to_navigate_to_bottom() throws Throwable {
-	   
+		Thread.sleep(3000);
 		scrollPageToWebElement(g_hp.iconfacebook);	
+		Thread.sleep(1000);
 		
 	}
 	@Then("^verify Auto scroll$")

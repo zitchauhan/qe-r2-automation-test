@@ -16,8 +16,7 @@ public class R1SP1_KER_262_Web_Global_Footer_SD extends CommonActionHelper{
 
 	@Then("^User will click on expand button$")
 	public void user_will_click_on_expand_button() throws Throwable {
-	//	scrollPageToWebElement(globalElementHeader.scrollingForFooterExpanding);
-		Thread.sleep(3000);
+		scrollPageToWebElement(globalElementHeader.scrollingForFooterExpanding);
 		globalElementHeader.clickexpandall_academy();
 
 
@@ -41,9 +40,9 @@ public class R1SP1_KER_262_Web_Global_Footer_SD extends CommonActionHelper{
 
 	}
 
-	@Then("^User will verify the presence of Giving Back$")
-	public void user_will_verify_the_presence_of_Giving_Back() throws Throwable {
-		globalElementHeader.validatingGivingBack();
+	@Then("^User will verify the presence of Investors$")
+	public void User_will_verify_the_presence_of_Investors() throws Throwable {
+		globalElementHeader.validatingInvestors();
 
 
 	}
@@ -74,7 +73,7 @@ public class R1SP1_KER_262_Web_Global_Footer_SD extends CommonActionHelper{
 	}
 	@Then("^User will verify the presence of Contact Us$")
 	public void user_will_verify_the_presence_of_Contact_Us() throws Throwable {
-		globalElementHeader.validatingContactUs();
+	//	globalElementHeader.validatingContactUs();
 
 
 	}

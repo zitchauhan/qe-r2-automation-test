@@ -50,12 +50,13 @@ public class SearchProductPO extends CommonActionHelper{
 		@FindBy(xpath="//ul[@class='filter-list-item']")
 	} )
 	public List<WebElement> facet_price_CheckBox_List;
-	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price_m']//ul")
+	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price_m']//ul/li")
 	})	public List<WebElement> facet_Price_CheckBox_ListMobile;	
 	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color_m']//ul")
 	})	public List<WebElement> facet_Color_CheckBox_ListMobile;	
-	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']//ul")
-	})	public List<WebElement> facet_Price_CheckBox_List;
+	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']//ul/li")
+
+    })     public List<WebElement> facet_Price_CheckBox_List; //SID 8-August-18
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color']//i")	public WebElement filterColorPlusBtn;
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']//i")	public WebElement filterPricePlusBtn;
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price_m']//span")	public WebElement filterPriceBtn;

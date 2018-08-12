@@ -1,13 +1,13 @@
 Feature: To Verify the functionality of "Weekly Ad Link" in the Global Header.
 
-  @Mobile @All @1HR @Regression @C-HP @KER-729  @ZYP_K729-1970
+  @Mobile @All @Regression @C-HP @KER-729  @ZYP_HP_K729-1970
   Scenario: Verify presence of weekly ad link in the header on Home page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User should be able to see Weekly Ad link
     Then User closes the web application
 
-  @Mobile @All @Regression  @C-HP @KER-729  @ZYP_K729-2814
+  @Mobile @All @Regression  @C-HP @KER-729  @ZYP_HP_K729-2814
   Scenario: Verify presence of weekly ad link in the header on PLP page
     Given user launches the browser and navigates to "ASO_HOME" page
      Then User navigates till PLP
@@ -15,7 +15,7 @@ Feature: To Verify the functionality of "Weekly Ad Link" in the Global Header.
     And User should be able to see Weekly Ad link
     Then User closes the web application
 
-  @Mobile @All  @1HR @Regression @C-HP  @KER-729  @ZYP_K729-5626
+  @Mobile @All @1HR  @Regression @C-HP  @KER-729  @ZYP_HP_K729-5626
   Scenario Outline: Verify presence of weekly ad link in the header on PLP page by search Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
     When user enters "<SearchTerm>" in the search box
@@ -27,7 +27,7 @@ Feature: To Verify the functionality of "Weekly Ad Link" in the Global Header.
       | SearchTerm |
       | Nike Shoe |
 
-  @Mobile @All @Regression @C-HP  @KER-729  @ZYP_K729-5627
+  @Mobile @All @Regression @C-HP  @KER-729  @ZYP_HP_K729-5627
   Scenario: Verify presence of weekly ad link in the header on L1 page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L1
@@ -35,7 +35,7 @@ Feature: To Verify the functionality of "Weekly Ad Link" in the Global Header.
     And User should be able to see Weekly Ad link
     Then User closes the web application
 
-  @Mobile @All @Regression @C-HP  @KER-729  @ZYP_K729-5628
+  @Mobile @All @Regression @C-HP  @KER-729  @ZYP_HP_K729-5628
   Scenario: Verify presence of weekly ad link in the header on CLP page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -44,7 +44,7 @@ Feature: To Verify the functionality of "Weekly Ad Link" in the Global Header.
     And User should be able to see Weekly Ad link
     Then User closes the web application
 
-  @Mobile @All @Regression  @C-HP @KER-729  @ZYP_K729-5629
+  @Mobile @All @Regression  @C-HP @KER-729  @ZYP_HP_K729-5629
   Scenario: Verify presence of weekly ad link in the header on PDP page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

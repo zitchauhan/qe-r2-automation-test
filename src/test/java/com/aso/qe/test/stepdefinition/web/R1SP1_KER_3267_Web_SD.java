@@ -25,7 +25,7 @@ public class R1SP1_KER_3267_Web_SD extends CommonActionHelper {
 
 	@Then("^User enter the invalid SKU search \"(.*?)\"$")
 	public void User_enter_the_invalid_SKU_search(String str) throws Throwable {
-		globalElementHeader.entertheSearchData("1111111111");
+		globalElementHeader.entertheSearchData(str);
 
 	}
 
@@ -34,9 +34,17 @@ public class R1SP1_KER_3267_Web_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(pdp_po.txtProductSKU));
 	}
 
-	@Then("^user verifies the error null search result page$")
+	@Then("^user verifies the error null search result page$") //Anuj 09-Aug
 	public void user_verifies_the_error_null_search_result_page() throws Throwable {
-		waitForElement(globalElementHeader.txtPleaseTryAnotherSearch);
-		assertTrue(isDisplayed(globalElementHeader.txtPleaseTryAnotherSearch));
+		if("mobile".equalsIgnoreCase(testtype)) {
+			
+			waitForElement(globalElementHeader.txtPleaseTryAnotherSearchMobile);
+			String textError = globalElementHeader.txtPleaseTryAnotherSearchMobile.getText();
+			assertTrue(textError.contains("couldn't find anything for"));
+		}else {
+			waitForElement(globalElementHeader.txtPleaseTryAnotherSearchMobile);
+			String textError = globalElementHeader.txtPleaseTryAnotherSearchMobile.getText();
+			assertTrue(textError.contains("couldn't find anything for"));
+		}
 	}
 }

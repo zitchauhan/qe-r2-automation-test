@@ -43,7 +43,7 @@ public class SD_SIT_FooterPage extends CommonActionHelper{
 
 	@Then("^User will verify the presence of Giving Back in Footer$")
 	public void user_will_verify_the_presence_of_Giving_Back() throws Throwable {
-		globalElementHeader.validatingGivingBack();
+		globalElementHeader.validatingInvestors();
 
 
 	}

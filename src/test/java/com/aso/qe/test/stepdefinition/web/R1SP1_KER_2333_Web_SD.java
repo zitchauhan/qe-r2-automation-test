@@ -42,6 +42,7 @@ public class R1SP1_KER_2333_Web_SD extends CommonActionHelper{
 		logger.debug("check category facet is expand");
 
 		if("mobile".equalsIgnoreCase(testtype)){
+			Thread.sleep(1000);
 			List<WebElement> openCategory = driver.findElements(By.xpath("//div[contains(@data-auid,'facetdrawer_drawer_Category_m')]//i[@class='academyicon icon-minus']"));
 			String categoryOpenCount = ""+openCategory.size();
 			assertEquals(categoryOpenCount,"1");

@@ -4,7 +4,6 @@ import static org.junit.Assert.assertTrue;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
-
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
@@ -12,6 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.asserts.SoftAssert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
@@ -19,26 +19,27 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(GlobalElementHeader_HomePO.class);
 	SIT_SigninPageObject signinPo= PageFactory.initElements(driver, SIT_SigninPageObject.class);
 	PDP_PO pdp_po= PageFactory.initElements(driver, PDP_PO.class);
-	@FindBy(xpath="//*[@data-auid='level3Category-Mens']|//*[@data-auid='level3Category-Mens_m'] | //*[@data-auid=\"level3Category-Men's Clothing\"]|//*[@data-auid=\"level3Category-Men's Clothing_m\"]") public WebElement btnMens_Clothing_Shop;
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing\"]|//*[@data-auid=\"level3Category-Men's Clothing_m\"]") public WebElement btnMens_Clothing_Shop;
 	@FindBy(xpath="//*[@data-auid='logo']//img")public WebElement imgAcademyLogo;
 	@FindBy(xpath="//*[@data-auid='logo_m']//img")public WebElement imgAcademyLogo_m;//danush
 	@FindBy(xpath="//*[@data-auid='search-clear-button_m']|//*[@data-auid='search-clear-button']") public  WebElement btnSearchLens;
 	@FindBy(xpath="//*[@data-auid='expand-search_m']") public WebElement btnExpandSearchLensInSearchPage;
 	@FindBy(xpath="//*[@data-auid='weeklyAds_m']") public  WebElement txtWeeklyADBurgerMenu;
-	
-	
+
+
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']") public WebElement btnBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']")  public WebElement btnXBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='level1Category-SHOP']") public WebElement btnShopCategory;
-	@FindBy(xpath="//*[@data-auid='level2Category-CLOTHING_m'] | //*[@data-auid='level2Category-CLOTHING']|//*[@data-auid='level2Category-Clothing_m'] | //*[@data-auid='level2Category-Clothing']")public WebElement btnClothingCategory; //UAT9
-	@FindBy(xpath="//*[@data-auid='level3Category-Mens_m']|//*[@data-auid='level3Category-Mens']/a|//*[@data-auid=\"level3Category-Men's Clothing_m\"]|//*[@data-auid=\"level3Category-Men's Clothing_m\"]|//*[@data-auid=\"level3Category-Men's Clothing\"]")public WebElement btnMen_Clothing_Shop;//UAT9
-	@FindBy(xpath="//*[@data-auid='level4Category-Shorts_m'] | //*[@data-auid='level4Category-Shirts']")public WebElement btnMensShirt_Men_Clothing_Shop;
-	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[3]")public WebElement imgMensShortShirt; 
+	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m'] | //*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING_m'] | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //UAT9
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]/a | //*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop;//UAT9
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shirts']|//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shorts']|//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop;
+	//@FindBy(xpath="//*[@data-auid='level4Category-Shorts_m'] | //*[@data-auid=\"level3Category-Men's Clothing\"]//*[@data-auid='level4Category-Shirts']")public WebElement btnMensShirt_Men_Clothing_Shop;
+	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//*[contains(@class,'c-product__description')])[1]")public WebElement imgMensShortShirt; 
 	@FindBy(xpath="//div[contains(@class,'breadCrumbComponent')]//span[@class='line-separator']//following-sibling::span//preceding-sibling::a") public WebElement lnkMensShirts;
 	@FindBy(xpath="((//span[@class='line-separator'])[3]/following::span)[1]") public WebElement lnkMensShirtsnotclickable;
 	@FindBy(xpath="//*[@data-auid='BreadCrumb_Academy']//a | //a[text()=\"Father's Day Gifts\"]") public WebElement lnkMensClothing;
 	@FindBy(xpath="//*[@data-auid='BreadCrumb_Academy']//a | //span[text()=\"Father's Day Gifts\"]") public WebElement lnkMensClothingnotclickable; 
-	
+
 	@FindBy(xpath="//span[@class='facet-trigger']")public WebElement btnFilterFacet;
 	@FindBy(xpath="//*[@data-auid='findAStore_m']")public WebElement btnFindAStoreBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='signInCta_m']") public  WebElement btnMyAccountBurgerMenu;
@@ -55,7 +56,7 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//*[@id='newUserSubmit']")public WebElement btnSignUp;
 	@FindBy(xpath="//div[contains(@class,'mobile-search')]") public WebElement ovlySearchTextBarMobile;
 	@FindBy(xpath="//*[@data-auid='go-to-CLOTHING_m']/a | //*[@data-auid='go-to-Clothing_m']/a") public WebElement txtToNavigateClothingBurgerMenuMobile;
-	@FindBy(xpath="//*[@data-auid='go-to-Mens_m']/a | //*[@data-auid=\"go-to-Men's Clothing_m\"]/a" ) public WebElement txtToNavigateMensBurgerMenuMobile;
+	@FindBy(xpath="//*[@data-auid='go-to-Mens_m']/a | //*[@data-auid=\"go-to-Boys' Clothing_m\"]/a" ) public WebElement txtToNavigateMensBurgerMenuMobile;
 	@FindBy(xpath="//*[@data-auid=\"logo\"]") public WebElement academyLogo;
 	@FindBy(xpath="//*[text()='THIS IS ACADEMY']") public WebElement txtFooterACADEMY;	
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_4https://www.instagram.com/academy/']") public WebElement iconinstagram;
@@ -67,17 +68,19 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Sign Up For More Deals']| //*[@data-auid='FOOTER_LINK_SIGN UP FOR MORE DEALS']") public WebElement lnkSIGNUPFORMOREDEALS;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Find A Store'] | //*[@data-auid='FOOTER_LINK_FIND A STORE']") public WebElement lnkfindastore;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Store Services']") public WebElement lnkStoreServices;
-    @FindBy(xpath="(//*[contains(@data-auid,'FOOTER_LINK_C')])") public WebElement lnkchatnow_m;//danush 31st july
+	@FindBy(xpath="(//*[contains(@data-auid,'FOOTER_LINK_C')])") public WebElement lnkchatnow_m;//danush 31st july
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Check Gift Card Balance") public WebElement lnkCheckGiftCardBalance;//Anuj 09-Aug
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Academy Credit Card']") public WebElement lnkAcademyCreditCards;
-	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Gift Cards']") public WebElement lnkgiftcards;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Shop Gift Cards']") public WebElement lnkgiftcards;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Customer Care']") public WebElement lnkcustomercare;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Contact Us']") public WebElement lnkcontactus;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Rebates']") public WebElement lnkrebates;
-	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Product Recall']") public WebElement lnkproductrecall;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Product Recalls']") public WebElement lnkproductrecall;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Return Policy']") public WebElement lnkreturnpolicy;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Check Order']") public WebElement lnkcheckorder;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Giving Back']") public WebElement lnkgivingback;
-	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Press Room']") public WebElement lnkpressroom;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Investors']") public WebElement lnkInvestors;//Anuj 09-Aug
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Press Releases']") public WebElement lnkPressReleases;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Careers']") public WebElement lnkcareers;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Our History']") public WebElement lnkourhistory;
 	@FindBy(xpath="//*[@data-auid='miniCart']") public WebElement iconcart;//danush
@@ -149,23 +152,25 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//*[text()='SERVICES']//parent::div//span") public WebElement expandall_Academy_services;	
 	@FindBy(xpath="//*[text()='NEED HELP?']//parent::div//span") public WebElement expandall_Academy_needhelp;
 	@FindBy(xpath="//*[text()='THIS IS ACADEMY']//parent::div//span") public WebElement expandall_Academy_academy;
-	@FindBy(xpath="(//*[@data-component='heroImage'])[2]") public WebElement scrollingForFooterExpanding;
+	@FindBy(xpath="(//*[@data-component='heroImage'])[4]") public WebElement scrollingForFooterExpanding;
 
 	//KER-3274
 	@FindBy(xpath="//*[text()='You might try:']") public WebElement labelforsearch;
 	@FindBy(xpath="//*[text()='112766238']") public WebElement skuID;
-	@FindBy(xpath="//*[contains(text(),\"We couldn't find anything for\")]") public WebElement txtPleaseTryAnotherSearch;
+	@FindBy(xpath="(//*[contains(text(),'You might try:')])[2]| //*[@data-component='searchResult']//span") public WebElement txtPleaseTryAnotherSearchDesktop;//Anuj 09 Aug
+	@FindBy(xpath="(//*[contains(text(),'You might try:')])[1]| //*[@data-component='searchResult']//span") public WebElement txtPleaseTryAnotherSearchMobile;//Anuj 09 Aug
+
 	@FindBy(xpath="//div[@data-component='searchResult']//span/b") public WebElement characterSearchLimitTitle;
 	@FindBy(xpath="//div[contains(text(),'Top Results for')]") public WebElement characterSearhTitle;
 	@FindBy(xpath="(//strong[contains(text(),'sh')])[1]") WebElement listsuggestion_productcard;
 
-	//Rashmi created below locators for sanity script related
+	//Rashmi created below elements for sanity script related
 	@FindBy(xpath="//*[@data-auid='shopbycategorysection']") public WebElement ContainerL1;
 	@FindBy(xpath="//div[@data-component='productGrid']") public WebElement ContainerL2;
 	@FindBy(xpath="//div[@data-component='productGrid']") public WebElement ContainerL3;
 	@FindBy(xpath="//*[@data-auid='product-listing']") public WebElement txtSearchResults;
 	@FindBy(xpath="//*[@data-auid='shopByCategory_tiles']//*[@data-auid='shopByCategory_0']") public WebElement CategoryL1; //Anuj 3 Aug
-//	@FindBy(xpath="//*[@data-auid='shopByCategory_tiles']//*[@data-auid='shopByCategory_0']") public WebElement CategoryL2; //Anuj 3 Aug
+	//	@FindBy(xpath="//*[@data-auid='shopByCategory_tiles']//*[@data-auid='shopByCategory_0']") public WebElement CategoryL2; //Anuj 3 Aug
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//img)[1]")  public WebElement PLPProduct;
 	@FindBy(xpath="//div[@data-component='searchResult']") public WebElement txtSearchPage;
 	@FindBy(linkText="Academy") public WebElement lnkbreadcrumbtext;
@@ -188,7 +193,8 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 
 	//KER-3238 Ak start
 	@FindBy(xpath="//*[@data-auid='level3Category-Shooting']/a") public WebElement txtShooting;
-	@FindBy(xpath="//*[@data-auid='level2Category-OUTDOORS_m']") public WebElement txtOutDoor_M;
+	@FindBy(xpath="//*[@data-auid='level2Category-Outdoors_m']") public WebElement txtOutDoor_M;
+	@FindBy(xpath="//*[@data-auid='level2Category-Outdoors']") public WebElement txtOutDoor;
 	@FindBy(xpath="//*[@data-auid='level3Category-Shooting_m']") public WebElement txtShooting_M;
 	@FindBy(xpath="//*[@data-auid='go-to-Shooting_m']/a") public WebElement txtShootingNavg_M;
 	@FindBy(xpath="//h1[contains(text(),'Sightmark Ultra Shot Plus and 3x Tactical Magnifier Set')]") public WebElement txtimageShooting;
@@ -199,7 +205,7 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//*[text()='Mens Clothing']") public WebElement titleMensclothing;
 	@FindBy(xpath="//*[text()='Mens Shirts']") public WebElement titleMensShirtclothing;
 
-//SID ADDED ******************************************************************************************************** //SID ADDED 
+	//SID ADDED ********************************************************************************************************//
 	@FindBy(xpath="//*[@data-auid='level3Category-Carhartt Brand Shop']/span[contains(text(),'Carhartt Brand Shop')] | //*[@data-auid='level3Category-Carhartt Brand Shop_m'] ") public WebElement lnkBrandNike;
 	@FindBy(xpath="//*[@data-auid='level3Category-Carhartt Brand Shop_m'] ") public WebElement btnBrandNike; 
 	@FindBy(xpath="//*[@data-auid='breadcrumb_m']") public WebElement mobileBreadcrumb; 
@@ -227,8 +233,15 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="((//span[@class='line-separator'])[3]/following::span)[1]") public WebElement lnkL3PageNotClickable;
 	@FindBy(xpath="((//span[@class='line-separator'])[1]/following::span)[1]") public WebElement lnkL1PageNotClickable;
 	@FindBy(xpath="//div[contains(@class,'breadCrumbComponent')]//span[@class='line-separator']//following-sibling::span//preceding-sibling::a") public WebElement lnkBreadcrumbClickable;
-	
-	//***********************************************************************************************************************************************
+	//SID --KER-1400 9-August-18
+	@FindBy(xpath="//*[contains(text(),'GET MORE DEALS')]") public WebElement lnkSIGNUPFORMOREDEALSMODAL;
+	@FindBy(xpath="//*[@id='email-address']") public WebElement lnkSIGNUPFORMOREDEALSEMAIL;
+	@FindBy(xpath="//*[@id='zip-code']") public WebElement lnkSIGNUPFORMOREDEALSZIPCODE;
+	@FindBy(xpath="//*[@data-auid='btnemail-signup-button']") public WebElement lnkSIGNUPFORMOREDEALSSUBMIT;
+	@FindBy(xpath="//*[contains(text(),'YOU ARE SET')]") public WebElement lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE;
+	@FindBy(xpath="//*[@data-component='footer']//a") public List<WebElement> footerLinks; //10 Aug 
+
+	//**SID END*********************************************************************************************************************************************
 	@FindBy(xpath="//*[(text()=\"Men's Shirts\")]") public WebElement txtMensShrit;
 	@FindBy(xpath="//div[contains(@class,'row')]//following-sibling::div[@class='mb-3']") public WebElement lnkL2PaginationMobile;
 	@FindBy(xpath="//*[@data-auid='myAccountCta']") public WebElement btnMyAccount;
@@ -239,36 +252,51 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='Sign Out_m']") public WebElement btnSignOut_M;
 	@FindBy(xpath="//*[@data-auid='level1Category-SHOP_m']//span[contains(@class,'minus')]") public WebElement btnSHOPBurgerMenuMinusIcon;
 	//KER-262 Start 
-	
-	
-	
-	
-	
-	 @FindBy(xpath="//*[@id='logonSubmit']")public WebElement btmSignIn;
-	 @FindBy(xpath="//*[@id='signup-link-from-login']")public WebElement linkSignUP;
-	 
-	 
-	 
-	 
-	 
-	 
-		@FindBy(xpath="(//*[contains(text(),'Account Summary')])[3]")public WebElement btmkAccountSummary;
-		@FindBy(xpath="(//*[contains(text(),'Account Summary')])[3]")public WebElement btmkAccountSummary_M;
-		//@FindBy(xpath="//*[@data-auid='myAccountCta_m']")public WebElement myAccountLink;
-		@FindBy(xpath="//*[@id='logonSubmit']") public WebElement signInBtm_M;
-		@FindBy(xpath="//*[@id='signup-link-from-login']")public WebElement signUpText_M;
-		@FindBy(xpath="//*[@data-auid='search-input_m']")public WebElement searchBox_M;
-		//@FindBy(xpath="//*[@data-auid='search-container_m']")public WebElement searchBox;
-		
-		@FindBy(xpath="//*[@data-auid='autoSuggestions_pant']/*") public WebElement verifyPantInSearch_M;
-		@FindBy(xpath="//*[@data-auid='search-clear-button_m']") public WebElement searchbtn_M;
-		@FindBy(xpath="//*[contains(text(),'Results for ')]/*")public WebElement searchResultText_M;
-		@FindBy(xpath="//*[@data-auid='expand-search_m']")public WebElement magnifying_M;
-		
- //KER-4041
-		@FindBy(xpath="//*[@id='scrollTopBtn']") public WebElement autoscroll;
-		@FindBy(xpath="//*[text()='Featured Categories'] | (//*[@data-component='heroImage'])[2]") public WebElement preFooterScroll; //4 Aug Anuj
-		    
+
+
+	@FindBy(xpath="//*[@data-auid='findAStore']/*[2]")public WebElement hourOfOperationATHeader;
+	@FindBy(xpath="(//*[@data-auid='find-a-store-modal'])[2]/*[2]/*/*[1]") public WebElement txtFindAsTorePopUP;
+	@FindBy(xpath="(//*[@data-auid='find-a-store-modal'])[2]/*[2]/*/*[2]/*/*[1]")public WebElement searchboxFindAsTorePopUp;
+	@FindBy(xpath="//*[@data-auid='findAStore']/*[1]/*[2]")public WebElement verifyFindStoreAfteLogin;
+	@FindBy(xpath="//*[@data-auid='findAStore']/*[1]/*[3]/*[2]")public WebElement changeicon;
+	@FindBy(xpath="//*[@data-auid='myAccountCta_m']")public WebElement btnMyAccountInWeeklyAds;
+
+
+	@FindBy(xpath="//*[contains(text(),'THIS IS ACADEMY')]")public WebElement expandAcademyPlus_M;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Press Releases']")public WebElement pressRelease_M;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Investors']")public WebElement inventors_M;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Shop Gift Cards']")public WebElement shopGiftCards_M;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Product Recalls']")public WebElement productRecalls_M;
+
+	@FindBy(xpath="//*[@id='logonSubmit']")public WebElement btmSignIn;
+	@FindBy(xpath="//*[@id='signup-link-from-login']")public WebElement linkSignUP;
+
+
+
+
+
+
+	@FindBy(xpath="(//*[contains(text(),'Account Summary')])[3]")public WebElement btmkAccountSummary;
+	@FindBy(xpath="(//*[contains(text(),'Account Summary')])[3]")public WebElement btmkAccountSummary_M;
+	//@FindBy(xpath="//*[@data-auid='myAccountCta_m']")public WebElement myAccountLink;
+	@FindBy(xpath="//*[@id='logonSubmit']") public WebElement signInBtm_M;
+	@FindBy(xpath="//*[@id='signup-link-from-login']")public WebElement signUpText_M;
+	@FindBy(xpath="//*[@data-auid='search-input_m']")public WebElement searchBox_M;
+	//@FindBy(xpath="//*[@data-auid='search-container_m']")public WebElement searchBox;
+
+	@FindBy(xpath="//*[@data-auid='autoSuggestions_pant']/*") public WebElement verifyPantInSearch_M;
+	@FindBy(xpath="//*[@data-auid='search-clear-button_m']") public WebElement searchbtn_M;
+	@FindBy(xpath="//*[contains(text(),'Results for ')]/*")public WebElement searchResultText_M;
+	@FindBy(xpath="//*[@data-auid='expand-search_m']")public WebElement magnifying_M;
+
+	//KER-4041
+	@FindBy(xpath="//*[@id='scrollTopBtn']") public WebElement autoscroll;
+	@FindBy(xpath="//*[text()='Featured Categories'] | (//*[@data-component='heroImage'])[2]") public WebElement preFooterScroll; //4 Aug Anuj
+
+	//KER-1915 Start CR-AKK
+	@FindBy(xpath="//button[@data-auid='btnwishListPopover_createList']")  public WebElement btnCreateList;
+	@FindBy(xpath="//*[@id='createWishListInputError']") public WebElement addWishListError;
+	//KER-1915 End CR-AKK
 	public void accountSummaryDeatils(String exceptedAccountSummaryTxt) throws Exception {
 		String actualAccountSummaryTxt = getText(accountSummaryTxt);
 		logger.debug("accountSummaryTxt:: " + actualAccountSummaryTxt);
@@ -693,8 +721,8 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 			logger.debug("Logo is clicked");
 			//assertEquals("http://35.202.244.154/", getCurrentPageURL());//30th july danush
 		}
-		
-		
+
+
 	}
 
 	public void validatingWeeklyAdAndFindStore() throws Exception{
@@ -741,15 +769,15 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 
 	public void entertheData() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
-//			Actions actions = new Actions(driver);
-//			actions.moveToElement(txtSearchBox_mobile);
-//			actions.click();
-//			actions.sendKeys("Clothing");
-//			Thread.sleep(2000);
-//			actions.build().perform();
+			//			Actions actions = new Actions(driver);
+			//			actions.moveToElement(txtSearchBox_mobile);
+			//			actions.click();
+			//			actions.sendKeys("Clothing");
+			//			Thread.sleep(2000);
+			//			actions.build().perform();
 			Thread.sleep(3000);
 			txtSearchBox_mobile.sendKeys("Clothing");
-			
+
 		}else {
 
 			Actions actions = new Actions(driver);
@@ -866,13 +894,12 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 
 	}
 	public void verifyThePDPPage() throws Exception{
-		if("mobile".equalsIgnoreCase(testtype)){
-			assertTrue(isDisplayed(description));
-			logger.debug("Description is displayed");
-		}else {
-
-			assertTrue(isDisplayed(description));
-			logger.debug("Description is displayed");
+		String currentURL = getCurrentPageURL();
+		if(currentURL.contains("pdp")) {
+			logger.debug("User is successfully navigated to PDP page with URL :: " + currentURL  );
+		}
+		else {
+			logger.debug("User is not able to navigate to PDP instead navigated to URL :: " + currentURL  );
 		}
 
 	}
@@ -896,27 +923,27 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 		boolean flag = false;
 		if("mobile".equalsIgnoreCase(testtype))
 		{
-		Thread.sleep(2000);//danush
-		txtSearchBox_mobile.clear();
-		Actions actions = new Actions(driver);
-		actions.moveToElement(txtSearchBox_mobile);
-		actions.click();
-		actions.sendKeys(inputSearchTxt);
-		actions.build().perform();
-		Thread.sleep(10000);
-		waitForElement(listsuggestion);
-		Actions search = new Actions(driver);
-		search.moveToElement(listsuggestion);
-		search.build().perform();
-		String searchResultTxt = listsuggestion.getText();
-		System.out.println("&&&&&&&&&&&&&&&&&&&*****************************ss:: "+searchResultTxt);
-		String searchTxtArray[]=searchResultTxt.split("\\r?\\n");
-		for(String txt: searchTxtArray){
-			if(txt != null && !(txt.contains("CATEGORY")||txt.contains("BRAND")||txt.contains("Clear")) && txt.contains(inputSearchTxt)){
-				flag = true;
+			Thread.sleep(2000);//danush
+			txtSearchBox_mobile.clear();
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox_mobile);
+			actions.click();
+			actions.sendKeys(inputSearchTxt);
+			actions.build().perform();
+			Thread.sleep(10000);
+			waitForElement(listsuggestion);
+			Actions search = new Actions(driver);
+			search.moveToElement(listsuggestion);
+			search.build().perform();
+			String searchResultTxt = listsuggestion.getText();
+			System.out.println("&&&&&&&&&&&&&&&&&&&*****************************ss:: "+searchResultTxt);
+			String searchTxtArray[]=searchResultTxt.split("\\r?\\n");
+			for(String txt: searchTxtArray){
+				if(txt != null && !(txt.contains("CATEGORY")||txt.contains("BRAND")||txt.contains("Clear")) && txt.contains(inputSearchTxt)){
+					flag = true;
+				}
 			}
-		}
-		System.out.println("verifySuggestionPage Flag::"+flag);
+			System.out.println("verifySuggestionPage Flag::"+flag);
 		}else {
 			txtSearchBox.clear();//anil
 			Actions actions = new Actions(driver);
@@ -1092,25 +1119,25 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 
 	public void validatingPressRoom() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
-			isDisplayed(lnkpressroom);
-			assertTrue(isClickable(lnkpressroom));
+			isDisplayed(lnkPressReleases);
+			assertTrue(isClickable(lnkPressReleases));
 			logger.debug("pressroom is not displayed");
 		}else {
-			isDisplayed(lnkpressroom);
-			assertTrue(isClickable(lnkpressroom));
+			isDisplayed(lnkPressReleases);
+			assertTrue(isClickable(lnkPressReleases));
 			logger.debug("press room  link is displayed");
 		}
 		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
 
 	}
-	public void validatingGivingBack() throws Exception{
+	public void validatingInvestors() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
-			isDisplayed(lnkgivingback);
-			assertTrue(isClickable(lnkgivingback));
+			isDisplayed(lnkInvestors);
+			assertTrue(isClickable(lnkInvestors));
 			logger.debug("our history link is not displayed");
 		}else {
-			isDisplayed(lnkgivingback);
-			isClickable(lnkgivingback);
+			isDisplayed(lnkInvestors);
+			isClickable(lnkInvestors);
 			logger.debug("our history link is displayed++++++++++++++++++++++++==");
 		}
 		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
@@ -1251,10 +1278,13 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 
 	public void validatingsignupformoredeals() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
+			scrollPageToWebElement(lnkSIGNUPFORMOREDEALS);
+			Thread.sleep(500);  //waiting for the search to disappear
 			isDisplayed(lnkSIGNUPFORMOREDEALS);
 			assertTrue(isClickable(lnkSIGNUPFORMOREDEALS));
 			logger.debug("lnkcustomercare link is not displayed");
 		}else {
+			scrollPageToWebElement(lnkSIGNUPFORMOREDEALS);
 			isDisplayed(lnkSIGNUPFORMOREDEALS);
 			isClickable(lnkSIGNUPFORMOREDEALS);
 			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
@@ -1324,6 +1354,8 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	}
 
 	public void findAndClickStoreinGH() throws Exception{
+		waitForPageLoad(driver);
+		Thread.sleep(2000);
 
 		if(isDisplayed(txtFindAStore)) {
 
@@ -1486,14 +1518,14 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	}
 
 	public void verifySuggestionPage_Productcard(String inputSearchTxt) throws Exception{
-//		Actions actions = new Actions(driver);
-//		actions.click();
-//		actions.sendKeys(Keys.BACK_SPACE);
-//		actions.sendKeys(Keys.BACK_SPACE);
-//		actions.sendKeys(inputSearchTxt);
-//		Thread.sleep(1000);
-//		actions.build().perform();
-//		Thread.sleep(1000);
+		//		Actions actions = new Actions(driver);
+		//		actions.click();
+		//		actions.sendKeys(Keys.BACK_SPACE);
+		//		actions.sendKeys(Keys.BACK_SPACE);
+		//		actions.sendKeys(inputSearchTxt);
+		//		Thread.sleep(1000);
+		//		actions.build().perform();
+		//		Thread.sleep(1000);
 		assertTrue(isDisplayed(listsuggestion_productcard));
 		assertTrue(clickOnButton(listsuggestion_productcard));
 
@@ -1629,6 +1661,7 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 
 	public void signOut() throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(btnSHOPBurgerMenuMinusIcon));
 			scrollPageToWebElement(btnMyAccountMobile);
 			Thread.sleep(1000);
 			assertTrue(clickOnButton(btnMyAccountMobile));
@@ -1648,4 +1681,35 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	public void clickSignupButton() throws Exception {
 		assertTrue(clickOnButton(btnSignUp));
 	}
+	//SID 8-August-18
+	public void softAssertFotterLink() {
+		int count=0;
+		SoftAssert softAssert = new SoftAssert();
+		try {
+			int sizeOfList = footerLinks.size();
+			scrollPageToWebElement(lnkourhistory);
+			for (int loop = 0; loop < sizeOfList; loop++) {
+				try {
+					System.out.println(footerLinks.get(loop).getText());
+					softAssert.assertTrue(isClickable(footerLinks.get(loop)),
+							"Fail: Expected link is click able but link " + footerLinks.get(loop).getText()
+							+ " is not clickable");
+					softAssert.assertAll();
+				} catch (Exception e) {
+
+					logger.debug("********************INSIDE CATCH******************");
+					logger.debug("Fail: Expected link is click able but link " + footerLinks.get(loop).getText()
+							+ " is not clickable");
+					count++;
+				}
+			}
+		} catch (Exception e) {
+			logger.debug("*****************************Method Fail***************************");
+		}
+		if(count>0) {
+			Assert.fail();
+		}
+	}
+
+
 }

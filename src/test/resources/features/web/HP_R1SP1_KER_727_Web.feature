@@ -1,7 +1,7 @@
 Feature: [UI] [Desktop ]To verify user can view 'My Account' from a drop down account summary upon successful log in 
 
  
- @C-HP @Web    @Regression   @KER-727  @1HR @ZYP_K727-3206           
+ @C-HP @Web    @Regression   @KER-727  @1HR @ZYP_HP_K727-3206           
 Scenario Outline: user to verify Account summary after successful login from ASO_HOME page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user to click on sing in and navigate to sign in page 
@@ -15,7 +15,7 @@ Scenario Outline: user to verify Account summary after successful login from ASO
 		|qaz2@gmail.com |qazlee  |
 				    
  
-@C-HP @Web  @Regression @KER-727  @ZYP_K727-4055
+@C-HP @Web  @Regression @KER-727  @ZYP_HP_K727-4055
 Scenario Outline: user to verify sing in  as invalid email address
    Given user launches the browser and navigates to "ASO_HOME" page
    When user to click on sing in and navigate to sign in page
@@ -28,7 +28,7 @@ Scenario Outline: user to verify sing in  as invalid email address
 		    |qaz1000@gmail.com |qazlee|
   	
   	
-  @C-HP @Web  @Regression @KER-727  @ZYP_K727-4061
+  @C-HP @Web  @Regression @KER-727  @ZYP_HP_K727-4061
 Scenario Outline: user to verify sing in  as invalid password address
    Given user launches the browser and navigates to "ASO_HOME" page
    When user to click on sing in and navigate to sign in page
@@ -41,7 +41,7 @@ Scenario Outline: user to verify sing in  as invalid password address
 		    |qaz2@gmail.com |qazlee111|
   			  
   		  
-  @C-HP @Web  @Regression @KER-727  @ZYP_K727-4063 @1HR
+  @C-HP @Web  @Regression @KER-727  @ZYP_HP_K727-4063 @1HR
   Scenario: user to very sign in by keeping username and password empty and clicking on signin 
   Given user launches the browser and navigates to "ASO_HOME" page 
   When user to click on sing in and navigate to sign in page  		  
@@ -49,7 +49,7 @@ Scenario Outline: user to verify sing in  as invalid password address
   Then verify enter email and password message to come 		    
   
   
- @C-HP @Web  @Regression  @KER-727  @ZYP_K727-4067 @1HR
+ @C-HP @Web  @Regression  @KER-727  @ZYP_HP_K727-4067 
  Scenario Outline: user to verify personal information  form My Account
     
   Given user launches the browser and navigates to "ASO_HOME" page 
@@ -62,7 +62,7 @@ Scenario Outline: user to verify sing in  as invalid password address
 		    |username          |password|
 		    |qaz2@gmail.com    |qazlee| 
 	    
-@C-HP @Web  @Regression  @KER-727 @ZYP_K727-4069 @1HR
+@C-HP @Web  @Regression  @KER-727 @ZYP_HP_K727-4069 
  Scenario Outline: user to verify Address book  form My Account
     
   Given user launches the browser and navigates to "ASO_HOME" page 
@@ -78,7 +78,7 @@ Scenario Outline: user to verify sing in  as invalid password address
   	    
   	    
   	    
-  	 @C-HP @Web  @Regression  @KER-727 @ZYP_K727-4070 @1HR
+  	 @C-HP @Web  @Regression  @KER-727 @ZYP_HP_K727-4070 
  Scenario Outline: user to verify WishList form My Account
     
   Given user launches the browser and navigates to "ASO_HOME" page 
@@ -93,7 +93,7 @@ Scenario Outline: user to verify sing in  as invalid password address
   	   
   	   
   	   
- 	 @C-HP @Web  @Regression @KER-727 @ZYP_K727-4065  @1HR
+ 	 @C-HP @Web  @Regression @KER-727 @ZYP_HP_K727-4065  
   	Scenario: Desktop-Verify the forgot your password functionality
      Given user launches the browser and navigates to "ASO_HOME" page
      When user to click on sing in and navigate to sign in page  		  
@@ -102,7 +102,7 @@ Scenario Outline: user to verify sing in  as invalid password address
     Then verify user to click submit button  
   	 
 
- @C-HP @Web  @Regression @KER-727 @ZYP_K727-4072  
+ @C-HP @Web  @Regression @KER-727 @ZYP_HP_K727-4072  
   	Scenario Outline: Desktop-To Verify the signout from MyAccount
      Given user launches the browser and navigates to "ASO_HOME" page
      When user to click on sing in and navigate to sign in page  		  
@@ -116,7 +116,7 @@ Scenario Outline: user to verify sing in  as invalid password address
 		    |username          |password|
 		    |qaz2@gmail.com    |qazlee|
   	  
-  	  @C-HP @Web  @Regression @KER-727 @ZYP_K727-1972   @1HR
+  	  @C-HP @Web  @Regression @KER-727 @ZYP_HP_K727-1972   
   	Scenario Outline: To Verify user is able to Sign In with Valid user name and password by clicking in Sign In Link in the global header
      Given user launches the browser and navigates to "ASO_HOME" page
      When user to click on sing in and navigate to sign in page  		  
@@ -133,7 +133,7 @@ Scenario Outline: user to verify sing in  as invalid password address
 		    |qaz2@gmail.com    |qazlee|
 		    
 	
-	@C-HP @Web  @Regression @KER-727 @ZYP_K727-8492 @CR-AKK
+	@C-HP @Web  @Regression @KER-727 @ZYP_HP_K727-8492 @CR-AKK
   	Scenario Outline: To Verify user to verify Account summary after successful login from ASO_HOME page
      Given user launches the browser and navigates to "ASO_HOME" page
      When user to click on sing in and navigate to sign in page  		  

@@ -1,6 +1,6 @@
 Feature: To Verify the Shop Collection to Home Page User Journeys
 
-  @SIT_UserJourney_m @KER-7055 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
+  @SIT_UserJourney_m @ZYP_HP_K6809-7055 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
   Scenario: Verify User Journey form Shop Collection to CTA to Home Page(through Brand Logo)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -39,7 +39,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User closes the web application
 
   
-  @SIT_UserJourney_m @KER-7057 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
+  @SIT_UserJourney_m @ZYP_HP_K6809-7057 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
   Scenario: Verify User Journey form Shop Collection to CTA to Footer
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -77,7 +77,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User will verify the presence of Our history
     And User will verify the presence of Careers
     Then User will verify the presence of Press Room
-    And User will verify the presence of Giving Back
+    And User will verify the presence of Investors
     And User will click on expand button for needhelp
     Then User will verify the presence of Check Order
     And User will verify the presence of Return Policy
@@ -97,7 +97,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User will verify the presence of legal policy
     Then User closes the web application
 
-  @SIT_UserJourney_m @KER-7058 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
+  @SIT_UserJourney_m @ZYP_HP_K6809-7058 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
   Scenario Outline: : Verify User Journey form Shop Collection to CTA to Find a Store to MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
    Then User clicks on the burger menu
@@ -146,7 +146,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       
 
   
-  @SIT_UserJourney_m @KER-7059 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
+  @SIT_UserJourney_m @ZYP_HP_K6809-7059 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
   Scenario Outline: : Verify User Journey form Shop Collection to CTA to Find a Store to HomePage(through Brand Logo)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -194,7 +194,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    |
 
   
-  @SIT_UserJourney_m @KER-7060 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
+  @SIT_UserJourney_m @ZYP_HP_K6809-7060 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
   Scenario Outline: Verify User Journey form Shop Collection to CTA to Find a Store to Academy Credit
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -241,7 +241,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    | 
       
 
-    @SIT_UserJourney_m @KER-7061 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
+    @SIT_UserJourney_m @ZYP_HP_K6809-7061 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
   Scenario Outline: Verify User Journey form Shop Collection to CTA to Find a Store to Header
     Given user launches the browser and navigates to "ASO_HOME" page
    Then User clicks on the burger menu
@@ -291,7 +291,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
 
 
 
-    @SIT_UserJourney_m @KER-7062 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
+    @SIT_UserJourney_m @ZYP_HP_K6809-7062 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
   Scenario: Verify User Journey form Shop Collection to ProductCard to Home Page(through Brand Logo)
     Given user launches the browser and navigates to "ASO_HOME" page
    Then User clicks on the burger menu
@@ -330,7 +330,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then User closes the web application
 
-    @SIT_UserJourney_m @KER-7063 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
+    @SIT_UserJourney_m @ZYP_HP_K6809-7063 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
   Scenario: Verify User Journey form Shop Collection to ProductCard to Footer
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -369,7 +369,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User will verify the presence of Our history
     And User will verify the presence of Careers
     Then User will verify the presence of Press Room
-    And User will verify the presence of Giving Back
+    And User will verify the presence of Investors
     And User will click on expand button for needhelp
     Then User will verify the presence of Check Order
     And User will verify the presence of Return Policy
@@ -389,7 +389,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User will verify the presence of legal policy
     Then User closes the web application
 
-  @SIT_UserJourney_m @KER-7064 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
+  @SIT_UserJourney_m @ZYP_HP_K6809-7064 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
   Scenario Outline: : Verify User Journey form Shop Collection to ProductCard to FindaStore to MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -438,7 +438,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    |
      
 
-    @SIT_UserJourney_m @KER-7065 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
+    @SIT_UserJourney_m @ZYP_HP_K6809-7065 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
   Scenario Outline: Verify User Journey form Shop Collection to ProductCard to Find a Store to Home Page(through Brand Logo)
     Given user launches the browser and navigates to "ASO_HOME" page
  	Then User clicks on the burger menu
@@ -487,7 +487,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    |
      
 
-    @SIT_UserJourney_m @KER-7066 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
+    @SIT_UserJourney_m @ZYP_HP_K6809-7066 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
   Scenario Outline: Verify User Journey form Shop Collection to ProductCard to Find a Store to Academy Credit
     Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
@@ -535,7 +535,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    | 
 
   
-  @SIT_UserJourney_m @KER-7067 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
+  @SIT_UserJourney_m @ZYP_HP_K6809-7067 @KER-6809 @C-HPUJ @Mobile @CR-Danush 
   Scenario Outline: Verify User Journey form Shop Collection to ProductCard to Find a Store to Header
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

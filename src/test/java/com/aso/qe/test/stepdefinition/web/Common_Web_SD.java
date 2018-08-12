@@ -28,13 +28,13 @@ public class Common_Web_SD extends CommonActionHelper{
 	@Given("^user launches the browser and navigates to \"(.*?)\" page$")
 	public void user_launches_the_browser_and_navigates_to_page(String url) throws Throwable {
 		initializeDriver();
-		if("mobile".equalsIgnoreCase(testtype)) {
-			logger.debug("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Mobile Launched ");
-		}
-		else
-		{
-			getDriver().manage().window().setSize(new Dimension(1500,1700));	
-		}
+//		if("mobile".equalsIgnoreCase(testtype)) {
+//			logger.debug("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Mobile Launched ");
+//		}
+//		else
+//		{
+//			getDriver().manage().window().setSize(new Dimension(1500,1700));	
+//		}
 		openBaseURL(url);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		waitForPageLoad(driver);

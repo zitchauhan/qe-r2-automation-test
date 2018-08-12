@@ -1,6 +1,6 @@
 Feature: To verify Product Questions and Answers
 
-@Regression  @C-PDP  @Web @ZYP_K1937-3459 @KER-1937 @All @CR-AKK
+@Regression  @C-PDP  @Web @ZYP_PDP_K1937-3459 @KER-1937 @All @CR-AKK @1HR
   Scenario Outline: To verify Product question and answer in PDP of Desktop
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP of any product

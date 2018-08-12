@@ -47,7 +47,7 @@ public class R1SP1_KER_615_Web_SD extends CommonActionHelper{
 		
 		Actions hover = new Actions(getDriver());
 		 hover.moveToElement(PLP_PO.drpdwnSortBy).build().perform();
-		 assertTrue(clickOnButton(PLP_PO.drpdwnSortBy));
+		// assertTrue(clickOnButton(PLP_PO.drpdwnSortBy));
 		for(String str: object) {
 			String xpath ="//*[@data-auid='sort_by']//*[text()='"+str+"']"; 
 			assertTrue(isDisplayed(getfindElementByXPath(xpath)));

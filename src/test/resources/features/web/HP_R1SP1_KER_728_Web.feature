@@ -1,6 +1,6 @@
 Feature: To Verify the functionality of "ASO - Logo" in the Global Header
 
-  @Web @All  @C-HP  @Regression @KER-728 @ZYP_K728-1971
+  @Web @All  @C-HP  @Regression @KER-728 @ZYP_HP_K728-1971 @1HR
   Scenario: As a user I want to navigate to Home page from PLP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User is able to see the ASO_Logo
@@ -9,7 +9,7 @@ Feature: To Verify the functionality of "ASO - Logo" in the Global Header
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-  @Web @All     @C-HP @Regression @KER-728 @ZYP_K728-5615
+  @Web @All     @C-HP @Regression @KER-728 @ZYP_HP_K728-5615 @1HR
   Scenario: As a user I want to navigate to Home page from PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP of any product
@@ -20,7 +20,7 @@ Feature: To Verify the functionality of "ASO - Logo" in the Global Header
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-  @Web @All   @C-HP @Regression @KER-728 @ZYP_K728-5616
+  @Web @All   @C-HP @Regression @KER-728 @ZYP_HP_K728-5616 @1HR
   Scenario: As a user I want to navigate to Home page from CLP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2
@@ -29,7 +29,7 @@ Feature: To Verify the functionality of "ASO - Logo" in the Global Header
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-  @Web @All @C-HP @Regression @KER-728 @ZYP_K728-5617
+  @Web @All @C-HP @Regression @KER-728 @ZYP_HP_K728-5617 @1HR
   Scenario: As a user I want to navigate to Home page from L1
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L1

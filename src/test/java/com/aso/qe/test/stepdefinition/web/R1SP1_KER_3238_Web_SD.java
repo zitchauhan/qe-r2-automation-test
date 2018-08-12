@@ -3,6 +3,7 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -38,6 +39,9 @@ public class R1SP1_KER_3238_Web_SD extends CommonActionHelper{
 		{
 			Thread.sleep(3000);
 			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
+			Actions hover = new Actions(getDriver());
+			hover.moveToElement(globalElementHeader.txtOutDoor).build().perform();
+			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.txtShooting));
 			
 		}
@@ -54,7 +58,7 @@ public class R1SP1_KER_3238_Web_SD extends CommonActionHelper{
 		}
 		else
 		{
-			assertTrue(clickOnButton(plp_po.productPLP1));
+			assertTrue(clickOnButton(plp_po.productName));
 		}
 	}
 

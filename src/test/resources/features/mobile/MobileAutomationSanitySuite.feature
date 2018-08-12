@@ -1,11 +1,11 @@
 Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
 
-  @AutomationSanity @AS1 @MAST-01
+  @AutomationSanity @AS1 @MAST-01 
    Scenario: TC_1- Verify all broken URL's on Home page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then verfy all link url's status code is 200
         
-  @AutomationSanity @AS1 @MAST-02
+  @AutomationSanity @AS1 @MAST-02 
   Scenario: TC_2-Login and Logout
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -14,7 +14,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User clicks on the burger menu
     Then user sign out from the website
 
-  @AutomationSanity @AS2  @MAST-03
+  @AutomationSanity @AS2  @MAST-03 
   Scenario: TC_3-Registered user checkout process
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -83,7 +83,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     And User will verify the presence of search
     Then User clicks on the burger menu
 
-  @AutomationSanity @AS2 @MAST-06
+  @AutomationSanity @AS2 @MAST-06 @1HR
   Scenario: TC_7-Verify  Global Header on All the pages(till PDP)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -102,7 +102,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User clicks on the burger menu
     Then User should be able to see FindStore Navigation Categories and MyAccount links
 
-  @AutomationSanity @AS2 @MAST-07
+  @AutomationSanity @AS2 @MAST-07 @1HR
   Scenario: TC_8-Verify Global Footer on All the pages(till PDP)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User will verify the presence of FIND A STORE
@@ -112,7 +112,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User will verify the presence of Our history
     Then User will verify the presence of Careers
     Then User will verify the presence of Press Room
-    Then User will verify the presence of Giving Back
+    Then User will verify the presence of Investors
     And User will click on expand button
     And User will click on expand button for needhelp
     Then User will verify the presence of Check Order
@@ -140,7 +140,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User will verify the presence of Our history
     Then User will verify the presence of Careers
     Then User will verify the presence of Press Room
-    Then User will verify the presence of Giving Back
+     Then User will verify the presence of Investors
     And User will click on expand button
     And User will click on expand button for needhelp
     Then User will verify the presence of Check Order
@@ -166,7 +166,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User will verify the presence of Our history
     Then User will verify the presence of Careers
     Then User will verify the presence of Press Room
-    Then User will verify the presence of Giving Back
+     Then User will verify the presence of Investors
     And User will click on expand button
     And User will click on expand button for needhelp
     Then User will verify the presence of Check Order
@@ -195,7 +195,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User will verify the presence of Our history
     Then User will verify the presence of Careers
     Then User will verify the presence of Press Room
-    Then User will verify the presence of Giving Back
+    Then User will verify the presence of Investors
     And User will click on expand button
     And User will click on expand button for needhelp
     Then User will verify the presence of Check Order
@@ -222,7 +222,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User will verify the presence of Our history
     Then User will verify the presence of Careers
     Then User will verify the presence of Press Room
-    Then User will verify the presence of Giving Back
+     Then User will verify the presence of Investors
     And User will click on expand button
     And User will click on expand button for needhelp
     Then User will verify the presence of Check Order
@@ -300,14 +300,14 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User navigates to L1
     Then user clicks on one of the subcategory and navigates to LTwo page
 
-  @AutomationSanity @AS1 @MAST-15
-  Scenario: TC_15-Verify Breadcumb on L1
+  @AutomationSanity @AS1 @MAST-15 @1HR
+  Scenario: TC_15-Verify Breadcumb on L1 
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L1
     Then User click on the breadcrumb last link
 
-  @AutomationSanity @AS1 @MAST-16
+  @AutomationSanity @AS1 @MAST-16 @1HR
   Scenario: TC_16-Verify Facets and Sorts on L2
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -343,7 +343,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User should be able to see the deselected PRICE filter Options in deselected state
 
   @AutomationSanity @AS1 @MAST-19
-  Scenario: TC_19-Verify Breadcumb on L2
+  Scenario: TC_19-Verify Breadcrumb on L2
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L2
@@ -391,7 +391,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User should be able to see the deselected PRICE filter Options in deselected state
 
   @AutomationSanity @AS1 @MAST-24
-  Scenario: TC_24-Verify Breadcumb on L3
+  Scenario: TC_24-Verify Breadcrumb on L3 @1HR
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L3
@@ -405,8 +405,8 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then user clicks on the product card and navigates to PDP of the product
     And user should be able to see PDP mention in the current url
 
-  @AutomationSanity @AS1 @MAST-26
-  Scenario: TC_26-Verify PDP page
+  @AutomationSanity @AS1 @MAST-26 @1HR
+  Scenario: TC_26-Verify PDP page 
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L3
@@ -418,7 +418,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     And user should be able to see Add to cart button and quantity section
     Then user should be able to see inventory status of the product
 
-  @AutomationSanity @AS1 @MAST-27
+  @AutomationSanity @AS1 @MAST-27 @1HR
   Scenario: TC_27-Verify Navigation from PDP to Homepage by clicking on ASO logo
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

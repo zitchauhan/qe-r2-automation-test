@@ -1,6 +1,6 @@
 Feature: Verify that by default only Category is open and all other facets are collapsed.
 
-  @1HR @Regression @C-PLP @Mobile @All @KER-2333  @ZYP_K2333-3948 @Rerun
+  @1HR @Regression @C-PLP @Mobile @All @KER-2333  @ZYP_PLP_K2333-3948 @Rerun @1HR
   Scenario: Verify that by default only Category is open and all other facets are collapsed.
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

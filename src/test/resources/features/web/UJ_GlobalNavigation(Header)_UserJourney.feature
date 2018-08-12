@@ -1,25 +1,18 @@
 Feature: To Verify user is be able to filter the products based on Price Ranges
 
-  @SIT_UserJourney @ZYP_K6809-7078 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
-  Scenario Outline: Verify user is able to select/unselect one or multiple filter by values from Home Page search
-    Given user launches the browser and navigates to "ASO_HOME" page
-    When User enters in Required_Product with "<SearchTerm>" and click on Go button
-    Then user should verify the Grid view
-    And User expands PRICE Filter Option
-    And user select the "<price>" in filter
-    And User expands COLOR Filter Option
-    And user select the "<color_name>" in filter
-    Then Verify the selected filtered products "<price>""<color_name>"are displayed in product grid
-    Then User should be able to unselect "<price>""<color_name>" the same checkbox for all the filters
-    Then User closes the web application
-
-    Examples: 
-      | SearchTerm | price        | color_name |
-      | Nike Shoe  | $10 - $19.99 | Black      |
+  @SIT_UserJourney @ZYP_GLN_K6809-7078 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+   Scenario: Verify Product grid on L3 
+      Given user launches the browser and navigates to "ASO_HOME" page
+      When user clicks on one of the category and navigates to LOne page
+      And User clicks on any of the subcategory in L1 Page
+      Then User should be navigated to L2 Page
+      When User clicks on required category in L2 Page
+      Then User should be navigated to L3 Page
+      Then User should be able to see product grid in L3 Page
 
  
 
-  @SIT_UserJourney @ZYP_K6809-7079 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_GLN_K6809-7079 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
   Scenario Outline: Verify As a User I should be able to select/deselect multiple price values in Search Page
     Given user launches the browser and navigates to "ASO_HOME" page
     When User enters in Required_Product with "<SearchTerm>" and click on Go button
@@ -35,7 +28,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | Nike Shoe  |
 
 
-    @SIT_UserJourney @ZYP_K6809-7081 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7081 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
   Scenario Outline: Verify the user should be shown a Null results page when the search term returns no matching relevant results
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
@@ -46,7 +39,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | SearchTerm |
       | Null  |
 
-    @SIT_UserJourney @ZYP_K6809-7082 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7082 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
   Scenario: Verify the user enters two characters into the search box and see predictive suggestions for matching keyword
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
@@ -58,7 +51,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
   
 
 
-    @SIT_UserJourney @ZYP_K6809-7083 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7083 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
   Scenario Outline: Verify user is able to search for Product not sold
     Given user launches the browser and navigates to "ASO_HOME" page
     When User enters in Required_Product with "<SearchTerm>" and click on Go button
@@ -72,7 +65,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | SearchTerm                              |
       | GLOCK G17 Gen5 9mm Semiautomatic Pistol |
 
-    @SIT_UserJourney @ZYP_K6809-7084 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7084 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
   Scenario: Verify User Journey form Cart to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user validate the cart icon
@@ -118,7 +111,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User closes the web application
 
      
-  @SIT_UserJourney @ZYP_K6809-7085 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush 
+  @SIT_UserJourney @ZYP_GLN_K6809-7085 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush 
   Scenario: Verify the SignIn Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -126,7 +119,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User closes the web application
 
   
-  @SIT_UserJourney @ZYP_K6809-7086 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_GLN_K6809-7086 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
   Scenario: Verify the SignUp Page
     Given user launches the browser and navigates to "ASO_HOME" page
      Then user should able to click on Signin button
@@ -135,7 +128,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
    Then User closes the web application
 
   
-  @SIT_UserJourney @ZYP_K6809-7087 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_GLN_K6809-7087 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
   Scenario: Verify the SignUp to WishList Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -147,7 +140,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then user should delete the created WishList
     Then User closes the web application
 
-    @SIT_UserJourney @ZYP_K6809-7088 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7088 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
   Scenario: Verify the Signup to Account Summary page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -156,7 +149,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user should verify the Account Summary page
     Then User closes the web application
 
-    @SIT_UserJourney @ZYP_K6809-7089 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7089 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
   Scenario: Verify the Signup to Address Book page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -172,7 +165,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user verify the delete address page and click on yes button
     Then User closes the web application
 
-    @SIT_UserJourney @ZYP_K6809-7090 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7090 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
   Scenario: Verify User Journey form Shop to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user clicks on one of the category and navigates to LOne page
@@ -214,7 +207,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-    @SIT_UserJourney @ZYP_K6809-7094 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7094 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
   Scenario: Verify User Journey form Deals to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User will verify the presence of deals category
@@ -255,7 +248,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-    @SIT_UserJourney @ZYP_K6809-7095 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7095 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
   Scenario: Verify User Journey form Deals to PDP Page Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User will verify the presence of deals category

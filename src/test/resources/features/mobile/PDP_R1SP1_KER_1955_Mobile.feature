@@ -1,7 +1,7 @@
 Feature: To Verify the Add To Cart Functionality
           
            
- @Regression @Mobile @C-PDP @1HR @All @KER-1955  @ZYP_K1955-3483
+ @Regression @Mobile @C-PDP @1HR @All @KER-1955  @ZYP_PDP_K1955-3483
   Scenario: Verify the Add To Cart functionality
            Given user launches the browser and navigates to "ASO_HOME" page
     	   Then User navigates till PLP

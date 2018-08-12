@@ -34,12 +34,34 @@ public class R1SP1_KER_1921_Web_SD extends CommonActionHelper{
 		pdpPageObj.quantityInput.sendKeys("100");
 	    clickOnButton(pdpPageObj.btnAddToCart);
 	}
+	
+	@Then ("^User to selects the product from PLP and add product in cart with access quantity$")
+	public void User_to_selects_the_product_from_PLP_and_add_product_in_cart_with_access_quantity()  throws Throwable{
+		    clickOnButton(pdpPageObj.pdpImage);
+		    waitForPageLoad(driver);
+		    Thread.sleep(2000);
+		    clickOnButton(pdpPageObj.btnXXLARGESizePDP);
+		    Thread.sleep(2000);
+		   scrollPageToWebElement(pdpPageObj.quantityInput);
+			Thread.sleep(2000);
+			pdpPageObj.quantityInput.sendKeys("100");
+		    clickOnButton(pdpPageObj.btnAddToCart);
+		
+	}
 
 	@Then("^verify Sorry the selected item is limited to XYZ order\\.$")
 	public void verify_Sorry_the_selected_item_is_limited_to_XYZ_order() throws Throwable {
 	   String actdata= getText(pdpPageObj.MsgSelectedItemLimited);
 	   assertEquals(actdata, "Sorry, the selected item is limited to 4 per order.");
 	}
+	
+	@Then("^verify user gets a msg Sorry we only have XYZ of this item available We added those to the cart$")
+	public void verify_user_gets_a_msg_Sorry_we_only_have_XYZ_of_this_item_available_We_added_those_to_the_cart() throws Throwable {
+		 String actdata= getText(pdpPageObj.txtLimitedQuantityAddedInCart);
+		   assertTrue(actdata.contains("We added those to the cart"));
+		   
+	}
+	
 	@Then("^User select to not sold online item$")
 	public void user_select_to_not_sold_online_item() throws Throwable {
 	   clickOnButton(pdpPageObj.selectSCCY_CPX_2CB9mmPistol);
@@ -62,9 +84,9 @@ public class R1SP1_KER_1921_Web_SD extends CommonActionHelper{
 	@Then("^verify out of stock$")
 	public void verify_out_of_stock() throws Throwable {
 	  
-		scrollPageToWebElement(pdpPageObj.MsgPDP_OnlineMessage);
-		String actdata=getText(pdpPageObj.MsgPDP_OnlineMessage);
-		assertEquals("Out of Stock Online", actdata);
+		scrollPageToWebElement(pdpPageObj.MsgOutOFStock);
+		String actdata=getText(pdpPageObj.MsgOutOFStock);
+		assertEquals("Out of Stock", actdata);
 				
 		
 	}

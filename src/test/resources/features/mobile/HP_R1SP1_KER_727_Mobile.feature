@@ -1,27 +1,29 @@
 Feature: [UI] [Mobile]To verify user can view 'My Account' from a drop down account summary upon successful log in 
 
 
- @C-HP @Mobile @Regression  @KER-727   @ZYP_K727-7419 @1HR
+ @C-HP @Mobile @Regression  @KER-727 @ZYP_HP_K727-7419 @1HR
   Scenario Outline:To Verify the signout from MyAccount
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 Then User clicks on the burger menu
 	 When user to click on sing in and navigate to sign in page
 	Then user to fill username "<username>" and password "<password>"
+	 And click sign in
 	 Then User clicks on the burger menu
-	Then click on singout 
+	 Then user sign out from the website
 	Examples: 
 	
 		|username         |password   |
 		|qaz2@gmail.com |qazlee  |
 	 
 	 
-	 @C-HP @Mobile @Regression  @KER-727   @ZYP_K727-7420
+	 @C-HP @Mobile @Regression  @KER-727   @ZYP_HP_K727-7420
 	 Scenario Outline:To verify user can view 'My Account' from a drop down account summary upon successful log in
 	 
 	 Given user launches the browser and navigates to "ASO_HOME" page 
 	 Then User clicks on the burger menu
 	 When user to click on sing in and navigate to sign in page
 	Then user to fill username "<username>" and password "<password>"
+	And click sign in
 	Then verify user to navigate to account summary page
 	
 	
@@ -33,7 +35,7 @@ Feature: [UI] [Mobile]To verify user can view 'My Account' from a drop down acco
 
 
 
- @C-HP @Mobile @Regression  @KER-727   @ZYP_K727-7421
+ @C-HP @Mobile @Regression  @KER-727   @ZYP_HP_K727-7421
 Scenario Outline:To Verify the Sign-in functionality for invalid email address
  Given user launches the browser and navigates to "ASO_HOME" page 
 	 Then User clicks on the burger menu
@@ -48,7 +50,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid email address
 	 
 	 
 	
- @C-HP @Mobile @Regression  @KER-727   @ZYP_K727-7422
+ @C-HP @Mobile @Regression  @KER-727   @ZYP_HP_K727-7422
 Scenario Outline:To Verify the Sign-in functionality for invalid  password
  Given user launches the browser and navigates to "ASO_HOME" page 
 	 Then User clicks on the burger menu
@@ -62,7 +64,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
 		|qaz2@gmail.com |qazlee1000  |
 
 
-  @C-HP  @Mobile  @Regression  @KER-727   @ZYP_K727-7423
+  @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-7423
  Scenario: Verify the Signin functionality for empty email address and empty password
  Given user launches the browser and navigates to "ASO_HOME" page 
   Then User clicks on the burger menu
@@ -72,7 +74,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
  
 
 
-  @C-HP  @Mobile  @Regression  @KER-727   @ZYP_K727-8434
+  @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-8434
    Scenario: Verify the forgot your password functionality
    Given user launches the browser and navigates to "ASO_HOME" page 
    Then User clicks on the burger menu
@@ -81,9 +83,8 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
     When user to enter email
     Then verify user to click submit button 
     
-    ############
     
-     @C-HP  @Mobile  @Regression  @KER-727   @ZYP_K727-8554
+     @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-8554
     Scenario Outline:  To Verify user is able to Sign In with Valid user name and password by clicking in Sign In Link 
     Given user launches the browser and navigates to "ASO_HOME" page 
     Then User clicks on the burger menu
@@ -99,7 +100,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
 
 
 
- @C-HP  @Mobile  @Regression  @KER-727   @ZYP_K727-8557 @1HR
+ @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-8557 @1HR
     Scenario Outline:  Verify the Personal Information details from MyAccount 
     Given user launches the browser and navigates to "ASO_HOME" page 
     Then User clicks on the burger menu
@@ -115,7 +116,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
 		|qaz2@gmail.com   |qazlee     | 	  
 
 
- @C-HP  @Mobile  @Regression  @KER-727   @ZYP_K727-8558 @1HR
+ @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-8558 
     Scenario Outline:  Verify the Address Book details from MyAccount 
     Given user launches the browser and navigates to "ASO_HOME" page 
     Then User clicks on the burger menu
@@ -131,7 +132,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
 		|qaz2@gmail.com   |qazlee     | 	  
 
 
- @C-HP  @Mobile  @Regression  @KER-727   @ZYP_K727-8559 @1HR
+ @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-8559 
     Scenario Outline:  Verify the Wishlists details from MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page 
     Then User clicks on the burger menu
@@ -146,7 +147,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
 		|username         |password   |
 		|qaz2@gmail.com   |qazlee     | 	
 		
-   @C-HP  @Mobile  @Regression  @KER-727   @ZYP_K727-4081 @CR-AKK
+   @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-4081 @CR-AKK
     Scenario Outline:  Verify the Personal Information details from MyAccount 
     Given user launches the browser and navigates to "ASO_HOME" page 
     Then User clicks on the burger menu
@@ -161,5 +162,21 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
 		|username         |password   |
 		|qaz2@gmail.com   |qazlee     |   
 		
+   @C-HP @Mobile @Regression  @KER-727 @ZYP_HP_K727-6466 @CR-AG
+	 Scenario Outline:To verify user can view 'My Account' from a drop down account summary upon successful log in
+	 
+	 Given user launches the browser and navigates to "ASO_HOME" page 
+	 Then User clicks on the burger menu
+	 When user to click on sing in and navigate to sign in page
+	Then user to fill username "<username>" and password "<password>"
+	And click sign in
+	Then verify user to navigate to account summary page
+	
+	
+	Examples: 
+	
+		|username         |password   |
+		|mondayacademy@mailinator.com |pass1234  |
+	 
   
 

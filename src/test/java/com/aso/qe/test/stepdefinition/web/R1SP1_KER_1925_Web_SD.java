@@ -8,12 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.PDP_PO;
+import com.aso.qe.test.pageobject.PLP_PO;
 import com.aso.qe.test.pageobject.SIT_HomePagePageObject;
 
 import cucumber.api.java.en.Then;
 
 public class R1SP1_KER_1925_Web_SD extends CommonActionHelper {
 	PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), PDP_PO.class);
+	PLP_PO plpPageObj = PageFactory.initElements(getDriver(), PLP_PO.class);
 	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver,
 			GlobalElementHeader_HomePO.class);
 	public SIT_HomePagePageObject HomePagePo = PageFactory.initElements(driver, SIT_HomePagePageObject.class);
@@ -21,7 +23,7 @@ public class R1SP1_KER_1925_Web_SD extends CommonActionHelper {
 	
 	@Then("^Navigate to PLP and select one product with regular price\\(without any promotion\\)$")
 	public void navigate_to_PLP_and_select_one_product_with_regular_price_without_any_promotion() throws Throwable {
-		pdpPageObj.clickShritImage();
+		plpPageObj.clickShirtImage();
 		assertTrue(isDisplayed(pdpPageObj.txtPlpPrice));
 		plpPrice=pdpPageObj.txtPlpPrice.getText();
 		pdpPageObj.clickPlpImage();
@@ -36,7 +38,7 @@ public class R1SP1_KER_1925_Web_SD extends CommonActionHelper {
 	
 	@Then("^Navigate to PLP and select one product with clearance$")
 	public void navigate_to_PLP_and_select_one_product_with_clearance() throws Throwable {
-		pdpPageObj.clickShritImage();
+		plpPageObj.clickShirtImage();
 		pdpPageObj.clickClearanceImage(); 
 	}
 

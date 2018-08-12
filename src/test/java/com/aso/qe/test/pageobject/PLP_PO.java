@@ -1,13 +1,17 @@
 package com.aso.qe.test.pageobject;
 
+import static org.junit.Assert.assertTrue;
+
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import com.aso.qe.framework.common.CommonActionHelper;
 
 public class PLP_PO extends CommonActionHelper{
-	//private   final Logger logger = Logger.getLogger(PLP_PO.class);
 
+	private static final Logger logger = Logger.getLogger(PLP_PO.class);
 	@FindBy(xpath="//*[@data-auid='sort_by']")public   WebElement drpdwnSortBy;
 	@FindBy(xpath="//*[@data-auid='sort_by']")public   WebElement searchdrpdwnSortBy;
 	@FindBy(xpath="//*[@data-auid='sort_by_m']//i")public   WebElement drpdwnSortByMobile;
@@ -18,7 +22,7 @@ public class PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//*[@data-auid=\"drawer_Men's Gloves\"]/a")public   WebElement lnkCategories_RelatedCategories;
 	@FindBy(xpath="(//*[@data-auid='facetdrawer_drawer_Related Categories_m']//a)[2]") public   WebElement lnkCategories_RelatedCategories_Mobile;
 	@FindBy(xpath="//*[contains(@data-component,'sectionTitle')]") public   WebElement txtSectionTitle;
-	@FindBy(xpath="//*[@data-auid='shopbycategorysection']//*[@data-auid='shopByCategory_1']") public WebElement secCategory_CLP;
+	@FindBy(xpath="//*[@data-auid='shopbycategorysection']//*[@data-auid='shopByCategory_0']") public WebElement secCategory_CLP;//9aug danush
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]/parent::div)[1]") 	public   WebElement productPLP1;
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//img)[1]") 	public   WebElement productPLP1_Mobile;
 
@@ -51,7 +55,94 @@ public class PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//a[text()='See Full Product Details']") public WebElement lnkSeeProdcutDetails;
 	//KER-737 End CR-AKK
 	
+	//KER-5271 Start CR-AKK
+	String expctedSearchDexLinkL1="https://uat9www.academy.com/categories/mens-clothes.jsp";
+	String expctedSearchDexLinkL2="https://uat9www.academy.com/categories/mens-pants.jsp";
+	@FindBy(xpath="//*[text()='Featured Categories']") public WebElement txtFeaturedCategories;
+	@FindBy(xpath="//a[text()='Mens Clothes']") public WebElement lnkMensClothes;
+	@FindBy(xpath="//a[text()='Mens Pants']") public WebElement lnkMensPants;
+	
+	
+	/////////////////////////////////////Anuj//////////////////////////////////////////////
+	@FindBy(xpath="//*[@data-auid='clearAll']") public WebElement lnkClearAll;
+	@FindBy(xpath="//*[@data-auid='facetsModalCTAS_M']/*[text()='Clear All']") public WebElement lnkClearAllMobile;
+	
+	//**SID*************************************************************************//
+	//KER-621 9-August-18
+		@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Ad Feature']") public WebElement clickAdFeature;
+		@FindBy(xpath="//*[@data-auid='drawer_Clearance']") public WebElement btnClearance;
+		@FindBy(xpath="//*[@data-auid='drawer_Online Only']") public WebElement btnOnline;
+		@FindBy(xpath="//*[@data-auid='drawer_New Low Price']") public WebElement btnPriceDrop;
+		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Clearance')])[1]") public WebElement colorClearance;
+		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Online Only')])[1]") public WebElement colorOnline;
+		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Price Drop')])[1]") public WebElement colorPriceDrop;
+		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Ships to Store')])[1]") public WebElement colorShipToStore;
+		
+		
+	//*****************************************************************************//
+	
+	
+	public void verifyFeaturedCategoriesText() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			Actions hover=new Actions(getDriver());
+			hover.moveToElement(txtFeaturedCategories);
+			Thread.sleep(2000);
+		}
+		else
+		{
+			scrollPageToWebElement(txtFeaturedCategories);
+			Thread.sleep(2000);
+		}	
+	}
+	
+	public void clickMensClothes() throws Exception {
+		assertTrue(clickOnButton(lnkMensClothes));
+		String actualSearchDexLinkL1=getDriver().getCurrentUrl();
+		assertTrue(expctedSearchDexLinkL1.equals(actualSearchDexLinkL1));
+	}
+	
+	public void clickMensPants() throws Exception {
+		assertTrue(clickOnButton(lnkMensPants));
+		String actualSearchDexLinkL2=getDriver().getCurrentUrl();
+		assertTrue(expctedSearchDexLinkL2.equals(actualSearchDexLinkL2));
+	}
+	//KER-5271 End CR-AKK
+	
 	public PLP_PO(WebDriver webDriver) {
 		super();
+		
+	}
+	
+	//KER-3455 END
+	public void clickShirtImage() throws Exception {
+		assertTrue(clickOnButton(productImage));
+	}
+	
+	//SID 9-August-18  KER-621
+	public String colorHashToRGB(WebElement adFeature) {
+		String[] rgb = new String[3];
+		String hexCode = adFeature.getCssValue("background-color");
+		logger.debug("RGB COLOR " + hexCode);
+		if (hexCode.contains("rgba")) {
+			rgb = hexCode.replace("rgba(", "").replace(")", "").split(",");
+		} else if (hexCode.contains("rgb")) {
+			rgb = hexCode.replace("rgb(", "").replace(")", "").split(",");
+		} else {
+			logger.debug("not either 'RGB' nor 'RGBA'");
+		}
+		rgb[0] = rgb[0].trim();
+		int redValue = Integer.parseInt(rgb[0]);
+		rgb[1] = rgb[1].trim();
+		int greenValue = Integer.parseInt(rgb[1]);
+		rgb[2] = rgb[2].trim();
+		int blueValue = Integer.parseInt(rgb[2]);
+		logger.debug("*******RED******" + redValue + "*****GREEN*******" + greenValue + "******BLUE******" + blueValue);
+		if (redValue > greenValue && redValue > blueValue) {
+			return "red";
+		} else if (blueValue > greenValue && blueValue > redValue) {
+			return "blue";
+		} else {
+			return "not either blue nor red";
+		}
 	}
 }

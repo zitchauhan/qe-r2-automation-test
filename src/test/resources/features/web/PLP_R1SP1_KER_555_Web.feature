@@ -1,6 +1,6 @@
 Feature: To verify user selecting/unselecting one or multiple 'filter by' values on a given facet (check-box)
 
-  @Sanity @Regression @Web @All @C-PLP  @KER-555  @ZYP_K555-2619
+  @Sanity @Regression @Web @All @C-PLP  @KER-555  @ZYP_PLP_K555-2619
   Scenario Outline: Verify user is able to select/unselect one or multiple filter by values on  a given facet (check-box)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -18,7 +18,7 @@ Feature: To verify user selecting/unselecting one or multiple 'filter by' values
       | price        | brand_name | color_name |
       | $10 - $19.99 | Adidas     | Black      |
 
-  @Sanity @Regression @Web @All @KER-555  @ZYP_K555-6309 @C-PLP
+  @Sanity @Regression @Web @All @KER-555  @ZYP_PLP_K555-6309 @C-PLP
   Scenario Outline: Verify user is able to select/unselect one or multiple filter by values from CLP Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2
@@ -36,7 +36,7 @@ Feature: To verify user selecting/unselecting one or multiple 'filter by' values
       | price        | brand_name | color_name |
       | $10 - $19.99 | Adidas     | Black      |
 
-  @Sanity @Regression @Web @All @KER-555  @ZYP_K555-6310 @C-PLP
+  @Sanity @Regression @Web @All @KER-555  @ZYP_PLP_K555-6310 @C-PLP
   Scenario Outline: Verify user is able to select/unselect one or multiple filter by values from Home Page search
     Given user launches the browser and navigates to "ASO_HOME" page
     When user enters "<SearchTerm>" in the search box

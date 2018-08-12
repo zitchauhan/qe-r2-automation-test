@@ -38,7 +38,12 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 	@Then("^user should be able to see Image of the product$")
 	public void user_should_be_able_to_see_Image_of_the_product() throws Throwable {
 		//assert(isDisplayed(pdp_po.secSize2));//To have product in Stock
-		assertTrue(isDisplayed(pdp_po.imgProductMainMixedMedia));
+		if("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(isDisplayed(pdp_po.imgProductMainMixedMedia_m));
+		}
+		else {
+			assertTrue(isDisplayed(pdp_po.imgProductMainMixedMedia));
+		}
 
 	}
 
@@ -89,7 +94,6 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 
 		assertTrue(isDisplayed(pdp_po.secLongDescription));
 		assertTrue(isDisplayed(pdp_po.textFeatureBenefits));
-		scrollPageToWebElement(pdp_po.txtNotifiedBack);
 		assertTrue(clickOnButton(pdp_po.tabDetailsSpecs));
 
 	}
@@ -250,12 +254,46 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 		 driver.navigate().refresh();
 	 }
 	 
-	 //KER-1926 Start CR-AKK
-	 @Then("^verfiy the Ask a question button$")
-	 public void verfiy_the_Ask_a_question_button() throws Throwable {
-		 assertTrue(isDisplayed(pdp_po.btnAskQuestion));
-		 
-	 }
+//	 //KER-1926 Start CR-AKK
+//	 @Then("^verfiy the Ask a question button$")
+//	 public void verfiy_the_Ask_a_question_button() throws Throwable {
+//		 assertTrue(isDisplayed(pdp_po.btnAskQuestion));
+//		 
+//	 }
+//
+//	 @Then("^verfiy the answer this question$")
+//	 public void verfiy_the_answer_this_question() throws Throwable {
+//		 assertTrue(isDisplayed(pdp_po.btnAnswerQuestion));
+//		 pdp_po.cilckAnswerThisQuestion();
+//	 }
+//
+//	 @Then("^close the answer this question popup$")
+//	 public void close_the_answer_this_question_popup() throws Throwable {
+//		 pdp_po.cilckOnCancel();
+//	 }
+//	//KER-1926 End CR-AKK
+//	 
+//	//KER-1937 Start CR-AKK	 
+//	 @Then("^user to fill QuestionSummary \"(.*?)\" and Nickname \"(.*?)\" and Email \"(.*?)\"$")
+//	 public void user_to_fill_QuestionSummary_and_Nickname_and_Email(String questionSumarry, String nickName, String email) throws Throwable {
+//		 assertTrue(clickOnButton(pdp_po.btnAskQuestion));
+//	     setInputText(pdp_po.inputQuestionSummary, questionSumarry);
+//	     setInputText(pdp_po.inputNickname, nickName);
+//	     setInputText(pdp_po.inputEmail, email);
+//	     assertTrue(clickOnButton(pdp_po.btnChecbox));
+//	 }
+//
+//	 @Then("^click on post question$")
+//	 public void click_on_post_question() throws Throwable {
+//		 assertTrue(clickOnButton(pdp_po.btnPostQuesdtion));
+//	 }
+//
+//	 @Then("^verfiy the answer is helpful$")
+//	 public void verfiy_the_answer_is_helpful() throws Throwable {
+//		 assertTrue(isDisplayed(pdp_po.btnYes)); 
+//		 assertTrue(isDisplayed(pdp_po.btnNo)); 
+//	 }
+//	//KER-1937 End CR-AKK
 
 	 @Then("^verfiy the answer this question$")
 	 public void verfiy_the_answer_this_question() throws Throwable {

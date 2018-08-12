@@ -1,6 +1,6 @@
 Feature: To Verify Unauthenticated/Authenticated UserJourney
 
-  @SIT_UserJourney_m @KER-7068 @KER-6809 @C-UnauthenticatedUJ @Mobile @CR-Danush 
+  @SIT_UserJourney_m @ZYP_UNA_K6809-7068 @KER-6809 @C-UnauthenticatedUJ @Mobile @CR-Danush 
   Scenario: Verify Unauthenticated User Journey form Home Page to Header
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -39,7 +39,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     
     
     
-    @SIT_UserJourney_m @KER-7069 @KER-6809 @C-UnauthenticatedUJ @Mobile @CR-Danush 
+    @SIT_UserJourney_m @ZYP_UNA_K6809-7069 @KER-6809 @C-UnauthenticatedUJ @Mobile @CR-Danush 
   Scenario: Verify Unauthenticated User Journey form Home Page to Footer
     Given user launches the browser and navigates to "ASO_HOME" page
    Then User clicks on the burger menu
@@ -76,7 +76,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User will verify the presence of Our history
     And User will verify the presence of Careers
     Then User will verify the presence of Press Room
-    And User will verify the presence of Giving Back
+    And User will verify the presence of Investors
     And User will click on expand button for needhelp
     Then User will verify the presence of Check Order
     And User will verify the presence of Return Policy
@@ -97,7 +97,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User closes the web application
     
     
-     @SIT_UserJourney_m @KER-7070 @KER-6809 @C-UnauthenticatedUJ @Mobile @CR-Danush 
+     @SIT_UserJourney_m @ZYP_UNA_K6809-7070 @KER-6809 @C-UnauthenticatedUJ @Mobile @CR-Danush 
   Scenario: Verify Unauthenticated User Journey form Home Page to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -135,7 +135,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User closes the web application
     
     
-    @SIT_UserJourney_m @KER-7097 @KER-6809 @C-UnauthenticatedUJ @Mobile @CR-Danush 
+    @SIT_UserJourney_m @ZYP_UNA_K6809-7097 @KER-6809 @C-UnauthenticatedUJ @Mobile @CR-Danush 
   Scenario: Verify Unauthenticated User Journey form Home Page to Wishlist to Header
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user click on CTA in Shop Collection
@@ -152,7 +152,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User closes the web application
     
     
-    @SIT_UserJourney_m @KER-7072 @KER-6809 @C-UnauthenticatedUJ @Mobile @CR-Danush 
+    @SIT_UserJourney_m @ZYP_UNA_K6809-7072 @KER-6809 @C-UnauthenticatedUJ @Mobile @CR-Danush 
   Scenario: Verify Unauthenticated User Journey form Home Page to Wishlist to Footer
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user click on CTA in Shop Collection
@@ -168,7 +168,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User will verify the presence of Our history
     And User will verify the presence of Careers
     Then User will verify the presence of Press Room
-    And User will verify the presence of Giving Back
+    And User will verify the presence of Investors
     And User will click on expand button for needhelp
     Then User will verify the presence of Check Order
     And User will verify the presence of Return Policy
@@ -189,7 +189,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User closes the web application
 
    
-  @SIT_UserJourney_m @KER-7073 @KER-6809 @C-UnauthenticatedUJ @Mobile @CR-Danush 
+  @SIT_UserJourney_m @ZYP_UNA_K6809-7073 @KER-6809 @C-UnauthenticatedUJ @Mobile @CR-Danush 
   Scenario: Verify Unauthenticated User Journey form Home Page to Wishlist to HomePage
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user click on CTA in Shop Collection
@@ -207,7 +207,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User closes the web application
     
     
-    @SIT_UserJourney_m @KER-7074 @KER-6809 @C-AuthenticatedUJ @Mobile @CR-Danush 
+    @SIT_UserJourney_m @ZYP_UNA_K6809-7074 @KER-6809 @C-AuthenticatedUJ @Mobile @CR-Danush 
   Scenario: Verify Authenticated User Journey form Home Page to L1/L2/L3 to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -229,7 +229,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
 
 
 
-	 @SIT_UserJourney_m @KER-7075 @KER-6809 @C-AuthenticatedUJ @Mobile @CR-Danush 
+	 @SIT_UserJourney_m @ZYP_UNA_K6809-7075 @KER-6809 @C-AuthenticatedUJ @Mobile @CR-Danush 
   Scenario: Verify Authenticated User Journey form Home Page to Header
    Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -269,7 +269,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     
     
     
-     @SIT_UserJourney_m @KER-7075 @KER-6809 @C-AuthenticatedUJ @Mobile @CR-Danush 
+     @SIT_UserJourney_m @ZYP_UNA_K6809-7075 @KER-6809 @C-AuthenticatedUJ @Mobile @CR-Danush 
   Scenario: Verify Authenticated User Journey form Home Page to Footer
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -307,7 +307,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User will verify the presence of Our history
     And User will verify the presence of Careers
     Then User will verify the presence of Press Room
-    And User will verify the presence of Giving Back
+    And User will verify the presence of Investors
     And User will click on expand button for needhelp
     Then User will verify the presence of Check Order
     And User will verify the presence of Return Policy
@@ -328,7 +328,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then User closes the web application
     
     
-     @SIT_UserJourney_m @KER-7077 @KER-6809 @C-AuthenticatedUJ @Mobile @CR-Danush 
+     @SIT_UserJourney_m @ZYP_UNA_K6809-7077 @KER-6809 @C-AuthenticatedUJ @Mobile @CR-Danush 
   Scenario: Verify Authenticated User Journey form Home Page to Home Page
    Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

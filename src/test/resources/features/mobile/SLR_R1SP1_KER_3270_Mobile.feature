@@ -1,6 +1,6 @@
 Feature: Verify the case behavior for redirect keyword in Mobile. Search keywords - Shirt vs shirt
 
-  @C-SLR @Mobile @Regression  @All @KER-3270  @ZYP_K3270-7609
+  @C-SLR @Mobile @Regression  @All @KER-3270  @ZYP_SLR_K3270-7609 @1HR
   Scenario: Verify the user search for Customer Keyword like Shirt
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
@@ -9,7 +9,7 @@ Feature: Verify the case behavior for redirect keyword in Mobile. Search keyword
     Then User is navigated to pdp page and verifies search result visible
     Then User closes the web application
 
-  @C-SLR @Mobile  @Regression @All @KER-3270  @ZYP_K3270-7610
+  @C-SLR @Mobile  @Regression @All @KER-3270  @ZYP_SLR_K3270-7610
   Scenario: verify the ability to create specific keywords that redirects to search result pages
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
@@ -18,7 +18,7 @@ Feature: Verify the case behavior for redirect keyword in Mobile. Search keyword
     Then navigated to pdp page
     Then User closes the web application
 
-  @C-SLR @Mobile  @Regression @All @KER-3270  @ZYP_K3270-7613 @Rerun
+  @C-SLR @Mobile  @Regression @All @KER-3270  @ZYP_SLR_K3270-7613 @Rerun
   Scenario: verify the ability to configure replacement words for specific search terms as Search Instead For
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
@@ -28,7 +28,7 @@ Feature: Verify the case behavior for redirect keyword in Mobile. Search keyword
     Then User closes the web application
 
 
-  @C-SLR @Mobile @Regression  @All @KER-3270  @ZYP_K3270-7614
+  @C-SLR @Mobile @Regression  @All @KER-3270  @ZYP_SLR_K3270-7614 @1HR
   Scenario: verify the ability to configure replacement words for specific search terms as Also Search for
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
@@ -37,7 +37,7 @@ Feature: Verify the case behavior for redirect keyword in Mobile. Search keyword
     Then User verifes the last breadcrumb keyword
     Then User closes the web application
 
-  @C-SLR @Mobile  @Regression @All @KER-3270  @ZYP_K3270-7616 @Rerun
+  @C-SLR @Mobile  @Regression @All @KER-3270  @ZYP_SLR_K3270-7616 @Rerun
   Scenario: verify the ability to configure synonyms for specific search terms
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage

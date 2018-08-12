@@ -1,6 +1,6 @@
 Feature: Verify presence of Global Element Header
 
-  @Web @All  @C-HP   @Regression @KER-720 @ZYP_K720-4337 @1HR
+  @Web @All  @C-HP   @Regression @KER-720 @ZYP_HP_K720-4337
   Scenario: Verify presence of Global Element Header from Homepage
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User will verify the presence of Sign In
@@ -13,7 +13,7 @@ Feature: Verify presence of Global Element Header
     And User will verify the presence of deals category
 
     
-    @Web @All  @C-HP  @Regression  @KER-720 @ZYP_K720-5475
+    @Web @All  @C-HP  @Regression  @KER-720 @ZYP_HP_K720-5475
   Scenario: Verify presence of Global Element Header from PLP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -27,7 +27,7 @@ Feature: Verify presence of Global Element Header
     And User will verify the presence of deals category
     
     
-    @Web @All  @C-HP  @Regression  @KER-720 @ZYP_K720-5476
+    @Web @All  @C-HP  @Regression  @KER-720 @ZYP_HP_K720-5476
   Scenario: Verify presence of Global Element Header from PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP of any product

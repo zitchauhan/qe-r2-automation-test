@@ -23,9 +23,9 @@ public class HomePagePOM {
 	@FindBy(xpath="//input[@id='logonId']")public WebElement inputEmail;
 	@FindBy(xpath="//input[@id='logonPassword']") public WebElement inputPassword;
 	@FindBy(xpath="//button[contains(text(),'Sign In')]") public WebElement buttonSignIn;
-	@FindBy(xpath="//h1") public WebElement txtAccountSummary;
+	@FindBy(xpath="//h1[@id='landingTitle' and text()='Account Summary']") public WebElement txtAccountSummary;
 	@FindBy(xpath="//*[@id='logonErrorMessage']")public WebElement msgVerifyIncorrect;
-	@FindBy(xpath="//*[@id='logonIdError") public WebElement msgVerifyEmail;
+	@FindBy(xpath="//*[@id='logonIdError']") public WebElement msgVerifyEmail;
 	@FindBy(xpath="//*[@id='logonPasswordError']")public WebElement msgVerifyPassword;
 	@FindBy(xpath="//*[@class='leftNavLinks']/*[2]/*") public WebElement tabPersonalInformation;
 	@FindBy(xpath="//*[@class='leftNavLinks']/*[3]/*") public WebElement tabAddressBook;
@@ -37,36 +37,71 @@ public class HomePagePOM {
 	
 	//RKA  KER-727 Mobile
 	
-	@FindBy(xpath="(//*[contains(text(),'Sign In')])[2]") public WebElement  linkSignIn_M;
+	//@FindBy(xpath="(//*[contains(text(),'Sign In')])[4]") public WebElement  linkSignIn_M;/RKA 8 aug
+	@FindBy(xpath="//*[@data-auid='signInCta_m']")public WebElement  linkSignIn_M;
 	@FindBy(xpath="//*[contains(text(),'Sign Out')]") public WebElement signout_M;
 	@FindBy(xpath="//*[contains(text(),'MY ACCOUNT MENU')]")public WebElement btnMyaccountMenu_M;
 	// KER- 727 END
 	//KER-710 Start
-	@FindBy(xpath="//*[text()='SHOP']") public WebElement btnShop;
-	@FindBy(xpath="(//*[text()='SHOES'])[1]") public WebElement btnShoe;
-	@FindBy(xpath="//*[text()='Boys Shoes']")public WebElement btnBoysShoe;
+	//@FindBy(xpath="//*[text()='SHOP']") public WebElement btnShop;/RKA 8 aug
+		@FindBy(xpath="//*[@data-auid='level1Category-SHOP']/*[1]")public WebElement btnShop;
+		
+		//@FindBy(xpath="(//*[text()='SHOES'])[1]") public WebElement btnShoe;/RKA 8 aug
+		@FindBy(xpath="//*[@data-auid='level2Category-Shoes']")public WebElement btnShoe;
+		//@FindBy(xpath="//*[text()='Boys Shoes']")public WebElement btnBoysShoe;/RKA 8 aug
+		@FindBy(xpath="//*[contains(@data-auid,'level3Category-Boys')]/*[1]")public WebElement btnBoysShoe;
+	
 	@FindBy(xpath="//*[@data-auid='shopByCategory_0']") public WebElement optionFirstClick;
 	@FindBy(xpath="//*[contains(text(),'Sort by')]/following-sibling::*[1]")public WebElement sortByOption;
 	@FindBy(xpath="//span[contains(text(),'Price (Low-High)')]") public WebElement selPriceLowToHigh;
 	@FindBy(xpath="//span[contains(text(),'Price (High-Low)')]") public WebElement selPriceHighToLow;
+	@FindBy(xpath="//span[contains(text(),'Brand (A-Z)')]")public WebElement selAtoB;
+//	@FindBy(xpath="(//*[@class=\"mt-half\"]/*/*[2])[3]") public WebElement firstProductPrice;/RKA 8 july
+//	@FindBy(xpath="(//*[@class=\"mt-half\"]/*/*[2])[4]") public WebElement secondProductPrice;/RKA 8 july
+//	@FindBy(xpath="(//*[@class=\"mt-half\"]/*/*[2])[5]") public WebElement thirdProductPrice;/RKA 8 july
+//	@FindBy(xpath="(//*[@class=\"mt-half\"]/*/*[2])[6]") public WebElement forthProductPrice;/RKA 8 july
+
+	@FindBy(xpath="(//*[@class='c-price__sub css-1f28zyy e1xaasfo1'])[1]/*[2]") public WebElement firstProductPrice;
+	@FindBy(xpath="(//*[@class='c-price__sub css-1f28zyy e1xaasfo1'])[2]/*[2]") public WebElement secondProductPrice;
+	@FindBy(xpath="(//*[@class='c-price__sub css-1f28zyy e1xaasfo1'])[3]/*[2]") public WebElement thirdProductPrice;
+	@FindBy(xpath="(//*[@class='c-price__sub css-1f28zyy e1xaasfo1'])[4]/*[2]") public WebElement forthProductPrice;
 	
-	@FindBy(xpath="(//*[@class=\"mt-half\"]/*/*[2])[3]") public WebElement firstProductPrice;
-	@FindBy(xpath="(//*[@class=\"mt-half\"]/*/*[2])[4]") public WebElement secondProductPrice;
-	@FindBy(xpath="(//*[@class=\"mt-half\"]/*/*[2])[5]") public WebElement thirdProductPrice;
-	@FindBy(xpath="(//*[@class=\"mt-half\"]/*/*[2])[6]") public WebElement forthProductPrice;
-	
-	
-	
+	@FindBy(xpath="(//*[contains(@class,'c-product__title')])[1]")public WebElement firstBrandName;
+	@FindBy(xpath="(//*[contains(@class,'c-product__title')])[2]")public WebElement secondBrandName;
+	@FindBy(xpath="(//*[contains(@class,'c-product__title')])[3]")public WebElement thirdBrandName;
+	@FindBy(xpath="(//*[contains(@class,'c-product__title')])[4]")public WebElement forthBrandName;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand']")public WebElement brandFacet;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand']//*[@data-auid='drawer_Adidas']")public WebElement brandFacetAddidas;
+	@FindBy(xpath="//*[@data-auid='shopByCategory_tiles']/*[1]")public WebElement firstItemL2;
+	@FindBy(xpath="//*[@data-auid='clearAll']/preceding-sibling::*")public WebElement verifyAddidasFromClearAll;
 	//KER-710 Mobile
-	@FindBy(xpath="(//*[text()='SHOES'])[2]")public WebElement btnShoe_M;
-	@FindBy(xpath="(//*[text()='Boys Shoes'])[2]")public WebElement btnBoysShoe_M;
+	//@FindBy(xpath="(//*[text()='SHOES'])[2]")public WebElement btnShoe_M;/RKA 9 aug
+	@FindBy(xpath="//*[@data-auid='level2Category-Shoes_m']")public WebElement btnShoe_M;
+	//@FindBy(xpath="(//*[text()='Boys Shoes'])[2]")public WebElement btnBoysShoe_M;/RKA 9 aug
+	@FindBy(xpath="//*[@data-auid='level4Category-Boots_m']")public WebElement btnBoysShoe_M;
 	@FindBy(xpath="(//h2)[1]") public WebElement headline_M;
 	@FindBy(xpath="//*[@data-auid='sort_by']") public WebElement sortBy_M;
 	@FindBy(xpath="//select")public WebElement selectbySortBy;
 	
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand_m']")public WebElement brandFacet_M;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand_m']//*[@data-auid='drawer_Adidas_m']")public WebElement brandFacetAddidas_M;
+	@FindBy(xpath="//*[@data-auid='level2Category-Shoes_m']")public WebElement btnShop_M;
+	@FindBy(xpath="//*[contains(@data-auid,'level3Category-Men')]")public WebElement btnMenShoe_M;
+	@FindBy(xpath="//*[@data-auid='level4Category-Athletic & Sneakers_m']")public WebElement btnAtheletic_Sneker_M;
+	
+	
 	
 	
 	//KER -710 END
+	
+	
+	//KER-3184
+	@FindBy(xpath="(//*[contains(text(),'Shop Gift Cards')])[1]")public WebElement btnShopGiftCards;
+	@FindBy(xpath="//*[contains(text(),'Shop Bulk Gift Cards')]")public WebElement btnShopBulkGiftCards;
+	@FindBy(xpath="(//*[contains(text(),'Check Balance')])[2]") public WebElement btnCheckBalance_CTA;
+	
+	//KER-3184 end	
+	
 	
 	
 	

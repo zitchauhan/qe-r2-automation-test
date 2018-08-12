@@ -1,4 +1,4 @@
-package com.aso.qe.test.stepdefinition.api;
+/*package com.aso.qe.test.stepdefinition.api;
 
 import static org.testng.Assert.assertTrue;
 
@@ -31,7 +31,7 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 	public void endpoint_for_guest_identity(String url) throws Throwable {
 				String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+url;
 				logger.debug("END Point URL:"+endpoints);
-				initiateRestAPIPostCallForGuestAuthen(endpoints);
+				//initiateRestAPIPostCallForGuestAuthen(endpoints);
 	}
 	
 	
@@ -58,7 +58,7 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 	public void validate_jsonSchema_for_MiniCart_with_Guest(String jsonSchemaFilePath)
 	{
 		try {
-			boolean flag = isJsonValid(convertJsonFileToString(JsonReaderCommon.jsonSchemaFolderPath+ jsonSchemaFilePath+".json"), response1.asString());
+	//		boolean flag = isJsonValid(convertJsonFileToString(JsonReaderCommon.jsonSchemaFolderPath+ jsonSchemaFilePath+".json"), response1.asString());
 			logger.debug("JSON Schema Validate FLAG:: "+flag);
 			assertTrue(flag);
 		} catch (ProcessingException e) {
@@ -126,3 +126,4 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		
 }
 
+*/

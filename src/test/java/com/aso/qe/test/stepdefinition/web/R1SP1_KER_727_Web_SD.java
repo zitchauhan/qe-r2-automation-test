@@ -56,6 +56,7 @@ public class R1SP1_KER_727_Web_SD extends CommonActionHelper{
 	@Then("^verify user to navigate to account summary page$")
 	public void verify_user_to_navigate_to_account_summary_page() throws Throwable {
 	    assertTrue(isDisplayed(hp_p.txtAccountSummary));
+	    
 	}
 	
 	@Then("^verify the validation message as incorrect$")
@@ -66,6 +67,7 @@ public class R1SP1_KER_727_Web_SD extends CommonActionHelper{
 	
 	@Then("^verify enter email and password message to come$")
 	public void verify_enter_email_and_password_message_to_come() throws Throwable {
+		  Thread.sleep(3000);
 	    assertTrue(isDisplayed(hp_p.msgVerifyEmail));
 	    assertTrue(isDisplayed(hp_p.msgVerifyPassword));
 	}

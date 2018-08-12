@@ -1,6 +1,6 @@
 Feature: To Verify the functionality of Find a Store link in the global header
 
-  @Web @All @C-HP @Regression @KER-730 @ZYP_K730-2817 
+  @Web @All @C-HP @Regression @KER-730 @ZYP_HP_K730-2817 
   Scenario: As a User when clicked on Find a Store then user should be navigated to Store Locator Modal
    Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to click on Find Store
@@ -9,7 +9,7 @@ Feature: To Verify the functionality of Find a Store link in the global header
 
    
 
-  @Web @All @C-HP @Regression @KER-730 @ZYP_K730-2711 @1HR
+  @Web @All @C-HP @Regression @KER-730 @ZYP_HP_K730-2711 @1HR
   Scenario Outline: As a user, if I have a saved/selected store, it should be displayed in the header in place of the Find a Store link
    Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to click on Find Store
@@ -23,7 +23,7 @@ Feature: To Verify the functionality of Find a Store link in the global header
       | FL 32822    |
       | FL 32904    |
     
-  @Web @All @C-HP @Regression @KER-730 @ZYP_K730-2820
+  @Web @All @C-HP @Regression @KER-730 @ZYP_HP_K730-2820
   Scenario Outline: As a user, if I have a saved/city store, it should be displayed in the header in place of the Find a Store link
    Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to click on Find Store
@@ -36,7 +36,7 @@ Feature: To Verify the functionality of Find a Store link in the global header
        | The Crosslands |
        | 34741          |
 
-  @Web @All @C-HP @Regression @KER-730 @ZYP_K730-7952
+  @Web @All @C-HP @Regression @KER-730 @ZYP_HP_K730-7952
   Scenario Outline: As a user, if I have a saved/state store, it should be displayed in the header in place of the Find a Store link
    Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to click on Find Store
@@ -49,7 +49,7 @@ Feature: To Verify the functionality of Find a Store link in the global header
       | Florida |
       |         |
       
- @Web @All @C-HP @Regression @KER-730 @ZYP_K730-2818 @1HR
+ @Web @All @C-HP @Regression @KER-730 @ZYP_HP_K730-2818 @1HR
   Scenario Outline: As a user, if I have enterted a special character to search a store, I should see correct messages
    Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to click on Find Store
@@ -61,7 +61,7 @@ Feature: To Verify the functionality of Find a Store link in the global header
       | StoreValue |
       | @		   |
  
- @Web @All @C-HP @Regression @KER-730 @ZYP_K730-2819
+ @Web @All @C-HP @Regression @KER-730 @ZYP_HP_K730-2819
   Scenario Outline: As a user, if I have enterted a space to serach a store, I should see Zero stores message
    Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to click on Find Store

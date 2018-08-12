@@ -3,6 +3,7 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -105,6 +106,7 @@ public class R1SP1_KER_262_Global_Header_SD extends CommonActionHelper{
 	public void user_to_click_on_search_button_after_putting_data(String data) throws Throwable {
 		waitForPageLoad(driver);
 		Thread.sleep(4000);
+		globalElementHeader.searchBox_M.clear();
 		globalElementHeader.searchBox_M.sendKeys(data);
 		clickOnButton(globalElementHeader.searchbtn_M);
 		assertTrue(isDisplayed(globalElementHeader.searchResultText_M));
@@ -133,4 +135,93 @@ public class R1SP1_KER_262_Global_Header_SD extends CommonActionHelper{
 	}
 	
 	
+
+	
+	@Then("^User verify hour of operation display in the place of find a store link$")
+	public void user_verify_hour_of_operation_display_in_the_place_of_find_a_store_link() throws Throwable {
+		assertTrue(isDisplayed(globalElementHeader.hourOfOperationATHeader));
+	}
+	@Then("^user verify element of find store popup$")
+	public void user_verify_element_of_find_store_popup() throws Throwable {
+	   assertTrue(isDisplayed(globalElementHeader.txtFindAsTorePopUP));
+	   assertTrue(isDisplayed(globalElementHeader.searchboxFindAsTorePopUp));
+	   
+	}
+	@Then("^User should be able to click on Find Store after sign in$")
+	public void user_should_be_able_to_click_on_Find_Store_after_sign_in() throws Throwable {
+	   assertTrue(clickOnButton(globalElementHeader.verifyFindStoreAfteLogin));
+	}
+	
+	@Then("^User verify have to verify change link with pencil icon$")
+	public void user_verify_have_to_verify_change_link_with_pencil_icon() throws Throwable {
+	   
+		Actions act=new Actions(driver);
+	   act.moveToElement(globalElementHeader.verifyFindStoreAfteLogin).perform();
+	   
+	   assertTrue(isDisplayed(globalElementHeader.changeicon));
+	}
+
+	@Then("^User to check expansion and collapse of the magnifying search field$")
+	public void user_to_check_expansion_and_collapse_of_the_magnifying_search_field() throws Throwable {
+waitForElement(globalElementHeader.magnifying_M);
+   clickOnButton(globalElementHeader.magnifying_M);
+  
+   clickOnButton(globalElementHeader.magnifying_M);
+   Thread.sleep(2000);
+ 
+	
+	}
+	
+	
+	@Then("^user verify drawer like shop ,trending ,deal$")
+	public void user_verify_drawer_like_shop_trending_deal() throws Throwable {
+	    assertTrue(isDisplayed(globalElementHeader.btnSHOPBurgerMenu));
+	    assertTrue(isDisplayed(globalElementHeader.btnTRENDINGBurgerMenu));
+	    assertTrue(isDisplayed(globalElementHeader.btnDEALSBurgerMenu));
+	}
+	
+	@Then("^User verify and click on weekly Ads$")
+	public void user_verify_and_click_on_weekly_Ads() throws Throwable {
+	   assertTrue(isDisplayed(globalElementHeader.txtWeeklyADBurgerMenu));
+	   clickOnButton(globalElementHeader.txtWeeklyADBurgerMenu);
+	    
+	}
+
+	@Then("^user verify myaccountlink from weekly Ads$")
+	public void user_verify_myaccountlink_from_weekly_Ads() throws Throwable {
+	 assertTrue(isDisplayed(globalElementHeader.btnMyAccountInWeeklyAds));  
+	}
+
+	@Then("^User will click on expand button of this is academy$")
+	public void user_will_click_on_expand_button_of_this_is_academy() throws Throwable {
+	    
+		
+		//scrollPageToWebElement(globalElementHeader.expandAcademyPlus_M);
+		clickOnButton(globalElementHeader.expandAcademyPlus_M);
+		Thread.sleep(2000);
+	}
+
+	@Then("^User will verify the presence of Press Release$")
+	public void user_will_verify_the_presence_of_Press_Release() throws Throwable {
+	    assertTrue(isClickable(globalElementHeader.pressRelease_M));
+	    
+	}
+	
+	@Then("^User will verify the presence of inventors$")
+	public void user_will_verify_the_presence_of_inventors() throws Throwable {
+	   assertTrue(isClickable(globalElementHeader.inventors_M));
+	}
+	
+	
+
+@Then("^User will verify the presence of Shop Gift Cards$")
+public void user_will_verify_the_presence_of_Shop_Gift_Cards() throws Throwable {
+    assertTrue(isClickable(globalElementHeader.shopGiftCards_M));
+}
+
+@Then("^User will verify the presence of Product Recalls$")
+public void user_will_verify_the_presence_of_Product_Recalls() throws Throwable {
+    assertTrue(isClickable(globalElementHeader.productRecalls_M));
+}
+
 }

@@ -1,6 +1,6 @@
 Feature: To Verify the Shop Collection to Home Page User Journeys
 
-  @SIT_UserJourney @ZYP_K6809-7055 @KER-6809 @C-HPUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_HP_K6809-7055 @KER-6809 @C-HPUJ @Web @CR-Danush
   Scenario: Verify User Journey form Shop Collection to CTA to Home Page(through Brand Logo)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -40,7 +40,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User closes the web application
 
   
-  @SIT_UserJourney @ZYP_K6809-7057 @KER-6809 @C-HPUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_HP_K6809-7057 @KER-6809 @C-HPUJ @Web @CR-Danush
   Scenario: Verify User Journey form Shop Collection to CTA to Footer
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -91,7 +91,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User will verify the presence of chat now in Footer
     Then User closes the web application
 
-  @SIT_UserJourney @ZYP_K6809-7058 @KER-6809 @C-HPUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_HP_K6809-7058 @KER-6809 @C-HPUJ @Web @CR-Danush
   Scenario Outline: : Verify User Journey form Shop Collection to CTA  to MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -141,7 +141,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       
 
 #  
-  @SIT_UserJourney @ZYP_K6809-7059 @KER-6809 @C-HPUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_HP_K6809-7059 @KER-6809 @C-HPUJ @Web @CR-Danush
   Scenario Outline: : Verify User Journey form Shop Collection to CTA to HomePage(through Brand Logo)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -194,7 +194,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
      
 
   
-  @SIT_UserJourney @ZYP_K6809-7060 @KER-6809 @C-HPUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_HP_K6809-7060 @KER-6809 @C-HPUJ @Web @CR-Danush
   Scenario Outline: Verify User Journey form Shop Collection to CTA to Academy Credit
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -243,7 +243,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    | The Crosslands | Florida |
       
 
-    @SIT_UserJourney @ZYP_K6809-7061 @KER-6809 @C-HPUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_HP_K6809-7061 @KER-6809 @C-HPUJ @Web @CR-Danush
   Scenario Outline: Verify User Journey form Shop Collection to CTA to Header
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -302,7 +302,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
 
 
  
-    @SIT_UserJourney @ZYP_K6809-7062 @KER-6809 @C-HPUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_HP_K6809-7062 @KER-6809 @C-HPUJ @Web @CR-Danush
   Scenario: Verify User Journey form Shop Collection to ProductCard to Home Page(through Brand Logo)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -342,7 +342,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-    @SIT_UserJourney @ZYP_K6809-7063 @KER-6809 @C-HPUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_HP_K6809-7063 @KER-6809 @C-HPUJ @Web @CR-Danush
   Scenario: Verify User Journey form Shop Collection to ProductCard to Footer
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -394,7 +394,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
     Then User will verify the presence of chat now in Footer
     Then User closes the web application
 
-  @SIT_UserJourney @ZYP_K6809-7064 @KER-6809 @C-HPUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_HP_K6809-7064 @KER-6809 @C-HPUJ @Web @CR-Danush
   Scenario Outline: : Verify User Journey form Shop Collection to ProductCard to FindaStore to MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -444,7 +444,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    | The Crosslands | Florida |
      
 
-    @SIT_UserJourney @ZYP_K6809-7065 @KER-6809 @C-HPUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_HP_K6809-7065 @KER-6809 @C-HPUJ @Web @CR-Danush
   Scenario Outline: Verify User Journey form Shop Collection to ProductCard to Find a Store to Home Page(through Brand Logo)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -497,7 +497,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       | FL 34741    | The Crosslands | Florida |
      
 
-    @SIT_UserJourney @ZYP_K6809-7066 @KER-6809 @C-HPUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_HP_K6809-7066 @KER-6809 @C-HPUJ @Web @CR-Danush
   Scenario Outline: Verify User Journey form Shop Collection to ProductCard to Academy Credit
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
@@ -548,7 +548,7 @@ Feature: To Verify the Shop Collection to Home Page User Journeys
       
 
   
-  @SIT_UserJourney @ZYP_K6809-7067 @KER-6809 @C-HPUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_HP_K6809-7067 @KER-6809 @C-HPUJ @Web @CR-Danush
   Scenario Outline: Verify User Journey form Shop Collection to ProductCard to Header
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button

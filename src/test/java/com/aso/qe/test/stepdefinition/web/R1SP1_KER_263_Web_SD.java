@@ -21,22 +21,24 @@ public class R1SP1_KER_263_Web_SD extends CommonActionHelper{
 		Thread.sleep(2000);
 		assertTrue((clickOnButton(globalElementHeader_HomePO.btnShopCategory)));
 		assertTrue(clickOnButton(globalElementHeader_HomePO.btnClothingCategory));
-		Thread.sleep(2000);
+		waitForPageLoad(driver);
 
 	}
 
 	@Then("^user clicks on one of the subcategory and navigates to LTwo page$")
 	public void user_clicks_on_one_of_the_subcategory_and_navigates_to_LTwo_page() throws Throwable {
+		Thread.sleep(6000);
 		assertTrue(clickOnButton(plp_PO.secCategory_CLP));
-		Thread.sleep(20000);
+		waitForPageLoad(driver);
 
 	}
 
 
 	@Then("^user clicks on one of the product category and navigates to LThree page$")
 	public void user_clicks_on_one_of_the_product_category_and_navigates_to_LThree_page() throws Throwable {
-		assertTrue(clickOnButton(plp_PO.secCategory_CLP));
-		Thread.sleep(20000);
+		Thread.sleep(2000);
+		assertTrue(clickOnButton(plp_PO.productPLP1));//8Aug danush
+		waitForPageLoad(driver);
 	}
 
 	@And("^user is able to see the product category name in section title\\.$")

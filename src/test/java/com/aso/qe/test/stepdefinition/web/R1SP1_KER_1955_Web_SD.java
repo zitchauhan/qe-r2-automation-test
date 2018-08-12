@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.PDP_PO;
@@ -66,8 +68,10 @@ public class R1SP1_KER_1955_Web_SD extends CommonActionHelper{
 
 	@Then("^User should be able to see added product in cart$")
 	public void user_should_be_able_to_see_added_product_in_cart() throws Throwable {
-		String productTitle = getText(pdp_po.secCheckoutPageProductTitle);
-		assertEquals(productTitle, productName);
+		
+		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[text()=\""+productName+"\"])[2]"));
+		assertTrue(isDisplayed(actualTitleInAddToCart));
+		
 	}
 
 }

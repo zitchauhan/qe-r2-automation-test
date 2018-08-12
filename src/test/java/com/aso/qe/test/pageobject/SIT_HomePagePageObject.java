@@ -35,7 +35,8 @@ public class SIT_HomePagePageObject extends CommonActionHelper {
 	
 	//@FindBy(xpath="//div[text()='Clearance']//following-sibling::img")public static WebElement BestSellerproduct;
 	
-	@FindBy(xpath="//*[contains(@data-auid,'data-auiddata-auid')]/div/div[2]")public static WebElement ShopCollectionL3;
+	//@FindBy(xpath="//*[contains(@data-auid,'data-auiddata-auid')]/div/div[2]")public static WebElement ShopCollectionL3;
+	@FindBy(xpath="//*[contains(@data-auid,'productCard_')]/div/div[2]")public static WebElement ShopCollectionL3;//8Aug Danush
 	public int getCategoryTileCount(WebElement categoryTileCount){
 		int tileCount = 0;
 		try{
