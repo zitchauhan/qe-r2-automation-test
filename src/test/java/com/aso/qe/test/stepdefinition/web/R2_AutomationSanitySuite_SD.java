@@ -33,21 +33,6 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 		r2SanityPo.verifyOrderSummaryOnCartPage();
 	}
 
-	@Then("^apply /fire condition based promotions once the cart has verified that correct conditions have been met$")
-	public void apply_fire_condition_based_promotions_once_the_cart_has_verified_that_correct_conditions_have_been_met() throws Throwable {
-	   
-	}
-
-	@And("^customer must see the following at Order Summary in Cart\\(Promo Code and associated discount as -\\$XX\\.XX \\(must be total order discount\\) And Total price must be updated to reflect discount\\)$")
-	public void customer_must_see_the_following_at_Order_Summary_in_Cart_Promo_Code_and_associated_discount_as_$XX_XX_must_be_total_order_discount_And_Total_price_must_be_updated_to_reflect_discount() throws Throwable {
-	    
-	}
-
-	@When("^navigates to PDP page$")
-	public void navigates_to_PDP_page() throws Throwable {
-	   
-	}
-
 	@Then("^user is navigated to Add to cart Notification popup$")
 	public void user_is_navigated_to_Add_to_cart_Notification_popup() throws Throwable {
 		Thread.sleep(2000);
@@ -107,15 +92,8 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 		    } else
 		    {
 		    	logger.debug("Quantity is not increased");
-		    }
-		    
-		    
+		    }    
 	}
-
-	/*@And("^user click on Add to cart button$")
-	public void user_click_on_Add_to_cart_button() throws Throwable {
-	    
-	}*/
 
 	@Then("^click the Remove Quantity link$")
 	public void click_the_Remove_Quantity_link() throws Throwable {
@@ -125,35 +103,11 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 
 	@And("^verify item is removed from the cart$")
 	public void verify_item_is_removed_from_the_cart() throws Throwable {
+		waitForElement(r2SanityPo.AS_btnRemoveFromCart);
 		assertFalse(isDisplayed(r2SanityPo.AS_btnRemoveFromCart));
 	    
 	}
 
-
-	@And("^user click on guest user$")
-	public void user_click_on_guest_user() throws Throwable {
-	    
-	}
-	
-	@When("^user enters promocode And clicks on Apply$")
-	public void user_enters_promocode_And_clicks_on_Apply() throws Throwable {
-	    
-	}
-	
-	@And("^user must see the following details Promo Code and associated discount And Total price$")
-	public void user_must_see_the_following_details_Promo_Code_and_associated_discount_And_Total_price() throws Throwable {
-	    
-	}
-	
-	@When("^user clicks on Remove promocode$")
-	public void user_clicks_on_Remove_promocode() throws Throwable {
-	    
-	}
-	
-	@Then("^promocode should get removed and associated discount should get remove And Total price must be updated with reflect amount$")
-	public void promocode_should_get_removed_and_associated_discount_should_get_remove_And_Total_price_must_be_updated_with_reflect_amount() throws Throwable {
-	    
-	}
 	
 	@Then("^user view the items in order summary details \\(Subtotal, Estimated Shipping/In-Store Pickup, Estimated Taxes\\)$")
 	public void user_view_the_items_in_order_summary_details_Subtotal_Estimated_Shipping_In_Store_Pickup_Estimated_Taxes() throws Throwable {
@@ -170,44 +124,31 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 	public void user_verifiy_Order_Total() throws Throwable {
 		assertTrue(isDisplayed(r2SanityPo.AS_txtTotalCart));
 	}
-	
-	@And("^User click on continue shopping$")
-	public void user_click_on_continue_shopping() throws Throwable {
-	    
-	}
-
-	@And("^User is able to see the selected variant image as thumbnail$")
-	public void user_is_able_to_see_the_selected_variant_image_as_thumbnail() throws Throwable {
-	    
-	}
-	
-	@And("^User navigates to PDP page$")
-	public void user_navigates_to_PDP_page() throws Throwable {
 		
-
-	}
-	
 	
 	@Then("^user clicks on one of the category and navigates to LOne$")
 	public void user_clicks_on_one_of_the_category_and_navigates_to_LOne_page() throws Throwable {
+		waitForElement(r2SanityPo.AS_btnShopCategory);
 		assertTrue((clickOnButton(r2SanityPo.AS_btnShopCategory)));
 		assertTrue(clickOnButton(r2SanityPo.AS_btnClothingCategory));
-		//Thread.sleep(20000);
+		Thread.sleep(3000);
 
 	}
 
 	@Then("^user clicks on one of the subcategory and navigates to LTwo$")
 	public void user_clicks_on_one_of_the_subcategory_and_navigates_to_LTwo_page() throws Throwable {
+		waitForElement(r2SanityPo.AS_secCategory_CLP);
 		assertTrue(clickOnButton(r2SanityPo.AS_secCategory_CLP));
-		//Thread.sleep(20000);
+		Thread.sleep(3000);
 
 	}
 
 
 	@Then("^user clicks on one of the product category and navigates to LThree$")
 	public void user_clicks_on_one_of_the_product_category_and_navigates_to_LThree_page() throws Throwable {
+		waitForElement(r2SanityPo.AS_productPLP1);
 		assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
-		//Thread.sleep(20000);
+		Thread.sleep(3000);
 	}
 	
 	
@@ -245,7 +186,6 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 
 	}
 	
-	
 	@Then("^user clicks on the product card and navigates to PDP$")
 	public void user_clicks_on_the_product_card_and_navigates_to_PDP_of_the_product() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
@@ -260,7 +200,4 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 	public void user_click_on_the_product_image_in_cart_page() throws Throwable {
 		assertTrue(clickOnButton(r2SanityPo.AS_productImage));
 	} 
-		
-	
-
 }
