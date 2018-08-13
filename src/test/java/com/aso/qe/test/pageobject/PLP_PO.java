@@ -79,6 +79,24 @@ public class PLP_PO extends CommonActionHelper{
 		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Ships to Store')])[1]") public WebElement colorShipToStore;
 		
 		
+		//KER-615
+		@FindBy(xpath="(//*[@data-auid='product-sort-dropdown'])[1]/*[2]/*/*/*[1]")public WebElement sortby_bestSelling;
+		
+	//KER-615 end
+		
+		
+		//KER-564
+				@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color']")public WebElement colorFacet;
+				@FindBy(xpath="//*[@data-auid='drawer_Black']")public WebElement blackColorFacet;
+				@FindBy(xpath="//*[@data-auid='clearAll']/preceding-sibling::*")public WebElement verifyBlackFromClearAll;
+				@FindBy(xpath="//*[@data-auid='listingPagination']/*/*[3]")public WebElement paginationForPage_2;
+				
+				@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color_m']")public WebElement colorFacet_M;
+				@FindBy(xpath="//*[@data-auid='drawer_Black_m']")public WebElement blackColorFacet_M;
+			
+		//KER-564
+		
+		
 	//*****************************************************************************//
 	
 	

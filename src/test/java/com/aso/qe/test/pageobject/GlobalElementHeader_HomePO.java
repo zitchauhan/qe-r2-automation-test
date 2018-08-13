@@ -297,6 +297,13 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//button[@data-auid='btnwishListPopover_createList']")  public WebElement btnCreateList;
 	@FindBy(xpath="//*[@id='createWishListInputError']") public WebElement addWishListError;
 	//KER-1915 End CR-AKK
+	//KER-1401 RKA Start
+	
+	@FindBy(xpath="//*[contains(@data-auid,'level3Category-Men')]/*[1]")public WebElement TxtMenShoeL2;
+	@FindBy(xpath="//*[@data-auid='sectionTitle']")public WebElement txtPageHeaderAsMenShoe;
+	@FindBy(xpath="//*[@data-auid='mens-shoes']/*/*[2]/*/*[4]")public WebElement txtBreadCrumbMenShoe;
+	
+	//KER-1401 END
 	public void accountSummaryDeatils(String exceptedAccountSummaryTxt) throws Exception {
 		String actualAccountSummaryTxt = getText(accountSummaryTxt);
 		logger.debug("accountSummaryTxt:: " + actualAccountSummaryTxt);

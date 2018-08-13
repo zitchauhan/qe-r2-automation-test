@@ -269,6 +269,14 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "(//button[contains(@data-auid, 'swatchButton-image-')])[1]")
 	public WebElement imgSubHelmetsCategory;
 	
+	//KER-3344 Start CR-AKK
+	@FindBy(xpath = "//div[contains(text(), 'Schutt Youth Recruit Hybrid Helmet - Shell Only')]")
+	public WebElement txtBundle;
+	@FindBy(xpath ="//div//button[contains(@data-auid, 'swatchButton-image-')][2]")
+	public WebElement imgBundleColor;
+	@FindBy(xpath ="//span[text()='Edit']")
+	public WebElement btnEdit;
+	//KER-3344 End CR-AKK
 	//KER-652 Start 
 	@FindBy(xpath="//*[@data-auid='Rating Stars']")public WebElement starRatingOnPDPtop;
 	@FindBy(xpath="//*[@data-auid='Rating Stars']/*/*/*[2]/*[2]/*|//*[@data-auid='Rating Stars']/*/*/*[3]/*[2]/*")public WebElement starRatingOnPDPtop_Zero;

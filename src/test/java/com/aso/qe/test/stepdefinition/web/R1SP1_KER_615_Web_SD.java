@@ -1,5 +1,6 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 import java.util.List;
 import org.openqa.selenium.interactions.Actions;
@@ -71,5 +72,13 @@ public class R1SP1_KER_615_Web_SD extends CommonActionHelper{
 		logger.debug("By default value in sort by option is ::"+ byDefaultValue );
 		}
 	}
+	
+	@Then("^User Check for the by default value as Best Selling$")
+	public void user_Check_for_the_by_default_value_as_Best_Selling() throws Throwable {
+	   assertEquals(PLP_PO.sortby_bestSelling.getText(), "Best Selling");
+	}
+
+
+	
 	
 }
