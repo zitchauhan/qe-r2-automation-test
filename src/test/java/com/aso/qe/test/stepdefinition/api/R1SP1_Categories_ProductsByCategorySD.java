@@ -110,7 +110,6 @@ public class R1SP1_Categories_ProductsByCategorySD extends JSONValidationUtils{
 		initiateRestAPICall(endpoints);
 	}
 
-
 	@Then("^validate jsonSchema \"(.*?)\"$")
 	public void validate_jsonSchema(String jsonSchemaFilePath){
 

@@ -16,6 +16,7 @@ Scenario Outline: TC_2 -  Verify Add to Cart json schema
     Given "<AddToCartSummaryUrl>" and post request "<addtocartRequestJson>" endpoint for Add to Cart with Guest user
     And validate jsonSchema "KER-3524-AddtoCartSchema"
     
+    
     Examples: 
       |  AddToCartSummaryUrl | addtocartRequestJson | 
       |  /api/cart/sku       | AddToCartPostRequest |
