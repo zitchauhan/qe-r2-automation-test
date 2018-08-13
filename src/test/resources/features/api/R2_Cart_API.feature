@@ -3,22 +3,22 @@ Feature: To Verify Get Cart Details API service without sign-in
 @AutomationSanity @R2_AS1   @R2_AAST-01   @R2_C-CART   @CR-VK  
 Scenario Outline: TC_1 - Verify Add to Cart without sign-in details
     Given "<AddToCartSummaryUrl>" and post request "<addtocartRequestJson>" endpoint for Add to Cart with Guest user
-    Then Verify response status code as 200 for Add to Cart
-    And validate jsonSchema "KER-3524-AddtoCartSchema" for AddToCart with Guest
+    Then Verify response status code as 200
+
     
     Examples: 
-      | Guestloginurl               | AddToCartSummaryUrl | addtocartRequestJson | 
-      | /api/profile/identity/guest | /api/cart/sku       | AddToCartPostRequest | 
+      |  AddToCartSummaryUrl | addtocartRequestJson | 
+      |  /api/cart/sku       | AddToCartPostRequest | 
 
 
 @AutomationSanity  @R2_AS1   @R2_AAST-02   @R2_C-CART   @CR-VK
 Scenario Outline: TC_2 -  Verify Add to Cart json schema
     Given "<AddToCartSummaryUrl>" and post request "<addtocartRequestJson>" endpoint for Add to Cart with Guest user
-    And validate jsonSchema "KER-3524-AddtoCartSchema" for AddToCart with Guest
+    And validate jsonSchema "KER-3524-AddtoCartSchema"
     
     Examples: 
-      | Guestloginurl               | AddToCartSummaryUrl | addtocartRequestJson | 
-      | /api/profile/identity/guest | /api/cart/sku       | AddToCartPostRequest |
+      |  AddToCartSummaryUrl | addtocartRequestJson | 
+      |  /api/cart/sku       | AddToCartPostRequest |
 
 
 @AutomationSanity  @R2_AS1   @R2_AAST-03   @R2_C-CART   @CR-VK
@@ -35,15 +35,15 @@ Scenario Outline: TC_3 - Verify Add to Cart required property values
       | cartURL            |
     
     Examples: 
-      | Guestloginurl               | AddToCartSummaryUrl | addtocartRequestJson | 
-      | /api/profile/identity/guest | /api/cart/sku       | AddToCartPostRequest |
+      |  AddToCartSummaryUrl | addtocartRequestJson | 
+      | /api/cart/sku       | AddToCartPostRequest |
       
          
 @AutomationSanity  @R2_AS1   @R2_AAST-04   @R2_C-CART   @CR-VK 
 Scenario Outline: TC_4 - verify Get Cart without sign-in details
 	Given "<GetCartUrl>" endpoint for getting cart
 	Then Verify response status code as 200 
-    And validate jsonSchema "KER-725-MinicartSchema" for MiniCart with Guest
+    And validate jsonSchema "KER-725-MinicartSchema"
     
 Examples: 
        | GetCartUrl |

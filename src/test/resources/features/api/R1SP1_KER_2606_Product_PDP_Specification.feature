@@ -40,7 +40,7 @@ Feature: To verify the Product PDP Specification API Services
   @Regression @Sanity @All @api @KER-2606 @ZYP-7056 @C-PDP
   Scenario Outline: : Verify Product PDP Specification with store and productid for status code 404
     Given "<ProductPDPUrl>" endpoint for Product PDP Specification
-    Then Verify response status code as 404 for Product PDP Specification
+    Then Verify response status code as 400 for Product PDP Specification
     And Verify the response message "Product Details could not be found" for CategoryDetail
 
     Examples: 

@@ -1,4 +1,5 @@
-/*package com.aso.qe.test.stepdefinition.api;
+package com.aso.qe.test.stepdefinition.api;
+
 
 import static org.testng.Assert.assertTrue;
 
@@ -34,31 +35,20 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 				//initiateRestAPIPostCallForGuestAuthen(endpoints);
 	}
 	
-	
-	
-	@Then("^validate jsonSchema \"(.*?)\" for AddToCart with Guest$")
-	public void validate_jsonSchema_for_AddToCart_with_Guest(String jsonSchemaFilePath)
-	{
-		try {
-			boolean flag = isJsonValid(convertJsonFileToString(JsonReaderCommon.jsonSchemaFolderPath+ jsonSchemaFilePath+".json"), response.asString());
-			logger.debug("JSON Schema Validate FLAG:: "+flag);
-			assertTrue(flag);
-		} catch (ProcessingException e) {
-			logger.error("ProcessingException msg::"+e.getMessage());
-			//e.printStackTrace();
-		} catch (IOException e) {
-			logger.error("IOException msg::"+e.getMessage());
-			//e.printStackTrace();
-		}
-		
+	@Given("^\"(.*?)\" endpoint for getting cart summary$")
+	public void endpoint_for_getting_cart_summary(String url) throws Throwable {
+		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+url+System.getProperty("OrderId")+"/summary";;
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICall(endpoints);
 	}
+	
 	
 	
 	@Then("^validate jsonSchema \"(.*?)\" for MiniCart with Guest$")
 	public void validate_jsonSchema_for_MiniCart_with_Guest(String jsonSchemaFilePath)
 	{
 		try {
-	//		boolean flag = isJsonValid(convertJsonFileToString(JsonReaderCommon.jsonSchemaFolderPath+ jsonSchemaFilePath+".json"), response1.asString());
+			boolean flag = isJsonValid(convertJsonFileToString(JsonReaderCommon.jsonSchemaFolderPath+ jsonSchemaFilePath+".json"), response.asString());
 			logger.debug("JSON Schema Validate FLAG:: "+flag);
 			assertTrue(flag);
 		} catch (ProcessingException e) {
@@ -121,9 +111,14 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 	public void endpoint_for_getting_cart(String url) throws Throwable {
 		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+url;
 		logger.debug("END Point URL:"+endpoints);
-		initiateRestAPICallWithCookies_v1(endpoints);
+		initiateRestAPICallWithGuestUserCookies(endpoints);
 	}
-		
+	
+	
+	@Given("^\"(.*?)\" endpoint for viewing cart details$")
+	public void endpoint_for_viewing_cart_details(String url) throws Throwable {
+		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+url+System.getProperty("OrderId");
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICallWithGuestUserCookies(endpoints);
+	}
 }
-
-*/

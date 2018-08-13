@@ -1,5 +1,6 @@
 Feature: API Route Specification
 
+
   @api @Regression @Sanity @All @KER-262 @ZYP-3079 @C-PDP
   Scenario Outline: : Verify status code 200 for success scenario for Route variantType and variantValue
     Given "RouteVariant" endpoint with variant"<RouteTypeAndValue>"
@@ -7,7 +8,7 @@ Feature: API Route Specification
 
     Examples: 
       | RouteTypeAndValue                        |
-      | variantType=product&variantValue=default |
+      | variantType=product&variantValue=regular |
 
   @api @Regression @Sanity @All @KER-262 @ZYP-5412 @C-PDP
   Scenario Outline: : Validate the RouteVariant json Schema for Route variantType and variantValue
@@ -16,7 +17,7 @@ Feature: API Route Specification
 
     Examples: 
       | RouteTypeAndValue                        |
-      | variantType=product&variantValue=default |
+      | variantType=product&variantValue=regular |
 
   @api @Regression @Sanity @All @KER-262 @ZYP-5413 @C-PDP
   Scenario Outline: : Verify RouteVariant Requried Property Value for Route variantType and variantValue
@@ -27,7 +28,7 @@ Feature: API Route Specification
 
     Examples: 
       | RouteTypeAndValue                        |
-      | variantType=product&variantValue=default |
+      | variantType=product&variantValue=regular |
 
   @api @Regression @Sanity @All @KER-262 @ZYP-5414 @C-PDP
   Scenario Outline: : Verify status code 200 for Route Category and variantValue
@@ -65,7 +66,7 @@ Feature: API Route Specification
 
     Examples: 
       | RouteTypeAndValue |
-      | categoryId=15054  |
+      | categoryId=15082  |
 
   @api @Regression @Sanity @All @KER-262 @ZYP-5418 @C-PDP
   Scenario Outline: : Validate RouteVariant json Schema for RouteVariant categoryId
@@ -74,7 +75,7 @@ Feature: API Route Specification
 
     Examples: 
       | RouteTypeAndValue |
-      | categoryId=15054  |
+      | categoryId=15082  |
 
   @api @Regression @Sanity @All @KER-262 @ZYP-5419 @C-PDP
   Scenario Outline: : Verify Requried Property Values for RouteVariant categoryId
@@ -85,7 +86,7 @@ Feature: API Route Specification
 
     Examples: 
       | RouteTypeAndValue |
-      | categoryId=15054  |
+      | categoryId=15082  |
 
   @api @Regression @Sanity @All @KER-262 @ZYP-3080 @C-PDP
   Scenario Outline: : Verify status code 200 for Category Id
@@ -94,7 +95,7 @@ Feature: API Route Specification
 
     Examples: 
       | RouteCategoryId  |
-      | categoryId=15054 |
+      | categoryId=15082 |
 
   @api @Regression @Sanity @All @KER-262 @ZYP-5420 @C-PDP
   Scenario Outline: : Verify RouteVariant Json Schema for Category Id
@@ -103,7 +104,7 @@ Feature: API Route Specification
 
     Examples: 
       | RouteCategoryId  |
-      | categoryId=15054 |
+      | categoryId=15082 |
 
   @api @Regression @Sanity @All @KER-262 @ZYP-5421 @C-PDP
   Scenario Outline: : Verify Requried Property Values for RouteCategory Id
@@ -115,7 +116,7 @@ Feature: API Route Specification
 
     Examples: 
       | RouteCategoryId  |
-      | categoryId=15054 |
+      | categoryId=15082 |
 
   @api @Regression @Sanity @All @KER-262 @ZYP-3081 @C-PDP
   Scenario Outline: : Verify status code 200 for success scenario for Route Page SEOUrl
@@ -124,7 +125,7 @@ Feature: API Route Specification
 
     Examples: 
       | pageSeoURL                  |
-      | www.Ravi.com |
+      | Brands |
 
   @api @Regression @Sanity @All @KER-262 @ZYP-5422 @C-PDP
   Scenario Outline: : Validate Route variant json schema for Route Page SEOUrl
@@ -133,7 +134,7 @@ Feature: API Route Specification
 
     Examples: 
       | pageSeoURL                  |
-      | www.Ravi.com |
+      | Brands |
 
   @api @Regression @Sanity @All @KER-262 @ZYP-5423 @C-PDP
   Scenario Outline: : Verify Requried Property Values for Route Page SEOUrl
@@ -144,7 +145,7 @@ Feature: API Route Specification
 
     Examples: 
       | pageSeoURL                  |
-      | www.Ravi.com |
+      | Brands |
 
   @api @Regression @Sanity @All @KER-262 @ZYP-5424 @C-PDP
   Scenario Outline: : Verify status code 200 for Route Page default SEOUrl
