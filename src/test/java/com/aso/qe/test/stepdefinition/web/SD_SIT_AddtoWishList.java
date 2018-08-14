@@ -43,14 +43,18 @@ public class SD_SIT_AddtoWishList extends CommonActionHelper {
 			assertTrue(clickOnButton(WishlistPo.btnNewWishlist));
 			assertTrue(isDisplayed(WishlistPo.tltCreatewishlist));
 			WishlistPo.enterListName();
-			assertTrue(clickOnButton(WishlistPo.btncancel));
-			assertTrue(clickOnButton(WishlistPo.btnNewWishlist));
 			assertTrue(clickOnButton(WishlistPo.btnsave));
+			assertTrue(clickOnButton(WishlistPo.btnNewWishlist));
+			assertTrue(clickOnButton(WishlistPo.btncancel));
+			
+			
 			
 		}
 		
 		@Then("^user should verify the created WishList$")
 		public void user_should_verify_the_created_WishList() throws Throwable {
+			waitForElement(WishlistPo.txtwishlistselect);
+			isDisplayed(WishlistPo.txtwishlistselect);
 			String wishlist= getText(WishlistPo.txtwishlistselect);
 			logger.info("Created Wishlist name " + wishlist);
 			
@@ -58,10 +62,17 @@ public class SD_SIT_AddtoWishList extends CommonActionHelper {
 		
 		@Then("^user should rename the created WishList$")
 		public void user_should_rename_the_created_WishList() throws Throwable {
+			Thread.sleep(300);
+			isClickable(WishlistPo.btnrenamewishlist);
+			waitForElement(WishlistPo.btnrenamewishlist);
 			assertTrue(clickOnButton(WishlistPo.btnrenamewishlist));
 			//AddWishlistPo.clearInputBox(WishlistPo.txtListname);
+			waitForElement(WishlistPo.renameWishListModal);
+			WishlistPo.txtrenamewishlistselect.click();
 			WishlistPo.txtrenamewishlistselect.clear();
-			setInputText(WishlistPo.txtrenamewishlistselect, "Rename wishlist");
+			WishlistPo.txtrenamewishlistselect.click();
+			WishlistPo.renameWishListName();   //rename wishlist
+			isClickable(WishlistPo.btnrenamesave);
 			assertTrue(clickOnButton(WishlistPo.btnrenamesave));
 			
 		}
@@ -69,9 +80,16 @@ public class SD_SIT_AddtoWishList extends CommonActionHelper {
 
 		@Then("^user should delete the created WishList$")
 		public void user_should_delete_the_created_WishList() throws Throwable {
+			Thread.sleep(300);
+			isClickable(WishlistPo.btndeletewishlist);
+			waitForElement(WishlistPo.btndeletewishlist);
+			Thread.sleep(300);
 			assertTrue(clickOnButton(WishlistPo.btndeletewishlist));
 			assertTrue(isDisplayed(WishlistPo.tltDeletewishlist));
 			assertTrue(clickOnButton(WishlistPo.btndeletecancel));
+			Thread.sleep(300);
+			isClickable(WishlistPo.btndeletewishlist);
+			waitForElement(WishlistPo.btndeletewishlist);
 			assertTrue(clickOnButton(WishlistPo.btndeletewishlist));
 			assertTrue(clickOnButton(WishlistPo.btndelete));
 		}

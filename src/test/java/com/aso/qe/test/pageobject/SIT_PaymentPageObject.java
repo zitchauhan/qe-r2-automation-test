@@ -16,7 +16,8 @@ private static final Logger logger = Logger.getLogger(SIT_PaymentPageObject.clas
 GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 	
 	@FindBy(xpath="//h2[text()='Payment Method']") public WebElement payment;
-	@FindBy(xpath="//*[@id=\"coPaymentMethodCC\"]") public WebElement rdbntcreditcard;
+//	@FindBy(xpath="//*[@id=\"coPaymentMethodCC\"]") public WebElement rdbntcreditcard; //Commented by SID 11-August-18
+	@FindBy(xpath="//*[@id='coPaymentMethodCC']") public WebElement rdbntcreditcard; //SID 11-August-18
 	@FindBy(xpath="//input[@id='creditCardInput']") public WebElement cardnumber;
 	@FindBy(xpath="//input[@id='expInput']") public WebElement expiration;
 	@FindBy(xpath="//input[@id='CVVInput']") public WebElement cvv;
@@ -24,6 +25,10 @@ GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver,
 	@FindBy(xpath="//font[text()='test1']") public WebElement txtusername;
 	@FindBy(xpath="//input[@type='password']") public WebElement txtpwd;
 	@FindBy(xpath="//input[@name='UsernamePasswordEntry']") public WebElement btnsubmit;
+	@FindBy(xpath="//*[@id='placeOrder']") public WebElement btnPlaceOrder;
+	
+	
+	
 	
 	
 	public void verifyPaymentmethodPage() throws Exception{
@@ -36,16 +41,20 @@ GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver,
 			logger.debug("Payment Method is displayed");
 		}
 	}
+//	public void validatecreditcarddetails() throws Exception {
+//			assertTrue(isSelected(rdbntcreditcard));		
+//			cardnumber.sendKeys("4111  1111  1111  1111");
+//			expiration.sendKeys("1123");
+//			cvv.sendKeys("345");	
+//		}
+	
+	//SID 11-August-18
 	public void validatecreditcarddetails() throws Exception {
-
-			assertTrue(isSelected(rdbntcreditcard));
-			//assertTrue(clickOnRadioButton(rdbntcreditcard));
-						
-			cardnumber.sendKeys("4111  1111  1111  1111");
-			expiration.sendKeys("1123");
-			cvv.sendKeys("345");
-						
-		}
+		assertTrue(isSelected(rdbntcreditcard));		
+		setInputText(cardnumber, "4111  1111  1111  1111");
+		setInputText(expiration, "1123");
+		setInputText(cvv, "345");
+	}
 	
 	public void verifyVisapwd() throws Exception {
 		Thread.sleep(20000);

@@ -125,6 +125,11 @@ public class R1SP1_KER_262_Web_Global_Footer_SD extends CommonActionHelper{
 
 	}
 	
+	@Then ("^user click on the chat now and verify the chat now pop up is opened$")
+	public void user_click_on_the_chat_now_and_verify_the_chat_now_pop_up_is_opened() throws Throwable{
+		globalElementHeader.validatingchatnowFunctioanlity();
+	}
+	
 	@Then("^User will verify the presence of privacy policy$")
 	public void user_will_verify_the_presence_of_privacy_policy() throws Throwable {
 		globalElementHeader.validatingPrivatPolicy();
@@ -161,5 +166,10 @@ public class R1SP1_KER_262_Web_Global_Footer_SD extends CommonActionHelper{
 	@Then("^Scroll till footer of the page$")
 	public void Scroll_till_footer_of_the_page() throws Throwable {
 		scrollPageToWebElement(globalElementHeader.preFooterScroll);
+	}
+	
+	@Then("^User will verify the presence of footer links$")
+	public void User_will_verify_the_presence_of_footer_links() {
+		globalElementHeader.softAssertFotterLink();
 	}
 }

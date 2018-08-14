@@ -1,6 +1,6 @@
 Feature:  Add to Cart - Error Messages (PDP)
 
-  @C-HP @Web @Regression @KER-1919 @ZYP_HP_K1919-5040 @CR-AG 
+  @C-PDP @Web @Regression @KER-1919 @ZYP_HP_K1919-5040 @CR-AG 
   Scenario Outline: [UI-Desktop]- Verify Add to Cart -message to inform the user that the item is OOS(Out of Stock)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user search the data in search box"<data>"
@@ -12,7 +12,7 @@ Feature:  Add to Cart - Error Messages (PDP)
       | Toddler Shirts |
 
       
-  @C-HP @Web @Regression @KER-1919 @ZYP_HP_K1919-5038 @CR-AG
+  @C-PDP @Web @Regression @KER-1919 @ZYP_HP_K1919-5038 @CR-AG
   Scenario Outline: [UI-Desktop]- Verify Add to Cart -messaging to confirm the limited quantity was added
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user search the data in search box"<data>"
@@ -24,7 +24,7 @@ Feature:  Add to Cart - Error Messages (PDP)
       | Magellan Outdoors Men's Neoprene Wading Boots |
       
           
-  @C-HP @Web @Regression @KER-1919 @ZYP_HP_K1919-5039 @CR-AG
+  @C-PDP @Web @Regression @KER-1919 @ZYP_HP_K1919-5039 @CR-AG
   Scenario Outline: [UI-Desktop]- Verify Add to Cart -messaging to confirm the quantity was added
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user search the data in search box"<data>"

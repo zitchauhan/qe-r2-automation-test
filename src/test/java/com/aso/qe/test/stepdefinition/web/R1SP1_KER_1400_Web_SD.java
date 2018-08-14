@@ -34,5 +34,7 @@ public class R1SP1_KER_1400_Web_SD extends CommonActionHelper{
 	@And("^user verify the success message$")
 	public void user_verify_the_success_message() throws InterruptedException {
 		assertTrue(isDisplayed(globalElementHeader.lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE));
+		Thread.sleep(1000);
+		assertTrue(clickOnButton(globalElementHeader.btnCloseCrossSuccess));
 	}
 }

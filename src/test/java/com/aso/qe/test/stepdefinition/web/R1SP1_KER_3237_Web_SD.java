@@ -1,5 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -40,7 +42,7 @@ public class R1SP1_KER_3237_Web_SD extends CommonActionHelper{
 	
 	@And("^User verifies the predictive suggestions for matching keyword$")
 	public void User_verifies_the_predictive_suggestions_for_matching_keyword() throws Throwable {
-		globalElementHeader.verifySuggestionPage("shoes");
+		assertTrue(globalElementHeader.verifySuggestionPage("Shoes"));
 
 	}
 	

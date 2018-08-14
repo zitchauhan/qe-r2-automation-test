@@ -277,6 +277,7 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 		//scrollPageToWebElement(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile);
 		Thread.sleep(1500);
 		assertTrue(isClickable(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile));
+		Thread.sleep(1500);
 		assertTrue(clickOnButton(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile));
 		
 	}

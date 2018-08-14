@@ -20,7 +20,8 @@ public class SD_SIT_CheckoutPage extends CommonActionHelper {
 	
 	@Then("^user click on continue checkout button$")
 	public void user_click_on_continue_checkout_button() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
+		waitForElement(CheckoutPo.btnContinueCheckout);
+	    isDisplayed(CheckoutPo.btnContinueCheckout);
 		assertTrue(clickOnButton(CheckoutPo.btnContinueCheckout));
 	}
 

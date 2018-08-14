@@ -30,7 +30,9 @@ public class SIT_HomePagePageObject extends CommonActionHelper {
 
 	@FindBy(xpath="//a[@data-auid='HP_FC_Anchor_2']/h6")public WebElement prdTileFeaturedCategory;
 
-	@FindBy(xpath="//div[@class='col-4 sc-product-card'][2]")public static WebElement ShopCollectionProductcard;
+//	@FindBy(xpath="//div[@class='col-4 sc-product-card'][2]")public static WebElement ShopCollectionProductcard;
+	@FindBy(xpath="(//*[@data-component='shopCollection']//*[contains(@class,'d-none d-md-block container')]//*[contains(@class,'sc-product-card')]//img)[1]")public static WebElement ShopCollectionProductcard;   //SID 11-August-18
+	
 	@FindBy(xpath="//*[@data-auid='btnbtn1']")public static WebElement ShopCollectionCTA;
 	
 	//@FindBy(xpath="//div[text()='Clearance']//following-sibling::img")public static WebElement BestSellerproduct;

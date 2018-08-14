@@ -25,7 +25,8 @@ public class SD_SIT_ShippingAddressPage extends CommonActionHelper{
 		
 	@Then("^user click on continue to shipping method button$")
 	public void user_click_on_continue_to_shipping_method_button() throws Throwable {
-		    // Write code here that turns the phrase above into concrete actions
+		waitForElement(ShipAddPo.btnContiuneToMethod);
+		isDisplayed(ShipAddPo.btnContiuneToMethod);
 		assertTrue(clickOnButton(ShipAddPo.btnContiuneToMethod));
 		}
 		

@@ -240,7 +240,8 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//*[@data-auid='btnemail-signup-button']") public WebElement lnkSIGNUPFORMOREDEALSSUBMIT;
 	@FindBy(xpath="//*[contains(text(),'YOU ARE SET')]") public WebElement lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE;
 	@FindBy(xpath="//*[@data-component='footer']//a") public List<WebElement> footerLinks; //10 Aug 
-
+	@FindBy(xpath="//*[@data-auid='email-signup-sucess-modal']//span") public WebElement btnCloseCrossSuccess;//Anuj 13Aug
+	
 	//**SID END*********************************************************************************************************************************************
 	@FindBy(xpath="//*[(text()=\"Men's Shirts\")]") public WebElement txtMensShrit;
 	@FindBy(xpath="//div[contains(@class,'row')]//following-sibling::div[@class='mb-3']") public WebElement lnkL2PaginationMobile;
@@ -253,14 +254,12 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//*[@data-auid='level1Category-SHOP_m']//span[contains(@class,'minus')]") public WebElement btnSHOPBurgerMenuMinusIcon;
 	//KER-262 Start 
 
-
 	@FindBy(xpath="//*[@data-auid='findAStore']/*[2]")public WebElement hourOfOperationATHeader;
 	@FindBy(xpath="(//*[@data-auid='find-a-store-modal'])[2]/*[2]/*/*[1]") public WebElement txtFindAsTorePopUP;
 	@FindBy(xpath="(//*[@data-auid='find-a-store-modal'])[2]/*[2]/*/*[2]/*/*[1]")public WebElement searchboxFindAsTorePopUp;
 	@FindBy(xpath="//*[@data-auid='findAStore']/*[1]/*[2]")public WebElement verifyFindStoreAfteLogin;
 	@FindBy(xpath="//*[@data-auid='findAStore']/*[1]/*[3]/*[2]")public WebElement changeicon;
 	@FindBy(xpath="//*[@data-auid='myAccountCta_m']")public WebElement btnMyAccountInWeeklyAds;
-
 
 	@FindBy(xpath="//*[contains(text(),'THIS IS ACADEMY')]")public WebElement expandAcademyPlus_M;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Press Releases']")public WebElement pressRelease_M;
@@ -270,11 +269,6 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 
 	@FindBy(xpath="//*[@id='logonSubmit']")public WebElement btmSignIn;
 	@FindBy(xpath="//*[@id='signup-link-from-login']")public WebElement linkSignUP;
-
-
-
-
-
 
 	@FindBy(xpath="(//*[contains(text(),'Account Summary')])[3]")public WebElement btmkAccountSummary;
 	@FindBy(xpath="(//*[contains(text(),'Account Summary')])[3]")public WebElement btmkAccountSummary_M;
@@ -302,8 +296,11 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//*[contains(@data-auid,'level3Category-Men')]/*[1]")public WebElement TxtMenShoeL2;
 	@FindBy(xpath="//*[@data-auid='sectionTitle']")public WebElement txtPageHeaderAsMenShoe;
 	@FindBy(xpath="//*[@data-auid='mens-shoes']/*/*[2]/*/*[4]")public WebElement txtBreadCrumbMenShoe;
-	
 	//KER-1401 END
+	
+	
+	
+	
 	public void accountSummaryDeatils(String exceptedAccountSummaryTxt) throws Exception {
 		String actualAccountSummaryTxt = getText(accountSummaryTxt);
 		logger.debug("accountSummaryTxt:: " + actualAccountSummaryTxt);
@@ -923,9 +920,11 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	}
 
 
-	@FindBy(xpath="//*[contains(@class,'mr-auto search-right-column')]")  WebElement listsuggestion;  
+	@FindBy(xpath="//*[contains(@class,'w-100 search-term-wrap row no-gutter')]//li//a")  List<WebElement> listsuggestion;  
+	@FindBy(xpath="//*[contains(@class,'position-absolute search-flyout search-mega-flyout')]")  WebElement suggestionFlyout; 
+	
 
-
+//SID MODIFIED 14-August
 	public boolean verifySuggestionPage(String inputSearchTxt) throws Exception{
 		boolean flag = false;
 		if("mobile".equalsIgnoreCase(testtype))
@@ -937,20 +936,18 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 			actions.click();
 			actions.sendKeys(inputSearchTxt);
 			actions.build().perform();
-			Thread.sleep(10000);
-			waitForElement(listsuggestion);
-			Actions search = new Actions(driver);
-			search.moveToElement(listsuggestion);
-			search.build().perform();
-			String searchResultTxt = listsuggestion.getText();
-			System.out.println("&&&&&&&&&&&&&&&&&&&*****************************ss:: "+searchResultTxt);
-			String searchTxtArray[]=searchResultTxt.split("\\r?\\n");
-			for(String txt: searchTxtArray){
-				if(txt != null && !(txt.contains("CATEGORY")||txt.contains("BRAND")||txt.contains("Clear")) && txt.contains(inputSearchTxt)){
-					flag = true;
+			flag = isDisplayed(suggestionFlyout);
+			if(flag==true) {
+			for(WebElement txt: listsuggestion){
+				if(txt != null && !(txt.getText().contains("CATEGORY")||txt.getText().contains("BRAND")||txt.getText().contains("Clear")) && txt.getText().contains(inputSearchTxt)){
+					txt.getText().toLowerCase().contains(inputSearchTxt.toLowerCase());
 				}
 			}
-			System.out.println("verifySuggestionPage Flag::"+flag);
+			return true;
+			}
+			else {
+				return false;
+			}
 		}else {
 			txtSearchBox.clear();//anil
 			Actions actions = new Actions(driver);
@@ -959,25 +956,21 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 			actions.sendKeys(inputSearchTxt);
 			Thread.sleep(1000);//anil
 			actions.build().perform();
-			Thread.sleep(10000);
-			waitForElement(listsuggestion);
-			Actions search = new Actions(driver);
-			search.moveToElement(listsuggestion);
-			search.build().perform();
-			String searchResultTxt = listsuggestion.getText();
-			System.out.println("&&&&&&&&&&&&&&&&&&&*****************************ss:: "+searchResultTxt);
-			String searchTxtArray[]=searchResultTxt.split("\\r?\\n");
-			for(String txt: searchTxtArray){
-				if(txt != null && !(txt.contains("CATEGORY")||txt.contains("BRAND")||txt.contains("Clear")) && txt.contains(inputSearchTxt)){
-					flag = true;
+			flag = isDisplayed(suggestionFlyout);
+			if(flag==true) {
+			for(WebElement txt: listsuggestion){
+				waitForElement(txt);
+				if(txt != null && !(txt.getText().contains("CATEGORY")||txt.getText().contains("BRAND")||txt.getText().contains("Clear")) && txt.getText().contains(inputSearchTxt)){
+					txt.getText().toLowerCase().contains(inputSearchTxt.toLowerCase());
 				}
 			}
-			System.out.println("verifySuggestionPage Flag::"+flag);
-		}
-		return flag;	
+			return true;
+			}
+			else {
+				return false;
+			}
+		}	
 	}
-
-
 
 	public boolean verifyDuplicateSuggestion(String inputSearchTxt) throws Exception{
 		boolean flag = false;
@@ -990,32 +983,22 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 			Thread.sleep(1000);
 			actions.build().perform();
 			Thread.sleep(1000);
-			waitForElement(listsuggestion);
-			Actions search = new Actions(driver);
-			search.moveToElement(listsuggestion);
-			search.build().perform();
-			waitForElement(listsuggestion);
-			Thread.sleep(1000);
-			String searchResultTxt = listsuggestion.getText();
-
-			logger.debug("&&&&&&&&&&&&&&&&&&&**************************ss:: "+searchResultTxt);
-			//System.out.println("&&&&&&&&&&&&&&&&&&&*****************************ss:: "+searchResultTxt);
-			String searchTxtArray[]=searchResultTxt.split("\\r?\\n");
-			for(String txt: searchTxtArray){
+			flag = isDisplayed(suggestionFlyout);
+			if(flag==true) {
+			for(WebElement txt: listsuggestion){
 				if(txt != null ){
-					if(seachMap.containsKey(txt)) {
+					if(seachMap.containsKey(txt.getText())) {
 						flag = false;
 						break;
 					}else {
-						seachMap.put(txt, txt);
+						seachMap.put(txt.getText(), txt.getText());
 						flag = true;
 					}
 
 				}
 			}
-			System.out.println("verifyDuplicateSuggestion Flag::"+flag);
+			}
 		}else {
-
 			HashMap<String, String> seachMap = new HashMap<String, String>();
 			Actions actions = new Actions(driver);
 			actions.moveToElement(txtSearchBox);
@@ -1023,30 +1006,21 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 			actions.click();
 			actions.sendKeys(inputSearchTxt);
 			actions.build().perform();
-			waitForElement(listsuggestion);
-			Actions search = new Actions(driver);
-			search.moveToElement(listsuggestion);
-			search.build().perform();
-			Thread.sleep(3000);
-			waitForElement(listsuggestion);
-			String searchResultTxt = listsuggestion.getText();
-
-			logger.debug("&&&&&&&&&&&&&&&&&&&**************************ss:: "+searchResultTxt);
-			//System.out.println("&&&&&&&&&&&&&&&&&&&*****************************ss:: "+searchResultTxt);
-			String searchTxtArray[]=searchResultTxt.split("\\r?\\n");
-			for(String txt: searchTxtArray){
+			flag = isDisplayed(suggestionFlyout);
+			if(flag==true) {
+			for(WebElement txt: listsuggestion){
 				if(txt != null ){
-					if(seachMap.containsKey(txt)) {
+					if(seachMap.containsKey(txt.getText())) {
 						flag = false;
 						break;
 					}else {
-						seachMap.put(txt, txt);
+						seachMap.put(txt.getText(), txt.getText());
 						flag = true;
 					}
 
 				}
 			}
-			System.out.println("verifyDuplicateSuggestion Flag::"+flag);
+			}
 		}
 		return flag;	
 	}
@@ -1310,9 +1284,18 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 			isClickable(lnkchatnow);
 			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
 		}
-
-
 	}
+	
+	public void validatingchatnowFunctioanlity() throws Exception{
+		
+			isDisplayed(lnkchatnow);
+			assertTrue(clickOnButton(lnkchatnow));
+			logger.debug("lnkcustomercare link popup is displayed");
+	
+	}
+	
+	
+	
 	public void validatingShopCategory() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(btnShopCategory);
@@ -1371,6 +1354,17 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 			logger.debug("Find A store link is not displayed ");	
 
 	}
+	
+	public void findAndClickStoreinFooter() throws Exception{
+
+		if(isDisplayed(lnkfindastore)) {
+
+			assertTrue(clickOnButton(lnkfindastore));
+		}else
+			logger.debug("Find A store link is not displayed ");	
+
+	}
+	
 	public void findAndClickStoreinMobile() throws InterruptedException {
 		if(isDisplayed(txtFindAStoreMobile)) {	
 			scrollPageToWebElement(txtFindAStoreMobile);

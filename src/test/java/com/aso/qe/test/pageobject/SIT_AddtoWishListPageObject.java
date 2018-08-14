@@ -1,5 +1,8 @@
 package com.aso.qe.test.pageobject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -7,13 +10,18 @@ import com.aso.qe.framework.common.CommonActionHelper;
 
 public class SIT_AddtoWishListPageObject extends CommonActionHelper{
 	
+	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());  //Sid
+	
 	@FindBy(xpath="//div[@data-auid='PDP_AddToWishList']") public WebElement lnkaddtowishlist;
 	@FindBy(xpath="//button[@id='newWishListBtn']") public  WebElement btnNewWishlist;
 	@FindBy(xpath="//h2[@id='createWishListModalTitle']") public  WebElement tltCreatewishlist;
 	@FindBy(xpath="//input[@id='createWishListInputField']") public  WebElement txtListname;
 	@FindBy(xpath="//button[@id='add_cancel']") public  WebElement btncancel;
 	@FindBy(xpath="//input[@id='add_save']") public  WebElement btnsave;
-	@FindBy(xpath="//select[@id='wishListSelect']") public  WebElement txtwishlistselect;
+//	@FindBy(xpath="//select[@id='wishListSelect']") public  WebElement txtwishlistselect;
+	@FindBy(xpath="//select[@id='wishListSelect']//*[@selected='selected']") public  WebElement txtwishlistselect; //sid 14-Aug
+	@FindBy(xpath="//*[@id='renamewishListModalTitle']") public  WebElement renameWishListModal;
+	
 	@FindBy(xpath="//button[@id='renameWishListBtn']") public  WebElement btnrenamewishlist;
 	@FindBy(xpath="//input[@id='renameWishListInputField']") public  WebElement txtrenamewishlistselect;
 	@FindBy(xpath="//input[@id='edit_save']") public  WebElement btnrenamesave;
@@ -27,10 +35,14 @@ public class SIT_AddtoWishListPageObject extends CommonActionHelper{
 	
 	
 	public void enterListName() throws Exception {
-
-		setInputText(txtListname, "New List");
-		
+		setInputText(txtListname, timeStamp);
 	}
+	
+	public void renameWishListName() throws Exception {
+		timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());
+		setInputText(txtrenamewishlistselect, timeStamp);
+	}
+	
 		
 
 }

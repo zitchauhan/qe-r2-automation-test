@@ -58,9 +58,9 @@ Feature: To verify the Inventory Specification API Services
     And Validate the Inventory Store Specification API Requried Property Value are not Null
       | skuId     |
      # | productId |
-      | storeId   |
-      | value     |
-      | key       |
+      #| storeId   |
+      #| value     |
+     # | key       |
 
     Examples: 
       | InventoryStoreUrl                            |
@@ -90,10 +90,10 @@ Feature: To verify the Inventory Specification API Services
     Then read the API json response
     And Validate the Inventory Store Specification API Requried Property Value are not Null
       | skuId     |
-      #| productId |
-      | storeId   |
-      | value     |
-      | key       |
+      | inventoryStatus |
+      #| storeId   |
+      #| value     |
+      #| key       |
     And Validate the Inventory Specification API Requried Property Value are not Null
       | skuId             |
       | availableQuantity |

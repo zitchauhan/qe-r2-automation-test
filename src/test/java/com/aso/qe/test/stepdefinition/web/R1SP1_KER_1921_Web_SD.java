@@ -19,7 +19,7 @@ public class R1SP1_KER_1921_Web_SD extends CommonActionHelper{
 	@Then("^user search the data in search box\"(.*?)\"$")
 	public void user_search_the_data_in_search_box(String data) throws Throwable {
 	  waitForPageLoad(driver);
-	  Thread.sleep(2000);
+	  Thread.sleep(5000);
 		pdpPageObj.searchbox.sendKeys(data);
 	   clickOnButton(pdpPageObj.searchMagnifyingBtm);
 		

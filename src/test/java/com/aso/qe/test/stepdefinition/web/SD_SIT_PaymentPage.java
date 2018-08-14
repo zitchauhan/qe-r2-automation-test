@@ -43,8 +43,10 @@ public class SD_SIT_PaymentPage extends CommonActionHelper {
 		driver.switchTo().frame("authWindow");
 		System.out.println("3333");
 		Thread.sleep(5000);
-		getDriver().findElement(By.xpath("//tr/td/img")).isDisplayed();
-		PayPo.txtpwd.sendKeys("1234");
+		getfindElementByXPath("//tr/td/img").isDisplayed();//SID 11-August-18
+//		getDriver().findElement(By.xpath("//tr/td/img")).isDisplayed();
+//		PayPo.txtpwd.sendKeys("1234");
+		setInputText(PayPo.txtpwd, "1234"); //SID 11-August-18
 		//((JavascriptExecutor) driver).executeScript("document.getElementsById('PayPo.txtpwd')[0].innerHTML=arguments[0];",1234,"");
 		//PayPo.verifyVisapwd();
 		System.out.println("4444");
@@ -53,6 +55,7 @@ public class SD_SIT_PaymentPage extends CommonActionHelper {
 		Thread.sleep(3000);
 		getDriver().switchTo().defaultContent();
 		Thread.sleep(3000);
+
 	}
 	
 	

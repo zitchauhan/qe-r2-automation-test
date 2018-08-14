@@ -63,7 +63,7 @@ public class Common_Web_SD extends CommonActionHelper{
 	@Then("^User clicks on the burger menu$")
 	public void User_clicks_on_the_burger_menu() throws Throwable {
 		if(isDisplayed(globalElementHeader.btnBurgerMenu)) {
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		assertTrue(clickOnButton(globalElementHeader.btnBurgerMenu));
 		Thread.sleep(1000);}
 		else {

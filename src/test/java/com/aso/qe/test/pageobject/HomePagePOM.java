@@ -102,9 +102,27 @@ public class HomePagePOM {
 	
 	//KER-3184 end	
 	
+	//KER-258 Start 
+	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[1]/following-sibling::*[5]")public WebElement productCarousel_1;
+	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[1]/following-sibling::*[6]")public WebElement productCarousel_2;
+	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[1]/following-sibling::*[7]")public WebElement productCarousel_3;
+	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/following-sibling::*[2]")public WebElement productCarousel_right;
+	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/following-sibling::*[1]")public WebElement productCarousel_left;
 	
+	//Mobile
+	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[4]/*/*[1]")public WebElement imgProductCarousel_M;
+	//KER-258 End
 	
+	//KER-260 Start
+	@FindBy(xpath="(//*[@data-component='heroImage'])[1]")public WebElement imgHero;
+	@FindBy(xpath="(//*[@data-auid='btnHP_HI_A_0'])[1]")public WebElement btnShopNowHeroImage;
+	@FindBy(xpath="//*[@data-auid='sectionTitle']")public WebElement txtSectionTitle;
+	//KER- 260 End
 	
+	//KER-259 Start
+	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/*/*[2]/*[2]")public WebElement productCarouselIndicator_2;
+	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/*/*[2]/*[1]")public WebElement productCarouselIndicator_1;
+	//KER-259 End
 	
 	public int getCategoryTileCount(WebElement categoryTileCount){
 		int tileCount = 0;

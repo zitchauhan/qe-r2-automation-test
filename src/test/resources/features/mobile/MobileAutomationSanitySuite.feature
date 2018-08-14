@@ -27,13 +27,10 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then user click on Add to cart button
     Then user click on checkout button
     Then user should able to see shipping Address page
-    # Then user should be able verify the order summary details
     Then user click on continue to shipping method button
     Then user click on continue checkout button
-   # Then user should able to verify the shipping address
     And user should able to verify the shipping method
     Then user should be able verify the order summary details
-   # Then user should able to click on Continue to Payment button
     When user should be able see the the payment method page and enter the creditcard details
     Then user should click on continue to review button
     And user enter verified by visa password and click on submit button
@@ -334,7 +331,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L2
-    And user scroll till filter flyout
+   And user scroll till filter flyout
     Then User clicks on the filter flyout
     And User expands PRICE Filter Option
     When User selects multiple PRICE filter Options

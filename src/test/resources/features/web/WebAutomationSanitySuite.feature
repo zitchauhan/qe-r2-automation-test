@@ -26,25 +26,17 @@ Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios
     Then user should be able verify the order summary details
     Then user click on continue to shipping method button
     Then user click on continue checkout button
-    Then user should able to verify the shipping address
-    And user should able to verify the shipping method
     Then user should be able verify the order summary details
-    Then user should able to click on Continue to Payment button
     When user should be able see the the payment method page and enter the creditcard details
     Then user should click on continue to review button
     And user enter verified by visa password and click on submit button
-    When user should should be able see Order summary page
-    Then user should able to verify the Review shipping address
-    And user should able to verify the Review shipping method
-    When user should able to verify the billing address
-    When user should able to verify the payment method
-    Then user should be able verify the order summary details
     Then user should click on Place Order Now button
+     When user should should be able see Order summary page
     Then user sign out from the website
 
     Examples: 
       | SearchTerm |
-      | shirts   |
+      | michigan state spartans |
 
   @AutomationSanity @AS2  @WAST-04 @1HR
   Scenario: TC_4-Guest user checkout process
@@ -55,23 +47,13 @@ Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios
     Then user click on checkout button
     Then user should verify the Guest checkout Page
     Then user click on Checkout as Guest button
-    Then user should able to see shipping Address page
-    Then user should be able verify the order summary details
     Then user should enter the shipping Address details
     Then user click on continue to shipping method button
     Then user click on continue checkout button
-    Then user should able to verify the shipping address
-    And user should able to verify the shipping method
-    Then user should be able verify the order summary details
     Then user should able to click on Continue to Payment button
     When user should be able see the the payment method page and enter the creditcard details
     Then user should click on continue to review button
     And user enter verified by visa password and click on submit button
-    When user should should be able see Order summary page
-    Then user should able to verify the Review shipping address
-    And user should able to verify the Review shipping method
-    When user should able to verify the billing address
-    When user should able to verify the payment method
     Then user should be able verify the order summary details
     Then user should click on Place Order Now button
 
@@ -133,130 +115,131 @@ Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios
   @AutomationSanity   @AS2 @WAST-07
   Scenario: TC_7-Verify Global Footer on All the pages(till PDP)
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then User will verify the presence of Our history
-    And User will verify the presence of Careers
-    Then User will verify the presence of Press Room
-    And User will verify the presence of Investors
-    Then User will verify the presence of Check Order
-    And User will verify the presence of Return Policy
-    Then User will verify the presence of Product Recall
-    And User will verify the presence of Rebates
-    Then User will verify the presence of Contact Us
-    And User will verify the presence of Customer Care
-    Then User will verify the presence of Gift Cards
-    And User will verify the presence of Academy Credit Card
-    Then User will verify the presence of Store Services
-    Then User will verify the presence of FIND A STORE
-    And User will verify the presence of sign up for more deals
-    Then User will verify the presence of chat now
-    Then User will verify the presence of privacy policy
-    And User will verify the presence of Terms and Conditions
-    Then User will verify the presence of legal policy
-    Then User will verify the presence of Facebook icon
-    And User will verify the presence of twitter icon
-    Then User will verify the presence of pinterest icon
-    And User will verify the presence of youtube icon
-    Then User will verify the presence of instagram icon
-    When user clicks on one of the category and navigates to LOne page
-    Then User will verify the presence of Our history
-    And User will verify the presence of Careers
-    Then User will verify the presence of Press Room
-    And User will verify the presence of Investors
-    Then User will verify the presence of Check Order
-    And User will verify the presence of Return Policy
-    Then User will verify the presence of Product Recall
-    And User will verify the presence of Rebates
-    Then User will verify the presence of Contact Us
-    And User will verify the presence of Customer Care
-    Then User will verify the presence of Gift Cards
-    And User will verify the presence of Academy Credit Card
-    Then User will verify the presence of Store Services
-    Then User will verify the presence of FIND A STORE
-    And User will verify the presence of sign up for more deals
-    Then User will verify the presence of chat now
-    Then User will verify the presence of privacy policy
-    And User will verify the presence of Terms and Conditions
-    Then User will verify the presence of legal policy
-    Then User will verify the presence of Facebook icon
-    And User will verify the presence of twitter icon
-    Then User will verify the presence of pinterest icon
-    And User will verify the presence of youtube icon
-    Then User will verify the presence of instagram icon
-    Then User navigates to L2 from home page
-    Then User will verify the presence of Our history
-    And User will verify the presence of Careers
-    Then User will verify the presence of Press Room
-    And User will verify the presence of Investors
-    Then User will verify the presence of Check Order
-    And User will verify the presence of Return Policy
-    Then User will verify the presence of Product Recall
-    And User will verify the presence of Rebates
-    Then User will verify the presence of Contact Us
-    And User will verify the presence of Customer Care
-    Then User will verify the presence of Gift Cards
-    And User will verify the presence of Academy Credit Card
-    Then User will verify the presence of Store Services
-    Then User will verify the presence of FIND A STORE
-    And User will verify the presence of sign up for more deals
-    Then User will verify the presence of chat now
-    Then User will verify the presence of privacy policy
-    And User will verify the presence of Terms and Conditions
-    Then User will verify the presence of legal policy
-    Then User will verify the presence of Facebook icon
-    And User will verify the presence of twitter icon
-    Then User will verify the presence of pinterest icon
-    And User will verify the presence of youtube icon
-    Then User will verify the presence of instagram icon
-    Then User navigates to L3 from home page
-    Then User will verify the presence of Our history
-    And User will verify the presence of Careers
-    Then User will verify the presence of Press Room
-    And User will verify the presence of Investors
-    Then User will verify the presence of Check Order
-    And User will verify the presence of Return Policy
-    Then User will verify the presence of Product Recall
-    And User will verify the presence of Rebates
-    Then User will verify the presence of Contact Us
-    And User will verify the presence of Customer Care
-    Then User will verify the presence of Gift Cards
-    And User will verify the presence of Academy Credit Card
-    Then User will verify the presence of Store Services
-    Then User will verify the presence of FIND A STORE
-    And User will verify the presence of sign up for more deals
-    Then User will verify the presence of chat now
-    Then User will verify the presence of privacy policy
-    And User will verify the presence of Terms and Conditions
-    Then User will verify the presence of legal policy
-    Then User will verify the presence of Facebook icon
-    And User will verify the presence of twitter icon
-    Then User will verify the presence of pinterest icon
-    And User will verify the presence of youtube icon
-    Then User will verify the presence of instagram icon
-    And User clicks on required product in L3 Page
-    Then User will verify the presence of Our history
-    And User will verify the presence of Careers
-    Then User will verify the presence of Press Room
-    And User will verify the presence of Investors
-    Then User will verify the presence of Check Order
-    And User will verify the presence of Return Policy
-    Then User will verify the presence of Product Recall
-    And User will verify the presence of Rebates
-    Then User will verify the presence of Contact Us
-    And User will verify the presence of Customer Care
-    Then User will verify the presence of Gift Cards
-    And User will verify the presence of Academy Credit Card
-    Then User will verify the presence of Store Services
-    Then User will verify the presence of FIND A STORE
-    And User will verify the presence of sign up for more deals
-    Then User will verify the presence of chat now
-    Then User will verify the presence of privacy policy
-    And User will verify the presence of Terms and Conditions
-    Then User will verify the presence of legal policy
-    Then User will verify the presence of Facebook icon
-    And User will verify the presence of twitter icon
-    Then User will verify the presence of pinterest icon
-    And User will verify the presence of youtube icon
-    Then User will verify the presence of instagram icon
+    Then User will verify the presence of footer links
+#    Then User will verify the presence of Our history
+#    And User will verify the presence of Careers
+#    Then User will verify the presence of Press Room
+#    And User will verify the presence of Investors
+#    Then User will verify the presence of Check Order
+#    And User will verify the presence of Return Policy
+#    Then User will verify the presence of Product Recall
+#    And User will verify the presence of Rebates
+#    Then User will verify the presence of Contact Us
+#    And User will verify the presence of Customer Care
+#    Then User will verify the presence of Gift Cards
+#    And User will verify the presence of Academy Credit Card
+#    Then User will verify the presence of Store Services
+#    Then User will verify the presence of FIND A STORE
+#    And User will verify the presence of sign up for more deals
+#    Then User will verify the presence of chat now
+#    Then User will verify the presence of privacy policy
+#    And User will verify the presence of Terms and Conditions
+#    Then User will verify the presence of legal policy
+#    Then User will verify the presence of Facebook icon
+#    And User will verify the presence of twitter icon
+#    Then User will verify the presence of pinterest icon
+#    And User will verify the presence of youtube icon
+#    Then User will verify the presence of instagram icon
+#    When user clicks on one of the category and navigates to LOne page
+#    Then User will verify the presence of Our history
+#    And User will verify the presence of Careers
+#    Then User will verify the presence of Press Room
+#    And User will verify the presence of Investors
+#    Then User will verify the presence of Check Order
+#    And User will verify the presence of Return Policy
+#    Then User will verify the presence of Product Recall
+#    And User will verify the presence of Rebates
+#    Then User will verify the presence of Contact Us
+#    And User will verify the presence of Customer Care
+#    Then User will verify the presence of Gift Cards
+#    And User will verify the presence of Academy Credit Card
+#    Then User will verify the presence of Store Services
+#    Then User will verify the presence of FIND A STORE
+#    And User will verify the presence of sign up for more deals
+#    Then User will verify the presence of chat now
+#    Then User will verify the presence of privacy policy
+#    And User will verify the presence of Terms and Conditions
+#    Then User will verify the presence of legal policy
+#    Then User will verify the presence of Facebook icon
+#    And User will verify the presence of twitter icon
+#    Then User will verify the presence of pinterest icon
+#    And User will verify the presence of youtube icon
+#    Then User will verify the presence of instagram icon
+#    Then User navigates to L2 from home page
+#    Then User will verify the presence of Our history
+#    And User will verify the presence of Careers
+#    Then User will verify the presence of Press Room
+#    And User will verify the presence of Investors
+#    Then User will verify the presence of Check Order
+#    And User will verify the presence of Return Policy
+#    Then User will verify the presence of Product Recall
+#    And User will verify the presence of Rebates
+#    Then User will verify the presence of Contact Us
+#    And User will verify the presence of Customer Care
+#    Then User will verify the presence of Gift Cards
+#    And User will verify the presence of Academy Credit Card
+#    Then User will verify the presence of Store Services
+#    Then User will verify the presence of FIND A STORE
+#    And User will verify the presence of sign up for more deals
+#    Then User will verify the presence of chat now
+#    Then User will verify the presence of privacy policy
+#    And User will verify the presence of Terms and Conditions
+#    Then User will verify the presence of legal policy
+#    Then User will verify the presence of Facebook icon
+#    And User will verify the presence of twitter icon
+#    Then User will verify the presence of pinterest icon
+#    And User will verify the presence of youtube icon
+#    Then User will verify the presence of instagram icon
+#    Then User navigates to L3 from home page
+#    Then User will verify the presence of Our history
+#    And User will verify the presence of Careers
+#    Then User will verify the presence of Press Room
+#    And User will verify the presence of Investors
+#    Then User will verify the presence of Check Order
+#    And User will verify the presence of Return Policy
+#    Then User will verify the presence of Product Recall
+#    And User will verify the presence of Rebates
+#    Then User will verify the presence of Contact Us
+#    And User will verify the presence of Customer Care
+#    Then User will verify the presence of Gift Cards
+#    And User will verify the presence of Academy Credit Card
+#    Then User will verify the presence of Store Services
+#    Then User will verify the presence of FIND A STORE
+#    And User will verify the presence of sign up for more deals
+#    Then User will verify the presence of chat now
+#    Then User will verify the presence of privacy policy
+#    And User will verify the presence of Terms and Conditions
+#    Then User will verify the presence of legal policy
+#    Then User will verify the presence of Facebook icon
+#    And User will verify the presence of twitter icon
+#    Then User will verify the presence of pinterest icon
+#    And User will verify the presence of youtube icon
+#    Then User will verify the presence of instagram icon
+#    And User clicks on required product in L3 Page
+#    Then User will verify the presence of Our history
+#    And User will verify the presence of Careers
+#    Then User will verify the presence of Press Room
+#    And User will verify the presence of Investors
+#    Then User will verify the presence of Check Order
+#    And User will verify the presence of Return Policy
+#    Then User will verify the presence of Product Recall
+#    And User will verify the presence of Rebates
+#    Then User will verify the presence of Contact Us
+#    And User will verify the presence of Customer Care
+#    Then User will verify the presence of Gift Cards
+#    And User will verify the presence of Academy Credit Card
+#    Then User will verify the presence of Store Services
+#    Then User will verify the presence of FIND A STORE
+#    And User will verify the presence of sign up for more deals
+#    Then User will verify the presence of chat now
+#    Then User will verify the presence of privacy policy
+#    And User will verify the presence of Terms and Conditions
+#    Then User will verify the presence of legal policy
+#    Then User will verify the presence of Facebook icon
+#    And User will verify the presence of twitter icon
+#    Then User will verify the presence of pinterest icon
+#    And User will verify the presence of youtube icon
+#    Then User will verify the presence of instagram icon
 
   @AutomationSanity  @AS1 @WAST-08 @1HR
   Scenario: TC_8-Verify Navigation from Homepage to L1

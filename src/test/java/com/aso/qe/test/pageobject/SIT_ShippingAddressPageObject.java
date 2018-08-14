@@ -21,10 +21,11 @@ public class SIT_ShippingAddressPageObject extends CommonActionHelper{
 	
 	public void verifyShippingAddressPage() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
+			waitForElement(address);
 			assertTrue(isDisplayed(address));
 			logger.debug("Shipping Address is displayed");
 		}else {
-			
+			waitForElement(address);
 			assertTrue(isDisplayed(address));
 			logger.debug("Shipping Address is displayed");
 		}
@@ -33,21 +34,30 @@ public class SIT_ShippingAddressPageObject extends CommonActionHelper{
 	}
 	
 	
-	public void verifyOrdersummarydetails() throws Exception{
-		if("mobile".equalsIgnoreCase(testtype)){
-			assertTrue(isDisplayed(txtordersummary));
-			logger.debug("Shipping Address is displayed");
-		}else {
-			
-			assertTrue(isDisplayed(txtordersummary));
-			logger.debug("Order Summary is displayed");
-			assertTrue(isDisplayed(tltproduct));
-			assertTrue(isDisplayed(txtskuid));
-			assertTrue(isDisplayed(txtitem));
-			assertTrue(isDisplayed(txtskuid));
-			}
+//	public void verifyOrdersummarydetails() throws Exception{
+//		if("mobile".equalsIgnoreCase(testtype)){
+//			scrollPageToWebElement(txtordersummary);
+//			waitForElement(txtordersummary);
+//			assertTrue(isDisplayed(txtordersummary));
+//			logger.debug("Shipping Address is displayed");
+//		}else {
+//			scrollPageToWebElement(txtordersummary);
+//			waitForElement(txtordersummary);
+//			assertTrue(isDisplayed(txtordersummary));
+//			logger.debug("Order Summary is displayed");
+//			scrollPageToWebElement(tltproduct);
+//			assertTrue(isDisplayed(tltproduct));
+//			scrollPageToWebElement(txtskuid);
+//			assertTrue(isDisplayed(txtskuid));
+//			scrollPageToWebElement(txtitem);
+//			assertTrue(isDisplayed(txtitem));
+//			scrollPageToWebElement(txtskuid);
+//			assertTrue(isDisplayed(txtskuid));
+//			}
 		
-		
+	public void verifyOrdersummarydetails(){
+		waitForElement(txtordersummary);
+		assertTrue(isDisplayed(txtordersummary));
 	}
 
 }

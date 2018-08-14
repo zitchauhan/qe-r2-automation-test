@@ -4,12 +4,13 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
 public class FindStorePO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(FindStorePO.class);
-
+	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(getDriver(),GlobalElementHeader_HomePO.class);
 
 	@FindBy(xpath = "//*[contains(text(), 'Find a Store')]")public WebElement ovly_FindStore;
 	@FindBy(xpath = "//input[@placeholder='Enter Zip Code or City, State']")public WebElement ovly_searchTextBox;
@@ -21,7 +22,11 @@ public class FindStorePO extends CommonActionHelper {
     @FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']")public WebElement ovly_btnCloseContainer;
 	@FindBy(xpath = "//*[@data-auid='findAStore']/span[2]")public WebElement txtStroeText;
 	@FindBy(xpath = "//*[@data-auid='findAStore_m']/span[2]")public WebElement txtStroeText_m;
-
+	@FindBy(xpath="//*[@id='mainSearchText']") public WebElement txtStoreLocatorPage;
+	@FindBy(xpath="//*[@id='mainLoadStores']") public WebElement btnGoSearchStore;
+	@FindBy(xpath="//*[@class='myStoreLogo']//parent::div//following-sibling::ul//span[contains(@id,'screenReader')]") public WebElement imgMyStoreLogo;
+	
+	
 	public FindStorePO(WebDriver webDriver) {
 		super();
 	}
@@ -85,4 +90,28 @@ public class FindStorePO extends CommonActionHelper {
 			logger.debug("Error message is not displayed");
 	}
 
+	
+	//Anuj 13 Aug
+	
+	public void verifyFindaStoreFucntionalityFromFooter(String str) {
+		
+		if(isDisplayed(txtStoreLocatorPage))
+		{
+			setInputText(txtStoreLocatorPage, str);
+			clickOnButton(btnGoSearchStore);
+			String selectedStoreTitle = getText(imgMyStoreLogo);
+			logger.debug("Store selected :::::::::: "+selectedStoreTitle);
+			clickOnButton(globalElementHeader.imgAcademyLogo);
+			waitForPageLoad(driver);
+			
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 }

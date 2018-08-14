@@ -4,6 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.PDP_PO;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
 public class R1SP1_KER_1920_Web_SD extends CommonActionHelper{
@@ -143,5 +144,10 @@ public class R1SP1_KER_1920_Web_SD extends CommonActionHelper{
 			pdpPageObj.addToCartProductValidationDesktop();
 		}
 	}
+		 @And("^user able to see item added in the cart$")
+		 public void user_able_to_see_item_added_in_the_cart() throws Throwable{
+			 assertTrue(isDisplayed(pdpPageObj.addtocarttitle));
+		 }
+	
 }
 

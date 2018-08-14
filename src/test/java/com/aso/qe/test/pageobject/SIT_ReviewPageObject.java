@@ -33,51 +33,69 @@ public class SIT_ReviewPageObject extends CommonActionHelper{
 		
 		}
 	
-	public void verifyReviewShippingaddress() throws Exception{
-		if("mobile".equalsIgnoreCase(testtype)){
-			assertTrue(isDisplayed(ReviewShippingaddress));
-			logger.debug("Shippingaddress is displayed");
-		}else {
-			
-			assertTrue(isDisplayed(ReviewShippingaddress));
-			logger.debug("Shippingaddress is displayed");
-		}
-		
-		
+//	public void verifyReviewShippingaddress() throws Exception{
+//		if("mobile".equalsIgnoreCase(testtype)){
+//			assertTrue(isDisplayed(ReviewShippingaddress));
+//			logger.debug("Shippingaddress is displayed");
+//		}else {
+//			
+//			assertTrue(isDisplayed(ReviewShippingaddress));
+//			logger.debug("Shippingaddress is displayed");
+//		}
+//		
+//		
+//	}
+	
+	public void verifyReviewShippingaddress(){
+		assertTrue(isDisplayed(ReviewShippingaddress));
 	}
 	
-	public void verifyReviewShippingmethod() throws Exception{
-		if("mobile".equalsIgnoreCase(testtype)){
-			assertTrue(isDisplayed(ReviewShippingmethod));
-			logger.debug("Shippingmethod is displayed");
-		}else {
-			
-			assertTrue(isDisplayed(ReviewShippingmethod));
-			logger.debug("Shippingmethod is displayed");
-		}
+	
+//	public void verifyReviewShippingmethod() throws Exception{
+//		if("mobile".equalsIgnoreCase(testtype)){
+//			assertTrue(isDisplayed(ReviewShippingmethod));
+//			logger.debug("Shippingmethod is displayed");
+//		}else {
+//			
+//			assertTrue(isDisplayed(ReviewShippingmethod));
+//			logger.debug("Shippingmethod is displayed");
+//		}
+//	}
+	
+	public void verifyReviewShippingmethod(){
+		assertTrue(isDisplayed(ReviewShippingmethod));
 	}
 	
-	public void verifyBillingaddress() throws Exception{
-		if("mobile".equalsIgnoreCase(testtype)){
-			assertTrue(isDisplayed(billingaddress));
-			logger.debug("Billing address is displayed");
-		}else {
-			
-			assertTrue(isDisplayed(billingaddress));
-			logger.debug("Billing address is displayed");
-		}
-		
-		}
 	
-	public void verifyPaymentmethod() throws Exception{
-		if("mobile".equalsIgnoreCase(testtype)){
-			assertTrue(isDisplayed(paymentmethod));
-			logger.debug("Payment method is displayed");
-		}else {
-			
-			assertTrue(isDisplayed(paymentmethod));
-			logger.debug("Payment method is displayed");
-		}
-		
-		}
+//	public void verifyBillingaddress() throws Exception{
+//		if("mobile".equalsIgnoreCase(testtype)){
+//			assertTrue(isDisplayed(billingaddress));
+//			logger.debug("Billing address is displayed");
+//		}else {
+//			
+//			assertTrue(isDisplayed(billingaddress));
+//			logger.debug("Billing address is displayed");
+//		}
+//		
+//		}
+	//SID 11-August-18
+	public void verifyBillingaddress(){
+		assertTrue(isDisplayed(billingaddress));
+	}
+	
+	
+//	public void verifyPaymentmethod() throws Exception{
+//		if("mobile".equalsIgnoreCase(testtype)){
+//			assertTrue(isDisplayed(paymentmethod));
+//			logger.debug("Payment method is displayed");
+//		}else {
+//			
+//			assertTrue(isDisplayed(paymentmethod));
+//			logger.debug("Payment method is displayed");
+//		}
+//		}
+	public void verifyPaymentmethod(){
+		assertTrue(isDisplayed(paymentmethod));
+	}
+	
 }

@@ -14,8 +14,7 @@ import cucumber.api.java.en.When;
 public class R1SP1_KER_730_Web_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1SP1_KER_730_Web_SD.class);
 	public FindStorePO findStorePO = PageFactory.initElements(getDriver(), FindStorePO.class);
-	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(getDriver(),
-			GlobalElementHeader_HomePO.class);
+	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(getDriver(),GlobalElementHeader_HomePO.class);
 
 	@Then("^User should be able to click on Find Store$")
 	public void User_should_be_able_to_see_Find_Store() throws Throwable {
@@ -24,6 +23,12 @@ public class R1SP1_KER_730_Web_SD extends CommonActionHelper {
 		} else {
 			Common_Web_SD.globalElementHeader.findAndClickStoreinGH();
 		}
+	}
+	
+	@Then("^User should be able to click on Find Store in footer$")
+	public void User_should_be_able_to_see_Find_Store_in_footer() throws Throwable {
+
+			Common_Web_SD.globalElementHeader.findAndClickStoreinFooter();
 	}
 
 	@Then("^Find Store Modal should pop-up$")
@@ -78,5 +83,9 @@ public class R1SP1_KER_730_Web_SD extends CommonActionHelper {
 	public void error_message_should_be_displayed() throws Throwable {
 		findStorePO.validateErrorMsg();
 	}
-
+	
+	@When("^User select store with Postal Code in Find A Store page\"(.*?)\"$")
+	public void User_select_store_with_Postal_Code_in_Find_A_Store_page(String str) {
+		findStorePO.verifyFindaStoreFucntionalityFromFooter(str);
+	}
 }
