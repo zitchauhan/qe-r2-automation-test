@@ -20,8 +20,10 @@ public class R1SP1_KER_2725_Web_SD extends CommonActionHelper {
 
 	@Then("^Verify the Promotional Eyebrow appears above the Product Name$")
 	public void verify_the_Promotional_Eyebrow_appears_above_the_Product_Name() throws Throwable {
-		scrollPageToWebElement(pdpPageObj.btnProductCardimage);
-		assertTrue(isDisplayed(pdpPageObj.txtPromotional));
+//		scrollPageToWebElement(pdpPageObj.btnProductCardimage);
+//		assertTrue(isDisplayed(pdpPageObj.txtPromotional));
+	assertTrue(clickOnButton(pdpPageObj.clickOnFirstIMG));
+	assertTrue(isDisplayed(pdpPageObj.txtPromotional));
 	}
 
 	@Then("^Verify Product Name is avilaible$")
@@ -51,13 +53,22 @@ public class R1SP1_KER_2725_Web_SD extends CommonActionHelper {
 
 	@Then("^user click on cta in Shop Collection$")
 	public void user_click_on_cta_in_Shop_Collection() throws Throwable {
+	
+		
 		HomePagePo.clickOnLink(SIT_HomePagePageObject.ShopCollectionCTA);
+	
+		//clickOnLink(SIT_HomePagePageObject.ShopCollectionCTA);
 	}
 	
 	@Then("^click on the prodct card in home page$")
 	public void click_on_the_prodct_card_in_home_page() throws Throwable {
+		waitForPageLoad(driver);//RKA 14 Aug
+		Thread.sleep(10000);
 		Actions hover=new Actions(getDriver());
 		hover.moveToElement(pdpPageObj.btnProdctimage).build().perform();
-	    pdpPageObj.clickProdcutCardimage();
+		
+		scrollPageToWebElement(pdpPageObj.btnProdctimage);
+		pdpPageObj.clickProdcutCardimage();
+	    
 	}
 }

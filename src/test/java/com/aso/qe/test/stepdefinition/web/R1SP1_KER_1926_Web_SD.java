@@ -313,8 +313,11 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 	//KER-1937 Start CR-AKK	 
 	 @Then("^user to fill QuestionSummary \"(.*?)\" and Nickname \"(.*?)\" and Email \"(.*?)\"$")
 	 public void user_to_fill_QuestionSummary_and_Nickname_and_Email(String questionSumarry, String nickName, String email) throws Throwable {
-		 assertTrue(clickOnButton(pdp_po.btnAskQuestion));
-	     setInputText(pdp_po.inputQuestionSummary, questionSumarry);
+		// assertTrue(clickOnButton(pdp_po.btnAskQuestion));
+		 //Fix by RKA 15 AUg
+	     Thread.sleep(5000);
+		 waitForElement(pdp_po.inputQuestionSummary);
+		 setInputText(pdp_po.inputQuestionSummary, questionSumarry);
 	     setInputText(pdp_po.inputNickname, nickName);
 	     setInputText(pdp_po.inputEmail, email);
 	     assertTrue(clickOnButton(pdp_po.btnChecbox));
@@ -323,6 +326,7 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 	 @Then("^click on post question$")
 	 public void click_on_post_question() throws Throwable {
 		 assertTrue(clickOnButton(pdp_po.btnPostQuesdtion));
+		 assertTrue(clickOnButton(pdp_po.click_XyourQuestionSubmitted));
 	 }
 
 	 @Then("^verfiy the answer is helpful$")
@@ -331,6 +335,30 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 		 assertTrue(isDisplayed(pdp_po.btnNo)); 
 	 }
 	//KER-1937 End CR-AKK
-
+	
+	 @Then("^verfiy the Ask a question button$")
+	 public void verfiy_the_Ask_a_question_button() throws Throwable {
+		 //ADDED by RKA 15 Aug
+		 //assertTrue(clickOnButton(pdp_po.linkBetheFirstTOAskQuestion));
+//	 Thread.sleep(3000);
+//	 if(isDisplayed(pdp_po.linkBetheFirstTOAskQuestion)) {
+//		 clickOnButton(pdp_po.linkBetheFirstTOAskQuestion); 
+//	 }
+//	 else {
+//		 assertTrue(clickOnButton(pdp_po.btnAskQuestion));
+//	 }
+	 
+	  Thread.sleep(3000);
+		 if(isDisplayed(pdp_po.btnAskQuestion)) {
+			 clickOnButton(pdp_po.btnAskQuestion); 
+			 
+		 }
+		 else {
+			 
+			 clickOnButton(pdp_po.linkBetheFirstTOAskQuestion); 
+		 }
+	 
+	 
+	 }
 }
 

@@ -30,11 +30,11 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']") public WebElement btnBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']")  public WebElement btnXBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='level1Category-SHOP']") public WebElement btnShopCategory;
-	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m'] | //*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING_m'] | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //UAT9
+	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m']/span | //*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING_m']/span | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //UAT9
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]/a | //*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop;//UAT9
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shirts']|//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shorts']|//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop;
 	//@FindBy(xpath="//*[@data-auid='level4Category-Shorts_m'] | //*[@data-auid=\"level3Category-Men's Clothing\"]//*[@data-auid='level4Category-Shirts']")public WebElement btnMensShirt_Men_Clothing_Shop;
-	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//*[contains(@class,'c-product__description')])[1]")public WebElement imgMensShortShirt; 
+	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//*[contains(@class,'c-product__description')])[2]")public WebElement imgMensShortShirt; 
 	@FindBy(xpath="//div[contains(@class,'breadCrumbComponent')]//span[@class='line-separator']//following-sibling::span//preceding-sibling::a") public WebElement lnkMensShirts;
 	@FindBy(xpath="((//span[@class='line-separator'])[3]/following::span)[1]") public WebElement lnkMensShirtsnotclickable;
 	@FindBy(xpath="//*[@data-auid='BreadCrumb_Academy']//a | //a[text()=\"Father's Day Gifts\"]") public WebElement lnkMensClothing;
@@ -295,12 +295,15 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	
 	@FindBy(xpath="//*[contains(@data-auid,'level3Category-Men')]/*[1]")public WebElement TxtMenShoeL2;
 	@FindBy(xpath="//*[@data-auid='sectionTitle']")public WebElement txtPageHeaderAsMenShoe;
-	@FindBy(xpath="//*[@data-auid='mens-shoes']/*/*[2]/*/*[4]")public WebElement txtBreadCrumbMenShoe;
+	@FindBy(xpath="//*[contains(@data-auid,'breadCrumb_link_1_')]//ancestor::span//following-sibling::span[@itemprop='itemListElement']//span[@itemprop='name']")public WebElement txtBreadCrumbMenShoe;
 	//KER-1401 END
 	
-	
-	
-	
+	//KER-2993 Anuj 14 Aug
+	@FindBy(xpath="//*[@data-component='rebates']|//*[contains(@class,'rebate-item')]")public WebElement secRebatesDetails;
+	@FindBy(xpath="//*[contains(@data-auid,\"level3Category-Men's Clothing\")]//*[@data-auid='level4Category-Shirts']") public WebElement lnkPromoAvailable;
+	@FindBy(xpath="//*[@data-auid=\"level4Category-Shirts_m\"]") public WebElement  btnNavigateToShirtMobile; 
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]") public WebElement  btnMensClothingMobile; 
+			
 	public void accountSummaryDeatils(String exceptedAccountSummaryTxt) throws Exception {
 		String actualAccountSummaryTxt = getText(accountSummaryTxt);
 		logger.debug("accountSummaryTxt:: " + actualAccountSummaryTxt);
@@ -681,9 +684,7 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	}
 
 	public void navigateToPLPViaClick_Mobile() throws Exception{
-		Thread.sleep(2000);
-		assertTrue(clickOnButton(btnBurgerMenu));
-		//assertTrue(clickOnButton(btnShopCategory));
+		clickOnBurgerMenu();
 		Thread.sleep(2000);
 		assertTrue(clickOnButton(btnClothingCategory));
 		Thread.sleep(2000);
@@ -1712,5 +1713,15 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 		}
 	}
 
+	public void clickOnBurgerMenu() throws InterruptedException {
+		if(isDisplayed(btnBurgerMenu)) {
+			Thread.sleep(3000);
+			assertTrue(clickOnButton(btnBurgerMenu));
+			Thread.sleep(1000);
+			}
+			else {
+				driver.navigate().refresh();
+			}
+	}
 
 }

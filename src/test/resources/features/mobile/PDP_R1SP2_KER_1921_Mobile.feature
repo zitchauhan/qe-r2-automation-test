@@ -15,7 +15,7 @@ Feature: [Mobile]  Add to Cart on PDP
   Scenario Outline: Verify the functionality of Add to Cart for "not sold online"
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User to click on search button after putting data"<data>"
-    Then User select to not sold online item
+#    Then User select to not sold online item
     Then User verify not sold online
 
     Examples: 
@@ -27,11 +27,11 @@ Feature: [Mobile]  Add to Cart on PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User to click on search button after putting data"<data>"
     Then User select item of "out of stock"
-    Then verify out of stock
-
+    Then verify out of stock 
     Examples: 
       | data           |
       | Toddler Shirts |
+
 
   @C-PDP @Mobile @Regression @KER-1921  @ZYP_PDP_K1921-5100 @CR-RKA
   Scenario: Verify the functionality of Add to Cart for -Enable

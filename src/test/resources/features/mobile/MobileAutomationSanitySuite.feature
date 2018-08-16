@@ -14,64 +14,64 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User clicks on the burger menu
     Then user sign out from the website
 
-  @AutomationSanity @AS2  @MAST-03 
-  Scenario: TC_3-Registered user checkout process
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    Then user should able to click on Signin button
-    And user should be able to enter the signin details
-    Then User will verify the presence of ASO Logo and click on Logo
-    Then User clicks on the burger menu
-    And User navigates to L3
-    Then user clicks on the product card and navigates to PDP of the product
-    Then user click on Add to cart button
-    Then user click on checkout button
-    Then user should able to see shipping Address page
-    Then user click on continue to shipping method button
-    Then user click on continue checkout button
-    And user should able to verify the shipping method
-    Then user should be able verify the order summary details
-    When user should be able see the the payment method page and enter the creditcard details
-    Then user should click on continue to review button
-    And user enter verified by visa password and click on submit button
-    When user should should be able see Order summary page
-    Then user should able to verify the Review shipping address
-    And user should able to verify the Review shipping method
-    When user should able to verify the billing address
-    When user should able to verify the payment method
-    Then user should be able verify the order summary details
-    Then user should click on Place Order Now button
-  
-
-  @AutomationSanity @AS2 @MAST-04
-  Scenario: TC_4-Guest user checkout process
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    Then User navigates to L3
-    Then user clicks on the product card and navigates to PDP of the product
-    Then user click on Add to cart button
-    Then user click on checkout button
-    Then user should verify the Guest checkout Page
-    Then user click on Checkout as Guest button
-    Then user should able to see shipping Address page
-    Then user should be able verify the order summary details
-    Then user should enter the shipping Address details
-    Then user click on continue to shipping method button
-    Then user click on continue checkout button
-    Then user should able to verify the shipping address
-    And user should able to verify the shipping method
-    Then user should be able verify the order summary details
-    Then user should able to click on Continue to Payment button
-    When user should be able see the the payment method page and enter the creditcard details
-    Then user should click on continue to review button
-    And user enter verified by visa password and click on submit button
-    When user should should be able see Order summary page
-    Then user should able to verify the Review shipping address
-    And user should able to verify the Review shipping method
-    When user should able to verify the billing address
-    When user should able to verify the payment method
-    Then user should be able verify the order summary details
-    Then user should click on Place Order Now button
+#  @AutomationSanity @AS2  @MAST-03 
+#  Scenario: TC_3-Registered user checkout process
+#    Given user launches the browser and navigates to "ASO_HOME" page
+#    Then User clicks on the burger menu
+#    Then user should able to click on Signin button
+#    And user should be able to enter the signin details
+#    Then User will verify the presence of ASO Logo and click on Logo
+#    Then User clicks on the burger menu
+#    And User navigates to L3
+#    Then user clicks on the product card and navigates to PDP of the product
+#    Then user click on Add to cart button
+#    Then user click on checkout button
+#    Then user should able to see shipping Address page
+#    Then user click on continue to shipping method button
+#    Then user click on continue checkout button
+#    And user should able to verify the shipping method
+#    Then user should be able verify the order summary details
+#    When user should be able see the the payment method page and enter the creditcard details
+#    Then user should click on continue to review button
+#    And user enter verified by visa password and click on submit button
+#    When user should should be able see Order summary page
+#    Then user should able to verify the Review shipping address
+#    And user should able to verify the Review shipping method
+#    When user should able to verify the billing address
+#    When user should able to verify the payment method
+#    Then user should be able verify the order summary details
+#    Then user should click on Place Order Now button
+#  
+#
+#  @AutomationSanity @AS2 @MAST-04
+#  Scenario: TC_4-Guest user checkout process
+#    Given user launches the browser and navigates to "ASO_HOME" page
+#    Then User clicks on the burger menu
+#    Then User navigates to L3
+#    Then user clicks on the product card and navigates to PDP of the product
+#    Then user click on Add to cart button
+#    Then user click on checkout button
+#    Then user should verify the Guest checkout Page
+#    Then user click on Checkout as Guest button
+#    Then user should able to see shipping Address page
+#    Then user should be able verify the order summary details
+#    Then user should enter the shipping Address details
+#    Then user click on continue to shipping method button
+#    Then user click on continue checkout button
+#    Then user should able to verify the shipping address
+#    And user should able to verify the shipping method
+#    Then user should be able verify the order summary details
+#    Then user should able to click on Continue to Payment button
+#    When user should be able see the the payment method page and enter the creditcard details
+#    Then user should click on continue to review button
+#    And user enter verified by visa password and click on submit button
+#    When user should should be able see Order summary page
+#    Then user should able to verify the Review shipping address
+#    And user should able to verify the Review shipping method
+#    When user should able to verify the billing address
+#    When user should able to verify the payment method
+#    Then user should be able verify the order summary details
+#    Then user should click on Place Order Now button
 
   @AutomationSanity @AS1 @MAST-05
   Scenario: TC_5-Verify  Home Page Launch
@@ -273,7 +273,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Examples: 
       | SearchTerm |
       | ashokgowda |
-
+ 
   @AutomationSanity @AS1 @MAST-13
   Scenario Outline: TC_13-Verify Search Result Page(Facets,  Sort and Pagination)
     Given user launches the browser and navigates to "ASO_HOME" page
@@ -281,11 +281,6 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     And user scroll till filter flyout
     Then User clicks on the filter flyout
     And User expands all Filter Options
-    Then User should be able to see all Filter Options as expanded
-    And User collapses all Filter Options
-    Then User should be able to see all Filter Options as collapsed
-    And User Click on apply filter button
-
     Examples: 
       | SearchTerm |
       | shirts  |
@@ -312,10 +307,6 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     And user scroll till filter flyout
     Then User clicks on the filter flyout
     And User expands all Filter Options
-    Then User should be able to see all Filter Options as expanded
-    And User collapses all Filter Options
-    Then User should be able to see all Filter Options as collapsed
-    And User Click on apply filter button
   
 
   @AutomationSanity @AS1 @MAST-17
@@ -334,10 +325,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
    And user scroll till filter flyout
     Then User clicks on the filter flyout
     And User expands PRICE Filter Option
-    When User selects multiple PRICE filter Options
-    Then User should be able to see the selected PRICE filter Options in selected state
-    When User deselects multiple PRICE filter Options
-    Then User should be able to see the deselected PRICE filter Options in deselected state
+   
 
   @AutomationSanity @AS1 @MAST-19
   Scenario: TC_19-Verify Breadcrumb on L2
@@ -361,10 +349,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     And user scroll till filter flyout
     Then User clicks on the filter flyout
     And User expands all Filter Options
-    Then User should be able to see all Filter Options as expanded
-    And User collapses all Filter Options
-    Then User should be able to see all Filter Options as collapsed
-    And User Click on apply filter button
+    
   
 
   @AutomationSanity @AS1 @MAST-22
@@ -387,8 +372,8 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     When User deselects multiple PRICE filter Options
     Then User should be able to see the deselected PRICE filter Options in deselected state
 
-  @AutomationSanity @AS1 @MAST-24
-  Scenario: TC_24-Verify Breadcrumb on L3 @1HR
+  @AutomationSanity @AS1 @MAST-24 @1HR
+  Scenario: TC_24-Verify Breadcrumb on L3 
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L3

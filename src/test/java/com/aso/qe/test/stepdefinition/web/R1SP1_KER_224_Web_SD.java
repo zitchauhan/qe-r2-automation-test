@@ -99,13 +99,30 @@ public void user_to_navigate_to_giftcart() throws Throwable {
 
 	}
 
-
+  
+  
 }	
 	
 	
 	
+
+	
+@Then("^User verify displaying review for product where rating is available$")
+public void user_verify_displaying_review_for_product_where_rating_is_available() throws Throwable {
+    assertTrue(isDisplayed(pl_p.productRating));
+}
+
+@Then("^User verify displaying NO review for product where NO rating is available$")
+public void user_verify_displaying_NO_review_for_product_where_NO_rating_is_available() throws Throwable {
+  
+	
+	pl_p.segregateTheProductHaving_Rating_and_NoRating();
 	
 	
+	
+}
+
+
 	
 
 }

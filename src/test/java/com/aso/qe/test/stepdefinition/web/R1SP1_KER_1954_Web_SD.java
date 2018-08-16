@@ -3,10 +3,12 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.PDP_PO;
+import com.aso.qe.test.pageobject.PLP_PO;
 
 import cucumber.api.java.en.Then;
 
@@ -15,7 +17,7 @@ public class R1SP1_KER_1954_Web_SD extends CommonActionHelper{
 	
 	
 	PDP_PO pdp_po=PageFactory.initElements(driver, PDP_PO.class);
-	
+	Logger logger = Logger.getLogger(R1SP1_KER_1954_Web_SD .class);
 	
 	
 	@Then("^User be able to write review$")
@@ -83,14 +85,22 @@ public void user_to_select_the_product_where_review_is_present() throws Throwabl
 @Then("^User to be able to sort review$")
 public void user_to_be_able_to_sort_review() throws Throwable {
    //selectByText(pdp_po.selectSortby,  " Highest to Lowest Rating ");
-   selectByValue(pdp_po.selectSortby, "positive");
+  selectByValue(pdp_po.selectSortby, "positive");
+  
 }
 	
 	
 @Then("^User go for pagination$")
 public void user_go_for_pagination() throws Throwable {
-   assertTrue(isDisplayed(pdp_po.reviewPaginationBackward));
-   assertTrue(isDisplayed(pdp_po.reviewPaginationForward));
+//   assertTrue(isDisplayed(pdp_po.reviewPaginationBackward));
+//   assertTrue(isDisplayed(pdp_po.reviewPaginationForward));
+if(isDisplayed(pdp_po.reviewPaginationBackward)) {
+	logger.debug("page backward is persent");
+}
+if(isDisplayed(pdp_po.reviewPaginationForward)) {
+	logger.debug("page forward is persent");
+}
+
 }
 
 	

@@ -64,14 +64,14 @@ public class R1SP1_KER_1921_Web_SD extends CommonActionHelper{
 	
 	@Then("^User select to not sold online item$")
 	public void user_select_to_not_sold_online_item() throws Throwable {
-	   clickOnButton(pdpPageObj.selectSCCY_CPX_2CB9mmPistol);
+	   clickOnButton(pdpPageObj.selectSCCY_CPX_2CB9mmPistol);//This step is not coming in build now
 	}
 	@Then("^User verify not sold online$")
 	public void user_verify_not_sold_online() throws Throwable {
 	   scrollPageToWebElement(pdpPageObj.MsgPDP_OnlineMessage);
 		String actdata=getText(pdpPageObj.MsgPDP_OnlineMessage);
-		assertEquals("Not Sold Online", actdata);
-			
+		//assertEquals("Not Sold Online", actdata); Not showing this data
+		assertEquals("ONLY SOLD IN STORES", actdata);
 	}
 	
 	
@@ -84,11 +84,13 @@ public class R1SP1_KER_1921_Web_SD extends CommonActionHelper{
 	@Then("^verify out of stock$")
 	public void verify_out_of_stock() throws Throwable {
 	  
-		scrollPageToWebElement(pdpPageObj.MsgOutOFStock);
-		String actdata=getText(pdpPageObj.MsgOutOFStock);
-		assertEquals("Out of Stock", actdata);
-				
+			scrollPageToWebElement(pdpPageObj.MsgOutOFStock);
 		
+			String actdata= getText(pdpPageObj.MsgOutOFStock).toUpperCase();
+		   
+			assertEquals("OUT OF STOCK ONLINE", actdata);
+				
+	
 	}
 
 	
@@ -97,16 +99,16 @@ public class R1SP1_KER_1921_Web_SD extends CommonActionHelper{
 	public void user_to_verify_add_to_cart_is_disable_enable_when_color_and_size_is_not_avialable() throws Throwable {
 	    
 
-		if(getText(pdpPageObj.MsgOutOFStock).equals("Out of Stock")) {
+		if(getText(pdpPageObj.MsgOutOFStock).equals("Out of Stock Online")) {
 			assertTrue(isDisplayed(pdpPageObj.MsgOutOFStock));
 			logger.debug("product is out of stock:: add to cart buttom is not displayed");
 			
 		}
-		else if (!getText(pdpPageObj.txtNotifiedBack).equalsIgnoreCase("Out of Stock")) {
+		else if (!getText(pdpPageObj.txtNotifiedBack).equalsIgnoreCase("Get Notified")) {
 			
 			
 			assertTrue(isDisplayed(pdpPageObj.btnAddToCart));
-			logger.debug("product is in of stock:: add to cart buttom is  displayed");
+			logger.debug("product is in  stock:: add to cart buttom is  displayed");
 		}
 
 	}
@@ -124,7 +126,7 @@ public class R1SP1_KER_1921_Web_SD extends CommonActionHelper{
 	
 	@Then("^user select the product having star rating$")
 	public void user_select_the_product_having_star_rating() throws Throwable {
-		assertTrue(clickOnButton(pdpPageObj.selectBCGMenGolfShort));
+		assertTrue(clickOnButton(pdpPageObj.selectStarratingProduct));
 	}
 
 }

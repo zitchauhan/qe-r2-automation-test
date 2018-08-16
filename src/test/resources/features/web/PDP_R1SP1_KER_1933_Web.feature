@@ -10,5 +10,5 @@ Feature: To verify user is able to see Shipping/Delivery Related Messaging in bu
    Then user able to see shipping/delivery related message in bulky product
    Examples:
    |data|
-   |trampoline|
+   |Guns|
     

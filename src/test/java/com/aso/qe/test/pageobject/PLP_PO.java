@@ -2,6 +2,8 @@ package com.aso.qe.test.pageobject;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,7 +25,9 @@ public class PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="(//*[@data-auid='facetdrawer_drawer_Related Categories_m']//a)[2]") public   WebElement lnkCategories_RelatedCategories_Mobile;
 	@FindBy(xpath="//*[contains(@data-component,'sectionTitle')]") public   WebElement txtSectionTitle;
 	@FindBy(xpath="//*[@data-auid='shopbycategorysection']//*[@data-auid='shopByCategory_0']") public WebElement secCategory_CLP;//9aug danush
-	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]/parent::div)[1]") 	public   WebElement productPLP1;
+	//@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]/parent::div)[3]") 	public   WebElement productPLP1;/RKA 16 aug
+	@FindBy(xpath="(//*[@class='css-1jc6cii'])[1]")public   WebElement productPLP1;
+	
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//img)[1]") 	public   WebElement productPLP1_Mobile;
 
 	
@@ -39,6 +43,15 @@ public class PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Gift Cards']")public WebElement giftCardLink;
 	@FindBy(xpath="//*[@data-auid='btnHP_GC_BUTTON_0']")public WebElement shopGiftCardBtm;
 	@FindBy(xpath="//*[@data-auid='breadCrumb_link_1_Shops']/following-sibling::*[2]")public WebElement giftCardShopBreadCrum;
+	@FindBy(xpath="//div[@class='css-1jc6cii']")public WebElement reviewRatingStars;
+	
+	
+	
+	@FindBy(xpath="//*[@class='col-12 col-md-4 d-flex']")public List<WebElement> totalNumberOfItemInGrid;
+	@FindBy(xpath="//*[@class='col-12 col-md-4 d-flex']//*[contains(@aria-label,'stars out of 5')]/*/*[2]")public List<WebElement> totalNumberOFItemHAving_Star;
+	@FindBy(xpath="(//*[@class='col-12 col-md-4 d-flex']//*[contains(@aria-label,'stars out of 5')])[1]")public WebElement firstStarRatingAvailiblity;
+	
+	
 	
 	
 	//KER-224 Mobile
@@ -96,9 +109,24 @@ public class PLP_PO extends CommonActionHelper{
 			
 		//KER-564
 		
+		//KER-2728 Anuj 14 Aug
+		@FindBy(xpath="(//*[contains(@data-auid,'productCard')]//*[text()='Buy 1 Get 1 Free'])[1]")public WebElement prdctWithPromoOffer;
+				
+		//KER-3101 Anuj 15 Aug
 		
+		@FindBy(xpath="//*[@id='BVSpotlightsContainer']")public WebElement secBazaarVoiceSpotlight;
+		@FindBy(xpath="//*[@id='BVSpotlightsContainer']//*[contains(@class,'chevron-right')]")public WebElement btnScrollRightBVCarousel;
+		@FindBy(xpath="//*[@id='BVSpotlightsContainer']//*[contains(@class,'bv-animated bv-fadeIn')]")public WebElement secBVFadedReviews;
+		
+		
+					
 	//*****************************************************************************//
 	
+		//KER-4120 Start
+		@FindBy(xpath="//*[@class='c-product_promomsg']")public WebElement textPromotionMsg;
+		
+//KER-4120 end
+//*****************************************************************************//
 	
 	public void verifyFeaturedCategoriesText() throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)){
@@ -163,4 +191,28 @@ public class PLP_PO extends CommonActionHelper{
 			return "not either blue nor red";
 		}
 	}
+	
+	
+	
+	public void segregateTheProductHaving_Rating_and_NoRating() {
+		
+		int totalnumberOfGridInPLP=totalNumberOfItemInGrid.size();
+		
+		System.out.println(totalnumberOfGridInPLP);
+	
+		if(isDisplayed(firstStarRatingAvailiblity)) {
+		
+			int i= totalNumberOFItemHAving_Star.size();
+			
+			System.out.println("Total number of item having star"+i);
+		
+		
+			int z=totalnumberOfGridInPLP -i;
+	System.out.println("Total number of item NOT having star"+ z);
+			
+		}
+	
+		
+	}
+	
 }

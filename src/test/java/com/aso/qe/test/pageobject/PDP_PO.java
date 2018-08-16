@@ -42,7 +42,7 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[text()='Questions']")	public   WebElement textQuestions;
 	@FindBy(xpath="//*[contains(@data-auid,'sku_')]")	public   WebElement txtProductSKU;
 	@FindBy(xpath="//*[contains(@data-auid,'item_')]")	public   WebElement txtProductItemNumber;
-	@FindBy(xpath="//*[@data-auid='swatchButton-image-4299']|//*[@data-auid='swatchButton-image-4060']") 	public   WebElement secSize1;
+	@FindBy(xpath="//*[@data-auid='PDP_Size_heading']//following-sibling::div//button[@aria-label='Medium']") 	public   WebElement secSize1;
 	@FindBy(xpath="//*[@data-auid='swatchButton-image-4286']|//*[@data-auid='swatchButton-image-4076']") 	public   WebElement secSize2;
 	@FindBy(xpath="//*[@data-auid='btnviewCart']") 	public WebElement btnViewCart;
 	@FindBy(xpath="//*[@data-auid='btncheckout']") 	public WebElement btnCheckout;
@@ -65,7 +65,8 @@ public class PDP_PO extends CommonActionHelper
 	public WebElement txtNotsoldonline;//9aug danush
 	//Start 28July2018
 	@FindBy(xpath="(//*[contains(@data-auid, 'quickview')]//preceding-sibling::img)[1]")  public  WebElement pdpImage;
-	@FindBy(xpath="(//*[contains(@data-auid, 'quickview')])[1]")  public  WebElement btnQuickView;
+	//@FindBy(xpath="(//*[contains(@data-auid, 'quickview')])[1]")  public  WebElement btnQuickView;RKA 15 aug
+	@FindBy(xpath="(//*[contains(text(),'Quick View')])[1]") public  WebElement btnQuickView;
 	@FindBy(xpath="//*[@data-auid='btnundefined']") public  WebElement btnSeeDetails;
 
 	//KER-714 Start CR-AKK
@@ -77,16 +78,24 @@ public class PDP_PO extends CommonActionHelper
 	//KER-714 End CR-AKK
 
 	//KER-3412 Start CR-AKK
+	
+	@FindBy(xpath="//*[@data-auid='shopByCategory_0']" ) public WebElement clickOnFirstIMG;
+	
+	
 	@FindBy(xpath="(//*[contains(@data-auid, 'productCard_')])[19]") public WebElement btnProductCardimage;
-	@FindBy(xpath="(//*[contains(@data-auid, 'productCard_')])[19]//div[contains(text(), 'Online Only')]")
+	//@FindBy(xpath="(//*[contains(@data-auid, 'productCard_')])[19]//div[contains(text(), 'Online Only')]")/RKA 15 aug
+	@FindBy(xpath="(//*[@class='badge css-6l2zn6 eggjmyf0'])[1]")
 	public WebElement txtPromotional;
-	@FindBy(xpath="(//*[contains(@data-auid, 'productCard_')])[19]//div[contains(text(), 'Coleman')]")
+	//@FindBy(xpath="(//*[contains(@data-auid, 'productCard_')])[19]//div[contains(text(), 'Coleman')]")
+	@FindBy(xpath="(//*[contains(@class,'c-product__description')])[1]")
 	public WebElement txtProdctText;
 
-	@FindBy(xpath="(//*[contains(@data-auid, 'productCard_')])[19]//span[contains(text(), '119')]")
+	//@FindBy(xpath="(//*[contains(@data-auid, 'productCard_')])[19]//span[contains(text(), '119')]")
+	@FindBy(xpath="(//*[contains(@class,'c-price__sub')])[1]")
 	public WebElement txtProdctPrice;
 
-	@FindBy(xpath="(//*[contains(@data-auid, 'productCard_')])[19]//div[@class='c-product__ratings-reviews my-quarter d-flex align-items-center']")
+	//@FindBy(xpath="(//*[contains(@data-auid, 'productCard_')])[19]//div[@class='c-product__ratings-reviews my-quarter d-flex align-items-center']")/RKA 15 aug
+	@FindBy(xpath="(//*[@class='css-1jc6cii'])[1]")
 	public WebElement bthStars;
 
 	@FindBy(xpath="//*[@data-auid='PDP_AdBug']") public WebElement txtPromotionalmsg;
@@ -103,10 +112,11 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='PDP_QC_INC']/preceding-sibling::*[1]/*")public WebElement quantityInput;
 	@FindBy(xpath="//*[contains(text(),'limited to 4 per order')]")public WebElement MsgSelectedItemLimited;
 	@FindBy(xpath="//*[@data-auid='productCard_3486078']")public WebElement selectSCCY_CPX_2CB9mmPistol;
-	@FindBy(xpath="//*[@data-auid='PDP_OnlineMessage']")public WebElement MsgPDP_OnlineMessage;
+	//@FindBy(xpath="//*[@data-auid='PDP_OnlineMessage']")public WebElement MsgPDP_OnlineMessage;/RKA 15 aug
+	@FindBy(xpath="(//*[contains(text(),'ONLY SOLD IN STORES')])[1]")public WebElement MsgPDP_OnlineMessage;
 	@FindBy(xpath="//*[@data-auid='productCard_5242504']")public WebElement selectNikeToddlerGirlDNAShirtandShortsSet;
 	@FindBy(xpath="//*[@data-auid='PDP_getNotifiedBackInStock']/../../*[1]")public WebElement  MsgOutOFStock;
-	@FindBy(xpath="//*[@data-auid='productCard_3730178']")public WebElement selectBCGMenGolfShort;
+	@FindBy(xpath="(//*[contains(@aria-label,'stars out of 5')])[1]")public WebElement selectStarratingProduct;
 	@FindBy(xpath="//*[@data-auid='PDP_close_Addtocart_Modal']") public WebElement btnCloseCrossAddToCartModel; //Anuj 7 Aug
 	@FindBy(xpath="//*[contains(text(),'We added those to the cart')]") public WebElement txtLimitedQuantityAddedInCart; //Anuj 11 Aug
 
@@ -139,6 +149,15 @@ public class PDP_PO extends CommonActionHelper
 		assertTrue(clickOnButton(btnPlpImage));
 	}
 
+	//KER-1925 REdesign By RKA 14 AUg
+	@FindBy(xpath="(//*[@class='c-price__sub css-1f28zyy e1xaasfo1'])[1]")public WebElement imgWithoutPRomotion_PRice;
+    @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Ad Feature']")public WebElement filterADfeature; 
+	@FindBy(xpath="//*[@data-auid='drawer_Clearance']")public WebElement filterClearence;
+	@FindBy(xpath="(//*[contains(@class,'badge css-')])[1]")public WebElement firstClearanceItem;
+	@FindBy(xpath="(//*[contains(@class,'badge css-')])[1]/../following-sibling::*/section/*/*[1]/*[2]")public WebElement PriceOFfirstClearenceITem;
+	@FindBy(xpath="//*[@class='css-115kh7q e1xidll61']")public WebElement txtPriceofPDP;
+	@FindBy(xpath="//*[contains(text(),'  Be the first to ask a question')]")public WebElement linkBetheFirstTOAskQuestion;
+	
 	@FindBy(xpath="(//*[contains(@class,'c-price_')]/span)[1]")
 	public WebElement txtPlpPrice;
 
@@ -162,7 +181,7 @@ public class PDP_PO extends CommonActionHelper
 
 	@FindBy(xpath="//*[@data-auid='PDP_MediaClick']//*[@alt='Hover/Click to enlarge'] | //*[@data-auid='PDP_ProductImage_m']//*[@alt='Hover/Click to enlarge'] ") public WebElement imgClickToZoom;
 	@FindBy(xpath="//*[@data-auid='PDP_Modal_closeIcon']/* | //*[@data-auid='PDP_ProductImage_m']//ancestor::div[@aria-modal='true']//button[contains(text(),'X')]") public WebElement btnCloseCrossZoom;
-	@FindBy(xpath="(//*[contains(text(),'Standard delivery of 10-14 days')])[1]") public WebElement txtShippingRelatedMsg; 
+	@FindBy(xpath="(//*[contains(text(),'Pick Up in 3-4 business days')])[1]") public WebElement txtShippingRelatedMsg; 
 
 	@FindBy(xpath = "//*[contains(@data-auid,'productCard_')]//span[contains(@class,'c-product__colors-available')]")	public List<WebElement> colorsAvailablePLP;
 	@FindBy(xpath = "//*[@data-auid='PDP_Color_Attribute']")	public WebElement visibilityAltColorPDP;
@@ -185,6 +204,10 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "//button[contains(text(), 'Ask a question')]") public WebElement btnAskQuestion;
 	@FindBy(xpath = "//button[contains(text(), ' Answer this Question')]") public WebElement btnAnswerQuestion;
 	@FindBy(xpath = "//button[@name='Cancel']") public WebElement btnCancel;
+	
+	//KER-2728 Anuj 14 Aug
+	@FindBy(xpath = "//*[contains(@data-auid,'PDP_PromoMessage')]") public WebElement txtPromoCodePDP;
+	
 
 	public void cilckAnswerThisQuestion() throws Exception {
 		assertTrue(clickOnButton(btnAnswerQuestion));
@@ -224,8 +247,8 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[contains(text(),'terms & conditions')]/../preceding-sibling::*")public WebElement btnTerms_conditions;
 	@FindBy(xpath="//*[contains(text(),'Your review was submitted')]/parent::*/parent::*/parent::*/parent::*/parent::*/parent::*/*[1]")public WebElement x_yourReviewSubmited;
 	//@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[3]")public WebElement itemWithNoReview;/RKA 10 aug
-	@FindBy(xpath="(//*[@class='c-product__colors-available m-noratings'])[1]")public WebElement itemWithNoReview;
-
+	//@FindBy(xpath="(//*[@class='c-product__colors-available m-noratings'])[1]")public WebElement itemWithNoReview;
+@FindBy(xpath="(//*[contains(@class,'c-product__colors')])[1]")public WebElement itemWithNoReview;
 
 	@FindBy(xpath="(//*[contains(text(),'Reviews')])[2]/../../following-sibling::*[1]/*[2]")public WebElement linkBeTheFirstTOReviewThisPRoduct;
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[*]/*[1]/*[2]/*[3]/*[1]/*/*[2]")public WebElement atLeastOneReview;
@@ -233,8 +256,11 @@ public class PDP_PO extends CommonActionHelper
 
 	//KER-1954Mob RKA
 	@FindBy(xpath="//*[@data-auid='Reviews_m']/*")public WebElement btnPlusReviews_M;
-	@FindBy(xpath="//*[@data-auid='productCard_3730178']") public WebElement selectproductWithReview;
+	@FindBy(xpath="(//*[@class='css-1jc6cii'])[1]") public WebElement selectproductWithReview;
 	@FindBy(xpath="(//*[contains(text(),'Sort by')])[1]/../following-sibling::*") public WebElement selectSortby;
+	
+	@FindBy(xpath="//*[contains(text(),' Highest to Lowest Rating ')]")public WebElement higestTOLowest;
+	
 	@FindBy(xpath="(//*[contains(text(),'Reviews')])[4]/../following-sibling::*/*[1]")public WebElement reviewPaginationBackward;
 	@FindBy(xpath="(//*[contains(text(),'Reviews')])[4]/../following-sibling::*/*[2]")public WebElement reviewPaginationForward;
 
@@ -279,9 +305,10 @@ public class PDP_PO extends CommonActionHelper
 	//KER-3344 End CR-AKK
 	//KER-652 Start 
 	@FindBy(xpath="//*[@data-auid='Rating Stars']")public WebElement starRatingOnPDPtop;
-	@FindBy(xpath="//*[@data-auid='Rating Stars']/*/*/*[2]/*[2]/*|//*[@data-auid='Rating Stars']/*/*/*[3]/*[2]/*")public WebElement starRatingOnPDPtop_Zero;
-	@FindBy(xpath="//*[@data-auid='Rating Stars']/*/*/*[2]/*[2]/*")public WebElement StarratingequalsZero;
-
+	//@FindBy(xpath="//*[@data-auid='Rating Stars']/*/*/*[2]/*[2]/*|//*[@data-auid='Rating Stars']/*/*/*[3]/*[2]/*")public WebElement starRatingOnPDPtop_Zero;/RKA 16 aug
+	@FindBy(xpath="//*[contains(@class,'bv_numReviews_text')]")public WebElement starRatingOnPDPtop_Zero;
+	@FindBy(xpath="//*[contains(@class,'bv_numReviews_text')]")public WebElement StarratingequalsZero;
+    @FindBy(xpath="(//*[@name='Cancel'])[2]")public WebElement click_XyourQuestionSubmitted;
 
 
 	//Anuj
@@ -342,7 +369,7 @@ public class PDP_PO extends CommonActionHelper
 	public void cilckQuickViewbutton() throws Exception {
 
 		assertTrue(clickOnButton(btnQuickView));
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	}
 
 	public void verifyAddcartOrSeeDetailsButton() throws Exception {
@@ -360,99 +387,55 @@ public class PDP_PO extends CommonActionHelper
 		super();
 	}
 
-//	public void addToCartAvailability(){
-//
-//		//String stockstatus = getText(txtNotifiedBack);
-//		if(isDisplayed(txtNotifiedBack))
-//		{
-//			logger.debug("errormessage:: Product is not available in stock");
-//			int nextImage=1;
-//
-//
-//			while(isEnabled(txtNotifiedBack)) {
-//
-//				WebElement diffImage = driver.findElementByXPath("(//*[@data-auid='PDP_Color_Attribute']//button)["+nextImage+"]");
-//
-//				clickOnButton(diffImage);
-//
-//				int nxtSize = 1;
-//				
-//			//	int numberOfSize = 
-//				
-//				while(isEnabled(txtNotifiedBack)) {
-//					WebElement nextSize = driver.findElementByXPath("(//*[@data-auid='PDP_Size_heading']//following-sibling::div//*[contains(@data-auid,'swatchButton-image-')])["+nxtSize+"]");
-//					
-//					nxtSize++;
-//					
-//					boolean flag = isEnabled(txtNotifiedBack);
-//					if(!flag) {
-//
-//						logger.debug("break the loop");
-//
-//						break;
-//
-//					}
-//					clickOnButton(nextSize);
-//				}
-//				nextImage++;
-//
-//				System.out.println("************************ "+diffImage);
-//
-//				boolean flag = isEnabled(txtNotifiedBack);
-//
-//				System.out.println("************************addcart BTN "+flag);
-//
-//				if(!flag) {
-//
-//					logger.debug("break the loop");
-//
-//					break;
-//
-//				}
-//			}
-//
-//		}
-//	}
-	 public void addToCartAvailability() throws InterruptedException{
-         waitForElement(selectedSwatchRepresentative);
-         isDisplayed(selectedSwatchRepresentative);
-         if (isDisplayed(txtNotifiedBack)) {
-                logger.debug("errormessage:: Product is not available in stock");
-                int nextImage = 1;
-                int nextSize=1;
-                boolean flag = isDisplayed(txtNotifiedBack);
-                System.err.println(flag);
-                List<WebElement> colorsAvailable = driver.findElements(By.xpath("//*[@data-auid='PDP_Color_Attribute']//button"));
-                int colorCount = colorsAvailable.size();
-                
-                Thread.sleep(300);
-                
-                List<WebElement> sizeAvailable = driver.findElements(By.xpath("(//*[@data-auid='PDP_Size_Attribute']//*[contains(@data-auid,'swatchButton-image')])"));
-                int sizeCount = sizeAvailable.size();
-                
-                while (colorCount>0) {
-                      WebElement diffImage = driver.findElement(By.xpath("(//*[@data-auid='PDP_Color_Attribute']//button)[" + nextImage + "]"));
-                      clickOnButton(diffImage);
-                      while (nextSize<=sizeCount) {
-                             WebElement diffSize = driver.findElement(By.xpath("(//*[@data-auid='PDP_Size_Attribute']//*[contains(@data-auid,'swatchButton-image')])[" + nextSize + "]"));
-                             clickOnButton(diffSize);
-                             flag = isDisplayed(txtNotifiedBack);
-                             System.err.println(flag);
-                             System.out.println("************************addcart BTN " + flag);
-                             if (!flag) {
-                                    System.err.println(flag);
-                                    logger.debug("break the loop");
-                                    colorCount=0;
-                                    break;
-                             }
-                             nextSize++;
-                      }
-                      nextImage++;
-                      colorCount--;
-                }
 
-         }
-  }
+	public void addToCartAvailability() throws InterruptedException{
+        waitForElement(selectedSwatchRepresentative);
+        isDisplayed(selectedSwatchRepresentative);
+         if (isDisplayed(txtNotifiedBack)) {
+               logger.debug("errormessage:: Product is not available in stock");
+               /*int nextImage = 1;
+               int nextSize=1;
+               int colorCount = 0;*/
+               boolean flag = isDisplayed(txtNotifiedBack);
+               System.err.println(flag);
+                    
+               List<WebElement> colorsAvailable = driver.findElements(By.xpath("//*[@data-auid='PDP_Color_Attribute']//button"));
+               colorsAvailable.size();
+               
+               Thread.sleep(300);
+              
+               WebElement diffImage = driver.findElement(By.xpath("(//*[@data-auid='PDP_Color_Attribute']//button)[1]"));
+               diffImage.click();
+               
+//               while (isDisplayed(txtNotifiedBack) && colorCount>0) {
+//               
+//                    List<WebElement> sizeAvailable = driver.findElements(By.xpath("(//*[@data-auid='PDP_Size_Attribute']//*[contains(@data-auid,'swatchButton-image')])"));
+//                   int sizeCount = sizeAvailable.size();
+//                   
+//                     WebElement diffImage = driver.findElement(By.xpath("(//*[@data-auid='PDP_Color_Attribute']//button)[" + nextImage + "]"));
+//                     clickOnButton(diffImage);
+//                     while (isDisplayed(txtNotifiedBack) && nextSize<=sizeCount) {
+//                            WebElement diffSize = driver.findElement(By.xpath("(//*[@data-auid='PDP_Size_Attribute']//*[contains(@data-auid,'swatchButton-image')])[" + nextSize + "]"));
+//                            clickOnButton(diffSize);
+//                            flag = isDisplayed(txtNotifiedBack);
+//                            System.err.println(flag);
+//                            System.out.println("************************addcart BTN " + flag);
+//                            if (!flag) {
+//                                   System.err.println(flag);
+//                                   logger.debug("break the loop");
+//                                   colorCount=0;
+//                                   break;
+//                            }
+//                            nextSize++;
+//                     }
+//                     nextImage++;
+//                     nextSize=1;
+//                     colorCount--;
+//               }
+
+        }
+ }
+
 
 	// SID 05-August-2018
 	public void altColorMatch() throws InterruptedException {
@@ -497,14 +480,15 @@ public class PDP_PO extends CommonActionHelper
 
 	//08-Aug Anuj  KER-1920
 	public void addToCartProductValidationDesktop() throws InterruptedException {
+	
+		addToCartAvailability();
 		String productImage = imgSrcSKUAttribute.getAttribute("src");
 		String productPrice = getText( txtPdpprice);
 		String productTitle = getText( txtProductTitle);
-
 		assertTrue(clickOnButton(btnAddToCart));
 		Thread.sleep(3000);
 		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[text()=\""+productTitle+"\"])[4]"));
-		WebElement actualPriceInAddToCart = driver.findElement(By.xpath("(//*[contains(text(),'"+productPrice+"')])[4]"));
+		WebElement actualPriceInAddToCart = driver.findElement(By.xpath("(//*[text()='"+productPrice+"'])[3]"));
 		String productImageAddToCartPopup = imgAddToCartPopup.getAttribute("src");
 
 		assertTrue(isDisplayed(actualTitleInAddToCart));
@@ -513,11 +497,11 @@ public class PDP_PO extends CommonActionHelper
 	}
 
 	//08-Aug Anuj  KER-1920
-	public void addToCartProductValidationMobile() {
+	public void addToCartProductValidationMobile() throws InterruptedException {
 		String productImage = imgproductPDPSRCMobile.getAttribute("src");
 		String productPrice = getText( txtPdpprice);
 		String productTitle = getText( txtProductTitle);
-
+		addToCartAvailability();
 		assertTrue(clickOnButton(btnAddToCart));
 
 		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[contains(text(),\""+productTitle+"\")])[5]"));
@@ -569,7 +553,7 @@ public class PDP_PO extends CommonActionHelper
 			waitForPageLoad(driver);
 
 
-			driver.findElement(By.xpath("(//*[@class='c-product__colors-available m-noratings'])["+num+"]")).click();
+			driver.findElement(By.xpath("(//*[contains(@class,'c-product__colors')])["+num+"]")).click();
 
 			num++;
 			waitForPageLoad(driver);

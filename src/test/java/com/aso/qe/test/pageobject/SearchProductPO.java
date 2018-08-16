@@ -14,7 +14,8 @@ import com.aso.qe.test.stepdefinition.web.Common_Web_SD;
 
 public class SearchProductPO extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(SearchProductPO.class);
-
+	public static int productDisplayCount;
+	@FindBy(xpath="//*[@class='col-4 o-copy__16bold']") public static WebElement itemscount;
 	@FindBy(xpath="//*[@data-auid='search-input']") public static WebElement searchTextBox;
 	@FindBy(xpath="//*[@data-auid='search-input_m']") public static WebElement searchTextBoxMobile;
 	@FindBy(xpath="//span[contains(text(),'Filters')]")public WebElement filterTitleBtn;	
@@ -36,7 +37,7 @@ public class SearchProductPO extends CommonActionHelper{
 	} )
 	public List<WebElement> productPriceList;
 	@FindBys( {
-		@FindBy(xpath="//a[contains(@data-auid,'productCard_')]")
+		@FindBy(xpath="//*[contains(@class,'c-price__sub')]")
 	} )
 	public List<WebElement> productList;
 	@FindBy(xpath="(//*[@data-auid='facetdrawer_drawer_Brand'])[2]")public WebElement brandBtn;
@@ -509,13 +510,8 @@ public class SearchProductPO extends CommonActionHelper{
 				String str[]=checkBoxTxt.split("\\r?\\n");
 				for(String txt: str){
 					if(txt !=null && !txt.contains("Clear")){
-						if(txt.contains("(")){
-							int index = txt.indexOf("(");
-							txt = txt.substring(index+2, txt.length()-1);;
-						}
-
-						logger.debug("Fianal Product Count:: "+txt);
-						int productCount = Integer.parseInt(txt);
+						int productCount = Integer.parseInt(txt.substring(txt.indexOf("(")+1, txt.indexOf(")")));
+						logger.debug("Fianal Product Count:: "+productCount);
 						if(productCount<=0){
 							captureScreenShot(Constants.FAIL);
 							flag= false;
@@ -547,8 +543,7 @@ public class SearchProductPO extends CommonActionHelper{
 				for(String txt: str){
 					if(txt != null && !txt.contains("Clear")){
 						if(txt.contains("(")){
-							int index = txt.indexOf(" (");
-							txt = txt.substring(index+2, txt.length()-1);
+							txt = txt.substring(txt.indexOf("(")+1, txt.indexOf(")"));
 						}
 
 						logger.debug("Fianal Product Count:: "+txt);
@@ -655,5 +650,18 @@ public class SearchProductPO extends CommonActionHelper{
 			}
 		}
 		return flag;
+	}
+
+	public static int getItemsCount(){
+		int count =0;
+		try{
+			String strcount = itemscount.getText();
+			if(strcount!= null && strcount.matches(".*\\d+.*")){
+				count = Integer.parseInt(strcount.replaceAll("([,a-zA-Z ])", "").trim());
+			}
+		}catch (Exception e) {
+
+		}
+		return count;
 	}
 }

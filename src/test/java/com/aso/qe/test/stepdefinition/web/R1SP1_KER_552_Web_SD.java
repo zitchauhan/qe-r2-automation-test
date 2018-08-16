@@ -78,7 +78,10 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 
 	@Then("^Verify the list of product is dispalyed are same as before filter$")
 	public void verify_the_list_of_product_is_dispalyed_are_same_as_before_filter() throws Throwable {
+		logger.debug("Before filter's Apply Items count::"+SearchProductPO.productDisplayCount );
+		logger.debug("After filter's Remove Items count::"+SearchProductPO.getItemsCount());
 		// Write code here that turns the phrase above into concrete actions
+		assertEquals(SearchProductPO.productDisplayCount, SearchProductPO.getItemsCount());
 	}
 
 	@When("^user click on filter button$")
@@ -144,6 +147,7 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 	@Given("^User expands PRICE Filter Option$")
 	public void user_expands_PRICE_Filter_Option() throws Throwable {
 		//searchProductPO.clickAllMinusFilterOptions();
+		SearchProductPO.productDisplayCount = SearchProductPO.getItemsCount();
 		if("mobile".equalsIgnoreCase(testtype)) {
 			driver =(RemoteWebDriver) driver.switchTo().defaultContent();
 			scrollPageToWebElement(Common_Web_SD.searchProductPO.filterPricePlusBtnMobile);	
@@ -256,7 +260,7 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 	@Then("^Verify the price filters product count with checkboxs product count should be equal$")
 	public void verify_the_price_filters_product_count_with_checkboxs_product_count_should_be_equal() throws Throwable {
 		int filterCheckBoxsProductCount = searchProductPO.getFilterCheckBoxsProductCount(searchProductPO.facet_Price_CheckBox_List);
-		int facetProductCount = searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
+		int facetProductCount = SearchProductPO.getItemsCount(); //searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
 		logger.debug(filterCheckBoxsProductCount+"::ProductCountMatch::"+facetProductCount);
 		assertEquals(filterCheckBoxsProductCount, facetProductCount);
 	}

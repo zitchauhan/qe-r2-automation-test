@@ -21,7 +21,7 @@ Feature:  Add to Cart - Error Messages (PDP)
 
     Examples: 
       | data                                          |
-      | Magellan Outdoors Men's Neoprene Wading Boots |
+      | Magellan Outdoors Men's Neoprene Wading |
       
           
   @C-PDP @Web @Regression @KER-1919 @ZYP_HP_K1919-5039 @CR-AG

@@ -62,13 +62,8 @@ public class Common_Web_SD extends CommonActionHelper{
 
 	@Then("^User clicks on the burger menu$")
 	public void User_clicks_on_the_burger_menu() throws Throwable {
-		if(isDisplayed(globalElementHeader.btnBurgerMenu)) {
-		Thread.sleep(5000);
-		assertTrue(clickOnButton(globalElementHeader.btnBurgerMenu));
-		Thread.sleep(1000);}
-		else {
-			driver.navigate().refresh();
-		}
+		globalElementHeader.clickOnBurgerMenu();
+		
 	}
 
 	@Then("^User clicks on the filter option$")
@@ -80,7 +75,7 @@ public class Common_Web_SD extends CommonActionHelper{
 	@Then ("^User navigates to L1$")
 	public void User_navigates_to_L1() throws InterruptedException {
 		if("mobile".equalsIgnoreCase(testtype)){
-			Thread.sleep(2000);
+			
 			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.txtToNavigateClothingBurgerMenuMobile));
@@ -100,7 +95,7 @@ public class Common_Web_SD extends CommonActionHelper{
 	@Then ("^User navigates to L2$")
 	public void User_navigate_to_L2() throws InterruptedException {
 		if("mobile".equalsIgnoreCase(testtype)){
-			Thread.sleep(2000);
+			
 			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.btnMen_Clothing_Shop));
@@ -124,7 +119,7 @@ public class Common_Web_SD extends CommonActionHelper{
 	@Then ("^User navigates to L3$")
 	public void User_navigates_to_L3() throws InterruptedException {
 		if("mobile".equalsIgnoreCase(testtype)){
-			Thread.sleep(2000);
+		
 			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.btnMen_Clothing_Shop));

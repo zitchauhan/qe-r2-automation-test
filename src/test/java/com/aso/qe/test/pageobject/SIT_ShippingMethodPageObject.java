@@ -1,15 +1,14 @@
 package com.aso.qe.test.pageobject;
 
-import static org.testng.Assert.assertTrue;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
 public class SIT_ShippingMethodPageObject extends CommonActionHelper {
-	private static final Logger logger = Logger.getLogger(SIT_ShippingAddressPageObject.class);
+	//private static final Logger logger = Logger.getLogger(SIT_ShippingAddressPageObject.class);
 	
 //	@FindBy(xpath="//*[@id='shipMeth']") public WebElement Shippingaddress;   //Commented by  SID 9-August-18
 	@FindBy(xpath="(//*[@id='coSelectAddress']//*[@name='addressId']/parent::label)[1]") public WebElement Shippingaddress; //SID 9-August-18
