@@ -96,7 +96,8 @@ Scenario Outline: TC_5-Verify add quantity adjustment in the Cart Page
 	Examples:
     | Quantity |
     | 5		   |
-    
+ 
+   
 
 @R2_AutomationSanity @R2_AS1 @WAST-06 @KER-2942 @ZYP_K2942-8047 @CR-DP
 Scenario: TC_6-Verify Remove link in the Cart Page 
