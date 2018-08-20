@@ -10,9 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
-public class R2_CART_PO extends CommonActionHelper {
+public class R2_Cart_PO extends CommonActionHelper {
 
-	private static final Logger logger = Logger.getLogger(R2_CART_PO.class);
+	private static final Logger logger = Logger.getLogger(R2_Cart_PO.class);
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 
 	// Start KER-2911 CR-DPK
@@ -24,20 +24,24 @@ public class R2_CART_PO extends CommonActionHelper {
 	WebElement continueShoppingLink;
 	@FindBy(xpath = "//a[@id='checkoutGuestButton']")
 	public WebElement btnBeginCheckout;
-	
-	@FindBy(xpath = "//div[text()='Subtotal']/..")
+
+	@FindBy(xpath = "//div[text()='Subtotal']/../div[2]")
 	public WebElement txtSubtotalCart;
+	
 
 	@FindBy(xpath = "//div[text()='Estimated Shipping']/..")
 	public WebElement txtEstimatedShippingCart;
 
-	@FindBy(xpath = "//div[text()='Estimated Taxes']/..")
+	@FindBy(xpath = "//div[text()='Estimated Taxes']/../div[2]")
 	public WebElement txtEstimatedTaxesCart;
+	
+	@FindBy(xpath = "//div[text()='Promocode']/../div[2]")
+	public WebElement txtPromocodeCart;
 
-	@FindBy(xpath = "//div[text()='Total']/..")
+	@FindBy(xpath = "//div[text()='Total']/../div[2]")
 	public WebElement txtTotalCart;
 
-	@FindBy(xpath = "//div[@class='col-12 col-md-5 px-0 pl-md-1']") 
+	@FindBy(xpath = "//div[@class='col-12 col-md-5 px-0 pl-md-1']")
 	public WebElement txtOrdersummaryCart;
 	// End KER-2911 CR-DPK
 
@@ -53,6 +57,10 @@ public class R2_CART_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//input[@data-auid='crt_rdOpt_1']")
 	public WebElement rbInStorePickUp;
+
+	@FindBy(xpath = "(//*[@data-auid='btnc_btnCheckout'])[1]")
+	public WebElement btnCheckout;
+
 	// End KER-2927 CR-SK
 
 	// start KER-2939 CR-RK
@@ -78,6 +86,23 @@ public class R2_CART_PO extends CommonActionHelper {
 	public WebElement txtSize;
 	// End KER-2939 CR-RK
 
+	// Start KER-2939 CR-AKK
+	@FindBy(xpath = "//a[contains(@data-auid, 'crt_lnkProdName_')]")
+	public WebElement lnkProducttext;
+
+	@FindBy(xpath = "(//*[contains(@data-auid, 'crt_lnkProdName_')]/../div/span[2])[1]")
+	public WebElement txtPrdColor;
+
+	@FindBy(xpath = "(//*[contains(@data-auid, 'crt_lnkProdName_')]/../div/span[2])[2]")
+	public WebElement txtPrdSize;
+
+	@FindBy(xpath = "//*[contains(@data-auid,'crt_btnRmvFromCart_')]")
+	public WebElement btnRemoveCart;
+
+	@FindBy(xpath = "(//*[contains(text(),'Promocode')]/.")
+	public WebElement txtPromoCode1;
+
+	// End KER-2939 CR-AKK
 	public void clickOnCartIcon() throws Exception {
 
 		if (isDisplayed(cartIcon)) {
@@ -197,10 +222,16 @@ public class R2_CART_PO extends CommonActionHelper {
 	}
 
 	public void increaseQuantityOnCartPage(int differencValue) {
-		String quantityDisplayed = getText(txtQuantity);
+		assertTrue(isDisplayed(txtQuantity));
+		String quantityDisplayed = txtQuantity.getAttribute("value").toString();
+		// String quantityDisplayed = getText(txtQuantity);
 		int increasedQuantity = Integer.parseInt(quantityDisplayed) + differencValue;
 		setInputText(txtQuantity, Integer.toString(increasedQuantity));
-		clickOnButton(txtQuantity);
+		tabInputBox(txtQuantity);
+
+		// clickOnButton(txtQuantity);
+		getDriver().navigate().refresh();
+		waitForElement(txtQuantity);
 	}
 
 	public void selectShipToMe() {
@@ -209,6 +240,11 @@ public class R2_CART_PO extends CommonActionHelper {
 
 	public void selectInStorPickUp() {
 		clickOnRadioButton(rbInStorePickUp);
+	}
+
+	public boolean clickOnCheckoutButton() {
+		return clickOnButton(btnCheckout);
+
 	}
 	// End KER-2927 CR-SK
 

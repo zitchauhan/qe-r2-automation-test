@@ -1,11 +1,20 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertTrue;
+
+import org.openqa.selenium.support.PageFactory;
+
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
 public class R2_CART_KER_2942_Web_SD extends CommonActionHelper {
+
+	
+	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
+	
 
 	@And("^User should be able to see the updated Order Summary$")
 	public void user_should_be_able_to_see_the_updated_Order_Summary() throws Throwable {
@@ -24,12 +33,15 @@ public class R2_CART_KER_2942_Web_SD extends CommonActionHelper {
 
 	@Then("^Verify cart is empty$")
 	public void verify_cart_is_empty() throws Throwable {
-
+		assertTrue(isDisplayed(r2SanityPo.AS_txtYourCart));
+	}
+	
+	@Then("^verify the Remove Quantity link$")
+	public void verify_the_Remove_Quantity_link() throws Throwable {
+		assertTrue(isDisplayed(r2SanityPo.AS_btnRemoveFromCart));
+		
 	}
 
-	@Then("^user should be able to enter the signin detail$")
-	public void user_should_be_able_to_enter_the_signin_detail() throws Throwable {
 
-	}
 
 }

@@ -4,7 +4,7 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -21,6 +21,9 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), PDP_PO.class);
+	
+	public String quantityprice;
+	public String modifiedQuantityprice;
 	
 	
 	@Then("^user clicks on the burger menu$")
@@ -45,34 +48,41 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 	@And("^user will click on View Cart button$")
 	public void user_will_click_on_View_Cart_button() throws Throwable {
 		assertTrue(clickOnButton(pdpPageObj.btnViewCart));
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 	}
 	
 	@And("^user navigate to Cart page$")
 	public void user_navigate_to_Cart_page() throws Throwable {
+		Thread.sleep(2000);
 		assertTrue(isDisplayed(r2SanityPo.AS_txtYourCart));
 	}
-
-	@When("^incrases the \"(.*?)\" to X$")
-	public void incrases_the_to_X(String arg1) throws Throwable {
-		Thread.sleep(1000);
-		String quantityprice = r2SanityPo.AS_txtQuantityPrice.getText();
+	
+		
+	
+	@When("^enter the \"(.*?)\" to X$")
+	public void enter_the_to_X(String arg1) throws Throwable {
+		quantityprice = r2SanityPo.AS_txtQuantityPrice.getText();
 	    logger.info("Quantity:"+quantityprice);
 	    Thread.sleep(1000);
 		r2SanityPo.AS_inputQty.clear();
 		Thread.sleep(1000);
-		setInputText(r2SanityPo.AS_inputQty, arg1);
+		setInputText(r2SanityPo.AS_inputQty, webPropHelper.getTestDataProperty(arg1));
 		Thread.sleep(1000);
 		r2SanityPo.AS_clkOutside.click();
 		Thread.sleep(1000);
-		
 	}
 
 	@And("^modified quantity should get updated$")
 	public void modified_quantity_should_get_updated() throws Throwable {
 		Thread.sleep(1000);
-		String quantity = r2SanityPo.AS_inputQty.getText();
-	    logger.info("Modified Quantity:"+quantity);
+		modifiedQuantityprice = r2SanityPo.AS_txtQuantityPrice.getText();
+		if(!modifiedQuantityprice.equals(quantityprice)) {
+			logger.info("Quantity Price are modified");
+		}else
+		{
+			logger.info("Quantity Price are not modified");
+		}
+	   
 	}
 
 	@Then("^Order Summary should get recalculated$")
@@ -116,8 +126,8 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 	}
 
 	@And("^user view and Applied Promotions/Discounts\"(.*?)\" \\(promo code, Military ID, Promotions\\)$")
-	public void user_view_and_Applied_Promotions_Discounts_promo_code_Military_ID_Promotions(String promo) throws Throwable{
-		r2SanityPo.verifyAppliedPromoOnCartPage(promo);
+	public void user_view_and_Applied_Promotions_Discounts_promo_code_Military_ID_Promotions() throws Throwable{
+//		r2SanityPo.verifyAppliedPromoOnCartPage();
 	}
 
 	@Then("^user verifiy Order Total$")
@@ -179,8 +189,10 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 			
 		}else{
 			assertTrue(clickOnButton(r2SanityPo.AS_btnShopCategory));
-			Actions hover = new Actions(getDriver());
-			hover.moveToElement(r2SanityPo.AS_btnClothingCategory).build().perform();
+			assertTrue(clickOnButton(r2SanityPo.AS_btnClothingCategory));
+			//Actions hover = new Actions(getDriver());
+			//hover.moveToElement(r2SanityPo.AS_btnClothingCategory).build().perform();
+			assertTrue(clickOnButton(r2SanityPo.AS_btnMen_Clothing_Shop));//danush
 			assertTrue(clickOnButton(r2SanityPo.AS_btnMensShirt_Men_Clothing_Shop));
 		}
 
@@ -191,6 +203,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 		if("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1_Mobile));
 		}else {
+			Thread.sleep(2000);
 			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 		}
 

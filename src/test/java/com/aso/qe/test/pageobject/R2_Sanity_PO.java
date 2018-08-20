@@ -23,18 +23,18 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	public WebElement AS_btnClothingCategory;
 	@FindBy(xpath = "//*[@data-auid='level3Category-Mens']")
 	public WebElement AS_btnMens_Clothing_Shop;
-	@FindBy(xpath = "//*[@data-auid='level3Category-Mens']|//*[@data-auid='level3Category-Mens_m']")
+	@FindBy(xpath = "//*[@data-auid='level3Category-Mens']|//*[@data-auid='level3Category-Mens_m'] | //*[@data-auid='shopByCategory_1']")
 	public WebElement AS_btnMen_Clothing_Shop;
 	@FindBy(xpath = "//*[@data-auid='search-input']")
 	public WebElement AS_txtSearchBox;
 	@FindBy(xpath = "//button[@data-auid='submitSearchButton'] | //*[@data-auid='search-clear-button']")
 	public WebElement AS_btnGO;
-	@FindBy(xpath = "//*[@data-auid='level4Category-Shirts_m'] | //*[@data-auid='go-to-Mens_m'] | //*[@data-auid='level4Category-Shirts']")
-	public WebElement AS_btnMensShirt_Men_Clothing_Shop;
+	@FindBy(xpath = "//*[@data-auid='level4Category-Shirts_m'] | //*[@data-auid='go-to-Mens_m'] | //*[@data-auid='level4Category-Shirts'] | //*[@data-auid='shopByCategory_3']")
+	public WebElement AS_btnMensShirt_Men_Clothing_Shop;// Aug18 danush
 	@FindBy(xpath = "//*[@data-auid='shopbycategorysection']//*[@data-auid='shopByCategory_1']")
 	public WebElement AS_secCategory_CLP;
-	@FindBy(xpath = "(//*[contains(@data-auid,'productCard_')]/following::div)[1]")
-	public WebElement AS_productPLP1;
+	@FindBy(xpath = "(//*[contains(@data-auid,'productCard_')])[4]")
+	public WebElement AS_productPLP1;// Aug18 danush
 
 	@FindBy(xpath = "(//a[contains(@data-auid,'productCard_')])[1]")
 	public WebElement AS_productPLP1_Mobile;
@@ -135,11 +135,12 @@ public class R2_Sanity_PO extends CommonActionHelper {
 
 	}
 
-	public void verifyAppliedPromoOnCartPage(String promo) throws InterruptedException {
+	public void verifyAppliedPromoOnCartPage(String arg1) throws InterruptedException {
 		assertTrue(isDisplayed(AS_txtAddPromoCode));
 		assertTrue(clickOnButton(AS_iconPlusPromoCode));
-		setInputText(AS_inputPromoCode, promo);
+		setInputText(AS_inputPromoCode, webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(AS_btnCartSubmit));
+		Thread.sleep(2000);
 	}
 
 }
