@@ -25,6 +25,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//a[@id='checkoutGuestButton']")
 	public WebElement btnBeginCheckout;
 
+//<<<<<<< Updated upstream:src/test/java/com/aso/qe/test/pageobject/R2_Cart_PO.java
 	@FindBy(xpath = "//div[text()='Subtotal']/../div[2]")
 	public WebElement txtSubtotalCart;
 	
@@ -224,12 +225,9 @@ public class R2_Cart_PO extends CommonActionHelper {
 	public void increaseQuantityOnCartPage(int differencValue) {
 		assertTrue(isDisplayed(txtQuantity));
 		String quantityDisplayed = txtQuantity.getAttribute("value").toString();
-		// String quantityDisplayed = getText(txtQuantity);
 		int increasedQuantity = Integer.parseInt(quantityDisplayed) + differencValue;
 		setInputText(txtQuantity, Integer.toString(increasedQuantity));
 		tabInputBox(txtQuantity);
-
-		// clickOnButton(txtQuantity);
 		getDriver().navigate().refresh();
 		waitForElement(txtQuantity);
 	}

@@ -2,7 +2,6 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertFalse;
-
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -10,6 +9,7 @@ import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.Then;
+
 
 public class R2_MyAccount_KER_4011_Web_SD extends CommonActionHelper {
 	
@@ -27,7 +27,8 @@ public class R2_MyAccount_KER_4011_Web_SD extends CommonActionHelper {
 			assertTrue(isDisplayed(r2MyAccountPo.password));
 			assertTrue(isDisplayed(r2MyAccountPo.logIn));
 			assertTrue(isDisplayed(r2MyAccountPo.lnkSignUp));
-			
+			assertTrue(isDisplayed(r2MyAccountPo.lnkForgotYourPassword));
+
 	}
 
 	

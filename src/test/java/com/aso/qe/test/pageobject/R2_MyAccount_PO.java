@@ -122,6 +122,10 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//a[text()='Forgot Your Password']")
 	public WebElement txtForgotYourPasswordDescription;
+	
+	@FindBy(xpath = "//button[text()='Forgot Your Password']")
+	public WebElement lnkForgotYourPassword;
+
 
 	@FindBy(xpath = "//*[contains(text(),'Create Account')]")
 	public WebElement txtCreateAccountDescription;
@@ -129,6 +133,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(),'Create Account')]")
 	public WebElement lnkCreateAccount;
 	// End KER-3392 CR-RK
+//<<<<<<< Updated upstream
 
 	// Start KER-4011 CR-SK
 	@FindBy(xpath = "//h5[.='Sign in']")
@@ -139,6 +144,42 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//p[.='The combination of Email Address and Password is incorrect. Please try again.']")
 	public WebElement txtIncorrectCombinationError;
-
+	
+	@FindBy(xpath = "//div[@class='css-yg98kr mb-half px-3']")
+	public WebElement address;
 	// End KER-4011 CR-SK
+	
+	// Start KER-4023 CR-SK
+	@FindBy(xpath = "//h4[.='FORGOT PASSWORD']")
+	public WebElement headerForgotYourPassword;
+
+	@FindBy(xpath = "//button[@data-auid='btnbutton-1']")
+	public WebElement btnSubmit; 
+	
+	@FindBy(xpath = "//button[.='Forgot your password?']")
+	public WebElement btnForgotYourPassword; 
+	// End KER-4023 CR-SK
+	
+	// Start KER-4230 CR-SK
+	@FindBy(xpath = "//a[.='profile']")
+	public WebElement lnkProfile;
+	
+	@FindBy(xpath = "//*[@data-auid='myAccountCta']")
+	public WebElement lnkMyAccount;
+	
+	@FindBy(xpath = "//button/i[@class='academyicon icon-lock pr-half']")
+	public WebElement btnChangePassword;
+	
+	@FindBy(xpath = "//div[.='New Password']/preceding-sibling::input[@type='password']")
+	public WebElement txtCurrentPassword;
+	
+	@FindBy(xpath = "//div[.='New Password']/following-sibling::input[@type='password']")
+	public WebElement txtNewPassword;
+	
+	@FindBy(xpath = "//*[@data-auid='btnundefined']")
+	public WebElement btnUpdate;
+	// End KER-4230 CR-SK
+	
+
+
 }

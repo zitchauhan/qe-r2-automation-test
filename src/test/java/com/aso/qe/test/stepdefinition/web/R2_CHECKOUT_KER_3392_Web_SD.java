@@ -4,7 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import static org.junit.Assert.assertTrue;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.R2_CheckOut_PO;
+import com.aso.qe.test.pageobject.R2_Checkout_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
@@ -14,7 +14,7 @@ import cucumber.api.java.en.When;
 public class R2_CHECKOUT_KER_3392_Web_SD extends CommonActionHelper {
 
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
-	R2_CheckOut_PO r2_CheckOut_Po=PageFactory.initElements(driver, R2_CheckOut_PO.class);
+	R2_Checkout_PO r2_CheckOut_Po=PageFactory.initElements(driver, R2_Checkout_PO.class);
 	R2_MyAccount_PO r2_MyAccount_PO=PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	
 	@Then("^user will click on Checkout button$")
@@ -22,15 +22,15 @@ public class R2_CHECKOUT_KER_3392_Web_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2SanityPo.AS_btnCheckout));  
 	}
 	
-	@Then("^user will verify the message for Sign-in$")
-	public void user_will_verify_the_message_for_Sign_in() throws Throwable {
-		assertTrue(isDisplayed(r2_CheckOut_Po.txtSignInDescription));
-	}
-	
-	@When("^user click on SignIn link$")
-	public void user_click_on_SignIn_link() throws Throwable {
-		assertTrue(clickOnButton(r2_CheckOut_Po.lnkSignIn_CheckOut)); 
-	}
+//	@Then("^user will verify the message for Sign-in$")
+//	public void user_will_verify_the_message_for_Sign_in() throws Throwable {
+//		assertTrue(isDisplayed(r2_CheckOut_Po.txtSignInDescription));
+//	}
+//	
+//	@When("^user click on SignIn link$")
+//	public void user_click_on_SignIn_link() throws Throwable {
+//		assertTrue(clickOnButton(r2_CheckOut_Po.lnkSignIn_CheckOut)); 
+//	}
 	
 	@Then("^user will verify the fields in SignIn popup$")
 	public void user_will_verify_the_fields_in_SignIn_popup() throws Throwable {

@@ -1723,5 +1723,28 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 				driver.navigate().refresh();
 			}
 	}
+	
+	public boolean signUpAndSignIn(String firstName, String lastName, String email, String password) throws Exception {
+		try {
+			setInputText(txtFirstName, firstName);
+			setInputText(txtLastName, lastName);
+			setInputText(txtEmail, email);
+			setInputText(txtPassword, password);
+			setInputText(txtConfirmPassword, password);
+			clickSignupButton();
+			if (!(isDisplayed(errormessage))){
+				assertTrue(clickOnButton(btnSignIn));
+				signinPo.verifySigninpage();
+				enterEmailAddressandPassword(firstName, lastName);
+				clickSubmitButton();
+			}
+			
+			return true;
+		}
+		catch(Exception e) {
+			return false;
+		}
+				
+	}
 
 }

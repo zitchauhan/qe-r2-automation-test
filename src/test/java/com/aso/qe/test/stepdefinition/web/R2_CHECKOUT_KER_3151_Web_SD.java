@@ -1,17 +1,26 @@
 package com.aso.qe.test.stepdefinition.web;
 
-import com.aso.qe.framework.common.CommonActionHelper;
+import static org.testng.Assert.assertTrue;
 
+import java.util.List;
+
+import org.openqa.selenium.support.PageFactory;
+
+import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
+
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class R2_CHECKOUT_KER_3151_Web_SD extends CommonActionHelper {
-
-	@Given("^user adds an address$")
-	public void user_adds_an_address() throws Throwable {
-
-	}
+	
+	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+//	@Given("^user adds an address$")
+//	public void user_adds_an_address() throws Throwable {
+//
+//	}
 
 	@Given("^click on submit button$")
 	public void click_on_submit_button() throws Throwable {
@@ -62,6 +71,16 @@ public class R2_CHECKOUT_KER_3151_Web_SD extends CommonActionHelper {
 	@Then("^the list of addresses will be from newest added to oldest\\.$")
 	public void the_list_of_addresses_will_be_from_newest_added_to_oldest() throws Throwable {
 
+	}
+	
+	@Given("^user creates an account and signs in$")
+	public void user_creates_an_account_and_signs_in(DataTable userDetails) throws Throwable {
+		List<List<String>> data = userDetails.raw();
+		String firstName = data.get(1).get(0);
+		String lastName = data.get(1).get(1);
+		String email = data.get(1).get(2);
+		String password = data.get(1).get(3);
+		assertTrue(globalElementHeader.signUpAndSignIn(firstName, lastName, email, password));
 	}
 
 }
