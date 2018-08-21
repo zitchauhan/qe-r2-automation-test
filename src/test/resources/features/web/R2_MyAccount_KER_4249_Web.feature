@@ -13,10 +13,10 @@ Scenario: Verify user is able to create an account with all valid data
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And clicks on SignUp link from SignIn page 
-	And user enter first "<FirstName>" 
-	And user enter last "<LastName>" 
-	And user enter email "<Address>" 
-	And user enter password "<Password1>" 
+	And user enter first "FirstName" 
+	And user enter last "LastName" 
+	And user enter email "Address" 
+	And user enter password "Password1" 
 	And user click optin checkbox 
 	And clicks on Sign Up Button 
 	And user should see the successfull message
@@ -28,8 +28,8 @@ Scenario: Verify user is able to create an account with all valid data
 Scenario: Verify the user is able to sign with the new created account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "<EmailAddress>" 
-	And user enter the valid password "<Password>" 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then user should get logged in successfully 
 				

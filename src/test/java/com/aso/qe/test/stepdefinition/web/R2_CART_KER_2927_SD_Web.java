@@ -14,7 +14,7 @@ import com.aso.qe.test.pageobject.R2_Cart_PO;
 //import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 //=======
 //import com.aso.qe.test.pageobject.R2_CART_PO;
-import com.aso.qe.test.pageobject.R2_Checkout_PO;
+import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 //>>>>>>> Stashed changes
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
@@ -46,7 +46,7 @@ public class R2_CART_KER_2927_SD_Web extends CommonActionHelper {
 	R2_Cart_PO cartR2PageObj = PageFactory.initElements(driver, R2_Cart_PO.class);
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), PDP_PO.class);
-	R2_Checkout_PO r2CheckOutPO = PageFactory.initElements(getDriver(), R2_Checkout_PO.class);
+	R2_CheckOut_PO r2CheckOutPO = PageFactory.initElements(getDriver(), R2_CheckOut_PO.class);
 //=======
 //	
 //	private static float taxDisplayed = 0.0f;

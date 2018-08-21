@@ -9,7 +9,7 @@ import com.aso.qe.test.pageobject.R2_Sanity_PO;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class R2_CHECKOUT_KER_3166_Web_SD extends CommonActionHelper {
+public class R2_CART_KER_3166_Web_SD extends CommonActionHelper {
 
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 
@@ -22,6 +22,11 @@ public class R2_CHECKOUT_KER_3166_Web_SD extends CommonActionHelper {
 	public void promo_code_field_is_exposed() throws Throwable {
 		assertTrue(isDisplayed(r2SanityPo.AS_inputPromoCode));
 		Thread.sleep(1000);
+	}
+	
+	@Then("^verify proper validation message is displayed$")
+	public void verify_proper_validation_message_is_displayed() throws Throwable {
+	    
 	}
 
 }

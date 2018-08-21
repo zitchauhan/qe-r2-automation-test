@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import java.util.concurrent.TimeUnit;
 
@@ -99,17 +100,21 @@ public class R2_CART_KER_2939_SD_Web extends CommonActionHelper {
 
 	@Then("^Shipping radio button is selected by default$")
 	public void shipping_radio_button_is_selected_by_default() throws Throwable {
-
+		
+			assertTrue(isEnabled(r2CartPo.rbShipToMe));
 	}
 
 	@Then("^in-stores radio button is deselected$")
 	public void in_stores_radio_button_is_deselected() throws Throwable {
-
+		if(!r2CartPo.rbInStorePickUp.isSelected())
+		{
+			assertTrue(isDisplayed(r2CartPo.rbInStorePickUp));
+		}
 	}
 
 	@Then("^in-stores information is hided$")
 	public void in_stores_information_is_hided() throws Throwable {
-
+		assertTrue(isDisplayed(r2CartPo.rbInStorePickUp));
 	}
 
 	@Then("^user enters Zip code$")
@@ -119,7 +124,7 @@ public class R2_CART_KER_2939_SD_Web extends CommonActionHelper {
 
 	@Then("^Shipping date information is displayed$")
 	public void shipping_date_information_is_displayed() throws Throwable {
-
+		assertTrue(isDisplayed(r2CartPo.txtEstArrival));
 	}
 
 	@Then("^in-store pick up radio button is selected$")
@@ -159,27 +164,30 @@ public class R2_CART_KER_2939_SD_Web extends CommonActionHelper {
 
 	@Then("^user click on the product name in cart page$")
 	public void user_click_on_the_product_name_in_cart_page() throws Throwable {
-
+		assertTrue(clickOnButton(r2CartPo.lnkProducttext));
 	}
 
 	@When("^user will verify in-store pick up radio button is selected$")
 	public void user_will_verify_in_store_pick_up_radio_button_is_selected() throws Throwable {
-
+		assertTrue(clickOnButton(r2CartPo.rbInStorePickUp));
 	}
 
 	@Then("^user will verify Shipping radio button is deselected$")
 	public void user_will_verify_Shipping_radio_button_is_deselected() throws Throwable {
-
+		if(!r2CartPo.rbShipToMe.isSelected())
+		{
+			assertTrue(isDisplayed(r2CartPo.rbShipToMe));
+		}
 	}
 
 	@Then("^user will verify if in-stores information is hidden$")
 	public void user_will_verify_if_in_stores_information_is_hidden() throws Throwable {
-
+		assertFalse(isDisplayed(r2CartPo.rbShipToMe));
 	}
 
 	@Then("^verify user can begin checkout$")
 	public void verify_user_can_begin_checkout() throws Throwable {
-
+		assertTrue(clickOnButton(r2CartPo.btnCheckout));
 	}
 	
  
@@ -191,6 +199,9 @@ public class R2_CART_KER_2939_SD_Web extends CommonActionHelper {
 		assertTrue(clickOnButton(r2CartPo.submitZIPCode));	
 		} 
 	 
-	
+	@When("^user verify the Est\\.Arrival Tool Tip is present$")
+	public void user_verify_the_Est_Arrival_Tool_Tip_is_present() throws Throwable {
+		assertTrue(isDisplayed(r2CartPo.iconTolltip));
+	}
 
 }

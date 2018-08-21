@@ -2,9 +2,11 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.java.en.And;
@@ -14,6 +16,7 @@ public class R2_CART_KER_2942_Web_SD extends CommonActionHelper {
 
 	
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
+	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
 	
 
 	@And("^User should be able to see the updated Order Summary$")
@@ -40,6 +43,14 @@ public class R2_CART_KER_2942_Web_SD extends CommonActionHelper {
 	public void verify_the_Remove_Quantity_link() throws Throwable {
 		assertTrue(isDisplayed(r2SanityPo.AS_btnRemoveFromCart));
 		
+	}
+	
+	@And("^user updates the product \"(.*?)\" on PDP to four$")
+	public void user_updates_the_product_on_PDP_to_four(String arg1) throws Throwable {
+		Thread.sleep(5000);
+		clearInputBox(r2CartPo.R2_iconQuantityIncrease);
+		setInputText(r2CartPo.R2_iconQuantityIncrease, webPropHelper.getTestDataProperty(arg1));
+		Thread.sleep(20000);
 	}
 
 

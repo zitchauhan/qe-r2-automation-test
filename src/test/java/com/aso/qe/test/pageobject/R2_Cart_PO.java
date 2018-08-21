@@ -25,7 +25,6 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//a[@id='checkoutGuestButton']")
 	public WebElement btnBeginCheckout;
 
-//<<<<<<< Updated upstream:src/test/java/com/aso/qe/test/pageobject/R2_Cart_PO.java
 	@FindBy(xpath = "//div[text()='Subtotal']/../div[2]")
 	public WebElement txtSubtotalCart;
 	
@@ -44,7 +43,40 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//div[@class='col-12 col-md-5 px-0 pl-md-1']")
 	public WebElement txtOrdersummaryCart;
+	
+	@FindBy(xpath = "//*[@data-auid='btnc_btnCheckout']")
+	public WebElement btnCartCheckout;
+		
 	// End KER-2911 CR-DPK
+	
+	
+	// Start KER-2942 CR-DPK
+	@FindBy(xpath = "//*[@data-auid='PDP_QC_INC']/../span/input[@aria-label='Enter Desired Quantity']")
+	public WebElement R2_iconQuantityIncrease;
+	
+	// End KER-2942 CR-DPK
+	
+	// Start KER-3169 CR-DPK
+	@FindBy(xpath = "//*[@data-auid='c_btnInputPromo']/div")
+	public WebElement txtInvalidPromo;
+	// End KER-3169 CR-DPK
+	
+	// Start KER-3511 CR-DPK
+	
+	@FindBy(xpath = "//*[text()='Change ZIP code']")
+	public WebElement lnkChangeZipCode;
+	
+	@FindBy(xpath = "//*[@data-auid='crt_inputZip']")
+	public WebElement inputZipCode;
+	
+	@FindBy(xpath = "//*[@data-auid='btncrt_btnCalcShippingModal']")
+	public WebElement btnCartSubmit;
+	
+	@FindBy(xpath = "//*[contains(text(),'Estimated Shipping')]/..")
+	public WebElement txtEstimatedShipping;
+	
+	// End KER-3511 CR-DPK
+	
 
 	// Start KER-2927 CR-SK
 	@FindBy(xpath = "//div[contains(text(), 'Estimated Taxes')]/following-sibling::div[1]")
@@ -102,8 +134,33 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "(//*[contains(text(),'Promocode')]/.")
 	public WebElement txtPromoCode1;
+	
+	@FindBy(xpath = "//button[@data-auid='btncrt_btnSignIn']") //Ak
+	public WebElement btnCrtSignIn;
+	
+	@FindBy(xpath ="(//*[contains(text(),'Est. Arrival Aug 23 -Aug 25')])[1]") //Ak
+	public WebElement txtEstArrival;
+	
+	@FindBy(xpath ="(//*[contains(@data-auid, 'tooltipcrt_rdTooltip_')])[1]") //Ak
+	public WebElement iconTolltip;
 
 	// End KER-2939 CR-AKK
+	
+	// Start KER-3127 CR-AKK
+	@FindBy(xpath = "//a[@data-auid='crt_lnkLegal_0']")
+	public WebElement lnkShippingPolicy;	
+	
+	@FindBy(xpath ="(//*[text()='Shipping Charges'])[2]")
+	public WebElement txtShippingCharges;
+	
+	@FindBy(xpath = "//a[@data-auid='crt_lnkLegal_1']")
+	public WebElement lnkReturnPolicy;
+	
+	@FindBy(xpath ="(//*[text()='Return Policy'])[2]")
+	public WebElement txtReturnPolicy;
+			
+	
+	// End KER-3127 CR-AKK
 	public void clickOnCartIcon() throws Exception {
 
 		if (isDisplayed(cartIcon)) {

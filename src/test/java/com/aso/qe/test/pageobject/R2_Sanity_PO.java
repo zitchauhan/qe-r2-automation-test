@@ -33,7 +33,6 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	public WebElement AS_btnMensShirt_Men_Clothing_Shop;// Aug18 danush
 	@FindBy(xpath = "//*[@data-auid='shopbycategorysection']//*[@data-auid='shopByCategory_1']")
 	public WebElement AS_secCategory_CLP;
-
 	@FindBy(xpath = "(//*[contains(@data-auid,'productCard_')])[4]")
 	public WebElement AS_productPLP1;// Aug18 danush
 
@@ -43,7 +42,7 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnviewCart']")
 	public WebElement AS_btnViewCart;
 
-	@FindBy(xpath = "//*[@data-auid='btncheckout']")
+	@FindBy(xpath = "//*[@data-auid='btnc_btnCheckout']") //AK
 	public WebElement AS_btnCheckout;
 
 	@FindBy(xpath = "//div[contains(@data-component,'sectionTitle')]")

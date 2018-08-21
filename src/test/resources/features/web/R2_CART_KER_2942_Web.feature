@@ -61,8 +61,8 @@ Feature: Verify Quantity Adjustment in Cart
 	Scenario: Verify Quantity Zero in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "<EmailAddress>" 
-	And user enter the valid password "<Password>" 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
 	And user click on signin button 
     Then User clicks on ASO Logo and should be navigated to Home Page
 	When user clicks on one of the category and navigates to LOne
@@ -74,7 +74,7 @@ Feature: Verify Quantity Adjustment in Cart
 	Then user is navigated to Add to cart Notification popup  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	When enter the "<Quantity1>" to X   
+	When enter the "Quantity1" to X   
 	And modified quantity should get updated  
 	And  Item is removed from the cart 
 	Then  Verify cart is empty 

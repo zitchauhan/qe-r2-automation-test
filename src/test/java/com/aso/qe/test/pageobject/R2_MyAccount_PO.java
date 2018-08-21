@@ -133,7 +133,6 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(),'Create Account')]")
 	public WebElement lnkCreateAccount;
 	// End KER-3392 CR-RK
-//<<<<<<< Updated upstream
 
 	// Start KER-4011 CR-SK
 	@FindBy(xpath = "//h5[.='Sign in']")
@@ -145,9 +144,16 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//p[.='The combination of Email Address and Password is incorrect. Please try again.']")
 	public WebElement txtIncorrectCombinationError;
 	
+	@FindBy(xpath = "//span[.='Please enter the Email Address in a valid format (ex. abc@xyz.com)']")
+	public WebElement txtInvalidEmailAddressError;
+	
+	@FindBy(xpath = "//span[.='Please enter an Email address and/or Password']")
+	public WebElement txtInvalidPasswordError;
+	
 	@FindBy(xpath = "//div[@class='css-yg98kr mb-half px-3']")
 	public WebElement address;
 	// End KER-4011 CR-SK
+	
 	
 	// Start KER-4023 CR-SK
 	@FindBy(xpath = "//h4[.='FORGOT PASSWORD']")
@@ -179,6 +185,56 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement btnUpdate;
 	// End KER-4230 CR-SK
+	// Start KER-3152 CR-AKK
+		@FindBy(xpath = "//input[@type='text']")
+		public WebElement inputEmail;
+
+		@FindBy(xpath = "//input[@type='password']")
+		public WebElement inputPassword;
+
+		@FindBy(xpath = "(//*[@data-auid='btnc_btnCheckout'])[3]")
+		public WebElement checkoutBtn;
+
+		@FindBy(xpath = "//*[@data-auid='checkout_shipping_methods_collapsed']")
+		public WebElement shippingMethodSection;
+
+		@FindBy(xpath = "//*[@data-auid='checkout_edit_shipping_address']")
+		public WebElement checkoutEditShippingBtn;
+
+		@FindBy(xpath = "//input[@type='text'][@name='companyName']")
+		public WebElement inputAdditionalAddress;
+
+		@FindBy(xpath = "//input[@name='address']")
+		public WebElement inputAddress;
+
+		@FindBy(xpath = "//*[@data-auid='btncheckout_goto_shipping_method_btn']")
+		public WebElement goToShippingMethod;
+
+		@FindBy(xpath = "//*[@data-auid='myAccountCta']")
+		public WebElement myAccount;
+
+		@FindBy(xpath = "//*[@data-auid='Wish List']")
+		public WebElement wishList;
+
+		@FindBy(xpath = "//*[@name='phoneNumber']")
+		public WebElement inputPhone;
+
+		@FindBy(xpath = "//*[@data-auid='checkout_shipping_address_add_more_details_link']")
+		public WebElement addMoreDetailsAddress;
+
+		@FindBy(xpath = "//input[@name='companyName']")
+		public WebElement inputCompanyName;
+
+		@FindBy(xpath = "//a[text()='address']")
+		public WebElement clickAddress;
+
+		@FindBy(xpath = "(//div[@class='col-12 col-md-8'])[2]/div[1]/div[2]/div[1]")
+		public WebElement checkAddress;
+
+		@FindBy(xpath = "(//div[@class='col-12 col-md-8'])[2]/div[1]/div[2]/div[4]")
+		public WebElement checkPhone;
+
+		// End KER-3152 CR-AKK
 	
 
 
