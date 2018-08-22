@@ -40,10 +40,14 @@ Scenario: To view details specific to an item in the cart
 	Then user verify BOPIS radio button 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8077 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8077 @CR-AKK 
 Scenario:
 To verify Shipping radio button - Authenticated user With store selected in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
 	When user clicks on one of the category and navigates to LOne 
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
@@ -52,10 +56,10 @@ To verify Shipping radio button - Authenticated user With store selected in My A
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	When user will verify Shipping radio button is selected by default 
-	Then user will verify if in-stores radio button is deselected 
-	And user will verify if in-stores information is hidden 
-	Then user clicks change "<ZIP>" code 
+	Then Shipping radio button is selected by default 
+	Then in-stores radio button is deselected 
+	And in-stores information is hided 
+	Then user clicks change "ZIPCode" code 
 	And user will verify if Shipping date information is displayed 
 	
 	
@@ -130,9 +134,9 @@ Scenario: To verify In-store Pick up radio button - with My Store info on My Acc
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	When user will verify in-store pick up radio button is selected 
+	When user will verify in-store pick up radio button is selected with "ZIPCode" 
 	Then user will verify Shipping radio button is deselected 
-	And user will verify if in-stores information is hidden 
+	And user will verify if in-stores information is hidden  
 	Then verify user can begin checkout 
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8075 @CR-AKK 
@@ -184,4 +188,19 @@ Scenario: To verify Est.Arrival Tool Tip
 	And user will click on View Cart button 
 	Then Shipping radio button is selected by default 
 	And user verify the Est.Arrival Tool Tip is present 
-	 
+ 
+
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8081 @CR-AKK 
+Scenario: To verify Quantity input field 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on one of the category and navigates to LOne 
+	Then user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	Then user clicks on one of the product category and navigates to LThree 
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button  
+	When user selects the Quantity field 
+	Then verfiy quantiy field is activated 
+	

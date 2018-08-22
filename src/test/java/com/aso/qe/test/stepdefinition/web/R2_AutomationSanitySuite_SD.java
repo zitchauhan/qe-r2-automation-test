@@ -22,6 +22,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 	PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), PDP_PO.class);
 	R2_Cart_PO r2CartPo = PageFactory.initElements(getDriver(), R2_Cart_PO.class);
 	
+	
 	public String quantityprice;
 	public String modifiedQuantityprice;
 	
@@ -61,6 +62,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 	
 	@When("^enter the \"(.*?)\" to X$")
 	public void enter_the_to_X(String arg1) throws Throwable {
+		waitForElement(r2SanityPo.AS_txtQuantityPrice);
 		quantityprice = r2SanityPo.AS_txtQuantityPrice.getText();
 	    logger.info("Quantity:"+quantityprice);
 	    Thread.sleep(1000);
@@ -69,7 +71,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 		setInputText(r2SanityPo.AS_inputQty, webPropHelper.getTestDataProperty(arg1));
 		Thread.sleep(1000);
 		r2SanityPo.AS_clkOutside.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 	}
 
 	@And("^modified quantity should get updated$")

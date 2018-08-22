@@ -103,4 +103,11 @@ R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 		return Float.parseFloat(taxDisplayed);
 	}
 	// End KER-2927 CR-SK
+	
+	// Start KER-2940 CR-AKK
+	@FindBy(xpath="(//*[@data-auid='checkout_order_summary_edit_cart_link'])[2]")
+	public WebElement btnEditCart;
+	
+	@FindBy(xpath="(//*[@data-auid='btnc_btnCheckout'])[1]")
+	public WebElement btnChekOut;
 }

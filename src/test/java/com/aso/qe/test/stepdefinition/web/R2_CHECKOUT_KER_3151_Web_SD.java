@@ -10,7 +10,7 @@ import cucumber.api.java.en.When;
 
 public class R2_CHECKOUT_KER_3151_Web_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R2_CHECKOUT_KER_3151_Web_SD.class);
-	
+
 	@Given("^user adds an address$")
 	public void user_adds_an_address() throws Throwable {
 

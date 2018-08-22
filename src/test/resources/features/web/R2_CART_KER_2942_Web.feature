@@ -79,3 +79,35 @@ Feature: Verify Quantity Adjustment in Cart
 	And  Item is removed from the cart 
 	Then  Verify cart is empty 
 	
+	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-9357 @CR-AKK 
+Scenario: Verify system does inventory check for product item added more than available 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on one of the category and navigates to LOne 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree 
+	And User is navigated to pdp page 
+	#	And product has 'X' inventory available in stock 
+	Then user click on Add to Cart Button 
+	And user will click on View Cart button 
+	And user navigate to Cart page
+	When enter the "Quantity2" to X 
+	Then user should not be allowed to enter more than available stock "Quantity3" 
+#	And User should be notified that Less quantity to be added or stock not enough  
+	Then Order Summary should get recalculated 
+	And user should be able to see the increased quantity and Price in Cart Order summary 
+	
+	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8051 @CR-AKK 
+Scenario: Verify Alphanumeric Quantity in the Cart Page 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on one of the category and navigates to LOne 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree 
+	And User is navigated to pdp page 
+	Then user click on Add to Cart Button
+	And user will click on View Cart button
+	When enter the "Quantity4" to X
+	Then user should not be allowed to enter any non-numeric value in the input
+	

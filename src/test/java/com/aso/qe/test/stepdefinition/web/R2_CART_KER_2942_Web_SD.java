@@ -2,7 +2,6 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -52,6 +51,42 @@ public class R2_CART_KER_2942_Web_SD extends CommonActionHelper {
 		setInputText(r2CartPo.R2_iconQuantityIncrease, webPropHelper.getTestDataProperty(arg1));
 		Thread.sleep(20000);
 	}
+	
+	@Then("^user should not be allowed to enter more than available stock \"(.*?)\"$")
+	public void user_should_not_be_allowed_to_enter_more_than_available_stock(String quantity3) throws Throwable {
+		Thread.sleep(2000);
+
+		String str1 = r2SanityPo.AS_inputQty.getAttribute("value");
+		int quantityFromSite = Integer.parseInt(str1);
+		int quantityFromProperty = Integer.parseInt(webPropHelper.getTestDataProperty(quantity3));
+		assertTrue(quantityFromSite == quantityFromProperty);
+		Thread.sleep(1000);
+	}
+
+	@Then("^User should be notified that Less quantity to be added or stock not enough$")
+	public void user_should_be_notified_that_Less_quantity_to_be_added_or_stock_not_enough() throws Throwable {
+		waitForElement(r2CartPo.cartQtyErr);
+		assertTrue(isDisplayed(r2CartPo.cartQtyErr));
+	}
+
+	
+
+	@Then("^user should not be allowed to enter any non-numeric value in the input$")
+	public void user_should_not_be_allowed_to_enter_any_non_numeric_value_in_the_input() throws Throwable {
+		String str1 = r2SanityPo.AS_inputQty.getAttribute("value");
+		boolean flag = true;
+		try {
+			Integer.parseInt(str1);
+		} catch (NumberFormatException e) {
+			flag = false;
+		} catch (NullPointerException e) {
+			flag = false;
+		}
+
+		assertTrue(flag == true);
+
+	}
+
 
 
 

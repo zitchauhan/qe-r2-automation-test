@@ -1,7 +1,6 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
 
 import java.util.concurrent.TimeUnit;
 
@@ -159,7 +158,7 @@ public class R2_CART_KER_2939_SD_Web extends CommonActionHelper {
 
 	@Then("^user will verify if Shipping date information is displayed$")
 	public void user_will_verify_if_Shipping_date_information_is_displayed() throws Throwable {
-
+		assertTrue(isDisplayed(r2CartPo.txtEstArrival));
 	}
 
 	@Then("^user click on the product name in cart page$")
@@ -167,13 +166,15 @@ public class R2_CART_KER_2939_SD_Web extends CommonActionHelper {
 		assertTrue(clickOnButton(r2CartPo.lnkProducttext));
 	}
 
-	@When("^user will verify in-store pick up radio button is selected$")
-	public void user_will_verify_in_store_pick_up_radio_button_is_selected() throws Throwable {
-		assertTrue(clickOnButton(r2CartPo.rbInStorePickUp));
-	}
 
+	@When("^user will verify in-store pick up radio button is selected with \"(.*?)\"$")
+	public void user_will_verify_in_store_pick_up_radio_button_is_selected_with(String arg1) throws Throwable {
+		r2CartPo.selectStore(webPropHelper.getTestDataProperty(arg1));
+	}
+	
 	@Then("^user will verify Shipping radio button is deselected$")
 	public void user_will_verify_Shipping_radio_button_is_deselected() throws Throwable {
+		
 		if(!r2CartPo.rbShipToMe.isSelected())
 		{
 			assertTrue(isDisplayed(r2CartPo.rbShipToMe));
@@ -182,7 +183,7 @@ public class R2_CART_KER_2939_SD_Web extends CommonActionHelper {
 
 	@Then("^user will verify if in-stores information is hidden$")
 	public void user_will_verify_if_in_stores_information_is_hidden() throws Throwable {
-		assertFalse(isDisplayed(r2CartPo.rbShipToMe));
+		assertTrue(isDisplayed(r2CartPo.rbShipToMe));
 	}
 
 	@Then("^verify user can begin checkout$")
@@ -203,5 +204,17 @@ public class R2_CART_KER_2939_SD_Web extends CommonActionHelper {
 	public void user_verify_the_Est_Arrival_Tool_Tip_is_present() throws Throwable {
 		assertTrue(isDisplayed(r2CartPo.iconTolltip));
 	}
+	
+	@When("^user selects the Quantity field$")
+	public void user_selects_the_Quantity_field() throws Throwable {
+		assertTrue(isDisplayed(r2SanityPo.AS_inputQty));
+	}
+	
+	@Then("^verfiy quantiy field is activated$")
+	public void verfiy_quantiy_field_is_activated() throws Throwable {
+		assertTrue(isEnabled(r2SanityPo.AS_inputQty));
+	}
+
+	
 
 }

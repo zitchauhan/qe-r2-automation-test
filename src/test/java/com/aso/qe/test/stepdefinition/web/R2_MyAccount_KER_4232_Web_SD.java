@@ -12,7 +12,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class R2_MY_ACCOUNT_KER_4232_Web_SD extends CommonActionHelper {
+public class R2_MyAccount_KER_4232_Web_SD extends CommonActionHelper {
 	
 	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	
