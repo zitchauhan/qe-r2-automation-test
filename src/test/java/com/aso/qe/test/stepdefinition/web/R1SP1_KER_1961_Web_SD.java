@@ -2,14 +2,12 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
-
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.HomePagePOM;
 import com.aso.qe.test.pageobject.SearchProductPO;
-
 import cucumber.api.java.en.Then;
 
 public class R1SP1_KER_1961_Web_SD extends CommonActionHelper {
@@ -28,16 +26,12 @@ public class R1SP1_KER_1961_Web_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
 	}
 
-	@Then("^User click on the brand btn$")
-	public void User_click_on_the_brand_btn() throws Throwable {
-		Actions action = new Actions(driver);
-		action.moveToElement(globalElementHeader.btnBrandCategory).build().perform();
-	}
 
 	@Then("^User click on the brand tab$")
 	public void User_click_on_the_brand_tab() throws Throwable {
+			scrollPageToWebElement(globalElementHeader.btnBrandCategoryTab);
+			breadcrumb=globalElementHeader.btnBrandCategoryTab.getText();
 		assertTrue(clickOnButton(globalElementHeader.btnBrandCategoryTab));
-		breadcrumb=globalElementHeader.btnBrandCategoryTab.getText();
 	}
 
 	@Then("^User click on the nike name$")
@@ -52,15 +46,19 @@ public class R1SP1_KER_1961_Web_SD extends CommonActionHelper {
 	
 	@Then("^User verify that brandcrumb is previous page$")
 	public void User_verify_that_brandcrumb_is_previous_page() throws Throwable {
-		assertEquals(globalElementHeader.mobileBreadcrumb.getText().toLowerCase(),
-				breadcrumb.toLowerCase());
+		assertEquals(globalElementHeader.mobileBreadcrumb.getText().toLowerCase(),breadcrumb.toLowerCase());
 	} 
-@Then("^User check for breadcrumb clickable$")
+
+	@Then("^User check for breadcrumb clickable$")
 	public void User_check_for_breadcrumb_clickable() throws Throwable {
+		breadcrumb = globalElementHeader.mobileBreadcrumb.getText();
 		assertTrue(clickOnButton(globalElementHeader.mobileBreadcrumb));
-	} 
-@Then("^User verify the title$")
+	}
+
+	@Then("^User verify the title$")
 	public void User_verify_the_title() throws Throwable {
-		assertEquals(globalElementHeader.mobileBreadcrumbpreviousTitle.getText().toLowerCase(),breadcrumb.toLowerCase());
-	} 
+		System.err.println(globalElementHeader.mobileBreadcrumbpreviousTitle.getText());
+		System.err.println(breadcrumb.toLowerCase());
+		assertEquals(globalElementHeader.mobileBreadcrumb.getText().toLowerCase(), breadcrumb.toLowerCase());
+	}
 }

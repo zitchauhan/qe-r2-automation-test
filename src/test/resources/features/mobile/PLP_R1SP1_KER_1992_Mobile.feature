@@ -4,7 +4,7 @@ Feature: To verify "Related Categories" as links and are clickable & navigates t
   Scenario: To verify "Related Categories" as links and are clickable & navigates to new landing page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
-    Then User navigates to L2
+    Then User navigates to L2 Mens clothing
     And user scroll till filter flyout
     Then User clicks on the filter flyout
     And user is able to see Related Categories in the filters

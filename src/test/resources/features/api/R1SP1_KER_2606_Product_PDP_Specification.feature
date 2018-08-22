@@ -22,16 +22,16 @@ Feature: To verify the Product PDP Specification API Services
   Scenario Outline: : Validate the Product PDP Specification with inventory Requried Property Values are not null
     Given "<ProductPDPUrl>" endpoint for Product PDP Specification
     Then read the API json response
-    And Validate the Product PDP "inventory" API Requried Property Value are not Null
-      | productId |
+    #And Validate the Product PDP "inventory" API Requried Property Value are not Null
+      #| productId |
     And Validate the "inventory" with "online" API Requried Property Value are not Null
       | skuId             |
       | availableQuantity |
       | inventoryStatus   |
       | onlineStoreName   |
       | inventoryStatus   |
-      And Validate the "inventory" with "store" API Requried Property Value are not Null
-      | skuId |
+      #And Validate the "inventory" with "store" API Requried Property Value are not Null
+      #| skuId |
 
     Examples: 
       | ProductPDPUrl                      |

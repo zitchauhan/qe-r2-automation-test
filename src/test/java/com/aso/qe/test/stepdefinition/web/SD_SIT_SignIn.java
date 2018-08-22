@@ -39,12 +39,13 @@ public class SD_SIT_SignIn extends CommonActionHelper{
 		globalElementHeader.clickSubmitButton();
 	}
 	
-	@Then("^user should be able to enter the signin details$")
-	public void user_should_be_able_to_enter_the_signin_details() throws Throwable {
+	/*@Then("^user should be able to enter the signin details$")
+	public void user_should_be_able_to_enter_the_signin_details() throws Throwable 
+	{
 		signinPo.verifySigninpage();
 		globalElementHeader.enterEmailAddressandPassword();
 		globalElementHeader.clickSubmitButton();
-	}
+	}*/
 	
 	@Then("^User will verify the presence of ASO Logo and click on Logo$")
 	public void user_will_verify_the_presence_of_ASO_Logo() throws Throwable {

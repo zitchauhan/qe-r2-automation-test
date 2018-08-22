@@ -40,6 +40,7 @@ public class R1SP1_KER_1955_Web_SD extends CommonActionHelper{
 
 	@Then("^User should be select the Quantity$")
 	public void user_should_be_select_the_Quantity() throws Throwable {
+		pdp_po.addToCartAvailability();
 		productName = getText(pdp_po.txtProductTitle);
 		assertTrue(clickOnButton(pdp_po.btnQuantityInc));
 	}

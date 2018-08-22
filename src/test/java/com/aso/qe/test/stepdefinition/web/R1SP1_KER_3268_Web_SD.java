@@ -17,7 +17,7 @@ public class R1SP1_KER_3268_Web_SD extends CommonActionHelper {
 
 	@Then("^User enter the boolean search \"(.*?)\"$")
 	public void User_enter_the_SKU_search(String str) throws Throwable {
-		globalElementHeader.entertheSearchData("Shoes & Socks");
+		globalElementHeader.entertheSearchData(str);
 
 	}
 	@Then("^user verifies the title of search results$")

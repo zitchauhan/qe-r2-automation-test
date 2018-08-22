@@ -10,7 +10,7 @@ Feature: Verify the Auto Correct in search and search suggestions
     Then User closes the web application
     Examples:
     |data|
-    |Goolf|
+    |goof|
 
   @C-SLR @Mobile @Regression @All @KER-3274  @ZYP_SLR_K3274-6337 @Rerun @CR-AG
   Scenario Outline: Verify the user verifies the label for the closest matching term
@@ -22,7 +22,7 @@ Feature: Verify the Auto Correct in search and search suggestions
     Then User closes the web application
     Examples:
     |data|
-    |Goolf|
+    |goof|
  
   @C-SLR @Mobile  @Regression @All @KER-3274  @ZYP_SLR_K3274-6340 @Rerun @1HR @CR-AG
 Scenario Outline: Verify the user verifies the respective search results are displayed for the closest matching term
@@ -34,7 +34,7 @@ Scenario Outline: Verify the user verifies the respective search results are dis
     Then User closes the web application
      Examples:
     |data|
-    |Goolf|
+    |goof|
 
   @C-SLR @Mobile  @Regression @All @KER-3274  @ZYP_SLR_K3274-6341 @Rerun @CR-AG
 Scenario Outline: Verify the user verifies the respective search results are clickable for the closest matching term
@@ -46,4 +46,4 @@ Scenario Outline: Verify the user verifies the respective search results are cli
     Then User closes the web application
  Examples:
     |data|
-    |Goolf|
+    |goof|

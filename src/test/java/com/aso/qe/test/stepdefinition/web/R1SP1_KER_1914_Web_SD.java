@@ -5,7 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.PDP_PO;
-import com.aso.qe.test.pageobject.SIT_HomePagePageObject;
+import com.aso.qe.test.pageobject.SIT_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -14,7 +14,7 @@ public class R1SP1_KER_1914_Web_SD extends CommonActionHelper {
 	PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), PDP_PO.class);
 	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver,
 			GlobalElementHeader_HomePO.class);
-	public SIT_HomePagePageObject HomePagePo = PageFactory.initElements(driver, SIT_HomePagePageObject.class);
+	public SIT_PO HomePagePo = PageFactory.initElements(driver, SIT_PO.class);
 	
 	
 	@Then("^user should able to click on wishlist button$")
@@ -25,7 +25,7 @@ public class R1SP1_KER_1914_Web_SD extends CommonActionHelper {
 	
 	@And("^User verifies the wishlist modal$")
 	public void User_verifies_the_wishlist_modal() {
-		assertTrue(isDisplayed(pdpPageObj.closeWishlistModal));
+		pdpPageObj.checkModal();
 	}
 	
 	@Then("^user enter the wishlist name$")

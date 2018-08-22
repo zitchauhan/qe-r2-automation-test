@@ -6,7 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.PLP_PO;
-import com.aso.qe.test.pageobject.SIT_HomePagePageObject;
+import com.aso.qe.test.pageobject.SIT_PO;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
@@ -14,7 +15,7 @@ public class R1SP1_KER_621_Web_SD extends CommonActionHelper {
 	PLP_PO plpPageObj = PageFactory.initElements(getDriver(), PLP_PO.class);
 	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver,
 			GlobalElementHeader_HomePO.class);
-	public SIT_HomePagePageObject HomePagePo = PageFactory.initElements(driver, SIT_HomePagePageObject.class);
+	public SIT_PO HomePagePo = PageFactory.initElements(driver, SIT_PO.class);
 	
 	
 	@And("^user expands the Ad badge filter$")

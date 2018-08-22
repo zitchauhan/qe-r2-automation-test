@@ -41,6 +41,7 @@ GlobalElementHeader_HomePO g_hp=PageFactory.initElements(getDriver(), GlobalElem
 	@Then("^user click on Auto scroll button$")
 	public void user_click_on_Auto_scroll_button() throws Throwable {
 	   assertTrue(isClickable(g_hp.autoscroll));
+	   clickOnButton(g_hp.autoscroll);
 	}
 
 	

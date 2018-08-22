@@ -64,7 +64,6 @@ Feature: To Verify the Add To Cart Functionality
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
     And User click on the product image
-    Then user click on Add to cart button 
     Then User add product to cart and validate the price title and image of the product
     And user click on checkout button
    

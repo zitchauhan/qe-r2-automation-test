@@ -14,19 +14,15 @@ Feature: To verify basic functionalities of PDP
     Then user should be able to see inventory status of the product
 
   @Regression  @C-PDP @Mobile @KER-1926  @ZYP_PDP_K1926-5558 @All @Rerun @1HR
-  Scenario Outline: To verify URL, Image, Attributes, Add to cart button section mobile by search
+  Scenario: To verify URL, Image, Attributes, Add to cart button section mobile by search
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box
+    When user enters "SearchTermPDP" in the search box
     And user should be able to see PDP mention in the current url
     Then user should be able to see Image of the product
     And user should be able to see the search term in the product title
     Then user should see different attribute and size of the product
     And user should be able to see Add to cart button and quantity section
     Then user should be able to see inventory status of the product
-
-    Examples: 
-      | SearchTerm                                          |
-      | ashokgowda |
 
  @Regression  @C-PDP @Mobile  @ZYP_PDP_K1926-4358 @KER-1926 @All @Rerun
   Scenario: To verify product detail content section "Details and specs" tab
@@ -64,14 +60,11 @@ Feature: To verify basic functionalities of PDP
     Then user clicks should be able to see the closed QandA tab
 
     @All  @C-PDP @Regression @Mobile  @KER-1926  @ZYP_PDP_K1926-5570 @Rerun
-    Scenario Outline: To verify sku and item value by search
+    Scenario: To verify sku and item value by search
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box
+    When user enters "SearchTermPDP" in the search box
     And user should be able to see the sku and item numbers for the given image
 
-    Examples: 
-      | SearchTerm                                          |
-      | ashokgowda |
 
   @Regression   @C-PDP @Mobile   @ZYP_PDP_K1926-4299 @KER-1926 @All @Rerun
   Scenario: To verify sku and item value by navigation
@@ -94,13 +87,9 @@ Feature: To verify basic functionalities of PDP
     Then user should be able to see the changed value of the sku and item
 
   @Regression  @C-PDP @Mobile @KER-1926  @ZYP_PDP_K1926-5756 @All @Rerun
-  Scenario Outline: To verify change of sku and item value by search
+  Scenario: To verify change of sku and item value by search
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box
+    When user enters "SearchTermPDP" in the search box
     And user should be able to see the sku and item numbers for the given image
     When user select any other size and color of the product varient
     Then user should be able to see the changed value of the sku and item
-
-    Examples: 
-      | SearchTerm                                          |
-      | ashokgowda |

@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.web;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -87,5 +88,11 @@ public class R1SP1_KER_730_Web_SD extends CommonActionHelper {
 	@When("^User select store with Postal Code in Find A Store page\"(.*?)\"$")
 	public void User_select_store_with_Postal_Code_in_Find_A_Store_page(String str) {
 		findStorePO.verifyFindaStoreFucntionalityFromFooter(str);
+	}
+	@Then("^close the find the store$")
+	public void close_the_find_the_store() throws Throwable {
+
+	     waitForElement(findStorePO.findAstoreXBTN_M);
+	     clickOnButton(findStorePO.findAstoreXBTN_M);
 	}
 }

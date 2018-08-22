@@ -15,7 +15,7 @@ Feature: [Desktop]  Add to Cart on PDP
   Scenario Outline: Verify the functionality of Add to Cart for "not sold online"
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user search the data in search box"<data>"
-    Then User select to not sold online item
+#                                                  Then User select to not sold online item
     Then User verify not sold online
 
     Examples: 

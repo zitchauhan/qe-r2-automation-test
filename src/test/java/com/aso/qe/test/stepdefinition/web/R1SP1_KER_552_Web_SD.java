@@ -159,9 +159,23 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 		}
 	}
 
+	@Given("^User expands GENDER Filter Option$")
+	public void user_expands_GENDER_Filter_Option() throws Throwable {
+		//searchProductPO.clickAllMinusFilterOptions();
+		SearchProductPO.productDisplayCount = SearchProductPO.getItemsCount();
+		if("mobile".equalsIgnoreCase(testtype)) {
+			driver =(RemoteWebDriver) driver.switchTo().defaultContent();
+			scrollPageToWebElement(Common_Web_SD.searchProductPO.filterGenderPlusBtnMobile);	
+			assertTrue(clickOnButton(Common_Web_SD.searchProductPO.filterGenderPlusBtnMobile));
+		}else {
+			searchProductPO.clickAllMinusFilterOptions();
+		assertTrue(clickOnButton(searchProductPO.filterGenderPlusBtn));
+		
+		}
+	}
 	@Given("^User expands CATEGORY Filter Option$")
 	public void user_expands_CATEGORY_Filter_Option() throws Throwable {
-		
+		SearchProductPO.productDisplayCount = SearchProductPO.getItemsCount();
 		if("mobile".equalsIgnoreCase(testtype)) {
 			scrollPageToWebElement(searchProductPO.filterCategoryPlusBtnMobile);	
 			assertTrue(clickOnButton(searchProductPO.filterCategoryPlusBtnMobile));
@@ -174,7 +188,7 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 
 	@Given("^User expands BRAND Filter Option$")
 	public void user_expands_BRAND_Filter_Option() throws Throwable {
-		
+		SearchProductPO.productDisplayCount = SearchProductPO.getItemsCount();
 		searchProductPO.clickAllMinusFilterOptions();
 		if("mobile".equalsIgnoreCase(testtype)) {
 			driver =(RemoteWebDriver) driver.switchTo().defaultContent();
@@ -188,6 +202,7 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 	
 	@Given("^User expands COLOR Filter Option$")
 	public void user_expands_COLOR_Filter_Option() throws Throwable {
+		SearchProductPO.productDisplayCount = SearchProductPO.getItemsCount();
 		searchProductPO.clickAllMinusFilterOptions();
 		if("mobile".equalsIgnoreCase(testtype)) {
 			driver =(RemoteWebDriver) driver.switchTo().defaultContent();
@@ -257,6 +272,21 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 		assertTrue(searchProductPO.checkboxProductCount(searchProductPO.facet_Price_CheckBox_List));
 	}
 	
+	@Then("^Verify all the color filters have checkbox product count should be gatherthan zero$")
+	public void verify_all_the_color_filters_have_checkbox_product_count_should_be_gatherthan_zero() throws Throwable {
+		assertTrue(searchProductPO.checkboxProductCount(searchProductPO.facet_Color_CheckBox_List));
+	}
+	
+	@Then("^Verify all the Gender filters have checkbox product count should be gatherthan zero$")
+	public void verify_all_the_gender_filters_have_checkbox_product_count_should_be_gatherthan_zero() throws Throwable {
+		assertTrue(searchProductPO.checkboxProductCount(searchProductPO.facet_Gender_CheckBox_List));
+	}
+	
+	@Then("^Verify all the Brand filters have checkbox product count should be gatherthan zero$")
+	public void verify_all_the_brand_filters_have_checkbox_product_count_should_be_gatherthan_zero() throws Throwable {
+		assertTrue(searchProductPO.checkboxProductCount(searchProductPO.facet_Brand_CheckBox_List));
+	}
+	
 	@Then("^Verify the price filters product count with checkboxs product count should be equal$")
 	public void verify_the_price_filters_product_count_with_checkboxs_product_count_should_be_equal() throws Throwable {
 		int filterCheckBoxsProductCount = searchProductPO.getFilterCheckBoxsProductCount(searchProductPO.facet_Price_CheckBox_List);
@@ -265,6 +295,29 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 		assertEquals(filterCheckBoxsProductCount, facetProductCount);
 	}
 	
+	@Then("^Verify the Gender filters product count with checkboxs product count should be equal$")
+	public void verify_the_Gender_filters_product_count_with_checkboxs_product_count_should_be_equal() throws Throwable {
+		int filterCheckBoxsProductCount = searchProductPO.getFilterCheckBoxsProductCount(searchProductPO.facet_Gender_CheckBox_List);
+		int facetProductCount = SearchProductPO.getItemsCount(); //searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
+		logger.debug(filterCheckBoxsProductCount+"::ProductCountMatch::"+facetProductCount);
+		assertEquals(filterCheckBoxsProductCount, facetProductCount);
+	}
+	
+	@Then("^Verify the Brand filters product count with checkboxs product count should be equal$")
+	public void verify_the_Brand_filters_product_count_with_checkboxs_product_count_should_be_equal() throws Throwable {
+		int filterCheckBoxsProductCount = searchProductPO.getFilterCheckBoxsProductCount(searchProductPO.facet_Brand_CheckBox_List);
+		int facetProductCount = SearchProductPO.getItemsCount(); //searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
+		logger.debug(filterCheckBoxsProductCount+"::ProductCountMatch::"+facetProductCount);
+		assertEquals(filterCheckBoxsProductCount, facetProductCount);
+	}
+	
+	@Then("^Verify the Color filters product count with checkboxs product count should be equal$")
+	public void verify_the_Color_filters_product_count_with_checkboxs_product_count_should_be_equal() throws Throwable {
+		int filterCheckBoxsProductCount = searchProductPO.getFilterCheckBoxsProductCount(searchProductPO.facet_Color_CheckBox_List);
+		int facetProductCount = SearchProductPO.getItemsCount(); //searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
+		logger.debug(filterCheckBoxsProductCount+"::ProductCountMatch::"+facetProductCount);
+		assertEquals(filterCheckBoxsProductCount, facetProductCount);
+	}
 	
 	@And("^User Click on apply filter button$")
 	public void User_clicks_on_the_filter_ApplyBtn() throws Throwable{

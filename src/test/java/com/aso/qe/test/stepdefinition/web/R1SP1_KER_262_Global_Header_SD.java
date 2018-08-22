@@ -76,7 +76,7 @@ public class R1SP1_KER_262_Global_Header_SD extends CommonActionHelper{
 	@Then("^verify account summary detail from my account$")
 	public void verify_account_summary_detail_from_my_account() throws Throwable {
 	 
-		assertTrue(isDisplayed(globalElementHeader.btmkAccountSummary_M));
+		assertTrue(isDisplayed(globalElementHeader.btmkAccountSummary));
 	}
 	
 	//###################

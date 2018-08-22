@@ -15,6 +15,7 @@ Feature: To Verify the functionality of Find a Store link in the global header
     Then User should be able to click on Find Store
      And Find Store Modal should pop-up
     When User select store with Postal Code
+    Then close the find the store 
     Then User clicks on the burger menu
     Then User should be able to see Selected_Store in the place of Find a Store link
     Then User closes the web application
@@ -31,6 +32,7 @@ Feature: To Verify the functionality of Find a Store link in the global header
     Then User clicks on the burger menu
     Then User should be able to click on Find Store
     When User select store with City
+    Then close the find the store
     Then User clicks on the burger menu
     Then User should be able to see Selected_Store in the place of Find a Store link
     Then User closes the web application
@@ -46,6 +48,7 @@ Feature: To Verify the functionality of Find a Store link in the global header
     Then User clicks on the burger menu
     Then User should be able to click on Find Store
     When User select store with State
+   Then close the find the store
     Then User clicks on the burger menu
     Then User should be able to see Selected_Store in the place of Find a Store link
     Then User closes the web application

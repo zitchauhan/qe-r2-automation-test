@@ -39,7 +39,7 @@ Feature: To verify user selecting/unselecting one or multiple 'filter by' values
   @Sanity @Regression @Web @All @KER-555  @ZYP_PLP_K555-6310 @C-PLP
   Scenario Outline: Verify user is able to select/unselect one or multiple filter by values from Home Page search
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box
+    When user enters "SearchTerm" in the search box
     And User expands PRICE Filter Option
     And user select the "<price>" in filter
     And User expands BRAND Filter Option
@@ -51,5 +51,5 @@ Feature: To verify user selecting/unselecting one or multiple 'filter by' values
     Then User closes the web application
 
   Examples: 
-    | SearchTerm | price        | brand_name | color_name |
-     | Nike Shoe | $10 - $19.99 | Adidas     | Black      |
+    | price        | brand_name | color_name |
+    | $10 - $19.99 | Adidas     | Black      |

@@ -63,7 +63,8 @@ public class R1SP1_KER_710_Web_SD extends CommonActionHelper{
 	public void user_should_be_able_to_see_L_Page_for_grid_sorting(int arg1) throws Throwable {
 	   
 		scrollPageToWebElement(hp_p.optionFirstClick);
-		clickOnButton(hp_p.optionFirstClick);		
+		clickOnButton(hp_p.optionFirstClick);
+		 Thread.sleep(3000);
 	}
 	
 	@Then("^navigate to sort by and navigate to best selling$")

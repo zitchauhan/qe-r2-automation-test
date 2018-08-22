@@ -55,11 +55,14 @@ public class SearchProductPO extends CommonActionHelper{
 	})	public List<WebElement> facet_Price_CheckBox_ListMobile;	
 	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color_m']//ul")
 	})	public List<WebElement> facet_Color_CheckBox_ListMobile;	
-	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']//ul/li")
-
-    })     public List<WebElement> facet_Price_CheckBox_List; //SID 8-August-18
+	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']//ul/li")}) public List<WebElement> facet_Price_CheckBox_List; //SID 8-August-18
+	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Gender']//ul")}) public List<WebElement> facet_Gender_CheckBox_List; 
+	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand']//ul")}) public List<WebElement> facet_Brand_CheckBox_List; 
+	@FindBys({ @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color']//ul")}) public List<WebElement> facet_Color_CheckBox_List; 
+	
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color']//i")	public WebElement filterColorPlusBtn;
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']//i")	public WebElement filterPricePlusBtn;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Gender']//i")	public WebElement filterGenderPlusBtn;
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price_m']//span")	public WebElement filterPriceBtn;
 	@FindBy(xpath="//span[@data-facet-id='1000349']") 	public WebElement priceCheckBoxUnder10;
 	@FindBy(xpath="//span[@id='counter_1000349']") 	public WebElement priceCheckBoxUnder10Count;
@@ -114,6 +117,7 @@ public class SearchProductPO extends CommonActionHelper{
 	} )
 	public List<WebElement> filterIconMinusListMobile;
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price_m']//i[@class='academyicon icon-plus']")public WebElement filterPricePlusBtnMobile;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Gender_m']//i[@class='academyicon icon-plus']")public WebElement filterGenderPlusBtnMobile;
 	@FindBy(xpath="//span[contains(text(),'CATEGORY')]//ancestor::div[contains(@data-auid,'facetdrawerdrawer')]")public WebElement filterCategoryPlusBtnMobile;
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand_m']//i[@class='academyicon icon-plus']")public WebElement filterBrandPlusBtnMobile;
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color_m']//i[@class='academyicon icon-plus']")public WebElement filterColorPlusBtnMobile;

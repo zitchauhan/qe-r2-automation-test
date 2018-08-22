@@ -4,14 +4,18 @@ import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertEquals;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
+
 import com.aso.qe.framework.common.CommonActionHelper;
 
 public class PDP_PO extends CommonActionHelper
@@ -28,10 +32,14 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='PDP_QC_DEC']") public WebElement btnQuantityDec;
 	@FindBy(xpath="//*[@data-auid='PDP_QC_INC']") public   WebElement btnQuantityInc;
 	@FindBy(xpath="//input[@aria-label='Enter Desired Quantity' and @value='1']") public   WebElement txtDesiredQtyValue_1;
-	@FindBy(xpath="//*[@data-auid='PDP_getNotifiedBackInStock']") public   WebElement txtNotifiedBack;
+	//@FindBy(xpath="//*[@data-auid='PDP_getNotifiedBackInStock']") public   WebElement txtNotifiedBack;/RKA 18 aug
+	@FindBy(xpath="//*[@data-auid='PDP_IventoryMessage']") public   WebElement txtNotifiedBack;
 	@FindBy(xpath="//*[@data-auid='PDP_DetailsAndSpecs']") public   WebElement tabDetailsSpecs;
+	@FindBy(xpath="//*[@data-auid='Detais and Specs_m']") public   WebElement tabDetailsSpecsMobile;
 	@FindBy(xpath="//*[@data-auid='PDP_Reviews']")	public   WebElement tabReviews;
+	@FindBy(xpath="//*[@data-auid='Reviews_m']")	public   WebElement tabReviewsMobile;
 	@FindBy(xpath="//*[@data-auid='PDP_Q&A']")	public   WebElement tabQA;
+	@FindBy(xpath="//*[@data-auid='qa_m']")	public   WebElement tabQAMobile;
 	@FindBy(xpath="//*[contains(@id,'react-tabs-7')]")	public   WebElement secLongDescription;
 	//@FindBy(xpath="//p[contains(text(),'Features and Benefits')]") 	public   WebElement textFeatureBenefits;/RKA august 7
 	@FindBy(xpath="//*[@data-auid='Features and Benefits']/*[1]") 	public   WebElement textFeatureBenefits;
@@ -42,7 +50,7 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[text()='Questions']")	public   WebElement textQuestions;
 	@FindBy(xpath="//*[contains(@data-auid,'sku_')]")	public   WebElement txtProductSKU;
 	@FindBy(xpath="//*[contains(@data-auid,'item_')]")	public   WebElement txtProductItemNumber;
-	@FindBy(xpath="//*[@data-auid='PDP_Size_heading']//following-sibling::div//button[@aria-label='Medium']") 	public   WebElement secSize1;
+	@FindBy(xpath="//*[@data-auid='PDP_Size_heading']//following-sibling::div//button[@aria-label='Medium']|//*[@data-auid='PDP_Shoe Size_Attribute']//span[text()='10']") 	public   WebElement secSize1;
 	@FindBy(xpath="//*[@data-auid='swatchButton-image-4286']|//*[@data-auid='swatchButton-image-4076']") 	public   WebElement secSize2;
 	@FindBy(xpath="//*[@data-auid='btnviewCart']") 	public WebElement btnViewCart;
 	@FindBy(xpath="//*[@data-auid='btncheckout']") 	public WebElement btnCheckout;
@@ -64,13 +72,16 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//div[text()='Not Sold Online'] | //*[@data-auid='PDP_IventoryMessage']") 
 	public WebElement txtNotsoldonline;//9aug danush
 	//Start 28July2018
-	@FindBy(xpath="(//*[contains(@data-auid, 'quickview')]//preceding-sibling::img)[1]")  public  WebElement pdpImage;
+	//@FindBy(xpath="(//*[contains(@data-auid, 'quickview')]//preceding-sibling::img)[1]")  public  WebElement pdpImage;/RKA 18 july
+	@FindBy(xpath="(//*[contains(@class,'c-price__sub')])[1]/../parent::*/preceding-sibling::*")public  WebElement pdpImage;
+	
 	//@FindBy(xpath="(//*[contains(@data-auid, 'quickview')])[1]")  public  WebElement btnQuickView;RKA 15 aug
-	@FindBy(xpath="(//*[contains(text(),'Quick View')])[1]") public  WebElement btnQuickView;
+	@FindBy(xpath="(//*[contains(@class,'c-price__sub')])[1]/../parent::*/preceding-sibling::*//button") public  WebElement btnQuickView;
 	@FindBy(xpath="//*[@data-auid='btnundefined']") public  WebElement btnSeeDetails;
 
 	//KER-714 Start CR-AKK
-	@FindBy(xpath="(//*[@data-auid='HP_PC_A_1']//img)[2]") public WebElement btnProdctimage;
+	//@FindBy(xpath="(//*[@data-auid='HP_PC_A_1']//img)[2]") public WebElement btnProdctimage;/RKA 17 aug
+	@FindBy(xpath="(//*[contains(@class,'d-none d-md-block')]/*[3]//*[@class='c-price__sub'])[1]")public WebElement btnProdctimage;
 
 	public void clickProdcutCardimage() throws Exception {
 		assertTrue(clickOnButton(btnProdctimage));
@@ -115,11 +126,12 @@ public class PDP_PO extends CommonActionHelper
 	//@FindBy(xpath="//*[@data-auid='PDP_OnlineMessage']")public WebElement MsgPDP_OnlineMessage;/RKA 15 aug
 	@FindBy(xpath="(//*[contains(text(),'ONLY SOLD IN STORES')])[1]")public WebElement MsgPDP_OnlineMessage;
 	@FindBy(xpath="//*[@data-auid='productCard_5242504']")public WebElement selectNikeToddlerGirlDNAShirtandShortsSet;
-	@FindBy(xpath="//*[@data-auid='PDP_getNotifiedBackInStock']/../../*[1]")public WebElement  MsgOutOFStock;
+	//@FindBy(xpath="//*[@data-auid='PDP_getNotifiedBackInStock']/../../*[1]")public WebElement  MsgOutOFStock;/RKA 18 aug
+		@FindBy(xpath="//*[@data-auid='PDP_IventoryMessage']")public WebElement  MsgOutOFStock;
 	@FindBy(xpath="(//*[contains(@aria-label,'stars out of 5')])[1]")public WebElement selectStarratingProduct;
 	@FindBy(xpath="//*[@data-auid='PDP_close_Addtocart_Modal']") public WebElement btnCloseCrossAddToCartModel; //Anuj 7 Aug
 	@FindBy(xpath="//*[contains(text(),'We added those to the cart')]") public WebElement txtLimitedQuantityAddedInCart; //Anuj 11 Aug
-
+@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*")public WebElement MsgquantityLimitation;
 
 
 	//@FindBy(xpath="//*[@data-auid='PDP_getNotifiedBackInStock']") public   WebElement txtNotifiedBack;
@@ -179,7 +191,8 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath="(//*[@data-auid='PDP_ProductImage_m']//img)[1]") public WebElement imgproductPDPSRCMobile;
 
 
-	@FindBy(xpath="//*[@data-auid='PDP_MediaClick']//*[@alt='Hover/Click to enlarge'] | //*[@data-auid='PDP_ProductImage_m']//*[@alt='Hover/Click to enlarge'] ") public WebElement imgClickToZoom;
+	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']//*[@alt='Hover/Click to enlarge'])[1]") public WebElement imgClickToZoom;
+	@FindBy(xpath="(//*[@data-auid='PDP_ProductImage_m']//*[@alt='Hover/Click to enlarge'] )[3]") public WebElement imgClickToZoomMobile;
 	@FindBy(xpath="//*[@data-auid='PDP_Modal_closeIcon']/* | //*[@data-auid='PDP_ProductImage_m']//ancestor::div[@aria-modal='true']//button[contains(text(),'X')]") public WebElement btnCloseCrossZoom;
 	@FindBy(xpath="(//*[contains(text(),'Pick Up in 3-4 business days')])[1]") public WebElement txtShippingRelatedMsg; 
 
@@ -196,7 +209,15 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid=\"Wish List\"]")	public WebElement headerWishList;
 	@FindBy(xpath = "//*[@id='wishListSelect']")	public WebElement selectWishList;
 	@FindBy(xpath = "//*[@id='wishListItemsContainer']//*[contains(text(),'SKU#')]")public WebElement wishListSKU;	
-
+	//sid 16-August KER-2725
+	@FindBy(xpath = "//*[@data-auid='PDP_AdBug']")public WebElement pdpEybrow;	
+	@FindBy(xpath = "//*[@data-auid='Rating Stars']")public WebElement pdpRating;	
+	@FindBy(xpath = "//*[@data-auid='PDP_PromoMessage']")public WebElement pdpPromoMessage;	
+	@FindBy(xpath = "//div[contains(@class,'breadCrumbComponent')]//span[4]//a")public WebElement navigateToPLP;	
+	@FindBy(xpath = "//*[@id='productCardListing']//*[contains(text(),'Online Only')]")public List<WebElement> checkOnlineBadges;
+	@FindBy(xpath = "//*[@data-bv-show='inline_rating']/parent::div")public WebElement checkRating;
+	
+	
 	//***********************************************************************************************************//
 
 
@@ -207,6 +228,8 @@ public class PDP_PO extends CommonActionHelper
 	
 	//KER-2728 Anuj 14 Aug
 	@FindBy(xpath = "//*[contains(@data-auid,'PDP_PromoMessage')]") public WebElement txtPromoCodePDP;
+	@FindBys({ @FindBy(xpath="//*[@data-auid='PDP_Color_Attribute']//button [not(*[local-name()='svg'])]")}) public List<WebElement> colorsAvailable;
+	@FindBys({ @FindBy(xpath="(//*[@data-auid='PDP_Size_Attribute']//button[@role] [not(*[local-name()='svg'])])")}) public List<WebElement> sizeAvailable;
 	
 
 	public void cilckAnswerThisQuestion() throws Exception {
@@ -272,7 +295,7 @@ public class PDP_PO extends CommonActionHelper
 	public WebElement btnShopCategory1;
 	@FindBy(xpath = "//a[@data-auid='level2Category-Sports']")
 	public WebElement btnSportsCategory;
-	@FindBy(xpath = "//*[@data-auid='level4Category-Helmets']")
+	@FindBy(xpath = "//*[@data-auid='level3Category-Baseball']//*[@data-auid='level4Category-Helmets']")
 	public WebElement btnHelmetsCategory;
 	@FindBy(xpath = "(//a[contains(@data-auid, 'productCard_')])[15]")
 	public WebElement imgHelmetSKUCategory;
@@ -290,7 +313,7 @@ public class PDP_PO extends CommonActionHelper
 	public WebElement btnSportsCategory_M;
 	@FindBy(xpath = "//a[@data-auid='level3Category-Football_m']")
 	public WebElement btnFootballCategory_M;
-	@FindBy(xpath = "//a[@data-auid='level4Category-Helmets_m']")
+	@FindBy(xpath = "//a[@data-auid='level4Category-Helmets & Masks_m']")
 	public WebElement HelmetsCategory_M;
 	@FindBy(xpath = "(//button[contains(@data-auid, 'swatchButton-image-')])[1]")
 	public WebElement imgSubHelmetsCategory;
@@ -324,13 +347,39 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[contains(text(),'RE ALL SET')]")public WebElement txtYouAreAllSet;
 	@FindBy(xpath="//*[@data-auid='PDP_Size_heading']/following-sibling::*/*[1]")public WebElement clickOtherSize;
 	//KER-2334 End
+	
+	// KER-1934 Start
+	@FindBy(xpath="//*[contains(@data-auid,'PDP_Size_heading')]/following-sibling::*/*/*[1]")public List<WebElement> txtSizeList;
+	@FindBy(xpath="//*[contains(@data-auid,'PDP_Size_heading')]/*[1]/*[2]")public WebElement textSize;
+	@FindBy(xpath="//*[@data-auid='PDP_Clearance_heading']/*/*[1]")public WebElement textclearance;
+	@FindBy(xpath="//*[@id='productCardListing']/*//*[@class='badge css-10lliur eggjmyf0']")public WebElement checkClearanceCondition;
+//	@FindBy(xpath="//*[contains(@class,'col-12 col-md-4 d-flex')]")public WebElement checkItemInGrid;
+	@FindBy(xpath="//*[@id='productCardListing']/*")public List<WebElement> itemInGrid;
+//	@FindBy(xpath="//*[contains(@class,'badge css-')]")public WebElement clearenctText;
+	@FindBy(xpath="//*[@data-auid='PDP_Color_heading']/./following-sibling::*/*")public List<WebElement> clickSwatchColor;	
+	
+	
+	//KER-1934 END
+	
+	//KER-2717 Start
+	@FindBy(xpath="//*[@data-auid='PDP_IventoryMessage']")public WebElement txtNotSoldInStore;
+	
+	
+	
+	
+	
+	
+	
+	
 	public void navigateToMultipleSKU() throws Exception {
 		Thread.sleep(2000);
 		assertTrue(clickOnButton(btnShopCategory1));
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		Actions hover = new Actions(getDriver());
 		hover.moveToElement(btnSportsCategory).build().perform();
-		assertTrue(clickOnButton(btnHelmetsCategory));
+		Thread.sleep(1000);
+		hover.moveToElement(btnHelmetsCategory).build().perform();
+		clickOnLink(btnHelmetsCategory);
 		Thread.sleep(3000);
 	}
 
@@ -361,15 +410,18 @@ public class PDP_PO extends CommonActionHelper
 	//KER-737 End CR-AKK
 
 	public void moveToPdpImage() throws Exception {
-		Actions hover=new Actions(getDriver());
-		hover.moveToElement(pdpImage).build().perform();
-		Thread.sleep(2000);
+//		Actions hover=new Actions(getDriver());
+//		hover.moveToElement(pdpImage).build().perform();
+//		Thread.sleep(2000);
+		moveHover(pdpImage);
 	}
 
 	public void cilckQuickViewbutton() throws Exception {
 
-		assertTrue(clickOnButton(btnQuickView));
-		Thread.sleep(5000);
+		//assertTrue(clickOnButton(btnQuickView));
+		clickOnButton(btnQuickView);
+	
+		//Thread.sleep(5000);
 	}
 
 	public void verifyAddcartOrSeeDetailsButton() throws Exception {
@@ -388,53 +440,36 @@ public class PDP_PO extends CommonActionHelper
 	}
 
 
-	public void addToCartAvailability() throws InterruptedException{
-        waitForElement(selectedSwatchRepresentative);
-        isDisplayed(selectedSwatchRepresentative);
-         if (isDisplayed(txtNotifiedBack)) {
-               logger.debug("errormessage:: Product is not available in stock");
-               /*int nextImage = 1;
-               int nextSize=1;
-               int colorCount = 0;*/
-               boolean flag = isDisplayed(txtNotifiedBack);
-               System.err.println(flag);
-                    
-               List<WebElement> colorsAvailable = driver.findElements(By.xpath("//*[@data-auid='PDP_Color_Attribute']//button"));
-               colorsAvailable.size();
-               
-               Thread.sleep(300);
-              
-               WebElement diffImage = driver.findElement(By.xpath("(//*[@data-auid='PDP_Color_Attribute']//button)[1]"));
-               diffImage.click();
-               
-//               while (isDisplayed(txtNotifiedBack) && colorCount>0) {
-//               
-//                    List<WebElement> sizeAvailable = driver.findElements(By.xpath("(//*[@data-auid='PDP_Size_Attribute']//*[contains(@data-auid,'swatchButton-image')])"));
-//                   int sizeCount = sizeAvailable.size();
-//                   
-//                     WebElement diffImage = driver.findElement(By.xpath("(//*[@data-auid='PDP_Color_Attribute']//button)[" + nextImage + "]"));
-//                     clickOnButton(diffImage);
-//                     while (isDisplayed(txtNotifiedBack) && nextSize<=sizeCount) {
-//                            WebElement diffSize = driver.findElement(By.xpath("(//*[@data-auid='PDP_Size_Attribute']//*[contains(@data-auid,'swatchButton-image')])[" + nextSize + "]"));
-//                            clickOnButton(diffSize);
-//                            flag = isDisplayed(txtNotifiedBack);
-//                            System.err.println(flag);
-//                            System.out.println("************************addcart BTN " + flag);
-//                            if (!flag) {
-//                                   System.err.println(flag);
-//                                   logger.debug("break the loop");
-//                                   colorCount=0;
-//                                   break;
-//                            }
-//                            nextSize++;
-//                     }
-//                     nextImage++;
-//                     nextSize=1;
-//                     colorCount--;
-//               }
+	public boolean addToCartAvailability() throws InterruptedException{
+		boolean isAddtoCart= false;
+		try{
+			waitForElement(selectedSwatchRepresentative);
+			isDisplayed(selectedSwatchRepresentative);
 
-        }
- }
+			if (isDisplayed(txtNotifiedBack)) {
+				for(WebElement colorElement: colorsAvailable){
+					clickOnButton(colorElement);
+					for(WebElement sizeElement:sizeAvailable){
+						logger.debug("Product Size Txt::"+sizeElement.getText());
+						clickOnButton(sizeElement);
+						if(isDisplayed(btnAddToCart)){
+							isAddtoCart=true;
+							break;
+						}
+					}
+					if(isAddtoCart){
+						break;
+					}
+				}
+			}else if(isDisplayed(btnAddToCart)){
+				isAddtoCart=true;
+			}
+		}catch (Exception e) {
+			logger.error("addToCartAvailability exception msg::"+e.getMessage());
+		}
+		logger.debug("Add to Cart buttion is visable::"+isAddtoCart);
+		return isAddtoCart;
+	}
 
 
 	// SID 05-August-2018
@@ -498,12 +533,14 @@ public class PDP_PO extends CommonActionHelper
 
 	//08-Aug Anuj  KER-1920
 	public void addToCartProductValidationMobile() throws InterruptedException {
+
+		addToCartAvailability();
 		String productImage = imgproductPDPSRCMobile.getAttribute("src");
 		String productPrice = getText( txtPdpprice);
 		String productTitle = getText( txtProductTitle);
-		addToCartAvailability();
+	
 		assertTrue(clickOnButton(btnAddToCart));
-
+		Thread.sleep(3000);
 		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[contains(text(),\""+productTitle+"\")])[5]"));
 		WebElement actualPriceInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),"+productPrice+")]"));
 		String productImageAddToCartPopup = imgAddToCartPopup.getAttribute("src");
@@ -571,7 +608,101 @@ public class PDP_PO extends CommonActionHelper
 
 
 	}
+//SID 16-August KER-2725
+	public boolean checkPresence() {
+		boolean flag=false;
+		if(isDisplayed(pdpRating) && isDisplayed(pdpPromoMessage) && isDisplayed(pdpEybrow)) {
+			flag=true;
+		}
+		else if(isDisplayed(pdpRating) && isDisplayed(pdpPromoMessage)) {
+			logger.debug("*************Promo Message not Found***************");
+			flag=false;
+		}
+		else {
+			Assert.fail();
+//			clickOnButton(navigateToPLP);
+//			boolean rating=false;
+//			for(WebElement checkOnlineBadge : checkOnlineBadges) {
+//				rating = isDisplayed(checkRating);
+//				if(rating==true) {
+//					flag=true;
+//					break;
+//				}
+//				else {
+//					flag=false;
+//				}
+//			}
+//			logger.debug("*************Promo Message not Found1***************");
+		}
+//		System.err.println(flag);
+		return flag;
+	}
+	
+	// SID 18-August
+	public void checkModal() {
+		boolean flag = isDisplayed(closeWishlistModal);
+		if (flag == false) {
+			assertTrue(clickOnButton(btnAddToWishList));
+		}
+	}
+	
+	//RKA 20 aug
+	 public boolean sizeTextname() {
+		 boolean flag = false;
+		 for(WebElement sizeElement:sizeAvailable){
+			 clickOnButton(sizeElement);
+			String sizeElementTxt = sizeElement.getText();
+			String sizeName=getText(textSize);
+			 logger.debug(sizeName+"::SIZE TXT::"+sizeElementTxt);
+			 
+			 if(sizeElementTxt !=null && sizeElementTxt.equals(sizeName)) {
+				 flag = true;
+			 }else {
+				 flag=false;
+				 break;
+			 }
+				
+		 }
+		 return flag;
+		 
+			
+			
+		}
 
-
-
+	 
+	 
+	 public void clickOnNonClearanceItem() {
+		 for(WebElement gridItem: itemInGrid) {
+			 System.out.println("000");
+			 if(isDisplayed(checkClearanceCondition)) {
+				System.out.println("11");
+			 String itemWithNoClearance =driver.findElement(By.xpath("//*[@class='col-12 col-md-4 d-flex']/*")).getAttribute("data-auid");
+			System.out.println("2222");
+			 System.out.println("%%%%%%%%%%%%%%%%"+itemWithNoClearance);
+			System.out.println("3333");
+			 WebElement item=driver.findElement(By.xpath("//*[@data-auid='"+itemWithNoClearance+"']"));
+		System.out.println("444");//*[@data-auid='btnproductCard_4705544_quickview']
+			 clickOnButton(item);
+			 System.out.println("555");
+			 }
+			 
+		 }
+	 }
+	 
+	 //RKA 20 AUG
+	 public void verifySKUforallItem() {
+		 
+	for(WebElement clickSwatchColor :clickSwatchColor ) {
+		
+		clickOnButton(clickSwatchColor);
+		assertTrue(isDisplayed(txtProductSKU));
+	}
+		 
+		 
+	 }
+	 
+	 
+	 
+	 
+	 
 }

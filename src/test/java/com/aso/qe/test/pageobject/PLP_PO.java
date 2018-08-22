@@ -26,7 +26,7 @@ public class PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//*[contains(@data-component,'sectionTitle')]") public   WebElement txtSectionTitle;
 	@FindBy(xpath="//*[@data-auid='shopbycategorysection']//*[@data-auid='shopByCategory_0']") public WebElement secCategory_CLP;//9aug danush
 	//@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]/parent::div)[3]") 	public   WebElement productPLP1;/RKA 16 aug
-	@FindBy(xpath="(//*[@class='css-1jc6cii'])[1]")public   WebElement productPLP1;
+	@FindBy(xpath="(//*[@id='productCardListing']/*/a)[2]")public   WebElement productPLP1;
 	
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//img)[1]") 	public   WebElement productPLP1_Mobile;
 
@@ -40,9 +40,12 @@ public class PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Ad Feature']/*[1]/*/*")public WebElement adFeaturePlus;
 	@FindBy(xpath="//*[@data-auid='drawer_Hot Deal']/*[2]/*")public WebElement hotDealOption;
 	@FindBy(xpath="//*[@data-auid='drawer_Clearance']/*[2]/*")public WebElement clearanceOption;
-	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Gift Cards']")public WebElement giftCardLink;
-	@FindBy(xpath="//*[@data-auid='btnHP_GC_BUTTON_0']")public WebElement shopGiftCardBtm;
-	@FindBy(xpath="//*[@data-auid='breadCrumb_link_1_Shops']/following-sibling::*[2]")public WebElement giftCardShopBreadCrum;
+
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Shop Gift Cards']")public WebElement giftCardLink;
+
+	@FindBy(xpath="(//*[@data-auid='btnHP_GC_BUTTON_0'])[1]")public WebElement shopGiftCardBtm;
+
+	@FindBy(xpath="//span[contains(text(),'Gift Card Shop')]")public WebElement giftCardShopBreadCrum;
 	@FindBy(xpath="//div[@class='css-1jc6cii']")public WebElement reviewRatingStars;
 	
 	
@@ -62,7 +65,7 @@ public class PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Ad Feature_m']/*[1]/*/*")public WebElement adFeaturePlus_M;
 	@FindBy(xpath="//*[@data-auid='drawer_Hot Deal_m']/*[2]/*")public WebElement hotDealOption_M;
 	@FindBy(xpath="//*[@data-auid='drawer_Clearance_m']/*[2]/*")public WebElement clearanceOption_M;
-
+	@FindBy(xpath="(//*[@data-auid='btnHP_GC_BUTTON_0'])[2]")public WebElement shopGiftCardBtm_M;
 	
 	//KER-737 start CR-AKK
 	@FindBy(xpath="//a[text()='See Full Product Details']") public WebElement lnkSeeProdcutDetails;
@@ -73,7 +76,7 @@ public class PLP_PO extends CommonActionHelper{
 	String expctedSearchDexLinkL2="https://uat9www.academy.com/categories/mens-pants.jsp";
 	@FindBy(xpath="//*[text()='Featured Categories']") public WebElement txtFeaturedCategories;
 	@FindBy(xpath="//a[text()='Mens Clothes']") public WebElement lnkMensClothes;
-	@FindBy(xpath="//a[text()='Mens Pants']") public WebElement lnkMensPants;
+	@FindBy(xpath="//a[contains(text(),'Pants')]") public WebElement lnkMensPants;
 	
 	
 	/////////////////////////////////////Anuj//////////////////////////////////////////////
@@ -86,7 +89,8 @@ public class PLP_PO extends CommonActionHelper{
 		@FindBy(xpath="//*[@data-auid='drawer_Clearance']") public WebElement btnClearance;
 		@FindBy(xpath="//*[@data-auid='drawer_Online Only']") public WebElement btnOnline;
 		@FindBy(xpath="//*[@data-auid='drawer_New Low Price']") public WebElement btnPriceDrop;
-		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Clearance')])[1]") public WebElement colorClearance;
+		//@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Clearance')])[1]") public WebElement colorClearance;/RKA 17 aug
+		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Clearance') and contains(@class,'badge css-10lliur eggjmyf0')])[1]") public WebElement colorClearance;
 		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Online Only')])[1]") public WebElement colorOnline;
 		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Price Drop')])[1]") public WebElement colorPriceDrop;
 		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Ships to Store')])[1]") public WebElement colorShipToStore;

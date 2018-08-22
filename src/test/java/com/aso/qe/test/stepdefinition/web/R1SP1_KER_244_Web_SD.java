@@ -33,6 +33,8 @@ public class R1SP1_KER_244_Web_SD extends CommonActionHelper{
 
 	@Then("^user clicks on one of the category card and navigates to category$")
 	public void user_clicks_on_one_of_the_category_card_and_navigates_to_category() throws Throwable {
+		waitForPageLoad(driver);
+		Thread.sleep(4000);
 		String currentURL = getCurrentPageURL();
 		assertTrue(clickOnButton(HomePagePOM.prdTileFeaturedCategory));
 		String changedURL = getCurrentPageURL();

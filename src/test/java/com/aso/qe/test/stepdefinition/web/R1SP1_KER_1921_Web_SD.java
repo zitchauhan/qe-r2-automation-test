@@ -88,7 +88,7 @@ public class R1SP1_KER_1921_Web_SD extends CommonActionHelper{
 		
 			String actdata= getText(pdpPageObj.MsgOutOFStock).toUpperCase();
 		   
-			assertEquals("OUT OF STOCK ONLINE", actdata);
+			assertEquals("SOLD IN STORES", actdata);
 				
 	
 	}
@@ -99,12 +99,12 @@ public class R1SP1_KER_1921_Web_SD extends CommonActionHelper{
 	public void user_to_verify_add_to_cart_is_disable_enable_when_color_and_size_is_not_avialable() throws Throwable {
 	    
 
-		if(getText(pdpPageObj.MsgOutOFStock).equals("Out of Stock Online")) {
+		if(getText(pdpPageObj.MsgOutOFStock).equals("Not Sold in Stores")) {
 			assertTrue(isDisplayed(pdpPageObj.MsgOutOFStock));
 			logger.debug("product is out of stock:: add to cart buttom is not displayed");
 			
 		}
-		else if (!getText(pdpPageObj.txtNotifiedBack).equalsIgnoreCase("Get Notified")) {
+		else if (getText(pdpPageObj.txtNotifiedBack).equalsIgnoreCase("Sold in Stores")) {
 			
 			
 			assertTrue(isDisplayed(pdpPageObj.btnAddToCart));
@@ -127,6 +127,17 @@ public class R1SP1_KER_1921_Web_SD extends CommonActionHelper{
 	@Then("^user select the product having star rating$")
 	public void user_select_the_product_having_star_rating() throws Throwable {
 		assertTrue(clickOnButton(pdpPageObj.selectStarratingProduct));
+	}
+
+	@Then("^user put the quantity on PDP$")
+	public void user_put_the_quantity_on_PDP() throws Throwable {
+		pdpPageObj.addToCartAvailability();
+		setInputText(pdpPageObj.quantityInput, "110");
+		waitForElement(pdpPageObj.btnAddToCart);
+		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+		
+		waitForElement(pdpPageObj.MsgquantityLimitation);
+		isDisplayed(pdpPageObj.MsgquantityLimitation);
 	}
 
 }

@@ -2,21 +2,12 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "productId": {
-      "type": "string"
-    },
-    "store": {
-      "type": "array",
-      "items": {}
-    },
     "online": {
       "type": "array",
       "items": {}
     }
   },
   "required": [
-    "productId",
-    "store",
     "online"
   ]
 }

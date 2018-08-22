@@ -1,6 +1,8 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -18,7 +20,7 @@ public class R1SP1_KER_3276_Web_SD extends CommonActionHelper {
 
 	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 	public SearchProductPO searchProductPO = PageFactory.initElements(driver, SearchProductPO.class);
-
+	public String actData;
 	/*@Then("^User enter the boolean search \"(.*?)\"$")
 	public void User_enter_the_SKU_search(String str) throws Throwable {
 		globalElementHeader.entertheSearchData("Shoes & Socks");
@@ -60,4 +62,65 @@ public class R1SP1_KER_3276_Web_SD extends CommonActionHelper {
 		waitForElement(globalElementHeader.error404);
 		assertTrue(isDisplayed(globalElementHeader.error404));
 	}*/
+	
+	
+	@Then("^user enter \"(.*?)\" in search box and wait for auto suggest pop up$")
+	public void user_enter_in_search_box_and_wait_for_auto_suggest_pop_up1(String arg1) throws Throwable {
+		waitForPageLoad(driver);
+		Thread.sleep(2000);
+		SearchProductPO.searchTextBox.sendKeys( webPropHelper.getTestDataProperty(arg1));
+		
+	}
+	
+	
+	
+	@Then("^user verify the product image name and price$")
+	public void user_verify_the_product_image_name_and_price() throws Throwable {
+	    assertTrue(isDisplayed(globalElementHeader.imgAutosuggest_HomePage));
+	    assertTrue(isDisplayed(globalElementHeader.productNameAutoSuggest_HomePage));
+	    assertTrue(isDisplayed(globalElementHeader.productPriceAutoSuggest_HomePage));
+	     actData=getText(globalElementHeader.productNameAutoSuggest_HomePage);
+	    
+	}
+	
+	
+
+	@Then("^user enter \"(.*?)\" in search box and wait for auto suggest pop up for first data$")
+	public void user_enter_in_search_box_and_wait_for_auto_suggest_pop_up_for_first_data(String go) throws Throwable {
+		waitForPageLoad(driver);
+		Thread.sleep(2000);
+		SearchProductPO.searchTextBox.sendKeys( webPropHelper.getTestDataProperty(go));
+	}
+
+	@Then("^user enter \"(.*?)\" in search box and wait for auto suggest pop up for second data$")
+	public void user_enter_in_search_box_and_wait_for_auto_suggest_pop_up_for_second_data(String shi) throws Throwable {
+		Thread.sleep(2000);
+
+		SearchProductPO.searchTextBox.clear();
+		SearchProductPO.searchTextBox.sendKeys( webPropHelper.getTestDataProperty(shi));
+	}
+	
+	@Then("^user enter \"(.*?)\" in search box and wait for auto suggest pop up for third data$")
+	public void user_enter_in_search_box_and_wait_for_auto_suggest_pop_up_for_third_data(String golf) throws Throwable {
+		Thread.sleep(2000);
+		SearchProductPO.searchTextBox.clear();
+		SearchProductPO.searchTextBox.sendKeys( webPropHelper.getTestDataProperty(golf));
+	}
+
+	@Then("^user click on first image from autosuggestion flyout on home page$")
+	public void user_click_on_first_image_from_autosuggestion_flyout_on_home_page() throws Throwable {
+	  clickOnButton(globalElementHeader.imgAutosuggest_HomePage);
+//	  String actData=getText(globalElementHeader.productNameAutoSuggest_HomePage);
+	  String expData=getText(globalElementHeader.txtProductNameOnPDP);
+	  assertEquals(actData, expData);
+	}
+	
+	@Then("^user click on Go button and verify relevent search item present in product catagory$")
+	public void user_click_on_Go_button_and_verify_relevent_search_item_present_in_product_catagory() throws Throwable {
+		assertTrue(clickOnButton(SearchProductPO.submitGOBtn));
+		waitForPageLoad(driver);
+		globalElementHeader.getProductName();
+		
+	}
+	
 }

@@ -1,5 +1,3 @@
-
-
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
@@ -7,21 +5,12 @@
     "inventory": {
       "type": "object",
       "properties": {
-        "productId": {
-          "type": "string"
-        },
-        "store": {
-          "type": "array",
-          "items": {}
-        },
         "online": {
           "type": "array",
           "items": {}
         }
       },
       "required": [
-        "productId",
-        "store",
         "online"
       ]
     },
@@ -98,6 +87,9 @@
             "keyword": {
               "type": "string"
             },
+            "wgFlag": {
+              "type": "string"
+            },
             "productSpecifications": {
               "type": "array",
               "items": {}
@@ -111,148 +103,14 @@
                 "4143902": {
                   "type": "string"
                 },
-                "4143901": {
-                  "type": "string"
-                },
-                "4802273": {
-                  "type": "string"
-                },
-                "4802274": {
-                  "type": "string"
-                },
-                "4802275": {
-                  "type": "string"
-                },
-                "4802276": {
-                  "type": "string"
-                },
-                "4134452": {
-                  "type": "string"
-                },
-                "4802270": {
-                  "type": "string"
-                },
-                "4134453": {
-                  "type": "string"
-                },
-                "4802271": {
-                  "type": "string"
-                },
-                "4802272": {
-                  "type": "string"
-                },
-                "4617633": {
-                  "type": "string"
-                },
-                "4617634": {
-                  "type": "string"
-                },
-                "4143910": {
-                  "type": "string"
-                },
-                "4802268": {
-                  "type": "string"
-                },
-                "4617643": {
-                  "type": "string"
-                },
-                "4134446": {
-                  "type": "string"
-                },
-                "4143909": {
-                  "type": "string"
-                },
-                "4802269": {
-                  "type": "string"
-                },
-                "4617642": {
-                  "type": "string"
-                },
-                "4802266": {
-                  "type": "string"
-                },
-                "4617645": {
-                  "type": "string"
-                },
-                "4143907": {
-                  "type": "string"
-                },
-                "4143908": {
-                  "type": "string"
-                },
-                "4134449": {
-                  "type": "string"
-                },
-                "4617644": {
-                  "type": "string"
-                },
-                "4802267": {
-                  "type": "string"
-                },
-                "4143905": {
-                  "type": "string"
-                },
-                "4802264": {
-                  "type": "string"
-                },
-                "4143906": {
-                  "type": "string"
-                },
-                "4802265": {
-                  "type": "string"
-                },
-                "4143903": {
-                  "type": "string"
-                },
-                "4617641": {
-                  "type": "string"
-                },
-                "4143904": {
-                  "type": "string"
-                },
-                "4617640": {
-                  "type": "string"
-                },
-                "4617639": {
-                  "type": "string"
-                },
-                "4134441": {
-                  "type": "string"
-                },
-                "4143899": {
-                  "type": "string"
-                },
-                "4134442": {
-                  "type": "string"
-                },
-                "4143898": {
-                  "type": "string"
-                },
-                "4617636": {
-                  "type": "string"
-                },
-                "4134443": {
-                  "type": "string"
-                },
-                "4617635": {
-                  "type": "string"
-                },
-                "4134444": {
-                  "type": "string"
-                },
-                "4617638": {
-                  "type": "string"
-                },
                 "4134445": {
-                  "type": "string"
-                },
-                "4617637": {
                   "type": "string"
                 }
               },
               "required": [
                 "4143900",
-                "4617637"
+                "4143902",
+                "4134445"
               ]
             },
             "productAttributes": {
@@ -293,6 +151,9 @@
             "productType": {
               "type": "string"
             },
+            "showBIS": {
+              "type": "string"
+            },
             "breadCrumb": {
               "type": "array",
               "items": {}
@@ -321,6 +182,7 @@
             "imageAltDescription",
             "productAttrGroups",
             "keyword",
+            "wgFlag",
             "productSpecifications",
             "productAttrCombinationGroups",
             "productAttributes",
@@ -328,6 +190,7 @@
             "productPrice",
             "sKUs",
             "productType",
+            "showBIS",
             "breadCrumb"
           ]
         }
@@ -342,4 +205,3 @@
     "product-info"
   ]
 }
-

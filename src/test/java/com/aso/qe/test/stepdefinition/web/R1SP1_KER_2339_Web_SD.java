@@ -1,8 +1,10 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertFalse;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
@@ -21,56 +23,95 @@ public class R1SP1_KER_2339_Web_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(globalElementHeader.imgMensShortShirt));
 	}
 
-	@Then("^User click on the breadcrumb last link$")
-	public void user_click_on_the_breadcrumb_last_link() throws Throwable {
-		driver.navigate().refresh();
-		waitForPageLoad(driver);
-		driver.navigate().refresh();
-		waitForPageLoad(driver);
-		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(clickOnButton(globalElementHeader.lnkBreadcrumbLast));
-		} else {
-			assertTrue(clickOnButton(globalElementHeader.lnkMensShirts));
-		}
-	}
+	
+	
 
-	@Then("^User click on the breadcrumb last second link$")
-	public void user_click_on_the_breadcrumb_last_second_link() throws Throwable {
-		assertTrue(clickOnButton(globalElementHeader.lnkMensShirts));
-	}
+
 
 	@Then("^User click on the breadcrumb link for mobile$")
 	public void user_click_on_the_breadcrumb_link_for_mobile() throws Throwable {
 		assertTrue(clickOnButton(globalElementHeader.lnkMensClothing));
 	}
 
-	@Then("^User verify the last breadcrumb in the series should not be an active link$")
-	public void user_verify_the_last_breadcrumb_in_the_series_should_not_be_an_active_link() throws Throwable {
-		driver.navigate().refresh();
-		if(isDisplayed(globalElementHeader.txtproductselected)) {
-		assertTrue(isDisplayed(globalElementHeader.txtproductselected));
-		}else {
-			driver.navigate().refresh();
-			Thread.sleep(3000);
-			driver.navigate().refresh();
-			Thread.sleep(3000);
-			assertTrue(isDisplayed(globalElementHeader.txtproductselected));
+	
+	//SID 20-August
+//	@Then("^User verify the last breadcrumb in the series should not be an active link$")
+//	public void user_verify_the_last_breadcrumb_in_the_series_should_not_be_an_active_link() throws Throwable {
+//		driver.navigate().refresh();
+//		boolean flag= true;
+//		if(isDisplayed(globalElementHeader.txtproductselected)) {
+//		assertTrue(isDisplayed(globalElementHeader.txtproductselected));
+//		if(isDisplayed(globalElementHeader.txtproductselected)) {
+//			flag = globalElementHeader.txtproductselected.getAttribute("href")!=null;
+//			assertFalse(flag);
+//		}
+//		}
+//	}
+//
+	@Then("^User click on the breadcrumb last active link in PDP$")
+	public void user_click_on_the_breadcrumb_last_active_link_in_PDP() throws Throwable {
+		waitForPageLoad(driver);
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(globalElementHeader.lnkBreadcrumbLast));
+		} else {
+			assertTrue(clickOnButton(globalElementHeader.pdpLastActiveBraedcrumb));
 		}
 	}
+	
+	@Then("^User click on the breadcrumb last active link in L3$")
+	public void user_click_on_the_breadcrumb_last_active_link_in_L3() throws Throwable {
+		waitForPageLoad(driver);
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(globalElementHeader.lnkBreadcrumbLast));
+		} else {
+			assertTrue(clickOnButton(globalElementHeader.l3LastActiveBreadcrumb));
+		}
+	}
+	@Then("^User click on the breadcrumb last active link in L2$")
+	public void user_click_on_the_breadcrumb_last_active_link_in_L2() throws Throwable {
+		waitForPageLoad(driver);
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(globalElementHeader.lnkBreadcrumbLast));
+		} else {
+			assertTrue(clickOnButton(globalElementHeader.l2LastActiveBreadcrumb));
+		}
+	}
+	@Then("^User click on the breadcrumb last active link in L1$")
+	public void user_click_on_the_breadcrumb_last_active_link_in_L1() throws Throwable {
+		waitForPageLoad(driver);
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(globalElementHeader.lnkBreadcrumbLast));
+		} else {
+			assertTrue(clickOnButton(globalElementHeader.l1LastActiveBreadcrumb));
+		}
+	}
+	
 
 	@Then("^User verify the last breadcrumb in the series should not be an active link for last link$")
 	public void user_verify_the_last_breadcrumb_in_the_series_should_not_be_an_active_link_for_last_link()
 			throws Throwable {
-		assertTrue(isDisplayed(globalElementHeader.lnkL3PageNotClickable));
-
+		assertTrue(isDisplayed(globalElementHeader.txtproductselected));
+		boolean flag= true;
+		if(isDisplayed(globalElementHeader.txtproductselected)) {
+		assertTrue(isDisplayed(globalElementHeader.txtproductselected));
+		if(isDisplayed(globalElementHeader.txtproductselected)) {
+			flag = globalElementHeader.txtproductselected.getAttribute("href")!=null;
+			assertFalse(flag);
+		}
+		}
 	}
 
-	@Then("^User verify the last breadcrumb in the series should not be an active link for second link$")
-	public void user_verify_the_last_breadcrumb_in_the_series_should_not_be_an_active_link_for_second_link()
-			throws Throwable {
-		assertTrue(isDisplayed(globalElementHeader.lnkL2PageNotClickable));
-	}
+//	@Then("^User verify the last breadcrumb in the series should not be an active link for second link$")
+//	public void user_verify_the_last_breadcrumb_in_the_series_should_not_be_an_active_link_for_second_link()
+//			throws Throwable {
+//		assertTrue(isDisplayed(globalElementHeader.lnkL2PageNotClickable));
+//	}
+//	@Then("^User click on the breadcrumb last second link$")
+//	public void user_click_on_the_breadcrumb_last_second_link() throws Throwable {
+//		assertTrue(clickOnButton(globalElementHeader.lnkMensShirts));
+//	}
 
+	
 	@And("^User verify that the last breadcrumb in PLP will not be an active link$")
 	public void user_verify_that_the_last_breadcrumb_in_PLP_will_not_be_an_active_link() throws Throwable {
 		assertTrue(isDisplayed(globalElementHeader.titleMensShirtclothing));
@@ -104,6 +145,15 @@ public class R1SP1_KER_2339_Web_SD extends CommonActionHelper {
 		Thread.sleep(300);
 		assertTrue(clickOnButton(globalElementHeader.txtFindAStoreMobile));
 	}
+	@Then("^User click on the brand btn$")
+	public void User_click_on_the_brand_btn() { 
+		Actions actions = new Actions(getDriver());
+        actions.moveToElement(globalElementHeader.btnBrandCategory).build().perform();
+		//moveHover(globalElementHeader.btnBrandCategory);
+		assertTrue(clickOnButton(globalElementHeader.lnkBrandNike));
+		
+	}
+	
 
 	@Then("^User click on the Find a Store button$")
 	public void user_click_on_the_Find_a_Store_button() throws Throwable {
@@ -197,5 +247,16 @@ public class R1SP1_KER_2339_Web_SD extends CommonActionHelper {
 		assertEquals(globalElementHeader.academyBreadcrumb.getText().toLowerCase(), "academy");
 		assertEquals(globalElementHeader.storeLocatorBreadcrumb.getText().toLowerCase(), "store locator");
 	}
+	
+	@Then("^User click on the breadcrumb last link$")
+	public void user_click_on_the_breadcrumb_last_link() throws Throwable {
+		driver.navigate().refresh();
+		waitForPageLoad(driver);
+		driver.navigate().refresh();
+		waitForPageLoad(driver);
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(globalElementHeader.lnkBreadcrumbLast));
+		}
+	} 
 
 }

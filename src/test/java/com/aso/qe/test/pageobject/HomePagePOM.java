@@ -16,7 +16,7 @@ public class HomePagePOM {
 	@FindBy(xpath="//a[@data-auid='HP_FC_Anchor_2']/h6")public WebElement prdTileFeaturedCategory;
 	@FindBy(xpath = "//a[text()='golf']") public WebElement result1;
 	@FindBy(xpath = "//a[text()='goop']") public WebElement result2;
-	@FindBy(xpath = "//a[text()='goal']") public WebElement result3;
+	@FindBy(xpath = "//a[text()='gogo']") public WebElement result3;
 	@FindBy(xpath = "//a[text()='good']") public WebElement result4;
 	@FindBy(xpath = "//a[text()='goofy']") public WebElement result5;
 	@FindBy(xpath="//*[contains(text(),'Sign In')]") public WebElement linkSignIn;
@@ -56,6 +56,7 @@ public class HomePagePOM {
 	@FindBy(xpath="//span[contains(text(),'Price (Low-High)')]") public WebElement selPriceLowToHigh;
 	@FindBy(xpath="//span[contains(text(),'Price (High-Low)')]") public WebElement selPriceHighToLow;
 	@FindBy(xpath="//span[contains(text(),'Brand (A-Z)')]")public WebElement selAtoB;
+	@FindBy(xpath="//span[contains(text(),'Best Selling')]")public WebElement selBestSelling;  //SID 16-August
 //	@FindBy(xpath="(//*[@class=\"mt-half\"]/*/*[2])[3]") public WebElement firstProductPrice;/RKA 8 july
 //	@FindBy(xpath="(//*[@class=\"mt-half\"]/*/*[2])[4]") public WebElement secondProductPrice;/RKA 8 july
 //	@FindBy(xpath="(//*[@class=\"mt-half\"]/*/*[2])[5]") public WebElement thirdProductPrice;/RKA 8 july
@@ -103,14 +104,21 @@ public class HomePagePOM {
 	//KER-3184 end	
 	
 	//KER-258 Start 
-	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[1]/following-sibling::*[5]")public WebElement productCarousel_1;
-	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[1]/following-sibling::*[6]")public WebElement productCarousel_2;
-	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[1]/following-sibling::*[7]")public WebElement productCarousel_3;
-	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/following-sibling::*[2]")public WebElement productCarousel_right;
-	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/following-sibling::*[1]")public WebElement productCarousel_left;
+//	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[1]/following-sibling::*[5]")public WebElement productCarousel_1;/RKA 16 aug
+//	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[1]/following-sibling::*[6]")public WebElement productCarousel_2;/RKA 16 aug
+//	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[1]/following-sibling::*[7]")public WebElement productCarousel_3;/RKA 16 aug
+//	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/following-sibling::*[2]")public WebElement productCarousel_right;/RKA 16 AUG
+//	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/following-sibling::*[1]")public WebElement productCarousel_left;/RKA 16 AUG
 	
+	
+	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[1]/*[1]")public WebElement productCarousel_1;
+	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[1]/*[2]")public WebElement productCarousel_2;
+	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[1]/*[3]")public WebElement productCarousel_3;
+	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/../preceding-sibling::*[2]")public WebElement productCarousel_right;
+	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/../preceding-sibling::*[1]")public WebElement productCarousel_left;
 	//Mobile
-	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[4]/*/*[1]")public WebElement imgProductCarousel_M;
+	//@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[4]/*/*[1]")public WebElement imgProductCarousel_M;/RKA 16 aug
+	@FindBy(xpath="//*[contains(@class,'col-8 col-md-4 pc')]")public WebElement imgProductCarousel_M;
 	//KER-258 End
 	
 	//KER-260 Start
@@ -120,8 +128,12 @@ public class HomePagePOM {
 	//KER- 260 End
 	
 	//KER-259 Start
-	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/*/*[2]/*[2]")public WebElement productCarouselIndicator_2;
-	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/*/*[2]/*[1]")public WebElement productCarouselIndicator_1;
+//	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/*/*[2]/*[2]")public WebElement productCarouselIndicator_2;/RKA 16 aug
+//	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/*/*[2]/*[1]")public WebElement productCarouselIndicator_1;/RKA 16 aug
+
+	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[2]/*[2]")public WebElement productCarouselIndicator_2;
+	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[2]/*[1]")public WebElement productCarouselIndicator_1;
+	
 	//KER-259 End
 	
 	public int getCategoryTileCount(WebElement categoryTileCount){

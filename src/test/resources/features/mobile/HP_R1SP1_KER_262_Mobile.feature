@@ -44,8 +44,10 @@ Feature: Verify presence of Socail Links from Homepage
   @Regression @Mobile @KER-262  @ZYP_HP_K262-4078 @C-HP @CR-RKA
   Scenario Outline: Verify the SignUp functionality for new customer
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    When user to click on sing in and navigate to sign in page
+#    Then User clicks on the burger menu
+#    When user to click on sing in and navigate to sign in page
+   Then User clicks on the burger menu
+    Then user should able to click on Signin button
     Then user to fill username "<username>" and password "<password>"
     When click sign in
 
@@ -56,8 +58,10 @@ Feature: Verify presence of Socail Links from Homepage
   @Regression @Mobile @KER-262  @ZYP_HP_K262-4085 @C-HP @CR-RKA
   Scenario Outline: To Verify the signout from MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    When user to click on sing in and navigate to sign in page
+#    Then User clicks on the burger menu
+#    When user to click on sing in and navigate to sign in page
+ Then User clicks on the burger menu
+    Then user should able to click on Signin button
     Then user to fill username "<username>" and password "<password>"
     When click sign in
     Then User clicks on the burger menu
@@ -70,8 +74,10 @@ Feature: Verify presence of Socail Links from Homepage
   @Regression @Mobile @KER-262  @ZYP_HP_K262-6468 @C-HP @CR-RKA
   Scenario Outline: To verify user can view 'My Account' from a drop down account summary upon successful log in
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    When user to click on sing in and navigate to sign in page
+#    Then User clicks on the burger menu
+#    When user to click on sing in and navigate to sign in page
+  Then User clicks on the burger menu
+    Then user should able to click on Signin button
     Then user to fill username "<username>" and password "<password>"
     And click sign in
     Then verify user to navigate to account summary page
@@ -83,8 +89,10 @@ Feature: Verify presence of Socail Links from Homepage
   @Regression @Mobile @KER-262  @ZYP_HP_K262-4073 @C-HP @CR-RKA
   Scenario Outline: Verify the Sign-in functionality for invalid email address
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    When user to click on sing in and navigate to sign in page
+#    Then User clicks on the burger menu
+#    When user to click on sing in and navigate to sign in page
+ Then User clicks on the burger menu
+    Then user should able to click on Signin button
     Then user to fill username "<username>" and password "<password>"
     And click sign in
     Then verify the validation message as incorrect
@@ -96,8 +104,10 @@ Feature: Verify presence of Socail Links from Homepage
   @Regression @Mobile @KER-262  @ZYP_HP_K262-4074 @C-HP @CR-RKA
   Scenario Outline: To Verify the Sign-in functionality for invalid  password
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    When user to click on sing in and navigate to sign in page
+#    Then User clicks on the burger menu
+#    When user to click on sing in and navigate to sign in page
+   Then User clicks on the burger menu
+    Then user should able to click on Signin button
     Then user to fill username "<username>" and password "<password>"
     And click sign in
     Then verify the validation message as incorrect
@@ -109,16 +119,20 @@ Feature: Verify presence of Socail Links from Homepage
   @Regression @Mobile @KER-262  @ZYP_HP_K262-4077 @C-HP @CR-RKA
   Scenario: Verify the Signin functionality for empty email address and empty password
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    When user to click on sing in and navigate to sign in page
+#    Then User clicks on the burger menu
+#    When user to click on sing in and navigate to sign in page
+  Then User clicks on the burger menu
+    Then user should able to click on Signin button
     And click sign in
     Then verify enter email and password message to come
 
   @C-HP @Mobile @Regression @KER-262  @ZYP_HP_K262-4079 @CR-RKA
   Scenario: Verify the forgot your password functionality
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    When user to click on sing in and navigate to sign in page
+#    Then User clicks on the burger menu
+#    When user to click on sing in and navigate to sign in page
+ Then User clicks on the burger menu
+    Then user should able to click on Signin button
     When user to be able to click forget password
     When user to enter email
     Then verify user to click submit button
@@ -126,8 +140,10 @@ Feature: Verify presence of Socail Links from Homepage
   @C-HP @Mobile @Regression @KER-262  @ZYP_HP_K262-4082 @CR-RKA
   Scenario Outline: Verify the Address Book details from MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    When user to click on sing in and navigate to sign in page
+#    Then User clicks on the burger menu
+#    When user to click on sing in and navigate to sign in page
+  Then User clicks on the burger menu
+    Then user should able to click on Signin button
     Then user to fill username "<username>" and password "<password>"
     And click sign in
     Then verify Address book form My Account
@@ -139,8 +155,10 @@ Feature: Verify presence of Socail Links from Homepage
   @C-HP @Mobile @Regression @KER-262  @ZYP_HP_K262-4083 @CR-RKA
   Scenario Outline: Verify the Wishlists details from MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    When user to click on sing in and navigate to sign in page
+#    Then User clicks on the burger menu
+#    When user to click on sing in and navigate to sign in page
+   Then User clicks on the burger menu
+    Then user should able to click on Signin button
     Then user to fill username "<username>" and password "<password>"
     And click sign in
     Then verify , WishList form My Account
@@ -152,8 +170,10 @@ Feature: Verify presence of Socail Links from Homepage
   @C-HP @Mobile @Regression @KER-262  @ZYP_HP_K262-2732 @CR-RKA
   Scenario: Mobile-Verify the Sign-In functionality for Guest User
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    When user to click on sing in and navigate to sign in page
+#    Then User clicks on the burger menu
+#    When user to click on sing in and navigate to sign in page
+ Then User clicks on the burger menu
+    Then user should able to click on Signin button
     Then user verify signup and signin 
     When user to be able to click forget password
     When user to enter email
@@ -205,8 +225,10 @@ Scenario Outline: Verify the global navigation
    And User navigates to L3
    And User clicks on the minicart icon and navigated to minicart 
    Then User should be dispalyed with message Your Shopping Cart is Empty   
-   Then User clicks on the burger menu
-   When user to click on sing in and navigate to sign in page
+#   Then User clicks on the burger menu
+#   When user to click on sing in and navigate to sign in page
+  Then User clicks on the burger menu
+    Then user should able to click on Signin button
    Then user to fill username "<username>" and password "<password>"
    And click sign in
    Then User clicks on the burger menu
@@ -224,8 +246,10 @@ Examples:
       Scenario Outline:  Verify the global navigation
        Given user launches the browser and navigates to "ASO_HOME" page
       Then User will verify the presence of ASO Logo and click on Logo 
-      Then User clicks on the burger menu
-      When user to click on sing in and navigate to sign in page
+#      Then User clicks on the burger menu
+#      When user to click on sing in and navigate to sign in page
+ Then User clicks on the burger menu
+    Then user should able to click on Signin button
      Then user to fill username "<username>" and password "<password>"
       And click sign in
       Then User clicks on the burger menu
@@ -242,8 +266,10 @@ Examples:
       @C-HP @Mobile @Regression @KER-262  @ZYP_HP_K262-4080 @CR-RKA
        Scenario Outline: Mobile-Verify the Account Summary details from MyAccount
         Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    When user to click on sing in and navigate to sign in page
+#    Then User clicks on the burger menu
+#    When user to click on sing in and navigate to sign in page
+ Then User clicks on the burger menu
+    Then user should able to click on Signin button
     Then user to fill username "<username>" and password "<password>"
     And click sign in
     Then verify Address book form My Account
@@ -254,11 +280,13 @@ Examples:
        
        
        
-        @C-HP @Mobile @Regression @KER-262  @ZYP_HP_K262-4084 @CR-RKA
+    @C-HP @Mobile @Regression @KER-262  @ZYP_HP_K262-4084 @CR-RKA
    Scenario Outline:To Verify the MyAccount dropdown
         Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    When user to click on sing in and navigate to sign in page
+#    Then User clicks on the burger menu
+#    When user to click on sing in and navigate to sign in page
+   Then User clicks on the burger menu
+    Then user should able to click on Signin button
     Then user to fill username "<username>" and password "<password>"
     And click sign in
     Then verify Address book form My Account
@@ -267,4 +295,14 @@ Examples:
       | username       | password |
       | qaz2@gmail.com | qazlee   |
        
-       
+     
+   @Mobile @All @C-HP @Regression @KER-262 @ZYP_HP_K262 @CR-RKA @BrokenLink
+   Scenario: TC_1- Verify all broken URL's on Home page
+    Given user launches the browser and navigates to "ASO_HOME" page
+    Then verfy all link url's status code is 200    
+    
+    @Mobile @All @C-HP @Regression @KER-262 @ZYP_HP_K262 @CR-RKA @BrokenImage
+   Scenario: TC_1- Verify all broken URL's on Home page
+    Given user launches the browser and navigates to "ASO_HOME" page
+    Then verfy all Image link urls status code is 200
+    

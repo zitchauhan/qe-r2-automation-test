@@ -33,13 +33,11 @@ Feature: To verify all sorting options are available
      
        
       @Mobile  @C-PLP @All @KER-615  @ZYP_PLP_K615-5606 @Regression @Rerun
-    Scenario Outline: Verify user is able to see all sorting option CLP by search
+    Scenario: Verify user is able to see all sorting option CLP by search
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box 
+    When user enters "SearchTerm" in the search box
     Then user is able to Most Relevant as a default sort option
-    Examples:   
-        |SearchTerm|
-		|Nike shoe|
+  
 											     
      
   

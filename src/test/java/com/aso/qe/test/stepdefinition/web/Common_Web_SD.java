@@ -115,6 +115,30 @@ public class Common_Web_SD extends CommonActionHelper{
 		}
 
 	}
+	
+	@Then ("^User navigates to L2 Mens clothing$")
+	public void User_navigate_to_L2_Mens_clothing() throws InterruptedException {
+		if("mobile".equalsIgnoreCase(testtype)){
+			
+			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(globalElementHeader.btnMenClothingShop));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(globalElementHeader. txtToNavigateMensCategoryMobile));
+			Thread.sleep(2000);
+
+		} else{
+			Thread.sleep(3000);
+			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
+			Thread.sleep(2000);
+			Actions hover = new Actions(getDriver());
+			hover.moveToElement(globalElementHeader.btnClothingCategory).build().perform();
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(globalElementHeader.btnMenClothingShop));
+			Thread.sleep(2000);
+		}
+
+	}
 
 	@Then ("^User navigates to L3$")
 	public void User_navigates_to_L3() throws InterruptedException {
@@ -152,5 +176,10 @@ public class Common_Web_SD extends CommonActionHelper{
 	@Then("^verfy all link url's status code is (\\d+)$")
 	public void verfy_all_link_url_s_status_code_is(int arg1) throws Throwable {
 		assertTrue(new ASOBrokenURLsLinks().getBrokenLinks(), ASOBrokenURLsLinks.errorText);
+	}
+	
+	@Then("^verfy all Image link urls status code is (\\d+)$")
+	public void verfy_all_image_link_url_s_status_code_is(int arg1) throws Throwable {
+		assertTrue(new ASOBrokenURLsLinks().getBrokenImageLinks(), ASOBrokenURLsLinks.errorText);
 	}
 }

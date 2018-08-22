@@ -8,7 +8,7 @@ Feature: To verify basic functionalities of PDP
     And user should be able to see PDP mention in the current url
     When user clicks on the Details and specs tab
     Then user should be able to see long description with feature and benefits section
-        When user clicks on Reviews tab
+    When user clicks on Reviews tab
     Then user should be able to see the reviews heading and section
     When user clicks on QandA tab
     Then user clicks should be able to see QandA section

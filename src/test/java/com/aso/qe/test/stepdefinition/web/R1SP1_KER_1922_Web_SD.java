@@ -17,8 +17,11 @@ public class R1SP1_KER_1922_Web_SD extends CommonActionHelper{
 
 	@Then("^user clicks on the product image to zoom$")
 	public void user_clicks_on_the_product_image_to_zoom() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)) {
+			  assertTrue(clickOnButton(pdpPageObj.imgClickToZoomMobile));
+		}else {
 	   assertTrue(clickOnButton(pdpPageObj.imgClickToZoom));
-	   
+		}
 	}
 
 	@Then("^user clicks on the cross button to close the zoomed image$")

@@ -21,11 +21,15 @@ public class R1SP1_KER_727_Web_SD extends CommonActionHelper{
 	
 	@When("^user to click on sing in and navigate to sign in page$")
 	public void user_to_click_on_sing_in_and_navigate_to_sign_in_page() throws Throwable {
-		         
-		if("mobile".equalsIgnoreCase(testtype)){	
-			scrollPageToWebElement(hp_p.linkSignIn_M);
-		   Thread.sleep(5000);
-			assertTrue(clickOnButton(hp_p.linkSignIn_M));
+		  // waitForElement(hp_p.linkSignIn_M);
+ 		if("mobile".equalsIgnoreCase(testtype)){	
+ 			Thread.sleep(1000);
+			clickOnButton(globalElementHeader.btnSHOPBurgerMenuMinusIcon);
+			Thread.sleep(1000);
+			scrollPageToWebElement(globalElementHeader.btnSignIn_mobile);
+			waitForElement(globalElementHeader.btnSignIn_mobile);
+			clickOnButton(globalElementHeader.btnSignIn_mobile);
+			Thread.sleep(1000);
 			
 		}else {
 		Thread.sleep(3000);

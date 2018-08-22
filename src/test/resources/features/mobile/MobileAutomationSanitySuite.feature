@@ -272,7 +272,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
 
     Examples: 
       | SearchTerm |
-      | ashokgowda |
+      | Columbia Sportswear Men's Dorado CVO PFG Boat Shoes |
  
   @AutomationSanity @AS1 @MAST-13
   Scenario Outline: TC_13-Verify Search Result Page(Facets,  Sort and Pagination)

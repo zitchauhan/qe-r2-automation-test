@@ -37,7 +37,7 @@ public class R1SP1_KER_263_Web_SD extends CommonActionHelper{
 	@Then("^user clicks on one of the product category and navigates to LThree page$")
 	public void user_clicks_on_one_of_the_product_category_and_navigates_to_LThree_page() throws Throwable {
 		Thread.sleep(2000);
-		assertTrue(clickOnButton(plp_PO.productPLP1));//8Aug danush
+		assertTrue(clickOnButton(plp_PO.secCategory_CLP));//8Aug danush
 		waitForPageLoad(driver);
 	}
 

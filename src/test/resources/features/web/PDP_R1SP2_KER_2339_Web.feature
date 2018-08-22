@@ -5,18 +5,20 @@ Scenario: Verify user is able to see a Breadcrumb to easily navigate between pag
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates till PLP 
 	Then User click on the product image 
-	Then User verify the last breadcrumb in the series should not be an active link 
-	Then User click on the breadcrumb last link 
+	Then User verify the last breadcrumb in the series should not be an active link for last link
+	Then User click on the breadcrumb last active link in PDP
 	And User verify the last breadcrumb in the series should not be an active link for last link 
-	Then User click on the breadcrumb last second link 
-	And User verify the last breadcrumb in the series should not be an active link for second link 
+	Then User click on the breadcrumb last active link in L3
+	And User verify the last breadcrumb in the series should not be an active link for last link  
+	Then User click on the breadcrumb last active link in L2
+	And User verify the last breadcrumb in the series should not be an active link for last link
+	Then User click on the breadcrumb last active link in L1
 
 @Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-9097 @CR-SG
 Scenario: Verify user is able to see Academy as anchor for all breadcrumbs(ex. brands) 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User click on the Shop tab 
-	Then User click on the brand btn 
-	Then User click on the nike name 
+	Then User click on the brand btn
 	And User verify that anchor is academy in breadcrumb 
 
 @Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-9098 @CR-SG @ZYP_PDP_K1921-3432
@@ -40,23 +42,23 @@ Scenario: Verify should be able to see breadcrumb from Search as: Academy> searc
 Scenario: [UI]-Verify the breadcrumb on L1 page-Desktop 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates to L1 
-	Then User verify the last breadcrumb in the series should not be an active link 
-	Then User click on the breadcrumb last link 
+	And User verify the last breadcrumb in the series should not be an active link for last link
+	Then User click on the breadcrumb last active link in L1
 	
 	
 @Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-6678 @CR-SG
 Scenario: [UI]-Verify the breadcrumb on L2 page-Desktop 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates to L2 
-	Then User verify the last breadcrumb in the series should not be an active link 
-	Then User click on the breadcrumb last link 
+	And User verify the last breadcrumb in the series should not be an active link for last link
+	Then User click on the breadcrumb last active link in L2
 	
 @Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-6679 @CR-SG
 Scenario: [UI]-Verify the breadcrumb on L3 page-Desktop 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates till PLP 
-	Then User verify the last breadcrumb in the series should not be an active link 
-	Then User click on the breadcrumb last link 
+	And User verify the last breadcrumb in the series should not be an active link for last link
+	Then User click on the breadcrumb last active link in L3
 	
 @Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-6683 @CR-SG
 Scenario: [UI]- Verify user should be able to see breadcrumb from store Locator landing page-Desktop 

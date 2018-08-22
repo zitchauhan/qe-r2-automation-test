@@ -65,14 +65,20 @@ public void user_to_navigate_to_verify_Ad_feature() throws Throwable {
 		 clickOnButton(pl_p.filter_M);
 		 scrollPageToWebElement(pl_p.adFeaturePlus_M);
 		 clickOnButton(pl_p.adFeaturePlus_M);
-		 isDisplayed(pl_p.hotDealOption_M);
-		 isDisplayed(pl_p.clearanceOption_M);
+		 if(isDisplayed(pl_p.hotDealOption_M)) {
+			 assertTrue(isDisplayed(pl_p.hotDealOption_M));
+		 }
+		 if(isDisplayed(pl_p.clearanceOption_M)) {
+			 assertTrue(isDisplayed(pl_p.clearanceOption_M));
+		 }
 	 }
 	 else {	
 	scrollPageToWebElement(pl_p.adFeaturePlus);
   assertTrue(clickOnButton(pl_p.adFeaturePlus));
-  assertTrue(isDisplayed(pl_p.hotDealOption));
-  assertTrue(isDisplayed(pl_p.clearanceOption));
+  if(isDisplayed(pl_p.hotDealOption)) {
+  assertTrue(isDisplayed(pl_p.hotDealOption));}
+  if(isDisplayed(pl_p.clearanceOption)) {
+  assertTrue(isDisplayed(pl_p.clearanceOption));}
 }}
 
 	
@@ -86,7 +92,7 @@ public void user_to_navigate_to_giftcart() throws Throwable {
 	  
 	   assertTrue(clickOnButton(pl_p.giftCardLink));
 	 
-	   assertTrue(clickOnButton(pl_p.shopGiftCardBtm));
+	   assertTrue(clickOnButton(pl_p.shopGiftCardBtm_M));
 	  
 
 	   

@@ -177,9 +177,9 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
 
 
   @Regression @Mobile  @C-PLP @All @KER-552  @ZYP_PLP_K552-6139  @1HR @Rerun
-  Scenario Outline: Verify user is able to expand/collapse filter options in Search Page Mobile
+  Scenario: Verify user is able to expand/collapse filter options in Search Page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box
+    When user enters "SearchTerm" in the search box
     Then User clicks on the filter flyout
     And User expands all Filter Options
     Then User should be able to see all Filter Options as expanded
@@ -187,14 +187,10 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be able to see all Filter Options as collapsed
     Then User closes the web application
 
-    Examples: 
-      | SearchTerm |
-      | Nike Shoe |
-
   @Regression @Mobile  @C-PLP @All @KER-552  @ZYP_PLP_K552-6141 @Rerun
-  Scenario Outline: Verify As a User I should be able to select/deselect multiple price values in Search Page Mobile
+  Scenario: Verify As a User I should be able to select/deselect multiple price values in Search Page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box
+    When user enters "SearchTerm" in the search box
     Then User clicks on the filter flyout
     And User expands PRICE Filter Option
     When User selects multiple PRICE filter Options
@@ -203,14 +199,10 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be able to see the deselected PRICE filter Options in deselected state
     Then User closes the web application
 
-    Examples: 
-      | SearchTerm |
-      | Nike Shoe |
-
   @Regression @Mobile  @C-PLP @All @KER-552  @ZYP_PLP_K552-6143 @Rerun
   Scenario Outline: Verify user is able to filter by price for search in Search Page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box
+    When user enters "SearchTerm" in the search box
     Then User clicks on the filter flyout
     And User expands PRICE Filter Option
     And user select the "<price>" in filter
@@ -220,28 +212,28 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User closes the web application
 
     Examples: 
-      | SearchTerm |  | price        |
-      | Nike Shoe |  | $10 - $19.99 |
+      | price        |
+      | $10 - $19.99 |
 
   @Regression @Mobile @C-PLP  @All @KER-552  @ZYP_PLP_K552-6145 @Rerun
   Scenario Outline: Verify user is able to filter by price for search in Search Page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
     #    When User enters in Required_Product with "<search_Value>" and click on Go button
     #    Then User should be navigated to Search_Page
-    When user enters "<SearchTerm>" in the search box
+    When user enters "SearchTerm" in the search box
     Then User clicks on the filter flyout
     And user select the "<price>" in filter
     # Then Verify the selected price range product is displayed in product grid
     Then User closes the web application
 
     Examples: 
-      | SearchTerm |  | search_Value | price          |
-      | Nike Shoe |  | Nike Shoes   | $100 - $199.99 |
+      | price          |
+      | $100 - $199.99 |
 
   @Regression @Mobile @C-PLP  @All @KER-552  @ZYP_PLP_K552-6147 @Rerun
   Scenario Outline: As a customer I should also be able to see how many items will populate within each price value prior to selecting it in Search Page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box
+    When user enters "SearchTerm" in the search box
     Then User clicks on the filter flyout
     And User expands PRICE Filter Option
     And user select the "<price>" in filter
@@ -251,5 +243,5 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then Verify the price filters product count with checkboxs product count should be equal
 
     Examples: 
-      | SearchTerm |  | price        |
-      | Nike Shoe |  | $10 - $19.99 |
+      | price        |
+      | $10 - $19.99 |

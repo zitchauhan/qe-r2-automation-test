@@ -1,6 +1,6 @@
 Feature: To Verify user is be able to filter the products based on Price Ranges
 
-  @SIT_UserJourney @ZYP_GLN_K6809-7078 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_GLN_K6809-7078 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
    Scenario: Verify Product grid on L3 
       Given user launches the browser and navigates to "ASO_HOME" page
       When user clicks on one of the category and navigates to LOne page
@@ -12,7 +12,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
 
  
 
-  @SIT_UserJourney @ZYP_GLN_K6809-7079 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_GLN_K6809-7079 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
   Scenario Outline: Verify As a User I should be able to select/deselect multiple price values in Search Page
     Given user launches the browser and navigates to "ASO_HOME" page
     When User enters in Required_Product with "<SearchTerm>" and click on Go button
@@ -28,7 +28,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | Nike Shoe  |
 
 
-    @SIT_UserJourney @ZYP_GLN_K6809-7081 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7081 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
   Scenario Outline: Verify the user should be shown a Null results page when the search term returns no matching relevant results
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
@@ -39,33 +39,22 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
       | SearchTerm |
       | Null  |
 
-    @SIT_UserJourney @ZYP_GLN_K6809-7082 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7082 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
   Scenario: Verify the user enters two characters into the search box and see predictive suggestions for matching keyword
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
     Then User verifies the predictive suggestions for matching keyword
-    #And User verifies the predictive suggestions for matching brand
-    #Then User should not see duplicates within predictive suggestions
     Then User closes the web application
 
-  
-
-
-    @SIT_UserJourney @ZYP_GLN_K6809-7083 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
-  Scenario Outline: Verify user is able to search for Product not sold
+    @SIT_UserJourney @ZYP_GLN_K6809-7083 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
+  Scenario: Verify user is able to search for Product not sold
     Given user launches the browser and navigates to "ASO_HOME" page
-    When User enters in Required_Product with "<SearchTerm>" and click on Go button
-    Then User is navigated to pdp page
-    And user should be able to see the name of the product in title
-    #And  user should be able to see Add to cart button and quantity section
-    Then user should verify the Product is not for sold online
+    When User enters in Required_Product with search term and click on Go button
+    Then user should verify the Product is not for sold in store
     Then User closes the web application
 
-    Examples: 
-      | SearchTerm                              |
-      | GLOCK G17 Gen5 9mm Semiautomatic Pistol |
 
-    @SIT_UserJourney @ZYP_GLN_K6809-7084 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7084 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
   Scenario: Verify User Journey form Cart to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user validate the cart icon
@@ -73,7 +62,6 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User is able to see the ASO_Logo
     Then User clicks on ASO Logo and should be navigated to Home Page
     When user clicks on one of the category and navigates to LOne page
-    #And user is able to see the product category name in section title.
     Then user clicks on one of the subcategory and navigates to LTwo page
     And user is able to see the product category name in section title.
     Then user clicks on one of the product category and navigates to LThree page
@@ -84,42 +72,39 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    #Then user should be able to click on Begin Checkout button
     Then user should verify the Guest checkout Page
     Then user click on Checkout as Guest button
     Then user should able to see shipping Address page
-    Then user should be able verify the order summary details
+    And user verify order summary
     Then user should enter the shipping Address details
     Then user click on continue to shipping method button
     Then user click on continue checkout button
-    Then user should able to verify the shipping address
-    And user should able to verify the shipping method
-    Then user should be able verify the order summary details
-    Then user should able to click on Continue to Payment button
-    When user should be able see the the payment method page and enter the creditcard details
+ 	And user verify order summary
+    And user enter the payment details
     Then user should click on continue to review button
     And user enter verified by visa password and click on submit button
-    When user should should be able see Order summary page
-    Then user should able to verify the Review shipping address
+    And user verify order summary
+    And user should able to verify the Review shipping address
     And user should able to verify the Review shipping method
-    When user should able to verify the billing address
-    When user should able to verify the payment method
-    Then user should be able verify the order summary details
+    And user should able to verify the billing address
+    And user should able to verify the payment method
     Then user should click on Place Order Now button
     Then User is able to see the ASO_Logo
     Then User clicks on ASO Logo and should be navigated to Home Page
+    Then User is able to see the ASO_Logo
+    Then User should be navigated to Home_Page
     Then User closes the web application
 
      
-  @SIT_UserJourney @ZYP_GLN_K6809-7085 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush 
+  @SIT_UserJourney @ZYP_GLN_K6809-7085 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID 
   Scenario: Verify the SignIn Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
-    And user should be able to enter the signin details
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then User closes the web application
 
   
-  @SIT_UserJourney @ZYP_GLN_K6809-7086 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_GLN_K6809-7086 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
   Scenario: Verify the SignUp Page
     Given user launches the browser and navigates to "ASO_HOME" page
      Then user should able to click on Signin button
@@ -128,11 +113,11 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
    Then User closes the web application
 
   
-  @SIT_UserJourney @ZYP_GLN_K6809-7087 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+  @SIT_UserJourney @ZYP_GLN_K6809-7087 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
   Scenario: Verify the SignUp to WishList Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
-    And user should be able to enter the signin details
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then user click on WishList link
     And user should verify the WishList page and create new Wishlist
     Then user should verify the created WishList
@@ -140,20 +125,20 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then user should delete the created WishList
     Then User closes the web application
 
-    @SIT_UserJourney @ZYP_GLN_K6809-7088 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+ @SIT_UserJourney @ZYP_GLN_K6809-7088 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
   Scenario: Verify the Signup to Account Summary page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
-    And user should be able to enter the signin details
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then user click on Account Summary link
     And user should verify the Account Summary page
     Then User closes the web application
 
-    @SIT_UserJourney @ZYP_GLN_K6809-7089 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+     @SIT_UserJourney @ZYP_GLN_K6809-7089 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
   Scenario: Verify the Signup to Address Book page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user should able to click on Signin button
-    And user should be able to enter the signin details
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then user click on Address Book link
     And user should verify the Address Book page
     Then user click on Add New Address button
@@ -165,11 +150,11 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user verify the delete address page and click on yes button
     Then User closes the web application
 
-    @SIT_UserJourney @ZYP_GLN_K6809-7090 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7090 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
   Scenario: Verify User Journey form Shop to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user clicks on one of the category and navigates to LOne page
-    #And user is able to see the product category name in section title.
+    And user is able to see the product category name in section title.
     Then user clicks on one of the subcategory and navigates to LTwo page
     And user is able to see the product category name in section title.
     Then user clicks on one of the product category and navigates to LThree page
@@ -183,23 +168,19 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then user should verify the Guest checkout Page
     Then user click on Checkout as Guest button
     Then user should able to see shipping Address page
-    Then user should be able verify the order summary details
+    And user verify order summary
     Then user should enter the shipping Address details
     Then user click on continue to shipping method button
     Then user click on continue checkout button
-    Then user should able to verify the shipping address
-    And user should able to verify the shipping method
-    Then user should be able verify the order summary details
-    Then user should able to click on Continue to Payment button
-    When user should be able see the the payment method page and enter the creditcard details
+ 	And user verify order summary
+    And user enter the payment details
     Then user should click on continue to review button
     And user enter verified by visa password and click on submit button
-    When user should should be able see Order summary page
-    Then user should able to verify the Review shipping address
+    And user verify order summary
+    And user should able to verify the Review shipping address
     And user should able to verify the Review shipping method
-    When user should able to verify the billing address
-    When user should able to verify the payment method
-    Then user should be able verify the order summary details
+    And user should able to verify the billing address
+    And user should able to verify the payment method
     Then user should click on Place Order Now button
     Then User is able to see the ASO_Logo
     Then User clicks on ASO Logo and should be navigated to Home Page
@@ -207,7 +188,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-    @SIT_UserJourney @ZYP_GLN_K6809-7094 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7094 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
   Scenario: Verify User Journey form Deals to Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User will verify the presence of deals category
@@ -220,27 +201,22 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    #Then user should be able to click on Begin Checkout button
     Then user should verify the Guest checkout Page
     Then user click on Checkout as Guest button
     Then user should able to see shipping Address page
-    Then user should be able verify the order summary details
+    And user verify order summary
     Then user should enter the shipping Address details
     Then user click on continue to shipping method button
     Then user click on continue checkout button
-    Then user should able to verify the shipping address
-    And user should able to verify the shipping method
-    Then user should be able verify the order summary details
-    Then user should able to click on Continue to Payment button
-    When user should be able see the the payment method page and enter the creditcard details
+ 	And user verify order summary
+    And user enter the payment details
     Then user should click on continue to review button
     And user enter verified by visa password and click on submit button
-    When user should should be able see Order summary page
-    Then user should able to verify the Review shipping address
+    And user verify order summary
+    And user should able to verify the Review shipping address
     And user should able to verify the Review shipping method
-    When user should able to verify the billing address
-    When user should able to verify the payment method
-    Then user should be able verify the order summary details
+    And user should able to verify the billing address
+    And user should able to verify the payment method
     Then user should click on Place Order Now button
     Then User is able to see the ASO_Logo
     Then User clicks on ASO Logo and should be navigated to Home Page
@@ -248,7 +224,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be navigated to Home_Page
     Then User closes the web application
 
-    @SIT_UserJourney @ZYP_GLN_K6809-7095 @KER-6809 @C-GlobalNavigationUJ @Web @CR-Danush
+    @SIT_UserJourney @ZYP_GLN_K6809-7095 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
   Scenario: Verify User Journey form Deals to PDP Page Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User will verify the presence of deals category
@@ -264,12 +240,12 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User is able to see the ASO_Logo
     Then User should be navigated to Home_Page
     Then user should able to click on Signin button
-    And user should be able to enter the signin details
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     When user clicks on one of the category and navigates to LOne page
-    #And user is able to see the product category name in section title.
+    And user is able to see the product category name in section title.
     Then user clicks on one of the subcategory and navigates to LTwo page
     And user is able to see the product category name in section title.
-    Then user clicks on one of the product category and navigates to LThree page
+    Then user clicks on product card and navigates to PDP page
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
@@ -277,24 +253,19 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user should be able to see Add to cart button and quantity section
     When user click on Add to cart button
     Then user click on checkout button
-    #Then user should able to see shipping Address page
-    Then user should be able verify the order summary details
-    #Then user should enter the shipping Address details
-    Then user click on continue to shipping method button
-    Then user click on continue checkout button
-    Then user should able to verify the shipping address
-    And user should able to verify the shipping method
-    Then user should be able verify the order summary details
-    Then user should able to click on Continue to Payment button
-    When user should be able see the the payment method page and enter the creditcard details
+    And user verify the shipping address
+    And user verify order summary
+    Then user click on continue shipping method button
+    And user verify shipping method and order summary
+    Then user click on continue payment button
+    And user enter the payment details
     Then user should click on continue to review button
     And user enter verified by visa password and click on submit button
-    When user should should be able see Order summary page
-    Then user should able to verify the Review shipping address
+    And user verify order summary
+    And user should able to verify the Review shipping address
     And user should able to verify the Review shipping method
-    When user should able to verify the billing address
-    When user should able to verify the payment method
-    Then user should be able verify the order summary details
+    And user should able to verify the billing address
+    And user should able to verify the payment method
     Then user should click on Place Order Now button
     Then User is able to see the ASO_Logo
     Then User clicks on ASO Logo and should be navigated to Home Page

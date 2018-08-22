@@ -64,7 +64,6 @@ Feature: [Web]  Product Card
     Then user verify product rating
     Then user to click on product name and navigate to PDP
 
-
   @C-PLP @Web @Regression @KER-224 @ZYP_PLP_K224-2890 @CR-RKA
   Scenario: Verify the Alternative color option in Product Card
     Given user launches the browser and navigates to "ASO_HOME" page

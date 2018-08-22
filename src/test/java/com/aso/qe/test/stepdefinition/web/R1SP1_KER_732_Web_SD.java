@@ -15,11 +15,12 @@ public class R1SP1_KER_732_Web_SD extends CommonActionHelper {
 	
 	@Then("^User click on Quick view button$")
 	public void user_click_on_Quick_view_button() throws Throwable {
-	  pdp_po.moveToPdpImage();
-	  Thread.sleep(5000);
-	  pdp_po.cilckQuickViewbutton();
-	  
-	  
+//	  pdp_po.moveToPdpImage();
+//	  //Thread.sleep(5000);
+//	  pdp_po.cilckQuickViewbutton();
+//	  
+	  moveHover(pdp_po.pdpImage);
+	  clickOnLink(pdp_po.btnQuickView);
 	}
 
 	@Then("^verify addcart or see details button is displayed\\.$")

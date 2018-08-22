@@ -5,17 +5,12 @@
     "inventory": {
       "type": "object",
       "properties": {
-        "store": {
-          "type": "array",
-          "items": {}
-        },
         "online": {
           "type": "array",
           "items": {}
         }
       },
       "required": [
-        "store",
         "online"
       ]
     },
@@ -116,6 +111,9 @@
             "productType": {
               "type": "string"
             },
+            "showBIS": {
+              "type": "string"
+            },
             "breadCrumb": {
               "type": "array",
               "items": {}
@@ -144,6 +142,7 @@
             "productPrice",
             "components",
             "productType",
+            "showBIS",
             "breadCrumb"
           ]
         }

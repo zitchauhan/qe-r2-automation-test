@@ -85,16 +85,24 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 	@When("^user clicks on the Details and specs tab$")
 	public void user_clicks_on_the_Details_and_specs_tab() throws Throwable {
 		scrollPageToWebElement(pdp_po.txtNotifiedBack);
+		if("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(pdp_po.tabDetailsSpecsMobile));
+		}else {
 		assertTrue(clickOnButton(pdp_po.tabDetailsSpecs));
-
+		}
 	}
 
 	@Then("^user should be able to see long description with feature and benefits section$")
 	public void user_should_be_able_to_see_long_description_with_feature_and_benefits_section() throws Throwable {
 
-		assertTrue(isDisplayed(pdp_po.secLongDescription));
+	//	assertTrue(isDisplayed(pdp_po.secLongDescription));
 		assertTrue(isDisplayed(pdp_po.textFeatureBenefits));
+		if("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(pdp_po.tabDetailsSpecsMobile));
+		}else {
 		assertTrue(clickOnButton(pdp_po.tabDetailsSpecs));
+		}
+		
 
 	}
 
@@ -121,23 +129,35 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 	@When("^user clicks on Reviews tab$")
 	public void user_clicks_on_Reviews_tab() throws Throwable {
 		scrollPageToWebElement(pdp_po.txtNotifiedBack);
+		if("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(pdp_po.tabReviewsMobile));
+		}else {
 		assertTrue(clickOnButton(pdp_po.tabReviews));
+		}
+	
 
 	}
 
 	@Then("^user should be able to see the reviews heading and section$")
 	public void user_should_be_able_to_see_the_reviews_heading_and_section() throws Throwable {
 
-		//		assertTrue(isDisplayed(pdp_po.ImgHallmark));
-		//		assertTrue(isDisplayed(pdp_po.textReviews)); Functionality is not displayed without Host Enteries. Bazar voice
-
-		assertTrue(clickOnButton(pdp_po.tabReviews));//Closing the drawer
+		if("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(pdp_po.tabReviewsMobile));
+		}else {
+		assertTrue(clickOnButton(pdp_po.tabReviews));
+		}
 	}
 
 	@When("^user clicks on QandA tab$")
 	public void user_clicks_on_QandA_tab() throws Throwable {
 		scrollPageToWebElement(pdp_po.txtNotifiedBack);
-		assertTrue(clickOnButton(pdp_po.tabQA)); 
+		if("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(pdp_po.tabQAMobile));
+		}else {
+		assertTrue(clickOnButton(pdp_po.tabQA));
+		}
+	
+		
 	}
 
 	@Then("^user clicks should be able to see QandA section$")
@@ -200,14 +220,14 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 				assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
 				Thread.sleep(1000);
 			}
-			setInputText(SearchProductPO.searchTextBoxMobile, searchText); 
+			setInputText(SearchProductPO.searchTextBoxMobile, webPropHelper.getTestDataProperty(searchText)); 
 			//SearchProductPO.searchTextBoxMobile.sendKeys(searchText);
 			assertTrue(clickOnButton(SearchProductPO.submitGOBtnMobile));
 			logger.debug("User entered search key :: " + searchText);
 			Thread.sleep(3000);
 		}else {
 			Thread.sleep(2000);
-			SearchProductPO.searchTextBox.sendKeys(searchText);
+			SearchProductPO.searchTextBox.sendKeys( webPropHelper.getTestDataProperty(searchText));
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(SearchProductPO.submitGOBtn));
 			Thread.sleep(2000);
@@ -224,10 +244,16 @@ public class R1SP1_KER_1926_Web_SD extends CommonActionHelper{
 
 	@Given("^user is able to see three tabs in the detail content section$")
 	public void user_is_able_to_see_three_tabs_in_the_detail_content_section() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(isDisplayed(pdp_po.tabReviewsMobile));
+			assertTrue(isDisplayed(pdp_po.tabDetailsSpecsMobile));
+			assertTrue(isDisplayed(pdp_po.tabQAMobile));
+		}else {
+		
 		assertTrue(isDisplayed(pdp_po.tabReviews));
 		assertTrue(isDisplayed(pdp_po.tabDetailsSpecs));
 		assertTrue(isDisplayed(pdp_po.tabQA));
-
+		}
 	}
 
 	@Then("^user is able to see the Details and specs tab by default open$")

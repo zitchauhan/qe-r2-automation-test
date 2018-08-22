@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.PDP_PO;
-import com.aso.qe.test.pageobject.SIT_HomePagePageObject;
+import com.aso.qe.test.pageobject.SIT_PO;
 
 import cucumber.api.java.en.Then;
 
@@ -16,7 +16,7 @@ public class R1SP1_KER_2725_Web_SD extends CommonActionHelper {
 	PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), PDP_PO.class);
 	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver,
 			GlobalElementHeader_HomePO.class);
-	public SIT_HomePagePageObject HomePagePo = PageFactory.initElements(driver, SIT_HomePagePageObject.class);
+	public SIT_PO HomePagePo = PageFactory.initElements(driver, SIT_PO.class);
 
 	@Then("^Verify the Promotional Eyebrow appears above the Product Name$")
 	public void verify_the_Promotional_Eyebrow_appears_above_the_Product_Name() throws Throwable {
@@ -55,7 +55,7 @@ public class R1SP1_KER_2725_Web_SD extends CommonActionHelper {
 	public void user_click_on_cta_in_Shop_Collection() throws Throwable {
 	
 		
-		HomePagePo.clickOnLink(SIT_HomePagePageObject.ShopCollectionCTA);
+		//clickOnLink(HomePagePo.ShopCollectionCTA);
 	
 		//clickOnLink(SIT_HomePagePageObject.ShopCollectionCTA);
 	}
@@ -71,4 +71,11 @@ public class R1SP1_KER_2725_Web_SD extends CommonActionHelper {
 		pdpPageObj.clickProdcutCardimage();
 	    
 	}
+	
+	@Then("^user verify the eyebrow ratings and the Promo message in PDP$")
+	public void user_verify_the_eyebrow_ratings_and_the_Promo_message_in_PDP()
+	{
+		assertTrue(pdpPageObj.checkPresence());
+		
+	} 
 }

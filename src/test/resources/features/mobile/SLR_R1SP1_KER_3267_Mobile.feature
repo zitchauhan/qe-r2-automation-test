@@ -44,4 +44,4 @@ Feature: Verify the user search for Customer Keyword/SKU Search Mobile
     And user verifies the entered SKU id
     Examples:
     |data|
-    |ashokgowda|
+    |Columbia Sportswear Men's Dorado CVO PFG Boat Shoes|

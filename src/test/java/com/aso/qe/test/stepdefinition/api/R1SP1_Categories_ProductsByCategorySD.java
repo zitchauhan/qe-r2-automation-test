@@ -204,7 +204,7 @@ public class R1SP1_Categories_ProductsByCategorySD extends JSONValidationUtils{
 	@Then("^Validate the Inventory Store Specification API Requried Property Value are not Null$")
 	public void validate_the_Inventory_Store_Specification_API_Requried_Property_Value_are_not_Null(List<String> propNameList) throws Throwable {
 		for(String propName:propNameList){
-			assertTrue(apiJsonResponse.verifyInventorySpecificationOnline(propName,"store"),Constants.API_ERROR_DESCRIPTION);
+			assertTrue(apiJsonResponse.verifyInventorySpecificationOnline(propName,"online"),Constants.API_ERROR_DESCRIPTION);
 		}
 	}
 	

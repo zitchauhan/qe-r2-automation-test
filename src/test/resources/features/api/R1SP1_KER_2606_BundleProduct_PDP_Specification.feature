@@ -22,8 +22,8 @@ Feature: To verify the BundleProduct PDP Specification API Services
   Scenario Outline: : Validate the BundleProduct PDP Specification with inventory Requried Property Values are not null
    Given "<BundleProductPDPUrl>" endpoint for BundleProduct PDP Specification
     Then read the API json response
-    And Validate the "inventory" with "store" API Requried Property Value are not Null
-      | bundleId |
+    #And Validate the "inventory" with "store" API Requried Property Value are not Null
+      #| bundleId |
       And Validate the "inventory" with "online" API Requried Property Value are not Null
       | bundleId |
 

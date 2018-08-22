@@ -12,7 +12,8 @@ public class FindStorePO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(FindStorePO.class);
 	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(getDriver(),GlobalElementHeader_HomePO.class);
 
-	@FindBy(xpath = "//*[contains(text(), 'Find a Store')]")public WebElement ovly_FindStore;
+	//@FindBy(xpath = "//*[contains(text(), 'Find a Store')]")public WebElement ovly_FindStore;/RKA 17 aug
+	@FindBy(xpath="(//*[contains(text(), 'Find a Store')])[2]")public WebElement ovly_FindStore;
 	@FindBy(xpath = "//input[@placeholder='Enter Zip Code or City, State']")public WebElement ovly_searchTextBox;
 	@FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']/span")public WebElement ovly_btnCloseCross;
 	@FindBy(xpath = "//*[@data-auid='submit-zip-code']/span")public WebElement ovly_btnGO;
@@ -21,11 +22,12 @@ public class FindStorePO extends CommonActionHelper {
 	@FindBy(xpath = "(//div[@data-auid='find-a-store-modal'])[2]/div[3]/div/div[text()='0 Stores were found within 250 miles of your search']")public WebElement txtNoStoreText;
     @FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']")public WebElement ovly_btnCloseContainer;
 	@FindBy(xpath = "//*[@data-auid='findAStore']/span[2]")public WebElement txtStroeText;
-	@FindBy(xpath = "//*[@data-auid='findAStore_m']/span[2]")public WebElement txtStroeText_m;
+	//@FindBy(xpath = "//*[@data-auid='findAStore_m']/span[2]")public WebElement txtStroeText_m;/RKA 17 aug
+	@FindBy(xpath="//*[@data-auid='findAStore_m']/*/*[1]/*[2]")public WebElement txtStroeText_m;
 	@FindBy(xpath="//*[@id='mainSearchText']") public WebElement txtStoreLocatorPage;
 	@FindBy(xpath="//*[@id='mainLoadStores']") public WebElement btnGoSearchStore;
 	@FindBy(xpath="//*[@class='myStoreLogo']//parent::div//following-sibling::ul//span[contains(@id,'screenReader')]") public WebElement imgMyStoreLogo;
-	
+	@FindBy(xpath="//*[@data-auid='find-a-store-modal-close']")public WebElement findAstoreXBTN_M;
 	
 	public FindStorePO(WebDriver webDriver) {
 		super();

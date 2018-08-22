@@ -30,7 +30,9 @@ public class R1SP1_KER_258_Web_SD extends CommonActionHelper{
 
 	@Then("^Verify product carosel is appearing on home page for mobile$")
 	public void verify_product_carosel_is_appearing_on_home_page_for_mobile() throws Throwable {
-	   assertTrue(isDisplayed(hp.imgProductCarousel_M));
+	  waitForPageLoad(driver);
+	  scrollPageToWebElement(hp.imgProductCarousel_M);
+		assertTrue(isDisplayed(hp.imgProductCarousel_M));
 	}
 	
 }

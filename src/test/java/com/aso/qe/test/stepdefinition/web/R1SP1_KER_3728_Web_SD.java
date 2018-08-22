@@ -31,16 +31,13 @@ public class R1SP1_KER_3728_Web_SD extends CommonActionHelper{
 	@Then("^verfiy the product details and features$")
 	public void verfiy_the_product_details_and_features() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(pdpPageObj.txtProdcutDetails));
-			Actions hover=new Actions(getDriver());
-			hover.moveToElement(pdpPageObj.txtDetails).build().perform();
 			assertTrue(isDisplayed(pdpPageObj.txtDetails_M));
 		}
 		else
 		{
-			assertTrue(isDisplayed(pdpPageObj.txtProdcutDetails));
-			scrollPageToWebElement(pdpPageObj.txtDetails);
-			assertTrue(isDisplayed(pdpPageObj.txtDetails));
+			assertTrue(isDisplayed(pdpPageObj.txtProductTitle));
+			scrollPageToWebElement(pdpPageObj.tabDetailsSpecs);
+			assertTrue(isDisplayed(pdpPageObj.tabDetailsSpecs));
 		}	
 		
 	}
