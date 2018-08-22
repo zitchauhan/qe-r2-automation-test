@@ -20,6 +20,9 @@ R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 //	 Start KER-2927 CR-SK
 	@FindBy(xpath = "//div[contains(text(), 'Estimated Taxes')]/following-sibling::div[1]")
 	public WebElement txtEstimatedTax;
+	
+	@FindBy(xpath = "//div[contains(text(), 'Total')]/following-sibling::div[1]")
+	public WebElement txtTotal;
 //	 End KER-2927 CR-SK
 
 	//start KER-6575 CR-MS

@@ -15,7 +15,8 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
+public class R2_AutomationSanitySuite_SD extends CommonActionHelper 
+{
 	private static final Logger logger = Logger.getLogger(R2_AutomationSanitySuite_SD.class);
 	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
@@ -165,8 +166,10 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 	
 	
 	@Then("^user click on Add to Cart Button$")
-	public void user_click_on_Add_to_cart_button() throws Throwable {
-		waitForElement(r2SanityPo.AS_btnAddToCart);
+	public void user_click_on_Add_to_cart_button() throws Throwable 
+	{
+		//waitForElement(r2SanityPo.AS_btnAddToCart);
+		pdpPageObj.addToCartAvailability();
 		assertTrue(clickOnButton(r2SanityPo.AS_btnAddToCart));
 		Thread.sleep(2000);
 	}

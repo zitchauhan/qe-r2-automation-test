@@ -79,6 +79,9 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//div[contains(text(), 'Estimated Taxes')]/following-sibling::div[1]")
 	public WebElement txtEstimatedTax;
 
+	@FindBy(xpath = "//div[contains(text(), 'Total')]/following-sibling::div[1]")
+	public WebElement txtTotal;
+
 	@FindBy(xpath = "//input[@data-auid='crt_inputQty']")
 	public WebElement txtQuantity;
 
@@ -168,21 +171,51 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "(//*[text()='Return Policy'])[2]")
 	public WebElement txtReturnPolicy;
+	// Start KER-3467 CR - SK
+	@FindBy(xpath = "//div[.='Sorry! There are no stores within 250 miles.Please order online or try new ZIP code.']")
+	public WebElement txtNoStoreErrorMessage;
+	// End KER-3467
+	// Start KER-2946 CR - SK
+	@FindBy(xpath = "//img[@alt='Visa']")
+	public WebElement iconVisa;
+
+	@FindBy(xpath = "//img[@alt='Master Card']")
+	public WebElement iconMasterCard;
+	
+	@FindBy(xpath = "//img[@alt='Paypal']")
+	public WebElement iconPaypal;
+	
+	@FindBy(xpath = "//img[@alt='Google Pay']")
+	public WebElement iconGooglePay;
+	
+	@FindBy(xpath = "//img[@alt='Apple Pay']")
+	public WebElement iconApplePay;
+	
+	@FindBy(xpath = "//img[@alt='Discover']")
+	public WebElement iconDiscover;
+	
+	@FindBy(xpath = "//img[@alt='American Express']")
+	public WebElement iconAmericanExpress;
+	
+	// End KER-2946
 	
 	//Start KER-2940 CR-AKK
 	@FindBy(xpath = "//li[@data-auid='miniCart']/div/a/span")
 	public WebElement iconMiniCart;
 	//End KER-2940 CR-AKK
-	
 	// Start KER-2942 CR-AKK
-	
-		@FindBy(xpath = "//div[@class='o-copy__14reg pl-1 pr-3 pr-sm-1 py-1']")
+			@FindBy(xpath = "//div[@class='o-copy__14reg pl-1 pr-3 pr-sm-1 py-1']")
 		public WebElement cartQtyErr;
 		
 		// End KER-2942 CR-AKK
 
+	// start ker-4231 CR-SK
+	@FindBy(xpath = "//span[@class='mini-cart-count']")
+	public WebElement miniCartCount;
+	// end ker-4231 CR-SK
+
 	// End KER-3127 CR-AKK
-	public void clickOnCartIcon() throws Exception {
+/*	public void clickOnCartIcon() throws Exception {
 
 		if (isDisplayed(cartIcon)) {
 			clickOnLink(cartIcon);
@@ -191,7 +224,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 			logger.debug("can't displayed Cart Icon");
 
 	}
-
+*/
 	public void compareCartEmptyTxt(String exceptedTxt) throws Exception {
 		String actualCartTxt = getText(cartEmptyTxt);
 		logger.debug("actualCartTxt:: " + actualCartTxt);
@@ -302,6 +335,13 @@ public class R2_Cart_PO extends CommonActionHelper {
 		return Float.parseFloat(taxDisplayed);
 	}
 
+	public float getTotaAmountOnCartPage() 
+	{
+		String totalAmountDisplayed = getText(txtTotal);
+		totalAmountDisplayed = totalAmountDisplayed.replace("$", "");
+		return Float.parseFloat(totalAmountDisplayed);
+	}
+
 	public void increaseQuantityOnCartPage(int differencValue) {
 		assertTrue(isDisplayed(txtQuantity));
 		String quantityDisplayed = txtQuantity.getAttribute("value").toString();
@@ -350,7 +390,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 		setInputText(txtZipCode, zipCode);
 		assertTrue(clickOnButton(btnZipCode));
 		assertTrue(clickOnButton(btnFindStoreClose));
-		assertTrue(clickOnButton(rbInStorePickUp));
+		
 		// End KER-2939 CR-AKK
 	}
 }

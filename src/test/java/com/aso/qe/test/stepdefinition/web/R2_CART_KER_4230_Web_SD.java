@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
+import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.Given;
@@ -14,8 +15,8 @@ import cucumber.api.java.en.Then;
 
 public class R2_CART_KER_4230_Web_SD extends CommonActionHelper {
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
-	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver,
-			GlobalElementHeader_HomePO.class);
+	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+	public R2_Cart_PO cartR2PageObj = PageFactory.initElements(driver, R2_Cart_PO.class);
 	public String defaultPassword = "DefaultPassword";
 	public String changedPassword = "ChangedPassword";
 
@@ -49,6 +50,19 @@ public class R2_CART_KER_4230_Web_SD extends CommonActionHelper {
 				changedPassword = "DefaultPassword";
 			}
 
+		}
+		
+		else if(emailID.contains("UserWithZeroProductsInCart")) {
+			setInputText(r2MyAccountPo.inputEmailAddress_SignIn, webPropHelper.getTestDataProperty("EmailAddressForZeroProductsInCart"));
+			setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty("Password"));
+			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
+			if(isDisplayed(cartR2PageObj.miniCartCount)) {
+				assertTrue(clickOnButton(cartR2PageObj.miniCartCount));
+				setInputText(cartR2PageObj.txtQuantity, "0");
+				if(isDisplayed(cartR2PageObj.txtQuantity))
+					tabInputBox(cartR2PageObj.txtQuantity);				
+			}		
+			
 		}
 	}
 
