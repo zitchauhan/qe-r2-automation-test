@@ -100,6 +100,39 @@ public class R2_MY_ACCOUNT_KER_4232_Web_SD extends CommonActionHelper {
 	@Then("^the new address gets saved$")
 	public void the_new_address_gets_saved() throws Throwable {
 	}
+	
+	@Given("^user makes a note of addresses displayed$")
+	public void user_makes_a_note_of_addresses_displayed() throws Throwable {
+		
+	    // Write code here that turns the phrase above into concrete actions
+//	    throw new PendingException();
+	}
+	
+	@When("^user clicks Remove button$")
+	public void user_clicks_Remove_button() throws Throwable {
+		
+	    // Write code here that turns the phrase above into concrete actions
+//	    throw new PendingException();
+	}
+
+	@Then("^user should see delete notification$")
+	public void user_should_see_delete_notification() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+//	    throw new PendingException();
+	}
+
+	@When("^user clicks on undo link$")
+	public void user_clicks_on_undo_link() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+//	    throw new PendingException();
+	}
+
+	@Then("^undo deletion action is performed$")
+	public void undo_deletion_action_is_performed() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+//	    throw new PendingException();
+	}
+	
 		
 
 }

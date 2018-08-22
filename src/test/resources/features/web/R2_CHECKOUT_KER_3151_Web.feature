@@ -69,9 +69,10 @@ Scenario: Verify  If the user has already changed/added an address within an act
 	@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-10655 @CR-AKK 
 	Scenario: Verify The list of addresses will be from newest added to oldest.
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user creates an account and signs in
-		|firstName |lastName|email						   |password |confirmPassword|
-		|automation|user	|automationuser@academymail.com|Pass@1234|Pass@1234		 |
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
 	And user clicks on one of the category and navigates to LOne 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 

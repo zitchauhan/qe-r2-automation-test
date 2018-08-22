@@ -11,6 +11,7 @@ import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -116,12 +117,14 @@ public class R2_MyAccount_KER_4249_Web_SD extends CommonActionHelper {
 
 	@When("^user enter the valid emailaddress \"(.*?)\"$")
 	public void user_enter_the_valid_emailaddress(String arg1) throws Throwable {
-		setInputText(r2MyAccountPo.inputEmailAddress_SignIn, webPropHelper.getTestDataProperty(arg1));
+		if(arg1 != "BlankEmailAddress")
+			setInputText(r2MyAccountPo.inputEmailAddress_SignIn, webPropHelper.getTestDataProperty(arg1));
 	}
 
 	@When("^user enter the valid password \"(.*?)\"$")
 	public void user_enter_the_valid_password(String arg1) throws Throwable {
-		setInputText(r2MyAccountPo.inputCreatePassword,webPropHelper.getTestDataProperty(arg1));
+		if(arg1 != "BlankPassword")
+			setInputText(r2MyAccountPo.inputCreatePassword,webPropHelper.getTestDataProperty(arg1));
 	}
 
 

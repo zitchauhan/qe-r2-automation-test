@@ -1,5 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import org.apache.log4j.Logger;
+
 import com.aso.qe.framework.common.CommonActionHelper;
 
 import cucumber.api.java.en.Given;
@@ -7,7 +9,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class R2_CHECKOUT_KER_3151_Web_SD extends CommonActionHelper {
-
+	private static final Logger logger = Logger.getLogger(R2_CHECKOUT_KER_3151_Web_SD.class);
+	
 	@Given("^user adds an address$")
 	public void user_adds_an_address() throws Throwable {
 
@@ -30,7 +33,13 @@ public class R2_CHECKOUT_KER_3151_Web_SD extends CommonActionHelper {
 
 	@When("^user is navigated to order summary page$")
 	public void user_is_navigated_to_order_summary_page() throws Throwable {
-
+		String currentURL = getCurrentPageURL();
+		if(currentURL.contains("checkout")) {
+			logger.debug("User is successfully navigated to Checkout page with URL :: " + currentURL  );
+		}
+		else {
+			logger.debug("User is not able to navigate to Checkout instead navigated to URL :: " + currentURL  );
+		}
 	}
 
 	@Then("^user verifies the default shipping address in the drop down$")

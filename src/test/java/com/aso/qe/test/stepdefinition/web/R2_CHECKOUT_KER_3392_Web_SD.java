@@ -19,6 +19,7 @@ public class R2_CHECKOUT_KER_3392_Web_SD extends CommonActionHelper {
 	
 	@Then("^user will click on Checkout button$")
 	public void user_will_click_on_Checkout_button() throws Throwable {
+		scrollPageToWebElement(r2SanityPo.AS_btnCheckout);
 		assertTrue(clickOnButton(r2SanityPo.AS_btnCheckout));  
 	}
 	

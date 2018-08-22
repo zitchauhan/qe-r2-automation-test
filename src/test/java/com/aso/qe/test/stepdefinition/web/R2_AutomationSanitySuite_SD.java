@@ -1,15 +1,14 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
 
 import org.apache.log4j.Logger;
-
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.PDP_PO;
+import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.java.en.And;
@@ -21,6 +20,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), PDP_PO.class);
+	R2_Cart_PO r2CartPo = PageFactory.initElements(getDriver(), R2_Cart_PO.class);
 	
 	public String quantityprice;
 	public String modifiedQuantityprice;
@@ -108,13 +108,13 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper {
 	@Then("^click the Remove Quantity link$")
 	public void click_the_Remove_Quantity_link() throws Throwable {
 		assertTrue(clickOnButton(r2SanityPo.AS_btnRemoveFromCart));
-		Thread.sleep(50000);
+		Thread.sleep(5000);
 	}
 
 	@And("^verify item is removed from the cart$")
 	public void verify_item_is_removed_from_the_cart() throws Throwable {
-		waitForElement(r2SanityPo.AS_btnRemoveFromCart);
-		assertFalse(isDisplayed(r2SanityPo.AS_btnRemoveFromCart));
+		waitForElement(r2CartPo.btnCrtSignIn);
+		assertTrue(isDisplayed(r2CartPo.btnCrtSignIn));
 	    
 	}
 

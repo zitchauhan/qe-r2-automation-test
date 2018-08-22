@@ -1,7 +1,7 @@
 Feature: Verify Promotional Messaging in Cart 
 
     @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2941 @ZYP_CART_K2941-8070 @CR-DPK
-    Scenario Outline: To verify discounts to specific items displayed at the item level (Free Shipping, BOGO, Gift With Purchase)          
+    Scenario: To verify discounts to specific items displayed at the item level (Free Shipping, BOGO, Gift With Purchase)          
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on one of the category and navigates to LOne
     Then user clicks on one of the subcategory and navigates to LTwo
@@ -12,11 +12,9 @@ Feature: Verify Promotional Messaging in Cart
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	And user view and Applied Promotions/Discounts"<PromoCode>" (promo code, Military ID, Promotions)
+	And user view and Applied Promotions/Discounts "PromoCode"
 	Then verify the discounts to specific items are displayed at the item level (Free Shipping, BOGO, Gift With Purchase)
-	Examples:
-     | PromoCode  |
-     | CPO015CVLP |
+	
 	
 	
 
