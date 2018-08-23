@@ -1,0 +1,22 @@
+{
+"billingAddress": {
+"addressLine1": "sssss",
+"addressLine2": "333 square",
+"addressType": "BB",
+"city": "plano",
+"country": "US",
+"email1": "abc@abc.com",
+"firstName": "santosh",
+"lastName": "kumar",
+"phone1": "9898909124",
+"state": "TX",
+"zipCode": "75025"
+},
+"correlationId": "12345888",
+"creditCardHolderName": "santosh",
+"creditCardNumber": "4111111111111133",
+"defaultFlag": true,
+"expiryDate": "0220",
+"token": "0245152126058289",
+"type": "VISA"
+}

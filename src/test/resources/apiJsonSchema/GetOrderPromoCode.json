@@ -1,0 +1,174 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "getpromocode": {
+      "type": "object",
+      "properties": {
+        "resourceId": {
+          "type": "string"
+        },
+        "promotionCode": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "associatedPromotion": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "promotionId": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "promotionId",
+                        "description"
+                      ]
+                    }
+                  ]
+                },
+                "code": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "associatedPromotion",
+                "code"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "associatedPromotion": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "promotionId": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "promotionId",
+                        "description"
+                      ]
+                    }
+                  ]
+                },
+                "code": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "associatedPromotion",
+                "code"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "associatedPromotion": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "promotionId": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "promotionId",
+                        "description"
+                      ]
+                    }
+                  ]
+                },
+                "code": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "associatedPromotion",
+                "code"
+              ]
+            }
+          ]
+        },
+        "channel": {
+          "type": "object",
+          "properties": {
+            "description": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "language"
+              ]
+            },
+            "userData": {
+              "type": "null"
+            },
+            "channelIdentifer": {
+              "type": "object",
+              "properties": {
+                "channelName": {
+                  "type": "string"
+                },
+                "uniqueID": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "channelName",
+                "uniqueID"
+              ]
+            }
+          },
+          "required": [
+            "description",
+            "userData",
+            "channelIdentifer"
+          ]
+        },
+        "resourceName": {
+          "type": "string"
+        },
+        "orderId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "resourceId",
+        "promotionCode",
+        "channel",
+        "resourceName",
+        "orderId"
+      ]
+    }
+  },
+  "required": [
+    "getpromocode"
+  ]
+}
