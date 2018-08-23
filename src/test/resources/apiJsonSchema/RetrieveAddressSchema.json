@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "lastName": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "addressType": {
+          "type": "string"
+        },
+        "phone1": {
+          "type": "string"
+        },
+        "email1": {
+          "type": "string"
+        },
+        "addressId": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "addressLine1": {
+          "type": "string"
+        },
+        "addressLine2": {
+          "type": "string"
+        },
+        "nickName": {
+          "type": "string"
+        },
+        "defaultAddress": {
+          "type": "boolean"
+        },
+        "zipCode": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "lastName",
+        "state",
+        "addressType",
+        "phone1",
+        "email1",
+        "addressId",
+        "country",
+        "city",
+        "addressLine1",
+        "addressLine2",
+        "nickName",
+        "defaultAddress",
+        "zipCode",
+        "firstName"
+      ]
+    }
+  ]
+}

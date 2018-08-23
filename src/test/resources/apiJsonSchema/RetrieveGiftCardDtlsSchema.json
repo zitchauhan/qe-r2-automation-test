@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "giftCardNumber": {
+          "type": "string"
+        },
+        "giftCardPin": {
+          "type": "string"
+        },
+        "giftCardBalance": {
+          "type": "string"
+        },
+        "xwalletId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "giftCardNumber",
+        "giftCardPin",
+        "giftCardBalance",
+        "xwalletId"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "giftListCount": {
+      "type": "integer"
+    },
+    "gifts": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "null"
+            },
+            "id": {
+              "type": "string"
+            },
+            "itemCount": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "itemCount"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "giftListCount",
+    "gifts"
+  ]
+}
