@@ -34,6 +34,26 @@ public class R2_CHECKOUT_KER_6824_Web_SD extends CommonActionHelper {
 	public void verify_Gift_Card_in_order_summary_page() throws Throwable {
 		assertTrue(isDisplayed(r2_CheckOut_Po.txtGiftCardOrderSummaryPage));
 	}
+	
+	@And("^verify Gift Card Number field$")
+	public void verify_Gift_Card_Number_field() throws Throwable {
+		assertTrue(isDisplayed(r2_CheckOut_Po.txtGiftcardNumber));
+	}
+
+	@And("^verify Pin Field$")
+	public void verify_Pin_Field() throws Throwable {
+		assertTrue(isDisplayed(r2_CheckOut_Po.txtPin));
+	}
+
+	@And("^verify \\+ Add another Gift Card$")
+	public void verify_Add_another_Gift_Card() throws Throwable {
+	    
+	}
+
+	@And("^verify Hide Gift Card$")
+	public void verify_Hide_Gift_Card() throws Throwable {
+		assertTrue(isDisplayed(r2_CheckOut_Po.minusIconGiftCard));
+	}
 
 	
 

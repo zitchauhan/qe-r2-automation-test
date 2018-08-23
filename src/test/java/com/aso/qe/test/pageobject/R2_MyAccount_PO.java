@@ -120,7 +120,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//span[text()='Password']")
 	public WebElement txtPasswordDescription;
 
-	@FindBy(xpath = "//a[text()='Forgot Your Password']")
+	@FindBy(xpath = "//a[contains(text(),'Forgot Your Password')]")
 	public WebElement txtForgotYourPasswordDescription;
 	
 	@FindBy(xpath = "//button[text()='Forgot Your Password']")

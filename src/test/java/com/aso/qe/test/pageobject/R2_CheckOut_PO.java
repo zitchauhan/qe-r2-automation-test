@@ -1,4 +1,7 @@
 package com.aso.qe.test.pageobject;
+import java.util.List;
+
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -6,8 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 
 public class R2_CheckOut_PO extends CommonActionHelper{
-	
+	private static final Logger logger = Logger.getLogger(R2_CheckOut_PO.class);	
 R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
+public String nullvalue="";
 
 	// start KER-3392 CR-RK
 	@FindBy(xpath = "//*[@data-auid='checkout_unauth_description_signin_link']")
@@ -15,6 +19,9 @@ R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 
 	@FindBy(xpath = "//*[contains(text(),'Sign In')]")
 	public WebElement lnkSignIn_CheckOut;
+	
+	@FindBy(xpath = "//*[@data-auid='email-signup-main-modal-close']")
+	public WebElement iconClose;
 
 	// End KER-3392 CR-RK
 //	 Start KER-2927 CR-SK
@@ -85,12 +92,30 @@ R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 			
 	// End KER-6821 CR-DPK	
 		
+		
+		// Start KER-3152 CR-DPK
+		@FindBy(xpath = "//*[@data-auid='checkout_edit_shipping_address']")
+		public WebElement btnEditShippingAddress;
+		
+		// End KER-3152 CR-DPK
+		
 		// Start KER-6824 CR-DPK
 		
 		@FindBy(xpath = "//*[text()='Gift Cards']/..")
 		public WebElement txtGiftCardOrderSummaryPage;
 		
 		// End KER-6824 CR-DPK
+		
+		// Start KER-2934 CR-DPK
+		@FindBy(xpath = "//*[@name='zipCode']/../span")
+		public WebElement txtZipcodeerrormsg;
+		
+		@FindBy(xpath = "//input[@type='text']")
+		public List<WebElement> inputShippingAddressfield;
+		
+		
+				
+		// End KER-2934 CR-DPK
 		
 		// Start KER-6575 CR-SK
 		

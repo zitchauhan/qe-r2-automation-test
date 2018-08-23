@@ -59,6 +59,84 @@ public class R2_Cart_PO extends CommonActionHelper {
 	public WebElement txtInvalidPromo;
 	// End KER-3169 CR-DPK
 
+	// Start KER-2940 CR-DPK
+	@FindBy(xpath = "//*[contains(text(),'Promocode')]/..")
+	public WebElement txtPromocode;
+
+	@FindBy(xpath = "//*[text()='$']/following::div")
+	public WebElement txtActualPrice;
+
+	@FindBy(xpath = "(//*[text()='$'])[1]")
+	public WebElement txtPromoPrice;
+
+	@FindBy(xpath = "(//*[text()='$'])[2]")
+	public WebElement txtActualPrice2;
+	// End KER-2940 CR-DPK
+	
+	// Start KER-2872 CR-DPK
+			@FindBy(xpath = "(//*[@data-auid='findAStore'])[1]")
+			public WebElement lnkFindaStoreHomePage;
+			
+			@FindBy(xpath = "//*[@data-auid='find-a-store']/input")
+			public WebElement inputFindaStoreHomePage;
+			
+			@FindBy(xpath = "//*[@data-auid='submit-zip-code']")
+			public WebElement btnZipcodeSubmit;
+			
+			
+			@FindBy(xpath = "(//*[@data-auid='find-a-store-modal'])[2]/../div[1]/div[2]")
+			public WebElement txtStoreResult;
+			
+			@FindBy(xpath = "//h2[text()='Find A Store']")
+			public WebElement txtFindaStore;
+			
+			@FindBy(xpath = "//*[@data-auid='btnfind-a-store-see-more-button']")
+			public WebElement btnViewTheNext5Stores;
+			
+			@FindBy(xpath = "//*[contains(text(),'Sorry')]")
+			public WebElement txtStaticErrorMsg;
+			
+			@FindBy(xpath = "(//*[@class='academyicon icon-plus '])[1]")
+			public WebElement iconPlusStoreAddressDrawer;
+			
+			@FindBy(xpath = "//*[@class='academyicon icon-plus ']")
+			public List<WebElement> iconPlusAllStoreAddressDrawer;
+			
+			@FindBy(xpath = "//*[@class='academyicon icon-minus']")
+			public WebElement iconMinusStoreAddressDrawer;
+			
+			
+			@FindBy(xpath = "(//*[@data-auid='btnfind-a-store-mystore-button'])[1]")
+			public WebElement btnMakeMyStore;
+			
+			@FindBy(xpath = "//*[@data-auid='btnfind-a-store-mystore-button']")
+			public List<WebElement> btnAllMakeMyStore;
+			
+			@FindBy(xpath = "(//*[@data-auid='facetdrawerundefined'])/div/div/div/div/div")
+			public WebElement txtAddress;
+			
+			@FindBy(xpath = "(//*[@data-auid='facetdrawerundefined'])/div/div/div/div[2]/div[1]")
+			public WebElement txtPhoneNumber;
+			
+			@FindBy(xpath = "(//*[@data-auid='facetdrawerundefined'])/div/div/div/div[2]/div[2]")
+			public WebElement txtDrivingDirection;
+			
+			@FindBy(xpath = "(//*[@data-auid='facetdrawerundefined'])/div/div/div/div/div[2]")
+			public WebElement txtStoreOpendays_hours;
+			
+			
+			@FindBy(xpath = "(//*[@data-auid='find-a-store-modal'])[2]/div/div")
+			public WebElement googleMap;
+			
+			@FindBy(xpath = "//*[text()='Your Store']")
+			public WebElement txtYourStore;
+			
+			
+			@FindBy(xpath = "//*[@data-auid='facetdrawerundefined']//*[contains(text(),'mi')]")
+			public List<WebElement> txtDistanceinMiles;
+			
+			// End KER-2872 CR-DPK
+	
 	// Start KER-3511 CR-DPK
 
 	@FindBy(xpath = "//*[text()='Change ZIP code']")
@@ -248,18 +326,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	
 	
 
-	// Start KER-2940 CR-DPK
-	@FindBy(xpath = "//*[contains(text(),'Promocode')]/..")
-	public WebElement txtPromocode;
 
-	@FindBy(xpath = "//*[text()='$']/following::div")
-	public WebElement txtActualPrice;
-
-	@FindBy(xpath = "(//*[text()='$'])[1]")
-	public WebElement txtPromoPrice;
-
-	@FindBy(xpath = "(//*[text()='$'])[2]")
-	public WebElement txtActualPrice2;
 
 	@SuppressWarnings("unlikely-arg-type")
 	public void verifySubtotal() {

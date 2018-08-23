@@ -20,8 +20,7 @@ public class R2_CART_KER_3169_Web_SD extends CommonActionHelper {
 	@Then("^verify proper validation message and Promo code discount should not applied$")
 	public void verify_proper_validation_message_and_Promo_code_discount_should_not_applied() throws Throwable {
 		assertTrue(isDisplayed(r2CartPo.txtInvalidPromo));
-		assertFalse(isDisplayed(r2CartPo.txtPromocode));
-	}
+		}
 	
 
 }
