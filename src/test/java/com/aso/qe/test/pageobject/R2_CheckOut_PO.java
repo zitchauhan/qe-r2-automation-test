@@ -138,4 +138,40 @@ public String nullvalue="";
 	
 	@FindBy(xpath="(//*[@data-auid='btnc_btnCheckout'])[1]")
 	public WebElement btnChekOut;
+	//End KER-2940 CR-AKK
+	
+	//Start KER-3163 CR-AKK
+	@FindBy(xpath="//input[@name='zipCode']/../span")
+	public WebElement msgZipCode;	
+	//End KER-3163 CR-AKK
+	
+	// Start KER-3167 CR-AKK
+		@FindBy(xpath = "//*[text()='Promocode']/../div[2]")
+		public WebElement discountAmt;
+
+		@FindBy(xpath = "//*[text()='Promocode']/..")
+		public WebElement promotxt;
+
+		@FindBy(xpath = "//button[@data-auid='crt_btnRmPromo_0']")
+		public WebElement removeCpnBtn;
+
+		@FindBy(xpath = "//*[@data-auid='crt_btnRmPromo_0']/../../div[1]")
+		public WebElement promoAddedTxt;
+		
+		@FindBy(xpath = "//*[@data-auid='miniCart']/div")
+		public WebElement clickMiniCart;
+		
+		// End KER-3167 CR-AKK
+		
+		//Start KER-6821 CR-AKK
+		@FindBy(xpath = "//a[@data-auid='checkout_payment_add_gift_card_icon']")
+		public WebElement lnkGiftCard;
+		
+		@FindBy(xpath = "//input[@data-auid='checkout_payment_gift_card_number_field']")
+		public WebElement inputGiftCard;
+		
+		@FindBy(xpath = "//input[@data-auid='checkout_payment_gift_card_pin_field']")
+		public WebElement inputPin;
+		
+		//End KER-6821 CR-AKK
 }

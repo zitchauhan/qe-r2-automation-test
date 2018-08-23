@@ -10,7 +10,7 @@ import com.aso.qe.test.pageobject.R2_Cart_PO;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
-public class R2_CART_KER_3127_SD_Web2 extends CommonActionHelper {
+public class R2_CART_KER_3127_SD_Web extends CommonActionHelper {
 
 	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
 
@@ -34,6 +34,19 @@ public class R2_CART_KER_3127_SD_Web2 extends CommonActionHelper {
 	@Then("^User is navigated to Return Policy page$")
 	public void user_is_navigated_to_Return_Policy_page() throws Throwable {
 		assertTrue(isDisplayed(r2CartPo.txtReturnPolicy));
+	}
+	
+	@Then("^User verifies the accepted payment icons\\( paypal/VISA/Mastercard/America express/Discover\\)$")
+	public void user_verifies_the_accepted_payment_icons_paypal_VISA_Mastercard_America_express_Discover()
+			throws Throwable {
+		scrollPageToWebElement(r2CartPo.iconVisa);
+		assertTrue(isDisplayed(r2CartPo.iconVisa));
+		assertTrue(isDisplayed(r2CartPo.iconMasterCard));
+		assertTrue(isDisplayed(r2CartPo.iconPaypal));
+		assertTrue(isDisplayed(r2CartPo.iconGooglePay));
+		assertTrue(isDisplayed(r2CartPo.iconApplePay));
+		assertTrue(isDisplayed(r2CartPo.iconAmericanExpress));
+		assertTrue(isDisplayed(r2CartPo.iconDiscover));
 	}
 
 }

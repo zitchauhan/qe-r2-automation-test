@@ -170,6 +170,7 @@ public class R2_CART_KER_2939_SD_Web extends CommonActionHelper {
 	@When("^user will verify in-store pick up radio button is selected with \"(.*?)\"$")
 	public void user_will_verify_in_store_pick_up_radio_button_is_selected_with(String arg1) throws Throwable {
 		r2CartPo.selectStore(webPropHelper.getTestDataProperty(arg1));
+		assertTrue(clickOnButton(r2CartPo.rbInStorePickUp));
 	}
 	
 	@Then("^user will verify Shipping radio button is deselected$")

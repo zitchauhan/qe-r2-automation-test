@@ -2,6 +2,8 @@ package com.aso.qe.test.pageobject;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
@@ -282,10 +284,10 @@ public class R2_Cart_PO extends CommonActionHelper {
 	public WebElement iconMiniCart;
 	//End KER-2940 CR-AKK
 	// Start KER-2942 CR-AKK
-			@FindBy(xpath = "//div[@class='o-copy__14reg pl-1 pr-3 pr-sm-1 py-1']")
-		public WebElement cartQtyErr;
-		
-		// End KER-2942 CR-AKK
+	@FindBy(xpath = "//*[contains(text(),'Promocode')]/../div[2]")
+			public WebElement txtPromoCodePrice;
+	
+    // End KER-2942 CR-AKK
 
 	// start ker-4231 CR-SK
 	@FindBy(xpath = "//span[@class='mini-cart-count']")
