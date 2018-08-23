@@ -17,18 +17,18 @@ Feature: Verify MyAccount Address API endpoint services
     And validate jsonSchema "RetrieveAddressSchema"
     Then Verify response status code as 200
 
-  @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-04 @CR-VK
-  Scenario: TC_4 - Retrieve shipping address details from a Profile
-    Given "Addurl" endpoint with "/shippingAddress" for getting address of a profile
-    Then Verify response status code as 200
-
+  #@All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-04 @CR-VK
+  #Scenario: TC_4 - Retrieve shipping address details from a Profile
+    #Given "Addurl" endpoint with "/shippingAddress" for getting address of a profile
+    #Then Verify response status code as 200
+#
   #And validate jsonSchema "RetrieveAddressSchema"
   #Then Verify response status code as 200
-  @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-05 @CR-VK
-  Scenario: TC_5 - Retrieve billing address details from a Profile
-    Given "Addurl" endpoint with "/billingAddress" for getting address of a profile
-    Then Verify response status code as 200
-
+  #@All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-05 @CR-VK
+  #Scenario: TC_5 - Retrieve billing address details from a Profile
+    #Given "Addurl" endpoint with "/billingAddress" for getting address of a profile
+    #Then Verify response status code as 200
+#
   #And validate jsonSchema "RetrieveAddressSchema"
   #Then Verify response status code as 200
   @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-06 @CR-VK
