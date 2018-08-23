@@ -23,20 +23,10 @@ public class R2_MyAccount_KER_4232_Web_SD extends CommonActionHelper {
 		
 	}
 
-	@When("^user enters valid \"(.*?)\" and \"(.*?)\" clicks on Login$")
-	public void user_enters_valid_and_clicks_on_Login(String email, String password) throws Throwable {
-		setInputText(myAccountPo.emailAddress, email);
-		setInputText(myAccountPo.password, password);
-		assertTrue(clickOnButton(myAccountPo.logIn));
-				
-		
-	}
-
 	@Then("^user lands on My Account page and click on adress$")
 	public void user_lands_on_My_Account_page_and_click_on_adress() throws Throwable {
 		waitForElement(myAccountPo.addressBook);
 		assertTrue(clickOnButton(myAccountPo.addressBook));
-		Thread.sleep(10000);
 	}
 
 	@Then("^user Clicks on Add New Address link$")
@@ -77,28 +67,6 @@ public class R2_MyAccount_KER_4232_Web_SD extends CommonActionHelper {
 	@Then("^user views State field is displayed$")
 	public void user_views_State_field_is_displayed() throws Throwable {
 		//assertTrue(isDisplayed(myAccountPo.sta));
-	}
-	
-	@Given("^user enters addressfields firstName \"(.*?)\" lastName \"(.*?)\" PhoneNumber \"(.*?)\" Address \"(.*?)\" ZipCode \"(.*?)\"$")
-	public void user_enters_addressfields_firstName_LastName_PhoneNumber_Address_ZipCode(String firstName, String lastName, String PhoneNumber, String Address, String ZipCode) throws Throwable {
-		setInputText(myAccountPo.adr_inpFirstName, firstName);
-		setInputText(myAccountPo.adr_inpLastName, lastName);
-		setInputText(myAccountPo.adr_inpPhoneNumber, PhoneNumber);
-		setInputText(myAccountPo.adr_inpAddress1, Address);
-		setInputText(myAccountPo.adr_inpzipCode, ZipCode);
-		
-	}	
-
-	@Given("^user selects state$")
-	public void user_selects_state() throws Throwable {
-	}
-
-	@Given("^clicks on Add New Address button$")
-	public void clicks_on_Add_New_Address_button() throws Throwable {
-	}
-
-	@Then("^the new address gets saved$")
-	public void the_new_address_gets_saved() throws Throwable {
 	}
 	
 	@Given("^user makes a note of addresses displayed$")

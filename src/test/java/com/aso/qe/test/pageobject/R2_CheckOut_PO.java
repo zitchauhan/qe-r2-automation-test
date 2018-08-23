@@ -117,6 +117,13 @@ public String nullvalue="";
 				
 		// End KER-2934 CR-DPK
 		
+			//start KER-2926 CR-MS
+	
+	
+	@FindBy(xpath = "//*[text()='Remove from Cart'] | //*[@data-auid='crt_btnRmvFromCart_710320043']")
+	public WebElement AS_btnRemoveFromCart;
+	//End KER-2926 CR-MS
+		
 		// Start KER-6575 CR-SK
 		
 		@FindBy(xpath="//*[@data-auid='checkout_header_logo_target_link']")

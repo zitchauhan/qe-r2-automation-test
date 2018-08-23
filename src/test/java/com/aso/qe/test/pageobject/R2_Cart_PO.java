@@ -138,6 +138,26 @@ public class R2_Cart_PO extends CommonActionHelper {
 			public List<WebElement> txtDistanceinMiles;
 			
 			// End KER-2872 CR-DPK
+			
+			
+			//Start KER-3613 Store Locator
+            @FindBy(xpath="//*[text()='Find a Store']")
+            public WebElement linkStoreLocator;           
+            
+            @FindBy(xpath="(//*[@data-auid='find-a-store-modal'])[2]")
+            public WebElement fieldStoreModal; 
+            
+            @FindBy(xpath="//*[@data-auid='submit-zip-code']/span")
+            public WebElement submitZipCode; 
+            
+            //@FindBy(xpath="//*[@data-auid='submit-zip-code']")
+            @FindBy(xpath = "//*[@name='zipcode']")
+            public WebElement textzipCode; 
+            
+            @FindBy(xpath="//*[text()='Closest Stores to Your Location']")
+            public WebElement storeDetails;
+            //End KER-3613 Store Locator
+
 	
 	// Start KER-3511 CR-DPK
 
@@ -297,6 +317,11 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//span[@class='mini-cart-count']")
 	public WebElement miniCartCount;
 	// end ker-4231 CR-SK
+	
+	//Start KER-2926 CR-MS
+		@FindBy(xpath = "//*[text()='YOUR CART IS EMPTY']")
+		public WebElement cartEmptyMsg;
+		//End KER-2926 CR-MS
 
 	// End KER-3127 CR-AKK
 /*	public void clickOnCartIcon() throws Exception {

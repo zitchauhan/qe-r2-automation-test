@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
+import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -17,6 +18,7 @@ import cucumber.api.java.en.When;
 public class R2_CART_KER_3511_Web_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R2_CART_KER_3511_Web_SD.class);
 	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
+	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	public String beforeChangeZipcode;
 	public String afterChangeZipcode;
 	
@@ -50,5 +52,10 @@ public class R2_CART_KER_3511_Web_SD extends CommonActionHelper {
 			logger.info("Estimated shipping cost is not updated based on zip code change");
 		}
 	}
+	
+	@Then("^Verify that estimated shipping is displayed on the basis of detected Geo location$")
+	public void verify_that_estimated_shipping_is_displayed_on_the_basis_of_detected_Geo_location() throws Throwable {		
+		assertTrue(isDisplayed(r2SanityPo.AS_txtEstimatedShippingCart));		
+	  }
 
 }

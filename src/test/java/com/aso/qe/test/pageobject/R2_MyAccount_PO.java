@@ -89,7 +89,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='address']")
 	public WebElement addressBook;
 
-	@FindBy(xpath = "//*[@data-auid='btnundefined']")
+	@FindBy(xpath = "//*[text()='ADD NEW ADDRESS']")
 	public WebElement addNewAddressBtn;
 
 	@FindBy(xpath = "//*[@name='firstName']")
