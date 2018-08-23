@@ -26,7 +26,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "(//input[@type='text'])[3]")
 	public WebElement inputEmailAddress;
 
-	@FindBy(xpath = "//input[@type='password']")
+	@FindBy(xpath = "(//div[.='Create Password']/following-sibling::div/input)[1]") // modified by CR- SK
+																					// "//input[@type='password']")
 	public WebElement inputCreatePassword;
 
 	@FindBy(xpath = "//input[@type='checkbox']")
@@ -143,7 +144,10 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//p[.='The combination of Email Address and Password is incorrect. Please try again.']")
 	public WebElement txtIncorrectCombinationError;
-	
+
+	@FindBy(xpath = "//p[contains(text(), 'Sorry, we do not have an account registered with this email address. Please enter a registered email address or create a new account')]")
+	public WebElement txtUnregisteredEmailAddressError; // 23 Aug
+
 	@FindBy(xpath = "//span[.='Please enter the Email Address in a valid format (ex. abc@xyz.com)']")
 	public WebElement txtInvalidEmailAddressError;
 	
@@ -185,6 +189,15 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement btnUpdate;
 	// End KER-4230 CR-SK
+
+	// Start KER-4249 CR-SK 23-Aug
+	@FindBy(xpath = "//button[.='Show']")
+	public WebElement btnShow;
+
+	@FindBy(xpath = "//button[.='Hide']")
+	public WebElement btnHide;
+	// End KER-4249 CR-SK 23-Aug
+
 	// Start KER-3152 CR-AKK
 		@FindBy(xpath = "//input[@type='text']")
 		public WebElement inputEmail;

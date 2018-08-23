@@ -140,6 +140,10 @@ public String nullvalue="";
 	public WebElement btnChekOut;
 	//End KER-2940 CR-AKK
 	
+	@FindBy(xpath = "//div[contains(text(), 'has been applied')]")
+	public WebElement txtGiftCardAppliedSuccessMessage;
+
+	
 	//Start KER-3163 CR-AKK
 	@FindBy(xpath="//input[@name='zipCode']/../span")
 	public WebElement msgZipCode;	
@@ -162,6 +166,9 @@ public String nullvalue="";
 		public WebElement clickMiniCart;
 		
 		// End KER-3167 CR-AKK
+		
+		@FindBy(xpath = "//*[@data-auid='checkout_payment_remove_gift_card_icon']")
+     	public WebElement btnRemoveGiftCard;
 		
 		//Start KER-6821 CR-AKK
 		@FindBy(xpath = "//a[@data-auid='checkout_payment_add_gift_card_icon']")

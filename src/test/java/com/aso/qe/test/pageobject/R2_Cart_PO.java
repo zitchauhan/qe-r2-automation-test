@@ -279,6 +279,10 @@ public class R2_Cart_PO extends CommonActionHelper {
 	
 	// End KER-2946
 	
+	//Start KER-2871 CR-SK
+	@FindBy(xpath = "(//*[@data-auid='findAStore'])[1]//span[2]")
+	public WebElement txtStoreLocator;
+	
 	//Start KER-2940 CR-AKK
 	@FindBy(xpath = "//li[@data-auid='miniCart']/div/a/span")
 	public WebElement iconMiniCart;

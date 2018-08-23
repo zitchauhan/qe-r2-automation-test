@@ -15,16 +15,14 @@ Scenario: Verify user is able to create an account with all valid data
 	And clicks on SignUp link from SignIn page 
 	And user enter first "FirstName" 
 	And user enter last "LastName" 
-	And user enter email "Address" 
-	And user enter password "Password1" 
+	And user enter random email Address
+	And user enter password "Password1"
 	And user click optin checkbox 
 	And clicks on Sign Up Button 
 	And user should see the successfull message
 	And user should be able to view My Account in global header
-	
-
-		
-@R2_Web @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10163 @CR-RK 
+			
+@R2_Web @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10163 @CR-RK
 Scenario: Verify the user is able to sign with the new created account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -32,7 +30,15 @@ Scenario: Verify the user is able to sign with the new created account
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then user should get logged in successfully 
-				
-				
-				
+	
+@R2_Web @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10161 @CR-SK 
+Scenario: Verify the user is able to see the unmasked password 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page 
+	When user enter password "Password1" 
+	Then user should see password masked 
+	When clicks on the Show label
+	Then user entered password should get unmasked displaying the characters 
+	And the label should get toggled to Hide 
 	

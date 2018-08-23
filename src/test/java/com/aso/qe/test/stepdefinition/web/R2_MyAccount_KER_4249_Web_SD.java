@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.support.PageFactory;
@@ -11,7 +12,6 @@ import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -20,7 +20,7 @@ public class R2_MyAccount_KER_4249_Web_SD extends CommonActionHelper {
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver,
 			GlobalElementHeader_HomePO.class);
-	
+
 	@When("^user clicks on SignIn link from global header$")
 	public void user_clicks_on_Sign_In_link_from_global_header() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.lnkSignIn));
@@ -54,14 +54,13 @@ public class R2_MyAccount_KER_4249_Web_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2MyAccountPo.txtWeak));
 		assertTrue(isDisplayed(r2MyAccountPo.txtStrong));
 	}
-	
+
 	@When("^user enter create password$")
 	public void user_enter_create_password() throws Throwable {
-		String password=PropertiesHelper.getInstance().getTestDataProperty("password"); 
-		setInputText(r2MyAccountPo.inputCreatePassword,password);
+		String password = PropertiesHelper.getInstance().getTestDataProperty("password");
+		setInputText(r2MyAccountPo.inputCreatePassword, password);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
-
 
 	@When("^user click optin checkbox$")
 	public void user_click_optin_checkbox() throws Throwable {
@@ -74,14 +73,14 @@ public class R2_MyAccount_KER_4249_Web_SD extends CommonActionHelper {
 	}
 
 	@When("^user should see the successfull message$")
-	public void user_should_see_the_successfull_message() throws Throwable {	
+	public void user_should_see_the_successfull_message() throws Throwable {
 	}
 
 	@When("^user should be able to view My Account in global header$")
 	public void user_should_be_able_to_view_My_Account_in_global_header() throws Throwable {
 
 	}
-	
+
 	@When("^user click on signin button$")
 	public void user_click_on_signin_button() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
@@ -92,10 +91,9 @@ public class R2_MyAccount_KER_4249_Web_SD extends CommonActionHelper {
 
 		assertTrue(isDisplayed(r2MyAccountPo.txtMyAccountDescription));
 	}
-	
 
 	@When("^user enter first \"(.*?)\"$")
-	public void user_enter_first(String arg1) throws Throwable { 
+	public void user_enter_first(String arg1) throws Throwable {
 		setInputText(r2MyAccountPo.inputFirstName, webPropHelper.getTestDataProperty(arg1));
 	}
 
@@ -104,29 +102,50 @@ public class R2_MyAccount_KER_4249_Web_SD extends CommonActionHelper {
 		setInputText(r2MyAccountPo.inputLastName, webPropHelper.getTestDataProperty(arg1));
 	}
 
-	@When("^user enter email \"(.*?)\"$")
-	public void user_enter_email(String arg1) throws Throwable {
-		setInputText(r2MyAccountPo.inputEmailAddress, webPropHelper.getTestDataProperty(arg1));
+	@When("^user enter random email Address$")
+	public void user_enter_email() throws Throwable {
+		UUID uuid = UUID.randomUUID();
+		String randomUUIDString = uuid.toString();
+		String txtemailaddress_random = "abc" + randomUUIDString + "@gmail.com";
+		setInputText(r2MyAccountPo.inputEmailAddress, txtemailaddress_random);
 	}
 
 	@When("^user enter password \"(.*?)\"$")
 	public void user_enter_password(String arg1) throws Throwable {
-		setInputText(r2MyAccountPo.inputCreatePassword,webPropHelper.getTestDataProperty(arg1));
+		setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty(arg1));
 	}
-
 
 	@When("^user enter the valid emailaddress \"(.*?)\"$")
 	public void user_enter_the_valid_emailaddress(String arg1) throws Throwable {
-		if(arg1 != "BlankEmailAddress")
+		if (arg1 != "BlankEmailAddress")
 			setInputText(r2MyAccountPo.inputEmailAddress_SignIn, webPropHelper.getTestDataProperty(arg1));
 	}
 
 	@When("^user enter the valid password \"(.*?)\"$")
 	public void user_enter_the_valid_password(String arg1) throws Throwable {
-		if(arg1 != "BlankPassword")
-			setInputText(r2MyAccountPo.inputCreatePassword,webPropHelper.getTestDataProperty(arg1));
+		if (arg1 != "BlankPassword")
+			setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty(arg1));
 	}
 
+	@Then("^user should see password masked$")
+	public void user_should_see_password_masked() throws Throwable {
+		assertTrue(r2MyAccountPo.inputCreatePassword.getAttribute("type").equalsIgnoreCase("password"));
+	}
 
+	@Then("^clicks on the Show label$")
+	public void clicks_on_the_Show_label() throws Throwable {
+		if (isDisplayed(r2MyAccountPo.btnShow))
+			assertTrue(clickOnButton(r2MyAccountPo.btnShow));
+	}
+
+	@Then("^user entered password should get unmasked displaying the characters$")
+	public void user_entered_password_should_get_unmasked_displaying_the_characters() throws Throwable {
+		assertTrue(r2MyAccountPo.inputCreatePassword.getAttribute("type").equalsIgnoreCase("text"));
+	}
+	
+	@Then("^the label should get toggled to Hide$")
+	public void the_label_should_get_toggled_to_Hide() throws Throwable {
+	    assertTrue(isDisplayed(r2MyAccountPo.btnHide));
+	}
 
 }
