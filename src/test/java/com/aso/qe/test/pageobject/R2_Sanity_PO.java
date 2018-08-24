@@ -8,7 +8,12 @@ import org.openqa.selenium.support.FindBy;
 import com.aso.qe.framework.common.CommonActionHelper;
 
 public class R2_Sanity_PO extends CommonActionHelper {
+	
+	/**************** START LOCAL OBJETCS AND DECLARATIONS ***********************/
+	
+	/*************** END LOCAL OBJETCS AND DECLARATIONS ************************/
 
+	/***************************** START XPAHTS**********************************/
 	@FindBy(xpath = "//*[@data-auid='btnAddToCart']")
 	public WebElement AS_btnAddToCart;
 	@FindBy(xpath = "//*[@data-auid='crt_btnCheckoutTop']")
@@ -30,11 +35,11 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	@FindBy(xpath = "//button[@data-auid='submitSearchButton'] | //*[@data-auid='search-clear-button']")
 	public WebElement AS_btnGO;
 	@FindBy(xpath = "//*[@data-auid='level4Category-Shirts_m'] | //*[@data-auid='go-to-Mens_m'] | //*[@data-auid='level4Category-Shirts'] | //*[@data-auid='shopByCategory_3']")
-	public WebElement AS_btnMensShirt_Men_Clothing_Shop;// Aug18 danush
+	public WebElement AS_btnMensShirt_Men_Clothing_Shop;
 	@FindBy(xpath = "//*[@data-auid='shopbycategorysection']//*[@data-auid='shopByCategory_1']")
 	public WebElement AS_secCategory_CLP;
 	@FindBy(xpath = "(//*[contains(@data-auid,'productCard_')])[5]")
-	public WebElement AS_productPLP1;// Aug18 danush
+	public WebElement AS_productPLP1;
 
 	@FindBy(xpath = "(//a[contains(@data-auid,'productCard_')])[1]")
 	public WebElement AS_productPLP1_Mobile;
@@ -42,7 +47,7 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnviewCart']")
 	public WebElement AS_btnViewCart;
 
-	@FindBy(xpath = "//*[@data-auid='btnc_btnCheckout']") //AK
+	@FindBy(xpath = "//*[@data-auid='btnc_btnCheckout']") 
 	public WebElement AS_btnCheckout;
 
 	@FindBy(xpath = "//div[contains(@data-component,'sectionTitle')]")
@@ -106,7 +111,9 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(),'YOUR CART')]")
 	public WebElement AS_txtYourCart;
 	// End Sanity CR-DPK
+	/***************************** END XPAHTS***********************************/
 
+	/***************************** START METHODS********************************/
 	public void clickAddToCart() throws Exception {
 		assertTrue(clickOnButton(AS_btnAddToCart));
 	}
@@ -142,5 +149,6 @@ public class R2_Sanity_PO extends CommonActionHelper {
 		assertTrue(clickOnButton(AS_btnCartSubmit));
 		Thread.sleep(2000);
 	}
+	/***************************** END METHODS*********************************/
 
 }

@@ -100,7 +100,37 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 	    // Write code here that turns the phrase above into concrete actions
 //	    throw new PendingException();
 	}
-	
+	@Then("^user enter First name \"(.*?)\" in address book$")
+	public void user_enter_First_name_in_address_book(String arg1) throws Throwable {
+		setInputText(myAccountPo.adr_inpFirstName, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@Then("^user enter Last name \"(.*?)\" in address book$")
+	public void user_enter_Last_name_in_address_book(String arg1) throws Throwable {
+		setInputText(myAccountPo.adr_inpLastName, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@Then("^user enter Phone number \"(.*?)\" in address book$")
+	public void user_enter_Phone_number_in_address_book(String arg1) throws Throwable {
+		setInputText(myAccountPo.adr_inpPhoneNumber, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@Then("^user enter Address \"(.*?)\" in address book$")
+	public void user_enter_Address_in_address_book(String arg1) throws Throwable {
+		setInputText(myAccountPo.adr_inpAddress1, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@Then("^user enter Zipcode \"(.*?)\" in address book$")
+	public void user_enter_Zipcode_in_address_book(String arg1) throws Throwable {
+		setInputText(myAccountPo.adr_inpzipCode, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@Given("^clicks on Add New Address button$")
+	public void clicks_on_Add_New_Address_button() throws Throwable {
+		
+		assertTrue(clickOnButton(myAccountPo.btnAdd));
+	}
+
 		
 
 }

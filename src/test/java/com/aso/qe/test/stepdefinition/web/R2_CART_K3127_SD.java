@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
+import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -13,6 +14,8 @@ import cucumber.api.java.en.Then;
 public class R2_CART_K3127_SD extends CommonActionHelper {
 
 	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
+	R2_CheckOut_PO r2CheckOutPo= PageFactory.initElements(driver,R2_CheckOut_PO.class);
+
 
 	@And("^User verifies and click the shipping policy link$")
 	public void user_verifies_and_click_the_shipping_policy_link() throws Throwable {
@@ -47,6 +50,12 @@ public class R2_CART_K3127_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CartPo.iconApplePay));
 		assertTrue(isDisplayed(r2CartPo.iconAmericanExpress));
 		assertTrue(isDisplayed(r2CartPo.iconDiscover));
+	}
+	@Then("^user will click on Paypal radio button$")
+	public void user_will_click_on_Paypal_radio_button() throws Throwable {
+		Thread.sleep(1000);
+		waitForElement(r2CheckOutPo.rdPaypal);
+		assertTrue(clickOnButton(r2CheckOutPo.rdPaypal));
 	}
 
 }
