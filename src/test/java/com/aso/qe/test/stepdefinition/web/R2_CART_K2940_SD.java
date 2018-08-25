@@ -193,29 +193,12 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CartPo.txtSubtotalCart));
 	}
 	
-	@Then("^discount value applied against the individual line item$")
-	public void discount_value_applied_against_the_individual_line_item() throws Throwable {
-	   
-	}
+	
 
 	@Then("^customer must see the following at Order Summary in Cart \\(Promo Code and associated discount as -\\$XX\\.XX \\(must be total order discount\\)\\)$")
 	public void customer_must_see_the_following_at_Order_Summary_in_Cart_Promo_Code_and_associated_discount_as_$XX_XX_must_be_total_order_discount() throws Throwable {
 	    
 	}
 
-	@Then("^total price must be updated to reflect discount$")
-	public void total_price_must_be_updated_to_reflect_discount() throws Throwable {
-	    
-	}
-
-	@Then("^associated discount should get remove$")
-	public void associated_discount_should_get_remove() throws Throwable {
-	    
-	}
-
-	@Then("^total price must be updated with reflect amount$")
-	public void total_price_must_be_updated_with_reflect_amount() throws Throwable {
-	    
-	}
 }
 

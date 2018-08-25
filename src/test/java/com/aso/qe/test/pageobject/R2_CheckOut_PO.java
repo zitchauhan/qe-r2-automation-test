@@ -115,6 +115,32 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	// start KER-2926 CR-MS
 	@FindBy(xpath = "//*[text()='Remove from Cart'] | //*[@data-auid='crt_btnRmvFromCart_710320043']")
 	public WebElement AS_btnRemoveFromCart;
+	
+	// CR-AKK 25Aug
+	@FindBy(xpath = "//div[text()='Subtotal']/..")
+	public WebElement txtSubTotal;
+	
+	@FindBy(xpath = "//div[text()='Estimated Shipping']/..")
+	public WebElement txtEsitmatedShipping;
+	
+
+	@FindBy(xpath = "//div[text()='Estimated Taxes']/..")
+	public WebElement txtExtimatedTax;
+	
+	@FindBy(xpath ="//div[text()='Total Discount']/..")
+	public WebElement txtTotalDiscount;
+	
+	@FindBy(xpath ="//*[@data-auid='checkout_order_summary_shipping_items']")
+	public WebElement txtDetailOrderSummary;
+	
+	@FindBy(xpath ="//*[@data-auid='facetdrawerundefined']//button//div[2]")
+	public WebElement txtItems;
+	
+	@FindBy(xpath ="//*[text()='Quantity']/../div[2]")
+	public WebElement txtQuantity;
+	
+	//CR-AKK 25Aug
+	
 	// End KER-2926 CR-MS
 
 	// Start KER-6575 CR-SK

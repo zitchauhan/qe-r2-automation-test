@@ -52,4 +52,30 @@ public class R2_CHECKOUT_K6575_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CheckoutPo.logoHeader));
 	}
 
+	@Then("^verify the presence of the following in the Order Summary$")
+	public void verify_the_presence_of_the_following_in_the_Order_Summary() throws Throwable {
+		assertTrue(isDisplayed(r2CheckoutPo.txtSubTotal));		
+		assertTrue(isDisplayed(r2CheckoutPo.txtEsitmatedShipping));
+		assertTrue(isDisplayed(r2CheckoutPo.txtExtimatedTax));	
+		assertTrue(isDisplayed(r2CheckoutPo.txtTotalDiscount));
+	}
+	
+	@Then("^user verifies item summary of Shipping items$")
+	public void user_verifies_item_summary_of_Shipping_items() throws Throwable {
+		assertTrue(isDisplayed(r2CheckoutPo.txtDetailOrderSummary)); 
+	}
+	
+	
+	@Then("^user in checkout page And verify items count$")
+	public void user_in_checkout_page_And_verify_items_count() throws Throwable {
+		assertTrue(isDisplayed(r2CheckoutPo.txtItems));
+	}
+
+	@Then("^Item summary with number of pick up items should display in checkout page$")
+	public void item_summary_with_number_of_pick_up_items_should_display_in_checkout_page() throws Throwable {
+		assertTrue(isDisplayed(r2CheckoutPo.txtDetailOrderSummary)); 
+		assertTrue(isDisplayed(r2CheckoutPo.txtQuantity));
+		
+	}
+
 }

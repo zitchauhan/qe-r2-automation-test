@@ -105,6 +105,13 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 	    System.out.println("*****" +str);
 	    assertTrue(str.isEmpty());
 	}
+	
+	@Then("^user will click on Paypal radio button$")
+	public void user_will_click_on_Paypal_radio_button() throws Throwable {
+		Thread.sleep(1000);
+		waitForElement(r2CheckOutPo.rdPaypal);
+		assertTrue(clickOnButton(r2CheckOutPo.rdPaypal));
+	}
 
 	
 

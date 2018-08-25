@@ -246,6 +246,20 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']")
 	public WebElement btnFindStoreClose;
+	
+	//CR-AKK 25Aug
+	@FindBy(xpath = "//*[@data-auid='PDP_AddToWishList']")
+	public WebElement lnkAddToWishList;
+	
+	@FindBy(xpath = "//input[@data-auid='input_newWishListName']")
+	public WebElement inputNewWishList;
+	
+	@FindBy(xpath = "//*[@data-auid='btnwishListPopover_createList']")
+	public WebElement btnCreatelist;
+	//CR-AKK 25Aug
+	
+	@FindBy(xpath ="//*[contains(@data-auid, 'wishListPopover_add_to_wishList_')]")
+	public WebElement lnkTextExistingList;	
 	// End KER-2939 CR-AKK
 
 	// Start KER-3127 CR-AKK
@@ -276,20 +290,29 @@ public class R2_Cart_PO extends CommonActionHelper {
 	public WebElement selectGenderGirl;
 
 	@FindBy(xpath = "//*[@data-auid='facetdrawer_drawer_Brand']")
-	public WebElement facetDrawerBrand;
+	public WebElement iconfacetDrawerBrand;
 
 	@FindBy(xpath = "//*[@data-auid='drawer_Diamondback']")
-	public WebElement selectBrandDiamondback;
+	public WebElement chboxBrandDiamondback;
 
 	@FindBy(xpath = "//*[@id='productCardListing']/div[3]")
 	public WebElement selectProductCycle;
 
-	@FindBy(xpath = "//div[text()=119.99]")
-	public WebElement lineItemDiscount;
+	@FindBy(xpath = "//*[@data-auid='crt_qtyField']/../following-sibling::div/section/div[1] ") //  CR-AKK 24Aug
+	public WebElement txtLineItemDiscount;
 	
-	@FindBy(xpath = "//div[text()='-$42']")
-	public WebElement appliedTotalDisc;
+	@FindBy(xpath = "//*[text()='Promocode']/../div[2]") //  CR-AKK 24Aug
+	public WebElement txtAppliedTotalDisc;
 	
+	@FindBy(xpath ="//div[@data-funding-source='paypal']") //  CR-AKK 24Aug
+	public WebElement btnPayPalCheckout;           //  CR-AKK 24Aug
+	
+	@FindBy(xpath ="//*[text()='Total:']/..//div[2]") //  CR-AKK 24Aug
+	public WebElement txtDiscountTotal;   //  CR-AKK 24Aug
+	
+	@FindBy(xpath ="(//*[text()='Total'])[2]/../div") //  CR-AKK 25Aug
+	public WebElement txtRemoveDiscountTotal;         //  CR-AKK 25Aug
+	 
 	// End KER-3127 CR-AKK //24Aug
 	
 	// Start KER-3467 CR - SK

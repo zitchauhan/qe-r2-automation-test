@@ -218,4 +218,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	public void user_click_on_the_product_image_in_cart_page() throws Throwable {
 		assertTrue(clickOnButton(r2SanityPo.AS_productImage));
 	} 
+	
+	
+
 }

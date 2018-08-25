@@ -215,6 +215,24 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 	public void verfiy_quantiy_field_is_activated() throws Throwable {
 		assertTrue(isEnabled(r2SanityPo.AS_inputQty));
 	}
+	
+	@When("^user clicks on Move to Wish list link$")
+	public void user_clicks_on_Move_to_Wish_list_link() throws Throwable {
+		
+	}
+	@When("^user clicks on Move to Wish list link \"(.*?)\" OR exisiting wishlink$")
+	public void user_clicks_on_Move_to_Wish_list_link_OR_exisiting_wishlink(String arg1) throws Throwable {
+		assertTrue(clickOnButton(r2CartPo.lnkAddToWishList));
+		if((r2CartPo.inputNewWishList).isDisplayed())
+		{
+			setInputText(r2CartPo.inputNewWishList, webPropHelper.getTestDataProperty(arg1));
+			assertTrue(clickOnButton(r2CartPo.btnCreatelist));
+		}
+	}
+	@Then("^item is moved from cart to the wish list$")
+	public void item_is_moved_from_cart_to_the_wish_list() throws Throwable {
+	   
+	}
 
 	
 

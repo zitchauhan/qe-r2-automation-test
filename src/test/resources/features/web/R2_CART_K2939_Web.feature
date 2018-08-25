@@ -30,7 +30,7 @@ Scenario: To view details specific to an item in the cart
 	And user verify prodcut name and prodcut link 
 	And user verify color and size 
 	Then user verify price of items for single quantity 
-	When enter the "Quantity" to X 
+	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user verify Remove cart link 
 	And user verify add to wishlist 
 	And user verify Discount messaging and Promotional messaging 
@@ -59,7 +59,7 @@ To verify Shipping radio button - Authenticated user With store selected in My A
 	Then Shipping radio button is selected by default 
 	Then in-stores radio button is deselected 
 	And in-stores information is hided 
-	Then user clicks change "ZIPCode" code 
+	Then user clicks change "AuthenticatedChangeZIPCode" code 
 	And user will verify if Shipping date information is displayed 
 	
 	
@@ -74,7 +74,7 @@ Scenario: Desktop - To verify Quantity input field
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	When enter the "Quantity" to X 
+	When enter the "EnterQuantityGreaterThenOne" to X 
 	And modified quantity should get updated 
 	Then Order Summary should get recalculated 
 	And user should be able to see the increased quantity and Price in Cart Order summary 
@@ -134,7 +134,7 @@ Scenario: To verify In-store Pick up radio button - with My Store info on My Acc
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	When user will verify in-store pick up radio button is selected with "ZIPCode" 
+	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then user will verify Shipping radio button is deselected 
 	And user will verify if in-stores information is hidden  
 	Then verify user can begin checkout 
@@ -203,4 +203,22 @@ Scenario: To verify Quantity input field
 	And user will click on View Cart button  
 	When user selects the Quantity field 
 	Then verfiy quantiy field is activated 
+	
+	 
+Scenario: To "Move to Wish list" from Cart 
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And user clicks on one of the category and navigates to LOne 
+	Then user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	Then user clicks on one of the product category and navigates to LThree  
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button
+	When user clicks on Move to Wish list link "NewWishLink" OR exisiting wishlink
+	Then item is moved from cart to the wish list
 	
