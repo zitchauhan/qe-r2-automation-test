@@ -10,7 +10,13 @@ Scenario: Verify user is able to enter the Sign In page from Sign In link
 Scenario: Verify available elements on the Sign in page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header
-	Then user should be able to validate elements of sign in page
+	Then Verify below Sub/Main Module of My Account
+		|# Verify following elements in login page	|
+		|Password				   					|
+		|Sign In									|
+		|Forgot Your Password						|
+		|Sign Up									|
+		|Email Address			   					|
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK 
 Scenario: Verify the user is able to sign in successfully with valid credentials
@@ -122,3 +128,4 @@ Scenario: Verify the user gets the error message when both email id and Password
 	Then user should not be allowed to login
 	And user should get an error message stating please enter valid email
 	And user should get an error message stating please enter an email or password
+	

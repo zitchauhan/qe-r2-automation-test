@@ -24,11 +24,11 @@ public class R2_MYACCOUNT_K4023_SD extends CommonActionHelper{
 		assertTrue(isDisplayed(r2_MyAccount_PO.headerForgotYourPassword));
 	}
 	
-	@Then("^user should be able to validate elements of forgot your password page$")
-	public void user_should_be_able_to_validate_elements_of_forgot_your_password_page() throws Throwable {
-	    assertTrue(isDisplayed(r2_MyAccount_PO.emailAddress));
-	    assertTrue(isDisplayed(r2_MyAccount_PO.btnSubmit));
-	    
-	}
+//	@Then("^user should be able to validate elements of forgot your password page$")
+//	public void user_should_be_able_to_validate_elements_of_forgot_your_password_page() throws Throwable {
+//	    assertTrue(isDisplayed(r2_MyAccount_PO.emailAddress));
+//	    assertTrue(isDisplayed(r2_MyAccount_PO.btnSubmit));
+//	    
+//	}
 
 }

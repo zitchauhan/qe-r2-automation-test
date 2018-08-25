@@ -21,15 +21,15 @@ public class R2_MYACCOUNT_K4011_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2MyAccountPo.headerSignIn));
 	}
 	
-	@Then("^user should be able to validate elements of sign in page$")
-	public void user_should_be_able_to_validate_elements_of_sign_in_page() throws Throwable {
-			assertTrue(isDisplayed(r2MyAccountPo.emailAddress));
-			assertTrue(isDisplayed(r2MyAccountPo.password));
-			assertTrue(isDisplayed(r2MyAccountPo.logIn));
-			assertTrue(isDisplayed(r2MyAccountPo.lnkSignUp));
-			assertTrue(isDisplayed(r2MyAccountPo.btnForgotYourPassword));
-
-	}
+//	@Then("^user should be able to validate elements of sign in page$")
+//	public void user_should_be_able_to_validate_elements_of_sign_in_page() throws Throwable {
+//			assertTrue(isDisplayed(r2MyAccountPo.emailAddress));
+//			assertTrue(isDisplayed(r2MyAccountPo.password));
+//			assertTrue(isDisplayed(r2MyAccountPo.logIn));
+//			assertTrue(isDisplayed(r2MyAccountPo.lnkSignUp));
+//			assertTrue(isDisplayed(r2MyAccountPo.btnForgotYourPassword));
+//
+//	}
 
 	
 	@Then("^a greeting message should be displayed$")

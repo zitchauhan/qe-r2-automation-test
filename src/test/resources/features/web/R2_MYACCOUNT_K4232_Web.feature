@@ -1,14 +1,23 @@
 Feature: E02-100 - My Account, Address Book
 
-#@R2_Web @R2_Regression @R2_All @P-High @C-My_Account @KER-4232 @ZYP_MYACCOUNT-K4232-9194 @CR-MS
-#     Scenario: Verify Authenticated user can Manage Address Book - View existing Address details
-#     Given user launches the browser and navigates to "ASO_HOME" page 
-#     And clicks on SignIn button in home page
-#     And user enter the valid emailaddress "EmailAddress" 
-#	 And user enter the valid password "Password" 
-#     And user click on signin button
-#     And user lands on My Account page and click on adress
-#	 And user Clicks on Add New Address link
+@R2_Web @R2_Regression @R2_All @P-High @C-My_Account @KER-4232 @ZYP_MYACCOUNT-K4232-9194 @CR-MS
+     Scenario: Verify Authenticated user can Manage Address Book - View existing Address details
+     Given user launches the browser and navigates to "ASO_HOME" page 
+     And clicks on SignIn button in home page
+     And user enter the valid emailaddress "EmailAddress" 
+	 And user enter the valid password "Password" 
+     And user click on signin button
+     And user lands on My Account page and click on adress
+	 When user Clicks on Add New Address link
+	 Then Verify below Sub/Main Module of My Account
+		|# Verify following elements in address page|
+		|First Name				   					|
+		|Last Name									|
+		|Phone Number								|
+		|Address 									|
+		|Zip Code			   						|
+		|City										|
+		|State										|
 #	 Then user views First Name field is displayed 
 #	 Then user views Last Name field is displayed
 #	 Then user views Phone Number field is displayed
@@ -16,7 +25,9 @@ Feature: E02-100 - My Account, Address Book
 #	 Then user views Zip Code field is displayed
 #	 Then user views City field is displayed
 #	 Then user views State field is displayed
-#	
+	
+	
+#	#partially completed
 #@R2_Web @R2_Regression @R2_All @P-High @C-My_Account @KER-4232 @ZYP_CART-K4232-9196 @CR-SK
 #Scenario: Verify Authenticated user can Manage Address Book - Delete Address details - Undo
 #	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -27,25 +38,6 @@ Feature: E02-100 - My Account, Address Book
 #	Then user should see delete notification
 #	When user clicks on undo link
 #	Then undo deletion action is performed
-	
-	
-	@R2_Web @R2_Regression @R2_All @P-High @C-My_Account @KER-4232 @ZYP_CART-K4232-9191 @CR-MS
-     Scenario: Verify Authenticated user can Manage Address Book - View existing Address details
-	 Given user launches the browser and navigates to "ASO_HOME" page 
-     And clicks on SignIn button in home page
-     And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button
-     Then user lands on My Account page and click on adress
-	 Then user Clicks on Add New Address link
-	 When user enter First name "FirstName" in address book
-	And user enter Last name "LastName" in address book
-	And user enter Phone number "PhoneNumber" in address book
-	And user enter Address "Address" in address book
-	And user enter Zipcode "zipcode" in address book
-	 And clicks on Add New Address button
-#	 Then the new address gets saved
-	
      
      
 

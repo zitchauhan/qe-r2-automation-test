@@ -4,7 +4,7 @@ Feature: verify Forgotten Password functionality
 Scenario: Verify user is able to enter the Forgot Password page from Forgot Password link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
-	And user logs in as "EmailAddressForChangePassword"
+	And user logs in as "UserWithZeroProductsInCart"
 	And user click on profile link
 	When user click on change password icon
 	And user enters current password
@@ -17,7 +17,7 @@ Scenario: Verify user is able to enter the Forgot Password page from Forgot Pass
 Scenario: Verify that user can continue the shopping without re-authentication after changing the password
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
-	And user logs in as "EmailAddressForChangePassword"
+	And user logs in as "UserWithZeroProductsInCart"
 	And user click on profile link
 	When user click on change password icon
 	And user enters current password

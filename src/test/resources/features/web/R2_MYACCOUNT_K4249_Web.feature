@@ -17,8 +17,8 @@ Scenario: Verify user is able to create an account with all valid data
 	And user enter last "LastName" 
 	And user enter random email Address
 	And user enter password "Password1"
-	And user click optin checkbox 
-	And clicks on Sign Up Button 
+	And user click optin checkbox
+	And clicks on Sign Up Button
 	And user should see the successfull message
 	And user should be able to view My Account in global header
 			
@@ -36,7 +36,7 @@ Scenario: Verify the user is able to see the unmasked password
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And clicks on SignUp link from SignIn page 
-	When user enter password "Password1" 
+	When user enter password "Password" 
 	Then user should see password masked 
 	When clicks on the Show label
 	Then user entered password should get unmasked displaying the characters 

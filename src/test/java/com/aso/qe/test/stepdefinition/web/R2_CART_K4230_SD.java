@@ -12,6 +12,7 @@ import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import freemarker.template.utility.NullArgumentException;
 
 public class R2_CART_K4230_SD extends CommonActionHelper {
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
@@ -53,16 +54,26 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 		}
 		
 		else if(emailID.contains("UserWithZeroProductsInCart")) {
-			setInputText(r2MyAccountPo.inputEmailAddress_SignIn, webPropHelper.getTestDataProperty("EmailAddressForZeroProductsInCart"));
-			setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty("Password"));
+			setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty("EmailAddressForZeroProductsInCart"));
+			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
 			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
 			if(isDisplayed(cartR2PageObj.miniCartCount)) {
 				assertTrue(clickOnButton(cartR2PageObj.miniCartCount));
 				setInputText(cartR2PageObj.txtQuantity, "0");
 				if(isDisplayed(cartR2PageObj.txtQuantity))
 					tabInputBox(cartR2PageObj.txtQuantity);				
-			}		
-			
+			}	
+		}
+		
+		else if(emailID.contains("RawUser")){
+			setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty("RawUser"));
+			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
+			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
+		}
+		
+		else
+		{
+			throw new NullArgumentException("Please validate arguement.");
 		}
 	}
 

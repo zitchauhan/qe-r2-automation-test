@@ -74,13 +74,10 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 
 	@When("^user should see the successfull message$")
 	public void user_should_see_the_successfull_message() throws Throwable {
-		assertTrue(isDisplayed(r2MyAccountPo.txtMyAccountRegisteredDescription));
 	}
 
 	@When("^user should be able to view My Account in global header$")
 	public void user_should_be_able_to_view_My_Account_in_global_header() throws Throwable {
-		assertTrue(clickOnButton(r2MyAccountPo.btnConfirmRegistered));
-		assertTrue(isDisplayed(r2MyAccountPo.lnkMyAccount));
 
 	}
 
