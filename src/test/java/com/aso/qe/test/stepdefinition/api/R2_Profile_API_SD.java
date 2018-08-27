@@ -140,4 +140,10 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		initiateRestPostAPICallWithoutBody(endpoints);
 	}
 
+	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for address verification$")
+	public void endpoint_with_for_address_verification(String Addressurl, String AddressVerificationRequest) throws Throwable {
+		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(Addressurl)+loadProps.getConfigPropProperty("baseurl");
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestPostAPICallForReg(endpoints, loadProps.getTestDataProperty(AddressVerificationRequest));
+	} 
 }

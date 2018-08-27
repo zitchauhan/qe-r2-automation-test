@@ -38,6 +38,11 @@ Feature: Verify MyAccount Address API endpoint services
     And validate jsonSchema "RetrieveAddressByIdSchema"
     Then Verify response status code as 200
 
+	@All-R2    @C1-MyAccount   @C2-Address   @API   @R2_AAST-02   @CR-VK  
+	Scenario: TC_2 - Address Verification of a User Profile
+    Given "Addressurl" endpoint with "AddressVerificationRequest" for address verification
+    Then Verify response status code as 201 
+    
   @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-07 @CR-VK
   Scenario: TC_7 - Remove an address from a Profile
     Given "Addurl" endpoint for removing "/address/" by "AddressId"
