@@ -56,7 +56,7 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 			webdriver = webActionHelper.launchChromeBrowser(webActionHelper.getWebDriverFolderPath("chromedriver"));
 			webdriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			webdriver.manage().window().maximize();
-			webdriver.get(loadProps.getConfigPropProperty("ASO_HOME"));
+			webdriver.get(apiEndpointWebURL);
 			CommonActionHelper.waitForPageLoad(webdriver);
 			webdriver.manage();
 			Set<Cookie> seleniumCookies = webdriver.manage().getCookies();
