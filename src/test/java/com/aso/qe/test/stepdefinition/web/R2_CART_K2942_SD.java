@@ -16,6 +16,7 @@ public class R2_CART_K2942_SD extends CommonActionHelper {
 	
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
+	String intgeres="1234567890";
 	
 
 	@And("^User should be able to see the updated Order Summary$")
@@ -87,7 +88,25 @@ public class R2_CART_K2942_SD extends CommonActionHelper {
 
 	}
 
+	@Then("^click the Remove from cart link$")
+	public void click_the_Remove_from_cart_link() throws Throwable {
+		assertTrue(clickOnButton(r2CartPo.lnkRemoveCart));
+	}
 
+	@Then("^verify the remove quantity message$")
+	public void verify_the_remove_quantity_message() throws Throwable {
+	  
+	}
 
-
+	@Then("^verify the Quantity is numeric value$")
+	public void verify_the_Quantity_is_numeric_value() throws Throwable {
+		String value=r2SanityPo.AS_inputQty.getAttribute("value");
+		assertTrue(value.contains(intgeres));
+	}
+	
+	@Then("^verify the Quantity is not allow alphanumeric$")
+	public void verify_the_Quantity_is_not_allow_alphanumeric() throws Throwable {
+		String quantity= r2SanityPo.AS_inputQty.getAttribute("value");
+		assertTrue(quantity.isEmpty());
+	}
 }

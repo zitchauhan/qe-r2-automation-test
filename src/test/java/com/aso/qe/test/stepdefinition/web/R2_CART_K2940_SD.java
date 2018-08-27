@@ -199,6 +199,23 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 	public void customer_must_see_the_following_at_Order_Summary_in_Cart_Promo_Code_and_associated_discount_as_$XX_XX_must_be_total_order_discount() throws Throwable {
 	    
 	}
+	
+	@Then("^verify that the hierarchy of itemizations in Order Summary in Cart Page$")
+	public void verify_that_the_hierarchy_of_itemizations_in_Order_Summary_in_Cart_Page() throws Throwable {
+		assertTrue(isDisplayed(r2CartPo.txtActualPrice));
+		assertTrue(isDisplayed(r2CartPo.txtEstimatedTaxesCart));
+		assertTrue(isDisplayed(r2CartPo.txtPromocode));
+	}
+	
+	@When("^user views Estimated Shipping in the Item Subtotal$")
+	public void user_views_Estimated_Shipping_in_the_Item_Subtotal() throws Throwable {
+		assertTrue(isDisplayed(r2CartPo.txtEstimatedShipping));
+	}
+
+	@Then("^verify Shipping charges for the items in the cart page is Zero and FREE is displayed$")
+	public void verify_Shipping_charges_for_the_items_in_the_cart_page_is_Zero_and_FREE_is_displayed() throws Throwable {
+		assertTrue(isDisplayed(r2CartPo.txtEstimatedFree));
+	}
 
 }
 

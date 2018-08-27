@@ -203,4 +203,37 @@ Scenario: To verify Estimated Shipping greater than zero
 	And Verify estimated taxes on the cart page 
 	And verify Shipping charges for the items in the cart page is greater than Zero 
 	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2940 @ZYP_CART_K2940-8053 @CR-AKK 	
+Scenario: To view the hierarchy of itemizations in Order Summary in Cart
+Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on one of the category and navigates to LOne 
+    Then user clicks on one of the subcategory and navigates to LTwo
+    And user is able to see the product category name in section title
+    Then user clicks on one of the product category and navigates to LThree
+	Then User is navigated to pdp page
+	Then user click on Add to Cart Button
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	When user navigate to Cart page 
+	Then verify that the hierarchy of itemizations in Order Summary in Cart Page
+
+#@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2940 @ZYP_CART_K2940-8059 @CR-AKK 
+Scenario: To verify Estimated Shipping equal to zero
+Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And user clicks on one of the category and navigates to LOne
+    And user clicks on one of the subcategory and navigates to LTwo
+    And user is able to see the product category name in section title
+    And user clicks on one of the product category and navigates to LThree
+	And User is navigated to pdp page
+	And user click on Add to Cart Button
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page
+	When enter the "EnterQuantityGreaterThenOne" to X 
+	When user views Estimated Shipping in the Item Subtotal
+	Then verify Shipping charges for the items in the cart page is Zero and FREE is displayed	
 	

@@ -4,12 +4,14 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
+import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.java.en.And;
@@ -22,6 +24,7 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 			GlobalElementHeader_HomePO.class);
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
+	R2_MyAccount_PO r2MyAccountPO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 
 	@Then("^User is able to see the selected variant image as thumbnail$")
 	public void user_is_able_to_see_the_selected_variant_image_as_thumbnail() throws Throwable {
@@ -223,17 +226,19 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 	@When("^user clicks on Move to Wish list link \"(.*?)\" OR exisiting wishlink$")
 	public void user_clicks_on_Move_to_Wish_list_link_OR_exisiting_wishlink(String arg1) throws Throwable {
 		assertTrue(clickOnButton(r2CartPo.lnkAddToWishList));
-		if((r2CartPo.inputNewWishList).isDisplayed())
-		{
-			setInputText(r2CartPo.inputNewWishList, webPropHelper.getTestDataProperty(arg1));
-			assertTrue(clickOnButton(r2CartPo.btnCreatelist));
-		}
+		assertTrue(clickOnButton(r2CartPo.lnkTextExistingList));
+		
 	}
 	@Then("^item is moved from cart to the wish list$")
 	public void item_is_moved_from_cart_to_the_wish_list() throws Throwable {
-	   
+		assertTrue(clickOnButton(r2MyAccountPO.lnkMyAccount));
+		assertTrue(clickOnButton(r2MyAccountPO.wishList));
+		
 	}
 
-	
+	@Then("^verify error message is displayed$")
+	public void verify_error_message_is_displayed() throws Throwable {
+	   
+	}
 
 }

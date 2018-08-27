@@ -55,6 +55,9 @@ public class R2_Cart_PO extends CommonActionHelper {
 	// Start KER-2942 CR-DPK
 	@FindBy(xpath = "//*[@data-auid='PDP_QC_INC']/../span/input[@aria-label='Enter Desired Quantity']")
 	public WebElement R2_iconQuantityIncrease;
+	
+	@FindBy(xpath ="(//*[contains(@data-auid,'crt_btnRmvFromCart_')])[1]") //27Aug
+	public WebElement lnkRemoveCart; //27Aug
 	// End KER-2942 CR-DPK
 
 	// Start KER-3169 CR-DPK
@@ -74,6 +77,11 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "(//*[text()='$'])[2]")
 	public WebElement txtActualPrice2;
+	
+	//Start CR-AKK 27Aug
+	@FindBy(xpath = "//div[text()='Estimated Shipping']/../div[2]")
+	public WebElement txtEstimatedFree;
+	//End CR-AKK 27Aug
 	// End KER-2940 CR-DPK
 
 	// Start KER-2872 CR-DPK

@@ -107,3 +107,72 @@ Scenario: Verify Alphanumeric Quantity in the Cart Page
 	When enter the "AlphanumericQuantity" to X 
 	Then user should not be allowed to enter any non-numeric value in the input 
 	
+	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8046 @CR-AKK 
+Scenario: Verify Reduce quantity adjustment in the Cart Page
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on one of the category and navigates to LOne 
+	Then user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	Then user clicks on one of the product category and navigates to LThree 
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	When enter the "EnterQuantityGreaterThenOne" to X 
+	Then Order Summary should get recalculated
+	When enter the "EnterQuantityLessThenTwo" to X 
+	Then Order Summary should get recalculated
+	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8048 @CR-AKK 
+Scenario:  Verify Remove quantity message in the Cart Page
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then User clicks on ASO Logo and should be navigated to Home Page 
+	And user clicks on one of the category and navigates to LOne 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree 
+	And User is navigated to pdp page 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	When click the Remove from cart link 
+	Then verify the remove quantity message
+	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6845 @CR-AKK 	
+Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
+Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on one of the category and navigates to LOne 
+	Then user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	Then user clicks on one of the product category and navigates to LThree 
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	When enter the "EnterQuantityGreaterThenOne" to X 	
+	Then verify the Quantity is numeric value 
+	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6849 @CR-AKK 	
+Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
+Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on one of the category and navigates to LOne 
+	Then user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	Then user clicks on one of the product category and navigates to LThree 
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	When enter the "EnterQuantityAlphaNumeric" to X 	 
+	Then verify the Quantity is not allow alphanumeric
+		
+	
