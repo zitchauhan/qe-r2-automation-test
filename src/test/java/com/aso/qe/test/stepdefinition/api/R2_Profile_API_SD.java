@@ -17,7 +17,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" endpoint for guest identity$")
 	public void endpoint_for_guest_identity(String Guestloginurl) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(Guestloginurl);
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Guestloginurl);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPIPostCallForGuestAuthen(endpoints);
 	}
@@ -26,7 +26,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 	public void with_endpoint_for_login_authentication(String loginurl, String LoginRequest) throws Throwable {
 		System.setProperty("ProfileId", "");
 		logger.debug("URL::"+url);
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(loginurl);
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(loginurl);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICall(endpoints, loadProps.getTestDataProperty(LoginRequest));
 		JsonPath jsonPathEvaluator = response.jsonPath();
@@ -37,21 +37,21 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for user registration$")
 	public void endpoint_with_for_user_registration(String RegistrationUrl, String RegistrationPostRequest) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(RegistrationUrl);
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(RegistrationUrl);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallForReg(endpoints, loadProps.getTestDataProperty(RegistrationPostRequest));
 	}
 
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for shipping details$")
 	public void endpoint_with_for_shipping_details(String url, String extension) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+url+System.getProperty("ProfileId")+extension;
+		String endpoints=apiEndpointIP+url+System.getProperty("ProfileId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 	}
 
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for getting address of a profile$")
 	public void endpoint_with_for_getting_address_of_a_profile(String Addurl, String extension) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 		JsonPath jsonPathEvaluator = response.jsonPath();
@@ -62,7 +62,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for getting Wishlist of a profile$")
 	public void endpoint_with_for_getting_Wishlist_of_a_profile(String Addurl, String extension) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 		JsonPath jsonPathEvaluator = response.jsonPath();
@@ -73,7 +73,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 
 	@Then("^\"(.*?)\" endpoint for removing \"(.*?)\" by \"(.*?)\"$")
 	public void endpoint_for_removing_by(String Addurl, String extension, String Id) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension+System.getProperty(Id);
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension+System.getProperty(Id);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestDeleteAPICall(endpoints);
 	}
@@ -81,7 +81,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for getting gift card details of a profile$")
 	public void endpoint_with_for_getting_gift_card_details_of_a_profile(String Addurl, String extension) throws Throwable {
 		System.setProperty("GiftWalletId","");
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 		JsonPath jsonPathEvaluator = response.jsonPath();
@@ -94,7 +94,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for getting credit card details of a profile$")
 	public void endpoint_with_for_getting_credit_card_details_of_a_profile(String Addurl, String extension) throws Throwable {
 		System.setProperty("WalletId","");
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 		JsonPath jsonPathEvaluator = response.jsonPath();
@@ -106,28 +106,28 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" endpoint for getting profile details of a profile$")
 	public void endpoint_for_getting_profile_details_of_a_profile(String Addurl) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId");
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId");
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 	}
 
 	@Then("^\"(.*?)\" endpoint for getting \"(.*?)\" by \"(.*?)\"$")
 	public void endpoint_for_getting_by(String Addurl, String extension, String Id) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension+System.getProperty(Id);
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension+System.getProperty(Id);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 	}
 
 	@Then("^\"(.*?)\" endpoint for getting \"(.*?)\" by \"(.*?)\" for a user profile$")
 	public void endpoint_for_getting_by_for_a_user_profile(String Addurl, String extension, String Id) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension+System.getProperty(Id)+"/";
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension+System.getProperty(Id)+"/";
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 	}
 
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" request and \"(.*?)\"$")
 	public void endpoint_with_request_and_for(String Addurl, String AddAddressRequest, String extension) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithCookies(endpoints, loadProps.getTestDataProperty(AddAddressRequest));
 	}
@@ -135,14 +135,14 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" endpoint for profile logout$")
 	public void endpoint_for_profile_logout(String logouturl) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(logouturl);
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(logouturl);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithoutBody(endpoints);
 	}
 
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for address verification$")
 	public void endpoint_with_for_address_verification(String Addressurl, String AddressVerificationRequest) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(Addressurl);
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addressurl);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallForReg(endpoints, loadProps.getTestDataProperty(AddressVerificationRequest));
 	} 

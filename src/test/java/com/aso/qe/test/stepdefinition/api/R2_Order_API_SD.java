@@ -17,7 +17,7 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 
 	@Then("^\"(.*?)\" endpoint with \"(.*?)\" request and \"(.*?)\" extension$")
 	public void endpoint_with_request_and_extension(String OrderUrl, String AddPromoCodeToOrder, String extension) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(OrderUrl)+System.getProperty("OrderId")+extension+loadProps.getTestDataProperty("PromoCode");
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(OrderUrl)+System.getProperty("OrderId")+extension+loadProps.getTestDataProperty("PromoCode");
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithCookies(endpoints, loadProps.getTestDataProperty(AddPromoCodeToOrder));
 	}
@@ -25,7 +25,7 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for getting promocode of an order$")
 	public void endpoint_with_for_getting_promocode_of_an_order(String OrderUrl, String extension) throws Throwable {
 		System.setProperty("PromoCode","");
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(OrderUrl)+System.getProperty("OrderId")+extension;
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(OrderUrl)+System.getProperty("OrderId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 		JsonPath jsonPathEvaluator = response.jsonPath();
@@ -37,7 +37,7 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" endpoint for removing \"(.*?)\" from an Order$")
 	public void endpoint_for_removing_from_an_Order(String OrderUrl, String extension) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(OrderUrl)+System.getProperty("OrderId")+extension+loadProps.getTestDataProperty("PromoCode");
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(OrderUrl)+System.getProperty("OrderId")+extension+loadProps.getTestDataProperty("PromoCode");
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestDeleteAPICall(endpoints);
 	}

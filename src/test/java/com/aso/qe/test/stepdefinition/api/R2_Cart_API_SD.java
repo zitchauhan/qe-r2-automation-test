@@ -27,7 +27,7 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" endpoint for getting cart summary$")
 	public void endpoint_for_getting_cart_summary(String url) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+url+System.getProperty("OrderId")+"/summary";;
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+"/summary";;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 	}
@@ -87,7 +87,7 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 	@Given("^\"(.*?)\" and post request \"(.*?)\" endpoint for Add to Cart with Guest user$")
 	public void and_post_request_endpoint_for_Add_to_Cart_with_Guest_user(String AddToCartSummaryUrl, String addtocartRequestJson) throws Throwable {
 		List<io.restassured.http.Cookie> restAssuredCookies = new R2_Cart_API_SD().getGuestUserCookies_v1();
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(AddToCartSummaryUrl);
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(AddToCartSummaryUrl);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithoutSignIn(endpoints, restAssuredCookies, loadProps.getTestDataProperty(addtocartRequestJson));
 	}
@@ -96,7 +96,7 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint for getting cart$")
 	public void endpoint_for_getting_cart(String GetCartUrl) throws Throwable {
 		System.setProperty("OrderId","");
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+loadProps.getTestDataProperty(GetCartUrl);
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(GetCartUrl);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithGuestUserCookies(endpoints);
 		JsonPath jsonPathEvaluator = response.jsonPath();
@@ -108,7 +108,7 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" endpoint for viewing cart details$")
 	public void endpoint_for_viewing_cart_details(String url) throws Throwable {
-		String endpoints=loadProps.getConfigPropProperty("api.uat6int.baseURL")+url+System.getProperty("OrderId");
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId");
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithGuestUserCookies(endpoints);
 	}
