@@ -1,5 +1,7 @@
 package com.aso.qe.test.pageobject;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -7,6 +9,11 @@ import com.aso.qe.framework.common.CommonActionHelper;
 
 public class R2_MyAccount_PO extends CommonActionHelper {
 
+	/**************** START LOCAL OBJETCS AND DECLARATIONS ***********************/
+	
+	/*************** END LOCAL OBJETCS AND DECLARATIONS ************************/
+	
+	/***************************** START XPAHTS**********************************/
 	// Start KER-4249 CR-RK
 	@FindBy(xpath = "//li[@data-auid='MyAccount']")
 	public WebElement lnkSignIn;
@@ -33,8 +40,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//input[@type='checkbox']")
 	public WebElement inputOptIn;
 
-	@FindBy(xpath = "//button[@data-auid='btnbutton-3']")
-	public WebElement btnSignUp;
+	@FindBy(xpath = "//button[@data-auid='btnsignup_btn']")
+	public WebElement btnSignUp; //KER-6941 Updated 27-8-18
 
 	@FindBy(xpath = "//button[text()='Sign In Now']")
 	public WebElement lnkSignInNow;
@@ -66,11 +73,12 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//button[@data-auid='btnemail-signin-button']")
 	public WebElement btnSignIn;
 
-	@FindBy(xpath = "//input[@type='text']")
-	public WebElement inputEmailAddress_SignIn;
+	@FindBy(xpath = "//input[@data-auid='email_input']")
+	public WebElement inputEmailAddress_SignIn;//KER-4232 CR-RK 25-8-18
 
-	@FindBy(xpath = "//span[text()='Myaccount']")
-	public WebElement txtMyAccountDescription;
+	@FindBy(xpath ="//h5[text()='PROFILE']")
+	public WebElement txtMyAccountDescription;// KER-4249 CR-RK -Updated
+
 	// End KER-4249 CR-RK
 
 	// Start KER-4232 CR-MS
@@ -167,7 +175,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//h4[.='FORGOT PASSWORD']")
 	public WebElement headerForgotYourPassword;
 
-	@FindBy(xpath = "//button[@data-auid='btnbutton-1']")
+	@FindBy(xpath = "//button[@data-auid='btnsubmit_btn']")
 	public WebElement btnSubmit;
 
 	@FindBy(xpath = "//button[.='Forgot your password?']")
@@ -229,7 +237,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//input[@type='text']")
 	public WebElement inputEmail;
 
-	@FindBy(xpath = "//input[@type='password']")
+	@FindBy(xpath = "//input[@data-auid='password_input']")
 	public WebElement inputPassword;
 
 	@FindBy(xpath = "(//*[@data-auid='btnc_btnCheckout'])[3]")
@@ -275,5 +283,57 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public WebElement checkPhone;
 
 	// End KER-3152 CR-AKK
+	
+		//Start KER-4249 CR-RK
+		
+		@FindBy(xpath = "//span[text()='You have successfully registered with Academy.com']")
+		public WebElement txtMyAccountRegisteredDescription;
+				
+		@FindBy(xpath = "//*[@data-auid='btnbutton-3']")
+		public WebElement btnConfirmRegistered;
+				
+		//End KER-4249 CR-RK
+				
+		//Start KER-4232 CR-RK
+		@FindBy(xpath = "//*[@data-auid='btnsubmit_btn']")
+		public WebElement btnAdd;
+		
+				
+		//End KER-4232 CR-RK
+		
+		//Start KER-4232 CR-RK
+		@FindBy(xpath = "(//*[text()='Edit'])[1]")
+		public WebElement btnEditDefaultAddress;
+		
+		@FindBy(xpath = "//*[text()='DEFAULT']")
+		public WebElement txtDefaultDescription;
+		@FindBy(xpath = "//*[text()='Set as Default']")
+		public WebElement btnSetAsDefault;
+		
+		@FindBy(xpath = "//span[.='Required']")
+		public List<WebElement> txtAllAddress;
+		
+		@FindBy(xpath = "//*[text()='Remove']")
+		public WebElement btnRemove;
+					
+		@FindBy(xpath = "//*[text()='Edit']")
+		public WebElement btnEdit;
+		
+		@FindBy(xpath = "//*[@data-auid='address_page']")
+		public WebElement txtAddressDescription;
+				
+		//End KER-4232 CR-RK
+		//Start KER-6941 CR-RK
+		@FindBy(xpath = "//input[@name='logonPassword']")
+		public WebElement inputPasswordSignIn;
+		
+		@FindBy(xpath = "//input[@name='logonId']")
+		public WebElement inputEmailAddressSignIn;
+		//End KER-6941 CR-RK
+	/***************************** END XPAHTS***********************************/
+	
+	/***************************** START METHODS********************************/
+	
+	/***************************** END METHODS*********************************/
 
 }

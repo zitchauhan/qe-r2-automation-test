@@ -24,11 +24,31 @@ public class R2_MYACCOUNT_K4023_SD extends CommonActionHelper{
 		assertTrue(isDisplayed(r2_MyAccount_PO.headerForgotYourPassword));
 	}
 	
-//	@Then("^user should be able to validate elements of forgot your password page$")
-//	public void user_should_be_able_to_validate_elements_of_forgot_your_password_page() throws Throwable {
-//	    assertTrue(isDisplayed(r2_MyAccount_PO.emailAddress));
-//	    assertTrue(isDisplayed(r2_MyAccount_PO.btnSubmit));
-//	    
-//	}
+	@Then("^user should be able to validate elements of forgot your password page$")
+	public void user_should_be_able_to_validate_elements_of_forgot_your_password_page() throws Throwable {
+	    assertTrue(isDisplayed(r2_MyAccount_PO.emailAddress));
+	    assertTrue(isDisplayed(r2_MyAccount_PO.btnSubmit));
+	    
+	}
+	@Then("^user clicks on Submit button without entering the email address$")
+	public void user_clicks_on_Submit_button_without_entering_the_email_address() throws Throwable {
+		assertTrue(clickOnButton(r2_MyAccount_PO.btnSubmit));
+	}
+	
 
+	@Then("^user should get an error message$")
+	public void user_should_get_an_error_message() throws Throwable {
+		assertTrue(isDisplayed(r2_MyAccount_PO.txtInvalidEmailAddressError));
+	}
+	
+	@Then("^user enters a \"(.*?)\" and clicks on Submit button$")
+	public void user_enters_a_and_clicks_on_Submit_button(String arg1) throws Throwable {
+		setInputText(r2_MyAccount_PO.emailAddress, webPropHelper.getTestDataProperty(arg1));
+		assertTrue(clickOnButton(r2_MyAccount_PO.btnSubmit));
+	}
+	@Then("^user should get an error message for nonregisteredemailid address$")
+	public void user_should_get_an_error_message_for_invalid_email() throws Throwable {
+		 assertTrue(isDisplayed(r2_MyAccount_PO.txtInvalidEmailAddressError));
+	    
+	}
 }
