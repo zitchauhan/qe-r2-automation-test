@@ -7,7 +7,8 @@ import org.openqa.selenium.support.FindBy;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
-public class R2_MyAccount_PO extends CommonActionHelper {
+public class R2_MyAccount_PO extends CommonActionHelper 
+{
 
 	/**************** START LOCAL OBJETCS AND DECLARATIONS ***********************/
 	
@@ -100,25 +101,25 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='ADD NEW ADDRESS']")
 	public WebElement addNewAddressBtn;
 
-	@FindBy(xpath = "//*[@name='firstName']")
+	@FindBy(xpath = "//*[text()='First Name']/..//input") // 27 Aug
 	public WebElement adr_inpFirstName;
 
-	@FindBy(xpath = "//*[@name='lastName']")
+	@FindBy(xpath = "//*[text()='Last Name']/..//input") // 27 Aug
 	public WebElement adr_inpLastName;
 
-	@FindBy(xpath = "//*[@name='addressLine1']")
+	@FindBy(xpath = "//*[text()='Address']/..//input") // 27 Aug
 	public WebElement adr_inpAddress1;
 
-	@FindBy(xpath = "//*[@name='zipCode']")
+	@FindBy(xpath = "//*[text()='ZIP Code']/..//input") // 27 Aug
 	public WebElement adr_inpzipCode;
 
-	@FindBy(xpath = "//*[@name='city']")
+	@FindBy(xpath = "//*[text()='City']/..//input") // 27 Aug
 	public WebElement adr_inpCity;
 
 	@FindBy(xpath = "//*[@auid='Phone Number-input']")
 	public WebElement adr_inpPhoneNumber;
 
-	@FindBy(xpath = "//label[.='State']//parent::div//following-sibling::div//button")
+	@FindBy(xpath = "//*[.='State']//parent::div//following-sibling::div//button")
 	public WebElement btnState; // CR-SK; 24 Aug
 	// End KER-4232 CR-MS
 
@@ -188,9 +189,6 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='myAccountCta']")
 	public WebElement lnkMyAccount;
-
-	@FindBy(xpath = "//button/i[@class='academyicon icon-lock pr-half']")
-	public WebElement btnChangePassword;
 
 	@FindBy(xpath = "//div[.='New Password']/preceding-sibling::input[@type='password']")
 	public WebElement txtCurrentPassword;
@@ -330,6 +328,135 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 		@FindBy(xpath = "//input[@name='logonId']")
 		public WebElement inputEmailAddressSignIn;
 		//End KER-6941 CR-RK
+	// Start Page validation CR-SK
+	@FindBy(xpath = "//h5[text()='PROFILE']")
+	public WebElement headerProfile;
+
+	@FindBy(xpath = "//span[text() = 'PROFILE INFORMATION']")
+	public WebElement headerProileInformation;
+
+	@FindBy(xpath = "//*[@data-auid='edit_info_btn']/i")
+	public WebElement lnkEdit;
+
+	@FindBy(xpath = "//div[text()='Name']")
+	public WebElement labelName;
+
+	@FindBy(xpath = "//div[text()='Name']/following-sibling::div")
+	public WebElement txtName;
+
+	@FindBy(xpath = "//div[text()='Email']")
+	public WebElement labelEmail;
+
+	@FindBy(xpath = "//div[text()='Email']/following-sibling::div")
+	public WebElement txtEmail;
+
+	@FindBy(xpath = "//span[text()='PASSWORD']")
+	public WebElement headerPassword;
+
+	@FindBy(xpath = "//*[@data-auid = 'edit_password_btn']")
+	public WebElement btnChangePassword;
+
+	@FindBy(xpath = "//*[text() = 'Your Password']")
+	public WebElement labelYourPassword;
+
+	@FindBy(xpath = "//*[text() = 'NOTIFICATIONS']")
+	public WebElement headerNotifications;
+
+	@FindBy(xpath = "//*[text() = 'NOTIFICATIONS']/..//input")
+	public WebElement chkReceiveNotifications;
+
+	@FindBy(xpath = "//*[text()='EDIT PROFILE']")
+	public WebElement headerEditProfile;
+
+	@FindBy(xpath = "(//*[text()='First Name']/following-sibling::input)[1]")
+	public WebElement txtFirstName;
+
+	@FindBy(xpath = "(//*[text()='Last Name']/following-sibling::input)[1]")
+	public WebElement txtLastName;
+
+	@FindBy(xpath = "(//*[text()='New Email']/following-sibling::div/input)[1]")
+	public WebElement txtNewEmail;
+
+	@FindBy(xpath = "(//*[text()='Confirm Email']/following-sibling::div/input)[1]")
+	public WebElement txtConfirmEmail;
+
+	@FindBy(xpath = "//h5[text()='PAYMENTS']")
+	public WebElement headerPayments;
+
+	@FindBy(xpath = "//*[text() = 'CREDIT CARDS']")
+	public WebElement headerCreditCards;
+
+	@FindBy(xpath = "//*[text() = 'You have no credit cards listed.']")
+	public WebElement txtNoCreditCardListed;
+
+	@FindBy(xpath = "//*[@data-auid='btnaddNew-giftCard-btn' and text()= 'ADD NEW CREDIT CARD']")
+	public WebElement btnAddNewCreditCard;
+
+	@FindBy(xpath = "//*[text() = 'GIFT CARDS']")
+	public WebElement headerGiftCards;
+
+	@FindBy(xpath = "//*[text() = 'ADD NEW CREDIT CARD']")
+	public WebElement headerAddNewCreditCards;
+
+	@FindBy(xpath = "//*[@auid = 'Credit Card Number-inputField']")
+	public WebElement txtCreditCardNumber;
+
+	@FindBy(xpath = "//*[@auid = 'Exp. Date-inputField']")
+	public WebElement txtExpiryDate;
+
+	@FindBy(xpath = "//*[@auid = 'x']")
+	public WebElement txtCVV;
+
+	@FindBy(xpath = "//*[text() = 'BILLING INFORMATION']")
+	public WebElement headerBillingInformation;
+
+	@FindBy(xpath = "//*[text()='Phone Number']/..//input")
+	public WebElement txtPhoneNumberInAddCreditCard;
+
+	@FindBy(xpath = "//*[@data-auid='btnsubmit-btn']")
+	public WebElement btnAddInAddCreditCard;
+
+	@FindBy(xpath = "//button[.='CANCEL']")
+	public WebElement btnCancelInAddCreditCard;
+
+	@FindBy(xpath = "//a[text()='wishlist']")
+	public WebElement lnkWishlist;
+
+	@FindBy(xpath = "//*[@data-auid='btnmodal_open_btn']")
+	public WebElement btnCreateNewWishlist;
+
+	@FindBy(xpath = "//*[@data-auid='wish_list_name_input']")
+	public WebElement txtWishListName;
+
+	@FindBy(xpath = "//*[@data-auid='btncreate_wish_list_btn']")
+	public WebElement btnCreateWishList;
+
+	@FindBy(xpath = "//a[text()='order']")
+	public WebElement lnkOrder;
+
+	@FindBy(xpath = "//h5[text()='ORDERS']")
+	public WebElement headerOrder;
+
+	@FindBy(xpath = "(//*[text()='order']/following-sibling::input)[1]")
+	public WebElement txtOrderNumber;
+
+	@FindBy(xpath = "(//*[text()='Shipping Zip Code']/following-sibling::input)[1]")
+	public WebElement txtShippingZipCode;
+
+	@FindBy(xpath = "//*[@data-auid='btnbutton-3']")
+	public WebElement btnFind;
+
+	@FindBy(xpath = "//*[text()='Set as Default']/../input")
+	public WebElement chkBoxSetAsDefault;
+
+	@FindBy(xpath = "//h5[text()='ADDRESS BOOK']")
+	public WebElement headerAddressBook;
+
+	@FindBy(xpath = "//*[@data-auid='btnsubmit_btn']")
+	public WebElement btnAddInAddressField;
+	
+		// End Page validation CR-SK
+
 	/***************************** END XPAHTS***********************************/
 	
 	/***************************** START METHODS********************************/

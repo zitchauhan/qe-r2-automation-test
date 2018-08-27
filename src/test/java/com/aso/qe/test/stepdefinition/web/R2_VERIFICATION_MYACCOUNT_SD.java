@@ -30,52 +30,189 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper
 			for (int i = 1; i < elements.size(); i++) 
 			{
 				String currentElement = elements.get(i).get(0);
-				////sign in
-				if (currentElement.equalsIgnoreCase("Email Address"))
+				//===============================================================================
+				////sign in or login page
+				//===============================================================================
+				if (currentElement.equalsIgnoreCase("SignInPage_EmailAddress_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.inputEmailAddress_SignIn));
-				else if (currentElement.equalsIgnoreCase("Password"))
+				else if (currentElement.equalsIgnoreCase("SignInPage_Password_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.password));
-				else if (currentElement.equalsIgnoreCase("Sign In"))
+				else if (currentElement.equalsIgnoreCase("SignInPage_SignIn_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.logIn));
-				else if (currentElement.equalsIgnoreCase("Sign Up"))
+				else if (currentElement.equalsIgnoreCase("SignInPage_SignUp_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.lnkSignUp));
-				else if (currentElement.equalsIgnoreCase("Forgot Your Password"))
+				else if (currentElement.equalsIgnoreCase("SignInPage_ForgotYourPassword_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnForgotYourPassword));
 				//===============================================================================
 				//////forgot password
 				//===============================================================================
-				else if (currentElement.equalsIgnoreCase("Email Address - Forgot Password Page"))
+				else if (currentElement.equalsIgnoreCase("ForgotPasswordPage_EmailAddress_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.txtEmailAddress));
-				else if (currentElement.equalsIgnoreCase("Submit Button - Forgot Password Page"))
+				else if (currentElement.equalsIgnoreCase("ForgotPasswordPage_Submit_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnSubmit));
+				//===============================================================================
 				///// Address 
-				else if (currentElement.equalsIgnoreCase("First Name"))
-					assertTrue(isDisplayed(r2MyAccountPo.adr_inpFirstName));
-				else if (currentElement.equalsIgnoreCase("Last Name"))
+				//===============================================================================
+				else if (currentElement.equalsIgnoreCase("AddressPage_FirstName_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtFirstName));
+				else if (currentElement.equalsIgnoreCase("AddressPage_LastName_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.adr_inpLastName));
-				else if (currentElement.equalsIgnoreCase("Phone Number"))
+				else if (currentElement.equalsIgnoreCase("AddressPage_PhoneNumber_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.adr_inpPhoneNumber));
-				else if (currentElement.equalsIgnoreCase("Address"))
+				else if (currentElement.equalsIgnoreCase("AddressPage_Address_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.adr_inpAddress1));
-				else if (currentElement.equalsIgnoreCase("Zip Code"))
+				else if (currentElement.equalsIgnoreCase("AddressPage_ZipCode_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.adr_inpzipCode));
-				else if (currentElement.equalsIgnoreCase("City"))
+				else if (currentElement.equalsIgnoreCase("AddressPage_City_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.adr_inpCity));
-				else if (currentElement.equalsIgnoreCase("State"))
-					assertTrue(isDisplayed(r2MyAccountPo.btnState));
+				else if (currentElement.equalsIgnoreCase("AddressPage_State_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnState));		
+				else if (currentElement.equalsIgnoreCase("AddressPage_SetAsDefault_chkBox"))
+					assertTrue(isDisplayed(r2MyAccountPo.chkBoxSetAsDefault));
+				else if (currentElement.equalsIgnoreCase("AddressPage_AddressBookHeader_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.headerAddressBook));
+				else if (currentElement.equalsIgnoreCase("AddressPage_Add_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnAddInAddressField));
+				else if (currentElement.equalsIgnoreCase("AddressPage_AddNewAddress_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.addNewAddressBtn));
+				else if (currentElement.equalsIgnoreCase("AddressPage_Cancel_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnCancelInAddCreditCard));
+				//===============================================================================				
 				//// Payment
-				else if (currentElement.equalsIgnoreCase("No Gift Card listed mesaage"))
+				//===============================================================================
+				else if (currentElement.equalsIgnoreCase("PaymentPage_PaymentsHeader_label"))
+					assertTrue(isDisplayed(r2MyAccountPo.headerPayments));
+				else if (currentElement.equalsIgnoreCase("PaymentPage_CreditCardHeader_label"))
+					assertTrue(isDisplayed(r2MyAccountPo.headerCreditCards));
+				else if (currentElement.equalsIgnoreCase("PaymentPage_GiftCardHeader_label"))
+					assertTrue(isDisplayed(r2MyAccountPo.headerGiftCards));
+				else if (currentElement.equalsIgnoreCase("PaymentPage_YouhaveNoCreditCardsListed_label"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtNoCreditCardListed));
+				else if (currentElement.equalsIgnoreCase("PaymentPage_YouHaveNoGiftcardsListed_label"))
 					assertTrue(isDisplayed(r2MyAccountPo.txtNoGiftCardListed));
-				else if (currentElement.equalsIgnoreCase("Add new Gift Card"))
+				else if (currentElement.equalsIgnoreCase("PaymentPage_AddNewCreditCard_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnAddNewCreditCard));
+				else if (currentElement.equalsIgnoreCase("PaymentPage_AddNewGiftCard_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnAddNewGiftCard));
-				else if (currentElement.equalsIgnoreCase("Gift Card Number"))
-					assertTrue(isDisplayed(r2MyAccountPo.txtGiftCardNumber));
-				else if (currentElement.equalsIgnoreCase("PIN"))
-					assertTrue(isDisplayed(r2MyAccountPo.txtGifCardPin));
-				else if (currentElement.equalsIgnoreCase("Cancel"))
+				//===============================================================================				
+				//// Profile
+				//===============================================================================
+				else if (currentElement.equalsIgnoreCase("ProfilePage_HelloMessage_label"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtHelloMessage));
+				else if (currentElement.equalsIgnoreCase("ProfilePage_ProfileHeader_label"))
+					assertTrue(isDisplayed(r2MyAccountPo.headerProfile));
+				else if (currentElement.equalsIgnoreCase("ProfilePage_EditIcon_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.lnkEdit));
+				else if (currentElement.equalsIgnoreCase("ProfilePage_ProfileInformation_label"))
+					assertTrue(isDisplayed(r2MyAccountPo.headerProileInformation));
+				else if (currentElement.equalsIgnoreCase("ProfilePage_Name_label"))
+					assertTrue(isDisplayed(r2MyAccountPo.labelName));
+				else if (currentElement.equalsIgnoreCase("ProfilePage_Name_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtName));
+				else if (currentElement.equalsIgnoreCase("ProfilePage_Email_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtEmail));
+				else if (currentElement.equalsIgnoreCase("ProfilePage_Email_label"))
+					assertTrue(isDisplayed(r2MyAccountPo.labelEmail));
+				else if (currentElement.equalsIgnoreCase("ProfilePage_PasswordHeader_label"))
+					assertTrue(isDisplayed(r2MyAccountPo.headerPassword));
+				else if (currentElement.equalsIgnoreCase("ProfilePage_ChangePassword_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnChangePassword));
+				else if (currentElement.equalsIgnoreCase("ProfilePage_ReceiveEmailNotifications_checkbox"))
+					assertTrue(isDisplayed(r2MyAccountPo.chkReceiveNotifications));
+				//===============================================================================				
+				//// Profile > Edit Profile
+				//===============================================================================
+				else if (currentElement.equalsIgnoreCase("EditProfilePage_EditProfileHeader_label"))
+					assertTrue(isDisplayed(r2MyAccountPo.headerEditProfile));
+				else if (currentElement.equalsIgnoreCase("EditProfilePage_FirstName_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtFirstName));
+				else if (currentElement.equalsIgnoreCase("EditProfilePage_LastName_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtLastName));
+				else if (currentElement.equalsIgnoreCase("EditProfilePage_NewEmail_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtNewEmail));
+				else if (currentElement.equalsIgnoreCase("EditProfilePage_ConfirmEmail_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtConfirmEmail));
+				else if (currentElement.equalsIgnoreCase("EditProfilePage_Update_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnUpdate));
+				else if (currentElement.equalsIgnoreCase("EditProfilePage_Cancel_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnCancelGiftCard));
-				else if (currentElement.equalsIgnoreCase("Add"))
+				//===============================================================================				
+				//// Profile > Change Password
+				//===============================================================================
+				else if (currentElement.equalsIgnoreCase("ChangePassworPage_CurrentPassword_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtCurrentPassword));
+				else if (currentElement.equalsIgnoreCase("ChangePassworPage_NewPassword_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtNewPassword));
+				else if (currentElement.equalsIgnoreCase("ChangePassworPage_Update_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnUpdate));
+				else if (currentElement.equalsIgnoreCase("ChangePassworPage_Cancel_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnCancelGiftCard));
+				//===============================================================================				
+				//// Payment > Add new credit card
+				//===============================================================================
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_BillingInformationHeader_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.headerBillingInformation));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_AddNewCreditCardsHeader_label"))
+					assertTrue(isDisplayed(r2MyAccountPo.headerAddNewCreditCards));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_CreditCardNumber_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtCreditCardNumber));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_CardExpiryDate_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtExpiryDate));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_CardCVV_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtCVV));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_FirstName_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.adr_inpFirstName));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_LastName_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.adr_inpLastName));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_Address_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.adr_inpAddress1));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_ZipCode_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.adr_inpzipCode));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_City_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.adr_inpCity));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_State_dropdown"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnState));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_PhoneNumber_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnAddInAddCreditCard));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_Add_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnAddInAddCreditCard));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_Cancel_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnCancelInAddCreditCard));
+				//===============================================================================				
+				//// Payment > Add new gift card
+				//===============================================================================
+				else if (currentElement.equalsIgnoreCase("AddGiftCardPage_GiftCardNumber_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtGiftCardNumber));
+				else if (currentElement.equalsIgnoreCase("AddGiftCardPage_PIN_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtGifCardPin));
+				else if (currentElement.equalsIgnoreCase("AddGiftCardPage_Cancel_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnCancelGiftCard));
+				else if (currentElement.equalsIgnoreCase("AddGiftCardPage_Add_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnAddGiftCard));
+				//===============================================================================				
+				//// Wishlist
+				//===============================================================================
+				else if (currentElement.equalsIgnoreCase("WishlistPage_Wishlist_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.lnkWishlist));
+				else if (currentElement.equalsIgnoreCase("WishlistPage_CreateANewWishlist_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnCreateNewWishlist));
+				else if (currentElement.equalsIgnoreCase("WishlistPage_WishListName_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtWishListName));
+				else if (currentElement.equalsIgnoreCase("WishlistPage_CreateWishList_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnCreateWishList));
+				//===============================================================================				
+				//// Order
+				//===============================================================================
+				else if (currentElement.equalsIgnoreCase("OrderPage_Order_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.lnkOrder));
+				else if (currentElement.equalsIgnoreCase("OrderPage_OrdersHeader_label"))
+					assertTrue(isDisplayed(r2MyAccountPo.headerOrder));
+				else if (currentElement.equalsIgnoreCase("OrderPage_OrderNumber_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtOrderNumber));
+				else if (currentElement.equalsIgnoreCase("OrderPage_ShippingZipCode_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtShippingZipCode));
+				else if (currentElement.equalsIgnoreCase("OrderPage_Find_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnFind));
 		
 				else {
 					logger.error("Element <" + currentElement + "> is not found in the SD list.");
