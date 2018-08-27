@@ -35,6 +35,17 @@ Scenario: Verify that user is able to see the 'View Next 5 stores' button, if st
 	And user click on submit button
 	Then user verify the results based on entering zipcode
 	And user should be able to see the View Next five Stores button	
+	
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-8719 @CR-DPK
+Scenario: Verify the user is able to see the store address of any of the listed store in 'Find a Store' modal through store accordion
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on Find a Store
+	Then user enter "zipCode" in Find a Store Model
+	And user click on submit button
+	Then user click on plus icon in Store Address drawer
+	And user should be able to see the store Details including its address, phone number, Driving Directions link, Store Open days/hours
+	And user verify minus icon in Store Address drawer	
 
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8725 @CR-DPK
@@ -48,6 +59,39 @@ Scenario: Verify that user is able to see the 'View Next 5 stores' button, if st
 	And user very Find a Store popup is closed
 	When user clicks on Find a Store
 	Then user verify the results based on entering zipcode
+	
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10621 @CR-DPK
+Scenario: Verify the user is able to view the 'Change Location' under In-store Pick Up on Cart in Product Blade
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on one of the category and navigates to LOne
+    Then user clicks on one of the subcategory and navigates to LTwo
+    And user is able to see the product category name in section title
+    Then user clicks on one of the product category and navigates to LThree
+	Then User is navigated to pdp page
+	Then user click on Add to Cart Button
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	When user will verify in-store pick up radio button is selected with "ZIPCode"
+	And verify Change Location link	
+	
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10622 @CR-DPK
+Scenario: Verify that user view 'Find a Store' modal from Cart
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on one of the category and navigates to LOne
+    Then user clicks on one of the subcategory and navigates to LTwo
+    And user is able to see the product category name in section title
+    Then user clicks on one of the product category and navigates to LThree
+	Then User is navigated to pdp page
+	Then user click on Add to Cart Button
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	When user will verify in-store pick up radio button is selected with "ZIPCode"
+	And click on Change Location link
+	Then Find in Store modal should get open	
 
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10652 @CR-DPK
@@ -109,6 +153,25 @@ Scenario: Verify user is displayed with an error message when there is no store 
 	Then user enter "WrongzipCode" in Find a Store Model
 	And user click on submit button
 	Then verify Static error message
+	
+	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10726 @CR-DPK
+Scenario: Verify that user view 'Find a Store' modal from Cart
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on one of the category and navigates to LOne
+    Then user clicks on one of the subcategory and navigates to LTwo
+    Then user clicks on one of the product category and navigates to LThree
+	Then User is navigated to pdp page
+	Then user click on Add to Cart Button
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	#When user will verify in-store pick up radio button is selected with "ZIPCode"
+	And click on Change Location link
+	Then user enter "zipCode" in Find a Store Model
+	And user click on submit button
+	Then user click on all plus icon in Store Address drawer
+	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
 	
 	
 	

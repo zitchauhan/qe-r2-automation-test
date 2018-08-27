@@ -26,6 +26,14 @@ public class R2_CheckOut_PO extends CommonActionHelper
 
 	@FindBy(xpath = "//*[@data-auid='email-signup-main-modal-close']")
 	public WebElement iconClose;
+	
+	@FindBy(xpath = "//*[@id='logonId']")
+	public WebElement inputEmailCheckOut;//27Aug
+	
+	@FindBy(xpath = "//*[@id='logonPassword']")
+	public WebElement inputPasswordCheckOut;//27Aug 
+	
+	
 	// End KER-3392 CR-RK
 	
 	// Start KER-2927 CR-SK
@@ -71,6 +79,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 
 	@FindBy(xpath = "//*[@data-auid='checkout_payment_hide_gift_card_icon']")
 	public WebElement minusIconGiftCard;
+	
+	@FindBy(xpath = "//*[@data-auid='checkout_payment_add_another_gift_card_icon']")
+	public WebElement plusAnotherIconGiftCard;//27Aug danush
 
 	@FindBy(xpath = "//*[text()='Gift Card Number']")
 	public WebElement txtGiftcardNumber;

@@ -117,5 +117,31 @@ public class R2_CHECKOUT_K3392_SD extends CommonActionHelper {
 		   logger.info("Password field is not Empty");
 	   }
 	}
+	
+	
+	@When("^user enter the Invalid emailaddress \"(.*?)\"$")
+	public void user_enter_the_Invalid_emailaddress(String arg1) throws Throwable {
+		if (arg1 != "BlankEmailAddress")
+			setInputText(r2CheckOutPo.inputEmailCheckOut, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@When("^user enter the Invalid password \"(.*?)\"$")
+	public void user_enter_the_Invalid_password(String arg1) throws Throwable {
+		if (arg1 != "BlankPassword")
+			setInputText(r2CheckOutPo.inputPasswordCheckOut, webPropHelper.getTestDataProperty(arg1));
+	}
+	
+	
+	@When("^user enter the valid Emailaddress \"(.*?)\"$")
+	public void user_enter_the_valid_Emailaddress(String arg1) throws Throwable {
+		if (arg1 != "BlankEmailAddress")
+			setInputText(r2CheckOutPo.inputEmailCheckOut, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@When("^user enter the valid Password \"(.*?)\"$")
+	public void user_enter_the_valid_Password(String arg1) throws Throwable {
+		if (arg1 != "BlankPassword")
+			setInputText(r2CheckOutPo.inputPasswordCheckOut, webPropHelper.getTestDataProperty(arg1));
+	}
 
 }

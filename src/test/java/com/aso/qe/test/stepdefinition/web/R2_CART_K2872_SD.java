@@ -93,6 +93,11 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	public void user_click_on_minus_icon_in_Store_Address_drawer() throws Throwable {
 		assertTrue(clickOnButton(r2CartPo.iconMinusStoreAddressDrawer));
 		}
+	
+	@Then("^user verify minus icon in Store Address drawer$")
+	public void user_verify_minus_icon_in_Store_Address_drawer() throws Throwable {
+		assertTrue(isDisplayed(r2CartPo.iconMinusStoreAddressDrawer));
+		}
 
 	@And("^user click on Make My store button$")
 	public void user_click_on_Make_My_store_button() throws Throwable {
@@ -169,6 +174,46 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	    	assertTrue(isDisplayed(plusIcon));
 	    }
 		
+	}
+	
+	@And("^click on Change Location link$")
+	public void click_on_Change_Location_link() throws Throwable {
+	    assertTrue(clickOnButton(r2CartPo.lnkChangeLocationCart));
+	}
+	
+	
+	@And("^verify Change Location link$")
+	public void verify_Change_Location_link() throws Throwable {
+	    assertTrue(isDisplayed(r2CartPo.lnkChangeLocationCart));
+	}
+
+	@Then("^Find in Store modal should get open$")
+	public void find_in_Store_modal_should_get_open() throws Throwable {
+		assertTrue(isDisplayed(r2CartPo.txtFindaStore));
+	}
+	
+	@And("^user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails$")
+	public void user_should_be_able_to_see_the_BOPIS_availability_as_Cart_Items_available_Not_available_for_Pickup_with_product_image_thumbnails() throws Throwable {
+		for(WebElement bopisavailablity: r2CartPo.txtBopisAvailablity) {
+			if(bopisavailablity.equals("Items Not Available for Pickup")) {
+				System.out.println("Items Not Available for Pickup");
+				logger.info("Items Not Available for Pickup");
+			}
+			else if(bopisavailablity.equals("Cart Items available")) {
+				System.out.println("Cart Items available");
+				logger.info("Cart Items available");
+			}
+			else {
+				System.out.println("No Items are available");
+				logger.info("No Items are available");
+			}
+		}
+				
+			
+			for(WebElement imagethumbnalis: r2CartPo.txtBopisImageThumbnails) {
+				assertTrue(isDisplayed(imagethumbnalis));
+		
+			}
 	}
 	
 }

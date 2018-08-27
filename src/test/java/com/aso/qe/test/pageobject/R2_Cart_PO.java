@@ -133,6 +133,16 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='facetdrawerundefined']//*[contains(text(),'mi')]")
 	public List<WebElement> txtDistanceinMiles;
+	
+	@FindBy(xpath = "//*[text()='Change Location']")
+	public WebElement lnkChangeLocationCart;//DPK 24 Aug
+	
+	
+	@FindBy(xpath = "//*[contains(text(),'Items Not Available for Pickup')]")
+	public List<WebElement> txtBopisAvailablity;//DPK 24 Aug
+	
+	@FindBy(xpath = "//*[contains(text(),'Items Not Available for Pickup')]/div/img")
+	public List<WebElement> txtBopisImageThumbnails;//DPK 24 Aug
 
 	// End KER-2872 CR-DPK
 
