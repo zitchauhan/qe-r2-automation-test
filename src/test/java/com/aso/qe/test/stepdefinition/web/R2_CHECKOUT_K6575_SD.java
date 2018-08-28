@@ -77,5 +77,12 @@ public class R2_CHECKOUT_K6575_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CheckoutPo.txtQuantity));
 		
 	}
+	
+	
+	@Then("^user should see the mini cart Icon with no\\. of items in cart notifier$")
+	public void user_should_see_the_mini_cart_Icon_with_no_of_items_in_cart_notifier() throws Throwable {
+		assertTrue(isDisplayed(r2CheckoutPo.R2_iconMiniCartCheckout));
+		assertTrue(isDisplayed(r2CheckoutPo.R2_miniCartCountCheckout));
+	}
 
 }

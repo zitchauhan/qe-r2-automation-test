@@ -157,6 +157,12 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	// Start KER-6575 CR-SK
 	@FindBy(xpath = "//*[@data-auid='checkout_header_logo_target_link']")
 	public WebElement R2_imgAcademyLogo;
+	
+	@FindBy(xpath = "//*[@data-auid='checkout_header_goto_cart_link']")
+	public WebElement R2_iconMiniCartCheckout;//28Aug danush
+	
+	@FindBy(xpath = "//*[@class='mini-cart-count']")
+	public WebElement R2_miniCartCountCheckout;//28Aug danush
 	// End KER-6575 CR-DPK
 
 	// Start KER-2940 CR-AKK
