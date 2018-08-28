@@ -10,3 +10,4 @@ Feature: This service would return inventory status for all 2 inventory sources 
     Given "InventoryPickUpSkus" validate with "InventoryPickUpStores" entering "SkuID" and "StoreID"
      And validate jsonSchema "Schema"
      
+     
