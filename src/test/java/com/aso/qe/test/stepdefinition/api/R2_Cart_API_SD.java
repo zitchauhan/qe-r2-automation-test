@@ -47,7 +47,6 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 
 	}
 
-
 	public List<io.restassured.http.Cookie> getGuestUserCookies_v1(){
 		List<io.restassured.http.Cookie> restAssuredCookies = new ArrayList<io.restassured.http.Cookie>();
 		RemoteWebDriver webdriver = null;
@@ -83,7 +82,6 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		assertTrue(validateStatusCode(statusCodeExpected));
 	}
 
-
 	@Given("^\"(.*?)\" and post request \"(.*?)\" endpoint for Add to Cart with Guest user$")
 	public void and_post_request_endpoint_for_Add_to_Cart_with_Guest_user(String AddToCartSummaryUrl, String addtocartRequestJson) throws Throwable {
 		List<io.restassured.http.Cookie> restAssuredCookies = new R2_Cart_API_SD().getGuestUserCookies_v1();
@@ -91,7 +89,6 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithoutSignIn(endpoints, restAssuredCookies, loadProps.getTestDataProperty(addtocartRequestJson));
 	}
-
 
 	@Given("^\"(.*?)\" endpoint for getting cart$")
 	public void endpoint_for_getting_cart(String GetCartUrl) throws Throwable {
@@ -105,11 +102,25 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		System.setProperty("OrderId", orderID);
 	}
 
-
 	@Given("^\"(.*?)\" endpoint for viewing cart details$")
 	public void endpoint_for_viewing_cart_details(String url) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId");
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithGuestUserCookies(endpoints);
 	}
+	
+	@Given("^\"(.*?)\" validating with \"(.*?)\"$")  //Anuj 23 Aug
+	public void validating_with(String arg1, String arg2) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(arg1)+loadProps.getTestDataProperty(arg2);
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICall(endpoints);
+	}
+
+	@Given("^\"(.*?)\" validate with \"(.*?)\" entering \"(.*?)\" and \"(.*?)\"$")  //Anuj 23 Aug
+	public void validate_with_entering_and(String arg1, String arg2, String arg3, String arg4) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(arg1)+loadProps.getTestDataProperty(arg3)+loadProps.getTestDataProperty(arg2)+loadProps.getTestDataProperty(arg4);
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICall(endpoints);
+	}
+
 }
