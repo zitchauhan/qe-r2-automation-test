@@ -29,7 +29,7 @@ public class R2_CHECKOUT_K2926_SD extends CommonActionHelper {
 	
 	@Then("^verify the item is removed$")
 	public void verify_the_item_is_removed() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.cartEmptyMsg));
+		assertTrue(isDisplayed(r2CartPo.cartEmptyTxt));//cartEmptyMsg
 	}
 
 	

@@ -90,7 +90,7 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 
 	@And("^the Total is in \\$XX\\.XX format$")
 	public void the_Total_is_in_$XX_XX_format() throws Throwable {
-		String totalPriceformat = r2CartPo.txtTotalCart.getText();
+		String totalPriceformat = r2CartPo.txtTotal.getText();//txtTotalCart
 		total = Double.parseDouble(totalPriceformat.replaceAll("[^0-9\\\\.]+", ""));
 		NumberFormat format = NumberFormat.getCurrencyInstance(Locale.US);
 		String estimateTaxCurrency = format.format(total);
@@ -134,12 +134,12 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 
 	@And("^verify Promo code discount is applied$")
 	public void verify_Promo_code_discount_is_applied() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.txtPromocode));
+		assertTrue(isDisplayed(r2CartPo.txtPromocodeCart));//txtPromocode
 	}
 
 	@And("^verify that consolidated amount for all promotions \\(except shipping\\) is applied$")
 	public void verify_that_consolidated_amount_for_all_promotions_except_shipping_is_applied() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.txtTotalCart));
+		assertTrue(isDisplayed(r2CartPo.txtTotal));//txtTotalCart
 		Thread.sleep(1000);
 	}
 
@@ -188,8 +188,8 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 	}
 	
 	@When("^verify the the Sub Total in Order Summary in Cart page$")
-	public void verify_the_the_Sub_Total_in_Order_Summary_in_Cart_page() throws Throwable {
-
+	public void verify_the_the_Sub_Total_in_Order_Summary_in_Cart_page() throws Throwable 
+	{
 		assertTrue(isDisplayed(r2CartPo.txtSubtotalCart));
 	}
 	
@@ -201,15 +201,17 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 	}
 	
 	@Then("^verify that the hierarchy of itemizations in Order Summary in Cart Page$")
-	public void verify_that_the_hierarchy_of_itemizations_in_Order_Summary_in_Cart_Page() throws Throwable {
+	public void verify_that_the_hierarchy_of_itemizations_in_Order_Summary_in_Cart_Page() throws Throwable 
+	{
 		assertTrue(isDisplayed(r2CartPo.txtActualPrice));
 		assertTrue(isDisplayed(r2CartPo.txtEstimatedTaxesCart));
-		assertTrue(isDisplayed(r2CartPo.txtPromocode));
+		assertTrue(isDisplayed(r2CartPo.txtPromocodeCart)); //txtPromocode
 	}
 	
 	@When("^user views Estimated Shipping in the Item Subtotal$")
-	public void user_views_Estimated_Shipping_in_the_Item_Subtotal() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.txtEstimatedShipping));
+	public void user_views_Estimated_Shipping_in_the_Item_Subtotal() throws Throwable 
+	{
+		assertTrue(isDisplayed(r2CartPo.txtEstimatedShippingCart));  //txtEstimatedShipping
 	}
 
 	@Then("^verify Shipping charges for the items in the cart page is Zero and FREE is displayed$")

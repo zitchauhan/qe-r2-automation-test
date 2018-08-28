@@ -59,9 +59,9 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
 			if(isDisplayed(cartR2PageObj.miniCartCount)) {
 				assertTrue(clickOnButton(cartR2PageObj.miniCartCount));
-				setInputText(cartR2PageObj.txtQuantity, "0");
-				if(isDisplayed(cartR2PageObj.txtQuantity))
-					tabInputBox(cartR2PageObj.txtQuantity);				
+				setInputText(cartR2PageObj.input_Quantity, "0");//txtQuantity
+				if(isDisplayed(cartR2PageObj.input_Quantity))//txtQuantity
+					tabInputBox(cartR2PageObj.input_Quantity);	//txtQuantity			
 			}	
 		}
 		

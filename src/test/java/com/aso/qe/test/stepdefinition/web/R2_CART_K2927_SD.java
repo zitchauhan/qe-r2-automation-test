@@ -101,15 +101,15 @@ public class R2_CART_K2927_SD extends CommonActionHelper {
 	
 	@When("^user decreases product quantity to zero$")
 	public void user_decreases_product_quantity_to_zero() throws Throwable {
-		setInputText(cartR2PageObj.txtQuantity, "0");
-		tabInputBox(cartR2PageObj.txtQuantity);
+		setInputText(cartR2PageObj.input_Quantity, "0");
+		tabInputBox(cartR2PageObj.input_Quantity);
 		getDriver().navigate().refresh();
-		waitForElement(cartR2PageObj.txtQuantity);
+		waitForElement(cartR2PageObj.input_Quantity);
 	}
 	
 	@Then("^estimated tax Is populated separately under Order Summary$")
 	public void estimated_tax_Is_populated_separately_under_Order_Summary() throws Throwable {
-		assertTrue(isDisplayed(cartR2PageObj.txtEstimatedTax));
+		assertTrue(isDisplayed(cartR2PageObj.txtEstimatedTaxesCart));//txtEstimatedTax
 	}
 
 	@Then("^Total amount including Tax Is populated separately under Order Summary$")

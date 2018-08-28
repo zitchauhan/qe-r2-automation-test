@@ -51,7 +51,7 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 
 	@Then("^user verify price of items for single quantity$")
 	public void user_verify_price_of_items_for_single_quantity() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.txtActualPrice));
+		assertTrue(isDisplayed(r2CartPo.txtActualPrice));//txtActualPrice
 	}
 
 	@Then("^user verify price of items more than one quantity$")
@@ -72,12 +72,12 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 
 	@And("^user verify add to wishlist$")
 	public void user_verify_add_to_wishlist() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.btnWlist));
+		assertTrue(isDisplayed(r2CartPo.btn_AddToWishList));//  btnWlist
 	}
 
 	@Then("^user verify Discount messaging and Promotional messaging$")
 	public void user_verify_Discount_messaging_and_Promotional_messaging() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.txtPromoCode1));
+		assertTrue(isDisplayed(r2CartPo.txtPromocodeCart));//txtPromoCode1
 	}
 
 	@Then("^user verfiy disclamier message$")
@@ -192,16 +192,16 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 
 	@Then("^verify user can begin checkout$")
 	public void verify_user_can_begin_checkout() throws Throwable {
-		assertTrue(clickOnButton(r2CartPo.btnCheckout));
+		assertTrue(clickOnButton(r2CartPo.btnCartCheckout));//btnCheckout
 	}
 	
  
 	@Then("^user clicks change \"(.*?)\" code$")
 		public void user_clicks_change_code(String arg1) throws Throwable { 
-		assertTrue(clickOnButton(r2CartPo.changeZIPCode));
-		setInputText(r2CartPo.inputZIPCode, webPropHelper.getTestDataProperty(arg1));
+		assertTrue(clickOnButton(r2CartPo.lnkChangeZipCode));// changeZIPCode
+		setInputText(r2CartPo.inputZipCode, webPropHelper.getTestDataProperty(arg1));//inputZIPCode
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		assertTrue(clickOnButton(r2CartPo.submitZIPCode));	
+		assertTrue(clickOnButton(r2CartPo.btnCartSubmit));	//submitZIPCode
 		} 
 	 
 	@When("^user verify the Est\\.Arrival Tool Tip is present$")

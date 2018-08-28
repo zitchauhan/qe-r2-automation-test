@@ -25,7 +25,7 @@ public class R2_CART_K3511_SD extends CommonActionHelper {
 	
 	@When("^user clicks on Change Zip Code link in Estimated shipping section of Order Summary section on Cart page$")
 	public void user_clicks_on_Change_Zip_Code_link_in_Estimated_shipping_section_of_Order_Summary_section_on_Cart_page() throws Throwable {
-		beforeChangeZipcode = r2CartPo.txtEstimatedShipping.getText();
+		beforeChangeZipcode = r2CartPo.txtEstimatedShippingCart.getText();//txtEstimatedShipping
 		assertTrue(clickOnButton(r2CartPo.lnkChangeZipCode));
 	}
 
@@ -42,8 +42,8 @@ public class R2_CART_K3511_SD extends CommonActionHelper {
 
 	@Then("^user verifies the estimated shipping cost based on updated zip code\\.$")
 	public void user_verifies_the_estimated_shipping_cost_based_on_updated_zip_code() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.txtEstimatedShipping));
-		afterChangeZipcode = r2CartPo.txtEstimatedShipping.getText();
+		assertTrue(isDisplayed(r2CartPo.txtEstimatedShippingCart));//txtEstimatedShipping
+		afterChangeZipcode = r2CartPo.txtEstimatedShippingCart.getText();//txtEstimatedShipping
 		if(!beforeChangeZipcode.equals(afterChangeZipcode)) {
 			logger.info("Estimated shipping cost is updated based on zip code change");
 		}
