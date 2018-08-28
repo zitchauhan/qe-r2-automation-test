@@ -53,6 +53,12 @@ Scenario: Verify MyAccount
 		|AddCreditCardPage_PhoneNumber_txt										|
 		|AddCreditCardPage_Add_btn												|
 		|AddCreditCardPage_Cancel_btn											|
+		|AddCreditCardPage_CVV_toolTip											|
+		|AddCreditCardPage_IconCVV_toolTipFlyout								|
+		|AddCreditCardPage_InlineErrorMessage_txt								|
+		|AddCreditCardPage_AddNewCreditCard										|
+		
+		
 		
 		|#Verify following elements in Payments > Add New Gift card section	|
 		|AddGiftCardPage_GiftCardNumber_txt									|
@@ -75,9 +81,9 @@ Scenario: Verify MyAccount
 		
 		|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
-		|EditProfilePage_FirstName_btn									|
-		|EditProfilePage_LastName_btn									|
-		|EditProfilePage_NewEmail_btn									|
+		|EditProfilePage_FirstName_txt									|
+		|EditProfilePage_LastName_txt									|
+		|EditProfilePage_NewEmail_txt									|
 		|EditProfilePage_ConfirmEmail_txt								|
 		|EditProfilePage_Update_btn										|
 		|EditProfilePage_Cancel_btn										|	

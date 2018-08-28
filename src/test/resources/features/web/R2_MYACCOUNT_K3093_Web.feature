@@ -7,9 +7,9 @@ Scenario: Verify that user is able to see the Add new Gift card on empty Wallet
 	And user logs in as "RawUser"
 	When user clicks on payment tab
 	Then Verify below Sub/Main Module of My Account
-		|#Verify following elements in accounts tab	|
-		|No Gift Card listed mesaage				|
-		|Add new Gift Card							|
+		|#Verify following elements in payments page	|
+		|PaymentPage_YouHaveNoGiftcardsListed_label		|
+		|PaymentPage_AddNewGiftCard_btn					|
 		
 
 @R2_Web @R2_Regression @R2_All @P-High @C-My_Account @KER-3093 @ZYP_CART_K3093-10309 @CR-SK 
@@ -20,11 +20,12 @@ Scenario: Verify that user is able to see the Add New Gift Card form
 	And user clicks on payment tab
 	When user clicks on Add New Gift Card button
 	Then Verify below Sub/Main Module of My Account
-		|#Verify following elements in accounts tab	|
-		|Gift Card Number							|
-		|PIN										|
-		|Cancel										|
-		|Add										|
+		|#Verify following elements in Payments > Add New Gift card section	|
+		|AddGiftCardPage_GiftCardNumber_txt									|
+		|AddGiftCardPage_PIN_txt											|
+		|AddGiftCardPage_Cancel_txt											|
+		|AddGiftCardPage_Add_txt											|
+
 		
 		
 #		"Scenario: Verify that user is able to see the Add New Gift Card form

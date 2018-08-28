@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -15,8 +16,7 @@ import freemarker.template.utility.NullArgumentException;
 
 import org.apache.log4j.Logger;
 
-public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper 
-{
+public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	private static final Logger logger = Logger.getLogger(R2_VERIFICATION_MYACCOUNT_SD.class);
@@ -53,8 +53,10 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper
 				//===============================================================================
 				///// Address 
 				//===============================================================================
+				else if (currentElement.equalsIgnoreCase("MyAccountPage_Address_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.addressBook));
 				else if (currentElement.equalsIgnoreCase("AddressPage_FirstName_txt"))
-					assertTrue(isDisplayed(r2MyAccountPo.txtFirstName));
+					assertTrue(isDisplayed(r2MyAccountPo.adr_inpFirstName));
 				else if (currentElement.equalsIgnoreCase("AddressPage_LastName_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.adr_inpLastName));
 				else if (currentElement.equalsIgnoreCase("AddressPage_PhoneNumber_txt"))
@@ -124,11 +126,11 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper
 				//===============================================================================
 				else if (currentElement.equalsIgnoreCase("EditProfilePage_EditProfileHeader_label"))
 					assertTrue(isDisplayed(r2MyAccountPo.headerEditProfile));
-				else if (currentElement.equalsIgnoreCase("EditProfilePage_FirstName_btn"))
+				else if (currentElement.equalsIgnoreCase("EditProfilePage_FirstName_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.txtFirstName));
-				else if (currentElement.equalsIgnoreCase("EditProfilePage_LastName_btn"))
+				else if (currentElement.equalsIgnoreCase("EditProfilePage_LastName_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.txtLastName));
-				else if (currentElement.equalsIgnoreCase("EditProfilePage_NewEmail_btn"))
+				else if (currentElement.equalsIgnoreCase("EditProfilePage_NewEmail_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.txtNewEmail));
 				else if (currentElement.equalsIgnoreCase("EditProfilePage_ConfirmEmail_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.txtConfirmEmail));
@@ -161,23 +163,34 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_CardCVV_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.txtCVV));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_FirstName_txt"))
-					assertTrue(isDisplayed(r2MyAccountPo.adr_inpFirstName));
+					assertTrue(isDisplayed(r2MyAccountPo.txtFirstNameInAddCreditCard));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_LastName_txt"))
-					assertTrue(isDisplayed(r2MyAccountPo.adr_inpLastName));
+					assertTrue(isDisplayed(r2MyAccountPo.txtLastNameInAddCreditCard));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_Address_txt"))
-					assertTrue(isDisplayed(r2MyAccountPo.adr_inpAddress1));
+					assertTrue(isDisplayed(r2MyAccountPo.txtAddressInAddCreditCard));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_ZipCode_txt"))
-					assertTrue(isDisplayed(r2MyAccountPo.adr_inpzipCode));
+					assertTrue(isDisplayed(r2MyAccountPo.txtZipCodeInAddCreditCard));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_City_txt"))
-					assertTrue(isDisplayed(r2MyAccountPo.adr_inpCity));
+					assertTrue(isDisplayed(r2MyAccountPo.txtCityInAddCreditCard));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_State_dropdown"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnState));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_PhoneNumber_txt"))
-					assertTrue(isDisplayed(r2MyAccountPo.btnAddInAddCreditCard));
+					assertTrue(isDisplayed(r2MyAccountPo.adr_inpPhoneNumber));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_Add_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnAddInAddCreditCard));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_Cancel_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnCancelInAddCreditCard));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_CVV_toolTip"))
+					assertTrue(isDisplayed(r2MyAccountPo.iconCVVToolTip));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_IconCVV_toolTipFlyout"))
+					assertTrue(isDisplayed(r2MyAccountPo.iconCVVToolTipFlyout));
+				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_InlineErrorMessage_txt"))
+					for(WebElement inlineError: r2MyAccountPo.inlineErrorMsg) {
+				    	assertTrue(isDisplayed(inlineError));
+					}
+		    	else if (currentElement.equalsIgnoreCase("AddCreditCardPage_AddNewCreditCard"))
+					assertTrue(isDisplayed(r2MyAccountPo.addNewCardCta));
+				
 				//===============================================================================				
 				//// Payment > Add new gift card
 				//===============================================================================
