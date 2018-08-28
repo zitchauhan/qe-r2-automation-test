@@ -64,14 +64,6 @@ public class R2_CART_K2942_SD extends CommonActionHelper {
 		Thread.sleep(1000);
 	}
 
-	@Then("^User should be notified that Less quantity to be added or stock not enough$")
-	public void user_should_be_notified_that_Less_quantity_to_be_added_or_stock_not_enough() throws Throwable {
-//		waitForElement(r2CartPo.cartQtyErr);
-//		assertTrue(isDisplayed(r2CartPo.cartQtyErr));
-	}
-
-	
-
 	@Then("^user should not be allowed to enter any non-numeric value in the input$")
 	public void user_should_not_be_allowed_to_enter_any_non_numeric_value_in_the_input() throws Throwable {
 		String str1 = r2SanityPo.AS_inputQty.getAttribute("value");
@@ -108,5 +100,17 @@ public class R2_CART_K2942_SD extends CommonActionHelper {
 	public void verify_the_Quantity_is_not_allow_alphanumeric() throws Throwable {
 		String quantity= r2SanityPo.AS_inputQty.getAttribute("value");
 		assertTrue(quantity.isEmpty());
+	}
+	
+	@Then("^verify the Quantity is not zero$")
+	public void verify_the_Quantity_is_not_zero() throws Throwable {
+		String quantity= r2SanityPo.AS_inputQty.getAttribute("value");
+		assertTrue(!quantity.isEmpty());
+	}
+	
+	@Then("^verify the Quantity is updated$")
+	public void verify_the_Quantity_is_updated() throws Throwable {
+		String quantity= r2SanityPo.AS_inputQty.getAttribute("value");
+		assertTrue(!quantity.isEmpty());
 	}
 }
