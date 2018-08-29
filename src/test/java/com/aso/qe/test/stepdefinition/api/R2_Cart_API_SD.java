@@ -1,6 +1,8 @@
 package com.aso.qe.test.stepdefinition.api;
 
 
+import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.assertNull;
 import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
@@ -122,5 +124,36 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICall(endpoints);
 	}
+
+	@Given("^\"(.*?)\" endpoint for Storelocator Find stores and findbyLatNLong StoreLocId$")
+	public void endpoint_for_Storelocator_Find_stores_findbyLatNLong_StoreLocId(String findStoreUrl) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(findStoreUrl);
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICall(endpoints);
+	}
+	
+	@Given("^\"(.*?)\" and post request \"(.*?)\" endpoint for Storelocator Find stores makemystore with SignIn user$")
+	public void and_post_request_endpoint_for_Storelocator_Find_stores_makemystore_with_SignIn_user(String url, String requestJson) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url);
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestPostAPICallWithCookies(endpoints, requestJson);
+	}
+	
+	@Given("^verify the Storelocator-Find stores-makemystore response data$")
+	public void verify_the_Storelocator_Find_stores_makemystore_response_data() throws Throwable {
+		JsonPath jsonPathEvaluator = response.jsonPath();
+		String data = jsonPathEvaluator.get("data");
+		logger.debug("Response Data::"+ data);
+		assertNotNull(data);
+	}
+
+	@Given("^verify the Storelocator Find stores findbyLatNLong response data$")
+	public void verify_the_Storelocator_Find_stores_findbyLatNLong_response_data() throws Throwable {
+		JsonPath jsonPathEvaluator = response.jsonPath();
+		String storeId = jsonPathEvaluator.get("stores[0].storeId");
+		logger.debug("Response storeId::"+ storeId);
+		assertNotNull(storeId);
+	}
+
 
 }
