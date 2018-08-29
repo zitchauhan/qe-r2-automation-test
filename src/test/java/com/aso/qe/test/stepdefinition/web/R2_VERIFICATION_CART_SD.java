@@ -34,8 +34,7 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 			
 				
 
-				//**********************************************************************************************			
-				//Your Cart (Start) 		
+				//**************************************%%%  WEB  %%%%**************************				//Your Cart (Start) 		
 				
 				if (currentElement.equalsIgnoreCase("ContinueShopping_Link"))
 					assertTrue(isDisplayed(r2CartPo.link_ContinueShopping));
@@ -190,7 +189,22 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 					else if (currentElement.equalsIgnoreCase("ShippingCharges_header"))
 						assertTrue(isDisplayed(r2CartPo.txtShippingCharges));
 				//After clicking Shiping Policy(End)
-//******************************************************************************
+           
+
+                      //********************************%%%% Mobile %%%%***********************************
+				// For Mobile
+				
+					else if (currentElement.equalsIgnoreCase("Quantity_M_input_txt"))
+					assertTrue(isDisplayed(r2CartPo.input_Quantity_M));
+	
+				else if (currentElement.equalsIgnoreCase("CheckOut_FirstBTN_M_btn"))
+					assertTrue(isDisplayed(r2CartPo.checkOut_M_Btn));		
+				//For Mobile End
+				
+				
+				
+				
+				
 					else {
 					logger.error("Element " + currentElement + " is not found.");
 					throw new NullArgumentException("Element <" + currentElement + "> is not found.");

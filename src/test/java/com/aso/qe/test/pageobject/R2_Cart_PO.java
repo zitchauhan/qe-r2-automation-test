@@ -695,7 +695,14 @@ public class R2_Cart_PO extends CommonActionHelper {
 	//&&&&&&&&&&&&&&&&&&&&&&&**************END***********************&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 	
 	
+	//&&&&&&&&&&&&&&&&&&&&&&&********@CR-RKA**MOBILE****&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 	
+	
+	
+		@FindBy(xpath="//*[@data-auid='crt_inputQty_m']")public WebElement input_Quantity_M;
+		@FindBy(xpath="(//*[@data-auid='btnc_btnCheckout'])[2]")public WebElement checkOut_M_Btn;
+		
+	//&&&&&&&&&&&&&&&&&&&&&&&********@CR-RKA******&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 	
 	
 	

@@ -3,6 +3,7 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.testng.Assert.assertThrows;
 import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -24,5 +25,19 @@ public class R2_CART_K2946_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(cart_po_r2.iconDiscover));
 		assertTrue(isDisplayed(cart_po_r2.iconAmericanExpress));
 	}
+	
+	
+	
+	
+	
+	
+	@Then("^user able to signin$")//temporary basis 
+	public void user_able_to_signin() throws Throwable {
+	   driver.findElement(By.xpath("//*[@data-auid='emailid_input']")).sendKeys("testacademy@gmail.com");
+	   driver.findElement(By.xpath("//*[@data-auid='password_input']")).sendKeys("Test@1234");
+	   driver.findElement(By.xpath("//*[@data-auid='btnemail-signin-button']")).click();
+	}
+	
+	
 	
 }
