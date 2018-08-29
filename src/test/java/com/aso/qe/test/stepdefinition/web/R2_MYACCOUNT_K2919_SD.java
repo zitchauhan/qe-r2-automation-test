@@ -89,6 +89,7 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	@And("^User clicks on Add CTA$")
 	public void user_clicks_on_Add_CTA() throws Throwable {
 		assertTrue(clickOnButton(myAccountPo.btnAddInAddCreditCard));
+		
 	}
 	
 	@Then("^verify that inline error messages are displayed prompting the user to enter all required fields$")
@@ -96,6 +97,49 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	    for(WebElement inlineError: myAccountPo.inlineErrorMsg) {
 	    	assertTrue(isDisplayed(inlineError));
 	    }
+	}
+	
+	
+	@And("^user enter First Name field \"(.*?)\"$")
+	public void user_enter_First_Name_field(String arg1) throws Throwable {
+		setInputText(myAccountPo.txtFirstNameInAddCreditCard, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@And("^user enter Last Name field \"(.*?)\"$")
+	public void user_enter_Last_Name_field(String arg1) throws Throwable {
+		setInputText(myAccountPo.txtLastNameInAddCreditCard, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	
+	@And("^user enter Address field \"(.*?)\"$")
+	public void user_enter_Address_field(String arg1) throws Throwable {
+		setInputText(myAccountPo.txtAddressInAddCreditCard, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@And("^user enter ZipCode field \"(.*?)\"$")
+	public void user_enter_ZipCode_field(String arg1) throws Throwable {
+		setInputText(myAccountPo.txtZipCodeInAddCreditCard, webPropHelper.getTestDataProperty(arg1));
+		
+	}
+	
+	@Given("^User clicks on cancel$")
+	public void user_clicks_on_cancel() throws Throwable {
+		assertTrue(clickOnButton(myAccountPo.btnCancelInAddCreditCard));
+	}
+	
+	@Then("^User verifies that the form fields are closed$")
+	public void user_verifies_that_the_form_fields_are_closed() throws Throwable {
+		assertTrue(isDisplayed(myAccountPo.btnAddNewCreditCard));
+	}
+	
+	@Then("^User verifies that city and State are populated automatically$")
+	public void user_verifies_that_city_and_State_are_populated_automatically() throws Throwable {
+		String city = myAccountPo.txtCityInAddCreditCard.getAttribute("value");
+	    String state = myAccountPo.btnState.getText();
+	       
+	    assertTrue(!city.isEmpty());
+	    assertTrue(!state.isEmpty());
+	    
 	}
 
 }
