@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -96,6 +97,18 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.btnAddNewCreditCard));
 				else if (currentElement.equalsIgnoreCase("PaymentPage_AddNewGiftCard_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnAddNewGiftCard));
+				else if (currentElement.equalsIgnoreCase("PaymentPage_RemoveGiftCards_btnList"))
+					for(WebElement btnRemove: r2MyAccountPo.btnRemoveGiftCardList) {
+				    	assertTrue(isDisplayed(btnRemove));
+					}
+				else if (currentElement.equalsIgnoreCase("PaymentPage_AddedGiftCards_txtList"))
+					for(WebElement txtAddedGiftCard: r2MyAccountPo.txtAddedGiftCardList) {
+				    	assertTrue(isDisplayed(txtAddedGiftCard));
+					}
+				
+				
+				
+				
 				//===============================================================================				
 				//// Profile
 				//===============================================================================

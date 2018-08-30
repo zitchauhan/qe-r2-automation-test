@@ -20,14 +20,6 @@ Feature: E02-100 - My Account, Address Book
 		|AddressPage_State_txt						|
 		
 
-#	 Then user views First Name field is displayed 
-#	 Then user views Last Name field is displayed
-#	 Then user views Phone Number field is displayed
-#	 Then user views Address field is displayed
-#	 Then user views Zip Code field is displayed
-#	 Then user views City field is displayed
-#	 Then user views State field is displayed
-	
 	
 #	#partially completed
 #@R2_Web @R2_Regression @R2_All @P-High @C-My_Account @KER-4232 @ZYP_CART-K4232-9196 @CR-SK

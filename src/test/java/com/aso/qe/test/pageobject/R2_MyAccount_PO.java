@@ -146,7 +146,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// End KER-3392 CR-RK
 
 	// Start KER-4011 CR-SK
-	@FindBy(xpath = "//*[@data-auid='email_input']")
+	@FindBy(xpath = "//*[@data-auid='emailid_input']")
 	public WebElement txtEmailAddress; // CR - SK, Date : 28 Aug 
 
 	@FindBy(xpath = "//h5[.='Sign in']")
@@ -208,8 +208,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// End KER-4249 CR-SK 23-Aug
 
 	// Start KER-3092
-	@FindBy(xpath = "//*[.='payment']")
-	public WebElement lnkPayment; ////CR-SK 28 Aug-18
+	@FindBy(xpath = "//*[.='payment']/a")
+	public WebElement lnkPayment; ////CR-SK 29 Aug-18 
 
 	@FindBy(xpath = "//div[.='You have no gift cards listed.']")
 	public WebElement txtNoGiftCardListed; // 25 Aug
@@ -223,11 +223,15 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[.='PIN']/following-sibling::input")
 	public WebElement txtGifCardPin; // 25 Aug
 
+	@FindBy(xpath = "//*[text()='ADD NEW GIFT CARD']")
+	public WebElement btnAddGiftCardPlusIcon; // 25 Aug
+	
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement btnAddGiftCard; // 25 Aug
+	
 
-	@FindBy(xpath = "//button[.='CANCEL']")
-	public WebElement btnCancelGiftCard; // CR-SK, 28 Aug
+	@FindBy(xpath = "//button[contains(text(),'CANCEL')]")
+	public WebElement btnCancelGiftCard; // CR-SK, 29 Aug
 	// End KER-3092
 
 	// Start KER-3152 CR-AKK
@@ -415,8 +419,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnsubmit-btn']")
 	public WebElement btnAddInAddCreditCard;
 
-	@FindBy(xpath = "//*[@auid='address_cancel_btn']")
-	public WebElement btnCancelInAddCreditCard;  // CR-SK 28 Aug-18
+	@FindBy(xpath = "//button[.='CANCEL']")
+	public WebElement btnCancelInAddCreditCard;  // CR-SK 29 Aug-18 
 
 	@FindBy(xpath = "//*[text()='wishlist']")
 	public WebElement lnkWishlist;
@@ -468,12 +472,19 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "//*[text()='City']/..//input") //CR-SK 28 Aug
 	public WebElement txtCityInAddCreditCard;
+	
+	@FindBy(xpath = "//div[text()= 'GIFT CARDS']/../following-sibling::div//*[text()='Remove']/i") //CR-SK 29 Aug
+	public List<WebElement> btnRemoveGiftCardList;
+	
+	@FindBy(xpath = "//*[contains(text(),'Gift Card ending in')]") //CR-SK 29 Aug
+	public List<WebElement> txtAddedGiftCardList;
 
+	@FindBy(xpath = "//*[contains(text(),'AVAILABLE BALANCE')]") //CR-SK 29 Aug
+	public WebElement txtAvailableBalance;
 	
+	
+		
 	// End Page validation CR-SK
-	
-//	@FindBy(xpath = "//*[@auid = 'CVV-inputField']")
-//	public WebElement txtCVV;// 28Aug danush
 	
 	@FindBy(xpath = "//*[@data-auid='tooltipsample tooltip']")
 	public WebElement iconCVVToolTip;// 28Aug danush

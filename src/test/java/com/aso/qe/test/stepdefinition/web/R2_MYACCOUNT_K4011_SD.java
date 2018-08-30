@@ -35,7 +35,7 @@ public class R2_MYACCOUNT_K4011_SD extends CommonActionHelper {
 	@Then("^a greeting message should be displayed$")
 	public void a_greeting_message_should_be_displayed() throws Throwable {
 	    assertTrue(isDisplayed(r2MyAccountPo.txtHelloMessage));
-	    getText(r2MyAccountPo.txtHelloMessage).contains("test");
+	    getText(r2MyAccountPo.txtHelloMessage).toLowerCase().contains("hello");
 	}
 	
 	@Then("^user should not be allowed to login$")

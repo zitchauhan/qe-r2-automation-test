@@ -11,7 +11,9 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
+import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -20,10 +22,17 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver,
 			GlobalElementHeader_HomePO.class);
+	R2_R1_Fun_PO r2R2FunPo = PageFactory.initElements(driver, R2_R1_Fun_PO.class); 
 
+	
 	@When("^user clicks on SignIn link from global header$")
+	@And("^user clicks on sign in link from burger menu$")
 	public void user_clicks_on_Sign_In_link_from_global_header() throws Throwable {
-		assertTrue(clickOnButton(r2MyAccountPo.lnkSignIn));
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(clickOnButton(r2R2FunPo.lnkSignInMobile));
+		}
+		else
+			assertTrue(clickOnButton(r2MyAccountPo.lnkSignIn));
 	}
 
 	@When("^clicks on SignUp link from SignIn page$")
@@ -88,7 +97,6 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 
 	@Then("^user should get logged in successfully$")
 	public void user_should_get_logged_in_successfully() throws Throwable {
-
 		assertTrue(isDisplayed(r2MyAccountPo.txtMyAccountDescription));
 	}
 

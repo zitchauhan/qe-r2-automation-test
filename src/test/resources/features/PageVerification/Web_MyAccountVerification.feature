@@ -37,6 +37,8 @@ Scenario: Verify MyAccount
 		|PaymentPage_YouHaveNoGiftcardsListed_label		|
 		|PaymentPage_AddNewCreditCard_btn				|	
 		|PaymentPage_AddNewGiftCard_btn					|
+		|PaymentPage_RemoveGiftCards_btnList			|
+		|PaymentPage_AddedGiftCards_txtList				|
 		
 		|#Verify following elements in Payments > Add new credit card section	|
 		|AddCreditCardPage_BillingInformationHeader_txt							|
@@ -107,6 +109,7 @@ Scenario: Verify MyAccount
 		|OrderPage_ShippingZipCode_txt				|
 		|OrderPage_Find_btn							|
 		
+			
 		
 		
 		

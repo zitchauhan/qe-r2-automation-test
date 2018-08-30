@@ -219,6 +219,11 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		assertTrue(clickOnButton(r2SanityPo.AS_productImage));
 	} 
 	
+	@Then("^user is navigated to checkout page$")
+	public void user_is_navigated_to_checkout_page() throws Throwable {
+		assertTrue(isDisplayed(r2SanityPo.headerCheckout));
+	}
+	
 	
 
 }
