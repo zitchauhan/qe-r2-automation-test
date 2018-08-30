@@ -40,6 +40,12 @@ Scenario: Verify MyAccount
 		|PaymentPage_RemoveGiftCards_btnList			|
 		|PaymentPage_AddedGiftCards_txtList				|
 		
+		|PaymentPage_CrediCardRemoved_txt|
+		|PaymentPage_CrediCardList_txt|
+		|PaymentPage_InvalidFirstName_txt|
+		|PaymentPage_InvalidLastName_txt|
+		
+		
 		|#Verify following elements in Payments > Add new credit card section	|
 		|AddCreditCardPage_BillingInformationHeader_txt							|
 		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
@@ -108,6 +114,12 @@ Scenario: Verify MyAccount
 		|OrderPage_OrderNumber_txt					|
 		|OrderPage_ShippingZipCode_txt				|
 		|OrderPage_Find_btn							|
+		
+		|#Verify following elements in SignUp section|
+		|SignUp_FirstName_txt						 |
+		|SignUp_LastName_txt						 |
+		|SignUp_EmailAddress						 |
+		|SignUp_Password					         | 
 		
 			
 		
