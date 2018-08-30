@@ -9,7 +9,15 @@ Feature: [Mobile]Verify Automatic Store Locator for Unauthenticated User
 	Then user click on Add to Cart Button  
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	Then user should see all payment icons on cart page
+	Then Verify below Sub/Main Module of Cart Page 
+	    |# user should see all payment icons on cart page|
+		|Visa_img|
+		|MasterCard_img|
+		|Paypal_img|
+		|GooglePay_img|
+		|ApplePay_img|
+		|AmericanExpress_img|
+		|Discover_img|
 	
 	
 	
