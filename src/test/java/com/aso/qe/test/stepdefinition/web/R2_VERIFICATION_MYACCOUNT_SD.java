@@ -78,6 +78,8 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.addNewAddressBtn));
 				else if (currentElement.equalsIgnoreCase("AddressPage_Cancel_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnCancelInAddCreditCard));
+				else if (currentElement.equalsIgnoreCase("AddressPage_Edit_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnEdit)); 
 				// ===============================================================================
 				//// Payment
 				// ===============================================================================
