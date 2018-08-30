@@ -38,6 +38,13 @@ Feature: To Verify Get Cart Details API service without sign-in
     Given "GetCartUrl" endpoint for getting cart
     And validate jsonSchema "KER-725-MinicartSchema"
 
+  @All-R2 @C1-Cart @C2-ChangeStore @api @R2_AAST-05 @CR-VK @ZYP_Cart_12577
+  Scenario: TC_5 - verify the change store id with guest user
+    #Given "Guestloginurl" endpoint for guest identity
+    #Given "GetCartUrl" endpoint for getting cart
+    Given "OrderUrl" with "changeStoreid" endpoint for Change Store
+    Then Verify response status code as 201
+
   @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-06 @CR-VK @ZYP_Cart_12224
   Scenario: TC_6 - verify Get Cart Summary without sign-in details
     Given "GetCartUrl" endpoint for getting cart summary

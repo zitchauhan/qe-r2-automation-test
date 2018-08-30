@@ -42,4 +42,9 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 		initiateRestDeleteAPICall(endpoints);
 	}
 
+	@Given("^\"(.*?)\" with \"(.*?)\" endpoint for Change Store$")
+	public void with_endpoint_for_Change_Store(String OrderUrl, String extension) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(OrderUrl)+System.getProperty("OrderId")+loadProps.getTestDataProperty(extension);
+		logger.debug("END Point URL:"+endpoints);
+	}
 }
