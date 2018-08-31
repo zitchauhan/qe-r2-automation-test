@@ -116,7 +116,7 @@ Feature: Debug
 		|AddCompanyNameAptNumberEtcOptional_Txt|
 		|AddCompanyNameAptNumberEtcOptional_Input|
 		|ZipCode_Input|
-		|Payment_Input|
+		|City_Input|
 		|State_DD|
 		|EmailAddressforOrderConfirmation_Input|
 		|SignuptogetHotDeals_checkBox|

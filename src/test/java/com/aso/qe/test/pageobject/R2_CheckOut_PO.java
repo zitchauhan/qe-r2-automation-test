@@ -368,14 +368,14 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'Phone Number')]/following::*[2]")public WebElement PhoneNumber_Input;
 	   
 	   @FindBy(xpath=" //*[contains(text(),'Send SMS text updates about my order')]/preceding::*[1]")public WebElement SendSMSTextUpdatesAboutMyOrder_checkbox;
-	   @FindBy(xpath="//*[@data-auid='checkout_shipping_address']//*[text()='Address']/following::*[2]")public WebElement Adderss_Input;
+	   @FindBy(xpath="//*[@name='billingAddress1']")public WebElement Adderss_Input;
 	   @FindBy(xpath="//*[@data-auid='checkout_shipping_address_add_more_details_link']")public WebElement AddCompanyNameAptNumberEtcOptional_Txt;
 	   @FindBy(xpath="//*[@placeholder='Add Company Name,Apt. Number,etc. (Optional)']")public WebElement AddCompanyNameAptNumberEtcOptional_Input;
 	   
 	   
 	   
 	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'ZIP Code')]/following::*[2]")public WebElement ZipCode_Input;
-	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'City')]/following::*[2]")public WebElement Payment_Input;
+	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'City')]/following::*[2]")public WebElement city_Input;
 	   @FindBy(xpath="//*[text()='State']/following::*[1]")public WebElement State_DD;
 	   
 	   

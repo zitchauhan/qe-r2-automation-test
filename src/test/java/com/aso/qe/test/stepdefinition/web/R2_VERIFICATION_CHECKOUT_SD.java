@@ -242,8 +242,8 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 						assertTrue(isDisplayed(r2CheckoutPo.AddCompanyNameAptNumberEtcOptional_Input));
 					else if (currentElement.equalsIgnoreCase("ZipCode_Input"))
 						assertTrue(isDisplayed(r2CheckoutPo.ZipCode_Input));
-					else if (currentElement.equalsIgnoreCase("Payment_Input"))
-						assertTrue(isDisplayed(r2CheckoutPo.Payment_Input));
+					else if (currentElement.equalsIgnoreCase("City_Input"))
+						assertTrue(isDisplayed(r2CheckoutPo.city_Input));
 					else if (currentElement.equalsIgnoreCase("State_DD"))
 						assertTrue(isDisplayed(r2CheckoutPo.State_DD));
 					else if (currentElement.equalsIgnoreCase("EmailAddressforOrderConfirmation_Input"))

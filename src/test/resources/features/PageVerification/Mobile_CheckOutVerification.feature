@@ -111,15 +111,15 @@ Feature: Debug
 		|LastName_Input|
 		|PhoneNumber_Input|
 		|SendSMSTextUpdatesAboutMyOrder_checkbox|
-		|Adderss_Input|#Not finalised|
+		|Adderss_Input|
 		|AddCompanyNameAptNumberEtcOptional_Txt|#Not finalised|
 		|AddCompanyNameAptNumberEtcOptional_Input|
 		|ZipCode_Input|
-		|Payment_Input|#Not finalised|
-		|State_DD|#Not finalised|
-		|EmailAddressforOrderConfirmation_Input|#Not finalised|
-		|SignuptogetHotDeals_checkBox|#Not finalised|
-		|ReviewOrder_Btn|#Not finalised|
+		|City_Input|
+		|State_DD|
+		|EmailAddressforOrderConfirmation_Input|
+		|SignuptogetHotDeals_checkBox|
+		|ReviewOrder_Btn|
 		|#%%%%%%%  PayPal  %%%%%%%%%%|
 		|PayPal_radioBtm|#Not finalised|
 		|PayPalCheckOut_Btn|#Not finalised|
