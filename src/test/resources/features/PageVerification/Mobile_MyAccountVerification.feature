@@ -28,6 +28,7 @@ Feature: Debug
 		|AddressPage_AddressBookHeader_txt			|
 		|AddressPage_Add_btn						|
 		|AddressPage_Cancel_btn						|
+		|AddressPage_Edit_btn						|
 		
 		|#Verify following elements in Payment page		|
 		|PaymentPage_PaymentsHeader_label				|

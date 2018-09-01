@@ -216,6 +216,184 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath="//input[@id='paypal']/..")
 	public WebElement rdPaypal;
 	// End KER-3127 CR-RK
+	
+	
+	////Starts Checkout Page Verification CR - SK
+	@FindBy(xpath="//*[@data-auid='checkout_shipping_address_add_more_details_link']")
+	public WebElement checkout_ShippingAddress_AddCompanyName_lnk;
+	
+	@FindBy(xpath="//*[@name='companyName']")
+	public WebElement checkout_ShippingAddress_AddCompanyName_txt;
+	
+	@FindBy(xpath="//*[@name ='state']/button")
+	public WebElement checkout_ShippingAddress_State_btn;
+//	
+	@FindBy(xpath = "//h4[text()='CHECKOUT']")
+	public WebElement checkout_CheckoutHeader_txt;
+	
+	@FindBy(xpath = "//*[contains(text(), 'Forgot your password')]")
+	public WebElement checkout_SignIn_ForgotYourPassword_lnk;
+	
+	@FindBy(xpath = "//*[@data-auid='btnemail-signin-button']")
+	public WebElement checkout_SignIn_SignIn_btn;
+	
+	@FindBy(xpath = "//*[text()='SHIPPING INFORMATION']")
+	public WebElement checkout_ShippingInformation_Header_txt;
+	
+	@FindBy(xpath = "//*[text()='SHIPPING ADDRESS']/..")
+	public WebElement checkout_ShippingAddress_txt;
+	
+	@FindBy(xpath = "//*[@data-auid='checkout_unauth_description_signin_link']//a")
+	public WebElement checkout_SignIn_lnk;
+	
+	@FindBy(xpath = "//h6[text()='SHIPPING ADDRESS']")
+	public WebElement checkout_ShippingAddress_ShippingAddressHeader_txt;
+		
+	@FindBy(xpath = "//*[text()='SHIPPING METHOD']")
+	public WebElement checkout_ShippingMethod_ShippingMethodHeader_txt;
+	
+	@FindBy(xpath = "//*[@data-auid='checkout_edit_shipping_method']")
+	public WebElement checkout_ShippingMethod_Edit_lnk;
+	
+	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']//*[contains(text(), 'Shipment')]")
+	public WebElement checkout_ShippingMethod_Shipment_txt;
+	
+	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']//*[contains(text(), 'Shipment')]/following-sibling::p")
+	public WebElement checkout_ShippingMethod_Items_txt;
+	
+	@FindBy(xpath = "//*[contains(@data-auid,'shipping_method_shipment_item_image')]")
+	public WebElement checkout_ShippingMethod_ItemImage_img;
+	
+	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']//button")
+	public WebElement checkout_ShippingMethod_ShippingMethodType_btn;
+	
+	@FindBy(xpath = "//*[@data-auid='btncheckout_goto_payment button-1']")
+	public WebElement checkout_ShippingMethod_GoToPayment_btn;
+	
+	@FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemSG']")
+	public WebElement checkout_ShippingMethod_ShippingDetails;
+		
+////Ends Checkout Page Verification CR - SK
+	
+//*************************CR-RKA********************************************
+		 //Order Summary(Start)
+		
+		
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Order Summary')]")public WebElement OrderSummary_Txt;
+//		@FindBy(xpath = "//*[text()='Subtotal']/..")public WebElement txtSubTotal;//subtotal_txt
+		@FindBy(xpath="//*[text()='Subtotal']/../*[2]")public WebElement SubTotalPrice_Txt;//subtotal_price
+		
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Shipping')]")public WebElement Shipping_Txt;
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Shipping')]/following-sibling::*[1]")public WebElement ShippingPrice_Txt;
+//		@FindBy(xpath = "//*[text()='Estimated Shipping']/..")public WebElement txtEsitmatedShipping;//estimatedshippint_txt
+		@FindBy(xpath="//*[text()='Estimated Shipping']/../*[2]")public WebElement EstimatedShippingPrice_txt;//estimatedshipping_price
+		
+		
+		@FindBy(xpath="//*[contains(text(),'Taxes')]")public WebElement Taxes_Txt;//taxprice_txt
+		@FindBy(xpath="//*[contains(text(),'Taxes')]/following-sibling::*[1]")public WebElement TaxesPrice_Txt;//taxprice
+		@FindBy(xpath="//*[contains(text(),'Esimated Taxes')]")public WebElement EstimatedTax_Txt;
+//		@FindBy(xpath = "//*[contains(text(),'Esimated Taxes')]/following-sibling::*[1]")public WebElement txtEstimatedTax;//estimatedPrice_Txt
+		
+		
+//		@FindBy(xpath ="//*[text()='Total Discount']")public WebElement txtTotalDiscount;
+		@FindBy(xpath="//*[text()='Total Discount']/following-sibling::*[1]")public WebElement TotalDiscountPrice_Txt;
+		
+//		@FindBy(xpath = "//*[text()= 'Total']/following-sibling::div[1]")public WebElement txtTotal;//Total_price
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[text()='Total']")public WebElement Total_txt;
+		
+		      //*****ITems under Order Summary (Start)
+		
+//		@FindBy(xpath="//*[@data-auid='facetdrawerundefined']//*[contains(text(),'Items')]")public WebElement txtItems;//Item_Txt
+		
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']/preceding-sibling::*[1]")public WebElement ShippingItemAvailable_Txt;
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']/*[1]")public WebElement ImageShippingItemAvailable ;
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']/*[2]/*[1]")public WebElement NameShippingItemAvailable_Txt;
+		
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']//*[contains(text(),'Color')]")public WebElement Color_Txt;
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']//*[contains(text(),'Color')]/following-sibling::*[1]")public WebElement ColorInput_Txt;
+	    
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']//*[contains(text(),'Size')]")public WebElement Size_Txt;
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']//*[contains(text(),'Size')]/following-sibling::*[1]")public WebElement SizeInput_Txt;
+		
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']//*[contains(text(),'Quantity')]")public WebElement Quantity_Txt;
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']//*[contains(text(),'Quantity')]/following-sibling::*[1]")public WebElement QuantityInput_Txt;
+		
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']//*[contains(text(),'$')]")public WebElement  PriceShippingItemAvailable_Txt;
+//		@FindBy(xpath = "(//*[@data-auid='checkout_order_summary_edit_cart_link'])[2]/*")public WebElement btnEditCart;//EditMyCart_Link
+		    
+		       //**********ITems under Order Summary (End)
+		//Order Summary(End)
+		
+		//*********************************************************************************************************************************************
+		 //Payment(Start)
+		 
+		//******************Payment Method(Start)
+		@FindBy(xpath="//*[@data-auid='checkout_payment']/preceding::*[1]")public WebElement PaymentHeader_Txt;
+		@FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'PAYMENT METHOD')]")public WebElement PaymentMethodHeader_Txt;
+		@FindBy(xpath="//*[text()='Credit Card']/preceding::*[2]")public WebElement CreditCard_radioBtn;
+		@FindBy(xpath="//*[text()='PayPal']/preceding::*[2]")public WebElement PayPal_radioBtn;
+		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]")public WebElement CreditCardNumber_Input;
+		@FindBy(xpath="//*[text()='Expiration Date']/following::*[1]")public WebElement ExpirationDate_Input;
+		@FindBy(xpath="//*[text()='CVV']/following::*[3]")public WebElement Cvv_Input;
+		@FindBy(xpath="//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']")public WebElement CvvToolTip;
+		@FindBy(xpath="//*[text()='Unrecognized card number']")public WebElement UnrecognizedCardNumber_Txt; 
+		@FindBy(xpath="//*[text()='Past expiration date']")public WebElement PastExpirationDate_Txt;
+		@FindBy(xpath="//*[text()='Please enter a valid security code']")public WebElement PleaseEnteRaValidSecurityCode_Txt;
+		//*****************Payment Method (END)
+		
+		//****************Gift Card(Start)
+		
+//		@FindBy(xpath = "//*[@data-auid='checkout_payment_add_gift_card_icon']")public WebElement plusIconGiftCard;	//Plus_GiftCard
+//		@FindBy(xpath = "//*[@data-auid='checkout_payment_hide_gift_card_icon']")public WebElement minusIconGiftCard;//Hide_GiftCard
+//		@FindBy(xpath = "//*[text()='Gift Card Number']")public WebElement txtGiftcardNumber;//GiftCardNumber_Txt
+//		@FindBy(xpath = "//*[@name='cardId']")	public WebElement inputGiftcardNumber;//GiftCardNumber_Input	
+		@FindBy(xpath="(//*[@data-auid='tooltipcheckout_payment_gift_card_tooltip'])[1]")public WebElement toolTip_giftCard;//GiftCardNumber_Tooltip
+//		@FindBy(xpath = "//*[text()='Invalid GiftCard Number']")public WebElement txtInvalidGiftcard;//InvalidGiftCardNumber_Txt
+//		@FindBy(xpath = "//*[text()='Pin']")public WebElement txtPin;//Pin_Txt
+//		@FindBy(xpath = "//*[@name='cardPin']")public WebElement inputPinNumber;//Pin_Input
+		@FindBy(xpath="(//*[@data-auid='tooltipcheckout_payment_gift_card_tooltip'])[2]")public WebElement toolTip_pin;
+//		@FindBy(xpath = "//*[text()='Invalid GiftCard Pin']")public WebElement txtInvalidPin;//InvalidGiftCardPin_Txt
+//		@FindBy(xpath = "//*[@data-auid='btncheckout_payment_apply_gift_card_btn']")public WebElement btnCheckoutApply; //Apply_Btn
+		
+		
+		//****************Gift Card(End)
+		
+		//*************** Billing Information(Start)
+	   @FindBy(xpath="//*[text()='BILLING INFORMATION']")public WebElement BillingInformation_Txt;
+	   @FindBy(xpath="//*[text()='Same As Shipping Address']")public WebElement SameAsShippingAddress_Txt;
+	   @FindBy(xpath="//*[text()='Same As Shipping Address']/preceding::*[1]")public WebElement SameAsShippingAddress_checkBox;
+	   
+	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'First Name')]/following::*[2]")public WebElement FirstName_Input;
+	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'Last Name')]/following::*[2]")public WebElement LastName_Input;
+	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'Phone Number')]/following::*[2]")public WebElement PhoneNumber_Input;
+	   
+	   @FindBy(xpath=" //*[contains(text(),'Send SMS text updates about my order')]/preceding::*[1]")public WebElement SendSMSTextUpdatesAboutMyOrder_checkbox;
+	   @FindBy(xpath="//*[@name='billingAddress1']")public WebElement Adderss_Input;
+	   @FindBy(xpath="//*[@data-auid='checkout_shipping_address_add_more_details_link']")public WebElement AddCompanyNameAptNumberEtcOptional_Txt;
+	   @FindBy(xpath="//*[@placeholder='Add Company Name,Apt. Number,etc. (Optional)']")public WebElement AddCompanyNameAptNumberEtcOptional_Input;
+	   
+	   
+	   
+	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'ZIP Code')]/following::*[2]")public WebElement ZipCode_Input;
+	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'City')]/following::*[2]")public WebElement city_Input;
+	   @FindBy(xpath="//*[text()='State']/following::*[1]")public WebElement State_DD;
+	   
+	   
+	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'Email Address for Order Confirmation')]/following::*[2]")public WebElement EmailAddressforOrderConfirmation_Input;
+	   
+	   @FindBy(xpath="//*[contains(text(),'Sign up to get Hot Deals')]/preceding::*[1]")public WebElement SignuptogetHotDeals_checkBox;
+	   
+	   @FindBy(xpath="//*[@data-auid='btnundefined']")public WebElement ReviewOrder_Btn;
+	   
+	   
+//	   @FindBy(xpath="//input[@id='paypal']/..")public WebElement rdPaypal;// PayPal_radioBtm;
+	   @FindBy(xpath="//*[text()=' Checkout']/..")public WebElement PayPalCheckOut_Btn;
+	   
+	   
+	 //*************** Billing Information(End)
+	   
+	   //Payment(End)
+	
 	/***************************** END XPAHTS********************************/
 	
 	/***************************** START METHODS********************************/

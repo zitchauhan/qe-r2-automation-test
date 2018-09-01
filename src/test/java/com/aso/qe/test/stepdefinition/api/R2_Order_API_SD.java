@@ -46,5 +46,14 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 	public void with_endpoint_for_Change_Store(String OrderUrl, String extension) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(OrderUrl)+System.getProperty("OrderId")+loadProps.getTestDataProperty(extension);
 		logger.debug("END Point URL:"+endpoints);
+		//initiateRestAPIPostCallForGuestAuthen(endpoints);
 	}
+	
+	@Given("^\"(.*?)\" endpoint for order details$")
+	public void endpoint_for_order_details(String OrderUrl) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(OrderUrl)+System.getProperty("OrderId");
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICallWithCookie(endpoints);
+	}
+
 }
