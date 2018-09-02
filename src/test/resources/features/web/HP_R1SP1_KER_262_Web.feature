@@ -155,7 +155,7 @@ Feature: [Desktop]Components - Header
       | username       | password | Postal_Code |
       | qaz2@gmail.com | qazlee   | FL 32822    |
 
-  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-6533 @CR-RKA
+ @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-6533 @CR-SG @RBeta
   Scenario Outline: Verify find a store UI navigation functionality
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to click on Find Store
@@ -167,12 +167,12 @@ Feature: [Desktop]Components - Header
       | Postal_Code |
       | FL 32822    |
       
- @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262 @CR-RKA @BrokenLink
+ @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262 @CR-RKA @BrokenLink 
     Scenario: TC_1- Verify all Image broken URL's on Home page
     Given user launches the browser and navigates to "ASO_HOME" page
 		Then verfy all link url's status code is 200    
 
-  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11665 @CR-RKA @BrokenLink
+  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11665 @CR-RKA @BrokenLink 
   Scenario: Verify all broken URL's on L1 page
     Given user launches the browser and navigates to "ASO_HOME" page
     When user clicks on one of the category and navigates to LOne page

@@ -4,13 +4,14 @@ Feature:  [Mobile] Components: PDP - Detailed Product Content - Reviews - Name F
 
                         
                         
-@Regression @Mobile @All @KER-1950 @C-PDP @ZYP_PDP_K1950-4207 @CR-RKA   @1HR
+@Regression @Mobile @All @KER-1950 @C-PDP @ZYP_PDP_K1950-4207 @CR-RKA   @1HR @RBeta
  Scenario: Verify when user hovered over the name displayed in Reviews section, the name flyout is displayed 
  Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     And User navigates to L3
    Then User to select the product where review is present  
     Then User to navigate to review
+    
       Then user do mousehover on review having name
   
  

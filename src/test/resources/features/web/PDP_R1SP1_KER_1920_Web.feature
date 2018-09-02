@@ -42,7 +42,7 @@ Feature: To Verify the Add To Cart Functionality
     Then User add product to cart and validate the price title and image of the product
 
     
-     @Regression @C-PDP @Web @All @KER-1920 @ZYP_PDP_K1920-5836 @CR-AG @1HR
+     @Regression @C-PDP @Web @All @KER-1920 @ZYP_PDP_K1920-5836 @CR-AG @1HR @RBeta
     Scenario: Verify the Add To Cart functionality and check the product name-Desktop
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP

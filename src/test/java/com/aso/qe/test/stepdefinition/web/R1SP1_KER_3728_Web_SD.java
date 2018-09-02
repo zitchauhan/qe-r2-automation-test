@@ -6,6 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.PDP_PO;
+
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
 public class R1SP1_KER_3728_Web_SD extends CommonActionHelper{
@@ -31,11 +33,12 @@ public class R1SP1_KER_3728_Web_SD extends CommonActionHelper{
 	@Then("^verfiy the product details and features$")
 	public void verfiy_the_product_details_and_features() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(pdpPageObj.txtDetails_M));
+			scrollPageToWebElement(pdpPageObj.txtDetails);
+			assertTrue(isDisplayed(pdpPageObj.txtDetails));
 		}
 		else
 		{
-			assertTrue(isDisplayed(pdpPageObj.txtProductTitle));
+			assertTrue(isDisplayed(pdpPageObj.txtProdcutDetails));
 			scrollPageToWebElement(pdpPageObj.tabDetailsSpecs);
 			assertTrue(isDisplayed(pdpPageObj.tabDetailsSpecs));
 		}	
@@ -49,6 +52,29 @@ public class R1SP1_KER_3728_Web_SD extends CommonActionHelper{
 			assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
 			assertTrue(clickOnButton(pdpPageObj.btnNextStep));
 			assertTrue(clickOnButton(pdpPageObj.btnAddToCart1));
+	}
+	
+	
+	@Then("^user navigate to No diff selection product PLP$")
+	public void user_navigate_to_No_diff_selection_product_PLP() {
+		pdpPageObj.navigateToNoDiffPLP();
+	}
+	
+	@And("^user click on Inground basketball hoops$")
+	public void user_click_on_Inground_basketball_hoops() {
+		assertTrue(clickOnButton(pdpPageObj.btnIngroundHoops_M));
+	}
+	
+	@And("^User click on the No diff selection product$")
+	public void User_click_on_the_No_diff_selection_product() {
+		assertTrue(clickOnButton(pdpPageObj.clickNoDiffProduct));
+	}
+	
+	@And("^user add the item to cart$")
+	public void user_add_the_item_to_cart() {
+		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+		waitForElement(pdpPageObj.secAddToCartPopup);
+		assertTrue(isDisplayed(pdpPageObj.secAddToCartPopup));
 	}
 }
 

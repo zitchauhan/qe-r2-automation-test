@@ -22,7 +22,7 @@ public class R1SP1_KER_3455_Web_SD extends CommonActionHelper{
 	@Then("^User select the avialable item and click on add to cart$")
 	public void user_select_the_avialable_item_and_click_on_add_to_cart() throws Throwable {
 		p_po.addToCartAvailability();
-		p_po.quantityInput.sendKeys("5");
+		p_po.quantityInput.sendKeys("2");
 		clickOnButton(p_po.btnAddToCart);
 		if("mobile".equalsIgnoreCase(testtype)){	
 			assertTrue(isDisplayed(p_po.msgItemAddedSuccessfully_M));

@@ -1,6 +1,6 @@
 Feature: [Desktop]  Ratings & Reviews - Product Detail Page
 
-@Web @C-PDP @Regression @KER-652 @ZYP_PDP_K652-3448 @CR-RKA
+@Web @C-PDP @Regression @KER-652 @ZYP_PDP_K652-3448 @CR-RKA @RBeta
  Scenario: To Verify Ratings and Review on PDP in desktop
   Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP of any product

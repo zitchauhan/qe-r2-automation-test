@@ -17,6 +17,12 @@ public class SIT_PO extends CommonActionHelper{
 	
 
 	//***SID********************************************************//
+	
+	//My Account Page SID 22-August
+	@FindBy(xpath="//a[@id='accountSummary']") public WebElement lnkAccountSummary;
+	@FindBy(xpath="//a[@id='personalInformation']") public WebElement personalInformation;
+	@FindBy(xpath="//a[@id='addressBook']") public WebElement addressBook;
+	@FindBy(xpath="//a[@id='wishLists']") public WebElement wishLists;
 	//Address Book
 	@FindBy(xpath="//*[@id='addressBook']") public WebElement clickAddressBook;
 	@FindBy(xpath="//button[@id='newAddressBtn']") public WebElement btnNewAddress;
@@ -35,7 +41,7 @@ public class SIT_PO extends CommonActionHelper{
 	@FindBy(xpath="//*[@data-auid='btnbtn1']")public WebElement ShopCollectionCTA;
 	
 	
-	@FindBy(xpath="(//*[@id='productCardListing']/*/a)[2]") public WebElement clickProuctCard;
+	@FindBy(xpath="(//*[@id='productCardListing']/*/a)[3]") public WebElement clickProuctCard;
 	
 	@FindBy(xpath="//h3[text()='Order Summary']") public WebElement ordersummary;
 	@FindBy(xpath="//h2[contains(text(),'Shipping Address')]") public WebElement ReviewShippingaddress;
@@ -63,7 +69,7 @@ public class SIT_PO extends CommonActionHelper{
 	@FindBy(xpath="//abbr[text()='Item:']/..") public WebElement txtitem;
 	@FindBy(xpath="//a[text()='Academy Credit Card']") public static WebElement lnkacademycredit;
 	@FindBy(xpath="//strong[text()='Limited time offer.']") public static WebElement txtLimitedoffer;
-	@FindBy(xpath="//a[@id='accountSummary']") public WebElement lnkAccountSummary;
+	
 	@FindBy(xpath="//h2[contains(text(),'Can')]") public WebElement txtcantfindorder;
 	@FindBy(xpath="//label[@for='orderNumberField']") public WebElement labelordernumber;
 	@FindBy(xpath="//input[@id='orderNumberField']") public WebElement txtordernumber;
@@ -146,13 +152,15 @@ public class SIT_PO extends CommonActionHelper{
 	
 	
 	
-	public void verifySigninpage() throws Exception{
+	public void verifySigninpage() throws Exception
+	{
 		assertTrue(isDisplayed(txtwelcomeback));
 		assertTrue(isDisplayed(lnkforgotpwd));
 		assertTrue(isDisplayed(txtdonthaveanaccount));
-		}
+	}
 	
-	public void verifyShippingAddressPage() throws Exception{
+	public void verifyShippingAddressPage() throws Exception
+	{
 		if("mobile".equalsIgnoreCase(testtype)){
 			waitForElement(address);
 			assertTrue(isDisplayed(address));
@@ -245,8 +253,8 @@ public void navigateToDealsandclickonproduct() throws Exception{
 		Actions hover = new Actions(getDriver());
 		hover.moveToElement(btnDailyDeals).build().perform();
 		assertTrue(clickOnButton(lnkProductDeals));
-		waitForElement(clickProuctCard);
-		assertTrue(clickOnButton(clickProuctCard));
+//		waitForElement(clickProuctCard);
+//		assertTrue(clickOnButton(clickProuctCard));
 	}
 		
 	}
@@ -383,7 +391,7 @@ public void cleartext() throws Exception{
 	
 	//SID 20-August
 	@FindBy(xpath="//*[contains(text(),'We apologize')]") public WebElement noInventoryAtCheckout;
-	@FindBy(xpath="//b[text()='Thank You!']") public WebElement orderPlaceSuccessMessage;
+	@FindBy(xpath="//*[contains(text(),'Order Number: ')]") public WebElement orderPlaceSuccessMessage;
 	
 	
 	

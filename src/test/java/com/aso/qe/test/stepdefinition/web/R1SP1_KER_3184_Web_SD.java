@@ -31,7 +31,12 @@ public class R1SP1_KER_3184_Web_SD extends CommonActionHelper{
 
 	@Then("^user verify shop gift card button in gift card landing page$")
 	public void user_verify_shop_gift_card_button_in_gift_card_landing_page() throws Throwable {
-	 assertTrue(isClickable(hp_p.btnShopGiftCards));
+	 
+	 if("mobile".equalsIgnoreCase(testtype)){	
+			assertTrue(isClickable(hp_p.btnShopGiftCards_M));
+		}else {
+			assertTrue(isClickable(hp_p.btnShopGiftCards));
+		}
 	}
 
 	
@@ -46,12 +51,22 @@ public class R1SP1_KER_3184_Web_SD extends CommonActionHelper{
 	
 	@Then("^User verify shop Bulk Gift Cards btn in gift card landing page$")
 	public void user_verify_shop_Bulk_Gift_Cards_btn_in_gift_card_landing_page() throws Throwable {
-	  
-		assertTrue(isClickable(hp_p.btnShopBulkGiftCards));
+		if("mobile".equalsIgnoreCase(testtype)){	
+			assertTrue(isClickable(hp_p.btnShopBulkGiftCards_M));
+		}else {
+			assertTrue(isClickable(hp_p.btnShopBulkGiftCards));
+		}
+		
 	}
 	@Then("^verify check balance CTA button in gift card landing page$")
 	public void verify_check_balance_CTA_button_in_gift_card_landing_page() throws Throwable {
-	    assertTrue(isClickable(hp_p.btnCheckBalance_CTA));
+	  
+	    if("mobile".equalsIgnoreCase(testtype)){	
+			assertTrue(isClickable(hp_p.btnCheckBalance_CTA_M));
+		}else {
+			 assertTrue(isClickable(hp_p.btnCheckBalance_CTA));
+		}
+		
 	}
 
 }

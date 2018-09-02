@@ -26,6 +26,7 @@ public class SearchProductPO extends CommonActionHelper{
 	@FindBy(xpath="//*[@id='catalogEntry_img756331']") public WebElement img_men_pant;
 	@FindBy(xpath="//*[contains(@data-auid,'facetdrawer_drawer_Category')]//i[@class='academyicon icon-minus']")public WebElement txtCategoryFacetOpen;
 	@FindBy(xpath="//*[contains(@data-auid,'facetdrawer_drawer_Category_m')]//i[@class='academyicon icon-minus']")	public WebElement txtCategoryFacetOpenMobile;
+	@FindBy(xpath="//*[contains(@data-auid,'facetdrawer_drawer_Category_m')]//i[@class='academyicon icon-plus']")	public WebElement openCategoryFacetMobile;  //SID 28-August
 	@FindBys( {
 		@FindBy(xpath="//div[@class='selectedfacet-container']")
 	} ) public List<WebElement> selectedfacet_containerList;

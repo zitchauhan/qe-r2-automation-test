@@ -2,18 +2,12 @@ Feature: [UI] [Desktop ]To verify user can view 'My Account' from a drop down ac
 
  
  @C-HP @Web    @Regression   @KER-727  @1HR @ZYP_HP_K727-3206           
-Scenario Outline: user to verify Account summary after successful login from ASO_HOME page 
+Scenario: user to verify Account summary after successful login from ASO_HOME page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user to click on sing in and navigate to sign in page 
-	Then user to fill username "<username>" and password "<password>"
-   And click sign in  
+	And user should be able to enter the signin details "Login_username" "Login_pwd"  
    Then verify user to navigate to account summary page
-	     
-	Examples: 
-	
-		|username       |password|
-		|qaz2@gmail.com |qazlee  |
-				    
+    
  
 @C-HP @Web  @Regression @KER-727  @ZYP_HP_K727-4055
 Scenario Outline: user to verify sing in  as invalid email address
@@ -50,49 +44,28 @@ Scenario Outline: user to verify sing in  as invalid password address
   
   
  @C-HP @Web  @Regression  @KER-727  @ZYP_HP_K727-4067 
- Scenario Outline: user to verify personal information  form My Account
+ Scenario: user to verify personal information  form My Account
     
   Given user launches the browser and navigates to "ASO_HOME" page 
   When user to click on sing in and navigate to sign in page  		  
-  Then user to fill username "<username>" and password "<password>"
-  And click sign in   
+  And user should be able to enter the signin details "Login_username" "Login_pwd"
    Then verify personal information form My Account
-  Examples: 
-		   
-		    |username          |password|
-		    |qaz2@gmail.com    |qazlee| 
-	    
+
 @C-HP @Web  @Regression  @KER-727 @ZYP_HP_K727-4069 
- Scenario Outline: user to verify Address book  form My Account
-    
+ Scenario: user to verify Address book  form My Account
   Given user launches the browser and navigates to "ASO_HOME" page 
   When user to click on sing in and navigate to sign in page  		  
-  Then user to fill username "<username>" and password "<password>"
-  And click sign in 
+  And user should be able to enter the signin details "Login_username" "Login_pwd"
   Then verify Address book form My Account
-  
-  Examples: 
-		   
-		    |username          |password|
-		    |qaz2@gmail.com    |qazlee|
-  	    
-  	    
+
   	    
   	 @C-HP @Web  @Regression  @KER-727 @ZYP_HP_K727-4070 
- Scenario Outline: user to verify WishList form My Account
-    
-  Given user launches the browser and navigates to "ASO_HOME" page 
-  When user to click on sing in and navigate to sign in page  		  
-  Then user to fill username "<username>" and password "<password>"
-   And click sign in 
-  Then verify , WishList form My Account
-  Examples: 
-		   
-		    |username          |password|
-		    |qaz2@gmail.com    |qazlee|
-  	   
-  	   
-  	   
+	 Scenario: user to verify WishList form My Account
+	  Given user launches the browser and navigates to "ASO_HOME" page 
+	  When user to click on sing in and navigate to sign in page  		  
+	  And user should be able to enter the signin details "Login_username" "Login_pwd"
+	  Then verify , WishList form My Account
+
  	 @C-HP @Web  @Regression @KER-727 @ZYP_HP_K727-4065  
   	Scenario: Desktop-Verify the forgot your password functionality
      Given user launches the browser and navigates to "ASO_HOME" page
@@ -103,51 +76,25 @@ Scenario Outline: user to verify sing in  as invalid password address
   	 
 
  @C-HP @Web  @Regression @KER-727 @ZYP_HP_K727-4072  
-  	Scenario Outline: Desktop-To Verify the signout from MyAccount
+  	Scenario: Desktop-To Verify the signout from MyAccount
      Given user launches the browser and navigates to "ASO_HOME" page
      When user to click on sing in and navigate to sign in page  		  
-     Then user to fill username "<username>" and password "<password>"
-     And click sign in 
+     And user should be able to enter the signin details "Login_username" "Login_pwd"
      Then click on singout
-     
 
-  Examples: 
-		   
-		    |username          |password|
-		    |qaz2@gmail.com    |qazlee|
   	  
   	  @C-HP @Web  @Regression @KER-727 @ZYP_HP_K727-1972   
-  	Scenario Outline: To Verify user is able to Sign In with Valid user name and password by clicking in Sign In Link in the global header
+  	Scenario: To Verify user is able to Sign In with Valid user name and password by clicking in Sign In Link in the global header
      Given user launches the browser and navigates to "ASO_HOME" page
      When user to click on sing in and navigate to sign in page  		  
-     Then user to fill username "<username>" and password "<password>"
-     And click sign in 
-     
-     
-
-     
-
-  Examples: 
-		   
-		    |username          |password|
-		    |qaz2@gmail.com    |qazlee|
-		    
+  	And user should be able to enter the signin details "Login_username" "Login_pwd"
+ 
 	
 	@C-HP @Web  @Regression @KER-727 @ZYP_HP_K727-8492 @CR-AKK
-  	Scenario Outline: To Verify user to verify Account summary after successful login from ASO_HOME page
+  	Scenario: To Verify user to verify Account summary after successful login from ASO_HOME page
      Given user launches the browser and navigates to "ASO_HOME" page
      When user to click on sing in and navigate to sign in page  		  
-     Then user to fill username "<username>" and password "<password>"
-     And click sign in 
+     And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then User clicks on ASO logo
     Then User should be navigated to Home_Page
-     
-
-     
-
-  Examples: 
-		   
-		    |username          |password|
-		    |qaz2@gmail.com    |qazlee|
-  	  
 

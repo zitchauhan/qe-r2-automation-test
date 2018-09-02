@@ -2,6 +2,9 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -16,12 +19,12 @@ public class R1SP1_KER_1915_Web_SD extends CommonActionHelper {
 	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver,
 			GlobalElementHeader_HomePO.class);
 	public SIT_PO AddtoWishListPageObjectPo = PageFactory.initElements(getDriver(), SIT_PO.class);
-	
+	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());  //Sid
 
-	@Then("^user create new Wishlist \"(.*?)\"$")
-	public void user_create_new_Wishlist(String wishlist) throws Throwable {
+	@Then("^user create new Wishlist$")
+	public void user_create_new_Wishlist() throws Throwable {
 		assertTrue(clickOnButton(AddtoWishListPageObjectPo.btnNewWishlist));
-		setInputText(AddtoWishListPageObjectPo.txtListname, wishlist);
+		setInputText(AddtoWishListPageObjectPo.txtListname, timeStamp);
 		assertTrue(clickOnButton(AddtoWishListPageObjectPo.btnsave));
 	}
 	

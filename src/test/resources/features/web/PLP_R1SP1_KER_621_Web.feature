@@ -9,7 +9,7 @@ Feature: To verify Product Badging and Status - Ad Feature Display
     And user verify the clearance badge color
 
   @Web @All @KER-621 @ZYP_PLP_K621-6175 @Regression @C-PLP @CR-SG
-  Scenario: Verify the color of ONLINE BADGE
+  Scenario: Verify the color of PRICE BADGE
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2
     And user expands the Ad badge filter
@@ -34,4 +34,3 @@ Feature: To verify Product Badging and Status - Ad Feature Display
     And user expands the Ad badge filter
     Then user click on online badge
     And user verify the online badge color
-#      

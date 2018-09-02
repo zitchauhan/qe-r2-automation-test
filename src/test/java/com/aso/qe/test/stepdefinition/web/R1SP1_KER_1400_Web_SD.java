@@ -33,8 +33,14 @@ public class R1SP1_KER_1400_Web_SD extends CommonActionHelper{
 	
 	@And("^user verify the success message$")
 	public void user_verify_the_success_message() throws InterruptedException {
-		assertTrue(isDisplayed(globalElementHeader.lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE));
-		Thread.sleep(1000);
-		assertTrue(clickOnButton(globalElementHeader.btnCloseCrossSuccess));
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(isDisplayed(globalElementHeader.lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE_M));
+			Thread.sleep(1000);
+			assertTrue(clickOnButton(globalElementHeader.btnCloseCrossSuccess));
+		} else {
+			assertTrue(isDisplayed(globalElementHeader.lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE_D));
+			Thread.sleep(1000);
+			assertTrue(clickOnButton(globalElementHeader.btnCloseCrossSuccess));
+		}
 	}
 }

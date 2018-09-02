@@ -3,7 +3,6 @@ package com.aso.qe.test.pageobject;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import com.aso.qe.test.common.POMConstants;
 
 public class HomePagePOM {
@@ -15,10 +14,10 @@ public class HomePagePOM {
 	@FindBy(xpath="//div[@data-component='featuredCategory']//div[@class='container pb-5']/div")public WebElement prdTileFeaturedCategory_Row;
 	@FindBy(xpath="//a[@data-auid='HP_FC_Anchor_2']/h6")public WebElement prdTileFeaturedCategory;
 	@FindBy(xpath = "//a[text()='golf']") public WebElement result1;
-	@FindBy(xpath = "//a[text()='goop']") public WebElement result2;
-	@FindBy(xpath = "//a[text()='gogo']") public WebElement result3;
-	@FindBy(xpath = "//a[text()='good']") public WebElement result4;
-	@FindBy(xpath = "//a[text()='goofy']") public WebElement result5;
+	@FindBy(xpath = "//a[text()='good']") public WebElement result2;
+	@FindBy(xpath = "//a[text()='glo']") public WebElement result3;
+	@FindBy(xpath = "//a[text()='geo']") public WebElement result4;
+	@FindBy(xpath = "//a[text()='goose']") public WebElement result5;
 	@FindBy(xpath="//*[contains(text(),'Sign In')]") public WebElement linkSignIn;
 	@FindBy(xpath="//input[@id='logonId']")public WebElement inputEmail;
 	@FindBy(xpath="//input[@id='logonPassword']") public WebElement inputPassword;
@@ -47,7 +46,7 @@ public class HomePagePOM {
 		@FindBy(xpath="//*[@data-auid='level1Category-SHOP']/*[1]")public WebElement btnShop;
 		
 		//@FindBy(xpath="(//*[text()='SHOES'])[1]") public WebElement btnShoe;/RKA 8 aug
-		@FindBy(xpath="//*[@data-auid='level2Category-Shoes']")public WebElement btnShoe;
+		@FindBy(xpath="//*[@data-auid='level2Category-Shoes'] | //*[@data-auid='level2Category-Shoes & Boots']")public WebElement btnShoe;  //SID 1-Sept
 		//@FindBy(xpath="//*[text()='Boys Shoes']")public WebElement btnBoysShoe;/RKA 8 aug
 		@FindBy(xpath="//*[contains(@data-auid,'level3Category-Boys')]/*[1]")public WebElement btnBoysShoe;
 	
@@ -72,7 +71,8 @@ public class HomePagePOM {
 	@FindBy(xpath="(//*[contains(@class,'c-product__title')])[3]")public WebElement thirdBrandName;
 	@FindBy(xpath="(//*[contains(@class,'c-product__title')])[4]")public WebElement forthBrandName;
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand']")public WebElement brandFacet;
-	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand']//*[@data-auid='drawer_Adidas']")public WebElement brandFacetAddidas;
+	@FindBy(xpath="(//*[@data-auid='facetdrawer_drawer_Brand']//*[contains(@data-auid,'drawer_')])[2]")public WebElement brandFacetAddidas;  //SID 24-August
+	
 	@FindBy(xpath="//*[@data-auid='shopByCategory_tiles']/*[1]")public WebElement firstItemL2;
 	@FindBy(xpath="//*[@data-auid='clearAll']/preceding-sibling::*")public WebElement verifyAddidasFromClearAll;
 	//KER-710 Mobile
@@ -85,9 +85,11 @@ public class HomePagePOM {
 	@FindBy(xpath="//select")public WebElement selectbySortBy;
 	
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand_m']")public WebElement brandFacet_M;
-	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand_m']//*[@data-auid='drawer_Adidas_m']")public WebElement brandFacetAddidas_M;
+//	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand_m']//*[@data-auid='drawer_Adidas_m']")public WebElement brandFacetAddidas_M;/RKA 24 aug
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand_m']//*[@data-auid='drawer_adidas_m']")public WebElement brandFacetAddidas_M;
 	@FindBy(xpath="//*[@data-auid='level2Category-Shoes_m']")public WebElement btnShop_M;
 	@FindBy(xpath="//*[contains(@data-auid,'level3Category-Men')]")public WebElement btnMenShoe_M;
+	@FindBy(xpath="//*[@data-auid=\"go-to-Men's Shoes_m\"]") public WebElement btnMenShoe_M_landing;  //SID 28-August
 	@FindBy(xpath="//*[@data-auid='level4Category-Athletic & Sneakers_m']")public WebElement btnAtheletic_Sneker_M;
 	
 	
@@ -97,10 +99,12 @@ public class HomePagePOM {
 	
 	
 	//KER-3184
-	@FindBy(xpath="(//*[contains(text(),'Shop Gift Cards')])[1]")public WebElement btnShopGiftCards;
+	@FindBy(xpath="(//*[contains(text(),'SHOP GIFT CARDS')])[1]")public WebElement btnShopGiftCards;
 	@FindBy(xpath="//*[contains(text(),'Shop Bulk Gift Cards')]")public WebElement btnShopBulkGiftCards;
 	@FindBy(xpath="(//*[contains(text(),'Check Balance')])[2]") public WebElement btnCheckBalance_CTA;
-	
+	@FindBy(xpath="(//*[contains(text(),'Shop Bulk Gift Cards')])[2]")public WebElement btnShopBulkGiftCards_M;
+	@FindBy(xpath="(//*[contains(text(),'Check Balance')])[3]") public WebElement btnCheckBalance_CTA_M;
+	@FindBy(xpath="(//*[contains(text(),'SHOP GIFT CARDS')])[2]")public WebElement btnShopGiftCards_M;
 	//KER-3184 end	
 	
 	//KER-258 Start 
@@ -155,5 +159,43 @@ public class HomePagePOM {
 	}
 	
 	
-
+	// SID 1-September
+	public boolean comparePriceLowtohigh() {
+		Boolean flag = false;
+		String first = firstProductPrice.getText();
+		String Second = secondProductPrice.getText();
+		String third = thirdProductPrice.getText();
+		String forth = forthProductPrice.getText();
+		Integer first_f = Integer.parseInt(first);
+		Integer second_s = Integer.parseInt(Second);
+		Integer third_t = Integer.parseInt(third);
+		Integer forth_f = Integer.parseInt(forth);
+		System.out.println(first_f + " " + second_s + " " + third_t + "  " + forth_f);
+		if ((first_f <= second_s) && (second_s <= third_t) && (third_t <= forth_f)) {
+			flag = true;
+		} else {
+			flag = false;
+		}
+		return flag;
+	}
+	
+	// SID 1-September
+	public boolean comparePriceHighToLow() {
+		Boolean flag = false;
+		String first = firstProductPrice.getText();
+		String Second = secondProductPrice.getText();
+		String third = thirdProductPrice.getText();
+		String forth = forthProductPrice.getText();
+		Integer first_f = Integer.parseInt(first);
+		Integer second_s = Integer.parseInt(Second);
+		Integer third_t = Integer.parseInt(third);
+		Integer forth_f = Integer.parseInt(forth);
+		System.out.println(first_f + " " + second_s + " " + third_t + "  " + forth_f);
+		if ((first_f >= second_s) && (second_s >= third_t) && (third_t >= forth_f)) {
+			flag = true;
+		} else {
+			flag = false;
+		}
+		return flag;
+	}
 }

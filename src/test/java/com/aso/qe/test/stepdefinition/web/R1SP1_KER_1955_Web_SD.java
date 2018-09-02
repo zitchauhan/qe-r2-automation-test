@@ -21,6 +21,7 @@ public class R1SP1_KER_1955_Web_SD extends CommonActionHelper{
 	SearchProductPO searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);
 	PDP_PO pdp_po = PageFactory.initElements(getDriver(), PDP_PO.class);
 	String productName ="";
+	String modifiedProductName="";
 
 	@And("^User selects Required product in Product Listing Page$")
 	public void user_selects_Required_product_in_Product_Listing_Page() throws Throwable {
@@ -42,6 +43,7 @@ public class R1SP1_KER_1955_Web_SD extends CommonActionHelper{
 	public void user_should_be_select_the_Quantity() throws Throwable {
 		pdp_po.addToCartAvailability();
 		productName = getText(pdp_po.txtProductTitle);
+		modifiedProductName= getText(pdp_po.txtProductTitle).replace("'", "");
 		assertTrue(clickOnButton(pdp_po.btnQuantityInc));
 	}
 
@@ -69,10 +71,21 @@ public class R1SP1_KER_1955_Web_SD extends CommonActionHelper{
 
 	@Then("^User should be able to see added product in cart$")
 	public void user_should_be_able_to_see_added_product_in_cart() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)) {
+			waitForElement(driver.findElement(By.xpath("(//*[text()='"+productName+"'])[1]")));
+		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[text()='"+productName+"'])[1]"));
+		String modifiedActualTitleInAddToCart =actualTitleInAddToCart.getText().replace("'", "");
+		System.err.println(productName);
+		System.err.println(modifiedActualTitleInAddToCart);
 		
-		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[text()=\""+productName+"\"])[2]"));
-		assertTrue(isDisplayed(actualTitleInAddToCart));
-		
+		assertEquals(productName, modifiedActualTitleInAddToCart);
+	}
+		else {
+			waitForElement(driver.findElement(By.xpath("(//*[text()='"+productName+"'])[2]")));
+			WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[text()='"+productName+"'])[2]"));
+			String modifiedActualTitleInAddToCart =actualTitleInAddToCart.getText().replace("'", "");
+			assertEquals(modifiedProductName, modifiedActualTitleInAddToCart);
+		}
 	}
 
 }

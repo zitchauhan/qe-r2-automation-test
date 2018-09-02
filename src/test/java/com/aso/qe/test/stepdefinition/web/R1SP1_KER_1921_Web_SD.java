@@ -40,8 +40,8 @@ public class R1SP1_KER_1921_Web_SD extends CommonActionHelper{
 		    clickOnButton(pdpPageObj.pdpImage);
 		    waitForPageLoad(driver);
 		    Thread.sleep(2000);
-		    clickOnButton(pdpPageObj.btnXXLARGESizePDP);
-		    Thread.sleep(2000);
+//		    clickOnButton(pdpPageObj.btnXXLARGESizePDP);
+//		    Thread.sleep(2000);
 		   scrollPageToWebElement(pdpPageObj.quantityInput);
 			Thread.sleep(2000);
 			pdpPageObj.quantityInput.sendKeys("100");
@@ -71,7 +71,7 @@ public class R1SP1_KER_1921_Web_SD extends CommonActionHelper{
 	   scrollPageToWebElement(pdpPageObj.MsgPDP_OnlineMessage);
 		String actdata=getText(pdpPageObj.MsgPDP_OnlineMessage);
 		//assertEquals("Not Sold Online", actdata); Not showing this data
-		assertEquals("ONLY SOLD IN STORES", actdata);
+		assertEquals("Special Order Ships to Store", actdata);
 	}
 	
 	

@@ -1,6 +1,6 @@
 Feature: Verify the case behavior for redirect keyword in Mobile. Search keywords - Shirt vs shirt
 
-  @C-SLR @Mobile @Regression  @All @KER-3270  @ZYP_SLR_K3270-7609 @1HR
+  @C-SLR @Mobile @Regression  @All @KER-3270  @ZYP_SLR_K3270-7609 @1HR @RBeta
   Scenario: Verify the user search for Customer Keyword like Shirt
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
@@ -28,7 +28,7 @@ Feature: Verify the case behavior for redirect keyword in Mobile. Search keyword
     Then User closes the web application
 
 
-  @C-SLR @Mobile @Regression  @All @KER-3270  @ZYP_SLR_K3270-7614 @1HR
+  @C-SLR @Mobile @Regression  @All @KER-3270  @ZYP_SLR_K3270-7614 @1HR @RBeta
   Scenario: verify the ability to configure replacement words for specific search terms as Also Search for
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage

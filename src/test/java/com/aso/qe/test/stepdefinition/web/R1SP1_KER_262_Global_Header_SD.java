@@ -154,11 +154,11 @@ public class R1SP1_KER_262_Global_Header_SD extends CommonActionHelper{
 	
 	@Then("^User verify have to verify change link with pencil icon$")
 	public void user_verify_have_to_verify_change_link_with_pencil_icon() throws Throwable {
-	   
+	   Boolean flag = false;
 		Actions act=new Actions(driver);
 	   act.moveToElement(globalElementHeader.verifyFindStoreAfteLogin).perform();
-	   
-	   assertTrue(isDisplayed(globalElementHeader.changeicon));
+	  flag = globalElementHeader.changeicon.isDisplayed();
+	  assertTrue(flag);
 	}
 
 	@Then("^User to check expansion and collapse of the magnifying search field$")

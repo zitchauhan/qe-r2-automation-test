@@ -3,7 +3,11 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.testng.Assert.assertTrue;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.SIT_PO;
 import com.aso.qe.test.pageobject.SearchProductPO;
@@ -99,7 +103,9 @@ public class SD_SIT extends CommonActionHelper {
 	}
 
 	@Then("^user should verify the Guest checkout Page$")
-	public void user_should_verify_the_Guest_checkout_Page() throws Throwable {
+	public void user_should_verify_the_Guest_checkout_Page() throws Throwable 
+	{
+		waitForElement(sit_po.btncheckoutguest);
 		assertTrue(isDisplayed(sit_po.btncheckoutguest));
 		assertTrue(isDisplayed(sit_po.btnpaypalguest));
 		assertTrue(isDisplayed(sit_po.btnsigninguest));
@@ -218,7 +224,8 @@ public class SD_SIT extends CommonActionHelper {
 	}
 
 	@Then("^user click on continue checkout button$")
-	public void user_click_on_continue_checkout_button() throws Throwable {
+	public void user_click_on_continue_checkout_button() throws Throwable 
+	{
 		waitForElement(sit_po.btnContinueCheckout);
 		isDisplayed(sit_po.btnContinueCheckout);
 		assertTrue(clickOnButton(sit_po.btnContinueCheckout));
@@ -290,11 +297,21 @@ public class SD_SIT extends CommonActionHelper {
 		sit_po.verifySigninpage();
 		globalElementHeader.enterEmailAddressandPassword(arg1, arg2);
 		globalElementHeader.clickSubmitButton();
+		if("mobile".equalsIgnoreCase(testtype)) 
+		{
+			waitForPageLoad(driver);
+		}
+		else 
+		{
+			waitForElement(globalElementHeader.btnMyAccount);
+		assertTrue(isDisplayed(globalElementHeader.btnMyAccount));
+		
+		}
 	} 
 
 	/*@Then("^user should be able to enter the signin details$")
 	public void user_should_be_able_to_enter_the_signin_details() throws Throwable {
-		sit_po.verifySigninpage();
+		//sit_po.verifySigninpage();
 		globalElementHeader.enterEmailAddressandPassword();
 		globalElementHeader.clickSubmitButton();
 	}*/
@@ -307,7 +324,7 @@ public class SD_SIT extends CommonActionHelper {
 
 	@Then("^user should able to click on Signup button$")
 	public void user_should_able_to_click_on_Signup_button() throws Throwable {
-		// assertTrue(clickOnButton(globalElementHeader.lnkSignUp));
+		 assertTrue(clickOnButton(globalElementHeader.lnkSignUp));
 	}
 
 	@And("^user should able to enter the Signup details$")
@@ -317,10 +334,17 @@ public class SD_SIT extends CommonActionHelper {
 		globalElementHeader.enterEmailAddress_signup();
 		globalElementHeader.enterPasswordForSignUp();
 		globalElementHeader.enterConfirmPassword();
+		
+	}
+	@And("^user verify he is signed in$")
+	public void user_verify_he_is_signed_in() {
+		assertTrue(clickOnButton(globalElementHeader.btnSignUp));
+		assertTrue(isDisplayed(globalElementHeader.txtWelcome));
 	}
 
 	@Then("^user sign out from the website$")
-	public void user_sign_out_from_the_website() throws Throwable {
+	public void user_sign_out_from_the_website() throws Throwable 
+	{
 		globalElementHeader.signOut();
 	}
 	
@@ -338,12 +362,14 @@ public class SD_SIT extends CommonActionHelper {
 	
 	@Then("^user click on continue shipping method button$")
 	public void user_click_on_continue_shipping_method_button(){
+		waitForElement(sit_po.clickContinueShippingMethod);
 		assertTrue(clickOnButton(sit_po.clickContinueShippingMethod));
 	}
 	
 	@And("^user verify shipping method and order summary$")
-	public void user_verify_shipping_method_and_order_summary(){
-		waitForElement(sit_po.txtordersummary);
+	public void user_verify_shipping_method_and_order_summary() throws InterruptedException{
+//		Thread.sleep(3000);
+		waitForElement(sit_po.Shippingmethod);
 		assertTrue(isDisplayed(sit_po.txtordersummary));
 		assertTrue(isDisplayed(sit_po.Shippingmethod));
 	}
@@ -357,36 +383,7 @@ public class SD_SIT extends CommonActionHelper {
 	public void user_enter_the_payment_details() throws Exception{
 		sit_po.validatecreditcarddetails();
 	}
-	
-//	@Then("^user should be able verify the order summary details$")
-//	public void user_should_be_able_verify_the_order_summary_details() throws Throwable {
-//		sit_po.verifyOrdersummarydetails() ;
-//	}
-	
-//	@Then("^user should able to verify shipping address$")
-//	public void user_should_able_to_verify_shipping_address() throws InterruptedException{
-//		waitForElement(sit_po.shippingAddress);
-//		isDisplayed(sit_po.shippingAddress);
-//	}
-//	
-//	@Then("^user should able to verify the shipping method$")
-//	public void user_should_able_to_verify_the_shipping_method() throws Throwable {
-//
-//			assertTrue(isDisplayed(sit_po.Shippingmethod));
-//	}
-//
-//	@Then("^user should able to click on Continue to Payment button$")
-//	public void user_should_able_to_click_on_Continue_to_Payment_button() throws Throwable {
-//		waitForElement(sit_po.btncontinuepayment);
-//		isDisplayed(sit_po.btncontinuepayment);
-//		assertTrue(clickOnButton(sit_po.btncontinuepayment));
-//		}
-	
-//	@When("^user should be able see the the payment method page and enter the creditcard details$")
-//	public void user_should_be_able_see_the_the_payment_method_page_and_enter_the_creditcard_details() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-//		sit_po.validatecreditcarddetails();
-//	}
+
 	
 	@Then("^user should click on continue to review button$")
 	public void user_should_click_on_continue_to_review_button() throws Throwable {
@@ -414,10 +411,14 @@ public class SD_SIT extends CommonActionHelper {
 
 	
 	@And("^user enter verified by visa password and click on submit button$")
-	public void user_enter_verified_by_visa_password_and_click_on_submit_button() throws Throwable {
+	public void user_enter_verified_by_visa_password_and_click_on_submit_button() throws Throwable 
+	{
 		Thread.sleep(20000);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated((By.name("Cardinal-CCA-IFrame"))));
 		driver.switchTo().frame("Cardinal-CCA-IFrame");
 		System.out.println("2222");
+		wait.until(ExpectedConditions.visibilityOfElementLocated((By.name("authWindow"))));
 		driver.switchTo().frame("authWindow");
 		System.out.println("3333");
 		Thread.sleep(5000);
@@ -432,12 +433,6 @@ public class SD_SIT extends CommonActionHelper {
 
 	}
 	
-//	@When("^user should should be able see Order summary page$")
-//	public void user_should_should_be_able_see_Order_summary_page() throws Throwable {
-//		sit_po.verifyOrdersummaryPage() ;
-//		Thread.sleep(2000);
-//	    
-//	}
 	
 	@And("^user should able to verify the Review shipping address$")
 	public void user_should_able_to_verify_the_Review_shipping_address() throws Throwable {
@@ -464,10 +459,21 @@ public class SD_SIT extends CommonActionHelper {
 	}
 	
 	@Then("^user should click on Place Order Now button$")
-	public void user_should_click_on_Place_Order_Now_button() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
+	public void on() throws Throwable {
 		assertTrue(clickOnButton(sit_po.btnplaceordernow));
 		Thread.sleep(2000);
+		if(isDisplayed(sit_po.noInventoryAtCheckout)) {
+			if(clickOnButton(sit_po.btnplaceordernow)) {
+				assertTrue(clickOnButton(sit_po.btnplaceordernow));
+				assertTrue(isDisplayed(sit_po.orderPlaceSuccessMessage));
+			}
+		else {
+			logger.debug("Cart is empty");
+			Assert.fail();
+		}
+		}
+		assertTrue(isDisplayed(sit_po.orderPlaceSuccessMessage));
+		logger.debug("Order Number "+sit_po.orderPlaceSuccessMessage.getText());
 	}
 	
 	@Then("^user clicks on product card and navigates to PDP page$")
@@ -479,7 +485,14 @@ public class SD_SIT extends CommonActionHelper {
 	public void user_enters_in_Required_Product_with_search_term_and_click_on_Go_button() throws Throwable {
 		
 		clickOnButton(SearchProductPO.searchTextBox);
-		setInputTextWithEnterKey(SearchProductPO.searchTextBox, webPropHelper.getTestDataProperty("Not_Sold_Store"));
-
+		setInputTextWithEnterKey(SearchProductPO.searchTextBox, webPropHelper.getTestDataProperty("Not_Sold_in_Store"));
 	}
+
+	@Then("^user should verify MyAccount page$")
+	public void user_should_verify_MyAccount_page() {
+		assertTrue((clickOnButton(globalElementHeader.btnMyAccount)));
+		globalElementHeader.verifyMyAccount();
+	}
+	
+	
 }

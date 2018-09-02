@@ -1,6 +1,6 @@
 Feature: [Mobile]  Add to Cart on PDP
 
-  @C-PDP @Mobile @Regression @KER-1921  @ZYP_PDP_K1921-5092 @CR-RKA
+  @C-PDP @Mobile @Regression @KER-1921  @ZYP_PDP_K1921-5092 @CR-RKA @RBeta
   Scenario Outline: Verify the functionality of Add to Cart- inventory/quantity restrictions are in place, then add the maximum available/allowable
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User to click on search button after putting data"<data>"
@@ -15,7 +15,7 @@ Feature: [Mobile]  Add to Cart on PDP
   Scenario Outline: Verify the functionality of Add to Cart for "not sold online"
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User to click on search button after putting data"<data>"
-#    Then User select to not sold online item
+    Then User select to not sold online item
     Then User verify not sold online
 
     Examples: 

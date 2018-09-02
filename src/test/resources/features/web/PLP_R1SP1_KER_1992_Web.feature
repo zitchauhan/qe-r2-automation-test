@@ -3,7 +3,7 @@ Feature: To verify "Related Categories" as links and are clickable & navigates t
   @Regression @Web @All @C-PLP   @ZYP_PLP_K1992-3181 @KER-1992
   Scenario: To verify "Related Categories" as links and are clickable & navigates to new landing page
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then User navigates to L2 Mens clothing
+    Then User navigates PLP having related categories
     And user is able to see Related Categories in the filters
     Then user clicks on the Related Categories drawer
     And user clicks on one of the links in the drawer

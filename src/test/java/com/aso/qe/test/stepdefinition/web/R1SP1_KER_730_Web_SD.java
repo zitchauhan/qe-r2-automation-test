@@ -91,8 +91,8 @@ public class R1SP1_KER_730_Web_SD extends CommonActionHelper {
 	}
 	@Then("^close the find the store$")
 	public void close_the_find_the_store() throws Throwable {
-
 	     waitForElement(findStorePO.findAstoreXBTN_M);
 	     clickOnButton(findStorePO.findAstoreXBTN_M);
+	     
 	}
 }

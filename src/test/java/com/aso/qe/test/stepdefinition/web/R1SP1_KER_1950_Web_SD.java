@@ -3,6 +3,8 @@ package com.aso.qe.test.stepdefinition.web;
 
 
 
+import static org.junit.Assert.assertTrue;
+
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
@@ -28,11 +30,13 @@ public class R1SP1_KER_1950_Web_SD extends CommonActionHelper{
 	}
 	@Then("^user do mousehover on review having name$")
 	public void user_do_mousehover_on_review_having_name() throws Throwable {
-	   
-		if(!pdp_po.mouseHoverOnReviewName.equals("Anonymous")) {
-			Thread.sleep(2000);
+
+		if(pdp_po.mouseHoverOnReviewName.getText().equals("Anonymous")==false) {
+			waitForElement(pdp_po.mouseHoverOnReviewName);
 	    	Actions act =new Actions(driver);    	
-	    	act.moveToElement(pdp_po.mouseHoverOnReviewName).perform();
+	    	act.moveToElement(pdp_po.mouseHoverOnReviewName).build().perform();
+	    	assertTrue(isDisplayed(pdp_po.reviewFlyout));
+	    	
 		    	
 	    
 	    }

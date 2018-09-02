@@ -1,6 +1,9 @@
 package com.aso.qe.test.pageobject;
 
-import static org.junit.Assert.assertTrue;
+
+import static org.testng.Assert.assertTrue;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
@@ -15,10 +18,13 @@ import org.testng.asserts.SoftAssert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
-public class GlobalElementHeader_HomePO extends CommonActionHelper {
+public class GlobalElementHeader_HomePO extends CommonActionHelper 
+{
 	private static final Logger logger = Logger.getLogger(GlobalElementHeader_HomePO.class);
-	SIT_PO signinPo= PageFactory.initElements(driver, SIT_PO.class);
+	SIT_PO sit_po= PageFactory.initElements(driver, SIT_PO.class);
 	PDP_PO pdp_po= PageFactory.initElements(driver, PDP_PO.class);
+	
+	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing\"]|//*[@data-auid=\"level3Category-Men's Clothing_m\"]") public WebElement btnMens_Clothing_Shop;
 	@FindBy(xpath="//*[@data-auid='logo']//img")public WebElement imgAcademyLogo;
 	@FindBy(xpath="//*[@data-auid='logo_m']//img")public WebElement imgAcademyLogo_m;//danush
@@ -37,8 +43,8 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//*[contains(@class,'c-product__description')])[2]")public WebElement imgMensShortShirt; 
 	@FindBy(xpath="//div[contains(@class,'breadCrumbComponent')]//span[@class='line-separator']//following-sibling::span//preceding-sibling::a") public WebElement lnkMensShirts;
 	@FindBy(xpath="((//span[@class='line-separator'])[3]/following::span)[1]") public WebElement lnkMensShirtsnotclickable;
-	@FindBy(xpath="//*[@data-auid='BreadCrumb_Academy']//a | //a[text()=\"Father's Day Gifts\"]") public WebElement lnkMensClothing;
-	@FindBy(xpath="//*[@data-auid='BreadCrumb_Academy']//a | //span[text()=\"Father's Day Gifts\"]") public WebElement lnkMensClothingnotclickable; 
+	//@FindBy(xpath="//*[@data-auid='breadcrumb_m'] | //a[text()=\"Father's Day Gifts\"]") public WebElement lnkMensClothing;
+	@FindBy(xpath="//*[@data-auid='BreadCrumb_Academy']//a | //span[text()=\"Father's Day Gifts\"]") public WebElement lnkMensClothing; 
 
 	@FindBy(xpath="//span[@class='facet-trigger']")public WebElement btnFilterFacet;
 	@FindBy(xpath="//*[@data-auid='findAStore_m']")public WebElement btnFindAStoreBurgerMenu;
@@ -107,7 +113,7 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//*[@id='rh-signin-inout-btn']")public WebElement btnsignout;
 	@FindBy(xpath="//*[@id='myAccountQuickLink']")	public WebElement accountSummaryFromMyAccount;
 	@FindBy(xpath="//*[@id='rh-signin-link-xs']")public WebElement accountSummaryFromMyAccount_Mobile;
-	@FindBy(xpath="//*[@id='wishLists']")public WebElement wishListFromMyAccount;// 30th july danush
+	@FindBy(xpath="//*[@data-auid='Wish List']")public WebElement wishListFromMyAccount;// SID 22-August
 	@FindBy(xpath = "//*[@data-auid='Wish List_m']")public WebElement wishListFromMyAccount_Mobile;
 	@FindBy(xpath ="//*[@id ='rh-signin-link-in'] | //*[contains(text(),'MY ACCOUNT MENU')]")public WebElement myAccountDropDown;//danush
 	@FindBy(xpath="//*[@id='btnForgotPassword']")public WebElement btnForgotPasswordSubmit;
@@ -154,7 +160,7 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//*[text()='NEED HELP?']//parent::div//span") public WebElement expandall_Academy_needhelp;
 	@FindBy(xpath="//*[text()='THIS IS ACADEMY']//parent::div//span") public WebElement expandall_Academy_academy;
 	@FindBy(xpath="(//*[@data-component='heroImage'])[4]") public WebElement scrollingForFooterExpanding;
-
+   @FindBy(xpath="//*[@data-auid='expand-search_m']/*|//*[@data-auid='search-clear-button_m']/span")public WebElement  magnify_M;
 	//KER-3274
 	@FindBy(xpath="(//*[text()='You might try:'])[1]") public WebElement labelforsearchMobile;
 	@FindBy(xpath="(//*[text()='You might try:'])[2]") public WebElement labelforsearch;
@@ -240,7 +246,8 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="//*[@id='email-address']") public WebElement lnkSIGNUPFORMOREDEALSEMAIL;
 	@FindBy(xpath="//*[@id='zip-code']") public WebElement lnkSIGNUPFORMOREDEALSZIPCODE;
 	@FindBy(xpath="//*[@data-auid='btnemail-signup-button']") public WebElement lnkSIGNUPFORMOREDEALSSUBMIT;
-	@FindBy(xpath="//*[contains(text(),'YOU ARE SET')]") public WebElement lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE;
+	@FindBy(xpath="(//*[@data-auid='email-signup-sucess-modal']//*[local-name()='svg'])[2]") public WebElement lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE_D;
+	@FindBy(xpath="(//*[@data-auid='email-signup-sucess-modal']//*[local-name()='svg'])[1]") public WebElement lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE_M;
 	@FindBy(xpath="//*[@data-component='footer']//a") public List<WebElement> footerLinks; //10 Aug 
 	@FindBy(xpath="//*[@data-auid='email-signup-sucess-modal']//span") public WebElement btnCloseCrossSuccess;//Anuj 13Aug
 	
@@ -251,11 +258,12 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	@FindBy(xpath="(//div[contains(@class,'breadCrumbComponent')]//*[3]//a)[1]") public WebElement l3LastActiveBreadcrumb;
 	@FindBy(xpath="(//div[contains(@class,'breadCrumbComponent')]//*[2]//a)[1]") public WebElement l2LastActiveBreadcrumb;
 	@FindBy(xpath="(//div[contains(@class,'breadCrumbComponent')]//*[1]//a)[1]") public WebElement l1LastActiveBreadcrumb;
-	
-	
+	@FindBy(xpath="//*[@data-auid='level2Category-Outdoors']") public WebElement btnOutdoorsCategory;
+	@FindBy(xpath="//*[@data-auid='level3Category-Automotive & Towing']/a ")public WebElement btnAutomotiveTowing_Shop;//UAT9
 	
 	//**SID END*********************************************************************************************************************************************
-	@FindBy(xpath="//*[(text()=\"Men's Shirts\")]") public WebElement txtMensShrit;
+	//@FindBy(xpath="//*[(text()=\"Men's Shirts\")]") public WebElement txtMensShrit;/RKA 22 aug
+	@FindBy(xpath="//*[@data-auid='sectionTitle']")public WebElement txtMensShrit;
 	@FindBy(xpath="//div[contains(@class,'row')]//following-sibling::div[@class='mb-3']") public WebElement lnkL2PaginationMobile;
 	@FindBy(xpath="//*[@data-auid='myAccountCta']") public WebElement btnMyAccount;
 	@FindBy(xpath="//*[@data-auid='myAccountCta_m']") public WebElement btnMyAccountMobile;
@@ -267,10 +275,10 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	//KER-262 Start 
 
 	@FindBy(xpath="//*[@data-auid='findAStore']/*[2]")public WebElement hourOfOperationATHeader;
-	@FindBy(xpath="(//*[@data-auid='find-a-store-modal'])[2]/*[2]/*/*[1]") public WebElement txtFindAsTorePopUP;
-	@FindBy(xpath="(//*[@data-auid='find-a-store-modal'])[2]/*[2]/*/*[2]/*/*[1]")public WebElement searchboxFindAsTorePopUp;
+	@FindBy(xpath="//*[@data-auid='find-a-store-modal']//*[contains(text(),'Find a Store')]") public WebElement txtFindAsTorePopUP;  //SID 24-August
+    @FindBy(xpath="//*[@data-auid='find-a-store-modal']//*[@data-auid='find-a-store']")public WebElement searchboxFindAsTorePopUp; //SID 24-August
 	@FindBy(xpath="//*[@data-auid='findAStore']/*[1]/*[2]")public WebElement verifyFindStoreAfteLogin;
-	@FindBy(xpath="//*[@data-auid='findAStore']/*[1]/*[3]/*[2]")public WebElement changeicon;
+	@FindBy(xpath="//*[@data-auid='findAStore']//*[contains(text(),'change')]/parent::*/child::*[contains(@class,'icon-pencil')]")public WebElement changeicon;// SID 30-August
 	@FindBy(xpath="//*[@data-auid='myAccountCta_m']")public WebElement btnMyAccountInWeeklyAds;
 
 	@FindBy(xpath="//*[contains(text(),'THIS IS ACADEMY')]")public WebElement expandAcademyPlus_M;
@@ -456,8 +464,9 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 
 	public void enterEmailAddressandPassword(String arg1, String arg2) throws Exception 
 	{
-			setInputText(txtEmailAddress, webPropHelper.getTestDataProperty(arg1));
-			setInputText(txtPassword, webPropHelper.getTestDataProperty(arg1));
+
+		setInputText(txtEmailAddress, webPropHelper.getTestDataProperty(arg1));
+		setInputText(txtPassword, webPropHelper.getTestDataProperty(arg2));
 
 		} 
 	/*public void enterEmailAddressandPassword() throws Exception {
@@ -485,26 +494,26 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	}
 	public void enterForgotEmail() throws Exception {
 
-		setInputText(txtForgotEmail, "abcd@gmail.com");
+		setInputText(txtForgotEmail, "qaz2@gmail.com");
 
 	}
 
 	public void enterEmail() throws Exception {
 
-		setInputText(txtEmail, "abcd@gmail.com");
+		setInputText(txtEmail, timeStamp+"@gmail.com");
 
 	}
 
 	public void enterFirstName() throws Exception {
 
-		setInputText(txtFirstName, "Rashika");
+		setInputText(txtFirstName, timeStamp);
 
 
 	}
 
 	public void enterLastName() throws Exception {
 
-		setInputText(txtLastName, "Kowtikwar");
+		setInputText(txtLastName, timeStamp);
 
 
 	}
@@ -543,10 +552,11 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 
 	}
 
-	public void clickSubmitButton() throws Exception {
+	public void clickSubmitButton() throws Exception 
+	{
 
 		assertTrue(clickOnButton(btnSubmit));
-		waitForElement(txtWelcome);
+		//waitForElement(txtWelcome);
 
 	}
 
@@ -762,12 +772,12 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 		//	Assert.assertEquals("Validating the presence for txt Find A Store");//Framework Method need to be used
 	}
 
-	public void validatingTxtSearchBox() throws Exception{
+	public void validatingTxtSearchBox(){
 		if("mobile".equalsIgnoreCase(testtype)){
-			isDisplayed(txtSearchBox_mobile);
+			assertTrue(isDisplayed(txtSearchBox_mobile));
 			logger.debug("txtSearchBox is displayed");
 		}else {
-			isDisplayed(txtSearchBox);
+			assertTrue(isDisplayed(txtSearchBox));
 			logger.debug("txtSearchBox is displayed");
 		}
 		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
@@ -965,16 +975,16 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 			actions.build().perform();
 			flag = isDisplayed(suggestionFlyout);
 			if(flag==true) {
-			for(WebElement txt: listsuggestion){
-				if(txt != null && !(txt.getText().contains("CATEGORY")||txt.getText().contains("BRAND")||txt.getText().contains("Clear")) && txt.getText().contains(inputSearchTxt)){
-					txt.getText().toLowerCase().contains(inputSearchTxt.toLowerCase());
+				for(WebElement txt: listsuggestion){
+					waitForElement(txt);
+					if(txt != null && txt.getText().toLowerCase().contains(inputSearchTxt.toLowerCase())){
+						flag=txt.getText().toLowerCase().contains(inputSearchTxt.toLowerCase());
+					}
 				}
-			}
-			return true;
-			}
-			else {
-				return false;
-			}
+				}
+				else {
+					flag=false;
+				}
 		}else {
 			txtSearchBox.clear();//anil
 			Actions actions = new Actions(driver);
@@ -987,16 +997,18 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 			if(flag==true) {
 			for(WebElement txt: listsuggestion){
 				waitForElement(txt);
-				if(txt != null && !(txt.getText().contains("CATEGORY")||txt.getText().contains("BRAND")||txt.getText().contains("Clear")) && txt.getText().contains(inputSearchTxt)){
-					txt.getText().toLowerCase().contains(inputSearchTxt.toLowerCase());
+				if(txt != null && txt.getText().toLowerCase().contains(inputSearchTxt.toLowerCase())){
+					flag=txt.getText().toLowerCase().contains(inputSearchTxt.toLowerCase());
 				}
 			}
-			return true;
+		
 			}
 			else {
-				return false;
+				flag=false;
 			}
-		}	
+		}
+		
+		return flag;
 	}
 
 	public boolean verifyDuplicateSuggestion(String inputSearchTxt) throws Exception{
@@ -1064,15 +1076,16 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	}
 	public void verifyTheNullPage() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
-			assertTrue(isDisplayed(nulldescription));
+			assertTrue(nulldescription.getText().contains("We couldn't find anything for"));
 			logger.debug("Description is displayed");
 		}else {
 
-			assertTrue(isDisplayed(nulldescription));
+			assertTrue(nulldescription.getText().contains("We couldn't find anything for"));
 			logger.debug("Description is displayed");
 		}
-
-	}public void verifyTheColorPage() throws Exception{
+	}
+	
+	public void verifyTheColorPage() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			assertTrue(isDisplayed(nulldescription));
 			logger.debug("Description is displayed");
@@ -1418,11 +1431,11 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	}
 
 
-	public void validateWeeklyAdLinkPresence() throws InterruptedException {
+	public void validateWeeklyAdLinkPresence() {
 		if("mobile".equalsIgnoreCase(testtype)){
-			isDisplayed(txtWeeklyADBurgerMenu);
+			assertTrue(isDisplayed(txtWeeklyADBurgerMenu));
 		}else {
-			isDisplayed(txtWeeklyAD);
+			assertTrue(isDisplayed(txtWeeklyAD));
 		}
 	}
 
@@ -1698,14 +1711,14 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 			assertTrue(clickOnButton(btnMyAccountMobile));
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(btnSignOut_M));
-			signinPo.verifySigninpage();
+			sit_po.verifySigninpage();
 
 		}else {
 			assertTrue(clickOnButton(btnMyAccount));
 			Thread.sleep(1000);
 			assertTrue(clickOnButton(btnSignOut));
 			Thread.sleep(1000);
-			signinPo.verifySigninpage();
+			sit_po.verifySigninpage();
 		}
 	}	
 
@@ -1743,6 +1756,7 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 	}
 
 	public void clickOnBurgerMenu() throws InterruptedException {
+		isClickable(btnBurgerMenu);
 		if(isDisplayed(btnBurgerMenu)) {
 //			Thread.sleep(3000);
 			assertTrue(clickOnButton(btnBurgerMenu));
@@ -1750,9 +1764,19 @@ public class GlobalElementHeader_HomePO extends CommonActionHelper {
 			}
 			else {
 				driver.navigate().refresh();
+				Thread.sleep(1000);
 			}
 	}
+	//SID UserJourney 22-August
 
+	public void verifyMyAccount()
+	 {
+		assertTrue(clickOnButton(wishListFromMyAccount));
+		assertTrue(isDisplayed(sit_po.lnkAccountSummary));
+		assertTrue(isDisplayed(sit_po.personalInformation));
+		assertTrue(isDisplayed(sit_po.wishLists));
+		assertTrue(isDisplayed(sit_po.addressBook));
+	}
 	//RKA 21 aug
 	public void getProductName() {
 		

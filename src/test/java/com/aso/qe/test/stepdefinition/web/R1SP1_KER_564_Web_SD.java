@@ -37,7 +37,6 @@ public class R1SP1_KER_564_Web_SD extends CommonActionHelper{
 	@Then("^User Verify Pagination of page$")
 	public void user_Verify_Pagination_of_page() throws Throwable {
 	   if(isDisplayed(plp_p.paginationForPage_2)) {
-		  scrollPageToWebElement(plp_p.paginationForPage_2);
 		   assertTrue(clickOnButton(plp_p.paginationForPage_2));
 	   }
 	}

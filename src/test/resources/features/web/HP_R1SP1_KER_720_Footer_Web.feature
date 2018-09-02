@@ -138,7 +138,7 @@ Feature: Verify presence of Global Element Footer
     Then User will verify the presence of legal policy 
    
    
-     @Web  @Regression @C-HP  @All  @KER-720 @ZYP_HP_K720-1980 @Rerun  @CR-AG @1HR
+     @Web  @Regression @C-HP  @All  @KER-720 @ZYP_HP_K720-1980 @Rerun  @CR-AG @1HR @RBeta
   Scenario Outline: To Verify "Global Footer Elements"
     Given user launches the browser and navigates to "ASO_HOME" page
     And User will verify the presence of Facebook icon

@@ -27,11 +27,11 @@ public class R1SP1_KER_1954_Web_SD extends CommonActionHelper{
 	    assertTrue(clickOnButton(pdp_po.btnExcellentStar));
 	    Thread.sleep(2000);
 	    pdp_po.inputReviewTitle.sendKeys("Automation Test_1");	
-	    pdp_po.inputReview.sendKeys("Automation Test_2 Automation Test_2 Automation Test_2");	 
+	    pdp_po.inputReview.sendKeys("I needed an orange shirt for my work and this one is my favorite! Very pretty color and extremely comfortable as well. I love this shirt so much that I bought 3. I highly recommend!");	 
 	    clickOnButton(pdp_po.btnRecommendToAFriend);
 	    pdp_po.inputNickName.sendKeys("Automation Test_3");	
 	    pdp_po.inputEmail.sendKeys("xyz@gmail.com");
-	    pdp_po.inputPhoneNumber.sendKeys("987456321");
+	    pdp_po.inputPhoneNumber.sendKeys("01234567890");
 	    clickOnButton(pdp_po.btnTerms_conditions);
 	    clickOnButton(pdp_po.btnPostReview);
 	    Thread.sleep(2000);

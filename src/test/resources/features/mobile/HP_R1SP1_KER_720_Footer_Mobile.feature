@@ -127,7 +127,7 @@ Feature: Verify presence of Global Element Footer
     Given user launches the browser and navigates to "ASO_HOME" page 
     Then User will verify the presence of privacy policy
     And User will verify the presence of Terms and Conditions
-    Then User will verify the presence of legal policy
+#    Then User will verify the presence of legal policy
     
      @Mobile @Regression @All  @C-HP  @KER-720  @ZYP_HP_K720-5497
     Scenario: Verify presence of Global Element Footer elements(privacypolicy,terms&conditions,legal policy) from PLP
@@ -135,7 +135,7 @@ Feature: Verify presence of Global Element Footer
     Then User navigates till PLP 
     Then User will verify the presence of privacy policy
     And User will verify the presence of Terms and Conditions
-    Then User will verify the presence of legal policy
+#    Then User will verify the presence of legal policy
 
      @Mobile @Regression @All   @C-HP @KER-720  @ZYP_HP_K720-5496
   Scenario: Verify presence of Global Element Footer elements(privacypolicy,terms&conditions,legal policy) from PDP
@@ -144,5 +144,5 @@ Feature: Verify presence of Global Element Footer
     Then User click on the product image
     Then User will verify the presence of privacy policy
     And User will verify the presence of Terms and Conditions
-    Then User will verify the presence of legal policy 
+#    Then User will verify the presence of legal policy 
    

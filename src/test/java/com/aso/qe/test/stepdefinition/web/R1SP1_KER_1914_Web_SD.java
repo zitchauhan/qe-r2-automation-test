@@ -47,13 +47,22 @@ public class R1SP1_KER_1914_Web_SD extends CommonActionHelper {
 	
 	@Then("^User navigate to wishlist from header$")
 	public void User_navigate_to_wishlist_from_header() throws InterruptedException {
+		if("mobile".equalsIgnoreCase(testtype)) {
+			Thread.sleep(300);
+			globalElementHeader.clickOnBurgerMenu();
+			scrollPageToWebElement(globalElementHeader.btnMyAccountMobile);
+			isDisplayed(globalElementHeader.btnMyAccountMobile);
+			assertTrue(clickOnButton(globalElementHeader.btnMyAccountMobile));
+			assertTrue(clickOnButton(globalElementHeader.wishListFromMyAccount_Mobile));
+		}
+		else {
 		Thread.sleep(300);
 		scrollPageToWebElement(globalElementHeader.btnMyAccount);
 		isDisplayed(globalElementHeader.btnMyAccount);
 		assertTrue(clickOnButton(globalElementHeader.btnMyAccount));
 		assertTrue(clickOnButton(pdpPageObj.headerWishList));
 	}
-	
+	}
 	@Then("^User navigate to wishlist from burger menu$")
 	public void User_navigate_to_wishlist_from_burger_menu() throws InterruptedException {
 		assertTrue(clickOnButton(globalElementHeader.btnBurgerMenu));

@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.HomePagePOM;
+import com.aso.qe.test.pageobject.PLP_PO;
 import com.aso.qe.test.pageobject.SearchProductPO;
 import cucumber.api.java.en.Then;
 
@@ -15,7 +16,8 @@ public class R1SP1_KER_1961_Web_SD extends CommonActionHelper {
 	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 	public HomePagePOM homepagePOM = PageFactory.initElements(driver, HomePagePOM.class);
 	public SearchProductPO searchProductPO = PageFactory.initElements(driver, SearchProductPO.class);
-
+	PLP_PO plp_po = PageFactory.initElements(driver, PLP_PO.class);
+	
 	@Then("^User click on burger menu$")
 	public void User_click_on_burger_menu() throws Throwable {
 		assertTrue(clickOnButton(globalElementHeader.btnBurgerMenu));
@@ -29,7 +31,8 @@ public class R1SP1_KER_1961_Web_SD extends CommonActionHelper {
 
 	@Then("^User click on the brand tab$")
 	public void User_click_on_the_brand_tab() throws Throwable {
-			scrollPageToWebElement(globalElementHeader.btnBrandCategoryTab);
+		Thread.sleep(5000);	
+		scrollPageToWebElement(globalElementHeader.btnBrandCategoryTab);
 			breadcrumb=globalElementHeader.btnBrandCategoryTab.getText();
 		assertTrue(clickOnButton(globalElementHeader.btnBrandCategoryTab));
 	}
@@ -57,8 +60,6 @@ public class R1SP1_KER_1961_Web_SD extends CommonActionHelper {
 
 	@Then("^User verify the title$")
 	public void User_verify_the_title() throws Throwable {
-		System.err.println(globalElementHeader.mobileBreadcrumbpreviousTitle.getText());
-		System.err.println(breadcrumb.toLowerCase());
-		assertEquals(globalElementHeader.mobileBreadcrumb.getText().toLowerCase(), breadcrumb.toLowerCase());
+		assertEquals(plp_po.txtSectionTitle.getText().toLowerCase(), breadcrumb.toLowerCase());
 	}
 }

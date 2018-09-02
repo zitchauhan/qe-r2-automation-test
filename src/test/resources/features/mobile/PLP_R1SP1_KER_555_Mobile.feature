@@ -26,7 +26,7 @@ Feature: To verify user selecting/unselecting one or multiple 'filter by' values
 
     Examples: 
       | price        | brand_name | color_name |
-      | $10 - $19.99 | Adidas     | Black      |
+      | $10 - $19.99 | Adidas     | Orange      |
 
    @Regression @C-PLP  @Mobile @All @KER-555  @ZYP_PLP_K555-6304 @Rerun
   Scenario Outline: Verify user is able to select/unselect one or multiple filter by values from CLP Page
@@ -56,7 +56,7 @@ Feature: To verify user selecting/unselecting one or multiple 'filter by' values
 
     Examples: 
       | price        | brand_name | color_name |
-      | $10 - $19.99 | Adidas     | Black      |
+      | $10 - $19.99 | Adidas     | Orange      |
 
    @Regression  @C-PLP @Mobile @All @KER-555  @ZYP_PLP_K555-6306 @Rerun
   Scenario Outline: Verify user is able to select/unselect one or multiple filter by values from Home Page search
@@ -85,4 +85,4 @@ Feature: To verify user selecting/unselecting one or multiple 'filter by' values
 
     Examples: 
        | price        | brand_name | color_name |
-       | $10 - $19.99 | Adidas     | Black      |
+       | $10 - $19.99 | Adidas     | Orange      |

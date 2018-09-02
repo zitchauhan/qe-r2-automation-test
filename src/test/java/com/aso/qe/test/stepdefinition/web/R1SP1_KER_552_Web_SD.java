@@ -6,10 +6,8 @@ import static org.testng.Assert.assertTrue;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
-
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.SearchProductPO;
-
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -18,7 +16,6 @@ import cucumber.api.java.en.When;
 public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(R1SP1_KER_552_Web_SD.class);
 	SearchProductPO searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);
-
 	@When("^User should be able to see the Number of items in each price range checkbox$")
 	public void user_should_be_able_to_see_the_Number_of_items_in_each_price_range_checkbox() throws Throwable {
 		String filterUnder10ProductCount = getText(searchProductPO.priceCheckBoxFrom10to20Count);
@@ -67,11 +64,8 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 	@Then("^user deselect the \"(.*?)\" filter$")
 	public void user_deselect_the_filter(String arg1) throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
-			//scrollPageToWebElement(searchProductPO.filterPricePlusBtnMobile);
-			//assertTrue(clickOnButton(Common_Web_SD.searchProductPO.filterPricePlusBtnMobile));
 			searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_ListMobile,arg1);
 		}else {
-			
 		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_price_CheckBox_List, arg1);
 	}
 	}
@@ -237,7 +231,9 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 	
 	@Given("^User unselect the \"(.*?)\" Filter$")
 	public void user_unselect_the_filter(String arg1) throws Throwable {
-		String xpath="//li[@data-auid='drawer_"+arg1+"']//i[contains(@class,'icon-checkbox-active')]";
+		//String xpath="//li[@data-auid='drawer_"+arg1+"_m']//i[contains(@class,'icon-checkbox-active')]";
+		String xpath="//li[@data-auid='drawer_"+arg1+"_m']/*[2]";
+		
 		logger.debug("Check Filter check xpath::"+xpath);
 		assertTrue(clickOnButton(getfindElementByXPath(xpath)));
 	}
@@ -331,14 +327,12 @@ public class R1SP1_KER_552_Web_SD extends CommonActionHelper{
 	 }
 	@Then("^User clicks on the filter flyout$")
 	public void User_clicks_on_the_filter_flyout() throws Throwable{
-		//scrollPageToWebElement(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile);
-		Thread.sleep(1500);
+		waitForElement(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile);
 		assertTrue(isClickable(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile));
 		Thread.sleep(1500);
 		assertTrue(clickOnButton(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile));
 		
 	}
-	
 }
 
 

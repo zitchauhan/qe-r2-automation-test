@@ -1,6 +1,6 @@
 Feature: Verify the Auto Correct in search and search suggestions
 
-  @C-SLR @Mobile @Regression  @All @KER-3274  @ZYP_SLR_K3274-6336 @Rerun @1HR @CR-AG
+  @C-SLR @Mobile @Regression  @All @KER-3274  @ZYP_SLR_K3274-6336 @Rerun @1HR @CR-AG @RBeta
   Scenario Outline: Verify the user verifies the title for the closest matching term
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
@@ -24,7 +24,7 @@ Feature: Verify the Auto Correct in search and search suggestions
     |data|
     |goof|
  
-  @C-SLR @Mobile  @Regression @All @KER-3274  @ZYP_SLR_K3274-6340 @Rerun @1HR @CR-AG
+  @C-SLR @Mobile  @Regression @All @KER-3274  @ZYP_SLR_K3274-6340 @Rerun @1HR @CR-AG @RBeta
 Scenario Outline: Verify the user verifies the respective search results are displayed for the closest matching term
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
@@ -36,7 +36,7 @@ Scenario Outline: Verify the user verifies the respective search results are dis
     |data|
     |goof|
 
-  @C-SLR @Mobile  @Regression @All @KER-3274  @ZYP_SLR_K3274-6341 @Rerun @CR-AG
+  @C-SLR @Mobile  @Regression @All @KER-3274  @ZYP_SLR_K3274-6341 @Rerun @CR-AG @RBeta
 Scenario Outline: Verify the user verifies the respective search results are clickable for the closest matching term
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage

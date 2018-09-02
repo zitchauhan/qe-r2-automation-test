@@ -24,9 +24,10 @@ Feature: To verify "Global Differences" in Mobile view
 
   @Mobile @All @C-HP  @Regression @KER-721  @ZYP_HP_K721-5607 @Rerun
   Scenario: Verify presence of header content on L1 page
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then User navigates to L1
+    Given user launches the browser and navigates to "ASO_HOME" page 
     Then User clicks on the burger menu
+     Then User navigates to L1
+     Then User clicks on the burger menu
     Then User should be able to see FindStore Navigation Categories and MyAccount links
     Then User closes the web application
 

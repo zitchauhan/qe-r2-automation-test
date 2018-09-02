@@ -36,7 +36,7 @@ Feature: Verify the user see search suggestions based on the data entered in the
     Then User should not see duplicates within predictive suggestions
     Then User closes the web application
 
-  @C-SLR @Web @All  @Regression @KER-3237  @ZYP_SLR_K3237-4379 @1HR
+  @C-SLR @Web @All  @Regression @KER-3237  @ZYP_SLR_K3237-4379 @1HR @RBeta
   Scenario: Verify the user can clear all the search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to view Search Box on Homepage

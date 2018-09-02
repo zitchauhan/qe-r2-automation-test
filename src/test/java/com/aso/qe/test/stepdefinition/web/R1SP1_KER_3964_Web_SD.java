@@ -55,9 +55,22 @@ public class R1SP1_KER_3964_Web_SD extends CommonActionHelper{
 
 	}
 	@And("^User click on search icon$")
-	public void User_click_on_search_icon() throws Throwable {
-		globalElementHeader.clickOnButton();
+	public void User_click_on_search_icon() throws Throwable 
+	{
+		if("mobile".equalsIgnoreCase(testtype)) 
+		{
+		//globalElementHeader.clickOnButton();
+		waitForPageLoad(driver);
+		Thread.sleep(2000);
+		clickOnButton(globalElementHeader.magnify_M);
+		}
+		else
+		{
+		       waitForPageLoad(driver);
+		       Thread.sleep(2000);
+		              clickOnButton(globalElementHeader.btnSearch_Desktop);  
 
+		}
 	}
 	@Then("^User is navigated to pdp page$")
 	public void User_is_navigated_to_pdp_page() throws Throwable {

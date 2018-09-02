@@ -13,9 +13,9 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
  
 
   @SIT_UserJourney @ZYP_GLN_K6809-7079 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
-  Scenario Outline: Verify As a User I should be able to select/deselect multiple price values in Search Page
+  Scenario: Verify As a User I should be able to select/deselect multiple price values in Search Page
     Given user launches the browser and navigates to "ASO_HOME" page
-    When User enters in Required_Product with "<SearchTerm>" and click on Go button
+    When user enters "SearchTerm" in the search box
     And User expands PRICE Filter Option
     When User selects multiple PRICE filter Options
     Then User should be able to see the selected PRICE filter Options in selected state
@@ -23,22 +23,15 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be able to see the deselected PRICE filter Options in deselected state
     Then User closes the web application
 
-    Examples: 
-      | SearchTerm |
-      | Nike Shoe  |
-
 
     @SIT_UserJourney @ZYP_GLN_K6809-7081 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
-  Scenario Outline: Verify the user should be shown a Null results page when the search term returns no matching relevant results
+  Scenario: Verify the user should be shown a Null results page when the search term returns no matching relevant results
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
-    When User enters in Required_Product with "<SearchTerm>" and click on Go button
+    When user enters "NullSearch" in the search box
     Then User is navigated to null page
     Then User closes the web application
-     Examples: 
-      | SearchTerm |
-      | Null  |
-
+    
     @SIT_UserJourney @ZYP_GLN_K6809-7082 @KER-6809 @C-GlobalNavigationUJ @Web @CR-SID
   Scenario: Verify the user enters two characters into the search box and see predictive suggestions for matching keyword
     Given user launches the browser and navigates to "ASO_HOME" page
@@ -110,6 +103,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
      Then user should able to click on Signin button
    Then user should able to click on Signup button
    And user should able to enter the Signup details
+   And user verify he is signed in
    Then User closes the web application
 
   
@@ -245,7 +239,6 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user is able to see the product category name in section title.
     Then user clicks on one of the subcategory and navigates to LTwo page
     And user is able to see the product category name in section title.
-    Then user clicks on product card and navigates to PDP page
     Then User is navigated to pdp page
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title

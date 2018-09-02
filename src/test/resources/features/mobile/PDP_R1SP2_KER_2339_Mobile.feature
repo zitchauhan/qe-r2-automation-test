@@ -5,10 +5,10 @@ Scenario: Verify user is able to see a Breadcrumb to easily navigate between pag
 Given user launches the browser and navigates to "ASO_HOME" page
 Then User navigates till PLP 
 Then User click on the product image 
-Then User click on the breadcrumb link for mobile 
+ Then User click on the breadcrumb last link
 
 
-@Regression @1HR @Mobile @All @KER-2339 @C-PDP  @ZYP_PDP_KK2339-9146 @CR-SG
+@Regression @1HR @Mobile @All @KER-2339 @C-PDP  @ZYP_PDP_KK2339-9146 @CR-SG @RBeta
 Scenario: Verify user is able to see Academy as anchor in breadcrumb(ex. brands) 
 Given user launches the browser and navigates to "ASO_HOME" page
  Then user enters required value in search box mobile and click on search

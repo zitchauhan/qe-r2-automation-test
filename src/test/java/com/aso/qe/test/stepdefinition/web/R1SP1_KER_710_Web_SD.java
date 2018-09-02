@@ -1,16 +1,9 @@
 package com.aso.qe.test.stepdefinition.web;
 
-
-
 import static org.testng.Assert.assertTrue;
-
-import java.util.Iterator;
 import java.util.TreeSet;
-
 import org.openqa.selenium.interactions.Actions;
-
 import org.openqa.selenium.support.PageFactory;
-
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
 import com.aso.qe.test.pageobject.HomePagePOM;
@@ -49,7 +42,7 @@ public class R1SP1_KER_710_Web_SD extends CommonActionHelper{
 			Actions hover = new Actions(getDriver());
 			Thread.sleep(2000);
 			hover.moveToElement(hp_p.btnShoe).build().perform();
-			Thread.sleep(2000);
+			waitForElement(hp_p.btnBoysShoe);
 			assertTrue(clickOnButton(hp_p.btnBoysShoe));
 			Thread.sleep(2000);
 			
@@ -104,47 +97,12 @@ public class R1SP1_KER_710_Web_SD extends CommonActionHelper{
 	
 	@Then("^compare the price is in Low to high mode$")
 	public void compare_the_price_is_in_Low_to_high_mode() throws Throwable {
-	   String first=getText(hp_p.firstProductPrice);
-	   String Second=getText(hp_p.secondProductPrice);
-	   String third=getText(hp_p.thirdProductPrice);
-	   String forth=getText(hp_p.forthProductPrice);
-	
-	   Integer first_f=Integer.parseInt(first);
-	   Integer second_s=Integer.parseInt(Second);
-	   Integer third_t=Integer.parseInt(third);
-	   Integer forth_f=Integer.parseInt(forth);
-	   System.out.println(first_f+" "+second_s +" "+ third_t +"  " + forth_f);
-	   if((first_f <=second_s ) &&(second_s <=third_t) && (third_t <= forth_f)) {
-		   System.out.println("Pass");
-	   }
-	   else {
-		   System.out.println("fail");
-	   }
-	  
-
-	
+		assertTrue(hp_p.comparePriceLowtohigh());
 	}
 	
 	@Then("^compare the price is in high to low mode$")
 	public void compare_the_price_is_in_high_to_low_mode() throws Throwable {
-	   
-		String first=getText(hp_p.firstProductPrice);
-		   String Second=getText(hp_p.secondProductPrice);
-		   String third=getText(hp_p.thirdProductPrice);
-		   String forth=getText(hp_p.forthProductPrice);
-		
-		   Integer first_f=Integer.parseInt(first);
-		   Integer second_s=Integer.parseInt(Second);
-		   Integer third_t=Integer.parseInt(third);
-		   Integer forth_f=Integer.parseInt(forth);
-		   System.out.println(first_f+" "+second_s +" "+ third_t +"  " + forth_f);
-		   if((first_f >=second_s ) &&(second_s >=third_t) && (third_t >= forth_f)) {
-			   System.out.println("Pass");
-		   }
-		   else {
-			   System.out.println("fail");
-		   }
-		
+	   assertTrue(hp_p.comparePriceHighToLow());		
 	}
 	@Then("^User should be able to sort by brand A to Z$")
 	public void user_should_be_able_to_sort_by_brand_A_to_Z() throws Throwable {
@@ -169,7 +127,7 @@ public class R1SP1_KER_710_Web_SD extends CommonActionHelper{
 	    tree.add(third);
 	    tree.add(forth);
 
-	    System.out.println(tree);
+	    System.err.println(tree);
 	
     
 	    
@@ -206,20 +164,12 @@ public class R1SP1_KER_710_Web_SD extends CommonActionHelper{
 	
 
 		if("mobile".equalsIgnoreCase(testtype)){	
-			
 			assertTrue(clickOnButton(hp_p.brandFacet_M )); 
 			   assertTrue(clickOnButton(hp_p.brandFacetAddidas_M));
 			   Thread.sleep(3000);
-				
-			
-			
-			
-			
 		}else {
 			waitForElement(hp_p.brandFacet);
-			 scrollPageToWebElement(hp_p.brandFacet);
 			   assertTrue(clickOnButton(hp_p.brandFacet ));
-			   waitForElement(hp_p.brandFacetAddidas);
 			   assertTrue(clickOnButton(hp_p.brandFacetAddidas));
 			   Thread.sleep(3000);
 				
@@ -247,7 +197,7 @@ public class R1SP1_KER_710_Web_SD extends CommonActionHelper{
 		Thread.sleep(2000);
 		assertTrue(clickOnButton(hp_p.btnMenShoe_M));
 		Thread.sleep(2000);
-		assertTrue(clickOnButton(hp_p.btnMenShoe_M));
-		
+		assertTrue(clickOnButton(hp_p.btnMenShoe_M_landing));  //SID 28-August
+		 
 	}
 }

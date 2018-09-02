@@ -1,6 +1,6 @@
 Feature: [Mobile]  Add to Cart - Error Messages (PDP)
 
-  @C-PDP @Mobile @Regression @KER-1919  @ZYP_PDP_K1919-5042 @CR-AG
+  @C-PDP @Mobile @Regression @KER-1919  @ZYP_PDP_K1919-5042 @CR-AG @RBeta
   Scenario Outline: - Verify Add to Cart -messaging confirming the restriction
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User to click on search button after putting data"<data>"
@@ -32,7 +32,7 @@ Feature: [Mobile]  Add to Cart - Error Messages (PDP)
 
     Examples: 
       | data                                          |
-      | shirts |
+      | Ariat Men's Workhog Work Boots |
       
  @C-PDP @Mobile @Regression @KER-1919  @ZYP_PDP_K1919-5044 @CR-AG
   Scenario: Verify Add to Cart -messaging to confirm the quantity was added

@@ -1,5 +1,8 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertTrue;
+
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -15,17 +18,17 @@ public class R1SP1_KER_732_Web_SD extends CommonActionHelper {
 	
 	@Then("^User click on Quick view button$")
 	public void user_click_on_Quick_view_button() throws Throwable {
-//	  pdp_po.moveToPdpImage();
-//	  //Thread.sleep(5000);
-//	  pdp_po.cilckQuickViewbutton();
-//	  
-	  moveHover(pdp_po.pdpImage);
-	  clickOnLink(pdp_po.btnQuickView);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(pdp_po.pdpImage).build().perform();
+		actions.moveToElement(pdp_po.btnQuickView).click().build().perform();
+//	  moveHover(pdp_po.pdpImage);
+//	  moveHover(pdp_po.btnQuickView);
+//	  clickOnLink(pdp_po.btnQuickView);
 	}
 
-	@Then("^verify addcart or see details button is displayed\\.$")
-	public void verify_addcart_or_see_details_button_is_displayed() throws Throwable {
-		pdp_po.verifyAddcartOrSeeDetailsButton();
+	@Then("^verify addcart button is displayed$")
+	public void verify_addcart_button_is_displayed() throws Throwable {
+		assertTrue(isDisplayed(pdp_po.btnAddToCart));
 	}
 
 }

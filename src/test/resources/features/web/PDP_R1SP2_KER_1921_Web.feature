@@ -1,6 +1,6 @@
 Feature: [Desktop]  Add to Cart on PDP
 
-  @C-PDP @Web @Regression @KER-1921 @ZYP_PDP_K1921-3432 @CR-RKA  @1HR
+  @C-PDP @Web @Regression @KER-1921 @ZYP_PDP_K1921-3432 @CR-RKA  @1HR @RBeta
   Scenario Outline: Verify the functionality of Add to Cart- inventory/quantity restrictions are in place, then add the maximum available/allowable
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user search the data in search box"<data>"
@@ -11,7 +11,7 @@ Feature: [Desktop]  Add to Cart on PDP
       | data                                          |
       | Magellan Outdoors Men's Neoprene Wading Boots |
 
-  @C-PDP @Web @Regression @KER-1921 @ZYP_PDP_K1921-5053 @CR-RKA
+  @C-PDP @Web @Regression @KER-1921 @ZYP_PDP_K1921-5053 @CR-RKA @RBeta
   Scenario Outline: Verify the functionality of Add to Cart for "not sold online"
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user search the data in search box"<data>"

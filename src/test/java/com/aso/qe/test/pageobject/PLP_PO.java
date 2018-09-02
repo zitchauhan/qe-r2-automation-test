@@ -21,9 +21,9 @@ public class PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//div[@class='Select-menu-outer']//div[@aria-label='SORT_OPTIONS") public   WebElement optnSortBy;
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Related Categories']") public   WebElement lnkRelatedCategories;
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Related Categories_m']") public   WebElement lnkRelatedCategories_Mobile;
-	@FindBy(xpath="//*[@data-auid=\"drawer_Men's Gloves\"]/a")public   WebElement lnkCategories_RelatedCategories;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Related Categories']//li[1]//a")public   WebElement lnkCategories_RelatedCategories;  //SID 27-August
 	@FindBy(xpath="(//*[@data-auid='facetdrawer_drawer_Related Categories_m']//a)[2]") public   WebElement lnkCategories_RelatedCategories_Mobile;
-	@FindBy(xpath="//*[contains(@data-component,'sectionTitle')]") public   WebElement txtSectionTitle;
+	@FindBy(xpath="//*[@data-auid='sectionTitle']") public   WebElement txtSectionTitle; //SID 27-August
 	@FindBy(xpath="//*[@data-auid='shopbycategorysection']//*[@data-auid='shopByCategory_0']") public WebElement secCategory_CLP;//9aug danush
 	//@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]/parent::div)[3]") 	public   WebElement productPLP1;/RKA 16 aug
 	@FindBy(xpath="(//*[@id='productCardListing']/*/a)[2]")public   WebElement productPLP1;
@@ -84,11 +84,14 @@ public class PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//*[@data-auid='facetsModalCTAS_M']/*[text()='Clear All']") public WebElement lnkClearAllMobile;
 	
 	//**SID*************************************************************************//
+	@FindBy(xpath="//*[@data-auid='drawer_Football Helmets_m']") public WebElement linkFootballHelmets;  //SID 28-August
+	@FindBy(xpath="//*[@data-auid='drawer_Football Helmets']") public WebElement linkFootballHelmets_Desktop;  //SID 28-August
+	
 	//KER-621 9-August-18
 		@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Ad Feature']") public WebElement clickAdFeature;
 		@FindBy(xpath="//*[@data-auid='drawer_Clearance']") public WebElement btnClearance;
 		@FindBy(xpath="//*[@data-auid='drawer_Online Only']") public WebElement btnOnline;
-		@FindBy(xpath="//*[@data-auid='drawer_New Low Price']") public WebElement btnPriceDrop;
+		@FindBy(xpath="//*[@data-auid='drawer_Price Drop']") public WebElement btnPriceDrop;
 		//@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Clearance')])[1]") public WebElement colorClearance;/RKA 17 aug
 		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Clearance') and contains(@class,'badge css-10lliur eggjmyf0')])[1]") public WebElement colorClearance;
 		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Online Only')])[1]") public WebElement colorOnline;

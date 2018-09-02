@@ -20,15 +20,15 @@ public class R1SP1_KER_2717_Web_SD extends CommonActionHelper {
 	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
 	PDP_PO pdp_po=PageFactory.initElements(driver, PDP_PO.class);
 	
-	
-	@Then("^user search \"(.*?)\" in search box$")
-	public void user_search_in_search_box(String arg1) throws Throwable {
-	   waitForPageLoad(driver);
-	   Thread.sleep(2000);
-		setInputText(pdp_po.searchbox, webPropHelper.getTestDataProperty("NotSoldInStore")); 
-		clickOnButton(pdp_po.searchMagnifyingBtm);
-		
-	}	
+//	SID 28-August
+//	@Then("^user search \"(.*?)\" in search box$")
+//	public void user_search_in_search_box(String arg1) throws Throwable {
+//	   waitForPageLoad(driver);
+//	   Thread.sleep(2000);
+//		setInputText(pdp_po.searchbox, webPropHelper.getTestDataProperty("NotSoldInStore")); 
+//		clickOnButton(pdp_po.searchMagnifyingBtm);
+//		
+//	}	
 	
 	@Then("^user verify not sold in store text on PDP$")
 	public void user_verify_not_sold_in_store_text_on_PDP() throws Throwable {

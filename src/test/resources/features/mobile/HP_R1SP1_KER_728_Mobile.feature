@@ -34,6 +34,7 @@ Feature: To Verify the functionality of "ASO - Logo" in the Global Header
   @Mobile @All    @Regression  @C-HP @KER-728  @ZYP_HP_K728-5620
   Scenario: As a user I want to navigate to Home page from L1
     Given user launches the browser and navigates to "ASO_HOME" page
+    Then User clicks on the burger menu
     Then User navigates to L1
     Then User is able to see the ASO_Logo
     Then User clicks on ASO logo

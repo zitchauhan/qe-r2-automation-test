@@ -1,10 +1,10 @@
 Feature: To verify "Related Categories" as links and are clickable & navigates to new landing page
 
-  @Regression @Mobile @C-PLP @All  @ZYP_PLP_K1992-5532 @KER-1992 @Rerun @1HR
+ @Regression @Mobile @C-PLP @All  @ZYP_PLP_K1992-5532 @KER-1992 @Rerun @1HR @RBeta
   Scenario: To verify "Related Categories" as links and are clickable & navigates to new landing page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
-    Then User navigates to L2 Mens clothing
+     Then User navigates PLP having related categories
     And user scroll till filter flyout
     Then User clicks on the filter flyout
     And user is able to see Related Categories in the filters

@@ -30,6 +30,7 @@ Feature: To Verify the functionality of "Weekly Ad Link" in the Global Header.
   @Mobile @All @Regression @C-HP  @KER-729  @ZYP_HP_K729-5627
   Scenario: Verify presence of weekly ad link in the header on L1 page Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
+   Then User clicks on the burger menu
     Then User navigates to L1
     Then User clicks on the burger menu
     And User should be able to see Weekly Ad link

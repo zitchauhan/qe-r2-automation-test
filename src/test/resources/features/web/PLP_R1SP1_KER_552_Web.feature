@@ -154,7 +154,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User closes the web application
 
 
-  @Regression @Web @All @KER-552 @ZYP_PLP_K552-6133 @C-PLP
+  @Regression @Web @All @KER-552 @ZYP_PLP_K552-6133 @C-PLP @RBeta
   Scenario Outline: Verify user is able to filter by price for search in Search Page
     Given user launches the browser and navigates to "ASO_HOME" page
     When user enters "SearchTerm" in the search box

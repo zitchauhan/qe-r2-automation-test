@@ -12,55 +12,54 @@ Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios
     And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then user sign out from the website
 
-  @AutomationSanityR1 @AS2 @WAST-03
-  Scenario: TC_3-Registered user checkout process
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then user should able to click on Signin button
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
-    When user enters "SearchTerm" in the search box
-    And User clicks on required product in L3 Page
-     When user click on Add to cart button
-    Then user click on checkout button
-    And user verify the shipping address
-    And user verify order summary
-    Then user click on continue shipping method button
-    And user verify shipping method and order summary
-    Then user click on continue payment button
-    And user enter the payment details
-    Then user should click on continue to review button
-    And user enter verified by visa password and click on submit button
-    And user verify order summary
-    And user should able to verify the Review shipping address
-    And user should able to verify the Review shipping method
-    And user should able to verify the billing address
-    And user should able to verify the payment method
-    Then user should click on Place Order Now button
-
-
-  @AutomationSanityR1 @AS2  @WAST-04 @1HR
-  Scenario: TC_4-Guest user checkout process
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then User navigates to L3 from home page
-    And User clicks on required product in L3 Page
-    Then user click on Add to cart button
-    Then user click on checkout button
-    Then user should verify the Guest checkout Page
-    Then user click on Checkout as Guest button
-    Then user should able to see shipping Address page
-    And user verify order summary
-    Then user should enter the shipping Address details
-    Then user click on continue to shipping method button
-    Then user click on continue checkout button
- 	And user verify order summary
-    And user enter the payment details
-    Then user should click on continue to review button
-    And user enter verified by visa password and click on submit button
-    And user verify order summary
-    And user should able to verify the Review shipping address
-    And user should able to verify the Review shipping method
-    And user should able to verify the billing address
-    And user should able to verify the payment method
-    Then user should click on Place Order Now button
+  #@AutomationSanityR1 @AS2 @WAST-03 @1HR
+  #Scenario: TC_3-Registered user checkout process
+    #Given user launches the browser and navigates to "ASO_HOME" page
+    #Then user should able to click on Signin button
+    #And user should be able to enter the signin details "Login_username" "Login_pwd"
+    #When user enters "SearchTerm" in the search box
+    #And User clicks on required product in L3 Page
+     #When user click on Add to cart button
+    #Then user click on checkout button
+    #And user verify the shipping address
+    #And user verify order summary
+    #Then user click on continue shipping method button
+    #And user verify shipping method and order summary
+    #Then user click on continue payment button
+    #And user enter the payment details
+    #Then user should click on continue to review button
+    #And user enter verified by visa password and click on submit button
+    #And user verify order summary
+    #And user should able to verify the Review shipping address
+    #And user should able to verify the Review shipping method
+    #And user should able to verify the billing address
+    #And user should able to verify the payment method
+    #Then user should click on Place Order Now button
+#
+#@AutomationSanityR1 @AS2 @WAST-04 @1HR
+  #Scenario: TC_4-Guest user checkout process
+    #Given user launches the browser and navigates to "ASO_HOME" page
+    #When user enters "SearchTerm" in the search box
+    #And User clicks on required product in L3 Page
+    #Then user click on Add to cart button
+    #Then user click on checkout button
+    #Then user should verify the Guest checkout Page
+    #Then user click on Checkout as Guest button
+    #Then user should able to see shipping Address page
+    #And user verify order summary
+    #Then user should enter the shipping Address details
+    #Then user click on continue to shipping method button
+    #Then user click on continue checkout button
+ #	And user verify order summary
+    #And user enter the payment details
+    #Then user should click on continue to review button
+    #And user enter verified by visa password and click on submit button
+    #And user verify order summary
+    #And user should able to verify the Review shipping address
+    #And user should able to verify the Review shipping method
+    #And user should able to verify the billing address
+    #And user should able to verify the payment method
+    #Then user should click on Place Order Now button
    
 
   @AutomationSanityR1  @AS1 @WAST-05 @1HR
@@ -312,4 +311,4 @@ Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios
     Given user launches the browser and navigates to "ASO_HOME" page
      Then User navigates to L3 from home page
      Then User click on Quick view button
-     Then verify addcart or see details button is displayed. 
+     Then verify addcart button is displayed 

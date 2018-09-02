@@ -21,7 +21,7 @@ Scenario: Verify user is able to see Academy as anchor for all breadcrumbs(ex. b
 	Then User click on the brand btn
 	And User verify that anchor is academy in breadcrumb 
 
-@Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-9098 @CR-SG @ZYP_PDP_K1921-3432
+@Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-9098 @CR-SG @ZYP_PDP_K1921-3432_1 @RBeta
 Scenario: Verify user is able to see breadcrumb for the subsequent store details page 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User click on the Find a Store button 
@@ -32,7 +32,7 @@ Scenario: Verify user is able to see breadcrumb for the subsequent store details
 	Then User click on see details 
 	Then User matches the order of breadcrumb 
 	
-@Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-6685 @CR-SG
+@Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-6685 @CR-SG @RBeta
 Scenario: Verify should be able to see breadcrumb from Search as: Academy> search -search term used-Desktop 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User enters required value in search box to navigate to search Results page 

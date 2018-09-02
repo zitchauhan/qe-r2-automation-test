@@ -10,6 +10,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -72,11 +73,11 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//div[text()='Not Sold Online'] | //*[@data-auid='PDP_IventoryMessage']") 
 	public WebElement txtNotsoldonline;//9aug danush
 	//Start 28July2018
-	//@FindBy(xpath="(//*[contains(@data-auid, 'quickview')]//preceding-sibling::img)[1]")  public  WebElement pdpImage;/RKA 18 july
-	@FindBy(xpath="(//*[contains(@class,'c-price__sub')])[1]/../parent::*/preceding-sibling::*")public  WebElement pdpImage;
+	@FindBy(xpath="(//*[contains(@data-auid, 'quickview')]//preceding-sibling::img)[1]")  public  WebElement pdpImage; //SID 27-August
+//	@FindBy(xpath="(//*[contains(@class,'c-price__sub')])[1]/../parent::*/preceding-sibling::*")public  WebElement pdpImage;  //SID 27-August
 	
-	//@FindBy(xpath="(//*[contains(@data-auid, 'quickview')])[1]")  public  WebElement btnQuickView;RKA 15 aug
-	@FindBy(xpath="(//*[contains(@class,'c-price__sub')])[1]/../parent::*/preceding-sibling::*//button") public  WebElement btnQuickView;
+	@FindBy(xpath="(//*[contains(@data-auid, 'quickview')])[1]")  public  WebElement btnQuickView; //SID 27-August
+//	@FindBy(xpath="(//*[contains(@class,'c-price__sub')])[1]/../parent::*/preceding-sibling::*//button") public  WebElement btnQuickView; //SID 27-August
 	@FindBy(xpath="//*[@data-auid='btnundefined']") public  WebElement btnSeeDetails;
 
 	//KER-714 Start CR-AKK
@@ -122,9 +123,9 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='productCard_14402']") public WebElement selectMagellanOutdoorsMenNeopreneWadingBoots ;
 	@FindBy(xpath="//*[@data-auid='PDP_QC_INC']/preceding-sibling::*[1]/*")public WebElement quantityInput;
 	@FindBy(xpath="//*[contains(text(),'limited to 4 per order')]")public WebElement MsgSelectedItemLimited;
-	@FindBy(xpath="//*[@data-auid='productCard_3486078']")public WebElement selectSCCY_CPX_2CB9mmPistol;
+	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[1]")public WebElement selectSCCY_CPX_2CB9mmPistol;
 	//@FindBy(xpath="//*[@data-auid='PDP_OnlineMessage']")public WebElement MsgPDP_OnlineMessage;/RKA 15 aug
-	@FindBy(xpath="(//*[contains(text(),'ONLY SOLD IN STORES')])[1]")public WebElement MsgPDP_OnlineMessage;
+	@FindBy(xpath="//*[@data-auid='PDP_IventoryMessage']")public WebElement MsgPDP_OnlineMessage;
 	@FindBy(xpath="//*[@data-auid='productCard_5242504']")public WebElement selectNikeToddlerGirlDNAShirtandShortsSet;
 	//@FindBy(xpath="//*[@data-auid='PDP_getNotifiedBackInStock']/../../*[1]")public WebElement  MsgOutOFStock;/RKA 18 aug
 		@FindBy(xpath="//*[@data-auid='PDP_IventoryMessage']")public WebElement  MsgOutOFStock;
@@ -138,12 +139,12 @@ public class PDP_PO extends CommonActionHelper
 	//KER-3455 @RKA
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[1]") public WebElement selectFirstItem;
 	@FindBy(xpath="//*[@data-auid='PDP_Size_heading']/following-sibling::*/*[2]") public WebElement Btm3Toddler;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[2]/*[1]/*[2]/*[1]")public WebElement msgItemAddedSuccessfully;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[2]/*[1]/*[2]/*[1]/following-sibling::*[3]/*")public WebElement msgBundleProductPRice;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[2]/*[1]/*[2]/*[1]/following-sibling::*[3]/following-sibling::*/*[2]") public WebElement btmViewcartATCnotificcation;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[2]/*[1]/*[2]/*[1]/following-sibling::*[3]/following-sibling::*/*[1]") public WebElement btmCheckOutATCnotification;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[2]/*[1]/*[1]")public WebElement  imgproductATCnotification;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[2]/*[1]/*[1]/following-sibling::*/*[2]") public WebElement producrNameATCnotification;
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[2]/*[1]")public WebElement msgItemAddedSuccessfully;
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[2]/*[1]/following-sibling::*[3]/*")public WebElement msgBundleProductPRice;
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[2]/*[1]/following-sibling::*[3]/following-sibling::*/*[2]") public WebElement btmViewcartATCnotificcation;
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[2]/*[1]/following-sibling::*[3]/following-sibling::*/*[1]") public WebElement btmCheckOutATCnotification;
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[1]")public WebElement  imgproductATCnotification;
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[1]/following-sibling::*/*[2]") public WebElement producrNameATCnotification;
 
 
 
@@ -188,7 +189,7 @@ public class PDP_PO extends CommonActionHelper
 	// **SID*************************************************************************************************//
 	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']//img)[1]") public WebElement imgSrcSKUAttribute ;
 	@FindBy(xpath="(//*[contains(@class,'ReactModal__Overlay ReactModal__Overlay')]//img)[1]") public WebElement imgAddToCartPopup ;
-	@FindBy(xpath="(//*[@data-auid='PDP_ProductImage_m']//img)[1]") public WebElement imgproductPDPSRCMobile;
+	@FindBy(xpath="(//*[@data-auid='PDP_ProductImage_m']//img)[4]") public WebElement imgproductPDPSRCMobile;  //SID 28-August
 
 
 	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']//*[@alt='Hover/Click to enlarge'])[1]") public WebElement imgClickToZoom;
@@ -247,7 +248,7 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath ="//*[@id='bv-textarea-field-questionsummary']") public WebElement inputQuestionSummary;
 	@FindBy(xpath ="//input[@id='bv-text-field-usernickname']") public WebElement inputNickname;
 	//@FindBy(xpath ="//input[@id='bv-email-field-hostedauthentication_authenticationemail']") public WebElement inputEmail;
-	@FindBy(xpath ="//input[@id='bv-checkbox-questions-termsAndConditions']") public WebElement btnChecbox;
+	@FindBy(xpath ="//input[@name='agreedtotermsandconditions']") public WebElement btnChecbox; //SID 24-August
 	@FindBy(xpath ="//button[text()='Post Question']") public WebElement btnPostQuesdtion;
 	@FindBy(xpath ="//button[@aria-label='Yes, answer by Anonymous is helpful.']") public WebElement btnYes;
 	@FindBy(xpath ="//button[@aria-label='No, answer by Anonymous is not helpful.']") public WebElement btnNo;
@@ -288,8 +289,9 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath="(//*[contains(text(),'Reviews')])[4]/../following-sibling::*/*[2]")public WebElement reviewPaginationForward;
 
 	//KER-1950
-	@FindBy(xpath="(//*[contains(text(),'Reviews')])[3]/parent::*/parent::*/parent::*/following-sibling::*[2]/*/*[2]/*[1]/*/*[1]/*[2]/*[1]/*[2]/*/*/*[1]/*/*") public WebElement mouseHoverOnReviewName;
-
+	@FindBy(xpath="((//*[contains(text(),'Reviews')])[3]/parent::*/parent::*/parent::*/following-sibling::*[2]/*/*[2]/*[1]/*/*[1]/*[2]/*[1]/*[2]/*/*/*[1]/*/*)[1]") public WebElement mouseHoverOnReviewName;
+	@FindBy(xpath = "//*[@role='tooltip']")	public WebElement reviewFlyout;  //SID 28-August
+	
 	// KER-3728 Start CR-AKK
 	@FindBy(xpath = "//*[@data-auid='level1Category-SHOP']")
 	public WebElement btnShopCategory1;
@@ -297,11 +299,13 @@ public class PDP_PO extends CommonActionHelper
 	public WebElement btnSportsCategory;
 	@FindBy(xpath = "//*[@data-auid='level3Category-Baseball']//*[@data-auid='level4Category-Helmets']")
 	public WebElement btnHelmetsCategory;
-	@FindBy(xpath = "(//a[contains(@data-auid, 'productCard_')])[15]")
-	public WebElement imgHelmetSKUCategory;
+	@FindBy(xpath = "//*[@data-auid='level3Category-Football']//*[@data-auid='level4Category-Helmets & Masks']")
+	public WebElement btnFootballHelmetsCategory;
+	@FindBy(xpath = "//*[text()='Schutt Youth DNA Recruit Hybrid Football Helmet with ROPO Facemask']")
+	public WebElement imgHelmetSKUCategory;  //SID 28-August
 	@FindBy(xpath = "//h2[text()='Schutt Youth DNA Recruit Hybrid Football Helmet with ROPO Facemask']")
 	public WebElement txtProdcutDetails;
-	@FindBy(xpath = "//span[text()='DETAILS & SPECS']")
+	@FindBy(xpath = "(//*[contains(text(),'DETAILS & SPECS')])[1]")
 	public WebElement txtDetails;
 	@FindBy(xpath = "//button[@data-auid='Detais and Specs_m']")
 	public WebElement txtDetails_M;
@@ -313,12 +317,26 @@ public class PDP_PO extends CommonActionHelper
 	public WebElement btnSportsCategory_M;
 	@FindBy(xpath = "//a[@data-auid='level3Category-Football_m']")
 	public WebElement btnFootballCategory_M;
+	@FindBy(xpath = "//*[@data-auid='level4Category-Hoops_m']")
+	public WebElement plp_BasketballHoopsCategory_M;  //SID 28-August
+	@FindBy(xpath = "//*[@data-auid='level3Category-Basketball_m']")
+	public WebElement btnBasketballCategory_M;  //SID 28-August
+	@FindBy(xpath = "//*[@data-auid='drawer_Inground Basketball Hoops_m']")
+	public WebElement btnIngroundHoops_M; //SID 28-August
+	@FindBy(xpath = "//*[text()='48-in Spalding Arena Series Glass In-Ground Basketball Hoop']")
+	public WebElement clickNoDiffProduct; //SID 28-August
+	
+	
+	
+	
 	@FindBy(xpath = "//a[@data-auid='level4Category-Helmets & Masks_m']")
 	public WebElement HelmetsCategory_M;
 	@FindBy(xpath = "(//button[contains(@data-auid, 'swatchButton-image-')])[1]")
 	public WebElement imgSubHelmetsCategory;
 
 	//KER-3344 Start CR-AKK
+	//Commented by SID 28-August
+	//@FindBy(xpath="//*[@data-auid='PDP_ProductName']") 
 	@FindBy(xpath = "//div[contains(text(), 'Schutt Youth Recruit Hybrid Helmet - Shell Only')]")
 	public WebElement txtBundle;
 	@FindBy(xpath ="//div//button[contains(@data-auid, 'swatchButton-image-')][2]")
@@ -345,7 +363,7 @@ public class PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@name='emailId']")public WebElement emailOFgetNotified;
 	@FindBy(xpath="//*[@data-auid='btnemail-signup-button']")public WebElement btnSubmitGetNotification;
 	@FindBy(xpath="//*[contains(text(),'RE ALL SET')]")public WebElement txtYouAreAllSet;
-	@FindBy(xpath="//*[@data-auid='PDP_Size_heading']/following-sibling::*/*[1]")public WebElement clickOtherSize;
+	@FindBy(xpath="(//*[contains(@data-auid,'Size')]//*[contains(@data-auid,'swatchButton')])[3]")public WebElement clickOtherSize; //SID 28-August
 	//KER-2334 End
 	
 	// KER-1934 Start
@@ -370,7 +388,7 @@ public class PDP_PO extends CommonActionHelper
 	
 	
 	
-	
+	//SID 28-August
 	public void navigateToMultipleSKU() throws Exception {
 		Thread.sleep(2000);
 		assertTrue(clickOnButton(btnShopCategory1));
@@ -378,13 +396,14 @@ public class PDP_PO extends CommonActionHelper
 		Actions hover = new Actions(getDriver());
 		hover.moveToElement(btnSportsCategory).build().perform();
 		Thread.sleep(1000);
-		hover.moveToElement(btnHelmetsCategory).build().perform();
-		clickOnLink(btnHelmetsCategory);
+		hover.moveToElement(btnFootballHelmetsCategory).build().perform();
+		clickOnLink(btnFootballHelmetsCategory);
 		Thread.sleep(3000);
 	}
 
+	//SID 28-AUgust
 	public void clickOnImgSkuItem() throws Exception {
-		Thread.sleep(3000);
+		scrollPageToWebElement(imgHelmetSKUCategory);
 		Actions hover = new Actions(getDriver());
 		hover.moveToElement(imgHelmetSKUCategory).build().perform();
 		assertTrue(clickOnButton(imgHelmetSKUCategory));
@@ -424,47 +443,85 @@ public class PDP_PO extends CommonActionHelper
 		//Thread.sleep(5000);
 	}
 
-	public void verifyAddcartOrSeeDetailsButton() throws Exception {
-		if(isDisplayed(btnSeeDetails))
-		{
-			logger.debug("our history link is not displayed");
-		}
-		else
-		{
-			isDisplayed(btnAddToCart);
-		}
-	}
+	//Commented by SID 27-August
+//	public void verifyAddcartOrSeeDetailsButton() throws Exception {
+//		if(isDisplayed(btnSeeDetails))
+//		{
+//			logger.debug("our history link is not displayed");
+//		}
+//		else
+//		{
+//			isDisplayed(btnAddToCart);
+//		}
+//	}
 	//End 28July2018
-	public PDP_PO(WebDriver webDriver) {
+	public PDP_PO(WebDriver webDriver) 
+	{
 		super();
 	}
 
 
-	public boolean addToCartAvailability() throws InterruptedException{
+	public boolean addToCartAvailability() throws InterruptedException
+	{
 		boolean isAddtoCart= false;
-		try{
+		try
+		{
 			waitForElement(selectedSwatchRepresentative);
 			isDisplayed(selectedSwatchRepresentative);
 
-			if (isDisplayed(txtNotifiedBack)) {
-				for(WebElement colorElement: colorsAvailable){
+			if (btnAddToCart.isDisplayed()) 
+			{
+				isAddtoCart=true;
+				
+			}
+			else
+			{
+				
+				for(WebElement colorElement: colorsAvailable)
+				{
 					clickOnButton(colorElement);
-					for(WebElement sizeElement:sizeAvailable){
+					for(WebElement sizeElement:sizeAvailable)
+					{
 						logger.debug("Product Size Txt::"+sizeElement.getText());
 						clickOnButton(sizeElement);
-						if(isDisplayed(btnAddToCart)){
+						if(isDisplayed(btnAddToCart))
+						{
 							isAddtoCart=true;
 							break;
 						}
 					}
-					if(isAddtoCart){
+					if(isAddtoCart)
+					{
 						break;
 					}
 				}
-			}else if(isDisplayed(btnAddToCart)){
-				isAddtoCart=true;
+				
 			}
-		}catch (Exception e) {
+		}
+		catch (NoSuchElementException e) 
+		{
+			for(WebElement colorElement: colorsAvailable)
+			{
+				clickOnButton(colorElement);
+				for(WebElement sizeElement:sizeAvailable)
+				{
+					logger.debug("Product Size Txt::"+sizeElement.getText());
+					clickOnButton(sizeElement);
+					if(isDisplayed(btnAddToCart))
+					{
+						isAddtoCart=true;
+						break;
+					}
+				}
+				if(isAddtoCart)
+				{
+					break;
+				}
+			}
+			//logger.error("addToCartAvailability exception msg::"+e.getMessage());
+		}
+		catch (Exception e) 
+		{
 			logger.error("addToCartAvailability exception msg::"+e.getMessage());
 		}
 		logger.debug("Add to Cart buttion is visable::"+isAddtoCart);
@@ -473,9 +530,11 @@ public class PDP_PO extends CommonActionHelper
 
 
 	// SID 05-August-2018
-	public void altColorMatch() throws InterruptedException {
+	public void altColorMatch() throws InterruptedException 
+	{
 		int colorCount = 0;
-		for (WebElement colorAvailablePLP : colorsAvailablePLP) {
+		for (WebElement colorAvailablePLP : colorsAvailablePLP) 
+		{
 			String altcolorAvailable = colorAvailablePLP.getText();
 			String[] altColorNumber = altcolorAvailable.split(" ");
 			try {
@@ -513,41 +572,52 @@ public class PDP_PO extends CommonActionHelper
 
 	}
 
-	//08-Aug Anuj  KER-1920
+	//08-Aug Anuj  KER-1920 //Modified SID 28-August
 	public void addToCartProductValidationDesktop() throws InterruptedException {
 	
 		addToCartAvailability();
 		String productImage = imgSrcSKUAttribute.getAttribute("src");
+		String[] productImageLink = productImage.split("\\?");  //SID
 		String productPrice = getText( txtPdpprice);
 		String productTitle = getText( txtProductTitle);
+		String filterProductTitle= productTitle.replace("'", "");//SID
+		String[] breakName = filterProductTitle.split(" ");//SID
 		assertTrue(clickOnButton(btnAddToCart));
 		Thread.sleep(3000);
-		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[text()=\""+productTitle+"\"])[4]"));
-		WebElement actualPriceInAddToCart = driver.findElement(By.xpath("(//*[text()='"+productPrice+"'])[3]"));
+		List<WebElement> countWebelement = driver.findElements(By.xpath("(//*[contains(text(),'"+breakName[0]+"')])")); //SID
+		int size =countWebelement.size();//SID
+		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[contains(text(),'"+breakName[0]+"')])["+size+"]"));//SID
+		String filterActualTitleInAddToCart = actualTitleInAddToCart.getText().replace("'", "");//SID
+		WebElement actualPriceInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),'"+productPrice+"')]"));
 		String productImageAddToCartPopup = imgAddToCartPopup.getAttribute("src");
-
-		assertTrue(isDisplayed(actualTitleInAddToCart));
-		assertTrue(isDisplayed(actualPriceInAddToCart));
-		assertTrue(productImage.contains(productImageAddToCartPopup)); 
+		String[] productImageAddToCartPopupLink = productImageAddToCartPopup.split("\\?");//SID
+		assertEquals(filterProductTitle, filterActualTitleInAddToCart);//SID
+		assertEquals(productPrice, actualPriceInAddToCart.getText());//SID
+		assertTrue(productImageLink[0].contains(productImageAddToCartPopupLink[0])); //SID
 	}
 
-	//08-Aug Anuj  KER-1920
+	//08-Aug Anuj  KER-1920  //Modified SID 28-August
 	public void addToCartProductValidationMobile() throws InterruptedException {
 
 		addToCartAvailability();
 		String productImage = imgproductPDPSRCMobile.getAttribute("src");
+		String[] productImageLink = productImage.split("\\?");  //SID
 		String productPrice = getText( txtPdpprice);
 		String productTitle = getText( txtProductTitle);
-	
+		String filterProductTitle= productTitle.replace("'", "");//SID
+		String[] breakName = filterProductTitle.split(" ");//SID
 		assertTrue(clickOnButton(btnAddToCart));
 		Thread.sleep(3000);
-		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[contains(text(),\""+productTitle+"\")])[5]"));
-		WebElement actualPriceInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),"+productPrice+")]"));
+		List<WebElement> countWebelement = driver.findElements(By.xpath("(//*[contains(text(),'"+breakName[0]+"')])")); //SID
+		int size =countWebelement.size();//SID
+		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[contains(text(),'"+breakName[0]+"')])["+size+"]"));//SID
+		String filterActualTitleInAddToCart = actualTitleInAddToCart.getText().replace("'", "");//SID
+		WebElement actualPriceInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),'"+productPrice+"')]"));
 		String productImageAddToCartPopup = imgAddToCartPopup.getAttribute("src");
-
-		assertTrue(isDisplayed(actualTitleInAddToCart));
-		assertTrue(isDisplayed(actualPriceInAddToCart));
-		assertTrue(productImage.contains(productImageAddToCartPopup)); 
+		String[] productImageAddToCartPopupLink = productImageAddToCartPopup.split("\\?");//SID
+		assertEquals(filterProductTitle, filterActualTitleInAddToCart);//SID
+		assertEquals(productPrice, actualPriceInAddToCart.getText());//SID
+		assertTrue(productImageLink[0].contains(productImageAddToCartPopupLink[0])); //SID
 	}
 
 	// SID 7-August-18
@@ -614,7 +684,7 @@ public class PDP_PO extends CommonActionHelper
 		if(isDisplayed(pdpRating) && isDisplayed(pdpPromoMessage) && isDisplayed(pdpEybrow)) {
 			flag=true;
 		}
-		else if(isDisplayed(pdpRating) && isDisplayed(pdpPromoMessage)) {
+		else if(isDisplayed(pdpRating) && isDisplayed(pdpEybrow)) {
 			logger.debug("*************Promo Message not Found***************");
 			flag=false;
 		}
@@ -703,6 +773,15 @@ public class PDP_PO extends CommonActionHelper
 	 
 	 
 	 
+	 //SID 28-August
+	 public void navigateToNoDiffPLP() {
+		 assertTrue(clickOnButton(btnSportsCategory_M));
+		 waitForElement(btnBasketballCategory_M).isDisplayed();
+			assertTrue(clickOnButton(btnBasketballCategory_M));
+			waitForElement(plp_BasketballHoopsCategory_M).isDisplayed();
+			assertTrue(clickOnButton(plp_BasketballHoopsCategory_M));
+			
+	 }
 	 
 	 
 }

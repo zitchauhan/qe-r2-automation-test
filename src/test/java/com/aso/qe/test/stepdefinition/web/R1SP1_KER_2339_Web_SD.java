@@ -23,10 +23,16 @@ public class R1SP1_KER_2339_Web_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(globalElementHeader.imgMensShortShirt));
 	}
 
-	
-	
-
-
+	@Then("^User click on the breadcrumb last link$")
+	public void user_click_on_the_breadcrumb_last_link() throws Throwable {
+		driver.navigate().refresh();
+		waitForPageLoad(driver);
+		driver.navigate().refresh();
+		waitForPageLoad(driver);
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(globalElementHeader.lnkBreadcrumbLast));
+		}
+	}
 
 	@Then("^User click on the breadcrumb link for mobile$")
 	public void user_click_on_the_breadcrumb_link_for_mobile() throws Throwable {
@@ -247,16 +253,5 @@ public class R1SP1_KER_2339_Web_SD extends CommonActionHelper {
 		assertEquals(globalElementHeader.academyBreadcrumb.getText().toLowerCase(), "academy");
 		assertEquals(globalElementHeader.storeLocatorBreadcrumb.getText().toLowerCase(), "store locator");
 	}
-	
-	@Then("^User click on the breadcrumb last link$")
-	public void user_click_on_the_breadcrumb_last_link() throws Throwable {
-		driver.navigate().refresh();
-		waitForPageLoad(driver);
-		driver.navigate().refresh();
-		waitForPageLoad(driver);
-		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(clickOnButton(globalElementHeader.lnkBreadcrumbLast));
-		}
-	} 
 
 }

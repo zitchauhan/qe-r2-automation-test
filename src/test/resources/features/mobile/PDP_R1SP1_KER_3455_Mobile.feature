@@ -65,7 +65,7 @@ Feature: [Mobile]Bundles - Add to Cart Notification
     Then User Verify view cart functionality in ATC noticfication
     Then User Verify checkout button in ATC notification
 
-  @Mobile @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-10065 @CR-RKA @1HR
+  @Mobile @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-10065 @CR-RKA @1HR @RBeta
   Scenario Outline: Verify the Limited Quantity Messaging in Add to Cart Notification for Bundles
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User to click on search button after putting data"<data>"
@@ -85,8 +85,8 @@ Feature: [Mobile]Bundles - Add to Cart Notification
     Then User select the avialable item and click on add to cart
     Then User Verify bundle image in ATC notification
 
-  #    4806
-  @Mobile @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-10067 @CR-RKA
+ 
+  @Mobile @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-10067 @CR-RKA @RBeta
   Scenario: Verify the Bundle Product Name in ATC notification
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

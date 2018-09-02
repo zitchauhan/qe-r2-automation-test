@@ -40,8 +40,8 @@ public class R1SP1_KER_615_Web_SD extends CommonActionHelper{
 			assertTrue(clickOnButton(PLP_PO.drpdwnSortByScrollMobile));
 			Thread.sleep(1000);
 			for(String str: object) {
-				Thread.sleep(300);
-				String xpath ="//div[@data-auid='sort_by_M']//option[contains(text(),'"+str+"')]"; 
+				Thread.sleep(3000);
+				String xpath ="//div[@data-auid='sort_by_m']//option[contains(text(),'"+str+"')]"; 
 				assertTrue(isDisplayed(getfindElementByXPath(xpath)));
 			}
 		}else {
