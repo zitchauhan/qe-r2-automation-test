@@ -5,16 +5,16 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.PLP_PO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PLP_PO;
 
 import cucumber.api.java.en.Then;
 
 public class R1_PLP_K4120_SD extends CommonActionHelper{
 	
 	
-	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
-	PLP_PO plp_po=PageFactory.initElements(driver, PLP_PO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+	R1_PLP_PO plp_po=PageFactory.initElements(driver, R1_PLP_PO.class);
 	@Then("^User see the promotional message if it is available in PLP$")
 	public void user_see_the_promotional_message_if_it_is_available_in_PLP() throws Throwable {
 		System.out.println("IF THIS METHOD/TEST CASE FAIL THEN PROMOTIONAL CODE IS NOT AVAILABLE ON ITEM ");

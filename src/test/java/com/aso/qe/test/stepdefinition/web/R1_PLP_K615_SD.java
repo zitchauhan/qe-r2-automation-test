@@ -8,15 +8,15 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.PLP_PO;
-import com.aso.qe.test.pageobject.SearchProductPO;
+import com.aso.qe.test.pageobject.R1_PLP_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
 import cucumber.api.java.en.Then;
 
 public class R1_PLP_K615_SD extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(R1_PLP_K615_SD.class);
-	SearchProductPO searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);
-	PLP_PO PLP_PO = PageFactory.initElements(getDriver(), PLP_PO.class);
+	R1_SearchProduct_PO searchProductPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
+	R1_PLP_PO PLP_PO = PageFactory.initElements(getDriver(), R1_PLP_PO.class);
 
 	@Then("^user is able to Best selling as a default sort option$")
 	public void user_is_able_to_Best_selling_as_a_default_sort_option() throws Throwable {

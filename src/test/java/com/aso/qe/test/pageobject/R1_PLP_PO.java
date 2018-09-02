@@ -11,9 +11,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import com.aso.qe.framework.common.CommonActionHelper;
 
-public class PLP_PO extends CommonActionHelper{
+public class R1_PLP_PO extends CommonActionHelper{
 
-	private static final Logger logger = Logger.getLogger(PLP_PO.class);
+	private static final Logger logger = Logger.getLogger(R1_PLP_PO.class);
 	@FindBy(xpath="//*[@data-auid='sort_by']")public   WebElement drpdwnSortBy;
 	@FindBy(xpath="//*[@data-auid='sort_by']")public   WebElement searchdrpdwnSortBy;
 	@FindBy(xpath="//*[@data-auid='sort_by_m']//i")public   WebElement drpdwnSortByMobile;
@@ -161,7 +161,7 @@ public class PLP_PO extends CommonActionHelper{
 	}
 	//KER-5271 End CR-AKK
 	
-	public PLP_PO(WebDriver webDriver) {
+	public R1_PLP_PO(WebDriver webDriver) {
 		super();
 		
 	}

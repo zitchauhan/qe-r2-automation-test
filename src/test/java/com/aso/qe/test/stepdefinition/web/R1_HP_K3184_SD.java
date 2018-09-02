@@ -5,16 +5,16 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.HomePagePOM;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_HomePage_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
 public class R1_HP_K3184_SD extends CommonActionHelper{
 
-	GlobalElementHeader_HomePO  geh_po= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
-	HomePagePOM hp_p=PageFactory.initElements(driver, HomePagePOM.class);
+	R1_GlobalElementHeader_Home_PO  geh_po= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+	R1_HomePage_PO hp_p=PageFactory.initElements(driver, R1_HomePage_PO.class);
 	
 	
 	@Then("^User click on shop Gift Cards Link and navigate to Gift Card LAnding page$")

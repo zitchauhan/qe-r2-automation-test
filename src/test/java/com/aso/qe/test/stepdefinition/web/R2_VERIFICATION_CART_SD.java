@@ -205,13 +205,16 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 				
 				
 				
-					else {
-					logger.error("Element " + currentElement + " is not found.");
-					throw new NullArgumentException("Element <" + currentElement + "> is not found.");
-				}
+					else 
+					{
+						logger.error("Element " + currentElement + " is not found.");
+						throw new NullArgumentException("Element <" + currentElement + "> is not found.");
+					}
 
 			}
-		} catch (NullPointerException e) {
+		} 
+		catch (NullPointerException e) 
+		{
 			logger.error("This test-step has been failed");
 		}
 	}

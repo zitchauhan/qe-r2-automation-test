@@ -8,12 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
-import com.aso.qe.test.pageobject.PDP_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
 
 import cucumber.api.java.en.Then;
 
 public class R1_PDP_K1921_SD extends CommonActionHelper{
-	PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), PDP_PO.class);
+	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	private static final Logger logger = Logger.getLogger(R1_PDP_K1921_SD.class);
 	
 	@Then("^user search the data in search box\"(.*?)\"$")

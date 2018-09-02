@@ -10,17 +10,17 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.web.helpers.ASOBrokenURLsLinks;
-import com.aso.qe.test.pageobject.FindStorePO;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.SearchProductPO;
+import com.aso.qe.test.pageobject.R1_FindStore_PO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class Common_Web_SD extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(Common_Web_SD.class);
-	public FindStorePO findStorePO;
-	public static GlobalElementHeader_HomePO globalElementHeader;
-	public static SearchProductPO searchProductPO;
+	public R1_FindStore_PO findStorePO;
+	public static R1_GlobalElementHeader_Home_PO globalElementHeader;
+	public static R1_SearchProduct_PO searchProductPO;
 
 	
 
@@ -38,9 +38,9 @@ public class Common_Web_SD extends CommonActionHelper{
 		openBaseURL(url);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		waitForPageLoad(driver);
-		findStorePO= PageFactory.initElements(driver, FindStorePO.class);
-		globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
-		searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);
+		findStorePO= PageFactory.initElements(driver, R1_FindStore_PO.class);
+		globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+		searchProductPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
 	}
 
 	@Then("^User closes the web application$")

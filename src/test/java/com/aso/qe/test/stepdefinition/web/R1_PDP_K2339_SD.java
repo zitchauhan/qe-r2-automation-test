@@ -7,16 +7,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.HomePagePOM;
-import com.aso.qe.test.pageobject.SearchProductPO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_HomePage_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
 public class R1_PDP_K2339_SD extends CommonActionHelper {
-	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
-	public HomePagePOM homepagePOM = PageFactory.initElements(driver, HomePagePOM.class);
-	public SearchProductPO searchProductPO = PageFactory.initElements(driver, SearchProductPO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+	public R1_HomePage_PO homepagePOM = PageFactory.initElements(driver, R1_HomePage_PO.class);
+	public R1_SearchProduct_PO searchProductPO = PageFactory.initElements(driver, R1_SearchProduct_PO.class);
 
 	@Then("^User click on the product image$")
 	public void user_click_on_the_productimage() throws Throwable {
@@ -228,7 +228,7 @@ public class R1_PDP_K2339_SD extends CommonActionHelper {
 
 	@Then("^user enters required value in search box mobile and click on search$")
 	public void user_enters_required_value_in_search_box_mobile_and_click_on_search() throws Throwable {
-		waitForElement(SearchProductPO.searchTextBoxMobile);
+		waitForElement(R1_SearchProduct_PO.searchTextBoxMobile);
 		globalElementHeader.txtSearchBox_mobile.click();
 		Thread.sleep(3000);
 		globalElementHeader.txtSearchBox_mobile.sendKeys("Pants");

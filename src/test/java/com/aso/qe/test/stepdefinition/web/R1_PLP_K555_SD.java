@@ -6,21 +6,21 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.SearchProductPO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class R1_PLP_K555_SD extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(R1_PLP_K555_SD.class);
-	SearchProductPO searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);;
+	R1_SearchProduct_PO searchProductPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);;
 
 
 	@When("^User enters in Required_Product with \"(.*?)\" and click on Go button$")
 	public void user_enters_in_Required_Product_with_and_click_on_Go_button(String arg1) throws Throwable {
 		logger.debug("Search Text ::"+arg1);
-		clickOnButton(SearchProductPO.searchTextBox);
-		setInputTextWithEnterKey(SearchProductPO.searchTextBox, arg1);
+		clickOnButton(R1_SearchProduct_PO.searchTextBox);
+		setInputTextWithEnterKey(R1_SearchProduct_PO.searchTextBox, arg1);
 		//clickOnButton(searchProductPO.submitGOBtn);
 
 	}

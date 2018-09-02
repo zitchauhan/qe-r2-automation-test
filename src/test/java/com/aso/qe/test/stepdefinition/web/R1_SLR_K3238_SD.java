@@ -7,19 +7,19 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.PDP_PO;
-import com.aso.qe.test.pageobject.PLP_PO;
-import com.aso.qe.test.pageobject.SearchProductPO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_PLP_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class R1_SLR_K3238_SD extends CommonActionHelper{
-	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
-	public SearchProductPO searchProductPO = PageFactory.initElements(driver, SearchProductPO.class);
-	public PLP_PO plp_po = PageFactory.initElements(driver, PLP_PO.class);
-	public PDP_PO pdp_po = PageFactory.initElements(driver, PDP_PO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+	public R1_SearchProduct_PO searchProductPO = PageFactory.initElements(driver, R1_SearchProduct_PO.class);
+	public R1_PLP_PO plp_po = PageFactory.initElements(driver, R1_PLP_PO.class);
+	public R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
 	String shootingName =  "";
 	String wordContains="Shot";
 	String offCode="?affcode=42";

@@ -9,17 +9,17 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.SIT_PO;
-import com.aso.qe.test.pageobject.SearchProductPO;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
+import com.aso.qe.test.pageobject.R1_SIT_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class SD_SIT extends CommonActionHelper {
-	private static final Logger logger = Logger.getLogger(SD_SIT.class);
-	SIT_PO sit_po = PageFactory.initElements(driver, SIT_PO.class);
-	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+public class R1_SD_SIT extends CommonActionHelper {
+	private static final Logger logger = Logger.getLogger(R1_SD_SIT.class);
+	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	// SD_SIT_AddtoWishList Addsit_po= new SD_SIT_AddtoWishList();
 
 	@Then("^user click on Add to Wish List/Sign In$")
@@ -484,8 +484,8 @@ public class SD_SIT extends CommonActionHelper {
 	@When("^User enters in Required_Product with search term and click on Go button$")
 	public void user_enters_in_Required_Product_with_search_term_and_click_on_Go_button() throws Throwable {
 		
-		clickOnButton(SearchProductPO.searchTextBox);
-		setInputTextWithEnterKey(SearchProductPO.searchTextBox, webPropHelper.getTestDataProperty("Not_Sold_in_Store"));
+		clickOnButton(R1_SearchProduct_PO.searchTextBox);
+		setInputTextWithEnterKey(R1_SearchProduct_PO.searchTextBox, webPropHelper.getTestDataProperty("Not_Sold_in_Store"));
 	}
 
 	@Then("^user should verify MyAccount page$")

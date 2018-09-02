@@ -12,8 +12,8 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.stepdefinition.web.Common_Web_SD;
 
-public class SearchProductPO extends CommonActionHelper{
-	private static final Logger logger = Logger.getLogger(SearchProductPO.class);
+public class R1_SearchProduct_PO extends CommonActionHelper{
+	private static final Logger logger = Logger.getLogger(R1_SearchProduct_PO.class);
 	public static int productDisplayCount;
 	@FindBy(xpath="//*[@class='col-4 o-copy__16bold']") public static WebElement itemscount;
 	@FindBy(xpath="//*[@data-auid='search-input']") public static WebElement searchTextBox;

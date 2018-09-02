@@ -4,15 +4,15 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.FindStorePO;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
+import com.aso.qe.test.pageobject.R1_FindStore_PO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 
 import cucumber.api.java.en.Then;
 
 public class R1_HP_K721_SD<globalElementHeader> extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(R1_HP_K721_SD.class);
-	public FindStorePO findStorePO= PageFactory.initElements(driver, FindStorePO.class);
-	public GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+	public R1_FindStore_PO findStorePO= PageFactory.initElements(driver, R1_FindStore_PO.class);
+	public R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 
 
 

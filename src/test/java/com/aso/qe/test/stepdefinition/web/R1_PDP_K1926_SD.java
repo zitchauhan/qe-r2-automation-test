@@ -5,10 +5,10 @@ import static org.junit.Assert.assertEquals;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.PDP_PO;
-import com.aso.qe.test.pageobject.PLP_PO;
-import com.aso.qe.test.pageobject.SearchProductPO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_PLP_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -17,9 +17,9 @@ import cucumber.api.java.en.When;
 public class R1_PDP_K1926_SD extends CommonActionHelper
 {
 	private static final Logger logger = Logger.getLogger(R1_PDP_K1926_SD.class);
-	PDP_PO pdp_po = PageFactory.initElements(getDriver(), PDP_PO.class);
-	GlobalElementHeader_HomePO globalElementHeader_HomePO = PageFactory.initElements(getDriver(), GlobalElementHeader_HomePO.class);
-	PLP_PO plp_po = PageFactory.initElements(getDriver(), PLP_PO.class);
+	R1_PDP_PO pdp_po = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader_HomePO = PageFactory.initElements(getDriver(), R1_GlobalElementHeader_Home_PO.class);
+	R1_PLP_PO plp_po = PageFactory.initElements(getDriver(), R1_PLP_PO.class);
 	String expectedSKU = "";
 	String searchKey = "";
 
@@ -218,26 +218,26 @@ public class R1_PDP_K1926_SD extends CommonActionHelper
 		searchKey=webPropHelper.getTestDataProperty(searchText);   //SID 24-August;
 		if("mobile".equalsIgnoreCase(testtype)) 
 		{
-			assertTrue(isDisplayed(SearchProductPO.submitGOBtnMobile));
-			if(!isDisplayed(SearchProductPO.searchTextBoxMobile)) 
+			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtnMobile));
+			if(!isDisplayed(R1_SearchProduct_PO.searchTextBoxMobile)) 
 			{
 				assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
 				Thread.sleep(1000);
 			}
-			setInputText(SearchProductPO.searchTextBoxMobile, webPropHelper.getTestDataProperty(searchText)); 
+			setInputText(R1_SearchProduct_PO.searchTextBoxMobile, webPropHelper.getTestDataProperty(searchText)); 
 			//SearchProductPO.searchTextBoxMobile.sendKeys(searchText);
-			assertTrue(clickOnButton(SearchProductPO.submitGOBtnMobile));
+			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtnMobile));
 			logger.debug("User entered search key :: " + searchText);
 			Thread.sleep(3000);
 		}else {
 			waitForPageLoad(driver);
 			Thread.sleep(2000);
-			assertTrue(isDisplayed(SearchProductPO.submitGOBtn));
-			SearchProductPO.searchTextBox.sendKeys( webPropHelper.getTestDataProperty(searchText));
+			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtn));
+			R1_SearchProduct_PO.searchTextBox.sendKeys( webPropHelper.getTestDataProperty(searchText));
 			Thread.sleep(2000);
-			assertTrue(clickOnButton(SearchProductPO.submitGOBtn));
+			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));
 			Thread.sleep(2000);
-			assertTrue(clickOnButton(SearchProductPO.submitGOBtn));//Due to existing defect clicking is required
+			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));//Due to existing defect clicking is required
 			logger.debug("User entered search key :: " + searchText);
 		}
 	}

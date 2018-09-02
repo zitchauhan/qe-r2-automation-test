@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.SearchProductPO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -15,7 +15,7 @@ import cucumber.api.java.en.When;
 
 public class R1_PLP_K552_SD extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(R1_PLP_K552_SD.class);
-	SearchProductPO searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);
+	R1_SearchProduct_PO searchProductPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
 	@When("^User should be able to see the Number of items in each price range checkbox$")
 	public void user_should_be_able_to_see_the_Number_of_items_in_each_price_range_checkbox() throws Throwable {
 		String filterUnder10ProductCount = getText(searchProductPO.priceCheckBoxFrom10to20Count);
@@ -72,10 +72,10 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 
 	@Then("^Verify the list of product is dispalyed are same as before filter$")
 	public void verify_the_list_of_product_is_dispalyed_are_same_as_before_filter() throws Throwable {
-		logger.debug("Before filter's Apply Items count::"+SearchProductPO.productDisplayCount );
-		logger.debug("After filter's Remove Items count::"+SearchProductPO.getItemsCount());
+		logger.debug("Before filter's Apply Items count::"+R1_SearchProduct_PO.productDisplayCount );
+		logger.debug("After filter's Remove Items count::"+R1_SearchProduct_PO.getItemsCount());
 		// Write code here that turns the phrase above into concrete actions
-		assertEquals(SearchProductPO.productDisplayCount, SearchProductPO.getItemsCount());
+		assertEquals(R1_SearchProduct_PO.productDisplayCount, R1_SearchProduct_PO.getItemsCount());
 	}
 
 	@When("^user click on filter button$")
@@ -141,7 +141,7 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	@Given("^User expands PRICE Filter Option$")
 	public void user_expands_PRICE_Filter_Option() throws Throwable {
 		//searchProductPO.clickAllMinusFilterOptions();
-		SearchProductPO.productDisplayCount = SearchProductPO.getItemsCount();
+		R1_SearchProduct_PO.productDisplayCount = R1_SearchProduct_PO.getItemsCount();
 		if("mobile".equalsIgnoreCase(testtype)) {
 			driver =(RemoteWebDriver) driver.switchTo().defaultContent();
 			scrollPageToWebElement(Common_Web_SD.searchProductPO.filterPricePlusBtnMobile);	
@@ -156,7 +156,7 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	@Given("^User expands GENDER Filter Option$")
 	public void user_expands_GENDER_Filter_Option() throws Throwable {
 		//searchProductPO.clickAllMinusFilterOptions();
-		SearchProductPO.productDisplayCount = SearchProductPO.getItemsCount();
+		R1_SearchProduct_PO.productDisplayCount = R1_SearchProduct_PO.getItemsCount();
 		if("mobile".equalsIgnoreCase(testtype)) {
 			driver =(RemoteWebDriver) driver.switchTo().defaultContent();
 			scrollPageToWebElement(Common_Web_SD.searchProductPO.filterGenderPlusBtnMobile);	
@@ -169,7 +169,7 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	}
 	@Given("^User expands CATEGORY Filter Option$")
 	public void user_expands_CATEGORY_Filter_Option() throws Throwable {
-		SearchProductPO.productDisplayCount = SearchProductPO.getItemsCount();
+		R1_SearchProduct_PO.productDisplayCount = R1_SearchProduct_PO.getItemsCount();
 		if("mobile".equalsIgnoreCase(testtype)) {
 			scrollPageToWebElement(searchProductPO.filterCategoryPlusBtnMobile);	
 			assertTrue(clickOnButton(searchProductPO.filterCategoryPlusBtnMobile));
@@ -182,7 +182,7 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 
 	@Given("^User expands BRAND Filter Option$")
 	public void user_expands_BRAND_Filter_Option() throws Throwable {
-		SearchProductPO.productDisplayCount = SearchProductPO.getItemsCount();
+		R1_SearchProduct_PO.productDisplayCount = R1_SearchProduct_PO.getItemsCount();
 		searchProductPO.clickAllMinusFilterOptions();
 		if("mobile".equalsIgnoreCase(testtype)) {
 			driver =(RemoteWebDriver) driver.switchTo().defaultContent();
@@ -196,7 +196,7 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	
 	@Given("^User expands COLOR Filter Option$")
 	public void user_expands_COLOR_Filter_Option() throws Throwable {
-		SearchProductPO.productDisplayCount = SearchProductPO.getItemsCount();
+		R1_SearchProduct_PO.productDisplayCount = R1_SearchProduct_PO.getItemsCount();
 		searchProductPO.clickAllMinusFilterOptions();
 		if("mobile".equalsIgnoreCase(testtype)) {
 			driver =(RemoteWebDriver) driver.switchTo().defaultContent();
@@ -286,7 +286,7 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	@Then("^Verify the price filters product count with checkboxs product count should be equal$")
 	public void verify_the_price_filters_product_count_with_checkboxs_product_count_should_be_equal() throws Throwable {
 		int filterCheckBoxsProductCount = searchProductPO.getFilterCheckBoxsProductCount(searchProductPO.facet_Price_CheckBox_List);
-		int facetProductCount = SearchProductPO.getItemsCount(); //searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
+		int facetProductCount = R1_SearchProduct_PO.getItemsCount(); //searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
 		logger.debug(filterCheckBoxsProductCount+"::ProductCountMatch::"+facetProductCount);
 		assertEquals(filterCheckBoxsProductCount, facetProductCount);
 	}
@@ -294,7 +294,7 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	@Then("^Verify the Gender filters product count with checkboxs product count should be equal$")
 	public void verify_the_Gender_filters_product_count_with_checkboxs_product_count_should_be_equal() throws Throwable {
 		int filterCheckBoxsProductCount = searchProductPO.getFilterCheckBoxsProductCount(searchProductPO.facet_Gender_CheckBox_List);
-		int facetProductCount = SearchProductPO.getItemsCount(); //searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
+		int facetProductCount = R1_SearchProduct_PO.getItemsCount(); //searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
 		logger.debug(filterCheckBoxsProductCount+"::ProductCountMatch::"+facetProductCount);
 		assertEquals(filterCheckBoxsProductCount, facetProductCount);
 	}
@@ -302,7 +302,7 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	@Then("^Verify the Brand filters product count with checkboxs product count should be equal$")
 	public void verify_the_Brand_filters_product_count_with_checkboxs_product_count_should_be_equal() throws Throwable {
 		int filterCheckBoxsProductCount = searchProductPO.getFilterCheckBoxsProductCount(searchProductPO.facet_Brand_CheckBox_List);
-		int facetProductCount = SearchProductPO.getItemsCount(); //searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
+		int facetProductCount = R1_SearchProduct_PO.getItemsCount(); //searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
 		logger.debug(filterCheckBoxsProductCount+"::ProductCountMatch::"+facetProductCount);
 		assertEquals(filterCheckBoxsProductCount, facetProductCount);
 	}
@@ -310,7 +310,7 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	@Then("^Verify the Color filters product count with checkboxs product count should be equal$")
 	public void verify_the_Color_filters_product_count_with_checkboxs_product_count_should_be_equal() throws Throwable {
 		int filterCheckBoxsProductCount = searchProductPO.getFilterCheckBoxsProductCount(searchProductPO.facet_Color_CheckBox_List);
-		int facetProductCount = SearchProductPO.getItemsCount(); //searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
+		int facetProductCount = R1_SearchProduct_PO.getItemsCount(); //searchProductPO.getFacetProductCount(searchProductPO.filterPriceBtn);
 		logger.debug(filterCheckBoxsProductCount+"::ProductCountMatch::"+facetProductCount);
 		assertEquals(filterCheckBoxsProductCount, facetProductCount);
 	}

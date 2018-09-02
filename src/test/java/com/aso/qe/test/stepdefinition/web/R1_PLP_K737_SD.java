@@ -5,17 +5,17 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.PDP_PO;
-import com.aso.qe.test.pageobject.PLP_PO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_PLP_PO;
 
 import cucumber.api.java.en.Then;
 
 public class R1_PLP_K737_SD extends CommonActionHelper {
 
-	public PLP_PO plp_po = PageFactory.initElements(getDriver(), PLP_PO.class);
-	public PDP_PO pdp_po = PageFactory.initElements(getDriver(), PDP_PO.class);;
-	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+	public R1_PLP_PO plp_po = PageFactory.initElements(getDriver(), R1_PLP_PO.class);
+	public R1_PDP_PO pdp_po = PageFactory.initElements(getDriver(), R1_PDP_PO.class);;
+	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 
 	@Then("^user is able to see color and size attributes$")
 	public void user_is_able_to_see_color_and_size_attributes() throws Throwable {

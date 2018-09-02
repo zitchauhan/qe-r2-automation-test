@@ -3,11 +3,11 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.PLP_PO;
+import com.aso.qe.test.pageobject.R1_PLP_PO;
 import cucumber.api.java.en.And;
 
 public class R1_HP_K563_SD extends CommonActionHelper{
-	PLP_PO plp_po=PageFactory.initElements(driver, PLP_PO.class);
+	R1_PLP_PO plp_po=PageFactory.initElements(driver, R1_PLP_PO.class);
 
 
 	@And("^User should be able to click on clear all button$")

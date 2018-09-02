@@ -5,7 +5,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -13,7 +13,7 @@ import cucumber.api.java.en.Then;
 public class R1_HP_K1400_SD extends CommonActionHelper
 {
 
-	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	
 	
 	@And("^User click on sign up for more deals and verify the modal$")

@@ -2,15 +2,15 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.PDP_PO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
 public class R1_PDP_K1920_SD extends CommonActionHelper{
 	//private static final Logger logger = Logger.getLogger(R1SP1_KER_1920_Web_SD.class);
-	PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), PDP_PO.class);
-	public GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
+	public R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 
 	String productTitle = "";
 	String productPrice= "";

@@ -18,11 +18,11 @@ import org.testng.asserts.SoftAssert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
-public class GlobalElementHeader_HomePO extends CommonActionHelper 
+public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper 
 {
-	private static final Logger logger = Logger.getLogger(GlobalElementHeader_HomePO.class);
-	SIT_PO sit_po= PageFactory.initElements(driver, SIT_PO.class);
-	PDP_PO pdp_po= PageFactory.initElements(driver, PDP_PO.class);
+	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
+	R1_SIT_PO sit_po= PageFactory.initElements(driver, R1_SIT_PO.class);
+	R1_PDP_PO pdp_po= PageFactory.initElements(driver, R1_PDP_PO.class);
 	
 	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing\"]|//*[@data-auid=\"level3Category-Men's Clothing_m\"]") public WebElement btnMens_Clothing_Shop;

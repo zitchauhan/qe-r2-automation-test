@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.PDP_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
 
 import cucumber.api.java.en.Then;
 
@@ -20,7 +20,7 @@ public class R1_PDP_K1950_SD extends CommonActionHelper{
 	
 	
 	
-	PDP_PO pdp_po=PageFactory.initElements(driver, PDP_PO.class);
+	R1_PDP_PO pdp_po=PageFactory.initElements(driver, R1_PDP_PO.class);
 
 	@Then("^user verify detail and specs tab and its content is displayed$")
 	public void user_verify_detail_and_specs_tab_and_its_content_is_displayed() throws Throwable {

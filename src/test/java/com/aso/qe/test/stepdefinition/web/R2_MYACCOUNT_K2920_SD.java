@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.PropertiesHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.Then;
@@ -21,8 +21,8 @@ import cucumber.api.java.en.When;
 public class R2_MYACCOUNT_K2920_SD extends CommonActionHelper {
 
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
-	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver,
-			GlobalElementHeader_HomePO.class);
+	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
+			R1_GlobalElementHeader_Home_PO.class);
 
 	@Then("^user should see the proper message$")
 	public void user_should_see_the_proper_message() throws Throwable {

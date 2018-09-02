@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.PropertiesHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.Then;
@@ -18,8 +18,8 @@ import cucumber.api.java.en.When;
 public class R2_MYACCOUNT_K6941_SD extends CommonActionHelper {
 
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
-	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver,
-			GlobalElementHeader_HomePO.class);
+	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
+			R1_GlobalElementHeader_Home_PO.class);
 
 	@Then("^user enter the emailaddress \"(.*?)\" in signin page$")
 	public void user_enter_the_emailaddress_in_signin_page(String arg1) throws Throwable {

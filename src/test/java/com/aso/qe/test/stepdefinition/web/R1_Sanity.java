@@ -5,20 +5,20 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.SearchProductPO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class Sanity extends CommonActionHelper{
+public class R1_Sanity extends CommonActionHelper{
 	//private static final Logger logger = Logger.getLogger(R1SP1_KER_728_Web_SD.class);
 
-	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	//public ShoppingCartViewPO shoppingCartViewPO =  PageFactory.initElements(driver, ShoppingCartViewPO.class);
-	public SearchProductPO searchProductPO =  PageFactory.initElements(driver, SearchProductPO.class);
+	public R1_SearchProduct_PO searchProductPO =  PageFactory.initElements(driver, R1_SearchProduct_PO.class);
 
 
 	/*@When("^user clicks on one of the category and navigates to LOne page$")

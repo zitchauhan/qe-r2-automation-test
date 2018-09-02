@@ -6,13 +6,13 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.HomePagePOM;
+import com.aso.qe.test.pageobject.R1_HomePage_PO;
 
 import cucumber.api.java.en.Then;
 
 public class R1_HP_K260_SD extends CommonActionHelper{
 	
-	HomePagePOM hp=PageFactory.initElements(driver, HomePagePOM.class);
+	R1_HomePage_PO hp=PageFactory.initElements(driver, R1_HomePage_PO.class);
 	
 	
 	 @Then("^User verify atleast one hero image should appear on home page$")

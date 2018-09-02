@@ -6,16 +6,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.FindStorePO;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
+import com.aso.qe.test.pageobject.R1_FindStore_PO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class R1_HP_K730_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_HP_K730_SD.class);
-	public FindStorePO findStorePO = PageFactory.initElements(getDriver(), FindStorePO.class);
-	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(getDriver(),GlobalElementHeader_HomePO.class);
+	public R1_FindStore_PO findStorePO = PageFactory.initElements(getDriver(), R1_FindStore_PO.class);
+	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(getDriver(),R1_GlobalElementHeader_Home_PO.class);
 
 	@Then("^User should be able to click on Find Store$")
 	public void User_should_be_able_to_see_Find_Store() throws Throwable {

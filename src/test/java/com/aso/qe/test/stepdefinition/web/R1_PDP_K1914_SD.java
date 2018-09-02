@@ -3,18 +3,18 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.PDP_PO;
-import com.aso.qe.test.pageobject.SIT_PO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_SIT_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
 public class R1_PDP_K1914_SD extends CommonActionHelper {
-	PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), PDP_PO.class);
-	public GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver,
-			GlobalElementHeader_HomePO.class);
-	public SIT_PO HomePagePo = PageFactory.initElements(driver, SIT_PO.class);
+	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
+	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
+			R1_GlobalElementHeader_Home_PO.class);
+	public R1_SIT_PO HomePagePo = PageFactory.initElements(driver, R1_SIT_PO.class);
 	
 	
 	@Then("^user should able to click on wishlist button$")

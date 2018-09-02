@@ -5,17 +5,17 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.HomePagePOM;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_HomePage_PO;
 
 import cucumber.api.java.en.Then;
 
 public class R1_SLR_K3274_SD extends CommonActionHelper{
 	//private static final Logger logger = Logger.getLogger(R1SP1_KER_3274_Web_SD.class);
 
-	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	//public ShoppingCartViewPO shoppingCartViewPO =  PageFactory.initElements(driver, ShoppingCartViewPO.class);
-	public HomePagePOM homePagePOM =  PageFactory.initElements(driver, HomePagePOM.class);
+	public R1_HomePage_PO homePagePOM =  PageFactory.initElements(driver, R1_HomePage_PO.class);
 	
 	
 	@Then("^User enter the search \"(.*?)\"$")

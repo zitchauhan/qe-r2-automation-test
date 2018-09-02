@@ -61,10 +61,10 @@ import cucumber.api.java.en.When;
 import cucumber.api.PendingException;
 import org.openqa.selenium.support.PageFactory;
 
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 
 public class R2_CART_K2944_SD extends CommonActionHelper {
-	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	
 	@Given("^user enter the OOS SKU search \"(.*?)\"$")
 	public void user_enter_the_OOS_SKU_search(String searchSKU) throws Throwable {

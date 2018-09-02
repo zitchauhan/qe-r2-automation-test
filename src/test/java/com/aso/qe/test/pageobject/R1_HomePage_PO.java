@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import com.aso.qe.test.common.POMConstants;
 
-public class HomePagePOM {
+public class R1_HomePage_PO {
 	//id, name, className, css, tagName, linkText, partialLinkText, xpath
-	private static final Logger logger = Logger.getLogger(HomePagePOM.class);
+	private static final Logger logger = Logger.getLogger(R1_HomePage_PO.class);
 
 	@FindBy(xpath = POMConstants.SubMenu) public WebElement submenu;
 	@FindBy(xpath="//div[@data-component='featuredCategory']//h3[text()='FEATURED CATEGORIES']")public WebElement secFeaturedCategory;

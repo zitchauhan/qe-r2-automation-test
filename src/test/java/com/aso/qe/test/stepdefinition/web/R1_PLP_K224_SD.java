@@ -4,14 +4,14 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.PLP_PO;
+import com.aso.qe.test.pageobject.R1_PLP_PO;
 
 import cucumber.api.java.en.Then;
 
 
 public class R1_PLP_K224_SD extends CommonActionHelper{
 	
- PLP_PO pl_p=PageFactory.initElements(driver, PLP_PO.class);
+ R1_PLP_PO pl_p=PageFactory.initElements(driver, R1_PLP_PO.class);
 	
 	@Then("^user verify image of product available$")
 	public void user_verify_image_of_product_available() throws Throwable {

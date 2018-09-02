@@ -7,13 +7,13 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 
-import com.aso.qe.test.pageobject.PDP_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
 
 import cucumber.api.java.en.Then;
 
 public class R1_PDP_K652_SD extends CommonActionHelper {
 	
-	PDP_PO pd_p=PageFactory.initElements(driver, PDP_PO.class);
+	R1_PDP_PO pd_p=PageFactory.initElements(driver, R1_PDP_PO.class);
 	
 	@Then("^user verify customer is able to view the average rating on top$")
 	public void user_verify_customer_is_able_to_view_the_average_rating_on_top() throws Throwable {

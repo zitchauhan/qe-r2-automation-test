@@ -5,16 +5,16 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.PLP_PO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PLP_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
 public class R1_PLP_K263_SD extends CommonActionHelper{
 	//private static final Logger logger = Logger.getLogger(R1SP1_KER_263_Web_SD.class);
-	PLP_PO plp_PO = PageFactory.initElements(getDriver(), PLP_PO.class);
-	GlobalElementHeader_HomePO globalElementHeader_HomePO = PageFactory.initElements(getDriver(), GlobalElementHeader_HomePO.class);
+	R1_PLP_PO plp_PO = PageFactory.initElements(getDriver(), R1_PLP_PO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader_HomePO = PageFactory.initElements(getDriver(), R1_GlobalElementHeader_Home_PO.class);
 
 	@Then("^user clicks on one of the category and navigates to LOne page$")
 	public void user_clicks_on_one_of_the_category_and_navigates_to_LOne_page() throws Throwable {

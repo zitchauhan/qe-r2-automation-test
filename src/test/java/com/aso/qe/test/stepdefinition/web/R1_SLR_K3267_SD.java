@@ -5,17 +5,17 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.PDP_PO;
-import com.aso.qe.test.pageobject.SearchProductPO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
 import cucumber.api.java.en.Then;
 
 public class R1_SLR_K3267_SD extends CommonActionHelper {
 
-	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
-	public SearchProductPO searchProductPO = PageFactory.initElements(driver, SearchProductPO.class);
-	public PDP_PO pdp_po = PageFactory.initElements(driver, PDP_PO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+	public R1_SearchProduct_PO searchProductPO = PageFactory.initElements(driver, R1_SearchProduct_PO.class);
+	public R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
 
 	@Then("^User enter the SKU search \"(.*?)\"$")
 	public void User_enter_the_SKU_search(String str) throws Throwable {

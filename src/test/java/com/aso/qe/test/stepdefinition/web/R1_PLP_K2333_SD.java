@@ -11,14 +11,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.SearchProductPO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class R1_PLP_K2333_SD extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(R1_PLP_K2333_SD.class);
-	SearchProductPO searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);;
+	R1_SearchProduct_PO searchProductPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);;
 
 
 

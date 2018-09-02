@@ -7,8 +7,8 @@ import org.openqa.selenium.support.FindBy;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
-public class ShoppingCartViewPO extends CommonActionHelper {
-	private static final Logger logger = Logger.getLogger(ShoppingCartViewPO.class);
+public class R1_ShoppingCartView_PO extends CommonActionHelper {
+	private static final Logger logger = Logger.getLogger(R1_ShoppingCartView_PO.class);
 	//@FindBy(xpath="//div[@class='col-1 a-pad-right0 a-text-right a-pos-inherit']//a[@data_auid='mini_cart']") WebElement cartIcon;/RKA 25 JuLY
 	@FindBy(xpath="//*[@data-auid='miniCart']//a") public WebElement cartIcon;
 	

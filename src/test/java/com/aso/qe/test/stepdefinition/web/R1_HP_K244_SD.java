@@ -7,15 +7,15 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.HomePagePOM;
-import com.aso.qe.test.pageobject.SearchProductPO;
+import com.aso.qe.test.pageobject.R1_HomePage_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
 import cucumber.api.java.en.Then;
 
 public class R1_HP_K244_SD extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(R1_HP_K244_SD.class);
-	SearchProductPO searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);
-	HomePagePOM HomePagePOM = PageFactory.initElements(getDriver(), HomePagePOM.class);
+	R1_SearchProduct_PO searchProductPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
+	R1_HomePage_PO HomePagePOM = PageFactory.initElements(getDriver(), R1_HomePage_PO.class);
 
 
 	@Then("^user is able to scroll till Featured categroy component$")

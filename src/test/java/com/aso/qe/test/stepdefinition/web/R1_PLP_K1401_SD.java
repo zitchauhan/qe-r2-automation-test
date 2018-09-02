@@ -6,18 +6,18 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.HomePagePOM;
-import com.aso.qe.test.pageobject.PLP_PO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_HomePage_PO;
+import com.aso.qe.test.pageobject.R1_PLP_PO;
 
 import cucumber.api.java.en.Then;
 
 public class R1_PLP_K1401_SD extends CommonActionHelper{
 
-	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
-	PLP_PO plp_po= PageFactory.initElements(driver, PLP_PO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+	R1_PLP_PO plp_po= PageFactory.initElements(driver, R1_PLP_PO.class);
 
-	HomePagePOM hp_p=PageFactory.initElements(driver, HomePagePOM.class);
+	R1_HomePage_PO hp_p=PageFactory.initElements(driver, R1_HomePage_PO.class);
 	@Then("^user navigate to men shoe L_TWO page$")
 	public void user_navigate_to_men_shoe_L_TWO_page() throws Throwable {
 

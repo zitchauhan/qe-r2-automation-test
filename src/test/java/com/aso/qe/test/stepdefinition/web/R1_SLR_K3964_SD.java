@@ -3,8 +3,8 @@ package com.aso.qe.test.stepdefinition.web;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.SearchProductPO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -12,9 +12,9 @@ import cucumber.api.java.en.Then;
 public class R1_SLR_K3964_SD extends CommonActionHelper{
 	//private static final Logger logger = Logger.getLogger(R1SP1_KER_728_Web_SD.class);
 
-	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	//public ShoppingCartViewPO shoppingCartViewPO =  PageFactory.initElements(driver, ShoppingCartViewPO.class);
-	public SearchProductPO searchProductPO =  PageFactory.initElements(driver, SearchProductPO.class);
+	public R1_SearchProduct_PO searchProductPO =  PageFactory.initElements(driver, R1_SearchProduct_PO.class);
 
 	@Then("^User should be able to see Search Box on Homepage$")
 	public void User_should_be_able_to_see_Search_Box_on_Homepage() throws Throwable {

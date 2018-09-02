@@ -5,7 +5,7 @@ import static org.junit.Assert.assertFalse;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
@@ -16,7 +16,7 @@ import cucumber.api.java.en.When;
 public class R2_MYACCOUNT_K6841_SD extends CommonActionHelper {
 
 	R2_MyAccount_PO r2_MyAccount_PO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
-	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	R2_Cart_PO r2CartPO = PageFactory.initElements(driver, R2_Cart_PO.class);
 
 	@Then("^User verifies that list of all saved credit/debit cards are displayed$")

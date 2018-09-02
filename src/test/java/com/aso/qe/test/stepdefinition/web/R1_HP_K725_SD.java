@@ -7,8 +7,8 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.PDP_PO;
-import com.aso.qe.test.pageobject.ShoppingCartViewPO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_ShoppingCartView_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -16,8 +16,8 @@ import cucumber.api.java.en.Then;
 public class R1_HP_K725_SD extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(R1_HP_K725_SD.class);
 
-	public ShoppingCartViewPO shoppingCartViewPO =  PageFactory.initElements(getDriver(), ShoppingCartViewPO.class);
-    public PDP_PO pdp=PageFactory.initElements(getDriver(), PDP_PO.class);
+	public R1_ShoppingCartView_PO shoppingCartViewPO =  PageFactory.initElements(getDriver(), R1_ShoppingCartView_PO.class);
+    public R1_PDP_PO pdp=PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	@Then("^User should be able to click on MiniCart icon and navigate to My cart page and Validate Shopping Cart$")
 	public void user_should_be_able_to_click_on_MiniCart_icon_and_navigate_to_My_cart_page_and_Validate_Shopping_Cart() throws Throwable {
 		logger.debug("user_should_be_able_to_click_on_MiniCart_icon_and_navigate_to_My_cart_page_and_Validate_Shopping_Cart");

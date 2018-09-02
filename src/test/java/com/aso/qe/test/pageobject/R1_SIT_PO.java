@@ -11,8 +11,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import com.aso.qe.framework.common.CommonActionHelper;
 
-public class SIT_PO extends CommonActionHelper{
-	private static final Logger logger = Logger.getLogger(SIT_PO.class);
+public class R1_SIT_PO extends CommonActionHelper{
+	private static final Logger logger = Logger.getLogger(R1_SIT_PO.class);
 	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());  //Sid
 	
 

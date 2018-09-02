@@ -6,13 +6,13 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
-import com.aso.qe.test.pageobject.PDP_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
 
 import cucumber.api.java.en.Then;
 
 public class R1_PDP_K3455_SD extends CommonActionHelper{
 	
-	PDP_PO p_po=PageFactory.initElements(driver, PDP_PO.class);
+	R1_PDP_PO p_po=PageFactory.initElements(driver, R1_PDP_PO.class);
 	
 	@Then("^User select the product from PDP page$")
 	public void user_select_the_product_from_PDP_page() throws Throwable {

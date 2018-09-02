@@ -8,8 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.PDP_PO;
-import com.aso.qe.test.pageobject.SearchProductPO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -18,8 +18,8 @@ import cucumber.api.java.en.When;
 
 public class R1_PDP_K1955_SD extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(R1_PDP_K1955_SD.class);
-	SearchProductPO searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);
-	PDP_PO pdp_po = PageFactory.initElements(getDriver(), PDP_PO.class);
+	R1_SearchProduct_PO searchProductPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
+	R1_PDP_PO pdp_po = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	String productName ="";
 	String modifiedProductName="";
 

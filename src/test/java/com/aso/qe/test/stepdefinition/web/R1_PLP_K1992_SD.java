@@ -7,16 +7,16 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.PLP_PO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PLP_PO;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class R1_PLP_K1992_SD extends CommonActionHelper{
 	//private static final Logger logger = Logger.getLogger(R1SP1_KER_1992_Web_SD.class);
-	PLP_PO plp_po = PageFactory.initElements(getDriver(), PLP_PO.class);
-	GlobalElementHeader_HomePO globalElementHeader = PageFactory.initElements(getDriver(), GlobalElementHeader_HomePO.class);
+	R1_PLP_PO plp_po = PageFactory.initElements(getDriver(), R1_PLP_PO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(getDriver(), R1_GlobalElementHeader_Home_PO.class);
 	String categoryName =  "";
 
 

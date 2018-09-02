@@ -19,9 +19,9 @@ import org.openqa.selenium.support.FindBys;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
-public class PDP_PO extends CommonActionHelper
+public class R1_PDP_PO extends CommonActionHelper
 {
-	private static final Logger logger = Logger.getLogger(GlobalElementHeader_HomePO.class);
+	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());  //Sid
 	private String sku;   //Sid
 
@@ -455,7 +455,7 @@ public class PDP_PO extends CommonActionHelper
 //		}
 //	}
 	//End 28July2018
-	public PDP_PO(WebDriver webDriver) 
+	public R1_PDP_PO(WebDriver webDriver) 
 	{
 		super();
 	}

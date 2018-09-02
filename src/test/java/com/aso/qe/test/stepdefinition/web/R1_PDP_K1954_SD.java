@@ -7,8 +7,8 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.PDP_PO;
-import com.aso.qe.test.pageobject.PLP_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_PLP_PO;
 
 import cucumber.api.java.en.Then;
 
@@ -16,7 +16,7 @@ public class R1_PDP_K1954_SD extends CommonActionHelper{
 	
 	
 	
-	PDP_PO pdp_po=PageFactory.initElements(driver, PDP_PO.class);
+	R1_PDP_PO pdp_po=PageFactory.initElements(driver, R1_PDP_PO.class);
 	Logger logger = Logger.getLogger(R1_PDP_K1954_SD .class);
 	
 	

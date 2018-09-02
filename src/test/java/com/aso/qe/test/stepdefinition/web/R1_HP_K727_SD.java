@@ -5,8 +5,8 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
-import com.aso.qe.test.pageobject.HomePagePOM;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_HomePage_PO;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -15,8 +15,8 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 	
 	
 
-	public GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
-	HomePagePOM hp_p=PageFactory.initElements(getDriver(), HomePagePOM.class);
+	public R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+	R1_HomePage_PO hp_p=PageFactory.initElements(getDriver(), R1_HomePage_PO.class);
 	
 	
 	@When("^user to click on sing in and navigate to sign in page$")
