@@ -236,4 +236,11 @@ public class R1SP1_Categories_ProductsByCategorySD extends JSONValidationUtils{
 			assertTrue(apiJsonResponse.verifyAddtoCartProp(propName,rootName),Constants.API_ERROR_DESCRIPTION);
 		}
 	}
+	
+	@Given("^Validate the \"(.*?)\" without array \"(.*?)\" API Requried Property Value are not Null$")
+	public void validate_the_without_array_API_Requried_Property_Value_are_not_Null(String rootElement, String type, List<String> propNameList) throws Throwable {
+		for(String propName:propNameList){
+			assertTrue(apiJsonResponse.verifyResponseWithRootAndchaild(propName,rootElement, type),Constants.API_ERROR_DESCRIPTION);
+		}
+	}
 }

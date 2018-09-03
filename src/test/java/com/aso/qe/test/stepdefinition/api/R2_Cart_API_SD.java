@@ -155,5 +155,18 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		assertNotNull(storeId);
 	}
 
+	@Given("^\"(.*?)\" with  \"(.*?)\" endpoint for Available Shipping Modes$")
+	public void with_endpoint_for_Available_Shipping_Modes(String url, String extension) throws Throwable {
+		//System.setProperty("OrderId", "422037");
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+loadProps.getTestDataProperty(extension);
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICallWithGuestUserCookies(endpoints);
+	}
 
+	@Given("^\"(.*?)\" with \"(.*?)\" endpoint for Available Shipping Modes with StoreId$")
+	public void with_endpoint_for_Available_Shipping_Modes_with_StoreId(String url, String extension) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+extension+loadProps.getTestDataProperty("API-StoreId");
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICallWithGuestUserCookies(endpoints);
+	}
 }

@@ -48,3 +48,39 @@ Scenario: TC_1 -Verify the Order details with SignIn user Json Response Details
   Scenario: TC_5 - Remove a PromoCode from an Order
     Given "OrderUrl" endpoint for removing "/promocode/" from an Order
     Then Verify response status code as 204
+
+  
+   @All-R2 @C1-Checkout @C2-AvailableShippingModes @api @R2_AAST-05 @CR-VK @ZYP_Checkout_GetCheckout_12736  
+ Scenario: TC_6 - Retrieve the Checkout-Get Available Shipping Modes 
+ Given "OrderUrl" with  "shippingModes" endpoint for Available Shipping Modes
+ And Verify response status code as 200
+ 
+  @All-R2 @C1-Checkout @C2-AvailableShippingModes @api @R2_AAST-05 @CR-VK @ZYP_Checkout_GetCheckout_12737  
+ Scenario: TC_6 - Validate the Checkout-Get Available Shipping Modes Json Schema
+ Given "OrderUrl" with  "shippingModes" endpoint for Available Shipping Modes
+ Then validate jsonSchema "R2-AvailableShippingModeSchema"
+ 
+  @All-R2 @C1-Checkout @C2-AvailableShippingModes @api @R2_AAST-05 @CR-VK @ZYP_Checkout_GetCheckout_12738 
+ Scenario: TC_6 - Verify the Checkout-Get Available Shipping Modes Response Details
+ Given "OrderUrl" with  "shippingModes" endpoint for Available Shipping Modes
+ Then read the API json response
+ And Validate the "fetchShipModesAndAssociatedItems" without array "results" API Requried Property Value are not Null
+ |orderId|
+ 
+ 
+ @All-R2 @C1-Checkout @C2-AvailableShippingModes @api @R2_AAST-05 @CR-VK @ZYP_Checkout_GetCheckout_12740  
+ Scenario: TC_6 - Retrieve the Checkout-Get Available Shipping Modes with storeId
+ Given "OrderUrl" with "shippingModesStoreID" endpoint for Available Shipping Modes with StoreId
+ And Verify response status code as 200
+ 
+  @All-R2 @C1-Checkout @C2-AvailableShippingModes @api @R2_AAST-05 @CR-VK @ZYP_Checkout_GetCheckout_12741  
+ Scenario: TC_6 - Validate the Checkout-Get Available Shipping Modes with storeId Json Schema
+ Given "OrderUrl" with "shippingModesStoreID" endpoint for Available Shipping Modes with StoreId
+ Then validate jsonSchema "R2-AvailableShippingModeSchema"
+ 
+  @All-R2 @C1-Checkout @C2-AvailableShippingModes @api @R2_AAST-05 @CR-VK @ZYP_Checkout_GetCheckout_12742 
+ Scenario: TC_6 - Verify the Checkout-Get Available Shipping Modes with storeId Response Details
+ Given "OrderUrl" with "shippingModesStoreID" endpoint for Available Shipping Modes with StoreId
+ Then read the API json response
+ And Validate the "fetchShipModesAndAssociatedItems" without array "results" API Requried Property Value are not Null
+ |orderId|

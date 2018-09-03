@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "fetchShipModesAndAssociatedItems": {
+      "type": "object",
+      "properties": {
+        "results": {
+          "type": "object",
+          "properties": {
+            "orderId": {
+              "type": "string"
+            },
+            "ShippingGroups": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "orderId",
+            "ShippingGroups"
+          ]
+        }
+      },
+      "required": [
+        "results"
+      ]
+    }
+  },
+  "required": [
+    "fetchShipModesAndAssociatedItems"
+  ]
+}
