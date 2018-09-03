@@ -159,13 +159,21 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		//System.setProperty("OrderId", "422037");
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+loadProps.getTestDataProperty(extension);
 		logger.debug("END Point URL:"+endpoints);
-		initiateRestAPICallWithGuestUserCookies(endpoints);
+		initiateRestAPICallWithCookie(endpoints);
 	}
 
 	@Given("^\"(.*?)\" with \"(.*?)\" endpoint for Available Shipping Modes with StoreId$")
 	public void with_endpoint_for_Available_Shipping_Modes_with_StoreId(String url, String extension) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+loadProps.getTestDataProperty(extension)+loadProps.getTestDataProperty("API-StoreId");
 		logger.debug("END Point URL:"+endpoints);
-		initiateRestAPICallWithGuestUserCookies(endpoints);
+		initiateRestAPICallWithCookie(endpoints);
+	}
+	
+	@Then("^Validated response details of \"(.*?)\"$")
+	public void validated_response_details_of(String arg1) throws Throwable {
+		JsonPath jsonPathEvaluator = response.jsonPath();
+		String orderID = jsonPathEvaluator.get(arg1);
+		logger.debug("Order ID::"+ orderID);
+		assertNotNull(orderID);
 	}
 }

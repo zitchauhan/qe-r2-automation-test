@@ -14,9 +14,7 @@ Feature: Verify Order Checkout-GiftCard API endpoint services
   @All-R2 @C1-Order @C2-Order-GiftCard @api @R2_AAST-05 @CR-VK @ZYP_Order-GiftCard_12755
   Scenario: TC_6 - verify the Order - Get Giftcard Json Response Details
     Given "OrderUrl" with  "/giftCards" endpoint for Order Get GiftCard Details
-    Then read the API json response
-    And Validate the "getGiftCard" API Requried Property Value are not Null
-      | orderId |
+    Then Validated response details of "getGiftCard.orderId"
 
   @All-R2 @C1-Checkout @C2-AvailableShippingModes @api @R2_AAST-05 @CR-VK @ZYP_Checkout_GetCheckout_12736
   Scenario: TC_6 - Retrieve the Checkout-Get Available Shipping Modes
@@ -31,9 +29,7 @@ Feature: Verify Order Checkout-GiftCard API endpoint services
   @All-R2 @C1-Checkout @C2-AvailableShippingModes @api @R2_AAST-05 @CR-VK @ZYP_Checkout_GetCheckout_12738
   Scenario: TC_6 - Verify the Checkout-Get Available Shipping Modes Response Details
     Given "OrderUrl" with  "shippingModes" endpoint for Available Shipping Modes
-    Then read the API json response
-    And Validate the "fetchShipModesAndAssociatedItems" without array "results" API Requried Property Value are not Null
-      | orderId |
+   Then Validated response details of "fetchShipModesAndAssociatedItems.results.orderId"
 
   @All-R2 @C1-Checkout @C2-AvailableShippingModes @api @R2_AAST-05 @CR-VK @ZYP_Checkout_GetCheckout_12740
   Scenario: TC_6 - Retrieve the Checkout-Get Available Shipping Modes with storeId
@@ -49,5 +45,4 @@ Feature: Verify Order Checkout-GiftCard API endpoint services
   Scenario: TC_6 - Verify the Checkout-Get Available Shipping Modes with storeId Response Details
     Given "OrderUrl" with "shippingModesStoreID" endpoint for Available Shipping Modes with StoreId
     Then read the API json response
-    And Validate the "fetchShipModesAndAssociatedItems" without array "results" API Requried Property Value are not Null
-      | orderId |
+    Then Validated response details of "fetchShipModesAndAssociatedItems.results.orderId"
