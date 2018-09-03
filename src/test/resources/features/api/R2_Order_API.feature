@@ -84,3 +84,16 @@ Scenario: TC_1 -Verify the Order details with SignIn user Json Response Details
  Then read the API json response
  And Validate the "fetchShipModesAndAssociatedItems" without array "results" API Requried Property Value are not Null
  |orderId|
+ 
+ 
+  @All-R2 @C1-Order @C2-Order-GiftCard @api @R2_AAST-05 @CR-VK @ZYP_Order-GiftCard_12754
+ Scenario: TC_6 - Retrieve the Order - Get Giftcard Details
+ Given "OrderUrl" with  "/giftCards" endpoint for Order Get GiftCard Details
+ And Verify response status code as 200
+ 
+  @All-R2 @C1-Order @C2-Order-GiftCard @api @R2_AAST-05 @CR-VK @ZYP_Order-GiftCard_12755
+ Scenario: TC_6 - verify the Order - Get Giftcard Json Response Details
+ Given "OrderUrl" with  "/giftCards" endpoint for Order Get GiftCard Details
+ Then read the API json response
+ And Validate the "getGiftCard" API Requried Property Value are not Null
+ |orderId|
