@@ -23,7 +23,7 @@ Scenario: Verify that user can continue the shopping without re-authentication a
 	And user enters current password
 	And user enters new password
 	And user clicks on Update button
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 

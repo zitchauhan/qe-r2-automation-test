@@ -24,7 +24,7 @@ Scenario: TC_2- Verify user can do the logout using Flyout from My Account heade
 	When user sign out from the website
 	Then Sign in page should open
 	When user logs in as "RawUser"
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -74,7 +74,7 @@ Scenario: TC_4-Verify that user is able to add a new gift card in My Account
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3166 @ZYP_CART_K3166-9604 @CR-DPK @AutomationSanityR2
 Scenario: TC_5-Verify promotion got applied for order level when user applied %off promotion on order -- Implicit promotion
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
@@ -90,7 +90,7 @@ Scenario: TC_5-Verify promotion got applied for order level when user applied %o
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8166  @CR-AKK @AutomationSanityR2 
 	Scenario: TC_6- Verify if user should be able to apply or remove a promotion code 
 		Given user launches the browser and navigates to "ASO_HOME" page 
-		When user clicks on one of the category and navigates to LOne
+		And User navigates to L2 Mens clothing
     	Then user clicks on one of the subcategory and navigates to LTwo
     	Then user clicks on one of the product category and navigates to LThree
 		Then User is navigated to pdp page 
@@ -113,7 +113,7 @@ Scenario: TC_5-Verify promotion got applied for order level when user applied %o
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @CR-DPK @AutomationSanityR2
 	Scenario: TC_7-Verify add quantity adjustment in the Cart Page 
 		Given user launches the browser and navigates to "ASO_HOME" page 
-		When user clicks on one of the category and navigates to LOne 
+		And User navigates to L2 Mens clothing 
 		Then user clicks on one of the subcategory and navigates to LTwo 
 		And user is able to see the product category name in section title 
 		Then user clicks on one of the product category and navigates to LThree 
@@ -134,22 +134,22 @@ Scenario: TC_5-Verify promotion got applied for order level when user applied %o
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-2939 @ZYP_CART_K2939-9615 @CR-AKK @AutomationSanityR2
 	Scenario: TC_8-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 		Given user launches the browser and navigates to "ASO_HOME" page 
-		When user clicks on one of the category and navigates to LOne 
+		And User navigates to L2 Mens clothing
 		Then user clicks on one of the subcategory and navigates to LTwo 
 		And user is able to see the product category name in section title 
 		Then user clicks on one of the product category and navigates to LThree 
-		Then User is navigated to pdp page 
-		Then user click on Add to Cart Button 
-		Then user is navigated to Add to cart Notification popup 
+		And User is navigated to pdp page 
+		And user click on Add to Cart Button 
+		And user is navigated to Add to cart Notification popup 
 		And user will click on View Cart button 
-		And user navigate to Cart page 
-		And User is able to see the selected variant image as thumbnail 
+		When user navigate to Cart page 
+		Then User is able to see the selected variant image as thumbnail 
 		
 		
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-DPK @AutomationSanityR2
 	Scenario: TC_9-Verify Remove link in the Cart Page 
 		Given user launches the browser and navigates to "ASO_HOME" page 
-		When user clicks on one of the category and navigates to LOne 
+		And User navigates to L2 Mens clothing 
 		Then user clicks on one of the subcategory and navigates to LTwo 
 		And user is able to see the product category name in section title 
 		Then user clicks on one of the product category and navigates to LThree 
@@ -164,7 +164,7 @@ Scenario: TC_5-Verify promotion got applied for order level when user applied %o
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8168  @CR-RK @AutomationSanityR2
 	Scenario: TC_10-Verify if user should be able to checkout if there are no errors 
 		Given user launches the browser and navigates to "ASO_HOME" page 
-		When user clicks on one of the category and navigates to LOne 
+		And User navigates to L2 Mens clothing
 		Then user clicks on one of the subcategory and navigates to LTwo 
 		And user is able to see the product category name in section title 
 		Then user clicks on one of the product category and navigates to LThree 
@@ -180,7 +180,7 @@ Scenario: TC_5-Verify promotion got applied for order level when user applied %o
 	@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8629 @CR-DPK @AutomationSanityR2
 	Scenario: TC_11-Verify Gift Card applied is reflected on Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page  
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -207,7 +207,7 @@ Scenario: TC_5-Verify promotion got applied for order level when user applied %o
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 @CR-RK 
 	Scenario: TC_12-Verify is user can Sign-In for faster checkout experience
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -224,7 +224,7 @@ Scenario: TC_5-Verify promotion got applied for order level when user applied %o
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @CR-MS @AutomationSanityR2
 	Scenario: TC_13-To Edit cart items from Order summary 
 		Given user launches the browser and navigates to "ASO_HOME" page 
-		And user clicks on one of the category and navigates to LOne 
+		And User navigates to L2 Mens clothing
 		And user clicks on one of the subcategory and navigates to LTwo 
 		And user is able to see the product category name in section title 
 		And user clicks on one of the product category and navigates to LThree 
@@ -240,7 +240,7 @@ Scenario: TC_5-Verify promotion got applied for order level when user applied %o
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098 @CR-AKK @AutomationSanityR2
 	Scenario: TC_14-To view the Order Summary details on the Check out 
 		Given user launches the browser and navigates to "ASO_HOME" page 
-		And user clicks on one of the category and navigates to LOne 
+		And User navigates to L2 Mens clothing 
 		And user clicks on one of the subcategory and navigates to LTwo 
 		And user is able to see the product category name in section title 
 		And user clicks on one of the product category and navigates to LThree 

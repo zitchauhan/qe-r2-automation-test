@@ -9,7 +9,7 @@ Feature: B07-250 - Gift Card - Authenticated User: Add New Gift Card at Checkout
 #	And user enter the valid emailaddress "EmailAddress" 
 #	And user enter the valid password "Password" 
 #	And user click on signin button 
-#	And user clicks on one of the category and navigates to LOne 
+#	And User navigates to L2 Mens clothing
 #	And user clicks on one of the subcategory and navigates to LTwo 
 #	And user is able to see the product category name in section title 
 #	And user clicks on one of the product category and navigates to LThree 
@@ -32,7 +32,7 @@ Feature: B07-250 - Gift Card - Authenticated User: Add New Gift Card at Checkout
 #	And user enter the valid emailaddress "EmailAddress" 
 #	And user enter the valid password "Password" 
 #	And user click on signin button 
-#	And user clicks on one of the category and navigates to LOne 
+#	And User navigates to L2 Mens clothing 
 #	And user clicks on one of the subcategory and navigates to LTwo 
 #	And user is able to see the product category name in section title 
 #	And user clicks on one of the product category and navigates to LThree 
@@ -85,7 +85,7 @@ Scenario: Verify Gift card fields displayed - No Previous Gift Cards Saved
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -104,7 +104,7 @@ Scenario: Verify Gift card fields displayed - No Previous Gift Cards Saved
 Scenario: 
 	verify the display of error message when an unauthenticated user is trying to add a GC that starts with 777 series at checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -142,7 +142,7 @@ Scenario: Verify Valid gift card is applied for purchases
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 

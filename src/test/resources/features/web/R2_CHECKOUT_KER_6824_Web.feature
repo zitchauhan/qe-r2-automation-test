@@ -4,7 +4,7 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8628 @CR-DPK
 	Scenario: Verify Gift Card applied is reflected on Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page  
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -31,7 +31,7 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8629 @CR-DPK
 	Scenario: Verify Gift Card applied is reflected on Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page  
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -58,7 +58,7 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8630 @CR-DPK
 	Scenario: Verify the gift card fields displayed on addition of extra card
 	Given user launches the browser and navigates to "ASO_HOME" page  
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -86,7 +86,7 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8631 @CR-DPK
 	Scenario: Verify +Add Another Gift card link is Suppressed in non-availability of remaining order amount
 	Given user launches the browser and navigates to "ASO_HOME" page  
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -114,7 +114,7 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8632 @CR-DPK 
 Scenario: Verify the Hide Gift Card CTA behavior
 	Given user launches the browser and navigates to "ASO_HOME" page  
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree

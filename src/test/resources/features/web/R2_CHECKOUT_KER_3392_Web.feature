@@ -4,7 +4,7 @@ Feature: Verify Checkout Login Interstitial
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8146 @CR-DPK
   Scenario: Verify if user can land on checkout page
    Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
    Then user clicks on one of the subcategory and navigates to LTwo
    And user is able to see the product category name in section title
    Then user clicks on one of the product category and navigates to LThree
@@ -20,7 +20,7 @@ Feature: Verify Checkout Login Interstitial
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 @CR-RK 
 	Scenario: Verify is user can Sign-In for faster checkout experience
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -37,7 +37,7 @@ Feature: Verify Checkout Login Interstitial
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8148 @CR-DPK 
 	Scenario: Verify the  User must view Sign-In/Interstitial Modal
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -53,7 +53,7 @@ Feature: Verify Checkout Login Interstitial
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8149 @CR-RK 
 	Scenario: Verify if user can create an account from Not a member? Create an account link
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -68,7 +68,7 @@ Feature: Verify Checkout Login Interstitial
 	@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-10423 @CR-RK 	
 	Scenario: Verify that user is able to navigate back to checkout page after creating new account 
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -89,7 +89,7 @@ Feature: Verify Checkout Login Interstitial
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8150 @CR-DPK 
 	Scenario: Verify is user gets proper validation message for invalid email address
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -110,7 +110,7 @@ Feature: Verify Checkout Login Interstitial
 @R2_Web @R2_Regression @R2_All @P-Lowest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8151 @CR-DPK 
 	Scenario: Verify is user gets proper validation message for invalid password
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -131,7 +131,7 @@ Feature: Verify Checkout Login Interstitial
 	@R2_Web @R2_Regression @R2_All @P-Lowest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8152 @CR-DPK 
 	Scenario: Verify if user is able to close the Sign-in popup window
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -149,7 +149,7 @@ Feature: Verify Checkout Login Interstitial
 	@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8153 @CR-DPK 
 	Scenario: Verify the if user not authenticated, user must see empty fields in Sign-in popup
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree

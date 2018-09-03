@@ -64,7 +64,7 @@ Scenario: Verify that user is able to see the 'View Next 5 stores' button, if st
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10621 @CR-DPK
 Scenario: Verify the user is able to view the 'Change Location' under In-store Pick Up on Cart in Product Blade
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -80,7 +80,7 @@ Scenario: Verify the user is able to view the 'Change Location' under In-store P
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10622 @CR-DPK
 Scenario: Verify that user view 'Find a Store' modal from Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -158,7 +158,7 @@ Scenario: Verify user is displayed with an error message when there is no store 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10726 @CR-DPK
 Scenario: Verify that user view 'Find a Store' modal from Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page

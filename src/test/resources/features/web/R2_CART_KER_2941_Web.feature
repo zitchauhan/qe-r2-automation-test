@@ -3,7 +3,7 @@ Feature: Verify Promotional Messaging in Cart
     @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2941 @ZYP_CART_K2941-8066 @CR-DPK
     Scenario: To verify Add Promo code in Cart Page         
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -19,7 +19,7 @@ Feature: Verify Promotional Messaging in Cart
     @R2_Web @R2_Regression @R2_All @P-Lowest @C-Cart @KER-2941 @ZYP_CART_K2941-8067 @CR-DPK
     Scenario: To verify Hide Promo code in Cart Page         
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -35,7 +35,7 @@ Feature: Verify Promotional Messaging in Cart
 	@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2941 @ZYP_CART_K2941-8068 @CR-DPK
     Scenario: To verify the limit of the Promo codes in cart Page         
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -51,7 +51,7 @@ Feature: Verify Promotional Messaging in Cart
 	@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2941 @ZYP_CART_K2941-8069 @CR-DPK
 	Scenario: To verify the Promo codes discounts in order summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
@@ -69,7 +69,7 @@ Feature: Verify Promotional Messaging in Cart
 	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2941 @ZYP_CART_K2941-8070 @CR-DPK
     Scenario: To verify discounts to specific items displayed at the item level (Free Shipping, BOGO, Gift With Purchase)          
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree

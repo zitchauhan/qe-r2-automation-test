@@ -7,7 +7,7 @@ Scenario: Verify if authenticated user can select a shipping address from the dr
 		|firstName |lastName|email						   |password |confirmPassword|
 		|automation|user	|automationuser@academymail.com|Pass@1234|Pass@1234		 |
 	And user adds an address 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -30,7 +30,7 @@ Scenario: Verify if authenticated user can  view all the shipping addresses at c
 		|automation|user	|automationuser@academymail.com|Pass@1234|Pass@1234		 |
 	And user adds an address
 	And user adds an address
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -53,7 +53,7 @@ Scenario: Verify  If the user has already changed/added an address within an act
 		|automation|user	|automationuser@academymail.com|Pass@1234|Pass@1234		 |
 	And user adds an address
 	And user adds an address
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -73,7 +73,7 @@ Scenario: Verify  If the user has already changed/added an address within an act
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 

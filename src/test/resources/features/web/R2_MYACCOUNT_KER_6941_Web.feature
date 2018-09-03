@@ -3,7 +3,7 @@ Feature: Verify Gift Card - Payment Processing
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8922 @CR-RK 
 Scenario: Verify The user must be able to input a valid email Id in checkout page
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -36,7 +36,7 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8924 @CR-RK 	
 	Scenario: Verify The user must see form field validations to ensure the e-mail address meets the desired format '@'provided in checkout page
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -68,7 +68,7 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8928 @CR-RK 		
 	Scenario: Verify The user must see form field validations to ensure the e-mail address meets the desired format (domain provided) in checkout page
 Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -101,7 +101,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8937 @CR-RK 	
 Scenario: Verify The user must be able to see the relevant errors when entering the email address in checkout page
 Given user launches the browser and navigates to "ASO_HOME" page 
-And user clicks on one of the category and navigates to LOne 
+And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 

@@ -3,7 +3,7 @@ Feature: Verify Quantity Adjustment in Cart
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @CR-DPK 
 Scenario: TC_5-Verify add quantity adjustment in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -21,7 +21,7 @@ Scenario: TC_5-Verify add quantity adjustment in the Cart Page
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-8045 @CR-DPK 
 Scenario: Verify cart gets recalculated on applying promotions and updated discounts displayed on Cart Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title  
 	Then user clicks on one of the product category and navigates to LThree 
@@ -41,7 +41,7 @@ Scenario: Verify cart gets recalculated on applying promotions and updated disco
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-DPK 
 Scenario: Verify Remove link in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -61,7 +61,7 @@ Scenario: Verify Quantity Zero in the Cart Page
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -78,7 +78,7 @@ Scenario: Verify Quantity Zero in the Cart Page
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-9357 @CR-AKK 
 Scenario: Verify system does inventory check for product item added more than available 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -97,7 +97,7 @@ Scenario: Verify system does inventory check for product item added more than av
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8051 @CR-AKK 
 Scenario: Verify Alphanumeric Quantity in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -111,7 +111,7 @@ Scenario: Verify Alphanumeric Quantity in the Cart Page
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8046 @CR-AKK 
 Scenario: Verify Reduce quantity adjustment in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -133,7 +133,7 @@ Scenario:  Verify Remove quantity message in the Cart Page
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -148,7 +148,7 @@ Scenario:  Verify Remove quantity message in the Cart Page
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6845 @CR-AKK 	
 Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
 Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -163,7 +163,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6849 @CR-AKK 	
 Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
 Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -178,7 +178,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6861 @CR-AKK 
 Scenario: To verify Reduce Quantity Adjustment - Via Open Field
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -196,7 +196,7 @@ Scenario: To verify Reduce Quantity Adjustment - Via Open Field
 Scenario:  To verify Remove link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -212,7 +212,7 @@ Scenario:  To verify Remove link
 Scenario:  To verify Remove link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -228,7 +228,7 @@ Scenario:  To verify Remove link
 Scenario: Verify Quantity Zero in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -244,7 +244,7 @@ Scenario: Verify Quantity Zero in the Cart Page
 Scenario: To verify Inventory Check on Quantity update
 Given user launches the browser and navigates to "ASO_HOME" page  
 	Then User clicks on ASO Logo and should be navigated to Home Page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 

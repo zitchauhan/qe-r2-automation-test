@@ -3,7 +3,7 @@ Feature: E02-100 - My Account, Address Book
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @CR-MS
 Scenario: To Edit cart items from Order summary
 	    Given user launches the browser and navigates to "ASO_HOME" page  
-		And user clicks on one of the category and navigates to LOne
+		And User navigates to L2 Mens clothing
 	    And user clicks on one of the subcategory and navigates to LTwo
 	    And user is able to see the product category name in section title
 	    And user clicks on one of the product category and navigates to LThree
@@ -19,7 +19,7 @@ Scenario: To Edit cart items from Order summary
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8101 @CR-MS
 Scenario: To Remove cart items from Order summary
 		Given user launches the browser and navigates to "ASO_HOME" page  
-		And user clicks on one of the category and navigates to LOne
+		And User navigates to L2 Mens clothing
 	    And user clicks on one of the subcategory and navigates to LTwo
 	    And user is able to see the product category name in section title
 	    And user clicks on one of the product category and navigates to LThree
@@ -37,7 +37,7 @@ Scenario: To Remove cart items from Order summary
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098 @CR-AKK		
 Scenario: To view the Order Summary details on the Check out
 		Given user launches the browser and navigates to "ASO_HOME" page  
-		And user clicks on one of the category and navigates to LOne
+		And User navigates to L2 Mens clothing
 	    And user clicks on one of the subcategory and navigates to LTwo
 	    And user is able to see the product category name in section title
 	    And user clicks on one of the product category and navigates to LThree
@@ -52,7 +52,7 @@ Scenario: To view the Order Summary details on the Check out
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8099 @CR-AKK	
 Scenario: To view the item summary with number of items
 Given user launches the browser and navigates to "ASO_HOME" page  
-		And user clicks on one of the category and navigates to LOne
+		And User navigates to L2 Mens clothing
 	    And user clicks on one of the subcategory and navigates to LTwo
 	    And user is able to see the product category name in section title
 	    And user clicks on one of the product category and navigates to LThree
@@ -67,7 +67,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-9685 @CR-AKK			
 Scenario: Verify To view the item summary with number of pick up items
 Given user launches the browser and navigates to "ASO_HOME" page  
-		And user clicks on one of the category and navigates to LOne
+		And User navigates to L2 Mens clothing
 	    And user clicks on one of the subcategory and navigates to LTwo
 	    And user is able to see the product category name in section title
 	    And user clicks on one of the product category and navigates to LThree

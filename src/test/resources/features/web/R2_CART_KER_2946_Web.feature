@@ -3,7 +3,7 @@ Feature: Verify accepted Payment Display in Cart
 @R2_Web @R2_Regression  @KER-2946 @ZYP_CART_K2946-7993 @CR-RKA 
 Scenario: Verify if unauthenticated user can view Accepted Payment Methods
     Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -26,7 +26,7 @@ Scenario: Verify if unauthenticated user can view Accepted Payment Methods
 Scenario: Verify if unauthenticated user can view Accepted Payment Methods
         Given user launches the browser and navigates to "ASO_HOME" page 
 		Then user able to signin 
-		When user clicks on one of the category and navigates to LOne
+		And User navigates to L2 Mens clothing
         Then user clicks on one of the subcategory and navigates to LTwo
         And user is able to see the product category name in section title
         Then user clicks on one of the product category and navigates to LThree

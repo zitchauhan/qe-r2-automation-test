@@ -4,7 +4,7 @@ Feature: Display Estimated Tax and Total in Cart
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2927 @ZYP_CART_K2927-8126 @CR-SK 
 Scenario: To verify Tax recalculation when items are edited 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -23,7 +23,7 @@ Scenario: To verify Tax recalculation when items are edited
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2927 @ZYP_CART_K2927-8127 @CR-SK 
 Scenario: To verify Tax recalculation when items are edited 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -42,7 +42,7 @@ Scenario: To verify Tax recalculation when items are edited
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2927 @ZYP_CART_K2927-8128 @CR-SK 
 Scenario: To verify Tax recalculation when quantity is 0
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     And user clicks on one of the subcategory and navigates to LTwo
     And user clicks on one of the product category and navigates to LThree
 	And User is navigated to pdp page
@@ -68,7 +68,7 @@ Scenario: To Verify Estimated Tax under the Order Summary in Cart - Authentic Us
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -86,7 +86,7 @@ Scenario: To Verify Estimated Tax under the Order Summary in Cart - Authentic Us
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2927 @ZYP_CART_K2927-8129 @CR-SK 
 Scenario: To verify Tax recalculation when switch between Shipping & Store Pick up
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -106,7 +106,7 @@ Scenario: To verify Tax recalculation when switch between Shipping & Store Pick 
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2927 @ZYP_CART_K2927-9652 @CR-RK 
 Scenario: To verify Tax recalculation when user switches from Shipping to store pickup 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -126,7 +126,7 @@ Scenario: To verify Tax recalculation when user switches from Shipping to store 
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-2927 @ZYP_CART_K2927-9653 @CR-RK
 Scenario: To verify Tax recalculation when user switches from store pickup to  Shipping
 Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the category and navigates to LOne 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
@@ -146,7 +146,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2927 @ZYP_CART_K2927-8130 @CR-SK 
 Scenario: To verify Tax recalculation when switch between Shipping & Store Pick up
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 

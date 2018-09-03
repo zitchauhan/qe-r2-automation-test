@@ -3,7 +3,7 @@ Feature: Verify Product Blade in Cart
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-2939 @ZYP_CART_K2939-9615 @CR-AKK 
 Scenario: To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -17,7 +17,7 @@ Scenario: To Verify Image for selected SKU is be displayed on product blade for 
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8071 @CR-AKK 
 Scenario: To view details specific to an item in the cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -48,7 +48,7 @@ To verify Shipping radio button - Authenticated user With store selected in My A
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -66,7 +66,7 @@ To verify Shipping radio button - Authenticated user With store selected in My A
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8080 @CR-AKK 
 Scenario: Desktop - To verify Quantity input field 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -83,7 +83,7 @@ Scenario: Desktop - To verify Quantity input field
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8073 @CR-AKK 
 Scenario: To Verify Thumbnail Image 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -97,7 +97,7 @@ Scenario: To Verify Thumbnail Image
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8074 @CR-AKK 
 Scenario: To verify Product name dynamic linking 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -111,7 +111,7 @@ Scenario: To verify Product name dynamic linking
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8082 @CR-AKK 
 Scenario: To verify Remove Link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -126,7 +126,7 @@ Scenario: To verify Remove Link
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8078 @CR-AKK 
 Scenario: To verify In-store Pick up radio button - with My Store info on My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -142,7 +142,7 @@ Scenario: To verify In-store Pick up radio button - with My Store info on My Acc
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8075 @CR-AKK 
 Scenario: To verify Shipping radio button - Unauthenticated user 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -162,7 +162,7 @@ Scenario: To verify Shipping radio button - Authenticated user With out store se
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -178,7 +178,7 @@ Scenario: To verify Shipping radio button - Authenticated user With out store se
 @R2_Web @R2_Regression @R2_All @P-Lowest @C-Cart @KER-2939 @ZYP_CART_K2939-8085 @CR-AKK 
 Scenario: To verify Est.Arrival Tool Tip 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -193,7 +193,7 @@ Scenario: To verify Est.Arrival Tool Tip
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8081 @CR-AKK 
 Scenario: To verify Quantity input field 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
@@ -211,7 +211,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree  
@@ -229,7 +229,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree  

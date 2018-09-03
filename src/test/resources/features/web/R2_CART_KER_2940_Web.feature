@@ -3,7 +3,7 @@ Feature: Verify Itemized Subtotal in Cart
 	@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8052 @CR-DPK
 	Scenario: To view price of each item in cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
@@ -28,7 +28,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And user enter the valid password "<Password>" 
 	And user click on signin button 
     Then User clicks on ASO Logo and should be navigated to Home Page
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
@@ -49,7 +49,7 @@ Feature: Verify Itemized Subtotal in Cart
 	@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8055 @CR-DPK
 	Scenario: To verify if the Promo Code Discount is applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
@@ -68,7 +68,7 @@ Feature: Verify Itemized Subtotal in Cart
 	@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8056 @CR-DPK
 	Scenario: To verify if the Military Discount is applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -90,7 +90,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And user enter the valid password "<Password>" 
 	And user click on signin button 
     Then User clicks on ASO Logo and should be navigated to Home Page
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -105,7 +105,7 @@ Feature: Verify Itemized Subtotal in Cart
 	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8062 @CR-DPK
 	Scenario: To verify Estimated Taxes for all the items in the Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -126,7 +126,7 @@ Feature: Verify Itemized Subtotal in Cart
 	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8063 @CR-DPK
 	Scenario: To verify Total for all the items in the Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -147,7 +147,7 @@ Feature: Verify Itemized Subtotal in Cart
 	@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2940 @ZYP_CART_K2940-8064 @CR-DPK
 	Scenario: To verify updated estimated Tax when cart is edited
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -166,7 +166,7 @@ Feature: Verify Itemized Subtotal in Cart
 	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8065 @CR-DPK
 	Scenario: To verify Mixed Promo's discounts applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -206,7 +206,7 @@ Scenario: To verify Estimated Shipping greater than zero
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2940 @ZYP_CART_K2940-8053 @CR-AKK 	
 Scenario: To view the hierarchy of itemizations in Order Summary in Cart
 Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing 
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -224,7 +224,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
     And user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     And user clicks on one of the product category and navigates to LThree

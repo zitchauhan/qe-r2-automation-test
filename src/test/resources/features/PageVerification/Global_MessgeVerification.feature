@@ -6,5 +6,6 @@ Feature: Message/Text Verification
     Then Verify the message on the page
     |# Following Error Message should show on the page|
     |All Rights Reserved|
+    |All Rights Reserved|
 		
 	

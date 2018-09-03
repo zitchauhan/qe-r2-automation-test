@@ -75,8 +75,8 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='Remove from Cart'] | //*[@data-auid='crt_btnRmvFromCart_${1}']")
 	public WebElement AS_btnRemoveFromCart;
 
-	@FindBy(xpath = "(//*[contains(text(),'Item Added Successfully')])[2]")
-	public WebElement AS_txtItemAddedSuccessfully;
+	@FindBy(xpath = "(//*[contains(text(),'Item Added Successfully')])[2] | //*[contains(text(),'Item Added Successfully')]")
+	public WebElement AS_txtItemAddedSuccessfully; // 3sep
 
 	@FindBy(xpath = "//div[text()='Subtotal']/..")
 	public WebElement AS_txtSubtotalCart;

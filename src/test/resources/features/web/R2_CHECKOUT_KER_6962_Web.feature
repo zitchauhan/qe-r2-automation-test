@@ -3,7 +3,7 @@ Feature: Verify Gift Card - Payment Processing
 @R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-6962 @ZYP_CART_K6962-8890 @CR-SK 
 Scenario: Verify applied gift cards should be displayed to the users
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
@@ -28,7 +28,7 @@ Scenario: Verify applied gift cards should be displayed to the users
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6962 @ZYP_CART_K6962-8899 @CR-SK 
 Scenario: Verify Once a gift card is applied, a Remove option should be displayed to the user. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on one of the category and navigates to LOne 
+	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 

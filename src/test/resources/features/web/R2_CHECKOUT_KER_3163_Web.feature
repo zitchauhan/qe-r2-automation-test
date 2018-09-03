@@ -3,7 +3,7 @@ Feature: View/Select Shipping Address in Checkout
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9407 @CR-AKK 
  Scenario: Verify if user can land on checkout page
    Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on one of the category and navigates to LOne
+	And User navigates to L2 Mens clothing
    Then user clicks on one of the subcategory and navigates to LTwo
    And user is able to see the product category name in section title
    Then user clicks on one of the product category and navigates to LThree
