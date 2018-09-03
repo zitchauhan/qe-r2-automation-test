@@ -2,7 +2,6 @@ package com.aso.qe.test.stepdefinition.api;
 
 
 import static org.testng.Assert.assertNotNull;
-import static org.testng.Assert.assertNull;
 import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
@@ -165,7 +164,7 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" with \"(.*?)\" endpoint for Available Shipping Modes with StoreId$")
 	public void with_endpoint_for_Available_Shipping_Modes_with_StoreId(String url, String extension) throws Throwable {
-		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+extension+loadProps.getTestDataProperty("API-StoreId");
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+loadProps.getTestDataProperty(extension)+loadProps.getTestDataProperty("API-StoreId");
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithGuestUserCookies(endpoints);
 	}
