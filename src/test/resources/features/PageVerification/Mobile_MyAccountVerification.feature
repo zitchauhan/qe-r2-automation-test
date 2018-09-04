@@ -36,6 +36,7 @@ Feature: Debug
 		|AddressPage_Default_txt					|
 				
 		|#Verify following elements in Payment page		|
+		|PaymentPage_Payment_lnk_mobile					|
 		|PaymentPage_PaymentsHeader_label				|
 		|PaymentPage_CreditCardHeader_label				|
 		|PaymentPage_GiftCardHeader_label				|
