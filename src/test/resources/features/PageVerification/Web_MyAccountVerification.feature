@@ -30,6 +30,7 @@ Scenario: Verify MyAccount
 		|AddressPage_Cancel_btn						|
 		|AddressPage_Edit_btn						|
 		|AddressPage_SetAsDefault_btn				|
+		|AddressPage_Default_txt					|		
 		
 		|#Verify following elements in Payment page		|
 		|PaymentPage_PaymentsHeader_label				|

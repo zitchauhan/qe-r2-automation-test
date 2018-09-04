@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -80,7 +81,12 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 				else if (currentElement.equalsIgnoreCase("AddressPage_Edit_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnEdit)); 
 				else if (currentElement.equalsIgnoreCase("AddressPage_SetAsDefault_btn"))
-					assertTrue(isDisplayed(r2MyAccountPo.setAsDefaultBtn));
+					assertTrue(isDisplayed(r2MyAccountPo.setAsDefaultBtn));				
+				else if (currentElement.equalsIgnoreCase("AddressPage_Default_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.default_txt));
+				else if (currentElement.equalsIgnoreCase("BurgerMenu_MyAccount_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.myAccount_txt_Mobile));
+				
 				// ===============================================================================
 				//// Payment
 				// ===============================================================================

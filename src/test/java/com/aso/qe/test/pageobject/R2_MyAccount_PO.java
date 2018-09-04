@@ -154,7 +154,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//h5[.='Sign in']")
 	public WebElement headerSignIn;
 
-	@FindBy(xpath = "//div[contains(text(), 'Hello')]")
+	@FindBy(xpath = "//*[contains(text(), 'Hello')]")
 	public WebElement txtHelloMessage;
 
 	@FindBy(xpath = "//p[.='The combination of Email Address and Password is incorrect. Please try again.']")
@@ -515,6 +515,14 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='add-new-Credit-Card-btn']")
 	public WebElement addNewCardCta; // 28 Aug - GK
+	
+	 @FindBy(xpath="//*[text()='DEFAULT']") 
+	 public WebElement default_txt;
+	 
+	 @FindBy(xpath="//*[@data-auid='myAccountCta_m']")
+	 public WebElement myAccount_txt_Mobile; 
+	 
+
 
 	/***************************** END XPAHTS ***********************************/
 

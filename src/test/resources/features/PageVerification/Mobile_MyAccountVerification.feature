@@ -4,6 +4,9 @@ Feature: Debug
 	Scenario: Verify MyAccount
 	Then Verify below Sub/Main Module of My Account 
 		|# Verify following elements in Sign in/login page	|
+		|BurgerMenu_MyAccount_txt				   			|
+	
+		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
 		|SignInPage_SignIn_btn								|
@@ -30,6 +33,7 @@ Feature: Debug
 		|AddressPage_Cancel_btn						|
 		|AddressPage_Edit_btn						|
 		|AddressPage_SetAsDefault_btn				|
+		|AddressPage_Default_txt					|
 				
 		|#Verify following elements in Payment page		|
 		|PaymentPage_PaymentsHeader_label				|
