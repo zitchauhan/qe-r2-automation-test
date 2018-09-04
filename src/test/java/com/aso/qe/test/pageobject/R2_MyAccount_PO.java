@@ -99,6 +99,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnadd_address_empty_btn']")
 	public WebElement addNewAddressBtn; // CR-SK, Date 28 Aug 2018
 
+	 @FindBy(xpath="//*[@data-auid='btnundefined']")
+	 public WebElement setAsDefaultBtn;//RKA 3 aug added 
+	
 	@FindBy(xpath = "//*[@auid='First Name-input']") // CR-SK, 28 Aug 2018
 	public WebElement adr_inpFirstName;
 

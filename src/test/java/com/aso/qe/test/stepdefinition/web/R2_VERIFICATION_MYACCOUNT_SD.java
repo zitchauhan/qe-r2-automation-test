@@ -79,6 +79,8 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.btnCancelInAddCreditCard));
 				else if (currentElement.equalsIgnoreCase("AddressPage_Edit_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnEdit)); 
+				else if (currentElement.equalsIgnoreCase("AddressPage_SetAsDefault_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.setAsDefaultBtn));
 				// ===============================================================================
 				//// Payment
 				// ===============================================================================
@@ -210,7 +212,7 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					}
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_AddNewCreditCard"))
 					assertTrue(isDisplayed(r2MyAccountPo.addNewCardCta));
-
+								
 				// ===============================================================================
 				//// Payment > Add new gift card
 				// ===============================================================================

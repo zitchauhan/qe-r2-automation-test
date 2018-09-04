@@ -29,7 +29,8 @@ Feature: Debug
 		|AddressPage_Add_btn						|
 		|AddressPage_Cancel_btn						|
 		|AddressPage_Edit_btn						|
-		
+		|AddressPage_SetAsDefault_btn				|
+				
 		|#Verify following elements in Payment page		|
 		|PaymentPage_PaymentsHeader_label				|
 		|PaymentPage_CreditCardHeader_label				|
