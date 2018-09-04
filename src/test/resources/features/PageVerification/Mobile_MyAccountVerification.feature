@@ -3,7 +3,7 @@ Feature: Debug
 
 	Scenario: Verify MyAccount
 	Then Verify below Sub/Main Module of My Account 
-		|# Verify following elements in Sign in/login page	|
+		|# Verify following elements in home page			|
 		|BurgerMenu_MyAccount_txt				   			|
 	
 		|# Verify following elements in Sign in/login page	|

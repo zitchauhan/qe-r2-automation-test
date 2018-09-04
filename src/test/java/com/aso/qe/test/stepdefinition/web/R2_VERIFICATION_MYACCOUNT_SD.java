@@ -90,6 +90,8 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 				// ===============================================================================
 				//// Payment
 				// ===============================================================================
+				else if (currentElement.equalsIgnoreCase("PaymentPage_Payment_lnk_mobile"))
+					assertTrue(isDisplayed(r2MyAccountPo.lnkPayment_Mobile));				
 				else if (currentElement.equalsIgnoreCase("PaymentPage_PaymentsHeader_label"))
 					assertTrue(isDisplayed(r2MyAccountPo.headerPayments));
 				else if (currentElement.equalsIgnoreCase("PaymentPage_CreditCardHeader_label"))

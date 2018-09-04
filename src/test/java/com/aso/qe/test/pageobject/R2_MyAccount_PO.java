@@ -78,7 +78,6 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//h5[text()='PROFILE']")
 	public WebElement txtMyAccountDescription; // KER-4249 CR-RK -Updated
 
-	
 	// End KER-4249 CR-RK
 
 	// Start KER-4232 CR-MS
@@ -89,20 +88,20 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public WebElement logIn;
 
 	@FindBy(xpath = "//*[@data-auid='email_input']")
-	public WebElement emailAddress;//KER-4023 CR-RK 3-Sep
+	public WebElement emailAddress;// KER-4023 CR-RK 3-Sep
 
 	@FindBy(xpath = "//*[@data-auid='password_input']")
 	public WebElement password;
 
-	@FindBy(xpath="//*[text()='address  Book']")
+	@FindBy(xpath = "//*[text()='address  Book']")
 	public WebElement addressBook;
 
 	@FindBy(xpath = "//*[@data-auid='btnadd_address_empty_btn']")
 	public WebElement addNewAddressBtn; // CR-SK, Date 28 Aug 2018
 
-	 @FindBy(xpath="//*[@data-auid='btnundefined']")
-	 public WebElement setAsDefaultBtn;//RKA 3 aug added 
-	
+	@FindBy(xpath = "//*[@data-auid='btnundefined']")
+	public WebElement setAsDefaultBtn;// RKA 3 aug added
+
 	@FindBy(xpath = "//*[@auid='First Name-input']") // CR-SK, 28 Aug 2018
 	public WebElement adr_inpFirstName;
 
@@ -158,7 +157,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(), 'Hello')]")
 	public WebElement txtHelloMessage;
 
-	@FindBy(xpath = "//*[.='The specified logon ID or password are not correct. Verify the information provided and log in again.']")
+	@FindBy(xpath = "//p[.='The combination of Email Address and Password is incorrect. Please try again.']")
 	public WebElement txtIncorrectCombinationError;
 
 	@FindBy(xpath = "//p[contains(text(), 'Sorry, we do not have an account registered with this email address. Please enter a registered email address or create a new account')]")
@@ -484,7 +483,6 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(),'AVAILABLE BALANCE')]") // CR-SK 29 Aug
 	public WebElement txtAvailableBalance;
 
-
 	// Start KER-2920 CR-RK
 
 	@FindBy(xpath = "//span[.='Card removed']")
@@ -516,15 +514,19 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='add-new-Credit-Card-btn']")
 	public WebElement addNewCardCta; // 28 Aug - GK
+
+	@FindBy(xpath = "//*[text()='DEFAULT']")
+	public WebElement default_txt;
+
+	@FindBy(xpath = "//*[@data-auid='myAccountCta_m']")
+	public WebElement myAccount_txt_Mobile;
+
+	@FindBy(xpath = "//*[@data-auid='Address Book_m']")
+	public WebElement addressBook_M;
 	
-	 @FindBy(xpath="//*[text()='DEFAULT']") 
-	 public WebElement default_txt;
-	 
-	 @FindBy(xpath="//*[@data-auid='myAccountCta_m']")
-	 public WebElement myAccount_txt_Mobile; 
-	 
-		@FindBy(xpath="//*[@data-auid='Address Book_m']")
-		public WebElement addressBook_M; 
+	@FindBy(xpath = "//*[text()='payment']")
+	public WebElement lnkPayment_Mobile; // CR-RK KER-2920 Sep 4 
+ 
 
 
 	/***************************** END XPAHTS ***********************************/
