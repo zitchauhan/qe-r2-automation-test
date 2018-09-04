@@ -35,20 +35,26 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	    setInputText(r2CartPo.inputFindaStoreHomePage, webPropHelper.getTestDataProperty(arg1));
 	}
 
-	@And("^user click on submit button$")
+/*	@And("^user click on submit button$")
 	public void user_click_on_submit_button() throws Throwable {
-		assertTrue(clickOnButton(r2CartPo.btnZipcodeSubmit));
-		Thread.sleep(2000);
+		if("mobile".equalsIgnoreCase(testtype)){	
+			assertTrue(clickOnButton(r2CartPo.btnZipcodeSubmit_m));
+			Thread.sleep(2000);
+		}else {
+			assertTrue(clickOnButton(r2CartPo.btnZipcodeSubmit));
+			Thread.sleep(2000);	
+		}
+		
 	}
-
+*/
 	@Then("^user verify the results based on entering zipcode$")
 	public void user_verify_the_results_based_on_entering_zipcode() throws Throwable {
 		waitForElement(r2CartPo.txtStoreResult);
 		assertTrue(isDisplayed(r2CartPo.txtStoreResult));
 	}
 	
-	@And("^user very Find a Store popup$")
-	public void user_very_Find_a_Store_popup() throws Throwable {
+	@And("^user verify Find a Store popup$")
+	public void user_verify_Find_a_Store_popup() throws Throwable {
 		assertTrue(isDisplayed(r2CartPo.txtFindaStore));
 	}
 	

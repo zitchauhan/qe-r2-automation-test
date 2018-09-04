@@ -61,7 +61,7 @@ public class R2_CART_K2942_SD extends CommonActionHelper {
 		int quantityFromSite = Integer.parseInt(str1);
 		int quantityFromProperty = Integer.parseInt(webPropHelper.getTestDataProperty(quantity3));
 		assertTrue(quantityFromSite == quantityFromProperty);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	}
 
 	@Then("^user should not be allowed to enter any non-numeric value in the input$")
@@ -112,5 +112,10 @@ public class R2_CART_K2942_SD extends CommonActionHelper {
 	public void verify_the_Quantity_is_updated() throws Throwable {
 		String quantity= r2SanityPo.AS_inputQty.getAttribute("value");
 		assertTrue(!quantity.isEmpty());
+	}
+	
+	@Then("^user verfiy the an error message$")
+	public void user_verfiy_the_an_error_message() throws Throwable {
+		assertTrue(isDisplayed(r2CartPo.ErrorMsgLimitedStack));
 	}
 }
