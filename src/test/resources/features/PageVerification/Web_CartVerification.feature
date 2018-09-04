@@ -69,7 +69,7 @@ Feature: Debug
 		|EstimatedShipping_txt|
 		|EstimatedTaxes_txt|
 		|ZipCode_txt|
-		
+		|EstimatedShippingPrice_Txt|
 		
 		
 		

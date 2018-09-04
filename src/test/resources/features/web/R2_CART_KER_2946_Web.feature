@@ -1,9 +1,9 @@
 Feature: Verify accepted Payment Display in Cart
 
-@R2_Web @R2_Regression  @KER-2946 @ZYP_CART_K2946-7993 @CR-RKA 
+@R2_Web @R2_Regression  @KER-2946 @ZYP_CART_K2946-7993 @CR-RK
 Scenario: Verify if unauthenticated user can view Accepted Payment Methods
     Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
+    And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
@@ -15,16 +15,16 @@ Scenario: Verify if unauthenticated user can view Accepted Payment Methods
 		|Visa_img|
 		|MasterCard_img|
 		|Paypal_img|
-		|GooglePay_img|
 		|ApplePay_img|
 		|AmericanExpress_img|
 		|Discover_img|
 		
 		
 		
-@R2_Web @R2_Regression  @KER-2946 @ZYP_CART_K2946-7994 @CR-RKA 
+@R2_Web @R2_Regression  @KER-2946 @ZYP_CART_K2946-7994 @CR-RK
 Scenario: Verify if unauthenticated user can view Accepted Payment Methods
-        Given user launches the browser and navigates to "ASO_HOME" page 
+        Given user launches the browser and navigates to "ASO_HOME" page
+        When user clicks on SignIn link from global header 
 		Then user able to signin 
 		And User navigates to L2 Mens clothing
         Then user clicks on one of the subcategory and navigates to LTwo
@@ -38,7 +38,6 @@ Scenario: Verify if unauthenticated user can view Accepted Payment Methods
 		|Visa_img|
 		|MasterCard_img|
 		|Paypal_img|
-		|GooglePay_img|
 		|ApplePay_img|
 		|AmericanExpress_img|
 		|Discover_img|

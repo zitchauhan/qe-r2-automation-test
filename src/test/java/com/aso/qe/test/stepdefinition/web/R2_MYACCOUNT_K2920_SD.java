@@ -18,7 +18,8 @@ import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class R2_MYACCOUNT_K2920_SD extends CommonActionHelper {
+public class R2_MYACCOUNT_K2920_SD extends CommonActionHelper 
+{
 
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,

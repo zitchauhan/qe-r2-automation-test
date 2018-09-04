@@ -38,13 +38,13 @@ public class R2_MYACCOUNT_K6941_SD extends CommonActionHelper {
 		UUID uuid = UUID.randomUUID();
 		String randomUUIDString = uuid.toString();
 		String txtemailaddress_random = "abc" + randomUUIDString + "@gmail.com";
-		setInputText(r2MyAccountPo.inputEmailAddress_SignIn, txtemailaddress_random);
+		setInputText(r2MyAccountPo.inputEmailAddress, txtemailaddress_random);//KER-6941 CR-Rk 3-Sep
 	}
 	@Then("^user enter random \"(.*?)\" in signup page$")
 	public void user_enter_random_in_signup_page(String arg1) throws Throwable {
 		//UUID uuid = UUID.randomUUID();
 		//String randomUUIDString = uuid.toString();
 		//String txtemailaddress_random = "abc" + randomUUIDString + "@gmail.com";
-		setInputText(r2MyAccountPo.inputEmailAddress_SignIn, arg1);
+		setInputText(r2MyAccountPo.inputEmailAddress, arg1); //KER-6941 CR-Rk 3-Sep
 	}
 }
