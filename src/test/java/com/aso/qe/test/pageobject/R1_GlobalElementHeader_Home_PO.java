@@ -1576,6 +1576,8 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	}
 
 	public void entertheSearchData(String str) throws Exception{
+		if(str.contentEquals("SKUNumber"))//4 Sep 18, Modified by SK to fetch value from TestData file 
+			str = webPropHelper.getTestDataProperty(str); //4 Sep 18, Modified by SK to fetch value from TestData file
 		if("mobile".equalsIgnoreCase(testtype)){
 			Actions actions = new Actions(driver);
 			actions.moveToElement(txtSearchBox_mobile);

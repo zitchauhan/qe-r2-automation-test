@@ -48,12 +48,6 @@ public class R2_MYACCOUNT_K4011_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2MyAccountPo.txtIncorrectCombinationError));
 	}
 	
-	@Then("^user should get an error message stating email id entered is not registered$")
-	public void user_should_get_an_error_message_stating_email_id_entered_is_not_registered () throws Throwable {
-		assertTrue(isDisplayed(r2MyAccountPo.txtUnregisteredEmailAddressError));
-	}
-
-	
 	@Then("^user should get an error message stating please enter valid email$")
 	public void user_should_get_an_error_message_stating_please_enter_valid_email() throws Throwable {
 		assertTrue(isDisplayed(r2MyAccountPo.txtInvalidEmailAddressError));

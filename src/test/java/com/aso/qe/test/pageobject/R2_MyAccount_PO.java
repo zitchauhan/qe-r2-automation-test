@@ -160,9 +160,6 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//p[.='The combination of Email Address and Password is incorrect. Please try again.']")
 	public WebElement txtIncorrectCombinationError;
 
-	@FindBy(xpath = "//p[contains(text(), 'Sorry, we do not have an account registered with this email address. Please enter a registered email address or create a new account')]")
-	public WebElement txtUnregisteredEmailAddressError; // 23 Aug
-
 	@FindBy(xpath = "//span[.='Please enter the Email Address in a valid format (ex. abc@xyz.com)']")
 	public WebElement txtInvalidEmailAddressError;
 

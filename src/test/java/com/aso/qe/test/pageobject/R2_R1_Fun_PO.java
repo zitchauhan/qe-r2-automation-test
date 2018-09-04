@@ -10,7 +10,7 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 
 	/***************************** START XPAHTS **********************************/
 	// Start KER-4249 CR-RK
-	@FindBy(xpath = "//a[text()='Sign In']") // CR-SK 29 Aug
+	@FindBy(xpath = "//*[@data-auid='signInCta_m']") // Modified CR-SK 4 Sep
 	public WebElement lnkSignInMobile;
 
 	// Start KER-3613 CR-RK
