@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
+//import static org.testng.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
@@ -8,9 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
+import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -19,6 +22,7 @@ public class R2_CART_K3511_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R2_CART_K3511_SD.class);
 	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
+	R2_MyAccount_PO r2MyAccountPo=PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	public String beforeChangeZipcode;
 	public String afterChangeZipcode;
 	
@@ -57,5 +61,47 @@ public class R2_CART_K3511_SD extends CommonActionHelper {
 	public void verify_that_estimated_shipping_is_displayed_on_the_basis_of_detected_Geo_location() throws Throwable {		
 		assertTrue(isDisplayed(r2SanityPo.AS_txtEstimatedShippingCart));		
 	  }
+
+	@Then("^user fill the Address book details$")
+	public void user_fill_the_Address_book_details() throws Throwable {
+	  
+		if(isDisplayed(r2MyAccountPo.default_txt)||isDisplayed(r2MyAccountPo.setAsDefaultBtn)) {
+			logger.info("%%%%%%%%%%%%%%%%%%%%  Address book detail is already filled  %%%%%%%%%%%%%");
+		
+		}
+		else	{
+			logger.info("%%%%%%%%%%%%%%%%%%%%  Address book detail is NOT filled  %%%%%%%%%%%%%");
+	
+			assertTrue(clickOnButton(r2MyAccountPo.addNewAddressBtn));
+			
+//			setInputText(r2MyAccountPo.adr_inpFirstName, "test1");
+//	    setInputText(r2MyAccountPo.adr_inpLastName, "test2");
+//	    setInputText(r2MyAccountPo.adr_inpAddress1, "test3");
+//	    setInputText(r2MyAccountPo.adr_inpzipCode, "78710");
+//	    Thread.sleep(2000);
+//	    setInputText(r2MyAccountPo.adr_inpPhoneNumber, "7896541230");
+//	    assertTrue(clickOnButton(r2MyAccountPo.btnAddInAddressField));
+		
+		//webPropHelper.getTestDataProperty(arg1)
+	    setInputText(r2MyAccountPo.adr_inpFirstName, webPropHelper.getTestDataProperty("UpdateFirstName"));
+	    setInputText(r2MyAccountPo.adr_inpLastName, webPropHelper.getTestDataProperty("UpdateLastName"));
+	    setInputText(r2MyAccountPo.adr_inpAddress1, webPropHelper.getTestDataProperty("UpdateAddress"));
+	    setInputText(r2MyAccountPo.adr_inpzipCode, webPropHelper.getTestDataProperty("UpdateZipcode"));
+	    Thread.sleep(2000);
+	    setInputText(r2MyAccountPo.adr_inpPhoneNumber, webPropHelper.getTestDataProperty("UpdatePhoneNumber"));
+	    assertTrue(clickOnButton(r2MyAccountPo.btnAddInAddressField));
+	    
+		}
+	}
+	
+	
+	@Then("^user change zip code$")
+	public void user_change_zip_code() throws Throwable {
+   assertTrue(clickOnButton(r2CartPo.lnkChangeZipCode));
+   Thread.sleep(2000);
+   setInputText(r2CartPo.inputZipCode, webPropHelper.getTestDataProperty("ZIPCODE"));
+   assertTrue(clickOnButton(r2CartPo.btnCartSubmit));
+	
+	}
 
 }

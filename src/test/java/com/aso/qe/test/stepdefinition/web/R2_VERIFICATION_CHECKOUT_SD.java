@@ -189,7 +189,8 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 						assertTrue(isDisplayed(r2CheckoutPo.PastExpirationDate_Txt));
 					else if (currentElement.equalsIgnoreCase("PleaseEnteRaValidSecurityCode_Txt"))
 						assertTrue(isDisplayed(r2CheckoutPo.PleaseEnteRaValidSecurityCode_Txt));
-					
+					else if (currentElement.equalsIgnoreCase("ChooseCreditcard_Dd"))
+						assertTrue(isDisplayed(r2CheckoutPo.chooseCreditcard_Dd));
 				//*****************Payment Method (END)
 					
 				//****************Gift Card(Start)	
@@ -259,21 +260,7 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 		
 				//*************** Billing Information(End)
 				//Payment(End)
-				// Modified Pick up location BOPIS(Start) 
-					else if (currentElement.equalsIgnoreCase("MePickUp_Drpdwn"))
-						assertTrue(isDisplayed(r2CheckoutPo.MePickUp_Drpdwn));
-					else if (currentElement.equalsIgnoreCase("StorePickupAlternatesFirstName_input"))
-						assertTrue(isDisplayed(r2CheckoutPo.PickupAltrFirstname_input));
-					else if (currentElement.equalsIgnoreCase("StorePickupAlternatesLastName_input"))
-						assertTrue(isDisplayed(r2CheckoutPo.PickupAltrLatstname_input));
-					else if (currentElement.equalsIgnoreCase("StorePickupAlternatesEmail_input"))
-						assertTrue(isDisplayed(r2CheckoutPo.PickupAltrEmail_input));
-					else if (currentElement.equalsIgnoreCase("StorePickupAlternatesPhoneNumber_input"))
-						assertTrue(isDisplayed(r2CheckoutPo.PickupAltrPhone_input));
-					else if (currentElement.equalsIgnoreCase("ErrorMsgRequired"))
-						assertTrue(isDisplayed(r2CheckoutPo.errorMsgRequired));
 				
-				// Modified Pick up location BOPIS(END) 
 				//**********************************************************************************************************************************
 
 				// else if (currentElement.equalsIgnoreCase("temp"))

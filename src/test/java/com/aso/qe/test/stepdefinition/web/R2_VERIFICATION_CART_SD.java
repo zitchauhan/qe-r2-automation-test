@@ -114,6 +114,8 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 					assertTrue(isDisplayed(r2CartPo.lnkChangeZipCode));
 				else if (currentElement.equalsIgnoreCase("ErrorMsgLimitedStack"))
 					assertTrue(isDisplayed(r2CartPo.ErrorMsgLimitedStack));
+				else if (currentElement.equalsIgnoreCase("Discount_Txt"))
+					assertTrue(isDisplayed(r2CartPo.discount_Txt));
 				
 				// Order Summary Finish
 	//************************************************************************************************			
@@ -172,6 +174,7 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 						assertTrue(isDisplayed(r2CartPo.txtInvalidPromo));
 					else if (currentElement.equalsIgnoreCase("Promocode_Txt"))
 						assertTrue(isDisplayed(r2CartPo.txtPromocodeCart));
+						
 				//Promo Code end
 //*********************************************************************************************************			
 				//When cart is empty (Start)	

@@ -92,6 +92,7 @@ Feature: Debug
 		|UnrecognizedCardNumber_Txt|
 		|PastExpirationDate_Txt|
 		|PleaseEnteRaValidSecurityCode_Txt|
+		|ChooseCreditcard_Dd|
 		|#%%%%%  Gift Card  %%%%%%%%%%|
 		|Plus_GiftCard|
 		|Hide_GiftCard|
@@ -124,16 +125,6 @@ Feature: Debug
 		|#%%%%%%%  PayPal  %%%%%%%%%%|
 		|PayPal_radioBtm|
 		|PayPalCheckOut_Btn|
-		
-		
-		|#%%%%%%%  Pickup DropDown %%%%%%%%%%|
-		|MePickUp_Drpdwn|
-		|StorePickupAlternatesFirstName_input|
-		|StorePickupAlternatesLastName_input|
-		|StorePickupAlternatesEmail_input|
-		|StorePickupAlternatesPhoneNumber_input|	
-		|ErrorMsgRequired|
-		
 		##########Ends CR-RKA	
 		
 	

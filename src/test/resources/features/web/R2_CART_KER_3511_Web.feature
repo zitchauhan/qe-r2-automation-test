@@ -49,9 +49,9 @@ Scenario: Verify if authenticated user can view updated estimated shipping when 
 	Scenario: Verify if authenticated user can view estimated shipping based on zip code saved to their account
 	 Given user launches the browser and navigates to "ASO_HOME" page 
      And clicks on SignIn button in home page
-     And user enter the valid emailaddress "RawUser" 
-	 And user enter the valid password "Password" 
-     And user click on signin button  
+    And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
 	  And user lands on My Account page and click on adress
 	 Then user fill the Address book details 
 	 And user clicks on one of the category and navigates to LOne
@@ -72,9 +72,9 @@ Scenario: Verify if authenticated user can view updated estimated shipping when 
 	Scenario: Verify if authenticated user can view updated estimated shipping based on updated zip code saved in account      
 Given user launches the browser and navigates to "ASO_HOME" page 
      And clicks on SignIn button in home page
-     And user enter the valid emailaddress "RawUser" 
-	 And user enter the valid password "Password" 
-     And user click on signin button  
+     And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
 	  And user lands on My Account page and click on adress
 	 Then user fill the Address book details 
 	 And user clicks on one of the category and navigates to LOne

@@ -70,7 +70,7 @@ Feature: Debug
 		|EstimatedTaxes_txt|
 		|ZipCode_txt|
 		|EstimatedShippingPrice_Txt|
-		
+		|Discount_Txt|
 		
 		
 		|# Verify following elements in Cart page"PromoCode"|
