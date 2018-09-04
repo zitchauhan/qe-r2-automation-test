@@ -2,9 +2,12 @@ package com.aso.qe.test.stepdefinition.api;
 
 
 import org.apache.log4j.Logger;
+import org.json.simple.JSONObject;
 
 import com.aso.qe.framework.api.helpers.JSONValidationUtils;
 import com.aso.qe.framework.api.helpers.MiniCartJsonResponseHelper;
+import com.aso.qe.framework.api.json.JsonReaderCommon;
+import com.aso.qe.framework.common.FrameWorkHelper;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -59,7 +62,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		logger.debug("Add ID::"+ addressID);
 		System.setProperty("AddressId", addressID);
 	}
-
+	
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for getting Wishlist of a profile$")
 	public void endpoint_with_for_getting_Wishlist_of_a_profile(String Addurl, String extension) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
@@ -103,7 +106,6 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		System.setProperty("WalletId", walletID);
 	}
 
-
 	@Given("^\"(.*?)\" endpoint for getting profile details of a profile$")
 	public void endpoint_for_getting_profile_details_of_a_profile(String Addurl) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId");
@@ -145,5 +147,23 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addressurl);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallForReg(endpoints, loadProps.getTestDataProperty(AddressVerificationRequest));
-	} 
+	}
+	
+	@Given("^\"(.*?)\" with  \"(.*?)\" endpoint for Order Get GiftCard Details$")
+	public void with_endpoint_for_Get_GiftCard_Details(String url, String extension) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+extension;
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICallWithCookie(endpoints);
+	}
+	
+	@Given("^\"(.*?)\" endpoint with \"(.*?)\" and \"(.*?)\" for Profile address update of user$")
+	public void endpoint_with_and_for_Profile_address_update_of_user(String url, String extension, String storeId) throws Throwable {
+		JSONObject addressjsonObject = getFirstAddressDetails();
+		String addressId = (String) addressjsonObject.get("addressId");
+		addressjsonObject.put("phone1", FrameWorkHelper.getRandomNumber(10));
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("ProfileId")+extension+addressId+storeId;
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, addressjsonObject.toJSONString());
+	}
+
 }
