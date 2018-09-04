@@ -605,7 +605,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//span[text()='Color']")public WebElement txtColor;
 	@FindBy(xpath = "//span[contains(text(),'Size')]")public WebElement txtSize;
 	@FindBy(xpath = "(//*[contains(text(),'Est. Arrival')])")public WebElement txtEstArrival;
-	
+	@FindBy(xpath ="//div[contains(text(), \"We're sorry!\")]")public WebElement ErrorMsgLimitedStack;// KER-2942 CR-AKK 3Sep
+		
 //	@FindBy(xpath = "//*[text()='$']/following::div")//duplicate Done
 //	public WebElement txtActualPrice;
 	//Your Cart item details Finish
@@ -657,10 +658,10 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[1]") public WebElement iconVisa;
 	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[2]") public WebElement iconMasterCard;
 	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[3]") public WebElement iconPaypal;
-	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[4]") public WebElement iconGooglePay;
-	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[5]") public WebElement iconApplePay;
-	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[6]") public WebElement iconAmericanExpress;
-	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[7]") public WebElement iconDiscover;
+	//@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[4]") public WebElement iconGooglePay;//De-scoped KER-2946 CR-RK
+	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[4]") public WebElement iconApplePay;
+	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[5]") public WebElement iconAmericanExpress;
+	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[6]") public WebElement iconDiscover;
 	
 	
 	//We Accept Finish

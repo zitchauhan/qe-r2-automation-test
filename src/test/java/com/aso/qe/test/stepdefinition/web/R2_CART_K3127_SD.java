@@ -45,7 +45,7 @@ public class R2_CART_K3127_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CartPo.iconVisa));
 		assertTrue(isDisplayed(r2CartPo.iconMasterCard));
 		assertTrue(isDisplayed(r2CartPo.iconPaypal));
-		assertTrue(isDisplayed(r2CartPo.iconGooglePay));
+	//	assertTrue(isDisplayed(r2CartPo.iconGooglePay)); /DE-Scoped
 		assertTrue(isDisplayed(r2CartPo.iconApplePay));
 		assertTrue(isDisplayed(r2CartPo.iconAmericanExpress));
 		assertTrue(isDisplayed(r2CartPo.iconDiscover));

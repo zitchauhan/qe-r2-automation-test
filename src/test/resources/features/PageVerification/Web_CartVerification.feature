@@ -27,7 +27,7 @@ Feature: Debug
 		|Color_txt|
 		|Size_txt|
 		|EstArrival_txt|
-	
+	    |ErrorMsgLimitedStack|
 	
 		|# Verify following elements in Cart page"We Accept"|
 		|Visa_img|

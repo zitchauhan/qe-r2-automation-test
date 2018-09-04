@@ -112,6 +112,8 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 				
 				else if (currentElement.equalsIgnoreCase("ZipCode_txt"))
 					assertTrue(isDisplayed(r2CartPo.lnkChangeZipCode));
+				else if (currentElement.equalsIgnoreCase("ErrorMsgLimitedStack"))
+					assertTrue(isDisplayed(r2CartPo.ErrorMsgLimitedStack));
 				
 				// Order Summary Finish
 	//************************************************************************************************			
@@ -151,8 +153,8 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 						assertTrue(isDisplayed(r2CartPo.iconMasterCard));
 					else if (currentElement.equalsIgnoreCase("Paypal_img"))
 						assertTrue(isDisplayed(r2CartPo.iconPaypal));
-					else if (currentElement.equalsIgnoreCase("GooglePay_img"))
-						assertTrue(isDisplayed(r2CartPo.iconGooglePay));
+//					else if (currentElement.equalsIgnoreCase("GooglePay_img"))/De-scoped BY CR- RK
+//						assertTrue(isDisplayed(r2CartPo.iconGooglePay));
 					else if (currentElement.equalsIgnoreCase("ApplePay_img"))
 						assertTrue(isDisplayed(r2CartPo.iconApplePay));
 					else if (currentElement.equalsIgnoreCase("AmericanExpress_img"))

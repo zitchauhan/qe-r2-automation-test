@@ -124,6 +124,16 @@ Feature: Debug
 		|#%%%%%%%  PayPal  %%%%%%%%%%|
 		|PayPal_radioBtm|
 		|PayPalCheckOut_Btn|
+		
+		
+		|#%%%%%%%  Pickup DropDown %%%%%%%%%%|
+		|MePickUp_Drpdwn|
+		|StorePickupAlternatesFirstName_input|
+		|StorePickupAlternatesLastName_input|
+		|StorePickupAlternatesEmail_input|
+		|StorePickupAlternatesPhoneNumber_input|	
+		|ErrorMsgRequired|
+		
 		##########Ends CR-RKA	
 		
 	
