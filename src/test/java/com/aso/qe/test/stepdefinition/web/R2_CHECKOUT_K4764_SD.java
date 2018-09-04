@@ -1,4 +1,4 @@
-package com.aso.qe.test.stepdefinition.web;
+/*package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 
@@ -63,3 +63,4 @@ public class R2_CHECKOUT_K4764_SD extends CommonActionHelper {
 
 	
 }
+*/
