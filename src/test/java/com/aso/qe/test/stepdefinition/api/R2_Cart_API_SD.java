@@ -170,10 +170,10 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 	}
 	
 	@Then("^Validated response details of \"(.*?)\"$")
-	public void validated_response_details_of(String arg1) throws Throwable {
+	public void validated_response_details_of(String key) throws Throwable {
 		JsonPath jsonPathEvaluator = response.jsonPath();
-		String orderID = jsonPathEvaluator.get(arg1);
-		logger.debug("Order ID::"+ orderID);
-		assertNotNull(orderID);
+		String value = jsonPathEvaluator.get(key);
+		logger.debug(key+"::"+ value);
+		assertNotNull(value);
 	}
 }
