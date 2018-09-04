@@ -185,7 +185,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	public void User_navigates_to_L3() throws InterruptedException {
 		if("mobile".equalsIgnoreCase(testtype)){
 			Thread.sleep(2000);
-			assertTrue(clickOnButton(r2SanityPo.AS_btnClothingCategory));
+			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory)); //4Sep
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(r2SanityPo.AS_btnMen_Clothing_Shop));
 			Thread.sleep(2000);

@@ -37,11 +37,11 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	// End KER-3392 CR-RK
 	
 	// Start KER-2927 CR-SK
-	@FindBy(xpath = "//div[contains(text(), 'Estimated Taxes')]/following-sibling::div[1]")
-	public WebElement txtEstimatedTax;
+//	@FindBy(xpath = "//div[contains(text(), 'Estimated Taxes')]/following-sibling::div[1]")
+//	public WebElement txtEstimatedTax;
 
-	@FindBy(xpath = "//div[contains(text(), 'Total')]/following-sibling::div[1]")
-	public WebElement txtTotal;
+//	@FindBy(xpath = "//div[contains(text(), 'Total')]/following-sibling::div[1]")
+//	public WebElement txtTotal;
 	// End KER-2927 CR-SK
 
 	// start KER-6575 CR-MS
@@ -128,24 +128,24 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	public WebElement AS_btnRemoveFromCart;
 	
 	// CR-AKK 25Aug
-	@FindBy(xpath = "//div[text()='Subtotal']/..")
-	public WebElement txtSubTotal;
+//	@FindBy(xpath = "//div[text()='Subtotal']/..")
+//	public WebElement txtSubTotal;
 	
-	@FindBy(xpath = "//div[text()='Estimated Shipping']/..")
-	public WebElement txtEsitmatedShipping;
-	
+//	@FindBy(xpath = "//div[text()='Estimated Shipping']/..")
+//	public WebElement txtEsitmatedShipping;
+//	
 
 	@FindBy(xpath = "//div[text()='Estimated Taxes']/..")
 	public WebElement txtExtimatedTax;
 	
-	@FindBy(xpath ="//div[text()='Total Discount']/..")
-	public WebElement txtTotalDiscount;
+//	@FindBy(xpath ="//div[text()='Total Discount']/..")
+//	public WebElement txtTotalDiscount;
 	
 	@FindBy(xpath ="//*[@data-auid='checkout_order_summary_shipping_items']")
 	public WebElement txtDetailOrderSummary;
 	
-	@FindBy(xpath ="//*[@data-auid='facetdrawerundefined']//button//div[2]")
-	public WebElement txtItems;
+//	@FindBy(xpath ="//*[@data-auid='facetdrawerundefined']//button//div[2]")
+//	public WebElement txtItems;
 	
 	@FindBy(xpath ="//*[text()='Quantity']/../div[2]")
 	public WebElement txtQuantity;
@@ -166,8 +166,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	// End KER-6575 CR-DPK
 
 	// Start KER-2940 CR-AKK
-	@FindBy(xpath = "(//*[@data-auid='checkout_order_summary_edit_cart_link'])[2]")
-	public WebElement btnEditCart;
+//	@FindBy(xpath = "(//*[@data-auid='checkout_order_summary_edit_cart_link'])[2]")
+//	public WebElement btnEditCart;
 
 	@FindBy(xpath = "(//*[@data-auid='btnc_btnCheckout'])[1]")
 	public WebElement btnChekOut;
@@ -213,8 +213,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	// End KER-6821 CR-AKK
 	
 	// Start KER-3127 CR-RK 
-	@FindBy(xpath="//input[@id='paypal']/..")
-	public WebElement rdPaypal;
+//	@FindBy(xpath="//input[@id='paypal']/..")
+//	public WebElement rdPaypal;
 	// End KER-3127 CR-RK
 	
 	
@@ -280,30 +280,30 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 		
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Order Summary')]")public WebElement OrderSummary_Txt;
-//		@FindBy(xpath = "//*[text()='Subtotal']/..")public WebElement txtSubTotal;//subtotal_txt
+		@FindBy(xpath = "//*[text()='Subtotal']/..")public WebElement txtSubTotal;//subtotal_txt
 		@FindBy(xpath="//*[text()='Subtotal']/../*[2]")public WebElement SubTotalPrice_Txt;//subtotal_price
 		
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Shipping')]")public WebElement Shipping_Txt;
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Shipping')]/following-sibling::*[1]")public WebElement ShippingPrice_Txt;
-//		@FindBy(xpath = "//*[text()='Estimated Shipping']/..")public WebElement txtEsitmatedShipping;//estimatedshippint_txt
+		@FindBy(xpath = "//*[text()='Estimated Shipping']/..")public WebElement txtEsitmatedShipping;//estimatedshippint_txt
 		@FindBy(xpath="//*[text()='Estimated Shipping']/../*[2]")public WebElement EstimatedShippingPrice_txt;//estimatedshipping_price
 		
 		
 		@FindBy(xpath="//*[contains(text(),'Taxes')]")public WebElement Taxes_Txt;//taxprice_txt
 		@FindBy(xpath="//*[contains(text(),'Taxes')]/following-sibling::*[1]")public WebElement TaxesPrice_Txt;//taxprice
-		@FindBy(xpath="//*[contains(text(),'Esimated Taxes')]")public WebElement EstimatedTax_Txt;
-//		@FindBy(xpath = "//*[contains(text(),'Esimated Taxes')]/following-sibling::*[1]")public WebElement txtEstimatedTax;//estimatedPrice_Txt
+		@FindBy(xpath="//*[contains(text(),'Estimated Taxes')]")public WebElement EstimatedTax_Txt;
+		@FindBy(xpath = "//*[contains(text(),'Estimated Taxes')]/following-sibling::*[1]")public WebElement txtEstimatedTax;//estimatedPrice_Txt
 		
 		
-//		@FindBy(xpath ="//*[text()='Total Discount']")public WebElement txtTotalDiscount;
+		@FindBy(xpath ="//*[text()='Total Discount']")public WebElement txtTotalDiscount;
 		@FindBy(xpath="//*[text()='Total Discount']/following-sibling::*[1]")public WebElement TotalDiscountPrice_Txt;
 		
-//		@FindBy(xpath = "//*[text()= 'Total']/following-sibling::div[1]")public WebElement txtTotal;//Total_price
+		@FindBy(xpath = "//*[text()= 'Total']/following-sibling::div[1]")public WebElement txtTotal;//Total_price
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[text()='Total']")public WebElement Total_txt;
 		
 		      //*****ITems under Order Summary (Start)
 		
-//		@FindBy(xpath="//*[@data-auid='facetdrawerundefined']//*[contains(text(),'Items')]")public WebElement txtItems;//Item_Txt
+		@FindBy(xpath="//*[@data-auid='facetdrawerundefined']//*[contains(text(),'Items')]")public WebElement txtItems;//Item_Txt
 		
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']/preceding-sibling::*[1]")public WebElement ShippingItemAvailable_Txt;
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']/*[1]")public WebElement ImageShippingItemAvailable ;
@@ -319,7 +319,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']//*[contains(text(),'Quantity')]/following-sibling::*[1]")public WebElement QuantityInput_Txt;
 		
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']//*[contains(text(),'$')]")public WebElement  PriceShippingItemAvailable_Txt;
-//		@FindBy(xpath = "(//*[@data-auid='checkout_order_summary_edit_cart_link'])[2]/*")public WebElement btnEditCart;//EditMyCart_Link
+		@FindBy(xpath = "(//*[@data-auid='checkout_order_summary_edit_cart_link'])[2]/*")public WebElement btnEditCart;//EditMyCart_Link
 		    
 		       //**********ITems under Order Summary (End)
 		//Order Summary(End)
@@ -371,8 +371,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   @FindBy(xpath=" //*[contains(text(),'Send SMS text updates about my order')]/preceding::*[1]")public WebElement SendSMSTextUpdatesAboutMyOrder_checkbox;
 	   @FindBy(xpath="//*[@name='billingAddress1']")public WebElement Adderss_Input;
-	   @FindBy(xpath="//*[@data-auid='checkout_shipping_address_add_more_details_link']")public WebElement AddCompanyNameAptNumberEtcOptional_Txt;
-	   @FindBy(xpath="//*[@placeholder='Add Company Name,Apt. Number,etc. (Optional)']")public WebElement AddCompanyNameAptNumberEtcOptional_Input;
+	   @FindBy(xpath="//*[contains(text(),'Add Company Name, Apt. Number, etc. (Optional)')]")public WebElement AddCompanyNameAptNumberEtcOptional_Txt;
+	   @FindBy(xpath="//*[contains(text(),'Add Company Name, Apt. Number, etc. (Optional)')]/following::*[2]")public WebElement AddCompanyNameAptNumberEtcOptional_Input;
 	   
 	   
 	   
@@ -388,7 +388,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='btnundefined']")public WebElement ReviewOrder_Btn;
 	   
 	   
-//	   @FindBy(xpath="//input[@id='paypal']/..")public WebElement rdPaypal;// PayPal_radioBtm;
+	   @FindBy(xpath="//input[@id='paypal']/..")public WebElement rdPaypal;// PayPal_radioBtm;
 	   @FindBy(xpath="//*[text()=' Checkout']/..")public WebElement PayPalCheckOut_Btn;
 	   
 	   
@@ -396,8 +396,12 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   //Payment(End)
 	   
+	//************************  MOBILE***********************
+	   @FindBy(xpath="(//*[@data-auid='checkout_order_summary_edit_cart_link'])[1]/*")public WebElement EditMyCart_Link_M;
 	
-	/***************************** END XPAHTS********************************/
+	   //*********************MOBILE END********************
+	   
+	   /***************************** END XPAHTS********************************/
 	
 	/***************************** START METHODS********************************/
 	// Start KER-2927 CR-SK

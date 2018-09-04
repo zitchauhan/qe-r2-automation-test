@@ -24,7 +24,7 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	public WebElement AS_btnXBurgerMenu;
 	@FindBy(xpath = "//*[@data-auid='level1Category-SHOP']")
 	public WebElement AS_btnShopCategory;
-	@FindBy(xpath = "//*[@data-auid='level2Category-CLOTHING_m'] | //*[@data-auid='level2Category-CLOTHING'] ")
+	@FindBy(xpath = "//*[@data-auid='level2Category-CLOTHING_m'] | //*[@data-auid='level2Category-CLOTHING'] | //*[@data-auid='level2Category-Clothing'] | //*[@data-auid='go-to-Clothing_m'] | //*[@data-auid='level2Category-Clothing_m']") //4Sep
 	public WebElement AS_btnClothingCategory;
 	@FindBy(xpath = "//*[@data-auid='level3Category-Mens']")
 	public WebElement AS_btnMens_Clothing_Shop;
@@ -75,8 +75,8 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='Remove from Cart'] | //*[@data-auid='crt_btnRmvFromCart_${1}']")
 	public WebElement AS_btnRemoveFromCart;
 
-	@FindBy(xpath = "(//*[contains(text(),'Item Added Successfully')])[2] | //*[contains(text(),'Item Added Successfully')]")
-	public WebElement AS_txtItemAddedSuccessfully; // 3sep
+	@FindBy(xpath = "(//*[contains(text(),'Item Added Successfully')])[2] | //*[contains(text(),'Item Added Successfully')]") //4Sep
+	public WebElement AS_txtItemAddedSuccessfully; // 4Ssep
 
 	@FindBy(xpath = "//div[text()='Subtotal']/..")
 	public WebElement AS_txtSubtotalCart;

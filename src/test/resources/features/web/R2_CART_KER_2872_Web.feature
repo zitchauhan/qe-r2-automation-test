@@ -174,9 +174,64 @@ Scenario: Verify that user view 'Find a Store' modal from Cart
 	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
 	
 	
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-11548 @CR-DPK
+Scenario: Verify the user is able to view the 'Change Location' under In-store Pick Up on Cart in Product Blade
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing
+    Then user clicks on one of the subcategory and navigates to LTwo
+    And user is able to see the product category name in section title
+    Then user clicks on one of the product category and navigates to LThree
+	Then User is navigated to pdp page
+	Then user click on Add to Cart Button
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Your Cart item details "|
+		|Image_ITemInCart| 
+		|CartProductName_Link   |
+		|color_input_txt       |
+		|Size_input_txt|
+#		|ShipToMe_radioBtn|
+#		|InStorePickup_FREE_radioBtn |
+	And verify Change Location link	
 	
 	
 	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11552 @CR-DPK
+Scenario: Verify user is able to see the inventory against the listed stores for the product not added to cart and modal opened from PDP
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing
+    Then user clicks on one of the subcategory and navigates to LTwo
+    And user is able to see the product category name in section title
+    Then user clicks on one of the product category and navigates to LThree
+	Then User is navigated to pdp page
+	And user click on Find a Store in PDP page
+	Then user enter "zipCode" in Find a Store Model
+	And user click on submit button
+	Then user click on all plus icon in Store Address drawer
+	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
+			
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11554 @CR-DPK
+Scenario: Verify user is able to see the inventory on store details drawer for the PDP not added to cart
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing
+    Then user clicks on one of the subcategory and navigates to LTwo
+    And user is able to see the product category name in section title
+    Then user clicks on one of the product category and navigates to LThree
+	Then User is navigated to pdp page
+	And user click on Find a Store in PDP page
+	Then user enter "zipCode" in Find a Store Model
+	And user click on submit button
+	Then user click on plus icon in Store Address drawer
+	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
 	
 	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-12582 @CR-DPK
+Scenario: Verify find a store Modal closes On Select "Close X" and If a user selects anywhere outside the modal
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on Find a Store
+	And user very Find a Store popup
+	Then Close X Find a store Modal 
+		
 	

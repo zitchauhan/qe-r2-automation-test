@@ -53,12 +53,12 @@ Feature: Debug
 		|Subtotal_price|
 		|Shipping_Txt|
 		|ShippingPrice_Txt|
-		|Estimatedshippint_txt| #Not finalised|
-		|EstimatedShippingPrice_txt|#Not finalised|
+		|Estimatedshippint_txt| 
+		|EstimatedShippingPrice_txt|
 		|Taxes_Txt|
 		|TaxesPrice_Txt|
-		|EstimatedTax_Txt|#Not finalised|
-		|EstimatedPrice_Txt|#Not finalised|
+		|EstimatedTax_Txt|
+		|EstimatedPrice_Txt|
 		|TotalDiscount_Txt|
 		|TotalDiscountPrice_Txt|
 		|Total_price|
@@ -76,7 +76,7 @@ Feature: Debug
 		|Quantity_Txt|
 		|QuantityInput_Txt|
 		|PriceShippingItemAvailable_Txt|
-		|EditMyCart_Link|#Not finalised|
+		|EditMyCart_Link_M|
 		
 		|# Verify following elements in Checkout page "Payment"|
 		|#%%%%%  Payment Method %%%%%%%%%%% |
@@ -112,7 +112,7 @@ Feature: Debug
 		|PhoneNumber_Input|
 		|SendSMSTextUpdatesAboutMyOrder_checkbox|
 		|Adderss_Input|
-		|AddCompanyNameAptNumberEtcOptional_Txt|#Not finalised|
+		|AddCompanyNameAptNumberEtcOptional_Txt|
 		|AddCompanyNameAptNumberEtcOptional_Input|
 		|ZipCode_Input|
 		|City_Input|
@@ -121,8 +121,8 @@ Feature: Debug
 		|SignuptogetHotDeals_checkBox|
 		|ReviewOrder_Btn|
 		|#%%%%%%%  PayPal  %%%%%%%%%%|
-		|PayPal_radioBtm|#Not finalised|
-		|PayPalCheckOut_Btn|#Not finalised|
+		|PayPal_radioBtm|
+		|PayPalCheckOut_Btn|
 		##########Ends CR-RKA	
 		
 	

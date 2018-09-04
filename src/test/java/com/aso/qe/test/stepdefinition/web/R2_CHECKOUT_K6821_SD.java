@@ -21,7 +21,12 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 	
 	@Then("^user click on checkout button in Cart page$")
 	public void user_click_on_checkout_button_in_Cart_page() throws Throwable {
-		assertTrue(clickOnButton(r2CartPo.btnCartCheckout));
+		if ("mobile".equalsIgnoreCase(testtype)) {
+		assertTrue(clickOnButton(r2CartPo.btn_checkOut_OrderSummary));}//KER-6941 CR-RK Sep 4
+		else
+		{
+			assertTrue(clickOnButton(r2CartPo.btnCartCheckout));	
+		}
 	}
 	
 	@When("^user enter First name \"(.*?)\"$")

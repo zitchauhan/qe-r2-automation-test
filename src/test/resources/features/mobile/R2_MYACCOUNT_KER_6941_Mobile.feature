@@ -112,4 +112,48 @@ Then User clicks on the burger menu
 ##    |# Following Error Message should show on the page|
 ##    |Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 	
+	
+	@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8930 @CR-RK 	
+Scenario: Verify The user must see form field validations to ensure the e-mail address meets the desired format (domain provided) in creating account page
+Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
+	Then user should able to click on Signin button
+	Then Verify below Sub/Main Module of My Account
+	|SignInPage_SignIn_btn								|
+	And clicks on SignUp link from SignIn page 
+	Then Verify below Sub/Main Module of My Account 
+	|#Verify following elements in SignUp section|
+	|SignUp_FirstName_txt						 |
+	|SignUp_LastName_txt						 |
+	|SignUp_EmailAddress						 |
+	|SignUp_Password					         | 
+	And user enter first "FirstName" 
+	And user enter last "LastName" 
+	And user enter random "InvalidEmailAddresswithoutdomain" in signup page
+	And clicks on Sign Up Button 
+	Then Verify the message on the page
+  	|# Following Error Message should show on the page|
+ 	|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
+
+
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8937 @CR-RK 	
+Scenario: Verify The user must be able to see the relevant errors when entering the email address in checkout page
+Given user launches the browser and navigates to "ASO_HOME" page 
+Then User clicks on the burger menu
+    And User navigates to LThree
+   	Then user clicks on the product card and navigates to PDP
+	Then user click on Add to Cart Button  
+	Then user is navigated to Add to cart Notification popup
+	And user will click on View Cart button 
+	And user navigate to Cart page
+	And user click on checkout button in Cart page
+	And user click on SignIn link
+	Then Verify below Sub/Main Module of My Account
+	|SignInPage_SignIn_btn								|
+	When user enter the emailaddress "InvalidEmailAddress" in signin page
+	And user enter the password "Password" 
+	And user click on signin button
+	#Then user should get an error message stating please enter valid email	
+
+	
 

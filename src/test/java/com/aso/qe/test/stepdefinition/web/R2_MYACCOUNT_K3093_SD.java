@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -14,10 +15,16 @@ import cucumber.api.java.en.Then;
 public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 	
 	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);
-	
+	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(getDriver(),R1_GlobalElementHeader_Home_PO.class);
 	@Given("^user clicks on payment tab$")
 	public void user_clicks_on_payment_tab() throws Throwable {
+		
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(clickOnButton(myAccountPo.lnkPayment_Mobile));	
+		}else
+		{
 	    assertTrue(clickOnButton(myAccountPo.lnkPayment));
+		}
 	}
 	
 	@Given("^user clicks on Add New Gift Card button$")
@@ -87,5 +94,10 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 		
 	}
 	
+	@Then("^user click on MyAccount breadcrumb$")
+	public void user_click_on_MyAccount_breadcrumb() throws Throwable {
+		assertTrue(clickOnButton(globalElementHeader.mobileBreadcrumb));
+		
+	}//KER-2910 CR-RK Sep 4
 
 }
