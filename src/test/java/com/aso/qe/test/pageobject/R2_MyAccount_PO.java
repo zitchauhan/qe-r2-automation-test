@@ -24,15 +24,14 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//h4")
 	public WebElement txtdescription;
 
-	@FindBy(xpath = "(//input[@type='text'])[1]")
-	public WebElement inputFirstName;
+	@FindBy(xpath = "//*[@data-auid='firstname_input']")
+	public WebElement inputFirstName;// Updated KER-6941 CR-RK
 
-	@FindBy(xpath = "(//input[@type='text'])[2]")
-	public WebElement inputLastName;
+	@FindBy(xpath = "//*[@data-auid='lastname_input']")
+	public WebElement inputLastName;// Updated KER-6941 CR-RK
 
-	@FindBy(xpath = "(//input[@type='text'])[3]")
-	public WebElement inputEmailAddress;
-
+	@FindBy(xpath = "//*[@data-auid='email_input']")
+	public WebElement inputEmailAddress;// Updated KER-6941 CR-RK
 	@FindBy(xpath = "(//div[.='Create Password']/following-sibling::div/input)[1]") // modified by CR- SK
 																					// "//input[@type='password']")
 	public WebElement inputCreatePassword;
@@ -88,8 +87,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnemail-signin-button']")
 	public WebElement logIn;
 
-	@FindBy(xpath = "//*[@class='css-ikqzer undefined']")
-	public WebElement emailAddress;
+	@FindBy(xpath = "//*[@data-auid='email_input']")
+	public WebElement emailAddress;//KER-4023 CR-RK 3-Sep
 
 	@FindBy(xpath = "//*[@data-auid='password_input']")
 	public WebElement password;

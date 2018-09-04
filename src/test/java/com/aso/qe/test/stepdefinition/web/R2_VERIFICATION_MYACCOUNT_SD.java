@@ -5,7 +5,6 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -46,7 +45,7 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 				////// forgot password
 				// ===============================================================================
 				else if (currentElement.equalsIgnoreCase("ForgotPasswordPage_EmailAddress_txt"))
-					assertTrue(isDisplayed(r2MyAccountPo.txtEmailAddress));
+					assertTrue(isDisplayed(r2MyAccountPo.emailAddress));
 				else if (currentElement.equalsIgnoreCase("ForgotPasswordPage_Submit_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnSubmit));
 				// ===============================================================================
