@@ -93,7 +93,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='password_input']")
 	public WebElement password;
 
-	@FindBy(xpath = "//*[text()='address']")
+	@FindBy(xpath="//*[text()='address  Book']")
 	public WebElement addressBook;
 
 	@FindBy(xpath = "//*[@data-auid='btnadd_address_empty_btn']")
