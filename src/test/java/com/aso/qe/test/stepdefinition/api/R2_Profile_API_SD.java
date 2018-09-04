@@ -165,5 +165,14 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, addressjsonObject.toJSONString());
 	}
+	
+	@Given("^\"(.*?)\" endpoint with \"(.*?)\" and \"(.*?)\" for MyAccount Edit Profile$")
+	public void endpoint_with_and_for_MyAccount_Edit_Profile(String url, String extension, String jsonRequestFilePath) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+extension+System.getProperty("ProfileId");
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ jsonRequestFilePath+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_FIRSTNAME", FrameWorkHelper.getRandomAlphabetic(8)).replace("REPLACE_LASTNAME", FrameWorkHelper.getRandomAlphabetic(8));
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
+	}
 
 }
