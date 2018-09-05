@@ -271,6 +271,30 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.inputEmailAddress));
 				else if (currentElement.equalsIgnoreCase("SignUp_Password"))
 					assertTrue(isDisplayed(r2MyAccountPo.inputCreatePassword));
+				else if (currentElement.equalsIgnoreCase("SignUp_ReceivePromotion_chkBx"))
+					assertTrue(isDisplayed(r2MyAccountPo.inputOptIn));
+				else if (currentElement.equalsIgnoreCase("SignUpPage_SignUp_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnSignUp));
+				else if (currentElement.equalsIgnoreCase("SignUpPage_AlreadyHaveAnAccount_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtAlreadyHaveAnAccountSignInNow));
+				else if (currentElement.equalsIgnoreCase("SignUpPage_SignInNow_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.lnkSignInNow));
+				else if (currentElement.equalsIgnoreCase("SignUpPage_PasswordMustContain_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtPasswordMustContainLabel));
+				else if (currentElement.equalsIgnoreCase("SignUpPage_MinimumCharacters_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtCharactersMin));
+				else if (currentElement.equalsIgnoreCase("SignUpPage_Cross_icon"))
+					assertTrue(isDisplayed(r2MyAccountPo.iconCross));
+				else if (currentElement.equalsIgnoreCase("SignUpPage_PasswordStrength_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtPasswordStrength));
+				else if (currentElement.equalsIgnoreCase("SignUpPage_Weak_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtWeak));
+				else if (currentElement.equalsIgnoreCase("SignUpPage_Strong_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtStrong));
+				
+				
+				
+				
 
 				else {
 					logger.error("Element <" + currentElement + "> is not found in the SD list.");

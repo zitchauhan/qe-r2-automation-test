@@ -42,10 +42,10 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//button[@data-auid='btnsignup_btn']")
 	public WebElement btnSignUp; // KER-6941 Updated 27-8-18
 
-	@FindBy(xpath = "//button[text()='Sign In Now']")
+	@FindBy(xpath = "//*[@data-auid='redirect_signin_btn']")
 	public WebElement lnkSignInNow;
 
-	@FindBy(xpath = "//div[text()='Already have an Account? Sign In Now']")
+	@FindBy(xpath = "//*[text()='Already have an Account?']")
 	public WebElement txtAlreadyHaveAnAccountSignInNow;
 
 	@FindBy(xpath = "//div[text()='Password Must Contain Label']")
@@ -526,6 +526,13 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "//*[@data-auid='Profile_m']")
 	public WebElement lnkProfile_Mobile; // CR-RK KER-4230 Sep 5
+	
+//	@FindBy(xpath = "//*[text()='CONGRATULATIONS']")
+//	public WebElement myAccount_SignUp_CongratulationsMessage_txt;
+//	
+//	@FindBy(xpath = "//*[text()='CONGRATULATIONS']")
+//	public WebElement myAccount_SignUp_CongratulationsMessage_txt;
+	
  
 
 

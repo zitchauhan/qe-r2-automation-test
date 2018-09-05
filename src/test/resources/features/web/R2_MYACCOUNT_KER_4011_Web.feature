@@ -109,7 +109,7 @@ Scenario: Verify the user gets the error message when Password is incorrect
 #
 #####Failing - Known Issue
 #@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-11141 @CR-SK
-#Scenario: Verify user referenced back to the same page from where sign out is triggered
+#Scenario: Verify user referenced back to the same page from where sign in is triggered
 #	Given user launches the browser and navigates to "ASO_HOME" page
 #	And User navigates to L2 Mens clothing
 #    And user clicks on one of the subcategory and navigates to LTwo

@@ -8,7 +8,10 @@ Feature: Message/Text Verification
     |All Rights Reserved|
     |All Rights Reserved|
     |Please enter the Email Address in a valid format (ex. abc@xyz.com)|
-    ||Not a valid name|
+    |Not a valid name|
+    |CONGRATULATIONS|
+    |You have successfully registered with Academy.com|
+    |LET'S SHOP|
     
 		
 	

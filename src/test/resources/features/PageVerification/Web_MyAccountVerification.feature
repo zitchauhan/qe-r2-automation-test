@@ -118,11 +118,59 @@ Scenario: Verify MyAccount
 		|OrderPage_ShippingZipCode_txt				|
 		|OrderPage_Find_btn							|
 		
-		|#Verify following elements in SignUp section|
-		|SignUp_FirstName_txt						 |
-		|SignUp_LastName_txt						 |
-		|SignUp_EmailAddress						 |
-		|SignUp_Password					         | 
+		|#Verify following elements in SignUp section	|
+		|SignUp_FirstName_txt						 	|
+		|SignUp_LastName_txt							|
+		|SignUp_EmailAddress						 	|
+		|SignUp_Password					         	| 
+		|SignUp_ReceivePromotion_chkBx					|
+		|SignUpPage_SignUp_btn							|
+		|SignUpPage_AlreadyHaveAnAccount_txt			|
+		|SignUpPage_SignInNow_lnk						|
+		|SignUpPage_PasswordMustContain_txt				|
+		|SignUpPage_MinimumCharacters_txt				|
+		|SignUpPage_Cross_icon							|
+		|SignUpPage_PasswordStrength_txt				|
+		|SignUpPage_Weak_txt							|
+		|SignUpPage_Strong_txt							|
+		
+		
+		
+#		else if (currentElement.equalsIgnoreCase(""))
+#					assertTrue(isDisplayed(r2MyAccountPo.inputOptIn));
+#				else if (currentElement.equalsIgnoreCase(""))
+#					assertTrue(isDisplayed(r2MyAccountPo.btnSignUp));
+#				else if (currentElement.equalsIgnoreCase(""))
+#					assertTrue(isDisplayed(r2MyAccountPo.));
+#				else if (currentElement.equalsIgnoreCase(""))
+#					assertTrue(isDisplayed(r2MyAccountPo.lnkSignInNow));
+#				else if (currentElement.equalsIgnoreCase(""))
+#					assertTrue(isDisplayed(r2MyAccountPo.txtPasswordMustContainLabel));
+#				else if (currentElement.equalsIgnoreCase(""))
+#					assertTrue(isDisplayed(r2MyAccountPo.txtCharactersMin));
+#				else if (currentElement.equalsIgnoreCase(""))
+#					assertTrue(isDisplayed(r2MyAccountPo.iconCross));
+#				else if (currentElement.equalsIgnoreCase(""))
+#					assertTrue(isDisplayed(r2MyAccountPo.txtPasswordStrength));
+#				else if (currentElement.equalsIgnoreCase(""))
+#					assertTrue(isDisplayed(r2MyAccountPo.txtWeak));
+#				else if (currentElement.equalsIgnoreCase(""))
+#					assertTrue(isDisplayed(r2MyAccountPo.txtStrong));
+		
+#		assertTrue(isDisplayed(r2MyAccountPo.inputFirstName));
+#		assertTrue(isDisplayed(r2MyAccountPo.inputLastName));
+#		assertTrue(isDisplayed(r2MyAccountPo.inputEmailAddress));
+#		assertTrue(isDisplayed(r2MyAccountPo.inputCreatePassword));
+#		assertTrue(isDisplayed(r2MyAccountPo.inputOptIn));
+#		assertTrue(isDisplayed(r2MyAccountPo.btnSignUp));
+#		assertTrue(isDisplayed(r2MyAccountPo.txtAlreadyHaveAnAccountSignInNow));
+#		assertTrue(isDisplayed(r2MyAccountPo.lnkSignInNow));
+#		assertTrue(isDisplayed(r2MyAccountPo.txtPasswordMustContainLabel));
+#		assertTrue(isDisplayed(r2MyAccountPo.txtCharactersMin));
+#		assertTrue(isDisplayed(r2MyAccountPo.iconCross));
+#		assertTrue(isDisplayed(r2MyAccountPo.txtPasswordStrength));
+#		assertTrue(isDisplayed(r2MyAccountPo.txtWeak));
+#		assertTrue(isDisplayed(r2MyAccountPo.txtStrong));
 		
 			
 		

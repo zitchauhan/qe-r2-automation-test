@@ -3,9 +3,9 @@ Feature: View/Select Shipping Address in Checkout
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8189 @CR-SK 
 Scenario: Verify if authenticated user can select a shipping address from the dropdown 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user creates an account and signs in
-		|firstName |lastName|email						   |password |confirmPassword|
-		|automation|user	|automationuser@academymail.com|Pass@1234|Pass@1234		 |
+#	And user creates an account and signs in
+#		|firstName |lastName|email						   |password |confirmPassword|
+#		|automation|user	|automationuser@academymail.com|Pass@1234|Pass@1234		 |
 	And user adds an address 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
@@ -25,9 +25,9 @@ Scenario: Verify if authenticated user can select a shipping address from the dr
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8188 @CR-SK 
 Scenario: Verify if authenticated user can  view all the shipping addresses at checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user creates an account and signs in
-		|firstName |lastName|email						   |password |confirmPassword|
-		|automation|user	|automationuser@academymail.com|Pass@1234|Pass@1234		 |
+#	And user creates an account and signs in
+#		|firstName |lastName|email						   |password |confirmPassword|
+#		|automation|user	|automationuser@academymail.com|Pass@1234|Pass@1234		 |
 	And user adds an address
 	And user adds an address
 	And User navigates to L2 Mens clothing 
@@ -48,9 +48,9 @@ Scenario: Verify if authenticated user can  view all the shipping addresses at c
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-10651 @CR-SK 
 Scenario: Verify  If the user has already changed/added an address within an active/incomplete order, the same would be displayed instead of default address
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user creates an account and signs in
-		|firstName |lastName|email						   |password |confirmPassword|
-		|automation|user	|automationuser@academymail.com|Pass@1234|Pass@1234		 |
+#	And user creates an account and signs in
+#		|firstName |lastName|email						   |password |confirmPassword|
+#		|automation|user	|automationuser@academymail.com|Pass@1234|Pass@1234		 |
 	And user adds an address
 	And user adds an address
 	And User navigates to L2 Mens clothing
@@ -62,7 +62,7 @@ Scenario: Verify  If the user has already changed/added an address within an act
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page
-	And user clicks on Continue to Checkout CTA
+#	And user clicks on Continue to Checkout CTA
 	When user enter new address details
 	Then new address should be displayed instead of default address
 	

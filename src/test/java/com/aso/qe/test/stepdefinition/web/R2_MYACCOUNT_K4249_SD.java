@@ -22,16 +22,14 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
-	R2_R1_Fun_PO r2R2FunPo = PageFactory.initElements(driver, R2_R1_Fun_PO.class); 
+	R2_R1_Fun_PO r2R2FunPo = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 
-	
 	@When("^user clicks on SignIn link from global header$")
 	@And("^user clicks on sign in link from burger menu$")
 	public void user_clicks_on_Sign_In_link_from_global_header() throws Throwable {
-		if("mobile".equalsIgnoreCase(testtype)){
+		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(r2R2FunPo.lnkSignInMobile));
-		}
-		else
+		} else
 			assertTrue(clickOnButton(r2MyAccountPo.lnkSignIn));
 	}
 
@@ -43,25 +41,6 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	@Then("^user should land on the Sign Up page to create a new account$")
 	public void user_should_land_on_the_Sign_Up_page_to_create_a_new_account() throws Throwable {
 		assertTrue(isDisplayed(r2MyAccountPo.txtdescription));
-	}
-
-	@Then("^user will check whether the following fields are displayed$")
-	public void user_will_check_whether_the_following_fields_are_displayed() throws Throwable {
-
-		assertTrue(isDisplayed(r2MyAccountPo.inputFirstName));
-		assertTrue(isDisplayed(r2MyAccountPo.inputLastName));
-		assertTrue(isDisplayed(r2MyAccountPo.inputEmailAddress));
-		assertTrue(isDisplayed(r2MyAccountPo.inputCreatePassword));
-		assertTrue(isDisplayed(r2MyAccountPo.inputOptIn));
-		assertTrue(isDisplayed(r2MyAccountPo.btnSignUp));
-		assertTrue(isDisplayed(r2MyAccountPo.txtAlreadyHaveAnAccountSignInNow));
-		assertTrue(isDisplayed(r2MyAccountPo.lnkSignInNow));
-		assertTrue(isDisplayed(r2MyAccountPo.txtPasswordMustContainLabel));
-		assertTrue(isDisplayed(r2MyAccountPo.txtCharactersMin));
-		assertTrue(isDisplayed(r2MyAccountPo.iconCross));
-		assertTrue(isDisplayed(r2MyAccountPo.txtPasswordStrength));
-		assertTrue(isDisplayed(r2MyAccountPo.txtWeak));
-		assertTrue(isDisplayed(r2MyAccountPo.txtStrong));
 	}
 
 	@When("^user enter create password$")
@@ -83,6 +62,7 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 
 	@When("^user should see the successfull message$")
 	public void user_should_see_the_successfull_message() throws Throwable {
+
 	}
 
 	@When("^user should be able to view My Account in global header$")
@@ -114,12 +94,13 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	public void user_enter_email() throws Throwable {
 		UUID uuid = UUID.randomUUID();
 		String randomUUIDString = uuid.toString();
-		String txtemailaddress_random = "abc" + randomUUIDString + "@gmail.com";
+		String txtemailaddress_random = "a" + randomUUIDString.replaceAll("-", "").substring(1, 10) + "@gmail.com";
 		setInputText(r2MyAccountPo.inputEmailAddress, txtemailaddress_random);
 	}
 
 	@When("^user enter password \"(.*?)\"$")
 	public void user_enter_password(String arg1) throws Throwable {
+		Thread.sleep(5000);
 		setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty(arg1));
 	}
 
@@ -150,10 +131,10 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	public void user_entered_password_should_get_unmasked_displaying_the_characters() throws Throwable {
 		assertTrue(r2MyAccountPo.inputCreatePassword.getAttribute("type").equalsIgnoreCase("text"));
 	}
-	
+
 	@Then("^the label should get toggled to Hide$")
 	public void the_label_should_get_toggled_to_Hide() throws Throwable {
-	    assertTrue(isDisplayed(r2MyAccountPo.btnHide));
+		assertTrue(isDisplayed(r2MyAccountPo.btnHide));
 	}
 
 }
