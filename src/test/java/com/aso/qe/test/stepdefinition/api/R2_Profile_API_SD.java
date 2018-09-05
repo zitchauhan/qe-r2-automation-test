@@ -175,4 +175,15 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
 	}
 
+	@Given("^\"(.*?)\" endpoint with \"(.*?)\" and \"(.*?)\" for update credit card details of a profile$")
+	public void endpoint_with_and_for_update_credit_card_details_of_a_profile(String url, String extension, String storeId) throws Throwable {
+		JSONObject creditCardObj = getFirstAddressDetails();
+		String xwalletId = (String) creditCardObj.get("xwalletId");
+		creditCardObj.put("creditCardHolderName", FrameWorkHelper.getRandomAlphabetic(10));
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("ProfileId")+extension+xwalletId+storeId;
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, creditCardObj.toJSONString());
+		
+	}
+
 }

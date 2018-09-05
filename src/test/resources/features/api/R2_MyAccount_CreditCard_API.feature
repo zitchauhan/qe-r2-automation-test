@@ -20,6 +20,24 @@ Feature: Verify MyAccount Credit Card API endpoint services
     Given "Addurl" endpoint with "/creditCards/" for getting credit card details of a profile
     And validate jsonSchema "RetrieveCreditCardDtlsSchema"
     
+  @All-R2 @C1-MyAccount @C2-CreditCard @api @R2_AAST-03 @CR-RT  @ZYP_MyAccount_CreditCard_12842
+  Scenario: TC_3 - Update the Profile Credit Card of creditCardHolderName 
+ Given "Addurl" endpoint with "/creditCards/" for getting credit card details of a profile
+ Given "Addurl" endpoint with "/creditCards/PUT/" and "?storeId=10151&makePrimary=false" for update credit card details of a profile 
+    Then Verify response status code as 200
+    
+    @All-R2 @C1-MyAccount @C2-CreditCard @api @R2_AAST-03 @CR-RT  @ZYP_MyAccount_CreditCard_12843
+  Scenario: TC_3 - Validate Update the Profile Credit Card of creditCardHolderName JSON Schema
+ Given "Addurl" endpoint with "/creditCards/" for getting credit card details of a profile
+ Given "Addurl" endpoint with "/creditCards/PUT/" and "?storeId=10151&makePrimary=false" for update credit card details of a profile 
+    And validate jsonSchema "UpdateCreditCardSchema"
+    
+     @All-R2 @C1-MyAccount @C2-CreditCard @api @R2_AAST-03 @CR-RT  @ZYP_MyAccount_CreditCard_12844
+  Scenario: TC_3 - Validate Update the Profile Credit Card of creditCardHolderName Response requried parameters
+ Given "Addurl" endpoint with "/creditCards/" for getting credit card details of a profile
+ Given "Addurl" endpoint with "/creditCards/PUT/" and "?storeId=10151&makePrimary=false" for update credit card details of a profile 
+   Then Validated response details of "xwalletId"
+    
   @All-R2 @C1-MyAccount @C2-CreditCard @api @R2_AAST-04 @CR-VK @ZYP_MyAccount_CreditCard_12239
   Scenario: TC_4 - Retrieve the Credit Card details By Id of a Profile
     Given "Addurl" endpoint for getting "/creditCards/" by "WalletId"
