@@ -29,7 +29,7 @@ Feature: Verify Checkout Login Interstitial
 	Then user is navigated to Add to cart Notification popup
 	And user will click on Checkout button
 	When user click on SignIn link
-	And user enter the valid "emailaddress" 
+	And user enter the valid emailaddress "emailaddress" 
 	And user enter create password 
 	And user click on signin button 
 	Then user should get logged in successfully
@@ -78,9 +78,9 @@ Feature: Verify Checkout Login Interstitial
 	And user will click on Checkout button
 	When user click on SignIn link
 	And user click on Create a Account link
-	And user enter first name 
-	And user enter last name 
-	And user enter email address
+	When user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Address "Address" 
 	And user enter create password
 	And user click optin checkbox 
 	And clicks on Sign Up Button 
@@ -104,7 +104,8 @@ Feature: Verify Checkout Login Interstitial
 	And user enter the valid Password "Password" 
 	And user click on signin button
 	Then user should not be allowed to login
-	And user should get an error message stating email id entered is not registered 	
+	And user should get an error message for nonregisteredemailid address
+	
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Lowest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8151 @CR-DPK 

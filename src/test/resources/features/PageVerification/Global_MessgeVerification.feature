@@ -7,5 +7,7 @@ Feature: Message/Text Verification
     |# Following Error Message should show on the page|
     |All Rights Reserved|
     |All Rights Reserved|
+    |Please enter the Email Address in a valid format (ex. abc@xyz.com)|
+    
 		
 	
