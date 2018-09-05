@@ -73,63 +73,9 @@ Scenario: TC_5-Verify that user is able to add a new gift card in My Account
 	Then user should be able to see "Valid16DigitGiftCardNumber" Gift card 
 	And user should be able to see available balance 
 	And there should be a Remove link with cross icon 
-#	
-#@R2_Mobile @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696_M @CR-DPK @AutomationSanityR2 
-#Scenario: TC_7-Verify that the first added Credit Card becomes the Default Credit Card for payment.
-
-#===========unit testing pending as search is not working
-@R2_Web @R2_Regression @R2_All @P-High @CR-SK @AutomationSanityR2
-Scenario: Search an item and  navigate to  View Cart
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User should be able to see Search Box on Homepage
-    When User enter the SKU search "SKUNumber"
-    And User click on search icon
-    And user verifies the entered SKU id
-    And user click on Add to Cart Button
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	Then user navigate to Cart page
-
-
-    
-#===========unit testing pending as search is not working
-@R2_Web @R2_Regression @R2_All @P-High @CR-SK @AutomationSanityR2
-Scenario: Search an item and  navigate to  checkout page from ATC modal
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User should be able to see Search Box on Homepage
-    When User enter the SKU search "SKUNumber"
-    And User click on search icon
-    And user verifies the entered SKU id
-    And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
-	Then user is navigated to checkout page
-
-@AutomationSanityR2 @R2_AS1 @R2_MAST-01 @CR-SK
-Scenario: Cat Nav - View Cart 
-	Given user launches the browser and navigates to "ASO_HOME" page
-	When User clicks on the burger menu
-    And User navigates to LThree
-   	And user clicks on the product card and navigates to PDP
-	And user click on Add to Cart Button  
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	Then user navigate to Cart page 
 	
-	
-@AutomationSanityR2 @R2_AS1 @R2_MAST-01 @CR-SK
-Scenario: Cat Nav - Checkout from ATC Modal 
-	Given user launches the browser and navigates to "ASO_HOME" page
-	When User clicks on the burger menu
-    And User navigates to LThree
-   	And user clicks on the product card and navigates to PDP
-	And user click on Add to Cart Button  
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
-	Then user is navigated to checkout page
-
-@AutomationSanityR2 @R2_AS1 @R2_MAST-01 @KER-3127 @ZYP_K3127-8168 @CR-AKK
-Scenario: TC_1-Verify if user should be able to checkout if there are no errors 
+@R2_Mobile @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696_M @CR-DPK @AutomationSanityR2 
+Scenario: TC_7-Verify that the first added Credit Card becomes the Default Credit Card for payment.
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
 	And user clicks on SignIn link from global header
