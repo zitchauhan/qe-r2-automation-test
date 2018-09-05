@@ -13,7 +13,9 @@ Scenario: To Verify if user is able to click on the Shipping policy link
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When User verifies and click the shipping policy link 
-	Then User is navigated to Shipping Charges page 
+	Then Verify below Sub/Main Module of Cart Page
+	|# User is navigated to Shipping Charges page|
+	|ShippingCharges_header| 
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8170 @CR-AKK 
 Scenario: To Verify if user is able to click on the Return policy link 
@@ -28,7 +30,8 @@ Scenario: To Verify if user is able to click on the Return policy link
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When User verifies and click the Return policy link 
-	Then User is navigated to Return Policy page 
+	|# User is navigated to Return Policy page |
+	|ReturnPolicy_txt|
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Lowest @C-Cart @KER-3127 @ZYP_CART_K3127-8171 @CR-AKK 
@@ -44,7 +47,15 @@ Scenario: verify if user is able to view the accepted Payments Icons
 	And user will click on View Cart button 
 	When user navigate to Cart page 
 	Then User verifies the accepted payment icons( paypal/VISA/Mastercard/America express/Discover) 
-	
+	Then Verify below Sub/Main Module of Cart Page
+		|Visa_img|
+		|MasterCard_img|
+		|Paypal_img|
+		|GooglePay_img|
+		|ApplePay_img|
+		|AmericanExpress_img|
+		|Discover_img|
+		
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8166 @CR-AKK 
 Scenario: Verify if user should be able to apply or remove a promotion code 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -76,11 +87,15 @@ Scenario: Verify if user is  able to view following elements in order summary of
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user click on view cart button 
-	Then user view the items in order summary details (Subtotal, Estimated Shipping/In-Store Pickup, Estimated Taxes) 
+	Then Verify below Sub/Main Module of Cart Page
+	    |Total_txt|
+		|SubTotal_txt|
+		|EstimatedShipping_txt|
+		|EstimatedTaxes_txt|
 	And user view and Applied Promotions/Discounts "OrderLevelPromocode" 
 	Then user verifiy Order Total 
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8168 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8168 @CR-AKK 
 Scenario: TC_1-Verify if user should be able to checkout if there are no errors 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
@@ -93,7 +108,7 @@ Scenario: TC_1-Verify if user should be able to checkout if there are no errors
 	And user click on view cart button 
 	And user click on checkout button in Cart page 
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8167 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8167 @CR-AKK 
 Scenario: Verify if  user should be able to click on PayPal checkout if applicable 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
@@ -111,4 +126,6 @@ Scenario: Verify if  user should be able to click on PayPal checkout if applicab
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page 
 	And user will click on Paypal radio button 
-	Then verify PayPal Checkout is dispalyed
+	Then Verify below Sub/Main Module of Checkout Page 
+	|# verify PayPal Checkout is dispalyed|
+	|PayPalCheckOut_Btn|

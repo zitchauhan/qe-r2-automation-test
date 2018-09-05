@@ -71,7 +71,7 @@ Feature: Debug
 		|ZipCode_txt|
 		|EstimatedShippingPrice_Txt|
 		|Discount_Txt|
-		
+		|RemovePromocode_Btn| 
 		
 		|# Verify following elements in Cart page"PromoCode"|
 		|Promocode_Price_txt|
@@ -89,3 +89,7 @@ Feature: Debug
 		
 		|# Verify following elements in Cart page"After clicking on  Shiping Policy"|
 		|ShippingCharges_header|
+		
+		
+		|# Verify following elements in Cart page"After clicking on  "ReturnPolicy_link"|
+		|ReturnPolicy_txt|

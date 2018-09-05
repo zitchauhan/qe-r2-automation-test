@@ -60,10 +60,10 @@ public class R2_CHECKOUT_K6575_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CheckoutPo.txtTotalDiscount));
 	}
 	
-	@Then("^user verifies item summary of Shipping items$")
-	public void user_verifies_item_summary_of_Shipping_items() throws Throwable {
-		assertTrue(isDisplayed(r2CheckoutPo.txtDetailOrderSummary)); 
-	}
+//	@Then("^user verifies item summary of Shipping items$")
+//	public void user_verifies_item_summary_of_Shipping_items() throws Throwable {
+//		assertTrue(isDisplayed(r2CheckoutPo.DetailOrderSummary_txt)); 
+//	}
 	
 	
 	@Then("^user in checkout page And verify items count$")
@@ -73,7 +73,7 @@ public class R2_CHECKOUT_K6575_SD extends CommonActionHelper {
 
 	@Then("^Item summary with number of pick up items should display in checkout page$")
 	public void item_summary_with_number_of_pick_up_items_should_display_in_checkout_page() throws Throwable {
-		assertTrue(isDisplayed(r2CheckoutPo.txtDetailOrderSummary)); 
+		assertTrue(isDisplayed(r2CheckoutPo.DetailOrderSummary_txt)); 
 		assertTrue(isDisplayed(r2CheckoutPo.txtQuantity));
 		
 	}

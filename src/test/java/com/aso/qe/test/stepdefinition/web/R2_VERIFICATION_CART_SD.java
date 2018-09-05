@@ -116,6 +116,9 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 					assertTrue(isDisplayed(r2CartPo.ErrorMsgLimitedStack));
 				else if (currentElement.equalsIgnoreCase("Discount_Txt"))
 					assertTrue(isDisplayed(r2CartPo.discount_Txt));
+				else if (currentElement.equalsIgnoreCase("RemovePromocode_Btn"))
+                    assertTrue(isDisplayed(r2CartPo.RemovePromocode_Btn));
+
 				
 				// Order Summary Finish
 	//************************************************************************************************			
@@ -194,7 +197,14 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 					else if (currentElement.equalsIgnoreCase("ShippingCharges_header"))
 						assertTrue(isDisplayed(r2CartPo.txtShippingCharges));
 				//After clicking Shiping Policy(End)
-           
+     //*************************************************************************************************
+				
+				//footer (Start)
+					else if (currentElement.equalsIgnoreCase("ReturnPolicy_txt"))
+                        assertTrue(isDisplayed(r2CartPo.ReturnPolicy_txt));
+
+				
+				//footer (End)
 
                       //********************************%%%% Mobile %%%%***********************************
 				// For Mobile

@@ -22,10 +22,10 @@ public class R2_CART_K3127_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2CartPo.lnkShippingPolicy));
 	}
 
-	@Then("^User is navigated to Shipping Charges page$")
-	public void user_is_navigated_to_Shipping_Charges_page() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.txtShippingCharges));
-	}
+//	@Then("^User is navigated to Shipping Charges page$")
+//	public void user_is_navigated_to_Shipping_Charges_page() throws Throwable {
+//		assertTrue(isDisplayed(r2CartPo.txtShippingCharges));
+//	}
 
 	@And("^User verifies and click the Return policy link$")
 	public void user_verifies_and_click_the_Return_policy_link() throws Throwable {
@@ -33,22 +33,22 @@ public class R2_CART_K3127_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2CartPo.lnkReturnPolicy));
 	}
 
-	@Then("^User is navigated to Return Policy page$")
-	public void user_is_navigated_to_Return_Policy_page() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.txtReturnPolicy));
-	}
+//	@Then("^User is navigated to Return Policy page$")
+//	public void user_is_navigated_to_Return_Policy_page() throws Throwable {
+//		assertTrue(isDisplayed(r2CartPo.ReturnPolicy_txt));
+//	}
 
 	@Then("^User verifies the accepted payment icons\\( paypal/VISA/Mastercard/America express/Discover\\)$")
 	public void user_verifies_the_accepted_payment_icons_paypal_VISA_Mastercard_America_express_Discover()
 			throws Throwable {
 		scrollPageToWebElement(r2CartPo.iconVisa);
-		assertTrue(isDisplayed(r2CartPo.iconVisa));
-		assertTrue(isDisplayed(r2CartPo.iconMasterCard));
-		assertTrue(isDisplayed(r2CartPo.iconPaypal));
-	//	assertTrue(isDisplayed(r2CartPo.iconGooglePay)); /DE-Scoped
-		assertTrue(isDisplayed(r2CartPo.iconApplePay));
-		assertTrue(isDisplayed(r2CartPo.iconAmericanExpress));
-		assertTrue(isDisplayed(r2CartPo.iconDiscover));
+//		assertTrue(isDisplayed(r2CartPo.iconVisa));
+//		assertTrue(isDisplayed(r2CartPo.iconMasterCard));
+//		assertTrue(isDisplayed(r2CartPo.iconPaypal));
+//	//	assertTrue(isDisplayed(r2CartPo.iconGooglePay)); /DE-Scoped
+//		assertTrue(isDisplayed(r2CartPo.iconApplePay));
+//		assertTrue(isDisplayed(r2CartPo.iconAmericanExpress));
+//		assertTrue(isDisplayed(r2CartPo.iconDiscover));
 	}
 
 	@Then("^User navigats to the item eligible for item level promo$")
@@ -81,10 +81,10 @@ public class R2_CART_K3127_SD extends CommonActionHelper {
 		assertTrue(str1.contains("-$"));
 	}
 
-	@Then("^verify PayPal Checkout is dispalyed$")
-	public void verify_PayPal_Checkout_is_dispalyed() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.btnPayPalCheckout));
-	}
+//	@Then("^verify PayPal Checkout is dispalyed$")
+//	public void verify_PayPal_Checkout_is_dispalyed() throws Throwable {
+//		assertTrue(isDisplayed(r2CartPo.btnPayPalCheckout));
+//	}
 	
 	@Then("^total price must be updated to reflect discount$")
 	public void total_price_must_be_updated_to_reflect_discount() throws Throwable {

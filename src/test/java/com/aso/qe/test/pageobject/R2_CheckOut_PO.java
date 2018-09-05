@@ -1,7 +1,10 @@
 package com.aso.qe.test.pageobject;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -142,7 +145,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 //	public WebElement txtTotalDiscount;
 	
 	@FindBy(xpath ="//*[@data-auid='checkout_order_summary_shipping_items']")
-	public WebElement txtDetailOrderSummary;
+	public WebElement DetailOrderSummary_txt;
 	
 //	@FindBy(xpath ="//*[@data-auid='facetdrawerundefined']//button//div[2]")
 //	public WebElement txtItems;
@@ -394,7 +397,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 		//*************** Billing Information(Start)
 	   @FindBy(xpath="//*[text()='BILLING INFORMATION']")public WebElement BillingInformation_Txt;
-	   @FindBy(xpath="//*[text()='Same As Shipping Address']")public WebElement SameAsShippingAddress_Txt;
+	   @FindBy(xpath="//*[text()='Same As Shipping Address']/following::*[3]")public WebElement SameAsShippingAddress_Txt;
 	   @FindBy(xpath="//*[text()='Same As Shipping Address']/preceding::*[1]")public WebElement SameAsShippingAddress_checkBox;
 	   
 	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'First Name')]/following::*[2]")public WebElement FirstName_Input;
@@ -413,12 +416,14 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[text()='State']/following::*[1]")public WebElement State_DD;
 	   
 	   
-	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'Email Address for Order Confirmation')]/following::*[2]")public WebElement EmailAddressforOrderConfirmation_Input;
+	   @FindBy(xpath="//*[@data-auid='checkout_payment']\r\n" + 
+	   		"//*[contains(text(),'Email Address for Order Confirmation')]/following::*[2]/input")public WebElement EmailAddressforOrderConfirmation_Input;
 	   
 	   @FindBy(xpath="//*[contains(text(),'Sign up to get Hot Deals')]/preceding::*[1]")public WebElement SignuptogetHotDeals_checkBox;
 	   
 	   @FindBy(xpath="//*[@data-auid='btnundefined']")public WebElement ReviewOrder_Btn;
-	   
+	   @FindBy(xpath="//*[@data-auid='checkout_edit_payment']")public WebElement EditPayment_Link;
+	   @FindBy(xpath="//*[text()='Change Billing Information']")public WebElement ChangeBillingInformation_Txt;
 	   
 	   @FindBy(xpath="//input[@id='paypal']/..")public WebElement rdPaypal;// PayPal_radioBtm;
 	   @FindBy(xpath="//*[text()=' Checkout']/..")public WebElement PayPalCheckOut_Btn;
@@ -443,5 +448,29 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		return Float.parseFloat(taxDisplayed);
 	}
 	// End KER-2927 CR-SK
+	
+	//Start KER-3132 CR-RKA
+	@FindBy(xpath="//*[text()='SHIPPING ADDRESS']/following::*[1]")public WebElement shippingAddressFirst_LastName;
+	@FindBy(xpath="//*[text()='Same As Shipping Address']/ancestor::div[1]/following::*[3]")public WebElement billingAddressFirst_LastName;
+	
+	@FindBy(xpath="//*[text()='SHIPPING ADDRESS']/following::*[3]")public WebElement shippingAddressphoneNumber;
+	@FindBy(xpath="//*[text()='Same As Shipping Address']/ancestor::div[1]/following::*[5]")public WebElement billingZip_Phone;
+	
+	@FindBy(xpath="//*[text()='SHIPPING ADDRESS']/following::*[2]")public WebElement shippingCityCountryName;
+	@FindBy(xpath="//*[text()='Same As Shipping Address']/ancestor::div[1]/following::*[4]")public WebElement billingCityCountryName;
+   //KER-CR-4058 RKA
+	@FindBy(xpath="//*[text()='ADDRESS VERIFICATION']")public WebElement AddressVerification_MSG;//For restricted item after clicking on go to shipMethod
+	
+	public void verifyShippingAndBillingAddressAreSame() throws InterruptedException {
+		
+		Thread.sleep(10000);
+		waitForElement(shippingAddressFirst_LastName);
+		assertEquals(getText(shippingAddressFirst_LastName), getText(billingAddressFirst_LastName));
+		assertEquals(getText(shippingAddressphoneNumber).substring(0, 8), getText(billingZip_Phone).substring(7, 15));
+		assertEquals(getText(shippingCityCountryName).subSequence(0, 15), getText(billingCityCountryName).substring(0, 15));
+	}
+	
+	
+	
 	/***************************** END METHODS*********************************/
 }

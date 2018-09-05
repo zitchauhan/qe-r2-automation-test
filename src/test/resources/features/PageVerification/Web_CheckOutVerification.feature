@@ -85,6 +85,8 @@ Feature: Debug
 		|QuantityInput_Txt|
 		|PriceShippingItemAvailable_Txt|
 		|EditMyCart_Link|
+		|DetailOrderSummary_txt|
+		
 		
 		|# Verify following elements in Checkout page "Payment"|
 		|#%%%%%  Payment Method %%%%%%%%%%% |
@@ -129,6 +131,8 @@ Feature: Debug
 		|EmailAddressforOrderConfirmation_Input|
 		|SignuptogetHotDeals_checkBox|
 		|ReviewOrder_Btn|
+		|EditPayment_Link|
+		|ChangeBillingInformation_Txt|
 		|#%%%%%%%  PayPal  %%%%%%%%%%|
 		|PayPal_radioBtm|
 		|PayPalCheckOut_Btn|

@@ -1,6 +1,6 @@
 Feature: Verify Itemized Subtotal in Cart 
 
-	@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8052 @CR-DPK
+	@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8052 @CR-AKK
 	Scenario: To view price of each item in cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
@@ -21,7 +21,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And verify the price format each item is $XX.XX 
 	
 		
-	@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8054 @CR-DPK
+	@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8054 @CR-AKK
 	Scenario: To verify the Sub-total for all items in cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user enter the valid emailaddress "<EmailAddress>" 
@@ -46,7 +46,7 @@ Feature: Verify Itemized Subtotal in Cart
 	
 
 
-	@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8055 @CR-DPK
+	@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8055 @CR-AKK
 	Scenario: To verify if the Promo Code Discount is applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
@@ -65,7 +65,7 @@ Feature: Verify Itemized Subtotal in Cart
 	
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8056 @CR-DPK
+	@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8056 @CR-AKK
 	Scenario: To verify if the Military Discount is applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
@@ -83,7 +83,7 @@ Feature: Verify Itemized Subtotal in Cart
 	
 	
 
-	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8061 @CR-DPK
+	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8061 @CR-AKK
 	Scenario: To verify Shipping charges for in-Store Pickup
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user enter the valid emailaddress "<EmailAddress>" 
@@ -102,7 +102,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And verify Shipping charges as FREE in cart page
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8062 @CR-DPK
+	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8062 @CR-AKK
 	Scenario: To verify Estimated Taxes for all the items in the Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
@@ -123,7 +123,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And Verify estimated taxes on the cart page 
 	And the Estimated Taxes are in $XX.XX format
 	
-	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8063 @CR-DPK
+	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8063 @CR-AKK
 	Scenario: To verify Total for all the items in the Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
@@ -144,7 +144,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And Verify Total for all items on the cart page 
 	And the Total is in $XX.XX format 
 
-	@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2940 @ZYP_CART_K2940-8064 @CR-DPK
+	@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2940 @ZYP_CART_K2940-8064 @CR-AKK
 	Scenario: To verify updated estimated Tax when cart is edited
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
@@ -163,7 +163,7 @@ Feature: Verify Itemized Subtotal in Cart
 	Then verify that the updated estimated Tax is displayed 
 
 
-	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8065 @CR-DPK
+	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8065 @CR-AKK
 	Scenario: To verify Mixed Promo's discounts applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing

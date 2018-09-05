@@ -175,7 +175,9 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2CheckoutPo.PriceShippingItemAvailable_Txt));
 				else if (currentElement.equalsIgnoreCase("EditMyCart_Link"))
 					assertTrue(isDisplayed(r2CheckoutPo.btnEditCart));
-				
+                else if (currentElement.equalsIgnoreCase("DetailOrderSummary_txt"))
+                    assertTrue(isDisplayed(r2CheckoutPo.DetailOrderSummary_txt));
+
 				//**********ITems under Order Summary (End)
 				//Order Summary(End)
 				
@@ -271,7 +273,11 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 						assertTrue(isDisplayed(r2CheckoutPo.SignuptogetHotDeals_checkBox));
 					else if (currentElement.equalsIgnoreCase("ReviewOrder_Btn"))
 						assertTrue(isDisplayed(r2CheckoutPo.ReviewOrder_Btn));
-					else if (currentElement.equalsIgnoreCase("PayPal_radioBtm"))
+						else if (currentElement.equalsIgnoreCase("EditPayment_Link"))
+							assertTrue(isDisplayed(r2CheckoutPo.EditPayment_Link));
+						else if (currentElement.equalsIgnoreCase("ChangeBillingInformation_Txt"))
+							assertTrue(isDisplayed(r2CheckoutPo.ChangeBillingInformation_Txt));
+						else if (currentElement.equalsIgnoreCase("rdPaypal"))
 						assertTrue(isDisplayed(r2CheckoutPo.rdPaypal));
 					else if (currentElement.equalsIgnoreCase("PayPalCheckOut_Btn"))
 						assertTrue(isDisplayed(r2CheckoutPo.PayPalCheckOut_Btn));

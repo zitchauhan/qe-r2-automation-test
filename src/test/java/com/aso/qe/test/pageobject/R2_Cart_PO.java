@@ -268,6 +268,12 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']")//*************find a store Duplicate 
 	public WebElement btnFindStoreClose;
 	
+	@FindBy(xpath = "(//div[@data-auid='facetdrawerundefined'])[2]")
+    public WebElement storeNames_txt;
+    
+    @FindBy(xpath = "//button[@data-auid='btnfind-a-store-mystore-button']")
+    public WebElement makeMyStore_btn; 
+
 	//CR-AKK 25Aug
 	@FindBy(xpath = "//*[@data-auid='PDP_AddToWishList']")
 	public WebElement lnkAddToWishList;
@@ -569,7 +575,10 @@ public class R2_Cart_PO extends CommonActionHelper {
 		waitForElement(txtZipCode);
 		setInputText(txtZipCode, zipCode);
 		assertTrue(clickOnButton(btnZipCode));
-		assertTrue(clickOnButton(btnFindStoreClose));
+        assertTrue(clickOnButton(storeNames_txt));
+        assertTrue(clickOnButton(makeMyStore_btn));
+//		assertTrue(clickOnButton(btnFindStoreClose));
+		
 	}
 	// End KER-2939 CR-AKK
 	/***************************** END METHODS *********************************/
@@ -594,8 +603,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="(//*[contains(@data-auid,'crt_lnkProdName_')])[1]")public WebElement lnkProducttext;//lnkProducttextlink_ProductCartName
 	@FindBy(xpath="(//*[text()='Color'])[1]/following::*[1]")public WebElement txtPrdColor;// txt_color input in color
 	@FindBy(xpath="(//*[text()='Size'])[1]/following::*[1]")public WebElement txtPrdSize;//txtPrdSize  txt_size input in size
-	@FindBy(xpath="//*[@data-auid='crt_rdOpt_0']")public WebElement rbShipToMe;
-	@FindBy(xpath="(//*[@data-auid='crt_rdOpt_1'])[1]")public WebElement rbInStorePickUp;
+	@FindBy(xpath="//*[@data-auid='crt_rdOpt_0'] | //span[text()='Ship To Me']")public WebElement rbShipToMe;
+	@FindBy(xpath="(//*[@data-auid='crt_rdOpt_1'])[1] | //span[text()='In Store Pickup – FREE']")public WebElement rbInStorePickUp;
 	@FindBy(xpath="//input[@data-auid='crt_inputQty']")public WebElement input_Quantity;
 	@FindBy(xpath="(//*[@data-auid='crt_qtyField'])[1]")public WebElement txt_Quantity;
 	@FindBy(xpath="(//*[@data-auid='tooltipcrt_rdTooltip_0'])[1]") public WebElement iconTolltip;// toolTip
@@ -626,6 +635,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//div[text()='Estimated Taxes']/../div[2]")public WebElement txtEstimatedTaxesCart;
 	@FindBy(xpath = "//div[text()='Total']/../div[2]")public WebElement txtTotal;
 	@FindBy(xpath="//div[text()='Discounts']")public WebElement discount_Txt;
+	@FindBy(xpath = "//button[@data-auid='crt_btnRmPromo_0']")public WebElement RemovePromocode_Btn; 
 	// Order Summary Finish
 	//****************************************************************************************************************
 	//Calculate Shipping (Start)
@@ -668,7 +678,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	//************************************************************************************************************************
 
 	//footer (Start)
-	@FindBy(xpath = "(//*[text()='Return Policy'])[2]")public WebElement txtReturnPolicy;
+	@FindBy(xpath = "(//*[text()='Return Policy'])[2]")public WebElement ReturnPolicy_txt;
 	//footer (end)
 	//****************************************************************************************************************
 	//Promo Code (Start)

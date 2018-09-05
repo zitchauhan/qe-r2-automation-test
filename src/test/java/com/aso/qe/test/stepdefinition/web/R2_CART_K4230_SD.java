@@ -1,5 +1,6 @@
 package com.aso.qe.test.stepdefinition.web;
 
+
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
@@ -28,13 +29,27 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 
 	@Given("^user click on profile link$")
 	public void user_click_on_profile_link() throws Throwable {
-		clickOnLink(r2MyAccountPo.lnkProfile);
+		
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(clickOnButton(r2MyAccountPo.lnkProfile_Mobile));	
+		}
+		else
+		{
+			assertTrue(clickOnButton(r2MyAccountPo.lnkProfile));
+		}
 	}
 	
 	
 	@Given("^user is not logged out$")
 	public void user_is_not_logged_out() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype))
+		{
+			assertTrue(isDisplayed(r2MyAccountPo.myAccount_txt_Mobile));
+		}
+		else
+		{
 		assertTrue(isDisplayed(r2MyAccountPo.lnkMyAccount));
+		}
 	}
 
 	@Given("^user logs in as \"(.*?)\"$")
@@ -65,8 +80,8 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 			}	
 		}
 		
-		else if(emailID.contains("RawUser") | emailID.contains("EmailAddress")){
-			setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty(emailID));
+		else if(emailID.contains("RawUser")){
+			setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty("RawUser"));
 			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
 			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
 		}
@@ -99,6 +114,22 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 	
 	@Then("^user should be able to change password$")
 	public void user_should_be_able_to_change_password() {
-		assertFalse(isDisplayed(r2MyAccountPo.btnUpdate));
+		assertTrue(isDisplayed(r2MyAccountPo.btnUpdate));
+	}
+	
+	@Then("^user click on MyAccount$")
+	public void user_click_on_MyAccount() {
+		if("mobile".equalsIgnoreCase(testtype))
+		{
+		assertTrue(clickOnButton(r2MyAccountPo.myAccount_txt_Mobile));
+		}else
+		{
+			assertTrue(clickOnButton(r2MyAccountPo.lnkMyAccount));
+		}
+	}
+	
+	@Then("^user click on edit button of default address$")
+	public void user_click_on_edit_button_of_default_address() throws Throwable {
+		assertTrue(clickOnButton(r2MyAccountPo.lnkEdit));   
 	}
 }

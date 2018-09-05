@@ -20,17 +20,17 @@ public class R2_CHECKOUT_K2926_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2CheckoutPo.btnEditCart));
 		
 	}
+//	
+//	@Then("^Remove items from the cart$")
+//	public void remove_items_from_the_cart() throws Throwable {
+//		assertTrue(clickOnButton(r2CartPo.btnRemoveCart));
+//		
+//	}
 	
-	@Then("^Remove items from the cart$")
-	public void remove_items_from_the_cart() throws Throwable {
-		assertTrue(clickOnButton(r2CartPo.btnRemoveCart));
-		
-	}
-	
-	@Then("^verify the item is removed$")
-	public void verify_the_item_is_removed() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.cartEmptyTxt));//cartEmptyMsg
-	}
+//	@Then("^verify the item is removed$")
+//	public void verify_the_item_is_removed() throws Throwable {
+//		assertTrue(isDisplayed(r2CartPo.cartEmptyTxt));//cartEmptyMsg
+//	}
 
 	
 }
