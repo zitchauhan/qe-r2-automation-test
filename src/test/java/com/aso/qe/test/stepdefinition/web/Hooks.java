@@ -1,10 +1,14 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.apache.log4j.Logger;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.framework.common.PropertiesHelper;
+import com.aso.qe.framework.web.helpers.BrowserProxyHelper;
 import com.aso.qe.framework.web.helpers.WebDriverHelper;
 
 import cucumber.api.Scenario;
@@ -17,15 +21,28 @@ public class Hooks {
 	public String testType;
 	public String screenshortName;
 	public PropertiesHelper loadProps;
-	
+
 	public Hooks(){}
+
+	@Before(order=0)//, value="@StartBrowserMobProxy")
+	public void StartBrowserProxy(Scenario scenario) {
+		Constants.enableBrowserProxy = System.getProperty("EnableBrowserProxy");
+		logger.debug("enableBrowserProxy Val::"+Constants.enableBrowserProxy);
+
+		if(Constants.enableBrowserProxy != null && "yes".equalsIgnoreCase(Constants.enableBrowserProxy)){
+			logger.debug("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Starting Browser MobProxy");
+			BrowserProxyHelper.getInstance().initiateBrowserMobProxy();
+			Constants.isBrowserProxyEnabled = true;
+			//Constants.isEnabled = false;
+		}
+	}
 
 	@Before
 	public void BeforeSteps(Scenario scenario) {
 		this.scenario = scenario;
 		loadProps = PropertiesHelper.getInstance();
 		Constants.screenShortTagNames ="";
-		
+
 		logger.debug("exection Start Scenario Name: "+scenario.getName());
 		testType = getTestType();
 		screenshortName = testType+"_"+getTagName("KER-")+"_"+getTagName("ZYP-");
@@ -41,7 +58,15 @@ public class Hooks {
 		logger.debug("Closing Webdriver or sessions.........");
 		WebDriverHelper.quitDriver();
 		logger.debug("Scenarion Execution End.");
-		
+
+	}
+
+	@After(order=9999)//, value="@ZZZZZxy")
+	public void stopProxyServer() {
+		logger.debug("--------------------  after9999Class inside process ----------------------"+Constants.enableBrowserProxy);
+		if(Constants.enableBrowserProxy != null && "yes".equalsIgnoreCase(Constants.enableBrowserProxy)){
+			BrowserProxyHelper.getInstance().generateHarFile("BrowserProxy_"+screenshortName+new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date())+".har");
+		}
 	}
 
 
@@ -75,9 +100,9 @@ public class Hooks {
 		boolean flag =false;
 		logger.debug(scenario.getStatus()+" :Scenario isFailed::"+scenario.isFailed());
 		logger.debug("Test Type::"+testType);
-			if (scenario.isFailed() && !testType.contains("api")) { 
-				flag = CommonActionHelper.embedScreenshot(scenario);
-			}
+		if (scenario.isFailed() && !testType.contains("api")) { 
+			flag = CommonActionHelper.embedScreenshot(scenario);
+		}
 		return flag;
 	}
 }
