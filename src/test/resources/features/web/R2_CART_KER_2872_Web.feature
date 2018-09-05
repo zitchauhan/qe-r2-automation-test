@@ -61,6 +61,28 @@ Scenario: Verify that user is able to see the 'View Next 5 stores' button, if st
 	Then user verify the results based on entering zipcode
 	
 	
+	
+@R2_Web @R2_Regression @R2_All @P-high @C-Cart @KER-2872 @ZYP_CART_K2872-10619 @CR-DPK	
+	Scenario: Verify that user is able to open the Find Store modal from PDP for BOPIS
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on one of the category and navigates to LOne SOF
+    Then user clicks on one of the subcategory and navigates to LTwo SOF
+    Then user clicks on one of the product category and navigates to LThree SOF
+	Then User is navigated to pdp page
+	And user is able to see Change Pickup Location link		
+	
+	
+@R2_Web @R2_Regression @R2_All @P-high @C-Cart @KER-2872 @ZYP_CART_K2872-10620 @CR-DPK	
+	Scenario: Verify that user is able to open the Find Store modal from PDP for BOPIS
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on one of the category and navigates to LOne SOF
+    Then user clicks on one of the subcategory and navigates to LTwo SOF
+    Then user clicks on one of the product category and navigates to LThree SOF
+	Then User is navigated to pdp page
+	And clicks on the Change Pickup Location link
+	And user very Find a Store popup	
+	
+	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10621 @CR-DPK
 Scenario: Verify the user is able to view the 'Change Location' under In-store Pick Up on Cart in Product Blade
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -73,7 +95,6 @@ Scenario: Verify the user is able to view the 'Change Location' under In-store P
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	When user will verify in-store pick up radio button is selected with "ZIPCode"
 	And verify Change Location link	
 	
 	
@@ -92,7 +113,33 @@ Scenario: Verify that user view 'Find a Store' modal from Cart
 	When user will verify in-store pick up radio button is selected with "ZIPCode"
 	And click on Change Location link
 	Then Find in Store modal should get open	
+	
+	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10624 @CR-DPK
+Scenario: Verify user is able to see the BOPIS availability against the listed stores for the products added in cart
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing
+    Then user clicks on one of the subcategory and navigates to LTwo
+    Then user clicks on one of the product category and navigates to LThree
+	Then User is navigated to pdp page
+	Then user click on Add to Cart Button
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And click on Change Location link
+	Then user enter "zipCode" in Find a Store Model
+	And user click on submit button
+	Then user click on all plus icon in Store Address drawer
+	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
 
+
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10647 @CR-DPK
+Scenario: Verify that user is not able to see the 'View Next 5 stores' button, if more stores are not available
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on Find a Store
+	Then user enter "zipcodeWithMax5Stores" in Find a Store Model
+	And user click on submit button
+	Then user should not be able to see the 'View Next 5 Stores' button"
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10652 @CR-DPK
 Scenario: Verify if the user can search the store details by entering City & state
@@ -156,7 +203,7 @@ Scenario: Verify user is displayed with an error message when there is no store 
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10726 @CR-DPK
-Scenario: Verify that user view 'Find a Store' modal from Cart
+Scenario: Verify user is able to see the BOPIS availability on store details drawer for the products added in cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
@@ -166,7 +213,6 @@ Scenario: Verify that user view 'Find a Store' modal from Cart
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	#When user will verify in-store pick up radio button is selected with "ZIPCode"
 	And click on Change Location link
 	Then user enter "zipCode" in Find a Store Model
 	And user click on submit button

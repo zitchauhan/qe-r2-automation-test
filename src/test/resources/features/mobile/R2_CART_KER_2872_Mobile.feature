@@ -6,6 +6,16 @@ Scenario: Verify that user is able to open the Find Store modal from the header
 	Then User clicks on the burger menu 
 	Then User should be able to click on Find Store
 	And user very Find a Store popup
+	
+	
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-8717 @CR-DPK
+Scenario: Verify the components user see on the 'Find a Store' modal with search input location
+	Given user launches the browser and navigates to "ASO_HOME" page
+	Then User clicks on the burger menu
+	Then User should be able to click on Find Store
+	Then user enter "zipCode" in Find a Store Model
+	And user click on submit button
+	Then verify the components in Find a Store Model	
 
 
 @R2_Mobile @R2_Regression @R2_All @P-Highest @C-Cart @KER-2872 @ZYP_CART_K2872-8710 @CR-DPK
@@ -62,6 +72,40 @@ Scenario: Verify that user is able to see the 'View Next 5 stores' button, if st
 	And user click on submit button
 	And user should be able to see the View Next five Stores button	
 
+
+@R2_Mobile @R2_Regression @R2_All @P-high @C-Cart @KER-2872 @ZYP_CART_K2872-10619 @CR-DPK	
+	Scenario: Verify that user is able to open the Find Store modal from PDP for BOPIS
+	Given user launches the browser and navigates to "ASO_HOME" page
+	Then User clicks on the burger menu 
+	When user clicks on one of the category and navigates to LOne SOF
+    Then user clicks on one of the subcategory and navigates to LTwo SOF
+    Then user clicks on one of the product category and navigates to LThree SOF
+	Then User is navigated to pdp page
+	And user is able to see Change Pickup Location link 
+	
+	
+@R2_Mobile @R2_Regression @R2_All @P-high @C-Cart @KER-2872 @ZYP_CART_K2872-10620 @CR-DPK	
+	Scenario: Verify that user is able to open the Find Store modal from PDP for BOPIS
+	Then User clicks on the burger menu 
+	When user clicks on one of the category and navigates to LOne SOF
+    Then user clicks on one of the subcategory and navigates to LTwo SOF
+    Then user clicks on one of the product category and navigates to LThree SOF
+	Then User is navigated to pdp page
+	And clicks on the Change Pickup Location link
+	And user very Find a Store popup	
+	
+	
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10621 @CR-DPK
+Scenario: Verify the user is able to view the 'Change Location' under In-store Pick Up on Cart in Product Blade
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
+    And User navigates to LThree
+    Then user clicks on the product card and navigates to PDP
+	Then user click on Add to Cart Button  
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And verify Change Location link	
+	
 
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10652 @CR-DPK
 Scenario: Verify if the user can search the store details by entering City & state
@@ -139,7 +183,6 @@ Scenario: Verify that user view 'Find a Store' modal from Cart
 	Then user click on Add to Cart Button  
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	#When user will verify in-store pick up radio button is selected with "ZIPCode"
 	And click on Change Location link
 	Then user enter "zipCode" in Find a Store Model
 	And user click on submit button
