@@ -2,8 +2,7 @@ package com.aso.qe.test.stepdefinition.web;
 
 
 
-import static org.testng.Assert.assertTrue;
-
+import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -50,25 +49,47 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 
 	@Then("^user clicks on one of the category and navigates to LOne SOF$")
 	public void user_clicks_on_one_of_the_category_and_navigates_to_LOne_page_SOF() throws Throwable {
-		waitForElement(r2SanityPo.AS_btnShopCategory);
-		assertTrue((clickOnButton(r2SanityPo.AS_btnShopCategory)));
-		assertTrue(clickOnButton(r2R1FunPO.btnOutdoorCategory));
-		Thread.sleep(3000);
-
+		   if("mobile".equalsIgnoreCase(testtype)){      
+			  // waitForElement(r2SanityPo.AS_btnShopCategory_m);
+				//assertTrue((clickOnButton(r2SanityPo.AS_btnShopCategory_m)));
+				assertTrue(clickOnButton(r2R1FunPO.btnOutdoorCategory));
+				Thread.sleep(3000);
+        }else {
+        	waitForElement(r2SanityPo.AS_btnShopCategory);
+    		assertTrue((clickOnButton(r2SanityPo.AS_btnShopCategory)));
+    		assertTrue(clickOnButton(r2R1FunPO.btnOutdoorCategory));
+    		Thread.sleep(3000);
+        }
+				
 	}
 	@Then("^user clicks on one of the subcategory and navigates to LTwo SOF$")
 	public void user_clicks_on_one_of_the_subcategory_and_navigates_to_LTwo_page_SOF() throws Throwable {
-		waitForElement(r2R1FunPO.secCategory_CLP);
-		assertTrue(clickOnButton(r2R1FunPO.secCategory_CLP));
-		assertTrue(clickOnButton(r2R1FunPO.productPLP));
-		Thread.sleep(3000);
+		   if("mobile".equalsIgnoreCase(testtype)){      
+			   waitForElement(r2R1FunPO.secCategory_CLPMobile);
+				assertTrue(clickOnButton(r2R1FunPO.secCategory_CLPMobile));
+				assertTrue(clickOnButton(r2R1FunPO.productPLP_m));
+				Thread.sleep(3000);
+        }else {
+        	waitForElement(r2R1FunPO.secCategory_CLP);
+    		assertTrue(clickOnButton(r2R1FunPO.secCategory_CLP));
+    		assertTrue(clickOnButton(r2R1FunPO.productPLP));
+    		Thread.sleep(3000);
+        }
+		
 
 	}
 	@Then("^user clicks on one of the product category and navigates to LThree SOF$")
 	public void user_clicks_on_one_of_the_product_category_and_navigates_to_LThree_page_SOF() throws Throwable {
-		waitForElement(r2SanityPo.AS_productPLP1);
-		assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
-		Thread.sleep(3000);
+		   if("mobile".equalsIgnoreCase(testtype)){      
+			   waitForElement(r2R1FunPO.AS_productPLP1_m);
+	    		assertTrue(clickOnButton(r2R1FunPO.AS_productPLP1_m));
+	    		Thread.sleep(3000);
+        }else {
+        	waitForElement(r2SanityPo.AS_productPLP1);
+    		assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
+    		Thread.sleep(3000);
+        }
+		
 	}
 	
 	@Then("^clicks on the Change Pickup Location link$")

@@ -20,13 +20,13 @@ Feature: To Verify Get Cart Details API service without sign-in
     Given "AddToCartSummaryUrl" and post request "addtocartRequestJson" endpoint for Add to Cart with Guest user
     Then read the API json response
     And Validate the Add to Cart API Requried Property Value are not Null
-      | itemCount          |
-      | orderTotal         |
-      | message            |
-      | totalQuantityAdded |
-      | totalCartQuantity  |
-      | checkoutURL        |
-      | cartURL            |
+      | items      |
+      | productId  |
+      | quantity   |
+      | giftItemAmount|
+      | attributeKey  |
+      | attributeValue|
+  
 
   @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-05 @CR-VK @ZYP_Cart_12222
   Scenario: TC_5 - verify Get Cart without sign-in details
@@ -37,11 +37,18 @@ Feature: To Verify Get Cart Details API service without sign-in
   Scenario: TC_5 - verify Get Cart without sign-in details
     Given "GetCartUrl" endpoint for getting cart
     And validate jsonSchema "KER-725-MinicartSchema"
+    
+      @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-05 @CR-VK @ZYP_Cart_12866 
+  Scenario: TC_5 - verify Get Cart without sign-in details
+    Given "GetCartUrl" endpoint for getting cart
+    Then read the API json response
+    And Validate the Add to Cart API Requried Property Value are not Null
+      | storeId |
+
+# I did not get the API details for below feature file. Help Needed
 
   @All-R2 @C1-Cart @C2-ChangeStore @api @R2_AAST-05 @CR-VK @ZYP_Cart_12577
   Scenario: TC_5 - verify the change store id with guest user
-    #Given "Guestloginurl" endpoint for guest identity
-    #Given "GetCartUrl" endpoint for getting cart
     Given "OrderUrl" with "changeStoreid" endpoint for Change Store
     Then Verify response status code as 201
 
