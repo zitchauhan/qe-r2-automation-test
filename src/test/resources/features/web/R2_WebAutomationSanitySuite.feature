@@ -1,9 +1,70 @@
 Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios 
 
-@R2_Web @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK
-@AutomationSanityR2 
-Scenario:
-TC_1- Verify the user is able to sign in successfully with valid credentials 
+
+#@R2_Web @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK
+#@AutomationSanityR2 
+#Scenario:
+#TC_1- Verify the user is able to sign in successfully with valid credentials 
+
+
+#===========unit testing pending as search is not working
+@R2_Web @R2_Regression @R2_All @P-High @CR-SK @AutomationSanityR2
+Scenario: Search an item and  navigate to  View Cart
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User should be able to see Search Box on Homepage
+    When User enter the SKU search "SKUNumber"
+    And User click on search icon
+    And user verifies the entered SKU id
+    And user click on Add to Cart Button
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	Then user navigate to Cart page
+
+#===========unit testing pending as search is not working
+@R2_Web @R2_Regression @R2_All @P-High @CR-SK @AutomationSanityR2
+Scenario: Search an item and  navigate to  checkout page from ATC modal
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User should be able to see Search Box on Homepage
+    When User enter the SKU search "SKUNumber"
+    And User click on search icon
+    And user verifies the entered SKU id
+    And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	When user click on checkout button 
+	Then user is navigated to checkout page
+	
+		
+@AutomationSanityR2 @CR-SK
+Scenario: Cat Nav - View Cart 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing
+    And user clicks on one of the subcategory and navigates to LTwo
+    And user clicks on one of the product category and navigates to LThree
+	And User is navigated to pdp page 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	Then user navigate to Cart page 
+	
+	
+@AutomationSanityR2 @CR-SK
+Scenario: Cat Nav - Checkout from ATC Modal 
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And User navigates to L2 Mens clothing
+    And user clicks on one of the subcategory and navigates to LTwo
+    And user clicks on one of the product category and navigates to LThree
+	And User is navigated to pdp page 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	When user click on checkout button 
+	Then user is navigated to checkout page
+
+
+
+
+
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK @AutomationSanityR2
+Scenario: TC_1- Verify the user is able to sign in successfully with valid credentials
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 

@@ -27,6 +27,13 @@ Feature: Debug
 		|checkout_ShippingInformation_Header_txt					|
 		|checkout_ShippingAddress_txt								|
 		
+		|#%%%%%%%  Pickup DropDown %%%%%%%%%% AKK|
+		|MePickUp_Drpdwn|
+		|StorePickupAlternatesFirstName_input|
+		|StorePickupAlternatesLastName_input|
+		|StorePickupAlternatesEmail_input|
+		|StorePickupAlternatesPhoneNumber_input|	
+		|ErrorMsgRequired|
 		
 		|# Verify following elements in Checkout > Shipping Method	|
 		|#------Below Elements has same name in PO------			|

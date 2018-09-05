@@ -275,6 +275,38 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 ////Ends Checkout Page Verification CR - SK
 	
+	
+	//Shipping information
+	
+	//*****Start Modify Pickup Location*********//
+	   //Start KER-4271 AKK
+	   @FindBy(xpath="//a[@data-auid='checkout_edit_in_store_pickup']")
+	   public WebElement EditStorPickUp_Btn;
+	   @FindBy(xpath="(//button[@type='button'])[1]/..")
+	   public WebElement MePickUp_Drpdwn;
+	   
+	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's First Name\"]")
+	   public WebElement PickupAltrFirstname_input;
+	   
+	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's Last Name\"]")
+	   public WebElement PickupAltrLatstname_input;
+	   
+	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's Email Address\"]")
+	   public WebElement PickupAltrEmail_input;
+	   
+	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's Phone Number\"]")
+	   public WebElement PickupAltrPhone_input;
+	   
+	   @FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']")
+	   public WebElement ShippingConfirm_btn;
+	   
+	   @FindBy(xpath="//span[text()='Required']")
+	   public WebElement errorMsgRequired;
+	   
+	 //*****Start Modify Pickup Location*********//
+//
+	   
+	
 //*************************CR-RKA********************************************
 		 //Order Summary(Start)
 		
