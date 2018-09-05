@@ -75,7 +75,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//input[@data-auid='emailid_input']")
 	public WebElement inputEmailAddress_SignIn;// KER-4232 CR-SK 28-8-18
 
-	@FindBy(xpath = "//h5[text()='PROFILE']")
+	@FindBy(xpath = "//*[text()='PROFILE']")
 	public WebElement txtMyAccountDescription; // KER-4249 CR-RK -Updated
 
 	// End KER-4249 CR-RK
@@ -151,7 +151,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='emailid_input']")
 	public WebElement txtEmailAddress; // CR - SK, Date : 28 Aug
 
-	@FindBy(xpath = "//h5[.='Sign in']")
+	@FindBy(xpath = "//*[text()='SIGN IN']")
 	public WebElement headerSignIn;
 
 	@FindBy(xpath = "//*[contains(text(), 'Hello')]")
@@ -523,6 +523,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "//*[text()='payment']")
 	public WebElement lnkPayment_Mobile; // CR-RK KER-2920 Sep 4 
+	
+	@FindBy(xpath = "//*[@data-auid='Profile_m']")
+	public WebElement lnkProfile_Mobile; // CR-RK KER-4230 Sep 5
  
 
 

@@ -8,6 +8,7 @@ Feature: Message/Text Verification
     |All Rights Reserved|
     |All Rights Reserved|
     |Please enter the Email Address in a valid format (ex. abc@xyz.com)|
+    ||Not a valid name|
     
 		
 	

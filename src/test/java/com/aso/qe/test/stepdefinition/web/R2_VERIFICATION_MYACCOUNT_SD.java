@@ -151,6 +151,9 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.btnChangePassword));
 				else if (currentElement.equalsIgnoreCase("ProfilePage_ReceiveEmailNotifications_checkbox"))
 					assertTrue(isDisplayed(r2MyAccountPo.chkReceiveNotifications));
+				else if (currentElement.equalsIgnoreCase("MyAccountPage_Profile_lnk_Mobile"))
+					assertTrue(isDisplayed(r2MyAccountPo.lnkProfile_Mobile));
+				
 				// ===============================================================================
 				//// Profile > Edit Profile
 				// ===============================================================================

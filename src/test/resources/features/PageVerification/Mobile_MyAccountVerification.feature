@@ -5,13 +5,14 @@ Feature: Debug
 	Then Verify below Sub/Main Module of My Account 
 		|# Verify following elements in home page			|
 		|BurgerMenu_MyAccount_txt				   			|
-	
+			
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
 		|SignInPage_SignIn_btn								|
 		|SignInPage_ForgotYourPassword_txt					|
 		|SignInPage_SignUp_btn								|
+		
 		
 		|# Verify following elements in forgot password page|
 		|ForgotPasswordPage_EmailAddress_txt				|
@@ -76,6 +77,7 @@ Feature: Debug
 		|AddGiftCardPage_Add_txt											|
 		
 		|#verify following elements in profile page		|
+		|MyAccountPage_Profile_lnk_Mobile				|
 		|ProfilePage_HelloMessage_label					| 
 		|ProfilePage_ProfileHeader_label				|			
 		|ProfilePage_ProfileInformation_label			|
