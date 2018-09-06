@@ -11,8 +11,8 @@ Scenario: To Verify Image for selected SKU is be displayed on product blade for 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And User is able to see the selected variant image as thumbnail 
+	When user navigate to Cart page 
+	Then User is able to see the selected variant image as thumbnail 
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8071 @CR-AKK 
 Scenario: To view details specific to an item in the cart 
@@ -76,7 +76,12 @@ Scenario: Desktop - To verify Quantity input field
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And modified quantity should get updated 
-	Then Order Summary should get recalculated 
+	Then Verify below Sub/Main Module of Cart Page
+		|# Then Order Summary should get recalculated |
+	    |Total_txt|
+		|SubTotal_txt|
+		|EstimatedShipping_txt|
+		|EstimatedTaxes_txt|
 	And user should be able to see the increased quantity and Price in Cart Order summary 
 	
 	
@@ -91,6 +96,8 @@ Scenario: To Verify Thumbnail Image
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
+	Then Verify below Sub/Main Module of Cart Page  
+	|CartProductName_Link   |
 	And user click on the product image in cart page 
 	And User is navigated to pdp page 
 	
@@ -105,8 +112,10 @@ Scenario: To verify Product name dynamic linking
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user click on the product name in cart page 
-	And User is navigated to pdp page 
+	Then Verify below Sub/Main Module of Cart Page  
+	|CartProductName_Link   |
+	When user click on the product name in cart page 
+	Then User is navigated to pdp page 
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8082 @CR-AKK 
 Scenario: To verify Remove Link 
@@ -118,9 +127,11 @@ Scenario: To verify Remove Link
 	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	Then click the Remove Quantity link 
-	And verify item is removed from the cart 
+	And user will click on View Cart button
+	Then Verify below Sub/Main Module of Cart Page 
+	|RemoveFromCart_Btn| 
+	When click the Remove Quantity link 
+	Then verify item is removed from the cart 
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8078 @CR-AKK 
@@ -135,7 +146,9 @@ Scenario: To verify In-store Pick up radio button - with My Store info on My Acc
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
-	Then user will verify Shipping radio button is deselected 
+	Then Verify below Sub/Main Module of Cart Page
+	|InStorePickup_FREE_radioBtn |
+	And user will verify Shipping radio button is deselected 
 	And user will verify if in-stores information is hidden  
 	Then verify user can begin checkout 
 	
@@ -150,10 +163,12 @@ Scenario: To verify Shipping radio button - Unauthenticated user
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	Then Shipping radio button is selected by default 
-	Then in-stores radio button is deselected 
+	And Shipping radio button is selected by default 
+	Then Verify below Sub/Main Module of Cart Page
+	|ShipToMe_radioBtn|
+	And in-stores radio button is deselected 
 	And in-stores information is hided 
-	And Shipping date information is displayed 
+	Then Shipping date information is displayed 
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8076 @CR-AKK 
 Scenario: To verify Shipping radio button - Authenticated user With out store selected in My Account 
@@ -170,10 +185,12 @@ Scenario: To verify Shipping radio button - Authenticated user With out store se
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	Then Shipping radio button is selected by default 
-	Then in-stores radio button is deselected 
+	And Shipping radio button is selected by default 
+	Then Verify below Sub/Main Module of Cart Page
+	|ShipToMe_radioBtn|
+	And in-stores radio button is deselected 
 	And in-stores information is hided 
-	And Shipping date information is displayed 
+	Then Shipping date information is displayed 
 	
 @R2_Web @R2_Regression @R2_All @P-Lowest @C-Cart @KER-2939 @ZYP_CART_K2939-8085 @CR-AKK 
 Scenario: To verify Est.Arrival Tool Tip 
@@ -187,7 +204,9 @@ Scenario: To verify Est.Arrival Tool Tip
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then Shipping radio button is selected by default 
-	And user verify the Est.Arrival Tool Tip is present 
+	Then Verify below Sub/Main Module of Cart Page 
+	|# user verify the Est.Arrival Tool Tip is present|
+	|toolTip_icon|
  
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8081 @CR-AKK 
@@ -202,7 +221,9 @@ Scenario: To verify Quantity input field
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button  
 	When user selects the Quantity field 
-	Then verfiy quantiy field is activated 
+	And verfiy quantiy field is activated
+	Then Verify below Sub/Main Module of Cart Page 
+	|Quantity_txt| 
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8072 @CR-AKK 	 
 Scenario: To "Move to Wish list" from Cart 

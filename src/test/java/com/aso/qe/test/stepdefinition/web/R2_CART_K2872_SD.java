@@ -13,6 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_FindStore_PO;
+import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -24,6 +25,7 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R2_Cart_PO.class);
 	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
 	R2_FindStore_PO r2FindaStoretPo = PageFactory.initElements(driver, R2_FindStore_PO.class);
+	R2_R1_Fun_PO r2R1FunPO=PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	
 	
 	
@@ -41,7 +43,7 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
     public void user_click_on_submit_button() throws Throwable {
            if("mobile".equalsIgnoreCase(testtype)){      
                   assertTrue(clickOnButton(r2FindaStoretPo.btnZipcodeSubmit_m));
-                  Thread.sleep(2000);
+                  Thread.sleep(5000);
            }else {
                   assertTrue(clickOnButton(r2CartPo.btnZipcodeSubmit));
                   Thread.sleep(2000); 
@@ -205,15 +207,12 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	public void user_should_be_able_to_see_the_BOPIS_availability_as_Cart_Items_available_Not_available_for_Pickup_with_product_image_thumbnails() throws Throwable {
 		for(WebElement bopisavailablity: r2CartPo.txtBopisAvailablity) {
 			if(bopisavailablity.equals("Items Not Available for Pickup")) {
-				System.out.println("Items Not Available for Pickup");
 				logger.info("Items Not Available for Pickup");
 			}
 			else if(bopisavailablity.equals("Cart Items available")) {
-				System.out.println("Cart Items available");
 				logger.info("Cart Items available");
 			}
 			else {
-				System.out.println("No Items are available");
 				logger.info("No Items are available");
 			}
 		}
@@ -234,6 +233,16 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	public void close_X_Find_a_store_Modal() throws Throwable {
 		assertTrue(clickOnButton(r2CartPo.btnFindStoreClose));
 		assertFalse(isDisplayed(r2CartPo.txtFindaStore));
+	}
+	
+	@And("^user is able to see Change Pickup Location link$")
+	public void user_is_able_to_see_Change_Pickup_Location_link() throws Throwable {
+		assertTrue(isDisplayed(r2R1FunPO.lnkPickupLocation)); 
+	}
+	
+	@Then("^user should not be able to see the 'View Next (\\d+) Stores' button\"$")
+	public void user_should_not_be_able_to_see_the_View_Next_Stores_button(int arg1) throws Throwable {
+		assertFalse(isDisplayed(r2CartPo.btnViewTheNext5Stores));
 	}
 	
 }

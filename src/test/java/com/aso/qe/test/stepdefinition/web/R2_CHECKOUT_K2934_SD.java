@@ -2,7 +2,7 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.PageFactory;
 
 import org.apache.log4j.Logger;
@@ -36,6 +36,11 @@ public class R2_CHECKOUT_K2934_SD extends CommonActionHelper {
 		}
 		
 		
+	}
+	
+	@And("^selects Add a New Shipping Address in address drop-down in shipping address drawer$")
+	public void selects_Add_a_New_Shipping_Address_in_address_drop_down_in_shipping_address_drawer() throws Throwable {
+	    
 	}
 	
 

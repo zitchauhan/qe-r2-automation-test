@@ -34,12 +34,12 @@ public class R2_CHECKOUT_K4134_SD extends CommonActionHelper {
 		String expPhoneNumber=r2CheckOutPo.PhoneNumber_Input.getAttribute("value");
 		assertTrue(expPhoneNumber.equals(webPropHelper.getTestDataProperty(arg1)));
 	}
-/*	
+	
 	@Given("^checks for no form errors$")
 	public void checks_for_no_form_errors() throws Throwable {
-		assertFalse(isDisplayed(r2CheckOutPo.phonenumberValidation));
+		assertFalse(isDisplayed(r2CheckOutPo.AlternatePhoneNumberErrorMsg_Txt));
 		
-	}*/
+	}
 	
 	@Then("^user can enter the alternative person invalid phone number \"(.*?)\"$")
 	public void user_can_enter_the_alternative_person_invalid_phone_number(String arg1) throws Throwable {
@@ -48,10 +48,10 @@ public class R2_CHECKOUT_K4134_SD extends CommonActionHelper {
 		
 	}
 	
-	/*@Then("^checks for form errors$")
+	@Then("^checks for form errors$")
 	public void checks_for_form_errors() throws Throwable {
-		assertTrue(isDisplayed(r2CheckOutPo.phonenumberValidation));
-	}*/
+		assertTrue(isDisplayed(r2CheckOutPo.AlternatePhoneNumberErrorMsg_Txt));
+	}
 	
 	@Then("^user enter alternative person FirstName \"(.*?)\"$")
 	public void user_enter_alternative_person_FirstName(String arg1) throws Throwable {

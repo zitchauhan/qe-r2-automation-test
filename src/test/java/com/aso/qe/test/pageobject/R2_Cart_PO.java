@@ -258,7 +258,9 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "(//*[@data-auid='findAStore'])[1]")//*************find a store Duplicate 
 	public WebElement lnkFindAStore;
-
+	@FindBy(xpath = "//a[@data-auid='findAStore_m']//span[2]")
+	public WebElement lnkFindAStore_M; 
+	
 	@FindBy(xpath = "//input[@name='zipcode']")//*************find a store Duplicate 
 	public WebElement txtZipCode;
 
@@ -571,15 +573,23 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	// Start KER-2939 CR-AKK
 	public void selectStore(String zipCode) {
-		assertTrue(clickOnButton(lnkFindAStore));
+		if("mobile".equalsIgnoreCase(testtype)){
+		assertTrue(clickOnButton(lnkFindAStore_M));
 		waitForElement(txtZipCode);
 		setInputText(txtZipCode, zipCode);
 		assertTrue(clickOnButton(btnZipCode));
         assertTrue(clickOnButton(storeNames_txt));
         assertTrue(clickOnButton(makeMyStore_btn));
-//		assertTrue(clickOnButton(btnFindStoreClose));
-		
-	}
+		}
+		else
+		{
+			assertTrue(clickOnButton(lnkFindAStore));
+			waitForElement(txtZipCode);
+			setInputText(txtZipCode, zipCode);
+			assertTrue(clickOnButton(btnZipCode));
+	        assertTrue(clickOnButton(storeNames_txt));
+	        assertTrue(clickOnButton(makeMyStore_btn));
+		} }
 	// End KER-2939 CR-AKK
 	/***************************** END METHODS *********************************/
 	

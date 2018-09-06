@@ -4,7 +4,7 @@ Feature: Verify BOPIS PDP Store Selection
 Scenario: Verify that user is able to open the Find Store modal from the header
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
-	And user very Find a Store popup
+	And user verify Find a Store popup
 
 
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8710 @CR-DPK
@@ -49,21 +49,20 @@ Scenario: Verify the user is able to see the store address of any of the listed 
 
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8725 @CR-DPK
-Scenario: Verify that user is able to see the 'View Next 5 stores' button, if stores are available
+Scenario: Verify My Store functionality and modal close behavior
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
 	Then user enter "zipCode" in Find a Store Model
 	And user click on submit button
 	Then user click on plus icon in Store Address drawer
 	And user click on Make My store button	
-	And user very Find a Store popup is closed
-	When user clicks on Find a Store
-	Then user verify the results based on entering zipcode
+	And user verify Find a Store popup is closed
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-high @C-Cart @KER-2872 @ZYP_CART_K2872-10619 @CR-DPK	
-	Scenario: Verify that user is able to open the Find Store modal from PDP for BOPIS
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10619 @CR-DPK	
+	Scenario: Verify that user is able to see the Change Location link on PDP
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on one of the category and navigates to LOne SOF
     Then user clicks on one of the subcategory and navigates to LTwo SOF
@@ -72,7 +71,7 @@ Scenario: Verify that user is able to see the 'View Next 5 stores' button, if st
 	And user is able to see Change Pickup Location link		
 	
 	
-@R2_Web @R2_Regression @R2_All @P-high @C-Cart @KER-2872 @ZYP_CART_K2872-10620 @CR-DPK	
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10620 @CR-DPK	
 	Scenario: Verify that user is able to open the Find Store modal from PDP for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on one of the category and navigates to LOne SOF
@@ -80,7 +79,7 @@ Scenario: Verify that user is able to see the 'View Next 5 stores' button, if st
     Then user clicks on one of the product category and navigates to LThree SOF
 	Then User is navigated to pdp page
 	And clicks on the Change Pickup Location link
-	And user very Find a Store popup	
+	And user verify Find a Store popup	
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10621 @CR-DPK
@@ -142,7 +141,7 @@ Scenario: Verify that user is not able to see the 'View Next 5 stores' button, i
 	Then user should not be able to see the 'View Next 5 Stores' button"
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10652 @CR-DPK
-Scenario: Verify if the user can search the store details by entering City & state
+Scenario: Verify the system behaviour on click of 'View Next 5 Stores' CTA
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
 	Then user enter "City-State" in Find a Store Model
@@ -175,7 +174,7 @@ Scenario: Verify the user is able to see the store address of any of the listed 
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10681 @CR-DPK
-Scenario: Verify the user is able to see the store address of any of the listed store in 'Find a Store' modal with search input location through Store accordion
+Scenario: Verify the system behavior on clicking 'Driving Directions' in store details drawer
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
 	Then user enter "zipCode" in Find a Store Model
@@ -238,8 +237,7 @@ Scenario: Verify the user is able to view the 'Change Location' under In-store P
 		|CartProductName_Link   |
 		|color_input_txt       |
 		|Size_input_txt|
-#		|ShipToMe_radioBtn|
-#		|InStorePickup_FREE_radioBtn |
+
 	And verify Change Location link	
 	
 	
@@ -277,7 +275,7 @@ Scenario: Verify user is able to see the inventory on store details drawer for t
 Scenario: Verify find a store Modal closes On Select "Close X" and If a user selects anywhere outside the modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
-	And user very Find a Store popup
+	And user verify Find a Store popup
 	Then Close X Find a store Modal 
 		
 	

@@ -237,8 +237,8 @@ Scenario:
 	And user click on Add to cart button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	When user click on the product image in cart page 
-	Then User is navigated to pdp page 
+	When user navigate to Cart page 
+	Then User is able to see the selected variant image as thumbnail 
 	
 @R2_Mobile @P-Highest @C-Cart @KER-2942 @ZYP_K2942-8047_M @CR-DP
 @AutomationSanityR2 

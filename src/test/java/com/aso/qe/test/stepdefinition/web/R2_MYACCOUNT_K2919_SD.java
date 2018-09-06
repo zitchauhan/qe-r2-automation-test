@@ -1,13 +1,16 @@
 package com.aso.qe.test.stepdefinition.web;
 
 
-import static org.testng.Assert.assertTrue;
+
+import static org.junit.Assert.assertTrue;
+
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.And;
@@ -17,6 +20,7 @@ import cucumber.api.java.en.Then;
 public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R2_MYACCOUNT_K2919_SD.class);
 	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);
+	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	
 		
 	@Given("^user clicks on Add New Credit Card button$")
@@ -141,5 +145,28 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	    assertTrue(!state.isEmpty());
 	    
 	}
+	
+
+@Given("^user enter PhoneNumber field \"(.*?)\"$")
+public void user_enter_PhoneNumber_field(String arg1) throws Throwable {
+	setInputText(myAccountPo.adr_inpPhoneNumber, webPropHelper.getTestDataProperty(arg1));
+}
+
+@Then("^click on Add button$")
+public void click_on_Add_button() throws Throwable {
+	assertTrue(clickOnButton(myAccountPo.btnAddInAddressField));
+}
+
+@Given("^click on Add another Credit Card button$")
+public void click_on_Add_another_Credit_Card_button() throws Throwable {
+	assertTrue(clickOnButton(myAccountPo.addNewCardCta));
+}
+
+@Then("^User verifies that in Payment section CCone credit card is pre-populated by default\\.$")
+public void user_verifies_that_in_Payment_section_CCone_credit_card_is_pre_populated_by_default() throws Throwable {
+	assertTrue(isDisplayed(r2CheckOutPo.chooseCreditcard_Dd));
+	String cc= r2CheckOutPo.chooseCreditcard_Dd.getText();
+	assertTrue(cc.contains("1111"));
+}
 
 }

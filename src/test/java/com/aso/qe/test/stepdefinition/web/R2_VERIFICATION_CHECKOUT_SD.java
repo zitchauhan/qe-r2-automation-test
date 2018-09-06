@@ -68,7 +68,7 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2CheckoutPo.checkout_ShippingAddress_txt));
 				
 				//======================================
-				// Pickup DropDown(Start)
+				// In-Store Pickup(Start)
 				else if (currentElement.equalsIgnoreCase("MePickUp_Drpdwn"))
 					assertTrue(isDisplayed(r2CheckoutPo.MePickUp_Drpdwn));
 				else if (currentElement.equalsIgnoreCase("StorePickupAlternatesFirstName_input"))
@@ -81,7 +81,25 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2CheckoutPo.PickupAltrPhone_input));
 				else if (currentElement.equalsIgnoreCase("ErrorMsgRequired"))
 					assertTrue(isDisplayed(r2CheckoutPo.errorMsgRequired));
-				// Pickup DropDown(End)
+				
+				else if (currentElement.equalsIgnoreCase("PickupLocation_Lbl"))
+					assertTrue(isDisplayed(r2CheckoutPo.PickupLocation_Lbl));
+				else if (currentElement.equalsIgnoreCase("StoreNameandAddress_Txt"))
+					assertTrue(isDisplayed(r2CheckoutPo.StoreNameandAddress_Txt));
+				else if (currentElement.equalsIgnoreCase("ChangeLocation_Lnk"))
+					assertTrue(isDisplayed(r2CheckoutPo.ChangeLocation_Lnk));
+				else if (currentElement.equalsIgnoreCase("ItemsForPickup_Itemcount_Txt"))
+					assertTrue(isDisplayed(r2CheckoutPo.ItemsForPickup_Itemcount_Txt));
+				else if (currentElement.equalsIgnoreCase("ItemsForPickup_Itemthumbnail_Txt"))
+					assertTrue(isDisplayed(r2CheckoutPo.ItemsForPickup_thumbnail_Txt));
+				else if (currentElement.equalsIgnoreCase("SeeInStorePickupInstructions_Dd"))
+					assertTrue(isDisplayed(r2CheckoutPo.SeeInStorePickupInstructionsl_Dd));
+				else if (currentElement.equalsIgnoreCase("AlternatePhoneNumberErrorMsg_Txt"))
+					assertTrue(isDisplayed(r2CheckoutPo.AlternatePhoneNumberErrorMsg_Txt));
+
+				else if (currentElement.equalsIgnoreCase("SeeInStorePickupInstructions_Msg"))
+					assertTrue(isDisplayed(r2CheckoutPo.SeeInStorePickupInstructions_Msg));
+				// In-Store Pickup(End)
 				
 	//==============================================
 				// ===============================================================================

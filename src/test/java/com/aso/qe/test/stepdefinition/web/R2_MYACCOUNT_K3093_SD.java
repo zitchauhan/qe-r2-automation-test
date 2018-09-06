@@ -9,11 +9,13 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
+import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
-	
+	R2_R1_Fun_PO r2_r1_fun_po=PageFactory.initElements(driver,R2_R1_Fun_PO.class );
 	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(getDriver(),R1_GlobalElementHeader_Home_PO.class);
 	@Given("^user clicks on payment tab$")
@@ -99,5 +101,44 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(globalElementHeader.mobileBreadcrumb));
 		
 	}//KER-2910 CR-RK Sep 4
+	
+	@Then("^user click on My Account and navigate to payment$")
+	public void user_click_on_My_Account_and_navigate_to_payment() throws Throwable {
+	 
+	  if("mobile".equalsIgnoreCase(testtype))
+		{
+		  clickOnButton(myAccountPo.myAccount_txt_Mobile);
+		  clickOnButton(r2_r1_fun_po.payment_M_Txt);
+		  
+		}else
+		{
+			 clickOnButton(myAccountPo.lnkMyAccount);
+			  clickOnButton(r2_r1_fun_po.payment_Txt);
+		} 
+	}
+	
 
+	@Then("^user click on cancel Gift card button$")
+	public void user_click_on_cancel_Gift_card_button() throws Throwable {
+		clickOnButton(myAccountPo.btnCancelGiftCard);
+	}
+	@Then("^user enter the Wrong Gift card and click on Add button$")
+	public void user_enter_the_Wrong_Gift_card_and_click_on_Add_button() throws Throwable {
+		 setInputText(myAccountPo.txtGiftCardNumber, webPropHelper.getTestDataProperty("WrongGiftcardNumber"));
+		 setInputText(myAccountPo.txtGifCardPin, webPropHelper.getTestDataProperty("WrongPinNumber"));
+		 assertTrue(clickOnButton((myAccountPo.btnAddGiftCard)));
+	}
+	@Then("^user fill the Zero balance gift card number and pin$")
+	public void user_fill_the_Zero_balance_gift_card_number_and_pin() throws Throwable {
+	    
+		 setInputText(myAccountPo.txtGiftCardNumber, webPropHelper.getTestDataProperty("ZeroBalanceGiftCardNumber"));
+		 setInputText(myAccountPo.txtGifCardPin, webPropHelper.getTestDataProperty("ZeroBalanceGiftCardPin"));
+		 assertTrue(clickOnButton((myAccountPo.btnAddGiftCard)));
+		
+		
+	}
+	@Then("^user fill the Existing gift card number and pin$")
+	public void user_fill_the_Existing_gift_card_number_and_pin() throws Throwable {
+	  
+	}
 }

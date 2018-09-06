@@ -24,7 +24,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='checkout_unauth_description_signin_link']")
 	public WebElement txtSignInDescription;
 
-	@FindBy(xpath = "//*[contains(text(),'Sign In')]")
+	@FindBy(xpath = "//*[contains(text(),'Sign in')]")//KER-6941 Updated Sep4 CR-RK 
 	public WebElement lnkSignIn_CheckOut;
 
 	@FindBy(xpath = "//*[@data-auid='email-signup-main-modal-close']")
@@ -278,14 +278,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 ////Ends Checkout Page Verification CR - SK
 	
-	
 	//Shipping information
 	
 	//*****Start Modify Pickup Location*********//
 	   //Start KER-4271 AKK
 	   @FindBy(xpath="//a[@data-auid='checkout_edit_in_store_pickup']")
 	   public WebElement EditStorPickUp_Btn;
-	   @FindBy(xpath="(//button[@type='button'])[1]/..")
+	   @FindBy(xpath="@FindBy(xpath=\"(//button[@type='button'])[1]/div/div[1]")
 	   public WebElement MePickUp_Drpdwn;
 	   
 	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's First Name\"]")
@@ -306,7 +305,36 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//span[text()='Required']")
 	   public WebElement errorMsgRequired;
 	   
-	 //*****Start Modify Pickup Location*********//
+	   
+	   @FindBy(xpath="//*[text()='PICKUP LOCATION']")
+	   public WebElement PickupLocation_Lbl;
+	   
+	   @FindBy(xpath="//*[text()='PICKUP LOCATION']/../div")
+	   public WebElement StoreNameandAddress_Txt;
+	   
+	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']")
+	   public WebElement ChangeLocation_Lnk;
+	   
+	   @FindBy(xpath="//*[contains(text(),'Items for Pickup')]/..")
+	   public WebElement ItemsForPickup_Itemcount_Txt;
+	   
+	   @FindBy(xpath="//*[contains(text(),'Items for Pickup')]/../..//img")
+	   public WebElement ItemsForPickup_thumbnail_Txt;
+	   
+	   @FindBy(xpath="//*[contains(text(),'See In-Store Pickup Instructions')]")
+	   public WebElement SeeInStorePickupInstructionsl_Dd;
+	   
+	   
+	   @FindBy(xpath="(//*[text()='Me+Alternate Person Pick Up'])[2]")
+	   public WebElement SeeInStorePickupInstructions_Select_Dd; 
+	
+	   @FindBy(xpath="//*[text()='Please enter a valid 10 digit phone number']")
+	   public WebElement AlternatePhoneNumberErrorMsg_Txt;
+	  
+	   @FindBy(xpath="//*[contains(text(),'See In-Store Pickup Instructions')]/../div[3]/ol")
+	   public WebElement SeeInStorePickupInstructions_Msg; 
+	   
+	   //*****Start Modify Pickup Location*********//
 //
 	   
 	

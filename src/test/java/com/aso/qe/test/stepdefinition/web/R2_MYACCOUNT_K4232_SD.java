@@ -42,7 +42,15 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 
 	@Then("^user Clicks on Add New Address link$")
 	public void user_Clicks_on_Add_New_Address_link() throws Throwable {
+		
+		if("mobile".equalsIgnoreCase(testtype))
+		{
+			assertTrue(clickOnButton(myAccountPo.myAccountPage_AddNewAddressPluIcon_btn));	
+		}else
+		{
 		assertTrue(clickOnButton(myAccountPo.addNewAddressBtn));
+		}
+		
 	}
 
 //	@Then("^user views First Name field is displayed$")
@@ -135,6 +143,7 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 	@Then("^user enter Zipcode \"(.*?)\" in address book$")
 	public void user_enter_Zipcode_in_address_book(String arg1) throws Throwable {
 		setInputText(myAccountPo.adr_inpzipCode, webPropHelper.getTestDataProperty(arg1));
+		Thread.sleep(1000);
 	}
 
 	@Given("^clicks on Add New Address button$")

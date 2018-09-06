@@ -35,12 +35,12 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And  user will click on Checkout button and navigates to Checkout page
 	When user click on edit shipping pickup
 	And user select me + alternate pickup person
-	Then Verify below Sub/Main Module of Checkout Page
+	Then Verify the message on the page
 	|#Then given below fields should display for the details of Alternative pickup person|
-		|StorePickupAlternatesFirstName_input|
-		|StorePickupAlternatesLastName_input|
-		|StorePickupAlternatesEmail_input|
-		|StorePickupAlternatesPhoneNumber_input|
+		|Alternate's First Name|
+		|Alternate's Last Name |
+		|Alternate's Email Address|
+		|Alternate's Phone Number |
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10822 @CR-AKK	
  Scenario: Verify after selecting Me + Alternate Pickup Person during checkout Alternate Pickup Person fields must display
@@ -57,12 +57,12 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And  user will click on Checkout button and navigates to Checkout page
 	When user click on edit shipping pickup
 	And user select me + alternate pickup person
-	Then Verify below Sub/Main Module of Checkout Page
+	Then Verify the message on the page
 	|#Then given below fields should display for the details of Alternative pickup person|
-		|StorePickupAlternatesFirstName_input|
-		|StorePickupAlternatesLastName_input|
-		|StorePickupAlternatesEmail_input|
-		|StorePickupAlternatesPhoneNumber_input|
+		|Alternate's First Name|
+		|Alternate's Last Name |
+		|Alternate's Email Address|
+		|Alternate's Phone Number |
 		
 	And user enter the Store Pickup Alternates FirstName "PickupFirstName"
 	And user enter the Store Pickup Alternates LastName "PickupLastName"
@@ -86,12 +86,12 @@ Scenario: Verify Mandatory fields for alternative pick up person details
 	And  user will click on Checkout button and navigates to Checkout page
 	When user click on edit shipping pickup
 	And user select me + alternate pickup person
-	Then Verify below Sub/Main Module of Checkout Page
+	Then Verify the message on the page
 	|#Then given below fields should display for the details of Alternative pickup person|
-		|StorePickupAlternatesFirstName_input|
-		|StorePickupAlternatesLastName_input|
-		|StorePickupAlternatesEmail_input|
-		|StorePickupAlternatesPhoneNumber_input|
+		|Alternate's First Name|
+		|Alternate's Last Name |
+		|Alternate's Email Address|
+		|Alternate's Phone Number |
 	And user click on confirm button
 	Then Verify below Sub/Main Module of Checkout Page
 	|# verify the error message |

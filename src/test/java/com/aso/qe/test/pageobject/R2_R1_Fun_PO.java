@@ -10,7 +10,7 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 
 	/***************************** START XPAHTS **********************************/
 	// Start KER-4249 CR-RK
-	@FindBy(xpath = "//a[text()='Sign In'] | | //*[@data-auid='signInCta_m']") // CR-AAK 4 sept
+	@FindBy(xpath = "//a[text()='Sign In'] | //*[@data-auid='signInCta_m']") // CR-AAK 6 sept
 	public WebElement lnkSignInMobile;
 
 	// Start KER-3613 CR-RK
@@ -40,4 +40,10 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='shopByCategory_9']")public WebElement btnShootingCategory;
 	@FindBy(xpath="//*[@data-auid='shopByCategory_4']")public WebElement ProductgunStorageSafty;
    @FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[1]")public WebElement productSelection;
+   
+   
+ //KER-3093 CR-RKA
+   @FindBy(xpath="//*[@data-auid='Payment']")public WebElement payment_Txt;
+   @FindBy(xpath="//*[@data-auid='Payment_m']")public WebElement payment_M_Txt;
+   //KER-3093 CR-RKA
 }

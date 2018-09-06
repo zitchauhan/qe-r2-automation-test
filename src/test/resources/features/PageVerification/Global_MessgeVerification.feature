@@ -12,14 +12,11 @@ Feature: Message/Text Verification
     |CONGRATULATIONS|
     |You have successfully registered with Academy.com|
     |LET'S SHOP|
-    |Please enter the First Name						|
-    | Please Enter a Last Name|
-	|Please enter a Password							|
- 	|Please enter an Email address						|
-	|The email address you entered already exists. Type a different email address and try again.|
- 	|Please enter the Email Address in a valid format (ex. abc@xyz.com)	|
- 	|*Minimum 8 characters								|	
- 	|For maximum security, please enter a Password different from your Email Address|
+    |Alternate's First Name|
+	|Alternate's Last Name |
+	|Alternate's Email Address|
+	|Alternate's Phone Number |
+	|The combination of Gift Card Number and PIN is incorrect. Please try again.| 
     
 		
 	

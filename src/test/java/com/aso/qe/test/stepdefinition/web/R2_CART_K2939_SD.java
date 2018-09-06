@@ -172,8 +172,16 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 
 	@When("^user will verify in-store pick up radio button is selected with \"(.*?)\"$")
 	public void user_will_verify_in_store_pick_up_radio_button_is_selected_with(String arg1) throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)){
+			globalElementHeader.clickOnBurgerMenu();
+			r2CartPo.selectStore(webPropHelper.getTestDataProperty(arg1));
+			assertTrue(clickOnButton(r2CartPo.rbInStorePickUp));
+		}
+		else
+		{
 		r2CartPo.selectStore(webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(r2CartPo.rbInStorePickUp));
+		}
 	}
 	
 	@Then("^user will verify Shipping radio button is deselected$")
@@ -192,7 +200,13 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 
 	@Then("^verify user can begin checkout$")
 	public void verify_user_can_begin_checkout() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(clickOnButton(r2CartPo.btn_checkOut_OrderSummary));
+		}
+		else
+		{
 		assertTrue(clickOnButton(r2CartPo.btnCartCheckout));//btnCheckout
+		}
 	}
 	
  

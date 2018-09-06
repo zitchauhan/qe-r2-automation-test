@@ -1,4 +1,4 @@
-/*package com.aso.qe.test.stepdefinition.web;
+package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 
@@ -24,9 +24,11 @@ public class R2_CHECKOUT_K4764_SD extends CommonActionHelper {
 
 	@Then("^user select me \\+ alternate pickup person$")
 	public void user_select_me_alternate_pickup_person() throws Throwable {
+		Thread.sleep(2000);
 		Actions hover=new Actions(getDriver());
-		hover.sendKeys(r2CheckoutPo.MePickUp_Drpdwn, Keys.DOWN,Keys.DOWN,Keys.ENTER).build().perform();
-	    Thread.sleep(5000);
+		hover.clickAndHold(r2CheckoutPo.MePickUp_Drpdwn).build().perform();
+		hover.sendKeys(r2CheckoutPo.MePickUp_Drpdwn, Keys.DOWN,Keys.ENTER).build().perform();
+	    Thread.sleep(3000);
 	}
 
 	@Then("^user enter the Store Pickup Alternates FirstName \"(.*?)\"$")
@@ -63,4 +65,3 @@ public class R2_CHECKOUT_K4764_SD extends CommonActionHelper {
 
 	
 }
-*/
