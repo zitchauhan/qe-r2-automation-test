@@ -2,7 +2,7 @@ Feature: Debug
 
 
 Scenario: Verify MyAccount 
-	Then Verify below Sub/Main Module of My Account 
+	Then Verify below Sub/Main Module of My Account
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
@@ -30,7 +30,9 @@ Scenario: Verify MyAccount
 		|AddressPage_Cancel_btn						|
 		|AddressPage_Edit_btn						|
 		|AddressPage_SetAsDefault_btn				|
-		|AddressPage_Default_txt					|		
+		|AddressPage_Default_txt					|	
+		|Below elements has same name in PO			|
+		|myAccountPage_AddNewAddressPluIcon_btn		|	
 		
 		|#Verify following elements in Payment page		|
 		|PaymentPage_PaymentsHeader_label				|
@@ -76,6 +78,7 @@ Scenario: Verify MyAccount
 		|AddGiftCardPage_PIN_txt											|
 		|AddGiftCardPage_Cancel_txt											|
 		|AddGiftCardPage_Add_txt											|
+		|AddGiftCardPage_Pin_toolTip										|
 		
 		|#verify following elements in profile page		|
 		|ProfilePage_HelloMessage_label					| 
@@ -133,6 +136,10 @@ Scenario: Verify MyAccount
 		|SignUpPage_PasswordStrength_txt				|
 		|SignUpPage_Weak_txt							|
 		|SignUpPage_Strong_txt							|
+		
+		|#Verify following elements in MyAccountsDropDown	|
+		|#	Below elements has same name in PO				|
+		|myAccount_MyAccountList_Orders_lnk			 		|
 		
 		
 		

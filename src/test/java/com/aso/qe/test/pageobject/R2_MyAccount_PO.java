@@ -32,8 +32,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='email_input']")
 	public WebElement inputEmailAddress;// Updated KER-6941 CR-RK
-	@FindBy(xpath = "(//div[.='Create Password']/following-sibling::div/input)[1]") // modified by CR- SK
-																					// "//input[@type='password']")
+
+	@FindBy(xpath = "(//div[.='Create Password']/following-sibling::div/input)[1]") // modified by CR- SK//
 	public WebElement inputCreatePassword;
 
 	@FindBy(xpath = "//input[@type='checkbox']")
@@ -93,7 +93,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='password_input']")
 	public WebElement password;
 
-	@FindBy(xpath = "//*[text()='address  Book']")
+	@FindBy(xpath = "//*[.='ADDRESS BOOK']/a")
 	public WebElement addressBook;
 
 	@FindBy(xpath = "//*[@data-auid='btnadd_address_empty_btn']")
@@ -182,7 +182,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// End KER-4023 CR-SK
 
 	// Start KER-4230 CR-SK
-	@FindBy(xpath = "//*[.='profile']") // CR-SK 28 Aug-18
+	@FindBy(xpath = "//*[text()='Profile']") // CR-SK 28 Aug-18 // KER-4230 CR-RK Sep 6
 	public WebElement lnkProfile;
 
 	@FindBy(xpath = "//*[@data-auid='myAccountCta']")
@@ -207,7 +207,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// End KER-4249 CR-SK 23-Aug
 
 	// Start KER-3092
-	@FindBy(xpath = "//*[.='payment']/a")
+	@FindBy(xpath = "//*[.='PAYMENT']/a ")
 	public WebElement lnkPayment; //// CR-SK 29 Aug-18
 
 	@FindBy(xpath = "//div[.='You have no gift cards listed.']")
@@ -222,13 +222,13 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[.='PIN']/following-sibling::input")
 	public WebElement txtGifCardPin; // 25 Aug
 
-	@FindBy(xpath = "//*[text()='ADD NEW GIFT CARD']")
-	public WebElement btnAddGiftCardPlusIcon; // 25 Aug
+	@FindBy(xpath = "(//*[text()='ADD NEW GIFT CARD'])[1]")
+	public WebElement btnAddGiftCardPlusIcon;  
 
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement btnAddGiftCard; // 25 Aug
 
-	@FindBy(xpath = "//button[contains(text(),'CANCEL')]")
+	@FindBy(xpath = "//*[@data-auid='btnundefined']/following::*[1]")
 	public WebElement btnCancelGiftCard; // CR-SK, 29 Aug
 	// End KER-3092
 
@@ -375,10 +375,10 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "(//*[text()='Last Name']/following-sibling::input)[1]")
 	public WebElement txtLastName;
 
-	@FindBy(xpath = "(//*[text()='New Email']/following-sibling::div/input)[1]")
+	@FindBy(xpath = "(//*[text()='New Email']/following-sibling::div//input)[1]") // CR - RK Sep 6 KER-4230
 	public WebElement txtNewEmail;
 
-	@FindBy(xpath = "(//*[text()='Confirm Email']/following-sibling::div/input)[1]")
+	@FindBy(xpath = "(//*[text()='Confirm Email']/following-sibling::div//input)[1]") // CR - RK Sep 6 KER-4230
 	public WebElement txtConfirmEmail;
 
 	@FindBy(xpath = "//h5[text()='PAYMENTS']")
@@ -520,21 +520,24 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='Address Book_m']")
 	public WebElement addressBook_M;
-	
+
 	@FindBy(xpath = "//*[text()='payment']")
-	public WebElement lnkPayment_Mobile; // CR-RK KER-2920 Sep 4 
-	
+	public WebElement lnkPayment_Mobile; // CR-RK KER-2920 Sep 4
+
 	@FindBy(xpath = "//*[@data-auid='Profile_m']")
 	public WebElement lnkProfile_Mobile; // CR-RK KER-4230 Sep 5
-	
-//	@FindBy(xpath = "//*[text()='CONGRATULATIONS']")
-//	public WebElement myAccount_SignUp_CongratulationsMessage_txt;
-//	
-//	@FindBy(xpath = "//*[text()='CONGRATULATIONS']")
-//	public WebElement myAccount_SignUp_CongratulationsMessage_txt;
-	
- 
 
+	@FindBy(xpath = "//*[text()='CONGRATULATIONS']")
+	public WebElement myAccount_SignUp_CongratulationsMessage_txt;
+
+	@FindBy(xpath = "//*[@data-auid='Order']")
+	public WebElement myAccount_MyAccountList_Orders_lnk;
+
+	@FindBy(xpath = "//*[@auid='add_address_btn']")
+	public WebElement myAccountPage_AddNewAddressPluIcon_btn; // CR-RK KER-4230 Sep 6
+
+	@FindBy(xpath = "//*[@data-auid='tooltipsample tooltip']") //CR - RKA Sep 6
+	public WebElement AddGiftCardPage_Pin_toolTip;
 
 	/***************************** END XPAHTS ***********************************/
 

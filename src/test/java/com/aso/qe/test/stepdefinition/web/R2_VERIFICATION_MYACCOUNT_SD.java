@@ -86,6 +86,9 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.default_txt));
 				else if (currentElement.equalsIgnoreCase("BurgerMenu_MyAccount_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.myAccount_txt_Mobile));
+				else if (currentElement.equalsIgnoreCase("myAccountPage_AddNewAddressPluIcon_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.myAccountPage_AddNewAddressPluIcon_btn));
+				
 				
 				// ===============================================================================
 				//// Payment
@@ -235,6 +238,9 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.btnCancelGiftCard));
 				else if (currentElement.equalsIgnoreCase("AddGiftCardPage_Add_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnAddGiftCard));
+				else if (currentElement.equalsIgnoreCase("AddGiftCardPage_Pin_toolTip"))
+					assertTrue(isDisplayed(r2MyAccountPo.AddGiftCardPage_Pin_toolTip));
+				
 				// ===============================================================================
 				//// Wishlist
 				// ===============================================================================
@@ -291,6 +297,12 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.txtWeak));
 				else if (currentElement.equalsIgnoreCase("SignUpPage_Strong_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.txtStrong));
+				// ===============================================================================
+				//// MyAccount dropdown header
+				// ===============================================================================
+				else if (currentElement.equalsIgnoreCase("myAccount_MyAccountList_Orders_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_Orders_lnk));
+				
 				
 				
 				

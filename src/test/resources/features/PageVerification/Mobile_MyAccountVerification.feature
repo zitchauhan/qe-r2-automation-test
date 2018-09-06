@@ -35,6 +35,9 @@ Feature: Debug
 		|AddressPage_Edit_btn						|
 		|AddressPage_SetAsDefault_btn				|
 		|AddressPage_Default_txt					|
+		|##Below elements has same name in PO		|
+		|myAccountPage_AddNewAddressPluIcon_btn		|	
+
 				
 		|#Verify following elements in Payment page		|
 		|PaymentPage_Payment_lnk_mobile					|
@@ -75,6 +78,7 @@ Feature: Debug
 		|AddGiftCardPage_PIN_txt											|
 		|AddGiftCardPage_Cancel_txt											|
 		|AddGiftCardPage_Add_txt											|
+		|AddGiftCardPage_Pin_toolTip										|
 		
 		|#verify following elements in profile page		|
 		|MyAccountPage_Profile_lnk_Mobile				|
