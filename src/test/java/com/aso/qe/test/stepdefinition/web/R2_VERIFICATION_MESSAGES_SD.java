@@ -31,7 +31,7 @@ public class R2_VERIFICATION_MESSAGES_SD extends CommonActionHelper
 			{
 				String currentElement = elements.get(i).get(0);
 			
-					VerifyTextPersent(currentElement);
+					VerifyTextPersent(currentElement.trim());
 					//assertTrue(isDisplayed(r2CartPo.link_ContinueShopping));
 			}
 		} 

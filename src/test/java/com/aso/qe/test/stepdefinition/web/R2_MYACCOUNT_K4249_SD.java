@@ -58,6 +58,12 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	@When("^clicks on Sign Up Button$")
 	public void clicks_on_Sign_Up_Button() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.btnSignUp));
+		Thread.sleep(2000);
+	}
+	
+	@Then("^user should be able to sign up successfully$")
+	public void user_should_be_able_to_sign_up_successfully() throws Throwable {
+	    assertTrue(isDisplayed(r2MyAccountPo.myAccount_SignUp_CongratulationsMessage_txt));
 	}
 
 	@When("^user should see the successfull message$")
@@ -77,7 +83,8 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 
 	@Then("^user should get logged in successfully$")
 	public void user_should_get_logged_in_successfully() throws Throwable {
-		assertTrue(isDisplayed(r2MyAccountPo.txtMyAccountDescription));
+		clickOnButton(r2MyAccountPo.myAccount);
+		assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_Orders_lnk));
 	}
 
 	@When("^user enter first \"(.*?)\"$")
@@ -89,6 +96,17 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	public void user_enter_last(String arg1) throws Throwable {
 		setInputText(r2MyAccountPo.inputLastName, webPropHelper.getTestDataProperty(arg1));
 	}
+	
+	@When("^user enter \"(.*?)\" in signup page$")
+	public void user_enter_in_signup_page(String arg1) throws Throwable {
+		String emailAddressToEnter;
+		if(arg1.equalsIgnoreCase("InvalidEmailAddress"))
+			emailAddressToEnter = arg1;
+		else
+			emailAddressToEnter = webPropHelper.getTestDataProperty(arg1);	
+		setInputText(r2MyAccountPo.inputEmailAddress, emailAddressToEnter);
+	}
+
 
 	@When("^user enter random email Address$")
 	public void user_enter_email() throws Throwable {
@@ -100,8 +118,15 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 
 	@When("^user enter password \"(.*?)\"$")
 	public void user_enter_password(String arg1) throws Throwable {
-		Thread.sleep(5000);
-		setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty(arg1));
+		String passwordToEnter;
+		if(arg1.equalsIgnoreCase("5Char"))
+			passwordToEnter = arg1;
+		else
+			passwordToEnter = webPropHelper.getTestDataProperty(arg1);
+		assertTrue(clickOnButton(r2MyAccountPo.inputCreatePassword));
+		//clicking on sign up as entering password directly destroys the page(all fields disappear) CR- SK
+		clickOnButton(r2MyAccountPo.btnSignUp);
+		setInputText(r2MyAccountPo.inputCreatePassword, passwordToEnter);
 	}
 
 	@When("^user enter the valid emailaddress \"(.*?)\"$")

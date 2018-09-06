@@ -3,17 +3,17 @@ Feature: Out of Stock
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2944 @ZYP_CART_K2944-8176 @CR-SK 
 Scenario: Verify that user is able to add OOS item to wishlist 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-#	And user creates an account and signs in 
-#		|firstName |lastName|email						   |password |confirmPassword|
-#		|automation|user	|automationuser@academymail.com|Pass@1234|Pass@1234		 |
-	And user enter the OOS SKU search "sjkdhasjk" 
-	And User click on search icon 
-	And User is navigated to pdp page 
-	When user clicks on Add to Wishlist Button 
-	And user enter the wishlist name 
-	And user confirm the successfully added modal 
-	Then verify that message Item is successfully added to wishlist is displayed 
-	And verify that item is added to wishlist 
+##	And user creates an account and signs in 
+##		|firstName |lastName|email						   |password |confirmPassword|
+##		|automation|user	|automationuser@academymail.com|Pass@1234|Pass@1234		 |
+#	And user enter the OOS SKU search "sjkdhasjk" 
+#	And User click on search icon 
+#	And User is navigated to pdp page 
+##	When user clicks on Add to Wishlist Button 
+#	And user enter the wishlist name 
+#	And user confirm the successfully added modal 
+#	Then verify that message Item is successfully added to wishlist is displayed 
+#	And verify that item is added to wishlist 
 	
 	
 	
