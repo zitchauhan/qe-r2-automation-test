@@ -223,7 +223,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public WebElement txtGifCardPin; // 25 Aug
 
 	@FindBy(xpath = "(//*[text()='ADD NEW GIFT CARD'])[1]")
-	public WebElement btnAddGiftCardPlusIcon;  
+	public WebElement btnAddGiftCardPlusIcon;
 
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement btnAddGiftCard; // 25 Aug
@@ -536,8 +536,25 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@auid='add_address_btn']")
 	public WebElement myAccountPage_AddNewAddressPluIcon_btn; // CR-RK KER-4230 Sep 6
 
-	@FindBy(xpath = "//*[@data-auid='tooltipsample tooltip']") //CR - RKA Sep 6
+	@FindBy(xpath = "//*[@data-auid='tooltipsample tooltip']") // CR - RKA Sep 6
 	public WebElement AddGiftCardPage_Pin_toolTip;
+
+	// End KER-4233 CR-MS 06 Sep
+	@FindBy(xpath = "//*[@data-auid='Wish List_m']")
+	public WebElement Wishlist_Mobile_lnk;
+
+	@FindBy(xpath = "//*[@data-auid='show_wish_list_btn']")
+	public WebElement WishlistItems_lnk;
+
+	@FindBy(xpath = "//*[@data-auid='delete_list_btn']")
+	public WebElement DeleteList_btn;
+
+	@FindBy(xpath = "//*[@data-auid='btndelete_wish_list_btn']")
+	public WebElement DeleteWishList_btn;
+
+	@FindBy(xpath = "//*[@data-auid='pop_over_btn']")
+	public WebElement Wishlist_icn;
+	// Start KER-4233 CR-MS
 
 	/***************************** END XPAHTS ***********************************/
 

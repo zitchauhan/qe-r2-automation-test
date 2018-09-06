@@ -79,22 +79,21 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 				else if (currentElement.equalsIgnoreCase("AddressPage_Cancel_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnCancelInAddCreditCard));
 				else if (currentElement.equalsIgnoreCase("AddressPage_Edit_btn"))
-					assertTrue(isDisplayed(r2MyAccountPo.btnEdit)); 
+					assertTrue(isDisplayed(r2MyAccountPo.btnEdit));
 				else if (currentElement.equalsIgnoreCase("AddressPage_SetAsDefault_btn"))
-					assertTrue(isDisplayed(r2MyAccountPo.setAsDefaultBtn));				
+					assertTrue(isDisplayed(r2MyAccountPo.setAsDefaultBtn));
 				else if (currentElement.equalsIgnoreCase("AddressPage_Default_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.default_txt));
 				else if (currentElement.equalsIgnoreCase("BurgerMenu_MyAccount_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.myAccount_txt_Mobile));
 				else if (currentElement.equalsIgnoreCase("myAccountPage_AddNewAddressPluIcon_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.myAccountPage_AddNewAddressPluIcon_btn));
-				
-				
+
 				// ===============================================================================
 				//// Payment
 				// ===============================================================================
 				else if (currentElement.equalsIgnoreCase("PaymentPage_Payment_lnk_mobile"))
-					assertTrue(isDisplayed(r2MyAccountPo.lnkPayment_Mobile));				
+					assertTrue(isDisplayed(r2MyAccountPo.lnkPayment_Mobile));
 				else if (currentElement.equalsIgnoreCase("PaymentPage_PaymentsHeader_label"))
 					assertTrue(isDisplayed(r2MyAccountPo.headerPayments));
 				else if (currentElement.equalsIgnoreCase("PaymentPage_CreditCardHeader_label"))
@@ -156,7 +155,7 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.chkReceiveNotifications));
 				else if (currentElement.equalsIgnoreCase("MyAccountPage_Profile_lnk_Mobile"))
 					assertTrue(isDisplayed(r2MyAccountPo.lnkProfile_Mobile));
-				
+
 				// ===============================================================================
 				//// Profile > Edit Profile
 				// ===============================================================================
@@ -226,7 +225,7 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					}
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_AddNewCreditCard"))
 					assertTrue(isDisplayed(r2MyAccountPo.addNewCardCta));
-								
+
 				// ===============================================================================
 				//// Payment > Add new gift card
 				// ===============================================================================
@@ -240,7 +239,7 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.btnAddGiftCard));
 				else if (currentElement.equalsIgnoreCase("AddGiftCardPage_Pin_toolTip"))
 					assertTrue(isDisplayed(r2MyAccountPo.AddGiftCardPage_Pin_toolTip));
-				
+
 				// ===============================================================================
 				//// Wishlist
 				// ===============================================================================
@@ -252,6 +251,16 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.txtWishListName));
 				else if (currentElement.equalsIgnoreCase("WishlistPage_CreateWishList_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnCreateWishList));
+				else if (currentElement.equalsIgnoreCase("Wishlist_Mobile_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.Wishlist_Mobile_lnk));
+				else if (currentElement.equalsIgnoreCase("WishlistItems_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.WishlistItems_lnk));
+				else if (currentElement.equalsIgnoreCase("DeleteList_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.DeleteList_btn));
+				else if (currentElement.equalsIgnoreCase("DeleteWishList_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.DeleteWishList_btn));
+				else if (currentElement.equalsIgnoreCase("Wishlist_icn"))
+					assertTrue(isDisplayed(r2MyAccountPo.Wishlist_icn));
 				// ===============================================================================
 				//// Order
 				// ===============================================================================
@@ -302,11 +311,6 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 				// ===============================================================================
 				else if (currentElement.equalsIgnoreCase("myAccount_MyAccountList_Orders_lnk"))
 					assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_Orders_lnk));
-				
-				
-				
-				
-				
 
 				else {
 					logger.error("Element <" + currentElement + "> is not found in the SD list.");
