@@ -34,8 +34,9 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 			scrollPageToWebElement(myAccountPo.addressBook_M);
 			clickOnButton(myAccountPo.addressBook_M);
 		}else {
-			waitForElement(myAccountPo.addressBook);
-			assertTrue(clickOnButton(myAccountPo.addressBook));
+			//clickOnButton(myAccountPo.lnkMyAccount);
+			waitForElement(myAccountPo.myAccount_MyAccountList_AddressBook_lnk );
+			assertTrue(clickOnButton(myAccountPo.myAccount_MyAccountList_AddressBook_lnk ));
 		}
 		
 	}
@@ -48,7 +49,7 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(myAccountPo.myAccountPage_AddNewAddressPluIcon_btn));	
 		}else
 		{
-		assertTrue(clickOnButton(myAccountPo.addNewAddressBtn));
+		assertTrue(clickOnButton(myAccountPo.myAccountPage_AddNewAddressPluIcon_btn));
 		}
 		
 	}
