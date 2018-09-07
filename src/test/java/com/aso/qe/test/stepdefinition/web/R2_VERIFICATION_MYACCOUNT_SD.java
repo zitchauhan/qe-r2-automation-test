@@ -261,6 +261,17 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.DeleteWishList_btn));
 				else if (currentElement.equalsIgnoreCase("Wishlist_icn"))
 					assertTrue(isDisplayed(r2MyAccountPo.Wishlist_icn));
+				else if (currentElement.equalsIgnoreCase("browse_products_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.browse_products_btn));
+				else if (currentElement.equalsIgnoreCase("Wishlist_createlist_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.Wishlist_createlist_lnk));
+				else if (currentElement.equalsIgnoreCase("Rename_list_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.Rename_list_lnk)); 
+				else if (currentElement.equalsIgnoreCase("Wishlist_name_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.Wishlist_name_txt));
+				
+ 
+
 				// ===============================================================================
 				//// Order
 				// ===============================================================================
@@ -313,6 +324,8 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 				// ===============================================================================
 				else if (currentElement.equalsIgnoreCase("myAccount_MyAccountList_Orders_lnk"))
 					assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_Orders_lnk));
+				else if (currentElement.equalsIgnoreCase("myAccount_MyAccountList_AddressBook_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_AddressBook_lnk));
 
 				else {
 					logger.error("Element <" + currentElement + "> is not found in the SD list.");

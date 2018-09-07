@@ -174,3 +174,86 @@ Scenario: Verify the user gets the error message on entering the password same a
 	    |# Following error Message should show on the page								|
 	    |For maximum security, please enter a Password different from your Email Address|
 
+
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10160 @CR-SK
+Scenario: Verify the user entered password gets validated against password rules dynamically
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page
+	And user enter first "FirstName"
+	And user enter last "LastName"
+	And user enter random email Address
+	And user enter password "NineCharacters"
+	Then password strength should show "Yellow" color
+	When user enter password "ForteenCharacters"
+	Then password strength should show "Green" color
+
+
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4249
+@ZYP_MYACCOUNT_K4249-10162 @CR-SK 
+Scenario: Verify the user is able to see the password strength info bubble 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page 
+	And user enter first "FirstName" 
+	And user enter last "LastName" 
+	And user enter random email Address 
+	And user enter password "Password" 
+	When user hovers on info icon tooltip of password strength 
+	Then Verify the message on the page 
+		|# Following error Message should show on the page								|
+		|What makes passwords strong?|
+		|Choose a password that is at least 8 characters in length and has a minimum of 1 number, 1 upper case letter, 1 lower case letter and 1 special character.|
+		
+		
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249
+@ZYP_MYACCOUNT_K4249-10166 @CR-SK 
+Scenario: Verify the user gets the error message when First name filled with any non-alpha character except - or '
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page 
+	When user enter first "@#@#es!~%^t" 
+	And clicks on Sign Up Button 
+	Then Verify the message on the page 
+		|# Following error Message should show on the page					|
+		|Enter a Valid First Name where Only Alphabets, ' and - are allowed	|
+	When user enter first "AutoTest4" 
+	And clicks on Sign Up Button 
+	Then Verify the message on the page 
+		|# Following error Message should show on the page					|
+		|Enter a Valid First Name where Only Alphabets, ' and - are allowed	|	
+		
+		
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249
+@ZYP_MYACCOUNT_K4249-10170 @CR-SK 
+Scenario: Verify the user gets the error message when Last name filled with any non-alpha character except - or '
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page 
+	When user enter last "Au@#@#es!~%^t" 
+	And clicks on Sign Up Button 
+	Then Verify the message on the page 
+		|# Following error Message should show on the page					|
+		|Enter a Valid Last Name where Only Alphabets, ' and - are allowed	|
+	When user enter last "AutoTest4" 
+	And clicks on Sign Up Button 
+	Then Verify the message on the page 
+		|# Following error Message should show on the page					|
+		|Enter a Valid Last Name where Only Alphabets, ' and - are allowed	|	
+		
+		
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10171 @CR-SK
+Scenario: Verify the user gets the error message when email address contains '+' as the non-alpha character
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page
+	And user enter first "FirstName"
+	And user enter last "LastName"
+	And user enter "EmailAddress+sd@email.com" in signup page
+	And user enter password "Password"
+	And clicks on Sign Up Button
+	Then Verify the message on the page
+	    |# Following error Message should show on the page					|
+	    |Please enter the Email Address in a valid format (ex. abc@xyz.com)	|	        
+		
+		

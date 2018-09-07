@@ -89,18 +89,28 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 
 	@When("^user enter first \"(.*?)\"$")
 	public void user_enter_first(String arg1) throws Throwable {
-		setInputText(r2MyAccountPo.inputFirstName, webPropHelper.getTestDataProperty(arg1));
+		String firstNameToEnter;
+		if(arg1.equalsIgnoreCase("FirstName"))
+			firstNameToEnter = webPropHelper.getTestDataProperty(arg1);
+		else 
+			firstNameToEnter = arg1;
+		setInputText(r2MyAccountPo.inputFirstName, firstNameToEnter);
 	}
 
 	@When("^user enter last \"(.*?)\"$")
 	public void user_enter_last(String arg1) throws Throwable {
-		setInputText(r2MyAccountPo.inputLastName, webPropHelper.getTestDataProperty(arg1));
+		String lastNameToEnter;
+		if(arg1.equalsIgnoreCase("LastName"))
+			lastNameToEnter = webPropHelper.getTestDataProperty(arg1);
+		else 
+			lastNameToEnter = arg1;
+		setInputText(r2MyAccountPo.inputLastName, lastNameToEnter);
 	}
 	
 	@When("^user enter \"(.*?)\" in signup page$")
 	public void user_enter_in_signup_page(String arg1) throws Throwable {
 		String emailAddressToEnter;
-		if(arg1.equalsIgnoreCase("InvalidEmailAddress"))
+		if(arg1.equalsIgnoreCase("InvalidEmailAddress") | arg1.equalsIgnoreCase("EmailAddress+sd@email.com"))
 			emailAddressToEnter = arg1;
 		else
 			emailAddressToEnter = webPropHelper.getTestDataProperty(arg1);	
@@ -121,11 +131,16 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 		String passwordToEnter;
 		if(arg1.equalsIgnoreCase("5Char"))
 			passwordToEnter = arg1;
+		else if(arg1.equalsIgnoreCase("NineCharacters"))
+			passwordToEnter = "Test@1234";
+		else if(arg1.equalsIgnoreCase("ForteenCharacters"))
+			passwordToEnter = "Test@1234teset";
 		else
 			passwordToEnter = webPropHelper.getTestDataProperty(arg1);
 		assertTrue(clickOnButton(r2MyAccountPo.inputCreatePassword));
 		//clicking on sign up as entering password directly destroys the page(all fields disappear) CR- SK
-		clickOnButton(r2MyAccountPo.btnSignUp);
+		if(!(arg1.equalsIgnoreCase("ForteenCharacters")))
+			clickOnButton(r2MyAccountPo.btnSignUp);
 		setInputText(r2MyAccountPo.inputCreatePassword, passwordToEnter);
 	}
 
@@ -160,6 +175,16 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	@Then("^the label should get toggled to Hide$")
 	public void the_label_should_get_toggled_to_Hide() throws Throwable {
 		assertTrue(isDisplayed(r2MyAccountPo.btnHide));
+	}
+	
+	@Then("^password strength should show \"(.*?)\" color$")
+	public void password_strength_should_show_color(String arg1) throws Throwable {
+		assertTrue(r2MyAccountPo.validatePasswordStrength(arg1));
+	}
+	
+	@When("^user hovers on info icon tooltip of password strength$")
+	public void user_hovers_on_info_icon_tooltip_of_password_strength() throws Throwable {
+	    assertTrue(moveHover(r2MyAccountPo.SignUpPage_PasswordStrength_tooltip));
 	}
 
 }

@@ -532,6 +532,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='Orders']")
 	public WebElement myAccount_MyAccountList_Orders_lnk;
+	
+	@FindBy(xpath = "//*[@data-auid='Address Book']")
+	public WebElement myAccount_MyAccountList_AddressBook_lnk;
 
 	@FindBy(xpath = "//*[@auid='add_address_btn']")
 	public WebElement myAccountPage_AddNewAddressPluIcon_btn; // CR-RK KER-4230 Sep 6
@@ -539,7 +542,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='tooltipsample tooltip']") // CR - RKA Sep 6
 	public WebElement AddGiftCardPage_Pin_toolTip;
 
-	// End KER-4233 CR-MS 06 Sep
+	// Start KER-4233 CR-MS 06 Sep
 	@FindBy(xpath = "//*[@data-auid='Wish List_m']")
 	public WebElement Wishlist_Mobile_lnk;
 
@@ -554,6 +557,20 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='pop_over_btn']")
 	public WebElement Wishlist_icn;
+	
+	@FindBy(xpath = "//*[@data-auid='pop_over_toggle_btn']")
+	public WebElement Wishlist_createlist_lnk;
+	
+	@FindBy(xpath = "//*[@data-auid='Wish_list_name_input']")
+	public WebElement Wishlist_name_txt;
+	
+	@FindBy(xpath = "//*[text()='Rename List']")
+	public WebElement Rename_list_lnk;
+	
+	@FindBy(xpath = "//*[@data-auid='btnbrowse_product_button']")
+	public WebElement browse_products_btn; 
+ 
+
 	// End KER-4233 CR-MS
 
 	@FindBy(xpath = "//*[text()='Weak']/following-sibling::div/div")
@@ -561,6 +578,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "//*[text()='Password Strength']//i")
 	public WebElement SignUpPage_PasswordStrength_tooltip;
+	
+	
 	
 
 	/***************************** END XPAHTS ***********************************/

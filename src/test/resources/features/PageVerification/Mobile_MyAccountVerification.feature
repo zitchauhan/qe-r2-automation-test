@@ -114,6 +114,16 @@ Feature: Debug
 		|WishlistPage_CreateANewWishlist_btn							|
 		|WishlistPage_WishListName_txt									|
 		|WishlistPage_CreateWishList_btn								|
+		|#=====below elements has same name in PO						|
+		|Wishlist_Mobile_lnk											|
+		|WishlistItems_lnk												|
+		|WishlistItems_lnk												|
+		|DeleteList_btn													|
+		|Wishlist_icn													|
+		|browse_products_btn											|
+		|Wishlist_createlist_lnk										|
+		|Rename_list_lnk												|
+		|Wishlist_name_txt												|
 		
 		|#Verify following elements in order section|
 		|OrderPage_Order_lnk						|

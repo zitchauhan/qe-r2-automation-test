@@ -113,6 +113,17 @@ Scenario: Verify MyAccount
 		|WishlistPage_CreateANewWishlist_btn							|
 		|WishlistPage_WishListName_txt									|
 		|WishlistPage_CreateWishList_btn								|
+		|#=====below elements has same name in PO						|
+		|WishlistItems_lnk												|
+		|WishlistItems_lnk												|
+		|DeleteList_btn													|
+		|Wishlist_icn													|
+		|browse_products_btn											|
+		|Wishlist_createlist_lnk										|
+		|Rename_list_lnk												|
+		|Wishlist_name_txt												|
+		
+		
 		
 		|#Verify following elements in order section|
 		|OrderPage_Order_lnk						|
@@ -141,44 +152,10 @@ Scenario: Verify MyAccount
 		|#Verify following elements in MyAccountsDropDown	|
 		|#	Below elements has same name in PO				|
 		|myAccount_MyAccountList_Orders_lnk			 		|
+		|myAccount_MyAccountList_AddressBook_lnk			|
 		
 		
 		
-#		else if (currentElement.equalsIgnoreCase(""))
-#					assertTrue(isDisplayed(r2MyAccountPo.inputOptIn));
-#				else if (currentElement.equalsIgnoreCase(""))
-#					assertTrue(isDisplayed(r2MyAccountPo.btnSignUp));
-#				else if (currentElement.equalsIgnoreCase(""))
-#					assertTrue(isDisplayed(r2MyAccountPo.));
-#				else if (currentElement.equalsIgnoreCase(""))
-#					assertTrue(isDisplayed(r2MyAccountPo.lnkSignInNow));
-#				else if (currentElement.equalsIgnoreCase(""))
-#					assertTrue(isDisplayed(r2MyAccountPo.txtPasswordMustContainLabel));
-#				else if (currentElement.equalsIgnoreCase(""))
-#					assertTrue(isDisplayed(r2MyAccountPo.txtCharactersMin));
-#				else if (currentElement.equalsIgnoreCase(""))
-#					assertTrue(isDisplayed(r2MyAccountPo.iconCross));
-#				else if (currentElement.equalsIgnoreCase(""))
-#					assertTrue(isDisplayed(r2MyAccountPo.txtPasswordStrength));
-#				else if (currentElement.equalsIgnoreCase(""))
-#					assertTrue(isDisplayed(r2MyAccountPo.txtWeak));
-#				else if (currentElement.equalsIgnoreCase(""))
-#					assertTrue(isDisplayed(r2MyAccountPo.txtStrong));
-		
-#		assertTrue(isDisplayed(r2MyAccountPo.inputFirstName));
-#		assertTrue(isDisplayed(r2MyAccountPo.inputLastName));
-#		assertTrue(isDisplayed(r2MyAccountPo.inputEmailAddress));
-#		assertTrue(isDisplayed(r2MyAccountPo.inputCreatePassword));
-#		assertTrue(isDisplayed(r2MyAccountPo.inputOptIn));
-#		assertTrue(isDisplayed(r2MyAccountPo.btnSignUp));
-#		assertTrue(isDisplayed(r2MyAccountPo.txtAlreadyHaveAnAccountSignInNow));
-#		assertTrue(isDisplayed(r2MyAccountPo.lnkSignInNow));
-#		assertTrue(isDisplayed(r2MyAccountPo.txtPasswordMustContainLabel));
-#		assertTrue(isDisplayed(r2MyAccountPo.txtCharactersMin));
-#		assertTrue(isDisplayed(r2MyAccountPo.iconCross));
-#		assertTrue(isDisplayed(r2MyAccountPo.txtPasswordStrength));
-#		assertTrue(isDisplayed(r2MyAccountPo.txtWeak));
-#		assertTrue(isDisplayed(r2MyAccountPo.txtStrong));
 		
 			
 		
