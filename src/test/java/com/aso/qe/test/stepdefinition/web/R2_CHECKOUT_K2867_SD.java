@@ -33,7 +33,7 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 	
 	@Then("^user click on In-Store Pick up edit button$")
 	public void user_click_on_In_Store_Pick_up_edit_button() throws Throwable {
-		waitForElement(r2CheckoutPo.EditStorPickUp_Btn);
+		Thread.sleep(3000);
 		assertTrue(clickOnButton(r2CheckoutPo.EditStorPickUp_Btn));
 	}
 	
@@ -110,7 +110,7 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 	@Then("^Verify that See In-Store Pickup Instructions expands$")
 	public void verify_that_See_In_Store_Pickup_Instructions_expands() throws Throwable 
 	{
-		//assertTrue(clickOnButton(r2CheckoutPo.SeeInStorePickupInstructions_Dd));
+		assertTrue(clickOnButton(r2CheckoutPo.SeeInStorePickupInstructions_Dd));
 	}
 
 	@And("^verify that see in-store pickup instructions are displayed$")
@@ -118,7 +118,16 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CheckoutPo.SeeInStorePickupInstructions_Msg));
 	}
 
-	
+	@When("^user clicks on Go to payment CTA$")
+	public void user_clicks_on_Go_to_payment_CTA() throws Throwable {
+		assertTrue(clickOnButton(r2CheckoutPo.ShippingConfirm_btn));
+		Thread.sleep(3000);
+	}
+
+	@Then("^Verify that user navigate to payment drawer$")
+	public void verify_that_user_navigate_to_payment_drawer() throws Throwable {
+		assertTrue(isDisplayed(r2CheckoutPo.PaymentHeader_Txt));
+	}
 
 	
 }
