@@ -3,7 +3,7 @@ Feature: Verify MyAccount Address API endpoint services
   @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-01 @CR-VK @ZYP_MyAccount_Address_12226
   Scenario: TC_1 - Verify Login Authentication Token Details
     Given "loginurl" with "LoginRequest" endpoint for login authentication
-    Then Verify response status code as 200
+    Then Verify response status code as 201
 
   @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-02 @CR-VK @ZYP_MyAccount_Address_12227
   Scenario: TC_2 - Add Address to User Profile

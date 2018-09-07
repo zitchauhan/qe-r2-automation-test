@@ -3,7 +3,7 @@ Feature: Verify MyAccount Credit Card API endpoint services
   @All-R2 @C1-MyAccount @C2-CreditCard @api @R2_AAST-01 @CR-VK  @ZYP_MyAccount_CreditCard_12235
   Scenario: TC_1 - Verify Login Authentication Token Details
     Given "loginurl" with "LoginRequest" endpoint for login authentication
-    Then Verify response status code as 200
+    Then Verify response status code as 201
 
   @All-R2 @C1-MyAccount @C2-CreditCard @api @R2_AAST-02 @CR-VK @ZYP_MyAccount_CreditCard_12236
   Scenario: TC_2 - Add Gift Card to User Profile

@@ -18,7 +18,7 @@ Feature: Verify MyAccount Login API endpoint service
   @All-R2 @C1-MyAccount @C2-Login @api @R2_AAST-03 @CR-VK @ZYP_MyAccount_Login_12257
   Scenario: TC_3 - Verify Login Authentication Token Details
     Given "loginurl" with "LoginRequest" endpoint for login authentication
-    Then Verify response status code as 200
+    Then Verify response status code as 201
 
   @All-R2 @C1-MyAccount @C2-Login @api @R2_AAST-04 @CR-VK  @ZYP_MyAccount_Login_12259
   Scenario: TC_4 - Retrieve the Profile details of a Profile

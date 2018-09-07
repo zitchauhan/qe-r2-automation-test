@@ -3,7 +3,7 @@ Feature: Verify Order API endpoint services
   @All-R2 @C1-Order @C2-Login @api @R2_AAST-01 @CR-VK @ZYP_Order_Login_12273
   Scenario: TC_1 - Verify Login Authentication Token Details
     Given "loginurl" with "LoginRequest" endpoint for login authentication
-    Then Verify response status code as 200
+    Then Verify response status code as 201
 
   @All-R2 @C1-Order @C2-AddPromo @api @R2_AAST-02 @CR-VK @ZYP_Order_AddPromo_12275
   Scenario: TC_2 - Add Promo Code to an order
