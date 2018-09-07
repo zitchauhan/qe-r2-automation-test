@@ -591,6 +591,26 @@ public class R2_Cart_PO extends CommonActionHelper {
 	        assertTrue(clickOnButton(makeMyStore_btn));
 		} }
 	// End KER-2939 CR-AKK
+	
+	
+	
+	
+	public void emptyCart() throws InterruptedException {
+		
+		waitForPageLoad(driver);
+		Thread.sleep(2000);
+		if(isDisplayed(cartEmptyTxt)) {
+			System.out.println("&&&&&&&&&&&&&&&&&&&& CART IS EMPTY  &&&&&&&&&&&&&&");
+	}
+		else {
+			while(isDisplayed(btnRemoveCart)) {
+				clickOnButton(btnRemoveCart);
+				if(isDisplayed(cartEmptyTxt)) {
+					break;
+				}
+			}
+		}
+		}
 	/***************************** END METHODS *********************************/
 	
 	
@@ -615,6 +635,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="(//*[text()='Size'])[1]/following::*[1]")public WebElement txtPrdSize;//txtPrdSize  txt_size input in size
 	@FindBy(xpath="//*[@data-auid='crt_rdOpt_0'] | //span[text()='Ship To Me']")public WebElement rbShipToMe;
 	@FindBy(xpath="(//*[@data-auid='crt_rdOpt_1'])[1] | //span[text()='In Store Pickup – FREE']")public WebElement rbInStorePickUp;
+	@FindBy(xpath="//*[text()='Ship To Store']") public WebElement ShipToStore_radioBtn;
 	@FindBy(xpath="//input[@data-auid='crt_inputQty']")public WebElement input_Quantity;
 	@FindBy(xpath="(//*[@data-auid='crt_qtyField'])[1]")public WebElement txt_Quantity;
 	@FindBy(xpath="(//*[@data-auid='tooltipcrt_rdTooltip_0'])[1]") public WebElement iconTolltip;// toolTip
@@ -706,6 +727,9 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//button[@data-auid='btncrt_btnSignIn']")	public WebElement btnCrtSignIn;
 	@FindBy(xpath="//button[@data-auid='btncrt_btnCntinueShop']")public WebElement continueShopping_btn;
 	@FindBy(xpath="//*[@data-auid='cart_continue_shopping_link']")public WebElement continueShoppingForEmptyCart_link;
+	@FindBy(xpath="//*[text()='Email Address']/following::*[3]")public WebElement WelcomeBackEmailAddress_Input;
+	@FindBy(xpath="//*[text()='Password']/following::*[2]")public WebElement WelcomeBackPassword_Input;
+	@FindBy(xpath="//*[@data-auid='btnemail-signin-button']")public WebElement WelcomeBackSignIN_Btn;
 	//When cart is empty(end)
 	//*********************************************************
 	//After clicking Shiping Policy(Start)

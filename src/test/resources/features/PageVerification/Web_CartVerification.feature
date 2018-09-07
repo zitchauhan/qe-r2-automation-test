@@ -28,6 +28,7 @@ Feature: Debug
 		|Size_txt|
 		|EstArrival_txt|
 	    |ErrorMsgLimitedStack|
+	    |ShipToStore_radioBtn|
 	
 		|# Verify following elements in Cart page"We Accept"|
 		|Visa_img|

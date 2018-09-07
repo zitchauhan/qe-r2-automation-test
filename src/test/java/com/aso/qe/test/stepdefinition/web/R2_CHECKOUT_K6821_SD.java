@@ -51,6 +51,7 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 
 	@And("^user enter Zipcode \"(.*?)\"$")
 	public void user_enter_Zipcode(String arg1) throws Throwable {
+		r2CheckOutPo.inputCheckoutZipCode.clear();
 		setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty(arg1));
 	}
 

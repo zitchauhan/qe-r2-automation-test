@@ -12,8 +12,9 @@ Scenario: To Verify if user is able to click on the Shipping policy link
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	When User verifies and click the shipping policy link 
-	Then Verify below Sub/Main Module of Cart Page
+	When User verifies and click the shipping policy link
+	And User is navigated to Shipping Charges page 
+	Then Verify below Sub/Main Module of Cart Page  
 	|# User is navigated to Shipping Charges page|
 	|ShippingCharges_header| 
 	
@@ -29,7 +30,9 @@ Scenario: To Verify if user is able to click on the Return policy link
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	When User verifies and click the Return policy link 
+	When User verifies and click the Return policy link  
+	And User is navigated to Return Policy page
+	Then Verify below Sub/Main Module of Cart Page
 	|# User is navigated to Return Policy page |
 	|ReturnPolicy_txt|
 	
@@ -46,12 +49,12 @@ Scenario: verify if user is able to view the accepted Payments Icons
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
-	Then User verifies the accepted payment icons( paypal/VISA/Mastercard/America express/Discover) 
+	And User verifies the accepted payment icons( paypal/VISA/Mastercard/America express/Discover) 
 	Then Verify below Sub/Main Module of Cart Page
+	|#User verifies the accepted payment icons|
 		|Visa_img|
 		|MasterCard_img|
 		|Paypal_img|
-		|GooglePay_img|
 		|ApplePay_img|
 		|AmericanExpress_img|
 		|Discover_img|
@@ -96,7 +99,7 @@ Scenario: Verify if user is  able to view following elements in order summary of
 	Then user verifiy Order Total 
 	
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8168 @CR-AKK 
-Scenario: TC_1-Verify if user should be able to checkout if there are no errors 
+Scenario: Verify if user should be able to checkout if there are no errors 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
@@ -105,8 +108,12 @@ Scenario: TC_1-Verify if user should be able to checkout if there are no errors
 	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
-	And user click on view cart button 
+	When user click on view cart button 
+	Then Verify below Sub/Main Module of Cart Page 
+		|# Verify below Sub/Main Module of Cart Page "|
+		|checkOutYourCart_Btn|
 	And user click on checkout button in Cart page 
+    
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8167 @CR-AKK 
 Scenario: Verify if  user should be able to click on PayPal checkout if applicable 

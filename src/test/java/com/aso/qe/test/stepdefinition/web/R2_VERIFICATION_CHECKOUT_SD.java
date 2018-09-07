@@ -93,7 +93,7 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 				else if (currentElement.equalsIgnoreCase("ItemsForPickup_Itemthumbnail_Txt"))
 					assertTrue(isDisplayed(r2CheckoutPo.ItemsForPickup_thumbnail_Txt));
 				else if (currentElement.equalsIgnoreCase("SeeInStorePickupInstructions_Dd"))
-					assertTrue(isDisplayed(r2CheckoutPo.SeeInStorePickupInstructionsl_Dd));
+					assertTrue(isDisplayed(r2CheckoutPo.SeeInStorePickupInstructions_Dd));
 				else if (currentElement.equalsIgnoreCase("AlternatePhoneNumberErrorMsg_Txt"))
 					assertTrue(isDisplayed(r2CheckoutPo.AlternatePhoneNumberErrorMsg_Txt));
 

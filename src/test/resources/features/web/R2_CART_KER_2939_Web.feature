@@ -29,13 +29,17 @@ Scenario: To view details specific to an item in the cart
 	Then user views the details specific to the item(Thumbnail image) 
 	And user verify prodcut name and prodcut link 
 	And user verify color and size 
-	Then user verify price of items for single quantity 
+	And user verify price of items for single quantity 
+	Then Verify below Sub/Main Module of Cart Page
+	|# verify Remove cart link |
+	|RemoveFromCart_Btn|
+	|AddToWishList_btn|
+	|ShipToMe_radioBtn|
+	|InStorePickup_FREE_radioBtn | 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user verify Remove cart link 
 	And user verify add to wishlist 
 	And user verify Discount messaging and Promotional messaging 
-	And user verfiy disclamier message 
-	And user verify SOF pickup information 
 	And user verify shipping information 
 	Then user verify BOPIS radio button 
 	
@@ -241,7 +245,11 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	When user clicks on Move to Wish list link "NewWishLink" OR exisiting wishlink
-	Then item is moved from cart to the wish list
+	And user enter the wishlist name 
+	Then Verify below Sub/Main Module of Cart Page 
+	|#Item is moved from cart to the wish list |
+	|AddToWishList_btn|
+	|ContinueShopping_btn|
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8079 @CR-AKK 	 
 	Scenario: To verify In-store Pick up radio button - without My Store info on My Account
@@ -261,8 +269,53 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then user will verify Shipping radio button is deselected 
 	And user will verify if in-stores information is hidden 
+	Then Verify below Sub/Main Module of Cart Page
+   |InStorePickup_FREE_radioBtn |
 	And verify user can begin checkout 
-	Then verify error message is displayed
-	 
+
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12508 @CR-AKK 	
+Scenario: Verify Product name dynamic display to product link
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing
+	Then user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	Then user clicks on one of the product category and navigates to LThree 
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user views the details specific to the item(Thumbnail image)  
+	Then Verify below Sub/Main Module of Cart Page
+	|#user verify prodcut name and prodcut link |
+	|CartProductName_Link |
+
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8084 @CR-AKK 
+Scenario: To verify SOF pick up message	
+Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on one of the category and navigates to LOne SOF
+    Then user clicks on one of the subcategory and navigates to LTwo SOF
+    Then user clicks on one of the product category and navigates to LThree SOF
+	Then User is navigated to pdp page
+	And clicks on the Change Pickup Location link
+	And user enter the Zipcode in "zipCode"
+	And user click on Add to Cart Button
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	Then Verify below Sub/Main Module of Cart Page
+    |#user verify ShipToStore |
+	|ShipToStore_radioBtn|
+	
+
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8083 @CR-AKK	 
+Scenario: To verify Disclaimer message
+Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on one of the category and navigates to LOne SOF
+    Then user clicks on one of the subcategory and navigates to LTwo SOF
+    Then user clicks on one of the product category and navigates to LThree SOF
+	Then User is navigated to pdp page
+    Then user views a Disclaimer message
+    When clicks on Read More Link
+    Then a drawer is expanded to show full message
 	
 	

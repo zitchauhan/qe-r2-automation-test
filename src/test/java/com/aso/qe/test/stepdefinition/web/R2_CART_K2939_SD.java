@@ -12,6 +12,7 @@ import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
+import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.java.en.And;
@@ -25,7 +26,8 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
 	R2_MyAccount_PO r2MyAccountPO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
-
+	R2_R1_Fun_PO r2R1FunPO = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
+	
 	@Then("^User is able to see the selected variant image as thumbnail$")
 	public void user_is_able_to_see_the_selected_variant_image_as_thumbnail() throws Throwable {
 		assertTrue(clickOnButton(r2SanityPo.AS_productImage));
@@ -239,20 +241,48 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 	}
 	@When("^user clicks on Move to Wish list link \"(.*?)\" OR exisiting wishlink$")
 	public void user_clicks_on_Move_to_Wish_list_link_OR_exisiting_wishlink(String arg1) throws Throwable {
-		assertTrue(clickOnButton(r2CartPo.lnkAddToWishList));
-		assertTrue(clickOnButton(r2CartPo.lnkTextExistingList));
+		assertTrue(clickOnButton(r2CartPo.btn_AddToWishList));
+		
 		
 	}
-	@Then("^item is moved from cart to the wish list$")
-	public void item_is_moved_from_cart_to_the_wish_list() throws Throwable {
-		assertTrue(clickOnButton(r2MyAccountPO.lnkMyAccount));
-		assertTrue(clickOnButton(r2MyAccountPO.wishList));
-		
+	
+	@Then("^user enter the Zipcode in \"(.*?)\"$")
+	public void user_enter_the_Zipcode_in(String arg1) throws Throwable {
+		r2CartPo.txtZipCode.clear();
+		setInputText(r2CartPo.txtZipCode, webPropHelper.getTestDataProperty(arg1));
+		assertTrue(clickOnButton(r2CartPo.btnZipCode));
+        assertTrue(clickOnButton(r2CartPo.storeNames_txt));
+        assertTrue(clickOnButton(r2CartPo.makeMyStore_btn));
+        getDriver().navigate().refresh();
 	}
 
-	@Then("^verify error message is displayed$")
-	public void verify_error_message_is_displayed() throws Throwable {
-	   
+	@Then("^user views a Disclaimer message$")
+	public void user_views_a_Disclaimer_message() throws Throwable {
+		assertTrue(isDisplayed(r2R1FunPO.Disclaimer_Txt));
 	}
+
+	@When("^clicks on Read More Link$")
+	public void clicks_on_Read_More_Link() throws Throwable {
+		assertTrue(clickOnButton(r2R1FunPO.SeeMore_lnk));
+	}
+
+	@Then("^a drawer is expanded to show full message$")
+	public void a_drawer_is_expanded_to_show_full_message() throws Throwable {
+		assertTrue(isDisplayed(r2R1FunPO.Disclaimer_Full_Txt));
+	}
+
+//	@Then("^item is moved from cart to the wish list$")
+//	public void item_is_moved_from_cart_to_the_wish_list() throws Throwable {
+//		assertTrue(isDisplayed(r2CartPo.continueShopping_btn));
+//
+//		
+//	}
+
+//	@Then("^verify error message is displayed$")
+//	public void verify_error_message_is_displayed() throws Throwable {
+//	   
+//	}
+	
+	
 
 }

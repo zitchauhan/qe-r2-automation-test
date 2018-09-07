@@ -1,11 +1,15 @@
 package com.aso.qe.test.pageobject;
 
 import static org.junit.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -13,7 +17,8 @@ import com.aso.qe.framework.common.CommonActionHelper;
 
 public class R2_CheckOut_PO extends CommonActionHelper 
 {
-	
+		private static final Logger logger = Logger.getLogger(R2_CheckOut_PO.class);
+
 	/**************** START LOCAL OBJETCS AND DECLARATIONS***********************/
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	public String nullvalue = "";
@@ -284,7 +289,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   //Start KER-4271 AKK
 	   @FindBy(xpath="//a[@data-auid='checkout_edit_in_store_pickup']")
 	   public WebElement EditStorPickUp_Btn;
-	   @FindBy(xpath="@FindBy(xpath=\"(//button[@type='button'])[1]/div/div[1]")
+	   @FindBy(xpath="(//button[@type='button'])[1]/div/div[1]")
 	   public WebElement MePickUp_Drpdwn;
 	   
 	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's First Name\"]")
@@ -322,7 +327,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   public WebElement ItemsForPickup_thumbnail_Txt;
 	   
 	   @FindBy(xpath="//*[contains(text(),'See In-Store Pickup Instructions')]")
-	   public WebElement SeeInStorePickupInstructionsl_Dd;
+	   public WebElement SeeInStorePickupInstructions_Dd;
 	   
 	   
 	   @FindBy(xpath="(//*[text()='Me+Alternate Person Pick Up'])[2]")
@@ -464,6 +469,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	//************************  MOBILE***********************
 	   @FindBy(xpath="(//*[@data-auid='checkout_order_summary_edit_cart_link'])[1]/*")public WebElement EditMyCart_Link_M;
 	
+	  @FindBy(xpath="//*[@data-auid='facetdrawerundefined']")
+		public WebElement itemExpand_icon_M;
+		@FindBy(xpath ="((//*[@data-auid='checkout_order_summary_edit_cart_link'])/div)[1]")
+		public WebElement EditCart_btn_M;
 	   //*********************MOBILE END********************
 	   
 	   /***************************** END XPAHTS********************************/
@@ -489,6 +498,16 @@ public class R2_CheckOut_PO extends CommonActionHelper
    //KER-CR-4058 RKA
 	@FindBy(xpath="//*[text()='ADDRESS VERIFICATION']")public WebElement AddressVerification_MSG;//For restricted item after clicking on go to shipMethod
 	
+	
+	//Sep7 CR-RK KER-3151
+	
+	
+	@FindBy(xpath="//*[@data-auid='checkout_edit_shipping_address']")public WebElement Checkout_ShippingAddress_Edit;
+	@FindBy(xpath="//*[@data-auid='checkout_edit_shipping_address']/../../div[2]")public WebElement Checkout_ShippingAddress_Default;
+	@FindBy(xpath="//*[@name='Dropdown']/button")public WebElement Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd;
+	@FindBy(xpath="//*[text()='Add a New Shipping Address']")public WebElement Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress;
+//Sep7 CR-RK KER-3151
+	
 	public void verifyShippingAndBillingAddressAreSame() throws InterruptedException {
 		
 		Thread.sleep(10000);
@@ -501,4 +520,68 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	
 	/***************************** END METHODS*********************************/
+	/**SID**************************************/
+	   
+	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVE']/p[1]")	public WebElement textBasicDelivery; //SID 5-September
+	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVE']/p[2]")	public WebElement textBasicDeliverMessage; //SID 5-September
+	   @FindBy(xpath="   (//*[@data-auid='btnc_btnCheckout'])[2]")public WebElement btnCheckOut_M; //SID 5-September
+	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button")public WebElement clickShippingWGDropDown; //SID 6-September
+	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button/parent::div//ul/li")public List<WebElement> WGServicesList; //SID 6-September
+	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button/parent::div//ul/li/*[contains(text(),'Scheduled')]")public WebElement WGScheduleService; //SID 5-September
+	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVETHRESHOLD']/p[1]")	public WebElement textScheduleDelivery; //SID 6-September
+	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVETHRESHOLD']/p[2]")	public WebElement textSchedukeDeliverMessage; //SID 6-September
+	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button/parent::div//ul/li/*[contains(text(),'Room')]")public WebElement WGRoomOfChoiceService; //SID 5-September
+	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/p[1]")	public WebElement textRoomOfChoiceDelivery; //SID 6-September
+	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/p[2]")	public WebElement textRoomOfChoiceDeliverMessage; //SID 6-September
+	   
+	  
+	 
+	   //SID 5-September
+	   public void checkWGDefault() {
+		   waitForElement(checkout_ShippingMethod_ShippingMethodHeader_txt);
+			assertTrue(isDisplayed(textBasicDelivery));
+			assertTrue(isDisplayed(textBasicDeliverMessage));	
+	   }
+	   
+	   //SID 6-September
+	   public void checkWGservicesAvailable() {
+		 assertTrue(clickOnButton(clickShippingWGDropDown));
+		   ArrayList<String> WGServices =new ArrayList<String>();
+		   WGServices.add("Basic Delivery");
+		   Boolean flag =false;
+		   WGServices.add("Scheduled Delivery");
+		   WGServices.add("Room of Choice");
+		   int size = WGServicesList.size();
+		  for(int i=1;i<=size;i++) {
+			  System.err.println(WGServices.get(i-1));
+			 flag =isDisplayed(driver.findElement(By.xpath("//*[contains(text(),'Basic Delivery')]/ancestor::button/parent::div//ul/li["+i+"]/*[contains(text(),'"+WGServices.get(i-1)+"')]")));
+			 logger.debug("Expected :: " +WGServices.get(i-1)+" but not found" );
+			 assertTrue(flag);
+		  }
+	   }
+	   
+	   //SID 6-September
+	   public void checkWGSchedule() {
+		   waitForElement(textScheduleDelivery);
+		   isDisplayed(textScheduleDelivery);
+		   System.err.println(textScheduleDelivery.getText());
+		   System.err.println(textSchedukeDeliverMessage.getText());
+			assertTrue(isDisplayed(textScheduleDelivery));
+			assertTrue(isDisplayed(textSchedukeDeliverMessage));	
+	   }
+	   
+	 //SID 6-September
+	   public void checkWGRoomOFChoice() {
+		   waitForElement(textRoomOfChoiceDelivery);
+		   isDisplayed(textRoomOfChoiceDelivery);
+		   System.err.println(textRoomOfChoiceDelivery.getText());
+		   System.err.println(textRoomOfChoiceDeliverMessage.getText());
+			assertTrue(isDisplayed(textRoomOfChoiceDelivery));
+			assertTrue(isDisplayed(textRoomOfChoiceDeliverMessage));	
+	   }
+	
+	   /**SID ENDS**************************************/
+	
+	
+	
 }

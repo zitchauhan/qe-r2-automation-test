@@ -17,6 +17,6 @@ Feature: Message/Text Verification
 	|Alternate's Email Address|
 	|Alternate's Phone Number |
 	|The combination of Gift Card Number and PIN is incorrect. Please try again.| 
-    
-		
+    |SHOP NOW|
+    | Item Added Successfully|
 	

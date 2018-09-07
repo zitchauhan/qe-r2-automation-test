@@ -64,6 +64,8 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 					assertTrue(isDisplayed(r2CartPo.rbShipToMe));
 				else if (currentElement.equalsIgnoreCase("InStorePickup_FREE_radioBtn"))
 					assertTrue(isDisplayed(r2CartPo.rbInStorePickUp));
+				else if (currentElement.equalsIgnoreCase("ShipToStore_radioBtn"))
+					assertTrue(isDisplayed(r2CartPo.ShipToStore_radioBtn));
 				else if (currentElement.equalsIgnoreCase("Quantity_input_txt"))
 					assertTrue(isDisplayed(r2CartPo.input_Quantity));
 				else if (currentElement.equalsIgnoreCase("Quantity_txt"))

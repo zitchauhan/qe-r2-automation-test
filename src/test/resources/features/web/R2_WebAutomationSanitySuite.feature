@@ -36,26 +36,26 @@ TC_2- Verify user can do the logout using Flyout from My Account header
 	Then User is navigated to pdp page 
 	
 	
-@R2_Web @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @CR-RK
+@R2_Web @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @CR-SK
 @AutomationSanityR2 
 Scenario: TC_3- Verify user is able to create an account with all valid data 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on SignIn link from global header 
-	And clicks on SignUp link from SignIn page 
-	And user enter first "FirstName" 
-	And user enter last "LastName" 
-	And user enter random email Address 
-	And user enter password "Password1" 
-	Then Verify below Sub/Main Module of My Account 
-		|#Verify following elements in SignUp section|
-		|SignUp_FirstName_txt						 |
-		|SignUp_LastName_txt						 |
-		|SignUp_EmailAddress						 |
-		|SignUp_Password					         |
-	And user click optin checkbox 
-	And clicks on Sign Up Button 
-	And user should see the successfull message 
-	And user should be able to view My Account in global header 
+       Given user launches the browser and navigates to "ASO_HOME" page 
+       When user clicks on SignIn link from global header 
+       And clicks on SignUp link from SignIn page 
+       And user enter first "FirstName" 
+       And user enter last "LastName" 
+       And user enter random email Address
+       And user enter password "Password"
+       Then user should see password masked 
+       When clicks on Sign Up Button
+       Then user should be able to sign up successfully
+       And Verify the message on the page
+           |# Following Message should show on the page|
+           |CONGRATULATIONS                                                |
+           |You have successfully registered with Academy.com|
+           |LET'S SHOP                                                            |
+       And user should be able to view My Account in global header
+
 	
 	
 @R2_Web @P-High @C-My_Account @KER-3093 @ZYP_CART_K3093-10418 @CR-SK
@@ -248,7 +248,7 @@ TC_15-To Verify Image for selected SKU is be displayed on product blade for mult
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
-	Then User is able to see the selected variant image as thumbnail 
+	Then User is able to see the selected variant image as thumbnail     
 	
 	
 @R2_Web @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-DPK
@@ -271,17 +271,18 @@ Scenario: TC_16-Verify Remove link in the Cart Page
 @AutomationSanityR2 
 Scenario: TC_17-Verify if user should be able to checkout if there are no errors 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
+	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
-	And user click on view cart button 
+	When user click on view cart button 
 	Then Verify below Sub/Main Module of Cart Page 
 		|# Verify below Sub/Main Module of Cart Page "|
-		|checkOutYourCart_Btn|	
+		|checkOutYourCart_Btn|
+	And user click on checkout button in Cart page 	
 		
 @R2_Web  @P-Highest @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8177 @CR-DPK @AutomationSanityR2 
 Scenario: TC_18-Verify As an unauthenticated user should be presented with the un-populated shipping address form fields 
@@ -386,22 +387,24 @@ Scenario: TC_22-Verify is user can Sign-In for faster checkout experience
 	And user click on signin button 
 	Then user should get logged in successfully 
 	
-@R2_Web @P-Highest @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @CR-MS
+@R2_Web @P-Highest @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @CR-AKK
 @AutomationSanityR2 
 Scenario: TC_23-To Edit cart items from Order summary 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button and navigates to Checkout page 
-	When user clicks on Edit My cart in Order Summary 
-	Then user should navigates to the CartPage "CartTitle" 
+	  Given user launches the browser and navigates to "ASO_HOME" page  
+		And User navigates to L2 Mens clothing
+	    And user clicks on one of the subcategory and navigates to LTwo
+	    And user is able to see the product category name in section title
+	    And user clicks on one of the product category and navigates to LThree
+		And User is navigated to pdp page
+		And user click on Add to Cart Button
+		And user is navigated to Add to cart Notification popup  
+		And user will click on View Cart button 
+		And user navigate to Cart page
+		And user will click on Checkout button and navigates to Checkout page
+		When user clicks on Edit My cart in Order Summary
+		Then Verify below Sub/Main Module of Checkout Page 
+	    |EditMyCart_Link|
+        Then user should navigates to the CartPage "CartTitle"
 	
 @R2_Web @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098 @CR-AKK
 @AutomationSanityR2 

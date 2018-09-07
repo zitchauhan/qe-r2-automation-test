@@ -36,9 +36,9 @@ Scenario: To Remove cart items from Order summary
 		Then Verify below Sub/Main Module of Cart Page
 		|# Remove items from the cart|
 		|RemoveFromCart_Btn|
-		|YourCartIsEmpty_Txt|
-# Then verify the item is removed
 		
+# Then verify the item is removed
+#		
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098 @CR-AKK		
 Scenario: To view the Order Summary details on the Check out
 		Given user launches the browser and navigates to "ASO_HOME" page  
@@ -52,10 +52,12 @@ Scenario: To view the Order Summary details on the Check out
 		And user will click on View Cart button 
 		And user navigate to Cart page
 		When user will click on Checkout button and navigates to Checkout page
-		Then verify the presence of the following in the Order Summary
-		Then Verify below Sub/Main Module of Cart Page
+		#Then verify the presence of the following in the Order Summary
+		Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Cart page"Order Summary"|
-		|EstimatedShipping_txt| 
+		|Subtotal_txt|
+		|Estimatedshippint_txt |
+		|TotalDiscount_Txt |
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8099 @CR-AKK	
 Scenario: To view the item summary with number of items
