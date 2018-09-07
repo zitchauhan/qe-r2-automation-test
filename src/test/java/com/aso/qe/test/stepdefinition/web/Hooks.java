@@ -25,8 +25,10 @@ public class Hooks {
 	public Hooks(){}
 
 	@Before(order=0)//, value="@StartBrowserMobProxy")
-	public void StartBrowserProxy(Scenario scenario) {
-		Constants.enableBrowserProxy = System.getProperty("EnableBrowserProxy");
+	public void StartBrowserProxy(Scenario scenario) 
+	{
+		logger.debug("StartBrowserProxy is Comentted");
+		/*Constants.enableBrowserProxy = System.getProperty("EnableBrowserProxy");
 		logger.debug("enableBrowserProxy Val::"+Constants.enableBrowserProxy);
 
 		if(Constants.enableBrowserProxy != null && "yes".equalsIgnoreCase(Constants.enableBrowserProxy)){
@@ -34,7 +36,7 @@ public class Hooks {
 			BrowserProxyHelper.getInstance().initiateBrowserMobProxy();
 			Constants.isBrowserProxyEnabled = true;
 			//Constants.isEnabled = false;
-		}
+		}*/
 	}
 
 	@Before
@@ -61,12 +63,14 @@ public class Hooks {
 
 	}
 
-	@After(order=9999)//, value="@ZZZZZxy")
-	public void stopProxyServer() {
-		logger.debug("--------------------  after9999Class inside process ----------------------"+Constants.enableBrowserProxy);
+	@After(order=0)//, value="@ZZZZZxy")
+	public void stopProxyServer() 
+	{
+		logger.debug("EndBrowserProxy is Comentted");
+	/*	logger.debug("--------------------  after9999Class inside process ----------------------"+Constants.enableBrowserProxy);
 		if(Constants.enableBrowserProxy != null && "yes".equalsIgnoreCase(Constants.enableBrowserProxy)){
 			BrowserProxyHelper.getInstance().generateHarFile("BrowserProxy_"+screenshortName+new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date())+".har");
-		}
+		}*/
 	}
 
 
