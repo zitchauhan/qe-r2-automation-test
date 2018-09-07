@@ -2,45 +2,35 @@ Feature: [UI] [Mobile]To verify user can view 'My Account' from a drop down acco
 
 
  @C-HP @Mobile @Regression  @KER-727 @ZYP_HP_K727-7419 @1HR
-  Scenario Outline:To Verify the signout from MyAccount
+  Scenario: To Verify the signout from MyAccount
 	Given user launches the browser and navigates to "ASO_HOME" page 
 #	 Then User clicks on the burger menu
 #	 When user to click on sing in and navigate to sign in page
 	Then User clicks on the burger menu
     Then user should able to click on Signin button
-	Then user to fill username "<username>" and password "<password>"
-	 And click sign in
+	And user should be able to enter the signin details "Login_username" "Login_pwd"
 	 Then User clicks on the burger menu
 	 Then user sign out from the website
-	Examples: 
-	
-		|username         |password   |
-		|qaz2@gmail.com |qazlee  |
+
 	 
 	 
 	 @C-HP @Mobile @Regression  @KER-727   @ZYP_HP_K727-7420
-	 Scenario Outline:To verify user can view 'My Account' from a drop down account summary upon successful log in
+	 Scenario: To verify user can view 'My Account' from a drop down account summary upon successful log in
 	 
 	 Given user launches the browser and navigates to "ASO_HOME" page 
 #	 Then User clicks on the burger menu
 #	 When user to click on sing in and navigate to sign in page
      Then User clicks on the burger menu
     Then user should able to click on Signin button
-	Then user to fill username "<username>" and password "<password>"
-	And click sign in
+	And user should be able to enter the signin details "Login_username" "Login_pwd"
 	Then verify user to navigate to account summary page
 	
-	
-	Examples: 
-	
-		|username         |password   |
-		|qaz2@gmail.com |qazlee  |
-	 
+
 
 
 
  @C-HP @Mobile @Regression  @KER-727   @ZYP_HP_K727-7421
-Scenario Outline:To Verify the Sign-in functionality for invalid email address
+Scenario Outline: To Verify the Sign-in functionality for invalid email address
  Given user launches the browser and navigates to "ASO_HOME" page 
 #	 Then User clicks on the burger menu
 #	 When user to click on sing in and navigate to sign in page
@@ -52,9 +42,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid email address
 	Examples: 
 	
 		|username         |password   |
-		|qaz222@gmail.com |qazlee  |
-	 
-	 
+		|qaz222@gmail.com |pass1234  |
 	
  @C-HP @Mobile @Regression  @KER-727   @ZYP_HP_K727-7422
 Scenario Outline:To Verify the Sign-in functionality for invalid  password
@@ -69,7 +57,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
 	Examples: 
 	
 		|username         |password   |
-		|qaz2@gmail.com |qazlee1000  |
+		|mondayacademy@mailinator.com |qazlee1000  |
 
 
   @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-7423
@@ -97,110 +85,70 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
     
     
      @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-8554
-    Scenario Outline:  To Verify user is able to Sign In with Valid user name and password by clicking in Sign In Link 
+    Scenario:  To Verify user is able to Sign In with Valid user name and password by clicking in Sign In Link 
     Given user launches the browser and navigates to "ASO_HOME" page 
 #    Then User clicks on the burger menu
 #    When user to click on sing in and navigate to sign in page
     Then User clicks on the burger menu
     Then user should able to click on Signin button
-    Then user to fill username "<username>" and password "<password>"
-	And click sign in
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
   	 Then verify user to navigate to account summary page
-  	 
-  	Examples: 
-	
-		|username         |password   |
-		|qaz2@gmail.com   |qazlee     | 	  
-
 
 
  @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-8557 @1HR
-    Scenario Outline:  Verify the Personal Information details from MyAccount 
+    Scenario:  Verify the Personal Information details from MyAccount 
     Given user launches the browser and navigates to "ASO_HOME" page 
 #    Then User clicks on the burger menu
 #    When user to click on sing in and navigate to sign in page
    Then User clicks on the burger menu
     Then user should able to click on Signin button
-    Then user to fill username "<username>" and password "<password>"
-	And click sign in
+   And user should be able to enter the signin details "Login_username" "Login_pwd"
 	Then verify personal information form My Account
-  	 
-  	 
-  	Examples: 
-	
-		|username         |password   |
-		|qaz2@gmail.com   |qazlee     | 	  
+  
 
 
  @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-8558 
-    Scenario Outline:  Verify the Address Book details from MyAccount 
+    Scenario:  Verify the Address Book details from MyAccount 
     Given user launches the browser and navigates to "ASO_HOME" page 
 #    Then User clicks on the burger menu
 #    When user to click on sing in and navigate to sign in page
     Then User clicks on the burger menu
     Then user should able to click on Signin button
-    Then user to fill username "<username>" and password "<password>"
-	And click sign in
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
 	Then verify Address book form My Account
-  	 
-  	 
-  	Examples: 
-	
-		|username         |password   |
-		|qaz2@gmail.com   |qazlee     | 	  
+	  
 
 
  @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-8559 
-    Scenario Outline:  Verify the Wishlists details from MyAccount
+    Scenario:  Verify the Wishlists details from MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page 
 #    Then User clicks on the burger menu
 #    When user to click on sing in and navigate to sign in page
     Then User clicks on the burger menu
     Then user should able to click on Signin button
-    Then user to fill username "<username>" and password "<password>"
-	And click sign in
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
 	Then verify , WishList form My Account
-  	 
-  	 
-  	Examples: 
-	
-		|username         |password   |
-		|qaz2@gmail.com   |qazlee     | 	
-		
+ 
    @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-4081 @CR-AKK
-    Scenario Outline:  Verify the Personal Information details from MyAccount 
+    Scenario:  Verify the Personal Information details from MyAccount 
     Given user launches the browser and navigates to "ASO_HOME" page 
 #    Then User clicks on the burger menu
 #    When user to click on sing in and navigate to sign in page
     Then User clicks on the burger menu
     Then user should able to click on Signin button
-    Then user to fill username "<username>" and password "<password>"
-	And click sign in
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
 	Then verify personal information form My Account
-  	 
-  	 
-  	Examples: 
-	
-		|username         |password   |
-		|qaz2@gmail.com   |qazlee     |   
-		
-   @C-HP @Mobile @Regression  @KER-727 @ZYP_HP_K727-6466 @CR-AG
-	 Scenario Outline:To verify user can view 'My Account' from a drop down account summary upon successful log in
-	 
-	 Given user launches the browser and navigates to "ASO_HOME" page 
-#	 Then User clicks on the burger menu
-#	 When user to click on sing in and navigate to sign in page
-Then User clicks on the burger menu
-    Then user should able to click on Signin button
-	Then user to fill username "<username>" and password "<password>"
-	And click sign in
-	Then verify user to navigate to account summary page
-	
-	
-	Examples: 
-	
-		|username         |password   |
-		|mondayacademy@mailinator.com |pass1234  |
-	 
-  
 
+		
+   @C-HP @Mobile @Regression @KER-727 @ZYP_HP_K727-6466 @CR-AG 
+Scenario: To verify user can view 'My Account' from a drop down account summary upon successful log in 
+
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	#	 Then User clicks on the burger menu
+	#	 When user to click on sing in and navigate to sign in page
+	Then User clicks on the burger menu 
+	Then user should able to click on Signin button 
+	And user should be able to enter the signin details "Login_username" "Login_pwd" 
+	Then verify user to navigate to account summary page 
+	
+	

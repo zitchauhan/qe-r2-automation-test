@@ -14,12 +14,11 @@ public class R1_HP_K258_SD extends CommonActionHelper{
 	
 	R1_HomePage_PO hp=PageFactory.initElements(driver, R1_HomePage_PO.class);
 	 
+	//SID 4-September
 	@Then("^User Verify product carousel is appearing on home page$")
 	public void user_Verify_product_carousel_is_appearing_on_home_page() throws Throwable {
 	   
-		assertTrue(isDisplayed(hp.productCarousel_1));
-		assertTrue(isDisplayed(hp.productCarousel_2));
-		assertTrue(isDisplayed(hp.productCarousel_3));
+		assertTrue(isDisplayed(hp.productCarousel));
 	}
 
 	@Then("^User Verify click on Carousel Arrows$")

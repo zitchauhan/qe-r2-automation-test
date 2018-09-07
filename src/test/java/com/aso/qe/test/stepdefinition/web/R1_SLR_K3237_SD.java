@@ -71,9 +71,7 @@ public class R1_SLR_K3237_SD extends CommonActionHelper{
 
 	@Then("^User click on clear all button$")
 	public void User_click_on_clear_all_button() throws Throwable{
-		//scrollPageToWebElement(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile);
-		
-		globalElementHeader.clickClearAllButton();
-				
+		globalElementHeader.clickClearAllButton();		
 	}
+
 }

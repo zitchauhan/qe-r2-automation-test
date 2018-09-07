@@ -189,13 +189,13 @@ public class R1_PDP_PO extends CommonActionHelper
 	// **SID*************************************************************************************************//
 	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']//img)[1]") public WebElement imgSrcSKUAttribute ;
 	@FindBy(xpath="(//*[contains(@class,'ReactModal__Overlay ReactModal__Overlay')]//img)[1]") public WebElement imgAddToCartPopup ;
-	@FindBy(xpath="(//*[@data-auid='PDP_ProductImage_m']//img)[4]") public WebElement imgproductPDPSRCMobile;  //SID 28-August
+	@FindBy(xpath="(//*[@data-auid='PDP_ProductImage_m']//img)[3]") public WebElement imgproductPDPSRCMobile;  //SID 28-August
 
 
 	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']//*[@alt='Hover/Click to enlarge'])[1]") public WebElement imgClickToZoom;
 	@FindBy(xpath="(//*[@data-auid='PDP_ProductImage_m']//*[@alt='Hover/Click to enlarge'] )[3]") public WebElement imgClickToZoomMobile;
 	@FindBy(xpath="//*[@data-auid='PDP_Modal_closeIcon']/* | //*[@data-auid='PDP_ProductImage_m']//ancestor::div[@aria-modal='true']//button[contains(text(),'X')]") public WebElement btnCloseCrossZoom;
-	@FindBy(xpath="(//*[contains(text(),'Pick Up in 3-4 business days')])[1]") public WebElement txtShippingRelatedMsg; 
+	@FindBy(xpath="(//*[contains(text(),'days')])[1]") public WebElement txtShippingRelatedMsg;  //SID 7-September
 
 	@FindBy(xpath = "//*[contains(@data-auid,'productCard_')]//span[contains(@class,'c-product__colors-available')]")	public List<WebElement> colorsAvailablePLP;
 	@FindBy(xpath = "//*[@data-auid='PDP_Color_Attribute']")	public WebElement visibilityAltColorPDP;
@@ -217,7 +217,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "//div[contains(@class,'breadCrumbComponent')]//span[4]//a")public WebElement navigateToPLP;	
 	@FindBy(xpath = "//*[@id='productCardListing']//*[contains(text(),'Online Only')]")public List<WebElement> checkOnlineBadges;
 	@FindBy(xpath = "//*[@data-bv-show='inline_rating']/parent::div")public WebElement checkRating;
-	
+	@FindBy(xpath = "(//*[contains(text(),'BEGIN CHECKOUT')])[1]")public WebElement btnCheckoutReskin;
 	
 	//***********************************************************************************************************//
 
@@ -405,8 +405,8 @@ public class R1_PDP_PO extends CommonActionHelper
 	public void clickOnImgSkuItem() throws Exception {
 		scrollPageToWebElement(imgHelmetSKUCategory);
 		Actions hover = new Actions(getDriver());
-		hover.moveToElement(imgHelmetSKUCategory).build().perform();
-		assertTrue(clickOnButton(imgHelmetSKUCategory));
+		hover.moveToElement(imgHelmetSKUCategory).click().build().perform();
+//		assertTrue(clickOnButton(imgHelmetSKUCategory));
 		Thread.sleep(2000);
 	}
 
@@ -567,7 +567,7 @@ public class R1_PDP_PO extends CommonActionHelper
 		for(WebElement altColorPDP : altColorsPDP){
 			waitForElement(altColorPDP);
 			assertTrue(clickOnButton(altColorPDP));
-			assertEquals(selectedSwatchColor.getText(),altColorPDP.getAttribute("alt"));
+			assertEquals(selectedSwatchColor.getText().trim(),altColorPDP.getAttribute("alt").trim());
 		}
 
 	}
@@ -580,18 +580,15 @@ public class R1_PDP_PO extends CommonActionHelper
 		String[] productImageLink = productImage.split("\\?");  //SID
 		String productPrice = getText( txtPdpprice);
 		String productTitle = getText( txtProductTitle);
-		String filterProductTitle= productTitle.replace("'", "");//SID
-		String[] breakName = filterProductTitle.split(" ");//SID
 		assertTrue(clickOnButton(btnAddToCart));
 		Thread.sleep(3000);
-		List<WebElement> countWebelement = driver.findElements(By.xpath("(//*[contains(text(),'"+breakName[0]+"')])")); //SID
-		int size =countWebelement.size();//SID
-		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[contains(text(),'"+breakName[0]+"')])["+size+"]"));//SID
-		String filterActualTitleInAddToCart = actualTitleInAddToCart.getText().replace("'", "");//SID
+		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),"+"\""+productTitle+"\""+")]"));//SID
 		WebElement actualPriceInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),'"+productPrice+"')]"));
 		String productImageAddToCartPopup = imgAddToCartPopup.getAttribute("src");
 		String[] productImageAddToCartPopupLink = productImageAddToCartPopup.split("\\?");//SID
-		assertEquals(filterProductTitle, filterActualTitleInAddToCart);//SID
+		System.err.println(productTitle);
+		System.err.println(actualTitleInAddToCart.getText());
+		assertEquals(productTitle, actualTitleInAddToCart.getText());//SID
 		assertEquals(productPrice, actualPriceInAddToCart.getText());//SID
 		assertTrue(productImageLink[0].contains(productImageAddToCartPopupLink[0])); //SID
 	}
@@ -604,18 +601,15 @@ public class R1_PDP_PO extends CommonActionHelper
 		String[] productImageLink = productImage.split("\\?");  //SID
 		String productPrice = getText( txtPdpprice);
 		String productTitle = getText( txtProductTitle);
-		String filterProductTitle= productTitle.replace("'", "");//SID
-		String[] breakName = filterProductTitle.split(" ");//SID
 		assertTrue(clickOnButton(btnAddToCart));
 		Thread.sleep(3000);
-		List<WebElement> countWebelement = driver.findElements(By.xpath("(//*[contains(text(),'"+breakName[0]+"')])")); //SID
-		int size =countWebelement.size();//SID
-		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[contains(text(),'"+breakName[0]+"')])["+size+"]"));//SID
-		String filterActualTitleInAddToCart = actualTitleInAddToCart.getText().replace("'", "");//SID
+		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),"+"\""+productTitle+"\""+")]"));//SID
 		WebElement actualPriceInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),'"+productPrice+"')]"));
 		String productImageAddToCartPopup = imgAddToCartPopup.getAttribute("src");
 		String[] productImageAddToCartPopupLink = productImageAddToCartPopup.split("\\?");//SID
-		assertEquals(filterProductTitle, filterActualTitleInAddToCart);//SID
+		System.err.println(productImageLink[0]);
+		System.err.println(productImageAddToCartPopupLink[0]);
+		assertEquals(productTitle, actualTitleInAddToCart.getText());//SID
 		assertEquals(productPrice, actualPriceInAddToCart.getText());//SID
 		assertTrue(productImageLink[0].contains(productImageAddToCartPopupLink[0])); //SID
 	}

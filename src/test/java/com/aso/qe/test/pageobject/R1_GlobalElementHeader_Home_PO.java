@@ -31,6 +31,13 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='search-clear-button_m']|//*[@data-auid='search-clear-button']") public  WebElement btnSearchLens;
 	@FindBy(xpath="//*[@data-auid='expand-search_m']") public WebElement btnExpandSearchLensInSearchPage;
 	@FindBy(xpath="//*[@data-auid='weeklyAds_m']") public  WebElement txtWeeklyADBurgerMenu;
+	@FindBy(xpath="(//*[text()='Select Circulars from Academy Sports + Outdoors'])[1]") public  WebElement txtWeeklyADPopUp_D; //SID 7-September
+	@FindBy(xpath="(//*[text()='Select Circulars from Academy Sports + Outdoors'])[1]/parent::*//tr[1]") public  WebElement txtWeeklyADPopUpClick_D; //SID 7-September
+	@FindBy(xpath="//*[@id='flyer-runs-container']") public  WebElement txtWeeklyADPopUp_M; //SID 7-September
+	@FindBy(xpath="//*[@id='flyer-runs-container']/div[1]") public  WebElement txtWeeklyADPopUpClick_M; //SID 7-September
+	
+	
+	
 
 
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']") public WebElement btnBurgerMenu;
@@ -39,7 +46,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m']/span | //*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING_m']/span | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //UAT9
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]/a | //*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop;//UAT9
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shirts']|//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shorts']|//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop;
-	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]| //*[@data-auid=\"level3Category-Men's Clothing\"]/a | //*[@data-auid='level3Category-Mens']/a")public WebElement btnMenClothingShop; //3Sep
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]| //*[@data-auid=\"level3Category-Men's Clothing\"]/a ")public WebElement btnMenClothingShop;
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//*[contains(@class,'c-product__description')])[2]")public WebElement imgMensShortShirt; 
 	@FindBy(xpath="//div[contains(@class,'breadCrumbComponent')]//span[@class='line-separator']//following-sibling::span//preceding-sibling::a") public WebElement lnkMensShirts;
 	@FindBy(xpath="((//span[@class='line-separator'])[3]/following::span)[1]") public WebElement lnkMensShirtsnotclickable;
@@ -784,6 +791,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 
 	}
 
+	
 	public void entertheSearchData() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			Actions actions = new Actions(driver);
@@ -915,20 +923,13 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 
 	public void clickClearAllButton() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
-			Actions actions = new Actions(driver);
-			actions.moveToElement(txtSearchBox_mobile);
-			actions.click();
-			actions.sendKeys("");
-		//	actions.build().perform();
+			clickOnButton(txtSearchBox_mobile);
+			waitForElement(btnClearAll);
 			assertTrue(clickOnButton(btnClearAll));
 			logger.debug("btnClearAll is clicked");
 		}else {
-			Actions actions = new Actions(driver);
-			actions.moveToElement(txtSearchBox);
-			Thread.sleep(3000);
-			actions.click();
-			actions.sendKeys("");
-			//actions.build().perform();
+			clickOnButton(txtSearchBox);
+			waitForElement(btnClearAll);
 			assertTrue(clickOnButton(btnClearAll));
 			logger.debug("btnClearAll is clicked");
 		}
@@ -1575,29 +1576,29 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 
 	}
 
+	//SID 4-September Santosh code merge
 	public void entertheSearchData(String str) throws Exception{
-		if(str.contentEquals("SKUNumber"))//4 Sep 18, Modified by SK to fetch value from TestData file 
-			str = webPropHelper.getTestDataProperty(str); //4 Sep 18, Modified by SK to fetch value from TestData file
-		if("mobile".equalsIgnoreCase(testtype)){
-			Actions actions = new Actions(driver);
-			actions.moveToElement(txtSearchBox_mobile);
-			Thread.sleep(3000);
-			actions.click();
-			actions.sendKeys(str);
-			actions.build().perform();
-		}else {
-
-			Actions actions = new Actions(driver);
-			actions.moveToElement(txtSearchBox);
-			Thread.sleep(3000);
-			actions.click();
-			actions.sendKeys(str);
-			actions.build().perform();
-
-		}
-
-	}
-
+        if(str.contentEquals("SKUNumber"))
+               str = webPropHelper.getTestDataProperty(str); //Modified by SK to  
+        if("mobile".equalsIgnoreCase(testtype)){
+               Actions actions = new Actions(driver);
+               actions.moveToElement(txtSearchBox_mobile);
+               Thread.sleep(3000);
+               actions.click();
+               actions.sendKeys(str);
+               actions.build().perform();
+        }else {
+               Actions actions = new Actions(driver);
+               actions.moveToElement(txtSearchBox);
+               Thread.sleep(3000);
+               actions.click();
+               actions.sendKeys(str);
+               actions.build().perform();
+        }
+ }
+	
+	
+	
 	//Rashmi Sanity changes
 	public void verifypresenceofL1Page() throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)){

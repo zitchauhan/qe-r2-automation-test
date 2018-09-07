@@ -28,20 +28,15 @@ Feature: [Desktop]Bundles - Add to Cart Notification
     Then User Verify view cart functionality in ATC noticfication
 
   @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-4814 @CR-RKA @RBeta
-  Scenario Outline: Verify the Check Out Button functionality in ATC notification for Bundle product for sign in user
+  Scenario: Verify the Check Out Button functionality in ATC notification for Bundle product for sign in user
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    Then user to fill username "<username>" and password "<password>"
-    And click sign in
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then User navigates to L3 from home page
     Then User should be able to see L3 Page
     Then User select the product from PDP page
     Then User select the avialable item and click on add to cart
     Then User Verify checkout button in ATC notification
-
-    Examples: 
-      | username       | password |
-      | qaz2@gmail.com | qazlee   |
 
   @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-6632 @CR-RKA @RBeta
   Scenario: Verify the Check Out Button functionality in ATC notification for Bundle product-Guest User
@@ -91,4 +86,4 @@ Feature: [Desktop]Bundles - Add to Cart Notification
     Then User should be able to see L3 Page
     Then User select the product from PDP page
     Then User select the avialable item and click on add to cart
-    Then User verify name of added product in ATC notification  
+    Then User verify name of added product in ATC notification 

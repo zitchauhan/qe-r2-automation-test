@@ -18,10 +18,10 @@ Feature: To To verify Quick View - Product Attributes
     And User verifies the alternative available colors
     Then User sees color options to be notated near the product image
 
-  @C-PLP @Web @Regression @KER-737 @ZYP_PLP_K737-6059 @CR-AKK @RBeta
+   @C-PLP @Web @Regression @KER-737 @ZYP_PLP_K737-6059 @CR-AKK @RBeta
   Scenario: Verify OOS states for quick view
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page
-    Then User click on Quick view button on oos
+     Then User click on Quick view button
     Then verify addcart button is displayed
  

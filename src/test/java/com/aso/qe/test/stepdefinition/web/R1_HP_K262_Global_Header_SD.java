@@ -183,6 +183,10 @@ waitForElement(globalElementHeader.magnifying_M);
 	@Then("^User verify and click on weekly Ads$")
 	public void user_verify_and_click_on_weekly_Ads() throws Throwable {
 	   assertTrue(isDisplayed(globalElementHeader.txtWeeklyADBurgerMenu));
+	   waitForElement(globalElementHeader.txtWeeklyADPopUp_M);
+	   if(isDisplayed(globalElementHeader.txtWeeklyADPopUp_M)) {
+		   assertTrue(clickOnButton(globalElementHeader.txtWeeklyADPopUpClick_M));
+	   }
 	   clickOnButton(globalElementHeader.txtWeeklyADBurgerMenu);
 	    
 	}

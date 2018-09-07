@@ -74,7 +74,6 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	public void verify_the_list_of_product_is_dispalyed_are_same_as_before_filter() throws Throwable {
 		logger.debug("Before filter's Apply Items count::"+R1_SearchProduct_PO.productDisplayCount );
 		logger.debug("After filter's Remove Items count::"+R1_SearchProduct_PO.getItemsCount());
-		// Write code here that turns the phrase above into concrete actions
 		assertEquals(R1_SearchProduct_PO.productDisplayCount, R1_SearchProduct_PO.getItemsCount());
 	}
 

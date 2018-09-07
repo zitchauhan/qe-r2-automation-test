@@ -28,21 +28,16 @@ Feature: [Mobile]Bundles - Add to Cart Notification
     Then User Verify view cart functionality in ATC noticfication
 
   @Mobile @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-10061 @CR-RKA @1HR
-  Scenario Outline: Verify the Check Out Button functionality in ATC notification for Bundle product for sign in user
+  Scenario: Verify the Check Out Button functionality in ATC notification for Bundle product for sign in user
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     When user to click on sing in and navigate to sign in page
-    Then user to fill username "<username>" and password "<password>"
-    And click sign in
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then User clicks on the burger menu
     Then User navigates to L3
     Then User select the product from PDP page
     Then User select the avialable item and click on add to cart
     Then User Verify checkout button in ATC notification
-
-    Examples: 
-      | username       | password |
-      | qaz2@gmail.com | qazlee   |
 
   @Mobile @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-10063 @CR-RKA
   Scenario: Verify the Check Out Button functionality in ATC notification for Bundle product-Guest User

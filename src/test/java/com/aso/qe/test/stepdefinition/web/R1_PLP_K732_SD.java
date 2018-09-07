@@ -28,6 +28,7 @@ public class R1_PLP_K732_SD extends CommonActionHelper {
 
 	@Then("^verify addcart button is displayed$")
 	public void verify_addcart_button_is_displayed() throws Throwable {
+		pdp_po.addToCartAvailability();
 		assertTrue(isDisplayed(pdp_po.btnAddToCart));
 	}
 

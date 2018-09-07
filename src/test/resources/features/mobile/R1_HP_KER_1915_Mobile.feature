@@ -1,41 +1,34 @@
 Feature: To Verify Product Wish List - Signed In User Flow (PDP)
 
   @Mobile @All @C-HP @Regression @KER-1915 @ZYP_HP_K1915-3445 @CR-AKK
-  Scenario Outline: To verfiy Create new wish list for signed in customer
+  Scenario: To verfiy Create new wish list for signed in customer
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     When user to click on sing in and navigate to sign in page
-    Then user to fill username "<username>" and password "<password>"
-    And click sign in
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then User navigate to wishlist from burger menu
-    And user create new Wishlist "<wishlist>"
+    And user create new Wishlist
 
-    Examples: 
-      | username       | password | wishlist |
-      | qaz2@gmail.com | qazlee   | Nikee    |
-
-  #
   @Mobile @All @C-HP @Regression @KER-1915 @ZYP_HP_K1915-3453_M @CR-AKK
   Scenario Outline: To verify signed user is able to add product to the existing wish list
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     When user to click on sing in and navigate to sign in page
-    Then user to fill username "<username>" and password "<password>"
-    And click sign in
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then User navigate to wishlist from burger menu
     And user create exsiting Wishlist "<wishlist>"
     Then verify error message
 
     Examples: 
-      | username       | password | wishlist |
-      | qaz2@gmail.com | qazlee   | Test     |
+      | wishlist |
+      | Test     |
 #						
 #@Mobile @All @C-PDP @Regression @KER-1915 @ZYP_HP_K1915-3454 @CR-AKK 
 #Scenario Outline: To verify no Wish list for gift cards and bundles 
 #Given user launches the browser and navigates to "ASO_HOME" page 
 #Then User clicks on the burger menu 
 #When user to click on sing in and navigate to sign in page 
-#Then user to fill username "<username>" and password "<password>" 
+#And user should be able to enter the signin details "Login_username" "Login_pwd" 
 #And click sign in 
 #Then User clicks on the burger menu 
 #Then User navigates to L3 

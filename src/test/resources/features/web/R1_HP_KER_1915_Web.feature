@@ -24,16 +24,10 @@ Examples:
 		|qaz2@gmail.com |qazlee  | Test		|
 		
 @Web @All @C-PDP @Regression @KER-1915 @ZYP_HP_K1915-3454 @CR-AKK
-  Scenario Outline: To verify no Wish list for gift cards and bundles
+  Scenario: To verify no Wish list for gift cards and bundles
    Given user launches the browser and navigates to "ASO_HOME" page
    When user to click on sing in and navigate to sign in page 
-   Then user to fill username "<username>" and password "<password>"
-   And click sign in
+   And user should be able to enter the signin details "Login_username" "Login_pwd"
    Then User navigates till PLP
     And User click on the product image
    Then user click on Add WishList link
-       
-Examples:  
-	
-		|username       |password|
-		|qaz2@gmail.com |qazlee  |

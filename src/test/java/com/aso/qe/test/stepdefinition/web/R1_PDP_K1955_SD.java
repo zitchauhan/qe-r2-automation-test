@@ -26,7 +26,7 @@ public class R1_PDP_K1955_SD extends CommonActionHelper{
 	@And("^User selects Required product in Product Listing Page$")
 	public void user_selects_Required_product_in_Product_Listing_Page() throws Throwable {
 		logger.debug("selecting requried product from L3 page::");
-		clickOnButton(searchProductPO.productList.get(0));
+		clickOnButton(searchProductPO.productList.get(1));
 	}
 
 	@Then("^User should be select the color$")
@@ -49,13 +49,14 @@ public class R1_PDP_K1955_SD extends CommonActionHelper{
 
 	@Then("^User clicks on AddToCart Button$")
 	public void user_clicks_on_AddToCart_Button() throws Throwable {
+		pdp_po.addToCartAvailability();
 		assertTrue(clickOnButton(pdp_po.btnAddToCart));
 	}
 
 	@Then("^User should be able to see ATC notification$")
 	public void user_should_be_able_to_see_ATC_notification() throws Throwable {
 
-		assertTrue(clickOnButton(pdp_po.secAddToCartPopup));
+		assertTrue(isDisplayed(pdp_po.secAddToCartPopup));
 	}
 
 	@When("^User clicks on View_Cart Button$")
@@ -65,6 +66,8 @@ public class R1_PDP_K1955_SD extends CommonActionHelper{
 
 	@Then("^User should be navigated to Cart Page$")
 	public void user_should_be_navigated_to_Cart_Page() throws Throwable {
+		waitForElement(pdp_po.btnCheckoutReskin);
+		isDisplayed(pdp_po.btnCheckoutReskin);
 		String actualURL = getTitle();
 		assertTrue(actualURL.contains("Shopping Cart"));
 	}
@@ -72,8 +75,8 @@ public class R1_PDP_K1955_SD extends CommonActionHelper{
 	@Then("^User should be able to see added product in cart$")
 	public void user_should_be_able_to_see_added_product_in_cart() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
-			waitForElement(driver.findElement(By.xpath("(//*[text()='"+productName+"'])[1]")));
-		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[text()='"+productName+"'])[1]"));
+			waitForElement(driver.findElement(By.xpath("(//*[text()="+"\""+productName+"\""+"])[1]")));
+		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[text()="+"\""+productName+"\""+"])[1]"));
 		String modifiedActualTitleInAddToCart =actualTitleInAddToCart.getText().replace("'", "");
 		System.err.println(productName);
 		System.err.println(modifiedActualTitleInAddToCart);
@@ -81,8 +84,9 @@ public class R1_PDP_K1955_SD extends CommonActionHelper{
 		assertEquals(productName, modifiedActualTitleInAddToCart);
 	}
 		else {
-			waitForElement(driver.findElement(By.xpath("(//*[text()='"+productName+"'])[2]")));
-			WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[text()='"+productName+"'])[2]"));
+			
+			waitForElement(driver.findElement(By.xpath("(//*[text()="+"\""+productName+"\""+"])[2]")));
+			WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[text()="+"\""+productName+"\""+"])[2]"));
 			String modifiedActualTitleInAddToCart =actualTitleInAddToCart.getText().replace("'", "");
 			assertEquals(modifiedProductName, modifiedActualTitleInAddToCart);
 		}

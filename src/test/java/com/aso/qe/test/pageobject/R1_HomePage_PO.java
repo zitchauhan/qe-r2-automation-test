@@ -114,12 +114,16 @@ public class R1_HomePage_PO {
 //	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/following-sibling::*[2]")public WebElement productCarousel_right;/RKA 16 AUG
 //	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/following-sibling::*[1]")public WebElement productCarousel_left;/RKA 16 AUG
 	
+	@FindBy(xpath="//*[@data-component='recommendations']//button/parent::div//a") public WebElement productCarousel; //SID 4-September
+//	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[1]/*[1]")public WebElement productCarousel_1; //SID 4-September
+//	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[1]/*[2]")public WebElement productCarousel_2; //SID 4-September
+//	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[1]/*[3]")public WebElement productCarousel_3; //SID 4-September
+//	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/../preceding-sibling::*[2]")public WebElement productCarousel_right; //SID 4-September
+//	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/../preceding-sibling::*[1]")public WebElement productCarousel_left; //SID 4-September
+	@FindBy(xpath="(//*[@data-component='recommendations']//button)[2]") public WebElement productCarousel_right;  //SID 4-September
+	@FindBy(xpath="(//*[@data-component='recommendations']//button)[1]") public WebElement productCarousel_left; //SID 4-September
 	
-	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[1]/*[1]")public WebElement productCarousel_1;
-	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[1]/*[2]")public WebElement productCarousel_2;
-	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[1]/*[3]")public WebElement productCarousel_3;
-	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/../preceding-sibling::*[2]")public WebElement productCarousel_right;
-	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/../preceding-sibling::*[1]")public WebElement productCarousel_left;
+	
 	//Mobile
 	//@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[4]/*/*[1]")public WebElement imgProductCarousel_M;/RKA 16 aug
 	@FindBy(xpath="//*[contains(@class,'col-8 col-md-4 pc')]")public WebElement imgProductCarousel_M;
@@ -135,8 +139,8 @@ public class R1_HomePage_PO {
 //	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/*/*[2]/*[2]")public WebElement productCarouselIndicator_2;/RKA 16 aug
 //	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/*/*[2]/*[1]")public WebElement productCarouselIndicator_1;/RKA 16 aug
 
-	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[2]/*[2]")public WebElement productCarouselIndicator_2;
-	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[2]/*[1]")public WebElement productCarouselIndicator_1;
+	@FindBy(xpath="//*[@data-component='recommendations']//button/parent::div//span[@role='button']")public WebElement productRecommendationIndicator; //SID 4-September
+//	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[2]/*[1]")public WebElement productCarouselIndicator_1;  //SID 4-September
 	
 	//KER-259 End
 	
@@ -166,10 +170,14 @@ public class R1_HomePage_PO {
 		String Second = secondProductPrice.getText();
 		String third = thirdProductPrice.getText();
 		String forth = forthProductPrice.getText();
-		Integer first_f = Integer.parseInt(first);
-		Integer second_s = Integer.parseInt(Second);
-		Integer third_t = Integer.parseInt(third);
-		Integer forth_f = Integer.parseInt(forth);
+		int first_f = Integer.parseInt(first);
+		int second_s = Integer.parseInt(Second);
+		int third_t = Integer.parseInt(third);
+		int forth_f = Integer.parseInt(forth);
+		System.err.println(first_f);
+		System.err.println(second_s);
+		System.err.println(third_t);
+		System.err.println(forth_f);
 		System.out.println(first_f + " " + second_s + " " + third_t + "  " + forth_f);
 		if ((first_f <= second_s) && (second_s <= third_t) && (third_t <= forth_f)) {
 			flag = true;

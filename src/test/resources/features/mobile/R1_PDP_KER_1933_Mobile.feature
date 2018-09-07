@@ -5,10 +5,10 @@ Feature: To verify user is able to see Shipping/Delivery Related Messaging in bu
    Given user launches the browser and navigates to "ASO_HOME" page
    Then User enter the search "<data>"
    And User click on search icon
-    And User selects Required product in Product Listing Page
+#    And User selects Required product in Product Listing Page
    And user should be able to see PDP mention in the current url
    Then user able to see shipping/delivery related message in bulky product
    Examples:
    |data|
-   |Guns|
+   |ProForm Cardio Strong Treadmill|
     

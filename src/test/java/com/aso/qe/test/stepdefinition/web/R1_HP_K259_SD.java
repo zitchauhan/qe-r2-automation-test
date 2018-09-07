@@ -16,8 +16,7 @@ public class R1_HP_K259_SD extends CommonActionHelper{
 
 	@Then("^Verify user click on Carousel indicatior and advance towards next carousel image$")
 	public void verify_user_click_on_Carousel_indicatior_and_advance_towards_next_carousel_image() throws Throwable {
-	   assertTrue(clickOnButton(hp.productCarouselIndicator_1));
-	   assertTrue(clickOnButton(hp.productCarouselIndicator_2));
+	   assertTrue(clickOnButton(hp.productRecommendationIndicator));
 	}
 	
 }

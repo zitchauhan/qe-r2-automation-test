@@ -6,8 +6,6 @@ Feature: To Verify the Add To Cart Functionality
           Given user launches the browser and navigates to "ASO_HOME" page
     	   Then User navigates to L3
            And User selects Required product in Product Listing Page
-           Then User should be select the color
-           Then User should be select the size
            Then User should be select the Quantity
            And User clicks on AddToCart Button
            Then User should be able to see ATC notification
