@@ -1,7 +1,7 @@
 Feature: Quick Checkout 
 
 #####==============Status Fixed
-@R2_Web @R2_Regression @R2_All @P-High @C-My_Account @KER-4030 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
 @ZYP_CART_K4030-11496 @CR-SK 
 Scenario: Verify authenticated user with no information saved in my account is able to navigate to shipping address drawer during quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -22,7 +22,7 @@ Scenario: Verify authenticated user with no information saved in my account is a
 		
 
 #####==============Status - Fixed
-@R2_Web @R2_Regression @R2_All @P-High @C-My_Account @KER-4030 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
 @ZYP_CART_K4030-11498 @CR-SK 
 Scenario: Verify authenticated user with address details saved in my account is able to navigate to Billing address drawer during express checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -43,7 +43,7 @@ Scenario: Verify authenticated user with address details saved in my account is 
 		|checkout_ShippingMethod_ShippingDetails|
 
 ########==============Status - In Progress
-#@R2_Web @R2_Regression @R2_All @P-High @C-My_Account @KER-4030 
+#@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
 #@ZYP_CART_K4030-11499 @CR-SK 
 #Scenario: Verify authenticated user with address details and payment details saved in my account is able to navigate to order summary page during express checkout 
 #	Given user launches the browser and navigates to "ASO_HOME" page 

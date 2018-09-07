@@ -306,6 +306,8 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.txtWeak));
 				else if (currentElement.equalsIgnoreCase("SignUpPage_Strong_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.txtStrong));
+				else if (currentElement.equalsIgnoreCase("SignUpPage_PasswordStrengthBar_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.SignUpPage_PasswordStrengthBar_txt));
 				// ===============================================================================
 				//// MyAccount dropdown header
 				// ===============================================================================
