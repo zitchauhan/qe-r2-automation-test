@@ -121,6 +121,23 @@ Feature: Debug
 		|OrderPage_OrderNumber_txt					|
 		|OrderPage_ShippingZipCode_txt				|
 		|OrderPage_Find_btn							|
+		
+		|#Verify following elements in SignUp section	|
+		|SignUp_FirstName_txt						 	|
+		|SignUp_LastName_txt							|
+		|SignUp_EmailAddress						 	|
+		|SignUp_Password					         	| 
+		|SignUp_ReceivePromotion_chkBx					|
+		|SignUpPage_SignUp_btn							|
+		|SignUpPage_AlreadyHaveAnAccount_txt			|
+		|SignUpPage_SignInNow_lnk						|
+		|SignUpPage_PasswordMustContain_txt				|
+		|SignUpPage_MinimumCharacters_txt				|
+		|SignUpPage_Cross_icon							|
+		|SignUpPage_PasswordStrength_txt				|
+		|SignUpPage_Weak_txt							|
+		|SignUpPage_Strong_txt							|
+		|SignUpPage_PasswordStrengthBar_txt				|
 	
 
 	

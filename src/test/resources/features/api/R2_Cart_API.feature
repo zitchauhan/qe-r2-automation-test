@@ -3,7 +3,7 @@ Feature: To Verify Get Cart Details API service without sign-in
   @All-R2 @C1-Cart @C2-Login @api @R2_AAST-01 @CR-VK @ZYP_Cart_12218
   Scenario: TC_1 - Verify Login Authentication Token Details
     Given "loginurl" with "LoginRequest" endpoint for login authentication
-    Then Verify response status code as 200
+    Then Verify response status code as 201
 
   @All-R2 @C1-Cart @C2-AddCart @api @R2_AAST-02 @CR-VK @ZYP_Cart_12219
   Scenario: TC_2 - Verify Add to Cart without sign-in details

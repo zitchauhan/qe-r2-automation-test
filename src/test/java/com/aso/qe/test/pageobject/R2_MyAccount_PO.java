@@ -530,7 +530,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='CONGRATULATIONS']")
 	public WebElement myAccount_SignUp_CongratulationsMessage_txt;
 
-	@FindBy(xpath = "//*[@data-auid='Order']")
+	@FindBy(xpath = "//*[@data-auid='Orders']")
 	public WebElement myAccount_MyAccountList_Orders_lnk;
 
 	@FindBy(xpath = "//*[@auid='add_address_btn']")
@@ -554,11 +554,40 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='pop_over_btn']")
 	public WebElement Wishlist_icn;
-	// Start KER-4233 CR-MS
+	// End KER-4233 CR-MS
+
+	@FindBy(xpath = "//*[text()='Weak']/following-sibling::div/div")
+	public WebElement SignUpPage_PasswordStrengthBar_txt;
+	
+	@FindBy(xpath = "//*[text()='Password Strength']//i")
+	public WebElement SignUpPage_PasswordStrength_tooltip;
+	
 
 	/***************************** END XPAHTS ***********************************/
 
 	/***************************** START METHODS ********************************/
+	
+	public boolean validatePasswordStrength(String expectedColor) {
+		String styleAttribute = SignUpPage_PasswordStrengthBar_txt.getAttribute("style");
+		styleAttribute = styleAttribute.split("width:")[1];
+        int paswwordStrengthPercentage = Integer.parseInt(styleAttribute.split("%")[0].trim());
+		if(expectedColor.equalsIgnoreCase("Yellow")) {
+			if(paswwordStrengthPercentage == 50) 
+				return true;
+			else 
+				return false;
+		}
+		else if(expectedColor.equalsIgnoreCase("Green")) {
+			if(paswwordStrengthPercentage == 100) 
+				return true;
+			else 
+				return false;
+		}else
+			return false;
+			
+		
+	}
+	
 
 	/***************************** END METHODS *********************************/
 

@@ -4,7 +4,7 @@ Feature: Verify Order Checkout-GiftCard API endpoint services
   Scenario: TC_1 - Verify Login Authentication Token Details
     Given "loginurl" with "LoginRequest" endpoint for login authentication
     Given "GetCartUrl" endpoint for getting cart
-    Then Verify response status code as 200
+    Then Verify response status code as 201
 
 
 #Post call required instead of get call 

@@ -33,7 +33,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICall(endpoints, loadProps.getTestDataProperty(LoginRequest));
 		JsonPath jsonPathEvaluator = response.jsonPath();
-		String  profileID = jsonPathEvaluator.get("x-userid");
+		String  profileID = jsonPathEvaluator.get("identity.userId");
 		logger.debug("Profile ID::"+ profileID);
 		System.setProperty("ProfileId", profileID);
 	}

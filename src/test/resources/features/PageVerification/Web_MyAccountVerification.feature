@@ -136,6 +136,7 @@ Scenario: Verify MyAccount
 		|SignUpPage_PasswordStrength_txt				|
 		|SignUpPage_Weak_txt							|
 		|SignUpPage_Strong_txt							|
+		|SignUpPage_PasswordStrengthBar_txt				|
 		
 		|#Verify following elements in MyAccountsDropDown	|
 		|#	Below elements has same name in PO				|
