@@ -73,8 +73,9 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When user click on edit shipping pickup
 	And user select me + alternate pickup person
 	Then user can enter the alternative person phone number "PhoneNumber"
-	And Verify below Sub/Main Module of Checkout Page
-		|Alternate's Phone Number|
+	Then Verify below Sub/Main Module of Checkout Page
+	|#Then given below fields should display for the details of Alternative pickup person|
+	|Alternate's Phone Number|
 
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10891 @CR-MS
 Scenario: Verify Phone number field validation
@@ -94,6 +95,7 @@ Scenario: Verify Phone number field validation
 	Then user can enter the alternative person phone number "PhoneNumber" 
 	And checks for no form errors
 	Then Verify below Sub/Main Module of Checkout Page
+	|#Then given below fields should display for the details of Alternative pickup person|
 	|Alternate's Phone Number|
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10892 @CR-MS
@@ -114,6 +116,7 @@ Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 	Then user can enter the alternative person invalid phone number "InvalidPhoneNumber"
 	And checks for form errors
 	Then Verify below Sub/Main Module of Checkout Page
+	|#Then given below fields should display for the details of Alternative pickup person|
 	|Alternate's Phone Number|
 
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10893 @CR-MS
@@ -134,7 +137,8 @@ Scenario: Verify Phone number field validation
 	Then user can enter the alternative person invalid phone number "InvalidPhoneNumber"
 	And checks for form errors
 	Then Verify below Sub/Main Module of Checkout Page
-		|Alternate's Phone Number|
+	|#Then given below fields should display for the details of Alternative pickup person|
+	|Alternate's Phone Number|
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10889 @CR-MS
 Scenario: Verify Phone number associated with BOPIS - Alternative pick up Person
@@ -174,6 +178,7 @@ Scenario: Verify SMS check box display with Primary and Alternative Person
 	When user click on edit shipping pickup
 	And user select me + alternate pickup person
     Then Verify below Sub/Main Module of Checkout Page
+    |#Then given below fields should display for the details of Alternative pickup person|
     |SendSMSTextUpdatesAboutMyOrder_checkbox|
     
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10887 @CR-MS
@@ -193,31 +198,4 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user will click on View Cart button
 	Then user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
 	And  user will click on Checkout button and navigates to Checkout page
-	
-
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	 
-
 	

@@ -24,15 +24,15 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 		}
 	}
 	
-	@Then("^user clicks on Create a New Wish List$")
-	public void user_clicks_on_Create_a_New_Wish_List() throws Throwable {
-		assertTrue(clickOnButton(r2MyAccountPo.btnCreateNewWishlist));
+	@Then("^user clicks on Create List$")
+	public void user_clicks_on_Create_List() throws Throwable {
+		assertTrue(clickOnButton(r2MyAccountPo.Wishlist_createlist_lnk));
 	}
 	
 	
 	@Then("^user enters Wishlist name \"(.*?)\"$")
 	public void user_enters_Wishlist_name(String arg1) throws Throwable {
-		setInputText(r2MyAccountPo.txtWishListName, webPropHelper.getTestDataProperty(arg1));
+		setInputText(r2MyAccountPo.Wishlist_name_txt, webPropHelper.getTestDataProperty(arg1));
 	}
 
 	@Then("^user click on create list$")
@@ -66,6 +66,26 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 	@Then("^user clicks on Delete WishList$")
 	public void user_clicks_on_Delete_WishList() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.DeleteWishList_btn));
+		
+	}
+	@Then("^user clicks on create$")
+	public void user_clicks_on_create() throws Throwable {
+		assertTrue(clickOnButton(r2MyAccountPo.btnSubmit));
+	}
+	
+	@Then("^verify the created list$")
+	public void verify_the_created_list() throws Throwable {
+		assertTrue(isDisplayed(r2MyAccountPo.WishlistItems_lnk));
+	}
+	
+	@Then("^user clicks on Rename List$")
+	public void user_clicks_on_Rename_List() throws Throwable {
+		assertTrue(clickOnButton(r2MyAccountPo.Rename_list_lnk));
+	}
+	
+	@Then("^clicks on browse products$")
+	public void clicks_on_browse_products() throws Throwable {
+		assertTrue(clickOnButton(r2MyAccountPo.browse_products_btn));
 		
 	}
 
