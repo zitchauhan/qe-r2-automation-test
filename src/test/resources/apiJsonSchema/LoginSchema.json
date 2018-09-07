@@ -7,10 +7,18 @@
       "properties": {
         "userId": {
           "type": "string"
+        },
+        "storeLocId": {
+          "type": "string"
+        },
+        "passwordExpiredFlag": {
+          "type": "boolean"
         }
       },
       "required": [
-        "userId"
+        "userId",
+        "storeLocId",
+        "passwordExpiredFlag"
       ]
     }
   },

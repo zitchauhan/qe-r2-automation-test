@@ -4,6 +4,17 @@ Feature: Verify MyAccount Address API endpoint services
   Scenario: TC_1 - Verify Login Authentication Token Details
     Given "loginurl" with "LoginRequest" endpoint for login authentication
     Then Verify response status code as 201
+    
+    @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-01 @CR-RT @ZYP_MyAccount_Address_13054
+  Scenario: TC_1 - Validate Login Authentication Token Details of JSON schema
+    Given "loginurl" with "LoginRequest" endpoint for login authentication
+    And validate jsonSchema "LoginSchema"
+    
+    @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-01 @CR-RT @ZYP_MyAccount_Address_13055
+  Scenario: TC_1 - Verify Login Authentication Token Details of JSON Response 
+    Given "loginurl" with "LoginRequest" endpoint for login authentication
+    Then Validated response details of "identity.userId"
+    Then Validated response details of "identity.storeLocId"
 
   @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-02 @CR-VK @ZYP_MyAccount_Address_12227
   Scenario: TC_2 - Add Address to User Profile

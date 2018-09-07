@@ -1,7 +1,7 @@
 {
-"logonId":"sampletest14@sapient.com",
-"logonPassword":"reg12345",
-"logonPasswordVerify":"reg12345",
-"firstName":"Tester",
-"lastName":"A"
+"logonId":"REPLACE_LOGONID@sapient.com",
+"logonPassword":"Reg@1234",
+"logonPasswordVerify":"Reg@1234",
+"firstName":"Automation",
+"lastName":"TestAPI"
 }

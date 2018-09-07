@@ -1,6 +1,8 @@
 package com.aso.qe.test.stepdefinition.api;
 
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 
@@ -39,10 +41,14 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 	}
 
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for user registration$")
-	public void endpoint_with_for_user_registration(String RegistrationUrl, String RegistrationPostRequest) throws Throwable {
+	public void endpoint_with_for_user_registration(String RegistrationUrl, String registrationPostRequest) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(RegistrationUrl);
 		logger.debug("END Point URL:"+endpoints);
-		initiateRestPostAPICallForReg(endpoints, loadProps.getTestDataProperty(RegistrationPostRequest));
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ registrationPostRequest+".json");
+		logger.debug("POST Request JSON:"+postRequestStr);
+		postRequestStr = postRequestStr.replace("REPLACE_LOGONID","test"+FrameWorkHelper.getRandomAlphabetic(6).toLowerCase());
+		
+		initiateRestPostAPICallWithoutCookiesAndReqStr(endpoints, postRequestStr);
 	}
 
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for shipping details$")
@@ -146,7 +152,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 	public void endpoint_with_for_address_verification(String Addressurl, String AddressVerificationRequest) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addressurl);
 		logger.debug("END Point URL:"+endpoints);
-		initiateRestPostAPICallForReg(endpoints, loadProps.getTestDataProperty(AddressVerificationRequest));
+		initiateRestPostAPICallWithoutCookies(endpoints, loadProps.getTestDataProperty(AddressVerificationRequest));
 	}
 	
 	@Given("^\"(.*?)\" with  \"(.*?)\" endpoint for Order Get GiftCard Details$")

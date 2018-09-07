@@ -14,7 +14,7 @@ Feature: This service would return inventory status for all 2 inventory sources 
   Scenario: TC_1 - Retrieve the Storelocator-Find stores-makemystore
     Given "loginurl" with "LoginRequest" endpoint for login authentication
     Given "MakeMyStore" and post request "MakeMyStoreRequest" endpoint for Storelocator Find stores makemystore with SignIn user
-    Then Verify response status code as 201
+    Then Verify response status code as 200
 
   @All-R2 @CR-RT @api @C-MyAccount @C-Storelocator-Find-Stores-makemystore @ZYP_MyAccount_stores-makemystore_12510
   Scenario: TC_1 - Retrieve the Storelocator-Find stores-makemystore-Validate Json Schema
