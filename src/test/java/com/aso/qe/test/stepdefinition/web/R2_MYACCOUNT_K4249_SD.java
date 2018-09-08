@@ -83,8 +83,14 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 
 	@Then("^user should get logged in successfully$")
 	public void user_should_get_logged_in_successfully() throws Throwable {
-		clickOnButton(r2MyAccountPo.myAccount);
-		assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_Orders_lnk));
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			globalElementHeader.clickOnBurgerMenu();
+			assertTrue(clickOnButton(globalElementHeader.btnMyAccountMobile));
+			assertTrue(isDisplayed(r2MyAccountPo.burgerMenu_Orders_lnk));
+		}else {
+			clickOnButton(r2MyAccountPo.myAccount);
+			assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_Orders_lnk));
+		}
 	}
 
 	@When("^user enter first \"(.*?)\"$")

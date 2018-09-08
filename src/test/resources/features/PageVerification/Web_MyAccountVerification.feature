@@ -153,6 +153,8 @@ Scenario: Verify MyAccount
 		|#	Below elements has same name in PO				|
 		|myAccount_MyAccountList_Orders_lnk			 		|
 		|myAccount_MyAccountList_AddressBook_lnk			|
+		|myAccount_MyAccountList_Profile_lnk				|
+		|myAccount_MyAccountList_Payment_lnk				|
 		
 		
 		

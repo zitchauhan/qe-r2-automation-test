@@ -9,10 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
-public class R2_R1_Fun_PO extends CommonActionHelper 
-{
+public class R2_R1_Fun_PO extends CommonActionHelper {
 
-	R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
+			R1_GlobalElementHeader_Home_PO.class);
 	/***************************** START XPAHTS **********************************/
 	// Start KER-4249 CR-RK
 	@FindBy(xpath = "//a[text()='Sign In'] | //*[@data-auid='signInCta_m']") // CR-AAK 6 sept
@@ -20,16 +20,15 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 
 	// Start KER-3613 CR-RK
 	@FindBy(xpath = "//*[@data-auid='level2Category-OUTDOORS_m'] | //*[@data-auid='level2Category-OUTDOORS'] | //*[@data-auid='level2Category-Outdoors'] | //*[@data-auid='level2Category-Outdoors_m']")
-	public WebElement btnOutdoorCategory;//Area L1 // 5 sept CR-DPK
-	
+	public WebElement btnOutdoorCategory;// Area L1 // 5 sept CR-DPK
 
 	@FindBy(xpath = "//*[@data-auid='shopByCategory_tiles']//*[@data-auid='shopByCategory_9']")
-	public WebElement secCategory_CLP;//Area L2
+	public WebElement secCategory_CLP;// Area L2
 	@FindBy(xpath = "//*[@data-auid='level3Category-Shooting_m']")
-	public WebElement secCategory_CLPMobile;//Area L2 // 5 sept CR-DPK
-	
+	public WebElement secCategory_CLPMobile;// Area L2 // 5 sept CR-DPK
+
 	@FindBy(xpath = "(//*[text()='Ships to Store']/..)[1]")
-	public WebElement AS_productPLP1_m; //5 sept CR-DPK --- Area  SOF PL
+	public WebElement AS_productPLP1_m; // 5 sept CR-DPK --- Area SOF PL
 
 	@FindBy(xpath = "//*[@data-auid='shopByCategory_tiles']//*[@data-auid='shopByCategory_3']")
 	public WebElement productPLP;// Area L3
@@ -40,55 +39,75 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 	public WebElement lnkPickupLocation;// Area PDP
 
 	// End KER-3613 CR-RK
-	/********SID ********************************************************************/
-	 @FindBy(xpath="//*[@data-auid='level2Category-Home & Backyard_m']")public WebElement tabHomeBackyard_M; //SID 5-September
-	   @FindBy(xpath="//*[@data-auid='level3Category-Grills & Outdoor Cooking_m']")public WebElement tabGrillOutdoor_M; //SID 5-September
-	   @FindBy(xpath=" //*[@data-auid='go-to-Grills & Outdoor Cooking_m']")public WebElement clickGrillsOutdoorTab; //SID 5-September
-	@FindBy(xpath="//*[@data-auid='level2Category-Home & Backyard']")public WebElement tabHomeBackyard; //SID 5-September
-	   @FindBy(xpath=" //*[@data-auid='level3Category-Grills & Outdoor Cooking']")public WebElement tabGrillOutdoor; //SID 5-September
-	   @FindBy(xpath=" //*[@data-auid='shopByCategory_1']")public WebElement clickGrills; //SID 5-September
-	   @FindBy(xpath = "(//*[contains(@data-auid,'productCard_')])[2]")	public WebElement selectGrill; //SID 5-September
-	
-	 //SID 5-September
-	   public void navigateToL2GrillOutdoor() throws InterruptedException {
-		   if("mobile".equalsIgnoreCase(testtype)){
-			    waitForElement(tabHomeBackyard_M);
-				assertTrue(clickOnButton(tabHomeBackyard_M));
-				waitForElement(tabGrillOutdoor_M);
-				assertTrue(clickOnButton(tabGrillOutdoor_M));
-				waitForElement(clickGrillsOutdoorTab);
-				assertTrue(clickOnButton(clickGrillsOutdoorTab));
-				Thread.sleep(2000);
+	/********
+	 * SID
+	 ********************************************************************/
+	@FindBy(xpath = "//*[@data-auid='level2Category-Home & Backyard_m']")
+	public WebElement tabHomeBackyard_M; // SID 5-September
+	@FindBy(xpath = "//*[@data-auid='level3Category-Grills & Outdoor Cooking_m']")
+	public WebElement tabGrillOutdoor_M; // SID 5-September
+	@FindBy(xpath = " //*[@data-auid='go-to-Grills & Outdoor Cooking_m']")
+	public WebElement clickGrillsOutdoorTab; // SID 5-September
+	@FindBy(xpath = "//*[@data-auid='level2Category-Home & Backyard']")
+	public WebElement tabHomeBackyard; // SID 5-September
+	@FindBy(xpath = " //*[@data-auid='level3Category-Grills & Outdoor Cooking']")
+	public WebElement tabGrillOutdoor; // SID 5-September
+	@FindBy(xpath = " //*[@data-auid='shopByCategory_1']")
+	public WebElement clickGrills; // SID 5-September
+	@FindBy(xpath = "(//*[contains(@data-auid,'productCard_')])[2]")
+	public WebElement selectGrill; // SID 5-September
 
-			} else{
-				
-				assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
-				Thread.sleep(2000);
-				Actions hover = new Actions(getDriver());
-				hover.moveToElement(tabHomeBackyard).build().perform();
-				Thread.sleep(2000);
-				assertTrue(clickOnButton(tabGrillOutdoor));
-				Thread.sleep(2000);
-			}
+	// SID 5-September
+	public void navigateToL2GrillOutdoor() throws InterruptedException {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			waitForElement(tabHomeBackyard_M);
+			assertTrue(clickOnButton(tabHomeBackyard_M));
+			waitForElement(tabGrillOutdoor_M);
+			assertTrue(clickOnButton(tabGrillOutdoor_M));
+			waitForElement(clickGrillsOutdoorTab);
+			assertTrue(clickOnButton(clickGrillsOutdoorTab));
+			Thread.sleep(2000);
 
-	   }
-	   /********SID ENDS ********************************************************************/
+		} else {
+
+			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
+			Thread.sleep(2000);
+			Actions hover = new Actions(getDriver());
+			hover.moveToElement(tabHomeBackyard).build().perform();
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(tabGrillOutdoor));
+			Thread.sleep(2000);
+		}
+
+	}
+
+	/********
+	 * SID ENDS
+	 ********************************************************************/
+
+	// KER-4058 CR-RKA
+	@FindBy(xpath = "//*[@data-auid='shopByCategory_9']")
+	public WebElement btnShootingCategory;
+	@FindBy(xpath = "//*[@data-auid='shopByCategory_4']")
+	public WebElement ProductgunStorageSafty;
+	@FindBy(xpath = "(//*[contains(@data-auid,'productCard_')])[1]")
+	public WebElement productSelection;
+
+	// KER-3093 CR-RKA
+	@FindBy(xpath = "//*[@data-auid='Payment']")
+	public WebElement payment_Txt;
+	@FindBy(xpath = "//*[@data-auid='Payment_m']")
+	public WebElement payment_M_Txt;
+	// KER-3093 CR-RKA
+
+	// KER-2939 CR-AKK
+	@FindBy(xpath = "//div[@id='PMC']")
+	public WebElement Disclaimer_Txt;
+	@FindBy(xpath = "//span[text()='See more']")
+	public WebElement SeeMore_lnk;
+	@FindBy(xpath = "//div[@id='PMC']/p")
+	public WebElement Disclaimer_Full_Txt;
 	
 	
-	//KER-4058 CR-RKA
-	@FindBy(xpath="//*[@data-auid='shopByCategory_9']")public WebElement btnShootingCategory;
-	@FindBy(xpath="//*[@data-auid='shopByCategory_4']")public WebElement ProductgunStorageSafty;
-   @FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[1]")public WebElement productSelection;
-   
-   
- //KER-3093 CR-RKA
-   @FindBy(xpath="//*[@data-auid='Payment']")public WebElement payment_Txt;
-   @FindBy(xpath="//*[@data-auid='Payment_m']")public WebElement payment_M_Txt;
-   //KER-3093 CR-RKA
-   
-   //KER-2939 CR-AKK
-   @FindBy(xpath="//div[@id='PMC']") public WebElement Disclaimer_Txt;
-   @FindBy(xpath="//span[text()='See more']") public WebElement SeeMore_lnk;
-   @FindBy(xpath="//div[@id='PMC']/p") public WebElement Disclaimer_Full_Txt;
-   
+
 }

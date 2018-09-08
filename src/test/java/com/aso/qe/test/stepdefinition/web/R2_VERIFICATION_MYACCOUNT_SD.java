@@ -326,6 +326,11 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_Orders_lnk));
 				else if (currentElement.equalsIgnoreCase("myAccount_MyAccountList_AddressBook_lnk"))
 					assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_AddressBook_lnk));
+				else if (currentElement.equalsIgnoreCase("myAccount_MyAccountList_Payment_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_Payment_lnk));
+				else if (currentElement.equalsIgnoreCase("myAccount_MyAccountList_Profile_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_Profile_lnk));
+			 
 
 				else {
 					logger.error("Element <" + currentElement + "> is not found in the SD list.");

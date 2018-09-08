@@ -148,6 +148,10 @@ Feature: Debug
 		|SignUpPage_Weak_txt							|
 		|SignUpPage_Strong_txt							|
 		|SignUpPage_PasswordStrengthBar_txt				|
+		
+		|#Verify following elements in SignUp section	|
+		|Following elements has same name in PO			|
+		|burgerMenu_Orders_lnk							|
 	
 
 	

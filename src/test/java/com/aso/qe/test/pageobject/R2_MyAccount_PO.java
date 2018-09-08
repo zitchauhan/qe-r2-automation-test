@@ -535,6 +535,14 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "//*[@data-auid='Address Book']")
 	public WebElement myAccount_MyAccountList_AddressBook_lnk;
+	
+	@FindBy(xpath = "//*[@data-auid='Payment']")//CR-RK 8 Sep
+	public WebElement myAccount_MyAccountList_Payment_lnk;
+	
+	@FindBy(xpath = "//*[@data-auid='Profile']") //CR-RK 8 Sep
+	public WebElement myAccount_MyAccountList_Profile_lnk; 
+	
+	
 
 	@FindBy(xpath = "//*[@auid='add_address_btn']")
 	public WebElement myAccountPage_AddNewAddressPluIcon_btn; // CR-RK KER-4230 Sep 6
@@ -579,6 +587,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='Password Strength']//i")
 	public WebElement SignUpPage_PasswordStrength_tooltip;
 	
+	@FindBy(xpath = "//*[@data-auid='Orders_m']")
+	public WebElement burgerMenu_Orders_lnk;
+	
 	
 	
 
@@ -587,6 +598,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	/***************************** START METHODS ********************************/
 	
 	public boolean validatePasswordStrength(String expectedColor) {
+		waitForElement(SignUpPage_PasswordStrengthBar_txt);
 		String styleAttribute = SignUpPage_PasswordStrengthBar_txt.getAttribute("style");
 		styleAttribute = styleAttribute.split("width:")[1];
         int paswwordStrengthPercentage = Integer.parseInt(styleAttribute.split("%")[0].trim());
