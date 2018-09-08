@@ -28,7 +28,7 @@ public class R2_CHECKOUT_K4764_SD extends CommonActionHelper {
 		Actions hover=new Actions(getDriver());
 		hover.clickAndHold(r2CheckoutPo.MePickUp_Drpdwn).build().perform();
 		hover.sendKeys(r2CheckoutPo.MePickUp_Drpdwn, Keys.DOWN,Keys.ENTER).build().perform();
-	    Thread.sleep(3000);
+	    Thread.sleep(5000);
 	}
 
 	@Then("^user enter the Store Pickup Alternates FirstName \"(.*?)\"$")

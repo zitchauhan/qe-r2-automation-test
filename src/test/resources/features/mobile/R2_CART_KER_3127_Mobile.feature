@@ -27,14 +27,8 @@ Verify if user should be able to apply or remove a promotion code
 	And user navigate to Cart page 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "ItemLevelPromoCodeDiscount" 
-	And discount value applied against the individual line item 
-	And user is displayed Promo code XXXXX applied 
-	And customer must see the associated discount as -$XX.XX (total order discount) at Order Summary in Cart 
-	And total price must be updated to reflect discount 
 	And User clicks on Remove Promo code link 
-	And Promo code is Removed 
-	And associated discount should get remove 
-	Then total price must be updated with reflect amount 
+	Then Promo code is Removed 
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8169_M @CR-AKK 
 Scenario: To Verify if user is able to click on the Shipping policy link 

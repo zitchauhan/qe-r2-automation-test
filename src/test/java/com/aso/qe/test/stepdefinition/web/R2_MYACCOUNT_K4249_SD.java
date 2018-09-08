@@ -91,7 +91,7 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 			clickOnButton(r2MyAccountPo.myAccount);
 			assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_Orders_lnk));
 		}
-	}
+	} 
 
 	@When("^user enter first \"(.*?)\"$")
 	public void user_enter_first(String arg1) throws Throwable {
