@@ -1,8 +1,6 @@
 package com.aso.qe.test.stepdefinition.api;
 
 
-import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 
@@ -162,6 +160,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		initiateRestAPICallWithCookie(endpoints);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" and \"(.*?)\" for Profile address update of user$")
 	public void endpoint_with_and_for_Profile_address_update_of_user(String url, String extension, String storeId) throws Throwable {
 		JSONObject addressjsonObject = getFirstAddressDetails();
@@ -179,6 +178,20 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ jsonRequestFilePath+".json");
 		postRequestStr = postRequestStr.replace("REPLACE_FIRSTNAME", FrameWorkHelper.getRandomAlphabetic(8)).replace("REPLACE_LASTNAME", FrameWorkHelper.getRandomAlphabetic(8));
 		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
+	}
+
+	@Given("^\"(.*?)\" endpoint for get Store Details$")
+	public void endpoint_for_get_Store_Details(String getStroreUrl) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(getStroreUrl);
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICall(endpoints);
+	}
+	
+	@Given("^\"(.*?)\" with \"(.*?)\" endpoint for change password of profile$")
+	public void with_endpoint_for_change_password_of_profile(String changepasswordurl, String requestPath) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(changepasswordurl);
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestPostAPICallWithCookies(endpoints, loadProps.getTestDataProperty(requestPath));
 	}
 
 }

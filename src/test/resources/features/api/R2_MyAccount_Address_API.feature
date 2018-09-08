@@ -4,14 +4,14 @@ Feature: Verify MyAccount Address API endpoint services
   Scenario: TC_1 - Verify Login Authentication Token Details
     Given "loginurl" with "LoginRequest" endpoint for login authentication
     Then Verify response status code as 201
-    
-    @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-01 @CR-RT @ZYP_MyAccount_Address_13054
+
+  @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-01 @CR-RT @ZYP_MyAccount_Address_13054
   Scenario: TC_1 - Validate Login Authentication Token Details of JSON schema
     Given "loginurl" with "LoginRequest" endpoint for login authentication
     And validate jsonSchema "LoginSchema"
-    
-    @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-01 @CR-RT @ZYP_MyAccount_Address_13055
-  Scenario: TC_1 - Verify Login Authentication Token Details of JSON Response 
+
+  @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-01 @CR-RT @ZYP_MyAccount_Address_13055
+  Scenario: TC_1 - Verify Login Authentication Token Details of JSON Response
     Given "loginurl" with "LoginRequest" endpoint for login authentication
     Then Validated response details of "identity.userId"
     Then Validated response details of "identity.storeLocId"
@@ -67,18 +67,26 @@ Feature: Verify MyAccount Address API endpoint services
     Given "Addurl" endpoint with "/address/PUT/" and "/?storeId=10151&makePrimary=false" for Profile address update of user
     Then Verify response status code as 200
 
-    @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-07 @CR-RT @ZYP_MyAccount_UpdateAddress_12795
+  @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-07 @CR-RT @ZYP_MyAccount_UpdateAddress_12795
   Scenario: TC_8 - Profile-Update an address of user profile JSON schema validation
-    Given "loginurl" with "LoginRequest" endpoint for login authentication
+    # Given "loginurl" with "LoginRequest" endpoint for login authentication
     Given "Addurl" endpoint with "/address/" for getting address of a profile
     Given "Addurl" endpoint with "/address/PUT/" and "/?storeId=10151&makePrimary=false" for Profile address update of user
     And validate jsonSchema "UpdateAddressByIdSchema"
-    
-     @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-07 @CR-RT @ZYP_MyAccount_UpdateAddress_12796
+
+  @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-07 @CR-RT @ZYP_MyAccount_UpdateAddress_12796
   Scenario: TC_8 - Profile-Update an address of user profile JSON response validation
-    Given "loginurl" with "LoginRequest" endpoint for login authentication
+    # Given "loginurl" with "LoginRequest" endpoint for login authentication
     Given "Addurl" endpoint with "/address/" for getting address of a profile
     Given "Addurl" endpoint with "/address/PUT/" and "/?storeId=10151&makePrimary=false" for Profile address update of user
     Then Validated response details of "userId"
     Then Validated response details of "addressId"
-    
+
+  @All-R2 @C1-MyAccount @C2-ChangePassword @api @R2_AAST-07 @CR-RT @ZYP_MyAccount_ChangePassword_13111
+  Scenario: TC_8 - Verify -Profile Change Password status code, JSON response validation and JSON schema validation
+    Given "ChangePasswordUrl" with "ChangePasswordRequest-FirstTime" endpoint for change password of profile
+    Then Verify response status code as 201
+    Given "ChangePasswordUrl" with "ChangePasswordRequest-SecondTime" endpoint for change password of profile
+    Then Verify response status code as 201
+    And validate jsonSchema "RegistrationSchema"
+    Then Validated response details of "identity.userId"

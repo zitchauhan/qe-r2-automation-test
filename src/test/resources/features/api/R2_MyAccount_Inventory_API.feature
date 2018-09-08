@@ -40,3 +40,19 @@ Feature: This service would return inventory status for all 2 inventory sources 
   Scenario: TC_3 - Retrieve the Storelocator Find stores findbyLatNLong andStoreLocId-Validate response data
     Given "FindStoreUrl" endpoint for Storelocator Find stores and findbyLatNLong StoreLocId
     And verify the Storelocator Find stores findbyLatNLong response data
+
+    @All-R2 @CR-RT @api @C-MyAccount @C-Storelocator-Find-Stores-findbyLatNLong @ZYP_MyAccount_GetStore_13077
+  Scenario: TC_3 - get the Store Details and verify the status code
+    Given "GetStoreDetailsUrl" endpoint for get Store Details
+    Then Verify response status code as 200
+    
+      @All-R2 @CR-RT @api @C-MyAccount @C-Storelocator-Find-Stores-findbyLatNLong @ZYP_MyAccount_GetStore_13078
+  Scenario: TC_3 - get the Store Details and validate the JSON schema
+    Given "GetStoreDetailsUrl" endpoint for get Store Details
+    And validate jsonSchema "GetStoreDetailsSchema"
+    
+     @All-R2 @CR-RT @api @C-MyAccount @C-Storelocator-Find-Stores-findbyLatNLong @ZYP_MyAccount_GetStore_13079
+  Scenario: TC_3 - get the Store Details and validate the JSON response details
+    Given "GetStoreDetailsUrl" endpoint for get Store Details
+     Then Validated response details of "stores[0].storeId"
+    Then Validated response details of "stores[0].type"
