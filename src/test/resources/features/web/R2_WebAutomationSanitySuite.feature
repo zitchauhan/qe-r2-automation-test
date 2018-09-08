@@ -158,7 +158,7 @@ Scenario: TC_10-Cat Nav - View Cart
 	Then user navigate to Cart page 
 	
 	
-@R2_Web @AutomationSanityR2 @CR-SK 
+@R2_Web @AutomationSanityR2 @CR-SK @R2ASWT-03
 Scenario: TC_11-Cat Nav - Checkout from ATC Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
@@ -342,50 +342,50 @@ Scenario: TC_20-Verify Gift Card applied is reflected on Order summary
 	And user click on Apply button
 	Then verify Gift Card in order summary page	
 	
-@R2_Web @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954 @CR-GK
-@AutomationSanityR2 
-Scenario: TC_21-Verify Valid gift card is applied for purchases 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button 
-	And user is navigated to order summary page 
-	Then user click on GiftCard Plus icon in Checkout page 
-	And user enter Gift card Number "GiftcardNumber" 
-	And user enter Pin Number "PinNumber" 
-	And user click on Apply button 
-	Then applied gift card "GiftcardNumber" should be displayed 
-	Then gift card balance is applied towards the purchase 
+#@R2_Web @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954 @CR-GK
+#@AutomationSanityR2 
+#Scenario: TC_21-Verify Valid gift card is applied for purchases 
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	When user clicks on SignIn link from global header 
+#	And user enter the valid emailaddress "EmailAddress" 
+#	And user enter the valid password "Password" 
+#	And user click on signin button 
+#	And User navigates to L2 Mens clothing 
+#	And user clicks on one of the subcategory and navigates to LTwo 
+#	And user is able to see the product category name in section title 
+#	And user clicks on one of the product category and navigates to LThree 
+#	And User is navigated to pdp page 
+#	And user click on Add to Cart Button 
+#	And user is navigated to Add to cart Notification popup 
+#	And user will click on View Cart button 
+#	And user navigate to Cart page 
+#	And user will click on Checkout button 
+#	And user is navigated to order summary page 
+#	Then user click on GiftCard Plus icon in Checkout page 
+#	And user enter Gift card Number "GiftcardNumber" 
+#	And user enter Pin Number "PinNumber" 
+#	And user click on Apply button 
+#	Then applied gift card "GiftcardNumber" should be displayed 
+#	Then gift card balance is applied towards the purchase 
 	
 	
-@R2_Web @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 @CR-RK
-@AutomationSanityR2 
-Scenario: TC_22-Verify is user can Sign-In for faster checkout experience 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
-	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
-	And user will click on Checkout button 
-	When user click on SignIn link 
-	And user enter the valid "emailaddress" 
-	And user enter create password 
-	And user click on signin button 
-	Then user should get logged in successfully 
+#@R2_Web @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 @CR-RK
+#@AutomationSanityR2 
+#Scenario: TC_22-Verify is user can Sign-In for faster checkout experience 
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	And User navigates to L2 Mens clothing 
+#	Then user clicks on one of the subcategory and navigates to LTwo 
+#	And user is able to see the product category name in section title 
+#	Then user clicks on one of the product category and navigates to LThree 
+#	Then User is navigated to pdp page 
+#	Then user click on Add to Cart Button 
+#	Then user is navigated to Add to cart Notification popup 
+#	And user will click on Checkout button 
+#	When user click on SignIn link 
+#	And user enter the valid "emailaddress" 
+#	And user enter create password 
+#	And user click on signin button 
+#	Then user should get logged in successfully 
 	
 @R2_Web @P-Highest @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @CR-AKK
 @AutomationSanityR2 
