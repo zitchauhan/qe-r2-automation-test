@@ -25,7 +25,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	R1_PDP_PO pdp_po= PageFactory.initElements(driver, R1_PDP_PO.class);
 	
 	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());
-	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing\"]|//*[@data-auid=\"level3Category-Men's Clothing_m\"]") public WebElement btnMens_Clothing_Shop;
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing\"]|//*[@data-auid=\"level3Category-Men's Clothing_m\"] | //*[@data-auid='level3Category-Mens_m'] | //*[@data-auid='level3Category-Mens']/a ") public WebElement btnMens_Clothing_Shop;
 	@FindBy(xpath="//*[@data-auid='logo']//img")public WebElement imgAcademyLogo;
 	@FindBy(xpath="//*[@data-auid='logo_m']//img")public WebElement imgAcademyLogo_m;//danush
 	@FindBy(xpath="//*[@data-auid='search-clear-button_m']|//*[@data-auid='search-clear-button']") public  WebElement btnSearchLens;
@@ -134,7 +134,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath = "//input[@name='lastName']")public WebElement txtLastName;
 	@FindBy(xpath = "//input[@name='firstName']")public WebElement txtFirstName;
 	@FindBy(xpath="//*[@id='signup-link-from-login']")public WebElement lnkSignUp;
-	@FindBy(xpath = "//*[@id='logonSubmit']")public WebElement btnSubmit;
+	@FindBy(xpath = "//*[@id='logonSubmit'] |//*[@data-auid='btnemail-signin-button']")public WebElement btnSubmit;
 	@FindBy(xpath = "//input[@type='password']")	public WebElement txtPassword;
 	@FindBy(xpath = "//input[@type='email']")	public WebElement txtEmailAddress;
 	@FindBy(xpath = "//*[@data-auid='signInCta']") public WebElement btnSignIn;

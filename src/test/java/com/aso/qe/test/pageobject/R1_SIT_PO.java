@@ -145,9 +145,9 @@ public class R1_SIT_PO extends CommonActionHelper{
 		
 	
 	@FindBy(xpath = "//input[@name='logonId']")	public WebElement txtEmail;	
-	@FindBy(xpath="//h1[text()='Welcome Back!']") public WebElement txtwelcomeback;
-	@FindBy(xpath="//a[text()='Forgot your password?']") public WebElement lnkforgotpwd;
-	@FindBy(xpath="//span[contains(text(),'Don')]") public WebElement txtdonthaveanaccount;
+	@FindBy(xpath="//h1[text()='Welcome Back!'] | //*[text()='SIGN IN']") public WebElement txtwelcomeback;
+	@FindBy(xpath="//*[text()='Forgot your password?']") public WebElement lnkforgotpwd;
+	@FindBy(xpath="//*[contains(text(),'Don')]") public WebElement txtdonthaveanaccount;
 	@FindBy(xpath="//a[text()='Sign Up']") public WebElement txtdonthaveanaccounttxtdonthaveanaccount;
 	
 	
