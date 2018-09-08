@@ -25,7 +25,7 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(myAccountPo.lnkPayment_Mobile));	
 		}else
 		{
-	    assertTrue(clickOnButton(myAccountPo.lnkPayment));
+	    assertTrue(clickOnButton(myAccountPo.myAccount_MyAccountList_Payment_lnk));
 		}
 	}
 	
