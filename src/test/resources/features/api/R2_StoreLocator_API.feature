@@ -16,12 +16,12 @@ Feature: To Verify Get City adn State of store Locator without sign-in
     Then Validated response details of "state"
     Then Validated response details of "city"
 
-@All-R2 @CR-RT @api @C-MyAccount @C-MyAccount-Inventory @ZYP_MyAccount_Inventory_13164
+  @All-R2 @CR-RT @api @C-MyAccount @C-MyAccount-Inventory @ZYP_MyAccount_Inventory_13164
   Scenario: TC_2 - verify Create store pickup inventory for the given Skus for particular store
-   Given "StorePickupInventory" with "StorePickupInventoryRequest" for Create store pickup inventory with skus and store
+    Given "StorePickupInventory" with "StorePickupInventoryRequest" for Create store pickup inventory with skus and store
     Then Verify response status code as 200
-     And validate jsonSchema "StorePickupInventorySchema"
-     Then Validated response details of "pickupResponse[0].storeId"
+    And validate jsonSchema "StorePickupInventorySchema"
+    Then Validated response details of "pickupResponse[0].storeId"
     Then Validated response details of "pickupResponse[0].skus[0].skuId"
 
   @All-R2 @CR-RT @api @C-MyAccount @C-MyAccount-Inventory @ZYP_MyAccount_Inventory_12285
