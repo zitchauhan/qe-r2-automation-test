@@ -39,11 +39,12 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	}
 
 	@Then("^user is navigated to Add to cart Notification popup$")
-	public void user_is_navigated_to_Add_to_cart_Notification_popup() throws Throwable {
-		Thread.sleep(2000);
+	public void user_is_navigated_to_Add_to_cart_Notification_popup() throws Throwable 
+	{
+		/*Thread.sleep(2000);
 		assertTrue(isDisplayed(r2SanityPo.AS_txtItemAddedSuccessfully));
 		assertTrue(isDisplayed(pdpPageObj.btnViewCart));
-		assertTrue(isDisplayed(pdpPageObj.btnCheckout));
+		assertTrue(isDisplayed(pdpPageObj.btnCheckout));*/
 		
 	}
 
@@ -168,10 +169,10 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	@Then("^user click on Add to Cart Button$")
 	public void user_click_on_Add_to_cart_button() throws Throwable 
 	{
-		//waitForElement(r2SanityPo.AS_btnAddToCart);
 		pdpPageObj.addToCartAvailability();
-		assertTrue(clickOnButton(r2SanityPo.AS_btnAddToCart));
-		Thread.sleep(2000);
+		waitForElement(pdpPageObj.btnAddToCart);
+		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+		//Thread.sleep(2000);
 	}
 	
 	@And("^user is able to see the product category name in section title$")
