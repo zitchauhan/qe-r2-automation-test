@@ -176,4 +176,11 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		logger.debug(key+"::"+ value);
 		assertNotNull(value);
 	}
+	
+	@Given("^\"(.*?)\" with \"(.*?)\" for Create store pickup inventory with skus and store$")
+	public void with_for_Create_store_pickup_inventory_with_skus_and_store(String url, String requestJson) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url);
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestPostAPICallWithoutCookies(endpoints, loadProps.getTestDataProperty(requestJson));
+	}
 }
