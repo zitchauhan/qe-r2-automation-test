@@ -1,0 +1,17 @@
+{
+  "sku": [
+    {
+      "skuId": "109334291",
+      "requestedQuantity": "1"
+    },
+    {
+      "skuId": "100060351",
+      "requestedQuantity": "1"
+    }
+  ],
+  "stores": [
+    "092",
+    "033"
+  ],
+  "source": "REALTIME"
+}
