@@ -62,8 +62,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|Alternate's First Name|
 		|Alternate's Last Name |
 		|Alternate's Email Address|
-		|Alternate's Phone Number |
-		
+		|Alternate's Phone Number |	
 	And user enter the Store Pickup Alternates FirstName "PickupFirstName"
 	And user enter the Store Pickup Alternates LastName "PickupLastName"
 	And user enter the Store Pickup Alternates Email "PickupEmail"

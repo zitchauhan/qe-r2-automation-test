@@ -58,7 +58,7 @@ public class R2_CHECKOUT_K3151_SD extends CommonActionHelper {
 
 	@Then("^user verifies the default shipping address in the drop down$")
 	public void user_verifies_the_default_shipping_address_in_the_drop_down() throws Throwable {
-
+		assertTrue(isDisplayed(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd));
 	}
 
 	@Then("^user verifies all the saved addresses in my account should be displayed in the dropdown$")

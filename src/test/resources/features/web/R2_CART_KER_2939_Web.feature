@@ -12,7 +12,7 @@ Scenario: To Verify Image for selected SKU is be displayed on product blade for 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
-	Then User is able to see the selected variant image as thumbnail 
+	Then User is able to see the selected variant image as thumbnail   
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8071 @CR-AKK 
 Scenario: To view details specific to an item in the cart 
@@ -42,7 +42,7 @@ Scenario: To view details specific to an item in the cart
 	And user verify Discount messaging and Promotional messaging 
 	And user verify shipping information 
 	Then user verify BOPIS radio button 
-	
+	  
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8077 @CR-AKK 
 Scenario:
@@ -317,5 +317,56 @@ Given user launches the browser and navigates to "ASO_HOME" page
     Then user views a Disclaimer message
     When clicks on Read More Link
     Then a drawer is expanded to show full message
+    
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12572 @CR-AKK 
+Scenario: Verify the Product blade where In-store pick is not available
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing
+	Then user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	Then user clicks on one of the product category and navigates to LThree 
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	When user will click on View Cart button 
+	And user navigate to Cart page 
+	Then in Product blade, radio button against In-store Pick-up should be suppressed
+	And Ship to Me radio button should be selected by default
+
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12573 @CR-AKK 	
+Scenario: Verify the Product blade where shipping is not available
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing
+	Then user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	Then user clicks on one of the product category and navigates to LThree 
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	When user will click on View Cart button 
+	And user navigate to Cart page 
+    When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
+	Then in Product blade, radio button against Ship to Me should be suppressed
+	And In-store pickup radio button should be selected by default
+
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12502 @CR-AKK	
+Scenario: To Verify that Move to Wishlist Link is not displayed for Gift Card(s) and Bundle Item(s). 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User navigates till PDP of soccer Bundle items
+	And user click on soccer item      
+	And User click on the product image of soccer item package 
+	Then Verify the nextstep functionality 
+	When user will click on View Cart button 
+	And user navigate to Cart page	  
+	Then Verify that Move to Wishlist Link is not displayed for Gift Card(s) and Bundle Item(s)
+	
+	 
+	 
+	     
+	  
+	
+	
+	
+	  
 	
 	

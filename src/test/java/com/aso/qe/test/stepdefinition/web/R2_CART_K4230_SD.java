@@ -35,7 +35,7 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 		}
 		else
 		{
-			assertTrue(clickOnButton(r2MyAccountPo.lnkProfile));
+			assertTrue(clickOnButton(r2MyAccountPo.myAccount_MyAccountList_Profile_lnk));
 		}
 	}
 	
