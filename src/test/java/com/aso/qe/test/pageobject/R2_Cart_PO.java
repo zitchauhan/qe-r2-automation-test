@@ -715,7 +715,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	//Promo Code (Start)
 	@FindBy(xpath = "//div[text()='Promocode']/../div[2]")public WebElement txtPromoPrice;
 	@FindBy(xpath = "//*[contains(text(),'Please enter a valid promotion code')]")public WebElement txtInvalidPromo;
-	@FindBy(xpath = "//div[text()='Promocode']")public WebElement txtPromocodeCart;
+	@FindBy(xpath = "//div[text()='Promocode'] | //*[text()='Enter Promo Code']")public WebElement txtPromocodeCart;
 	
 	
 	

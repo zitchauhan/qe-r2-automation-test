@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_HomePage_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
@@ -22,7 +23,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	R2_Cart_PO r2CartPo = PageFactory.initElements(getDriver(), R2_Cart_PO.class);
-	
+	R1_HomePage_PO r1HomePagePO = PageFactory.initElements(getDriver(), R1_HomePage_PO.class);
 	
 	public String quantityprice;
 	public String modifiedQuantityprice;
@@ -226,5 +227,14 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	}
 	
 	
+	@Then("^user enter the valid emailaddress \"(.*?)\" from checkout page$")
+	public void user_enter_the_valid_emailaddress_from_checkout_page(String arg1) throws Throwable {
+		setInputText(r1HomePagePO.inputEmail, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@Then("^user enter the valid password \"(.*?)\" from checkout page$")
+	public void user_enter_the_valid_password_from_checkout_page(String arg1) throws Throwable {
+		setInputText(r1HomePagePO.inputPassword, webPropHelper.getTestDataProperty(arg1));
+	}
 
 }

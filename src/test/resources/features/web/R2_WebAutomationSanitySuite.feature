@@ -1,5 +1,5 @@
 Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios 
-
+    
 @R2_Web @R2_WAST-01 @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK
 @AutomationSanityR2 
 Scenario:
@@ -15,8 +15,6 @@ TC_1- Verify the user is able to sign in successfully with valid credentials
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then user should get logged in successfully 
-
-	
 	
 @R2_Web @R2_WAST-02 @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10301 @CR-SK
 @AutomationSanityR2 
@@ -34,8 +32,7 @@ TC_2- Verify user can do the logout using Flyout from My Account header
 	And user clicks on one of the product category and navigates to LThree 
 	And user sign out from the website 
 	Then User is navigated to pdp page 
-	
-	
+		
 @R2_Web @R2_WAST-03 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @CR-SK
 @AutomationSanityR2 
 Scenario: TC_3- Verify user is able to create an account with all valid data 
@@ -62,7 +59,7 @@ Scenario: TC_5-Verify that user is able to add a new gift card in My Account
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user logs in as "RawUser" 
-#	And user clicks on payment tab 
+	#And user clicks on payment tab 
 	Then user click on My Account and navigate to payment
 	And User has empty wallet with no Gift Card added 
 	When user clicks on Add New Gift Card button 
@@ -131,7 +128,7 @@ Scenario: TC_8-Search an item and  navigate to  View Cart
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
-	
+	 
 	#===========unit testing pending as search is not working
 @R2_Web @R2_WAST-07  @P-High @CR-SK @AutomationSanityR2 
 Scenario: TC_9-Search an item and  navigate to  checkout page from ATC modal 
@@ -143,7 +140,7 @@ Scenario: TC_9-Search an item and  navigate to  checkout page from ATC modal
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
-	Then user is navigated to checkout page 
+	Then user is navigated to checkout page     
 	
 	
 @R2_Web @R2_WAST-08 @AutomationSanityR2 @CR-SK 
@@ -291,19 +288,9 @@ Scenario: TC_18-Verify As an unauthenticated user should be presented with the u
 	Then user navigate to Cart page
 	And selects Add a New Shipping Address in address drop-down in shipping address drawer 
 	Then user click on checkout button in Cart page
-	|# Verify following elements in Checkout > Shipping Address	|
-		|checkout_ShippingAddress_FirstName_txt						|
-		|checkout_ShippingAddress_LastName_txt						|
-		|checkout_ShippingAddress_PhoneNumber_txt					|
-		|checkout_ShippingAddress_Address_txt						|
-		|checkout_ShippingAddress_ZipCode_txt						|
-		|checkout_ShippingAddress_City_txt							|
-		|checkout_ShippingAddress_Edit_lnk							|
-		|checkOut_ShippingAddress_GoToShippingMethod_btn			|
-		|checkOut_ShippingAddress_AddNewShippingAddress_btn         |
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
+	And user enter Phone number "PhoneNumber"  
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page	
@@ -339,10 +326,39 @@ Scenario: TC_20-Verify Gift Card applied is reflected on Order summary
 @AutomationSanityR2 
 Scenario: TC_21-Verify Valid gift card is applied for purchases 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on SignIn link from global header 
+	And user clicks on SignIn link from global header
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+    And user click on signin button
+	And User navigates to L2 Mens clothing
+    Then user clicks on one of the subcategory and navigates to LTwo
+    And user is able to see the product category name in section title
+    Then user clicks on one of the product category and navigates to LThree
+	Then User is navigated to pdp page
+	Then user click on Add to Cart Button
+	Then user is navigated to Add to cart Notification popup  
+	And user will click on View Cart button 
+	And user navigate to Cart page
+	Then user click on checkout button in Cart page
+	When user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "zipcode" 
+	Then user click on Go To Shipping Method button in Checkout page
+	Then user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "GiftcardNumber"
+	And user enter Pin Number "PinNumber" 
+	And user click on Apply button
+	Then applied gift card "GiftcardNumber" should be displayed 
+	Then gift card balance is applied towards the purchase 
+	
+	
+@R2_Web @R2_WAST-19 @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147
+@CR-RK 
+@AutomationSanityR2 
+Scenario: TC_22-Verify is user can Sign-In for faster checkout experience 
+	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
@@ -352,54 +368,35 @@ Scenario: TC_21-Verify Valid gift card is applied for purchases
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	And user click on checkout button in Cart page
-	And user is navigated to order summary page 
-	Then user click on GiftCard Plus icon in Checkout page 
-	And user enter Gift card Number "GiftcardNumber" 
-	And user enter Pin Number "PinNumber" 
-	And user click on Apply button 
-	Then applied gift card "GiftcardNumber" should be displayed 
-	Then gift card balance is applied towards the purchase 
-	
-	
-@R2_Web @R2_WAST-19 @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 @CR-RK
-@AutomationSanityR2 
-Scenario: TC_22-Verify is user can Sign-In for faster checkout experience 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
-	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
-	And user click on checkout button in Cart page
+	And user will click on Checkout button and navigates to Checkout page 
 	When user click on SignIn link 
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password"  
+	And user enter the valid emailaddress "EmailAddress" from checkout page 
+	And user enter the valid password "Password" from checkout page 
 	And user click on signin button 
 	Then user should get logged in successfully 
 	
-@R2_Web @R2_WAST-20 @P-Highest @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @CR-AKK
+@R2_Web @R2_WAST-20 @P-Highest @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100
+@CR-AKK 
 @AutomationSanityR2 
 Scenario: TC_23-To Edit cart items from Order summary 
-	  Given user launches the browser and navigates to "ASO_HOME" page  
-		And User navigates to L2 Mens clothing
-	    And user clicks on one of the subcategory and navigates to LTwo
-	    And user is able to see the product category name in section title
-	    And user clicks on one of the product category and navigates to LThree
-		And User is navigated to pdp page
-		And user click on Add to Cart Button
-		And user is navigated to Add to cart Notification popup  
-		And user will click on View Cart button 
-		And user navigate to Cart page
-		And user will click on Checkout button and navigates to Checkout page
-		When user clicks on Edit My cart in Order Summary
-		Then Verify below Sub/Main Module of Checkout Page 
-	    |EditMyCart_Link|
-        Then user should navigates to the CartPage "CartTitle"
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree 
+	And User is navigated to pdp page 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user will click on Checkout button and navigates to Checkout page 
+	When user clicks on Edit My cart in Order Summary 
+	Then Verify below Sub/Main Module of Checkout Page 
+		|EditMyCart_Link|
+	Then user should navigates to the CartPage "CartTitle" 
 	
-@R2_Web @R2_WAST-21 @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098 @CR-AKK
+@R2_Web @R2_WAST-21 @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098
+@CR-AKK 
 @AutomationSanityR2 
 Scenario: TC_24-To view the Order Summary details on the Check out 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -415,14 +412,46 @@ Scenario: TC_24-To view the Order Summary details on the Check out
 	When user will click on Checkout button and navigates to Checkout page 
 	Then verify the presence of the following in the Order Summary 
 	
-		
-		
-@R2_Web @R2_WAST-22 @P-Highest @C-Cart @KER-2872 @ZYP_CART_K2872-8710 @CR-DPK
+	
+	
+@R2_Web @R2_WAST-22 @P-Highest @C-Cart @KER-2872 @ZYP_CART_K2872-8710 @CR-DPK 
 @AutomationSanityR2 
-Scenario:
-TC_25-Verify that the user should be able to search the store details by entering ZIP code 
+Scenario: 
+	TC_25-Verify that the user should be able to search the store details by entering ZIP code 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on Find a Store
-	Then user enter "zipCode" in Find a Store Model
-	And user click on submit button
-	Then user verify the results based on entering zipcode
+	When user clicks on Find a Store 
+	Then user enter "zipCode" in Find a Store Model 
+	And user click on submit button 
+	Then user verify the results based on entering zipcode 
+	
+@AutomationSanityR2 @R2_WAST-23 
+Scenario: TC_26- Verify all broken URL's on Cart page 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user clicks on one of the product category and navigates to LThree 
+	And user click on Add to Cart Button 
+	And user will click on View Cart button 
+	Then verfy all link url's status code is 200 
+	
+@AutomationSanityR2 @R2_WAST-24 
+Scenario: TC_27- Verify all broken URL's on Checkout page 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing 
+	Then user clicks on one of the subcategory and navigates to LTwo 
+	Then user clicks on one of the product category and navigates to LThree 
+	Then user click on Add to Cart Button 
+	And user click on view cart button 
+	When user click on checkout button in Cart page 
+	Then user is navigated to checkout page 
+	Then verfy all link url's status code is 200 
+	
+@AutomationSanityR2 @R2_WAST-25 
+Scenario: TC_28- Verify all broken URL's on MyAccount page 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then user click on My Account and navigate to payment 
+	Then verfy all link url's status code is 200 

@@ -25,7 +25,7 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2CartPo.btn_checkOut_OrderSummary));}//KER-6941 CR-RK Sep 4
 		else
 		{
-			assertTrue(clickOnButton(r2CartPo.btnCartCheckout));	
+			assertTrue(clickOnButton(r2CartPo.btnCartCheckout));
 		}
 	}
 	

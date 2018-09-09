@@ -19,7 +19,7 @@ public class R2_CHECKOUT_K6575_SD extends CommonActionHelper {
 	@Then("^user will click on Checkout button and navigates to Checkout page$")
 	public void user_will_click_on_Checkout_button_and_navigates_to_Checkout_page() throws Throwable {
 		assertTrue(clickOnButton(r2SanityPo.AS_btnCheckout));
-//		Thread.sleep(3000);
+		Thread.sleep(3000);
 	}
 
 	@Then("^user clicks on mini cart Icon in checkout page$")
