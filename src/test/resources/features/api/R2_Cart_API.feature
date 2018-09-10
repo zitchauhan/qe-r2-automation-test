@@ -18,15 +18,11 @@ Feature: To Verify Get Cart Details API service without sign-in
   @All-R2 @C1-Cart @C2-AddCart @api @R2_AAST-04 @CR-VK @ZYP_Cart_12221
   Scenario: TC_4 - Verify Add to Cart required property values
     Given "AddToCartSummaryUrl" and post request "addtocartRequestJson" endpoint for Add to Cart with Guest user
-    Then read the API json response
-    And Validate the Add to Cart API Requried Property Value are not Null
-      | items      |
-      | productId  |
-      | quantity   |
-      | giftItemAmount|
-      | attributeKey  |
-      | attributeValue|
-  
+    Then Validated response details of "addToCart.itemCount"
+    Then Validated response details of "addToCart.message"
+    Then Validated response details of "addToCart.totalQuantityAdded"
+    Then Validated response details of "addToCart.totalCartQuantity"
+    Then Validated response details of "addToCart.orderTotal"
 
   @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-05 @CR-VK @ZYP_Cart_12222
   Scenario: TC_5 - verify Get Cart without sign-in details
@@ -37,20 +33,21 @@ Feature: To Verify Get Cart Details API service without sign-in
   Scenario: TC_5 - verify Get Cart without sign-in details
     Given "GetCartUrl" endpoint for getting cart
     And validate jsonSchema "KER-725-MinicartSchema"
-    
-      @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-05 @CR-VK @ZYP_Cart_12866 
+
+  @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-05 @CR-VK @ZYP_Cart_12866
   Scenario: TC_5 - verify Get Cart without sign-in details
     Given "GetCartUrl" endpoint for getting cart
-    Then read the API json response
-    And Validate the Add to Cart API Requried Property Value are not Null
-      | storeId |
+    Then Validated response details of "orderId"
+    Then Validated response details of "orderTotal"
+    Then Validated response details of "totalProductPrice"
+    Then Validated response details of "currency"
+    Then Validated response details of "totalOrderItem"
 
-# I did not get the API details for below feature file. Help Needed
-
+  # I did not get the API details for below feature file. Help Needed
   @All-R2 @C1-Cart @C2-ChangeStore @api @R2_AAST-05 @CR-VK @ZYP_Cart_12577
   Scenario: TC_5 - verify the change store id with guest user
     Given "OrderUrl" with "changeStoreid" endpoint for Change Store
-    Then Verify response status code as 201
+    Then Verify response status code as 200
 
   @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-06 @CR-VK @ZYP_Cart_12224
   Scenario: TC_6 - verify Get Cart Summary without sign-in details

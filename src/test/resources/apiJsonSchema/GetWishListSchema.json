@@ -7,27 +7,7 @@
     },
     "gifts": {
       "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "null"
-            },
-            "id": {
-              "type": "string"
-            },
-            "itemCount": {
-              "type": "integer"
-            }
-          },
-          "required": [
-            "name",
-            "id",
-            "itemCount"
-          ]
-        }
-      ]
+      "items": {}
     }
   },
   "required": [
