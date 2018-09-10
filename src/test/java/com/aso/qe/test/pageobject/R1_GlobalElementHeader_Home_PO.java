@@ -47,6 +47,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]/a | //*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop;//UAT9
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shirts']|//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shorts']|//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop;
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]| //*[@data-auid=\"level3Category-Men's Clothing\"]/a | //*[@data-auid='level3Category-Mens']/a")public WebElement btnMenClothingShop; //3Sep
+	@FindBy(xpath="//*[@data-auid='level3Category-Womens']/a")public WebElement btnWommenClothingShop; //3Sep
 //	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]| //*[@data-auid=\"level3Category-Men's Clothing\"]/a ")public WebElement btnMenClothingShop;
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//*[contains(@class,'c-product__description')])[2]")public WebElement imgMensShortShirt; 
 	@FindBy(xpath="//div[contains(@class,'breadCrumbComponent')]//span[@class='line-separator']//following-sibling::span//preceding-sibling::a") public WebElement lnkMensShirts;
@@ -72,6 +73,8 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='go-to-CLOTHING_m']/a | //*[@data-auid='go-to-Clothing_m']/a") public WebElement txtToNavigateClothingBurgerMenuMobile;
 	@FindBy(xpath="//*[@data-auid='go-to-Mens_m']/a | //*[@data-auid=\"go-to-Boys' Clothing_m\"]/a" ) public WebElement txtToNavigateMensBurgerMenuMobile;
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]" ) public WebElement txtToNavigateMensCategoryMobile;
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Women's Clothing_m\"]" ) public WebElement txtToNavigateWoensCategoryMobile;
+	
 	@FindBy(xpath="//*[@data-auid=\"logo\"]") public WebElement academyLogo;
 	@FindBy(xpath="//*[text()='THIS IS ACADEMY']") public WebElement txtFooterACADEMY;	
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_4https://www.instagram.com/academy/']") public WebElement iconinstagram;

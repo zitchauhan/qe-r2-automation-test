@@ -139,6 +139,31 @@ public class Common_Web_SD extends CommonActionHelper{
 		}
 
 	}
+	
+	
+	@Then ("^User navigates to L2 Womens clothing$")
+	public void User_navigate_to_L2_Womens_clothing() throws InterruptedException {
+		if("mobile".equalsIgnoreCase(testtype)){
+			
+			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(globalElementHeader.btnWommenClothingShop));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(globalElementHeader. txtToNavigateWoensCategoryMobile));
+			Thread.sleep(2000);
+
+		} else{
+			Thread.sleep(3000);
+			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
+			Thread.sleep(2000);
+			Actions hover = new Actions(getDriver());
+			hover.moveToElement(globalElementHeader.btnClothingCategory).build().perform();
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(globalElementHeader.btnWommenClothingShop));
+			Thread.sleep(2000);
+		}
+
+	}
 
 	@Then ("^User navigates to L3$")
 	public void User_navigates_to_L3() throws InterruptedException {

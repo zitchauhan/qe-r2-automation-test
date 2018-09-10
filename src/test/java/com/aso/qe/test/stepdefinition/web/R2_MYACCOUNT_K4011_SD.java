@@ -48,10 +48,10 @@ public class R2_MYACCOUNT_K4011_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2MyAccountPo.txtIncorrectCombinationError));
 	}
 	
-	@Then("^user should get an error message stating please enter valid email$")
-	public void user_should_get_an_error_message_stating_please_enter_valid_email() throws Throwable {
-		assertTrue(isDisplayed(r2MyAccountPo.txtInvalidEmailAddressError));
-	}
+//	@Then("^user should get an error message stating please enter valid email$")
+//	public void user_should_get_an_error_message_stating_please_enter_valid_email() throws Throwable {
+//		assertTrue(isDisplayed(r2MyAccountPo.txtInvalidEmailAddressError));
+//	}
 	
 	@Then("^user should get an error message stating please enter an email or password$")
 	public void user_should_get_an_error_message_stating_please_enter_an_email_or_password() throws Throwable {

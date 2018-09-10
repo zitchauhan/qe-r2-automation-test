@@ -480,6 +480,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	/***************************** START METHODS********************************/
 	// Start KER-2927 CR-SK
 	public float getEstimatedTaxOnCheckoutPage() {
+		waitForElement(txtEstimatedTax);
 		String taxDisplayed = getText(txtEstimatedTax);
 		taxDisplayed = taxDisplayed.replace("$", "");
 		return Float.parseFloat(taxDisplayed);
