@@ -65,12 +65,11 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	And user enter the emailaddress "InvalidEmailAddress" in signin page
-	And user enter the emailaddress "EmailAddress" in signin page
 	And user enter the password "Password" 
 	And user click on signin button
-#	Then Verify the message on the page
-#    |# Following Error Message should show on the page|
-#    |Please enter the Email Address in a valid format (ex. abc@xyz.com)|
+	Then Verify the message on the page
+    |# Following Error Message should show on the page|
+   	|Invalid Email|
 
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8925 @CR-RK 	
 	Scenario: Verify The user must see form field validations to ensure the e-mail address meets the desired format e.g.@ provided in creating account page
@@ -115,9 +114,9 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the emailaddress "InvalidEmailAddresswithoutdomain" in signin page
 	And user enter the password "Password" 
 	And user click on signin button
-#	Then Verify the message on the page
-##    |# Following Error Message should show on the page|
-##    |Please enter the Email Address in a valid format (ex. abc@xyz.com)|
+	Then Verify the message on the page
+    |# Following Error Message should show on the page|
+    |Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 	
 
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8930 @CR-RK 	
@@ -164,4 +163,24 @@ And user clicks on one of the category and navigates to LOne
 	And user click on signin button
 	#Then user should get an error message stating please enter valid email
 
+
+	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8938 @CR-RK 	
+Scenario: Verify The user must be able to see the relevant errors when entering the email address in Account create page
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on one of the category and navigates to LOne 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree 
+	And User is navigated to pdp page 
+	Then user click on Add to Cart Button  
+	Then user is navigated to Add to cart Notification popup
+	And user will click on View Cart button 
+	And user navigate to Cart page
+	And user click on checkout button in Cart page
+	And user click on SignIn link
+	And user click on Create a Account link
+	When user enter random "InvalidEmailAddress" in signup page
+	Then Verify the message on the page
+    |# Following Error Message should show on the page|
+	|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 	

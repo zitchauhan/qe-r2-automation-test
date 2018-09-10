@@ -19,6 +19,7 @@ Feature: Message/Text Verification
 	|The combination of Gift Card Number and PIN is incorrect. Please try again.| 
     |SHOP NOW|
     | Item Added Successfully|
+    |Invalid Email|
     |CartPage|
     |SHARE YOUR WISHLIST|
 	

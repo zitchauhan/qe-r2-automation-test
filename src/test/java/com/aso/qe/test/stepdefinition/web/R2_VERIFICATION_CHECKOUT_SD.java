@@ -303,6 +303,45 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 				//*************** Billing Information(End)
 				//Payment(End)
 				
+				//****************************************************************************			
+				//We Accept (Start)
+				else if (currentElement.equalsIgnoreCase("Visa_img"))
+					assertTrue(isDisplayed(r2CheckoutPo.iconVisa));
+				else if (currentElement.equalsIgnoreCase("MasterCard_img"))
+						assertTrue(isDisplayed(r2CheckoutPo.iconMasterCard));
+					else if (currentElement.equalsIgnoreCase("Paypal_img"))
+						assertTrue(isDisplayed(r2CheckoutPo.iconPaypal));
+					else if (currentElement.equalsIgnoreCase("GooglePay_img"))
+						assertTrue(isDisplayed(r2CheckoutPo.iconGooglePay));
+					else if (currentElement.equalsIgnoreCase("ApplePay_img"))
+						assertTrue(isDisplayed(r2CheckoutPo.iconApplePay));
+					else if (currentElement.equalsIgnoreCase("AmericanExpress_img"))
+						assertTrue(isDisplayed(r2CheckoutPo.iconAmericanExpress));
+					else if (currentElement.equalsIgnoreCase("Discover_img"))
+						assertTrue(isDisplayed(r2CheckoutPo.iconDiscover));
+				//We Accept Finish
+				
+				
+				//****************************************************************************			
+				//Checkout Footer(Start)
+				else if (currentElement.equalsIgnoreCase("CheckoutFooterLegalLinkPrivacyPolicy_Lnk"))
+					assertTrue(isDisplayed(r2CheckoutPo.checkoutFooterLegalLinkPrivacyPolicy));
+				else if (currentElement.equalsIgnoreCase("CheckoutFooterLegalLinkPrivacyPolicy_Txt"))
+					assertTrue(isDisplayed(r2CheckoutPo.checkoutFooterLegalLinkPrivacyPolicy_txt));
+				else if (currentElement.equalsIgnoreCase("CheckoutFooterChatNowLink_Lnk"))
+						assertTrue(isDisplayed(r2CheckoutPo.checkoutFooterChatNowLink));
+					else if (currentElement.equalsIgnoreCase("CheckoutFooterContactNumberLink_mobile_Lnk"))
+						assertTrue(isDisplayed(r2CheckoutPo.checkoutFooterContactNumberLink_mobile));
+					else if (currentElement.equalsIgnoreCase("CheckoutFooterLegalLinkTermsConditions_lnk"))
+						assertTrue(isDisplayed(r2CheckoutPo.checkoutFooterLegalLinkTermsConditions));
+					else if (currentElement.equalsIgnoreCase("CheckoutFooterLegalLinkTermsConditions_Txt"))
+						assertTrue(isDisplayed(r2CheckoutPo.checkoutFooterLegalLinkTermsConditions_txt));
+					else if (currentElement.equalsIgnoreCase("CheckoutFooterLegalLinkCaliforniaProposition65_Lnk"))
+						assertTrue(isDisplayed(r2CheckoutPo.checkoutFooterLegalLinkCaliforniaProposition65));
+					else if (currentElement.equalsIgnoreCase("CheckoutFooterLegalLinkCaliforniaProposition65_Txt"))
+						assertTrue(isDisplayed(r2CheckoutPo.checkoutFooterLegalLinkCaliforniaProposition65_txt));
+					
+				//Checkout Footer Finish
 				//**********************************************************************************************************************************
                     //*********************MOBILE START ***************************
 					else if (currentElement.equalsIgnoreCase("EditMyCart_Link_M"))

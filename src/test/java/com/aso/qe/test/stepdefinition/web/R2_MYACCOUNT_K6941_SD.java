@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -46,5 +47,6 @@ public class R2_MYACCOUNT_K6941_SD extends CommonActionHelper {
 		//String randomUUIDString = uuid.toString();
 		//String txtemailaddress_random = "abc" + randomUUIDString + "@gmail.com";
 		setInputText(r2MyAccountPo.inputEmailAddress, arg1); //KER-6941 CR-Rk 3-Sep
+		r2MyAccountPo.inputEmailAddress.sendKeys(Keys.TAB);
 	}
 }
