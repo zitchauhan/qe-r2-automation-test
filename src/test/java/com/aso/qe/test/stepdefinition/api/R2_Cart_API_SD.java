@@ -172,9 +172,9 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 	@Then("^Validated response details of \"(.*?)\"$")
 	public void validated_response_details_of(String key) throws Throwable {
 		JsonPath jsonPathEvaluator = response.jsonPath();
-		String value = jsonPathEvaluator.get(key);
-		logger.debug(key+"::"+ value);
-		assertNotNull(value);
+		Object propObj = jsonPathEvaluator.get(key);
+		logger.debug(key+"::"+ propObj);
+		assertNotNull(JSONValidationUtils.isNotNull(propObj));
 	}
 	
 	@Given("^\"(.*?)\" with \"(.*?)\" for Create store pickup inventory with skus and store$")

@@ -1,6 +1,6 @@
 Feature: E02-100 - My Account, Address Book
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT-K4232-9194 @CR-MS
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT-K4232-9194 @CR-RK
      Scenario: Verify Authenticated user can Manage Address Book - View existing Address details
      Given user launches the browser and navigates to "ASO_HOME" page 
      And clicks on SignIn button in home page
@@ -12,6 +12,7 @@ Feature: E02-100 - My Account, Address Book
      And user enter the valid emailaddress "RawUser" 
 	 And user enter the valid password "Password" 
      And user click on signin button
+     And user click on MyAccount
      And user lands on My Account page and click on adress
 	 When user Clicks on Add New Address link
 	 Then Verify below Sub/Main Module of My Account
@@ -27,7 +28,7 @@ Feature: E02-100 - My Account, Address Book
 
 	
 	#partially completed
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_CART-K4232-9196 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_CART-K4232-9196 @CR-RK
 Scenario: Verify Authenticated user can Manage Address Book - Delete Address details - Undo
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page
@@ -39,10 +40,9 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	 And user click on MyAccount
 	And user lands on My Account page and click on adress
 	Then Verify below Sub/Main Module of My Account
-	|# Verify following elements in address page|
-	|MyAccountPage_Address_lnk					|
 	When user clicks Remove button
 	Then user should see delete notification
 	When user clicks on undo link
@@ -60,11 +60,18 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
      And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	And user click on MyAccount
      Then user lands on My Account page and click on adress
-     Then Verify below Sub/Main Module of My Account
-	|# Verify following elements in address page|
-	|MyAccountPage_Address_lnk					|
-	 Then user Clicks on Add New Address link
+      Then user Clicks on Add New Address link
+      Then Verify below Sub/Main Module of My Account
+	 	|# Verify following elements in address page|
+	 	|AddressPage_FirstName_txt				   	|
+		|AddressPage_LastName_txt					|
+		|AddressPage_PhoneNumber_txt				|
+		|AddressPage_Address_txt 					|
+		|AddressPage_ZipCode_txt			   		|
+		|AddressPage_City_txt						|
+		|AddressPage_State_txt						|
 	 When user enter First name "FirstName" in address book
 	And user enter Last name "LastName" in address book
 	And user enter Phone number "PhoneNumber" in address book
@@ -86,14 +93,11 @@ Scenario: Verify Authenticated user can Manage Address Book - Add new Address de
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user click on MyAccount 
 	Then user lands on My Account page and click on adress 
-	Then Verify below Sub/Main Module of My Account
-	|# Verify following elements in address page|
-	|MyAccountPage_Address_lnk					|
 	Then user Clicks on Add New Address link 
 	Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in address page|
-		|AddressPage_AddNewAddress_btn				|
 		|AddressPage_FirstName_txt				   	|
 		|AddressPage_LastName_txt					|
 		|AddressPage_PhoneNumber_txt				|
@@ -121,6 +125,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Add new Address de
      And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	And user click on MyAccount 
      Then user lands on My Account page and click on adress
      Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in address page|
@@ -128,7 +133,6 @@ Scenario: Verify Authenticated user can Manage Address Book - Add new Address de
      Then user Clicks on Add New Address link 
      Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in address page|
-		|AddressPage_AddNewAddress_btn				|
 		|AddressPage_FirstName_txt				   	|
 		|AddressPage_LastName_txt					|
 		|AddressPage_PhoneNumber_txt				|
@@ -163,6 +167,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
      And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	And user click on MyAccount 
      Then user lands on My Account page and click on adress
      Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in address page|
@@ -184,6 +189,7 @@ Scenario: Verify Authenticated user can -Set Default Address
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user click on MyAccount 
 	Then user lands on My Account page and click on adress 
 	  Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in address page|
@@ -224,6 +230,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Edit Address detai
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user click on MyAccount 
 	Then user lands on My Account page and click on adress 
 	 Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in address page|
