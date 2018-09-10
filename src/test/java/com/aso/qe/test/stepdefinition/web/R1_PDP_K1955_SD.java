@@ -81,7 +81,7 @@ public class R1_PDP_K1955_SD extends CommonActionHelper{
 		System.err.println(productName);
 		System.err.println(modifiedActualTitleInAddToCart);
 		
-		assertEquals(productName, modifiedActualTitleInAddToCart);
+		assertEquals(modifiedProductName, modifiedActualTitleInAddToCart);
 	}
 		else {
 			

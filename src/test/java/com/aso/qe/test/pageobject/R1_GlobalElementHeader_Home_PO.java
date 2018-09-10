@@ -941,6 +941,8 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		}
 
 	}
+	
+	//SID 10-September
 	public void verifyThePDPPage() throws Exception{
 		String currentURL = getCurrentPageURL();
 		if(currentURL.contains("pdp")) {
@@ -948,6 +950,11 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		}
 		else {
 			logger.debug("User is not able to navigate to PDP instead navigated to URL :: " + currentURL  );
+		}
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(isDisplayed(pdp_po.imgProductMainMixedMedia_m));
+		} else {
+			assertTrue(isDisplayed(pdp_po.imgProductMainMixedMedia));
 		}
 
 	}
