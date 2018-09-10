@@ -578,6 +578,25 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnbrowse_product_button']")
 	public WebElement browse_products_btn; 
  
+	@FindBy(xpath="//*[@data-auid='btnkeep_wish_list_btn']")
+	public WebElement Keep_Wishlist_btn;
+	
+	@FindBy(xpath="//*[@data-auid='share_list_btn']")
+	public WebElement Share_list_lnk;
+	
+	@FindBy(xpath="//*[@data-auid='email_list_input']")
+	public WebElement Email_input_txt;
+	
+	@FindBy(xpath="//*[@data-auid='comment_input']")
+	public WebElement Message_txt;
+	
+	@FindBy(xpath="//*[@data-auid='btnshare_whish_list_btn']")
+	public WebElement Share_Wishlist_btn;
+	
+	@FindBy(xpath="//*[@data-auid='close_modal_btn']")
+	public WebElement Cancel_btn; 
+ 
+
 
 	// End KER-4233 CR-MS
 

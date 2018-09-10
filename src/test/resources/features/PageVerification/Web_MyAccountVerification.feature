@@ -122,6 +122,12 @@ Scenario: Verify MyAccount
 		|Wishlist_createlist_lnk										|
 		|Rename_list_lnk												|
 		|Wishlist_name_txt												|
+		|Keep_Wishlist_btn												|
+		|Share_list_lnk													|
+		|Email_input_txt												|
+		|Message_txt													|
+		|Share_Wishlist_btn												|
+		|Cancel_btn														|
 		
 		
 		

@@ -269,6 +269,18 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.Rename_list_lnk)); 
 				else if (currentElement.equalsIgnoreCase("Wishlist_name_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.Wishlist_name_txt));
+				else if (currentElement.equalsIgnoreCase("Keep_Wishlist_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.Keep_Wishlist_btn));
+				else if (currentElement.equalsIgnoreCase("Share_list_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.Share_list_lnk));
+				else if (currentElement.equalsIgnoreCase("Email_input_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.Email_input_txt));
+				else if (currentElement.equalsIgnoreCase("Message_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.Message_txt));
+				else if (currentElement.equalsIgnoreCase("Share_Wishlist_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.Share_Wishlist_btn));
+				else if (currentElement.equalsIgnoreCase("Cancel_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.Cancel_btn)); 
 				
  
 
