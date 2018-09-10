@@ -67,7 +67,6 @@ Scenario: Verify that user able to update the profile
 	When user click on change password icon
 	Then Verify below Sub/Main Module of My Account 
 	|#Verify following elements in Profile > change password section|
-		|ChangePassworPage_CurrentPassword_btn							|
 		|ChangePassworPage_NewPassword_txt								|
 		|ChangePassworPage_Update_btn									|
 		|ChangePassworPage_Cancel_btn									|
@@ -296,7 +295,6 @@ Scenario: Verify that user can change the password in Profile section.
 	When user click on change password icon
 	Then Verify below Sub/Main Module of My Account 
 	|#Verify following elements in Profile > change password section|
-		|ChangePassworPage_CurrentPassword_btn							|
 		|ChangePassworPage_NewPassword_txt								|
 		|ChangePassworPage_Update_btn									|
 		|ChangePassworPage_Cancel_btn									|

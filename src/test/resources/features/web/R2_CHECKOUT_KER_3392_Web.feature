@@ -27,7 +27,9 @@ Feature: Verify Checkout Login Interstitial
 	Then User is navigated to pdp page
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup
-	And user will click on Checkout button
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	Then user click on checkout button in Cart page
 	When user click on SignIn link
 	And user enter the valid emailaddress "emailaddress" 
 	And user enter create password 
@@ -60,7 +62,9 @@ Feature: Verify Checkout Login Interstitial
 	Then User is navigated to pdp page
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup
-	And user will click on Checkout button
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	Then user click on checkout button in Cart page
 	When user click on SignIn link
 	And user click on Create a Account link
 	Then User is navigated to Create a Account page
@@ -75,7 +79,9 @@ Feature: Verify Checkout Login Interstitial
 	Then User is navigated to pdp page
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup
-	And user will click on Checkout button
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	Then user click on checkout button in Cart page
 	When user click on SignIn link
 	And user click on Create a Account link
 	When user enter First name "FirstName" 
