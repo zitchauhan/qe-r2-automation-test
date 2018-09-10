@@ -151,7 +151,56 @@ Scenario: Verify that Authenticated user can create additional wish list
 	|browse_products_btn|
 	Then clicks on browse products
 	
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-10490 @CR-MS
+Scenario: Verify that Authenticated User is able to cancel deleting a Wish List
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
+	Then user should able to click on Signin button
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then User clicks on the burger menu
+	And user click on MyAccount
+	Then user click on WishList
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|Wishlist_createlist_lnk|
+	|WishlistItems_lnk|
+	And user clicks on WishListItems
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|Wishlist_icn|
+	Then user clicks on Delete list
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|DeleteWishList_btn|
+	|Keep_Wishlist_btn|
+	And user clicks on keep wishlist
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+    |Wishlist_icn|
 
-
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11103 @CR-MS
+Scenario: Verify that Authenticated User is able to rename a Wish List
+   Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
+	Then user should able to click on Signin button
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then User clicks on the burger menu
+	And user click on MyAccount
+	Then user click on WishList
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|Wishlist_createlist_lnk|
+	|WishlistItems_lnk|
+	And user clicks on WishListItems
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|Rename_list_lnk|
+	Then user clicks on Rename List
+	Then user enters Wishlist name "WishlistName"
+	And user clicks on create
 
 

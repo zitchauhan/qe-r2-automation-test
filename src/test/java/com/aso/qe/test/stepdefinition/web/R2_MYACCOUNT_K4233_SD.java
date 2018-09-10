@@ -8,6 +8,7 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 	
@@ -55,6 +56,7 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 		if("mobile".equalsIgnoreCase(testtype)){
 			assertTrue(clickOnButton(r2MyAccountPo.Wishlist_icn));
 			assertTrue(clickOnButton(r2MyAccountPo.DeleteList_btn));
+			Thread.sleep(5000);
 			
 		}
 		else
@@ -88,6 +90,48 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2MyAccountPo.browse_products_btn));
 		
 	}
+	
+	@Then("^user clicks on keep wishlist$")
+	public void user_clicks_on_keep_wishlist() throws Throwable {
+		assertTrue(clickOnButton(r2MyAccountPo.Keep_Wishlist_btn));
+		
+	}
+
+	@Then("^Verify that Wish List is displayed$")
+	public void verify_that_Wish_List_is_displayed() throws Throwable {
+		assertTrue(isDisplayed(r2MyAccountPo.txtHelloMessage));
+		getText(r2MyAccountPo.txtHelloMessage).toLowerCase().contains("hello");
+		
+	}
+	
+	@When("^User Clicks on Share List Link$")
+	public void user_Clicks_on_Share_List_Link() throws Throwable {
+		assertTrue(clickOnButton(r2MyAccountPo.Share_list_lnk)); 
+		Thread.sleep(5000);
+	}
+	
+	@Then("^User Enters Emailaddress \"(.*?)\"$")
+	public void user_Enters_Emailaddress(String arg1) throws Throwable {
+		setInputText(r2MyAccountPo.Email_input_txt, webPropHelper.getTestDataProperty(arg1));
+	}
+	
+	@Then("^User Enter Optional message \"(.*?)\"$")
+	public void user_Enter_Optional_message(String arg1) throws Throwable {
+		setInputText(r2MyAccountPo.Message_txt, webPropHelper.getTestDataProperty(arg1));
+		
+	}
+	
+
+	@Then("^User Clicks clicks on Cancel button$")
+	public void user_Clicks_clicks_on_Cancel_button() throws Throwable {
+		assertTrue(clickOnButton(r2MyAccountPo.Cancel_btn)); 
+	}
+	
+	@Then("^User Clicks on Share Wishlist button$")
+	public void user_Clicks_on_Share_Wishlist_button() throws Throwable {
+		assertTrue(clickOnButton(r2MyAccountPo.Share_Wishlist_btn));
+	}
+	
 
 
 }
