@@ -27,7 +27,15 @@ public class R2_CART_K3143_SD extends CommonActionHelper {
 	
 	@Then("^user click on My account link$")
 	public void user_click_on_My_account_link() throws Throwable {
-		 clickOnButton(myAccountPo.lnkMyAccount);
+		
+		if("mobile".equalsIgnoreCase(testtype)){	
+			scrollPageToWebElement(myAccountPo.myAccount_txt_Mobile);
+			clickOnButton(myAccountPo.myAccount_txt_Mobile);
+		}else {
+			clickOnButton(myAccountPo.lnkMyAccount);
+		}
+		
+//		clickOnButton(myAccountPo.lnkMyAccount);
 	}
 	@Then("^User click on sign in button on cart page$")
 	public void user_click_on_sign_in_button_on_cart_page() throws Throwable {
@@ -59,5 +67,8 @@ public class R2_CART_K3143_SD extends CommonActionHelper {
 	public void user_verify_sucessfully_added_item_MSG() throws Throwable {
 	   isDisplayed(pdp.msgItemAddedSuccessfully);
 	}
-
+//	@Then("^user scroll to order in my account in mobile$")
+//	public void user_scroll_to_order_in_my_account_in_mobile() throws Throwable {
+//	 scrollPageToWebElement(myAccountPo.burgerMenu_Orders_lnk);   
+//	}
 }

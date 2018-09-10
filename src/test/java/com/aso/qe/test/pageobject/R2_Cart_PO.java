@@ -605,6 +605,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 		else {
 			while(isDisplayed(btnRemoveCart)) {
 				clickOnButton(btnRemoveCart);
+				Thread.sleep(10000);
 				if(isDisplayed(cartEmptyTxt)) {
 					break;
 				}
