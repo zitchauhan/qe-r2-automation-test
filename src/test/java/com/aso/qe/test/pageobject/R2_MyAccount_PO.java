@@ -590,6 +590,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='Orders_m']")
 	public WebElement burgerMenu_Orders_lnk;
 	
+	@FindBy(xpath = "//*[@data-auid='btnundefined']/preceding-sibling::button")
+	public WebElement myAccount_ChangePassword_Cancel_btn; // CR-SK, 29 Aug
 	
 	
 

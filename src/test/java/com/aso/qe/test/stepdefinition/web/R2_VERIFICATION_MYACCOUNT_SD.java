@@ -183,7 +183,7 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 				else if (currentElement.equalsIgnoreCase("ChangePassworPage_Update_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnUpdate));
 				else if (currentElement.equalsIgnoreCase("ChangePassworPage_Cancel_btn"))
-					assertTrue(isDisplayed(r2MyAccountPo.btnCancelGiftCard));
+					assertTrue(isDisplayed(r2MyAccountPo.myAccount_ChangePassword_Cancel_btn));
 				// ===============================================================================
 				//// Payment > Add new credit card
 				// ===============================================================================
@@ -210,7 +210,7 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_State_dropdown"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnState));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_PhoneNumber_txt"))
-					assertTrue(isDisplayed(r2MyAccountPo.adr_inpPhoneNumber));
+					assertTrue(isDisplayed(r2MyAccountPo.txtPhoneNumberInAddCreditCard));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_Add_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnAddInAddCreditCard));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_Cancel_btn"))
