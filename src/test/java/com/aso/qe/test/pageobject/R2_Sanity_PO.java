@@ -38,10 +38,10 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	public WebElement AS_btnMensShirt_Men_Clothing_Shop;
 	@FindBy(xpath = "//*[@data-auid='shopbycategorysection']//*[@data-auid='shopByCategory_1']")
 	public WebElement AS_secCategory_CLP;
-	@FindBy(xpath = "(//*[contains(@data-auid,'productCard_')])[5]")
+	@FindBy(xpath = "//*[contains(@data-auid,'productCard_')]")
 	public WebElement AS_productPLP1;
 
-	@FindBy(xpath = "(//a[contains(@data-auid,'productCard_')])[6]") //28 Aug2018
+	@FindBy(xpath = "//*[contains(@data-auid,'productCard_')]") //28 Aug2018
 	public WebElement AS_productPLP1_Mobile;
 
 	@FindBy(xpath = "//*[@data-auid='btnviewCart']")
