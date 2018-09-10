@@ -6,6 +6,7 @@ import static org.testng.Assert.assertFalse;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.xbill.DNS.TXTRecord;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
@@ -67,9 +68,11 @@ public class R2_CART_K2927_SD extends CommonActionHelper {
 		assertTrue(taxDisplayed < currentTaxDisplayed);
 	}
 
+	@And("^user selects the ship to Store Pick up radio button$")
 	@When("^user switches the shipping to Store Pick up$")
 	public void user_switches_the_shipping_to_Store_Pick_up() throws Throwable {
 		cartR2PageObj.selectInStorPickUp();
+		getDriver().navigate().refresh();
 	}
 
 	@Given("^user makes a note of tax calculation$")
@@ -94,9 +97,11 @@ public class R2_CART_K2927_SD extends CommonActionHelper {
 		assertTrue(taxDisplayed < currentTaxDisplayed);
 	}
 
-	@Given("^user selects Ship To Me radio button$")
+	@Given("^user switches from Store Pick up to Shipping$")
+	@And("^user selects Ship To Me radio button$")
 	public void user_selects_Ship_To_Me_radio_button() throws Throwable {
 		cartR2PageObj.selectShipToMe();
+		getDriver().navigate().refresh();
 	}
 	
 	@When("^user decreases product quantity to zero$")
@@ -119,13 +124,10 @@ public class R2_CART_K2927_SD extends CommonActionHelper {
 
 	@Then("^user verifies estimated tax and total on checkout page$")
 	public void user_verifies_estimated_tax_and_total_on_checkout_page() throws Throwable {
-	    assertTrue(isDisplayed(r2CheckOutPO.txtEstimatedTax));
+		waitForElement(r2CheckOutPO.TaxesPrice_Txt);
+	    assertTrue(isDisplayed(r2CheckOutPO.TaxesPrice_Txt));
 	    assertTrue(isDisplayed(r2CheckOutPO.txtTotal));
 	}
 
 
-	@When("^user switches from Store Pick up to Shipping$")
-	public void user_switches_from_Store_Pick_up_to_Shipping() throws Throwable {
-
-	}
 }
