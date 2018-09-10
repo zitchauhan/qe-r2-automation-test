@@ -191,7 +191,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 	public void with_endpoint_for_change_password_of_profile(String changepasswordurl, String requestPath) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(changepasswordurl);
 		logger.debug("END Point URL:"+endpoints);
-		initiateRestPostAPICallWithCookies(endpoints, loadProps.getTestDataProperty(requestPath));
+		initiateRestPostAPICallWithoutCookies(endpoints, loadProps.getTestDataProperty(requestPath));
 	}
 
 }
