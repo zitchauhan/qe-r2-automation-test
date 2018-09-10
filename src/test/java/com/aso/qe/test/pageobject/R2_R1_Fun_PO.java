@@ -100,7 +100,9 @@ public class R2_R1_Fun_PO extends CommonActionHelper
    @FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[2]") public WebElement Socceritem_Pdp_lnk;
    @FindBy(xpath="(//*[contains(@data-auid,'swatchButton-image-')])[1]") public WebElement Soccersize_btn; 
 	   
-	    
+ //Start KER-6655 CR-MS
+   @FindBy(xpath="//*[@data-auid='btnbtnEnableBuyNow']") public WebElement EnableBuyNow_btn;
+   //End KER-6655 CR-MS	    
 
    
 }

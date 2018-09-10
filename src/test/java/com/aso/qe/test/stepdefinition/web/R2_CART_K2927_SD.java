@@ -6,7 +6,7 @@ import static org.testng.Assert.assertFalse;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.xbill.DNS.TXTRecord;
+//import org.xbill.DNS.TXTRecord;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
@@ -39,7 +39,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class R2_CART_K2927_SD extends CommonActionHelper {
+public class R2_CART_K2927_SD extends CommonActionHelper 
+{
 //<<<<<<< Updated upstream
 
 	private static float taxDisplayed = 0.0f;

@@ -19,14 +19,14 @@ public class R2_CHECKOUT_K6575_SD extends CommonActionHelper {
 	@Then("^user will click on Checkout button and navigates to Checkout page$")
 	public void user_will_click_on_Checkout_button_and_navigates_to_Checkout_page() throws Throwable {
 		assertTrue(clickOnButton(r2SanityPo.AS_btnCheckout));
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	}
 
 	@Then("^user clicks on mini cart Icon in checkout page$")
 	public void user_clicks_on_mini_cart_Icon_in_checkout_page() throws Throwable {
 		waitForElement(r2CheckoutPo.btnMiniCart);
 		assertTrue(clickOnButton(r2CheckoutPo.btnMiniCart));
-	}
+			}
 
 	@Then("^user should navigates to the CartPage \"(.*?)\"$")
 	public void user_should_navigates_to_the_CartPage(String tittle) throws Throwable {
@@ -48,7 +48,7 @@ public class R2_CHECKOUT_K6575_SD extends CommonActionHelper {
 	
 	@Then("^user should able to see Academy Business Logo$")
 	public void user_should_able_to_see_Academy_Business_Logo() throws Throwable {
-		waitForElement(r2CheckoutPo.btnMiniCart);
+		waitForElement(r2CheckoutPo.logoHeader);
 		assertTrue(isDisplayed(r2CheckoutPo.logoHeader));
 	}
 
@@ -81,7 +81,6 @@ public class R2_CHECKOUT_K6575_SD extends CommonActionHelper {
 	
 	@Then("^user should see the mini cart Icon with no\\. of items in cart notifier$")
 	public void user_should_see_the_mini_cart_Icon_with_no_of_items_in_cart_notifier() throws Throwable {
-		assertTrue(isDisplayed(r2CheckoutPo.R2_iconMiniCartCheckout));
 		assertTrue(isDisplayed(r2CheckoutPo.R2_miniCartCountCheckout));
 	}
 

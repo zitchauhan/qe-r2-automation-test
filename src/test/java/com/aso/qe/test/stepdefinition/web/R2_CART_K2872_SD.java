@@ -58,13 +58,13 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CartPo.txtStoreResult));
 	}
 	
-	@And("^user very Find a Store popup$")
-	public void user_very_Find_a_Store_popup() throws Throwable {
+	@And("^user verify Find a Store popup$")
+	public void user_verify_Find_a_Store_popup() throws Throwable {
 		assertTrue(isDisplayed(r2CartPo.txtFindaStore));
 	}
 	
-	@And("^user very Find a Store popup is closed$")
-	public void user_very_Find_a_Store_popup_is_closed() throws Throwable {
+	@And("^user verify Find a Store popup is closed$")
+	public void user_verify_Find_a_Store_popup_is_closed() throws Throwable {
 		assertFalse(isDisplayed(r2CartPo.txtFindaStore));
 	}
 	
