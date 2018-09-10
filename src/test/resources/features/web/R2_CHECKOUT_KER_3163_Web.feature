@@ -12,7 +12,7 @@ Feature: View/Select Shipping Address in Checkout
 	Then user is navigated to Add to cart Notification popup
 	And user will click on View Cart button 
     And user navigate to Cart page
-	And user will click on Checkout button
+	And user click on checkout button in Cart page
     When user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 

@@ -18,7 +18,7 @@ Scenario:
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	And user will click on Checkout button 
+	And user click on checkout button in Cart page
 	And user is navigated to order summary page  
 	Then User verifies the default address is selected in dropdown in shipping address section 
 	And User navigates to Shipping Method section 

@@ -28,8 +28,7 @@ Scenario: TC_2-Verify user can do the logout using Flyout from My Account header
 	Then Sign in page should open 
 	When user logs in as "RawUser" 
 	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
+	And user clicks on one of the subcategory and navigates to LTwo  
 	And user clicks on one of the product category and navigates to LThree 
 	And user sign out from the website 
 	Then User is navigated to pdp page 
@@ -114,12 +113,10 @@ Scenario:
 	Then click on Add button 
 	And User clicks on the burger menu 
 	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
+	And user clicks on one of the subcategory and navigates to LTwo  
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user will click on Checkout button and navigates to Checkout page 
@@ -134,7 +131,6 @@ Scenario: TC_8- Search an item and  navigate to  View Cart
 	And User click on search icon 
 	And user verifies the entered SKU id 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
 	
@@ -149,7 +145,6 @@ Scenario: TC_9- Search an item and  navigate to  checkout page from ATC modal
 	And User click on search icon 
 	And user verifies the entered SKU id 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
 	Then user is navigated to checkout page 
 	
@@ -160,7 +155,6 @@ Scenario: TC_10- Cat Nav - View Cart
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
 	
@@ -172,7 +166,6 @@ Scenario: TC_11- Cat Nav - Checkout from ATC Modal
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
 	Then user is navigated to checkout page 
 	
@@ -187,7 +180,6 @@ Scenario:
 	And User navigates to LThree 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "OrderLevelQuantity" to X 
@@ -202,11 +194,13 @@ Scenario:
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "EnterQuantityGreaterThenOne" to X 
-	And user view and Applied Promotions/Discounts "ItemLevelPromoCodeDiscount" 
+	And user view and Applied Promotions/Discounts "ItemLevelPromoCodeDiscount"
+	Then Verify below Sub/Main Module of Cart Page
+	|# verify the following element in checkout order summary page|
+	|RemoveFromCart_Btn| 
 	And User clicks on Remove Promo code link 
 	Then Promo code is Removed 
 	
@@ -217,8 +211,7 @@ Scenario: TC_14-Verify add quantity adjustment in the Cart Page
 	And User clicks on the burger menu 
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
+	And user click on Add to Cart Button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user view the items in order summary details (Subtotal, Estimated Shipping/In-Store Pickup, Estimated Taxes) 
@@ -239,9 +232,11 @@ Scenario:
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page "Your Cart item details "|
+	|CartProductName_Link   |
 	Then User is able to see the selected variant image as thumbnail 
 	
 @R2_Mobile @R2_MAST-14 @P-Highest @C-Cart @KER-2942 @ZYP_K2942-8047_M @CR-DP 
@@ -252,10 +247,12 @@ Scenario: TC_16-Verify Remove link in the Cart Page
 	And User navigates to LThree 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	Then verify the Remove Quantity link 
+	And verify the Remove Quantity link
+	Then Verify below Sub/Main Module of Cart Page 
+		|# Verify following elements in Cart page "Your Cart item details "|
+		|RemoveFromCart_Btn|
 	
 @R2_Mobile @R2_MAST-15 @P-Highest @C-Cart @KER-3127 @ZYP_K3127-8168_M @CR-AKK 
 @AutomationSanityR2 
@@ -265,8 +262,10 @@ Scenario: TC_17-Verify if user should be able to checkout if there are no errors
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	When user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	When user click on view cart button 
+	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Your Cart item details "| 
+	|checkOutYourCart_Btn|
 	And user click on checkout button in Cart page 
 	
 @R2_Mobile @R2_MAST-16 @P-Highest @C-Checkout @KER-2934 
@@ -278,7 +277,6 @@ Scenario:
 	And User navigates to LThree 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
 	And selects Add a New Shipping Address in address drop-down in shipping address drawer 
@@ -300,7 +298,6 @@ Scenario: TC_20-Verify Gift Card applied is reflected on Order summary
 	And User navigates to LThree 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then user click on checkout button in Cart page 
@@ -329,7 +326,6 @@ Scenario: TC_21-Verify Valid gift card is applied for purchases
 	And User navigates to LThree 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then user click on checkout button in Cart page 
@@ -356,7 +352,6 @@ Scenario: TC_22-Verify is user can Sign-In for faster checkout experience
 	And User navigates to LThree 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user will click on Checkout button and navigates to Checkout page 
@@ -375,14 +370,14 @@ Scenario: TC_23-To Edit cart items from Order summary
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user will click on Checkout button and navigates to Checkout page 
 	When user clicks on Edit My cart in Order Summary 
-	Then Verify below Sub/Main Module of Checkout Page 
-		|EditMyCart_Link|
 	Then user should navigates to the CartPage "CartTitle" 
+	Then Verify the message on the page
+    |# Following Error Message should show on the page|
+     |CartPage|
 	
 @R2_Mobile @R2_MAST-21 @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098_M 
 @CR-AKK 
@@ -393,11 +388,15 @@ Scenario: TC_24-To view the Order Summary details on the Check out
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When user will click on Checkout button and navigates to Checkout page 
-	And verify the presence of the following in the Order Summary 
+	Then Verify below Sub/Main Module of Checkout Page
+	|# Verify following elements in Checkout page "Order Summary"|
+		|Subtotal_txt|
+		|Estimatedshippint_txt|
+		|EstimatedTax_Txt|
+		|TotalDiscount_Txt|
 	
 	
 @R2_Mobile @R2_MAST-22 @P-Highest @C-Cart @KER-2872 @ZYP_CART_K2872-8710_M 

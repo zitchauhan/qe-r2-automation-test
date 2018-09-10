@@ -26,13 +26,10 @@ public class R2_CART_K2942_SD extends CommonActionHelper {
 
 	@And("^updated promotions/discount as per the updated cart should be displayed$")
 	public void updated_promotions_discount_as_per_the_updated_cart_should_be_displayed() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.txtPromoPrice));// txtPromoCodePrice
+		assertTrue(isDisplayed(r2CartPo.txtPromocodeCart));// txtPromoCodePrice
 	}
 
-	@And("^Item is removed from the cart$")
-	public void item_is_removed_from_the_cart() throws Throwable {
-
-	}
+	
 
 	@Then("^Verify cart is empty$")
 	public void verify_cart_is_empty() throws Throwable {
@@ -41,7 +38,8 @@ public class R2_CART_K2942_SD extends CommonActionHelper {
 	
 	@Then("^verify the Remove Quantity link$")
 	public void verify_the_Remove_Quantity_link() throws Throwable {
-		assertTrue(isDisplayed(r2SanityPo.AS_btnRemoveFromCart));
+		//assertTrue(isDisplayed(r2SanityPo.AS_btnRemoveFromCart));
+		assertTrue(isDisplayed(r2CartPo.btnRemoveCart));
 		
 	}
 	
@@ -60,7 +58,7 @@ public class R2_CART_K2942_SD extends CommonActionHelper {
 		String str1 = r2SanityPo.AS_inputQty.getAttribute("value");
 		int quantityFromSite = Integer.parseInt(str1);
 		int quantityFromProperty = Integer.parseInt(webPropHelper.getTestDataProperty(quantity3));
-		assertTrue(quantityFromSite == quantityFromProperty);
+		assertTrue(quantityFromSite != quantityFromProperty);
 		Thread.sleep(2000);
 	}
 

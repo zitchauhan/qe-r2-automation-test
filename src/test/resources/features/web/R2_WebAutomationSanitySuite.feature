@@ -28,7 +28,6 @@ TC_2- Verify user can do the logout using Flyout from My Account header
 	When user logs in as "RawUser" 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	And user sign out from the website 
 	Then User is navigated to pdp page 
@@ -125,7 +124,6 @@ Scenario: TC_8-Search an item and  navigate to  View Cart
 	And User click on search icon 
 	And user verifies the entered SKU id 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
 	 
@@ -137,8 +135,7 @@ Scenario: TC_9-Search an item and  navigate to  checkout page from ATC modal
 	When User enter the SKU search "SKUNumber" 
 	And User click on search icon 
 	And user verifies the entered SKU id 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
+	And user click on Add to Cart Button  
 	When user click on checkout button 
 	Then user is navigated to checkout page     
 	
@@ -149,9 +146,7 @@ Scenario: TC_10-Cat Nav - View Cart
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
 	
@@ -161,10 +156,8 @@ Scenario: TC_11-Cat Nav - Checkout from ATC Modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And user clicks on one of the product category and navigates to LThree  
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
 	Then user is navigated to checkout page 
 	
@@ -177,9 +170,7 @@ TC_12-Verify promotion got applied for order level when user applied %off promot
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
-	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
+	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "OrderLevelQuantity" to X 
@@ -193,14 +184,15 @@ TC_13- Verify if user should be able to apply or remove a promotion code
 	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "ItemLevelPromoCodeDiscount"  
-	And User clicks on Remove Promo code link 
+	Then Verify below Sub/Main Module of Cart Page
+	|# verify the following element in checkout order summary page|
+	|RemoveFromCart_Btn|
+	And User clicks on Remove Promo code link
 	Then Promo code is Removed 
 
 	
@@ -210,11 +202,8 @@ Scenario: TC_14-Verify add quantity adjustment in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then user view the items in order summary details (Subtotal, Estimated Shipping/In-Store Pickup, Estimated Taxes) 
@@ -232,15 +221,16 @@ Scenario:
 TC_15-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
+	Then user clicks on one of the subcategory and navigates to LTwo  
+	Then user clicks on one of the product category and navigates to LThree  
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
-	Then User is able to see the selected variant image as thumbnail    
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page "Your Cart item details "|
+	|CartProductName_Link   |
+	And User is able to see the selected variant image as thumbnail 
+	  
 	
 	
 @R2_Web @R2_WAST-14 @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-AKK
@@ -249,14 +239,14 @@ Scenario: TC_16-Verify Remove link in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
+	Then user clicks on one of the product category and navigates to LThree  
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	Then verify the Remove Quantity link 
+	And verify the Remove Quantity link
+	Then Verify below Sub/Main Module of Cart Page 
+		|# Verify following elements in Cart page "Your Cart item details "|
+		|RemoveFromCart_Btn|
 	
 	
 @R2_Web @R2_WAST-15 @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8168 @CR-AKK
@@ -265,12 +255,12 @@ Scenario: TC_17-Verify if user should be able to checkout if there are no errors
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	When user click on view cart button 
+	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Your Cart item details "| 
+	|checkOutYourCart_Btn|
 	And user click on checkout button in Cart page 
 	
 		
@@ -279,11 +269,8 @@ Scenario: TC_18-Verify As an unauthenticated user should be presented with the u
  	Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Mens clothing
    Then user clicks on one of the subcategory and navigates to LTwo
-   And user is able to see the product category name in section title
    Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
 	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user navigate to Cart page
 	And selects Add a New Shipping Address in address drop-down in shipping address drawer 
@@ -302,11 +289,8 @@ Scenario: TC_20-Verify Gift Card applied is reflected on Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
-	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup  
+	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page
 	Then user click on checkout button in Cart page
@@ -332,9 +316,7 @@ Scenario: TC_21-Verify Valid gift card is applied for purchases
     And user click on signin button
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
 	Then user click on Add to Cart Button
 	Then user is navigated to Add to cart Notification popup  
 	And user will click on View Cart button 
@@ -361,11 +343,8 @@ Scenario: TC_22-Verify is user can Sign-In for faster checkout experience
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
+	And user clicks on one of the product category and navigates to LThree  
+	And user click on Add to Cart Button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user will click on Checkout button and navigates to Checkout page 
@@ -381,19 +360,17 @@ Scenario: TC_22-Verify is user can Sign-In for faster checkout experience
 Scenario: TC_23-To Edit cart items from Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
+	And user clicks on one of the subcategory and navigates to LTwo  
 	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user will click on Checkout button and navigates to Checkout page 
 	When user clicks on Edit My cart in Order Summary 
-	Then Verify below Sub/Main Module of Checkout Page 
-		|EditMyCart_Link|
 	Then user should navigates to the CartPage "CartTitle" 
+	Then Verify the message on the page
+    |# Following Error Message should show on the page|
+     |CartPage|
 	
 @R2_Web @R2_WAST-21 @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098
 @CR-AKK 
@@ -402,15 +379,17 @@ Scenario: TC_24-To view the Order Summary details on the Check out
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When user will click on Checkout button and navigates to Checkout page 
-	Then verify the presence of the following in the Order Summary 
+	Then Verify below Sub/Main Module of Checkout Page
+	|# Verify following elements in Checkout page "Order Summary"|
+		|Subtotal_txt|
+		|Estimatedshippint_txt|
+		|EstimatedTax_Txt|
+		|TotalDiscount_Txt|
 	
 	
 	

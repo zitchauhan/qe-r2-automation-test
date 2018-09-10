@@ -33,7 +33,8 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 
 	@Then("^User is able to see the selected variant image as thumbnail$")
 	public void user_is_able_to_see_the_selected_variant_image_as_thumbnail() throws Throwable {
-		assertTrue(clickOnButton(r2SanityPo.AS_productImage));
+		//assertTrue(clickOnButton(r2SanityPo.AS_productImage));
+		assertTrue(clickOnButton(r2CartPo.lnkProducttext));
 		globalElementHeader.verifyThePDPPage();
 	}
 

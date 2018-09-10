@@ -7,9 +7,11 @@ Scenario: To Verify Image for selected SKU is be displayed on product blade for 
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page "Your Cart item details "|
+	|CartProductName_Link   |
 	Then User is able to see the selected variant image as thumbnail 
 
 	@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8071_M @CR-AKK 
@@ -19,7 +21,6 @@ Scenario: To view details specific to an item in the cart
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user views the details specific to the item(Thumbnail image) 
@@ -53,7 +54,6 @@ To verify Shipping radio button - Authenticated user With store selected in My A
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When Shipping radio button is selected by default 
 	And in-stores radio button is deselected 
@@ -70,7 +70,6 @@ Scenario: Desktop - To verify Quantity input field
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And modified quantity should get updated 
@@ -89,7 +88,6 @@ Scenario: To Verify Thumbnail Image
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then Verify below Sub/Main Module of Cart Page  
 	|CartProductName_Link   | 
@@ -103,7 +101,6 @@ Scenario: To verify Product name dynamic linking
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page  
 	|CartProductName_Link   |
@@ -117,7 +114,6 @@ Scenario: To verify Remove Link
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then Verify below Sub/Main Module of Cart Page 
 	|RemoveFromCart_Btn|
@@ -131,7 +127,6 @@ Scenario: To verify In-store Pick up radio button - with My Store info on My Acc
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then Verify below Sub/Main Module of Cart Page
@@ -146,8 +141,7 @@ Scenario: To verify Shipping radio button - Unauthenticated user
 	And User clicks on the burger menu
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP  
-	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
+	Then user click on Add to Cart Button  
 	And user will click on View Cart button 
 	And Shipping radio button is selected by default 
 	Then Verify below Sub/Main Module of Cart Page
@@ -168,7 +162,6 @@ Scenario: To verify Shipping radio button - Authenticated user With out store se
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And Shipping radio button is selected by default 
 	Then Verify below Sub/Main Module of Cart Page
@@ -184,7 +177,6 @@ Scenario: To verify Est.Arrival Tool Tip
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then Shipping radio button is selected by default 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -198,7 +190,6 @@ Scenario: To verify Quantity input field
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button  
 	When user selects the Quantity field 
 	And verfiy quantiy field is activated 
@@ -216,8 +207,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	 And User clicks on the burger menu
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP  
-	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup  
+	Then user click on Add to Cart Button  
 	And user will click on View Cart button
 	When user clicks on Move to Wish list link "NewWishLink" OR exisiting wishlink
 	And user enter the wishlist name 
@@ -237,8 +227,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP  
-	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup  
+	Then user click on Add to Cart Button  
 	And user will click on View Cart button
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then user will verify Shipping radio button is deselected 
@@ -254,7 +243,6 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user views the details specific to the item(Thumbnail image)  
@@ -298,8 +286,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP  
-	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
+	Then user click on Add to Cart Button 
 	When user will click on View Cart button 
 	And user navigate to Cart page 
 	Then in Product blade, radio button against In-store Pick-up should be suppressed
@@ -312,7 +299,6 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	When user will click on View Cart button 
 	And user navigate to Cart page 
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"

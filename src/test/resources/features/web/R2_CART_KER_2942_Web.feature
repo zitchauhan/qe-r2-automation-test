@@ -1,21 +1,21 @@
 Feature: Verify Quantity Adjustment in Cart 
 
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @CR-AKK 
-Scenario: TC_5-Verify add quantity adjustment in the Cart Page 
+Scenario: Verify add quantity adjustment in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
+	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then user view the items in order summary details (Subtotal, Estimated Shipping/In-Store Pickup, Estimated Taxes) 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And modified quantity should get updated 
 	Then Order Summary should get recalculated 
+	Then Verify below Sub/Main Module of Cart Page 
+		|# Verify following elements in Cart page"Order Summary"|
+		|SubTotal_txt|
 	And user should be able to see the increased quantity and Price in Cart Order summary 
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-8045 @CR-AKK 
@@ -33,9 +33,12 @@ Scenario: Verify cart gets recalculated on applying promotions and updated disco
 	And verify Order Summary in Cart 
 	Then user verifiy Order Total 
 	When enter the "EnterQuantityGreaterThenOne" to X 
-	And user view and Applied Promotions/Discounts "Promocode1" 
+	And user view and Applied Promotions/Discounts "OrderLevelDiscount" 
 	And User should be able to see the updated Order Summary 
 	And updated promotions/discount as per the updated cart should be displayed 
+	Then Verify below Sub/Main Module of Cart Page
+	|# Then user is displayed Promo code XXXXX applied |
+	|Promocode_Txt|
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-AKK 
@@ -43,14 +46,14 @@ Scenario: Verify Remove link in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
+	Then user clicks on one of the product category and navigates to LThree  
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	Then verify the Remove Quantity link 
+	And verify the Remove Quantity link
+	Then Verify below Sub/Main Module of Cart Page 
+		|# Verify following elements in Cart page "Your Cart item details "|
+		|RemoveFromCart_Btn|
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-8049 @CR-AKK 
@@ -71,9 +74,11 @@ Scenario: Verify Quantity Zero in the Cart Page
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "ZeroQuantity" to X 
-	Then modified quantity should get updated 
-	And  Item is removed from the cart 
-	Then  Verify cart is empty 
+#	Then modified quantity should get updated 
+	And  Verify cart is empty 
+	Then Verify below Sub/Main Module of Cart Page
+	|# Verify cart is empty|
+	|YourCart_Header|
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-9357 @CR-AKK 
 Scenario: Verify system does inventory check for product item added more than available 
