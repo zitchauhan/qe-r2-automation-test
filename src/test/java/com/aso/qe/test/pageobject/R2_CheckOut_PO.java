@@ -53,10 +53,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	// End KER-2927 CR-SK
 
 	// start KER-6575 CR-MS
-	@FindBy(xpath = "//*[@data-auid='checkout_header_goto_cart_link']")
+	@FindBy(xpath = "//*[@data-auid='checkout_header_miniCart']//a")
 	public WebElement btnMiniCart;
 
-	@FindBy(xpath = "//*[@data-auid='checkout_header_logo_target_link']")
+	@FindBy(xpath = "//*[@data-auid='checkout_header_logo']")
 	public WebElement logoHeader;
 	// End KER-6575 CR-RK
 
@@ -344,7 +344,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	
 //*************************CR-RKA********************************************
-		 //Order Summary(Start)
+		//Sign in Check out (Start)
+	   @FindBy(xpath="//*[text()='Email Address']/following::*[3]")public WebElement WelcomeBackEmailAddress_Input;
+		@FindBy(xpath="//*[text()='Password']/following::*[2]")public WebElement WelcomeBackPassword_Input;
+		@FindBy(xpath="//*[@data-auid='btnemail-signin-button']")public WebElement WelcomeBackSignIN_Btn;
+	   
+		//Sign in Check out (End)
+	   //Order Summary(Start)
 		
 		
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Order Summary')]")public WebElement OrderSummary_Txt;
@@ -479,12 +485,14 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	/***************************** START METHODS********************************/
 	// Start KER-2927 CR-SK
-	public float getEstimatedTaxOnCheckoutPage() {
-		waitForElement(txtEstimatedTax);
-		String taxDisplayed = getText(txtEstimatedTax);
-		taxDisplayed = taxDisplayed.replace("$", "");
-		return Float.parseFloat(taxDisplayed);
-	}
+	
+    public float getEstimatedTaxOnCheckoutPage() {
+        waitForElement(txtEstimatedTax);
+        String taxDisplayed = getText(txtEstimatedTax);
+        taxDisplayed = taxDisplayed.replace("$", "");
+        return Float.parseFloat(taxDisplayed);
+}
+
 	// End KER-2927 CR-SK
 	
 	//Start KER-3132 CR-RKA
@@ -508,6 +516,24 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@name='Dropdown']/button")public WebElement Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd;
 	@FindBy(xpath="//*[text()='Add a New Shipping Address']")public WebElement Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress;
 //Sep7 CR-RK KER-3151
+	
+	//Start Sep10 KER-6576 CR-RK
+		 @FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_Privacy Policy']")	public WebElement checkoutFooterLegalLinkPrivacyPolicy; // 10-September
+		   @FindBy(xpath = "//*[@data-auid='checkout_footer_chat_now_link']")	public WebElement checkoutFooterChatNowLink; // 10-September
+		   @FindBy(xpath = "//*[@data-auid='checkout_footer_contact_number_link_m']")	public WebElement checkoutFooterContactNumberLink_mobile; // 10-September
+		   @FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_Terms & Conditions']")	public WebElement checkoutFooterLegalLinkTermsConditions; // 10-September
+		   @FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_California Proposition 65 California Transparency in Supply Chains Act (SB 657)']")	public WebElement checkoutFooterLegalLinkCaliforniaProposition65; // 10-September
+		   @FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Visa_icon']") public WebElement iconVisa;
+			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Master Card_icon']") public WebElement iconMasterCard;
+			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Paypal_icon']") public WebElement iconPaypal;
+			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_GooglePay_icon']") public WebElement iconGooglePay;
+			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_ApplePay_icon']") public WebElement iconApplePay;
+			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Amex Card_icon']") public WebElement iconAmericanExpress;
+			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Discover_icon']") public WebElement iconDiscover;
+		   	 @FindBy(xpath = "//*[text()='Privacy']")	public WebElement checkoutFooterLegalLinkPrivacyPolicy_txt; // 10-September
+			 @FindBy(xpath = "//*[text()='Terms and ']")	public WebElement checkoutFooterLegalLinkTermsConditions_txt; // 10-September
+			 @FindBy(xpath = "//*[text()='California Transparency in Supply Chains Act (SB 657)']")	public WebElement checkoutFooterLegalLinkCaliforniaProposition65_txt; // 10-September
+			//End Sep10 KER-6576 CR-RK	
 	
 	public void verifyShippingAndBillingAddressAreSame() throws InterruptedException {
 		
@@ -583,6 +609,31 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	   /**SID ENDS**************************************/
 	
+	   // To be updated by Anuj
+	   /**AG KER-3138 Starts**************************************/
+       
+       @FindBy(xpath = "//*[@data-auid='checkout_payment']") public WebElement secPayment;
+       @FindBy(xpath = "//*[text()='PAYMENT METHOD']") public WebElement secPaymentHeading;
+       @FindBy(xpath = "//*[@id='creditCard']") public WebElement rdbtnCreditCard;
+       @FindBy(xpath = "//*[text()='Credit Card']") public WebElement txtCreditCard;
+       @FindBy(xpath = "//*[@id='PayPal']") public WebElement rdbtnPayPal;
+       @FindBy(xpath = "//*[text()='PayPal']") public WebElement txtPaypal;
+       @FindBy(xpath = "//*[@id='gpay']") public WebElement rdbtnGooglePay;
+       @FindBy(xpath = "//*[text()='Google Pay']") public WebElement txtGooglePay;
+       @FindBy(xpath = "//*[text()='Credit Card Number']") public WebElement txtCreditCardHeading;
+       @FindBy(xpath = "//*[@id='creditcardField']") public WebElement txtCreditCardInput;
+       @FindBy(xpath = "//*[@id='creditcardField']//following-sibling::span/img[contains(@src,'visa')]") public WebElement imgVisaCreditCardInput;
+       @FindBy(xpath = "//*[text()='Expiration Date']") public WebElement txtExpirationDate;
+       @FindBy(xpath = "//*[@id='expirationDate']") public WebElement txtExpirationDateInput;
+       @FindBy(xpath = "//*[@placeholder='MM/YY']") public WebElement txtExpirationPlaceholders;
+       @FindBy(xpath = "//*[@id='expirationDate']//parent::label//following-sibling::div/span[contains(text(),'Past expiration date')]") public WebElement txtErrorMsgForPastDates;
+       @FindBy(xpath = "//*[@id='cvv']") public WebElement txtCVVInput;
+       @FindBy(xpath = "//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']") public WebElement btnCVVToolTip;
+       @FindBy(xpath = "//*[text()='The 3 digit code found on far right of signature box']") public WebElement txtCVVToolTipMsg;
+      
+       /**AG KER-3138 Ends**************************************/
+
+
 	
 	
 }

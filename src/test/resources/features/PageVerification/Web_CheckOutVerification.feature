@@ -147,7 +147,23 @@ Feature: Debug
 		|PayPalCheckOut_Btn|
 		##########Ends CR-RKA	
 		
-	
+	|# Verify following elements in Checkout page"We Accept"|
+		|Visa_img|
+		|MasterCard_img|
+		|Paypal_img|
+		|GooglePay_img|
+		|ApplePay_img|
+		|AmericanExpress_img|
+		|Discover_img|
+	|# Verify following elements in Checkout footer_Lnk|
+		|CheckoutFooterLegalLinkPrivacyPolicy_Lnk|
+		|CheckoutFooterLegalLinkPrivacyPolicy_Txt|
+		|CheckoutFooterChatNowLink_Lnk|
+		|CheckoutFooterContactNumberLink_mobile_Lnk|
+		|CheckoutFooterLegalLinkTermsConditions_lnk|
+		|CheckoutFooterLegalLinkTermsConditions_Txt|
+		|CheckoutFooterLegalLinkCaliforniaProposition65_Lnk|
+		|CheckoutFooterLegalLinkCaliforniaProposition65_Txt|
 		
 			
 		
