@@ -24,15 +24,16 @@ public class R2_CHECKOUT_K3392_SD extends CommonActionHelper {
 	
 	public String nullvalue="";
 	
-//	@Then("^user will click on Checkout button$")
-//	public void user_will_click_on_Checkout_button() throws Throwable {
-//		if("mobile".equalsIgnoreCase(testtype)){
-//			//assertTrue(clickOnButton(r2CheckOutPo.btnCheckOut_M));  
-//		}
-//		else {
-//		assertTrue(clickOnButton(r2SanityPo.AS_btnCheckout));  
-//	}
-//	}
+	@Then("^user will click on Checkout button$")
+	public void user_will_click_on_Checkout_button() throws Throwable 
+	{
+		if("mobile".equalsIgnoreCase(testtype)){
+			//assertTrue(clickOnButton(r2CheckOutPo.btnCheckOut_M));  
+		}
+		else {
+		assertTrue(clickOnButton(r2SanityPo.AS_btnCheckout));  
+	}
+	}
 	
 	@Then("^user will verify the message for Sign-in$")
 	public void user_will_verify_the_message_for_Sign_in() throws Throwable {
