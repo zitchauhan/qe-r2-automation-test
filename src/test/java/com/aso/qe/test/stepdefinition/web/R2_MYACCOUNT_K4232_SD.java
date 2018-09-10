@@ -151,6 +151,7 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 	public void clicks_on_Add_New_Address_button() throws Throwable {
 		
 		assertTrue(clickOnButton(myAccountPo.btnAdd));
+		Thread.sleep(2000);
 	}
 
 	@Given("^user views validation message on all fields$")

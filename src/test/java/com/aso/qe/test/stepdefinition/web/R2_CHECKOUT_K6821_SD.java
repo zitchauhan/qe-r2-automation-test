@@ -53,6 +53,7 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 	public void user_enter_Zipcode(String arg1) throws Throwable {
 		r2CheckOutPo.inputCheckoutZipCode.clear();
 		setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty(arg1));
+		Thread.sleep(2000);
 	}
 
 	@Then("^user click on Go To Shipping Method button in Checkout page$")
