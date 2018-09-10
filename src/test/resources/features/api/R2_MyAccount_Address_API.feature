@@ -84,6 +84,7 @@ Feature: Verify MyAccount Address API endpoint services
 
   @All-R2 @C1-MyAccount @C2-ChangePassword @api @R2_AAST-07 @CR-RT @ZYP_MyAccount_ChangePassword_13111
   Scenario: TC_8 - Verify -Profile Change Password status code, JSON response validation and JSON schema validation
+    Given "loginurl" with "ChangePasswordLoginRequest" endpoint for login authentication
     Given "ChangePasswordUrl" with "ChangePasswordRequest-FirstTime" endpoint for change password of profile
     Then Verify response status code as 201
     Given "ChangePasswordUrl" with "ChangePasswordRequest-SecondTime" endpoint for change password of profile
