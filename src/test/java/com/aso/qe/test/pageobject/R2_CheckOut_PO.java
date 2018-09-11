@@ -634,6 +634,82 @@ public class R2_CheckOut_PO extends CommonActionHelper
        /**AG KER-3138 Ends**************************************/
 
 
+	public void validatePaymentPage() {
+		assertTrue(isDisplayed(secPayment));
+		assertTrue(isDisplayed(secPaymentHeading));
+		assertTrue(isEnabled(rdbtnCreditCard));
+		assertTrue(isDisplayed(txtCreditCard));
+		assertTrue(isEnabled(rdbtnPayPal));
+		assertTrue(isDisplayed(txtPaypal));
+		assertTrue(isEnabled(rdbtnGooglePay));
+		assertTrue(isDisplayed(txtGooglePay));
+		assertTrue(isDisplayed(txtCreditCardHeading));
+		assertTrue(isDisplayed(txtCreditCardInput));
+		assertTrue(isDisplayed(txtExpirationDate));
+		assertTrue(isDisplayed(txtExpirationDateInput));
+		assertTrue(isDisplayed(txtExpirationPlaceholders));
+		assertTrue(isDisplayed(txtCVVInput));
+		assertTrue(isDisplayed(btnCVVToolTip));
+	}
+
+	public void enterCardDetails(String cardNumber) {
+
+		setInputText(txtCreditCardInput, cardNumber);
+	}
+
+
+	public void verifyEnterdCardNumber(String cardNumber) {
+
+		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[@id='creditcardField' and contains(@value,"+webPropHelper.getTestDataProperty(cardNumber)+")]")))); 
+	}
+
+
+	public void enterExpirationValue(String expirationValue) {
+		setInputText(txtExpirationDateInput, expirationValue);
+	}
+
+	public void enterCVVValue(String cvv) {
+		setInputText(txtCVVInput,cvv);
+	}
+
+	public void verifyCVVTooltip() {
+		assertTrue(isDisplayed(btnCVVToolTip));
+		moveHover(btnCVVToolTip);
+		txtCVVToolTipMsg.isDisplayed();
+	}
 	
+	public void verifyCardImage() {
+		setInputText(txtCreditCardInput, "41");
+		assertTrue(isDisplayed(imgVisaCreditCardInput));
+	}
 	
+	public void verifyErrorMsgInCVVSpecialCaharacterInput() {
+		setInputText(txtCVVInput,"!@#$%");
+		String cvv = txtCVVInput.getAttribute("value");
+		assertTrue(cvv.isEmpty());
+	}
+
+	
+	public void enterMasterCardDetails() {
+		setInputText(txtCreditCardInput, webPropHelper.getTestDataProperty("CardMaster"));
+		setInputText(txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
+		setInputText(txtCVVInput,webPropHelper.getTestDataProperty("ThreeDigitCVV"));
+	}
+	
+	public void enterVisaCardDetails() {
+		setInputText(txtCreditCardInput, webPropHelper.getTestDataProperty("CardVISA"));
+		setInputText(txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
+		setInputText(txtCVVInput,webPropHelper.getTestDataProperty("ThreeDigitCVV"));
+	}
+	public void enterAmexCardDetails() {
+		setInputText(txtCreditCardInput, webPropHelper.getTestDataProperty("CardAmex"));
+		setInputText(txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
+		setInputText(txtCVVInput,webPropHelper.getTestDataProperty("FourDigitCVV"));
+	}
+	
+	public void enterDiscoverCardDetails() {
+		setInputText(txtCreditCardInput, webPropHelper.getTestDataProperty("CardDiscover"));
+		setInputText(txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
+		setInputText(txtCVVInput,webPropHelper.getTestDataProperty("ThreeDigitCVV"));
+	}
 }
