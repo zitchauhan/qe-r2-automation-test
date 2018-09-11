@@ -1,6 +1,6 @@
 Feature: E02-100 - My Account, Address Book
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT-K4232-9194 @CR-RK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9194 @CR-RK
      Scenario: Verify Authenticated user can Manage Address Book - View existing Address details
      Given user launches the browser and navigates to "ASO_HOME" page 
      And clicks on SignIn button in home page
@@ -28,7 +28,7 @@ Feature: E02-100 - My Account, Address Book
 
 	
 	#partially completed
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_CART-K4232-9196 @CR-RK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9196 @CR-RK
 Scenario: Verify Authenticated user can Manage Address Book - Delete Address details - Undo
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page
@@ -48,7 +48,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 	When user clicks on undo link
 	Then undo deletion action is performed
      
-   	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_CART-K4232-9191 @CR-MS
+   	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9191 @CR-MS
      Scenario: Verify Authenticated user can Manage Address Book - View existing Address details
 	 Given user launches the browser and navigates to "ASO_HOME" page 
      And clicks on SignIn button in home page
@@ -81,7 +81,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 #	 Then the new address gets saved
      
 
-     @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_CART-K4232-9334 @CR-RK 
+     @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9334 @CR-RK 
 Scenario: Verify Authenticated user can Manage Address Book - Add new Address details - Validation Messages 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -113,7 +113,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Add new Address de
 	Then user views validation message on all fields
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_CART-K4232-9333 @CR-RK 
+	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9333 @CR-RK 
 	Scenario: Verify Authenticated user can Manage Address Book -Set Default Address
 	Given user launches the browser and navigates to "ASO_HOME" page
 	 And clicks on SignIn button in home page
@@ -155,7 +155,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Add new Address de
 	|# Verify following elements in address page|
 	|AddressPage_SetAsDefault_chkBox			|
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_CART-K4232-9332 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9332 @CR-RK 
 Scenario: Verify Authenticated user can Manage Address Book - Delete Address details - Undo
 	Given user launches the browser and navigates to "ASO_HOME" page
 	 And clicks on SignIn button in home page
@@ -177,7 +177,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 	
      
      
- @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_CART-K4232-9195 @CR-RK 
+ @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9195 @CR-RK 
 Scenario: Verify Authenticated user can -Set Default Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -199,7 +199,7 @@ Scenario: Verify Authenticated user can -Set Default Address
 	|# Verify following elements in address page|
 	|AddressPage_SetAsDefault_chkBox			| 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_CART-K4232-9193 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9193 @CR-RK 
 Scenario: Verify Authenticated user can Manage Address Book - Delete Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -218,7 +218,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 	When user clicks Remove button 
 	Then user should see delete notification 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_CART-K4232-9192 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9192 @CR-RK 
 Scenario: Verify Authenticated user can Manage Address Book - Edit Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -247,7 +247,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Edit Address detai
 
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT-K4232-9196 @CR-RK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9196 @CR-RK
 Scenario: Verify Authenticated user has Address given through SOF
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header

@@ -2,7 +2,7 @@ Feature: E02-100 - My Account, Address Book
 
    
 
-     @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_CART-K4232-9334 @CR-RK 
+     @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9334 @CR-RK 
 Scenario: Verify Authenticated user can Manage Address Book - Add new Address details - Validation Messages 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -35,7 +35,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Add new Address de
 	Then user views validation message on all fields
 	
 	
-	@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_CART-K4232-9333 @CR-RK 
+	@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9333 @CR-RK 
 	Scenario: Verify Authenticated user can Manage Address Book -Set Default Address
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
