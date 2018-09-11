@@ -52,7 +52,7 @@ Then user click on My Account and navigate to payment
 
 ########################		
 		
-#@R2_Web @R2_Regression @R2_All @P-High @C-My_Account @KER-3093
+#@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-3093
 #@ZYP_CART_K3093-10418 @CR-SK 
 #Scenario: Verify that user is able to add a new gift card in My Account 
 #	Given user launches the browser and navigates to "ASO_HOME" page 

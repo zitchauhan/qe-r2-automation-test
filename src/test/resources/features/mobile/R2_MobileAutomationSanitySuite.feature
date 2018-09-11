@@ -55,7 +55,7 @@ Scenario: TC_3- Verify user is able to create an account with all valid data
 	And user should be able to view My Account in global header 
 	
 	
-@R2_Mobile @R2_MAST-04 @P-High @C-My_Account @KER-3093 @ZYP_CART_K3093-10418_M 
+@R2_Mobile @R2_MAST-04 @P-High @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418_M 
 @CR-SK @AutomationSanityR2 
 Scenario: TC_5-Verify that user is able to add a new gift card in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
