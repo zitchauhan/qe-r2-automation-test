@@ -148,7 +148,9 @@ Scenario:  Verify Remove quantity message in the Cart Page
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When click the Remove from cart link 
-	Then verify the remove quantity message
+	Then Verify the message on the page
+    |# verify the remove quantity message|
+    |Undo|
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6845 @CR-AKK 	
 Scenario: To verify the field type accepted for Quantity in the Cart - Numeric

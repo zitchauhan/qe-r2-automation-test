@@ -16,9 +16,10 @@ Feature: Message/Text Verification
 	|Alternate's Last Name |
 	|Alternate's Email Address|
 	|Alternate's Phone Number |
-	|The combination of Gift Card Number and PIN is incorrect. Please try again.| 
+	|The combination of Gift Card Number and PIN is incorrect. Please try again| 
     |SHOP NOW|
     | Item Added Successfully|
+    |Please enter a valid promotion code|
     |Invalid Email|
     |CartPage|
     |SHARE YOUR WISHLIST|

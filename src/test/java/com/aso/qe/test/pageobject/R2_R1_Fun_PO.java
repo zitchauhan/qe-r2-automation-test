@@ -102,7 +102,46 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 	   
  //Start KER-6655 CR-MS
    @FindBy(xpath="//*[@data-auid='btnbtnEnableBuyNow']") public WebElement EnableBuyNow_btn;
-   //End KER-6655 CR-MS	    
+   //End KER-6655 CR-MS	
+   
+   
+   
+ //Start KER-3166 CR-DPK 
+   @FindBy(xpath="//*[@data-auid='level2Category-Accessories & More'] | //*[@data-auid='level2Category-Accessories & More_m']")public WebElement tabAccessoriesMore; //DPK 11-September
+   @FindBy(xpath="//*[@data-auid='go-to-Accessories & More_m']")public WebElement clickAccessoriesMore_M; //DPK 11-September
+   @FindBy(xpath="//*[contains(@data-auid,'shopByCategory_')]//*[text()='Watches']")public WebElement tabWatches; //DPK 11-September
+   @FindBy(xpath="//*[@data-auid=\"drawer_Men's Watches\"]")public WebElement lnkMensWatches; //DPK 11-September
+   @FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[6]")public WebElement selectMensWatch; //DPK 11-September
+   
+   
+   
+   public void navigateToL3Watches() throws InterruptedException {
+	   if("mobile".equalsIgnoreCase(testtype)){
+		    waitForElement(tabAccessoriesMore);
+			assertTrue(clickOnButton(tabAccessoriesMore));
+			waitForElement(clickAccessoriesMore_M);
+			assertTrue(clickOnButton(clickAccessoriesMore_M));
+			waitForElement(tabWatches);
+			assertTrue(clickOnButton(tabWatches));
+			waitForElement(selectMensWatch);
+			assertTrue(clickOnButton(selectMensWatch));
+			Thread.sleep(2000);
 
+		} else{
+			
+			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
+			waitForElement(tabAccessoriesMore);
+			assertTrue(clickOnButton(tabAccessoriesMore));
+			waitForElement(tabWatches);
+			assertTrue(clickOnButton(tabWatches));
+			waitForElement(lnkMensWatches);
+			assertTrue(clickOnButton(lnkMensWatches));
+			waitForElement(selectMensWatch);
+			assertTrue(clickOnButton(selectMensWatch));
+			Thread.sleep(2000);
+		}
+
+   }
+ //End KER-3166 CR-DPK
    
 }

@@ -1,6 +1,6 @@
 Feature: [Mobile] Verify Quantity Adjustment in Cart 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Cart @KER-2942 @ZYP_K2942-8044_M @CR-AKK
+@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8044_M @CR-AKK
 Scenario: Verify add quantity adjustment in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -101,3 +101,90 @@ Scenario: Verify Alphanumeric Quantity in the Cart Page
 	And user navigate to Cart page 
 	When enter the "AlphanumericQuantity" to X 
 	Then user should not be allowed to enter any non-numeric value in the input 
+	
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8046_M @CR-AKK 
+Scenario: Verify Reduce quantity adjustment in the Cart Page
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	And User navigates to LThree 
+	And user clicks on the product card and navigates to PDP 
+	And user click on Add to Cart Button   
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	When enter the "EnterQuantityGreaterThenOne" to X 
+	Then Order Summary should get recalculated
+	When enter the "EnterQuantityLessThenTwo" to X 
+	Then Order Summary should get recalculated
+	
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8048_M @CR-AKK 
+Scenario:  Verify Remove quantity message in the Cart Page
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And User clicks on the burger menu 
+	And User navigates to LThree 
+	And user clicks on the product card and navigates to PDP 
+	And user click on Add to Cart Button   
+	And user will click on View Cart button 
+	And user navigate to Cart page  
+	When click the Remove from cart link
+	Then Verify the message on the page
+    |# verify the remove quantity message|
+    |Undo|
+    
+  @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6845_M @CR-AKK 	
+Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	And User navigates to LThree 
+	And user clicks on the product card and navigates to PDP 
+	And user click on Add to Cart Button   
+	And user will click on View Cart button 
+	And user navigate to Cart page  
+	When enter the "EnterQuantityGreaterThenOne" to X 	
+	Then verify the Quantity is numeric value
+	
+	
+	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6849_M @CR-AKK 	
+Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	And User navigates to LThree 
+	And user clicks on the product card and navigates to PDP 
+	And user click on Add to Cart Button   
+	And user will click on View Cart button 
+	And user navigate to Cart page   
+	When enter the "EnterQuantityAlphaNumeric" to X 	 
+	Then verify the Quantity is not allow alphanumeric
+	
+	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6861_M @CR-AKK 
+Scenario: To verify Reduce Quantity Adjustment - Via Open Field
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	And User navigates to LThree 
+	And user clicks on the product card and navigates to PDP 
+	And user click on Add to Cart Button   
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	When enter the "EnterQuantityGreaterThenOne" to X 
+	Then Order Summary should get recalculated
+	When enter the "EnterQuantityLessThenTwo" to X 	
+	Then verify the Quantity is numeric value
+	
+#@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6864_M @CR-AKK 
+#Scenario:  To verify Remove link
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	And User clicks on the burger menu 
+#	And User navigates to LThree 
+#	And user clicks on the product card and navigates to PDP 
+#	And user click on Add to Cart Button   
+#	And user will click on View Cart button 
+#	And user navigate to Cart page 
+#	Then Verify below Sub/Main Module of Cart Page
+#	|# verify the following element in checkout order summary page|
+#	|RemoveFromCart_Btn| 
+##	Then click the Remove from cart link  
+	

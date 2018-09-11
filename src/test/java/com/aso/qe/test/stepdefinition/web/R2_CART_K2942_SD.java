@@ -81,17 +81,24 @@ public class R2_CART_K2942_SD extends CommonActionHelper {
 	@Then("^click the Remove from cart link$")
 	public void click_the_Remove_from_cart_link() throws Throwable {
 		assertTrue(clickOnButton(r2CartPo.lnkRemoveCart));
+		Thread.sleep(5000);
 	}
 
-	@Then("^verify the remove quantity message$")
-	public void verify_the_remove_quantity_message() throws Throwable {
-	  
-	}
 
 	@Then("^verify the Quantity is numeric value$")
 	public void verify_the_Quantity_is_numeric_value() throws Throwable {
+		moveHover(r2SanityPo.AS_inputQty);
 		String value=r2SanityPo.AS_inputQty.getAttribute("value");
-		assertTrue(value.contains(intgeres));
+		boolean flag = true;
+		try {
+			Integer.parseInt(value);
+		} catch (NumberFormatException e) {
+			flag = false;
+		} catch (NullPointerException e) {
+			flag = false;
+		}
+
+		assertTrue(flag == true);
 	}
 	
 	@Then("^verify the Quantity is not allow alphanumeric$")

@@ -96,8 +96,10 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 		//assertTrue(clickOnButton(r2CheckoutPo.SeeInStorePickupInstructions_Select_Dd));
 		Thread.sleep(3000);
 		Actions hover=new Actions(getDriver());
-		//hover.clickAndHold(r2CheckoutPo.MePickUp_Drpdwn).build().perform();
-		hover.sendKeys(r2CheckoutPo.MePickUp_Drpdwn, Keys.DOWN,Keys.ENTER).build().perform();
+		hover.click(r2CheckoutPo.MePickUp_Drpdwn).build().perform();
+		hover.click(r2CheckoutPo.MePickUp_Drpdwn).build().perform();
+		hover.sendKeys(Keys.DOWN,Keys.ENTER).build().perform();
+		//hover.sendKeys(r2CheckoutPo.MePickUp_Drpdwn, Keys.DOWN,Keys.ENTER).build().perform();
 	    Thread.sleep(3000);
 	}
 
