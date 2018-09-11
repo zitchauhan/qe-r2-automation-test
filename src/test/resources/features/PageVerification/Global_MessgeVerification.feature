@@ -22,4 +22,5 @@ Feature: Message/Text Verification
     |Invalid Email|
     |CartPage|
     |SHARE YOUR WISHLIST|
+    |Undo|
 	
