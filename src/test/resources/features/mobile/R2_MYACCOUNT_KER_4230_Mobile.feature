@@ -1,6 +1,6 @@
 Feature: verify Forgotten Password functionality
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4230-10576 @CR-RK
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10576 @CR-RK
 Scenario: Verify user is able to enter the Forgot Password page from Forgot Password link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -23,7 +23,7 @@ Scenario: Verify user is able to enter the Forgot Password page from Forgot Pass
 	Then user should be able to change password
 	 
 	 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4230-11120 @CR-RK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-11120 @CR-RK
 Scenario: Verify that user can continue the shopping without re-authentication after changing the password
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -312,12 +312,11 @@ Scenario: Verify that user can change the password in Profile section.
 	When user click on change password icon
 	Then Verify below Sub/Main Module of My Account 
 	|#Verify following elements in Profile > change password section|
-		|ChangePassworPage_CurrentPassword_btn							|
 		|ChangePassworPage_NewPassword_txt								|
 		|ChangePassworPage_Update_btn									|
 		|ChangePassworPage_Cancel_btn									|
-	And user enters currentpassword "currentpassword"
-	And user enters newpassword "newpassword"
+	And user enters currentpassword "Password"
+	And user enters newpassword "Password"
 	And user clicks on Update button 
 	
 		@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10577 @CR-RK
@@ -339,7 +338,6 @@ Scenario: Verify that user can see the error message in password field.
 	When user click on change password icon
 	Then Verify below Sub/Main Module of My Account 
 	|#Verify following elements in Profile > change password section|
-		|ChangePassworPage_CurrentPassword_btn							|
 		|ChangePassworPage_NewPassword_txt								|
 		|ChangePassworPage_Update_btn									|
 		|ChangePassworPage_Cancel_btn									|

@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -112,6 +113,7 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	@And("^user enter Last Name field \"(.*?)\"$")
 	public void user_enter_Last_Name_field(String arg1) throws Throwable {
 		setInputText(myAccountPo.txtLastNameInAddCreditCard, webPropHelper.getTestDataProperty(arg1));
+		myAccountPo.txtLastNameInAddCreditCard.sendKeys(Keys.TAB);
 	}
 
 	

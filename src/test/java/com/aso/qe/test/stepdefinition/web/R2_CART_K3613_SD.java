@@ -99,7 +99,7 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 
 	@Then("^user should be able to see the Find a Store modal$")
 	public void user_should_be_able_to_see_the_Find_a_Store_modal() throws Throwable {
-		assertTrue(isDisplayed(r2CartPO.storeDetails)); 
+		assertTrue(isDisplayed(r2CartPO.fieldStoreModal)); 
 	}
 
 }

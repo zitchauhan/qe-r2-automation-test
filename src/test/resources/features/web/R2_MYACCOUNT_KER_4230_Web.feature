@@ -1,6 +1,6 @@
 Feature: verify Forgotten Password functionality
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4230-10576 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10576 @CR-RK
 Scenario: Verify user is able to enter the Forgot Password page from Forgot Password link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -19,7 +19,7 @@ And user enters current password
 	Then user should be able to change password
  
 	 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4230-11120 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-11120 @CR-RK
 Scenario: Verify that user can continue the shopping without re-authentication after changing the password
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header

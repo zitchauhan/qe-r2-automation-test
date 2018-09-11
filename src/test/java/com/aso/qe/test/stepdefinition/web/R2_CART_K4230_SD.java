@@ -53,44 +53,45 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 	}
 
 	@Given("^user logs in as \"(.*?)\"$")
-	public void user_logs_in_as(String emailID) throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		if (emailID.contains("EmailAddressForChangePassword")) {
-			setInputText(r2MyAccountPo.inputEmailAddress_SignIn, webPropHelper.getTestDataProperty("EmailAddressForChangePassword"));
-			setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty("DefaultPassword"));
-			clickOnButton(r2MyAccountPo.btnSignIn);
-			if (isDisplayed(r2MyAccountPo.txtIncorrectCombinationError)) {
-				setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty("ChangedPassword"));
-				clickOnButton(r2MyAccountPo.btnSignIn);
-				defaultPassword = "ChangedPassword";
-				changedPassword = "DefaultPassword";
-			}
+    public void user_logs_in_as(String emailID) throws Throwable {
+           // Write code here that turns the phrase above into concrete actions
+           if (emailID.contains("EmailAddressForChangePassword")) {
+                  setInputText(r2MyAccountPo.inputEmailAddress_SignIn, webPropHelper.getTestDataProperty("EmailAddressForChangePassword"));
+                  setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty("DefaultPassword"));
+                  clickOnButton(r2MyAccountPo.btnSignIn);
+                  if (isDisplayed(r2MyAccountPo.txtIncorrectCombinationError)) {
+                        setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty("ChangedPassword"));
+                        clickOnButton(r2MyAccountPo.btnSignIn);
+                        defaultPassword = "ChangedPassword";
+                        changedPassword = "DefaultPassword";
+                  }
 
-		}
-		
-		else if(emailID.contains("UserWithZeroProductsInCart")) {
-			setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty("EmailAddressForZeroProductsInCart"));
-			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
-			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
-			if(isDisplayed(cartR2PageObj.miniCartCount)) {
-				assertTrue(clickOnButton(cartR2PageObj.miniCartCount));
-				setInputText(cartR2PageObj.input_Quantity, "0");//txtQuantity
-				if(isDisplayed(cartR2PageObj.input_Quantity))//txtQuantity
-					tabInputBox(cartR2PageObj.input_Quantity);	//txtQuantity			
-			}	
-		}
-		
-		else if(emailID.contains("RawUser") |emailID.contains("EmailAddress") ){
-			setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty(emailID));
-			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
-			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
-		}
-		
-		else
-		{
-			throw new NullArgumentException("Please validate arguement.");
-		}
-	}
+           }
+           
+           else if(emailID.contains("UserWithZeroProductsInCart")) {
+                  setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty("EmailAddressForZeroProductsInCart"));
+                  setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
+                  assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
+                  if(isDisplayed(cartR2PageObj.miniCartCount)) {
+                        assertTrue(clickOnButton(cartR2PageObj.miniCartCount));
+                        setInputText(cartR2PageObj.input_Quantity, "0");//txtQuantity
+                        if(isDisplayed(cartR2PageObj.input_Quantity))//txtQuantity
+                               tabInputBox(cartR2PageObj.input_Quantity);    //txtQuantity               
+                  }      
+           }
+           
+           else if(emailID.contains("RawUser") |emailID.contains("EmailAddress") ){
+                  setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty(emailID));
+                  setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
+                  assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
+           }
+           
+           else
+           {
+                  throw new NullArgumentException("Please validate arguement.");
+           }
+    }
+
 
 	@Given("^user click on change password icon$")
 	public void user_click_on_change_password_icon() throws Throwable {

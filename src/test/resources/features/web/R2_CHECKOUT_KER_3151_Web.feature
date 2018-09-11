@@ -185,3 +185,30 @@ And user clicks on SignIn link from global header
 	And user click on edit button in shipping address section
 	And user verifies the default shipping address in the drop down
 	
+	
+	@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8024 @CR-RK 
+Scenario: Verify that  authenticated user is able to select address in dropdown in shipping address section
+Given user launches the browser and navigates to "ASO_HOME" page 
+And user clicks on SignIn link from global header
+	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
+	|SignInPage_SignIn_btn								|
+	|SignInPage_SignUp_btn								|
+	|SignInPage_EmailAddress_txt			   			| 
+	|SignInPage_Password_txt				   			|
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	And User navigates to L2 Mens clothing
+   Then user clicks on one of the subcategory and navigates to LTwo
+   And user is able to see the product category name in section title
+   Then user clicks on one of the product category and navigates to LThree
+	Then User is navigated to pdp page
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup
+	And user click on checkout button
+	And user click on edit button in shipping address section
+	And user select the shipping address in the drop down
+	And user click on confirm button
+	And user verifies the selected address is displayed in address section
+	

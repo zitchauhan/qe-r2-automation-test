@@ -109,4 +109,19 @@ public class R2_CHECKOUT_K3151_SD extends CommonActionHelper {
 	public void user_click_on_confirm_button() throws Throwable {
 	    assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
 	}
+	@Then("^user select the shipping address in the drop down$")
+	public void user_select_the_shipping_address_in_the_drop_down() throws Throwable {
+		Actions hover=new Actions(getDriver());
+		hover.click(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd).build().perform();
+		hover.click(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd).build().perform();
+		hover.sendKeys(Keys.DOWN,Keys.DOWN,Keys.DOWN,Keys.DOWN,Keys.ENTER).build().perform();
+
+		//hover.sendKeys(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_SelectShippingAddress, Keys.DOWN,Keys.ENTER).build().perform();
+	}
+
+	@Then("^user verifies the selected address is displayed in address section$")
+	public void user_verifies_the_selected_address_is_displayed_in_address_section() throws Throwable {
+		assertTrue(isDisplayed(r2CheckOutPo.Checkout_ShippingAddress_Default));
+	}
+	
 }
