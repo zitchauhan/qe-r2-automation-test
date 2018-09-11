@@ -80,8 +80,8 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 			}	
 		}
 		
-		else if(emailID.contains("RawUser")){
-			setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty("RawUser"));
+		else if(emailID.contains("RawUser") |emailID.contains("EmailAddress") ){
+			setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty(emailID));
 			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
 			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
 		}

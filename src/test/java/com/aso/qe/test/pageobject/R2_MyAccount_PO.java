@@ -45,7 +45,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='redirect_signin_btn']")
 	public WebElement lnkSignInNow;
 
-	@FindBy(xpath = "//*[text()='Already have an Account?']")
+	@FindBy(xpath = "//*[contains(text(), 'Already have an Account')]")
 	public WebElement txtAlreadyHaveAnAccountSignInNow;
 
 	@FindBy(xpath = "//div[text()='Password Must Contain Label']")

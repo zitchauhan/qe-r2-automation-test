@@ -549,8 +549,10 @@ public class R2_Cart_PO extends CommonActionHelper {
 	}
 
 	public boolean clickOnCheckoutButton() {
-		return clickOnButton(btnCartCheckout);// btnCheckout
-
+		if("mobile".equalsIgnoreCase(testtype))
+			return clickOnButton(btn_checkOut_OrderSummary);
+		else
+			return clickOnButton(btnCartCheckout);// btnCheckout
 	}
 	// End KER-2927 CR-SK
 

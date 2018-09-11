@@ -60,7 +60,8 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 	@Then("^checkout page displays updated tax$")
 	public void checkout_page_displays_updated_tax() throws Throwable {
 		float currentTaxDisplayed = r2CheckOutPO.getEstimatedTaxOnCheckoutPage();
-		assertTrue(taxDisplayed != currentTaxDisplayed);
+		if(taxDisplayed != 0)
+			assertTrue(taxDisplayed != currentTaxDisplayed);
 	}
 	
 	@Then("^checkout page displays increased tax$")
@@ -89,7 +90,8 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 	@Then("^cart page displays updated tax$")
 	public void cart_page_displays_updated_tax() throws Throwable {
 		float currentTaxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
-		assertTrue(taxDisplayed != currentTaxDisplayed);
+		if(taxDisplayed != 0)
+			assertTrue(taxDisplayed != currentTaxDisplayed);
 	}
 	
 	@Then("^cart page displays increased tax$")
@@ -129,6 +131,23 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 	    assertTrue(isDisplayed(r2CheckOutPO.TaxesPrice_Txt));
 	    assertTrue(isDisplayed(r2CheckOutPO.txtTotal));
 	}
+	
+	@Then ("^User navigates to L3 of women clothes$")
+	public void User_navigates_to_L3() throws InterruptedException {
+		if("mobile".equalsIgnoreCase(testtype)){
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(r2SanityPo.AS_btnWomen_Clothing_Shop));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(globalElementHeader.burgerMenu_GoToWomen_btn)); 
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(r2SanityPo.AS_btnWomensTops_Women_Clothing_Shop));
+			Thread.sleep(4000);
+		}
+
+	}
+	
 
 
 }
