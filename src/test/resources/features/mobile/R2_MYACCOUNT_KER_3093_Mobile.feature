@@ -1,6 +1,6 @@
 Feature: [Mobile]Verify Add Gift Card in Account 
 
-@R2_Mobile @R2_Regression   @KER-3093  @ZYP_K3093-10308 @CR-RKA 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10308_M @CR-RKA 
 Scenario: Verify that user is able to see the Add new Gift card on empty Wallet 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -15,8 +15,7 @@ Then user click on My Account and navigate to payment
 		|PaymentPage_YouHaveNoGiftcardsListed_label		|
 		|PaymentPage_AddNewGiftCard_btn					|
 	
-	
-	@R2_Mobile @R2_Regression   @KER-3093  @ZYP_K3093-10309 @CR-RKA 
+	@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10309_M @CR-RKA 
 Scenario: Verify that user is able to see the Add new Gift card on empty Wallet 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -34,8 +33,7 @@ Then Verify below Sub/Main Module of My Account
 		|AddGiftCardPage_Cancel_txt											|
 		|AddGiftCardPage_Add_txt											|
 	
-
- @R2_Mobile @R2_Regression   @KER-3093  @ZYP_K3093-10313 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10313_M @CR-RKA
 Scenario: Verify that user is able to see info tooltip against PIN field 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -68,7 +66,7 @@ Then user click on My Account and navigate to payment
 #	And user should be able to see available balance
 #	And there should be a Remove link with cross icon
 #########################	
-	@R2_Mobile @R2_Regression   @KER-3093  @ZYP_K3093-10416 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10416_M @CR-RKA
 	Scenario: Verify that user returns to the empty Wallet on Cancel
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -85,7 +83,7 @@ Then user click on My Account and navigate to payment
    |PaymentPage_YouHaveNoGiftcardsListed_label		|
    |PaymentPage_AddNewGiftCard_btn					|
 
-@R2_Mobile @R2_Regression   @KER-3093  @ZYP_K3093-10420 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10420_M @CR-RKA
 Scenario: Verify that user gets the error message on entering in-store credit gift card entry
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -100,8 +98,8 @@ Then user click on My Account and navigate to payment
  Then Verify the message on the page
    |#Verify following error Msg in Gift card section |
    |The combination of Gift Card Number and PIN is incorrect. Please try again.|
-   
-@R2_Mobile @R2_Regression   @KER-3093  @ZYP_K3093-10421 @CR-RKA
+
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10421_M @CR-RKA   
 Scenario: Verify that user gets the error message on entering incorrect GC number
 Given user launches the browser and navigates to "ASO_HOME" page 
 Then User clicks on the burger menu
@@ -117,7 +115,7 @@ Then user click on My Account and navigate to payment
    |#Verify following error Msg in Gift card section |
   |The combination of Gift Card Number and PIN is incorrect. Please try again.|
 
-@R2_Mobile @R2_Regression   @KER-3093  @ZYP_K3093-10422 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10422_M @CR-RKA
 Scenario: Verify that user gets the error message on entering incorrect PIN
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -129,7 +127,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    |#Verify following error Msg in Gift card section |
    |Invalid Gift Card and PIN combination|
 
-@R2_Mobile @R2_Regression   @KER-3093  @ZYP_K3093-10424 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10424_M @CR-RKA
 Scenario: Verify that user gets the error message on entering ZERO balance GC number
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu

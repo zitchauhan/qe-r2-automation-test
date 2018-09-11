@@ -86,6 +86,9 @@ Feature: Debug
 		|SignIn_btn|
 		|ContinueShopping_btn|
 		|ContinueShopping_forEmptyCart_Link|
+		|WelcomeBackEmailAddress_Input|
+		|WelcomeBackPassword_Input|
+		|WelcomeBackSignIN_Btn|
 
 		
 		|# Verify following elements in Cart page"After clicking on  Shiping Policy"|

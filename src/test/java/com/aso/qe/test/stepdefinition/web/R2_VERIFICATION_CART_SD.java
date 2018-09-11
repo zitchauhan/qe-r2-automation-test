@@ -111,7 +111,8 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 				
 				else if (currentElement.equalsIgnoreCase("EstimatedShipping_txt"))
 					assertTrue(isDisplayed(r2CartPo.txtEstimatedShippingCart));
-				
+				else if (currentElement.equalsIgnoreCase("EstimatedShippingPrice_Txt"))
+					assertTrue(isDisplayed(r2CartPo.txt_EstimatedShipping));
 				else if (currentElement.equalsIgnoreCase("ZipCode_txt"))
 					assertTrue(isDisplayed(r2CartPo.lnkChangeZipCode));
 				else if (currentElement.equalsIgnoreCase("ErrorMsgLimitedStack"))
@@ -191,6 +192,12 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 						assertTrue(isDisplayed(r2CartPo.continueShopping_btn));
 					else if (currentElement.equalsIgnoreCase("ContinueShopping_forEmptyCart_Link"))
 					assertTrue(isDisplayed(r2CartPo.continueShoppingForEmptyCart_link));
+					else if (currentElement.equalsIgnoreCase("WelcomeBackEmailAddress_Input"))
+						assertTrue(isDisplayed(r2CartPo.WelcomeBackEmailAddress_Input));
+					else if (currentElement.equalsIgnoreCase("WelcomeBackPassword_Input"))
+						assertTrue(isDisplayed(r2CartPo.WelcomeBackPassword_Input));
+					else if (currentElement.equalsIgnoreCase("WelcomeBackSignIN_Btn"))
+						assertTrue(isDisplayed(r2CartPo.WelcomeBackSignIN_Btn));
 				
 				//When cart is empty(Finish)
 				

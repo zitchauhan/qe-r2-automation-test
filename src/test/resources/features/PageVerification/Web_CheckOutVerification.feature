@@ -8,6 +8,12 @@ Feature: Debug
 		|checkout_YouAreCheckingOutAsGuest_txt		|
 		|#Below Elements has same name in PO		|
 		|checkout_SignIn_lnk						|
+		|#After click on sign in|
+		|WelcomeBackEmailAddress_Input|
+		|WelcomeBackPassword_Input|
+		|WelcomeBackSignIN_Btn|
+		
+		
 		
 		|# Verify following elements in Checkout > Shipping Address	|
 		|checkout_ShippingAddress_FirstName_txt						|

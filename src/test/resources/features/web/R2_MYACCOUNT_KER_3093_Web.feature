@@ -1,6 +1,6 @@
 Feature: [Web]Verify Add Gift Card in Account 
 
-@R2_Web @R2_Regression   @KER-3093  @ZYP_K3093-10308 @CR-RKA 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10308 @CR-RKA 
 Scenario: Verify that user is able to see the Add new Gift card on empty Wallet 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -13,7 +13,7 @@ Scenario: Verify that user is able to see the Add new Gift card on empty Wallet
 		|PaymentPage_AddNewGiftCard_btn					|
 	
 	
-	@R2_Web @R2_Regression   @KER-3093  @ZYP_K3093-10309 @CR-RKA 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10309 @CR-RKA 
 Scenario: Verify that user is able to see the Add new Gift card on empty Wallet 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -28,7 +28,7 @@ Then Verify below Sub/Main Module of My Account
 		|AddGiftCardPage_Add_txt											|
 	
 
- @R2_Web @R2_Regression   @KER-3093  @ZYP_K3093-10313 @CR-RKA
+ @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10313 @CR-RKA
 Scenario: Verify that user is able to see info tooltip against PIN field 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -57,7 +57,7 @@ Scenario: Verify that user is able to see info tooltip against PIN field
 #	And user should be able to see available balance
 #	And there should be a Remove link with cross icon
 #########################	
-	@R2_Web @R2_Regression   @KER-3093  @ZYP_K3093-10416 @CR-RKA
+	@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10416 @CR-RKA
 	Scenario: Verify that user returns to the empty Wallet on Cancel
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -70,7 +70,7 @@ Scenario: Verify that user is able to see info tooltip against PIN field
    |PaymentPage_YouHaveNoGiftcardsListed_label		|
    |PaymentPage_AddNewGiftCard_btn					|
 
-@R2_Web @R2_Regression   @KER-3093  @ZYP_K3093-10420 @CR-RKA
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10420 @CR-RKA
 Scenario: Verify that user gets the error message on entering in-store credit gift card entry
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -82,7 +82,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    |#Verify following error Msg in Gift card section |
    |The combination of Gift Card Number and PIN is incorrect. Please try again.|
    
-@R2_Web @R2_Regression   @KER-3093  @ZYP_K3093-10421 @CR-RKA
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10421 @CR-RKA
 Scenario: Verify that user gets the error message on entering incorrect GC number
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -94,7 +94,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    |#Verify following error Msg in Gift card section |
    |Invalid Gift Card and PIN combination|
 
-@R2_Web @R2_Regression   @KER-3093  @ZYP_K3093-10422 @CR-RKA
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10422 @CR-RKA
 Scenario: Verify that user gets the error message on entering incorrect PIN
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -106,7 +106,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    |#Verify following error Msg in Gift card section |
    |Invalid Gift Card and PIN combination|
 
-@R2_Web @R2_Regression   @KER-3093  @ZYP_K3093-10424 @CR-RKA
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10424 @CR-RKA
 Scenario: Verify that user gets the error message on entering ZERO balance GC number
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
