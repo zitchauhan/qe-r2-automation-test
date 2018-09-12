@@ -122,7 +122,7 @@ Scenario: To verify Tax recalculation when user switches from Shipping to store 
 
 
 ############## Failing - Manual as well - Taxes are being displayed as 0
-@R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-2927 @ZYP_CART_K2927-9653 @CR-SK
+@R2_Web @R2_Regression @R2_All @1HR @P-Highest @C-Cart @KER-2927 @ZYP_CART_K2927-9653 @CR-SK
 Scenario: To verify Tax recalculation when user switches from store pickup to  Shipping
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
@@ -140,7 +140,7 @@ Scenario: To verify Tax recalculation when user switches from store pickup to  S
 	When user navigates to checkout page
 	Then checkout page displays updated tax
 
-######## Execution pending
+######## Execution pending-------------Incorrect
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2927 @ZYP_CART_K2927-8130 @CR-SK 
 Scenario: To verify Tax recalculation when switch between Shipping & Store Pick up
 	Given user launches the browser and navigates to "ASO_HOME" page 

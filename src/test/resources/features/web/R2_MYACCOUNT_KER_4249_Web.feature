@@ -17,7 +17,7 @@ Scenario: Verify the available fields on the Sign Up page
 		|SignUpPage_SignInNow_lnk						|
 
 
-@R2_Web @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @CR-SK 
+@R2_Web @R2_Regression @R2_All @1HR @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @CR-SK 
 Scenario: Verify user is able to create an account with all valid data 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -36,7 +36,7 @@ Scenario: Verify user is able to create an account with all valid data
 	    |LET'S SHOP									|
 	And user should be able to view My Account in global header
 
-@R2_Web @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10163 @CR-SK
+@R2_Web @R2_Regression @R2_All @1HR @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10163 @CR-SK
 Scenario: Verify the user is able to sign with the new created account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -45,7 +45,7 @@ Scenario: Verify the user is able to sign with the new created account
 	And user click on signin button 
 	Then user should get logged in successfully
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10161 @CR-SK
+@R2_Web @R2_Regression @R2_All @1HR @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10161 @CR-SK
 Scenario: Verify the user is able to see the unmasked password 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
