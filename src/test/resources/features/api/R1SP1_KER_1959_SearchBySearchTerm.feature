@@ -76,6 +76,7 @@ Feature: To verify the Search by SearchTerm API Services
       | SearchTermUrl                | SearchTermText |
       | /api/search/sitesearch/shirt | shirt          |
 
+
   @Regression @Sanity @All @api @KER-1959 @ZYP-6830 @C-SLR
   Scenario Outline: : Validate the Search by searchTerm with shoes  Requried Property Values are not null
     Given "<SearchTermUrl>" endpoint for Search by SearchTerm
@@ -198,4 +199,4 @@ Feature: To verify the Search by SearchTerm API Services
 
     Examples: 
       | SearchTermUrl                 | PropertyType | SearchTermText |
-      | /api/search/sitesearch/adidas | breadcrumb   | adidas         |
+      | /api/search/sitesearch/adidas | breadcrumb   | adidas brand        |

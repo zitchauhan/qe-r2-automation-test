@@ -45,8 +45,8 @@ Feature: To verify the Product Suggest API Services
   Scenario Outline: : Validate the Product Suggest with shoes Requried Property Values are not null
     Given "<ProductSuggestUrl>" endpoint for Product Suggest
     Then read the ProductsByCategory json response
-    And Validate the Search by SearchTerm Requried Property Values contains with "<SearchProductText>"
-      | name |
+    #And Validate the Search by SearchTerm Requried Property Values contains with "<SearchProductText>"
+     # | name |
     And Validate ProductInfo Requried Property Value are not Null
       | name               |
       | id                 |
@@ -59,6 +59,7 @@ Feature: To verify the Product Suggest API Services
       | imageURL           |
     And Validate ProductInfo defaultSkuPrice Requried Property Value are not Null
       | salePrice |
+
 
     Examples: 
       | ProductSuggestUrl                    | SearchProductText |
