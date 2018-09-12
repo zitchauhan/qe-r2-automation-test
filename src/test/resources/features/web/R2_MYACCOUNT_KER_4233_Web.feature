@@ -63,7 +63,7 @@ Scenario: Verify that Authenticated User is able to delete a Wish List
 	
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11099 @CR-MS
 Scenario: Verify that Authenticated User is able to view the Wish List page 
-    Given user launches the browser and navigates to "ASO_HOME" page 
+    Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "emailWithOutPhonenumber" 
 	And user enter the valid password "Password" 
@@ -283,7 +283,57 @@ Scenario: Verify the User is able to Share a wish list
     And User Clicks on Share Wishlist button
     Then Verify that Wish List is displayed	
     
-   
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11104 @CR-MS
+Scenario: Verify that Authenticated User is able to cancel deleting a Wish List 
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	And user click on MyAccount
+	Then user click on WishList
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|Wishlist_createlist_lnk|
+	|WishlistItems_lnk|
+	And user clicks on WishListItems
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|DeleteList_btn|
+	Then user clicks on Delete list
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|DeleteWishList_btn|
+	|Keep_Wishlist_btn|
+	And user clicks on keep wishlist	
+    Then Verify that Wish List is displayed   
 	
-	
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11106 @CR-MS
+Scenario: Verify the elements of Share wishlist modal 
+   Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	And user click on MyAccount
+	Then user click on WishList
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|Wishlist_createlist_lnk|
+	|WishlistItems_lnk|
+	And user clicks on WishListItems
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|DeleteList_btn|
+	|Share_list_lnk|
+	When User Clicks on Share List Link
+	Then Verify the message on the page
+	|#Verify the message on the popup modal|
+	|SHARE YOUR WISHLIST|	 
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|Email_input_txt|
+	|Message_txt|
+	|Share_Wishlist_btn|
+	|Cancel_btn|	
 	
