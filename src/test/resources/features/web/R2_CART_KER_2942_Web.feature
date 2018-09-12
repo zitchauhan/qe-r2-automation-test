@@ -212,7 +212,9 @@ Scenario:  To verify Remove link
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
-	Then click the Remove from cart link  
+	Then Verify below Sub/Main Module of Cart Page
+	|# verify the following element in checkout order summary page|
+	|RemoveFromCart_Btn| 
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6866 @CR-AKK 
@@ -229,7 +231,9 @@ Scenario:  To verify Remove link
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When click the Remove from cart link 
-	Then verify the remove quantity message
+	Then Verify the message on the page
+    |# verify the remove quantity message|
+    |Undo|
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-6867 @CR-AKK 
 Scenario: Verify Quantity Zero in the Cart Page 
@@ -245,7 +249,9 @@ Scenario: Verify Quantity Zero in the Cart Page
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "ZeroQuantity" to X 
-	Then verify the Quantity is not zero 
+	Then Verify the message on the page
+    |# verify the item is removed|
+    |Undo|
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-6914 @CR-AKK
 Scenario: To verify Inventory Check on Quantity update
@@ -274,7 +280,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	When enter the "MoreThanStockQuantity" to X 
+	When enter the "MoreThanThresholdQuantity" to X 
 #	And user should not be allowed to enter more than available stock "AvliableeStockQuantity" 
 #	Then user verfiy the an error message 
 	Then Verify below Sub/Main Module of Cart Page

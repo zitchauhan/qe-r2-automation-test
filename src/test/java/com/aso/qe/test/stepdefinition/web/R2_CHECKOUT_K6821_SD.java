@@ -30,8 +30,11 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 	}
 	
 	@When("^user enter First name \"(.*?)\"$")
-	public void user_enter_First_name(String arg1) throws Throwable {
+	public void user_enter_First_name(String arg1) throws Throwable 
+	{
 		setInputText(r2CheckOutPo.inputCheckoutFirstName, webPropHelper.getTestDataProperty(arg1));
+		
+		//moveHover(element)
 	}
 
 	@And("^user enter Last name \"(.*?)\"$")
@@ -64,23 +67,28 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 	
 	@Then("^user click on GiftCard Plus icon in Checkout page$")
 	public void user_click_on_GiftCard_Plus_icon_in_Checkout_page() throws Throwable {
+		waitForElement(r2CheckOutPo.plusIconGiftCard);
 		assertTrue(clickOnButton(r2CheckOutPo.plusIconGiftCard));
+		Thread.sleep(3000);
 	}
 	
 	@And("^user enter Gift card Number \"(.*?)\"$")
 	public void user_enter_Gift_card_Number(String arg1) throws Throwable {
 		setInputText(r2CheckOutPo.inputGiftcardNumber, webPropHelper.getTestDataProperty(arg1));
+		Thread.sleep(3000);
 	}
 
 	@And("^user enter Pin Number \"(.*?)\"$")
 	public void user_enter_Pin_Number(String arg1) throws Throwable {
 		setInputText(r2CheckOutPo.inputPinNumber, webPropHelper.getTestDataProperty(arg1));
+		Thread.sleep(3000);
 	}
 
 	@And("^user click on Apply button$")
 	public void user_click_on_Apply_button() throws Throwable {
+		waitForElement(r2CheckOutPo.btnCheckoutApply);
 		assertTrue(clickOnButton(r2CheckOutPo.btnCheckoutApply));
-		Thread.sleep(20000);
+		Thread.sleep(3000);
 	}
 
 	@Then("^user verify the inline error message stating: Invalid Gift Card Number/Insufficient Funds$")
@@ -97,11 +105,14 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 
 	@When("^enter valid Gift Card Number \"(.*?)\"$")
 	public void enter_valid_Gift_Card_Number(String arg1) throws Throwable {
+		waitForElement(r2CheckOutPo.inputGiftCard);
 		setInputText(r2CheckOutPo.inputGiftCard, webPropHelper.getTestDataProperty(arg1));
+		Thread.sleep(3000);
 	}
 
 	@When("^enters an alphanumeric PIN \"(.*?)\"$")
 	public void enters_an_alphanumeric_PIN(String arg1) throws Throwable {
+		waitForElement(r2CheckOutPo.inputPin);
 		setInputText(r2CheckOutPo.inputPin, webPropHelper.getTestDataProperty(arg1));
 	   
 	}

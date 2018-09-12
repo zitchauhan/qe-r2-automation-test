@@ -30,7 +30,7 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	public WebElement AS_btnMens_Clothing_Shop;
 	@FindBy(xpath = "//*[@data-auid='level3Category-Mens']|//*[@data-auid='level3Category-Mens_m'] | //*[@data-auid='shopByCategory_1'] | //*[@data-auid=\"level3Category-Men's Clothing_m\"]") //12Sep
 	public WebElement AS_btnMen_Clothing_Shop;
-	@FindBy(xpath = "//*[@data-auid='level3Category-Womens_m'] | //*[@data-auid=\"level3Category-Women's Clothing_m\"]")
+	@FindBy(xpath = "//*[@data-auid='level3Category-Womens_m']")
 	public WebElement AS_btnWomen_Clothing_Shop;
 	@FindBy(xpath = "//*[@data-auid='search-input']")
 	public WebElement AS_txtSearchBox;
