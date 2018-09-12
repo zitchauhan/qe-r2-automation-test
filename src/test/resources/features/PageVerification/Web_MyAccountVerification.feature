@@ -44,6 +44,7 @@ Scenario: Verify MyAccount
 		|PaymentPage_AddNewGiftCard_btn					|
 		|PaymentPage_RemoveGiftCards_btnList			|
 		|PaymentPage_AddedGiftCards_txtList				|
+		||PaymentPage_AddNewGiftCards_plusIcon			|	
 		
 		|PaymentPage_CrediCardRemoved_txt|
 		|PaymentPage_CrediCardList_txt|

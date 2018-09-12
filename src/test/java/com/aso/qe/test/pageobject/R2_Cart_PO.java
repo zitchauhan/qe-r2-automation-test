@@ -666,7 +666,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="//*[text()='Subtotal']/following-sibling::*")public WebElement txtSubtotalCart;
 	@FindBy(xpath="//div[text()='Estimated Shipping']/..")public WebElement txtEstimatedShippingCart;
 	@FindBy(xpath="//*[text()='Estimated Shipping']/following-sibling::*")public WebElement txt_EstimatedShipping;
-	@FindBy(xpath="//*[text()='Change ZIP code']")public WebElement  lnkChangeZipCode;
+	@FindBy(xpath="//*[text()='Change Zipcode']")public WebElement  lnkChangeZipCode;
 	@FindBy(xpath = "//div[text()='Estimated Taxes']/../div[2]")public WebElement txtEstimatedTaxesCart;
 	@FindBy(xpath = "//div[text()='Total']/../div[2]")public WebElement txtTotal;
 	@FindBy(xpath="//div[text()='Discounts']")public WebElement discount_Txt;

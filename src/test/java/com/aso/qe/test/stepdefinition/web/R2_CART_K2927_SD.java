@@ -148,6 +148,13 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 
 	}
 	
+	@When("^user enters \"(.*?)\" in change zipcode field in cart page$")
+	public void user_changes_zipcode_in_cart_page(String arg1) throws Throwable {
+		assertTrue(clickOnButton(cartR2PageObj.lnkChangeZipCode));
+		setInputText(cartR2PageObj.inputZipCode, webPropHelper.getTestDataProperty(arg1));
+		assertTrue(clickOnButton(cartR2PageObj.btnCartSubmit));
+	}
+	
 
 
 }

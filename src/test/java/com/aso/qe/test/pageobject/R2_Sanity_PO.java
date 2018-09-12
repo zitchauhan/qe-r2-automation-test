@@ -28,15 +28,15 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	public WebElement AS_btnClothingCategory;
 	@FindBy(xpath = "//*[@data-auid='level3Category-Mens']")
 	public WebElement AS_btnMens_Clothing_Shop;
-	@FindBy(xpath = "//*[@data-auid='level3Category-Mens']|//*[@data-auid='level3Category-Mens_m'] | //*[@data-auid='shopByCategory_1']")
+	@FindBy(xpath = "//*[@data-auid='level3Category-Mens']|//*[@data-auid='level3Category-Mens_m'] | //*[@data-auid='shopByCategory_1'] | //*[@data-auid=\"level3Category-Men's Clothing_m\"]") //12Sep
 	public WebElement AS_btnMen_Clothing_Shop;
-	@FindBy(xpath = "//*[@data-auid='level3Category-Womens_m']")
+	@FindBy(xpath = "//*[@data-auid='level3Category-Womens_m'] | //*[@data-auid=\"level3Category-Women's Clothing_m\"]")
 	public WebElement AS_btnWomen_Clothing_Shop;
 	@FindBy(xpath = "//*[@data-auid='search-input']")
 	public WebElement AS_txtSearchBox;
 	@FindBy(xpath = "//button[@data-auid='submitSearchButton'] | //*[@data-auid='search-clear-button']")
 	public WebElement AS_btnGO;
-	@FindBy(xpath = "//*[@data-auid='level4Category-Shirts_m'] | //*[@data-auid='go-to-Mens_m'] | //*[@data-auid='level4Category-Shirts'] | //*[@data-auid='shopByCategory_3']")
+	@FindBy(xpath = "//*[@data-auid='level4Category-Shirts_m'] | //*[@data-auid='go-to-Mens_m'] | //*[@data-auid='level4Category-Shirts'] | //*[@data-auid='shopByCategory_3'] | //*[@data-auid=\"go-to-Men's Clothing_m\"]/a") //12sep
 	public WebElement AS_btnMensShirt_Men_Clothing_Shop;
 	@FindBy(xpath = "//*[@data-auid='shopByCategory_0']")
 	public WebElement AS_btnWomensTops_Women_Clothing_Shop;

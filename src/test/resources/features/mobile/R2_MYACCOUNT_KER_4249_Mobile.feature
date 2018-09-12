@@ -89,39 +89,38 @@ Scenario: Verify the user gets the error message when Last name is left blank
 	    |# Following error Message should show on the page	|
 	    | Please Enter a Last Name|
 
-#
-######Failing - Known Issue KER-12929
-##@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10152_M @CR-SK
-##Scenario: Verify the user gets the error message when Password is left blank
-##	Given user launches the browser and navigates to "ASO_HOME" page
-##	And User clicks on the burger menu
-##	When user clicks on sign in link from burger menu
-##	And clicks on SignUp link from SignIn page
-##	And user enter first "FirstName"
-##	And user enter last "LastName"
-##	And user enter random email Address
-##	And clicks on Sign Up Button
-##	Then Verify the message on the page
-##	    |# Following error Message should show on the page	|
-##	    |Please enter a Password							|		    
-##	
-##	
-######Failing - Known Issue KER-12929
-##@R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10153_M @CR-SK
-##Scenario: Verify the user gets the error message when Email address is left blank
-##	Given user launches the browser and navigates to "ASO_HOME" page 
-##	And User clicks on the burger menu
-##	When user clicks on sign in link from burger menu
-##	And clicks on SignUp link from SignIn page
-##	And user enter first "FirstName"
-##	And user enter last "LastName"
-##	And user enter password "Password"
-##	And clicks on Sign Up Button
-##	Then Verify the message on the page
-##	    |# Following error Message should show on the page	|
-##	    |Please enter an Email address						|	
-#	    
-#
+
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10152_M @CR-SK
+Scenario: Verify the user gets the error message when Password is left blank
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And User clicks on the burger menu
+	When user clicks on sign in link from burger menu
+	And clicks on SignUp link from SignIn page
+	And user enter first "FirstName"
+	And user enter last "LastName"
+	And user enter random email Address
+	And clicks on Sign Up Button
+	Then Verify the message on the page
+	    |# Following error Message should show on the page	|
+	    |Please enter a Password							|		    
+	
+	
+####Failing - Known Issue KER-12929
+@R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10153_M @CR-SK
+Scenario: Verify the user gets the error message when Email address is left blank
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu
+	When user clicks on sign in link from burger menu
+	And clicks on SignUp link from SignIn page
+	And user enter first "FirstName"
+	And user enter last "LastName"
+	And user enter password "Password"
+	And clicks on Sign Up Button
+	Then Verify the message on the page
+	    |# Following error Message should show on the page	|
+	    |Please enter an Email address						|	
+	    
+
 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10154_M @CR-SK
 Scenario: Verify the user gets the error message when sign up from existing email ID
 	Given user launches the browser and navigates to "ASO_HOME" page 

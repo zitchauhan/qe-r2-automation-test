@@ -50,6 +50,7 @@ Feature: Debug
 		|PaymentPage_AddNewGiftCard_btn					|
 		|PaymentPage_RemoveGiftCards_btnList			|
 		|PaymentPage_AddedGiftCards_txtList				|
+		|||PaymentPage_AddNewGiftCards_plusIcon			|	
 		
 		|#Verify following elements in Payments > Add new credit card section	|
 		|AddCreditCardPage_BillingInformationHeader_txt							|

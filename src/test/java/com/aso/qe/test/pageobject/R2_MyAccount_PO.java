@@ -399,13 +399,13 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text() = 'ADD NEW CREDIT CARD']")
 	public WebElement headerAddNewCreditCards;
 
-	@FindBy(xpath = "//*[@auid = 'Credit Card Number-inputField']")
+	@FindBy(xpath = "//*[@auid = 'Credit Card Number-inputField'] | //*[@id='creditcardField'] |//*[@name ='creditcardField']") // CR-DPK Date 12-Sept
 	public WebElement txtCreditCardNumber;
 
-	@FindBy(xpath = "//*[@auid = 'Exp. Date-inputField']")
+	@FindBy(xpath = "//*[@auid = 'Exp. Date-inputField'] | //*[@id='expirationDate'] |//*[@name ='expiryField']") // CR-DPK Date 12-Sept
 	public WebElement txtExpiryDate;
 
-	@FindBy(xpath = "//*[@auid = 'CVV-inputField']") // CR-SK Date 28-Aug
+	@FindBy(xpath = "//*[@auid = 'CVV-inputField'] | //*[@id='cvv'] | //*[@name ='cvvField']") // CR-SK Date 28-Aug, CR-DPK Date 12-Sept
 	public WebElement txtCVV;
 
 	@FindBy(xpath = "//*[text() = 'BILLING INFORMATION']")
@@ -471,7 +471,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='City']/..//input") // CR-SK 28 Aug
 	public WebElement txtCityInAddCreditCard;
 
-	@FindBy(xpath = "//div[text()= 'GIFT CARDS']/../following-sibling::div//*[text()='Remove']/i") // CR-SK 29 Aug
+	@FindBy(xpath = "//div[text()= 'Gift Cards']/../following-sibling::div//*[text()='Remove']/i") // CR-SK 29 Aug Modified RKA 12 Sep
 	public List<WebElement> btnRemoveGiftCardList;
 
 	@FindBy(xpath = "//*[contains(text(),'Gift Card ending in')]") // CR-SK 29 Aug
@@ -536,8 +536,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='Address Book']")
 	public WebElement myAccount_MyAccountList_AddressBook_lnk;
 	
-	@FindBy(xpath = "//*[@data-auid='Payment']")//CR-RK 8 Sep
-	public WebElement myAccount_MyAccountList_Payment_lnk;
+	@FindBy(xpath = "//*[@data-auid='Payments']")//CR-RK 8 Sep
+	public WebElement myAccount_MyAccountList_Payment_lnk; //Updated Cr-RK Sep12 KER-4230 
 	
 	@FindBy(xpath = "//*[@data-auid='Profile']") //CR-RK 8 Sep
 	public WebElement myAccount_MyAccountList_Profile_lnk; 

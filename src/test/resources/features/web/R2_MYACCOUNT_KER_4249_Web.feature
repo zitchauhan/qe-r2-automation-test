@@ -84,34 +84,32 @@ Scenario: Verify the user gets the error message when Last name is left blank
 	    | Please Enter a Last Name|
 
 
-#####Failing - Known Issue KER-12929
-#@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10152 @CR-SK
-#Scenario: Verify the user gets the error message when Password is left blank
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	When user clicks on SignIn link from global header 
-#	And clicks on SignUp link from SignIn page
-#	And user enter first "FirstName"
-#	And user enter last "LastName"
-#	And user enter random email Address
-#	And clicks on Sign Up Button
-#	Then Verify the message on the page
-#	    |# Following error Message should show on the page	|
-#	    |Please enter a Password							|		    
-#	
-#	
-#####Failing - Known Issue KER-12929
-#@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10153 @CR-SK
-#Scenario: Verify the user gets the error message when Email address is left blank
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	When user clicks on SignIn link from global header 
-#	And clicks on SignUp link from SignIn page
-#	And user enter first "FirstName"
-#	And user enter last "LastName"
-#	And user enter password "Password"
-#	And clicks on Sign Up Button
-#	Then Verify the message on the page
-#	    |# Following error Message should show on the page	|
-#	    |Please enter an Email address						|	
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10152 @CR-SK
+Scenario: Verify the user gets the error message when Password is left blank
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page
+	And user enter first "FirstName"
+	And user enter last "LastName"
+	And user enter random email Address
+	And clicks on Sign Up Button
+	Then Verify the message on the page
+	    |# Following error Message should show on the page	|
+	    |Please enter a Password							|		    
+	
+	
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10153 @CR-SK
+Scenario: Verify the user gets the error message when Email address is left blank
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page
+	And user enter first "FirstName"
+	And user enter last "LastName"
+	And user enter password "Password"
+	And clicks on Sign Up Button
+	Then Verify the message on the page
+	    |# Following error Message should show on the page	|
+	    |Please enter an Email address						|	
 	    
 
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10154 @CR-SK

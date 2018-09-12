@@ -127,6 +127,8 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					for (WebElement txtAddedGiftCard : r2MyAccountPo.txtAddedGiftCardList) {
 						assertTrue(isDisplayed(txtAddedGiftCard));
 					}
+				else if (currentElement.equalsIgnoreCase("PaymentPage_AddNewGiftCards_plusIcon"))
+					assertTrue(isDisplayed(r2MyAccountPo.btnAddGiftCardPlusIcon)); 
 
 				// ===============================================================================
 				//// Profile
