@@ -1,6 +1,5 @@
 package com.aso.qe.test.pageobject;
 
-
 import static org.testng.Assert.assertTrue;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -45,7 +44,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='level1Category-SHOP']") public WebElement btnShopCategory;
 	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m']/span | //*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING_m']/span | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //UAT9
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]/a | //*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop;//UAT9
-	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shirts']|//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shorts']|//*[@data-auid=\"level4Category-Shirts_m\"] | //*[@data-auid=\"go-to-Boys' Clothing_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop;//RKA sept10
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shirts']|//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shorts']|//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop;
 	@FindBy(xpath="//*[@data-auid='go-to-Womens_m']/a | //*[@data-auid=\"go-to-Women's Clothing_m\"]/a")public WebElement burgerMenu_GoToWomen_btn; //CR-SK, 11 Sep
 	@FindBy(xpath="//*[@data-auid='go-to-School Uniforms_m']/a")public WebElement burgerMenu_GoToSchoolUniform_btn; //CR-SK, 12 Sep
 	
@@ -77,7 +76,6 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='go-to-Mens_m']/a | //*[@data-auid=\"go-to-Boys' Clothing_m\"]/a" ) public WebElement txtToNavigateMensBurgerMenuMobile;
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]" ) public WebElement txtToNavigateMensCategoryMobile;
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Women's Clothing_m\"]" ) public WebElement txtToNavigateWoensCategoryMobile;
-	
 	@FindBy(xpath="//*[@data-auid=\"logo\"]") public WebElement academyLogo;
 	@FindBy(xpath="//*[text()='THIS IS ACADEMY']") public WebElement txtFooterACADEMY;	
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_4https://www.instagram.com/academy/']") public WebElement iconinstagram;
@@ -805,7 +803,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			actions.moveToElement(txtSearchBox_mobile);
 			Thread.sleep(3000);
 			actions.click();
-			actions.sendKeys("Magellan Outdoors Men's Eagle Pass Deluxe Long Sleeve Shirt");
+			actions.sendKeys("Columbia Sportswear Men's Dorado CVO PFG Boat Shoes");
 			actions.build().perform();
 		}else {
 
@@ -814,7 +812,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			Thread.sleep(3000);
 			actions.click();
 			//actions.sendKeys("Magellan Outdoors Men's Eagle Pass Deluxe Long Sleeve Shirt");
-			actions.sendKeys("Magellan Outdoors Men's Eagle Pass Deluxe Shirt");
+			actions.sendKeys("Columbia Sportswear Men's Dorado CVO PFG Boat Shoes");
 			actions.build().perform();
 
 		}
@@ -1663,7 +1661,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		Actions hover = new Actions(getDriver());
 		hover.moveToElement(btnClothingCategory).build().perform();
 		Thread.sleep(2000);
-		assertTrue(clickOnButton(btnMensShirt_Men_Clothing_Shop));
+		assertTrue(clickOnButton(btnMenClothingShop));
 		Thread.sleep(2000);
 	}	
 
@@ -1720,6 +1718,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		}
 	}
 
+	//SID 10-September
 	public void signOut() throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(btnSHOPBurgerMenuMinusIcon));
@@ -1728,14 +1727,18 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			assertTrue(clickOnButton(btnMyAccountMobile));
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(btnSignOut_M));
-			sit_po.verifySigninpage();
+			waitForElement(btnBurgerMenu);
+			assertTrue(isDisplayed(btnBurgerMenu));
+			assertTrue(clickOnButton(btnBurgerMenu));
+			assertTrue(isDisplayed(btnMyAccountBurgerMenu));
 
 		}else {
 			assertTrue(clickOnButton(btnMyAccount));
 			Thread.sleep(1000);
 			assertTrue(clickOnButton(btnSignOut));
 			Thread.sleep(1000);
-			sit_po.verifySigninpage();
+			assertTrue(isDisplayed(btnSignIn));
+//			sit_po.verifySigninpage();
 		}
 	}	
 
