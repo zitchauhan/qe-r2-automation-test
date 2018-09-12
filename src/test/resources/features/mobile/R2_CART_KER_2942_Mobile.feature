@@ -1,6 +1,6 @@
 Feature: [Mobile] Verify Quantity Adjustment in Cart 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8044_M @CR-AKK
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8044_M @CR-AKK
 Scenario: Verify add quantity adjustment in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -38,7 +38,7 @@ Scenario: Verify cart gets recalculated on applying promotions and updated disco
 	|# Then user is displayed Promo code XXXXX applied |
 	|Promocode_Txt|
 	
-	@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8047_M @CR-AKK 
+	@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8047_M @CR-AKK 
 Scenario: Verify Remove link in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

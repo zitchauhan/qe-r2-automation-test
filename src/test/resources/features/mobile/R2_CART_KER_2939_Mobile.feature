@@ -1,6 +1,6 @@
 Feature: [Mobile] Verify Product Blade in Cart 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Cart @KER-2939 @ZYP-K2939_9615_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2939 @ZYP-K2939_9615_M @CR-AKK 
 Scenario: To Verify Image for selected SKU is be displayed on product blade for  multi-variant product. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
