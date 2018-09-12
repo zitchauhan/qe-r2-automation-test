@@ -1,7 +1,7 @@
-Feature: Debug
+Feature: Debug 
 
 
-	Scenario: Verify Checkout for Web
+Scenario: Verify Checkout for Web 
 	Then Verify below Sub/Main Module of Checkout Page 
 	##########Starts CR-SK
 		|#Verify following elements in checkout page|
@@ -129,6 +129,8 @@ Feature: Debug
 		|toolTip_pin|
 		|InvalidGiftCardPin_Txt|
 		|Apply_Btn|
+		|txtGiftCardAppliedSuccessMessage|
+		|btnToRemoveGiftCardOnCheckoutPage|
 		|#%%%%%%   Billing Information  %%%%%%%%%%|
 		|BillingInformation_Txt|
 		|SameAsShippingAddress_Txt|
@@ -153,7 +155,7 @@ Feature: Debug
 		|PayPalCheckOut_Btn|
 		##########Ends CR-RKA	
 		
-	|# Verify following elements in Checkout page"We Accept"|
+		|# Verify following elements in Checkout page"We Accept"|
 		|Visa_img|
 		|MasterCard_img|
 		|Paypal_img|
@@ -161,7 +163,7 @@ Feature: Debug
 		|ApplePay_img|
 		|AmericanExpress_img|
 		|Discover_img|
-	|# Verify following elements in Checkout footer_Lnk|
+		|# Verify following elements in Checkout footer_Lnk|
 		|CheckoutFooterLegalLinkPrivacyPolicy_Lnk|
 		|CheckoutFooterLegalLinkPrivacyPolicy_Txt|
 		|CheckoutFooterChatNowLink_Lnk|
@@ -171,5 +173,5 @@ Feature: Debug
 		|CheckoutFooterLegalLinkCaliforniaProposition65_Lnk|
 		|CheckoutFooterLegalLinkCaliforniaProposition65_Txt|
 		
-			
+		
 		

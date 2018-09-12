@@ -102,14 +102,14 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3144 
 @ZYP_CHECKOUT_K3144-9638 @CR-GK 
-Scenario:Verify user receive error message after adding a shipping address with AK/HI/PR in My Account 
+Scenario: Verify user receive error message after adding a shipping address with AK/HI/PR in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user click on My account link 
-	And user clicks on address book 
+	And user lands on My Account page and click on adress 
 	And user Clicks on Add New Address link 
 	And user enter First name "FirstName" in address book 
 	And user enter Last name "LastName" in address book 

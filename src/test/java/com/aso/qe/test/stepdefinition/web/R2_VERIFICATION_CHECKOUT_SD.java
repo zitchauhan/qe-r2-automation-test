@@ -261,6 +261,11 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 						assertTrue(isDisplayed(r2CheckoutPo.txtInvalidPin));
 					else if (currentElement.equalsIgnoreCase("Apply_Btn"))
 						assertTrue(isDisplayed(r2CheckoutPo.btnCheckoutApply));
+					else if (currentElement.equalsIgnoreCase("GiftCardAppliedSuccessMsg"))
+						assertTrue(isDisplayed(r2CheckoutPo.txtGiftCardAppliedSuccessMessage));
+					else if (currentElement.equalsIgnoreCase("btnToRemoveGiftCardOnCheckoutPage"))
+						assertTrue(isDisplayed(r2CheckoutPo.btnRemoveGiftCard));
+				
 				//****************Gift Card(End)
 				
 				//*************** Billing Information(Start)

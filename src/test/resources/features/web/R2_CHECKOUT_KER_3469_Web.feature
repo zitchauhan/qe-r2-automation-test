@@ -19,7 +19,7 @@ Scenario: Verify BOPIS Pick Up Person - Authenticated user -Alternate Person
 	And user click on checkout button in Cart page 
 	And user is navigated to order summary page 
 	And user click on In-Store Pick up edit button 
-	And user selects a new option from drop down 
+	And user select me + alternate pickup person 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#Verify following elements in checkout page bopis pickup|
 		|StorePickupAlternatesFirstName_input|
@@ -45,7 +45,7 @@ Scenario:
 	And user click on checkout button in Cart page 
 	And user is navigated to order summary page 
 	And user click on In-Store Pick up edit button 
-	And user selects a new option from drop down 
+	And user select me + alternate pickup person 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#Verify following elements in checkout page bopis pickup|
 		|StorePickupAlternatesFirstName_input|
