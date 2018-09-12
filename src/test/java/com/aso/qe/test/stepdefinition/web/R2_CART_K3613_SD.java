@@ -21,7 +21,13 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 	
 	@When("^clicks on the Select Store link in the header$")
 	public void clicks_on_the_Select_Store_link_in_the_header() throws Throwable {
-		assertTrue(clickOnButton(r2CartPO.linkStoreLocator));		
+		if("mobile".equalsIgnoreCase(testtype))
+				{
+			assertTrue(clickOnButton(r2CartPO.lnkFindAStore_M));
+				}else
+				{
+		assertTrue(clickOnButton(r2CartPO.lnkFindaStoreHomePage));
+				}
 	}
 
 	@Then("^user should be able to see the Find a Store modal prompting up$")
