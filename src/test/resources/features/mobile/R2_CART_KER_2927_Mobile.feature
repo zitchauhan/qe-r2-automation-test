@@ -116,7 +116,7 @@ Scenario: To verify Tax recalculation when user switches from Shipping to store 
 
 
 ############### Failing - Manual as well - Taxes are being displayed as 0
-#@R2_Mobile @R2_Regression @R2_All @1HR @P-Highest @C-Cart @KER-2927 @ZYP_CART_K2927-9653_M @CR-SK
+#@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-Highest @C-Cart @KER-2927 @ZYP_CART_K2927-9653_M @CR-SK
 #Scenario: To verify Tax recalculation when user switches from store pickup to  Shipping
 #	Given user launches the browser and navigates to "ASO_HOME" page 
 #	And User clicks on the burger menu 
