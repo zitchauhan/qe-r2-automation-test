@@ -29,7 +29,7 @@ Scenario: Verify the available elements on the Forgot Password page
 		|ForgotPasswordPage_Submit_btn						|
 
 	
-@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4023-10082 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4023-10082 @CR-RK 
 Scenario: Verify the user gets the error message when both email id and Password are incorrect 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -44,7 +44,7 @@ Scenario: Verify the user gets the error message when both email id and Password
     |# Following Error Message should show on the page|
     |Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 	
-@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4023 @ZYP_MYACCOUNT_K4023-10081 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4023 @ZYP_MYACCOUNT_K4023-10081 @CR-RK 
 Scenario: Verify the user gets the error message when Email Id is left blank 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -61,7 +61,7 @@ Scenario: Verify the user gets the error message when Email Id is left blank
     |# Following Error Message should show on the page|
     |Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 	
-@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4023 @ZYP_MYACCOUNT_K4023-10083 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4023 @ZYP_MYACCOUNT_K4023-10083 @CR-RK 
 Scenario: Verify the user gets the error message on entering non-registered email id 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

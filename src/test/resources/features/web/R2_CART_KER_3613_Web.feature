@@ -1,6 +1,6 @@
 Feature: B06-150 - BOPIS PDP Store Selection
 
-#@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3613 @ZYP_CART_K3613-10727 @CR-RK
+#@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3613 @ZYP_CART_K3613-10727 @CR-RK
 #Scenario: Verify that user should be able to click select store in header & open the Find Store modal 
 #	Given user launches the browser and navigates to "ASO_HOME" page
 #	When clicks on the Select Store link in the header

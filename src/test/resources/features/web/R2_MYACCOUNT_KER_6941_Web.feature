@@ -95,7 +95,7 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
     |# Following Error Message should show on the page|
     |Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8928 @CR-RK 		
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8928 @CR-RK 		
 	Scenario: Verify The user must see form field validations to ensure the e-mail address meets the desired format (domain provided) in checkout page
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on one of the category and navigates to LOne page  
@@ -119,7 +119,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
     |Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 	
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8930 @CR-RK 	
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8930 @CR-RK 	
 Scenario: Verify The user must see form field validations to ensure the e-mail address meets the desired format (domain provided) in creating account page
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -141,7 +141,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
   	|# Following Error Message should show on the page|
  	|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8937 @CR-RK 	
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8937 @CR-RK 	
 Scenario: Verify The user must be able to see the relevant errors when entering the email address in checkout page
 Given user launches the browser and navigates to "ASO_HOME" page 
 And user clicks on one of the category and navigates to LOne 
@@ -164,7 +164,7 @@ And user clicks on one of the category and navigates to LOne
 	#Then user should get an error message stating please enter valid email
 
 
-	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8938 @CR-RK 	
+	@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8938 @CR-RK 	
 Scenario: Verify The user must be able to see the relevant errors when entering the email address in Account create page
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on one of the category and navigates to LOne 

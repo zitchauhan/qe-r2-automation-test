@@ -1,6 +1,6 @@
 Feature: Verfiy  View/Delete/Set Default Credit/Debit Card in Account
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10549 @CR-RK 
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10549 @CR-RK 
 Scenario: Verify user is able to remove the saved credit card from My Account
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -22,7 +22,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user clicks Remove button in payment page
 	And user should see the proper message
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10553 @CR-RK 	
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10553 @CR-RK 	
 Scenario: Verify user is able to make any saved credit card as default
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -64,7 +64,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user clicks Remove button in payment page
 	And user should see the proper message
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10545 @CR-RK	
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10545 @CR-RK	
 Scenario: Verify user is able to see the list of saved credit cards on the Payment page under My Account
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu

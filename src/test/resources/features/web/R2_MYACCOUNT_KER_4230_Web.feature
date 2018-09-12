@@ -1,6 +1,6 @@
 Feature: verify Forgotten Password functionality
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10576 @CR-RK
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10576 @CR-RK
 Scenario: Verify user is able to enter the Forgot Password page from Forgot Password link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -19,7 +19,7 @@ And user enters current password
 	Then user should be able to change password
  
 	 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-11120 @CR-RK
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-11120 @CR-RK
 Scenario: Verify that user can continue the shopping without re-authentication after changing the password
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -42,7 +42,7 @@ Scenario: Verify that user can continue the shopping without re-authentication a
 	Then User is navigated to pdp page
 	And user is not logged out
 	
-	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10565 @CR-RK
+	@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2  @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10565 @CR-RK
 Scenario: Verify that user able to update the profile	
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -74,7 +74,7 @@ Scenario: Verify that user able to update the profile
 	And user enters new password
 	And user clicks on Update button                                                                                                
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10566 @CR-RK
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10566 @CR-RK
 Scenario: Verify that user can see the error message in First name input field.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -277,7 +277,7 @@ Scenario: Verify that user can see the error message if user enters the email id
   |# Following Error Message should show on the page|
 	|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10576 @CR-RK
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR  @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10576 @CR-RK
 Scenario: Verify that user can change the password in Profile section.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header

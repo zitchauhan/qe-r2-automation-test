@@ -15,7 +15,7 @@ Scenario: Verify that Authenticated User is able to view the Wish List page
 	Then Verify that Create Your First Wish List button
 	
 
-@R2_Web @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-10504 @CR-MS
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-10504 @CR-MS
 Scenario: Verify that Authenticated user can create first wish list
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -61,7 +61,7 @@ Scenario: Verify that Authenticated User is able to delete a Wish List
 	And user clicks on Delete WishList
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11099 @CR-MS
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11099 @CR-MS
 Scenario: Verify that Authenticated User is able to view the Wish List page 
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -75,7 +75,7 @@ Scenario: Verify that Authenticated User is able to view the Wish List page
 	|WishlistPage_CreateANewWishlist_btn|
 	Then Verify that Create Your First Wish List button	
 
-@R2_Web @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11113 @CR-MS
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11113 @CR-MS
 Scenario: Verify that Authenticated user can create first wish list
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

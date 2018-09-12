@@ -1,6 +1,6 @@
 Feature: View/Select Shipping Address in Checkout 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8189 @CR-RK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8189 @CR-RK 
 Scenario: Verify if authenticated user can select a shipping address from the dropdown 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -89,7 +89,7 @@ Scenario: Verify if authenticated user can  view all the shipping addresses at c
 	And user click on edit button in shipping address section
 	And user verifies all the saved addresses in my account should be displayed in the dropdown
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-10645 @CR-RK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-10645 @CR-RK 
 Scenario: Verify for authenticated user default address will always be displayed on top 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -163,7 +163,7 @@ Scenario: Verify  If the user has already changed/ added an address within an ac
 	Then user click on Go To Shipping Method button in Checkout page
 	And user should see the order summary page with the default address	
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8023 @CR-RK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8023 @CR-RK 
 Scenario: Verify that  authenticated user is able to view default address in dropdown in shipping address section
 Given user launches the browser and navigates to "ASO_HOME" page 
 Then User clicks on the burger menu
@@ -188,7 +188,7 @@ Then User clicks on the burger menu
 	
 	
 	
-	@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8024 @CR-RK 
+	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8024 @CR-RK 
 Scenario: Verify that  authenticated user is able to select address in dropdown in shipping address section
 Given user launches the browser and navigates to "ASO_HOME" page 
 Then User clicks on the burger menu

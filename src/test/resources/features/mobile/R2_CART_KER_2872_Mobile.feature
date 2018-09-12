@@ -8,7 +8,7 @@ Scenario: Verify that user is able to open the Find Store modal from the header
 	And user verify Find a Store popup
 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Cart @KER-2872 @ZYP_CART_K2872-8710 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2  @C-Cart @KER-2872 @ZYP_CART_K2872-8710 @CR-DPK
 Scenario: Verify that the user should be able to search the store details by entering ZIP code
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 
@@ -77,6 +77,7 @@ Scenario: Verify My Store functionality and modal close behavior
 	
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10620 @CR-DPK	
 	Scenario: Verify that user is able to open the Find Store modal from PDP for BOPIS
+	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 
 	When user clicks on one of the category and navigates to LOne SOF
     Then user clicks on one of the subcategory and navigates to LTwo SOF
@@ -151,7 +152,7 @@ Scenario: Verify the system behaviour on click of 'View Next 5 Stores' CTA
 
 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Cart @KER-2872 @ZYP_CART_K2872-10661 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2  @C-Cart @KER-2872 @ZYP_CART_K2872-10661 @CR-DPK
 Scenario: Verify if the user can search the store details by entering City & state
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 

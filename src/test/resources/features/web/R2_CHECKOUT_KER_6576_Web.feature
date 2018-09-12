@@ -2,7 +2,7 @@ Feature: B04-350 - Display Simple Header on Checkout Page
 
 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6576 @ZYP_CHECKOUT_K6576-8739 @CR-RK	
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2  @C-Checkout @KER-6576 @ZYP_CHECKOUT_K6576-8739 @CR-RK	
 Scenario:  Verify the Elements present in Checkout footer
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User navigates to L2 Mens clothing
@@ -34,7 +34,7 @@ Scenario:  Verify the Elements present in Checkout footer
 		
 		
 		
-		@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6576 @ZYP_CHECKOUT_K6576-8742 @CR-RK	
+		@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6576 @ZYP_CHECKOUT_K6576-8742 @CR-RK	
 		Scenario:  Verify that user is able to open Privacy Policy Page from checkout page footer
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User navigates to L2 Mens clothing
@@ -55,7 +55,7 @@ Scenario:  Verify the Elements present in Checkout footer
 		|# Verify following elements in Checkout footer_Lnk|
 		|CheckoutFooterLegalLinkPrivacyPolicy_Txt|
 		
-		@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6576 @ZYP_CHECKOUT_K6576-8744 @CR-RK
+		@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6576 @ZYP_CHECKOUT_K6576-8744 @CR-RK
 		Scenario:  Verify that user is able to open Terms & Conditions Page from checkout page footer
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User navigates to L2 Mens clothing
@@ -77,7 +77,7 @@ Scenario:  Verify the Elements present in Checkout footer
 		|CheckoutFooterLegalLinkTermsConditions_Txt|
 		
 		
-		@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6576 @ZYP_CHECKOUT_K6576-8747 @CR-RK
+		@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6576 @ZYP_CHECKOUT_K6576-8747 @CR-RK
 		Scenario:  Verify that user is able to open Prop 65 Page from checkout page footer
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User navigates to L2 Mens clothing
@@ -99,7 +99,7 @@ Scenario:  Verify the Elements present in Checkout footer
 		|CheckoutFooterLegalLinkCaliforniaProposition65_Txt|
 		
 		
-		@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6576 @ZYP_CHECKOUT_K6576-8741 @CR-RK
+		@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6576 @ZYP_CHECKOUT_K6576-8741 @CR-RK
 		Scenario:  Verify that user is able to open chat modal from checkout page footer
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User navigates to L2 Mens clothing

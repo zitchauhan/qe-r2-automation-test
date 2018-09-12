@@ -83,7 +83,7 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 	Then verify GiftCard and Pin field
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8631 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2  @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8631 @CR-DPK
 	Scenario: Verify +Add Another Gift card link is Suppressed in non-availability of remaining order amount
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	And User navigates to L2 Mens clothing

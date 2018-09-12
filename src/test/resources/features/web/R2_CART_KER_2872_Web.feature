@@ -7,7 +7,7 @@ Scenario: Verify that user is able to open the Find Store modal from the header
 	And user verify Find a Store popup
 
 
-@R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8710 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2  @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8710 @CR-DPK
 Scenario: Verify that the user should be able to search the store details by entering ZIP code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
@@ -153,7 +153,7 @@ Scenario: Verify the system behaviour on click of 'View Next 5 Stores' CTA
 
 
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10661 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2  @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10661 @CR-DPK
 Scenario: Verify if the user can search the store details by entering City & state
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
