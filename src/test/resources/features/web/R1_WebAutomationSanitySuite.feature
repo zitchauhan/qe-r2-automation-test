@@ -1,16 +1,16 @@
 Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios
 
-  @AutomationSanityR1 @AS1 @WAST-01
-  Scenario: TC_1- Verify all broken URL's on Home page
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then verfy all link url's status code is 200
-    
-  @AutomationSanityR1 @AS1 @WAST-02 @1HR
-  Scenario: TC_2-Login and Logout
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then user should able to click on Signin button
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
-    Then user sign out from the website
+  #@AutomationSanityR1 @AS1 @WAST-01
+  #Scenario: TC_1- Verify all broken URL's on Home page
+    #Given user launches the browser and navigates to "ASO_HOME" page
+    #Then verfy all link url's status code is 200
+    #
+  #@AutomationSanityR1 @AS1 @WAST-02 @1HR
+  #Scenario: TC_2-Login and Logout
+    #Given user launches the browser and navigates to "ASO_HOME" page
+    #Then user should able to click on Signin button
+    #And user should be able to enter the signin details "Login_username" "Login_pwd"
+    #Then user sign out from the website
 
   #@AutomationSanityR1 @AS2 @WAST-03 @1HR
   #Scenario: TC_3-Registered user checkout process
