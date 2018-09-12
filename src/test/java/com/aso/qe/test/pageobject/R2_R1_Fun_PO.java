@@ -82,8 +82,8 @@ public class R2_R1_Fun_PO extends CommonActionHelper
    
    
  //KER-3093 CR-RKA
-   @FindBy(xpath="//*[@data-auid='Payment']")public WebElement payment_Txt;
-   @FindBy(xpath="//*[@data-auid='Payment_m']")public WebElement payment_M_Txt;
+   @FindBy(xpath="//*[@data-auid='Payments']")public WebElement payment_Txt;
+   @FindBy(xpath="//*[@data-auid='Payments_m']")public WebElement payment_M_Txt;
    //KER-3093 CR-RKA
    
    //KER-2939 CR-AKK

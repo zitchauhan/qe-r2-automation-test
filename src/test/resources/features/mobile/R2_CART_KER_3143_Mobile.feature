@@ -1,6 +1,7 @@
 Feature: [Mobile] B06-100- Merge Cart
+ 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143@ZYP_Cart_K3143-10257_M @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143 @ZYP_Cart_K3143-10257_M @CR-RKA
 Scenario: Verify if Unauthenticated customer will be able to add items to cart for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -39,6 +40,7 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page"When cart is empty"|
 	|YourCartIsEmpty_Txt| 
+	
 	####### 11 sept
 	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3143 @ZYP_CART_K3143-12547_M @CR-RKA
 	Scenario: Verify the display and behavior of 'Continue Shopping' in Cart Title
@@ -177,105 +179,106 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	Then Verify the message on the page
 	|#verify item added successfully MSG#|
 	 | Item Added Successfully|
- ###### 11 sept end  
-#   @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8159_M @CR-RKA
-#    Scenario: Verify if Authenticated user must be able to view all items designated for shipping    
-#	Given user launches the browser and navigates to "ASO_HOME" page
-#    Then User clicks on the burger menu
-#    Then user should able to click on Signin button
-#	And user enter the valid emailaddress "EmailAddress" 
-#	And user enter the valid password "Password" 
-#   And user click on signin button
-#	Then User clicks on the burger menu
-#     And User navigates to L3
-#      Then user clicks on the product card and navigates to PDP 
-#	And User is navigated to pdp page 
-#	And user click on Add to Cart Button 	
-#	And user is navigated to Add to cart Notification popup
-#	And user will click on View Cart button 
-#	Then Verify below Sub/Main Module of Cart Page
-#	|# Verify following elements in Cart page "Item in Cart "|
-#	|Items_txt|
+ ##### 11 sept end  
+   @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8159_M @CR-RKA
+    Scenario: Verify if Authenticated user must be able to view all items designated for shipping    
+	Given user launches the browser and navigates to "ASO_HOME" page
+    Then User clicks on the burger menu
+    Then user should able to click on Signin button
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+   And user click on signin button
+	Then User clicks on the burger menu
+     And User navigates to L3
+      Then user clicks on the product card and navigates to PDP 
+	And User is navigated to pdp page 
+	And user click on Add to Cart Button 	
+	And user is navigated to Add to cart Notification popup
+	And user will click on View Cart button 
+	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Item in Cart "|
+	|Items_txt|
+	 
 	
-#	@R2_Web @R2_Regression  @KER-3143 @ZYP_Cart_K3143-8160 @CR-RKA
-#	Scenario: Verify if user must be able to view all items designated for BOPIS( Buy online and pick in store)
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	And user clicks on SignIn link from global header 
-#	And user enter the valid emailaddress "EmailAddress" 
-#	And user enter the valid password "Password" 
-#	And user click on signin button 
-#	And user clicks on one of the category and navigates to LOne 
-#	And user clicks on one of the subcategory and navigates to LTwo 
-#	And user is able to see the product category name in section title 
-#	And user clicks on one of the product category and navigates to LThree  
-#	Then User is navigated to pdp page 
-#	Then user click on Add to Cart Button 
-#	Then user is navigated to Add to cart Notification popup 
-#	And user will click on View Cart button
-#	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"  
-#	Then Verify below Sub/Main Module of Cart Page
-#   |Verify item for Bopis |
-#   |Items_txt|
+	@R2_Web @R2_Regression  @KER-3143 @ZYP_Cart_K3143-8160 @CR-RKA
+	Scenario: Verify if user must be able to view all items designated for BOPIS( Buy online and pick in store)
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And user clicks on one of the category and navigates to LOne 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree  
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button
+	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"  
+	Then Verify below Sub/Main Module of Cart Page
+   |Verify item for Bopis |
+   |Items_txt|
    
-#   @R2_Web @R2_Regression  @KER-3143 @ZYP_Cart_K3143-8161 @CR-RKA
- #  Scenario: Verify if user "Pick Up In Store" location must display the store location selected for unauthenticated
- #  Given user launches the browser and navigates to "ASO_HOME" page
-#   And user clicks on one of the category and navigates to LOne 
-#	And user clicks on one of the subcategory and navigates to LTwo 
-#	And user is able to see the product category name in section title 
-#	And user clicks on one of the product category and navigates to LThree  
-#	Then User is navigated to pdp page 
-#	Then user click on Add to Cart Button 
-#	Then user is navigated to Add to cart Notification popup 
-#	Then Verify below Sub/Main Module of Cart Page
-#	|#user verify ShipToStore |
-#	|InStorePickup_FREE_radioBtn |
-#	|#Change location pending|
+   @R2_Web @R2_Regression  @KER-3143 @ZYP_Cart_K3143-8161 @CR-RKA
+   Scenario: Verify if user "Pick Up In Store" location must display the store location selected for unauthenticated
+   Given user launches the browser and navigates to "ASO_HOME" page
+   And user clicks on one of the category and navigates to LOne 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree  
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	Then Verify below Sub/Main Module of Cart Page
+	|#user verify ShipToStore |
+	|InStorePickup_FREE_radioBtn |
+	|#Change location pending|
 
-#@R2_Web @R2_Regression  @KER-3143 @ZYP_Cart_K3143-8162 @CR-RKA
-#Scenario: Verify if cart has one or more common item(s), the cart should show single
-#Given user launches the browser and navigates to "ASO_HOME" page
-#And user clicks on one of the category and navigates to LOne 
-#	And user clicks on one of the subcategory and navigates to LTwo 
-#	And user is able to see the product category name in section title 
-#	And user clicks on one of the product category and navigates to LThree  
-#	Then User is navigated to pdp page 
-#	Then user click on Add to Cart Button 
-#	Then user is navigated to Add to cart Notification popup 
-#	And user will click on View Cart button
- #   And user clicks on one of the category and navigates to LOne 
-#	And user clicks on one of the subcategory and navigates to LTwo 
-#	And user is able to see the product category name in section title 
-#	And user clicks on one of the product category and navigates to LThree  
-#	Then User is navigated to pdp page 
-#	Then user click on Add to Cart Button 
- #	And user will click on View Cart button
-#	Then Verify below Sub/Main Module of Cart Page
-#	|# Verify total item  in Cart page |
-#	|Items_txt|
+@R2_Web @R2_Regression  @KER-3143 @ZYP_Cart_K3143-8162 @CR-RKA
+Scenario: Verify if cart has one or more common item(s), the cart should show single
+Given user launches the browser and navigates to "ASO_HOME" page
+And user clicks on one of the category and navigates to LOne 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree  
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button
+    And user clicks on one of the category and navigates to LOne 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree  
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+ 	And user will click on View Cart button
+	Then Verify below Sub/Main Module of Cart Page
+	|# Verify total item  in Cart page |
+	|Items_txt|
 
-#@R2_Web @R2_Regression  @KER-3143 @ZYP_Cart_K3143-8163 @CR-RKA
-#Scenario: Verify if one or more item(s) from my previously added session is deleted or removed from catalog, the user should not see those as part of merged cart
-#Given user launches the browser and navigates to "ASO_HOME" page
-#And user clicks on one of the category and navigates to LOne 
-#	And user clicks on one of the subcategory and navigates to LTwo 
-#	And user is able to see the product category name in section title 
-#	And user clicks on one of the product category and navigates to LThree  
-#	Then User is navigated to pdp page 
-#	Then user click on Add to Cart Button 
-#	Then user is navigated to Add to cart Notification popup 
-#	And user will click on View Cart button	
-#	Then user will empty the cart if product is in cart
-#	And user clicks on one of the category and navigates to LOne 
-#	And user clicks on one of the subcategory and navigates to LTwo 
-#	And user is able to see the product category name in section title 
-#	And user clicks on one of the product category and navigates to LThree  
-#	Then User is navigated to pdp page 
-#	Then user click on Add to Cart Button 
-#	Then user is navigated to Add to cart Notification popup 
-#	And user will click on View Cart button
-#	Then Verify below Sub/Main Module of Cart Page
-#	|# Verify total item  in Cart page |
+@R2_Web @R2_Regression  @KER-3143 @ZYP_Cart_K3143-8163 @CR-RKA
+Scenario: Verify if one or more item(s) from my previously added session is deleted or removed from catalog, the user should not see those as part of merged cart
+Given user launches the browser and navigates to "ASO_HOME" page
+And user clicks on one of the category and navigates to LOne 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree  
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button	
+	Then user will empty the cart if product is in cart
+	And user clicks on one of the category and navigates to LOne 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree  
+	Then User is navigated to pdp page 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button
+	Then Verify below Sub/Main Module of Cart Page
+	|# Verify total item  in Cart page |
 #	|Items_txt|
-	
+#	
  

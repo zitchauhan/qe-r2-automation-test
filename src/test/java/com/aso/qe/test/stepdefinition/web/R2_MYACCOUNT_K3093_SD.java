@@ -141,4 +141,10 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 	public void user_fill_the_Existing_gift_card_number_and_pin() throws Throwable {
 	  
 	}
+	
+	@Then("^user click on Plus icon add new gift card$")
+	public void user_click_on_Plus_icon_add_new_gift_card() throws Throwable {
+	    clickOnButton(myAccountPo.btnAddGiftCardPlusIcon);
+	}
+
 }
