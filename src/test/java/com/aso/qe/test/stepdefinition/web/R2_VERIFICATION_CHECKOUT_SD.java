@@ -172,6 +172,11 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2CheckoutPo.txtTotal));
 				else if (currentElement.equalsIgnoreCase("Total_txt"))
 					assertTrue(isDisplayed(r2CheckoutPo.Total_txt));
+				else if (currentElement.equalsIgnoreCase("GiftCards_txt"))
+					assertTrue(isDisplayed(r2CheckoutPo.giftCards_txt));
+				else if (currentElement.equalsIgnoreCase("GiftCardsPrice_txt"))
+					assertTrue(isDisplayed(r2CheckoutPo.giftCardsPrice_txt));
+				
 				
 				//*****ITems under Order Summary (Start)
 				

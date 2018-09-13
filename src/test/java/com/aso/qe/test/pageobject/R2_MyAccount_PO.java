@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import com.aso.qe.framework.common.CommonActionHelper;
 
 public class R2_MyAccount_PO extends CommonActionHelper {
+	
 
 	/**************** START LOCAL OBJETCS AND DECLARATIONS ***********************/
 
@@ -640,7 +641,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 		
 	}
 	
-
+	
 	/***************************** END METHODS *********************************/
 
 }

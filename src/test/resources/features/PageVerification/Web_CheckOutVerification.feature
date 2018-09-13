@@ -86,6 +86,8 @@ Scenario: Verify Checkout for Web
 		|TotalDiscountPrice_Txt|
 		|Total_price|
 		|Total_txt|
+		|giftCards_txt|
+		|giftCardsPrice_txt|
 		
 		|#%%%%%  ITems under Order Summary  %%%%%|
 		|Item_Txt|

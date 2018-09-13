@@ -9,7 +9,9 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class R2_CHECKOUT_K3168_SD extends CommonActionHelper {
 	R2_CheckOut_PO r2CheckOutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
@@ -27,6 +29,7 @@ public class R2_CHECKOUT_K3168_SD extends CommonActionHelper {
 	}
 
 	@Then("^user clicks on the submit button$")
+	@When("^user clicks on Review order button on checkout page$")
 	public void user_clicks_on_the_submit_button() throws Throwable {
 		assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 	}

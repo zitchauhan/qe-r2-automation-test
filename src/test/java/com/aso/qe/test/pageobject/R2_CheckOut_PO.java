@@ -375,6 +375,11 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath = "//*[text()= 'Total']/following-sibling::div[1]")public WebElement txtTotal;//Total_price
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[text()='Total']")public WebElement Total_txt;
 		
+		@FindBy(xpath = "//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Gift Card')]")public WebElement giftCards_txt;
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Gift Card')]/following-sibling::*")public WebElement giftCardsPrice_txt;
+		
+		
+		
 		      //*****ITems under Order Summary (Start)
 		
 		@FindBy(xpath="//*[@data-auid='facetdrawerundefined']//*[contains(text(),'Items')]")public WebElement txtItems;//Item_Txt
