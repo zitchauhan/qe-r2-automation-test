@@ -43,13 +43,14 @@ Feature: Verify Order API endpoint services
   Scenario: TC_1 -Verify the Order details with SignIn user Json Response Details
     Given "OrderUrl" endpoint for order details
     Then read the API json response
-    
-    
-    
+
+  @All-R2 @C1-Order @C2-AddShippingAddres @api @R2_AAST-04 @CR-RT @ZYP_AddShippingAddress_13550
+  Scenario: TC_7 - Add the Shipping Address and validate the Schema and response details
+    Given "OrderUrl" by "/shipping" endpoint with "AddShippingAddressRequest" for Add shipping Address of Order profile
+    Then Verify response status code as 200
 
   @All-R2 @C1-Order @C2-RemovePromoCode @api @R2_AAST-05 @CR-VK @ZYP_Order_RemovePromoCode_12280
   Scenario: TC_5 - Remove a PromoCode from an Order
     Given "OrderUrl" endpoint for removing "/promocode/" from an Order
     Then Verify response status code as 204
-
     # for delete their is no schema and if there is no schema no required field 
