@@ -1,6 +1,7 @@
 package com.aso.qe.test.pageobject;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -623,7 +624,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
        @FindBy(xpath = "//*[text()='Credit Card']") public WebElement txtCreditCard;
        @FindBy(xpath = "//*[@id='PayPal']") public WebElement rdbtnPayPal;
        @FindBy(xpath = "//*[text()='PayPal']") public WebElement txtPaypal;
-       @FindBy(xpath = "//*[@id='gpay']") public WebElement rdbtnGooglePay;
+       @FindBy(xpath = "//*[@id='gpay'] | //*[@id='GooglePay']") public WebElement rdbtnGooglePay;
        @FindBy(xpath = "//*[text()='Google Pay']") public WebElement txtGooglePay;
        @FindBy(xpath = "//*[text()='Credit Card Number']") public WebElement txtCreditCardHeading;
        @FindBy(xpath = "//*[@id='creditcardField']") public WebElement txtCreditCardInput;
@@ -665,7 +666,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 
 	public void verifyEnterdCardNumber(String cardNumber) {
 
-		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[@id='creditcardField' and contains(@value,"+webPropHelper.getTestDataProperty(cardNumber)+")]")))); 
+		String cvv = txtCreditCardInput.getAttribute("value");
+		assertFalse(cvv.isEmpty());
+		logger.debug("Credit card number entered in the Field "+cvv);
 	}
 
 
@@ -719,6 +722,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	}
 	
 	 // To be updated by Anuj
+	   /**AG KER-3130 Starts**************************************/
+    
+	@FindBy(xpath="//*[text()='Unrecognized expiration date']")public WebElement unrecognizedExpirationDate_Txt; 
+    
+    
+    /**AG KER-3130 Ends**************************************/
+		 // To be updated by Anuj
 	   /**AG KER-3130 Starts**************************************/
     
     @FindBy(xpath = "//*[@id='billingFirstName']//following-sibling::*[contains(text(),'Please')]") public WebElement txtBillingFirstNameErrorMsg;
