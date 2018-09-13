@@ -1,6 +1,6 @@
 Feature: [Mobile] Verify Product Blade in Cart 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2939 @ZYP-K2939_9615_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2939 @ZYP_CART_K2939_9615 @CR-AKK 
 Scenario: To Verify Image for selected SKU is be displayed on product blade for  multi-variant product. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -14,7 +14,7 @@ Scenario: To Verify Image for selected SKU is be displayed on product blade for 
 	|CartProductName_Link   |
 	Then User is able to see the selected variant image as thumbnail 
 
-	@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8071_M @CR-AKK 
+	@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8071 @CR-AKK 
 Scenario: To view details specific to an item in the cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -41,7 +41,7 @@ Scenario: To view details specific to an item in the cart
 	Then user verify BOPIS radio button 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8077_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8077 @CR-AKK 
 Scenario:
 To verify Shipping radio button - Authenticated user With store selected in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -63,7 +63,7 @@ To verify Shipping radio button - Authenticated user With store selected in My A
 	|# user will verify if Shipping date information is displayed |
 	|EstArrival_txt|
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8080_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8080 @CR-AKK 
 Scenario: Desktop - To verify Quantity input field 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -81,7 +81,7 @@ Scenario: Desktop - To verify Quantity input field
 		|EstimatedTaxes_txt|
 	And user should be able to see the increased quantity and Price in Cart Order summary 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8073_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8073 @CR-AKK 
 Scenario: To Verify Thumbnail Image 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -90,11 +90,12 @@ Scenario: To Verify Thumbnail Image
 	And user click on Add to cart button
 	And user will click on View Cart button
 	Then Verify below Sub/Main Module of Cart Page  
+	|# Verify following elements in Cart page "Your Cart item details "|
 	|CartProductName_Link   | 
 	And user click on the product image in cart page 
 	And User is navigated to pdp page 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8074_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8074 @CR-AKK 
 Scenario: To verify Product name dynamic linking 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -102,12 +103,13 @@ Scenario: To verify Product name dynamic linking
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button
 	And user will click on View Cart button 
-	Then Verify below Sub/Main Module of Cart Page  
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page "Your Cart item details "| 
 	|CartProductName_Link   |
 	When user click on the product name in cart page
 	Then User is navigated to pdp page 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8082_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8082 @CR-AKK 
 Scenario: To verify Remove Link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -120,7 +122,7 @@ Scenario: To verify Remove Link
 	When click the Remove Quantity link 
 	Then verify item is removed from the cart 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8078_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8078 @CR-AKK 
 Scenario: To verify In-store Pick up radio button - with My Store info on My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -130,12 +132,13 @@ Scenario: To verify In-store Pick up radio button - with My Store info on My Acc
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Your Cart item details "|
    |InStorePickup_FREE_radioBtn |
 	And user will verify Shipping radio button is deselected 
 	And user will verify if in-stores information is hidden  
 	Then verify user can begin checkout 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8075_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8075 @CR-AKK 
 Scenario: To verify Shipping radio button - Unauthenticated user 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
@@ -145,12 +148,13 @@ Scenario: To verify Shipping radio button - Unauthenticated user
 	And user will click on View Cart button 
 	And Shipping radio button is selected by default 
 	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Your Cart item details "|
 	|ShipToMe_radioBtn|
 	And in-stores radio button is deselected 
 	And in-stores information is hided 
 	Then Shipping date information is displayed 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8076_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8076 @CR-AKK 
 Scenario: To verify Shipping radio button - Authenticated user With out store selected in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -165,12 +169,13 @@ Scenario: To verify Shipping radio button - Authenticated user With out store se
 	And user will click on View Cart button 
 	And Shipping radio button is selected by default 
 	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Your Cart item details "|
 	|ShipToMe_radioBtn|
 	And in-stores radio button is deselected 
 	Then in-stores information is hided 
 	And Shipping date information is displayed 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Lowest @C-Cart @KER-2939 @ZYP_CART_K2939-8085_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Lowest @C-Cart @KER-2939 @ZYP_CART_K2939-8085 @CR-AKK 
 Scenario: To verify Est.Arrival Tool Tip 
 	Given user launches the browser and navigates to "ASO_HOME" page 
     And User clicks on the burger menu
@@ -183,7 +188,7 @@ Scenario: To verify Est.Arrival Tool Tip
 	|# user verify the Est.Arrival Tool Tip is present|
 	|toolTip_icon|
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8081_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8081 @CR-AKK 
 Scenario: To verify Quantity input field 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 And User clicks on the burger menu
@@ -194,9 +199,10 @@ Scenario: To verify Quantity input field
 	When user selects the Quantity field 
 	And verfiy quantiy field is activated 
 	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page "Your Cart item details "|
 	|Quantity_txt|
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8072_M @CR-AKK 	 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8072 @CR-AKK 	 
 Scenario: To "Move to Wish list" from Cart 
 Given user launches the browser and navigates to "ASO_HOME" page
    And User clicks on the burger menu 
@@ -216,7 +222,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|AddToWishList_btn|
 	|ContinueShopping_btn|
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8079_M @CR-AKK 	 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8079 @CR-AKK 	 
 	Scenario: To verify In-store Pick up radio button - without My Store info on My Account
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu  
@@ -233,10 +239,11 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user will verify Shipping radio button is deselected 
 	And user will verify if in-stores information is hidden 
 	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Your Cart item details "|
    |InStorePickup_FREE_radioBtn |
 	And verify user can begin checkout 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12508_M @CR-AKK 	
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12508 @CR-AKK 	
 Scenario: Verify Product name dynamic display to product link
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -251,7 +258,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|CartProductName_Link |
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8084_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8084 @CR-AKK 
 Scenario: To verify SOF pick up message	
 Given user launches the browser and navigates to "ASO_HOME" page 
 And User clicks on the burger menu
@@ -269,7 +276,7 @@ And User clicks on the burger menu
 	|ShipToStore_radioBtn|
 	
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8083_M @CR-AKK	 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8083 @CR-AKK	 
 Scenario: To verify Disclaimer message
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -280,7 +287,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
     Then user views a Disclaimer message
     When clicks on Read More Link
     
-    @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12572_M @CR-AKK 
+    @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12572 @CR-AKK 
 Scenario: Verify the Product blade where In-store pick is not available
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -292,7 +299,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then in Product blade, radio button against In-store Pick-up should be suppressed
 	And Ship to Me radio button should be selected by default
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12573_M @CR-AKK 	
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12573 @CR-AKK 	
 Scenario: Verify the Product blade where shipping is not available
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -305,7 +312,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then in Product blade, radio button against Ship to Me should be suppressed
 	And In-store pickup radio button should be selected by default
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12502_M @CR-AKK	
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12502 @CR-AKK	
 Scenario: To Verify that Move to Wishlist Link is not displayed for Gift Card(s) and Bundle Item(s). 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu

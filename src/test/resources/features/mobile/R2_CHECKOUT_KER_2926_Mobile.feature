@@ -1,6 +1,6 @@
 Feature: [Mobile] My Account, Address Book 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100_M @CR-AKK  
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @CR-AKK  
 Scenario: To Edit cart items from Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -16,7 +16,7 @@ Scenario: To Edit cart items from Order summary
     |# Following Error Message should show on the page|
      |CartPage|
 	
-@R2_Mobile  @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098_M @CR-AKK 
+@R2_Mobile  @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098 @CR-AKK 
 	Scenario: To view the Order Summary details on the Check out 
 		Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -34,7 +34,7 @@ Scenario: To Edit cart items from Order summary
 		|TotalDiscount_Txt|
 		
 		
-@R2_Mobile  @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8101_M @CR-AKK
+@R2_Mobile  @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8101 @CR-AKK
 Scenario: To Remove cart items from Order summary
 		Given user launches the browser and navigates to "ASO_HOME" page  
 		And User clicks on the burger menu
@@ -55,7 +55,7 @@ Scenario: To Remove cart items from Order summary
 		
 
 
-@R2_Mobile  @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8099_M @CR-AKK	
+@R2_Mobile  @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8099 @CR-AKK	
 Scenario: To view the item summary with number of items
 		Given user launches the browser and navigates to "ASO_HOME" page  
 		And User clicks on the burger menu
@@ -70,7 +70,7 @@ Scenario: To view the item summary with number of items
         |# user verifies item summary of Shipping items|
 		|DetailOrderSummary_txt|
 		
-@R2_Mobile  @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-9685_M @CR-AKK			
+@R2_Mobile  @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-9685 @CR-AKK			
 Scenario: Verify To view the item summary with number of pick up items
 		Given user launches the browser and navigates to "ASO_HOME" page  
 		And User clicks on the burger menu

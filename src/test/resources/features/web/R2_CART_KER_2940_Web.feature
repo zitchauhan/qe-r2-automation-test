@@ -13,12 +13,16 @@ Feature: Verify Itemized Subtotal in Cart
 	Then User clicks on ASO Logo and should be navigated to Home Page
 	And User navigates to LThree 
 	Then user clicks on the product card and navigates to PDP
-	Then user click on Add to Cart Button
+	Then user click on Add to Cart Button    
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And user navigate to Cart page 
-	Then verify price of each item in the cart
-	And verify the price format each item is $XX.XX 
+	Then verify price of each item in the cart 
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|
+	|FirstQuantityPrice_Txt|
+	|SecondQuantityPrice_Txt|  
+	And verify the price format each item is $XX.XX  
 	
 		
 	@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8054 @CR-AKK
@@ -42,6 +46,10 @@ Feature: Verify Itemized Subtotal in Cart
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And user navigate to Cart page 
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|
+	|FirstQuantityPrice_Txt|
+	|SecondQuantityPrice_Txt|  
 	Then verify that itemized subtotal for each item in cart is displayed  
 	
 
@@ -62,6 +70,9 @@ Feature: Verify Itemized Subtotal in Cart
 	And user view and Applied Promotions/Discounts "Promocode"
 	And verify Promo code discount is applied 
 	And verify that consolidated amount for all promotions (except shipping) is applied
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|
+	|Total_txt|
 	
 	
 	
@@ -78,8 +89,11 @@ Feature: Verify Itemized Subtotal in Cart
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user view and Applied Promotions/Discounts "PromoCode"
-	And verify Military code discount is applied correctly 
-	
+	And verify Military code discount is applied correctly  
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|
+	|Total_txt|
+	  
 	
 	
 
@@ -121,6 +135,9 @@ Feature: Verify Itemized Subtotal in Cart
 	And user will click on View Cart button
 	And user navigate to Cart page 
 	And Verify estimated taxes on the cart page 
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|
+	|EstimatedTaxes_txt|
 	And the Estimated Taxes are in $XX.XX format
 	
 	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8063 @CR-AKK
@@ -142,6 +159,9 @@ Feature: Verify Itemized Subtotal in Cart
 	And user will click on View Cart button
 	And user navigate to Cart page
 	And Verify Total for all items on the cart page 
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|
+	|Total_txt|  
 	And the Total is in $XX.XX format 
 
 	@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2940 @ZYP_CART_K2940-8064 @CR-AKK

@@ -114,7 +114,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then Verify below Sub/Main Module of Checkout Page
 	|# Me+Alternate pick person should get selected |
 	|MePickUp_Drpdwn|
-	Then Alternate pick person option should not be available
+	
 		
 	
 	

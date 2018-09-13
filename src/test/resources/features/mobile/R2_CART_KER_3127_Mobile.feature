@@ -1,6 +1,6 @@
 Feature: [Mobile]Verify order summary on cart page 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-3127 @ZYP_CART_K3127-8168_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-3127 @ZYP_CART_K3127-8168 @CR-AKK 
 Scenario: Verify if user should be able to checkout if there are no errors 
 		Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -13,7 +13,7 @@ Scenario: Verify if user should be able to checkout if there are no errors
 	|checkOutYourCart_Btn|
 	And user click on checkout button in Cart page 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-3127 @ZYP_CART_K3127-8166_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-3127 @ZYP_CART_K3127-8166 @CR-AKK 
 Scenario:
 Verify if user should be able to apply or remove a promotion code 
 Given user launches the browser and navigates to "ASO_HOME" page 
@@ -31,7 +31,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on Remove Promo code link 
 	Then Promo code is Removed 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8169_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8169 @CR-AKK 
 Scenario: To Verify if user is able to click on the Shipping policy link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -47,7 +47,7 @@ Scenario: To Verify if user is able to click on the Shipping policy link
 	|# User is navigated to Shipping Charges page|
 	|ShippingCharges_header|
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8170_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8170 @CR-AKK 
 Scenario: To Verify if user is able to click on the Return policy link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -63,7 +63,7 @@ Scenario: To Verify if user is able to click on the Return policy link
 	|# User is navigated to Return Policy page |
 	|ReturnPolicy_txt|
 	
-@R2_Mobile @R2_Regression @R2_All @P-Lowest @C-Cart @KER-3127 @ZYP_CART_K3127-8171_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Lowest @C-Cart @KER-3127 @ZYP_CART_K3127-8171 @CR-AKK 
 Scenario: verify if user is able to view the accepted Payments Icons 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -83,7 +83,7 @@ Scenario: verify if user is able to view the accepted Payments Icons
 		|AmericanExpress_img|
 		|Discover_img|
 		
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-3127 @ZYP_CART_K3127-8165_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-3127 @ZYP_CART_K3127-8165 @CR-AKK 
 Scenario: Verify if user is  able to view following elements in order summary of cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -100,7 +100,7 @@ Scenario: Verify if user is  able to view following elements in order summary of
 	And user view and Applied Promotions/Discounts "OrderLevelPromocode" 
 	Then user verifiy Order Total 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8167_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8167 @CR-AKK 
 Scenario: Verify if  user should be able to click on PayPal checkout if applicable 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

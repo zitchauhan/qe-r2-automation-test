@@ -58,9 +58,4 @@ public class R2_CHECKOUT_K4764_SD extends CommonActionHelper {
 		Thread.sleep(3000);
 	}
 
-	@Then("^Alternate pick person option should not be available$")
-	public void alternate_pick_person_option_should_not_be_available() throws Throwable {
-
-	}
-
 }

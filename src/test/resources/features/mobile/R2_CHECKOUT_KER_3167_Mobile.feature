@@ -1,6 +1,6 @@
 Feature: To verify Remove Promo code in Order Summary 
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3167 @ZYP_CHECKOUT_K3167-8094_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3167 @ZYP_CHECKOUT_K3167-8094 @CR-AKK 
 Scenario: To verify Remove Promo code in Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -18,14 +18,11 @@ Scenario: To verify Remove Promo code in Order Summary
 	And User clicks on Remove Promo code link 
 	Then Promo code is Removed
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3167 @ZYP_CHECKOUT_K3167-8093_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3167 @ZYP_CHECKOUT_K3167-8093 @CR-AKK 
 Scenario: To verify Promo code applied in Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User navigates to LThree 
+	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -35,7 +32,7 @@ Scenario: To verify Promo code applied in Order Summary
 	|# Then user is displayed Promo code XXXXX applied |
 	|Discount_Txt|
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3167 @ZYP_CHECKOUT_K3167-8095_M @CR-AKK	
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3167 @ZYP_CHECKOUT_K3167-8095 @CR-AKK	
 Scenario: To verify Promo code Removed in Order Summary
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

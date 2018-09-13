@@ -92,7 +92,8 @@ Scenario: To Verify Thumbnail Image
 	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
-	Then Verify below Sub/Main Module of Cart Page  
+	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Your Cart item details "|  
 	|CartProductName_Link   |
 	And user click on the product image in cart page 
 	And User is navigated to pdp page 
@@ -107,6 +108,7 @@ Scenario: To verify Product name dynamic linking
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page  
+	|# Verify following elements in Cart page "Your Cart item details "|
 	|CartProductName_Link   |
 	When user click on the product name in cart page 
 	Then User is navigated to pdp page 
@@ -121,6 +123,7 @@ Scenario: To verify Remove Link
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button
 	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page "Your Cart item details "|
 	|RemoveFromCart_Btn| 
 	When click the Remove Quantity link 
 	Then verify item is removed from the cart 
@@ -137,6 +140,7 @@ Scenario: To verify In-store Pick up radio button - with My Store info on My Acc
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Your Cart item details "|
 	|InStorePickup_FREE_radioBtn |
 	And user will verify Shipping radio button is deselected 
 	And user will verify if in-stores information is hidden  
@@ -153,6 +157,7 @@ Scenario: To verify Shipping radio button - Unauthenticated user
 	And user will click on View Cart button 
 	And Shipping radio button is selected by default 
 	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Your Cart item details "|
 	|ShipToMe_radioBtn|
 	And in-stores radio button is deselected 
 	And in-stores information is hided 
@@ -173,6 +178,7 @@ Scenario: To verify Shipping radio button - Authenticated user With out store se
 	And user will click on View Cart button 
 	And Shipping radio button is selected by default 
 	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Your Cart item details "|
 	|ShipToMe_radioBtn|
 	And in-stores radio button is deselected 
 	And in-stores information is hided 
@@ -205,6 +211,7 @@ Scenario: To verify Quantity input field
 	When user selects the Quantity field 
 	And verfiy quantiy field is activated
 	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page "Your Cart item details "|
 	|Quantity_txt| 
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8072 @CR-AKK 	 
@@ -244,6 +251,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user will verify Shipping radio button is deselected 
 	And user will verify if in-stores information is hidden 
 	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Your Cart item details "|
    |InStorePickup_FREE_radioBtn |
 	And verify user can begin checkout 
 

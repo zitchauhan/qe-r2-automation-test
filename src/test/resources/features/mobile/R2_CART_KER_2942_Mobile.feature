@@ -1,6 +1,6 @@
 Feature: [Mobile] Verify Quantity Adjustment in Cart 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8044_M @CR-AKK
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @CR-AKK
 Scenario: Verify add quantity adjustment in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -18,7 +18,7 @@ Scenario: Verify add quantity adjustment in the Cart Page
 		|SubTotal_txt|
 	And user should be able to see the increased quantity and Price in Cart Order summary  
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-8045_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-8045 @CR-AKK 
 Scenario: Verify cart gets recalculated on applying promotions and updated discounts displayed on Cart Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -38,7 +38,7 @@ Scenario: Verify cart gets recalculated on applying promotions and updated disco
 	|# Then user is displayed Promo code XXXXX applied |
 	|Promocode_Txt|
 	
-	@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8047_M @CR-AKK 
+	@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-AKK 
 Scenario: Verify Remove link in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -53,7 +53,7 @@ Scenario: Verify Remove link in the Cart Page
 	|#verify the Remove Quantity link |
 	|RemoveFromCart_Btn|
 	
-	@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-8049_M @CR-AKK 
+	@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-8049 @CR-AKK 
 Scenario: Verify Quantity Zero in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -75,7 +75,7 @@ Scenario: Verify Quantity Zero in the Cart Page
 	|# Verify cart is empty|
 	|YourCart_Header|
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-9357_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-9357 @CR-AKK 
 Scenario: Verify system does inventory check for product item added more than available 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -102,7 +102,7 @@ Scenario: Verify Alphanumeric Quantity in the Cart Page
 	When enter the "AlphanumericQuantity" to X 
 	Then user should not be allowed to enter any non-numeric value in the input 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8046_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8046 @CR-AKK 
 Scenario: Verify Reduce quantity adjustment in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -116,7 +116,7 @@ Scenario: Verify Reduce quantity adjustment in the Cart Page
 	When enter the "EnterQuantityLessThenTwo" to X 
 	Then Order Summary should get recalculated
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8048_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8048 @CR-AKK 
 Scenario:  Verify Remove quantity message in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -135,7 +135,7 @@ Scenario:  Verify Remove quantity message in the Cart Page
     |# verify the remove quantity message|
     |Undo|
     
-  @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6845_M @CR-AKK 	
+  @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6845 @CR-AKK 	
 Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -148,7 +148,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then verify the Quantity is numeric value
 	
 	
-	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6849_M @CR-AKK 	
+	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6849 @CR-AKK 	
 Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -160,7 +160,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When enter the "EnterQuantityAlphaNumeric" to X 	 
 	Then verify the Quantity is not allow alphanumeric
 	
-	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6861_M @CR-AKK 
+	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6861 @CR-AKK 
 Scenario: To verify Reduce Quantity Adjustment - Via Open Field
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -174,7 +174,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When enter the "EnterQuantityLessThenTwo" to X 	
 	Then verify the Quantity is numeric value
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6864_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6864 @CR-AKK 
 Scenario:  To verify Remove link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -189,7 +189,7 @@ Scenario:  To verify Remove link
 
 
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6866_M @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6866 @CR-AKK 
 Scenario:  To verify Remove link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -203,7 +203,7 @@ Scenario:  To verify Remove link
     |# verify the remove quantity message|
     |Undo|
     
-   @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-6867_M @CR-AKK 
+   @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-6867 @CR-AKK 
 Scenario: Verify Quantity Zero in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -230,7 +230,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then verify the Quantity is updated
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-12549_M @CR-AKK	
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-12549 @CR-AKK	
 Scenario: Verify the user gets the error message if Product has limited stock available
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

@@ -1,7 +1,7 @@
 Feature: BOPIS Alternate Pickup Person
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10820_M @CR-AKK
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10820 @CR-AKK
 Scenario: Verify customer must be able to select and Me + Alternate Pickup Person from Who Is Picking Up Dropdown during checkout
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -18,7 +18,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|# Me+Alternate pick person should get selected |
 	|MePickUp_Drpdwn|
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10821_M @CR-AKK	
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10821 @CR-AKK	
  Scenario: Verify after selecting Me + Alternate Pickup Person during checkout Alternate Pickup Person fields must display
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -38,7 +38,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|Alternate's Email Address|
 		|Alternate's Phone Number |
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10822_M @CR-AKK	
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10822 @CR-AKK	
  Scenario: Verify after selecting Me + Alternate Pickup Person during checkout Alternate Pickup Person fields must display
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -64,7 +64,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user click on confirm button
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10823_M @CR-AKK	
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10823 @CR-AKK	
 Scenario: Verify Mandatory fields for alternative pick up person details
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -88,7 +88,7 @@ Scenario: Verify Mandatory fields for alternative pick up person details
 	|# verify the error message |
 	|ErrorMsgRequired|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10831_M @CR-AKK		
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10831 @CR-AKK		
 Scenario: Verify No alternate pickup person may be entered for restricted products
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -101,10 +101,10 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And  user will click on Checkout button and navigates to Checkout page
 	When user click on edit shipping pickup
 	And user select me + alternate pickup person
-	Then Verify below Sub/Main Module of Checkout Page
+	Then Verify below Sub/Main Module of Checkout Page   
 	|# Me+Alternate pick person should get selected |
 	|MePickUp_Drpdwn|
-	Then Alternate pick person option should not be available
-		
+
+		 
 	
 	
