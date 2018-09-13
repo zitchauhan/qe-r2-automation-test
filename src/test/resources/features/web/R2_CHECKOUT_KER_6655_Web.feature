@@ -122,20 +122,51 @@ Scenario: Verify the Payment details modal if user does not have saved Shipping 
     |Shipping_City_txt|
     |Shipping_State_txt|
     |Signup_Cbx|
-    |Default_Payment_Option_btn|        
+    |Default_Payment_Option_btn|
+    
 
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12346 @CR-MS
+Scenario: Verify Enable Buy Now is applicable for Baits
+   Given user launches the browser and navigates to "ASO_HOME" page
+    And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	When user clicks on one of the category and navigates to LOne SOF
+    Then user clicks on one of the subcategory and navigates to LTwo Baits
+    Then user clicks on one of the product category and navigates to LThree Baits
+    Then Verify below Sub/Main Module of PDP
+    |#Verify following elements in PDP modal popup|
+    |Default_Payment_Option_btn|
+    
+#Defect-KER-13488
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12348 @CR-MS
 Scenario: Verify Enable Buy Now is not applicable for following items SOF Age Restriction Items Item(s) having only In store Inventory while loading PDP
-    Given user launches the browser and navigates to "ASO_HOME" page
+   Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "emailWithOutPhonenumber" 
+	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	When user clicks on one of the category and navigates to LOne SOF
     Then user clicks on one of the subcategory and navigates to LTwo SOF
     Then user clicks on one of the product category and navigates to LThree SOF
-    Then user should not able to see the Enable BUY NOW button on the PDP
-    
+    Then user should not able to see the Enable BUY NOW button on the PDP    
+          
+
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12346 @CR-MS
+Scenario: Verify Enable Buy Now is applicable for Baits
+   Given user launches the browser and navigates to "ASO_HOME" page
+    And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	When user clicks on one of the category and navigates to LOne SOF
+    Then user clicks on one of the subcategory and navigates to LTwo Baits
+    Then user clicks on one of the product category and navigates to LThree Baits
+    Then Verify below Sub/Main Module of PDP
+    |#Verify following elements in PDP modal popup|
+    |Default_Payment_Option_btn|
+   
 
 
 

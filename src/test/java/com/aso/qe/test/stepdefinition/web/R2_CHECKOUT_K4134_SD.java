@@ -14,17 +14,20 @@ import cucumber.api.java.en.Then;
 public class R2_CHECKOUT_K4134_SD extends CommonActionHelper {
 	
 	R2_CheckOut_PO r2CheckOutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
+	String expPhoneNumber;
 	
 	@Then("^user enter Phone number \"(.*?)\" in Billing address$")
 	public void user_enter_Phone_number_in_Billing_address(String arg1) throws Throwable {
 		setInputText(r2CheckOutPo.PhoneNumber_Input, webPropHelper.getTestDataProperty(arg1));
-		String expPhoneNumber=r2CheckOutPo.PhoneNumber_Input.getAttribute("value");
+		expPhoneNumber = r2CheckOutPo.PhoneNumber_Input.getAttribute("value");
 		assertTrue(expPhoneNumber.equals(webPropHelper.getTestDataProperty(arg1)));
 	}
-	
+
 	@Then("^user views the phone number given in the My account saved Billing address$")
-	public void user_views_the_phone_number_given_in_the_My_account_saved_Billing_address() throws Throwable {		
-		
+	public void user_views_the_phone_number_given_in_the_My_account_saved_Billing_address() throws Throwable {
+		expPhoneNumber = r2CheckOutPo.PhoneNumber_Input.getAttribute("value");
+		assertFalse(expPhoneNumber.isEmpty());
+
 	}
 	
 	@Then("^user can enter the alternative person phone number \"(.*?)\"$")

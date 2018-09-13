@@ -146,4 +146,22 @@ public class R2_R1_Fun_PO extends CommonActionHelper
    //KER-5892  CR-RKA
    @FindBy(xpath="//*[@data-auid='btncheckout']")public WebElement checkoutBtnATC;
    //KER-5892  CR-RKA end
+   
+   // Start KER-6655-MS
+   @FindBy(xpath = "//*[@data-auid='shopByCategory_tiles']//*[@data-auid='shopByCategory_2']")
+	public WebElement Baits_secCategory_CLP;//Area L2
+   
+   @FindBy(xpath = "//*[@data-auid='shopByCategory_tiles']//*[@data-auid='shopByCategory_6']")
+	public WebElement Baits_productPLP;// Area L3
+   
+   @FindBy(xpath = "//*[@data-auid='level3Category-Fishing_m']")
+  	public WebElement Baits_secCategory_CLP_m;//Area L2
+   
+    @FindBy(xpath = "//*[@data-auid='go-to-Fishing_m']")
+  	public WebElement Baits_productPLP_m;// Area L3
+    
+    @FindBy(xpath = "//*[contains(text(),'Baits')]")
+  	public WebElement Baits_productPLP1_m;
+     
+   // End KER-6655-MS
 }
