@@ -143,5 +143,7 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 
    }
  //End KER-3166 CR-DPK
-   
+   //KER-5892  CR-RKA
+   @FindBy(xpath="//*[@data-auid='btncheckout']")public WebElement checkoutBtnATC;
+   //KER-5892  CR-RKA end
 }

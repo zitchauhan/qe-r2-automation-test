@@ -73,6 +73,8 @@ Feature: Debug
 		|EstimatedShippingPrice_Txt|
 		|Discount_Txt|
 		|RemovePromocode_Btn| 
+	|FirstQuantityPrice_Txt|
+		|SecondQuantityPrice_Txt| 
 		
 		|# Verify following elements in Cart page"PromoCode"|
 		|Promocode_Price_txt|

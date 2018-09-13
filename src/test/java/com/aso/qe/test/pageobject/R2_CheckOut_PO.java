@@ -418,8 +418,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[text()='Unrecognized card number']")public WebElement UnrecognizedCardNumber_Txt; 
 		@FindBy(xpath="//*[text()='Past expiration date']")public WebElement PastExpirationDate_Txt;
 		@FindBy(xpath="//*[text()='Please enter a valid security code']")public WebElement PleaseEnteRaValidSecurityCode_Txt; 
-		@FindBy(xpath="//*[contains(text(),'Visa Ending In')]")public WebElement chooseCreditcard_Dd; 
-
+		@FindBy(xpath="//*[contains(text(),'Visa ending in')]")public WebElement chooseCreditcard_Dd; 
+        @FindBy(xpath="//*[@data-auid='undefined_listOption_1']")public WebElement AddNewCreditCard_Txt;
 		//*****************Payment Method (END)
 		
 		//****************Gift Card(Start)
@@ -717,4 +717,50 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		setInputText(txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
 		setInputText(txtCVVInput,webPropHelper.getTestDataProperty("ThreeDigitCVV"));
 	}
+	
+	 // To be updated by Anuj
+	   /**AG KER-3130 Starts**************************************/
+    
+    @FindBy(xpath = "//*[@id='billingFirstName']//following-sibling::*[contains(text(),'Please')]") public WebElement txtBillingFirstNameErrorMsg;
+    @FindBy(xpath = "//*[@id='billingLastName']//following-sibling::*[contains(text(),'Please')]") public WebElement txtBillingLastNameErrorMsg;
+    @FindBy(xpath = "//*[@id='billingPhoneNumber']//following-sibling::*[contains(text(),'Please')]") public WebElement txtBillingPhoneNumberErrorMsg;
+    @FindBy(xpath = "//*[@id='billingZipCode']//following-sibling::*[contains(text(),'Please')]") public WebElement txtBillingZipCodeErrorMsg;
+    @FindBy(xpath = "//*[@id='billingCity']//following-sibling::*[contains(text(),'Required')]") public WebElement txtBillingCityErrorMsg;
+    @FindBy(xpath = "//*[@id='email']//parent::div//following-sibling::*[contains(text(),'Please')]") public WebElement txtBillingEmailAddressForOrderConfirmationErrorMsg;
+    @FindBy(xpath = "//*[@id='billingAddress1']//following-sibling::*[contains(text(),'Please')]") public WebElement txtBillingAddressErrorMsg;
+    @FindBy(xpath = "//*[@id='billingState']//following-sibling::*[contains(text(),'Required')]") public WebElement txtBillingStateErrorMsg;
+    @FindBy(xpath="//*[@id='billingAddress1']")public WebElement txtEmailAddressforOrderConfirmationInput;
+    @FindBy(xpath="//*[@data-auid='btnPlace_Order']")public WebElement btnPlaceOrderPaymentPage;
+    @FindBy(xpath = "//*[@id='billingZipCode']//following-sibling::*[contains(text(),'Invalid')]") public WebElement txtBillingZipCodeInvalidErrorMsg;
+    @FindBy(xpath = "//*[@id='email']//parent::div//following-sibling::*[contains(text(),'Enter a valid email')]") public WebElement txtBillingEmailAddressForOrderConfirmationInvalidErrorMsg;
+  
+    
+    /**AG KER-3130 Ends**************************************/
+
+    public void billingAddressErrorMsgValidation() {
+    	
+    	assertTrue(isDisplayed(txtBillingFirstNameErrorMsg));
+    	assertTrue(isDisplayed(txtBillingLastNameErrorMsg));
+    	assertTrue(isDisplayed(txtBillingPhoneNumberErrorMsg));
+    	assertTrue(isDisplayed(txtBillingZipCodeErrorMsg));
+    	assertTrue(isDisplayed(txtBillingCityErrorMsg));
+    	assertTrue(isDisplayed(txtBillingEmailAddressForOrderConfirmationErrorMsg));
+    	assertTrue(isDisplayed(txtBillingAddressErrorMsg));
+    	assertTrue(isDisplayed(txtBillingStateErrorMsg));
+    	
+    }
+	
+    public void errormMsgValidationForInvalidZipPhoneEmail() {
+    	assertTrue(isDisplayed(txtBillingZipCodeInvalidErrorMsg));
+    	assertTrue(isDisplayed(txtBillingCityErrorMsg));
+    	assertTrue(isDisplayed(txtBillingEmailAddressForOrderConfirmationInvalidErrorMsg));
+    	assertTrue(isDisplayed(txtBillingZipCodeInvalidErrorMsg));
+    	assertTrue(isDisplayed(txtBillingPhoneNumberErrorMsg));
+    
+    	
+    }
+    
+    
+ 
+    
 }

@@ -240,6 +240,8 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 						assertTrue(isDisplayed(r2CheckoutPo.PleaseEnteRaValidSecurityCode_Txt));
 					else if (currentElement.equalsIgnoreCase("ChooseCreditcard_Dd"))
 						assertTrue(isDisplayed(r2CheckoutPo.chooseCreditcard_Dd));
+					else if (currentElement.equalsIgnoreCase("AddNewCreditCard_Txt"))
+						assertTrue(isDisplayed(r2CheckoutPo.AddNewCreditCard_Txt));
 				//*****************Payment Method (END)
 					
 				//****************Gift Card(Start)	

@@ -121,6 +121,11 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 					assertTrue(isDisplayed(r2CartPo.discount_Txt));
 				else if (currentElement.equalsIgnoreCase("RemovePromocode_Btn"))
                     assertTrue(isDisplayed(r2CartPo.RemovePromocode_Btn));
+				
+				else if (currentElement.equalsIgnoreCase("FirstQuantityPrice_Txt"))
+					assertTrue(isDisplayed(r2CartPo.FirstQuantityPrice_Txt));
+				else if (currentElement.equalsIgnoreCase("SecondQuantityPrice_Txt"))
+                    assertTrue(isDisplayed(r2CartPo.SecondQuantityPrice_Txt));
 
 				
 				// Order Summary Finish

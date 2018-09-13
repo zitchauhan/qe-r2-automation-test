@@ -579,6 +579,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 		if("mobile".equalsIgnoreCase(testtype)){
 		assertTrue(clickOnButton(lnkFindAStore_M));
 		waitForElement(txtZipCode);
+		txtZipCode.clear();
 		setInputText(txtZipCode, zipCode);
 		assertTrue(clickOnButton(btnZipCode));
         assertTrue(clickOnButton(storeNames_txt));
@@ -588,6 +589,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 		{
 			assertTrue(clickOnButton(lnkFindAStore));
 			waitForElement(txtZipCode);
+			txtZipCode.clear();
 			setInputText(txtZipCode, zipCode);
 			assertTrue(clickOnButton(btnZipCode));
 	        assertTrue(clickOnButton(storeNames_txt));
@@ -671,6 +673,11 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//div[text()='Total']/../div[2]")public WebElement txtTotal;
 	@FindBy(xpath="//div[text()='Discounts']")public WebElement discount_Txt;
 	@FindBy(xpath = "//button[@data-auid='crt_btnRmPromo_0']")public WebElement RemovePromocode_Btn; 
+	@FindBy(xpath = "(//*[@data-auid='crt_qtyField'])[1]/following::*[18]")
+	public WebElement FirstQuantityPrice_Txt;
+	
+	@FindBy(xpath = "(//*[@data-auid='crt_qtyField'])[2]/following::*[18]")
+	public WebElement SecondQuantityPrice_Txt;
 	// Order Summary Finish
 	//****************************************************************************************************************
 	//Calculate Shipping (Start)

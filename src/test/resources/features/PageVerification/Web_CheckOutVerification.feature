@@ -119,6 +119,7 @@ Scenario: Verify Checkout for Web
 		|PastExpirationDate_Txt|
 		|PleaseEnteRaValidSecurityCode_Txt|
 		|ChooseCreditcard_Dd|
+		|AddNewCreditCard_Txt|
 		|#%%%%%  Gift Card  %%%%%%%%%%|
 		|Plus_GiftCard|
 		|Hide_GiftCard|
