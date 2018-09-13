@@ -184,4 +184,11 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		initiateRestPostAPICallWithoutCookies(endpoints, loadProps.getTestDataProperty(requestJson));
 	}
 	
+	@Given("^\"(.*?)\" by \"(.*?)\" with \"(.*?)\" endpoint for Cart-Update-Remove-Quantity$")
+	public void by_with_endpoint_for_Cart_Update_Remove_Quantity(String url, String extension, String requestJson) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+"PUT/"+System.getProperty("OrderId")+extension;
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestPostAPICallWithoutCookies(endpoints, requestJson);
+	}
+
 }

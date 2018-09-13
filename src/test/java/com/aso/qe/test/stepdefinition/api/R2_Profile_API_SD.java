@@ -194,4 +194,20 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		initiateRestPostAPICallWithoutCookies(endpoints, loadProps.getTestDataProperty(requestPath));
 	}
 
+	
+	@Given("^\"(.*?)\" by \"(.*?)\" endpoint with \"(.*?)\" for Add shipping Address of Order profile$")
+	public void by_endpoint_with_for_Add_shipping_Address_of_Order_profile(String url, String extension, String requestPath) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+extension;
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestPath+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_FIRSTNAME", FrameWorkHelper.getRandomAlphabetic(8))
+				.replace("REPLACE_FIRSTNAME", FrameWorkHelper.getRandomAlphabetic(8))
+				.replace("REPLACE_LASTNAME", FrameWorkHelper.getRandomAlphabetic(8))
+				.replace("REPLACE_PHONENUMBER", FrameWorkHelper.getRandomNumber(10))
+				.replace("REPLACE_ORDERID", System.getProperty("OrderId"))
+				.replace("REPLACE_ADDRESS", FrameWorkHelper.getRandomAlphabetic(8))
+				;
+		
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
+	}
 }
