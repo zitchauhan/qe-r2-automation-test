@@ -36,5 +36,5 @@ Feature: Verify MyAccount Gift Card API endpoint services
   @All-R2 @C1-MyAccount @C2-GiftCard @api @R2_AAST-05 @CR-VK @ZYP_MyAccount_GiftCard_12248
   Scenario: TC_5 - Remove Gift Card detail from a Profile
     Given "Addurl" endpoint with "/giftCards/" for getting gift card details of a profile
-    Then "Addurl" endpoint for removing "/giftCards/" by "GiftWalletId"
-    And Verify response status code as 200
+    Then "Addurl" endpoint for removing "/giftCards/DELETE/" by "GiftWalletId"
+    And Verify response status code as 204
