@@ -38,10 +38,40 @@ public class R2_CHECKOUT_K2934_SD extends CommonActionHelper {
 		
 	}
 	
-	@And("^selects Add a New Shipping Address in address drop-down in shipping address drawer$")
-	public void selects_Add_a_New_Shipping_Address_in_address_drop_down_in_shipping_address_drawer() throws Throwable {
-	    
+		
+	
+	@And("^error is found in the shipping address$")
+	public void error_is_found_in_the_shipping_address() throws Throwable {
+		assertTrue(isDisplayed(r2CheckOutPo.errorMsgShippingAddress_txt));
 	}
+
+	@And("^user selects the suggested address instead of entered address$")
+	public void user_selects_the_suggested_address_instead_of_entered_address() throws Throwable {
+		assertTrue(clickOnButton(r2CheckOutPo.selectSuggestedAddress));
+	}
+	
+	
+	@And("^user verify the suggested address$")
+	public void user_verify_the_suggested_address() throws Throwable {
+		assertTrue(isDisplayed(r2CheckOutPo.selectSuggestedAddress));
+	}
+
+	@And("^clicks on Use Selected Address button$")
+	public void clicks_on_Use_Selected_Address_button() throws Throwable {
+		assertTrue(clickOnButton(r2CheckOutPo.btnSelectedAddress));
+		Thread.sleep(20000);
+	}
+	
+	@And("^user should see the Zip code pre-populated in Shipping Address drawer$")
+	public void user_should_see_the_Zip_code_pre_populated_in_Shipping_Address_drawer() throws Throwable {
+	    String zip= r2CheckOutPo.inputCheckoutZipCode.getText();
+	    if(!zip.isEmpty()) {
+			  logger.info("Zip code is pre-populated");
+		   }else {
+			  	  logger.info("Zip code is not pre-populated");
+		   }
+	    	
+	    }
 	
 
 }

@@ -6,7 +6,6 @@ import static org.junit.Assert.assertTrue;
 
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -44,41 +43,23 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	@And("^User enters Credit Card number \"(.*?)\"$")
 	public void user_enters_Credit_Card_number(String text) throws Throwable {
 		setInputText(myAccountPo.txtCreditCardNumber, webPropHelper.getTestDataProperty(text));
-		
+			
 	}
 	
 		
-	
-	@Then("^User views red outlined box and message 'Unrecognized card number'$")
-	public void user_views_red_outlined_box_and_message_Unrecognized_card_number() throws Throwable {
-	   
-	}
-
+		
 	@And("^User enters expiration date \"(.*?)\"$")
 	public void user_enters_expiration_date(String arg1) throws Throwable {
 		setInputText(myAccountPo.txtExpiryDate, webPropHelper.getTestDataProperty(arg1));
 	}
 
-	@Then("^Verify that red outlined box and message 'Past expiration date' is displayed$")
-	public void verify_that_red_outlined_box_and_message_Past_expiration_date_is_displayed() throws Throwable {
-	    
-	}
-	
-	@Then("^Verify that red outlined box and message 'Unrecognized expiration date' is displayed$")
-	public void verify_that_red_outlined_box_and_message_Unrecognized_expiration_date_is_displayed() throws Throwable {
-	    
-	}
-	
+		
 	@Given("^User enters CVV number \"(.*?)\"$")
 	public void user_enters_CVV_number(String arg1) throws Throwable {
 		setInputText(myAccountPo.txtCVV, webPropHelper.getTestDataProperty(arg1));
 		
 	}
 
-	@Then("^verify that red outlined box and message 'Please enter a valid security code' is displayed$")
-	public void verify_that_red_outlined_box_and_message_Please_enter_a_valid_security_code_is_displayed() throws Throwable {
-	   
-	}
 	
 	@Then("^verify that the field population does not happen$")
 	public void verify_that_the_field_population_does_not_happen() throws Throwable {
@@ -113,7 +94,6 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	@And("^user enter Last Name field \"(.*?)\"$")
 	public void user_enter_Last_Name_field(String arg1) throws Throwable {
 		setInputText(myAccountPo.txtLastNameInAddCreditCard, webPropHelper.getTestDataProperty(arg1));
-		myAccountPo.txtLastNameInAddCreditCard.sendKeys(Keys.TAB);
 	}
 
 	
@@ -125,7 +105,7 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	@And("^user enter ZipCode field \"(.*?)\"$")
 	public void user_enter_ZipCode_field(String arg1) throws Throwable {
 		setInputText(myAccountPo.txtZipCodeInAddCreditCard, webPropHelper.getTestDataProperty(arg1));
-		
+		Thread.sleep(3000);
 	}
 	
 	@Given("^User clicks on cancel$")
@@ -157,6 +137,7 @@ public void user_enter_PhoneNumber_field(String arg1) throws Throwable {
 @Then("^click on Add button$")
 public void click_on_Add_button() throws Throwable {
 	assertTrue(clickOnButton(myAccountPo.btnAddInAddressField));
+	Thread.sleep(5000);
 }
 
 @Given("^click on Add another Credit Card button$")
@@ -169,6 +150,11 @@ public void user_verifies_that_in_Payment_section_CCone_credit_card_is_pre_popul
 	assertTrue(isDisplayed(r2CheckOutPo.chooseCreditcard_Dd));
 	String cc= r2CheckOutPo.chooseCreditcard_Dd.getText();
 	assertTrue(cc.contains("1111"));
+}
+
+@And("^Verify that Credit Card details as entered are saved in User Profile\\.$")
+public void verify_that_Credit_Card_details_as_entered_are_saved_in_User_Profile() throws Throwable {
+	assertTrue(isDisplayed(myAccountPo.txtCreditCardDetails));
 }
 
 }

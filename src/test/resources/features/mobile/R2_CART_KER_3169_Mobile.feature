@@ -1,6 +1,6 @@
 Feature: Verify Item/Order Level Promotion Calculation
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3169 @ZYP_CHECKOUT_K3166-8096 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3169 @ZYP_CHECKOUT_K3169-8096 @CR-DPK
 Scenario: To verify open field to enter promotion code
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
@@ -22,7 +22,7 @@ Scenario: To verify open field to enter promotion code
 	Then user click on checkout button in Cart page
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3169 @ZYP_CHECKOUT_K3166-8097 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3169 @ZYP_CHECKOUT_K3169-8097 @CR-DPK
 Scenario: To verify open field to enter promotion code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu

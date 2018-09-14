@@ -223,7 +223,7 @@ Scenario: Verify user is able to see the BOPIS availability on store details dra
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-11548 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-11548 @CR-DPK
 Scenario: Verify the user is able to view the 'Change Location' under In-store Pick Up on Cart in Product Blade
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -243,7 +243,7 @@ Scenario: Verify the user is able to view the 'Change Location' under In-store P
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11552 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11552 @CR-DPK
 Scenario: Verify user is able to see the inventory against the listed stores for the product not added to cart and modal opened from PDP
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -255,7 +255,7 @@ Scenario: Verify user is able to see the inventory against the listed stores for
 	Then user click on all plus icon in Store Address drawer
 	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
 			
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11554 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11554 @CR-DPK
 Scenario: Verify user is able to see the inventory on store details drawer for the PDP not added to cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -268,12 +268,12 @@ Scenario: Verify user is able to see the inventory on store details drawer for t
 	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-12582 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-12582 @CR-DPK
 Scenario: Verify find a store Modal closes On Select "Close X" and If a user selects anywhere outside the modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
 	Then User should be able to click on Find Store
-	And user very Find a Store popup
+	And user verify Find a Store popup
 	Then Close X Find a store Modal 	
 	
 	
