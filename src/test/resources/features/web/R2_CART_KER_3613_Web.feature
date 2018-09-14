@@ -28,7 +28,7 @@ Scenario: Verify that the user should be able to search the store details by ent
 	Then verify Static error message
 
 
-@R2_Web @R2_Regression @R2_All @P-Highest @C-Bopis @KER-3613 @ZYP_BOPIS_K3613-10728 @CR-RK
+@R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-3613 @ZYP_CART_K3613-10728 @CR-RK
 Scenario: Verify that user should be able to open the Find Store modal from PDP for BOPIS
 Given user launches the browser and navigates to "ASO_HOME" page 
 When user clicks on one of the category and navigates to LOne SOF
@@ -38,7 +38,7 @@ When user clicks on one of the category and navigates to LOne SOF
 	And clicks on the Change Pickup Location link
 	Then user should be able to see the Find a Store modal
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Bopis @KER-3613 @ZYP_BOPIS_K3613-10759 @CR-RK        
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3613 @ZYP_CART_K3613-10759 @CR-RK        
 Scenario: Verify that  the user should be able to  search the store details by entering ZIP code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on one of the category and navigates to LOne SOF

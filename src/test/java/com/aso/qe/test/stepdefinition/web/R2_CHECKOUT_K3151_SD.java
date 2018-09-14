@@ -21,22 +21,7 @@ import cucumber.api.java.en.When;
 public class R2_CHECKOUT_K3151_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R2_CHECKOUT_K3151_SD.class);
 	R2_CheckOut_PO r2CheckOutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
-	@Given("^user adds an address$")
-	public void user_adds_an_address() throws Throwable {
-
-	}
-
-	@Given("^click on submit button$")
-	public void click_on_submit_button() throws Throwable {
-
-	}
-
-	@When("^user selects an address from dropdown$")
-	public void user_selects_an_address_from_dropdown() throws Throwable {
-		
-		//assertTrue(isDisplayed(r2CheckOutPo.Checkout_ShippingAddress_Default));
-	}
-
+	
 	@When("^user should see the order summary page with the default address$")
 	public void user_should_see_the_order_summary_page_with_the_default_address() throws Throwable {
 		WebElement defaultaddress=r2CheckOutPo.Checkout_ShippingAddress_Default;
@@ -70,26 +55,7 @@ public class R2_CHECKOUT_K3151_SD extends CommonActionHelper {
 	
 	}
 
-	@When("^user enter new address details$")
-	public void user_enter_new_address_details() throws Throwable {
-
-	}
-
-	@Then("^new address should be displayed instead of default address$")
-	public void new_address_should_be_displayed_instead_of_default_address() throws Throwable {
-
-	}
-
-	@Given("^user navigates to Checkout page And verify address available from my account$")
-	public void user_navigates_to_Checkout_page_And_verify_address_available_from_my_account() throws Throwable {
-
-	}
-
-	@Then("^the list of addresses will be from newest added to oldest\\.$")
-	public void the_list_of_addresses_will_be_from_newest_added_to_oldest() throws Throwable {
-
-	}
-	
+		
 	@Given("^user click on edit button in shipping address section$")
 	public void user_click_on_edit_button_in_shipping_address_section() throws Throwable {
 		assertTrue(clickOnButton(r2CheckOutPo.Checkout_ShippingAddress_Edit));

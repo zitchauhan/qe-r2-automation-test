@@ -23,7 +23,7 @@ Scenario: Verify user is able to enter the Forgot Password page from Forgot Pass
 	Then user should be able to change password
 	 
 	 
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2  @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-11120 @CR-RK
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2  @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-11120 @CR-RK
 Scenario: Verify that user can continue the shopping without re-authentication after changing the password
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -238,7 +238,7 @@ Scenario: Verify that user can see the error message in Last name field if user 
 	 |Not a valid name|
 	
 	
-		 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10572 @CR-RK
+		 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10572 @CR-RK
 Scenario: Verify that user can see the error message if user enters the email id in New Email and Confirm Email input fields with non-alpha + character.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu

@@ -1,27 +1,71 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
+//import static org.testng.Assert.assertTrue;
 
 import java.util.List;
 
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.test.pageobject.R1_FindStore_PO;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
+import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import freemarker.template.utility.NullArgumentException;
 
 import org.apache.log4j.Logger;
 
 public class R2_VERIFICATION_CART_SD extends CommonActionHelper 
 {
+	public R1_FindStore_PO findStorePO;
+	public static R1_SearchProduct_PO searchProductPO;
+	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 
 	R2_Cart_PO r2CartPo=PageFactory.initElements(driver, R2_Cart_PO.class);
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	private static final Logger logger = Logger.getLogger(R2_VERIFICATION_CART_SD.class);
+	
+	@When("^User searches a product \"(.*?)\" and navigates to PDP$")
+	public void user_searches_a_product_and_navigates_to_PDP(String arg1) throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)){
+			Common_Web_SD.globalElementHeader.clickOnBurgerMenu();
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.btnClothingCategory)); //4Sep
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(r2SanityPo.AS_btnMen_Clothing_Shop));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(r2SanityPo.AS_btnMensShirt_Men_Clothing_Shop));
+			Thread.sleep(4000);
+			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1_Mobile));
+			
+
+		}else{
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.btnShopCategory));
+			Thread.sleep(2000);
+			Actions hover = new Actions(getDriver());
+			hover.moveToElement(Common_Web_SD.globalElementHeader.btnClothingCategory).build().perform();
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.btnMenClothingShop));
+			Thread.sleep(2000);
+			waitForElement(r2SanityPo.AS_secCategory_CLP);
+			assertTrue(clickOnButton(r2SanityPo.AS_secCategory_CLP));
+			Thread.sleep(3000);
+			waitForElement(r2SanityPo.AS_productPLP1);
+			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
+			Thread.sleep(3000);
+			Common_Web_SD.globalElementHeader.verifyThePDPPage();
+		}
+		
+	}
 
 	@Then("Verify below Sub/Main Module of Cart Page$")
 	public void verify_below_Sub_Main_Module_of_Cart_Page(DataTable arg1) throws Throwable  {
@@ -247,5 +291,8 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 			logger.error("This test-step has been failed");
 		}
 	}
+	
+	
+	
 
 }

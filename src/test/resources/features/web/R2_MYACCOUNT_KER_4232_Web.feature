@@ -44,9 +44,9 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 	And user lands on My Account page and click on adress
 	Then Verify below Sub/Main Module of My Account
 	When user clicks Remove button
-	Then user should see delete notification
-	When user clicks on undo link
-	Then undo deletion action is performed
+	Then Verify the message on the page
+    |# verify the remove quantity message|
+    |Undo|
      
    	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9191 @CR-MS
      Scenario: Verify Authenticated user can Manage Address Book - View existing Address details
@@ -173,7 +173,9 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 	|# Verify following elements in address page|
 		|MyAccountPage_Address_lnk		| 
     When user clicks Remove button
-	Then user should see delete notification
+	Then Verify the message on the page
+    |# verify the remove quantity message|
+    |Undo|
 	
      
      
@@ -216,7 +218,9 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 	|# Verify following elements in address page|
 		|MyAccountPage_Address_lnk		|  
 	When user clicks Remove button 
-	Then user should see delete notification 
+	Then Verify the message on the page
+    |# verify the remove quantity message|
+    |Undo|
 
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9192 @CR-RK 
 Scenario: Verify Authenticated user can Manage Address Book - Edit Address details 
