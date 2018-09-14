@@ -37,7 +37,13 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 
 	@And("^user clicks on Cart icon$")
 	public void user_clicks_on_Cart_icon() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(clickOnButton(globalElementHeader.iconcart_m));	
+		}
+		else
+		{
 		assertTrue(clickOnButton(r2CartPo.iconMiniCart));
+		}
 	}
 
 	/*
@@ -150,8 +156,15 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 
 	@And("^user click on edit cart CTA to navigate to Cart page$")
 	public void user_click_on_edit_cart_CTA_to_navigate_to_Cart_page() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(clickOnButton(r2CheckOutPo.btnEditCart_m));
+			getDriver().manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+		}
+		else
+		{
 		assertTrue(clickOnButton(r2CheckOutPo.btnEditCart));
 		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		}
 	}
 
 	@Then("^verify that the updated estimated Tax is displayed$")
@@ -194,4 +207,8 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CartPo.txtEstimatedFree));
 	}
 
+	@Then("^user cilck on expand icon in order summary checkout page$")
+	public void user_cilck_on_expand_icon_in_order_summary_checkout_page() throws Throwable {
+		assertTrue(clickOnButton(r2CheckOutPo.ExpandIcon_Link));
+	}
 }

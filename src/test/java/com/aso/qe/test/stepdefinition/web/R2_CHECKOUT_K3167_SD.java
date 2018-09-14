@@ -53,6 +53,7 @@ public class R2_CHECKOUT_K3167_SD extends CommonActionHelper {
 	public void user_clicks_on_Remove_Promo_code_link() throws Throwable {
 		assertTrue(isDisplayed(r2CheckOutPO.removeCpnBtn));
 		assertTrue(clickOnButton(r2CheckOutPO.removeCpnBtn));
+		Thread.sleep(2000);
 	}
 
 	@Then("^Promo code is Removed$")
