@@ -1,19 +1,16 @@
 Feature: [Web]Payment restrictions
 
-@R2_Web @R2_Regression @KER-4039 @ZYP_CART_K4039-10454 @CR-RKA 
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-10454 @CR-RKA
 Scenario: Verify that PayPal and More Options radio buttons are disabled when Gift Card is applied
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
+Given user launches the browser and navigates to "ASO_HOME" page 
+And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page
-	And user click on checkout button in Cart page
-	And user enter First name "FirstName" 
+And user click on Add to Cart Button 
+Then user click on checkout from ATC pop up
+And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
 	And user enter Address "Address" 
@@ -23,30 +20,179 @@ Scenario: Verify that PayPal and More Options radio buttons are disabled when Gi
 	And user enter Gift card Number "GiftcardNumber"
 	And user enter Pin Number "PinNumber" 
 	And user click on Apply button
-	Then applied gift card "GiftcardNumber" should be displayed
-	
-#@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6962 @ZYP_CART_K6962-8899 @CR-SK 
-#Scenario: Verify Once a gift card is applied, a Remove option should be displayed to the user. 
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	And User navigates to L2 Mens clothing
-#	And user clicks on one of the subcategory and navigates to LTwo 
-#	And user is able to see the product category name in section title 
-#	And user clicks on one of the product category and navigates to LThree 
-#	And User is navigated to pdp page 
-#	And user click on Add to Cart Button 
-#	And user is navigated to Add to cart Notification popup 
-#	And user will click on View Cart button 
-#	And user navigate to Cart page
-#	And user click on checkout button in Cart page
-#	And user enter First name "FirstName" 
-#	And user enter Last name "LastName" 
-#	And user enter Phone number "PhoneNumber" 
-#	And user enter Address "Address" 
-#	And user enter Zipcode "zipcode" 
-#	And user click on Go To Shipping Method button in Checkout page
-#	When user click on GiftCard Plus icon in Checkout page
-#	And user enter Gift card Number "GiftcardNumber"
-#	And user enter Pin Number "PinNumber" 
-#	And user click on Apply button
-#	And applied gift card "GiftcardNumber" should be displayed
-#	Then Remove option is displayed to user
+	Then user verify all the paypal and more radio btn is disable 
+	Then Verify below Sub/Main Module of Checkout Page 
+	    |#verify Radio btn in checkout page|
+        |CreditCard_radioBtn|
+		|PayPal_radioBtn|
+
+
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-10455 @CR-RKA
+Scenario: Verify that PayPal and More Options radio buttons are enabled when Gift Card is removed
+Given user launches the browser and navigates to "ASO_HOME" page 
+And User navigates to L2 Mens clothing
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree 
+	And User is navigated to pdp page 
+	Then user change the quantity of item in PDP 
+And user click on Add to Cart Button 
+Then user click on checkout from ATC pop up
+And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "zipcode" 
+	And user click on Go To Shipping Method button in Checkout page
+	When user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "GiftcardNumber"
+	And user enter Pin Number "PinNumber" 
+	And user click on Apply button
+   And user click on remove gift card on checkout page
+Then user click on paypal 
+Then Verify below Sub/Main Module of Checkout Page 
+	    |#verify Radio btn in checkout page|
+        |CreditCard_radioBtn|
+		|PayPal_radioBtn|
+
+
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9876 @CR-RKA
+Scenario: Verify that user can combine Gift Card payment with Credit/Debit Card only
+Given user launches the browser and navigates to "ASO_HOME" page 
+And User navigates to L2 Mens clothing
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree 
+	And User is navigated to pdp page  
+And user click on Add to Cart Button 
+Then user click on checkout from ATC pop up
+And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "zipcode" 
+	And user click on Go To Shipping Method button in Checkout page
+	When user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "GiftcardNumber"
+	And user enter Pin Number "PinNumber" 
+	And user click on Apply button
+Then Verify below Sub/Main Module of Checkout Page
+|#verify credit card detail is visible#|
+|CreditCardNumber_Input|
+		|ExpirationDate_Input|
+		|Cvv_Input|
+
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9885 @CR-RKA
+Scenario: Verify that user cannot combine Gift Card payment with any non-Credit/Debit Card only
+Given user launches the browser and navigates to "ASO_HOME" page 
+And User navigates to L2 Mens clothing
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree 
+	And User is navigated to pdp page  
+And user click on Add to Cart Button 
+Then user click on checkout from ATC pop up
+And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "zipcode" 
+	And user click on Go To Shipping Method button in Checkout page
+  Then user click on paypal radiobtn 
+  Then user switch to iframe to verify paypalcheckoutBtn 
+  Then Verify below Sub/Main Module of Checkout Page
+  |#verify gift card related things are not displayed |
+  |PayPalCheckOut_Btn|
+
+
+
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9889 @CR-RKA
+Scenario: Verify that user can use multiple gift cards to make the payment
+Given user launches the browser and navigates to "ASO_HOME" page 
+And User navigates to L2 Mens clothing
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree 
+	And User is navigated to pdp page 
+And user click on Add to Cart Button 
+Then user click on checkout from ATC pop up
+And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "zipcode" 
+	And user click on Go To Shipping Method button in Checkout page
+When user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "GiftcardNumber"
+	And user enter Pin Number "PinNumber" 
+	And user click on Apply button
+	Then user click on ADD Another Gift Card 
+And user enter Gift card Number "GIFTCARDNUMBER"
+	And user enter Pin Number "GIFTCARDPIN" 
+	And user click on Apply button
+Then Verify below Sub/Main Module of Checkout Page
+  |#verify gift card remove displayed after adding second gift card |
+|btnToRemoveGiftCardOnCheckoutPage|
+
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9892 @CR-RKA
+Scenario: Verify that user cannot use more than one credit/debit card for single transaction
+Given user launches the browser and navigates to "ASO_HOME" page 
+And User navigates to L2 Mens clothing
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree 
+	And User is navigated to pdp page 
+And user click on Add to Cart Button 
+Then user click on checkout from ATC pop up
+And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "zipcode" 
+	And user click on Go To Shipping Method button in Checkout page
+  And user enters "DebitCardNumber" details and verify it is getting entered in Credit card section
+    Then user enters valid expiry date "ExpDate"
+    And user enters valid cvv value "CVV"
+    Then user fill email address in payment
+    Then user clicks on the submit button
+     Then Verify below Sub/Main Module of Checkout Page
+     |#verify only billing information is displayed after payment through credit card|
+     |BillingInformation_Txt|
+
+
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9920 @CR-RKA
+Scenario: Verify that user cannot combine PayPal payment with any other payment option
+Given user launches the browser and navigates to "ASO_HOME" page 
+And User navigates to L2 Mens clothing
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree 
+	And User is navigated to pdp page  
+And user click on Add to Cart Button 
+Then user click on checkout from ATC pop up
+And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "zipcode" 
+	And user click on Go To Shipping Method button in Checkout page
+  Then user click on paypal radiobtn 
+  Then user switch to iframe to verify paypalcheckoutBtn 
+  Then Verify below Sub/Main Module of Checkout Page
+  |#verify only paypal related things are displayed |
+  |PayPalCheckOut_Btn|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

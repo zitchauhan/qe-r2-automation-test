@@ -18,6 +18,7 @@ Feature: Debug
 		|YourCart_Header|
 		|Items_txt|
 		|TotalYourCart_txt|
+		|checkOutYourCart_Btn| 
 		
 		|# Verify following elements in Cart page "Your Cart item details "|
 		|Image_ITemInCart| 

@@ -105,6 +105,14 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 
 				else if (currentElement.equalsIgnoreCase("SeeInStorePickupInstructions_Msg"))
 					assertTrue(isDisplayed(r2CheckoutPo.SeeInStorePickupInstructions_Msg));
+				//Only for SOF Item--Start
+				else if (currentElement.equalsIgnoreCase("ShipToStoreforSOF_Txt"))
+					assertTrue(isDisplayed(r2CheckoutPo.ShipToStoreforSOF_Txt));
+				else if (currentElement.equalsIgnoreCase("ShipToStoreforSOF_compliance_Txt"))
+					assertTrue(isDisplayed(r2CheckoutPo.ShipToStoreforSOF_compliance_Txt));
+				else if (currentElement.equalsIgnoreCase("ShipToStoreforSOF_Payment_Btn"))
+					assertTrue(isDisplayed(r2CheckoutPo.ShipToStoreforSOF_Payment_Btn));
+				//Only for SOF Item--End
 				// In-Store Pickup(End)
 				
 	//==============================================
@@ -272,7 +280,8 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 						assertTrue(isDisplayed(r2CheckoutPo.txtGiftCardAppliedSuccessMessage));
 					else if (currentElement.equalsIgnoreCase("btnToRemoveGiftCardOnCheckoutPage"))
 						assertTrue(isDisplayed(r2CheckoutPo.btnRemoveGiftCard));
-				
+					else if (currentElement.equalsIgnoreCase("AddAnotherGiftCard_Txt"))
+						assertTrue(isDisplayed(r2CheckoutPo.AddAnotherGiftCard_Txt));
 				//****************Gift Card(End)
 				
 				//*************** Billing Information(Start)
@@ -317,6 +326,8 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 						assertTrue(isDisplayed(r2CheckoutPo.rdPaypal));
 					else if (currentElement.equalsIgnoreCase("PayPalCheckOut_Btn"))
 						assertTrue(isDisplayed(r2CheckoutPo.PayPalCheckOut_Btn));
+				else if (currentElement.equalsIgnoreCase("SavePaymentInfoForLater_checkBox"))
+					assertTrue(isDisplayed(r2CheckoutPo.savePaymentInfoForLater_checkBox));
 		
 				//*************** Billing Information(End)
 				//Payment(End)

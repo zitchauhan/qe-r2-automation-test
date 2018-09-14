@@ -164,4 +164,7 @@ public class R2_R1_Fun_PO extends CommonActionHelper
   	public WebElement Baits_productPLP1_m;
      
    // End KER-6655-MS
+    
+    //KER-4039 CR-RKA
+    @FindBy(xpath="//*[@data-auid='checkout_payment']//iframe")public WebElement paypalCheckoutFrame;
 }

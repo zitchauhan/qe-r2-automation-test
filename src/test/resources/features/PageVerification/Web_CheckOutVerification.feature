@@ -48,6 +48,9 @@ Scenario: Verify Checkout for Web
 		|SeeInStorePickupInstructions_Dd|
 		|SeeInStorePickupInstructions_Msg|
 		|AlternatePhoneNumberErrorMsg_Txt|
+		|ShipToStoreforSOF_Txt|
+		|ShipToStoreforSOF_compliance_Txt|
+		|ShipToStoreforSOF_Payment_Btn|
 		
 		
 		|# Verify following elements in Checkout > Shipping Method	|
@@ -153,9 +156,11 @@ Scenario: Verify Checkout for Web
 		|ReviewOrder_Btn|
 		|EditPayment_Link|
 		|ChangeBillingInformation_Txt|
+		|SavePaymentInfoForLater_checkBox|
 		|#%%%%%%%  PayPal  %%%%%%%%%%|
 		|PayPal_radioBtm|
 		|PayPalCheckOut_Btn|
+		|AddressVerificationSystemModelPopUp|
 		##########Ends CR-RKA	
 		
 		|# Verify following elements in Checkout page"We Accept"|

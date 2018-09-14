@@ -139,40 +139,40 @@ Feature: [Desktop]Components - Header
       | Postal_Code |
       | FL 32822    |
       
- @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262 @CR-RKA @BrokenLink @Broken
-    Scenario: Verify all Image broken URL's on Home page
+ @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262 @CR-RKA @BrokenLink @Broken @TC_BL_01 
+    Scenario: Verify all broken URL's on Home page
     Given user launches the browser and navigates to "ASO_HOME" page
 		Then verfy all link url's status code is 200    
 
-  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11665 @CR-RKA @BrokenLink @Broken
+  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11665 @CR-RKA @BrokenLink @Broken @TC_BL_02 
   Scenario: Verify all broken URL's on L1 page
     Given user launches the browser and navigates to "ASO_HOME" page
     When user clicks on one of the category and navigates to LOne page
     Then User should be able to see L1 Page
     Then verfy all link url's status code is 200
 
-  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11666 @CR-RKA @BrokenLink @Broken
+  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11666 @CR-RKA @BrokenLink @Broken @TC_BL_03
   Scenario: Verify all broken URL's on L2 page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2 from home page
     Then User should be able to see L2 Page
     Then verfy all link url's status code is 200
 
-  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11667 @CR-RKA @BrokenLink @Broken
+  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11667 @CR-RKA @BrokenLink @Broken @TC_BL_04
   Scenario: Verify all broken URL's on L3 page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page
     Then User should be able to see L3 Page
     Then verfy all link url's status code is 200
 
-  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11668 @CR-RKA @BrokenLink @Broken
+  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11668 @CR-RKA @BrokenLink @Broken @TC_BL_05
   Scenario: Verify all broken URL's on PDP page
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP of any product
     Then user clicks on the product card and navigates to PDP of the product
     Then verfy all link url's status code is 200
 
-  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11669 @CR-RKA @BrokenLink @Broken
+  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11669 @CR-RKA @BrokenLink @Broken @TC_BL_09
   Scenario: Verify all broken URL's on Reskin page
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
@@ -180,42 +180,42 @@ Feature: [Desktop]Components - Header
     
      
     
-   @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262_Image @CR-RKA @BrokenImage @Broken
+   @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262_Image @CR-RKA @BrokenImage @Broken @TC_BIM_01
     Scenario: TC_1- Verify all Image broken URL's on Home page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then verfy all Image link urls status code is 200
     
     
-    @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11665_Image @CR-RKA @BrokenImage @Broken
-  Scenario: Verify all broken URL's on L1 page
+    @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11665_Image @CR-RKA @BrokenImage @Broken  @TC_BIM_02
+  Scenario: Verify all broken Image on L1 page
     Given user launches the browser and navigates to "ASO_HOME" page
     When user clicks on one of the category and navigates to LOne page
     Then User should be able to see L1 Page
     Then verfy all Image link urls status code is 200
 
-  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11666_Image @CR-RKA @BrokenImage @Broken
-  Scenario: Verify all broken URL's on L2 page
+  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11666_Image @CR-RKA @BrokenImage @Broken @TC_BIM_03
+  Scenario: Verify all broken Images on L2 page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2 from home page
     Then User should be able to see L2 Page
     Then verfy all Image link urls status code is 200
 
-  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11667_Image @CR-RKA @BrokenImage @Broken
-  Scenario: Verify all broken URL's on L3 page
+  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11667_Image @CR-RKA @BrokenImage @Broken @TC_BIM_04
+  Scenario: Verify all broken Images on L3 page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page
     Then User should be able to see L3 Page
     Then verfy all Image link urls status code is 200
 
-  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11668_Image @CR-RKA @BrokenImage @Broken
-  Scenario: Verify all broken URL's on PDP page
+  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11668_Image @CR-RKA @BrokenImage @Broken @TC_BIM_05
+  Scenario: Verify all broken Images on PDP page
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP of any product
     Then user clicks on the product card and navigates to PDP of the product
     Then verfy all Image link urls status code is 200
 
-  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11669_Image @CR-RKA @BrokenImage @Broken
-  Scenario: Verify all broken URL's on Reskin page
+  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-11669_Image @CR-RKA @BrokenImage @Broken @TC_BIM_09
+  Scenario: Verify all broken Images on Reskin page
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
     Then verfy all Image link urls status code is 200
