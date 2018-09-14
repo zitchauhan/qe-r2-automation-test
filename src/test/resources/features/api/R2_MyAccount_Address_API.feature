@@ -57,7 +57,7 @@ Feature: Verify MyAccount Address API endpoint services
 
   @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-07 @CR-VK @ZYP_MyAccount_Address_12234
   Scenario: TC_7 - Remove an address from a Profile
-    Given "Addurl" endpoint for removing "/address/" by "AddressId"
+    Given "Addurl" endpoint for removing "/address/DELETE/" by "AddressId"
     Then Verify response status code as 204
 
   @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-07 @CR-RT @ZYP_MyAccount_UpdateAddress_12794

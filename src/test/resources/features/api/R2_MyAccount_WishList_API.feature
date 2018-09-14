@@ -35,5 +35,5 @@ Feature: Verify MyAccount WishList API endpoint services
 
   @All-R2 @C1-MyAccount @C2-WishList @api @R2_AAST-05 @CR-VK @ZYP_MyAccount_WishList_12270
   Scenario: TC_5 - Remove wishlist details of a Profile
-    Given "Addurl" endpoint for removing "/wishlist/" by "WishListId"
+    Given "Addurl" endpoint for removing "/wishlist/DELETE/" by "WishListId"
     Then Verify response status code as 200

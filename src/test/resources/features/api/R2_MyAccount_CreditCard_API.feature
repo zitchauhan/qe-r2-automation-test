@@ -33,5 +33,5 @@ Feature: Verify MyAccount Credit Card API endpoint services
   @All-R2 @C1-MyAccount @C2-CreditCard @api @R2_AAST-05 @CR-VK @ZYP_MyAccount_CreditCard_12241
   Scenario: TC_5 - Remove Credit Card detail from a Profile
     Given "Addurl" endpoint with "/creditCards/" for getting credit card details of a profile
-    Then "Addurl" endpoint for removing "/creditCards/" by "WalletId"
-    And Verify response status code as 200
+    Then "Addurl" endpoint for removing "/creditCards/DELETE/" by "WalletId"
+    And Verify response status code as 204

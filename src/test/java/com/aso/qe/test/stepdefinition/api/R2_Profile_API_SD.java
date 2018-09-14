@@ -82,7 +82,8 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 	public void endpoint_for_removing_by(String Addurl, String extension, String Id) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension+System.getProperty(Id);
 		logger.debug("END Point URL:"+endpoints);
-		initiateRestDeleteAPICall(endpoints);
+		//initiateRestDeleteAPICall(endpoints);
+		initiateRestPostAPICallWithCookiesAndWithOutBody(endpoints);
 	}
 
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for getting gift card details of a profile$")
