@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "addShippingAddress": {
+      "type": "object",
+      "properties": {
+        "orderId": {
+          "type": "string"
+        },
+        "addressId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "orderId",
+        "addressId"
+      ]
+    }
+  },
+  "required": [
+    "addShippingAddress"
+  ]
+}
