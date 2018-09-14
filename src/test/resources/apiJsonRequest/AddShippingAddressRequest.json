@@ -12,7 +12,5 @@
 	"orderId": "REPLACE_ORDERID",
 	"isAddressVerified": "1",
 	"URL": "checkout",
-	"alternatePickup": {
-	},
 	"storeAddress": []
 }
