@@ -272,6 +272,8 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="(//div[contains(@class,'breadCrumbComponent')]//*[1]//a)[1]") public WebElement l1LastActiveBreadcrumb;
 	@FindBy(xpath="//*[@data-auid='level2Category-Outdoors']") public WebElement btnOutdoorsCategory;
 	@FindBy(xpath="//*[@data-auid='level3Category-Automotive & Towing']/a ")public WebElement btnAutomotiveTowing_Shop;//UAT9
+	@FindBy(xpath="(//*[contains(@data-auid,'level3Category')])[1] ")public WebElement clickDealItem;//SID 13-September
+	
 	
 	//**SID END*********************************************************************************************************************************************
 	//@FindBy(xpath="//*[(text()=\"Men's Shirts\")]") public WebElement txtMensShrit;/RKA 22 aug
@@ -1729,6 +1731,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			assertTrue(clickOnButton(btnSignOut_M));
 			waitForElement(btnBurgerMenu);
 			assertTrue(isDisplayed(btnBurgerMenu));
+			Thread.sleep(3000);
 			assertTrue(clickOnButton(btnBurgerMenu));
 			assertTrue(isDisplayed(btnMyAccountBurgerMenu));
 

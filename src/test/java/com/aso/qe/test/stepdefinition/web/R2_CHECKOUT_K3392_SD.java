@@ -28,7 +28,7 @@ public class R2_CHECKOUT_K3392_SD extends CommonActionHelper {
 	public void user_will_click_on_Checkout_button() throws Throwable 
 	{
 		if("mobile".equalsIgnoreCase(testtype)){
-			//assertTrue(clickOnButton(r2CheckOutPo.btnCheckOut_M));  
+			assertTrue(clickOnButton(r2CheckOutPo.btnCheckOut_M));  
 		}
 		else {
 		assertTrue(clickOnButton(r2SanityPo.AS_btnCheckout));  
