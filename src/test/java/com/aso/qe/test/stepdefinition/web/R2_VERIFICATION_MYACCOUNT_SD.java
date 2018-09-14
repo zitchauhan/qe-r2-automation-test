@@ -129,6 +129,10 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					}
 				else if (currentElement.equalsIgnoreCase("PaymentPage_AddNewGiftCards_plusIcon"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnAddGiftCardPlusIcon)); 
+				else if (currentElement.equalsIgnoreCase("PaymentPage_CreditCardDetails"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtCreditCardDetails)); 
+				
+				
 
 				// ===============================================================================
 				//// Profile

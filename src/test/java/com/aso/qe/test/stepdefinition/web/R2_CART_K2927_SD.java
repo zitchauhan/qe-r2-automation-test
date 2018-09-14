@@ -41,9 +41,9 @@ import cucumber.api.java.en.When;
 
 public class R2_CART_K2927_SD extends CommonActionHelper 
 {
-//<<<<<<< Updated upstream
 
-	private static float taxDisplayed = 0.0f;
+	private static double taxDisplayed = 0.0f;
+	private static double totalAmountDisplayed = 0.0f;
 
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	R2_Cart_PO cartR2PageObj = PageFactory.initElements(driver, R2_Cart_PO.class);
@@ -59,14 +59,14 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 
 	@Then("^checkout page displays updated tax$")
 	public void checkout_page_displays_updated_tax() throws Throwable {
-		float currentTaxDisplayed = r2CheckOutPO.getEstimatedTaxOnCheckoutPage();
+		double currentTaxDisplayed = r2CheckOutPO.getEstimatedTaxOnCheckoutPage();
 		if(taxDisplayed != 0)
 			assertTrue(taxDisplayed != currentTaxDisplayed);
 	}
 	
 	@Then("^checkout page displays increased tax$")
 	public void checkout_page_displays_increased_tax() throws Throwable {
-		float currentTaxDisplayed = r2CheckOutPO.getEstimatedTaxOnCheckoutPage();
+		double currentTaxDisplayed = r2CheckOutPO.getEstimatedTaxOnCheckoutPage();
 		assertTrue(taxDisplayed < currentTaxDisplayed);
 	}
 
@@ -81,6 +81,14 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 	public void user_makes_a_note_of_tax_calculation() throws Throwable {
 		taxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
 	}
+	
+	@Given("^user makes a note of tax and total amount$")
+	public void user_makes_a_note_of_tax_and_total_amount() throws Throwable {
+		taxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
+		totalAmountDisplayed = cartR2PageObj.getTotaAmountOnCartPage();
+	}
+	
+	
 
 	@When("^user increases products quantity$")
 	public void user_increases_products_quantity() throws Throwable {
@@ -89,14 +97,14 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 
 	@Then("^cart page displays updated tax$")
 	public void cart_page_displays_updated_tax() throws Throwable {
-		float currentTaxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
+		double currentTaxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
 		if(taxDisplayed != 0)
 			assertTrue(taxDisplayed != currentTaxDisplayed);
 	}
 	
 	@Then("^cart page displays increased tax$")
 	public void cart_page_displays_increased_tax() throws Throwable {
-		float currentTaxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
+		double currentTaxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
 		assertTrue(taxDisplayed < currentTaxDisplayed);
 	}
 
@@ -154,6 +162,23 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 		setInputText(cartR2PageObj.inputZipCode, webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(cartR2PageObj.btnCartSubmit));
 	}
+	
+	@Then("^tax displayed on cart is greater than zero$")
+	public void tax_displayed_on_cart_is_greater_than_zero() throws Throwable {
+	    double estimatedTaxOnCartPage = cartR2PageObj.getEstimatedTaxOnCartPage();
+	    assertTrue(estimatedTaxOnCartPage > 0);
+	}
+
+	@Then("^tax and total amount displayed in checkout page is same as cart page$")
+	public void tax_displayed_in_checkout_page_is_same_as_cart_page() throws Throwable {
+	    double taxOnCheckOutPage = r2CheckOutPO.getEstimatedTaxOnCheckoutPage();
+	    double totalAmountOnCheckOutPage = r2CheckOutPO.getTotalAmountOnCheckoutPage();
+//	    System.out.println("taxDisplayed ==" + taxDisplayed +" taxOnCheckOutPage = " + taxOnCheckOutPage);
+//	    System.out.println("totalAmountDisplayed ==" + totalAmountDisplayed +" totalAmountOnCheckOutPage = " + totalAmountOnCheckOutPage);
+	    assertTrue(taxDisplayed == taxOnCheckOutPage);
+	    assertTrue(totalAmountDisplayed == totalAmountOnCheckOutPage);
+	}
+
 	
 
 

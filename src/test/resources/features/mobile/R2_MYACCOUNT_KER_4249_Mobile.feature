@@ -1,6 +1,6 @@
 Feature: Verify  Customer Registration/ Sign Up 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10148_M @CR-SK 
+@R2obile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10148 @CR-SK 
 Scenario: Verify the available fields on the Sign Up page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -18,7 +18,7 @@ Scenario: Verify the available fields on the Sign Up page
 		|SignUpPage_SignInNow_lnk						|
 
 
-@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149_M @CR-SK 
+@R2obile @R2_Regression @R2_All @1HR_R2 @P-Highest @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10149 @CR-SK 
 Scenario: Verify user is able to create an account with all valid data 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -38,7 +38,7 @@ Scenario: Verify user is able to create an account with all valid data
 	    |LET'S SHOP									|
 	And user should be able to view My Account in global header
 
-@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10163_M @CR-SK
+@R2obile @R2_Regression @R2_All @1HR_R2 @P-Highest @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10163 @CR-SK
 Scenario: Verify the user is able to sign with the new created account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -48,7 +48,7 @@ Scenario: Verify the user is able to sign with the new created account
 	And user click on signin button 
 	Then user should get logged in successfully
 	
-@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10161_M @CR-SK
+@R2obile @R2_Regression @R2_All @1HR_R2 @P-Highest @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10161 @CR-SK
 Scenario: Verify the user is able to see the unmasked password 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -60,7 +60,7 @@ Scenario: Verify the user is able to see the unmasked password
 	Then user entered password should get unmasked displaying the characters 
 	And the label should get toggled to Hide
 
-@R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10150_M @CR-SK
+@R2obile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10150 @CR-SK
 Scenario: Verify the user gets the error message when First name is left blank
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
@@ -75,7 +75,7 @@ Scenario: Verify the user gets the error message when First name is left blank
 	    |Please enter the First Name|
 	    
 
-@R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10151_M @CR-SK
+@R2obile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10151 @CR-SK
 Scenario: Verify the user gets the error message when Last name is left blank
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -90,7 +90,7 @@ Scenario: Verify the user gets the error message when Last name is left blank
 	    | Please Enter a Last Name|
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10152_M @CR-SK
+@R2obile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10152 @CR-SK
 Scenario: Verify the user gets the error message when Password is left blank
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
@@ -106,7 +106,7 @@ Scenario: Verify the user gets the error message when Password is left blank
 	
 	
 ####Failing - Known Issue KER-12929
-@R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10153_M @CR-SK
+@R2obile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10153 @CR-SK
 Scenario: Verify the user gets the error message when Email address is left blank
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -121,7 +121,7 @@ Scenario: Verify the user gets the error message when Email address is left blan
 	    |Please enter an Email address						|	
 	    
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10154_M @CR-SK
+@R2obile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10154 @CR-SK
 Scenario: Verify the user gets the error message when sign up from existing email ID
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -137,7 +137,7 @@ Scenario: Verify the user gets the error message when sign up from existing emai
 	    |The email address you entered already exists. Type a different email address and try again.|	 
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10156_M @CR-SK
+@R2obile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10156 @CR-SK
 Scenario: Verify the user gets the error message when Email Id format is incorrect
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -153,24 +153,23 @@ Scenario: Verify the user gets the error message when Email Id format is incorre
 	    |Please enter the Email Address in a valid format (ex. abc@xyz.com)	|
 
 	    
-######Failing - Known Issue KER-12929
-#@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10157_M @CR-SK
-#Scenario: Verify the user gets the error message on entering the password not meeting the requirements of minimum characters
-#	Given user launches the browser and navigates to "ASO_HOME" page
-#	And User clicks on the burger menu 
-#	When user clicks on sign in link from burger menu
-#	And clicks on SignUp link from SignIn page
-#	And user enter first "FirstName"
-#	And user enter last "LastName"
-#	And user enter random email Address
-#	And user enter password "5Char"
-#	And clicks on Sign Up Button
-#	Then Verify the message on the page
-#	    |# Following error Message should show on the page	|
-#	    |*Minimum 8 characters								|
+@R2obile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10157 @CR-SK
+Scenario: Verify the user gets the error message on entering the password not meeting the requirements of minimum characters
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And User clicks on the burger menu 
+	When user clicks on sign in link from burger menu
+	And clicks on SignUp link from SignIn page
+	And user enter first "FirstName"
+	And user enter last "LastName"
+	And user enter random email Address
+	And user enter password "5Char"
+	And clicks on Sign Up Button
+	Then Verify the message on the page
+	    |# Following error Message should show on the page	|
+	    |*Minimum 8 characters								|
 	    
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10158_M @CR-SK
+@R2obile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10158 @CR-SK
 Scenario: Verify the user gets the error message on entering the password same as email address
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -186,7 +185,7 @@ Scenario: Verify the user gets the error message on entering the password same a
 	    |For maximum security, please enter a Password different from your Email Address|
 
 
-@R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10160_M @CR-SK
+@R2obile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10160 @CR-SK
 Scenario: Verify the user entered password gets validated against password rules dynamically
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -201,8 +200,8 @@ Scenario: Verify the user entered password gets validated against password rules
 	Then password strength should show "Green" color
 
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4249
-@ZYP_MYACCOUNT_K4249-10162_M @CR-SK 
+@R2obile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4249
+@ZYPYACCOUNT_K4249-10162 @CR-SK 
 Scenario: Verify the user is able to see the password strength info bubble 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -219,8 +218,8 @@ Scenario: Verify the user is able to see the password strength info bubble
 		|Choose a password that is at least 8 characters in length and has a minimum of 1 number, 1 upper case letter, 1 lower case letter and 1 special character.|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249
-@ZYP_MYACCOUNT_K4249-10166_M @CR-SK 
+@R2obile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249
+@ZYPYACCOUNT_K4249-10166 @CR-SK 
 Scenario: Verify the user gets the error message when First name filled with any non-alpha character except - or '
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -238,8 +237,8 @@ Scenario: Verify the user gets the error message when First name filled with any
 		|Enter a Valid First Name where Only Alphabets, ' and - are allowed	|	
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249
-@ZYP_MYACCOUNT_K4249-10170_M @CR-SK 
+@R2obile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249
+@ZYPYACCOUNT_K4249-10170 @CR-SK 
 Scenario: Verify the user gets the error message when Last name filled with any non-alpha character except - or '
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -257,7 +256,7 @@ Scenario: Verify the user gets the error message when Last name filled with any 
 		|Enter a Valid Last Name where Only Alphabets, ' and - are allowed	|	
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10171_M @CR-SK
+@R2obile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYPYACCOUNT_K4249-10171 @CR-SK
 Scenario: Verify the user gets the error message when email address contains '+' as the non-alpha character
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu

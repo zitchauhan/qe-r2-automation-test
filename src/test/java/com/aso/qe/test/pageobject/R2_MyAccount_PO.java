@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import com.aso.qe.framework.common.CommonActionHelper;
 
 public class R2_MyAccount_PO extends CommonActionHelper {
-	
 
 	/**************** START LOCAL OBJETCS AND DECLARATIONS ***********************/
 
@@ -103,23 +102,24 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement setAsDefaultBtn;// RKA 3 aug added
 
-	@FindBy(xpath = "//*[@auid='First Name-input']") // CR-SK, 28 Aug 2018
-	public WebElement adr_inpFirstName;
+	 @FindBy(xpath = "//*[@data-auid='First Name-input']") // CR-SK, 28 Aug 2018
+     public WebElement adr_inpFirstName;
 
-	@FindBy(xpath = "//*[@auid='Last Name-input']") // CR-SK, 28 Aug 2018
-	public WebElement adr_inpLastName;
+     @FindBy(xpath = "//*[@data-auid='Last Name-input']") // CR-SK, 28 Aug 2018
+     public WebElement adr_inpLastName;
 
-	@FindBy(xpath = "//*[@auid='Address-input']") // CR-SK, 28 Aug 2018
-	public WebElement adr_inpAddress1;
+     @FindBy(xpath = "//*[@data-auid='Address-input']") // CR-SK, 28 Aug 2018
+     public WebElement adr_inpAddress1;
 
-	@FindBy(xpath = "//*[@auid='ZIP Code-input']") // CR-SK, 28 Aug 2018
-	public WebElement adr_inpzipCode;
+     @FindBy(xpath = "//*[@data-auid='ZIP Code-input']") // CR-SK, 28 Aug 2018
+     public WebElement adr_inpzipCode;
 
-	@FindBy(xpath = "//*[@auid='City-input']") // 27 Aug
-	public WebElement adr_inpCity;
+     @FindBy(xpath = "//*[@data-auid='City-input']") // 27 Aug
+     public WebElement adr_inpCity;
 
-	@FindBy(xpath = "//*[@auid='Phone Number-input']")
-	public WebElement adr_inpPhoneNumber;
+     @FindBy(xpath = "//*[@data-auid='Phone Number-input']")
+     public WebElement adr_inpPhoneNumber;
+
 
 	@FindBy(xpath = "//*[.='State']//parent::div//following-sibling::div//button")
 	public WebElement btnState; // CR-SK; 24 Aug
@@ -400,13 +400,18 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text() = 'ADD NEW CREDIT CARD']")
 	public WebElement headerAddNewCreditCards;
 
-	@FindBy(xpath = "//*[@auid = 'Credit Card Number-inputField'] | //*[@id='creditcardField'] |//*[@name ='creditcardField']") // CR-DPK Date 12-Sept
+	@FindBy(xpath = "//*[@auid = 'Credit Card Number-inputField'] | //*[@id='creditcardField'] |//*[@name ='creditcardField']") // CR-DPK
+																																// Date
+																																// 12-Sept
 	public WebElement txtCreditCardNumber;
 
-	@FindBy(xpath = "//*[@auid = 'Exp. Date-inputField'] | //*[@id='expirationDate'] |//*[@name ='expiryField']") // CR-DPK Date 12-Sept
+	@FindBy(xpath = "//*[@auid = 'Exp. Date-inputField'] | //*[@id='expirationDate'] |//*[@name ='expiryField']") // CR-DPK
+																													// Date
+																													// 12-Sept
 	public WebElement txtExpiryDate;
 
-	@FindBy(xpath = "//*[@auid = 'CVV-inputField'] | //*[@id='cvv'] | //*[@name ='cvvField']") // CR-SK Date 28-Aug, CR-DPK Date 12-Sept
+	@FindBy(xpath = "//*[@auid = 'CVV-inputField'] | //*[@id='cvv'] | //*[@name ='cvvField']") // CR-SK Date 28-Aug,
+																								// CR-DPK Date 12-Sept
 	public WebElement txtCVV;
 
 	@FindBy(xpath = "//*[text() = 'BILLING INFORMATION']")
@@ -472,7 +477,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='City']/..//input") // CR-SK 28 Aug
 	public WebElement txtCityInAddCreditCard;
 
-	@FindBy(xpath = "//div[text()= 'Gift Cards']/../following-sibling::div//*[text()='Remove']/i") // CR-SK 29 Aug Modified RKA 12 Sep
+	@FindBy(xpath = "//div[text()= 'Gift Cards']/../following-sibling::div//*[text()='Remove']/i") // CR-SK 29 Aug
+																									// Modified RKA 12
+																									// Sep
 	public List<WebElement> btnRemoveGiftCardList;
 
 	@FindBy(xpath = "//*[contains(text(),'Gift Card ending in')]") // CR-SK 29 Aug
@@ -533,17 +540,15 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='Orders']")
 	public WebElement myAccount_MyAccountList_Orders_lnk;
-	
+
 	@FindBy(xpath = "//*[@data-auid='Address Book']")
 	public WebElement myAccount_MyAccountList_AddressBook_lnk;
-	
-	@FindBy(xpath = "//*[@data-auid='Payments']")//CR-RK 8 Sep
-	public WebElement myAccount_MyAccountList_Payment_lnk; //Updated Cr-RK Sep12 KER-4230 
-	
-	@FindBy(xpath = "//*[@data-auid='Profile']") //CR-RK 8 Sep
-	public WebElement myAccount_MyAccountList_Profile_lnk; 
-	
-	
+
+	@FindBy(xpath = "//*[@data-auid='Payments']") // CR-RK 8 Sep
+	public WebElement myAccount_MyAccountList_Payment_lnk; // Updated Cr-RK Sep12 KER-4230
+
+	@FindBy(xpath = "//*[@data-auid='Profile']") // CR-RK 8 Sep
+	public WebElement myAccount_MyAccountList_Profile_lnk;
 
 	@FindBy(xpath = "//*[@auid='add_address_btn']")
 	public WebElement myAccountPage_AddNewAddressPluIcon_btn; // CR-RK KER-4230 Sep 6
@@ -566,82 +571,82 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='pop_over_btn']")
 	public WebElement Wishlist_icn;
-	
+
 	@FindBy(xpath = "//*[@data-auid='pop_over_toggle_btn']")
 	public WebElement Wishlist_createlist_lnk;
-	
+
 	@FindBy(xpath = "//*[@data-auid='Wish_list_name_input']")
 	public WebElement Wishlist_name_txt;
-	
+
 	@FindBy(xpath = "//*[text()='Rename List']")
 	public WebElement Rename_list_lnk;
-	
-	@FindBy(xpath = "//*[@data-auid='btnbrowse_product_button']")
-	public WebElement browse_products_btn; 
- 
-	@FindBy(xpath="//*[@data-auid='btnkeep_wish_list_btn']")
-	public WebElement Keep_Wishlist_btn;
-	
-	@FindBy(xpath="//*[@data-auid='share_list_btn']")
-	public WebElement Share_list_lnk;
-	
-	@FindBy(xpath="//*[@data-auid='email_list_input']")
-	public WebElement Email_input_txt;
-	
-	@FindBy(xpath="//*[@data-auid='comment_input']")
-	public WebElement Message_txt;
-	
-	@FindBy(xpath="//*[@data-auid='btnshare_whish_list_btn']")
-	public WebElement Share_Wishlist_btn;
-	
-	@FindBy(xpath="//*[@data-auid='close_modal_btn']")
-	public WebElement Cancel_btn; 
- 
 
+	@FindBy(xpath = "//*[@data-auid='btnbrowse_product_button']")
+	public WebElement browse_products_btn;
+
+	@FindBy(xpath = "//*[@data-auid='btnkeep_wish_list_btn']")
+	public WebElement Keep_Wishlist_btn;
+
+	@FindBy(xpath = "//*[@data-auid='share_list_btn']")
+	public WebElement Share_list_lnk;
+
+	@FindBy(xpath = "//*[@data-auid='email_list_input']")
+	public WebElement Email_input_txt;
+
+	@FindBy(xpath = "//*[@data-auid='comment_input']")
+	public WebElement Message_txt;
+
+	@FindBy(xpath = "//*[@data-auid='btnshare_whish_list_btn']")
+	public WebElement Share_Wishlist_btn;
+
+	@FindBy(xpath = "//*[@data-auid='close_modal_btn']")
+	public WebElement Cancel_btn;
 
 	// End KER-4233 CR-MS
 
 	@FindBy(xpath = "//*[text()='Weak']/following-sibling::div/div")
 	public WebElement SignUpPage_PasswordStrengthBar_txt;
-	
+
 	@FindBy(xpath = "//*[text()='Password Strength']//i")
 	public WebElement SignUpPage_PasswordStrength_tooltip;
-	
+
 	@FindBy(xpath = "//*[@data-auid='Orders_m']")
 	public WebElement burgerMenu_Orders_lnk;
-	
+
 	@FindBy(xpath = "//*[@data-auid='btnundefined']/preceding-sibling::button")
 	public WebElement myAccount_ChangePassword_Cancel_btn; // CR-SK, 29 Aug
 	
+	@FindBy(xpath = "//*[text()='DEFAULT']/..") //CR-DPK 14-Sept
+	public WebElement txtCreditCardDetails; 
+ 
+
+
 	
 
 	/***************************** END XPAHTS ***********************************/
 
 	/***************************** START METHODS ********************************/
-	
+
 	public boolean validatePasswordStrength(String expectedColor) {
 		waitForElement(SignUpPage_PasswordStrengthBar_txt);
 		String styleAttribute = SignUpPage_PasswordStrengthBar_txt.getAttribute("style");
 		styleAttribute = styleAttribute.split("width:")[1];
-        int paswwordStrengthPercentage = Integer.parseInt(styleAttribute.split("%")[0].trim());
-		if(expectedColor.equalsIgnoreCase("Yellow")) {
-			if(paswwordStrengthPercentage == 50) 
+		int paswwordStrengthPercentage = Integer.parseInt(styleAttribute.split("%")[0].trim());
+		if (expectedColor.equalsIgnoreCase("Yellow")) {
+			if (paswwordStrengthPercentage == 50)
 				return true;
-			else 
+			else
 				return false;
-		}
-		else if(expectedColor.equalsIgnoreCase("Green")) {
-			if(paswwordStrengthPercentage == 100) 
+		} else if (expectedColor.equalsIgnoreCase("Green")) {
+			if (paswwordStrengthPercentage == 100)
 				return true;
-			else 
+			else
 				return false;
-		}else
+		} else
 			return false;
-			
-		
+
 	}
-	
-	
+
 	/***************************** END METHODS *********************************/
 
 }

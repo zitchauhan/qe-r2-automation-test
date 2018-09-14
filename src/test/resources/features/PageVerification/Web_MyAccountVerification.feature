@@ -44,7 +44,9 @@ Scenario: Verify MyAccount
 		|PaymentPage_AddNewGiftCard_btn					|
 		|PaymentPage_RemoveGiftCards_btnList			|
 		|PaymentPage_AddedGiftCards_txtList				|
-		||PaymentPage_AddNewGiftCards_plusIcon			|	
+		|PaymentPage_AddNewGiftCards_plusIcon			|
+		|PaymentPage_CreditCardDetails					|
+		
 		
 		|PaymentPage_CrediCardRemoved_txt|
 		|PaymentPage_CrediCardList_txt|
@@ -165,17 +167,5 @@ Scenario: Verify MyAccount
 		
 		
 		
-		
-			
-		
-		
-		
-		
-	Then Verify below Sub/Main Module of My Account 
-	Then Verify below Sub-Module of Checkout 
-	Then Verify below Sub-Module of Order 
-	Then Verify below Sub-Module of Cart 
-	Then Verify below Sub-Module of PLP 
-	Then Verify below Sub-Module of HomePage 
-	Then Verify below Sub-Module of PDP 
+
 	

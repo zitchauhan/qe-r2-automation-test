@@ -60,10 +60,10 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2MyAccountPo.btnSignUp));
 		Thread.sleep(3000);
 	}
-	
+
 	@Then("^user should be able to sign up successfully$")
 	public void user_should_be_able_to_sign_up_successfully() throws Throwable {
-	    assertTrue(isDisplayed(r2MyAccountPo.myAccount_SignUp_CongratulationsMessage_txt));
+		assertTrue(isDisplayed(r2MyAccountPo.myAccount_SignUp_CongratulationsMessage_txt));
 	}
 
 	@When("^user should see the successfull message$")
@@ -87,18 +87,18 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 			globalElementHeader.clickOnBurgerMenu();
 			assertTrue(clickOnButton(globalElementHeader.btnMyAccountMobile));
 			assertTrue(isDisplayed(r2MyAccountPo.burgerMenu_Orders_lnk));
-		}else {
+		} else {
 			clickOnButton(r2MyAccountPo.myAccount);
 			assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_Orders_lnk));
 		}
-	} 
+	}
 
 	@When("^user enter first \"(.*?)\"$")
 	public void user_enter_first(String arg1) throws Throwable {
 		String firstNameToEnter;
-		if(arg1.equalsIgnoreCase("FirstName"))
+		if (arg1.equalsIgnoreCase("FirstName"))
 			firstNameToEnter = webPropHelper.getTestDataProperty(arg1);
-		else 
+		else
 			firstNameToEnter = arg1;
 		setInputText(r2MyAccountPo.inputFirstName, firstNameToEnter);
 	}
@@ -106,23 +106,22 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	@When("^user enter last \"(.*?)\"$")
 	public void user_enter_last(String arg1) throws Throwable {
 		String lastNameToEnter;
-		if(arg1.equalsIgnoreCase("LastName"))
+		if (arg1.equalsIgnoreCase("LastName"))
 			lastNameToEnter = webPropHelper.getTestDataProperty(arg1);
-		else 
+		else
 			lastNameToEnter = arg1;
 		setInputText(r2MyAccountPo.inputLastName, lastNameToEnter);
 	}
-	
+
 	@When("^user enter \"(.*?)\" in signup page$")
 	public void user_enter_in_signup_page(String arg1) throws Throwable {
 		String emailAddressToEnter;
-		if(arg1.equalsIgnoreCase("InvalidEmailAddress") | arg1.equalsIgnoreCase("EmailAddress+sd@email.com"))
+		if (arg1.equalsIgnoreCase("InvalidEmailAddress") | arg1.equalsIgnoreCase("EmailAddress+sd@email.com"))
 			emailAddressToEnter = arg1;
 		else
-			emailAddressToEnter = webPropHelper.getTestDataProperty(arg1);	
+			emailAddressToEnter = webPropHelper.getTestDataProperty(arg1);
 		setInputText(r2MyAccountPo.inputEmailAddress, emailAddressToEnter);
 	}
-
 
 	@When("^user enter random email Address$")
 	public void user_enter_email() throws Throwable {
@@ -135,17 +134,17 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	@When("^user enter password \"(.*?)\"$")
 	public void user_enter_password(String arg1) throws Throwable {
 		String passwordToEnter;
-		if(arg1.equalsIgnoreCase("5Char"))
+		if (arg1.equalsIgnoreCase("5Char"))
 			passwordToEnter = arg1;
-		else if(arg1.equalsIgnoreCase("NineCharacters"))
+		else if (arg1.equalsIgnoreCase("NineCharacters"))
 			passwordToEnter = "Test@1234";
-		else if(arg1.equalsIgnoreCase("ForteenCharacters"))
+		else if (arg1.equalsIgnoreCase("ForteenCharacters"))
 			passwordToEnter = "Test@1234teset";
 		else
 			passwordToEnter = webPropHelper.getTestDataProperty(arg1);
 		assertTrue(clickOnButton(r2MyAccountPo.inputCreatePassword));
-		//clicking on sign up as entering password directly destroys the page(all fields disappear) CR- SK
-		if(!(arg1.equalsIgnoreCase("ForteenCharacters")))
+		// clicking on sign up as entering password directly destroys the page(all		// fields disappear) CR- SK
+		if (!(arg1.equalsIgnoreCase("ForteenCharacters")))
 			clickOnButton(r2MyAccountPo.btnSignUp);
 		setInputText(r2MyAccountPo.inputCreatePassword, passwordToEnter);
 	}
@@ -182,15 +181,15 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	public void the_label_should_get_toggled_to_Hide() throws Throwable {
 		assertTrue(isDisplayed(r2MyAccountPo.btnHide));
 	}
-	
+
 	@Then("^password strength should show \"(.*?)\" color$")
 	public void password_strength_should_show_color(String arg1) throws Throwable {
 		assertTrue(r2MyAccountPo.validatePasswordStrength(arg1));
 	}
-	
+
 	@When("^user hovers on info icon tooltip of password strength$")
 	public void user_hovers_on_info_icon_tooltip_of_password_strength() throws Throwable {
-	    assertTrue(moveHover(r2MyAccountPo.SignUpPage_PasswordStrength_tooltip));
+		assertTrue(moveHover(r2MyAccountPo.SignUpPage_PasswordStrength_tooltip));
 	}
 
 }

@@ -142,20 +142,19 @@ Scenario: Verify the user gets the error message when Email Id format is incorre
 	    |Please enter the Email Address in a valid format (ex. abc@xyz.com)	|
 
 	    
-######Failing - Known Issue KER-12929
-#@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10157 @CR-SK
-#Scenario: Verify the user gets the error message on entering the password not meeting the requirements of minimum characters
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	When user clicks on SignIn link from global header 
-#	And clicks on SignUp link from SignIn page
-#	And user enter first "FirstName"
-#	And user enter last "LastName"
-#	And user enter random email Address
-#	And user enter password "5Char"
-#	And clicks on Sign Up Button
-#	Then Verify the message on the page
-#	    |# Following error Message should show on the page	|
-#	    |*Minimum 8 characters								|
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10157 @CR-SK
+Scenario: Verify the user gets the error message on entering the password not meeting the requirements of minimum characters
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page
+	And user enter first "FirstName"
+	And user enter last "LastName"
+	And user enter random email Address
+	And user enter password "5Char"
+	And clicks on Sign Up Button
+	Then Verify the message on the page
+	    |# Following error Message should show on the page	|
+	    |*Minimum 8 characters								|
 	    
 
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10158 @CR-SK

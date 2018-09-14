@@ -153,18 +153,35 @@ Scenario: To Verify Estimated Tax under the Order Summary in Cart - Unauthentica
 	Then user verifies estimated tax and total on checkout page
 
 
-#####In progress
-#@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-8124 @ZYP_CART_K2927-8124 @CR-SK
-#Scenario: To Verify Available Taxes and Tax is > $0.00 - Authenticated User
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	And user logs in as "EmailAddress"
-#	And User navigates to L2 Mens clothing 
-#	And user clicks on one of the subcategory and navigates to LTwo 
-#	And user clicks on one of the product category and navigates to LThree 
-#	And User is navigated to pdp page 
-#	And user click on Add to Cart Button 
-#	And user is navigated to Add to cart Notification popup 
-#	And user will click on View Cart button 
-#	And user navigate to Cart page
-#	When user navigates to checkout page
-#	Then checkout page displays updated tax
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2927 @ZYP_CART_K2927-8125 @CR-SK 
+Scenario: To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And User searches a product "SKUForATaxableProduct" and navigates to PDP
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page
+	When user enters "FindStoreZipcode" in change zipcode field in cart page
+	Then cart page displays updated tax
+	And tax displayed on cart is greater than zero
+	And user makes a note of tax and total amount
+	When user navigates to checkout page
+	Then tax and total amount displayed in checkout page is same as cart page
+
+
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-8124 @ZYP_CART_K2927-8124 @CR-SK
+Scenario: To Verify Available Taxes and Tax is > $0.00 - Authenticated User
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And user clicks on SignIn link from global header
+	And user logs in as "UserWithTaxableAddress"
+	And User searches a product "SKUForATaxableProduct" and navigates to PDP 
+	When user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page
+	And user enters "FindStoreZipcode" in change zipcode field in cart page
+	Then cart page displays updated tax
+	And tax displayed on cart is greater than zero
+	And user makes a note of tax and total amount
+	When user navigates to checkout page
+	Then tax and total amount displayed in checkout page is same as cart page

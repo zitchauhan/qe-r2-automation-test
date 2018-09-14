@@ -131,24 +131,6 @@ Scenario: To verify Tax recalculation when user switches from store pickup to  S
 	Then cart page displays updated tax
 	When user navigates to checkout page
 	Then checkout page displays updated tax
-##
-######### Execution pending-------------Incorrect
-##@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2927 @ZYP_CART_K2927-8130_M @CR-SK 
-##Scenario: To verify Tax recalculation when switch between Shipping & Store Pick up
-##	Given user launches the browser and navigates to "ASO_HOME" page 
-##	And User clicks on the burger menu 
-##	And User navigates to LThree 
-##	And user clicks on the product card and navigates to PDP 
-##	And  user click on Add to Cart Button
-##	And user is navigated to Add to cart Notification popup 
-##	And user will click on View Cart button 
-##	And user navigate to Cart page
-##	And user selects Ship To Me radio button
-##	And user makes a note of tax calculation
-##	When user switches the shipping to Store Pick up
-##	Then cart page displays updated tax
-##	When user navigates to checkout page
-##	Then checkout page displays updated tax
 
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2927 @ZYP_CART_K2927-8120_M @CR-SK 
 Scenario: To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User 
@@ -167,3 +149,57 @@ Scenario: To Verify Estimated Tax under the Order Summary in Cart - Unauthentica
 	And Total amount including Tax Is populated separately under Order Summary
 	When user navigates to checkout page
 	Then user verifies estimated tax and total on checkout page	
+	
+	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2927 @ZYP_CART_K2927-8125 @CR-SK 
+Scenario: To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And User searches a product "SKUForTaxableProduct" and navigates to PDP
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page
+	When user enters "FindStoreZipcode" in change zipcode field in cart page
+	Then cart page displays updated tax
+	And tax displayed on cart is greater than zero
+	And user makes a note of tax and total amount
+	When user navigates to checkout page
+	Then tax and total amount displayed in checkout page is same as cart page
+	
+	
+#####In progress
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-8124 @ZYP_CART_K2927-8124 @CR-SK
+Scenario: To Verify Available Taxes and Tax is > $0.00 - Authenticated User
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And User clicks on the burger menu 
+	And user clicks on SignIn link from global header
+	And user logs in as "UserWithTaxableAddress"
+	And User searches a product "SKUForATaxableProduct" and navigates to PDP 
+	When user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page
+	And user enters "FindStoreZipcode" in change zipcode field in cart page
+	Then cart page displays updated tax
+	And tax displayed on cart is greater than zero
+	And user makes a note of tax and total amount
+	When user navigates to checkout page
+	Then tax and total amount displayed in checkout page is same as cart page
+##
+######### Execution pending-------------Incorrect
+##@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2927 @ZYP_CART_K2927-8130_M @CR-SK 
+##Scenario: To verify Tax recalculation when switch between Shipping & Store Pick up
+##	Given user launches the browser and navigates to "ASO_HOME" page 
+##	And User clicks on the burger menu 
+##	And User navigates to LThree 
+##	And user clicks on the product card and navigates to PDP 
+##	And  user click on Add to Cart Button
+##	And user is navigated to Add to cart Notification popup 
+##	And user will click on View Cart button 
+##	And user navigate to Cart page
+##	And user selects Ship To Me radio button
+##	And user makes a note of tax calculation
+##	When user switches the shipping to Store Pick up
+##	Then cart page displays updated tax
+##	When user navigates to checkout page
+##	Then checkout page displays updated tax
