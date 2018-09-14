@@ -26,4 +26,18 @@ Feature: Message/Text Verification
     |Undo|
     |SPECIAL ORDER SHIP TO STORE|
     |See In-Store Pickup Instructions|
+    |Unrecognized card number|
+	|Past expiration date|
+	|Unrecognized expiration date|
+	|Please enter an expiration date|
+	|Please enter a valid security code|
+	|Please enter a security code|
+	|Please enter the First Name|
+	|Please Enter a Last Name|
+	|Please enter a phone number|
+	|Please enter a street address|
+	|Please enter a zip code|
+	|Please enter the City name|
+	|Please select a State|
+	|Required|
 	
