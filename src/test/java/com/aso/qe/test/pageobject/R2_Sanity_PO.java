@@ -67,7 +67,8 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	public WebElement AS_inputQty_m;
 	@FindBy(xpath = "(//div[text()='$'])[1]")
 	public WebElement AS_txtQuantityPrice;
-	@FindBy(xpath = "(//div[text()='$'])[1]")
+	//@FindBy(xpath = "(//div[text()='$'])[1]")
+	@FindBy(xpath = "(//*[contains(@data-auid,'crt_qtyField')])[1]/../following-sibling::*/*[1]") 
 	public WebElement AS_clkOutside;
 	@FindBy(xpath = "//*[@data-auid='crt_btnAddPromo']")
 	public WebElement AS_btnAddPromo;
