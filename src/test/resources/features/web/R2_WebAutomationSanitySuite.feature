@@ -41,22 +41,22 @@ TC_1- Verify Login Logout
 @R2_Web @R2_WAST-03 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @CR-SK
 @AutomationSanityR2 
 Scenario: TC_3- Verify User is able to create
-       Given user launches the browser and navigates to "ASO_HOME" page 
-       When user clicks on SignIn link from global header 
-       And clicks on SignUp link from SignIn page 
-       And user enter first "FirstName" 
-       And user enter last "LastName" 
-       And user enter random email Address
-       And user enter password "Password"
-       Then user should see password masked 
-       When clicks on Sign Up Button
-       Then user should be able to sign up successfully
-       And Verify the message on the page
-           |# Following Message should show on the page|
-           |CONGRATULATIONS                                                |
-           |You have successfully registered with Academy.com|
-           |LET'S SHOP                                                            |
-       And user should be able to view My Account in global header
+      Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page 
+	And user enter first "SanityFirstName" 
+	And user enter last "SanityLastName" 
+	And user enter random email Address 
+	And user enter password "SanityPassword" 
+	Then user should see password masked 
+	When clicks on Sign Up Button 
+	Then user should be able to sign up successfully 
+	And Verify the message on the page 
+		|# Following Message should show on the page|
+		|CONGRATULATIONS                            |
+		|You have successfully registered with Academy.com|
+		|LET'S SHOP                                       |
+	And user should be able to view My Account in global header 
 	
 @R2_Web @R2_WAST-04 @P-High @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418 @CR-SK
 @AutomationSanityR2 
@@ -126,7 +126,7 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 Scenario: TC_8-Verify and Search an item and  navigate to  View Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SKUNumber" 
+	When User enter the SKU search "SanitySKUNumber" 
 	And User click on search icon 
 	And user verifies the entered SKU id 
 	And user click on Add to Cart Button 
@@ -162,7 +162,7 @@ Scenario: TC_11-Verify Cat Nav - Checkout from ATC Modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
-	And user clicks on one of the product category and navigates to LThree  
+	And user clicks on one of the product category and navigates to LThree 
 	And user click on Add to Cart Button 
 	When user click on checkout button 
 	Then user is navigated to checkout page 
@@ -179,48 +179,48 @@ TC_12-Verify Apply Promotion
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	When enter the "OrderLevelQuantity" to X 
+	When enter the "SanityOrderLevelQuantity" to X 
 	Then verify Promo code discount is applied
 		
 @R2_Web @R2_WAST-11 @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8166 @CR-AKK
 @AutomationSanityR2 
 Scenario:
 TC_13- Verify Apply Promotion / Remove Promotion
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	When enter the "EnterQuantityGreaterThenOne" to X 
-	And user view and Applied Promotions/Discounts "ItemLevelPromoCodeDiscount"  
-	Then Verify below Sub/Main Module of Cart Page
+	Given  user launches the browser and navigates to "ASO_HOME" page 
+	And  User navigates to L2 Mens clothing 
+	Then  user clicks on one of the subcategory and navigates to LTwo 
+	Then  user clicks on one of the product category and navigates to LThree 
+	Then  user click on Add to Cart Button 
+	And  user will click on View Cart button 
+	And  user navigate to Cart page 
+	When  enter the "SanityEnterQuantityGreaterThenOne" to X 
+	And  user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount" 
+	Then  Verify below Sub/Main Module of Cart Page 
 	|# verify the following element in checkout order summary page|
 	|RemoveFromCart_Btn|
-	And User clicks on Remove Promo code link
-	Then Promo code is Removed 
+	And  User clicks on Remove Promo code link 
+	Then  Promo code is Removed 
 
 	
 @R2_Web @R2_WAST-12 @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @CR-AKK
 @AutomationSanityR2 
 Scenario: TC_14-Verify Update Quantity
 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	Then user view the items in order summary details (Subtotal, Estimated Shipping/In-Store Pickup, Estimated Taxes) 
-	When enter the "EnterQuantityGreaterThenOne" to X 
-	And modified quantity should get updated 
-	Then Order Summary should get recalculated 
-	Then Verify below Sub/Main Module of Cart Page 
-		|# Verify following elements in Cart page"Order Summary"|
-		|SubTotal_txt|
-	And user should be able to see the increased quantity and Price in Cart Order summary 
+	Given  user launches the browser and navigates to "ASO_HOME" page 
+	And  User navigates to L2 Mens clothing 
+	Then  user clicks on one of the subcategory and navigates to LTwo 
+	Then  user clicks on one of the product category and navigates to LThree 
+	Then  user click on Add to Cart Button 
+	And  user will click on View Cart button 
+	And  user navigate to Cart page 
+	Then  user view the items in order summary details (Subtotal, Estimated Shipping/In-Store Pickup, Estimated Taxes) 
+	When  enter the "EnterQuantityGreaterThenOne" to X 
+	And  modified quantity should get updated 
+	Then  Order Summary should get recalculated 
+	Then  Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|
+	|SubTotal_txt|
+	And  user should be able to see the increased quantity and Price in Cart Order summary 
 	
 @R2_Web @R2_WAST-13 @P-Highest @C-Cart @KER-2939 @ZYP_CART_K2939-9615 @CR-AKK
 @AutomationSanityR2 
@@ -243,33 +243,31 @@ TC_15-To Verify Image for selected SKU is be displayed on product blade for mult
 @R2_Web @R2_WAST-14 @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-AKK
 @AutomationSanityR2 
 Scenario: TC_16-Verify Remove Item from Cart
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	Then user clicks on one of the product category and navigates to LThree  
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And verify the Remove Quantity link
-	Then Verify below Sub/Main Module of Cart Page 
-		|# Verify following elements in Cart page "Your Cart item details "|
-		|RemoveFromCart_Btn|
-	
+	Given  user launches the browser and navigates to "ASO_HOME" page 
+	And  User navigates to L2 Mens clothing 
+	Then  user clicks on one of the subcategory and navigates to LTwo 
+	Then  user clicks on one of the product category and navigates to LThree 
+	Then  user click on Add to Cart Button 
+	And  user will click on View Cart button 
+	And  user navigate to Cart page 
+	And  verify the Remove Quantity link 
+	Then  Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page "Your Cart item details "|
+	|RemoveFromCart_Btn|
 	
 @R2_Web @R2_WAST-15 @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8168 @CR-AKK
 @AutomationSanityR2 
 Scenario: TC_17-Verify User Able to Checkout, if no errors in cart
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then user click on Add to Cart Button 
-	When user click on view cart button 
-	Then Verify below Sub/Main Module of Cart Page
+	Given  user launches the browser and navigates to "ASO_HOME" page 
+	And  User navigates to L2 Mens clothing 
+	Then  user clicks on one of the subcategory and navigates to LTwo 
+	Then  user clicks on one of the product category and navigates to LThree 
+	Then  user click on Add to Cart Button 
+	When  user click on view cart button 
+	Then  Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page "Your Cart item details "| 
 	|checkOutYourCart_Btn|
-	And user click on checkout button in Cart page 
-	
+	And  user click on checkout button in Cart page 
 		
 @R2_Web  @R2_WAST-16 @P-Highest @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8177 @CR-DPK @AutomationSanityR2 
 Scenario: TC_18-Verify Add Shipping Address
@@ -368,38 +366,37 @@ Scenario: TC_22-Verify Sign In During Checkout
 @CR-AKK 
 @AutomationSanityR2 
 Scenario: TC_23- Verify Edit cart items from Order summary 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo  
-	And user clicks on one of the product category and navigates to LThree 
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button and navigates to Checkout page 
-	When user clicks on Edit My cart in Order Summary 
-	Then user should navigates to the CartPage "CartTitle" 
-	Then Verify the message on the page
-    |# Following Error Message should show on the page|
-     |CartPage|
+	Given  user launches the browser and navigates to "ASO_HOME" page 
+	And  User navigates to L2 Mens clothing 
+	And  user clicks on one of the subcategory and navigates to LTwo 
+	And  user clicks on one of the product category and navigates to LThree 
+	And  user click on Add to Cart Button 
+	And  user will click on View Cart button 
+	And  user navigate to Cart page 
+	And  user will click on Checkout button and navigates to Checkout page 
+	When  user clicks on Edit My cart in Order Summary 
+	Then  user should navigates to the CartPage "CartTitle" 
+	Then  Verify the message on the page 
+	|# Following Message should show on the page|
+	|CartPage|
 	
 @R2_Web @R2_WAST-21 @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098
 @CR-AKK 
 @AutomationSanityR2 
 Scenario: TC_24-Verify Order Summary
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user clicks on one of the product category and navigates to LThree 
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	When user will click on Checkout button and navigates to Checkout page 
-	Then Verify below Sub/Main Module of Checkout Page
+	Given  user launches the browser and navigates to "ASO_HOME" page 
+	And  User navigates to L2 Mens clothing 
+	And  user clicks on one of the subcategory and navigates to LTwo 
+	And  user clicks on one of the product category and navigates to LThree 
+	And  user click on Add to Cart Button 
+	And  user will click on View Cart button 
+	And  user navigate to Cart page 
+	When  user will click on Checkout button and navigates to Checkout page 
+	Then  Verify below Sub/Main Module of Checkout Page 
 	|# Verify following elements in Checkout page "Order Summary"|
-		|Subtotal_txt|
-		|Estimatedshippint_txt|
-		|EstimatedTax_Txt|
-		|TotalDiscount_Txt|
+	|Subtotal_txt|
+	|Estimatedshippint_txt|
+	|EstimatedTax_Txt|  
 	
 	
 	

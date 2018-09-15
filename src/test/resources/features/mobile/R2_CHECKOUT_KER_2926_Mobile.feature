@@ -10,6 +10,7 @@ Scenario: To Edit cart items from Order summary
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user will click on Checkout button and navigates to Checkout page 
+	And user cilck on expand icon in order summary checkout page 
 	When user clicks on Edit My cart in Order Summary 
 	Then user should navigates to the CartPage "CartTitle" 
 	Then Verify the message on the page

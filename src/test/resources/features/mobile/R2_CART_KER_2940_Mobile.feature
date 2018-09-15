@@ -237,5 +237,23 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user navigate to Cart page
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	When user views Estimated Shipping in the Item Subtotal
-	Then verify Shipping charges for the items in the cart page is Zero and FREE is displayed	
+	Then verify Shipping charges for the items in the cart page is Zero and FREE is displayed
+	
+	
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8057 @CR-AKK
+	Scenario: To verify Shipping charges for in-Store Pickup
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmployeeEmailAddress" 
+	And user enter the valid password "EmployeePassword" 
+	And user click on signin button 
+    Then User clicks on ASO Logo and should be navigated to Home Page
+    And User clicks on the burger menu
+	And User navigates to LThree
+    And user clicks on the product card and navigates to PDP 
+	And user click on Add to Cart Button  
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And verify Employee discount is appiled 	
 	

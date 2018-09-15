@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
-import static org.testng.Assert.assertTrue;
+import static org.junit.Assert.assertTrue;
+
 
 import org.openqa.selenium.support.PageFactory;
 
@@ -18,8 +19,9 @@ public class R2_CHECKOUT_K2926_SD extends CommonActionHelper {
 	@Then("^user clicks on Edit My cart in Order Summary$")
 	public void user_clicks_on_Edit_My_cart_in_Order_Summary() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)){
-			assertTrue(clickOnButton(r2CheckoutPo.itemExpand_icon_M));
-			assertTrue(clickOnButton(r2CheckoutPo.EditCart_btn_M));	
+			//assertTrue(clickOnButton(r2CheckoutPo.itemExpand_icon_M));
+			//assertTrue(clickOnButton(r2CheckoutPo.EditCart_btn_M));	
+			assertTrue(clickOnButton(r2CheckoutPo.btnEditCart_m));
 		}
 		else
 		{

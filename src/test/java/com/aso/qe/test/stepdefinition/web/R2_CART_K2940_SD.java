@@ -54,7 +54,7 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 
 	@And("^verify Shipping charges as FREE in cart page$")
 	public void verify_Shipping_charges_as_FREE_in_cart_page() throws Throwable {
-		// Need to check functionality is not working
+		assertTrue(isDisplayed(r2CartPo.txtEstimatedTaxesCart));
 	}
 
 	@And("^Verify estimated taxes on the cart page$")
@@ -117,7 +117,7 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 
 	@And("^verify that Mixed promo discounts are applied for respective items$")
 	public void verify_that_Mixed_promo_discounts_are_applied_for_respective_items() throws Throwable {
-		// Need to verify functionality is not working
+		assertTrue(isDisplayed(r2CartPo.discount_Txt));
 	}
 
 	@And("^verify Promo code discount is applied$")
@@ -210,5 +210,10 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 	@Then("^user cilck on expand icon in order summary checkout page$")
 	public void user_cilck_on_expand_icon_in_order_summary_checkout_page() throws Throwable {
 		assertTrue(clickOnButton(r2CheckOutPo.ExpandIcon_Link));
+	}
+	
+	@Then("^verify Employee discount is appiled$")
+	public void verify_Employee_discount_is_appiled() throws Throwable {
+		assertTrue(isDisplayed(r2CartPo.discount_Txt));
 	}
 }
