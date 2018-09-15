@@ -194,7 +194,7 @@ Scenario: Verify the user is able to see the password strength info bubble
 	And clicks on SignUp link from SignIn page 
 	And user enter first "FirstName" 
 	And user enter last "LastName" 
-	And user enter random email Address 
+	And user enter random email Address
 	And user enter password "Password" 
 	When user hovers on info icon tooltip of password strength 
 	Then Verify the message on the page 
@@ -253,4 +253,46 @@ Scenario: Verify the user gets the error message when email address contains '+'
 	    |# Following error Message should show on the page					|
 	    |Please enter the Email Address in a valid format (ex. abc@xyz.com)	|	        
 		
-		
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10164 @CR-SK
+Scenario: Verify the user does not get the error message when First name filled with 1 character
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page
+	And user enter first "F"
+	And user enter last "LastName"
+	And user enter random email Address
+	And user enter password "Password"
+	And clicks on Sign Up Button
+	Then Verify the message not displayed on the page
+	    |# Following error Message should not show on the page	|
+	    |Please enter the First Name							|		
+
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10167 @CR-SK
+Scenario: Verify the user does not get the error message when Last name filled with 1 character
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page
+	And user enter first "FirstName"
+	And user enter last "L"
+	And user enter random email Address
+	And user enter password "Password"
+	And clicks on Sign Up Button
+	Then Verify the message not displayed on the page
+	    |# Following error Message should not show on the page	|
+	    | Please Enter a Last Name								|		    
+	    
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10165 @CR-SK
+Scenario: Verify the user gets the error message when First name filled with more than 50 characters
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page
+	And user enter last "NameHavingMoreThan50Characters"
+	Then Verify "First Name" text field does not accept more than 50 characters
+	
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10168 @CR-SK
+Scenario: Verify the user gets the error message when last name filled with more than 50 characters
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page
+	And user enter last "NameHavingMoreThan50Characters"
+	And Verify "Last Name" text field does not accept more than 50 characters	    		    

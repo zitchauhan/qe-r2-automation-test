@@ -16,29 +16,36 @@ import freemarker.template.utility.NullArgumentException;
 
 import org.apache.log4j.Logger;
 
-public class R2_VERIFICATION_MESSAGES_SD extends CommonActionHelper 
-{
+public class R2_VERIFICATION_MESSAGES_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R2_VERIFICATION_MYACCOUNT_SD.class);
 
-
 	@Then("Verify the message on the page$")
-	public void Verify_the_message_on_the_page(DataTable arg1) throws Throwable  
-	{
+	public void Verify_the_message_on_the_page(DataTable arg1) throws Throwable {
 
 		try {
 			List<List<String>> elements = arg1.raw();
-			for (int i = 1; i < elements.size(); i++) 
-			{
+			for (int i = 1; i < elements.size(); i++) {
 				String currentElement = elements.get(i).get(0);
-			
-					VerifyTextPersent(currentElement.trim());
-					//assertTrue(isDisplayed(r2CartPo.link_ContinueShopping));
+
+				VerifyTextPersent(currentElement.trim());
+				// assertTrue(isDisplayed(r2CartPo.link_ContinueShopping));
 			}
-		} 
-		catch (NullPointerException e) 
-		{
+		} catch (NullPointerException e) {
 			logger.error("This test-step has been failed");
 		}
 	}
 
+	@Then("Verify the message not displayed on the page$")
+	public void Verify_the_message_not_displayed_the_page(DataTable arg1) throws Throwable {
+
+		try {
+			List<List<String>> messages = arg1.raw();
+			for (int i = 1; i < messages.size(); i++) {
+				String currentMessage = messages.get(i).get(0);
+				VerifyTextNotPersent(currentMessage.trim());
+			}
+		} catch (NullPointerException e) {
+			logger.error("This test-step has been failed");
+		}
+	}
 }

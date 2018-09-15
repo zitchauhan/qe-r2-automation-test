@@ -12,10 +12,13 @@ import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
+import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import freemarker.template.utility.NullArgumentException;
+import net.bytebuddy.implementation.bytecode.Throw;
 
 public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 
@@ -66,16 +69,6 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2MyAccountPo.myAccount_SignUp_CongratulationsMessage_txt));
 	}
 
-	@When("^user should see the successfull message$")
-	public void user_should_see_the_successfull_message() throws Throwable {
-
-	}
-
-	@When("^user should be able to view My Account in global header$")
-	public void user_should_be_able_to_view_My_Account_in_global_header() throws Throwable {
-
-	}
-
 	@When("^user click on signin button$")
 	public void user_click_on_signin_button() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
@@ -98,6 +91,8 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 		String firstNameToEnter;
 		if (arg1.equalsIgnoreCase("FirstName"))
 			firstNameToEnter = webPropHelper.getTestDataProperty(arg1);
+		else if (arg1.equalsIgnoreCase("NameHavingMoreThan50Characters"))
+			firstNameToEnter = "namehavigmorethanfiftycharactersvalidationsiammorethanfiftycharacters";
 		else
 			firstNameToEnter = arg1;
 		setInputText(r2MyAccountPo.inputFirstName, firstNameToEnter);
@@ -108,6 +103,8 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 		String lastNameToEnter;
 		if (arg1.equalsIgnoreCase("LastName"))
 			lastNameToEnter = webPropHelper.getTestDataProperty(arg1);
+		else if (arg1.equalsIgnoreCase("NameHavingMoreThan50Characters"))
+			lastNameToEnter = "namehavigmorethanfiftycharactersvalidationsiammorethanfiftycharacters";
 		else
 			lastNameToEnter = arg1;
 		setInputText(r2MyAccountPo.inputLastName, lastNameToEnter);
@@ -190,6 +187,20 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	@When("^user hovers on info icon tooltip of password strength$")
 	public void user_hovers_on_info_icon_tooltip_of_password_strength() throws Throwable {
 		assertTrue(moveHover(r2MyAccountPo.SignUpPage_PasswordStrength_tooltip));
+	}
+	
+	@Then("^Verify \"(.*?)\" text field does not accept more than (\\d+) characters$")
+	public void verify_text_field_does_not_accept_more_than_characters(String arg1, int arg2) throws Throwable {
+		int maxLength = 0;
+	    if(arg1.equalsIgnoreCase("First Name"))
+	    	maxLength = Integer.parseInt(r2MyAccountPo.inputFirstName.getAttribute("maxlength"));
+	    else if(arg1.equalsIgnoreCase("Last Name")) 
+	    	maxLength = Integer.parseInt(r2MyAccountPo.inputLastName.getAttribute("maxlength"));
+	    else
+	    	throw new NullArgumentException("Please validate arguement.");
+	    
+	    assertTrue(maxLength == arg2);
+	    
 	}
 
 }
