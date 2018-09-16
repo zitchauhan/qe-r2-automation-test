@@ -1,16 +1,17 @@
 Feature: Add Shipping Address in Checkout 
 
 
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR-R2 @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8177 @CR-DPK 
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR-R2 @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8177 @CR-DPK 
 Scenario: Verify the Shipping address form that authenticated user can view on adding new shipping address during checkout
  	Given user launches the browser and navigates to "ASO_HOME" page
+ 	Then User clicks on the burger menu
  	And user clicks on SignIn link from global header
  	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User navigates to L2 Mens clothing
-   Then user clicks on one of the subcategory and navigates to LTwo
-     Then user clicks on one of the product category and navigates to LThree
+	Then User clicks on the burger menu
+	And User navigates to LThree
+   	Then user clicks on the product card and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -29,13 +30,13 @@ Scenario: Verify the Shipping address form that authenticated user can view on a
 	
 	
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8178 @CR-DPK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8178 @CR-DPK 
 Scenario: Verify if unauthenticated user be presented with the blank shipping address form fields
  	Given user launches the browser and navigates to "ASO_HOME" page
-	And User navigates to L2 Mens clothing
-   Then user clicks on one of the subcategory and navigates to LTwo
-     Then user clicks on one of the product category and navigates to LThree
-	Then user click on Add to Cart Button
+	Then User clicks on the burger menu
+	And User navigates to LThree
+   	Then user clicks on the product card and navigates to PDP
+     Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
 	Then user click on Go To Shipping Method button in Checkout page
@@ -47,13 +48,14 @@ Scenario: Verify if unauthenticated user be presented with the blank shipping ad
 	|Please enter a street address|
 	|Please enter a zip code|
 	|Required|	
+	
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8179 @CR-DPK 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8179 @CR-DPK 
 Scenario: Verify Guest user should view zipcode pre-populated if previously provided on Cart
  	Given user launches the browser and navigates to "ASO_HOME" page
-	And User navigates to L2 Mens clothing
-   Then user clicks on one of the subcategory and navigates to LTwo
-     Then user clicks on one of the product category and navigates to LThree
+	Then User clicks on the burger menu
+	And User navigates to LThree
+   	Then user clicks on the product card and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -89,12 +91,12 @@ Scenario: Verify guest user, if after placing order, registers the account saves
 	And user click on go to payment present in shipping method
 		
 
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2  @1HR_R2  @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-9683 @CR-DPK 
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2  @1HR_R2  @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-9683 @CR-DPK 
 Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided on cart page 
  	Given user launches the browser and navigates to "ASO_HOME" page
-	And User navigates to L2 Mens clothing
-   Then user clicks on one of the subcategory and navigates to LTwo
-     Then user clicks on one of the product category and navigates to LThree
+	Then User clicks on the burger menu
+	And User navigates to LThree
+   	Then user clicks on the product card and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -117,12 +119,12 @@ Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided o
 	Then user click on Go To Shipping Method button in Checkout page
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR-R2 @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-10382 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR-R2 @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-10382 @CR-DPK
   Scenario: Verify if user selects AVS address suggestion and checkout
     Given user launches the browser and navigates to "ASO_HOME" page
-    And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    Then user clicks on one of the product category and navigates to LThree
+    Then User clicks on the burger menu
+	And User navigates to LThree
+   	Then user clicks on the product card and navigates to PDP
      Then user click on Add to Cart Button
      And user will click on View Cart button
      Then user click on checkout button in Cart page
@@ -145,12 +147,12 @@ Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided o
 	And user verify the suggested address	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-10383 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-10383 @CR-DPK
   Scenario: Verify if user selects AVS address suggestion and checkout
     Given user launches the browser and navigates to "ASO_HOME" page
-    And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    Then user clicks on one of the product category and navigates to LThree
+    Then User clicks on the burger menu
+	And User navigates to LThree
+   	Then user clicks on the product card and navigates to PDP
      Then user click on Add to Cart Button
      And user will click on View Cart button
     Then user click on checkout button in Cart page
@@ -175,12 +177,12 @@ Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided o
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-11681 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-11681 @CR-DPK
   Scenario: Verify Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA, Shipping Method drawer gets open on successful validation
     Given user launches the browser and navigates to "ASO_HOME" page
-    And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    Then user clicks on one of the product category and navigates to LThree
+    Then User clicks on the burger menu
+	And User navigates to LThree
+   	Then user clicks on the product card and navigates to PDP
      Then user click on Add to Cart Button
      And user will click on View Cart button
     Then user click on checkout button in Cart page

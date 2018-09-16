@@ -44,6 +44,21 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 	   assertTrue(clickOnButton(r2CheckOutPo.EditPayment_Link));
 	   assertTrue(clickOnButton(r2CheckOutPo.ChangeBillingInformation_Txt));
 	}
-
+	@Then("^user fill billing information after clicking on change billing information text$")
+	public void user_fill_billing_information_after_clicking_on_change_billing_information_text() throws Throwable {
+	    setInputText(r2CheckOutPo.FirstName_Input, webPropHelper.getTestDataProperty("FirstName"));
+	    setInputText(r2CheckOutPo.LastName_Input, webPropHelper.getTestDataProperty("LastName"));
+	    setInputText(r2CheckOutPo.PhoneNumber_Input, webPropHelper.getTestDataProperty("PhoneNumber"));
+	    setInputText(r2CheckOutPo.Adderss_Input, webPropHelper.getTestDataProperty("AVSAddress"));
+	    setInputText(r2CheckOutPo.ZipCode_Input, webPropHelper.getTestDataProperty("zipcode"));
+	    Thread.sleep(3000);
+	    setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty("login"));
+	    clickOnButton(r2CheckOutPo.ReviewOrder_Btn);
+	    Thread.sleep(20000);
+	}
+	@Then("^user click on checkbox Same as shipping address$")
+	public void user_click_on_checkbox_Same_as_shipping_address() throws Throwable {
+	   clickOnButton(r2CheckOutPo.SameAsShippingAddress_checkBox);
+	}
 
 }

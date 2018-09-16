@@ -132,6 +132,18 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2MyAccountPo.Share_Wishlist_btn));
 	}
 	
+	@Then("^verify user navigated home page$")
+	public void verify_user_navigated_home_page() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype))
+		{
+		assertTrue(clickOnButton(r2MyAccountPo.myAccount_txt_Mobile));
+		}else
+		{
+			assertTrue(clickOnButton(r2MyAccountPo.lnkMyAccount));
+			
+		}
+	}
+	
 
 
 }

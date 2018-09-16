@@ -1,13 +1,11 @@
-Feature: [Web]Payment restrictions
+Feature: [Mobile]Payment restrictions
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-10454 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-10454 @CR-RKA
 Scenario: Verify that PayPal and More Options radio buttons are disabled when Gift Card is applied
 Given user launches the browser and navigates to "ASO_HOME" page 
-And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+And User clicks on the burger menu 
+	And User navigates to LThree 
+	And user clicks on the product card and navigates to PDP 
 And user click on Add to Cart Button 
 Then user click on checkout from ATC pop up
 And user enter First name "FirstName" 
@@ -27,14 +25,12 @@ And user enter First name "FirstName"
 		|PayPal_radioBtn|
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-10455 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-10455 @CR-RKA
 Scenario: Verify that PayPal and More Options radio buttons are enabled when Gift Card is removed
 Given user launches the browser and navigates to "ASO_HOME" page 
-And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+And User clicks on the burger menu 
+	And User navigates to LThree 
+	And user clicks on the product card and navigates to PDP
 	Then user change the quantity of item in PDP 
 And user click on Add to Cart Button 
 Then user click on checkout from ATC pop up
@@ -56,14 +52,12 @@ Then Verify below Sub/Main Module of Checkout Page
 		|PayPal_radioBtn|
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9876 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9876 @CR-RKA
 Scenario: Verify that user can combine Gift Card payment with Credit/Debit Card only
 Given user launches the browser and navigates to "ASO_HOME" page 
-And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page  
+And User clicks on the burger menu 
+	And User navigates to LThree 
+	And user clicks on the product card and navigates to PDP
 And user click on Add to Cart Button 
 Then user click on checkout from ATC pop up
 And user enter First name "FirstName" 
@@ -85,11 +79,9 @@ Then Verify below Sub/Main Module of Checkout Page
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9885 @CR-RKA
 Scenario: Verify that user cannot combine Gift Card payment with any non-Credit/Debit Card only
 Given user launches the browser and navigates to "ASO_HOME" page 
-And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page  
+And User clicks on the burger menu 
+	And User navigates to LThree 
+And user clicks on the product card and navigates to PDP
 And user click on Add to Cart Button 
 Then user click on checkout from ATC pop up
 And user enter First name "FirstName" 
@@ -106,14 +98,12 @@ And user enter First name "FirstName"
 
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9889 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9889 @CR-RKA
 Scenario: Verify that user can use multiple gift cards to make the payment
 Given user launches the browser and navigates to "ASO_HOME" page 
-And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+And User clicks on the burger menu 
+	And User navigates to LThree 
+And user clicks on the product card and navigates to PDP
 And user click on Add to Cart Button 
 Then user click on checkout from ATC pop up
 And user enter First name "FirstName" 
@@ -134,14 +124,12 @@ Then Verify below Sub/Main Module of Checkout Page
   |#verify gift card remove displayed after adding second gift card |
 |btnToRemoveGiftCardOnCheckoutPage|
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9892 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9892 @CR-RKA
 Scenario: Verify that user cannot use more than one credit/debit card for single transaction
 Given user launches the browser and navigates to "ASO_HOME" page 
-And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+And User clicks on the burger menu 
+	And User navigates to LThree 
+And user clicks on the product card and navigates to PDP
 And user click on Add to Cart Button 
 Then user click on checkout from ATC pop up
 And user enter First name "FirstName" 
@@ -163,11 +151,9 @@ And user enter First name "FirstName"
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9920 @CR-RKA
 Scenario: Verify that user cannot combine PayPal payment with any other payment option
 Given user launches the browser and navigates to "ASO_HOME" page 
-And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page  
+And User clicks on the burger menu 
+	And User navigates to LThree 
+And user clicks on the product card and navigates to PDP
 And user click on Add to Cart Button 
 Then user click on checkout from ATC pop up
 And user enter First name "FirstName" 
