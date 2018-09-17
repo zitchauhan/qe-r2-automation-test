@@ -76,10 +76,14 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 	
 	
 	//KER-4058 CR-RKA
-	@FindBy(xpath="//*[@data-auid='shopByCategory_9']")public WebElement btnShootingCategory;
-	@FindBy(xpath="//*[@data-auid='shopByCategory_4']")public WebElement ProductgunStorageSafty;
+	@FindBy(xpath="//*[@data-auid='shopByCategory_0']")public WebElement btnShootingCategory;
+	@FindBy(xpath="//*[@data-auid='shopByCategory_0']")public WebElement ProductgunStorageSafty;
    @FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[1]")public WebElement productSelection;
-   
+//   @FindBy(xpath="//*[@data-auid='level3Category-Shooting_m']")public WebElement shooting_M;
+   @FindBy(xpath="//*[@data-auid='level4Category-Firearms_m']")public WebElement firearms_M;
+   @FindBy(xpath="//*[@data-auid='level3Category-Boating']/*[1]")public WebElement boating_txt;
+   @FindBy(xpath="//*[@data-auid='shopByCategory_tiles']//*[contains(text(),'Kayaks & Canoes')]")public WebElement kayakCanoes_txt;
+   @FindBy(xpath="//*[@data-auid='productCard_1025869']")public WebElement intexKayak_txt;
    
  //KER-3093 CR-RKA
    @FindBy(xpath="//*[@data-auid='Payments']")public WebElement payment_Txt; // CR-DPK 12-sept
@@ -167,4 +171,10 @@ public class R2_R1_Fun_PO extends CommonActionHelper
     
     //KER-4039 CR-RKA
     @FindBy(xpath="//*[@data-auid='checkout_payment']//iframe")public WebElement paypalCheckoutFrame;
+    
+    
+
+@FindBy(xpath = "//*[text()='Change zip code']")//CR-AKK 17-sept
+       public WebElement ChangeZipCode_lnk;
+
 }

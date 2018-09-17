@@ -328,6 +328,8 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 						assertTrue(isDisplayed(r2CheckoutPo.PayPalCheckOut_Btn));
 				else if (currentElement.equalsIgnoreCase("SavePaymentInfoForLater_checkBox"))
 					assertTrue(isDisplayed(r2CheckoutPo.savePaymentInfoForLater_checkBox));
+				else if (currentElement.equalsIgnoreCase("AddressVerificationSystemModelPopUp"))
+					assertTrue(isDisplayed(r2CheckoutPo.AddressVerification_MSG)); 
 		
 				//*************** Billing Information(End)
 				//Payment(End)

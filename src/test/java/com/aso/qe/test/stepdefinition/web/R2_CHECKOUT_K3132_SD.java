@@ -41,8 +41,14 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 	
 	@Then("^user click on edit Payment link and click on billing information$")
 	public void user_click_on_edit_Payment_link_and_click_on_billing_information() throws Throwable {
-	   assertTrue(clickOnButton(r2CheckOutPo.EditPayment_Link));
+	  
+		if(isDisplayed(r2CheckOutPo.EditPayment_Link)) {
+		assertTrue(clickOnButton(r2CheckOutPo.EditPayment_Link));
 	   assertTrue(clickOnButton(r2CheckOutPo.ChangeBillingInformation_Txt));
+		}
+		else {
+			assertTrue(clickOnButton(r2CheckOutPo.ChangeBillingInformation_Txt));
+		}
 	}
 	@Then("^user fill billing information after clicking on change billing information text$")
 	public void user_fill_billing_information_after_clicking_on_change_billing_information_text() throws Throwable {
@@ -60,5 +66,20 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 	public void user_click_on_checkbox_Same_as_shipping_address() throws Throwable {
 	   clickOnButton(r2CheckOutPo.SameAsShippingAddress_checkBox);
 	}
-
+	@Then("^user fill the email address and click on review order btn$")
+	public void user_fill_the_email_address_and_click_on_review_order_btn() throws Throwable {
+		
+		setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,  webPropHelper.getTestDataProperty("login"));
+	clickOnButton(r2CheckOutPo.ReviewOrder_Btn);
+	
+	}
+	
+	@Then("^user fill the credit card detail in payment$")
+	public void user_fill_the_credit_card_detail_in_payment() throws Throwable {
+		
+		setInputText(r2CheckOutPo.CreditCardNumber_Input,  webPropHelper.getTestDataProperty("CreditCardNumber"));
+		setInputText(r2CheckOutPo.ExpirationDate_Input,  webPropHelper.getTestDataProperty("ExpDate"));
+		setInputText(r2CheckOutPo.Cvv_Input,  webPropHelper.getTestDataProperty("CVV"));
+	}
+	
 }

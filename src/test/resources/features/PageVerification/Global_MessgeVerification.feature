@@ -40,4 +40,4 @@ Feature: Message/Text Verification
 	|Please enter the City name|
 	|Please select a State|
 	|Required|
-	
+	|We are unable to ship to PO, APO and FPO. Please change your shipping address.|
