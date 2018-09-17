@@ -153,10 +153,12 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	}
 
 	@Then("^user clicks on one of the subcategory and navigates to LTwo$")
-	public void user_clicks_on_one_of_the_subcategory_and_navigates_to_LTwo_page() throws Throwable {
-		waitForElement(r2SanityPo.AS_secCategory_CLP);
+	public void user_clicks_on_one_of_the_subcategory_and_navigates_to_LTwo_page() throws Throwable 
+	{
+			//////////////////////-hitain-CR----------->
+		/*waitForElement(r2SanityPo.AS_secCategory_CLP);
 		assertTrue(clickOnButton(r2SanityPo.AS_secCategory_CLP));
-		Thread.sleep(3000);
+		Thread.sleep(3000);*/
 
 	}
 

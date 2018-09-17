@@ -53,3 +53,25 @@ Feature: Debug Testing
 #	Then verify price of each item in the cart
 #	And verify the price format each item is $XX.XX 
 #	When User searches a product "productName" and navigates to PDP
+
+
+
+@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8052 @CR-DPK
+	Scenario: To view price of each item in cart
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on one of the category and navigates to LOne
+  Then user clicks on one of the subcategory and navigates to LTwo
+  Then user clicks on one of the product category and navigates to LThree
+	Then User is navigated to pdp page
+	Then user click on Add to Cart Button
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button
+	Then User clicks on ASO Logo and should be navigated to Home Page
+	And User navigates to LThree 
+	Then user clicks on the product card and navigates to PDP
+	Then user click on Add to Cart Button
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button
+	And user navigate to Cart page 
+	Then verify price of each item in the cart
+	And verify the price format each item is $XX.XX 
