@@ -55,5 +55,31 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 	}
+	
+	@Given("^\"(.*?)\" by \"(.*?)\" endpoint for get profile placed orders details$")
+	public void by_endpoint_for_get_profile_placed_orders_details(String orderUrl, String extension) throws Throwable {
+		System.setProperty("PlacedOrderId","");
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(orderUrl)+loadProps.getTestDataProperty(extension);
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICallWithCookie(endpoints);
+		JsonPath jsonPathEvaluator = response.jsonPath();
+		String placedOrderId = jsonPathEvaluator.get("orders[0].orderNumber");
+		logger.debug("Placed orderNumber::"+ placedOrderId);
+		System.setProperty("PlacedOrderId", placedOrderId);
+	}
+
+	@Given("^\"(.*?)\" endpoint for get profile order by id details$")
+	public void endpoint_for_get_profile_order_by_id_details(String orderUrl) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(orderUrl)+System.getProperty("PlacedOrderId");
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICallWithCookie(endpoints);
+	}
+	
+	@Given("^\"(.*?)\" by \"(.*?)\" endpoint for Search profile placed orders with order id and zip code$")
+	public void by_endpoint_for_Search_profile_placed_orders_with_order_id_and_zip_code(String orderUrl, String extension) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(orderUrl)+System.getProperty("PlacedOrderId")+"?zipCode="+loadProps.getTestDataProperty(extension);
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICallWithCookie(endpoints);
+	}
 
 }
