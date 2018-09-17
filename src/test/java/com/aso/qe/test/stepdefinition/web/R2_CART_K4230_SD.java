@@ -72,12 +72,15 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
                   setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty("EmailAddressForZeroProductsInCart"));
                   setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
                   assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
-                  if(isDisplayed(cartR2PageObj.miniCartCount)) {
-                        assertTrue(clickOnButton(cartR2PageObj.miniCartCount));
-                        setInputText(cartR2PageObj.input_Quantity, "0");//txtQuantity
-                        if(isDisplayed(cartR2PageObj.input_Quantity))//txtQuantity
-                               tabInputBox(cartR2PageObj.input_Quantity);    //txtQuantity               
-                  }      
+                  if ("mobile".equalsIgnoreCase(testtype)) {
+          			assertTrue(clickOnButton(globalElementHeader.iconcart_m));
+
+          		} else {
+          			assertTrue(clickOnButton(globalElementHeader.iconcart));
+
+          		}
+                cartR2PageObj.emptyCart();
+    
            }
            
            else if(emailID.contains("RawUser") |emailID.contains("EmailAddress") | emailID.contains("UserWithTaxableAddress") ){

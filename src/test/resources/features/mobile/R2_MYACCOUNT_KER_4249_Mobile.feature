@@ -300,20 +300,20 @@ Scenario: Verify the user does not get the error message when Last name filled w
 	    |# Following error Message should not show on the page	|
 	    | Please Enter a Last Name								|	
 	    
-#@R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10165 @CR-SK
-#Scenario: Verify the user gets the error message when First name filled with more than 50 characters
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	And User clicks on the burger menu
-#	When user clicks on SignIn link from global header 
-#	And clicks on SignUp link from SignIn page
-#	And user enter last "NameHavingMoreThan50Characters"
-#	Then Verify "First Name" text field does not accept more than 50 characters
-#	
-#@R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10168 @CR-SK
-#Scenario: Verify the user gets the error message when last name filled with more than 50 characters
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	And User clicks on the burger menu
-#	When user clicks on SignIn link from global header 
-#	And clicks on SignUp link from SignIn page
-#	And user enter last "NameHavingMoreThan50Characters"
-#	And Verify "Last Name" text field does not accept more than 50 characters	    		    
+@R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10165 @CR-SK
+Scenario: Verify the user gets the error message when First name filled with more than 50 characters
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu
+	When user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page
+	And user enter last "NameHavingMoreThan50Characters"
+	Then Verify "First Name" text field does not accept more than 50 characters
+	
+@R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10168 @CR-SK
+Scenario: Verify the user gets the error message when last name filled with more than 50 characters
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu
+	When user clicks on SignIn link from global header 
+	And clicks on SignUp link from SignIn page
+	And user enter last "NameHavingMoreThan50Characters"
+	And Verify "Last Name" text field does not accept more than 50 characters	    		    
