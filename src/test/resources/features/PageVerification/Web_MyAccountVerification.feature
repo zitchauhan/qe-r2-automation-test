@@ -2,7 +2,11 @@ Feature: Debug
 
 
 Scenario: Verify MyAccount 
-	Then Verify below Sub/Main Module of My Account
+	Then Verify below Sub/Main Module of My Account 
+		|# Verify following elements in home page	|
+		|UnauthenticatedUserMyAccountBtn	|
+		|LoggedInUserMyAccountBtn	        | 
+		
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
@@ -46,6 +50,9 @@ Scenario: Verify MyAccount
 		|PaymentPage_AddedGiftCards_txtList				|
 		|PaymentPage_AddNewGiftCards_plusIcon			|
 		|PaymentPage_CreditCardDetails					|
+		|PaymentPage_Payment_lnk_web                    |
+		|PaymentPage_SetAsDefault_btn                   | 
+ 
 		
 		
 		|PaymentPage_CrediCardRemoved_txt|
@@ -95,6 +102,10 @@ Scenario: Verify MyAccount
 		|ProfilePage_PasswordHeader_label				|		
 		|ProfilePage_ChangePassword_btn					|
 		|ProfilePage_ReceiveEmailNotifications_checkbox	|
+		|MyAccountPage_Profile_cta                      |
+		|ProfilePage_MaskedPassword                     | 
+ 
+
 		
 		|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
@@ -104,7 +115,7 @@ Scenario: Verify MyAccount
 		|EditProfilePage_ConfirmEmail_txt								|
 		|EditProfilePage_Update_btn										|
 		|EditProfilePage_Cancel_btn										|	
-				
+		
 		|#Verify following elements in Profile > change password section|
 		|ChangePassworPage_CurrentPassword_btn							|
 		|ChangePassworPage_NewPassword_txt								|
@@ -140,6 +151,17 @@ Scenario: Verify MyAccount
 		|OrderPage_OrderNumber_txt					|
 		|OrderPage_ShippingZipCode_txt				|
 		|OrderPage_Find_btn							|
+		|OrderPage_TotalNumberOfOrder_txt           |
+		|OrderPage_CustomerCare_lnk                 |
+		|OrderPage_OrdersDropDownNewestSorted       | 
+		|Order_Cancel_lnk                           |
+		|Order_View_Details_Btn                     |
+		|Order_Back_To_Order_Lnk                    |
+		|Order_Note_Txt                             | 
+ 
+		
+ 
+		
 		
 		|#Verify following elements in SignUp section	|
 		|SignUp_FirstName_txt						 	|
@@ -167,5 +189,5 @@ Scenario: Verify MyAccount
 		
 		
 		
-
+		
 	

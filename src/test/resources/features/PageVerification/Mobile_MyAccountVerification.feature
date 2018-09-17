@@ -3,6 +3,12 @@ Feature: Debug
 
 	Scenario: Verify MyAccount
 	Then Verify below Sub/Main Module of My Account 
+		|# Verify following elements in home page	|
+		|UnauthenticatedUserMyAccountBtn	|
+		|LoggedInUserMyAccountBtn	        | 
+		|PaymentPage_Payment_lnk_web                    |
+		|PaymentPage_SetAsDefault_btn                   | 
+	
 		|# Verify following elements in home page			|
 		|BurgerMenu_MyAccount_txt				   			|
 			
@@ -52,6 +58,9 @@ Feature: Debug
 		|PaymentPage_AddedGiftCards_txtList				|
 		|PaymentPage_AddNewGiftCards_plusIcon			|	
 		|PaymentPage_CreditCardDetails					|
+		|PaymentPage_Payment_lnk_web                    |
+		|PaymentPage_SetAsDefault_btn                   | 
+ 
 		
 		|#Verify following elements in Payments > Add new credit card section	|
 		|AddCreditCardPage_BillingInformationHeader_txt							|
@@ -95,6 +104,10 @@ Feature: Debug
 		|ProfilePage_PasswordHeader_label				|		
 		|ProfilePage_ChangePassword_btn					|
 		|ProfilePage_ReceiveEmailNotifications_checkbox	|
+		|MyAccountPage_Profile_cta                      |
+		|ProfilePage_MaskedPassword                     | 
+ 
+		
 		
 		|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
@@ -139,6 +152,17 @@ Feature: Debug
 		|OrderPage_OrderNumber_txt					|
 		|OrderPage_ShippingZipCode_txt				|
 		|OrderPage_Find_btn							|
+		|OrderPage_TotalNumberOfOrder_txt           |
+		|OrderPage_CustomerCare_lnk                 |
+		|OrderPage_OrdersDropDownNewestSorted       | 
+		|Order_Cancel_lnk                           |
+		|Order_View_Details_Btn                     |
+		|Order_Back_To_Order_Lnk_M                  |
+		|Order_Note_Txt                             | 
+ 
+		
+ 
+		
 		
 		|#Verify following elements in SignUp section	|
 		|SignUp_FirstName_txt						 	|

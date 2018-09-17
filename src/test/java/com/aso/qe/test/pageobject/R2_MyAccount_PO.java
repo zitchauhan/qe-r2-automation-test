@@ -99,9 +99,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnadd_address_empty_btn']")
 	public WebElement addNewAddressBtn; // CR-SK, Date 28 Aug 2018
 
-	@FindBy(xpath = "//*[@data-auid='btnundefined']")
-	public WebElement setAsDefaultBtn;// RKA 3 aug added
-
+	@FindBy(xpath = "//*[@data-auid='setAsDefault_btn']")
+	public WebElement setAsDefaultBtn;// RKA 3 aug added //GK 17Sept 
+ 
 	 @FindBy(xpath = "//*[@data-auid='First Name-input']") // CR-SK, 28 Aug 2018
      public WebElement adr_inpFirstName;
 
@@ -195,9 +195,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//div[.='New Password']/following-sibling::input[@type='password']")
 	public WebElement txtNewPassword;
 
-	@FindBy(xpath = "//*[@data-auid='btnundefined']")
+	@FindBy(xpath = "//*[@data-auid='updatePassword']")
 	public WebElement btnUpdate;
-	// End KER-4230 CR-SK
 
 	// Start KER-4249 CR-SK 23-Aug
 	@FindBy(xpath = "//button[.='Show']")
@@ -426,8 +425,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//button[.='CANCEL']")
 	public WebElement btnCancelInAddCreditCard; // CR-SK 29 Aug-18
 
-	@FindBy(xpath = "//*[text()='wishlist']")
-	public WebElement lnkWishlist;
+	@FindBy(xpath = "//*[text()='WISH LIST']")
+	public WebElement lnkWishlist; 
+ 
 
 	@FindBy(xpath = "//*[@data-auid='btnmodal_open_btn']")
 	public WebElement btnCreateNewWishlist;
@@ -438,8 +438,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btncreate_wish_list_btn']")
 	public WebElement btnCreateWishList;
 
-	@FindBy(xpath = "//*[text()='order']")
-	public WebElement lnkOrder;
+	@FindBy(xpath = "//a[text()='ORDERS']")
+	public WebElement lnkOrder; 
 
 	@FindBy(xpath = "//h5[text()='ORDERS']")
 	public WebElement headerOrder;
@@ -477,10 +477,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='City']/..//input") // CR-SK 28 Aug
 	public WebElement txtCityInAddCreditCard;
 
-	@FindBy(xpath = "//div[text()= 'Gift Cards']/../following-sibling::div//*[text()='Remove']/i") // CR-SK 29 Aug
-																									// Modified RKA 12
-																									// Sep
-	public List<WebElement> btnRemoveGiftCardList;
+	@FindBy(xpath = "//div[text()= 'GIFT CARDS']/../following-sibling::div//*[text()='Remove']/i") // CR-SK 29 Aug	// Modified RKA 12	// Sep Modified GK	// 17Sep
+	public List<WebElement> btnRemoveGiftCardList; 
 
 	@FindBy(xpath = "//*[contains(text(),'Gift Card ending in')]") // CR-SK 29 Aug
 	public List<WebElement> txtAddedGiftCardList;
@@ -619,6 +617,49 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='DEFAULT']/..") //CR-DPK 14-Sept
 	public WebElement txtCreditCardDetails; 
  
+
+	// Start KER-4229 CR-GK 16 Sep
+		@FindBy(xpath = "//*[@data-auid='btnbutton-3']")
+		public List<WebElement> viewOrderDetailsBtn;
+
+		@FindBy(xpath = "//*[contains(text(),'Total Orders')]")
+		public WebElement totalNumberOfOrder;
+
+		@FindBy(xpath = "//a[contains(text(),'Customer Care')]")
+		public WebElement customerCareLink;
+
+		@FindBy(xpath = "//*[contains(text(),'Newest')]")
+		public WebElement ordersDropDownNewest;
+
+		@FindBy(xpath = "//*[contains(text(),'Oldest')]")
+		public WebElement ordersDropDownOldest;
+
+		@FindBy(xpath = "//*[contains(text(),'Your Password')]/../div[2]")
+		public WebElement maskedPasswordInProfile;
+
+		@FindBy(xpath = "//a[text()='PROFILE']")
+		public WebElement myAccountProfilecta;
+		// End KER-4233 CR-GK 
+	 
+		//Start KER-4237 CR-MS
+		
+		@FindBy(xpath="//*[text()='Cancel Order']")
+		public WebElement Order_Cancel_lnk;
+		
+		@FindBy(xpath="//*[text()='VIEW DETAILS']")
+		public WebElement Order_View_Details_Btn;
+		
+		@FindBy(xpath="//*[text()='Back to order']")
+		public WebElement Order_Back_To_Order_Lnk;
+		
+		@FindBy(xpath="//*[@data-auid='Orders_m']")
+		public WebElement Order_Back_To_Order_Lnk_M;
+		
+		@FindBy(xpath="//*[text()='After your item is ready for pickup, it will be held in our store for 7 days.']")
+		public WebElement Order_Note_Txt;
+		
+		//End KER-4237 CR-MS 
+	 
 
 
 	

@@ -117,18 +117,18 @@ Scenario: Verify user can do the logout using Flyout from My Account header
 	Then User is navigated to pdp page
 
 
-###In Progress
-#@R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-11141_M @CR-SK
-#Scenario: Verify user referenced back to the same page from where sign in is triggered
-#	Given user launches the browser and navigates to "ASO_HOME" page
-#	And User clicks on the burger menu 
-#	And User navigates to LThree 
-#	And user clicks on the product card and navigates to PDP 
-#	And User clicks on the burger menu
-#	And user clicks on SignIn link from global header
-#	And Sign in page should open
-#	When user logs in as "RawUser" 
-#	Then User is navigated to pdp page
+##In Progress
+@R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-11141_M @CR-SK
+Scenario: Verify user referenced back to the same page from where sign in is triggered
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And User clicks on the burger menu 
+	And User navigates to LThree 
+	And user clicks on the product card and navigates to PDP 
+	And User clicks on the burger menu
+	And user clicks on SignIn link from global header
+	And Sign in page should open
+	When user logs in as "RawUser" 
+	Then User is navigated to pdp page
 	
 #Failing - Known Issue
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10052_M @CR-SK

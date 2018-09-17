@@ -18,4 +18,12 @@ public class R2_CART_K2871_SD extends CommonActionHelper {
 		String storeLocator = getText(cartR2PageObj.txtStoreLocator);
 		assertTrue(storeLocator.equalsIgnoreCase(webPropHelper.getTestDataProperty(arg1)));
 	}
+	
+	@Then("^user is able to see nearest store location \"(.*?)\" in burger menu$")
+	public void user_is_able_to_see_nearest_store_location_in_burger_menu(String arg1) throws Throwable {
+		String storeLocator = getText(cartR2PageObj.lnkFindAStore_M);
+		assertTrue(storeLocator.equalsIgnoreCase(webPropHelper.getTestDataProperty(arg1)));
+	}
+
+	
 }

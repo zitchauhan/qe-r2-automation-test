@@ -185,3 +185,23 @@ Scenario: To Verify Available Taxes and Tax is > $0.00 - Authenticated User
 	And user makes a note of tax and total amount
 	When user navigates to checkout page
 	Then tax and total amount displayed in checkout page is same as cart page
+	
+	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2927 @ZYP_CART_K2927-8121 @CR-SK 
+Scenario: To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And user enters "SKUForBopisProduct" in the search box
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page
+	And user selects the ship to Store Pick up radio button
+	And user makes a note of tax calculation
+	When user switches from Store Pick up to Shipping
+	Then cart page displays updated tax
+	And estimated tax Is populated separately under Order Summary
+	And Total amount including Tax Is populated separately under Order Summary
+	When user navigates to checkout page
+	Then user verifies estimated tax and total on checkout page
+	
+	

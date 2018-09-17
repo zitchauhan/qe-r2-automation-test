@@ -30,9 +30,16 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 			for (int i = 1; i < elements.size(); i++) {
 				String currentElement = elements.get(i).get(0);
 				// ===============================================================================
+				//// Home Page
+				// ===============================================================================
+				if (currentElement.equalsIgnoreCase("UnauthenticatedUserMyAccountBtn"))
+					assertTrue(isDisplayed(r2MyAccountPo.signIn));
+				else if (currentElement.equalsIgnoreCase("LoggedInUserMyAccountBtn"))
+					assertTrue(isDisplayed(r2MyAccountPo.lnkMyAccount));
+				// ===============================================================================
 				//// sign in or login page
 				// ===============================================================================
-				if (currentElement.equalsIgnoreCase("SignInPage_EmailAddress_txt"))
+				else if (currentElement.equalsIgnoreCase("SignInPage_EmailAddress_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.inputEmailAddress_SignIn));
 				else if (currentElement.equalsIgnoreCase("SignInPage_Password_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.password));
@@ -92,6 +99,8 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 				// ===============================================================================
 				//// Payment
 				// ===============================================================================
+				else if (currentElement.equalsIgnoreCase("PaymentPage_Payment_lnk_web"))
+					assertTrue(isDisplayed(r2MyAccountPo.lnkPayment)); 
 				else if (currentElement.equalsIgnoreCase("PaymentPage_Payment_lnk_mobile"))
 					assertTrue(isDisplayed(r2MyAccountPo.lnkPayment_Mobile));
 				else if (currentElement.equalsIgnoreCase("PaymentPage_PaymentsHeader_label"))
@@ -131,7 +140,10 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.btnAddGiftCardPlusIcon)); 
 				else if (currentElement.equalsIgnoreCase("PaymentPage_CreditCardDetails"))
 					assertTrue(isDisplayed(r2MyAccountPo.txtCreditCardDetails)); 
-				
+				else if (currentElement.equalsIgnoreCase("PaymentPage_SetAsDefault_btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.setAsDefaultBtn)); 
+ 
+
 				
 
 				// ===============================================================================
@@ -161,7 +173,11 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.chkReceiveNotifications));
 				else if (currentElement.equalsIgnoreCase("MyAccountPage_Profile_lnk_Mobile"))
 					assertTrue(isDisplayed(r2MyAccountPo.lnkProfile_Mobile));
-
+				else if (currentElement.equalsIgnoreCase("MyAccountPage_Profile_cta"))
+					assertTrue(isDisplayed(r2MyAccountPo.myAccountProfilecta));
+				else if (currentElement.equalsIgnoreCase("ProfilePage_MaskedPassword"))
+					assertTrue(isDisplayed(r2MyAccountPo.maskedPasswordInProfile)); 
+ 
 				// ===============================================================================
 				//// Profile > Edit Profile
 				// ===============================================================================
@@ -303,6 +319,26 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.txtShippingZipCode));
 				else if (currentElement.equalsIgnoreCase("OrderPage_Find_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnFind));
+				else if (currentElement.equalsIgnoreCase("OrderPage_TotalNumberOfOrder_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.totalNumberOfOrder));
+				else if (currentElement.equalsIgnoreCase("OrderPage_CustomerCare_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.customerCareLink));
+				else if (currentElement.equalsIgnoreCase("OrderPage_OrdersDropDownNewestSorted"))
+					assertTrue(isDisplayed(r2MyAccountPo.ordersDropDownNewest));
+				else if (currentElement.equalsIgnoreCase("Order_View_Details_Btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_View_Details_Btn));
+				else if (currentElement.equalsIgnoreCase("Order_Cancel_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Cancel_lnk));
+				else if (currentElement.equalsIgnoreCase("Order_Note_Txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Note_Txt));
+				else if (currentElement.equalsIgnoreCase("Order_Back_To_Order_Lnk_M"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Back_To_Order_Lnk_M));
+				else if (currentElement.equalsIgnoreCase("Order_Back_To_Order_Lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Back_To_Order_Lnk)); 
+ 
+
+ 
+
 
 				// ===============================================================================
 				//// SignUp
