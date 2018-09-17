@@ -41,3 +41,10 @@ Feature: Message/Text Verification
 	|Please select a State|
 	|Required|
 	|We are unable to ship to PO, APO and FPO. Please change your shipping address.|
+
+	|We're sorry! Due to limited stock only part of your order can be fulfilled at this time.|
+	|Ship to|
+	|In-Store Pickup Available|
+	
+	
+	
