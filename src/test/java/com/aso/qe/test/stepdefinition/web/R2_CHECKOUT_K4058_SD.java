@@ -21,9 +21,9 @@ public class R2_CHECKOUT_K4058_SD extends CommonActionHelper {
 	R2_CheckOut_PO r2CheckOutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	
 	@Then("^user navigate to GunStorageAndSafty L_Three$")
-	public void user_navigate_to_GunStorageAndSafty_L_Three() throws Throwable {
-		
-
+	public void user_navigate_to_GunStorageAndSafty_L_Three() throws Throwable 
+	{
+	
 		if("mobile".equalsIgnoreCase(testtype))
 		{			
 		 	

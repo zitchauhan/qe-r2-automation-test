@@ -1,6 +1,7 @@
 package com.aso.qe.test.pageobject;
 
-import static org.testng.Assert.assertTrue;
+import static org.junit.Assert.assertTrue;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -16,6 +17,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.test.stepdefinition.web.Common_Web_SD;
 
 public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper 
 {
@@ -73,7 +75,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@id='newUserSubmit']")public WebElement btnSignUp;
 	@FindBy(xpath="//div[contains(@class,'mobile-search')]") public WebElement ovlySearchTextBarMobile;
 	@FindBy(xpath="//*[@data-auid='go-to-CLOTHING_m']/a | //*[@data-auid='go-to-Clothing_m']/a") public WebElement txtToNavigateClothingBurgerMenuMobile;
-	@FindBy(xpath="//*[@data-auid='go-to-Mens_m']/a | //*[@data-auid=\"go-to-Boys' Clothing_m\"]/a" ) public WebElement txtToNavigateMensBurgerMenuMobile;
+	@FindBy(xpath="//*[contains(@data-auid,'go-to-Men')]/a | //*[@data-auid=\"go-to-Boys' Clothing_m\"]/a" ) public WebElement txtToNavigateMensBurgerMenuMobile;
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]" ) public WebElement txtToNavigateMensCategoryMobile;
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Women's Clothing_m\"]" ) public WebElement txtToNavigateWoensCategoryMobile;
 	@FindBy(xpath="//*[@data-auid=\"logo\"]") public WebElement academyLogo;
@@ -946,15 +948,20 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	//SID 10-September
 	public void verifyThePDPPage() throws Exception{
 		String currentURL = getCurrentPageURL();
-		if(currentURL.contains("pdp")) {
+		if(currentURL.contains("pdp")) 
+		{
 			logger.debug("User is successfully navigated to PDP page with URL :: " + currentURL  );
 		}
-		else {
+		else 
+		{
 			logger.debug("User is not able to navigate to PDP instead navigated to URL :: " + currentURL  );
 		}
-		if ("mobile".equalsIgnoreCase(testtype)) {
+		if ("mobile".equalsIgnoreCase(testtype)) 
+		{
 			assertTrue(isDisplayed(pdp_po.imgProductMainMixedMedia_m));
-		} else {
+		} 
+		else 
+		{
 			assertTrue(isDisplayed(pdp_po.imgProductMainMixedMedia));
 		}
 
@@ -1654,6 +1661,39 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		Thread.sleep(3000);
 		assertTrue(clickOnButton(btnMens_Clothing_Shop));
 		Thread.sleep(3000);
+	}	
+	
+	
+	public void navigateL2HeaderToPLP() throws Exception
+	{
+
+		//////////////////////-hitain-CR----------->
+		
+		if("mobile".equalsIgnoreCase(testtype))
+		{
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnClothingCategory)); //4Sep
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnMenClothingShop));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.txtToNavigateMensBurgerMenuMobile));
+			Thread.sleep(1000);
+			
+		}
+		else
+		{
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnShopCategory));
+			Thread.sleep(2000);
+			//Actions hover = new Actions(getDriver());
+			moveHover(btnClothingCategory);
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnMenClothingShop));
+			Thread.sleep(2000);
+			//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
+			
+			
+		}
 	}	
 
 

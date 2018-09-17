@@ -34,20 +34,28 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 	private static final Logger logger = Logger.getLogger(R2_VERIFICATION_CART_SD.class);
 	
 	@When("^User searches a product \"(.*?)\" and navigates to PDP$")
-	public void user_searches_a_product_and_navigates_to_PDP(String arg1) throws Throwable {
-		if("mobile".equalsIgnoreCase(testtype)){
-			Common_Web_SD.globalElementHeader.clickOnBurgerMenu();
+	public void user_searches_a_product_and_navigates_to_PDP(String arg1) throws Throwable 
+	{
+		//////////////////////-hitain-CR----------->
+		
+		Common_Web_SD.globalElementHeader.navigateL2HeaderToPLP();
+		assertTrue(clickOnButton(r2SanityPo.AS_productPLP1_Mobile));
+		Common_Web_SD.globalElementHeader.verifyThePDPPage();
+		
+		/*if("mobile".equalsIgnoreCase(testtype))
+		{
+			//Common_Web_SD.globalElementHeader.clickOnBurgerMenu();
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.btnClothingCategory)); //4Sep
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(r2SanityPo.AS_btnMen_Clothing_Shop));
 			Thread.sleep(2000);
-			assertTrue(clickOnButton(r2SanityPo.AS_btnMensShirt_Men_Clothing_Shop));
+			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.txtToNavigateMensBurgerMenuMobile));
 			Thread.sleep(4000);
 			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1_Mobile));
-			
-
-		}else{
+		}
+		else
+		{
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.btnShopCategory));
 			Thread.sleep(2000);
@@ -64,7 +72,7 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper
 			Thread.sleep(3000);
 			Common_Web_SD.globalElementHeader.verifyThePDPPage();
 		}
-		
+		*/
 	}
 
 	@Then("Verify below Sub/Main Module of Cart Page$")

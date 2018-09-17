@@ -36,8 +36,11 @@ public class R1_Sanity extends CommonActionHelper{
 	}
 
 	@Then("^User navigates to L2 from home page$")
-	public void user_navigates_to_L2_from_home_page() throws Throwable {
-		globalElementHeader.navigateToL2ViaClick_DesktopHomepage();
+	public void user_navigates_to_L2_from_home_page() throws Throwable 
+	{
+		//////////////////////-hitain-CR----------->
+		//globalElementHeader.navigateToL2ViaClick_DesktopHomepage();
+		globalElementHeader.navigateL2HeaderToPLP();
 	}
 
 

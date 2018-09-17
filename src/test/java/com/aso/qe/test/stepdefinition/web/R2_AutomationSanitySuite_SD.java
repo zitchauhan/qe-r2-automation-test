@@ -186,8 +186,16 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	}
 	
 	@Then ("^User navigates to LThree$")
-	public void User_navigates_to_L3() throws InterruptedException {
-		if("mobile".equalsIgnoreCase(testtype)){
+	public void User_navigates_to_L3() throws Exception 
+	{
+		//////////////////////-hitain-CR----------->
+		
+		globalElementHeader.navigateL2HeaderToPLP();
+		
+		
+		
+		/*if("mobile".equalsIgnoreCase(testtype))
+		{
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory)); //4Sep
 			Thread.sleep(2000);
@@ -203,15 +211,18 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 			//hover.moveToElement(r2SanityPo.AS_btnClothingCategory).build().perform();
 			assertTrue(clickOnButton(r2SanityPo.AS_btnMen_Clothing_Shop));//danush
 			assertTrue(clickOnButton(r2SanityPo.AS_btnMensShirt_Men_Clothing_Shop));
-		}
+		}*/
 
 	}
 	
 	@Then("^user clicks on the product card and navigates to PDP$")
 	public void user_clicks_on_the_product_card_and_navigates_to_PDP_of_the_product() throws Throwable {
-		if("mobile".equalsIgnoreCase(testtype)) {
+		if("mobile".equalsIgnoreCase(testtype)) 
+		{
 			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1_Mobile));
-		}else {
+		}
+		else 
+		{
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 		}
