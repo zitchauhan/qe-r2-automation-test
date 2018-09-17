@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
-import static org.junit.Assert.assertTrue;
+
+import static org.testng.Assert.assertTrue;
 
 import java.security.KeyStore.SecretKeyEntry;
 
@@ -152,6 +153,20 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 
 	}
 
+	
+	@Then ("^User Naviates L2 form Homepage Header$")
+	public void User_Naviate_L2_form_HomepageHeader() throws Exception 
+	{
+		globalElementHeader.navigateL2HeaderToPLP();
+	}
+	
+	@Then ("^User clicks on product in PLP$")
+	public void User_clicks_on_product_in_PLP() throws Exception 
+	{
+		assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
+	}
+	
+	
 	@Then("^user clicks on one of the subcategory and navigates to LTwo$")
 	public void user_clicks_on_one_of_the_subcategory_and_navigates_to_LTwo_page() throws Throwable 
 	{

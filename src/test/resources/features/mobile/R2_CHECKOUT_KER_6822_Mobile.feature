@@ -11,15 +11,16 @@ Scenario: Verify Gift card fields displayed - No Previous Gift Cards Saved
 	And user click on signin button 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
-	Then user clicks on the product card and navigates to PDP 
+	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user will click on Checkout button 
 	And user is navigated to order summary page 
-	Then user click on GiftCard Plus icon in Checkout page 
+	And user clicks on edit payment cta 
+	And user click on GiftCard Plus icon in Checkout page 
+	And user selects add new gift card option from the dropdown 
 	Then Gift Card Number field and PIN fields are displayed 
 	
 	
@@ -34,15 +35,16 @@ Scenario: Verify Valid gift card is applied for purchases
 	And user click on signin button 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
-	Then user clicks on the product card and navigates to PDP 
+	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user will click on Checkout button 
 	And user is navigated to order summary page 
-	Then user click on GiftCard Plus icon in Checkout page 
+	And user clicks on edit payment cta 
+	And user click on GiftCard Plus icon in Checkout page 
+	And user selects add new gift card option from the dropdown 
 	And user enter Gift card Number "GiftcardNumber" 
 	And user enter Pin Number "PinNumber" 
 	And user click on Apply button 
@@ -58,8 +60,7 @@ Scenario:
 	Verify the user can enter valid new Gift card with 13 or 16 digit in Checkout for payment  
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
-	Then user clicks on the product card and navigates to PDP 
+	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -71,7 +72,9 @@ Scenario:
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page 
+	And user clicks on edit payment cta 
 	And user click on GiftCard Plus icon in Checkout page 
+	And user selects add new gift card option from the dropdown 
 	And user enter Gift card Number "Series777GiftCard" 
 	And user enter Pin Number "Series777GiftCardPin" 
 	When user click on Apply button 
@@ -82,3 +85,88 @@ Scenario:
 		|# Following button and success message on checkout page|
 		|GiftCardAppliedSuccessMsg|
 		|btnToRemoveGiftCardOnCheckoutPage|
+		
+		
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6822 
+@ZYP_CHECKOUT_K6822-7917 @CR-GK 
+Scenario: Verify Add new gift card during checkout user has Saved Gift Cards 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then User clicks on ASO Logo and should be navigated to Home Page 
+	Then User clicks on the burger menu 
+	When User searches a product "productName" and navigates to PDP 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user will click on Checkout button 
+	And user is navigated to order summary page 
+	And user clicks on edit payment cta 
+	And user click on GiftCard Plus icon in Checkout page 
+	And user selects add new gift card option from the dropdown 
+	Then Verify below Sub/Main Module of Checkout Page 
+		|#%%%%%  Gift Card form in payment drawer%%%%%%%%%%|
+		|GiftCardNumber_Input|
+		|Pin_Input|
+		|Apply_Btn|
+		
+		
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6822 
+@ZYP_CHECKOUT_K6822-7949 @CR-GK 
+Scenario: Verify Add new Gift Card fields 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then User clicks on ASO Logo and should be navigated to Home Page 
+	Then User clicks on the burger menu 
+	When User searches a product "productName" and navigates to PDP 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user will click on Checkout button 
+	And user is navigated to order summary page 
+	And user clicks on edit payment cta 
+	And user click on GiftCard Plus icon in Checkout page 
+	And user selects add new gift card option from the dropdown 
+	Then Verify below Sub/Main Module of Checkout Page 
+		|#%%%%%  Gift Card form in payment drawer%%%%%%%%%%|
+		|GiftCardNumber_Input|
+		|Pin_Input|
+		|Apply_Btn|
+		
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6822 
+@ZYP_CHECKOUT_K6822-7956 @CR-GK 
+Scenario: Verify Gift card balance is Stored in My account 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then User clicks on ASO Logo and should be navigated to Home Page 
+	Then User clicks on the burger menu 
+	When User searches a product "productName" and navigates to PDP 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user will click on Checkout button 
+	And user is navigated to order summary page 
+	And user clicks on edit payment cta 
+	And user click on GiftCard Plus icon in Checkout page 
+	And user selects add new gift card option from the dropdown 
+	And user enter Gift card Number "GiftcardNumber" 
+	And user enter Pin Number "PinNumber" 
+	And user click on Apply button 
+	And user clicks on edit payment cta 
+	Then applied gift card "GiftcardNumber" should be displayed 
+	And User navigates from checkout to payments in myaccount 
+	Then user should be able to see "GiftcardNumber" Gift card 

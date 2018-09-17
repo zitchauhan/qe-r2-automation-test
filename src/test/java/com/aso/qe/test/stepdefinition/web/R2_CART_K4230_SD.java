@@ -57,10 +57,10 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
            // Write code here that turns the phrase above into concrete actions
            if (emailID.contains("EmailAddressForChangePassword")) {
                   setInputText(r2MyAccountPo.inputEmailAddress_SignIn, webPropHelper.getTestDataProperty("EmailAddressForChangePassword"));
-                  setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty("DefaultPassword"));
+                  setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("DefaultPassword"));
                   clickOnButton(r2MyAccountPo.btnSignIn);
                   if (isDisplayed(r2MyAccountPo.txtIncorrectCombinationError)) {
-                        setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty("ChangedPassword"));
+                        setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("ChangedPassword"));
                         clickOnButton(r2MyAccountPo.btnSignIn);
                         defaultPassword = "ChangedPassword";
                         changedPassword = "DefaultPassword";

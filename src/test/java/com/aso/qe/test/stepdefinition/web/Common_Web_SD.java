@@ -16,7 +16,8 @@ import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class Common_Web_SD extends CommonActionHelper{
+public class Common_Web_SD extends CommonActionHelper
+{
 	private static final Logger logger = Logger.getLogger(Common_Web_SD.class);
 	public R1_FindStore_PO findStorePO;
 	public static R1_GlobalElementHeader_Home_PO globalElementHeader;
@@ -139,6 +140,9 @@ public class Common_Web_SD extends CommonActionHelper{
 		}
 
 	}
+	
+	
+	
 	
 	
 	@Then ("^User navigates to L2 Womens clothing$")
