@@ -34,6 +34,7 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 	public double priceItem2 = 0;
 	private String singleTaxCurrency;
 	private String multiTaxCurrency;
+	public static String cart;
 
 	@And("^user clicks on Cart icon$")
 	public void user_clicks_on_Cart_icon() throws Throwable {
@@ -199,6 +200,7 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 	@When("^user views Estimated Shipping in the Item Subtotal$")
 	public void user_views_Estimated_Shipping_in_the_Item_Subtotal() throws Throwable {
 		assertTrue(isDisplayed(r2CartPo.txtEstimatedShippingCart)); // txtEstimatedShipping
+		cart= r2CartPo.txtEstimatedShippingCart.getText();
 	}
 
 	@Then("^verify Shipping charges for the items in the cart page is Zero and FREE is displayed$")

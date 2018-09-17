@@ -372,6 +372,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath = "//*[text()='Estimated Shipping']/..")public WebElement txtEsitmatedShipping;//estimatedshippint_txt
 		@FindBy(xpath="//*[text()='Estimated Shipping']/../*[2]")public WebElement EstimatedShippingPrice_txt;//estimatedshipping_price
 		
+		@FindBy(xpath="(//*[contains(text(),'147.50')])[1]")public WebElement shippingPriceInShippingMethod_txt;
+		
 		
 		@FindBy(xpath="//*[contains(text(),'Taxes')]")public WebElement Taxes_Txt;//taxprice_txt
 		@FindBy(xpath="//*[contains(text(),'Taxes')]/following-sibling::*[1]")public WebElement TaxesPrice_Txt;//taxprice
@@ -534,6 +536,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	
 	//Sep7 CR-RK KER-3151
+	
+	
+	//Start CR-DPK KER-2911
+	@FindBy(xpath="//*[text()='Special Order Ship To Store']/../div[2]")public WebElement SpecialOrderShipToStore_txt;
+	
+	//End CR-DPK KER-2911
+	
 	
 	
 	@FindBy(xpath="//*[@data-auid='checkout_edit_shipping_address']")public WebElement Checkout_ShippingAddress_Edit;

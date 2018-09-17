@@ -1,11 +1,11 @@
 Feature: Verify Accurate Shipping Prices at Checkout
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2911 @ZYP_CHECKOUT_K2926-8229 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2911 @ZYP_CHECKOUT_K2926-8229 @CR-DPK
 Scenario: Verify if the shipping price on Checkout screen is same as Order Summary on Cart page
-	    Given user launches the browser and navigates to "ASO_HOME" page  
-		And User navigates to L2 Mens clothing
-	    And user clicks on one of the subcategory and navigates to LTwo
-	     And user clicks on one of the product category and navigates to LThree
+	    Given user launches the browser and navigates to "ASO_HOME" page
+	    And User clicks on the burger menu   
+		And User navigates to LThree
+   	Then user clicks on the product card and navigates to PDP
 		And user click on Add to Cart Button
 		And user will click on View Cart button 
 		When user views Estimated Shipping in the Item Subtotal
@@ -24,11 +24,12 @@ Scenario: Verify if the shipping price on Checkout screen is same as Order Summa
 		
 		
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2911
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2911
 @ZYP_CHECKOUT_K2926-8230 @CR-DPK 
 Scenario:
 Verify the shipping price for each shipping method for Ship 2 Store items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
 	Then user navigate to GunStorageAndSafty L_Three 
 	Then user select the product from L_Three and navigate to PDP 
 	When user clicks on Find a Store 
@@ -52,13 +53,15 @@ Verify the shipping price for each shipping method for Ship 2 Store items
 	
 
 		
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2911
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2911
 @ZYP_CHECKOUT_K2926-8231 @CR-DPK 
 Scenario:
 Verify the shipping price for each shipping method for SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
 	Then user navigate to GunStorageAndSafty L_Three 
 	Then user select the product from L_Three and navigate to PDP 
+	And User clicks on the burger menu 
 	When user clicks on Find a Store 
 	Then user enter "zipCode" in Find a Store Model 
 	And user click on submit button 
@@ -78,7 +81,7 @@ Verify the shipping price for each shipping method for SOF items
 	Then User verify the fixed shipping price value set in DB for the selected shipping method from DB
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2911
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2911
 @ZYP_CHECKOUT_K2926-8232 @CR-DPK 
 Scenario:
 Verify the shipping price for each shipping method for Gift Card items
