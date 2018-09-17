@@ -40,11 +40,9 @@ Feature: Message/Text Verification
 	|Please enter the City name|
 	|Please select a State|
 	|Required|
+	|ARE YOU SURE YOU WANT TO CANCEL THIS ORDER?|
 	|We are unable to ship to PO, APO and FPO. Please change your shipping address.|
-
 	|We're sorry! Due to limited stock only part of your order can be fulfilled at this time.|
 	|Ship to|
 	|In-Store Pickup Available|
-	
-	
 	
