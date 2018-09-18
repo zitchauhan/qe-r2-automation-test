@@ -2,12 +2,12 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "store": {
+    "pickupResponse": {
       "type": "array",
       "items": {}
     }
   },
   "required": [
-    "store"
+    "pickupResponse"
   ]
 }
