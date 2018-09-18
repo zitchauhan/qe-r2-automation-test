@@ -13,6 +13,8 @@ Scenario: Verify Checkout for Web
 		|WelcomeBackPassword_Input|
 		|WelcomeBackSignIN_Btn|
 		
+		|#checkout footer|
+		|CheckOut_CheckOutFooter|
 		
 		
 		|# Verify following elements in Checkout > Shipping Address	|

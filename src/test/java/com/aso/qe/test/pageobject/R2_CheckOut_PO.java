@@ -499,6 +499,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   //Payment(End)
 	   
+	//Footer Start
+	@FindBy(xpath ="//*[@data-auid='checkout_footer_component']")public WebElement checkOut_CheckOutFooter; 
+	//Footer End
 	//************************  MOBILE***********************
 	   @FindBy(xpath="(//*[@data-auid='checkout_order_summary_edit_cart_link'])[1]/*")public WebElement EditMyCart_Link_M;
 	

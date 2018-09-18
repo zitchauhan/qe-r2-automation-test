@@ -41,6 +41,10 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2CheckoutPo.WelcomeBackPassword_Input));
 				else if (currentElement.equalsIgnoreCase("WelcomeBackSignIN_Btn"))
 					assertTrue(isDisplayed(r2CheckoutPo.WelcomeBackSignIN_Btn));
+				//Footer Start
+				else if(currentElement.equalsIgnoreCase("CheckOut_CheckOutFooter"))
+					assertTrue(isDisplayed(r2CheckoutPo.checkOut_CheckOutFooter)); 
+				//Fotter End
 				// ===============================================================================
 				//// Check out > Shipping Address
 				// ===============================================================================
