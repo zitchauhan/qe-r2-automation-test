@@ -83,6 +83,7 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 		} else {
 			clickOnButton(r2MyAccountPo.myAccount);
 			assertTrue(isDisplayed(r2MyAccountPo.myAccount_MyAccountList_Orders_lnk));
+		  assertTrue(clickOnButton(r2MyAccountPo.myAccount));
 		}
 	}
 

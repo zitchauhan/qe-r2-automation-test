@@ -1,6 +1,6 @@
 Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios 
 
-@@R2_Mobile @R2_WAST-01 @P-High @C-MyAccount @KER-4011 
+@R2_Mobile @R2_WAST-01 @P-High @C-MyAccount @KER-4011 
 @ZYP_MYACCOUNT_K4011-10040 @CR-SK @AutomationSanityR2 
 Scenario: 
 	TC_1- Verify Login Logout  

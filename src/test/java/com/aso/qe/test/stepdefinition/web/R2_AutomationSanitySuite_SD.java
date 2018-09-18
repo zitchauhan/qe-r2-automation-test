@@ -281,6 +281,8 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 			assertTrue(clickOnButton(r2MyAccountPo.myAccount));
 			Thread.sleep(1000);
 		    assertTrue(clickOnButton(r2MyAccountPo.signOut_lnk));	
+		    Thread.sleep(1000);
+		  
 		}
 		
 	    
