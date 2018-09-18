@@ -25,6 +25,7 @@ import io.restassured.path.json.JsonPath;
 
 public class R2_Cart_API_SD extends JSONValidationUtils{
 	private static final Logger logger = Logger.getLogger(R2_Cart_API_SD.class);
+	public static String cartItemID;
 
 	@Given("^\"(.*?)\" endpoint for getting cart summary$")
 	public void endpoint_for_getting_cart_summary(String url) throws Throwable {
@@ -184,11 +185,53 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		initiateRestPostAPICallWithoutCookies(endpoints, loadProps.getTestDataProperty(requestJson));
 	}
 	
-	@Given("^\"(.*?)\" by \"(.*?)\" with \"(.*?)\" endpoint for Cart-Update-Remove-Quantity$")
+	@Given("^\"(.*?)\" by \"(.*?)\" with \"(.*?)\" endpoint for Cart-Update-Quantity$")
 	public void by_with_endpoint_for_Cart_Update_Remove_Quantity(String url, String extension, String requestJson) throws Throwable {
+		if(org.springframework.util.StringUtils.isEmpty(cartItemID)){
+			cartItemID="750080875";
+		}
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+"PUT/"+System.getProperty("OrderId")+extension;
 		logger.debug("END Point URL:"+endpoints);
-		initiateRestPostAPICallWithoutCookies(endpoints, requestJson);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestJson+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_ITEMID", cartItemID).replace("REPLACE_QUANTITY", "1");
+		logger.debug("POST Request JSON:"+postRequestStr);
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
+	}
+	
+	@Given("^\"(.*?)\" and post request \"(.*?)\" endpoint for Add to Cart with Sign user$")
+	public void and_post_request_endpoint_for_Add_to_Cart_with_Sign_user(String addToCartSummaryUrl, String addtocartRequestJson) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(addToCartSummaryUrl);
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestPostAPICallWithCookies(endpoints, loadProps.getTestDataProperty(addtocartRequestJson));
+		JsonPath jsonPathEvaluator = response.jsonPath();
+		cartItemID = jsonPathEvaluator.get("addToCart.items[0].itemId");
+		logger.debug("Cart ItemID::"+ cartItemID);
+	}
+	
+	@Given("^\"(.*?)\" by \"(.*?)\" with \"(.*?)\" endpoint for Remove Item from Cart$")
+	public void by_with_endpoint_for_Remove_Item_from_Cart(String url, String extension, String requestJson) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+"PUT/"+extension;
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestJson+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_ITEMID", cartItemID).replace("REPLACE_QUANTITY", "0");
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
+	}
+
+	@Given("^\"(.*?)\" by \"(.*?)\" endpoint for Get Available Shipping Methods for Cart Items$")
+	public void by_endpoint_for_Get_Available_Shipping_Methods_for_Cart_Items(String url, String extension) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+extension+System.getProperty("OrderId");
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICallWithCookie(endpoints);
+	}
+	
+	@Given("^\"(.*?)\" by \"(.*?)\" with \"(.*?)\" endpoint for Cart Items Initiate Checkout$")
+	public void by_with_endpoint_for_Cart_Items_Initiate_Checkout(String url, String extension, String requestJson) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+"PUT/"+System.getProperty("OrderId")+extension;
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestJson+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_ORDERID", System.getProperty("OrderId"));
+		logger.debug("POST Request JSON:"+postRequestStr);
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
 	}
 
 }

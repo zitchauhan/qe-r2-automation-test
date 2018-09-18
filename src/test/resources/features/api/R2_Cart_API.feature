@@ -5,17 +5,28 @@ Feature: To Verify Get Cart Details API service without sign-in
     Given "loginurl" with "LoginRequest" endpoint for login authentication
     Then Verify response status code as 201
 
-  @All-R2 @C1-Cart @C2-AddCart @api @R2_AAST-02 @CR-VK @ZYP_Cart_12219
+  @All-R2 @C1-Cart @C2-AddCart @api @R2_AAST-02 @CR-RT @ZYP_Cart_13776
+  Scenario: TC_2 - Verify Add to Cart Item with sign-in details
+    Given "AddToCartSummaryUrl" and post request "addtocartRequestJson" endpoint for Add to Cart with Sign user
+    Then Verify response status code as 200
+    And validate jsonSchema "KER-3524-AddtoCartSchema"
+    Then Validated response details of "addToCart.itemCount"
+    Then Validated response details of "addToCart.message"
+    Then Validated response details of "addToCart.totalQuantityAdded"
+    Then Validated response details of "addToCart.totalCartQuantity"
+    Then Validated response details of "addToCart.orderTotal"
+
+  @All-R2 @C1-Cart @C2-AddCart @api @R2_AAST-02 @CR-RT @ZYP_Cart_12219
   Scenario: TC_2 - Verify Add to Cart without sign-in details
     Given "AddToCartSummaryUrl" and post request "addtocartRequestJson" endpoint for Add to Cart with Guest user
     Then Verify response status code as 200
 
-  @All-R2 @C1-Cart @C2-AddCart @api @R2_AAST-03 @CR-VK @ZYP_Cart_12220
+  @All-R2 @C1-Cart @C2-AddCart @api @R2_AAST-03 @CR-RT @ZYP_Cart_12220
   Scenario: TC_3 -  Verify Add to Cart json schema
     Given "AddToCartSummaryUrl" and post request "addtocartRequestJson" endpoint for Add to Cart with Guest user
     And validate jsonSchema "KER-3524-AddtoCartSchema"
 
-  @All-R2 @C1-Cart @C2-AddCart @api @R2_AAST-04 @CR-VK @ZYP_Cart_12221
+  @All-R2 @C1-Cart @C2-AddCart @api @R2_AAST-04 @CR-RT @ZYP_Cart_12221
   Scenario: TC_4 - Verify Add to Cart required property values
     Given "AddToCartSummaryUrl" and post request "addtocartRequestJson" endpoint for Add to Cart with Guest user
     Then Validated response details of "addToCart.itemCount"
@@ -42,6 +53,37 @@ Feature: To Verify Get Cart Details API service without sign-in
     Then Validated response details of "totalProductPrice"
     Then Validated response details of "currency"
     Then Validated response details of "totalOrderItem"
+    
+    @All-R2 @C1-Cart @C2-UpdateCart @api @R2_AAST-05 @CR-RT @ZYP_InitiateCheckout_13803
+  Scenario: TC_5 - verify the Cart Items Initiate Checkout
+		Given "GetCartUrl" by "/initiate" with "InitiateCheckoutRequest" endpoint for Cart Items Initiate Checkout
+    Then Verify response status code as 204
+    
+
+  @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_AvailableShippingMethods_13786
+  Scenario: TC_7 - verify the Cart Items Available Shipping Methods for status code
+    Given "GetCartUrl" by "/getAvailableShippingMethods/?profile=getshipppingmodeswithestimate&orderId=" endpoint for Get Available Shipping Methods for Cart Items
+    Then Verify response status code as 200
+
+  @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_AvailableShippingMethods_13787
+  Scenario: TC_7 - verify the Cart Items Available Shipping Methods for Json Schema
+    Given "GetCartUrl" by "/getAvailableShippingMethods/?profile=getshipppingmodeswithestimate&orderId=" endpoint for Get Available Shipping Methods for Cart Items
+    And validate jsonSchema "R2-CartAvailableShippingModeSchema"
+
+  @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_AvailableShippingMethods_13788
+  Scenario: TC_7 - verify the Cart Items Available Shipping Methods for Json requried details
+    Given "GetCartUrl" by "/getAvailableShippingMethods/?profile=getshipppingmodeswithestimate&orderId=" endpoint for Get Available Shipping Methods for Cart Items
+    Then Validated response details of "availableshippingmode.results.orderId"
+
+  @All-R2 @C1-Cart @C2-UpdateCart @api @R2_AAST-07 @CR-RT @ZYP_UpdateRemove_13546
+  Scenario: TC_7 - verify the Cart-Item-Update-Quantity and validate the Schema and response details
+    Given "GetCartUrl" by "/updateItemQuantity" with "CartItemUpdateRemoveRequest" endpoint for Cart-Update-Quantity
+    Then Verify response status code as 204
+
+  @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_UpdateRemove_13778
+  Scenario: TC_7 - verify the Cart-Item-Remove and validate the Schema and response details
+    Given "GetCartUrl" by "undefined/updateItemQuantity" with "CartItemUpdateRemoveRequest" endpoint for Remove Item from Cart
+    Then Verify response status code as 204
 
   # I did not get the API details for below feature file. Help Needed
   @All-R2 @C1-Cart @C2-ChangeStore @api @R2_AAST-05 @CR-VK @ZYP_Cart_12577
@@ -58,9 +100,3 @@ Feature: To Verify Get Cart Details API service without sign-in
   Scenario: TC_7 - verify View Cart details without sign-in details
     Given "GetCartUrl" endpoint for viewing cart details
     Then Verify response status code as 200
-
-  @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_UpdateRemove_13546
-  Scenario: TC_7 - verify the Cart-Update-Remove-Quantity and validate the Schema and response details
-    Given "GetCartUrl" by "/updateItemQuantity" with "CartUpdateRemoveRequest" endpoint for Cart-Update-Remove-Quantity
-    Then Verify response status code as 204
-
