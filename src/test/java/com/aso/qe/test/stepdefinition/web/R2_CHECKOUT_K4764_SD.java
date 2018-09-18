@@ -54,7 +54,7 @@ public class R2_CHECKOUT_K4764_SD extends CommonActionHelper {
 
 	@Then("^user click on confirm button$")
 	public void user_click_on_confirm_button() throws Throwable {
-		assertTrue(clickOnButton(r2CheckoutPo.ShippingConfirm_btn));
+		assertTrue(clickOnButton(r2CheckoutPo.btnGoToShippingMethod));
 		Thread.sleep(3000);
 	}
 

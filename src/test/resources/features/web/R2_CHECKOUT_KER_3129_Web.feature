@@ -157,8 +157,7 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	Scenario: Verify if  User can  view updated tax and order total in order summary section on checkout if zip code is updated.
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header	
-	    Then user should able to click on Signin button
-		Then Verify below Sub/Main Module of My Account
+	    Then Verify below Sub/Main Module of My Account
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
@@ -233,4 +232,25 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	Then user verifies estimated tax and total on checkout page
 	
 	
+	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8016 @CR-RK 	
+	Scenario: Verify if  the tax information flows in order details in MY Account
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And user clicks on SignIn link from global header	
+	    Then user should able to click on Signin button
+		Then Verify below Sub/Main Module of My Account
+		|# Verify following elements in Sign in/login page	|
+		|SignInPage_EmailAddress_txt			   			| 
+		|SignInPage_Password_txt				   			|
+		And user enter the valid emailaddress "EmailAddress" 
+		And user enter the valid password "Password" 
+		And user click on signin button
+		And user navigates to orders in my account 
+		Then Verify below Sub/Main Module of My Account 
+		|#Verify following elements in order section|
+		|Order_View_Details_Btn|
+		When user click on view Details
+		Then Verify below Sub/Main Module of My Account 
+		|#Verify following elements in order section|
+		|Order_Taxes_Price|
+		|Order_OrderTotal|
 	

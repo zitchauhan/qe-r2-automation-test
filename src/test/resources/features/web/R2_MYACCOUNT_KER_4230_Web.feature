@@ -48,7 +48,6 @@ Scenario: Verify that user able to update the profile
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in Sign in/login page	|
-	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -80,7 +79,6 @@ Scenario: Verify that user can see the error message in First name input field.
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in Sign in/login page	|
-	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -104,7 +102,6 @@ Scenario: Verify that user can see the error message in First name input field.
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in Sign in/login page	|
-	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -127,7 +124,6 @@ Scenario: Verify that user can see the error message in First name input field.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
-	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -150,7 +146,6 @@ Scenario: Verify that user can see the error message in last name input field.
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in Sign in/login page	|
-	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -174,7 +169,6 @@ Scenario: Verify that user can see the error message in Last name field if user 
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in Sign in/login page	|
-	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -199,7 +193,6 @@ Scenario: Verify that user can see the error message in Last name field if user 
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in Sign in/login page	|
-	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -226,7 +219,6 @@ Scenario: Verify that user can see the error message if user enters the email id
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in Sign in/login page	|
-	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -255,7 +247,6 @@ Scenario: Verify that user can see the error message if user enters the email id
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in Sign in/login page	|
-	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -283,7 +274,6 @@ Scenario: Verify that user can change the password in Profile section.
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in Sign in/login page	|
-	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -308,7 +298,6 @@ Scenario: Verify that user can see the error message in password field.
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in Sign in/login page	|
-	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -336,7 +325,6 @@ Scenario: Verify that system keep the addresses intact after changing the email 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
-	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -351,7 +339,95 @@ Scenario: Verify that system keep the addresses intact after changing the email 
 		|EditProfilePage_EditProfileHeader_label						|
 	And user enter new email field "EmailAddress" 
 	And user enter confirm email field "EmailAddress" 
-	And user clicks on Update button 
+	And user clicks on Update button in edit profile
 	And user click on MyAccount
 	 Then user lands on My Account page and click on adress
 	 And user verifies the First address provided is set as default
+	 
+	 
+	 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-11116 @CR-RK
+Scenario: Verify that system keep the payments intact after changing the email address.
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header
+	Then Verify below Sub/Main Module of My Account
+	|SignInPage_SignUp_btn								|
+	|SignInPage_EmailAddress_txt			   			| 
+	|SignInPage_Password_txt				   			|
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And user click on MyAccount
+	And user click on profile link
+	And user click on edit button of default address
+	Then Verify below Sub/Main Module of My Account 
+	|#verify following elements in Profile > Edit Profile section	|
+		|EditProfilePage_EditProfileHeader_label						|
+	And user enter new email field "EmailAddress" 
+	And user enter confirm email field "EmailAddress" 
+	And user clicks on Update button in edit profile
+	 Then user click on My Account and navigate to payment
+	 Then Verify below Sub/Main Module of My Account 
+	 |#Verify following elements in Payment page		|
+	 |PaymentPage_CreditCardHeader_label				|
+	 Then Verify below Sub/Main Module of My Account 
+	 |#Verify following elements in Payments > Add new credit card section	|
+		|AddCreditCardPage_BillingInformationHeader_txt							|
+	 
+	 
+	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-11117 @CR-RK
+Scenario: Verify that system keep the wish-list intact after changing the email address.
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header
+	Then Verify below Sub/Main Module of My Account
+	|SignInPage_SignUp_btn								|
+	|SignInPage_EmailAddress_txt			   			| 
+	|SignInPage_Password_txt				   			|
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And user click on MyAccount
+	And user click on profile link
+	And user click on edit button of default address
+	Then Verify below Sub/Main Module of My Account 
+	|#verify following elements in Profile > Edit Profile section	|
+		|EditProfilePage_EditProfileHeader_label						|
+	And user enter new email field "EmailAddress" 
+	And user enter confirm email field "EmailAddress" 
+	And user clicks on Update button in edit profile
+	And user click on MyAccount
+	Then user click on WishList
+	 Then Verify below Sub/Main Module of My Account 
+	 |#Verify following elements in create a wishlist section		|
+	 |WishlistItems_lnk												|
+	 
+	 
+	 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-11118 @CR-RK
+Scenario: Verify that system keep the orders intact after changing the email address.
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header
+	Then Verify below Sub/Main Module of My Account
+	|SignInPage_SignUp_btn								|
+	|SignInPage_EmailAddress_txt			   			| 
+	|SignInPage_Password_txt				   			|
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And user click on MyAccount
+	And user click on profile link
+	And user click on edit button of default address
+	Then Verify below Sub/Main Module of My Account 
+	|#verify following elements in Profile > Edit Profile section	|
+	|EditProfilePage_EditProfileHeader_label						|
+	And user enter new email field "EmailAddress" 
+	And user enter confirm email field "EmailAddress" 
+	And user clicks on Update button in edit profile
+	And user navigates to orders in my account 
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following elements in order section|
+	|OrderPage_OrdersHeader_label|
+	|Order_View_Details_Btn|
+	When user click on view Details
+	Then Verify below Sub/Main Module of My Account 
+	|#Verify following elements in order section|
+	|Order_Taxes_Price|
+	|Order_OrderTotal|	

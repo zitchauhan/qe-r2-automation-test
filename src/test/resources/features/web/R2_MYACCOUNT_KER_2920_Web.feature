@@ -17,7 +17,6 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then Verify below Sub/Main Module of My Account
 	|#Verify following elements in Payments > Add new credit card section	|
 	|PaymentPage_PaymentsHeader_label				|
-	|AddCreditCardPage_AddNewCreditCardsHeader_label											|
 	Then user clicks Remove button in payment page
 	And user should see the proper message
 	

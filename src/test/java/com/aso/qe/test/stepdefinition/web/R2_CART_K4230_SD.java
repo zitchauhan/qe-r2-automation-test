@@ -99,7 +99,6 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 	@Given("^user click on change password icon$")
 	public void user_click_on_change_password_icon() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.btnChangePassword));
-		//Thread.sleep(10000);
 	}
 
 	@Given("^user enters current password$")
@@ -115,7 +114,6 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 	@Given("^user clicks on Update button$")
 	public void user_clicks_on_Update_button() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.btnUpdate));
-	Thread.sleep(1000);
 	}
 	
 	@Then("^user should be able to change password$")
@@ -173,8 +171,18 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 	public void user_enters_newpassword(String arg1) throws Throwable {
 		setInputText(r2MyAccountPo.txtNewPassword, webPropHelper.getTestDataProperty(arg1));
 	}
-	@Then("^user enter the old password as new password$")
-	public void user_enter_the_old_password_as_new_password() throws Throwable {
-		setInputText(r2MyAccountPo.txtNewPassword, webPropHelper.getTestDataProperty(defaultPassword));
+
+	@Then("^user clicks on Update button in edit profile$")
+	public void user_clicks_on_Update_button_in_edit_profile() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype))
+		{
+			assertTrue(clickOnButton(r2MyAccountPo.btnAddGiftCard));  	
+		}else
+		{
+			
+			assertTrue(clickOnButton(r2MyAccountPo.btnAddGiftCard));  
+		}
 	}
+	
+	
 }
