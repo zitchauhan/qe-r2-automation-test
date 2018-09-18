@@ -53,6 +53,12 @@ Feature: To Verify Get Cart Details API service without sign-in
     Then Validated response details of "totalProductPrice"
     Then Validated response details of "currency"
     Then Validated response details of "totalOrderItem"
+    
+    @All-R2 @C1-Cart @C2-UpdateCart @api @R2_AAST-05 @CR-RT @ZYP_InitiateCheckout_13803
+  Scenario: TC_5 - verify the Cart Items Initiate Checkout
+		Given "GetCartUrl" by "/initiate" with "InitiateCheckoutRequest" endpoint for Cart Items Initiate Checkout
+    Then Verify response status code as 204
+    
 
   @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_AvailableShippingMethods_13786
   Scenario: TC_7 - verify the Cart Items Available Shipping Methods for status code
@@ -69,7 +75,7 @@ Feature: To Verify Get Cart Details API service without sign-in
     Given "GetCartUrl" by "/getAvailableShippingMethods/?profile=getshipppingmodeswithestimate&orderId=" endpoint for Get Available Shipping Methods for Cart Items
     Then Validated response details of "availableshippingmode.results.orderId"
 
-  @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_UpdateRemove_13546
+  @All-R2 @C1-Cart @C2-UpdateCart @api @R2_AAST-07 @CR-RT @ZYP_UpdateRemove_13546
   Scenario: TC_7 - verify the Cart-Item-Update-Quantity and validate the Schema and response details
     Given "GetCartUrl" by "/updateItemQuantity" with "CartItemUpdateRemoveRequest" endpoint for Cart-Update-Quantity
     Then Verify response status code as 204

@@ -214,7 +214,6 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestJson+".json");
 		postRequestStr = postRequestStr.replace("REPLACE_ITEMID", cartItemID).replace("REPLACE_QUANTITY", "0");
-		logger.debug("POST Request JSON:"+postRequestStr);
 		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
 	}
 
@@ -223,6 +222,16 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+extension+System.getProperty("OrderId");
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
+	}
+	
+	@Given("^\"(.*?)\" by \"(.*?)\" with \"(.*?)\" endpoint for Cart Items Initiate Checkout$")
+	public void by_with_endpoint_for_Cart_Items_Initiate_Checkout(String url, String extension, String requestJson) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+"PUT/"+System.getProperty("OrderId")+extension;
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestJson+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_ORDERID", System.getProperty("OrderId"));
+		logger.debug("POST Request JSON:"+postRequestStr);
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
 	}
 
 }
