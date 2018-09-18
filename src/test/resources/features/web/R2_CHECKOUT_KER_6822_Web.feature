@@ -59,8 +59,7 @@ Scenario: Verify Gift card fields displayed - No Previous Gift Cards Saved
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	When User Naviates L2 form Homepage Header 
-	And User clicks on product in PLP
+	When User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
