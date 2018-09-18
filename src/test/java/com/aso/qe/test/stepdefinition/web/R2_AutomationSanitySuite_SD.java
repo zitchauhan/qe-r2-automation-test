@@ -154,8 +154,8 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	}
 
 	
-	@Then ("^User Naviates L2 form Homepage Header$")
-	public void User_Naviate_L2_form_HomepageHeader() throws Exception 
+	@Then ("^User Navigates L2 form Homepage Header$")
+	public void User_Navigates_L2_form_HomepageHeader() throws Exception 
 	{
 		globalElementHeader.navigateL2HeaderToPLP();
 	}
