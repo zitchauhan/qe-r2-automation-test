@@ -4,7 +4,6 @@ Feature: B04-250- Guest Checkout Flow
 @ZYP_CHECKOUT_K3165-8237 @CR-GK 
 Scenario: Verify the guest user is able to view the Zipcode on checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -21,7 +20,6 @@ Scenario: Verify the guest user is able to view the Zipcode on checkout page
 Scenario: 
 	Verify the guest user is able to view the Checkout Header and Footer on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -40,7 +38,6 @@ Scenario:
 Scenario: 
 	Verify the guest user is able to see the pre-populated City/State with Zipcode 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -59,7 +56,6 @@ Scenario:
 	Verify the guest user is able to enter the shipping address details on Checkout page 
 	Verify the guest user is able to see the pre-populated City/State with Zipcode 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 

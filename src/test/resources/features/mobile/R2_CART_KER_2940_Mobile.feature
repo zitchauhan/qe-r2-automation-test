@@ -221,7 +221,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user navigate to Cart page
 	Then verify that the hierarchy of itemizations in Order Summary in Cart Page
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2940 @ZYP_CART_K2940-8059 @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2940 @ZYP_CART_K2940-8059 @CR-AKK 
 Scenario: To verify Estimated Shipping equal to zero
 Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 

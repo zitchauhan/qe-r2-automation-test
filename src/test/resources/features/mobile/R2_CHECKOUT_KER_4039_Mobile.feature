@@ -76,7 +76,7 @@ Then Verify below Sub/Main Module of Checkout Page
 		|ExpirationDate_Input|
 		|Cvv_Input|
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9885 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9885 @CR-RKA
 Scenario: Verify that user cannot combine Gift Card payment with any non-Credit/Debit Card only
 Given user launches the browser and navigates to "ASO_HOME" page 
 And User clicks on the burger menu 
@@ -148,7 +148,7 @@ And user enter First name "FirstName"
      |BillingInformation_Txt|
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9920 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9920 @CR-RKA
 Scenario: Verify that user cannot combine PayPal payment with any other payment option
 Given user launches the browser and navigates to "ASO_HOME" page 
 And User clicks on the burger menu 

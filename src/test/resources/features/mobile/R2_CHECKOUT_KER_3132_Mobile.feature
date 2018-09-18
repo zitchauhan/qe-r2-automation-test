@@ -11,7 +11,7 @@ Scenario: Verify Billing address on check out page - pre-populated billing addre
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
- When User searches a product "productName" and navigates to PDP
+	When User searches a product "productName" and navigates to PDP
  And user click on Add to Cart Button 
 Then user click on checkout from ATC pop up 
 Then user click on edit Payment link and click on billing information
@@ -103,8 +103,8 @@ Then User clicks on the burger menu
 	And user click on submit button
 	Then user click on plus icon in Store Address drawer
 	And user click on Make My store button	
-And User clicks on the burger menu 
-Then user navigate to GunStorageAndSafty L_Three   
+  And User clicks on the burger menu 
+  Then user navigate to GunStorageAndSafty L_Three   
     Then user select the product from L_Three and navigate to PDP
     And user click on Add to Cart Button 
     	And user is navigated to Add to cart Notification popup 

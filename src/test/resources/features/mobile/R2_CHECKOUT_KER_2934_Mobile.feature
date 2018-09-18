@@ -71,7 +71,7 @@ Scenario: Verify Guest user should view zipcode pre-populated if previously prov
 	And user should see the Zip code pre-populated in Shipping Address drawer
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-9681 @CR-DPK 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-9681 @CR-DPK 
 Scenario: Verify guest user, if after placing order, registers the account saves the address in My Account
  	Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Mens clothing

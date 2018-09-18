@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
+
 import static org.junit.Assert.assertEquals;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
@@ -9,6 +10,8 @@ import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
+import com.aso.qe.test.pageobject.R2_Sanity_PO;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -20,6 +23,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper
 	R1_PDP_PO pdp_po = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	R1_GlobalElementHeader_Home_PO globalElementHeader_HomePO = PageFactory.initElements(getDriver(), R1_GlobalElementHeader_Home_PO.class);
 	R1_PLP_PO plp_po = PageFactory.initElements(getDriver(), R1_PLP_PO.class);
+	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	String expectedSKU = "";
 	String searchKey = "";
 
@@ -229,6 +233,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper
 			setInputTextWithEnterKey(R1_SearchProduct_PO.searchTextBoxMobile, webPropHelper.getTestDataProperty(searchText)); 
 			//SearchProductPO.searchTextBoxMobile.sendKeys(searchText);
 //			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtnMobile));
+			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 			logger.debug("User entered search key :: " + searchText);
 			Thread.sleep(3000);
 		}else {
@@ -241,6 +246,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper
 //			Thread.sleep(2000);
 //			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));//Due to existing defect clicking is required
 			logger.debug("User entered search key :: " + searchText);
+			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 		}
 	}
 

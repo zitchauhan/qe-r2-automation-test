@@ -231,7 +231,7 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	Then user verifies estimated tax and total on checkout page
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8016 @CR-RK 	
+	@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8016 @CR-RK 	
 	Scenario: Verify if  the tax information flows in order details in MY Account
 	Given user launches the browser and navigates to "ASO_HOME" page
 		And User clicks on the burger menu  

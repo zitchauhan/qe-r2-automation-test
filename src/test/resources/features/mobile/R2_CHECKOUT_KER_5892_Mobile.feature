@@ -56,13 +56,13 @@ Given user launches the browser and navigates to "ASO_HOME" page
     Then user click on Add new credit card 
      Then Verify below Sub/Main Module of Checkout Page
      |#verify credit card number ,expirydate and cvv input box is displayed|
-     |CreditCardNumber_Input|
-		|ExpirationDate_Input|
-		|Cvv_Input|
+     	|CreditCardNumber_Input|
+			|ExpirationDate_Input|
+			|Cvv_Input|
 		
 		
 		#pending
-#		@R2_Web @R2_Regression @R2_All @P-High  @C-Checkout @KER-5892 @ZYP_CHECKOUT_K5892-10816 @CR-RKA
+#		@R2_Mobile @R2_Regression @R2_All @P-High  @C-Checkout @KER-5892 @ZYP_CHECKOUT_K5892-10816 @CR-RKA
 #Scenario:  Verify the user is able to add a new credit card while payment that is displayed in active order only
 #Given user launches the browser and navigates to "ASO_HOME" page 
 #	When user clicks on SignIn link from global header

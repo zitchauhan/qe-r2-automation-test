@@ -151,7 +151,7 @@ Scenario: To Verify Estimated Tax under the Order Summary in Cart - Unauthentica
 	Then user verifies estimated tax and total on checkout page	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2927 @ZYP_CART_K2927-8125 @CR-SK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2927 @ZYP_CART_K2927-8125 @CR-SK 
 Scenario: To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "SKUForTaxableProduct" and navigates to PDP
@@ -168,7 +168,7 @@ Scenario: To Verify Estimated Tax under the Order Summary in Cart - Unauthentica
 	
 	
 #####In progress
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-8124 @ZYP_CART_K2927-8124 @CR-SK
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-8124 @ZYP_CART_K2927-8124 @CR-SK
 Scenario: To Verify Available Taxes and Tax is > $0.00 - Authenticated User
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 

@@ -2,7 +2,7 @@ Feature: View/Select Shipping Address in Checkout
 
 
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8189 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8189 @CR-RK 
 Scenario: Verify if authenticated user can select a shipping address from the dropdown 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 And user clicks on SignIn link from global header
@@ -47,7 +47,7 @@ Scenario: Verify if authenticated user can select a shipping address from the dr
 	And user click on checkout button
 	And user should see the order summary page with the default address
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8188 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8188 @CR-RK 
 Scenario: Verify if authenticated user can  view all the shipping addresses at checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -89,7 +89,7 @@ Scenario: Verify if authenticated user can  view all the shipping addresses at c
 	And user click on edit button in shipping address section
 	And user verifies all the saved addresses in my account should be displayed in the dropdown
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-10645 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-10645 @CR-RK 
 Scenario: Verify for authenticated user default address will always be displayed on top 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header

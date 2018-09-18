@@ -10,7 +10,6 @@ Scenario: Verify Gift card fields displayed - No Previous Gift Cards Saved
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
-	Then User clicks on the burger menu 
 	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -34,7 +33,6 @@ Scenario: Verify Valid gift card is applied for purchases
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
-	Then User clicks on the burger menu 
 	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -59,7 +57,6 @@ Scenario: Verify Valid gift card is applied for purchases
 Scenario: 
 	Verify the user can enter valid new Gift card with 13 or 16 digit in Checkout for payment  
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on the burger menu 
 	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -97,7 +94,6 @@ Scenario: Verify Add new gift card during checkout user has Saved Gift Cards
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
-	Then User clicks on the burger menu 
 	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -125,7 +121,6 @@ Scenario: Verify Add new Gift Card fields
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
-	Then User clicks on the burger menu 
 	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -152,7 +147,6 @@ Scenario: Verify Gift card balance is Stored in My account
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
-	Then User clicks on the burger menu 
 	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
