@@ -22,10 +22,20 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	
-		
+
+	@Given("^user deletes all existing credit card$")
+	public void user_deletes_all_existing_credit_card() throws Throwable {
+		for(WebElement removeElement: myAccountPo.PaymentPage_CreditCard_Remove_list) {
+			removeElement.click();
+		}
+	}
+	
 	@Given("^user clicks on Add New Credit Card button$")
 	public void user_clicks_on_Add_New_Credit_Card_button() throws Throwable {
-		assertTrue(clickOnButton(myAccountPo.btnAddNewCreditCard));
+		if(isDisplayed(myAccountPo.btnAddNewCreditCard))
+			assertTrue(clickOnButton(myAccountPo.btnAddNewCreditCard));
+		else
+			assertTrue(clickOnButton(myAccountPo.addNewCardCta));
 	}
 	
 	@And("^user clicks the CVV Tool Tip$")
@@ -140,6 +150,12 @@ public void click_on_Add_button() throws Throwable {
 	Thread.sleep(5000);
 }
 
+@Then("^click on Add button on credit card page$")
+public void click_on_Add_button_on_credit_card_page() throws Throwable {
+	assertTrue(clickOnButton(myAccountPo.PaymentPage_AddCreditCard_Add_btn));
+	Thread.sleep(5000);
+}
+
 @Given("^click on Add another Credit Card button$")
 public void click_on_Add_another_Credit_Card_button() throws Throwable {
 	assertTrue(clickOnButton(myAccountPo.addNewCardCta));
@@ -150,6 +166,16 @@ public void user_verifies_that_in_Payment_section_CCone_credit_card_is_pre_popul
 	assertTrue(isDisplayed(r2CheckOutPo.chooseCreditcard_Dd));
 	String cc= r2CheckOutPo.chooseCreditcard_Dd.getText();
 	assertTrue(cc.contains("1111"));
+}
+
+@Then("^User verifies that in Payment section credit card \"(.*?)\" is pre-populated by default$")
+public void user_verifies_that_in_Payment_section_credit_card_is_pre_populated_by_default(String arg1) throws Throwable {
+	waitForElement(r2CheckOutPo.chooseCreditcard_Dd);
+//	assertTrue(isDisplayed(r2CheckOutPo.chooseCreditcard_Dd));
+	arg1 = webPropHelper.getTestDataProperty(arg1);
+	String cc= r2CheckOutPo.chooseCreditcard_Dd.getText();
+	arg1 = arg1.substring(arg1.length() - 4);
+	assertTrue(cc.contains(arg1));
 }
 
 @And("^Verify that Credit Card details as entered are saved in User Profile\\.$")

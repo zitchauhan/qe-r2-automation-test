@@ -1,23 +1,18 @@
 Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios 
     
-@R2_Web @R2_WAST-01 @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK
-@AutomationSanityR2 
-Scenario:
-TC_1- Verify Login Logout  
+@R2_Web @R2_WAST-01 @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040@CR-SK @AutomationSanityR2 
+Scenario: 
+	TC_1- Verify Login Logout  
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on SignIn link from global header 
-	Then Verify below Sub/Main Module of My Account 
-		|# Verify following elements in Sign in/login page	|
-		|SignInPage_EmailAddress_txt			   			| 
-		|SignInPage_Password_txt				   			|
-		|SignInPage_SignIn_btn								|
-	And user enter the valid emailaddress "EmailAddress" 
+	When user clicks on SignIn link from global header
+	And user enter the valid emailaddress "SanityEmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then user should get logged in successfully 
-	When user sign out from the website 
-	Then Sign in page should open 
-	|# Verify following elements in Sign in/login page	|
+	When user clicks on signout link in myaccount list
+	And user clicks on SignIn link from global header 
+	Then Verify below Sub/Main Module of My Account  
+		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
 		|SignInPage_SignIn_btn								|
@@ -40,7 +35,7 @@ TC_1- Verify Login Logout
 		
 @R2_Web @R2_WAST-03 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @CR-SK
 @AutomationSanityR2 
-Scenario: TC_3- Verify User is able to create
+Scenario: TC_3- Verify User is able to create an account
       Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And clicks on SignUp link from SignIn page 
@@ -56,7 +51,6 @@ Scenario: TC_3- Verify User is able to create
 		|CONGRATULATIONS                            |
 		|You have successfully registered with Academy.com|
 		|LET'S SHOP                                       |
-	And user should be able to view My Account in global header 
 	
 @R2_Web @R2_WAST-04 @P-High @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418 @CR-SK
 @AutomationSanityR2 
@@ -78,18 +72,18 @@ Scenario: TC_5- Verify User is able to Add Gift Card
 	And user should be able to see available balance 
 	And there should be a Remove link with cross icon 
 
-	@R2_Web @R2_WAST-05  @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK @AutomationSanityR2
+@R2_Web @R2_WAST-05  @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK @AutomationSanityR2
 Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
     And user click on signin button
-#    When user clicks on payment tab
     Then user click on My Account and navigate to payment
+    And user deletes all existing credit card
 	And user clicks on Add New Credit Card button	
-	And User enters Credit Card number "CreditCard"
- 	And User enters expiration date "ExpirationDate"
+	And User enters Credit Card number "CreditCardNumber"
+ 	And User enters expiration date "ExpDate"
  	And User enters CVV number "CVV"
  	Then user enter First Name field "UpdateFirstName"
  	And user enter Last Name field "UpdateLastName"
@@ -97,37 +91,32 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
  	And user enter ZipCode field "UpdateZipcode"
  	And user enter PhoneNumber field "UpdatePhoneNumber"
  	Then User verifies that city and State are populated automatically
- 	Then click on Add button
+ 	Then click on Add button on credit card page
  	And click on Add another Credit Card button
- 	And User enters Credit Card number "SecondCreditCard"
- 	And User enters expiration date "SecondExpirationDate"
- 	And User enters CVV number "SecondCVV"
+ 	And User enters Credit Card number "SecondCreditCardNumber"
+ 	And User enters expiration date "ExpDate"
+ 	And User enters CVV number "CVV"
  	Then user enter First Name field "UpdateFirstName"
  	And user enter Last Name field "UpdateLastName"
  	And user enter Address field "UpdateAddress"
  	And user enter ZipCode field "UpdateZipcode"
  	And user enter PhoneNumber field "UpdatePhoneNumber"
  	Then User verifies that city and State are populated automatically
-	Then click on Add button
-	And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo
-	And user is able to see the product category name in section title
-	And user clicks on one of the product category and navigates to LThree
-	And User is navigated to pdp page
+	Then click on Add button on credit card page
+	And User searches a product "SanitySKUNumber" and navigates to PDP
 	And user click on Add to Cart Button
 	And user is navigated to Add to cart Notification popup  
 	And user will click on View Cart button 
 	And user navigate to Cart page
-	And user will click on Checkout button and navigates to Checkout page
-	Then User verifies that in Payment section CCone credit card is pre-populated by default.
+	And user will click on Checkout button and navigates to Checkout page     
+	Then User verifies that in Payment section credit card "CreditCardNumber" is pre-populated by default
 	
 	#===========unit testing pending as search is not working
 @R2_Web  @R2_WAST-06 @P-High @CR-SK @AutomationSanityR2 
 Scenario: TC_8-Verify and Search an item and  navigate to  View Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SanitySKUNumber" 
-	And User click on search icon 
+    When User searches a product "SanitySKUNumber" and navigates to PDP
 	And user verifies the entered SKU id 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -138,8 +127,7 @@ Scenario: TC_8-Verify and Search an item and  navigate to  View Cart
 Scenario: TC_9-Verify and Search - Checkout from ATC Modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SKUNumber" 
-	And User click on search icon 
+	When User searches a product "SanitySKUNumber" and navigates to PDP
 	And user verifies the entered SKU id 
 	And user click on Add to Cart Button  
 	When user click on checkout button 

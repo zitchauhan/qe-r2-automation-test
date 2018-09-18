@@ -212,7 +212,9 @@ public class R1_PDP_K1926_SD extends CommonActionHelper
 
 	}
 
+	
 	@When("^user enters \"(.*?)\" in the search box$")
+	@And("^User searches a product \"(.*?)\" and navigates to PDP$")
 	public void user_enters_in_the_search_box(String searchText) throws Throwable 
 	{
 		searchKey=webPropHelper.getTestDataProperty(searchText);   //SID 24-August;
@@ -224,20 +226,20 @@ public class R1_PDP_K1926_SD extends CommonActionHelper
 				assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
 				Thread.sleep(1000);
 			}
-			setInputText(R1_SearchProduct_PO.searchTextBoxMobile, webPropHelper.getTestDataProperty(searchText)); 
+			setInputTextWithEnterKey(R1_SearchProduct_PO.searchTextBoxMobile, webPropHelper.getTestDataProperty(searchText)); 
 			//SearchProductPO.searchTextBoxMobile.sendKeys(searchText);
-			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtnMobile));
+//			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtnMobile));
 			logger.debug("User entered search key :: " + searchText);
 			Thread.sleep(3000);
 		}else {
 			waitForPageLoad(driver);
 			Thread.sleep(2000);
 			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtn));
-			R1_SearchProduct_PO.searchTextBox.sendKeys( webPropHelper.getTestDataProperty(searchText));
+			setInputTextWithEnterKey(R1_SearchProduct_PO.searchTextBox, webPropHelper.getTestDataProperty(searchText));
 			Thread.sleep(2000);
-			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));
-			Thread.sleep(2000);
-			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));//Due to existing defect clicking is required
+//			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));
+//			Thread.sleep(2000);
+//			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));//Due to existing defect clicking is required
 			logger.debug("User entered search key :: " + searchText);
 		}
 	}

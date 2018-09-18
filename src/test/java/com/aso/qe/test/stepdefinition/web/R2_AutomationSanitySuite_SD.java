@@ -13,6 +13,7 @@ import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_HomePage_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
+import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.java.en.And;
@@ -27,6 +28,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	R2_Cart_PO r2CartPo = PageFactory.initElements(getDriver(), R2_Cart_PO.class);
 	R1_HomePage_PO r1HomePagePO = PageFactory.initElements(getDriver(), R1_HomePage_PO.class);
+	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	
 	public String quantityprice;
 	public String modifiedQuantityprice;
@@ -265,6 +267,24 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	@Then("^user enter the valid password \"(.*?)\" from checkout page$")
 	public void user_enter_the_valid_password_from_checkout_page(String arg1) throws Throwable {
 		setInputText(r1HomePagePO.inputPassword, webPropHelper.getTestDataProperty(arg1));
+	}
+	
+	@When("^user clicks on signout link in myaccount list$")
+	public void user_clicks_on_signout_link_in_myaccount_list() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)) {
+			if(!(isDisplayed(r2MyAccountPo.signOut_Mobile_lnk)))
+				assertTrue(clickOnButton(r2MyAccountPo.myAccount_txt_Mobile));
+		    assertTrue(clickOnButton(r2MyAccountPo.signOut_Mobile_lnk));
+		}
+		else
+		{
+			assertTrue(clickOnButton(r2MyAccountPo.myAccount));
+			Thread.sleep(1000);
+		    assertTrue(clickOnButton(r2MyAccountPo.signOut_lnk));	
+		}
+		
+	    
+	    
 	}
 
 }

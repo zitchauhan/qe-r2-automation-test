@@ -121,6 +121,7 @@ Scenario: Verify MyAccount
 		|ChangePassworPage_NewPassword_txt								|
 		|ChangePassworPage_Update_btn									|
 		|ChangePassworPage_Cancel_btn									|
+		|ChangePasswordPage_toolTip_Btn                                 | 
 		
 		|#Verify following elements in create a wishlist section		|
 		|WishlistPage_Wishlist_lnk										|
@@ -142,6 +143,8 @@ Scenario: Verify MyAccount
 		|Message_txt													|
 		|Share_Wishlist_btn												|
 		|Cancel_btn														|
+		|WhishList_Remove_Lnk                       					|
+		
 		
 		
 		
@@ -158,6 +161,8 @@ Scenario: Verify MyAccount
 		|Order_View_Details_Btn                     |
 		|Order_Back_To_Order_Lnk                    |
 		|Order_Note_Txt                             | 
+		 |Order_OrderTotal|
+		|Order_Taxes_Price|
  
 		
  

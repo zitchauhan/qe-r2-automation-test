@@ -123,7 +123,7 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 
 	@And("^verify Promo code discount is applied$")
 	public void verify_Promo_code_discount_is_applied() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.txtPromocodeCart));// txtPromocode
+		assertTrue(isDisplayed(r2CartPo.discount_Txt));// txtPromocode
 	}
 
 	@And("^verify that consolidated amount for all promotions \\(except shipping\\) is applied$")

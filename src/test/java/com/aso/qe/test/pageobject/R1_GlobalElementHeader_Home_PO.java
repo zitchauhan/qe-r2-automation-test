@@ -1781,7 +1781,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			assertTrue(clickOnButton(btnSignOut));
 			Thread.sleep(1000);
 			assertTrue(isDisplayed(btnSignIn));
-//			sit_po.verifySigninpage();
+			sit_po.verifySigninpage();
 		}
 	}	
 

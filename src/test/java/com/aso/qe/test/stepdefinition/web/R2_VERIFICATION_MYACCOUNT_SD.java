@@ -177,6 +177,8 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.myAccountProfilecta));
 				else if (currentElement.equalsIgnoreCase("ProfilePage_MaskedPassword"))
 					assertTrue(isDisplayed(r2MyAccountPo.maskedPasswordInProfile)); 
+				else if (currentElement.equalsIgnoreCase("ChangePasswordPage_toolTip_Btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.ChangePasswordPage_toolTip_Btn)); 
  
 				// ===============================================================================
 				//// Profile > Edit Profile
@@ -303,7 +305,12 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.Share_Wishlist_btn));
 				else if (currentElement.equalsIgnoreCase("Cancel_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.Cancel_btn)); 
-				
+				else if (currentElement.equalsIgnoreCase("WhishList_Remove_Lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.WhishList_Remove_Lnk));
+				else if (currentElement.equalsIgnoreCase("WhishList_Remove_Lnk_M"))
+					assertTrue(isDisplayed(r2MyAccountPo.WhishList_Remove_Lnk_M)); 
+ 
+
  
 
 				// ===============================================================================
@@ -335,7 +342,10 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.Order_Back_To_Order_Lnk_M));
 				else if (currentElement.equalsIgnoreCase("Order_Back_To_Order_Lnk"))
 					assertTrue(isDisplayed(r2MyAccountPo.Order_Back_To_Order_Lnk)); 
- 
+				else if (currentElement.equalsIgnoreCase("Order_OrderTotal"))
+					assertTrue(isDisplayed(r2MyAccountPo.txtTotal)); 
+ 				else if (currentElement.equalsIgnoreCase("Order_Taxes_Price"))
+					assertTrue(isDisplayed(r2MyAccountPo.TaxesPrice_Txt)); 
 
  
 

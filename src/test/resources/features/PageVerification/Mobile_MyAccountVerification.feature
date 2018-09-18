@@ -123,6 +123,7 @@ Feature: Debug
 		|ChangePassworPage_NewPassword_txt								|
 		|ChangePassworPage_Update_btn									|
 		|ChangePassworPage_Cancel_btn									|
+		|ChangePasswordPage_toolTip_Btn                                 | 
 		
 		|#Verify following elements in create a wishlist section		|
 		|WishlistPage_Wishlist_lnk										|
@@ -145,6 +146,7 @@ Feature: Debug
 		|Message_txt													|
 		|Share_Wishlist_btn												|
 		|Cancel_btn														|
+		|WhishList_Remove_Lnk_M                     					|  
 			
 		|#Verify following elements in order section|
 		|OrderPage_Order_lnk						|
@@ -159,6 +161,8 @@ Feature: Debug
 		|Order_View_Details_Btn                     |
 		|Order_Back_To_Order_Lnk_M                  |
 		|Order_Note_Txt                             | 
+		 |Order_OrderTotal|
+		|Order_Taxes_Price|
  
 		
  

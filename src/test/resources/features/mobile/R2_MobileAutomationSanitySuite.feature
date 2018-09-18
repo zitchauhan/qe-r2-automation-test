@@ -1,49 +1,45 @@
 Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios 
 
-@R2_Mobile @R2_MAST-01 @P-High @C-MyAccount @KER-4011
-@ZYP_MYACCOUNT_K4011-10040_M @CR-SK @AutomationSanityR2 
-Scenario:
-TC_1- Verify Login Logout  
+@@R2_Mobile @R2_WAST-01 @P-High @C-MyAccount @KER-4011 
+@ZYP_MYACCOUNT_K4011-10040 @CR-SK @AutomationSanityR2 
+Scenario: 
+	TC_1- Verify Login Logout  
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-	When user clicks on sign in link from burger menu 
+	And user clicks on the burger menu 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "SanityEmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then user should get logged in successfully 
+	When user clicks on signout link in myaccount list 
+	And user clicks on the burger menu 
+	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
 		|SignInPage_SignIn_btn								|
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
-	Then user should get logged in successfully 
-	And User clicks on the burger menu
-	When user sign out from the website 
-	Then Sign in page should open 
-	|# Verify following elements in Sign in/login page	|
-		|SignInPage_EmailAddress_txt			   			| 
-		|SignInPage_Password_txt				   			|
-		|SignInPage_SignIn_btn		|
-	
-#@R2_Mobile @R2_MAST-02 @P-High @C-MyAccount @KER-4011
-#@ZYP_MYACCOUNT_K4011-10301_M @CR-SK @AutomationSanityR2 
-#Scenario: TC_2-Verify user can do the logout using Flyout from My Account header 
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	And User clicks on the burger menu 
-#	When user clicks on sign in link from burger menu 
-#	And user logs in as "RawUser" 
-#	When user sign out from the website 
-#	Then Sign in page should open 
-#	When user logs in as "RawUser" 
-#	And user clicks on one of the category and navigates to LOne 
-#	And user clicks on one of the subcategory and navigates to LTwo  
-#	And user clicks on one of the product category and navigates to LThree 
-#	And user sign out from the website 
-#	Then User is navigated to pdp page 
-	
+		
+		#@R2_Mobile @R2_MAST-02 @P-High @C-MyAccount @KER-4011
+		#@ZYP_MYACCOUNT_K4011-10301_M @CR-SK @AutomationSanityR2 
+		#Scenario: TC_2-Verify user can do the logout using Flyout from My Account header 
+		#	Given user launches the browser and navigates to "ASO_HOME" page 
+		#	And User clicks on the burger menu 
+		#	When user clicks on sign in link from burger menu 
+		#	And user logs in as "RawUser" 
+		#	When user sign out from the website 
+		#	Then Sign in page should open 
+		#	When user logs in as "RawUser" 
+		#	And user clicks on one of the category and navigates to LOne 
+		#	And user clicks on one of the subcategory and navigates to LTwo  
+		#	And user clicks on one of the product category and navigates to LThree 
+		#	And user sign out from the website 
+		#	Then User is navigated to pdp page 
+		
 @R2_Mobile @R2_MAST-03 @P-Highest @C-MyAccount @KER-4249 
 @ZYP_MYACCOUNT_K4249-10149_M @CR-SK @AutomationSanityR2 
-Scenario: TC_3- Verify User is able to create
-		Given user launches the browser and navigates to "ASO_HOME" page 
+Scenario: TC_3- Verify User is able to create an account 
+	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	When user clicks on sign in link from burger menu 
 	And clicks on SignUp link from SignIn page 
@@ -59,12 +55,11 @@ Scenario: TC_3- Verify User is able to create
 		|CONGRATULATIONS                            |
 		|You have successfully registered with Academy.com|
 		|LET'S SHOP                                       |
-	And user should be able to view My Account in global header
-	
-	
+		
+		
 @R2_Mobile @R2_MAST-04 @P-High @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418_M 
 @CR-SK @AutomationSanityR2 
-Scenario: TC_5- Verify User is able to Add Gift Card
+Scenario: TC_5- Verify User is able to Add Gift Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -84,10 +79,10 @@ Scenario: TC_5- Verify User is able to Add Gift Card
 	And user should be able to see available balance 
 	And there should be a Remove link with cross icon 
 	
-@R2_Mobile @R2_MAST-05 @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696_M 
+	
+@R2_Mobile @R2_WAST-05 @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696
 @CR-DPK @AutomationSanityR2 
-Scenario: 
-	TC_7-Verify Add Credit Card and added as a Default Card 
+Scenario: TC_7-Verify Add Credit Card and added as a Default Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -95,10 +90,11 @@ Scenario:
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User clicks on the burger menu 
-	When user clicks on payment tab 
+	When user click on My Account and navigate to payment 
+	And user deletes all existing credit card 
 	And user clicks on Add New Credit Card button 
-	And User enters Credit Card number "CreditCard" 
-	And User enters expiration date "ExpirationDate" 
+	And User enters Credit Card number "CreditCardNumber" 
+	And User enters expiration date "ExpDate" 
 	And User enters CVV number "CVV" 
 	Then user enter First Name field "UpdateFirstName" 
 	And user enter Last Name field "UpdateLastName" 
@@ -106,36 +102,35 @@ Scenario:
 	And user enter ZipCode field "UpdateZipcode" 
 	And user enter PhoneNumber field "UpdatePhoneNumber" 
 	Then User verifies that city and State are populated automatically 
-	Then click on Add button 
+	Then click on Add button on credit card page 
 	And click on Add another Credit Card button 
-	And User enters Credit Card number "SecondCreditCard" 
-	And User enters expiration date "SecondExpirationDate" 
-	And User enters CVV number "SecondCVV" 
+	And User enters Credit Card number "SecondCreditCardNumber" 
+	And User enters expiration date "ExpDate" 
+	And User enters CVV number "CVV" 
 	Then user enter First Name field "UpdateFirstName" 
 	And user enter Last Name field "UpdateLastName" 
 	And user enter Address field "UpdateAddress" 
 	And user enter ZipCode field "UpdateZipcode" 
 	And user enter PhoneNumber field "UpdatePhoneNumber" 
 	Then User verifies that city and State are populated automatically 
-	Then click on Add button 
-	And User clicks on the burger menu 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo  
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	Then click on Add button on credit card page 
+	And User clicks on ASO Logo and should be navigated to Home Page 
+	And User searches a product "SanitySKUNumber" and navigates to PDP 
 	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user will click on Checkout button and navigates to Checkout page 
-	Then User verifies that in Payment section CCone credit card is pre-populated by default. 
+	Then User verifies that in Payment section credit card "CreditCardNumber" is pre-populated by default 
+	
 	
 	#===========unit testing pending as search is not working
 @R2_Mobile @R2_MAST-06 @P-High @CR-SK @AutomationSanityR2 
-Scenario: TC_8-Verify and Search an item and  navigate to  View Cart
+Scenario: TC_8-Verify and Search an item and  navigate to  View Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SanitySKUNumber" 
-	And User click on search icon 
+	When User searches a product "SanitySKUNumber" and navigates to PDP 
+	#	And User click on search icon 
 	And user verifies the entered SKU id 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -155,7 +150,7 @@ Scenario: TC_9-Verify and Search - Checkout from ATC Modal
 	Then user is navigated to checkout page 
 	
 @R2_Mobile @R2_MAST-08 @CR-SK @AutomationSanityR2 
-Scenario: TC_10-Verify Cat Nav - View Cart
+Scenario: TC_10-Verify Cat Nav - View Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User clicks on the burger menu 
 	And User navigates to LThree 
@@ -166,7 +161,7 @@ Scenario: TC_10-Verify Cat Nav - View Cart
 	
 	
 @R2_Mobile @R2_MAST-09 @CR-SK @AutomationSanityR2 
-Scenario: TC_11-Verify Cat Nav - Checkout from ATC Modal
+Scenario: TC_11-Verify Cat Nav - Checkout from ATC Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User clicks on the burger menu 
 	And User navigates to LThree 
@@ -241,13 +236,13 @@ Scenario:
 	And user will click on View Cart button 
 	When user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page 
-	|# Verify following elements in Cart page "Your Cart item details "|
-	|CartProductName_Link   |
+		|# Verify following elements in Cart page "Your Cart item details "|
+		|CartProductName_Link   |
 	Then User is able to see the selected variant image as thumbnail 
 	
 @R2_Mobile @R2_MAST-14 @P-Highest @C-Cart @KER-2942 @ZYP_K2942-8047_M @CR-DP 
 @AutomationSanityR2 
-Scenario: TC_16-Verify Remove Item from Cart
+Scenario: TC_16-Verify Remove Item from Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User navigates to LThree 
@@ -259,7 +254,7 @@ Scenario: TC_16-Verify Remove Item from Cart
 	Then Verify below Sub/Main Module of Cart Page 
 		|# Verify following elements in Cart page "Your Cart item details "|
 		|RemoveFromCart_Btn|
-	
+		
 @R2_Mobile @R2_MAST-15 @P-Highest @C-Cart @KER-3127 @ZYP_K3127-8168_M @CR-AKK 
 @AutomationSanityR2 
 Scenario: TC_17-Verify User Able to Checkout, if no errors in cart 
@@ -321,7 +316,7 @@ Scenario: TC_20-Verify Payment - Add Gift Card - Unathenticated
 	
 @R2_Mobile @R2_MAST-18 @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954_M 
 @CR-GK @AutomationSanityR2 
-Scenario: TC_21-Verify Payment - Add Gift Card - Athenticated
+Scenario: TC_21-Verify Payment - Add Gift Card - Athenticated 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user should able to click on Signin button 
@@ -352,7 +347,7 @@ Scenario: TC_21-Verify Payment - Add Gift Card - Athenticated
 @R2_Mobile @R2_MAST-19 @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147_M 
 @CR-RK 
 @AutomationSanityR2 
-Scenario: TC_22-Verify Sign In During Checkout
+Scenario: TC_22-Verify Sign In During Checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User navigates to LThree 
@@ -385,11 +380,11 @@ Scenario: TC_23- Verify Edit cart items from Order summary
 	Then Verify the message on the page 
 		|# Following Error Message should show on the page|
 		|CartPage|
-	
+		
 @R2_Mobile @R2_MAST-21 @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098_M 
 @CR-AKK 
 @AutomationSanityR2 
-Scenario: TC_24-Verify Order Summary
+Scenario: TC_24-Verify Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to LThree 
@@ -403,8 +398,8 @@ Scenario: TC_24-Verify Order Summary
 		|Subtotal_txt|
 		|Estimatedshippint_txt|
 		|EstimatedTax_Txt |
-	
-	
+		
+		
 @R2_Mobile @R2_MAST-22 @P-Highest @C-Cart @KER-2872 @ZYP_CART_K2872-8710_M 
 @CR-DPK 
 @AutomationSanityR2 
@@ -418,7 +413,7 @@ Scenario:
 	Then user verify the results based on entering zipcode 
 	
 	
- @R2_MAST-23 @BrokenLink @Broken @TC_BL_09
+@R2_MAST-23 @BrokenLink @Broken @TC_BL_09 
 Scenario: TC_26- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -428,7 +423,7 @@ Scenario: TC_26- Verify all broken URL's on Cart page
 	And user will click on View Cart button 
 	Then verfy all link url's status code is 200 
 	
-@R2_MAST-24 @BrokenLink @Broken @TC_BL_10
+@R2_MAST-24 @BrokenLink @Broken @TC_BL_10 
 Scenario: TC_27- Verify all broken URL's on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -440,7 +435,7 @@ Scenario: TC_27- Verify all broken URL's on Checkout page
 	Then user is navigated to checkout page 
 	Then verfy all link url's status code is 200 
 	
- @R2_MAST-25 @BrokenLink @Broken @TC_BL_11
+@R2_MAST-25 @BrokenLink @Broken @TC_BL_11 
 Scenario: TC_28- Verify all broken URL's on MyAccount page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -453,7 +448,7 @@ Scenario: TC_28- Verify all broken URL's on MyAccount page
 	Then verfy all link url's status code is 200 
 	
 	
-	 @R2_MAST-23 @BrokenLink @Broken @TC_BIM_09
+@R2_MAST-23 @BrokenLink @Broken @TC_BIM_09 
 Scenario: TC_26- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -463,7 +458,7 @@ Scenario: TC_26- Verify all broken URL's on Cart page
 	And user will click on View Cart button 
 	Then verfy all Image link urls status code is 200 
 	
-@R2_MAST-24 @BrokenLink @Broken @TC_BIM_10
+@R2_MAST-24 @BrokenLink @Broken @TC_BIM_10 
 Scenario: TC_27- Verify all broken URL's on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -473,9 +468,9 @@ Scenario: TC_27- Verify all broken URL's on Checkout page
 	And user will click on View Cart button 
 	When user click on checkout button in Cart page 
 	Then user is navigated to checkout page 
-	Then verfy all Image link urls status code is 200
+	Then verfy all Image link urls status code is 200 
 	
- @R2_MAST-25 @BrokenLink @Broken @TC_BIM_11
+@R2_MAST-25 @BrokenLink @Broken @TC_BIM_11 
 Scenario: TC_28- Verify all broken URL's on MyAccount page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -485,7 +480,7 @@ Scenario: TC_28- Verify all broken URL's on MyAccount page
 	And user click on signin button 
 	And User clicks on the burger menu 
 	Then user click on My Account and navigate to payment 
-	Then verfy all Image link urls status code is 200
+	Then verfy all Image link urls status code is 200 
 	
 	
 	

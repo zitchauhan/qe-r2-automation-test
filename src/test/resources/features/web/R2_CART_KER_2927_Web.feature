@@ -174,7 +174,7 @@ Scenario: To Verify Available Taxes and Tax is > $0.00 - Authenticated User
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
 	And user logs in as "UserWithTaxableAddress"
-	And User searches a product "SKUForATaxableProduct" and navigates to PDP 
+	And User searches a product "SKUForATaxableProduct" and navigates to PDP
 	When user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
