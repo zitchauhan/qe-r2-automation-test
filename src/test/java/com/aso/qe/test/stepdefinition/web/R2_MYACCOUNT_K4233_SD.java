@@ -49,6 +49,7 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 	@Then("^user clicks on WishListItems$")
 	public void user_clicks_on_WishListItems() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.WishlistItems_lnk));
+		Thread.sleep(1000);
 	}
 	
 	@Then("^user clicks on Delete list$")
@@ -142,6 +143,23 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2MyAccountPo.lnkMyAccount));
 			
 		}
+	}
+	
+	@Then("^user click on remove on product card$")
+	public void user_click_on_remove_on_product_card() throws Throwable {
+		
+		
+		if("mobile".equalsIgnoreCase(testtype))
+		{
+		assertTrue(clickOnButton(r2MyAccountPo.WhishList_Remove_Lnk_M));
+		Thread.sleep(3000);
+		}else
+		{
+			assertTrue(clickOnButton(r2MyAccountPo.WhishList_Remove_Lnk));
+			Thread.sleep(3000);
+			
+		}
+	    
 	}
 	
 

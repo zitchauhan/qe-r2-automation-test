@@ -32,7 +32,7 @@ public class R2_MYACCOUNT_K4327_SD extends CommonActionHelper {
 	@Then("^user click on view Details$")
 	public void user_click_on_view_Details() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.Order_View_Details_Btn));
-		Thread.sleep(300);
+		Thread.sleep(3000);
 	   
 	}
 	

@@ -45,6 +45,6 @@ Feature: Message/Text Verification
 	|We're sorry! Due to limited stock only part of your order can be fulfilled at this time.|
 	|Ship to|
 	|In-Store Pickup Available|
-	|Password must be at least 8 characters long|
-	|The combination of Email Address and Password is incorrect. Please try again.|
-	|For maximum security, please enter a Password different from the previous one|
+	|IN STORE PICKUP INSTRUCTIONS|
+	| ARE YOU SURE YOU WANT TO CANCEL THIS ORDER?|
+	

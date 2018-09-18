@@ -372,7 +372,25 @@ Scenario: Verify the User is able to cancel Sharing wishlist
     And User Enters Emailaddress "EmailWithoutPaymentDetails"
 	And User Enter Optional message "WishlistName"
 	Then User Clicks clicks on Cancel button
-	And Verify that Wish List is displayed	
+	And Verify that Wish List is displayed
+	
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-10486 @CR-MS
+Scenario: Verify that Authenticated User is able to Remove items from Wish List
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	And user click on MyAccount
+	Then user click on WishList
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|Wishlist_createlist_lnk|
+	|WishlistItems_lnk|
+	And user clicks on WishListItems
+	And user click on remove on product card
+	Then Verify the message on the page
+	|Undo|
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11105 @CR-MS
@@ -457,4 +475,26 @@ Scenario: Verify the User is able to Share a wish list
 	 And User Enter Optional message "WishlistName"
     And User Clicks on Share Wishlist button
     Then Verify that Wish List is displayed
+    
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11101 @CR-MS
+Scenario: Verify that Authenticated User is able to Remove items from Wish List
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	And user click on MyAccount
+	Then user click on WishList
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|Wishlist_createlist_lnk|
+	|WishlistItems_lnk|
+	And user clicks on WishListItems
+	And user click on remove on product card
+	Then Verify the message on the page
+	|Undo|	
+	
+	
+	
+	    
 	
