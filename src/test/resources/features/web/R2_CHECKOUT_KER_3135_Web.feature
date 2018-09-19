@@ -15,6 +15,8 @@ Scenario: To verify change billing Address CTA
 	And user navigate to Cart page 
 	And user click on checkout button in Cart page 
 	And user is navigated to order summary page 
+	And user clicks on edit shipping method cta 
+	And user click on go to payment present in shipping method 
 	Then user click on edit Payment link and click on billing information 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#%%%%%%   Billing Information Form %%%%%%%%%%|

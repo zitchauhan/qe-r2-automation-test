@@ -41,7 +41,7 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 	
 	@Then("^user click on edit Payment link and click on billing information$")
 	public void user_click_on_edit_Payment_link_and_click_on_billing_information() throws Throwable {
-	  
+		Thread.sleep(2000);
 		if(isDisplayed(r2CheckOutPo.EditPayment_Link)) {
 		assertTrue(clickOnButton(r2CheckOutPo.EditPayment_Link));
 	   assertTrue(clickOnButton(r2CheckOutPo.ChangeBillingInformation_Txt));
