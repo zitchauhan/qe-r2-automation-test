@@ -233,7 +233,8 @@ public class R1_PDP_K1926_SD extends CommonActionHelper
 			setInputTextWithEnterKey(R1_SearchProduct_PO.searchTextBoxMobile, webPropHelper.getTestDataProperty(searchText)); 
 			//SearchProductPO.searchTextBoxMobile.sendKeys(searchText);
 //			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtnMobile));
-			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
+			if(!(searchText.toLowerCase().contains("sku")))
+					assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 			logger.debug("User entered search key :: " + searchText);
 			Thread.sleep(3000);
 		}else {
@@ -246,7 +247,8 @@ public class R1_PDP_K1926_SD extends CommonActionHelper
 //			Thread.sleep(2000);
 //			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));//Due to existing defect clicking is required
 			logger.debug("User entered search key :: " + searchText);
-			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
+			if(!(searchText.toLowerCase().contains("sku")))
+				assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 		}
 	}
 

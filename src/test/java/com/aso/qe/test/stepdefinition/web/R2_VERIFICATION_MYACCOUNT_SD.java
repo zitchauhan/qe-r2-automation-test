@@ -236,7 +236,7 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_PhoneNumber_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.txtPhoneNumberInAddCreditCard));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_Add_btn"))
-					assertTrue(isDisplayed(r2MyAccountPo.btnAddInAddCreditCard));
+					assertTrue(isDisplayed(r2MyAccountPo.PaymentPage_AddCreditCard_Add_btn));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_Cancel_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnCancelInAddCreditCard));
 				else if (currentElement.equalsIgnoreCase("AddCreditCardPage_CVV_toolTip"))

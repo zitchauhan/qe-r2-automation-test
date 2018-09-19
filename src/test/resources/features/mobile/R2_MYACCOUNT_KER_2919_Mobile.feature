@@ -59,13 +59,13 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user click on My Account and navigate to payment
 	#When user clicks on payment tab
 	And user clicks on Add New Credit Card button	
-	Then Verify below Sub/Main Module of My Account
-		|#Verify following elements in Payments > Add new credit card section	|
-		|AddCreditCardPage_BillingInformationHeader_txt							|
-		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
-		|AddCreditCardPage_CreditCardNumber_txt									|
-		|AddCreditCardPage_CardExpiryDate_txt									|
-		|AddCreditCardPage_CardCVV_txt											|	
+#	Then Verify below Sub/Main Module of My Account
+#		|#Verify following elements in Payments > Add new credit card section	|
+#		|AddCreditCardPage_BillingInformationHeader_txt							|
+#		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
+#		|AddCreditCardPage_CreditCardNumber_txt									|
+#		|AddCreditCardPage_CardExpiryDate_txt									|
+#		|AddCreditCardPage_CardCVV_txt											|	
 	And User enters Credit Card number "InvalidCreditCard"
 	And user clicks the CVV Tool Tip
 	Then Verify the message on the page
@@ -86,13 +86,13 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	Then user click on My Account and navigate to payment
 	#When user clicks on payment tab
 	And user clicks on Add New Credit Card button	
-	Then Verify below Sub/Main Module of My Account
-		|#Verify following elements in Payments > Add new credit card section	|
-		|AddCreditCardPage_BillingInformationHeader_txt							|
-		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
-		|AddCreditCardPage_CreditCardNumber_txt									|
-		|AddCreditCardPage_CardExpiryDate_txt									|
-		|AddCreditCardPage_CardCVV_txt											|	
+#	Then Verify below Sub/Main Module of My Account
+#		|#Verify following elements in Payments > Add new credit card section	|
+#		|AddCreditCardPage_BillingInformationHeader_txt							|
+#		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
+#		|AddCreditCardPage_CreditCardNumber_txt									|
+#		|AddCreditCardPage_CardExpiryDate_txt									|
+#		|AddCreditCardPage_CardCVV_txt											|	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "PastExpirationDate"
 	And user clicks the CVV Tool Tip
@@ -114,13 +114,13 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	Then user click on My Account and navigate to payment
 	#When user clicks on payment tab
 	And user clicks on Add New Credit Card button	
-	Then Verify below Sub/Main Module of My Account
-		|#Verify following elements in Payments > Add new credit card section	|
-		|AddCreditCardPage_BillingInformationHeader_txt							|
-		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
-		|AddCreditCardPage_CreditCardNumber_txt									|
-		|AddCreditCardPage_CardExpiryDate_txt									|
-		|AddCreditCardPage_CardCVV_txt											|	
+#	Then Verify below Sub/Main Module of My Account
+#		|#Verify following elements in Payments > Add new credit card section	|
+#		|AddCreditCardPage_BillingInformationHeader_txt							|
+#		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
+#		|AddCreditCardPage_CreditCardNumber_txt									|
+#		|AddCreditCardPage_CardExpiryDate_txt									|
+#		|AddCreditCardPage_CardCVV_txt											|	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "NonExistentExpirationDate"
 	And user clicks the CVV Tool Tip
@@ -140,13 +140,13 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	Then user click on My Account and navigate to payment
 	#When user clicks on payment tab
 	And user clicks on Add New Credit Card button	
-	Then Verify below Sub/Main Module of My Account
-		|#Verify following elements in Payments > Add new credit card section	|
-		|AddCreditCardPage_BillingInformationHeader_txt							|
-		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
-		|AddCreditCardPage_CreditCardNumber_txt									|
-		|AddCreditCardPage_CardExpiryDate_txt									|
-		|AddCreditCardPage_CardCVV_txt											|	
+#	Then Verify below Sub/Main Module of My Account
+#		|#Verify following elements in Payments > Add new credit card section	|
+#		|AddCreditCardPage_BillingInformationHeader_txt							|
+#		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
+#		|AddCreditCardPage_CreditCardNumber_txt									|
+#		|AddCreditCardPage_CardExpiryDate_txt									|
+#		|AddCreditCardPage_CardCVV_txt											|	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "NonNumberExpirationDate"
 	And user clicks the CVV Tool Tip
@@ -166,13 +166,13 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	Then user click on My Account and navigate to payment
 	#When user clicks on payment tab
 	And user clicks on Add New Credit Card button	
-	Then Verify below Sub/Main Module of My Account
-		|#Verify following elements in Payments > Add new credit card section	|
-		|AddCreditCardPage_BillingInformationHeader_txt							|
-		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
-		|AddCreditCardPage_CreditCardNumber_txt									|
-		|AddCreditCardPage_CardExpiryDate_txt									|
-		|AddCreditCardPage_CardCVV_txt											|	
+#	Then Verify below Sub/Main Module of My Account
+#		|#Verify following elements in Payments > Add new credit card section	|
+#		|AddCreditCardPage_BillingInformationHeader_txt							|
+#		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
+#		|AddCreditCardPage_CreditCardNumber_txt									|
+#		|AddCreditCardPage_CardExpiryDate_txt									|
+#		|AddCreditCardPage_CardCVV_txt											|	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "ExpDate"
  	And User enters CVV number "InvalidCVV"
@@ -194,13 +194,13 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	Then user click on My Account and navigate to payment
 	#When user clicks on payment tab
 	And user clicks on Add New Credit Card button	
-	Then Verify below Sub/Main Module of My Account
-		|#Verify following elements in Payments > Add new credit card section	|
-		|AddCreditCardPage_BillingInformationHeader_txt							|
-		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
-		|AddCreditCardPage_CreditCardNumber_txt									|
-		|AddCreditCardPage_CardExpiryDate_txt									|
-		|AddCreditCardPage_CardCVV_txt											|	
+#	Then Verify below Sub/Main Module of My Account
+#		|#Verify following elements in Payments > Add new credit card section	|
+#		|AddCreditCardPage_BillingInformationHeader_txt							|
+#		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
+#		|AddCreditCardPage_CreditCardNumber_txt									|
+#		|AddCreditCardPage_CardExpiryDate_txt									|
+#		|AddCreditCardPage_CardCVV_txt											|	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "ExpDate"
  	And User enters CVV number "NonNumberCVV"
@@ -224,7 +224,7 @@ Scenario: Verify that user is not able to proceed with Billing Information addit
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "ExpDate"
  	And User enters CVV number "CVV"
- 	Then click on Add button
+ 	Then click on Add button on credit card page
 	Then Verify the message on the page
 	|# Following Error Message should show on the page|
 	|Please enter the First Name|
@@ -248,13 +248,13 @@ Scenario: Verify that Payment Details are not saved if User clicks on Cancel CTA
 	Then user click on My Account and navigate to payment
 	#When user clicks on payment tab
 	And user clicks on Add New Credit Card button	
-	Then Verify below Sub/Main Module of My Account
-		|#Verify following elements in Payments > Add new credit card section	|
-		|AddCreditCardPage_BillingInformationHeader_txt							|
-		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
-		|AddCreditCardPage_CreditCardNumber_txt									|
-		|AddCreditCardPage_CardExpiryDate_txt									|
-		|AddCreditCardPage_CardCVV_txt											|	
+#	Then Verify below Sub/Main Module of My Account
+#		|#Verify following elements in Payments > Add new credit card section	|
+#		|AddCreditCardPage_BillingInformationHeader_txt							|
+#		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
+#		|AddCreditCardPage_CreditCardNumber_txt									|
+#		|AddCreditCardPage_CardExpiryDate_txt									|
+#		|AddCreditCardPage_CardCVV_txt											|	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "ExpDate"
  	And User enters CVV number "CVV"
@@ -279,13 +279,13 @@ Scenario: Verify that Payment Details are not saved if User clicks on Cancel CTA
 	Then user click on My Account and navigate to payment
 	#When user clicks on payment tab
 	And user clicks on Add New Credit Card button	
-	Then Verify below Sub/Main Module of My Account
-		|#Verify following elements in Payments > Add new credit card section	|
-		|AddCreditCardPage_BillingInformationHeader_txt							|
-		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
-		|AddCreditCardPage_CreditCardNumber_txt									|
-		|AddCreditCardPage_CardExpiryDate_txt									|
-		|AddCreditCardPage_CardCVV_txt											|	
+#	Then Verify below Sub/Main Module of My Account
+#		|#Verify following elements in Payments > Add new credit card section	|
+#		|AddCreditCardPage_BillingInformationHeader_txt							|
+#		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
+#		|AddCreditCardPage_CreditCardNumber_txt									|
+#		|AddCreditCardPage_CardExpiryDate_txt									|
+#		|AddCreditCardPage_CardCVV_txt											|	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "ExpDate"
  	And User enters CVV number "CVV"
@@ -318,7 +318,7 @@ Scenario: Verify if entered address is validated by AVS
     And user enter PhoneNumber field "PhoneNumber"
     And user enter Address field "AVSAddress"
     And user enter ZipCode field "zipcode"
-    Then click on Add button	
+    Then click on Add button on credit card page
 	And error is found in the shipping address
 	And user selects the suggested address instead of entered address
 	And clicks on Use Selected Address button
@@ -340,13 +340,13 @@ Scenario: Verify that the City and State are auto populated when Zip Code is ent
 	Then user click on My Account and navigate to payment
 	#When user clicks on payment tab
 	And user clicks on Add New Credit Card button	
-	Then Verify below Sub/Main Module of My Account
-		|#Verify following elements in Payments > Add new credit card section	|
-		|AddCreditCardPage_BillingInformationHeader_txt							|
-		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
-		|AddCreditCardPage_CreditCardNumber_txt									|
-		|AddCreditCardPage_CardExpiryDate_txt									|
-		|AddCreditCardPage_CardCVV_txt											|	
+#	Then Verify below Sub/Main Module of My Account
+#		|#Verify following elements in Payments > Add new credit card section	|
+#		|AddCreditCardPage_BillingInformationHeader_txt							|
+#		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
+#		|AddCreditCardPage_CreditCardNumber_txt									|
+#		|AddCreditCardPage_CardExpiryDate_txt									|
+#		|AddCreditCardPage_CardCVV_txt											|	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "ExpDate"
  	And User enters CVV number "CVV"

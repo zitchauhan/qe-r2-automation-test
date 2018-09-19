@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.web;
 
 
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 
@@ -32,10 +33,11 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	
 	@Given("^user clicks on Add New Credit Card button$")
 	public void user_clicks_on_Add_New_Credit_Card_button() throws Throwable {
-		if(isDisplayed(myAccountPo.btnAddNewCreditCard))
-			assertTrue(clickOnButton(myAccountPo.btnAddNewCreditCard));
-		else
+		Thread.sleep(1000);
+		if(isDisplayed(myAccountPo.addNewCardCta))
 			assertTrue(clickOnButton(myAccountPo.addNewCardCta));
+		else
+			assertTrue(clickOnButton(myAccountPo.btnAddNewCreditCard));
 	}
 	
 	@And("^user clicks the CVV Tool Tip$")
@@ -125,7 +127,7 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	
 	@Then("^User verifies that the form fields are closed$")
 	public void user_verifies_that_the_form_fields_are_closed() throws Throwable {
-		assertTrue(isDisplayed(myAccountPo.btnAddNewCreditCard));
+		assertFalse(isDisplayed(myAccountPo.PaymentPage_AddCreditCard_Add_btn));
 	}
 	
 	@Then("^User verifies that city and State are populated automatically$")

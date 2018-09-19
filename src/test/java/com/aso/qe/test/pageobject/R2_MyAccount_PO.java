@@ -549,7 +549,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	// End Page validation CR-SK
 
-	@FindBy(xpath = "//*[@data-auid='tooltipsample tooltip']")
+	@FindBy(xpath = "//*[@data-auid='tooltipmyAct_payment_crdtCard_cvv']")
 	public WebElement iconCVVToolTip;// 28Aug danush
 
 	@FindBy(xpath = "//*[@data-auid='tooltipsample tooltip']/div")
