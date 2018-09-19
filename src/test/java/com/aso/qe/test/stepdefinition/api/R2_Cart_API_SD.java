@@ -111,13 +111,13 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		initiateRestAPICallWithGuestUserCookies(endpoints);
 
 		try{
-			if(org.springframework.util.StringUtils.isEmpty(cartItemID)){		
+			//if(org.springframework.util.StringUtils.isEmpty(cartItemID)){		
 				JsonPath jsonPathEvaluator = response.jsonPath();
 				/*List<Object> orderID = jsonPathEvaluator.getList("orders.orderItems.orderItemId");
 					for(Object obj: orderID){}*/
 				cartItemID = jsonPathEvaluator.get("orders[0].orderItems[0].orderItemId");
 				logger.debug(" cartItemID::"+ cartItemID);
-			}
+			//}
 		}catch (Exception e) {
 			logger.error("jsonPathEvaluator exception msg::"+e.getMessage());
 		}

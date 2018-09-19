@@ -29,20 +29,20 @@ Feature: Verify Order API endpoint services
     Then "OrderUrl" endpoint with "/promocode" for getting promocode of an order
     Then validate jsonSchema "GetOrderPromoCode"
 
-  @All-R2 @C1-Order @C2-GetOrder @api @R2_AAST-04 @CR-RT @ZYP_Order_GetPromo_12587
+  @All-R2 @C1-Order @C2-GetOrder @api @R2_AAST-04 @CR-RT @ZYP_Order_Details_12587
   Scenario: TC_1 -Verify the Order details with SignIn user
     Given "OrderUrl" endpoint for order details
     And Verify response status code as 200
 
-  @All-R2 @C1-Order @C2-GetOrder @api @R2_AAST-04 @CR-RT @ZYP_Order_GetPromo_12588
+  @All-R2 @C1-Order @C2-GetOrder @api @R2_AAST-04 @CR-RT @ZYP_Order_Details_12588
   Scenario: TC_1 -Verify the Order details with SignIn user Json Schema
     Given "OrderUrl" endpoint for order details
     Then validate jsonSchema "R2-OrderDetailsSchema"
 
-  @All-R2 @C1-Order @C2-GetOrder @api @R2_AAST-04 @CR-RT @ZYP_Order_GetPromo_12589
+  @All-R2 @C1-Order @C2-GetOrder @api @R2_AAST-04 @CR-RT @ZYP_Order_Details_12589
   Scenario: TC_1 -Verify the Order details with SignIn user Json Response Details
     Given "OrderUrl" endpoint for order details
-    Then read the API json response
+     Then Validated response details of "orders[0].orderId"
 
   @All-R2 @C1-Order @C2-AddShippingAddres @api @R2_AAST-04 @CR-RT @ZYP_AddShippingAddress_13550
   Scenario: TC_7 - Add the Shipping Address and validate the Schema and response details
