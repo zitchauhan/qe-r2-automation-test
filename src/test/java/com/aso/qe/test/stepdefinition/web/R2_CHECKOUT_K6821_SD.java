@@ -49,13 +49,26 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 
 	@And("^user enter Address \"(.*?)\"$")
 	public void user_enter_Address(String arg1) throws Throwable {
-		setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty(arg1));
+		String addressToEnter = "";
+		if(arg1.equalsIgnoreCase("Invalidaddress"))
+			addressToEnter = "!!!!!";
+		else
+			addressToEnter = webPropHelper.getTestDataProperty(arg1);
+		r2CheckOutPo.inputCheckoutZipCode.clear();
+		setInputText(r2CheckOutPo.inputCheckoutAddress, addressToEnter);
+		Thread.sleep(2000);
+		//setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty(arg1));
 	}
 
 	@And("^user enter Zipcode \"(.*?)\"$")
 	public void user_enter_Zipcode(String arg1) throws Throwable {
+		String zipCodeToEnter = "";
+		if(arg1.equalsIgnoreCase("InvalidZipCode"))
+			zipCodeToEnter = "sldkj";
+		else
+			zipCodeToEnter = webPropHelper.getTestDataProperty(arg1);
 		r2CheckOutPo.inputCheckoutZipCode.clear();
-		setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty(arg1));
+		setInputText(r2CheckOutPo.inputCheckoutZipCode, zipCodeToEnter);
 		Thread.sleep(2000);
 	}
 

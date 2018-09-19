@@ -139,6 +139,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='btncheckout_use_selected_address_btn'] | //*[@data-auid='btnsuggest_btn']")//CR-DPK 14-sept
 	public WebElement btnSelectedAddress;
 	
+	@FindBy(xpath = "//*[@data-auid='checkout_modify_shipping_address_link']")//CR-DPK 19-sept
+	public WebElement lnkModifyAddress;
+	
 	// End KER-2934 CR-DPK
 
 	// start KER-2926 CR-MS
@@ -607,9 +610,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 		@FindBy(xpath = "(//*[@data-component='orderConfirmation']//*)[6]")
 		public WebElement txtOrderID;
-		
-		
-		
 	   //SID 5-September
 	   public void checkWGDefault() {
 		   waitForElement(checkout_ShippingMethod_ShippingMethodHeader_txt);
@@ -789,8 +789,12 @@ public class R2_CheckOut_PO extends CommonActionHelper
     @FindBy(xpath="//*[contains(text(),'You must be at least 18 years')]")public WebElement ShipToStoreforSOF_compliance_Txt;
     @FindBy(xpath="//*[@data-auid='btncheckout_ship_to_store_submit_button']")public WebElement ShipToStoreforSOF_Payment_Btn;
   //Only for SOF Item--Start KER-KER-7033 & KER-7031
+
+	 //Start KER-3174 CR-RK 19-Sep
+	 @FindBy(xpath = "//*[@data-auid='checkout_edit_ship_to_store']")	public WebElement checkoutEditShipToStore_btn;
+	 //End KER-3174 CR-RK 19-Sep
+	 
     
- 
     /**AG KER-3130 Ends**************************************/
 
     public void billingAddressErrorMsgValidation() {
