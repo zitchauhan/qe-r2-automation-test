@@ -94,7 +94,7 @@ Feature: [Desktop]Components - Header
     #    Then User should be able to see Selected_Store in the place of Find a Store link
     Examples: 
       | Postal_Code |
-      | FL 32822    |
+      | 78710       |
 
   @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-2730 @CR-RKA
   Scenario Outline: Verify that the store details are displayed for guest user
@@ -105,7 +105,7 @@ Feature: [Desktop]Components - Header
 
     Examples: 
       | Postal_Code |
-      | FL 32822    |
+      | 78710       |
 
   @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-2734 @CR-RKA
   Scenario: Verify the UI for Find a store modal
@@ -125,7 +125,7 @@ Feature: [Desktop]Components - Header
 
     Examples: 
       | Postal_Code |
-      | FL 32822    |
+      | 78710       |
 
  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-6533 @CR-SG @RBeta
   Scenario Outline: Verify find a store UI navigation functionality
@@ -137,7 +137,7 @@ Feature: [Desktop]Components - Header
 
     Examples: 
       | Postal_Code |
-      | FL 32822    |
+      | 78710       |
       
  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262 @CR-RKA @BrokenLink @Broken @TC_BL_01 
     Scenario: Verify all broken URL's on Home page

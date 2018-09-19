@@ -18,20 +18,20 @@ public class R1_HomePage_PO {
 	@FindBy(xpath = "//a[text()='glo']") public WebElement result3;
 	@FindBy(xpath = "//a[text()='geo']") public WebElement result4;
 	@FindBy(xpath = "//a[text()='goose']") public WebElement result5;
-	@FindBy(xpath="//*[contains(text(),'Sign In')]") public WebElement linkSignIn;
+	@FindBy(xpath="//*[contains(text(),'Sign In')] | //*[contains(text(),'My Account')]") public WebElement linkSignIn;  //SID 19-September
 	@FindBy(xpath="//input[@id='logonId']")public WebElement inputEmail;
 	@FindBy(xpath="//input[@id='logonPassword']") public WebElement inputPassword;
-	@FindBy(xpath="//button[contains(text(),'Sign In')]") public WebElement buttonSignIn;
-	@FindBy(xpath="//h1[@id='landingTitle' and text()='Account Summary']") public WebElement txtAccountSummary;
-	@FindBy(xpath="//*[@id='logonErrorMessage']")public WebElement msgVerifyIncorrect;
-	@FindBy(xpath="//*[@id='logonIdError']") public WebElement msgVerifyEmail;
-	@FindBy(xpath="//*[@id='logonPasswordError']")public WebElement msgVerifyPassword;
+	@FindBy(xpath="//button[contains(text(),'Sign In')]  | //button[contains(text(),'Sign in')]") public WebElement buttonSignIn;  //SID 19-September
+	@FindBy(xpath="//*[@data-auid='Orders']") public WebElement txtAccountSummary;  //SID 19-September
+	@FindBy(xpath="//*[@id='logonErrorMessage'] | //*[contains(@role,'alert') and contains(text(),'incorrect')]")public WebElement msgVerifyIncorrect;  //SID 19-September
+	@FindBy(xpath="//*[@id='logonIdError'] | //*[contains(@role,'alert') and contains(text(),'Please enter email address')]") public WebElement msgVerifyEmail; //SID 19-September
+	@FindBy(xpath="//*[@id='logonPasswordError'] | //*[contains(@role,'alert') and contains(text(),'Please enter the Password')]")public WebElement msgVerifyPassword;  //SID 19-September
 	@FindBy(xpath="//*[@class='leftNavLinks']/*[2]/*") public WebElement tabPersonalInformation;
 	@FindBy(xpath="//*[@class='leftNavLinks']/*[3]/*") public WebElement tabAddressBook;
 	@FindBy(xpath="//*[@class='leftNavLinks']/*[4]/*") public WebElement tabWishList;
-	@FindBy(xpath="//*[contains(text(),'Forgot your password?')]") public WebElement textForgotPasword;
-	@FindBy(xpath="//*[@id='forgot-email']") public WebElement inputForgetEmail;
-	@FindBy(xpath="//*[@id='btnForgotPassword']") public WebElement btnSubmit;
+	@FindBy(xpath="//*[contains(text(),'Forgot your password?')] | //*[text()='Forgot your password ?']") public WebElement textForgotPasword; //SID 19-September
+	@FindBy(xpath="//*[@id='forgot-email'] | //*[@data-auid='email_input']") public WebElement inputForgetEmail; //SID 19-September
+	@FindBy(xpath="//*[@id='btnForgotPassword'] | //*[@data-auid='btnsubmit_btn']") public WebElement btnSubmit;  //SID 19-September
 	
 	
 	//RKA  KER-727 Mobile
