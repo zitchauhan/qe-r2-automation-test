@@ -53,12 +53,11 @@ Feature: To Verify Get Cart Details API service without sign-in
     Then Validated response details of "totalProductPrice"
     Then Validated response details of "currency"
     Then Validated response details of "totalOrderItem"
-    
-    @All-R2 @C1-Cart @C2-UpdateCart @api @R2_AAST-05 @CR-RT @ZYP_InitiateCheckout_13803
+
+  @All-R2 @C1-Cart @C2-UpdateCart @api @R2_AAST-05 @CR-RT @ZYP_InitiateCheckout_13803
   Scenario: TC_5 - verify the Cart Items Initiate Checkout
-		Given "GetCartUrl" by "/initiate" with "InitiateCheckoutRequest" endpoint for Cart Items Initiate Checkout
+    Given "GetCartUrl" by "/initiate" with "InitiateCheckoutRequest" endpoint for Cart Items Initiate Checkout
     Then Verify response status code as 204
-    
 
   @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_AvailableShippingMethods_13786
   Scenario: TC_7 - verify the Cart Items Available Shipping Methods for status code
@@ -100,3 +99,19 @@ Feature: To Verify Get Cart Details API service without sign-in
   Scenario: TC_7 - verify View Cart details without sign-in details
     Given "GetCartUrl" endpoint for viewing cart details
     Then Verify response status code as 200
+
+  @All-R2 @C1-Cart @C2-UpdateCart @api @R2_AAST-07 @CR-RT @ZYP_BopisUpdate_13908
+  Scenario: TC_7 - verify the Cart Bopis Update Shipping Mode details
+    Given "GetCartUrl" by "PUT/updateshippingmode" with "CartBopisUpdateShippingModeRequest" endpoint for Cart-Bopis-Update-Shipping-Mode
+    Then Verify response status code as 200
+
+  @All-R2 @C1-Cart @C2-UpdateCart @api @R2_AAST-07 @CR-RT @ZYP_BopisUpdate_13909
+  Scenario: TC_7 - Validate the Cart Bopis Update Shipping Mode Json Schema
+    Given "GetCartUrl" by "PUT/updateshippingmode" with "CartBopisUpdateShippingModeRequest" endpoint for Cart-Bopis-Update-Shipping-Mode
+    And validate jsonSchema "R2-CartBopisUpdateShippingModeSchema"
+
+  @All-R2 @C1-Cart @C2-UpdateCart @api @R2_AAST-07 @CR-RT @ZYP_BopisUpdate_13910
+  Scenario: TC_7 - verify the Cart Bopis Update Shipping Mode Json Response details
+    Given "GetCartUrl" by "PUT/updateshippingmode" with "CartBopisUpdateShippingModeRequest" endpoint for Cart-Bopis-Update-Shipping-Mode
+    Then Validated response details of "orderId"
+    Then Validated response details of "orderItem.orderItemId"
