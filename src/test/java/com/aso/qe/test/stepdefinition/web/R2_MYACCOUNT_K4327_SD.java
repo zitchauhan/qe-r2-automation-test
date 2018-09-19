@@ -50,7 +50,7 @@ public class R2_MYACCOUNT_K4327_SD extends CommonActionHelper {
 
 	@When("^User clicks on No Button on confirmation modal$")
 	public void user_clicks_on_No_Button_on_confirmation_modal() throws Throwable {
-		assertTrue(clickOnButton(r2MyAccountPo.btnUpdate));
+		assertTrue(clickOnButton(r2MyAccountPo.Cancel_NO_Order_Btn));
 	    
 	}
 
