@@ -293,6 +293,29 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	@FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemSG']")
 	public WebElement checkout_ShippingMethod_ShippingDetails;
+	
+	
+	//****Start PayPal****//
+    @FindBy(xpath = "//*[@id='closeCart']")
+    public WebElement PaypalClose_icon;
+    @FindBy(xpath = "//*[text()='Shipping discount']")
+    public WebElement PaypalShippigDiscount_txt;
+    @FindBy(xpath ="//*[@id='loginSection']/*/*[2]/*")
+    public WebElement PaypalScreenLogin_Btn;
+    @FindBy(xpath ="//*[@id='email']")
+    public WebElement PaypalEmail_Input;
+    @FindBy(xpath ="//*[@id='btnNext']")
+    public WebElement PaypalNext_Btn;
+    @FindBy(xpath ="//*[@id='password']")
+    public WebElement PaypalPassWord_Input;
+    @FindBy(xpath ="//*[@id='btnLogin']")
+    public WebElement PaypalLogin_Btn;
+    @FindBy(xpath ="//*[@id='button']/*")
+    public WebElement PayPalContinue_Btn;
+    
+    
+    //****End PayPal****//
+
 		
 ////Ends Checkout Page Verification CR - SK
 	

@@ -1,7 +1,13 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -23,6 +29,49 @@ public class R2_CHECKOUT_K3338_SD extends CommonActionHelper {
 	@Then("^Verify paypal button is clicked$")
 	public void verify_paypal_button_is_clicked() throws Throwable {	
 		assertTrue(clickOnButton(r2CheckOutPo.PayPalCheckOut_Btn));
-		Thread.sleep(10000);
+		Thread.sleep(20000);
 	}
+	@Then("^user switch to window of paypal$")
+	public void user_switch_to_window_of_paypal() throws Throwable {
+	    System.out.println("111");
+		Set<String> set=driver.getWindowHandles();
+	    Iterator<String> it=set.iterator();
+	    String parentWindow=it.next();
+	    String childWindow=it.next();
+	    //System.out.println("222");
+	    driver.switchTo().window(childWindow);
+	    waitForPageLoad(driver);
+	   // System.out.println("3333");
+	}
+	@Then("^user verify the element of paypal window$")
+	public void user_verify_the_element_of_paypal_window() throws Throwable {
+//		 System.out.println("444");
+//		 Thread.sleep(20000);
+//		Boolean ee= driver.findElement(By.xpath("//*[text()='Shipping discount']")).isDisplayed();
+//		 System.out.println("555");
+//		System.out.println(ee);
+//		
+		assertTrue(isDisplayed(r2CheckOutPo.PaypalShippigDiscount_txt));
+	}
+	
+	@Then("^enter the paypal login \"(.*?)\" \"(.*?)\"$")
+	public void enter_the_paypal_login(String arg1, String arg2) throws Throwable {
+		assertTrue(clickOnButton(r2CheckOutPo.PaypalClose_icon));
+		assertTrue(clickOnButton(r2CheckOutPo.PaypalScreenLogin_Btn));
+		waitForElement(r2CheckOutPo.PaypalEmail_Input);
+		assertTrue(clickOnButton(r2CheckOutPo.PaypalEmail_Input));
+		setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty(arg1));
+		assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
+		setInputText(r2CheckOutPo.PaypalPassWord_Input, webPropHelper.getTestDataProperty(arg2));
+		assertTrue(clickOnButton(r2CheckOutPo.PaypalLogin_Btn));
+		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));		
+	}
+
+	
+	@Then("^verify the gift card option is not displayed$")
+	public void verify_the_gift_card_option_is_not_displayed() throws Throwable {
+	 assertFalse(isDisplayed(r2CheckOutPo.plusIconGiftCard));
+	}
+
+	
 }
