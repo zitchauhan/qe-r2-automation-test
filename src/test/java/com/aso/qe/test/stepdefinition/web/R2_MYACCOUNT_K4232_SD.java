@@ -44,12 +44,12 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 	@Then("^user Clicks on Add New Address link$")
 	public void user_Clicks_on_Add_New_Address_link() throws Throwable {
 		
-		if("mobile".equalsIgnoreCase(testtype))
+		if(isDisplayed(myAccountPo.myAccountPage_AddNewAddressPluIcon_btn))
 		{
 			assertTrue(clickOnButton(myAccountPo.myAccountPage_AddNewAddressPluIcon_btn));	
 		}else
 		{
-		assertTrue(clickOnButton(myAccountPo.myAccountPage_AddNewAddressPluIcon_btn));
+		assertTrue(clickOnButton(myAccountPo.addNewAddressBtn));
 		}
 		
 	}

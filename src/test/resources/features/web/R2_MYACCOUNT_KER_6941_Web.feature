@@ -20,10 +20,7 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 	And user enter the emailaddress "EmailAddress" in signin page
 	And user enter the password "Password" 
 	And user click on signin button 
-	Then Verify below Sub/Main Module of My Account	
-	|#verify following elements in profile page		|
-		|ProfilePage_HelloMessage_label					| 
-
+	
 
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8923 @CR-RK 
 	Scenario: Verify The user must be able to input a valid email Id while creating account
@@ -109,8 +106,6 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user navigate to Cart page
 	And user click on checkout button in Cart page
 	And user click on SignIn link
-	Then Verify below Sub/Main Module of My Account
-	|SignInPage_SignIn_btn								|
 	And user enter the emailaddress "InvalidEmailAddresswithoutdomain" in signin page
 	And user enter the password "Password" 
 	And user click on signin button

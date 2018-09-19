@@ -65,25 +65,26 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
         }
 		
 	}
-/*	
+	
 	@Then("^user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers$")
 	public void user_should_see_unselected_checkbox_acknowledgement_with_appropriate_age_restriction_disclaimers() throws Throwable {
-	    assertTrue(isDisplayed(r2CheckoutPo.Checkout_SeeInStorePickupInstructions_chk));
-	    assertTrue(isDisplayed(r2CheckoutPo.Checkout_SeeInStorePickupInstructionsAgeRestriction_txt));
+	    assertTrue(isDisplayed(r2CheckoutPo.ShipToStoreforSOF_compliance_Txt));
+	   
 	}
 	
 	@Then("^user click on edit button in ship to store$")
 	public void user_click_on_edit_button_in_ship_to_store() throws Throwable {
 		assertTrue(clickOnButton(r2CheckoutPo.checkoutEditShipToStore_btn));
-	}*/
+	}
 
-	/*@Then("^user click on checkbox in special order ship to store section$")
+	@Then("^user click on checkbox in special order ship to store section$")
 	public void user_click_on_checkbox_in_special_order_ship_to_store_section() throws Throwable {
-	  
+		 assertTrue(clickOnButton(r2CheckoutPo.ShipToStoreforSOF_compliance_Txt));
 	}
 
 	@Then("^user click on go to payment section$")
 	public void user_click_on_go_to_payment_section() throws Throwable {
-	   
-	}*/
-}
+		assertTrue(clickOnButton(r2CheckoutPo.ShipToStoreforSOF_Payment_Btn));
+		
+	}
+	}

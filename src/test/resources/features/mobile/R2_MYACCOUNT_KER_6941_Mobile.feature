@@ -12,15 +12,10 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 	And user navigate to Cart page
 	And user click on checkout button in Cart page
 	And user click on SignIn link
-	Then Verify below Sub/Main Module of My Account
-	|SignInPage_SignIn_btn								|
 	And user enter the emailaddress "EmailAddress" in signin page
 	And user enter the password "Password" 
 	And user click on signin button 
-	Then Verify below Sub/Main Module of My Account	
-	|#verify following elements in profile page		|
-		|ProfilePage_HelloMessage_label					| 
-
+	
 
 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8923 @CR-RK 
 	Scenario: Verify The user must be able to input a valid email Id while creating account
@@ -28,6 +23,7 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|#Verify following elements in SignUp section|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	And clicks on SignUp link from SignIn page
@@ -57,8 +53,6 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 	And user navigate to Cart page
 	And user click on checkout button in Cart page
 	And user click on SignIn link
-	Then Verify below Sub/Main Module of My Account
-	|SignInPage_SignIn_btn								|
 	And user enter the emailaddress "InvalidEmailAddress" in signin page
 	And user enter the password "Password" 
 	And user click on signin button
@@ -71,8 +65,6 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button
-	Then Verify below Sub/Main Module of My Account
-	|SignInPage_SignIn_btn								|
 	And clicks on SignUp link from SignIn page 
 	Then Verify below Sub/Main Module of My Account 
 	|#Verify following elements in SignUp section|
@@ -102,8 +94,6 @@ Then User clicks on the burger menu
 	And user navigate to Cart page
 	And user click on checkout button in Cart page
 	And user click on SignIn link
-	Then Verify below Sub/Main Module of My Account
-	|SignInPage_SignIn_btn								|
 	And user enter the emailaddress "InvalidEmailAddresswithoutdomain" in signin page
 	And user enter the password "Password" 
 	And user click on signin button
@@ -117,8 +107,6 @@ Scenario: Verify The user must see form field validations to ensure the e-mail a
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button
-	Then Verify below Sub/Main Module of My Account
-	|SignInPage_SignIn_btn								|
 	And clicks on SignUp link from SignIn page 
 	Then Verify below Sub/Main Module of My Account 
 	|#Verify following elements in SignUp section|
@@ -147,8 +135,6 @@ Then User clicks on the burger menu
 	And user navigate to Cart page
 	And user click on checkout button in Cart page
 	And user click on SignIn link
-	Then Verify below Sub/Main Module of My Account
-	|SignInPage_SignIn_btn								|
 	When user enter the emailaddress "InvalidEmailAddress" in signin page
 	And user enter the password "Password" 
 	And user click on signin button

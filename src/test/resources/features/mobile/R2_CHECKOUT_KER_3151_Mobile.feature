@@ -17,19 +17,7 @@ Scenario: Verify if authenticated user can select a shipping address from the dr
 	Then User clicks on the burger menu
      Then user lands on My Account page and click on adress
          Then user Clicks on Add New Address link 
-     Then Verify below Sub/Main Module of My Account
-		|# Verify following elements in address page|
-		|AddressPage_FirstName_txt				   	|
-		|AddressPage_LastName_txt					|
-		|AddressPage_PhoneNumber_txt				|
-		|AddressPage_Address_txt 					|
-		|AddressPage_ZipCode_txt			   		|
-		|AddressPage_City_txt						|
-		|AddressPage_State_txt						|
-		|AddressPage_AddressBookHeader_txt			|
-		|AddressPage_Add_btn						|
-		|AddressPage_Cancel_btn						|
-		When user enter First name "FirstName" in address book
+    	When user enter First name "FirstName" in address book
 	And user enter Last name "LastName" in address book
 	And user enter Phone number "PhoneNumber" in address book
 	And user enter Address "Address" in address book
@@ -62,19 +50,7 @@ Scenario: Verify if authenticated user can  view all the shipping addresses at c
 	Then User clicks on the burger menu
      Then user lands on My Account page and click on adress
          Then user Clicks on Add New Address link 
-     Then Verify below Sub/Main Module of My Account
-		|# Verify following elements in address page|
-		|AddressPage_FirstName_txt				   	|
-		|AddressPage_LastName_txt					|
-		|AddressPage_PhoneNumber_txt				|
-		|AddressPage_Address_txt 					|
-		|AddressPage_ZipCode_txt			   		|
-		|AddressPage_City_txt						|
-		|AddressPage_State_txt						|
-		|AddressPage_AddressBookHeader_txt			|
-		|AddressPage_Add_btn						|
-		|AddressPage_Cancel_btn						|
-		When user enter First name "FirstName" in address book
+     		When user enter First name "FirstName" in address book
 	And user enter Last name "LastName" in address book
 	And user enter Phone number "PhoneNumber" in address book
 	And user enter Address "Address" in address book
@@ -106,19 +82,7 @@ Scenario: Verify for authenticated user default address will always be displayed
 	Then User clicks on the burger menu
      Then user lands on My Account page and click on adress
          Then user Clicks on Add New Address link 
-     Then Verify below Sub/Main Module of My Account
-		|# Verify following elements in address page|
-		|AddressPage_FirstName_txt				   	|
-		|AddressPage_LastName_txt					|
-		|AddressPage_PhoneNumber_txt				|
-		|AddressPage_Address_txt 					|
-		|AddressPage_ZipCode_txt			   		|
-		|AddressPage_City_txt						|
-		|AddressPage_State_txt						|
-		|AddressPage_AddressBookHeader_txt			|
-		|AddressPage_Add_btn						|
-		|AddressPage_Cancel_btn						|
-		When user enter First name "FirstName" in address book
+    		When user enter First name "FirstName" in address book
 	And user enter Last name "LastName" in address book
 	And user enter Phone number "PhoneNumber" in address book
 	And user enter Address "Address" in address book
