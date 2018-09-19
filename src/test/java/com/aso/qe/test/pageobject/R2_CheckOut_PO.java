@@ -479,8 +479,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[text()='State']/following::*[1]")public WebElement State_DD;
 	   
 	   
-	   @FindBy(xpath="//*[@data-auid='checkout_payment']\r\n" + 
-	   		"//*[contains(text(),'Email Address for Order Confirmation')]/following::*[2]/input")public WebElement EmailAddressforOrderConfirmation_Input;
+	   @FindBy(xpath="//*[contains(text(),'Email Address for Order Confirmation')]/following::*[2]/input")public WebElement EmailAddressforOrderConfirmation_Input;
 	   
 	   @FindBy(xpath="//*[contains(text(),'Sign up to get Hot Deals')]/preceding::*[1]")public WebElement SignuptogetHotDeals_checkBox;
 	   
@@ -602,7 +601,15 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="(//*[contains(@data-auid,'level3Category')])[1]//img")public WebElement dealTabProduct; //SID 5-September
 	   
 	  
-	 
+		//*************KER-2915*********************//
+		@FindBy(xpath = "//*[@data-component='orderConfirmation']//*[text()='THANKS FOR SUBMITTING YOUR ORDER']")
+		public WebElement txtOrderSuccesfullStatus;
+		
+		@FindBy(xpath = "(//*[@data-component='orderConfirmation']//*)[6]")
+		public WebElement txtOrderID;
+		
+		
+		
 	   //SID 5-September
 	   public void checkWGDefault() {
 		   waitForElement(checkout_ShippingMethod_ShippingMethodHeader_txt);
@@ -783,29 +790,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
     @FindBy(xpath="//*[@data-auid='btncheckout_ship_to_store_submit_button']")public WebElement ShipToStoreforSOF_Payment_Btn;
   //Only for SOF Item--Start KER-KER-7033 & KER-7031
     
+ 
     /**AG KER-3130 Ends**************************************/
-    
-  //****Start PayPal****//
-    @FindBy(xpath = "//*[@id='closeCart']")
-    public WebElement PaypalClose_icon;
-    @FindBy(xpath = "//*[text()='Shipping discount']")
-    public WebElement PaypalShippigDiscount_txt;
-    @FindBy(xpath ="//*[@id='loginSection']/*/*[2]/*")
-    public WebElement PaypalScreenLogin_Btn;
-    @FindBy(xpath ="//*[@id='email']")
-    public WebElement PaypalEmail_Input;
-    @FindBy(xpath ="//*[@id='btnNext']")
-    public WebElement PaypalNext_Btn;
-    @FindBy(xpath ="//*[@id='password']")
-    public WebElement PaypalPassWord_Input;
-    @FindBy(xpath ="//*[@id='btnLogin']")
-    public WebElement PaypalLogin_Btn;
-    @FindBy(xpath ="//*[@id='button']/*")
-    public WebElement PayPalContinue_Btn;
-    
-    
-    //****End PayPal****//
-
 
     public void billingAddressErrorMsgValidation() {
     	

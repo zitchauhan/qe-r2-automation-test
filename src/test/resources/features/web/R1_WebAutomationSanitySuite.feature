@@ -155,9 +155,9 @@ Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios
     And user should be able to see PDP mention in the current url
 
   @AutomationSanityR1 @AS1 @WAST-13 @1HR
-  Scenario: TC_13-Verify Search Result Page(Facets,Â  Sort and Pagination)
+  Scenario: TC_13-Verify Search Result Page(Facets,Sort and Pagination)
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "SearchTerm" in the search box
+    When user enters "SearchTerm" in the search box and navigates to PLP
     And User expands PRICE Filter Option
     When User selects multiple PRICE filter Options
     Then User should be able to see the selected PRICE filter Options in selected state
