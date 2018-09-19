@@ -123,7 +123,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='city']") // 27 Aug //CR-RK KER-3151 Sep 18
 	public WebElement adr_inpCity;
 
-	@FindBy(xpath = "//*[@name='phone1']")
+	@FindBy(xpath = "//*[@name='phoneNumber']")
 	public WebElement adr_inpPhoneNumber; // CR-RK KER-3151 Sep 18
 
 	// @FindBy(xpath = "//*[@data-auid='First Name-input']") // CR-SK, 28 Aug 2018
@@ -549,7 +549,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	// End Page validation CR-SK
 
-	@FindBy(xpath = "//*[@data-auid='tooltipmyAct_payment_crdtCard_cvv']")
+	@FindBy(xpath = "//*[@data-auid='tooltipsample tooltip']")
 	public WebElement iconCVVToolTip;// 28Aug danush
 
 	@FindBy(xpath = "//*[@data-auid='tooltipsample tooltip']/div")

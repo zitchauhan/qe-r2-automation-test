@@ -233,8 +233,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper
 			setInputTextWithEnterKey(R1_SearchProduct_PO.searchTextBoxMobile, webPropHelper.getTestDataProperty(searchText)); 
 			//SearchProductPO.searchTextBoxMobile.sendKeys(searchText);
 //			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtnMobile));
-			if(!(searchText.toLowerCase().contains("sku")))
-					assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
+			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 			logger.debug("User entered search key :: " + searchText);
 			Thread.sleep(3000);
 		}else {
@@ -247,11 +246,36 @@ public class R1_PDP_K1926_SD extends CommonActionHelper
 //			Thread.sleep(2000);
 //			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));//Due to existing defect clicking is required
 			logger.debug("User entered search key :: " + searchText);
-			if(!(searchText.toLowerCase().contains("sku")))
-				assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
+			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 		}
 	}
 
+	
+	@When("^user enters \"(.*?)\" in the search box and navigates to PLP$")  //not navigating to PDP
+	public void user_enters_in_the_search_box_and_navigate_tp_PLP(String searchText) throws Throwable 
+	{
+		searchKey=webPropHelper.getTestDataProperty(searchText);  
+		if("mobile".equalsIgnoreCase(testtype)) 
+		{
+			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtnMobile));
+			if(!isDisplayed(R1_SearchProduct_PO.searchTextBoxMobile)) 
+			{
+				assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
+				Thread.sleep(1000);
+			}
+			setInputTextWithEnterKey(R1_SearchProduct_PO.searchTextBoxMobile, webPropHelper.getTestDataProperty(searchText)); 
+			logger.debug("User entered search key :: " + searchText);
+		}else {
+			waitForPageLoad(driver);
+			Thread.sleep(2000);
+			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtn));
+			setInputTextWithEnterKey(R1_SearchProduct_PO.searchTextBox, webPropHelper.getTestDataProperty(searchText));
+			Thread.sleep(2000);
+			logger.debug("User entered search key :: " + searchText);
+		}
+	}
+	
+	
 	@Then("^user should be able to see the search term in the product title$")
 	public void user_should_be_able_to_see_the_search_term_in_the_product_title() throws Throwable {
 		assertEquals("Columbia Sportswear Men's Dorado CVO PFG Boat Shoes", getText(pdp_po.txtProductTitle));

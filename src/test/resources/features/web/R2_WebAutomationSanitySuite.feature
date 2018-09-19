@@ -266,7 +266,6 @@ Scenario: TC_18-Verify Add Shipping Address
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user navigate to Cart page
-	And selects Add a New Shipping Address in address drop-down in shipping address drawer 
 	Then user click on checkout button in Cart page
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
