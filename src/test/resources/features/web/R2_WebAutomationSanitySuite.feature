@@ -103,7 +103,7 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
  	And user enter PhoneNumber field "UpdatePhoneNumber"
  	Then User verifies that city and State are populated automatically
 	Then click on Add button on credit card page
-	And User searches a product "SanitySKUNumber" and navigates to PDP
+	And User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button
 	And user is navigated to Add to cart Notification popup  
 	And user will click on View Cart button 
