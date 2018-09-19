@@ -109,8 +109,20 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId");
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithGuestUserCookies(endpoints);
+
+		try{
+			//if(org.springframework.util.StringUtils.isEmpty(cartItemID)){		
+				JsonPath jsonPathEvaluator = response.jsonPath();
+				/*List<Object> orderID = jsonPathEvaluator.getList("orders.orderItems.orderItemId");
+					for(Object obj: orderID){}*/
+				cartItemID = jsonPathEvaluator.get("orders[0].orderItems[0].orderItemId");
+				logger.debug(" cartItemID::"+ cartItemID);
+			//}
+		}catch (Exception e) {
+			logger.error("jsonPathEvaluator exception msg::"+e.getMessage());
+		}
 	}
-	
+
 	@Given("^\"(.*?)\" validating with \"(.*?)\"$")  //Anuj 23 Aug
 	public void validating_with(String arg1, String arg2) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(arg1)+loadProps.getTestDataProperty(arg2);
@@ -131,14 +143,14 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICall(endpoints);
 	}
-	
+
 	@Given("^\"(.*?)\" and post request \"(.*?)\" endpoint for Storelocator Find stores makemystore with SignIn user$")
 	public void and_post_request_endpoint_for_Storelocator_Find_stores_makemystore_with_SignIn_user(String url, String requestJson) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithCookies(endpoints, requestJson);
 	}
-	
+
 	@Given("^verify the Storelocator-Find stores-makemystore response data$")
 	public void verify_the_Storelocator_Find_stores_makemystore_response_data() throws Throwable {
 		JsonPath jsonPathEvaluator = response.jsonPath();
@@ -169,7 +181,7 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 	}
-	
+
 	@Then("^Validated response details of \"(.*?)\"$")
 	public void validated_response_details_of(String key) throws Throwable {
 		JsonPath jsonPathEvaluator = response.jsonPath();
@@ -177,14 +189,14 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		logger.debug(key+"::"+ propObj);
 		assertNotNull(JSONValidationUtils.isNotNull(propObj));
 	}
-	
+
 	@Given("^\"(.*?)\" with \"(.*?)\" for Create store pickup inventory with skus and store$")
 	public void with_for_Create_store_pickup_inventory_with_skus_and_store(String url, String requestJson) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithoutCookies(endpoints, loadProps.getTestDataProperty(requestJson));
 	}
-	
+
 	@Given("^\"(.*?)\" by \"(.*?)\" with \"(.*?)\" endpoint for Cart-Update-Quantity$")
 	public void by_with_endpoint_for_Cart_Update_Remove_Quantity(String url, String extension, String requestJson) throws Throwable {
 		if(org.springframework.util.StringUtils.isEmpty(cartItemID)){
@@ -197,7 +209,7 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		logger.debug("POST Request JSON:"+postRequestStr);
 		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
 	}
-	
+
 	@Given("^\"(.*?)\" and post request \"(.*?)\" endpoint for Add to Cart with Sign user$")
 	public void and_post_request_endpoint_for_Add_to_Cart_with_Sign_user(String addToCartSummaryUrl, String addtocartRequestJson) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(addToCartSummaryUrl);
@@ -207,7 +219,7 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		cartItemID = jsonPathEvaluator.get("addToCart.items[0].itemId");
 		logger.debug("Cart ItemID::"+ cartItemID);
 	}
-	
+
 	@Given("^\"(.*?)\" by \"(.*?)\" with \"(.*?)\" endpoint for Remove Item from Cart$")
 	public void by_with_endpoint_for_Remove_Item_from_Cart(String url, String extension, String requestJson) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+"PUT/"+extension;
@@ -223,15 +235,24 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 	}
-	
+
 	@Given("^\"(.*?)\" by \"(.*?)\" with \"(.*?)\" endpoint for Cart Items Initiate Checkout$")
 	public void by_with_endpoint_for_Cart_Items_Initiate_Checkout(String url, String extension, String requestJson) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+"PUT/"+System.getProperty("OrderId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestJson+".json");
 		postRequestStr = postRequestStr.replace("REPLACE_ORDERID", System.getProperty("OrderId"));
-		logger.debug("POST Request JSON:"+postRequestStr);
 		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
 	}
+
+	@Given("^\"(.*?)\" by \"(.*?)\" with \"(.*?)\" endpoint for Cart-Bopis-Update-Shipping-Mode$")
+	public void by_with_endpoint_for_Cart_Bopis_Update_Shipping_Mode(String url, String extension, String requestJson) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+extension;
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestJson+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_ORDERID", System.getProperty("OrderId")).replace("REPLACE_ITEMID", cartItemID);
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
+	}
+
 
 }
