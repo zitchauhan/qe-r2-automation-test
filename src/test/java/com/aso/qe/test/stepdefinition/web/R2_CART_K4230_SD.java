@@ -20,7 +20,7 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	public R2_Cart_PO cartR2PageObj = PageFactory.initElements(driver, R2_Cart_PO.class);
 	public String defaultPassword = "DefaultPassword";
-	public String changedPassword = "ChangedPassword";
+	public  String changedPassword = "ChangedPassword";
 
 	@Given("^user click on my account link$")
 	public void user_click_on_my_account_link() throws Throwable {
@@ -67,7 +67,7 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
                   }
 
            }
-           
+            
            else if(emailID.contains("UserWithZeroProductsInCart")) {
                   setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty("EmailAddressForZeroProductsInCart"));
                   setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
@@ -114,6 +114,7 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 	@Given("^user clicks on Update button$")
 	public void user_clicks_on_Update_button() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.btnUpdate));
+		//Thread.sleep(10000);
 	}
 	
 	@Then("^user should be able to change password$")
@@ -184,5 +185,8 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 		}
 	}
 	
-	
+	@Then("^user enter the old password as new password$")
+	public void user_enter_the_old_password_as_new_password() throws Throwable {
+		setInputText(r2MyAccountPo.txtNewPassword, webPropHelper.getTestDataProperty(defaultPassword));
+	}
 }

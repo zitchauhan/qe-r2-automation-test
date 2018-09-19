@@ -50,4 +50,6 @@ Feature: Message/Text Verification
 	|In-Store Pickup Available|
 	|IN STORE PICKUP INSTRUCTIONS|
 	| ARE YOU SURE YOU WANT TO CANCEL THIS ORDER?|
-	
+	|Password must be at least 8 characters long|
+	|The combination of Email Address and Password is incorrect. Please try again.|
+	|For maximum security, please enter a Password different from the previous one|

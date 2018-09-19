@@ -1,10 +1,12 @@
-Feature: [Web]E01-200 - Forgotten Password - Create New Password
+Feature: [Mobile]E01-200 - Forgotten Password - Create New Password
 
-  @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10175 @CR-RKA
+  @R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10175 @CR-RKA
   Scenario: Verify the password requirement rules
   Given  user launches the browser and navigates to "ASO_HOME" page 
-	And  clicks on SignIn button in home page 
+	Then User clicks on the burger menu 
+	Then user should able to click on Signin button 
 	And user logs in as "EmailAddressForChangePassword" 
+	Then User clicks on the burger menu
 	And user navigates to profile in my account 
 	And user click on change password icon
 	And user enters current password 
@@ -13,11 +15,13 @@ Feature: [Web]E01-200 - Forgotten Password - Create New Password
 	|#verify  new password dot is display|
 	|ChangePassworPage_NewPassword_txt			|
 	
-	@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10177 @CR-RKA
+	@R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10177 @CR-RKA
 	Scenario: Verify the user is able to see the password strength info bubble
 	Given  user launches the browser and navigates to "ASO_HOME" page 
-	And  clicks on SignIn button in home page 
+	Then User clicks on the burger menu 
+	Then user should able to click on Signin button 
 	And user logs in as "EmailAddressForChangePassword" 
+	Then User clicks on the burger menu
 	And user navigates to profile in my account 
 	And user click on change password icon
 	And user enters current password 
@@ -27,12 +31,14 @@ Feature: [Web]E01-200 - Forgotten Password - Create New Password
 	|#verify the tooltip in change your password|
 	|ChangePasswordPage_toolTip_Btn                                 |
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10178 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10178 @CR-RKA
 Scenario: Verify the user gets the error message on entering the password not meeting the requirements of min. characters
 
-Given  user launches the browser and navigates to "ASO_HOME" page 
-	And  clicks on SignIn button in home page 
+   Given  user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu 
+	Then user should able to click on Signin button
 	And user logs in as "EmailAddressForChangePassword" 
+	Then User clicks on the burger menu
 	And user navigates to profile in my account 
 	And user click on change password icon
 	And user enters current password 
@@ -42,11 +48,13 @@ Given  user launches the browser and navigates to "ASO_HOME" page
    |#Verify the following MSG is display when password is less then 8 caharacter|
    |Password must be at least 8 characters long|
    
-   @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10179 @CR-RKA
+   @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10179 @CR-RKA
    Scenario: Verify the user enters the valid password and resets the password successfully
 Given  user launches the browser and navigates to "ASO_HOME" page 
-	And  clicks on SignIn button in home page 
+	Then User clicks on the burger menu 
+	Then user should able to click on Signin button
 	And user logs in as "EmailAddressForChangePassword" 
+	Then User clicks on the burger menu
 	And user navigates to profile in my account 
 	And user click on change password icon 
 	And user enters current password 
@@ -56,18 +64,22 @@ Given  user launches the browser and navigates to "ASO_HOME" page
 		|#verify following elements in Payments page in My Account|
 		|ProfilePage_ChangePassword_btn|
 
- @R2_Web @R2_Regression @R2_All @P-Highest @1HR @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10180 @CR-RKA
+ @R2_Mobile @R2_Regression @R2_All @P-Highest @1HR @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10180 @CR-RKA
 Scenario: Verify the user is able to sign with the new password
 Given  user launches the browser and navigates to "ASO_HOME" page 
-	And  clicks on SignIn button in home page 
+	Then User clicks on the burger menu 
+	Then user should able to click on Signin button
 	And user logs in as "EmailAddressForChangePassword" 
+	Then User clicks on the burger menu
 	And user navigates to profile in my account 
 	And user click on change password icon 
 	And user enters current password 
 	And user enters new password 
 	And user clicks on Update button 
+#	Then User clicks on the burger menu
     When user sign out from the website 
-    And  clicks on SignIn button in home page 
+    Then User clicks on the burger menu 
+	Then user should able to click on Signin button
 	And user logs in as "EmailAddressForChangePassword" 
      Then Verify below Sub/Main Module of My Account 
 		|#verify user to be able to login with change password |
@@ -76,7 +88,8 @@ Given  user launches the browser and navigates to "ASO_HOME" page
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10181 @CR-RKA
 Scenario: Verify the user is not able to sign with the old password
 Given  user launches the browser and navigates to "ASO_HOME" page 
-	And  clicks on SignIn button in home page 
+	Then User clicks on the burger menu 
+	Then user should able to click on Signin button
 	And user enter the valid emailaddress "EmailAddress" 
 	And  user enter the valid password "IncorrectPassword"
 	And  user click on signin button 
@@ -85,11 +98,13 @@ Given  user launches the browser and navigates to "ASO_HOME" page
 	    |The combination of Email Address and Password is incorrect. Please try again.|
 	 
 	 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10182 @CR-RKA   
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10182 @CR-RKA   
 Scenario: Verify the user gets the error message on entering the password not meeting the requirements of same as email address
 	Given  user launches the browser and navigates to "ASO_HOME" page 
-	And  clicks on SignIn button in home page 
+	Then User clicks on the burger menu 
+	Then user should able to click on Signin button
 	And user logs in as "EmailAddressForChangePassword" 
+	Then User clicks on the burger menu 
 	And user navigates to profile in my account 
 	And user click on change password icon 
 	Then user enter the wrong current password 
@@ -98,11 +113,13 @@ Scenario: Verify the user gets the error message on entering the password not me
 	##Only verification msg is required currently not displayed
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10184 @CR-RKA
+	@R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10184 @CR-RKA
 	Scenario: Verify user can set the new password same as old password of 8 digits
 	 Given  user launches the browser and navigates to "ASO_HOME" page 
-	And  clicks on SignIn button in home page 
+	Then User clicks on the burger menu 
+	Then user should able to click on Signin button
 	And user logs in as "EmailAddressForChangePassword" 
+	Then User clicks on the burger menu 
 	And user navigates to profile in my account 
 	And user click on change password icon 
 	And user enters current password 
@@ -113,11 +130,13 @@ Scenario: Verify the user gets the error message on entering the password not me
     |For maximum security, please enter a Password different from the previous one|
 	
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10185 @CR-RKA  
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10185 @CR-RKA  
 	Scenario: Verify user not allowed to set the new password same as old password of 6 digits
  Given  user launches the browser and navigates to "ASO_HOME" page 
-	And  clicks on SignIn button in home page 
+	Then User clicks on the burger menu 
+	Then user should able to click on Signin button
 	And user logs in as "EmailAddressForChangePassword" 
+	Then User clicks on the burger menu 
 	And user navigates to profile in my account 
 	And user click on change password icon 
 	And user enters current password 
