@@ -163,6 +163,10 @@ Feature: Debug
 		|Order_Note_Txt                             | 
 		 |Order_OrderTotal|
 		|Order_Taxes_Price|
+		|Order_Number_Txt|
+	    |Total_Items_Txt|
+	    |Cancel_Yes_Order_Btn|
+	    |Cancel_NO_Order_Btn| 
  
 		
  

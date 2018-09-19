@@ -24,6 +24,7 @@ Scenario: Verify MyAccount
 		|AddressPage_FirstName_txt				   	|
 		|AddressPage_LastName_txt					|
 		|AddressPage_PhoneNumber_txt				|
+		
 		|AddressPage_Address_txt 					|
 		|AddressPage_ZipCode_txt			   		|
 		|AddressPage_City_txt						|
@@ -163,6 +164,10 @@ Scenario: Verify MyAccount
 		|Order_Note_Txt                             | 
 		 |Order_OrderTotal|
 		|Order_Taxes_Price|
+		|Order_Number_Txt|
+	    |Total_Items_Txt|
+	    |Cancel_Yes_Order_Btn|
+	    |Cancel_NO_Order_Btn| 
  
 		
  

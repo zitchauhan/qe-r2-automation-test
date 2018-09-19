@@ -717,6 +717,21 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[text()='Remove']")
 	public WebElement WhishList_Remove_Lnk_M;
+	
+	@FindBy(xpath="//*[contains(text(),'ARE YOU SURE')]/following-sibling::*[1]/*[2]")
+    public WebElement Order_Number_Txt;	
+	
+	@FindBy(xpath="//*[contains(text(),'Total Items')]/following-sibling::*[1]")
+	public WebElement Total_Items_Txt;
+	
+	@FindBy(xpath="//*[text()='YES, CANCEL MY ORDER']")
+	public WebElement Cancel_Yes_Order_Btn;
+	
+	@FindBy(xpath="//*[text()='NO']")
+	public WebElement Cancel_NO_Order_Btn; 
+	
+	@FindBy(xpath = "//*[@data-auid='phone1']")
+	public WebElement AddressBook_inpPhoneNumber; //19sept CR-GK 
 
 	/***************************** END XPAHTS ***********************************/
 

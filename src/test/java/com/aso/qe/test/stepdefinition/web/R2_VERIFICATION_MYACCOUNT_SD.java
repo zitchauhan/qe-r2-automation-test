@@ -66,7 +66,7 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 				else if (currentElement.equalsIgnoreCase("AddressPage_LastName_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.adr_inpLastName));
 				else if (currentElement.equalsIgnoreCase("AddressPage_PhoneNumber_txt"))
-					assertTrue(isDisplayed(r2MyAccountPo.adr_inpPhoneNumber));
+					assertTrue(isDisplayed(r2MyAccountPo.AddressBook_inpPhoneNumber));
 				else if (currentElement.equalsIgnoreCase("AddressPage_Address_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.adr_inpAddress1));
 				else if (currentElement.equalsIgnoreCase("AddressPage_ZipCode_txt"))
@@ -346,6 +346,16 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.txtTotal)); 
  				else if (currentElement.equalsIgnoreCase("Order_Taxes_Price"))
 					assertTrue(isDisplayed(r2MyAccountPo.TaxesPrice_Txt)); 
+ 				else if (currentElement.equalsIgnoreCase("Order_Number_Txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Number_Txt));
+ 				else if (currentElement.equalsIgnoreCase("Total_Items_Txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.Total_Items_Txt));
+ 				else if (currentElement.equalsIgnoreCase("Cancel_Yes_Order_Btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.Cancel_Yes_Order_Btn));
+ 				else if (currentElement.equalsIgnoreCase("Cancel_NO_Order_Btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.Cancel_NO_Order_Btn)); 
+ 
+
 
  
 
