@@ -166,7 +166,7 @@ Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal
 	When User clicks on the burger menu 
 #	#And User navigates to LThree 
 #	##And user clicks on the product card and navigates to PDP 
-    Then User searches a product "ProductName" and navigates to PDP
+    Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	When user click on checkout button 
 	Then user is navigated to checkout page 
@@ -180,7 +180,7 @@ Scenario: TC_10-Verify Apply Promotion
 	And User clicks on the burger menu 
 #	#And User navigates to LThree 
 #	Then user clicks on the product card and navigates to PDP 
-	Then User searches a product "ProductName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -194,7 +194,7 @@ Scenario: TC_11- Verify Apply Promotion / Remove Promotion
 	And User clicks on the burger menu 
 #	#And User navigates to LThree 
 #	##And user clicks on the product card and navigates to PDP 
-	Then User searches a product "ProductName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -213,7 +213,7 @@ Scenario: TC_12-Verify Update Quantity
 	And User clicks on the burger menu 
 #	#And User navigates to LThree 
 #	##And user clicks on the product card and navigates to PDP 
-	 Then User searches a product "ProductName" and navigates to PDP
+	 Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -234,7 +234,7 @@ Scenario:
 	And User clicks on the burger menu 
 #	#And User navigates to LThree 
 #	##And user clicks on the product card and navigates to PDP
-    Then User searches a product "ProductName" and navigates to PDP 
+    Then User searches a product "productName" and navigates to PDP 
 	And user click on Add to cart button 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
@@ -250,7 +250,7 @@ Scenario: TC_14-Verify Remove Item from Cart
 	Then User clicks on the burger menu 
 #	#And User navigates to LThree 
 #	Then user clicks on the product card and navigates to PDP 
-	Then User searches a product "ProductName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -266,7 +266,7 @@ Scenario: TC_15-Verify User Able to Checkout, if no errors in cart
 	And User clicks on the burger menu 
 #	#And User navigates to LThree 
 #	##And user clicks on the product card and navigates to PDP 
-    Then User searches a product "ProductName" and navigates to PDP
+    Then User searches a product "productName" and navigates to PDP
 	When user click on Add to Cart Button 
 	When user click on view cart button 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -282,7 +282,7 @@ Scenario:
 	Then User clicks on the burger menu 
 #	#And User navigates to LThree 
 #	Then user clicks on the product card and navigates to PDP 
-    Then User searches a product "ProductName" and navigates to PDP
+    Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
@@ -303,7 +303,7 @@ Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated
 	Then User clicks on the burger menu 
 #	#And User navigates to LThree 
 #	Then user clicks on the product card and navigates to PDP 
-    Then User searches a product "ProductName" and navigates to PDP
+    Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -332,7 +332,7 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated
 	Then User clicks on the burger menu 
 #	#And User navigates to LThree 
 #	Then user clicks on the product card and navigates to PDP 
-    Then User searches a product "ProductName" and navigates to PDP
+    Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -359,7 +359,7 @@ Scenario: TC_19-Verify Sign In During Checkout
 	Then User clicks on the burger menu 
 	##And User navigates to LThree 
 	#Then user clicks on the product card and navigates to PDP 
-	Then User searches a product "ProductName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -378,7 +378,7 @@ Scenario: TC_20- Verify Edit cart items from Order summary
 	And User clicks on the burger menu 
 	#And User navigates to LThree 
 	##And user clicks on the product card and navigates to PDP 
-	Then User searches a product "ProductName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -398,7 +398,7 @@ Scenario: TC_21-Verify Order Summary
 	And User clicks on the burger menu 
 	#And User navigates to LThree 
 	##And user clicks on the product card and navigates to PDP 
-	Then User searches a product "ProductName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -429,7 +429,7 @@ Scenario: TC_23- Verify all broken URL's on Cart page
 	And User clicks on the burger menu 
 	#And User navigates to LThree 
 	##And user clicks on the product card and navigates to PDP 
-	Then User searches a product "ProductName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	Then verfy all link url's status code is 200 
@@ -440,7 +440,7 @@ Scenario: TC_24- Verify all broken URL's on Checkout page
 	And User clicks on the burger menu 
 	#And User navigates to LThree 
 	##And user clicks on the product card and navigates to PDP 
-	Then User searches a product "ProductName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When user click on checkout button in Cart page 
@@ -466,7 +466,7 @@ Scenario: TC_26- Verify all broken URL's on Cart page
 	And User clicks on the burger menu 
 	#And User navigates to LThree 
 	##And user clicks on the product card and navigates to PDP 
-	Then User searches a product "ProductName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	Then verfy all Image link urls status code is 200 
@@ -477,7 +477,7 @@ Scenario: TC_27- Verify all broken URL's on Checkout page
 	And User clicks on the burger menu 
 	#And User navigates to LThree 
 	##And user clicks on the product card and navigates to PDP 
-	Then User searches a product "ProductName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When user click on checkout button in Cart page 
