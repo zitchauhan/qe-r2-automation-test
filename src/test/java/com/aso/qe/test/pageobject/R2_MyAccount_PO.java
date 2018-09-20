@@ -745,9 +745,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='phone1']")
 	public WebElement AddressBook_inpPhoneNumber; //19sept CR-GK 
 	
-	@FindBy(xpath = "//*[.='Print a Receipt']")
-	public WebElement Order_Print_Receipt;
-	
+//	@FindBy(xpath = "//*[.='Print a Receipt']")
+//	public WebElement Order_Print_Receipt;
+//	
 	/*@FindBy(xpath = "//*[@data-auid='phone1']")
 	public WebElement Order_Print_Receipt;
 	
