@@ -1,8 +1,7 @@
 Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios 
     
 @R2_Web @R2_WAST-01 @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040@CR-SK @AutomationSanityR2 
-Scenario: 
-	TC_1- Verify Login Logout  
+Scenario: TC_1- Verify Login Logout  
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header
 	And user enter the valid emailaddress "SanityEmailAddress" 
@@ -54,7 +53,7 @@ Scenario: TC_3- Verify User is able to create an account
 	
 @R2_Web @R2_WAST-04 @P-High @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418 @CR-SK
 @AutomationSanityR2 
-Scenario: TC_5- Verify User is able to Add Gift Card
+Scenario: TC_4- Verify User is able to Add Gift Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user logs in as "RawUser" 
@@ -73,7 +72,7 @@ Scenario: TC_5- Verify User is able to Add Gift Card
 	And there should be a Remove link with cross icon 
 
 @R2_Web @R2_WAST-05  @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK @AutomationSanityR2
-Scenario: TC_7-Verify Add Credit Card and added as a Default Card
+Scenario: TC_5-Verify Add Credit Card and added as a Default Card
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
 	And user enter the valid emailaddress "EmailAddress" 
@@ -113,10 +112,10 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	
 	#===========unit testing pending as search is not working
 @R2_Web  @R2_WAST-06 @P-High @CR-SK @AutomationSanityR2 
-Scenario: TC_8-Verify and Search an item and  navigate to  View Cart
+Scenario: TC_6-Verify and Search an item and  navigate to  View Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
-    When User searches a product "SanitySKUNumber" and navigates to PDP
+    When User searches a product "productName" and navigates to PDP
 	And user verifies the entered SKU id 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -124,10 +123,10 @@ Scenario: TC_8-Verify and Search an item and  navigate to  View Cart
 	 
 	#===========unit testing pending as search is not working
 @R2_Web @R2_WAST-07  @P-High @CR-SK @AutomationSanityR2 
-Scenario: TC_9-Verify and Search - Checkout from ATC Modal
+Scenario: TC_7-Verify and Search - Checkout from ATC Modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
-	When User searches a product "SanitySKUNumber" and navigates to PDP
+	When User searches a product "productName" and navigates to PDP
 	And user verifies the entered SKU id 
 	And user click on Add to Cart Button  
 	When user click on checkout button 
@@ -135,7 +134,7 @@ Scenario: TC_9-Verify and Search - Checkout from ATC Modal
 	
 	
 @R2_Web @R2_WAST-08 @AutomationSanityR2 @CR-SK 
-Scenario: TC_10-Verify Cat Nav - View Cart
+Scenario: TC_8-Verify Cat Nav - View Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
@@ -146,7 +145,7 @@ Scenario: TC_10-Verify Cat Nav - View Cart
 	
 	
 @R2_Web @R2_WAST-09 @AutomationSanityR2 @CR-SK 
-Scenario: TC_11-Verify Cat Nav - Checkout from ATC Modal
+Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
@@ -158,8 +157,7 @@ Scenario: TC_11-Verify Cat Nav - Checkout from ATC Modal
 	
 @R2_Web @R2_WAST-10 @P-High @C-Checkout @KER-3166 @ZYP_CART_K3166-9604 @CR-DPK
 @AutomationSanityR2 
-Scenario:
-TC_12-Verify Apply Promotion
+Scenario: TC_10-Verify Apply Promotion
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
@@ -172,8 +170,7 @@ TC_12-Verify Apply Promotion
 		
 @R2_Web @R2_WAST-11 @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8166 @CR-AKK
 @AutomationSanityR2 
-Scenario:
-TC_13- Verify Apply Promotion / Remove Promotion
+Scenario: TC_11- Verify Apply Promotion / Remove Promotion
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  User navigates to L2 Mens clothing 
 	Then  user clicks on one of the subcategory and navigates to LTwo 
@@ -192,7 +189,7 @@ TC_13- Verify Apply Promotion / Remove Promotion
 	
 @R2_Web @R2_WAST-12 @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @CR-AKK
 @AutomationSanityR2 
-Scenario: TC_14-Verify Update Quantity
+Scenario: TC_12-Verify Update Quantity
 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  User navigates to L2 Mens clothing 
@@ -212,8 +209,7 @@ Scenario: TC_14-Verify Update Quantity
 	
 @R2_Web @R2_WAST-13 @P-Highest @C-Cart @KER-2939 @ZYP_CART_K2939-9615 @CR-AKK
 @AutomationSanityR2 
-Scenario:
-TC_15-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
+Scenario: TC_13-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo  
@@ -230,7 +226,7 @@ TC_15-To Verify Image for selected SKU is be displayed on product blade for mult
 	
 @R2_Web @R2_WAST-14 @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-AKK
 @AutomationSanityR2 
-Scenario: TC_16-Verify Remove Item from Cart
+Scenario: TC_14-Verify Remove Item from Cart
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  User navigates to L2 Mens clothing 
 	Then  user clicks on one of the subcategory and navigates to LTwo 
@@ -245,7 +241,7 @@ Scenario: TC_16-Verify Remove Item from Cart
 	
 @R2_Web @R2_WAST-15 @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8168 @CR-AKK
 @AutomationSanityR2 
-Scenario: TC_17-Verify User Able to Checkout, if no errors in cart
+Scenario: TC_15-Verify User Able to Checkout, if no errors in cart
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  User navigates to L2 Mens clothing 
 	Then  user clicks on one of the subcategory and navigates to LTwo 
@@ -258,7 +254,7 @@ Scenario: TC_17-Verify User Able to Checkout, if no errors in cart
 	And  user click on checkout button in Cart page 
 		
 @R2_Web  @R2_WAST-16 @P-Highest @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8177 @CR-DPK @AutomationSanityR2 
-Scenario: TC_18-Verify Add Shipping Address
+Scenario: TC_16-Verify Add Shipping Address
  	Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Mens clothing
    Then user clicks on one of the subcategory and navigates to LTwo
@@ -266,7 +262,6 @@ Scenario: TC_18-Verify Add Shipping Address
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user navigate to Cart page
-	And selects Add a New Shipping Address in address drop-down in shipping address drawer 
 	Then user click on checkout button in Cart page
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
@@ -278,7 +273,7 @@ Scenario: TC_18-Verify Add Shipping Address
 		
 @R2_Web @R2_WAST-17  @P-High @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8629 @CR-DPK
 @AutomationSanityR2 
-Scenario: TC_20-Verify Payment - Add Gift Card - Unathenticated
+Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated
 
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	And User navigates to L2 Mens clothing
@@ -302,7 +297,7 @@ Scenario: TC_20-Verify Payment - Add Gift Card - Unathenticated
 	
 @R2_Web @R2_WAST-18 @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954 @CR-GK
 @AutomationSanityR2 
-Scenario: TC_21-Verify Payment - Add Gift Card - Athenticated
+Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated
 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -334,7 +329,7 @@ Scenario: TC_21-Verify Payment - Add Gift Card - Athenticated
 @R2_Web @R2_WAST-19 @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147
 @CR-RK 
 @AutomationSanityR2 
-Scenario: TC_22-Verify Sign In During Checkout
+Scenario: TC_19-Verify Sign In During Checkout
  
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
@@ -353,7 +348,7 @@ Scenario: TC_22-Verify Sign In During Checkout
 @R2_Web @R2_WAST-20 @P-Highest @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100
 @CR-AKK 
 @AutomationSanityR2 
-Scenario: TC_23- Verify Edit cart items from Order summary 
+Scenario: TC_20- Verify Edit cart items from Order summary 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  User navigates to L2 Mens clothing 
 	And  user clicks on one of the subcategory and navigates to LTwo 
@@ -371,7 +366,7 @@ Scenario: TC_23- Verify Edit cart items from Order summary
 @R2_Web @R2_WAST-21 @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098
 @CR-AKK 
 @AutomationSanityR2 
-Scenario: TC_24-Verify Order Summary
+Scenario: TC_21-Verify Order Summary
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  User navigates to L2 Mens clothing 
 	And  user clicks on one of the subcategory and navigates to LTwo 
@@ -390,8 +385,7 @@ Scenario: TC_24-Verify Order Summary
 	
 @R2_Web @R2_WAST-22 @P-Highest @C-Cart @KER-2872 @ZYP_CART_K2872-8710 @CR-DPK 
 @AutomationSanityR2 
-Scenario: 
-	TC_25-Verify Find a store
+Scenario: TC_22-Verify Find a store
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
 	Then user enter "zipCode" in Find a Store Model 
@@ -399,7 +393,7 @@ Scenario:
 	Then user verify the results based on entering zipcode 
 	
 @R2_WAST-23 @BrokenLink @Broken @TC_BL_06
-Scenario: TC_26- Verify all broken URL's on Cart page 
+Scenario: TC_23- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
@@ -409,7 +403,7 @@ Scenario: TC_26- Verify all broken URL's on Cart page
 	Then verfy all link url's status code is 200 
 	
 @R2_WAST-24 @BrokenLink @Broken @TC_BL_07
-Scenario: TC_27- Verify all broken URL's on Checkout page 
+Scenario: TC_24- Verify all broken URL's on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
@@ -421,7 +415,7 @@ Scenario: TC_27- Verify all broken URL's on Checkout page
 	Then verfy all link url's status code is 200 
 	
 @R2_WAST-25 @BrokenLink @Broken @TC_BL_08
-Scenario: TC_28- Verify all broken URL's on MyAccount page 
+Scenario: TC_25- Verify all broken URL's on MyAccount page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
@@ -430,7 +424,7 @@ Scenario: TC_28- Verify all broken URL's on MyAccount page
 	Then user click on My Account and navigate to payment 
 	Then verfy all link url's status code is 200 
 
-	@R2_WAST-23 @BrokenLink @Broken @TC_BIM_06
+	@R2_WAST-26 @BrokenLink @Broken @TC_BIM_06
 Scenario: TC_26- Verify all broken Images on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
@@ -440,7 +434,7 @@ Scenario: TC_26- Verify all broken Images on Cart page
 	And user will click on View Cart button 
 	Then verfy all Image link urls status code is 200
 	
-@R2_WAST-24 @BrokenLink @Broken @TC_BIM_07
+@R2_WAST-27 @BrokenLink @Broken @TC_BIM_07
 Scenario: TC_27- Verify all broken Images on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
@@ -452,7 +446,7 @@ Scenario: TC_27- Verify all broken Images on Checkout page
 	Then user is navigated to checkout page 
 	Then verfy all Image link urls status code is 200 
 	
-@R2_WAST-25 @BrokenLink @Broken @TC_BIM_08
+@R2_WAST-28 @BrokenLink @Broken @TC_BIM_08
 Scenario: TC_28- Verify all broken Images on MyAccount page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

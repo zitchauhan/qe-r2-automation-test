@@ -2,8 +2,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
 
 @R2_Mobile @R2_WAST-01 @P-High @C-MyAccount @KER-4011 
 @ZYP_MYACCOUNT_K4011-10040 @CR-SK @AutomationSanityR2 
-Scenario: 
-	TC_1- Verify Login Logout  
+Scenario: TC_1- Verify Login Logout  
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on the burger menu 
 	When user clicks on SignIn link from global header 
@@ -59,7 +58,7 @@ Scenario: TC_3- Verify User is able to create an account
 		
 @R2_Mobile @R2_MAST-04 @P-High @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418_M 
 @CR-SK @AutomationSanityR2 
-Scenario: TC_5- Verify User is able to Add Gift Card 
+Scenario: TC_4- Verify User is able to Add Gift Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -82,7 +81,7 @@ Scenario: TC_5- Verify User is able to Add Gift Card
 	
 @R2_Mobile @R2_WAST-05 @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696
 @CR-DPK @AutomationSanityR2 
-Scenario: TC_7-Verify Add Credit Card and added as a Default Card 
+Scenario: TC_5-Verify Add Credit Card and added as a Default Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -115,7 +114,7 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	Then User verifies that city and State are populated automatically 
 	Then click on Add button on credit card page 
 	And User clicks on ASO Logo and should be navigated to Home Page 
-	And User searches a product "SanitySKUNumber" and navigates to PDP 
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -126,10 +125,10 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	
 	#===========unit testing pending as search is not working
 @R2_Mobile @R2_MAST-06 @P-High @CR-SK @AutomationSanityR2 
-Scenario: TC_8-Verify and Search an item and  navigate to  View Cart 
+Scenario: TC_6-Verify and Search an item and  navigate to  View Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
-	When User searches a product "SanitySKUNumber" and navigates to PDP 
+	When User searches a product "productName" and navigates to PDP 
 	#	And User click on search icon 
 	And user verifies the entered SKU id 
 	And user click on Add to Cart Button 
@@ -140,7 +139,7 @@ Scenario: TC_8-Verify and Search an item and  navigate to  View Cart
 	
 	#===========unit testing pending as search is not working
 @R2_Mobile @R2_MAST-07 @P-High @CR-SK @AutomationSanityR2 
-Scenario: TC_9-Verify and Search - Checkout from ATC Modal 
+Scenario: TC_7-Verify and Search - Checkout from ATC Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User clicks on the burger menu 
 	And User navigates to LThree 
@@ -150,7 +149,7 @@ Scenario: TC_9-Verify and Search - Checkout from ATC Modal
 	Then user is navigated to checkout page 
 	
 @R2_Mobile @R2_MAST-08 @CR-SK @AutomationSanityR2 
-Scenario: TC_10-Verify Cat Nav - View Cart 
+Scenario: TC_8-Verify Cat Nav - View Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User clicks on the burger menu 
 	And User navigates to LThree 
@@ -161,7 +160,7 @@ Scenario: TC_10-Verify Cat Nav - View Cart
 	
 	
 @R2_Mobile @R2_MAST-09 @CR-SK @AutomationSanityR2 
-Scenario: TC_11-Verify Cat Nav - Checkout from ATC Modal 
+Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User clicks on the burger menu 
 	And User navigates to LThree 
@@ -174,8 +173,7 @@ Scenario: TC_11-Verify Cat Nav - Checkout from ATC Modal
 	
 @R2_Mobile @R2_MAST-10 @P-High @C-Cart @KER-3166 @ZYP_K3166-9604_M @CR-DP 
 @AutomationSanityR2 
-Scenario: 
-	TC_12-Verify Apply Promotion
+Scenario: TC_10-Verify Apply Promotion
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to LThree 
@@ -188,8 +186,7 @@ Scenario:
 	
 @R2_Mobile @R2_MAST-11 @P-Highest @C-Cart @KER-3127 @ZYP_K3127-8166_M @CR-AKK 
 @AutomationSanityR2 
-Scenario: 
-	TC_13- Verify Apply Promotion / Remove Promotion
+Scenario: TC_11- Verify Apply Promotion / Remove Promotion
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to LThree 
@@ -207,7 +204,7 @@ Scenario:
 	
 @R2_Mobile @R2_MAST-12 @P-Highest @C-Cart @KER-2942 @ZYP_K2942-8044_M @CR-AKK 
 @AutomationSanityR2 
-Scenario: TC_14-Verify Update Quantity 
+Scenario: TC_12-Verify Update Quantity 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to LThree 
@@ -227,7 +224,7 @@ Scenario: TC_14-Verify Update Quantity
 @R2_Mobile @R2_MAST-13 @P-Highest @C-Cart @KER-2939 @ZYP-K2939_9615_M @CR-AKK 
 @AutomationSanityR2 
 Scenario: 
-	TC_15-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
+	TC_13-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to LThree 
@@ -242,7 +239,7 @@ Scenario:
 	
 @R2_Mobile @R2_MAST-14 @P-Highest @C-Cart @KER-2942 @ZYP_K2942-8047_M @CR-DP 
 @AutomationSanityR2 
-Scenario: TC_16-Verify Remove Item from Cart 
+Scenario: TC_14-Verify Remove Item from Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User navigates to LThree 
@@ -257,7 +254,7 @@ Scenario: TC_16-Verify Remove Item from Cart
 		
 @R2_Mobile @R2_MAST-15 @P-Highest @C-Cart @KER-3127 @ZYP_K3127-8168_M @CR-AKK 
 @AutomationSanityR2 
-Scenario: TC_17-Verify User Able to Checkout, if no errors in cart 
+Scenario: TC_15-Verify User Able to Checkout, if no errors in cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to LThree 
@@ -272,7 +269,7 @@ Scenario: TC_17-Verify User Able to Checkout, if no errors in cart
 @R2_Mobile @R2_MAST-16 @P-Highest @C-Checkout @KER-2934 
 @ZYP_CHECKOUT_K2934-8177_M @CR-DPK @AutomationSanityR2 
 Scenario: 
-	TC_18-Verify Add Shipping Address
+	TC_16-Verify Add Shipping Address
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User navigates to LThree 
@@ -293,7 +290,7 @@ Scenario:
 	
 @R2_Mobile @R2_MAST-17 @P-High @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8629_M 
 @CR-DPK @AutomationSanityR2 
-Scenario: TC_20-Verify Payment - Add Gift Card - Unathenticated 
+Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User navigates to LThree 
@@ -316,7 +313,7 @@ Scenario: TC_20-Verify Payment - Add Gift Card - Unathenticated
 	
 @R2_Mobile @R2_MAST-18 @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954_M 
 @CR-GK @AutomationSanityR2 
-Scenario: TC_21-Verify Payment - Add Gift Card - Athenticated 
+Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user should able to click on Signin button 
@@ -347,7 +344,7 @@ Scenario: TC_21-Verify Payment - Add Gift Card - Athenticated
 @R2_Mobile @R2_MAST-19 @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147_M 
 @CR-RK 
 @AutomationSanityR2 
-Scenario: TC_22-Verify Sign In During Checkout 
+Scenario: TC_19-Verify Sign In During Checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User navigates to LThree 
@@ -365,7 +362,7 @@ Scenario: TC_22-Verify Sign In During Checkout
 @R2_Mobile @R2_MAST-20 @P-Highest @C-Checkout @KER-2926 
 @ZYP_CHECKOUT_K2926-8100_M @CR-AKK 
 @AutomationSanityR2 
-Scenario: TC_23- Verify Edit cart items from Order summary 
+Scenario: TC_20- Verify Edit cart items from Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to LThree 
@@ -384,7 +381,7 @@ Scenario: TC_23- Verify Edit cart items from Order summary
 @R2_Mobile @R2_MAST-21 @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098_M 
 @CR-AKK 
 @AutomationSanityR2 
-Scenario: TC_24-Verify Order Summary 
+Scenario: TC_21-Verify Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to LThree 
@@ -404,7 +401,7 @@ Scenario: TC_24-Verify Order Summary
 @CR-DPK 
 @AutomationSanityR2 
 Scenario: 
-	TC_25-Verify Find a store 
+	TC_22-Verify Find a store 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then User should be able to click on Find Store 
@@ -414,7 +411,7 @@ Scenario:
 	
 	
 @R2_MAST-23 @BrokenLink @Broken @TC_BL_09 
-Scenario: TC_26- Verify all broken URL's on Cart page 
+Scenario: TC_23- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to LThree 
@@ -424,7 +421,7 @@ Scenario: TC_26- Verify all broken URL's on Cart page
 	Then verfy all link url's status code is 200 
 	
 @R2_MAST-24 @BrokenLink @Broken @TC_BL_10 
-Scenario: TC_27- Verify all broken URL's on Checkout page 
+Scenario: TC_24- Verify all broken URL's on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to LThree 
@@ -436,7 +433,7 @@ Scenario: TC_27- Verify all broken URL's on Checkout page
 	Then verfy all link url's status code is 200 
 	
 @R2_MAST-25 @BrokenLink @Broken @TC_BL_11 
-Scenario: TC_28- Verify all broken URL's on MyAccount page 
+Scenario: TC_25- Verify all broken URL's on MyAccount page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -448,7 +445,7 @@ Scenario: TC_28- Verify all broken URL's on MyAccount page
 	Then verfy all link url's status code is 200 
 	
 	
-@R2_MAST-23 @BrokenLink @Broken @TC_BIM_09 
+@R2_MAST-26 @BrokenLink @Broken @TC_BIM_09 
 Scenario: TC_26- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -458,7 +455,7 @@ Scenario: TC_26- Verify all broken URL's on Cart page
 	And user will click on View Cart button 
 	Then verfy all Image link urls status code is 200 
 	
-@R2_MAST-24 @BrokenLink @Broken @TC_BIM_10 
+@R2_MAST-27 @BrokenLink @Broken @TC_BIM_10 
 Scenario: TC_27- Verify all broken URL's on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -470,7 +467,7 @@ Scenario: TC_27- Verify all broken URL's on Checkout page
 	Then user is navigated to checkout page 
 	Then verfy all Image link urls status code is 200 
 	
-@R2_MAST-25 @BrokenLink @Broken @TC_BIM_11 
+@R2_MAST-28 @BrokenLink @Broken @TC_BIM_11 
 Scenario: TC_28- Verify all broken URL's on MyAccount page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

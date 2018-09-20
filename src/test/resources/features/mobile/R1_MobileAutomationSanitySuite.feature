@@ -264,15 +264,11 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User navigates to L3
     Then user clicks on the product card and navigates to PDP of the product
 
-  @AutomationSanityR1 @AS1  @MAST-12
-  Scenario Outline: TC_12-Verify Search from Home Page
+ @AutomationSanityR1 @AS1  @MAST-12
+  Scenario: TC_12-Verify Search from Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box
+   Then User searches a product "SearchTerm" and navigates to PDP
     And user should be able to see the sku and item numbers for the given image
-
-    Examples: 
-      | SearchTerm |
-      | Columbia Sportswear Men's Dorado CVO PFG Boat Shoes |
  
   @AutomationSanityR1 @AS1 @MAST-13
   Scenario: TC_13-Verify Search Result Page(Facets, Sort and Pagination)
