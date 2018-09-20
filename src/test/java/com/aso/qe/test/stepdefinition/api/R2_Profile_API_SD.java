@@ -209,8 +209,8 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ loadProps.getTestDataProperty(requestPath)+".json");
 		postRequestStr = postRequestStr.replace("REPLACE_EMAILID", regEmailId)
-				.replace("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword")
-						.replace("REPLACE_NEWPASSWORD", "Ravi@005@"));
+				.replaceAll("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword")
+						.replaceAll("REPLACE_NEWPASSWORD", "Ravi@005@"));
 		initiateRestPostAPICallWithoutCookiesAndReqStr(endpoints, postRequestStr);
 	}
 
