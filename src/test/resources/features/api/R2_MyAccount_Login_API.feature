@@ -21,6 +21,14 @@ Feature: Verify MyAccount Login API endpoint service
     Then Verify response status code as 201
     And validate jsonSchema "RegistrationSchema"
     Then Validated response details of "identity.userId"
+    
+    @All-R2 @C1-MyAccount @C2-ChangePassword @api @R2_AAST-07 @CR-RT @ZYP_MyAccount_ChangePassword_13111
+  Scenario: TC_8 - Verify -Profile Change Password status code, JSON response validation and JSON schema validation
+    Given "loginurl" with "ChangePasswordLoginRequest" endpoint for Change Password login authentication
+    Given "ChangePasswordUrl" with "ChangePasswordRequest-FirstTime" endpoint for change password of profile
+    Then Verify response status code as 201
+    And validate jsonSchema "RegistrationSchema"
+    Then Validated response details of "identity.userId"
 
   @All-R2 @C1-MyAccount @C2-Login @api @R2_AAST-03 @CR-VK @ZYP_MyAccount_Login_12257
   Scenario: TC_3 - Verify Login Authentication Token Details
