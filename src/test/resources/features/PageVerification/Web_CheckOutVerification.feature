@@ -34,6 +34,8 @@ Scenario: Verify Checkout for Web
 		|checkout_CheckoutHeader_txt								|
 		|checkout_ShippingInformation_Header_txt					|
 		|checkout_ShippingAddress_txt								|
+		|checkout_ShippingAddress_AVSModelSuggestedAddress          |
+		|checkout_ShippingAddress_AVSModelSelectAddress_btn         | 
 		
 		|#%%%%%%%  In-Store Pickup DropDown %%%%%%%%%% AKK|
 		|MePickUp_Drpdwn|
@@ -108,7 +110,9 @@ Scenario: Verify Checkout for Web
 		|PriceShippingItemAvailable_Txt|
 		|EditMyCart_Link|
 		|DetailOrderSummary_txt|
-		
+		|txtOrderSuccesfullStatus|
+		|OrderConfirmationPage_OrderNumber|
+		|OrderConfirmationPage_OrderNumber_txt| 
 		
 		|# Verify following elements in Checkout page "Payment"|
 		|#%%%%%  Payment Method %%%%%%%%%%% |
@@ -125,6 +129,7 @@ Scenario: Verify Checkout for Web
 		|PleaseEnteRaValidSecurityCode_Txt|
 		|ChooseCreditcard_Dd|
 		|AddNewCreditCard_Txt|
+		|Checkout_CreditCardPay_ImgLogo| 
 		|#%%%%%  Gift Card  %%%%%%%%%%|
 		|Plus_GiftCard|
 		|Hide_GiftCard|

@@ -1,7 +1,6 @@
 package com.aso.qe.test.pageobject;
 
-//import static org.junit.Assert.assertTrue;
-import static org.testng.Assert.assertTrue;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
@@ -443,7 +442,6 @@ public class R2_Cart_PO extends CommonActionHelper {
 		emptyCart();
 	
 	}
-		
 	public void compareCartEmptyTxt(String exceptedTxt) throws Exception {
 		String actualCartTxt = getText(cartEmptyTxt);
 		logger.debug("actualCartTxt:: " + actualCartTxt);
@@ -658,7 +656,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="(//*[text()='Size'])[1]/following::*[1]")public WebElement txtPrdSize;//txtPrdSize  txt_size input in size
 	@FindBy(xpath="//*[@data-auid='crt_rdOpt_0'] | //span[text()='Ship To Me']")public WebElement rbShipToMe;
 	@FindBy(xpath="(//*[@data-auid='crt_rdOpt_1'])[1] | //span[text()='In Store Pickup – FREE']")public WebElement rbInStorePickUp;
-	@FindBy(xpath="//*[text()='Ship To Store']") public WebElement ShipToStore_radioBtn;
+	@FindBy(xpath="//*[text()='Ship To Store'] | //*[text()='Special Order Ships to Store']") public WebElement ShipToStore_radioBtn;
 	@FindBy(xpath="//input[@data-auid='crt_inputQty']")public WebElement input_Quantity;
 	@FindBy(xpath="(//*[@data-auid='crt_qtyField'])[1]")public WebElement txt_Quantity;
 	@FindBy(xpath="(//*[@data-auid='tooltipcrt_rdTooltip_0'])[1]") public WebElement iconTolltip;// toolTip
