@@ -88,40 +88,40 @@ Scenario: TC_5-Verify Add Credit Card and added as a Default Card
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User clicks on the burger menu 
-	When user click on My Account and navigate to payment 
-	And user deletes all existing credit card 
-	And user clicks on Add New Credit Card button 
-	And User enters Credit Card number "CreditCardNumber" 
-	And User enters expiration date "ExpDate" 
-	And User enters CVV number "CVV" 
-	Then user enter First Name field "UpdateFirstName" 
-	And user enter Last Name field "UpdateLastName" 
-	And user enter Address field "UpdateAddress" 
-	And user enter ZipCode field "UpdateZipcode" 
-	And user enter PhoneNumber field "UpdatePhoneNumber" 
-	Then User verifies that city and State are populated automatically 
-	Then click on Add button on credit card page 
-	And click on Add another Credit Card button 
-	And User enters Credit Card number "SecondCreditCardNumber" 
-	And User enters expiration date "ExpDate" 
-	And User enters CVV number "CVV" 
-	Then user enter First Name field "UpdateFirstName" 
-	And user enter Last Name field "UpdateLastName" 
-	And user enter Address field "UpdateAddress" 
-	And user enter ZipCode field "UpdateZipcode" 
-	And user enter PhoneNumber field "UpdatePhoneNumber" 
-	Then User verifies that city and State are populated automatically 
-	Then click on Add button on credit card page 
+#	And User clicks on the burger menu 
+#	When user click on My Account and navigate to payment 
+#	And user deletes all existing credit card 
+#	And user clicks on Add New Credit Card button 
+#	And User enters Credit Card number "CreditCardNumber" 
+#	And User enters expiration date "ExpDate" 
+#	And User enters CVV number "CVV" 
+#	Then user enter First Name field "UpdateFirstName" 
+#	And user enter Last Name field "UpdateLastName" 
+#	And user enter Address field "UpdateAddress" 
+#	And user enter ZipCode field "UpdateZipcode" 
+#	And user enter PhoneNumber field "UpdatePhoneNumber" 
+#	Then User verifies that city and State are populated automatically 
+#	Then click on Add button on credit card page 
+#	And click on Add another Credit Card button 
+#	And User enters Credit Card number "SecondCreditCardNumber" 
+#	And User enters expiration date "ExpDate" 
+#	And User enters CVV number "CVV" 
+#	Then user enter First Name field "UpdateFirstName" 
+#	And user enter Last Name field "UpdateLastName" 
+#	And user enter Address field "UpdateAddress" 
+#	And user enter ZipCode field "UpdateZipcode" 
+#	And user enter PhoneNumber field "UpdatePhoneNumber" 
+#	Then User verifies that city and State are populated automatically 
+#	Then click on Add button on credit card page 
 	And User clicks on ASO Logo and should be navigated to Home Page 
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button and navigates to Checkout page 
+	And user click on checkout button
+#	And user is navigated to Add to cart Notification popup 
+#	And user will click on View Cart button 
+#	And user navigate to Cart page 
+#	And user will click on Checkout button and navigates to Checkout page 
 	Then User verifies that in Payment section credit card "CreditCardNumber" is pre-populated by default 
-	
 	
 	#===========unit testing pending as search is not working
 @R2_Mobile @R2_MAST-06 @P-High @CR-SK @AutomationSanityR2 
@@ -154,6 +154,7 @@ Scenario: TC_8-Verify Cat Nav - View Cart
 	When User clicks on the burger menu 
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
+	
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
@@ -163,8 +164,9 @@ Scenario: TC_8-Verify Cat Nav - View Cart
 Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+#	#And User navigates to LThree 
+#	##And user clicks on the product card and navigates to PDP 
+    Then User searches a product "ProductName" and navigates to PDP
 	And user click on Add to Cart Button 
 	When user click on checkout button 
 	Then user is navigated to checkout page 
@@ -176,8 +178,9 @@ Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal
 Scenario: TC_10-Verify Apply Promotion
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
-	Then user clicks on the product card and navigates to PDP 
+#	#And User navigates to LThree 
+#	Then user clicks on the product card and navigates to PDP 
+	Then User searches a product "ProductName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -189,8 +192,9 @@ Scenario: TC_10-Verify Apply Promotion
 Scenario: TC_11- Verify Apply Promotion / Remove Promotion
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+#	#And User navigates to LThree 
+#	##And user clicks on the product card and navigates to PDP 
+	Then User searches a product "ProductName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -207,8 +211,9 @@ Scenario: TC_11- Verify Apply Promotion / Remove Promotion
 Scenario: TC_12-Verify Update Quantity 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+#	#And User navigates to LThree 
+#	##And user clicks on the product card and navigates to PDP 
+	 Then User searches a product "ProductName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -227,8 +232,9 @@ Scenario:
 	TC_13-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+#	#And User navigates to LThree 
+#	##And user clicks on the product card and navigates to PDP
+    Then User searches a product "ProductName" and navigates to PDP 
 	And user click on Add to cart button 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
@@ -242,8 +248,9 @@ Scenario:
 Scenario: TC_14-Verify Remove Item from Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
-	Then user clicks on the product card and navigates to PDP 
+#	#And User navigates to LThree 
+#	Then user clicks on the product card and navigates to PDP 
+	Then User searches a product "ProductName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -257,8 +264,9 @@ Scenario: TC_14-Verify Remove Item from Cart
 Scenario: TC_15-Verify User Able to Checkout, if no errors in cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+#	#And User navigates to LThree 
+#	##And user clicks on the product card and navigates to PDP 
+    Then User searches a product "ProductName" and navigates to PDP
 	When user click on Add to Cart Button 
 	When user click on view cart button 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -272,12 +280,12 @@ Scenario:
 	TC_16-Verify Add Shipping Address
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
-	Then user clicks on the product card and navigates to PDP 
+#	#And User navigates to LThree 
+#	Then user clicks on the product card and navigates to PDP 
+    Then User searches a product "ProductName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
-	And selects Add a New Shipping Address in address drop-down in shipping address drawer 
 	Then user click on checkout button in Cart page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
@@ -293,8 +301,9 @@ Scenario:
 Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
-	Then user clicks on the product card and navigates to PDP 
+#	#And User navigates to LThree 
+#	Then user clicks on the product card and navigates to PDP 
+    Then User searches a product "ProductName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -321,8 +330,9 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
-	Then user clicks on the product card and navigates to PDP 
+#	#And User navigates to LThree 
+#	Then user clicks on the product card and navigates to PDP 
+    Then User searches a product "ProductName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -347,8 +357,9 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated
 Scenario: TC_19-Verify Sign In During Checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
-	Then user clicks on the product card and navigates to PDP 
+	##And User navigates to LThree 
+	#Then user clicks on the product card and navigates to PDP 
+	Then User searches a product "ProductName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -365,8 +376,9 @@ Scenario: TC_19-Verify Sign In During Checkout
 Scenario: TC_20- Verify Edit cart items from Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+	#And User navigates to LThree 
+	##And user clicks on the product card and navigates to PDP 
+	Then User searches a product "ProductName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -384,8 +396,9 @@ Scenario: TC_20- Verify Edit cart items from Order summary
 Scenario: TC_21-Verify Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+	#And User navigates to LThree 
+	##And user clicks on the product card and navigates to PDP 
+	Then User searches a product "ProductName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -414,8 +427,9 @@ Scenario:
 Scenario: TC_23- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+	#And User navigates to LThree 
+	##And user clicks on the product card and navigates to PDP 
+	Then User searches a product "ProductName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	Then verfy all link url's status code is 200 
@@ -424,8 +438,9 @@ Scenario: TC_23- Verify all broken URL's on Cart page
 Scenario: TC_24- Verify all broken URL's on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+	#And User navigates to LThree 
+	##And user clicks on the product card and navigates to PDP 
+	Then User searches a product "ProductName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When user click on checkout button in Cart page 
@@ -449,8 +464,9 @@ Scenario: TC_25- Verify all broken URL's on MyAccount page
 Scenario: TC_26- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+	#And User navigates to LThree 
+	##And user clicks on the product card and navigates to PDP 
+	Then User searches a product "ProductName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	Then verfy all Image link urls status code is 200 
@@ -459,8 +475,9 @@ Scenario: TC_26- Verify all broken URL's on Cart page
 Scenario: TC_27- Verify all broken URL's on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+	#And User navigates to LThree 
+	##And user clicks on the product card and navigates to PDP 
+	Then User searches a product "ProductName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When user click on checkout button in Cart page 
