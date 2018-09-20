@@ -309,6 +309,17 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.WhishList_Remove_Lnk));
 				else if (currentElement.equalsIgnoreCase("WhishList_Remove_Lnk_M"))
 					assertTrue(isDisplayed(r2MyAccountPo.WhishList_Remove_Lnk_M)); 
+                else if (currentElement.equalsIgnoreCase("WishList_Product_Img"))
+                    assertTrue(isDisplayed(r2MyAccountPo.WishList_Product_Img)); 
+				else if (currentElement.equalsIgnoreCase("WishList_Product_Eyebrow"))
+					assertTrue(isDisplayed(r2MyAccountPo.WishList_Product_Eyebrow));
+				else if (currentElement.equalsIgnoreCase("WishList_Product_Tittle"))
+					assertTrue(isDisplayed(r2MyAccountPo.WishList_Product_Tittle));
+				else if (currentElement.equalsIgnoreCase("WishList_Product_Review"))
+					assertTrue(isDisplayed(r2MyAccountPo.WishList_Product_Review));
+				else if (currentElement.equalsIgnoreCase("WishList_Product_Price"))
+		            assertTrue(isDisplayed(r2MyAccountPo.WishList_Product_Price));
+
  
 
  
@@ -354,10 +365,10 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.Cancel_Yes_Order_Btn));
  				else if (currentElement.equalsIgnoreCase("Cancel_NO_Order_Btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.Cancel_NO_Order_Btn)); 
- 
-
-
- 
+ 				else if (currentElement.equalsIgnoreCase("Order_Payment_txt"))
+                    assertTrue(isDisplayed(r2MyAccountPo.Order_Payment_txt));
+ 				else if (currentElement.equalsIgnoreCase("Order_Payment_Section"))
+                    assertTrue(isDisplayed(r2MyAccountPo.Order_Payment_Section));
 
 
 				// ===============================================================================

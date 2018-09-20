@@ -535,7 +535,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	// End KER-2940 CR-DPK
 
 	// Start KER-2927 CR-SK
-	public float getEstimatedTaxOnCartPage() {
+	public float getEstimatedTaxOnCartPage() throws InterruptedException {
+		Thread.sleep(5000);
 		String taxDisplayed = getText(txtEstimatedTaxesCart);// txtEstimatedTax
 		taxDisplayed = taxDisplayed.replace("$", "");
 		return Float.parseFloat(taxDisplayed);

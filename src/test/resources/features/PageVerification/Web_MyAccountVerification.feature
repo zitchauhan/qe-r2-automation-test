@@ -145,9 +145,11 @@ Scenario: Verify MyAccount
 		|Share_Wishlist_btn												|
 		|Cancel_btn														|
 		|WhishList_Remove_Lnk                       					|
-		
-		
-		
+		|WishList_Product_Img											|
+        |WishList_Product_Eyebrow										|
+        |WishList_Product_Tittle										|
+        |WishList_Product_Review										|
+        |WishList_Product_Price											|
 		
 		|#Verify following elements in order section|
 		|OrderPage_Order_lnk						|
@@ -162,12 +164,15 @@ Scenario: Verify MyAccount
 		|Order_View_Details_Btn                     |
 		|Order_Back_To_Order_Lnk                    |
 		|Order_Note_Txt                             | 
-		 |Order_OrderTotal|
-		|Order_Taxes_Price|
-		|Order_Number_Txt|
-	    |Total_Items_Txt|
-	    |Cancel_Yes_Order_Btn|
-	    |Cancel_NO_Order_Btn| 
+		 |Order_OrderTotal							|
+		|Order_Taxes_Price							|
+		|Order_Number_Txt							|
+	    |Total_Items_Txt							|
+	    |Cancel_Yes_Order_Btn						|
+	    |Cancel_NO_Order_Btn						| 
+	    |Order_Payment_txt							|
+        |Order_Payment_Section						|
+	    
  
 		
  
