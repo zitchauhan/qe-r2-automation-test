@@ -91,11 +91,11 @@ public class R1_SIT_PO extends CommonActionHelper{
 	@FindBy(xpath="//p[@id='deleteQuestionMessage']") public WebElement txtDeletesmsg;
 	@FindBy(xpath="//button[@id='confirmDelete']") public WebElement btnyes;
 	@FindBy(xpath="//div[@data-auid='PDP_AddToWishList']") public WebElement lnkaddtowishlist;
-	@FindBy(xpath="//button[@id='newWishListBtn']") public  WebElement btnNewWishlist;
+	@FindBy(xpath="//button[@id='newWishListBtn'] | //*[@data-auid='btnmodal_open_btn'] | //*[text()='Create a New Wish List']") public  WebElement btnNewWishlist;  //SID 19-September
 	@FindBy(xpath="//h2[@id='createWishListModalTitle']") public  WebElement tltCreatewishlist;
-	@FindBy(xpath="//input[@id='createWishListInputField']") public  WebElement txtListname;
+	@FindBy(xpath="//input[@id='createWishListInputField'] | //*[@data-auid='wish_list_name_input'] | //*[@data-auid='Wish_list_name_input']") public  WebElement txtListname;  //SID 19-September
 	@FindBy(xpath="//button[@id='add_cancel']") public  WebElement btncancel;
-	@FindBy(xpath="//input[@id='add_save']") public  WebElement btnsave;
+	@FindBy(xpath="//input[@id='add_save'] | //*[@data-auid='btnsubmit_btn']") public  WebElement btnsave;  //SID 19-September
 	@FindBy(xpath="//select[@id='wishListSelect']//*[@selected='selected']") public  WebElement txtwishlistselect; //sid 14-Aug
 	@FindBy(xpath="//*[@id='renamewishListModalTitle']") public  WebElement renameWishListModal;
 	
@@ -146,7 +146,7 @@ public class R1_SIT_PO extends CommonActionHelper{
 	
 	@FindBy(xpath = "//input[@name='logonId']")	public WebElement txtEmail;	
 	@FindBy(xpath="//h1[text()='Welcome Back!'] | //*[text()='SIGN IN']") public WebElement txtwelcomeback;
-	@FindBy(xpath="//*[text()='Forgot your password?']") public WebElement lnkforgotpwd;
+	@FindBy(xpath="//*[text()='Forgot your password?'] | //*[text()='Forgot your password ?'] ") public WebElement lnkforgotpwd;  //SID 19-September
 	@FindBy(xpath="//*[contains(text(),'Don')]") public WebElement txtdonthaveanaccount;
 	@FindBy(xpath="//a[text()='Sign Up']") public WebElement txtdonthaveanaccounttxtdonthaveanaccount;
 	

@@ -106,11 +106,25 @@ Scenario: Verify the user gets the error message on entering the password not me
 	And user navigates to profile in my account 
 	And user click on change password icon 
 	And user enters current password 
-	Then user enter the old password as new password
+	Then user enter the old password as new password 
 	And user clicks on Update button 
     Then Verify the message on the page
     |#Verify following MSG should be displayed if old and current password is same|
     |For maximum security, please enter a Password different from the previous one|
-	  
+	
+
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10185 @CR-RKA  
+	Scenario: Verify user not allowed to set the new password same as old password of 6 digits
+ Given  user launches the browser and navigates to "ASO_HOME" page 
+	And  clicks on SignIn button in home page 
+	And user logs in as "EmailAddressForChangePassword" 
+	And user navigates to profile in my account 
+	And user click on change password icon 
+	And user enters current password 
+   Then user enter the six digit password 
+   And user clicks on Update button 
+   Then Verify the message on the page
+   |#Verify following MSG is displaying|
+   |Password must be at least 8 characters long|
 	
 	

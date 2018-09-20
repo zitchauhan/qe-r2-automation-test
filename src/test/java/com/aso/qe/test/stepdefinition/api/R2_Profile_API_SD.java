@@ -16,7 +16,8 @@ import io.restassured.path.json.JsonPath;
 public class R2_Profile_API_SD extends JSONValidationUtils{
 	private static final Logger logger = Logger.getLogger(R2_Profile_API_SD.class);
 	public MiniCartJsonResponseHelper miniCartJsonResponseHelper;
-	private String url;
+	//private String url;
+	public static String regEmailId;
 
 	@Given("^\"(.*?)\" endpoint for guest identity$")
 	public void endpoint_for_guest_identity(String Guestloginurl) throws Throwable {
@@ -28,7 +29,6 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 	@Given("^\"(.*?)\" with \"(.*?)\" endpoint for login authentication$")
 	public void with_endpoint_for_login_authentication(String loginurl, String LoginRequest) throws Throwable {
 		System.setProperty("ProfileId", "");
-		logger.debug("URL::"+url);
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(loginurl);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICall(endpoints, loadProps.getTestDataProperty(LoginRequest));
@@ -38,14 +38,27 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		System.setProperty("ProfileId", profileID);
 	}
 
+	@Given("^\"(.*?)\" with \"(.*?)\" endpoint for Change Password login authentication$")
+	public void with_endpoint_for_Change_Password_login_authentication(String loginurl, String loginRequest) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(loginurl);
+		logger.debug("END Point URL:"+endpoints);
+
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ loginRequest+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_EMAILID", regEmailId)
+				.replace("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword"));
+
+		changePasswordLogInAPICall(endpoints, postRequestStr);
+	}
+
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for user registration$")
 	public void endpoint_with_for_user_registration(String RegistrationUrl, String registrationPostRequest) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(RegistrationUrl);
 		logger.debug("END Point URL:"+endpoints);
 		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ registrationPostRequest+".json");
-		logger.debug("POST Request JSON:"+postRequestStr);
-		postRequestStr = postRequestStr.replace("REPLACE_LOGONID","test"+FrameWorkHelper.getRandomAlphabetic(6).toLowerCase());
-		
+		regEmailId= "test"+FrameWorkHelper.getRandomAlphabetic(6).toLowerCase()+"@yopmail.com";
+		postRequestStr = postRequestStr.replace("REPLACE_LOGONID",regEmailId)
+				.replaceAll("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword"));
+
 		initiateRestPostAPICallWithoutCookiesAndReqStr(endpoints, postRequestStr);
 	}
 
@@ -66,7 +79,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		logger.debug("Add ID::"+ addressID);
 		System.setProperty("AddressId", addressID);
 	}
-	
+
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for getting Wishlist of a profile$")
 	public void endpoint_with_for_getting_Wishlist_of_a_profile(String Addurl, String extension) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
@@ -153,14 +166,14 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithoutCookies(endpoints, loadProps.getTestDataProperty(AddressVerificationRequest));
 	}
-	
+
 	@Given("^\"(.*?)\" with  \"(.*?)\" endpoint for Order Get GiftCard Details$")
 	public void with_endpoint_for_Get_GiftCard_Details(String url, String extension) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" and \"(.*?)\" for Profile address update of user$")
 	public void endpoint_with_and_for_Profile_address_update_of_user(String url, String extension, String storeId) throws Throwable {
@@ -171,9 +184,10 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, addressjsonObject.toJSONString());
 	}
-	
+
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" and \"(.*?)\" for MyAccount Edit Profile$")
 	public void endpoint_with_and_for_MyAccount_Edit_Profile(String url, String extension, String jsonRequestFilePath) throws Throwable {
+		httpCookies=response.getDetailedCookies();
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+extension+System.getProperty("ProfileId");
 		logger.debug("END Point URL:"+endpoints);
 		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ jsonRequestFilePath+".json");
@@ -187,15 +201,20 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICall(endpoints);
 	}
-	
+
 	@Given("^\"(.*?)\" with \"(.*?)\" endpoint for change password of profile$")
 	public void with_endpoint_for_change_password_of_profile(String changepasswordurl, String requestPath) throws Throwable {
+		//httpCookies=response.getDetailedCookies();
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(changepasswordurl);
 		logger.debug("END Point URL:"+endpoints);
-		initiateRestPostAPICallWithoutCookies(endpoints, loadProps.getTestDataProperty(requestPath));
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ loadProps.getTestDataProperty(requestPath)+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_EMAILID", regEmailId);
+		postRequestStr = postRequestStr.replaceAll("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword"));
+		postRequestStr = postRequestStr.replaceAll("REPLACE_NEWPASSWORD", "Ravi@1234");
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
 	}
 
-	
+
 	@Given("^\"(.*?)\" by \"(.*?)\" endpoint with \"(.*?)\" for Add shipping Address of Order profile$")
 	public void by_endpoint_with_for_Add_shipping_Address_of_Order_profile(String url, String extension, String requestPath) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+extension;
@@ -208,7 +227,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 				.replace("REPLACE_ORDERID", System.getProperty("OrderId"))
 				.replace("REPLACE_ADDRESS", FrameWorkHelper.getRandomAlphabetic(8))
 				;
-		
+
 		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
 	}
 }

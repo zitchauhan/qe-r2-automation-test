@@ -1,19 +1,19 @@
 Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
-
-  @AutomationSanityR1 @AS1 @MAST-01 
-   Scenario: TC_1- Verify all broken URL's on Home page
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then verfy all link url's status code is 200
-        
-  @AutomationSanityR1 @AS1 @MAST-02 
-  Scenario: TC_2-Login and Logout
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    Then user should able to click on Signin button
-    Then user should be able to enter the signin details "Login_username" "Login_pwd"
-    Then User clicks on the burger menu
-    Then user sign out from the website
-
+#
+#  @AutomationSanityR1 @AS1 @MAST-01 
+#   Scenario: TC_1- Verify all broken URL's on Home page
+#    Given user launches the browser and navigates to "ASO_HOME" page
+#    Then verfy all link url's status code is 200
+#        
+#  @AutomationSanityR1 @AS1 @MAST-02 
+#  Scenario: TC_2-Login and Logout
+#    Given user launches the browser and navigates to "ASO_HOME" page
+#    Then User clicks on the burger menu
+#    Then user should able to click on Signin button
+#    Then user should be able to enter the signin details "Login_username" "Login_pwd"
+#    Then User clicks on the burger menu
+#    Then user sign out from the website
+#
 #  @AutomationSanityR1 @AS2  @MAST-03 
 #  Scenario: TC_3-Registered user checkout process
 #    Given user launches the browser and navigates to "ASO_HOME" page
@@ -264,20 +264,16 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User navigates to L3
     Then user clicks on the product card and navigates to PDP of the product
 
-  @AutomationSanityR1 @AS1  @MAST-12
-  Scenario Outline: TC_12-Verify Search from Home Page
+ @AutomationSanityR1 @AS1  @MAST-12
+  Scenario: TC_12-Verify Search from Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box
+   Then User searches a product "SearchTerm" and navigates to PDP
     And user should be able to see the sku and item numbers for the given image
-
-    Examples: 
-      | SearchTerm |
-      | Columbia Sportswear Men's Dorado CVO PFG Boat Shoes |
  
   @AutomationSanityR1 @AS1 @MAST-13
-  Scenario: TC_13-Verify Search Result Page(Facets,  Sort and Pagination)
+  Scenario: TC_13-Verify Search Result Page(Facets, Sort and Pagination)
     Given user launches the browser and navigates to "ASO_HOME" page
-   When user enters "SearchTerm" in the search box
+    When user enters "SearchTerm" in the search box and navigates to PLP
     And user scroll till filter flyout
     Then User clicks on the filter flyout
     And User expands all Filter Options

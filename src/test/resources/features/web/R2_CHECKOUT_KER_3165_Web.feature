@@ -54,7 +54,6 @@ Scenario:
 @ZYP_CHECKOUT_K3165-8241 @CR-GK 
 Scenario: 
 	Verify the guest user is able to enter the shipping address details on Checkout page 
-	Verify the guest user is able to see the pre-populated City/State with Zipcode 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
@@ -70,4 +69,149 @@ Scenario:
 	Then Verify the message on the page 
 		|# Following Error Message should show on the page|
 		|Please enter a zip code|
+		
+		
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@ZYP_CHECKOUT_K3165-8242 @CR-GK 
+Scenario: 
+	Verify the system triggers the Address Verification (AVS) to guest user on wrong address entry 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user click on checkout button in Cart page 
+	And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "AVSAddress" 
+	And user enter Zipcode "zipcode" 
+	Then user click on Go To Shipping Method button in Checkout page 
+	Then Verify below Sub/Main Module of Checkout Page 
+		|#%%%%%%   Verify below in address verification model in  shipping %%%%%%%%%%|
+		|AddressVerificationSystemModelPopUp                 |
+		|checkout_ShippingAddress_AVSModelSuggestedAddress   |
+		|checkout_ShippingAddress_AVSModelSelectAddress_btn  |
+		
+		
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
+@ZYP_CHECKOUT_K3165-8244 @CR-GK 
+Scenario: 
+	Verify the guest user is able to edit the Saved address in the Shipping address
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user click on checkout button in Cart page 
+	And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "zipcode" 
+	Then user click on Go To Shipping Method button in Checkout page 
+	And Verify below Sub/Main Module of Checkout Page 
+		|#%%%%  Verify below in shipping drawer in checkout page %%%%%%%|
+		|checkout_ShippingAddress_Edit_lnk		|
+		
+		
+		#@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
+@ZYP_CHECKOUT_K3165-8245 @CR-GK 
+Scenario: 
+	Verify the guest user is displayed with required validations and errors on shipping address 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user click on checkout button in Cart page 
+	And user click on Go To Shipping Method button in Checkout page 
+	Then Verify the message on the page 
+		|# Following Error Message should show on the page|
+		|Please enter the First Name|
+		|Please Enter a Last Name|
+		|Please enter a phone number|
+		|Please enter a street address|
+		|Required|		
+		|Please enter a zip code|
+	And  user enter First name "FirstName" 
+	And  user enter Last name "LastName" 
+	And  user enter Phone number "PhoneNumber" 
+	And  user enter Address "AVSAddress" 
+	And  user enter Zipcode "zipcode" 
+	Then  user click on Go To Shipping Method button in Checkout page 
+	Then  Verify below Sub/Main Module of Checkout Page 
+		|#%%%%%%   Verify below in address verification model in  shipping %%%%%%%%%%|
+		|AddressVerificationSystemModelPopUp                 |
+		|checkout_ShippingAddress_AVSModelSuggestedAddress   |
+	And  user selects the suggested address instead of entered address 
+	And  clicks on Use Selected Address button 
 	
+	
+	
+@R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3165 
+@ZYP_CHECKOUT_K3165-8246 @CR-GK 
+Scenario: 
+	Verify the guest user is able to select the shipping method from the list
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user click on checkout button in Cart page 
+	And  user enter First name "FirstName" 
+	And  user enter Last name "LastName" 
+	And  user enter Phone number "PhoneNumber" 
+	And  user enter Address "AVSAddress" 
+	And  user enter Zipcode "zipcode" 
+	And  user click on Go To Shipping Method button in Checkout page 
+	And  user selects the suggested address instead of entered address 
+	And  clicks on Use Selected Address button 
+	And user clicks on edit shipping method cta 
+	Then  Verify below Sub/Main Module of Checkout Page 
+		|#%%%%%%   Verify below in checkout page shipping method drawer %%%%%%%%%%|
+		|checkout_ShippingMethod_ShippingMethodHeader_txt			|
+		|checkout_ShippingMethod_Shipment_txt						|
+		|checkout_ShippingMethod_Items_txt							|
+		|checkout_ShippingMethod_ItemImage_img						|
+		|checkout_ShippingMethod_ShippingMethodType_btn				|
+		|checkout_ShippingMethod_GoToPayment_btn					|		
+		
+		
+@R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3165 
+@ZYP_CHECKOUT_K3165-8248 @CR-GK 
+Scenario: 
+	Verify the guest user is able to select the Credit Card payment method in order to place the order 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user click on checkout button in Cart page 
+	And  user enter First name "FirstName" 
+	And  user enter Last name "LastName" 
+	And  user enter Phone number "PhoneNumber" 
+	And  user enter Address "AVSAddress" 
+	And  user enter Zipcode "zipcode" 
+	And  user click on Go To Shipping Method button in Checkout page 
+	And  user selects the suggested address instead of entered address 
+	And  clicks on Use Selected Address button 
+	And user clicks on edit shipping method cta 
+	And user click on go to payment present in shipping method 
+	Then  Verify below Sub/Main Module of Checkout Page 
+		|#%%%%%%   Verify below in checkout page payment drawer %%%%%%%%%%|
+		|PaymentMethodHeader_Txt|
+		|CreditCard_radioBtn|
+		|CreditCardNumber_Input|
+		|ExpirationDate_Input|
+		|Cvv_Input|
+		|CvvToolTip|
+		|BillingInformation_Txt|
+		|SameAsShippingAddress_Txt|
+		|SameAsShippingAddress_checkBox|
+		|ReviewOrder_Btn|

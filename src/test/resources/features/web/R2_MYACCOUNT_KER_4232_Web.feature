@@ -42,7 +42,6 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 	And user click on signin button
 	 And user click on MyAccount
 	And user lands on My Account page and click on adress
-	Then Verify below Sub/Main Module of My Account
 	When user clicks Remove button
 	Then Verify the message on the page
     |# verify the remove quantity message|
@@ -127,9 +126,6 @@ Scenario: Verify Authenticated user can Manage Address Book - Add new Address de
 	And user click on signin button
 	And user click on MyAccount 
      Then user lands on My Account page and click on adress
-     Then Verify below Sub/Main Module of My Account
-	|# Verify following elements in address page|
-		|MyAccountPage_Address_lnk		|
      Then user Clicks on Add New Address link 
      Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in address page|
@@ -214,9 +210,6 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then user lands on My Account page and click on adress
-	 Then Verify below Sub/Main Module of My Account
-	|# Verify following elements in address page|
-		|MyAccountPage_Address_lnk		|  
 	When user clicks Remove button 
 	Then Verify the message on the page
     |# verify the remove quantity message|
@@ -246,7 +239,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Edit Address detai
 	And user enter Phone number "UpdatePhoneNumber" in address book
 	And user enter Address "UpdateAddress" in address book
 	And user enter Zipcode "UpdateZipcode" in address book
-	And user clicks on Update button 
+	And user clicks on Update button in edit profile
 	And user verifies the "UpdateFirstName" in address
 
 
@@ -271,6 +264,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user is navigated to Add to cart Notification popup 
 	And user click on view cart button
 	And user clicks on SignIn link from global header
+	And user click on MyAccount 
 	Then user lands on My Account page and click on adress 
 	And user verifies the First address provided is set as default
 

@@ -28,14 +28,17 @@ public class R2_CHECKOUT_K6654_SD extends CommonActionHelper {
 	}
 	@Then("^user enter password of four digit$")
 	public void user_enter_password_of_four_digit() throws Throwable {
-		setInputText(myAccount.txtCurrentPassword, webPropHelper.getTestDataProperty("FirstName"));
+		setInputText(myAccount.txtCurrentPassword, webPropHelper.getTestDataProperty("FOURDIGITPASSWORD"));
 	}
 	@Then("^user enter the wrong current password$")
 	public void user_enter_the_wrong_current_password() throws Throwable {
 		setInputText(myAccount.txtCurrentPassword, webPropHelper.getTestDataProperty("IncorrectPassword"));
 	}
 
-	
+	@Then("^user enter the six digit password$")
+	public void user_enter_the_six_digit_password() throws Throwable {
+		setInputText(myAccount.txtNewPassword, webPropHelper.getTestDataProperty("SIXDIGITPASSWORD"));
+	}
 
 
 

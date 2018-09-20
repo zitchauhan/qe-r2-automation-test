@@ -6,6 +6,7 @@ Scenario: Verify user is able to enter the Forgot Password page from Forgot Pass
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -29,6 +30,7 @@ Scenario: Verify that user can continue the shopping without re-authentication a
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -56,6 +58,7 @@ Scenario: Verify that user able to update the profile
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -72,7 +75,7 @@ Scenario: Verify that user able to update the profile
 		|EditProfilePage_EditProfileHeader_label						|
 	And user enter First Name field "FirstName" 
 	And user enter Last Name field "LastName" 
-	And user clicks on Update button
+	And user clicks on Update button in edit profile
 	When user click on change password icon
 	Then Verify below Sub/Main Module of My Account 
 	|#Verify following elements in Profile > change password section|
@@ -91,6 +94,7 @@ Scenario: Verify that user can see the error message in First name input field.
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -106,8 +110,8 @@ Scenario: Verify that user can see the error message in First name input field.
 	|#verify following elements in Profile > Edit Profile section	|
 	|EditProfilePage_EditProfileHeader_label						|
 	And user enter First Name field "InvalidFirstName" 
-	And user clicks on Update button
 	Then Verify the message on the page
+	|# Following Error Message should show on the page|
 	 |Not a valid name|
  
 	 	@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10567 @CR-RK
@@ -116,6 +120,7 @@ Scenario: Verify that user can see the error message in First name field if user
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -131,8 +136,8 @@ Scenario: Verify that user can see the error message in First name field if user
 	|#verify following elements in Profile > Edit Profile section	|
 	|EditProfilePage_EditProfileHeader_label						|
 	And user enter First Name field "InvalidFirstNameWithSingleChar" 
-	And user clicks on Update button
 	Then Verify the message on the page
+	|# Following Error Message should show on the page|
 	 |Not a valid name|
 
 	 
@@ -142,6 +147,7 @@ Scenario: Verify that user can see the error message in First name field if user
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -157,8 +163,8 @@ Scenario: Verify that user can see the error message in First name field if user
 	|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
 	And user enter First Name field "InvalidEmailForMoreThan50Characters" 
-	And user clicks on Update button
 	Then Verify the message on the page
+	|# Following Error Message should show on the page|
 	 |Not a valid name|
 	 
 	 
@@ -168,6 +174,7 @@ Scenario: Verify that user can see the error message in last name input field.
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -183,8 +190,8 @@ Scenario: Verify that user can see the error message in last name input field.
 	|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
 	And user enter Last Name field "InvalidLastName" 
-	And user clicks on Update button
 	Then Verify the message on the page
+	|# Following Error Message should show on the page|
 	 |Not a valid name|
 	 
 	 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10570 @CR-RK
@@ -193,6 +200,7 @@ Scenario: Verify that user can see the error message in Last name field if user 
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -208,8 +216,8 @@ Scenario: Verify that user can see the error message in Last name field if user 
 	|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
 	And user enter Last Name field "InvalidLastNameWithSingleChar" 
-	And user clicks on Update button
 	Then Verify the message on the page
+	|# Following Error Message should show on the page|
 	 |Not a valid name|
 	 
 	 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10571 @CR-RK
@@ -218,6 +226,7 @@ Scenario: Verify that user can see the error message in Last name field if user 
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -233,8 +242,8 @@ Scenario: Verify that user can see the error message in Last name field if user 
 	|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
 	And user enter Last Name field "InvalidEmailForMoreThan50Characters" 
-	And user clicks on Update button
 	Then Verify the message on the page
+	|# Following Error Message should show on the page|
 	 |Not a valid name|
 	
 	
@@ -244,6 +253,7 @@ Scenario: Verify that user can see the error message if user enters the email id
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -260,9 +270,11 @@ Then User clicks on the burger menu
 		|EditProfilePage_EditProfileHeader_label						|
 	And user enter new email field "InvalidEmailAddress" 
 	Then Verify the message on the page
+	|# Following Error Message should show on the page|
 	|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 	And user enter confirm email field "InvalidConfirmEmail" 
 	Then Verify the message on the page
+	|# Following Error Message should show on the page|
 	|Please enter the Email Address in a valid format (ex. abc@xyz.com)| 
 	 
 	  @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10573 @CR-RK
@@ -271,6 +283,7 @@ Scenario: Verify that user can see the error message if user enters the email id
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -287,9 +300,11 @@ Scenario: Verify that user can see the error message if user enters the email id
 		|EditProfilePage_EditProfileHeader_label						|
 	And user enter new email field "InvalidEmailForMoreThan50Characters" 
 	Then Verify the message on the page
+	|# Following Error Message should show on the page|
 	|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 	And user enter confirm email field "InvalidEmailForMoreThan50Characters" 
 	Then Verify the message on the page
+	|# Following Error Message should show on the page|
 	|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 	
 	
@@ -299,6 +314,7 @@ Scenario: Verify that user can change the password in Profile section.
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -325,6 +341,7 @@ Scenario: Verify that user can see the error message in password field.
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -344,6 +361,7 @@ Scenario: Verify that user can see the error message in password field.
 	And user enters currentpassword "invalidpasswordWithLessThan8Char"
 	And user enters newpassword "invalidpasswordWithLessThan8Char"
 	Then Verify the message on the page
+	|# Following Error Message should show on the page|
 	  |8 characters minimum|
 	  
 	@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-11115 @CR-RK
@@ -352,7 +370,7 @@ Scenario: Verify that system keep the addresses intact after changing the email 
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
-	
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -379,7 +397,7 @@ Scenario: Verify that system keep the payments intact after changing the email a
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
-	
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -412,7 +430,7 @@ Scenario: Verify that system keep the wish-list intact after changing the email 
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
-	
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
@@ -443,6 +461,7 @@ Scenario: Verify that system keep the orders intact after changing the email add
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
 	|SignInPage_SignUp_btn								|
 	|SignInPage_EmailAddress_txt			   			| 

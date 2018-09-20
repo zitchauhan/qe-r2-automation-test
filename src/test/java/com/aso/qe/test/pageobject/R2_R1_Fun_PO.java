@@ -45,9 +45,9 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='level3Category-Grills & Outdoor Cooking_m']")public WebElement tabGrillOutdoor_M; //SID 5-September
 	   @FindBy(xpath=" //*[@data-auid='go-to-Grills & Outdoor Cooking_m']")public WebElement clickGrillsOutdoorTab; //SID 5-September
 	@FindBy(xpath="//*[@data-auid='level2Category-Home & Backyard']")public WebElement tabHomeBackyard; //SID 5-September
-	   @FindBy(xpath=" //*[@data-auid='level3Category-Grills & Outdoor Cooking']")public WebElement tabGrillOutdoor; //SID 5-September
-	   @FindBy(xpath=" //*[@data-auid='shopByCategory_1']")public WebElement clickGrills; //SID 5-September
-	   @FindBy(xpath = "(//*[contains(@data-auid,'productCard_')])[2]")	public WebElement selectGrill; //SID 5-September
+	   @FindBy(xpath="//*[@data-auid='level3Category-Grills & Outdoor Cooking']/a")public WebElement tabGrillOutdoor; //SID 5-September, modify CR-DPK 19-sept
+	   @FindBy(xpath="//*[@data-auid='shopByCategory_0'] | //*[@data-auid='level4Category-Grills']")public WebElement clickGrills; //SID 5-September, modify CR-DPK 19-sept
+	   @FindBy(xpath = "(//*[contains(@data-auid,'productCard_')])[5]")	public WebElement selectGrill; //SID 5-September, modify CR-DPK 19-sept
 	
 	 //SID 5-September
 	   public void navigateToL2GrillOutdoor() throws InterruptedException {
@@ -113,9 +113,10 @@ public class R2_R1_Fun_PO extends CommonActionHelper
  //Start KER-3166 CR-DPK 
    @FindBy(xpath="//*[@data-auid='level2Category-Accessories & More'] | //*[@data-auid='level2Category-Accessories & More_m']")public WebElement tabAccessoriesMore; //DPK 11-September
    @FindBy(xpath="//*[@data-auid='go-to-Accessories & More_m']")public WebElement clickAccessoriesMore_M; //DPK 11-September
-   @FindBy(xpath="//*[contains(@data-auid,'shopByCategory_')]//*[text()='Watches']")public WebElement tabWatches; //DPK 11-September
+   @FindBy(xpath="//*[@data-auid='level3Category-Electronics_m']")public WebElement clickElectronic_M; //DPK 19-September
+   @FindBy(xpath="//*[contains(@data-auid,'shopByCategory_')]//*[text()='Watches'] | //*[text()='Watches']")public WebElement tabWatches; //DPK 11-September, 19 sept
    @FindBy(xpath="//*[@data-auid=\"drawer_Men's Watches\"]")public WebElement lnkMensWatches; //DPK 11-September
-   @FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[6]")public WebElement selectMensWatch; //DPK 11-September
+   @FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[5]")public WebElement selectMensWatch; //DPK 11-September, 19-sept
    
    
    
@@ -123,8 +124,8 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 	   if("mobile".equalsIgnoreCase(testtype)){
 		    waitForElement(tabAccessoriesMore);
 			assertTrue(clickOnButton(tabAccessoriesMore));
-			waitForElement(clickAccessoriesMore_M);
-			assertTrue(clickOnButton(clickAccessoriesMore_M));
+			waitForElement(clickElectronic_M);
+			assertTrue(clickOnButton(clickElectronic_M));
 			waitForElement(tabWatches);
 			assertTrue(clickOnButton(tabWatches));
 			waitForElement(selectMensWatch);
@@ -135,7 +136,7 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 			
 			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
 			waitForElement(tabAccessoriesMore);
-			assertTrue(clickOnButton(tabAccessoriesMore));
+			moveHover(tabAccessoriesMore);// CR-DPK, 19-sept
 			waitForElement(tabWatches);
 			assertTrue(clickOnButton(tabWatches));
 			waitForElement(lnkMensWatches);

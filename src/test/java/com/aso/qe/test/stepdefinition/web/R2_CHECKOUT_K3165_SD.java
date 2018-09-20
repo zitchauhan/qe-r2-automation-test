@@ -51,4 +51,11 @@ public class R2_CHECKOUT_K3165_SD extends CommonActionHelper {
 		assertFalse(cityNamePopulatedInCheckoutShip.isEmpty());
 	}
 
+	@And("^user clicks on edit shipping method cta$")
+	public void user_clicks_on_edit_shipping_method_cta() throws Throwable {
+		if (isDisplayed(r2CheckOut_po.checkout_ShippingMethod_Edit_lnk)) {
+			assertTrue(clickOnButton(r2CheckOut_po.checkout_ShippingMethod_Edit_lnk));
+		}
+	}
+
 }

@@ -9,7 +9,7 @@ Feature: PDP BOPIS Messaging & Variations to Customer
     And user enter the valid password "Password"
     And user click on signin button
     And User should be able to see Search Box on Homepage
-    When User enter the SKU search "SKUNumber"
+    When User enter the SKU search "SKUForBopisProduct"
     And User click on search icon
     Then user change the quantity of item in PDP
 
@@ -22,7 +22,7 @@ Feature: PDP BOPIS Messaging & Variations to Customer
     And user enter the valid password "Password"
     And user click on signin button
     And User should be able to see Search Box on Homepage
-    When User enter the SKU search "SKUNumber"
+    When User enter the SKU search "SKUForBopisProduct"
     And User click on search icon
     And user change the quantity of item in PDP
     Then user decrease the quantity of item in PDP
@@ -36,7 +36,7 @@ Feature: PDP BOPIS Messaging & Variations to Customer
     And user enter the valid password "Password"
     And user click on signin button
     And User should be able to see Search Box on Homepage
-    When User enter the SKU search "SKUNumber"
+    When User enter the SKU search "SKUForBopisProduct"
     And User click on search icon
     When user clicks on Move to Wish list link "NewWishLink" OR exisiting wishlink
     Then Verify below Sub/Main Module of Cart Page
@@ -53,7 +53,7 @@ Feature: PDP BOPIS Messaging & Variations to Customer
     And user enter the valid password "Password"
     And user click on signin button
     And User should be able to see Search Box on Homepage
-    When User enter the SKU search "SKUNumber"
+    When User enter the SKU search "SKUForBopisProduct"
     And User click on search icon
     Then user click on Add to Cart Button
 
@@ -67,7 +67,7 @@ Feature: PDP BOPIS Messaging & Variations to Customer
     And user enter the valid password "Password"
     And user click on signin button
     And User should be able to see Search Box on Homepage
-    When User enter the SKU search "SKUNumber"
+    When User enter the SKU search "SKUForBopisProduct"
     And User click on search icon
     And user change the quantity of item in PDP
     Then user decrease the quantity of item in PDP
@@ -81,7 +81,7 @@ Feature: PDP BOPIS Messaging & Variations to Customer
     And user enter the valid password "Password"
     And user click on signin button
     And User should be able to see Search Box on Homepage
-    When User enter the SKU search "SKUNumber"
+    When User enter the SKU search "SKUForBopisProduct"
     And User click on search icon
     And user click on Add to Cart Button
     And user will click on View Cart button
@@ -97,7 +97,7 @@ Feature: PDP BOPIS Messaging & Variations to Customer
   Scenario: Verify that the user is able add item to cart if items are low in stock
     Given user launches the browser and navigates to "ASO_HOME" page
     And User should be able to see Search Box on Homepage
-    When User enter the SKU search "SKUNumber"
+    When User enter the SKU search "SKUForBopisProduct"
     And User click on search icon
     And user click on Add to Cart Button
     And user will click on View Cart button
@@ -118,7 +118,7 @@ Feature: PDP BOPIS Messaging & Variations to Customer
   Scenario: Verify customer must see messaging when attempting to add more inventory of an item to their cart than inventory exists at the selected store
     Given user launches the browser and navigates to "ASO_HOME" page
     And User should be able to see Search Box on Homepage
-    When User enter the SKU search "SKUNumber"
+    When User enter the SKU search "SKUForBopisProduct"
     And User click on search icon
     And user change the quantity of item in PDP
     And user click on Add to Cart Button
@@ -132,7 +132,7 @@ Feature: PDP BOPIS Messaging & Variations to Customer
   Scenario: Verify that the user is able to view "Ships To" information on PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     And User should be able to see Search Box on Homepage
-    When User enter the SKU search "SKUNumber"
+    When User enter the SKU search "SKUForBopisProduct"
     And User click on search icon
     Then Verify the message on the page
       | # Following Error Message should show on the page |
@@ -148,7 +148,7 @@ Feature: PDP BOPIS Messaging & Variations to Customer
     And user enter the valid password "Password"
     And user click on signin button
     And User should be able to see Search Box on Homepage
-    When User enter the SKU search "SKUNumber"
+    When User enter the SKU search "SKUForBopisProduct"
     And User click on search icon
     And verfiy the Change Pickup Location link
     Then Verify the message on the page

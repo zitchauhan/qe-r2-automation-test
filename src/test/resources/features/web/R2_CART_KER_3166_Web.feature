@@ -5,15 +5,16 @@ Scenario: To verify Add Promotion Code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
 	When user clicks on Add Promo code link under Cart Order Summary
-	Then Promo code field is exposed
+	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page"Order Summary"|
+		|OrderSummary_Header|
+		|Minus_HidePromo_btn|
+		|EnterPromoCode_input|
+		|Submit_PromoCode_btn|
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-8087 @CR-DPK
@@ -22,14 +23,13 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
 	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And verify Order Summary in Cart 
-	Then user verifiy Order Total
-	And user view and Applied Promotions/Discounts "Promocode8087"
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|	
+		|OrderSummary_Header|
+		|Plus_AddPromoCode_btn|
+	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-8088 @CR-DPK
@@ -38,64 +38,129 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
 	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And verify Order Summary in Cart 
-	Then user verifiy Order Total
-	And user view and Applied Promotions/Discounts "Promocode8088"
-	Then verify proper validation message is displayed
+	And user view and Applied Promotions/Discounts "WrongPromocode"
+	Then Verify the message on the page
+    |# Following Error Message should show on the page|
+    |Please enter a valid promotion code.|
+    
+    
+    
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-8089 @CR-DPK
+Scenario: To verify Submit Promotion code
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing
+    Then user clicks on one of the subcategory and navigates to LTwo
+    Then user clicks on one of the product category and navigates to LThree
+	Then user click on Add to Cart Button
+	And user will click on View Cart button 
+	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"    
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|	
+		|checkOut_OrderSummary_btn|	
+		|Total_txt|
+		|SubTotal_txt|
+		|EstimatedTaxes_txt|
+		|Discount_Txt|	    
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-8091 @CR-DPK
-Scenario: To verify Promo code applied in Order Summary
+Scenario: verify Item/order Promo code applied in Order Summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
 	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And verify Order Summary in Cart 
-	Then user verifiy Order Total
-	And user view and Applied Promotions/Discounts "ItemLevelPromoCodeDiscount"
-	And verify Promo code discount is applied
-	And Verify Total for all items on the cart page	
+	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount"    
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|	
+		|checkOut_OrderSummary_btn|	
+		|Total_txt|
+		|SubTotal_txt|
+		|EstimatedTaxes_txt|
+		|Discount_Txt|	
+		
 	
-	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9604 @CR-DPK
-Scenario: Verify promotion got applied for order level when user applied %off promotion on order -- Implicit promotion
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
-	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	When enter the "OrderLevelQuantity" to X 
-	Then verify Promo code discount is applied	
-	
-	
-	
- @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9591 @CR-DPK 
+		
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9591 @CR-DPK 
 Scenario: Verify promotion got applied to the product when user applied %off promotion on product level in cart--with promocode
-Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+Given user launches the browser and navigates to "ASO_HOME" page
+	And User navigates to L2 Grills Outdoor cooking
+	And user clicks on one of the subcategory of Grills Outdoor
+	And user select the product
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	When user navigate to Cart page and changes the quantity to "OrderLevelQuantity" 
+	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity" 
+	Then Verify below Sub/Main Module of Cart Page
+	|# Then discount is displayed in Order Summary|
+	|Discount_Txt|
+	|RemovePromocode_Btn|	
+	
+
+
+ @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-9593 @CR-DPK 
+Scenario: Verify promotion got applied to the Catagory when user applied %off promotion on Category level in cart--with promocode
+Given user launches the browser and navigates to "ASO_HOME" page
+	Then User navigates to LThree Mens Watches 
+	And user click on Add to Cart Button 
+	And user will click on View Cart button	
+	When enter the "EnterQuantityGreaterThenOne" to X  
+	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity" 
+	Then Verify below Sub/Main Module of Cart Page
+	|# Then discount is displayed in Order Summary|
+	|Discount_Txt|
+	|RemovePromocode_Btn|			
+	
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9595 @CR-DPK 
+Scenario: Verify promotion got applied for order level when user applied %off promotion on order -- with promocode
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing
+    Then user clicks on one of the subcategory and navigates to LTwo
+    Then user clicks on one of the product category and navigates to LThree
+	Then user click on Add to Cart Button
+	And user will click on View Cart button 
+	When enter the "EnterQuantityGreaterThenOne" to X  
 	And user view and Applied Promotions/Discounts "OrderLevelDiscount" 
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|	
+		|checkOut_OrderSummary_btn|	
+		|Total_txt|
+		|SubTotal_txt|
+		|EstimatedTaxes_txt|	
+		|Discount_Txt|	
+	
+	
+		
+ @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9596 @CR-DPK 
+Scenario: Verify promotion got applied to the product when user applied $ Amount off promotion on product level in cart -- with Promocode
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Grills Outdoor cooking
+	And user clicks on one of the subcategory of Grills Outdoor
+	And user select the product
+	And user click on Add to Cart Button 
+	And user will click on View Cart button 
+	When enter the "EnterQuantityGreaterThenOne" to X  
+	And user view and Applied Promotions/Discounts "AmountLevelDiscount" 
+	Then Verify below Sub/Main Module of Cart Page
+	|# Then discount is displayed in Order Summary|
+	|checkOut_OrderSummary_btn|	
+		|Total_txt|
+		|SubTotal_txt|
+		|EstimatedTaxes_txt|	
+		|Discount_Txt|	
+		
+		
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9597 @CR-DPK 
+Scenario: Verify promotion got applied to the Category when user applied $ amount off promotion on Category level in cart -- with promocode
+Given user launches the browser and navigates to "ASO_HOME" page 
+Then User navigates to LThree Mens Watches 
+	And user click on Add to Cart Button 
+	And user will click on View Cart button	
+	When enter the "EnterQuantityGreaterThenOne" to X  
+	And user view and Applied Promotions/Discounts "AmountLevelDiscount" 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
 	|Discount_Txt|
@@ -108,54 +173,90 @@ Scenario: Verify promotion got applied for order level when user applied $ amoun
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	When user navigate to Cart page and changes the quantity to "OrderLevelQuantity" 
-	And user view and Applied Promotions/Discounts "OrderLevelDiscount" 
+	When enter the "EnterQuantityGreaterThenOne" to X  
+	And user view and Applied Promotions/Discounts "AmountLevelDiscount" 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
 	|Discount_Txt|
-	|RemovePromocode_Btn|	
-	
-	
- @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9602 @CR-DPK 
+	|RemovePromocode_Btn|			
+		
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9602 @CR-DPK 
 Scenario: Verify implicit %off promotion got applied to the product when user adds eligible product in cart-- Implicit promotion
 Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User navigates to L2 Grills Outdoor cooking
+	And user clicks on one of the subcategory of Grills Outdoor
+	And user select the product
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
 	|Discount_Txt|
-	|RemovePromocode_Btn|
-	
+
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-9603 @CR-DPK 
 Scenario: Verify promotion got applied to the Category when user applied %off promotion on Category level in cart -- Implicit promotion
 Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	Then User navigates to LThree Mens Watches 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
 	|Discount_Txt|
-	|RemovePromocode_Btn|		
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9604 @CR-DPK 
+Scenario: Verify promotion got applied for order level when user applied %off promotion on order -- Implicit promotion
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing
+    Then user clicks on one of the subcategory and navigates to LTwo
+    Then user clicks on one of the product category and navigates to LThree
+	Then user click on Add to Cart Button
+	And user will click on View Cart button 
+	When enter the "OrderLevelQuantity" to X 
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|	
+		|checkOut_OrderSummary_btn|	
+		|Total_txt|
+		|SubTotal_txt|
+		|EstimatedTaxes_txt|	
+		|Discount_Txt|
+		
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9605 @CR-DPK 
+Scenario: Verify promotion got applied to the product when user applied $ Amount off promotion on product level in cart -- Implicit promotion
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Grills Outdoor cooking
+	And user clicks on one of the subcategory of Grills Outdoor
+	And user select the product
+	And user click on Add to Cart Button 
+	And user will click on View Cart button 
+	When enter the "OrderLevelQuantity" to X 
+	Then Verify below Sub/Main Module of Cart Page
+	|# Then discount is displayed in Order Summary|
+	|checkOut_OrderSummary_btn|	
+		|Total_txt|
+		|SubTotal_txt|
+		|EstimatedTaxes_txt|	
+		|Discount_Txt|
+	
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9606 @CR-DPK 
+Scenario: Verify promotion got applied to the Category when user applied $ amount off promotion on Category level in cart -- Implicit promotion
+Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User navigates to LThree Mens Watches 
+	And user click on Add to Cart Button 
+	And user will click on View Cart button
+	When enter the "OrderLevelQuantity" to X  
+	Then Verify below Sub/Main Module of Cart Page
+	|# Then discount is displayed in Order Summary|
+	|checkOut_OrderSummary_btn|	
+		|Total_txt|
+		|SubTotal_txt|
+		|EstimatedTaxes_txt|	
+		|Discount_Txt|	
 	
 	
 	
@@ -164,15 +265,13 @@ Scenario: Verify promotion got applied for order level when user creates $ amoun
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	When user navigate to Cart page and changes the quantity to "OrderLevelQuantity" 
-	And user view and Applied Promotions/Discounts "OrderLevelDiscount" 
+	When enter the "EnterQuantityGreaterThenOne" to X  
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
-	|Discount_Txt|
-	|RemovePromocode_Btn|	
+	|Discount_Txt|			
+			
+	
+	

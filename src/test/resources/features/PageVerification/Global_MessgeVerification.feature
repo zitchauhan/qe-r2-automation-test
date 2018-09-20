@@ -50,4 +50,10 @@ Feature: Message/Text Verification
 	|In-Store Pickup Available|
 	|IN STORE PICKUP INSTRUCTIONS|
 	| ARE YOU SURE YOU WANT TO CANCEL THIS ORDER?|
-	
+	|First name and Last name can only contain letters|
+	|Please enter a valid 10 digit phone number|
+	|Please enter a valid street address|
+	|Invalid zip code, please enter a valid zip code|
+	|Password must be at least 8 characters long|
+	|The combination of Email Address and Password is incorrect. Please try again.|
+	|For maximum security, please enter a Password different from the previous one|
