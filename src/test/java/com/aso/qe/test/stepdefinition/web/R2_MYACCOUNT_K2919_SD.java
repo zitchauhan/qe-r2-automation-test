@@ -7,7 +7,9 @@ import static org.junit.Assert.assertTrue;
 
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -23,7 +25,7 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	
-
+	Actions keyAction = new Actions(getDriver());
 	@Given("^user deletes all existing credit card$")
 	public void user_deletes_all_existing_credit_card() throws Throwable {
 		for(WebElement removeElement: myAccountPo.PaymentPage_CreditCard_Remove_list) {
@@ -55,21 +57,22 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	@And("^User enters Credit Card number \"(.*?)\"$")
 	public void user_enters_Credit_Card_number(String text) throws Throwable {
 		setInputText(myAccountPo.txtCreditCardNumber, webPropHelper.getTestDataProperty(text));
-			
-	}
+		keyAction.sendKeys(Keys.TAB).build().perform();
+			}
 	
 		
 		
 	@And("^User enters expiration date \"(.*?)\"$")
 	public void user_enters_expiration_date(String arg1) throws Throwable {
 		setInputText(myAccountPo.txtExpiryDate, webPropHelper.getTestDataProperty(arg1));
+		keyAction.sendKeys(Keys.TAB).build().perform();
 	}
 
 		
 	@Given("^User enters CVV number \"(.*?)\"$")
 	public void user_enters_CVV_number(String arg1) throws Throwable {
 		setInputText(myAccountPo.txtCVV, webPropHelper.getTestDataProperty(arg1));
-		
+		keyAction.sendKeys(Keys.TAB).build().perform();
 	}
 
 	
@@ -172,6 +175,7 @@ public void user_verifies_that_in_Payment_section_CCone_credit_card_is_pre_popul
 
 @Then("^User verifies that in Payment section credit card \"(.*?)\" is pre-populated by default$")
 public void user_verifies_that_in_Payment_section_credit_card_is_pre_populated_by_default(String arg1) throws Throwable {
+	r2CheckOutPo.verifyShippingAddress(arg1);
 	waitForElement(r2CheckOutPo.chooseCreditcard_Dd);
 //	assertTrue(isDisplayed(r2CheckOutPo.chooseCreditcard_Dd));
 	arg1 = webPropHelper.getTestDataProperty(arg1);
