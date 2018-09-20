@@ -1,6 +1,7 @@
 package com.aso.qe.test.pageobject;
 
-import static org.junit.Assert.assertTrue;
+//import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertTrue;
 
 import java.util.List;
 
@@ -17,6 +18,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	/**************** START LOCAL OBJETCS AND DECLARATIONS ***********************/
 	private static final Logger logger = Logger.getLogger(R2_Cart_PO.class);
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
+	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
+			R1_GlobalElementHeader_Home_PO.class);
 	/*************** END LOCAL OBJETCS AND DECLARATIONS **************************/
 
 	/***************************** START XPAHTS **********************************/
@@ -426,7 +429,21 @@ public class R2_Cart_PO extends CommonActionHelper {
 	// End KER-2926 CR-MS
 	/***************************** END XPAHTS ********************************/
 
-	/***************************** START METHODS ********************************/
+	/***************************** START METHODS 
+	 * @throws InterruptedException ********************************/
+	
+	public void navigateAndDeleteAllProductsInCart() throws InterruptedException {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(globalElementHeader.iconcart_m));
+
+		} else {
+			assertTrue(clickOnButton(globalElementHeader.iconcart));
+
+		}
+		emptyCart();
+	
+	}
+		
 	public void compareCartEmptyTxt(String exceptedTxt) throws Exception {
 		String actualCartTxt = getText(cartEmptyTxt);
 		logger.debug("actualCartTxt:: " + actualCartTxt);

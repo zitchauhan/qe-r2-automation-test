@@ -558,9 +558,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='Required']")
 	public List<WebElement> inlineErrorMsg;// 28Aug danush
 
-	@FindBy(xpath = "//*[@data-auid='add-new-Credit-Card-btn']")
-	public WebElement addNewCardCta; // 28 Aug - GK
-
+	@FindBy(xpath = "//*[text()='ADD NEW CREDIT CARD'] | //*[@data-auid='add-new-Credit-Card-btn']")
+	public WebElement addNewCardCta; // 28 Aug - GK, 20 Sept CR-DPK 
+	
 	@FindBy(xpath = "//*[text()='DEFAULT']")
 	public WebElement default_txt;
 
@@ -732,6 +732,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "//*[@data-auid='phone1']")
 	public WebElement AddressBook_inpPhoneNumber; //19sept CR-GK 
+
 
 	/***************************** END XPAHTS ***********************************/
 
