@@ -178,6 +178,11 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 	    assertTrue(taxDisplayed == taxOnCheckOutPage);
 	    assertTrue(totalAmountDisplayed == totalAmountOnCheckOutPage);
 	}
+	
+	@Given("^user navigate and deletes existing items in cart$")
+	public void user_navigates_delete_existing_items_in_cart() throws Throwable {
+		cartR2PageObj.navigateAndDeleteAllProductsInCart();
+	}
 
 	
 
