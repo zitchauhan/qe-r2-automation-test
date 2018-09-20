@@ -31,8 +31,9 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 
 	@Then("^user click on paypal$")
 	public void user_click_on_paypal() throws Throwable {
-	    waitForElement(r2CheckOutPo.PayPal_radioBtn);
+//	    waitForElement(r2CheckOutPo.PayPal_radioBtn);
 		clickOnButton(r2CheckOutPo.PayPal_radioBtn);
+		Thread.sleep(1000);
 	}
 	
 	@Then("^user change the quantity of item in PDP$")
