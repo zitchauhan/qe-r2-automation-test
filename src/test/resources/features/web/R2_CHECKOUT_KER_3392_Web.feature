@@ -31,8 +31,8 @@ Feature: Verify Checkout Login Interstitial
 	Then user navigate to Cart page 
 	Then user click on checkout button in Cart page
 	When user click on SignIn link
-	And user enter the valid emailaddress "emailaddress" 
-	And user enter create password 
+	And user enter the emailaddress "emailaddress" in signin page
+	And user enter the password "password"
 	And user click on signin button 
 	Then user should get logged in successfully
 	
@@ -67,7 +67,14 @@ Feature: Verify Checkout Login Interstitial
 	Then user click on checkout button in Cart page
 	When user click on SignIn link
 	And user click on Create a Account link
-	Then User is navigated to Create a Account page
+	Then Verify below Sub/Main Module of My Account 
+	|#Verify following elements in SignUp section	|
+		|SignUp_FirstName_txt						 	|
+		|SignUp_LastName_txt							|
+		|SignUp_EmailAddress						 	|
+		|SignUp_Password					         	| 
+		|SignUp_ReceivePromotion_chkBx					|
+		|SignUpPage_SignUp_btn							|
 
 	@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-10423 @CR-RK 	
 	Scenario: Verify that user is able to navigate back to checkout page after creating new account 

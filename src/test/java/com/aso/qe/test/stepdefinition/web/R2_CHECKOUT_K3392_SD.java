@@ -51,9 +51,9 @@ public class R2_CHECKOUT_K3392_SD extends CommonActionHelper {
 	public void user_will_verify_the_fields_in_SignIn_popup() throws Throwable {
 		assertTrue(isDisplayed(r2_MyAccount_PO.txtWelcomeDescription)); 
 		assertTrue(isDisplayed(r2_MyAccount_PO.txtEmailAddressDescription)); 
-		assertTrue(isDisplayed(r2_MyAccount_PO.inputEmailAddress_SignIn));
+		assertTrue(isDisplayed(r2_MyAccount_PO.inputEmailAddressSignIn));
 		assertTrue(isDisplayed(r2_MyAccount_PO.txtPasswordDescription)); 
-		assertTrue(isDisplayed(r2_MyAccount_PO.inputCreatePassword));
+		assertTrue(isDisplayed(r2_MyAccount_PO.inputPasswordSignIn));
 		assertTrue(isDisplayed(r2_MyAccount_PO.txtForgotYourPasswordDescription)); 
 		assertTrue(isDisplayed(r2_MyAccount_PO.btnSignIn));
 		assertTrue(isDisplayed(r2_MyAccount_PO.txtCreateAccountDescription));

@@ -71,3 +71,20 @@ And user clicks on SignIn link from global header
    Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
 	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails
+	
+	
+	
+	@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3613 @ZYP_CART_K3613-10760 @CR-AKK	
+Scenario: Verify that user should be able to view  proper error message while adding to cart  if a product has limited stock for pick-up 
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to L2 Mens clothing
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user is able to see the product category name in section title 
+	And user clicks on one of the product category and navigates to LThree 
+	And User is navigated to pdp page 
+	When enter the "MoreThanThresholdQuantity" to X in PDP
+	Then user click on Add to Cart Button 
+	 Then Verify the message on the page
+	   |# Following Error Message should show on the page|
+	   |Sorry|
+	
