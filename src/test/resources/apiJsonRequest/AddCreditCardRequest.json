@@ -1,22 +1,22 @@
 {
 "billingAddress": {
-"addressLine1": "sssss",
+"addressLine1": "white cloud apartment",
 "addressLine2": "333 square",
 "addressType": "BB",
 "city": "plano",
 "country": "US",
-"email1": "abc@abc.com",
-"firstName": "santosh",
-"lastName": "kumar",
-"phone1": "9898909124",
+"email1": "ravit@gmail.com",
+"firstName": "Ravi",
+"lastName": "Prasad",
+"phone1": "7643326576",
 "state": "TX",
 "zipCode": "75025"
 },
 "correlationId": "12345888",
-"creditCardHolderName": "santosh",
-"creditCardNumber": "4111111111111133",
+"creditCardHolderName": "RaviPrasad",
+"creditCardNumber": "4000021231111111",
 "defaultFlag": true,
-"expiryDate": "0220",
+"expiryDate": "0223",
 "token": "0245152126058289",
 "type": "VISA"
 }

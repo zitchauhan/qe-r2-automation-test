@@ -17,7 +17,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 	private static final Logger logger = Logger.getLogger(R2_Profile_API_SD.class);
 	public MiniCartJsonResponseHelper miniCartJsonResponseHelper;
 	//private String url;
-	private static String regEmailId;
+	public static String regEmailId;
 
 	@Given("^\"(.*?)\" endpoint for guest identity$")
 	public void endpoint_for_guest_identity(String Guestloginurl) throws Throwable {
@@ -47,7 +47,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		postRequestStr = postRequestStr.replace("REPLACE_EMAILID", regEmailId)
 				.replace("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword"));
 
-		initiateRestPostAPICallWithoutCookiesAndReqStr(endpoints, postRequestStr);
+		changePasswordLogInAPICall(endpoints, postRequestStr);
 	}
 
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for user registration$")
@@ -55,7 +55,6 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(RegistrationUrl);
 		logger.debug("END Point URL:"+endpoints);
 		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ registrationPostRequest+".json");
-		logger.debug("POST Request JSON:"+postRequestStr);
 		regEmailId= "test"+FrameWorkHelper.getRandomAlphabetic(6).toLowerCase()+"@yopmail.com";
 		postRequestStr = postRequestStr.replace("REPLACE_LOGONID",regEmailId)
 				.replaceAll("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword"));
@@ -205,13 +204,14 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" with \"(.*?)\" endpoint for change password of profile$")
 	public void with_endpoint_for_change_password_of_profile(String changepasswordurl, String requestPath) throws Throwable {
+		//httpCookies=response.getDetailedCookies();
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(changepasswordurl);
 		logger.debug("END Point URL:"+endpoints);
 		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ loadProps.getTestDataProperty(requestPath)+".json");
-		postRequestStr = postRequestStr.replace("REPLACE_EMAILID", regEmailId)
-				.replaceAll("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword")
-						.replaceAll("REPLACE_NEWPASSWORD", "Ravi@005@"));
-		initiateRestPostAPICallWithoutCookiesAndReqStr(endpoints, postRequestStr);
+		postRequestStr = postRequestStr.replace("REPLACE_EMAILID", regEmailId);
+		postRequestStr = postRequestStr.replaceAll("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword"));
+		postRequestStr = postRequestStr.replaceAll("REPLACE_NEWPASSWORD", "Ravi@1234");
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
 	}
 
 

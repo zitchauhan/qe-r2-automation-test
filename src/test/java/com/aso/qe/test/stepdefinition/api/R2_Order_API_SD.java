@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 
 import com.aso.qe.framework.api.helpers.JSONValidationUtils;
 import com.aso.qe.framework.api.helpers.MiniCartJsonResponseHelper;
+import com.aso.qe.framework.api.json.JsonReaderCommon;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -80,6 +81,15 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(orderUrl)+System.getProperty("PlacedOrderId")+"?zipCode="+loadProps.getTestDataProperty(extension);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
+	}
+	
+	@Given("^\"(.*?)\" with \"(.*?)\" endpoint for Place Order$")
+	public void with_endpoint_for_Place_Order(String url, String requestJson) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId");
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestJson+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_ORDERID", System.getProperty("OrderId"));
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
 	}
 
 }
