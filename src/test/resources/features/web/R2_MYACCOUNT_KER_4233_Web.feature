@@ -58,7 +58,7 @@ Scenario: Verify that Authenticated User is able to delete a Wish List
 	|#Verify following element in wishlist section|
 	|DeleteWishList_btn|	
 	And user clicks on Delete WishList
-	Then Verify that Create Your First Wish List button
+	Then Verify that Wish List is displayed
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11099 @CR-MS
@@ -147,7 +147,7 @@ Scenario: Verify that Authenticated user can create additional wish list
 Scenario: Verify that Authenticated User is able to cancel deleting a Wish List 
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user click on MyAccount
@@ -252,7 +252,7 @@ Scenario: Verify that Authenticated User is able to rename a Wish List
 	And user clicks on create
 	And Verify that Wish List is displayed 
 	
-     #KER-12894
+     
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-10497 @CR-MS
 Scenario: Verify the User is able to Share a wish list
     Given user launches the browser and navigates to "ASO_HOME" page 
@@ -291,7 +291,7 @@ Scenario: Verify the User is able to Share a wish list
 Scenario: Verify that Authenticated User is able to cancel deleting a Wish List 
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user click on MyAccount
@@ -415,7 +415,7 @@ Scenario: Verify that Authenticated User is able to delete a Wish List
 	|#Verify following element in wishlist section|
 	|DeleteWishList_btn|	
 	And user clicks on Delete WishList
-	Then Verify that Create Your First Wish List button	
+	Then Verify that Wish List is displayed	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11114 @CR-MS	
 Scenario: Verify that Authenticated user can create additional wish list
@@ -440,9 +440,31 @@ Scenario: Verify that Authenticated user can create additional wish list
 	|#Verify following element in wishlist section|
 	|browse_products_btn|
 	Then clicks on browse products
-	And verify user navigated home page	
+	And verify user navigated home page
+
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11100 @CR-MS
+Scenario: Verify that Authenticated User is able to view the Wish List Details
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	And user click on MyAccount
+	Then user click on WishList
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|Wishlist_createlist_lnk|
+	|WishlistItems_lnk|
+	And user clicks on WishListItems
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|WishList_Product_Img|
+	|WishList_Product_Eyebrow|
+	|WishList_Product_Tittle|
+	|WishList_Product_Review|
+	|WishList_Product_Price|	
 	
-     #KER-12894
+#     #KER-12894
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11108 @CR-MS
 Scenario: Verify the User is able to Share a wish list
     Given user launches the browser and navigates to "ASO_HOME" page 
@@ -493,6 +515,31 @@ Scenario: Verify that Authenticated User is able to Remove items from Wish List
 	And user click on remove on product card
 	Then Verify the message on the page
 	|Undo|	
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-10485 @CR-MS
+Scenario: Verify that Authenticated User is able to view the Wish List Details
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	And user click on MyAccount
+	Then user click on WishList
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|Wishlist_createlist_lnk|
+	|WishlistItems_lnk|
+	And user clicks on WishListItems
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|WishList_Product_Img|
+	|WishList_Product_Eyebrow|
+	|WishList_Product_Tittle|
+	|WishList_Product_Review|
+	|WishList_Product_Price|
+	
+	
+	
 	
 	
 	
