@@ -42,7 +42,7 @@ Feature: Verify Order API endpoint services
   @All-R2 @C1-Order @C2-GetOrder @api @R2_AAST-04 @CR-RT @ZYP_Order_Details_12589
   Scenario: TC_1 -Verify the Order details with SignIn user Json Response Details
     Given "OrderUrl" endpoint for order details
-     Then Validated response details of "orders[0].orderId"
+    Then Validated response details of "orders[0].orderId"
 
   @All-R2 @C1-Order @C2-AddShippingAddres @api @R2_AAST-04 @CR-RT @ZYP_AddShippingAddress_13550
   Scenario: TC_7 - Add the Shipping Address and validate the Schema and response details
@@ -102,3 +102,8 @@ Feature: Verify Order API endpoint services
   Scenario: TC_1 -Verify the profile placed orders Search by orderId and Zip code JSON Response with SignIn user
     Given "profileorders" by "PlacedOrderZipCode" endpoint for Search profile placed orders with order id and zip code
     Then Validated response details of "orders[0].orderNumber"
+
+  @All-R2 @C1-Order @C2-OrderDetails @api @R2_AAST-06 @CR-RT @ZYP_OrderDetails_14034
+  Scenario: TC_1 -Verify the Place order with SignIn user
+    Given "OrderUrl" with "PlaceOrderRequest" endpoint for Place Order
+    And Verify response status code as 200

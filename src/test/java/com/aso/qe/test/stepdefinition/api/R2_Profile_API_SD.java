@@ -214,6 +214,16 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
 	}
 
+	@Given("^\"(.*?)\" with \"(.*?)\" endpoint for forgot password of profile$")
+	public void with_endpoint_for_forgot_password_of_profile(String changepasswordurl, String requestPath) throws Throwable {
+		//httpCookies=response.getDetailedCookies();
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(changepasswordurl);
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ loadProps.getTestDataProperty(requestPath)+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_EMAILID", regEmailId);
+		
+		initiateRestPostAPICallWithoutCookiesAndReqStr(endpoints, postRequestStr);
+	}
 
 	@Given("^\"(.*?)\" by \"(.*?)\" endpoint with \"(.*?)\" for Add shipping Address of Order profile$")
 	public void by_endpoint_with_for_Add_shipping_Address_of_Order_profile(String url, String extension, String requestPath) throws Throwable {

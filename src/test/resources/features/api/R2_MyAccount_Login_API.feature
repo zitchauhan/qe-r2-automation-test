@@ -52,7 +52,7 @@ Feature: Verify MyAccount Login API endpoint service
     
     @All-R2 @C1-MyAccount @C2-Login @api @R2_AAST-05 @CR-RT @ZYP_MyAccount_ResetPassword_13199
      Scenario: TC_5 - Reset the Profile Password for verify the status code, schema validation and response details
-    Given "ResetPasswordUrl" with "RestPasswordRequest" endpoint for change password of profile
+    Given "ResetPasswordUrl" with "RestPasswordRequest" endpoint for forgot password of profile
     Then Verify response status code as 201
     And validate jsonSchema "RegistrationSchema"
     Then Validated response details of "identity.userId"
