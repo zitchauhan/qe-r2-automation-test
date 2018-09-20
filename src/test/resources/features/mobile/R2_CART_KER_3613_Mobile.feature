@@ -76,3 +76,15 @@ Then user should able to click on Signin button
     Then user clicks on the product card and navigates to PDP of the product
 	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails
 	
+	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3613 @ZYP_CART_K3613-10760 @CR-AKK	
+Scenario: Verify that user should be able to view  proper error message while adding to cart  if a product has limited stock for pick-up 
+Given user launches the browser and navigates to "ASO_HOME" page 
+And User clicks on the burger menu 
+	  Then User navigates to L3
+    Then user clicks on the product card and navigates to PDP
+	When enter the "MoreThanThresholdQuantity" to X in PDP
+	Then user click on Add to Cart Button 
+	 Then Verify the message on the page
+	   |# Following Error Message should show on the page|
+	   |Sorry|
+	

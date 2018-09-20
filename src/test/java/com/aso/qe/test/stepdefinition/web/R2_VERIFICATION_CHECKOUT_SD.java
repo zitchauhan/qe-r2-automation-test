@@ -76,7 +76,12 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2CheckoutPo.btnEditShippingAddress));
 				else if (currentElement.equalsIgnoreCase("checkout_ShippingAddress_txt"))
 					assertTrue(isDisplayed(r2CheckoutPo.checkout_ShippingAddress_txt));
-				
+				else if (currentElement.equalsIgnoreCase("checkout_ShippingAddress_AVSModelSuggestedAddress"))
+					assertTrue(isDisplayed(r2CheckoutPo.selectSuggestedAddress));
+				else if (currentElement.equalsIgnoreCase("checkout_ShippingAddress_AVSModelSelectAddress_btn"))
+					assertTrue(isDisplayed(r2CheckoutPo.btnSelectedAddress)); 
+ 
+
 				//======================================
 				// In-Store Pickup(Start)
 				else if (currentElement.equalsIgnoreCase("MePickUp_Drpdwn"))
@@ -218,6 +223,13 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2CheckoutPo.btnEditCart));
                 else if (currentElement.equalsIgnoreCase("DetailOrderSummary_txt"))
                     assertTrue(isDisplayed(r2CheckoutPo.DetailOrderSummary_txt));
+                else if (currentElement.equalsIgnoreCase("txtOrderSuccesfullStatus"))
+                    assertTrue(isDisplayed(r2CheckoutPo.txtOrderSuccesfullStatus));
+                else if (currentElement.equalsIgnoreCase("OrderConfirmationPage_OrderNumber"))
+                    assertTrue(isDisplayed(r2CheckoutPo.orderConfirmationPage_OrderNumber));
+                else if (currentElement.equalsIgnoreCase("OrderConfirmationPage_OrderNumber_txt"))
+                    assertTrue(isDisplayed(r2CheckoutPo.orderConfirmationPage_OrderNumber_txt)); 
+ 
 
 				//**********ITems under Order Summary (End)
 				//Order Summary(End)
@@ -254,6 +266,10 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 						assertTrue(isDisplayed(r2CheckoutPo.chooseCreditcard_Dd));
 					else if (currentElement.equalsIgnoreCase("AddNewCreditCard_Txt"))
 						assertTrue(isDisplayed(r2CheckoutPo.AddNewCreditCard_Txt));
+					else if (currentElement.equalsIgnoreCase("Checkout_CreditCardPay_ImgLogo"))
+											assertTrue(isDisplayed(r2CheckoutPo.Checkout_CreditCardPay_ImgLogo)); 
+					 
+
 				//*****************Payment Method (END)
 					
 				//****************Gift Card(Start)	

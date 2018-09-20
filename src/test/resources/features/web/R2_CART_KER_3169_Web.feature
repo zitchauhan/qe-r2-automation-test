@@ -13,12 +13,11 @@ Scenario: To verify open field to enter promotion code
     Then user clicks on one of the product category and navigates to LThree
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
-	When enter the "EnterQuantityGreaterThenOne" to X 
-	And user view and Applied Promotions/Discounts "OrderLevelDiscount" 
-	Then Verify below Sub/Main Module of Cart Page
-	|# Then discount is displayed in Order Summary|
-	|Promocode_Txt|
-	Then user click on checkout button in Cart page
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|	
+		|OrderSummary_Header|
+		|Plus_AddPromoCode_btn|
+	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3169 @ZYP_CHECKOUT_K3166-8097 @CR-DPK
@@ -34,9 +33,9 @@ Scenario: To verify open field to enter promotion code
     Then user clicks on one of the product category and navigates to LThree
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
-	And user click on promo code field 
-	Then Verify below Sub/Main Module of Cart Page 
-		|# Verify following elements in Cart page"Order Summary"|
+	When user clicks on Add Promo code link under Cart Order Summary
+	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page"Order Summary"|
 		|OrderSummary_Header|
 		|Minus_HidePromo_btn|
 		|EnterPromoCode_input|

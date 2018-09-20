@@ -4,8 +4,8 @@ Feature: Employee Discount
 Scenario: To verify that an existing ASO employee is able to see the employee discount on cart page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
-	And user enter the valid emailaddress "EmployeeUserName" 
-	And user enter the valid password "EmployeePass" 
+	And user enter the valid emailaddress "EmployeeEmailAddress" 
+	And user enter the valid password "EmployeePassword" 
 	And user click on signin button 
 	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
@@ -25,8 +25,8 @@ Scenario: To verify that an existing ASO employee is able to see the employee di
 Scenario: To verify that an existing ASO employee is able to see the employee discount on cart page when only few of the items are applied with employee discount
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
-	And user enter the valid emailaddress "EmployeeUserName" 
-	And user enter the valid password "EmployeePass" 
+	And user enter the valid emailaddress "EmployeeEmailAddress" 
+	And user enter the valid password "EmployeePassword" 
 	And user click on signin button 
 	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
@@ -48,9 +48,42 @@ Scenario: To verify that an existing ASO employee is able to see the employee di
 	And user verify the employee discount in order summery
 
 	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4238 @ZYP_CHECKOUT_K4238-8053 @CR-AKK
+Scenario: To verify that an existing ASO employee is able to see the employee discount on cart page when only few of the items are applied with employee discount
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And clicks on SignIn button in home page 
+	And user enter the valid emailaddress "EmployeeEmailAddress" 
+	And user enter the valid password "EmployeePassword" 
+	And user click on signin button 	
+When user clicks on Cart icon
+Then user navigate to Cart page
+Then Verify below Sub/Main Module of Cart Page
+		|# Verify following elements in Cart page "Your Cart "|
+		|SubTotal_txt|
+		|EstimatedShipping_txt|
+		|EstimatedTaxes_txt|
+		|Total_txt|
+
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4238 @ZYP_CHECKOUT_K4238-10747 @CR-AKK	
+	Scenario: To verify that 'Free Shipping' is not applied through promotion for an ASO employee if received employee discount on cart page
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And clicks on SignIn button in home page 
+	And user enter the valid emailaddress "EmployeeEmailAddress" 
+	And user enter the valid password "EmployeePassword" 
+	And user click on signin button 	
+    When user clicks on Cart icon
+    Then user navigate to Cart page
+	Then system should not display the estimated shipping discount on cart page
 	
-	
-	
-	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4238 @ZYP_CHECKOUT_K4238-10745 @CR-AKK
+Scenario: To verify that an academy user who is not an ASO employee should not see the employee discount on cart page
+Given user launches the browser and navigates to "ASO_HOME" page 
+And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	When user clicks on Cart icon
+    And user navigate to Cart page
+    Then verify employee discount should not display
 
 	

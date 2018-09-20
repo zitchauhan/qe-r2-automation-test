@@ -79,9 +79,7 @@ Scenario: Verify that user able to update the profile
 	When user click on change password icon
 	Then Verify below Sub/Main Module of My Account 
 	|#Verify following elements in Profile > change password section|
-		|ChangePassworPage_CurrentPassword_btn							|
-		|ChangePassworPage_NewPassword_txt								|
-		|ChangePassworPage_Update_btn									|
+			|ChangePassworPage_Update_btn									|
 		|ChangePassworPage_Cancel_btn									|
 	And user enters current password
 	And user enters new password
@@ -328,7 +326,7 @@ Scenario: Verify that user can change the password in Profile section.
 	When user click on change password icon
 	Then Verify below Sub/Main Module of My Account 
 	|#Verify following elements in Profile > change password section|
-		|ChangePassworPage_NewPassword_txt								|
+		
 		|ChangePassworPage_Update_btn									|
 		|ChangePassworPage_Cancel_btn									|
 	And user enters currentpassword "Password"
@@ -355,7 +353,7 @@ Scenario: Verify that user can see the error message in password field.
 	When user click on change password icon
 	Then Verify below Sub/Main Module of My Account 
 	|#Verify following elements in Profile > change password section|
-		|ChangePassworPage_NewPassword_txt								|
+		
 		|ChangePassworPage_Update_btn									|
 		|ChangePassworPage_Cancel_btn									|
 	And user enters currentpassword "invalidpasswordWithLessThan8Char"

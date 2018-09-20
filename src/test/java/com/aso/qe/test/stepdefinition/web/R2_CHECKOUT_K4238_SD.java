@@ -20,6 +20,7 @@ public class R2_CHECKOUT_K4238_SD extends CommonActionHelper {
 	
 	R2_CheckOut_PO r2CheckOutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+	R2_Cart_PO r2CartPO=PageFactory.initElements(driver, R2_Cart_PO.class);
 	String productName="";
 	
 	@And("^user verify the employee discount is visible at item level$")
@@ -65,7 +66,19 @@ public class R2_CHECKOUT_K4238_SD extends CommonActionHelper {
 		
 	}
 
+
+	@Then("^system should not display the estimated shipping discount on cart page$")
+	public void system_should_not_display_the_estimated_shipping_discount_on_cart_page() throws Throwable {
+		String amount=r2CartPO.txt_EstimatedShipping.getText();
+		String free="Free";
+		assertFalse(amount.contains(free));
+	}
 	
+	@Then("^verify employee discount should not display$")
+	public void verify_employee_discount_should_not_display() throws Throwable {
+		assertTrue(isDisplayed(r2CartPO.txt_EstimatedShipping));
+	}
+
 
 	
 }

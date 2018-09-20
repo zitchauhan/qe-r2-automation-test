@@ -22,7 +22,7 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 	public void user_clicks_on_payment_tab() throws Throwable {
 		
 		if("mobile".equalsIgnoreCase(testtype)){
-			assertTrue(clickOnButton(myAccountPo.myAccount));
+			assertTrue(clickOnButton(myAccountPo.myAccount_txt_Mobile));
 			assertTrue(clickOnButton(myAccountPo.lnkPayment_Mobile));	
 		}else
 		{

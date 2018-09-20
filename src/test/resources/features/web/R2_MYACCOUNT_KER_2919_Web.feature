@@ -237,7 +237,7 @@ Scenario: Verify if entered address is validated by AVS
  	And Verify that Credit Card details as entered are saved in User Profile.
  	
  	
-@R2_Web @R2_WAST-05  @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK @AutomationSanityR2
+@R2_Web @R2_Regression @R2_All  @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK 
 Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -270,12 +270,9 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	Then click on Add button on credit card page
 	And User searches a product "SanitySKUNumber" and navigates to PDP
 	And user click on Add to Cart Button
-	And user is navigated to Add to cart Notification popup  
 	And user will click on View Cart button 
-	And user navigate to Cart page
 	And user will click on Checkout button and navigates to Checkout page     
 	Then User verifies that in Payment section credit card "CreditCardNumber" is pre-populated by default
-		 	
  		
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919 @ZYP_CART_K2919-10698 @CR-DPK 
 Scenario: Verify that the City and State are auto populated when Zip Code is entered

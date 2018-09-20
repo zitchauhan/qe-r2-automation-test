@@ -1,6 +1,6 @@
 Feature: To verify Remove Promo code in Order Summary 
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3167 @ZYP_CHECKOUT_K3167-8094 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3167 @ZYP_CHECKOUT_K3167-8094 @CR-AKK 
 Scenario: To verify Remove Promo code in Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
@@ -20,7 +20,7 @@ Scenario: To verify Remove Promo code in Order Summary
 	And User clicks on Remove Promo code link 
 	Then Promo code is Removed
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3167 @ZYP_CHECKOUT_K3167-8093 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3167 @ZYP_CHECKOUT_K3167-8093 @CR-AKK 
 Scenario: To verify Promo code applied in Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
@@ -37,7 +37,7 @@ Scenario: To verify Promo code applied in Order Summary
 	|# Then user is displayed Promo code XXXXX applied |
 	|Discount_Txt|
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3167 @ZYP_CHECKOUT_K3167-8095 @CR-AKK	
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3167 @ZYP_CHECKOUT_K3167-8095 @CR-AKK	
 Scenario: To verify Promo code Removed in Order Summary
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing

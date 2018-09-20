@@ -73,5 +73,9 @@ public class R2_CHECKOUT_K3338_SD extends CommonActionHelper {
 	 assertFalse(isDisplayed(r2CheckOutPo.plusIconGiftCard));
 	}
 
+	@Then("^verify the paypal radio option is not displayed$")
+	public void verify_the_paypal_radio_option_is_not_displayed() throws Throwable {
+		assertFalse(isDisplayed(r2CheckOutPo.PayPal_radioBtn));
+	}
 	
 }

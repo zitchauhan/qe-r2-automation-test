@@ -21,6 +21,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		private static final Logger logger = Logger.getLogger(R2_CheckOut_PO.class);
 
 	/**************** START LOCAL OBJETCS AND DECLARATIONS***********************/
+	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);	
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	public String nullvalue = "";
 	/*************** END LOCAL OBJETCS AND DECLARATIONS ************************/
@@ -261,7 +262,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[text()='SHIPPING INFORMATION']")
 	public WebElement checkout_ShippingInformation_Header_txt;
 	
-	@FindBy(xpath = "//*[text()='SHIPPING ADDRESS']/..")
+	@FindBy(xpath = "//*[text()='SHIPPING ADDRESS']/../div[2]/..") //CR-DPK 20-sept
 	public WebElement checkout_ShippingAddress_txt;
 	
 	@FindBy(xpath = "//*[@data-auid='checkout_unauth_description_signin_link']//a")
@@ -443,6 +444,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 		@FindBy(xpath="//*[@data-auid='facetdrawerundefined']/button")
 		public WebElement ExpandIcon_Link;
+		
+		@FindBy(xpath="//*[@data-auid='btnbutton-1']")
+		public WebElement OrderConfirmation_GuestUser_PasswordSubmitBtn; 
 		    
 		       //**********ITems under Order Summary (End)
 		//Order Summary(End)
@@ -464,7 +468,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[text()='Please enter a valid security code']")public WebElement PleaseEnteRaValidSecurityCode_Txt; 
 		@FindBy(xpath="//*[contains(text(),'Visa ending in')]")public WebElement chooseCreditcard_Dd; 
         @FindBy(xpath="//*[@data-auid='undefined_listOption_1']")public WebElement AddNewCreditCard_Txt;
-		//*****************Payment Method (END)
+        @FindBy(xpath="//*[@name='creditcardField']/../span[2]/img")public WebElement Checkout_CreditCardPay_ImgLogo;
+        //*****************Payment Method (END)
 		
 		//****************Gift Card(Start)
 		
@@ -515,10 +520,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   @FindBy(xpath="//input[@id='paypal']/..")public WebElement rdPaypal;// PayPal_radioBtm;
 	   @FindBy(xpath="//*[text()=' Checkout']/..")public WebElement PayPalCheckOut_Btn;
-	@FindBy(xpath = "//*[contains(text(),'Save Payment Info for Later')]")
-	public WebElement savePaymentInfoForLater_checkBox;
+	@FindBy(xpath = "//*[contains(text(),'Save Payment Info for Later')]")public WebElement savePaymentInfoForLater_checkBox;
 	 
-	   
+	@FindBy(xpath = "//*[text()='Order Number']/../p[3]")public WebElement orderConfirmationPage_OrderNumber;
+	 
+	@FindBy(xpath = "//*[text()='Order Number']")public WebElement orderConfirmationPage_OrderNumber_txt; 
+ 
+
 	   
 	 //*************** Billing Information(End)
 	   
@@ -849,6 +857,28 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		taxDisplayed = taxDisplayed.replace("$", "");
 		return Float.parseFloat(taxDisplayed);
 	}
- 
-    
+	
+	//Start  CR-DPK KER-2919
+	public void verifyShippingAddress(String arg1) throws InterruptedException
+	{
+		
+		if(isDisplayed(checkout_ShippingAddress_txt)) {
+			
+		}
+		
+		else {
+			addAddressInCheckoutPage();
+		}
+	}
+	
+	public void addAddressInCheckoutPage() throws InterruptedException {
+		setInputText(myAccountPo.txtFirstNameInAddCreditCard, webPropHelper.getTestDataProperty("UpdateFirstName"));
+		setInputText(myAccountPo.txtLastNameInAddCreditCard, webPropHelper.getTestDataProperty("UpdateLastName"));
+		setInputText(myAccountPo.txtAddressInAddCreditCard, webPropHelper.getTestDataProperty("UpdateAddress"));
+		setInputText(inputCheckoutPhoneNumber, webPropHelper.getTestDataProperty("UpdatePhoneNumber"));
+		setInputText(myAccountPo.txtZipCodeInAddCreditCard, webPropHelper.getTestDataProperty("UpdateZipcode"));
+		Thread.sleep(3000);
+		assertTrue(clickOnButton(btnGoToShippingMethod));
+	}
+	//End CR-DPK KER-2919
 }
