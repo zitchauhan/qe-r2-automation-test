@@ -138,7 +138,7 @@ Scenario: Verify the user is navigated to the PayPal page
 		|#verify gift card related things are not displayed |
 		|PayPalCheckOut_Btn|	
 	Then Verify paypal button is clicked 
-	#	
+		
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @1HR-R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8261 @CR-AKK 
@@ -226,7 +226,7 @@ Scenario: Verify the authenticated user cannot pay the remaining or partial orde
 @ZYP_CHECKOUT_3338-8257 @CR-AKK
 Scenario: Verify guest user cannot select Paypal as Payment method on checkout for SOF products
 Given user launches the browser and navigates to "ASO_HOME" page 
-	When User searches a product "productName" and navigates to PDP 
+	When User searches a product "SOFSKUNumber" and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up  
 	And user enter First name "FirstName" 
@@ -235,4 +235,48 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page 
+	Then verify the paypal radio option is not displayed 
+	
+	@R2_Mobile @R2_Regression @R2_All @P-Low @1HR-R2 @C-Checkout @KER-3338 
+@ZYP_CHECKOUT_3338-8260 @CR-AKK
+Scenario: Verify authenticated user cannot select Paypal as Payment method on checkout for SOF products
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	When User searches a product "SOFSKUNumber" and navigates to PDP 
+	And user click on Add to Cart Button 
+	Then user click on checkout from ATC pop up  
+	And user click on Go To Shipping Method button in Checkout page
+	Then verify the paypal radio option is not displayed 
+	
+	@R2_Mobile @R2_Regression @R2_All @P-Low @1HR-R2 @C-Checkout @KER-3338 
+@ZYP_CHECKOUT_3338-8263 @CR-AKK
+Scenario: Verify the user is navigated back to the Academy.com once PayPal payment process is done	
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	And User navigates to LThree 
+	And user clicks on the product card and navigates to PDP 
+	And user click on Add to Cart Button 
+	Then user click on checkout from ATC pop up  
+	And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "zipcode" 
+	And user click on Go To Shipping Method button in Checkout page 
+	Then user click on paypal radiobtn 
+	Then user switch to iframe to verify paypalcheckoutBtn 
+	Then Verify below Sub/Main Module of Checkout Page 
+		|#verify gift card related things are not displayed |
+		|PayPalCheckOut_Btn| 
+	Then Verify paypal button is clicked 
+	Then user switch to window of paypal 
+	And enter the paypal login "PayPalEmail" "PayPalPassword" 
+	Then Verify below Sub/Main Module of Checkout Page 
+		|#%%%%%%   Billing Information %%%%%%%%%%|
+		|EditPayment_Link|
+	
 	

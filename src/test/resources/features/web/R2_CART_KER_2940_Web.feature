@@ -11,8 +11,7 @@ Feature: Verify Itemized Subtotal in Cart
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     Then User clicks on ASO Logo and should be navigated to Home Page
-    And User navigates to LThree
-    Then user clicks on the product card and navigates to PDP
+	Then User searches a product "SKUForWhiteGlove" and navigates to PDP
     Then user click on Add to Cart Button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
@@ -40,8 +39,7 @@ Feature: Verify Itemized Subtotal in Cart
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     Then User clicks on ASO Logo and should be navigated to Home Page
-    And User navigates to LThree
-    Then user clicks on the product card and navigates to PDP
+    Then User searches a product "SKUForWhiteGlove" and navigates to PDP
     Then user click on Add to Cart Button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
