@@ -140,7 +140,7 @@ Scenario: TC_8-Verify Cat Nav - View Cart
 #	And User navigates to L2 Mens clothing 
 #	And user clicks on one of the subcategory and navigates to LTwo 
 #	And user clicks on one of the product category and navigates to LThree 
-#   Then User searches a product "ProductName" and navigates to PDP
+#   Then User searches a product "productName" and navigates to PDP
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP
 	And user click on Add to Cart Button 
@@ -154,7 +154,7 @@ Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal
 #	And User navigates to L2 Mens clothing 
 #	And user clicks on one of the subcategory and navigates to LTwo 
 #	And user clicks on one of the product category and navigates to LThree 
-#	 Then User searches a product "ProductName" and navigates to PDP
+#	 Then User searches a product "productName" and navigates to PDP
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP
 	And user click on Add to Cart Button 	
@@ -169,7 +169,7 @@ Scenario: TC_10-Verify Apply Promotion
 #	And User navigates to L2 Mens clothing
 #    Then user clicks on one of the subcategory and navigates to LTwo
 #    Then user clicks on one of the product category and navigates to LThree
-	 Then User searches a product "ProductName" and navigates to PDP
+	 Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -203,7 +203,7 @@ Scenario: TC_12-Verify Update Quantity
 #	And  User navigates to L2 Mens clothing 
 #	Then  user clicks on one of the subcategory and navigates to LTwo 
 #	Then  user clicks on one of the product category and navigates to LThree 
-     Then User searches a product "ProductName" and navigates to PDP
+     Then User searches a product "productName" and navigates to PDP
 	Then  user click on Add to Cart Button 
 	And  user will click on View Cart button 
 	And  user navigate to Cart page 
@@ -223,7 +223,7 @@ Scenario: TC_13-To Verify Image for selected SKU is be displayed on product blad
 #	And User navigates to L2 Mens clothing 
 #	Then user clicks on one of the subcategory and navigates to LTwo  
 #	Then user clicks on one of the product category and navigates to LThree  
-	Then User searches a product "ProductName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
@@ -241,7 +241,7 @@ Scenario: TC_14-Verify Remove Item from Cart
 #	And  User navigates to L2 Mens clothing 
 #	Then  user clicks on one of the subcategory and navigates to LTwo 
 #	Then  user clicks on one of the product category and navigates to LThree 
-	 Then User searches a product "ProductName" and navigates to PDP
+	 Then User searches a product "productName" and navigates to PDP
 	Then  user click on Add to Cart Button 
 	And  user will click on View Cart button 
 	And  user navigate to Cart page 
@@ -257,7 +257,7 @@ Scenario: TC_15-Verify User Able to Checkout, if no errors in cart
 #	And  User navigates to L2 Mens clothing 
 #	Then  user clicks on one of the subcategory and navigates to LTwo 
 #	Then  user clicks on one of the product category and navigates to LThree 
-	 Then User searches a product "ProductName" and navigates to PDP
+	 Then User searches a product "productName" and navigates to PDP
 	Then  user click on Add to Cart Button 
 	When  user click on view cart button 
 	Then  Verify below Sub/Main Module of Cart Page 
@@ -271,7 +271,7 @@ Scenario: TC_16-Verify Add Shipping Address
 #	And User navigates to L2 Mens clothing
 #   Then user clicks on one of the subcategory and navigates to LTwo
 #   Then user clicks on one of the product category and navigates to LThree
-	 Then User searches a product "ProductName" and navigates to PDP
+	 Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user navigate to Cart page
@@ -292,7 +292,7 @@ Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated
 #	And User navigates to L2 Mens clothing
 #    Then user clicks on one of the subcategory and navigates to LTwo
 #    Then user clicks on one of the product category and navigates to LThree
-	 Then User searches a product "ProductName" and navigates to PDP
+	 Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page
@@ -321,7 +321,7 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated
 #	And User navigates to L2 Mens clothing
 #    Then user clicks on one of the subcategory and navigates to LTwo
 #    Then user clicks on one of the product category and navigates to LThree
-	 Then User searches a product "ProductName" and navigates to PDP
+	 Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button
 	Then user is navigated to Add to cart Notification popup  
 	And user will click on View Cart button 
@@ -350,7 +350,7 @@ Scenario: TC_19-Verify Sign In During Checkout
 #	And User navigates to L2 Mens clothing 
 #	And user clicks on one of the subcategory and navigates to LTwo 
 #	And user clicks on one of the product category and navigates to LThree  
-	Then User searches a product "ProductName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -369,7 +369,7 @@ Scenario: TC_20- Verify Edit cart items from Order summary
 #	And  User navigates to L2 Mens clothing 
 #	And  user clicks on one of the subcategory and navigates to LTwo 
 #	And  user clicks on one of the product category and navigates to LThree 
-	 Then User searches a product "ProductName" and navigates to PDP
+	 Then User searches a product "productName" and navigates to PDP
 	And  user click on Add to Cart Button 
 	And  user will click on View Cart button 
 	And  user navigate to Cart page 
@@ -388,7 +388,7 @@ Scenario: TC_21-Verify Order Summary
 #	And  User navigates to L2 Mens clothing 
 #	And  user clicks on one of the subcategory and navigates to LTwo 
 #	And  user clicks on one of the product category and navigates to LThree 
- Then User searches a product "ProductName" and navigates to PDP
+ Then User searches a product "productName" and navigates to PDP
 	And  user click on Add to Cart Button 
 	And  user will click on View Cart button 
 	And  user navigate to Cart page 
@@ -416,7 +416,7 @@ Scenario: TC_23- Verify all broken URL's on Cart page
 #	And User navigates to L2 Mens clothing 
 #	And user clicks on one of the subcategory and navigates to LTwo 
 #	And user clicks on one of the product category and navigates to LThree 
-    Then User searches a product "ProductName" and navigates to PDP
+    Then User searches a product "productName" and navigates to PDP
     And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	Then verfy all link url's status code is 200 
@@ -427,7 +427,7 @@ Scenario: TC_24- Verify all broken URL's on Checkout page
 #	And User navigates to L2 Mens clothing 
 #	Then user clicks on one of the subcategory and navigates to LTwo 
 #	Then user clicks on one of the product category and navigates to LThree 
-	 Then User searches a product "ProductName" and navigates to PDP
+	 Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user click on view cart button 
 	When user click on checkout button in Cart page 
@@ -450,7 +450,7 @@ Scenario: TC_26- Verify all broken Images on Cart page
 #	And User navigates to L2 Mens clothing 
 #	And user clicks on one of the subcategory and navigates to LTwo 
 #	And user clicks on one of the product category and navigates to LThree 
-	 Then User searches a product "ProductName" and navigates to PDP
+	 Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	Then verfy all Image link urls status code is 200
@@ -461,7 +461,7 @@ Scenario: TC_27- Verify all broken Images on Checkout page
 #	And User navigates to L2 Mens clothing 
 #	Then user clicks on one of the subcategory and navigates to LTwo 
 #	Then user clicks on one of the product category and navigates to LThree 
-	 Then User searches a product "ProductName" and navigates to PDP
+	 Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user click on view cart button 
 	When user click on checkout button in Cart page 
