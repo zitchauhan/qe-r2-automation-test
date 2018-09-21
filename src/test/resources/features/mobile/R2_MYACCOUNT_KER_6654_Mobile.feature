@@ -85,7 +85,7 @@ Given  user launches the browser and navigates to "ASO_HOME" page
 		|#verify user to be able to login with change password |
 		|ProfilePage_ChangePassword_btn|
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10181 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10181 @CR-RKA
 Scenario: Verify the user is not able to sign with the old password
 Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 

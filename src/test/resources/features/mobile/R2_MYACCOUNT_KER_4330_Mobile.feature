@@ -53,7 +53,7 @@ Scenario: Verify that user is able to view BOPIS order details before pickup
     |#Verify following elements in my account order details|
      |Order_View_Details_Btn|    
      
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4330 @ZYP_MYACCOUNT_K4330-10936 @CR-MS
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4330 @ZYP_MYACCOUNT_K4330-10936 @CR-MS
 Scenario: Verify the details in order details section  
     Given user launches the browser and navigates to "ASO_HOME" page
    Then User clicks on the burger menu 
