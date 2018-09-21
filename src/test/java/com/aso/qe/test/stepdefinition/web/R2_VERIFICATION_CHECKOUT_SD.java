@@ -21,10 +21,11 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 
 	@Then("^Verify below Sub/Main Module of Checkout Page$")
 	public void verify_below_Sub_Main_Module_of_Checkout_Page(DataTable arg1) throws Throwable {
+		String currentElement = null;
 		try {
 			List<List<String>> elements = arg1.raw();
 			for (int i = 1; i < elements.size(); i++) {
-				String currentElement = elements.get(i).get(0);
+				currentElement = elements.get(i).get(0);
 				//////////////////////////// Starts CR-SK
 				// ===============================================================================
 				//// Checkout page
@@ -413,6 +414,10 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 			}
 		} catch (NullPointerException e) {
 			logger.error("This test-step has been failed");
+		}
+		catch (AssertionError a) {
+			logger.error("Element " + currentElement + " is not present on screen.");
+			throw new AssertionError("Element <" + currentElement + "> is not present on application page .");
 		}
 	}
 

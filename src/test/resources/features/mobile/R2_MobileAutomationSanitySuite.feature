@@ -187,25 +187,25 @@ Scenario: TC_10-Verify Apply Promotion
 	When enter the "SanityOrderLevelQuantity" to X 
 	Then verify Promo code discount is applied 
 	
-@R2_Mobile @R2_MAST-11 @P-Highest @C-Cart @KER-3127 @ZYP_K3127-8166_M @CR-AKK 
-@AutomationSanityR2 
-Scenario: TC_11- Verify Apply Promotion / Remove Promotion
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-#	#And User navigates to LThree 
-#	##And user clicks on the product card and navigates to PDP 
-	Then User searches a product "productName" and navigates to PDP
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	When enter the "SanityEnterQuantityGreaterThenOne" to X 
-	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount" 
-	Then Verify below Sub/Main Module of Cart Page 
-		|# verify the following element in checkout order summary page|
-		|RemoveFromCart_Btn| 
-	And User clicks on Remove Promo code link 
-	Then Promo code is Removed 
-	
+#@R2_Mobile @R2_MAST-11 @P-Highest @C-Cart @KER-3127 @ZYP_K3127-8166_M @CR-AKK 
+#@AutomationSanityR2 
+#Scenario: TC_11- Verify Apply Promotion / Remove Promotion
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	And User clicks on the burger menu 
+##	#And User navigates to LThree 
+##	##And user clicks on the product card and navigates to PDP 
+#	Then User searches a product "productName" and navigates to PDP
+#	And user click on Add to Cart Button 
+#	And user will click on View Cart button 
+#	And user navigate to Cart page 
+#	When enter the "SanityEnterQuantityGreaterThenOne" to X 
+#	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount" 
+#	Then Verify below Sub/Main Module of Cart Page 
+#		|# verify the following element in checkout order summary page|
+#		|RemoveFromCart_Btn| 
+#	And User clicks on Remove Promo code link 
+#	Then Promo code is Removed 
+#	
 @R2_Mobile @R2_MAST-12 @P-Highest @C-Cart @KER-2942 @ZYP_K2942-8044_M @CR-AKK 
 @AutomationSanityR2 
 Scenario: TC_12-Verify Update Quantity 

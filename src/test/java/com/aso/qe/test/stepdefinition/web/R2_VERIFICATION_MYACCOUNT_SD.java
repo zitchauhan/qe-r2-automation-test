@@ -24,11 +24,11 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 
 	@Then("^Verify below Sub/Main Module of My Account$")
 	public void Verify_below_Sub_Main_Module_of_My_Account(DataTable arg1) throws Throwable {
-
+		String currentElement = null;
 		try {
 			List<List<String>> elements = arg1.raw();
 			for (int i = 1; i < elements.size(); i++) {
-				String currentElement = elements.get(i).get(0);
+				currentElement = elements.get(i).get(0);
 				// ===============================================================================
 				//// Home Page
 				// ===============================================================================
@@ -425,6 +425,10 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 			}
 		} catch (NullPointerException e) {
 			logger.error("This test-step has been failed");
+		}
+		catch (AssertionError a) {
+			logger.error("Element " + currentElement + " is not present on screen.");
+			throw new AssertionError("Element <" + currentElement + "> is not present on application page .");
 		}
 	}
 

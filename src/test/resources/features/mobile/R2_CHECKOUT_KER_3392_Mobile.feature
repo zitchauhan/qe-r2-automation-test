@@ -46,7 +46,7 @@ Feature: Verify Checkout Login Interstitial
 	When user click on SignIn link
 	And  user will verify the fields in SignIn popup
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8149 @CR-RK 
+@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8149 @CR-RK 
 	Scenario: Verify if user can create an account from Not a member? Create an account link
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 

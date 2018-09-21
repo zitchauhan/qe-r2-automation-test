@@ -268,7 +268,7 @@ Scenario: Verify if entered address is validated by AVS
  	And Verify that Credit Card details as entered are saved in User Profile.
  	
  	
- @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK @AutomationSanityR2
+ @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK 
 Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
@@ -302,7 +302,7 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
  	Then User verifies that city and State are populated automatically
 	Then click on Add button on credit card page
 #	/hen User clicks on ASO Logo and should be navigated to Home Page
-	And User searches a product "SanitySKUNumber" and navigates to PDP
+	And User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page     
