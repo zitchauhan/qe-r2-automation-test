@@ -79,6 +79,13 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		System.setProperty("AddressId", addressID);
 	}
 
+	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for get the shipping address of a profile$")
+	public void endpoint_with_for_get_the_shipping_address_of_a_profile(String url, String extension) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+"r2/"+System.getProperty("ProfileId")+extension;
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestAPICallWithCookie(endpoints);
+	}
+	
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for getting Wishlist of a profile$")
 	public void endpoint_with_for_getting_Wishlist_of_a_profile(String Addurl, String extension) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
@@ -94,10 +101,17 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 	public void endpoint_for_removing_by(String Addurl, String extension, String Id) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension+System.getProperty(Id);
 		logger.debug("END Point URL:"+endpoints);
-		//initiateRestDeleteAPICall(endpoints);
+		initiateRestPostAPICallWithCookiesAndWithOutBody(endpoints);
+	}
+	
+	@Given("^\"(.*?)\" and \"(.*?)\" endpoint for Wishlist removing \"(.*?)\" by \"(.*?)\"$")
+	public void and_endpoint_for_Wishlist_removing_by(String url, String r2extension, String extension, String id) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+loadProps.getTestDataProperty(r2extension)+System.getProperty("ProfileId")+extension+System.getProperty(id);
+		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithCookiesAndWithOutBody(endpoints);
 	}
 
+	
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for getting gift card details of a profile$")
 	public void endpoint_with_for_getting_gift_card_details_of_a_profile(String Addurl, String extension) throws Throwable {
 		System.setProperty("GiftWalletId","");
@@ -234,9 +248,19 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 				.replace("REPLACE_LASTNAME", FrameWorkHelper.getRandomAlphabetic(8))
 				.replace("REPLACE_PHONENUMBER", FrameWorkHelper.getRandomNumber(10))
 				.replace("REPLACE_ORDERID", System.getProperty("OrderId"))
-				.replace("REPLACE_ADDRESS", FrameWorkHelper.getRandomAlphabetic(8))
-				;
+				.replace("REPLACE_ADDRESS", FrameWorkHelper.getRandomAlphabetic(8));
 
 		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
+	}
+	
+	@Given("^\"(.*?)\" by \"(.*?)\" endpoint with \"(.*?)\" for update the shipping address of a order$")
+	public void by_endpoint_with_for_update_the_shipping_address_of_a_order(String url, String extension, String requestPath) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+"PUT/"+System.getProperty("OrderId")+extension;
+		logger.debug("END Point URL:"+endpoints);
+		JSONObject shippingAddressjsonObj = getShippingAddressDetails();
+		/*JSONObject addressjsonObject = getFirstAddressDetails();
+		String addressId = (String) addressjsonObject.get("addressId");
+		addressjsonObject.put("phone1", FrameWorkHelper.getRandomNumber(10));*/
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, shippingAddressjsonObj.toJSONString());
 	}
 }

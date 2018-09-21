@@ -44,13 +44,19 @@ Feature: Verify Order API endpoint services
     Given "OrderUrl" endpoint for order details
     Then Validated response details of "orders[0].orderId"
 
-  @All-R2 @C1-Order @C2-AddShippingAddres @api @R2_AAST-04 @CR-RT @ZYP_AddShippingAddress_13550
+  @All-R2 @C1-Order @C2-OrderAddress @api @R2_AAST-04 @CR-RT @ZYP_AddShippingAddress_13550
   Scenario: TC_7 - Add the Shipping Address and validate the Schema and response details
     Given "OrderUrl" by "/shipping" endpoint with "AddShippingAddressRequest" for Add shipping Address of Order profile
     Then Verify response status code as 201
     Then validate jsonSchema "R2-AddShippingAddressSchema"
     Then Validated response details of "addShippingAddress.orderId"
     Then Validated response details of "addShippingAddress.addressId"
+
+  @All-R2 @C1-Order @C2-OrderAddress @api @R2_AAST-04 @CR-RT @ZYP_UpdateShippingAddress_??
+  Scenario: TC_7 - Add the Shipping Address and validate the Schema and response details
+    Given "Addurl" endpoint with "/address" for get the shipping address of a profile
+    Given "OrderUrl" by "/shipping" endpoint with "UpdateShippingRequest" for update the shipping address of a order
+    Then Verify response status code as 200
 
   @All-R2 @C1-Order @C2-RemovePromoCode @api @R2_AAST-05 @CR-VK @ZYP_Order_RemovePromoCode_12280
   Scenario: TC_5 - Remove a PromoCode from an Order
