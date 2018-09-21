@@ -58,6 +58,8 @@ Feature: Message/Text Verification
 	|The combination of Email Address and Password is incorrect. Please try again.|
 	|For maximum security, please enter a Password different from the previous one|
 	|Paypal account|
+	|Order Number|
+	|Billing Zip Code|
 	|Your confirmation email is on its way|
 	|By placing this order, I accept Academy's|
     |Terms and Conditions|
