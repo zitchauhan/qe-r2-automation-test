@@ -129,5 +129,17 @@ Scenario: Verify Enable Buy Now is applicable for Baits
     |#Verify following elements in PDP modal popup|
     |Default_Payment_Option_btn|    
  
-    
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12347 @CR-MS
+Scenario: Verify Enable Buy Now is applicable for Gift cards
+   Given user launches the browser and navigates to "ASO_HOME" page
+    And User clicks on the burger menu 
+    And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	And User clicks on the burger menu
+    When User searches a product "SKUForGiftCard" and navigates to PDP 
+    Then Verify below Sub/Main Module of PDP
+    |#Verify following elements in PDP modal popup|
+    |Default_Payment_Option_btn|   
     

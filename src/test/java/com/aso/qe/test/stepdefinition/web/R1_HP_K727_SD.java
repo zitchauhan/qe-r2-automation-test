@@ -1,6 +1,6 @@
 package com.aso.qe.test.stepdefinition.web;
 
-import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
 
@@ -39,11 +39,11 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 	}
 	
 	
-	
+	//SID 19-September
 	@Then("^user to fill username \"(.*?)\" and password \"(.*?)\"$")
 	public void user_to_fill_username_and_password(String username, String password) throws Throwable {
-		setInputText(hp_p.inputEmail , username);
-		setInputText(hp_p.inputPassword, password);
+		setInputText(globalElementHeader.txtEmailAddress , username);
+		setInputText(globalElementHeader.txtPassword, password);
 	}
 
 	
@@ -56,9 +56,10 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 		Thread.sleep(4000);
 	}
 	
-	
+	//SID Modify 19-September
 	@Then("^verify user to navigate to account summary page$")
 	public void verify_user_to_navigate_to_account_summary_page() throws Throwable {
+		assertTrue(clickOnButton(globalElementHeader.btnMyAccount));
 	    assertTrue(isDisplayed(hp_p.txtAccountSummary));
 	    
 	}
@@ -125,7 +126,7 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 
 	@Then("^verify user to click submit button$")
 	public void verify_user_to_click_submit_button() throws Throwable {
-	   hp_p.btnSubmit.submit();
+	   assertTrue(clickOnButton(hp_p.btnSubmit));  //SID 19-September
 	}
 
 	@Then("^click on singout$")

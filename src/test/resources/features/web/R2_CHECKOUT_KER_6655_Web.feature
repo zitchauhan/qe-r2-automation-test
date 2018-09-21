@@ -7,10 +7,7 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
 	And user enter the valid emailaddress "emailWithOutPhonenumber" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User navigates to L2 Mens clothing
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	When user clicks on one of the product category and navigates to LThree  
+	When User searches a product "productName" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |Verify following elements in PDP page|
     |EnableBuyNow_btn|
@@ -25,7 +22,6 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
 	And User navigates to L2 Mens clothing
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree  
 	When user clicks on one of the product category and navigates to LThree  
     Then Verify below Sub/Main Module of PDP
     |Verify following elements in PDP page|
@@ -166,7 +162,19 @@ Scenario: Verify Enable Buy Now is applicable for Baits
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP modal popup|
     |Default_Payment_Option_btn|
-   
+    
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12347 @CR-MS
+Scenario: Verify Enable Buy Now is applicable for Gift cards
+   Given user launches the browser and navigates to "ASO_HOME" page
+    And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+    When User searches a product "SKUForGiftCard" and navigates to PDP 
+    Then Verify below Sub/Main Module of PDP
+    |#Verify following elements in PDP modal popup|
+    |Default_Payment_Option_btn|    
+
 
 
 

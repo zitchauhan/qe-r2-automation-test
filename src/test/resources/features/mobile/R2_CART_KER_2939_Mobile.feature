@@ -31,8 +31,6 @@ Scenario: To view details specific to an item in the cart
 	|# verify Remove cart link |
 	|RemoveFromCart_Btn|
 	|AddToWishList_btn|
-	|ShipToMe_radioBtn|
-	|InStorePickup_FREE_radioBtn |
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user verify Remove cart link 
 	And user verify add to wishlist 
@@ -314,10 +312,26 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12502 @CR-AKK	
 Scenario: To Verify that Move to Wishlist Link is not displayed for Gift Card(s) and Bundle Item(s). 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu
-	Then User navigates till PDP of soccer Bundle items
-	And user click on soccer item       
+	Given user launches the browser and navigates to "ASO_HOME" page   
+	Then User searches a product "SKUForBundleProducts" and navigates to PDP     
 	And User click on the product image of soccer item package 
 	Then Verify the nextstep functionality 
     Then Verify that Move to Wishlist Link is not displayed for Gift Card(s) and Bundle Item(s)
+    
+    
+    @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-12746 @CR-AKK 
+Scenario: To verify Ship to store radio button - Authenticated user With store selected in My Account
+Given user launches the browser and navigates to "ASO_HOME" page 
+And User clicks on the burger menu
+And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	When User searches a product "SOFSKUNumber" and navigates to PDP
+	Then User is navigated to pdp page
+	And user click on Add to Cart Button
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	Then Verify below Sub/Main Module of Cart Page
+    |#user verify ShipToStore |
+	|ShipToStore_radioBtn| 

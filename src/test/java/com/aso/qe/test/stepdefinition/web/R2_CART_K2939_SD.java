@@ -252,37 +252,37 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 		}
 	}
 
-	@Then("^User navigates till PDP of soccer Bundle items$")
-	public void user_navigates_till_PDP_of_soccer_Bundle_items() throws Throwable {
-		if ("mobile".equalsIgnoreCase(testtype)) {
-			Thread.sleep(2000);
-			assertTrue(clickOnButton(r1PDPPO.btnSportsCategory_M));
-			Thread.sleep(2000);
-			assertTrue(clickOnButton(r2R1FunPO.Soccer_lnk_m));
-			Thread.sleep(2000);
-			assertTrue(clickOnButton(r2R1FunPO.Soccer_to_lnk));
-			Thread.sleep(2000);
-		} else {
-			Thread.sleep(3000);
-			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
-			Thread.sleep(2000);
-			Actions hover = new Actions(getDriver());
-			hover.moveToElement(r1PDPPO.btnSportsCategory_M).build().perform();
-			Thread.sleep(2000);
-			assertTrue(clickOnButton(r2R1FunPO.Soccer_lnk));
-			Thread.sleep(2000);
-		}
-	}
+//	@Then("^User navigates till PDP of soccer Bundle items$")
+//	public void user_navigates_till_PDP_of_soccer_Bundle_items() throws Throwable {
+//		if ("mobile".equalsIgnoreCase(testtype)) {
+//			Thread.sleep(2000);
+//			assertTrue(clickOnButton(r1PDPPO.btnSportsCategory_M));
+//			Thread.sleep(2000);
+//			assertTrue(clickOnButton(r2R1FunPO.Soccer_lnk_m));
+//			Thread.sleep(2000);
+//			assertTrue(clickOnButton(r2R1FunPO.Soccer_to_lnk));
+//			Thread.sleep(2000);
+//		} else {
+//			Thread.sleep(3000);
+//			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
+//			Thread.sleep(2000);
+//			Actions hover = new Actions(getDriver());
+//			hover.moveToElement(r1PDPPO.btnSportsCategory_M).build().perform();
+//			Thread.sleep(2000);
+//			assertTrue(clickOnButton(r2R1FunPO.Soccer_lnk));
+//			Thread.sleep(2000);
+//		}
+//	}
 
-	@Then("^user click on soccer item$")
-	public void user_click_on_soccer_item() throws Throwable {
-		assertTrue(clickOnButton(r2R1FunPO.Socceritem_lnk));
-	}
+//	@Then("^user click on soccer item$")
+//	public void user_click_on_soccer_item() throws Throwable {
+//		assertTrue(clickOnButton(r2R1FunPO.Socceritem_lnk));
+//	}
 
-	@Then("^User click on the product image of soccer item package$")
-	public void user_click_on_the_product_image_of_soccer_item_package() throws Throwable {
-		assertTrue(clickOnButton(r2R1FunPO.Socceritem_Pdp_lnk));
-	}
+//	@Then("^User click on the product image of soccer item package$")
+//	public void user_click_on_the_product_image_of_soccer_item_package() throws Throwable {
+//		assertTrue(clickOnButton(r2R1FunPO.Socceritem_Pdp_lnk));
+//	}
 
 	@Then("^Verify the nextstep functionality$")
 	public void verify_the_nextstep_functionality() throws Throwable {

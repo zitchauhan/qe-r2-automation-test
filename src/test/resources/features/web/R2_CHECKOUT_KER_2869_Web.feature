@@ -8,8 +8,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SKUForBopisProduct" 
-	And User click on search icon 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP
 	Then user change the quantity of item in PDP
 
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10687 @CR-AKK	
@@ -20,8 +19,7 @@ Scenario: Verify that the user is able to decrease the item quantity on PDP
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SKUForBopisProduct" 
-	And User click on search icon 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP
 	And user change the quantity of item in PDP
 	Then user decrease the quantity of item in PDP 
 	
@@ -34,8 +32,7 @@ Scenario: Verify that the user is able to view "Add to Wish list" CTA on PDP
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SKUForBopisProduct" 
-	And User click on search icon 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP
 	When user clicks on Move to Wish list link "NewWishLink" OR exisiting wishlink
 	Then Verify below Sub/Main Module of Cart Page 
 	|#Item is moved from cart to the wish list |
@@ -50,8 +47,7 @@ Scenario: Verify that the user is able to view "Add to Wish list" CTA on PDP
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SKUForBopisProduct" 
-	And User click on search icon 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP
 	Then user click on Add to Cart Button 
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10703 @CR-AKK		
@@ -62,8 +58,7 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SKUForBopisProduct" 
-	And User click on search icon 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP
 	And user change the quantity of item in PDP
 	Then user decrease the quantity of item in PDP
 	
@@ -75,8 +70,7 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SKUForBopisProduct" 
-	And User click on search icon 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -91,8 +85,7 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
 	Scenario: Verify that the user is able add item to cart if items are low in stock
     Given user launches the browser and navigates to "ASO_HOME" page
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SKUForBopisProduct" 
-	And User click on search icon 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button
     When enter the "MoreThanThresholdQuantity" to X  
@@ -112,8 +105,7 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
 	Scenario: Verify customer must see messaging when attempting to add more inventory of an item to their cart than inventory exists at the selected store
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SKUForBopisProduct" 
-	And User click on search icon 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP
 	And user change the quantity of item in PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button
@@ -126,8 +118,7 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
 	Scenario: Verify that the user is able to view "Ships To" information on PDP
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SKUForBopisProduct" 
-	And User click on search icon 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
     |Ship to|
@@ -141,8 +132,7 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User should be able to see Search Box on Homepage 
-	When User enter the SKU search "SKUForBopisProduct" 
-	And User click on search icon 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And verfiy the Change Pickup Location link
 	Then Verify the message on the page
     |# Following Error Message should show on the page|

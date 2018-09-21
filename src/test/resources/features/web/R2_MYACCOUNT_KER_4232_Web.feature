@@ -193,9 +193,7 @@ Scenario: Verify Authenticated user can -Set Default Address
 	|# Verify following elements in address page|
 		|MyAccountPage_Address_lnk		| 
 	And user click on set as default button 
-	Then Verify below Sub/Main Module of My Account
-	|# Verify following elements in address page|
-	|AddressPage_SetAsDefault_chkBox			| 
+	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9193 @CR-RK 
 Scenario: Verify Authenticated user can Manage Address Book - Delete Address details 
@@ -209,6 +207,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user click on MyAccount 
 	Then user lands on My Account page and click on adress
 	When user clicks Remove button 
 	Then Verify the message on the page

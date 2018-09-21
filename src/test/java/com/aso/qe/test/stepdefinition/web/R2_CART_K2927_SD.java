@@ -135,6 +135,7 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 
 	@Then("^user verifies estimated tax and total on checkout page$")
 	public void user_verifies_estimated_tax_and_total_on_checkout_page() throws Throwable {
+		waitForPageLoad(driver);
 		waitForElement(r2CheckOutPO.TaxesPrice_Txt);
 	    assertTrue(isDisplayed(r2CheckOutPO.TaxesPrice_Txt));
 	    assertTrue(isDisplayed(r2CheckOutPO.txtTotal));
@@ -165,7 +166,7 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 	
 	@Then("^tax displayed on cart is greater than zero$")
 	public void tax_displayed_on_cart_is_greater_than_zero() throws Throwable {
-	    double estimatedTaxOnCartPage = cartR2PageObj.getEstimatedTaxOnCartPage();
+	    float estimatedTaxOnCartPage = cartR2PageObj.getEstimatedTaxOnCartPage();
 	    assertTrue(estimatedTaxOnCartPage > 0);
 	}
 
