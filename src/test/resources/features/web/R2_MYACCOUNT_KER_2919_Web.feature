@@ -8,6 +8,7 @@ Scenario: Verify that authenticated user is able to navigate to "Payments" Page.
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
+    And user deletes all existing credit card
 	And user clicks on Add New Credit Card button
 	Then Verify below Sub/Main Module of My Account
 		|#Verify following elements in Payments > Add new credit card section	|
@@ -35,6 +36,7 @@ Scenario: Verify CVV Tool Tip
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
+    And user deletes all existing credit card
 	And user clicks on Add New Credit Card button
 	Then Verify below Sub/Main Module of My Account
 		|#Verify following elements in Payments > Add new credit card section	|
@@ -50,9 +52,9 @@ Scenario: Verify that user is not able to proceed  with Credit card addition wit
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
+    And user deletes all existing credit card
 	And user clicks on Add New Credit Card button		
 	And User enters Credit Card number "InvalidCreditCard"
-	And user clicks the CVV Tool Tip
 	Then Verify the message on the page
 	|# Following Error Message should show on the page|
 	|Unrecognized card number|
@@ -66,10 +68,10 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
+    And user deletes all existing credit card
 	And user clicks on Add New Credit Card button	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "PastExpirationDate"
-	And user clicks the CVV Tool Tip
 	Then Verify the message on the page
 	|# Following Error Message should show on the page|
 	|Past expiration date|	
@@ -83,10 +85,10 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	And user enter the valid password "Password" 
     And user click on signin button
 	Then user click on My Account and navigate to payment
+	And user deletes all existing credit card
 	And user clicks on Add New Credit Card button
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "NonExistentExpirationDate"
-	And user clicks the CVV Tool Tip
 	Then Verify the message on the page
 	|# Following Error Message should show on the page|
 	|Unrecognized expiration date|	
@@ -99,10 +101,10 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	And user enter the valid password "Password" 
     And user click on signin button
 	Then user click on My Account and navigate to payment
+	And user deletes all existing credit card
 	And user clicks on Add New Credit Card button	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "NonNumberExpirationDate"
-	And user clicks the CVV Tool Tip
 	Then Verify the message on the page
 	|# Following Error Message should show on the page|
 	|Please enter an expiration date|
@@ -115,12 +117,12 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	And user enter the valid password "Password" 
     And user click on signin button
 	Then user click on My Account and navigate to payment
+	And user deletes all existing credit card
 	And user clicks on Add New Credit Card button
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "ExpDate"
  	And User enters CVV number "InvalidCVV"
- 	And user clicks the CVV Tool Tip
-	Then Verify the message on the page
+ 	Then Verify the message on the page
 	|# Following Error Message should show on the page|
 	|Please enter a valid security code|
 	
@@ -133,11 +135,11 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	And user enter the valid password "Password" 
     And user click on signin button
 	Then user click on My Account and navigate to payment
+	And user deletes all existing credit card
 	And user clicks on Add New Credit Card button	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "ExpDate"
  	And User enters CVV number "NonNumberCVV"
-	And user clicks the CVV Tool Tip
 	Then Verify the message on the page
 	|# Following Error Message should show on the page|
 	|Please enter a security code|	
@@ -152,6 +154,7 @@ Scenario: Verify that user is not able to proceed with Billing Information addit
 	And user enter the valid password "Password" 
     And user click on signin button
 	Then user click on My Account and navigate to payment
+	And user deletes all existing credit card
 	And user clicks on Add New Credit Card button	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "ExpDate"
@@ -177,6 +180,7 @@ Scenario: Verify that Payment Details are not saved if User clicks on Cancel CTA
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
+    And user deletes all existing credit card
 	And user clicks on Add New Credit Card button	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "ExpDate"
@@ -237,7 +241,7 @@ Scenario: Verify if entered address is validated by AVS
  	And Verify that Credit Card details as entered are saved in User Profile.
  	
  	
-@R2_Web @R2_Regression @R2_All  @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK @AutomationSanityR2
 Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -268,11 +272,15 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
  	And user enter PhoneNumber field "UpdatePhoneNumber"
  	Then User verifies that city and State are populated automatically
 	Then click on Add button on credit card page
+	Then User clicks on ASO Logo and should be navigated to Home Page
 	And User searches a product "SanitySKUNumber" and navigates to PDP
 	And user click on Add to Cart Button
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page     
 	Then User verifies that in Payment section credit card "CreditCardNumber" is pre-populated by default
+	
+	
+	
  		
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919 @ZYP_CART_K2919-10698 @CR-DPK 
 Scenario: Verify that the City and State are auto populated when Zip Code is entered
@@ -282,15 +290,7 @@ Scenario: Verify that the City and State are auto populated when Zip Code is ent
 	And user enter the valid password "Password" 
     And user click on signin button
 	Then user click on My Account and navigate to payment
-	#When user clicks on payment tab
 	And user clicks on Add New Credit Card button	
-#	Then Verify below Sub/Main Module of My Account
-#		|#Verify following elements in Payments > Add new credit card section	|
-#		|AddCreditCardPage_BillingInformationHeader_txt							|
-#		|AddCreditCardPage_AddNewCreditCardsHeader_label						|
-#		|AddCreditCardPage_CreditCardNumber_txt									|
-#		|AddCreditCardPage_CardExpiryDate_txt									|
-#		|AddCreditCardPage_CardCVV_txt											|	
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "ExpDate"
  	And User enters CVV number "CVV"

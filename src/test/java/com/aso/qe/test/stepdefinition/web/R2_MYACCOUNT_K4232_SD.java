@@ -37,6 +37,7 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 			//clickOnButton(myAccountPo.lnkMyAccount);
 			waitForElement(myAccountPo.myAccount_MyAccountList_AddressBook_lnk );
 			assertTrue(clickOnButton(myAccountPo.myAccount_MyAccountList_AddressBook_lnk ));
+			Thread.sleep(5000);
 		}
 		
 	}
@@ -57,8 +58,11 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 
 	@When("^user clicks Remove button$")
 	public void user_clicks_Remove_button() throws Throwable {
-		
-	   assertTrue(clickOnButton(myAccountPo.btnRemove));
+		for(WebElement removeAddress: myAccountPo.addresRemove_Btn) {
+			
+			clickOnButton(removeAddress);
+		}
+	   
 	}
 
 

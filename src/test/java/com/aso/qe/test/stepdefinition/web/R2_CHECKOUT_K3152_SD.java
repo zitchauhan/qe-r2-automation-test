@@ -1,5 +1,6 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
@@ -38,6 +39,14 @@ public class R2_CHECKOUT_K3152_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2MyAccountPo.checkoutEditShippingBtn));
 
 	}
+	
+	@Then("^User verify edit CTA$")
+	public void user_verify_edit_CTA() throws Throwable {
+		assertFalse(clickOnButton(r2MyAccountPo.checkoutEditShippingBtn));
+
+	}
+	
+	
 
 	@Then("^User verify Shipping Method should collapse and the Shipping Address section expands and field should populate with previously added data$")
 	public void user_verify_Shipping_Method_should_collapse_and_the_Shipping_Address_section_expands_and_field_should_populate_with_previously_added_data()

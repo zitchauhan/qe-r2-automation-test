@@ -42,8 +42,10 @@ public class R2_CHECKOUT_K3392_SD extends CommonActionHelper {
 	
 	@When("^user click on SignIn link$")
 	public void user_click_on_SignIn_link() throws Throwable {
-		waitForElement(r2CheckOutPo.lnkSignIn_CheckOut);
-		assertTrue(clickOnButton(r2CheckOutPo.lnkSignIn_CheckOut));
+		waitForElement(r2CheckOutPo.checkout_SignIn_lnk);
+		moveHover(r2CheckOutPo.checkout_SignIn_lnk);
+		//assertTrue(clickOnButton(r2CheckOutPo.checkout_SignIn_lnk));
+		moveHover(r2CheckOutPo.checkout_SignIn_lnk);
 		Thread.sleep(3000);
 	}
 	
@@ -148,6 +150,11 @@ public class R2_CHECKOUT_K3392_SD extends CommonActionHelper {
 	public void user_enter_the_valid_Password(String arg1) throws Throwable {
 		if (arg1 != "BlankPassword")
 			setInputText(r2CheckOutPo.inputPasswordCheckOut, webPropHelper.getTestDataProperty(arg1));
+	}
+	
+	@When("^user clicks on Forgot your password link on the Sign in for checkout page$")
+	public void user_clicks_on_Forgot_your_password_link_on_the_Sign_in_for_checkout_page() throws Throwable {
+	    assertTrue(clickOnButton(r2CheckOutPo.btnForgotYourPasswordCheckOut));
 	}
 
 }
