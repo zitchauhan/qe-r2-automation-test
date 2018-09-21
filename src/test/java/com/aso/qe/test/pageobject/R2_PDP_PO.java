@@ -37,6 +37,9 @@ public class R2_PDP_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(),'Sign up to get Hot Deals')]/preceding::*[1]")
 	public WebElement Signup_Cbx;
 	
+	@FindBy(xpath = "//*[@data-auid='wishListPopover_add_to_wishList_0']")
+	public WebElement WishList_Pop_Item_Lnk;
+	
 	//End KER-6655 CR-MS	 
 	
 	/***************************** END XPAHTS **********************************/

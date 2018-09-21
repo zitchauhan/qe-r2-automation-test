@@ -48,6 +48,8 @@ public class R2_VERIFICATION_PDP_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2PdpPo.Default_Payment_Option_btn));
 				else if (currentElement.equalsIgnoreCase("Signup_Cbx"))
 					assertTrue(isDisplayed(r2PdpPo.Signup_Cbx));
+				else if (currentElement.equalsIgnoreCase("WishList_Pop_Item_Lnk"))
+					assertTrue(isDisplayed(r2PdpPo.WishList_Pop_Item_Lnk));
 				else {
 					logger.error("Element <" + currentElement + "> is not found in the SD list.");
 					throw new NullArgumentException("Element <" + currentElement + "> is not found in the SD list.");

@@ -124,6 +124,19 @@ Scenario: Verify that Authenticated User is able to rename a Wish List
 	Then user clicks on Rename List
 	Then user enters Wishlist name "WishlistName"
 	And user clicks on create
+	
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11111 @CR-MS
+Scenario: Verify the User is able to move item from wish list to cart
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailWithoutShipDetails" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And User searches a product "productName" and navigates to PDP
+	And user add an item to wishlist "WishlistName" and navigates to wishlist
+	And clicks on Move to Cart button
+	Then verify the item is moved to cart	
 
 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-10505 @CR-MS	
 Scenario: Verify that Authenticated user can create additional wish list
@@ -179,6 +192,22 @@ Scenario: Verify that Authenticated User is able to cancel deleting a Wish List
 	|#Verify following element in wishlist section|
     |Wishlist_icn|
 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11102 @CR-MS
+Scenario: Verify that Authenticated User is able to restore Removed item in Wish List
+   Given user launches the browser and navigates to "ASO_HOME" page
+	Then User clicks on the burger menu 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And User searches a product "productName" and navigates to PDP
+	And user add an item to wishlist "WishlistName" and navigates to wishlist
+	And user click on remove on product card and click on undo
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|WishList_Product_Eyebrow|
+	|WishList_Product_Tittle|    
+
 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11103 @CR-MS
 Scenario: Verify that Authenticated User is able to rename a Wish List
    Given user launches the browser and navigates to "ASO_HOME" page 
@@ -204,24 +233,18 @@ Scenario: Verify that Authenticated User is able to rename a Wish List
    
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-10486 @CR-MS
 Scenario: Verify that Authenticated User is able to Remove items from Wish List
-    Given user launches the browser and navigates to "ASO_HOME" page
-     Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on the burger menu
-	Then user should able to click on Signin button
-	And user enter the valid emailaddress "EmailAddress" 
+ Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailWithoutShipDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	Then User clicks on the burger menu
-	And user click on MyAccount
-	Then user click on WishList
+	And User searches a product "productName" and navigates to PDP
+	And user add an item to wishlist "WishlistName" and navigates to wishlist
+	And user click on remove on product card
 	Then Verify below Sub/Main Module of My Account
 	|#Verify following element in wishlist section|
-	|Wishlist_createlist_lnk|
-	|WishlistItems_lnk|
-	And user clicks on WishListItems
-	And user click on remove on product card
-	Then Verify the message on the page
-	|Undo|	   
+	|browse_products_btn|   
 
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11104 @CR-MS
 Scenario: Verify that Authenticated User is able to cancel deleting a Wish List
@@ -278,7 +301,6 @@ Scenario: Verify that Authenticated User is able to delete a Wish List
 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-10485 @CR-MS
 Scenario: Verify that Authenticated User is able to view the Wish List Details
     Given user launches the browser and navigates to "ASO_HOME" page
-    Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
@@ -296,6 +318,20 @@ Scenario: Verify that Authenticated User is able to view the Wish List Details
 	|#Verify following element in wishlist section|
 	|WishList_Product_Eyebrow|
 	|WishList_Product_Tittle|
+	
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11109 @CR-MS
+Scenario: Verify the User is able to move item from wish list to cart
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailWithoutShipDetails" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And User searches a product "productName" and navigates to PDP
+	And user add an item to wishlist "WishlistName" and navigates to wishlist
+	And clicks on Move to Cart button
+	Then verify the item is moved to cart 
+	
 	
 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11114 @CR-MS	
 Scenario: Verify that Authenticated user can create additional wish list
@@ -325,29 +361,22 @@ Scenario: Verify that Authenticated user can create additional wish list
 	
 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11101 @CR-MS
 Scenario: Verify that Authenticated User is able to Remove items from Wish List
-    Given user launches the browser and navigates to "ASO_HOME" page
-     Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on the burger menu
-	Then user should able to click on Signin button
-	And user enter the valid emailaddress "EmailAddress" 
+ Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailWithoutShipDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	Then User clicks on the burger menu
-	And user click on MyAccount
-	Then user click on WishList
+	And User searches a product "productName" and navigates to PDP
+	And user add an item to wishlist "WishlistName" and navigates to wishlist
+	And user click on remove on product card
 	Then Verify below Sub/Main Module of My Account
 	|#Verify following element in wishlist section|
-	|Wishlist_createlist_lnk|
-	|WishlistItems_lnk|
-	And user clicks on WishListItems
-	And user click on remove on product card
-	Then Verify the message on the page
-	|Undo|
+	|browse_products_btn|
 	
 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-11100 @CR-MS
 Scenario: Verify that Authenticated User is able to view the Wish List Details
     Given user launches the browser and navigates to "ASO_HOME" page
-    Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
 	Then user should able to click on Signin button
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
@@ -366,6 +395,35 @@ Scenario: Verify that Authenticated User is able to view the Wish List Details
 	|WishList_Product_Eyebrow|
 	|WishList_Product_Tittle|
 	
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-10498 @CR-MS
+Scenario: Verify the User is able to move item from wish list to cart
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailWithoutShipDetails" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And User searches a product "productName" and navigates to PDP
+	And user add an item to wishlist "WishlistName" and navigates to wishlist
+	And clicks on Move to Cart button
+	Then verify the item is moved to cart 
+
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 @ZYP_MYACCOUNT_K4233-10487 @CR-MS
+Scenario: Verify that Authenticated User is able to restore Removed item in Wish List
+   Given user launches the browser and navigates to "ASO_HOME" page
+	Then User clicks on the burger menu 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And User searches a product "productName" and navigates to PDP
+	And user add an item to wishlist "WishlistName" and navigates to wishlist
+	And user click on remove on product card and click on undo
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following element in wishlist section|
+	|WishList_Product_Eyebrow|
+	|WishList_Product_Tittle|
+			
 	
 	
 	 	

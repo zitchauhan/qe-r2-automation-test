@@ -5,7 +5,10 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
+import com.aso.qe.test.pageobject.R2_PDP_PO;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -13,6 +16,12 @@ import cucumber.api.java.en.When;
 public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 	
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
+	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);	
+	R2_CART_K4230_SD r2CartSd= PageFactory.initElements(driver, R2_CART_K4230_SD.class);
+	R1_PDP_PO pdp_po= PageFactory.initElements(driver, R1_PDP_PO.class);
+	Common_Web_SD commonSd = PageFactory.initElements(driver, Common_Web_SD.class);
+	R2_PDP_PO r2PdpPo = PageFactory.initElements(driver, R2_PDP_PO.class);
+	
 	
 	@Then("^user click on WishList$")
 	public void user_click_on_WishList() throws Throwable {
@@ -135,6 +144,7 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 	
 	@Then("^verify user navigated home page$")
 	public void verify_user_navigated_home_page() throws Throwable {
+		
 		if("mobile".equalsIgnoreCase(testtype))
 		{
 		assertTrue(clickOnButton(r2MyAccountPo.myAccount_txt_Mobile));
@@ -152,14 +162,68 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 		if("mobile".equalsIgnoreCase(testtype))
 		{
 		assertTrue(clickOnButton(r2MyAccountPo.WhishList_Remove_Lnk_M));
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		}else
 		{
 			assertTrue(clickOnButton(r2MyAccountPo.WhishList_Remove_Lnk));
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 			
 		}
 	    
+	}
+	
+	@When("^user add an item to wishlist \"(.*?)\" and navigates to wishlist$")
+	public void user_add_an_item_to_wishlist_and_navigates_to_wishlist(String arg1) throws Throwable {
+		
+		assertTrue(clickOnButton(r2CartPo.lnkAddToWishList));
+		Thread.sleep(5000);
+		//setInputText(r2CartPo.inputNewWishList, webPropHelper.getTestDataProperty(arg1));
+		//assertTrue(clickOnButton(r2CartPo.btnCreatelist));
+		assertTrue(clickOnButton(r2PdpPo.WishList_Pop_Item_Lnk));
+		Thread.sleep(5000);
+		assertTrue(isDisplayed(pdp_po.successWishlistModal));
+		
+		if("mobile".equalsIgnoreCase(testtype)){
+			commonSd.User_clicks_on_the_burger_menu();
+			r2CartSd.user_click_on_MyAccount();
+			user_click_on_WishList();
+			user_clicks_on_WishListItems();			
+
+		}
+		else
+		{
+			r2CartSd.user_click_on_MyAccount();
+			user_click_on_WishList();
+			user_clicks_on_WishListItems();
+		}	
+	   
+	}
+
+	@When("^clicks on Move to Cart button$")
+	public void clicks_on_Move_to_Cart_button() throws Throwable {
+		assertTrue(clickOnButton(r2MyAccountPo.Wishlist_MoveToACart_Btn));
+	}
+
+	@Then("^verify the item is moved to cart$")
+	public void verify_the_item_is_moved_to_wishlist() throws Throwable {
+		Thread.sleep(3000);
+		assertTrue(isDisplayed(r2MyAccountPo.browse_products_btn));
+	}
+	
+	@When("^user click on remove on product card and click on undo$")
+	public void user_click_on_undo() throws Throwable {
+		
+		if("mobile".equalsIgnoreCase(testtype))
+		{
+		assertTrue(clickOnButton(r2MyAccountPo.WhishList_Remove_Lnk_M));
+		assertTrue(clickOnButton(r2MyAccountPo.Wishlist_Undo));
+		}else
+		{
+			assertTrue(clickOnButton(r2MyAccountPo.WhishList_Remove_Lnk));
+			assertTrue(clickOnButton(r2MyAccountPo.Wishlist_Undo));
+			Thread.sleep(3000);
+		}
+		
 	}
 	
 
