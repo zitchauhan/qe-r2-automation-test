@@ -3,6 +3,7 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -127,9 +128,10 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 	public void user_enter_new_email_field(String arg1) throws Throwable {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			setInputText(r2MyAccountPo.txtNewEmail, webPropHelper.getTestDataProperty(arg1));
+			r2MyAccountPo.txtNewEmail.sendKeys(Keys.TAB);
 		} else {
 			setInputText(r2MyAccountPo.txtNewEmail, webPropHelper.getTestDataProperty(arg1));
-
+			r2MyAccountPo.txtNewEmail.sendKeys(Keys.TAB);
 		}
 	}
 
@@ -137,8 +139,10 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 	public void user_enter_confirm_email_field(String arg1) throws Throwable {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			setInputText(r2MyAccountPo.txtConfirmEmail, webPropHelper.getTestDataProperty(arg1));
+			r2MyAccountPo.txtConfirmEmail.sendKeys(Keys.TAB);
 		} else {
 			setInputText(r2MyAccountPo.txtConfirmEmail, webPropHelper.getTestDataProperty(arg1));
+			r2MyAccountPo.txtConfirmEmail.sendKeys(Keys.TAB);
 
 		}
 	}

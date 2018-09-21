@@ -88,5 +88,27 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|PaymentPage_CrediCardList_txt|
 	
 
-
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10552 @CR-RK 	
+Scenario: Verify deleted CC retains in the saved CC list in My Account on Undo
+Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
+	Then user should able to click on Signin button
+	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
+	|SignInPage_SignIn_btn								|
+	|SignInPage_EmailAddress_txt			   			| 
+	|SignInPage_Password_txt				   			|
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password"
+	And user click on signin button
+	Then User clicks on the burger menu
+	And user click on MyAccount
+	And user clicks on payment tab
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following elements in Payments > Add new credit card section	|
+	|PaymentPage_PaymentsHeader_label				|
+	Then user clicks Remove button in payment page
+	Then Verify the message on the page
+    |# verify the remove quantity message|
+    |Undo|
 

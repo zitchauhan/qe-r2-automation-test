@@ -60,6 +60,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user clicks Remove button in payment page
 	And user should see the proper message
 
+
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10545 @CR-RK	
 Scenario: Verify user is able to see the list of saved credit cards on the Payment page under My Account
 Given user launches the browser and navigates to "ASO_HOME" page 
@@ -83,5 +84,24 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|PaymentPage_CrediCardList_txt|
 	
 
-
-
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10552 @CR-RK 	
+Scenario: Verify deleted CC retains in the saved CC list in My Account on Undo
+Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
+	|SignInPage_SignIn_btn								|
+	|SignInPage_EmailAddress_txt			   			| 
+	|SignInPage_Password_txt				   			|
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password"
+	And user click on signin button
+	And user click on MyAccount
+		And user clicks on payment tab
+Then Verify below Sub/Main Module of My Account
+	|#Verify following elements in Payments > Add new credit card section	|
+	|PaymentPage_PaymentsHeader_label				|
+	Then user clicks Remove button in payment page
+	Then Verify the message on the page
+    |# verify the remove quantity message|
+    |Undo|

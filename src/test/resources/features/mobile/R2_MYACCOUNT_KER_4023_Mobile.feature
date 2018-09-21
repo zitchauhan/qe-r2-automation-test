@@ -60,7 +60,7 @@ Then User clicks on the burger menu
 	And user clicks on Submit button without entering the email address 
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
-    |Please enter the Email Address in a valid format (ex. abc@xyz.com)|
+   |Please enter email address|
 	
 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4023 @ZYP_MYACCOUNT_K4023-10083 @CR-RK 
 Scenario: Verify the user gets the error message on entering non-registered email id 

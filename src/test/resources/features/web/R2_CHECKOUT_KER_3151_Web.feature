@@ -64,8 +64,8 @@ Verify if authenticated user can  view all the shipping addresses at checkout
 	And User navigates to LThree 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
-	#Then user is navigated to Add to cart Notification popup
-	#And user click on checkout button
+	Then user is navigated to Add to cart Notification popup
+	And user click on checkout button
 	And user click on edit button in shipping address section 
 	And user verifies all the saved addresses in my account should be displayed in the dropdown 
 	
@@ -97,8 +97,8 @@ Verify for authenticated user default address will always be displayed on top
 	And User navigates to LThree 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
-	#Then user is navigated to Add to cart Notification popup
-	#And user click on checkout button
+	Then user is navigated to Add to cart Notification popup
+	And user click on checkout button
 	And user should see the order summary page with the default address 
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3151
