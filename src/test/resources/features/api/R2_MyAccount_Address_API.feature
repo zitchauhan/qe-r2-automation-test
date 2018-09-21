@@ -31,18 +31,28 @@ Feature: Verify MyAccount Address API endpoint services
     Given "Addurl" endpoint with "/address/" for getting address of a profile
     And validate jsonSchema "RetrieveAddressSchema"
 
-  @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-04 @CR-VK @ZYP_MyAccount_Address_12230
+  @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-04 @CR-RT @ZYP_MyAccount_Address_12230
   Scenario: TC_4 - Retrieve shipping address details from a Profile
-    Given "Addurl" endpoint with "/shippingAddress" for getting address of a profile
+    Given "Addurl" endpoint with "/address" for get the shipping address of a profile
     Then Verify response status code as 200
+
+  @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-04 @CR-RT @ZYP_MyAccount_Address_14067
+  Scenario: TC_4 - Retrieve shipping address details from a Profile and validate the json schema
+    Given "Addurl" endpoint with "/address" for get the shipping address of a profile
+    And validate jsonSchema "R2-GetShippingAddressSchema"
+
+  @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-04 @CR-RT @ZYP_MyAccount_Address_14068
+  Scenario: TC_4 - Retrieve shipping address details from a Profile and verify the JSON response details
+    Given "Addurl" endpoint with "/address" for get the shipping address of a profile
+    Then Validated response details of "profile.address[0].addressType"
+    Then Validated response details of "profile.address[0].addressId"
 
   #And validate jsonSchema "RetrieveAddressSchema"
   #Then Verify response status code as 200
-  @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-05 @CR-VK @ZYP_MyAccount_Address_12231
-  Scenario: TC_5 - Retrieve billing address details from a Profile
-    Given "Addurl" endpoint with "/billingAddress" for getting address of a profile
-    Then Verify response status code as 200
-
+  #@All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-05 @CR-VK @ZYP_MyAccount_Address_12231
+  #Scenario: TC_5 - Retrieve billing address details from a Profile
+  #Given "Addurl" endpoint with "/billingAddress" for getting address of a profile
+  #Then Verify response status code as 200
   #And validate jsonSchema "RetrieveAddressSchema"
   #Then Verify response status code as 200
   @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-06 @CR-VK @ZYP_MyAccount_Address_12232
@@ -81,5 +91,3 @@ Feature: Verify MyAccount Address API endpoint services
     Given "Addurl" endpoint with "/address/PUT/" and "/?storeId=10151&makePrimary=false" for Profile address update of user
     Then Validated response details of "userId"
     Then Validated response details of "addressId"
-
-  

@@ -1,0 +1,30 @@
+{
+    "orderId":"REPLACE_ORDERID",
+    "paymentMethod":"creditCard",
+    "creditCard":{
+            "exp_date":"0523",
+            "cardType":"Visa",
+            "lastFourCCDigit":"8291",
+            "token":"2537446225198291",
+            "cardHolderFirstName":"John",
+            "cardHolderLastName":"Smith"
+    },
+    "billingAddress":{
+        "firstName":"",
+        "lastName":"",
+        "address":"",
+        "phoneNumber":"",
+        "zipCode":"",
+        "state":"",
+        "city":"",
+        "country":"",
+        "organizationName":"",
+        "email":"ravit@gmail.com"
+    },
+    "addressId":"",
+    "editBillingAddressId":"",
+    "billingSameAsShippingAddress":"1",
+        "smsPreference" : "1",
+     "promoEmailPreference":"1",
+     "savePaymentInfo":"1"
+}

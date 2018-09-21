@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 import com.aso.qe.framework.api.helpers.JSONValidationUtils;
 import com.aso.qe.framework.api.helpers.MiniCartJsonResponseHelper;
 import com.aso.qe.framework.api.json.JsonReaderCommon;
+import com.aso.qe.framework.common.FrameWorkHelper;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -92,4 +93,23 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
 	}
 
+	@Given("^\"(.*?)\" by \"(.*?)\" endpoint with \"(.*?)\" for add Order Shipping Address details$")
+	public void by_endpoint_with_for_add_Order_Shipping_Address_details(String orderUrl, String extension, String requestJson) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(orderUrl)+"PUT/"+System.getProperty("OrderId")+extension;
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestJson+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_ORDERID", System.getProperty("OrderId")).replace("REPLACE_LASTNAME", FrameWorkHelper.getRandomAlphabetic(6)).replace("REPLACE_FIRSTNAME", FrameWorkHelper.getRandomAlphabetic(7));
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
+	}
+	
+	@Given("^\"(.*?)\" by \"(.*?)\" endpoint with \"(.*?)\" for add Order Billing Address and PaymentMethod details$")
+	public void by_endpoint_with_for_add_Order_Billing_Address_and_PaymentMethod_details(String orderUrl, String extension, String requestJson) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(orderUrl)+System.getProperty("OrderId")+extension;
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestJson+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_ORDERID", System.getProperty("OrderId"));
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
+	}
+	
+	
 }
