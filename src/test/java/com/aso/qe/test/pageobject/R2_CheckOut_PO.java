@@ -43,6 +43,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@id='logonPassword']")
 	public WebElement inputPasswordCheckOut;//27Aug 
 	
+	@FindBy(xpath = "//*[contains(text(),'Forgot')]")// CR-DPK sept-21
+	public WebElement btnForgotYourPasswordCheckOut; 
+	
 	
 	// End KER-3392 CR-RK
 	

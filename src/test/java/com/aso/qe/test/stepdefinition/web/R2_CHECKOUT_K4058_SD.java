@@ -67,7 +67,12 @@ public class R2_CHECKOUT_K4058_SD extends CommonActionHelper {
 	@Then("^user navigate to L_Three Kayak$")
 	public void user_navigate_to_L_Three_Kayak() throws Throwable {
 if("mobile".equalsIgnoreCase(testtype)){			
-		 	
+	Thread.sleep(2000);
+	clickOnButton(r2_r1_fun_po.btnOutdoorCategory);
+	Thread.sleep(2000);
+	clickOnButton(r2_r1_fun_po.boating_txt_M);
+	Thread.sleep(2000);
+	clickOnButton(r2_r1_fun_po.kayakCanoes_txt_M);
 
 		}else {
 			Thread.sleep(3000);
@@ -83,8 +88,13 @@ if("mobile".equalsIgnoreCase(testtype)){
 	
 	@Then("^usr select the kayak and navigate to PDP page$")
 	public void usr_select_the_kayak_and_navigate_to_PDP_page() throws Throwable {
-	   clickOnButton(r2_r1_fun_po.intexKayak_txt);
+		if("mobile".equalsIgnoreCase(testtype)){
+		clickOnButton(r2_r1_fun_po.pelican_txt_M);
+		Thread.sleep(3000);
+		}else {
+		clickOnButton(r2_r1_fun_po.intexKayak_txt);
 	   Thread.sleep(3000);
+		}
 	}
 
 }

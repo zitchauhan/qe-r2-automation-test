@@ -1,8 +1,9 @@
-Feature: [Web]Restricted shipping to PO,APO , FPO boxes
+Feature: [Mobile]Restricted shipping to PO,APO , FPO boxes
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9833 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9833 @CR-RKA
 Scenario: Verify user will be prevented from adding restricted products to PO box in shipping address.
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
 	And user click on Add to Cart Button 
@@ -17,14 +18,14 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    |#verify following MSG should come|
 	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
 	   
-	   
 	
 	
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9834 @CR-RKA
+	@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9834 @CR-RKA
 	Scenario: Verify user will be prevented from adding restricted products to APO box in shipping address.
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu 
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
 	And user click on Add to Cart Button 
@@ -40,9 +41,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
 	   
 	   
-	@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9835 @CR-RKA
+	@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9835 @CR-RKA
 	   Scenario: Verify user will be prevented from adding restricted products to FPO box in shipping address
 	   Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
 	And user click on Add to Cart Button 
@@ -57,10 +59,11 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    |#verify following MSG should come|
 	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
 	   
-	   @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9836 @CR-RKA
+	   @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9836 @CR-RKA
 	   Scenario: Verify if user selected PO Box address in shipping section, user can see the error message when adding the restricted items in cart.
 	   
 	    Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
 	And user click on Add to Cart Button 
@@ -76,10 +79,11 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
 	   
 	   
-	   @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9837 @CR-RKA
+	   @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9837 @CR-RKA
 	   Scenario: Verify if user selected APO Box address in shipping section, user can see the error message when adding the restricted items in cart.
 	   
 	       Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
 	And user click on Add to Cart Button 
@@ -94,9 +98,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    |#verify following MSG should come|
 	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
 	   
-	   @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9839 @CR-RKA
+	   @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9839 @CR-RKA
 	  Scenario: Verify if user selected FPO Box address in shipping section,user can see the error message when adding the restricted items in cart. 
 	          Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
 	And user click on Add to Cart Button 
@@ -111,10 +116,11 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    |#verify following MSG should come|
 	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
 	   
-	     @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9840 @CR-RKA
+	     @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9840 @CR-RKA
 	   Scenario: Verify if unauthenticated user selected PO Box address in shipping section, unauthenticated user can see the error message when sign in on checkout page.
 	   
 	             Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
 	And user click on Add to Cart Button 
@@ -129,9 +135,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    |#verify following MSG should come|
 	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
 	  
-	   @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9842 @CR-RKA
+	   @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9842 @CR-RKA
 	  Scenario: Verify if unauthenticated user selected APO Box address in shipping section, unauthenticated user can see the error message when sign in on checkout page. 
 	                Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
 	And user click on Add to Cart Button 
@@ -146,9 +153,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    |#verify following MSG should come|
 	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
 	  
-	   @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9843 @CR-RKA
+	   @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9843 @CR-RKA
 	  Scenario: Verify if unauthenticated user selected FPO Box address in shipping section, unauthenticated user can see the error message when sign in on checkout page.
 	                   Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
 	And user click on Add to Cart Button 
@@ -165,7 +173,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 
 
 	  
-#	    @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9845 @CR-RKA
+#	    @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9845 @CR-RKA
 #	   Scenario: Verify that ASO application restricts the user to select minimum threshold value to schedule a delivery.
 #	   
 #	          Given user launches the browser and navigates to "ASO_HOME" page 

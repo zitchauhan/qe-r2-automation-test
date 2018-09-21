@@ -84,6 +84,11 @@ public class R2_R1_Fun_PO extends CommonActionHelper
    @FindBy(xpath="//*[@data-auid='level3Category-Boating']/*[1]")public WebElement boating_txt;
    @FindBy(xpath="//*[@data-auid='shopByCategory_tiles']//*[contains(text(),'Kayaks & Canoes')]")public WebElement kayakCanoes_txt;
    @FindBy(xpath="//*[@data-auid='productCard_1025869']")public WebElement intexKayak_txt;
+   @FindBy(xpath="//*[@data-auid='level3Category-Boating_m']")public WebElement boating_txt_M;
+   @FindBy(xpath="//*[@data-auid='level4Category-Kayaks & Canoes_m']")public WebElement kayakCanoes_txt_M;
+   @FindBy(xpath="//*[@data-auid='productCard_242901']")public WebElement pelican_txt_M;
+   
+   
    
  //KER-3093 CR-RKA
    @FindBy(xpath="//*[@data-auid='Payments']")public WebElement payment_Txt; // CR-DPK 12-sept
@@ -177,5 +182,11 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 
 @FindBy(xpath = "//*[text()='Change zip code']")//CR-AKK 17-sept
        public WebElement ChangeZipCode_lnk;
+
+@FindBy(xpath ="//*[@data-auid='FOOTER_LINK_Check Order']")//CR-AKK 17-sept
+public WebElement CheckOrder_Lnk;
+
+@FindBy(xpath ="//*[text()='NEED HELP?']/..")//CR-AKK 17-sept
+public WebElement NeddHelp_M;
 
 }
