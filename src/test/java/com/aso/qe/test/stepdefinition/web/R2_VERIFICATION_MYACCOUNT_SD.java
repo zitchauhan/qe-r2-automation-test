@@ -319,9 +319,10 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.WishList_Product_Review));
 				else if (currentElement.equalsIgnoreCase("WishList_Product_Price"))
 		            assertTrue(isDisplayed(r2MyAccountPo.WishList_Product_Price));
-
- 
-
+				else if (currentElement.equalsIgnoreCase("Wishlist_MoveToACart_Btn"))
+		            assertTrue(isDisplayed(r2MyAccountPo.Wishlist_MoveToACart_Btn)); 
+ 				else if (currentElement.equalsIgnoreCase("Wishlist_Undo"))
+		            assertTrue(isDisplayed(r2MyAccountPo.Wishlist_Undo)); 
  
 
 				// ===============================================================================

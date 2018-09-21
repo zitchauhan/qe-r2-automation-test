@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import static org.junit.Assert.assertEquals;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -259,6 +260,75 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 		Thread.sleep(3000);
 
 	}
+	
+	
+//	@When("^user adds \"(.*?)\" product to the cart$")
+//	public void user_adds_product_to_the_cart(String arg1) throws Throwable {
+//		boolean isAddtoCart= false;
+//		try
+//		{
+//			waitForElement(selectedSwatchRepresentative);
+//			isDisplayed(selectedSwatchRepresentative);
+//
+//			if (btnAddToCart.isDisplayed()) 
+//			{
+//				isAddtoCart=true;
+//				
+//			}
+//			else
+//			{
+//				
+//				for(WebElement colorElement: colorsAvailable)
+//				{
+//					clickOnButton(colorElement);
+//					for(WebElement sizeElement:sizeAvailable)
+//					{
+//						logger.debug("Product Size Txt::"+sizeElement.getText());
+//						clickOnButton(sizeElement);
+//						if(isDisplayed(btnAddToCart))
+//						{
+//							isAddtoCart=true;
+//							break;
+//						}
+//					}
+//					if(isAddtoCart)
+//					{
+//						break;
+//					}
+//				}
+//				
+//			}
+//		}
+//		catch (NoSuchElementException e) 
+//		{
+//			for(WebElement colorElement: colorsAvailable)
+//			{
+//				clickOnButton(colorElement);
+//				for(WebElement sizeElement:sizeAvailable)
+//				{
+//					logger.debug("Product Size Txt::"+sizeElement.getText());
+//					clickOnButton(sizeElement);
+//					if(isDisplayed(btnAddToCart))
+//					{
+//						isAddtoCart=true;
+//						break;
+//					}
+//				}
+//				if(isAddtoCart)
+//				{
+//					break;
+//				}
+//			}
+//			//logger.error("addToCartAvailability exception msg::"+e.getMessage());
+//		}
+//		catch (Exception e) 
+//		{
+//			logger.error("addToCartAvailability exception msg::"+e.getMessage());
+//		}
+//		logger.debug("Add to Cart buttion is visable::"+isAddtoCart);
+//		return isAddtoCart;
+//	}
+//	}
 
 	@When("^user enters \"(.*?)\" in the search box and navigates to PLP$") // not navigating to PDP
 	public void user_enters_in_the_search_box_and_navigate_tp_PLP(String searchText) throws Throwable {

@@ -153,6 +153,10 @@ Feature: Debug
         |WishList_Product_Tittle										|
         |WishList_Product_Review										|
         |WishList_Product_Price											|
+        ||Wishlist_Undo													|
+        |Wishlist_MoveToACart_Btn										| 
+ 
+        
 		
 			
 		|#Verify following elements in order section|

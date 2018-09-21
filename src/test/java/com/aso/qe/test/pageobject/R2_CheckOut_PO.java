@@ -277,6 +277,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='checkout_edit_shipping_method']")
 	public WebElement checkout_ShippingMethod_Edit_lnk;
 	
+	@FindBy(xpath = "//*[@data-auid='undefined_dropdownList']")
+	public WebElement checkout_ShippingMethod_List_dd;
+	
+	
 	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']//*[contains(text(), 'Shipment')]")
 	public WebElement checkout_ShippingMethod_Shipment_txt;
 	

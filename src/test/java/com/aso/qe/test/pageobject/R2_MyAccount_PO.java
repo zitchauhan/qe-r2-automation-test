@@ -724,12 +724,18 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public WebElement TaxesPrice_Txt;// taxprice
 	// End KER-3129 CR-RK Sep18
 
-	@FindBy(xpath = "//*[contains(text(),'Rename List')]/ancestor::*[6]/following-sibling::*[2]//button[contains(@class,'icon-close')]")
+	@FindBy(xpath = "//*[@data-auid='btnundefined']/ancestor::*[3]/descendant::button[1]")
 	public WebElement WhishList_Remove_Lnk;
 
-	@FindBy(xpath = "//*[text()='Remove']")
-	public WebElement WhishList_Remove_Lnk_M;
+	@FindBy(xpath = "//*[@data-auid='btnundefined']/ancestor::*[3]/descendant::button[2]")
+	public WebElement WhishList_Remove_Lnk_M; 
 	
+	@FindBy(xpath = "//*[@data-auid='undo_click_btn']")
+	public WebElement Wishlist_Undo; 
+ 
+	@FindBy(xpath = "//*[text()='MOVE TO CART']")
+	public WebElement Wishlist_MoveToACart_Btn; 
+ 
 	@FindBy(xpath="//*[contains(text(),'ARE YOU SURE')]/following-sibling::*[1]/*[2]")
     public WebElement Order_Number_Txt;	
 	
@@ -745,19 +751,19 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='phone1']")
 	public WebElement AddressBook_inpPhoneNumber; //19sept CR-GK 
 	
-//	@FindBy(xpath = "//*[.='Print a Receipt']")
-//	public WebElement Order_Print_Receipt;
-//	
-	/*@FindBy(xpath = "//*[@data-auid='phone1']")
-	public WebElement Order_Print_Receipt;
+	@FindBy(xpath = "//*[text()='Remove']")// CR-DPK 21-sept
+	public List<WebElement> addresRemove_Btn; 
 	
-	 @FindBy(xpath = "//*[.='Print a Receipt']")
-	//Start KER-3172 CR-RK Sep20
-	       @FindBy(xpath = "//*[.='Print a Receipt']")
-	       public WebElement Order_Print_Receipt;
-	       //End KER-3172 CR-RK Sep20 
-*/
+	@FindBy(xpath ="//*[text()='Order Number']/../*[2]")
+    public WebElement OrderNumber_Input;
+    
+    @FindBy(xpath ="//*[text()='Billing Zip Code']/../*[2]")
+    public WebElement BillindZipCode_Input;
+    
+    @FindBy(xpath="//*[@data-auid='btnbutton-3']")
+    public WebElement Check_Btn;
 
+	
 	/***************************** END XPAHTS ***********************************/
 
 	/***************************** START METHODS ********************************/

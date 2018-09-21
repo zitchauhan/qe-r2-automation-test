@@ -65,6 +65,9 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 		String zipCodeToEnter = "";
 		if(arg1.equalsIgnoreCase("InvalidZipCode"))
 			zipCodeToEnter = "sldkj";
+		else if(arg1.equalsIgnoreCase("CalifirniaZipCode")) {
+			zipCodeToEnter = "90001";
+		}
 		else
 			zipCodeToEnter = webPropHelper.getTestDataProperty(arg1);
 		r2CheckOutPo.inputCheckoutZipCode.clear();
