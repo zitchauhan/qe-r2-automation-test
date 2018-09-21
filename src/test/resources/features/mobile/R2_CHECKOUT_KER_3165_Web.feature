@@ -1,6 +1,6 @@
 Feature: B04-250- Guest Checkout Flow 
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8237 @CR-GK 
 Scenario: Verify the guest user is able to view the Zipcode on checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -15,7 +15,7 @@ Scenario: Verify the guest user is able to view the Zipcode on checkout page
 	Then Guest User should be able to see the "FindAsStoreZIPCode" zipcode pre-populated on Checkout page 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8239 @CR-GK 
 Scenario: 
 	Verify the guest user is able to view the Checkout Header and Footer on Checkout page 
@@ -33,7 +33,7 @@ Scenario:
 		|CheckOut_CheckOutFooter                    |
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8240 @CR-GK 
 Scenario: 
 	Verify the guest user is able to see the pre-populated City/State with Zipcode 
@@ -50,10 +50,10 @@ Scenario:
 	And City/State on the basis of the Zipcode should also be pre-populated on Checkout page 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8241 @CR-GK 
 Scenario: 
-	Verify the guest user is able to enter the shipping address details on Checkout page
+	Verify the guest user is able to enter the shipping address details on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
@@ -71,7 +71,7 @@ Scenario:
 		|Please enter a zip code|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8242 @CR-GK 
 Scenario: 
 	Verify the system triggers the Address Verification (AVS) to guest user on wrong address entry 
@@ -95,7 +95,7 @@ Scenario:
 		|checkout_ShippingAddress_AVSModelSelectAddress_btn  |
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8244 @CR-GK 
 Scenario: 
 	Verify the guest user is able to edit the Saved address in the Shipping address
@@ -117,7 +117,7 @@ Scenario:
 		|checkout_ShippingAddress_Edit_lnk		|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8245 @CR-GK 
 Scenario: 
 	Verify the guest user is displayed with required validations and errors on shipping address 
@@ -152,7 +152,7 @@ Scenario:
 	
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8246 @CR-GK 
 Scenario: 
 	Verify the guest user is able to select the shipping method from the list
@@ -182,7 +182,7 @@ Scenario:
 		|checkout_ShippingMethod_GoToPayment_btn					|		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8248 @CR-GK 
 Scenario: 
 	Verify the guest user is able to select the Credit Card payment method in order to place the order 
@@ -217,7 +217,7 @@ Scenario:
 		|ReviewOrder_Btn|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8249 @CR-GK 
 Scenario: 
 	Verify the guest user is able to select the PayPal payment method in order to place the order 
@@ -238,15 +238,15 @@ Scenario:
 	And  clicks on Use Selected Address button 
 	And user clicks on edit shipping method cta 
 	And user click on go to payment present in shipping method 
-	Then user click on paypal
-	And user switch to iframe to verify paypalcheckoutBtn 
+	Then user click on paypal 
+	And user switch to iframe to verify paypalcheckoutBtn
 	And  Verify below Sub/Main Module of Checkout Page 
 		|#%%%%%%   Verify user is able to see paypal checkout button %%%%%%%%%%|
 		|PayPalCheckOut_Btn|
 		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8250 @CR-GK 
 Scenario: 
 	Verify the guest user is able to select the Gift Card payment method in order to place the order 
@@ -279,7 +279,7 @@ Scenario:
 		|ReviewOrder_Btn        |
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8251 @CR-GK 
 Scenario: 
 	Verify the guest user is able to add new Credit Card as payment method in order to place the order 
@@ -306,7 +306,7 @@ Scenario:
 		|Checkout_CreditCardPay_ImgLogo|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8253 @CR-GK 
 Scenario: 
 	Verify the guest user is able to enter a different Billing address on Payment drawer 
@@ -335,7 +335,7 @@ Scenario:
 		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8254 @CR-GK 
 Scenario: Verify the guest user is able to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -365,7 +365,7 @@ Scenario: Verify the guest user is able to place the order
 		|OrderConfirmationPage_OrderNumber_txt|
 		
 		
-		#@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
+		#@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 		#@ZYP_CHECKOUT_K3165-8255 @CR-GK 
 		#Scenario: 
 		#	Verify the guest user's address is saved in My Address on registering from Order confirmation 
@@ -398,3 +398,5 @@ Scenario: Verify the guest user is able to place the order
 		#		|# Then guest user should be displayed with the below attributes|
 		#		|AddressPage_Edit_btn|
 		
+		
+	
