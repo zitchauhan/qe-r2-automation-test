@@ -705,10 +705,25 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[text()='VIEW DETAILS']")
 	public WebElement Order_View_Details_Btn;
-
-	@FindBy(xpath = "//*[text()='Back to order']")
+	
+	//SID Modified 22-September
+	@FindBy(xpath = "//*[text()='Back to order'] | //*[@data-component='myaccount']//*[text()='Back to Orders']")
 	public WebElement Order_Back_To_Order_Lnk;
-
+	
+	//SID 22-September
+	@FindBy(xpath = "//*[text()='ORDER CANCELLATION']")
+	public WebElement Order_Cancellation_page;
+	
+	//SID 22-September
+		@FindBy(xpath = "//*[text()='Your order cancellation request has been received']")
+		public WebElement Order_Cancellaton_Message;
+	
+	//SID 22-September
+		@FindBy(xpath = "//*[@data-component='myaccount']//*[text()='REFUND PAYMENT']")
+		public WebElement Cancellation_Page_Refund_Payment_Details;
+		
+	
+	
 	@FindBy(xpath = "//*[@data-auid='Orders_m']")
 	public WebElement Order_Back_To_Order_Lnk_M;
 
@@ -762,6 +777,11 @@ public class R2_MyAccount_PO extends CommonActionHelper {
     
     @FindBy(xpath="//*[@data-auid='btnbutton-3']")
     public WebElement Check_Btn;
+    
+    //SID 22-September
+    @FindBy(xpath="//*[contains(text(),'ORDER DETAILS')]")
+    public WebElement Order_Details_page;
+  
 
 	
 	/***************************** END XPAHTS ***********************************/

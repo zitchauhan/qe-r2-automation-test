@@ -239,6 +239,7 @@ Scenario:
 	And user clicks on edit shipping method cta 
 	And user click on go to payment present in shipping method 
 	Then user click on paypal 
+	And user switch to iframe to verify paypalcheckoutBtn
 	And  Verify below Sub/Main Module of Checkout Page 
 		|#%%%%%%   Verify user is able to see paypal checkout button %%%%%%%%%%|
 		|PayPalCheckOut_Btn|
