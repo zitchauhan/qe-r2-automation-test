@@ -14,3 +14,15 @@ Scenario: Verify MyAccount
 	      |Signup_Cbx|
 	      |Default_Payment_Option_btn|
 	      |WishList_Pop_Item_Lnk|
+	      |Credit_CardNumber_txt|
+	      |Credit_Card_Expriration_txt|
+		  |Credit_Card_Cvv_txt|
+		  |BillingState_txt|
+		  |BillingFirstName_txt|
+		  |BillingLastName_txt|
+		  |BllingAddress_txt|
+		  |BillingZipCode_txt|
+		  |BillingCity_txt|
+		  |BillingPhone_txt|
+		  |BillingEmail_txt|
+		   |PaymentFormSubmit_btn|

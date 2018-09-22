@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
+import cucumber.api.java.en.Then;
+
 public class R2_PDP_PO extends CommonActionHelper {
 	
 	/***************************** START XPAHTS **********************************/
@@ -39,6 +41,45 @@ public class R2_PDP_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "//*[@data-auid='wishListPopover_add_to_wishList_0']")
 	public WebElement WishList_Pop_Item_Lnk;
+	
+	@FindBy(xpath="//*[@data-auid='creditCardNumber']")
+	public WebElement Credit_CardNumber_txt;
+	
+	@FindBy(xpath="//*[@data-auid='creditCardExpiration']")
+	public WebElement Credit_Card_Expriration_txt;
+	
+	@FindBy(xpath="//*[@data-auid='creditCardCVV']")
+	public WebElement Credit_Card_Cvv_txt;
+	
+	@FindBy(xpath="//*[@data-auid='billingState']")
+	public WebElement BillingState_txt;
+	
+	@FindBy(xpath="//*[@data-auid='billingFirstName']")
+	public WebElement BillingFirstName_txt;
+	
+	@FindBy(xpath="//*[@data-auid='billingLastName']")
+	public WebElement BillingLastName_txt;
+	
+	@FindBy(xpath="//*[@data-auid='billingAddress']")
+	public WebElement BllingAddress_txt;
+	
+	@FindBy(xpath="//*[@data-auid='billingZipCode']")
+	public WebElement BillingZipCode_txt;
+	
+	@FindBy(xpath="//*[@data-auid='billingCity']")
+	public WebElement BillingCity_txt;
+	
+	@FindBy(xpath="//*[@data-auid='billingPhone']")
+	public WebElement BillingPhone_txt;
+	
+	@FindBy(xpath="//*[@data-auid='billingEmail']")
+	public WebElement BillingEmail_txt;
+	
+	@FindBy(xpath="//*[@data-auid='btndefaultPaymentFormSubmit']")
+	public WebElement PaymentFormSubmit_btn;
+	
+
+	
 	
 	//End KER-6655 CR-MS	 
 	
