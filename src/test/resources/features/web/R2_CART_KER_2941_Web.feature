@@ -4,15 +4,17 @@ Feature: Verify Promotional Messaging in Cart
     Scenario: To verify Add Promo code in Cart Page         
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
-    Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
-	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user clicks on one of the product category and navigates to LThree 
+	And user click on Add to Cart Button 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user verify the promo code field
+	When user clicks on Add Promo code link under Cart Order Summary
+	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page"Order Summary"|
+		|OrderSummary_Header|
+		|Minus_HidePromo_btn|
+		|EnterPromoCode_input|
+		|Submit_PromoCode_btn|
 	
 	
 	
@@ -20,15 +22,17 @@ Feature: Verify Promotional Messaging in Cart
     Scenario: To verify Hide Promo code in Cart Page         
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
-    Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
-	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user clicks on one of the product category and navigates to LThree 
+	And user click on Add to Cart Button 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user verify the promo code field
+	When user clicks on Add Promo code link under Cart Order Summary
+	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page"Order Summary"|
+		|OrderSummary_Header|
+		|Minus_HidePromo_btn|
+		|EnterPromoCode_input|
+		|Submit_PromoCode_btn|
 	And user click on Hide promo code field
 	
 	
@@ -37,15 +41,15 @@ Feature: Verify Promotional Messaging in Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
 	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user view and Applied Promotions/Discounts "Promocode8068"
-	And again try to apply Promocode "1Promocode8068"
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|	
+		|OrderSummary_Header|
+		|Plus_AddPromoCode_btn|
+	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"
+	And again try to apply Promocode "SanityOrderLevelQuantity"
 	
 	
 	@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2941 @ZYP_CART_K2941-8069 @CR-DPK
@@ -54,15 +58,16 @@ Feature: Verify Promotional Messaging in Cart
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
 	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And verify Order Summary in Cart 
-	Then user verifiy Order Total
-	And user view and Applied Promotions/Discounts "Promocode8069"
-	And verify Promo code discount is applied 
+	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"    
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|	
+		|checkOut_OrderSummary_btn|	
+		|Total_txt|
+		|SubTotal_txt|
+		|EstimatedTaxes_txt|
+		|Discount_Txt|	    
 	
 	
 	
@@ -71,15 +76,17 @@ Feature: Verify Promotional Messaging in Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
 	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user view and Applied Promotions/Discounts "PromoCode"
-	Then verify the discounts to specific items are displayed at the item level (Free Shipping, BOGO, Gift With Purchase)
+	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount"    
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|	
+		|checkOut_OrderSummary_btn|	
+		|Total_txt|
+		|SubTotal_txt|
+		|EstimatedTaxes_txt|
+		|Discount_Txt|
 	
 	
 	

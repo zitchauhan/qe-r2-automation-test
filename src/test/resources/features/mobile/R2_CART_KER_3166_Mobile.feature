@@ -82,8 +82,26 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|EstimatedTaxes_txt|
 		|Discount_Txt|
 	
-	
 
+
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-8092 @CR-DPK
+Scenario: To verify Promo code applied in Check out page
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
+	 And User navigates to LThree
+    Then user clicks on the product card and navigates to PDP 
+	Then user click on Add to Cart Button
+	And user will click on View Cart button 
+	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"
+	And user will click on Checkout button and navigates to Checkout page    
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|	
+		|SubTotal_txt|
+		|Estimatedshippint_txt|
+		|EstimatedTaxes_txt|
+		|TotalDiscount_Txt|	
+		|Total_txt|    
+		
  @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9591 @CR-DPK 
 Scenario: Verify promotion got applied to the product when user applied %off promotion on product level in cart--with promocode
 Given user launches the browser and navigates to "ASO_HOME" page
