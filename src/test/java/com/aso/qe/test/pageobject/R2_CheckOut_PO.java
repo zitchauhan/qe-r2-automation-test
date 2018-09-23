@@ -146,6 +146,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='checkout_modify_shipping_address_link']")//CR-DPK 19-sept
 	public WebElement lnkModifyAddress;
 	
+	@FindBy(xpath = "//*[@data-auid='checkout_save_shipping_address']")//CR-SK 22-sept
+	public WebElement Checkout_ShippingAddress_SaveShipping_chekbox;
+	
+	
 	// End KER-2934 CR-DPK
 
 	// start KER-2926 CR-MS
@@ -280,8 +284,14 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='checkout_edit_shipping_method']")
 	public WebElement checkout_ShippingMethod_Edit_lnk;
 	
-	@FindBy(xpath = "//*[@data-auid='undefined_dropdownList']")
+	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']//*[@data-auid='undefined_dropdownList']")
 	public WebElement checkout_ShippingMethod_List_dd;
+	
+	@FindBy(xpath = "//*[@data-auid='checkout_payment']//*[@data-auid='undefined_dropdownList']")
+	public WebElement checkout_PaymentMethod_List_dd;
+	
+	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address']//*[@data-auid='undefined_dropdownList']")
+	public WebElement checkout_ShippingAddress_List_dd;
 	
 	
 	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']//*[contains(text(), 'Shipment')]")
@@ -473,7 +483,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[text()='Unrecognized card number']")public WebElement UnrecognizedCardNumber_Txt; 
 		@FindBy(xpath="//*[text()='Past expiration date']")public WebElement PastExpirationDate_Txt;
 		@FindBy(xpath="//*[text()='Please enter a valid security code']")public WebElement PleaseEnteRaValidSecurityCode_Txt; 
-		@FindBy(xpath="//*[contains(text(),'Visa ending in')]")public WebElement chooseCreditcard_Dd; 
+		@FindBy(xpath="//*[text()='Choose Card']/..//button")public WebElement chooseCreditcard_Dd; //modified SK 22 Sep
+		@FindBy(xpath="//*[text()='SHIPPING ADDRESS']/..//button")public WebElement chooseShippingAddress_Dd; //CR-SK 22 Sep
+		
         @FindBy(xpath="//*[@data-auid='undefined_listOption_1']")public WebElement AddNewCreditCard_Txt;
         @FindBy(xpath="//*[@name='creditcardField']/../span[2]/img")public WebElement Checkout_CreditCardPay_ImgLogo;
         //*****************Payment Method (END)

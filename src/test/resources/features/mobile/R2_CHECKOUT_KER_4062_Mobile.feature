@@ -1,6 +1,6 @@
 Feature: Gift Card application 
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4062 @ZYP_CART_K4062-8103 @CR-SK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4062 @ZYP_CART_K4062-8103 @CR-SK 
 Scenario: Verify if user gets proper validation message for empty password
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "productName" and navigates to PDP 
@@ -19,7 +19,7 @@ Scenario: Verify if user gets proper validation message for empty password
 	    |Please enter the Password							|	
 	
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4062 @ZYP_CART_K4062-10300
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4062 @ZYP_CART_K4062-10300
 @CR-SK 
 Scenario:
 Verify if user gets proper validation message for password less than 8 characters 

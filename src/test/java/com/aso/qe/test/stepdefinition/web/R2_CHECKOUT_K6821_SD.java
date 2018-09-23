@@ -27,6 +27,7 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 		{
 			assertTrue(clickOnButton(r2CartPo.btnCartCheckout));
 		}
+		waitForPageLoad(driver);
 	}
 	
 	@When("^user enter First name \"(.*?)\"$")

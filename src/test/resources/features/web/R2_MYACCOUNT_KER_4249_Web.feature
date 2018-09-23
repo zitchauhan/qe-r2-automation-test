@@ -95,7 +95,7 @@ Scenario: Verify the user gets the error message when Password is left blank
 	And clicks on Sign Up Button
 	Then Verify the message on the page
 	    |# Following error Message should show on the page	|
-	    |Please enter a Password							|		    
+	    |Please enter the Password							|		    
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10153 @CR-SK

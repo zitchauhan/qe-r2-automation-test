@@ -72,7 +72,7 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 			cartR2PageObj.navigateAndDeleteAllProductsInCart();
 		}
 
-		else if (emailID.contains("RawUser") | emailID.contains("EmailAddress")
+		else if (emailID.contains("RawUser") | emailID.contains("UserWithDefaultCaliforniaAddress") | emailID.contains("EmailAddress")
 				| emailID.contains("UserWithTaxableAddress") | emailID.contains("UserWithSavedAddressAndPayment")) {
 			setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty(emailID));
 			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
