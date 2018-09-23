@@ -45,7 +45,7 @@ public class R2_MYACCOUNT_K4018_SD extends CommonActionHelper
 
 	@When("^User clicks on Check button$")
 	public void user_clicks_on_Check_button() throws Throwable {
-		assertTrue(isDisplayed(r2MyAccountPo.Check_Btn));
+		assertTrue(clickOnButton(r2MyAccountPo.Check_Btn));
 	}
 
 	@Then("^Verify that error message is displayed$")
@@ -53,10 +53,11 @@ public class R2_MYACCOUNT_K4018_SD extends CommonActionHelper
 	   //Need to verify functionality is not working
 	}
 
-
+	//SID 22-September
 	@Then("^Order Details page should be displayed$")
 	public void order_Details_page_should_be_displayed() throws Throwable {
-		//Need to verify functionality is not working
+		waitForElement(r2MyAccountPo.Order_Details_page);
+		assertTrue(isDisplayed(r2MyAccountPo.Order_Details_page));
 	}
 
 	@Then("^Billing information associated with order should NOT be displayed$")
