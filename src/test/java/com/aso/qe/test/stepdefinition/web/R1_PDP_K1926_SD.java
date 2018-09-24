@@ -391,8 +391,11 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 	}
 
 	@When("^user navigates to PLP of any product$")
-	public void user_navigates_to_PLP_of_any_product() throws Throwable {
-		globalElementHeader_HomePO.navigateToPLPViaClick_Desktop();
+	public void user_navigates_to_PLP_of_any_product() throws Throwable 
+	{
+		//globalElementHeader_HomePO.navigateToPLPViaClick_Desktop();
+		
+		globalElementHeader_HomePO.navigateL2HeaderToPLP();
 	}
 
 	@Then("^User refresh the page$")
