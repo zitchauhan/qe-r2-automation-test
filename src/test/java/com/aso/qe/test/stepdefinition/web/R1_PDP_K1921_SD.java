@@ -52,7 +52,7 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 	@Then("^verify Sorry the selected item is limited to XYZ order\\.$")
 	public void verify_Sorry_the_selected_item_is_limited_to_XYZ_order() throws Throwable {
 	   String actdata= getText(pdpPageObj.MsgSelectedItemLimited);
-	   assertEquals(actdata, "Sorry, the selected item is limited to 4 per order.");
+	   assertTrue(actdata.contains("We added those to the cart"));
 	}
 	
 	@Then("^verify user gets a msg Sorry we only have XYZ of this item available We added those to the cart$")

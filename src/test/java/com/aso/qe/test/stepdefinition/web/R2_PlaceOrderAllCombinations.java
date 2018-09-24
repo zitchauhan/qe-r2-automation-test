@@ -11,7 +11,8 @@ import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
 import cucumber.api.java.en.Given;
 
-public class R2_PlaceOrderAllCombinations extends CommonActionHelper {
+public class R2_PlaceOrderAllCombinations extends CommonActionHelper 
+{
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(driver, R1_PDP_PO.class);
 	R2_R1_Fun_PO r2R1FunPO = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 

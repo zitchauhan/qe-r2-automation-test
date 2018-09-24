@@ -31,6 +31,7 @@ public class R2_CHECKOUT_K3130_SD extends CommonActionHelper {
 	@Then("^user clicks on the Review order button$")
 	public void user_clicks_on_the_Review_order_button() throws Throwable {
 		clickOnButton(r2CheckOutPo.ReviewOrder_Btn);
+		Thread.sleep(10000);
 	}
 	
 	@Then("user uncheck the checkbox for Billing address different from shipping address$")
@@ -40,10 +41,8 @@ public class R2_CHECKOUT_K3130_SD extends CommonActionHelper {
 	}
 
 
-	@Given("^user clicks on place order on checkout page$")
 	@And("^user able to see the button place order$")
 	public void user_able_to_see_the_button_place_order() throws Throwable{
-		waitForElement(r2CheckOutPo.btnPlaceOrderPaymentPage);
 		assertTrue(isDisplayed(r2CheckOutPo.btnPlaceOrderPaymentPage));
 		assertTrue(clickOnButton(r2CheckOutPo.btnPlaceOrderPaymentPage));
 	}
