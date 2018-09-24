@@ -64,3 +64,4 @@ Feature: Message/Text Verification
 	|By placing this order, I accept Academy's|
     |Terms and Conditions|
     |Privacy Policy|
+    |Invalid Gift Card Number/Insufficient Funds|
