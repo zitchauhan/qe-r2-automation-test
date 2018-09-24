@@ -329,7 +329,7 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	Then User clicks on the burger menu 
+#	Then User clicks on the burger menu 
 #	#And User navigates to LThree 
 #	Then user clicks on the product card and navigates to PDP 
     Then User searches a product "productName" and navigates to PDP

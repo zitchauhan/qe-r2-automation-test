@@ -21,6 +21,7 @@ Scenario: To verify Remove Promo code in Order Summary
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3167 @ZYP_CHECKOUT_K3167-8093 @CR-AKK 
 Scenario: To verify Promo code applied in Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
