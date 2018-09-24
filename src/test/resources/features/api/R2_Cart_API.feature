@@ -74,16 +74,6 @@ Feature: To Verify Get Cart Details API service without sign-in
     Given "GetCartUrl" by "/getAvailableShippingMethods/?profile=getshipppingmodeswithestimate&orderId=" endpoint for Get Available Shipping Methods for Cart Items
     Then Validated response details of "availableshippingmode.results.orderId"
 
-  @All-R2 @C1-Cart @C2-UpdateCart @api @R2_AAST-07 @CR-RT @ZYP_UpdateRemove_13546
-  Scenario: TC_7 - verify the Cart-Item-Update-Quantity and validate the Schema and response details
-    Given "GetCartUrl" by "/updateItemQuantity" with "CartItemUpdateRemoveRequest" endpoint for Cart-Update-Quantity
-    Then Verify response status code as 204
-
-  @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_UpdateRemove_13778
-  Scenario: TC_7 - verify the Cart-Item-Remove and validate the Schema and response details
-    Given "GetCartUrl" by "undefined/updateItemQuantity" with "CartItemUpdateRemoveRequest" endpoint for Remove Item from Cart
-    Then Verify response status code as 204
-
   # I did not get the API details for below feature file. Help Needed
   @All-R2 @C1-Cart @C2-ChangeStore @api @R2_AAST-05 @CR-VK @ZYP_Cart_12577
   Scenario: TC_5 - verify the change store id with guest user
@@ -130,3 +120,14 @@ Feature: To Verify Get Cart Details API service without sign-in
   Scenario: TC_7 - verify the Cart Estimated Tax and Shipping Charge Json Response details
     Given "GetCartUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
     Then Validated response details of "orders[0].orderId"
+    
+     @All-R2 @C1-Cart @C2-UpdateCart @api @R2_AAST-07 @CR-RT @ZYP_UpdateRemove_13546
+  Scenario: TC_7 - verify the Cart-Item-Update-Quantity and validate the Schema and response details
+    Given "GetCartUrl" by "/updateItemQuantity" with "CartItemUpdateRemoveRequest" endpoint for Cart-Update-Quantity
+    Then Verify response status code as 204
+
+  @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_UpdateRemove_13778
+  Scenario: TC_7 - verify the Cart-Item-Remove and validate the Schema and response details
+    Given "GetCartUrl" by "undefined/updateItemQuantity" with "CartItemUpdateRemoveRequest" endpoint for Remove Item from Cart
+    Then Verify response status code as 204
+    Given "AddToCartSummaryUrl" and post request "addtocartRequestJson" endpoint for Add to Cart with Guest user

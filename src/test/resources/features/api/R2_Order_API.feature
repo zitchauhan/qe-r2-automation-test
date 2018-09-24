@@ -53,7 +53,7 @@ Feature: Verify Order API endpoint services
     Then Validated response details of "addShippingAddress.addressId"
 
   @All-R2 @C1-Order @C2-OrderAddress @api @R2_AAST-04 @CR-RT @ZYP_UpdateShippingAddress_14260
-  Scenario: TC_7 - Add the Shipping Address and validate the Schema and response details
+  Scenario: TC_7 - Update the Shipping Address and validate the Schema and response details
     Given "Addurl" endpoint with "/address" for get the shipping address of a profile
     Given "OrderUrl" by "/shipping" endpoint with "UpdateShippingRequest" for update the shipping address of a order
     Then Verify response status code as 200
