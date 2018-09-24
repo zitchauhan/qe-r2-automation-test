@@ -866,9 +866,17 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	  
 	  
 	  //End KER-2925 CR-AG 21-Sep
-    
+	 
+	 
     /**AG KER-3130 Ends**************************************/
 
+ //
+	 //K4237-HSP- 24-Sep Start---------------- 
+	  @FindBy(xpath = "//*[contains(text(),'Order Number')]/following-sibling::p")public WebElement orderSubmitted_OrderNumber; 
+	  @FindBy(xpath ="//*[contains(text(),'Order Number')]/following-sibling::input")public WebElement checkOutCheckOrderStatus_OrderNumberInput; 
+	 
+	//K4237-HSP- 24-Sep End---------------- 
+	  
     public void billingAddressErrorMsgValidation() {
     	
     	assertTrue(isDisplayed(txtBillingFirstNameErrorMsg));
