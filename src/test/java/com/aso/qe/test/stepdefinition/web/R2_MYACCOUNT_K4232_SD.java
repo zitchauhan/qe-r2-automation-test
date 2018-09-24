@@ -1,5 +1,6 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebElement;
@@ -136,6 +137,17 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 		
 	}
 
-		
+	@Then("^user verifies that remove button is not available$")
+	public void user_verifies_that_remove_button_is_not_available() throws Throwable {
+		if (isDisplayed(myAccountPo.btnRemove)) {
+			for (WebElement removeAddress : myAccountPo.addresRemove_Btn) {
+
+				clickOnButton(removeAddress);
+				Thread.sleep(2000);
+			
+		} }else {
+			assertFalse(isDisplayed(myAccountPo.btnRemove));
+		}
+	}
 
 }

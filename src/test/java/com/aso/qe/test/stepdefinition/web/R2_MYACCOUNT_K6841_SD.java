@@ -78,8 +78,11 @@ public class R2_MYACCOUNT_K6841_SD extends CommonActionHelper {
 	@When("^user fills the credit/debit form$")
 	public void user_fills_the_credit_debit_form() throws Throwable {
 		setInputText(r2_MyAccount_PO.txtCreditCardNumber, webPropHelper.getTestDataProperty("CreditCardNumber"));
+		Thread.sleep(2000);
 		setInputText(r2_MyAccount_PO.txtExpiryDate, webPropHelper.getTestDataProperty("ExpDate"));
+		Thread.sleep(2000);
 		setInputText(r2_MyAccount_PO.txtCVV, webPropHelper.getTestDataProperty("CVV"));
+		Thread.sleep(2000);
 		setInputText(r2_MyAccount_PO.txtFirstNameInAddCreditCard, webPropHelper.getTestDataProperty("FirstName"));
 		setInputText(r2_MyAccount_PO.txtLastNameInAddCreditCard, webPropHelper.getTestDataProperty("LastName"));
 		setInputText(r2_MyAccount_PO.txtAddressInAddCreditCard, webPropHelper.getTestDataProperty("Address"));
@@ -89,7 +92,8 @@ public class R2_MYACCOUNT_K6841_SD extends CommonActionHelper {
 
 	@When("^user clicks on add cta$")
 	public void user_clicks_on_add_cta() throws Throwable {
-		assertTrue(clickOnButton(r2_MyAccount_PO.btnAddInAddCreditCard));
+		assertTrue(clickOnButton(r2_MyAccount_PO.PaymentPage_AddCreditCard_Add_btn)); //Sep24 CR-RK KER-2920
+		Thread.sleep(2000);
 	}
 
 	@Then("^User updates CC/debit card and billing information$")

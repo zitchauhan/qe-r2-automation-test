@@ -111,4 +111,33 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then Verify the message on the page
     |# verify the remove quantity message|
     |Undo|
+    
+    
+    @R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10554 @CR-RK 	
+Scenario: Verify last added credit card in saved list becomes the default on deletion of Default credit card
+Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
+	Then user should able to click on Signin button 
+	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in Sign in/login page	|
+	|SignInPage_SignIn_btn								|
+	|SignInPage_EmailAddress_txt			   			| 
+	|SignInPage_Password_txt				   			|
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password"
+	And user click on signin button
+	Then User clicks on the burger menu
+	And user clicks on payment tab
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following elements in Payments > Add new credit card section	|
+	|PaymentPage_PaymentsHeader_label				|
+	And user clicks on add new credit card cta
+	And user fills the credit/debit form
+	And user clicks on add cta
+	And user clicks on add new credit card cta
+	And user fills the credit/debit form
+	And user clicks on add cta
+	And user verifies the credit card saved is set as default
+	And user clicks Remove button in payment page
+	And user verifies the credit card saved is set as default
 

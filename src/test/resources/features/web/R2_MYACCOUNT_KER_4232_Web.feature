@@ -267,6 +267,33 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user lands on My Account page and click on adress 
 	And user verifies the First address provided is set as default
 
+
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-12772 @CR-RK 
+	Scenario: Verify My Account Address Book - Delete only saved address that is Default Address
+	Given user launches the browser and navigates to "ASO_HOME" page
+	 And user clicks on SignIn link from global header
+	 Then Verify below Sub/Main Module of My Account 
+		|# Verify following elements in Sign in/login page	|
+		|SignInPage_EmailAddress_txt			   			| 
+		|SignInPage_Password_txt				   			|
+		|SignInPage_SignIn_btn								|
+     And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	And user click on MyAccount
+	    Then user lands on My Account page and click on adress
+         Then user Clicks on Add New Address link 
+     		When user enter First name "FirstName" in address book
+	And user enter Last name "LastName" in address book
+	And user enter Phone number "PhoneNumber" in address book
+	And user enter Address "Address" in address book
+	And user enter Zipcode "zipcode" in address book
+	 And user click on set as default button
+	 And clicks on Add New Address button
+ 	Then Verify below Sub/Main Module of My Account
+	|# Verify following elements in address page|
+	|AddressPage_Default_txt					|	
+	And user verifies that remove button is not available
      
      
 
