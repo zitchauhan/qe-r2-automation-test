@@ -115,3 +115,18 @@ Feature: To Verify Get Cart Details API service without sign-in
     Given "GetCartUrl" by "PUT/updateshippingmode" with "CartBopisUpdateShippingModeRequest" endpoint for Cart-Bopis-Update-Shipping-Mode
     Then Validated response details of "orderId"
     Then Validated response details of "orderItem.orderItemId"
+
+  @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_EstimatedTax_14238
+  Scenario: TC_7 - verify the Cart Estimated Tax and Shipping Charge Response status code details
+    Given "GetCartUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
+    Then Verify response status code as 200
+
+  @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_EstimatedTax_14239
+  Scenario: TC_7 - Validate the Cart Estimated Tax and Shipping Charge Json Schema details
+    Given "GetCartUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
+    And validate jsonSchema "R2-CartEstimatedTaxShippingChargeSchema"
+
+  @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_EstimatedTax_14240
+  Scenario: TC_7 - verify the Cart Estimated Tax and Shipping Charge Json Response details
+    Given "GetCartUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
+    Then Validated response details of "orders[0].orderId"

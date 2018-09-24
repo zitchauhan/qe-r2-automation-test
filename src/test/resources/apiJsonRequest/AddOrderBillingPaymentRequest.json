@@ -1,30 +1,30 @@
 {
-    "orderId":"REPLACE_ORDERID",
-    "paymentMethod":"creditCard",
-    "creditCard":{
-            "exp_date":"0523",
-            "cardType":"Visa",
-            "lastFourCCDigit":"8291",
-            "token":"2537446225198291",
-            "cardHolderFirstName":"John",
-            "cardHolderLastName":"Smith"
-    },
-    "billingAddress":{
-        "firstName":"",
-        "lastName":"",
-        "address":"",
-        "phoneNumber":"",
-        "zipCode":"",
-        "state":"",
-        "city":"",
-        "country":"",
-        "organizationName":"",
-        "email":"ravit@gmail.com"
-    },
-    "addressId":"",
-    "editBillingAddressId":"",
-    "billingSameAsShippingAddress":"1",
-        "smsPreference" : "1",
-     "promoEmailPreference":"1",
-     "savePaymentInfo":"1"
+  "orderId": "REPLACE_ORDERID",
+  "paymentMethod": "creditCard",
+  "addressId": "",
+  "editBillingAddressId": "",
+  "billingSameAsShippingAddress": "0",
+  "creditCard": {
+    "exp_date": "1223",
+    "cardType": "Visa",
+    "lastFourCCDigit": "1111",
+    "token": "1857715650981111",
+    "cardHolderFirstName": "Ravi",
+    "cardHolderLastName": "Prasad"
+  },
+  "savePaymentInfo": "1",
+  "promoEmailPreference": "0",
+  "billingAddress": {
+    "firstName": "Ravi",
+    "lastName": "Prasad",
+    "address": "White Pearl Apartment, US",
+    "phoneNumber": "7654321233",
+    "zipCode": "72201",
+    "state": "AR",
+    "city": "Little Rock",
+    "country": "US",
+    "organizationName": "",
+    "email": "ravi.t@gmail.com"
+  }
 }
+
