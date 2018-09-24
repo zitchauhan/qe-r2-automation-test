@@ -32,7 +32,13 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 	
 	@Given("^user clicks on Add New Gift Card button$")
 	public void user_clicks_on_Add_New_Gift_Card_button() throws Throwable {
-		assertTrue(clickOnButton(myAccountPo.btnAddNewGiftCard));
+		
+		if(isDisplayed(myAccountPo.btnAddGiftCardPlusIcon)) {
+		
+		assertTrue(clickOnButton(myAccountPo.btnAddGiftCardPlusIcon));}
+		else {
+			assertTrue(clickOnButton(myAccountPo.btnAddNewGiftCard));
+		}
 	}
 	
 	@Given("^User has empty wallet with no Gift Card added$")

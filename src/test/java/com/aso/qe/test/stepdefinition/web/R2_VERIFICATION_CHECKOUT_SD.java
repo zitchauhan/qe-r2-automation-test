@@ -82,7 +82,8 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 				else if (currentElement.equalsIgnoreCase("checkout_ShippingAddress_AVSModelSelectAddress_btn"))
 					assertTrue(isDisplayed(r2CheckoutPo.btnSelectedAddress)); 
  
-
+				else if (currentElement.equalsIgnoreCase("Checkout_ShippingAddress_SaveShipping_chekbox"))
+					assertTrue(isDisplayed(r2CheckoutPo.Checkout_ShippingAddress_SaveShipping_chekbox));
 				//======================================
 				// In-Store Pickup(Start)
 				else if (currentElement.equalsIgnoreCase("MePickUp_Drpdwn"))
@@ -303,6 +304,14 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 						assertTrue(isDisplayed(r2CheckoutPo.btnRemoveGiftCard));
 					else if (currentElement.equalsIgnoreCase("AddAnotherGiftCard_Txt"))
 						assertTrue(isDisplayed(r2CheckoutPo.AddAnotherGiftCard_Txt));
+					else if (currentElement.equalsIgnoreCase("ChoosegiftCard_Dd"))
+						assertTrue(isDisplayed(r2CheckoutPo.checkOutGiftCardDropDown));						
+						else if (currentElement.equalsIgnoreCase("AddAnewGiftCard_Txt"))
+							assertTrue(isDisplayed(r2CheckoutPo.AddAnewGiftCard_Txt));
+						else if (currentElement.equalsIgnoreCase("Plus_AddAnotherGiftCard_Txt"))
+							assertTrue(isDisplayed(r2CheckoutPo.plusAnotherIconGiftCard));
+				
+				
 				//****************Gift Card(End)
 				
 				//*************** Billing Information(Start)

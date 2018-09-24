@@ -477,7 +477,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[text()='Credit Card']")public WebElement CreditCard_radioBtn;
 		@FindBy(xpath="//*[text()='PayPal']")public WebElement PayPal_radioBtn;
 		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]")public WebElement CreditCardNumber_Input;
-		@FindBy(xpath="//*[text()='Exp Date']/following::*[1]")public WebElement ExpirationDate_Input;
+		@FindBy(xpath="//*[text()='Expiration Date']/following::*[1]")public WebElement ExpirationDate_Input;
 		@FindBy(xpath="//*[text()='CVV']/following::*[3]")public WebElement Cvv_Input;
 		@FindBy(xpath="//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']")public WebElement CvvToolTip;
 		@FindBy(xpath="//*[text()='Unrecognized card number']")public WebElement UnrecognizedCardNumber_Txt; 
@@ -488,6 +488,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
         @FindBy(xpath="//*[@data-auid='undefined_listOption_1']")public WebElement AddNewCreditCard_Txt;
         @FindBy(xpath="//*[@name='creditcardField']/../span[2]/img")public WebElement Checkout_CreditCardPay_ImgLogo;
+        @FindBy(xpath="//*[contains(text(),'Choose Card')]/following::*[2]")public WebElement Checkout_CreditCard_DropDown; 
+        
+
         //*****************Payment Method (END)
 		
 		//****************Gift Card(Start)
@@ -505,6 +508,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath = "//*[@data-auid='btncheckout_payment_apply_gift_card_btn']")public WebElement btnCheckoutApply; //Apply_Btn
 		@FindBy(xpath="//*[@data-auid='checkout_payment_add_another_gift_card_icon']")public WebElement AddAnotherGiftCard_Txt;
 		@FindBy(xpath = "//div[contains(text(),'Choose Gift Card')]/../div/div/div/button")public WebElement checkOutGiftCardDropDown; 
+		@FindBy(xpath="//*[contains(text(),'Add a New Gift Card')]")public WebElement AddAnewGiftCard_Txt;
+		@FindBy(xpath="//*[contains(text(),'APPLY')]")public WebElement apply_btn;
 		
 		//****************Gift Card(End)
 		
@@ -544,7 +549,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[text()='Order Number']/../p[3]")public WebElement orderConfirmationPage_OrderNumber;
 	 
 	@FindBy(xpath = "//*[text()='Order Number']")public WebElement orderConfirmationPage_OrderNumber_txt; 
- 
+	@FindBy(xpath = "//*[text()='BILLING INFORMATION']/following-sibling::div/div[1]/div[4]")public WebElement orderConfirmationPage_PaymentDrawer_BillingEmail; 
+	 
+
 
 	   
 	 //*************** Billing Information(End)
@@ -812,6 +819,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		setInputText(txtCVVInput,webPropHelper.getTestDataProperty("ThreeDigitCVV"));
 	}
 	
+	
+	public void enterWrongCardDetails() {
+		setInputText(txtCreditCardInput, "4123131246519411"); //yet to get correct data to externalise 
+		setInputText(txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
+		setInputText(txtCVVInput,webPropHelper.getTestDataProperty("ThreeDigitCVV"));
+	}
+	
 	 // To be updated by Anuj
 	   /**AG KER-3130 Starts**************************************/
     
@@ -844,6 +858,14 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	 @FindBy(xpath = "//*[@data-auid='checkout_edit_ship_to_store']")	public WebElement checkoutEditShipToStore_btn;
 	 //End KER-3174 CR-RK 19-Sep
 	 
+	 //Start KER-2925 CR-AG 21-Sep
+	  @FindBy(xpath="//*[contains(text(),'Terms and Conditions')]")public WebElement lnkTermsConditons;
+	  @FindBy(xpath="//*[contains(text(),'Privacy Policy')]")public WebElement lnkPrivacyPolicy;
+	  @FindBy(xpath="//*[@id='1' and @name='Dropdown']")public WebElement drpdownShippingAddress;
+	  
+	  
+	  
+	  //End KER-2925 CR-AG 21-Sep
     
     /**AG KER-3130 Ends**************************************/
 
@@ -900,4 +922,44 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		assertTrue(clickOnButton(btnGoToShippingMethod));
 	}
 	//End CR-DPK KER-2919
+	
+	public void userNavigateToTermsCondition() throws InterruptedException{
+		assertTrue(clickOnButton(lnkTermsConditons));
+
+		 ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
+		 
+		    driver.switchTo().window(tabs.get(1));
+		    String Title ="Terms and Conditions of Website Use";
+		    assertTrue(Title.equalsIgnoreCase(getTitle()));
+		    
+	}
+	
+	public void userNavigateToPrivacyPolicy() throws InterruptedException{
+		assertTrue(clickOnButton(lnkPrivacyPolicy));
+
+		 ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
+		 
+		    driver.switchTo().window(tabs.get(1));
+		    String Title ="Privacy Policy";
+		    assertTrue(Title.equalsIgnoreCase(getTitle()));	
+	}
+	
+	public void verifymodifiedShippingAddress() throws InterruptedException{
+	
+		
+		String modifiedFirstName= webPropHelper.getTestDataProperty("FirstName");
+		String modifiedSecondName= webPropHelper.getTestDataProperty("LastName");
+		String modifiedPhoneNumber= webPropHelper.getTestDataProperty("PhoneNumber");
+		String modifiedAddress= webPropHelper.getTestDataProperty("PO_ADDRESS");
+		String modifiedZipcode= webPropHelper.getTestDataProperty("PO_ZIPCODE");
+
+		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedFirstName+"')]"))));
+		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedSecondName+"')]"))));
+		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedPhoneNumber+"')]"))));
+		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedAddress+"')]"))));
+		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedZipcode+"')]"))));
+
+		
+	}
+	
 }

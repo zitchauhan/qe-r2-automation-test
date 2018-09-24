@@ -26,6 +26,10 @@ Scenario: Verify Checkout for Web
 		|checkout_ShippingAddress_City_txt							|
 		|checkout_ShippingAddress_Edit_lnk							|
 		|checkOut_ShippingAddress_GoToShippingMethod_btn			|
+		|Checkout_ShippingAddress_SaveShipping_chekbox|
+		
+		
+		
 		|#------Below Elements has same name in PO------			|
 		|checkout_ShippingAddress_ShippingAddressHeader_txt			|
 		|checkout_ShippingAddress_AddCompanyName_lnk				|
@@ -144,6 +148,11 @@ Scenario: Verify Checkout for Web
 		|Apply_Btn|
 		|txtGiftCardAppliedSuccessMessage|
 		|btnToRemoveGiftCardOnCheckoutPage|
+		|ChoosegiftCard_Dd|
+		|AddAnewGiftCard_Txt|
+		|Plus_AddAnotherGiftCard_Txt|
+		
+		
 		|#%%%%%%   Billing Information  %%%%%%%%%%|
 		|BillingInformation_Txt|
 		|SameAsShippingAddress_Txt|
