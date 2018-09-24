@@ -109,6 +109,16 @@ Scenario: BOPIS-Verify that order is gets cancelled if user clicks on Yes, Cance
 	Then Verify below Sub/Main Module of My Account
     |#Verify following elements in my account order details|
     |Order_Back_To_Order_Lnk|
+    
+@R2_Web @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4327 @ZYP_MYACCOUNT_K4327-10920 @CR-MS
+Scenario: Verify that the Guest user is able to navigate to check order status page
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	When User navigates to Check Oder status Page 
+	Then Verify the message on the page 
+		|# Following Message should show on the page| 
+		|Order Number|
+		|Billing Zip Code|
+	
 		   
     
     

@@ -19,10 +19,8 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
 	And user enter the valid emailaddress "EmailWithoutShipDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User navigates to L2 Mens clothing
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	When user clicks on one of the product category and navigates to LThree  
+	 And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
     Then Verify below Sub/Main Module of PDP
     |Verify following elements in PDP page|
     |EnableBuyNow_btn|
@@ -34,10 +32,8 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User navigates to L2 Mens clothing
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	When user clicks on one of the product category and navigates to LThree  
+	 And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
     Then Verify below Sub/Main Module of PDP
     |Verify following elements in PDP page|
     |EnableBuyNow_btn|
@@ -49,10 +45,8 @@ Scenario: Verify that Authenticated user is able to view modal to add shipping d
 	And user enter the valid emailaddress "EmailWithoutShipDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User navigates to L2 Mens clothing
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree  
+	 And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
     Then Verify below Sub/Main Module of PDP
     |Verify following elements in PDP page|
     |EnableBuyNow_btn|
@@ -75,10 +69,8 @@ Scenario: Verify the shipping details modal if user does not have saved Shipping
 	And user enter the valid emailaddress "emailWithOutPhonenumber" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User navigates to L2 Mens clothing
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree  
+	 And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP 
     Then Verify below Sub/Main Module of PDP
     |Verify following elements in PDP page|
     |EnableBuyNow_btn|
@@ -108,7 +100,7 @@ Scenario: Verify Enable Buy Now is applicable for Baits
     |#Verify following elements in PDP modal popup|
     |Default_Payment_Option_btn|
     
-#Defect-KER-13488
+##Defect-KER-13488
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12348 @CR-MS
 Scenario: Verify Enable Buy Now is not applicable for following items SOF Age Restriction Items Item(s) having only In store Inventory while loading PDP
    Given user launches the browser and navigates to "ASO_HOME" page
