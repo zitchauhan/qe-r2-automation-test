@@ -173,4 +173,82 @@ Scenario:
 		|# Following Error Message should show on the page|
 		|Enter a valid email address,Note that + is not allowed in email address field.|
 		
+		
+		
+@R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
+@ZYP_CHECKOUT_K3164-13295 @CR-GK 
+Scenario: 
+	Verify that user should be displayed with the error message if they try to save billing info without entering the email id for order confirmation field in checkout page 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And  user is navigated to Add to cart Notification popup 
+	And  user click on checkout from ATC pop up 
+	And  user enter First name "FirstName" 
+	And  user enter Last name "LastName" 
+	And  user enter Phone number "PhoneNumber" 
+	And  user enter Address "AVSAddress" 
+	And  user enter Zipcode "zipcode" 
+	And  user click on Go To Shipping Method button in Checkout page 
+	And  user selects the suggested address instead of entered address 
+	And  clicks on Use Selected Address button 
+	And user clicks on edit shipping method cta 
+	And user click on go to payment present in shipping method 
+	And user fill the credit card detail in payment 
+	And user click on confirm billing address button 
+	Then Verify the message on the page 
+		|# Following Error Message should show on the page|
+		|Please enter email address|
+		
+		
+@R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
+@ZYP_CHECKOUT_K3164-13293 @CR-GK 
+Scenario: 
+	Verify the validation error message for the email id for order confirmation field in the shipping address drawer in checkout page if we edit without passing the email id 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And  user is navigated to Add to cart Notification popup 
+	And  user click on checkout from ATC pop up 
+	And  user enter First name "FirstName" 
+	And  user enter Last name "LastName" 
+	And  user enter Phone number "PhoneNumber" 
+	And  user enter Address "AVSAddress" 
+	And  user enter Zipcode "zipcode" 
+	And  user click on Go To Shipping Method button in Checkout page 
+	And  user selects the suggested address instead of entered address 
+	And  clicks on Use Selected Address button 
+	And user clicks on edit shipping method cta 
+	And user click on go to payment present in shipping method 
+	And user fill the credit card detail in payment 
+	And user click on confirm billing address button 
+	Then Verify the message on the page 
+		|# Following Error Message should show on the page|
+		|Please enter email address|
+		
+		
+		
+@R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
+@ZYP_CHECKOUT_K3164-13290 @CR-GK 
+Scenario: 
+	Verify the validation error message for the email id for order confirmation field in the shipping address drawer in checkout page if we edit without passing the email id 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And  user is navigated to Add to cart Notification popup 
+	And  user click on checkout from ATC pop up 
+	And  user enter First name "FirstName" 
+	And  user enter Last name "LastName" 
+	And  user enter Phone number "PhoneNumber" 
+	And  user enter Address "AVSAddress" 
+	And  user enter Zipcode "zipcode" 
+	And  user click on Go To Shipping Method button in Checkout page 
+	And  user selects the suggested address instead of entered address 
+	And  clicks on Use Selected Address button 
+	And user clicks on edit shipping method cta 
+	And user click on go to payment present in shipping method 
+	And user fill the credit card detail in payment 
+	And user enter the email id for order confirmation "EmailAddress" 
+	And user click on confirm billing address button 
+	Then user should be able to see the email "EmailAddress" in payment drawer 
 	

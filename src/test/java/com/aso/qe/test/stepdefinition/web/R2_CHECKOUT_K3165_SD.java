@@ -66,7 +66,7 @@ public class R2_CHECKOUT_K3165_SD extends CommonActionHelper {
 	public void user_fill_the_email_address_for_shipment_and_click_on_review_order_btn() throws Throwable {
 		String randomGeneratedString = RandomStringUtils.randomAlphabetic(10);
 		String head = "test";
-		String tail = "@mailinator.com";
+		String tail = "@deleteme.com";
 		String newGeneratedEmail = head + randomGeneratedString + tail;
 		logger.debug("The new random generated email address is " + newGeneratedEmail);
 		setInputText(r2CheckOut_po.EmailAddressforOrderConfirmation_Input, newGeneratedEmail.toString());

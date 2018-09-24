@@ -14,6 +14,7 @@ import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 
 public class R2_CHECKOUT_K3164_SD extends CommonActionHelper {
 
@@ -42,7 +43,7 @@ public class R2_CHECKOUT_K3164_SD extends CommonActionHelper {
 	@And("^User Clicks on credit card dropwdown and selects another card$")
 	public void user_Clicks_on_credit_card_dropwdown_and_selects_another_card() throws Throwable {
 		Thread.sleep(5000);
-		//hover.click(r2CheckOut_po.Checkout_CreditCard_DropDown).build().perform();
+		hover.click(r2CheckOut_po.Checkout_CreditCard_DropDown).build().perform();
 		hover.sendKeys(Keys.DOWN, Keys.ENTER).build().perform();
 	}
 
@@ -55,6 +56,15 @@ public class R2_CHECKOUT_K3164_SD extends CommonActionHelper {
 	public void user_enter_the_email_id_for_order_confirmation(String EmailAddress) throws Throwable {
 		setInputText(r2CheckOut_po.EmailAddressforOrderConfirmation_Input,
 				webPropHelper.getTestDataProperty(EmailAddress));
+	}
+
+	@Then("^user should be able to see the email \"(.*?)\" in payment drawer$")
+	public void user_should_be_able_to_see_the_email_in_payment_drawer(String email) throws Throwable {
+		Thread.sleep(2000);
+		assertTrue(isDisplayed(r2CheckOut_po.orderConfirmationPage_PaymentDrawer_BillingEmail));
+		String emailIdInPaymentDrawer = getText(r2CheckOut_po.orderConfirmationPage_PaymentDrawer_BillingEmail);
+		String dataFromPropertyFile = webPropHelper.getTestDataProperty(email);
+		assertTrue((emailIdInPaymentDrawer.trim()).equals(dataFromPropertyFile.trim()));
 	}
 
 }
