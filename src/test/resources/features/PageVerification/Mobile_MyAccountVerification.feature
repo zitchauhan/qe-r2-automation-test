@@ -180,6 +180,23 @@ Feature: Debug
 	    |Cancel_NO_Order_Btn						| 
 	    |Order_Payment_txt							|
         |Order_Payment_Section						|
+        |MyAccount_OrderPage_OrderPlacedOnDate_txt  |
+		|MyAccount_OrderPage_OrderNumber_txt        |
+		|MyAccount_OrderPage_OrderTotal_txt         |
+		|MyAccount_OrderPage_OrderNumberInput       |
+		|MyAccount_OrderPage_OrderDetailsPage       |
+		|MyAccount_OrderDetailsPage_OrderDate       |
+		|MyAccount_OrderDetailsPage_OrderStatus     |
+		|MyAccount_OrderDetailsPage_ShippingAmount  |
+		|MyAccount_OrderDetailsPage_TaxAmount       |
+		|MyAccount_OrderDetailsPage_SubTotalAmount  |
+		|MyAccount_OrderDetailsPage_PrintReceipt    |
+		|MyAccount_OrderDetailsPage_OrderCancelLink |
+		|MyAccount_OrderDetailsPage_ShippingAddress |
+		|MyAccount_OrderDetailsPage_BillingInfo     |
+		|MyAccount_OrderDetailsPage_EmailOrPhone    | 
+ 
+        
  
 		
  

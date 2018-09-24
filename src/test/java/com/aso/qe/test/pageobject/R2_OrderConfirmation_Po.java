@@ -31,6 +31,9 @@ public class R2_OrderConfirmation_Po extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='redirect_signin_btn']")
 	public WebElement orderConfirmation_SignUp_SignInNow;
 	
+	@FindBy(xpath = "//*[text()='THANKS FOR SUBMITTING YOUR ORDER']")
+	public WebElement orderConfirmation_ThanksForSubmittingOrder_txt;
+	
 //	@FindBy(xpath = "//*[contains(text(), 'Already have an Account')]")
 //	public WebElement txtAlreadyHaveAnAccountSignInNow;
 //

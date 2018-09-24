@@ -43,6 +43,7 @@ public class R2_CHECKOUT_K3130_SD extends CommonActionHelper {
 	@Given("^user clicks on place order on checkout page$")
 	@And("^user able to see the button place order$")
 	public void user_able_to_see_the_button_place_order() throws Throwable{
+		waitForElement(r2CheckOutPo.btnPlaceOrderPaymentPage);
 		assertTrue(isDisplayed(r2CheckOutPo.btnPlaceOrderPaymentPage));
 		assertTrue(clickOnButton(r2CheckOutPo.btnPlaceOrderPaymentPage));
 	}

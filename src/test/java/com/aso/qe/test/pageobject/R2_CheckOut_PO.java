@@ -477,7 +477,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[text()='Credit Card']")public WebElement CreditCard_radioBtn;
 		@FindBy(xpath="//*[text()='PayPal']")public WebElement PayPal_radioBtn;
 		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]")public WebElement CreditCardNumber_Input;
-		@FindBy(xpath="//*[text()='Expiration Date']/following::*[1]")public WebElement ExpirationDate_Input;
+		@FindBy(xpath="//*[text()='Exp Date']/following::*[1]")public WebElement ExpirationDate_Input;
 		@FindBy(xpath="//*[text()='CVV']/following::*[3]")public WebElement Cvv_Input;
 		@FindBy(xpath="//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']")public WebElement CvvToolTip;
 		@FindBy(xpath="//*[text()='Unrecognized card number']")public WebElement UnrecognizedCardNumber_Txt; 

@@ -29,7 +29,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']|//ul[@class='slider animated'])[2]") public WebElement imgProductMainMixedMedia_m;//9aug danush
 	@FindBy(xpath="//*[@data-auid='PDP_ProductName']") public WebElement txtProductTitle;
 	@FindBy(xpath="//*[contains(@data-auid,'Size_Attribute')]") public WebElement secProductAttributeSizes;
-	@FindBy(xpath="//*[@data-auid='btnAddToCart']") public WebElement btnAddToCart;
+	@FindBy(xpath="//*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']") public WebElement btnAddToCart;//modified SK - 24 Sep
 	@FindBy(xpath="//*[@data-auid='PDP_QC_DEC']") public WebElement btnQuantityDec;
 	@FindBy(xpath="//*[@data-auid='PDP_QC_INC']") public   WebElement btnQuantityInc;
 	@FindBy(xpath="//input[@aria-label='Enter Desired Quantity' and @value='1']") public   WebElement txtDesiredQtyValue_1;
@@ -231,6 +231,37 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[contains(@data-auid,'PDP_PromoMessage')]") public WebElement txtPromoCodePDP;
 	@FindBys({ @FindBy(xpath="//*[@data-auid='PDP_Color_Attribute']//button [not(*[local-name()='svg'])]")}) public List<WebElement> colorsAvailable;
 	@FindBys({ @FindBy(xpath="(//*[@data-auid='PDP_Size_Attribute']//button[@role] [not(*[local-name()='svg'])])")}) public List<WebElement> sizeAvailable;
+	
+	@FindBy(xpath="//*[text()='Size']/../following-sibling::*//*[@data-auid='swatchButton-image-3782' and not(*[local-name()='svg'])]")
+	public WebElement availableSizeForMultiSkuProduct;
+	
+	@FindBy(xpath="//*[text()='Size']/../preceding-sibling::*//*[@data-auid='swatchButton-image-3782' and not(*[local-name()='svg'])]")
+	public WebElement availableColorForMultiSkuProduct;
+	
+	@FindBy(xpath="//*[text()='Shoe Size']/../following-sibling::*//*[@data-auid='swatchButton-image-3782' and not(*[local-name()='svg'])]")
+	public WebElement availableSizeForBundleProduct;
+	
+	@FindBy(xpath="//*[text()='Shoe Size']/../preceding-sibling::*//*[@data-auid='swatchButton-image-3782' and not(*[local-name()='svg'])]")
+	public WebElement availableColorForBundleProduct;
+	
+	@FindBy(xpath="//*[text()='Shoe Width']/../following-sibling::*//*[@data-auid='swatchButton-image-3782' and not(*[local-name()='svg'])]")
+	public WebElement availableBallSizesForBundleProduct;
+	
+	@FindBy(xpath="//*[text()='Shoe Width']/../following-sibling::*//*[@data-auid='swatchButton-image-3782' and not(*[local-name()='svg'])]")
+	public WebElement availableWidthForBundleProduct;
+	
+	@FindBy(xpath = "//*[@data-auid='undefined_INC']")
+	public WebElement increaseQuantityForBaitProduct;
+	
+	@FindBy(xpath = "//*[@data-auid='btnundefined']")
+	public WebElement addSelectionsToCart;
+	
+	
+	@FindBy(xpath = "//*[text()='Ball Size']/../preceding-sibling::*//*[@data-auid='swatchButton-image-3782' and not(*[local-name()='svg'])]")
+	public WebElement availableBallColorForBundleProduct;
+	
+	@FindBy(xpath = "//*[text()='Ball Size']/../following-sibling::*//*[@data-auid='swatchButton-image-3782' and not(*[local-name()='svg'])]")
+	public WebElement availableBallSizeForBundleProduct;
 	
 
 	public void cilckAnswerThisQuestion() throws Exception {
