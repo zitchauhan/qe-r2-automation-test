@@ -254,5 +254,10 @@ public class R2_Cart_API_SD extends JSONValidationUtils{
 		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
 	}
 
+	@Given("^\"(.*?)\" by \"(.*?)\" for Taxes Cart Estimated Tax and Shipping Charge$")
+	public void by_for_Taxes_Cart_Estimated_Tax_and_Shipping_Charge(String url, String extension) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+extension;
+		initiateRestAPICallWithCookie(endpoints);
+	}
 
 }

@@ -51,13 +51,17 @@ public class Common_Web_SD extends CommonActionHelper
 	}
 
 	@Then("^User navigates till PLP$")
-	public void User_navigates_till_PLP() throws Throwable {
+	public void User_navigates_till_PLP() throws Throwable 
+	{
 
-		if("mobile".equalsIgnoreCase(testtype)){
+	/*	if("mobile".equalsIgnoreCase(testtype)){
 			globalElementHeader.navigateToPLPViaClick_Mobile();
 		} else{
 			globalElementHeader.navigateToPLPViaClick_Desktop();
-		}
+		}*/
+		
+		
+		globalElementHeader.navigateL2HeaderToPLP();
 	}
 
 

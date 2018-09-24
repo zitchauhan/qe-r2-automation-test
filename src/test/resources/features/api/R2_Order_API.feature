@@ -52,11 +52,35 @@ Feature: Verify Order API endpoint services
     Then Validated response details of "addShippingAddress.orderId"
     Then Validated response details of "addShippingAddress.addressId"
 
-  @All-R2 @C1-Order @C2-OrderAddress @api @R2_AAST-04 @CR-RT @ZYP_UpdateShippingAddress_??
-  Scenario: TC_7 - Add the Shipping Address and validate the Schema and response details
+  @All-R2 @C1-Order @C2-OrderAddress @api @R2_AAST-04 @CR-RT @ZYP_UpdateShippingAddress_14260
+  Scenario: TC_7 - Update the Shipping Address and validate the Schema and response details
     Given "Addurl" endpoint with "/address" for get the shipping address of a profile
     Given "OrderUrl" by "/shipping" endpoint with "UpdateShippingRequest" for update the shipping address of a order
     Then Verify response status code as 200
+    
+    
+     @All-R2 @C1-Order @C2-OrderAddress @api @R2_AAST-04 @CR-RT @ZYP_AddBillingAddress_14256
+  Scenario: TC_7 - Add the Order-Billing Address Credit Card Payment Instructions and validate the Schema and response details
+  Given "OrderUrl" by "/creditCard" endpoint with "AddOrderBillingPaymentRequest" for add Order Billing Address and PaymentMethod details
+Then Verify response status code as 201
+Then validate jsonSchema "R2-AddBillingAddressSchema"
+     Then Validated response details of "addBillingAddress.orderId"
+    Then Validated response details of "addBillingAddress.billAddressId"
+
+ @All-R2 @C1-Order @C2-OrderCart @api @R2_AAST-07 @CR-RT @ZYP_EstimatedTax_14257
+  Scenario: TC_7 - verify the Order Cart Estimated Tax and Shipping Charge Response status code details
+    Given "GetCartUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
+    Then Verify response status code as 200
+
+  @All-R2 @C1-Order @C2-OrderCart @api @R2_AAST-07 @CR-RT @ZYP_EstimatedTax_14258
+  Scenario: TC_7 - Validate the Order Cart Estimated Tax and Shipping Charge Json Schema details
+    Given "GetCartUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
+    And validate jsonSchema "R2-CartEstimatedTaxShippingChargeSchema"
+
+  @All-R2 @C1-Order @C2-OrderCart @api @R2_AAST-07 @CR-RT @ZYP_EstimatedTax_14259
+  Scenario: TC_7 - verify the Order Cart Estimated Tax and Shipping Charge Json Response details
+    Given "GetCartUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
+    Then Validated response details of "orders[0].orderId"
 
   @All-R2 @C1-Order @C2-RemovePromoCode @api @R2_AAST-05 @CR-VK @ZYP_Order_RemovePromoCode_12280
   Scenario: TC_5 - Remove a PromoCode from an Order
