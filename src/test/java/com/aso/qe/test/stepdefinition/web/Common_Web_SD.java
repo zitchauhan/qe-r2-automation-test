@@ -174,8 +174,9 @@ public class Common_Web_SD extends CommonActionHelper
 	}
 
 	@Then ("^User navigates to L3$")
-	public void User_navigates_to_L3() throws InterruptedException {
-		if("mobile".equalsIgnoreCase(testtype)){
+	public void User_navigates_to_L3() throws Exception 
+	{
+		/*if("mobile".equalsIgnoreCase(testtype)){
 		
 			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
 			Thread.sleep(2000);
@@ -192,7 +193,9 @@ public class Common_Web_SD extends CommonActionHelper
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.btnMensShirt_Men_Clothing_Shop));
 			Thread.sleep(2000);
-		}
+		}*/
+		
+		globalElementHeader.navigateL2HeaderToPLP();
 
 	}
 
