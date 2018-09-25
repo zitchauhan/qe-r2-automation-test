@@ -34,7 +34,7 @@ Scenario: Verify user is able to create an account with all valid data
 	    |CONGRATULATIONS							|
 	    |You have successfully registered with Academy.com|
 	    |LET'S SHOP									|
-	And user should be able to view My Account in global header
+
 
 @R2_Web @R2_Regression @R2_All @1HR_R2 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10163 @CR-SK
 Scenario: Verify the user is able to sign with the new created account 

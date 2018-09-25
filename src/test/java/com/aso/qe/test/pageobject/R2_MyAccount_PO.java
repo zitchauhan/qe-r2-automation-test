@@ -521,14 +521,14 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='City']/..//input") // CR-SK 28 Aug
 	public WebElement txtCityInAddCreditCard;
 
-	@FindBy(xpath = "//div[text()= 'GIFT CARDS']/../following-sibling::div//*[text()='Remove']/i") // CR-SK 29 Aug //
+	@FindBy(xpath = "//div[text()= 'GIFT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'GIFT CARDS']/../following-sibling::*//*[text()='Remove']") // CR-SK 29 Aug //
 																									// Modified RKA 12
 																									// // Sep Modified
 																									// GK // 17Sep
 
 	public List<WebElement> btnRemoveGiftCardList;
 
-	@FindBy(xpath = "//*[text()= 'CREDIT CARDS']/../following-sibling::div//*[text()='Remove']/i") // CR-SK 29 Aug // //
+	@FindBy(xpath = "//*[text()= 'CREDIT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'CREDIT CARDS']/../following-sibling::*//*[text()='Remove']/preceding-sibling::i") // CR-SK 29 Aug // //
 																									// Modified RKA 12
 																									// // // Sep
 																									// Modified // GK //
@@ -809,6 +809,37 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[contains(text(),'SHIPPING ADDRESS')]/following-sibling::div/div[1]/div[4]")
 	public WebElement MyAccount_OrderDetailsPage_EmailOrPhone;
+
+	// Start KER-4330 CR-MS Sep25
+
+	@FindBy(xpath = "//*[contains(text(),'IN-STORE PICKUP')]")
+	public WebElement Order_Bopis_In_Store_Pickup_txt;
+
+	@FindBy(xpath = "//*[contains(text(),'PICKUP INFORMATION')]")
+	public WebElement Order_Bopis_Pickup_txt;
+
+	@FindBy(xpath = "//*[contains(text(),'Store Hours')]")
+	public WebElement Order_Bopis_Store_Hours_txt;
+
+	@FindBy(xpath = "//*[contains(text(),'PICKUP INFORMATION')]/following-sibling::*/*[2]")
+	public WebElement Order_Bopis_Pickup_Information_Person_Details_Txt;
+
+	@FindBy(xpath = "//*[contains(text(),'View Store Details')]")
+	public WebElement Order_Bopis_View_Store_Btn;
+
+	@FindBy(xpath = "//*[text()= 'Print a Receipt']")
+	public WebElement Order_Bopis_Print_Receipt_lnk;
+
+	@FindBy(xpath = "//*[contains(text(),'In-Store Pickup from')]")
+	public WebElement Order_Bopis_InStore_Pickup_Msg;
+
+	@FindBy(xpath = " //*[@data-auid='btnundefined']/../following-sibling::*[1]/*/*[1]")
+	public WebElement Order_Bopis_Item_Img;
+
+	@FindBy(xpath = " //*[@data-auid='btnundefined']/../following-sibling::*[1]/*/*[2]")
+	public WebElement Order_Bopis_Item_Details;
+
+	// End KER-4330 CR-MS Sep25
 
 	/***************************** END XPAHTS ***********************************/
 

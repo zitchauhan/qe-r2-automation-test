@@ -182,7 +182,18 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 	
 	@Given("^user navigate and deletes existing items in cart$")
 	public void user_navigates_delete_existing_items_in_cart() throws Throwable {
-		cartR2PageObj.navigateAndDeleteAllProductsInCart();
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(globalElementHeader.iconcart_m));
+
+		} else {
+			assertTrue(clickOnButton(globalElementHeader.iconcart));
+
+		}
+		while(isDisplayed( cartR2PageObj.btnRemoveCart)) {
+			clickOnButton(cartR2PageObj.btnRemoveCart);
+			Thread.sleep(5000);
+		}
+//		emptyCart();
 	}
 
 	

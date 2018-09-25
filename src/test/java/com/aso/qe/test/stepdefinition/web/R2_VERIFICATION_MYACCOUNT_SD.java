@@ -398,6 +398,24 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.headerBillingInformation));
 				else if (currentElement.equalsIgnoreCase("MyAccount_OrderDetailsPage_EmailOrPhone"))
 					assertTrue(isDisplayed(r2MyAccountPo.MyAccount_OrderDetailsPage_EmailOrPhone));
+				else if (currentElement.equalsIgnoreCase("Order_Bopis_In_Store_Pickup_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Bopis_In_Store_Pickup_txt));
+				else if (currentElement.equalsIgnoreCase("Order_Bopis_Pickup_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Bopis_Pickup_txt));
+				else if (currentElement.equalsIgnoreCase("Order_Bopis_Store_Hours_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Bopis_Store_Hours_txt));
+				else if (currentElement.equalsIgnoreCase("Order_Bopis_Pickup_Information_Person_Details_Txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Bopis_Pickup_Information_Person_Details_Txt));
+				else if (currentElement.equalsIgnoreCase("Order_Bopis_View_Store_Btn"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Bopis_View_Store_Btn));
+				else if (currentElement.equalsIgnoreCase("Order_Bopis_Print_Receipt_lnk"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Bopis_Print_Receipt_lnk));
+				else if (currentElement.equalsIgnoreCase("Order_Bopis_InStore_Pickup_Msg"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Bopis_InStore_Pickup_Msg));
+				else if (currentElement.equalsIgnoreCase("Order_Bopis_Item_Img"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Bopis_Item_Img));
+				else if (currentElement.equalsIgnoreCase("Order_Bopis_Item_Details"))
+					assertTrue(isDisplayed(r2MyAccountPo.Order_Bopis_Item_Details));
 
 				// ===============================================================================
 				//// SignUp

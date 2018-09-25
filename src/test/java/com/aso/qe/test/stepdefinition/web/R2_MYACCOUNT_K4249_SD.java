@@ -125,7 +125,7 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	public void user_enter_email() throws Throwable {
 		UUID uuid = UUID.randomUUID();
 		String randomUUIDString = uuid.toString();
-		String txtemailaddress_random = "a" + randomUUIDString.replaceAll("-", "").substring(1, 10) + "@gmail.com";
+		String txtemailaddress_random = "a" + randomUUIDString.replaceAll("-", "").substring(1, 10) + "@deleteme.com";
 		setInputText(r2MyAccountPo.inputEmailAddress, txtemailaddress_random);
 	}
 
