@@ -230,10 +230,10 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnaddNew-giftCard-btn' and text()= 'ADD NEW GIFT CARD']")
 	public WebElement btnAddNewGiftCard; // 25 Aug
 
-	@FindBy(xpath = "//*[.='Gift Card Number']/following-sibling::input") // CR-SK,28-Aug 2018
+	@FindBy(xpath = "//*[text()='Gift Card Number']//following-sibling::div/input") // CR-SK,28-Aug 2018 //updated 25/9/18
 	public WebElement txtGiftCardNumber; // 25 Aug
 
-	@FindBy(xpath = "//*[.='PIN']/following-sibling::input")
+	@FindBy(xpath = " //*[.='PIN']/following-sibling::div/input")//updated 25/9/18
 	public WebElement txtGifCardPin; // 25 Aug
 
 	@FindBy(xpath = "(//*[text()='ADD NEW GIFT CARD'])[1]")
@@ -538,7 +538,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(),'Gift Card ending in')]") // CR-SK 29 Aug
 	public List<WebElement> txtAddedGiftCardList;
 
-	@FindBy(xpath = "//*[contains(text(),'AVAILABLE BALANCE')]") // CR-SK 29 Aug
+	@FindBy(xpath = "//*[contains(text(),'Available Balance')]") // CR-SK 29 Aug //Modified 25/9 Anuj
 	public WebElement txtAvailableBalance;
 
 	// Start KER-2920 CR-RK

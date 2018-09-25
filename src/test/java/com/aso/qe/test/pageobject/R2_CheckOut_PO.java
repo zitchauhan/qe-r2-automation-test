@@ -124,7 +124,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	// End KER-3152 CR-DPK
 
 	// Start KER-6824 CR-DPK
-	@FindBy(xpath = "//*[text()='Gift Cards']/..")
+	@FindBy(xpath = "//*[text()='GIFT CARDS']/..") //modified 25/9/18 Anuj
 	public WebElement txtGiftCardOrderSummaryPage;
 	// End KER-6824 CR-DPK
 
