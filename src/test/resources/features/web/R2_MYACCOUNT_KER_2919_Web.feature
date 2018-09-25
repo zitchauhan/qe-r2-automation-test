@@ -241,7 +241,7 @@ Scenario: Verify if entered address is validated by AVS
  	And Verify that Credit Card details as entered are saved in User Profile.
  	
  	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK @AutomationSanityR2
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK
 Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header

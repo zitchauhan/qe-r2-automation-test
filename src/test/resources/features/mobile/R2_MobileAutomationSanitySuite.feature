@@ -71,10 +71,7 @@ Scenario: TC_4- Verify User is able to Add Gift Card
 	And user enter valid "Valid16DigitGiftCardNumber" in Gift Card Number text field 
 	And user enter valid "Valid8DigitGiftCardPIN" in Gift Card PIN text field 
 	And clicks on Add button to add gift card 
-	Then Verify below Sub/Main Module of My Account 
-		|#Verify following elements in Payments > Add New Gift card section	|
-		|AddGiftCardPage_Add_txt										|
-	Then user should be able to see "Valid16DigitGiftCardNumber" Gift card 
+    Then user should be able to see "Valid16DigitGiftCardNumber" Gift card 
 	And user should be able to see available balance 
 	And there should be a Remove link with cross icon 
 	
@@ -88,39 +85,10 @@ Scenario: TC_5-Verify Add Credit Card and added as a Default Card
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-#	And User clicks on the burger menu 
-#	When user click on My Account and navigate to payment 
-#	And user deletes all existing credit card 
-#	And user clicks on Add New Credit Card button 
-#	And User enters Credit Card number "CreditCardNumber" 
-#	And User enters expiration date "ExpDate" 
-#	And User enters CVV number "CVV" 
-#	Then user enter First Name field "UpdateFirstName" 
-#	And user enter Last Name field "UpdateLastName" 
-#	And user enter Address field "UpdateAddress" 
-#	And user enter ZipCode field "UpdateZipcode" 
-#	And user enter PhoneNumber field "UpdatePhoneNumber" 
-#	Then User verifies that city and State are populated automatically 
-#	Then click on Add button on credit card page 
-#	And click on Add another Credit Card button 
-#	And User enters Credit Card number "SecondCreditCardNumber" 
-#	And User enters expiration date "ExpDate" 
-#	And User enters CVV number "CVV" 
-#	Then user enter First Name field "UpdateFirstName" 
-#	And user enter Last Name field "UpdateLastName" 
-#	And user enter Address field "UpdateAddress" 
-#	And user enter ZipCode field "UpdateZipcode" 
-#	And user enter PhoneNumber field "UpdatePhoneNumber" 
-#	Then User verifies that city and State are populated automatically 
-#	Then click on Add button on credit card page 
 	And User clicks on ASO Logo and should be navigated to Home Page 
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user click on checkout button
-#	And user is navigated to Add to cart Notification popup 
-#	And user will click on View Cart button 
-#	And user navigate to Cart page 
-#	And user will click on Checkout button and navigates to Checkout page 
 	Then User verifies that in Payment section credit card "CreditCardNumber" is pre-populated by default 
 	
 	#===========unit testing pending as search is not working
@@ -129,7 +97,6 @@ Scenario: TC_6-Verify and Search an item and  navigate to  View Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
 	When User searches a product "productName" and navigates to PDP 
-	#	And User click on search icon 
 	And user verifies the entered SKU id 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -154,7 +121,6 @@ Scenario: TC_8-Verify Cat Nav - View Cart
 	When User clicks on the burger menu 
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
-	
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
@@ -162,10 +128,7 @@ Scenario: TC_8-Verify Cat Nav - View Cart
 	
 @R2_Mobile @R2_MAST-09 @CR-SK @AutomationSanityR2 
 Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When User clicks on the burger menu 
-#	#And User navigates to LThree 
-#	##And user clicks on the product card and navigates to PDP 
+	Given user launches the browser and navigates to "ASO_HOME" page  
     Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	When user click on checkout button 
@@ -177,9 +140,6 @@ Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal
 @AutomationSanityR2 
 Scenario: TC_10-Verify Apply Promotion
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-#	#And User navigates to LThree 
-#	Then user clicks on the product card and navigates to PDP 
 	Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -210,10 +170,7 @@ Scenario: TC_10-Verify Apply Promotion
 @AutomationSanityR2 
 Scenario: TC_12-Verify Update Quantity 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-#	#And User navigates to LThree 
-#	##And user clicks on the product card and navigates to PDP 
-	 Then User searches a product "productName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -231,9 +188,6 @@ Scenario: TC_12-Verify Update Quantity
 Scenario: 
 	TC_13-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-#	#And User navigates to LThree 
-#	##And user clicks on the product card and navigates to PDP
     Then User searches a product "productName" and navigates to PDP 
 	And user click on Add to cart button 
 	And user will click on View Cart button 
@@ -247,9 +201,6 @@ Scenario:
 @AutomationSanityR2 
 Scenario: TC_14-Verify Remove Item from Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on the burger menu 
-#	#And User navigates to LThree 
-#	Then user clicks on the product card and navigates to PDP 
 	Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -263,9 +214,6 @@ Scenario: TC_14-Verify Remove Item from Cart
 @AutomationSanityR2 
 Scenario: TC_15-Verify User Able to Checkout, if no errors in cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-#	#And User navigates to LThree 
-#	##And user clicks on the product card and navigates to PDP 
     Then User searches a product "productName" and navigates to PDP
 	When user click on Add to Cart Button 
 	When user click on view cart button 
@@ -279,9 +227,6 @@ Scenario: TC_15-Verify User Able to Checkout, if no errors in cart
 Scenario: 
 	TC_16-Verify Add Shipping Address
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on the burger menu 
-#	#And User navigates to LThree 
-#	Then user clicks on the product card and navigates to PDP 
     Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -300,25 +245,19 @@ Scenario:
 @CR-DPK @AutomationSanityR2 
 Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on the burger menu 
-#	#And User navigates to LThree 
-#	Then user clicks on the product card and navigates to PDP 
-    Then User searches a product "productName" and navigates to PDP
+	 Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	Then user click on checkout button in Cart page 
-	When user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	Then user click on Go To Shipping Method button in Checkout page 
-	Then user click on GiftCard Plus icon in Checkout page 
-	And user enter Gift card Number "GiftcardNumber" 
+	And user navigate to Cart page
+    And user click on checkout button
+	And user fill the PO box in shipping address 
+	And user click on Go To Shipping Method button in Checkout page
+	Then user click on go to payment present in shipping method
+	Then user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "GiftcardNumber"
 	And user enter Pin Number "PinNumber" 
-	And user click on Apply button 
-	Then verify Gift Card in order summary page 
+	And user click on Apply button
+	Then verify Gift Card in order summary page	 
 	
 @R2_Mobile @R2_MAST-18 @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954_M 
 @CR-GK @AutomationSanityR2 
@@ -329,24 +268,14 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-#	Then User clicks on the burger menu 
-#	#And User navigates to LThree 
-#	Then user clicks on the product card and navigates to PDP 
     Then User searches a product "productName" and navigates to PDP
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	Then user click on checkout button in Cart page 
-	When user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	Then user click on Go To Shipping Method button in Checkout page 
-	Then user click on GiftCard Plus icon in Checkout page 
-	And user enter Gift card Number "GiftcardNumber" 
+	Then user click on Add to Cart Button
+     And user click on checkout button 
+    Then user click on go to payment present in shipping method
+	Then user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "GiftcardNumber"
 	And user enter Pin Number "PinNumber" 
-	And user click on Apply button 
+	And user click on Apply button
 	Then applied gift card "GiftcardNumber" should be displayed 
 	Then gift card balance is applied towards the purchase 
 	
@@ -356,9 +285,6 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated
 @AutomationSanityR2 
 Scenario: TC_19-Verify Sign In During Checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on the burger menu 
-	##And User navigates to LThree 
-	#Then user clicks on the product card and navigates to PDP 
 	Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -375,9 +301,6 @@ Scenario: TC_19-Verify Sign In During Checkout
 @AutomationSanityR2 
 Scenario: TC_20- Verify Edit cart items from Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-	#And User navigates to LThree 
-	##And user clicks on the product card and navigates to PDP 
 	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -395,9 +318,6 @@ Scenario: TC_20- Verify Edit cart items from Order summary
 @AutomationSanityR2 
 Scenario: TC_21-Verify Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-	#And User navigates to LThree 
-	##And user clicks on the product card and navigates to PDP 
 	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -426,9 +346,6 @@ Scenario:
 @R2_MAST-23 @BrokenLink @Broken @TC_BL_09 
 Scenario: TC_23- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-	#And User navigates to LThree 
-	##And user clicks on the product card and navigates to PDP 
 	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -437,9 +354,6 @@ Scenario: TC_23- Verify all broken URL's on Cart page
 @R2_MAST-24 @BrokenLink @Broken @TC_BL_10 
 Scenario: TC_24- Verify all broken URL's on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-	#And User navigates to LThree 
-	##And user clicks on the product card and navigates to PDP 
 	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -463,9 +377,6 @@ Scenario: TC_25- Verify all broken URL's on MyAccount page
 @R2_MAST-26 @BrokenLink @Broken @TC_BIM_09 
 Scenario: TC_26- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-	#And User navigates to LThree 
-	##And user clicks on the product card and navigates to PDP 
 	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -473,10 +384,7 @@ Scenario: TC_26- Verify all broken URL's on Cart page
 	
 @R2_MAST-27 @BrokenLink @Broken @TC_BIM_10 
 Scenario: TC_27- Verify all broken URL's on Checkout page 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-	#And User navigates to LThree 
-	##And user clicks on the product card and navigates to PDP 
+	Given user launches the browser and navigates to "ASO_HOME" page  
 	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
