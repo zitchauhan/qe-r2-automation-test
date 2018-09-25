@@ -1,17 +1,17 @@
-Feature: Debug
+Feature: Debug 
 
 
-	Scenario: Verify MyAccount
+Scenario: Verify MyAccount 
 	Then Verify below Sub/Main Module of My Account 
 		|# Verify following elements in home page	|
 		|UnauthenticatedUserMyAccountBtn	|
 		|LoggedInUserMyAccountBtn	        | 
 		|PaymentPage_Payment_lnk_web                    |
 		|PaymentPage_SetAsDefault_btn                   | 
-	
+		
 		|# Verify following elements in home page			|
 		|BurgerMenu_MyAccount_txt				   			|
-			
+		
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
@@ -43,8 +43,8 @@ Feature: Debug
 		|AddressPage_Default_txt					|
 		|##Below elements has same name in PO		|
 		|myAccountPage_AddNewAddressPluIcon_btn		|	
-
-				
+		
+		
 		|#Verify following elements in Payment page		|
 		|PaymentPage_Payment_lnk_mobile					|
 		|PaymentPage_PaymentsHeader_label				|
@@ -60,7 +60,7 @@ Feature: Debug
 		|PaymentPage_CreditCardDetails					|
 		|PaymentPage_Payment_lnk_web                    |
 		|PaymentPage_SetAsDefault_btn                   | 
- 
+		
 		
 		|#Verify following elements in Payments > Add new credit card section	|
 		|AddCreditCardPage_BillingInformationHeader_txt							|
@@ -106,7 +106,7 @@ Feature: Debug
 		|ProfilePage_ReceiveEmailNotifications_checkbox	|
 		|MyAccountPage_Profile_cta                      |
 		|ProfilePage_MaskedPassword                     | 
- 
+		
 		
 		
 		|#verify following elements in Profile > Edit Profile section	|
@@ -117,7 +117,7 @@ Feature: Debug
 		|EditProfilePage_ConfirmEmail_txt								|
 		|EditProfilePage_Update_btn										|
 		|EditProfilePage_Cancel_btn										|	
-				
+		
 		|#Verify following elements in Profile > change password section|
 		|ChangePassworPage_CurrentPassword_btn							|
 		|ChangePassworPage_NewPassword_txt								|
@@ -149,16 +149,16 @@ Feature: Debug
 		|WhishList_Remove_Lnk_M                     					|  
 		|Wishlist_icn													|
 		|WishList_Product_Img											|
-        |WishList_Product_Eyebrow										|
-        |WishList_Product_Tittle										|
-        |WishList_Product_Review										|
-        |WishList_Product_Price											|
-        ||Wishlist_Undo													|
-        |Wishlist_MoveToACart_Btn										| 
- 
-        
+		|WishList_Product_Eyebrow										|
+		|WishList_Product_Tittle										|
+		|WishList_Product_Review										|
+		|WishList_Product_Price											|
+		||Wishlist_Undo													|
+		|Wishlist_MoveToACart_Btn										| 
 		
-			
+		
+		
+		
 		|#Verify following elements in order section|
 		|OrderPage_Order_lnk						|
 		|OrderPage_OrdersHeader_label				|
@@ -172,15 +172,15 @@ Feature: Debug
 		|Order_View_Details_Btn                     |
 		|Order_Back_To_Order_Lnk_M                  |
 		|Order_Note_Txt                             | 
-		 |Order_OrderTotal							|
+		|Order_OrderTotal							|
 		|Order_Taxes_Price							|
 		|Order_Number_Txt							|
-	    |Total_Items_Txt							|
-	    |Cancel_Yes_Order_Btn						|
-	    |Cancel_NO_Order_Btn						| 
-	    |Order_Payment_txt							|
-        |Order_Payment_Section						|
-        |MyAccount_OrderPage_OrderPlacedOnDate_txt  |
+		|Total_Items_Txt							|
+		|Cancel_Yes_Order_Btn						|
+		|Cancel_NO_Order_Btn						| 
+		|Order_Payment_txt							|
+		|Order_Payment_Section						|
+		|MyAccount_OrderPage_OrderPlacedOnDate_txt  |
 		|MyAccount_OrderPage_OrderNumber_txt        |
 		|MyAccount_OrderPage_OrderTotal_txt         |
 		|MyAccount_OrderPage_OrderNumberInput       |
@@ -195,11 +195,21 @@ Feature: Debug
 		|MyAccount_OrderDetailsPage_ShippingAddress |
 		|MyAccount_OrderDetailsPage_BillingInfo     |
 		|MyAccount_OrderDetailsPage_EmailOrPhone    | 
- 
-        
- 
+		|Order_Bopis_In_Store_Pickup_txt|
+		|Order_Bopis_Pickup_txt|
+		|Order_Bopis_Store_Hours_txt|
+		|Order_Bopis_Pickup_Information_Person_Details_Txt|
+		|Order_Bopis_View_Store_Btn|
+		|Order_Bopis_Print_Receipt_lnk|
+		|Order_Bopis_InStore_Pickup_Msg|
+		|Order_Bopis_Item_Img|
+		|Order_Bopis_Item_Details|
 		
- 
+		
+		
+		
+		
+		
 		
 		
 		|#Verify following elements in SignUp section	|
@@ -222,6 +232,6 @@ Feature: Debug
 		|#Verify following elements in SignUp section	|
 		|Following elements has same name in PO			|
 		|burgerMenu_Orders_lnk							|
-	
-
+		
+		
 	

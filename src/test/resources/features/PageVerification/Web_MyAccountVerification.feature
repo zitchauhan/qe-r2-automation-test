@@ -53,7 +53,7 @@ Scenario: Verify MyAccount
 		|PaymentPage_CreditCardDetails					|
 		|PaymentPage_Payment_lnk_web                    |
 		|PaymentPage_SetAsDefault_btn                   | 
- 
+		
 		
 		
 		|PaymentPage_CrediCardRemoved_txt|
@@ -105,8 +105,8 @@ Scenario: Verify MyAccount
 		|ProfilePage_ReceiveEmailNotifications_checkbox	|
 		|MyAccountPage_Profile_cta                      |
 		|ProfilePage_MaskedPassword                     | 
- 
-
+		
+		
 		
 		|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
@@ -146,14 +146,14 @@ Scenario: Verify MyAccount
 		|Cancel_btn														|
 		|WhishList_Remove_Lnk                       					|
 		|WishList_Product_Img											|
-        |WishList_Product_Eyebrow										|
-        |WishList_Product_Tittle										|
-        |WishList_Product_Review										|
-        |WishList_Product_Price											|
-        |Wishlist_Undo													|
-        |Wishlist_MoveToACart_Btn										| 
- 
-        
+		|WishList_Product_Eyebrow										|
+		|WishList_Product_Tittle										|
+		|WishList_Product_Review										|
+		|WishList_Product_Price											|
+		|Wishlist_Undo													|
+		|Wishlist_MoveToACart_Btn										| 
+		
+		
 		
 		|#Verify following elements in order section|
 		|OrderPage_Order_lnk						|
@@ -168,15 +168,15 @@ Scenario: Verify MyAccount
 		|Order_View_Details_Btn                     |
 		|Order_Back_To_Order_Lnk                    |
 		|Order_Note_Txt                             | 
-		 |Order_OrderTotal							|
+		|Order_OrderTotal							|
 		|Order_Taxes_Price							|
 		|Order_Number_Txt							|
-	    |Total_Items_Txt							|
-	    |Cancel_Yes_Order_Btn						|
-	    |Cancel_NO_Order_Btn						| 
-	    |Order_Payment_txt							|
-        |Order_Payment_Section						|
-        |MyAccount_OrderPage_OrderPlacedOnDate_txt  |
+		|Total_Items_Txt							|
+		|Cancel_Yes_Order_Btn						|
+		|Cancel_NO_Order_Btn						| 
+		|Order_Payment_txt							|
+		|Order_Payment_Section						|
+		|MyAccount_OrderPage_OrderPlacedOnDate_txt  |
 		|MyAccount_OrderPage_OrderNumber_txt        |
 		|MyAccount_OrderPage_OrderTotal_txt         |
 		|MyAccount_OrderPage_OrderNumberInput       |
@@ -191,12 +191,22 @@ Scenario: Verify MyAccount
 		|MyAccount_OrderDetailsPage_ShippingAddress |
 		|MyAccount_OrderDetailsPage_BillingInfo     |
 		|MyAccount_OrderDetailsPage_EmailOrPhone    | 
- 
-        
-	    
- 
+		|Order_Bopis_In_Store_Pickup_txt|
+		|Order_Bopis_Pickup_txt|
+		|Order_Bopis_Store_Hours_txt|
+		|Order_Bopis_Pickup_Information_Person_Details_Txt|
+		|Order_Bopis_View_Store_Btn|
+		|Order_Bopis_Print_Receipt_lnk|
+		|Order_Bopis_InStore_Pickup_Msg|
+		|Order_Bopis_Item_Img|
+		|Order_Bopis_Item_Details|
 		
- 
+		
+		
+		
+		
+		
+		
 		
 		
 		|#Verify following elements in SignUp section	|
