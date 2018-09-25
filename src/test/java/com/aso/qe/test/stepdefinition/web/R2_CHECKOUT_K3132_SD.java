@@ -64,13 +64,13 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 	}
 	@Then("^user click on checkbox Same as shipping address$")
 	public void user_click_on_checkbox_Same_as_shipping_address() throws Throwable {
-	   clickOnButton(r2CheckOutPo.SameAsShippingAddress_checkBox);
+		assertTrue(clickOnButton(r2CheckOutPo.SameAsShippingAddress_checkBox));
 	}
 	@Then("^user fill the email address and click on review order btn$")
 	public void user_fill_the_email_address_and_click_on_review_order_btn() throws Throwable {
 		
 		setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,  webPropHelper.getTestDataProperty("login"));
-	clickOnButton(r2CheckOutPo.ReviewOrder_Btn);
+		assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 	
 	}
 	
