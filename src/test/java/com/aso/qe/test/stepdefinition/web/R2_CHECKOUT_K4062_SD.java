@@ -73,7 +73,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			// waitForElement(r2CheckOutPo.CreditCardNumber_Input);
 			if (!(isDisplayed(r2CheckOutPo.chooseCreditcard_Dd))) {
 				setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty(creditCardNumber));
-				setInputText(r2CheckOutPo.ExpirationDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
+				setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
 				setInputText(r2CheckOutPo.Cvv_Input, webPropHelper.getTestDataProperty(cvv));
 				setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
 						webPropHelper.getTestDataProperty("EmailAddress"));
