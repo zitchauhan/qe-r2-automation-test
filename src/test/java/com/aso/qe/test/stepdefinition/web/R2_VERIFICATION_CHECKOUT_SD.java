@@ -231,8 +231,10 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
                     assertTrue(isDisplayed(r2CheckoutPo.orderConfirmationPage_OrderNumber));
                 else if (currentElement.equalsIgnoreCase("OrderConfirmationPage_OrderNumber_txt"))
                     assertTrue(isDisplayed(r2CheckoutPo.orderConfirmationPage_OrderNumber_txt)); 
- 
-
+                else if (currentElement.equalsIgnoreCase("orderSubmitted_OrderNumber"))
+                    assertTrue(isDisplayed(r2CheckoutPo.orderSubmitted_OrderNumber)); 
+                else if (currentElement.equalsIgnoreCase("checkOutCheckOrderStatus_OrderNumberInput"))
+                    assertTrue(isDisplayed(r2CheckoutPo.checkOutCheckOrderStatus_OrderNumberInput)); 
 				//**********ITems under Order Summary (End)
 				//Order Summary(End)
 				

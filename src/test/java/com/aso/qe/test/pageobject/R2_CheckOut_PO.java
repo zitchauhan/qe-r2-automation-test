@@ -416,7 +416,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath = "//*[text()='Estimated Shipping']/..")public WebElement txtEsitmatedShipping;//estimatedshippint_txt
 		@FindBy(xpath="//*[text()='Estimated Shipping']/../*[2]")public WebElement EstimatedShippingPrice_txt;//estimatedshipping_price
 		
-		@FindBy(xpath="(//*[contains(text(),'147.50')])[1]")public WebElement shippingPriceInShippingMethod_txt;
+		@FindBy(xpath="//*[contains(text(),'Day shipping')]")public WebElement shippingPriceInShippingMethod_txt; //CR-DPK sept-25
 		
 		
 		@FindBy(xpath="//*[contains(text(),'Taxes')]")public WebElement Taxes_Txt;//taxprice_txt
@@ -432,8 +432,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath = "//*[text()= 'Total']/following-sibling::div[1]")public WebElement txtTotal;//Total_price
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[text()='Total']")public WebElement Total_txt;
 		
-		@FindBy(xpath = "//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Gift Card')]")public WebElement giftCards_txt;
-		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Gift Card')]/following-sibling::*")public WebElement giftCardsPrice_txt;
+		@FindBy(xpath = "//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Gift Card')] | //*[contains(text(),'GIFT CARDS')]")public WebElement giftCards_txt; //CR-DPK 25-sept
+		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Gift Card')]/following-sibling::* | //*[contains(text(),'GIFT CARDS')]/following-sibling::*")public WebElement giftCardsPrice_txt; //CR-DPK 25-sept
 		
 		
 		
