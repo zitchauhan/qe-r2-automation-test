@@ -98,3 +98,58 @@ Scenario:
 		|MyAccount_OrderDetailsPage_ShippingAddress |
 		|Order_OrderTotal							|
 		
+		
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@ZYP_MYACCOUNT_K4237-10518 @CR-GK 
+Scenario: Verify that Authenticated user is able to Print Order receipt 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And user navigates to orders in my account 
+	And User clicks on View Details CTA for an order 
+	Then Verify below Sub/Main Module of My Account 
+		|#Verify following elements in order section|
+		|MyAccount_OrderDetailsPage_PrintReceipt    |
+	And user click on print receipt link 
+	
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@ZYP_MYACCOUNT_K4237-10519 @CR-GK 
+Scenario: 
+	Verify that Authenticated user is able to view order details for BOPIS orders 
+	Given   user launches the browser and navigates to "ASO_HOME" page 
+	When   user clicks on SignIn link from global header 
+	And   user enter the valid emailaddress "EmailAddress" 
+	And   user enter the valid password "Password" 
+	And   user click on signin button 
+	And   user navigates to orders in my account 
+	And   User clicks on View Details CTA for an order 
+	Then  Verify below Sub/Main Module of My Account 
+		|#Verify following elements in order details page|
+		|MyAccount_OrderPage_OrderDetailsPage       |
+		|MyAccount_OrderDetailsPage_OrderDate       |
+		|MyAccount_OrderDetailsPage_OrderNumber     |
+		|MyAccount_OrderDetailsPage_OrderStatus     |
+		|Order_OrderTotal							|
+		|MyAccount_OrderDetailsPage_TaxAmount       |
+		|MyAccount_OrderDetailsPage_SubTotalAmount  |
+		
+		
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@ZYP_MYACCOUNT_K4237-10526 @CR-GK 
+Scenario: Verify that UnAuthenticated user is able to print order receipt 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And user navigates to orders in my account 
+	And User clicks on View Details CTA for an order 
+	Then Verify below Sub/Main Module of My Account 
+		|#Verify following elements in order section|
+		|MyAccount_OrderDetailsPage_PrintReceipt    |
+	And user click on print receipt link 
+	
+	

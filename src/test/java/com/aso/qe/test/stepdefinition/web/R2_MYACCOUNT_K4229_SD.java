@@ -57,6 +57,7 @@ public class R2_MYACCOUNT_K4229_SD extends CommonActionHelper {
 
 	@And("^Oldest sorting option is available$")
 	public void oldest_sorting_option_is_available() throws Throwable {
+		scrollPageToWebElement(r2_MyAccount_PO.ordersDropDownNewest);
 		Actions hover = new Actions(getDriver());
 		hover.click(r2_MyAccount_PO.ordersDropDownNewest).build().perform();
 		hover.sendKeys(Keys.DOWN, Keys.ENTER).build().perform();
