@@ -16,7 +16,7 @@ public class R1_HP_K710_SD extends CommonActionHelper{
 	
 	public R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 
-	
+	//public static R1_GlobalElementHeader_Home_PO globalElementHeader;
 	public R1_HomePage_PO hp_p=PageFactory.initElements(driver, R1_HomePage_PO.class);
 	
 	
@@ -189,8 +189,10 @@ public class R1_HP_K710_SD extends CommonActionHelper{
 	   
 	}
 	@Then("^User navigates to L(\\d+) from home page for shoe catagory$")
-	public void user_navigates_to_L_from_home_page_for_shoe_catagory(int arg1) throws Throwable {
-		waitForPageLoad(driver);
+	public void user_navigates_to_L_from_home_page_for_shoe_catagory(int arg1) throws Throwable 
+	{
+	
+		/*	waitForPageLoad(driver);
 		Thread.sleep(5000);
 		waitForElement(hp_p.btnShop_M);
 		assertTrue(clickOnButton(hp_p.btnShop_M));
@@ -198,6 +200,10 @@ public class R1_HP_K710_SD extends CommonActionHelper{
 		assertTrue(clickOnButton(hp_p.btnMenShoe_M));
 		Thread.sleep(2000);
 		assertTrue(clickOnButton(hp_p.btnMenShoe_M_landing));  //SID 28-August
-		 
+*/		
+		
+		globalElementHeader.navigateL2HeaderToPLP();
+		
+		
 	}
 }
