@@ -58,10 +58,18 @@ public class R1_HP_K728_SD extends CommonActionHelper{
 		}
 	}
 
+	//SID 20-September
 	@Then("^User should be navigated to Home_Page$")
 	public void User_should_be_navigated_to_Home_Page() throws Throwable{
-		
-		String homePageCurrentURL=homeURL.replace("?debug=aso","");
+		String homePageCurrentURL="";
+		if(homeURL.contains("?debug=aso")) {
+			homePageCurrentURL=homeURL.replace("?debug=aso","");}
+		if(homeURL.contains("/kermit")) {
+			 homePageCurrentURL=homeURL.replace("/kermit","");
+		}
+		else {
+			homePageCurrentURL=homeURL;
+		}
 		assertEquals(homePageCurrentURL, getCurrentPageURL());
 	}
 
