@@ -715,16 +715,20 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		//Assert.assertEquals("validating the PLP PAGE","Men's Shoes");//Framework Method need to be used
 	}
 
-	public void navigateToPLPViaClick_Desktop() throws Exception{
-		Thread.sleep(2000);
-		assertTrue(clickOnButton(btnShopCategory));
-		Thread.sleep(2000);
-		Actions hover = new Actions(getDriver());
-		hover.moveToElement(btnClothingCategory).build().perform();
-		Thread.sleep(2000);
-		//assertTrue(clickOnButton(btnMen_Clothing_Shop));
-		assertTrue(clickOnButton(btnMensShirt_Men_Clothing_Shop));
-		Thread.sleep(2000);
+	public void navigateToPLPViaClick_Desktop() throws Exception
+	{
+		{
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnShopCategory));
+			Thread.sleep(2000);
+			//Actions hover = new Actions(getDriver());
+			moveHover(btnClothingCategory);
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnMenClothingShop));
+			Thread.sleep(2000);
+			//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
+		
+		}
 	}
 
 	public void navigateToL2ViaClick_Desktop() throws Exception{
@@ -735,28 +739,72 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		assertTrue(clickOnButton(btnMensShirt_Men_Clothing_Shop));
 	}
 
-	public void navigateToPLPViaClick_Mobile() throws Exception{
-		clickOnBurgerMenu();
+	public void navigateToPLPViaClick_Mobile() throws Exception
+	{
+		/*clickOnBurgerMenu();
 		Thread.sleep(2000);
 		assertTrue(clickOnButton(btnClothingCategory));
 		Thread.sleep(2000);
 		assertTrue(clickOnButton(btnMen_Clothing_Shop));
 		Thread.sleep(2000);
 		assertTrue(clickOnButton(btnMensShirt_Men_Clothing_Shop));
-		Thread.sleep(2000);
+		Thread.sleep(2000);*/
+		
+		
+		if("mobile".equalsIgnoreCase(testtype))
+		{
+			assertTrue(clickOnButton(btnBurgerMenu));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnClothingCategory)); //4Sep
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnMenClothingShop));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.txtToNavigateMensBurgerMenuMobile));
+			Thread.sleep(1000);
+			
+		}
+		else
+		{
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnShopCategory));
+			Thread.sleep(2000);
+			//Actions hover = new Actions(getDriver());
+			moveHover(btnClothingCategory);
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnMenClothingShop));
+			Thread.sleep(2000);
+			//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
+		
+		}
 	}
 
-	public void navigateToL2PageViaClick_Mobile() throws Exception{
-		Thread.sleep(2000);
-		assertTrue(clickOnButton(btnBurgerMenu));
-		Thread.sleep(2000);
-		//assertTrue(clickOnButton(btnShopCategory));
-		assertTrue(clickOnButton(btnClothingCategory));
-		Thread.sleep(2000);
-		assertTrue(clickOnButton(btnMen_Clothing_Shop));
-		Thread.sleep(2000);
-		assertTrue(clickOnButton(btnMen_Clothing_Shop));
-		Thread.sleep(2000);
+	public void navigateToL2PageViaClick_Mobile() throws Exception
+	{
+		if("mobile".equalsIgnoreCase(testtype))
+		{
+			assertTrue(clickOnButton(btnBurgerMenu));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnClothingCategory)); //4Sep
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnMenClothingShop));
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.txtToNavigateMensBurgerMenuMobile));
+			Thread.sleep(1000);
+			
+		}
+		else
+		{
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnShopCategory));
+			Thread.sleep(2000);
+			//Actions hover = new Actions(getDriver());
+			moveHover(btnClothingCategory);
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnMenClothingShop));
+			Thread.sleep(2000);
+			//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
+		
+		}
 	}
 
 	public void validateASO_LOGOPresence() throws Exception{

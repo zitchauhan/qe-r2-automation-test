@@ -54,14 +54,14 @@ public class Common_Web_SD extends CommonActionHelper
 	public void User_navigates_till_PLP() throws Throwable 
 	{
 
-	/*	if("mobile".equalsIgnoreCase(testtype)){
+		if("mobile".equalsIgnoreCase(testtype)){
 			globalElementHeader.navigateToPLPViaClick_Mobile();
 		} else{
 			globalElementHeader.navigateToPLPViaClick_Desktop();
-		}*/
+		}
 		
 		
-		globalElementHeader.navigateL2HeaderToPLP();
+		//globalElementHeader.navigateL2HeaderToPLP();
 	}
 
 
