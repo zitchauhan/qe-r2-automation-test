@@ -656,11 +656,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="(//*[text()='Color'])[1]/following::*[1]")public WebElement txtPrdColor;// txt_color input in color
 	@FindBy(xpath="(//*[text()='Size'])[1]/following::*[1]")public WebElement txtPrdSize;//txtPrdSize  txt_size input in size
 	@FindBy(xpath="//*[@data-auid='crt_rdOpt_0'] | //span[text()='Ship To Me']")public WebElement rbShipToMe;
-<<<<<<< .mine
 	@FindBy(xpath="//span[text()='In Store Pickup – FREE']")public WebElement rbInStorePickUp;//modified MS 26 Sep
-=======
-	@FindBy(xpath="//span[text()='In Store Pickup – FREE']")public WebElement rbInStorePickUp;
->>>>>>> .theirs
 	@FindBy(xpath="//*[text()='Ship To Store'] | //*[text()='Special Order Ships to Store']") public WebElement ShipToStore_radioBtn;
 	@FindBy(xpath="//input[@data-auid='crt_inputQty']")public WebElement input_Quantity;
 	@FindBy(xpath="(//*[@data-auid='crt_qtyField'])[1]")public WebElement txt_Quantity;
