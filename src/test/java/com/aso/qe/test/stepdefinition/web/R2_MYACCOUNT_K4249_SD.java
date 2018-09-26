@@ -2,7 +2,6 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 
-import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.support.PageFactory;
@@ -12,13 +11,11 @@ import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
-import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import freemarker.template.utility.NullArgumentException;
-import net.bytebuddy.implementation.bytecode.Throw;
 
 public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 
@@ -123,10 +120,7 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 
 	@When("^user enter random email Address$")
 	public void user_enter_email() throws Throwable {
-		UUID uuid = UUID.randomUUID();
-		String randomUUIDString = uuid.toString();
-		String txtemailaddress_random = "a" + randomUUIDString.replaceAll("-", "").substring(1, 10) + "@deleteme.com";
-		setInputText(r2MyAccountPo.inputEmailAddress, txtemailaddress_random);
+		setInputText(r2MyAccountPo.inputEmailAddress, r2MyAccountPo.generateRandomEmailId());
 	}
 
 	@When("^user enter password \"(.*?)\"$")

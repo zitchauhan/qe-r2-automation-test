@@ -1,16 +1,19 @@
 package com.aso.qe.test.pageobject;
 
 import java.util.List;
-
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.test.stepdefinition.web.Common_Web_SD;
+
 
 public class R2_MyAccount_PO extends CommonActionHelper {
-
+	
 	/**************** START LOCAL OBJETCS AND DECLARATIONS ***********************/
-
+	private static final Logger logger = Logger.getLogger(Common_Web_SD.class);
 	/*************** END LOCAL OBJETCS AND DECLARATIONS ************************/
 
 	/***************************** START XPAHTS **********************************/
@@ -230,10 +233,11 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnaddNew-giftCard-btn' and text()= 'ADD NEW GIFT CARD']")
 	public WebElement btnAddNewGiftCard; // 25 Aug
 
-	@FindBy(xpath = "//*[text()='Gift Card Number']//following-sibling::div/input") // CR-SK,28-Aug 2018 //updated 25/9/18
+	@FindBy(xpath = "//*[text()='Gift Card Number']//following-sibling::div/input") // CR-SK,28-Aug 2018 //updated
+																					// 25/9/18
 	public WebElement txtGiftCardNumber; // 25 Aug
 
-	@FindBy(xpath = " //*[.='PIN']/following-sibling::div/input")//updated 25/9/18
+	@FindBy(xpath = " //*[.='PIN']/following-sibling::div/input") // updated 25/9/18
 	public WebElement txtGifCardPin; // 25 Aug
 
 	@FindBy(xpath = "(//*[text()='ADD NEW GIFT CARD'])[1]")
@@ -521,18 +525,25 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='City']/..//input") // CR-SK 28 Aug
 	public WebElement txtCityInAddCreditCard;
 
-	@FindBy(xpath = "//div[text()= 'GIFT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'GIFT CARDS']/../following-sibling::*//*[text()='Remove']") // CR-SK 29 Aug //
-																									// Modified RKA 12
-																									// // Sep Modified
-																									// GK // 17Sep
+	@FindBy(xpath = "//div[text()= 'GIFT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'GIFT CARDS']/../following-sibling::*//*[text()='Remove']") // CR-SK
+																																											// 29
+																																											// Aug
+																																											// //
+	// Modified RKA 12
+	// // Sep Modified
+	// GK // 17Sep
 
 	public List<WebElement> btnRemoveGiftCardList;
 
-	@FindBy(xpath = "//*[text()= 'CREDIT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'CREDIT CARDS']/../following-sibling::*//*[text()='Remove']/preceding-sibling::i") // CR-SK 29 Aug // //
-																									// Modified RKA 12
-																									// // // Sep
-																									// Modified // GK //
-																									// 17Sep
+	@FindBy(xpath = "//*[text()= 'CREDIT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'CREDIT CARDS']/../following-sibling::*//*[text()='Remove']/preceding-sibling::i") // CR-SK
+																																																	// 29
+																																																	// Aug
+																																																	// //
+																																																	// //
+	// Modified RKA 12
+	// // // Sep
+	// Modified // GK //
+	// 17Sep
 	public List<WebElement> PaymentPage_CreditCard_Remove_list;
 
 	@FindBy(xpath = "//*[contains(text(),'Gift Card ending in')]") // CR-SK 29 Aug
@@ -862,6 +873,17 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 				return false;
 		} else
 			return false;
+
+	}
+
+	public String generateRandomEmailId() {
+		
+		String randomGeneratedString = RandomStringUtils.randomAlphanumeric(10);
+		String head = "test";
+		String tail = "@deleteme.com";
+		String newGeneratedEmail = head + randomGeneratedString + tail;
+		logger.debug("The new random generated email address is " + newGeneratedEmail);
+		return newGeneratedEmail;
 
 	}
 

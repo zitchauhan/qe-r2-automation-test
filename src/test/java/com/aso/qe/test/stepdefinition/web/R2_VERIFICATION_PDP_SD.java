@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_PDP_PO;
 
 import cucumber.api.DataTable;
@@ -15,11 +16,11 @@ import cucumber.api.java.en.Then;
 import freemarker.template.utility.NullArgumentException;
 
 public class R2_VERIFICATION_PDP_SD extends CommonActionHelper {
-	
+
 	R2_PDP_PO r2PdpPo = PageFactory.initElements(driver, R2_PDP_PO.class);
+	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
 	private static final Logger logger = Logger.getLogger(R2_VERIFICATION_MYACCOUNT_SD.class);
 
-	
 	@Then("^Verify below Sub/Main Module of PDP$")
 	public void Verify_below_Sub_Main_Module_of_My_Account(DataTable arg1) throws Throwable {
 
@@ -50,6 +51,8 @@ public class R2_VERIFICATION_PDP_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2PdpPo.Signup_Cbx));
 				else if (currentElement.equalsIgnoreCase("WishList_Pop_Item_Lnk"))
 					assertTrue(isDisplayed(r2PdpPo.WishList_Pop_Item_Lnk));
+				else if (currentElement.equalsIgnoreCase("EstArrival_txt"))
+					assertTrue(isDisplayed(r2CartPo.txtEstArrival));
 				else {
 					logger.error("Element <" + currentElement + "> is not found in the SD list.");
 					throw new NullArgumentException("Element <" + currentElement + "> is not found in the SD list.");
@@ -60,5 +63,5 @@ public class R2_VERIFICATION_PDP_SD extends CommonActionHelper {
 			logger.error("This test-step has been failed");
 		}
 
-}
+	}
 }

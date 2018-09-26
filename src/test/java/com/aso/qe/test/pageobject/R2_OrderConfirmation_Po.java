@@ -34,17 +34,17 @@ public class R2_OrderConfirmation_Po extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='THANKS FOR SUBMITTING YOUR ORDER']")
 	public WebElement orderConfirmation_ThanksForSubmittingOrder_txt;
 	
-	@FindBy(xpath = "(//*[text()='For a faster checkout, use Email id to create account']/following-sibling::p)[1]")
+	@FindBy(xpath = "(//*[text()='For a faster checkout next time, create your account below']/following-sibling::p)[1]")
 	public WebElement orderConfirmation_FullName_txt;
 	
-	@FindBy(xpath = "(//*[text()='For a faster checkout, use Email id to create account']/following-sibling::p)[2]")
+	@FindBy(xpath = "(//*[text()='For a faster checkout next time, create your account below']/following-sibling::p)[2]")
 	public WebElement orderConfirmation_EmailAddress_txt;
 	
-	@FindBy(xpath = "//*[text()='Choose Password']/following-sibling::*//*[@type='password']")
+	@FindBy(xpath = "//*[text()='Choose Password']/following-sibling::*//*[@type='password'] | //*[@data-auid='btnbutton-1']")
 	public WebElement orderConfirmation_ChoosePassword_txt;
 	
-	@FindBy(xpath = "//*[@labeltext='Sign UP to get Hot deals, Weekly Adds, Local Events and more']")
-	public WebElement orderConfirmation_SigUpToGetHotDeals_checkbox;
+	@FindBy(xpath = "//*[@labeltext='Yes, notify me about the latest hot deals, ads, local events & more!']")
+	public WebElement orderConfirmation_NotifyMe_checkbox;
 	
 	
 //@

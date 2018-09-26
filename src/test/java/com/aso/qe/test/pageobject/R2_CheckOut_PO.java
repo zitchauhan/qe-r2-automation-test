@@ -505,7 +505,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath = "//*[@name='cardPin']")public WebElement inputPinNumber;//Pin_Input
 		@FindBy(xpath="(//*[@data-auid='tooltipcheckout_payment_gift_card_tooltip'])[2]")public WebElement toolTip_pin;
 		@FindBy(xpath = "//*[text()='Invalid GiftCard Pin']")public WebElement txtInvalidPin;//InvalidGiftCardPin_Txt
-		@FindBy(xpath = "//*[@data-auid='btncheckout_payment_apply_gift_card_btn']")public WebElement btnCheckoutApply; //Apply_Btn
+		@FindBy(xpath = "//*[@data-auid='btncheckout_payment_apply_gift_card_btn'] | //*[contains(text(),'APPLY')]")public WebElement btnCheckoutApply; //Apply_Btn
 		@FindBy(xpath="//*[@data-auid='checkout_payment_add_another_gift_card_icon']")public WebElement AddAnotherGiftCard_Txt;
 		@FindBy(xpath = "//div[contains(text(),'Choose Gift Card')]/../div/div/div/button")public WebElement checkOutGiftCardDropDown; 
 		@FindBy(xpath="//*[contains(text(),'Add a New Gift Card')]")public WebElement AddAnewGiftCard_Txt;
