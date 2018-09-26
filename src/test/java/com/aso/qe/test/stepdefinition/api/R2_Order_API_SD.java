@@ -98,7 +98,7 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 	@Given("^\"(.*?)\" by \"(.*?)\" endpoint with \"(.*?)\" for Add shipping Address of Order profile$")
 	public void by_endpoint_with_for_Add_shipping_Address_of_Order_profile(String url, String extension, String requestPath) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("OrderId")+extension;
-		logger.debug("END Point URL:"+endpoints);
+		
 		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestPath+".json");
 		postRequestStr = postRequestStr.replace("REPLACE_FIRSTNAME", FrameWorkHelper.getRandomAlphabetic(8))
 				.replace("REPLACE_FIRSTNAME", FrameWorkHelper.getRandomAlphabetic(8))
@@ -125,5 +125,25 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 		logger.debug("billAddressId::"+billAddressId);
 	}
 	
+	@Given("^\"(.*?)\" by \"(.*?)\" endpoint with \"(.*?)\" for add Order Gift Card details$")
+	public void by_endpoint_with_for_add_Order_Gift_Card_details(String orderUrl, String extension, String requestJson) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(orderUrl)+System.getProperty("OrderId")+extension;
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestJson+".json");
+		postRequestStr = postRequestStr.replace("REPLACE_ORDERID", System.getProperty("OrderId"));
+		
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
+	}
 	
+	@Given("^\"(.*?)\" by \"(.*?)\" endpoint for Remove Order Gift Card$")
+	public void by_endpoint_for_Remove_Order_Gift_Card(String orderUrl, String extension) throws Throwable {
+		JsonPath jsonPathEvaluator = response.jsonPath();
+		String gcPiId = jsonPathEvaluator.get("orders[0].giftCardDetails[0].gcPiId");
+		logger.debug("gcPiId Code::"+ gcPiId);
+		
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(orderUrl)+"DELETE/"+System.getProperty("OrderId")+extension+gcPiId;
+		logger.debug("END Point URL:"+endpoints);
+		initiateRestPostAPICallWithCookiesAndWithOutBody(endpoints);
+	}
+
+
 }
