@@ -55,19 +55,21 @@ Feature: Verify Order API endpoint services
   @All-R2 @C1-Order @C2-OrderAddress @api @R2_AAST-04 @CR-RT @ZYP_UpdateShippingAddress_14260
   Scenario: TC_7 - Update the Shipping Address and validate the Schema and response details
     Given "Addurl" endpoint with "/address" for get the shipping address of a profile
-    Given "OrderUrl" by "/shipping" endpoint with "UpdateShippingRequest" for update the shipping address of a order
-    Then Verify response status code as 200
-    
-    
-     @All-R2 @C1-Order @C2-OrderAddress @api @R2_AAST-04 @CR-RT @ZYP_AddBillingAddress_14256
+    Given "OrderUrl" by "/shipping" endpoint with "UpdateOrderShippingAddressRequest" for update the shipping address of a order
+    Then Verify response status code as 201
+    Then validate jsonSchema "R2-UpdateShippingAddressSchema"
+    Then Validated response details of "updateShippingAddress.orderId"
+    Then Validated response details of "updateShippingAddress.addressId"
+
+  @All-R2 @C1-Order @C2-OrderAddress @api @R2_AAST-04 @CR-RT @ZYP_AddBillingAddress_14256
   Scenario: TC_7 - Add the Order-Billing Address Credit Card Payment Instructions and validate the Schema and response details
-  Given "OrderUrl" by "/creditCard" endpoint with "AddOrderBillingPaymentRequest" for add Order Billing Address and PaymentMethod details
-Then Verify response status code as 201
-Then validate jsonSchema "R2-AddBillingAddressSchema"
-     Then Validated response details of "addBillingAddress.orderId"
+    Given "OrderUrl" by "/creditCard" endpoint with "AddOrderBillingPaymentRequest" for add Order Billing Address and PaymentMethod details
+    Then Verify response status code as 201
+    Then validate jsonSchema "R2-AddBillingAddressSchema"
+    Then Validated response details of "addBillingAddress.orderId"
     Then Validated response details of "addBillingAddress.billAddressId"
 
- @All-R2 @C1-Order @C2-OrderCart @api @R2_AAST-07 @CR-RT @ZYP_EstimatedTax_14257
+  @All-R2 @C1-Order @C2-OrderCart @api @R2_AAST-07 @CR-RT @ZYP_EstimatedTax_14257
   Scenario: TC_7 - verify the Order Cart Estimated Tax and Shipping Charge Response status code details
     Given "OrderUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
     Then Verify response status code as 200

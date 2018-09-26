@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.api;
 
 
 import org.apache.log4j.Logger;
+import org.json.simple.JSONObject;
 
 import com.aso.qe.framework.api.helpers.JSONValidationUtils;
 import com.aso.qe.framework.api.helpers.MiniCartJsonResponseHelper;
@@ -113,6 +114,25 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 		logger.debug("ShippingAddressId::"+shippingAddressId);
 	}
 	
+	@Given("^\"(.*?)\" by \"(.*?)\" endpoint with \"(.*?)\" for update the shipping address of a order$")
+	public void by_endpoint_with_for_update_the_shipping_address_of_a_order(String url, String extension, String requestPath) throws Throwable {
+		
+		JSONObject shippingAddressjsonObj = getShippingAddressDetails();
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPath+ requestPath+".json");
+		postRequestStr= postRequestStr.replace("REPLACE_ADDRESSID", shippingAddressjsonObj.get("addressId").toString())
+				.replace("REPLACE_FIRSTNAME", shippingAddressjsonObj.get("firstName").toString())
+				.replace("REPLACE_LASTNAME", shippingAddressjsonObj.get("lastName").toString())
+				.replace("REPLACE_PHONENUMBER", shippingAddressjsonObj.get("phoneNumber").toString())
+				.replace("REPLACE_ADDRESS", shippingAddressjsonObj.get("address").toString())
+				.replace("REPLACE_ZIPCODE", shippingAddressjsonObj.get("zipCode").toString())
+				.replace("REPLACE_CITY", shippingAddressjsonObj.get("city").toString())
+				.replace("REPLACE_STATE", shippingAddressjsonObj.get("state").toString())
+				.replace("REPLACE_COUNTRY", shippingAddressjsonObj.get("country").toString())
+				.replace("REPLACE_ORDERID", System.getProperty("OrderId"));
+		
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+"PUT/"+System.getProperty("OrderId")+extension;
+		initiateRestPostAPICallWithCookiesAndRequestJsonStr(endpoints, postRequestStr);
+	}
 	
 	@Given("^\"(.*?)\" by \"(.*?)\" endpoint with \"(.*?)\" for add Order Billing Address and PaymentMethod details$")
 	public void by_endpoint_with_for_add_Order_Billing_Address_and_PaymentMethod_details(String orderUrl, String extension, String requestJson) throws Throwable {
@@ -144,6 +164,5 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithCookiesAndWithOutBody(endpoints);
 	}
-
 
 }
