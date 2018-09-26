@@ -189,4 +189,13 @@ public WebElement CheckOrder_Lnk;
 @FindBy(xpath ="//*[text()='NEED HELP?']/..")//CR-AKK 17-sept
 public WebElement NeddHelp_M;
 
+@FindBy(xpath ="(//*[contains(@data-auid,'productCard_')])[1]//img")//CR-AKK 25-sept
+public WebElement ProdutCard_img;
+
+@FindBy(xpath ="(//*[contains(@data-auid,'btnproductCard_')])[1]")//CR-AKK 25-sept
+public WebElement QuickView_Btn;
+
+@FindBy(xpath ="//*[@data-auid='btnAddToCart']")//CR-AKK 25-sept
+public WebElement AddToCart_btn; 
+
 }

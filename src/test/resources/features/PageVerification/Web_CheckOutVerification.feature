@@ -99,6 +99,8 @@ Scenario: Verify Checkout for Web
 		|Total_txt|
 		|giftCards_txt|
 		|giftCardsPrice_txt|
+		|orderSubmitted_OrderNumber|
+		|checkOutCheckOrderStatus_OrderNumberInput|
 		
 		|#%%%%%  ITems under Order Summary  %%%%%|
 		|Item_Txt|

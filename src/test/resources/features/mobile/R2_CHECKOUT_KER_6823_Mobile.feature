@@ -76,156 +76,151 @@ Then Verify below Sub/Main Module of Checkout Page
 |#verify add new giftcard is displayed |
 |AddAnewGiftCard_Txt|
 
-# @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8672 @CR-RKA
-#Scenario: Verify saved another gift card drop down having 13 and 16 digit GC with 4 or 8 digit PIN	
-#
-# Given user launches the browser and navigates to "ASO_HOME" page
-#	And user clicks on SignIn link from global header
-#	And user enter the valid emailaddress "EmailAddress" 
-#	And user enter the valid password "Password" 
-#    And user click on signin button
-#    Then user click on My Account and navigate to payment
-#    When user clicks on Add New Gift Card button  
-#    Then user fill the gift card in My Account 
-# And User navigates to L2 Mens clothing
-#    Then user clicks on one of the subcategory and navigates to LTwo
-#    Then user clicks on one of the product category and navigates to LThree
-#	Then User is navigated to pdp page
-#  Then user click on Add to Cart Button
-##  Then user click on checkout from ATC pop up
+ @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8672 @CR-RKA
+Scenario: Verify saved another gift card drop down having 13 and 16 digit GC with 4 or 8 digit PIN	
+
+ Given user launches the browser and navigates to "ASO_HOME" page
+	 And User clicks on the burger menu 
+	And user clicks on SignIn link from global header
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+    And user click on signin button
+    And User clicks on the burger menu 
+    Then user click on My Account and navigate to payment
+    When user clicks on Add New Gift Card button  
+    Then user fill the gift card in My Account 
+When User searches a product "productName" and navigates to PDP
+  Then user click on Add to Cart Button
+  Then user click on checkout from ATC pop up
 #  And user will click on View Cart button
 #  And user will click on Checkout button and navigates to Checkout page
-#  And user click on GiftCard Plus icon in Checkout page
-#Then Verify below Sub/Main Module of Checkout Page 
-#|#verify user is able to see choose gift card Drop down|
-#|ChoosegiftCard_Dd|
+  And user click on GiftCard Plus icon in Checkout page
+Then Verify below Sub/Main Module of Checkout Page 
+|#verify user is able to see choose gift card Drop down|
+|ChoosegiftCard_Dd|
 
 
-# @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8673 @CR-RKA
-#Scenario: Verify No second Saved Gift Card for Authenticated user
-#
-#
-#Given user launches the browser and navigates to "ASO_HOME" page
-#	And user clicks on SignIn link from global header
-#	And user enter the valid emailaddress "EmailAddress" 
-#	And user enter the valid password "Password" 
-#    And user click on signin button
-#    Then user click on My Account and navigate to payment
-#    When user clicks on Add New Gift Card button  
-#    Then user fill the gift card in My Account 
-# And User navigates to L2 Mens clothing
-#    Then user clicks on one of the subcategory and navigates to LTwo
-#    Then user clicks on one of the product category and navigates to LThree
-#	Then User is navigated to pdp page
-#  Then user click on Add to Cart Button
-##  Then user click on checkout from ATC pop up
-#  And user will click on View Cart button
-#  And user will click on Checkout button and navigates to Checkout page
-#  And user click on GiftCard Plus icon in Checkout page
-#Then Verify below Sub/Main Module of Checkout Page 
-#|#verify user is able to see Gift cart ending digit in choose gift card Dropdown|
-#|ChoosegiftCard_Dd|
+ @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8673 @CR-RKA
+Scenario: Verify No second Saved Gift Card for Authenticated user
 
-# @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8675 @CR-RKA
-#Scenario: Verify +Add another Gift card is Suppressed
 
-#Given user launches the browser and navigates to "ASO_HOME" page
-#	And user clicks on SignIn link from global header
-#	And user enter the valid emailaddress "EmailAddress" 
-#	And user enter the valid password "Password" 
-#    And user click on signin button
-#    Then user click on My Account and navigate to payment
-#    When user clicks on Add New Gift Card button  
-#    Then user fill the gift card in My Account 
-# And User navigates to L2 Mens clothing
-#    Then user clicks on one of the subcategory and navigates to LTwo
-#    Then user clicks on one of the product category and navigates to LThree
-#	Then User is navigated to pdp page
-#  Then user click on Add to Cart Button
-##  Then user click on checkout from ATC pop up
-#  And user will click on View Cart button
-#  And user will click on Checkout button and navigates to Checkout page
-#  And user click on GiftCard Plus icon in Checkout page
-#Then user click on apply giftcard button 
-#Then Verify below Sub/Main Module of Checkout Page 
-#|#verify +add another gift card|
-#|Plus_AddAnotherGiftCard_Txt|
-#Then user click on remove gift card  
+Given user launches the browser and navigates to "ASO_HOME" page
+	And User clicks on the burger menu
+	And user clicks on SignIn link from global header
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+    And user click on signin button
+    And User clicks on the burger menu
+    Then user click on My Account and navigate to payment
+    When user clicks on Add New Gift Card button  
+    Then user fill the gift card in My Account 
+ When User searches a product "productName" and navigates to PDP
+  Then user click on Add to Cart Button
+#  Then user click on checkout from ATC pop up
+  And user will click on View Cart button
+  And user will click on Checkout button and navigates to Checkout page
+  And user click on GiftCard Plus icon in Checkout page
+Then Verify below Sub/Main Module of Checkout Page 
+|#verify user is able to see Gift cart ending digit in choose gift card Dropdown|
+|ChoosegiftCard_Dd|
 
-# @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8682 @CR-RKA
-#Scenario: Verify remove all gift cards
-#Given user launches the browser and navigates to "ASO_HOME" page
-#	And user clicks on SignIn link from global header
-#	And user enter the valid emailaddress "EmailAddress" 
-#	And user enter the valid password "Password" 
-#    And user click on signin button
-#    Then user click on My Account and navigate to payment
-#    When user clicks on Add New Gift Card button  
-#    Then user fill the gift card in My Account 
-# And User navigates to L2 Mens clothing
-#    Then user clicks on one of the subcategory and navigates to LTwo
-#    Then user clicks on one of the product category and navigates to LThree
-#	Then User is navigated to pdp page
-#  Then user click on Add to Cart Button
-##  Then user click on checkout from ATC pop up
-#  And user will click on View Cart button
-#  And user will click on Checkout button and navigates to Checkout page
-#  And user click on GiftCard Plus icon in Checkout page
-#Then Verify below Sub/Main Module of Checkout Page 
-#|#verify user is able to see choose gift card Drop down|
-#|ChoosegiftCard_Dd|
+ @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8675 @CR-RKA
+Scenario: Verify +Add another Gift card is Suppressed
+
+Given user launches the browser and navigates to "ASO_HOME" page
+	And User clicks on the burger menu
+	And user clicks on SignIn link from global header
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+    And user click on signin button
+    And User clicks on the burger menu
+    Then user click on My Account and navigate to payment
+    When user clicks on Add New Gift Card button  
+    Then user fill the gift card in My Account 
+ When User searches a product "productName" and navigates to PDP
+
+  Then user click on Add to Cart Button
+#  Then user click on checkout from ATC pop up
+  And user will click on View Cart button
+  And user will click on Checkout button and navigates to Checkout page
+  And user click on GiftCard Plus icon in Checkout page
+Then user click on apply giftcard button 
+Then Verify below Sub/Main Module of Checkout Page 
+|#verify +add another gift card|
+|Plus_AddAnotherGiftCard_Txt|
+Then user click on remove gift card  
+
+ @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8682 @CR-RKA
+Scenario: Verify remove all gift cards
+Given user launches the browser and navigates to "ASO_HOME" page
+	And User clicks on the burger menu
+	And user clicks on SignIn link from global header
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+    And user click on signin button
+    And User clicks on the burger menu
+    Then user click on My Account and navigate to payment
+    When user clicks on Add New Gift Card button  
+    Then user fill the gift card in My Account 
+  When User searches a product "productName" and navigates to PDP
+  Then user click on Add to Cart Button
+#  Then user click on checkout from ATC pop up
+  And user will click on View Cart button
+  And user will click on Checkout button and navigates to Checkout page
+  And user click on GiftCard Plus icon in Checkout page
+Then Verify below Sub/Main Module of Checkout Page 
+|#verify user is able to see choose gift card Drop down|
+|ChoosegiftCard_Dd|
   
-#  @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8658 @CR-RKA
-#  Scenario: Verify Gift Card Chronology and Balance
-#  
-#  Given user launches the browser and navigates to "ASO_HOME" page
-#	And user clicks on SignIn link from global header
-#	And user enter the valid emailaddress "EmailAddress" 
-#	And user enter the valid password "Password" 
-#    And user click on signin button
-#    Then user click on My Account and navigate to payment
-#    When user clicks on Add New Gift Card button  
-#    Then user fill the gift card in My Account 
-# And User navigates to L2 Mens clothing
-#    Then user clicks on one of the subcategory and navigates to LTwo
-#    Then user clicks on one of the product category and navigates to LThree
-#	Then User is navigated to pdp page
-#  Then user click on Add to Cart Button
-##  Then user click on checkout from ATC pop up
-#  And user will click on View Cart button
-#  And user will click on Checkout button and navigates to Checkout page
-#  And user click on GiftCard Plus icon in Checkout page
-#Then Verify below Sub/Main Module of Checkout Page 
-#|#verify user is able to see chronology and balance in choose gift card|
-#|ChoosegiftCard_Dd|
+  @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8658 @CR-RKA
+  Scenario: Verify Gift Card Chronology and Balance
+  
+  Given user launches the browser and navigates to "ASO_HOME" page
+	And User clicks on the burger menu
+	And user clicks on SignIn link from global header
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+    And user click on signin button
+    And User clicks on the burger menu
+    Then user click on My Account and navigate to payment
+    When user clicks on Add New Gift Card button  
+    Then user fill the gift card in My Account 
+  When User searches a product "productName" and navigates to PDP
+  Then user click on Add to Cart Button
+#  Then user click on checkout from ATC pop up
+  And user will click on View Cart button
+  And user will click on Checkout button and navigates to Checkout page
+  And user click on GiftCard Plus icon in Checkout page
+Then Verify below Sub/Main Module of Checkout Page 
+|#verify user is able to see chronology and balance in choose gift card|
+|ChoosegiftCard_Dd|
   
   
-#  @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8659 @CR-RKA
-#  Scenario: Verify Gift card drop down supressed
-#  
-#  Given user launches the browser and navigates to "ASO_HOME" page
-#	And user clicks on SignIn link from global header
-#	And user enter the valid emailaddress "EmailAddress" 
-#	And user enter the valid password "Password" 
-#    And user click on signin button
-#    Then user click on My Account and navigate to payment
-#    When user clicks on Add New Gift Card button  
-#    Then user fill the gift card in My Account 
-# And User navigates to L2 Mens clothing
-#    Then user clicks on one of the subcategory and navigates to LTwo
-#    Then user clicks on one of the product category and navigates to LThree
-#	Then User is navigated to pdp page
-#  Then user click on Add to Cart Button
-##  Then user click on checkout from ATC pop up
-#  And user will click on View Cart button
-#  And user will click on Checkout button and navigates to Checkout page
-#  And user click on GiftCard Plus icon in Checkout page
-#Then user click on apply giftcard button 
-#Then Verify below Sub/Main Module of Checkout Page 
-#|#verify gift card drop down supressed|
-#|Plus_AddAnotherGiftCard_Txt|
-#Then user click on remove gift card 
-#  
+  @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8659 @CR-RKA
+  Scenario: Verify Gift card drop down supressed
+  
+  Given user launches the browser and navigates to "ASO_HOME" page
+	And User clicks on the burger menu
+	And user clicks on SignIn link from global header
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+    And user click on signin button
+    And User clicks on the burger menu
+    Then user click on My Account and navigate to payment
+    When user clicks on Add New Gift Card button  
+    Then user fill the gift card in My Account 
+ When User searches a product "productName" and navigates to PDP
+  Then user click on Add to Cart Button
+#  Then user click on checkout from ATC pop up
+  And user will click on View Cart button
+  And user will click on Checkout button and navigates to Checkout page
+  And user click on GiftCard Plus icon in Checkout page
+Then user click on apply giftcard button 
+Then Verify below Sub/Main Module of Checkout Page 
+|#verify gift card drop down supressed|
+|Plus_AddAnotherGiftCard_Txt|
+Then user click on remove gift card 
+  
   
   
   

@@ -4,12 +4,12 @@ Feature: E03-100 - My Account, Order Details
 @ZYP_MYACCOUNT_K4237-10510 @CR-GK 
 Scenario: Verify that Authenticated User is able to view order list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu
+	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User clicks on the burger menu
+	And User clicks on the burger menu 
 	And user navigates to orders in my account 
 	Then Verify that list of orders are displayed in the right section of the page 
 	And Verify below Sub/Main Module of My Account 
@@ -28,10 +28,10 @@ Scenario: Verify that Authenticated User is able to view order list
 Scenario: 
 	Verify that Order search field is displayed if Authenticated user does not have any orders 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu
-	And user clicks on sign in link from burger menu
+	And User clicks on the burger menu 
+	And user clicks on sign in link from burger menu 
 	And user logs in as "RawUser" 
-	And User clicks on the burger menu
+	And User clicks on the burger menu 
 	And user navigates to orders in my account 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in order section|
@@ -45,12 +45,12 @@ Scenario:
 Scenario: 
 	Verify that Authenticated user is able to view shipping and Billing Details of an order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu
+	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User clicks on the burger menu
+	And User clicks on the burger menu 
 	And user navigates to orders in my account 
 	And User clicks on View Details CTA for an order 
 	Then Verify below Sub/Main Module of My Account 
@@ -101,3 +101,63 @@ Scenario:
 		|MyAccount_OrderDetailsPage_ShippingAddress |
 		|Order_OrderTotal							|
 		
+		
+		
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@ZYP_MYACCOUNT_K4237-10518 @CR-GK 
+Scenario: Verify that Authenticated user is able to Print Order receipt 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	And user clicks on sign in link from burger menu 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And User clicks on the burger menu 
+	And user navigates to orders in my account 
+	And User clicks on View Details CTA for an order 
+	Then Verify below Sub/Main Module of My Account 
+		|#Verify following elements in order section|
+		|MyAccount_OrderDetailsPage_PrintReceipt    |
+	And user click on print receipt link 
+	
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@ZYP_MYACCOUNT_K4237-10519 @CR-GK 
+Scenario: 
+	Verify that Authenticated user is able to view order details for BOPIS orders 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	And user clicks on sign in link from burger menu 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And User clicks on the burger menu 
+	And   user navigates to orders in my account 
+	And   User clicks on View Details CTA for an order 
+	Then  Verify below Sub/Main Module of My Account 
+		|#Verify following elements in order details page|
+		|MyAccount_OrderPage_OrderDetailsPage       |
+		|MyAccount_OrderDetailsPage_OrderDate       |
+		|MyAccount_OrderDetailsPage_OrderNumber     |
+		|MyAccount_OrderDetailsPage_OrderStatus     |
+		|Order_OrderTotal							|
+		|MyAccount_OrderDetailsPage_TaxAmount       |
+		|MyAccount_OrderDetailsPage_SubTotalAmount  |
+		
+		
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@ZYP_MYACCOUNT_K4237-10526 @CR-GK 
+Scenario: Verify that UnAuthenticated user is able to print order receipt 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	And user clicks on sign in link from burger menu 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And User clicks on the burger menu 
+	And user navigates to orders in my account 
+	And User clicks on View Details CTA for an order 
+	Then Verify below Sub/Main Module of My Account 
+		|#Verify following elements in order section|
+		|MyAccount_OrderDetailsPage_PrintReceipt    |
+	And user click on print receipt link

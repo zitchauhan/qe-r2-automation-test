@@ -101,3 +101,32 @@ Verify the shipping price for each shipping method for Gift Card items
 		|Total_price|
 		|Total_txt|
 	Then User should retrieve the FREE shipping for the selected shipping method from DB		
+	
+	
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2911
+@ZYP_CHECKOUT_K2926-8233 @CR-DPK 
+Scenario:
+Verify the shipping price for each shipping method for White glove items where Shipping Exception table exists
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu
+	And User navigates to L2 Grills Outdoor cooking
+	And user clicks on one of the subcategory of Grills Outdoor
+	And user select the product
+	And user click on Add to Cart Button 
+	And user will click on View Cart button 
+	And user will click on Checkout button and navigates to Checkout page
+	When user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "ZIPCODE"
+	Then user click on Go To Shipping Method button in Checkout page
+	Then User should retrieve the expected shipping price for the selected shipping method from Shipping Exception table in DB
+	Then Verify below Sub/Main Module of Checkout Page 
+		|# Verify following elements in Checkout page "Order Summary"|
+		|Subtotal_txt|
+		|Subtotal_price|
+		|Taxes_Txt|
+		|TaxesPrice_Txt|
+		|Total_price|
+		|Total_txt|	

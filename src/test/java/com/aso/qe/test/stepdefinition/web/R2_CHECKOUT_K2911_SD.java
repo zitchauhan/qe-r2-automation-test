@@ -35,13 +35,24 @@ public class R2_CHECKOUT_K2911_SD extends CommonActionHelper {
 	}
 	
 	
+	
+	
 	@Then("^User should retrieve the FREE shipping for the selected shipping method from DB$")
 	public void user_should_retrieve_the_FREE_shipping_for_the_selected_shipping_method_from_DB() throws Throwable {
 		String giftCard=r2CheckoutPo.EstimatedShippingPrice_txt.getText();
 		assertEquals(giftCard,"FREE");
 	}
 	
-	@Then("^User should retrieve the expected shipping price for the selected shipping method from Shipping  Exception table in DB$")
+//	@Then("^User should retrieve the expected shipping price for the selected shipping method from Shipping  Exception table in DB$")
+//	public void user_should_retrieve_the_expected_shipping_price_for_the_selected_shipping_method_from_Shipping_Exception_table_in_DB() throws Throwable {
+//		String WhiteGlove_OrderSummary=r2CheckoutPo.ShippingPrice_Txt.getText();
+//		String WhiteGlove_OrderSummary_price= WhiteGlove_OrderSummary.replaceAll("[^0-9]", "");
+//		String WhiteGlove_Shippingmethod = r2CheckoutPo.shippingPriceInShippingMethod_txt.getText();
+//		String WhiteGlove_price= WhiteGlove_Shippingmethod.replaceAll("[^0-9]", "");
+//		assertEquals(WhiteGlove_OrderSummary_price,WhiteGlove_price);
+//	}
+	
+	@Then("^User should retrieve the expected shipping price for the selected shipping method from Shipping Exception table in DB$")
 	public void user_should_retrieve_the_expected_shipping_price_for_the_selected_shipping_method_from_Shipping_Exception_table_in_DB() throws Throwable {
 		String WhiteGlove_OrderSummary=r2CheckoutPo.ShippingPrice_Txt.getText();
 		String WhiteGlove_OrderSummary_price= WhiteGlove_OrderSummary.replaceAll("[^0-9]", "");

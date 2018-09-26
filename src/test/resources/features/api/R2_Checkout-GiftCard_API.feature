@@ -59,3 +59,17 @@ Feature: Verify Order Checkout-GiftCard API endpoint services
     Given "OrderUrl" with "shippingModesStoreID" endpoint for Available Shipping Modes with StoreId
     Then read the API json response
     Then Validated response details of "fetchShipModesAndAssociatedItems.results.orderId"
+
+  @All-R2 @C1-Checkout @C2-ChechoutGiftCard @api @R2_AAST-05 @CR-RT @ZYP_Checkout_AddGiftCard_14456
+  Scenario: TC_6 - Apply the Checkout Gift Card details
+    Given "OrderUrl" by "/giftCards" endpoint with "AddOrderGiftCardRequest" for add Order Gift Card details
+    Then Verify response status code as 201
+		Then Validated response details of "orderId"
+
+  @All-R2 @C1-Checkout @C2-ChechoutGiftCard @api @R2_AAST-05 @CR-RT @ZYP_Checkout_RemoveGiftCard_14457
+  Scenario: TC_6 - Remove the Checkout Gift Card details
+    Given "OrderUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
+    Given "OrderUrl" by "/giftCards/" endpoint for Remove Order Gift Card
+    Then Verify response status code as 201
+    Then validate jsonSchema "R2-CheckoutRemoveGiftCardSchema"
+    Then Validated response details of "removeGiftCard.orderId"

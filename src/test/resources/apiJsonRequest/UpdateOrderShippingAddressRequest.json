@@ -1,0 +1,15 @@
+{
+	"addressId": "REPLACE_ADDRESSID",
+	"firstName": "REPLACE_FIRSTNAME ",
+	"lastName": "REPLACE_LASTNAME",
+	"phoneNumber": "REPLACE_PHONENUMBER",
+	"companyName": "",
+	"address": "REPLACE_ADDRESS",
+	"zipCode": "REPLACE_ZIPCODE",
+	"city": "REPLACE_CITY",
+	"state": "REPLACE_STATE",
+	"country": "REPLACE_COUNTRY",
+	"orderId": "REPLACE_ORDERID",
+	"isAddressVerified": "1",
+	"URL": "checkout"
+}

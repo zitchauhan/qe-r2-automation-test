@@ -267,7 +267,6 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Authenticated
 	Then applied gift card "GiftcardNumber" should be displayed 
 	Then gift card balance is applied towards the purchase 
 	
-	
 @R2_Web @R2_WAST-18 @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954 @CR-GK
 @AutomationSanityR2 
 Scenario: TC_18-Verify Payment - Add Gift Card - Authenticated
@@ -280,7 +279,6 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Authenticated
 	 Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button
      And user click on checkout button 
-    Then user click on go to payment present in shipping method
 	Then user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "GiftcardNumber"
 	And user enter Pin Number "PinNumber" 

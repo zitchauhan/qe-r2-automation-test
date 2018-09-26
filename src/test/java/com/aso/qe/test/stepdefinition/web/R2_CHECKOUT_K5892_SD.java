@@ -30,7 +30,25 @@ public class R2_CHECKOUT_K5892_SD extends CommonActionHelper {
 	    clickOnButton(chpo.AddNewCreditCard_Txt);
 	}
 
-	
+	@Then("^user fill the credit card detail of checkout page$")
+	public void user_fill_the_credit_card_detail_of_checkout_page() throws Throwable {
+		setInputText(chpo.CreditCardNumber_Input, webPropHelper.getTestDataProperty("CardVISA"));
+		setInputText(chpo.ExpirationDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
+		setInputText(chpo.Cvv_Input, webPropHelper.getTestDataProperty("ThreeDigitCVV"));
+		setInputText(chpo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty("EmployeeEmailAddress"));
+		clickOnButton(chpo.ReviewOrder_Btn);
+		
+	}
+
+	@Then("^user click on place order button$")
+	public void user_click_on_place_order_button() throws Throwable {
+	   clickOnButton(chpo.btnPlaceOrderPaymentPage);
+	   Thread.sleep(20000);
+	}
+
+
+
+
 	
 	
 }
