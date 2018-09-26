@@ -69,17 +69,17 @@ Then validate jsonSchema "R2-AddBillingAddressSchema"
 
  @All-R2 @C1-Order @C2-OrderCart @api @R2_AAST-07 @CR-RT @ZYP_EstimatedTax_14257
   Scenario: TC_7 - verify the Order Cart Estimated Tax and Shipping Charge Response status code details
-    Given "GetCartUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
+    Given "OrderUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
     Then Verify response status code as 200
 
   @All-R2 @C1-Order @C2-OrderCart @api @R2_AAST-07 @CR-RT @ZYP_EstimatedTax_14258
   Scenario: TC_7 - Validate the Order Cart Estimated Tax and Shipping Charge Json Schema details
-    Given "GetCartUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
+    Given "OrderUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
     And validate jsonSchema "R2-CartEstimatedTaxShippingChargeSchema"
 
   @All-R2 @C1-Order @C2-OrderCart @api @R2_AAST-07 @CR-RT @ZYP_EstimatedTax_14259
   Scenario: TC_7 - verify the Order Cart Estimated Tax and Shipping Charge Json Response details
-    Given "GetCartUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
+    Given "OrderUrl" by "?deliveryZipCode=72201&storeZipCode=" for Taxes Cart Estimated Tax and Shipping Charge
     Then Validated response details of "orders[0].orderId"
 
   @All-R2 @C1-Order @C2-RemovePromoCode @api @R2_AAST-05 @CR-VK @ZYP_Order_RemovePromoCode_12280

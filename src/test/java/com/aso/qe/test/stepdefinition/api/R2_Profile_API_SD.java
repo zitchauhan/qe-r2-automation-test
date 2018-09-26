@@ -118,10 +118,15 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
+		
+		System.setProperty("GiftWalletId", getValueFromResponse("xwalletId[0]"));
+		/*try{
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		String walletID = jsonPathEvaluator.get("xwalletId[0]");
 		logger.debug("Wallet ID::"+ walletID);
 		System.setProperty("GiftWalletId", walletID);
+		}catch (Exception e) {
+		}*/
 	}
 
 
