@@ -75,8 +75,7 @@ Scenario: TC_4- Verify User is able to Add Gift Card
 	And user should be able to see available balance 
 	And there should be a Remove link with cross icon 
 	
-	
-@R2_Mobile @R2_WAST-05 @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696
+	@R2_Mobile @R2_WAST-05 @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696
 @CR-DPK @AutomationSanityR2 
 Scenario: TC_5-Verify Add Credit Card and added as a Default Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -247,8 +246,6 @@ Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page
     And user click on checkout button
 	And user fill the PO box in shipping address 
 	And user click on Go To Shipping Method button in Checkout page
@@ -259,7 +256,7 @@ Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated
 	And user click on Apply button
 	Then verify Gift Card in order summary page	 
 	
-@R2_Mobile @R2_MAST-18 @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954_M 
+	@R2_Mobile @R2_MAST-18 @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954_M 
 @CR-GK @AutomationSanityR2 
 Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -279,7 +276,7 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated
 	Then applied gift card "GiftcardNumber" should be displayed 
 	Then gift card balance is applied towards the purchase 
 	
-	
+		
 @R2_Mobile @R2_MAST-19 @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147_M 
 @CR-RK 
 @AutomationSanityR2 
