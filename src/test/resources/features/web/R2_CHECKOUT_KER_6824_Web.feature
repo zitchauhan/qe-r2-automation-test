@@ -133,7 +133,33 @@ Scenario: Verify the Hide Gift Card CTA behavior
 		|Apply_Btn|
 	Then user click on GiftCard Minus icon in Checkout page	
 	
+
+
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6824-8646 @CR-DPK
+	Scenario: Verify Remove Gift Card behavior for 13 and 16 digit gift card with 4 or 8 digit PIN
+	Given user launches the browser and navigates to "ASO_HOME" page  
+	And User Navigates L2 form Homepage Header 
+   And User clicks on product in PLP
+	Then user click on Add to Cart Button
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page
+	When user enter First name "FirstName" 
+	And user enter Last name "LastName" 	
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "zipcode" 
+	Then user click on Go To Shipping Method button in Checkout page
+	And user click on go to payment present in shipping method
+	Then user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "GiftcardNumber"
+	And user enter Pin Number "PinNumber" 
+	And user click on Apply button
+	Then Verify below Sub/Main Module of Checkout Page 
+	|# Verify following elements in Checkout page "Order Summary"|
+	|btnToRemoveGiftCardOnCheckoutPage|
+	And clicking on Remove and Remove icon should remove the applied GC
 	
+		
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6824-10196 @CR-DPK
 	Scenario: Verify the error message when user enters valid new Gift card with valid old PIN in Checkout for payment

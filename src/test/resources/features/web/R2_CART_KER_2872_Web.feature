@@ -59,14 +59,40 @@ Scenario: Verify My Store functionality and modal close behavior
 	And user verify Find a Store popup is closed
 	
 	
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10617 @CR-DPK
+Scenario: Verify that user is able to seethe Change Location link on PLP BOPIS filter page
+	Given user launches the browser and navigates to "ASO_HOME" page
+	Then User should be able to click on Find Store
+	Then user enter "zipCode" in Find a Store Model
+	And user click on submit button
+	Then user click on plus icon in Store Address drawer
+	And user click on Make My store button	 
+	And User Navigates L2 form Homepage Header
+	When user lands on the PLP page with Filter Drawer 
+	And user is able to see Change Pickup Location link in PLP		
+	
+
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10618 @CR-DPK
+Scenario: Verify that user is able to open the Find Store modal from PLP for BOPIS filter
+	Given user launches the browser and navigates to "ASO_HOME" page
+	Then User should be able to click on Find Store
+	Then user enter "zipCode" in Find a Store Model
+	And user click on submit button
+	Then user click on plus icon in Store Address drawer
+	And user click on Make My store button	 
+	And User Navigates L2 form Homepage Header
+	When user lands on the PLP page with Filter Drawer 
+	And clicks on the Change Pickup Location link in PLP
+	And user verify Find a Store popup	
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10619 @CR-DPK	
 	Scenario: Verify that user is able to see the Change Location link on PDP
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne SOF
-    Then user clicks on one of the subcategory and navigates to LTwo SOF
-    Then user clicks on one of the product category and navigates to LThree SOF
+#	When user clicks on one of the category and navigates to LOne SOF
+#    Then user clicks on one of the subcategory and navigates to LTwo SOF
+#    Then user clicks on one of the product category and navigates to LThree SOF
+	Then User searches a product "SOFSKUNumber" and navigates to PDP	
 	Then User is navigated to pdp page
 	And user is able to see Change Pickup Location link		
 	
@@ -74,9 +100,10 @@ Scenario: Verify My Store functionality and modal close behavior
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10620 @CR-DPK	
 	Scenario: Verify that user is able to open the Find Store modal from PDP for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne SOF
-    Then user clicks on one of the subcategory and navigates to LTwo SOF
-    Then user clicks on one of the product category and navigates to LThree SOF
+#	When user clicks on one of the category and navigates to LOne SOF
+#    Then user clicks on one of the subcategory and navigates to LTwo SOF
+#    Then user clicks on one of the product category and navigates to LThree SOF
+	Then User searches a product "SOFSKUNumber" and navigates to PDP
 	Then User is navigated to pdp page
 	And clicks on the Change Pickup Location link
 	And user verify Find a Store popup	
@@ -85,30 +112,20 @@ Scenario: Verify My Store functionality and modal close behavior
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10621 @CR-DPK
 Scenario: Verify the user is able to view the 'Change Location' under In-store Pick Up on Cart in Product Blade
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
-    Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
+	And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
 	And verify Change Location link	
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10622 @CR-DPK
 Scenario: Verify that user view 'Find a Store' modal from Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
-    Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
+	And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
 	When user will verify in-store pick up radio button is selected with "ZIPCode"
 	And click on Change Location link
 	Then Find in Store modal should get open	
@@ -116,15 +133,10 @@ Scenario: Verify that user view 'Find a Store' modal from Cart
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10624 @CR-DPK
 Scenario: Verify user is able to see the BOPIS availability against the listed stores for the products added in cart
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
+	And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
 	And click on Change Location link
 	Then user enter "zipCode" in Find a Store Model
 	And user click on submit button
@@ -204,14 +216,10 @@ Scenario: Verify user is displayed with an error message when there is no store 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10726 @CR-DPK
 Scenario: Verify user is able to see the BOPIS availability on store details drawer for the products added in cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
+	And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
 	And click on Change Location link
 	Then user enter "zipCode" in Find a Store Model
 	And user click on submit button
@@ -222,15 +230,10 @@ Scenario: Verify user is able to see the BOPIS availability on store details dra
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-11548 @CR-DPK
 Scenario: Verify the user is able to view the 'Change Location' under In-store Pick Up on Cart in Product Blade
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
-    Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
+	And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	Then user click on Add to Cart Button
-	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page "Your Cart item details "|
 		|Image_ITemInCart| 
@@ -245,25 +248,20 @@ Scenario: Verify the user is able to view the 'Change Location' under In-store P
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11552 @CR-DPK
 Scenario: Verify user is able to see the inventory against the listed stores for the product not added to cart and modal opened from PDP
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
-    Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
+	And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	And user click on Find a Store in PDP page
 	Then user enter "zipCode" in Find a Store Model
 	And user click on submit button
 	Then user click on all plus icon in Store Address drawer
 	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
+	
 			
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11554 @CR-DPK
 Scenario: Verify user is able to see the inventory on store details drawer for the PDP not added to cart
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
-    Then user clicks on one of the product category and navigates to LThree
-	Then User is navigated to pdp page
+	Given user launches the browser and navigates to "ASO_HOME" page  
+	 And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	And user click on Find a Store in PDP page
 	Then user enter "zipCode" in Find a Store Model
 	And user click on submit button

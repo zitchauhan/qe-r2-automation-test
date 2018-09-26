@@ -198,4 +198,14 @@ public WebElement QuickView_Btn;
 @FindBy(xpath ="//*[@data-auid='btnAddToCart']")//CR-AKK 25-sept
 public WebElement AddToCart_btn; 
 
+//Start KER-2872 CR-DPK
+@FindBy(xpath ="//*[@data-auid='filtersTitle_m']")//CR-DPK 26-sept
+public WebElement DdFilter_M;
+
+@FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_Shipping & Pickup'] | //*[@data-auid='facetdrawer_drawer_Shipping & Pickup_m']")//CR-DPK 26-sept
+public WebElement txtShippingPickupFilterDrawer; 
+
+@FindBy(xpath ="//*[text()='Change Pickup Location']")//CR-DPK 26-sept
+public WebElement lnkPLPChangePickupLocation;
+//End KER-2872 CR-DPK
 }

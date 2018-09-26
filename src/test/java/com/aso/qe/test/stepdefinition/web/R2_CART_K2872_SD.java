@@ -245,4 +245,30 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 		assertFalse(isDisplayed(r2CartPo.btnViewTheNext5Stores));
 	}
 	
+	@When("^user lands on the PLP page with Filter Drawer$")
+	public void user_lands_on_the_PLP_page_with_Filter_Drawer() throws Throwable {
+		 if("mobile".equalsIgnoreCase(testtype)){   
+			 scrollPageToWebElement(r2R1FunPO.DdFilter_M);
+			  assertTrue(clickOnButton(r2R1FunPO.DdFilter_M));
+			  assertTrue(clickOnButton(r2R1FunPO.txtShippingPickupFilterDrawer));
+              Thread.sleep(5000);
+       }else {
+    	   assertTrue(clickOnButton(r2R1FunPO.txtShippingPickupFilterDrawer));
+              Thread.sleep(2000); 
+       }
+		
+	}
+	
+	@And("^user is able to see Change Pickup Location link in PLP$")
+	public void user_is_able_to_see_Change_Pickup_Location_link_in_PLP() throws Throwable {
+		assertTrue(isDisplayed(r2R1FunPO.lnkPLPChangePickupLocation)); 
+	}
+	
+	@Then("^clicks on the Change Pickup Location link in PLP$")
+	public void clicks_on_the_Change_Pickup_Location_link_in_PLP() throws Throwable {
+		assertTrue(clickOnButton(r2R1FunPO.lnkPLPChangePickupLocation)); 
+		Thread.sleep(2000);
+	}
+
+		
 }
