@@ -4,6 +4,7 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
+import com.aso.qe.test.pageobject.R2_OrderConfirmation_Po;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
 import static org.junit.Assert.assertTrue;
@@ -22,6 +23,7 @@ public class R2_CHECKOUT_K3165_SD extends CommonActionHelper {
 	R2_Cart_PO r2Cart_Po = PageFactory.initElements(driver, R2_Cart_PO.class);
 	R2_CheckOut_PO r2CheckOut_po = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	R2_MyAccount_PO r2MyAccount_po = PageFactory.initElements(driver, R2_MyAccount_PO.class);
+	R2_OrderConfirmation_Po r2_OrderConfirmationPo = PageFactory.initElements(driver, R2_OrderConfirmation_Po.class);
 	private static final Logger logger = Logger.getLogger(R2_CHECKOUT_K3165_SD.class);
 
 	@And("^enters the \"(.*?)\" zip on the Cart page$")
@@ -64,12 +66,7 @@ public class R2_CHECKOUT_K3165_SD extends CommonActionHelper {
 
 	@And("^user fill the email address for shipment and click on review order btn$")
 	public void user_fill_the_email_address_for_shipment_and_click_on_review_order_btn() throws Throwable {
-		String randomGeneratedString = RandomStringUtils.randomAlphabetic(10);
-		String head = "test";
-		String tail = "@deleteme.com";
-		String newGeneratedEmail = head + randomGeneratedString + tail;
-		logger.debug("The new random generated email address is " + newGeneratedEmail);
-		setInputText(r2CheckOut_po.EmailAddressforOrderConfirmation_Input, newGeneratedEmail.toString());
+		setInputText(r2CheckOut_po.EmailAddressforOrderConfirmation_Input, r2MyAccount_po.generateRandomEmailId());
 		clickOnButton(r2CheckOut_po.ReviewOrder_Btn);
 		Thread.sleep(2000);
 	}
@@ -77,8 +74,10 @@ public class R2_CHECKOUT_K3165_SD extends CommonActionHelper {
 	@And("^registers for the account from the Order confirmation screen with \"(.*?)\"$")
 	public void registers_for_the_account_from_the_Order_confirmation_screen_with(String passwordFromTestFile)
 			throws Throwable {
-		setInputText(r2MyAccount_po.inputPasswordSignIn, webPropHelper.getTestDataProperty(passwordFromTestFile));
+		setInputText(r2_OrderConfirmationPo.orderConfirmation_ChoosePassword_txt,
+				webPropHelper.getTestDataProperty(passwordFromTestFile));
 		assertTrue(clickOnButton(r2CheckOut_po.OrderConfirmation_GuestUser_PasswordSubmitBtn));
+		Thread.sleep(3000);
 	}
 
 	@And("^user navigates from Order successful page to address book in my account$")
@@ -92,5 +91,11 @@ public class R2_CHECKOUT_K3165_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2MyAccount_po.lnkSignIn));
 			assertTrue(clickOnButton(r2MyAccount_po.myAccount_MyAccountList_AddressBook_lnk));
 		}
+	}
+
+	@Then("^Guest User should be able to see only one available method for the shipment displayed in shipping method$")
+	public void guest_User_should_be_able_to_see_only_one_available_method_for_the_shipment_displayed_in_shipping_method()
+			throws Throwable {
+		assertFalse(isDisplayed(r2CheckOut_po.checkout_ShippingMethod_ShippingMethodType_btn));
 	}
 }
