@@ -27,10 +27,9 @@ Scenario:
 	And user enter Address "UpdateAddress" in address book
 	And user enter Zipcode "UpdateZipcode" in address book
 	And clicks on Add New Address button
-	And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user clicks on one of the product category and navigates to LThree 
-	And user click on Add to Cart Button 
+	And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
+	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	And user click on checkout button in Cart page
 	And user click on edit button in shipping address section 
@@ -42,9 +41,8 @@ Scenario:
 Scenario: 
 	Verify that guest user is able to edit address in shipping address section on checkout page
 	Given user launches the browser and navigates to "ASO_HOME" page
-	And User navigates to L2 Mens clothing
-   Then user clicks on one of the subcategory and navigates to LTwo
-     Then user clicks on one of the product category and navigates to LThree
+	And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -70,10 +68,9 @@ Scenario:
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10627 @CR-DPK
   Scenario: Verify while edit address Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA (as applicable) , AVS check should happen and user should see AVS modal
     Given user launches the browser and navigates to "ASO_HOME" page
-    And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    Then user clicks on one of the product category and navigates to LThree
-     Then user click on Add to Cart Button
+   And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
+	Then user click on Add to Cart Button
      And user will click on View Cart button
      Then user click on checkout button in Cart page
      Then Verify below Sub/Main Module of Checkout Page
@@ -98,11 +95,10 @@ Scenario:
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10628 @CR-DPK
   Scenario: Verify if an error is found in the address while edit. And AVS returns a suggestion
     Given user launches the browser and navigates to "ASO_HOME" page
-    And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    Then user clicks on one of the product category and navigates to LThree
-     Then user click on Add to Cart Button
-     And user will click on View Cart button
+    And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
+	Then user click on Add to Cart Button
+      And user will click on View Cart button
      Then user click on checkout button in Cart page
      Then Verify below Sub/Main Module of Checkout Page
     |# Verify following elements in Checkout > Shipping Address	|
@@ -125,10 +121,9 @@ Scenario:
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10629 @CR-DPK
   Scenario: Verify if user selects suggestion and checkout while edit address
     Given user launches the browser and navigates to "ASO_HOME" page
-    And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    Then user clicks on one of the product category and navigates to LThree
-     Then user click on Add to Cart Button
+    And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
+	Then user click on Add to Cart Button
      And user will click on View Cart button
      Then user click on checkout button in Cart page
      When user enter First name "FirstName"

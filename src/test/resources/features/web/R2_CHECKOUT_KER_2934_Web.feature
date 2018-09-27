@@ -8,9 +8,8 @@ Scenario: Verify the Shipping address form that authenticated user can view on a
  	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User navigates to L2 Mens clothing
-   Then user clicks on one of the subcategory and navigates to LTwo
-     Then user clicks on one of the product category and navigates to LThree
+	And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -32,9 +31,8 @@ Scenario: Verify the Shipping address form that authenticated user can view on a
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8178 @CR-DPK 
 Scenario: Verify if unauthenticated user be presented with the blank shipping address form fields
  	Given user launches the browser and navigates to "ASO_HOME" page
-	And User navigates to L2 Mens clothing
-   Then user clicks on one of the subcategory and navigates to LTwo
-     Then user clicks on one of the product category and navigates to LThree
+	And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -51,9 +49,8 @@ Scenario: Verify if unauthenticated user be presented with the blank shipping ad
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8179 @CR-DPK 
 Scenario: Verify Guest user should view zipcode pre-populated if previously provided on Cart
  	Given user launches the browser and navigates to "ASO_HOME" page
-	And User navigates to L2 Mens clothing
-   Then user clicks on one of the subcategory and navigates to LTwo
-     Then user clicks on one of the product category and navigates to LThree
+	And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -72,9 +69,8 @@ Scenario: Verify Guest user should view zipcode pre-populated if previously prov
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-9681 @CR-DPK 
 Scenario: Verify guest user, if after placing order, registers the account saves the address in My Account
  	Given user launches the browser and navigates to "ASO_HOME" page
-	And User navigates to L2 Mens clothing
-   Then user clicks on one of the subcategory and navigates to LTwo
-     Then user clicks on one of the product category and navigates to LThree
+	And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -92,9 +88,8 @@ Scenario: Verify guest user, if after placing order, registers the account saves
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2  @1HR_R2  @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-9683 @CR-DPK 
 Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided on cart page 
  	Given user launches the browser and navigates to "ASO_HOME" page
-	And User navigates to L2 Mens clothing
-   Then user clicks on one of the subcategory and navigates to LTwo
-     Then user clicks on one of the product category and navigates to LThree
+	And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -120,11 +115,10 @@ Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided o
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-10382 @CR-DPK
   Scenario: Verify if user selects AVS address suggestion and checkout
     Given user launches the browser and navigates to "ASO_HOME" page
-    And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    Then user clicks on one of the product category and navigates to LThree
-     Then user click on Add to Cart Button
-     And user will click on View Cart button
+  And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
+	Then user click on Add to Cart Button
+    And user will click on View Cart button
      Then user click on checkout button in Cart page
      Then Verify below Sub/Main Module of Checkout Page
     |# Verify following elements in Checkout > Shipping Address	|
@@ -148,10 +142,9 @@ Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided o
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-10383 @CR-DPK
   Scenario: Verify if user selects AVS address suggestion and checkout
     Given user launches the browser and navigates to "ASO_HOME" page
-    And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    Then user clicks on one of the product category and navigates to LThree
-     Then user click on Add to Cart Button
+   And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
+	Then user click on Add to Cart Button
      And user will click on View Cart button
     Then user click on checkout button in Cart page
     Then Verify below Sub/Main Module of Checkout Page
@@ -178,10 +171,9 @@ Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided o
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-11681 @CR-DPK
   Scenario: Verify Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA, Shipping Method drawer gets open on successful validation
     Given user launches the browser and navigates to "ASO_HOME" page
-    And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    Then user clicks on one of the product category and navigates to LThree
-     Then user click on Add to Cart Button
+    And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
+	Then user click on Add to Cart Button
      And user will click on View Cart button
     Then user click on checkout button in Cart page
     When user enter First name "FirstName"

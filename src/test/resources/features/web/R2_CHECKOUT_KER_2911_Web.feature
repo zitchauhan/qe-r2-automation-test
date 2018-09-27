@@ -1,12 +1,11 @@
 Feature: Verify Accurate Shipping Prices at Checkout
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2911 @ZYP_CHECKOUT_K2926-8229 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2911 @ZYP_CHECKOUT_K2911-8229 @CR-DPK
 Scenario: Verify if the shipping price on Checkout screen is same as Order Summary on Cart page
 	    Given user launches the browser and navigates to "ASO_HOME" page  
-		And User navigates to L2 Mens clothing
-	    And user clicks on one of the subcategory and navigates to LTwo
-	     And user clicks on one of the product category and navigates to LThree
-		And user click on Add to Cart Button
+		And User Navigates L2 form Homepage Header 
+    	 And User clicks on product in PLP
+		Then user click on Add to Cart Button
 		And user will click on View Cart button 
 		When user views Estimated Shipping in the Item Subtotal
 		And user will click on Checkout button and navigates to Checkout page
