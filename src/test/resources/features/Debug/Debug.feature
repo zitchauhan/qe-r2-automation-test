@@ -1,23 +1,17 @@
 Feature: Debug Testing 
 
-
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8009
-@CR-RK 
-Scenario:
-Verify if authenticated User can  view tax line item in order summary section on checkout. 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
-	And User searches a product "SKUForATaxableProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	When user enters "FindStoreZipcode" in change zipcode field in cart page 
-	Then cart page displays updated tax 
-	And tax displayed on cart is greater than zero 
-	And user makes a note of tax and total amount 
-	When user navigates to checkout page 
-	Then tax and total amount displayed in checkout page is same as cart page
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-8639 @ZYP_CHECKOUT_K6575-8639 @CR-MS
+Scenario: Verify user clicks on the mini cart Icon should navigates user to the cart page.
+	    Given user launches the browser and navigates to "ASO_HOME" page  
+		  When user clicks on one of the category and navigates to LOne
+	    Then user clicks on one of the subcategory and navigates to LTwo
+	    And user is able to see the product category name in section title
+	    Then user clicks on one of the product category and navigates to LThree
+		 Then User is navigated to pdp page
+		 Then user click on Add to Cart Button
+		 Then user is navigated to Add to cart Notification popup  
+		 And user will click on View Cart button 
+		 And user navigate to Cart page
+		 And user will click on Checkout button and navigates to Checkout page
+		 And user clicks on mini cart Icon in checkout page
+	   Then user should navigates to the CartPage "CartTitle"

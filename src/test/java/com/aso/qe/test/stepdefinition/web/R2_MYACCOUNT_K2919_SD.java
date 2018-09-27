@@ -30,7 +30,6 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	public void user_deletes_all_existing_credit_card() throws Throwable {
 		for(WebElement removeElement: myAccountPo.PaymentPage_CreditCard_Remove_list) {
 			removeElement.click();
-			Thread.sleep(2000);
 		}
 	}
 	
@@ -105,17 +104,21 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	@And("^user enter First Name field \"(.*?)\"$")
 	public void user_enter_First_Name_field(String arg1) throws Throwable {
 		setInputText(myAccountPo.txtFirstNameInAddCreditCard, webPropHelper.getTestDataProperty(arg1));
+		myAccountPo.txtFirstNameInAddCreditCard.sendKeys(Keys.TAB);
 	}
 
 	@And("^user enter Last Name field \"(.*?)\"$")
 	public void user_enter_Last_Name_field(String arg1) throws Throwable {
 		setInputText(myAccountPo.txtLastNameInAddCreditCard, webPropHelper.getTestDataProperty(arg1));
+		myAccountPo.txtLastNameInAddCreditCard.sendKeys(Keys.TAB);
+		
 	}
 
 	
 	@And("^user enter Address field \"(.*?)\"$")
 	public void user_enter_Address_field(String arg1) throws Throwable {
 		setInputText(myAccountPo.txtAddressInAddCreditCard, webPropHelper.getTestDataProperty(arg1));
+		myAccountPo.txtAddressInAddCreditCard.sendKeys(Keys.TAB);
 	}
 
 	@And("^user enter ZipCode field \"(.*?)\"$")
