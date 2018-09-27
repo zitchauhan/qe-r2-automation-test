@@ -417,9 +417,7 @@ Scenario: Verify that system keep the payments intact after changing the email a
 	 Then Verify below Sub/Main Module of My Account 
 	 |#Verify following elements in Payment page		|
 	 |PaymentPage_CreditCardHeader_label				|
-	 Then Verify below Sub/Main Module of My Account 
-	 |#Verify following elements in Payments > Add new credit card section	|
-		|AddCreditCardPage_BillingInformationHeader_txt							|
+	 
 	 
 	 
 	@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-11117 @CR-RK

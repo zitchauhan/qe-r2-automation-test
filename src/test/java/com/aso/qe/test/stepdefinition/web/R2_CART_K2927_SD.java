@@ -189,9 +189,10 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 			assertTrue(clickOnButton(globalElementHeader.iconcart));
 
 		}
-		while(isDisplayed( cartR2PageObj.btnRemoveCart)) {
+		while(isDisplayed(cartR2PageObj.btnRemoveCart)) 
+		{
 			clickOnButton(cartR2PageObj.btnRemoveCart);
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 		}
 //		emptyCart();
 	}

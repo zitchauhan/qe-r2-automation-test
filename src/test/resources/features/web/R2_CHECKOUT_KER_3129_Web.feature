@@ -11,8 +11,7 @@ Scenario: Verify if  for authenticated User tax line item on checkout page is sa
 		And user enter the valid emailaddress "EmailAddress" 
 		And user enter the valid password "Password" 
 		And user click on signin button
-		And User navigates to L2 Mens clothing
-	    And User searches a product "SOFSKUNumber" and navigates to PDP
+		Then User searches a product "productName" and navigates to PDP
 		And User is navigated to pdp page
 		And user click on Add to Cart Button
 		And user is navigated to Add to cart Notification popup  
@@ -34,13 +33,11 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 		And user enter the valid password "Password" 
 		And user click on signin button
 		And User navigates to L2 Mens clothing
-	   And User searches a product "SOFSKUNumber" and navigates to PDP
+	   Then User searches a product "productName" and navigates to PDP
 		And User is navigated to pdp page
 		And user click on Add to Cart Button
 		And user click on continue shopping
-		When user clicks on one of the category and navigates to LOne SOF
-    	Then user clicks on one of the subcategory and navigates to LTwo SOF
-    	Then user clicks on one of the product category and navigates to LThree SOF
+		And User searches a product "SOFSKUNumber" and navigates to PDP
 		Then User is navigated to pdp page
 		And user click on Add to Cart Button
 		And user is navigated to Add to cart Notification popup  

@@ -12,10 +12,8 @@ Scenario: Verify if  for authenticated User tax line item on checkout page is sa
 		And user enter the valid emailaddress "EmailAddress" 
 		And user enter the valid password "Password" 
 		And user click on signin button
-		And User clicks on the burger menu 
-		And User navigates to LThree 
-		And user clicks on the product card and navigates to PDP 
-		And user click on Add to Cart Button
+		And User searches a product "productName" and navigates to PDP 
+		And user click on Add to Cart Button 
 		And user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 		And user navigate to Cart page
@@ -35,15 +33,10 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 		And user enter the valid emailaddress "EmailAddress" 
 		And user enter the valid password "Password" 
 		And user click on signin button
-		And User clicks on the burger menu 
-		And User navigates to LThree 
-		And user clicks on the product card and navigates to PDP
-		And user click on Add to Cart Button
+		And User searches a product "productName" and navigates to PDP 
+		And user click on Add to Cart Button 
 		And user click on continue shopping
-		And User clicks on the burger menu
-		When user clicks on one of the category and navigates to LOne SOF
-    	Then user clicks on one of the subcategory and navigates to LTwo SOF
-    	Then user clicks on one of the product category and navigates to LThree SOF
+		And User searches a product "SOFSKUNumber" and navigates to PDP
 		Then User is navigated to pdp page
 		And user click on Add to Cart Button
 		And user is navigated to Add to cart Notification popup  
@@ -82,10 +75,8 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
    @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9561 @CR-RK	
 	Scenario: Verify if  User can  view updated tax and order total in order summary section on checkout if user switches from store pickup to Shipping
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP
-	And user click on Add to Cart Button
+	And User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And user navigate to Cart page
@@ -99,9 +90,7 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 	@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9562 @CR-RK	
 	Scenario: Verify if  User can  view updated tax and order total in order summary section on checkout if user switches from shipping to store pickup
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
