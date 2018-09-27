@@ -9,11 +9,7 @@ Scenario:  Verify that the user is able to see the firearm specific compliance r
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User clicks on the burger menu
-	When user clicks on one of the category and navigates to LOne SOF
-	Then user clicks on one of the subcategory and navigates to LTwo SOF
-	Then user clicks on one of the product category and navigates to LThree SOF
-	Then User is navigated to pdp page
+	Then User searches a product "SOFSKUNumber" and navigates to PDP
 	And user click on Add to Cart Button
 	And user will click on View Cart button 
 	And user navigate to Cart page  
@@ -33,11 +29,7 @@ Scenario:  Verify that user is able to proceed to checkout after accepting the f
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User clicks on the burger menu
-	When user clicks on one of the category and navigates to LOne SOF
-	Then user clicks on one of the subcategory and navigates to LTwo SOF
-	Then user clicks on one of the product category and navigates to LThree SOF
-	Then User is navigated to pdp page
+	Then User searches a product "SOFSKUNumber" and navigates to PDP
 	And user click on Add to Cart Button
 	And user will click on View Cart button 
 	And user navigate to Cart page  
@@ -61,11 +53,7 @@ Scenario:  Verify that user is able to proceed to checkout after accepting the f
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User clicks on the burger menu
-	When user clicks on one of the category and navigates to LOne SOF
-	Then user clicks on one of the subcategory and navigates to LTwo SOF
-	Then user clicks on one of the product category and navigates to LThree SOF
-	Then User is navigated to pdp page
+	Then User searches a product "SOFSKUNumber" and navigates to PDP
 	And user click on Add to Cart Button
 	And user will click on View Cart button 
 	And user navigate to Cart page  

@@ -8,11 +8,7 @@ Feature: B03-500-SOF Checkout landing and variations
     And user enter the valid emailaddress "EmailWithoutPaymentDetails"
     And user enter the valid password "Password"
     And user click on signin button
-    And User clicks on the burger menu
-    When user clicks on one of the category and navigates to LOne SOF
-    Then user clicks on one of the subcategory and navigates to LTwo SOF
-    Then user clicks on one of the product category and navigates to LThree SOF
-    Then User is navigated to pdp page
+    Then User searches a product "SOFSKUNumber" and navigates to PDP
     And user click on Add to Cart Button
     And user will click on View Cart button
     And user navigate to Cart page
@@ -22,11 +18,7 @@ Feature: B03-500-SOF Checkout landing and variations
   @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-7031 @ZYP_CHECKOUT_K7031-9588 @CR-MS
   Scenario: To verify checkout landing variations - Guest User
     Given user launches the browser and navigates to "ASO_HOME" page
-    And User clicks on the burger menu
-    When user clicks on one of the category and navigates to LOne SOF
-    Then user clicks on one of the subcategory and navigates to LTwo SOF
-    Then user clicks on one of the product category and navigates to LThree SOF
-    Then User is navigated to pdp page
+   Then User searches a product "SOFSKUNumber" and navigates to PDP
     And clicks on the Change Pickup Location link
     And user enter the Zipcode in "zipCode"
     And user click on Add to Cart Button
@@ -45,11 +37,7 @@ Feature: B03-500-SOF Checkout landing and variations
     And user enter the valid emailaddress "EmailWithoutPaymentDetails"
     And user enter the valid password "Password"
     And user click on signin button
-    And User clicks on the burger menu
-    When user clicks on one of the category and navigates to LOne SOF
-    Then user clicks on one of the subcategory and navigates to LTwo SOF
-    Then user clicks on one of the product category and navigates to LThree SOF
-    Then User is navigated to pdp page
+   Then User searches a product "SOFSKUNumber" and navigates to PDP
     And user click on Add to Cart Button
     And user will click on View Cart button
     And user navigate to Cart page
