@@ -39,6 +39,11 @@ public class R2_CHECKOUT_K6654_SD extends CommonActionHelper {
 	public void user_enter_the_six_digit_password() throws Throwable {
 		setInputText(myAccount.txtNewPassword, webPropHelper.getTestDataProperty("SIXDIGITPASSWORD"));
 	}
+	@Then("^user click on the show lable$")
+	public void user_click_on_the_show_lable() throws Throwable {
+	    clickOnButton(myAccount.btnShow);
+	}
+
 
 
 

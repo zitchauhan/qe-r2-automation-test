@@ -16,7 +16,8 @@ public class R2_CHECKOUT_K5892_SD extends CommonActionHelper {
 	R2_R1_Fun_PO funpo=PageFactory.initElements(driver,R2_R1_Fun_PO.class );
 	R2_CheckOut_PO chpo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	@Then("^user click on checkout from ATC pop up$")
-	public void user_click_on_checkout_from_ATC_pop_up() throws Throwable {
+	public void user_click_on_checkout_from_ATC_pop_up() throws Throwable 
+	{
 	    clickOnButton(funpo.checkoutBtnATC);
 	    
 	}

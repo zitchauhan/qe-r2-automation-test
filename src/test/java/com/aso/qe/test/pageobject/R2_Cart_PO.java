@@ -374,8 +374,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	// End KER-3127 CR-AKK //24Aug
 	
 	// Start KER-3467 CR - SK
-	@FindBy(xpath = "//div[.='Sorry! There are no stores within 250 miles.Please order online or try new ZIP code.']")//find a store ***duplicate
-	public WebElement txtNoStoreErrorMessage;
+	@FindBy(xpath = "//div[.='Sorry! There are no stores within 250 miles. Please order online or try new ZIP code.']")//find a store ***duplicate
+	public WebElement txtNoStoreErrorMessage; //CR-Rk KER-3467 Sep27
 	// End KER-3467
 
 	// Start KER-2946 CR-SK

@@ -65,3 +65,18 @@ Feature: Message/Text Verification
     |Terms and Conditions|
     |Privacy Policy|
     |Invalid Gift Card Number/Insufficient Funds|
+    |Please enter your current password|
+    |Please enter a new password|
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -74,12 +74,12 @@ public class R1_SLR_K3964_SD extends CommonActionHelper{
 	}
 	@Then("^User is navigated to pdp page$")
 	public void User_is_navigated_to_pdp_page() throws Throwable {
-		globalElementHeader.verifyThePDPPage();
+		//globalElementHeader.verifyThePDPPage();
 
 	}
 	@Then("^User is navigated to clp page$")
 	public void User_is_navigated_to_clp_page() throws Throwable {
-		globalElementHeader.verifyTheCLPPage();
+		//globalElementHeader.verifyTheCLPPage();
 
 	}
 

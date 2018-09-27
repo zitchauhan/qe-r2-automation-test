@@ -127,4 +127,36 @@ Scenario: Verify the user gets the error message on entering the password not me
    |#Verify following MSG is displaying|
    |Password must be at least 8 characters long|
 	
+
+
+
+
+
+	@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10176 @CR-RKA
+	Scenario: Verify the user is able to see the unmasked password
 	
+	Given  user launches the browser and navigates to "ASO_HOME" page 
+	And  clicks on SignIn button in home page 
+	And user logs in as "EmailAddressForChangePassword" 
+	And user navigates to profile in my account 
+	And user click on change password icon 
+	And user enters current password 
+   Then user enter the six digit password 
+   Then user click on the show lable  
+   Then Verify below Sub/Main Module of My Account
+   |# verify user can unmask the new password after clicking on show btn|
+   |ChangePassworPage_NewPassword_txt								|
+   
+   @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10183 @CR-RKA
+   Scenario: Verify the user gets the error message on blank password
+   
+   Given  user launches the browser and navigates to "ASO_HOME" page 
+	And  clicks on SignIn button in home page 
+	And user logs in as "EmailAddressForChangePassword" 
+	And user navigates to profile in my account 
+	And user click on change password icon
+	And user clicks on Update button 
+	 Then Verify the message on the page
+	 |#verify user verify the error message|
+	  |Please enter your current password|
+      |Please enter a new password|

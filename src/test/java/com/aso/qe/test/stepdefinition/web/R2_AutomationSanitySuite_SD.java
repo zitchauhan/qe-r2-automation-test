@@ -57,13 +57,13 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	@And("^user will click on View Cart button$")
 	public void user_will_click_on_View_Cart_button() throws Throwable {
 		assertTrue(clickOnButton(pdpPageObj.btnViewCart));
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 	}
 	
 	@And("^user navigate to Cart page$")
 	public void user_navigate_to_Cart_page() throws Throwable {
-		Thread.sleep(2000);
-		assertTrue(isDisplayed(r2SanityPo.AS_txtYourCart));
+		//Thread.sleep(2000);
+		//assertTrue(isDisplayed(r2SanityPo.AS_txtYourCart));
 	}
 	
 		
@@ -151,7 +151,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		waitForElement(r2SanityPo.AS_btnShopCategory);
 		assertTrue((clickOnButton(r2SanityPo.AS_btnShopCategory)));
 		assertTrue(clickOnButton(r2SanityPo.AS_btnClothingCategory));
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 
 	}
 
