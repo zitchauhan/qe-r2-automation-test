@@ -222,6 +222,7 @@ Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios
   Scenario: TC_21-Verify Facets and Sorts on L3
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
+    And user navigate to L3 page
     And User expands PRICE Filter Option
     When User selects multiple PRICE filter Options
     Then User should be able to see the selected PRICE filter Options in selected state
@@ -233,6 +234,7 @@ Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios
   Scenario: TC_22-Verify Pagination on L3
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
+    And user navigate to L3 page
     And User scroll to pagination
     Then User should be able to see pagination links in L3 page
 
@@ -240,6 +242,7 @@ Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios
   Scenario: TC_23-Verify Product grid on L3
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
+    And user navigate to L3 page
     And User expands PRICE Filter Option
     When User selects multiple PRICE filter Options
     Then User should be able to see the selected PRICE filter Options in selected state
@@ -250,13 +253,15 @@ Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios
   Scenario: TC_24-Verify Breadcrumb on L3
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
-    	And User verify the last breadcrumb in the series should not be an active link for last link
+    And user navigate to L3 page
+    And User verify the last breadcrumb in the series should not be an active link for last link
 	Then User click on the breadcrumb last active link in L3
 
   @AutomationSanityR1 @AS1 @WAST-25 @1HR
   Scenario: TC_25-Verify L3 to PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
+    And user navigate to L3 page
     And User clicks on required product in L3 Page
     And user should be able to see PDP mention in the current url
 

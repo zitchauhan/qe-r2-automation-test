@@ -13,6 +13,8 @@ import com.aso.qe.framework.web.helpers.ASOBrokenURLsLinks;
 import com.aso.qe.test.pageobject.R1_FindStore_PO;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
+
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
@@ -198,7 +200,12 @@ public class Common_Web_SD extends CommonActionHelper
 		globalElementHeader.navigateL2HeaderToPLP();
 
 	}
-
+	@And("^user navigate to L3 page$")
+	public void user_navigate_to_L3_page() {
+		waitForElement(globalElementHeader.CategoryL1);
+		assertTrue(clickOnButton(globalElementHeader.CategoryL1));
+	}
+	
 	@Then("^User should be navigated to Search Result Page$")
 	public void user_should_be_navigated_to_Search_Result_Page() throws Throwable {
 		globalElementHeader.entertheSearchDataForResultsPage();
