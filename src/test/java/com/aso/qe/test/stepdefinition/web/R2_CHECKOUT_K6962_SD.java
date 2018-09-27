@@ -1,8 +1,13 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
+//import static org.testng.Assert.assertTrue;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -10,6 +15,7 @@ import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class R2_CHECKOUT_K6962_SD extends CommonActionHelper {
 
@@ -20,6 +26,13 @@ public class R2_CHECKOUT_K6962_SD extends CommonActionHelper {
 		String lastFourDigitOfGiftCard = (webPropHelper.getTestDataProperty(arg1))
 				.substring((webPropHelper.getTestDataProperty(arg1)).length() - 4);
 		assertTrue(getText(r2CheckOutPo.txtGiftCardAppliedSuccessMessage).contains(lastFourDigitOfGiftCard));
+	}
+	
+	@Then("^applied gift card \"(.*?)\" should be displayed for second gift card$")
+	public void applied_gift_card_should_be_displayed_for_second_gift_cardelds_loaded_Full_name_email_address_choose_password_submit_button_and_check_box_for_email_News_letters(String arg1) throws Throwable {
+		String lastFourDigitOfGiftCard = (webPropHelper.getTestDataProperty(arg1))
+				.substring((webPropHelper.getTestDataProperty(arg1)).length() - 4);
+		assertTrue(getText(r2CheckOutPo.txtGiftCardAppliedSuccessMessageSecond).contains(lastFourDigitOfGiftCard));
 	}
 
 	@Then("^Remove option is displayed to user$")
@@ -58,6 +71,18 @@ public class R2_CHECKOUT_K6962_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CheckOutPo.giftCardsPrice_txt));
 		String giftCardPrice = getText(r2CheckOutPo.giftCardsPrice_txt);
 		assertTrue(getText(r2CheckOutPo.txtGiftCardAppliedSuccessMessage).contains(giftCardPrice));
+	}
+	
+	@When("^user selects \"(.*?)\" from choose gift card dropdown$")
+	public void user_selects_from_choose_gift_card_dropdown(String arg1) throws Throwable {
+		assertTrue(clickOnButton(r2CheckOutPo.checkOutGiftCardDropDown));
+		List<WebElement> shippingMethodList = r2CheckOutPo.checkout_GiftCard_List_dd.findElements(By.tagName("li"));
+		for (WebElement li : shippingMethodList) {
+			if (li.getText().contains(arg1)) {
+				li.click();
+				break;
+			}
+		}
 	}
 
 }

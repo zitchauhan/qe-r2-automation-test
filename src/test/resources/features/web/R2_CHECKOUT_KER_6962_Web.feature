@@ -4,21 +4,12 @@ Feature: Verify Gift Card - Payment Processing
 @R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-6962 @ZYP_CART_K6962-8890 @CR-SK 
 Scenario: Verify applied gift cards should be displayed to the users
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page
-	And user click on checkout button in Cart page
-	And user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user 
 	When user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "Valid16DigitGiftCardNumber"
 	And user enter Pin Number "Valid8DigitGiftCardPIN" 
@@ -27,23 +18,14 @@ Scenario: Verify applied gift cards should be displayed to the users
 
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6962 @ZYP_CART_K6962-8899 @CR-SK 
-Scenario: Verify Once a gift card is applied, a Remove option should be displayed to the user. 
+Scenario: Verify Once a gift card is applied, a Remove option should be displayed to the user
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page
-	And user click on checkout button in Cart page
-	And user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "Valid16DigitGiftCardNumber"
 	And user enter Pin Number "Valid8DigitGiftCardPIN" 
@@ -55,21 +37,12 @@ Scenario: Verify Once a gift card is applied, a Remove option should be displaye
 @R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-6962 @ZYP_CART_K6962-8900 @CR-SK 
 Scenario: Verify  click on remove gift card, the respective gift card should no longer be applied to the transaction.
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page
-	And user click on checkout button in Cart page
-	And user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user
 	And user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "Valid16DigitGiftCardNumber"
 	And user enter Pin Number "Valid8DigitGiftCardPIN" 
@@ -81,21 +54,12 @@ Scenario: Verify  click on remove gift card, the respective gift card should no 
 @R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-6962 @ZYP_CART_K6962-12324 @CR-SK 
 Scenario: Verify for full payment using Gift Card, Billing address is still required
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page
-	And user click on checkout button in Cart page
-	And user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "Valid16DigitGiftCardNumber"
 	And user enter Pin Number "Valid8DigitGiftCardPIN" 
@@ -112,21 +76,12 @@ Scenario: Verify for full payment using Gift Card, Billing address is still requ
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8897 @CR-SK 
 Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Sign in user
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page
-	And user click on checkout button in Cart page
-	And user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "Valid16DigitGiftCardNumber"
 	And user enter Pin Number "Valid8DigitGiftCardPIN" 
@@ -138,29 +93,59 @@ Scenario: Verify If a gift card covers the full transaction, the amount applied 
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8902 @CR-SK 
 Scenario: Verify user is prompted with message to retain the physical gift card
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page
-	And user click on checkout button in Cart page
-	And user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "Valid16DigitGiftCardNumber"
 	And user enter Pin Number "Valid8DigitGiftCardPIN" 
 	And user click on Apply button
 	Then applied gift card "Valid16DigitGiftCardNumber" should be displayed
-	Then Verify the message on the page 
+	And Verify the message on the page 
 	|# user should see below message on the page																|
 	|Please keep your physical gift card for future reference to assit with any returns or oder cancellations.	|
 	
+
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8883 @CR-SK 
+Scenario: Verify Guest Users should be able to enter an unlimited number of gift cards on any transaction
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+    And user click on Add to Cart Button for "MultiSKUProduct"
+	And user is navigated to Add to cart Notification popup 
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user
+	When user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "LowBalanceGiftCard"
+	And user enter Pin Number "LowBalanceGiftCardPin" 
+	And user click on Apply button
+	And user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "Valid16DigitGiftCardNumber"
+	And user enter Pin Number "Valid8DigitGiftCardPIN"
+	And user click on Apply button
+	Then applied gift card "Valid16DigitGiftCardNumber" should be displayed for second gift card
 	
+	@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8884 @CR-SK 
+Scenario: Verify Sign in Users should be able to enter an unlimited number of gift cards on any transaction
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user creates an account
+	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And user click on Add to Cart Button for "MultiSKUProduct" 
+	And user is navigated to Add to cart Notification popup 
+	When user click on checkout button 
+	And user adds shipment address on checkout page for "newly registered" user
+	And user selects shipment method on check out page for "newly registered" user
+	When user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "LowBalanceGiftCard"
+	And user enter Pin Number "LowBalanceGiftCardPin" 
+	And user click on Apply button
+	And user click on GiftCard Plus icon in Checkout page
+	And user selects "Add a New Gift Card" from choose gift card dropdown
+	And user enter Gift card Number "Valid16DigitGiftCardNumber"
+	And user enter Pin Number "Valid8DigitGiftCardPIN"
+	And user click on Apply button
+	Then applied gift card "Valid16DigitGiftCardNumber" should be displayed for second gift card
 	

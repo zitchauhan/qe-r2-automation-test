@@ -18,6 +18,7 @@ import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import io.restassured.internal.assertion.PathFragmentEscaper;
 
 public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
@@ -40,7 +41,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		if (userWithoutExistingShippingAddress) {
 			setInputText(r2CheckOutPo.inputCheckoutFirstName, webPropHelper.getTestDataProperty("FirstName"));
 			setInputText(r2CheckOutPo.inputCheckoutLasttName, webPropHelper.getTestDataProperty("LastName"));
-			setInputText(r2CheckOutPo.inputCheckoutPhoneNumber, webPropHelper.getTestDataProperty("PhoneNumber"));
+			setInputText(r2CheckOutPo.inputCheckoutPhoneNumber, r2MyAccountPO.generateRandomMobileNumber());
 			setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty("Address"));
 			setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("zipcode"));
 			assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
@@ -107,8 +108,11 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 				setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty(creditCardNumber));
 				setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
 				setInputText(r2CheckOutPo.Cvv_Input, webPropHelper.getTestDataProperty(cvv));
-				setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
-						r2MyAccountPO.generateRandomEmailId());
+				if(arg2.equalsIgnoreCase("guest") | arg2.equalsIgnoreCase("unauthenticated")) {
+					setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
+							r2MyAccountPO.generateRandomEmailId());
+				}
+				
 				assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 			}
 			if (!(userWithoutExistingPaymentDetails)) {
@@ -141,7 +145,10 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 				waitForElement(r2CheckOutPo.btnCheckoutApply);
 				assertTrue(clickOnButton(r2CheckOutPo.btnCheckoutApply));
 				waitForElement(r2CheckOutPo.txtGiftCardAppliedSuccessMessage);
-				setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, r2MyAccountPO.generateRandomEmailId());
+				if(arg2.equalsIgnoreCase("guest") | arg2.equalsIgnoreCase("unauthenticated")) {
+					setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
+							r2MyAccountPO.generateRandomEmailId());
+				}
 				Thread.sleep(5000);
 				assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 			}
@@ -175,8 +182,10 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2CheckOutPo.PaypalEmail_Input));
 			setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty("PayPalEmail"));
 			assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
+			waitForElement(r2CheckOutPo.PaypalPassWord_Input);
 			setInputText(r2CheckOutPo.PaypalPassWord_Input, webPropHelper.getTestDataProperty("PayPalPassword"));
 			assertTrue(clickOnButton(r2CheckOutPo.PaypalLogin_Btn));
+			waitForPageLoad(driver);
 			assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));
 			driver.switchTo().window(parentWindow);
 		}
@@ -350,6 +359,28 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_EmailAddress_txt));
 		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_ChoosePassword_txt));
 		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_NotifyMe_checkbox));
+	}
+	
+	@When("^user enter \"(.*?)\" in password field of order confirmation page$")
+	public void user_enter_in_password_field_of_order_confirmation_page(String arg1) throws Throwable {
+	    setInputText(r2OrderConfPO.orderConfirmation_ChoosePassword_txt, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@When("^user unchecks email news letter checkbox on order confirmation page$")
+	public void user_unchecks_email_news_letter_checkbox_on_order_confirmation_page() throws Throwable {
+	    if(isSelected(r2OrderConfPO.orderConfirmation_NotifyMe_checkbox)){
+	    	clickOnButton(r2OrderConfPO.orderConfirmation_NotifyMe_checkbox);
+	    }
+	}
+	
+	@When("^user clicks on submit button on order confirmation page$")
+	public void user_clicks_on_submit_button_on_order_confirmation_page() throws Throwable {
+	    assertTrue(clickOnButton(r2OrderConfPO.orderConfirmation_Submit_btn));
+	}
+
+	@Then("^verify user is able to sign up successfully on order confirmation page$")
+	public void verify_user_is_able_to_sign_up_successfully_on_order_confirmation_page() throws Throwable {
+	   assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_AccountCreatedMessage_txt));
 	}
 
 }

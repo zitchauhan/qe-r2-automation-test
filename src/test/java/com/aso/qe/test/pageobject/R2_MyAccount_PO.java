@@ -209,14 +209,14 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	// @FindBy(xpath = "//div[.='New
 	// Password']/following-sibling::input[@type='password']")/RKA 18 sept
-	@FindBy(xpath = "(//*[@data-auid='undefined_inline_button'])[2]/preceding::*[1]")
+	@FindBy(xpath = "(//*[@data-auid='undefined_inline_button'])[1]/preceding::*[1]")
 	public WebElement txtNewPassword;
 
 	@FindBy(xpath = "//*[@data-auid='updatePassword']")
 	public WebElement btnUpdate;
 
 	// Start KER-4249 CR-SK 23-Aug
-	@FindBy(xpath = "//button[.='Show']")
+	@FindBy(xpath = "//button[.='SHOW']")
 	public WebElement btnShow;
 
 	@FindBy(xpath = "//button[.='Hide']")
@@ -677,7 +677,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='Orders_m']")
 	public WebElement burgerMenu_Orders_lnk;
 
-	@FindBy(xpath = "//*[@data-auid='btnundefined']/preceding-sibling::button")
+	@FindBy(xpath = "//*[@data-auid='btnundefined']/preceding-sibling::button | //*[@data-auid='backToProfilePage']")
 	public WebElement myAccount_ChangePassword_Cancel_btn; // CR-SK, 29 Aug
 
 	@FindBy(xpath = "//*[text()='DEFAULT']/..") // CR-DPK 14-Sept
@@ -884,6 +884,15 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 		String newGeneratedEmail = head + randomGeneratedString + tail;
 		logger.debug("The new random generated email address is " + newGeneratedEmail);
 		return newGeneratedEmail;
+
+	}
+	
+public String generateRandomMobileNumber() {
+		
+		String randomGeneratedMobileNumber = RandomStringUtils.randomNumeric(9);
+		randomGeneratedMobileNumber = "9" + randomGeneratedMobileNumber;
+		logger.debug("The new random generated mobile number is " + randomGeneratedMobileNumber);
+		return randomGeneratedMobileNumber;
 
 	}
 

@@ -204,6 +204,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 
 	@FindBy(xpath = "//div[contains(text(), 'has been applied')]")
 	public WebElement txtGiftCardAppliedSuccessMessage;
+	
+	@FindBy(xpath = "(//div[contains(text(), 'has been applied')])[2]")
+	public WebElement txtGiftCardAppliedSuccessMessageSecond;
 
 	// Start KER-3163 CR-AKK
 	@FindBy(xpath = "//input[@name='zipCode']/../span")
@@ -292,6 +295,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address']//*[@data-auid='undefined_dropdownList']")
 	public WebElement checkout_ShippingAddress_List_dd;
+	
+	@FindBy(xpath = "//*[@data-auid='checkout_payment']//*[@data-auid='undefined_dropdownList']")
+	public WebElement checkout_GiftCard_List_dd;
 	
 	
 	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']//*[contains(text(), 'Shipment')]")
@@ -495,14 +501,14 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 		//****************Gift Card(Start)
 		
-		@FindBy(xpath = "//*[@data-auid='checkout_payment_add_gift_card_icon']")public WebElement plusIconGiftCard;	//Plus_GiftCard
+		@FindBy(xpath = "//*[@data-auid='checkout_payment_add_gift_card_icon'] | //*[@data-auid='checkout_payment_add_another_gift_card_icon']")public WebElement plusIconGiftCard;	//Plus_GiftCard
 		@FindBy(xpath = "//*[@data-auid='checkout_payment_hide_gift_card_icon']")public WebElement minusIconGiftCard;//Hide_GiftCard
 		@FindBy(xpath = "//*[text()='Gift Card Number']")public WebElement txtGiftcardNumber;//GiftCardNumber_Txt
-		@FindBy(xpath = "//*[@name='cardId']")	public WebElement inputGiftcardNumber;//GiftCardNumber_Input	
+		@FindBy(xpath = "//*[@name='cardId'] | //*[@data-auid='checkout_payment_gift_card_number_field']")	public WebElement inputGiftcardNumber;//GiftCardNumber_Input	
 		@FindBy(xpath="(//*[@data-auid='tooltipcheckout_payment_gift_card_tooltip'])[1]")public WebElement toolTip_giftCard;//GiftCardNumber_Tooltip
 		@FindBy(xpath = "//*[text()='Invalid GiftCard Number']")public WebElement txtInvalidGiftcard;//InvalidGiftCardNumber_Txt
 		@FindBy(xpath = "//*[text()='Pin']")public WebElement txtPin;//Pin_Txt
-		@FindBy(xpath = "//*[@name='cardPin']")public WebElement inputPinNumber;//Pin_Input
+		@FindBy(xpath = "//*[@name='cardPin'] | //*[@data-auid='checkout_payment_gift_card_pin_field']")public WebElement inputPinNumber;//Pin_Input
 		@FindBy(xpath="(//*[@data-auid='tooltipcheckout_payment_gift_card_tooltip'])[2]")public WebElement toolTip_pin;
 		@FindBy(xpath = "//*[text()='Invalid GiftCard Pin']")public WebElement txtInvalidPin;//InvalidGiftCardPin_Txt
 		@FindBy(xpath = "//*[@data-auid='btncheckout_payment_apply_gift_card_btn'] | //*[contains(text(),'APPLY')]")public WebElement btnCheckoutApply; //Apply_Btn

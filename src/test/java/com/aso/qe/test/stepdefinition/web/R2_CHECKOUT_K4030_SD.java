@@ -10,13 +10,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
+import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
 import cucumber.api.java.en.When;
 
 public class R2_CHECKOUT_K4030_SD extends CommonActionHelper {
 
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
-
+	R2_R1_Fun_PO r2_r1_fun_po = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	@When("^user click on edit button of shipping method$")
 	public void user_click_on_edit_button_of_shipping_method() throws Throwable {
 		assertTrue(clickOnButton(r2CheckOutPo.checkout_ShippingMethod_Edit_lnk));
@@ -43,17 +44,25 @@ public class R2_CHECKOUT_K4030_SD extends CommonActionHelper {
 	
 	@When("^user is able to modify payment method$")
 	public void user_is_able_to_modify_payment_method() throws Throwable {
-		assertTrue(clickOnButton(r2CheckOutPo.chooseCreditcard_Dd));
-		String selectedPaymentMethod = getText(r2CheckOutPo.chooseCreditcard_Dd);
-		List<WebElement> paymentMethodList = r2CheckOutPo.checkout_PaymentMethod_List_dd.findElements(By.tagName("li"));
-		for (WebElement li : paymentMethodList) {
-			if (!(li.getText().contains(selectedPaymentMethod))) {
-				li.click();
-				break;
+		if(isDisplayed(r2CheckOutPo.chooseCreditcard_Dd)) {
+			assertTrue(clickOnButton(r2CheckOutPo.chooseCreditcard_Dd));
+			String selectedPaymentMethod = getText(r2CheckOutPo.chooseCreditcard_Dd);
+			List<WebElement> paymentMethodList = r2CheckOutPo.checkout_PaymentMethod_List_dd.findElements(By.tagName("li"));
+			for (WebElement li : paymentMethodList) {
+				if (!(li.getText().contains(selectedPaymentMethod))) {
+					li.click();
+					break;
+				}
 			}
+			String newPaymentMethod = getText(r2CheckOutPo.chooseCreditcard_Dd);
+			assertTrue(!(selectedPaymentMethod.equals(newPaymentMethod)));
+		}else {
+			clickOnButton(r2CheckOutPo.PayPal_radioBtn);
+			Thread.sleep(2000);
+			driver.switchTo().frame(r2_r1_fun_po.paypalCheckoutFrame);
+			assertTrue(isDisplayed(r2CheckOutPo.PayPalCheckOut_Btn));
 		}
-		String newPaymentMethod = getText(r2CheckOutPo.chooseCreditcard_Dd);
-		assertTrue(!(selectedPaymentMethod.equals(newPaymentMethod)));
+		
 	}
 	
 	

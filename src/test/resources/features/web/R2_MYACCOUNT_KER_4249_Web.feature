@@ -154,7 +154,7 @@ Scenario: Verify the user gets the error message on entering the password not me
 	And clicks on Sign Up Button
 	Then Verify the message on the page
 	    |# Following error Message should show on the page	|
-	    |*Minimum 8 characters								|
+	    |Password must be at least 8 characters long		|
 	    
 
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10158 @CR-SK

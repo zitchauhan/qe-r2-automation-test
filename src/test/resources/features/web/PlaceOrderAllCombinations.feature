@@ -1,6 +1,6 @@
 Feature: Place order
 
-@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @P-High 
+@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order 
 @CR-SK 
 Scenario Outline: Verify if authenticated user is able to place an order for single SKU product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -26,8 +26,7 @@ Scenario Outline: Verify if authenticated user is able to place an order for sin
 		|PayPal			|
 		
 		
-@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @P-High 
-@CR-SK 
+@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @CR-SK
 Scenario Outline: Verify if authenticated user is able to place an order for multi SKU products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account
@@ -51,7 +50,7 @@ Scenario Outline: Verify if authenticated user is able to place an order for mul
 				
 		
 				
-@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @P-High
+@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order 
  @CR-SK 
 Scenario Outline: Verify if authenticated user is able to place an order for bundle products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -76,7 +75,7 @@ Scenario Outline: Verify if authenticated user is able to place an order for bun
 						
 						
 						
-@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @P-High
+@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order 
  @CR-SK 
 Scenario Outline: Verify if authenticated user is able to place an order for standard gift card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -100,7 +99,7 @@ Scenario Outline: Verify if authenticated user is able to place an order for sta
 		|PayPal			|
 		
 		
-@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @P-High
+@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order 
  @CR-SK 
 Scenario Outline: Verify if authenticated user is able to place an order for bulk gift card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -123,7 +122,7 @@ Scenario Outline: Verify if authenticated user is able to place an order for bul
 		|Credit Card	|
 		|PayPal			|
 		
-@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations  @CR-SK 
+@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations  @CR-SK @R2_Order 
 Scenario Outline: Verify if authenticated user is able to place an order for bait products
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account
@@ -146,7 +145,7 @@ Scenario Outline: Verify if authenticated user is able to place an order for bai
 		|PayPal			|
 
 
-@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @P-High 
+@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order 
 @CR-SK 
 Scenario Outline: Verify if unauthenticated user is able to place an order for single SKU product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -169,7 +168,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an order for s
 		|PayPal			|
 		
 		
-@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @P-High 
+@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order 
 @CR-SK 
 Scenario Outline: Verify if unauthenticated user is able to place an for multi SKU products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -193,7 +192,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 				
 				
 				
-@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @P-High
+@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order 
  @CR-SK 
 Scenario Outline: Verify if unauthenticated user is able to place an for bundle products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -217,7 +216,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bundle 
 						
 						
 						
-@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @P-High
+@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order 
  @CR-SK 
 Scenario Outline: Verify if unauthenticated user is able to place an for standard gift card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -240,7 +239,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for standar
 		|PayPal			|
 		
 		
-@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @P-High
+@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order 
  @CR-SK 
 Scenario Outline: Verify if unauthenticated user is able to place an for bulk gift card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -262,7 +261,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bulk gi
 		|Credit Card - Visa	|
 		|PayPal			|
 		
-@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @P-High
+@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order 
  @CR-SK 
 Scenario Outline: Verify if unauthenticated user is able to place an for bait products
 	Given user launches the browser and navigates to "ASO_HOME" page 
