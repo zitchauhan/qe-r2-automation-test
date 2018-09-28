@@ -644,7 +644,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="//*[.='YOUR CART']")public WebElement txt_YourCart;
 	@FindBy(xpath="//*[@data-auid='crt_btnCheckoutTop']/preceding::*[2]")public WebElement txt_items;
 	@FindBy(xpath="//*[@data-auid='crt_btnCheckoutTop']/preceding::*[1]")public WebElement txt_totalYourCart;
-	@FindBy(xpath="(//*[@data-auid='btnc_btnCheckout'])[1]")public WebElement btnCartCheckout;
+	@FindBy(xpath="(//*[@data-auid='btnCheckout'])[3]")public WebElement btnCartCheckout;
 	
 	
 	//Your Cart End
@@ -655,19 +655,20 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="(//*[contains(@data-auid,'crt_lnkProdName_')])[1]")public WebElement lnkProducttext;//lnkProducttextlink_ProductCartName
 	@FindBy(xpath="(//*[text()='Color'])[1]/following::*[1]")public WebElement txtPrdColor;// txt_color input in color
 	@FindBy(xpath="(//*[text()='Size'])[1]/following::*[1]")public WebElement txtPrdSize;//txtPrdSize  txt_size input in size
-	@FindBy(xpath="//*[@data-auid='crt_rdOpt_0'] | //span[text()='Ship To Me']")public WebElement rbShipToMe;
+	@FindBy(xpath="//span[text()='Ship To Me']")public WebElement rbShipToMe;
 	@FindBy(xpath="//span[text()='In Store Pickup – FREE']")public WebElement rbInStorePickUp;//modified MS 26 Sep
 	@FindBy(xpath="//*[text()='Ship To Store'] | //*[text()='Special Order Ships to Store']") public WebElement ShipToStore_radioBtn;
 	@FindBy(xpath="//input[@data-auid='crt_inputQty']")public WebElement input_Quantity;
 	@FindBy(xpath="(//*[@data-auid='crt_qtyField'])[1]")public WebElement txt_Quantity;
 	@FindBy(xpath="(//*[@data-auid='tooltipcrt_rdTooltip_0'])[1]") public WebElement iconTolltip;// toolTip
-	@FindBy(xpath="(//*[@data-auid='PDP_AddToWishList'])[1]")public WebElement btn_AddToWishList;//btnWlist
+	@FindBy(xpath="(//*[@data-auid='PDP_AddToWishList'])[1] | (//*[contains(@data-auid,'crt_btnWlist')])[1]")public WebElement btn_AddToWishList;//btnWlist
 	@FindBy(xpath="(//*[contains(@data-auid,'crt_btnRmvFromCart_')])[1]")public WebElement btnRemoveCart;//btnRemoveCart txt_RemoveFromCart
 	@FindBy(xpath="(//*[contains(@data-auid,'crt_qtyField')])[1]/../following-sibling::*/*[1]")public WebElement txt_CartItemAmount;//txt_YourCartAmount
 	@FindBy(xpath = "//span[text()='Color']")public WebElement txtColor;
 	@FindBy(xpath = "//span[contains(text(),'Size')]")public WebElement txtSize;
 	@FindBy(xpath = "(//*[contains(text(),'Est. Arrival')])")public WebElement txtEstArrival;
 	@FindBy(xpath ="//div[contains(text(), \"We're sorry!\")]")public WebElement ErrorMsgLimitedStack;// KER-2942 CR-AKK 3Sep
+	@FindBy(xpath ="//*[text()='Not available for In-Store pickup']") public WebElement Bopis_Rbn;
 		
 //	@FindBy(xpath = "//*[text()='$']/following::div")//duplicate Done
 //	public WebElement txtActualPrice;

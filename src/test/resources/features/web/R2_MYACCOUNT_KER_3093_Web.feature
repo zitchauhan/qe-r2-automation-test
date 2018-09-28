@@ -134,18 +134,127 @@ Then Verify the message on the page
 #     ||
 
 
+############################################################28 sept
 
 
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10427 @CR-RKA
+Scenario: Verify that user gets the error message on blank GC number
+ Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+    Then user click on My Account and navigate to payment
+	When user clicks on Add New Gift Card button
+	And user enter valid "Valid8DigitGiftCardPIN" in Gift Card PIN text field 
+	And clicks on Add button to add gift card 
+Then Verify the message on the page
+|#verify ther following MSG is displayed|
+|Required|
 
 
-
-
-
-
-
-
-
-
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10425 @CR-RKA
+Scenario: Verify that user gets the error message on entering invalid/non-existing GC number	
+Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+    Then user click on My Account and navigate to payment
+	When user clicks on Add New Gift Card button
+   Then user enter the Wrong Gift card and click on Add button 
+   Then Verify the message on the page
+   |#verify ther following MSG is displayed|
+    |Invalid GiftCard Number|
+    |Invalid GiftCard Pin|
+   
+   
+   @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10429 @CR-RKA
+   Scenario: Verify that user gets the error message on blank PIN
+   Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+    Then user click on My Account and navigate to payment
+	When user clicks on Add New Gift Card button
+   And user enter valid "Valid16DigitGiftCardNumber" in Gift Card Number text field 
+   And clicks on Add button to add gift card 
+    Then Verify the message on the page
+   |#verify ther following MSG is displayed|
+   |Required|
+   
+   @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10430 @CR-RKA
+   Scenario: Verify that user gets the error message on blank GC# and PIN
+   
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+    Then user click on My Account and navigate to payment
+	When user clicks on Add New Gift Card button
+   And clicks on Add button to add gift card 
+    Then Verify the message on the page
+   |#verify ther following MSG is displayed|
+   |Required|
+   |Required|
+   
+   
+   @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10415 @CR-RKA
+   Scenario: Verify that user is able to add a new GC having 16 digit with 4 or 8 digit PIN and old GC having 13 digit with 4 digit PIN in My Account
+   Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then user click on My Account and navigate to payment
+	When user clicks on Add New Gift Card button 
+	And user enter valid "Valid16DigitGiftCardNumber" in Gift Card Number text field 
+	And user enter valid "Valid8DigitGiftCardPIN" in Gift Card PIN text field 
+	And clicks on Add button to add gift card 
+   Then Verify below Sub/Main Module of My Account 
+   |#verify the following|
+   |PaymentPage_RemoveGiftCards_btnList			|
+   
+   When user clicks Remove button 
+   
+   @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10417 @CR-RKA
+   Scenario: Verify that user returns to the empty Wallet on Cancel with existing card	
+   Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then user click on My Account and navigate to payment
+	When user clicks on Add New Gift Card button 
+	And user enter valid "Valid16DigitGiftCardNumber" in Gift Card Number text field 
+	And user enter valid "Valid8DigitGiftCardPIN" in Gift Card PIN text field 
+	And clicks on Add button to add gift card 
+   Given user clicks on Add New Gift Card button
+   Then user click on cancel Gift card button
+   Then Verify below Sub/Main Module of My Account 
+   |#verify the following|
+   |PaymentPage_RemoveGiftCards_btnList			|
+   
+    @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10419 @CR-RKA
+   Scenario: Verify that user is able to add a new gift card having 16 digit with 4 or 8 digit PIN in My Account with existing card
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then user click on My Account and navigate to payment
+	When user clicks on Add New Gift Card button 
+	And user enter valid "Valid16DigitGiftCardNumber" in Gift Card Number text field 
+	And user enter valid "Valid8DigitGiftCardPIN" in Gift Card PIN text field 
+	And clicks on Add button to add gift card 
+    Then Verify below Sub/Main Module of My Account 
+    |#verify the following|
+    |PaymentPage_RemoveGiftCards_btnList			|
+    |PaymentPage_GiftCardHeader_label				|
+    |PaymentPage_AddedGiftCards_txtList				|
+   
 #	
 #	#		"Scenario: Verify that user is able to see the Add New Gift Card form
 #	#Given User is logged in My Account on academy.com

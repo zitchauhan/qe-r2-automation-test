@@ -67,7 +67,8 @@ Feature: Message/Text Verification
     |Invalid Gift Card Number/Insufficient Funds|
     |Please enter your current password|
     |Please enter a new password|
-    
+    |Invalid GiftCard Number|
+    |Invalid GiftCard Pin|
     
     
     
