@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
@@ -45,21 +46,21 @@ public class R2_CART_K2942_SD extends CommonActionHelper {
 	
 	@And("^user updates the product \"(.*?)\" on PDP to four$")
 	public void user_updates_the_product_on_PDP_to_four(String arg1) throws Throwable {
-		Thread.sleep(5000);
+		Thread.sleep(Constants.thread_medium); 
 		clearInputBox(r2CartPo.R2_iconQuantityIncrease);
 		setInputText(r2CartPo.R2_iconQuantityIncrease, webPropHelper.getTestDataProperty(arg1));
-		Thread.sleep(20000);
+		Thread.sleep(Constants.thread_highest);
 	}
 	
 	@Then("^user should not be allowed to enter more than available stock \"(.*?)\"$")
 	public void user_should_not_be_allowed_to_enter_more_than_available_stock(String quantity3) throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 
 		String str1 = r2SanityPo.AS_inputQty.getAttribute("value");
 		int quantityFromSite = Integer.parseInt(str1);
 		int quantityFromProperty = Integer.parseInt(webPropHelper.getTestDataProperty(quantity3));
 		assertTrue(quantityFromSite != quantityFromProperty);
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 	}
 
 	@Then("^user should not be allowed to enter any non-numeric value in the input$")
@@ -81,7 +82,7 @@ public class R2_CART_K2942_SD extends CommonActionHelper {
 	@Then("^click the Remove from cart link$")
 	public void click_the_Remove_from_cart_link() throws Throwable {
 		assertTrue(clickOnButton(r2CartPo.lnkRemoveCart));
-		Thread.sleep(5000);
+		Thread.sleep(Constants.thread_medium); 
 	}
 
 

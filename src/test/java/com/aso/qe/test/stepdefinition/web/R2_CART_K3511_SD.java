@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
@@ -87,7 +88,7 @@ public class R2_CART_K3511_SD extends CommonActionHelper {
 	    setInputText(r2MyAccountPo.adr_inpLastName, webPropHelper.getTestDataProperty("UpdateLastName"));
 	    setInputText(r2MyAccountPo.adr_inpAddress1, webPropHelper.getTestDataProperty("UpdateAddress"));
 	    setInputText(r2MyAccountPo.adr_inpzipCode, webPropHelper.getTestDataProperty("UpdateZipcode"));
-	    Thread.sleep(2000);
+	    Thread.sleep(Constants.thread_low); 
 	    setInputText(r2MyAccountPo.adr_inpPhoneNumber, webPropHelper.getTestDataProperty("UpdatePhoneNumber"));
 	    assertTrue(clickOnButton(r2MyAccountPo.btnAddInAddressField));
 	    
@@ -98,7 +99,7 @@ public class R2_CART_K3511_SD extends CommonActionHelper {
 	@Then("^user change zip code$")
 	public void user_change_zip_code() throws Throwable {
    assertTrue(clickOnButton(r2CartPo.lnkChangeZipCode));
-   Thread.sleep(2000);
+   Thread.sleep(Constants.thread_low); 
    setInputText(r2CartPo.inputZipCode, webPropHelper.getTestDataProperty("ZIPCODE"));
    assertTrue(clickOnButton(r2CartPo.btnCartSubmit));
 	

@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
@@ -49,7 +50,7 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 	@Then("^store results should get displayed on the basis of ZIPCode entered$")
 	public void store_results_should_get_displayed_on_the_basis_of_ZIPCode_entered() throws Throwable {
 		assertTrue(isDisplayed(r2CartPO.storeDetails));
-		Thread.sleep(5000);
+		Thread.sleep(Constants.thread_medium);
 		
 	}
 
@@ -59,12 +60,12 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 			  // waitForElement(r2SanityPo.AS_btnShopCategory_m);
 				//assertTrue((clickOnButton(r2SanityPo.AS_btnShopCategory_m)));
 				assertTrue(clickOnButton(r2R1FunPO.btnOutdoorCategory));
-				Thread.sleep(3000);
+				Thread.sleep(Constants.thread_medium);
         }else {
         	waitForElement(r2SanityPo.AS_btnShopCategory);
     		assertTrue((clickOnButton(r2SanityPo.AS_btnShopCategory)));
     		assertTrue(clickOnButton(r2R1FunPO.btnOutdoorCategory));
-    		Thread.sleep(3000);
+    		Thread.sleep(Constants.thread_medium);
         }
 				
 	}
@@ -74,12 +75,12 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 			   waitForElement(r2R1FunPO.secCategory_CLPMobile);
 				assertTrue(clickOnButton(r2R1FunPO.secCategory_CLPMobile));
 				assertTrue(clickOnButton(r2R1FunPO.productPLP_m));
-				Thread.sleep(3000);
+				Thread.sleep(Constants.thread_medium);
         }else {
         	waitForElement(r2R1FunPO.secCategory_CLP);
     		assertTrue(clickOnButton(r2R1FunPO.secCategory_CLP));
     		assertTrue(clickOnButton(r2R1FunPO.productPLP));
-    		Thread.sleep(3000);
+    		Thread.sleep(Constants.thread_medium);
         }
 		
 
@@ -89,11 +90,11 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 		   if("mobile".equalsIgnoreCase(testtype)){      
 			   waitForElement(r2R1FunPO.AS_productPLP1_m);
 	    		assertTrue(clickOnButton(r2R1FunPO.AS_productPLP1_m));
-	    		Thread.sleep(3000);
+	    		Thread.sleep(Constants.thread_medium);
         }else {
         	waitForElement(r2SanityPo.AS_productPLP1);
     		assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
-    		Thread.sleep(3000);
+    		Thread.sleep(Constants.thread_medium);
         }
 		
 	}

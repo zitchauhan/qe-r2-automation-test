@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
@@ -97,7 +98,7 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 
 	@Then("^verify that itemized subtotal for each item in cart is displayed$")
 	public void verify_that_itemized_subtotal_for_each_item_in_cart_is_displayed() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		r2CartPo.verifySubtotal();
 	}
 
@@ -129,7 +130,7 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 	@And("^verify that consolidated amount for all promotions \\(except shipping\\) is applied$")
 	public void verify_that_consolidated_amount_for_all_promotions_except_shipping_is_applied() throws Throwable {
 		assertTrue(isDisplayed(r2CartPo.txtTotal));// txtTotalCart
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low); 
 	}
 
 	@And("^verify Military code discount is applied correctly$")
@@ -170,7 +171,7 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 
 	@Then("^verify that the updated estimated Tax is displayed$")
 	public void verify_that_the_updated_estimated_Tax_is_displayed() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		String taxPriceformat = r2CartPo.txtEstimatedTaxesCart.getText();
 		extimateTax = Double.parseDouble(taxPriceformat.replaceAll("[^0-9\\\\.]+", ""));
 		NumberFormat format = NumberFormat.getCurrencyInstance(Locale.US);

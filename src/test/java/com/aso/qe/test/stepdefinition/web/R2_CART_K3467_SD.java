@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 
 import cucumber.api.java.en.Then;
@@ -20,14 +21,14 @@ public class R2_CART_K3467_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2_cart_po.lnkFindAStore_M));
 			setInputText(r2_cart_po.txtZipCode, webPropHelper.getTestDataProperty(arg1));
 	        assertTrue(clickOnButton(r2_cart_po.btnZipCode));
-	        Thread.sleep(1000);
+	        Thread.sleep(Constants.thread_low); 
 		}
 		else
 		{
 		assertTrue(clickOnButton(r2_cart_po.lnkFindAStore));
         setInputText(r2_cart_po.txtZipCode, webPropHelper.getTestDataProperty(arg1));
         assertTrue(clickOnButton(r2_cart_po.btnZipCode));
-        Thread.sleep(1000);
+        Thread.sleep(Constants.thread_low); 
 		}
 	}
 

@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
@@ -56,10 +57,10 @@ public class R2_CART_K3127_SD extends CommonActionHelper {
 		waitForElement(r2SanityPo.AS_btnShopCategory);
 		assertTrue((clickOnButton(r2SanityPo.AS_btnShopCategory)));
 		assertTrue(clickOnButton(r2CartPo.subCategoryCycling));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(r2CartPo.shopByCategory2));
 		assertTrue(clickOnButton(r2CartPo.facetDrawerGender));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(r2CartPo.selectGenderGirl));
 		assertTrue(clickOnButton(r2CartPo.iconfacetDrawerBrand));
 		assertTrue(clickOnButton(r2CartPo.chboxBrandDiamondback));
@@ -69,7 +70,7 @@ public class R2_CART_K3127_SD extends CommonActionHelper {
 	@Then("^discount value applied against the individual line item$")
 	public void discount_value_applied_against_the_individual_line_item() throws Throwable {
 		driver.navigate().refresh();
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		isDisplayed(r2CartPo.txtLineItemDiscount);
 	}
 

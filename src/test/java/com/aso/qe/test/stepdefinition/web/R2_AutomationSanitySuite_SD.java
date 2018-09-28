@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_HomePage_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
@@ -73,18 +74,18 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		waitForElement(r2SanityPo.AS_txtQuantityPrice);
 		quantityprice = r2SanityPo.AS_txtQuantityPrice.getText();
 	    logger.info("Quantity:"+quantityprice);
-	    Thread.sleep(1000);
+	    Thread.sleep(Constants.thread_low); 
 		r2SanityPo.AS_inputQty.clear();
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low); 
 		setInputText(r2SanityPo.AS_inputQty, webPropHelper.getTestDataProperty(arg1));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low); 
 		r2SanityPo.AS_clkOutside.click();
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_low); 
 	}
 
 	@And("^modified quantity should get updated$")
 	public void modified_quantity_should_get_updated() throws Throwable {
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low); 
 		modifiedQuantityprice = r2SanityPo.AS_txtQuantityPrice.getText();
 		if(!modifiedQuantityprice.equals(quantityprice)) {
 			logger.info("Quantity Price are modified");
@@ -118,7 +119,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	@Then("^click the Remove Quantity link$")
 	public void click_the_Remove_Quantity_link() throws Throwable {
 		assertTrue(clickOnButton(r2SanityPo.AS_btnRemoveFromCart));
-		Thread.sleep(5000);
+		Thread.sleep(Constants.thread_medium);
 	}
 
 	@And("^verify item is removed from the cart$")
@@ -184,7 +185,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	public void user_clicks_on_one_of_the_product_category_and_navigates_to_LThree_page() throws Throwable {
 		waitForElement(r2SanityPo.AS_productPLP1);
 		assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 	}
 	
 	
@@ -242,7 +243,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		}
 		else 
 		{
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 		}
 
@@ -279,9 +280,9 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		else
 		{
 			assertTrue(clickOnButton(r2MyAccountPo.myAccount));
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 		    assertTrue(clickOnButton(r2MyAccountPo.signOut_lnk));	
-		    Thread.sleep(1000);
+		    Thread.sleep(Constants.thread_low);
 		  
 		}
 		

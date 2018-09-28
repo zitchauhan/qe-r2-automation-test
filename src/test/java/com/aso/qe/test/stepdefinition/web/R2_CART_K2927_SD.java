@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 //import org.xbill.DNS.TXTRecord;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 //<<<<<<< Updated upstream
@@ -144,15 +145,15 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 	@Then ("^User navigates to L3 of women clothes$")
 	public void User_navigates_to_L3() throws InterruptedException {
 		if("mobile".equalsIgnoreCase(testtype)){
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(r2SanityPo.AS_btnWomen_Clothing_Shop));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(globalElementHeader.burgerMenu_GoToWomen_btn)); 
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(r2SanityPo.AS_btnWomensTops_Women_Clothing_Shop));
-			Thread.sleep(4000);
+			Thread.sleep(Constants.thread_medium);
 		}
 
 	}

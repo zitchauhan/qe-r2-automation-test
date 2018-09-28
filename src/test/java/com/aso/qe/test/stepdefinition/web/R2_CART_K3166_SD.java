@@ -4,6 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import static org.junit.Assert.assertTrue;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
@@ -23,7 +24,7 @@ public class R2_CART_K3166_SD extends CommonActionHelper {
 	@Then("^Promo code field is exposed$")
 	public void promo_code_field_is_exposed() throws Throwable {
 		assertTrue(isDisplayed(r2SanityPo.AS_inputPromoCode));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 	}
 	
 	@Then("^User navigates to LThree Mens Watches$")
