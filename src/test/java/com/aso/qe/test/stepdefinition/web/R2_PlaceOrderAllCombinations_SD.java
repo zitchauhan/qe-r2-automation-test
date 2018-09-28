@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
@@ -55,7 +56,7 @@ public class R2_PlaceOrderAllCombinations_SD extends CommonActionHelper {
 		for (WebElement btnRemove : r2MyAccountPo.btnRemoveGiftCardList) {
 			// if(isDisplayed(btnRemove))
 			assertTrue(clickOnButton(btnRemove));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 		}
 		// }
 
@@ -71,11 +72,9 @@ public class R2_PlaceOrderAllCombinations_SD extends CommonActionHelper {
 		setInputText(r2MyAccountPo.inputFirstName, webPropHelper.getTestDataProperty("FirstName"));
 		setInputText(r2MyAccountPo.inputLastName, webPropHelper.getTestDataProperty("LastName"));
 		setInputText(r2MyAccountPo.inputEmailAddress, r2MyAccountPo.generateRandomEmailId());
-		//Added to ensure password input field loads properly
-		assertTrue(clickOnButton(r2MyAccountPo.btnSignUp));
 		setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty("Password"));
 		assertTrue(clickOnButton(r2MyAccountPo.btnSignUp));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		assertTrue(isDisplayed(r2MyAccountPo.myAccount_SignUp_CongratulationsMessage_txt));
 	}
 
