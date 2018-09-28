@@ -84,5 +84,16 @@ public class R2_CHECKOUT_K6962_SD extends CommonActionHelper {
 			}
 		}
 	}
+	
+	@Then("^user should be able to do transaction successfully with gift card and credit card$")
+	public void user_should_be_able_to_do_transaction_successfully_with_gift_card_and_credit_card() throws Throwable {
+	    assertTrue(isDisplayed(r2CheckOutPo.btnPlaceOrderPaymentPage));
+	}
+	
+	@Then("^user should not be able to pay remaining balace with paypal$")
+	public void user_should_not_be_able_to_pay_remaining_balace_with_paypal() throws Throwable {
+		assertFalse(isEnabled(r2CheckOutPo.checkout_PaymentMethod_PayPal_Disabled_rb));
+//		assertTrue(isDisplayed(r2CheckOutPo.checkout_PaymentMethod_PayPal_Disabled_rb));
+	}
 
 }

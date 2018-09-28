@@ -128,10 +128,10 @@ Scenario: Verify Guest Users should be able to enter an unlimited number of gift
 	And user click on Apply button
 	Then applied gift card "Valid16DigitGiftCardNumber" should be displayed for second gift card
 	
-	@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8884 @CR-SK 
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8884 @CR-SK 
 Scenario: Verify Sign in Users should be able to enter an unlimited number of gift cards on any transaction
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user creates an account
+	And user creates an account
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct" 
 	And user is navigated to Add to cart Notification popup 
@@ -149,3 +149,96 @@ Scenario: Verify Sign in Users should be able to enter an unlimited number of gi
 	And user click on Apply button
 	Then applied gift card "Valid16DigitGiftCardNumber" should be displayed for second gift card
 	
+	
+	
+@R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-6962 @ZYP_CART_K6962-8882 @CR-SK 
+Scenario: Verify System should integrate with RTS/First data for existing gift card payment processing flow
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And user click on Add to Cart Button for "MultiSKUProduct" 
+	And user is navigated to Add to cart Notification popup 
+	When user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	When user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "LowBalanceGiftCard"
+	And user enter Pin Number "LowBalanceGiftCardPin" 
+	And user click on Apply button
+	And user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "Valid16DigitGiftCardNumber"
+	And user enter Pin Number "Valid8DigitGiftCardPIN"
+	And user click on Apply button
+	Then applied gift card "LowBalanceGiftCard" should be displayed
+	And applied gift card "Valid16DigitGiftCardNumber" should be displayed for second gift card
+
+
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8885 @CR-SK 
+Scenario: Verify for guest user If the balance on the provided gift cards doesn't cover the full cost, the user should be able to pay the difference with a credit card
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And user click on Add to Cart Button for "MultiSKUProduct" 
+	And user is navigated to Add to cart Notification popup 
+	When user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	When user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "LowBalanceGiftCard"
+	And user enter Pin Number "LowBalanceGiftCardPin" 
+	And user click on Apply button
+	Then applied gift card "LowBalanceGiftCard" should be displayed
+	When user add "Credit Card" details in payment method for "guest" user
+	Then user should be able to do transaction successfully with gift card and credit card
+	
+	
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8886 @CR-SK 
+Scenario: Verify for Sign in user If the balance on the provided gift cards doesn't cover the full cost, the user should be able to pay the difference with a credit card
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user creates an account
+	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And user click on Add to Cart Button for "MultiSKUProduct" 
+	And user is navigated to Add to cart Notification popup 
+	When user click on checkout button 
+	And user adds shipment address on checkout page for "newly registered" user
+	And user selects shipment method on check out page for "newly registered" user
+	When user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "LowBalanceGiftCard"
+	And user enter Pin Number "LowBalanceGiftCardPin" 
+	And user click on Apply button
+	Then applied gift card "LowBalanceGiftCard" should be displayed
+	When user add "Credit Card" details in payment method for "newly registered" user
+	Then user should be able to do transaction successfully with gift card and credit card
+	
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8888 @CR-SK 
+Scenario: Verify for guest user If the balance on the provided Gift cards doesn't cover the full cost, the user should NOT be able to pay the difference with a PayPal
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And user click on Add to Cart Button for "MultiSKUProduct" 
+	And user is navigated to Add to cart Notification popup 
+	When user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	When user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "LowBalanceGiftCard"
+	And user enter Pin Number "LowBalanceGiftCardPin" 
+	And user click on Apply button
+	Then applied gift card "LowBalanceGiftCard" should be displayed
+	And user should not be able to pay remaining balace with paypal	
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8889 @CR-SK 
+Scenario: Verify the Authenticated user cannot pay the remaining or partial order amount using PayPal in combination with Gift Card
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user creates an account
+	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And user click on Add to Cart Button for "MultiSKUProduct" 
+	And user is navigated to Add to cart Notification popup 
+	When user click on checkout button 
+	And user adds shipment address on checkout page for "newly registered" user
+	And user selects shipment method on check out page for "newly registered" user
+	When user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "LowBalanceGiftCard"
+	And user enter Pin Number "LowBalanceGiftCardPin" 
+	And user click on Apply button
+	Then applied gift card "LowBalanceGiftCard" should be displayed
+	And user should not be able to pay remaining balace with paypal

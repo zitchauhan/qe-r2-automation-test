@@ -17,45 +17,46 @@ import cucumber.api.java.Before;
 
 public class Hooks {
 	private static final Logger logger = Logger.getLogger(Hooks.class);
-	public Scenario scenario;
+	public static Scenario scenario;
 	public String testType;
 	public String screenshortName;
 	public PropertiesHelper loadProps;
 
-	public Hooks(){}
+	public Hooks() {
+	}
 
-	@Before(order=0)//, value="@StartBrowserMobProxy")
-	public void StartBrowserProxy(Scenario scenario) 
-	{
+	@Before(order = 0) // , value="@StartBrowserMobProxy")
+	public void StartBrowserProxy(Scenario scenario) {
 		logger.debug("StartBrowserProxy is Comentted");
-		/*Constants.enableBrowserProxy = System.getProperty("EnableBrowserProxy");
-		logger.debug("enableBrowserProxy Val::"+Constants.enableBrowserProxy);
-
-		if(Constants.enableBrowserProxy != null && "yes".equalsIgnoreCase(Constants.enableBrowserProxy)){
-			logger.debug("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Starting Browser MobProxy");
-			BrowserProxyHelper.getInstance().initiateBrowserMobProxy();
-			Constants.isBrowserProxyEnabled = true;
-			//Constants.isEnabled = false;
-		}*/
+		/*
+		 * Constants.enableBrowserProxy = System.getProperty("EnableBrowserProxy");
+		 * logger.debug("enableBrowserProxy Val::"+Constants.enableBrowserProxy);
+		 * 
+		 * if(Constants.enableBrowserProxy != null &&
+		 * "yes".equalsIgnoreCase(Constants.enableBrowserProxy)){ logger.
+		 * debug("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Starting Browser MobProxy"
+		 * ); BrowserProxyHelper.getInstance().initiateBrowserMobProxy();
+		 * Constants.isBrowserProxyEnabled = true; //Constants.isEnabled = false; }
+		 */
 	}
 
 	@Before
 	public void BeforeSteps(Scenario scenario) {
 		this.scenario = scenario;
 		loadProps = PropertiesHelper.getInstance();
-		Constants.screenShortTagNames ="";
+		Constants.screenShortTagNames = "";
 
-		logger.debug("exection Start Scenario Name: "+scenario.getName());
+		logger.debug("exection Start Scenario Name: " + scenario.getName());
 		testType = getTestType();
-		screenshortName = testType+"_"+getTagName("KER-")+"_"+getTagName("ZYP-");
-		screenshortName = screenshortName.replaceAll("[^A-Za-z0-9-_]","");
+		screenshortName = testType + "_" + getTagName("KER-") + "_" + getTagName("ZYP-");
+		screenshortName = screenshortName.replaceAll("[^A-Za-z0-9-_]", "");
 		Constants.screenShortTagNames = screenshortName;
-		logger.debug("screenshortName Name::"+screenshortName);
+		logger.debug("screenshortName Name::" + screenshortName);
 	}
 
 	@After
 	public void AfterSteps() {
-		logger.debug("exection End Scenario Name: "+scenario.getName()+"  :: Status:"+scenario.getStatus());
+		logger.debug("exection End Scenario Name: " + scenario.getName() + "  :: Status:" + scenario.getStatus());
 		embedScreenshot(scenario);
 		logger.debug("Closing Webdriver or sessions.........");
 		WebDriverHelper.quitDriver();
@@ -63,21 +64,24 @@ public class Hooks {
 
 	}
 
-	@After(order=0)//, value="@ZZZZZxy")
-	public void stopProxyServer() 
-	{
+	@After(order = 0) // , value="@ZZZZZxy")
+	public void stopProxyServer() {
 		logger.debug("EndBrowserProxy is Comentted");
-	/*	logger.debug("--------------------  after9999Class inside process ----------------------"+Constants.enableBrowserProxy);
-		if(Constants.enableBrowserProxy != null && "yes".equalsIgnoreCase(Constants.enableBrowserProxy)){
-			BrowserProxyHelper.getInstance().generateHarFile("BrowserProxy_"+screenshortName+new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date())+".har");
-		}*/
+		/*
+		 * logger.
+		 * debug("--------------------  after9999Class inside process ----------------------"
+		 * +Constants.enableBrowserProxy); if(Constants.enableBrowserProxy != null &&
+		 * "yes".equalsIgnoreCase(Constants.enableBrowserProxy)){
+		 * BrowserProxyHelper.getInstance().generateHarFile("BrowserProxy_"+
+		 * screenshortName+new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new
+		 * Date())+".har"); }
+		 */
 	}
 
-
-	private String getTagName(String name){
-		String tName="";
-		for(String tag: scenario.getSourceTagNames()){
-			if(tag!= null && tag.contains(name)){
+	private String getTagName(String name) {
+		String tName = "";
+		for (String tag : scenario.getSourceTagNames()) {
+			if (tag != null && tag.contains(name)) {
 				tName = tag;
 				break;
 			}
@@ -85,13 +89,13 @@ public class Hooks {
 		return tName;
 	}
 
-	private String getTestType(){
-		String testType="";
-		for(String tag: scenario.getSourceTagNames()){
-			if(tag!= null){
+	private String getTestType() {
+		String testType = "";
+		for (String tag : scenario.getSourceTagNames()) {
+			if (tag != null) {
 				tag = tag.toLowerCase();
-				if( tag.contains("api")||tag.contains("web")||tag.contains("mobile")){
-					testType = tag.replaceAll("[^A-Za-z0-9-_]","");
+				if (tag.contains("api") || tag.contains("web") || tag.contains("mobile")) {
+					testType = tag.replaceAll("[^A-Za-z0-9-_]", "");
 					break;
 				}
 
@@ -100,13 +104,18 @@ public class Hooks {
 		return testType;
 	}
 
-	private boolean embedScreenshot(Scenario scenario) {  
-		boolean flag =false;
-		logger.debug(scenario.getStatus()+" :Scenario isFailed::"+scenario.isFailed());
-		logger.debug("Test Type::"+testType);
-		if (scenario.isFailed() && !testType.contains("api")) { 
-			flag = CommonActionHelper.embedScreenshot(scenario);
+	private boolean embedScreenshot(Scenario scenario) {
+		boolean flag = false;
+		logger.debug(scenario.getStatus() + " :Scenario isFailed::" + scenario.isFailed());
+		logger.debug("Test Type::" + testType);
+		if (scenario.isFailed() && !testType.contains("api")) {
+			flag = new CommonActionHelper().embedScreenshot(scenario);
 		}
 		return flag;
+	}
+
+	public boolean embedScreenshotForPassScenario() {
+
+		return new CommonActionHelper().embedScreenshot(scenario);
 	}
 }

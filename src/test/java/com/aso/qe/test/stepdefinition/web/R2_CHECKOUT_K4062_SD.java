@@ -27,6 +27,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 	R2_CHECKOUT_K3132_SD r2_CheckOut_k3132_SD = new R2_CHECKOUT_K3132_SD();
 	R2_R1_Fun_PO r2_r1_fun_po = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	R2_MyAccount_PO r2MyAccountPO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
+	Hooks hooks = new Hooks();
 
 	@And("^user adds shipment address on checkout page for \"(.*?)\" user$")
 	public void user_adds_shipment_address_on_checkout_page_for_user(String arg1) throws Throwable {
@@ -76,7 +77,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		if (!(userWithoutExistingPaymentDetails)) {
 			if (isDisplayed(r2CheckOutPo.EditPayment_Link)) {
 				clickOnButton(r2CheckOutPo.EditPayment_Link);
-			}  
+			}
 			if (isDisplayed(r2CheckOutPo.btnRemoveGiftCard)) {
 				clickOnButton(r2CheckOutPo.btnRemoveGiftCard);
 			}
@@ -108,11 +109,11 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 				setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty(creditCardNumber));
 				setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
 				setInputText(r2CheckOutPo.Cvv_Input, webPropHelper.getTestDataProperty(cvv));
-				if(arg2.equalsIgnoreCase("guest") | arg2.equalsIgnoreCase("unauthenticated")) {
+				if (arg2.equalsIgnoreCase("guest") | arg2.equalsIgnoreCase("unauthenticated")) {
 					setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
 							r2MyAccountPO.generateRandomEmailId());
 				}
-				
+
 				assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 			}
 			if (!(userWithoutExistingPaymentDetails)) {
@@ -120,46 +121,52 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 					assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 			}
 			Thread.sleep(5000);
-			
+
 		} else if (arg1.equalsIgnoreCase("gift card")) {
-			boolean chooseGiftCard = false;
+			boolean chooseGiftCard = true;
 			if (!(userWithoutExistingPaymentDetails)) {
 				if (isDisplayed(r2CheckOutPo.plusIconGiftCard)) {
 					assertTrue(clickOnButton(r2CheckOutPo.plusIconGiftCard));
 					if (isDisplayed((r2CheckOutPo.inputGiftcardNumber))) {
-						setInputText(r2CheckOutPo.inputGiftcardNumber, webPropHelper.getTestDataProperty("Valid16DigitGiftCardNumber"));
-						chooseGiftCard = true;
-						
-					}else if(isDisplayed(r2CheckOutPo.btnCheckoutApply)) {
+						setInputText(r2CheckOutPo.inputGiftcardNumber,
+								webPropHelper.getTestDataProperty("Valid16DigitGiftCardNumber"));
+
+					} else if (isDisplayed(r2CheckOutPo.btnCheckoutApply)) {
+						chooseGiftCard = false;
 						clickOnButton(r2CheckOutPo.btnCheckoutApply);
-						
+
 					}
 				}
 			} else {
 				assertTrue(clickOnButton(r2CheckOutPo.plusIconGiftCard));
-				setInputText(r2CheckOutPo.inputGiftcardNumber, webPropHelper.getTestDataProperty("Valid16DigitGiftCardNumber"));
+				setInputText(r2CheckOutPo.inputGiftcardNumber,
+						webPropHelper.getTestDataProperty("Valid16DigitGiftCardNumber"));
 			}
 
-			if(chooseGiftCard) {
+			if (chooseGiftCard) {
 				setInputText(r2CheckOutPo.inputPinNumber, webPropHelper.getTestDataProperty("Valid8DigitGiftCardPIN"));
 				waitForElement(r2CheckOutPo.btnCheckoutApply);
 				assertTrue(clickOnButton(r2CheckOutPo.btnCheckoutApply));
 				waitForElement(r2CheckOutPo.txtGiftCardAppliedSuccessMessage);
-				if(arg2.equalsIgnoreCase("guest") | arg2.equalsIgnoreCase("unauthenticated")) {
+				if (arg2.equalsIgnoreCase("guest") | arg2.equalsIgnoreCase("unauthenticated")) {
 					setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
 							r2MyAccountPO.generateRandomEmailId());
 				}
-				Thread.sleep(5000);
+				// Thread.sleep(5000);
+				// assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
+			}
+
+			Thread.sleep(5000);
+			if (isDisplayed(r2CheckOutPo.ReviewOrder_Btn)) {
 				assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
+
+				// if(!(userWithoutExistingPaymentDetails)) {
+				// if(isDisplayed(r2CheckOutPo.ReviewOrder_Btn)) {
+				// assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
+				// }
 			}
-			
-			if(!(userWithoutExistingPaymentDetails)) {
-				if(isDisplayed(r2CheckOutPo.ReviewOrder_Btn)) {
-					assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
-				}
-			}
-			
-//			Thread.sleep(3000);
+
+			// Thread.sleep(3000);
 
 		} else if (arg1.equalsIgnoreCase("PayPal")) {
 			clickOnButton(r2CheckOutPo.PayPal_radioBtn);
@@ -334,6 +341,9 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 
 	@Then("^verify user is able to successfully place the order$")
 	public void user_is_able_to_place_the_order() throws Throwable {
+		if (isDisplayed(r2OrderConfPO.orderConfirmation_ThanksForSubmittingOrder_txt)) {
+			hooks.embedScreenshotForPassScenario();
+		}
 		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_ThanksForSubmittingOrder_txt));
 	}
 
@@ -360,27 +370,27 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_ChoosePassword_txt));
 		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_NotifyMe_checkbox));
 	}
-	
+
 	@When("^user enter \"(.*?)\" in password field of order confirmation page$")
 	public void user_enter_in_password_field_of_order_confirmation_page(String arg1) throws Throwable {
-	    setInputText(r2OrderConfPO.orderConfirmation_ChoosePassword_txt, webPropHelper.getTestDataProperty(arg1));
+		setInputText(r2OrderConfPO.orderConfirmation_ChoosePassword_txt, webPropHelper.getTestDataProperty(arg1));
 	}
 
 	@When("^user unchecks email news letter checkbox on order confirmation page$")
 	public void user_unchecks_email_news_letter_checkbox_on_order_confirmation_page() throws Throwable {
-	    if(isSelected(r2OrderConfPO.orderConfirmation_NotifyMe_checkbox)){
-	    	clickOnButton(r2OrderConfPO.orderConfirmation_NotifyMe_checkbox);
-	    }
+		if (isSelected(r2OrderConfPO.orderConfirmation_NotifyMe_checkbox)) {
+			clickOnButton(r2OrderConfPO.orderConfirmation_NotifyMe_checkbox);
+		}
 	}
-	
+
 	@When("^user clicks on submit button on order confirmation page$")
 	public void user_clicks_on_submit_button_on_order_confirmation_page() throws Throwable {
-	    assertTrue(clickOnButton(r2OrderConfPO.orderConfirmation_Submit_btn));
+		assertTrue(clickOnButton(r2OrderConfPO.orderConfirmation_Submit_btn));
 	}
 
 	@Then("^verify user is able to sign up successfully on order confirmation page$")
 	public void verify_user_is_able_to_sign_up_successfully_on_order_confirmation_page() throws Throwable {
-	   assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_AccountCreatedMessage_txt));
+		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_AccountCreatedMessage_txt));
 	}
 
 }

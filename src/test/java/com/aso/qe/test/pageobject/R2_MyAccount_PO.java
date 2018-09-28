@@ -890,7 +890,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 public String generateRandomMobileNumber() {
 		
 		String randomGeneratedMobileNumber = RandomStringUtils.randomNumeric(9);
-		randomGeneratedMobileNumber = "9" + randomGeneratedMobileNumber;
+		randomGeneratedMobileNumber = "6" + randomGeneratedMobileNumber;
 		logger.debug("The new random generated mobile number is " + randomGeneratedMobileNumber);
 		return randomGeneratedMobileNumber;
 

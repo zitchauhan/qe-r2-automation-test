@@ -318,6 +318,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemSG']")
 	public WebElement checkout_ShippingMethod_ShippingDetails;
 	
+	@FindBy(xpath = "//*[@data-auid='checkout_payment_options_radio_button_PayPal']")
+	public WebElement checkout_PaymentMethod_PayPal_Disabled_rb;
+	
 	
 	//****Start PayPal****//
     @FindBy(xpath = "//*[@id='closeCart']")
@@ -734,7 +737,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
        @FindBy(xpath = "//*[@id='creditcardField']") public WebElement txtCreditCardInput;
        @FindBy(xpath = "//*[@id='creditcardField']//following-sibling::span/img[contains(@src,'visa')]") public WebElement imgVisaCreditCardInput;
        @FindBy(xpath = "//*[text()='Expiration Date']") public WebElement txtExpirationDate;
-       @FindBy(xpath = "//*[@id='expirationDate']") public WebElement txtExpirationDateInput;
+       @FindBy(xpath = "//*[@id='expirationDate'] | //*[@id='expiryField']") public WebElement txtExpirationDateInput;
        @FindBy(xpath = "//*[@placeholder='MM/YY']") public WebElement txtExpirationPlaceholders;
        @FindBy(xpath = "//*[@id='expirationDate']//parent::label//following-sibling::div/span[contains(text(),'Past expiration date')]") public WebElement txtErrorMsgForPastDates;
        @FindBy(xpath = "//*[@id='cvv']") public WebElement txtCVVInput;

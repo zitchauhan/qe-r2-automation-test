@@ -1,30 +1,52 @@
 Feature: Place order
 
-@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order 
-@CR-SK 
+#@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order 
+#@CR-SK 
+#Scenario Outline: Verify if authenticated user is able to place an order for single SKU product 
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	When user clicks on SignIn link from global header 
+#	And user logs in as "EmailAddress"
+#    And user navigate and deletes existing items in cart
+#	And User searches a product "productName" and navigates to PDP 
+#	And user click on Add to Cart Button 
+#	And user is navigated to Add to cart Notification popup 
+#	And user click on checkout button 
+#	And user adds shipment address on checkout page for "authenticated" user
+#	And user selects shipment method on check out page for "authenticated" user
+#	And user add "<Payment Type>" details in payment method for "authenticated" user
+#	And user clicks on place order on checkout page 
+#	Then verify user is able to successfully place the order 
+#	And Verify the message on the page 
+#		|# Message for successful order is displayed		|
+#		|THANKS FOR SUBMITTING YOUR ORDER					|
+#	Examples: 
+#		|Payment Type	|
+##		|Gift Card		|
+#		|Credit Card - Visa	|
+#		|PayPal			|
+		
+
+@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @CR-SK
 Scenario Outline: Verify if authenticated user is able to place an order for single SKU product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on SignIn link from global header 
-	And user logs in as "EmailAddress"
-    And user navigate and deletes existing items in cart
+	When user creates an account
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
-	And user adds shipment address on checkout page for "authenticated" user
-	And user selects shipment method on check out page for "authenticated" user
-	And user add "<Payment Type>" details in payment method for "authenticated" user
+	When user click on checkout button 
+	And user adds shipment address on checkout page for "newly registered" user
+	And user selects shipment method on check out page for "newly registered" user
+	And user add "<Payment Type>" details in payment method for "newly registered" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-	And Verify the message on the page 
+	Then Verify the message on the page 
 		|# Message for successful order is displayed		|
 		|THANKS FOR SUBMITTING YOUR ORDER					|
 	Examples: 
 		|Payment Type	|
 #		|Gift Card		|
-		|Credit Card - Visa	|
+		|Credit Card - Master	|
 		|PayPal			|
-		
 		
 @R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @CR-SK
 Scenario Outline: Verify if authenticated user is able to place an order for multi SKU products 
@@ -282,3 +304,5 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bait pr
 #		|Gift Card		|
 		|Credit Card	|
 		|PayPal			|
+		
+		
