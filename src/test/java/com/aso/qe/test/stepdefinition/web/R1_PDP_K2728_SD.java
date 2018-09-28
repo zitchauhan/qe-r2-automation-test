@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.apache.log4j.Logger;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
@@ -26,7 +27,7 @@ public class R1_PDP_K2728_SD extends CommonActionHelper {
 	   if(isDisplayed(plpPageObj.prdctWithPromoOffer)) {
 	   assertTrue(clickOnButton(plpPageObj.prdctWithPromoOffer));
 	   waitForPageLoad(driver);
-	   Thread.sleep(3000);
+	   Thread.sleep(Constants.thread_medium);
 	   assertTrue(isDisplayed(pdpPageObj.txtPromoCodePDP));
 	   }else {
 		   logger.debug("There are no promo offers product");
@@ -36,14 +37,14 @@ public class R1_PDP_K2728_SD extends CommonActionHelper {
 	@Then("^User navigates to page having promo content$")
 	 public void User_navigates_to_page_having_promo_content() throws Throwable {
 	  
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		Actions hover = new Actions(getDriver());
 		hover.moveToElement(globalElementHeader.btnClothingCategory).build().perform();
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		assertTrue(clickOnButton(globalElementHeader.lnkPromoAvailable));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		
 		
 		

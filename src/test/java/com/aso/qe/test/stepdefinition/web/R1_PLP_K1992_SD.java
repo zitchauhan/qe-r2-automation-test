@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
 
@@ -25,21 +26,21 @@ public class R1_PLP_K1992_SD extends CommonActionHelper{
 		if ("mobile".equalsIgnoreCase(testtype)) {
 
 			assertTrue(clickOnButton(globalElementHeader.txtOutDoor_M));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(globalElementHeader.txtShooting_M));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(globalElementHeader.txtShootingNavg_M));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 
 		} else {
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			Actions hover = new Actions(getDriver());
 			hover.moveToElement(globalElementHeader.btnOutdoorsCategory).build().perform();
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(globalElementHeader.btnAutomotiveTowing_Shop));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 		}
 
 	}

@@ -6,6 +6,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_HomePage_PO;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
@@ -22,7 +23,7 @@ public class R1_PLP_K1401_SD extends CommonActionHelper{
 	public void user_navigate_to_men_shoe_L_TWO_page() throws Throwable {
 
 		waitForPageLoad(driver);
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		assertTrue(clickOnButton(hp_p.btnShop));
 		Actions hover = new Actions(getDriver());
 
@@ -36,11 +37,11 @@ public class R1_PLP_K1401_SD extends CommonActionHelper{
 	public void user_verify_the_title_of_L_TWO_page_as_men_shoe() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(globalElementHeader.btnMensClothingMobile));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(globalElementHeader. btnNavigateToShirtMobile));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 		}else {
 			assertTrue(isDisplayed(globalElementHeader.txtPageHeaderAsMenShoe));
 			System.out.println(globalElementHeader.txtBreadCrumbMenShoe.getText());

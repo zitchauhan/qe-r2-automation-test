@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 
 import cucumber.api.java.en.Then;
@@ -47,14 +48,14 @@ public class R1_HP_K728_SD extends CommonActionHelper{
 		if("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(globalElementHeader.imgAcademyLogoMobile)); 
 			waitForPageLoad(driver);
-			Thread.sleep(5000);
+			Thread.sleep(Constants.thread_medium);
 //			for(WebElement ele : globalElementHeader.academyLogoList){
 //				ele.click();
 //			}
 		}else {
 			assertTrue(clickOnButton(globalElementHeader.imgAcademyLogo));
 			waitForPageLoad(driver);
-			Thread.sleep(8000);
+			Thread.sleep(Constants.thread_high);
 		}
 	}
 

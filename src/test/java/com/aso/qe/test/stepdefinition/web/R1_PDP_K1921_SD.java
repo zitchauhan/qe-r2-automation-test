@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 
 import cucumber.api.java.en.Then;
@@ -19,7 +19,7 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 	@Then("^user search the data in search box\"(.*?)\"$")
 	public void user_search_the_data_in_search_box(String data) throws Throwable {
 	  waitForPageLoad(driver);
-	  Thread.sleep(5000);
+	  Thread.sleep(Constants.thread_medium);
 		pdpPageObj.searchbox.sendKeys(data);
 	   clickOnButton(pdpPageObj.searchMagnifyingBtm);
 		
@@ -30,7 +30,7 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 	  
 		clickOnButton(pdpPageObj.selectMagellanOutdoorsMenNeopreneWadingBoots);
 	   scrollPageToWebElement(pdpPageObj.quantityInput);
-		Thread.sleep(2000);
+	   Thread.sleep(Constants.thread_low); 
 		pdpPageObj.quantityInput.sendKeys("100");
 	    clickOnButton(pdpPageObj.btnAddToCart);
 	}
@@ -39,11 +39,11 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 	public void User_to_selects_the_product_from_PLP_and_add_product_in_cart_with_access_quantity()  throws Throwable{
 		    clickOnButton(pdpPageObj.pdpImage);
 		    waitForPageLoad(driver);
-		    Thread.sleep(2000);
+		    Thread.sleep(Constants.thread_low); 
 //		    clickOnButton(pdpPageObj.btnXXLARGESizePDP);
 //		    Thread.sleep(2000);
 		   scrollPageToWebElement(pdpPageObj.quantityInput);
-			Thread.sleep(2000);
+		   Thread.sleep(Constants.thread_low); 
 			pdpPageObj.quantityInput.sendKeys("100");
 		    clickOnButton(pdpPageObj.btnAddToCart);
 		

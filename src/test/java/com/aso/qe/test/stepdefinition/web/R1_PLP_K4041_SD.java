@@ -9,6 +9,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 
 import cucumber.api.java.en.Then;
@@ -23,9 +24,9 @@ R1_GlobalElementHeader_Home_PO g_hp=PageFactory.initElements(getDriver(), R1_Glo
 	
 	@Then("^User to navigate to bottom$")
 	public void user_to_navigate_to_bottom() throws Throwable {
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_low);
 		scrollPageToWebElement(g_hp.iconfacebook);	
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		
 	}
 	@Then("^verify Auto scroll$")

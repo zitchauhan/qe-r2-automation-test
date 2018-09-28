@@ -8,6 +8,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
@@ -208,7 +209,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 	public void user_clicks_on_the_product_card_and_navigates_to_PDP_of_the_product() throws Throwable {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			scrollPageToWebElement(plp_po.drpdwnSortByScrollMobile);
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(plp_po.productPLP1_Mobile));
 		} else {
 			assertTrue(clickOnButton(plp_po.productPLP1));
@@ -230,12 +231,12 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 			// assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtnMobile));
 			if (!isDisplayed(R1_SearchProduct_PO.searchTextBoxMobile))
 				assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low); 
 			searchTextBox = R1_SearchProduct_PO.searchTextBoxMobile;
 
 		} else {
 			waitForPageLoad(driver);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtn));
 			searchTextBox = R1_SearchProduct_PO.searchTextBox;
 		}
@@ -247,7 +248,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 			}
 			clearText(searchTextBox);
 			setInputTextWithEnterKey(searchTextBox, searchWord);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 			waitForPageLoad(driver);
 			if (r1_SearchPO.verifyTextDisplayedOnPage("We couldn't find anything for")) {
 			} else {
@@ -257,7 +258,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 		}
 		if (!(searchText.toLowerCase().contains("sku")))
 			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 
 	}
 	
@@ -337,17 +338,17 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtnMobile));
 			if (!isDisplayed(R1_SearchProduct_PO.searchTextBoxMobile)) {
 				assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
-				Thread.sleep(1000);
+				Thread.sleep(Constants.thread_low);
 			}
 			setInputTextWithEnterKey(R1_SearchProduct_PO.searchTextBoxMobile,
 					webPropHelper.getTestDataProperty(searchText));
 			logger.debug("User entered search key :: " + searchText);
 		} else {
 			waitForPageLoad(driver);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtn));
 			setInputTextWithEnterKey(R1_SearchProduct_PO.searchTextBox, webPropHelper.getTestDataProperty(searchText));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			logger.debug("User entered search key :: " + searchText);
 		}
 	}
@@ -448,7 +449,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 			String email) throws Throwable {
 		// assertTrue(clickOnButton(pdp_po.btnAskQuestion));
 		// Fix by RKA 15 AUg
-		Thread.sleep(5000);
+		Thread.sleep(Constants.thread_medium);
 		waitForElement(pdp_po.inputQuestionSummary);
 		setInputText(pdp_po.inputQuestionSummary, questionSumarry);
 		setInputText(pdp_po.inputNickname, nickName);
@@ -481,7 +482,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 		// assertTrue(clickOnButton(pdp_po.btnAskQuestion));
 		// }
 
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		if (isDisplayed(pdp_po.btnAskQuestion)) {
 			clickOnButton(pdp_po.btnAskQuestion);
 

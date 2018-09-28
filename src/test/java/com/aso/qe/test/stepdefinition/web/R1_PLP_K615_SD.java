@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
@@ -38,9 +39,9 @@ public class R1_PLP_K615_SD extends CommonActionHelper{
 	public void user_able_to_see_all_sorting_options_after_clicking_on_sort_by_filter(List<String> object) throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(PLP_PO.drpdwnSortByScrollMobile));
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			for(String str: object) {
-				Thread.sleep(3000);
+				Thread.sleep(Constants.thread_low);
 				String xpath ="//div[@data-auid='sort_by_m']//option[contains(text(),'"+str+"')]"; 
 				assertTrue(isDisplayed(getfindElementByXPath(xpath)));
 			}

@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_FindStore_PO;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 
@@ -72,7 +73,7 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 	@When("^User enters special character in Store Locator Modal$")
 	public void User_enters_special_character_in_Store_Locator_Modal() throws Throwable {
 		findStorePO.selectAStoreEmptyOrSpecialchars("@");
-		Thread.sleep(5000);
+		Thread.sleep(Constants.thread_medium); 
 	}
 
 	@When("^User enters space in Store Locator Modal$")

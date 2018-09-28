@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
 import com.aso.qe.test.pageobject.R1_SIT_PO;
@@ -25,12 +26,12 @@ public class R1_PLP_K621_SD extends CommonActionHelper {
 		scrollPageToWebElement(plpPageObj.clickAdFeature);
 		isDisplayed(plpPageObj.clickAdFeature);
 		assertTrue(clickOnButton(plpPageObj.clickAdFeature));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 	}
 	
 	@Then("^user click on clearance badge$")
 	public void user_click_on_clearance_badge() throws InterruptedException{
-		Thread.sleep(300);
+		Thread.sleep(Constants.thread_low); 
 		scrollPageToWebElement(plpPageObj.btnClearance);
 		isDisplayed(plpPageObj.btnClearance);
 		assertTrue(clickOnButton(plpPageObj.btnClearance));
@@ -38,7 +39,7 @@ public class R1_PLP_K621_SD extends CommonActionHelper {
 	
 	@Then("^user click on online badge$")
 	public void user_click_on_online_badge() throws InterruptedException{
-		Thread.sleep(300);
+		Thread.sleep(Constants.thread_low); 
 		scrollPageToWebElement(plpPageObj.btnOnline);
 		isDisplayed(plpPageObj.btnOnline);
 		assertTrue(clickOnButton(plpPageObj.btnOnline));
@@ -46,7 +47,7 @@ public class R1_PLP_K621_SD extends CommonActionHelper {
 	
 	@Then("^user click on price badge$")
 	public void user_click_on_price_badge() throws InterruptedException{
-		Thread.sleep(300);
+		Thread.sleep(Constants.thread_low); 
 		scrollPageToWebElement(plpPageObj.btnPriceDrop);
 		isDisplayed(plpPageObj.btnPriceDrop);
 		assertTrue(clickOnButton(plpPageObj.btnPriceDrop));

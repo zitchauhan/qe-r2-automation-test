@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_HomePage_PO;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
@@ -31,7 +32,7 @@ public class R1_PLP_K1961_SD extends CommonActionHelper {
 
 	@Then("^User click on the brand tab$")
 	public void User_click_on_the_brand_tab() throws Throwable {
-		Thread.sleep(5000);	
+		Thread.sleep(Constants.thread_medium);
 		scrollPageToWebElement(globalElementHeader.btnBrandCategoryTab);
 			breadcrumb=globalElementHeader.btnBrandCategoryTab.getText();
 		assertTrue(clickOnButton(globalElementHeader.btnBrandCategoryTab));

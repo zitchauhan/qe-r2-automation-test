@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import cucumber.api.java.en.And;
@@ -45,7 +46,7 @@ public class R1_PDP_K1920_SD extends CommonActionHelper{
 	public void user_click_on_view_cart_button() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)){
 			scrollPageToWebElement(pdpPageObj.btnViewCart);
-			Thread.sleep(10000);
+			Thread.sleep(Constants.thread_highest);
 			waitForElement(pdpPageObj.btnViewCart);
 			assertTrue(clickOnButton(pdpPageObj.btnViewCart));
 		}
@@ -60,7 +61,7 @@ public class R1_PDP_K1920_SD extends CommonActionHelper{
 	public void user_click_on_checkout_button() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)){
 			scrollPageToWebElement(pdpPageObj.btnCheckout);
-			Thread.sleep(10000);
+			Thread.sleep(Constants.thread_highest);
 			waitForElement(pdpPageObj.btnCheckout);
 			assertTrue(clickOnButton(pdpPageObj.btnCheckout));
 		}else

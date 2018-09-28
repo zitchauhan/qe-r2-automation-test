@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import cucumber.api.java.en.Then;
@@ -21,7 +22,7 @@ public class R1_HP_K2993_SD extends CommonActionHelper{
 	public void user_navigate_to_rebates_page() throws Throwable {
 		assertTrue(clickOnButton(globalElementHeader.lnkrebates));
 		waitForPageLoad(driver);
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(getTitle().contains("Rebates"));
 	}
 

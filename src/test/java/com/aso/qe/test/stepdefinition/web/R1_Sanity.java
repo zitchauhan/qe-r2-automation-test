@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
@@ -147,11 +148,11 @@ public class R1_Sanity extends CommonActionHelper{
 
 	@Then("^User should be able to see pagination links in L3 page$")
 	public void user_should_be_able_to_see_pagination_links_in_L3_page() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		assertTrue((isDisplayed(globalElementHeader.lnkL2Pagination)));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		assertTrue((clickOnButton(globalElementHeader.lnkPagination2)));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		assertTrue((clickOnButton(globalElementHeader.lnkNextPagePagination)));
 	}
 
@@ -165,9 +166,9 @@ public class R1_Sanity extends CommonActionHelper{
 //			globalElementHeader.lnkL2PaginationMobile.sendKeys(Keys.ARROW_UP);
 //			globalElementHeader.lnkL2PaginationMobile.sendKeys(Keys.ARROW_UP);
 		}else {
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 			scrollPageToWebElement(globalElementHeader.lnkL2Pagination);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 		}
 	}
 

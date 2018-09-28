@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_ShoppingCartView_PO;
 
@@ -30,7 +31,7 @@ public class R1_HP_K724_SD extends CommonActionHelper {
 	public void navigates_to_LOne_page() throws Throwable {
 		assertTrue((clickOnButton(globalElementHeader.btnShopCategory)));
 		assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
-		Thread.sleep(20000);
+		Thread.sleep(Constants.thread_low);
 	}
 
 	@Then("^navigates to LTwo page$")

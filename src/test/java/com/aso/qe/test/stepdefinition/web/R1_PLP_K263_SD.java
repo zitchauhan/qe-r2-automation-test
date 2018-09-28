@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
 
@@ -18,7 +19,7 @@ public class R1_PLP_K263_SD extends CommonActionHelper{
 
 	@Then("^user clicks on one of the category and navigates to LOne page$")
 	public void user_clicks_on_one_of_the_category_and_navigates_to_LOne_page() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue((clickOnButton(globalElementHeader_HomePO.btnShopCategory)));
 		assertTrue(clickOnButton(globalElementHeader_HomePO.btnClothingCategory));
 		waitForPageLoad(driver);
@@ -27,7 +28,7 @@ public class R1_PLP_K263_SD extends CommonActionHelper{
 
 	@Then("^user clicks on one of the subcategory and navigates to LTwo page$")
 	public void user_clicks_on_one_of_the_subcategory_and_navigates_to_LTwo_page() throws Throwable {
-		Thread.sleep(6000);
+		Thread.sleep(Constants.thread_high);
 		assertTrue(clickOnButton(plp_PO.secCategory_CLP));
 		waitForPageLoad(driver);
 
@@ -36,7 +37,7 @@ public class R1_PLP_K263_SD extends CommonActionHelper{
 
 	@Then("^user clicks on one of the product category and navigates to LThree page$")
 	public void user_clicks_on_one_of_the_product_category_and_navigates_to_LThree_page() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(plp_PO.secCategory_CLP));//8Aug danush
 		waitForPageLoad(driver);
 	}

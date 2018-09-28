@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_HomePage_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
@@ -34,7 +35,7 @@ public class R1_HP_K244_SD extends CommonActionHelper{
 	@Then("^user clicks on one of the category card and navigates to category$")
 	public void user_clicks_on_one_of_the_category_card_and_navigates_to_category() throws Throwable {
 		waitForPageLoad(driver);
-		Thread.sleep(4000);
+		Thread.sleep(Constants.thread_medium);
 		String currentURL = getCurrentPageURL();
 		assertTrue(clickOnButton(HomePagePOM.prdTileFeaturedCategory));
 		String changedURL = getCurrentPageURL();

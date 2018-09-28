@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 
 import cucumber.api.java.en.And;
@@ -36,11 +37,11 @@ public class R1_HP_K1400_SD extends CommonActionHelper
 	public void user_verify_the_success_message() throws InterruptedException {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(globalElementHeader.lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE_M));
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(globalElementHeader.btnCloseCrossSuccess));
 		} else {
 			assertTrue(isDisplayed(globalElementHeader.lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE_D));
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(globalElementHeader.btnCloseCrossSuccess));
 		}
 	}

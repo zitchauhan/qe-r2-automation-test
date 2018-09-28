@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_HomePage_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
@@ -148,7 +149,7 @@ public class R1_PDP_K2339_SD extends CommonActionHelper {
 	public void user_click_on_the_Find_a_Store_button_in_burger_menu() throws Throwable {
 		scrollPageToWebElement(globalElementHeader.txtFindAStoreMobile);
 		waitForElement(globalElementHeader.txtFindAStoreMobile);
-		Thread.sleep(300);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(globalElementHeader.txtFindAStoreMobile));
 	}
 	@Then("^User click on the brand btn$")
@@ -193,7 +194,7 @@ public class R1_PDP_K2339_SD extends CommonActionHelper {
 
 	@Then("^User click on see details$")
 	public void user_click_on_see_details() throws Throwable {
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		for (WebElement storeResult : globalElementHeader.storeResults) {
 			assertTrue(clickOnButton(storeResult));
 			break;
@@ -230,7 +231,7 @@ public class R1_PDP_K2339_SD extends CommonActionHelper {
 	public void user_enters_required_value_in_search_box_mobile_and_click_on_search() throws Throwable {
 		waitForElement(R1_SearchProduct_PO.searchTextBoxMobile);
 		globalElementHeader.txtSearchBox_mobile.click();
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		globalElementHeader.txtSearchBox_mobile.sendKeys("Pants");
 		globalElementHeader.clickSearchbtn.click();
 	}

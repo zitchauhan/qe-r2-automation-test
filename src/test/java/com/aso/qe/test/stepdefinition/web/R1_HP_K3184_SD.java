@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_HomePage_PO;
 
@@ -21,7 +22,7 @@ public class R1_HP_K3184_SD extends CommonActionHelper{
 	public void user_click_on_shop_Gift_Cards_Link_and_navigate_to_Gift_Card_LAnding_page() throws Throwable {
 	
 		waitForPageLoad(driver);
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		scrollPageToWebElement(geh_po.lnkgiftcards);
 	    waitForElement(geh_po.lnkgiftcards);
 		assertTrue(clickOnButton(geh_po.lnkgiftcards)); 
@@ -44,7 +45,7 @@ public class R1_HP_K3184_SD extends CommonActionHelper{
 	public void user_scroll_to_service_on_footer_and_expand_service() throws Throwable {
 	    waitForPageLoad(driver);
 	   
-	    Thread.sleep(2000);
+	    Thread.sleep(Constants.thread_low);
 	    assertTrue(clickOnButton(geh_po.expandall_Academy_services));
 	   assertTrue(clickOnButton(geh_po.lnkgiftcards));
 	}

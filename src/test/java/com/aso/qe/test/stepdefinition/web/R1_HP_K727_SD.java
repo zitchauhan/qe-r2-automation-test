@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_HomePage_PO;
 
@@ -23,16 +24,16 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 	public void user_to_click_on_sing_in_and_navigate_to_sign_in_page() throws Throwable {
 		  // waitForElement(hp_p.linkSignIn_M);
  		if("mobile".equalsIgnoreCase(testtype)){	
- 			Thread.sleep(1000);
+ 			Thread.sleep(Constants.thread_low);
 			clickOnButton(globalElementHeader.btnSHOPBurgerMenuMinusIcon);
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			scrollPageToWebElement(globalElementHeader.btnSignIn_mobile);
 			waitForElement(globalElementHeader.btnSignIn_mobile);
 			clickOnButton(globalElementHeader.btnSignIn_mobile);
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			
 		}else {
-		Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 					assertTrue(clickOnButton(hp_p.linkSignIn));					
 		}
 		
@@ -53,7 +54,7 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 	public void click_sign_in() throws Throwable {
 	  assertTrue(isClickable(hp_p.buttonSignIn));
 		clickOnButton(hp_p.buttonSignIn);
-		Thread.sleep(4000);
+		Thread.sleep(Constants.thread_medium);
 	}
 	
 	//SID Modify 19-September
@@ -66,13 +67,13 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 	
 	@Then("^verify the validation message as incorrect$")
 	public void verify_the_validation_message_as_incorrect() throws Throwable {
-	    Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		assertTrue(isDisplayed(hp_p.msgVerifyIncorrect));
 	}
 	
 	@Then("^verify enter email and password message to come$")
 	public void verify_enter_email_and_password_message_to_come() throws Throwable {
-		  Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 	    assertTrue(isDisplayed(hp_p.msgVerifyEmail));
 	    assertTrue(isDisplayed(hp_p.msgVerifyPassword));
 	}
@@ -133,7 +134,7 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 	public void click_on_singout() throws Throwable {
 		
 		if("mobile".equalsIgnoreCase(testtype)){	
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			scrollPageToWebElement(hp_p.signout_M);
 			clickOnButton(hp_p.signout_M);
 			

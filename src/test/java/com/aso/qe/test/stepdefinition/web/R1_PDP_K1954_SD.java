@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
 
@@ -23,9 +24,9 @@ public class R1_PDP_K1954_SD extends CommonActionHelper{
 	@Then("^User be able to write review$")
 	public void user_be_able_to_write_review() throws Throwable {
 	    assertTrue(clickOnButton(pdp_po.btnWriteAReview));
-	   Thread.sleep(4000);
+	    Thread.sleep(Constants.thread_medium);
 	    assertTrue(clickOnButton(pdp_po.btnExcellentStar));
-	    Thread.sleep(2000);
+	    Thread.sleep(Constants.thread_low);
 	    pdp_po.inputReviewTitle.sendKeys("Automation Test_1");	
 	    pdp_po.inputReview.sendKeys("I needed an orange shirt for my work and this one is my favorite! Very pretty color and extremely comfortable as well. I love this shirt so much that I bought 3. I highly recommend!");	 
 	    clickOnButton(pdp_po.btnRecommendToAFriend);
@@ -34,7 +35,7 @@ public class R1_PDP_K1954_SD extends CommonActionHelper{
 	    pdp_po.inputPhoneNumber.sendKeys("01234567890");
 	    clickOnButton(pdp_po.btnTerms_conditions);
 	    clickOnButton(pdp_po.btnPostReview);
-	    Thread.sleep(2000);
+	    Thread.sleep(Constants.thread_low);
 	    assertTrue(clickOnButton(pdp_po.x_yourReviewSubmited));
 	}
 	
@@ -62,7 +63,7 @@ public class R1_PDP_K1954_SD extends CommonActionHelper{
 public void user_to_click_on_be_the_first_to_review_and_write_review() throws Throwable {
    assertTrue(clickOnButton(pdp_po.linkBeTheFirstTOReviewThisPRoduct));
    
-   Thread.sleep(2000);
+   Thread.sleep(Constants.thread_low);
    assertTrue(clickOnButton(pdp_po.btnExcellentStar));
    pdp_po.inputReviewTitle.sendKeys("Automation Test_1");	
    pdp_po.inputReview.sendKeys("Automation Test_2 Automation Test_2 Automation Test_2");	 

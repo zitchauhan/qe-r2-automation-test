@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 
 import cucumber.api.java.en.Then;
@@ -69,7 +70,7 @@ public class R1_HP_K262_Global_Header_SD extends CommonActionHelper{
 	@Then("^Verify signout from my account$")
 	public void verify_signout_from_my_account() throws Throwable {
 		assertTrue(clickOnButton(globalElementHeader.btnMyAccount));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(globalElementHeader.btnSignOut));
 	}
 
@@ -90,7 +91,7 @@ public class R1_HP_K262_Global_Header_SD extends CommonActionHelper{
 	public void user_to_verify_search_for_any_requirement(String data) throws Throwable {
 		
 		waitForPageLoad(driver);
-		Thread.sleep(4000);
+		Thread.sleep(Constants.thread_medium);
 		globalElementHeader.searchBox_M.sendKeys(data);
 		String actText=getText(globalElementHeader.verifyPantInSearch_M);
 	     assertEquals(actText, "pant");
@@ -105,7 +106,7 @@ public class R1_HP_K262_Global_Header_SD extends CommonActionHelper{
 	@Then("^User to click on search button after putting data\"(.*?)\"$")
 	public void user_to_click_on_search_button_after_putting_data(String data) throws Throwable {
 		waitForPageLoad(driver);
-		Thread.sleep(4000);
+		Thread.sleep(Constants.thread_medium);
 		globalElementHeader.searchBox_M.clear();
 		globalElementHeader.searchBox_M.sendKeys(data);
 		clickOnButton(globalElementHeader.searchbtn_M);
@@ -121,7 +122,7 @@ public class R1_HP_K262_Global_Header_SD extends CommonActionHelper{
 
 	@Then("^user to verify global search box functionality\"(.*?)\"$")
 	public void user_to_verify_global_search_box_functionality(String data) throws Throwable {
-		Thread.sleep(4000);
+		Thread.sleep(Constants.thread_medium);
 		   globalElementHeader.searchBox_M.sendKeys(data);
 			clickOnButton(globalElementHeader.searchbtn_M);
 			assertTrue(isDisplayed(globalElementHeader.searchResultText_M));
@@ -167,7 +168,7 @@ waitForElement(globalElementHeader.magnifying_M);
    clickOnButton(globalElementHeader.magnifying_M);
   
    clickOnButton(globalElementHeader.magnifying_M);
-   Thread.sleep(2000);
+   Thread.sleep(Constants.thread_low);
  
 	
 	}
@@ -202,7 +203,7 @@ waitForElement(globalElementHeader.magnifying_M);
 		
 		//scrollPageToWebElement(globalElementHeader.expandAcademyPlus_M);
 		clickOnButton(globalElementHeader.expandAcademyPlus_M);
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 	}
 
 	@Then("^User will verify the presence of Press Release$")

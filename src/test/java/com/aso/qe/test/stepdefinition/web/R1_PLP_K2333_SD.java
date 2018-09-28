@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
 import cucumber.api.java.en.Then;
@@ -42,7 +43,7 @@ public class R1_PLP_K2333_SD extends CommonActionHelper{
 		logger.debug("check category facet is expand");
 
 		if("mobile".equalsIgnoreCase(testtype)){
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			List<WebElement> openCategory = driver.findElements(By.xpath("//div[contains(@data-auid,'facetdrawer_drawer_Category_m')]//i[@class='academyicon icon-minus']"));
 			String categoryOpenCount = ""+openCategory.size();
 			assertEquals(categoryOpenCount,"1");

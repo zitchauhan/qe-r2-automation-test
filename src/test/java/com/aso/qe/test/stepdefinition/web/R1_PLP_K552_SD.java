@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -118,7 +119,7 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	@Then("^User should be able to see the selected PRICE filter Options in selected state$")
 	public void user_should_be_able_to_see_the_selected_PRICE_filter_Options_in_selected_state() throws Throwable {
 		assertTrue(Common_Web_SD.searchProductPO.isPriceOptionSelected());
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 	}
 
 	@When("^User deselects multiple PRICE filter Options$")
@@ -317,7 +318,7 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	@And("^User Click on apply filter button$")
 	public void User_clicks_on_the_filter_ApplyBtn() throws Throwable{
 		assertTrue(clickOnButton(Common_Web_SD.searchProductPO.applyFilterfacet_containerMobile));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		waitForPageLoad(getDriver());
 	}
 	@And ("^user scroll till filter flyout$")
@@ -328,7 +329,7 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	public void User_clicks_on_the_filter_flyout() throws Throwable{
 		waitForElement(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile);
 		assertTrue(isClickable(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile));
-		Thread.sleep(1500);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile));
 		
 	}

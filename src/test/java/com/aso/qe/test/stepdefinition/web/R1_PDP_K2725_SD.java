@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_SIT_PO;
@@ -63,7 +64,7 @@ public class R1_PDP_K2725_SD extends CommonActionHelper {
 	@Then("^click on the prodct card in home page$")
 	public void click_on_the_prodct_card_in_home_page() throws Throwable {
 		waitForPageLoad(driver);//RKA 14 Aug
-		Thread.sleep(10000);
+		Thread.sleep(Constants.thread_highest);
 		Actions hover=new Actions(getDriver());
 		hover.moveToElement(pdpPageObj.btnProdctimage).build().perform();
 		
