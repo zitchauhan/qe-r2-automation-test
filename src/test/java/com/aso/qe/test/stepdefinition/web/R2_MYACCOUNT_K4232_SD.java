@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
@@ -31,14 +32,14 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 		if("mobile".equalsIgnoreCase(testtype)){	
 			scrollPageToWebElement(myAccountPo.myAccount_txt_Mobile);
 			clickOnButton(myAccountPo.myAccount_txt_Mobile);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			scrollPageToWebElement(myAccountPo.addressBook_M);
 			clickOnButton(myAccountPo.addressBook_M);
 		}else {
 			//clickOnButton(myAccountPo.lnkMyAccount);
 			waitForElement(myAccountPo.myAccount_MyAccountList_AddressBook_lnk );
 			assertTrue(clickOnButton(myAccountPo.myAccount_MyAccountList_AddressBook_lnk ));
-			Thread.sleep(5000);
+			Thread.sleep(Constants.thread_medium);
 		}
 		
 	}
@@ -90,14 +91,14 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 	@Then("^user enter Zipcode \"(.*?)\" in address book$")
 	public void user_enter_Zipcode_in_address_book(String arg1) throws Throwable {
 		setInputText(myAccountPo.adr_inpzipCode, webPropHelper.getTestDataProperty(arg1));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 	}
 
 	@Given("^clicks on Add New Address button$")
 	public void clicks_on_Add_New_Address_button() throws Throwable {
 		
 		assertTrue(clickOnButton(myAccountPo.btnAdd));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 	}
 
 	@Given("^user views validation message on all fields$")
@@ -143,7 +144,7 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 			for (WebElement removeAddress : myAccountPo.addresRemove_Btn) {
 
 				clickOnButton(removeAddress);
-				Thread.sleep(2000);
+				Thread.sleep(Constants.thread_low);
 			
 		} }else {
 			assertFalse(isDisplayed(myAccountPo.btnRemove));

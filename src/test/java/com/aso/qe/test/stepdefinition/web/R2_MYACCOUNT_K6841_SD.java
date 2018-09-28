@@ -5,6 +5,7 @@ import static org.junit.Assert.assertFalse;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
@@ -21,14 +22,14 @@ public class R2_MYACCOUNT_K6841_SD extends CommonActionHelper {
 
 	@Then("^User verifies that list of all saved credit/debit cards are displayed$")
 	public void user_verifies_that_list_of_all_saved_credit_debit_cards_are_displayed() throws Throwable {
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(r2_MyAccount_PO.headerBillingInformation));
 	}
 
 	@When("^user clicks on Edit CTA for a selected card$")
 	public void user_clicks_on_Edit_CTA_for_a_selected_card() throws Throwable {
 		assertTrue(clickOnButton(r2_MyAccount_PO.btnEdit));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 	}
 
 	@Then("^user verify all the form fields are pre-populated$")
@@ -78,11 +79,11 @@ public class R2_MYACCOUNT_K6841_SD extends CommonActionHelper {
 	@When("^user fills the credit/debit form$")
 	public void user_fills_the_credit_debit_form() throws Throwable {
 		setInputText(r2_MyAccount_PO.txtCreditCardNumber, webPropHelper.getTestDataProperty("CreditCardNumber"));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		setInputText(r2_MyAccount_PO.txtExpiryDate, webPropHelper.getTestDataProperty("ExpDate"));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		setInputText(r2_MyAccount_PO.txtCVV, webPropHelper.getTestDataProperty("CVV"));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		setInputText(r2_MyAccount_PO.txtFirstNameInAddCreditCard, webPropHelper.getTestDataProperty("FirstName"));
 		setInputText(r2_MyAccount_PO.txtLastNameInAddCreditCard, webPropHelper.getTestDataProperty("LastName"));
 		setInputText(r2_MyAccount_PO.txtAddressInAddCreditCard, webPropHelper.getTestDataProperty("Address"));
@@ -93,7 +94,7 @@ public class R2_MYACCOUNT_K6841_SD extends CommonActionHelper {
 	@When("^user clicks on add cta$")
 	public void user_clicks_on_add_cta() throws Throwable {
 		assertTrue(clickOnButton(r2_MyAccount_PO.PaymentPage_AddCreditCard_Add_btn)); //Sep24 CR-RK KER-2920
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 	}
 
 	@Then("^User updates CC/debit card and billing information$")

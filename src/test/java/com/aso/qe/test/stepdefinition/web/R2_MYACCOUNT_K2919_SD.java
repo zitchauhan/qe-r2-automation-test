@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
@@ -35,7 +36,7 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	
 	@Given("^user clicks on Add New Credit Card button$")
 	public void user_clicks_on_Add_New_Credit_Card_button() throws Throwable {
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		if(isDisplayed(myAccountPo.addNewCardCta))
 			assertTrue(clickOnButton(myAccountPo.addNewCardCta));
 		else
@@ -124,7 +125,7 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	@And("^user enter ZipCode field \"(.*?)\"$")
 	public void user_enter_ZipCode_field(String arg1) throws Throwable {
 		setInputText(myAccountPo.txtZipCodeInAddCreditCard, webPropHelper.getTestDataProperty(arg1));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 	}
 	
 	@Given("^User clicks on cancel$")
@@ -156,13 +157,13 @@ public void user_enter_PhoneNumber_field(String arg1) throws Throwable {
 @Then("^click on Add button$")
 public void click_on_Add_button() throws Throwable {
 	assertTrue(clickOnButton(myAccountPo.btnAddInAddressField));
-	Thread.sleep(5000);
+	Thread.sleep(Constants.thread_medium);
 }
 
 @Then("^click on Add button on credit card page$")
 public void click_on_Add_button_on_credit_card_page() throws Throwable {
 	assertTrue(clickOnButton(myAccountPo.PaymentPage_AddCreditCard_Add_btn));
-	Thread.sleep(5000);
+	Thread.sleep(Constants.thread_medium);
 }
 
 @Given("^click on Add another Credit Card button$")

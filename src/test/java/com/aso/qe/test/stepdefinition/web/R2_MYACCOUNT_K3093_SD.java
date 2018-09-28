@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
@@ -77,7 +78,7 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 	@Then("^user should be able to see \"(.*?)\" Gift card$")
 	public void user_should_be_able_to_see_Gift_card(String arg1) throws Throwable {
 		boolean localFlag = false;
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		for(WebElement txtAddedGiftCard: myAccountPo.txtAddedGiftCardList) {
 	    	if(isDisplayed(txtAddedGiftCard)) {
 	    		String lastFourCharacters = webPropHelper.getTestDataProperty(arg1).substring(webPropHelper.getTestDataProperty(arg1).length() - 4);

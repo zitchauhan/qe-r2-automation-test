@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
@@ -46,7 +47,7 @@ public class R2_MYACCOUNT_K3092_SD extends CommonActionHelper {
 		setInputText(myAccountPo.txtGiftCardNumber, webPropHelper.getTestDataProperty("GIFTCARDNUMBER"));
 		 setInputText(myAccountPo.txtGifCardPin, webPropHelper.getTestDataProperty("GIFTCARDPIN"));
 		 assertTrue(clickOnButton((myAccountPo.btnAddGiftCard)));
-		 Thread.sleep(10000);
+		 Thread.sleep(Constants.thread_highest);
 		 clickOnButton(myAccountPo.btnRemove);
 		}
 	}

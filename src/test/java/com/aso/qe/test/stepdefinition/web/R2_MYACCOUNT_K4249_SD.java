@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
@@ -58,7 +59,7 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	@When("^clicks on Sign Up Button$")
 	public void clicks_on_Sign_Up_Button() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.btnSignUp));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 	}
 
 	@Then("^user should be able to sign up successfully$")

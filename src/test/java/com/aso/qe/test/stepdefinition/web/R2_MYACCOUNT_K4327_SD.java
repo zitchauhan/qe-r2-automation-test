@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.Then;
@@ -32,7 +33,7 @@ public class R2_MYACCOUNT_K4327_SD extends CommonActionHelper {
 	@Then("^user click on view Details$")
 	public void user_click_on_view_Details() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.Order_View_Details_Btn));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 	   
 	}
 	

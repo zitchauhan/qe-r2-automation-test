@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_PDP_PO;
@@ -61,7 +62,7 @@ public class R2_MYACCOUNT_K4012_SD extends CommonActionHelper {
 		
 		for(WebElement ViewOrder:r2MyAccountPo.viewOrderDetailsBtn) {        	   
 	     	 assertTrue(clickOnButton(ViewOrder));
-	     	 Thread.sleep(5000);
+	     	Thread.sleep(Constants.thread_medium);
 			String ordernumber=r2MyAccountPo.MyAccount_OrderDetailsPage_OrderNumber.getText();	
 				if(ordernumber.equalsIgnoreCase(actualOrderNumber)) {		
 					assertTrue(clickOnButton(r2MyAccountPo.Order_Cancel_lnk));	
@@ -78,7 +79,7 @@ public class R2_MYACCOUNT_K4012_SD extends CommonActionHelper {
 		
 		for(WebElement ViewOrder:r2MyAccountPo.viewOrderDetailsBtn) {        	   
 	     	 assertTrue(clickOnButton(ViewOrder));
-	     	 Thread.sleep(5000);
+	     	Thread.sleep(Constants.thread_medium);
 			String ordernumber=r2MyAccountPo.Order_Number_Txt.getText();	
 				if(ordernumber.equalsIgnoreCase(actualOrderNumber)) {		
 					assertTrue(clickOnButton(r2MyAccountPo.Order_Cancel_lnk));	

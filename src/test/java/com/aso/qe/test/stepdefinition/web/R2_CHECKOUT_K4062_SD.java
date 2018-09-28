@@ -10,6 +10,7 @@ import java.util.Set;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_OrderConfirmation_Po;
@@ -120,8 +121,8 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 				if (isDisplayed(r2CheckOutPo.ReviewOrder_Btn))
 					assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 			}
-			Thread.sleep(5000);
-
+			Thread.sleep(Constants.thread_medium); 
+			
 		} else if (arg1.equalsIgnoreCase("gift card")) {
 			boolean chooseGiftCard = true;
 			if (!(userWithoutExistingPaymentDetails)) {
@@ -156,7 +157,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 				// assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 			}
 
-			Thread.sleep(5000);
+			Thread.sleep(Constants.thread_medium);
 			if (isDisplayed(r2CheckOutPo.ReviewOrder_Btn)) {
 				assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 
@@ -170,10 +171,10 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 
 		} else if (arg1.equalsIgnoreCase("PayPal")) {
 			clickOnButton(r2CheckOutPo.PayPal_radioBtn);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			driver.switchTo().frame(r2_r1_fun_po.paypalCheckoutFrame);
 			assertTrue(clickOnButton(r2CheckOutPo.PayPalCheckOut_Btn));
-			Thread.sleep(20000);
+			Thread.sleep(Constants.thread_highest);
 			System.out.println("111");
 			Set<String> set = driver.getWindowHandles();
 			Iterator<String> it = set.iterator();
@@ -255,7 +256,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			// if (isDisplayed(r2CheckOutPo.ReviewOrder_Btn)) {
 			assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 			// waitForElement(r2CheckOutPo.btnPlaceOrderPaymentPage);
-			Thread.sleep(5000);
+			Thread.sleep(Constants.thread_medium);
 			// }
 
 			// r2_CheckOut_k3132_SD.user_fill_the_payment_details();
@@ -272,15 +273,15 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, r2MyAccountPO.generateRandomEmailId());
 			assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 			// waitForElement(r2CheckOutPo.btnPlaceOrderPaymentPage);
-			Thread.sleep(5000);
+			Thread.sleep(Constants.thread_medium);
 			// }
 
 		} else if (arg1.equalsIgnoreCase("PayPal")) {
 			clickOnButton(r2CheckOutPo.PayPal_radioBtn);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			driver.switchTo().frame(r2_r1_fun_po.paypalCheckoutFrame);
 			assertTrue(clickOnButton(r2CheckOutPo.PayPalCheckOut_Btn));
-			Thread.sleep(20000);
+			Thread.sleep(Constants.thread_highest);
 			System.out.println("111");
 			Set<String> set = driver.getWindowHandles();
 			Iterator<String> it = set.iterator();
