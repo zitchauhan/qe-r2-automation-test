@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 
 public class R2_Sanity_PO extends CommonActionHelper {
 	
@@ -130,25 +131,25 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	}
 
 	public void verifyOrderSummaryOnCartPage() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(AS_txtSubtotalCart));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(AS_txtEstimatedShippingCart));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(AS_txtEstimatedTaxesCart));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(AS_txtTotalCart));
 
 	}
 
 	public void verifyRecalculatedOrderSummaryOnCartPage() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(AS_txtSubtotalCart));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(AS_txtEstimatedShippingCart));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(AS_txtEstimatedTaxesCart));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(AS_txtTotalCart));
 
 	}
@@ -158,7 +159,7 @@ public class R2_Sanity_PO extends CommonActionHelper {
 		assertTrue(clickOnButton(AS_iconPlusPromoCode));
 		setInputText(AS_inputPromoCode, webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(AS_btnCartSubmit));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 	}
 	/***************************** END METHODS*********************************/
 

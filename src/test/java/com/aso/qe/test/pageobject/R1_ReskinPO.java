@@ -11,6 +11,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
+
 import java.util.Date;
 
 public class R1_ReskinPO extends CommonActionHelper {
@@ -90,7 +92,7 @@ public class R1_ReskinPO extends CommonActionHelper {
 			Boolean flag = false;
 			waitForElement(cartremove);
 			assertTrue(clickOnButton(cartremove));
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			String cartmsg = getText(removecartmsg);
 			String filtercartmsg = cartmsg.replace("'", "");
 			String filterActualRemoveCartMsg = "THE ITEM WAS REMOVED FROM THE SHOPPING CART.";
@@ -105,7 +107,7 @@ public class R1_ReskinPO extends CommonActionHelper {
 			int incqty1 = Integer.parseInt(qtyincrease1);
 			waitForElement(btntoincreaseqty);
 			assertTrue(clickOnButton(btntoincreaseqty));
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			String qtyincrease2 = inputcartqty.getAttribute("value");
 			int incqty2 = Integer.parseInt(qtyincrease2);
 			flag = incqty2 > incqty1;
@@ -119,7 +121,7 @@ public class R1_ReskinPO extends CommonActionHelper {
 			int incqty1 = Integer.parseInt(qtyincrease1);
 			inputcartqty.clear();
 			inputcartqty.sendKeys("4");
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			String qtyincrease2 = inputcartqty.getAttribute("value");
 			System.err.println(qtyincrease2);
 			int incqty2 = Integer.parseInt(qtyincrease2);
@@ -135,7 +137,7 @@ public class R1_ReskinPO extends CommonActionHelper {
 			String qtydecreace1 = inputcartqty.getAttribute("value");
 			int decqty1 = Integer.parseInt(qtydecreace1);
 			waitForElement(btntodecreaseqty).isEnabled();
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			assertTrue(clickOnButton(btntodecreaseqty));
 			String qtydecrease2 = inputcartqty.getAttribute("value");
 			System.err.println(qtydecrease2);
@@ -151,7 +153,7 @@ public class R1_ReskinPO extends CommonActionHelper {
 			int incqty1 = Integer.parseInt(qtydecrease1);
 		    inputcartqty.clear();
 			inputcartqty.sendKeys("4");
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			String qtydecrease2 = inputcartqty.getAttribute("value");
 			int incqty2 = Integer.parseInt(qtydecrease2);
 			flag = incqty1 > incqty2;
@@ -179,7 +181,7 @@ public class R1_ReskinPO extends CommonActionHelper {
 
 	public void clickOnwishListLink() throws InterruptedException {
 		clickOnLink(tabWishList);
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 	}
 
 	public boolean isWishListBtnDisplayed() {
@@ -192,7 +194,7 @@ public class R1_ReskinPO extends CommonActionHelper {
 	public void clickOnNewwishListBtn() throws InterruptedException {
 		if (isWishListBtnDisplayed()) {
 			clickOnButton(newWishListBtn);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 		} else {
 			logger.debug("wish list button is not diplayed");
 		}

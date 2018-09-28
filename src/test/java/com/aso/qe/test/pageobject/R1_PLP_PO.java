@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 
 public class R1_PLP_PO extends CommonActionHelper{
 
@@ -139,12 +140,12 @@ public class R1_PLP_PO extends CommonActionHelper{
 		if("mobile".equalsIgnoreCase(testtype)){
 			Actions hover=new Actions(getDriver());
 			hover.moveToElement(txtFeaturedCategories);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 		}
 		else
 		{
 			scrollPageToWebElement(txtFeaturedCategories);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 		}	
 	}
 	

@@ -17,6 +17,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.stepdefinition.web.Common_Web_SD;
 
 public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper 
@@ -718,14 +719,14 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	public void navigateToPLPViaClick_Desktop() throws Exception
 	{
 		{
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnShopCategory));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			//Actions hover = new Actions(getDriver());
 			moveHover(btnClothingCategory);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnMenClothingShop));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 		
 		}
@@ -742,37 +743,37 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	public void navigateToPLPViaClick_Mobile() throws Exception
 	{
 		/*clickOnBurgerMenu();
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(btnClothingCategory));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(btnMen_Clothing_Shop));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(btnMensShirt_Men_Clothing_Shop));
-		Thread.sleep(2000);*/
+		Thread.sleep(Constants.thread_low);*/
 		
 		
 		if("mobile".equalsIgnoreCase(testtype))
 		{
 			assertTrue(clickOnButton(btnBurgerMenu));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnClothingCategory)); //4Sep
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnMenClothingShop));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.txtToNavigateMensBurgerMenuMobile));
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			
 		}
 		else
 		{
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnShopCategory));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			//Actions hover = new Actions(getDriver());
 			moveHover(btnClothingCategory);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnMenClothingShop));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 		
 		}
@@ -783,25 +784,25 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		if("mobile".equalsIgnoreCase(testtype))
 		{
 			assertTrue(clickOnButton(btnBurgerMenu));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnClothingCategory)); //4Sep
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnMenClothingShop));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.txtToNavigateMensBurgerMenuMobile));
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			
 		}
 		else
 		{
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnShopCategory));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			//Actions hover = new Actions(getDriver());
 			moveHover(btnClothingCategory);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnMenClothingShop));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 		
 		}
@@ -853,7 +854,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		if("mobile".equalsIgnoreCase(testtype)){
 			Actions actions = new Actions(driver);
 			actions.moveToElement(txtSearchBox_mobile);
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			actions.click();
 			actions.sendKeys("Columbia Sportswear Men's Dorado CVO PFG Boat Shoes");
 			actions.build().perform();
@@ -861,7 +862,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 
 			Actions actions = new Actions(driver);
 			actions.moveToElement(txtSearchBox);
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			actions.click();
 			//actions.sendKeys("Magellan Outdoors Men's Eagle Pass Deluxe Long Sleeve Shirt");
 			actions.sendKeys("Columbia Sportswear Men's Dorado CVO PFG Boat Shoes");
@@ -881,14 +882,14 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			//			actions.sendKeys("Clothing");
 			//			Thread.sleep(2000);
 			//			actions.build().perform();
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			txtSearchBox_mobile.sendKeys("Clothing");
 
 		}else {
 
 			Actions actions = new Actions(driver);
 			actions.moveToElement(txtSearchBox);
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			actions.click();
 			actions.sendKeys("Clothing");
 			actions.build().perform();
@@ -902,7 +903,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			actions.moveToElement(txtSearchBox_mobile);
 			actions.click();
 			actions.sendKeys("Running Shoes");
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			actions.build().perform();
 			assertTrue(clickOnButton(btnGO_mobile));
 			//scrollPageToWebElement(btnNext);
@@ -913,7 +914,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 
 			Actions actions = new Actions(driver);
 			actions.moveToElement(txtSearchBox);
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			actions.click();
 			actions.sendKeys("Running Shoes");
 			actions.build().perform();
@@ -930,14 +931,14 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			Actions actions = new Actions(driver);
 			actions.moveToElement(txtSearchBox_mobile);
 			actions.click();
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			actions.sendKeys("null");
 			actions.build().perform();
 		}else {
 
 			Actions actions = new Actions(driver);
 			actions.moveToElement(txtSearchBox);
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			actions.click();
 			actions.sendKeys("null");
 			actions.build().perform();
@@ -949,7 +950,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		if("mobile".equalsIgnoreCase(testtype)){
 			Actions actions = new Actions(driver);
 			actions.moveToElement(txtSearchBox_mobile);
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			actions.click();
 			actions.sendKeys("red");
 			actions.build().perform();
@@ -957,7 +958,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 
 			Actions actions = new Actions(driver);
 			actions.moveToElement(txtSearchBox);
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			actions.click();
 			actions.sendKeys("red");
 			actions.build().perform();
@@ -967,7 +968,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	}
 	public void clickOnButton() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnGO_mobile));
 			logger.debug("btnGO is clicked");
 		}else {
@@ -1036,7 +1037,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		boolean flag = false;
 		if("mobile".equalsIgnoreCase(testtype))
 		{
-			Thread.sleep(2000);//danush
+			Thread.sleep(Constants.thread_low); //danush
 			txtSearchBox_mobile.clear();
 			Actions actions = new Actions(driver);
 			actions.moveToElement(txtSearchBox_mobile);
@@ -1061,7 +1062,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			actions.moveToElement(txtSearchBox);
 			actions.click();
 			actions.sendKeys(inputSearchTxt);
-			Thread.sleep(1000);//anil
+			Thread.sleep(Constants.thread_low); //anil
 			actions.build().perform();
 			flag = isDisplayed(suggestionFlyout);
 			if(flag==true) {
@@ -1089,9 +1090,9 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			actions.moveToElement(txtSearchBox_mobile);
 			actions.click();
 			actions.sendKeys(inputSearchTxt);
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low); 
 			actions.build().perform();
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low); 
 			flag = isDisplayed(suggestionFlyout);
 			if(flag==true) {
 			for(WebElement txt: listsuggestion){
@@ -1111,7 +1112,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			HashMap<String, String> seachMap = new HashMap<String, String>();
 			Actions actions = new Actions(driver);
 			actions.moveToElement(txtSearchBox);
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			actions.click();
 			actions.sendKeys(inputSearchTxt);
 			actions.build().perform();
@@ -1176,9 +1177,9 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		}}
 
 	public void clickexpandall_academy() throws Exception{
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(expandall_Academy_academy));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 
 	}
 	public void validatingOurhistory() throws Exception{
@@ -1370,7 +1371,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	public void validatingsignupformoredeals() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			scrollPageToWebElement(lnkSIGNUPFORMOREDEALS);
-			Thread.sleep(500);  //waiting for the search to disappear
+			Thread.sleep(Constants.thread_low);   //waiting for the search to disappear
 			isDisplayed(lnkSIGNUPFORMOREDEALS);
 			assertTrue(isClickable(lnkSIGNUPFORMOREDEALS));
 			logger.debug("lnkcustomercare link is not displayed");
@@ -1455,7 +1456,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 
 	public void findAndClickStoreinGH() throws Exception{
 		waitForPageLoad(driver);
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 
 		if(isDisplayed(txtFindAStore)) {
 
@@ -1479,7 +1480,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		if(isDisplayed(txtFindAStoreMobile)) {	
 			scrollPageToWebElement(txtFindAStoreMobile);
 			waitForElement(txtFindAStoreMobile);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
            
 			moveHover(txtFindAStoreMobile);
 			clickOnLink(txtFindAStoreMobile);
@@ -1637,9 +1638,9 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		//		actions.sendKeys(Keys.BACK_SPACE);
 		//		actions.sendKeys(Keys.BACK_SPACE);
 		//		actions.sendKeys(inputSearchTxt);
-		//		Thread.sleep(1000);
+		//		Thread.sleep(Constants.thread_low); 
 		//		actions.build().perform();
-		//		Thread.sleep(1000);
+		//		Thread.sleep(Constants.thread_low); 
 		assertTrue(isDisplayed(listsuggestion_productcard));
 		assertTrue(clickOnButton(listsuggestion_productcard));
 
@@ -1652,14 +1653,14 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
         if("mobile".equalsIgnoreCase(testtype)){
                Actions actions = new Actions(driver);
                actions.moveToElement(txtSearchBox_mobile);
-               Thread.sleep(3000);
+               Thread.sleep(Constants.thread_medium);  
                actions.click();
                actions.sendKeys(str);
                actions.build().perform();
         }else {
                Actions actions = new Actions(driver);
                actions.moveToElement(txtSearchBox);
-               Thread.sleep(3000);
+               Thread.sleep(Constants.thread_medium);  
                actions.click();
                actions.sendKeys(str);
                actions.build().perform();
@@ -1701,14 +1702,14 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	}
 
 	public void navigateToL2ViaClick_DesktopHomepage() throws Exception{
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);  
 		assertTrue(clickOnButton(btnShopCategory));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);  
 		Actions hover = new Actions(getDriver());
 		hover.moveToElement(btnClothingCategory).build().perform();
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);  
 		assertTrue(clickOnButton(btnMens_Clothing_Shop));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);  
 	}	
 	
 	
@@ -1719,25 +1720,25 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		
 		if("mobile".equalsIgnoreCase(testtype))
 		{
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnClothingCategory)); //4Sep
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(btnMenClothingShop));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.txtToNavigateMensBurgerMenuMobile));
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low); 
 			
 		}
 		else
 		{
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(btnShopCategory));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 			//Actions hover = new Actions(getDriver());
 			moveHover(btnClothingCategory);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(btnMenClothingShop));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 			//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 			
 			
@@ -1746,13 +1747,13 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 
 
 	public void navigateToL3ViaClick_DesktopHomepage() throws Exception{
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		assertTrue(clickOnButton(btnShopCategory));
 		Actions hover = new Actions(getDriver());
 		hover.moveToElement(btnClothingCategory).build().perform();
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		assertTrue(clickOnButton(btnMenClothingShop));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 	}	
 
 	public void enterthePDPSearchData() throws Exception{
@@ -1813,21 +1814,21 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		if("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(btnSHOPBurgerMenuMinusIcon));
 			scrollPageToWebElement(btnMyAccountMobile);
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(btnMyAccountMobile));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(btnSignOut_M));
 			waitForElement(btnBurgerMenu);
 			assertTrue(isDisplayed(btnBurgerMenu));
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			assertTrue(clickOnButton(btnBurgerMenu));
 			assertTrue(isDisplayed(btnMyAccountBurgerMenu));
 
 		}else {
 			assertTrue(clickOnButton(btnMyAccount));
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnSignOut));
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 //			assertTrue(isDisplayed(btnSignIn));
 //			sit_po.verifySigninpage();
 		}
@@ -1871,11 +1872,11 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		if(isDisplayed(btnBurgerMenu)) {
 //			Thread.sleep(3000);
 			assertTrue(clickOnButton(btnBurgerMenu));
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			}
 			else {
 				driver.navigate().refresh();
-				Thread.sleep(1000);
+				Thread.sleep(Constants.thread_low);
 			}
 	}
 	//SID UserJourney 22-August

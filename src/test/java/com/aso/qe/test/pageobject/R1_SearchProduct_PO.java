@@ -361,7 +361,7 @@ public class R1_SearchProduct_PO extends CommonActionHelper {
 	}
 
 	public boolean clickAllPlusFilterOptions() throws InterruptedException {
-		Thread.sleep(100);
+		Thread.sleep(Constants.thread_low);
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			boolean flag = false;
 			for (WebElement plusElement : filterIconPlusListMobile) {
@@ -391,7 +391,7 @@ public class R1_SearchProduct_PO extends CommonActionHelper {
 	}
 
 	public boolean checkAllfilterOptionsExpandedIsDisplayed() throws InterruptedException {
-		Thread.sleep(100);
+		Thread.sleep(Constants.thread_low);
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
 
@@ -424,7 +424,7 @@ public class R1_SearchProduct_PO extends CommonActionHelper {
 	}
 
 	public boolean clickAllMinusFilterOptions() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			boolean flag = false;
 			for (WebElement minusElement : filterIconMinusListMobile) {
@@ -489,7 +489,7 @@ public class R1_SearchProduct_PO extends CommonActionHelper {
 
 	public boolean selectAllUnselectFacetCheckBox(List<WebElement> facet_price_CheckBox_List)
 			throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		boolean flag = false;
 		logger.debug("CheckBox_List Size:: " + facet_price_CheckBox_List.size());
 		for (WebElement element : facet_price_CheckBox_List) {
@@ -519,7 +519,7 @@ public class R1_SearchProduct_PO extends CommonActionHelper {
 
 	public boolean checkboxProductCount(List<WebElement> facet_price_CheckBox_List) throws InterruptedException {
 		boolean flag = false;
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		try {
 			logger.debug("  ::__CheckBox_List Size:: " + facet_price_CheckBox_List.size());
 			for (WebElement element : facet_price_CheckBox_List) {
@@ -549,7 +549,7 @@ public class R1_SearchProduct_PO extends CommonActionHelper {
 	}
 
 	public int getFilterCheckBoxsProductCount(List<WebElement> facet_price_CheckBox_List) throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		int productCount = 0;
 		try {
 			logger.debug("  ::__CheckBox_List Size:: " + facet_price_CheckBox_List.size());
@@ -577,7 +577,7 @@ public class R1_SearchProduct_PO extends CommonActionHelper {
 	}
 
 	public int getFacetProductCount(WebElement facetProductCount) throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		int productCount = 0;
 		try {
 			String facetFilterTxt = getText(facetProductCount);
@@ -597,7 +597,7 @@ public class R1_SearchProduct_PO extends CommonActionHelper {
 	}
 
 	public boolean isPriceOptionSelected() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		boolean flag = false;
 		for (WebElement element : chkbox_price_selected) {
 			flag = isDisplayed(element);
@@ -611,14 +611,14 @@ public class R1_SearchProduct_PO extends CommonActionHelper {
 	}
 
 	public void deSelectMultiplePriceOption() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		clickOnButton(chkbox_PriceOption1);
 		clickOnButton(chkbox_PriceOption2);
 		clickOnButton(chkbox_PriceOption3);
 	}
 
 	public boolean isPriceOptionDeSelected() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		boolean flag = false;
 		for (WebElement element : chkbox_price_deselected) {
 			flag = isDisplayed(element);
@@ -632,7 +632,7 @@ public class R1_SearchProduct_PO extends CommonActionHelper {
 	}
 
 	public void verifyProductName() throws Exception {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			String actualProductNameTxt = getText(Common_Web_SD.searchProductPO.productname_mobile);
 			logger.debug("actualProductNameTxt:: " + actualProductNameTxt);

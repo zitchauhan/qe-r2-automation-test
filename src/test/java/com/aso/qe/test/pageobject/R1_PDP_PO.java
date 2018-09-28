@@ -18,6 +18,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 
 public class R1_PDP_PO extends CommonActionHelper
 {
@@ -266,12 +267,12 @@ public class R1_PDP_PO extends CommonActionHelper
 
 	public void cilckAnswerThisQuestion() throws Exception {
 		assertTrue(clickOnButton(btnAnswerQuestion));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 	}
 
 	public void cilckOnCancel() throws Exception {
 		assertTrue(clickOnButton(btnCancel));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 	}
 	//KER-1952 End CR-AKK
 
@@ -421,15 +422,15 @@ public class R1_PDP_PO extends CommonActionHelper
 	
 	//SID 28-August
 	public void navigateToMultipleSKU() throws Exception {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(btnShopCategory1));
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		Actions hover = new Actions(getDriver());
 		hover.moveToElement(btnSportsCategory).build().perform();
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		hover.moveToElement(btnFootballHelmetsCategory).build().perform();
 		clickOnLink(btnFootballHelmetsCategory);
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 	}
 
 	//SID 28-AUgust
@@ -438,24 +439,24 @@ public class R1_PDP_PO extends CommonActionHelper
 		Actions hover = new Actions(getDriver());
 		hover.moveToElement(imgHelmetSKUCategory).click().build().perform();
 //		assertTrue(clickOnButton(imgHelmetSKUCategory));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 	}
 
 	public void navigateToMultipleSKU_Mobile() throws Exception {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		assertTrue(clickOnButton(btnSportsCategory_M));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		assertTrue(clickOnButton(btnFootballCategory_M));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		assertTrue(clickOnButton(HelmetsCategory_M));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_low); 
 	}
 	// KER-3728 End CR-AKK
 
 	public void moveToPdpImage1() throws Exception {
 		Actions hover = new Actions(getDriver());
 		hover.moveToElement(pdpImage1).build().perform();
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 	}
 	//KER-737 End CR-AKK
 
@@ -612,7 +613,7 @@ public class R1_PDP_PO extends CommonActionHelper
 		String productPrice = getText( txtPdpprice);
 		String productTitle = getText( txtProductTitle);
 		assertTrue(clickOnButton(btnAddToCart));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium); 
 		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),"+"\""+productTitle+"\""+")]"));//SID
 		WebElement actualPriceInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),'"+productPrice+"')]"));
 		String productImageAddToCartPopup = imgAddToCartPopup.getAttribute("src");
@@ -633,7 +634,7 @@ public class R1_PDP_PO extends CommonActionHelper
 		String productPrice = getText( txtPdpprice);
 		String productTitle = getText( txtProductTitle);
 		assertTrue(clickOnButton(btnAddToCart));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium); 
 		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),"+"\""+productTitle+"\""+")]"));//SID
 		WebElement actualPriceInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),'"+productPrice+"')]"));
 		String productImageAddToCartPopup = imgAddToCartPopup.getAttribute("src");

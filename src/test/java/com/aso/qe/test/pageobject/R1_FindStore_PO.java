@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 
 public class R1_FindStore_PO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_FindStore_PO.class);
@@ -71,7 +72,7 @@ public class R1_FindStore_PO extends CommonActionHelper {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			scrollPageToWebElement(txtStroeText_m);
 			waitForElement(txtStroeText_m);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			if (isDisplayed(txtStroeText_m))
 				logger.debug("Store Name is displayed");
 			else

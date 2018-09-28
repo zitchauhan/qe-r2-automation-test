@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 
 public class R2_R1_Fun_PO extends CommonActionHelper 
 {
@@ -58,17 +59,17 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 				assertTrue(clickOnButton(tabGrillOutdoor_M));
 				waitForElement(clickGrillsOutdoorTab);
 				assertTrue(clickOnButton(clickGrillsOutdoorTab));
-				Thread.sleep(2000);
+				Thread.sleep(Constants.thread_low);
 
 			} else{
 				
 				assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
-				Thread.sleep(2000);
+				Thread.sleep(Constants.thread_low);
 				Actions hover = new Actions(getDriver());
 				hover.moveToElement(tabHomeBackyard).build().perform();
-				Thread.sleep(2000);
+				Thread.sleep(Constants.thread_low);
 				assertTrue(clickOnButton(tabGrillOutdoor));
-				Thread.sleep(2000);
+				Thread.sleep(Constants.thread_low);
 			}
 
 	   }
@@ -135,7 +136,7 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 			assertTrue(clickOnButton(tabWatches));
 			waitForElement(selectMensWatch);
 			assertTrue(clickOnButton(selectMensWatch));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 
 		} else{
 			
@@ -148,7 +149,7 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 			assertTrue(clickOnButton(lnkMensWatches));
 			waitForElement(selectMensWatch);
 			assertTrue(clickOnButton(selectMensWatch));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 		}
 
    }

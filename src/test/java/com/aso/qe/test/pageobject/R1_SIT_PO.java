@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 
 public class R1_SIT_PO extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(R1_SIT_PO.class);
@@ -359,7 +360,7 @@ public void cleartext() throws Exception{
 	public void verifyShippingaddress() throws InterruptedException {
 		waitForElement(shippingAddress);
 		isDisplayed(shippingAddress);
-		Thread.sleep(7000);
+		Thread.sleep(Constants.thread_high);
 		clickOnLink(shippingAddress);
 	}
 
@@ -417,17 +418,17 @@ public void cleartext() throws Exception{
 		}
 		
 		public void verifyVisapwd() throws Exception {
-			Thread.sleep(20000);
+			Thread.sleep(Constants.thread_low); 
 			driver.switchTo().frame("Cardinal-CCA-IFrame");
 			driver.switchTo().frame("authWindow");
-			Thread.sleep(5000);
+			Thread.sleep(Constants.thread_medium);
 			getDriver().findElement(By.xpath("//tr/td/img")).isDisplayed();
 			setInputText(txtpwd, "1234");
-			Thread.sleep(4000);
+			Thread.sleep(Constants.thread_medium);
 			btnsubmit.click();
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			getDriver().switchTo().defaultContent();
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			
 		}
 		
