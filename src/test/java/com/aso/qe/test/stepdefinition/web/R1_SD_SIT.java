@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_SIT_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
@@ -59,7 +60,7 @@ public class R1_SD_SIT extends CommonActionHelper {
 
 	@Then("^user should rename the created WishList$")
 	public void user_should_rename_the_created_WishList() throws Throwable {
-		Thread.sleep(300);
+		Thread.sleep(Constants.thread_low); 
 		isClickable(sit_po.btnrenamewishlist);
 		waitForElement(sit_po.btnrenamewishlist);
 		assertTrue(clickOnButton(sit_po.btnrenamewishlist));
@@ -76,14 +77,14 @@ public class R1_SD_SIT extends CommonActionHelper {
 
 	@Then("^user should delete the created WishList$")
 	public void user_should_delete_the_created_WishList() throws Throwable {
-		Thread.sleep(300);
+		Thread.sleep(Constants.thread_low); 
 		isClickable(sit_po.btndeletewishlist);
 		waitForElement(sit_po.btndeletewishlist);
-		Thread.sleep(300);
+		Thread.sleep(Constants.thread_low); 
 		assertTrue(clickOnButton(sit_po.btndeletewishlist));
 		assertTrue(isDisplayed(sit_po.tltDeletewishlist));
 		assertTrue(clickOnButton(sit_po.btndeletecancel));
-		Thread.sleep(300);
+		Thread.sleep(Constants.thread_low); 
 		isClickable(sit_po.btndeletewishlist);
 		waitForElement(sit_po.btndeletewishlist);
 		assertTrue(clickOnButton(sit_po.btndeletewishlist));
@@ -159,7 +160,7 @@ public class R1_SD_SIT extends CommonActionHelper {
 
 	@Then("^user click on Add New Address button$")
 	public void user_click_on_Add_New_Address_button() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		clickOnButton(sit_po.btnNewAddress);
 	}
 
@@ -183,23 +184,23 @@ public class R1_SD_SIT extends CommonActionHelper {
 		assertTrue(isDisplayed(sit_po.txtAddressverification));
 		clickOnButton(sit_po.btncontinue);
 		assertTrue(isDisplayed(sit_po.txtAddresssuccessmsg));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		clickOnButton(sit_po.btnok);
 
 	}
 
 	@Then("^user click on edit button$")
 	public void user_click_on_edit_button() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		clickOnButton(sit_po.btnedit);
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 	}
 
 	@Then("^user modify the address and click on continue button and ok button$")
 	public void user_modify_the_address_and_click_on_continue_button_and_ok_button() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		sit_po.cleartext();
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		// sit_po.enterPhoneNumber();
 		sit_po.txtclearphonenumber.sendKeys("1234567890");
 		assertTrue(clickOnButton(sit_po.btneditsavebutton));
@@ -208,7 +209,7 @@ public class R1_SD_SIT extends CommonActionHelper {
 		assertTrue(isDisplayed(sit_po.txteditAddresssuccessmsg));
 		assertTrue(clickOnButton(sit_po.btneditok));
 		System.out.println("123");
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 
 	}
 
@@ -278,13 +279,13 @@ public class R1_SD_SIT extends CommonActionHelper {
 	@Then("^user should able to click on Signin button$")
 	public void user_should_able_to_click_on_Signin_button() throws Throwable {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low); 
 			clickOnButton(globalElementHeader.btnSHOPBurgerMenuMinusIcon);
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low); 
 			scrollPageToWebElement(globalElementHeader.btnSignIn_mobile);
 			waitForElement(globalElementHeader.btnSignIn_mobile);
 			clickOnButton(globalElementHeader.btnSignIn_mobile);
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low); 
 		} else {
 			assertTrue(clickOnButton(globalElementHeader.btnSignIn));
 		}
@@ -389,7 +390,7 @@ public class R1_SD_SIT extends CommonActionHelper {
 	public void user_should_click_on_continue_to_review_button() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		assertTrue(clickOnButton(sit_po.btncontinuetoreview));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 	}
 	
 	@Then("^user should able to see shipping Address page$")
@@ -413,7 +414,7 @@ public class R1_SD_SIT extends CommonActionHelper {
 	@And("^user enter verified by visa password and click on submit button$")
 	public void user_enter_verified_by_visa_password_and_click_on_submit_button() throws Throwable 
 	{
-		Thread.sleep(20000);
+		Thread.sleep(Constants.thread_highest); 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated((By.name("Cardinal-CCA-IFrame"))));
 		driver.switchTo().frame("Cardinal-CCA-IFrame");
@@ -421,15 +422,15 @@ public class R1_SD_SIT extends CommonActionHelper {
 		wait.until(ExpectedConditions.visibilityOfElementLocated((By.name("authWindow"))));
 		driver.switchTo().frame("authWindow");
 		System.out.println("3333");
-		Thread.sleep(5000);
+		Thread.sleep(Constants.thread_medium);
 		getfindElementByXPath("//tr/td/img").isDisplayed();//SID 11-August-18
 		setInputText(sit_po.txtpwd, "1234"); //SID 11-August-18
 		System.out.println("4444");
 		assertTrue(clickOnButton(sit_po.btnsubmit));
 		System.out.println("555");
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		getDriver().switchTo().defaultContent();
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 
 	}
 	
@@ -461,7 +462,7 @@ public class R1_SD_SIT extends CommonActionHelper {
 	@Then("^user should click on Place Order Now button$")
 	public void on() throws Throwable {
 		assertTrue(clickOnButton(sit_po.btnplaceordernow));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		if(isDisplayed(sit_po.noInventoryAtCheckout)) {
 			if(clickOnButton(sit_po.btnplaceordernow)) {
 				assertTrue(clickOnButton(sit_po.btnplaceordernow));

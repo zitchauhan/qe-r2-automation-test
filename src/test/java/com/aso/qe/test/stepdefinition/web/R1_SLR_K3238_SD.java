@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
@@ -29,19 +30,19 @@ public class R1_SLR_K3238_SD extends CommonActionHelper{
 	public void user_navigates_to_PLP_of_outdoor() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
 			isClickable(globalElementHeader.txtOutDoor_M);
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(globalElementHeader.txtOutDoor_M));
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(globalElementHeader.txtShooting_M));
 			 assertTrue(clickOnButton(globalElementHeader.txtShootingNavg_M));
 		}
 		else
 		{
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
 			Actions hover = new Actions(getDriver());
 			hover.moveToElement(globalElementHeader.txtOutDoor).build().perform();
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(globalElementHeader.txtShooting));
 			
 		}
@@ -53,7 +54,7 @@ public class R1_SLR_K3238_SD extends CommonActionHelper{
 	public void user_clicks_on_the_shooting_and_navigates_to_PDP_of_the_product() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
 			scrollPageToWebElement(plp_po.drpdwnSortByScrollMobile);
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(plp_po.productPLP1_Mobile));
 		}
 		else

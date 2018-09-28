@@ -3,6 +3,7 @@ package com.aso.qe.test.stepdefinition.web;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
@@ -61,13 +62,13 @@ public class R1_SLR_K3964_SD extends CommonActionHelper{
 		{
 		//globalElementHeader.clickOnButton();
 		waitForPageLoad(driver);
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		clickOnButton(globalElementHeader.magnify_M);
 		}
 		else
 		{
 		       waitForPageLoad(driver);
-		       Thread.sleep(2000);
+		       Thread.sleep(Constants.thread_low); 
 		              clickOnButton(globalElementHeader.btnSearch_Desktop);  
 
 		}

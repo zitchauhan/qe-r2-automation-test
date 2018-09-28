@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
@@ -67,7 +68,7 @@ public class R1_SLR_K3276_SD extends CommonActionHelper {
 	@Then("^user enter \"(.*?)\" in search box and wait for auto suggest pop up$")
 	public void user_enter_in_search_box_and_wait_for_auto_suggest_pop_up1(String arg1) throws Throwable {
 		waitForPageLoad(driver);
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		R1_SearchProduct_PO.searchTextBox.sendKeys( webPropHelper.getTestDataProperty(arg1));
 		
 	}
@@ -88,13 +89,13 @@ public class R1_SLR_K3276_SD extends CommonActionHelper {
 	@Then("^user enter \"(.*?)\" in search box and wait for auto suggest pop up for first data$")
 	public void user_enter_in_search_box_and_wait_for_auto_suggest_pop_up_for_first_data(String go) throws Throwable {
 		waitForPageLoad(driver);
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		R1_SearchProduct_PO.searchTextBox.sendKeys( webPropHelper.getTestDataProperty(go));
 	}
 
 	@Then("^user enter \"(.*?)\" in search box and wait for auto suggest pop up for second data$")
 	public void user_enter_in_search_box_and_wait_for_auto_suggest_pop_up_for_second_data(String shi) throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 
 		R1_SearchProduct_PO.searchTextBox.clear();
 		R1_SearchProduct_PO.searchTextBox.sendKeys( webPropHelper.getTestDataProperty(shi));
@@ -102,7 +103,7 @@ public class R1_SLR_K3276_SD extends CommonActionHelper {
 	
 	@Then("^user enter \"(.*?)\" in search box and wait for auto suggest pop up for third data$")
 	public void user_enter_in_search_box_and_wait_for_auto_suggest_pop_up_for_third_data(String golf) throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		R1_SearchProduct_PO.searchTextBox.clear();
 		R1_SearchProduct_PO.searchTextBox.sendKeys( webPropHelper.getTestDataProperty(golf));
 	}
