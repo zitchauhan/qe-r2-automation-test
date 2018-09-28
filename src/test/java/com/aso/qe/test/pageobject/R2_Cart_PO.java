@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -426,6 +427,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 //	public WebElement cartEmptyMsg;//keep it
 
 	// End KER-2926 CR-MS
+	@FindBy(xpath = "//*[@data-auid='findAStore']/a/span[1]")
+	public WebElement selectStoreMiniBalloon;
 	/***************************** END XPAHTS ********************************/
 
 	/***************************** START METHODS 
@@ -612,10 +615,39 @@ public class R2_Cart_PO extends CommonActionHelper {
 	        assertTrue(clickOnButton(makeMyStore_btn));
 		} }
 	// End KER-2939 CR-AKK
-	
-	
-	
-	
+	// Start KER-4231 CR-GK
+	public void selectStoreWithZipAndStoreName(String zipCode, String storeName) {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(lnkFindAStore_M));
+			waitForElement(txtZipCode);
+			txtZipCode.clear();
+			setInputText(txtZipCode, zipCode);
+			try {
+				assertTrue(clickOnButton(btnZipCode));
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				logger.debug("Exception in setting up the store");
+				e.printStackTrace();
+			}
+			assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
+			assertTrue(clickOnButton(makeMyStore_btn));
+		} else {
+			assertTrue(clickOnButton(selectStoreMiniBalloon));
+			waitForElement(txtZipCode);
+			txtZipCode.clear();
+			setInputText(txtZipCode, zipCode);
+			try {
+				assertTrue(clickOnButton(btnZipCode));
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				logger.debug("Exception in setting up the store");
+				e.printStackTrace();
+			}
+			assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
+			assertTrue(clickOnButton(makeMyStore_btn));
+		}
+
+	}
 	public void emptyCart() throws InterruptedException {
 		
 		waitForPageLoad(driver);

@@ -11,7 +11,7 @@ Scenario: Verify Authenticated user able to see the BOPIS items for pickup
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
-	And user sets up a store for "FindStoreZipcode" 
+	And user selects store with "FindStoreZipcode" and "storeName1" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -30,7 +30,7 @@ Scenario:
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
-	And user sets up a store for "FindStoreZipcode" 
+	And user selects store with "FindStoreZipcode" and "storeName1" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -50,7 +50,7 @@ Scenario: Verify Authenticated user able to see the BOPIS items for pickup
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
-	And user sets up a store for "FindStoreZipcode" 
+	And user selects store with "FindStoreZipcode" and "storeName1" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -58,7 +58,7 @@ Scenario: Verify Authenticated user able to see the BOPIS items for pickup
 	And user navigate to Cart page 
 	Then user should be able to see In-Store Pick up enabled 
 	
-		
+	
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-4231 @ZYP_CART_K4231-8891 
 @CR-GK 
 Scenario: 
@@ -71,8 +71,30 @@ Scenario:
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
-	And user sets up a store for "FindStoreZipcode" 
+	And user selects store with "FindStoreZipcode" and "storeName1" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button
+	And user will click on View Cart button 
+	
+	
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-4231 @ZYP_CART_K4231-8887 
+@CR-GK 
+Scenario: Verify Authenticated user can change their favorite store in PLP 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	And user should able to click on Signin button 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And user navigate and deletes existing items in cart 
+	And User clicks on the burger menu 
+	And user selects store with "FindStoreZipcode" and "storeName1" 
+	And User searches a product "SKUForBopisProduct" and navigates to PDP 
+	And User clicks on the burger menu 
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	Then user should be able to see In-Store Pick up enabled 
