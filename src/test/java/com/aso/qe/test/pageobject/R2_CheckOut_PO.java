@@ -15,6 +15,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 
 public class R2_CheckOut_PO extends CommonActionHelper 
 {
@@ -641,7 +642,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	public void verifyShippingAndBillingAddressAreSame() throws InterruptedException {
 		
-		Thread.sleep(10000);
+		Thread.sleep(Constants.thread_highest);
 		waitForElement(shippingAddressFirst_LastName);
 		assertEquals(getText(shippingAddressFirst_LastName), getText(billingAddressFirst_LastName));
 		assertEquals(getText(shippingAddressphoneNumber).substring(0, 8), getText(billingZip_Phone).substring(7, 15));
@@ -934,7 +935,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		setInputText(myAccountPo.txtAddressInAddCreditCard, webPropHelper.getTestDataProperty("UpdateAddress"));
 		setInputText(inputCheckoutPhoneNumber, webPropHelper.getTestDataProperty("UpdatePhoneNumber"));
 		setInputText(myAccountPo.txtZipCodeInAddCreditCard, webPropHelper.getTestDataProperty("UpdateZipcode"));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		assertTrue(clickOnButton(btnGoToShippingMethod));
 	}
 	//End CR-DPK KER-2919

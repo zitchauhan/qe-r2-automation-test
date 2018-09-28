@@ -12,6 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 
 public class R2_Cart_PO extends CommonActionHelper {
 
@@ -651,14 +652,14 @@ public class R2_Cart_PO extends CommonActionHelper {
 	public void emptyCart() throws InterruptedException {
 		
 		waitForPageLoad(driver);
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		if(isDisplayed(cartEmptyTxt)) {
 			System.out.println("&&&&&&&&&&&&&&&&&&&& CART IS EMPTY  &&&&&&&&&&&&&&");
 	}
 		else {
 			while(isDisplayed(btnRemoveCart)) {
 				clickOnButton(btnRemoveCart);
-				Thread.sleep(10000);
+				Thread.sleep(Constants.thread_highest);
 				if(isDisplayed(cartEmptyTxt)) {
 					break;
 				}
