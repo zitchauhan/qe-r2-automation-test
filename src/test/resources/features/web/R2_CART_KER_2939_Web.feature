@@ -48,12 +48,14 @@ To verify Shipping radio button - Authenticated user With store selected in My A
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User navigates to L2 Mens clothing
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
+	#And User navigates to L2 Mens clothing
+	#Then user clicks on one of the subcategory and navigates to LTwo 
+	#Then user clicks on one of the product category and navigates to LThree 
+	#Then User is navigated to pdp page 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
+	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then Shipping radio button is selected by default 
 	Then in-stores radio button is deselected 
 	And in-stores information is hided 
@@ -130,10 +132,11 @@ Scenario: To verify Remove Link
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8078 @CR-AKK 
 Scenario: To verify In-store Pick up radio button - with My Store info on My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
+	#And User navigates to L2 Mens clothing 
+	#Then user clicks on one of the subcategory and navigates to LTwo 
+	#Then user clicks on one of the product category and navigates to LThree 
+	#Then User is navigated to pdp page 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 

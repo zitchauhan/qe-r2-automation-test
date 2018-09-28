@@ -93,7 +93,7 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 
 	@Then("^user verify BOPIS radio button$")
 	public void user_verify_BOPIS_radio_button() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.rbInStorePickUp));
+		assertTrue(isDisplayed(r2CartPo.Bopis_Rbn));
 	}
 
 	@Then("^Shipping radio button is selected by default$")

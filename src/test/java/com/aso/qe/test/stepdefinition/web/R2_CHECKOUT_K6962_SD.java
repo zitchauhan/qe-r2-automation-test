@@ -91,7 +91,8 @@ public class R2_CHECKOUT_K6962_SD extends CommonActionHelper {
 	}
 	
 	@Then("^user should not be able to pay remaining balace with paypal$")
-	public void user_should_not_be_able_to_pay_remaining_balace_with_paypal() throws Throwable {
+	public void user_should_not_be_able_to_pay_remaining_balace_with_paypal() throws Throwable 
+	{
 		assertFalse(isEnabled(r2CheckOutPo.checkout_PaymentMethod_PayPal_Disabled_rb));
 //		assertTrue(isDisplayed(r2CheckOutPo.checkout_PaymentMethod_PayPal_Disabled_rb));
 	}
