@@ -6,6 +6,7 @@ import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
@@ -44,7 +45,7 @@ public class R2_CHECKOUT_K5892_SD extends CommonActionHelper {
 	@Then("^user click on place order button$")
 	public void user_click_on_place_order_button() throws Throwable {
 	   clickOnButton(chpo.btnPlaceOrderPaymentPage);
-	   Thread.sleep(20000);
+	   Thread.sleep(Constants.thread_highest);
 	}
 
 

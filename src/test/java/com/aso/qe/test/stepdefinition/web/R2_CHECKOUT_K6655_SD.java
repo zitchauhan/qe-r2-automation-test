@@ -6,6 +6,8 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
+import com.aso.qe.framework.common.WaiterHelper;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_PDP_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
@@ -32,7 +34,7 @@ public class R2_CHECKOUT_K6655_SD extends CommonActionHelper {
 	@When("^User clicks on Enable Buy Now button$")
 	public void user_clicks_on_Enable_Buy_Now_button() throws Throwable {
 		assertTrue(clickOnButton(r2PdpPo.EnableBuyNow_btn));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium); 
 	}
 	
 	@Then("^user should not able to see the Enable BUY NOW button on the PDP$")
@@ -47,12 +49,12 @@ public class R2_CHECKOUT_K6655_SD extends CommonActionHelper {
 			 waitForElement(r2R1FunPO.Baits_secCategory_CLP_m);
 			 assertTrue(clickOnButton(r2R1FunPO.Baits_secCategory_CLP_m));
 			 assertTrue(clickOnButton(r2R1FunPO.Baits_productPLP_m));
-			 Thread.sleep(3000);
+			 Thread.sleep(Constants.thread_medium); 
 		 }else {
 			 waitForElement(r2R1FunPO.Baits_secCategory_CLP);
 			 assertTrue(clickOnButton(r2R1FunPO.Baits_secCategory_CLP));
 			 assertTrue(clickOnButton(r2R1FunPO.Baits_productPLP));
-			 Thread.sleep(3000);
+			 Thread.sleep(Constants.thread_medium); 
 		}
 	}
 	
@@ -72,11 +74,11 @@ public class R2_CHECKOUT_K6655_SD extends CommonActionHelper {
 			 waitForElement(r2R1FunPO.Baits_productPLP1_m);
 			 waitForElement(r2SanityPo.AS_productPLP1);
 			 assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
-			 Thread.sleep(3000);
+			 Thread.sleep(Constants.thread_medium); 
 		 }else {
 			 waitForElement(r2SanityPo.AS_productPLP1);
 			 assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
-			 Thread.sleep(3000);		
+			 Thread.sleep(Constants.thread_medium); 		
 	}
 }
 //	@Then("^User enters Payment details$")
@@ -138,7 +140,7 @@ public class R2_CHECKOUT_K6655_SD extends CommonActionHelper {
 	@Then("^user clicks on paymentsubmit button$")
 	public void user_clicks_on_paymentsubmit_button() throws Throwable {
 		assertTrue(clickOnButton(r2PdpPo.PaymentFormSubmit_btn));
-		Thread.sleep(5000);
+		//WaiterHelper.sleep(Constants.thread_medium);
 		
 	}
 	
@@ -146,7 +148,7 @@ public class R2_CHECKOUT_K6655_SD extends CommonActionHelper {
 	public void delete_the_payment_details_in_myaccount() throws Throwable {
 		assertTrue(clickOnButton(r2_MyAccount_PO.myAccount_MyAccountList_Payment_lnk));
 		assertTrue(clickOnButton(r2_MyAccount_PO.btnRemove));
-		Thread.sleep(5000);
+		Thread.sleep(Constants.thread_medium);
 		
 	}
 	

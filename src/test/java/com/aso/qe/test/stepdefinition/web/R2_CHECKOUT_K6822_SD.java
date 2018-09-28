@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
@@ -54,7 +55,7 @@ public class R2_CHECKOUT_K6822_SD extends CommonActionHelper {
 
 	@And("^User navigates from checkout to payments in myaccount$")
 	public void user_navigates_from_checkout_to_payments_in_myaccount() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(r2CheckOutPo.logoHeader));
 			globalElementHeader.clickOnBurgerMenu();
@@ -62,12 +63,12 @@ public class R2_CHECKOUT_K6822_SD extends CommonActionHelper {
 			clickOnButton(myAccountPo.myAccount_txt_Mobile);
 			scrollPageToWebElement(r2R1FunPo.payment_M_Txt);
 			clickOnButton(r2R1FunPo.payment_M_Txt);
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 		} else {
 			assertTrue(clickOnButton(r2CheckOutPo.logoHeader));
 			assertTrue(clickOnButton(myAccountPo.myAccount));
 			assertTrue(clickOnButton(myAccountPo.myAccount_MyAccountList_Payment_lnk));
-			Thread.sleep(1000);
+			Thread.sleep(Constants.thread_low);
 		}
 
 	}

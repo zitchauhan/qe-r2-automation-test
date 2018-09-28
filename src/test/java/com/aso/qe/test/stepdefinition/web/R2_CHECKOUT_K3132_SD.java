@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
 import cucumber.api.java.en.Given;
@@ -36,12 +37,12 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 	   setInputText(r2CheckOutPo.Cvv_Input, webPropHelper.getTestDataProperty("CVV"));
 	   setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty("EmailAddress"));
 	   assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
-	   Thread.sleep(10000);
+	   Thread.sleep(Constants.thread_highest);
 	}
 	
 	@Then("^user click on edit Payment link and click on billing information$")
 	public void user_click_on_edit_Payment_link_and_click_on_billing_information() throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		if(isDisplayed(r2CheckOutPo.EditPayment_Link)) {
 		assertTrue(clickOnButton(r2CheckOutPo.EditPayment_Link));
 	   assertTrue(clickOnButton(r2CheckOutPo.ChangeBillingInformation_Txt));
@@ -57,10 +58,10 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 	    setInputText(r2CheckOutPo.PhoneNumber_Input, webPropHelper.getTestDataProperty("PhoneNumber"));
 	    setInputText(r2CheckOutPo.Adderss_Input, webPropHelper.getTestDataProperty("AVSAddress"));
 	    setInputText(r2CheckOutPo.ZipCode_Input, webPropHelper.getTestDataProperty("zipcode"));
-	    Thread.sleep(3000);
+	    Thread.sleep(Constants.thread_medium);
 	    setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty("login"));
 	    clickOnButton(r2CheckOutPo.ReviewOrder_Btn);
-	    Thread.sleep(20000);
+	    Thread.sleep(Constants.thread_highest);
 	}
 	@Then("^user click on checkbox Same as shipping address$")
 	public void user_click_on_checkbox_Same_as_shipping_address() throws Throwable {

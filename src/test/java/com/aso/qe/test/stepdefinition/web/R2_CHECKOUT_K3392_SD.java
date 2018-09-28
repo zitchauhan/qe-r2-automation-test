@@ -8,6 +8,7 @@ import static org.junit.Assert.assertTrue;
 import org.apache.log4j.Logger;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
@@ -46,7 +47,7 @@ public class R2_CHECKOUT_K3392_SD extends CommonActionHelper {
 		moveHover(r2CheckOutPo.checkout_SignIn_lnk);
 		//assertTrue(clickOnButton(r2CheckOutPo.checkout_SignIn_lnk));
 		moveHover(r2CheckOutPo.checkout_SignIn_lnk);
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 	}
 	
 	@Then("^user will verify the fields in SignIn popup$")

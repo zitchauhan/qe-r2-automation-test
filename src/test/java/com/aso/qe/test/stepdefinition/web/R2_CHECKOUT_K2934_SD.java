@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.apache.log4j.Logger;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
 
@@ -59,7 +60,7 @@ public class R2_CHECKOUT_K2934_SD extends CommonActionHelper {
 	@And("^clicks on Use Selected Address button$")
 	public void clicks_on_Use_Selected_Address_button() throws Throwable {
 		assertTrue(clickOnButton(r2CheckOutPo.btnSelectedAddress));
-		Thread.sleep(20000);
+		Thread.sleep(Constants.thread_highest);
 	}
 	
 	@And("^user should see the Zip code pre-populated in Shipping Address drawer$")

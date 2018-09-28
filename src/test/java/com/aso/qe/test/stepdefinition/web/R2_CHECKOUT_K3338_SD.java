@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
@@ -29,7 +30,7 @@ public class R2_CHECKOUT_K3338_SD extends CommonActionHelper {
 	@Then("^Verify paypal button is clicked$")
 	public void verify_paypal_button_is_clicked() throws Throwable {	
 		assertTrue(clickOnButton(r2CheckOutPo.PayPalCheckOut_Btn));
-		Thread.sleep(20000);
+		Thread.sleep(Constants.thread_highest);
 	}
 	@Then("^user switch to window of paypal$")
 	public void user_switch_to_window_of_paypal() throws Throwable {

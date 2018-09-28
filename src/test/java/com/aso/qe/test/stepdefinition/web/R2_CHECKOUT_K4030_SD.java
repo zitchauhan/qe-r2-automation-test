@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
@@ -58,7 +59,7 @@ public class R2_CHECKOUT_K4030_SD extends CommonActionHelper {
 			assertTrue(!(selectedPaymentMethod.equals(newPaymentMethod)));
 		}else {
 			clickOnButton(r2CheckOutPo.PayPal_radioBtn);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			driver.switchTo().frame(r2_r1_fun_po.paypalCheckoutFrame);
 			assertTrue(isDisplayed(r2CheckOutPo.PayPalCheckOut_Btn));
 		}

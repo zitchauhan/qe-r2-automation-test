@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
 import cucumber.api.java.en.Then;
@@ -23,13 +24,13 @@ public class R2_CHECKOUT_K4764_SD extends CommonActionHelper {
 
 	@Then("^user select me \\+ alternate pickup person$")
 	public void user_select_me_alternate_pickup_person() throws Throwable {
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		Actions hover=new Actions(getDriver());
 		hover.click(r2CheckoutPo.MePickUp_Drpdwn).build().perform();
 		hover.click(r2CheckoutPo.MePickUp_Drpdwn).build().perform();
 		hover.sendKeys(Keys.DOWN,Keys.ENTER).build().perform();
 		//hover.sendKeys(r2CheckoutPo.MePickUp_Drpdwn, Keys.DOWN,Keys.ENTER).build().perform();
-	    Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 	}
 
 	@Then("^user enter the Store Pickup Alternates FirstName \"(.*?)\"$")
@@ -55,7 +56,7 @@ public class R2_CHECKOUT_K4764_SD extends CommonActionHelper {
 	@Then("^user click on confirm button$")
 	public void user_click_on_confirm_button() throws Throwable {
 		assertTrue(clickOnButton(r2CheckoutPo.btnGoToShippingMethod));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 	}
 
 }

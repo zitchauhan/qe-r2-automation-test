@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
@@ -27,20 +28,20 @@ public class R2_CHECKOUT_K4058_SD extends CommonActionHelper {
 		if("mobile".equalsIgnoreCase(testtype))
 		{			
 		 	
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			clickOnButton(r2_r1_fun_po.btnOutdoorCategory);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			clickOnButton(r2_r1_fun_po.secCategory_CLPMobile);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			clickOnButton(r2_r1_fun_po.firearms_M);
 			
 		}else {
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			
 			clickOnButton(r2_r1_fun_po.btnOutdoorCategory);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			clickOnButton(r2_r1_fun_po.btnShootingCategory);
 			waitForPageLoad(driver);
 			clickOnButton(r2_r1_fun_po.ProductgunStorageSafty);
@@ -67,19 +68,19 @@ public class R2_CHECKOUT_K4058_SD extends CommonActionHelper {
 	@Then("^user navigate to L_Three Kayak$")
 	public void user_navigate_to_L_Three_Kayak() throws Throwable {
 if("mobile".equalsIgnoreCase(testtype)){			
-	Thread.sleep(2000);
+	Thread.sleep(Constants.thread_low);
 	clickOnButton(r2_r1_fun_po.btnOutdoorCategory);
-	Thread.sleep(2000);
+	Thread.sleep(Constants.thread_low);
 	clickOnButton(r2_r1_fun_po.boating_txt_M);
-	Thread.sleep(2000);
+	Thread.sleep(Constants.thread_low);
 	clickOnButton(r2_r1_fun_po.kayakCanoes_txt_M);
 
 		}else {
-			Thread.sleep(3000);
+			Thread.sleep(Constants.thread_medium);
 			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			moveHover(r2_r1_fun_po.btnOutdoorCategory);
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			clickOnButton(r2_r1_fun_po.boating_txt);
 			waitForPageLoad(driver);
 			clickOnButton(r2_r1_fun_po.kayakCanoes_txt);
@@ -90,10 +91,10 @@ if("mobile".equalsIgnoreCase(testtype)){
 	public void usr_select_the_kayak_and_navigate_to_PDP_page() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)){
 		clickOnButton(r2_r1_fun_po.pelican_txt_M);
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		}else {
 		clickOnButton(r2_r1_fun_po.intexKayak_txt);
-	   Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		}
 	}
 

@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
 import cucumber.api.java.en.And;
@@ -31,7 +32,7 @@ public class R2_CHECKOUT_K3130_SD extends CommonActionHelper {
 	@Then("^user clicks on the Review order button$")
 	public void user_clicks_on_the_Review_order_button() throws Throwable {
 		clickOnButton(r2CheckOutPo.ReviewOrder_Btn);
-		Thread.sleep(10000);
+		Thread.sleep(Constants.thread_highest);
 	}
 	
 	@Then("user uncheck the checkbox for Billing address different from shipping address$")

@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.Given;
@@ -88,7 +89,7 @@ public class R2_CHECKOUT_K3152_SD extends CommonActionHelper {
 
 	@Then("^User navigates to Address book$")
 	public void user_navigates_to_Address_book() throws Throwable {
-		Thread.sleep(5000);
+		Thread.sleep(Constants.thread_medium); 
 		clickBackButton();
 		assertTrue(clickOnButton(r2MyAccountPo.myAccount));
 		assertTrue(clickOnButton(r2MyAccountPo.wishList));

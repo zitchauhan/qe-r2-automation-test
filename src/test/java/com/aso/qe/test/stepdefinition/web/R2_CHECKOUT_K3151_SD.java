@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
 import cucumber.api.java.en.Given;
@@ -59,7 +60,7 @@ public class R2_CHECKOUT_K3151_SD extends CommonActionHelper {
 	@Given("^user click on edit button in shipping address section$")
 	public void user_click_on_edit_button_in_shipping_address_section() throws Throwable {
 		assertTrue(clickOnButton(r2CheckOutPo.Checkout_ShippingAddress_Edit));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 	}
 
 	@Given("^user click on Add a new Shipping Address button in the shipping address drop down$")

@@ -6,6 +6,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
 import cucumber.api.java.en.And;
@@ -54,7 +55,7 @@ public class R2_CHECKOUT_K6824_SD extends CommonActionHelper {
 	@And("^clicking on Remove and Remove icon should remove the applied GC$")
 	public void clicking_on_Remove_and_Remove_icon_should_remove_the_applied_GC() throws Throwable {
 		assertTrue(clickOnButton(r2CheckOutPo.btnRemoveGiftCard));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_low);
 		assertFalse(isDisplayed(r2CheckOutPo.btnRemoveGiftCard));
 	}
 

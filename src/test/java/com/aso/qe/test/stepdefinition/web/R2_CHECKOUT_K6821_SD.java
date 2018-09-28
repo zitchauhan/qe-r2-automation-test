@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
@@ -57,7 +58,7 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 			addressToEnter = webPropHelper.getTestDataProperty(arg1);
 		r2CheckOutPo.inputCheckoutAddress.clear();
 		setInputText(r2CheckOutPo.inputCheckoutAddress, addressToEnter);
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		//setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty(arg1));
 	}
 
@@ -70,39 +71,39 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 			zipCodeToEnter = webPropHelper.getTestDataProperty(arg1);
 		r2CheckOutPo.inputCheckoutZipCode.clear();
 		setInputText(r2CheckOutPo.inputCheckoutZipCode, zipCodeToEnter);
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 	}
 
 	@Then("^user click on Go To Shipping Method button in Checkout page$")
 	public void user_click_on_Go_To_Shipping_Method_button_in_Checkout_page() throws Throwable {
 		assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
-		Thread.sleep(5000);
+		Thread.sleep(Constants.thread_medium); 
 	}
 	
 	@Then("^user click on GiftCard Plus icon in Checkout page$")
 	public void user_click_on_GiftCard_Plus_icon_in_Checkout_page() throws Throwable {
 		waitForElement(r2CheckOutPo.plusIconGiftCard);
 		assertTrue(clickOnButton(r2CheckOutPo.plusIconGiftCard));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium); 
 	}
 	
 	@And("^user enter Gift card Number \"(.*?)\"$")
 	public void user_enter_Gift_card_Number(String arg1) throws Throwable {
 		setInputText(r2CheckOutPo.inputGiftcardNumber, webPropHelper.getTestDataProperty(arg1));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium); 
 	}
 
 	@And("^user enter Pin Number \"(.*?)\"$")
 	public void user_enter_Pin_Number(String arg1) throws Throwable {
 		setInputText(r2CheckOutPo.inputPinNumber, webPropHelper.getTestDataProperty(arg1));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium); 
 	}
 
 	@And("^user click on Apply button$")
 	public void user_click_on_Apply_button() throws Throwable {
 		waitForElement(r2CheckOutPo.btnCheckoutApply);
 		assertTrue(clickOnButton(r2CheckOutPo.btnCheckoutApply));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium); 
 	}
 
 	@Then("^user verify the inline error message stating: Invalid Gift Card Number/Insufficient Funds$")
@@ -121,7 +122,7 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 	public void enter_valid_Gift_Card_Number(String arg1) throws Throwable {
 		waitForElement(r2CheckOutPo.inputGiftCard);
 		setInputText(r2CheckOutPo.inputGiftCard, webPropHelper.getTestDataProperty(arg1));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium); 
 	}
 
 	@When("^enters an alphanumeric PIN \"(.*?)\"$")
@@ -140,7 +141,7 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 	
 	@Then("^user will click on Paypal radio button$")
 	public void user_will_click_on_Paypal_radio_button() throws Throwable {
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_low);
 		waitForElement(r2CheckOutPo.rdPaypal);
 		assertTrue(clickOnButton(r2CheckOutPo.rdPaypal));
 	}

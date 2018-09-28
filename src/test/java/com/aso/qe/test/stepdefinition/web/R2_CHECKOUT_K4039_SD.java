@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
@@ -33,7 +34,7 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 	public void user_click_on_paypal() throws Throwable {
 //	    waitForElement(r2CheckOutPo.PayPal_radioBtn);
 		clickOnButton(r2CheckOutPo.PayPal_radioBtn);
-		Thread.sleep(1000);
+		Thread.sleep(Constants.thread_medium);
 	}
 	
 	@Then("^user change the quantity of item in PDP$")
@@ -49,7 +50,7 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 	}
 	@Then("^user switch to iframe to verify paypalcheckoutBtn$")
 	public void user_switch_to_iframe_to_verify_paypalcheckoutBtn() throws Throwable {
-	    Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 		driver.switchTo().frame(r2_r1_fun_po.paypalCheckoutFrame);
 	}
 	@Then("^user click on ADD Another Gift Card$")

@@ -5,6 +5,7 @@ import static org.junit.Assert.assertFalse;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
@@ -22,7 +23,7 @@ public class R2_CHECKOUT_K3167_SD extends CommonActionHelper {
 	
 	@Given("^user navigate to Cart page and changes the quantity to \"(.*?)\"$")
 	public void user_navigate_to_Cart_page_and_changes_the_quantity_to(String quantity10) throws Throwable {
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low); 
 		assertTrue(isDisplayed(r2SanityPo.AS_txtYourCart));
 		clearInputBox(r2SanityPo.AS_inputQty);
 		setInputText(r2SanityPo.AS_inputQty, webPropHelper.getTestDataProperty("quantity10"));
@@ -31,15 +32,15 @@ public class R2_CHECKOUT_K3167_SD extends CommonActionHelper {
 	@Given("^click on mini cart$")
 	public void click_on_mini_cart() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)){
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(globalElementHeaderHomePO.iconcart_m));
-			Thread.sleep(4000);
+			Thread.sleep(Constants.thread_medium);
 		}
 		else
 		{
-			Thread.sleep(2000);
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(globalElementHeaderHomePO.iconcart));
-			Thread.sleep(4000);
+			Thread.sleep(Constants.thread_medium);
 		}
 		
 	}
@@ -53,7 +54,7 @@ public class R2_CHECKOUT_K3167_SD extends CommonActionHelper {
 	public void user_clicks_on_Remove_Promo_code_link() throws Throwable {
 		assertTrue(isDisplayed(r2CheckOutPO.removeCpnBtn));
 		assertTrue(clickOnButton(r2CheckOutPO.removeCpnBtn));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_low);
 	}
 
 	@Then("^Promo code is Removed$")

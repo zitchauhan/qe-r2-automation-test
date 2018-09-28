@@ -14,6 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
@@ -33,7 +34,7 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 	
 	@Then("^user click on In-Store Pick up edit button$")
 	public void user_click_on_In_Store_Pick_up_edit_button() throws Throwable {
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		assertTrue(clickOnButton(r2CheckoutPo.EditStorPickUp_Btn));
 	}
 	
@@ -56,7 +57,7 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 			r2CartPo.inputFindaStoreHomePage.clear();
 			setInputText(r2CartPo.inputFindaStoreHomePage, webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(r2CartPo.btnZipcodeSubmit));
-		Thread.sleep(5000);
+		Thread.sleep(Constants.thread_medium);
 		for ( WebElement plusIcon : r2CartPo.iconPlusAllStoreAddressDrawer) {
 		    
 	    	assertTrue(clickOnButton(plusIcon));
@@ -65,9 +66,9 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 		
 		int myStore= r2CartPo.btnAllMakeMyStore.size();
 			for(int i=0;i<myStore;i++){
-			Thread.sleep(10000);
+			Thread.sleep(Constants.thread_highest);
 			r2CartPo.btnAllMakeMyStore.get(3).click();
-			Thread.sleep(10000);
+			Thread.sleep(Constants.thread_highest);
 				    
 		}
 	}
@@ -94,13 +95,13 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 	@And("^user selects a new option from drop down$")
 	public void user_selects_a_new_option_from_drop_down() throws Throwable {
 		//assertTrue(clickOnButton(r2CheckoutPo.SeeInStorePickupInstructions_Select_Dd));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 		Actions hover=new Actions(getDriver());
 		hover.click(r2CheckoutPo.MePickUp_Drpdwn).build().perform();
 		hover.click(r2CheckoutPo.MePickUp_Drpdwn).build().perform();
 		hover.sendKeys(Keys.DOWN,Keys.ENTER).build().perform();
 		//hover.sendKeys(r2CheckoutPo.MePickUp_Drpdwn, Keys.DOWN,Keys.ENTER).build().perform();
-	    Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 	}
 
 	@And("^the selected value is displayed$")
@@ -123,7 +124,7 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 	@When("^user clicks on Go to payment CTA$")
 	public void user_clicks_on_Go_to_payment_CTA() throws Throwable {
 		assertTrue(clickOnButton(r2CheckoutPo.ShippingConfirm_btn));
-		Thread.sleep(3000);
+		Thread.sleep(Constants.thread_medium);
 	}
 
 	@Then("^Verify that user navigate to payment drawer$")
