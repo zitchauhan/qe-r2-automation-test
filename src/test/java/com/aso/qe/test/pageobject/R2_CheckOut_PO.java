@@ -15,7 +15,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.framework.common.Constants;
 
 public class R2_CheckOut_PO extends CommonActionHelper 
 {
@@ -322,6 +321,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='checkout_payment_options_radio_button_PayPal']")
 	public WebElement checkout_PaymentMethod_PayPal_Disabled_rb;
 	
+	
 	//****Start PayPal****//
     @FindBy(xpath = "//*[@id='closeCart']")
     public WebElement PaypalClose_icon;
@@ -486,7 +486,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[text()='Credit Card']")public WebElement CreditCard_radioBtn;
 		@FindBy(xpath="//*[text()='PayPal']")public WebElement PayPal_radioBtn;
 		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]")public WebElement CreditCardNumber_Input;
-		@FindBy(xpath="//*[text()='Exp Date']/following::*[1]")public WebElement ExpirationDate_Input;
+		@FindBy(xpath="//*[text()='Expiration Date']/following::*[1]")public WebElement ExpirationDate_Input;
 		@FindBy(xpath="//*[text()='CVV']/following::*[3]")public WebElement Cvv_Input;
 		@FindBy(xpath="//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']")public WebElement CvvToolTip;
 		@FindBy(xpath="//*[text()='Unrecognized card number']")public WebElement UnrecognizedCardNumber_Txt; 
@@ -642,7 +642,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	public void verifyShippingAndBillingAddressAreSame() throws InterruptedException {
 		
-		Thread.sleep(Constants.thread_highest);
+		Thread.sleep(10000);
 		waitForElement(shippingAddressFirst_LastName);
 		assertEquals(getText(shippingAddressFirst_LastName), getText(billingAddressFirst_LastName));
 		assertEquals(getText(shippingAddressphoneNumber).substring(0, 8), getText(billingZip_Phone).substring(7, 15));
@@ -737,7 +737,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
        @FindBy(xpath = "//*[@id='creditcardField']") public WebElement txtCreditCardInput;
        @FindBy(xpath = "//*[@id='creditcardField']//following-sibling::span/img[contains(@src,'visa')]") public WebElement imgVisaCreditCardInput;
        @FindBy(xpath = "//*[text()='Expiration Date']") public WebElement txtExpirationDate;
-       @FindBy(xpath = "//*[@id='expirationDate']") public WebElement txtExpirationDateInput;
+       @FindBy(xpath = "//*[@id='expirationDate'] | //*[@id='expiryField']") public WebElement txtExpirationDateInput;
        @FindBy(xpath = "//*[@placeholder='MM/YY']") public WebElement txtExpirationPlaceholders;
        @FindBy(xpath = "//*[@id='expirationDate']//parent::label//following-sibling::div/span[contains(text(),'Past expiration date')]") public WebElement txtErrorMsgForPastDates;
        @FindBy(xpath = "//*[@id='cvv']") public WebElement txtCVVInput;
@@ -935,7 +935,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		setInputText(myAccountPo.txtAddressInAddCreditCard, webPropHelper.getTestDataProperty("UpdateAddress"));
 		setInputText(inputCheckoutPhoneNumber, webPropHelper.getTestDataProperty("UpdatePhoneNumber"));
 		setInputText(myAccountPo.txtZipCodeInAddCreditCard, webPropHelper.getTestDataProperty("UpdateZipcode"));
-		Thread.sleep(Constants.thread_medium);
+		Thread.sleep(3000);
 		assertTrue(clickOnButton(btnGoToShippingMethod));
 	}
 	//End CR-DPK KER-2919
