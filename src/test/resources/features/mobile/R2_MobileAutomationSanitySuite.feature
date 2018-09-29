@@ -18,22 +18,7 @@ Scenario: TC_1- Verify Login Logout
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
 		|SignInPage_SignIn_btn								|
-		
-		#@R2_Mobile @R2_MAST-02 @P-High @C-MyAccount @KER-4011
-		#@ZYP_MYACCOUNT_K4011-10301_M @CR-SK @AutomationSanityR2 
-		#Scenario: TC_2-Verify user can do the logout using Flyout from My Account header 
-		#	Given user launches the browser and navigates to "ASO_HOME" page 
-		#	And User clicks on the burger menu 
-		#	When user clicks on sign in link from burger menu 
-		#	And user logs in as "RawUser" 
-		#	When user sign out from the website 
-		#	Then Sign in page should open 
-		#	When user logs in as "RawUser" 
-		#	And user clicks on one of the category and navigates to LOne 
-		#	And user clicks on one of the subcategory and navigates to LTwo  
-		#	And user clicks on one of the product category and navigates to LThree 
-		#	And user sign out from the website 
-		#	Then User is navigated to pdp page 
+	
 		
 @R2_Mobile @R2_MAST-03 @P-Highest @C-MyAccount @KER-4249 
 @ZYP_MYACCOUNT_K4249-10149_M @CR-SK @AutomationSanityR2 
@@ -63,7 +48,6 @@ Scenario: TC_4- Verify User is able to Add Gift Card
 	And User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
 	And user logs in as "RawUser" 
-	#And user clicks on payment tab 
 	And User clicks on the burger menu 
 	Then user click on My Account and navigate to payment 
 	And User has empty wallet with no Gift Card added 
@@ -138,33 +122,36 @@ Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal
 @R2_Mobile @R2_MAST-10 @P-High @C-Cart @KER-3166 @ZYP_K3166-9604_M @CR-DP 
 @AutomationSanityR2 
 Scenario: TC_10-Verify Apply Promotion
+Given user launches the browser and navigates to "ASO_HOME" page 
+	 Then User searches a product "productName" and navigates to PDP
+	Then user click on Add to Cart Button 
+	And user will click on View Cart button 
+	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"    
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|	
+		|checkOut_OrderSummary_btn|	
+		|Total_txt|
+		|SubTotal_txt|
+		|EstimatedTaxes_txt|
+		|Discount_Txt|	 
+	
+@R2_Mobile @R2_MAST-11 @P-Highest @C-Cart @KER-3127 @ZYP_K3127-8166_M @CR-AKK 
+@AutomationSanityR2 
+Scenario: TC_11- Verify Apply Promotion / Remove Promotion
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User searches a product "productName" and navigates to PDP
+	Then User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	When enter the "SanityOrderLevelQuantity" to X 
-	Then verify Promo code discount is applied 
+	When enter the "EnterQuantityGreaterThenOne" to X 
+	And user view and Applied Promotions/Discounts "ItemLevelPromoCodeDiscount"  
+	Then Verify below Sub/Main Module of Cart Page
+	|# verify the following element in checkout order summary page|
+	|RemoveFromCart_Btn|
+	And User clicks on Remove Promo code link
+	Then Promo code is Removed 
 	
-#@R2_Mobile @R2_MAST-11 @P-Highest @C-Cart @KER-3127 @ZYP_K3127-8166_M @CR-AKK 
-#@AutomationSanityR2 
-#Scenario: TC_11- Verify Apply Promotion / Remove Promotion
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	And User clicks on the burger menu 
-##	#And User navigates to LThree 
-##	##And user clicks on the product card and navigates to PDP 
-#	Then User searches a product "productName" and navigates to PDP
-#	And user click on Add to Cart Button 
-#	And user will click on View Cart button 
-#	And user navigate to Cart page 
-#	When enter the "SanityEnterQuantityGreaterThenOne" to X 
-#	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount" 
-#	Then Verify below Sub/Main Module of Cart Page 
-#		|# verify the following element in checkout order summary page|
-#		|RemoveFromCart_Btn| 
-#	And User clicks on Remove Promo code link 
-#	Then Promo code is Removed 
-#	
+	
 @R2_Mobile @R2_MAST-12 @P-Highest @C-Cart @KER-2942 @ZYP_K2942-8044_M @CR-AKK 
 @AutomationSanityR2 
 Scenario: TC_12-Verify Update Quantity 
@@ -339,9 +326,50 @@ Scenario:
 	And user click on submit button 
 	Then user verify the results based on entering zipcode 
 	
+	@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @CR-SK @AutomationSanityR2
+Scenario Outline: TC_23- Verify if authenticated user is able to place an order for single SKU product 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu 
+	When user creates an account
+	And User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	When user click on checkout button 
+	And user adds shipment address on checkout page for "newly registered" user
+	And user selects shipment method on check out page for "newly registered" user
+	And user add "<Payment Type>" details in payment method for "newly registered" user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	Then Verify the message on the page 
+		|# Message for successful order is displayed		|
+		|THANKS FOR SUBMITTING YOUR ORDER					|
+	Examples: 
+		|Payment Type	|
+		|PayPal			|
 	
+	@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order  @AutomationSanityR2
+@CR-SK 
+Scenario Outline:  TC_24-Verify if unauthenticated user is able to place an order for single SKU product 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	And user add "<Payment Type>" details in payment method for "guest" user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	And Verify the message on the page 
+		|# Message for successful order is displayed		|
+		|THANKS FOR SUBMITTING YOUR ORDER					|
+	Examples: 
+		|Payment Type	|
+		|PayPal			|
+		
+			
 @R2_MAST-23 @BrokenLink @Broken @TC_BL_09 
-Scenario: TC_23- Verify all broken URL's on Cart page 
+Scenario: TC_25- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
@@ -349,7 +377,7 @@ Scenario: TC_23- Verify all broken URL's on Cart page
 	Then verfy all link url's status code is 200 
 	
 @R2_MAST-24 @BrokenLink @Broken @TC_BL_10 
-Scenario: TC_24- Verify all broken URL's on Checkout page 
+Scenario: TC_26- Verify all broken URL's on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
@@ -359,7 +387,7 @@ Scenario: TC_24- Verify all broken URL's on Checkout page
 	Then verfy all link url's status code is 200 
 	
 @R2_MAST-25 @BrokenLink @Broken @TC_BL_11 
-Scenario: TC_25- Verify all broken URL's on MyAccount page 
+Scenario: TC_27- Verify all broken URL's on MyAccount page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -372,7 +400,7 @@ Scenario: TC_25- Verify all broken URL's on MyAccount page
 	
 	
 @R2_MAST-26 @BrokenLink @Broken @TC_BIM_09 
-Scenario: TC_26- Verify all broken URL's on Cart page 
+Scenario: TC_28- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
@@ -380,7 +408,7 @@ Scenario: TC_26- Verify all broken URL's on Cart page
 	Then verfy all Image link urls status code is 200 
 	
 @R2_MAST-27 @BrokenLink @Broken @TC_BIM_10 
-Scenario: TC_27- Verify all broken URL's on Checkout page 
+Scenario: TC_29- Verify all broken URL's on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
@@ -390,7 +418,7 @@ Scenario: TC_27- Verify all broken URL's on Checkout page
 	Then verfy all Image link urls status code is 200 
 	
 @R2_MAST-28 @BrokenLink @Broken @TC_BIM_11 
-Scenario: TC_28- Verify all broken URL's on MyAccount page 
+Scenario: TC_30- Verify all broken URL's on MyAccount page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on SignIn link from global header 

@@ -16,21 +16,6 @@ Scenario: TC_1- Verify Login Logout
 		|SignInPage_Password_txt				   			|
 		|SignInPage_SignIn_btn								|
 	
-#@R2_Web @R2_WAST-02 @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10301 @CR-SK
-#@AutomationSanityR2 
-#Scenario:
-#TC_2- Verify user can do the logout using Flyout from My Account header 
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	And user clicks on SignIn link from global header 
-#	And user logs in as "RawUser" 
-#	When user sign out from the website 
-#	Then Sign in page should open 
-#	When user logs in as "RawUser" 
-#	And User navigates to L2 Mens clothing 
-#	And user clicks on one of the subcategory and navigates to LTwo 
-#	And user clicks on one of the product category and navigates to LThree 
-#	And user sign out from the website 
-#	Then User is navigated to pdp page 
 		
 @R2_Web @R2_WAST-03 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @CR-SK
 @AutomationSanityR2 
@@ -57,7 +42,6 @@ Scenario: TC_4- Verify User is able to Add Gift Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user logs in as "RawUser" 
-	#And user clicks on payment tab 
 	Then user click on My Account and navigate to payment
 	And User has empty wallet with no Gift Card added 
 	When user clicks on Add New Gift Card button 
@@ -127,31 +111,35 @@ Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal
 @R2_Web @R2_WAST-10 @P-High @C-Checkout @KER-3166 @ZYP_CART_K3166-9604 @CR-DPK
 @AutomationSanityR2 
 Scenario: TC_10-Verify Apply Promotion
-	Given user launches the browser and navigates to "ASO_HOME" page 
+Given user launches the browser and navigates to "ASO_HOME" page 
 	 Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	When enter the "SanityOrderLevelQuantity" to X 
-	Then verify Promo code discount is applied
+	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"    
+	Then Verify below Sub/Main Module of Cart Page 
+	|# Verify following elements in Cart page"Order Summary"|	
+		|checkOut_OrderSummary_btn|	
+		|Total_txt|
+		|SubTotal_txt|
+		|EstimatedTaxes_txt|
+		|Discount_Txt|	 
 		
-#@R2_Web @R2_WAST-11 @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8166 @CR-AKK
-#@AutomationSanityR2 
-#Scenario: TC_11- Verify Apply Promotion / Remove Promotion
-#	Given  user launches the browser and navigates to "ASO_HOME" page 
-#	And  User navigates to L2 Mens clothing 
-#	Then  user clicks on one of the subcategory and navigates to LTwo 
-#	Then  user clicks on one of the product category and navigates to LThree 
-#	Then  user click on Add to Cart Button 
-#	And  user will click on View Cart button 
-#	And  user navigate to Cart page 
-#	When  enter the "SanityEnterQuantityGreaterThenOne" to X 
-#	And  user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount" 
-#	Then  Verify below Sub/Main Module of Cart Page 
-#	|# verify the following element in checkout order summary page|
-#	|RemoveFromCart_Btn|
-#	And  User clicks on Remove Promo code link 
-#	Then  Promo code is Removed 
+@R2_Web @R2_WAST-11 @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8166 @CR-AKK
+@AutomationSanityR2 
+Scenario: TC_11- Verify Apply Promotion / Remove Promotion
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User searches a product "productName" and navigates to PDP 
+	Then user click on Add to Cart Button 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	When enter the "EnterQuantityGreaterThenOne" to X 
+	And user view and Applied Promotions/Discounts "ItemLevelPromoCodeDiscount"  
+	Then Verify below Sub/Main Module of Cart Page
+	|# verify the following element in checkout order summary page|
+	|RemoveFromCart_Btn|
+	And User clicks on Remove Promo code link
+	Then Promo code is Removed 
+	
 
 	
 @R2_Web @R2_WAST-12 @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @CR-AKK
@@ -267,24 +255,22 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Authenticated
 	Then applied gift card "GiftcardNumber" should be displayed 
 	Then gift card balance is applied towards the purchase 
 	
-@R2_Web @R2_WAST-18 @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954 @CR-GK
+	
+	@R2_Web @R2_MAST-19 @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147
+@CR-RK 
 @AutomationSanityR2 
-Scenario: TC_18-Verify Payment - Add Gift Card - Authenticated
-
+Scenario: TC_19-Verify Sign In During Checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-    And user click on signin button
-	 Then User searches a product "productName" and navigates to PDP
-	Then user click on Add to Cart Button
-     And user click on checkout button 
-	Then user click on GiftCard Plus icon in Checkout page
-	And user enter Gift card Number "GiftcardNumber"
-	And user enter Pin Number "PinNumber" 
-	And user click on Apply button
-	Then applied gift card "GiftcardNumber" should be displayed 
-	Then gift card balance is applied towards the purchase 
+	Then User searches a product "productName" and navigates to PDP
+	Then user click on Add to Cart Button 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user will click on Checkout button and navigates to Checkout page 
+	When user click on SignIn link 
+	And user enter the valid emailaddress "EmailAddress" from checkout page 
+	And user enter the valid password "Password" from checkout page 
+	And user click on signin button 
+	Then user should get logged in successfully 
 	
 @R2_Web @R2_WAST-20 @P-Highest @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100
 @CR-AKK 
@@ -329,8 +315,49 @@ Scenario: TC_22-Verify Find a store
 	And user click on submit button 
 	Then user verify the results based on entering zipcode 
 	
+	@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @CR-SK @AutomationSanityR2
+Scenario Outline: TC_23- Verify if authenticated user is able to place an order for single SKU product 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user creates an account
+	And User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	When user click on checkout button 
+	And user adds shipment address on checkout page for "newly registered" user
+	And user selects shipment method on check out page for "newly registered" user
+	And user add "<Payment Type>" details in payment method for "newly registered" user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	Then Verify the message on the page 
+		|# Message for successful order is displayed		|
+		|THANKS FOR SUBMITTING YOUR ORDER					|
+	Examples: 
+		|Payment Type	|
+		|PayPal			|
+	
+	@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order  @AutomationSanityR2
+@CR-SK 
+Scenario Outline:  TC_24-Verify if unauthenticated user is able to place an order for single SKU product 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	And user add "<Payment Type>" details in payment method for "guest" user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	And Verify the message on the page 
+		|# Message for successful order is displayed		|
+		|THANKS FOR SUBMITTING YOUR ORDER					|
+	Examples: 
+		|Payment Type	|
+		|PayPal			|
+		
+		
 @R2_WAST-23 @BrokenLink @Broken @TC_BL_06
-Scenario: TC_23- Verify all broken URL's on Cart page 
+Scenario: TC_25- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
     Then User searches a product "productName" and navigates to PDP
     And user click on Add to Cart Button 
@@ -338,7 +365,7 @@ Scenario: TC_23- Verify all broken URL's on Cart page
 	Then verfy all link url's status code is 200 
 	
 @R2_WAST-24 @BrokenLink @Broken @TC_BL_07
-Scenario: TC_24- Verify all broken URL's on Checkout page 
+Scenario: TC_26- Verify all broken URL's on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
@@ -348,7 +375,7 @@ Scenario: TC_24- Verify all broken URL's on Checkout page
 	Then verfy all link url's status code is 200 
 	
 @R2_WAST-25 @BrokenLink @Broken @TC_BL_08
-Scenario: TC_25- Verify all broken URL's on MyAccount page 
+Scenario: TC_27- Verify all broken URL's on MyAccount page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
@@ -358,7 +385,7 @@ Scenario: TC_25- Verify all broken URL's on MyAccount page
 	Then verfy all link url's status code is 200 
 
 	@R2_WAST-26 @BrokenLink @Broken @TC_BIM_06
-Scenario: TC_26- Verify all broken Images on Cart page 
+Scenario: TC_28- Verify all broken Images on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 Then User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
@@ -366,7 +393,7 @@ Scenario: TC_26- Verify all broken Images on Cart page
 	Then verfy all Image link urls status code is 200
 	
 @R2_WAST-27 @BrokenLink @Broken @TC_BIM_07
-Scenario: TC_27- Verify all broken Images on Checkout page 
+Scenario: TC_29- Verify all broken Images on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 Then User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
@@ -376,7 +403,7 @@ Scenario: TC_27- Verify all broken Images on Checkout page
 	Then verfy all Image link urls status code is 200 
 	
 @R2_WAST-28 @BrokenLink @Broken @TC_BIM_08
-Scenario: TC_28- Verify all broken Images on MyAccount page 
+Scenario: TC_30- Verify all broken Images on MyAccount page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 

@@ -36,9 +36,12 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 		
 		if(isDisplayed(myAccountPo.btnAddGiftCardPlusIcon)) {
 		
-		assertTrue(clickOnButton(myAccountPo.btnAddGiftCardPlusIcon));}
+		assertTrue(clickOnButton(myAccountPo.btnAddGiftCardPlusIcon));
+		Thread.sleep(Constants.thread_low);
+		}
 		else {
 			assertTrue(clickOnButton(myAccountPo.btnAddNewGiftCard));
+			Thread.sleep(Constants.thread_low);
 		}
 	}
 	
