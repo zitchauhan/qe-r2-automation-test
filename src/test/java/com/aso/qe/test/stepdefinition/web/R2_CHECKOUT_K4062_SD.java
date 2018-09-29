@@ -25,7 +25,7 @@ import io.restassured.internal.assertion.PathFragmentEscaper;
 public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 	R2_OrderConfirmation_Po r2OrderConfPO = PageFactory.initElements(driver, R2_OrderConfirmation_Po.class);
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
-	//R2_CHECKOUT_K3132_SD r2_CheckOut_k3132_SD = new R2_CHECKOUT_K3132_SD();
+	// R2_CHECKOUT_K3132_SD r2_CheckOut_k3132_SD = new R2_CHECKOUT_K3132_SD();
 	R2_R1_Fun_PO r2_r1_fun_po = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	R2_MyAccount_PO r2MyAccountPO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	Hooks hooks = new Hooks();
@@ -121,8 +121,8 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 				if (isDisplayed(r2CheckOutPo.ReviewOrder_Btn))
 					assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 			}
-			Thread.sleep(Constants.thread_medium); 
-			
+			Thread.sleep(Constants.thread_medium);
+
 		} else if (arg1.equalsIgnoreCase("gift card")) {
 			boolean chooseGiftCard = true;
 			if (!(userWithoutExistingPaymentDetails)) {
@@ -130,7 +130,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 					assertTrue(clickOnButton(r2CheckOutPo.plusIconGiftCard));
 					if (isDisplayed((r2CheckOutPo.inputGiftcardNumber))) {
 						setInputText(r2CheckOutPo.inputGiftcardNumber,
-								webPropHelper.getTestDataProperty("Valid16DigitGiftCardNumber"));
+								webPropHelper.getTestDataProperty("GiftCardNumberForOrderPlacement"));
 
 					} else if (isDisplayed(r2CheckOutPo.btnCheckoutApply)) {
 						chooseGiftCard = false;
@@ -141,11 +141,11 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			} else {
 				assertTrue(clickOnButton(r2CheckOutPo.plusIconGiftCard));
 				setInputText(r2CheckOutPo.inputGiftcardNumber,
-						webPropHelper.getTestDataProperty("Valid16DigitGiftCardNumber"));
+						webPropHelper.getTestDataProperty("GiftCardNumberForOrderPlacement"));
 			}
 
 			if (chooseGiftCard) {
-				setInputText(r2CheckOutPo.inputPinNumber, webPropHelper.getTestDataProperty("Valid8DigitGiftCardPIN"));
+				setInputText(r2CheckOutPo.inputPinNumber, webPropHelper.getTestDataProperty("GiftCardPinForOrderPlacement"));
 				waitForElement(r2CheckOutPo.btnCheckoutApply);
 				assertTrue(clickOnButton(r2CheckOutPo.btnCheckoutApply));
 				waitForElement(r2CheckOutPo.txtGiftCardAppliedSuccessMessage);
@@ -153,21 +153,12 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 					setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
 							r2MyAccountPO.generateRandomEmailId());
 				}
-				// Thread.sleep(5000);
-				// assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 			}
 
 			Thread.sleep(Constants.thread_medium);
 			if (isDisplayed(r2CheckOutPo.ReviewOrder_Btn)) {
 				assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
-
-				// if(!(userWithoutExistingPaymentDetails)) {
-				// if(isDisplayed(r2CheckOutPo.ReviewOrder_Btn)) {
-				// assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
-				// }
 			}
-
-			// Thread.sleep(3000);
 
 		} else if (arg1.equalsIgnoreCase("PayPal")) {
 			clickOnButton(r2CheckOutPo.PayPal_radioBtn);
@@ -175,7 +166,6 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			driver.switchTo().frame(r2_r1_fun_po.paypalCheckoutFrame);
 			assertTrue(clickOnButton(r2CheckOutPo.PayPalCheckOut_Btn));
 			Thread.sleep(Constants.thread_highest);
-			System.out.println("111");
 			Set<String> set = driver.getWindowHandles();
 			Iterator<String> it = set.iterator();
 			String parentWindow = it.next();
@@ -265,8 +255,8 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			waitForElement(r2CheckOutPo.plusIconGiftCard);
 			assertTrue(clickOnButton(r2CheckOutPo.plusIconGiftCard));
 			setInputText(r2CheckOutPo.inputGiftcardNumber,
-					webPropHelper.getTestDataProperty("Valid16DigitGiftCardNumber"));
-			setInputText(r2CheckOutPo.inputPinNumber, webPropHelper.getTestDataProperty("Valid8DigitGiftCardPIN"));
+					webPropHelper.getTestDataProperty("GiftCardNumberForOrderPlacement"));
+			setInputText(r2CheckOutPo.inputPinNumber, webPropHelper.getTestDataProperty("GiftCardPinForOrderPlacement"));
 			waitForElement(r2CheckOutPo.btnCheckoutApply);
 			assertTrue(clickOnButton(r2CheckOutPo.btnCheckoutApply));
 			waitForElement(r2CheckOutPo.txtGiftCardAppliedSuccessMessage);

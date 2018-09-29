@@ -73,7 +73,7 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 		}
 
 		else if (emailID.contains("RawUser") | emailID.contains("UserWithDefaultCaliforniaAddress") | emailID.contains("EmailAddress")
-				| emailID.contains("UserWithTaxableAddress") | emailID.contains("UserWithSavedAddressAndPayment")) {
+				| emailID.contains("UserWithTaxableAddress") | emailID.contains("UserWithSavedAddressAndPayment") |  emailID.contains("UserForOrderPlacement")) {
 			setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty(emailID));
 			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
 			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));

@@ -73,8 +73,8 @@ Scenario: Verify for full payment using Gift Card, Billing address is still requ
 		|Please enter a zip code									|
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8897 @CR-SK 
-Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Sign in user
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8895 @CR-SK 
+Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Guest user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
@@ -122,6 +122,7 @@ Scenario: Verify Guest Users should be able to enter an unlimited number of gift
 	And user enter Gift card Number "LowBalanceGiftCard"
 	And user enter Pin Number "LowBalanceGiftCardPin" 
 	And user click on Apply button
+	Then applied gift card "LowBalanceGiftCard" should be displayed
 	And user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "Valid16DigitGiftCardNumber"
 	And user enter Pin Number "Valid8DigitGiftCardPIN"
@@ -142,6 +143,7 @@ Scenario: Verify Sign in Users should be able to enter an unlimited number of gi
 	And user enter Gift card Number "LowBalanceGiftCard"
 	And user enter Pin Number "LowBalanceGiftCardPin" 
 	And user click on Apply button
+	Then applied gift card "LowBalanceGiftCard" should be displayed
 	And user click on GiftCard Plus icon in Checkout page
 	And user selects "Add a New Gift Card" from choose gift card dropdown
 	And user enter Gift card Number "Valid16DigitGiftCardNumber"
@@ -164,11 +166,11 @@ Scenario: Verify System should integrate with RTS/First data for existing gift c
 	And user enter Gift card Number "LowBalanceGiftCard"
 	And user enter Pin Number "LowBalanceGiftCardPin" 
 	And user click on Apply button
+	Then applied gift card "LowBalanceGiftCard" should be displayed
 	And user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "Valid16DigitGiftCardNumber"
 	And user enter Pin Number "Valid8DigitGiftCardPIN"
 	And user click on Apply button
-	Then applied gift card "LowBalanceGiftCard" should be displayed
 	And applied gift card "Valid16DigitGiftCardNumber" should be displayed for second gift card
 
 
@@ -242,3 +244,58 @@ Scenario: Verify the Authenticated user cannot pay the remaining or partial orde
 	And user click on Apply button
 	Then applied gift card "LowBalanceGiftCard" should be displayed
 	And user should not be able to pay remaining balace with paypal
+	
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8892 @CR-SK 
+Scenario: Verify If a gift card does not cover the full transaction, the amount applied should be displayed and also applied amount should displayed in order summary subtotals for Guest user
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And user click on Add to Cart Button for "MultiSKUProduct"
+	And user is navigated to Add to cart Notification popup 
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user
+	When user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "LowBalanceGiftCard"
+	And user enter Pin Number "LowBalanceGiftCardPin"  
+	And user click on Apply button
+	Then applied gift card "LowBalanceGiftCard" should be displayed
+	And Applied amount should be displayed in order summary	
+	
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8893 @CR-SK 
+Scenario: Verify If a gift card does not cover the full transaction, the amount applied should be displayed and also applied amount should displayed in order summary subtotals for Sign in user
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user creates an account
+	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And user click on Add to Cart Button for "MultiSKUProduct"
+	And user is navigated to Add to cart Notification popup 
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user
+	When user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "LowBalanceGiftCard"
+	And user enter Pin Number "LowBalanceGiftCardPin"  
+	And user click on Apply button
+	Then applied gift card "LowBalanceGiftCard" should be displayed
+	And Applied amount should be displayed in order summary
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8897 @CR-SK 
+Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Sign in user
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And user clicks on the burger menu
+	And user creates an account
+	And User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user
+	When user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "Valid16DigitGiftCardNumber"
+	And user enter Pin Number "Valid8DigitGiftCardPIN" 
+	And user click on Apply button
+	Then applied gift card "Valid16DigitGiftCardNumber" should be displayed
+	And Remaining gift card balance should be displayed
+	And Applied amount should be displayed in order summary	
+	
