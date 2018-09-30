@@ -139,7 +139,40 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
     |In-Store Pickup Available|
     
     
+      @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10701 @CR-AKK
+    Scenario: Verify that the user is able to view "In-Store Pickup Available" in its correct state on PDP
+Given user launches the browser and navigates to "ASO_HOME" page
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And User should be able to see Search Box on Homepage 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
+	When User clicks on choose location
+	Then verify that Find a Store Modal is displayed
 	
+	 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10704 @CR-AKK
+	Scenario: Verify that user sees appropriate message If shipping is unavailable for an item
+Given user launches the browser and navigates to "ASO_HOME" page
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And User should be able to see Search Box on Homepage 
+	Then User searches a product "SKUForBopisProductUnavailable" and navigates to PDP 
+	Then Verify the message on the page
+    |# Following Error Message should show on the page|
+    |Shipping Not Available|
 
-
-	
+ @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10705 @CR-AKK
+	Scenario: Verify that user sees appropriate message If shipping is unavailable for an item
+Given user launches the browser and navigates to "ASO_HOME" page
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And User should be able to see Search Box on Homepage 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
+	Then Verify the message on the page
+    |# Following Error Message should show on the page|
+    |Out of Stock|

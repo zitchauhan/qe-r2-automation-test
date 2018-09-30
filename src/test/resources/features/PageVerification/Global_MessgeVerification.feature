@@ -69,6 +69,8 @@ Feature: Message/Text Verification
     |Please enter a new password|
     |Invalid GiftCard Number|
     |Invalid GiftCard Pin|
+    |Shipping Not Available|
+    |Out of Stock|
     
     
     
