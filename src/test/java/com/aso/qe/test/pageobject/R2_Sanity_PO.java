@@ -159,7 +159,7 @@ public class R2_Sanity_PO extends CommonActionHelper {
 		assertTrue(clickOnButton(AS_iconPlusPromoCode));
 		setInputText(AS_inputPromoCode, webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(AS_btnCartSubmit));
-		Thread.sleep(Constants.thread_low);
+		Thread.sleep(2000);
 	}
 	/***************************** END METHODS*********************************/
 

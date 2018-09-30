@@ -55,10 +55,10 @@ Given user launches the browser and navigates to "ASO_HOME" page
      And User clicks on product in PLP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
+	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"    
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
-		|checkOut_OrderSummary_btn|	
 		|Total_txt|
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|
@@ -72,7 +72,8 @@ Scenario: To verify Item level description
 	 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
 	Then user click on Add to Cart Button
-	And user will click on View Cart button 
+	And user will click on View Cart button
+	When enter the "EnterQuantityGreaterThenOne" to X  
 	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount"    
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
@@ -99,10 +100,10 @@ Given user launches the browser and navigates to "ASO_HOME" page
      And User clicks on product in PLP
     Then user click on Add to Cart Button
 	And user will click on View Cart button
+	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount"    
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
-		|checkOut_OrderSummary_btn|	
 		|Total_txt|
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|
@@ -118,6 +119,7 @@ Scenario: To verify Promo code applied in Check out page
      And User clicks on product in PLP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
+	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"
 	And user will click on Checkout button and navigates to Checkout page    
 	Then Verify below Sub/Main Module of Checkout Page
@@ -137,6 +139,7 @@ Then User clicks on the burger menu
 	And user select the product
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
+	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity" 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
@@ -172,7 +175,6 @@ Then User clicks on the burger menu
 	And user view and Applied Promotions/Discounts "OrderLevelDiscount" 
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
-		|checkOut_OrderSummary_btn|	
 		|Total_txt|
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|	
@@ -191,7 +193,6 @@ Then User clicks on the burger menu
 	And user view and Applied Promotions/Discounts "AmountLevelDiscount" 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
-	|checkOut_OrderSummary_btn|	
 		|Total_txt|
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|	
@@ -238,7 +239,8 @@ Then User clicks on the burger menu
 	And user clicks on one of the subcategory of Grills Outdoor
 	And user select the product
 	And user click on Add to Cart Button 
-	And user will click on View Cart button 
+	And user will click on View Cart button
+	When enter the "EnterQuantityGreaterThenOne" to X  
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
 	|Discount_Txt|
@@ -251,6 +253,7 @@ Then User clicks on the burger menu
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
 	And user will click on View Cart button 
+	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
 	|Discount_Txt|
@@ -264,10 +267,9 @@ Then User clicks on the burger menu
      And User clicks on product in PLP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
-	When enter the "OrderLevelQuantity" to X 
+	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
-		|checkOut_OrderSummary_btn|	
 		|Total_txt|
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|	
@@ -282,10 +284,9 @@ Then User clicks on the burger menu
 	And user select the product
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
-	When enter the "OrderLevelQuantity" to X 
+	When enter the "EnterQuantityGreaterThenOne" to X  
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
-	|checkOut_OrderSummary_btn|	
 		|Total_txt|
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|	
@@ -299,10 +300,9 @@ Then User clicks on the burger menu
 	Then User navigates to LThree Mens Watches 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button
-	When enter the "OrderLevelQuantity" to X  
+	When enter the "EnterQuantityGreaterThenOne" to X  
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
-	|checkOut_OrderSummary_btn|	
 		|Total_txt|
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|	

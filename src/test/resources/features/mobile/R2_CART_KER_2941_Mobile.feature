@@ -44,6 +44,7 @@ Feature: Verify Promotional Messaging in Cart
     Then user clicks on the product card and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
+	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
 		|OrderSummary_Header|
@@ -60,6 +61,7 @@ Feature: Verify Promotional Messaging in Cart
     Then user clicks on the product card and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
+	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"    
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
@@ -79,6 +81,7 @@ Feature: Verify Promotional Messaging in Cart
     Then user clicks on the product card and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
+	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount"    
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	

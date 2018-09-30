@@ -44,6 +44,7 @@ Feature: Verify Promotional Messaging in Cart
     Then user clicks on one of the product category and navigates to LThree
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
+	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
 		|OrderSummary_Header|
@@ -60,10 +61,10 @@ Feature: Verify Promotional Messaging in Cart
     Then user clicks on one of the product category and navigates to LThree
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
+	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"    
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
-		|checkOut_OrderSummary_btn|	
 		|Total_txt|
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|
@@ -78,11 +79,11 @@ Feature: Verify Promotional Messaging in Cart
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
 	Then user click on Add to Cart Button
-	And user will click on View Cart button 
+	And user will click on View Cart button
+	When enter the "EnterQuantityGreaterThenOne" to X  
 	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount"    
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
-		|checkOut_OrderSummary_btn|	
 		|Total_txt|
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|
