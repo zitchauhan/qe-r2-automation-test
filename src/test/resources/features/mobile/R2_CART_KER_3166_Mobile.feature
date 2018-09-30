@@ -1,6 +1,6 @@
 Feature: Verify Item/Order Level Promotion Calculation
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-8086 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Cart @KER-3166 @ZYP_CART_K3166-8086 @CR-DPK
 Scenario: To verify Add Promotion Code
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
@@ -65,7 +65,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|Discount_Txt|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-8090 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @1HR_R2 @KER-3166 @ZYP_CART_K3166-8090 @CR-DPK
 Scenario: To verify Item level description
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu

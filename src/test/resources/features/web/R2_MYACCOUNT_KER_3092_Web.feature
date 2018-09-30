@@ -14,7 +14,7 @@ Then Verify below Sub/Main Module of My Account
      |PaymentPage_AddedGiftCards_txtList				|
      
      
-      @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-3092 @ZYP_MYACCOUNT_K3092-10462 @CR-RKA
+      @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-3092 @ZYP_MYACCOUNT_K3092-10462 @CR-RKA @1HR_R2
      Scenario: Verify that user is able to remove the added GC from My Account
     Given user launches the browser and navigates to "ASO_HOME" page 
      And user clicks on SignIn link from global header 

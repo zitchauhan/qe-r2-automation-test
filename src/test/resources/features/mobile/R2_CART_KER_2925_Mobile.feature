@@ -1,6 +1,6 @@
 Feature: Place Order
 
-@R2_Mobile @R2_Regression @P-High @C-Checkout @KER-2915 @ZYP_CART_K2915-8190 @CR-AG 
+@R2_Mobile @R2_Regression @P-High @1HR_R2 @C-Checkout @KER-2915 @ZYP_CART_K2915-8190 @CR-AG 
 Scenario: verify if user should be able to submit the order on the checkout page
     Given user launches the browser and navigates to "ASO_HOME" page  
 	When User searches a product "productName" and navigates to PDP
@@ -51,7 +51,7 @@ Scenario: Verify if Order status is updated in 'My account'
     |Your confirmation email is on its way|
     #User navigation to myorders page yet to make
     
-        	@R2_Mobile @R2_Regression @P-Low @C-Checkout @KER-2915 @ZYP_CART_K2915-8193 @CR-AG 
+        	@R2_Mobile @R2_Regression @1HR_R2 @P-Low @C-Checkout @KER-2915 @ZYP_CART_K2915-8193 @CR-AG 
 Scenario: Verify if Order status is updated in 'My account'
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP
@@ -212,7 +212,7 @@ Scenario: Verify Before clicking 'Place Order', if the user edits shipping metho
     |# Following Error Message should show on the page|
     |Your confirmation email is on its way|
  
-       @R2_Mobile @R2_Regression @P-Highest @C-Checkout @KER-2925 @ZYP_CART_K2925-10297 @CR-AG 
+       @R2_Mobile @R2_Regression @P-Highest @1HR_R2 @C-Checkout @KER-2925 @ZYP_CART_K2925-10297 @CR-AG 
 Scenario: Verify Before clicking 'Place Order', if the user edits payment method, the same should be updated in the order summary. Payment will be authorized to the updated payment method only upon click on Place Order.
     Given user launches the browser and navigates to "ASO_HOME" page 
       And User clicks on the burger menu 

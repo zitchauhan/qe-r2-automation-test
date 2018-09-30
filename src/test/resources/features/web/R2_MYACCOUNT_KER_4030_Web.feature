@@ -1,6 +1,6 @@
 Feature: Quick Checkout 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 @1HR_R2
 @ZYP_MYACCOUNT_K4030-11496 @CR-SK 
 Scenario: Verify authenticated user with no information saved in my account is able to navigate to shipping address drawer during quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 

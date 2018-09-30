@@ -1,6 +1,6 @@
 Feature: Add Credit/Debit Card in Account 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10675 @CR-DPK 
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10675 @CR-DPK 
 Scenario: Verify that authenticated user is able to navigate to "Payments" Page.
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu

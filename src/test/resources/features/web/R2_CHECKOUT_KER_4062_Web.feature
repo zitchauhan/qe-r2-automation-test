@@ -63,7 +63,7 @@ Scenario: Verify if user gets proper validation message for empty password
 	    |Please enter the Password							|		
 	    
 	    
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4062 @ZYP_CART_K4062-8102 @CR-SK 
+@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-4062 @ZYP_CART_K4062-8102 @CR-SK 
 Scenario: Verify if user can create account from Order Confirmation Page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When User searches a product "productName" and navigates to PDP

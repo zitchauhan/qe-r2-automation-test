@@ -1,7 +1,7 @@
 Feature: Add Shipping Address in Checkout 
 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR-R2 @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8177 @CR-DPK 
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8177 @CR-DPK 
 Scenario: Verify the Shipping address form that authenticated user can view on adding new shipping address during checkout
  	Given user launches the browser and navigates to "ASO_HOME" page
  	Then User clicks on the burger menu
@@ -119,7 +119,7 @@ Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided o
 	Then user click on Go To Shipping Method button in Checkout page
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR-R2 @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-10382 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-10382 @CR-DPK
   Scenario: Verify if user selects AVS address suggestion and checkout
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

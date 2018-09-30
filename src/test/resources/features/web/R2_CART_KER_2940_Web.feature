@@ -1,6 +1,6 @@
 Feature: Verify Itemized Subtotal in Cart
 
-  @R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8052 @CR-AKK
+  @R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8052 @CR-AKK @1HR_R2
   Scenario: To view price of each item in cart
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing

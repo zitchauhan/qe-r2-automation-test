@@ -44,7 +44,7 @@ Scenario: Verify that Authenticated User is able to view order list
 	And Oldest sorting option is available 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4229 
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10475 @CR-GK 
 Scenario: Verify that Authenticated User is able to navigate to Profile page 
 	Given  user launches the browser and navigates to "ASO_HOME" page 

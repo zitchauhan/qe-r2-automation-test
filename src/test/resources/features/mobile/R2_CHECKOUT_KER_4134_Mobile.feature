@@ -1,6 +1,6 @@
 Feature: B06-225 - BOPIS: SMS Capture
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10888 @CR-MS
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10888 @CR-MS @1HR_R2
 Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

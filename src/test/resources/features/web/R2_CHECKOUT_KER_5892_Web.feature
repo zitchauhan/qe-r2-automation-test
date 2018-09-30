@@ -38,7 +38,7 @@ Scenario: Verify user selected credit card is visually indicated in the drop-dow
     |#verify  credit card DD is highlighting after clicking on choose creditcard DD  | 
      |ChooseCreditcard_Dd|
 
-@R2_Web @R2_Regression @R2_All @P-High  @C-Checkout @KER-5892 @ZYP_CHECKOUT_K5892-10814 @CR-RKA
+@R2_Web @R2_Regression @R2_All @P-High  @C-Checkout @KER-5892 @ZYP_CHECKOUT_K5892-10814 @CR-RKA @1HR_R2
 Scenario:  Verify the user is able to add a new credit card while payment that is displayed in active order only
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header

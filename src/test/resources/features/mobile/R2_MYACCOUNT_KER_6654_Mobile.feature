@@ -31,7 +31,7 @@ Feature: [Mobile]E01-200 - Forgotten Password - Create New Password
 	|#verify the tooltip in change your password|
 	|ChangePasswordPage_toolTip_Btn                                 |
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10178 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10178 @CR-RKA
 Scenario: Verify the user gets the error message on entering the password not meeting the requirements of min. characters
 
    Given  user launches the browser and navigates to "ASO_HOME" page 

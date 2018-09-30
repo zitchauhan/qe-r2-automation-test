@@ -1,6 +1,6 @@
 Feature: [Mobile] B07-200 Checkout| Signed In User| Pay using saved Credit Card 
 
-@R2_Mobile @R2_Regression @R2_All @P-Higest @1HR  @C-Checkout @KER-5892 @ZYP_CHECKOUT_K5892-8201 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-Higest @1HR_R2  @C-Checkout @KER-5892 @ZYP_CHECKOUT_K5892-8201 @CR-RKA
 Scenario: Verify user is able to see the list of saved credit cards on Checkout while Payment
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu

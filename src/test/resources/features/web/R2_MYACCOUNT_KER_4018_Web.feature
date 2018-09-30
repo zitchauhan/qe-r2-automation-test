@@ -59,7 +59,7 @@ Feature: Order Cancellation Guest Customer Order Search
 #    |ABNNC		   | BAV		  	  |
 
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4018 
-@ZYP_MYACCOUNT_K4018-10659 @CR-AKK 
+@ZYP_MYACCOUNT_K4018-10659 @CR-AKK @1HR_R2
 Scenario:
 Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
 	Given user launches the browser and navigates to "ASO_HOME" page 

@@ -22,7 +22,7 @@ Scenario: Verify that My Account option is available for Authenticated User
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4229 
-@ZYP_MYACCOUNT_K4229-10473 @CR-GK 
+@ZYP_MYACCOUNT_K4229-10473 @CR-GK @1HR_R2
 Scenario: Verify that Authenticated User is able to navigate to My Account page 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 

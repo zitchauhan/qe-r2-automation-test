@@ -1,7 +1,7 @@
 Feature: [Mobile] B06-100- Merge Cart
  
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143 @ZYP_Cart_K3143-10257 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @1HR_R2  @KER-3143 @ZYP_Cart_K3143-10257 @CR-RKA
 Scenario: Verify if Unauthenticated customer will be able to add items to cart for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -98,7 +98,7 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	    |ShippingPolicy_link|
 		|ReturnPolicy_link|
 		
-	@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8155 @CR-RKA
+	@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Cart @KER-3143  @ZYP_Cart_K3143-8155 @CR-RKA
 	Scenario: Verify if Unauthenticated customer will be able to add items to cart for shipping
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu

@@ -1,7 +1,7 @@
 Feature: [Mobile]B07-250 - Gift Card - Authenticated User Using Saved GC at Checkout
 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8657 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-6823 @ZYP_CHECKOUT_K6823-8657 @CR-RKA
 Scenario: Verify choose gift card option for authenticated User with 13 and 16 digit Gift Card having 4 or 8 digit PIN
 Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 

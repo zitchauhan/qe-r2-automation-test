@@ -1,7 +1,7 @@
 Feature: Verify BOPIS PDP Store Selection
 
 	
-@R2_Mobile @R2_Regression @R2_All  @P-Highest @C-Cart @KER-3178 @ZYP_CART_K3178-9940 @CR-AG
+@R2_Mobile @R2_Regression @R2_All  @P-Highest  @1HR_R2 @C-Cart @KER-3178 @ZYP_CART_K3178-9940 @CR-AG
 Scenario: Verify that user view 'Find a Store' modal from Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -73,7 +73,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
      When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"   
 
     
-    @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3178 @ZYP_CART_K3178-9944 @CR-AG
+    @R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Cart @KER-3178 @ZYP_CART_K3178-9944 @CR-AG
 Scenario: After searching for a couple of different keywords the header stops displaying
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

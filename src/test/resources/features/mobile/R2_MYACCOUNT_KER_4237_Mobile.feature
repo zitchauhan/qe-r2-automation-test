@@ -71,7 +71,7 @@ Scenario:
 		
 		
 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
-@ZYP_MYACCOUNT_K4237-10514 @CR-GK 
+@ZYP_MYACCOUNT_K4237-10514 @CR-GK @1HR_R2
 Scenario: 
 	Verify that Guest user is not able to view shipping and Billing Details of an order 
 	Given user launches the browser and navigates to "ASO_HOME" page 

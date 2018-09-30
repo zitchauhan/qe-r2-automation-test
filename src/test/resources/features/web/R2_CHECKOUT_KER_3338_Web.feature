@@ -1,6 +1,6 @@
 Feature: PayPal on Checkout page 
 
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR-R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-11739 @CR-AKK 
 Scenario:
 Verify user is able to checkout using PayPal with Order level Promotion applied 
@@ -66,7 +66,7 @@ Scenario:
 		|# Following Message should show on the page|  
 		|Paypal account|
 		
-@R2_Web @R2_Regression @R2_All @P-High @1HR-R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-11742 @CR-AKK 
 Scenario:
 Verify user is able to checkout using PayPal with shipping-level Promotion applied 
@@ -103,7 +103,7 @@ Verify user is able to checkout using PayPal with shipping-level Promotion appli
 		
 
 		
-@R2_Web @R2_Regression @R2_All @P-High @1HR-R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8256 @CR-AKK 
 Scenario: 
 	Verify guest user is able to select Paypal as Payment method on checkout for non-SOF items 
@@ -128,7 +128,7 @@ Scenario:
 		|PayPalCheckOut_Btn|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @1HR-R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8258 @CR-AKK 
 Scenario:
 Verify guest user is able to proceed with Paypal as checkout for non-SOF items 
@@ -148,7 +148,7 @@ Verify guest user is able to proceed with Paypal as checkout for non-SOF items
 	And user click on Go To Shipping Method button in Checkout page 
 	Then user click on paypal radiobtn 
 	
-@R2_Web @R2_Regression @R2_All @P-Low @1HR-R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8262 @CR-AKK 
 Scenario: Verify the user is navigated to the PayPal page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -173,7 +173,7 @@ Scenario: Verify the user is navigated to the PayPal page
 	Then Verify paypal button is clicked 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @1HR-R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8261 @CR-AKK 
 Scenario:
 Verify authenticated user is able to proceed with Paypal as checkout for non-SOF items 
@@ -202,7 +202,7 @@ Verify authenticated user is able to proceed with Paypal as checkout for non-SOF
 		|PayPalCheckOut_Btn|	
 	Then Verify paypal button is clicked 
 	
-@R2_Web @R2_Regression @R2_All @P-Low @1HR-R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8259 @CR-AKK 
 Scenario:
 Verify logged in user is able to select Paypal as Payment method on checkout for non-SOF items 
@@ -220,7 +220,7 @@ Verify logged in user is able to select Paypal as Payment method on checkout for
 	Then user click on checkout from ATC pop up 
 	Then user click on paypal radiobtn 
 	
-	@R2_Web @R2_Regression @R2_All @P-Low @1HR-R2 @C-Checkout @KER-3338 
+	@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-10270 @CR-AKK 		
 Scenario: Verify the authenticated user cannot pay the remaining or partial order amount using PayPal in combination with Gift Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -240,7 +240,7 @@ Scenario: Verify the authenticated user cannot pay the remaining or partial orde
 	Then user click on paypal radiobtn 
 	Then verify the gift card option is not displayed 
 	
-	@R2_Web @R2_Regression @R2_All @P-Low @1HR-R2 @C-Checkout @KER-3338 
+	@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8257 @CR-AKK
 Scenario: Verify guest user cannot select Paypal as Payment method on checkout for SOF products
 Given user launches the browser and navigates to "ASO_HOME" page 
@@ -256,7 +256,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then verify the paypal radio option is not displayed 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @1HR-R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8260 @CR-AKK
 Scenario: Verify authenticated user cannot select Paypal as Payment method on checkout for SOF products
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -271,7 +271,7 @@ Scenario: Verify authenticated user cannot select Paypal as Payment method on ch
 	Then verify the paypal radio option is not displayed 
 
 	
-@R2_Web @R2_Regression @R2_All @P-Low @1HR-R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8263 @CR-AKK
 Scenario: Verify the user is navigated back to the Academy.com once PayPal payment process is done	
 Given user launches the browser and navigates to "ASO_HOME" page 

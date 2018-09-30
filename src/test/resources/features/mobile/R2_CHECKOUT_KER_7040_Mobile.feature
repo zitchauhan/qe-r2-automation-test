@@ -1,6 +1,6 @@
 Feature: B10-500 - Buy Now Checkout Error Conditions
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-7040 @ZYP_CHECKOUT_K6655-8907 @CR-MS
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-7040 @ZYP_CHECKOUT_K6655-8907 @CR-MS @1HR_R2
 Scenario: Verify that Authenticated user is NOT able proceed to checkout if payment information fails fraud check
 Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 

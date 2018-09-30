@@ -1,7 +1,7 @@
 Feature:  Shipping Methods - White Glove Service
 
 
-@R2_Mobile @R2_Regression @R2_All @P-Medium @C-Checkout @KER-6760 @ZYP_CHECKOUT_K6760-8941_M @CR-SG 
+@R2_Mobile @R2_Regression @R2_All @P-Medium @C-Checkout @KER-6760 @ZYP_CHECKOUT_K6760-8941_M @CR-SG @1HR_R2
 Scenario: Verify that the Authorized user is able to view the default services available for WG items
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu

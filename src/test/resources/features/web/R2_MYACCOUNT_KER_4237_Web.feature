@@ -25,7 +25,7 @@ Scenario: Verify that Authenticated User is able to view order list
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
-@ZYP_MYACCOUNT_K4237-10511 @CR-GK 
+@ZYP_MYACCOUNT_K4237-10511 @CR-GK @1HR_R2
 Scenario: 
 	Verify that Order search field is displayed if Authenticated user does not have any orders 
 	Given user launches the browser and navigates to "ASO_HOME" page 

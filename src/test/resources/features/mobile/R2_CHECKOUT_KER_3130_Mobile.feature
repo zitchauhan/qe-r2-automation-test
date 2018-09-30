@@ -22,7 +22,7 @@ Scenario: Verify user gets the form field validation error on leaving mandatory 
 	And user validates error msg displayed for all required fields
 	
     
-@R2_Mobile @R2_Regression @P-Highest @C-Checkout @KER-3130 @ZYP_CART_K3132-9554 @CR-AG 
+@R2_Mobile @R2_Regression @P-Highest @1HR_R2 @C-Checkout @KER-3130 @ZYP_CART_K3132-9554 @CR-AG 
 Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank
    Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

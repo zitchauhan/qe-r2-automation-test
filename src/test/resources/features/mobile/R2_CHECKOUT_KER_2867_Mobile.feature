@@ -26,7 +26,7 @@ Scenario: Verify that UnAuthenticated user is able to view the instore pickup dr
 		|SeeInStorePickupInstructions_Dd|
 	
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2867 @ZYP_CHECKOUT_K2867-10900 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-2867 @ZYP_CHECKOUT_K2867-10900 @CR-DPK
 Scenario: Verify that UnAuthenticated user is able to change the Pickup location
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu

@@ -37,7 +37,7 @@ Scenario: Verify user is able to create an account with all valid data
 	    |You have successfully registered with Academy.com|
 	    |LET'S SHOP									|
 
-@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10163 @CR-SK
+@R2_Mobile @R2_Regression @R2_All  @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10163 @CR-SK
 Scenario: Verify the user is able to sign with the new created account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -47,7 +47,7 @@ Scenario: Verify the user is able to sign with the new created account
 	And user click on signin button 
 	Then user should get logged in successfully
 	
-@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10161 @CR-SK
+@R2_Mobile @R2_Regression @R2_All  @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10161 @CR-SK
 Scenario: Verify the user is able to see the unmasked password 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu

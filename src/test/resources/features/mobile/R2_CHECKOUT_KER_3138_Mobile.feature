@@ -1,6 +1,6 @@
 Feature: Insert Payment Details (Credit/Debit Card) on checkout screen
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3138 @ZYP_CART_K3138-8205 @CR-AG 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3138 @ZYP_CART_K3138-8205 @CR-AG @1HR_R2
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
 	      Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

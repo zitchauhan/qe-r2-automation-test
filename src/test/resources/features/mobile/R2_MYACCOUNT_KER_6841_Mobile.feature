@@ -16,7 +16,7 @@ Feature: E02-250 - Edit Credit/Debit Card in Account
       | #Verify following elements in Payments > Add new credit card section |
       | AddCreditCardPage_BillingInformationHeader_txt                       |
 
-  @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-6841 @ZYP_MYACCOUNT_K6841-10631 @CR-RKA
+  @R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-6841 @ZYP_MYACCOUNT_K6841-10631 @CR-RKA
   Scenario: 
     Verify that authenticated user is able to edit the saved credit/debit cards
     Given user launches the browser and navigates to "ASO_HOME" page

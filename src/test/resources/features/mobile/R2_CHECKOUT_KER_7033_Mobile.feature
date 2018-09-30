@@ -21,7 +21,7 @@ Scenario:  Verify that the user is able to see the firearm specific compliance r
 		|ShipToStoreforSOF_Payment_Btn|
 
 #KER-12636		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-7033 @ZYP_CHECKOUT_K7033-10048 @CR-MS
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-7033 @ZYP_CHECKOUT_K7033-10048 @CR-MS
 Scenario:  Verify that user is able to proceed to checkout after accepting the firearm specific compliance rules
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu

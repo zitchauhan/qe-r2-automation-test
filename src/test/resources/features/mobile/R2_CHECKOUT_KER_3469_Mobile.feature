@@ -27,7 +27,7 @@ Scenario: Verify BOPIS Pick Up Person - Authenticated user -Alternate Person
 		|StorePickupAlternatesPhoneNumber_input|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3469 
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3469 
 @ZYP_CHECKOUT_K3469-10874 @CR-GK 
 Scenario: 
 	Verify BOPIS Pick Up Person - Un Authenticated user - Alternate Pick up 

@@ -15,7 +15,7 @@ Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 	When user will click on Checkout button and navigates to Checkout page
 	Then user enter Phone number "PhoneNumber" in Billing address
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10884 @CR-MS	
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10884 @CR-MS	@1HR_R2
 Scenario: Verify Phone number associated with BOPIS
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

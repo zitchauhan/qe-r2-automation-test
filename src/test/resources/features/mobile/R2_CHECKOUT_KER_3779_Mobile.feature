@@ -21,7 +21,7 @@ Then user click on Add to Cart Button
     |checkout_ShippingMethod_GoToPayment_btn|
     |checkout_ShippingMethod_ItemImage_img|
         
-    @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10815 @CR-RKA
+    @R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10815 @CR-RKA
     Scenario: Verify that user should be able to fulfill an order when cart having multiple item with single fulfillment option(Ship to home)
     Given user launches the browser and navigates to "ASO_HOME" page 
     When User searches a product "productName" and navigates to PDP

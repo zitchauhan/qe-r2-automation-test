@@ -31,7 +31,7 @@ Verify that User is able to add item to cart after making selections on Diff Mod
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4119
-@ZYP_CHECKOUT_K4119-8645 @CR-AKK 
+@ZYP_CHECKOUT_K4119-8645 @CR-AKK  @1HR_R2
 Scenario:
 Verify that User is able to view the cart after adding item to cart from PLP 
 	Given user launches the browser and navigates to "ASO_HOME" page 

@@ -1,7 +1,7 @@
 Feature: B04-300- Authenticated Checkout Flow 
 
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3164 
-@ZYP_CHECKOUT_K3164-8027 @CR-GK 
+@ZYP_CHECKOUT_K3164-8027 @CR-GK @1HR_R2
 Scenario: 
 	Verify that authenticated user is able to select address in dropdown in shipping address section 
 	Given user launches the browser and navigates to "ASO_HOME" page 

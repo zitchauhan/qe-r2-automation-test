@@ -63,7 +63,7 @@ Scenario: Verify Expiration date invalid due to past expiration date
 	
 	
 	    
-           @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3139 @ZYP_CART_K3139-8217 @CR-AG 
+           @R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-Low @C-Checkout @KER-3139 @ZYP_CART_K3139-8217 @CR-AG 
 Scenario: Verify Expiration date invalid due to non-existent date values
 	 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

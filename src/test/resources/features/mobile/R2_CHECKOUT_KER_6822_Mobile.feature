@@ -24,7 +24,7 @@ Scenario: Verify Gift card fields displayed - No Previous Gift Cards Saved
 	
 	
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6822 
-@ZYP_CHECKOUT_K6822-7954 @CR-GK 
+@ZYP_CHECKOUT_K6822-7954 @CR-GK @1HR_R2
 Scenario: Verify Valid gift card is applied for purchases 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

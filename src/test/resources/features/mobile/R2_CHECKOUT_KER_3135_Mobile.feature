@@ -1,6 +1,6 @@
 Feature: B07-500- Change Billing Address 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3135 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3135 @1HR_R2
 @ZYP_CHECKOUT_K3135-8101 @CR-GK 
 Scenario: To verify change billing Address CTA 
 	Given user launches the browser and navigates to "ASO_HOME" page 

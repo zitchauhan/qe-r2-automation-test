@@ -1,6 +1,6 @@
 Feature: B07-250 - Gift Card - Authenticated User: Add New Gift Card at Checkout 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6822 
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6822 @1HR_R2
 @ZYP_CHECKOUT_K6822-7949 @CR-GK 
 Scenario: Verify Add new Gift Card fields 
 	Given user launches the browser and navigates to "ASO_HOME" page 

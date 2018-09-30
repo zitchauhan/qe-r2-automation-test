@@ -1,6 +1,6 @@
 Feature: Employee Discount
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Checkout @KER-4238 @ZYP_CHECKOUT_K4238-10742 @CR-SG
+@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Checkout @KER-4238 @ZYP_CHECKOUT_K4238-10742 @CR-SG @1HR_R2
 Scenario: To verify that an existing ASO employee is able to see the employee discount on cart page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu

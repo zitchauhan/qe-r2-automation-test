@@ -18,7 +18,7 @@ Scenario: Verify that for Authenticated user Cancel Order CTA is displayed for o
     |#Verify following elements in my account order details|
     |Order_Note_Txt|
     
-@R2_Web @R2_Regression @R2_All @P-High @R2_Order @C-MyAccount @KER-4330 @ZYP_MYACCOUNT_K4330-10931 @CR-MS
+@R2_Web @R2_Regression @R2_All @P-High @R2_Order @C-MyAccount @KER-4330 @ZYP_MYACCOUNT_K4330-10931 @CR-MS @1HR_R2
 Scenario: Verify the details in In-Store Pickup Instructions section
    Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

@@ -12,7 +12,7 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
     |Verify following elements in PDP page|
     |EnableBuyNow_btn|
     
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8668 @CR-MS
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8668 @CR-MS @1HR_R2
 Scenario: Verify that Authenticated user is able to view Enable Buy Now button on PDP if user does not have saved Shipping Address but has saved payment details
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 

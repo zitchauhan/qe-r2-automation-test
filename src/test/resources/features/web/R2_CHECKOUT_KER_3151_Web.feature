@@ -37,7 +37,7 @@ Verify if authenticated user can select a shipping address from the dropdown
 	And user click on checkout button 
 	And user should see the order summary page with the default address 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3151
+@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3151
 @ZYP_CHECKOUT_K3151-8188 @CR-RK 
 Scenario:
 Verify if authenticated user can  view all the shipping addresses at checkout 

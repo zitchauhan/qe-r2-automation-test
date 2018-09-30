@@ -1,6 +1,6 @@
 Feature: [Mobile]Payment restrictions
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-10454 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-10454 @CR-RKA @1HR_R2
 Scenario: Verify that PayPal and More Options radio buttons are disabled when Gift Card is applied
 Given user launches the browser and navigates to "ASO_HOME" page 
 And User clicks on the burger menu 

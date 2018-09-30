@@ -1,6 +1,6 @@
 Feature: Verify Login/Sign in page and functionality
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10038 @CR-SK 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10038 @CR-SK @1HR_R2
 Scenario: Verify user is able to enter the Sign In page from Sign In link 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header

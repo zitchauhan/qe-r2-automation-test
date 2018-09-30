@@ -1,6 +1,6 @@
 Feature: B06-175- Mixed Cart - Order Confirmation screen
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest  @C-Checkout @KER-2856 @ZYP_CHECKOUT_K2856-10865 @CR-RK
+@R2_Mobile @R2_Regression @R2_All @P-Highest  @1HR_R2 @C-Checkout @KER-2856 @ZYP_CHECKOUT_K2856-10865 @CR-RK
 Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods Ship to Home and BOPIS
 Given user launches the browser and navigates to "ASO_HOME" page 
 And User clicks on the burger menu 

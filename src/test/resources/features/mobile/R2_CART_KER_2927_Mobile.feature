@@ -163,7 +163,7 @@ Scenario: To Verify Available Taxes and Tax is > $0.00 - Authenticated User
 	When user navigates to checkout page
 	Then tax and total amount displayed in checkout page is same as cart page
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2927 @ZYP_CART_K2927-8121 @CR-SK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @1HR_R2 @C-Cart @KER-2927 @ZYP_CART_K2927-8121 @CR-SK 
 Scenario: To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user enters "SKUForBopisProduct" in the search box

@@ -1,6 +1,6 @@
 Feature: Verify accepted Payment Display in Cart
 
-@R2_Web @R2_Regression  @KER-2946 @ZYP_CART_K2946-7993 @CR-RKA
+@R2_Web @R2_Regression  @KER-2946 @ZYP_CART_K2946-7993 @CR-RKA @1HR_R2
 Scenario: Verify if unauthenticated user can view Accepted Payment Methods
     Given user launches the browser and navigates to "ASO_HOME" page 
     And User navigates to L2 Mens clothing

@@ -73,7 +73,7 @@ Scenario: Verify the details in order details section
     |Order_Payment_txt|
     |Order_Payment_Section|   
 
-@R2_Mobile @R2_Regression @R2_All @P-High @R2_Order @C-MyAccount @KER-4330 @ZYP_MYACCOUNT_K4330-10934 @CR-MS
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @R2_Order @C-MyAccount @KER-4330 @ZYP_MYACCOUNT_K4330-10934 @CR-MS
 Scenario: Verify that user is able to view BOPIS order details before pickup
    Given user launches the browser and navigates to "ASO_HOME" page
    Then User clicks on the burger menu 

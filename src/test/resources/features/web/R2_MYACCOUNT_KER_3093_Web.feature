@@ -13,7 +13,7 @@ Scenario: Verify that user is able to see the Add new Gift card on empty Wallet
 		|PaymentPage_AddNewGiftCard_btn					|
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10309 @CR-RKA 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10309 @CR-RKA @1HR_R2
 Scenario: Verify that user is able to see the Add new Gift card on empty Wallet 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

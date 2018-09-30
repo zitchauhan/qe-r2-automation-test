@@ -1,7 +1,7 @@
 Feature: B06-225 - BOPIS Pick-Up Person 
 
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3469 
-@ZYP_CHECKOUT_K3469-10872 @CR-GK 
+@ZYP_CHECKOUT_K3469-10872 @CR-GK @1HR_R2
 Scenario: Verify BOPIS Pick Up Person - Authenticated user -Alternate Person 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

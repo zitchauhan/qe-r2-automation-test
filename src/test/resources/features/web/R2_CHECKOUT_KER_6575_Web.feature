@@ -26,7 +26,7 @@ Scenario: Verify when user click on the Logo should navigate user to Home Page
     	Then User should be navigated to Home_Page	
     	
     	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6575 @ZYP_CHECKOUT_K6575-8638 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6575 @ZYP_CHECKOUT_K6575-8638 @CR-DPK @1HR_R2
 Scenario: Verify user should see the mini cart Icon with no. of items in cart notifier
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User navigates to L2 Mens clothing

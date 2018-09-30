@@ -1,6 +1,6 @@
 Feature: B03-500-SOF Checkout landing and variations
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-7031 @ZYP_CHECKOUT_K7031-9590 @CR-MS
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-7031 @ZYP_CHECKOUT_K7031-9590 @CR-MS @1HR_R2
 Scenario:  To verify checkout landing variations - shipping drawer hidden for SOF
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 

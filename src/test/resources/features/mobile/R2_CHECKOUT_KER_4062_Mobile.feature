@@ -65,7 +65,7 @@ Scenario: Verify if user can create account from Order Confirmation Page
 	    |You have successfully registered with Academy.com	|
 	    |LET'S SHOP											|
 	    
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4062 @ZYP_CART_K4062-8105 @CR-SK 
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-4062 @ZYP_CART_K4062-8105 @CR-SK 
 Scenario: Verify the available customer details
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "productName" and navigates to PDP 

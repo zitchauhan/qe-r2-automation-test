@@ -1,6 +1,6 @@
 Feature: [Mobile]Verify Add Gift Card in Account
 
-  @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-3093 @ZYP_MYACCOUNT_K3093-10308_M @CR-RKA
+  @R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-3093 @ZYP_MYACCOUNT_K3093-10308_M @CR-RKA
   Scenario: Verify that user is able to see the Add new Gift card on empty Wallet
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

@@ -1,6 +1,6 @@
 Feature: View/Select Shipping Address in Checkout 
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8189 @CR-RK 
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151 @ZYP_CHECKOUT_K3151-8189 @CR-RK  @1HR_R2
 Scenario: Verify if authenticated user can select a shipping address from the dropdown 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu

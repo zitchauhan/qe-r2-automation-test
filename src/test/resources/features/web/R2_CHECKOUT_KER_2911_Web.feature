@@ -1,6 +1,6 @@
 Feature: Verify Accurate Shipping Prices at Checkout
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2911 @ZYP_CHECKOUT_K2911-8229 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-2911 @ZYP_CHECKOUT_K2911-8229 @CR-DPK
 Scenario: Verify if the shipping price on Checkout screen is same as Order Summary on Cart page
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User Navigates L2 form Homepage Header 

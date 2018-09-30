@@ -46,7 +46,7 @@ Scenario: Verify that Authenticated user is able to view "Enable Buy Now" button
     |Verify following elements in PDP page|
     |EnableBuyNow_btn| 
     
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8692 @CR-MS
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8692 @CR-MS
 Scenario: Verify that Authenticated user is able to view modal to add shipping details if user does not have saved Shipping Address but has saved payment details
     Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

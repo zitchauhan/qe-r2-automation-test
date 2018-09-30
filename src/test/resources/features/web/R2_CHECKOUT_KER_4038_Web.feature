@@ -44,7 +44,7 @@ Verify that user is not able to add another gift if single Gift card covers the 
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4038
-@ZYP_CART_K4038-10032 @CR-SK 
+@ZYP_CART_K4038-10032 @CR-SK @1HR_R2
 Scenario:
 Verify that payment details(Credit card) is suppressed if single Gift card covers the order Total 
 	Given user launches the browser and navigates to "ASO_HOME" page 

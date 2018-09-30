@@ -22,7 +22,7 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 	And user click on signin button 
 	
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8923 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8923 @CR-RK @1HR_R2
 	Scenario: Verify The user must be able to input a valid email Id while creating account
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

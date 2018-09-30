@@ -116,7 +116,7 @@ Then User clicks on the burger menu
 		|# Verify following section SPECIAL ORDER SHIP TO STORE in checkout page|
 		|ShipToStoreforSOF_Txt|
 	
-		@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10440 @CR-RKA
+		@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10440 @CR-RKA
 Scenario: Verify if 'Same as Shipping Address' checkbox is disabled for STS order
 
 Given user launches the browser and navigates to "ASO_HOME" page

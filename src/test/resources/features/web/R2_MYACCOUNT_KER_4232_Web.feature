@@ -28,7 +28,7 @@ Feature: E02-100 - My Account, Address Book
 
 	
 	#partially completed
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9196 @CR-RK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9196 @CR-RK @1HR_R2
 Scenario: Verify Authenticated user can Manage Address Book - Delete Address details - Undo
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page

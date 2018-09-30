@@ -22,7 +22,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	
 	
 	
-	@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9834 @CR-RKA
+	@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9834 @CR-RKA
 	Scenario: Verify user will be prevented from adding restricted products to APO box in shipping address.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 

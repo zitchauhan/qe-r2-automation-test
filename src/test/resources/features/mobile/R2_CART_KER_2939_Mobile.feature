@@ -39,7 +39,7 @@ Scenario: To view details specific to an item in the cart
 	Then user verify BOPIS radio button 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8077 @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8077 @CR-AKK 
 Scenario:
 To verify Shipping radio button - Authenticated user With store selected in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 

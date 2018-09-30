@@ -17,7 +17,7 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 	And user click on signin button 
 	
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8923 @CR-RK 
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8923 @CR-RK 
 	Scenario: Verify The user must be able to input a valid email Id while creating account
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu

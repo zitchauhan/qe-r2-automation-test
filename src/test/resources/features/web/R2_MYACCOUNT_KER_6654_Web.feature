@@ -13,7 +13,7 @@ Feature: [Web]E01-200 - Forgotten Password - Create New Password
 	|#verify  new password dot is display|
 	|ChangePassworPage_NewPassword_txt			|
 	
-	@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10177 @CR-RKA
+	@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10177 @CR-RKA 
 	Scenario: Verify the user is able to see the password strength info bubble
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 
@@ -27,7 +27,7 @@ Feature: [Web]E01-200 - Forgotten Password - Create New Password
 	|#verify the tooltip in change your password|
 	|ChangePasswordPage_toolTip_Btn                                 |
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10178 @CR-RKA
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 @ZYP_MYACCOUNT_K6654-10178 @CR-RKA @1HR_R2
 Scenario: Verify the user gets the error message on entering the password not meeting the requirements of min. characters
 
 Given  user launches the browser and navigates to "ASO_HOME" page 

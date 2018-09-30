@@ -131,7 +131,7 @@ Scenario: Verify if user clicks "Go to Payment" with incorrect details, system s
 		|checkOut_ShippingAddress_GoToShippingMethod_btn			|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-Highest @1H_R2 @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9413 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9413 @CR-DPK
   Scenario: Verify user can continue checkout with the suggested address/ entered address.
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing

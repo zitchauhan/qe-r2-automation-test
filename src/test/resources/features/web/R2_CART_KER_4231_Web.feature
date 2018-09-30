@@ -1,6 +1,6 @@
 Feature: Verify Authenticated Customer Store Priority 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-4231 @ZYP_CART_K4231-8894 
+@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Cart @KER-4231 @ZYP_CART_K4231-8894 
 @CR-SK 
 Scenario: Verify Authenticated user able to see the BOPIS items for pickup 
 	Given user launches the browser and navigates to "ASO_HOME" page 

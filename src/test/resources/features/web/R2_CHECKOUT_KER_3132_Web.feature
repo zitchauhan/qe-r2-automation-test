@@ -2,7 +2,7 @@ Feature: [Web] Populate Billing Address on Checkout page
 
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8114 @CR-RKA
+@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8114 @CR-RKA
 Scenario: Verify Billing address on check out page - pre-populated billing address
  Given user launches the browser and navigates to "ASO_HOME" page 
  Then user should able to click on Signin button

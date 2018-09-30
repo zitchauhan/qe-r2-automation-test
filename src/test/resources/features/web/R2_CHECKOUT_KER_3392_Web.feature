@@ -17,7 +17,7 @@ Feature: Verify Checkout Login Interstitial
 	And user will verify the message for Sign-in
 	
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 @CR-RK 
 	Scenario: Verify is user can Sign-In for faster checkout experience
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Mens clothing

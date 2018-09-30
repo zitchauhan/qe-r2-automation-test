@@ -87,7 +87,7 @@ Feature: B06-225- BOPIS Age Restriction Flag in Checkout
 	And user able to see the button place order
 
 	
-	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3174 @ZYP_CART_K3174-KER-10276 @CR-RK 
+	@R2_Mobile @R2_Regression @R2_All @P-Low @1HR_R2 @C-Cart @KER-3174 @ZYP_CART_K3174-KER-10276 @CR-RK 
 Scenario: Verify without checking acknowledgement, user is not able to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu

@@ -31,7 +31,7 @@ Feature: Verify Checkout Login Interstitial
 	And user click on signin button 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8148 @CR-DPK 
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8148 @CR-DPK 
 	Scenario: Verify the  User must view Sign-In/Interstitial Modal
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 

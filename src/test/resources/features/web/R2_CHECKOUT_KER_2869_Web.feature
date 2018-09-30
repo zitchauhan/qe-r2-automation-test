@@ -1,6 +1,6 @@
 Feature: PDP BOPIS Messaging & Variations to Customer
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10686 @CR-AKK
+@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10686 @CR-AKK
 Scenario: Verify that the user is able to increase the item quantity on PDP
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

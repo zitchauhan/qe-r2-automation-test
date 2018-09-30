@@ -113,7 +113,7 @@ Scenario: Verify CVV invalid due to incorrect digit length
 	And user click on Go To Shipping Method button in Checkout page
 	Then user enteres invalid CVV and validates the error msg
 	
-		           @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3139 @ZYP_CART_K3139-8220 @CR-AG 
+		           @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3139 @ZYP_CART_K3139-8220 @CR-AG @1HR_R2
 Scenario: Verify if CVV invalid due to non-number input
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing

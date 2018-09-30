@@ -1,6 +1,6 @@
 Feature: [Web] B06-100- Merge Cart
 
-@R2_Web @R2_Regression  @KER-3143 @ZYP_Cart_K3143-10257 @CR-RKA
+@R2_Web @R2_Regression  @KER-3143 @ZYP_Cart_K3143-10257 @CR-RKA @1HR_R2
 Scenario: Verify if Unauthenticated customer will be able to add items to cart for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 

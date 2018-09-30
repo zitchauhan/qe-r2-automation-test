@@ -1,6 +1,6 @@
 Feature: E02-250- View Gift Card Details in Account
 
-  @R2_Mobile @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-3092 @ZYP_MYACCOUNT_K3092-10463_M @CR-RKA
+  @R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-3092 @ZYP_MYACCOUNT_K3092-10463_M @CR-RKA
   Scenario: Verify The user must be able to input a valid email Id in checkout page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

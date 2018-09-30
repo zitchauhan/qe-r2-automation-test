@@ -1,7 +1,7 @@
 Feature: Verfiy Edit Shipping Address in Checkout 
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-8025 @CR-DPK 
+@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-8025 @CR-DPK 
 Scenario: 
 	Verify that authenticated user is able to edit address in shipping address section on checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 

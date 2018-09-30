@@ -73,7 +73,7 @@ Feature: Verify Promotional Messaging in Cart
 	
 	
 	
-	@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2941 @ZYP_CART_K2941-8070 @CR-DPK
+	@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-High @C-Cart @KER-2941 @ZYP_CART_K2941-8070 @CR-DPK
     Scenario: To verify discounts to specific items displayed at the item level (Free Shipping, BOGO, Gift With Purchase)          
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu

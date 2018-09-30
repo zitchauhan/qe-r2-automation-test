@@ -1,7 +1,7 @@
 Feature:  Shipping Methods - White Glove Service
 
 
-@R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-6760 @ZYP_CHECKOUT_K6760-8941 @CR-SG 
+@R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-6760 @ZYP_CHECKOUT_K6760-8941 @CR-SG @1HR_R2
 Scenario: Verify that the Authorized user is able to view the default services available for WG items
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

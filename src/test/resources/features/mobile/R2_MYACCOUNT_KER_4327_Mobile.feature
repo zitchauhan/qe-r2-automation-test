@@ -19,7 +19,7 @@ Scenario: Verify that for Authenticated user Cancel Order CTA is displayed for o
     |#Verify following elements in my account order details|
     |Order_Cancel_lnk|
     
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4327 @ZYP_MYACCOUNT_K4327-10917 @CR-MS
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-4327 @ZYP_MYACCOUNT_K4327-10917 @CR-MS
 Scenario: BOPIS-Verify that Authenticated User is able to navigate back to order details page from cancellation confirmation page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu 

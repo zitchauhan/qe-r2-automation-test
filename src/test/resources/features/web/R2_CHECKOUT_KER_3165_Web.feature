@@ -153,7 +153,7 @@ Scenario:
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3165 
-@ZYP_CHECKOUT_K3165-8246 @CR-GK 
+@ZYP_CHECKOUT_K3165-8246 @CR-GK @1HR_R2
 Scenario: 
 	Verify the guest user is able to select the shipping method from the list
 	Given user launches the browser and navigates to "ASO_HOME" page 

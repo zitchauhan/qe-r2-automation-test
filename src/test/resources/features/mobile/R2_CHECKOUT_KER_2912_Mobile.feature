@@ -1,7 +1,7 @@
 Feature: B03-685- Display Estimated Delivery Dates on PDP and Cart 
 
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2912 
-@ZYP_CHECKOUT_K2912-10761 @CR-GK 
+@ZYP_CHECKOUT_K2912-10761 @CR-GK @1HR_R2
 Scenario: 
 	Verify that user is able to see transparent estimated delivery dates on pdp and cart
 	Given user launches the browser and navigates to "ASO_HOME" page 

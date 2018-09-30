@@ -1,6 +1,6 @@
 Feature: Verify B06-225 Display BOPIS Pickup Information Drawer in Checkout
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2867 @ZYP_CHECKOUT_K2867-10899 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-2867 @ZYP_CHECKOUT_K2867-10899 @CR-DPK
 Scenario: Verify that UnAuthenticated user is able to view the instore pickup drawer details
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 

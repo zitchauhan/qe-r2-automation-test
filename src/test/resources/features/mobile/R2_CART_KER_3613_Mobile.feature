@@ -57,7 +57,7 @@ Scenario: Verify that  the user should be able to  search the store details by e
 	And user click on submit button
 	Then verify the components in Find a Store Model
 	
-	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3613 @ZYP_CART_K3613-10769 @CR-RK 	
+	@R2_Mobile @R2_Regression @R2_All @P-Low @1HR_R2 @C-Cart @KER-3613 @ZYP_CART_K3613-10769 @CR-RK 	
 Scenario: Verify that user should be able to see proper  message while adding to cart for the product which is not available for pickup
 Given user launches the browser and navigates to "ASO_HOME" page 
 And User clicks on the burger menu 

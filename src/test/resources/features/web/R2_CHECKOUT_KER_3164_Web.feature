@@ -54,7 +54,7 @@ Scenario: Verify that authenticated user is able view/select shipping method
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3164 
-@ZYP_CHECKOUT_K3164-8029 @CR-GK 
+@ZYP_CHECKOUT_K3164-8029 @CR-GK @1HR_R2
 Scenario: 
 	Verify if User is able to select a Payment method on One Page Checkout Screen 
 	Given  user launches the browser and navigates to "ASO_HOME" page 

@@ -60,7 +60,7 @@ Scenario: Verify that user is not able to proceed  with Credit card addition wit
 	|Unrecognized card number|
 	
 	
- @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10679 @CR-DPK 
+ @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10679 @CR-DPK @1HR_R2
 Scenario: Verify that user is not able to proceed with Credit card addition with past expiration date 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
