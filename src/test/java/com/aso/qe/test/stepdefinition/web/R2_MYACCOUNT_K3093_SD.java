@@ -157,5 +157,25 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 	public void user_click_on_Plus_icon_add_new_gift_card() throws Throwable {
 	    clickOnButton(myAccountPo.btnAddGiftCardPlusIcon);
 	}
+	
+	@Then("^user fill the alphanumeric gift and fill correct pin$")
+	public void user_fill_the_alphanumeric_gift_and_fill_correct_pin() throws Throwable {
+		 setInputText(myAccountPo.txtGiftCardNumber, webPropHelper.getTestDataProperty("AlphanumericGiftCardNumber"));
+		 setInputText(myAccountPo.txtGifCardPin, webPropHelper.getTestDataProperty("NewPinNumber"));
+		 assertTrue(clickOnButton((myAccountPo.btnAddGiftCard)));
+		 
+		
+	}
+
+	@Then("^user fill correct giftcard number and alphanumeric pin$")
+	public void user_fill_correct_giftcard_number_and_alphanumeric_pin() throws Throwable {
+	
+		setInputText(myAccountPo.txtGiftCardNumber, webPropHelper.getTestDataProperty("Valid16DigitGiftCardNumber"));
+		 setInputText(myAccountPo.txtGifCardPin, webPropHelper.getTestDataProperty("AlphanumericGiftCardPin"));
+		 assertTrue(clickOnButton((myAccountPo.btnAddGiftCard)));
+	
+	}
+
+
 
 }

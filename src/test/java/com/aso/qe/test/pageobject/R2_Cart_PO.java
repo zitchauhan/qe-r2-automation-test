@@ -430,6 +430,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	// End KER-2926 CR-MS
 	@FindBy(xpath = "//*[@data-auid='findAStore']/a/span[1]")
 	public WebElement selectStoreMiniBalloon;
+	@FindBy(xpath = "//*[contains(text(),'Included')]")
+	public WebElement cart_IncludedTxt;
 	/***************************** END XPAHTS ********************************/
 
 	/***************************** START METHODS 

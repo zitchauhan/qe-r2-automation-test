@@ -105,7 +105,16 @@ public class R2_CART_K3511_SD extends CommonActionHelper {
    Thread.sleep(Constants.thread_low); 
    setInputText(r2CartPo.inputZipCode, webPropHelper.getTestDataProperty("ZIPCODE"));
    assertTrue(clickOnButton(r2CartPo.btnCartSubmit));
-	
+   Thread.sleep(Constants.thread_medium);
 	}
+	
+	@Then("^user click on change zip code and fill the zip code outside the US$")
+	public void user_click_on_change_zip_code_and_fill_the_zip_code_outside_the_US() throws Throwable {
+	 clickOnButton(r2CartPo.lnkChangeZipCode);
+	 setInputText(r2CartPo.inputZipCode, webPropHelper.getTestDataProperty("ZipCodeOtherThenUS"));
+	 clickOnButton(r2CartPo.btnCartSubmit);
+	 Thread.sleep(Constants.thread_medium);
+	}
+
 
 }

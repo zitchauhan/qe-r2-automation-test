@@ -39,7 +39,9 @@ Scenario: Verify if authenticated user can view updated estimated shipping when 
     And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	 
 	  And user lands on My Account page and click on adress
+	
 	 Then user fill the Address book details 
 	 And user clicks on one of the category and navigates to LOne
 	    And user clicks on one of the subcategory and navigates to LTwo
@@ -80,4 +82,28 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		
 	
 	
-	
+
+@R2_Web @R2_Regression @R2_All @P-Low  @C-Cart @KER-3511 @ZYP_CART_K3511-12777 @CR-RKA 
+Scenario: Verify if geo location is not selected as US
+Given user launches the browser and navigates to "ASO_HOME" page 
+ When User searches a product "productName" and navigates to PDP
+    And user click on Add to Cart Button
+    And user is navigated to Add to cart Notification popup
+    And user will click on View Cart button
+Then user click on change zip code and fill the zip code outside the US
+ Then Verify below Sub/Main Module of Cart Page
+ |#verify the extimated Tax is ZERO|
+ |EstimatedTaxes_txt|
+
+@R2_Web @R2_Regression @R2_All @P-Low  @C-Cart @KER-3511 @ZYP_CART_K3511-12776 @CR-RKA
+Scenario: Verify if user selected zip code other than US states
+Given user launches the browser and navigates to "ASO_HOME" page 
+ When User searches a product "productName" and navigates to PDP
+    And user click on Add to Cart Button
+    And user is navigated to Add to cart Notification popup
+    And user will click on View Cart button
+Then user click on change zip code and fill the zip code outside the US
+Then Verify below Sub/Main Module of Cart Page
+ |#verify the extimated Tax is ZERO|
+ |EstimatedTaxes_txt|
+ 
