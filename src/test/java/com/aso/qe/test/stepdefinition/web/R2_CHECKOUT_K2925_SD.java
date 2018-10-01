@@ -58,13 +58,13 @@ public class R2_CHECKOUT_K2925_SD extends CommonActionHelper {
 		r2CheckoutPo.userNavigateToPrivacyPolicy();
 	}
 
-	@Then("user able to see the same order ID in My order section$")
-	public void user_able_to_see_the_same_order_ID_in_My_order_section() throws Throwable{
-		Boolean flag =false;
-		System.out.println(orderID);
-		flag =isDisplayed(driver.findElement(By.xpath("//*[contains(text(),'"+orderID+"')]")));
-		assertTrue(flag);
-	}
+//	@Then("user able to see the same order ID in My order section$")
+//	public void user_able_to_see_the_same_order_ID_in_My_order_section() throws Throwable{
+//		Boolean flag =false;
+//		System.out.println(orderID);
+//		flag =isDisplayed(driver.findElement(By.xpath("//*[contains(text(),'"+orderID+"')]")));
+//		assertTrue(flag);
+//	}
 
 	@Then("^user modify the shipping address$")
 	public void user_modify_the_shipping_address() throws Throwable{
