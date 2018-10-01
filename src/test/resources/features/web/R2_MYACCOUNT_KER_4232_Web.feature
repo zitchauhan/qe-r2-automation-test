@@ -27,7 +27,7 @@ Feature: E02-100 - My Account, Address Book
 		
 
 	
-	#partially completed
+
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 @ZYP_MYACCOUNT_K4232-9196 @CR-RK @1HR_R2
 Scenario: Verify Authenticated user can Manage Address Book - Delete Address details - Undo
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -42,6 +42,20 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 	And user click on signin button
 	 And user click on MyAccount
 	And user lands on My Account page and click on adress
+	 Then user Clicks on Add New Address link
+     	 When user enter First name "FirstName" in address book
+	And user enter Last name "LastName" in address book
+	And user enter Phone number "PhoneNumber" in address book
+	And user enter Address "Address" in address book
+	And user enter Zipcode "zipcode" in address book
+	 And clicks on Add New Address button
+	 Then user Clicks on Add New Address link
+     	 When user enter First name "FirstName" in address book
+	And user enter Last name "LastName" in address book
+	And user enter Phone number "PhoneNumber" in address book
+	And user enter Address "Address" in address book
+	And user enter Zipcode "zipcode" in address book
+	 And clicks on Add New Address button
 	When user clicks Remove button
 	Then Verify the message on the page
     |# verify the remove quantity message|
