@@ -1,16 +1,12 @@
 Feature: B06-225 - BOPIS Pick-Up Person 
 
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3469 
-@ZYP_CHECKOUT_K3469-10872 @CR-GK @1HR_R2
+@ZYP_CHECKOUT_K3469-10872 @CR-GK @1HR_R2 
 Scenario: Verify BOPIS Pick Up Person - Authenticated user -Alternate Person 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user logs in as "RawUser" 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -32,11 +28,7 @@ Scenario: Verify BOPIS Pick Up Person - Authenticated user -Alternate Person
 Scenario: 
 	Verify BOPIS Pick Up Person - Un Authenticated user - Alternate Pick up 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -57,11 +49,7 @@ Scenario:
 @ZYP_CHECKOUT_K3469-10876 @CR-GK 
 Scenario: Verify BOPIS Pick Up Person - Continue to Complete Payment 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 

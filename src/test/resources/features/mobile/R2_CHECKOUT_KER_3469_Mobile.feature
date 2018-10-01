@@ -7,13 +7,10 @@ Scenario: Verify BOPIS Pick Up Person - Authenticated user -Alternate Person
 	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu 
 	And user logs in as "RawUser" 
-	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
 	And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	And user click on checkout button in Cart page 
 	And user is navigated to order summary page 
@@ -32,13 +29,10 @@ Scenario: Verify BOPIS Pick Up Person - Authenticated user -Alternate Person
 Scenario: 
 	Verify BOPIS Pick Up Person - Un Authenticated user - Alternate Pick up 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
 	And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	And user click on checkout button in Cart page 
 	And user is navigated to order summary page 
@@ -56,9 +50,7 @@ Scenario:
 @ZYP_CHECKOUT_K3469-10876 @CR-GK 
 Scenario: Verify BOPIS Pick Up Person - Continue to Complete Payment 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 

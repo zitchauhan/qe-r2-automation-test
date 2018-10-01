@@ -24,7 +24,7 @@ Scenario: Verify Gift card fields displayed - No Previous Gift Cards Saved
 	
 	
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6822 
-@ZYP_CHECKOUT_K6822-7954 @CR-GK @1HR_R2
+@ZYP_CHECKOUT_K6822-7954 @CR-GK @1HR_R2 
 Scenario: Verify Valid gift card is applied for purchases 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -93,13 +93,10 @@ Scenario: Verify Add new gift card during checkout user has Saved Gift Cards
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	Then User clicks on ASO Logo and should be navigated to Home Page 
 	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button 
+	And user click on checkout from ATC pop up 
 	And user is navigated to order summary page 
 	And user clicks on edit payment cta 
 	And user click on GiftCard Plus icon in Checkout page 

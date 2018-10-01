@@ -24,7 +24,6 @@ Scenario:
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
 	And user click on checkout button in Cart page 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#Verify following elements in checkout page|
@@ -153,7 +152,7 @@ Scenario:
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3165 
-@ZYP_CHECKOUT_K3165-8246 @CR-GK @1HR_R2
+@ZYP_CHECKOUT_K3165-8246 @CR-GK @1HR_R2 
 Scenario: 
 	Verify the guest user is able to select the shipping method from the list
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -239,7 +238,7 @@ Scenario:
 	And user clicks on edit shipping method cta 
 	And user click on go to payment present in shipping method 
 	Then user click on paypal 
-	And user switch to iframe to verify paypalcheckoutBtn
+	And user switch to iframe to verify paypalcheckoutBtn 
 	And  Verify below Sub/Main Module of Checkout Page 
 		|#%%%%%%   Verify user is able to see paypal checkout button %%%%%%%%%%|
 		|PayPalCheckOut_Btn|
@@ -366,9 +365,10 @@ Scenario: Verify the guest user is able to place the order
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
-@ZYP_CHECKOUT_K3165-8243 @CR-GK
-Scenario: Verify the guest user is notified with an error on entering restricted address for the items in cart
-Given user launches the browser and navigates to "ASO_HOME" page 
+@ZYP_CHECKOUT_K3165-8243 @CR-GK 
+Scenario: 
+	Verify the guest user is notified with an error on entering restricted address for the items in cart 
+	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -384,12 +384,12 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then Verify the message on the page 
 		|# Following Error Message should show on the page|
 		|We are unable to ship to AK, HI and PR. Please change your shipping address.|
-	
-
+		
+		
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8247 @CR-GK 
-Scenario:
-Verify the shipping method has no drop-down for single method available 
+Scenario: 
+	Verify the shipping method has no drop-down for single method available 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUForGiftCard" and navigates to PDP 
 	And user click on Add to Cart Button 
@@ -404,39 +404,39 @@ Verify the shipping method has no drop-down for single method available
 	And  user selects the suggested address instead of entered address 
 	And  clicks on Use Selected Address button 
 	And user clicks on edit shipping method cta 
-	Then Guest User should be able to see only one available method for the shipment displayed in shipping method
-		
-		
-		@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
-		@ZYP_CHECKOUT_K3165-8255 @CR-GK 
-		Scenario: 
-			Verify the guest user's address is saved in My Address on registering from Order confirmation 
-			Given user launches the browser and navigates to "ASO_HOME" page 
-			When User searches a product "productName" and navigates to PDP 
-			And user click on Add to Cart Button 
-			And user is navigated to Add to cart Notification popup 
-			And user click on checkout from ATC pop up 
-			And  user enter First name "FirstName" 
-			And  user enter Last name "LastName" 
-			And  user enter Phone number "PhoneNumber" 
-			And  user enter Address "AVSAddress" 
-			And  user enter Zipcode "zipcode" 
-			And  user click on Go To Shipping Method button in Checkout page 
-			And  user selects the suggested address instead of entered address 
-			And  clicks on Use Selected Address button 
-			And user clicks on edit shipping method cta 
-			And user click on go to payment present in shipping method 
-			And user fill the credit card detail in payment 
-			And user fill the email address for shipment and click on review order btn 
-			And user able to see the button place order 
-			And registers for the account from the Order confirmation screen with "Password" 
-			Then Verify the message on the page 
-				|# Then guest user should be displayed with a banner message for successful account creation|
-				|Congrats, Academy! You've created an account!|
-			And user navigates from Order successful page to address book in my account 
-			And Verify below Sub/Main Module of My Account 
-				|# Then guest user should be displayed with the below attributes|
-				|AddressPage_Edit_btn|
+	Then Guest User should be able to see only one available method for the shipment displayed in shipping method 
+	
+	
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
+@ZYP_CHECKOUT_K3165-8255 @CR-GK 
+Scenario: 
+	Verify the guest user's address is saved in My Address on registering from Order confirmation 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user click on checkout from ATC pop up 
+	And  user enter First name "FirstName" 
+	And  user enter Last name "LastName" 
+	And  user enter Phone number "PhoneNumber" 
+	And  user enter Address "AVSAddress" 
+	And  user enter Zipcode "zipcode" 
+	And  user click on Go To Shipping Method button in Checkout page 
+	And  user selects the suggested address instead of entered address 
+	And  clicks on Use Selected Address button 
+	And user clicks on edit shipping method cta 
+	And user click on go to payment present in shipping method 
+	And user fill the credit card detail in payment 
+	And user fill the email address for shipment and click on review order btn 
+	And user able to see the button place order 
+	And registers for the account from the Order confirmation screen with "Password" 
+	Then Verify the message on the page 
+		|# Then guest user should be displayed with a banner message for successful account creation|
+		|Congrats, Academy! You've created an account!|
+	And user navigates from Order successful page to address book in my account 
+	And Verify below Sub/Main Module of My Account 
+		|# Then guest user should be displayed with the below attributes|
+		|AddressPage_Edit_btn|
 		
 		
 	

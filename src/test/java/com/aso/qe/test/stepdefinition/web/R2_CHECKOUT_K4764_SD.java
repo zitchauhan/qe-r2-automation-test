@@ -27,7 +27,6 @@ public class R2_CHECKOUT_K4764_SD extends CommonActionHelper {
 		Thread.sleep(Constants.thread_medium);
 		Actions hover=new Actions(getDriver());
 		hover.click(r2CheckoutPo.MePickUp_Drpdwn).build().perform();
-		hover.click(r2CheckoutPo.MePickUp_Drpdwn).build().perform();
 		hover.sendKeys(Keys.DOWN,Keys.ENTER).build().perform();
 		//hover.sendKeys(r2CheckoutPo.MePickUp_Drpdwn, Keys.DOWN,Keys.ENTER).build().perform();
 		Thread.sleep(Constants.thread_medium);
