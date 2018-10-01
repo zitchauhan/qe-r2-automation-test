@@ -7,6 +7,8 @@ import java.util.Iterator;
 import java.util.Set;
 //
 
+import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -23,13 +25,15 @@ import cucumber.api.java.en.When;
 import io.restassured.internal.assertion.PathFragmentEscaper;
 
 public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
+	private static final Logger logger = Logger.getLogger(R2_CheckOut_PO.class);
 	R2_OrderConfirmation_Po r2OrderConfPO = PageFactory.initElements(driver, R2_OrderConfirmation_Po.class);
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	// R2_CHECKOUT_K3132_SD r2_CheckOut_k3132_SD = new R2_CHECKOUT_K3132_SD();
 	R2_R1_Fun_PO r2_r1_fun_po = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	R2_MyAccount_PO r2MyAccountPO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	Hooks hooks = new Hooks();
-
+	String orderID=" ";
+	
 	@And("^user adds shipment address on checkout page for \"(.*?)\" user$")
 	public void user_adds_shipment_address_on_checkout_page_for_user(String arg1) throws Throwable {
 		boolean userWithoutExistingShippingAddress = false;
@@ -336,6 +340,8 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			hooks.embedScreenshotForPassScenario();
 		}
 		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_ThanksForSubmittingOrder_txt));
+		orderID = r2CheckOutPo.txtOrderID.getText();
+		logger.debug("Order Id on order confirmation status" + orderID);
 	}
 
 	@And("^user enter \"(.*?)\" in last name field of sign up page$")
@@ -382,6 +388,14 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 	@Then("^verify user is able to sign up successfully on order confirmation page$")
 	public void verify_user_is_able_to_sign_up_successfully_on_order_confirmation_page() throws Throwable {
 		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_AccountCreatedMessage_txt));
+	}
+	
+	@Then("user able to see the same order ID in My order section$")
+	public void user_able_to_see_the_same_order_ID_in_My_order_section() throws Throwable{
+		Boolean flag =false;
+		System.out.println(orderID);
+		flag =isDisplayed(driver.findElement(By.xpath("//*[contains(text(),'"+orderID+"')]")));
+		assertTrue(flag);
 	}
 
 }
