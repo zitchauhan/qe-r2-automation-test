@@ -845,14 +845,14 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		 // To be updated by Anuj
 	   /**AG KER-3130 Starts**************************************/
     
-    @FindBy(xpath = "//*[@id='billingFirstName']//following-sibling::*[contains(text(),'Please')]") public WebElement txtBillingFirstNameErrorMsg;
-    @FindBy(xpath = "//*[@id='billingLastName']//following-sibling::*[contains(text(),'Please')]") public WebElement txtBillingLastNameErrorMsg;
-    @FindBy(xpath = "//*[@id='billingPhoneNumber']//following-sibling::*[contains(text(),'Please')]") public WebElement txtBillingPhoneNumberErrorMsg;
-    @FindBy(xpath = "//*[@id='billingZipCode']//following-sibling::*[contains(text(),'Please')]") public WebElement txtBillingZipCodeErrorMsg;
-    @FindBy(xpath = "//*[@id='billingCity']//following-sibling::*[contains(text(),'Required')]") public WebElement txtBillingCityErrorMsg;
-    @FindBy(xpath = "//*[@id='email']//parent::div//following-sibling::*[contains(text(),'Please')]") public WebElement txtBillingEmailAddressForOrderConfirmationErrorMsg;
-    @FindBy(xpath = "//*[@id='billingAddress1']//following-sibling::*[contains(text(),'Please')]") public WebElement txtBillingAddressErrorMsg;
-    @FindBy(xpath = "//*[@id='billingState']//following-sibling::*[contains(text(),'Required')]") public WebElement txtBillingStateErrorMsg;
+    @FindBy(xpath = "//*[@id='billingFirstName']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingFirstNameErrorMsg;
+    @FindBy(xpath = "//*[@id='billingLastName']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingLastNameErrorMsg;
+    @FindBy(xpath = "//*[@id='billingPhoneNumber']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingPhoneNumberErrorMsg;
+    @FindBy(xpath = "//*[@id='billingZipCode']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingZipCodeErrorMsg;
+    @FindBy(xpath = "//*[@id='billingCity']//following-sibling::div//span[contains(text(),'Required')]") public WebElement txtBillingCityErrorMsg;
+    @FindBy(xpath = "//*[@id='email']//parent::div//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingEmailAddressForOrderConfirmationErrorMsg;
+    @FindBy(xpath = "//*[@id='billingAddress1']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingAddressErrorMsg;
+    @FindBy(xpath = "//*[@id='billingState']//following-sibling::div//span[contains(text(),'Required')]") public WebElement txtBillingStateErrorMsg;
     @FindBy(xpath="//*[@id='billingAddress1']")public WebElement txtEmailAddressforOrderConfirmationInput;
     @FindBy(xpath="//*[@data-auid='btnPlace_Order']")public WebElement btnPlaceOrderPaymentPage;
     @FindBy(xpath = "//*[@id='billingZipCode']//following-sibling::*[contains(text(),'Invalid')]") public WebElement txtBillingZipCodeInvalidErrorMsg;
