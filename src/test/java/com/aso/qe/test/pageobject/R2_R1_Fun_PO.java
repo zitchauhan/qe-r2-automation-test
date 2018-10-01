@@ -209,4 +209,10 @@ public WebElement txtShippingPickupFilterDrawer;
 @FindBy(xpath ="//*[text()='Change Pickup Location']")//CR-DPK 26-sept
 public WebElement lnkPLPChangePickupLocation;
 //End KER-2872 CR-DPK
+
+@FindBy(xpath ="//*[@data-auid='PDP_FindAStore']")
+public WebElement ChooseLocation_Lnk;
+
+@FindBy(xpath ="//*[@data-auid='btnundefined']")
+public WebElement BuyNow_btn;
 }

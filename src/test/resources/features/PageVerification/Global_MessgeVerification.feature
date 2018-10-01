@@ -71,7 +71,11 @@ Feature: Message/Text Verification
     |Invalid GiftCard Pin|
     |Shipping Not Available|
     |Out of Stock|
-    |$0.00|
+	|$0.00|
+    |ORDER NUMBER|
+    |ORDERS|
+    |ORDER PLACED ON|
+    
     
     
     
