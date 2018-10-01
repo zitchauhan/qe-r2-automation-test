@@ -138,4 +138,4 @@ Feature: Verify Order API endpoint services
   @All-R2 @C1-Order @C2-OrderDetails @api @R2_AAST-06 @CR-RT @ZYP_OrderDetails_14034
   Scenario: TC_1 -Verify the Place order with SignIn user
     Given "OrderUrl" with "PlaceOrderRequest" endpoint for Place Order
-    And Verify response status code as 200
+    And Verify response status code as 201
