@@ -28,7 +28,6 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
-		|OrderSummary_Header|
 		|Plus_AddPromoCode_btn|
 	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"
 	

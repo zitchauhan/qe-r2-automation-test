@@ -11,7 +11,6 @@ Feature: Verify Promotional Messaging in Cart
 	When user clicks on Add Promo code link under Cart Order Summary
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page"Order Summary"|
-		|OrderSummary_Header|
 		|Minus_HidePromo_btn|
 		|EnterPromoCode_input|
 		|Submit_PromoCode_btn|
@@ -28,7 +27,6 @@ Feature: Verify Promotional Messaging in Cart
 	When user clicks on Add Promo code link under Cart Order Summary
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page"Order Summary"|
-		|OrderSummary_Header|
 		|Minus_HidePromo_btn|
 		|EnterPromoCode_input|
 		|Submit_PromoCode_btn|
@@ -47,8 +45,7 @@ Feature: Verify Promotional Messaging in Cart
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
-		|OrderSummary_Header|
-		|Plus_AddPromoCode_btn|
+			|Plus_AddPromoCode_btn|
 	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"
 	And again try to apply Promocode "SanityOrderLevelQuantity"
 	
@@ -65,7 +62,6 @@ Feature: Verify Promotional Messaging in Cart
 	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"    
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
-		|checkOut_OrderSummary_btn|	
 		|Total_txt|
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|
@@ -85,7 +81,6 @@ Feature: Verify Promotional Messaging in Cart
 	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount"    
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
-		|checkOut_OrderSummary_btn|	
 		|Total_txt|
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|	

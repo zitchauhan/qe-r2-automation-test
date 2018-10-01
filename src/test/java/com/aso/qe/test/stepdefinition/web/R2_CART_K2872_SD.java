@@ -177,7 +177,6 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	@Then("^verify the components in Find a Store Model$")
 	public void verify_the_components_in_Find_a_Store_Model() throws Throwable {
 		assertTrue(isDisplayed(r2CartPo.googleMap));
-		assertFalse(isDisplayed(r2CartPo.txtYourStore));
 		for(WebElement miles: r2CartPo.txtDistanceinMiles) {
 			assertTrue(isDisplayed(miles));
 		}
@@ -238,7 +237,7 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	
 	@And("^user is able to see Change Pickup Location link$")
 	public void user_is_able_to_see_Change_Pickup_Location_link() throws Throwable {
-		assertTrue(isDisplayed(r2R1FunPO.lnkPickupLocation)); 
+		assertTrue(isDisplayed(r2R1FunPO.lnkPLPChangePickupLocation)); 
 	}
 	
 	@Then("^user should not be able to see the 'View Next (\\d+) Stores' button\"$")

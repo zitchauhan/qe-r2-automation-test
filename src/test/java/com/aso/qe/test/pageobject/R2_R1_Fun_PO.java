@@ -37,7 +37,7 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='go-to-Shooting_m']")
 	public WebElement productPLP_m;// Area L3 // 5 sept CR-DPK
 
-	@FindBy(xpath = "//*[text()='Choose Pickup Location']")
+	@FindBy(xpath = "(//*[text()='Choose Pickup Location'])[2]")
 	public WebElement lnkPickupLocation;// Area PDP
 
 	// End KER-3613 CR-RK
