@@ -538,7 +538,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	// Start KER-2927 CR-SK
 	public float getEstimatedTaxOnCartPage() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(Constants.thread_medium);
 		String taxDisplayed = getText(txtEstimatedTaxesCart);// txtEstimatedTax
 		taxDisplayed = taxDisplayed.replace("$", "");
 		return Float.parseFloat(taxDisplayed);
@@ -718,7 +718,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="//*[@data-auid='crt_btnHidePromo']")public WebElement btn_Minus_HidePromo;
 	@FindBy(xpath="//*[@data-auid='crt_inputPromo']")public WebElement input_EnterPromoCode;
 	@FindBy(xpath="//*[@data-auid='btncrt_btnPromoSbmt']")public WebElement btn_Submit_PromoCode;
-	@FindBy(xpath="(//*[@data-auid='btnc_btnCheckout'])[3]")public WebElement btn_checkOut_OrderSummary;
+	@FindBy(xpath="(//*[@data-auid='btnc_btnCheckout'])[3] | (//*[@data-auid='btnCheckout'])[3]")public WebElement btn_checkOut_OrderSummary;
 	@FindBy(xpath="//*[text()='Subtotal']/following-sibling::*")public WebElement txtSubtotalCart;
 	@FindBy(xpath="//div[text()='Estimated Shipping']/..")public WebElement txtEstimatedShippingCart;
 	@FindBy(xpath="//*[text()='Estimated Shipping']/following-sibling::*")public WebElement txt_EstimatedShipping;

@@ -1818,11 +1818,11 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			assertTrue(clickOnButton(btnMyAccountMobile));
 			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(btnSignOut_M));
-			waitForElement(btnBurgerMenu);
-			assertTrue(isDisplayed(btnBurgerMenu));
-			Thread.sleep(Constants.thread_medium);
-			assertTrue(clickOnButton(btnBurgerMenu));
-			assertTrue(isDisplayed(btnMyAccountBurgerMenu));
+//			waitForElement(btnBurgerMenu);
+//			assertTrue(isDisplayed(btnBurgerMenu));
+//			Thread.sleep(Constants.thread_medium);
+//			assertTrue(clickOnButton(btnBurgerMenu));
+//			assertTrue(isDisplayed(btnMyAccountBurgerMenu));
 
 		}else {
 			assertTrue(clickOnButton(btnMyAccount));

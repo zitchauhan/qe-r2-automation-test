@@ -9,7 +9,7 @@ Scenario: Verify Authenticated user able to see the BOPIS items for pickup
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
-	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
