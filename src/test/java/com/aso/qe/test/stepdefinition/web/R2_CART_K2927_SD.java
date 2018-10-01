@@ -12,6 +12,7 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 //<<<<<<< Updated upstream
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 //import com.aso.qe.test.pageobject.R2_CheckOut_PO;
@@ -51,6 +52,7 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	R2_CheckOut_PO r2CheckOutPO = PageFactory.initElements(getDriver(), R2_CheckOut_PO.class);
+	R1_SearchProduct_PO r1_SearchPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
 
 	@When("^user navigates to checkout page$")
 	public void user_navigates_to_checkout_page() throws Throwable {
@@ -190,11 +192,32 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 			assertTrue(clickOnButton(globalElementHeader.iconcart));
 
 		}
-		while(isDisplayed(cartR2PageObj.btnRemoveCart)) 
-		{
-			clickOnButton(cartR2PageObj.btnRemoveCart);
-			//Thread.sleep(5000);
+		waitForPageLoad(driver);
+		boolean oosProductsAvailable = false;
+		Thread.sleep(Constants.thread_medium);
+		if(r1_SearchPO.verifyTextDisplayedOnPage("There are not enough items in your stock to fulfill your order")) {
+			assertTrue(clickOnButton(cartR2PageObj.editInCart_btn));
+			oosProductsAvailable = true;
 		}
+		
+		for(WebElement removeBtn : cartR2PageObj.removeCart_lst_btn) {
+			assertTrue(clickOnButton(removeBtn));
+			Thread.sleep(Constants.thread_medium);
+		}
+		
+		if(oosProductsAvailable) {
+			for(WebElement removeOOSBtn : cartR2PageObj.removeCartforOOSProducts_lst_btn) {
+				assertTrue(clickOnButton(removeOOSBtn));
+				Thread.sleep(Constants.thread_medium);
+			}	
+		}
+		
+		
+//		while(isDisplayed(cartR2PageObj.btnRemoveCart) && (loopCount <= countOfremoveButtonInCartPage ))
+//		{
+//			clickOnButton(cartR2PageObj.btnRemoveCart);
+//			loopCount++;
+//		}
 //		emptyCart();
 	}
 

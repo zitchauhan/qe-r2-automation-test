@@ -696,6 +696,10 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="(//*[@data-auid='tooltipcrt_rdTooltip_0'])[1]") public WebElement iconTolltip;// toolTip
 	@FindBy(xpath="(//*[@data-auid='PDP_AddToWishList'])[1] | (//*[contains(@data-auid,'crt_btnWlist')])[1]")public WebElement btn_AddToWishList;//btnWlist
 	@FindBy(xpath="(//*[contains(@data-auid,'crt_btnRmvFromCart_')])[1]")public WebElement btnRemoveCart;//btnRemoveCart txt_RemoveFromCart
+	@FindBy(xpath="//*[contains(@data-auid,'crt_btnRmvFromCart_')]")public List<WebElement> removeCart_lst_btn;
+	@FindBy(xpath="//*[contains(@data-auid,'crt_btnRmvCartOos')]")public List<WebElement> removeCartforOOSProducts_lst_btn;
+	
+	
 	@FindBy(xpath="(//*[contains(@data-auid,'crt_qtyField')])[1]/../following-sibling::*/*[1]")public WebElement txt_CartItemAmount;//txt_YourCartAmount
 	@FindBy(xpath = "//span[text()='Color']")public WebElement txtColor;
 	@FindBy(xpath = "//span[contains(text(),'Size')]")public WebElement txtSize;
@@ -810,6 +814,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 		
 	//&&&&&&&&&&&&&&&&&&&&&&&********@CR-RKA******&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 	
-	
+		@FindBy(xpath = "//*[@data-auid='btncrt_editInCartbtn']")
+		public WebElement editInCart_btn;
 	
 }
