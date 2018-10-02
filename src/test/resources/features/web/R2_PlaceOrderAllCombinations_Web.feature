@@ -24,6 +24,32 @@ Feature: Place order
 ##		|Gift Card		|
 #		|Credit Card - Visa	|
 #		|PayPal			|
+
+
+@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order 
+@CR-SK 
+Scenario Outline:
+Verify that UnAuthenticated user is able to place an order for a bopis product
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
+	And User searches a product "SKUForBopisProduct" and navigates to PDP 
+	And user click on Add to Cart Button
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button
+	And user selects the ship to Store Pick up radio button
+	And verify user can begin checkout
+	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "FindAsStoreZIPCode" , "EmailAddress"
+	And user add "<Payment Type>" details in payment method for "guest" user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	Then Verify the message on the page 
+		|# Message for successful order is displayed		|
+		|THANKS FOR SUBMITTING YOUR ORDER					|
+	Examples: 
+		|Payment Type	|
+#		|Gift Card		|
+		|Credit Card	|
+		|PayPal			|
 		
 
 @R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @CR-SK
