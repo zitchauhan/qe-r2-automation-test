@@ -82,8 +82,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 And User clicks on the burger menu 
 	  Then User navigates to L3
     Then user clicks on the product card and navigates to PDP
-	When enter the "MoreThanThresholdQuantity" to X in PDP
 	Then user click on Add to Cart Button 
+	When enter the "MoreThanThresholdQuantity" to X
 	 Then Verify the message on the page
 	   |# Following Error Message should show on the page|
 	   |Sorry|

@@ -116,5 +116,14 @@ public class R2_CART_K3511_SD extends CommonActionHelper {
 	 Thread.sleep(Constants.thread_medium);
 	}
 
+	@Then("^user click on zip code and fill the zip code of restricted state$")
+	public void user_click_on_zip_code_and_fill_the_zip_code_of_restricted_state() throws Throwable {
+		 assertTrue(clickOnButton(r2CartPo.lnkChangeZipCode));
+		   Thread.sleep(Constants.thread_low); 
+		   setInputText(r2CartPo.inputZipCode, webPropHelper.getTestDataProperty("ZipCodeOfRestrictedState"));
+		   assertTrue(clickOnButton(r2CartPo.btnCartSubmit));
+		   Thread.sleep(Constants.thread_medium);
+	}
+
 
 }

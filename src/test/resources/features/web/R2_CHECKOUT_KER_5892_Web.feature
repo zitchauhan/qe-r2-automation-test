@@ -80,3 +80,40 @@ Given  user launches the browser and navigates to "ASO_HOME" page
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#%%  verify order below attributes on order confirmation page %%|
 		|OrderConfirmationPage_OrderNumber|
+
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR  @C-Checkout @KER-5892 @ZYP_CHECKOUT_K5892-13288 @CR-RKA
+Scenario: Verify expired credit card behavior in checkout page - Payment section (Single Credit Card)
+Given  user launches the browser and navigates to "ASO_HOME" page 
+	And  user clicks on SignIn link from global header 
+	And  user enter the valid emailaddress "EmailAddress" 
+	And  user enter the valid password "Password" 
+	And  user click on signin button 
+Then user click on My Account and navigate to payment
+And user clicks on add new credit card cta
+Then user fill expired credit card detail 
+Then user enter First Name field "UpdateFirstName"
+ 	And user enter Last Name field "UpdateLastName"
+ 	And user enter Address field "UpdateAddress"
+ 	And user enter ZipCode field "UpdateZipcode"
+ 	And user enter PhoneNumber field "UpdatePhoneNumber"
+ 	Then click on Add button on credit card page
+When User searches a product "productName" and navigates to PDP
+	And user click on Add to Cart Button 
+	And user click on checkout button
+And User Clicks on credit card dropwdown and selects another card 
+Then Verify below Sub/Main Module of Checkout Page 
+		|# Verify following elements in Checkout > Payment Drawer|
+		|Checkout_CreditCard_DropDown|
+
+
+
+
+
+
+
+
+
+
+
+
+

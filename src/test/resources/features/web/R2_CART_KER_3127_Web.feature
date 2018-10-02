@@ -69,7 +69,7 @@ Scenario: Verify if user should be able to apply or remove a promotion code
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "EnterQuantityGreaterThenOne" to X 
-	And user view and Applied Promotions/Discounts "ItemLevelPromoCodeDiscount"  
+	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount"  
 	Then Verify below Sub/Main Module of Cart Page
 	|# verify the following element in checkout order summary page|
 	|RemoveFromCart_Btn|

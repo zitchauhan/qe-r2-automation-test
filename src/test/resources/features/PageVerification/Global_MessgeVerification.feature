@@ -75,6 +75,7 @@ Feature: Message/Text Verification
     |ORDER NUMBER|
     |ORDERS|
     |ORDER PLACED ON|
+    |YOUR CART|
     
     
     

@@ -1,62 +1,62 @@
 Feature: Order Cancellation Guest Customer Order Search 
 
-#@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4018 
-#@ZYP_MYACCOUNT_K4018-10658 @CR-AKK 
-#Scenario Outline: Verify that the error message is displayed if Guest user enters invalid Order number or Billing Zip Code
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	And User navigates to Check Oder status Page 
-#	When user enter "<InvalidOrdernumber>" and "<InvalidBillingZipcode>"
-#	And User clicks on Check button 
-#	Then Verify that error message is displayed
-#	 Examples:
-#    |InvalidOrdernumber|InvalidBillingZipcode |
-#    |2421424		   | 14124				  |
-#		
-#@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4018 
-#@ZYP_MYACCOUNT_K4018-KER-10653 @CR-AKK 		
-#Scenario: Verify that the Guest user is able to navigate to check order status page.
-#Given user launches the browser and navigates to "ASO_HOME" page 
-#	And User navigates to Check Oder status Page
-#	Then Verify the message on the page
-#    |# Following Message should show on the page| 
-#	|Order Number|
-#	|Billing Zip Code|
-#	
-#@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4018 
-#@ZYP_MYACCOUNT_K4018-10657 @CR-AKK 
-#Scenario Outline: Verify that the error message is displayed if Guest user enters order detail not matching with valid order
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	And User navigates to Check Oder status Page 
-#	When user enter "<InvalidOrdernumber>" and "<ValidBillingZipcode>"
-#	And User clicks on Check button 
-#	Then Verify that error message is displayed
-#	 Examples:
-#    |InvalidOrdernumber|ValidBillingZipcode   |
-#    |2421424		   | 77450			  	  |
-#	
-#	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4018 
-#@ZYP_MYACCOUNT_K4018-10656 @CR-AKK 
-#Scenario Outline: Verify that the error message is displayed if Guest user enters order detail not matching with valid order
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	And User navigates to Check Oder status Page 
-#	When user enter "ValidOrdernumber" and "InvalidBillingZipcode"
-#	And User clicks on Check button 
-#	Then Verify that error message is displayed
-#	Examples:
-#    |ValidOrdernumber|InValidBillingZipcode   |
-#    |9052176008		   | 77450			  	  |
-#	
-#	@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4018 
-#@ZYP_MYACCOUNT_K4018-10654 @CR-AKK 
-#	Scenario Outline: Verify that the Guest user is not able to enter non numerical values in Order number and Billing Zip code fields. 
-#Given user launches the browser and navigates to "ASO_HOME" page 
-#	And User navigates to Check Oder status Page 
-#	When user enter "InvalidOrdernumber" and "InvalidBillingZipcode"
-#	And User clicks on Check button 
-#	Then Verify that error message is displayed
-#	Examples:
-#    |InvalidOrdernumber|InValidBillingZipcode   |
-#    |ABNNC		   | BAV		  	  |
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4018 
+@ZYP_MYACCOUNT_K4018-10658 @CR-AKK 
+Scenario Outline: Verify that the error message is displayed if Guest user enters invalid Order number or Billing Zip Code
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to Check Oder status Page 
+	When user enter "<InvalidOrdernumber>" and "<InvalidBillingZipcode>"
+	And User clicks on Check button 
+	Then Verify that error message is displayed
+	 Examples:
+    |InvalidOrdernumber|InvalidBillingZipcode |
+    |2421424		   | 14124				  |
+		
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4018 
+@ZYP_MYACCOUNT_K4018-KER-10653 @CR-AKK 		
+Scenario: Verify that the Guest user is able to navigate to check order status page.
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to Check Oder status Page
+	Then Verify the message on the page
+    |# Following Message should show on the page| 
+	|Order Number|
+	|Billing Zip Code|
+	
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4018 
+@ZYP_MYACCOUNT_K4018-10657 @CR-AKK 
+Scenario Outline: Verify that the error message is displayed if Guest user enters order detail not matching with valid order
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to Check Oder status Page 
+	When user enter "<InvalidOrdernumber>" and "<ValidBillingZipcode>"
+	And User clicks on Check button 
+	Then Verify that error message is displayed
+	 Examples:
+    |InvalidOrdernumber|ValidBillingZipcode   |
+    |2421424		   | 77450			  	  |
+	
+	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4018 
+@ZYP_MYACCOUNT_K4018-10656 @CR-AKK 
+Scenario Outline: Verify that the error message is displayed if Guest user enters order detail not matching with valid order
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to Check Oder status Page 
+	When user enter "ValidOrdernumber" and "InvalidBillingZipcode"
+	And User clicks on Check button 
+	Then Verify that error message is displayed
+	Examples:
+    |ValidOrdernumber|InValidBillingZipcode   |
+    |9052176008		   | 77450			  	  |
+	
+	@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4018 
+@ZYP_MYACCOUNT_K4018-10654 @CR-AKK 
+	Scenario Outline: Verify that the Guest user is not able to enter non numerical values in Order number and Billing Zip code fields. 
+Given user launches the browser and navigates to "ASO_HOME" page 
+	And User navigates to Check Oder status Page 
+	When user enter "InvalidOrdernumber" and "InvalidBillingZipcode"
+	And User clicks on Check button 
+	Then Verify that error message is displayed
+	Examples:
+    |InvalidOrdernumber|InValidBillingZipcode   |
+    |ABNNC		   | BAV		  	  |
 
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4018 
 @ZYP_MYACCOUNT_K4018-10659 @CR-AKK @1HR_R2

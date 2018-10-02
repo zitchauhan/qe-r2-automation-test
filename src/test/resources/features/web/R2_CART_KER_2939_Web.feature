@@ -48,12 +48,13 @@ To verify Shipping radio button - Authenticated user With store selected in My A
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	#And user navigate and deletes existing items in cart
 	#And User navigates to L2 Mens clothing
 	#Then user clicks on one of the subcategory and navigates to LTwo 
 	#Then user clicks on one of the product category and navigates to LThree 
 	#Then User is navigated to pdp page 
-	Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button 
+	When user enters "SKUForBopisProduct" in the search box
+	And user click on Add to Cart Button
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then Shipping radio button is selected by default 
@@ -135,9 +136,9 @@ Scenario: To verify In-store Pick up radio button - with My Store info on My Acc
 	#And User navigates to L2 Mens clothing 
 	#Then user clicks on one of the subcategory and navigates to LTwo 
 	#Then user clicks on one of the product category and navigates to LThree 
-	#Then User is navigated to pdp page 
-	Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#Then User is navigated to pdp page  
+	When user enters "SKUForBopisProduct" in the search box
+	And user click on Add to Cart Button
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then Verify below Sub/Main Module of Cart Page

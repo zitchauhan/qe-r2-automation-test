@@ -2,9 +2,9 @@ Feature: Verfiy  View/Delete/Set Default Credit/Debit Card in Account
 
 @R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10549 @CR-RK 
 Scenario: Verify user is able to remove the saved credit card from My Account
-Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
-	Then user should able to click on Signin button
+	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|SignInPage_SignIn_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -13,8 +13,11 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password" 
 	And user click on signin button
 	Then User clicks on the burger menu
-	#And user click on MyAccount
-	And user clicks on payment tab
+    Then user click on My Account and navigate to payment
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following elements in Payments > Add new credit card section	|
+	|PaymentPage_PaymentsHeader_label				|
+	|AddCreditCardPage_AddNewCreditCardsHeader_label											|
 	Then user clicks Remove button in payment page
 	And user should see the proper message
 	
@@ -22,7 +25,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify user is able to make any saved credit card as default
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
-	Then user should able to click on Signin button
+	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|SignInPage_SignIn_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -31,8 +34,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password"
 	And user click on signin button
 	Then User clicks on the burger menu
-	And user click on MyAccount
-	And user clicks on payment tab
+	Then user click on My Account and navigate to payment
 	Then Verify below Sub/Main Module of My Account
 	|#Verify following elements in Payments > Add new credit card section	|
 	|PaymentPage_PaymentsHeader_label				|
@@ -43,7 +45,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify that user is able to remove the only saved CC from My Account
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
-	Then user should able to click on Signin button
+	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|SignInPage_SignIn_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -52,8 +54,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password"
 	And user click on signin button
 	Then User clicks on the burger menu
-	And user click on MyAccount
-	And user clicks on payment tab
+	Then user click on My Account and navigate to payment
 	Then Verify below Sub/Main Module of My Account
 	|#Verify following elements in Payments > Add new credit card section	|
 	|PaymentPage_PaymentsHeader_label				|
@@ -64,7 +65,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify user is able to see the list of saved credit cards on the Payment page under My Account
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
-	Then user should able to click on Signin button
+	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|SignInPage_SignIn_btn								|
 	|SignInPage_EmailAddress_txt			   			| 
@@ -73,8 +74,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password"
 	And user click on signin button
 	Then User clicks on the burger menu
-	And user click on MyAccount
-	And user clicks on payment tab
+	Then user click on My Account and navigate to payment
 	Then Verify below Sub/Main Module of My Account
 	|#Verify following elements in Payments > Add new credit card section	|
 	|PaymentPage_PaymentsHeader_label				|
@@ -88,7 +88,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify deleted CC retains in the saved CC list in My Account on Undo
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
-	Then user should able to click on Signin button
+	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
@@ -98,8 +98,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password"
 	And user click on signin button
 	Then User clicks on the burger menu
-	And user click on MyAccount
-	And user clicks on payment tab
+	Then user click on My Account and navigate to payment
 	Then Verify below Sub/Main Module of My Account
 	|#Verify following elements in Payments > Add new credit card section	|
 	|PaymentPage_PaymentsHeader_label				|
@@ -113,7 +112,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify last added credit card in saved list becomes the default on deletion of Default credit card
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
-	Then user should able to click on Signin button 
+	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account
 	|# Verify following elements in Sign in/login page	|
 	|SignInPage_SignIn_btn								|
@@ -123,7 +122,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password"
 	And user click on signin button
 	Then User clicks on the burger menu
-	And user clicks on payment tab
+	Then user click on My Account and navigate to payment
 	Then Verify below Sub/Main Module of My Account
 	|#Verify following elements in Payments > Add new credit card section	|
 	|PaymentPage_PaymentsHeader_label				|

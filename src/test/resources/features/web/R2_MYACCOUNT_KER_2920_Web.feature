@@ -12,8 +12,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And user click on MyAccount
-	And user clicks on payment tab
+	  Then user click on My Account and navigate to payment
 	Then Verify below Sub/Main Module of My Account
 	|#Verify following elements in Payments > Add new credit card section	|
 	|PaymentPage_PaymentsHeader_label				|
@@ -32,9 +31,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password"
 	And user click on signin button
-	And user click on MyAccount
-		And user clicks on payment tab
-		Then Verify below Sub/Main Module of My Account
+	Then user click on My Account and navigate to payment
+	Then Verify below Sub/Main Module of My Account
 	|#Verify following elements in Payments > Add new credit card section	|
 	|PaymentPage_PaymentsHeader_label				|
 	Then user click on set as default button 
@@ -52,8 +50,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password"
 	And user click on signin button
-	And user click on MyAccount
-	And user clicks on payment tab
+	Then user click on My Account and navigate to payment
 	Then Verify below Sub/Main Module of My Account
 	|#Verify following elements in Payments > Add new credit card section	|
 	|PaymentPage_PaymentsHeader_label				|
@@ -73,15 +70,15 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password"
 	And user click on signin button
-	And user click on MyAccount
-	And user clicks on payment tab
+	Then user click on My Account and navigate to payment
 	Then Verify below Sub/Main Module of My Account
 	|#Verify following elements in Payments > Add new credit card section	|
 	|PaymentPage_PaymentsHeader_label				|
-	And user clicks on add new credit card cta
-	And user fills the credit/debit form
-	And user clicks on add cta
-	And user verifies the credit card saved is set as default
+	And user verifies the credit card saved is set as default 
+	Then Verify below Sub/Main Module of My Account
+	|#Verify following elements in Payment page		|
+	|PaymentPage_CrediCardList_txt|
+	
 
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10552 @CR-RK 	
 Scenario: Verify deleted CC retains in the saved CC list in My Account on Undo
@@ -95,9 +92,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password"
 	And user click on signin button
-	And user click on MyAccount
-		And user clicks on payment tab
-Then Verify below Sub/Main Module of My Account
+	Then user click on My Account and navigate to payment
+	Then Verify below Sub/Main Module of My Account
 	|#Verify following elements in Payments > Add new credit card section	|
 	|PaymentPage_PaymentsHeader_label				|
 	Then user clicks Remove button in payment page
@@ -119,8 +115,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password"
 	And user click on signin button
-	And user click on MyAccount
-	And user clicks on payment tab
+    Then user click on My Account and navigate to payment
 	Then Verify below Sub/Main Module of My Account
 	|#Verify following elements in Payments > Add new credit card section	|
 	|PaymentPage_PaymentsHeader_label				|

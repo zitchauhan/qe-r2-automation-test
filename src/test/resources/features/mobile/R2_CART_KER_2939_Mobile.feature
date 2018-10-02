@@ -313,9 +313,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12502 @CR-AKK	
 Scenario: To Verify that Move to Wishlist Link is not displayed for Gift Card(s) and Bundle Item(s). 
 	Given user launches the browser and navigates to "ASO_HOME" page   
-	Then User searches a product "SKUForBundleProducts" and navigates to PDP     
-	And User click on the product image of soccer item package 
-	Then Verify the nextstep functionality 
+	Then User searches a product "SKUForBundleProducts" and navigates to PDP
+	Then Verify the nextstep functionality  
     Then Verify that Move to Wishlist Link is not displayed for Gift Card(s) and Bundle Item(s)
     
     

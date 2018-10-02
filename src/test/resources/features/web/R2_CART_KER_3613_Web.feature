@@ -82,8 +82,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
-	When enter the "MoreThanThresholdQuantity" to X in PDP
 	Then user click on Add to Cart Button 
+	When enter the "MoreThanThresholdQuantity" to X 
 	 Then Verify the message on the page
 	   |# Following Error Message should show on the page|
 	   |Sorry|

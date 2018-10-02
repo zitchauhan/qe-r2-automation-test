@@ -180,7 +180,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User should be able to see Search Box on Homepage 
-	Then User searches a product "SKUForBopisProductUnavailable" and navigates to PDP 
+	Then User searches a product "SanitySKUNumber" and navigates to PDP 
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
     |Shipping Not Available|

@@ -183,11 +183,24 @@ And user enter First name "FirstName"
   |PayPalCheckOut_Btn|
 
 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9921 @CR-RKA
+Scenario: Verify that user cannot see More Options payment option in Payment drawer section
 
-
-
-
-
+Given user launches the browser and navigates to "ASO_HOME" page 
+ When User searches a product "productName" and navigates to PDP
+ And User is navigated to pdp page  
+And user click on Add to Cart Button 
+Then user click on checkout from ATC pop up
+And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "zipcode" 
+	And user click on Go To Shipping Method button in Checkout page
+Then Verify below Sub/Main Module of Checkout Page
+|#verify the following|
+|CreditCard_radioBtn|
+		|PayPal_radioBtn|
 
 
 

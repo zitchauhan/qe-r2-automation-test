@@ -101,7 +101,7 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 	
 	@Then("^clicks on the Change Pickup Location link$")
 	public void clicks_on_the_Change_Pickup_Location_link() throws Throwable {
-		assertTrue(clickOnButton(r2R1FunPO.lnkPickupLocation));   
+		assertTrue(clickOnButton(r2R1FunPO.ChooseLocation_Lnk));   
 	}
 
 	@Then("^user should be able to see the Find a Store modal$")

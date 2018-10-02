@@ -163,7 +163,7 @@ Scenario: Verify that user is not able to proceed with Billing Information addit
 	Then Verify the message on the page
 	|# Following Error Message should show on the page|
 	|Please enter the First Name|
-	|Please Enter a Last Name|
+	|Please enter a Last Name|
 	|Please enter a phone number|
 	|Please enter a street address|
 	|Please enter a zip code|
@@ -258,7 +258,7 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
  	And user enter Last Name field "UpdateLastName"
  	And user enter Address field "UpdateAddress"
  	And user enter ZipCode field "UpdateZipcode"
- 	And user enter PhoneNumber field "UpdatePhoneNumber"
+ 	And user enter PhoneNumber field "PhoneNumber"
  	Then User verifies that city and State are populated automatically
  	Then click on Add button on credit card page
  	And click on Add another Credit Card button
