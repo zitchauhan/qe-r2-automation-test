@@ -126,7 +126,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='city']") // 27 Aug //CR-RK KER-3151 Sep 18
 	public WebElement adr_inpCity;
 
-	@FindBy(xpath = "//*[@name='phone1'] | //*[@data-auid='phone1']")
+	@FindBy(xpath = "//*[@name='phone1'] | //*[@data-auid='phone1']|//*[text()='Phone Number']/following::*[2]")
 	public WebElement adr_inpPhoneNumber; // CR-RK KER-3151 Sep 18
 
 	// Start KER-3172 CR-RK Sep20

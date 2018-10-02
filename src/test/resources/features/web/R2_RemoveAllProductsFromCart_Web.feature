@@ -9,9 +9,11 @@ Scenario Outline: Remove all existing products from cart
 	And user click on signin button 
 	And user navigate and deletes existing items in cart
 	Examples: 
-		|EmailID							|Password		|
-		|emailWithOutPhonenumber			|Password		|
-		|emailWithOutPhonenumber			|Password		|
- 		|UserWithSavedAddressAndPayment		|Password		|
- 		|UserWithDefaultCaliforniaAddress	|Password		|
- 		|UserForOrderPlacement				|Password		|
+		|EmailID							|Password|
+		|emailWithOutPhonenumber			|Password|
+		|emailWithOutPhonenumber			|Password|
+ 		|UserWithSavedAddressAndPayment		|Password|
+ 		|UserWithDefaultCaliforniaAddress	|Password|
+ 		|UserForOrderPlacement				|Password|
+ 		|EmailAddress						|Password|
+ 		

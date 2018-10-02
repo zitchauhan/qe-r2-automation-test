@@ -314,7 +314,7 @@ Scenario: TC_22-Verify Find a store
 	And user click on submit button 
 	Then user verify the results based on entering zipcode 
 	
-	@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @CR-SK @AutomationSanityR2
+	@R2_Web @R2_All @R2_Order @CR-SK @AutomationSanityR2
 Scenario Outline: TC_23- Verify if authenticated user is able to place an order for single SKU product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account
@@ -334,7 +334,7 @@ Scenario Outline: TC_23- Verify if authenticated user is able to place an order 
 		|Payment Type	|
 		|PayPal			|
 	
-	@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order  @AutomationSanityR2
+	@R2_Web @R2_All @R2_Order  @AutomationSanityR2
 @CR-SK 
 Scenario Outline:  TC_24-Verify if unauthenticated user is able to place an order for single SKU product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
