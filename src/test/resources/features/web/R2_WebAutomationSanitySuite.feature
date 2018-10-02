@@ -57,13 +57,12 @@ Scenario: TC_4- Verify User is able to Add Gift Card
 Scenario: TC_5-Verify Add Credit Card and added as a Default Card
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-    And user click on signin button
+	And user logs in as "EmailAddress"
 	And User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button
 	And user click on checkout button
-	Then User verifies that in Payment section credit card "CreditCardNumber" is pre-populated by default
+	And user clicks on edit payment cta
+
 	
 	#===========unit testing pending as search is not working
 @R2_Web  @R2_WAST-06 @P-High @CR-SK @AutomationSanityR2 
