@@ -62,7 +62,8 @@ Scenario: Verify Quantity Zero in the Cart Page
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user click on signin button
+	And user navigate and deletes existing items in cart
 	Then User clicks on ASO Logo and should be navigated to Home Page 
 	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 
@@ -136,7 +137,8 @@ Scenario:  Verify Remove quantity message in the Cart Page
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user click on signin button
+	And user navigate and deletes existing items in cart 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
 	And User navigates to L2 Mens clothing
 	And user clicks on one of the subcategory and navigates to LTwo 

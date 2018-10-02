@@ -33,6 +33,9 @@ public class R2_PDP_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@name='shippingState']")
 	public WebElement Shipping_State_txt;
 	
+	@FindBy(xpath = "//*[@name='shippingPhone']")
+	public WebElement Shipping_Phone_txt;
+	
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement Default_Payment_Option_btn;
 	
@@ -77,6 +80,9 @@ public class R2_PDP_PO extends CommonActionHelper {
 	
 	@FindBy(xpath="//*[@data-auid='btndefaultPaymentFormSubmit']")
 	public WebElement PaymentFormSubmit_btn;
+	
+	@FindBy(xpath = "(//*[@data-auid='btnundefined'])[2]")
+	public WebElement Add_Default_Payment_Option_btn;
 	
 
 	

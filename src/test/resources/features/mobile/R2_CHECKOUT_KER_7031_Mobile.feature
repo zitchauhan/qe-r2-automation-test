@@ -8,6 +8,7 @@ Feature: B03-500-SOF Checkout landing and variations
     And user enter the valid emailaddress "EmailWithoutPaymentDetails"
     And user enter the valid password "Password"
     And user click on signin button
+    And user navigate and deletes existing items in cart
     Then User searches a product "SOFSKUNumber" and navigates to PDP
     And user click on Add to Cart Button
     And user will click on View Cart button
@@ -37,6 +38,7 @@ Feature: B03-500-SOF Checkout landing and variations
     And user enter the valid emailaddress "EmailWithoutPaymentDetails"
     And user enter the valid password "Password"
     And user click on signin button
+    And user navigate and deletes existing items in cart
    Then User searches a product "SOFSKUNumber" and navigates to PDP
     And user click on Add to Cart Button
     And user will click on View Cart button

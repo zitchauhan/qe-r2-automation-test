@@ -4,9 +4,10 @@ Feature: B03-500-SOF Checkout landing and variations
 Scenario:  To verify checkout landing variations - shipping drawer hidden for SOF
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid emailaddress "emailWithOutPhonenumber" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	And user navigate and deletes existing items in cart
 	Then User searches a product "SOFSKUNumber" and navigates to PDP
 	And user click on Add to Cart Button
 	And user is navigated to Add to cart Notification popup 
@@ -33,9 +34,10 @@ Then User searches a product "SOFSKUNumber" and navigates to PDP
 Scenario:  To verify checkout landing variations - Authenticated user
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid emailaddress "emailWithOutPhonenumber" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	And user navigate and deletes existing items in cart
 	Then User searches a product "SOFSKUNumber" and navigates to PDP
     And user click on Add to Cart Button
 	And user is navigated to Add to cart Notification popup 

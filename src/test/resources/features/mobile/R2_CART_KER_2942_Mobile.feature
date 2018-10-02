@@ -60,7 +60,8 @@ Scenario: Verify Quantity Zero in the Cart Page
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user click on signin button
+	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 
@@ -123,7 +124,8 @@ Scenario:  Verify Remove quantity message in the Cart Page
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user click on signin button
+	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
 	And User navigates to LThree 
 	And user clicks on the product card and navigates to PDP 

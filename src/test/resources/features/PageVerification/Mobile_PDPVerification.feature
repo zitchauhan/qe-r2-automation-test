@@ -25,4 +25,6 @@ Scenario: Verify MyAccount
 		  |BillingCity_txt|
 		  |BillingPhone_txt|
 		  |BillingEmail_txt|
-		   |PaymentFormSubmit_btn|
+		  |PaymentFormSubmit_btn|
+		  |Shipping_Phone_txt|
+		  |Add_Default_Payment_Option_btn|

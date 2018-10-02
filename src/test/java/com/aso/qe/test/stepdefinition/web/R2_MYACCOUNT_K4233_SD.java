@@ -37,13 +37,13 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 	
 	@Then("^user clicks on Create List$")
 	public void user_clicks_on_Create_List() throws Throwable {
-		assertTrue(clickOnButton(r2MyAccountPo.Wishlist_createlist_lnk));
+		assertTrue(clickOnButton(r2MyAccountPo.btnCreateWishList));
 	}
 	
 	
 	@Then("^user enters Wishlist name \"(.*?)\"$")
 	public void user_enters_Wishlist_name(String arg1) throws Throwable {
-		setInputText(r2MyAccountPo.Wishlist_name_txt, webPropHelper.getTestDataProperty(arg1));
+		setInputText(r2MyAccountPo.txtWishListName, webPropHelper.getTestDataProperty(arg1));
 	}
 
 	@Then("^user click on create list$")
@@ -111,7 +111,6 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 	@Then("^Verify that Wish List is displayed$")
 	public void verify_that_Wish_List_is_displayed() throws Throwable {
 		assertTrue(isDisplayed(r2MyAccountPo.txtHelloMessage));
-		getText(r2MyAccountPo.txtHelloMessage).toLowerCase().contains("hello");
 		
 	}
 	
@@ -224,6 +223,12 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2MyAccountPo.Wishlist_Undo));
 			Thread.sleep(Constants.thread_low);
 		}
+		
+	}
+	
+	@Then("^user clicks on create first wishlist button$")
+	public void user_clicks_on_create_first_wishlist_button() throws Throwable {
+		assertTrue(clickOnButton(r2MyAccountPo.btnCreateNewWishlist));
 		
 	}
 	

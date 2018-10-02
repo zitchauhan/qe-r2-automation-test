@@ -140,7 +140,7 @@ public class R2_CHECKOUT_K6655_SD extends CommonActionHelper {
 	@Then("^user clicks on paymentsubmit button$")
 	public void user_clicks_on_paymentsubmit_button() throws Throwable {
 		assertTrue(clickOnButton(r2PdpPo.PaymentFormSubmit_btn));
-		//WaiterHelper.sleep(Constants.thread_medium);
+		Thread.sleep(Constants.thread_medium);
 		
 	}
 	
@@ -152,4 +152,39 @@ public class R2_CHECKOUT_K6655_SD extends CommonActionHelper {
 		
 	}
 	
+	@Then("^user is allowed to enter first name \"(.*?)\"$")
+	public void user_is_allowed_to_enter_first_name(String arg1) throws Throwable {
+		setInputText(r2PdpPo.Shipping_First_Name_txt, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@Then("^user is allowed to enter last name \"(.*?)\"$")
+	public void user_is_allowed_to_enter_last_name(String arg1) throws Throwable {
+		setInputText(r2PdpPo.Shipping_Last_Name_txt, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@Then("^user is allowed to enter address \"(.*?)\"$")
+	public void user_is_allowed_to_enter_address(String arg1) throws Throwable {
+		setInputText(r2PdpPo.Shipping_Address_txt, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@Then("^user is allowed to enter zipcode \"(.*?)\"$")
+	public void user_is_allowed_to_enter_zipcode(String arg1) throws Throwable {
+		setInputText(r2PdpPo.Shipping_ZipCode_txt, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@Then("^user is allowed to enter phone number \"(.*?)\"$")
+	public void user_is_allowed_to_enter_phone_number(String arg1) throws Throwable {
+		setInputText(r2PdpPo.Shipping_Phone_txt, webPropHelper.getTestDataProperty(arg1));
+	}
+	
+	@When("^user clicks on add default payment option$")
+	public void user_clicks_on_add_default_payment_option() throws Throwable {
+		assertTrue(clickOnButton(r2PdpPo.Add_Default_Payment_Option_btn));
+		Thread.sleep(5000);
+		
+	}
+	
+	
+	
+
 }

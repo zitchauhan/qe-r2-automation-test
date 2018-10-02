@@ -12,7 +12,8 @@ Verify authenticate user is able to see the See In-Store Pickup Instructions sec
 		|SignInPage_Password_txt				   			|
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user click on signin button
+	And user navigate and deletes existing items in cart 
 	And User searches a product "SOFSKUNumber" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -77,6 +78,7 @@ Scenario: Verify authenticate user is able to place the BOPIS order
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	And user navigate and deletes existing items in cart
 	And User searches a product "SOFSKUNumber" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -101,6 +103,7 @@ Scenario: Verify without checking acknowledgement, user is not able to place the
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	And user navigate and deletes existing items in cart
 	And User searches a product "SOFSKUNumber" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
