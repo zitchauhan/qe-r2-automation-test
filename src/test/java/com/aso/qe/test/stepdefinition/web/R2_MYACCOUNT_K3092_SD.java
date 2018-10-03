@@ -32,9 +32,10 @@ public class R2_MYACCOUNT_K3092_SD extends CommonActionHelper {
 
 		
 		assertTrue(clickOnButton(myAccountPo.btnAddNewGiftCard));
-		setInputText(myAccountPo.txtGiftCardNumber, webPropHelper.getTestDataProperty("GIFTCARDNUMBER"));
-		 setInputText(myAccountPo.txtGifCardPin, webPropHelper.getTestDataProperty("GIFTCARDPIN"));
+		setInputText(myAccountPo.txtGiftCardNumber, webPropHelper.getTestDataProperty("validGiftCardNumber"));
+		 setInputText(myAccountPo.txtGifCardPin, webPropHelper.getTestDataProperty("validPinNumber"));
 		 assertTrue(clickOnButton((myAccountPo.btnAddGiftCard)));
+		 Thread.sleep(Constants.thread_medium);
 	}
 	
 	@Then("^user remove the gift card$")

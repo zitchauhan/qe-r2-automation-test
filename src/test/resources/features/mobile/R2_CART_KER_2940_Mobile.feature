@@ -65,6 +65,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And user navigate to Cart page  
 	And verify Order Summary in Cart 
 	Then user verifiy Order Total
+	When enter the "EnterQuantityGreaterThenOne" to X
 	And user view and Applied Promotions/Discounts "Promocode"
 	And verify Promo code discount is applied 
 	And verify that consolidated amount for all promotions (except shipping) is applied
@@ -81,7 +82,8 @@ Feature: Verify Itemized Subtotal in Cart
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
-	And user navigate to Cart page  
+	And user navigate to Cart page
+	When enter the "EnterQuantityGreaterThenOne" to X  
 	And user view and Applied Promotions/Discounts "PromoCode"
 	And verify Military code discount is applied correctly 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -180,6 +182,7 @@ Then Verify below Sub/Main Module of Cart Page
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
 	And user navigate to Cart page
+	When enter the "EnterQuantityGreaterThenOne" to X
 	And user view and Applied Promotions/Discounts "PromoCode"
 	And verify that Mixed promo discounts are applied for respective items
 

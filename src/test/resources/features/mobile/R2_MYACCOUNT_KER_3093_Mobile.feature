@@ -10,10 +10,13 @@ Feature: [Mobile]Verify Add Gift Card in Account
     And user click on signin button
     Then User clicks on the burger menu
     Then user click on My Account and navigate to payment
+    And user deletes all existing gift cards
     Then Verify below Sub/Main Module of My Account
       | #Verify following elements in payments page "Gift cart section" |
       | PaymentPage_YouHaveNoGiftcardsListed_label                      |
       | PaymentPage_AddNewGiftCard_btn                                  |
+      
+      
 
   @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-3093 @ZYP_MYACCOUNT_K3093-10309_M @CR-RKA
   Scenario: Verify that user is able to see the Add new Gift card on empty Wallet

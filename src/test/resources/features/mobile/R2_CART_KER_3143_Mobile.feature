@@ -192,7 +192,6 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	Then User clicks on the burger menu
      And User navigates to L3
       Then user clicks on the product card and navigates to PDP 
-	And User is navigated to pdp page 
 	And user click on Add to Cart Button 	
 	And user is navigated to Add to cart Notification popup
 	And user will click on View Cart button 
@@ -203,15 +202,14 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	 @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8160 @CR-RKA
 	Scenario: Verify if user must be able to view all items designated for BOPIS( Buy online and pick in store)
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on SignIn link from global header 
+	Then User clicks on the burger menu
+    Then user should able to click on Signin button
 	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
+	And user enter the valid password "Password"
 	And user click on signin button 
-	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree  
-	Then User is navigated to pdp page 
+	Then User clicks on the burger menu
+    And User navigates to L3
+    Then user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
@@ -223,10 +221,14 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
     @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3143  @ZYP_Cart_K3143-8161 @CR-RKA
    Scenario: Verify if user "Pick Up In Store" location must display the store location selected for unauthenticated
    Given user launches the browser and navigates to "ASO_HOME" page
-   And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree  
+   Then User clicks on the burger menu
+    Then user should able to click on Signin button
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password"
+	And user click on signin button 
+	Then User clicks on the burger menu
+    And User navigates to L3
+    Then user clicks on the product card and navigates to PDP  
 	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -239,9 +241,14 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 Scenario: Verify if cart has one or more common item(s), the cart should show single
 Given user launches the browser and navigates to "ASO_HOME" page
 And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree  
+	Then User clicks on the burger menu
+    Then user should able to click on Signin button
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password"
+	And user click on signin button 
+	Then User clicks on the burger menu
+    And User navigates to L3
+    Then user clicks on the product card and navigates to PDP  
 	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -259,11 +266,14 @@ And user clicks on one of the category and navigates to LOne
  @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8163 @CR-RKA
 Scenario: Verify if one or more item(s) from my previously added session is deleted or removed from catalog, the user should not see those as part of merged cart
 Given user launches the browser and navigates to "ASO_HOME" page
-And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree  
-	Then User is navigated to pdp page 
+Then User clicks on the burger menu
+    Then user should able to click on Signin button
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password"
+	And user click on signin button 
+	Then User clicks on the burger menu
+    And User navigates to L3
+    Then user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button	

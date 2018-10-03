@@ -51,7 +51,8 @@ public class R2_CHECKOUT_K4058_SD extends CommonActionHelper {
 	}
 	@Then("^user select the product from L_Three and navigate to PDP$")
 	public void user_select_the_product_from_L_Three_and_navigate_to_PDP() throws Throwable {
-	   assertTrue(clickOnButton(r2_r1_fun_po.productSelection));
+	   waitForPageLoad(driver);
+		assertTrue(clickOnButton(r2_r1_fun_po.productSelection));
 	}
 	
 	@Then("^user fill the PO box in shipping address and verify error message$")

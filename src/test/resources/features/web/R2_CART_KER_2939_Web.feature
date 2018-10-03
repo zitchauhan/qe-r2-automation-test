@@ -17,9 +17,8 @@ Scenario: To Verify Image for selected SKU is be displayed on product blade for 
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8071 @CR-AKK 
 Scenario: To view details specific to an item in the cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-	Then user clicks on one of the subcategory and navigates to LTwo  
-	Then user clicks on one of the product category and navigates to LThree 
+	When user enters "SanitySKUNumber" in the search box
+	And user click on Add to Cart Button
 	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -140,7 +139,7 @@ Scenario: To verify In-store Pick up radio button - with My Store info on My Acc
 	When user enters "SKUForBopisProduct" in the search box
 	And user click on Add to Cart Button
 	And user will click on View Cart button 
-	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
+	#When user will verify in-store pick up radio button is selected with "Zipcode" 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page "Your Cart item details "|
 	|InStorePickup_FREE_radioBtn |
@@ -344,14 +343,13 @@ And user clicks on SignIn link from global header
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	When User searches a product "SOFSKUNumber" and navigates to PDP
-	Then User is navigated to pdp page
+	When user enters "SKUForBopisProduct" in the search box
 	And user click on Add to Cart Button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page
     |#user verify ShipToStore |
-	|ShipToStore_radioBtn| 
+	|InStorePickup_FREE_radioBtn |
 	     
 	  
 	
