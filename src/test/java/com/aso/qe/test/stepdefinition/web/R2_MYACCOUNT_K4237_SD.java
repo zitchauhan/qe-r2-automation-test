@@ -25,12 +25,15 @@ public class R2_MYACCOUNT_K4237_SD extends CommonActionHelper {
 	}
 
 	@And("^user click on check order link and check for the order with zip code \"(.*?)\"$")
-	public void user_click_on_check_order_link_and_check_for_the_order_with_zip_code(String zip) throws Throwable 
-	{
+	public void user_click_on_check_order_link_and_check_for_the_order_with_zip_code(String zip) throws Throwable {
 		Thread.sleep(Constants.thread_low);
-		System.out.println("==============================" + r2_CheckOut_PO.orderSubmitted_OrderNumber);
 		String orderNumber = getText(r2_CheckOut_PO.orderSubmitted_OrderNumber).trim();
-		assertTrue(clickOnButton(r2_r1_FunPo.CheckOrder_Lnk));
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(r2_r1_FunPo.NeddHelp_M));
+			assertTrue(clickOnButton(r2_r1_FunPo.CheckOrder_Lnk));
+		} else {
+			assertTrue(clickOnButton(r2_r1_FunPo.CheckOrder_Lnk));
+		}
 		clearInputBox(r2_CheckOut_PO.checkOutCheckOrderStatus_OrderNumberInput);
 		setInputText(r2_CheckOut_PO.checkOutCheckOrderStatus_OrderNumberInput, orderNumber);
 		clearInputBox(r2_CheckOut_PO.inputCheckoutZipCode);
