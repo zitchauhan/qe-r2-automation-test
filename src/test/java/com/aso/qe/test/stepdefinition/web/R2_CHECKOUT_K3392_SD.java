@@ -44,9 +44,9 @@ public class R2_CHECKOUT_K3392_SD extends CommonActionHelper {
 	@When("^user click on SignIn link$")
 	public void user_click_on_SignIn_link() throws Throwable {
 		waitForElement(r2CheckOutPo.checkout_SignIn_lnk);
-		moveHover(r2CheckOutPo.checkout_SignIn_lnk);
-		// assertTrue(clickOnButton(r2CheckOutPo.checkout_SignIn_lnk));
-		moveHover(r2CheckOutPo.checkout_SignIn_lnk);
+		//moveHover(r2CheckOutPo.checkout_SignIn_lnk);
+		assertTrue(clickOnButton(r2CheckOutPo.checkout_SignIn_lnk));
+		//moveHover(r2CheckOutPo.checkout_SignIn_lnk);
 		Thread.sleep(Constants.thread_medium);
 	}
 

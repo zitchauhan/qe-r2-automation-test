@@ -12,7 +12,6 @@ Scenario:
 	And user enter the valid password "Password" 
 	And user click on signin button
 	Then User clicks on the burger menu
-	And user click on MyAccount
 	And user lands on My Account page and click on adress
 	When user clicks Remove button
 	Then user Clicks on Add New Address link 

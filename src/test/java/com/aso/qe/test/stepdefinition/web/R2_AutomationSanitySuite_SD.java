@@ -58,7 +58,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	@And("^user will click on View Cart button$")
 	public void user_will_click_on_View_Cart_button() throws Throwable {
 		assertTrue(clickOnButton(pdpPageObj.btnViewCart));
-		//Thread.sleep(3000);
+		Thread.sleep(Constants.thread_highest);
 	}
 	
 	@And("^user navigate to Cart page$")

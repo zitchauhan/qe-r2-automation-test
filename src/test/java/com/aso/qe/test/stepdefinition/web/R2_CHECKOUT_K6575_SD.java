@@ -6,6 +6,8 @@ import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
+import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
@@ -15,12 +17,13 @@ public class R2_CHECKOUT_K6575_SD extends CommonActionHelper {
 	
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	R2_CheckOut_PO r2CheckoutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
+	R2_Cart_PO r2CartPo=PageFactory.initElements(getDriver(), R2_Cart_PO.class);
 	
 	@Then("^user will click on Checkout button and navigates to Checkout page$")
 	public void user_will_click_on_Checkout_button_and_navigates_to_Checkout_page() throws Throwable 
 	{
-		assertTrue(clickOnButton(r2SanityPo.AS_btnCheckout));
-		//Thread.sleep(5000);
+		assertTrue(clickOnButton(r2CartPo.btn_checkOut_OrderSummary));
+		Thread.sleep(Constants.thread_high);
 	}
 
 	@Then("^user clicks on mini cart Icon in checkout page$")

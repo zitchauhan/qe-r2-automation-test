@@ -102,11 +102,12 @@ Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided o
 		|checkout_ShippingAddress_ZipCode_txt						|
 		|checkout_ShippingAddress_City_txt							|
 		|checkOut_ShippingAddress_GoToShippingMethod_btn			|
-	When user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	Then user click on Go To Shipping Method button in Checkout page
+#	When user enter First name "FirstName" 
+#	And user enter Last name "LastName" 
+#	And user enter Phone number "PhoneNumber" 
+#	And user enter Address "Address" 
+#Then user click on Go To Shipping Method button in Checkout page
+	And user adds shipment address on checkout page for "guest" user without zipcode
 	And verify the error message for mandatory field
 	And user enter Zipcode "ZIPCODE"
 	Then user click on Go To Shipping Method button in Checkout page

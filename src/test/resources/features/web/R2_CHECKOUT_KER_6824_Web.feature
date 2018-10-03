@@ -143,12 +143,7 @@ Scenario: Verify the Hide Gift Card CTA behavior
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page
-	When user enter First name "FirstName" 
-	And user enter Last name "LastName" 	
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	Then user click on Go To Shipping Method button in Checkout page
+	And user adds shipment address on checkout page for "guest" user
 	And user click on go to payment present in shipping method
 	Then user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "GiftcardNumber"

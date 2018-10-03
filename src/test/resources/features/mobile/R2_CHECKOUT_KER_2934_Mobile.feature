@@ -94,9 +94,7 @@ Scenario: Verify guest user, if after placing order, registers the account saves
 @R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2  @1HR_R2  @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-9683 @CR-DPK 
 Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided on cart page 
  	Given user launches the browser and navigates to "ASO_HOME" page
-	Then User clicks on the burger menu
-	And User navigates to LThree
-  Then user clicks on the product card and navigates to PDP
+	And User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -109,11 +107,7 @@ Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided o
 		|checkout_ShippingAddress_ZipCode_txt						|
 		|checkout_ShippingAddress_City_txt							|
 		|checkOut_ShippingAddress_GoToShippingMethod_btn			|
-	When user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	Then user click on Go To Shipping Method button in Checkout page
+	And user adds shipment address on checkout page for "guest" user without zipcode
 	And verify the error message for mandatory field
 	And user enter Zipcode "ZIPCODE"
 	Then user click on Go To Shipping Method button in Checkout page
@@ -137,12 +131,7 @@ Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided o
 		|checkout_ShippingAddress_ZipCode_txt						|
 		|checkout_ShippingAddress_City_txt							|
 		|checkOut_ShippingAddress_GoToShippingMethod_btn			|
-    When user enter First name "FirstName"
-    And user enter Last name "LastName"
-    And user enter Phone number "PhoneNumber"
-    And user enter Address "AVSAddress"
-    And user enter Zipcode "zipcode"
-    Then user click on Go To Shipping Method button in Checkout page	
+   And user adds shipment address on checkout page for "guest" user	for AVSaddress
 	And error is found in the shipping address
 	And user verify the suggested address	
 	

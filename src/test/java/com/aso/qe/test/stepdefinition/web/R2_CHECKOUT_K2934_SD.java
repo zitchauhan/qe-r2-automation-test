@@ -10,7 +10,7 @@ import org.apache.log4j.Logger;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
-
+import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -20,6 +20,7 @@ public class R2_CHECKOUT_K2934_SD extends CommonActionHelper {
 
 	private static final Logger logger = Logger.getLogger(R2_CHECKOUT_K2934_SD.class);
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
+	R2_MyAccount_PO r2MyAccountPO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	
 	@And("^verify the error message for mandatory field$")
 	public void verify_the_error_message_for_mandatory_field() throws Throwable {
@@ -74,5 +75,44 @@ public class R2_CHECKOUT_K2934_SD extends CommonActionHelper {
 	    	
 	    }
 	
-
+	@And("^user adds shipment address on checkout page for \"(.*?)\" user without zipcode$")
+	public void user_adds_shipment_address_on_checkout_page_for_user_without_zipcode(String arg1) throws Throwable {
+		boolean userWithoutExistingShippingAddress = false;
+		if (arg1.equalsIgnoreCase("newly registered") | arg1.equalsIgnoreCase("guest")
+				| arg1.equalsIgnoreCase("unauthenticated"))
+			userWithoutExistingShippingAddress = true;
+		if (!(userWithoutExistingShippingAddress)) {
+			if (!(isDisplayed(r2CheckOutPo.btnEditShippingAddress)))
+				userWithoutExistingShippingAddress = true;
+		}
+		if (userWithoutExistingShippingAddress) {
+			setInputText(r2CheckOutPo.inputCheckoutFirstName, webPropHelper.getTestDataProperty("FirstName"));
+			setInputText(r2CheckOutPo.inputCheckoutLasttName, webPropHelper.getTestDataProperty("LastName"));
+			setInputText(r2CheckOutPo.inputCheckoutPhoneNumber, r2MyAccountPO.generateRandomMobileNumber());
+			setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty("Address"));
+			//setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("zipcode"));
+			assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
+		}
+	}
+	
+	
+	@And("^user adds shipment address on checkout page for \"(.*?)\" user for AVSaddress$")
+	public void user_adds_shipment_address_on_checkout_page_for_user_for_AVSaddress(String arg1) throws Throwable {
+		boolean userWithoutExistingShippingAddress = false;
+		if (arg1.equalsIgnoreCase("newly registered") | arg1.equalsIgnoreCase("guest")
+				| arg1.equalsIgnoreCase("unauthenticated"))
+			userWithoutExistingShippingAddress = true;
+		if (!(userWithoutExistingShippingAddress)) {
+			if (!(isDisplayed(r2CheckOutPo.btnEditShippingAddress)))
+				userWithoutExistingShippingAddress = true;
+		}
+		if (userWithoutExistingShippingAddress) {
+			setInputText(r2CheckOutPo.inputCheckoutFirstName, webPropHelper.getTestDataProperty("FirstName"));
+			setInputText(r2CheckOutPo.inputCheckoutLasttName, webPropHelper.getTestDataProperty("LastName"));
+			setInputText(r2CheckOutPo.inputCheckoutPhoneNumber, r2MyAccountPO.generateRandomMobileNumber());
+			setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty("AVSAddress"));
+			setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("zipcode"));
+			assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
+		}
+	}
 }
