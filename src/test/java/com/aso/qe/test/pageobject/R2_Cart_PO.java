@@ -21,6 +21,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
+	R1_FindStore_PO r1FindStorePO = PageFactory.initElements(driver, R1_FindStore_PO.class);
 	/*************** END LOCAL OBJETCS AND DECLARATIONS **************************/
 
 	/***************************** START XPAHTS **********************************/
@@ -274,7 +275,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']")//*************find a store Duplicate 
 	public WebElement btnFindStoreClose;
 	
-	@FindBy(xpath = "(//div[@data-auid='facetdrawerundefined'])[2]")
+	@FindBy(xpath = "(//div[@data-auid='facetdrawerundefined'])[1]")
     public WebElement storeNames_txt;
     
     @FindBy(xpath = "//button[@data-auid='btnfind-a-store-mystore-button']")
@@ -606,6 +607,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 		assertTrue(clickOnButton(btnZipCode));
         assertTrue(clickOnButton(storeNames_txt));
         assertTrue(clickOnButton(makeMyStore_btn));
+        assertTrue(clickOnButton(r1FindStorePO.ovly_btnCloseCross));
 		}
 		else
 		{
@@ -616,6 +618,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 			assertTrue(clickOnButton(btnZipCode));
 	        assertTrue(clickOnButton(storeNames_txt));
 	        assertTrue(clickOnButton(makeMyStore_btn));
+	        assertTrue(clickOnButton(r1FindStorePO.ovly_btnCloseCross));
 		} }
 	// End KER-2939 CR-AKK
 	// Start KER-4231 CR-GK
@@ -634,6 +637,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 			}
 			assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
 			assertTrue(clickOnButton(makeMyStore_btn));
+			assertTrue(clickOnButton(btnFindStoreClose));
 		} else {
 			assertTrue(clickOnButton(selectStoreMiniBalloon));
 			waitForElement(txtZipCode);
@@ -648,6 +652,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 			}
 			assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
 			assertTrue(clickOnButton(makeMyStore_btn));
+			assertTrue(clickOnButton(btnFindStoreClose));
 		}
 
 	}

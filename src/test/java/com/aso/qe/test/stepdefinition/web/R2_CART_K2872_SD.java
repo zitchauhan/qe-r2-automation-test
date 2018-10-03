@@ -114,6 +114,9 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	@And("^user click on Make My store button$")
 	public void user_click_on_Make_My_store_button() throws Throwable {
 		assertTrue(clickOnButton(r2CartPo.btnMakeMyStore));
+		if(isDisplayed(r2CartPo.btnFindStoreClose)) {
+			clickOnButton(r2CartPo.btnFindStoreClose);
+		}
 	}
 	
 	@And("^user verify Make My store button$")

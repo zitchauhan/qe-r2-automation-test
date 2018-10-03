@@ -16,6 +16,7 @@ And user enter First name "FirstName"
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page
+	Given user selects shipment method on check out page
 	When user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "GiftcardNumber"
 	And user enter Pin Number "PinNumber" 
