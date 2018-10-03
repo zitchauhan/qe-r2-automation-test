@@ -246,8 +246,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement btnAddGiftCard; // 25 Aug
 
-	@FindBy(xpath = "//*[@data-auid='btnundefined']/following::*[1]")
-	public WebElement btnCancelGiftCard; // CR-SK, 29 Aug
+	@FindBy(xpath = "//*[@data-auid='btnundefined']/preceding::*[1]")
+	public WebElement btnCancelGiftCard; // CR-SK, 29 Aug Modified CR-RKA 3 Oct
 	// End KER-3092
 
 	// Start KER-3152 CR-AKK
