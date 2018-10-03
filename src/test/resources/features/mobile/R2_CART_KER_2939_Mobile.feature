@@ -128,7 +128,7 @@ Scenario: To verify In-store Pick up radio button - with My Store info on My Acc
 	And user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
-	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
+	#When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page "Your Cart item details "|
    |InStorePickup_FREE_radioBtn |
@@ -326,11 +326,10 @@ And user clicks on SignIn link from global header
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	When User searches a product "SOFSKUNumber" and navigates to PDP
-	Then User is navigated to pdp page
+	When user enters "SKUForBopisProduct" in the search box
 	And user click on Add to Cart Button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page
     |#user verify ShipToStore |
-	|ShipToStore_radioBtn| 
+	|InStorePickup_FREE_radioBtn |
