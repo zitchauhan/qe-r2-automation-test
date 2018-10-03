@@ -1,5 +1,7 @@
 package com.aso.qe.test.pageobject;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.List;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.log4j.Logger;
@@ -246,8 +248,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement btnAddGiftCard; // 25 Aug
 
-	@FindBy(xpath = "//*[@data-auid='btnundefined']/following::*[1]")
-	public WebElement btnCancelGiftCard; // CR-SK, 29 Aug
+	@FindBy(xpath = "//*[@data-auid='btnundefined']/preceding::*[1]")
+	public WebElement btnCancelGiftCard; // CR-SK, 29 Aug Modified CR-RKA 3 Oct
 	// End KER-3092
 
 	// Start KER-3152 CR-AKK
@@ -849,6 +851,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = " //*[@data-auid='btnundefined']/../following-sibling::*[1]/*/*[2]")
 	public WebElement Order_Bopis_Item_Details;
+	
+	@FindBy(xpath = "//*[@data-auid='show_wish_list_btn']")
+	public List<WebElement> openWishListBtn;
 
 	// End KER-4330 CR-MS Sep25
 
@@ -895,6 +900,15 @@ public String generateRandomMobileNumber() {
 		return randomGeneratedMobileNumber;
 
 	}
+
+public void deleteAllWishList() {
+	for (WebElement wishlistopenbtn : openWishListBtn) {
+		assertTrue(clickOnButton(wishlistopenbtn));
+		assertTrue(clickOnButton(Wishlist_icn));
+		assertTrue(clickOnButton(DeleteList_btn));
+		assertTrue(clickOnButton(DeleteWishList_btn));
+	}
+}
 
 	/***************************** END METHODS *********************************/
 
