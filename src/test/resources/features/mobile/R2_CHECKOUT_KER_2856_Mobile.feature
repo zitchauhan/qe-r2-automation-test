@@ -8,6 +8,9 @@ And User clicks on the burger menu
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	Then User clicks on the burger menu 
+	When user clicks on Find a Store 
+	And user selects a new store from Find a Store modal "FindAsStoreZIPCode"
 	When user enters "SKUForBopisProduct" in the search box
     When user click on Add to cart button
     Then user is navigated to Add to cart Notification popup 
@@ -31,6 +34,9 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods BOPIS and S
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	Then User clicks on the burger menu 
+	When user clicks on Find a Store 
+	And user selects a new store from Find a Store modal "FindAsStoreZIPCode"
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
     And user click on Add to Cart Button
 	And user is navigated to Add to cart Notification popup 
@@ -60,6 +66,9 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Shi
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	Then User clicks on the burger menu 
+	When user clicks on Find a Store 
+	And user selects a new store from Find a Store modal "FindAsStoreZIPCode"
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
     And user click on Add to Cart Button
 	And user is navigated to Add to cart Notification popup 
@@ -84,6 +93,9 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Shi
 	
 @R2_Mobile @R2_Regression @R2_All @P-High  @C-Checkout @KER-2856 @ZYP_CHECKOUT_K2856-10868 @CR-RK	
 Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods for BOPIS, Sequence - Un authenticated user
+Then User clicks on the burger menu 
+When user clicks on Find a Store 
+	And user selects a new store from Find a Store modal "FindAsStoreZIPCode"
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
     And user click on Add to Cart Button
 	And user is navigated to Add to cart Notification popup
@@ -111,6 +123,9 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods for BOPIS, 
 	
 @R2_Mobile @R2_Regression @R2_All @P-High  @C-Checkout @KER-2856 @ZYP_CHECKOUT_K2856-10869 @CR-RK	
 Scenario: Verify Mixed cart Order confirmation - Order Summary Modal Sequece
+	Then User clicks on the burger menu 
+	When user clicks on Find a Store 
+	And user selects a new store from Find a Store modal "FindAsStoreZIPCode"
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
     And user click on Add to Cart Button
 	And user is navigated to Add to cart Notification popup
