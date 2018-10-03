@@ -6,7 +6,7 @@ Scenario: Verify the user is able to see their favorite store in ASO site home p
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
 	And user logs in as "EmailAddress"
-	And user sets up a store for "FindStoreZipcode"
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
 	And user sign out from the website
 	When user clicks on SignIn link from global header
 	And user logs in as "EmailAddress"
