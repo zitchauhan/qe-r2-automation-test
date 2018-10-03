@@ -390,12 +390,14 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_AccountCreatedMessage_txt));
 	}
 	
+	
 	@Then("user able to see the same order ID in My order section$")
 	public void user_able_to_see_the_same_order_ID_in_My_order_section() throws Throwable{
-		Boolean flag =false;
-		System.out.println(orderID);
-		flag =isDisplayed(driver.findElement(By.xpath("//*[contains(text(),'"+orderID+"')]")));
-		assertTrue(flag);
+		r2CheckOutPo.orderIDvalidationInMyAccount(orderID);
 	}
 
+	@Then("^user selects the gift card which is not exhausted$")
+	public void user_selects_the_gift_card_which_is_not_exhausted() throws Throwable {
+		r2CheckOutPo.validGiftCardSelection();
+	}
 }

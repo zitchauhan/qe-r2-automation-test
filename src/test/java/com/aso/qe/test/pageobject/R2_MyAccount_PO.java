@@ -11,9 +11,8 @@ import org.openqa.selenium.support.FindBy;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.stepdefinition.web.Common_Web_SD;
 
-
 public class R2_MyAccount_PO extends CommonActionHelper {
-	
+
 	/**************** START LOCAL OBJETCS AND DECLARATIONS ***********************/
 	private static final Logger logger = Logger.getLogger(Common_Web_SD.class);
 	/*************** END LOCAL OBJETCS AND DECLARATIONS ************************/
@@ -429,9 +428,11 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text() = 'ADD NEW CREDIT CARD']")
 	public WebElement headerAddNewCreditCards;
 
-	@FindBy(xpath = "//*[@auid = 'Credit Card Number-inputField'] | //*[@id='creditcardField'] |//*[@name ='creditcardField']") // CR-DPK
-																																// Date
-																																// 12-Sept
+	@FindBy(xpath = "//*[@auid = 'Credit Card Number-inputField'] | //*[@id='creditcardField'] |//*[@name ='creditcardField'] | //*[@data-auid='creditcardField']") // CR-GK
+																																									// //
+																																									// Date
+																																									// //
+																																									// 3-oct
 	public WebElement txtCreditCardNumber;
 
 	@FindBy(xpath = "//*[@auid = 'Exp. Date-inputField'] | //*[@id='expirationDate'] |//*[@name ='expiryField']") // CR-DPK
@@ -851,7 +852,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = " //*[@data-auid='btnundefined']/../following-sibling::*[1]/*/*[2]")
 	public WebElement Order_Bopis_Item_Details;
-	
+
 	@FindBy(xpath = "//*[@data-auid='show_wish_list_btn']")
 	public List<WebElement> openWishListBtn;
 
@@ -882,7 +883,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	}
 
 	public String generateRandomEmailId() {
-		
+
 		String randomGeneratedString = RandomStringUtils.randomAlphanumeric(10);
 		String head = "test";
 		String tail = "@deleteme.com";
@@ -891,9 +892,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 		return newGeneratedEmail;
 
 	}
-	
-public String generateRandomMobileNumber() {
-		
+
+	public String generateRandomMobileNumber() {
+
 		String randomGeneratedMobileNumber = RandomStringUtils.randomNumeric(9);
 		randomGeneratedMobileNumber = "6" + randomGeneratedMobileNumber;
 		logger.debug("The new random generated mobile number is " + randomGeneratedMobileNumber);
@@ -901,14 +902,14 @@ public String generateRandomMobileNumber() {
 
 	}
 
-public void deleteAllWishList() {
-	for (WebElement wishlistopenbtn : openWishListBtn) {
-		assertTrue(clickOnButton(wishlistopenbtn));
-		assertTrue(clickOnButton(Wishlist_icn));
-		assertTrue(clickOnButton(DeleteList_btn));
-		assertTrue(clickOnButton(DeleteWishList_btn));
+	public void deleteAllWishList() {
+		for (WebElement wishlistopenbtn : openWishListBtn) {
+			assertTrue(clickOnButton(wishlistopenbtn));
+			assertTrue(clickOnButton(Wishlist_icn));
+			assertTrue(clickOnButton(DeleteList_btn));
+			assertTrue(clickOnButton(DeleteWishList_btn));
+		}
 	}
-}
 
 	/***************************** END METHODS *********************************/
 

@@ -871,7 +871,11 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	  @FindBy(xpath="//*[contains(text(),'Terms and Conditions')]")public WebElement lnkTermsConditons;
 	  @FindBy(xpath="//*[contains(text(),'Privacy Policy')]")public WebElement lnkPrivacyPolicy;
 	  @FindBy(xpath="//*[@id='1' and @name='Dropdown']")public WebElement drpdownShippingAddress;
-	  
+	  @FindBy(xpath= "//*[contains(text(),'Gift Card Ending In')]//ancestor::button")
+		public WebElement drpdownGiftCard;
+		
+		@FindBy(xpath= "//*[contains(text(),'Gift Card Ending In')]//ancestor::div//following-sibling::div/p[contains(text(),'Remaining Balance')]")
+		public WebElement txtEmptyGiftCard;
 	  
 	  
 	  //End KER-2925 CR-AG 21-Sep
@@ -979,4 +983,33 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 	}
 	
+	public void orderIDvalidationInMyAccount(String orderID) {
+		Boolean flag =false;
+		System.out.println(orderID);
+		flag =isDisplayed(driver.findElement(By.xpath("//*[contains(text(),'"+orderID+"')]")));
+		assertTrue(flag);
+	}
+
+	
+	public void validGiftCardSelection() {
+		
+		String giftAmount = getText(txtEmptyGiftCard).substring(19);
+		
+		while(giftAmount == "00.00") {
+			
+		assertTrue(clickOnButton(drpdownGiftCard));
+	
+		List<WebElement> giftCardCount = driver.findElements(By.xpath("//*[@id='customDropdownList'and @data-auid='undefined_dropdownList']/li"));
+	
+		for (WebElement element : giftCardCount){
+		
+	        	clickOnButton(element);
+	        	assertTrue(clickOnButton(drpdownGiftCard));
+	        	
+	           giftAmount = getText(txtEmptyGiftCard).substring(18);
+	           
+		}	
+		
+	        }
+	    }
 }
