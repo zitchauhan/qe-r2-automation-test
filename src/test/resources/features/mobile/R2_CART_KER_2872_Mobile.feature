@@ -4,7 +4,8 @@ Feature: Verify BOPIS PDP Store Selection
 Scenario: Verify that user is able to open the Find Store modal from the header
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 
-	Then User should be able to click on Find Store
+#	Then User should be able to click on Find Store
+    And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
 	And user verify Find a Store popup
 
 
@@ -103,7 +104,7 @@ Scenario: Verify that user is able to open the Find Store modal from PLP for BOP
 #	When user clicks on one of the category and navigates to LOne SOF
  #   Then user clicks on one of the subcategory and navigates to LTwo SOF
   #  Then user clicks on one of the product category and navigates to LThree SOF
-	Then User searches a product "SOFSKUNumber" and navigates to PDP	
+	 When user enters "SOFSKUNumber" in the search box	
 	Then User is navigated to pdp page
 	And user is able to see Change Pickup Location link	
 	
@@ -115,7 +116,7 @@ Scenario: Verify that user is able to open the Find Store modal from PLP for BOP
 #	When user clicks on one of the category and navigates to LOne SOF
 #    Then user clicks on one of the subcategory and navigates to LTwo SOF
 #    Then user clicks on one of the product category and navigates to LThree SOF
-	Then User searches a product "SOFSKUNumber" and navigates to PDP
+	 When user enters "SOFSKUNumber" in the search box
 	Then User is navigated to pdp page
 	And clicks on the Change Pickup Location link
 	And user verify Find a Store popup	

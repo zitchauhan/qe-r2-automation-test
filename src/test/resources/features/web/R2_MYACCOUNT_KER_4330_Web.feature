@@ -25,8 +25,15 @@ Scenario: Verify the details in In-Store Pickup Instructions section
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And user click on MyAccount
-	And user click on Orders link
+	And user navigate and deletes existing items in cart 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user will click on View Cart button 
+	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
+	Then user click on checkout button 
+	Then user click on review order button 
+	And user able to see the button place order
+	And user navigates from Order successful page to Orders in my account
 	Then Verify below Sub/Main Module of My Account
     |#Verify following elements in my account order details|
     |Order_View_Details_Btn|
@@ -153,29 +160,3 @@ Scenario: Verify the details in Order Summary section
     |Order_Bopis_In_Store_Pickup_txt|
     |MyAccount_OrderDetailsPage_SubTotalAmount|
     |Order_Bopis_Print_Receipt_lnk|     
-
-    
-    
-    
-
-    
-    	    
-    
-	
-	
-	
-	 
-      
-     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-          
-	

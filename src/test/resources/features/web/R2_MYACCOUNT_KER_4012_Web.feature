@@ -1,13 +1,14 @@
 Feature: E03-150-Order Cancellation Request Order Cancellation from My Account
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @R2_Order @KER-4012 @ZYP_MYACCOUNT_K4012-10668 @ZYP_MYACCOUNT_K4012-10672 @CR-MS
+  @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @R2_Order @KER-4012 @ZYP_MYACCOUNT_K4012-10668 @ZYP_MYACCOUNT_K4012-10672 @CR-MS
 Scenario: Verify that order is not cancelled if user clicks on No CTA on confirmation modal
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User searches a product "productName" and navigates to PDP
+	And User Navigates L2 form Homepage Header 
+    And User clicks on product in PLP
 	Then user clicks on By Now button
 	And user is navigated to order confirmation page and captures order number
 	And user click on MyAccount

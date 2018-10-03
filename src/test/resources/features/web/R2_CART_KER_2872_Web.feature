@@ -213,7 +213,7 @@ Scenario: Verify user is displayed with an error message when there is no store 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10726 @CR-DPK
 Scenario: Verify user is able to see the BOPIS availability on store details drawer for the products added in cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User searches a product "SOFSKUNumber" and navigates to PDP
+	 When user enters "SOFSKUNumber" in the search box
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	And click on Change Location link
@@ -226,7 +226,7 @@ Scenario: Verify user is able to see the BOPIS availability on store details dra
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-11548 @CR-DPK
 Scenario: Verify the user is able to view the 'Change Location' under In-store Pick Up on Cart in Product Blade
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User searches a product "SOFSKUNumber" and navigates to PDP
+    When user enters "SOFSKUNumber" in the search box 
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	And verify Change Location link	
@@ -236,7 +236,7 @@ Scenario: Verify the user is able to view the 'Change Location' under In-store P
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11552 @CR-DPK
 Scenario: Verify user is able to see the inventory against the listed stores for the product not added to cart and modal opened from PDP
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User searches a product "SOFSKUNumber" and navigates to PDP
+	 When user enters "SOFSKUNumber" in the search box
 	When user clicks on Find a Store
 	Then user enter "zipCode" in Find a Store Model
 	And user click on submit button
@@ -247,7 +247,7 @@ Scenario: Verify user is able to see the inventory against the listed stores for
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11554 @CR-DPK
 Scenario: Verify user is able to see the inventory on store details drawer for the PDP not added to cart
 	Given user launches the browser and navigates to "ASO_HOME" page  
-	Then User searches a product "SOFSKUNumber" and navigates to PDP
+	 When user enters "SOFSKUNumber" in the search box
 	And user click on Find a Store in PDP page
 	Then user enter "zipCode" in Find a Store Model
 	And user click on submit button

@@ -34,7 +34,7 @@ Scenario:
 	And user navigates to orders in my account 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in order section|
-		|OrderPage_ShippingZipCode_txt        |
+		|OrderPage_BillingZipCode_txt         |
 		|MyAccount_OrderPage_OrderNumberInput |
 		|OrderPage_Find_btn					  |
 		

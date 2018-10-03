@@ -3,7 +3,7 @@ Feature: B06-225 - BOPIS Errors in Cart
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3468 @ZYP_CART_K3468-9925 @CR-RK @1HR_R2
 Scenario: Verify user is able to see the error messages on Cart for insufficient inventory
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User searches a product "SOFSKUNumber" and navigates to PDP
+	 When user enters "SOFSKUNumber" in the search box
   	And User is navigated to pdp page 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 

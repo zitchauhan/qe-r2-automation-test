@@ -14,6 +14,7 @@ Scenario: Verify user is able to see the list of saved credit cards on Checkout 
 	Then user click on Add to Cart Button
 	Then user is navigated to Add to cart Notification popup 
     Then user click on checkout from ATC pop up
+    And user clicks on edit payment cta
     Then Verify below Sub/Main Module of Checkout Page
     |#verify  credit card is selected  | 
      |ChooseCreditcard_Dd|
@@ -33,6 +34,7 @@ Scenario: Verify user selected credit card is visually indicated in the drop-dow
 	Then user click on Add to Cart Button
 	Then user is navigated to Add to cart Notification popup 
     Then user click on checkout from ATC pop up
+    And user clicks on edit payment cta
     Then user click on credit card dropdown
     Then Verify below Sub/Main Module of Checkout Page
     |#verify  credit card DD is highlighting after clicking on choose creditcard DD  | 
@@ -52,6 +54,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user click on Add to Cart Button
 	Then user is navigated to Add to cart Notification popup 
     Then user click on checkout from ATC pop up
+    And user clicks on edit payment cta
     Then user click on credit card dropdown
     Then user click on Add new credit card 
      Then Verify below Sub/Main Module of Checkout Page
@@ -100,6 +103,7 @@ Then user enter First Name field "UpdateFirstName"
 When User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user click on checkout button
+	And user clicks on edit payment cta
 And User Clicks on credit card dropwdown and selects another card 
 Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Payment Drawer|

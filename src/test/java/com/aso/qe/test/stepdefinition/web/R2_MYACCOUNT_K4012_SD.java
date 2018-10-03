@@ -45,7 +45,8 @@ public class R2_MYACCOUNT_K4012_SD extends CommonActionHelper {
 
 	@Then("^user clicks on By Now button$")
 	public void user_clicks_on_By_Now_button() throws Throwable {
-		
+		waitForPageLoad(driver);
+		waitForElement(r2PdpPo.Default_Payment_Option_btn);
 		assertTrue(clickOnButton(r2PdpPo.Default_Payment_Option_btn));
 		
 	}
@@ -59,8 +60,7 @@ public class R2_MYACCOUNT_K4012_SD extends CommonActionHelper {
 	
 	@Then("^user click on view Details with the GeneratedOrdernumber by No$")
 	public void user_click_on_view_Details_with_the_GeneratedOrdernumber_by_No() throws Throwable {
-		
-		for(WebElement ViewOrder:r2MyAccountPo.viewOrderDetailsBtn) {        	   
+			for(WebElement ViewOrder:r2MyAccountPo.viewOrderDetailsBtn) {        	   
 	     	 assertTrue(clickOnButton(ViewOrder));
 	     	Thread.sleep(Constants.thread_medium);
 			String ordernumber=r2MyAccountPo.MyAccount_OrderDetailsPage_OrderNumber.getText();	

@@ -11,7 +11,7 @@ Scenario: Verify Authenticated user able to see the BOPIS items for pickup
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
-	And user selects store with "FindStoreZipcode" and "storeName1" 
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -30,7 +30,7 @@ Scenario:
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
-	And user selects store with "FindStoreZipcode" and "storeName1" 
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -50,7 +50,7 @@ Scenario: Verify Authenticated user able to see the BOPIS items for pickup
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
-	And user selects store with "FindStoreZipcode" and "storeName1" 
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -71,7 +71,7 @@ Scenario:
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
-	And user selects store with "FindStoreZipcode" and "storeName1" 
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -89,7 +89,7 @@ Scenario: Verify Authenticated user can change their favorite store in PLP
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
-	And user selects store with "FindStoreZipcode" and "storeName1" 
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And User clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 

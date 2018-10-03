@@ -273,10 +273,11 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
  	Then User verifies that city and State are populated automatically
 	Then click on Add button on credit card page
 	Then User clicks on ASO Logo and should be navigated to Home Page
+	And user navigate and deletes existing items in cart
 	And User searches a product "SanitySKUNumber" and navigates to PDP
 	And user click on Add to Cart Button
 	And user will click on View Cart button 
-	And user will click on Checkout button and navigates to Checkout page     
+	And user click on checkout button in Cart page     
 	Then User verifies that in Payment section credit card "CreditCardNumber" is pre-populated by default
 	
 	
