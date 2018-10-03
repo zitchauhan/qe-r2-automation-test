@@ -510,7 +510,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath = "//*[@name='cardId'] | //*[@data-auid='checkout_payment_gift_card_number_field']")	public WebElement inputGiftcardNumber;//GiftCardNumber_Input	
 		@FindBy(xpath="(//*[@data-auid='tooltipcheckout_payment_gift_card_tooltip'])[1]")public WebElement toolTip_giftCard;//GiftCardNumber_Tooltip
 		@FindBy(xpath = "//*[text()='Invalid GiftCard Number']")public WebElement txtInvalidGiftcard;//InvalidGiftCardNumber_Txt
-		@FindBy(xpath = "//*[text()='Pin']")public WebElement txtPin;//Pin_Txt
+		@FindBy(xpath = "//*[text()='Pin'] | //*[text()='PIN']")public WebElement txtPin;//Pin_Txt//Modified CR-SK 3 Oct
 		@FindBy(xpath = "//*[@name='cardPin'] | //*[@data-auid='checkout_payment_gift_card_pin_field']")public WebElement inputPinNumber;//Pin_Input
 		@FindBy(xpath="(//*[@data-auid='tooltipcheckout_payment_gift_card_tooltip'])[2]")public WebElement toolTip_pin;
 		@FindBy(xpath = "//*[text()='Invalid GiftCard Pin']")public WebElement txtInvalidPin;//InvalidGiftCardPin_Txt

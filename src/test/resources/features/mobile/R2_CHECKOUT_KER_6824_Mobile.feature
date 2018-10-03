@@ -152,8 +152,8 @@ Scenario: Verify the Hide Gift Card CTA behavior
 	And user adds shipment address on checkout page for "guest" user
 	And user click on go to payment present in shipping method
 	Then user click on GiftCard Plus icon in Checkout page
-	And user enter Gift card Number "GiftcardNumber"
-	And user enter Pin Number "PinNumber" 
+	And user enter Gift card Number "Valid16DigitGiftCardNumber"
+	And user enter Pin Number "Valid8DigitGiftCardPIN" 
 	And user click on Apply button
 	Then Verify below Sub/Main Module of Checkout Page 
 	|# Verify following elements in Checkout page "Order Summary"|

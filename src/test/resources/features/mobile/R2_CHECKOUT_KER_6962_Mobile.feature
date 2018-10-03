@@ -105,7 +105,7 @@ Scenario: Verify user is prompted with message to retain the physical gift card
 	Then applied gift card "Valid16DigitGiftCardNumber" should be displayed
 	Then Verify the message on the page 
 	|# user should see below message on the page																|
-	|Please keep your physical gift card for future reference to assit with any returns or oder cancellations.	|	
+	|Please keep your physical gift card for future reference to assist with any returns or order cancelations.	|	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8883 @CR-SK 
 Scenario: Verify Guest Users should be able to enter an unlimited number of gift cards on any transaction

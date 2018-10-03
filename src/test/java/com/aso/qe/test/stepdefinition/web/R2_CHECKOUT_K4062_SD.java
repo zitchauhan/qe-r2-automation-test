@@ -312,7 +312,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		setInputText(r2OrderConfPO.orderConfirmation_SignUp_FirstName_txt, webPropHelper.getTestDataProperty(arg1));
 	}
 
-	@And("^user clicks on sign up  button of sign up page$")
+	@And("^user clicks on sign up button of sign up page$")
 	public void user_clicks_on_sign_up_button_of_sign_up_page() throws Throwable {
 		assertTrue(clickOnButton(r2OrderConfPO.orderConfirmation_SignUp_SignUp_btn));
 	}

@@ -220,9 +220,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//button[.='SHOW']")
 	public WebElement btnShow;
 
-	@FindBy(xpath = "//button[.='Hide']")
+	@FindBy(xpath = "//button[.='Hide'] | //button[.='HIDE']")
 	public WebElement btnHide;
-	// End KER-4249 CR-SK 23-Aug
+	// End KER-4249 CR-GK 3-Oct 
 
 	// Start KER-3092
 	@FindBy(xpath = "//*[.='PAYMENT']/a ")

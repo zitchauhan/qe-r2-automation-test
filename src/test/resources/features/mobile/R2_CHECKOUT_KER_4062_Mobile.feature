@@ -57,7 +57,7 @@ Scenario: Verify if user can create account from Order Confirmation Page
 	And user enter "LastName" in last name field of sign up page
 	And user enters "random email" in email field of sign up page
 	And user enter "Password" in create password field of sign up page
-	And user clicks on sign up  button of sign up page
+	And user clicks on sign up button of sign up page
 	Then user should be able to sign up successfully
 	And Verify the message on the page
 	    |# Following Message should show on the page		|

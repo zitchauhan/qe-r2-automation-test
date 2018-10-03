@@ -70,6 +70,7 @@ public class R2_CHECKOUT_K6962_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CheckOutPo.giftCards_txt));
 		assertTrue(isDisplayed(r2CheckOutPo.giftCardsPrice_txt));
 		String giftCardPrice = getText(r2CheckOutPo.giftCardsPrice_txt);
+		giftCardPrice = giftCardPrice.replace("-", "");
 		assertTrue(getText(r2CheckOutPo.txtGiftCardAppliedSuccessMessage).contains(giftCardPrice));
 	}
 	

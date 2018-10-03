@@ -332,6 +332,8 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.txtOrderNumber));
 				else if (currentElement.equalsIgnoreCase("OrderPage_ShippingZipCode_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.txtShippingZipCode));
+				else if (currentElement.equalsIgnoreCase("OrderPage_BillingZipCode_txt"))
+					assertTrue(isDisplayed(r2MyAccountPo.BillindZipCode_Input)); 
 				else if (currentElement.equalsIgnoreCase("OrderPage_Find_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnFind));
 				else if (currentElement.equalsIgnoreCase("OrderPage_TotalNumberOfOrder_txt"))
