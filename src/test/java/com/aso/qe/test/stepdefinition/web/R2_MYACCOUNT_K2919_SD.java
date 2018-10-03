@@ -31,7 +31,7 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	public void user_deletes_all_existing_credit_card() throws Throwable {
 		for(WebElement removeElement: myAccountPo.PaymentPage_CreditCard_Remove_list) {
 			removeElement.click();
-			Thread.sleep(Constants.thread_medium);
+//			Thread.sleep(Constants.thread_medium);
 		}
 	}
 	
