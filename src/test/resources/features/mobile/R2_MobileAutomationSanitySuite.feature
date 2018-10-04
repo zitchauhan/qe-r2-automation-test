@@ -247,7 +247,7 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user should able to click on Signin button 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SanityEmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
     Then User searches a product "productName" and navigates to PDP
@@ -273,7 +273,7 @@ Scenario: TC_19-Verify Sign In During Checkout
 	And user navigate to Cart page 
 	And user will click on Checkout button and navigates to Checkout page 
 	When user click on SignIn link 
-	And user enter the valid emailaddress "EmailAddress" from checkout page 
+	And user enter the valid emailaddress "SanityEmailAddress" from checkout page 
 	And user enter the valid password "Password" from checkout page 
 	And user click on signin button 
 	Then user should get logged in successfully 
@@ -324,47 +324,47 @@ Scenario:
 	And user click on submit button 
 	Then user verify the results based on entering zipcode 
 	
-	@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @CR-SK @AutomationSanityR2
-Scenario Outline: TC_23- Verify if authenticated user is able to place an order for single SKU product 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on the burger menu 
-	When user creates an account
-	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
-	And user adds shipment address on checkout page for "newly registered" user
-	And user selects shipment method on check out page for "newly registered" user
-	And user add "<Payment Type>" details in payment method for "newly registered" user
-	And user clicks on place order on checkout page 
-	Then verify user is able to successfully place the order 
-	Then Verify the message on the page 
-		|# Message for successful order is displayed		|
-		|THANKS FOR SUBMITTING YOUR ORDER					|
-	Examples: 
-		|Payment Type	|
-		|PayPal			|
-	
-	@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order  @AutomationSanityR2
-@CR-SK 
-Scenario Outline:  TC_24-Verify if unauthenticated user is able to place an order for single SKU product 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
-	And user adds shipment address on checkout page for "guest" user
-	And user selects shipment method on check out page for "guest" user
-	And user add "<Payment Type>" details in payment method for "guest" user
-	And user clicks on place order on checkout page 
-	Then verify user is able to successfully place the order 
-	And Verify the message on the page 
-		|# Message for successful order is displayed		|
-		|THANKS FOR SUBMITTING YOUR ORDER					|
-	Examples: 
-		|Payment Type	|
-		|PayPal			|
-		
+#	@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @CR-SK @AutomationSanityR2
+#Scenario Outline: TC_23- Verify if authenticated user is able to place an order for single SKU product 
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	Then User clicks on the burger menu 
+#	When user creates an account
+#	And User searches a product "productName" and navigates to PDP 
+#	And user click on Add to Cart Button 
+#	And user is navigated to Add to cart Notification popup 
+#	When user click on checkout button 
+#	And user adds shipment address on checkout page for "newly registered" user
+#	And user selects shipment method on check out page for "newly registered" user
+#	And user add "<Payment Type>" details in payment method for "newly registered" user
+#	And user clicks on place order on checkout page 
+#	Then verify user is able to successfully place the order 
+#	Then Verify the message on the page 
+#		|# Message for successful order is displayed		|
+#		|THANKS FOR SUBMITTING YOUR ORDER					|
+#	Examples: 
+#		|Payment Type	|
+#		|PayPal			|
+#	
+#	@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order  @AutomationSanityR2
+#@CR-SK 
+#Scenario Outline:  TC_24-Verify if unauthenticated user is able to place an order for single SKU product 
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	When User searches a product "productName" and navigates to PDP 
+#	And user click on Add to Cart Button 
+#	And user is navigated to Add to cart Notification popup 
+#	And user click on checkout button 
+#	And user adds shipment address on checkout page for "guest" user
+#	And user selects shipment method on check out page for "guest" user
+#	And user add "<Payment Type>" details in payment method for "guest" user
+#	And user clicks on place order on checkout page 
+#	Then verify user is able to successfully place the order 
+#	And Verify the message on the page 
+#		|# Message for successful order is displayed		|
+#		|THANKS FOR SUBMITTING YOUR ORDER					|
+#	Examples: 
+#		|Payment Type	|
+#		|PayPal			|
+#		
 			
 @R2_MAST-23 @BrokenLink @Broken @TC_BL_09 
 Scenario: TC_25- Verify all broken URL's on Cart page 
