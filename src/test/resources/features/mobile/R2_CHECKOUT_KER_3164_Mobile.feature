@@ -62,9 +62,10 @@ Scenario:
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user should able to click on Signin button 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart
 	And  User searches a product "productName" and navigates to PDP 
 	And  user click on Add to Cart Button 
 	And  user is navigated to Add to cart Notification popup 

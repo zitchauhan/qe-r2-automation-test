@@ -50,7 +50,7 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 	}
 	@Then("^user switch to iframe to verify paypalcheckoutBtn$")
 	public void user_switch_to_iframe_to_verify_paypalcheckoutBtn() throws Throwable {
-		Thread.sleep(Constants.thread_low);
+		Thread.sleep(Constants.thread_high);
 		driver.switchTo().frame(r2_r1_fun_po.paypalCheckoutFrame);
 	}
 	@Then("^user click on ADD Another Gift Card$")

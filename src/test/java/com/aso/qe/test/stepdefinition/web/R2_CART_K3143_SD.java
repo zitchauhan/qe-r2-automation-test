@@ -50,10 +50,10 @@ public class R2_CART_K3143_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2CartPo.WelcomeBackSignIN_Btn));
 		
 	}
-	@Then("^user will empty the cart if product is in cart$")
-	public void user_will_empty_the_cart_if_product_is_in_cart() throws Throwable {
-	    r2CartPo.emptyCart();
-	}
+//	@Then("^user will empty the cart if product is in cart$")
+//	public void user_will_empty_the_cart_if_product_is_in_cart() throws Throwable {
+//	    r2CartPo.emptyCart();
+//	}
 	@Then("^user click on continue shopping$")
 	public void user_click_on_continue_shopping() throws Throwable {
 	   assertTrue(clickOnButton(r2CartPo.link_ContinueShopping));

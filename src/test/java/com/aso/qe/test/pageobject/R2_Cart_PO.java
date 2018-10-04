@@ -433,6 +433,13 @@ public class R2_Cart_PO extends CommonActionHelper {
 	public WebElement selectStoreMiniBalloon;
 	@FindBy(xpath = "//*[contains(text(),'Included')]")
 	public WebElement cart_IncludedTxt;
+	
+	@FindBy(xpath = "//div[@data-auid='facetdrawerundefined']")
+    public List<WebElement> selectStorePopUpStoreList;
+
+    @FindBy(xpath = "//*[contains(text(),'Item Not Available')]")
+    public WebElement selectStoreItemNotAvailable;
+
 	/***************************** END XPAHTS ********************************/
 
 	/***************************** START METHODS 
@@ -598,28 +605,46 @@ public class R2_Cart_PO extends CommonActionHelper {
 	// End KER-2939 CR-RK
 
 	// Start KER-2939 CR-AKK
-	public void selectStore(String zipCode) {
-		if("mobile".equalsIgnoreCase(testtype)){
-		assertTrue(clickOnButton(lnkFindAStore_M));
-		waitForElement(txtZipCode);
-		txtZipCode.clear();
-		setInputText(txtZipCode, zipCode);
-		assertTrue(clickOnButton(btnZipCode));
-        assertTrue(clickOnButton(storeNames_txt));
-        assertTrue(clickOnButton(makeMyStore_btn));
-        assertTrue(clickOnButton(r1FindStorePO.ovly_btnCloseCross));
-		}
-		else
-		{
-			assertTrue(clickOnButton(lnkFindAStore));
-			waitForElement(txtZipCode);
-			txtZipCode.clear();
-			setInputText(txtZipCode, zipCode);
-			assertTrue(clickOnButton(btnZipCode));
-	        assertTrue(clickOnButton(storeNames_txt));
-	        assertTrue(clickOnButton(makeMyStore_btn));
-	        assertTrue(clickOnButton(r1FindStorePO.ovly_btnCloseCross));
-		} }
+	public void selectStore(String zipCode) throws InterruptedException {
+        if ("mobile".equalsIgnoreCase(testtype)) {
+               assertTrue(clickOnButton(lnkFindAStore_M));
+               waitForElement(txtZipCode);
+               txtZipCode.clear();
+               setInputText(txtZipCode, zipCode);
+               assertTrue(clickOnButton(btnZipCode));
+               Thread.sleep(Constants.thread_high);
+               for (WebElement selectStorefromList : selectStorePopUpStoreList) {
+                     assertTrue(clickOnButton(selectStorefromList));
+                     if (isDisplayed(selectStoreItemNotAvailable)) {
+                            assertTrue(clickOnButton(selectStorefromList));
+                            continue;
+                     } else {
+                            break;
+                     }
+               }
+               assertTrue(clickOnButton(makeMyStore_btn));
+               assertTrue(clickOnButton(r1FindStorePO.ovly_btnCloseCross));
+        } else {
+               assertTrue(clickOnButton(lnkFindAStore));
+               waitForElement(txtZipCode);
+               txtZipCode.clear();
+               setInputText(txtZipCode, zipCode);
+               assertTrue(clickOnButton(btnZipCode));
+               Thread.sleep(Constants.thread_high);
+               for (WebElement selectStorefromList : selectStorePopUpStoreList) {
+                     assertTrue(clickOnButton(selectStorefromList));
+                     if (isDisplayed(selectStoreItemNotAvailable)) {
+                            assertTrue(clickOnButton(selectStorefromList));
+                            continue;
+                     } else {
+                            break;
+                     }
+               }
+               assertTrue(clickOnButton(makeMyStore_btn));
+               assertTrue(clickOnButton(r1FindStorePO.ovly_btnCloseCross));
+        }
+ }
+
 	// End KER-2939 CR-AKK
 	// Start KER-4231 CR-GK
 	public void selectStoreWithZipAndStoreName(String zipCode, String storeName) {

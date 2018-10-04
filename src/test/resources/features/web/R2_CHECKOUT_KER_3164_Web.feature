@@ -57,21 +57,19 @@ Scenario: Verify that authenticated user is able view/select shipping method
 @ZYP_CHECKOUT_K3164-8029 @CR-GK @1HR_R2
 Scenario: 
 	Verify if User is able to select a Payment method on One Page Checkout Screen 
-	Given  user launches the browser and navigates to "ASO_HOME" page 
-	And  user clicks on SignIn link from global header 
-	And  user enter the valid emailaddress "EmailAddress" 
-	And  user enter the valid password "Password" 
-	And  user click on signin button 
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And user should able to click on Signin button 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And user navigate and deletes existing items in cart
 	And  User searches a product "productName" and navigates to PDP 
 	And  user click on Add to Cart Button 
 	And  user is navigated to Add to cart Notification popup 
 	And  user click on checkout from ATC pop up 
 	And user clicks on edit shipping method cta 
 	And user click on go to payment present in shipping method 
-	And User Clicks on credit card dropwdown and selects another card 
-	Then Verify below Sub/Main Module of Checkout Page 
-		|# Verify following elements in Checkout > Payment Drawer|
-		|Checkout_CreditCard_DropDown|
+	Then User Clicks on credit card dropwdown and selects another card 
 		
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3164 

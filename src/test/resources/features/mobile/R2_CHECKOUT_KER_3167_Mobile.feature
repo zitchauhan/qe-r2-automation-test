@@ -10,7 +10,7 @@ Scenario: To verify Remove Promo code in Order Summary
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page and changes the quantity to "OrderLevelQuantity" 
-	And user view and Applied Promotions/Discounts "OrderLevelDiscount" 
+	And user view and Applied Promotions/Discounts "Promocode" 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
 	|Discount_Txt|
@@ -28,7 +28,7 @@ Scenario: To verify Promo code applied in Order Summary
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page and changes the quantity to "OrderLevelQuantity" 
-	And user view and Applied Promotions/Discounts "OrderLevelDiscount" 
+	And user view and Applied Promotions/Discounts "Promocode" 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then user is displayed Promo code XXXXX applied |
 	|Discount_Txt|
@@ -43,7 +43,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page and changes the quantity to "OrderLevelQuantity" 
-	When user view and Applied Promotions/Discounts "OrderLevelDiscount"
+	When user view and Applied Promotions/Discounts "Promocode"
 	And User clicks on Remove Promo code link 
 	Then Promo code is Removed 
 	And associated discount should get remove 

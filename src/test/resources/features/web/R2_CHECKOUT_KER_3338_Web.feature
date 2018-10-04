@@ -2,14 +2,10 @@ Feature: PayPal on Checkout page
 
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-11739 @CR-AKK 
-Scenario:
-Verify user is able to checkout using PayPal with Order level Promotion applied 
+Scenario: 
+	Verify user is able to checkout using PayPal with Order level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -68,8 +64,8 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-11742 @CR-AKK 
-Scenario:
-Verify user is able to checkout using PayPal with shipping-level Promotion applied 
+Scenario: 
+	Verify user is able to checkout using PayPal with shipping-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
@@ -101,26 +97,18 @@ Verify user is able to checkout using PayPal with shipping-level Promotion appli
 		|# Following Message should show on the page|  
 		|Paypal account|
 		
-
+		
 		
 @R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8256 @CR-AKK 
 Scenario: 
 	Verify guest user is able to select Paypal as Payment method on checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up 
-	And user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page 
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user 
 	Then user click on paypal radiobtn 
 	Then user switch to iframe to verify paypalcheckoutBtn 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -130,8 +118,8 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8258 @CR-AKK 
-Scenario:
-Verify guest user is able to proceed with Paypal as checkout for non-SOF items 
+Scenario: 
+	Verify guest user is able to proceed with Paypal as checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
@@ -152,19 +140,11 @@ Verify guest user is able to proceed with Paypal as checkout for non-SOF items
 @ZYP_CHECKOUT_3338-8262 @CR-AKK 
 Scenario: Verify the user is navigated to the PayPal page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up 
-	And user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page 
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user 
 	Then user click on paypal radiobtn 
 	Then user switch to iframe to verify paypalcheckoutBtn 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -175,26 +155,15 @@ Scenario: Verify the user is navigated to the PayPal page
 	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8261 @CR-AKK 
-Scenario:
-Verify authenticated user is able to proceed with Paypal as checkout for non-SOF items 
+Scenario: 
+	Verify authenticated user is able to proceed with Paypal as checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	And user creates an account 
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up 
-	And user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page 
+	And user adds shipment address on checkout page for "newly registered" user 
+	And user selects shipment method on check out page for "newly registered" user 
 	Then user click on paypal radiobtn 
 	Then user switch to iframe to verify paypalcheckoutBtn 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -202,10 +171,11 @@ Verify authenticated user is able to proceed with Paypal as checkout for non-SOF
 		|PayPalCheckOut_Btn|	
 	Then Verify paypal button is clicked 
 	
+	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8259 @CR-AKK 
-Scenario:
-Verify logged in user is able to select Paypal as Payment method on checkout for non-SOF items 
+Scenario: 
+	Verify logged in user is able to select Paypal as Payment method on checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
@@ -220,9 +190,10 @@ Verify logged in user is able to select Paypal as Payment method on checkout for
 	Then user click on checkout from ATC pop up 
 	Then user click on paypal radiobtn 
 	
-	@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
-@ZYP_CHECKOUT_3338-10270 @CR-AKK 		
-Scenario: Verify the authenticated user cannot pay the remaining or partial order amount using PayPal in combination with Gift Card
+@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
+@ZYP_CHECKOUT_3338-10270 @CR-AKK 
+Scenario:
+Verify the authenticated user cannot pay the remaining or partial order amount using PayPal in combination with Gift Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
@@ -240,54 +211,64 @@ Scenario: Verify the authenticated user cannot pay the remaining or partial orde
 	Then user click on paypal radiobtn 
 	Then verify the gift card option is not displayed 
 	
-	@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
-@ZYP_CHECKOUT_3338-8257 @CR-AKK
-Scenario: Verify guest user cannot select Paypal as Payment method on checkout for SOF products
-Given user launches the browser and navigates to "ASO_HOME" page 
+@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
+@ZYP_CHECKOUT_3338-8257 @CR-AKK 
+Scenario: 
+	Verify guest user cannot select Paypal as Payment method on checkout for SOF products 
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
 	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up  
-	And user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page
+	Then user click on checkout from ATC pop up 
+	And user selects terms and conditions checkbox for SOF items 
+	#	And user enter First name "FirstName" 
+	#	And user enter Last name "LastName" 
+	#	And user enter Phone number "PhoneNumber" 
+	#	And user enter Address "Address" 
+	#	And user enter Zipcode "zipcode" 
+	And user selects shipment method on check out page for "Guest" user 
 	Then verify the paypal radio option is not displayed 
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8260 @CR-AKK
-Scenario: Verify authenticated user cannot select Paypal as Payment method on checkout for SOF products
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
+Scenario:
+Verify guest user cannot select Paypal as Payment method on checkout for SOF products 
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And user creates an account
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
 	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up  
-	And user click on Go To Shipping Method button in Checkout page
+	Then user click on checkout from ATC pop up 
+	And user selects terms and conditions checkbox for SOF items 
+	#	And user enter First name "FirstName" 
+	#	And user enter Last name "LastName" 
+	#	And user enter Phone number "PhoneNumber" 
+	#	And user enter Address "Address" 
+	#	And user enter Zipcode "zipcode" 
+	And user selects shipment method on check out page for "Newly Registered" user
 	Then verify the paypal radio option is not displayed 
-
+	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
-@ZYP_CHECKOUT_3338-8263 @CR-AKK
-Scenario: Verify the user is navigated back to the Academy.com once PayPal payment process is done	
-Given user launches the browser and navigates to "ASO_HOME" page 
+@ZYP_CHECKOUT_3338-8263 @CR-AKK 
+Scenario:
+Verify the user is navigated back to the Academy.com once PayPal payment process is done 
+	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
 	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up
+	Then user click on checkout from ATC pop up 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page 
+	And user click on Go To Shipping Method button in Checkout page
+	And user selects shipment method on check out page for "Guest" user 
 	Then user click on paypal radiobtn 
 	Then user switch to iframe to verify paypalcheckoutBtn 
 	Then Verify below Sub/Main Module of Checkout Page 

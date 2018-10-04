@@ -312,7 +312,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']//button")
 	public WebElement checkout_ShippingMethod_ShippingMethodType_btn;
 	
-	@FindBy(xpath = "//*[@data-auid='btncheckout_goto_payment button-1']")
+	@FindBy(xpath = "//*[@data-auid='btncheckout_goto_payment button-1'] | //*[@data-auid='btncheckout_ship_to_store_submit_button']")
 	public WebElement checkout_ShippingMethod_GoToPayment_btn;
 	
 	@FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemSG']")
@@ -560,6 +560,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[text()='Order Number']")public WebElement orderConfirmationPage_OrderNumber_txt; 
 	@FindBy(xpath = "//*[text()='BILLING INFORMATION']/following-sibling::div/div[1]/div[4]")public WebElement orderConfirmationPage_PaymentDrawer_BillingEmail; 
 	 
+	@FindBy(xpath = "//*[contains(text(), 'See In-Store Pickup Instructions')]/../..//input[@type='checkbox']")
+	public WebElement termsAndConditions_checkBox;
+	//*[contains(text(), 'See In-Store Pickup Instructions')]/../..//input[@type='checkbox']
 
 
 	   

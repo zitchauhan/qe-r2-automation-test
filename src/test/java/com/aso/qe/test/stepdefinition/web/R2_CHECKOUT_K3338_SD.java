@@ -52,7 +52,7 @@ public class R2_CHECKOUT_K3338_SD extends CommonActionHelper {
 //		 System.out.println("555");
 //		System.out.println(ee);
 //		
-		assertTrue(isDisplayed(r2CheckOutPo.PaypalShippigDiscount_txt));
+		assertTrue(isDisplayed(r2CheckOutPo.PaypalClose_icon));
 	}
 	
 	@Then("^enter the paypal login \"(.*?)\" \"(.*?)\"$")
@@ -77,6 +77,13 @@ public class R2_CHECKOUT_K3338_SD extends CommonActionHelper {
 	@Then("^verify the paypal radio option is not displayed$")
 	public void verify_the_paypal_radio_option_is_not_displayed() throws Throwable {
 		assertFalse(isDisplayed(r2CheckOutPo.PayPal_radioBtn));
+	}
+	
+	@Then("^user selects terms and conditions checkbox for SOF items$")
+	public void user_selects_terms_and_conditions_checkbox_for_SOF_items() throws Throwable {
+	    if(!(isSelected(r2CheckOutPo.termsAndConditions_checkBox))) {
+	    	clickOnButton(r2CheckOutPo.termsAndConditions_checkBox);
+	    }
 	}
 	
 }

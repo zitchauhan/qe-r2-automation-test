@@ -1,5 +1,6 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
@@ -94,7 +95,7 @@ public class R2_CART_K3127_SD extends CommonActionHelper {
 
 	@Then("^associated discount should get remove$")
 	public void associated_discount_should_get_remove() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.txtAppliedTotalDisc));
+		assertFalse(isDisplayed(r2CartPo.txtAppliedTotalDisc));
 	}
 
 	@Then("^total price must be updated with reflect amount$")

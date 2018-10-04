@@ -192,6 +192,7 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 	}
 	
 	@Given("^user navigate and deletes existing items in cart$")
+	@Then("^user will empty the cart if product is in cart$")
 	public void user_navigates_delete_existing_items_in_cart() throws Throwable {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(globalElementHeader.iconcart_m));
@@ -210,21 +211,23 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 		
 		for(WebElement removeBtn : cartR2PageObj.removeCart_lst_btn) {
 			assertTrue(clickOnButton(removeBtn));
-			Thread.sleep(Constants.thread_medium);
+			Thread.sleep(Constants.thread_high);
 		}
 		
 		if(oosProductsAvailable) {
 			for(WebElement removeOOSBtn : cartR2PageObj.removeCartforOOSProducts_lst_btn) {
 				assertTrue(clickOnButton(removeOOSBtn));
-				Thread.sleep(Constants.thread_medium);
+				Thread.sleep(Constants.thread_high);
 			}	
 		}
 		
-		
-//		while(isDisplayed(cartR2PageObj.btnRemoveCart) && (loopCount <= countOfremoveButtonInCartPage ))
+//		int countOfremoveButtonInCartPage =  cartR2PageObj.removeCart_lst_btn.size();
+//		int loopCount = 0;
+//		while(isDisplayed(cartR2PageObj.btnRemoveCart) && (loopCount <= countOfremoveButtonInCartPage + 1))
 //		{
 //			clickOnButton(cartR2PageObj.btnRemoveCart);
 //			loopCount++;
+//			Thread.sleep(Constants.thread_medium);
 //		}
 //		emptyCart();
 	}
