@@ -8,9 +8,9 @@ Scenario: Verify authenticated user with no information saved in my account is a
 	And User clicks on the burger menu
 	And user clicks on sign in link from burger menu
 	And user logs in as "RawUser"
+	And user navigate and deletes existing items in cart
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
 	Then Verify below Sub/Main Module of Checkout Page
 		|# Verify following elements in Checkout > Shipping Address	|
@@ -26,14 +26,13 @@ Scenario: Verify authenticated user with address details saved in my account is 
 	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu
 	And user logs in as "UserWithTaxableAddress"
+	And user navigate and deletes existing items in cart
 	And User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
 	Then Verify below Sub/Main Module of Checkout Page
 		|# Verify following elements in Checkout|
 		|PaymentHeader_Txt						|
-		|PaymentMethodHeader_Txt				|
 		|checkout_ShippingAddress_txt			|
 		|checkout_ShippingMethod_ShippingDetails|
 
@@ -43,18 +42,16 @@ Scenario: Verify authenticated user with address details and payment details sav
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu
-	And user logs in as "UserWithSavedAddressAndPayment" 
+	And user logs in as "UserWithSavedAddressAndPayment"
+	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
 	Then Verify below Sub/Main Module of Checkout Page
 		|# Verify following elements in Checkout|
 		|PaymentHeader_Txt						|
-		|PaymentMethodHeader_Txt				|
 		|checkout_ShippingAddress_txt			|
 		|checkout_ShippingMethod_ShippingDetails|
-		|ChooseCreditcard_Dd					|
 
 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-11502 @CR-SK 
@@ -66,7 +63,6 @@ Scenario: Verify the primary default shipping options should be utilized while q
 	And user navigate and deletes existing items in cart
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
 	Then Verify the message on the page
     |# Following shipping message should show on the page	|
@@ -82,7 +78,6 @@ Scenario: Verify the primary default shipping options should be utilized while q
 	And user navigate and deletes existing items in cart
 	And User searches a product "SKUForWhiteGlove" and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button
 	Then Verify the message on the page
     |# Following shipping message should show on the page					|
@@ -99,7 +94,6 @@ Scenario: Verify during quick checkout error message will display for shipping a
 	And user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	And user click on checkout button
 	Then user is navigated to checkout page
 	And Verify the message on the page
@@ -117,7 +111,6 @@ Scenario: Verify user can able to edit shipping method after landing on order su
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
 	And user click on edit button of shipping method 
 	And user modifies shipping method
@@ -136,7 +129,6 @@ Scenario: Verify user can able to edit Payment Methods after landing on order su
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
 	Then user is able to modify payment method
 
@@ -150,7 +142,6 @@ Scenario: Verify user can able to edit shipping address after landing on order s
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
 	And user click on edit button of shipping address 
 	Then user is able to modify shipping address

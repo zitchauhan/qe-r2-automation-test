@@ -62,6 +62,7 @@ public class R2_CHECKOUT_K3165_SD extends CommonActionHelper {
 	public void user_clicks_on_edit_shipping_method_cta() throws Throwable {
 		if (isDisplayed(r2CheckOut_po.checkout_ShippingMethod_Edit_lnk)) {
 			assertTrue(clickOnButton(r2CheckOut_po.checkout_ShippingMethod_Edit_lnk));
+			Thread.sleep(Constants.thread_low);
 		}
 	}
 

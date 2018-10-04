@@ -3,6 +3,7 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 import cucumber.api.java.en.And;
@@ -61,9 +62,10 @@ public class R2_CHECKOUT_K6760_SD extends CommonActionHelper {
 	}
 
 	@And("^user click on go to payment present in shipping method$")
-	public void user_click_on_go_to_payment_present_in_shipping_method() {
+	public void user_click_on_go_to_payment_present_in_shipping_method() throws InterruptedException {
 		if (isDisplayed(r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn))
 			assertTrue(clickOnButton(r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn));
+		     Thread.sleep(Constants.thread_low);
 	}
 
 	@Then("^user verify the Schedule service available for WG items$")

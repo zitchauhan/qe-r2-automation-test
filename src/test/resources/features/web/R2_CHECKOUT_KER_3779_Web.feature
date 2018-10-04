@@ -94,7 +94,7 @@ Then user click on Add to Cart Button
     |checkout_ShippingMethod_GoToPayment_btn|
     |checkout_ShippingMethod_ItemImage_img|
 
-##not tested because find to store is not working
+
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10878 @CR-RKA
 Scenario: Verify that user should be able to fulfill an order when cart having single item like SOF products with single fulfillment option(dropship to store)
 
@@ -104,8 +104,10 @@ When user clicks on Find a Store
 	And user click on submit button
 	Then user click on plus icon in Store Address drawer
 	And user click on Make My store button	
-Then user navigate to GunStorageAndSafty L_Three   
-    Then user select the product from L_Three and navigate to PDP
+#Then user navigate to GunStorageAndSafty L_Three   
+#    Then user select the product from L_Three and navigate to PDP
+ 
+ When User searches a product "SOFSKUNumber" and navigates to PDP
     And user click on Add to Cart Button 
    And user will click on View Cart button
    When user will click on Checkout button and navigates to Checkout page
@@ -127,7 +129,7 @@ And user does accepts the firearm specific compliance
 		|SignuptogetHotDeals_checkBox|
 		|ReviewOrder_Btn|
 		
-		###not tested because find to store is not working
+		
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10913 @CR-RKA
 Scenario: Verify that user should be able to fulfill an order when cart having multiple items like SOF products with single fulfillment option(dropship to store)
 
@@ -137,8 +139,9 @@ When user clicks on Find a Store
 	And user click on submit button
 	Then user click on plus icon in Store Address drawer
 	And user click on Make My store button	
-Then user navigate to GunStorageAndSafty L_Three   
-    Then user select the product from L_Three and navigate to PDP
+#Then user navigate to GunStorageAndSafty L_Three   
+#    Then user select the product from L_Three and navigate to PDP
+ When User searches a product "SOFSKUNumber" and navigates to PDP
     And user click on Add to Cart Button 
    And user will click on View Cart button
 When user will click on Checkout button and navigates to Checkout page
@@ -161,7 +164,7 @@ And user does accepts the firearm specific compliance
 		|ReviewOrder_Btn|
 
 
-    ##not tested because find a store is not working
+  
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10932 @CR-RKA
 Scenario: Scenario:Verify that user should be able to fulfill an order when cart having multiple item with single fulfillment option( ship from store)
 Given user launches the browser and navigates to "ASO_HOME" page

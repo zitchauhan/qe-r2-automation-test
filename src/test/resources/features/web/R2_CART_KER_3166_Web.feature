@@ -25,7 +25,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
 			|Plus_AddPromoCode_btn|
-	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"
+	And user view and Applied Promotions/Discounts "Promocode"
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-8088 @CR-DPK
@@ -50,7 +50,7 @@ Scenario: To verify Submit Promotion code
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
-	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"    
+	And user view and Applied Promotions/Discounts "Promocode"    
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
 		|Total_txt|
@@ -67,7 +67,7 @@ Scenario: To verify Item level description
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
-	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount"    
+	And user view and Applied Promotions/Discounts "Promocode"    
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
 		|SubTotal_txt|
@@ -93,7 +93,7 @@ Scenario: verify Item/order Promo code applied in Order Summary
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
-	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount"    
+	And user view and Applied Promotions/Discounts "Promocode"    
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
 		|Total_txt|
@@ -110,7 +110,7 @@ Scenario: To verify Promo code applied in Check out page
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
-	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"
+	And user view and Applied Promotions/Discounts "Promocode"
 	And user will click on Checkout button and navigates to Checkout page    
 	Then Verify below Sub/Main Module of Checkout Page
 	|# Verify following elements in Checkout page "Order Summary"|	
@@ -130,7 +130,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
-	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity" 
+	And user view and Applied Promotions/Discounts "Promocode" 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
 	|Discount_Txt|
@@ -146,7 +146,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user click on Add to Cart Button 
 	And user will click on View Cart button	
 	When enter the "EnterQuantityGreaterThenOne" to X  
-	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity" 
+	And user view and Applied Promotions/Discounts "Promocode" 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
 	|Discount_Txt|
@@ -161,7 +161,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X  
-	And user view and Applied Promotions/Discounts "OrderLevelDiscount" 
+	And user view and Applied Promotions/Discounts "Promocode" 
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
 		|Total_txt|

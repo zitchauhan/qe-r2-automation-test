@@ -123,11 +123,9 @@ Scenario: To verify Remove Link
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8078 @CR-AKK 
 Scenario: To verify In-store Pick up radio button - with My Store info on My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP  
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
+	When user enters "SKUForBopisProduct" in the search box
+	And user click on Add to Cart Button
+	And user will click on View Cart button  
 	#When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page "Your Cart item details "|

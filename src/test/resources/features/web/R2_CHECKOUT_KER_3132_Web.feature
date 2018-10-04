@@ -48,10 +48,7 @@ Then Verify below Sub/Main Module of Checkout Page
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8116 @CR-RKA
 Scenario: Verify Billing address on check out Page - Same as Shipping Address
         Given user launches the browser and navigates to "ASO_HOME" page 
-        And user clicks on one of the category and navigates to LOne
-	    And user clicks on one of the subcategory and navigates to LTwo
-	    And user is able to see the product category name in section title
-	    And user clicks on one of the product category and navigates to LThree
+       When User searches a product "productName" and navigates to PDP
 		And User is navigated to pdp page
 		And user click on Add to Cart Button
 		And user is navigated to Add to cart Notification popup  
@@ -63,7 +60,8 @@ Scenario: Verify Billing address on check out Page - Same as Shipping Address
 	    And user enter Address "Address" 
     	And user enter Zipcode "zipcode" 
 	   And user click on Go To Shipping Method button in Checkout page 
-      Then user compare Shipping Address is same as Billing Address 
+#      Then user compare Shipping Address is same as Billing Address 
+      And user click on go to payment present in shipping method
       Then Verify below Sub/Main Module of Checkout Page 
       |checkout_ShippingAddress_txt								|
       |SameAsShippingAddress_Txt|

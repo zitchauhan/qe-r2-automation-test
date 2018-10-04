@@ -140,9 +140,6 @@ Scenario: To verify In-store Pick up radio button - with My Store info on My Acc
 	And user click on Add to Cart Button
 	And user will click on View Cart button 
 	#When user will verify in-store pick up radio button is selected with "Zipcode" 
-	Then Verify below Sub/Main Module of Cart Page
-	|# Verify following elements in Cart page "Your Cart item details "|
-	|InStorePickup_FREE_radioBtn |
 	And user will verify Shipping radio button is deselected 
 	And user will verify if in-stores information is hidden  
 	Then verify user can begin checkout 

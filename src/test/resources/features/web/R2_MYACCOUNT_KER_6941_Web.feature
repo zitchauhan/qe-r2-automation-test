@@ -66,7 +66,7 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 	And user click on signin button
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
-   	|Invalid Email|
+   	|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 @ZYP_MYACCOUNT_K6941-8925 @CR-RK 	
 	Scenario: Verify The user must see form field validations to ensure the e-mail address meets the desired format e.g.@ provided in creating account page

@@ -752,7 +752,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="//*[@data-auid='btncrt_btnPromoSbmt']")public WebElement btn_Submit_PromoCode;
 	@FindBy(xpath="(//*[@data-auid='btnc_btnCheckout'])[3] | (//*[@data-auid='btnCheckout'])[3]")public WebElement btn_checkOut_OrderSummary;
 	@FindBy(xpath="//*[text()='Subtotal']/following-sibling::*")public WebElement txtSubtotalCart;
-	@FindBy(xpath="//div[text()='Estimated Shipping']/..")public WebElement txtEstimatedShippingCart;
+	@FindBy(xpath="//div[text()='Estimated Shipping']/../*[2]")public WebElement txtEstimatedShippingCart;//CR-RK Oct4 KER-2911
 	@FindBy(xpath="//*[text()='Estimated Shipping']/following-sibling::*")public WebElement txt_EstimatedShipping;
 	@FindBy(xpath="//*[text()='Change ZIP Code']")public WebElement  lnkChangeZipCode;
 	@FindBy(xpath = "//div[text()='Estimated Taxes']/../div[2]")public WebElement txtEstimatedTaxesCart;

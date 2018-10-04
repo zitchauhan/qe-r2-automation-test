@@ -37,8 +37,7 @@ Scenario: Verify Valid gift card is applied for purchases
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button 
+	 And user click on checkout button in Cart page
 	And user is navigated to order summary page 
 	And user clicks on edit payment cta 
 	And user click on GiftCard Plus icon in Checkout page 

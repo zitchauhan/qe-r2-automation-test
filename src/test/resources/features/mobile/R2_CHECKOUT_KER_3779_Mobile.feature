@@ -92,7 +92,7 @@ Then user click on Add to Cart Button
     |checkout_ShippingMethod_GoToPayment_btn|
     |checkout_ShippingMethod_ItemImage_img|
 
-#not tested because find to store is not working
+
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10878 @CR-RKA
 Scenario: Verify that user should be able to fulfill an order when cart having single item like SOF products with single fulfillment option(dropship to store)
 
@@ -127,7 +127,7 @@ And user does accepts the firearm specific compliance
 		|SignuptogetHotDeals_checkBox|
 		|ReviewOrder_Btn|
 		
-		###not tested because find to store is not working
+		
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10913 @CR-RKA
 Scenario: Verify that user should be able to fulfill an order when cart having multiple items like SOF products with single fulfillment option(dropship to store)
 
@@ -163,7 +163,7 @@ And user does accepts the firearm specific compliance
 		|ReviewOrder_Btn|
 
 
-    ##not tested because find a store is not working
+   
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10932 @CR-RKA
 Scenario: Scenario:Verify that user should be able to fulfill an order when cart having multiple item with single fulfillment option( ship from store)
 Given user launches the browser and navigates to "ASO_HOME" page

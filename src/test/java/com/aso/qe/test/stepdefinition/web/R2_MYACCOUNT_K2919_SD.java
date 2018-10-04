@@ -38,10 +38,13 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	@Given("^user clicks on Add New Credit Card button$")
 	public void user_clicks_on_Add_New_Credit_Card_button() throws Throwable {
 		Thread.sleep(Constants.thread_low);
-		if(isDisplayed(myAccountPo.addNewCardCta))
+		if(isDisplayed(myAccountPo.addNewCardCta)) {
 			assertTrue(clickOnButton(myAccountPo.addNewCardCta));
-		else
+		Thread.sleep(Constants.thread_medium);
+		}else {
 			assertTrue(clickOnButton(myAccountPo.btnAddNewCreditCard));
+		Thread.sleep(Constants.thread_medium);
+	}
 	}
 	
 	@And("^user clicks the CVV Tool Tip$")
@@ -68,6 +71,7 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	public void user_enters_expiration_date(String arg1) throws Throwable {
 		setInputText(myAccountPo.txtExpiryDate, webPropHelper.getTestDataProperty(arg1));
 		keyAction.sendKeys(Keys.TAB).build().perform();
+		Thread.sleep(Constants.thread_medium);
 	}
 
 		

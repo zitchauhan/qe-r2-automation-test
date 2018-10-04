@@ -78,7 +78,7 @@ Scenario: Verify Authenticated user can change their favorite store in PLP
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
-	And user selects store with "FindStoreZipcode" and "storeName1" 
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And user click on Add to Cart Button 

@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import java.text.NumberFormat;
 import java.util.Locale;
@@ -124,7 +125,14 @@ public class R2_CART_K2940_SD extends CommonActionHelper {
 
 	@And("^verify Promo code discount is applied$")
 	public void verify_Promo_code_discount_is_applied() throws Throwable {
+		if(isDisplayed(r2CartPo.discount_Txt))
+		{
 		assertTrue(isDisplayed(r2CartPo.discount_Txt));// txtPromocode
+		}
+		else
+		{
+			assertFalse(isDisplayed(r2CartPo.discount_Txt));
+		}
 	}
 
 	@And("^verify that consolidated amount for all promotions \\(except shipping\\) is applied$")

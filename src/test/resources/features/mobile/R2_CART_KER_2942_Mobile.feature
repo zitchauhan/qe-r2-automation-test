@@ -74,7 +74,7 @@ Scenario: Verify Quantity Zero in the Cart Page
 	And  Verify cart is empty 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify cart is empty|
-	|YourCart_Header|
+	|YourCartIsEmpty_Txt|
 	
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-9357 @CR-AKK 
 Scenario: Verify system does inventory check for product item added more than available 

@@ -83,7 +83,15 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 
 	@Then("^user verify Discount messaging and Promotional messaging$")
 	public void user_verify_Discount_messaging_and_Promotional_messaging() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.discount_Txt));// txtPromoCode1
+		
+		if(isDisplayed(r2CartPo.discount_Txt))
+		{
+			assertTrue(isDisplayed(r2CartPo.discount_Txt));// txtPromoCode1
+		}
+		else
+		{
+			assertFalse(isDisplayed(r2CartPo.discount_Txt));
+		}
 	}
 
 	@Then("^user verify shipping information$")

@@ -235,10 +235,9 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	|InStorePickup_FREE_radioBtn |
 	|#Change location pending|
 
- @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8162 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8162 @CR-RKA
 Scenario: Verify if cart has one or more common item(s), the cart should show single
 Given user launches the browser and navigates to "ASO_HOME" page
-And user clicks on one of the category and navigates to LOne 
 	Then User clicks on the burger menu
     Then user should able to click on Signin button
 	And user enter the valid emailaddress "EmailAddress" 
@@ -247,20 +246,17 @@ And user clicks on one of the category and navigates to LOne
 	Then User clicks on the burger menu
     And User navigates to L3
     Then user clicks on the product card and navigates to PDP  
-	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
-    And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree  
-	Then User is navigated to pdp page 
+    When User searches a product "productName" and navigates to PDP  
+#	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
  	And user will click on View Cart button
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify total item  in Cart page |
 	|Items_txt|
+	
  @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8163 @CR-RKA
 Scenario: Verify if one or more item(s) from my previously added session is deleted or removed from catalog, the user should not see those as part of merged cart
 Given user launches the browser and navigates to "ASO_HOME" page

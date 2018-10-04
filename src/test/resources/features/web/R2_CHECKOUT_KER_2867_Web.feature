@@ -28,6 +28,7 @@ Scenario: Verify that UnAuthenticated user is able to view the instore pickup dr
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2867 @ZYP_CHECKOUT_K2867-10900 @CR-DPK
 Scenario: Verify that UnAuthenticated user is able to change the Pickup location
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
 	Then User searches a product "SOFSKUNumber" and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
@@ -106,6 +107,7 @@ Scenario: Verify that UnAuthenticated user is able to view Pickup Instructions d
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2867 @ZYP_CHECKOUT_K2867-10903 @CR-DPK
 Scenario: Verify that UnAuthenticated user is able to select "Go To Payment" CTA and continue to payment drawer
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
 	Then User searches a product "SOFSKUNumber" and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -125,7 +127,7 @@ Scenario: Verify that UnAuthenticated user is able to select "Go To Payment" CTA
 		|MePickUp_Drpdwn|
 		|SeeInStorePickupInstructions_Dd|
 	When user clicks on Go to payment CTA
-	Then Verify that user navigate to payment drawer	
+	Then Verify that user navigate to payment drawer
 		
 
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2867 @ZYP_CHECKOUT_K2867-10904 @CR-DPK
@@ -136,6 +138,7 @@ Scenario: Verify that Authenticated user is able to view the instore pickup draw
 	And user enter the valid password "Password" 
     And user click on signin button
     Then User clicks on ASO Logo and should be navigated to Home Page 
+    And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
 	Then User searches a product "SOFSKUNumber" and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
@@ -163,9 +166,9 @@ Scenario: Verify that Authenticated user is able to change the Pickup location
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
     And user click on signin button
+    And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
    Then User searches a product "SOFSKUNumber" and navigates to PDP 
-     And User clicks on product in PLP
-	Then user click on Add to Cart Button
+    Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then user will verify Shipping radio button is deselected 

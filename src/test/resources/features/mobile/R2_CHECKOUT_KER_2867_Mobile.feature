@@ -27,6 +27,7 @@ Scenario: Verify that UnAuthenticated user is able to view the instore pickup dr
 @R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-2867 @ZYP_CHECKOUT_K2867-10900 @CR-DPK
 Scenario: Verify that UnAuthenticated user is able to change the Pickup location
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP
 	Then user click on Add to Cart Button  
 	Then user is navigated to Add to cart Notification popup 

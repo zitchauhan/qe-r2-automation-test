@@ -14,10 +14,12 @@ And user enter First name "FirstName"
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page
+	Given user selects shipment method on check out page
 	When user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "GiftcardNumber"
 	And user enter Pin Number "PinNumber" 
 	And user click on Apply button
+	 And user click on remove gift card on checkout page
 	Then user verify all the paypal and more radio btn is disable 
 	Then Verify below Sub/Main Module of Checkout Page 
 	    |#verify Radio btn in checkout page|
@@ -40,6 +42,7 @@ And user enter First name "FirstName"
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page
+	Given user selects shipment method on check out page
 	When user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "GiftcardNumber"
 	And user enter Pin Number "PinNumber" 
@@ -66,10 +69,12 @@ And user enter First name "FirstName"
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page
+	Given user selects shipment method on check out page
 	When user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "GiftcardNumber"
 	And user enter Pin Number "PinNumber" 
 	And user click on Apply button
+	And user click on remove gift card on checkout page
 Then Verify below Sub/Main Module of Checkout Page
 |#verify credit card detail is visible#|
 |CreditCardNumber_Input|
@@ -90,6 +95,7 @@ And user enter First name "FirstName"
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page
+	Given user selects shipment method on check out page
   Then user click on paypal radiobtn 
   Then user switch to iframe to verify paypalcheckoutBtn 
   Then Verify below Sub/Main Module of Checkout Page
@@ -112,6 +118,7 @@ And user enter First name "FirstName"
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page
+Given user selects shipment method on check out page
 When user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "GiftcardNumber"
 	And user enter Pin Number "PinNumber" 
@@ -138,6 +145,7 @@ And user enter First name "FirstName"
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page
+	Given user selects shipment method on check out page
   And user enters "DebitCardNumber" details and verify it is getting entered in Credit card section
     Then user enters valid expiry date "ExpDate"
     And user enters valid cvv value "CVV"
@@ -162,6 +170,7 @@ And user enter First name "FirstName"
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page
+	Given user selects shipment method on check out page
   Then user click on paypal radiobtn 
   Then user switch to iframe to verify paypalcheckoutBtn 
   Then Verify below Sub/Main Module of Checkout Page

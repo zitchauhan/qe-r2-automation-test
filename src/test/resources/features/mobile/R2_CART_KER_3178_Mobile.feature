@@ -2,7 +2,8 @@ Feature: BOPIS Change Store in CHECKOUT
 
 @R2_Mobile @R2_Regression @R2_All @P-Highest @C-Cart @KER-3178 @ZYP_CART_K3178-9940 @CR-AG @1HR_R2
 Scenario: Verify the user is able to view the Change Location under In-store Pick Up on Checkout
-Given user launches the browser and navigates to "ASO_HOME" page 
+Given user launches the browser and navigates to "ASO_HOME" page
+    Then User clicks on the burger menu 
 	When user clicks on SignIn link from global header 
 	And user logs in as "EmailAddress"
 	When User searches a product "productName" and navigates to PDP
@@ -13,8 +14,9 @@ Given user launches the browser and navigates to "ASO_HOME" page
  
     @R2_Mobile @R2_Regression @R2_All @P-Highest @C-Cart @KER-3178 @ZYP_CART_K3178-9941 @CR-AG
  Scenario: Verify that user view Find a Store modal from Change Location in Checkout
- Given user launches the browser and navigates to "ASO_HOME" page 
-		When user clicks on SignIn link from global header 
+ Given user launches the browser and navigates to "ASO_HOME" page
+    Then User clicks on the burger menu 
+	When user clicks on SignIn link from global header 
 	And user logs in as "EmailAddress"
 	When User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
@@ -24,8 +26,9 @@ Given user launches the browser and navigates to "ASO_HOME" page
     
     @R2_Mobile @R2_Regression @R2_All @P-Highest @C-Cart @KER-3178 @ZYP_CART_K3178-9942 @CR-AG
 Scenario: Verify user can change the store using Find in Store modal
-Given user launches the browser and navigates to "ASO_HOME" page 
-		When user clicks on SignIn link from global header 
+Given user launches the browser and navigates to "ASO_HOME" page
+    Then User clicks on the burger menu 
+	When user clicks on SignIn link from global header 
 	And user logs in as "EmailAddress"
 	When User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 

@@ -16,7 +16,9 @@ Scenario: Verify Billing address on check out page - pre-populated billing addre
 Then user click on checkout from ATC pop up 
 Then user click on edit Payment link and click on billing information
 Then user fill billing information after clicking on change billing information text 
-##only verification is needed  after clicking confirm that is blocked for today
+Then Verify below Sub/Main Module of Checkout Page
+|#verify billing information|
+|AddressVerificationSystemModelPopUp|
  
  
  @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8115 @CR-RKA
@@ -51,7 +53,8 @@ Scenario: Verify Billing address on check out Page - Same as Shipping Address
 	    And user enter Address "Address" 
     	And user enter Zipcode "zipcode" 
 	   And user click on Go To Shipping Method button in Checkout page 
-      Then user compare Shipping Address is same as Billing Address 
+#      Then user compare Shipping Address is same as Billing Address 
+   And user click on go to payment present in shipping method
       Then Verify below Sub/Main Module of Checkout Page 
       |checkout_ShippingAddress_txt								|
       |SameAsShippingAddress_Txt|
