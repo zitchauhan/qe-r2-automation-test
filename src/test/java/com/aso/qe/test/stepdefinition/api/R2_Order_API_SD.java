@@ -22,7 +22,7 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 
 	@Then("^\"(.*?)\" endpoint with \"(.*?)\" request and \"(.*?)\" extension$")
 	public void endpoint_with_request_and_extension(String OrderUrl, String AddPromoCodeToOrder, String extension) throws Throwable {
-		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(OrderUrl)+System.getProperty("OrderId")+extension+loadProps.getTestDataProperty("PromoCode");
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(OrderUrl)+System.getProperty("OrderId")+extension+loadProps.getTestDataProperty("APIOrderPromoCode");
 		initiateRestPostAPICallWithCookies(endpoints, loadProps.getTestDataProperty(AddPromoCodeToOrder));
 	}
 
@@ -40,8 +40,8 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" endpoint for removing \"(.*?)\" from an Order$")
 	public void endpoint_for_removing_from_an_Order(String OrderUrl, String extension) throws Throwable {
-		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(OrderUrl)+System.getProperty("OrderId")+extension+loadProps.getTestDataProperty("PromoCode");
-		initiateRestDeleteAPICall(endpoints);
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(OrderUrl)+"DELETE/"+System.getProperty("OrderId")+extension+loadProps.getTestDataProperty("APIOrderPromoCode");
+		initiateRestPostAPICallWithCookiesAndWithOutBody(endpoints);
 	}
 
 	@Given("^\"(.*?)\" with \"(.*?)\" endpoint for Change Store$")
@@ -70,7 +70,7 @@ public class R2_Order_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" endpoint for get profile order by id details$")
 	public void endpoint_for_get_profile_order_by_id_details(String orderUrl) throws Throwable {
-		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(orderUrl)+System.getProperty("PlacedOrderId");
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(orderUrl)+"9052180038";//System.getProperty("PlacedOrderId");
 		initiateRestAPICallWithCookie(endpoints);
 	}
 	

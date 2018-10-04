@@ -87,7 +87,7 @@ Feature: Verify Order API endpoint services
   @All-R2 @C1-Order @C2-RemovePromoCode @api @R2_AAST-05 @CR-VK @ZYP_Order_RemovePromoCode_12280
   Scenario: TC_5 - Remove a PromoCode from an Order
     Given "OrderUrl" endpoint for removing "/promocode/" from an Order
-    Then Verify response status code as 204
+    Then Verify response status code as 201
 
   # for delete their is no schema and if there is no schema no required field
   @All-R2 @C1-Order @C2-ProfileOrder @api @R2_AAST-06 @CR-RT @ZYP_Get_Placed_Orders_13731
