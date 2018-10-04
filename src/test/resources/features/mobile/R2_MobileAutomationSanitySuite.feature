@@ -236,8 +236,8 @@ Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated
 	And user click on Go To Shipping Method button in Checkout page
 	Then user click on go to payment present in shipping method
 	Then user click on GiftCard Plus icon in Checkout page
-	And user enter Gift card Number "GiftcardNumber"
-	And user enter Pin Number "PinNumber" 
+	And user enter Gift card Number "Valid16DigitGiftCardNumber"
+	And user enter Pin Number "Valid8DigitGiftCardPIN" 
 	And user click on Apply button
 	Then verify Gift Card in order summary page	 
 	
@@ -255,10 +255,10 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated
      And user click on checkout button 
     Then user click on go to payment present in shipping method
 	Then user click on GiftCard Plus icon in Checkout page
-	And user enter Gift card Number "GiftcardNumber"
-	And user enter Pin Number "PinNumber" 
+	And user enter Gift card Number "Valid16DigitGiftCardNumber"
+	And user enter Pin Number "Valid8DigitGiftCardPIN" 
 	And user click on Apply button
-	Then applied gift card "GiftcardNumber" should be displayed 
+	Then applied gift card "Valid16DigitGiftCardNumber" should be displayed 
 	Then gift card balance is applied towards the purchase 
 	
 		
@@ -276,7 +276,7 @@ Scenario: TC_19-Verify Sign In During Checkout
 	And user enter the valid emailaddress "SanityEmailAddress" from checkout page 
 	And user enter the valid password "Password" from checkout page 
 	And user click on signin button 
-	Then user should get logged in successfully 
+
 	
 @R2_Mobile @R2_MAST-20 @P-Highest @C-Checkout @KER-2926 
 @ZYP_CHECKOUT_K2926-8100_M @CR-AKK 
