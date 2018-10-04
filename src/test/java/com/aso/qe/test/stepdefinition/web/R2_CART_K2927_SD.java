@@ -62,9 +62,12 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 
 	@Then("^checkout page displays updated tax$")
 	public void checkout_page_displays_updated_tax() throws Throwable {
-		double currentTaxDisplayed = r2CheckOutPO.getEstimatedTaxOnCheckoutPage();
+		float currentTaxDisplayed = r2CheckOutPO.getEstimatedTaxOnCheckoutPage();
 		if(taxDisplayed != 0)
+		{
 			assertTrue(taxDisplayed != currentTaxDisplayed);
+		}
+		
 	}
 	
 	@Then("^checkout page displays increased tax$")
@@ -100,9 +103,14 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 
 	@Then("^cart page displays updated tax$")
 	public void cart_page_displays_updated_tax() throws Throwable {
-		double currentTaxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
-		if(taxDisplayed != 0)
+		float currentTaxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
+		if(taxDisplayed == 0) {
 			assertTrue(taxDisplayed != currentTaxDisplayed);
+		}else if(taxDisplayed != 0) {			
+			assertTrue(taxDisplayed == currentTaxDisplayed);
+		}else if(taxDisplayed != 0) {			
+			assertTrue(taxDisplayed != currentTaxDisplayed);
+		}
 	}
 	
 	@Then("^cart page displays increased tax$")

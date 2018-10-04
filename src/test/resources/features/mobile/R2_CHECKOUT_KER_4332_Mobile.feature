@@ -78,8 +78,8 @@ Scenario: Verify user can process the order
 	When User clicks on Enable Buy Now button
 	Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP modal popup|
-    |Shipping_First_Name_txt|
-    |Shipping_Last_Name_txt|
+    |EnableBuyNow_btn|
+    
     
    
 

@@ -114,6 +114,10 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 		if (!r2CartPo.rbInStorePickUp.isSelected()) {
 			assertTrue(isDisplayed(r2CartPo.rbInStorePickUp));
 		}
+		else
+		{
+	  assertTrue(isDisplayed(r2CartPo.Bopis_Rbn));
+	}
 	}
 
 	@Then("^in-stores information is hided$")

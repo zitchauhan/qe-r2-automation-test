@@ -194,11 +194,3 @@ Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
     Then Order Details page should be displayed
     When User Clicks on Cancel Order link
     And User clicks on No Button on confirmation modal
-    Then Verify below Sub/Main Module of My Account
-    #|#Verify following elements in my account order details|
-    #|Order_Back_To_Order_Lnk|
-    #|Order_Cancel_lnk| 
-#	
-#	
-#	
-#	

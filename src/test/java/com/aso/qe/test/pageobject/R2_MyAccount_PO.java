@@ -76,7 +76,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//button[@data-auid='btnemail-signin-button']")
 	public WebElement btnSignIn;
 
-	@FindBy(xpath = "//input[@data-auid='emailid_input']")
+	@FindBy(xpath = "//input[@data-auid='emailid_input'] | //*[@data-auid='Email Address']")
 	public WebElement inputEmailAddress_SignIn;// KER-4232 CR-SK 28-8-18
 
 	@FindBy(xpath = "//*[text()='PROFILE']")
@@ -143,11 +143,11 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//h4")
 	public WebElement txtWelcomeDescription; // Cr-RK SEp20 KER-3392
 
-	@FindBy(xpath = "//*[text()='Email Address']")
-	public WebElement txtEmailAddressDescription; // Cr-RK SEp20 KER-3392
+	@FindBy(xpath = "//*[@data-auid='Email Address']")
+	public WebElement txtEmailAddressDescription; // Cr-RK SEp20 KER-3392 //CR-RK Oct4 KER-3392
 
-	@FindBy(xpath = "//*[text()='Password']")
-	public WebElement txtPasswordDescription; // Cr-RK SEp20 KER-3392
+	@FindBy(xpath = "//*[@data-auid='Password']")
+	public WebElement txtPasswordDescription; // Cr-RK SEp20 KER-3392  //CR-RK Oct4 KER-3392
 
 	@FindBy(xpath = "//*[contains(text(),'Forgot your password')]")
 	public WebElement txtForgotYourPasswordDescription; // Cr-RK SEp20 KER-3392
@@ -255,7 +255,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//input[@type='text']")
 	public WebElement inputEmail;
 
-	@FindBy(xpath = "//input[@data-auid='password_input']")
+	@FindBy(xpath = "//input[@data-auid='password_input'] | //*[@data-auid='Password']")
 	public WebElement inputPassword;
 
 	@FindBy(xpath = "(//*[@data-auid='btnc_btnCheckout'])[3]")

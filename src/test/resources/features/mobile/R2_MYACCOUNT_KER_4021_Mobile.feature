@@ -3,8 +3,27 @@ Feature: E03-150 - Order Cancellation Cancel Order Confirmation (Guest & Authent
   @R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4021 @ZYP_MYACCOUNT_K4021-10637 @CR-RK
   Scenario: Verify that Guest User is able to view Cancellation Confirmation page
   Given user launches the browser and navigates to "ASO_HOME" page 
-  	And User navigates to Check Oder status Page
-	When user enter "OrderNumber" and "BillindZipCode"
+  	  When User searches a product "productName" and navigates to PDP
+    And user click on Add to Cart Button
+    And user is navigated to Add to cart Notification popup
+    And user will click on View Cart button
+    And user navigate to Cart page
+    And user click on checkout button in Cart page
+    And user enter First name "FirstName"
+    And user enter Last name "LastName"
+    And user enter Phone number "PhoneNumber"
+    And user enter Address "AVSAddress"
+    And user enter Zipcode "zipcode"
+    And user click on Go To Shipping Method button in Checkout page
+    And user selects the suggested address instead of entered address
+    And clicks on Use Selected Address button
+    And user click on go to payment present in shipping method
+    And user fill the credit card detail in payment
+    And user fill the email address for shipment and click on review order btn
+    And user able to see the button place order
+    Then user able to see order number
+    And User navigates to Check Oder status Page
+    Then System Generate ordernumber "GeneratedOrdernumber" and "zipcode"
 	And User clicks on Check button
 	#And user click on view Details
 	Then Verify below Sub/Main Module of My Account
@@ -35,7 +54,7 @@ Feature: E03-150 - Order Cancellation Cancel Order Confirmation (Guest & Authent
       @R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-4021 @ZYP_MYACCOUNT_K4021-10639 @CR-RK
   Scenario: Verify that Authenticated User is able to view Cancellation Confirmation page
   Given user launches the browser and navigates to "ASO_HOME" page 
-  	Then User clicks on the burger menu
+   	Then User clicks on the burger menu
 	Then user should able to click on Signin button 
 	Then Verify below Sub/Main Module of My Account 
 		|# Verify following elements in Sign in/login page	|

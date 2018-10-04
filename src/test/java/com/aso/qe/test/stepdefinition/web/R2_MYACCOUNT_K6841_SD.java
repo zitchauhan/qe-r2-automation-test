@@ -28,9 +28,26 @@ public class R2_MYACCOUNT_K6841_SD extends CommonActionHelper {
 
 	@When("^user clicks on Edit CTA for a selected card$")
 	public void user_clicks_on_Edit_CTA_for_a_selected_card() throws Throwable {
+		if(isDisplayed(r2_MyAccount_PO.addNewCardCta)) {
+			assertTrue(clickOnButton(r2_MyAccount_PO.addNewCardCta));
+			setInputText(r2_MyAccount_PO.txtCreditCardNumber, webPropHelper.getTestDataProperty("CreditCardNumber"));
+			setInputText(r2_MyAccount_PO.txtExpiryDate, webPropHelper.getTestDataProperty("ExpDate"));
+			setInputText(r2_MyAccount_PO.txtCVV, webPropHelper.getTestDataProperty("CVV"));
+			setInputText(r2_MyAccount_PO.txtFirstNameInAddCreditCard, webPropHelper.getTestDataProperty("UpdateFirstName"));
+			setInputText(r2_MyAccount_PO.txtLastNameInAddCreditCard, webPropHelper.getTestDataProperty("UpdateLastName"));
+			setInputText(r2_MyAccount_PO.txtAddressInAddCreditCard, webPropHelper.getTestDataProperty("UpdateAddress"));
+			setInputText(r2_MyAccount_PO.txtZipCodeInAddCreditCard, webPropHelper.getTestDataProperty("UpdateZipcode"));
+			setInputText(r2_MyAccount_PO.adr_inpPhoneNumber, webPropHelper.getTestDataProperty("UpdatePhoneNumber"));
+			assertTrue(clickOnButton(r2_MyAccount_PO.PaymentPage_AddCreditCard_Add_btn));
+			Thread.sleep(Constants.thread_medium);
+			assertTrue(clickOnButton(r2_MyAccount_PO.btnEdit));
+			Thread.sleep(Constants.thread_low);
+		}
+		else {
 		assertTrue(clickOnButton(r2_MyAccount_PO.btnEdit));
 		Thread.sleep(Constants.thread_low);
 	}
+	}	
 
 	@Then("^user verify all the form fields are pre-populated$")
 	public void user_verify_all_the_form_fields_are_pre_populated() throws Throwable {

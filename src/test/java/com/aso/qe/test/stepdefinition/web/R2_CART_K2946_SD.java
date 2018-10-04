@@ -31,12 +31,13 @@ public class R2_CART_K2946_SD extends CommonActionHelper {
 	
 	
 	
-	@Then("^user able to signin$")//temporary basis 
-	public void user_able_to_signin() throws Throwable {
+	/*@Then("^user able to signin$")//temporary basis 
+	public void user_able_to_signin() throws Throwable 
+	{
 	   driver.findElement(By.xpath("//*[@data-auid='emailid_input']")).sendKeys("testacademy@gmail.com");
 	   driver.findElement(By.xpath("//*[@data-auid='password_input']")).sendKeys("Test@1234");
 	   driver.findElement(By.xpath("//*[@data-auid='btnemail-signin-button']")).click();
-	}
+	}*/
 	
 	
 	

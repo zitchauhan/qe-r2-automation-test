@@ -59,7 +59,7 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 	    setInputText(r2CheckOutPo.Adderss_Input, webPropHelper.getTestDataProperty("AVSAddress"));
 	    setInputText(r2CheckOutPo.ZipCode_Input, webPropHelper.getTestDataProperty("zipcode"));
 	    Thread.sleep(Constants.thread_medium);
-	    setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty("login"));
+//	    setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty("login"));
 	    clickOnButton(r2CheckOutPo.ReviewOrder_Btn);
 	    Thread.sleep(Constants.thread_highest);
 	}

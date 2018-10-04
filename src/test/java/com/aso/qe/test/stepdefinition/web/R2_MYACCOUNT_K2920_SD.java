@@ -1,7 +1,8 @@
 package com.aso.qe.test.stepdefinition.web;
 
 
-import static org.testng.Assert.assertTrue;
+import static org.junit.Assert.assertTrue;
+
 
 import java.util.List;
 import java.util.UUID;
@@ -11,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
@@ -33,7 +35,25 @@ public class R2_MYACCOUNT_K2920_SD extends CommonActionHelper
 	@Then("^user verifies the credit card saved is set as default$")
 	public void user_verifies_the_credit_card_saved_is_set_as_default() throws Throwable {
 		
-		assertTrue(isDisplayed(r2MyAccountPo.txtDefaultDescription));
+		if(isDisplayed(r2MyAccountPo.txtDefaultDescription)) {
+			
+					}
+		else {
+			assertTrue(clickOnButton(r2MyAccountPo.addNewCardCta));
+			setInputText(r2MyAccountPo.txtCreditCardNumber, webPropHelper.getTestDataProperty("CreditCardNumber"));
+			setInputText(r2MyAccountPo.txtExpiryDate, webPropHelper.getTestDataProperty("ExpDate"));
+			setInputText(r2MyAccountPo.txtCVV, webPropHelper.getTestDataProperty("CVV"));
+			setInputText(r2MyAccountPo.txtFirstNameInAddCreditCard, webPropHelper.getTestDataProperty("UpdateFirstName"));
+			setInputText(r2MyAccountPo.txtLastNameInAddCreditCard, webPropHelper.getTestDataProperty("UpdateLastName"));
+			setInputText(r2MyAccountPo.txtAddressInAddCreditCard, webPropHelper.getTestDataProperty("UpdateAddress"));
+			setInputText(r2MyAccountPo.txtZipCodeInAddCreditCard, webPropHelper.getTestDataProperty("UpdateZipcode"));
+			setInputText(r2MyAccountPo.adr_inpPhoneNumber, webPropHelper.getTestDataProperty("UpdatePhoneNumber"));
+			assertTrue(clickOnButton(r2MyAccountPo.PaymentPage_AddCreditCard_Add_btn));
+			Thread.sleep(Constants.thread_medium);
+			assertTrue(isDisplayed(r2MyAccountPo.txtDefaultDescription));
+	}
+		
+		
 	}
 	
 	@Then("^user verifies the following details$")

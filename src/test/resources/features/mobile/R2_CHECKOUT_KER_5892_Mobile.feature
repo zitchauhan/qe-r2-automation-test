@@ -8,9 +8,10 @@ Scenario: Verify user is able to see the list of saved credit cards on Checkout 
    And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
     And user click on signin button
-	Then User clicks on the burger menu
-   And User navigates to LThree
-	And user clicks on the product card and navigates to PDP 
+#	Then User clicks on the burger menu
+#   And User navigates to LThree
+#	And user clicks on the product card and navigates to PDP 
+	And  User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button
 	Then user is navigated to Add to cart Notification popup 
     Then user click on checkout from ATC pop up

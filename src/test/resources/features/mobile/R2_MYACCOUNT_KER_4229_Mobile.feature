@@ -64,7 +64,7 @@ Scenario: Verify that Authenticated User is able to navigate to Profile page
 		|ProfilePage_Email_txt							|
 		|ProfilePage_Email_label						|
 		|ProfilePage_ChangePassword_btn					|
-		|MaskedPasswordInProfile_mask                   |
+		|ProfilePage_MaskedPassword                 |
 		|ProfilePage_ReceiveEmailNotifications_checkbox	|
 		
 @R2_Mobile @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4229 

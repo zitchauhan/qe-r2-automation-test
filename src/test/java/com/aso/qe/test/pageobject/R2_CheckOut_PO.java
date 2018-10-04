@@ -272,7 +272,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[text()='SHIPPING INFORMATION']")
 	public WebElement checkout_ShippingInformation_Header_txt;
 	
-	@FindBy(xpath = "//*[text()='SHIPPING ADDRESS']/../div[2]/..") //CR-DPK 20-sept
+	@FindBy(xpath = "//*[contains(text(),'SHIPPING ADDRESS')]/../div[2]/..") //CR-AG 04-10
 	public WebElement checkout_ShippingAddress_txt;
 	
 	@FindBy(xpath = "//*[@data-auid='checkout_unauth_description_signin_link']//a")

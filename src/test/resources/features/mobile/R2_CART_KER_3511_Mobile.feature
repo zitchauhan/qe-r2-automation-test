@@ -2,9 +2,11 @@ Feature: [Mobile] B05-350 Shipping Estimate in Cart
 	@R2_Mobile @R2_Regression  @C-Cart @P-High @KER-3511 @1HR_R2 @ZYP_CART_K3511-7989 @CR-RKA	 
 	Scenario: Verify if authenticated user can view estimated shipping based on zip code saved to their account
 	 Given user launches the browser and navigates to "ASO_HOME" page 
-	 Then User clicks on the burger menu
-    Then user should able to click on Signin button
-    Then user able to signin
+	Then User clicks on the burger menu  
+	When user should able to click on Signin button 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password"
+	And user click on signin button 
     Then User clicks on the burger menu
 	  And user lands on My Account page and click on adress
 	 Then user fill the Address book details 
@@ -24,9 +26,11 @@ Feature: [Mobile] B05-350 Shipping Estimate in Cart
 @R2_Mobile @R2_Regression  @C-Cart @P-Low @KER-3511 @ZYP_CART_K3511-7990 @CR-RKA	 
 	Scenario: Verify if authenticated user can view updated estimated shipping based on updated zip code saved in account      
 Given user launches the browser and navigates to "ASO_HOME" page 
-    Then User clicks on the burger menu
-    Then user should able to click on Signin button
-    Then user able to signin
+   Then User clicks on the burger menu  
+	When user should able to click on Signin button 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password"
+	And user click on signin button 
      Then User clicks on the burger menu
 	  And user lands on My Account page and click on adress
 	 Then user fill the Address book details 
@@ -44,9 +48,11 @@ Given user launches the browser and navigates to "ASO_HOME" page
 @R2_Mobile @R2_Regression  @C-Cart @P-High @1HR_R2 @KER-3511 @ZYP_CART_K3511-7991 @CR-RKA	 
  Scenario: Verify if authenticated user can view updated estimated shipping when zip code updated on cart page in order summary section.
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on the burger menu
-    Then user should able to click on Signin button
-    Then user able to signin
+	Then User clicks on the burger menu  
+	When user should able to click on Signin button 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password"
+	And user click on signin button 
    Then User clicks on the burger menu
 	And User navigates to LThree
    	Then user clicks on the product card and navigates to PDP

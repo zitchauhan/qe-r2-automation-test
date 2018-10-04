@@ -110,6 +110,7 @@ Scenario: To verify Tax recalculation when user switches from store pickup to  S
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page
+	And user enters "ZIPCODE" in change zipcode field in cart page
 	And user selects the ship to Store Pick up radio button
 	And user makes a note of tax calculation
 	When user switches from Store Pick up to Shipping

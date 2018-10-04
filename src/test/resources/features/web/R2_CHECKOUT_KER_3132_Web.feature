@@ -9,17 +9,19 @@ Scenario: Verify Billing address on check out page - pre-populated billing addre
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-  And user clicks on one of the category and navigates to LOne
-	    And user clicks on one of the subcategory and navigates to LTwo
-	    And user is able to see the product category name in section title
-	    And user clicks on one of the product category and navigates to LThree
-		And User is navigated to pdp page
-#When User searches a product "productName" and navigates to PDP
+#  And user clicks on one of the category and navigates to LOne
+#	    And user clicks on one of the subcategory and navigates to LTwo
+#	    And user is able to see the product category name in section title
+#	    And user clicks on one of the product category and navigates to LThree
+#		And User is navigated to pdp page
+When User searches a product "productName" and navigates to PDP
  And user click on Add to Cart Button 
 Then user click on checkout from ATC pop up
 Then user click on edit Payment link and click on billing information
 Then user fill billing information after clicking on change billing information text 
-##only verification is needed  after clicking confirm that is blocked for today
+Then Verify below Sub/Main Module of Checkout Page
+|#verify billing information|
+|AddressVerificationSystemModelPopUp|
 
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8115 @CR-RKA

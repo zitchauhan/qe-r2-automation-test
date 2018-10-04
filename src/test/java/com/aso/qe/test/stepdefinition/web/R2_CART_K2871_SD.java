@@ -26,7 +26,7 @@ public class R2_CART_K2871_SD extends CommonActionHelper {
 		
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			
-			assertTrue(clickOnButton(cartR2PageObj.btnFindStoreClose));
+			//assertTrue(clickOnButton(cartR2PageObj.btnFindStoreClose));
 			assertTrue(clickOnButton(globalElementHeader.btnBurgerMenu));
 			String storeLocator = getText(cartR2PageObj.lnkFindAStore_M);
 			assertTrue(storeLocator.equalsIgnoreCase(webPropHelper.getTestDataProperty(arg1)));

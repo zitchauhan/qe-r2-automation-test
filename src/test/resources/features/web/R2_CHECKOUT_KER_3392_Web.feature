@@ -31,10 +31,9 @@ Feature: Verify Checkout Login Interstitial
 	Then user navigate to Cart page 
 	Then user click on checkout button in Cart page
 	When user click on SignIn link
-	And user enter the valid emailaddress "emailaddress" 
-	And user enter create password 
-	And user click on signin button 
-	Then user should get logged in successfully
+	And user enter the emailaddress "EmailAddress" from checkout page
+	And user enter the password "Password" from checkout page
+	And user click on signin button
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8148 @CR-DPK 
 	Scenario: Verify the  User must view Sign-In/Interstitial Modal

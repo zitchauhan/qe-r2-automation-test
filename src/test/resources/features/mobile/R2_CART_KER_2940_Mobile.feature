@@ -5,15 +5,12 @@ Feature: Verify Itemized Subtotal in Cart
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
 	And User navigates to LThree 
-     Then user clicks on one of the subcategory and navigates to LTwo
-    Then user clicks on one of the product category and navigates to LThree
+    Then user clicks on the product card and navigates to PDP
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then User clicks on ASO Logo and should be navigated to Home Page
-	And User clicks on the burger menu
-	And User navigates to LThree 
-	And user clicks on the product card and navigates to PDP 
+    And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
 	And user navigate to Cart page      

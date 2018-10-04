@@ -4,9 +4,7 @@ Feature: [Mobile] B06-100- Merge Cart
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @1HR_R2  @KER-3143 @ZYP_Cart_K3143-10257 @CR-RKA
 Scenario: Verify if Unauthenticated customer will be able to add items to cart for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on the burger menu
-	 And User navigates to L3
-  Then user clicks on the product card and navigates to PDP of the product 
+	When User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 

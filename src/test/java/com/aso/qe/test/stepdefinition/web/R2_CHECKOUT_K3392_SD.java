@@ -87,7 +87,7 @@ public class R2_CHECKOUT_K3392_SD extends CommonActionHelper {
 	public void user_resets_the_password() throws Throwable {
 
 	}
-
+	
 	@Then("^verify that user navigates to cart page as a signed in user$")
 	public void verify_that_user_navigates_to_cart_page_as_a_signed_in_user() throws Throwable {
 
@@ -152,6 +152,15 @@ public class R2_CHECKOUT_K3392_SD extends CommonActionHelper {
 	@When("^user clicks on Forgot your password link on the Sign in for checkout page$")
 	public void user_clicks_on_Forgot_your_password_link_on_the_Sign_in_for_checkout_page() throws Throwable {
 		assertTrue(clickOnButton(r2CheckOutPo.btnForgotYourPasswordCheckOut));
+	}
+	@Then("^user enter the emailaddress \"(.*?)\" from checkout page$")
+	public void user_enter_the_valid_emailaddress_from_checkout_page(String arg1) throws Throwable {
+		setInputText(r2_MyAccount_PO.inputEmailAddress_SignIn, webPropHelper.getTestDataProperty(arg1));
+	}
+
+	@Then("^user enter the password \"(.*?)\" from checkout page$")
+	public void user_enter_the_valid_password_from_checkout_page(String arg1) throws Throwable {
+		setInputText(r2_MyAccount_PO.inputPassword, webPropHelper.getTestDataProperty(arg1));
 	}
 
 }

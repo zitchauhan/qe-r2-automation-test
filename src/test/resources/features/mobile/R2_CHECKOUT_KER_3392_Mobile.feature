@@ -26,8 +26,8 @@ Feature: Verify Checkout Login Interstitial
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
 	When user click on SignIn link
-	And user enter the emailaddress "EmailAddress" in signin page
-	And user enter the password "Password"
+	And user enter the emailaddress "EmailAddress" from checkout page
+	And user enter the password "Password" from checkout page
 	And user click on signin button 
 	
 	
