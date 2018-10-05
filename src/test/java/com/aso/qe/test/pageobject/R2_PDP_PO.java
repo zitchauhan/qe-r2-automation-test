@@ -12,7 +12,7 @@ public class R2_PDP_PO extends CommonActionHelper {
 	/***************************** START XPAHTS **********************************/
 	
 	//Start KER-6655 CR-MS
-	 @FindBy(xpath="//*[@data-auid='btnbtnEnableBuyNow']") 
+	 @FindBy(xpath="//*[@data-auid='btnbtnEnableBuyNow']|//*[@data-auid='btnundefined']") 
 	 public WebElement EnableBuyNow_btn;
 	
 	@FindBy(xpath = "//*[@name='shippingFirstName']")

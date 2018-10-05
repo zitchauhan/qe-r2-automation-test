@@ -31,6 +31,7 @@ public class R2_CHECKOUT_K4332_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2R1FunPO.BuyNow_btn));
 		Thread.sleep(Constants.thread_highest);
 		Thread.sleep(Constants.thread_highest);
+		Thread.sleep(Constants.thread_highest);
 	}
 	
 	

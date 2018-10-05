@@ -1,13 +1,16 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
 
+
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.framework.common.WaiterHelper;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_PDP_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
@@ -23,7 +26,7 @@ public class R2_CHECKOUT_K6655_SD extends CommonActionHelper {
 	R2_R1_Fun_PO r2R1FunPO=PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	R2_Sanity_PO r2SanityPo=PageFactory.initElements(driver,R2_Sanity_PO.class);
 	R2_MyAccount_PO r2_MyAccount_PO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
-	
+	R1_PDP_PO r1PDPPO = PageFactory.initElements(driver, R1_PDP_PO.class);
 	
 	@Then("^Verify that Enable Buy Now button is displayed on PDP$")
 	public void verify_that_Enable_Buy_Now_button_is_displayed_on_PDP() throws Throwable {
@@ -182,6 +185,17 @@ public class R2_CHECKOUT_K6655_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2PdpPo.Add_Default_Payment_Option_btn));
 		Thread.sleep(5000);
 		
+	}
+	
+	@Then("^Verify nextstep functionality$")
+	public void verify_nextstep_functionality() throws Throwable {
+		Actions hover = new Actions(getDriver());
+		hover.moveToElement(r2R1FunPO.Soccersize_btn);
+		assertTrue(clickOnButton(r2R1FunPO.Soccersize_btn));
+		assertTrue(clickOnButton(r1PDPPO.btnNextStep));
+		assertTrue(clickOnButton(r2R1FunPO.Soccersize_btn));
+		assertTrue(clickOnButton(r1PDPPO.btnNextStep));
+		assertTrue(clickOnButton(r2R1FunPO.Soccersize_btn));
 	}
 	
 	

@@ -195,7 +195,7 @@ Scenario: Verify that Authenticated user is able proceed to checkout by adding p
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User searches a product "productName" and navigates to PDP
+	And User searches a product "SanitySKUNumber" and navigates to PDP
 	When User clicks on Enable Buy Now button
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|
@@ -232,7 +232,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User searches a product "SKUForBundleProducts" and navigates to PDP
-	Then Verify the nextstep functionality 
+	Then Verify nextstep functionality 
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn| 
