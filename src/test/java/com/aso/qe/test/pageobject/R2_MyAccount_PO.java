@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.stepdefinition.web.Common_Web_SD;
 
 public class R2_MyAccount_PO extends CommonActionHelper {
@@ -899,12 +900,17 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	}
 
-	public void deleteAllWishList() {
-		for (WebElement wishlistopenbtn : openWishListBtn) {
-			assertTrue(clickOnButton(wishlistopenbtn));
-			assertTrue(clickOnButton(Wishlist_icn));
+	//CR-GK 5-Oct
+	public void deleteAllWishList(){
+		int listCount = openWishListBtn.size();
+		while (listCount > 0) {
+			assertTrue(clickOnButton(WishlistItems_lnk));
+			if ("mobile".equalsIgnoreCase(testtype)) {
+				assertTrue(clickOnButton(Wishlist_icn));
+			}
 			assertTrue(clickOnButton(DeleteList_btn));
 			assertTrue(clickOnButton(DeleteWishList_btn));
+			listCount--;
 		}
 	}
 

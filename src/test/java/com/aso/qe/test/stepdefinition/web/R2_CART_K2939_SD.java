@@ -312,7 +312,7 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2R1FunPO.Soccersize_btn));
 		assertTrue(clickOnButton(r1PDPPO.btnNextStep));
 		assertTrue(clickOnButton(r2R1FunPO.Soccersize_btn));
-		assertTrue(clickOnButton(r1PDPPO.btnAddToCart1));
+		assertTrue(clickOnButton(r1PDPPO.btnAddToCart));
 
 	}
 

@@ -161,9 +161,7 @@ Scenario: Verify that user can see the error message in First name field if user
 	|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
 	And user enter First Name field "InvalidEmailForMoreThan50Characters" 
-	Then Verify the message on the page
-	|# Following Error Message should show on the page|
-	 |Not a valid name|
+	Then Verify First Name field should not accept more than fifty character
 	 
 	 
 	 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10569 @CR-RK
@@ -240,9 +238,7 @@ Scenario: Verify that user can see the error message in Last name field if user 
 	|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
 	And user enter Last Name field "InvalidEmailForMoreThan50Characters" 
-	Then Verify the message on the page
-	|# Following Error Message should show on the page|
-	 |Not a valid name|
+	Then Verify Last Name field should not accept more than fifty character
 	
 	
 		 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10572 @CR-RK

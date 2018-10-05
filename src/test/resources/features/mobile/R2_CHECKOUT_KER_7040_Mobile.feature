@@ -31,7 +31,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
      When User clicks on Enable Buy Now button
 #    Then verify the error message
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-7040 @ZYP_CHECKOUT_K6655-8906 @CR-MS
+@R2_Mobile   @R2_All @P-Low @C-Order @C-Checkout_Order   @KER-7040 @ZYP_CHECKOUT_K6655-8906 @CR-MS
 Scenario: Verify that user is able to proceed with checkout if user does not selects required product attributes
  Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -48,7 +48,7 @@ Scenario: Verify that user is able to proceed with checkout if user does not sel
 #   Then user verifies the order number
 
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-7040 @ZYP_CHECKOUT_K6655-11946 @CR-MS
+@R2_Mobile  @R2_All @P-Low @C-Order @C-Checkout_Order @KER-7040 @ZYP_CHECKOUT_K6655-11946 @CR-MS
 Scenario: Verify that user is able to proceed with checkout if user does not selects required product attributes
  Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

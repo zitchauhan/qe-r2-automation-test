@@ -19,6 +19,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user enter Address "Address"
     And user enter Zipcode "zipcode"
     Then user click on Go To Shipping Method button in Checkout page
+    And user click on go to payment present in shipping method
     Then user click on GiftCard Plus icon in Checkout page
     And user enter Gift card Number "WrongGiftcardNumber"
     And user enter Pin Number "WrongPinNumber"
@@ -30,11 +31,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
   @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-6821 @ZYP_CHECKOUT_K6821-10203 @CR-AKK
   Scenario: Verify the error message when user enters the invalid Gift card number
     Given user launches the browser and navigates to "ASO_HOME" page
-    And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
-    Then user clicks on one of the product category and navigates to LThree
-    Then User is navigated to pdp page
+    When User searches a product "productName" and navigates to PDP
     Then user click on Add to Cart Button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
@@ -46,6 +43,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user enter Address "Address"
     And user enter Zipcode "zipcode"
     Then user click on Go To Shipping Method button in Checkout page
+     And user click on go to payment present in shipping method
     When user clicks on Add Gift Card link
     And enter valid Gift Card Number "GiftCardNumber"
     And enters an alphanumeric PIN "PIN"
@@ -70,6 +68,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user enter Address "Address"
     And user enter Zipcode "zipcode"
     Then user click on Go To Shipping Method button in Checkout page
+     And user click on go to payment present in shipping method
     When user clicks on Add Gift Card link
     And enter valid Gift Card Number "GiftCardNumber"
     And user enter Pin Number "NewPinNumber"
@@ -97,6 +96,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user enter Address "Address"
     And user enter Zipcode "zipcode"
     Then user click on Go To Shipping Method button in Checkout page
+    And user click on go to payment present in shipping method
     When user clicks on Add Gift Card link
     And enter valid Gift Card Number "13DigitsGiftCardNumber"
     And user enter Pin Number "4DigitPinNumber"
@@ -121,6 +121,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user enter Address "Address"
     And user enter Zipcode "zipcode"
     Then user click on Go To Shipping Method button in Checkout page
+   And user click on go to payment present in shipping method
     When user clicks on Add Gift Card link
     And enter valid Gift Card Number "validGiftCardNumber"
     And user enter Pin Number "OldPinNumber"
@@ -148,6 +149,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user enter Address "Address"
     And user enter Zipcode "zipcode"
     Then user click on Go To Shipping Method button in Checkout page
+     And user click on go to payment present in shipping method
     When user clicks on Add Gift Card link
     And enter valid Gift Card Number "AlphanuremericGiftCardNumber"
     And user enter Pin Number "validPinNumber"

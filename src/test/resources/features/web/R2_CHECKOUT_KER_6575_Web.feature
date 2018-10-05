@@ -49,12 +49,10 @@ Scenario: Verify user clicks on the mini cart Icon should navigates user to the 
 		And user clicks on mini cart Icon in checkout page
 	    Then Verify below Sub/Main Module of Cart Page
 		|# Verify following elements in Cart page "Your Cart "|
-		|ContinueShopping_Link|
 		|YourCart_Header|
 		|Items_txt|
 		|TotalYourCart_txt|
-		|checkOutYourCart_Btn|
-	    
+			    
 		    
 	    
 

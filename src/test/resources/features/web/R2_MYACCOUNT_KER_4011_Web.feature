@@ -79,7 +79,7 @@ Scenario: Verify the user gets the error message when Login id is left blank
 	And user click on signin button
 	Then Verify the message on the page 
 		|# Following error Message should show on the page	|
-		|Please enter email address							|
+		|Please enter an email address							|
 
 @R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10051 @CR-SK
 Scenario: Verify the user gets the error message when Password is left blank 
@@ -90,7 +90,7 @@ Scenario: Verify the user gets the error message when Password is left blank
 	And user click on signin button
 	Then Verify the message on the page 
 		|# Following error Message should show on the page	|
-		|Please enter password								|
+		|Please enter the password								|
 
 ####Failing - Known Issue
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10301 @CR-SK
@@ -129,6 +129,6 @@ Scenario: Verify the user gets the error message when both email id and Password
 	And user click on signin button
 	Then Verify the message on the page 
 		|# Following error Message should show on the page	|
-		|Please enter email address							|
-		|Please enter password								|
+		|Please enter an email address							|
+		|Please enter the password								|
 	

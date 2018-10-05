@@ -142,32 +142,22 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	
 	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8013 @CR-RK 	
 	Scenario: Verify if  User can  view updated tax and order total in order summary section on checkout if zip code is updated.
-	Given user launches the browser and navigates to "ASO_HOME" page
-	And user clicks on SignIn link from global header	
-	    Then Verify below Sub/Main Module of My Account
-		|# Verify following elements in Sign in/login page	|
-		|SignInPage_EmailAddress_txt			   			| 
-		|SignInPage_Password_txt				   			|
-		And user enter the valid emailaddress "EmailAddress" 
-		And user enter the valid password "Password" 
-		And user click on signin button
-		And User navigates to L2 Womens clothing 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And User navigates to L2 Womens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page
-	And user click on checkout button in Cart page
-	And user is navigated to order summary page  
-#	Then User verifies the default address is selected in dropdown in shipping address section 
-#	And User navigates to Shipping Method section 
-#	Then User verifies that an Edit CTA is displayed for Shipping Address 
-#	And User clicks on edit CTA 
-#	And user select the shipping address in the drop down
-#	And user click on confirm button in shipping address
-	Then user verifies estimated tax and total on checkout page
+	And user navigate to Cart page 
+	And user click on checkout button in Cart page 
+	And user is navigated to order summary page
+	Then user verifies estimated tax and total on checkout page 
 	
 	
 	@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8014 @CR-RK 	
@@ -188,31 +178,21 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	
 	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8015 @CR-RK 	
 	Scenario: Verify if  User can  view updated tax and order total in order summary section on checkout if zip code is updated.
-	Given user launches the browser and navigates to "ASO_HOME" page
-	And user clicks on SignIn link from global header	
-	    Then user should able to click on Signin button
-		Then Verify below Sub/Main Module of My Account
-		|# Verify following elements in Sign in/login page	|
-		|SignInPage_EmailAddress_txt			   			| 
-		|SignInPage_Password_txt				   			|
-		And user enter the valid emailaddress "EmailAddress" 
-		And user enter the valid password "Password" 
-		And user click on signin button
-		Then User searches a product "productName" and navigates to PDP
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	Then user should able to click on Signin button 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then User searches a product "productName" and navigates to PDP 
 	And User is navigated to pdp page 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page
-	And user click on checkout button in Cart page
-	And user is navigated to order summary page  
-#	Then User verifies the default address is selected in dropdown in shipping address section 
-#	And User navigates to Shipping Method section 
-#	Then User verifies that an Edit CTA is displayed for Shipping Address 
-#	And User clicks on edit CTA 
-#	And user select the shipping address in the drop down
-#	And user click on confirm button in shipping address
-	Then user verifies estimated tax and total on checkout page
+	And user navigate to Cart page 
+	And user click on checkout button in Cart page 
+	And user is navigated to order summary page 
+	Then user verifies estimated tax and total on checkout page 
 	
 	
 	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8016 @CR-RK 	

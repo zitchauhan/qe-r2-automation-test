@@ -31,8 +31,9 @@ Scenario: Verify the Shipping address form that authenticated user can view on a
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8178 @CR-DPK 
 Scenario: Verify if unauthenticated user be presented with the blank shipping address form fields
  	Given user launches the browser and navigates to "ASO_HOME" page
-	And User Navigates L2 form Homepage Header 
-     And User clicks on product in PLP
+#	And User Navigates L2 form Homepage Header 
+#     And User clicks on product in PLP
+When User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -40,10 +41,10 @@ Scenario: Verify if unauthenticated user be presented with the blank shipping ad
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
     |Please enter the First Name|
-	|Please Enter a Last Name|
+	|Please enter a Last Name|
 	|Please enter a phone number|
 	|Please enter a street address|
-	|Please enter a zip code|
+#	|Please enter a zip code|
 	|Required|	
 
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8179 @CR-DPK 

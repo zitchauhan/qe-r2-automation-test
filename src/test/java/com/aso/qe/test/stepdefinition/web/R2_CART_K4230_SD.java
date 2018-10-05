@@ -7,6 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
@@ -82,6 +83,7 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 		else {
 			throw new NullArgumentException("Please validate arguement.");
 		}
+		Thread.sleep(Constants.thread_high);
 	}
 
 	@Given("^user click on change password icon$")
@@ -170,5 +172,19 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 	@Then("^user enter the old password as new password$")
 	public void user_enter_the_old_password_as_new_password() throws Throwable {
 		setInputText(r2MyAccountPo.txtNewPassword, webPropHelper.getTestDataProperty(defaultPassword));
+	}
+	
+	@Then("^Verify First Name field should not accept more than fifty character$")
+	public void verify_First_Name_field_should_not_accept_more_than_fifty_character() throws Throwable {
+	    String maxlength=r2MyAccountPo.txtFirstNameInAddCreditCard.getAttribute("maxlength");
+	    System.out.println(maxlength);
+	    assertTrue(maxlength.equals("50"));
+	}
+	
+	@Then("^Verify Last Name field should not accept more than fifty character$")
+	public void verify_Last_Name_field_should_not_accept_more_than_fifty_character() throws Throwable {
+		String maxlength=r2MyAccountPo.txtLastNameInAddCreditCard.getAttribute("maxlength");
+	    System.out.println(maxlength);
+	    assertTrue(maxlength.equals("50"));
 	}
 }

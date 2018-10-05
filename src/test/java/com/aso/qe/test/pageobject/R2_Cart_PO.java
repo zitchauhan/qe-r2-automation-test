@@ -606,80 +606,51 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	// Start KER-2939 CR-AKK
 	public void selectStore(String zipCode) throws InterruptedException {
-        if ("mobile".equalsIgnoreCase(testtype)) {
-               assertTrue(clickOnButton(lnkFindAStore_M));
-               waitForElement(txtZipCode);
-               txtZipCode.clear();
-               setInputText(txtZipCode, zipCode);
-               assertTrue(clickOnButton(btnZipCode));
-               Thread.sleep(Constants.thread_high);
-               for (WebElement selectStorefromList : selectStorePopUpStoreList) {
-                     assertTrue(clickOnButton(selectStorefromList));
-                     if (isDisplayed(selectStoreItemNotAvailable)) {
-                            assertTrue(clickOnButton(selectStorefromList));
-                            continue;
-                     } else {
-                            break;
-                     }
-               }
-               assertTrue(clickOnButton(makeMyStore_btn));
-               assertTrue(clickOnButton(r1FindStorePO.ovly_btnCloseCross));
-        } else {
-               assertTrue(clickOnButton(lnkFindAStore));
-               waitForElement(txtZipCode);
-               txtZipCode.clear();
-               setInputText(txtZipCode, zipCode);
-               assertTrue(clickOnButton(btnZipCode));
-               Thread.sleep(Constants.thread_high);
-               for (WebElement selectStorefromList : selectStorePopUpStoreList) {
-                     assertTrue(clickOnButton(selectStorefromList));
-                     if (isDisplayed(selectStoreItemNotAvailable)) {
-                            assertTrue(clickOnButton(selectStorefromList));
-                            continue;
-                     } else {
-                            break;
-                     }
-               }
-               assertTrue(clickOnButton(makeMyStore_btn));
-               assertTrue(clickOnButton(r1FindStorePO.ovly_btnCloseCross));
-        }
- }
-
-	// End KER-2939 CR-AKK
-	// Start KER-4231 CR-GK
-	public void selectStoreWithZipAndStoreName(String zipCode, String storeName) {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(lnkFindAStore_M));
-			waitForElement(txtZipCode);
-			txtZipCode.clear();
-			setInputText(txtZipCode, zipCode);
-			try {
-				assertTrue(clickOnButton(btnZipCode));
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-				logger.debug("Exception in setting up the store");
-				e.printStackTrace();
+
+		} else {
+			assertTrue(clickOnButton(lnkFindAStore));
+		}
+		waitForElement(txtZipCode);
+		txtZipCode.clear();
+		setInputText(txtZipCode, zipCode);
+		assertTrue(clickOnButton(btnZipCode));
+		Thread.sleep(Constants.thread_high);
+		for (WebElement selectStorefromList : selectStorePopUpStoreList) {
+			assertTrue(clickOnButton(selectStorefromList));
+			if (isDisplayed(selectStoreItemNotAvailable)) {
+				assertTrue(clickOnButton(selectStorefromList));
+				continue;
+			} else {
+				break;
 			}
-			assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
+		}
+		if (isDisplayed(makeMyStore_btn)) {
 			assertTrue(clickOnButton(makeMyStore_btn));
-			assertTrue(clickOnButton(btnFindStoreClose));
+		}
+		assertTrue(clickOnButton(r1FindStorePO.ovly_btnCloseCross));
+	}
+
+	// End KER-2939 CR-AKK
+
+	// Start KER-4231 CR-GK 5-Oct
+	public void selectStoreWithZipAndStoreName(String zipCode, String storeName) throws InterruptedException {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(lnkFindAStore_M));
 		} else {
 			assertTrue(clickOnButton(selectStoreMiniBalloon));
-			waitForElement(txtZipCode);
-			txtZipCode.clear();
-			setInputText(txtZipCode, zipCode);
-			try {
-				assertTrue(clickOnButton(btnZipCode));
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-				logger.debug("Exception in setting up the store");
-				e.printStackTrace();
-			}
-			assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
-			assertTrue(clickOnButton(makeMyStore_btn));
-			assertTrue(clickOnButton(btnFindStoreClose));
 		}
-
+		waitForElement(txtZipCode);
+		txtZipCode.clear();
+		setInputText(txtZipCode, zipCode);
+		assertTrue(clickOnButton(btnZipCode));
+		Thread.sleep(3000);
+		assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
+		if (isDisplayed(makeMyStore_btn)) {
+			assertTrue(clickOnButton(makeMyStore_btn));
+		}
+		assertTrue(clickOnButton(btnFindStoreClose));
 	}
 	public void emptyCart() throws InterruptedException {
 		

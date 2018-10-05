@@ -23,7 +23,7 @@ Scenario: Verify that My Account option is available for Authenticated User
 		|BurgerMenu_MyAccount_txt	        |
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4229 
+  @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10474 @CR-GK 
 Scenario: Verify that Authenticated User is able to view order list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -38,9 +38,8 @@ Scenario: Verify that Authenticated User is able to view order list
 	And Verify that 10 orders are displayed per page 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in order section|
-		|TotalNumberOfOrder_txt                     |
-		|CustomerCare_lnk                           |
-		|OrdersDropDownNewestSorted                 |
+		|OrderPage_TotalNumberOfOrder_txt                     |
+		|OrderPage_OrdersDropDownNewestSorted                |
 	And Oldest sorting option is available 
 	
 	
@@ -64,7 +63,7 @@ Scenario: Verify that Authenticated User is able to navigate to Profile page
 		|ProfilePage_Email_txt							|
 		|ProfilePage_Email_label						|
 		|ProfilePage_ChangePassword_btn					|
-		|ProfilePage_MaskedPassword                 |
+		|MaskedPasswordInProfile_mask                   |
 		|ProfilePage_ReceiveEmailNotifications_checkbox	|
 		
 @R2_Mobile @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4229 

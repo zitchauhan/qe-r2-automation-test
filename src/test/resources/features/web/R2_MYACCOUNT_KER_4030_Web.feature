@@ -45,8 +45,8 @@ Scenario: Verify authenticated user with address details and payment details sav
 	Then Verify below Sub/Main Module of Checkout Page
 		|# Verify following elements in Checkout|
 		|checkout_ShippingAddress_txt			|
-		|ChooseCreditcard_Dd					|
 		|checkout_ShippingMethod_ShippingDetails|
+		|PaymentMethodHeader_Txt				|
 
 
 

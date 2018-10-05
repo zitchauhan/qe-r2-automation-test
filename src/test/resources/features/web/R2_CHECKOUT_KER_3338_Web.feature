@@ -67,14 +67,9 @@ Scenario:
 Scenario: 
 	Verify user is able to checkout using PayPal with shipping-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
+	And user will click on View Cart button  
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then user click on checkout button in Cart page 
 	And user enter First name "FirstName" 
@@ -93,9 +88,9 @@ Scenario:
 	Then user switch to window of paypal 
 	Then user verify the element of paypal window 
 	And enter the paypal login "PayPalEmail" "PayPalPassword" 
-	Then Verify the message on the page 
-		|# Following Message should show on the page|  
-		|Paypal account|
+#	Then Verify the message on the page 
+#		|# Following Message should show on the page|  
+#		|Paypal account|
 		
 		
 		
@@ -255,11 +250,7 @@ Verify guest user cannot select Paypal as Payment method on checkout for SOF pro
 Scenario:
 Verify the user is navigated back to the Academy.com once PayPal payment process is done 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up 
 	And user enter First name "FirstName" 
@@ -277,6 +268,6 @@ Verify the user is navigated back to the Academy.com once PayPal payment process
 	Then Verify paypal button is clicked 
 	Then user switch to window of paypal 
 	And enter the paypal login "PayPalEmail" "PayPalPassword" 
-	Then Verify below Sub/Main Module of Checkout Page 
-		|#%%%%%%   Billing Information %%%%%%%%%%|
-		|EditPayment_Link|
+#	Then Verify below Sub/Main Module of Checkout Page 
+#		|#%%%%%%   Billing Information %%%%%%%%%%|
+#		|EditPayment_Link|

@@ -1,6 +1,6 @@
 Feature: E03-150 - Order Cancellation Cancel Order Confirmation (Guest & Authenticated Customers)
 
-  @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4021 @ZYP_MYACCOUNT_K4021-10637 @CR-RK
+  @R2_Web  @R2_All @P-Highest @1HR_R2 @C-Order @C-MyAccount_Order   @KER-4021 @ZYP_MYACCOUNT_K4021-10637 @CR-RK
   Scenario: Verify that Guest User is able to view Cancellation Confirmation page
   Given user launches the browser and navigates to "ASO_HOME" page 
   	And User navigates to Check Oder status Page
@@ -32,7 +32,7 @@ Feature: E03-150 - Order Cancellation Cancel Order Confirmation (Guest & Authent
       | Order_Back_To_Order_Lnk                                |
       
       
-   @R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-4021 @ZYP_MYACCOUNT_K4021-10639 @CR-RK
+   @R2_Web  @R2_All @P-High @1HR_R2 @C-Order @C-MyAccount_Order   @KER-4021 @ZYP_MYACCOUNT_K4021-10639 @CR-RK
   Scenario: Verify that Authenticated User is able to view Cancellation Confirmation page
   Given user launches the browser and navigates to "ASO_HOME" page 
   	When user clicks on SignIn link from global header 

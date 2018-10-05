@@ -1,6 +1,6 @@
 Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios 
     
-@R2_Web @R2_WAST-01 @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040@CR-SK @AutomationSanityR2 
+@R2_Web @R2_WAST-01 @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK @AutomationSanityR2 
 Scenario: TC_1- Verify Login Logout  
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header

@@ -19,10 +19,7 @@ Scenario: To view details specific to an item in the cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "SanitySKUNumber" in the search box
 	And user click on Add to Cart Button
-	Then User is navigated to pdp page 
-	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
 	Then user views the details specific to the item(Thumbnail image) 
 	And user verify prodcut name and prodcut link 
 	And user verify color and size 
@@ -31,12 +28,8 @@ Scenario: To view details specific to an item in the cart
 	|# verify Remove cart link |
 	|RemoveFromCart_Btn|
 	|AddToWishList_btn|
-	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user verify Remove cart link 
 	And user verify add to wishlist 
-	And user verify Discount messaging and Promotional messaging 
-	And user verify shipping information 
-	Then user verify BOPIS radio button 
 	  
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8077 @CR-AKK 

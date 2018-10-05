@@ -25,7 +25,7 @@ Scenario: Verify that Authenticated User is able to view order list
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
-@ZYP_MYACCOUNT_K4237-10511 @CR-GK @1HR_R2
+@ZYP_MYACCOUNT_K4237-10511 @CR-GK @1HR_R2 
 Scenario: 
 	Verify that Order search field is displayed if Authenticated user does not have any orders 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -48,7 +48,13 @@ Scenario:
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And user navigates to orders in my account 
+	And user navigate and deletes existing items in cart 
+	Then User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user click on checkout from ATC pop up 
+	Then user click on review order button 
+	And user able to see the button place order 
+	And user navigates from Order successful page to Orders in my account 
 	And User clicks on View Details CTA for an order 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in order section|
@@ -100,14 +106,20 @@ Scenario:
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
-@ZYP_MYACCOUNT_K4237-10518 @CR-GK 
+@ZYP_MYACCOUNT_K4237-10518 @Order @CR-GK 
 Scenario: Verify that Authenticated user is able to Print Order receipt 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And user navigates to orders in my account 
+	And user navigate and deletes existing items in cart 
+	Then User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user click on checkout from ATC pop up 
+	Then user click on review order button 
+	And user able to see the button place order 
+	And user navigates from Order successful page to Orders in my account 
 	And User clicks on View Details CTA for an order 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in order section|
@@ -138,14 +150,20 @@ Scenario:
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
-@ZYP_MYACCOUNT_K4237-10526 @CR-GK 
+@ZYP_MYACCOUNT_K4237-10526 @Order @CR-GK 
 Scenario: Verify that UnAuthenticated user is able to print order receipt 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And user navigates to orders in my account 
+	And user navigate and deletes existing items in cart 
+	Then User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user click on checkout from ATC pop up 
+	Then user click on review order button 
+	And user able to see the button place order 
+	And user navigates from Order successful page to Orders in my account 
 	And User clicks on View Details CTA for an order 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in order section|

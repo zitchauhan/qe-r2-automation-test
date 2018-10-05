@@ -1,9 +1,9 @@
 Feature: E03-150 - Order Cancellation Cancel Order Confirmation (Guest & Authenticated Customers)
 
-  @R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4021 @ZYP_MYACCOUNT_K4021-10637 @CR-RK
+  @R2_Mobile  @R2_All @P-Highest @1HR_R2 @C-Order @C-MyAccount_Order   @KER-4021 @ZYP_MYACCOUNT_K4021-10637 @CR-RK
   Scenario: Verify that Guest User is able to view Cancellation Confirmation page
   Given user launches the browser and navigates to "ASO_HOME" page 
-  	  When User searches a product "productName" and navigates to PDP
+  	When User searches a product "productName" and navigates to PDP
     And user click on Add to Cart Button
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
@@ -51,7 +51,7 @@ Feature: E03-150 - Order Cancellation Cancel Order Confirmation (Guest & Authent
       | Order_Back_To_Order_Lnk                                |
       
       
-      @R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-4021 @ZYP_MYACCOUNT_K4021-10639 @CR-RK
+      @R2_Mobile  @R2_All @P-High @1HR_R2 @C-Order @C-MyAccount_Order   @KER-4021 @ZYP_MYACCOUNT_K4021-10639 @CR-RK
   Scenario: Verify that Authenticated User is able to view Cancellation Confirmation page
   Given user launches the browser and navigates to "ASO_HOME" page 
    	Then User clicks on the burger menu

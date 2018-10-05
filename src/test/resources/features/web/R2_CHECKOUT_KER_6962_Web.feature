@@ -283,7 +283,6 @@ Scenario: Verify If a gift card does not cover the full transaction, the amount 
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8897 @CR-SK 
 Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Sign in user
 	Given user launches the browser and navigates to "ASO_HOME" page
-	And user clicks on the burger menu
 	And user creates an account
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 

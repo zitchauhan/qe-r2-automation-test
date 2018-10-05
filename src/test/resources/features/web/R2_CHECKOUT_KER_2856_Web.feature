@@ -1,6 +1,6 @@
 Feature: B06-175- Mixed Cart - Order Confirmation screen
 
-@R2_Web @R2_Regression @R2_All @P-Highest  @1HR_R2 @C-Checkout @KER-2856 @ZYP_CHECKOUT_K2856-10865 @CR-RK
+@R2_Web  @R2_All @P-Highest  @1HR_R2 @C-Order @C-Checkout_Order   @KER-2856 @ZYP_CHECKOUT_K2856-10865 @CR-RK
 Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods Ship to Home and BOPIS
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -22,11 +22,11 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user able to see the button place order
 	And user is navigated to order confirmation page and captures order number
 	
-	@R2_Web @R2_Regression @R2_All @P-High  @C-Checkout @KER-2856 @ZYP_CHECKOUT_K2856-10866 @CR-RK
+	@R2_Web  @R2_All @P-High  @C-Order @C-Checkout_Order   @KER-2856 @ZYP_CHECKOUT_K2856-10866 @CR-RK
 Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods BOPIS and SOF
 	Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid emailaddress "EmailAddress"	
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
@@ -51,11 +51,11 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods BOPIS and S
 	And user able to see the button place order
 	And user is navigated to order confirmation page and captures order number
 	
-	@R2_Web @R2_Regression @R2_All @P-High  @C-Checkout @KER-2856 @ZYP_CHECKOUT_K2856-10867 @CR-RK
+	@R2_Web  @R2_All @P-High  @C-Order @C-Checkout_Order   @KER-2856 @ZYP_CHECKOUT_K2856-10867 @CR-RK
 Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Ship to Home
 	Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
@@ -80,7 +80,7 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Shi
 	And user able to see the button place order
 	And user is navigated to order confirmation page and captures order number
 	
-	@R2_Web @R2_Regression @R2_All @P-High  @C-Checkout @KER-2856 @ZYP_CHECKOUT_K2856-10868 @CR-RK	
+	@R2_Web  @R2_All @P-High  @C-Order @C-Checkout_Order   @KER-2856 @ZYP_CHECKOUT_K2856-10868 @CR-RK	
 Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods for BOPIS, Sequence - Un authenticated user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
@@ -108,7 +108,7 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods for BOPIS, 
 	|#Verify following elements in order section|
 	|Order_Bopis_In_Store_Pickup_txt|
 	
-	@R2_Web @R2_Regression @R2_All @P-High  @C-Checkout @KER-2856 @ZYP_CHECKOUT_K2856-10869 @CR-RK	
+	@R2_Web  @R2_All @P-High  @C-Order @C-Checkout_Order   @KER-2856 @ZYP_CHECKOUT_K2856-10869 @CR-RK	
 Scenario: Verify Mixed cart Order confirmation - Order Summary Modal Sequece
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
