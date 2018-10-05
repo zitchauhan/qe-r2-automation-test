@@ -124,10 +124,10 @@ Feature: To Verify Get Cart Details API service without sign-in
      @All-R2 @C1-Cart @C2-UpdateCart @api @R2_AAST-07 @CR-RT @ZYP_UpdateRemove_13546
   Scenario: TC_7 - verify the Cart-Item-Update-Quantity and validate the Schema and response details
     Given "GetCartUrl" by "/updateItemQuantity" with "CartItemUpdateRemoveRequest" endpoint for Cart-Update-Quantity
-    Then Verify response status code as 204
+    Then Verify response status code as 200
 
   @All-R2 @C1-Cart @C2-GetCart @api @R2_AAST-07 @CR-RT @ZYP_UpdateRemove_13778
   Scenario: TC_7 - verify the Cart-Item-Remove and validate the Schema and response details
     Given "GetCartUrl" by "undefined/updateItemQuantity" with "CartItemUpdateRemoveRequest" endpoint for Remove Item from Cart
-    Then Verify response status code as 204
+    Then Verify response status code as 200
     Given "AddToCartSummaryUrl" and post request "addtocartRequestJson" endpoint for Add to Cart with Guest user
