@@ -1,6 +1,6 @@
 Feature: [Web] B06-100- Merge Cart
 
-@R2_Web @R2_Regression @-Cart @P-High @KER-3143 @ZYP_Cart_K3143-10257 @CR-RKA @1HR_R2
+@R2_Web @R2_Regression @C-Cart @P-High @KER-3143 @ZYP_Cart_K3143-10257 @CR-RKA @1HR_R2
 Scenario: Verify if Unauthenticated customer will be able to add items to cart for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 #	And User navigates to L2 Mens clothing 
@@ -19,7 +19,7 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	|#verify INStorePickup_FREE radio btn is enable# |
 	|InStorePickup_FREE_radioBtn |
 
-@R2_Web @R2_Regression @-Cart   @KER-3143 @P-Low @ZYP_Cart_K3143-10263 @CR-RKA
+@R2_Web @R2_Regression @C-Cart   @KER-3143 @P-Low @ZYP_Cart_K3143-10263 @CR-RKA
 Scenario: Verify if Un-Authenticated user must be able to sign into their account from MyAccount in header
 Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -31,7 +31,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|#verify INStorePickup_FREE radio btn is enable# |
 	|myAccount_MyAccountList_Orders_lnk			 		|
 	
-	@R2_Web @R2_Regression @-Cart   @P-Low  @KER-3143 @ZYP_Cart_K3143-12506 @CR-RKA
+	@R2_Web @R2_Regression @C-Cart   @P-Low  @KER-3143 @ZYP_Cart_K3143-12506 @CR-RKA
 	Scenario: Verify Unauthenticated user is able to Sign in from empty cart
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the minicart icon and navigated to minicart
@@ -42,7 +42,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|# Verify following elements in Cart page"When cart is empty"|
 	|YourCartIsEmpty_Txt| 
 	
-	@R2_Web @R2_Regression @-Cart  @P-Low @KER-3143 @ZYP_Cart_K3143-12547 @CR-RKA
+	@R2_Web @R2_Regression @C-Cart  @P-Low @KER-3143 @ZYP_Cart_K3143-12547 @CR-RKA
 	Scenario: Verify the display and behavior of 'Continue Shopping' in Cart Title
 		Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on one of the category and navigates to LOne 
@@ -60,7 +60,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|#verify user is on Home Page#|
 	|SHOP NOW|
 	
-	@R2_Web @R2_Regression @P-Low @-Cart   @KER-3143 @ZYP_Cart_K3143-12548 @CR-RKA
+	@R2_Web @R2_Regression @P-Low @C-Cart   @KER-3143 @ZYP_Cart_K3143-12548 @CR-RKA
 	Scenario: Verify the display and behavior of 'Checkout' in Cart Title
 		Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on one of the category and navigates to LOne 
@@ -83,7 +83,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|checkout_ShippingAddress_City_txt							|
 		|checkOut_ShippingAddress_GoToShippingMethod_btn			|
 	
-	@R2_Web @R2_Regression @P-High @-Cart  @KER-3143 @ZYP_Cart_K3143-12571 @CR-RKA
+	@R2_Web @R2_Regression @P-High @C-Cart  @KER-3143 @ZYP_Cart_K3143-12571 @CR-RKA
 	Scenario: Verify all the components available on the Order Summary of the Cart
 		Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on one of the category and navigates to LOne 
@@ -105,7 +105,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|ReturnPolicy_link|
 		
 	
-	@R2_Web @R2_Regression  @P-High @-Cart  @KER-3143 @ZYP_Cart_K3143-8155 @CR-RKA
+	@R2_Web @R2_Regression  @P-High @C-Cart  @KER-3143 @ZYP_Cart_K3143-8155 @CR-RKA
 	Scenario: Verify if Unauthenticated customer will be able to add items to cart for shipping
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on one of the category and navigates to LOne 
@@ -120,7 +120,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|#verify item added successfully MSG#|
 	 | Item Added Successfully|
 	
-	@R2_Web @R2_Regression @P-Low @-Cart  @KER-3143 @ZYP_Cart_K3143-8156 @CR-RKA
+	@R2_Web @R2_Regression @P-Low @C-Cart  @KER-3143 @ZYP_Cart_K3143-8156 @CR-RKA
 	Scenario: Verify authenticated user has ability to sign in to the account from empty cart
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -158,7 +158,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|TotalYourCart_txt|
 		
 		
-		@R2_Web @R2_Regression @P-Low @-Cart  @KER-3143 @ZYP_Cart_K3143-8157 @CR-RKA
+		@R2_Web @R2_Regression @P-Low @C-Cart  @KER-3143 @ZYP_Cart_K3143-8157 @CR-RKA
 	Scenario: Verify if un-authenticated user must be able to sign into their account from checkout page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on one of the category and navigates to LOne 
@@ -173,7 +173,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
     Then user sign in from checkout page 
     
     
-    @R2_Web @R2_Regression @P-High @KER-3143 @-Cart  @ZYP_Cart_K3143-8158 @CR-RKA
+    @R2_Web @R2_Regression @P-High @KER-3143 @C-Cart  @ZYP_Cart_K3143-8158 @CR-RKA
     Scenario: Verify if Authenticated user must be able to view cart the items added
     
     Given user launches the browser and navigates to "ASO_HOME" page
@@ -193,7 +193,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|#verify item added successfully MSG#|
 	 | Item Added Successfully|
    
-    @R2_Web @R2_Regression @P-High  @KER-3143 @-Cart  @ZYP_Cart_K3143-8159 @CR-RKA
+    @R2_Web @R2_Regression @P-High  @KER-3143 @C-Cart  @ZYP_Cart_K3143-8159 @CR-RKA
     Scenario: Verify if Authenticated user must be able to view all items designated for shipping
         
 	Given user launches the browser and navigates to "ASO_HOME" page
@@ -213,7 +213,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|# Verify following elements in Cart page "Item in Cart "|
 	|Items_txt|
 	
-	@R2_Web @R2_Regression @P-High @KER-3143 @-Cart  @ZYP_Cart_K3143-8160 @CR-RKA
+	@R2_Web @R2_Regression @P-High @KER-3143 @C-Cart  @ZYP_Cart_K3143-8160 @CR-RKA
 	Scenario: Verify if user must be able to view all items designated for BOPIS( Buy online and pick in store)
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -233,7 +233,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    |Verify item for Bopis |
    |Items_txt|
    
-   @R2_Web @R2_Regression  @KER-3143  @P-Low  @-Cart @ZYP_Cart_K3143-8161 @CR-RKA
+   @R2_Web @R2_Regression  @KER-3143  @P-Low  @C-Cart @ZYP_Cart_K3143-8161 @CR-RKA
    Scenario: Verify if user "Pick Up In Store" location must display the store location selected for unauthenticated
    Given user launches the browser and navigates to "ASO_HOME" page
    And user clicks on one of the category and navigates to LOne 
@@ -248,7 +248,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|InStorePickup_FREE_radioBtn |
 	|#Change location pending|
 
-@R2_Web @R2_Regression  @KER-3143 @P-High @-Cart  @ZYP_Cart_K3143-8162 @CR-RKA
+@R2_Web @R2_Regression  @KER-3143 @P-High @C-Cart  @ZYP_Cart_K3143-8162 @CR-RKA
 Scenario: Verify if cart has one or more common item(s), the cart should show single
 Given user launches the browser and navigates to "ASO_HOME" page
 And user clicks on one of the category and navigates to LOne 
@@ -270,7 +270,7 @@ And user clicks on one of the category and navigates to LOne
 	|# Verify total item  in Cart page |
 	|Items_txt|
 
-@R2_Web @R2_Regression @P-High @KER-3143 @-Cart  @ZYP_Cart_K3143-8163 @CR-RKA
+@R2_Web @R2_Regression @P-High @KER-3143 @C-Cart  @ZYP_Cart_K3143-8163 @CR-RKA
 Scenario: Verify if one or more item(s) from my previously added session is deleted or removed from catalog, the user should not see those as part of merged cart
 Given user launches the browser and navigates to "ASO_HOME" page
 And user clicks on one of the category and navigates to LOne 
