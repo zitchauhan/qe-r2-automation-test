@@ -7,7 +7,7 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
 	And user enter the valid emailaddress "emailWithOutPhonenumber" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	When User searches a product "productName" and navigates to PDP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|
@@ -19,8 +19,7 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
 	And user enter the valid emailaddress "EmailWithoutShipDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	 And User Navigates L2 form Homepage Header 
-     And User clicks on product in PLP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|
@@ -32,8 +31,7 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	 And User Navigates L2 form Homepage Header 
-     And User clicks on product in PLP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|
@@ -45,8 +43,7 @@ Scenario: Verify that Authenticated user is able to view modal to add shipping d
 	And user enter the valid emailaddress "EmailWithoutShipDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	 And User Navigates L2 form Homepage Header 
-     And User clicks on product in PLP
+	 When User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|
@@ -68,7 +65,7 @@ Scenario: Verify the shipping details modal if user does not have saved Shipping
 	And user enter the valid emailaddress "emailWithOutPhonenumber" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	When User searches a product "productName" and navigates to PDP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|
@@ -134,8 +131,7 @@ Scenario: Verify the Payment details modal if user does not have saved Shipping 
 	And user enter random email Address
 	And user enter password "Password"
 	When clicks on Sign Up Button
-	And User Navigates L2 form Homepage Header 
-     And User clicks on product in PLP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|
@@ -168,7 +164,7 @@ Scenario: Verify that Authenticated user is able to view modal to add payment de
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User searches a product "productName" and navigates to PDP 
+	And User searches a product "SKUForBuyNow" and navigates to PDP 
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|
@@ -195,7 +191,7 @@ Scenario: Verify that Authenticated user is able proceed to checkout by adding p
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User searches a product "SanitySKUNumber" and navigates to PDP
+	And User searches a product "SKUForBuyNow" and navigates to PDP
 	When User clicks on Enable Buy Now button
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|
@@ -257,8 +253,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailWithoutShipDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	 And User Navigates L2 form Homepage Header 
-     And User clicks on product in PLP
+	And User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|
@@ -291,8 +286,7 @@ Scenario: Verify that Authenticated user is able proceed to CHECKOUT by adding s
 	And user enter random email Address
 	And user enter password "Password"
 	When clicks on Sign Up Button
-	And User Navigates L2 form Homepage Header 
-     And User clicks on product in PLP
+	And User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|

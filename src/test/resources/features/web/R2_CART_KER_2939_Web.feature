@@ -223,7 +223,6 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then Verify below Sub/Main Module of Cart Page 
 	|#Item is moved from cart to the wish list |
 	|AddToWishList_btn|
-	|ContinueShopping_btn|
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8079 @CR-AKK 	 
 	Scenario: To verify In-store Pick up radio button - without My Store info on My Account
@@ -281,9 +280,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8083 @CR-AKK	 
 Scenario: To verify Disclaimer message
 Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne SOF
-    Then user clicks on one of the subcategory and navigates to LTwo SOF
-    Then user clicks on one of the product category and navigates to LThree SOF
+	When user enters "SOFSKUNumber" in the search box
 	Then User is navigated to pdp page
     Then user views a Disclaimer message
     When clicks on Read More Link

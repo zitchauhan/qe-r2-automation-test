@@ -8,7 +8,7 @@ Scenario: Verify user can navigates to Order confirmation page
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	When User searches a product "SanitySKUNumber" and navigates to PDP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then verify the buy now button is clickable
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
@@ -22,7 +22,7 @@ Scenario: Verify user can see order placed for selected single SKU on the PDP
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	When User searches a product "SanitySKUNumber" and navigates to PDP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then verify the buy now button is clickable
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
@@ -36,7 +36,7 @@ Scenario: Verify user can see order placed for selected single SKU on the PDP
 	
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4332 @ZYP_CHECKOUT_K4332-9521 @CR-AKK
+@R2_Mobile  @R2_All @P-High  @C-Order @CS-Checkout_Ordert @KER-4332 @ZYP_CHECKOUT_K4332-9521 @CR-AKK
 Scenario: To Verify user can see the BUY NOW button in PDP
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -44,7 +44,7 @@ Scenario: To Verify user can see the BUY NOW button in PDP
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	When User searches a product "SanitySKUNumber" and navigates to PDP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then Verify that Enable Buy Now button is displayed on PDP
 
 	@R2_Mobile  @R2_All @P-High @C-Order @CS-Checkout_Order   @KER-4332 @ZYP_CHECKOUT_K4332-10316 @CR-AKK
@@ -55,7 +55,7 @@ Scenario: Verify user can see order placed for selected single SKU on the PDP
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	When User searches a product "SanitySKUNumber" and navigates to PDP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then verify the buy now button is clickable
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
@@ -74,11 +74,11 @@ Scenario: Verify user can process the order
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	When User searches a product "SanitySKUNumber" and navigates to PDP 
+	When User searches a product "SKUForBuyNow" and navigates to PDP 
 	When User clicks on Enable Buy Now button
-	Then Verify below Sub/Main Module of PDP
-    |#Verify following elements in PDP modal popup|
-    |EnableBuyNow_btn|
+	Then Verify the message on the page
+    |# Following Error Message should show on the page|
+	|Order Number|
     
     
    
@@ -91,7 +91,7 @@ Scenario: Verify Shipping address and method has no errors or does not require u
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	When User searches a product "SanitySKUNumber" and navigates to PDP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then verify the buy now button is clickable
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
@@ -105,7 +105,7 @@ Scenario: Verify Payment information is authorized successfully Then user should
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	When User searches a product "SanitySKUNumber" and navigates to PDP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then verify the buy now button is clickable
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
@@ -119,7 +119,7 @@ Scenario: Verify Academy.com should not consider any persistent item(s) in my ca
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	When User searches a product "SanitySKUNumber" and navigates to PDP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then verify the buy now button is clickable
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
@@ -138,7 +138,7 @@ Scenario: Verify The persistent cart should not be affect and any number of item
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	When User searches a product "SanitySKUNumber" and navigates to PDP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then verify the buy now button is clickable
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
@@ -160,7 +160,7 @@ Scenario: Verify The mini cart icon on the order confirmation header should disp
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	When User searches a product "SanitySKUNumber" and navigates to PDP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then verify the buy now button is clickable
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
@@ -212,7 +212,7 @@ Scenario: Verify Shipping address and method has errors Then user should be navi
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	When User searches a product "SanitySKUNumber" and navigates to PDP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then verify the buy now button is clickable
 	Then Verify the message on the page
     |# Following Error Message should show on the page|

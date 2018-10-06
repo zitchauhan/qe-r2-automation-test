@@ -8,8 +8,7 @@ Scenario: Verify that Authenticated user is NOT able proceed to checkout if paym
 	And user enter the valid emailaddress "userhavingfraudcreditcard" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User Navigates L2 form Homepage Header 
-    And User clicks on product in PLP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP modal popup|
     |Default_Payment_Option_btn|
@@ -23,8 +22,7 @@ Scenario: Verify that Authenticated user is able proceed to checkout by adding p
 	And user enter the valid emailaddress "userhavingexpiredcreditcard" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User Navigates L2 form Homepage Header 
-    And User clicks on product in PLP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP modal popup|
     |Default_Payment_Option_btn|
@@ -38,8 +36,7 @@ Scenario: Verify that user is able to proceed with checkout if user does not sel
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User Navigates L2 form Homepage Header 
-    And User clicks on product in PLP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP modal popup|
     |Default_Payment_Option_btn|
@@ -67,8 +64,7 @@ Scenario: Verify that if Prop65 shipping restricted to CA, and user has CA as de
 	And user enter the valid emailaddress "UserWithDefaultCaliforniaAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User Navigates L2 form Homepage Header 
-    And User clicks on product in PLP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP modal popup|
     |Default_Payment_Option_btn|
@@ -82,8 +78,7 @@ Scenario: Verify that if Prop65 shipping restricted to CA, and user has CA as de
 	And user enter the valid emailaddress "UserWithDefaultCaliforniaAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User Navigates L2 form Homepage Header 
-    And User clicks on product in PLP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP modal popup|
     |Default_Payment_Option_btn|
@@ -97,8 +92,7 @@ Scenario: Verify that Buy Now CTA is not displayed when shipping method and/ or 
 	And user enter the valid emailaddress "EmailWithoutShipDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User Navigates L2 form Homepage Header 
-    And User clicks on product in PLP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP modal popup|
     |EnableBuyNow_btn|
@@ -120,8 +114,7 @@ Scenario: Verify that if Prop65 shipping restricted to CA, and user has CA as de
 	And user enter the valid emailaddress "UserWithDefaultCaliforniaAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	And User Navigates L2 form Homepage Header 
-    And User clicks on product in PLP
+	When User searches a product "SKUForBuyNow" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP modal popup|
     |Default_Payment_Option_btn|

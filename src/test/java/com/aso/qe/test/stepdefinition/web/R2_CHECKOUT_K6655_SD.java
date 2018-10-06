@@ -37,7 +37,7 @@ public class R2_CHECKOUT_K6655_SD extends CommonActionHelper {
 	@When("^User clicks on Enable Buy Now button$")
 	public void user_clicks_on_Enable_Buy_Now_button() throws Throwable {
 		assertTrue(clickOnButton(r2PdpPo.EnableBuyNow_btn));
-		Thread.sleep(Constants.thread_medium); 
+		Thread.sleep(Constants.thread_highest); 
 	}
 	
 	@Then("^user should not able to see the Enable BUY NOW button on the PDP$")

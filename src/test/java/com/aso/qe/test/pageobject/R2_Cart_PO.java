@@ -728,7 +728,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="//*[text()='Change ZIP Code']")public WebElement  lnkChangeZipCode;
 	@FindBy(xpath = "//div[text()='Estimated Taxes']/../div[2]")public WebElement txtEstimatedTaxesCart;
 	@FindBy(xpath = "//div[text()='Total']/../div[2]")public WebElement txtTotal;
-	@FindBy(xpath="//div[text()='Discounts']")public WebElement discount_Txt;
+	//KER-3166 (06-Oct) | Discounts text is changed to Discount Sreekanth
+	@FindBy(xpath="//div[text()='Discount']")public WebElement discount_Txt;
 	@FindBy(xpath = "//button[@data-auid='crt_btnRmPromo_0']")public WebElement RemovePromocode_Btn; 
 	@FindBy(xpath = "(//*[@data-auid='crt_qtyField'])[1]/following::*[18]")
 	public WebElement FirstQuantityPrice_Txt;
