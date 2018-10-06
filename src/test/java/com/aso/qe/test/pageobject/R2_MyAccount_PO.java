@@ -203,8 +203,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='myAccountCta']")
 	public WebElement lnkMyAccount;
 
-	@FindBy(xpath = "//*[contains(text(),'Current Password')]/following-sibling::div/input")
-	public WebElement txtCurrentPassword;//modified GK 04 - Oct
+	@FindBy(xpath = "//*[contains(text(),'Current Password')]/following-sibling::div/input | //*[contains(text(),'Current Password')]/../following-sibling::div/input | //*[@name='currentPassword']")
+	public WebElement txtCurrentPassword;//modified GK 06 - Oct
 
 	// @FindBy(xpath = "//div[.='New
 	// Password']/following-sibling::input[@type='password']")/RKA 18 sept

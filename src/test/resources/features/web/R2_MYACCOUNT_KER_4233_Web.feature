@@ -10,7 +10,7 @@ Scenario: Verify that Authenticated User is able to view the Wish List page
 	And user click on signin button 
 	And user click on MyAccount 
 	Then user click on WishList 
-	Then deletes all the existing wishlists
+	Then deletes all the existing wishlists 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in wishlist|
 		|WishlistPage_CreateANewWishlist_btn|
@@ -289,11 +289,16 @@ Scenario: Verify that Authenticated User is able to view the Wish List Details
 	And user click on signin button 
 	And user click on MyAccount 
 	Then user click on WishList 
+	And deletes all the existing wishlists 
+	And user clicks on create first wishlist button 
+	Then user enters Wishlist name "WishlistName" 
+	And user clicks on Create List 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following element in wishlist section|
 		|Wishlist_createlist_lnk|
 		|WishlistItems_lnk|
-	And user clicks on WishListItems 
+	And User searches a product "productName" and navigates to PDP 
+	And user add an item to wishlist "WishlistName" and navigates to wishlist 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following element in wishlist section|
 		|WishList_Product_Img|
@@ -310,6 +315,12 @@ Scenario: Verify the User is able to move item from wish list to cart
 	And user enter the valid emailaddress "EmailWithoutShipDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user click on MyAccount 
+	Then user click on WishList 
+	And deletes all the existing wishlists 
+	And user clicks on create first wishlist button 
+	Then user enters Wishlist name "WishlistName" 
+	And user clicks on Create List 
 	And User searches a product "productName" and navigates to PDP 
 	And user add an item to wishlist "WishlistName" and navigates to wishlist 
 	And clicks on Move to Cart button 

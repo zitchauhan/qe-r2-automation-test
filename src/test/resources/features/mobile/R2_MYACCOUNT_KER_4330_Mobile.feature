@@ -1,15 +1,23 @@
 Feature: B06-250 - BOPIS Order Details Page Impact 
 	//Bopis Place Order functionality is not working
-@R2_Mobile  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330
+@R2_Mobile @R2_All @P-High @C-Order @CS-MyAccount_Order @KER-4330 
 @ZYP_MYACCOUNT_K4330-10933 @CR-MS 
-Scenario:
-Verify that for Authenticated user Cancel Order CTA is displayed for orders having BOPIS items 
+Scenario: 
+	Verify that for Authenticated user Cancel Order CTA is displayed for orders having BOPIS items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user will click on View Cart button 
+	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
+	Then verify user can begin checkout 
+	Then user click on review order button 
+	And user able to see the button place order 
 	Then User clicks on the burger menu 
 	And user click on MyAccount 
 	And user click on Orders link 
@@ -21,7 +29,7 @@ Verify that for Authenticated user Cancel Order CTA is displayed for orders havi
 		|#Verify following elements in my account order details|
 		|Order_Note_Txt|
 		
-@R2_Mobile  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330
+@R2_Mobile @R2_All @P-High @C-Order @CS-MyAccount_Order @KER-4330 
 @ZYP_MYACCOUNT_K4330-10931 @CR-MS 
 Scenario: Verify the details in In-Store Pickup Instructions section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -30,6 +38,14 @@ Scenario: Verify the details in In-Store Pickup Instructions section
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user will click on View Cart button 
+	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
+	Then verify user can begin checkout 
+	Then user click on review order button 
+	And user able to see the button place order 
 	Then User clicks on the burger menu 
 	And user click on MyAccount 
 	And user click on Orders link 
@@ -41,7 +57,7 @@ Scenario: Verify the details in In-Store Pickup Instructions section
 		|#Verify following elements in my account order details|
 		|IN STORE PICKUP INSTRUCTIONS| 
 		
-@R2_Mobile  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330
+@R2_Mobile @R2_All @P-High @C-Order @CS-MyAccount_Order @KER-4330 
 @ZYP_MYACCOUNT_K4330-10928 @CR-MS 
 Scenario: Verify that user is able to view BOPIS order details before pickup 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -57,7 +73,7 @@ Scenario: Verify that user is able to view BOPIS order details before pickup
 		|#Verify following elements in my account order details|
 		|Order_View_Details_Btn|    
 		
-@R2_Mobile  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330
+@R2_Mobile @R2_All @P-High @C-Order @CS-MyAccount_Order @KER-4330 
 @ZYP_MYACCOUNT_K4330-10936 @CR-MS 
 Scenario: Verify the details in order details section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -66,9 +82,17 @@ Scenario: Verify the details in order details section
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user will click on View Cart button 
+	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
+	Then verify user can begin checkout 
+	Then user click on review order button 
+	And user able to see the button place order 
 	Then User clicks on the burger menu 
 	And user click on MyAccount 
-	When user click on Orders link 
+	And user click on Orders link 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in my account order details|
 		|Order_View_Details_Btn|
@@ -76,9 +100,9 @@ Scenario: Verify the details in order details section
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in my account order details|
 		|Order_Payment_txt|
-		|Order_Payment_Section|   
+		|Order_Payment_Section|  
 		
-@R2_Mobile  @R2_All @P-High @1HR_R2 @C-Order @CS-MyAccount_Order     
+@R2_Mobile @R2_All @P-High @1HR_R2 @C-Order @CS-MyAccount_Order 
 @KER-4330 @ZYP_MYACCOUNT_K4330-10934 @CR-MS 
 Scenario: Verify that user is able to view BOPIS order details before pickup 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -111,8 +135,8 @@ Scenario: Verify that user is able to view BOPIS order details before pickup
 		|Order_Bopis_Pickup_txt|
 		|Order_Bopis_Store_Hours_txt| 
 		
-@R2_Mobile  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330
-@ZYP_MYACCOUNT_K4330-10930 @CR-MS 
+@R2_Mobile @R2_All @P-High @C-Order @CS-MyAccount_Order @KER-4330 
+@ZYP_MYACCOUNT_K4330-10930 @C-Order @CR-MS 
 Scenario: Verify the details in In Store Pickup section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
@@ -120,9 +144,16 @@ Scenario: Verify the details in In Store Pickup section
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart 
+	And User searches a product "SKUForBopisProduct" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user will click on View Cart button 
+	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
+	And user click on checkout button in Cart page 
+	Then user click on review order button 
+	And user able to see the button place order 
 	Then User clicks on the burger menu 
-	And user click on MyAccount 
-	And user click on Orders link 
+	And user navigates from Order successful page to Orders in my account 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in my account order details|
 		|Order_View_Details_Btn|
@@ -132,10 +163,10 @@ Scenario: Verify the details in In Store Pickup section
 		|Order_Bopis_In_Store_Pickup_txt|
 		|Order_Bopis_Pickup_txt|
 		|Order_Bopis_Store_Hours_txt|
-		|Order_Bopis_Pickup_Information_Person_Details_Txt| 
+		|Order_Bopis_Pickup_Information_Person_Details_Txt|
 		
-@R2_Mobile  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330
-@ZYP_MYACCOUNT_K4330-10929 @CR-MS 
+@R2_Mobile @R2_All @P-High @C-Order @CS-MyAccount_Order @KER-4330 
+@ZYP_MYACCOUNT_K4330-10929 @C-Order @CR-MS 
 Scenario: Verify the details in order details section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
@@ -143,9 +174,15 @@ Scenario: Verify the details in order details section
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	Then User clicks on the burger menu 
-	And user click on MyAccount 
-	And user click on Orders link 
+	And user navigate and deletes existing items in cart 
+	And User searches a product "SKUForBopisProduct" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user will click on View Cart button 
+	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
+	And user click on checkout button in Cart page 
+	Then user click on review order button 
+	And user able to see the button place order 
+	And user navigates from Order successful page to Orders in my account 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in my account order details|
 		|Order_View_Details_Btn|
@@ -161,8 +198,8 @@ Scenario: Verify the details in order details section
 		|Order_Bopis_Item_Img|
 		|Order_Bopis_Item_Details|
 		
-@R2_Mobile  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330
-@ZYP_MYACCOUNT_K4330-10935 @CR-MS 
+@R2_Mobile @R2_All @P-High @C-Order @CS-MyAccount_Order @KER-4330 
+@ZYP_MYACCOUNT_K4330-10935 @C-Order @CR-MS 
 Scenario: Verify the details in Order Summary section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
@@ -170,9 +207,16 @@ Scenario: Verify the details in Order Summary section
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart 
+	And User searches a product "SKUForBopisProduct" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user will click on View Cart button 
+	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
+	And user click on checkout button in Cart page 
+	Then user click on review order button 
+	And user able to see the button place order 
 	Then User clicks on the burger menu 
-	And user click on MyAccount 
-	And user click on Orders link 
+	And user navigates from Order successful page to Orders in my account 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in my account order details|
 		|Order_View_Details_Btn|

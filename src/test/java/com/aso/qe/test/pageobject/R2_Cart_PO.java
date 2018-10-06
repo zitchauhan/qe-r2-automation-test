@@ -434,7 +434,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(),'Included')]")
 	public WebElement cart_IncludedTxt;
 	
-	@FindBy(xpath = "//div[@data-auid='facetdrawerundefined']")
+	@FindBy(xpath = "//div[@data-auid='facetdrawerundefined']/button")
     public List<WebElement> selectStorePopUpStoreList;
 
     @FindBy(xpath = "//*[contains(text(),'Item Not Available')]")
