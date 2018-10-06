@@ -1,6 +1,6 @@
 Feature: B06-280 - BOPIS Authenticated Order Cancellation 
 
-@R2_Mobile  @R2_All @P-High @C-Order @C-MyAccount_Order   @KER-4327 
+@R2_Mobile  @R2_All @P-High @C-Order @CS-MyAccount_Order   @KER-4327 
 @ZYP_MYACCOUNT_K4327-10912 @CR-MS 
 Scenario: 
 	Verify that for Authenticated user Cancel Order CTA is displayed for orders having BOPIS items 
@@ -21,7 +21,7 @@ Scenario:
 		|#Verify following elements in my account order details|
 		|Order_Cancel_lnk|
 		
-@R2_Mobile  @R2_All @P-High @1HR_R2 @C-Order @C-MyAccount_Order   @KER-4327 
+@R2_Mobile  @R2_All @P-High @1HR_R2 @C-Order @CS-MyAccount_Order   @KER-4327 
 @ZYP_MYACCOUNT_K4327-10917 @CR-MS 
 Scenario: 
 	BOPIS-Verify that Authenticated User is able to navigate back to order details page from cancellation confirmation page 
@@ -45,7 +45,7 @@ Scenario:
 		|#Verify following elements in my account order details|
 		|Order_View_Details_Btn|
 		
-@R2_Mobile  @R2_All @P-High @C-Order @C-MyAccount_Order   @KER-4327 
+@R2_Mobile  @R2_All @P-High @C-Order @CS-MyAccount_Order   @KER-4327 
 @ZYP_MYACCOUNT_K4327-10915 @CR-MS 
 Scenario: 
 	BOPIS-Verify that order is not cancelled if user clicks on No CTA on confirmation modal 
@@ -73,7 +73,7 @@ Scenario:
 		|Order_Back_To_Order_Lnk|
 		|Order_Cancel_lnk|
 		
-@R2_Mobile  @R2_All @P-Low @C-Order @C-MyAccount_Order   @KER-4327 
+@R2_Mobile  @R2_All @P-Low @C-Order @CS-MyAccount_Order   @KER-4327 
 @ZYP_MYACCOUNT_K4327-10914 @CR-MS 
 Scenario: BOPIS-Verify the elements of order cancel confirmation modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -99,7 +99,7 @@ Scenario: BOPIS-Verify the elements of order cancel confirmation modal
 		| ARE YOU SURE YOU WANT TO CANCEL THIS ORDER?| 
 		
 		#Defect-KER-13721
-@R2_Mobile  @R2_All @P-Low @C-Order @C-MyAccount_Order   @KER-4327 
+@R2_Mobile  @R2_All @P-Low @C-Order @CS-MyAccount_Order   @KER-4327 
 @ZYP_MYACCOUNT_K4327-10914 @CR-MS 
 Scenario: 
 	BOPIS-Verify that order is gets cancelled if user clicks on Yes, Cancel my Order CTA on confirmation modal 
@@ -128,7 +128,7 @@ Scenario:
 		|#Verify following elements in my account order details|
 		|Order_Back_To_Order_Lnk|
 		
-@R2_Mobile  @R2_All @P-Highest @C-Order @C-MyAccount_Order   @KER-4327 
+@R2_Mobile  @R2_All @P-Highest @C-Order @CS-MyAccount_Order   @KER-4327 
 @ZYP_MYACCOUNT_K4327-10920 @CR-MS 
 Scenario: 
 	Verify that the Guest user is able to navigate to check order status page 

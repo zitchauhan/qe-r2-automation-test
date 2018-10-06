@@ -1,7 +1,7 @@
 Feature: B06-250 - BOPIS Order Details Page Impact 
 
 	//Bopis Place Order functionality is not working
-@R2_Web  @R2_All @P-High @C-Order @C-MyAccount_Order   @C-MyAccount @KER-4330 
+@R2_Web  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330 
 @ZYP_MYACCOUNT_K4330-10933 @Order @CR-MS 
 Scenario: 
 	Verify that for Authenticated user Cancel Order CTA is displayed for orders having BOPIS items 
@@ -27,7 +27,7 @@ Scenario:
 		|#Verify following elements in my account order details|
 		|Order_Note_Txt|
 		
-@R2_Web  @R2_All @P-High @C-Order @C-MyAccount_Order   @C-MyAccount @KER-4330 
+@R2_Web  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330 
 @ZYP_MYACCOUNT_K4330-10931 @Order @CR-MS @1HR_R2 
 Scenario: Verify the details in In-Store Pickup Instructions section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -52,7 +52,7 @@ Scenario: Verify the details in In-Store Pickup Instructions section
 		|#Verify following elements in my account order details|
 		|IN STORE PICKUP INSTRUCTIONS| 
 		
-@R2_Web  @R2_All @P-High @C-Order @C-MyAccount_Order   @C-MyAccount @KER-4330 
+@R2_Web  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330 
 @ZYP_MYACCOUNT_K4330-10928 @CR-MS 
 Scenario: Verify that user is able to view BOPIS order details before pickup 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -66,7 +66,7 @@ Scenario: Verify that user is able to view BOPIS order details before pickup
 		|#Verify following elements in my account order details|
 		|Order_View_Details_Btn| 
 		
-@R2_Web  @R2_All @P-High @C-Order @C-MyAccount_Order   @C-MyAccount @KER-4330 
+@R2_Web  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330 
 @ZYP_MYACCOUNT_K4330-10936 @CR-MS 
 Scenario: Verify the details in order details section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -85,7 +85,7 @@ Scenario: Verify the details in order details section
 		|Order_Payment_txt|
 		|Order_Payment_Section|
 		
-@R2_Web  @R2_All @P-High @C-Order @C-MyAccount_Order   @C-MyAccount @KER-4330 
+@R2_Web  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330 
 @ZYP_MYACCOUNT_K4330-10934 @Order @CR-MS 
 Scenario: Verify that user is able to view BOPIS order details before pickup 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -115,7 +115,7 @@ Scenario: Verify that user is able to view BOPIS order details before pickup
 		|Order_Bopis_Pickup_txt|
 		|Order_Bopis_Store_Hours_txt| 
 		
-@R2_Web  @R2_All @P-High @C-Order @C-MyAccount_Order   @C-MyAccount @KER-4330 
+@R2_Web  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330 
 @ZYP_MYACCOUNT_K4330-10930 @Order @CR-MS 
 Scenario: Verify the details in In Store Pickup section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -143,7 +143,7 @@ Scenario: Verify the details in In Store Pickup section
 		|Order_Bopis_Store_Hours_txt|
 		|Order_Bopis_Pickup_Information_Person_Details_Txt| 
 		
-@R2_Web  @R2_All @P-High @C-Order @C-MyAccount_Order   @C-MyAccount @KER-4330 
+@R2_Web  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330 
 @ZYP_MYACCOUNT_K4330-10929 @Order @CR-MS 
 Scenario: Verify the details in order details section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -175,7 +175,7 @@ Scenario: Verify the details in order details section
 		|Order_Bopis_Item_Img|
 		|Order_Bopis_Item_Details|
 		
-@R2_Web  @R2_All @P-High @C-Order @C-MyAccount_Order   @C-MyAccount @KER-4330 
+@R2_Web  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330 
 @ZYP_MYACCOUNT_K4330-10935 @Order @CR-MS 
 Scenario: Verify the details in Order Summary section 
 	Given user launches the browser and navigates to "ASO_HOME" page 

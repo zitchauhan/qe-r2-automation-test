@@ -1,6 +1,6 @@
 Feature: Order Cancellation Guest Customer Order Search 
 
-@R2_Web  @R2_All @P-Low @C-Order @C-MyAccount_Order   @KER-4018 
+@R2_Web  @R2_All @P-Low @C-Order @CS-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10658 @CR-AKK 
 Scenario Outline: Verify that the error message is displayed if Guest user enters invalid Order number or Billing Zip Code
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -12,7 +12,7 @@ Scenario Outline: Verify that the error message is displayed if Guest user enter
     |InvalidOrdernumber|InvalidBillingZipcode |
     |2421424		   | 14124				  |
 		
-@R2_Web  @R2_All @P-Low @C-Order @C-MyAccount_Order   @KER-4018 
+@R2_Web  @R2_All @P-Low @C-Order @CS-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-KER-10653 @CR-AKK 		
 Scenario: Verify that the Guest user is able to navigate to check order status page.
 Given user launches the browser and navigates to "ASO_HOME" page 
@@ -22,7 +22,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|Order Number|
 	|Billing Zip Code|
 	
-@R2_Web  @R2_All @P-High @C-Order @C-MyAccount_Order   @KER-4018 
+@R2_Web  @R2_All @P-High @C-Order @CS-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10657 @CR-AKK 
 Scenario Outline: Verify that the error message is displayed if Guest user enters order detail not matching with valid order
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -34,7 +34,7 @@ Scenario Outline: Verify that the error message is displayed if Guest user enter
     |InvalidOrdernumber|ValidBillingZipcode   |
     |2421424		   | 77450			  	  |
 	
-	@R2_Web  @R2_All @P-High @C-Order @C-MyAccount_Order   @KER-4018 
+	@R2_Web  @R2_All @P-High @C-Order @CS-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10656 @CR-AKK 
 Scenario Outline: Verify that the error message is displayed if Guest user enters order detail not matching with valid order
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -46,7 +46,7 @@ Scenario Outline: Verify that the error message is displayed if Guest user enter
     |ValidOrdernumber|InValidBillingZipcode   |
     |9052176008		   | 77450			  	  |
 	
-	@R2_Web  @R2_All @P-Low @C-Order @C-MyAccount_Order   @KER-4018 
+	@R2_Web  @R2_All @P-Low @C-Order @CS-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10654 @CR-AKK 
 	Scenario Outline: Verify that the Guest user is not able to enter non numerical values in Order number and Billing Zip code fields. 
 Given user launches the browser and navigates to "ASO_HOME" page 
@@ -58,7 +58,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
     |InvalidOrdernumber|InValidBillingZipcode   |
     |ABNNC		   | BAV		  	  |
 
-@R2_Web  @R2_All @P-Highest @1HR_R2 @C-Order @C-MyAccount_Order   @KER-4018 
+@R2_Web  @R2_All @P-Highest @1HR_R2 @C-Order @CS-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10659 @CR-AKK @1HR_R2
 Scenario:
 Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
@@ -90,7 +90,7 @@ Verify that the error message is displayed if Guest user enters order detail not
 	And Billing information associated with order should NOT be displayed 
 	
 	
-@R2_Web  @R2_All @P-Highest @1HR_R2 @C-Order @C-MyAccount_Order   @KER-4018 
+@R2_Web  @R2_All @P-Highest @1HR_R2 @C-Order @CS-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10660 @CR-AKK 
 Scenario:
 Verify that Authenticated user is able to view order details if clicks check order status in footer. 
