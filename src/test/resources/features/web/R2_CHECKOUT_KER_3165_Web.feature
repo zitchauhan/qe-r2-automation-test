@@ -334,7 +334,7 @@ Scenario:
 		
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-3165 
 @ZYP_CHECKOUT_K3165-8254 @CR-GK 
 Scenario: Verify the guest user is able to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -407,7 +407,7 @@ Scenario:
 	Then Guest User should be able to see only one available method for the shipment displayed in shipping method 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Low   @KER-3165 
 @ZYP_CHECKOUT_K3165-8255 @CR-GK 
 Scenario: 
 	Verify the guest user's address is saved in My Address on registering from Order confirmation 

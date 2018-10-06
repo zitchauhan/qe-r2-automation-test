@@ -40,7 +40,7 @@ Scenario: Verify that Authenticated user is able to view "Enable Buy Now" button
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn| 
     
-@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8692 @CR-MS
+@R2_Mobile @R2_All @P-High @1HR_R2 @C-Order @CC-Checkout_Order @KER-6655 @ZYP_CHECKOUT_K6655-8692 @CR-MS
 Scenario: Verify that Authenticated user is able to view modal to add shipping details if user does not have saved Shipping Address but has saved payment details
     Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -63,7 +63,7 @@ Scenario: Verify that Authenticated user is able to view modal to add shipping d
     |Shipping_State_txt|
     |Add_Default_Payment_Option_btn|
     
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8721 @CR-MS
+@R2_Mobile @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6655 @ZYP_CHECKOUT_K6655-8721 @CR-MS
 Scenario: Verify the shipping details modal if user does not have saved Shipping Address and payment details in My Account
     Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -131,7 +131,7 @@ Scenario: Verify Enable Buy Now is applicable for Gift cards
     |#Verify following elements in PDP modal popup|
     |Default_Payment_Option_btn|
     
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8726 @CR-MS
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High @KER-6655 @ZYP_CHECKOUT_K6655-8726 @CR-MS
 Scenario: Verify the Payment details modal if user does not have saved Shipping Address and payment details in My Account
     Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
@@ -171,7 +171,7 @@ Scenario: Verify the Payment details modal if user does not have saved Shipping 
     |PaymentFormSubmit_btn|    
     
     
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8731 @CR-MS
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High @KER-6655 @ZYP_CHECKOUT_K6655-8731 @CR-MS
 Scenario: Verify the Payment details modal if user does not have saved Shipping Address and payment details in My Account
     Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 
@@ -199,7 +199,7 @@ Scenario: Verify the Payment details modal if user does not have saved Shipping 
     |BillingEmail_txt|
     |PaymentFormSubmit_btn|       
     
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8732 @CR-MS @1HR_R2 @1HR_R2
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High @KER-6655 @ZYP_CHECKOUT_K6655-8732 @CR-MS @1HR_R2 @1HR_R2
 Scenario: Verify that Authenticated user is able proceed to checkout by adding payment details in Payment Form modal if user does not have saved Payment Address but has saved Shipping details
     Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 
@@ -266,7 +266,7 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
     |Verify following elements in PDP page|
     |EnableBuyNow_btn|	 
     
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8693 @CR-MS
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-6655 @ZYP_CHECKOUT_K6655-8693 @CR-MS
 Scenario: Verify that Authenticated user is able proceed to checkout by adding shipping details in Shipping Form modal if user does not have saved Shipping Address but has saved payment details
 Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -298,7 +298,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
     |#Verify following elements in PDP modal popup|
     |Add_Default_Payment_Option_btn| 
     
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8727 @CR-MS @1HR_R2 @1HR_R2
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-6655 @ZYP_CHECKOUT_K6655-8727 @CR-MS @1HR_R2 @1HR_R2
 Scenario: Verify that Authenticated user is able proceed to CHECKOUT by adding shipping and Payment details if user does not have saved Shipping Address and payment details in My Account
 Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

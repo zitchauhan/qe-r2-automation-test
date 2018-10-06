@@ -41,7 +41,7 @@ Feature: B06-225- BOPIS Age Restriction Flag in Checkout
     And user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers
 
   
-  @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3174 @ZYP_CART_K3174-KER-10273 @CR-RK
+  @R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-Low   @KER-3174 @ZYP_CART_K3174-KER-10273 @CR-RK
   Scenario: Verify guest user is able to place the BOPIS order
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -64,7 +64,7 @@ Feature: B06-225- BOPIS Age Restriction Flag in Checkout
 	And user able to see the button place order
 	
 	
-	 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3174 @ZYP_CART_K3174-KER-10275 @CR-RK
+	 @R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-Low   @KER-3174 @ZYP_CART_K3174-KER-10275 @CR-RK
   Scenario: Verify authenticate user is able to place the BOPIS order
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

@@ -1,6 +1,6 @@
 Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
 
-  @R2_Mobile  @R2_All @P-High  @C-Order @CS-MyAccount_Order   @KER-4019 @ZYP_MYACCOUNT_K4019-10648 @CR-SG
+  @R2_Mobile  @R2_All @P-High  @C-Order @CC-MyAccount_Order   @KER-4019 @ZYP_MYACCOUNT_K4019-10648 @CR-SG
   Scenario: Verify that order is gets cancelled if Guest user clicks on Yes, Cancel my Order CTA on confirmation modal
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
@@ -35,7 +35,7 @@ Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
       | #Verify following elements in my account order details |
       | Order_Back_To_Order_Lnk                                |
 
-  @R2_Mobile  @R2_All @P-High  @C-Order @CS-MyAccount_Order   @KER-4019 @ZYP_MYACCOUNT_K4019-10650 @CR-SG
+  @R2_Mobile  @R2_All @P-High  @C-Order @CC-MyAccount_Order   @KER-4019 @ZYP_MYACCOUNT_K4019-10650 @CR-SG
   Scenario: Verify that Guest User is able to navigate back to order details page from cancellation confirmation page
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
@@ -67,7 +67,7 @@ Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
     Then Order Details page should be displayed
     And Cancel Order CTA should not be displayed
 
-  @R2_Mobile  @R2_All @P-High  @C-Order @CS-MyAccount_Order   @KER-4019 @ZYP_MYACCOUNT_K4019-10641 @CR-SG
+  @R2_Mobile  @R2_All @P-High  @C-Order @CC-MyAccount_Order   @KER-4019 @ZYP_MYACCOUNT_K4019-10641 @CR-SG
   Scenario: Verify that for Guest user Cancel Order CTA is displayed for orders in remorse period
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
@@ -97,7 +97,7 @@ Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
       | #Verify following elements in my account order details |
       | Order_Cancel_lnk                                       |
 
-  @R2_Mobile  @R2_All @P-High  @C-Order @CS-MyAccount_Order   @KER-4019 @ZYP_MYACCOUNT_K4019-10642 @CR-SG
+  @R2_Mobile  @R2_All @P-High  @C-Order @CC-MyAccount_Order   @KER-4019 @ZYP_MYACCOUNT_K4019-10642 @CR-SG
   Scenario: Verify that for Guest user Cancel Order CTA is not displayed for fully shipped orders
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
@@ -125,7 +125,7 @@ Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
     Then Order Details page should be displayed
     And Cancel Order CTA should not be displayed
 
-  @R2_Mobile  @R2_All @P-High  @C-Order @CS-MyAccount_Order   @KER-4019 @ZYP_MYACCOUNT_K4019-10643 @CR-SG
+  @R2_Mobile  @R2_All @P-High  @C-Order @CC-MyAccount_Order   @KER-4019 @ZYP_MYACCOUNT_K4019-10643 @CR-SG
   Scenario: Verify that for Guest user Cancel Order CTA is NOT displayed for partially shipped orders
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
@@ -153,7 +153,7 @@ Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
     Then Order Details page should be displayed
     And Cancel Order CTA should not be displayed
 
-  @R2_Mobile  @R2_All @P-High @1HR_R2 @C-Order @CS-MyAccount_Order   @KER-4019 @ZYP_MYACCOUNT_K4019-10646 @CR-SG
+  @R2_Mobile  @R2_All @P-High @1HR_R2 @C-Order @CC-MyAccount_Order   @KER-4019 @ZYP_MYACCOUNT_K4019-10646 @CR-SG
   Scenario: Verify that order is not cancelled if Guest user clicks on No CTA on confirmation modal
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP

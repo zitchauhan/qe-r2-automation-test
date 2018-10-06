@@ -36,7 +36,7 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8692 @CR-MS
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-6655 @ZYP_CHECKOUT_K6655-8692 @CR-MS
 Scenario: Verify that Authenticated user is able to view modal to add shipping details if user does not have saved Shipping Address but has saved payment details
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
@@ -58,7 +58,7 @@ Scenario: Verify that Authenticated user is able to view modal to add shipping d
     |Shipping_State_txt|
     |Add_Default_Payment_Option_btn|
     
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8721 @CR-MS
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-6655 @ZYP_CHECKOUT_K6655-8721 @CR-MS
 Scenario: Verify the shipping details modal if user does not have saved Shipping Address and payment details in My Account
    Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
@@ -81,7 +81,7 @@ Scenario: Verify the shipping details modal if user does not have saved Shipping
     |Add_Default_Payment_Option_btn|
     
       
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12346 @CR-MS @1HR_R2
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-6655 @ZYP_CHECKOUT_K6655-12346 @CR-MS @1HR_R2
 Scenario: Verify Enable Buy Now is applicable for Baits
    Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
@@ -97,7 +97,7 @@ Scenario: Verify Enable Buy Now is applicable for Baits
     |Default_Payment_Option_btn|
     
 ##Defect-KER-13488
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12348 @CR-MS
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-6655 @ZYP_CHECKOUT_K6655-12348 @CR-MS
 Scenario: Verify Enable Buy Now is not applicable for following items SOF Age Restriction Items Item(s) having only In store Inventory while loading PDP
    Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
@@ -121,7 +121,7 @@ Scenario: Verify Enable Buy Now is applicable for Gift cards
     |#Verify following elements in PDP modal popup|
     |Default_Payment_Option_btn|    
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8726 @CR-MS
+@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6655 @ZYP_CHECKOUT_K6655-8726 @CR-MS
 Scenario: Verify the Payment details modal if user does not have saved Shipping Address and payment details in My Account
    Given user launches the browser and navigates to "ASO_HOME" page  
 	And user clicks on SignIn link from global header 
@@ -157,7 +157,7 @@ Scenario: Verify the Payment details modal if user does not have saved Shipping 
     |BillingEmail_txt|
     |PaymentFormSubmit_btn|
     
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8731 @CR-MS
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-6655 @ZYP_CHECKOUT_K6655-8731 @CR-MS
 Scenario: Verify that Authenticated user is able to view modal to add payment details if user does not have saved payment details but has saved Shipping Address
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
@@ -184,7 +184,7 @@ Scenario: Verify that Authenticated user is able to view modal to add payment de
     |BillingEmail_txt|
     |PaymentFormSubmit_btn|   
     
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8732 @CR-MS @1HR_R2
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-6655 @ZYP_CHECKOUT_K6655-8732 @CR-MS @1HR_R2
 Scenario: Verify that Authenticated user is able proceed to checkout by adding payment details in Payment Form modal if user does not have saved Payment Address but has saved Shipping details
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
@@ -220,7 +220,7 @@ Scenario: Verify that Authenticated user is able proceed to checkout by adding p
     |PaymentFormSubmit_btn|
   
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12345 @CR-MS @1HR_R2
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-6655 @ZYP_CHECKOUT_K6655-12345 @CR-MS @1HR_R2
 Scenario: Verify Enable Buy Now is applicable for Bundle / Package Item(s)
 Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
@@ -233,7 +233,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn| 
     
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8735 @CR-MS
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-6655 @ZYP_CHECKOUT_K6655-8735 @CR-MS
 Scenario: Verify that Authenticated user is able to view Enable Buy Now button on PDP if user does not have saved payment and Shipping Address details
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
@@ -246,7 +246,7 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
     |EnableBuyNow_btn|
         
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8693 @CR-MS
+@R2_Web  @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6655 @ZYP_CHECKOUT_K6655-8693 @CR-MS
 Scenario: Verify that Authenticated user is able proceed to checkout by adding shipping details in Shipping Form modal if user does not have saved Shipping Address but has saved payment details
 Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
@@ -276,7 +276,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
     |#Verify following elements in PDP modal popup|
     |Add_Default_Payment_Option_btn|
     
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8727 @CR-MS @1HR_R2
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-6655 @ZYP_CHECKOUT_K6655-8727 @CR-MS @1HR_R2
 Scenario: Verify that Authenticated user is able proceed to CHECKOUT by adding shipping and Payment details if user does not have saved Shipping Address and payment details in My Account
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	And user clicks on SignIn link from global header 

@@ -39,7 +39,7 @@ Scenario:
 		|OrderPage_Find_btn					  |
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Web @C-Order @CC-MyAccount_Order @R2_All @P-High   @KER-4237 
 @ZYP_MYACCOUNT_K4237-10513 @CR-GK 
 Scenario: 
 	Verify that Authenticated user is able to view shipping and Billing Details of an order 
@@ -73,7 +73,7 @@ Scenario:
 		|Order_Payment_txt							|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Web @C-Order @CC-MyAccount_Order @R2_All @P-High   @KER-4237 
 @ZYP_MYACCOUNT_K4237-10514 @CR-GK 
 Scenario: 
 	Verify that Guest user is not able to view shipping and Billing Details of an order 
@@ -105,7 +105,7 @@ Scenario:
 		|Order_OrderTotal							|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Web @C-Order @CC-MyAccount_Order @R2_All @P-High   @KER-4237 
 @ZYP_MYACCOUNT_K4237-10518 @Order @CR-GK 
 Scenario: Verify that Authenticated user is able to Print Order receipt 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -149,7 +149,7 @@ Scenario:
 		|MyAccount_OrderDetailsPage_SubTotalAmount  |
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Web @C-Order @CC-MyAccount_Order @R2_All @P-High   @KER-4237 
 @ZYP_MYACCOUNT_K4237-10526 @Order @CR-GK 
 Scenario: Verify that UnAuthenticated user is able to print order receipt 
 	Given user launches the browser and navigates to "ASO_HOME" page 

@@ -1,7 +1,7 @@
 Feature: B10-500 - Buy Now Checkout Error Conditions
 
         #Defect-KER-14238--Functionality is not working
-@R2_Mobile @R2_Regression @R2_All @P-low @C-Checkout @KER-7040 @ZYP_CHECKOUT_K7040-8907 @CR-MS @1HR_R2
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-low   @KER-7040 @ZYP_CHECKOUT_K7040-8907 @CR-MS @1HR_R2
 Scenario: Verify that Authenticated user is NOT able proceed to checkout if payment information fails fraud check
 Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 
@@ -16,7 +16,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
      When User clicks on Enable Buy Now button
 #    Then verify the error message
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-7040 @ZYP_CHECKOUT_K6655-12028 @CR-MS
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High  @KER-7040 @ZYP_CHECKOUT_K6655-12028 @CR-MS
 Scenario: Verify that Authenticated user is NOT able proceed to checkout if payment information fails fraud check
 Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 
@@ -31,7 +31,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
      When User clicks on Enable Buy Now button
 #    Then verify the error message
 
-@R2_Mobile   @R2_All @P-Low @C-Order @CS-Checkout_Order   @KER-7040 @ZYP_CHECKOUT_K6655-8906 @CR-MS
+@R2_Mobile   @R2_All @P-Low @C-Order @CC-Checkout_Order   @KER-7040 @ZYP_CHECKOUT_K6655-8906 @CR-MS
 Scenario: Verify that user is able to proceed with checkout if user does not selects required product attributes
  Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -47,7 +47,7 @@ Scenario: Verify that user is able to proceed with checkout if user does not sel
 #   Then user verifies the order number
 
 
-@R2_Mobile  @R2_All @P-Low @C-Order @CS-Checkout_Order @KER-7040 @ZYP_CHECKOUT_K6655-11946 @CR-MS
+@R2_Mobile  @R2_All @P-Low @C-Order @CC-Checkout_Order @KER-7040 @ZYP_CHECKOUT_K6655-11946 @CR-MS
 Scenario: Verify that user is able to proceed with checkout if user does not selects required product attributes
  Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -62,7 +62,7 @@ Scenario: Verify that user is able to proceed with checkout if user does not sel
     When User clicks on Enable Buy Now button
 #   Then user verifies the order number
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-7040 @ZYP_CHECKOUT_K6655-12030 @CR-MS
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-Low   @KER-7040 @ZYP_CHECKOUT_K6655-12030 @CR-MS
 Scenario: Verify that if Prop65 shipping restricted to CA, and user has CA as default address in profile then error message is displayed and Buy Now is disabled on the PDP
  Given user launches the browser and navigates to "ASO_HOME" page
    Then User clicks on the burger menu
@@ -77,7 +77,7 @@ Scenario: Verify that if Prop65 shipping restricted to CA, and user has CA as de
     When User clicks on Enable Buy Now button
 #    Then verify the error message
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-7040 @ZYP_CHECKOUT_K6655-12031 @CR-MS
+@R2_Mobile   @R2_All @P-Low @C-Order @CC-Checkout_Order @KER-7040 @ZYP_CHECKOUT_K6655-12031 @CR-MS
 Scenario: Verify that if Prop65 shipping restricted to CA, and user has CA as default address in profile then error message is displayed on checkout
  Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -116,7 +116,7 @@ Scenario: Verify that user should be displayed with error message if they try to
 	When User searches a product "SOFSKUNumber" and navigates to PDP
 	Then user should not able to see the Enable BUY NOW button on the PDP     
    
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-7040 @ZYP_CHECKOUT_K6655-12033 @CR-MS
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-Low   @KER-7040 @ZYP_CHECKOUT_K6655-12033 @CR-MS
 Scenario: Verify that if Prop65 shipping restricted to CA, and user has CA as default address in profile then error message is displayed on checkout
  Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

@@ -1,6 +1,6 @@
 Feature: Order Cancellation Guest Customer Order Search 
 
-@R2_Mobile  @R2_All @P-Low @C-Order @CS-MyAccount_Order   @KER-4018 
+@R2_Mobile  @R2_All @P-Low @C-Order @CC-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10658 @CR-AKK 
 Scenario Outline:
 Verify that the error message is displayed if Guest user enters invalid Order number or Billing Zip Code 
@@ -13,7 +13,7 @@ Verify that the error message is displayed if Guest user enters invalid Order nu
 		|InvalidOrdernumber|InvalidBillingZipcode |
 		|2421424		   | 14124				  |
 		
-@R2_Mobile  @R2_All @P-Low @C-Order @CS-MyAccount_Order   @KER-4018 
+@R2_Mobile  @R2_All @P-Low @C-Order @CC-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-KER-10653 @CR-AKK 
 Scenario:
 Verify that the Guest user is able to navigate to check order status page. 
@@ -24,7 +24,7 @@ Verify that the Guest user is able to navigate to check order status page.
 		|Order Number|
 		|Billing Zip Code|
 		
-@R2_Mobile  @R2_All @P-High @C-Order @CS-MyAccount_Order   @KER-4018 
+@R2_Mobile  @R2_All @P-High @C-Order @CC-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10657 @CR-AKK 
 Scenario Outline:
 Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
@@ -38,7 +38,7 @@ Examples:
 	|2421424		   | 77450			  	  |
 	
 	
-	@R2_Mobile  @R2_All @P-Low @C-Order @CS-MyAccount_Order   @KER-4018 
+	@R2_Mobile  @R2_All @P-Low @C-Order @CC-MyAccount_Order   @KER-4018 
 	@ZYP_MYACCOUNT_K4018-10654 @CR-AKK 
 	Scenario Outline:
 	Verify that the Guest user is not able to enter non numerical values in Order number and Billing Zip code fields. 
@@ -51,7 +51,7 @@ Examples:
 	|InvalidOrdernumber|InValidBillingZipcode   |
 	|ABNNC		   | BAV		  	  |
 	
-	@R2_Mobile  @R2_All @P-High @C-Order @CS-MyAccount_Order   @KER-4018 
+	@R2_Mobile  @R2_All @P-High @C-Order @CC-MyAccount_Order   @KER-4018 
 	@ZYP_MYACCOUNT_K4018-10656 @CR-AKK 
 	Scenario Outline:
 	Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
@@ -65,7 +65,7 @@ Examples:
 	|9052176008		   | 77450			  	  |
 	
 	
-@R2_Mobile  @R2_All @P-Highest @1HR_R2 @C-Order @CS-MyAccount_Order  
+@R2_Mobile  @R2_All @P-Highest @1HR_R2 @C-Order @CC-MyAccount_Order  
 @KER-4018 
 @ZYP_MYACCOUNT_K4018-10659 @CR-AKK 
 Scenario:
@@ -98,7 +98,7 @@ Then System Generate ordernumber "GeneratedOrdernumber" and "zipcode"
 	And Billing information associated with order should NOT be displayed 
 	
 	
-@R2_Mobile  @R2_All @P-Highest @1HR_R2 @C-Order @CS-MyAccount_Order  
+@R2_Mobile  @R2_All @P-Highest @1HR_R2 @C-Order @CC-MyAccount_Order  
 @KER-4018 
 @ZYP_MYACCOUNT_K4018-10660 @CR-AKK 
 Scenario:

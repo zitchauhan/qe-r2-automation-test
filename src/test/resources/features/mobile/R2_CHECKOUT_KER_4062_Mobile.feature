@@ -1,6 +1,6 @@
 Feature: Guest registration Post Checkout from Order Confirmation Page
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4062 @ZYP_CART_K4062-8103 @CR-SK 
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-Low   @KER-4062 @ZYP_CART_K4062-8103 @CR-SK 
 Scenario: Verify if user gets proper validation message for empty password
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "productName" and navigates to PDP 
@@ -13,13 +13,13 @@ Scenario: Verify if user gets proper validation message for empty password
 	And user clicks on place order on checkout page
 	And user clicks on create account on order confirmation page
 	And user enters "FirstName" in first name field of sign up page
-	And user clicks on sign up  button
+	And user clicks on sign up button of sign up page
 	Then Verify the message on the page
 	    |# Following error Message should show on the page	|
 	    |Please enter the Password							|	
 	
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4062 @ZYP_CART_K4062-10300
+@R2_Mobile  @R2_All @P-Low   @KER-4062 @ZYP_CART_K4062-10300
 @CR-SK 
 Scenario:
 Verify if user gets proper validation message for password less than 8 characters 
@@ -35,13 +35,13 @@ Verify if user gets proper validation message for password less than 8 character
 	And user clicks on create account on order confirmation page 
 	And user enters "FirstName" in first name field of sign up page 
 	And  user enter "PasswordLessThan8Charactes" in create password field of sign up page 
-	And user clicks on sign up  button
+	And user clicks on sign up button of sign up page
 	Then Verify the message on the page 
 		|# Following error Message should show on the page	|
 		|Password must be at least 8 characters long		|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4062 @ZYP_CART_K4062-8102 @CR-SK 
+@R2_Mobile  @R2_All @P-High @C-Order @CC-Checkout_Order @KER-4062 @ZYP_CART_K4062-8102 @CR-SK 
 Scenario: Verify if user can create account from Order Confirmation Page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "productName" and navigates to PDP 
@@ -65,7 +65,7 @@ Scenario: Verify if user can create account from Order Confirmation Page
 	    |You have successfully registered with Academy.com	|
 	    |LET'S SHOP											|
 	    
-@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-4062 @ZYP_CART_K4062-8105 @CR-SK 
+@R2_Mobile @R2_All @P-High @1HR_R2 @C-Order @CC-Checkout_Order @KER-4062 @ZYP_CART_K4062-8105 @CR-SK 
 Scenario: Verify the available customer details
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "productName" and navigates to PDP 
@@ -79,7 +79,7 @@ Scenario: Verify the available customer details
 	Then user verifies the fields loaded Full name, email address, choose password, submit button and check box for email News letters
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4062
+@R2_Mobile   @R2_All @P-Low @C-Order @CC-Checkout_Order @KER-4062
 @ZYP_CART_K4062-8107 @CR-SK 
 Scenario: verify the account register with out Email News letter 
 	Given user launches the browser and navigates to "ASO_HOME" page 

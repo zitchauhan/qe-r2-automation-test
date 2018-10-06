@@ -126,7 +126,7 @@ Scenario: Verify if User is able to enter billing information
 	And user click on confirm billing address button 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3164 
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-Highest   @KER-3164 
 @ZYP_CHECKOUT_K3164-8031 @CR-GK 
 Scenario: 
 	Given user launches the browser and navigates to "ASO_HOME" page 

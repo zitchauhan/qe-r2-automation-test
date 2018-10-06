@@ -117,7 +117,7 @@ Scenario: Verify if User is able to enter billing information
 	And user click on confirm billing address button 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3164 
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Highest   @KER-3164 
 @ZYP_CHECKOUT_K3164-8031 @CR-GK 
 Scenario: 
 	Verify if the user is able to reviw and place order from One Page Checkout Screen
@@ -141,7 +141,7 @@ Scenario:
 		|OrderConfirmationPage_OrderNumber_txt|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Medium   @KER-3164 
 @ZYP_CHECKOUT_K3164-13296 @CR-GK 
 Scenario: 
 	Verify that user should be displayed with the validation error message if they try to enter invalid email id for order confirmation field in checkout page

@@ -70,7 +70,7 @@ Scenario:
 		|Order_Payment_txt							|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Mobile @C-Order @CC-MyAccount_Order @R2_All @P-High   @KER-4237 
 @ZYP_MYACCOUNT_K4237-10514 @CR-GK @1HR_R2
 Scenario: 
 	Verify that Guest user is not able to view shipping and Billing Details of an order 
