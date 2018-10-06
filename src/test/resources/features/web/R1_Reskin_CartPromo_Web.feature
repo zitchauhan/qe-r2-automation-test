@@ -1,7 +1,7 @@
 Feature: To Verify the Cart Add item/Remove item/Increase and decrease qty & Apply promo code 
 
 
-@Regression @Sanity @C-Reskin @Web @All @Rerun @CR-SDK 
+ @Sanity @C-Reskin @Web @All @Rerun @CR-SDK 
 Scenario: Verify the Add To Cart functionality and validate the product. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates to L3 
@@ -14,7 +14,7 @@ Scenario: Verify the Add To Cart functionality and validate the product.
 	Then User should be able to see added product in cart 
 	And User closes the web application 
 	
-@Regression @Sanity @C-Reskin @Web @All @Rerun @CR-SDK 
+ @Sanity @C-Reskin @Web @All @Rerun @CR-SDK 
 Scenario: Verify the product added to the card is removed from cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates till PLP 
@@ -25,7 +25,7 @@ Scenario: Verify the product added to the card is removed from cart
 	And User closes the web application 
 	
 	
-@Regression @Sanity @C-Reskin @Web @All @Rerun @CR-SDK 
+ @Sanity @C-Reskin @Web @All @Rerun @CR-SDK 
 Scenario: Verify the product is added to the card and able to increase the qty 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates till PLP 
@@ -36,7 +36,7 @@ Scenario: Verify the product is added to the card and able to increase the qty
 	Then user increase the qty by inputing the value 
 	And User closes the web application 
 	
-@Regression @Sanity @C-Reskin @Web @All @Rerun @CR-SDK 
+ @Sanity @C-Reskin @Web @All @Rerun @CR-SDK 
 Scenario: Verify the product is added to the card and able to decreace the qty 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates till PLP 

@@ -175,7 +175,7 @@ Scenario: Verify the details in order details section
 		|Order_Bopis_Item_Img|
 		|Order_Bopis_Item_Details|
 		
-@R2_Web  @R2_All @P-High @C-Order @CS-MyAccount_Order      @KER-4330 
+@R2_Web  @R2_All @P-High @C-Order @CS-MyAccount_Order     @KER-4330 
 @ZYP_MYACCOUNT_K4330-10935 @Order @CR-MS 
 Scenario: Verify the details in Order Summary section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
