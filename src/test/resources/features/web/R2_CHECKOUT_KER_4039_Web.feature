@@ -1,6 +1,6 @@
 Feature: [Web]Payment restrictions
 
-  @R2_Web @R2_All @P-High @1HR_R2 @C-Order @C-Checkout_Order @KER-4039 @ZYP_CHECKOUT_K4039-10454 @CR-RKA
+  @R2_Web @R2_All @P-High @1HR_R2 @C-Order @CC-Checkout_Order @KER-4039 @ZYP_CHECKOUT_K4039-10454 @CR-RKA
   Scenario: Verify that PayPal and More Options radio buttons are disabled when Gift Card is applied
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing
@@ -27,7 +27,7 @@ Feature: [Web]Payment restrictions
       | CreditCard_radioBtn                |
       | PayPal_radioBtn                    |
 
-  @R2_Web @R2_All @P-High @C-Order @C-Checkout_Order @KER-4039 @ZYP_CHECKOUT_K4039-10455 @CR-RKA
+  @R2_Web @R2_All @P-High @C-Order @CC-Checkout_Order @KER-4039 @ZYP_CHECKOUT_K4039-10455 @CR-RKA
   Scenario: Verify that PayPal and More Options radio buttons are enabled when Gift Card is removed
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing
@@ -56,7 +56,7 @@ Feature: [Web]Payment restrictions
       | CreditCard_radioBtn                |
       | PayPal_radioBtn                    |
 
-  @R2_Web @R2_All @P-High @C-Order @C-Checkout_Order @KER-4039 @ZYP_CHECKOUT_K4039-9876 @CR-RKA
+  @R2_Web @R2_All @P-High @C-Order @CC-Checkout_Order @KER-4039 @ZYP_CHECKOUT_K4039-9876 @CR-RKA
   Scenario: Verify that user can combine Gift Card payment with Credit/Debit Card only
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing
@@ -106,7 +106,7 @@ Feature: [Web]Payment restrictions
       | #verify gift card related things are not displayed |
       | PayPalCheckOut_Btn                                 |
 
-  @R2_Web @R2_All @P-High @C-Order @C-Checkout_Order @KER-4039 @ZYP_CHECKOUT_K4039-9889 @CR-RKA
+  @R2_Web @R2_All @P-High @C-Order @CC-Checkout_Order @KER-4039 @ZYP_CHECKOUT_K4039-9889 @CR-RKA
   Scenario: Verify that user can use multiple gift cards to make the payment
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing
