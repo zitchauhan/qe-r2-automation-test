@@ -16,7 +16,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
      When User clicks on Enable Buy Now button
 #    Then verify the error message
 
-@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High  @KER-7040 @ZYP_CHECKOUT_K6655-12028 @CR-MS
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order  @KER-7040 @ZYP_CHECKOUT_K6655-12028 @CR-MS
 Scenario: Verify that Authenticated user is NOT able proceed to checkout if payment information fails fraud check
 Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 

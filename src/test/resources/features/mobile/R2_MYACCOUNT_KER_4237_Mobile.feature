@@ -65,7 +65,7 @@ Feature: E03-100 - My Account, Order Details
       | MyAccount_OrderDetailsPage_EmailOrPhone     |
       | Order_Payment_txt                           |
 
-  @R2_Mobile @C-Order @CC-MyAccount_Order @R2_All @P-High @KER-4237 @ZYP_MYACCOUNT_K4237-10514 @CR-GK @1HR_R2
+  @R2_Mobile @C-Order @CC-MyAccount_Order @R2_All @P-High_Order @KER-4237 @ZYP_MYACCOUNT_K4237-10514 @CR-GK @1HR_R2
   Scenario: 
     Verify that Guest user is not able to view shipping and Billing Details of an order
 

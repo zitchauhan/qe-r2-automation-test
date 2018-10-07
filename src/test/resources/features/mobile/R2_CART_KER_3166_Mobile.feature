@@ -136,7 +136,7 @@ Scenario: To verify Promo code applied in Check out page
 		|TotalDiscount_Txt|	
 		|Total_txt|    		
 		
-@R2_Mobile   @R2_All @P-High @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9591
+@R2_Mobile   @R2_All @P-High_Order @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9591
 @CR-DPK 
 Scenario:
 Verify promotion got applied to the product when user applied %off promotion on product level in cart--with promocode 
@@ -172,7 +172,7 @@ Verify promotion got applied to the Catagory when user applied %off promotion on
 		
 		
 		
-@R2_Mobile   @R2_All @P-High @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9595
+@R2_Mobile   @R2_All @P-High_Order @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9595
 @CR-DPK 
 Scenario:
 Verify promotion got applied for order level when user applied %off promotion on order -- with promocode 
@@ -191,7 +191,7 @@ Verify promotion got applied for order level when user applied %off promotion on
 		|EstimatedTaxes_txt|	
 		|Discount_Txt|
 		
-@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High   @KER-3166 @ZYP_CART_K3166-9596
+@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High_Order   @KER-3166 @ZYP_CART_K3166-9596
 @CR-DPK 
 Scenario:
 Verify promotion got applied to the product when user applied $ Amount off promotion on product level in cart -- with Promocode 
@@ -212,7 +212,7 @@ Verify promotion got applied to the product when user applied $ Amount off promo
 		|Promocode_Txt|	
 		
 		
-@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High  @KER-3166 @ZYP_CART_K3166-9597
+@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High_Order  @KER-3166 @ZYP_CART_K3166-9597
 @CR-DPK 
 Scenario:
 Verify promotion got applied to the Category when user applied $ amount off promotion on Category level in cart -- with promocode 
@@ -229,7 +229,7 @@ Verify promotion got applied to the Category when user applied $ amount off prom
 		|RemovePromocode_Btn|
 		
 		
-@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High   @KER-3166 @ZYP_CART_K3166-9598
+@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High_Order   @KER-3166 @ZYP_CART_K3166-9598
 @CR-DPK 
 Scenario:
 Verify promotion got applied for order level when user applied $ amount off promotion on order -- with promocode 

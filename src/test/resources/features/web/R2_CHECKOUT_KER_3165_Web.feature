@@ -334,7 +334,7 @@ Scenario:
 		
 		
 		
-@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-3165 
+@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-3165 
 @ZYP_CHECKOUT_K3165-8254 @CR-GK 
 Scenario: Verify the guest user is able to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page 

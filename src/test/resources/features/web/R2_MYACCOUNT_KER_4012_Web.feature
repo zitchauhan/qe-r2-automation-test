@@ -1,6 +1,6 @@
 Feature: E03-150-Order Cancellation Request Order Cancellation from My Account
 
-  @R2_Web  @R2_All @P-High @C-Order @CC-MyAccount_Order    @KER-4012 @ZYP_MYACCOUNT_K4012-10668 @ZYP_MYACCOUNT_K4012-10672 @CR-MS
+  @R2_Web  @R2_All @P-High_Order @C-Order @CC-MyAccount_Order    @KER-4012 @ZYP_MYACCOUNT_K4012-10668 @ZYP_MYACCOUNT_K4012-10672 @CR-MS
 Scenario: Verify that order is not cancelled if user clicks on No CTA on confirmation modal
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -46,7 +46,7 @@ Scenario: Verify that for Authenticated user "Cancel Order" CTA is displayed for
 	|Cancel_Yes_Order_Btn|
     |Cancel_NO_Order_Btn|
     
-@R2_Web  @R2_All @P-High @C-Order @CC-MyAccount_Order    @KER-4012 @ZYP_MYACCOUNT_K4012-10668 @ZYP_MYACCOUNT_K4012-10669 @ZYP_MYACCOUNT_K4012-11150 @CR-MS
+@R2_Web  @R2_All @P-High_Order @C-Order @CC-MyAccount_Order    @KER-4012 @ZYP_MYACCOUNT_K4012-10668 @ZYP_MYACCOUNT_K4012-10669 @ZYP_MYACCOUNT_K4012-11150 @CR-MS
 Scenario: Verify that order is gets cancelled if user clicks on Yes, Cancel my Order CTA on confirmation modal
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -61,7 +61,7 @@ Scenario: Verify that order is gets cancelled if user clicks on Yes, Cancel my O
 	And user click on view Details with the GeneratedOrdernumber by yes
 	Then verify the cancellation Order message
 	
-@R2_Web  @R2_All @P-High @C-Order @CC-MyAccount_Order    @KER-4012 @ZYP_MYACCOUNT_K4012-10668 @ZYP_MYACCOUNT_K4012-10669 @CR-MS
+@R2_Web  @R2_All @P-High_Order @C-Order @CC-MyAccount_Order    @KER-4012 @ZYP_MYACCOUNT_K4012-10668 @ZYP_MYACCOUNT_K4012-10669 @CR-MS
 Scenario: Verify Cancel Order link is not displayed after order is cancelled
    Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

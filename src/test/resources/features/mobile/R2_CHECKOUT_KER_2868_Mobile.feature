@@ -33,7 +33,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then Verify the message on the page 
 	
 	
-	@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High    @KER-2868 @ZYP_CHECKOUT_K2868-10716 @CR-AKK
+	@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order    @KER-2868 @ZYP_CHECKOUT_K2868-10716 @CR-AKK
 Scenario: Verify that UnAuthenticated user is able to view In-Store Pickup Information on Order confirmation page
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP
@@ -47,7 +47,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user able to see the button place order
 	Then Verify that In-Store Pickup Information is displayed
 	
-	@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High    @KER-2868 @ZYP_CHECKOUT_K2868-10739 @CR-AKK
+	@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order   @KER-2868 @ZYP_CHECKOUT_K2868-10739 @CR-AKK
 Scenario: Verify that UnAuthenticated user is able to view In-Store Pickup Information on Order confirmation page
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP
@@ -62,7 +62,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And Verify that notes are displayed
 	
 	
-	@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High    @KER-2868 @ZYP_CHECKOUT_K2868-10740 @CR-AKK
+	@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order    @KER-2868 @ZYP_CHECKOUT_K2868-10740 @CR-AKK
 Scenario: Verify that UnAuthenticated user is able to view   Payment Details  on Order confirmation page
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP
@@ -76,7 +76,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user able to see the button place order
 	And Verify that Order Summary displayed
 	
-	@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-2868 @ZYP_CHECKOUT_K2868-10738 @CR-AKK
+	@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order  @KER-2868 @ZYP_CHECKOUT_K2868-10738 @CR-AKK
 Scenario: Verify that UnAuthenticated user is able to view Payment Details on Order confirmation page
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP

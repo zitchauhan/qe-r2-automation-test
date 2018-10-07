@@ -54,7 +54,7 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 	
 	
 	
-@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6824 @ZYP_CHECKOUT_K6824-8630 @CR-DPK
+@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6824 @ZYP_CHECKOUT_K6824-8630 @CR-DPK
 	Scenario: Verify the gift card fields displayed on addition of extra card
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	And User Navigates L2 form Homepage Header 
@@ -156,7 +156,7 @@ Scenario: Verify the Hide Gift Card CTA behavior
 	
 		
 	
-@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6824 @ZYP_CHECKOUT_K6824-10196 @CR-DPK
+@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6824 @ZYP_CHECKOUT_K6824-10196 @CR-DPK
 	Scenario: Verify the error message when user enters valid new Gift card with valid old PIN in Checkout for payment
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	And User Navigates L2 form Homepage Header 

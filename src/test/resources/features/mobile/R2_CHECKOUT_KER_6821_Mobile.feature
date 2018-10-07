@@ -1,6 +1,6 @@
 Feature: Verfiy Gift Card - Payment Validation in Checkout
 
-  @R2_Mobile   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6821 @ZYP_CHECKOUT_K6821-7957 @CR-AKK
+  @R2_Mobile   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6821 @ZYP_CHECKOUT_K6821-7957 @CR-AKK
   Scenario: Verify the error message when user enters the invalid Gift card number
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu 
@@ -69,7 +69,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
       | # user should be displayed with inline error message |
       | InvalidGiftCardNumber_Txt                            |
 
-  @R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-6821 @ZYP_CHECKOUT_K6821-10192 @CR-AKK
+  @R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order   @KER-6821 @ZYP_CHECKOUT_K6821-10192 @CR-AKK
   Scenario: Verify the user can enter valid old Gift card in Checkout for payment
     Given user launches the browser and navigates to "ASO_HOME" page
      And User clicks on the burger menu 
@@ -114,7 +114,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
       | # user should be displayed with inline error message |
       | InvalidGiftCardNumber_Txt                            |
 
-  @R2_Mobile   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6821 @ZYP_CHECKOUT_K6821-10202 @CR-AKK
+  @R2_Mobile   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6821 @ZYP_CHECKOUT_K6821-10202 @CR-AKK
   Scenario: Verify user is not allowed to enter any non-numeric input to GIft card number
     Given user launches the browser and navigates to "ASO_HOME" page
      And User clicks on the burger menu 

@@ -170,7 +170,7 @@ Then Verify below Sub/Main Module of Cart Page
 	When enter the "Quantity" to X 
 	Then verify that the updated estimated Tax is displayed 
 
-	@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High  @KER-2940 @ZYP_CART_K2940-8065 @CR-AKK
+	@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High_Order  @KER-2940 @ZYP_CART_K2940-8065 @CR-AKK
 	Scenario: To verify Mixed Promo's discounts applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

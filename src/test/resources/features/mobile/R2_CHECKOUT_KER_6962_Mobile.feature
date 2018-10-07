@@ -68,7 +68,7 @@ Feature: Verify Gift Card - Payment Processing
       | Please enter a valid street address                     |
       | Please enter a zip code                                 |
 
-  @R2_Mobile @R2_All @1HR_R2 @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8895 @CR-SK
+  @R2_Mobile @R2_All @1HR_R2 @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8895 @CR-SK
   Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Guest user
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "productName" and navigates to PDP
@@ -85,7 +85,7 @@ Feature: Verify Gift Card - Payment Processing
     And Remaining gift card balance should be displayed
     And Applied amount should be displayed in order summary
 
-  @R2_Mobile @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8902 @CR-SK
+  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8902 @CR-SK
   Scenario: Verify user is prompted with message to retain the physical gift card
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "productName" and navigates to PDP
@@ -103,7 +103,7 @@ Feature: Verify Gift Card - Payment Processing
       | # user should see below message on the page                                                                |
       | Please keep your physical gift card for future reference to assist with any returns or order cancelations. |
 
-  @R2_Mobile @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8883 @CR-SK
+  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8883 @CR-SK
   Scenario: Verify Guest Users should be able to enter an unlimited number of gift cards on any transaction
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP
@@ -123,7 +123,7 @@ Feature: Verify Gift Card - Payment Processing
     And user click on Apply button
     Then applied gift card "Valid16DigitGiftCardNumber" should be displayed for second gift card
 
-  @R2_Mobile @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8884 @CR-SK
+  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8884 @CR-SK
   Scenario: Verify Sign in Users should be able to enter an unlimited number of gift cards on any transaction
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on the burger menu
@@ -166,7 +166,7 @@ Feature: Verify Gift Card - Payment Processing
     And user click on Apply button
     And applied gift card "Valid16DigitGiftCardNumber" should be displayed for second gift card
 
-  @R2_Mobile @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8885 @CR-SK
+  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8885 @CR-SK
   Scenario: Verify for guest user If the balance on the provided gift cards doesn't cover the full cost, the user should be able to pay the difference with a credit card
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP
@@ -183,7 +183,7 @@ Feature: Verify Gift Card - Payment Processing
     When user add "Credit Card" details in payment method for "guest" user
     Then user should be able to do transaction successfully with gift card and credit card
 
-  @R2_Mobile @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8886 @CR-SK
+  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8886 @CR-SK
   Scenario: Verify for Sign in user If the balance on the provided gift cards doesn't cover the full cost, the user should be able to pay the difference with a credit card
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on the burger menu
@@ -202,7 +202,7 @@ Feature: Verify Gift Card - Payment Processing
     When user add "Credit Card" details in payment method for "newly registered" user
     Then user should be able to do transaction successfully with gift card and credit card
 
-  @R2_Mobile @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8888 @CR-SK
+  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8888 @CR-SK
   Scenario: Verify for guest user If the balance on the provided Gift cards doesn't cover the full cost, the user should NOT be able to pay the difference with a PayPal
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP
@@ -218,7 +218,7 @@ Feature: Verify Gift Card - Payment Processing
     Then applied gift card "LowBalanceGiftCard" should be displayed
     And user should not be able to pay remaining balace with paypal
 
-  @R2_Mobile @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8889 @CR-SK
+  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8889 @CR-SK
   Scenario: Verify the Authenticated user cannot pay the remaining or partial order amount using PayPal in combination with Gift Card
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on the burger menu
@@ -236,7 +236,7 @@ Feature: Verify Gift Card - Payment Processing
     Then applied gift card "LowBalanceGiftCard" should be displayed
     And user should not be able to pay remaining balace with paypal
 
-  @R2_Mobile @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8892 @CR-SK
+  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8892 @CR-SK
   Scenario: Verify If a gift card does not cover the full transaction, the amount applied should be displayed and also applied amount should displayed in order summary subtotals for Guest user
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP
@@ -252,7 +252,7 @@ Feature: Verify Gift Card - Payment Processing
     Then applied gift card "LowBalanceGiftCard" should be displayed
     And Applied amount should be displayed in order summary
 
-  @R2_Mobile @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8893 @CR-SK
+  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8893 @CR-SK
   Scenario: Verify If a gift card does not cover the full transaction, the amount applied should be displayed and also applied amount should displayed in order summary subtotals for Sign in user
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on the burger menu
@@ -270,7 +270,7 @@ Feature: Verify Gift Card - Payment Processing
     Then applied gift card "LowBalanceGiftCard" should be displayed
     And Applied amount should be displayed in order summary
 
-  @R2_Mobile @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8897 @CR-SK
+  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8897 @CR-SK
   Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Sign in user
     Given user launches the browser and navigates to "ASO_HOME" page
     And user creates an account

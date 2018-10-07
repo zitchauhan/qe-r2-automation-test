@@ -39,7 +39,7 @@ Scenario: Verify that user is not able to add another gift if single Gift card c
 	   |Hide Gift Card																		|
 	    
 	   
-@R2_Mobile   @R2_All @P-High @1HR_R2 @C-Order @CC-Checkout_Order @KER-4038 @ZYP_CART_K4038-10032 @CR-SK 
+@R2_Mobile   @R2_All @P-High_Order @1HR_R2 @C-Order @CC-Checkout_Order @KER-4038 @ZYP_CART_K4038-10032 @CR-SK 
 Scenario: Verify that payment details(Credit card) is suppressed if single Gift card covers the order Total
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user enters "productName" in the search box
@@ -61,7 +61,7 @@ Scenario: Verify that payment details(Credit card) is suppressed if single Gift 
 	   
 	   
 	   
-@R2_Mobile  @R2_All @P-High @C-Order @CC-Checkout_Order @KER-4038
+@R2_Mobile  @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-4038
 @ZYP_CART_K4038-10023 @CR-SK 
 Scenario:
 Verify that User is able to add multiple Gift Cards having 13 and 16 digit with 4 or 8 digit PIN on Payment page 
@@ -83,7 +83,7 @@ Verify that User is able to add multiple Gift Cards having 13 and 16 digit with 
 	And user click on Apply button 
 	And applied gift card "Valid16DigitGiftCardNumber" should be displayed for second gift card 	   
 	   
-@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-4038
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order   @KER-4038
 @ZYP_CART_K4038-10024 @CR-SK 
 Scenario:
 Verify that User is able to view cumulative deduction from the gift cards in single line item in the order summary if Gift cards cover full transaction amount 

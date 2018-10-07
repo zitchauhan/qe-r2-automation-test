@@ -18,7 +18,7 @@ Scenario: Verify add quantity adjustment in the Cart Page
 		|SubTotal_txt|
 	And user should be able to see the increased quantity and Price in Cart Order summary 
 		
-@R2_Web   @R2_All @P-High @C-Order @CC-Cart_Order @KER-2942 @ZYP_CART_K2942-8045 @CR-AKK 
+@R2_Web   @R2_All @P-High_Order @C-Order @CC-Cart_Order @KER-2942 @ZYP_CART_K2942-8045 @CR-AKK 
 Scenario: Verify cart gets recalculated on applying promotions and updated discounts displayed on Cart Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 

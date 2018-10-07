@@ -23,7 +23,7 @@ Feature: B07-250 - Gift Card - Authenticated User: Add New Gift Card at Checkout
       | Pin_Input                                          |
       | Apply_Btn                                          |
 
-  @R2_Web @C-Order @CC-Checkout_Order @R2_All @P-High @KER-6822 @ZYP_CHECKOUT_K6822-7956 @CR-GK
+  @R2_Web @C-Order @CC-Checkout_Order @R2_All @P-High_Order @KER-6822 @ZYP_CHECKOUT_K6822-7956 @CR-GK
   Scenario: Verify Gift card balance is Stored in My account
     Given user launches the browser and navigates to "ASO_HOME" page
     When user clicks on SignIn link from global header
@@ -93,7 +93,7 @@ Feature: B07-250 - Gift Card - Authenticated User: Add New Gift Card at Checkout
       | Pin_Input                                          |
       | Apply_Btn                                          |
 
-  @R2_Web @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6822 @ZYP_CHECKOUT_K6822-7954 @CR-GK
+  @R2_Web @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6822 @ZYP_CHECKOUT_K6822-7954 @CR-GK
   Scenario: Verify Valid gift card is applied for purchases
     Given user launches the browser and navigates to "ASO_HOME" page
     When user clicks on SignIn link from global header

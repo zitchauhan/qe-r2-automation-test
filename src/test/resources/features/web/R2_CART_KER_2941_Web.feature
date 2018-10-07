@@ -72,7 +72,7 @@ Feature: Verify Promotional Messaging in Cart
 	
 	
 	
-	@R2_Web  @R2_All @P-High @C-Order @CC-Cart_Order @KER-2941 @ZYP_CART_K2941-8070 @CR-DPK @1HR_R2
+	@R2_Web  @R2_All @P-High_Order @C-Order @CC-Cart_Order @KER-2941 @ZYP_CART_K2941-8070 @CR-DPK @1HR_R2
     Scenario: To verify discounts to specific items displayed at the item level (Free Shipping, BOGO, Gift With Purchase)          
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing

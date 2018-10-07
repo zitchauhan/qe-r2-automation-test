@@ -24,7 +24,7 @@ Verify that the Guest user is able to navigate to check order status page.
 		|Order Number|
 		|Billing Zip Code|
 		
-@R2_Mobile  @R2_All @P-High @C-Order @CC-MyAccount_Order   @KER-4018 
+@R2_Mobile  @R2_All @P-High_Order @C-Order @CC-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10657 @CR-AKK 
 Scenario Outline:
 Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
@@ -51,7 +51,7 @@ Examples:
 	|InvalidOrdernumber|InValidBillingZipcode   |
 	|ABNNC		   | BAV		  	  |
 	
-	@R2_Mobile  @R2_All @P-High @C-Order @CC-MyAccount_Order   @KER-4018 
+	@R2_Mobile  @R2_All @P-High_Order @C-Order @CC-MyAccount_Order   @KER-4018 
 	@ZYP_MYACCOUNT_K4018-10656 @CR-AKK 
 	Scenario Outline:
 	Verify that the error message is displayed if Guest user enters order detail not matching with valid order 

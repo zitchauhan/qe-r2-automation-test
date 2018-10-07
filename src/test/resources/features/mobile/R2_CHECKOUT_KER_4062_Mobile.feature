@@ -41,7 +41,7 @@ Verify if user gets proper validation message for password less than 8 character
 		|Password must be at least 8 characters long		|
 		
 		
-@R2_Mobile  @R2_All @P-High @C-Order @CC-Checkout_Order @KER-4062 @ZYP_CART_K4062-8102 @CR-SK 
+@R2_Mobile  @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-4062 @ZYP_CART_K4062-8102 @CR-SK 
 Scenario: Verify if user can create account from Order Confirmation Page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "productName" and navigates to PDP 
@@ -65,7 +65,7 @@ Scenario: Verify if user can create account from Order Confirmation Page
 	    |You have successfully registered with Academy.com	|
 	    |LET'S SHOP											|
 	    
-@R2_Mobile @R2_All @P-High @1HR_R2 @C-Order @CC-Checkout_Order @KER-4062 @ZYP_CART_K4062-8105 @CR-SK 
+@R2_Mobile @R2_All @P-High_Order @1HR_R2 @C-Order @CC-Checkout_Order @KER-4062 @ZYP_CART_K4062-8105 @CR-SK 
 Scenario: Verify the available customer details
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "productName" and navigates to PDP 

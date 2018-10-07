@@ -1,6 +1,6 @@
 Feature: Place Order
 
-@R2_Web @C-Order @CC-Cart_Order @P-High   @KER-2915 @ZYP_CART_K2915-8190 @CR-AG @1HR_R2
+@R2_Web @C-Order @CC-Cart_Order @P-High_Order   @KER-2915 @ZYP_CART_K2915-8190 @CR-AG @1HR_R2
 Scenario Outline: verify if user should be able to submit the order on the checkout page
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP

@@ -168,7 +168,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    |Required|
    
    
-   @R2_Web  @R2_All @P-High @C-Order @CC-MyAccount_Order  @KER-3093  @ZYP_MYACCOUNT_K3093-10415 @CR-RKA
+   @R2_Web  @R2_All @P-High_Order @C-Order @CC-MyAccount_Order  @KER-3093  @ZYP_MYACCOUNT_K3093-10415 @CR-RKA
    Scenario: Verify that user is able to add a new GC having 16 digit with 4 or 8 digit PIN and old GC having 13 digit with 4 digit PIN in My Account
    Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -204,7 +204,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    |#verify the following|
    |PaymentPage_RemoveGiftCards_btnList			|
    
-    @R2_Web  @R2_All @P-High @C-Order @CC-MyAccount_Order  @KER-3093  @ZYP_MYACCOUNT_K3093-10419 @CR-RKA
+    @R2_Web  @R2_All @P-High_Order @C-Order @CC-MyAccount_Order  @KER-3093  @ZYP_MYACCOUNT_K3093-10419 @CR-RKA
    Scenario: Verify that user is able to add a new gift card having 16 digit with 4 or 8 digit PIN in My Account with existing card
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

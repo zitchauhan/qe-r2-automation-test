@@ -1,6 +1,6 @@
 Feature: B06-280 - BOPIS Authenticated Order Cancellation 
 
-@R2_Mobile @R2_All @P-High @C-Order @CC-MyAccount_Order @KER-4327 
+@R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4327 
 @ZYP_MYACCOUNT_K4327-10912 @CR-MS 
 Scenario: 
 	Verify that for Authenticated user Cancel Order CTA is displayed for orders having BOPIS items 
@@ -28,7 +28,7 @@ Scenario:
 		|#Verify following elements in my account order details|
 		|Order_Cancel_lnk|
 		
-@R2_Mobile @R2_All @P-High @1HR_R2 @C-Order @CC-MyAccount_Order @KER-4327 
+@R2_Mobile @R2_All @P-High_Order @1HR_R2 @C-Order @CC-MyAccount_Order @KER-4327 
 @ZYP_MYACCOUNT_K4327-10917 @CR-MS 
 Scenario: 
 	BOPIS-Verify that Authenticated User is able to navigate back to order details page from cancellation confirmation page 
@@ -52,7 +52,7 @@ Scenario:
 		|#Verify following elements in my account order details|
 		|Order_View_Details_Btn|
 		
-@R2_Mobile @R2_All @P-High @C-Order @CC-MyAccount_Order @KER-4327 
+@R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4327 
 @ZYP_MYACCOUNT_K4327-10915 @CR-MS 
 Scenario: 
 	BOPIS-Verify that order is not cancelled if user clicks on No CTA on confirmation modal 

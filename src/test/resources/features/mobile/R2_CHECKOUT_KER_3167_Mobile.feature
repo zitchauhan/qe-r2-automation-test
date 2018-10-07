@@ -33,7 +33,7 @@ Scenario: To verify Promo code applied in Order Summary
 	|# Then user is displayed Promo code XXXXX applied |
 	|Discount_Txt|
 	
-@R2_Mobile   @R2_All @P-High @1HR_R2 @C-Order @CC-Checkout_Order @KER-3167 @ZYP_CHECKOUT_K3167-8095 @CR-AKK	
+@R2_Mobile   @R2_All @P-High_Order @1HR_R2 @C-Order @CC-Checkout_Order @KER-3167 @ZYP_CHECKOUT_K3167-8095 @CR-AKK	
 Scenario: To verify Promo code Removed in Order Summary
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

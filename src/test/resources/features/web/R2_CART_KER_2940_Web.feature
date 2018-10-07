@@ -50,7 +50,7 @@ Feature: Verify Itemized Subtotal in Cart
       | SecondQuantityPrice_Txt                                 |
     Then verify that itemized subtotal for each item in cart is displayed
 
-  @R2_Web @C-Order @CC-Cart_Order @R2_All @P-High @R2   @KER-2940 @ZYP_CART_K2940-8055 @CR-AKK
+  @R2_Web @C-Order @CC-Cart_Order @R2_All @P-High_Order @R2   @KER-2940 @ZYP_CART_K2940-8055 @CR-AKK
   Scenario: To verify if the Promo Code Discount is applied
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing
@@ -71,7 +71,7 @@ Feature: Verify Itemized Subtotal in Cart
       | # Verify following elements in Cart page"Order Summary" |
       | Total_txt                                               |
 
-  @R2_Web @C-Order @CC-Cart_Order @R2_All @P-High @R2  @KER-2940 @ZYP_CART_K2940-8056 @CR-AKK
+  @R2_Web @C-Order @CC-Cart_Order @R2_All @P-High_Order @R2  @KER-2940 @ZYP_CART_K2940-8056 @CR-AKK
   Scenario: To verify if the Military Discount is applied
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing
@@ -174,7 +174,7 @@ Feature: Verify Itemized Subtotal in Cart
     When enter the "Quantity" to X
     Then verify that the updated estimated Tax is displayed
 
-  @R2_Web   @R2_All @P-High @C-Order @CC-Cart_Order @KER-2940 @ZYP_CART_K2940-8065 @CR-AKK
+  @R2_Web   @R2_All @P-High_Order @C-Order @CC-Cart_Order @KER-2940 @ZYP_CART_K2940-8065 @CR-AKK
   Scenario: To verify Mixed Promo's discounts applied
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing
