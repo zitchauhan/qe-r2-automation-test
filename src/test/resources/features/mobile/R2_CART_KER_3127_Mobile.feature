@@ -13,7 +13,7 @@ Scenario: Verify if user should be able to checkout if there are no errors
 	|checkOutYourCart_Btn|
 	And user click on checkout button in Cart page 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-3127 @ZYP_CART_K3127-8166 @CR-AKK 
+@R2_Mobile   @R2_All @P-Highest @1HR_R2 @C-Order @CC-Cart_Order @KER-3127 @ZYP_CART_K3127-8166 @CR-AKK 
 Scenario:
 Verify if user should be able to apply or remove a promotion code 
 Given user launches the browser and navigates to "ASO_HOME" page 
@@ -83,7 +83,7 @@ Scenario: verify if user is able to view the accepted Payments Icons
 		|AmericanExpress_img|
 		|Discover_img|
 		
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-3127 @ZYP_CART_K3127-8165 @CR-AKK 
+@R2_Mobile   @R2_All @P-Highest @1HR_R2 @C-Order @CC-Cart_Order @KER-3127 @ZYP_CART_K3127-8165 @CR-AKK 
 Scenario: Verify if user is  able to view following elements in order summary of cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

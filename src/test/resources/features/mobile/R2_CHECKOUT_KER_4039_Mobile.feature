@@ -1,6 +1,6 @@
 Feature: [Mobile]Payment restrictions
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-10454 @CR-RKA @1HR_R2
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-4039 @ZYP_CHECKOUT_K4039-10454 @CR-RKA @1HR_R2
 Scenario: Verify that PayPal and More Options radio buttons are disabled when Gift Card is applied
 Given user launches the browser and navigates to "ASO_HOME" page 
 And User clicks on the burger menu 
@@ -27,7 +27,7 @@ And user enter First name "FirstName"
 		|PayPal_radioBtn|
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-10455 @CR-RKA
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High    @KER-4039 @ZYP_CHECKOUT_K4039-10455 @CR-RKA
 Scenario: Verify that PayPal and More Options radio buttons are enabled when Gift Card is removed
 Given user launches the browser and navigates to "ASO_HOME" page 
 And User clicks on the burger menu 
@@ -55,7 +55,7 @@ Then Verify below Sub/Main Module of Checkout Page
 		|PayPal_radioBtn|
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9876 @CR-RKA
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High  @KER-4039 @ZYP_CHECKOUT_K4039-9876 @CR-RKA
 Scenario: Verify that user can combine Gift Card payment with Credit/Debit Card only
 Given user launches the browser and navigates to "ASO_HOME" page 
 And User clicks on the burger menu 
@@ -81,7 +81,7 @@ Then Verify below Sub/Main Module of Checkout Page
 		|ExpirationDate_Input|
 		|Cvv_Input|
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9885 @CR-RKA
+@R2_Mobile @R2_Regression @C-Checkout @R2_All @P-High @KER-4039 @ZYP_CHECKOUT_K4039-9885 @CR-RKA
 Scenario: Verify that user cannot combine Gift Card payment with any non-Credit/Debit Card only
 Given user launches the browser and navigates to "ASO_HOME" page 
 And User clicks on the burger menu 
@@ -104,7 +104,7 @@ And user enter First name "FirstName"
 
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9889 @CR-RKA
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High  @KER-4039 @ZYP_CHECKOUT_K4039-9889 @CR-RKA
 Scenario: Verify that user can use multiple gift cards to make the payment
 Given user launches the browser and navigates to "ASO_HOME" page 
 And User clicks on the burger menu 
@@ -131,7 +131,7 @@ Then Verify below Sub/Main Module of Checkout Page
   |#verify gift card remove displayed after adding second gift card |
 |btnToRemoveGiftCardOnCheckoutPage|
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9892 @CR-RKA
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-4039 @ZYP_CHECKOUT_K4039-9892 @CR-RKA
 Scenario: Verify that user cannot use more than one credit/debit card for single transaction
 Given user launches the browser and navigates to "ASO_HOME" page 
 And User clicks on the burger menu 

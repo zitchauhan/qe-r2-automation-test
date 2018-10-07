@@ -51,7 +51,7 @@ Feature: Verify Itemized Subtotal in Cart
 	|SecondQuantityPrice_Txt|  
 	Then verify that itemized subtotal for each item in cart is displayed  
 
-	@R2_Mobile @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8055 @CR-AKK
+	@R2_Mobile  @C-Order @CC-Cart_Order @R2_All @P-High @R2   @KER-2940 @ZYP_CART_K2940-8055 @CR-AKK
 	Scenario: To verify if the Promo Code Discount is applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -71,7 +71,7 @@ Feature: Verify Itemized Subtotal in Cart
 	|Total_txt|
 
 	
-	@R2_Mobile @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8056 @CR-AKK
+	@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High @R2  @KER-2940 @ZYP_CART_K2940-8056 @CR-AKK
 	Scenario: To verify if the Military Discount is applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -170,7 +170,7 @@ Then Verify below Sub/Main Module of Cart Page
 	When enter the "Quantity" to X 
 	Then verify that the updated estimated Tax is displayed 
 
-	@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8065 @CR-AKK
+	@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High  @KER-2940 @ZYP_CART_K2940-8065 @CR-AKK
 	Scenario: To verify Mixed Promo's discounts applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

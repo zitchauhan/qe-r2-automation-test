@@ -53,7 +53,7 @@ Scenario: Verify that user is able to see info tooltip against PIN field
    |PaymentPage_YouHaveNoGiftcardsListed_label		|
    |PaymentPage_AddNewGiftCard_btn					|
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10420 @CR-RKA
+@R2_Web   @R2_All @P-Low @C-Order @CC-MyAccount_Order  @KER-3093  @ZYP_MYACCOUNT_K3093-10420 @CR-RKA
 Scenario: Verify that user gets the error message on entering in-store credit gift card entry
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -89,7 +89,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    |#Verify following error Msg in Gift card section |
    |Invalid Gift Card and PIN combination|
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10424 @CR-RKA
+@R2_Web  @R2_All @P-Low @C-Order @CC-MyAccount_Order @KER-3093  @ZYP_MYACCOUNT_K3093-10424 @CR-RKA
 Scenario: Verify that user gets the error message on entering ZERO balance GC number
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -136,7 +136,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
     |Invalid GiftCard Pin|
    
    
-   @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10429 @CR-RKA
+   @R2_Web  @R2_All @P-Low @C-Order @CC-MyAccount_Order  @KER-3093  @ZYP_MYACCOUNT_K3093-10429 @CR-RKA
    Scenario: Verify that user gets the error message on blank PIN
    Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -168,7 +168,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    |Required|
    
    
-   @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10415 @CR-RKA
+   @R2_Web  @R2_All @P-High @C-Order @CC-MyAccount_Order  @KER-3093  @ZYP_MYACCOUNT_K3093-10415 @CR-RKA
    Scenario: Verify that user is able to add a new GC having 16 digit with 4 or 8 digit PIN and old GC having 13 digit with 4 digit PIN in My Account
    Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -186,7 +186,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    
    When user clicks Remove button 
    
-   @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10417 @CR-RKA
+   @R2_Web  @R2_All @P-Low @C-Order @CC-MyAccount_Order  @KER-3093  @ZYP_MYACCOUNT_K3093-10417 @CR-RKA
    Scenario: Verify that user returns to the empty Wallet on Cancel with existing card	
    Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -204,7 +204,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    |#verify the following|
    |PaymentPage_RemoveGiftCards_btnList			|
    
-    @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount  @KER-3093  @ZYP_MYACCOUNT_K3093-10419 @CR-RKA
+    @R2_Web  @R2_All @P-High @C-Order @CC-MyAccount_Order  @KER-3093  @ZYP_MYACCOUNT_K3093-10419 @CR-RKA
    Scenario: Verify that user is able to add a new gift card having 16 digit with 4 or 8 digit PIN in My Account with existing card
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

@@ -36,7 +36,7 @@ Feature: Verify Promotional Messaging in Cart
 	And user click on Hide promo code field
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2941 @ZYP_CART_K2941-8068 @CR-DPK
+	@R2_Web @C-Order @CC-Cart_Order @R2_All @P-Low  @KER-2941 @ZYP_CART_K2941-8068 @CR-DPK
     Scenario: To verify the limit of the Promo codes in cart Page         
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
@@ -53,7 +53,7 @@ Feature: Verify Promotional Messaging in Cart
 	And again try to apply Promocode "SanityOrderLevelQuantity"
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2941 @ZYP_CART_K2941-8069 @CR-DPK
+	@R2_Web @C-Order @CC-Cart_Order @R2_All @P-Low   @KER-2941 @ZYP_CART_K2941-8069 @CR-DPK
 	Scenario: To verify the Promo codes discounts in order summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing
@@ -72,7 +72,7 @@ Feature: Verify Promotional Messaging in Cart
 	
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2941 @ZYP_CART_K2941-8070 @CR-DPK @1HR_R2
+	@R2_Web  @R2_All @P-High @C-Order @CC-Cart_Order @KER-2941 @ZYP_CART_K2941-8070 @CR-DPK @1HR_R2
     Scenario: To verify discounts to specific items displayed at the item level (Free Shipping, BOGO, Gift With Purchase)          
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing

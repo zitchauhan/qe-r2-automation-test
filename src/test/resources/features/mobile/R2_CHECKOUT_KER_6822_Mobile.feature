@@ -23,7 +23,7 @@ Scenario: Verify Gift card fields displayed - No Previous Gift Cards Saved
 	Then Gift Card Number field and PIN fields are displayed 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6822 
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High  @KER-6822 
 @ZYP_CHECKOUT_K6822-7954 @CR-GK @1HR_R2 
 Scenario: Verify Valid gift card is applied for purchases 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -51,7 +51,7 @@ Scenario: Verify Valid gift card is applied for purchases
 		|GiftCardAppliedSuccessMsg|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR @C-Checkout @KER-6822 
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-Highest @1HR  @KER-6822 
 @ZYP_CHECKOUT_K6822-10193 @CR-GK 
 Scenario: 
 	Verify the user can enter valid new Gift card with 13 or 16 digit in Checkout for payment  
@@ -83,7 +83,7 @@ Scenario:
 		|btnToRemoveGiftCardOnCheckoutPage|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6822 
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High   @KER-6822 
 @ZYP_CHECKOUT_K6822-7917 @CR-GK 
 Scenario: Verify Add new gift card during checkout user has Saved Gift Cards 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -133,7 +133,7 @@ Scenario: Verify Add new Gift Card fields
 		|Pin_Input|
 		|Apply_Btn|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6822 
+@R2_Mobile   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6822 
 @ZYP_CHECKOUT_K6822-7956 @CR-GK 
 Scenario: Verify Gift card balance is Stored in My account 
 	Given user launches the browser and navigates to "ASO_HOME" page 

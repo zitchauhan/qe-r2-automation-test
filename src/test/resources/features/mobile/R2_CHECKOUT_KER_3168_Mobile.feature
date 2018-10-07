@@ -1,6 +1,6 @@
 Feature: Insert Payment Details (Credit/Debit Card) on checkout screen
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3138 @ZYP_CART_K3138-8205 @CR-AG 
+@R2_Mobile  @R2_All @P-High @C-Order @CC-Checkout_Order @KER-3138 @ZYP_CART_K3138-8205 @CR-AG 
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
 	      Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -20,7 +20,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 	Then user validate all the required fields in the Payment section to be visible
     And user enters "DebitCardNumber" details and verify it is getting entered in Credit card section
 
-    @R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3138 @ZYP_CART_K3138-8206 @CR-AG 
+    @R2_Mobile  @R2_All @P-Highest @1HR_R2 @C-Order @CC-Checkout_Order @KER-3138 @ZYP_CART_K3138-8206 @CR-AG 
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
 	  Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -43,7 +43,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     And user enters valid cvv value "CVV"
     Then user clicks on the submit button
 
-    @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3138 @ZYP_CART_K3138-8207 @CR-AG 
+    @R2_Mobile  @R2_All @P-Low @C-Order @CC-Checkout_Order @KER-3138 @ZYP_CART_K3138-8207 @CR-AG 
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -66,7 +66,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     And user enters valid cvv value "CVV"
     Then user clicks on the submit button
 
-    @R2_Mobile @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3138 @ZYP_CART_K3138-8208 @CR-AG 
+    @R2_Mobile  @R2_All @P-Highest @C-Order @CC-Checkout_Order @KER-3138 @ZYP_CART_K3138-8208 @CR-AG 
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
 	  Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -90,7 +90,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     Then user clicks on the submit button
 
 
-    @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3138 @ZYP_CART_K3138-8209 @CR-AG 
+    @R2_Mobile  @R2_All @P-High @C-Order @CC-Checkout_Order @KER-3138 @ZYP_CART_K3138-8209 @CR-AG 
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

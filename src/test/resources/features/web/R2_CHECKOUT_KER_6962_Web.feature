@@ -1,7 +1,7 @@
 Feature: Verify Gift Card - Payment Processing
 
 
-@R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-6962 @ZYP_CART_K6962-8890 @CR-SK 
+@R2_Web   @R2_All @P-Medium @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8890 @CR-SK 
 Scenario: Verify applied gift cards should be displayed to the users
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
@@ -17,7 +17,7 @@ Scenario: Verify applied gift cards should be displayed to the users
 	Then applied gift card "Valid16DigitGiftCardNumber" should be displayed
 
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6962 @ZYP_CART_K6962-8899 @CR-SK 
+@R2_Web   @R2_All @P-Low @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8899 @CR-SK 
 Scenario: Verify Once a gift card is applied, a Remove option should be displayed to the user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
@@ -34,7 +34,7 @@ Scenario: Verify Once a gift card is applied, a Remove option should be displaye
 	Then Remove option is displayed to user
 
 
-@R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-6962 @ZYP_CART_K6962-8900 @CR-SK 
+@R2_Web   @R2_All @P-Medium @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8900 @CR-SK 
 Scenario: Verify  click on remove gift card, the respective gift card should no longer be applied to the transaction.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
@@ -51,7 +51,7 @@ Scenario: Verify  click on remove gift card, the respective gift card should no 
 	Then gift card should no longer be applied to the transaction	
 	
 
-@R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-6962 @ZYP_CART_K6962-12324 @CR-SK 
+@R2_Web   @R2_All @P-Medium @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-12324 @CR-SK 
 Scenario: Verify for full payment using Gift Card, Billing address is still required
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
@@ -73,7 +73,7 @@ Scenario: Verify for full payment using Gift Card, Billing address is still requ
 		|Please enter a zip code									|
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8895 @CR-SK @1HR_R2
+@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8895 @CR-SK @1HR_R2
 Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Guest user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
@@ -90,7 +90,7 @@ Scenario: Verify If a gift card covers the full transaction, the amount applied 
 	And Remaining gift card balance should be displayed
 	And Applied amount should be displayed in order summary
 			
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8902 @CR-SK 
+@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8902 @CR-SK 
 Scenario: Verify user is prompted with message to retain the physical gift card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
@@ -109,7 +109,7 @@ Scenario: Verify user is prompted with message to retain the physical gift card
 	|Please keep your physical gift card for future reference to assist with any returns or order cancelations.	|	
 	
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8883 @CR-SK 
+@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8883 @CR-SK 
 Scenario: Verify Guest Users should be able to enter an unlimited number of gift cards on any transaction
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
@@ -129,7 +129,7 @@ Scenario: Verify Guest Users should be able to enter an unlimited number of gift
 	And user click on Apply button
 	Then applied gift card "Valid16DigitGiftCardNumber" should be displayed for second gift card
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8884 @CR-SK 
+@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8884 @CR-SK 
 Scenario: Verify Sign in Users should be able to enter an unlimited number of gift cards on any transaction
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user creates an account
@@ -153,7 +153,7 @@ Scenario: Verify Sign in Users should be able to enter an unlimited number of gi
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-6962 @ZYP_CART_K6962-8882 @CR-SK 
+@R2_Web   @R2_All @P-Highest @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8882 @CR-SK 
 Scenario: Verify System should integrate with RTS/First data for existing gift card payment processing flow
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
@@ -174,7 +174,7 @@ Scenario: Verify System should integrate with RTS/First data for existing gift c
 	And applied gift card "Valid16DigitGiftCardNumber" should be displayed for second gift card
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8885 @CR-SK 
+@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8885 @CR-SK 
 Scenario: Verify for guest user If the balance on the provided gift cards doesn't cover the full cost, the user should be able to pay the difference with a credit card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
@@ -193,7 +193,7 @@ Scenario: Verify for guest user If the balance on the provided gift cards doesn'
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8886 @CR-SK 
+@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8886 @CR-SK 
 Scenario: Verify for Sign in user If the balance on the provided gift cards doesn't cover the full cost, the user should be able to pay the difference with a credit card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user creates an account
@@ -212,7 +212,7 @@ Scenario: Verify for Sign in user If the balance on the provided gift cards does
 	Then user should be able to do transaction successfully with gift card and credit card
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8888 @CR-SK 
+@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8888 @CR-SK 
 Scenario: Verify for guest user If the balance on the provided Gift cards doesn't cover the full cost, the user should NOT be able to pay the difference with a PayPal
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
@@ -228,7 +228,7 @@ Scenario: Verify for guest user If the balance on the provided Gift cards doesn'
 	Then applied gift card "LowBalanceGiftCard" should be displayed
 	And user should not be able to pay remaining balace with paypal	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8889 @CR-SK 
+@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8889 @CR-SK 
 Scenario: Verify the Authenticated user cannot pay the remaining or partial order amount using PayPal in combination with Gift Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user creates an account
@@ -246,7 +246,7 @@ Scenario: Verify the Authenticated user cannot pay the remaining or partial orde
 	And user should not be able to pay remaining balace with paypal
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8892 @CR-SK 
+@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8892 @CR-SK 
 Scenario: Verify If a gift card does not cover the full transaction, the amount applied should be displayed and also applied amount should displayed in order summary subtotals for Guest user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
@@ -263,7 +263,7 @@ Scenario: Verify If a gift card does not cover the full transaction, the amount 
 	And Applied amount should be displayed in order summary	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8893 @CR-SK 
+@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8893 @CR-SK 
 Scenario: Verify If a gift card does not cover the full transaction, the amount applied should be displayed and also applied amount should displayed in order summary subtotals for Sign in user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user creates an account
@@ -280,7 +280,7 @@ Scenario: Verify If a gift card does not cover the full transaction, the amount 
 	Then applied gift card "LowBalanceGiftCard" should be displayed
 	And Applied amount should be displayed in order summary
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6962 @ZYP_CART_K6962-8897 @CR-SK 
+@R2_Web   @R2_All @P-High @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8897 @CR-SK 
 Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Sign in user
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user creates an account

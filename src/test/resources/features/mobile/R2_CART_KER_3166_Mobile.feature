@@ -19,7 +19,7 @@ Scenario: To verify Add Promotion Code
 		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-8087
+@R2_Mobile   @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-8087
 @CR-DPK 
 Scenario: To verify open field to enter promotion code 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -34,7 +34,7 @@ Scenario: To verify open field to enter promotion code
 	And user view and Applied Promotions/Discounts "Promocode" 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-8088
+@R2_Mobile  @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-8088
 @CR-DPK 
 Scenario: To verify open field to enter promotion code 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -49,7 +49,7 @@ Scenario: To verify open field to enter promotion code
 		|Please enter a valid promotion code.|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-8089
+@R2_Mobile   @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-8089
 @CR-DPK 
 Scenario: To verify open field to enter promotion code 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -68,7 +68,7 @@ Scenario: To verify open field to enter promotion code
 		|Discount_Txt|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @1HR_R2 @KER-3166
+@R2_Mobile   @R2_All @P-Low @C-Order @CC-Cart_Order @1HR_R2 @KER-3166
 @ZYP_CART_K3166-8090 @CR-DPK 
 Scenario: To verify Item level description 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -96,7 +96,7 @@ Scenario: To verify Item level description
 		|Total_txt|    				
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-8091
+@R2_Mobile   @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-8091
 @CR-DPK 
 Scenario: verify Item/order Promo code applied in Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -116,7 +116,7 @@ Scenario: verify Item/order Promo code applied in Order Summary
 		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-8092
+@R2_Mobile   @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-8092
 @CR-DPK 
 Scenario: To verify Promo code applied in Check out page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -136,7 +136,7 @@ Scenario: To verify Promo code applied in Check out page
 		|TotalDiscount_Txt|	
 		|Total_txt|    		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9591
+@R2_Mobile   @R2_All @P-High @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9591
 @CR-DPK 
 Scenario:
 Verify promotion got applied to the product when user applied %off promotion on product level in cart--with promocode 
@@ -154,7 +154,7 @@ Verify promotion got applied to the product when user applied %off promotion on 
 		|RemovePromocode_Btn|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-9593
+@R2_Mobile  @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9593
 @CR-DPK 
 Scenario:
 Verify promotion got applied to the Catagory when user applied %off promotion on Category level in cart--with promocode 
@@ -172,7 +172,7 @@ Verify promotion got applied to the Catagory when user applied %off promotion on
 		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9595
+@R2_Mobile   @R2_All @P-High @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9595
 @CR-DPK 
 Scenario:
 Verify promotion got applied for order level when user applied %off promotion on order -- with promocode 
@@ -191,7 +191,7 @@ Verify promotion got applied for order level when user applied %off promotion on
 		|EstimatedTaxes_txt|	
 		|Discount_Txt|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9596
+@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High   @KER-3166 @ZYP_CART_K3166-9596
 @CR-DPK 
 Scenario:
 Verify promotion got applied to the product when user applied $ Amount off promotion on product level in cart -- with Promocode 
@@ -212,7 +212,7 @@ Verify promotion got applied to the product when user applied $ Amount off promo
 		|Promocode_Txt|	
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9597
+@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High  @KER-3166 @ZYP_CART_K3166-9597
 @CR-DPK 
 Scenario:
 Verify promotion got applied to the Category when user applied $ amount off promotion on Category level in cart -- with promocode 
@@ -229,7 +229,7 @@ Verify promotion got applied to the Category when user applied $ amount off prom
 		|RemovePromocode_Btn|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9598
+@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High   @KER-3166 @ZYP_CART_K3166-9598
 @CR-DPK 
 Scenario:
 Verify promotion got applied for order level when user applied $ amount off promotion on order -- with promocode 

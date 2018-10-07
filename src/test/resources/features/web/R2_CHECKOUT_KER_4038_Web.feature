@@ -1,6 +1,6 @@
 Feature: Gift Card application 
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4038
+@R2_Web  @R2_All @P-Low @C-Order @CC-Checkout_Order @KER-4038
 @ZYP_CART_K4038-10028 @CR-SK 
 Scenario:
 Verify that user is not able to add another gift card once the applied GCs cover the entire transaction amount 
@@ -21,7 +21,7 @@ Verify that user is not able to add another gift card once the applied GCs cover
 		|Enter a Gift Card																		|
 		|Hide Gift Card																			|
 		
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4038
+@R2_Web  @R2_All @P-Low @C-Order @CC-Checkout_Order @KER-4038
 @ZYP_CART_K4038-10029 @CR-SK 
 Scenario:
 Verify that user is not able to add another gift if single Gift card covers the order Total 
@@ -43,7 +43,7 @@ Verify that user is not able to add another gift if single Gift card covers the 
 		|Hide Gift Card																		|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4038
+@R2_Web  @R2_All @P-High @C-Order @CC-Checkout_Order @KER-4038
 @ZYP_CART_K4038-10032 @CR-SK @1HR_R2
 Scenario:
 Verify that payment details(Credit card) is suppressed if single Gift card covers the order Total 
@@ -65,7 +65,7 @@ Verify that payment details(Credit card) is suppressed if single Gift card cover
 		|Expiration Date											|	
 		|CVV														|
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4038
+@R2_Web  @R2_All @P-High @C-Order @CC-Checkout_Order @KER-4038
 @ZYP_CART_K4038-10023 @CR-SK 
 Scenario:
 Verify that User is able to add multiple Gift Cards having 13 and 16 digit with 4 or 8 digit PIN on Payment page 
@@ -90,7 +90,7 @@ Verify that User is able to add multiple Gift Cards having 13 and 16 digit with 
 	
 	
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4038
+@R2_Web  @R2_All @P-High @C-Order @CC-Checkout_Order @KER-4038
 @ZYP_CART_K4038-10024 @CR-SK 
 Scenario:
 Verify that User is able to view cumulative deduction from the gift cards in single line item in the order summary if Gift cards cover full transaction amount 

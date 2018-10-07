@@ -15,7 +15,7 @@ Scenario: To verify Add Promotion Code
 		|Submit_PromoCode_btn|
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-8087 @CR-DPK
+@R2_Web @C-Order @CC-Cart_Order @R2_All @P-High  @KER-3166 @ZYP_CART_K3166-8087 @CR-DPK
 Scenario: To verify open field to enter promotion code
 Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
@@ -28,7 +28,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user view and Applied Promotions/Discounts "Promocode"
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-8088 @CR-DPK
+@R2_Web @C-Order @CC-Cart_Order @R2_All @P-High   @KER-3166 @ZYP_CART_K3166-8088 @CR-DPK
 Scenario: To verify open field to enter promotion code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 
@@ -42,7 +42,7 @@ Scenario: To verify open field to enter promotion code
     
     
     
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-8089 @CR-DPK
+@R2_Web @C-Order @CC-Cart_Order @R2_All @P-Low   @KER-3166 @ZYP_CART_K3166-8089 @CR-DPK
 Scenario: To verify Submit Promotion code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
@@ -59,7 +59,7 @@ Scenario: To verify Submit Promotion code
 		|Discount_Txt|	 
 		
 		
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-8090 @CR-DPK
+@R2_Web   @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-8090 @CR-DPK
 Scenario: To verify Item level description
 	Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
@@ -85,7 +85,7 @@ Scenario: To verify Item level description
 		|Total_txt|    			
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-8091 @CR-DPK
+@R2_Web   @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-8091 @CR-DPK
 Scenario: verify Item/order Promo code applied in Order Summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
@@ -102,7 +102,7 @@ Scenario: verify Item/order Promo code applied in Order Summary
 		|Discount_Txt|	
 		
 		
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-8092 @CR-DPK
+@R2_Web @C-Order @CC-Cart_Order @R2_All @P-Low  @KER-3166 @ZYP_CART_K3166-8092 @CR-DPK
 Scenario: To verify Promo code applied in Check out page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
@@ -121,7 +121,7 @@ Scenario: To verify Promo code applied in Check out page
 		|Total_txt|    			
 	
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9591 @CR-DPK 
+@R2_Web  @R2_All @P-High @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9591 @CR-DPK 
 Scenario: Verify promotion got applied to the product when user applied %off promotion on product level in cart--with promocode
 Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Grills Outdoor cooking
@@ -138,7 +138,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	
 
 
- @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-9593 @CR-DPK 
+ @R2_Web   @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9593 @CR-DPK 
 Scenario: Verify promotion got applied to the Catagory when user applied %off promotion on Category level in cart--with promocode
 Given user launches the browser and navigates to "ASO_HOME" page
 		 And User Navigates L2 form Homepage Header 
@@ -153,7 +153,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|RemovePromocode_Btn|			
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9595 @CR-DPK 
+@R2_Web   @R2_All @P-High @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9595 @CR-DPK 
 Scenario: Verify promotion got applied for order level when user applied %off promotion on order -- with promocode
 Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
@@ -171,7 +171,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	
 	
 		
- @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9596 @CR-DPK 
+ @R2_Web   @R2_All @P-High @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9596 @CR-DPK 
 Scenario: Verify promotion got applied to the product when user applied $ Amount off promotion on product level in cart -- with Promocode
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Grills Outdoor cooking
@@ -189,7 +189,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|Discount_Txt|	
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9597 @CR-DPK 
+@R2_Web   @R2_All @P-High @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9597 @CR-DPK 
 Scenario: Verify promotion got applied to the Category when user applied $ amount off promotion on Category level in cart -- with promocode
 Given user launches the browser and navigates to "ASO_HOME" page 
 Then User navigates to LThree Mens Watches 
@@ -204,7 +204,7 @@ Then User navigates to LThree Mens Watches
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9598 @CR-DPK 
+@R2_Web   @R2_All @P-High @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9598 @CR-DPK 
 Scenario: Verify promotion got applied for order level when user applied $ amount off promotion on order -- with promocode
 Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
