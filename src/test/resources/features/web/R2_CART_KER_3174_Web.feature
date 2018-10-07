@@ -42,7 +42,7 @@ Verify guest user is able to see the See In-Store Pickup Instructions section
 	Then user click on Go To Shipping Method button in Checkout page 
 	And user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers 
 	
-@R2_Web @C-Order @CC-Cart_Ordern @R2_All @P-Low   @KER-3174
+@R2_Web @C-Order @CC-Cart_Order @R2_All @P-Low   @KER-3174
 @ZYP_CART_K3174-KER-10273 @CR-RK 
 Scenario: Verify guest user is able to place the BOPIS order 
 	Given user launches the browser and navigates to "ASO_HOME" page 

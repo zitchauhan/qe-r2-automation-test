@@ -36,7 +36,7 @@ Scenario: Verify user can see order placed for selected single SKU on the PDP
 	
 
 
-@R2_Mobile  @R2_All @P-High  @C-Order @CC-Checkout_Ordert @KER-4332 @ZYP_CHECKOUT_K4332-9521 @CR-AKK
+@R2_Mobile  @R2_All @P-High  @C-Order @CC-Checkout_Order @KER-4332 @ZYP_CHECKOUT_K4332-9521 @CR-AKK
 Scenario: To Verify user can see the BUY NOW button in PDP
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
