@@ -54,10 +54,10 @@ Scenario: Verify that Authenticated User is able to rename a Wish List
 	Then User clicks on the burger menu 
 	And user click on MyAccount 
 	Then user click on WishList 
-	Then Verify below Sub/Main Module of My Account 
-		|#Verify following element in wishlist section|
-		|Wishlist_createlist_lnk|
-		|WishlistItems_lnk|
+	And deletes all the existing wishlists
+	And user clicks on create first wishlist button 
+	Then user enters Wishlist name "WishlistName" 
+	And user clicks on Create List
 	And user clicks on WishListItems 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following element in wishlist section|
@@ -109,10 +109,10 @@ Scenario: Verify that Authenticated User is able to delete a Wish List
 	Then User clicks on the burger menu 
 	And user click on MyAccount 
 	Then user click on WishList 
-	Then Verify below Sub/Main Module of My Account 
-		|#Verify following element in wishlist section|
-		|Wishlist_createlist_lnk|
-		|WishlistItems_lnk|
+	And deletes all the existing wishlists
+	And user clicks on create first wishlist button 
+	Then user enters Wishlist name "WishlistName" 
+	And user clicks on Create List
 	And user clicks on WishListItems 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following element in wishlist section|
@@ -134,9 +134,6 @@ Scenario: Verify that Authenticated user can create additional wish list
 	Then User clicks on the burger menu 
 	And user click on MyAccount 
 	Then user click on WishList 
-	Then Verify below Sub/Main Module of My Account 
-		|#Verify following element in wishlist section|
-		|Wishlist_createlist_lnk|
 	And user clicks on Create List 
 	Then user enters Wishlist name "WishlistName" 
 	And user clicks on create 
@@ -146,7 +143,7 @@ Scenario: Verify that Authenticated user can create additional wish list
 	And user clicks on WishListItems 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following element in wishlist section|
-		|browse_products_btn|	
+		|Wishlist_MoveToACart_Btn										|	
 		
 		
 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233

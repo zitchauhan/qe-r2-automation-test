@@ -4,8 +4,8 @@ Feature: E03-150-Order Cancellation Request Order Cancellation from My Account
 Scenario: Verify that order is not cancelled if user clicks on No CTA on confirmation modal
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu  
-	Then user clicks on SignIn link from global header
-	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
+	When user should able to click on Signin button 
+	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password"
 	And user click on signin button 
 	And User searches a product "SKUForBuyNow" and navigates to PDP
@@ -24,7 +24,7 @@ Scenario: Verify that order is not cancelled if user clicks on No CTA on confirm
 Scenario: Verify that for Authenticated user "Cancel Order" CTA is displayed for orders
     Given user launches the browser and navigates to "ASO_HOME" page 
     Then User clicks on the burger menu 
-	Then user clicks on SignIn link from global header 
+	When user should able to click on Signin button 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
@@ -53,8 +53,8 @@ Scenario: Verify that for Authenticated user "Cancel Order" CTA is displayed for
 Scenario: Verify that order is gets cancelled if user clicks on Yes, Cancel my Order CTA on confirmation modal
      Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu  
-	Then user clicks on SignIn link from global header
-	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
+	When user should able to click on Signin button
+	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password"
 	And user click on signin button 
 	And User searches a product "SKUForBuyNow" and navigates to PDP
@@ -70,7 +70,7 @@ Scenario: Verify that order is gets cancelled if user clicks on Yes, Cancel my O
 Scenario: Verify Cancel Order link is not displayed after order is cancelled
    Given user launches the browser and navigates to "ASO_HOME" page
    Then User clicks on the burger menu  
-	Then user clicks on SignIn link from global header
+	When user should able to click on Signin button 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button

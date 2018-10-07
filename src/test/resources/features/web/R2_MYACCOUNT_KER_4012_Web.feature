@@ -8,6 +8,7 @@ Scenario: Verify that order is not cancelled if user clicks on No CTA on confirm
 	And user enter the valid password "Password" 
 	And user click on signin button
 	When User searches a product "SKUForBuyNow" and navigates to PDP
+
 	Then user clicks on By Now button
 	And user is navigated to order confirmation page and captures order number
 	And user click on MyAccount
@@ -49,7 +50,7 @@ Scenario: Verify that for Authenticated user "Cancel Order" CTA is displayed for
 Scenario: Verify that order is gets cancelled if user clicks on Yes, Cancel my Order CTA on confirmation modal
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
+	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	When User searches a product "SKUForBuyNow" and navigates to PDP
