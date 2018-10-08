@@ -1,6 +1,6 @@
 Feature: Verify BOPIS PDP Store Selection
 
-@C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-8706 @CR-DPK
+@C-BOPIS @R2_Mobile  @R2_All @P-High_B @CB-Cart @KER-2872 @ZYP_CART_K2872-8706 @CR-DPK
 Scenario: Verify that user is able to open the Find Store modal from the header
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 

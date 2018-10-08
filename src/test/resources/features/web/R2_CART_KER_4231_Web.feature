@@ -1,6 +1,6 @@
 Feature: Verify Authenticated Customer Store Priority 
 
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Cart @KER-4231 @ZYP_CART_K4231-8894 
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @1HR_R2 @CB-Cart @KER-4231 @ZYP_CART_K4231-8894 
 @CR-SK 
 Scenario: Verify Authenticated user able to see the BOPIS items for pickup 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -16,7 +16,7 @@ Scenario: Verify Authenticated user able to see the BOPIS items for pickup
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
 	
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-Medium @C-Cart @KER-4231 @ZYP_CART_K4231-8896 
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Medium @CB-Cart @KER-4231 @ZYP_CART_K4231-8896 
 @CR-SK 
 Scenario: 
 	Verify Authenticated user can see the BOPIS item available message in newly selected store 
@@ -34,7 +34,7 @@ Scenario:
 	And user navigate to Cart page 
 	Then user should be able to see In-Store Pick up enabled 
 	
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-4231 @ZYP_CART_K4231-8898 
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-4231 @ZYP_CART_K4231-8898 
 @CR-SK 
 Scenario: Verify Authenticated user able to see the BOPIS items for pickup 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -52,7 +52,7 @@ Scenario: Verify Authenticated user able to see the BOPIS items for pickup
 	Then user should be able to see In-Store Pick up enabled 
 	
 	
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-4231 @ZYP_CART_K4231-8891 
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-4231 @ZYP_CART_K4231-8891 
 @CR-GK 
 Scenario: 
 	Verify Authenticated user can add BOPIS item for newly selected store to cart 
@@ -69,7 +69,7 @@ Scenario:
 	And user will click on View Cart button 
 	
 	
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-4231 @ZYP_CART_K4231-8887 
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-4231 @ZYP_CART_K4231-8887 
 @CR-GK 
 Scenario: Verify Authenticated user can change their favorite store in PLP 
 	Given user launches the browser and navigates to "ASO_HOME" page 

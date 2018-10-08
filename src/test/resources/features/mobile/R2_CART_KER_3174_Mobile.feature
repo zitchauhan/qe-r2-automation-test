@@ -1,6 +1,6 @@
 Feature: B06-225- BOPIS Age Restriction Flag in Checkout
 
-  @C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3174 @ZYP_CART_K3174-KER-10274 @CR-RK
+  @C-BOPIS @R2_Mobile  @R2_All @P-Low @CB-Cart @KER-3174 @ZYP_CART_K3174-KER-10274 @CR-RK
  	Scenario: Verify authenticate user is able to see the See In-Store Pickup Instructions section
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -21,7 +21,7 @@ Feature: B06-225- BOPIS Age Restriction Flag in Checkout
 	And user click on checkout button in Cart page 
 	And user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers
 
-  @C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3174 @ZYP_CART_K3174-KER-10271 @CR-RK
+  @C-BOPIS @R2_Mobile  @R2_All @P-Low @CB-Cart @KER-3174 @ZYP_CART_K3174-KER-10271 @CR-RK
   Scenario: Verify guest user is able to see the See In-Store Pickup Instructions section
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -89,7 +89,7 @@ Feature: B06-225- BOPIS Age Restriction Flag in Checkout
 	And user able to see the button place order
 
 	
-	@C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-Low @1HR_R2 @C-Cart @KER-3174 @ZYP_CART_K3174-KER-10276 @CR-RK 
+	@C-BOPIS @R2_Mobile  @R2_All @P-Low @1HR_R2 @CB-Cart @KER-3174 @ZYP_CART_K3174-KER-10276 @CR-RK 
 Scenario: Verify without checking acknowledgement, user is not able to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu

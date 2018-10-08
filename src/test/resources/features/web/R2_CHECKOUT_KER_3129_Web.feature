@@ -48,7 +48,7 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 		And User should have same tax on Checkout Page Order Summary	
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9550 @CR-RK @C-BOPIS
+@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9550 @CR-RK @C-BOPIS
 Scenario: Verify if  User can  view tax line item in order summary section on checkout (BOPIS Cart).
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 	    And user clicks on SignIn link from global header

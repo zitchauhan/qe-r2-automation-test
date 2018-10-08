@@ -1,6 +1,6 @@
 Feature: B06-225 - BOPIS Pick-Up Person 
 
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3469 
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-3469 
 @ZYP_CHECKOUT_K3469-10872 @CR-GK @1HR_R2 
 Scenario: Verify BOPIS Pick Up Person - Authenticated user -Alternate Person 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -23,7 +23,7 @@ Scenario: Verify BOPIS Pick Up Person - Authenticated user -Alternate Person
 		|StorePickupAlternatesEmail_input|
 		|StorePickupAlternatesPhoneNumber_input|
 		
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3469 
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-3469 
 @ZYP_CHECKOUT_K3469-10874 @CR-GK 
 Scenario: 
 	Verify BOPIS Pick Up Person - Un Authenticated user - Alternate Pick up 
@@ -45,7 +45,7 @@ Scenario:
 		|StorePickupAlternatesEmail_input|
 		|StorePickupAlternatesPhoneNumber_input|
 		
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3469 
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-3469 
 @ZYP_CHECKOUT_K3469-10876 @CR-GK 
 Scenario: Verify BOPIS Pick Up Person - Continue to Complete Payment 
 	Given user launches the browser and navigates to "ASO_HOME" page 

@@ -1,12 +1,12 @@
 Feature: B06-150 - BOPIS PDP Store Selection
 
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3613 @ZYP_CART_K3613-10727 @CR-RK 
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10727 @CR-RK 
 Scenario: Verify that user should be able to click select store in header & open the Find Store modal 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When clicks on the Select Store link in the header
 	Then user should be able to see the Find a Store modal prompting up
 
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3613 @ZYP_CART_K3613-10759 @CR-RK
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10759 @CR-RK
 Scenario: Verify that the user should be able to search the store details by entering ZIP code
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When clicks on the Select Store link in the header
@@ -14,7 +14,7 @@ Scenario: Verify that the user should be able to search the store details by ent
 	And Clicks submit button
 	And store results should get displayed on the basis of ZIPCode entered
 	
-	@C-BOPIS @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3613 @ZYP_CART_K3613-10758 @CR-RK	
+	@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10758 @CR-RK	
 	Scenario: Verify that the user should be displayed with an  error message when there is no store within 250 miles (or configured value)
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on one of the category and navigates to LOne SOF
@@ -28,7 +28,7 @@ Scenario: Verify that the user should be able to search the store details by ent
 	Then verify Static error message
 
 
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-Highest @C-Cart @KER-3613 @ZYP_CART_K3613-10728 @CR-RK @1HR_R2
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Highest @CB-Cart @KER-3613 @ZYP_CART_K3613-10728 @CR-RK @1HR_R2
 Scenario: Verify that user should be able to open the Find Store modal from PDP for BOPIS
 Given user launches the browser and navigates to "ASO_HOME" page 
 When user clicks on one of the category and navigates to LOne SOF
@@ -38,7 +38,7 @@ When user clicks on one of the category and navigates to LOne SOF
 	And clicks on the Change Pickup Location link
 	Then user should be able to see the Find a Store modal
 	
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3613 @ZYP_CART_K3613-10759 @CR-RK        
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10759 @CR-RK        
 Scenario: Verify that  the user should be able to  search the store details by entering ZIP code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on one of the category and navigates to LOne SOF
@@ -52,7 +52,7 @@ Scenario: Verify that  the user should be able to  search the store details by e
 	Then verify the components in Find a Store Model
 
 	
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3613 @ZYP_CART_K3613-10769 @CR-RK 	
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10769 @CR-RK 	
 Scenario: Verify that user should be able to see proper  message while adding to cart for the product which is not available for pickup
 Given user launches the browser and navigates to "ASO_HOME" page 
 And user clicks on SignIn link from global header
@@ -74,7 +74,7 @@ And user clicks on SignIn link from global header
 	
 	
 	
-	@C-BOPIS @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3613 @ZYP_CART_K3613-10760 @CR-AKK	
+	@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10760 @CR-AKK	
 Scenario: Verify that user should be able to view  proper error message while adding to cart  if a product has limited stock for pick-up 
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing

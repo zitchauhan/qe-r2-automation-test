@@ -32,7 +32,7 @@ Scenario: To view details specific to an item in the cart
 	And user verify add to wishlist 
 	  
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8077 @CR-AKK @C-BOPIS
+@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2939 @ZYP_CART_K2939-8077 @CR-AKK @C-BOPIS
 Scenario:
 To verify Shipping radio button - Authenticated user With store selected in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -122,7 +122,7 @@ Scenario: To verify Remove Link
 	Then verify item is removed from the cart 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8078 @CR-AKK @C-BOPIS
+@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2939 @ZYP_CART_K2939-8078 @CR-AKK @C-BOPIS
 Scenario: To verify In-store Pick up radio button - with My Store info on My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#And User navigates to L2 Mens clothing 
@@ -323,7 +323,7 @@ Scenario: To Verify that Move to Wishlist Link is not displayed for Gift Card(s)
 	Then Verify that Move to Wishlist Link is not displayed for Gift Card(s) and Bundle Item(s)
 	
 	 
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-12746 @CR-AKK @C-BOPIS
+@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2939 @ZYP_CART_K2939-12746 @CR-AKK @C-BOPIS
 Scenario: To verify Ship to store radio button - Authenticated user With store selected in My Account
 Given user launches the browser and navigates to "ASO_HOME" page 
 And user clicks on SignIn link from global header 

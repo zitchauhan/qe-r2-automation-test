@@ -1,6 +1,6 @@
 Feature: B06-250- BOPIS Item Return 
 
- @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3172 @ZYP_CART_K3172-10074 @CR-RK @C-BOPIS
+ @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3172 @ZYP_CART_K3172-10074 @CR-RK @C-BOPIS
 Scenario: Verify Customer must be able to select "Print Receipt" from Order Details and print a receipt for a BOPIS order
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header

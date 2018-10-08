@@ -36,7 +36,7 @@ Scenario: To view details specific to an item in the cart
 	And user verify add to wishlist 
 	And user verify Discount messaging and Promotional messaging 
 	And user verify shipping information 
-	Then user verify BOPIS radio button 
+#	Then user verify BOPIS radio button 
 	
 	
 @R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8077 @CR-AKK 

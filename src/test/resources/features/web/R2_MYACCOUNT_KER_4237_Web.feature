@@ -127,7 +127,7 @@ Scenario: Verify that Authenticated user is able to Print Order receipt
 	And user click on print receipt link 
 	
 	
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-MyAccount @KER-4237 
 @ZYP_MYACCOUNT_K4237-10519 @CR-GK 
 Scenario: 
 	Verify that Authenticated user is able to view order details for BOPIS orders 

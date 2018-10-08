@@ -99,7 +99,7 @@ Scenario: Verify the user gets the error message when Password is left blank
 		|Please enter the password								|
 
 
-@R2_Mobile @C-BOPIS @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10301 @CR-SK
+@R2_Mobile @C-BOPIS @R2_NonRegression @R2_All @P-High_B @1HR_R2 @CB-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10301 @CR-SK
 Scenario: Verify user can do the logout using Flyout from My Account header
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
