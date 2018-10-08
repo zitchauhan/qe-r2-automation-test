@@ -43,7 +43,7 @@ Verify guest user is able to see the See In-Store Pickup Instructions section
 	And user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers 
 	
 @R2_Web @C-Order @CC-Cart_Order @R2_All @P-Low   @KER-3174
-@ZYP_CART_K3174-KER-10273 @CR-RK 
+@ZYP_CART_K3174-KER-10273 @CR-RK  @C-BOPIS
 Scenario: Verify guest user is able to place the BOPIS order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SOFSKUNumber" and navigates to PDP 
@@ -67,7 +67,7 @@ Scenario: Verify guest user is able to place the BOPIS order
 	
 	
 	@R2_Web   @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3174
-@ZYP_CART_K3174-KER-10275 @CR-RK 
+@ZYP_CART_K3174-KER-10275 @CR-RK  @C-BOPIS
 Scenario: Verify authenticate user is able to place the BOPIS order 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header 

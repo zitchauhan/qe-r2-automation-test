@@ -1,6 +1,6 @@
 Feature: B06-225 - BOPIS: SMS Capture
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10888 @CR-MS
+@C-BOPIS @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10888 @CR-MS
 Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
@@ -14,7 +14,7 @@ Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 	When user will click on Checkout button and navigates to Checkout page
 	Then user enter Phone number "PhoneNumber" in Billing address
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10884 @CR-MS	
+@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10884 @CR-MS	
 Scenario: Verify Phone number associated with BOPIS
     Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -42,7 +42,7 @@ Scenario: Verify Phone number associated with BOPIS
     Then user can enter the alternative person phone number "PhoneNumber"
     
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10886 @CR-MS	
+@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10886 @CR-MS	
 Scenario: Verify Phone number associated with BOPIS - Saved Billing address
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -61,7 +61,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When user will click on Checkout button and navigates to Checkout page
 #	And  user views the phone number given in the My account saved Billing address
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10885 @CR-MS	
+@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10885 @CR-MS	
 Scenario: Verify Phone number associated with BOPIS - Alternative Person
     Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -88,7 +88,7 @@ Scenario: Verify Phone number associated with BOPIS - Alternative Person
 		|Alternate's Phone Number |
     Then user can enter the alternative person phone number "PhoneNumber"
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10891 @CR-MS
+@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10891 @CR-MS
 Scenario: Verify Phone number field validation
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -116,7 +116,7 @@ Scenario: Verify Phone number field validation
 		|Alternate's Email Address|
 		|Alternate's Phone Number |
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10892 @CR-MS
+@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10892 @CR-MS
 Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -145,7 +145,7 @@ Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 #	And checks for form errors
 	
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10893 @CR-MS
+@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10893 @CR-MS
 Scenario: Verify Phone number field validation
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -173,7 +173,7 @@ Scenario: Verify Phone number field validation
 		|Alternate's Email Address|
 		|Alternate's Phone Number |
 		
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10889 @CR-MS
+@C-BOPIS @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10889 @CR-MS
 Scenario: Verify Phone number associated with BOPIS - Alternative pick up Person
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -204,7 +204,7 @@ Scenario: Verify Phone number associated with BOPIS - Alternative pick up Person
 	And user can enter the alternative person phone number "PhoneNumber"
 #	Then user click on confirm button
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10890 @CR-MS
+@C-BOPIS @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10890 @CR-MS
 Scenario: Verify SMS check box display with Primary and Alternative Person
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -228,7 +228,7 @@ Scenario: Verify SMS check box display with Primary and Alternative Person
     |SendSMSTextUpdatesAboutMyOrder_checkbox|
 #   Then verify the notification message    
     
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10887 @CR-MS
+@C-BOPIS @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10887 @CR-MS
 Scenario: Verify Phone number associated with BOPIS - Change Billing address
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

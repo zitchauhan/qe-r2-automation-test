@@ -1,13 +1,13 @@
 Feature: Verify BOPIS PDP Store Selection
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8706 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8706 @CR-DPK @C-BOPIS
 Scenario: Verify that user is able to open the Find Store modal from the header
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
 	And user verify Find a Store popup
 
 
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2  @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8710 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2  @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8710 @CR-DPK @C-BOPIS
 Scenario: Verify that the user should be able to search the store details by entering ZIP code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
@@ -17,7 +17,7 @@ Scenario: Verify that the user should be able to search the store details by ent
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8717 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8717 @CR-DPK @C-BOPIS
 Scenario: Verify the components user see on the 'Find a Store' modal with search input location
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on Find a Store
@@ -27,7 +27,7 @@ Scenario: Verify the components user see on the 'Find a Store' modal with search
 
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8718 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8718 @CR-DPK @C-BOPIS
 Scenario: Verify that user is able to see the 'View Next 5 stores' button, if stores are available
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
@@ -37,7 +37,7 @@ Scenario: Verify that user is able to see the 'View Next 5 stores' button, if st
 	And user should be able to see the View Next five Stores button	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-8719 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-8719 @CR-DPK @C-BOPIS
 Scenario: Verify the user is able to see the store address of any of the listed store in 'Find a Store' modal through store accordion
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
@@ -48,7 +48,7 @@ Scenario: Verify the user is able to see the store address of any of the listed 
 	And user verify minus icon in Store Address drawer	
 
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8725 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8725 @CR-DPK @C-BOPIS
 Scenario: Verify My Store functionality and modal close behavior
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
@@ -59,7 +59,7 @@ Scenario: Verify My Store functionality and modal close behavior
 	And user verify Find a Store popup is closed
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10617 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10617 @CR-DPK @C-BOPIS
 Scenario: Verify that user is able to seethe Change Location link on PLP BOPIS filter page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on Find a Store
@@ -72,7 +72,7 @@ Scenario: Verify that user is able to seethe Change Location link on PLP BOPIS f
 	And user is able to see Change Pickup Location link in PLP		
 	
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10618 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10618 @CR-DPK @C-BOPIS
 Scenario: Verify that user is able to open the Find Store modal from PLP for BOPIS filter
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on Find a Store
@@ -86,7 +86,7 @@ Scenario: Verify that user is able to open the Find Store modal from PLP for BOP
 	And user verify Find a Store popup	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10619 @CR-DPK	
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10619 @CR-DPK	 @C-BOPIS
 	Scenario: Verify that user is able to see the Change Location link on PDP
 	Given user launches the browser and navigates to "ASO_HOME" page 
 #	When user clicks on one of the category and navigates to LOne SOF
@@ -97,7 +97,7 @@ Scenario: Verify that user is able to open the Find Store modal from PLP for BOP
 	And user is able to see Change Pickup Location link		
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10620 @CR-DPK	
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10620 @CR-DPK	@C-BOPIS
 	Scenario: Verify that user is able to open the Find Store modal from PDP for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 #	When user clicks on one of the category and navigates to LOne SOF
@@ -109,7 +109,7 @@ Scenario: Verify that user is able to open the Find Store modal from PLP for BOP
 	And user verify Find a Store popup	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10621 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10621 @CR-DPK @C-BOPIS
 Scenario: Verify the user is able to view the 'Change Location' under In-store Pick Up on Cart in Product Blade
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SOFSKUNumber" and navigates to PDP
@@ -118,7 +118,7 @@ Scenario: Verify the user is able to view the 'Change Location' under In-store P
 	And verify Change Location link	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10622 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-10622 @CR-DPK @C-BOPIS
 Scenario: Verify that user view 'Find a Store' modal from Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP
@@ -128,7 +128,7 @@ Scenario: Verify that user view 'Find a Store' modal from Cart
 	Then Find in Store modal should get open
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10624 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10624 @CR-DPK @C-BOPIS
 Scenario: Verify user is able to see the BOPIS availability against the listed stores for the products added in cart
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SOFSKUNumber" and navigates to PDP
@@ -141,7 +141,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
 
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10647 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10647 @CR-DPK @C-BOPIS
 Scenario: Verify that user is not able to see the 'View Next 5 stores' button, if more stores are not available
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
@@ -162,7 +162,7 @@ Scenario: Verify the system behaviour on click of 'View Next 5 Stores' CTA
 
 
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2  @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10661 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2  @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10661 @CR-DPK @C-BOPIS
 Scenario: Verify if the user can search the store details by entering City & state
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
@@ -171,7 +171,7 @@ Scenario: Verify if the user can search the store details by entering City & sta
 	Then user verify the results based on entering zipcode
 
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10665 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10665 @CR-DPK @C-BOPIS
 Scenario: Verify the user is able to see the store address of any of the listed store in 'Find a Store' modal with search input location through Store accordion
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
@@ -182,7 +182,7 @@ Scenario: Verify the user is able to see the store address of any of the listed 
 	And user click on minus icon in Store Address drawer
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10681 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10681 @CR-DPK @C-BOPIS
 Scenario: Verify the system behavior on clicking 'Driving Directions' in store details drawer
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
@@ -192,7 +192,7 @@ Scenario: Verify the system behavior on clicking 'Driving Directions' in store d
 	And user should click on Driving Direction
 	Then user should be redirected to the Google Maps in new tab/window	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10715 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10715 @CR-DPK @C-BOPIS
 Scenario: Verify the "Make My Store" CTA behavior for manually searched and input location
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
@@ -201,7 +201,7 @@ Scenario: Verify the "Make My Store" CTA behavior for manually searched and inpu
 	Then user click on all plus icon in Store Address drawer
 	And user verify Make My store button	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10724 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10724 @CR-DPK @C-BOPIS
 Scenario: Verify user is displayed with an error message when there is no store within 250 miles (or configured value)
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store
@@ -210,7 +210,7 @@ Scenario: Verify user is displayed with an error message when there is no store 
 	Then verify Static error message
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10726 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10726 @CR-DPK @C-BOPIS
 Scenario: Verify user is able to see the BOPIS availability on store details drawer for the products added in cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 When user enters "SOFSKUNumber" in the search box
@@ -223,7 +223,7 @@ Scenario: Verify user is able to see the BOPIS availability on store details dra
 	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-11548 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2872 @ZYP_CART_K2872-11548 @CR-DPK @C-BOPIS
 Scenario: Verify the user is able to view the 'Change Location' under In-store Pick Up on Cart in Product Blade
 	Given user launches the browser and navigates to "ASO_HOME" page 
     When user enters "SOFSKUNumber" in the search box 
@@ -233,7 +233,7 @@ Scenario: Verify the user is able to view the 'Change Location' under In-store P
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11552 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11552 @CR-DPK @C-BOPIS
 Scenario: Verify user is able to see the inventory against the listed stores for the product not added to cart and modal opened from PDP
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 When user enters "SOFSKUNumber" in the search box
@@ -244,7 +244,7 @@ Scenario: Verify user is able to see the inventory against the listed stores for
 	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
 	
 			
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11554 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-11554 @CR-DPK @C-BOPIS
 Scenario: Verify user is able to see the inventory on store details drawer for the PDP not added to cart
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	 When user enters "SOFSKUNumber" in the search box
@@ -255,7 +255,7 @@ Scenario: Verify user is able to see the inventory on store details drawer for t
 	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-12582 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CHECKOUT_K2872-12582 @CR-DPK @C-BOPIS
 Scenario: Verify find a store Modal closes On Select "Close X" and If a user selects anywhere outside the modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store

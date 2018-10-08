@@ -1,6 +1,6 @@
-Feature: B06-175- Mixed Cart - Order Confirmation screen 
+Feature: B06-175- Mixed Cart - Order Confirmation screen
 
-@R2_Web @R2_All @P-Highest @1HR_R2 @C-Order @CC-Checkout_Order @C-BOPIS
+@C-BOPIS @R2_Web  @R2_All @P-Highest  @1HR_R2 @C-Order @CC-Checkout_Order   @KER-2856 @ZYP_CHECKOUT_K2856-10865 @CR-RK
 @KER-2856 @ZYP_CHECKOUT_K2856-10865 @CR-RK 
 Scenario:
 Verify Mixed Cart Order Confirmation - Fullfilment methods Ship to Home and BOPIS 
@@ -24,7 +24,7 @@ Verify Mixed Cart Order Confirmation - Fullfilment methods Ship to Home and BOPI
 	And user able to see the button place order 
 	And user is navigated to order confirmation page and captures order number 
 	
-@R2_Web @R2_All @P-High_Order @C-Order @CC-Checkout_Order @C-BOPIS @KER-2856
+	@C-BOPIS @R2_Web  @R2_All @P-High_Order @C-Order @CC-Checkout_Order   @KER-2856 @ZYP_CHECKOUT_K2856-10866 @CR-RK
 @ZYP_CHECKOUT_K2856-10866 @CR-RK 
 Scenario:
 Verify Mixed Cart Order Confirmation - Fullfilment methods BOPIS and SOF 
@@ -55,8 +55,8 @@ Verify Mixed Cart Order Confirmation - Fullfilment methods BOPIS and SOF
 	And user able to see the button place order 
 	And user is navigated to order confirmation page and captures order number 
 	
-@R2_Web @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-2856
-@ZYP_CHECKOUT_K2856-10867 @CR-RK 
+	@C-BOPIS @R2_Web  @R2_All @P-High_Order @C-Order @CC-Checkout_Order   @KER-2856 @ZYP_CHECKOUT_K2856-10867 @CR-RK
+Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Ship to Home
 Scenario:
 Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Ship to Home 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -79,8 +79,8 @@ Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Ship to Home
 	And user able to see the button place order 
 	And user is navigated to order confirmation page and captures order number 
 	
-@R2_Web @R2_All @P-High_Order @C-Order @C-BOPIS @CC-Checkout_Order @KER-2856
-@ZYP_CHECKOUT_K2856-10868 @CR-RK 
+	@C-BOPIS @R2_Web  @R2_All @P-High_Order @C-Order @CC-Checkout_Order   @KER-2856 @ZYP_CHECKOUT_K2856-10868 @CR-RK	
+
 Scenario:
 Verify Mixed Cart Order Confirmation - Fullfilment methods for BOPIS, Sequence - Un authenticated user 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -109,7 +109,7 @@ Verify Mixed Cart Order Confirmation - Fullfilment methods for BOPIS, Sequence -
 		|#Verify following elements in order section|
 		|Order_Bopis_In_Store_Pickup_txt|
 		
-@R2_Web @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-2856
+	@C-BOPIS @R2_Web  @R2_All @P-High_Order @C-Order @CC-Checkout_Order   @KER-2856 @ZYP_CHECKOUT_K2856-10869 @CR-RK	
 @ZYP_CHECKOUT_K2856-10869 @CR-RK 
 Scenario:
 Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Ship to Home 

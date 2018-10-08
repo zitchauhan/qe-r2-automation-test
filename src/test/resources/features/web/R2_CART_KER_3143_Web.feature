@@ -1,6 +1,6 @@
 Feature: [Web] B06-100- Merge Cart
 
-@R2_Web @R2_Regression @C-Cart @P-High @KER-3143 @ZYP_Cart_K3143-10257 @CR-RKA @1HR_R2
+@R2_Web @R2_Regression @C-Cart @P-High @KER-3143 @ZYP_Cart_K3143-10257 @CR-RKA @1HR_R2 @C-BOPIS
 Scenario: Verify if Unauthenticated customer will be able to add items to cart for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 #	And User navigates to L2 Mens clothing 
@@ -213,7 +213,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|# Verify following elements in Cart page "Item in Cart "|
 	|Items_txt|
 	
-	@R2_Web @R2_Regression @P-High @KER-3143 @C-Cart  @ZYP_Cart_K3143-8160 @CR-RKA
+	@R2_Web @R2_Regression @P-High @KER-3143 @C-Cart  @ZYP_Cart_K3143-8160 @CR-RKA @C-BOPIS
 	Scenario: Verify if user must be able to view all items designated for BOPIS( Buy online and pick in store)
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
