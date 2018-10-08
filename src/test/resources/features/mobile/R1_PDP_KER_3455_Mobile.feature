@@ -32,7 +32,7 @@ Feature: [Mobile]Bundles - Add to Cart Notification
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user should be able to enter the signin details "login" "password"
     Then User clicks on the burger menu
     Then User navigates to L3
     Then User select the product from PDP page

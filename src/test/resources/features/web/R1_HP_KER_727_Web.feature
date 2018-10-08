@@ -5,7 +5,7 @@ Feature: [UI] [Desktop ]To verify user can view 'My Account' from a drop down ac
 Scenario: user to verify Account summary after successful login from ASO_HOME page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user to click on sing in and navigate to sign in page 
-	And user should be able to enter the signin details "Login_username" "Login_pwd"  
+	And user should be able to enter the signin details "login" "password"  
    Then verify user to navigate to account summary page
     
  
@@ -48,14 +48,14 @@ Scenario Outline: user to verify sing in  as invalid password address
     
   Given user launches the browser and navigates to "ASO_HOME" page 
   When user to click on sing in and navigate to sign in page  		  
-  And user should be able to enter the signin details "Login_username" "Login_pwd"
+  And user should be able to enter the signin details "login" "password"
    Then verify personal information form My Account
 
 @C-HP @Web  @Regression  @KER-727 @ZYP_HP_K727-4069 
  Scenario: user to verify Address book  form My Account
   Given user launches the browser and navigates to "ASO_HOME" page 
   When user to click on sing in and navigate to sign in page  		  
-  And user should be able to enter the signin details "Login_username" "Login_pwd"
+  And user should be able to enter the signin details "login" "password"
   Then verify Address book form My Account
 
   	    
@@ -63,7 +63,7 @@ Scenario Outline: user to verify sing in  as invalid password address
 	 Scenario: user to verify WishList form My Account
 	  Given user launches the browser and navigates to "ASO_HOME" page 
 	  When user to click on sing in and navigate to sign in page  		  
-	  And user should be able to enter the signin details "Login_username" "Login_pwd"
+	  And user should be able to enter the signin details "login" "password"
 	  Then verify , WishList form My Account
 
  	 @C-HP @Web  @Regression @KER-727 @ZYP_HP_K727-4065  
@@ -79,7 +79,7 @@ Scenario Outline: user to verify sing in  as invalid password address
   	Scenario: Desktop-To Verify the signout from MyAccount
      Given user launches the browser and navigates to "ASO_HOME" page
      When user to click on sing in and navigate to sign in page  		  
-     And user should be able to enter the signin details "Login_username" "Login_pwd"
+     And user should be able to enter the signin details "login" "password"
      Then click on singout
 
   	  
@@ -87,14 +87,14 @@ Scenario Outline: user to verify sing in  as invalid password address
   	Scenario: To Verify user is able to Sign In with Valid user name and password by clicking in Sign In Link in the global header
      Given user launches the browser and navigates to "ASO_HOME" page
      When user to click on sing in and navigate to sign in page  		  
-  	And user should be able to enter the signin details "Login_username" "Login_pwd"
+  	And user should be able to enter the signin details "login" "password"
  
 	
 	@C-HP @Web  @Regression @KER-727 @ZYP_HP_K727-8492 @CR-AKK
   	Scenario: To Verify user to verify Account summary after successful login from ASO_HOME page
      Given user launches the browser and navigates to "ASO_HOME" page
      When user to click on sing in and navigate to sign in page  		  
-     And user should be able to enter the signin details "Login_username" "Login_pwd"
+     And user should be able to enter the signin details "login" "password"
     Then User clicks on ASO logo
     Then User should be navigated to Home_Page
 

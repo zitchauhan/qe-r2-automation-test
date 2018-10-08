@@ -102,8 +102,9 @@ public class R1_PDP_K1920_SD extends CommonActionHelper{
 	public void User_check_for_the_view_cart_title() throws Throwable {
 		//		waitForElement(pdpPageObj.viewcarttitle);
 		//		assertTrue(isDisplayed(pdpPageObj.viewcarttitle));
-		assertTrue("Shopping Cart".equalsIgnoreCase(getTitle()));
-
+		//assertTrue("cart".contains(getTitle()));
+		waitForPageLoad(driver);
+          assertTrue(getTitle().contains("cart"));
 	}
 
 	@Then("^User check for the title of checkout$")

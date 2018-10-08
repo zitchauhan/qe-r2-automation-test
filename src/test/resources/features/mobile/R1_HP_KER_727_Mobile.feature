@@ -8,7 +8,7 @@ Feature: [UI] [Mobile]To verify user can view 'My Account' from a drop down acco
 #	 When user to click on sing in and navigate to sign in page
 	Then User clicks on the burger menu
     Then user should able to click on Signin button
-	And user should be able to enter the signin details "Login_username" "Login_pwd"
+	And user should be able to enter the signin details "login" "password"
 	 Then User clicks on the burger menu
 	 Then user sign out from the website
 
@@ -22,7 +22,7 @@ Feature: [UI] [Mobile]To verify user can view 'My Account' from a drop down acco
 #	 When user to click on sing in and navigate to sign in page
      Then User clicks on the burger menu
     Then user should able to click on Signin button
-	And user should be able to enter the signin details "Login_username" "Login_pwd"
+	And user should be able to enter the signin details "login" "password"
 	Then verify user to navigate to account summary page
 	
 
@@ -91,7 +91,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
 #    When user to click on sing in and navigate to sign in page
     Then User clicks on the burger menu
     Then user should able to click on Signin button
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user should be able to enter the signin details "login" "password"
   	 Then verify user to navigate to account summary page
 
 
@@ -102,7 +102,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
 #    When user to click on sing in and navigate to sign in page
    Then User clicks on the burger menu
     Then user should able to click on Signin button
-   And user should be able to enter the signin details "Login_username" "Login_pwd"
+   And user should be able to enter the signin details "login" "password"
 	Then verify personal information form My Account
   
 
@@ -114,7 +114,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
 #    When user to click on sing in and navigate to sign in page
     Then User clicks on the burger menu
     Then user should able to click on Signin button
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user should be able to enter the signin details "login" "password"
 	Then verify Address book form My Account
 	  
 
@@ -126,7 +126,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
 #    When user to click on sing in and navigate to sign in page
     Then User clicks on the burger menu
     Then user should able to click on Signin button
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user should be able to enter the signin details "login" "password"
 	Then verify , WishList form My Account
  
    @C-HP  @Mobile  @Regression  @KER-727   @ZYP_HP_K727-4081 @CR-AKK
@@ -136,7 +136,7 @@ Scenario Outline:To Verify the Sign-in functionality for invalid  password
 #    When user to click on sing in and navigate to sign in page
     Then User clicks on the burger menu
     Then user should able to click on Signin button
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user should be able to enter the signin details "login" "password"
 	Then verify personal information form My Account
 
 		
@@ -148,7 +148,7 @@ Scenario: To verify user can view 'My Account' from a drop down account summary 
 	#	 When user to click on sing in and navigate to sign in page
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
-	And user should be able to enter the signin details "Login_username" "Login_pwd" 
+	And user should be able to enter the signin details "login" "password" 
 	Then verify user to navigate to account summary page 
 	
 	

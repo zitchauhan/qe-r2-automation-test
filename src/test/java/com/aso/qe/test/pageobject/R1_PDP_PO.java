@@ -218,7 +218,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "//div[contains(@class,'breadCrumbComponent')]//span[4]//a")public WebElement navigateToPLP;	
 	@FindBy(xpath = "//*[@id='productCardListing']//*[contains(text(),'Online Only')]")public List<WebElement> checkOnlineBadges;
 	@FindBy(xpath = "//*[@data-bv-show='inline_rating']/parent::div")public WebElement checkRating;
-	@FindBy(xpath = "(//*[contains(text(),'BEGIN CHECKOUT')])[1]")public WebElement btnCheckoutReskin;
+	@FindBy(xpath = "(//*[contains(text(),'Checkout')])[1]")public WebElement btnCheckoutReskin;
 	
 	//***********************************************************************************************************//
 
@@ -707,10 +707,10 @@ public class R1_PDP_PO extends CommonActionHelper
 //SID 16-August KER-2725
 	public boolean checkPresence() {
 		boolean flag=false;
-		if(isDisplayed(pdpRating) && isDisplayed(pdpPromoMessage) && isDisplayed(pdpEybrow)) {
+		if(isDisplayed(pdpRating) && isDisplayed(pdpPromoMessage)) {
 			flag=true;
 		}
-		else if(isDisplayed(pdpRating) && isDisplayed(pdpEybrow)) {
+		else if(isDisplayed(pdpRating)) {
 			logger.debug("*************Promo Message not Found***************");
 			flag=false;
 		}

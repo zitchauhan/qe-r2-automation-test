@@ -18,13 +18,13 @@ Feature: To Verify the functionality of "Weekly Ad Link" in the Global Header.
   @Mobile @All @1HR  @Regression @C-HP  @KER-729  @ZYP_HP_K729-5626
   Scenario Outline: Verify presence of weekly ad link in the header on PLP page by search Mobile
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "<SearchTerm>" in the search box
+    When user enters "<productName>" in the search box
     Then User clicks on the burger menu
     And User should be able to see Weekly Ad link
     Then User closes the web application
 
     Examples: 
-      | SearchTerm |
+      | productName |
       | Nike Shoe |
 
   @Mobile @All @Regression @C-HP  @KER-729  @ZYP_HP_K729-5627

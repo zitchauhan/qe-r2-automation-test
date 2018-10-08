@@ -33,14 +33,14 @@ Feature: To verify all sorting options are available
   @Web @All @KER-615 @ZYP_PLP_K615-5605 @Regression @C-PLP @CR-RKA
   Scenario: Verify user is able to see all sorting option CLP by search
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "SearchTerm" in the search box
+    When user enters "productName" in the search box
     Then user is able to Most Relevant as a default sort option
 
 
   @Web @KER-615 @ZYP_PLP_K615-2896 @Regression @C-PLP @CR-RKA
   Scenario: Verify user is shown default sort option as Most Relevent for search
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "SearchTerm" in the search box
+    When user enters "productName" in the search box
     Then user is able to Most Relevant as a default sort option
 
 

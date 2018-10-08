@@ -92,7 +92,7 @@ public class R1_SIT_PO extends CommonActionHelper{
 	@FindBy(xpath="//p[@id='deleteQuestionMessage']") public WebElement txtDeletesmsg;
 	@FindBy(xpath="//button[@id='confirmDelete']") public WebElement btnyes;
 	@FindBy(xpath="//div[@data-auid='PDP_AddToWishList']") public WebElement lnkaddtowishlist;
-	@FindBy(xpath="//button[@id='newWishListBtn'] | //*[@data-auid='btnmodal_open_btn'] | //*[text()='Create a New Wish List']") public  WebElement btnNewWishlist;  //SID 19-September
+	@FindBy(xpath="//button[@id='newWishListBtn'] | //*[@data-auid='btnmodal_open_btn'] | //*[text()='Create a New Wish List'] | //*[text()='Create a List']") public  WebElement btnNewWishlist;  //SID 19-September
 	@FindBy(xpath="//h2[@id='createWishListModalTitle']") public  WebElement tltCreatewishlist;
 	@FindBy(xpath="//input[@id='createWishListInputField'] | //*[@data-auid='wish_list_name_input'] | //*[@data-auid='Wish_list_name_input']") public  WebElement txtListname;  //SID 19-September
 	@FindBy(xpath="//button[@id='add_cancel']") public  WebElement btncancel;

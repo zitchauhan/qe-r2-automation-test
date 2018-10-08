@@ -24,13 +24,8 @@ Scenario: Verify user is able to see Academy as anchor for all breadcrumbs(ex. b
 @Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-9098 @CR-SG @ZYP_PDP_K1921-3432_1 @RBeta
 Scenario: Verify user is able to see breadcrumb for the subsequent store details page 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
-	Then User click on the Find a Store button 
-	Then User is able to see Find a Store Modal 
-	Then User enter the pin code 
-	Then User click on search button 
-	And User should able to see the results 
-	Then User click on see details 
-	Then User matches the order of breadcrumb 
+	When user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
+    Then user is able to see nearest store location "FindStoreZipcodeNearestStore"
 	
 @Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-6685 @CR-SG @RBeta
 Scenario: Verify should be able to see breadcrumb from Search as: Academy> search -search term used-Desktop 

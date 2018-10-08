@@ -31,7 +31,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
   Scenario: Verify the Check Out Button functionality in ATC notification for Bundle product for sign in user
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user should be able to enter the signin details "login" "password"
     Then User navigates to L3 from home page
     Then User should be able to see L3 Page
     Then User select the product from PDP page

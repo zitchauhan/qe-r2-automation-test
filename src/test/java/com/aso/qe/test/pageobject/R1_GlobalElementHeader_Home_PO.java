@@ -210,8 +210,8 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//div[@class='container']//b[1]") public WebElement searchTitle;
 	@FindBy(xpath="//span[text()='Skechers']") public WebElement specificSearchTitle;
 	@FindBy(xpath="//div[@class='container css-tnijvs']/h2[text()='Skechers']") public WebElement specificSearchTitle_M;
-	@FindBy(xpath="//span[text()='Water Parks & Slides']") public WebElement searchTerm;
-	@FindBy(xpath="//div[@class='container css-tnijvs']//h2") public WebElement searchTerm_M;
+	@FindBy(xpath="//span[text()='Water Parks & Slides']") public WebElement productName;
+	@FindBy(xpath="//div[@class='container css-tnijvs']//h2") public WebElement productName_M;
 	@FindBy(xpath="(//*[contains(text(),'Frisbee')])[1]")	public WebElement txtSearchFrisbeeProduct;
 
 	//KER-3238 Ak start
@@ -250,7 +250,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//ol[@class='storeLocatorBreadcrumb z-list-inline']/li[5]//span[@itemprop='name']") public WebElement storeNameBreadcrumb; 
 	@FindBy(xpath="//ol[@class='storeLocatorBreadcrumb z-list-inline']/li[1]//span") public WebElement academyBreadcrumb;
 	@FindBy(xpath="//ol[@class='storeLocatorBreadcrumb z-list-inline']/li[2]//span") public WebElement storeLocatorBreadcrumb;
-	@FindBy(xpath="//*[@data-auid='breadCrumb_link_0_Academy']//parent::span/span[2]") public WebElement searchTermBreadcrumb; 
+	@FindBy(xpath="(//*[@data-auid='breadCrumb_link_0_Academy']//ancestor::span/span)[2]") public WebElement productNameBreadcrumb; //updated by Anuj 08 oct
 	@FindBy(xpath="//*[@data-auid='search-clear-button_m']") public WebElement clickSearchbtn;
 	@FindBy(xpath="((//span[@class='line-separator'])[2]/following::span)[1]") public WebElement lnkL2PageNotClickable;
 	@FindBy(xpath="((//span[@class='line-separator'])[3]/following::span)[1]") public WebElement lnkL3PageNotClickable;
@@ -723,9 +723,9 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			assertTrue(clickOnButton(btnShopCategory));
 			Thread.sleep(Constants.thread_low);
 			//Actions hover = new Actions(getDriver());
-			moveHover(btnClothingCategory);
+			//moveHover(btnClothingCategory);
 			Thread.sleep(Constants.thread_low);
-			assertTrue(clickOnButton(btnMenClothingShop));
+			assertTrue(clickOnButton(btnMensShirt_Men_Clothing_Shop));
 			Thread.sleep(Constants.thread_low);
 			//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 		

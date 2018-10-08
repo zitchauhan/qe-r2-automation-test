@@ -14,8 +14,8 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(getDriver(),R1_GlobalElementHeader_Home_PO.class);
 
 	//@FindBy(xpath = "//*[contains(text(), 'Find a Store')]")public WebElement ovly_FindStore;/RKA 17 aug
-	@FindBy(xpath="(//*[contains(text(), 'Find a Store')])[2]")public WebElement ovly_FindStore;
-	@FindBy(xpath = "//input[@placeholder='Enter Zip Code or City, State']")public WebElement ovly_searchTextBox;
+	@FindBy(xpath="(//*[contains(text(), 'Find A Store')])[2]")public WebElement ovly_FindStore;
+	@FindBy(xpath = "//input[@name='zipcode']")public WebElement ovly_searchTextBox;
 	@FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']/span")public WebElement ovly_btnCloseCross;
 	@FindBy(xpath = "//*[@data-auid='submit-zip-code']/span")public WebElement ovly_btnGO;
     @FindBy(xpath = "(//button[@aria-label='Make My Store'])[1]")public WebElement ovly_btnMakeMyStore_1;

@@ -1,5 +1,6 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.text.SimpleDateFormat;
@@ -44,5 +45,10 @@ public class R1_HP_K1915_SD extends CommonActionHelper {
 	@Then("^user click on Add WishList link$")
 	public void user_click_on_Add_WishList_link() throws Throwable {
 		assertTrue(isDisplayed(pdpPageObj.btnAddToWishList));
+	}
+	
+	@Then("^user should not be able to see Add WishList link$")
+	public void user_should_not_be_able_to_see_Add_WishList_link() throws Throwable {
+		assertFalse(isDisplayed(pdpPageObj.btnAddToWishList));
 	}
 }

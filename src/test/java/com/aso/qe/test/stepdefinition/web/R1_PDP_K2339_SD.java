@@ -221,9 +221,9 @@ public class R1_PDP_K2339_SD extends CommonActionHelper {
 		waitForElement(globalElementHeader.anchorAcademy);
 		assertTrue(isDisplayed(globalElementHeader.anchorAcademy));
 		Boolean check = false;
-		check = globalElementHeader.searchTermBreadcrumb.getText().equalsIgnoreCase("Search - " + "Pants");
+		check = globalElementHeader.productNameBreadcrumb.getText().equalsIgnoreCase("Results for " + "Pants");
 		if (check == true) {
-			assertTrue(isDisplayed(globalElementHeader.searchTermBreadcrumb));
+			assertTrue(isDisplayed(globalElementHeader.productNameBreadcrumb));
 		}
 	}
 

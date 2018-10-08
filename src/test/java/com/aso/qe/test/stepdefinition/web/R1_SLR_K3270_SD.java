@@ -68,8 +68,8 @@ public class R1_SLR_K3270_SD extends CommonActionHelper{
 			assertTrue(isDisplayed(globalElementHeader.mobileBreadcrumb));
 		}
 		else {
-		waitForElement(globalElementHeader.searchTerm);
-		assertTrue(isDisplayed(globalElementHeader.searchTerm));
+		waitForElement(globalElementHeader.productName);
+		assertTrue(isDisplayed(globalElementHeader.productName));
 		}
 	}
 	

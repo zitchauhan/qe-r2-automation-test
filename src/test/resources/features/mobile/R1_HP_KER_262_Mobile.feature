@@ -48,7 +48,7 @@ Scenario: Verify the SignUp functionality for new customer
 	#    When user to click on sing in and navigate to sign in page
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
-	And user should be able to enter the signin details "Login_username" "Login_pwd" 
+	And user should be able to enter the signin details "login" "password" 
 	
 @Regression @Mobile @KER-262 @ZYP_HP_K262-4085 @C-HP @CR-RKA 
 Scenario: To Verify the signout from MyAccount 
@@ -57,7 +57,7 @@ Scenario: To Verify the signout from MyAccount
 	#    When user to click on sing in and navigate to sign in page
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
-	And user should be able to enter the signin details "Login_username" "Login_pwd" 
+	And user should be able to enter the signin details "login" "password" 
 	Then User clicks on the burger menu 
 	Then click on singout 
 	
@@ -69,7 +69,7 @@ To verify user can view 'My Account' from a drop down account summary upon succe
 	#    When user to click on sing in and navigate to sign in page
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
-	And user should be able to enter the signin details "Login_username" "Login_pwd" 
+	And user should be able to enter the signin details "login" "password" 
 	Then verify user to navigate to account summary page 
 	
 	
@@ -133,7 +133,7 @@ Scenario: Verify the Address Book details from MyAccount
 	#    When user to click on sing in and navigate to sign in page
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
-	And user should be able to enter the signin details "Login_username" "Login_pwd" 
+	And user should be able to enter the signin details "login" "password" 
 	Then verify Address book form My Account 
 	
 @C-HP @Mobile @Regression @KER-262 @ZYP_HP_K262-4083 @CR-RKA 
@@ -143,7 +143,7 @@ Scenario: Verify the Wishlists details from MyAccount
 	#    When user to click on sing in and navigate to sign in page
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
-	And user should be able to enter the signin details "Login_username" "Login_pwd" 
+	And user should be able to enter the signin details "login" "password" 
 	Then verify , WishList form My Account 
 	
 	
@@ -211,7 +211,7 @@ Then User should be dispalyed with message Your Shopping Cart is Empty
 #   When user to click on sing in and navigate to sign in page
 Then User clicks on the burger menu 
 Then user should able to click on Signin button 
-And user should be able to enter the signin details "Login_username" "Login_pwd" 
+And user should be able to enter the signin details "login" "password" 
 Then User clicks on the burger menu 
 Then user verify drawer like shop ,trending ,deal 
 Then User verify and click on weekly Ads 
@@ -228,7 +228,7 @@ Then User will verify the presence of ASO Logo and click on Logo
 #      When user to click on sing in and navigate to sign in page
 Then User clicks on the burger menu 
 Then user should able to click on Signin button 
-And user should be able to enter the signin details "Login_username" "Login_pwd" 
+And user should be able to enter the signin details "login" "password" 
 Then User clicks on the burger menu 
 Then User verify and click on weekly Ads 
 And User clicks on the minicart icon and navigated to minicart 
@@ -242,7 +242,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 #    When user to click on sing in and navigate to sign in page
 Then User clicks on the burger menu 
 Then user should able to click on Signin button 
-And user should be able to enter the signin details "Login_username" "Login_pwd" 
+And user should be able to enter the signin details "login" "password" 
 Then verify Address book form My Account 
 
 @C-HP @Mobile @Regression @KER-262 @ZYP_HP_K262-4084 @CR-RKA 
@@ -252,7 +252,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 #    When user to click on sing in and navigate to sign in page
 Then User clicks on the burger menu 
 Then user should able to click on Signin button 
-And user should be able to enter the signin details "Login_username" "Login_pwd" 
+And user should be able to enter the signin details "login" "password" 
 Then verify Address book form My Account 
 
 

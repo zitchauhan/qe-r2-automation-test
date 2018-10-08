@@ -37,16 +37,16 @@ public class R1_HP_K724_SD extends CommonActionHelper {
 	@Then("^navigates to LTwo page$")
 	public void navigates_to_LTwo_page() throws Throwable {
 		assertTrue((clickOnButton(globalElementHeader.btnShopCategory)));
-		Actions hover = new Actions(getDriver());
-		hover.moveToElement(globalElementHeader.btnClothingCategory).build().perform();
+//		Actions hover = new Actions(getDriver());
+//		hover.moveToElement(globalElementHeader.btnClothingCategory).build().perform();
 		assertTrue((clickOnButton(globalElementHeader.btnMensShirt_Men_Clothing_Shop)));
 	}
 
 	@Then("^navigates to LThree page$")
 	public void navigates_to_LThree_page() throws Throwable {
 		assertTrue((clickOnButton(globalElementHeader.btnShopCategory)));
-		Actions hover = new Actions(getDriver());
-		hover.moveToElement(globalElementHeader.btnClothingCategory).build().perform();
+//		Actions hover = new Actions(getDriver());
+//		hover.moveToElement(globalElementHeader.btnClothingCategory).build().perform();
 		assertTrue((clickOnButton(globalElementHeader.btnMensShirt_Men_Clothing_Shop)));
 	}
 

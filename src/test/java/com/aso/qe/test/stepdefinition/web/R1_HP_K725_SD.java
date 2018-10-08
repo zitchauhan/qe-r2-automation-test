@@ -23,13 +23,13 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 		logger.debug("user_should_be_able_to_click_on_MiniCart_icon_and_navigate_to_My_cart_page_and_Validate_Shopping_Cart");
 
 		shoppingCartViewPO.clickOnCartIcon();
-		shoppingCartViewPO.compareCartEmptyTxt("YOUR SHOPPING CART IS EMPTY");
+		shoppingCartViewPO.compareCartEmptyTxt("YOUR CART IS EMPTY");
 	}
 
 	@Then("^User should be dispalyed with message Your Shopping Cart is Empty$")
 	public void user_should_be_dispalyed_with_message_Your_Shopping_Cart_is_Empty() throws Throwable {
 		
-		shoppingCartViewPO.compareCartEmptyTxt("YOUR SHOPPING CART IS EMPTY");
+		shoppingCartViewPO.compareCartEmptyTxt("YOUR CART IS EMPTY");
 	
 	}
 	

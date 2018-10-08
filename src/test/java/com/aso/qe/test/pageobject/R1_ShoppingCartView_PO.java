@@ -12,7 +12,7 @@ public class R1_ShoppingCartView_PO extends CommonActionHelper {
 	//@FindBy(xpath="//div[@class='col-1 a-pad-right0 a-text-right a-pos-inherit']//a[@data_auid='mini_cart']") WebElement cartIcon;/RKA 25 JuLY
 	@FindBy(xpath="//*[@data-auid='miniCart']//a") public WebElement cartIcon;
 	
-	@FindBy(xpath="//h1[contains(text(),'Your Shopping Cart is Empty')]") WebElement cartEmptyTxt;
+	@FindBy(xpath="//*[contains(text(),'YOUR CART IS EMPTY')]") WebElement cartEmptyTxt;
 	@FindBy(xpath="//.[@class='cont-shop-link']") WebElement continueShoppingLink;
 	@FindBy(xpath="//div[@class='cartitem-row-outer']") public WebElement secProductInCart;
 	//@FindBy(xpath="//span[@id='rh-cart-count']")	public WebElement txtMinicartCount;/RKA 25 July

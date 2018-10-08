@@ -16,7 +16,7 @@ Feature: To verify basic functionalities of PDP
   @Regression  @C-PDP @Mobile @KER-1926  @ZYP_PDP_K1926-5558 @All @Rerun @1HR @RBeta
   Scenario: To verify URL, Image, Attributes, Add to cart button section mobile by search
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "SearchTermPDP" in the search box
+    When user enters "productNamePDP" in the search box
     And user should be able to see PDP mention in the current url
     Then user should be able to see Image of the product
     And user should be able to see the search term in the product title
@@ -62,7 +62,7 @@ Feature: To verify basic functionalities of PDP
     @All  @C-PDP @Regression @Mobile  @KER-1926  @ZYP_PDP_K1926-5570 @Rerun
     Scenario: To verify sku and item value by search
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "SearchTermPDP" in the search box
+    When user enters "productNamePDP" in the search box
     And user should be able to see the sku and item numbers for the given image
 
 
@@ -89,7 +89,7 @@ Feature: To verify basic functionalities of PDP
   @Regression  @C-PDP @Mobile @KER-1926  @ZYP_PDP_K1926-5756 @All @Rerun @RBeta
   Scenario: To verify change of sku and item value by search
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "SearchTermPDP" in the search box
+    When user enters "productNamePDP" in the search box
     And user should be able to see the sku and item numbers for the given image
     When user select any other size and color of the product varient
     Then user should be able to see the changed value of the sku and item

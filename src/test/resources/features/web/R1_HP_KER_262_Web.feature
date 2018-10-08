@@ -4,14 +4,14 @@ Feature: [Desktop]Components - Header
   Scenario: Desktop-To Verify the signout from MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user should be able to enter the signin details "login" "password"
     Then Verify signout from my account
 
   @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-1972 @CR-RKA
   Scenario: Desktop- To Verify user is able to Sign In with Valid user name and password by clicking in Sign In Link in the global header
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user should be able to enter the signin details "login" "password"
     Then verify user to navigate to account summary page
 
 
@@ -58,7 +58,7 @@ Feature: [Desktop]Components - Header
   Scenario: user to verify personal information  form My Account
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user should be able to enter the signin details "login" "password"
     Then verify personal information form My Account
 
 
@@ -66,14 +66,14 @@ Feature: [Desktop]Components - Header
   Scenario: user to verify Address book  form My Account
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user should be able to enter the signin details "login" "password"
     Then verify Address book form My Account
 
   @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-4070 @CR-RKA
   Scenario: user to verify WishList form My Account
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user should be able to enter the signin details "login" "password"
     Then verify , WishList form My Account
 
 
@@ -81,7 +81,7 @@ Feature: [Desktop]Components - Header
   Scenario: Desktop-Verify the Account Summary details from MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user should be able to enter the signin details "login" "password"
     Then verify account summary detail from my account
 
   
@@ -118,7 +118,7 @@ Feature: [Desktop]Components - Header
   Scenario Outline: Verify that the store details are displayed for Logged-in user
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user should be able to enter the signin details "login" "password"
     Then User should be able to click on Find Store after sign in
     When User select store with Postal Code
     Then User verify hour of operation display in the place of find a store link
