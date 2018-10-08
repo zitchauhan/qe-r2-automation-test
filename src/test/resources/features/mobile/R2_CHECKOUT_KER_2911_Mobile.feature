@@ -1,6 +1,6 @@
 Feature: Verify Accurate Shipping Prices at Checkout
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @1HR_R2 @KER-2911 @ZYP_CHECKOUT_K2926-8229 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @1HR_R2 @KER-2911 @ZYP_CHECKOUT_K2911-8229 @CR-DPK
 Scenario: Verify if the shipping price on Checkout screen is same as Order Summary on Cart page
 	    Given user launches the browser and navigates to "ASO_HOME" page
 	    And User clicks on the burger menu   
@@ -25,18 +25,24 @@ Scenario: Verify if the shipping price on Checkout screen is same as Order Summa
 		
 	
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2911
-@ZYP_CHECKOUT_K2926-8230 @CR-DPK 
+@ZYP_CHECKOUT_K2911-8230 @CR-DPK 
 Scenario:
 Verify the shipping price for each shipping method for Ship 2 Store items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
+	Then User should be able to click on Find Store
+	Then user enter "zipCode" in Find a Store Model
+	And user click on submit button
+	Then user click on plus icon in Store Address drawer
+	And user click on Make My store button	
 	And User clicks on the burger menu 
 	Then user navigate to GunStorageAndSafty L_Three 
 	Then user select the product from L_Three and navigate to PDP 
-	When user clicks on Find a Store 
-	Then user enter "zipCode" in Find a Store Model 
-	And user click on submit button 
-	Then user click on plus icon in Store Address drawer 
-	And user click on Make My store button 
+#	When user clicks on Find a Store 
+#	Then user enter "zipCode" in Find a Store Model 
+#	And user click on submit button 
+#	Then user click on plus icon in Store Address drawer 
+#	And user click on Make My store button 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page
@@ -54,19 +60,25 @@ Verify the shipping price for each shipping method for Ship 2 Store items
 
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2911
-@ZYP_CHECKOUT_K2926-8231 @CR-DPK 
+@ZYP_CHECKOUT_K2911-8231 @CR-DPK 
 Scenario:
 Verify the shipping price for each shipping method for SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User clicks on the burger menu
+	Then User should be able to click on Find Store
+	Then user enter "zipCode" in Find a Store Model
+	And user click on submit button
+	Then user click on plus icon in Store Address drawer
+	And user click on Make My store button	 
 	And User clicks on the burger menu 
 	Then user navigate to GunStorageAndSafty L_Three 
 	Then user select the product from L_Three and navigate to PDP 
-	And User clicks on the burger menu 
-	When user clicks on Find a Store 
-	Then user enter "zipCode" in Find a Store Model 
-	And user click on submit button 
-	Then user click on plus icon in Store Address drawer 
-	And user click on Make My store button 
+#	And User clicks on the burger menu 
+#	When user clicks on Find a Store 
+#	Then user enter "zipCode" in Find a Store Model 
+#	And user click on submit button 
+#	Then user click on plus icon in Store Address drawer 
+#	And user click on Make My store button 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page
@@ -82,7 +94,7 @@ Verify the shipping price for each shipping method for SOF items
 
 
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2911
-@ZYP_CHECKOUT_K2926-8232 @CR-DPK 
+@ZYP_CHECKOUT_K2911-8232 @CR-DPK 
 Scenario:
 Verify the shipping price for each shipping method for Gift Card items
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -104,7 +116,7 @@ Verify the shipping price for each shipping method for Gift Card items
 	
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2911
-@ZYP_CHECKOUT_K2926-8233 @CR-DPK 
+@ZYP_CHECKOUT_K2911-8233 @CR-DPK 
 Scenario:
 Verify the shipping price for each shipping method for White glove items where Shipping Exception table exists
 	Given user launches the browser and navigates to "ASO_HOME" page 

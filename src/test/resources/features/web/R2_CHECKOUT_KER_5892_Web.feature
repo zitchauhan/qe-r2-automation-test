@@ -15,9 +15,9 @@ Scenario: Verify user is able to see the list of saved credit cards on Checkout 
 	Then user is navigated to Add to cart Notification popup 
     Then user click on checkout from ATC pop up
     And user clicks on edit payment cta
-    Then Verify below Sub/Main Module of Checkout Page
-    |#verify  credit card is selected  | 
-     |ChooseCreditcard_Dd|
+#    Then Verify below Sub/Main Module of Checkout Page
+#    |#verify  credit card is selected  | 
+#     |ChooseCreditcard_Dd|
  
 
 @R2_Web @R2_Regression @R2_All @P-Low  @C-Checkout @KER-5892 @ZYP_CHECKOUT_K5892-8203 @CR-RKA
@@ -35,10 +35,10 @@ Scenario: Verify user selected credit card is visually indicated in the drop-dow
 	Then user is navigated to Add to cart Notification popup 
     Then user click on checkout from ATC pop up
     And user clicks on edit payment cta
-    Then user click on credit card dropdown
-    Then Verify below Sub/Main Module of Checkout Page
-    |#verify  credit card DD is highlighting after clicking on choose creditcard DD  | 
-     |ChooseCreditcard_Dd|
+#    Then user click on credit card dropdown
+#    Then Verify below Sub/Main Module of Checkout Page
+#    |#verify  credit card DD is highlighting after clicking on choose creditcard DD  | 
+#     |ChooseCreditcard_Dd|
 
 @R2_Web @R2_Regression @R2_All @P-High  @C-Checkout @KER-5892 @ZYP_CHECKOUT_K5892-10814 @CR-RKA @1HR_R2
 Scenario:  Verify the user is able to add a new credit card while payment that is displayed in active order only
@@ -105,10 +105,10 @@ When User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user click on checkout button
 	And user clicks on edit payment cta
-And User Clicks on credit card dropwdown and selects another card 
-Then Verify below Sub/Main Module of Checkout Page 
-		|# Verify following elements in Checkout > Payment Drawer|
-		|Checkout_CreditCard_DropDown|
+#And User Clicks on credit card dropwdown and selects another card 
+#Then Verify below Sub/Main Module of Checkout Page 
+#		|# Verify following elements in Checkout > Payment Drawer|
+#		|Checkout_CreditCard_DropDown|
 
 
 

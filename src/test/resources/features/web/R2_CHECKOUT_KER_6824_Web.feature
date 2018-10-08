@@ -31,8 +31,9 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 @R2_Web  @R2_All @P-Highest @1HR_R2 @C-Order @CC-Checkout_Order @KER-6824 @ZYP_CHECKOUT_K6824-8629 @CR-DPK
 	Scenario: Verify 13 or 16 digit Gift Card with 4 or 8 digit PIN applied is reflected on Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page  
-	And User Navigates L2 form Homepage Header 
-    And User clicks on product in PLP
+#	And User Navigates L2 form Homepage Header 
+#    And User clicks on product in PLP
+	When User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page

@@ -38,10 +38,12 @@ Feature: Verify Checkout Login Interstitial
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8148 @CR-DPK 
 	Scenario: Verify the  User must view Sign-In/Interstitial Modal
 	Given user launches the browser and navigates to "ASO_HOME" page
-	And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
-    Then user clicks on one of the product category and navigates to LThree
+#	And User navigates to L2 Mens clothing
+#    Then user clicks on one of the subcategory and navigates to LTwo
+#    And user is able to see the product category name in section title
+#    Then user clicks on one of the product category and navigates to LThree
+
+When User searches a product "productName" and navigates to PDP
 	Then User is navigated to pdp page
 	Then user click on Add to Cart Button
 	Then user is navigated to Add to cart Notification popup 
@@ -108,9 +110,11 @@ Feature: Verify Checkout Login Interstitial
 	When user enter the valid Emailaddress "UnregisteredEmailAddress"
 	And user enter the valid Password "Password" 
 	And user click on signin button
-	Then user should not be allowed to login
-	And user should get an error message for nonregisteredemailid address
-	
+#	Then user should not be allowed to login
+#	And user should get an error message for nonregisteredemailid address
+	 Then Verify the message on the page
+	 |#verify following MSG should be displayed|
+	 |The combination of Email Address and Password is incorrect. Please try again.|
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Lowest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8151 @CR-DPK 
@@ -130,9 +134,11 @@ Feature: Verify Checkout Login Interstitial
 	When user enter the Invalid emailaddress "IncorrectEmailAddress"
 	And user enter the Invalid password "IncorrectPassword" 
 	And user click on signin button
-	Then user should not be allowed to login
-	And user should get an error message stating email id or password is incorrect
-	
+#	Then user should not be allowed to login
+#	And user should get an error message stating email id or password is incorrect
+	 Then Verify the message on the page
+	 |#verify following MSG should be displayed|
+	 |The combination of Email Address and Password is incorrect. Please try again.|
 	
 	@R2_Web @R2_Regression @R2_All @P-Lowest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8152 @CR-DPK 
 	Scenario: Verify if user is able to close the Sign-in popup window

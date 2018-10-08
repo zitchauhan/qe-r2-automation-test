@@ -33,9 +33,10 @@ Scenario: Verify the Shipping address form that authenticated user can view on a
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8178 @CR-DPK 
 Scenario: Verify if unauthenticated user be presented with the blank shipping address form fields
  	Given user launches the browser and navigates to "ASO_HOME" page
-	Then User clicks on the burger menu
-	And User navigates to LThree
-   	Then user clicks on the product card and navigates to PDP
+#	Then User clicks on the burger menu
+#	And User navigates to LThree
+#   	Then user clicks on the product card and navigates to PDP
+   When User searches a product "productName" and navigates to PDP
      Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -43,10 +44,10 @@ Scenario: Verify if unauthenticated user be presented with the blank shipping ad
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
     |Please enter the First Name|
-	|Please Enter a Last Name|
+	|Please enter a Last Name|
 	|Please enter a phone number|
 	|Please enter a street address|
-	|Please enter a zip code|
+#	|Please enter a zip code|
 	|Required|	
 	
 
@@ -74,9 +75,10 @@ Scenario: Verify Guest user should view zipcode pre-populated if previously prov
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-9681 @CR-DPK 
 Scenario: Verify guest user, if after placing order, registers the account saves the address in My Account
  	Given user launches the browser and navigates to "ASO_HOME" page
- 	Then User clicks on the burger menu
- 	When User Navigates L2 form Homepage Header 
-	And User clicks on product in PLP
+# 	Then User clicks on the burger menu
+# 	When User Navigates L2 form Homepage Header 
+#	And User clicks on product in PLP
+	 When User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
  	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -116,9 +118,10 @@ Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided o
 @R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-10382 @CR-DPK
   Scenario: Verify if user selects AVS address suggestion and checkout
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-		And User navigates to LThree
-   	Then user clicks on the product card and navigates to PDP
+#    Then User clicks on the burger menu
+#		And User navigates to LThree
+#   	Then user clicks on the product card and navigates to PDP
+    And User searches a product "productName" and navigates to PDP 
      Then user click on Add to Cart Button
      And user will click on View Cart button
      Then user click on checkout button in Cart page
@@ -131,7 +134,13 @@ Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided o
 		|checkout_ShippingAddress_ZipCode_txt						|
 		|checkout_ShippingAddress_City_txt							|
 		|checkOut_ShippingAddress_GoToShippingMethod_btn			|
-   And user adds shipment address on checkout page for "guest" user	for AVSaddress
+#   And user adds shipment address on checkout page for "guest" user	for AVSaddress
+	 When user enter First name "FirstName"
+    And user enter Last name "LastName"
+    And user enter Phone number "PhoneNumber"
+    And user enter Address "AVSAddress"
+    And user enter Zipcode "zipcode"
+    Then user click on Go To Shipping Method button in Checkout page	
 	And error is found in the shipping address
 	And user verify the suggested address	
 	

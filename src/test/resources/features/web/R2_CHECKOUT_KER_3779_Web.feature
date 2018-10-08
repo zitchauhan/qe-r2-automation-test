@@ -120,7 +120,7 @@ And user does accepts the firearm specific compliance
 		|FirstName_Input|
 		|LastName_Input|
 		|PhoneNumber_Input|
-		|SendSMSTextUpdatesAboutMyOrder_checkbox|
+#		|SendSMSTextUpdatesAboutMyOrder_checkbox|
 		|Adderss_Input|
 		|ZipCode_Input|
 		|City_Input|
@@ -154,7 +154,7 @@ And user does accepts the firearm specific compliance
 		|FirstName_Input|
 		|LastName_Input|
 		|PhoneNumber_Input|
-		|SendSMSTextUpdatesAboutMyOrder_checkbox|
+#		|SendSMSTextUpdatesAboutMyOrder_checkbox|
 		|Adderss_Input|
 		|ZipCode_Input|
 		|City_Input|

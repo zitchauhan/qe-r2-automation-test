@@ -70,8 +70,9 @@ Scenario: Verify Guest user should view zipcode pre-populated if previously prov
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-9681 @CR-DPK 
 Scenario: Verify guest user, if after placing order, registers the account saves the address in My Account
  	Given user launches the browser and navigates to "ASO_HOME" page
-	And User Navigates L2 form Homepage Header 
-     And User clicks on product in PLP
+#	And User Navigates L2 form Homepage Header 
+#     And User clicks on product in PLP
+	When User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
