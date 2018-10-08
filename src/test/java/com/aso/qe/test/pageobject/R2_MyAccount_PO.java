@@ -461,10 +461,10 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnmodal_open_btn']")
 	public WebElement btnCreateNewWishlist;
 
-	@FindBy(xpath = "//*[@data-auid='wish_list_name_input']")
+	@FindBy(xpath = "//*[@data-auid='wish_list_name_input'] | //*[@data-auid='Wish_list_name_input']")//CR-DPK 05-oct
 	public WebElement txtWishListName;
 
-	@FindBy(xpath = "//*[@data-auid='btncreate_wish_list_btn']")
+	@FindBy(xpath = "//*[@data-auid='btncreate_wish_list_btn'] | //*[@data-auid='pop_over_toggle_btn']")
 	public WebElement btnCreateWishList;
 
 	@FindBy(xpath = "//*[@data-auid='btnundefined']/ancestor::*[2]/preceding-sibling::*[1]/*[1]")
@@ -503,7 +503,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnbutton-3']")
 	public WebElement btnFind;
 
-	@FindBy(xpath = "//*[text()='Set as Default']/../input")
+	@FindBy(xpath = "//*[text()='Set as Default']/..//label")//CR-DPK oct-08
 	public WebElement chkBoxSetAsDefault;
 
 	@FindBy(xpath = "//h5[text()='ADDRESS BOOK']")

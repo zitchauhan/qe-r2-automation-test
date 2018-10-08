@@ -240,33 +240,30 @@ Verify Authenticated user can Manage Address Book - Delete Address details
 		|Undo|
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232
-@ZYP_MYACCOUNT_K4232-9192 @CR-RK 
-Scenario:
-Verify Authenticated user can Manage Address Book - Edit Address details 
+@ZYP_MYACCOUNT_K4232-9196 @CR-RK 
+Scenario: Verify Authenticated user has Address given through SOF 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And clicks on SignIn button in home page 
+	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
 		|SignInPage_SignIn_btn								|
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart
+	And User searches a product "SOFSKUNumber" and navigates to PDP 
+	When user clicks on Find a Store
+	Then user enter "zipCode" in Find a Store Model
+	And user click on submit button
+	Then user click on plus icon in Store Address drawer
+	And user click on Make My store button
+	And user click on Add to Cart Button 
+	And user click on view cart button 
 	And user click on MyAccount 
 	Then user lands on My Account page and click on adress 
-	Then Verify below Sub/Main Module of My Account 
-		|# Verify following elements in address page|
-		|myAccountPage_AddNewAddressPluIcon_btn		|
-		|AddressPage_Edit_btn|
-	And user click on edit button in address book 
-	When user enter First name "UpdateFirstName" in address book 
-	And user enter Last name "UpdateLastName" in address book 
-	And user enter Phone number "UpdatePhoneNumber" in address book 
-	And user enter Address "UpdateAddress" in address book 
-	And user enter Zipcode "UpdateZipcode" in address book 
-	And user clicks on Update button in edit profile 
-	And user verifies the "UpdateFirstName" in address 
+	And user verifies the First address provided is set as default  
 	
 	
 	

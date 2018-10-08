@@ -80,7 +80,7 @@ Scenario: Verify that Authenticated User is able to navigate to Profile page
 		|ProfilePage_Email_label						|
 		|ProfilePage_ChangePassword_btn					|
 		|ProfilePage_MaskedPassword                   |
-		|ProfilePage_ReceiveEmailNotifications_checkbox	|
+		
 		
 @R2_Web @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10476 @CR-GK 

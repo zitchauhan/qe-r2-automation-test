@@ -31,19 +31,18 @@ Feature: Verify Checkout Login Interstitial
 	Then user navigate to Cart page 
 	Then user click on checkout button in Cart page
 	When user click on SignIn link
-	And user enter the emailaddress "EmailAddress" from checkout page
-	And user enter the password "Password" from checkout page
-	And user click on signin button
+	And user enter the valid emailaddress "emailaddress" 
+	And user enter create password 
+	And user click on signin button 
+	Then user should get logged in successfully
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8148 @CR-DPK 
 	Scenario: Verify the  User must view Sign-In/Interstitial Modal
 	Given user launches the browser and navigates to "ASO_HOME" page
-#	And User navigates to L2 Mens clothing
-#    Then user clicks on one of the subcategory and navigates to LTwo
-#    And user is able to see the product category name in section title
-#    Then user clicks on one of the product category and navigates to LThree
-
-When User searches a product "productName" and navigates to PDP
+	And User navigates to L2 Mens clothing
+    Then user clicks on one of the subcategory and navigates to LTwo
+    And user is able to see the product category name in section title
+    Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
 	Then user click on Add to Cart Button
 	Then user is navigated to Add to cart Notification popup 
@@ -110,11 +109,9 @@ When User searches a product "productName" and navigates to PDP
 	When user enter the valid Emailaddress "UnregisteredEmailAddress"
 	And user enter the valid Password "Password" 
 	And user click on signin button
-#	Then user should not be allowed to login
-#	And user should get an error message for nonregisteredemailid address
-	 Then Verify the message on the page
-	 |#verify following MSG should be displayed|
-	 |The combination of Email Address and Password is incorrect. Please try again.|
+	Then user should not be allowed to login
+	And user should get an error message for nonregisteredemailid address
+	
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Lowest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8151 @CR-DPK 
@@ -134,11 +131,9 @@ When User searches a product "productName" and navigates to PDP
 	When user enter the Invalid emailaddress "IncorrectEmailAddress"
 	And user enter the Invalid password "IncorrectPassword" 
 	And user click on signin button
-#	Then user should not be allowed to login
-#	And user should get an error message stating email id or password is incorrect
-	 Then Verify the message on the page
-	 |#verify following MSG should be displayed|
-	 |The combination of Email Address and Password is incorrect. Please try again.|
+	Then user should not be allowed to login
+	And user should get an error message stating email id or password is incorrect
+	
 	
 	@R2_Web @R2_Regression @R2_All @P-Lowest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8152 @CR-DPK 
 	Scenario: Verify if user is able to close the Sign-in popup window
@@ -176,6 +171,20 @@ When User searches a product "productName" and navigates to PDP
 
 
 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-10426 @CR-DPK 	
+	Scenario: Verify that user is able to navigate back to forgot password page 
+	Given user launches the browser and navigates to "ASO_HOME" page
+	 And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP 
+	Then user click on Add to Cart Button 
+	And user will click on View Cart button
+	Then user click on checkout button in Cart page
+	When user click on SignIn link
+	When user clicks on Forgot your password link on the Sign in for checkout page
+	Then Verify below Sub/Main Module of My Account 
+	|# Verify following elements in forgot password page|
+	|ForgotPasswordPage_EmailAddress_txt				|
+	|ForgotPasswordPage_Submit_btn						|
 	
 
 

@@ -260,8 +260,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@name ='state']/button")
 	public WebElement checkout_ShippingAddress_State_btn;
 //	
-	@FindBy(xpath = "//h4[text()='CHECKOUT']")
-	public WebElement checkout_CheckoutHeader_txt;
+	@FindBy(xpath = "//*[text()='CHECKOUT']")
+	public WebElement checkout_CheckoutHeader_txt;//CR_DPK 08-oct
 	
 	@FindBy(xpath = "//*[contains(text(), 'Forgot your password')]")
 	public WebElement checkout_SignIn_ForgotYourPassword_lnk;
@@ -481,7 +481,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		 //Payment(Start)
 		 
 		//******************Payment Method(Start)
-		@FindBy(xpath="//*[@data-auid='checkout_payment']/preceding::*[1]")public WebElement PaymentHeader_Txt;
+		@FindBy(xpath="//*[@data-auid='checkout_payment']/preceding::*[1] | //*[@data-auid='checkout_edit_payment']/preceding::*[1]")public WebElement PaymentHeader_Txt;
 		@FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'PAYMENT METHOD')]")public WebElement PaymentMethodHeader_Txt;
 		@FindBy(xpath="//*[text()='Credit Card']")public WebElement CreditCard_radioBtn;
 		@FindBy(xpath="//*[text()='PayPal']")public WebElement PayPal_radioBtn;

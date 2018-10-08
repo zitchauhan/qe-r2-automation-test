@@ -102,7 +102,7 @@ Scenario: Verify that user can see the error message in First name input field.
 	 |Not a valid name|
 	 
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10567 @CR-RK
-Scenario: Verify that user can see the error message in First name input field.
+Scenario: Verify that user can see the error message in First name field if user enters "1" character in input field.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
@@ -126,7 +126,7 @@ Scenario: Verify that user can see the error message in First name input field.
 	
 	
 	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10568 @CR-RK
-Scenario: Verify that user can see the error message in First name input field.
+Scenario: Verify that user can see the error message in First name field if user enters "51" character in input field.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
 	Then Verify below Sub/Main Module of My Account
@@ -143,9 +143,7 @@ Scenario: Verify that user can see the error message in First name input field.
 	|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
 	And user enter First Name field "InvalidEmailForMoreThan50Characters" 
-	Then Verify the message on the page
-	|# Following Error Message should show on the page|
-	 |Not a valid name|
+	Then Verify First Name field should not accept more than fifty character
 	 
 	 	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10569 @CR-RK
 Scenario: Verify that user can see the error message in last name input field.
@@ -213,9 +211,7 @@ Scenario: Verify that user can see the error message in Last name field if user 
 	|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
 	And user enter Last Name field "InvalidEmailForMoreThan50Characters" 
-	Then Verify the message on the page
-  |# Following Error Message should show on the page|
-	 |Not a valid name|
+	Then Verify Last Name field should not accept more than fifty character
 		
 	 
 

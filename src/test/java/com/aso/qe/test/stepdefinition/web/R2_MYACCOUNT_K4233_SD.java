@@ -14,7 +14,8 @@ import com.aso.qe.test.pageobject.R2_PDP_PO;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
+public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper 
+{
 
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);

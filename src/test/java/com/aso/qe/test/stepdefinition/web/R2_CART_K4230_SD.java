@@ -162,10 +162,10 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 	@Then("^user clicks on Update button in edit profile$")
 	public void user_clicks_on_Update_button_in_edit_profile() throws Throwable {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(clickOnButton(r2MyAccountPo.btnAddGiftCard));
+			assertTrue(clickOnButton(r2MyAccountPo.btnSubmit));
 		} else {
 
-			assertTrue(clickOnButton(r2MyAccountPo.btnAddGiftCard));
+			assertTrue(clickOnButton(r2MyAccountPo.btnSubmit));
 		}
 	}
 	

@@ -37,8 +37,8 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='go-to-Shooting_m']")
 	public WebElement productPLP_m;// Area L3 // 5 sept CR-DPK
 
-	@FindBy(xpath = "(//*[text()='Choose Pickup Location'])[2]")
-	public WebElement lnkPickupLocation;// Area PDP
+	@FindBy(xpath = "//*[@data-auid='PDP_FindAStore']")
+	public WebElement lnkPickupLocation;// Area PDP //CR-Rk Oct8 KER-2869
 
 	// End KER-3613 CR-RK
 	/********SID ********************************************************************/
@@ -181,8 +181,8 @@ public class R2_R1_Fun_PO extends CommonActionHelper
     
     
 
-@FindBy(xpath = "//*[text()='Change zip code']")//CR-AKK 17-sept
-       public WebElement ChangeZipCode_lnk;
+@FindBy(xpath = "//*[text()='Change ZIP Code']")//CR-AKK 17-sept
+       public WebElement ChangeZipCode_lnk; //CR-Rk Oct8 KER-2869
 
 @FindBy(xpath ="//*[@data-auid='FOOTER_LINK_Check Order']")//CR-AKK 17-sept
 public WebElement CheckOrder_Lnk;
