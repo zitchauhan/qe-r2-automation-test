@@ -84,7 +84,8 @@ public class R2_VERIFICATION_PDP_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2PdpPo.BillingEmail_txt));
 				else if (currentElement.equalsIgnoreCase("PaymentFormSubmit_btn"))
 					assertTrue(isDisplayed(r2PdpPo.PaymentFormSubmit_btn));
-				
+				else if (currentElement.equalsIgnoreCase("EstArrival_txt"))
+					assertTrue(isDisplayed(r2PdpPo.txtEstArrival));//CR-RK Oct 8 KER-2912
 				else {
 					logger.error("Element <" + currentElement + "> is not found in the SD list.");
 					throw new NullArgumentException("Element <" + currentElement + "> is not found in the SD list.");

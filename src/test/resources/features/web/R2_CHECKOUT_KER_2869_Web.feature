@@ -127,12 +127,11 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
  @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10699 @CR-AKK	
    Scenario: Verify that the user is able to view In-Store Pickup Available in its correct state on PDP
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
-	And User should be able to see Search Box on Homepage 
-	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
+#	When user clicks on SignIn link from global header 
+#	And user enter the valid emailaddress "EmailAddress" 
+#	And user enter the valid password "Password" 
+#	And user click on signin button 
+	And User searches a product "productName" and navigates to PDP 
 	And verfiy the Change Pickup Location link
 	Then Verify the message on the page
     |# Following Error Message should show on the page|

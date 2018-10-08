@@ -3,18 +3,13 @@ Feature: E02-100 - My Account, Address Book
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @CR-AKK
 Scenario: To Edit cart items from Order summary
 	    Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo  
-	And user clicks on one of the product category and navigates to LThree 
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user will click on Checkout button and navigates to Checkout page 
 	When user clicks on Edit My cart in Order Summary 
 	Then user should navigates to the CartPage "CartTitle" 
-	Then Verify the message on the page
-    |# Following Error Message should show on the page|
-     |CartPage|
         
 #@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8101 @CR-AKK
 #Scenario: To Remove cart items from Order summary

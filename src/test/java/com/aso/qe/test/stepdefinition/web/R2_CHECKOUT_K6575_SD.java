@@ -35,8 +35,8 @@ public class R2_CHECKOUT_K6575_SD extends CommonActionHelper {
 	@Then("^user should navigates to the CartPage \"(.*?)\"$")
 	public void user_should_navigates_to_the_CartPage(String tittle) throws Throwable {
 		//String actualTittle=driver.getTitle();
-		webPropHelper.getTestDataProperty(tittle);	
-		assertEquals(driver.getTitle(), webPropHelper.getTestDataProperty(tittle));
+		//webPropHelper.getTestDataProperty(tittle);	
+		assertTrue(isDisplayed(r2CartPo.txt_YourCart));
 	}
 
 	@Then("^user clicks on Academy sports Logo$")

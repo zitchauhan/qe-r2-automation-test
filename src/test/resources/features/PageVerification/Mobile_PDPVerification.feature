@@ -28,3 +28,5 @@ Scenario: Verify MyAccount
 		  |PaymentFormSubmit_btn|
 		  |Shipping_Phone_txt|
 		  |Add_Default_Payment_Option_btn|
+		  |In-Store Pickup Available|
+		  |EstArrival_txt|
