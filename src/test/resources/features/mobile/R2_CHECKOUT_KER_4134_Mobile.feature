@@ -1,6 +1,6 @@
 Feature: B06-225 - BOPIS: SMS Capture
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10888 @CR-MS
+@R2_Mobile @C-BOPIS @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10888 @CR-MS
 Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -15,7 +15,7 @@ Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 	When user will click on Checkout button and navigates to Checkout page
 	Then user enter Phone number "PhoneNumber" in Billing address
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10884 @CR-MS	
+@R2_Mobile @C-BOPIS @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10884 @CR-MS	
 Scenario: Verify Phone number associated with BOPIS
 Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu
@@ -43,7 +43,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|Alternate's Phone Number |
      Then user can enter the alternative person phone number "PhoneNumber"
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10886 @CR-MS	
+@R2_Mobile @C-BOPIS @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10886 @CR-MS	
 Scenario: Verify Phone number associated with BOPIS - Saved Billing address
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -63,7 +63,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When user will click on Checkout button and navigates to Checkout page
 #	And  user views the phone number given in the My account saved Billing address
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10885 @CR-MS	
+@R2_Mobile @C-BOPIS @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10885 @CR-MS	
 Scenario: Verify Phone number associated with BOPIS
 Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu
@@ -91,7 +91,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|Alternate's Phone Number |
      Then user can enter the alternative person phone number "PhoneNumber"
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10891 @CR-MS
+@R2_Mobile @C-BOPIS @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10891 @CR-MS
 Scenario: Verify Phone number field validation
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 And User clicks on the burger menu
@@ -120,7 +120,7 @@ Scenario: Verify Phone number field validation
 		|Alternate's Email Address|
 		|Alternate's Phone Number |
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10892 @CR-MS
+@R2_Mobile @C-BOPIS @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10892 @CR-MS
 Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 And User clicks on the burger menu
@@ -150,7 +150,7 @@ Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 #	And checks for form errors
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10893 @CR-MS
+@R2_Mobile @C-BOPIS  @R2_Regression @R2_All @P-High @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10893 @CR-MS
 Scenario: Verify Phone number field validation
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 And User clicks on the burger menu
@@ -179,7 +179,7 @@ Scenario: Verify Phone number field validation
 	Then user can enter the alternative person invalid phone number "InvalidPhoneNumber"
 	And checks for form errors
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10889 @CR-MS
+@R2_Mobile @C-BOPIS @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10889 @CR-MS
 Scenario: Verify Phone number associated with BOPIS - Alternative pick up Person
   Given user launches the browser and navigates to "ASO_HOME" page 
 	 And User clicks on the burger menu
@@ -211,7 +211,7 @@ Scenario: Verify Phone number associated with BOPIS - Alternative pick up Person
 	And user can enter the alternative person phone number "PhoneNumber"
 #	Then user click on confirm button
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10890 @CR-MS
+@R2_Mobile @C-BOPIS  @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10890 @CR-MS
 Scenario: Verify SMS check box display with Primary and Alternative Person
  Given user launches the browser and navigates to "ASO_HOME" page 
 	 And User clicks on the burger menu
@@ -236,7 +236,7 @@ Scenario: Verify SMS check box display with Primary and Alternative Person
     |SendSMSTextUpdatesAboutMyOrder_checkbox|
 #    Then verify the notification message
     
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10887 @CR-MS
+@R2_Mobile @C-BOPIS  @R2_Regression @R2_All @P-Low @C-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10887 @CR-MS
 Scenario: Verify Phone number associated with BOPIS - Saved Billing address
 Given user launches the browser and navigates to "ASO_HOME" page 
 	 And User clicks on the burger menu
@@ -255,7 +255,6 @@ Given user launches the browser and navigates to "ASO_HOME" page
     |InStorePickup_FREE_radioBtn |
 	And  user will click on Checkout button and navigates to Checkout page
    Then user enter Phone number "PhoneNumber" in Billing address	
-	
 	
 	
 	

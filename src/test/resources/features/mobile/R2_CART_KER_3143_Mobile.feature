@@ -1,7 +1,7 @@
 Feature: [Mobile] B06-100- Merge Cart
  
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @1HR_R2  @KER-3143 @ZYP_Cart_K3143-10257 @CR-RKA
+@R2_Mobile @C-BOPIS  @R2_Regression @R2_All @P-High @C-Cart @1HR_R2  @KER-3143 @ZYP_Cart_K3143-10257 @CR-RKA
 Scenario: Verify if Unauthenticated customer will be able to add items to cart for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP
@@ -14,7 +14,7 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	|#verify INStorePickup_FREE radio btn is enable# |
 	|InStorePickup_FREE_radioBtn |
 
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3143 @ZYP_Cart_K3143-10263 @CR-RKA
+ @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3143 @ZYP_Cart_K3143-10263 @CR-RKA
  Scenario: Verify if Un-Authenticated user must be able to sign into their account from MyAccount in header
 
  Given user launches the browser and navigates to "ASO_HOME" page    
@@ -197,7 +197,7 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	|# Verify following elements in Cart page "Item in Cart "|
 	|Items_txt|
 	 
-	 @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8160 @CR-RKA
+	 @R2_Mobile @C-BOPIS @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8160 @CR-RKA
 	Scenario: Verify if user must be able to view all items designated for BOPIS( Buy online and pick in store)
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -278,4 +278,5 @@ Then User clicks on the burger menu
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify total item  in Cart page |
 	|Items_txt|
+#	
  

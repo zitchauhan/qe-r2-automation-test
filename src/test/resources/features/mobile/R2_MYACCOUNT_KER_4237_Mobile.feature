@@ -112,7 +112,7 @@ Feature: E03-100 - My Account, Order Details
       | MyAccount_OrderDetailsPage_PrintReceipt     |
     And user click on print receipt link
 
-  @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 @ZYP_MYACCOUNT_K4237-10519 @CR-GK
+  @C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 @ZYP_MYACCOUNT_K4237-10519 @CR-GK
   Scenario: 
     Verify that Authenticated user is able to view order details for BOPIS orders
 

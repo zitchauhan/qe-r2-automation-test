@@ -70,7 +70,7 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 		Then User should verify the tax on cart order Summary page
 		And user will click on Checkout button and navigates to Checkout page
 		And User should have same tax on Checkout Page Order Summary			
-   
+#   
    
    @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9561 @CR-RK	
 	Scenario: Verify if  User can  view updated tax and order total in order summary section on checkout if user switches from store pickup to Shipping

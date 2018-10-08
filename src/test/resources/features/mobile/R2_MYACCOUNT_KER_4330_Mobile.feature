@@ -1,7 +1,7 @@
 Feature: B06-250 - BOPIS Order Details Page Impact
   //Bopis Place Order functionality is not working
 
-  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10933 @CR-MS
+  @C-BOPIS @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10933 @CR-MS
   Scenario: 
     Verify that for Authenticated user Cancel Order CTA is displayed for orders having BOPIS items
 
@@ -30,7 +30,7 @@ Feature: B06-250 - BOPIS Order Details Page Impact
       | #Verify following elements in my account order details |
       | Order_Note_Txt                                         |
 
-  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10931 @CR-MS
+  @C-BOPIS @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10931 @CR-MS
   Scenario: Verify the details in In-Store Pickup Instructions section
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -57,7 +57,7 @@ Feature: B06-250 - BOPIS Order Details Page Impact
       | #Verify following elements in my account order details |
       | IN STORE PICKUP INSTRUCTIONS                           |
 
-  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10928 @CR-MS
+  @C-BOPIS @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10928 @CR-MS
   Scenario: Verify that user is able to view BOPIS order details before pickup
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -72,7 +72,7 @@ Feature: B06-250 - BOPIS Order Details Page Impact
       | #Verify following elements in my account order details |
       | Order_View_Details_Btn                                 |
 
-  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10936 @CR-MS
+  @C-BOPIS @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10936 @CR-MS
   Scenario: Verify the details in order details section
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -100,7 +100,7 @@ Feature: B06-250 - BOPIS Order Details Page Impact
       | Order_Payment_txt                                      |
       | Order_Payment_Section                                  |
 
-  @R2_Mobile @R2_All @P-High_Order @1HR_R2 @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10934 @CR-MS
+  @C-BOPIS @R2_Mobile @R2_All @P-High_Order @1HR_R2 @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10934 @CR-MS
   Scenario: Verify that user is able to view BOPIS order details before pickup
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -132,7 +132,7 @@ Feature: B06-250 - BOPIS Order Details Page Impact
       | Order_Bopis_Pickup_txt                                 |
       | Order_Bopis_Store_Hours_txt                            |
 
-  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10930 @CR-MS
+  @C-BOPIS @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10930 @CR-MS
   Scenario: Verify the details in In Store Pickup section
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -161,7 +161,7 @@ Feature: B06-250 - BOPIS Order Details Page Impact
       | Order_Bopis_Store_Hours_txt                            |
       | Order_Bopis_Pickup_Information_Person_Details_Txt      |
 
-  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10929 @CR-MS
+  @C-BOPIS @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10929 @CR-MS
   Scenario: Verify the details in order details section
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -193,7 +193,7 @@ Feature: B06-250 - BOPIS Order Details Page Impact
       | Order_Bopis_Item_Img                                   |
       | Order_Bopis_Item_Details                               |
 
-  @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10935 @CR-MS
+  @C-BOPIS @R2_Mobile @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10935 @CR-MS
   Scenario: Verify the details in Order Summary section
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

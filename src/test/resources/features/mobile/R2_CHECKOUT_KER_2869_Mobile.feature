@@ -1,6 +1,6 @@
 Feature: PDP BOPIS Messaging & Variations to Customer 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-2869
+@R2_Mobile @C-BOPIS @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-2869
 @ZYP_CHECKOUT_K2869-10686 @CR-AKK 
 Scenario: Verify that the user is able to increase the item quantity on PDP 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -13,7 +13,7 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
 	Then user change the quantity of item in PDP 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2869
+@R2_Mobile @R2_Regression @R2_All @P-High @C-BOPIS @C-Checkout @KER-2869
 @ZYP_CHECKOUT_K2869-10687 @CR-AKK 
 Scenario: Verify that the user is able to decrease the item quantity on PDP 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -27,7 +27,7 @@ Scenario: Verify that the user is able to decrease the item quantity on PDP
 	And user change the quantity of item in PDP 
 	Then user decrease the quantity of item in PDP 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2869
+@R2_Mobile @R2_Regression @R2_All @P-High @C-BOPIS @C-Checkout @KER-2869
 @ZYP_CHECKOUT_K2869-10688 @CR-AKK 
 Scenario: Verify that the user is able to view "Add to Wish list" CTA on PDP 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -44,7 +44,7 @@ Scenario: Verify that the user is able to view "Add to Wish list" CTA on PDP
 		| AddToWishList_btn                         |
 	And user enter the wishlist name 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2869
+@R2_Mobile @R2_Regression @R2_All @P-High @C-BOPIS @C-Checkout @KER-2869
 @ZYP_CHECKOUT_K2869-10691 @CR-AKK 
 Scenario: Verify that the user is able to view "Add to Wish list" CTA on PDP 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -58,7 +58,7 @@ Scenario: Verify that the user is able to view "Add to Wish list" CTA on PDP
 	Then user click on Add to Cart Button 
 	
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2869
+@R2_Mobile @R2_Regression @R2_All @P-High @C-BOPIS @C-Checkout @KER-2869
 @ZYP_CHECKOUT_K2869-10703 @CR-AKK 
 Scenario: Verify that the user is able to increase the item quantity on PDP 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -72,7 +72,7 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
 	And user change the quantity of item in PDP 
 	Then user decrease the quantity of item in PDP 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-2869
+@R2_Mobile @R2_Regression @R2_All @P-High @C-BOPIS @1HR_R2 @C-Checkout @KER-2869
 @ZYP_CHECKOUT_K2869-10706 @CR-AKK 
 Scenario: Verify that the user is able add item to cart if available 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -93,7 +93,7 @@ Scenario: Verify that the user is able add item to cart if available
 		| EstimatedShipping_txt                     |
 		| EstimatedTaxes_txt                        |
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2869
+@R2_Mobile @R2_Regression @R2_All @P-High @C-BOPIS @C-Checkout @KER-2869
 @ZYP_CHECKOUT_K2869-10707 @CR-AKK 
 Scenario:
 Verify that the user is able add item to cart if items are low in stock 
@@ -107,7 +107,7 @@ Verify that the user is able add item to cart if items are low in stock
 		| # Following Error Message should show on the page                                        |
 		| We're sorry! Due to limited stock only part of your order can be fulfilled at this time. |
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2869
+@R2_Mobile @R2_Regression @R2_All @P-High  @C-BOPIS @C-Checkout @KER-2869
 @ZYP_CHECKOUT_K2869-10708 @CR-AKK 
 Scenario:
 Verify that the user is not able add item to cart if item goes out of stock 
@@ -117,7 +117,7 @@ Verify that the user is not able add item to cart if item goes out of stock
 	And User click on search icon 
 	Then Verify add to cart button not dispalyed 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2869
+@R2_Mobile @R2_Regression @R2_All @P-High @C-BOPIS @C-Checkout @KER-2869
 @ZYP_CHECKOUT_K2869-10717 @CR-AKK 
 Scenario:
 Verify customer must see messaging when attempting to add more inventory of an item to their cart than inventory exists at the selected store 
@@ -132,7 +132,7 @@ Verify customer must see messaging when attempting to add more inventory of an i
 		| # Following Error Message should show on the page                                        |
 		| We're sorry! Due to limited stock only part of your order can be fulfilled at this time. |
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2869
+@R2_Mobile @R2_Regression @R2_All @P-Low  @C-BOPIS @C-Checkout @KER-2869
 @ZYP_CHECKOUT_K2869-10695 @CR-AKK 
 Scenario: Verify that the user is able to view "Ships To" information on PDP 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -143,7 +143,7 @@ Scenario: Verify that the user is able to view "Ships To" information on PDP
 		| Ship to                                           |
 	Then verfiy the Change Zip code link 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2869
+@R2_Mobile @R2_Regression @R2_All @C-BOPIS @P-Low @C-Checkout @KER-2869
 @ZYP_CHECKOUT_K2869-10699 @CR-AKK 
 Scenario:
 Verify that the user is able to view In-Store Pickup Available in its correct state on PDP 
@@ -160,7 +160,7 @@ Verify that the user is able to view In-Store Pickup Available in its correct st
 		| # Following Error Message should show on the page |
 		| In-Store Pickup Available                         |
 		
-		 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10701 @CR-AKK
+		 @R2_Mobile @R2_Regression @C-BOPIS @R2_All @P-Low @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10701 @CR-AKK
     Scenario: Verify that the user is able to view "In-Store Pickup Available" in its correct state on PDP
 Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
@@ -172,7 +172,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When User clicks on choose location
 	Then verify that Find a Store Modal is displayed
 	
-	 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10704 @CR-AKK
+	 @R2_Mobile @R2_Regression @R2_All @P-Low  @C-BOPIS @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10704 @CR-AKK
 	Scenario: Verify that user sees appropriate message If shipping is unavailable for an item
 Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
@@ -185,7 +185,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
     |# Following Error Message should show on the page|
     |Shipping Not Available|
 
- @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10705 @CR-AKK
+ @R2_Mobile @R2_Regression @R2_All @P-Low @C-BOPIS  @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10705 @CR-AKK
 	Scenario: Verify that user sees appropriate message If shipping is unavailable for an item
 Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
