@@ -225,6 +225,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 		String[] arrSearchKey = searchKey.split(",");
 
 		WebElement searchTextBox = null;
+		WebElement searchButton = null;
 		// WebElement
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -233,12 +234,13 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 				assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
 			Thread.sleep(Constants.thread_low); 
 			searchTextBox = R1_SearchProduct_PO.searchTextBoxMobile;
-
+			searchButton = R1_SearchProduct_PO.submitGOBtnMobile;
 		} else {
 			waitForPageLoad(driver);
 			Thread.sleep(Constants.thread_low); 
 			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtn));
 			searchTextBox = R1_SearchProduct_PO.searchTextBox;
+			searchButton = R1_SearchProduct_PO.submitGOBtn;
 		}
 
 		for (String searchWord : arrSearchKey) {
@@ -246,8 +248,11 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 				if (!isDisplayed(R1_SearchProduct_PO.searchTextBoxMobile))
 					assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
 			}
-			clearText(searchTextBox);
-			setInputTextWithEnterKey(searchTextBox, searchWord);
+//			clearText(searchTextBox);
+//			setInputTextWithEnterKey(searchTextBox, searchWord);
+			setInputText(searchTextBox, searchWord);
+			assertTrue(clickOnButton(searchButton));
+			
 			Thread.sleep(Constants.thread_low); 
 			waitForPageLoad(driver);
 			if (r1_SearchPO.verifyTextDisplayedOnPage("We couldn't find anything for")) {

@@ -75,7 +75,7 @@ public class R2_PlaceOrderAllCombinations_SD extends CommonActionHelper {
 		setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty("Password"));
 		assertTrue(clickOnButton(r2MyAccountPo.btnSignUp));
 		Thread.sleep(Constants.thread_medium);
-//		assertTrue(isDisplayed(r2MyAccountPo.myAccount_SignUp_CongratulationsMessage_txt));
+		assertTrue(isDisplayed(r2MyAccountPo.myAccount_SignUp_CongratulationsMessage_txt));
 	}
 
 }

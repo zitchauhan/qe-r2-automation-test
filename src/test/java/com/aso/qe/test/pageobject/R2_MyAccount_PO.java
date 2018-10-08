@@ -600,7 +600,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='Profile_m']")
 	public WebElement lnkProfile_Mobile; // CR-RK KER-4230 Sep 5
 
-	@FindBy(xpath = "//*[text()='CONGRATULATIONS']")
+	@FindBy(xpath = "//*[text()='Play Ball!']")
 	public WebElement myAccount_SignUp_CongratulationsMessage_txt;
 
 	@FindBy(xpath = "//*[@data-auid='Orders']")
