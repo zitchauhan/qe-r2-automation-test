@@ -769,9 +769,10 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[2]") public WebElement iconMasterCard;
 	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[3]") public WebElement iconPaypal;
 	//@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[4]") public WebElement iconGooglePay;//De-scoped KER-2946 CR-RK
-	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[4]") public WebElement iconApplePay;
-	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[5]") public WebElement iconAmericanExpress;
-	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[6]") public WebElement iconDiscover;
+	// De-scoped KER-2946 CR-MS
+	//@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[4]") public WebElement iconApplePay;
+	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[4]") public WebElement iconAmericanExpress;
+	@FindBy(xpath="(//*[.='WE ACCEPT'])[2]/following-sibling::*/*[5]") public WebElement iconDiscover;
 	
 	
 	//We Accept Finish

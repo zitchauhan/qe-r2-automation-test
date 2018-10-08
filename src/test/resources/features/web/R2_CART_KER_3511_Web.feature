@@ -21,6 +21,7 @@ Scenario: Verify if authenticated user can view updated estimated shipping when 
 	
 	@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3511 @ZYP_CART_K3511-7992 @CR-DPK
 	Scenario: Verify if unauthenticated user can view estimated shipping cost based entered zip code
+	Given user launches the browser and navigates to "ASO_HOME" page
 	And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
 	Then user click on Add to Cart Button
@@ -68,7 +69,6 @@ Scenario: Verify if authenticated user can view updated estimated shipping based
 	Then user fill the Address book details 
 	And user clicks on one of the category and navigates to LOne 
 	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
 	And user click on Add to Cart Button 

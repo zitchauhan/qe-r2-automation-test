@@ -220,8 +220,8 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper {
 				// else if (currentElement.equalsIgnoreCase("GooglePay_img"))/De-scoped BY CR-
 				// RK
 				// assertTrue(isDisplayed(r2CartPo.iconGooglePay));
-				else if (currentElement.equalsIgnoreCase("ApplePay_img"))
-					assertTrue(isDisplayed(r2CartPo.iconApplePay));
+				/*else if (currentElement.equalsIgnoreCase("ApplePay_img"))
+					assertTrue(isDisplayed(r2CartPo.iconApplePay));*/  ///De-scoped CR-MS
 				else if (currentElement.equalsIgnoreCase("AmericanExpress_img"))
 					assertTrue(isDisplayed(r2CartPo.iconAmericanExpress));
 				else if (currentElement.equalsIgnoreCase("Discover_img"))

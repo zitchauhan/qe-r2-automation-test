@@ -210,6 +210,12 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2CartPo.btn_AddToWishList));
 
 	}
+	
+	@When("^user clicks on Move to Wish list$")
+	public void user_clicks_on_Move_to_Wish_list() throws Throwable {
+		
+		assertTrue(clickOnButton(r2CartPo.btn_AddToWishList));
+	}
 
 	@Then("^user enter the Zipcode in \"(.*?)\"$")
 	public void user_enter_the_Zipcode_in(String arg1) throws Throwable {
@@ -320,6 +326,12 @@ public class R2_CART_K2939_SD extends CommonActionHelper {
 	public void verify_that_Move_to_Wishlist_Link_is_not_displayed_for_Gift_Card_s_and_Bundle_Item_s()
 			throws Throwable {
 		assertFalse(isDisplayed(r2CartPo.btn_AddToWishList));
+	}
+	
+	@Then("^user enter the Wishlist name$")
+	public void user_enter_the_wishlist_name() throws InterruptedException {
+		//pdpPageObj.createWishList();
+		assertTrue(clickOnButton(r2CartPo.lnkTextExistingList));
 	}
 
 }

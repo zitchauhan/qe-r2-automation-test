@@ -13,7 +13,7 @@ Feature: [Mobile]Verify Automatic Store Locator for Unauthenticated User
 		|Visa_img|
 		|MasterCard_img|
 		|Paypal_img|
-		|ApplePay_img|
+#		|ApplePay_img|
 		|AmericanExpress_img|
 		|Discover_img|
 	
@@ -37,6 +37,6 @@ Feature: [Mobile]Verify Automatic Store Locator for Unauthenticated User
 		|Visa_img|
 		|MasterCard_img|
 		|Paypal_img|
-		|ApplePay_img|
+#		|ApplePay_img|
 		|AmericanExpress_img|
 		|Discover_img|

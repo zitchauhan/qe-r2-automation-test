@@ -218,8 +218,9 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button
-	When user clicks on Move to Wish list link "NewWishLink" OR exisiting wishlink
-	And user enter the wishlist name 
+#	When user clicks on Move to Wish list link "NewWishLink" OR exisiting wishlink
+    When user clicks on Move to Wish list
+	And user enter the Wishlist name 
 	Then Verify below Sub/Main Module of Cart Page 
 	|#Item is moved from cart to the wish list |
 	|AddToWishList_btn|
