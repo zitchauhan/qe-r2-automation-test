@@ -31,18 +31,19 @@ Feature: Verify Checkout Login Interstitial
 	Then user navigate to Cart page 
 	Then user click on checkout button in Cart page
 	When user click on SignIn link
-	And user enter the valid emailaddress "emailaddress" 
-	And user enter create password 
-	And user click on signin button 
-	Then user should get logged in successfully
+	And user enter the emailaddress "EmailAddress" from checkout page
+	And user enter the password "Password" from checkout page
+	And user click on signin button
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8148 @CR-DPK 
 	Scenario: Verify the  User must view Sign-In/Interstitial Modal
 	Given user launches the browser and navigates to "ASO_HOME" page
-	And User navigates to L2 Mens clothing
-    Then user clicks on one of the subcategory and navigates to LTwo
-    And user is able to see the product category name in section title
-    Then user clicks on one of the product category and navigates to LThree
+#	And User navigates to L2 Mens clothing
+#    Then user clicks on one of the subcategory and navigates to LTwo
+#    And user is able to see the product category name in section title
+#    Then user clicks on one of the product category and navigates to LThree
+
+When User searches a product "productName" and navigates to PDP
 	Then User is navigated to pdp page
 	Then user click on Add to Cart Button
 	Then user is navigated to Add to cart Notification popup 
@@ -84,13 +85,15 @@ Feature: Verify Checkout Login Interstitial
 	Then user click on checkout button in Cart page
 	When user click on SignIn link
 	And user click on Create a Account link
-	When user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Address "Address" 
+	When user enter first "FirstName" 
+	And user enter last "LastName" 
+	And user enter random email address in signup page
 	And user enter create password
-	And user click optin checkbox 
 	And clicks on Sign Up Button 
-	Then verify that user navigates to checkout page as a signed in user
+	Then Verify below Sub/Main Module of Checkout Page 
+	|# Verify following elements in Checkout > Shipping Address	|
+	|checkout_ShippingInformation_Header_txt					|
+	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8150 @CR-DPK 
 	Scenario: Verify is user gets proper validation message for invalid email address
@@ -109,9 +112,11 @@ Feature: Verify Checkout Login Interstitial
 	When user enter the valid Emailaddress "UnregisteredEmailAddress"
 	And user enter the valid Password "Password" 
 	And user click on signin button
-	Then user should not be allowed to login
-	And user should get an error message for nonregisteredemailid address
-	
+#	Then user should not be allowed to login
+#	And user should get an error message for nonregisteredemailid address
+	 Then Verify the message on the page
+	 |#verify following MSG should be displayed|
+	 |The combination of Email Address and Password is incorrect. Please try again.|
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Lowest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8151 @CR-DPK 
@@ -131,9 +136,11 @@ Feature: Verify Checkout Login Interstitial
 	When user enter the Invalid emailaddress "IncorrectEmailAddress"
 	And user enter the Invalid password "IncorrectPassword" 
 	And user click on signin button
-	Then user should not be allowed to login
-	And user should get an error message stating email id or password is incorrect
-	
+#	Then user should not be allowed to login
+#	And user should get an error message stating email id or password is incorrect
+	 Then Verify the message on the page
+	 |#verify following MSG should be displayed|
+	 |The combination of Email Address and Password is incorrect. Please try again.|
 	
 	@R2_Web @R2_Regression @R2_All @P-Lowest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8152 @CR-DPK 
 	Scenario: Verify if user is able to close the Sign-in popup window
