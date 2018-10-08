@@ -43,7 +43,7 @@ public class R2_OrderConfirmation_Po extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='Choose Password']/following-sibling::*//*[@type='password'] | //*[text()='Create a Password']/following-sibling::*//*[@type='password']")
 	public WebElement orderConfirmation_ChoosePassword_txt;
 	
-	@FindBy(xpath = "//*[@labeltext='Yes, notify me about the latest hot deals, ads, local events & more!']")
+	@FindBy(xpath = "//*[@labeltext='Yes, notify me about the latest hot deals, ads, local events & more!']/following-sibling::* | //*[@labeltext='Sign up to get Hot Deals, Weekly Ads, Local Events, and more delivered straight to your inbox. You can unsubscribe at anytime.']/following-sibling::*")
 	public WebElement orderConfirmation_NotifyMe_checkbox;
 	
 	@FindBy(xpath = "//*[@data-auid='btnbutton-1']")

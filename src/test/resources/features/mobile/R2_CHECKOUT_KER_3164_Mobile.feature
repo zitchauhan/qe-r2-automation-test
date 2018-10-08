@@ -1,7 +1,7 @@
 Feature: B04-300- Authenticated Checkout Flow 
 
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3164 
-@ZYP_CHECKOUT_K3164-8027 @CR-GK @1HR_R2
+@ZYP_CHECKOUT_K3164-8027 @CR-GK @1HR_R2 
 Scenario: 
 	Verify that authenticated user is able to select address in dropdown in shipping address section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -65,7 +65,7 @@ Scenario:
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And user navigate and deletes existing items in cart
+	And user navigate and deletes existing items in cart 
 	And  User searches a product "productName" and navigates to PDP 
 	And  user click on Add to Cart Button 
 	And  user is navigated to Add to cart Notification popup 
@@ -126,55 +126,50 @@ Scenario: Verify if User is able to enter billing information
 	And user click on confirm billing address button 
 	
 	
-@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-Highest   @KER-3164 
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-Highest @KER-3164 
 @ZYP_CHECKOUT_K3164-8031 @CR-GK 
 Scenario: 
+	Verify if the user is able to reviw and place order from One Page Checkout Screen 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User clicks on the burger menu 
-	And user should able to click on Signin button 
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
-	And  User searches a product "productName" and navigates to PDP 
-	And  user click on Add to Cart Button 
-	And  user is navigated to Add to cart Notification popup 
-	And  user click on checkout from ATC pop up 
-	And user clicks on edit shipping method cta 
-	And user click on go to payment present in shipping method 
-	And user click on confirm billing address button 
-	And user able to see the button place order 
-	Then Verify below Sub/Main Module of Checkout Page 
-		|#%%  verify order below attributes on order confirmation page %%|
-		|txtOrderSuccesfullStatus|
-		|OrderConfirmationPage_OrderNumber|
-		|OrderConfirmationPage_OrderNumber_txt|
-		
-		
+	And user clicks on the burger menu 
+	When user creates an account 
+	And User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	When user click on checkout button 
+	And user adds shipment address on checkout page for "newly registered" user 
+	And user selects shipment method on check out page for "newly registered" user 
+	And user add "Credit Card" details in payment method for "newly registered" user 
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	
+	
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-13296 @CR-GK 
 Scenario: 
-	Verify that user should be displayed with the validation error message if they try to enter invalid email id for order confirmation field in checkout page
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user click on checkout button in Cart page 
-	And  user enter First name "FirstName" 
-	And  user enter Last name "LastName" 
-	And  user enter Phone number "PhoneNumber" 
-	And  user enter Address "AVSAddress" 
-	And  user enter Zipcode "zipcode" 
-	And  user click on Go To Shipping Method button in Checkout page 
-	And  user selects the suggested address instead of entered address 
-	And  clicks on Use Selected Address button 
-	And user clicks on edit shipping method cta 
-	And user click on go to payment present in shipping method 
-	And user fill the credit card detail in payment 
-	And user enter the email id for order confirmation "InvalidEmailAddress" 
-	And user click on confirm billing address button 
-	Then Verify the message on the page 
+	Verify that user should be displayed with the validation error message if they
+		try to enter invalid email id for order confirmation field in checkout page 
+	Given  user launches the browser and navigates to "ASO_HOME" page 
+	When  User searches a product "productName" and navigates to PDP 
+	And  user click on Add to Cart Button 
+	And  user is navigated to Add to cart Notification popup 
+	And  user will click on View Cart button 
+	And  user navigate to Cart page 
+	And  user click on checkout button in Cart page 
+	And   user enter First name "FirstName" 
+	And   user enter Last name "LastName" 
+	And   user enter Phone number "PhoneNumber" 
+	And   user enter Address "AVSAddress" 
+	And   user enter Zipcode "zipcode" 
+	And   user click on Go To Shipping Method button in Checkout page 
+	And   user selects the suggested address instead of entered address 
+	And   clicks on Use Selected Address button 
+	And  user clicks on edit shipping method cta 
+	And  user click on go to payment present in shipping method 
+	And  user fill the credit card detail in payment 
+	And  user enter the email id for order confirmation "InvalidEmailAddress" 
+	And  user click on confirm billing address button 
+	Then  Verify the message on the page 
 		|# Following Error Message should show on the page|
 		|Enter a valid email address,Note that + is not allowed in email address field.|
 		
@@ -182,25 +177,27 @@ Scenario:
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-13295 @CR-GK 
 Scenario: 
-	Verify that user should be displayed with the error message if they try to save billing info without entering the email id for order confirmation field in checkout page 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And  user is navigated to Add to cart Notification popup 
-	And  user click on checkout from ATC pop up 
-	And  user enter First name "FirstName" 
-	And  user enter Last name "LastName" 
-	And  user enter Phone number "PhoneNumber" 
-	And  user enter Address "AVSAddress" 
-	And  user enter Zipcode "zipcode" 
-	And  user click on Go To Shipping Method button in Checkout page 
-	And  user selects the suggested address instead of entered address 
-	And  clicks on Use Selected Address button 
-	And user clicks on edit shipping method cta 
-	And user click on go to payment present in shipping method 
-	And user fill the credit card detail in payment 
-	And user click on confirm billing address button 
-	Then Verify the message on the page 
+	Verify that user should be displayed with the error message if they try to
+		save billing info without entering the email id for order confirmation field
+		in checkout page 
+	Given  user launches the browser and navigates to "ASO_HOME" page 
+	When  User searches a product "productName" and navigates to PDP 
+	And  user click on Add to Cart Button 
+	And   user is navigated to Add to cart Notification popup 
+	And   user click on checkout from ATC pop up 
+	And   user enter First name "FirstName" 
+	And   user enter Last name "LastName" 
+	And   user enter Phone number "PhoneNumber" 
+	And   user enter Address "AVSAddress" 
+	And   user enter Zipcode "zipcode" 
+	And   user click on Go To Shipping Method button in Checkout page 
+	And   user selects the suggested address instead of entered address 
+	And   clicks on Use Selected Address button 
+	And  user clicks on edit shipping method cta 
+	And  user click on go to payment present in shipping method 
+	And  user fill the credit card detail in payment 
+	And  user click on confirm billing address button 
+	Then  Verify the message on the page 
 		|# Following Error Message should show on the page|
 		|Please enter email address|
 		
@@ -208,25 +205,27 @@ Scenario:
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-13293 @CR-GK 
 Scenario: 
-	Verify the validation error message for the email id for order confirmation field in the shipping address drawer in checkout page if we edit without passing the email id 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And  user is navigated to Add to cart Notification popup 
-	And  user click on checkout from ATC pop up 
-	And  user enter First name "FirstName" 
-	And  user enter Last name "LastName" 
-	And  user enter Phone number "PhoneNumber" 
-	And  user enter Address "AVSAddress" 
-	And  user enter Zipcode "zipcode" 
-	And  user click on Go To Shipping Method button in Checkout page 
-	And  user selects the suggested address instead of entered address 
-	And  clicks on Use Selected Address button 
-	And user clicks on edit shipping method cta 
-	And user click on go to payment present in shipping method 
-	And user fill the credit card detail in payment 
-	And user click on confirm billing address button 
-	Then Verify the message on the page 
+	Verify the validation error message for the email id for order confirmation
+		field in the shipping address drawer in checkout page if we edit without
+		passing the email id 
+	Given  user launches the browser and navigates to "ASO_HOME" page 
+	When  User searches a product "productName" and navigates to PDP 
+	And  user click on Add to Cart Button 
+	And   user is navigated to Add to cart Notification popup 
+	And   user click on checkout from ATC pop up 
+	And   user enter First name "FirstName" 
+	And   user enter Last name "LastName" 
+	And   user enter Phone number "PhoneNumber" 
+	And   user enter Address "AVSAddress" 
+	And   user enter Zipcode "zipcode" 
+	And   user click on Go To Shipping Method button in Checkout page 
+	And   user selects the suggested address instead of entered address 
+	And   clicks on Use Selected Address button 
+	And  user clicks on edit shipping method cta 
+	And  user click on go to payment present in shipping method 
+	And  user fill the credit card detail in payment 
+	And  user click on confirm billing address button 
+	Then  Verify the message on the page 
 		|# Following Error Message should show on the page|
 		|Please enter email address|
 		
@@ -235,23 +234,25 @@ Scenario:
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-13290 @CR-GK 
 Scenario: 
-	Verify the validation error message for the email id for order confirmation field in the shipping address drawer in checkout page if we edit without passing the email id 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And  user is navigated to Add to cart Notification popup 
-	And  user click on checkout from ATC pop up 
-	And  user enter First name "FirstName" 
-	And  user enter Last name "LastName" 
-	And  user enter Phone number "PhoneNumber" 
-	And  user enter Address "AVSAddress" 
-	And  user enter Zipcode "zipcode" 
-	And  user click on Go To Shipping Method button in Checkout page 
-	And  user selects the suggested address instead of entered address 
-	And  clicks on Use Selected Address button 
-	And user clicks on edit shipping method cta 
-	And user click on go to payment present in shipping method 
-	And user fill the credit card detail in payment 
-	And user enter the email id for order confirmation "EmailAddress" 
-	And user click on confirm billing address button 
-	Then user should be able to see the email "EmailAddress" in payment drawer
+	Verify the validation error message for the email id for order confirmation
+		field in the shipping address drawer in checkout page if we edit without
+		passing the email id 
+	Given  user launches the browser and navigates to "ASO_HOME" page 
+	When  User searches a product "productName" and navigates to PDP 
+	And  user click on Add to Cart Button 
+	And   user is navigated to Add to cart Notification popup 
+	And   user click on checkout from ATC pop up 
+	And   user enter First name "FirstName" 
+	And   user enter Last name "LastName" 
+	And   user enter Phone number "PhoneNumber" 
+	And   user enter Address "AVSAddress" 
+	And   user enter Zipcode "zipcode" 
+	And   user click on Go To Shipping Method button in Checkout page 
+	And   user selects the suggested address instead of entered address 
+	And   clicks on Use Selected Address button 
+	And  user clicks on edit shipping method cta 
+	And  user click on go to payment present in shipping method 
+	And  user fill the credit card detail in payment 
+	And  user enter the email id for order confirmation "EmailAddress" 
+	And  user click on confirm billing address button 
+	Then  user should be able to see the email "EmailAddress" in payment drawer

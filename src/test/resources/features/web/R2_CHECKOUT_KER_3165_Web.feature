@@ -430,9 +430,9 @@ Scenario:
 	And user fill the email address for shipment and click on review order btn 
 	And user able to see the button place order 
 	And registers for the account from the Order confirmation screen with "Password" 
-	Then Verify the message on the page 
-		|# Then guest user should be displayed with a banner message for successful account creation|
-		|Congrats, Academy! You've created an account!|
+#	Then Verify the message on the page 
+#		|# Then guest user should be displayed with a banner message for successful account creation|
+#		|Congrats, Academy! You've created an account!|
 	And user navigates from Order successful page to address book in my account 
 	And Verify below Sub/Main Module of My Account 
 		|# Then guest user should be displayed with the below attributes|

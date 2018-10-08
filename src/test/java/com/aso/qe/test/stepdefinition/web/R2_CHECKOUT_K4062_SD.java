@@ -336,10 +336,10 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 
 	@Then("^verify user is able to successfully place the order$")
 	public void user_is_able_to_place_the_order() throws Throwable {
-		if (isDisplayed(r2OrderConfPO.orderConfirmation_ThanksForSubmittingOrder_txt)) {
+		if (isDisplayed(r2CheckOutPo.txtOrderID)) {
 			hooks.embedScreenshotForPassScenario();
 		}
-		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_ThanksForSubmittingOrder_txt));
+		assertTrue(isDisplayed(r2CheckOutPo.txtOrderID));
 		orderID = r2CheckOutPo.txtOrderID.getText();
 		logger.debug("Order Id on order confirmation status" + orderID);
 	}
@@ -365,7 +365,6 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_FullName_txt));
 		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_EmailAddress_txt));
 		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_ChoosePassword_txt));
-		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_NotifyMe_checkbox));
 	}
 
 	@When("^user enter \"(.*?)\" in password field of order confirmation page$")

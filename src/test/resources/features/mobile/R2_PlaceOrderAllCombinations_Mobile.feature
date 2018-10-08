@@ -15,9 +15,9 @@ Scenario Outline: Verify if authenticated user is able to place an order for sin
 	And user add "<Payment Type>" details in payment method for "newly registered" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-	Then Verify the message on the page 
-		|# Message for successful order is displayed		|
-		|THANKS FOR SUBMITTING YOUR ORDER					|
+#	Then Verify the message on the page 
+#		|# Message for successful order is displayed		|
+#		|THANKS FOR SUBMITTING YOUR ORDER					|
 	Examples: 
 		|Payment Type	|
 #		|Gift Card		|

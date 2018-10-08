@@ -1,29 +1,28 @@
 Feature: Place order
 
-@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order 
-@CR-SK 
-Scenario Outline:
-Verify that UnAuthenticated user is able to place an order for a bopis product
-	Given user launches the browser and navigates to "ASO_HOME" page
-	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
-	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button
-	And user selects the ship to Store Pick up radio button
-	And verify user can begin checkout
-	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "FindAsStoreZIPCode" , "EmailAddress"
-	And user add "<Payment Type>" details in payment method for "guest" user
-	And user clicks on place order on checkout page 
-	Then verify user is able to successfully place the order 
-	Then Verify the message on the page 
-		|# Message for successful order is displayed		|
-		|THANKS FOR SUBMITTING YOUR ORDER					|
-	Examples: 
-		|Payment Type	|
-#		|Gift Card		|
-		|Credit Card	|
-		|PayPal			|
+#@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order 
+#@CR-SK 
+#Scenario Outline: Verify that UnAuthenticated user is able to place an order for a bopis product
+#	Given user launches the browser and navigates to "ASO_HOME" page
+#	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
+#	And User searches a product "SKUForBopisProduct" and navigates to PDP 
+#	And user click on Add to Cart Button
+#	And user is navigated to Add to cart Notification popup 
+#	And user will click on View Cart button
+#	And user selects the ship to Store Pick up radio button
+#	And verify user can begin checkout
+#	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "FindAsStoreZIPCode" , "EmailAddress"
+#	And user add "<Payment Type>" details in payment method for "guest" user
+#	And user clicks on place order on checkout page 
+#	Then verify user is able to successfully place the order 
+##	Then Verify the message on the page 
+##		|# Message for successful order is displayed		|
+##		|THANKS FOR SUBMITTING YOUR ORDER					|
+#	Examples: 
+#		|Payment Type	|
+##		|Gift Card		|
+#		|Credit Card	|
+#		|PayPal			|
 
 @R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @CR-SK
 Scenario Outline: Verify if authenticated user is able to place an order for single SKU product 
@@ -33,14 +32,14 @@ Scenario Outline: Verify if authenticated user is able to place an order for sin
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
-	And user adds shipment address on checkout page for "newly registered" user
-	And user selects shipment method on check out page for "newly registered" user
-	And user add "<Payment Type>" details in payment method for "newly registered" user
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	And user add "<Payment Type>" details in payment method for "guest" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-	Then Verify the message on the page 
-		|# Message for successful order is displayed		|
-		|THANKS FOR SUBMITTING YOUR ORDER					|
+#	Then Verify the message on the page 
+#		|# Message for successful order is displayed		|
+#		|THANKS FOR SUBMITTING YOUR ORDER					|
 	Examples: 
 		|Payment Type	|
 #		|Gift Card		|
@@ -60,9 +59,9 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 	And user add "<Payment Type>" details in payment method for "guest" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-	Then Verify the message on the page 
-		|# Message for successful order is displayed		|
-		|THANKS FOR SUBMITTING YOUR ORDER					|
+#	Then Verify the message on the page 
+#		|# Message for successful order is displayed		|
+#		|THANKS FOR SUBMITTING YOUR ORDER					|
 	Examples: 
 		|Payment Type	|
 #		|Gift Card		|
@@ -84,9 +83,9 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bundle 
 	And user add "<Payment Type>" details in payment method for "guest" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-	And Verify the message on the page 
-		|# Message for successful order is displayed		|
-		|THANKS FOR SUBMITTING YOUR ORDER					|
+#	And Verify the message on the page 
+#		|# Message for successful order is displayed		|
+#		|THANKS FOR SUBMITTING YOUR ORDER					|
 	Examples: 
 		|Payment Type	|
 #		|Gift Card		|
@@ -108,9 +107,9 @@ Scenario Outline: Verify if unauthenticated user is able to place an for standar
 	And user add "<Payment Type>" details in payment method for "guest" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-	And Verify the message on the page 
-		|# Message for successful order is displayed|
-		|THANKS FOR SUBMITTING YOUR ORDER			|
+#	And Verify the message on the page 
+#		|# Message for successful order is displayed|
+#		|THANKS FOR SUBMITTING YOUR ORDER			|
 	Examples: 
 		|Payment Type	|
 #		|Gift Card		|
@@ -118,11 +117,10 @@ Scenario Outline: Verify if unauthenticated user is able to place an for standar
 		|PayPal			|
 		
 		
-@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order 
- @CR-SK 
+@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order  @CR-SK 
 Scenario Outline: Verify if unauthenticated user is able to place an for bulk gift card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When User searches a product "SKUForBulkGiftCard" and navigates to PDP 
+	When User searches a product "SKUForBulkGiftCard" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user click on checkout button 
@@ -131,9 +129,9 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bulk gi
 	And user add "<Payment Type>" details in payment method for "guest" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-	And Verify the message on the page 
-		|# Message for successful order is displayed|
-		|THANKS FOR SUBMITTING YOUR ORDER			|
+#	And Verify the message on the page 
+#		|# Message for successful order is displayed|
+#		|THANKS FOR SUBMITTING YOUR ORDER			|
 	Examples: 
 		|Payment Type	|
 #		|Gift Card		|
@@ -153,9 +151,9 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bait pr
 	And user add "<Payment Type>" details in payment method for "guest" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-	And Verify the message on the page 
-		|# Message for successful order is displayed|
-		|THANKS FOR SUBMITTING YOUR ORDER			|
+#	And Verify the message on the page 
+#		|# Message for successful order is displayed|
+#		|THANKS FOR SUBMITTING YOUR ORDER			|
 	Examples: 
 		|Payment Type	|
 #		|Gift Card		|
@@ -179,9 +177,9 @@ Scenario Outline: Verify if authenticated user is able to place an with GC and C
 	Then gift card balance is applied towards the purchase 
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-	And Verify the message on the page 
-		|# Message for successful order is displayed|
-		|THANKS FOR SUBMITTING YOUR ORDER!			|
+#	And Verify the message on the page 
+#		|# Message for successful order is displayed|
+#		|THANKS FOR SUBMITTING YOUR ORDER!			|
 	Examples: 
 		|Payment Type	|
 		|Credit Card	|

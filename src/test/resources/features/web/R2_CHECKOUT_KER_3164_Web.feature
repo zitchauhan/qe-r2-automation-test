@@ -121,24 +121,17 @@ Scenario: Verify if User is able to enter billing information
 @ZYP_CHECKOUT_K3164-8031 @CR-GK 
 Scenario: 
 	Verify if the user is able to reviw and place order from One Page Checkout Screen
-	Given  user launches the browser and navigates to "ASO_HOME" page 
-	And  user clicks on SignIn link from global header 
-	And  user enter the valid emailaddress "EmailAddress" 
-	And  user enter the valid password "Password" 
-	And  user click on signin button 
-	And  User searches a product "productName" and navigates to PDP 
-	And  user click on Add to Cart Button 
-	And  user is navigated to Add to cart Notification popup 
-	And  user click on checkout from ATC pop up 
-	And user clicks on edit shipping method cta 
-	And user click on go to payment present in shipping method 
-	And user click on confirm billing address button 
-	And user able to see the button place order 
-	Then Verify below Sub/Main Module of Checkout Page 
-		|#%%  verify order below attributes on order confirmation page %%|
-		|txtOrderSuccesfullStatus|
-		|OrderConfirmationPage_OrderNumber|
-		|OrderConfirmationPage_OrderNumber_txt|
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user creates an account 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button for "Bundle Product" 
+	And user is navigated to Add to cart Notification popup 
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "newly registered" user 
+	And user selects shipment method on check out page for "newly registered" user 
+	And user add "Credit Card" details in payment method for "newly registered" user 
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
 		
 		
 @R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Medium   @KER-3164 
