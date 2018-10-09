@@ -527,21 +527,23 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='City']/..//input") // CR-SK 28 Aug
 	public WebElement txtCityInAddCreditCard;
 
-	@FindBy(xpath = "//*[@id='gift-card-container']//*[text()='Remove'] | //div[text()= 'GIFT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'GIFT CARDS']/../following-sibling::*//*[text()='Remove']") // CR-SK
-																																											// 29
-																																											// Aug
-																																											// //
+	final String xpathForDeleteGiftCardButton = "//div[text()= 'GIFT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'GIFT CARDS']/../following-sibling::*//*[text()='Remove'] | //*[text()= 'Gift Card']/../following-sibling::*//*[text()='Remove']";
+	@FindBy(xpath = xpathForDeleteGiftCardButton) // CR-SK
+													// 29
+													// Aug
+													// //
 	// Modified RKA 12
 	// // Sep Modified
-	// GK // 17Sep
+	// CR-GK 9-Oct
 
 	public List<WebElement> btnRemoveGiftCardList;
 
-	@FindBy(xpath = "//*[text()= 'CREDIT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'CREDIT CARDS']/../following-sibling::*//*[text()='Remove']/preceding-sibling::i") // CR-SK
-																																																	// 29
-																																																	// Aug
-																																																	// //
-																																																	// //
+	final String xpathForDeleteCreditCardButton = "//*[text()= 'CREDIT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'CREDIT CARDS']/../following-sibling::*//*[text()='Remove']/preceding-sibling::i";
+	@FindBy(xpath = xpathForDeleteCreditCardButton) // CR-SK
+													// 29
+													// Aug
+													// //
+													// //
 	// Modified RKA 12
 	// // // Sep
 	// Modified // GK //
@@ -855,8 +857,13 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='show_wish_list_btn']")
 	public List<WebElement> openWishListBtn;
 
-	@FindBy(xpath = "//*[text()= 'CREDIT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'CREDIT CARDS']/../following-sibling::*//*[text()='Remove']/preceding-sibling::i")
+	// CR-GK 9-Oct
+	@FindBy(xpath = xpathForDeleteCreditCardButton)
 	public WebElement MyAccount_CreditCardRemoveBtn;
+
+	// CR-GK 9-Oct
+	@FindBy(xpath = xpathForDeleteGiftCardButton)
+	public WebElement MyAccount_GiftCardRemoveBtn;
 
 	// End KER-4330 CR-MS Sep25
 
@@ -925,6 +932,17 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 			assertTrue(clickOnButton(MyAccount_CreditCardRemoveBtn));
 			Thread.sleep(Constants.thread_highest);
 			cardsCount--;
+		}
+	}
+
+	// CR-GK 9-Oct
+	public void deleteAllGiftCardsFromMyAccount() throws InterruptedException {
+		Thread.sleep(Constants.thread_low);
+		int giftCardsCount = btnRemoveGiftCardList.size();
+		while (giftCardsCount > 0) {
+			assertTrue(clickOnButton(MyAccount_GiftCardRemoveBtn));
+			Thread.sleep(Constants.thread_medium);
+			giftCardsCount--;
 		}
 	}
 

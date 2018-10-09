@@ -92,19 +92,20 @@ Scenario: Verify the user gets the error message when Password is left blank
 		|# Following error Message should show on the page	|
 		|Please enter the password								|
 
-####Failing - Known Issue
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10301 @CR-SK
-Scenario: Verify user can do the logout using Flyout from My Account header
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011
+@ZYP_MYACCOUNT_K4011-10301 @CR-SK 
+Scenario: Verify user can do the logout using Flyout from My Account header 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
-	And user logs in as "RawUser"
-	When user sign out from the website
-	Then Sign in page should open
-	When user logs in as "RawUser"
-	And User navigates to L2 Mens clothing
-    And user clicks on one of the subcategory and navigates to LTwo
-    And user clicks on one of the product category and navigates to LThree
-	And user sign out from the website
+	And user logs in as "RawUser" 
+	When user sign out from the website 
+	#	Then Sign in page should open
+	And user clicks on SignIn link from global header 
+	When user logs in as "RawUser" 
+	And User navigates to L2 Mens clothing 
+	And user clicks on one of the subcategory and navigates to LTwo 
+	And user clicks on one of the product category and navigates to LThree 
+	And user sign out from the website 
 	Then User is navigated to pdp page
 
 

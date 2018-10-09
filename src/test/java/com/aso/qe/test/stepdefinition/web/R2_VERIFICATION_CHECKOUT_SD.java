@@ -146,6 +146,8 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2CheckoutPo.checkout_ShippingMethod_GoToPayment_btn));
 				else if (currentElement.equalsIgnoreCase("checkout_ShippingMethod_ShippingDetails"))
 					assertTrue(isDisplayed(r2CheckoutPo.checkout_ShippingMethod_ShippingDetails));
+				else if (currentElement.equalsIgnoreCase("checkout_ShippingMethod_ItemWHITEGLOVE"))
+					assertTrue(isDisplayed(r2CheckoutPo.textBasicDeliverMessage));
 
 				// ===============================================================================
 				//// Check out > Sign In page

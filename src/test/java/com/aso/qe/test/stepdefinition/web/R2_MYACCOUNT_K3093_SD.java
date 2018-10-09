@@ -125,7 +125,7 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 		{
 			 clickOnButton(myAccountPo.lnkMyAccount);
 			  clickOnButton(r2_r1_fun_po.payment_Txt);
-		} 
+		}
 	}
 	
 
@@ -176,6 +176,9 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 	
 	}
 
-
+	@Then("^user deletes all the GiftCards in MyAccount Payment page$")
+	public void user_deletes_all_the_GiftCards_in_MyAccount_Payment_page() throws Throwable {
+	    myAccountPo.deleteAllGiftCardsFromMyAccount();
+	}
 
 }

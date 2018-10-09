@@ -23,14 +23,14 @@ public class R2_MYACCOUNT_K3092_SD extends CommonActionHelper {
 	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	
 	
-	@Then("^user filling the gift card detial$")
+	@Then("^user filling the gift card detail$")
 	public void user_filling_the_gift_card_detial() throws Throwable {
-		for (WebElement btnRemove : myAccountPo.btnRemoveGiftCardList) {
+		/*for (WebElement btnRemove : myAccountPo.btnRemoveGiftCardList) {
 			if(isDisplayed(btnRemove))
 					clickOnButton(btnRemove);
-		}
-
+		}*/
 		
+		myAccountPo.deleteAllGiftCardsFromMyAccount();
 		assertTrue(clickOnButton(myAccountPo.btnAddNewGiftCard));
 		setInputText(myAccountPo.txtGiftCardNumber, webPropHelper.getTestDataProperty("validGiftCardNumber"));
 		 setInputText(myAccountPo.txtGifCardPin, webPropHelper.getTestDataProperty("validPinNumber"));

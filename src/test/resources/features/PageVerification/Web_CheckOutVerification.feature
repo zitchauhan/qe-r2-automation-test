@@ -71,6 +71,7 @@ Scenario: Verify Checkout for Web
 		|checkout_ShippingMethod_ShippingMethodType_btn				|
 		|checkout_ShippingMethod_GoToPayment_btn					|
 		|checkout_ShippingMethod_ShippingDetails					|
+		|checkout_ShippingMethod_ItemWHITEGLOVE                     |
 		
 		|# Verify following elements in Checkout > Sign In	|
 		|checkout_SignIn_EmailAddress_txt					|
