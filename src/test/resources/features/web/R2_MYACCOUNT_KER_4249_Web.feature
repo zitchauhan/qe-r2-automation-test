@@ -28,11 +28,11 @@ Scenario: Verify user is able to create an account with all valid data
 	And user enter password "Password"
 	Then user should see password masked 
 	When clicks on Sign Up Button
-	Then user should be able to sign up successfully
+	#Then user should be able to sign up successfully
 	And Verify the message on the page
 	    |# Following Message should show on the page|
-	    |CONGRATULATIONS							|
-	    |You have successfully registered with Academy.com|
+	    |Play Ball!							|
+	    |Your academy.com account has been created|
 	    |LET'S SHOP									|
 
 
@@ -213,12 +213,7 @@ Scenario: Verify the user gets the error message when First name filled with any
 	And clicks on Sign Up Button 
 	Then Verify the message on the page 
 		|# Following error Message should show on the page					|
-		|Enter a Valid First Name where Only Alphabets, ' and - are allowed	|
-	When user enter first "AutoTest4" 
-	And clicks on Sign Up Button 
-	Then Verify the message on the page 
-		|# Following error Message should show on the page					|
-		|Enter a Valid First Name where Only Alphabets, ' and - are allowed	|	
+		|This form field has an unrecognized character	|		
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249
@@ -230,13 +225,8 @@ Scenario: Verify the user gets the error message when Last name filled with any 
 	When user enter last "Au@#@#es!~%^t" 
 	And clicks on Sign Up Button 
 	Then Verify the message on the page 
-		|# Following error Message should show on the page					|
-		|Enter a Valid Last Name where Only Alphabets, ' and - are allowed	|
-	When user enter last "AutoTest4" 
-	And clicks on Sign Up Button 
-	Then Verify the message on the page 
-		|# Following error Message should show on the page					|
-		|Enter a Valid Last Name where Only Alphabets, ' and - are allowed	|	
+		|# Following error Message should show on the page	|
+		|This form field has an unrecognized character	|	
 		
 		
 @R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10171 @CR-SK
@@ -254,11 +244,11 @@ Scenario: Verify the user gets the error message when email address contains '+'
 	    |Please enter the Email Address in a valid format (ex. abc@xyz.com)	|	        
 		
 @R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10164 @CR-SK
-Scenario: Verify the user does not get the error message when First name filled with 1 character
+Scenario: Verify the user does not get the error message when First name filled with empty character
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And clicks on SignUp link from SignIn page
-	And user enter first "F"
+	And user enter first ""
 	And user enter last "LastName"
 	And user enter random email Address
 	And user enter password "Password"
@@ -267,19 +257,19 @@ Scenario: Verify the user does not get the error message when First name filled 
 	    |# Following error Message should not show on the page	|
 	    |Please enter the First Name							|		
 
-@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10167 @CR-SK
-Scenario: Verify the user does not get the error message when Last name filled with 1 character
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on SignIn link from global header 
-	And clicks on SignUp link from SignIn page
-	And user enter first "FirstName"
-	And user enter last "L"
-	And user enter random email Address
-	And user enter password "Password"
-	And clicks on Sign Up Button
-	Then Verify the message not displayed on the page
-	    |# Following error Message should not show on the page	|
-	    | Please Enter a Last Name								|		    
+	@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10167 @CR-SK
+	Scenario: Verify the user does not get the error message when Last name filled with empty character
+		Given user launches the browser and navigates to "ASO_HOME" page 
+		When user clicks on SignIn link from global header 
+		And clicks on SignUp link from SignIn page
+		And user enter first "FirstName"
+		And user enter last ""
+		And user enter random email Address
+		And user enter password "Password"
+		And clicks on Sign Up Button
+		Then Verify the message not displayed on the page
+		    |# Following error Message should not show on the page	|
+		    | Please Enter a Last Name								|		    
 	    
 @R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10165 @CR-SK
 Scenario: Verify the user gets the error message when First name filled with more than 50 characters

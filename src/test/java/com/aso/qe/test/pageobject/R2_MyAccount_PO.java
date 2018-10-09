@@ -111,8 +111,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//h5[text()='PAYMENT']") // CR-RK KER-2920 Sep18
 	public WebElement headerPayments;
 
-	@FindBy(xpath = "//*[@data-auid='defaultAddress']")
-	public WebElement setAsDefaultBtn;// RKA 3 aug added //GK 17Sept //CR-RK KER-3151 Sep 18
+	@FindBy(xpath = "//*[@data-auid='defaultAddress'] | //*[text()='DEFAULT']")
+	public WebElement setAsDefaultBtn;// RKA 3 aug added //GK 17Sept //CR-RK KER-3151 Sep 18 //CR-DPK 09-oct
 
 	@FindBy(xpath = "//*[@data-auid='firstName']") // CR-SK, 28 Aug 2018 //CR-RK KER-3151 Sep 18
 	public WebElement adr_inpFirstName;
@@ -855,6 +855,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='show_wish_list_btn']")
 	public List<WebElement> openWishListBtn;
 
+	@FindBy(xpath = "//*[text()= 'CREDIT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'CREDIT CARDS']/../following-sibling::*//*[text()='Remove']/preceding-sibling::i")
+	public WebElement MyAccount_CreditCardRemoveBtn;
+
 	// End KER-4330 CR-MS Sep25
 
 	/***************************** END XPAHTS ***********************************/
@@ -912,6 +915,16 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 			assertTrue(clickOnButton(DeleteList_btn));
 			assertTrue(clickOnButton(DeleteWishList_btn));
 			listCount--;
+		}
+	}
+
+	// CR-GK 9-Oct
+	public void deleteAllCreditCardsFromMyAccount() throws InterruptedException {
+		int cardsCount = PaymentPage_CreditCard_Remove_list.size();
+		while (cardsCount > 0) {
+			assertTrue(clickOnButton(MyAccount_CreditCardRemoveBtn));
+			Thread.sleep(Constants.thread_highest);
+			cardsCount--;
 		}
 	}
 

@@ -1,7 +1,7 @@
 Feature: B07-500- Change Billing Address 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3135 @1HR_R2
-@ZYP_CHECKOUT_K3135-8101 @CR-GK 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3135 @1HR_R2 
+@ZYP_CHECKOUT_K3135-8108 @CR-GK 
 Scenario: To verify change billing Address CTA 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
@@ -29,6 +29,7 @@ Scenario: To verify change billing Address CTA
 		|ZipCode_Input|
 		|City_Input|
 		|State_DD|
+		|EmailAddressforOrderConfirmation_Input|
 		|SignuptogetHotDeals_checkBox|
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
 	And user click on confirm billing address button 
@@ -62,6 +63,7 @@ Scenario: To verify all fields in Billing Address Form
 		|ZipCode_Input|
 		|City_Input|
 		|State_DD|
+		|EmailAddressforOrderConfirmation_Input|
 		|SignuptogetHotDeals_checkBox|
 		|SavePaymentInfoForLater_checkBox|
 		|ReviewOrder_Btn|
@@ -88,6 +90,7 @@ Scenario: To verify change billing Address CTA
 	And user click on confirm billing address button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#%%%%%%   Billing Information %%%%%%%%%%|
+		|EditPayment_Link|
 		|BillingInformation_Txt|
 		
 		
@@ -138,5 +141,6 @@ Scenario: To verify Extra fields in Billing Address Form
 	And user click on confirm billing address button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#%%%%%%   Billing Information %%%%%%%%%%|
+		|EditPayment_Link|
 		|BillingInformation_Txt|
 	

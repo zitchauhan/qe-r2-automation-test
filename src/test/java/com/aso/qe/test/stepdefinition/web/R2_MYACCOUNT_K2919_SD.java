@@ -27,12 +27,13 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	
 	Actions keyAction = new Actions(getDriver());
-	@Given("^user deletes all existing credit card$")
+	@Given("^user deletes all existing credit card$") //CR-GK 9-Oct
 	public void user_deletes_all_existing_credit_card() throws Throwable {
-		for(WebElement removeElement: myAccountPo.PaymentPage_CreditCard_Remove_list) {
+		/*for(WebElement removeElement: myAccountPo.PaymentPage_CreditCard_Remove_list) {
 			removeElement.click();
 			Thread.sleep(Constants.thread_highest);
-		}
+		}*/
+		myAccountPo.deleteAllCreditCardsFromMyAccount();
 	}
 	
 	@Given("^user clicks on Add New Credit Card button$")

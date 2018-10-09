@@ -136,6 +136,8 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2CartPo.txtSize));
 				else if (currentElement.equalsIgnoreCase("EstArrival_txt"))
 					assertTrue(isDisplayed(r2CartPo.txtEstArrival));
+				else if (currentElement.equalsIgnoreCase("Cart_IncludedTxt"))
+					assertTrue(isDisplayed(r2CartPo.cart_IncludedTxt));
 
 				// Your Cart item details Finish
 				// ****************************************************************************************************
