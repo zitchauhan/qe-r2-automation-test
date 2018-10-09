@@ -190,7 +190,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//h4[.='FORGOT PASSWORD']")
 	public WebElement headerForgotYourPassword;
 
-	@FindBy(xpath = "//*[@data-auid='btnsubmit_btn']") // CR-SK 28 Aug-18
+	@FindBy(xpath = "//*[@data-auid='btnsubmit_btn'] | //*[@data-auid='btnundefined']") // CR-SK 28 Aug-18 //CR-DPK oct-09
 	public WebElement btnSubmit;
 
 	@FindBy(xpath = "//*[@data-auid='forgot_password_btn']")
@@ -527,7 +527,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='City']/..//input") // CR-SK 28 Aug
 	public WebElement txtCityInAddCreditCard;
 
-	@FindBy(xpath = "//div[text()= 'GIFT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'GIFT CARDS']/../following-sibling::*//*[text()='Remove']") // CR-SK
+	@FindBy(xpath = "//*[@id='gift-card-container']//*[text()='Remove'] | //div[text()= 'GIFT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'GIFT CARDS']/../following-sibling::*//*[text()='Remove']") // CR-SK
 																																											// 29
 																																											// Aug
 																																											// //
@@ -673,7 +673,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='Weak']/following-sibling::div/div")
 	public WebElement SignUpPage_PasswordStrengthBar_txt;
 
-	@FindBy(xpath = "//*[text()='Password Strength']//i")
+	@FindBy(xpath = "//*[text()='Password Strength']//i | //*[@data-auid='tooltipmyAct_passwordStrengthMeter']") //CR-DPK oct-09
 	public WebElement SignUpPage_PasswordStrength_tooltip;
 
 	@FindBy(xpath = "//*[@data-auid='Orders_m']")

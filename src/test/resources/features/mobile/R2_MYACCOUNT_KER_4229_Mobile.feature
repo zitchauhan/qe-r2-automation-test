@@ -119,8 +119,7 @@ Scenario:
 		|AddCreditCardPage_BillingInformationHeader_txt	|
 		|PaymentPage_CreditCardDetails					|
 		|PaymentPage_SetAsDefault_btn                   |
-		|PaymentPage_GiftCardHeader_label				|
-		|PaymentPage_RemoveGiftCards_btnList			|
+		
 
 
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4229 
