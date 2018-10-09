@@ -33,9 +33,10 @@ Scenario: Verify the Shipping address form that authenticated user can view on a
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8178 @CR-DPK 
 Scenario: Verify if unauthenticated user be presented with the blank shipping address form fields
  	Given user launches the browser and navigates to "ASO_HOME" page
-	Then User clicks on the burger menu
-	And User navigates to LThree
-   	Then user clicks on the product card and navigates to PDP
+#	Then User clicks on the burger menu
+#	And User navigates to LThree
+#   	Then user clicks on the product card and navigates to PDP
+     When User searches a product "productName" and navigates to PDP
      Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -75,9 +76,10 @@ Scenario: Verify Guest user should view zipcode pre-populated if previously prov
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-9681 @CR-DPK 
 Scenario: Verify guest user, if after placing order, registers the account saves the address in My Account
  	Given user launches the browser and navigates to "ASO_HOME" page
- 	Then User clicks on the burger menu
- 	When User Navigates L2 form Homepage Header 
-	And User clicks on product in PLP
+# 	Then User clicks on the burger menu
+# 	When User Navigates L2 form Homepage Header 
+#	And User clicks on product in PLP
+	When User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
  	And user will click on View Cart button
 	Then user click on checkout button in Cart page

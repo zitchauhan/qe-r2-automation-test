@@ -65,7 +65,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 			|Cvv_Input|
 		
 		
-@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order    @KER-5892 @ZYP_CHECKOUT_K5892-10816 @CR-RKA
+		
+		@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order    @KER-5892 @ZYP_CHECKOUT_K5892-10816 @CR-RKA
 Scenario:  Verify the user is able to add a new credit card while payment that is displayed in active order only
 Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -83,7 +84,6 @@ Given  user launches the browser and navigates to "ASO_HOME" page
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#%%  verify order below attributes on order confirmation page %%|
 		|OrderConfirmationPage_OrderNumber|
-		
 
 @R2_Mobile @R2_Regression @R2_All @P-Highest @1HR  @C-Checkout @KER-5892 @ZYP_CHECKOUT_K5892-13288 @CR-RKA
 Scenario: Verify expired credit card behavior in checkout page - Payment section (Single Credit Card)

@@ -32,6 +32,7 @@ Scenario:
 	 Then User clicks on the burger menu
 	And User navigates to LThree
    	Then user clicks on the product card and navigates to PDP
+   
      Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	And user click on checkout button in Cart page
@@ -98,9 +99,10 @@ Scenario:
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10628 @CR-DPK
   Scenario: Verify if an error is found in the address while edit. And AVS returns a suggestion
        Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-	And User navigates to LThree
-   	Then user clicks on the product card and navigates to PDP
+#    Then User clicks on the burger menu
+#	And User navigates to LThree
+#   	Then user clicks on the product card and navigates to PDP
+When User searches a product "productName" and navigates to PDP
      Then user click on Add to Cart Button
      And user will click on View Cart button
      Then user click on checkout button in Cart page

@@ -45,6 +45,7 @@ Scenario: Verify if authenticated user can view estimated shipping based on zip 
 	Then user fill the Address book details 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
+	
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -98,6 +99,18 @@ Given user launches the browser and navigates to "ASO_HOME" page
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
 Then user click on change zip code and fill the zip code outside the US
+Then Verify below Sub/Main Module of Cart Page
+ |#verify the extimated Tax is ZERO|
+ |EstimatedTaxes_txt|
+ 
+ @R2_Mobile @R2_Regression @R2_All @P-Low  @C-Cart @KER-3511 @ZYP_CART_K3511-12758 @CR-RKA
+Scenario: verify if proper validation message is displayed if user already has products in his cart and tries to add a Zip code"
+Given user launches the browser and navigates to "ASO_HOME" page 
+ When User searches a product "productName" and navigates to PDP
+    And user click on Add to Cart Button
+    And user is navigated to Add to cart Notification popup
+    And user will click on View Cart button
+Then user click on zip code and fill the zip code of restricted state
 Then Verify below Sub/Main Module of Cart Page
  |#verify the extimated Tax is ZERO|
  |EstimatedTaxes_txt|

@@ -129,9 +129,10 @@ Feature: Verify Checkout Login Interstitial
 	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8153 @CR-DPK 
 	Scenario: Verify the if user not authenticated, user must see empty fields in Sign-in popup
 	Given user launches the browser and navigates to "ASO_HOME" page
-	And User clicks on the burger menu 
-		 And User Navigates L2 form Homepage Header 
-     And User clicks on product in PLP
+#	And User clicks on the burger menu 
+#		 And User Navigates L2 form Homepage Header 
+#     And User clicks on product in PLP
+	When User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page
@@ -146,9 +147,7 @@ Feature: Verify Checkout Login Interstitial
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-10423 @CR-RK 	
 	Scenario: Verify that user is able to navigate back to checkout page after creating new account 
 	Given user launches the browser and navigates to "ASO_HOME" page
-	And User clicks on the burger menu 
-		 And User Navigates L2 form Homepage Header 
-     And User clicks on product in PLP
+	When User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup
 	And user will click on View Cart button
