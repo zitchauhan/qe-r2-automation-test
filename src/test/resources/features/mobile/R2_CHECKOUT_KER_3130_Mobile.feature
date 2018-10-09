@@ -73,7 +73,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
  	And User verifies that city and State are populated automatically
 
 
-@R2_Mobile   @P-Medium @R2_Regression @C-Checkout @KER-3130 @ZYP_CART_K3132-9564 @CR-AG 
+@R2_Mobile @P-Medium @R2_Regression @C-Checkout @KER-3130 @ZYP_CART_K3132-9564 @CR-AG 
 Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank
 Given user launches the browser and navigates to "ASO_HOME" page 
  When User searches a product "productName" and navigates to PDP

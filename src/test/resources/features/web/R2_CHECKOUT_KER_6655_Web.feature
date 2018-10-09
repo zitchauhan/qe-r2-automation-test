@@ -104,9 +104,7 @@ Scenario: Verify Enable Buy Now is not applicable for following items SOF Age Re
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-	When user clicks on one of the category and navigates to LOne SOF
-    Then user clicks on one of the subcategory and navigates to LTwo SOF
-    Then user clicks on one of the product category and navigates to LThree SOF
+	When User searches a product "SOFSKUNumber" and navigates to PDP
     Then user should not able to see the Enable BUY NOW button on the PDP    
     
 @R2_Web @R2_Regression @R2_All @P-High_Order @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12347 @CR-MS
@@ -164,6 +162,8 @@ Scenario: Verify that Authenticated user is able to view modal to add payment de
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user deletes all existing credit card
+	And user deletes all existing gift cards
 	And User searches a product "SKUForBuyNow" and navigates to PDP 
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|

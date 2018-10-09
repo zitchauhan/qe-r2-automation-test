@@ -39,7 +39,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public WebElement inputEmailAddress;// Updated KER-6941 CR-RK
 
 	//@FindBy(xpath = "(//div[.='Create Password']/following-sibling::div/input)[1]") // modified by CR- SK//
-	@FindBy(xpath = "//*[@data-auid='Password']")//RKA 8 oct
+	@FindBy(xpath = "//*[@id='signup-passwordfield'] | //*[@data-auid='Password']")//RKA 8 oct
 	public WebElement inputCreatePassword;
 
 	@FindBy(xpath = "//input[@type='checkbox']")
@@ -589,7 +589,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='DEFAULT']")
 	public WebElement default_txt;
 
-	@FindBy(xpath = "//*[@data-auid='myAccountCta_m']")
+	@FindBy(xpath = "//*[@data-auid='myAccountCta_m'] | //*[@data-auid='signInCta_m']")
 	public WebElement myAccount_txt_Mobile;
 
 	@FindBy(xpath = "//*[@data-auid='Address Book_m']")

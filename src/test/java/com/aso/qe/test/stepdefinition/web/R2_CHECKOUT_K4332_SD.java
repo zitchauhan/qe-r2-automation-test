@@ -28,10 +28,13 @@ public class R2_CHECKOUT_K4332_SD extends CommonActionHelper {
 	
 	@Then("^verify the buy now button is clickable$")
 	public void verify_the_buy_now_button_is_clickable() throws Throwable {
-		assertTrue(clickOnButton(r2R1FunPO.BuyNow_btn));
-		Thread.sleep(Constants.thread_highest);
-		Thread.sleep(Constants.thread_highest);
-		Thread.sleep(Constants.thread_highest);
+		if(isEnabled(r2R1FunPO.BuyNow_btn)) {
+			assertTrue(clickOnButton(r2R1FunPO.BuyNow_btn));
+			Thread.sleep(Constants.thread_highest);
+			Thread.sleep(Constants.thread_highest);
+			Thread.sleep(Constants.thread_highest);
+		}
+		
 	}
 	
 	

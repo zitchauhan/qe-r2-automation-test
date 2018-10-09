@@ -95,10 +95,7 @@ Scenario: Verify Enable Buy Now is not applicable for following items SOF Age Re
 	And user enter the valid emailaddress "emailWithOutPhonenumber" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User clicks on the burger menu
-	When user clicks on one of the category and navigates to LOne SOF
-    Then user clicks on one of the subcategory and navigates to LTwo SOF
-    Then user clicks on one of the product category and navigates to LThree SOF
+	When User searches a product "SOFSKUNumber" and navigates to PDP
     Then user should not able to see the Enable BUY NOW button on the PDP
     
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12346 @CR-MS @1HR_R2 @1HR_R2
@@ -179,6 +176,8 @@ Scenario: Verify the Payment details modal if user does not have saved Shipping 
 	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user deletes all existing credit card
+	And user deletes all existing gift cards
 	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then Verify below Sub/Main Module of PDP
     |Verify following elements in PDP page|

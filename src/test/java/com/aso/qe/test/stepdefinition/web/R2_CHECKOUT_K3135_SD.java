@@ -30,7 +30,9 @@ public class R2_CHECKOUT_K3135_SD extends CommonActionHelper {
 
 	@And("^user click on confirm billing address button$")
 	public void user_click_on_confirm_billing_address_button() throws Throwable {
-		assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
+		if(isDisplayed(r2CheckOutPo.ReviewOrder_Btn)) {
+			assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));	
+		}
 	}
 
 	@And("^user click on Add Company Name, Apt Name, Number etc link$")
