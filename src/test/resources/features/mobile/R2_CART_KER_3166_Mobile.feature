@@ -272,7 +272,8 @@ Verify promotion got applied to the Category when user applied %off promotion on
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
-	And User clicks on product in PLP 
+	And User clicks on product in PLP
+	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page 

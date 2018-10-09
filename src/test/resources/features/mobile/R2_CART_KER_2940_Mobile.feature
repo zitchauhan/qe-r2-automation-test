@@ -163,7 +163,8 @@ Then Verify below Sub/Main Module of Cart Page
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
 	And user navigate to Cart page       
-	And user click on Checkout button 
+#	And user click on Checkout button
+    And user click on checkout button in Cart page 
 	And user cilck on expand icon in order summary checkout page 
 	And user click on edit cart CTA to navigate to Cart page
 	And the Estimated Taxes are in $XX.XX format   

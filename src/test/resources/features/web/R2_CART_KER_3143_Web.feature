@@ -115,11 +115,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then Verify signout from my account
-	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -200,7 +197,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    |Verify item for Bopis |
    |Items_txt|
    
-   @R2_Web @R2_Regression  @KER-3143  @P-Low  @C-Cart @ZYP_Cart_K3143-8161 @CR-RKA
+   @R2_Web @R2_Regression  @KER-3143  @P-Low  @C-Cart @ZYP_Cart_K3143-8161 @C-BOPIS @CR-RKA
    Scenario: Verify if user "Pick Up In Store" location must display the store location selected for unauthenticated
     Given user launches the browser and navigates to "ASO_HOME" page
     When User Navigates L2 form Homepage Header 
@@ -220,13 +217,13 @@ When User Navigates L2 form Homepage Header
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
-    And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree  
-	Then User is navigated to pdp page 
-	Then user click on Add to Cart Button 
- 	And user will click on View Cart button
+#    And user clicks on one of the category and navigates to LOne 
+#	And user clicks on one of the subcategory and navigates to LTwo 
+#	And user is able to see the product category name in section title 
+#	And user clicks on one of the product category and navigates to LThree  
+#	Then User is navigated to pdp page 
+#	Then user click on Add to Cart Button 
+# 	And user will click on View Cart button
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify total item  in Cart page |
 	|Items_txt|
@@ -239,13 +236,12 @@ When User Navigates L2 form Homepage Header
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button	
-	Then user will empty the cart if product is in cart
-	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree  
-	Then User is navigated to pdp page 
-	Then user click on Add to Cart Button 
+#	And user clicks on one of the category and navigates to LOne 
+#	And user clicks on one of the subcategory and navigates to LTwo 
+#	And user is able to see the product category name in section title 
+#	And user clicks on one of the product category and navigates to LThree  
+#	Then User is navigated to pdp page 
+#	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then Verify below Sub/Main Module of Cart Page

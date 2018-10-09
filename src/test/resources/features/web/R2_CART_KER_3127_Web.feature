@@ -46,7 +46,7 @@ Scenario: verify if user is able to view the accepted Payments Icons
 		|Visa_img|
 		|MasterCard_img|
 		|Paypal_img|
-		|ApplePay_img|
+#		|ApplePay_img|
 		|AmericanExpress_img|
 		|Discover_img|
 		
@@ -103,13 +103,17 @@ Scenario: Verify if  user should be able to click on PayPal checkout if applicab
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user click on view cart button 
-	And user click on checkout button in Cart page 
-	When user enter First name "FirstName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page 
+	And user click on checkout button in Cart page
+    And  user enter First name "FirstName" 
+	And  user enter Last name "LastName" 
+	And  user enter Phone number "PhoneNumber" 
+	And  user enter Address "AVSAddress" 
+	And  user enter Zipcode "zipcode" 
+	And  user click on Go To Shipping Method button in Checkout page 
+	And  user selects the suggested address instead of entered address 
+	And  clicks on Use Selected Address button 
+	And user click on go to payment present in shipping method
 	And user will click on Paypal radio button 
 	Then Verify below Sub/Main Module of Checkout Page 
 	|# verify PayPal Checkout is dispalyed|
-	|PayPalCheckOut_Btn|
+	|rdPaypal|

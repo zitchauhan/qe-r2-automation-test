@@ -118,7 +118,7 @@ Scenario: Verify Reduce quantity adjustment in the Cart Page
 Scenario:  Verify Remove quantity message in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "emailWithOutPhonenumber" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user navigate and deletes existing items in cart 

@@ -136,7 +136,7 @@ Feature: Verify Itemized Subtotal in Cart
       | Total_txt                                               |
     And the Total is in $XX.XX format
 
-  @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2940 @ZYP_CART_K2940-8064 @CR-AKK
+ @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2940 @ZYP_CART_K2940-8064 @CR-AKK
   Scenario: To verify updated estimated Tax when cart is edited
     Given user launches the browser and navigates to "ASO_HOME" page
    When User Navigates L2 form Homepage Header 
@@ -145,7 +145,8 @@ Feature: Verify Itemized Subtotal in Cart
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
-    And user click on Checkout button
+#    And user click on Checkout button
+    And user click on checkout button in Cart page
     And user click on edit cart CTA to navigate to Cart page
     And the Estimated Taxes are in $XX.XX format
     When enter the "Quantity" to X

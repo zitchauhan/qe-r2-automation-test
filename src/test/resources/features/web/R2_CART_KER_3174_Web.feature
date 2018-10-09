@@ -14,7 +14,9 @@ Verify authenticate user is able to see the See In-Store Pickup Instructions sec
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user navigate and deletes existing items in cart 
-	And User searches a product "SOFSKUNumber" and navigates to PDP 
+	And User searches a product "SOFSKUNumber" and navigates to PDP
+	And clicks on the Change Pickup Location link
+	And user enter the Zipcode in "zipCode" 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -27,19 +29,13 @@ Verify authenticate user is able to see the See In-Store Pickup Instructions sec
 Scenario:
 Verify guest user is able to see the See In-Store Pickup Instructions section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User searches a product "SOFSKUNumber" and navigates to PDP 
+	And User searches a product "SOFSKUNumber" and navigates to PDP
+	And clicks on the Change Pickup Location link
+	And user enter the Zipcode in "zipCode" 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
 	And user click on checkout button in Cart page 
-	When user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Phone number "PhoneNumber" 
-	And user enter Address "Address" 
-	And user enter Zipcode "Zipcode" 
-	And user enter Phone number "PhoneNumber" 
-	Then user click on Go To Shipping Method button in Checkout page 
 	And user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers 
 	
 @R2_Web @C-NonOrder @CC-Cart_Order @R2_All @P-Low   @KER-3174
@@ -104,7 +100,9 @@ Scenario: Verify without checking acknowledgement, user is not able to place the
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user navigate and deletes existing items in cart
-	And User searches a product "SOFSKUNumber" and navigates to PDP 
+	And User searches a product "SOFSKUNumber" and navigates to PDP
+	And clicks on the Change Pickup Location link
+	And user enter the Zipcode in "zipCode" 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 

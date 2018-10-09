@@ -16,17 +16,17 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 
  @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3143 @ZYP_Cart_K3143-10263 @CR-RKA
  Scenario: Verify if Un-Authenticated user must be able to sign into their account from MyAccount in header
-
  Given user launches the browser and navigates to "ASO_HOME" page    
   Then User clicks on the burger menu
     Then user should able to click on Signin button
     And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
     And user click on signin button
-    Then user verify title of the home page
-    Then Verify the message on the page
-     |#verify Home page is displayed after sign in|SHOP NOW||
-     |SHOP NOW|
+    Then User clicks on the burger menu
+    Then user click on My account link 
+    Then Verify below Sub/Main Module of My Account
+	|#verify INStorePickup_FREE radio btn is enable# |
+	|BurgerMenu_MyAccount_txt			 		         |
 	
 	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3143 @ZYP_Cart_K3143-12506 @CR-RKA
 	Scenario: Verify Unauthenticated user is able to Sign in from empty cart
@@ -216,7 +216,7 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
    |Verify item for Bopis |
    |Items_txt|
    
-    @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3143  @ZYP_Cart_K3143-8161 @CR-RKA
+    @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3143  @ZYP_Cart_K3143-8161 @C-BOPIS @CR-RKA
    Scenario: Verify if user "Pick Up In Store" location must display the store location selected for unauthenticated
    Given user launches the browser and navigates to "ASO_HOME" page
    Then User clicks on the burger menu

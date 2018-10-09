@@ -190,13 +190,13 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on product in PLP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button
-	When user clicks on Move to Wish list link "NewWishLink" OR exisiting wishlink
-	And user enter the wishlist name 
+    When user clicks on Move to Wish list
+	And user enter the Wishlist name 
 	Then Verify below Sub/Main Module of Cart Page 
 	|#Item is moved from cart to the wish list |
 	|AddToWishList_btn|
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8079 @CR-AKK 	 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8079 @C-BOPIS @CR-AKK 	 
 	Scenario: To verify In-store Pick up radio button - without My Store info on My Account
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -231,10 +231,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8084 @CR-AKK 
 Scenario: To verify SOF pick up message	
 Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne SOF
-    Then user clicks on one of the subcategory and navigates to LTwo SOF
-    Then user clicks on one of the product category and navigates to LThree SOF
-	Then User is navigated to pdp page
+	Then User searches a product "SOFSKUNumber" and navigates to PDP
 	And clicks on the Change Pickup Location link
 	And user enter the Zipcode in "zipCode"
 	And user click on Add to Cart Button
