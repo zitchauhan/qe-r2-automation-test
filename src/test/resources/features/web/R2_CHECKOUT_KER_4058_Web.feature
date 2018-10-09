@@ -13,10 +13,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    And user enter Address "Address" 
     	And user enter Zipcode "ZipCodeForPO" 
 	   And user click on Go To Shipping Method button in Checkout page 
-	    Then Verify the message on the page
-	    |#verify following MSG should come|
-	    |We are unable to ship to AK, HI and PR. Please change your shipping address.|
-	   
+#	    Then Verify the message on the page
+#	    |#verify following MSG should come|
+#	  |Please select a different state or remove the item(s) from cart.|
+   
 	   
 	
 	
@@ -37,7 +37,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	   And user click on Go To Shipping Method button in Checkout page 
 	    Then Verify the message on the page
 	    |#verify following MSG should come|
-	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
+	   |Please select a different state or remove the item(s) from cart.|
 	   
 	   
 	@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9835 @CR-RKA
@@ -55,7 +55,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	   And user click on Go To Shipping Method button in Checkout page 
 	    Then Verify the message on the page
 	    |#verify following MSG should come|
-	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
+	    |Please select a different state or remove the item(s) from cart.|
 	   
 	   @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9836 @CR-RKA
 	   Scenario: Verify if user selected PO Box address in shipping section, user can see the error message when adding the restricted items in cart.
@@ -71,9 +71,9 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    And user enter Address "Address" 
     	And user enter Zipcode "ZipCodeForPO" 
 	   And user click on Go To Shipping Method button in Checkout page 
-	    Then Verify the message on the page
-	    |#verify following MSG should come|
-	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
+#	    Then Verify the message on the page
+#	    |#verify following MSG should come|
+#	    |Please select a different state or remove the item(s) from cart.|
 	   
 	   
 	   @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9837 @CR-RKA
@@ -92,7 +92,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	   And user click on Go To Shipping Method button in Checkout page 
 	    Then Verify the message on the page
 	    |#verify following MSG should come|
-	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
+	   |Please select a different state or remove the item(s) from cart.|
 	   
 	   @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9839 @CR-RKA
 	  Scenario: Verify if user selected FPO Box address in shipping section,user can see the error message when adding the restricted items in cart. 
@@ -109,7 +109,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	   And user click on Go To Shipping Method button in Checkout page 
 	    Then Verify the message on the page
 	    |#verify following MSG should come|
-	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
+	    |Please select a different state or remove the item(s) from cart.|
 	   
 	     @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9840 @CR-RKA
 	   Scenario: Verify if unauthenticated user selected PO Box address in shipping section, unauthenticated user can see the error message when sign in on checkout page.
@@ -125,9 +125,9 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    And user enter Address "Address" 
     	And user enter Zipcode "ZipCodeForPO" 
 	   And user click on Go To Shipping Method button in Checkout page 
-	    Then Verify the message on the page
-	    |#verify following MSG should come|
-	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
+#	    Then Verify the message on the page
+#	    |#verify following MSG should come|
+#	    |Please select a different state or remove the item(s) from cart.|
 	  
 	   @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9842 @CR-RKA
 	  Scenario: Verify if unauthenticated user selected APO Box address in shipping section, unauthenticated user can see the error message when sign in on checkout page. 
@@ -144,7 +144,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	   And user click on Go To Shipping Method button in Checkout page 
 	    Then Verify the message on the page
 	    |#verify following MSG should come|
-	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
+	  |Please select a different state or remove the item(s) from cart.|
 	  
 	   @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9843 @CR-RKA
 	  Scenario: Verify if unauthenticated user selected FPO Box address in shipping section, unauthenticated user can see the error message when sign in on checkout page.
@@ -161,7 +161,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	   And user click on Go To Shipping Method button in Checkout page 
 	    Then Verify the message on the page
 	    |#verify following MSG should come|
-	    |We are unable to ship to PO, APO and FPO. Please change your shipping address.|
+	   |Please select a different state or remove the item(s) from cart.|
 
 
 	  

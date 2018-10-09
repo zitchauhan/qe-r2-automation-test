@@ -65,8 +65,6 @@ Feature: Verify Checkout Login Interstitial
 		|SignUp_FirstName_txt						 	|
 		|SignUp_LastName_txt							|
 		|SignUp_EmailAddress						 	|
-		|SignUp_Password					         	| 
-		|SignUp_ReceivePromotion_chkBx					|
 		|SignUpPage_SignUp_btn							|
 
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8150 @CR-DPK 
@@ -129,10 +127,9 @@ Feature: Verify Checkout Login Interstitial
 	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8153 @CR-DPK 
 	Scenario: Verify the if user not authenticated, user must see empty fields in Sign-in popup
 	Given user launches the browser and navigates to "ASO_HOME" page
-#	And User clicks on the burger menu 
-#		 And User Navigates L2 form Homepage Header 
-#     And User clicks on product in PLP
-	When User searches a product "productName" and navigates to PDP
+	And User clicks on the burger menu 
+		 And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page
@@ -147,22 +144,21 @@ Feature: Verify Checkout Login Interstitial
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-10423 @CR-RK 	
 	Scenario: Verify that user is able to navigate back to checkout page after creating new account 
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When User searches a product "productName" and navigates to PDP
+	And User clicks on the burger menu 
+		 And User Navigates L2 form Homepage Header 
+     And User clicks on product in PLP
 	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup
 	And user will click on View Cart button
-	Then user navigate to Cart page 
 	Then user click on checkout button in Cart page
 	When user click on SignIn link
 	And user click on Create a Account link
 	When user enter first "FirstName" 
 	And user enter last "LastName" 
-	And user enter random email address in signup page
+	And user enter random email address in signup page 
 	And user enter create password
 	And clicks on Sign Up Button 
-	Then Verify below Sub/Main Module of Checkout Page 
-	|# Verify following elements in Checkout > Shipping Address	|
-	|checkout_ShippingInformation_Header_txt					|
+	Then verify that user navigates to checkout page as a signed in user
+	
 	
 	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-10426 @CR-DPK 	
 	Scenario: Verify that user is able to navigate back to forgot password page 

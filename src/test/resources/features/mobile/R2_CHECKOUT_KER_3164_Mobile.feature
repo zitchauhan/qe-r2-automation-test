@@ -199,7 +199,7 @@ Scenario:
 	And  user click on confirm billing address button 
 	Then  Verify the message on the page 
 		|# Following Error Message should show on the page|
-		|Please enter email address|
+		|Please enter an email address|
 		
 		
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
@@ -227,7 +227,7 @@ Scenario:
 	And  user click on confirm billing address button 
 	Then  Verify the message on the page 
 		|# Following Error Message should show on the page|
-		|Please enter email address|
+		|Please enter an email address|
 		
 		
 		

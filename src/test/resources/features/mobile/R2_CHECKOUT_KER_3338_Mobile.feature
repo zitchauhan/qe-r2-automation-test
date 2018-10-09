@@ -267,8 +267,6 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then Verify paypal button is clicked 
 	Then user switch to window of paypal 
 	And enter the paypal login "PayPalEmail" "PayPalPassword" 
-	Then Verify below Sub/Main Module of Checkout Page 
-		|#%%%%%%   Billing Information %%%%%%%%%%|
-		|EditPayment_Link|
+	
 	
 	
