@@ -193,6 +193,7 @@ And user enter First name "FirstName"
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page
+	Given user selects shipment method on check out page
 Then Verify below Sub/Main Module of Checkout Page
 |#verify the following|
 |CreditCard_radioBtn|

@@ -40,7 +40,7 @@ When User searches a product "productName" and navigates to PDP
 	Then user click on Go To Shipping Method button in Checkout page
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
-    |Please enter the First Name|
+    |Please enter a First Name|
 	|Please enter a Last Name|
 	|Please enter a phone number|
 	|Please enter a street address|

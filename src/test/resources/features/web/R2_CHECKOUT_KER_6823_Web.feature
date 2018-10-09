@@ -5,7 +5,7 @@ Feature: B07-250 - Gift Card - Authenticated User Using Saved GC at Checkout
 Scenario: Verify choose gift card option for authenticated User with 13 and 16 digit Gift Card having 4 or 8 digit PIN
 Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
@@ -27,7 +27,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
   Scenario: Verify one gift card applied and Balance is not covered in full
   Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
@@ -49,7 +49,7 @@ Then Verify below Sub/Main Module of Checkout Page
 Scenario: To verify the GC in 'Choose Gift Card' drop down should be disabled for an authenticated user if full balance of the GC utilized in order
 Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
@@ -76,7 +76,7 @@ Scenario: Verify saved another gift card drop down having 13 and 16 digit GC wit
 
  Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
@@ -102,7 +102,7 @@ Scenario: Verify No second Saved Gift Card for Authenticated user
 
 Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
@@ -126,7 +126,7 @@ Scenario: Verify +Add another Gift card is Suppressed
 
 Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
@@ -151,7 +151,7 @@ Then user click on remove gift card
 Scenario: Verify remove all gift cards
 Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
@@ -175,7 +175,7 @@ Then Verify below Sub/Main Module of Checkout Page
   
   Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
@@ -200,7 +200,7 @@ Then Verify below Sub/Main Module of Checkout Page
   
   Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
@@ -219,7 +219,7 @@ Then user click on apply giftcard button
 Then Verify below Sub/Main Module of Checkout Page 
 |#verify gift card drop down supressed|
 |Plus_AddAnotherGiftCard_Txt|
-Then user click on remove gift card 
+#Then user click on remove gift card 
   
   
   

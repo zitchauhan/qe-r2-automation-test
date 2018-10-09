@@ -139,8 +139,8 @@ Feature: Verify Checkout Login Interstitial
 	And user click on signin button
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
-    |Please enter email address|
-	|Please enter password|	
+    |Please enter an email address|
+    |Please enter the password|
 	
 	
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-10423 @CR-RK 	
@@ -150,18 +150,20 @@ Feature: Verify Checkout Login Interstitial
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
 	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup
 	And user will click on View Cart button
+	Then user navigate to Cart page 
 	Then user click on checkout button in Cart page
 	When user click on SignIn link
 	And user click on Create a Account link
-	When user enter First name "FirstName" 
-	And user enter Last name "LastName" 
-	And user enter Address "Address" 
+	When user enter first "FirstName" 
+	And user enter last "LastName" 
+	And user enter random email address in signup page
 	And user enter create password
-	And user click optin checkbox 
 	And clicks on Sign Up Button 
-	Then verify that user navigates to checkout page as a signed in user
-	
+	Then Verify below Sub/Main Module of Checkout Page 
+	|# Verify following elements in Checkout > Shipping Address	|
+	|checkout_ShippingInformation_Header_txt					|
 	
 	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-10426 @CR-DPK 	
 	Scenario: Verify that user is able to navigate back to forgot password page 

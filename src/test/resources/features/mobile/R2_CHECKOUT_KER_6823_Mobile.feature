@@ -6,7 +6,7 @@ Scenario: Verify choose gift card option for authenticated User with 13 and 16 d
 Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     And User clicks on the burger menu 
@@ -31,7 +31,7 @@ And User navigates to LThree
   Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     And User clicks on the burger menu 
@@ -55,7 +55,7 @@ Scenario: To verify the GC in 'Choose Gift Card' drop down should be disabled fo
 Given user launches the browser and navigates to "ASO_HOME" page
 	 And User clicks on the burger menu 
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     And User clicks on the burger menu 
@@ -82,13 +82,14 @@ Scenario: Verify saved another gift card drop down having 13 and 16 digit GC wit
  Given user launches the browser and navigates to "ASO_HOME" page
 	 And User clicks on the burger menu 
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     And User clicks on the burger menu 
     Then user click on My Account and navigate to payment
     When user clicks on Add New Gift Card button  
     Then user fill the gift card in My Account 
+Then User clicks on ASO Logo and should be navigated to Home Page
 When User searches a product "productName" and navigates to PDP
   Then user click on Add to Cart Button
   Then user click on checkout from ATC pop up
@@ -107,13 +108,14 @@ Scenario: Verify No second Saved Gift Card for Authenticated user
 Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     And User clicks on the burger menu
     Then user click on My Account and navigate to payment
     When user clicks on Add New Gift Card button  
     Then user fill the gift card in My Account 
+Then User clicks on ASO Logo and should be navigated to Home Page
  When User searches a product "productName" and navigates to PDP
   Then user click on Add to Cart Button
 #  Then user click on checkout from ATC pop up
@@ -130,13 +132,14 @@ Scenario: Verify +Add another Gift card is Suppressed
 Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     And User clicks on the burger menu
     Then user click on My Account and navigate to payment
     When user clicks on Add New Gift Card button  
     Then user fill the gift card in My Account 
+Then User clicks on ASO Logo and should be navigated to Home Page
  When User searches a product "productName" and navigates to PDP
 
   Then user click on Add to Cart Button
@@ -155,13 +158,14 @@ Scenario: Verify remove all gift cards
 Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     And User clicks on the burger menu
     Then user click on My Account and navigate to payment
     When user clicks on Add New Gift Card button  
     Then user fill the gift card in My Account 
+Then User clicks on ASO Logo and should be navigated to Home Page
   When User searches a product "productName" and navigates to PDP
   Then user click on Add to Cart Button
 #  Then user click on checkout from ATC pop up
@@ -178,13 +182,14 @@ Then Verify below Sub/Main Module of Checkout Page
   Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     And User clicks on the burger menu
     Then user click on My Account and navigate to payment
     When user clicks on Add New Gift Card button  
     Then user fill the gift card in My Account 
+    Then User clicks on ASO Logo and should be navigated to Home Page
   When User searches a product "productName" and navigates to PDP
   Then user click on Add to Cart Button
 #  Then user click on checkout from ATC pop up
@@ -202,13 +207,14 @@ Then Verify below Sub/Main Module of Checkout Page
   Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
     And User clicks on the burger menu
     Then user click on My Account and navigate to payment
     When user clicks on Add New Gift Card button  
     Then user fill the gift card in My Account 
+    Then User clicks on ASO Logo and should be navigated to Home Page
  When User searches a product "productName" and navigates to PDP
   Then user click on Add to Cart Button
 #  Then user click on checkout from ATC pop up
@@ -219,7 +225,7 @@ Then user click on apply giftcard button
 Then Verify below Sub/Main Module of Checkout Page 
 |#verify gift card drop down supressed|
 |Plus_AddAnotherGiftCard_Txt|
-Then user click on remove gift card 
+#Then user click on remove gift card 
   
   
   

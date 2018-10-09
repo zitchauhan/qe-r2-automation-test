@@ -35,7 +35,7 @@ Feature: Message/Text Verification
 	|Please enter an expiration date|
 	|Please enter a valid security code|
 	|Please enter a security code|
-	|Please enter the First Name|
+	|Please enter a First Name|
 	|Please enter a Last Name|
 	|Please enter a phone number|
 	|Please enter a street address|
@@ -77,8 +77,8 @@ Feature: Message/Text Verification
     |ORDER PLACED ON|
     |YOUR CART|
     |The combination of Email Address and Password is incorrect. Please try again.|
-    
-    
+    |Please enter an email address|
+    |Please enter the password|
     
     
     

@@ -3,9 +3,10 @@ Feature: Verify Accurate Shipping Prices at Checkout
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @1HR_R2 @KER-2911 @ZYP_CHECKOUT_K2911-8229 @CR-DPK
 Scenario: Verify if the shipping price on Checkout screen is same as Order Summary on Cart page
 	    Given user launches the browser and navigates to "ASO_HOME" page
-	    And User clicks on the burger menu   
-		And User navigates to LThree
-   	Then user clicks on the product card and navigates to PDP
+#	    And User clicks on the burger menu   
+#		And User navigates to LThree
+#   	Then user clicks on the product card and navigates to PDP
+	When User searches a product "productName" and navigates to PDP
 		And user click on Add to Cart Button
 		And user will click on View Cart button 
 		When user views Estimated Shipping in the Item Subtotal
@@ -24,7 +25,7 @@ Scenario: Verify if the shipping price on Checkout screen is same as Order Summa
 		
 		
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2911
+#@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2911
 @ZYP_CHECKOUT_K2911-8230 @CR-DPK 
 Scenario:
 Verify the shipping price for each shipping method for Ship 2 Store items 
@@ -133,7 +134,7 @@ Verify the shipping price for each shipping method for White glove items where S
 	And user enter Address "Address" 
 	And user enter Zipcode "ZIPCODE"
 	Then user click on Go To Shipping Method button in Checkout page
-	Then User should retrieve the expected shipping price for the selected shipping method from Shipping Exception table in DB
+#	Then User should retrieve the expected shipping price for the selected shipping method from Shipping Exception table in DB
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout page "Order Summary"|
 		|Subtotal_txt|

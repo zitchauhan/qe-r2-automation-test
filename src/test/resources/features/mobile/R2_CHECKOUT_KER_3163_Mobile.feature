@@ -4,20 +4,21 @@ Feature: View/Select Shipping Address in Checkout
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9406 @CR-DPK 
 Scenario: Verify if user clicks "Go to Payment" without completing mandatory fields, system should accurate and displays relevant error messages.
  	Given user launches the browser and navigates to "ASO_HOME" page
-	And User clicks on the burger menu   
-	And User navigates to LThree
-   	Then user clicks on the product card and navigates to PDP
+#	And User clicks on the burger menu   
+#	And User navigates to LThree
+#   	Then user clicks on the product card and navigates to PDP
+	When User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
 	Then user click on Go To Shipping Method button in Checkout page
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
-    |Please enter the First Name|
-	|Please Enter a Last Name|
+    |Please enter a First Name|
+	|Please enter a Last Name|
 	|Please enter a phone number|
 	|Please enter a street address|
-	|Please enter a zip code|
+#	|Please enter a zip code|
 	|Required|	
 	
 	 
@@ -25,9 +26,10 @@ Scenario: Verify if user clicks "Go to Payment" without completing mandatory fie
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9407 @CR-DPK 
 Scenario: Verify if user clicks "Go to Payment" with incorrect details, system should accurate and displays relevant error messages.
 	 Given user launches the browser and navigates to "ASO_HOME" page
-	And User clicks on the burger menu   
-	And User navigates to LThree
-   	Then user clicks on the product card and navigates to PDP
+#	And User clicks on the burger menu   
+#	And User navigates to LThree
+#   	Then user clicks on the product card and navigates to PDP
+	When User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
@@ -36,6 +38,7 @@ Scenario: Verify if user clicks "Go to Payment" with incorrect details, system s
 	And user enter Phone number "InvalidPhoneNumber" 
 	And user enter Address "Invalidaddress" 
 	And user enter Zipcode "Invalidzipcode" 
+	Then user click on Go To Shipping Method button in Checkout page
 	Then user click on Go To Shipping Method button in Checkout page
 	Then Verify the message on the page
     |# Following Error Message should show on the page|

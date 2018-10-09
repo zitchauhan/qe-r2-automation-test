@@ -8,7 +8,7 @@ Scenario: Verify Billing address on check out page - pre-populated billing addre
  Given user launches the browser and navigates to "ASO_HOME" page 
  And User clicks on the burger menu 
  Then user should able to click on Signin button
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	When User searches a product "productName" and navigates to PDP
@@ -90,6 +90,7 @@ Then user click on checkout from ATC pop up
 	    And user enter Address "Address" 
     	And user enter Zipcode "zipcode" 
 	   And user click on Go To Shipping Method button in Checkout page 
+	    And user click on go to payment present in shipping method
 	   Then user fill the credit card detail in payment  
 	   Then user fill the email address and click on review order btn
 Then user click on edit Payment link and click on billing information
@@ -144,7 +145,7 @@ Then user navigate to GunStorageAndSafty L_Three
 		|FirstName_Input|
 		|LastName_Input|
 		|PhoneNumber_Input|
-		|SendSMSTextUpdatesAboutMyOrder_checkbox|
+#		|SendSMSTextUpdatesAboutMyOrder_checkbox|
 		|Adderss_Input|
 		|ZipCode_Input|
 		|City_Input|

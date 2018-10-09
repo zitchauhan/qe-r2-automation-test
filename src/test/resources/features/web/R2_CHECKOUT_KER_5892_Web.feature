@@ -4,7 +4,7 @@ Feature: [Web] B07-200 Checkout| Signed In User| Pay using saved Credit Card
 Scenario: Verify user is able to see the list of saved credit cards on Checkout while Payment
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header
-   And user enter the valid emailaddress "EmailAddress" 
+   And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
 	And User navigates to L2 Mens clothing
@@ -15,16 +15,16 @@ Scenario: Verify user is able to see the list of saved credit cards on Checkout 
 	Then user is navigated to Add to cart Notification popup 
     Then user click on checkout from ATC pop up
     And user clicks on edit payment cta
-#    Then Verify below Sub/Main Module of Checkout Page
-#    |#verify  credit card is selected  | 
-#     |ChooseCreditcard_Dd|
+    Then Verify below Sub/Main Module of Checkout Page
+    |#verify  credit card is selected  | 
+     |ChooseCreditcard_Dd|
  
 
 @R2_Web @R2_Regression @R2_All @P-Low  @C-Checkout @KER-5892 @ZYP_CHECKOUT_K5892-8203 @CR-RKA
 Scenario: Verify user selected credit card is visually indicated in the drop-down
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header
-   And user enter the valid emailaddress "EmailAddress" 
+   And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
 	And User navigates to L2 Mens clothing
@@ -35,16 +35,16 @@ Scenario: Verify user selected credit card is visually indicated in the drop-dow
 	Then user is navigated to Add to cart Notification popup 
     Then user click on checkout from ATC pop up
     And user clicks on edit payment cta
-#    Then user click on credit card dropdown
-#    Then Verify below Sub/Main Module of Checkout Page
-#    |#verify  credit card DD is highlighting after clicking on choose creditcard DD  | 
-#     |ChooseCreditcard_Dd|
+    Then user click on credit card dropdown
+    Then Verify below Sub/Main Module of Checkout Page
+    |#verify  credit card DD is highlighting after clicking on choose creditcard DD  | 
+     |ChooseCreditcard_Dd|
 
 @R2_Web @R2_Regression @R2_All @P-High  @C-Checkout @KER-5892 @ZYP_CHECKOUT_K5892-10814 @CR-RKA @1HR_R2
 Scenario:  Verify the user is able to add a new credit card while payment that is displayed in active order only
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header
-   And user enter the valid emailaddress "EmailAddress" 
+   And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
     And user click on signin button
 #	And User navigates to L2 Mens clothing
@@ -70,7 +70,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario:  Verify the user is able to add a new credit card while payment that is displayed in active order only
 Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  user clicks on SignIn link from global header 
-	And  user enter the valid emailaddress "EmailAddress" 
+	And  user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And  user enter the valid password "Password" 
 	And  user click on signin button 
 	And  User searches a product "productName" and navigates to PDP 
@@ -89,7 +89,7 @@ Given  user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify expired credit card behavior in checkout page - Payment section (Single Credit Card)
 Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  user clicks on SignIn link from global header 
-	And  user enter the valid emailaddress "EmailAddress" 
+	And  user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And  user enter the valid password "Password" 
 	And  user click on signin button 
 Then user click on My Account and navigate to payment
@@ -101,14 +101,15 @@ Then user enter First Name field "UpdateFirstName"
  	And user enter ZipCode field "UpdateZipcode"
  	And user enter PhoneNumber field "UpdatePhoneNumber"
  	Then click on Add button on credit card page
+ 	Then User clicks on ASO logo
 When User searches a product "productName" and navigates to PDP
 	And user click on Add to Cart Button 
 	And user click on checkout button
 	And user clicks on edit payment cta
-#And User Clicks on credit card dropwdown and selects another card 
-#Then Verify below Sub/Main Module of Checkout Page 
-#		|# Verify following elements in Checkout > Payment Drawer|
-#		|Checkout_CreditCard_DropDown|
+And User Clicks on credit card dropwdown and selects another card 
+Then Verify below Sub/Main Module of Checkout Page 
+		|# Verify following elements in Checkout > Payment Drawer|
+	     |ChooseCreditcard_Dd|
 
 
 
