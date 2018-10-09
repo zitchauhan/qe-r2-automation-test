@@ -43,11 +43,8 @@ Scenario: Verify if authenticated user can view estimated shipping based on zip 
 	And user click on MyAccount 
 	And user lands on My Account page and click on adress 
 	Then user fill the Address book details 
-	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -67,10 +64,8 @@ Scenario: Verify if authenticated user can view updated estimated shipping based
 	And user click on MyAccount 
 	And user lands on My Account page and click on adress 
 	Then user fill the Address book details 
-	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 

@@ -3,12 +3,6 @@ Feature: [Web] B06-100- Merge Cart
 @R2_Web @R2_NonRegression @CB-Cart @P-High_B @KER-3143 @ZYP_Cart_K3143-10257 @CR-RKA @1HR_R2 @C-BOPIS
 Scenario: Verify if Unauthenticated customer will be able to add items to cart for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
-#	And User navigates to L2 Mens clothing 
-#	Then user clicks on one of the subcategory and navigates to LTwo 
-#	And user is able to see the product category name in section title 
-#	Then user clicks on one of the product category and navigates to LThree 
-#	Then User is navigated to pdp page 
-#	
 	When User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -44,12 +38,9 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	
 	@R2_Web @R2_Regression @C-Cart  @P-Low @KER-3143 @ZYP_Cart_K3143-12547 @CR-RKA
 	Scenario: Verify the display and behavior of 'Continue Shopping' in Cart Title
-		Given user launches the browser and navigates to "ASO_HOME" page
-	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	Given user launches the browser and navigates to "ASO_HOME" page
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -63,11 +54,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	@R2_Web @R2_Regression @P-Low @C-Cart   @KER-3143 @ZYP_Cart_K3143-12548 @CR-RKA
 	Scenario: Verify the display and behavior of 'Checkout' in Cart Title
 		Given user launches the browser and navigates to "ASO_HOME" page
-	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -86,11 +74,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	@R2_Web @R2_Regression @P-High @C-Cart  @KER-3143 @ZYP_Cart_K3143-12571 @CR-RKA
 	Scenario: Verify all the components available on the Order Summary of the Cart
 		Given user launches the browser and navigates to "ASO_HOME" page
-	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
@@ -108,11 +93,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	@R2_Web @R2_Regression  @P-High @C-Cart  @KER-3143 @ZYP_Cart_K3143-8155 @CR-RKA
 	Scenario: Verify if Unauthenticated customer will be able to add items to cart for shipping
 	Given user launches the browser and navigates to "ASO_HOME" page
-	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
    Then user verify sucessfully added item MSG 
@@ -127,11 +109,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
     And user click on signin button
-    And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+   When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -161,11 +140,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		@R2_Web @R2_Regression @P-Low @C-Cart  @KER-3143 @ZYP_Cart_K3143-8157 @CR-RKA
 	Scenario: Verify if un-authenticated user must be able to sign into their account from checkout page
 	Given user launches the browser and navigates to "ASO_HOME" page
-	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -181,11 +157,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
     And user click on signin button
-	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
    Then user verify sucessfully added item MSG 
@@ -200,12 +173,9 @@ Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-   And user click on signin button
-	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+    And user click on signin button
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	And user click on Add to Cart Button 	
 	And user is navigated to Add to cart Notification popup
 	And user will click on View Cart button 
@@ -220,11 +190,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree  
-	Then User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
@@ -235,12 +202,9 @@ Given user launches the browser and navigates to "ASO_HOME" page
    
    @R2_Web @R2_Regression  @KER-3143  @P-Low  @C-Cart @ZYP_Cart_K3143-8161 @CR-RKA
    Scenario: Verify if user "Pick Up In Store" location must display the store location selected for unauthenticated
-   Given user launches the browser and navigates to "ASO_HOME" page
-   And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree  
-	Then User is navigated to pdp page 
+    Given user launches the browser and navigates to "ASO_HOME" page
+    When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	Then Verify below Sub/Main Module of Cart Page
@@ -251,11 +215,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 @R2_Web @R2_Regression  @KER-3143 @P-High @C-Cart  @ZYP_Cart_K3143-8162 @CR-RKA
 Scenario: Verify if cart has one or more common item(s), the cart should show single
 Given user launches the browser and navigates to "ASO_HOME" page
-And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree  
-	Then User is navigated to pdp page 
+When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
@@ -273,11 +234,8 @@ And user clicks on one of the category and navigates to LOne
 @R2_Web @R2_Regression @P-High @KER-3143 @C-Cart  @ZYP_Cart_K3143-8163 @CR-RKA
 Scenario: Verify if one or more item(s) from my previously added session is deleted or removed from catalog, the user should not see those as part of merged cart
 Given user launches the browser and navigates to "ASO_HOME" page
-And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree  
-	Then User is navigated to pdp page 
+When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button	

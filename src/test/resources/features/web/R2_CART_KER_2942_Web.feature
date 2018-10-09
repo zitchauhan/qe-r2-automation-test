@@ -3,9 +3,8 @@ Feature: Verify Quantity Adjustment in Cart
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @CR-AKK 
 Scenario: Verify add quantity adjustment in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	Then user clicks on one of the product category and navigates to LThree 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -21,11 +20,8 @@ Scenario: Verify add quantity adjustment in the Cart Page
 @R2_Web   @R2_All @P-High_Order @C-Order @CC-Cart_Order @KER-2942 @ZYP_CART_K2942-8045 @CR-AKK 
 Scenario: Verify cart gets recalculated on applying promotions and updated discounts displayed on Cart Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title  
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -44,9 +40,8 @@ Scenario: Verify cart gets recalculated on applying promotions and updated disco
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-AKK 
 Scenario: Verify Remove link in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	Then user clicks on one of the product category and navigates to LThree  
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP   
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -65,11 +60,8 @@ Scenario: Verify Quantity Zero in the Cart Page
 	And user click on signin button
 	And user navigate and deletes existing items in cart
 	Then User clicks on ASO Logo and should be navigated to Home Page 
-	And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -84,11 +76,8 @@ Scenario: Verify Quantity Zero in the Cart Page
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-9357 @CR-AKK 
 Scenario: Verify system does inventory check for product item added more than available 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	#	And product has 'X' inventory available in stock 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -103,11 +92,8 @@ Scenario: Verify system does inventory check for product item added more than av
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8051 @CR-AKK 
 Scenario: Verify Alphanumeric Quantity in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When enter the "AlphanumericQuantity" to X 
@@ -117,11 +103,8 @@ Scenario: Verify Alphanumeric Quantity in the Cart Page
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8046 @CR-AKK 
 Scenario: Verify Reduce quantity adjustment in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -140,11 +123,8 @@ Scenario:  Verify Remove quantity message in the Cart Page
 	And user click on signin button
 	And user navigate and deletes existing items in cart 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
-	And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -157,11 +137,8 @@ Scenario:  Verify Remove quantity message in the Cart Page
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6845 @CR-AKK 	
 Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
 Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -172,11 +149,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6849 @CR-AKK 	
 Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
 Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -187,11 +161,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6861 @CR-AKK 
 Scenario: To verify Reduce Quantity Adjustment - Via Open Field
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -204,12 +175,8 @@ Scenario: To verify Reduce Quantity Adjustment - Via Open Field
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6864 @CR-AKK 
 Scenario:  To verify Remove link
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on ASO Logo and should be navigated to Home Page 
-	And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -222,12 +189,8 @@ Scenario:  To verify Remove link
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6866 @CR-AKK 
 Scenario:  To verify Remove link
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on ASO Logo and should be navigated to Home Page 
-	And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -240,12 +203,8 @@ Scenario:  To verify Remove link
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-6867 @CR-AKK 
 Scenario: Verify Quantity Zero in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on ASO Logo and should be navigated to Home Page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -258,12 +217,8 @@ Scenario: Verify Quantity Zero in the Cart Page
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-6914 @CR-AKK
 Scenario: To verify Inventory Check on Quantity update
 Given user launches the browser and navigates to "ASO_HOME" page  
-	Then User clicks on ASO Logo and should be navigated to Home Page 
-	And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -274,11 +229,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-12549 @CR-AKK	
 Scenario: Verify the user gets the error message if Product has limited stock available
 Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 

@@ -3,11 +3,8 @@ Feature: Verify order summary on cart page
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8169 @CR-AKK 
 Scenario: To Verify if user is able to click on the Shipping policy link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -21,11 +18,8 @@ Scenario: To Verify if user is able to click on the Shipping policy link
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8170 @CR-AKK 
 Scenario: To Verify if user is able to click on the Return policy link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -40,11 +34,8 @@ Scenario: To Verify if user is able to click on the Return policy link
 @R2_Web @R2_Regression @R2_All @P-Lowest @C-Cart @KER-3127 @ZYP_CART_K3127-8171 @CR-AKK 
 Scenario: verify if user is able to view the accepted Payments Icons 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	And user clicks on one of the product category and navigates to LThree 
-	And User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -62,9 +53,8 @@ Scenario: verify if user is able to view the accepted Payments Icons
 @R2_Web   @R2_All @P-Highest @1HR_R2 @C-Order @CC-Cart_Order @KER-3127 @ZYP_CART_K3127-8166 @CR-AKK 
 Scenario: Verify if user should be able to apply or remove a promotion code 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	Then user clicks on one of the product category and navigates to LThree 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -79,11 +69,8 @@ Scenario: Verify if user should be able to apply or remove a promotion code
 @R2_Web   @R2_All @P-Highest @1HR_R2 @C-Order @CC-Cart_Order @KER-3127 @ZYP_CART_K3127-8165 @CR-AKK 
 Scenario: Verify if user is  able to view following elements in order summary of cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user click on view cart button 
@@ -98,9 +85,8 @@ Scenario: Verify if user is  able to view following elements in order summary of
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-3127 @ZYP_CART_K3127-8168 @CR-AKK 
 Scenario: Verify if user should be able to checkout if there are no errors 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	Then user clicks on one of the product category and navigates to LThree 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
 	Then user click on Add to Cart Button 
 	When user click on view cart button 
 	Then Verify below Sub/Main Module of Cart Page
@@ -112,11 +98,8 @@ Scenario: Verify if user should be able to checkout if there are no errors
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3127 @ZYP_CART_K3127-8167 @CR-AKK 
 Scenario: Verify if  user should be able to click on PayPal checkout if applicable 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
-	Then user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
-	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user click on view cart button 
