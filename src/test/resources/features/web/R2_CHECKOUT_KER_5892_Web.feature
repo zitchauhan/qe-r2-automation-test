@@ -66,13 +66,14 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		
 		
 		
-		@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-5892 @ZYP_CHECKOUT_K5892-10816 @CR-RKA
+@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-5892 @ZYP_CHECKOUT_K5892-10816 @CR-RKA
 Scenario:  Verify the user is able to add a new credit card while payment that is displayed in active order only
 Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  user clicks on SignIn link from global header 
-	And  user enter the valid emailaddress "EmailAddress" 
+	And  user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And  user enter the valid password "Password" 
 	And  user click on signin button 
+	And user navigate and deletes existing items in cart
 	And  User searches a product "productName" and navigates to PDP 
 	And  user click on Add to Cart Button 
 	And  user is navigated to Add to cart Notification popup 

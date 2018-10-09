@@ -1703,12 +1703,12 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 
 	public void navigateToL2ViaClick_DesktopHomepage() throws Exception{
 		Thread.sleep(Constants.thread_medium);  
-		assertTrue(clickOnButton(btnShopCategory));
+		clickOnButton(btnShopCategory);
 		Thread.sleep(Constants.thread_medium);  
 		Actions hover = new Actions(getDriver());
 		hover.moveToElement(btnClothingCategory).build().perform();
 		Thread.sleep(Constants.thread_medium);  
-		assertTrue(clickOnButton(btnMens_Clothing_Shop));
+		clickOnButton(btnMens_Clothing_Shop);
 		Thread.sleep(Constants.thread_medium);  
 	}	
 	
@@ -1721,23 +1721,23 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		if("mobile".equalsIgnoreCase(testtype))
 		{
 			Thread.sleep(Constants.thread_low);
-			assertTrue(clickOnButton(btnClothingCategory)); //4Sep
+			clickOnButton(btnClothingCategory); //4Sep
 			Thread.sleep(Constants.thread_low); 
-			assertTrue(clickOnButton(btnMenClothingShop));
+			clickOnButton(btnMenClothingShop);
 			Thread.sleep(Constants.thread_low); 
-			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.txtToNavigateMensBurgerMenuMobile));
+			clickOnButton(Common_Web_SD.globalElementHeader.txtToNavigateMensBurgerMenuMobile);
 			Thread.sleep(Constants.thread_low); 
 			
 		}
 		else
 		{
 			Thread.sleep(Constants.thread_low); 
-			assertTrue(clickOnButton(btnShopCategory));
+			clickOnButton(btnShopCategory);
 			Thread.sleep(Constants.thread_low); 
 			//Actions hover = new Actions(getDriver());
 			moveHover(btnClothingCategory);
 			Thread.sleep(Constants.thread_low); 
-			assertTrue(clickOnButton(btnMenClothingShop));
+			clickOnButton(btnMenClothingShop);
 			Thread.sleep(Constants.thread_low); 
 			//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 			

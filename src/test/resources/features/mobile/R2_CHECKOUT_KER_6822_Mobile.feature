@@ -42,8 +42,8 @@ Scenario: Verify Valid gift card is applied for purchases
 	And user clicks on edit payment cta 
 	And user click on GiftCard Plus icon in Checkout page 
 	And user selects add new gift card option from the dropdown 
-	And user enter Gift card Number "GiftcardNumber" 
-	And user enter Pin Number "PinNumber" 
+	And user enter Gift card Number "Valid16DigitGiftCardNumber" 
+	And user enter Pin Number "Valid8DigitGiftCardPIN" 
 	And user click on Apply button 
 	Then gift card balance is applied towards the purchase 
 	And Verify below Sub/Main Module of Checkout Page 
@@ -153,10 +153,10 @@ Scenario: Verify Gift card balance is Stored in My account
 	And user clicks on edit payment cta 
 	And user click on GiftCard Plus icon in Checkout page 
 	And user selects add new gift card option from the dropdown 
-	And user enter Gift card Number "GiftcardNumber" 
-	And user enter Pin Number "PinNumber" 
+	And user enter Gift card Number "Valid16DigitGiftCardNumber" 
+	And user enter Pin Number "Valid8DigitGiftCardPIN" 
 	And user click on Apply button 
 	And user clicks on edit payment cta 
-	Then applied gift card "GiftcardNumber" should be displayed 
+	Then applied gift card "Valid16DigitGiftCardNumber" should be displayed 
 	And User navigates from checkout to payments in myaccount 
-	Then user should be able to see "GiftcardNumber" Gift card 
+	Then user should be able to see "Valid16DigitGiftCardNumber" Gift card 

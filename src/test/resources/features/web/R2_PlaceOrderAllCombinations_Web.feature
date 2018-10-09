@@ -32,9 +32,9 @@ Scenario Outline: Verify if authenticated user is able to place an order for sin
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
-	And user adds shipment address on checkout page for "guest" user
-	And user selects shipment method on check out page for "guest" user
-	And user add "<Payment Type>" details in payment method for "guest" user
+	And user adds shipment address on checkout page for "Newly Registered" user
+	And user selects shipment method on check out page for "Newly Registered" user
+	And user add "<Payment Type>" details in payment method for "Newly Registered" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
 #	Then Verify the message on the page 
@@ -89,7 +89,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bundle 
 	Examples: 
 		|Payment Type	|
 #		|Gift Card		|
-		|Credit Card - Discover	|
+		|Credit Card 	|
 		|PayPal			|
 						
 						
@@ -161,28 +161,28 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bait pr
 		|PayPal			|
 
 
-@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order @CR-AG
-Scenario Outline: Verify if authenticated user is able to place an with GC and CC
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on SignIn link from global header
-	And user logs in as "SanityEmailAddress"
-	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user click on checkout button 
-	Then user click on GiftCard Plus icon in Checkout page
-	Then user selects the gift card which is not exhausted
-	And user add "<Payment Type>" details in payment method for "newly registered" user
-	And user click on Apply button
-	Then user click on review order button
-	Then gift card balance is applied towards the purchase 
-	And user clicks on place order on checkout page 
-	Then verify user is able to successfully place the order 
-#	And Verify the message on the page 
-#		|# Message for successful order is displayed|
-#		|THANKS FOR SUBMITTING YOUR ORDER!			|
-	Examples: 
-		|Payment Type	|
-		|Credit Card	|
+#@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order @CR-AG
+#Scenario Outline: Verify if authenticated user is able to place an with GC and CC
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	And user clicks on SignIn link from global header
+#	And user logs in as "SanityEmailAddress"
+#	When User searches a product "productName" and navigates to PDP 
+#	And user click on Add to Cart Button 
+#	And user click on checkout button 
+#	Then user click on GiftCard Plus icon in Checkout page
+#	Then user selects the gift card which is not exhausted
+#	And user add "<Payment Type>" details in payment method for "newly registered" user
+#	And user click on Apply button
+#	Then user click on review order button
+#	Then gift card balance is applied towards the purchase 
+#	And user clicks on place order on checkout page 
+#	Then verify user is able to successfully place the order 
+##	And Verify the message on the page 
+##		|# Message for successful order is displayed|
+##		|THANKS FOR SUBMITTING YOUR ORDER!			|
+#	Examples: 
+#		|Payment Type	|
+#		|Credit Card	|
 		
 ############================================================================================================================				
 		

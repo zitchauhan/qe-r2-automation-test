@@ -166,7 +166,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	@Then ("^User clicks on product in PLP$")
 	public void User_clicks_on_product_in_PLP() throws Exception 
 	{
-		assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
+		clickOnButton(r2SanityPo.AS_productPLP1);
 	}
 	
 	

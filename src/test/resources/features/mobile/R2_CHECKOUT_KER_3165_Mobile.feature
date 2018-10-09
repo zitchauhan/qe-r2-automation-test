@@ -338,31 +338,17 @@ Scenario:
 @R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order  @KER-3165 
 @ZYP_CHECKOUT_K3165-8254 @CR-GK 
 Scenario: Verify the guest user is able to place the order 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When User searches a product "productName" and navigates to PDP 
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user click on checkout button in Cart page 
-	And  user enter First name "FirstName" 
-	And  user enter Last name "LastName" 
-	And  user enter Phone number "PhoneNumber" 
-	And  user enter Address "AVSAddress" 
-	And  user enter Zipcode "zipcode" 
-	And  user click on Go To Shipping Method button in Checkout page 
-	And  user selects the suggested address instead of entered address 
-	And  clicks on Use Selected Address button 
-	And user clicks on edit shipping method cta 
-	And user click on go to payment present in shipping method 
-	And user fill the credit card detail in payment 
-	And user fill the email address and click on review order btn 
-	And user able to see the button place order 
-	Then Verify below Sub/Main Module of Checkout Page 
-		|#%%  verify order below attributes on order confirmation page %%|
-		|txtOrderSuccesfullStatus|
-		|OrderConfirmationPage_OrderNumber|
-		|OrderConfirmationPage_OrderNumber_txt|
+	When user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	And user add "Credit Card" details in payment method for "guest" user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+
 		
 		
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
@@ -430,10 +416,7 @@ Scenario:
 	And user fill the credit card detail in payment 
 	And user fill the email address for shipment and click on review order btn 
 	And user able to see the button place order 
-	And registers for the account from the Order confirmation screen with "Password" 
-#	Then Verify the message on the page 
-#		|# Then guest user should be displayed with a banner message for successful account creation|
-#		|Congrats, Academy! You've created an account!|
+	And registers for the account from the Order confirmation screen with "Password"
 	And User clicks on the burger menu 
 	And user navigates from Order successful page to address book in my account 
 	And Verify below Sub/Main Module of My Account 
