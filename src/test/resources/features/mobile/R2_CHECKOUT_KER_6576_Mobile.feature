@@ -18,8 +18,6 @@ Scenario:  Verify the Elements present in Checkout footer
 		|Visa_img|
 		|MasterCard_img|
 		|Paypal_img|
-		|GooglePay_img|
-		|ApplePay_img|
 		|AmericanExpress_img|
 		|Discover_img|
 		Then Verify below Sub/Main Module of Checkout Page 
