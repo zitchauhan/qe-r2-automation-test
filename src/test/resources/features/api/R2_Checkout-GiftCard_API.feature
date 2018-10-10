@@ -1,23 +1,23 @@
 Feature: Verify Order Checkout-GiftCard API endpoint services
 
-  @All-R2 @C1-Order @C2-Login @api @R2_AAST-01 @CR-RT @ZYP_Order_Login_12273
+  @All-R2 @C1-Checkout @C2-Login @api @R2_AAST-01 @CR-RT @ZYP_Order_Login_12273
   Scenario: TC_1 - Verify Login Authentication Token Details
     Given "loginurl" with "LoginRequest" endpoint for login authentication
     Given "GetCartUrl" endpoint for getting cart
     Then Verify response status code as 200
 
   #Post call required instead of get call
-  @All-R2 @C1-Order @C2-Order-GiftCard @api @R2_AAST-05 @CR-VK @ZYP_Order-GiftCard_12754
+  @All-R2 @C1-Checkout @C2-Order-GiftCard @api @R2_AAST-05 @CR-VK @ZYP_Order-GiftCard_12754
   Scenario: TC_6 - Retrieve the Order - Get Giftcard Details
     Given "OrderUrl" with  "/giftCards" endpoint for Order Get GiftCard Details
     And Verify response status code as 200
 
-  @All-R2 @C1-Order @C2-Order-GiftCard @api @R2_AAST-05 @CR-VK @ZYP_Order-GiftCard_12755
+  @All-R2 @C1-Checkout @C2-Order-GiftCard @api @R2_AAST-05 @CR-VK @ZYP_Order-GiftCard_12755
   Scenario: TC_6 - verify the Order - Get Giftcard Json Response Details
     Given "OrderUrl" with  "/giftCards" endpoint for Order Get GiftCard Details
     Then Validated response details of "getGiftCard.orderId"
 
-  @All-R2 @C1-Order @C2-Order-GiftCard @api @R2_AAST-05 @CR-RT @ZYP_Order-GiftCard_12867
+  @All-R2 @C1-Checkout @C2-Order-GiftCard @api @R2_AAST-05 @CR-RT @ZYP_Order-GiftCard_12867
   Scenario: TC_6 - verify the Order - Get Giftcard Json Response Details
     Given "OrderUrl" with  "/giftCards" endpoint for Order Get GiftCard Details
     Then Validated response details of "getGiftCard.orderId"
