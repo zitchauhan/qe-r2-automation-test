@@ -6,7 +6,7 @@ Scenario: Verify that user is able to open the Find Store modal from the header
 	Then User clicks on the burger menu 
 #	Then User should be able to click on Find Store
     And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
-	And user verify Find a Store popup
+#	And user verify Find a Store popup
 
 
 @R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2  @C-Cart @KER-2872 @ZYP_CART_K2872-8710 @CR-DPK

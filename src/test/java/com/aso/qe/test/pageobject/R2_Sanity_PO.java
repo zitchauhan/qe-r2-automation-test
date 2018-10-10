@@ -118,8 +118,8 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(),'YOUR CART')]")
 	public WebElement AS_txtYourCart;
 	
-	@FindBy(xpath = "//h4[text()='CHECKOUT']")
-	public WebElement headerCheckout;
+	@FindBy(xpath = "//*[text()='CHECKOUT']")   
+	public WebElement headerCheckout; //Anuj 09-Oct
 	
 	
 	// End Sanity CR-DPK

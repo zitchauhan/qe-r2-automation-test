@@ -267,13 +267,13 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
  @AutomationSanityR1 @AS1  @MAST-12
   Scenario: TC_12-Verify Search from Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
-   Then User searches a product "SearchTerm" and navigates to PDP
+   Then User searches a product "productName" and navigates to PDP
     And user should be able to see the sku and item numbers for the given image
  
   @AutomationSanityR1 @AS1 @MAST-13
   Scenario: TC_13-Verify Search Result Page(Facets, Sort and Pagination)
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "SearchTerm" in the search box and navigates to PLP
+    When user enters "productName" in the search box and navigates to PLP
     And user scroll till filter flyout
     Then User clicks on the filter flyout
     And User expands all Filter Options
