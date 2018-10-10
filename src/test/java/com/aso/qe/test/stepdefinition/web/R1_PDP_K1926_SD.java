@@ -212,7 +212,9 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(plp_po.productPLP1_Mobile));
 		} else {
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(plp_po.productPLP1));
+			Thread.sleep(Constants.thread_low);
 		}
 
 	}

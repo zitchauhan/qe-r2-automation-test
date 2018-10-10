@@ -8,9 +8,3 @@ Feature: [Desktop]  Ratings & Reviews - Product Detail Page
   Then user verify customer is able to view the average rating on top  
   Then user click on Review and Rating on top of the page
   Then User be able to write review
-    When user navigates to PLP of any product
-    Then User select the product with No reviews 
-    When user clicks on Reviews tab
-    Then User to verify Be the first to review this product       
-
-  
