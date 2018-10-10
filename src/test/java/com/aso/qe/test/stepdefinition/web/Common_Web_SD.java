@@ -126,18 +126,23 @@ public class Common_Web_SD extends CommonActionHelper
 	@Then ("^User navigates to L2 Mens clothing$")
 	public void User_navigate_to_L2_Mens_clothing() throws InterruptedException {
 		if("mobile".equalsIgnoreCase(testtype)){
-			
+			waitForPageLoad(getDriver());
 			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
 			Thread.sleep(2000);
+			waitForPageLoad(getDriver());
 			assertTrue(clickOnButton(globalElementHeader.btnMenClothingShop));
 			Thread.sleep(2000);
+			waitForPageLoad(getDriver());
 			assertTrue(clickOnButton(globalElementHeader. txtToNavigateMensCategoryMobile));
 			Thread.sleep(2000);
+			waitForPageLoad(getDriver());
 
 		} else{
 			Thread.sleep(3000);
+			waitForPageLoad(getDriver());
 			assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
 			Thread.sleep(2000);
+			waitForPageLoad(getDriver());
 			Actions hover = new Actions(getDriver());
 			hover.moveToElement(globalElementHeader.btnClothingCategory).build().perform();
 			Thread.sleep(2000);

@@ -15,7 +15,6 @@ Scenario: To verify Remove Promo code in Order Summary
 	And user view and Applied Promotions/Discounts "Promocode" 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
-	|Discount_Txt|
 	|RemovePromocode_Btn|
 	And User clicks on Remove Promo code link 
 	Then Promo code is Removed

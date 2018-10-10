@@ -114,9 +114,9 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 	@Then("^user click on MyAccount$")
 	public void user_click_on_MyAccount() {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(clickOnButton(r2MyAccountPo.myAccount_txt_Mobile));
+			clickOnButton(r2MyAccountPo.myAccount_txt_Mobile);
 		} else {
-			assertTrue(clickOnButton(r2MyAccountPo.lnkMyAccount));
+			clickOnButton(r2MyAccountPo.lnkMyAccount);
 
 		}
 	}

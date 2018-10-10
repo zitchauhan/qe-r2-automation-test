@@ -435,7 +435,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 
 		
 		
-		@FindBy(xpath ="//*[text()='Total Discount']")public WebElement txtTotalDiscount;
+		@FindBy(xpath ="//*[text()='Total Discount'] | //div[text()='Discount']")public WebElement txtTotalDiscount;
 		@FindBy(xpath="//*[text()='Total Discount']/following-sibling::*[1]")public WebElement TotalDiscountPrice_Txt;
 		
 		@FindBy(xpath = "//*[text()= 'Total']/following-sibling::div[1]")public WebElement txtTotal;//Total_price

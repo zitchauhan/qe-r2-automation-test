@@ -160,12 +160,14 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	@Then ("^User Navigates L2 form Homepage Header$")
 	public void User_Navigates_L2_form_HomepageHeader() throws Exception 
 	{
+		waitForPageLoad(getDriver());
 		globalElementHeader.navigateL2HeaderToPLP();
 	}
 	
 	@Then ("^User clicks on product in PLP$")
 	public void User_clicks_on_product_in_PLP() throws Exception 
 	{
+		waitForPageLoad(getDriver());
 		clickOnButton(r2SanityPo.AS_productPLP1);
 	}
 	
@@ -184,6 +186,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	@Then("^user clicks on one of the product category and navigates to LThree$")
 	public void user_clicks_on_one_of_the_product_category_and_navigates_to_LThree_page() throws Throwable {
 		waitForElement(r2SanityPo.AS_productPLP1);
+		waitForPageLoad(getDriver());
 		assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 		Thread.sleep(Constants.thread_medium);
 	}
@@ -192,6 +195,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	@Then("^user click on Add to Cart Button$")
 	public void user_click_on_Add_to_cart_button() throws Throwable 
 	{
+		waitForPageLoad(getDriver());
 		pdpPageObj.addToCartAvailability();
 		waitForElement(pdpPageObj.btnAddToCart);
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
@@ -237,6 +241,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	
 	@Then("^user clicks on the product card and navigates to PDP$")
 	public void user_clicks_on_the_product_card_and_navigates_to_PDP_of_the_product() throws Throwable {
+		waitForPageLoad(getDriver());
 		if("mobile".equalsIgnoreCase(testtype)) 
 		{
 			assertTrue(clickOnButton(r2SanityPo.AS_productPLP1_Mobile));

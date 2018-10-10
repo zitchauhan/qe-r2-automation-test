@@ -78,8 +78,9 @@ public class R2_CHECKOUT_K3165_SD extends CommonActionHelper {
 			throws Throwable {
 		setInputText(r2_OrderConfirmationPo.orderConfirmation_ChoosePassword_txt,
 				webPropHelper.getTestDataProperty(passwordFromTestFile));
-		assertTrue(clickOnButton(r2CheckOut_po.OrderConfirmation_GuestUser_PasswordSubmitBtn));
-		Thread.sleep(Constants.thread_low); 
+		Thread.sleep(Constants.thread_low);
+		assertTrue(clickOnButton(r2_OrderConfirmationPo.orderConfirmation_Submit_btn));
+		Thread.sleep(Constants.thread_medium);
 	}
 
 	@And("^user navigates from Order successful page to address book in my account$")

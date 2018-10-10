@@ -26,7 +26,7 @@ public class R2_CHECKOUT_K3167_SD extends CommonActionHelper {
 		Thread.sleep(Constants.thread_low); 
 		assertTrue(isDisplayed(r2SanityPo.AS_txtYourCart));
 		clearInputBox(r2SanityPo.AS_inputQty);
-		setInputText(r2SanityPo.AS_inputQty, webPropHelper.getTestDataProperty("quantity10"));
+		setInputText(r2SanityPo.AS_inputQty, webPropHelper.getTestDataProperty(quantity10));
 	}
 
 	@Given("^click on mini cart$")

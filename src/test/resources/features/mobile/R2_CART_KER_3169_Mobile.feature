@@ -4,10 +4,8 @@ Feature: Verify Item/Order Level Promotion Calculation
 Scenario: To verify open field to enter promotion code
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
-	Then user should able to click on Signin button
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button
+	And user creates an account
+	And user navigate and deletes existing items in cart
 	Then User clicks on the burger menu
 	 And User navigates to LThree
     Then user clicks on the product card and navigates to PDP 
@@ -24,10 +22,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: To verify open field to enter promotion code
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
-	Then user should able to click on Signin button
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button
+	And user creates an account
+	And user navigate and deletes existing items in cart
 	Then User clicks on the burger menu
 	 And User navigates to LThree
     Then user clicks on the product card and navigates to PDP 

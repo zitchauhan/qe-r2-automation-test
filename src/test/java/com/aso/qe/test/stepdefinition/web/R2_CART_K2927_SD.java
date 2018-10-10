@@ -206,7 +206,8 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 		}
 		
 		for(WebElement removeBtn : cartR2PageObj.removeCart_lst_btn) {
-			assertTrue(clickOnButton(removeBtn));
+			clickOnButton(cartR2PageObj.lnkRemoveCart);
+//			assertTrue(clickOnButton(removeBtn));
 			Thread.sleep(Constants.thread_high);
 		}
 		

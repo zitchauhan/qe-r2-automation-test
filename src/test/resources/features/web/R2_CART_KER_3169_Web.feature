@@ -3,10 +3,7 @@ Feature: Verify Item/Order Level Promotion Calculation
 @R2_Web   @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3169 @ZYP_CHECKOUT_K3166-8096 @CR-DPK @1HR_R2
 Scenario: To verify open field to enter promotion code
 	Given user launches the browser and navigates to "ASO_HOME" page
-	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-    And user click on signin button
+	And user creates an account
     Then User clicks on ASO Logo and should be navigated to Home Page 
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
@@ -22,11 +19,8 @@ Scenario: To verify open field to enter promotion code
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3169 @ZYP_CHECKOUT_K3166-8097 @CR-DPK
 Scenario: To verify open field to enter promotion code
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-    And user click on signin button
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And user creates an account
     Then User clicks on ASO Logo and should be navigated to Home Page
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
