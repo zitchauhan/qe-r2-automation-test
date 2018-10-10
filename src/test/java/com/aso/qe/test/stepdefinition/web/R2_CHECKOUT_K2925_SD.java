@@ -10,6 +10,7 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_ReskinPO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
+import com.aso.qe.test.pageobject.R2_OrderConfirmation_Po;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -19,6 +20,7 @@ public class R2_CHECKOUT_K2925_SD extends CommonActionHelper {
 	R2_CheckOut_PO r2CheckoutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
 	R1_ReskinPO reskinPO = PageFactory.initElements(driver, R1_ReskinPO.class);
+	R2_OrderConfirmation_Po r2OrderConfPO = PageFactory.initElements(driver, R2_OrderConfirmation_Po.class);
 	public String checkout;
 
 	String orderID=" ";
@@ -36,7 +38,7 @@ public class R2_CHECKOUT_K2925_SD extends CommonActionHelper {
 
 	@And("^user check order confirmation status in order summary page$")
 	public void user_check_order_confirmation_status_in_order_summary_page() throws Throwable {
-		assertTrue(clickOnButton(r2CheckoutPo.txtOrderSuccesfullStatus));
+		assertTrue(clickOnButton(r2OrderConfPO.orderConfirmation_ThanksForSubmittingOrder_txt));
 		orderID = r2CheckoutPo.txtOrderID.getText();
 		logger.debug("Order Id on order confirmation status" + orderID);
 	}

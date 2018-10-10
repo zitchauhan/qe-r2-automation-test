@@ -1,60 +1,65 @@
 Feature: Place Order
 
-  @R2_Mobile @P-High_Order @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8190 @ZYP_CART_K2925-8191 @ZYP_CART_K2925-8192 @ZYP_CART_K2925-8194 @ZYP_CART_K2925-11126 @CR-AG @1HR_R2
-  Scenario Outline: verify if user should be able to submit the order on the checkout page
-    Given user launches the browser and navigates to "ASO_HOME" page
-    When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user click on checkout button
-    And user adds shipment address on checkout page for "guest" user
-    And user selects shipment method on check out page for "guest" user
-    And user add "<Payment Type>" details in payment method for "guest" user
-    Then Verify the message on the page
-      | # Following Message should show on the page |
-      | By placing this order, I accept Academy's   |
-      | Terms and Conditions                        |
-      | Privacy Policy                              |
-    And user clicks on place order on checkout page
-    Then verify user is able to successfully place the order
-    Then Verify the message on the page
-      | # Message for successful order is displayed |
-      | Order Number                                |
-    And user click on MyAccount
-    And user click on Orders link
-    Then Verify below Sub/Main Module of My Account
-      | #Verify following elements in my account order details |
-      | Order_View_Details_Btn                                 |
-    And user click on view Details
-    Then user able to see the same order ID in My order section
+  @R2_Mobile @P-High_Order @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8190
+@ZYP_CART_K2925-8191 @ZYP_CART_K2925-8192 @ZYP_CART_K2925-8194
+@ZYP_CART_K2925-11126 @CR-AG @1HR_R2 
+Scenario Outline: verify if user should be able to submit the order on the checkout page 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user click on checkout button 
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user 
+	And user add "<Payment Type>" details in payment method for "guest" user 
+	Then Verify the message on the page 
+		| # Following Message should show on the page |
+		| By placing this order, I accept Academy's   |
+		| Terms and Conditions                        |
+		| Privacy Policy                              |
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	Then Verify the message on the page 
+		| # Message for successful order is displayed |
+		| Order Number                                |
+	And registers for the account from the Order confirmation screen with "Password" 
+	And user clicks on the burger menu 
+	And user click on MyAccount 
+	And user click on Orders link 
+	Then Verify below Sub/Main Module of My Account 
+		| #Verify following elements in my account order details |
+		| Order_View_Details_Btn                                 |
+	And user click on view Details 
+	Then user able to see the same order ID in My order section 
+	
+	Examples: 
+		| Payment Type      |
+		| Credit Card 		|
 
-    Examples: 
-      | Payment Type       |
-      | Credit Card - VISA |
-
-  @R2_Mobile @P-Highest @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8192 @CR-AG
-  Scenario: Verify if Order status is updated in 'My account'
-    Given user launches the browser and navigates to "ASO_HOME" page
-    And user clicks on SignIn link from global header
-    And user enter the valid emailaddress "EmailAddress"
-    And user enter the valid password "Password"
-    And user click on signin button
-    When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user click on checkout button
-    Then user fill email address in payment
-    Then user clicks on the Review order button
-    And user able to see the button place order
-    And user check order confirmation status in order summary page
-    Then Verify the message on the page
-      | # Following Error Message should show on the page |
-      | Your confirmation email is on its way             |
-    And user click on MyAccount
-    And user click on Orders link
-    Then Verify below Sub/Main Module of My Account
-      | #Verify following elements in my account order details |
-      | Order_View_Details_Btn                                 |
-    And user click on view Details
-    Then user able to see the same order ID in My order section
+#  @R2_Mobile @P-Highest @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8192 @CR-AG
+#  Scenario: Verify if Order status is updated in 'My account'
+#    Given user launches the browser and navigates to "ASO_HOME" page
+#    And user clicks on the burger menu
+#    And user clicks on SignIn link from global header
+#    And user enter the valid emailaddress "EmailAddress"
+#    And user enter the valid password "Password"
+#    And user click on signin button
+#    When User searches a product "productName" and navigates to PDP
+#    And user click on Add to Cart Button
+#    And user click on checkout button
+#    Then user fill email address in payment
+#    Then user clicks on the Review order button
+#    And user able to see the button place order
+#    And user check order confirmation status in order summary page
+##    Then Verify the message on the page
+##      | # Following Error Message should show on the page |
+##      | Your confirmation email is on its way             |
+#    And user click on MyAccount
+#    And user click on Orders link
+#    Then Verify below Sub/Main Module of My Account
+#      | #Verify following elements in my account order details |
+#      | Order_View_Details_Btn                                 |
+#    And user click on view Details
+#    Then user able to see the same order ID in My order section
 
   ############## Below one has to enter wrong payment details which will accept the payment but reject in order confirmation page ########
   @R2_Mobile @P-Low @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8193 @CR-AG
