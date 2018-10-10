@@ -70,7 +70,7 @@ Scenario: Verify the user gets the error message when Password is incorrect
 #	Then user should not be allowed to login
 	And user should get an error message stating email id or password is incorrect
 
-@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10049 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10049 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message when Login id is left blank
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -81,7 +81,7 @@ Scenario: Verify the user gets the error message when Login id is left blank
 		|# Following error Message should show on the page	|
 		|Please enter an email address							|
 
-@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10051 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10051 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message when Password is left blank 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -121,7 +121,7 @@ Scenario: Verify user referenced back to the same page from where sign in is tri
 	Then User is navigated to pdp page
 #	
 
-@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10052 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10052 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message when both email id and Password are blank
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

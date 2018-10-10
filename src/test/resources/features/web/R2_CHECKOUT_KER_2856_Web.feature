@@ -101,7 +101,7 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods for BOPIS, 
 		|#Verify following elements in order section|
 		|Order_Bopis_In_Store_Pickup_txt|
 		
-	@C-BOPIS @R2_Web  @R2_All @P-High_B_Order @C-NonOrder @CC-Checkout_Order   @KER-2856 @ZYP_CHECKOUT_K2856-10869 @CR-RK
+	@C-BOPIS @R2_Web  @R2_All @P-High_B_Order @C-NonOrder @CC-Checkout_Order  @C1-Message  @KER-2856 @ZYP_CHECKOUT_K2856-10869 @CR-RK
 Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Ship to Home 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 

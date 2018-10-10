@@ -71,8 +71,8 @@ Scenario:
 		|Checkout_ShippingAddress_Edit_lnk			|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
-@ZYP_MYACCOUNT_K4030-11503 @CR-SK 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 @C1-Message
+@ZYP_MYACCOUNT_K4030-11503 @CR-SK @C1-Message
 Scenario:
 Verify the primary default shipping options should be utilized while quick checkout for WG products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -89,7 +89,7 @@ Verify the primary default shipping options should be utilized while quick check
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
-@ZYP_MYACCOUNT_K4030-12817 @CR-SK 
+@ZYP_MYACCOUNT_K4030-12817 @CR-SK @C1-Message @C1-Message
 Scenario:
 Verify during quick checkout error message will display for shipping address section for Items do not have prop 65 
 	Given user launches the browser and navigates to "ASO_HOME" page 

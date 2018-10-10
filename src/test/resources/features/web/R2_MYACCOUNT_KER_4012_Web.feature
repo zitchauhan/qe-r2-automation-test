@@ -19,7 +19,7 @@ Scenario: Verify that order is not cancelled if user clicks on No CTA on confirm
     |Order_Back_To_Order_Lnk|
     |Order_Cancel_lnk| 
     
-@R2_Web  @R2_All @P-Low @C-Order @CC-MyAccount_Order    @KER-4012 @ZYP_MYACCOUNT_K4012-10663 @ZYP_MYACCOUNT_K4012-10667 @ZYP_MYACCOUNT_K4012-11149 @CR-MS
+@R2_Web  @R2_All @P-Low @C-Order @CC-MyAccount_Order    @KER-4012 @ZYP_MYACCOUNT_K4012-10663 @ZYP_MYACCOUNT_K4012-10667 @ZYP_MYACCOUNT_K4012-11149 @CR-MS @C1-Message
 Scenario: Verify that for Authenticated user "Cancel Order" CTA is displayed for orders
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

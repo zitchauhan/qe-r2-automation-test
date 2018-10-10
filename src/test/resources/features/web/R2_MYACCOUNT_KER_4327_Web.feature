@@ -84,7 +84,7 @@ Scenario:
 		|Order_Cancel_lnk|
 		
 @C-BOPIS @R2_Web  @R2_All @P-Low @C-NonOrder @CC-MyAccount_Order   @KER-4327 
-@ZYP_MYACCOUNT_K4327-10914 @CR-MS 
+@ZYP_MYACCOUNT_K4327-10914 @CR-MS @C1-MessageB
 Scenario: BOPIS-Verify the elements of order cancel confirmation modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -108,7 +108,7 @@ Scenario: BOPIS-Verify the elements of order cancel confirmation modal
 		
 		#Defect-KER-13721
 @C-BOPIS @R2_Web  @R2_All @P-Low @C-NonOrder @CC-MyAccount_Order   @KER-4327 
-@ZYP_MYACCOUNT_K4327-10916 @CR-MS 
+@ZYP_MYACCOUNT_K4327-10916 @CR-MS @C1-MessageB
 Scenario: 
 	BOPIS-Verify that order is gets cancelled if user clicks on Yes, Cancel my Order CTA on confirmation modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -135,7 +135,7 @@ Scenario:
 		|Order_Back_To_Order_Lnk|
 		
 @C-BOPIS @R2_Web  @R2_All @P-Highest @C-NonOrder @CC-MyAccount_Order   @KER-4327 
-@ZYP_MYACCOUNT_K4327-10920 @CR-MS 
+@ZYP_MYACCOUNT_K4327-10920 @CR-MS @C1-MessageB
 Scenario: 
 	Verify that the Guest user is able to navigate to check order status page 
 	Given user launches the browser and navigates to "ASO_HOME" page 

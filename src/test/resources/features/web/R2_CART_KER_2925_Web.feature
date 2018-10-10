@@ -1,6 +1,6 @@
 Feature: Place Order
 
-  @R2_Web @P-High_Order @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8190 @ZYP_CART_K2925-8191 @ZYP_CART_K2925-8192 @ZYP_CART_K2925-8194 @ZYP_CART_K2925-11126 @CR-AG @1HR_R2
+  @R2_Web @C1-Message @P-High_Order @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8190 @ZYP_CART_K2925-8191 @ZYP_CART_K2925-8192 @ZYP_CART_K2925-8194 @ZYP_CART_K2925-11126 @CR-AG @1HR_R2
   Scenario Outline: verify if user should be able to submit the order on the checkout page
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
@@ -93,7 +93,7 @@ Feature: Place Order
   #    |By placing this order, I accept Academy's|
   #    |Terms and Conditions|
   #    |Privacy Policy|
-  @R2_Web @P-Low @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8195 @CR-AG
+  @R2_Web @P-Low @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8195 @CR-AG @C1-Message
   Scenario Outline: Verify if user can click the legal disclaimer Terms and Conditions is clickable
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
@@ -119,7 +119,7 @@ Feature: Place Order
       | Payment Type       |
       | Credit Card - VISA |
 
-  @R2_Web @P-Low @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8196 @CR-AG
+  @R2_Web @P-Low @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8196 @CR-AG @C1-Message
   Scenario Outline: Verify if user can click the legal disclaimer Privacy policy is clickable
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
@@ -199,7 +199,7 @@ Feature: Place Order
     Then user able to see the same order ID in My order section
     And user validate the same updated shipping address in my orders page
 
-  @R2_Web @P-Highest @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-10295 @CR-AG
+  @R2_Web @P-Highest @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-10295 @CR-AG @C1-Message
   Scenario: Verify Before clicking 'Place Order', if the user edits shipping method, the same should be updated in the order summary.
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header
@@ -222,7 +222,7 @@ Feature: Place Order
       | # Following Error Message should show on the page |
       | Order Number                                      |
 
-  @R2_Web @P-Highest @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-10297 @CR-AG
+  @R2_Web @P-Highest @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-10297 @CR-AG @C1-Message
   Scenario: Verify Before clicking 'Place Order', if the user edits payment method, the same should be updated in the order summary. Payment will be authorized to the updated payment method only upon click on Place Order.
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header

@@ -18,7 +18,7 @@ Scenario: TC_1- Verify Login Logout
 	
 		
 @R2_Web @R2_WAST-03 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @CR-SK
-@AutomationSanityR2 
+@AutomationSanityR2 @C1-Message
 Scenario: TC_3- Verify User is able to create an account
       Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -272,7 +272,7 @@ Scenario: TC_19-Verify Sign In During Checkout
  
 	
 @R2_Web @R2_WAST-20 @P-Highest @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100
-@CR-AKK 
+@CR-AKK @C1-Message @C1-Message
 @AutomationSanityR2 
 Scenario: TC_20- Verify Edit cart items from Order summary 
 	Given  user launches the browser and navigates to "ASO_HOME" page 

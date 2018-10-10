@@ -30,7 +30,7 @@ Scenario: Verify the user is able to see the password strength info bubble
 		|ChangePasswordPage_toolTip_Btn                                 |
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
-@ZYP_MYACCOUNT_K6654-10178 @CR-RKA @1HR_R2 
+@ZYP_MYACCOUNT_K6654-10178 @CR-RKA @1HR_R2 @C1-Message
 Scenario: 
 	Verify the user gets the error message on entering the password not meeting the requirements of min. characters 
 
@@ -81,7 +81,7 @@ Scenario: Verify the user is able to sign with the new password
 		|ProfilePage_ChangePassword_btn|
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
-@ZYP_MYACCOUNT_K6654-10181 @CR-RKA 
+@ZYP_MYACCOUNT_K6654-10181 @CR-RKA @C1-Message
 Scenario: Verify the user is not able to sign with the old password 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 
@@ -109,7 +109,7 @@ Scenario:
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6654 
-@ZYP_MYACCOUNT_K6654-10184 @CR-RKA 
+@ZYP_MYACCOUNT_K6654-10184 @CR-RKA @C1-Message
 Scenario: Verify user can set the new password same as old password of 8 digits 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 
@@ -127,7 +127,7 @@ Scenario: Verify user can set the new password same as old password of 8 digits
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
-@ZYP_MYACCOUNT_K6654-10185 @CR-RKA 
+@ZYP_MYACCOUNT_K6654-10185 @CR-RKA @C1-Message
 Scenario: 
 	Verify user not allowed to set the new password same as old password of 6 digits 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -164,7 +164,7 @@ Scenario: Verify the user is able to see the unmasked password
 		|ChangePassworPage_NewPassword_txt								|
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
-@ZYP_MYACCOUNT_K6654-10183 @CR-RKA 
+@ZYP_MYACCOUNT_K6654-10183 @CR-RKA @C1-Message
 Scenario: Verify the user gets the error message on blank password 
 
 	Given  user launches the browser and navigates to "ASO_HOME" page 

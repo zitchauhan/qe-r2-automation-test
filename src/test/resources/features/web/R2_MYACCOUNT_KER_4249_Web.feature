@@ -17,7 +17,7 @@ Scenario: Verify the available fields on the Sign Up page
 		|SignUpPage_SignInNow_lnk						|
 
 
-@R2_Web @R2_Regression @R2_All @1HR_R2 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @CR-SK 
+@R2_Web @R2_Regression @R2_All @1HR_R2 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @CR-SK @C1-Message
 Scenario: Verify user is able to create an account with all valid data 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -56,7 +56,7 @@ Scenario: Verify the user is able to see the unmasked password
 	Then user entered password should get unmasked displaying the characters 
 	And the label should get toggled to Hide
 	
-@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10150 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10150 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message when First name is left blank
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -70,7 +70,7 @@ Scenario: Verify the user gets the error message when First name is left blank
 	    |Please enter the First Name|
 	    
 
-@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10151 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10151 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message when Last name is left blank
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -84,7 +84,7 @@ Scenario: Verify the user gets the error message when Last name is left blank
 	    | Please Enter a Last Name|
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10152 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10152 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message when Password is left blank
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -98,7 +98,7 @@ Scenario: Verify the user gets the error message when Password is left blank
 	    |Please enter the Password							|		    
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10153 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10153 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message when Email address is left blank
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -112,7 +112,7 @@ Scenario: Verify the user gets the error message when Email address is left blan
 	    |Please enter an Email address						|	
 	    
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10154 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10154 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message when sign up from existing email ID
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -127,7 +127,7 @@ Scenario: Verify the user gets the error message when sign up from existing emai
 	    |The email address you entered already exists. Type a different email address and try again.|	 
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10156 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10156 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message when Email Id format is incorrect
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -142,7 +142,7 @@ Scenario: Verify the user gets the error message when Email Id format is incorre
 	    |Please enter the Email Address in a valid format (ex. abc@xyz.com)	|
 
 	    
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10157 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10157 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message on entering the password not meeting the requirements of minimum characters
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -157,7 +157,7 @@ Scenario: Verify the user gets the error message on entering the password not me
 	    |Password must be at least 8 characters long		|
 	    
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10158 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10158 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message on entering the password same as email address
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -187,7 +187,7 @@ Scenario: Verify the user entered password gets validated against password rules
 
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4249
-@ZYP_MYACCOUNT_K4249-10162 @CR-SK 
+@ZYP_MYACCOUNT_K4249-10162 @CR-SK @C1-Message
 Scenario: Verify the user is able to see the password strength info bubble 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -204,7 +204,7 @@ Scenario: Verify the user is able to see the password strength info bubble
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249
-@ZYP_MYACCOUNT_K4249-10166 @CR-SK 
+@ZYP_MYACCOUNT_K4249-10166 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message when First name filled with any non-alpha character except - or '
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -217,7 +217,7 @@ Scenario: Verify the user gets the error message when First name filled with any
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4249
-@ZYP_MYACCOUNT_K4249-10170 @CR-SK 
+@ZYP_MYACCOUNT_K4249-10170 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message when Last name filled with any non-alpha character except - or '
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -229,7 +229,7 @@ Scenario: Verify the user gets the error message when Last name filled with any 
 		|This form field has an unrecognized character	|	
 		
 		
-@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10171 @CR-SK
+@R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10171 @CR-SK @C1-Message
 Scenario: Verify the user gets the error message when email address contains '+' as the non-alpha character
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

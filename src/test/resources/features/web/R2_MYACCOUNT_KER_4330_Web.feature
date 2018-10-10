@@ -28,7 +28,7 @@ Feature: B06-250 - BOPIS Order Details Page Impact
       | #Verify following elements in my account order details |
       | Order_Note_Txt                                         |
 
-  @C-BOPIS @R2_Web @R2_All @P-High_B_Order @C-NonOrder @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10931 @Order @CR-MS @1HR_R2
+  @C-BOPIS @R2_Web @R2_All @P-High_B_Order @C-NonOrder @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10931 @Order @CR-MS @1HR_R2 @C1-MessageB
   Scenario: Verify the details in In-Store Pickup Instructions section
     Given user launches the browser and navigates to "ASO_HOME" page
     When user clicks on SignIn link from global header

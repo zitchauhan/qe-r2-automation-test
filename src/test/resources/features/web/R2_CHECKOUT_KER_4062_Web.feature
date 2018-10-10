@@ -1,6 +1,6 @@
 Feature: Guest registration Post Checkout from Order Confirmation Page
 
-@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Low    @KER-4062 @ZYP_CART_K4062-8103 @CR-SK 
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Low    @KER-4062 @ZYP_CART_K4062-8103 @CR-SK @C1-Message
 Scenario: Verify if user gets proper validation message for empty password
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "productName" and navigates to PDP 
@@ -20,7 +20,7 @@ Scenario: Verify if user gets proper validation message for empty password
 	
 
 @R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Low   @KER-4062 @ZYP_CART_K4062-10300
-@CR-SK 
+@CR-SK  @C1-Message
 Scenario:
 Verify if user gets proper validation message for password less than 8 characters 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -75,7 +75,7 @@ Scenario: Verify the available customer details
 
 
 @R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Low   @KER-4062
-@ZYP_CART_K4062-8107 @CR-SK 
+@ZYP_CART_K4062-8107 @CR-SK @C1-Message
 Scenario: verify the account register with out Email News letter 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
@@ -98,7 +98,7 @@ Scenario: verify the account register with out Email News letter
 	
 	
 @R2_Web @C-Order @CC-Checkout_Order @R2_All @P-High @KER-4062 @ZYP_CART_K4062-8104
-@CR-SK 
+@CR-SK @C1-Message
 Scenario:
 Verify if user gets proper validation message for invalid password
 	Given user launches the browser and navigates to "ASO_HOME" page 

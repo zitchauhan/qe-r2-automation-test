@@ -135,7 +135,7 @@ Scenario:
 		
 		
 @R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Medium   @KER-3164 
-@ZYP_CHECKOUT_K3164-13296 @CR-GK 
+@ZYP_CHECKOUT_K3164-13296 @CR-GK @C1-Message
 Scenario: 
 	Verify that user should be displayed with the validation error message if they try to enter invalid email id for order confirmation field in checkout page
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -165,7 +165,7 @@ Scenario:
 		
 		
 @R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
-@ZYP_CHECKOUT_K3164-13295 @CR-GK 
+@ZYP_CHECKOUT_K3164-13295 @CR-GK @C1-Message
 Scenario: 
 	Verify that user should be displayed with the error message if they try to save billing info without entering the email id for order confirmation field in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -191,7 +191,7 @@ Scenario:
 		
 		
 @R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
-@ZYP_CHECKOUT_K3164-13293 @CR-GK 
+@ZYP_CHECKOUT_K3164-13293 @CR-GK @C1-Message
 Scenario: 
 	Verify the validation error message for the email id for order confirmation field in the shipping address drawer in checkout page if we edit without passing the email id 
 	Given user launches the browser and navigates to "ASO_HOME" page 

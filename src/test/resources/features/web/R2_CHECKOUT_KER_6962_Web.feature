@@ -51,7 +51,7 @@ Scenario: Verify  click on remove gift card, the respective gift card should no 
 	Then gift card should no longer be applied to the transaction	
 	
 
-@R2_Web   @R2_All @P-Medium @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-12324 @CR-SK 
+@R2_Web   @R2_All @P-Medium @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-12324 @CR-SK @C1-Message
 Scenario: Verify for full payment using Gift Card, Billing address is still required
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
@@ -90,7 +90,7 @@ Scenario: Verify If a gift card covers the full transaction, the amount applied 
 	And Remaining gift card balance should be displayed
 	And Applied amount should be displayed in order summary
 			
-@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8902 @CR-SK 
+@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8902 @CR-SK @C1-Message
 Scenario: Verify user is prompted with message to retain the physical gift card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 

@@ -44,7 +44,7 @@ Scenario: Verify CVV Tool Tip
 	
 	
 	
- @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919 @ZYP_CART_K2919-10678 @CR-DPK 
+ @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919 @ZYP_CART_K2919-10678 @CR-DPK @C1-Message
 Scenario: Verify that user is not able to proceed  with Credit card addition without valid credit card details 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -60,7 +60,7 @@ Scenario: Verify that user is not able to proceed  with Credit card addition wit
 	|Unrecognized card number|
 	
 	
- @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10679 @CR-DPK @1HR_R2
+ @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10679 @CR-DPK @1HR_R2 @C1-Message
 Scenario: Verify that user is not able to proceed with Credit card addition with past expiration date 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -77,7 +77,7 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	|Past expiration date|	
 	
 	
- @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10680 @CR-DPK 
+ @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10680 @CR-DPK @C1-Message
 Scenario: Verify that user is not able to proceed with Credit card addition without valid credit card expiration date
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -93,7 +93,7 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	|# Following Error Message should show on the page|
 	|Unrecognized expiration date|	
 	
- @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919 @ZYP_CART_K2919-10682 @CR-DPK 
+ @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919 @ZYP_CART_K2919-10682 @CR-DPK @C1-Message
 Scenario: Verify that user is not able to proceed with Credit card addition with non number credit card expiration date
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -109,7 +109,7 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	|# Following Error Message should show on the page|
 	|Please enter an expiration date|
 	
- @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919 @ZYP_CART_K2919-10683 @CR-DPK 
+ @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919 @ZYP_CART_K2919-10683 @CR-DPK @C1-Message
 Scenario: Verify that user is not able to proceed with Credit card addition with invalid credit card CVV length 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -127,7 +127,7 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	|Please enter a valid security code|
 	
 
- @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919 @ZYP_CART_K2919-10685 @CR-DPK 
+ @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919 @ZYP_CART_K2919-10685 @CR-DPK @C1-Message
 Scenario: Verify that user is not able to proceed with Credit card addition with non number CVV 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -146,7 +146,7 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 
 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10689 @CR-DPK 
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10689 @CR-DPK @C1-Message
 Scenario: Verify that user is not able to proceed with Billing Information addition without entering all the required fields
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header

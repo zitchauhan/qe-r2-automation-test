@@ -74,7 +74,7 @@ And user clicks on SignIn link from global header
 	
 	
 	
-	@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10760 @CR-AKK	
+	@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10760 @CR-AKK @C1-Message	
 Scenario: Verify that user should be able to view  proper error message while adding to cart  if a product has limited stock for pick-up 
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing

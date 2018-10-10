@@ -143,7 +143,7 @@ Scenario: Verify that Authenticated user can create additional wish list
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 
-@ZYP_MYACCOUNT_K4233-10493 @ZYP_MYACCOUNT_K4233-11106 @CR-MS 
+@ZYP_MYACCOUNT_K4233-10493 @ZYP_MYACCOUNT_K4233-11106 @CR-MS @C1-Message
 Scenario: Verify the elements of Share wishlist modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -173,7 +173,7 @@ Scenario: Verify the elements of Share wishlist modal
 		|Cancel_btn|
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4233 
-@ZYP_MYACCOUNT_K4233-10495 @ZYP_MYACCOUNT_K4233-11107 @CR-MS 
+@ZYP_MYACCOUNT_K4233-10495 @ZYP_MYACCOUNT_K4233-11107 @CR-MS @C1-Message
 Scenario: Verify the User is able to cancel Sharing wishlist 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -209,7 +209,7 @@ Scenario: Verify the User is able to cancel Sharing wishlist
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4233 
-@ZYP_MYACCOUNT_K4233-10497 @ZYP_MYACCOUNT_K4233-11108 @CR-MS 
+@ZYP_MYACCOUNT_K4233-10497 @ZYP_MYACCOUNT_K4233-11108 @CR-MS @C1-Message
 Scenario: Verify the User is able to Share a wish list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
