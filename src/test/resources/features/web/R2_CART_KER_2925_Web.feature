@@ -19,6 +19,7 @@ Feature: Place Order
     Then Verify the message on the page
       | # Message for successful order is displayed |
       | Order Number                                |
+    And registers for the account from the Order confirmation screen with "Password" 
     And user click on MyAccount
     And user click on Orders link
     Then Verify below Sub/Main Module of My Account
@@ -26,7 +27,6 @@ Feature: Place Order
       | Order_View_Details_Btn                                 |
     And user click on view Details
     Then user able to see the same order ID in My order section
-
     Examples: 
       | Payment Type       |
       | Credit Card - VISA |
