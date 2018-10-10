@@ -156,6 +156,9 @@ public class R2_Cart_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "//*[contains(text(),'Items Not Available for Pickup')]/div/img")
 	public List<WebElement> txtBopisImageThumbnails;//DPK 24 Aug
+	//KER-2872 CR-MS Added a webelement for find store link in cart 
+	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Find A Store']")
+	public WebElement findStoreCart_Lnk;
 
 	// End KER-2872 CR-DPK
 
@@ -440,6 +443,10 @@ public class R2_Cart_PO extends CommonActionHelper {
     @FindBy(xpath = "//*[contains(text(),'Item Not Available')]")
     public WebElement selectStoreItemNotAvailable;
 
+	// CR-RKA 10-Oct
+	@FindBy(xpath = "//*[@data-auid='ContinueShopping']")
+	public WebElement continueShoppingItemSuccessufllyAddedPopUP;
+
 	/***************************** END XPAHTS ********************************/
 
 	/***************************** START METHODS 
@@ -652,6 +659,24 @@ public class R2_Cart_PO extends CommonActionHelper {
 		}
 		assertTrue(clickOnButton(btnFindStoreClose));
 	}
+	//This method selects the store and don't closes the findAStore Modal
+	public void selectStoreWithModalOpen(String zipCode, String storeName) throws InterruptedException {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(lnkFindAStore_M));
+		} else {
+			assertTrue(clickOnButton(selectStoreMiniBalloon));
+		}
+		waitForElement(txtZipCode);
+		txtZipCode.clear();
+		setInputText(txtZipCode, zipCode);
+		assertTrue(clickOnButton(btnZipCode));
+		Thread.sleep(3000);
+		assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
+		if (isDisplayed(makeMyStore_btn)) {
+			assertTrue(clickOnButton(makeMyStore_btn));
+		}
+		
+	}
 	public void emptyCart() throws InterruptedException {
 		
 		waitForPageLoad(driver);
@@ -676,7 +701,9 @@ public class R2_Cart_PO extends CommonActionHelper {
 	//&&&&&&&&&&&&&&&&&&&&&&&********@CR-RKA******&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 	//Your Cart (Start)
 	//KER-3143 auid is changed @CR-MS
-	@FindBy(xpath = "//*[@data-auid='crt_lnkCntShopping']")public WebElement link_ContinueShopping;
+	@FindBy(xpath = "//*[@data-auid='crt_lnkCntShopping'] | //*[@data-auid='ContinueShopping']")
+	public WebElement link_ContinueShopping;
+	
 	@FindBy(xpath="//*[.='YOUR CART']")public WebElement txt_YourCart;
 	@FindBy(xpath="//*[@data-auid='crt_btnCheckoutTop']/preceding::*[2]")public WebElement txt_items;
 	@FindBy(xpath="//*[@data-auid='crt_btnCheckoutTop']/preceding::*[1]")public WebElement txt_totalYourCart;

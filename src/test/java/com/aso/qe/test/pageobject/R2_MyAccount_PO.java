@@ -230,7 +230,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//div[.='You have no gift cards listed.']")
 	public WebElement txtNoGiftCardListed; // 25 Aug
 
-	@FindBy(xpath = "//*[@data-auid='btnaddNew-giftCard-btn' and text()= 'ADD NEW GIFT CARD']")
+	@FindBy(xpath = "//*[@data-auid='btnaddNew-giftCard-btn' and text()= 'ADD NEW GIFT CARD'] | //*[text()= 'ADD NEW GIFT CARD']")//CR-DPK 10oct
 	public WebElement btnAddNewGiftCard; // 25 Aug
 
 	@FindBy(xpath = "//*[text()='Gift Card Number']//following-sibling::div/input") // CR-SK,28-Aug 2018 //updated
@@ -421,7 +421,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnaddNew-giftCard-btn' and text()= 'ADD NEW CREDIT CARD']")
 	public WebElement btnAddInAddCreditCard;
 
-	@FindBy(xpath = "//*[text() = 'GIFT CARDS']")
+	@FindBy(xpath = "//*[text() = 'GIFT CARDS'] | //*[text() = 'Gift Card']")//CR-DPK 10oct
 	public WebElement headerGiftCards;
 
 	@FindBy(xpath = "//*[text() = 'ADD NEW CREDIT CARD']")
@@ -782,10 +782,10 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='Remove']") // CR-DPK 21-sept
 	public List<WebElement> addresRemove_Btn;
 
-	@FindBy(xpath = "//*[text()='Order Number']/../*[2]")
+	@FindBy(xpath = "//*[text()='Order Number']/../*[2] | //*[text()='Order Number']/../../*[2]")//CR-DPK 10oct
 	public WebElement OrderNumber_Input;
 
-	@FindBy(xpath = "//*[text()='Billing Zip Code']/../*[2]")
+	@FindBy(xpath = "//*[text()='Billing Zip Code']/../*[2] | //*[text()='Billing Zip Code']/../../*[2]")//CR-DPK 10oct
 	public WebElement BillindZipCode_Input;
 
 	@FindBy(xpath = "//*[@data-auid='btnbutton-3']")

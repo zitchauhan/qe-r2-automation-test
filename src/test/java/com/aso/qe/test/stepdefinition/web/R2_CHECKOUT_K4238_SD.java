@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
@@ -69,6 +70,7 @@ public class R2_CHECKOUT_K4238_SD extends CommonActionHelper {
 
 	@Then("^system should not display the estimated shipping discount on cart page$")
 	public void system_should_not_display_the_estimated_shipping_discount_on_cart_page() throws Throwable {
+		Thread.sleep(Constants.thread_low);
 		String amount=r2CartPO.txt_EstimatedShipping.getText();
 		String free="Free";
 		assertFalse(amount.contains(free));

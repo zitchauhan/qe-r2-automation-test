@@ -75,10 +75,12 @@ public class R2_CHECKOUT_K6575_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CheckoutPo.txtItems));
 	}
 
+	//CR-RKA 10-Oct CR-RK 10-Oct
 	@Then("^Item summary with number of pick up items should display in checkout page$")
 	public void item_summary_with_number_of_pick_up_items_should_display_in_checkout_page() throws Throwable {
+		assertTrue(clickOnButton(r2CheckoutPo.itemExpand_icon_M));
 		assertTrue(isDisplayed(r2CheckoutPo.DetailOrderSummary_txt)); 
-		assertTrue(isDisplayed(r2CheckoutPo.txtQuantity));
+		assertTrue(isDisplayed(r2CheckoutPo.Quantity_Txt));
 		
 	}
 	

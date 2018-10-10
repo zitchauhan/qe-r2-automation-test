@@ -16,7 +16,7 @@ Scenario: Verify that the Authorized user is able to view the default services a
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	And user will click on Checkout button 
+	 And user will click on Checkout button and navigates to Checkout page 
 	Then user verify the default service available for WG items
 
 	
@@ -35,7 +35,7 @@ Scenario: Verify that the Authorized user is able to view the all White Glove se
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	And user will click on Checkout button 
+And user will click on Checkout button and navigates to Checkout page
 	Then user verify the default service available for WG items
 	Then User click on the edit button in Shipping method
 	And user verify the WG services available
@@ -55,7 +55,7 @@ Scenario: Verify that the Authorized user is able to view the details of Bulk Ca
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	And user will click on Checkout button 
+	And user will click on Checkout button and navigates to Checkout page
 	Then user verify the default service available for WG items
 	Then User click on the edit button in Shipping method
 	And user select the Scheduled Delivery WG service
@@ -77,7 +77,7 @@ Scenario: Verify that the Authorized user is able to view the details of Bulk Ca
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	And user will click on Checkout button 
+	And user will click on Checkout button and navigates to Checkout page
 	Then user verify the default service available for WG items
 	Then User click on the edit button in Shipping method
 	And user select the Room of choice Delivery WG service
@@ -102,7 +102,7 @@ Scenario: Verify that the Authorized user is able to view the details of Bulk Ca
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	And user will click on Checkout button 
+	 And user will click on Checkout button and navigates to Checkout page 
 	Then user verify the default service available for WG items
 	Then User click on the edit button in Shipping method
 	And user select the Scheduled Delivery WG service

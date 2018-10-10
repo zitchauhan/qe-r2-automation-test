@@ -75,7 +75,7 @@ Scenario:
 	And User Clicks on credit card dropwdown and selects another card 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Payment Drawer|
-		|Checkout_CreditCard_DropDown|
+		|ChooseCreditcard_Dd|
 		
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3164 
@@ -84,7 +84,7 @@ Scenario: Verify if User is able to enter billing information
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user should able to click on Signin button 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And  User searches a product "productName" and navigates to PDP 
@@ -104,7 +104,7 @@ Scenario: Verify if User is able to enter billing information
 		|ZipCode_Input|
 		|City_Input|
 		|State_DD|
-		|EmailAddressforOrderConfirmation_Input|
+		#		|EmailAddressforOrderConfirmation_Input|
 		|SignuptogetHotDeals_checkBox|
 		|ReviewOrder_Btn|
 	And user click on checkbox Same as shipping address 
@@ -119,7 +119,7 @@ Scenario: Verify if User is able to enter billing information
 		|ZipCode_Input|
 		|City_Input|
 		|State_DD|
-		|EmailAddressforOrderConfirmation_Input|
+		#		|EmailAddressforOrderConfirmation_Input|
 		|SignuptogetHotDeals_checkBox|
 		|ReviewOrder_Btn|
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 

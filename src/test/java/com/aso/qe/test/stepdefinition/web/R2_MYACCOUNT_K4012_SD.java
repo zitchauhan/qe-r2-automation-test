@@ -60,6 +60,7 @@ public class R2_MYACCOUNT_K4012_SD extends CommonActionHelper {
 	
 	@Then("^user click on view Details with the GeneratedOrdernumber by No$")
 	public void user_click_on_view_Details_with_the_GeneratedOrdernumber_by_No() throws Throwable {
+			waitForElement(r2MyAccountPo.ordersDropDownNewest);
 			for(WebElement ViewOrder:r2MyAccountPo.viewOrderDetailsBtn) {        	   
 	     	 assertTrue(clickOnButton(ViewOrder));
 	     	Thread.sleep(Constants.thread_medium);

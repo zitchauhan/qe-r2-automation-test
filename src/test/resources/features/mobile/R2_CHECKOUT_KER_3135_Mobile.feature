@@ -6,7 +6,7 @@ Scenario: To verify change billing Address CTA
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 
@@ -29,7 +29,7 @@ Scenario: To verify change billing Address CTA
 		|ZipCode_Input|
 		|City_Input|
 		|State_DD|
-		|EmailAddressforOrderConfirmation_Input|
+#		|EmailAddressforOrderConfirmation_Input|
 		|SignuptogetHotDeals_checkBox|
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
 	And user click on confirm billing address button 
@@ -40,7 +40,7 @@ Scenario: To verify all fields in Billing Address Form
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 
@@ -63,7 +63,7 @@ Scenario: To verify all fields in Billing Address Form
 		|ZipCode_Input|
 		|City_Input|
 		|State_DD|
-		|EmailAddressforOrderConfirmation_Input|
+#		|EmailAddressforOrderConfirmation_Input|
 		|SignuptogetHotDeals_checkBox|
 		|SavePaymentInfoForLater_checkBox|
 		|ReviewOrder_Btn|
@@ -75,7 +75,7 @@ Scenario: To verify change billing Address CTA
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 
@@ -100,7 +100,7 @@ Scenario: To verify user can add new billing address information
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User searches a product "productName" and navigates to PDP 
@@ -124,7 +124,7 @@ Scenario: To verify Extra fields in Billing Address Form
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 

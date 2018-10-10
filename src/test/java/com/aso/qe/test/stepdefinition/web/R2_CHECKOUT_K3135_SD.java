@@ -19,19 +19,20 @@ public class R2_CHECKOUT_K3135_SD extends CommonActionHelper {
 		clearText(r2CheckOutPo.PhoneNumber_Input);
 		clearText(r2CheckOutPo.Adderss_Input);
 		clearText(r2CheckOutPo.ZipCode_Input);
-		clearText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input);
+		// clearText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input);
 		setInputText(r2CheckOutPo.FirstName_Input, webPropHelper.getTestDataProperty(arg1));
 		setInputText(r2CheckOutPo.LastName_Input, webPropHelper.getTestDataProperty(arg2));
 		setInputText(r2CheckOutPo.PhoneNumber_Input, webPropHelper.getTestDataProperty(arg3));
 		setInputText(r2CheckOutPo.Adderss_Input, webPropHelper.getTestDataProperty(arg4));
 		setInputText(r2CheckOutPo.ZipCode_Input, webPropHelper.getTestDataProperty(arg5));
-		setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty(arg6));
+		// setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
+		// webPropHelper.getTestDataProperty(arg6));
 	}
 
 	@And("^user click on confirm billing address button$")
 	public void user_click_on_confirm_billing_address_button() throws Throwable {
-		if(isDisplayed(r2CheckOutPo.ReviewOrder_Btn)) {
-			assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));	
+		if (isDisplayed(r2CheckOutPo.ReviewOrder_Btn)) {
+			assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 		}
 	}
 

@@ -7,8 +7,8 @@ Scenario: Verify that order is not cancelled if user clicks on No CTA on confirm
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	And user navigate and deletes existing items in cart
 	When User searches a product "SKUForBuyNow" and navigates to PDP
-
 	Then user clicks on By Now button
 	And user is navigated to order confirmation page and captures order number
 	And user click on MyAccount
@@ -53,6 +53,7 @@ Scenario: Verify that order is gets cancelled if user clicks on Yes, Cancel my O
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	And user navigate and deletes existing items in cart
 	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then user clicks on By Now button
 	And user is navigated to order confirmation page and captures order number

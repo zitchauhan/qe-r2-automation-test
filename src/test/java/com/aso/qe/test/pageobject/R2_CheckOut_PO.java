@@ -573,6 +573,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	//Footer Start
 	@FindBy(xpath ="//*[@data-auid='checkout_footer_component']")public WebElement checkOut_CheckOutFooter; 
 	//Footer End
+	
+	//CR-GK 10-Oct
+	@FindBy(xpath ="//*[contains(text(),'New Credit Card')]")public WebElement checkOut_SelectAddNewCreditCard;
+	
 	//************************  MOBILE***********************
 	   @FindBy(xpath="(//*[@data-auid='checkout_order_summary_edit_cart_link'])[1]/*")public WebElement EditMyCart_Link_M;
 	
@@ -737,7 +741,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
        @FindBy(xpath = "//*[@id='gpay'] | //*[@id='GooglePay']") public WebElement rdbtnGooglePay;
        @FindBy(xpath = "//*[text()='Google Pay']") public WebElement txtGooglePay;
        @FindBy(xpath = "//*[text()='Credit Card Number']") public WebElement txtCreditCardHeading;
-       @FindBy(xpath = "//*[@id='creditcardField']") public WebElement txtCreditCardInput;
+       @FindBy(xpath = "//*[@id='creditcardField'] | //*[text()='Credit Card Number']/following::*[1]") public WebElement txtCreditCardInput; //CR-RKA 10-Oct
        @FindBy(xpath = "//*[@id='creditcardField']//following-sibling::span/img[contains(@src,'visa')]") public WebElement imgVisaCreditCardInput;
        @FindBy(xpath = "//*[text()='Expiration Date']") public WebElement txtExpirationDate;
        @FindBy(xpath = "//*[@id='expirationDate'] | //*[@id='expiryField']") public WebElement txtExpirationDateInput;

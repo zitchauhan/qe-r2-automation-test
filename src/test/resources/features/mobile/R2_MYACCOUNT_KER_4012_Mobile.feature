@@ -8,6 +8,7 @@ Scenario: Verify that order is not cancelled if user clicks on No CTA on confirm
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password"
 	And user click on signin button 
+	And user navigate and deletes existing items in cart
 	And User searches a product "SKUForBuyNow" and navigates to PDP
 	Then user clicks on By Now button	
 	And user is navigated to order confirmation page and captures order number
@@ -17,7 +18,6 @@ Scenario: Verify that order is not cancelled if user clicks on No CTA on confirm
 	And user click on view Details with the GeneratedOrdernumber by No 
     Then Verify below Sub/Main Module of My Account
     |#Verify following elements in my account order details|
-    |Order_Back_To_Order_Lnk|
     |Order_Cancel_lnk| 
     
 @R2_Mobile  @R2_All @P-Low  @C-Order @CC-MyAccount_Order   @KER-4012 @ZYP_MYACCOUNT_K4012-10663 @ZYP_MYACCOUNT_K4012-10667 @ZYP_MYACCOUNT_K4012-11149 @CR-MS
@@ -57,6 +57,7 @@ Scenario: Verify that order is gets cancelled if user clicks on Yes, Cancel my O
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password"
 	And user click on signin button 
+	And user navigate and deletes existing items in cart
 	And User searches a product "SKUForBuyNow" and navigates to PDP
 	Then user clicks on By Now button	
 	And user is navigated to order confirmation page and captures order number
@@ -64,7 +65,7 @@ Scenario: Verify that order is gets cancelled if user clicks on Yes, Cancel my O
 	And user click on MyAccount
 	And user click on Orders link
 	And user click on view Details with the GeneratedOrdernumber by yes
-	Then verify the cancellation Order message
+	Then verify the cancellation Order message 
 	
 @R2_Mobile  @R2_All @P-High_Order @C-Order @CC-MyAccount_Order   @KER-4012 @ZYP_MYACCOUNT_K4012-10668 @ZYP_MYACCOUNT_K4012-10669 @CR-MS
 Scenario: Verify Cancel Order link is not displayed after order is cancelled

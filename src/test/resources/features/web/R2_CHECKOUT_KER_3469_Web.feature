@@ -49,6 +49,7 @@ Scenario:
 @ZYP_CHECKOUT_K3469-10876 @CR-GK 
 Scenario: Verify BOPIS Pick Up Person - Continue to Complete Payment 
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 

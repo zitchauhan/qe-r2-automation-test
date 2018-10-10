@@ -1,8 +1,10 @@
-package com.aso.qe.test.stepdefinition.web; 
+package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertEquals;
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -15,23 +17,25 @@ import com.aso.qe.test.pageobject.R2_Sanity_PO;
 import cucumber.api.java.en.Then;
 
 public class R2_CHECKOUT_K5892_SD extends CommonActionHelper {
-	R2_R1_Fun_PO funpo=PageFactory.initElements(driver,R2_R1_Fun_PO.class );
-	R2_CheckOut_PO chpo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
-	R2_MyAccount_PO mpo=PageFactory.initElements(driver, R2_MyAccount_PO.class);
+	R2_R1_Fun_PO funpo = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
+	R2_CheckOut_PO chpo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
+	R2_MyAccount_PO mpo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
+	Actions hover = new Actions(getDriver());
+
 	@Then("^user click on checkout from ATC pop up$")
-	public void user_click_on_checkout_from_ATC_pop_up() throws Throwable 
-	{
-	    clickOnButton(funpo.checkoutBtnATC);
-	    
+	public void user_click_on_checkout_from_ATC_pop_up() throws Throwable {
+		clickOnButton(funpo.checkoutBtnATC);
+
 	}
-	
+
 	@Then("^user click on credit card dropdown$")
 	public void user_click_on_credit_card_dropdown() throws Throwable {
-	   clickOnButton(chpo.chooseCreditcard_Dd);
+		clickOnButton(chpo.chooseCreditcard_Dd);
 	}
+
 	@Then("^user click on Add new credit card$")
 	public void user_click_on_Add_new_credit_card() throws Throwable {
-	    clickOnButton(chpo.AddNewCreditCard_Txt);
+		clickOnButton(chpo.AddNewCreditCard_Txt);
 	}
 
 	@Then("^user fill the credit card detail of checkout page$")
@@ -39,35 +43,38 @@ public class R2_CHECKOUT_K5892_SD extends CommonActionHelper {
 		setInputText(chpo.CreditCardNumber_Input, webPropHelper.getTestDataProperty("CardVISA"));
 		setInputText(chpo.ExpirationDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
 		setInputText(chpo.Cvv_Input, webPropHelper.getTestDataProperty("ThreeDigitCVV"));
-		setInputText(chpo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty("EmployeeEmailAddress"));
+		setInputText(chpo.EmailAddressforOrderConfirmation_Input,
+				webPropHelper.getTestDataProperty("EmployeeEmailAddress"));
 		clickOnButton(chpo.ReviewOrder_Btn);
-		
+
 	}
 
 	@Then("^user click on place order button$")
 	public void user_click_on_place_order_button() throws Throwable {
-	   clickOnButton(chpo.btnPlaceOrderPaymentPage);
-	   Thread.sleep(Constants.thread_highest);
+		clickOnButton(chpo.btnPlaceOrderPaymentPage);
+		Thread.sleep(Constants.thread_highest);
 	}
-
-
 
 	@Then("^user fill expired credit card detail$")
 	public void user_fill_expired_credit_card_detail() throws Throwable {
 		setInputText(mpo.txtCreditCardNumber, webPropHelper.getTestDataProperty("CardVISA"));
 		setInputText(mpo.txtExpiryDate, "1018");
 		setInputText(mpo.txtCVV, webPropHelper.getTestDataProperty("ThreeDigitCVV"));
-	
-		 
+
 	}
 
 	@Then("^user click on edit payment metnod$")
 	public void user_click_on_edit_payment_metnod() throws Throwable {
-	    if(isDisplayed(chpo.EditPayment_Link)) {
-	    	clickOnButton(chpo.EditPayment_Link);
-	    }
+		if (isDisplayed(chpo.EditPayment_Link)) {
+			clickOnButton(chpo.EditPayment_Link);
+		}
 	}
 
+	@Then("^user click on credit card dropdown and selects and new credit card$")
+	public void user_click_on_credit_card_dropdown_and_selects_and_new_credit_card() throws Throwable {
+		assertTrue(clickOnButton(chpo.chooseCreditcard_Dd));
+		hover.clickAndHold(chpo.checkOut_SelectAddNewCreditCard).build().perform();
+		hover.sendKeys(chpo.checkOut_SelectAddNewCreditCard, Keys.DOWN, Keys.ENTER).build().perform();
+	}
 
-	
 }

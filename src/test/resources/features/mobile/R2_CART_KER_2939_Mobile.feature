@@ -255,23 +255,30 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8084 @CR-AKK 
 Scenario: To verify SOF pick up message	
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user enters "SOFSKUNumber" in the search box
-	And clicks on the Change Pickup Location link
-	And user enter the Zipcode in "zipCode"
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And User clicks on the burger menu
+	Then user should able to click on Signin button 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then User searches a product "SOFSKUNumber" and navigates to PDP
 	And user click on Add to Cart Button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page
     |#user verify ShipToStore |
-	|ShipToStore_radioBtn|
+#	|ShipToStore_radioBtn|
 	
 
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8083 @CR-AKK	 
 Scenario: To verify Disclaimer message
-Given user launches the browser and navigates to "ASO_HOME" page 
+Given user launches the browser and navigates to "ASO_HOME" page
+    And User clicks on the burger menu
+	Then user should able to click on Signin button 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button  
 	When user enters "SOFSKUNumber" in the search box
-	Then User is navigated to pdp page
     Then user views a Disclaimer message
     When clicks on Read More Link
     

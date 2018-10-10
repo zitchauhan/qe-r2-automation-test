@@ -190,20 +190,17 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 		
 	}
 	
+	@Then("^user select store with \"(.*?)\" and \"(.*?)\"$")
+	public void user_select_store_with_and(String zipCode, String storeName) throws Throwable {
+		
+		r2CartPo.selectStoreWithModalOpen(webPropHelper.getTestDataProperty(zipCode),
+				webPropHelper.getTestDataProperty(storeName));
+		
+	}
+	
 	@And("^click on Change Location link$")
 	public void click_on_Change_Location_link() throws Throwable {
-	    assertTrue(clickOnButton(r2CartPo.lnkChangeLocationCart));
-	}
-	
-	
-	@And("^verify Change Location link$")
-	public void verify_Change_Location_link() throws Throwable {
-	    assertTrue(isDisplayed(r2CartPo.lnkChangeLocationCart));
-	}
-
-	@Then("^Find in Store modal should get open$")
-	public void find_in_Store_modal_should_get_open() throws Throwable {
-		assertTrue(isDisplayed(r2CartPo.txtFindaStore));
+	    assertTrue(clickOnButton(r2CartPo.findStoreCart_Lnk));
 	}
 	
 	@And("^user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails$")
@@ -240,7 +237,7 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	
 	@And("^user is able to see Change Pickup Location link$")
 	public void user_is_able_to_see_Change_Pickup_Location_link() throws Throwable {
-		assertTrue(isDisplayed(r2R1FunPO.lnkPLPChangePickupLocation)); 
+		assertTrue(isDisplayed(r2R1FunPO.lnkPickupLocation)); 
 	}
 	
 	@Then("^user should not be able to see the 'View Next (\\d+) Stores' button\"$")
@@ -272,6 +269,16 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2R1FunPO.lnkPLPChangePickupLocation)); 
 		Thread.sleep(Constants.thread_low);
 	}
+	
+	@And("^verify Change Location link$")
+	public void verify_Change_Location_link() throws Throwable {
+	    assertTrue(isDisplayed(r2CartPo.findStoreCart_Lnk));
+	}
 
+	@Then("^Find in Store modal should get open$")
+	public void find_in_Store_modal_should_get_open() throws Throwable {
+		assertTrue(isDisplayed(r2CartPo.findStoreCart_Lnk));
+	}
+	
 		
 }
