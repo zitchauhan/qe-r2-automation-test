@@ -102,11 +102,12 @@ Scenario: Verify if 'Same as Shipping Address' checkbox is disabled for STS orde
 
 Given user launches the browser and navigates to "ASO_HOME" page
 Then User clicks on the burger menu
-	Then User should be able to click on Find Store
-	Then user enter "zipCode" in Find a Store Model
-	And user click on submit button
-	Then user click on plus icon in Store Address drawer
-	And user click on Make My store button	
+#	Then User should be able to click on Find Store
+#	Then user enter "zipCode" in Find a Store Model
+#	And user click on submit button
+#	Then user click on plus icon in Store Address drawer
+#	And user click on Make My store button	
+And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
   And User clicks on the burger menu 
   Then user navigate to GunStorageAndSafty L_Three   
     Then user select the product from L_Three and navigate to PDP
