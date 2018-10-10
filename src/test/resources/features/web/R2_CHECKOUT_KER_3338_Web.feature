@@ -28,7 +28,7 @@ Scenario:
 	Then user verify the element of paypal window 
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3338 
-@ZYP_CHECKOUT_3338-11741 @CR-AKK 
+@ZYP_CHECKOUT_3338-11741 @CR-AKK @C1-Message
 Scenario: 
 	Verify user is able to checkout using PayPal with item-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -63,7 +63,7 @@ Scenario:
 		|Paypal account|
 		
 @R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
-@ZYP_CHECKOUT_3338-11742 @CR-AKK 
+@ZYP_CHECKOUT_3338-11742 @CR-AKK @C1-Message
 Scenario: 
 	Verify user is able to checkout using PayPal with shipping-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 

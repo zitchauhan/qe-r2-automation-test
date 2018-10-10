@@ -28,7 +28,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user view and Applied Promotions/Discounts "Promocode"
 	
 	
-@R2_Web @C-Order @CC-Cart_Order @R2_All @P-High_Order  @KER-3166 @ZYP_CART_K3166-8088 @CR-DPK
+@R2_Web @C-Order @CC-Cart_Order @R2_All @P-High_Order  @KER-3166 @ZYP_CART_K3166-8088 @CR-DPK @C1-Message
 Scenario: To verify open field to enter promotion code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 

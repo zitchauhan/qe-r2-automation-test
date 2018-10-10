@@ -46,7 +46,7 @@ Verify The user must be able to input a valid email Id while creating account
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941
-@ZYP_MYACCOUNT_K6941-8924 @CR-RK 
+@ZYP_MYACCOUNT_K6941-8924 @CR-RK @C1-Message
 Scenario:
 Verify The user must see form field validations to ensure the e-mail address meets the desired format '@'provided in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -69,7 +69,7 @@ Verify The user must see form field validations to ensure the e-mail address mee
 		|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941
-@ZYP_MYACCOUNT_K6941-8925 @CR-RK 
+@ZYP_MYACCOUNT_K6941-8925 @CR-RK @C1-Message
 Scenario:
 Verify The user must see form field validations to ensure the e-mail address meets the desired format e.g.@ provided in creating account page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -95,7 +95,7 @@ Verify The user must see form field validations to ensure the e-mail address mee
 		|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6941
-@ZYP_MYACCOUNT_K6941-8928 @CR-RK 
+@ZYP_MYACCOUNT_K6941-8928 @CR-RK @C1-Message
 Scenario:
 Verify The user must see form field validations to ensure the e-mail address meets the desired format (domain provided) in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -116,7 +116,7 @@ Verify The user must see form field validations to ensure the e-mail address mee
 		
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6941
-@ZYP_MYACCOUNT_K6941-8930 @CR-RK 
+@ZYP_MYACCOUNT_K6941-8930 @CR-RK @C1-Message
 Scenario:
 Verify The user must see form field validations to ensure the e-mail address meets the desired format (domain provided) in creating account page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -163,7 +163,7 @@ Verify The user must be able to see the relevant errors when entering the email 
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6941
-@ZYP_MYACCOUNT_K6941-8938 @CR-RK 
+@ZYP_MYACCOUNT_K6941-8938 @CR-RK @C1-Message
 Scenario:
 Verify The user must be able to see the relevant errors when entering the email address in Account create page 
 	Given user launches the browser and navigates to "ASO_HOME" page 

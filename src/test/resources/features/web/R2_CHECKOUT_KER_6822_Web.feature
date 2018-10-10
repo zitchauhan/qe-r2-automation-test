@@ -116,7 +116,7 @@ Feature: B07-250 - Gift Card - Authenticated User: Add New Gift Card at Checkout
       | # Following button and success message on checkout page |
       | GiftCardAppliedSuccessMsg                               |
 
-  @R2_Web @R2_All @P-Highest @1HR @C-Order @CC-Checkout_Order @KER-6822 @ZYP_CHECKOUT_K6822-10193 @CR-GK
+  @R2_Web @R2_All @P-Highest @1HR @C-Order @CC-Checkout_Order @KER-6822 @ZYP_CHECKOUT_K6822-10193 @CR-GK @C1-Message
   Scenario: 
     Verify the user can enter valid new Gift card with 13 or 16 digit in Checkout for payment 
     	verify the display of error message when an unauthenticated user is trying to add a GC that starts with 777 series at checkout

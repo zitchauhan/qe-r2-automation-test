@@ -114,7 +114,7 @@ Scenario: Verify Reduce quantity adjustment in the Cart Page
 	When enter the "EnterQuantityLessThenTwo" to X 
 	Then Order Summary should get recalculated
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8048 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-8048 @CR-AKK @C1-Message
 Scenario:  Verify Remove quantity message in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -186,7 +186,7 @@ Scenario:  To verify Remove link
 	|RemoveFromCart_Btn| 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6866 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2942 @ZYP_CART_K2942-6866 @CR-AKK  @C1-Message
 Scenario:  To verify Remove link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
@@ -200,7 +200,7 @@ Scenario:  To verify Remove link
     |# verify the remove quantity message|
     |Undo|
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-6867 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-6867 @CR-AKK @C1-Message
 Scenario: Verify Quantity Zero in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 

@@ -36,7 +36,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|# Verify following elements in Cart page"When cart is empty"|
 	|YourCartIsEmpty_Txt| 
 	
-	@R2_Web @R2_Regression @C-Cart  @P-Low @KER-3143 @ZYP_Cart_K3143-12547 @CR-RKA
+	@R2_Web @R2_Regression @C-Cart  @P-Low @KER-3143 @ZYP_Cart_K3143-12547 @CR-RKA @C1-Message
 	Scenario: Verify the display and behavior of 'Continue Shopping' in Cart Title
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When User Navigates L2 form Homepage Header 
@@ -90,7 +90,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|ReturnPolicy_link|
 		
 	
-	@R2_Web @R2_Regression  @P-High @C-Cart  @KER-3143 @ZYP_Cart_K3143-8155 @CR-RKA
+	@R2_Web @R2_Regression  @P-High @C-Cart  @KER-3143 @ZYP_Cart_K3143-8155 @CR-RKA @C1-Message
 	Scenario: Verify if Unauthenticated customer will be able to add items to cart for shipping
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When User Navigates L2 form Homepage Header 
@@ -146,7 +146,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
     Then user sign in from checkout page 
     
     
-    @R2_Web @R2_Regression @P-High @KER-3143 @C-Cart  @ZYP_Cart_K3143-8158 @CR-RKA
+    @R2_Web @R2_Regression @P-High @KER-3143 @C-Cart  @ZYP_Cart_K3143-8158 @CR-RKA @C1-Message
     Scenario: Verify if Authenticated user must be able to view cart the items added
     
     Given user launches the browser and navigates to "ASO_HOME" page

@@ -59,7 +59,7 @@ Scenario: Verify that user returns to the empty Wallet on Cancel
 		|PaymentPage_AddNewGiftCard_btn					|
 		
 @R2_Web @R2_All @P-Low @C-Order @CC-MyAccount_Order @KER-3093
-@ZYP_MYACCOUNT_K3093-10420 @CR-RKA 
+@ZYP_MYACCOUNT_K3093-10420 @CR-RKA @C1-Message
 Scenario:
 Verify that user gets the error message on entering in-store credit gift card entry 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -73,7 +73,7 @@ Verify that user gets the error message on entering in-store credit gift card en
 		|The combination of Gift Card Number and PIN is incorrect. Please try again.|
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-3093
-@ZYP_MYACCOUNT_K3093-10421 @CR-RKA 
+@ZYP_MYACCOUNT_K3093-10421 @CR-RKA @C1-Message
 Scenario:
 Verify that user gets the error message on entering incorrect GC number 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -88,7 +88,7 @@ Verify that user gets the error message on entering incorrect GC number
 		|Invalid GiftCard Number|
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-3093
-@ZYP_MYACCOUNT_K3093-10422 @CR-RKA 
+@ZYP_MYACCOUNT_K3093-10422 @CR-RKA @C1-Message
 Scenario: Verify that user gets the error message on entering incorrect PIN 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -101,7 +101,7 @@ Scenario: Verify that user gets the error message on entering incorrect PIN
 		|Invalid GiftCard Pin|
 		
 @R2_Web @R2_All @P-Low @C-Order @CC-MyAccount_Order @KER-3093
-@ZYP_MYACCOUNT_K3093-10424 @CR-RKA 
+@ZYP_MYACCOUNT_K3093-10424 @CR-RKA @C1-Message
 Scenario:
 Verify that user gets the error message on entering ZERO balance GC number 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -118,7 +118,7 @@ Verify that user gets the error message on entering ZERO balance GC number
 		
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-3093
-@ZYP_MYACCOUNT_K3093-10427 @CR-RKA 
+@ZYP_MYACCOUNT_K3093-10427 @CR-RKA @C1-Message
 Scenario: Verify that user gets the error message on blank GC number 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -135,7 +135,7 @@ Scenario: Verify that user gets the error message on blank GC number
 		
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-3093
-@ZYP_MYACCOUNT_K3093-10425 @CR-RKA 
+@ZYP_MYACCOUNT_K3093-10425 @CR-RKA @C1-Message
 Scenario:
 Verify that user gets the error message on entering invalid/non-existing GC number 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -153,7 +153,7 @@ Verify that user gets the error message on entering invalid/non-existing GC numb
 		
 		
 @R2_Web @R2_All @P-Low @C-Order @CC-MyAccount_Order @KER-3093
-@ZYP_MYACCOUNT_K3093-10429 @CR-RKA 
+@ZYP_MYACCOUNT_K3093-10429 @CR-RKA @C1-Message
 Scenario: Verify that user gets the error message on blank PIN 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -169,7 +169,7 @@ Scenario: Verify that user gets the error message on blank PIN
 		|Required|
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-3093
-@ZYP_MYACCOUNT_K3093-10430 @CR-RKA 
+@ZYP_MYACCOUNT_K3093-10430 @CR-RKA @C1-Message
 Scenario: Verify that user gets the error message on blank GC# and PIN 
 
 	Given user launches the browser and navigates to "ASO_HOME" page 

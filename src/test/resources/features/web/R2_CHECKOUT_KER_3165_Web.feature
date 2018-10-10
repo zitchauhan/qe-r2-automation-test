@@ -50,7 +50,7 @@ Scenario:
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
-@ZYP_CHECKOUT_K3165-8241 @CR-GK 
+@ZYP_CHECKOUT_K3165-8241 @CR-GK @C1-Message
 Scenario: 
 	Verify the guest user is able to enter the shipping address details on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -117,7 +117,7 @@ Scenario:
 		
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
-@ZYP_CHECKOUT_K3165-8245 @CR-GK 
+@ZYP_CHECKOUT_K3165-8245 @CR-GK @C1-Message
 Scenario: 
 	Verify the guest user is displayed with required validations and errors on shipping address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -350,7 +350,7 @@ Scenario: Verify the guest user is able to place the order
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
-@ZYP_CHECKOUT_K3165-8243 @CR-GK 
+@ZYP_CHECKOUT_K3165-8243 @CR-GK @C1-Message
 Scenario: 
 	Verify the guest user is notified with an error on entering restricted address for the items in cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 

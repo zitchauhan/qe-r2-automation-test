@@ -20,7 +20,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|# Me+Alternate pick person should get selected |
 	|MePickUp_Drpdwn|
 	
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10821 @CR-AKK	@1HR_R2
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10821 @CR-AKK	@1HR_R2 @C1-Message
  Scenario: Verify after selecting Me + Alternate Pickup Person during checkout Alternate Pickup Person fields must display
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
@@ -42,7 +42,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|Alternate's Email Address|
 		|Alternate's Phone Number |
 		
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10822 @CR-AKK	
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10822 @CR-AKK	 @C1-Message
  Scenario: Verify after selecting Me + Alternate Pickup Person during checkout Alternate Pickup Person fields must display
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
@@ -70,7 +70,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user click on confirm button
 	
 	
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10823 @CR-AKK	
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4764 @ZYP_CHECKOUT_K4764-10823 @CR-AKK	@C1-Message
 Scenario: Verify Mandatory fields for alternative pick up person details
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 

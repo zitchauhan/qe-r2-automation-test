@@ -78,7 +78,7 @@ Scenario: Verify that user able to update the profile
 	And user enters new password
 	And user clicks on Update button                                                                                                
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10566 @CR-RK
+@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10566 @CR-RK @C1-Message @C1-Message
 Scenario: Verify that user can see the error message in First name input field.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -101,7 +101,7 @@ Scenario: Verify that user can see the error message in First name input field.
  |# Following Error Message should show on the page|
 	 |Not a valid name|
 	 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10567 @CR-RK
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10567 @CR-RK @C1-Message @C1-Message
 Scenario: Verify that user can see the error message in First name field if user enters "1" character in input field.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -145,7 +145,7 @@ Scenario: Verify that user can see the error message in First name field if user
 	And user enter First Name field "InvalidEmailForMoreThan50Characters" 
 	Then Verify First Name field should not accept more than fifty character
 	 
-	 	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10569 @CR-RK
+	 	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10569 @CR-RK @C1-Message @C1-Message
 Scenario: Verify that user can see the error message in last name input field.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -168,7 +168,7 @@ Scenario: Verify that user can see the error message in last name input field.
   |# Following Error Message should show on the page|
 	 |Not a valid name|
 	 
-	  	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10570 @CR-RK
+	  	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10570 @CR-RK @C1-Message
 Scenario: Verify that user can see the error message in Last name field if user enters 1 character in input field.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -216,7 +216,7 @@ Scenario: Verify that user can see the error message in Last name field if user 
 	 
 
 
-	 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10572 @CR-RK
+	 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10572 @CR-RK @C1-Message
 Scenario: Verify that user can see the error message if user enters the email id in New Email and Confirm Email input fields with non-alpha + character.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -244,7 +244,7 @@ Scenario: Verify that user can see the error message if user enters the email id
 	|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 	
 	
-		 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10573 @CR-RK
+		 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10573 @CR-RK @C1-Message
 Scenario: Verify that user can see the error message if user enters the email id  more than 255 Characters in New Email and Confirm Email input fields.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -290,7 +290,7 @@ Scenario: Verify that user can change the password in Profile section.
 	And user enters newpassword "newpassword"
 	And user clicks on Update button 
 	
-	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10577 @CR-RK
+	@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10577 @CR-RK @C1-Message
 Scenario: Verify that user can see the error message in password field.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header

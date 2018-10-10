@@ -14,7 +14,7 @@ Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 	When user will click on Checkout button and navigates to Checkout page
 	Then user enter Phone number "PhoneNumber" in Billing address
 	
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10884 @CR-MS	
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10884 @CR-MS	@C1-Message_B
 Scenario: Verify Phone number associated with BOPIS
     Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -61,7 +61,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When user will click on Checkout button and navigates to Checkout page
 #	And  user views the phone number given in the My account saved Billing address
 
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10885 @CR-MS	
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10885 @CR-MS	@C1-Message_B
 Scenario: Verify Phone number associated with BOPIS - Alternative Person
     Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -88,7 +88,7 @@ Scenario: Verify Phone number associated with BOPIS - Alternative Person
 		|Alternate's Phone Number |
     Then user can enter the alternative person phone number "PhoneNumber"
 
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10891 @CR-MS
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10891 @CR-MS @C1-Message_B
 Scenario: Verify Phone number field validation
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -116,7 +116,7 @@ Scenario: Verify Phone number field validation
 		|Alternate's Email Address|
 		|Alternate's Phone Number |
 		
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10892 @CR-MS
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10892 @CR-MS @C1-MessageB
 Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -145,7 +145,7 @@ Scenario: Verify Phone number associated with BOPIS - Un Authenticated user
 #	And checks for form errors
 	
 
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10893 @CR-MS
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10893 @CR-MS @C1-MessageB
 Scenario: Verify Phone number field validation
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -173,7 +173,7 @@ Scenario: Verify Phone number field validation
 		|Alternate's Email Address|
 		|Alternate's Phone Number |
 		
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10889 @CR-MS
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10889 @CR-MS @C1-MessageB
 Scenario: Verify Phone number associated with BOPIS - Alternative pick up Person
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -204,7 +204,7 @@ Scenario: Verify Phone number associated with BOPIS - Alternative pick up Person
 	And user can enter the alternative person phone number "PhoneNumber"
 #	Then user click on confirm button
 	
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10890 @CR-MS
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Checkout @KER-4134 @ZYP_CHECKOUT_K4134-10890 @CR-MS @C1-MessageB
 Scenario: Verify SMS check box display with Primary and Alternative Person
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

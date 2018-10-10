@@ -95,7 +95,7 @@ When User searches a product "productName" and navigates to PDP
 	|checkout_ShippingInformation_Header_txt					|
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8150 @CR-DPK 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8150 @CR-DPK @C1-Message
 	Scenario: Verify is user gets proper validation message for invalid email address
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Mens clothing
@@ -119,7 +119,7 @@ When User searches a product "productName" and navigates to PDP
 	 |The combination of Email Address and Password is incorrect. Please try again.|
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Lowest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8151 @CR-DPK 
+@R2_Web @R2_Regression @R2_All @P-Lowest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8151 @CR-DPK @C1-Message
 	Scenario: Verify is user gets proper validation message for invalid password
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Mens clothing

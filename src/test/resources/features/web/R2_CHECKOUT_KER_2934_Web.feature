@@ -28,7 +28,7 @@ Scenario: Verify the Shipping address form that authenticated user can view on a
 	
 	
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8178 @CR-DPK 
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8178 @CR-DPK  @C1-Message
 Scenario: Verify if unauthenticated user be presented with the blank shipping address form fields
  	Given user launches the browser and navigates to "ASO_HOME" page
 #	And User Navigates L2 form Homepage Header 

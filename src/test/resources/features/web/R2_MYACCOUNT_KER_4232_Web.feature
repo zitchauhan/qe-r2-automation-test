@@ -172,7 +172,7 @@ Scenario: Verify Authenticated user can Manage Address Book -Set Default Address
 		|AddressPage_SetAsDefault_chkBox			|
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232
-@ZYP_MYACCOUNT_K4232-9332 @CR-RK 
+@ZYP_MYACCOUNT_K4232-9332 @CR-RK @C1-Message
 Scenario:
 Verify Authenticated user can Manage Address Book - Delete Address details - Undo 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -219,7 +219,7 @@ Scenario: Verify Authenticated user can -Set Default Address
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232
-@ZYP_MYACCOUNT_K4232-9193 @CR-RK 
+@ZYP_MYACCOUNT_K4232-9193 @CR-RK @C1-Message
 Scenario:
 Verify Authenticated user can Manage Address Book - Delete Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 

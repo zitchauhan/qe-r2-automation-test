@@ -13,7 +13,7 @@ Scenario Outline: Verify that the error message is displayed if Guest user enter
     |2421424		   | 14124				  |
 		
 @R2_Web  @R2_All @P-Low @C-Order @CC-MyAccount_Order   @KER-4018 
-@ZYP_MYACCOUNT_K4018-KER-10653 @CR-AKK 		
+@ZYP_MYACCOUNT_K4018-KER-10653 @CR-AKK 		 @C1-Message
 Scenario: Verify that the Guest user is able to navigate to check order status page.
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to Check Oder status Page

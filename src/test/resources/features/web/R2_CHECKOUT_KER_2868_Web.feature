@@ -1,6 +1,6 @@
 Feature: B06-225- BOPIS Order Confirmation Impact 
 
-@R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-Highest @1HR_R2 @C-BOPIS
+@R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-Highest @1HR_R2 @C-BOPIS @C1-Message_B
 @KER-2868 @ZYP_CHECKOUT_K2868-10722 @CR-AKK 
 Scenario:
 Verify that UnAuthenticated user is able to create an account on Order Confirmation page 
@@ -19,7 +19,7 @@ Verify that UnAuthenticated user is able to create an account on Order Confirmat
 		|# Then guest user should be displayed with a banner message for successful account creation|
 		|created an account|
 		
-@R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-Highest @1HR_R2 @C-BOPIS
+@R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-Highest @1HR_R2 @C-BOPIS @C1-Message_B
 @KER-2868 @ZYP_CHECKOUT_K2868-10709 @CR-AKK 
 Scenario:
 Verify that UnAuthenticated user is able to view  in-store pickup instructions on order confirmation page 
@@ -103,7 +103,7 @@ Verify that UnAuthenticated user is able to view Payment Details on Order confir
 	And Verify that Payment Details is displayed 
 	
 	
-@R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-Low @KER-2868 @C-BOPIS
+@R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-Low @KER-2868 @C-BOPIS @C1-Message_B
 @ZYP_CHECKOUT_K2868-10713 @CR-AKK 
 Scenario:
 Verify that UnAuthenticated user is able to view account section on Order confirmation page 

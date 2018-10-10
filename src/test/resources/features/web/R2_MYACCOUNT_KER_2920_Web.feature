@@ -80,7 +80,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|PaymentPage_CrediCardList_txt|
 	
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10552 @CR-RK 	
+@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2920 @ZYP_MYACCOUNT_K2920-10552 @CR-RK 	@C1-Message
 Scenario: Verify deleted CC retains in the saved CC list in My Account on Undo
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

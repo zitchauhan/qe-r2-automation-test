@@ -81,7 +81,7 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
 	|EstimatedShipping_txt|
 	|EstimatedTaxes_txt|
 	
-	@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10707 @CR-AKK	
+	@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10707 @CR-AKK	@C1-Message_B
 	Scenario: Verify that the user is able add item to cart if items are low in stock
     Given user launches the browser and navigates to "ASO_HOME" page
 	And User should be able to see Search Box on Homepage 
@@ -101,7 +101,7 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
 	And User click on search icon 
 	Then Verify add to cart button not dispalyed 
 	
-	 @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10717 @CR-AKK	
+	 @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10717 @CR-AKK	@C1-Message_B
 	Scenario: Verify customer must see messaging when attempting to add more inventory of an item to their cart than inventory exists at the selected store
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User should be able to see Search Box on Homepage 
@@ -114,7 +114,7 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
     |# Following Error Message should show on the page|
     |We're sorry! Due to limited stock only part of your order can be fulfilled at this time.|
 	
-     @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10695 @CR-AKK	
+     @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10695 @CR-AKK	@C1-Message_B
 	Scenario: Verify that the user is able to view "Ships To" information on PDP
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User should be able to see Search Box on Homepage 
@@ -124,7 +124,7 @@ Scenario: Verify that the user is able to increase the item quantity on PDP
     |Ship to|
     Then verfiy the Change Zip code link
     
- @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10699 @CR-AKK	
+ @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10699 @CR-AKK	@C1-Message_B
    Scenario: Verify that the user is able to view In-Store Pickup Available in its correct state on PDP
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
@@ -151,7 +151,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When User clicks on choose location
 	Then verify that Find a Store Modal is displayed
 	
-	 @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10704 @CR-AKK
+	 @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10704 @CR-AKK @C1-Message_B
 	Scenario: Verify that user sees appropriate message If shipping is unavailable for an item
 Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
@@ -164,7 +164,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
     |# Following Error Message should show on the page|
     |Shipping Not Available|
 
- @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10705 @CR-AKK
+ @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10705 @CR-AKK @C1-Message_B
 	Scenario: Verify that user sees appropriate message If shipping is unavailable for an item
 Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
