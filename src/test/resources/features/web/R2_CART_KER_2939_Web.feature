@@ -130,8 +130,6 @@ Scenario: To verify Shipping radio button - Unauthenticated user
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page "Your Cart item details "|
 	|ShipToMe_radioBtn|
-	And in-stores radio button is deselected 
-	And in-stores information is hided 
 	Then Shipping date information is displayed 
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8076 @CR-AKK 
@@ -149,8 +147,6 @@ Scenario: To verify Shipping radio button - Authenticated user With out store se
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page "Your Cart item details "|
 	|ShipToMe_radioBtn|
-	And in-stores radio button is deselected 
-	And in-stores information is hided 
 	Then Shipping date information is displayed 
 	
 @R2_Web @R2_Regression @R2_All @P-Lowest @C-Cart @KER-2939 @ZYP_CART_K2939-8085 @CR-AKK 
@@ -230,10 +226,13 @@ Given user launches the browser and navigates to "ASO_HOME" page
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8084 @CR-AKK 
 Scenario: To verify SOF pick up message	
-Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User searches a product "SOFSKUNumber" and navigates to PDP
-	And clicks on the Change Pickup Location link
-	And user enter the Zipcode in "zipCode"
+Given user launches the browser and navigates to "ASO_HOME" page
+    And user clicks on SignIn link from global header
+    And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	And user navigate and deletes existing items in cart 
+	Then User searches a product "SOFSKUNumber" and navigates to PDP	
 	And user click on Add to Cart Button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -259,7 +258,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user click on Add to Cart Button 
 	When user will click on View Cart button 
 	And user navigate to Cart page 
-	Then in Product blade, radio button against In-store Pick-up should be suppressed
+#	Then in Product blade, radio button against In-store Pick-up should be suppressed
 	And Ship to Me radio button should be selected by default
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-12573 @CR-AKK 	

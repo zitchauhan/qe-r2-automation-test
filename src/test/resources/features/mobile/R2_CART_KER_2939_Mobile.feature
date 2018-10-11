@@ -329,4 +329,4 @@ Scenario: To verify Ship to store radio button - Authenticated user With store s
 	And user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page
     |#user verify ShipToStore |
-	|InStorePickup_FREE_radioBtn |
+	|ShipToStore_radioBtn|

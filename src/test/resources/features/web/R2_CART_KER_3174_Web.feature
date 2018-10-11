@@ -15,8 +15,6 @@ Verify authenticate user is able to see the See In-Store Pickup Instructions sec
 	And user click on signin button
 	And user navigate and deletes existing items in cart 
 	And User searches a product "SOFSKUNumber" and navigates to PDP
-	And clicks on the Change Pickup Location link
-	And user enter the Zipcode in "zipCode" 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -28,10 +26,12 @@ Verify authenticate user is able to see the See In-Store Pickup Instructions sec
 @ZYP_CART_K3174-KER-10271 @CR-RK 
 Scenario:
 Verify guest user is able to see the See In-Store Pickup Instructions section 
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	And user navigate and deletes existing items in cart  
 	And User searches a product "SOFSKUNumber" and navigates to PDP
-	And clicks on the Change Pickup Location link
-	And user enter the Zipcode in "zipCode" 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
@@ -101,8 +101,6 @@ Scenario: Verify without checking acknowledgement, user is not able to place the
 	And user click on signin button
 	And user navigate and deletes existing items in cart
 	And User searches a product "SOFSKUNumber" and navigates to PDP
-	And clicks on the Change Pickup Location link
-	And user enter the Zipcode in "zipCode" 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 

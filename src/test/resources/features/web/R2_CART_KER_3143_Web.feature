@@ -236,14 +236,6 @@ When User Navigates L2 form Homepage Header
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button	
-#	And user clicks on one of the category and navigates to LOne 
-#	And user clicks on one of the subcategory and navigates to LTwo 
-#	And user is able to see the product category name in section title 
-#	And user clicks on one of the product category and navigates to LThree  
-#	Then User is navigated to pdp page 
-#	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify total item  in Cart page |
 	|Items_txt|
