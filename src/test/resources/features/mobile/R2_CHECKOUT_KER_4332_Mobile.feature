@@ -60,6 +60,7 @@ Scenario: Verify user can see order placed for selected single SKU on the PDP
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
 	|Order Number|
+	And User clicks on the burger menu
 	And user click on MyAccount
 	And user click on Orders link
 	Then Verify the message on the page

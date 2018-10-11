@@ -273,6 +273,7 @@ Feature: Verify Gift Card - Payment Processing
   @R2_Mobile @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8897 @CR-SK
   Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Sign in user
     Given user launches the browser and navigates to "ASO_HOME" page
+    And user clicks on the burger menu
     And user creates an account
     And User searches a product "productName" and navigates to PDP
     And user click on Add to Cart Button

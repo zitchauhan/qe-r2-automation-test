@@ -146,7 +146,8 @@ Scenario:
 	And user enter Phone number "PhoneNumber" 
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page 
+	And user click on Go To Shipping Method button in Checkout page
+	And user click on go to payment present in shipping method
 	And user click on GiftCard Plus icon in Checkout page 
 	And user enter Gift card Number "Series777GiftCard" 
 	And user enter Pin Number "Series777GiftCardPin" 

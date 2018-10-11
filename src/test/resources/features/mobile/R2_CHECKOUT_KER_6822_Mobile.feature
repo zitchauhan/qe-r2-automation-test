@@ -45,7 +45,7 @@ Scenario: Verify Valid gift card is applied for purchases
 	And user enter Gift card Number "Valid16DigitGiftCardNumber" 
 	And user enter Pin Number "Valid8DigitGiftCardPIN" 
 	And user click on Apply button 
-	Then gift card balance is applied towards the purchase 
+	Then applied gift card "Valid16DigitGiftCardNumber" should be displayed
 	And Verify below Sub/Main Module of Checkout Page 
 		|# Following button and success message on checkout page|
 		|GiftCardAppliedSuccessMsg|
@@ -68,9 +68,9 @@ Scenario:
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
 	And user click on Go To Shipping Method button in Checkout page 
-	And user clicks on edit payment cta 
-	And user click on GiftCard Plus icon in Checkout page 
-	And user selects add new gift card option from the dropdown 
+	And user click on go to payment present in shipping method
+#	And user clicks on edit payment cta 
+	And user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "Series777GiftCard" 
 	And user enter Pin Number "Series777GiftCardPin" 
 	When user click on Apply button 

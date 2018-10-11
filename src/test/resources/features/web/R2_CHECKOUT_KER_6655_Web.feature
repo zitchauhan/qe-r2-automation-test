@@ -136,10 +136,12 @@ Scenario: Verify the Payment details modal if user does not have saved Shipping 
     When User clicks on Enable Buy Now button
     And user is allowed to enter first name "FirstName"
     And user is allowed to enter last name "LastName"
-    And user is allowed to enter address "Address"
-    And user is allowed to enter zipcode "FindAsStoreZIPCode"
-    And user is allowed to enter phone number "PhoneNumber" 
+    And user is allowed to enter address "AVSAddress"
+    And user is allowed to enter zipcode "zipcode"
+    And user is allowed to enter phone number "PhoneNumber"
     And user clicks on add default payment option
+    And user selects the suggested address instead of entered address
+    And clicks on Use Selected Address button
     Then Verify below Sub/Main Module of PDP
     |#Verify following elements in PDP page|
     |Credit_CardNumber_txt|
@@ -287,19 +289,15 @@ Scenario: Verify that Authenticated user is able proceed to CHECKOUT by adding s
 	And user enter password "Password"
 	When clicks on Sign Up Button
 	And User searches a product "SKUForBuyNow" and navigates to PDP
-    Then Verify below Sub/Main Module of PDP
-    |#Verify following elements in PDP page|
-    |EnableBuyNow_btn|
-    When User clicks on Enable Buy Now button
-    Then Verify below Sub/Main Module of PDP
-    |#Verify following elements in PDP page|
-     |Add_Default_Payment_Option_btn|
+     When User clicks on Enable Buy Now button
     And user is allowed to enter first name "FirstName"
     And user is allowed to enter last name "LastName"
-    And user is allowed to enter address "Address"
-    And user is allowed to enter zipcode "FindAsStoreZIPCode"
+    And user is allowed to enter address "AVSAddress"
+    And user is allowed to enter zipcode "zipcode"
     And user is allowed to enter phone number "PhoneNumber"
-     And user clicks on add default payment option
+    And user clicks on add default payment option
+    And user selects the suggested address instead of entered address
+    And clicks on Use Selected Address button
     And user enters creditcardnumber "CardVISA"
     And user enters creaditcardExp "ExpDate"
     And user enters creditcardcvv "ThreeDigitCVV"

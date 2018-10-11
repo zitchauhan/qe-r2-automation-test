@@ -29,7 +29,7 @@ public class R2_CHECKOUT_K3165_SD extends CommonActionHelper {
 
 	@And("^enters the \"(.*?)\" zip on the Cart page$")
 	public void enters_the_zip_on_the_Cart_page(String arg1) throws Throwable {
-		Thread.sleep(Constants.thread_low); 
+		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(r2Cart_Po.lnkChangeZipCode));
 		assertTrue(isDisplayed(r2Cart_Po.inputZipCode));
 		setInputText(r2Cart_Po.inputZipCode, webPropHelper.getTestDataProperty(arg1));
@@ -38,13 +38,13 @@ public class R2_CHECKOUT_K3165_SD extends CommonActionHelper {
 	@And("^click on submit button on calculate shipping model$")
 	public void click_on_submit_button_on_calculate_shipping_model() throws Throwable {
 		assertTrue(clickOnButton(r2Cart_Po.btnCartSubmit));
-		Thread.sleep(Constants.thread_low); 
+		Thread.sleep(Constants.thread_low);
 	}
 
 	@Then("^Guest User should be able to see the \"(.*?)\" zipcode pre-populated on Checkout page$")
 	public void guest_User_should_be_able_to_see_the_zipcode_pre_populated_on_Checkout_page(String arg1)
 			throws Throwable {
-		Thread.sleep(Constants.thread_low); 
+		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(r2CheckOut_po.inputCheckoutZipCode));
 		String dataFromShippingTxtBox = r2CheckOut_po.inputCheckoutZipCode.getAttribute("value");
 		String dataFromPropertyFile = webPropHelper.getTestDataProperty(arg1);
@@ -70,17 +70,25 @@ public class R2_CHECKOUT_K3165_SD extends CommonActionHelper {
 	public void user_fill_the_email_address_for_shipment_and_click_on_review_order_btn() throws Throwable {
 		setInputText(r2CheckOut_po.EmailAddressforOrderConfirmation_Input, r2MyAccount_po.generateRandomEmailId());
 		clickOnButton(r2CheckOut_po.ReviewOrder_Btn);
-		Thread.sleep(Constants.thread_low); 
+		Thread.sleep(Constants.thread_low);
 	}
 
 	@And("^registers for the account from the Order confirmation screen with \"(.*?)\"$")
 	public void registers_for_the_account_from_the_Order_confirmation_screen_with(String passwordFromTestFile)
 			throws Throwable {
+		waitForPageLoad(getDriver());
 		setInputText(r2_OrderConfirmationPo.orderConfirmation_ChoosePassword_txt,
 				webPropHelper.getTestDataProperty(passwordFromTestFile));
 		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(r2_OrderConfirmationPo.orderConfirmation_Submit_btn));
-		Thread.sleep(Constants.thread_medium);
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			{
+				if (isDisplayed(r2_OrderConfirmationPo.orderConfirmation_Submit_btn))
+					assertTrue(clickOnButton(r2_OrderConfirmationPo.orderConfirmation_Submit_btn));
+			}
+
+		}
+		Thread.sleep(Constants.thread_high);
 	}
 
 	@And("^user navigates from Order successful page to address book in my account$")

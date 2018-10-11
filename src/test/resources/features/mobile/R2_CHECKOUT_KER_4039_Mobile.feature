@@ -18,8 +18,8 @@ Scenario:
 	And user click on Go To Shipping Method button in Checkout page 
 	Given user selects shipment method on check out page 
 	When user click on GiftCard Plus icon in Checkout page 
-	And user enter Gift card Number "GiftcardNumber" 
-	And user enter Pin Number "PinNumber" 
+	And user enter Gift card Number "Valid16DigitGiftCardNumber" 
+	And user enter Pin Number "Valid8DigitGiftCardPIN" 
 	And user click on Apply button 
 	And user click on remove gift card on checkout page 
 	Then user verify all the paypal and more radio btn is disable 
@@ -48,8 +48,8 @@ Scenario:
 	And user click on Go To Shipping Method button in Checkout page 
 	Given user selects shipment method on check out page 
 	When user click on GiftCard Plus icon in Checkout page 
-	And user enter Gift card Number "GiftcardNumber" 
-	And user enter Pin Number "PinNumber" 
+	And user enter Gift card Number "Valid16DigitGiftCardNumber" 
+	And user enter Pin Number "Valid8DigitGiftCardPIN" 
 	And user click on Apply button 
 	And user click on remove gift card on checkout page 
 	Then user click on paypal 
@@ -77,8 +77,8 @@ Scenario:
 	And user click on Go To Shipping Method button in Checkout page 
 	Given user selects shipment method on check out page 
 	When user click on GiftCard Plus icon in Checkout page 
-	And user enter Gift card Number "GiftcardNumber" 
-	And user enter Pin Number "PinNumber" 
+	And user enter Gift card Number "LowBalanceGiftCard" 
+	And user enter Pin Number "LowBalanceGiftCardPin" 
 	And user click on Apply button 
 	And user click on remove gift card on checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -89,8 +89,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @C-Checkout @R2_All @P-High @KER-4039 
 @ZYP_CHECKOUT_K4039-9885 @CR-RKA 
-Scenario: 
-	Verify that user cannot combine Gift Card payment with any non-Credit/Debit Card only 
+Scenario: 	Verify that user cannot combine Gift Card payment with any non-Credit/Debit Card only 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
@@ -127,8 +126,8 @@ Scenario: Verify that user can use multiple gift cards to make the payment
 	And user click on Go To Shipping Method button in Checkout page 
 	Given user selects shipment method on check out page 
 	When user click on GiftCard Plus icon in Checkout page 
-	And user enter Gift card Number "GiftcardNumber" 
-	And user enter Pin Number "PinNumber" 
+	And user enter Gift card Number "LowBalanceGiftCard" 
+	And user enter Pin Number "LowBalanceGiftCardPin" 
 	And user click on Apply button 
 	Then user click on ADD Another Gift Card 
 	And user enter Gift card Number "Valid16DigitGiftCardNumber" 
@@ -140,8 +139,7 @@ Scenario: Verify that user can use multiple gift cards to make the payment
 		
 @R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order @KER-4039 
 @ZYP_CHECKOUT_K4039-9892 @CR-RKA 
-Scenario: 
-	Verify that user cannot use more than one credit/debit card for single transaction 
+Scenario: Verify that user cannot use more than one credit/debit card for single transaction 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to LThree 
@@ -167,8 +165,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 
 @ZYP_CHECKOUT_K4039-9920 @CR-RKA 
-Scenario: 
-	Verify that user cannot combine PayPal payment with any other payment option 
+Scenario: Verify that user cannot combine PayPal payment with any other payment option 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
@@ -190,8 +187,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4039 
 @ZYP_CHECKOUT_K4039-9921 @CR-RKA 
-Scenario: 
-	Verify that user cannot see More Options payment option in Payment drawer section 
+Scenario: Verify that user cannot see More Options payment option in Payment drawer section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	And User is navigated to pdp page 

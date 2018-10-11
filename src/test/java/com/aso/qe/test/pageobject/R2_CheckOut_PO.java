@@ -734,16 +734,16 @@ public class R2_CheckOut_PO extends CommonActionHelper
        
        @FindBy(xpath = "//*[@data-auid='checkout_payment']") public WebElement secPayment;
        @FindBy(xpath = "//*[text()='PAYMENT METHOD']") public WebElement secPaymentHeading;
-       @FindBy(xpath = "//*[@id='creditCard']") public WebElement rdbtnCreditCard;
+       @FindBy(xpath = "//*[@id='creditCard'] | //*[@data-auid='checkout_payment_options_radio_button_Credit Card']") public WebElement rdbtnCreditCard;
        @FindBy(xpath = "//*[text()='Credit Card']") public WebElement txtCreditCard;
-       @FindBy(xpath = "//*[@id='PayPal']") public WebElement rdbtnPayPal;
+       @FindBy(xpath = "//*[@id='PayPal'] | //*[@data-auid='checkout_payment_options_radio_button_PayPal']") public WebElement rdbtnPayPal;
        @FindBy(xpath = "//*[text()='PayPal']") public WebElement txtPaypal;
        @FindBy(xpath = "//*[@id='gpay'] | //*[@id='GooglePay']") public WebElement rdbtnGooglePay;
        @FindBy(xpath = "//*[text()='Google Pay']") public WebElement txtGooglePay;
        @FindBy(xpath = "//*[text()='Credit Card Number']") public WebElement txtCreditCardHeading;
        @FindBy(xpath = "//*[@id='creditcardField'] | //*[text()='Credit Card Number']/following::*[1]") public WebElement txtCreditCardInput; //CR-RKA 10-Oct
        @FindBy(xpath = "//*[@id='creditcardField']//following-sibling::span/img[contains(@src,'visa')]") public WebElement imgVisaCreditCardInput;
-       @FindBy(xpath = "//*[text()='Expiration Date']") public WebElement txtExpirationDate;
+       @FindBy(xpath = "//*[text()='Expiration Date'] | //*[text()='Exp Date']") public WebElement txtExpirationDate;
        @FindBy(xpath = "//*[@id='expirationDate'] | //*[@id='expiryField']") public WebElement txtExpirationDateInput;
        @FindBy(xpath = "//*[@placeholder='MM/YY']") public WebElement txtExpirationPlaceholders;
        @FindBy(xpath = "//*[@id='expirationDate']//parent::label//following-sibling::div/span[contains(text(),'Past expiration date')]") public WebElement txtErrorMsgForPastDates;
@@ -761,8 +761,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		assertTrue(isDisplayed(txtCreditCard));
 		assertTrue(isEnabled(rdbtnPayPal));
 		assertTrue(isDisplayed(txtPaypal));
-		assertTrue(isEnabled(rdbtnGooglePay));
-		assertTrue(isDisplayed(txtGooglePay));
+//		assertTrue(isEnabled(rdbtnGooglePay));
+//		assertTrue(isDisplayed(txtGooglePay));
 		assertTrue(isDisplayed(txtCreditCardHeading));
 		assertTrue(isDisplayed(txtCreditCardInput));
 		assertTrue(isDisplayed(txtExpirationDate));

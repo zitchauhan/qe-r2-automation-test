@@ -32,8 +32,8 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 	R2_R1_Fun_PO r2_r1_fun_po = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	R2_MyAccount_PO r2MyAccountPO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	Hooks hooks = new Hooks();
-	String orderID=" ";
-	
+	String orderID = " ";
+
 	@And("^user adds shipment address on checkout page for \"(.*?)\" user$")
 	public void user_adds_shipment_address_on_checkout_page_for_user(String arg1) throws Throwable {
 		boolean userWithoutExistingShippingAddress = false;
@@ -149,7 +149,8 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			}
 
 			if (chooseGiftCard) {
-				setInputText(r2CheckOutPo.inputPinNumber, webPropHelper.getTestDataProperty("GiftCardPinForOrderPlacement"));
+				setInputText(r2CheckOutPo.inputPinNumber,
+						webPropHelper.getTestDataProperty("GiftCardPinForOrderPlacement"));
 				waitForElement(r2CheckOutPo.btnCheckoutApply);
 				assertTrue(clickOnButton(r2CheckOutPo.btnCheckoutApply));
 				waitForElement(r2CheckOutPo.txtGiftCardAppliedSuccessMessage);
@@ -179,7 +180,10 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 
 			if (isDisplayed(r2CheckOutPo.PaypalClose_icon))
 				assertTrue(clickOnButton(r2CheckOutPo.PaypalClose_icon));
-			assertTrue(clickOnButton(r2CheckOutPo.PaypalScreenLogin_Btn));
+			if (isDisplayed(r2CheckOutPo.PaypalScreenLogin_Btn))
+				assertTrue(clickOnButton(r2CheckOutPo.PaypalScreenLogin_Btn));
+
+//			assertTrue(clickOnButton(r2CheckOutPo.PaypalScreenLogin_Btn));
 			waitForElement(r2CheckOutPo.PaypalEmail_Input);
 			assertTrue(clickOnButton(r2CheckOutPo.PaypalEmail_Input));
 			setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty("PayPalEmail"));
@@ -260,7 +264,8 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2CheckOutPo.plusIconGiftCard));
 			setInputText(r2CheckOutPo.inputGiftcardNumber,
 					webPropHelper.getTestDataProperty("GiftCardNumberForOrderPlacement"));
-			setInputText(r2CheckOutPo.inputPinNumber, webPropHelper.getTestDataProperty("GiftCardPinForOrderPlacement"));
+			setInputText(r2CheckOutPo.inputPinNumber,
+					webPropHelper.getTestDataProperty("GiftCardPinForOrderPlacement"));
 			waitForElement(r2CheckOutPo.btnCheckoutApply);
 			assertTrue(clickOnButton(r2CheckOutPo.btnCheckoutApply));
 			waitForElement(r2CheckOutPo.txtGiftCardAppliedSuccessMessage);
@@ -382,16 +387,20 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 	@When("^user clicks on submit button on order confirmation page$")
 	public void user_clicks_on_submit_button_on_order_confirmation_page() throws Throwable {
 		assertTrue(clickOnButton(r2OrderConfPO.orderConfirmation_Submit_btn));
+		//Added as submit button needs to be clicked twice for mobile 
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			if(isDisplayed(r2OrderConfPO.orderConfirmation_Submit_btn))
+				assertTrue(clickOnButton(r2OrderConfPO.orderConfirmation_Submit_btn));
+		}
 	}
 
 	@Then("^verify user is able to sign up successfully on order confirmation page$")
 	public void verify_user_is_able_to_sign_up_successfully_on_order_confirmation_page() throws Throwable {
 		assertTrue(isDisplayed(r2OrderConfPO.orderConfirmation_AccountCreatedMessage_txt));
 	}
-	
-	
+
 	@Then("user able to see the same order ID in My order section$")
-	public void user_able_to_see_the_same_order_ID_in_My_order_section() throws Throwable{
+	public void user_able_to_see_the_same_order_ID_in_My_order_section() throws Throwable {
 		r2CheckOutPo.orderIDvalidationInMyAccount(orderID);
 	}
 

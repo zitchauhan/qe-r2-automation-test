@@ -1,33 +1,33 @@
 Feature: B10-500 - Buy Now Checkout Error Conditions
 
-   #Defect-KER-14238--Functionality is not working
-@R2_Web  @R2_All @P-low @C-Order @CC-Checkout_Order   @KER-7040 @ZYP_CHECKOUT_K7040-8907 @CR-MS
-Scenario: Verify that Authenticated user is NOT able proceed to checkout if payment information fails fraud check
- Given user launches the browser and navigates to "ASO_HOME" page
-    And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "userhavingfraudcreditcard" 
-	And user enter the valid password "Password" 
-	And user click on signin button
-	When User searches a product "SKUForBuyNow" and navigates to PDP
-    Then Verify below Sub/Main Module of PDP
-    |#Verify following elements in PDP modal popup|
-    |Default_Payment_Option_btn|
-    When User clicks on Enable Buy Now button
-#    Then verify the error message
-
-@R2_Web  @R2_All @P-High_Order @C-Order @CC-Checkout_Order   @KER-7040 @ZYP_CHECKOUT_K6655-12028 @CR-MS
-Scenario: Verify that Authenticated user is able proceed to checkout by adding payment details in Payment Form modal if existing credit card has been expired
- Given user launches the browser and navigates to "ASO_HOME" page
-    And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "userhavingexpiredcreditcard" 
-	And user enter the valid password "Password" 
-	And user click on signin button
-	When User searches a product "SKUForBuyNow" and navigates to PDP
-    Then Verify below Sub/Main Module of PDP
-    |#Verify following elements in PDP modal popup|
-    |Default_Payment_Option_btn|
-    When User clicks on Enable Buy Now button
-#    Then verify the error message
+#   #Defect-KER-14238--Functionality is not working
+#@R2_Web  @R2_All @P-low @C-Order @CC-Checkout_Order   @KER-7040 @ZYP_CHECKOUT_K7040-8907 @CR-MS
+#Scenario: Verify that Authenticated user is NOT able proceed to checkout if payment information fails fraud check
+# Given user launches the browser and navigates to "ASO_HOME" page
+#    And user clicks on SignIn link from global header 
+#	And user enter the valid emailaddress "userhavingfraudcreditcard" 
+#	And user enter the valid password "Password" 
+#	And user click on signin button
+#	When User searches a product "SKUForBuyNow" and navigates to PDP
+#    Then Verify below Sub/Main Module of PDP
+#    |#Verify following elements in PDP modal popup|
+#    |Default_Payment_Option_btn|
+#    When User clicks on Enable Buy Now button
+##    Then verify the error message
+#
+#@R2_Web  @R2_All @P-High_Order @C-Order @CC-Checkout_Order   @KER-7040 @ZYP_CHECKOUT_K6655-12028 @CR-MS
+#Scenario: Verify that Authenticated user is able proceed to checkout by adding payment details in Payment Form modal if existing credit card has been expired
+# Given user launches the browser and navigates to "ASO_HOME" page
+#    And user clicks on SignIn link from global header 
+#	And user enter the valid emailaddress "userhavingexpiredcreditcard" 
+#	And user enter the valid password "Password" 
+#	And user click on signin button
+#	When User searches a product "SKUForBuyNow" and navigates to PDP
+#    Then Verify below Sub/Main Module of PDP
+#    |#Verify following elements in PDP modal popup|
+#    |Default_Payment_Option_btn|
+#    When User clicks on Enable Buy Now button
+##    Then verify the error message
 
 @R2_Web  @R2_All @P-Low @C-Order @CC-Checkout_Order   @KER-7040 @ZYP_CHECKOUT_K6655-8906 @CR-MS
 Scenario: Verify that user is able to proceed with checkout if user does not selects required product attributes

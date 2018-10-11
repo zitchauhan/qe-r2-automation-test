@@ -18,8 +18,8 @@ Feature: [Web]Payment restrictions
     And user click on Go To Shipping Method button in Checkout page
     Given user selects shipment method on check out page
     When user click on GiftCard Plus icon in Checkout page
-    And user enter Gift card Number "GiftcardNumber"
-    And user enter Pin Number "PinNumber"
+    And user enter Gift card Number "Valid16DigitGiftCardNumber"
+    And user enter Pin Number "Valid8DigitGiftCardPIN"
     And user click on Apply button
     Then user verify all the paypal and more radio btn is disable
     Then Verify below Sub/Main Module of Checkout Page
@@ -74,8 +74,8 @@ Feature: [Web]Payment restrictions
     And user click on Go To Shipping Method button in Checkout page
     Given user selects shipment method on check out page
     When user click on GiftCard Plus icon in Checkout page
-    And user enter Gift card Number "GiftcardNumber"
-    And user enter Pin Number "PinNumber"
+    And user enter Gift card Number "LowBalanceGiftCard"
+    And user enter Pin Number "LowBalanceGiftCardPin"
     And user click on Apply button
     Then Verify below Sub/Main Module of Checkout Page
       | #verify credit card detail is visible# |
@@ -124,8 +124,8 @@ Feature: [Web]Payment restrictions
     And user click on Go To Shipping Method button in Checkout page
     Given user selects shipment method on check out page
     When user click on GiftCard Plus icon in Checkout page
-    And user enter Gift card Number "GiftcardNumber"
-    And user enter Pin Number "PinNumber"
+    And user enter Gift card Number "LowBalanceGiftCard"
+    And user enter Pin Number "LowBalanceGiftCardPin"
     And user click on Apply button
     Then user click on ADD Another Gift Card
     And user enter Gift card Number "Valid16DigitGiftCardNumber"

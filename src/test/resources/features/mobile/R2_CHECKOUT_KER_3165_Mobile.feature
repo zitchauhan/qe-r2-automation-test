@@ -411,7 +411,7 @@ Scenario:
 	And  user click on Go To Shipping Method button in Checkout page 
 	And  user selects the suggested address instead of entered address 
 	And  clicks on Use Selected Address button 
-	And user clicks on edit shipping method cta 
+#	And user clicks on edit shipping method cta 
 	And user click on go to payment present in shipping method 
 	And user fill the credit card detail in payment 
 	And user fill the email address for shipment and click on review order btn 

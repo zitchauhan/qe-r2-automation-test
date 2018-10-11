@@ -66,7 +66,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		
 		
 		
-		@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order    @KER-5892 @ZYP_CHECKOUT_K5892-10816 @CR-RKA
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order    @KER-5892 @ZYP_CHECKOUT_K5892-10816 @CR-RKA
 Scenario:  Verify the user is able to add a new credit card while payment that is displayed in active order only
 Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -76,9 +76,7 @@ Given  user launches the browser and navigates to "ASO_HOME" page
 	And  user click on signin button 
 	And  User searches a product "productName" and navigates to PDP 
 	And  user click on Add to Cart Button 
-	And  user click on checkout from ATC pop up 
-	And user clicks on edit shipping method cta 
-	And user click on go to payment present in shipping method 
+	And  user click on checkout from ATC pop up
 	And user click on confirm billing address button 
 	And user able to see the button place order
 	Then Verify below Sub/Main Module of Checkout Page 

@@ -124,7 +124,7 @@ Scenario:
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button for "Bundle Product" 
+	And user click on Add to Cart Button
 	And user is navigated to Add to cart Notification popup 
 	And user click on checkout button 
 	And user adds shipment address on checkout page for "newly registered" user 

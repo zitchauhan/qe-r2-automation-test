@@ -16,6 +16,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user enter Address "Address"
     And user enter Zipcode "zipcode"
     Then user click on Go To Shipping Method button in Checkout page
+    And user click on go to payment present in shipping method
     Then user click on GiftCard Plus icon in Checkout page
     And user enter Gift card Number "WrongGiftcardNumber"
     And user enter Pin Number "WrongPinNumber"
@@ -40,6 +41,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user enter Address "Address"
     And user enter Zipcode "zipcode"
     Then user click on Go To Shipping Method button in Checkout page
+    And user click on go to payment present in shipping method
     When user clicks on Add Gift Card link
     And enter valid Gift Card Number "GiftCardNumber"
     And enters an alphanumeric PIN "PIN"
@@ -87,6 +89,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user enter Address "Address"
     And user enter Zipcode "zipcode"
     Then user click on Go To Shipping Method button in Checkout page
+    And user click on go to payment present in shipping method
     When user clicks on Add Gift Card link
     And enter valid Gift Card Number "13DigitsGiftCardNumber"
     And user enter Pin Number "4DigitPinNumber"
@@ -108,6 +111,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user enter Address "Address"
     And user enter Zipcode "zipcode"
     Then user click on Go To Shipping Method button in Checkout page
+    And user click on go to payment present in shipping method
     When user clicks on Add Gift Card link
     And enter valid Gift Card Number "validGiftCardNumber"
     And user enter Pin Number "OldPinNumber"
@@ -132,6 +136,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user enter Address "Address"
     And user enter Zipcode "zipcode"
     Then user click on Go To Shipping Method button in Checkout page
+    And user click on go to payment present in shipping method
     When user clicks on Add Gift Card link
     And enter valid Gift Card Number "AlphanuremericGiftCardNumber"
     And user enter Pin Number "validPinNumber"
