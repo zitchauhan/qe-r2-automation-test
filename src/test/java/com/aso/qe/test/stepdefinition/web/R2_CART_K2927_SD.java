@@ -205,10 +205,13 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 			oosProductsAvailable = true;
 		}
 		
-		for(WebElement removeBtn : cartR2PageObj.removeCart_lst_btn) {
+		int countOfItems = cartR2PageObj.removeCart_lst_btn.size(); 
+//		for(WebElement removeBtn : cartR2PageObj.removeCart_lst_btn) {
+		while(countOfItems > 0) {
 			clickOnButton(cartR2PageObj.lnkRemoveCart);
 //			assertTrue(clickOnButton(removeBtn));
 			Thread.sleep(Constants.thread_high);
+			countOfItems--;
 		}
 		
 		if(oosProductsAvailable) {

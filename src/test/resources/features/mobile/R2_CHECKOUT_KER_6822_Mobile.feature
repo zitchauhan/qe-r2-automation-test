@@ -9,7 +9,7 @@ Scenario: Verify Gift card fields displayed - No Previous Gift Cards Saved
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	Then User clicks on ASO Logo and should be navigated to Home Page 
+	And user navigate and deletes existing items in cart
 	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -116,6 +116,7 @@ Scenario: Verify Add new Gift Card fields
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart
 	Then User clicks on ASO Logo and should be navigated to Home Page 
 	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 

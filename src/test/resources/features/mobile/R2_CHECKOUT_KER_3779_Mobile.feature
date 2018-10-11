@@ -101,14 +101,13 @@ Verify that user should be able to fulfill an order when cart having single item
 		|checkout_ShippingMethod_ItemImage_img|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3779
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 
 @ZYP_CHECKOUT_K3779-10878 @CR-RKA 
-Scenario:
-Verify that user should be able to fulfill an order when cart having single item like SOF products with single fulfillment option(dropship to store) 
-
+Scenario: 
+	Verify that user should be able to fulfill an order when cart having single item like SOF products with single fulfillment option(dropship to store) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
+	And user selects a store with ZIP "FindStoreZipcode" 
 	Then User clicks on the burger menu 
 	Then user navigate to GunStorageAndSafty L_Three 
 	Then user select the product from L_Three and navigate to PDP 
@@ -124,7 +123,6 @@ Verify that user should be able to fulfill an order when cart having single item
 		|FirstName_Input|
 		|LastName_Input|
 		|PhoneNumber_Input|
-		#		|SendSMSTextUpdatesAboutMyOrder_checkbox|
 		|Adderss_Input|
 		|ZipCode_Input|
 		|City_Input|

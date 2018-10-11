@@ -490,7 +490,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[text()='CVV']/following::*[3]")public WebElement Cvv_Input;
 		@FindBy(xpath="//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']")public WebElement CvvToolTip;
 		@FindBy(xpath="//*[text()='Unrecognized card number']")public WebElement UnrecognizedCardNumber_Txt; 
-		@FindBy(xpath="//*[text()='Past expiration date']")public WebElement PastExpirationDate_Txt;
+		@FindBy(xpath="//*[text()='Please enter an expiration date']")public WebElement PastExpirationDate_Txt;//CR-RK Oct11 KER-3139
 		@FindBy(xpath="//*[text()='Please enter a valid security code']")public WebElement PleaseEnteRaValidSecurityCode_Txt; 
 		@FindBy(xpath="//*[text()='Choose Card']/..//button")public WebElement chooseCreditcard_Dd; //modified SK 22 Sep
 		@FindBy(xpath="//*[text()='SHIPPING ADDRESS']/..//button")public WebElement chooseShippingAddress_Dd; //CR-SK 22 Sep
@@ -533,7 +533,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   @FindBy(xpath=" //*[contains(text(),'Send SMS text updates about my order')]/preceding::*[1]")public WebElement SendSMSTextUpdatesAboutMyOrder_checkbox;
 	   @FindBy(xpath="//*[@name='billingAddress1']")public WebElement Adderss_Input;
-	   @FindBy(xpath="//*[contains(text(),'Add Company Name, Apt. Number, etc. (Optional)')]")public WebElement AddCompanyNameAptNumberEtcOptional_Txt;
+	   
+	   //CR-GK 11-Oct
+	   @FindBy(xpath="//*[contains(text(),'Add Company Name, Apt. Number, etc. (Optional)')] | //a[@id='optionalAddressField']")public WebElement AddCompanyNameAptNumberEtcOptional_Txt;
 	   @FindBy(xpath="//*[contains(text(),'Add Company Name, Apt. Number, etc. (Optional)')]/following::*[2]")public WebElement AddCompanyNameAptNumberEtcOptional_Input;
 	   
 	   
@@ -893,7 +895,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
  //
 	 //K4237-HSP- 24-Sep Start---------------- 
 	  @FindBy(xpath = "//*[contains(text(),'Order Number')]/following-sibling::p")public WebElement orderSubmitted_OrderNumber; 
-	  @FindBy(xpath ="//*[contains(text(),'Order Number')]/following-sibling::input")public WebElement checkOutCheckOrderStatus_OrderNumberInput; 
+	  @FindBy(xpath ="//*[contains(text(),'Order Number')]/following-sibling::input | //*[contains(text(),'Order Number')]/../../input")//CR-DPK 11-oct
+	  public WebElement checkOutCheckOrderStatus_OrderNumberInput; 
 	 
 	//K4237-HSP- 24-Sep End---------------- 
 	  

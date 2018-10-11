@@ -84,9 +84,6 @@ Verify Guest user should view zipcode pre-populated if previously provided on Ca
 Scenario:
 Verify guest user, if after placing order, registers the account saves the address in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	# 	Then User clicks on the burger menu
-	# 	When User Navigates L2 form Homepage Header 
-	#	And User clicks on product in PLP
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 

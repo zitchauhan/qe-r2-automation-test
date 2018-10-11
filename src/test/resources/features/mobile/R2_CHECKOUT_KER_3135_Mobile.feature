@@ -102,7 +102,8 @@ Scenario: To verify user can add new billing address information
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user click on signin button
+	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -111,7 +112,7 @@ Scenario: To verify user can add new billing address information
 	And user click on checkout button in Cart page 
 	And user is navigated to order summary page 
 	And user click on edit Payment link and click on billing information 
-	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "AddressToOpenAVSModel" , "zipcode" , "EmailAddress" 
+	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "AVSAddress" , "zipcode" , "EmailAddress" 
 	And user click on confirm billing address button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#%%%%%%   Billing Information %%%%%%%%%%|
@@ -126,7 +127,8 @@ Scenario: To verify Extra fields in Billing Address Form
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user click on signin button
+	And user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
 	And   user click on Add to Cart Button 
 	And   user is navigated to Add to cart Notification popup 
@@ -135,7 +137,7 @@ Scenario: To verify Extra fields in Billing Address Form
 	And   user click on checkout button in Cart page 
 	And   user is navigated to order summary page 
 	And   user click on edit Payment link and click on billing information 
-	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "AddressToOpenAVSModel" , "zipcode" , "EmailAddress" 
+	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "zipcode" , "EmailAddress" 
 	And user click on Add Company Name, Apt Name, Number etc link 
 	And user enters extra address information "PO_ADDRESS" 
 	And user click on confirm billing address button 

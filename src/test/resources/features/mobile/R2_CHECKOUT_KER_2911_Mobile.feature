@@ -24,8 +24,7 @@ Scenario: Verify if the shipping price on Checkout screen is same as Order Summa
 		And User should have same Shipping price on Cart Page Order Summary
 		
 		
-	
-#@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2911
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2911
 @ZYP_CHECKOUT_K2911-8230 @CR-DPK 
 Scenario:
 Verify the shipping price for each shipping method for Ship 2 Store items 
@@ -60,29 +59,17 @@ Verify the shipping price for each shipping method for Ship 2 Store items
 	
 
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2911
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2911 
 @ZYP_CHECKOUT_K2911-8231 @CR-DPK 
-Scenario:
-Verify the shipping price for each shipping method for SOF items 
+Scenario: 
+	Verify the shipping price for each shipping method for SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User clicks on the burger menu
-	Then User should be able to click on Find Store
-	Then user enter "zipCode" in Find a Store Model
-	And user click on submit button
-	Then user click on plus icon in Store Address drawer
-	And user click on Make My store button	 
-	And User clicks on the burger menu 
-	Then user navigate to GunStorageAndSafty L_Three 
-	Then user select the product from L_Three and navigate to PDP 
-#	And User clicks on the burger menu 
-#	When user clicks on Find a Store 
-#	Then user enter "zipCode" in Find a Store Model 
-#	And user click on submit button 
-#	Then user click on plus icon in Store Address drawer 
-#	And user click on Make My store button 
+	Then User clicks on the burger menu 
+	And user selects a store with ZIP "zipCode" 
+	Then User searches a product "SOFSKUNumber" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
-	And user will click on Checkout button and navigates to Checkout page
+	And user will click on Checkout button and navigates to Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout page "Order Summary"|
 		|Subtotal_txt|
