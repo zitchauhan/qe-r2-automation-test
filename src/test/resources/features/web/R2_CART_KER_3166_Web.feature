@@ -218,7 +218,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|Discount_Txt|
 	|RemovePromocode_Btn|			
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9602 @CR-DPK 
+@R2_Web  @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9602 @CR-DPK 
 Scenario: Verify implicit %off promotion got applied to the product when user adds eligible product in cart-- Implicit promotion
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Grills Outdoor cooking
@@ -232,7 +232,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|Discount_Txt|
 
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-9603 @CR-DPK 
+@R2_Web   @R2_All @P-Low   @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9603 @CR-DPK 
 Scenario: Verify promotion got applied to the Category when user applied %off promotion on Category level in cart -- Implicit promotion
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates to LThree Mens Watches 
@@ -243,7 +243,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|# Then discount is displayed in Order Summary|
 	|Discount_Txt|
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9604 @CR-DPK 
+@R2_Web   @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9604 @CR-DPK 
 Scenario: Verify promotion got applied for order level when user applied %off promotion on order -- Implicit promotion
 Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
@@ -258,7 +258,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|EstimatedTaxes_txt|	
 		|Discount_Txt|
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9605 @CR-DPK 
+@R2_Web      @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9605 @CR-DPK 
 Scenario: Verify promotion got applied to the product when user applied $ Amount off promotion on product level in cart -- Implicit promotion
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Grills Outdoor cooking
@@ -275,7 +275,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|Discount_Txt|
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9606 @CR-DPK 
+@R2_Web  @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9606 @CR-DPK 
 Scenario: Verify promotion got applied to the Category when user applied $ amount off promotion on Category level in cart -- Implicit promotion
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates to LThree Mens Watches 
@@ -291,7 +291,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9607 @CR-DPK 
+@R2_Web @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9607 @CR-DPK 
 Scenario: Verify promotion got applied for order level when user creates $ amount off promo eligible order-- Implicit promotion
 Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 

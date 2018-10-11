@@ -248,7 +248,7 @@ Verify promotion got applied for order level when user applied $ amount off prom
 		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9602
+@R2_Mobile @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9602
 @CR-DPK 
 Scenario:
 Verify implicit %off promotion got applied to the product when user adds eligible product in cart-- Implicit promotion 
@@ -265,7 +265,7 @@ Verify implicit %off promotion got applied to the product when user adds eligibl
 		|Discount_Txt|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3166 @ZYP_CART_K3166-9603
+@R2_Mobile  @R2_All @P-Low @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9603
 @CR-DPK 
 Scenario:
 Verify promotion got applied to the Category when user applied %off promotion on Category level in cart -- Implicit promotion 
@@ -281,7 +281,7 @@ Verify promotion got applied to the Category when user applied %off promotion on
 		|Discount_Txt|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9604
+@R2_Mobile @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9604
 @CR-DPK 
 Scenario:
 Verify promotion got applied for order level when user applied %off promotion on order -- Implicit promotion 
@@ -299,7 +299,7 @@ Verify promotion got applied for order level when user applied %off promotion on
 		|EstimatedTaxes_txt|	
 		|Discount_Txt|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9605
+@R2_Mobile   @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9605
 @CR-DPK 
 Scenario:
 Verify promotion got applied to the product when user applied $ Amount off promotion on product level in cart -- Implicit promotion 
@@ -319,7 +319,7 @@ Verify promotion got applied to the product when user applied $ Amount off promo
 		|Discount_Txt|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9606
+@R2_Mobile @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9606
 @CR-DPK 
 Scenario:
 Verify promotion got applied to the Category when user applied $ amount off promotion on Category level in cart -- Implicit promotion 
@@ -338,7 +338,7 @@ Verify promotion got applied to the Category when user applied $ amount off prom
 		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-9607
+@R2_Mobile @R2_All @P-High_Order @CC-Cart_Order @C-Order @C-Cart @KER-3166 @ZYP_CART_K3166-9607
 @CR-DPK 
 Scenario:
 Verify promotion got applied for order level when user creates $ amount off promo eligible order-- Implicit promotion 
