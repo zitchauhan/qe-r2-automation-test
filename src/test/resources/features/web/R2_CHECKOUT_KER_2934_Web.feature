@@ -81,7 +81,7 @@ Scenario: Verify guest user, if after placing order, registers the account saves
 	And user enter Phone number "PhoneNumber" 
 	And user enter Address "Address" 
 	Then user click on Go To Shipping Method button in Checkout page
-	And verify the error message for mandatory field
+	#And verify the error message for mandatory field
 	And user enter Zipcode "ZIPCODE"
 	Then user click on Go To Shipping Method button in Checkout page
 	And user click on go to payment present in shipping method

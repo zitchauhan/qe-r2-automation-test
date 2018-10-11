@@ -8,7 +8,7 @@ Scenario: Verify if the shipping price on Checkout screen is same as Order Summa
 		Then user click on Add to Cart Button
 		And user will click on View Cart button 
 		When user views Estimated Shipping in the Item Subtotal
-		And user will click on Checkout button and navigates to Checkout page
+		And user click on checkout button in Cart page 
 		Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout page "Order Summary"|
 		|Subtotal_txt|

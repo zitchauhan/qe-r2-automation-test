@@ -32,10 +32,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
-And user clicks on one of the category and navigates to LOne
-	    And user clicks on one of the subcategory and navigates to LTwo
-	    And user is able to see the product category name in section title
-	    And user clicks on one of the product category and navigates to LThree
+When User Navigates L2 form Homepage Header
+And User clicks on product in PLP
 		And User is navigated to pdp page
  And user click on Add to Cart Button 
 Then user click on checkout from ATC pop up
@@ -48,7 +46,8 @@ Then Verify below Sub/Main Module of Checkout Page
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8116 @CR-RKA
 Scenario: Verify Billing address on check out Page - Same as Shipping Address
         Given user launches the browser and navigates to "ASO_HOME" page 
-       When User searches a product "productName" and navigates to PDP
+      When User Navigates L2 form Homepage Header
+And User clicks on product in PLP
 		And User is navigated to pdp page
 		And user click on Add to Cart Button
 		And user is navigated to Add to cart Notification popup  
@@ -88,20 +87,24 @@ Then user fill billing information after clicking on change billing information 
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8118 @CR-RKA
 Scenario: Verify Billing address on check out Page - new address information
-
 Given user launches the browser and navigates to "ASO_HOME" page
-And user clicks on one of the category and navigates to LOne
-	    And user clicks on one of the subcategory and navigates to LTwo
-	    And user is able to see the product category name in section title
-	    And user clicks on one of the product category and navigates to LThree
-		And User is navigated to pdp page
+When User Navigates L2 form Homepage Header
+And User clicks on product in PLP
+And User is navigated to pdp page
  And user click on Add to Cart Button 
-Then user click on checkout from ATC pop up
-Then user click on edit Payment link and click on billing information
+ And user is navigated to Add to cart Notification popup  
+And user will click on View Cart button 
+And user click on checkout button in Cart page
+And user adds shipment address on checkout page for "guest" user
+And user selects shipment method on check out page for "guest" user
+And User enters Credit Card number "CreditCardNumber"
+ 	And User enters expiration date "ExpDate"
+ 	And User enters CVV number "CVV"
+Then user click on checkbox Same as shipping address
 Then user fill billing information after clicking on change billing information text
 #only validation is nedded after clicking confirm btn
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10439 @CR-RKA
+@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10439 @CR-RKA
 Scenario: Verify if 'Same as Shipping Address' checkbox is disabled for STS order
 
 Given user launches the browser and navigates to "ASO_HOME" page
@@ -123,7 +126,7 @@ Then user navigate to GunStorageAndSafty L_Three
 		|ShipToStoreforSOF_Txt|
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10440 @CR-RKA
+@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10440 @CR-RKA
 Scenario: Verify if 'Same as Shipping Address' checkbox is disabled for STS order
 
 Given user launches the browser and navigates to "ASO_HOME" page
