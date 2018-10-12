@@ -170,14 +170,15 @@ Feature: Place Order
       | data                                          |
       | Magellan Outdoors Men's Neoprene Wading Boots |
 
-  @R2_Web @P-Highest @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-10294 @CR-AG
+   @R2_Web @P-Highest @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-10294 @CR-AG
   Scenario: Verify Before clicking 'Place Order', if the user edits shipping address, the same should be updated in the order summary.
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header
-    And user logs in as "EmailAddress"
-    #	And user enter the valid emailaddress "EmailAddress"
-    #	And user enter the valid password "Password"
-    #    And user click on signin button
+   # And user logs in as "EmailAddress"
+    	And user enter the valid emailaddress "UserWithSavedAddressAndPayment"
+    	And user enter the valid password "Password"
+       And user click on signin button
+       And user navigate and deletes existing items in cart
     When User searches a product "productName" and navigates to PDP
     And user click on Add to Cart Button
     And user click on checkout button
@@ -196,17 +197,17 @@ Feature: Place Order
       | #Verify following elements in my account order details |
       | Order_View_Details_Btn                                 |
     And user click on view Details
-    Then user able to see the same order ID in My order section
     And user validate the same updated shipping address in my orders page
 
   @R2_Web @P-Highest @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-10295 @CR-AG @C1-Message
   Scenario: Verify Before clicking 'Place Order', if the user edits shipping method, the same should be updated in the order summary.
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header
-    And user logs in as "EmailAddress"
-    #	And user enter the valid emailaddress "EmailAddress"
-    #	And user enter the valid password "Password"
-    #    And user click on signin button
+    #And user logs in as "EmailAddress"
+    	And user enter the valid emailaddress "UserWithSavedAddressAndPayment"
+   		And user enter the valid password "Password"
+        And user click on signin button
+        And user navigate and deletes existing items in cart
     When User searches a product "productName" and navigates to PDP
     And user click on Add to Cart Button
     And user click on checkout button
@@ -214,7 +215,7 @@ Feature: Place Order
     Then user clicks on the Review order button
     And user clicks on edit shipping method cta
     Then user modifies shipping method
-    And user click on Go To Shipping Method button in Checkout page
+    When user selects shipment method on check out page
     Then user clicks on the Review order button
     And user able to see the button place order
     And user check order confirmation status in order summary page
@@ -226,18 +227,18 @@ Feature: Place Order
   Scenario: Verify Before clicking 'Place Order', if the user edits payment method, the same should be updated in the order summary. Payment will be authorized to the updated payment method only upon click on Place Order.
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header
-    #	And user enter the valid emailaddress "EmailAddress"
-    #	And user enter the valid password "Password"
-    #    And user click on signin button
-    And user logs in as "EmailAddress"
-    When User searches a product "productName" and navigates to PDP
+    And user enter the valid emailaddress "UserWithSavedAddressAndPayment"
+   		And user enter the valid password "Password"
+        And user click on signin button
+        And user navigate and deletes existing items in cart
+    When User searches a product "productName" and navigates to PDP	
     And user click on Add to Cart Button
     And user click on checkout button
     Then user fill email address in payment
     Then user clicks on the Review order button
     And user clicks on edit payment cta
     Then user is able to modify payment method
-    And user click on Go To Shipping Method button in Checkout page
+    #And user click on Go To Shipping Method button in Checkout page
     Then user clicks on the Review order button
     And user able to see the button place order
     And user check order confirmation status in order summary page

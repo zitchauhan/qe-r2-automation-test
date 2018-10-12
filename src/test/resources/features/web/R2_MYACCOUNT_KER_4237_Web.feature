@@ -45,7 +45,7 @@ Scenario:
 	Verify that Authenticated user is able to view shipping and Billing Details of an order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
@@ -110,7 +110,7 @@ Scenario:
 Scenario: Verify that Authenticated user is able to Print Order receipt 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
@@ -133,7 +133,7 @@ Scenario:
 	Verify that Authenticated user is able to view order details for BOPIS orders 
 	Given   user launches the browser and navigates to "ASO_HOME" page 
 	When   user clicks on SignIn link from global header 
-	And   user enter the valid emailaddress "EmailAddress" 
+	And   user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And   user enter the valid password "Password" 
 	And   user click on signin button 
 	And   user navigates to orders in my account 
@@ -154,7 +154,7 @@ Scenario:
 Scenario: Verify that UnAuthenticated user is able to print order receipt 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 

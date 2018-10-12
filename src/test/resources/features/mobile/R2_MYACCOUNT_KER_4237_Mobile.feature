@@ -43,7 +43,7 @@ Feature: E03-100 - My Account, Order Details
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu
     And user clicks on sign in link from burger menu
-    And user enter the valid emailaddress "EmailAddress"
+    And user enter the valid emailaddress "UserWithSavedAddressAndPayment"
     And user enter the valid password "Password"
     And user click on signin button
     And User clicks on the burger menu
@@ -101,7 +101,7 @@ Feature: E03-100 - My Account, Order Details
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu
     And user clicks on sign in link from burger menu
-    And user enter the valid emailaddress "EmailAddress"
+    And user enter the valid emailaddress "UserWithSavedAddressAndPayment"
     And user enter the valid password "Password"
     And user click on signin button
     And User clicks on the burger menu
@@ -119,7 +119,7 @@ Feature: E03-100 - My Account, Order Details
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu
     And user clicks on sign in link from burger menu
-    And user enter the valid emailaddress "EmailAddress"
+    And user enter the valid emailaddress "UserWithSavedAddressAndPayment"
     And user enter the valid password "Password"
     And user click on signin button
     And User clicks on the burger menu
@@ -140,7 +140,7 @@ Feature: E03-100 - My Account, Order Details
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu
     And user clicks on sign in link from burger menu
-    And user enter the valid emailaddress "EmailAddress"
+    And user enter the valid emailaddress "UserWithSavedAddressAndPayment"
     And user enter the valid password "Password"
     And user click on signin button
     And User clicks on the burger menu

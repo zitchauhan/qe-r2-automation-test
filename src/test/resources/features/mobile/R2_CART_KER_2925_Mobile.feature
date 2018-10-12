@@ -182,10 +182,10 @@ Scenario Outline: verify if user should be able to submit the order on the check
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on the burger menu
     And user clicks on SignIn link from global header
-    And user logs in as "EmailAddress"
-    #	And user enter the valid emailaddress "EmailAddress"
-    #	And user enter the valid password "Password"
-    #    And user click on signin button
+   And user enter the valid emailaddress "UserWithSavedAddressAndPayment"
+    	And user enter the valid password "Password"
+       And user click on signin button
+       And user navigate and deletes existing items in cart
     When User searches a product "productName" and navigates to PDP
     And user click on Add to Cart Button
     And user click on checkout button
@@ -212,10 +212,10 @@ Scenario Outline: verify if user should be able to submit the order on the check
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on the burger menu
     And user clicks on SignIn link from global header
-    And user logs in as "EmailAddress"
-    #	And user enter the valid emailaddress "EmailAddress"
-    #	And user enter the valid password "Password"
-    #    And user click on signin button
+   And user enter the valid emailaddress "UserWithSavedAddressAndPayment"
+    	And user enter the valid password "Password"
+       And user click on signin button
+       And user navigate and deletes existing items in cart
     When User searches a product "productName" and navigates to PDP
     And user click on Add to Cart Button
     And user click on checkout button
@@ -223,7 +223,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
     Then user clicks on the Review order button
     And user clicks on edit shipping method cta
     Then user modifies shipping method
-    And user click on Go To Shipping Method button in Checkout page
+   When user selects shipment method on check out page
     Then user clicks on the Review order button
     And user able to see the button place order
     And user check order confirmation status in order summary page
@@ -236,10 +236,10 @@ Scenario Outline: verify if user should be able to submit the order on the check
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on the burger menu
     And user clicks on SignIn link from global header
-    #	And user enter the valid emailaddress "EmailAddress"
-    #	And user enter the valid password "Password"
-    #    And user click on signin button
-    And user logs in as "EmailAddress"
+   And user enter the valid emailaddress "UserWithSavedAddressAndPayment"
+    	And user enter the valid password "Password"
+       And user click on signin button
+       And user navigate and deletes existing items in cart"
     When User searches a product "productName" and navigates to PDP
     And user click on Add to Cart Button
     And user click on checkout button
@@ -247,7 +247,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
     Then user clicks on the Review order button
     And user clicks on edit payment cta
     Then user is able to modify payment method
-    And user click on Go To Shipping Method button in Checkout page
+    #And user click on Go To Shipping Method button in Checkout page
     Then user clicks on the Review order button
     And user able to see the button place order
     And user check order confirmation status in order summary page

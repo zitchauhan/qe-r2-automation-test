@@ -198,10 +198,10 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='PDP_Modal_closeIcon']/* | //*[@data-auid='PDP_ProductImage_m']//ancestor::div[@aria-modal='true']//button[contains(text(),'X')]") public WebElement btnCloseCrossZoom;
 	@FindBy(xpath="(//*[contains(text(),'days')])[1]") public WebElement txtShippingRelatedMsg;  //SID 7-September
 
-	@FindBy(xpath = "//*[contains(@data-auid,'productCard_')]//span[contains(@class,'c-product__colors-available')]")	public List<WebElement> colorsAvailablePLP;
+	@FindBy(xpath = "//*[contains(@data-auid,'productCard_')]//span[contains(@class,'c-product__colors-available')and contains(text(),'colors')]")	public List<WebElement> colorsAvailablePLP; //SID 4-October
 	@FindBy(xpath = "//*[@data-auid='PDP_Color_Attribute']")	public WebElement visibilityAltColorPDP;
 	@FindBy(xpath = "//*[@data-auid='PDP_Color_Attribute']//button[contains(@data-auid,'swatchButton-image-')]//img")	public List<WebElement> altColorsPDP;
-	@FindBy(xpath = "//*[@data-auid='PDP_MediaClick']//img | //*[@data-auid='PDP_ProductImage_m']//img")	public WebElement selectedSwatchRepresentative;
+	@FindBy(xpath = "//*[@data-auid='PDP_MediaClick']//img | //*[@data-auid='PDP_ProductImage_m']//img | (//*[@data-component='productDetailsMultiSkuPackage']//img)[1] | (//*[@data-component='productDetailsMultiSku']//img)[1] | (//*[@data-auid='PDP_MediaClick']//img)[1]")	public WebElement selectedSwatchRepresentative; //SID modified 9-October
 	@FindBy(xpath = "//*[@data-auid='PDP_Color_heading']//*[2]")	public WebElement selectedSwatchColor;
 	@FindBy(xpath = "//*[@data-auid='PDP_close_wishList']")	public WebElement closeWishlistModal;
 	@FindBy(xpath = "//*[@data-auid='input_newWishListName']")	public WebElement txtWishlist;
@@ -232,10 +232,12 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[contains(@data-auid,'PDP_PromoMessage')]") public WebElement txtPromoCodePDP;
 	@FindBys({ @FindBy(xpath="//*[@data-auid='PDP_Color_Attribute']//button [not(*[local-name()='svg'])]")}) public List<WebElement> colorsAvailable;
 	@FindBys({ @FindBy(xpath="(//*[@data-auid='PDP_Size_Attribute']//button[@role] [not(*[local-name()='svg'])])")}) public List<WebElement> sizeAvailable;
+	@FindBys({ @FindBy(xpath="(//*[@data-auid='PDP_Size_Attribute']//button[@role] [(*[local-name()='svg'])])")}) public List<WebElement> sizeNotAvailable; //SID 5-October
 	
 	@FindBy(xpath="//*[text()='Size']/../following-sibling::*//*[@data-auid='swatchButton-image-3782' and not(*[local-name()='svg'])]")
 	public WebElement availableSizeForMultiSkuProduct;
 	
+		@FindBys({ @FindBy(xpath="//*[text()='Size']/parent::div/following-sibling::div//button[not(*[local-name()='svg'])]")}) public List<WebElement> sizeAvailableMultipleSKU;  //SID 2-October
 	@FindBy(xpath="//*[text()='Size']/../preceding-sibling::*//*[@data-auid='swatchButton-image-3782' and not(*[local-name()='svg'])]")
 	public WebElement availableColorForMultiSkuProduct;
 	
@@ -245,6 +247,8 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[text()='Shoe Size']/../preceding-sibling::*//*[@data-auid='swatchButton-image-3782' and not(*[local-name()='svg'])]")
 	public WebElement availableColorForBundleProduct;
 	
+	
+	@FindBys({ @FindBy(xpath="//*[text()='Color']/parent::div/following-sibling::div//button[not(*[local-name()='svg'])]")}) public List<WebElement> colorsAvailableMultipleSKU; //SID 2-October
 	@FindBy(xpath="//*[text()='Shoe Width']/../following-sibling::*//*[@data-auid='swatchButton-image-3782' and not(*[local-name()='svg'])]")
 	public WebElement availableBallSizesForBundleProduct;
 	
@@ -810,4 +814,201 @@ public class R1_PDP_PO extends CommonActionHelper
 	 }
 	 
 	 
+	// SID 12-October
+	public Boolean checkBtnaddToCartMultipleSKUPackage() {
+		boolean isAddtoCart = false;
+		boolean flag = false;
+		try {
+			waitForElement(selectedSwatchRepresentative);
+			isDisplayed(selectedSwatchRepresentative);
+			if (sizeAvailableMultipleSKU.size()>0) {
+				isAddtoCart = true;
+			} else {
+				System.err.println("INSIDE ELSE");
+				for (WebElement colorElement : colorsAvailableMultipleSKU) {
+					clickOnButton(colorElement);
+					flag = sizeAvailableMultipleSKU.size() > 0;
+					if (flag) {
+						for (WebElement sizeElement : sizeAvailableMultipleSKU) {
+							logger.debug("Product Size Txt::" + sizeElement.getText());
+							clickOnButton(sizeElement);
+							if (sizeAvailableMultipleSKU.size()>0) {
+								isAddtoCart = true;
+								break;
+							}
+						}
+						if (isAddtoCart) {
+							break;
+						}
+					}
+				}
+
+			}
+		} catch (NoSuchElementException e) {
+			System.err.println("INSIDE EXCEPTION1");
+			for (WebElement colorElement : colorsAvailableMultipleSKU) {
+				clickOnButton(colorElement);
+				try {
+					flag = sizeAvailableMultipleSKU.size() > 0;
+					if (flag) {
+						for (WebElement sizeElement : sizeAvailableMultipleSKU) {
+							logger.debug("Product Size Txt::" + sizeElement.getText());
+							clickOnButton(sizeElement);
+							if (sizeAvailableMultipleSKU.size()>0) {
+								isAddtoCart = true;
+								break;
+							}
+						}
+						if (isAddtoCart) {
+							break;
+						}
+					}
+				} catch (Exception ex) {
+					System.err.println("INSIDE EXCEPTION2");
+					if (isAddtoCart) {
+						System.err.println("NOT WORKING");
+						break;
+					}
+				}
+			}
+		} catch (Exception e) {
+			logger.error("checkBtnNext exception msg::" + e.getMessage());
+		}
+		logger.debug("Add to cart multiple sku package button is visable::" + isAddtoCart);
+		return isAddtoCart;
+	}
+	 
+	// SID 2-October
+	public Boolean checkBtnNext() {
+		boolean btnNext = false;
+		boolean flag = false;
+		try {
+			waitForElement(selectedSwatchRepresentative);
+			isDisplayed(selectedSwatchRepresentative);
+			if (btnNextStep.isEnabled()) {
+				btnNext = true;
+			} else {
+				for (WebElement colorElement : colorsAvailableMultipleSKU) {
+					clickOnButton(colorElement);
+					flag = sizeAvailableMultipleSKU.size() > 0;
+					if (flag) {
+						for (WebElement sizeElement : sizeAvailableMultipleSKU) {
+							logger.debug("Product Size Txt::" + sizeElement.getText());
+							clickOnButton(sizeElement);
+							if (btnNextStep.isEnabled()) {
+								btnNext = true;
+								break;
+							}
+						}
+						if (btnNext) {
+							break;
+						}
+					}
+				}
+
+			}
+		} catch (NoSuchElementException e) {
+			for (WebElement colorElement : colorsAvailableMultipleSKU) {
+				clickOnButton(colorElement);
+				try {
+				flag = sizeAvailableMultipleSKU.size() > 0;
+				if (flag) {
+					for (WebElement sizeElement : sizeAvailableMultipleSKU) {
+						logger.debug("Product Size Txt::" + sizeElement.getText());
+						clickOnButton(sizeElement);
+						if (btnNextStep.isEnabled()) {
+							btnNext = true;
+							break;
+						}
+					}
+					if (btnNext) {
+						break;
+					}
+				}
+			}
+				catch(Exception ex) {
+					if (btnNext) {
+						System.err.println("NOT WORKING");
+						break;
+					}
+				}
+			}
+		} catch (Exception e) {
+			logger.error("checkBtnNext exception msg::" + e.getMessage());
+		}
+		logger.debug("Next button is visable::" + btnNext);
+		return btnNext;
+	}
+
+	// SID 5-October
+	public Boolean checkAddtoCartDisabled() {
+		boolean isAddtoCart = false;
+		System.err.println("ADD TO CART ENTER");
+		try {
+			waitForElement(selectedSwatchRepresentative);
+			isDisplayed(selectedSwatchRepresentative);
+
+			if (!btnAddToCart.isDisplayed()) {
+				isAddtoCart = true;
+
+			} else {
+				for (WebElement sizeElement : sizeNotAvailable) {
+					logger.debug("Product Size Txt::" + sizeElement.getText());
+					clickOnButton(sizeElement);
+					if (!isDisplayed(btnAddToCart)) {
+						isAddtoCart = true;
+						break;
+					}
+				}
+			}
+		} catch (NoSuchElementException e) {
+			for (WebElement sizeElement : sizeNotAvailable) {
+				logger.debug("Product Size Txt::" + sizeElement.getText());
+				clickOnButton(sizeElement);
+				if (!btnAddToCart.isDisplayed()) {
+					isAddtoCart = true;
+					break;
+				}
+			}
+		} catch (Exception e) {
+			logger.error("checkAddtoCartDisabled exception msg::" + e.getMessage());
+		}
+		logger.debug("Add to Cart button is not visable::" + isAddtoCart);
+		return isAddtoCart;
+	}
+
+	// SID 9-Oct
+	public boolean giftCardColor() throws InterruptedException {
+		boolean isAddtoCart = false;
+		try {
+			waitForElement(selectedSwatchRepresentative);
+			isDisplayed(selectedSwatchRepresentative);
+
+			if (btnAddToCart.isDisplayed()) {
+				isAddtoCart = true;
+
+			} else {
+
+				for (WebElement colorElement : colorsAvailable) {
+					clickOnButton(colorElement);
+					if (isAddtoCart) {
+						break;
+					}
+				}
+
+			}
+		} catch (NoSuchElementException e) {
+			for (WebElement colorElement : colorsAvailable) {
+				clickOnButton(colorElement);
+				if (isAddtoCart) {
+					break;
+				}
+			}
+		} catch (Exception e) {
+			logger.error("addToCartAvailability exception msg::" + e.getMessage());
+		}
+		logger.debug("Add to Cart buttion is visable::" + isAddtoCart);
+		return isAddtoCart;
+	}
+
 }

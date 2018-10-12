@@ -845,7 +845,11 @@ public class R2_Cart_PO extends CommonActionHelper {
 		@FindBy(xpath="(//*[@data-auid='btnc_btnCheckout'])[2]")public WebElement checkOut_M_Btn;
 		
 	//&&&&&&&&&&&&&&&&&&&&&&&********@CR-RKA******&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+		
 	
+		@FindBy(xpath = "//*[text()='X']")//CR-DPK 12-oct
+		public WebElement closeOutOffStockItem;
+		
 		@FindBy(xpath = "//*[@data-auid='btncrt_editInCartbtn']")
 		public WebElement editInCart_btn;
 	

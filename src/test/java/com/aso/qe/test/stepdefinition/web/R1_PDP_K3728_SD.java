@@ -14,8 +14,8 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	
-	@Then("^User navigates till PDP of multiple sku package$")
-	public void user_navigates_till_PDP_of_multiple_sku_package() throws Throwable {
+	@Then("^User navigates till PLP of multiple sku package$")
+	public void user_navigates_till_PLP_of_multiple_sku_package() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
 		pdpPageObj.navigateToMultipleSKU_Mobile();
 		}
@@ -29,7 +29,7 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 	public void user_click_on_the_product_image_of_sku_package() throws Throwable {
 		pdpPageObj.clickOnImgSkuItem();
 	}
-
+	
 	@Then("^verfiy the product details and features$")
 	public void verfiy_the_product_details_and_features() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
@@ -47,11 +47,13 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 	
 	@Then("^verfiy add to cart functionality$")
 	public void verfiy_add_to_cart_functionality() throws Throwable {
-			Actions hover=new Actions(getDriver());
-			hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
-			assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
-			assertTrue(clickOnButton(pdpPageObj.btnNextStep));
-			assertTrue(clickOnButton(pdpPageObj.btnAddToCart1));
+		Actions hover=new Actions(getDriver());
+		hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
+		assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
+		pdpPageObj.checkBtnNext();
+		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
+		pdpPageObj.checkBtnaddToCartMultipleSKUPackage();
+		assertTrue(clickOnButton(pdpPageObj.btnAddToCart1));
 	}
 	
 	
