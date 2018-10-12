@@ -26,7 +26,7 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods Ship to Hom
 Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods BOPIS and SOF 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 

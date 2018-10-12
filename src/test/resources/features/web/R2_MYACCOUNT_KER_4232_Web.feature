@@ -249,7 +249,7 @@ Scenario: Verify Authenticated user has Address given through SOF
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
 		|SignInPage_SignIn_btn								|
-	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user navigate and deletes existing items in cart
@@ -277,7 +277,7 @@ Scenario: Verify Authenticated user has Address given through SOF
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
 		|SignInPage_SignIn_btn								|
-	And user enter the valid emailaddress "login" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "password" 
 	And user click on signin button 
 	When user clicks on one of the category and navigates to LOne SOF 

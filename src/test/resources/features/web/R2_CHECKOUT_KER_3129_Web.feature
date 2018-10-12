@@ -29,7 +29,7 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-		And user enter the valid emailaddress "EmailAddress" 
+		And user enter the valid emailaddress "SOFemail" 
 		And user enter the valid password "Password" 
 		And user click on signin button
 		And User navigates to L2 Mens clothing
@@ -56,7 +56,7 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-		And user enter the valid emailaddress "EmailAddress" 
+		And user enter the valid emailaddress "SOFemail" 
 		And user enter the valid password "Password" 
 		And user click on signin button
 		When user clicks on one of the category and navigates to LOne SOF

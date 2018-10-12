@@ -9,7 +9,7 @@ Feature: B06-225- BOPIS Age Restriction Flag in Checkout
 	|# Verify following elements in Sign in/login page	|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user navigate and deletes existing items in cart
@@ -73,7 +73,7 @@ Feature: B06-225- BOPIS Age Restriction Flag in Checkout
 	|# Verify following elements in Sign in/login page	|
 	|SignInPage_EmailAddress_txt			   			| 
 	|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user navigate and deletes existing items in cart
@@ -98,7 +98,7 @@ Scenario: Verify without checking acknowledgement, user is not able to place the
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user navigate and deletes existing items in cart

@@ -134,7 +134,7 @@ Scenario: Verify that UnAuthenticated user is able to select "Go To Payment" CTA
 Scenario: Verify that Authenticated user is able to view the instore pickup drawer details
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
     And user click on signin button
     Then User clicks on ASO Logo and should be navigated to Home Page 
@@ -163,7 +163,7 @@ Scenario: Verify that Authenticated user is able to view the instore pickup draw
 Scenario: Verify that Authenticated user is able to change the Pickup location
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
     And user click on signin button
     And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
@@ -195,7 +195,7 @@ Scenario: Verify that Authenticated user is able to change the Pickup location
 Scenario: Verify that Authenticated user is able to select and enter information for who is picking up an order
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
     And user click on signin button
     Then User clicks on ASO Logo and should be navigated to Home Page
@@ -226,7 +226,7 @@ Scenario: Verify that Authenticated user is able to select and enter information
 Scenario: Verify that Authenticated user is able to view Pickup Instructions details
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
     And user click on signin button
     Then User clicks on ASO Logo and should be navigated to Home Page
@@ -257,7 +257,7 @@ Scenario: Verify that Authenticated user is able to view Pickup Instructions det
 Scenario: Verify that Authenticated user is able to select "Go To Payment" CTA and continue to payment drawer
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
     And user click on signin button
    Then User searches a product "SOFSKUNumber" and navigates to PDP

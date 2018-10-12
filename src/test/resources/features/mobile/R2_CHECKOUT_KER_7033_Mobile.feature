@@ -6,7 +6,7 @@ Scenario:  Verify that the user is able to see the firearm specific compliance r
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu
     And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user navigate and deletes existing items in cart
@@ -27,7 +27,7 @@ Scenario:  Verify that user is able to proceed to checkout after accepting the f
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu
     And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user navigate and deletes existing items in cart
@@ -52,7 +52,7 @@ Scenario:  Verify that user is able to proceed to checkout after accepting the f
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu
     And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user navigate and deletes existing items in cart

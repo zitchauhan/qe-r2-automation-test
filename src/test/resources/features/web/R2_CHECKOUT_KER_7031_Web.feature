@@ -5,7 +5,7 @@ Feature: B03-500-SOF Checkout landing and variations
 Scenario: To verify checkout landing variations - shipping drawer hidden for SOF 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "emailWithOutPhonenumber" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
@@ -36,7 +36,7 @@ Scenario: To verify checkout landing variations - Guest User
 Scenario: To verify checkout landing variations - Authenticated user 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "emailWithOutPhonenumber" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 

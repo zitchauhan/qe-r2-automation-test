@@ -30,7 +30,7 @@ Feature: B06-175- Mixed Cart - Order Confirmation screen
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu
     Then user should able to click on Signin button
-    And user enter the valid emailaddress "EmailAddress"
+    And user enter the valid emailaddress "SOFemail"
     And user enter the valid password "Password"
     And user click on signin button
     Then User clicks on the burger menu
@@ -110,7 +110,7 @@ Feature: B06-175- Mixed Cart - Order Confirmation screen
 
   @C-BOPIS @R2_Mobile @R2_All @P-High_B_Order @CC-Checkout_Order @KER-2856 @ZYP_CHECKOUT_K2856-10869 @CR-RK
   Scenario: Verify Mixed cart Order confirmation - Order Summary Modal Sequece
-    Given user launches the browser and navigates to "ASO_HOME" page
+#    Given user launches the browser and navigates to "ASO_HOME" page
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on the burger menu
     And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"

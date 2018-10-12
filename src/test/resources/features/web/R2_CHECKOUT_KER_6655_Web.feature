@@ -101,7 +101,7 @@ Scenario: Verify Enable Buy Now is applicable for Baits
 Scenario: Verify Enable Buy Now is not applicable for following items SOF Age Restriction Items Item(s) having only In store Inventory while loading PDP
    Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	When User searches a product "SOFSKUNumber" and navigates to PDP

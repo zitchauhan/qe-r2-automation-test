@@ -34,7 +34,7 @@ Scenario:
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
@@ -62,7 +62,7 @@ Verify if  User can  view tax line item in order summary section on checkout (BO
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "SOFSKUNumber" and navigates to PDP 

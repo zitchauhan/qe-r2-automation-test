@@ -10,7 +10,7 @@ Verify authenticate user is able to see the See In-Store Pickup Instructions sec
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user navigate and deletes existing items in cart 
@@ -27,7 +27,7 @@ Verify authenticate user is able to see the See In-Store Pickup Instructions sec
 Scenario:
 Verify guest user is able to see the See In-Store Pickup Instructions section 
 	Given user launches the browser and navigates to "ASO_HOME" page
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user navigate and deletes existing items in cart  
@@ -71,7 +71,7 @@ Scenario: Verify authenticate user is able to place the BOPIS order
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user navigate and deletes existing items in cart
@@ -96,7 +96,7 @@ Scenario: Verify without checking acknowledgement, user is not able to place the
 		|# Verify following elements in Sign in/login page	|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And user navigate and deletes existing items in cart

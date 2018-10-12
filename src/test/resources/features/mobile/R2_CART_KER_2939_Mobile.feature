@@ -258,7 +258,7 @@ Scenario: To verify SOF pick up message
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
 	Then user should able to click on Signin button 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User searches a product "SOFSKUNumber" and navigates to PDP
@@ -275,7 +275,7 @@ Scenario: To verify Disclaimer message
 Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu
 	Then user should able to click on Signin button 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "SOFemail" 
 	And user enter the valid password "Password" 
 	And user click on signin button  
 	When user enters "SOFSKUNumber" in the search box
