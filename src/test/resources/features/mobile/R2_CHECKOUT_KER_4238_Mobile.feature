@@ -13,9 +13,9 @@ Scenario: To verify that an existing ASO employee is able to see the employee di
 	And user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
-	And user verify the employee discount is visible at item level
+#	And user verify the employee discount is visible at item level
 	And user will click on Checkout button 
-	And user verify the employee discount in order summery
+#	And user verify the employee discount in order summery
 	
 	
 @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4238 @ZYP_CHECKOUT_K4238-10743 @CR-SG
@@ -37,9 +37,9 @@ Scenario: To verify that an existing ASO employee is able to see the employee di
 	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
-	And user verify the employee discount is visible at item level when deal items are there
+#	And user verify the employee discount is visible at item level when deal items are there
 	And user will click on Checkout button 
-	And user verify the employee discount in order summery
+#	And user verify the employee discount in order summery
 	
 	@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4238 @ZYP_CHECKOUT_K4238-8053 @CR-AKK
 Scenario: To verify that an existing ASO employee is able to see the employee discount on cart page when only few of the items are applied with employee discount

@@ -17,8 +17,6 @@ Scenario:
 	And user enters current password 
 	And user enters new password 
 	And user clicks on Update button 
-	Then user should be able to change password 
-	
 	
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-11120 @CR-RK 
@@ -303,17 +301,25 @@ Scenario:
 		|SignInPage_SignUp_btn								|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user logs in as "EmailAddressForChangePassword" 
+	And user creates an account 
 	And user navigates to profile in my account 
 	And user click on edit button of default address 
 	Then Verify below Sub/Main Module of My Account 
 		|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
-	And user enter new email field "EmailAddress" 
-	And user enter confirm email field "EmailAddress" 
+	And user enter new email in new email field 
+	And user enter new email in confirm email field 
 	And user clicks on Update button in edit profile 
 	And user click on MyAccount 
 	Then user lands on My Account page and click on adress 
+	Then user Clicks on Add New Address link 
+	When user enter First name "FirstName" in address book 
+	And user enter Last name "LastName" in address book 
+	And user enter Phone number "PhoneNumber" in address book 
+	And user enter Address "Address" in address book 
+	And user enter Zipcode "zipcode" in address book 
+	And user click on set as default button 
+	And clicks on Add New Address button 
 	And user verifies the First address provided is set as default 
 	
 	
@@ -328,15 +334,15 @@ Scenario:
 		|SignInPage_SignUp_btn								|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user logs in as "EmailAddressForChangePassword" 
+	And user creates an account 
 	And user navigates to profile in my account 
 	And user click on edit button of default address 
 	Then Verify below Sub/Main Module of My Account 
 		|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
-	And user enter new email field "EmailAddress" 
-	And user enter confirm email field "EmailAddress" 
-	And user clicks on Update button in edit profile 
+	And user enter new email in new email field 
+	And user enter new email in confirm email field 
+	And user clicks on Update button in edit profile
 	Then user click on My Account and navigate to payment 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in Payment page		|
@@ -354,17 +360,17 @@ Scenario:
 		|SignInPage_SignUp_btn								|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user logs in as "EmailAddressForChangePassword" 
+	And user creates an account 
 	And user navigates to profile in my account 
 	And user click on edit button of default address 
 	Then Verify below Sub/Main Module of My Account 
 		|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
-	And user enter new email field "EmailAddress" 
-	And user enter confirm email field "EmailAddress" 
+	And user enter new email in new email field 
+	And user enter new email in confirm email field 
 	And user clicks on Update button in edit profile 
-	And user click on MyAccount 
-	Then user click on WishList 
+	And user navigates to wishlist in my account 
+	And user create new Wishlist 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in create a wishlist section		|
 		|WishlistItems_lnk												|
@@ -376,20 +382,9 @@ Scenario:
 	Verify that system keep the orders intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
-	Then Verify below Sub/Main Module of My Account 
-		|# Verify following elements in Sign in/login page	|
-		|SignInPage_SignUp_btn								|
-		|SignInPage_EmailAddress_txt			   			| 
-		|SignInPage_Password_txt				   			|
-	And user logs in as "EmailAddressForChangePassword" 
-	And user navigates to profile in my account 
-	And user click on edit button of default address 
-	Then Verify below Sub/Main Module of My Account 
-		|#verify following elements in Profile > Edit Profile section	|
-		|EditProfilePage_EditProfileHeader_label						|
-	And user enter new email field "EmailAddress" 
-	And user enter confirm email field "EmailAddress" 
-	And user clicks on Update button in edit profile 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
 	And user navigates to orders in my account 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in order section|

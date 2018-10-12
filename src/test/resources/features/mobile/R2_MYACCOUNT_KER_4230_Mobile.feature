@@ -252,9 +252,7 @@ Verify that user can see the error message if user enters the email id in New Em
 		|SignInPage_SignUp_btn								|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user logs in as "EmailAddressForChangePassword"  
 	Then User clicks on the burger menu 
 	And user navigates to profile in my account 
 	And user click on edit button of default address 
@@ -283,9 +281,7 @@ Verify that user can see the error message if user enters the email id  more tha
 		|SignInPage_SignUp_btn								|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user logs in as "EmailAddressForChangePassword"  
 	Then User clicks on the burger menu 
 	And user navigates to profile in my account
 	And user click on edit button of default address 
@@ -314,9 +310,7 @@ Scenario: Verify that user can see the error message in password field.
 		|SignInPage_SignUp_btn								|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user logs in as "EmailAddressForChangePassword" 
 	Then User clicks on the burger menu 
 	And user navigates to profile in my account 
 	When user click on change password icon 
@@ -342,20 +336,26 @@ Verify that system keep the addresses intact after changing the email address.
 		|SignInPage_SignUp_btn								|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user creates an account 
 	Then User clicks on the burger menu 
 	And user navigates to profile in my account 
 	And user click on edit button of default address 
 	Then Verify below Sub/Main Module of My Account 
 		|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
-	And user enter new email field "EmailAddress" 
-	And user enter confirm email field "EmailAddress" 
+	And user enter new email in new email field 
+	And user enter new email in confirm email field 
 	And user clicks on Update button in edit profile 
 	Then User clicks on the burger menu 
-	Then user lands on My Account page and click on adress 
+	Then user lands on My Account page and click on adress
+	Then user Clicks on Add New Address link 
+	When user enter First name "FirstName" in address book 
+	And user enter Last name "LastName" in address book 
+	And user enter Phone number "PhoneNumber" in address book 
+	And user enter Address "Address" in address book 
+	And user enter Zipcode "zipcode" in address book 
+	And user click on set as default button 
+	And clicks on Add New Address button 
 	And user verifies the First address provided is set as default 
 	
 @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230
@@ -370,17 +370,15 @@ Verify that system keep the payments intact after changing the email address.
 		|SignInPage_SignUp_btn								|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user creates an account  
 	Then User clicks on the burger menu 
 	And user navigates to profile in my account
 	And user click on edit button of default address 
 	Then Verify below Sub/Main Module of My Account 
 		|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
-	And user enter new email field "EmailAddress" 
-	And user enter confirm email field "EmailAddress" 
+	And user enter new email in new email field 
+	And user enter new email in confirm email field 
 	And user clicks on Update button in edit profile 
 	Then User clicks on the burger menu 
 	Then user click on My Account and navigate to payment 
@@ -402,18 +400,16 @@ Verify that system keep the wish-list intact after changing the email address.
 		|SignInPage_SignUp_btn								|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user creates an account
 	Then User clicks on the burger menu 
 	And user navigates to profile in my account
 	And user click on edit button of default address 
 	Then Verify below Sub/Main Module of My Account 
 		|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
-	And user enter new email field "EmailAddress" 
-	And user enter confirm email field "EmailAddress" 
-	And user clicks on Update button in edit profile 
+	And user enter new email in new email field 
+	And user enter new email in confirm email field 
+	And user clicks on Update button in edit profile
 	Then User clicks on the burger menu 
 	And user click on MyAccount 
 	Then user click on WishList 
@@ -435,18 +431,16 @@ Verify that system keep the orders intact after changing the email address.
 		|SignInPage_SignUp_btn								|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user creates an account 
 	Then User clicks on the burger menu 
 	And user navigates to profile in my account 
 	And user click on edit button of default address 
 	Then Verify below Sub/Main Module of My Account 
 		|#verify following elements in Profile > Edit Profile section	|
 		|EditProfilePage_EditProfileHeader_label						|
-	And user enter new email field "EmailAddress" 
-	And user enter confirm email field "EmailAddress" 
-	And user clicks on Update button in edit profile 
+	And user enter new email in new email field 
+	And user enter new email in confirm email field 
+	And user clicks on Update button in edit profile
 	Then User clicks on the burger menu 
 	And user navigates to orders in my account 
 	Then Verify below Sub/Main Module of My Account 

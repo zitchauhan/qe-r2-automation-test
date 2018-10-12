@@ -200,14 +200,7 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 		waitForPageLoad(driver);
 		boolean oosProductsAvailable = false;
 		Thread.sleep(Constants.thread_medium);
-		if(isDisplayed(cartR2PageObj.closeOutOffStockItem)) {
-			clickOnButton(cartR2PageObj.closeOutOffStockItem);
-			for(WebElement removeOOSBtn : cartR2PageObj.removeCartforOOSProducts_lst_btn) {
-				assertTrue(clickOnButton(removeOOSBtn));
-				Thread.sleep(Constants.thread_high);
-			}
-		}
-		if(r1_SearchPO.verifyTextDisplayedOnPage("There are not enough items in your stock to fulfill your order")) {
+		if(r1_SearchPO.verifyTextDisplayedOnPage("There are not enough items in stock to fulfill your order")) {
 			assertTrue(clickOnButton(cartR2PageObj.editInCart_btn));
 			oosProductsAvailable = true;
 		}

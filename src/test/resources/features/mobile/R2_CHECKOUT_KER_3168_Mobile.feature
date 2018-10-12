@@ -18,7 +18,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     	And user enter Zipcode "zipcode" 
 	   And user click on Go To Shipping Method button in Checkout page 
 	   And user click on go to payment present in shipping method
-	Then user validate all the required fields in the Payment section to be visible
+#	Then user validate all the required fields in the Payment section to be visible
     And user enters "DebitCardNumber" details and verify it is getting entered in Credit card section
 
     @R2_Mobile  @R2_All @P-Highest @1HR_R2 @C-Order @CC-Checkout_Order @KER-3138 @ZYP_CART_K3138-8206 @CR-AG 
@@ -39,7 +39,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     	And user enter Zipcode "zipcode" 
 	   And user click on Go To Shipping Method button in Checkout page 
 	   And user click on go to payment present in shipping method
-	Then user validate all the required fields in the Payment section to be visible
+#	Then user validate all the required fields in the Payment section to be visible
     And user enters "DebitCardNumber" details and verify it is getting entered in Credit card section
     Then user enters valid expiry date "ExpDate"
     And user enters valid cvv value "CVV"
@@ -63,7 +63,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     	And user enter Zipcode "zipcode" 
 	   And user click on Go To Shipping Method button in Checkout page 
 	   And user click on go to payment present in shipping method
-	Then user validate all the required fields in the Payment section to be visible
+#	Then user validate all the required fields in the Payment section to be visible
     And user enters "DebitCardNumber" details and verify it is getting entered in Credit card section
     Then user enters valid expiry date "ExpDate"
     And user enters valid cvv value "CVV"
@@ -87,7 +87,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     	And user enter Zipcode "zipcode" 
 	   And user click on Go To Shipping Method button in Checkout page 
 	   And user click on go to payment present in shipping method
-	Then user validate all the required fields in the Payment section to be visible
+#	Then user validate all the required fields in the Payment section to be visible
     And user enters "DebitCardNumber" details and verify it is getting entered in Credit card section
     Then user enters valid expiry date "ExpDate"
     And user enters valid cvv value "CVV"
@@ -112,7 +112,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     	And user enter Zipcode "zipcode" 
 	   And user click on Go To Shipping Method button in Checkout page 
 	   And user click on go to payment present in shipping method
-	Then user validate all the required fields in the Payment section to be visible
+#	Then user validate all the required fields in the Payment section to be visible
     And user verifies visa card entery in the card fields
     And user verifies master card entery in the card fields
     And user verifies Amex card entery in the card fields
@@ -137,7 +137,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     	And user enter Zipcode "zipcode" 
 	   And user click on Go To Shipping Method button in Checkout page 
 	   And user click on go to payment present in shipping method
-	Then user validate all the required fields in the Payment section to be visible
+#	Then user validate all the required fields in the Payment section to be visible
 	
 
  @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3138 @ZYP_CART_K3138-8211 @CR-AG 
@@ -158,7 +158,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     	And user enter Zipcode "zipcode" 
 	   And user click on Go To Shipping Method button in Checkout page 
 	   And user click on go to payment present in shipping method
-	Then user validate all the required fields in the Payment section to be visible
+#	Then user validate all the required fields in the Payment section to be visible
     Then user enter two digits in cvv and verifies the card image displayed in the credit card input section
     
     
@@ -180,8 +180,8 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     	And user enter Zipcode "zipcode" 
 	   And user click on Go To Shipping Method button in Checkout page 
 	   And user click on go to payment present in shipping method
-	Then user validate all the required fields in the Payment section to be visible
-    Then user hover on the toop tip icon of CVV and verify tool tip display
+#	Then user validate all the required fields in the Payment section to be visible
+#    Then user hover on the toop tip icon of CVV and verify tool tip display
     
          @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3138 @ZYP_CART_K3138-8218 @CR-AG 
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
@@ -201,7 +201,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     	And user enter Zipcode "zipcode" 
 	   And user click on Go To Shipping Method button in Checkout page 
 	   And user click on go to payment present in shipping method
-	Then user validate all the required fields in the Payment section to be visible
+#	Then user validate all the required fields in the Payment section to be visible
     Then user verify entering special characters inside cvv input section
     
 

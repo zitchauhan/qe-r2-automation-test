@@ -106,7 +106,7 @@ Verify during quick checkout error message will display for shipping address sec
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
-@ZYP_MYACCOUNT_K4030-KER-12809 @CR-SK 
+@ZYP_MYACCOUNT_K4030-12809 @CR-SK 
 Scenario:
 Verify user can able to edit shipping address method landing on order summary during quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -125,7 +125,7 @@ Verify user can able to edit shipping address method landing on order summary du
 		
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
-@ZYP_MYACCOUNT_K4030-KER-12810 @CR-SK 
+@ZYP_MYACCOUNT_K4030-12810 @CR-SK 
 Scenario:
 Verify user can able to edit Payment Methods after landing on order summary during quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -139,7 +139,7 @@ Verify user can able to edit Payment Methods after landing on order summary duri
 	Then user is able to modify payment method 
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
-@ZYP_MYACCOUNT_K4030-KER-12808 @CR-SK 
+@ZYP_MYACCOUNT_K4030-12808 @CR-SK 
 Scenario:
 Verify user can able to edit shipping address after landing on order summary during quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 

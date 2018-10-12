@@ -25,9 +25,6 @@ Scenario: Verify the user is able to see the password strength info bubble
 	And user enters current password 
 	And user enters new password 
 	Then user click on anywhere in change password 
-	Then Verify below Sub/Main Module of My Account 
-		|#verify the tooltip in change your password|
-		|ChangePasswordPage_toolTip_Btn                                 |
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10178 @CR-RKA @1HR_R2 @C1-Message
@@ -113,7 +110,7 @@ Scenario:
 Scenario: Verify user can set the new password same as old password of 8 digits 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "EmailAddressForChangePassword" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user navigates to profile in my account 

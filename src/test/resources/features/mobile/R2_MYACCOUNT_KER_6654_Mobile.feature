@@ -129,7 +129,7 @@ Scenario: Verify user can set the new password same as old password of 8 digits
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "EmailAddressForChangePassword" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User clicks on the burger menu 

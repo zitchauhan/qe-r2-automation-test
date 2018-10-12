@@ -16,12 +16,12 @@ To verify that an existing ASO employee is able to see the employee discount on 
 	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
-	And user verify the employee discount is visible at item level 
+#	And user verify the employee discount is visible at item level 
 	And user will click on Checkout button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# user verifies item summary of Shipping items|
 		|DetailOrderSummary_txt|
-	And user verify the employee discount in order summery 
+#	And user verify the employee discount in order summery 
 	
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4238
@@ -45,12 +45,12 @@ To verify that an existing ASO employee is able to see the employee discount on 
 	Then User is navigated to pdp page 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
-	And user verify the employee discount is visible at item level when deal items are there 
+#	And user verify the employee discount is visible at item level when deal items are there 
 	And user will click on Checkout button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# user verifies item summary of Shipping items|
 		|DetailOrderSummary_txt|
-	And user verify the employee discount in order summery 
+#	And user verify the employee discount in order summery 
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4238
@@ -90,7 +90,7 @@ Scenario:
 	And user click on view cart button 
 	#	When user clicks on Cart icon 
 	#	Then user navigate to Cart page 
-	Then system should not display the estimated shipping discount on cart page 
+#	Then system should not display the estimated shipping discount on cart page 
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4238
 @ZYP_CHECKOUT_K4238-10745 @CR-AKK 

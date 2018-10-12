@@ -96,7 +96,7 @@ public class R1_SIT_PO extends CommonActionHelper{
 	@FindBy(xpath="//h2[@id='createWishListModalTitle']") public  WebElement tltCreatewishlist;
 	@FindBy(xpath="//input[@id='createWishListInputField'] | //*[@data-auid='wish_list_name_input'] | //*[@data-auid='Wish_list_name_input']") public  WebElement txtListname;  //SID 19-September
 	@FindBy(xpath="//button[@id='add_cancel']") public  WebElement btncancel;
-	@FindBy(xpath="//input[@id='add_save'] | //*[@data-auid='btnsubmit_btn']") public  WebElement btnsave;  //SID 19-September
+	@FindBy(xpath="//input[@id='add_save'] | //*[@data-auid='btnsubmit_btn'] | //*[@data-auid='btncreate_wish_list_btn']") public  WebElement btnsave;  //SID 19-September
 	@FindBy(xpath="//select[@id='wishListSelect']//*[@selected='selected']") public  WebElement txtwishlistselect; //sid 14-Aug
 	@FindBy(xpath="//*[@id='renamewishListModalTitle']") public  WebElement renameWishListModal;
 	

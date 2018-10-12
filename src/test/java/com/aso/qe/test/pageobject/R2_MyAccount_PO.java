@@ -621,7 +621,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@auid='add_address_btn']")
 	public WebElement myAccountPage_AddNewAddressPluIcon_btn; // CR-RK KER-4230 Sep 6
 
-	@FindBy(xpath = "//*[@data-auid='tooltipsample tooltip']") // CR - RKA Sep 6
+	@FindBy(xpath = "//*[@data-auid='tooltipsample tooltip'] | //*[@data-auid='tooltipundefined']") // CR - RKA Sep 6
 	public WebElement AddGiftCardPage_Pin_toolTip;
 
 	// Start KER-4233 CR-MS 06 Sep
@@ -646,7 +646,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='Wish_list_name_input']")
 	public WebElement Wishlist_name_txt;
 
-	@FindBy(xpath = "//*[text()='Rename List']")
+	@FindBy(xpath = "(//*[text()='Rename List'])[2]")
 	public WebElement Rename_list_lnk;
 
 	@FindBy(xpath = "//*[@data-auid='btnbrowse_product_button']")

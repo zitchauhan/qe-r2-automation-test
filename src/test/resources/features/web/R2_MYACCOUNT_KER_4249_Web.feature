@@ -11,7 +11,7 @@ Scenario: Verify the available fields on the Sign Up page
 		|SignUp_LastName_txt							|
 		|SignUp_EmailAddress						 	|
 		|SignUp_Password					         	| 
-		|SignUp_ReceivePromotion_chkBx					|
+#		|SignUp_ReceivePromotion_chkBx					|
 		|SignUpPage_SignUp_btn							|
 		|SignUpPage_AlreadyHaveAnAccount_txt			|
 		|SignUpPage_SignInNow_lnk						|

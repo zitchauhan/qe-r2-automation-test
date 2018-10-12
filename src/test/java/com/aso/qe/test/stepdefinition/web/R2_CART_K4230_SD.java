@@ -23,6 +23,7 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 	public R2_Cart_PO cartR2PageObj = PageFactory.initElements(driver, R2_Cart_PO.class);
 	public String defaultPassword = "DefaultPassword";
 	public String changedPassword = "ChangedPassword";
+	private final String newRandomEmail = r2MyAccountPo.generateRandomEmailId();
 
 	@Given("^user click on my account link$")
 	public void user_click_on_my_account_link() throws Throwable {
@@ -73,8 +74,9 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 			cartR2PageObj.navigateAndDeleteAllProductsInCart();
 		}
 
-		else if (emailID.contains("RawUser") | emailID.contains("UserWithDefaultCaliforniaAddress") | emailID.contains("EmailAddress")
-				| emailID.contains("UserWithTaxableAddress") | emailID.contains("UserWithSavedAddressAndPayment") |  emailID.contains("UserForOrderPlacement")) {
+		else if (emailID.contains("RawUser") | emailID.contains("UserWithDefaultCaliforniaAddress")
+				| emailID.contains("EmailAddress") | emailID.contains("UserWithTaxableAddress")
+				| emailID.contains("UserWithSavedAddressAndPayment") | emailID.contains("UserForOrderPlacement")) {
 			setInputText(r2MyAccountPo.txtEmailAddress, webPropHelper.getTestDataProperty(emailID));
 			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
 			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
@@ -168,23 +170,47 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2MyAccountPo.btnSubmit));
 		}
 	}
-	
+
 	@Then("^user enter the old password as new password$")
 	public void user_enter_the_old_password_as_new_password() throws Throwable {
 		setInputText(r2MyAccountPo.txtNewPassword, webPropHelper.getTestDataProperty(defaultPassword));
 	}
-	
+
 	@Then("^Verify First Name field should not accept more than fifty character$")
 	public void verify_First_Name_field_should_not_accept_more_than_fifty_character() throws Throwable {
-	    String maxlength=r2MyAccountPo.txtFirstNameInAddCreditCard.getAttribute("maxlength");
-	    System.out.println(maxlength);
-	    assertTrue(maxlength.equals("50"));
+		String maxlength = r2MyAccountPo.txtFirstNameInAddCreditCard.getAttribute("maxlength");
+		System.out.println(maxlength);
+		assertTrue(maxlength.equals("50"));
 	}
-	
+
 	@Then("^Verify Last Name field should not accept more than fifty character$")
 	public void verify_Last_Name_field_should_not_accept_more_than_fifty_character() throws Throwable {
-		String maxlength=r2MyAccountPo.txtLastNameInAddCreditCard.getAttribute("maxlength");
-	    System.out.println(maxlength);
-	    assertTrue(maxlength.equals("50"));
+		String maxlength = r2MyAccountPo.txtLastNameInAddCreditCard.getAttribute("maxlength");
+		System.out.println(maxlength);
+		assertTrue(maxlength.equals("50"));
 	}
+
+	@Then("^user enter new email in new email field$")
+	public void user_enter_new_email_in_new_email_field() throws Throwable {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			setInputText(r2MyAccountPo.txtNewEmail, newRandomEmail);
+			r2MyAccountPo.txtNewEmail.sendKeys(Keys.TAB);
+		} else {
+			setInputText(r2MyAccountPo.txtNewEmail, newRandomEmail);
+			r2MyAccountPo.txtNewEmail.sendKeys(Keys.TAB);
+		}
+	}
+
+	@Then("^user enter new email in confirm email field$")
+	public void user_enter_new_email_in_confirm_email_field() throws Throwable {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			setInputText(r2MyAccountPo.txtConfirmEmail, newRandomEmail);
+			r2MyAccountPo.txtConfirmEmail.sendKeys(Keys.TAB);
+		} else {
+			setInputText(r2MyAccountPo.txtConfirmEmail, newRandomEmail);
+			r2MyAccountPo.txtConfirmEmail.sendKeys(Keys.TAB);
+
+		}
+	}
+
 }
