@@ -161,9 +161,7 @@ Scenario: Verify the "Make My Store" CTA behavior for manually searched and inpu
 Scenario: Verify user is displayed with an error message when there is no store within 250 miles (or configured value)
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
-	Then User should be able to click on Find Store
-	Then user enter "WrongzipCode" in Find a Store Model
-	And user click on submit button
+    And user select store with "WrongzipCode" and "FindStoreZipcodeNearestStore"
 	Then verify Static error message
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10726 @CR-DPK

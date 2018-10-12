@@ -53,9 +53,6 @@ To verify Shipping radio button - Authenticated user With store selected in My A
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button 
 	And user will click on View Cart button 
-	When Shipping radio button is selected by default 
-	And in-stores radio button is deselected 
-	And in-stores information is hided 
 	And user clicks change "AuthenticatedChangeZIPCode" code 
 	Then Verify below Sub/Main Module of Cart Page
 	|# user will verify if Shipping date information is displayed |
@@ -127,9 +124,6 @@ Scenario: To verify In-store Pick up radio button - with My Store info on My Acc
 	And user click on Add to Cart Button
 	And user will click on View Cart button  
 	#When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
-	Then Verify below Sub/Main Module of Cart Page
-	|# Verify following elements in Cart page "Your Cart item details "|
-   |InStorePickup_FREE_radioBtn |
 	And user will verify Shipping radio button is deselected 
 	And user will verify if in-stores information is hidden  
 	Then verify user can begin checkout 
@@ -145,10 +139,8 @@ Scenario: To verify Shipping radio button - Unauthenticated user
 	And Shipping radio button is selected by default 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page "Your Cart item details "|
-	|ShipToMe_radioBtn|
-	And in-stores radio button is deselected 
-	And in-stores information is hided 
-	Then Shipping date information is displayed 
+	|ShipToMe_radioBtn| 
+	Then Shipping date information is displayed  
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2939 @ZYP_CART_K2939-8076 @CR-AKK 
 Scenario: To verify Shipping radio button - Authenticated user With out store selected in My Account 
@@ -167,8 +159,6 @@ Scenario: To verify Shipping radio button - Authenticated user With out store se
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page "Your Cart item details "|
 	|ShipToMe_radioBtn|
-	And in-stores radio button is deselected 
-	Then in-stores information is hided 
 	And Shipping date information is displayed 
 	
 @R2_Mobile @R2_Regression @R2_All @P-Lowest @C-Cart @KER-2939 @ZYP_CART_K2939-8085 @CR-AKK 
