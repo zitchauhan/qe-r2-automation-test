@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 //import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -22,11 +23,12 @@ public class R2_PlaceOrderAllCombinations_SD extends CommonActionHelper {
 	@Given("^user click on Add to Cart Button for \"(.*?)\"$")
 	public void user_click_on_Add_to_Cart_Button_for(String arg1) throws Throwable {
 		if (arg1.equalsIgnoreCase("MultiSKUProduct")) {
-			assertTrue(clickOnButton(pdpPageObj.availableColorForMultiSkuProduct));
-			assertTrue(clickOnButton(pdpPageObj.availableSizeForMultiSkuProduct));
+			Actions hover = new Actions(getDriver());
+			hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
+			assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
+			pdpPageObj.checkBtnNext();
 			assertTrue(clickOnButton(pdpPageObj.btnNextStep));
-			assertTrue(clickOnButton(pdpPageObj.availableColorForMultiSkuProduct));
-			assertTrue(clickOnButton(pdpPageObj.availableSizeForMultiSkuProduct));
+			pdpPageObj.checkBtnaddToCartMultipleSKUPackage();
 			assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 		} else if (arg1.equalsIgnoreCase("Bundle Product")) {
 			assertTrue(clickOnButton(pdpPageObj.availableColorForBundleProduct));
