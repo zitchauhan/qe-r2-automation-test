@@ -23,7 +23,7 @@ Scenario: Verify that My Account option is available for Authenticated User
 		|BurgerMenu_MyAccount_txt	        |
 		
 		
-  @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4229 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10474 @CR-GK 
 Scenario: Verify that Authenticated User is able to view order list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -63,7 +63,7 @@ Scenario: Verify that Authenticated User is able to navigate to Profile page
 		|ProfilePage_Email_txt							|
 		|ProfilePage_Email_label						|
 		|ProfilePage_ChangePassword_btn					|
-		|MaskedPasswordInProfile_mask                   |
+		|ProfilePage_MaskedPassword                   |
 		
 		
 @R2_Mobile @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4229 
@@ -83,8 +83,8 @@ Scenario: Verify that Authenticated User is able to view the address book
 		|AddressPage_AddressBookHeader_txt			|
 		|AddressPage_SetAsDefault_btn				|
 		|AddressPage_Default_txt					|
-
-
+		
+		
 @R2_Mobile @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10477 @CR-GK 
 Scenario: Verify that Authenticated User is able to view the Wish List 
@@ -96,12 +96,16 @@ Scenario: Verify that Authenticated User is able to view the Wish List
 	And  user click on signin button 
 	And User clicks on the burger menu 
 	And user navigates to wishlist in my account 
+	And deletes all the existing wishlists 
+	And user clicks on create first wishlist button 
+	Then user enters Wishlist name "WishlistName" 
+	And user clicks on Create List 
 	Then Verify below Sub/Main Module of My Account 
 		|#verify following elements in Wish List page	|
 		|WishlistItems_lnk      |
 		|Wishlist_createlist_lnk|
-
-
+		
+		
 @R2_Mobile @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10478 @CR-GK 
 Scenario: 
@@ -120,8 +124,8 @@ Scenario:
 		|PaymentPage_CreditCardDetails					|
 		|PaymentPage_SetAsDefault_btn                   |
 		
-
-
+		
+		
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10489 @CR-GK 
 Scenario: 
@@ -139,8 +143,8 @@ Scenario:
 	Then Verify below Sub/Main Module of My Account 
 		|#verify following elements in Payments page in My Account|
 		|ProfilePage_ChangePassword_btn|
-
-
+		
+		
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10512 @CR-GK 
 Scenario: 

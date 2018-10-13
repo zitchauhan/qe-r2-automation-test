@@ -288,6 +288,8 @@ public class R2_VERIFICATION_MYACCOUNT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2MyAccountPo.Wishlist_createlist_lnk));
 				else if (currentElement.equalsIgnoreCase("Rename_list_lnk"))
 					assertTrue(isDisplayed(r2MyAccountPo.Rename_list_lnk));
+				else if (currentElement.equalsIgnoreCase("Rename_list_lnk_mob"))
+					assertTrue(isDisplayed(r2MyAccountPo.Rename_list_lnk_mob));
 				else if (currentElement.equalsIgnoreCase("Wishlist_name_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.Wishlist_name_txt));
 				else if (currentElement.equalsIgnoreCase("Keep_Wishlist_btn"))

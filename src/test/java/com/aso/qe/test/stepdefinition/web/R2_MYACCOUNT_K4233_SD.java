@@ -14,8 +14,7 @@ import com.aso.qe.test.pageobject.R2_PDP_PO;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper 
-{
+public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
@@ -89,7 +88,11 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper
 
 	@Then("^user clicks on Rename List$")
 	public void user_clicks_on_Rename_List() throws Throwable {
-		assertTrue(clickOnButton(r2MyAccountPo.Rename_list_lnk));
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(r2MyAccountPo.Rename_list_lnk_mob));
+		} else {
+			assertTrue(clickOnButton(r2MyAccountPo.Rename_list_lnk));
+		}
 	}
 
 	@Then("^clicks on browse products$")
@@ -220,8 +223,7 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper
 	}
 
 	@Then("^deletes all the existing wishlists$")
-	public void deletes_all_the_existing_wishlists() throws Throwable 
-	{
+	public void deletes_all_the_existing_wishlists() throws Throwable {
 		if (isDisplayed(r2MyAccountPo.WishlistItems_lnk)) {
 			r2MyAccountPo.deleteAllWishList();
 		}

@@ -41,13 +41,13 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class R2_CART_K2927_SD extends CommonActionHelper 
-{
+public class R2_CART_K2927_SD extends CommonActionHelper {
 
 	private static double taxDisplayed = 0.0f;
 	private static double totalAmountDisplayed = 0.0f;
 
-	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
+			R1_GlobalElementHeader_Home_PO.class);
 	R2_Cart_PO cartR2PageObj = PageFactory.initElements(driver, R2_Cart_PO.class);
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
@@ -63,13 +63,12 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 	@Then("^checkout page displays updated tax$")
 	public void checkout_page_displays_updated_tax() throws Throwable {
 		float currentTaxDisplayed = r2CheckOutPO.getEstimatedTaxOnCheckoutPage();
-		if(taxDisplayed != 0)
-		{
+		if (taxDisplayed != 0) {
 			assertTrue(taxDisplayed != currentTaxDisplayed);
 		}
-		
+
 	}
-	
+
 	@Then("^checkout page displays increased tax$")
 	public void checkout_page_displays_increased_tax() throws Throwable {
 		double currentTaxDisplayed = r2CheckOutPO.getEstimatedTaxOnCheckoutPage();
@@ -87,14 +86,12 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 	public void user_makes_a_note_of_tax_calculation() throws Throwable {
 		taxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
 	}
-	
+
 	@Given("^user makes a note of tax and total amount$")
 	public void user_makes_a_note_of_tax_and_total_amount() throws Throwable {
 		taxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
 		totalAmountDisplayed = cartR2PageObj.getTotaAmountOnCartPage();
 	}
-	
-	
 
 	@When("^user increases products quantity$")
 	public void user_increases_products_quantity() throws Throwable {
@@ -104,11 +101,11 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 	@Then("^cart page displays updated tax$")
 	public void cart_page_displays_updated_tax() throws Throwable {
 		float currentTaxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
-		if(taxDisplayed != 0) {
+		if (taxDisplayed != 0) {
 			assertTrue(taxDisplayed != currentTaxDisplayed);
 		}
 	}
-	
+
 	@Then("^cart page displays increased tax$")
 	public void cart_page_displays_increased_tax() throws Throwable {
 		double currentTaxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
@@ -121,72 +118,81 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 		cartR2PageObj.selectShipToMe();
 		getDriver().navigate().refresh();
 	}
-	
+
 	@When("^user decreases product quantity to zero$")
 	public void user_decreases_product_quantity_to_zero() throws Throwable {
-		setInputText(cartR2PageObj.input_Quantity, "0");
-		tabInputBox(cartR2PageObj.input_Quantity);
-		getDriver().navigate().refresh();
-		waitForElement(cartR2PageObj.input_Quantity);
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			setInputText(cartR2PageObj.input_Quantity, "0");
+			tabInputBox(cartR2PageObj.input_Quantity);
+			getDriver().navigate().refresh();
+		} else {
+			setInputText(cartR2PageObj.input_Quantity, "0");
+			tabInputBox(cartR2PageObj.input_Quantity);
+			getDriver().navigate().refresh();
+			waitForElement(cartR2PageObj.input_Quantity);
+		}
 	}
-	
+
 	@Then("^estimated tax Is populated separately under Order Summary$")
 	public void estimated_tax_Is_populated_separately_under_Order_Summary() throws Throwable {
-		assertTrue(isDisplayed(cartR2PageObj.txtEstimatedTaxesCart));//txtEstimatedTax
+		assertTrue(isDisplayed(cartR2PageObj.txtEstimatedTaxesCart));// txtEstimatedTax
 	}
 
 	@Then("^Total amount including Tax Is populated separately under Order Summary$")
 	public void total_amount_including_Tax_Is_populated_separately_under_Order_Summary() throws Throwable {
-	    assertTrue(isDisplayed(cartR2PageObj.txtTotal));
+		assertTrue(isDisplayed(cartR2PageObj.txtTotal));
 	}
 
 	@Then("^user verifies estimated tax and total on checkout page$")
 	public void user_verifies_estimated_tax_and_total_on_checkout_page() throws Throwable {
 		waitForPageLoad(driver);
 		waitForElement(r2CheckOutPO.TaxesPrice_Txt);
-	    assertTrue(isDisplayed(r2CheckOutPO.TaxesPrice_Txt));
-	    assertTrue(isDisplayed(r2CheckOutPO.txtTotal));
+		assertTrue(isDisplayed(r2CheckOutPO.TaxesPrice_Txt));
+		assertTrue(isDisplayed(r2CheckOutPO.txtTotal));
 	}
-	
-	@Then ("^User navigates to L3 of women clothes$")
+
+	@Then("^User navigates to L3 of women clothes$")
 	public void User_navigates_to_L3() throws InterruptedException {
-		if("mobile".equalsIgnoreCase(testtype)){
+		if ("mobile".equalsIgnoreCase(testtype)) {
 			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
 			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(r2SanityPo.AS_btnWomen_Clothing_Shop));
 			Thread.sleep(Constants.thread_low);
-			assertTrue(clickOnButton(globalElementHeader.burgerMenu_GoToWomen_btn)); 
+			assertTrue(clickOnButton(globalElementHeader.burgerMenu_GoToWomen_btn));
 			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(r2SanityPo.AS_btnWomensTops_Women_Clothing_Shop));
 			Thread.sleep(Constants.thread_medium);
 		}
 
 	}
-	
+
 	@When("^user enters \"(.*?)\" in change zipcode field in cart page$")
 	public void user_changes_zipcode_in_cart_page(String arg1) throws Throwable {
 		assertTrue(clickOnButton(cartR2PageObj.lnkChangeZipCode));
 		setInputText(cartR2PageObj.inputZipCode, webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(cartR2PageObj.btnCartSubmit));
 	}
-	
+
 	@Then("^tax displayed on cart is greater than zero$")
 	public void tax_displayed_on_cart_is_greater_than_zero() throws Throwable {
-	    float estimatedTaxOnCartPage = cartR2PageObj.getEstimatedTaxOnCartPage();
-	    assertTrue(estimatedTaxOnCartPage > 0);
+		float estimatedTaxOnCartPage = cartR2PageObj.getEstimatedTaxOnCartPage();
+		assertTrue(estimatedTaxOnCartPage > 0);
 	}
 
 	@Then("^tax and total amount displayed in checkout page is same as cart page$")
 	public void tax_displayed_in_checkout_page_is_same_as_cart_page() throws Throwable {
-	    double taxOnCheckOutPage = r2CheckOutPO.getEstimatedTaxOnCheckoutPage();
-	    double totalAmountOnCheckOutPage = r2CheckOutPO.getTotalAmountOnCheckoutPage();
-//	    System.out.println("taxDisplayed ==" + taxDisplayed +" taxOnCheckOutPage = " + taxOnCheckOutPage);
-//	    System.out.println("totalAmountDisplayed ==" + totalAmountDisplayed +" totalAmountOnCheckOutPage = " + totalAmountOnCheckOutPage);
-	    assertTrue(taxDisplayed == taxOnCheckOutPage);
-	    assertTrue(totalAmountDisplayed == totalAmountOnCheckOutPage);
+		double taxOnCheckOutPage = r2CheckOutPO.getEstimatedTaxOnCheckoutPage();
+		double totalAmountOnCheckOutPage = r2CheckOutPO.getTotalAmountOnCheckoutPage();
+		// System.out.println("taxDisplayed ==" + taxDisplayed +" taxOnCheckOutPage = "
+		// + taxOnCheckOutPage);
+		// System.out.println("totalAmountDisplayed ==" + totalAmountDisplayed +"
+		// totalAmountOnCheckOutPage = " + totalAmountOnCheckOutPage);
+		assertTrue(taxDisplayed == taxOnCheckOutPage);
+		assertTrue(totalAmountDisplayed == totalAmountOnCheckOutPage);
 	}
-	
+
 	@Given("^user navigate and deletes existing items in cart$")
 	@Then("^user will empty the cart if product is in cart$")
 	public void user_navigates_delete_existing_items_in_cart() throws Throwable {
@@ -200,39 +206,37 @@ public class R2_CART_K2927_SD extends CommonActionHelper
 		waitForPageLoad(driver);
 		boolean oosProductsAvailable = false;
 		Thread.sleep(Constants.thread_medium);
-		if(r1_SearchPO.verifyTextDisplayedOnPage("There are not enough items in stock to fulfill your order")) {
+		if (r1_SearchPO.verifyTextDisplayedOnPage("There are not enough items in stock to fulfill your order")) {
 			assertTrue(clickOnButton(cartR2PageObj.editInCart_btn));
 			oosProductsAvailable = true;
 		}
-		
-		int countOfItems = cartR2PageObj.removeCart_lst_btn.size(); 
-//		for(WebElement removeBtn : cartR2PageObj.removeCart_lst_btn) {
-		while(countOfItems > 0) {
+
+		int countOfItems = cartR2PageObj.removeCart_lst_btn.size();
+		// for(WebElement removeBtn : cartR2PageObj.removeCart_lst_btn) {
+		while (countOfItems > 0) {
 			clickOnButton(cartR2PageObj.lnkRemoveCart);
-//			assertTrue(clickOnButton(removeBtn));
+			// assertTrue(clickOnButton(removeBtn));
 			Thread.sleep(Constants.thread_high);
 			countOfItems--;
 		}
-		
-		if(oosProductsAvailable) {
-			for(WebElement removeOOSBtn : cartR2PageObj.removeCartforOOSProducts_lst_btn) {
+
+		if (oosProductsAvailable) {
+			for (WebElement removeOOSBtn : cartR2PageObj.removeCartforOOSProducts_lst_btn) {
 				assertTrue(clickOnButton(removeOOSBtn));
 				Thread.sleep(Constants.thread_high);
-			}	
+			}
 		}
-		
-//		int countOfremoveButtonInCartPage =  cartR2PageObj.removeCart_lst_btn.size();
-//		int loopCount = 0;
-//		while(isDisplayed(cartR2PageObj.btnRemoveCart) && (loopCount <= countOfremoveButtonInCartPage + 1))
-//		{
-//			clickOnButton(cartR2PageObj.btnRemoveCart);
-//			loopCount++;
-//			Thread.sleep(Constants.thread_medium);
-//		}
-//		emptyCart();
+
+		// int countOfremoveButtonInCartPage = cartR2PageObj.removeCart_lst_btn.size();
+		// int loopCount = 0;
+		// while(isDisplayed(cartR2PageObj.btnRemoveCart) && (loopCount <=
+		// countOfremoveButtonInCartPage + 1))
+		// {
+		// clickOnButton(cartR2PageObj.btnRemoveCart);
+		// loopCount++;
+		// Thread.sleep(Constants.thread_medium);
+		// }
+		// emptyCart();
 	}
-
-	
-
 
 }

@@ -648,6 +648,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "(//*[text()='Rename List'])[2]")
 	public WebElement Rename_list_lnk;
+	
+	@FindBy(xpath = "//*[text()='Rename List']")
+	public WebElement Rename_list_lnk_mob;
 
 	@FindBy(xpath = "//*[@data-auid='btnbrowse_product_button']")
 	public WebElement browse_products_btn;

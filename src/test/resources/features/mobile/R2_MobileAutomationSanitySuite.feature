@@ -130,8 +130,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|checkOut_OrderSummary_btn|	
 		|Total_txt|
 		|SubTotal_txt|
-		|EstimatedTaxes_txt|
-		|Discount_Txt|	 
+		|EstimatedTaxes_txt| 
 	
 @R2_Mobile @R2_MAST-11 @P-Highest @C-Cart @KER-3127 @ZYP_K3127-8166_M @CR-AKK 
 @AutomationSanityR2 
