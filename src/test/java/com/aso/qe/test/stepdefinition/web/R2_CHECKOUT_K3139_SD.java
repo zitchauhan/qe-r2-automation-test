@@ -30,14 +30,14 @@ public class R2_CHECKOUT_K3139_SD extends CommonActionHelper {
 	
 	@Then("^user enter invalid non existent expiration date and verifies error msg$")
 	public void user_enter_invalid_non_existent_expiration_date_and_verifies_error_msg() throws Throwable {
-		setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty("UnrecongnisedExpirationDate"));
+		setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty("NonExistentExpirationDate"));
 		assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 		assertTrue(isDisplayed(r2CheckOutPo.unrecognizedExpirationDate_Txt));
 	}
 
 	@Then("^user enteres invalid CVV and validates the error msg$")
 	public void user_enteres_invalid_CVV_and_validates_the_error_msg() throws Throwable {
-		setInputText(r2CheckOutPo.txtCVVInput, webPropHelper.getTestDataProperty("UnrecongnisedExpirationDate"));
+		setInputText(r2CheckOutPo.txtCVVInput, webPropHelper.getTestDataProperty("InvalidCVV"));
 		assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 		assertTrue(isDisplayed(r2CheckOutPo.PleaseEnteRaValidSecurityCode_Txt));
 	}

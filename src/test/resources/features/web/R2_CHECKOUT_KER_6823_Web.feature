@@ -27,7 +27,7 @@ Scenario:
 		|ChoosegiftCard_Dd|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6823
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6823 
 @ZYP_CHECKOUT_K6823-8671 @CR-RKA 
 Scenario: Verify one gift card applied and Balance is not covered in full 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -36,6 +36,7 @@ Scenario: Verify one gift card applied and Balance is not covered in full
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then user click on My Account and navigate to payment 
+	And user deletes all the GiftCards in MyAccount Payment page 
 	When user clicks on Add New Gift Card button 
 	Then user fill the gift card in My Account 
 	And User navigates to L2 Mens clothing 
@@ -50,16 +51,18 @@ Scenario: Verify one gift card applied and Balance is not covered in full
 		|#verify add new giftcard is displayed |
 		|AddAnewGiftCard_Txt|
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6823
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6823 
 @ZYP_CHECKOUT_K6823-11184 @CR-RKA 
-Scenario:
-To verify the GC in 'Choose Gift Card' drop down should be disabled for an authenticated user if full balance of the GC utilized in order 
+Scenario: 
+	To verify the GC in 'Choose Gift Card' drop down should be disabled for an authenticated user if full balance of the GC utilized in order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart 
 	Then user click on My Account and navigate to payment 
+	And user deletes all the GiftCards in MyAccount Payment page 
 	When user clicks on Add New Gift Card button 
 	Then user fill the gift card in My Account 
 	And User navigates to L2 Mens clothing 
@@ -78,10 +81,10 @@ To verify the GC in 'Choose Gift Card' drop down should be disabled for an authe
 		|#verify add new giftcard is displayed |
 		|AddAnewGiftCard_Txt|
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6823
+@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6823 
 @ZYP_CHECKOUT_K6823-8672 @CR-RKA 
-Scenario:
-Verify saved another gift card drop down having 13 and 16 digit GC with 4 or 8 digit PIN 
+Scenario: 
+	Verify saved another gift card drop down having 13 and 16 digit GC with 4 or 8 digit PIN 
 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -105,17 +108,17 @@ Verify saved another gift card drop down having 13 and 16 digit GC with 4 or 8 d
 		|ChoosegiftCard_Dd|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 
 @ZYP_CHECKOUT_K6823-8673 @CR-RKA 
 Scenario: Verify No second Saved Gift Card for Authenticated user 
-
-
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart 
 	Then user click on My Account and navigate to payment 
+	And user deletes all the GiftCards in MyAccount Payment page 
 	When user clicks on Add New Gift Card button 
 	Then user fill the gift card in My Account 
 	And User navigates to L2 Mens clothing 
@@ -149,16 +152,16 @@ Scenario: Verify +Add another Gift card is Suppressed
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
 	And user click on Add to Cart Button 
-	And user click on checkout from ATC pop up
+	And user click on checkout from ATC pop up 
 	And user clicks on edit payment cta 
-	And user click on GiftCard Plus icon in Checkout page
+	And user click on GiftCard Plus icon in Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify in choose gift card dropdown default gift card is showing|
 		|ChoosegiftCard_Dd| 
 	And user click on apply giftcard button 
 	And user click on remove gift card 
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 
 @ZYP_CHECKOUT_K6823-8682 @CR-RKA 
 Scenario: Verify remove all gift cards 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -166,7 +169,9 @@ Scenario: Verify remove all gift cards
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart 
 	Then user click on My Account and navigate to payment 
+	And user deletes all the GiftCards in MyAccount Payment page 
 	When user clicks on Add New Gift Card button 
 	Then user fill the gift card in My Account 
 	And User navigates to L2 Mens clothing 
@@ -182,16 +187,17 @@ Scenario: Verify remove all gift cards
 		|#verify user is able to see choose gift card Drop down|
 		|ChoosegiftCard_Dd|
 		
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 
 @ZYP_CHECKOUT_K6823-8658 @CR-RKA 
 Scenario: Verify Gift Card Chronology and Balance 
-
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart 
 	Then user click on My Account and navigate to payment 
+	And user deletes all the GiftCards in MyAccount Payment page 
 	When user clicks on Add New Gift Card button 
 	Then user fill the gift card in My Account 
 	And User navigates to L2 Mens clothing 
@@ -208,16 +214,17 @@ Scenario: Verify Gift Card Chronology and Balance
 		|ChoosegiftCard_Dd|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823
+@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-6823 
 @ZYP_CHECKOUT_K6823-8659 @CR-RKA 
 Scenario: Verify Gift card drop down supressed 
-
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart 
 	Then user click on My Account and navigate to payment 
+	And user deletes all the GiftCards in MyAccount Payment page 
 	When user clicks on Add New Gift Card button 
 	Then user fill the gift card in My Account 
 	And User navigates to L2 Mens clothing 
@@ -230,11 +237,6 @@ Scenario: Verify Gift card drop down supressed
 	And user will click on Checkout button and navigates to Checkout page 
 	And user click on GiftCard Plus icon in Checkout page 
 	Then user click on apply giftcard button 
-	Then Verify below Sub/Main Module of Checkout Page 
-		|#verify gift card drop down supressed|
-		|Plus_AddAnotherGiftCard_Txt|
-		#Then user click on remove gift card 
+	Then user click on remove gift card 
 		
 		
-		
-  

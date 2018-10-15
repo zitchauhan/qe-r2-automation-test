@@ -38,8 +38,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='email_input']")
 	public WebElement inputEmailAddress;// Updated KER-6941 CR-RK
 
-	//@FindBy(xpath = "(//div[.='Create Password']/following-sibling::div/input)[1]") // modified by CR- SK//
-	@FindBy(xpath = "//*[@id='signup-passwordfield'] | //*[@data-auid='Password']")//RKA 8 oct
+	// @FindBy(xpath = "(//div[.='Create
+	// Password']/following-sibling::div/input)[1]") // modified by CR- SK//
+	@FindBy(xpath = "//*[@id='signup-passwordfield'] | //*[@data-auid='Password']") // RKA 8 oct
 	public WebElement inputCreatePassword;
 
 	@FindBy(xpath = "//input[@type='checkbox']")
@@ -157,7 +158,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//button[text()='Forgot Your Password']")
 	public WebElement lnkForgotYourPassword;
 
-	@FindBy(xpath = "//*[contains(text(),'Create Account')]")
+	@FindBy(xpath = "//*[contains(text(),'Create Account')] | //*[contains(text(),'Create an account')]")
 	public WebElement txtCreateAccountDescription;
 
 	@FindBy(xpath = "//*[contains(text(),'Create Account')] | //*[contains(text(),'Create an account')]") // 4-Oct CR_GK
@@ -190,7 +191,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//h4[.='FORGOT PASSWORD']")
 	public WebElement headerForgotYourPassword;
 
-	@FindBy(xpath = "//*[@data-auid='btnsubmit_btn'] | //*[@data-auid='btnundefined']") // CR-SK 28 Aug-18 //CR-DPK oct-09
+	@FindBy(xpath = "//*[@data-auid='btnsubmit_btn'] | //*[@data-auid='btnundefined']") // CR-SK 28 Aug-18 //CR-DPK
+																						// oct-09
 	public WebElement btnSubmit;
 
 	@FindBy(xpath = "//*[@data-auid='forgot_password_btn']")
@@ -205,7 +207,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public WebElement lnkMyAccount;
 
 	@FindBy(xpath = "//*[contains(text(),'Current Password')]/following-sibling::div/input | //*[contains(text(),'Current Password')]/../following-sibling::div/input | //*[@name='currentPassword']")
-	public WebElement txtCurrentPassword;//modified GK 06 - Oct
+	public WebElement txtCurrentPassword;// modified GK 06 - Oct
 
 	// @FindBy(xpath = "//div[.='New
 	// Password']/following-sibling::input[@type='password']")/RKA 18 sept
@@ -230,7 +232,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//div[.='You have no gift cards listed.']")
 	public WebElement txtNoGiftCardListed; // 25 Aug
 
-	@FindBy(xpath = "//*[@data-auid='btnaddNew-giftCard-btn' and text()= 'ADD NEW GIFT CARD'] | //*[text()= 'ADD NEW GIFT CARD']")//CR-DPK 10oct
+	@FindBy(xpath = "//*[@data-auid='btnaddNew-giftCard-btn' and text()= 'ADD NEW GIFT CARD'] | //*[text()= 'ADD NEW GIFT CARD']") // CR-DPK
+																																	// 10oct
 	public WebElement btnAddNewGiftCard; // 25 Aug
 
 	@FindBy(xpath = "//*[text()='Gift Card Number']//following-sibling::div/input") // CR-SK,28-Aug 2018 //updated
@@ -335,7 +338,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//span[.='Required']")
 	public List<WebElement> txtAllAddress;
 
-	@FindBy(xpath = "//*[text()='Remove']")
+	final String removeBtnForAddress = "//*[text()='Remove']";
+	@FindBy(xpath = removeBtnForAddress)
 	public WebElement btnRemove;
 
 	@FindBy(xpath = "//*[text()='Edit']")
@@ -421,7 +425,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnaddNew-giftCard-btn' and text()= 'ADD NEW CREDIT CARD']")
 	public WebElement btnAddInAddCreditCard;
 
-	@FindBy(xpath = "//*[text() = 'GIFT CARDS'] | //*[text() = 'Gift Card']")//CR-DPK 10oct
+	@FindBy(xpath = "//*[text() = 'GIFT CARDS'] | //*[text() = 'Gift Card']") // CR-DPK 10oct
 	public WebElement headerGiftCards;
 
 	@FindBy(xpath = "//*[text() = 'ADD NEW CREDIT CARD']")
@@ -461,7 +465,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnmodal_open_btn']")
 	public WebElement btnCreateNewWishlist;
 
-	@FindBy(xpath = "//*[@data-auid='wish_list_name_input'] | //*[@data-auid='Wish_list_name_input']")//CR-DPK 05-oct
+	@FindBy(xpath = "//*[@data-auid='wish_list_name_input'] | //*[@data-auid='Wish_list_name_input']") // CR-DPK 05-oct
 	public WebElement txtWishListName;
 
 	@FindBy(xpath = "//*[@data-auid='btncreate_wish_list_btn'] | //*[@data-auid='pop_over_toggle_btn']")
@@ -503,7 +507,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnbutton-3']")
 	public WebElement btnFind;
 
-	@FindBy(xpath = "//*[text()='Set as Default']/..//label")//CR-DPK oct-08
+	@FindBy(xpath = "//*[text()='Set as Default']/..//label") // CR-DPK oct-08
 	public WebElement chkBoxSetAsDefault;
 
 	@FindBy(xpath = "//h5[text()='ADDRESS BOOK']")
@@ -648,7 +652,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "(//*[text()='Rename List'])[2]")
 	public WebElement Rename_list_lnk;
-	
+
 	@FindBy(xpath = "//*[text()='Rename List']")
 	public WebElement Rename_list_lnk_mob;
 
@@ -678,7 +682,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='Weak']/following-sibling::div/div")
 	public WebElement SignUpPage_PasswordStrengthBar_txt;
 
-	@FindBy(xpath = "//*[text()='Password Strength']//i | //*[@data-auid='tooltipmyAct_passwordStrengthMeter']") //CR-DPK oct-09
+	@FindBy(xpath = "//*[text()='Password Strength']//i | //*[@data-auid='tooltipmyAct_passwordStrengthMeter']") // CR-DPK
+																													// oct-09
 	public WebElement SignUpPage_PasswordStrength_tooltip;
 
 	@FindBy(xpath = "//*[@data-auid='Orders_m']")
@@ -782,13 +787,14 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='phone1']")
 	public WebElement AddressBook_inpPhoneNumber; // 19sept CR-GK
 
-	@FindBy(xpath = "//*[text()='Remove']") // CR-DPK 21-sept
+	@FindBy(xpath = removeBtnForAddress) // CR-DPK 21-sept //CR-GK 15-Oct
 	public List<WebElement> addresRemove_Btn;
 
-	@FindBy(xpath = "//*[text()='Order Number']/../*[2] | //*[text()='Order Number']/../../*[2]")//CR-DPK 10oct
+	@FindBy(xpath = "//*[text()='Order Number']/../*[2] | //*[text()='Order Number']/../../*[2]") // CR-DPK 10oct
 	public WebElement OrderNumber_Input;
 
-	@FindBy(xpath = "//*[text()='Billing Zip Code']/../*[2] | //*[text()='Billing Zip Code']/../../*[2]")//CR-DPK 10oct
+	@FindBy(xpath = "//*[text()='Billing Zip Code']/../*[2] | //*[text()='Billing Zip Code']/../../*[2]") // CR-DPK
+																											// 10oct
 	public WebElement BillindZipCode_Input;
 
 	@FindBy(xpath = "//*[@data-auid='btnbutton-3']")
@@ -914,8 +920,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	}
 
-	//CR-GK 5-Oct
-	public void deleteAllWishList(){
+	// CR-GK 5-Oct
+	public void deleteAllWishList() {
 		int listCount = openWishListBtn.size();
 		while (listCount > 0) {
 			assertTrue(clickOnButton(WishlistItems_lnk));
@@ -946,6 +952,17 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 			assertTrue(clickOnButton(MyAccount_GiftCardRemoveBtn));
 			Thread.sleep(Constants.thread_medium);
 			giftCardsCount--;
+		}
+	}
+
+	// CR-GK 15-Oct
+	public void deleteAllNonDefaultSavedAddressFromProfile() throws InterruptedException {
+		Thread.sleep(Constants.thread_low);
+		int nonDefaultaddressCountInProfile = addresRemove_Btn.size();
+		while (nonDefaultaddressCountInProfile > 0) {
+			assertTrue(clickOnButton(btnRemove));
+			Thread.sleep(Constants.thread_low);
+			nonDefaultaddressCountInProfile--;
 		}
 	}
 

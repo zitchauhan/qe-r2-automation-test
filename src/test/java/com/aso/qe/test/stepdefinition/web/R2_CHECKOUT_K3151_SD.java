@@ -21,24 +21,23 @@ import cucumber.api.java.en.When;
 
 public class R2_CHECKOUT_K3151_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R2_CHECKOUT_K3151_SD.class);
-	R2_CheckOut_PO r2CheckOutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
-	
+	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
+
 	@When("^user should see the order summary page with the default address$")
 	public void user_should_see_the_order_summary_page_with_the_default_address() throws Throwable {
-		WebElement defaultaddress=r2CheckOutPo.Checkout_ShippingAddress_Default;
+		WebElement defaultaddress = r2CheckOutPo.Checkout_ShippingAddress_Default;
 		assertTrue(isDisplayed(r2CheckOutPo.Checkout_ShippingAddress_Default));
-		System.out.println("**************"+defaultaddress.getText());
-		
+		System.out.println("**************" + defaultaddress.getText());
+
 	}
 
 	@When("^user is navigated to order summary page$")
 	public void user_is_navigated_to_order_summary_page() throws Throwable {
 		String currentURL = getCurrentPageURL();
-		if(currentURL.contains("checkout")) {
-			logger.debug("User is successfully navigated to Checkout page with URL :: " + currentURL  );
-		}
-		else {
-			logger.debug("User is not able to navigate to Checkout instead navigated to URL :: " + currentURL  );
+		if (currentURL.contains("checkout")) {
+			logger.debug("User is successfully navigated to Checkout page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Checkout instead navigated to URL :: " + currentURL);
 		}
 	}
 
@@ -50,45 +49,49 @@ public class R2_CHECKOUT_K3151_SD extends CommonActionHelper {
 	@Then("^user verifies all the saved addresses in my account should be displayed in the dropdown$")
 	public void user_verifies_all_the_saved_addresses_in_my_account_should_be_displayed_in_the_dropdown()
 			throws Throwable {
-		WebElement shippingaddressdropdown=r2CheckOutPo.Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd;
-		System.out.println("**********"+shippingaddressdropdown.getText());
+		WebElement shippingaddressdropdown = r2CheckOutPo.Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd;
+		System.out.println("**********" + shippingaddressdropdown.getText());
 		assertTrue(isDisplayed(shippingaddressdropdown));
-	
+
 	}
 
-		
 	@Given("^user click on edit button in shipping address section$")
 	public void user_click_on_edit_button_in_shipping_address_section() throws Throwable {
-		assertTrue(clickOnButton(r2CheckOutPo.Checkout_ShippingAddress_Edit));
-		Thread.sleep(Constants.thread_low); 
+		if (isDisplayed(r2CheckOutPo.Checkout_ShippingAddress_Edit)) {
+			assertTrue(clickOnButton(r2CheckOutPo.Checkout_ShippingAddress_Edit));
+		}
+		Thread.sleep(Constants.thread_low);
 	}
 
 	@Given("^user click on Add a new Shipping Address button in the shipping address drop down$")
 	public void user_click_on_Add_a_new_Shipping_Address_button_in_the_shipping_address_drop_down() throws Throwable {
 		assertTrue(clickOnButton(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd));
-		
-		
-		Actions hover=new Actions(getDriver());
+
+		Actions hover = new Actions(getDriver());
 		hover.clickAndHold(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress).build().perform();
-		hover.sendKeys(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress, Keys.DOWN,Keys.ENTER).build().perform();
+		hover.sendKeys(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress, Keys.DOWN, Keys.ENTER)
+				.build().perform();
 	}
+
 	@Then("^user click on confirm button in shipping address$")
 	public void user_click_on_confirm_button() throws Throwable {
-	    assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
+		assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
 	}
+
 	@Then("^user select the shipping address in the drop down$")
 	public void user_select_the_shipping_address_in_the_drop_down() throws Throwable {
-		Actions hover=new Actions(getDriver());
+		Actions hover = new Actions(getDriver());
 		hover.click(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd).build().perform();
 		hover.click(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd).build().perform();
-		hover.sendKeys(Keys.DOWN,Keys.DOWN,Keys.DOWN,Keys.DOWN,Keys.ENTER).build().perform();
+		hover.sendKeys(Keys.DOWN, Keys.DOWN, Keys.DOWN, Keys.DOWN, Keys.ENTER).build().perform();
 
-		//hover.sendKeys(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_SelectShippingAddress, Keys.DOWN,Keys.ENTER).build().perform();
+		// hover.sendKeys(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_SelectShippingAddress,
+		// Keys.DOWN,Keys.ENTER).build().perform();
 	}
 
 	@Then("^user verifies the selected address is displayed in address section$")
 	public void user_verifies_the_selected_address_is_displayed_in_address_section() throws Throwable {
 		assertTrue(isDisplayed(r2CheckOutPo.Checkout_ShippingAddress_Default));
 	}
-	
+
 }

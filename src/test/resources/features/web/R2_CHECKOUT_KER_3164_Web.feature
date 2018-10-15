@@ -78,6 +78,7 @@ Scenario: Verify if User is able to enter billing information
 	And  user enter the valid emailaddress "EmailAddress" 
 	And  user enter the valid password "Password" 
 	And  user click on signin button 
+	And user navigate and deletes existing items in cart 
 	And  User searches a product "productName" and navigates to PDP 
 	And  user click on Add to Cart Button 
 	And  user is navigated to Add to cart Notification popup 
@@ -85,6 +86,7 @@ Scenario: Verify if User is able to enter billing information
 	And user clicks on edit shipping method cta 
 	And user click on go to payment present in shipping method 
 	And user clicks on change billing info cta 
+	And user click on checkbox Same as shipping address 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements billing address form|
 		|SameAsShippingAddress_checkBox|
@@ -95,7 +97,6 @@ Scenario: Verify if User is able to enter billing information
 		|ZipCode_Input|
 		|City_Input|
 		|State_DD|
-		|EmailAddressforOrderConfirmation_Input|
 		|SignuptogetHotDeals_checkBox|
 		|ReviewOrder_Btn|
 	And user click on checkbox Same as shipping address 
@@ -110,11 +111,10 @@ Scenario: Verify if User is able to enter billing information
 		|ZipCode_Input|
 		|City_Input|
 		|State_DD|
-		|EmailAddressforOrderConfirmation_Input|
 		|SignuptogetHotDeals_checkBox|
 		|ReviewOrder_Btn|
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
-	And user click on confirm billing address button 
+	And user click on confirm billing address button
 	
 	
 @R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Highest   @KER-3164 

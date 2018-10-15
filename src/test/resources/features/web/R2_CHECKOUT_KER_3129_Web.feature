@@ -80,12 +80,12 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And user navigate to Cart page
-	And user selects Ship To Me radio button
-	And user makes a note of tax calculation
-	When user switches the shipping to Store Pick up
-	Then cart page displays updated tax
-	When user navigates to checkout page
-	Then checkout page displays updated tax	
+#	And user selects Ship To Me radio button
+#	And user makes a note of tax calculation
+#	When user switches the shipping to Store Pick up
+#	Then cart page displays updated tax
+#	When user navigates to checkout page
+#	Then checkout page displays updated tax	
 	
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9562 @CR-RK	        
 Scenario: To verify Tax recalculation when user switches from Shipping to store pickup 
@@ -96,12 +96,12 @@ Scenario: To verify Tax recalculation when user switches from Shipping to store 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page
-	And user selects Ship To Me radio button
-	And user makes a note of tax calculation
-	When user switches the shipping to Store Pick up
-	Then cart page displays updated tax
-	When user navigates to checkout page
-	Then checkout page displays updated tax
+#	And user selects Ship To Me radio button
+#	And user makes a note of tax calculation
+#	When user switches the shipping to Store Pick up
+#	Then cart page displays updated tax
+#	When user navigates to checkout page
+#	Then checkout page displays updated tax
 	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8009 @CR-RK

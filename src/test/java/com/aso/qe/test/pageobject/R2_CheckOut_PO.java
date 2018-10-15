@@ -124,7 +124,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	// End KER-3152 CR-DPK
 
 	// Start KER-6824 CR-DPK
-	@FindBy(xpath = "//*[text()='GIFT CARDS']/..") //modified 25/9/18 Anuj
+	@FindBy(xpath = "//*[text()='GIFT CARDS']/.. | //*[@data-auid='checkout_order_summary_section']/div[2]/div[4]") //modified 25/9/18 Anuj
 	public WebElement txtGiftCardOrderSummaryPage;
 	// End KER-6824 CR-DPK
 
@@ -664,7 +664,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	/**SID**************************************/
 	   
 	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVE']/p[1]")	public WebElement textBasicDelivery; //SID 5-September
-	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVE']/p[2]")	public WebElement textBasicDeliverMessage; //SID 5-September
+	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVE']/p[2] | //*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVE']/div")	public WebElement textBasicDeliverMessage; //SID 5-September
 	   @FindBy(xpath="   (//*[@data-auid='btnc_btnCheckout'])[2]")public WebElement btnCheckOut_M; //SID 5-September
 	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button")public WebElement clickShippingWGDropDown; //SID 6-September
 	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button/parent::div//ul/li")public List<WebElement> WGServicesList; //SID 6-September
@@ -673,7 +673,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVETHRESHOLD']/p[2]")	public WebElement textSchedukeDeliverMessage; //SID 6-September
 	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button/parent::div//ul/li/*[contains(text(),'Room')]")public WebElement WGRoomOfChoiceService; //SID 5-September
 	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/p[1]")	public WebElement textRoomOfChoiceDelivery; //SID 6-September
-	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/p[2]")	public WebElement textRoomOfChoiceDeliverMessage; //SID 6-September
+	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/p[2] | //*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/div")	public WebElement textRoomOfChoiceDeliverMessage; //SID 6-September
 	   @FindBy(xpath="(//*[@data-component='cart']//*[text()='Employee Discount applied'])[1]")public WebElement employeeDiscountItemLevel_CartPage; //SID 13-September
 	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Employee Discount')]")public WebElement employeeDiscountOrderSummerPage; //SID 13-September
 	   @FindBy(xpath="(//*[contains(@data-auid,'level3Category')])[1]//img")public WebElement dealTabProduct; //SID 5-September
@@ -799,7 +799,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	public void verifyCVVTooltip() {
 		assertTrue(isDisplayed(btnCVVToolTip));
 		moveHover(btnCVVToolTip);
-		txtCVVToolTipMsg.isDisplayed();
+		assertTrue(clickOnButton(btnCVVToolTip));
+		assertTrue(isDisplayed(txtCVVToolTipMsg));
 	}
 	
 	public void verifyCardImage() {

@@ -256,7 +256,6 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|Total_txt|
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|	
-		|Discount_Txt|
 		
 @R2_Web      @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9605 @CR-DPK 
 Scenario: Verify promotion got applied to the product when user applied $ Amount off promotion on product level in cart -- Implicit promotion

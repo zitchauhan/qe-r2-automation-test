@@ -198,15 +198,14 @@ public class R2_CART_K2927_SD extends CommonActionHelper {
 	public void user_navigates_delete_existing_items_in_cart() throws Throwable {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(globalElementHeader.iconcart_m));
-
 		} else {
 			assertTrue(clickOnButton(globalElementHeader.iconcart));
-
 		}
+
 		waitForPageLoad(driver);
 		boolean oosProductsAvailable = false;
-		Thread.sleep(Constants.thread_medium);
-		if (r1_SearchPO.verifyTextDisplayedOnPage("There are not enough items in stock to fulfill your order")) {
+		Thread.sleep(Constants.thread_high);
+		if (r1_SearchPO.verifyTextDisplayedOnPage("WE'RE SORRY")) {
 			assertTrue(clickOnButton(cartR2PageObj.editInCart_btn));
 			oosProductsAvailable = true;
 		}

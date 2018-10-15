@@ -10,12 +10,13 @@ Scenario: To verify checkout landing variations - shipping drawer hidden for SOF
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	Then User searches a product "SOFSKUNumber" and navigates to PDP 
+	And user selects a store with ZIP "FindStoreZipcode" 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When user will click on Checkout button and navigates to Checkout page 
-	Then user should not be allowed to view shipping method drawer if only SOF items are in the cart 
+	Then user should not be allowed to view shipping method drawer if only SOF items are in the cart
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-7031 
 @ZYP_CHECKOUT_K7031-9588 @CR-MS 
