@@ -8,6 +8,7 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_HomePage_PO;
+import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -18,6 +19,7 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 
 	public R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	R1_HomePage_PO hp_p=PageFactory.initElements(getDriver(), R1_HomePage_PO.class);
+	public R2_MyAccount_PO myAccount_PO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	
 	
 	@When("^user to click on sing in and navigate to sign in page$")
@@ -60,8 +62,17 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 	//SID Modify 19-September
 	@Then("^verify user to navigate to account summary page$")
 	public void verify_user_to_navigate_to_account_summary_page() throws Throwable {
-		assertTrue(clickOnButton(globalElementHeader.btnMyAccount));
-	    assertTrue(isDisplayed(hp_p.txtAccountSummary));
+		
+		if("mobile".equalsIgnoreCase(testtype)){			
+			clickOnButton(hp_p.btnMyaccountMenu_M)	;
+			assertTrue(isDisplayed(myAccount_PO.burgerMenu_Orders_lnk));
+			
+		}else {
+			assertTrue(clickOnButton(globalElementHeader.btnMyAccount)); 
+		    assertTrue(isDisplayed(hp_p.txtAccountSummary));				
+		}
+		
+		
 	    
 	}
 	
@@ -83,7 +94,7 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 				
 		if("mobile".equalsIgnoreCase(testtype)){	
 			clickOnButton(hp_p.btnMyaccountMenu_M)	;
-			assertTrue(isDisplayed(hp_p.tabWishList));						
+			assertTrue(isDisplayed(hp_p.tabWishListMobile));						
 			}else {
 				assertTrue(isDisplayed(hp_p.tabWishList));	
 			}
@@ -94,7 +105,7 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 	
 		if("mobile".equalsIgnoreCase(testtype)){			
 		clickOnButton(hp_p.btnMyaccountMenu_M)	;
-		assertTrue(isDisplayed(hp_p.tabPersonalInformation));
+		assertTrue(isDisplayed(hp_p.tabPersonalInformation_Mobile));
 		}else {
 			assertTrue(isDisplayed(hp_p.tabPersonalInformation));					
 	}
@@ -105,7 +116,7 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 			
 		if("mobile".equalsIgnoreCase(testtype)){			
 				clickOnButton(hp_p.btnMyaccountMenu_M)	;
-			assertTrue(isDisplayed(hp_p.tabAddressBook));
+			assertTrue(isDisplayed(hp_p.tabAddressBookMobile));
 				
 			}else {
 				assertTrue(isDisplayed(hp_p.tabAddressBook));				

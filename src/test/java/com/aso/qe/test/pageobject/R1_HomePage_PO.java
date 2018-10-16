@@ -26,9 +26,12 @@ public class R1_HomePage_PO {
 	@FindBy(xpath="//*[@id='logonErrorMessage'] | //*[contains(@role,'alert') and contains(text(),'incorrect')]")public WebElement msgVerifyIncorrect;  //SID 19-September
 	@FindBy(xpath="//*[@id='logonIdError'] | //*[contains(@role,'alert') and contains(text(),'Please enter email address')]") public WebElement msgVerifyEmail; //SID 19-September
 	@FindBy(xpath="//*[@id='logonPasswordError'] | //*[contains(@role,'alert') and contains(text(),'Please enter the Password')]")public WebElement msgVerifyPassword;  //SID 19-September
-	@FindBy(xpath="//*[@class='leftNavLinks']/*[2]/*") public WebElement tabPersonalInformation;
-	@FindBy(xpath="//*[@class='leftNavLinks']/*[3]/*") public WebElement tabAddressBook;
-	@FindBy(xpath="//*[@class='leftNavLinks']/*[4]/*") public WebElement tabWishList;
+	@FindBy(xpath="//*[@data-auid='Profile']") public WebElement tabPersonalInformation;
+	@FindBy(xpath="//*[@data-auid='Profile_m']") public WebElement tabPersonalInformation_Mobile;//upadte anuj gupta 16 Oct
+	@FindBy(xpath="//*[@data-auid='Address Book_m']") public WebElement tabAddressBookMobile;
+	@FindBy(xpath="//*[@data-auid='Address Book']") public WebElement tabAddressBook;
+	@FindBy(xpath="//*[@data-auid='Wish List_m']") public WebElement tabWishListMobile;
+	@FindBy(xpath="//*[@data-auid='Wish List']") public WebElement tabWishList;
 	@FindBy(xpath="//*[contains(text(),'Forgot your password?')] | //*[text()='Forgot your password ?']") public WebElement textForgotPasword; //SID 19-September
 	@FindBy(xpath="//*[@id='forgot-email'] | //*[@data-auid='email_input']") public WebElement inputForgetEmail; //SID 19-September
 	@FindBy(xpath="//*[@id='btnForgotPassword'] | //*[@data-auid='btnsubmit_btn']") public WebElement btnSubmit;  //SID 19-September
@@ -39,7 +42,7 @@ public class R1_HomePage_PO {
 	//@FindBy(xpath="(//*[contains(text(),'Sign In')])[4]") public WebElement  linkSignIn_M;/RKA 8 aug
 	@FindBy(xpath="//*[@data-auid='signInCta_m']")public WebElement  linkSignIn_M;
 	@FindBy(xpath="//*[contains(text(),'Sign Out')]") public WebElement signout_M;
-	@FindBy(xpath="//*[contains(text(),'MY ACCOUNT MENU')]")public WebElement btnMyaccountMenu_M;
+	@FindBy(xpath="//*[@data-auid='myAccountCta_m']")public WebElement btnMyaccountMenu_M;
 	// KER- 727 END
 	//KER-710 Start
 	//@FindBy(xpath="//*[text()='SHOP']") public WebElement btnShop;/RKA 8 aug
