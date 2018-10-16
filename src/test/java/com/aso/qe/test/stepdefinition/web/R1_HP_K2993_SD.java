@@ -23,7 +23,9 @@ public class R1_HP_K2993_SD extends CommonActionHelper{
 		assertTrue(clickOnButton(globalElementHeader.lnkrebates));
 		waitForPageLoad(driver);
 		Thread.sleep(Constants.thread_low);
-		assertTrue(getTitle().contains("Rebates"));
+		assertTrue(isDisplayed(globalElementHeader.secRebatesDetails));
+		
+		//assertTrue(getTitle().contains("rebates"));
 	}
 
 	@Then("^User able to see all neccessary details inside it$")

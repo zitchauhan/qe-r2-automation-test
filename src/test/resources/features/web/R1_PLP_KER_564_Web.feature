@@ -10,8 +10,4 @@ Scenario: Verify Faceted Navigation - Refresh products whenever the filters valu
     Then User veriy brand facet 
     Then User Verify color facet   
     Then User Verify Pagination of page  
-    When user enters "SearchL3" in the search box
-   Then User select the brand facet product from L3
-    Then User veriy brand facet 
-    Then User Verify color facet   
-    Then User Verify Pagination of page
+  
