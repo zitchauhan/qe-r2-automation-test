@@ -75,39 +75,39 @@ Verify if  User can  view tax line item in order summary section on checkout (BO
 #	And User should have same tax on Checkout Page Order Summary 
 	
 #	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3129
-@ZYP_CHECKOUT_K3129-9561 @CR-RK 
-Scenario:
-Verify if  User can  view updated tax and order total in order summary section on checkout if user switches from store pickup to Shipping 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user selects the ship to Store Pick up radio button 
-	And user makes a note of tax calculation 
-	When user switches from Store Pick up to Shipping 
-	Then cart page displays updated tax 
-	When user navigates to checkout page 
-	Then checkout page displays updated tax 
+#@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3129
+#@ZYP_CHECKOUT_K3129-9561 @CR-RK 
+#Scenario:
+#Verify if  User can  view updated tax and order total in order summary section on checkout if user switches from store pickup to Shipping 
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	And User searches a product "productName" and navigates to PDP 
+#	And user click on Add to Cart Button 
+#	And user is navigated to Add to cart Notification popup 
+#	And user will click on View Cart button 
+#	And user navigate to Cart page 
+#	And user selects the ship to Store Pick up radio button 
+#	And user makes a note of tax calculation 
+#	When user switches from Store Pick up to Shipping 
+#	Then cart page displays updated tax 
+#	When user navigates to checkout page 
+#	Then checkout page displays updated tax 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3129
-@ZYP_CHECKOUT_K3129-9562 @CR-RK 
-Scenario:
-Verify if  User can  view updated tax and order total in order summary section on checkout if user switches from shipping to store pickup 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user selects Ship To Me radio button 
-	And user makes a note of tax calculation 
-	When user switches the shipping to Store Pick up 
-	Then cart page displays updated tax 
-	When user navigates to checkout page 
-	Then checkout page displays updated tax 
+#@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3129
+#@ZYP_CHECKOUT_K3129-9562 @CR-RK 
+#Scenario:
+#Verify if  User can  view updated tax and order total in order summary section on checkout if user switches from shipping to store pickup 
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	And User searches a product "productName" and navigates to PDP 
+#	And user click on Add to Cart Button 
+#	And user is navigated to Add to cart Notification popup 
+#	And user will click on View Cart button 
+#	And user navigate to Cart page 
+#	And user selects Ship To Me radio button 
+#	And user makes a note of tax calculation 
+#	When user switches the shipping to Store Pick up 
+#	Then cart page displays updated tax 
+#	When user navigates to checkout page 
+#	Then checkout page displays updated tax 
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8009
 @CR-RK 

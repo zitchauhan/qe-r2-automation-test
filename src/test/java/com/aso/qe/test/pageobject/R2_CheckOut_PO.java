@@ -665,7 +665,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVE']/p[1]")	public WebElement textBasicDelivery; //SID 5-September
 	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVE']/p[2] | //*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVE']/div")	public WebElement textBasicDeliverMessage; //SID 5-September
-	   @FindBy(xpath="   (//*[@data-auid='btnc_btnCheckout'])[2]")public WebElement btnCheckOut_M; //SID 5-September
+	   @FindBy(xpath="   (//*[@data-auid='btnc_btnCheckout'])[2] | (//*[@data-auid='btnCheckout'])[2]")public WebElement btnCheckOut_M; //SID 5-September //CR-GK 16Oct
 	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button")public WebElement clickShippingWGDropDown; //SID 6-September
 	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button/parent::div//ul/li")public List<WebElement> WGServicesList; //SID 6-September
 	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button/parent::div//ul/li/*[contains(text(),'Scheduled')]")public WebElement WGScheduleService; //SID 5-September

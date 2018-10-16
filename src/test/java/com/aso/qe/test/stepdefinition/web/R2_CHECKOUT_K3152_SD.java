@@ -37,17 +37,16 @@ public class R2_CHECKOUT_K3152_SD extends CommonActionHelper {
 
 	@Then("^User clicks on edit CTA$")
 	public void user_clicks_on_edit_CTA() throws Throwable {
-		assertTrue(clickOnButton(r2MyAccountPo.checkoutEditShippingBtn));
-
+		if (isDisplayed(r2MyAccountPo.checkoutEditShippingBtn)) {
+			assertTrue(clickOnButton(r2MyAccountPo.checkoutEditShippingBtn));
+		}
 	}
-	
+
 	@Then("^User verify edit CTA$")
 	public void user_verify_edit_CTA() throws Throwable {
 		assertFalse(clickOnButton(r2MyAccountPo.checkoutEditShippingBtn));
 
 	}
-	
-	
 
 	@Then("^User verify Shipping Method should collapse and the Shipping Address section expands and field should populate with previously added data$")
 	public void user_verify_Shipping_Method_should_collapse_and_the_Shipping_Address_section_expands_and_field_should_populate_with_previously_added_data()
@@ -89,7 +88,7 @@ public class R2_CHECKOUT_K3152_SD extends CommonActionHelper {
 
 	@Then("^User navigates to Address book$")
 	public void user_navigates_to_Address_book() throws Throwable {
-		Thread.sleep(Constants.thread_medium); 
+		Thread.sleep(Constants.thread_medium);
 		clickBackButton();
 		assertTrue(clickOnButton(r2MyAccountPo.myAccount));
 		assertTrue(clickOnButton(r2MyAccountPo.wishList));

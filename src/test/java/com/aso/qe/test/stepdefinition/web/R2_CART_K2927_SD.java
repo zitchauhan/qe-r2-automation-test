@@ -198,6 +198,7 @@ public class R2_CART_K2927_SD extends CommonActionHelper {
 	public void user_navigates_delete_existing_items_in_cart() throws Throwable {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(globalElementHeader.iconcart_m));
+			Thread.sleep(Constants.thread_medium);
 		} else {
 			assertTrue(clickOnButton(globalElementHeader.iconcart));
 		}

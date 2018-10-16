@@ -1,10 +1,10 @@
 Feature: Add Shipping Address in Checkout 
 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934 
 @ZYP_CHECKOUT_K2934-8177 @CR-DPK 
-Scenario:
-Verify the Shipping address form that authenticated user can view on adding new shipping address during checkout 
+Scenario: 
+	Verify the Shipping address form that authenticated user can view on adding new shipping address during checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -32,10 +32,10 @@ Verify the Shipping address form that authenticated user can view on adding new 
 		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2934
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-2934 
 @ZYP_CHECKOUT_K2934-8178 @CR-DPK 
-Scenario:
-Verify if unauthenticated user be presented with the blank shipping address form fields 
+Scenario: 
+	Verify if unauthenticated user be presented with the blank shipping address form fields 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	Then User clicks on the burger menu
 	#	And User navigates to LThree
@@ -56,10 +56,10 @@ Verify if unauthenticated user be presented with the blank shipping address form
 		|Required|	
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 
 @ZYP_CHECKOUT_K2934-8179 @CR-DPK 
-Scenario:
-Verify Guest user should view zipcode pre-populated if previously provided on Cart 
+Scenario: 
+	Verify Guest user should view zipcode pre-populated if previously provided on Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User navigates to LThree 
@@ -79,10 +79,10 @@ Verify Guest user should view zipcode pre-populated if previously provided on Ca
 	And user should see the Zip code pre-populated in Shipping Address drawer 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 
 @ZYP_CHECKOUT_K2934-9681 @CR-DPK 
-Scenario:
-Verify guest user, if after placing order, registers the account saves the address in My Account 
+Scenario: 
+	Verify guest user, if after placing order, registers the account saves the address in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
@@ -92,6 +92,7 @@ Verify guest user, if after placing order, registers the account saves the addre
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
 	And user enter Address "Address" 
+	And user keeps the zip field empty 
 	Then user click on Go To Shipping Method button in Checkout page 
 	And verify the error message for mandatory field 
 	And user enter Zipcode "ZIPCODE" 
@@ -99,10 +100,10 @@ Verify guest user, if after placing order, registers the account saves the addre
 	And user click on go to payment present in shipping method 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @1HR_R2 @C-Checkout
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @1HR_R2 @C-Checkout 
 @KER-2934 @ZYP_CHECKOUT_K2934-9683 @CR-DPK 
-Scenario:
-Verify User needs to enter Zip code(it is mandatory) if not provided on cart page 
+Scenario: 
+	Verify User needs to enter Zip code(it is mandatory) if not provided on cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
@@ -117,13 +118,14 @@ Verify User needs to enter Zip code(it is mandatory) if not provided on cart pag
 		|checkout_ShippingAddress_ZipCode_txt						|
 		|checkout_ShippingAddress_City_txt							|
 		|checkOut_ShippingAddress_GoToShippingMethod_btn			|
+	And user keeps the zip field empty 
 	And user adds shipment address on checkout page for "guest" user without zipcode 
 	And verify the error message for mandatory field 
 	And user enter Zipcode "ZIPCODE" 
 	Then user click on Go To Shipping Method button in Checkout page 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934
+@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934 
 @ZYP_CHECKOUT_K2934-10382 @CR-DPK 
 Scenario: Verify if user selects AVS address suggestion and checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -154,7 +156,7 @@ Scenario: Verify if user selects AVS address suggestion and checkout
 	And user verify the suggested address 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 
 @ZYP_CHECKOUT_K2934-10383 @CR-DPK 
 Scenario: Verify if user selects AVS address suggestion and checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -185,10 +187,10 @@ Scenario: Verify if user selects AVS address suggestion and checkout
 	
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-2934 
 @ZYP_CHECKOUT_K2934-11681 @CR-DPK 
-Scenario:
-Verify Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA, Shipping Method drawer gets open on successful validation 
+Scenario: 
+	Verify Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA, Shipping Method drawer gets open on successful validation 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User navigates to LThree 

@@ -142,16 +142,16 @@ Scenario: Verify that user should be displayed with error message if they try to
 	When User searches a product "SOFSKUNumber" and navigates to PDP
 	Then user should not able to see the Enable BUY NOW button on the PDP
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-7040 @ZYP_CHECKOUT_K6655-8908 @CR-MS
-Scenario: Verify that user should be displayed with error message if they try to ship restricted items to restricted shipping address
- Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "UserWithDefaultCaliforniaAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button
-	When User searches a product "OutOfStockSKUNumber" and navigates to PDP
-	Then user should not able to see the Enable BUY NOW button on the PDP	
+#@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-7040 @ZYP_CHECKOUT_K6655-8908 @CR-MS
+#Scenario: Verify that user should be displayed with error message if they try to ship restricted items to restricted shipping address
+# Given user launches the browser and navigates to "ASO_HOME" page
+#    Then User clicks on the burger menu
+#    And user clicks on SignIn link from global header 
+#	And user enter the valid emailaddress "UserWithDefaultCaliforniaAddress" 
+#	And user enter the valid password "Password" 
+#	And user click on signin button
+#	When User searches a product "OutOfStockSKUNumber" and navigates to PDP
+#	Then user should not able to see the Enable BUY NOW button on the PDP	
 
 
 

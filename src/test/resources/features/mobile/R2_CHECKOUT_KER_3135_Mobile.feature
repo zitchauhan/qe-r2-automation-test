@@ -9,6 +9,7 @@ Scenario: To verify change billing Address CTA
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -29,7 +30,6 @@ Scenario: To verify change billing Address CTA
 		|ZipCode_Input|
 		|City_Input|
 		|State_DD|
-#		|EmailAddressforOrderConfirmation_Input|
 		|SignuptogetHotDeals_checkBox|
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
 	And user click on confirm billing address button 
@@ -43,6 +43,7 @@ Scenario: To verify all fields in Billing Address Form
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -63,7 +64,6 @@ Scenario: To verify all fields in Billing Address Form
 		|ZipCode_Input|
 		|City_Input|
 		|State_DD|
-#		|EmailAddressforOrderConfirmation_Input|
 		|SignuptogetHotDeals_checkBox|
 		|SavePaymentInfoForLater_checkBox|
 		|ReviewOrder_Btn|
@@ -78,6 +78,7 @@ Scenario: To verify change billing Address CTA
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -102,7 +103,7 @@ Scenario: To verify user can add new billing address information
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
-	And user click on signin button
+	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
@@ -127,7 +128,7 @@ Scenario: To verify Extra fields in Billing Address Form
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
-	And user click on signin button
+	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
 	And   user click on Add to Cart Button 

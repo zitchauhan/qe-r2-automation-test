@@ -114,19 +114,20 @@ Scenario: Verify Enable Buy Now is applicable for Baits
     |#Verify following elements in PDP modal popup|
     |Default_Payment_Option_btn|    
  
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12347 @CR-MS
-Scenario: Verify Enable Buy Now is applicable for Gift cards
-   Given user launches the browser and navigates to "ASO_HOME" page
-    And User clicks on the burger menu 
-    And user clicks on SignIn link from global header 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 
+@ZYP_CHECKOUT_K6655-12347 @CR-MS 
+Scenario: Verify Enable Buy Now is applicable for Gift cards 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User clicks on the burger menu 
+	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
-	And user click on signin button
-	And User clicks on the burger menu
-    When User searches a product "SKUForGiftCard" and navigates to PDP 
-    Then Verify below Sub/Main Module of PDP
-    |#Verify following elements in PDP modal popup|
-    |Default_Payment_Option_btn|
+	And user click on signin button 
+	And user navigate and deletes existing items in cart 
+	When User searches a product "SKUForGiftCard" and navigates to PDP 
+	Then Verify below Sub/Main Module of PDP 
+		|#Verify following elements in PDP modal popup|
+		|Default_Payment_Option_btn|
     
 @R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order @KER-6655 @ZYP_CHECKOUT_K6655-8726 @CR-MS
 Scenario: Verify the Payment details modal if user does not have saved Shipping Address and payment details in My Account
@@ -259,9 +260,10 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
    	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "OutOfStockSKUNumber" 
+	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user click on signin button
+	And user navigate and deletes existing items in cart
 	Then User searches a product "SKUForBundleProducts" and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |Verify following elements in PDP page|

@@ -124,7 +124,6 @@ Scenario: TC_10-Verify Apply Promotion
 		|Total_txt|
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|
-		|Discount_Txt|	 
 		
 @R2_Web @R2_WAST-11 @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8166 @CR-AKK 
 @AutomationSanityR2 

@@ -2,17 +2,17 @@ Feature: [Mobile] Populate Billing Address on Checkout page
 
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3132
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 
 @ZYP_CHECKOUT_K3132-8114 @CR-RKA 
-Scenario:
-Verify Billing address on check out page - pre-populated billing address 
-
+Scenario: 
+	Verify Billing address on check out page - pre-populated billing address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	Then user should able to click on Signin button 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
+	And user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up 
@@ -23,7 +23,7 @@ Verify Billing address on check out page - pre-populated billing address
 		|AddressVerificationSystemModelPopUp|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132 
 @ZYP_CHECKOUT_K3132-8115 @CR-RKA 
 Scenario: Verify Billing address on check out Page - Same as Shipping Address 
 
@@ -42,7 +42,7 @@ Scenario: Verify Billing address on check out Page - Same as Shipping Address
 		|#verify shipping address is displying|
 		|SameAsShippingAddress_Txt|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3132
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 
 @ZYP_CHECKOUT_K3132-8116 @CR-RKA 
 Scenario: Verify Billing address on check out Page - Same as Shipping Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -63,7 +63,7 @@ Scenario: Verify Billing address on check out Page - Same as Shipping Address
 		|checkout_ShippingAddress_txt								|
 		|SameAsShippingAddress_Txt|
 		
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132 
 @ZYP_CHECKOUT_K3132-8117 @CR-RKA 
 Scenario: Verify Billing address on check out Page - new address information 
 
@@ -82,7 +82,7 @@ Scenario: Verify Billing address on check out Page - new address information
 	
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132
+@R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132 
 @ZYP_CHECKOUT_K3132-8118 @CR-RKA 
 Scenario: Verify Billing address on check out Page - new address information 
 
@@ -103,10 +103,10 @@ Scenario: Verify Billing address on check out Page - new address information
 	Then user fill billing information after clicking on change billing information text 
 	#only validation is nedded after clicking confirm btn
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3132
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 
 @ZYP_CHECKOUT_K3132-10439 @CR-RKA 
-Scenario:
-Verify if 'Same as Shipping Address' checkbox is disabled for STS order 
+Scenario: 
+	Verify if 'Same as Shipping Address' checkbox is disabled for STS order 
 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
@@ -129,10 +129,10 @@ Verify if 'Same as Shipping Address' checkbox is disabled for STS order
 		|# Verify following section SPECIAL ORDER SHIP TO STORE in checkout page|
 		|ShipToStoreforSOF_Txt|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3132
+@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3132 
 @ZYP_CHECKOUT_K3132-10440 @CR-RKA 
-Scenario:
-Verify if 'Same as Shipping Address' checkbox is disabled for STS order 
+Scenario: 
+	Verify if 'Same as Shipping Address' checkbox is disabled for STS order 
 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 

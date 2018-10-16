@@ -136,6 +136,7 @@ Scenario: To verify Extra fields in Billing Address Form
 	And user click on Add Company Name, Apt Name, Number etc link 
 	And user enters extra address information "PO_ADDRESS" 
 	And user click on confirm billing address button 
+	And clicks on Use Selected Address button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#%%%%%%   Billing Information %%%%%%%%%%|
 		|EditPayment_Link|
