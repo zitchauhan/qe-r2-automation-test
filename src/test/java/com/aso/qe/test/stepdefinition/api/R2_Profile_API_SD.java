@@ -70,11 +70,12 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for getting address of a profile$")
 	public void endpoint_with_for_getting_address_of_a_profile(String Addurl, String extension) throws Throwable {
+		
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 		JsonPath jsonPathEvaluator = response.jsonPath();
-		String addressID = jsonPathEvaluator.get("addressId[0]");
+		String addressID = jsonPathEvaluator.get("profile.address[0].addressId");
 		logger.debug("Add ID::"+ addressID);
 		System.setProperty("AddressId", addressID);
 	}
@@ -88,11 +89,12 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 	
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for getting Wishlist of a profile$")
 	public void endpoint_with_for_getting_Wishlist_of_a_profile(String Addurl, String extension) throws Throwable {
+		
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 		JsonPath jsonPathEvaluator = response.jsonPath();
-		String wishlistId = jsonPathEvaluator.get("gifts[0].id");
+		String wishlistId = jsonPathEvaluator.get("profile.wishList[0].id");
 		logger.debug("WishList ID::"+ wishlistId);
 		System.setProperty("WishListId", wishlistId);
 	}
@@ -165,6 +167,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" request and \"(.*?)\"$")
 	public void endpoint_with_request_and_for(String Addurl, String AddAddressRequest, String extension) throws Throwable {
+		
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithCookies(endpoints, loadProps.getTestDataProperty(AddAddressRequest));
@@ -196,7 +199,8 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" and \"(.*?)\" for Profile address update of user$")
 	public void endpoint_with_and_for_Profile_address_update_of_user(String url, String extension, String storeId) throws Throwable {
 		JSONObject addressjsonObject = getFirstAddressDetails();
-		String addressId = (String) addressjsonObject.get("addressId");
+		String addressId = (String) addressjsonObject.get("profile.address[0].addressId");
+		//String addressID = jsonPathEvaluator.get("profile.address[0].addressId");
 		addressjsonObject.put("phone1", FrameWorkHelper.getRandomNumber(10));
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("ProfileId")+extension+addressId+storeId;
 		logger.debug("END Point URL:"+endpoints);
