@@ -101,7 +101,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 
 	@Then("^\"(.*?)\" endpoint for removing \"(.*?)\" by \"(.*?)\"$")
 	public void endpoint_for_removing_by(String Addurl, String extension, String Id) throws Throwable {
-		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension+System.getProperty(Id);
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+System.getProperty("ProfileId")+System.getProperty("ProfileId");
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithCookiesAndWithOutBody(endpoints);
 	}
@@ -121,7 +121,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 		
-		System.setProperty("GiftWalletId", getValueFromResponse("xwalletId[0]"));
+		System.setProperty("GiftWalletId", getValueFromResponse("profile.payment[0].xwalletId"));
 		/*try{
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		String walletID = jsonPathEvaluator.get("xwalletId[0]");
@@ -139,7 +139,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 		JsonPath jsonPathEvaluator = response.jsonPath();
-		String walletID = jsonPathEvaluator.get("xwalletId[0]");
+		String walletID = jsonPathEvaluator.get("profile.payment.xWalletId[0]");
 		logger.debug("Wallet ID::"+ walletID);
 		System.setProperty("WalletId", walletID);
 	}
@@ -153,7 +153,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 
 	@Then("^\"(.*?)\" endpoint for getting \"(.*?)\" by \"(.*?)\"$")
 	public void endpoint_for_getting_by(String Addurl, String extension, String Id) throws Throwable {
-		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension+System.getProperty(Id);
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension;
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestAPICallWithCookie(endpoints);
 	}
@@ -200,7 +200,6 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 	public void endpoint_with_and_for_Profile_address_update_of_user(String url, String extension, String storeId) throws Throwable {
 		JSONObject addressjsonObject = getFirstAddressDetails();
 		String addressId = (String) addressjsonObject.get("profile.address[0].addressId");
-		//String addressID = jsonPathEvaluator.get("profile.address[0].addressId");
 		addressjsonObject.put("phone1", FrameWorkHelper.getRandomNumber(10));
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(url)+System.getProperty("ProfileId")+extension+addressId+storeId;
 		logger.debug("END Point URL:"+endpoints);
