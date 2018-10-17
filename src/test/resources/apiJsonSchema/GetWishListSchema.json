@@ -2,16 +2,36 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "giftListCount": {
-      "type": "integer"
-    },
-    "gifts": {
-      "type": "array",
-      "items": {}
+    "profile": {
+      "type": "object",
+      "properties": {
+        "wishList": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "wishList"
+      ]
     }
   },
   "required": [
-    "giftListCount",
-    "gifts"
+    "profile"
   ]
 }

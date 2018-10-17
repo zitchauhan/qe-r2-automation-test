@@ -28,7 +28,7 @@ Feature: Verify MyAccount Address API endpoint services
 
   @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-03 @CR-VK @ZYP_MyAccount_Address_12229
   Scenario: TC_3 - Retrieve the address details of a Profile
-    Given "Addurl" endpoint with "/address/" for getting address of a profile
+    Given "Addurlr2" endpoint with "/address/" for getting address of a profile
     And validate jsonSchema "RetrieveAddressSchema"
 
   @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-04 @CR-RT @ZYP_MyAccount_Address_12230
@@ -63,7 +63,7 @@ Feature: Verify MyAccount Address API endpoint services
 
   @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-06 @CR-VK @ZYP_MyAccount_Address_12233
   Scenario: TC_6 - Retrieve  address details by address Id for a Profile
-    Given "Addurl" endpoint for getting "/address/" by "AddressId" for a user profile
+    Given "Addurlr2" endpoint for getting "/address/" by "AddressId" for a user profile
     And validate jsonSchema "RetrieveAddressByIdSchema"
 
   @All-R2 @C1-MyAccount @C2-Address @api @R2_AAST-07 @CR-VK @ZYP_MyAccount_Address_12234

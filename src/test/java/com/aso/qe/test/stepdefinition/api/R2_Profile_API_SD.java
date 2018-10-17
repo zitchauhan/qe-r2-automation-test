@@ -101,7 +101,7 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 
 	@Then("^\"(.*?)\" endpoint for removing \"(.*?)\" by \"(.*?)\"$")
 	public void endpoint_for_removing_by(String Addurl, String extension, String Id) throws Throwable {
-		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+System.getProperty("ProfileId")+System.getProperty("ProfileId");
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(Addurl)+System.getProperty("ProfileId")+extension+System.getProperty(Id);
 		logger.debug("END Point URL:"+endpoints);
 		initiateRestPostAPICallWithCookiesAndWithOutBody(endpoints);
 	}
