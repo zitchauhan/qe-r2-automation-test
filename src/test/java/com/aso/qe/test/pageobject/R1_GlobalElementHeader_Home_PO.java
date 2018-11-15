@@ -1872,7 +1872,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	public void clickOnBurgerMenu() throws InterruptedException {
 		isClickable(btnBurgerMenu);
 		if(isDisplayed(btnBurgerMenu)) {
-//			Thread.sleep(3000);
+			Thread.sleep(3000);
 			assertTrue(clickOnButton(btnBurgerMenu));
 			Thread.sleep(Constants.thread_low);
 			}

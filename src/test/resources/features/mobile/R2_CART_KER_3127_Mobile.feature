@@ -4,7 +4,7 @@ Feature: [Mobile]Verify order summary on cart page
 Scenario: Verify if user should be able to checkout if there are no errors 
 		Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	When user click on Add to Cart Button 
 	When user click on view cart button 
@@ -18,7 +18,7 @@ Scenario:
 Verify if user should be able to apply or remove a promotion code 
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -35,7 +35,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: To Verify if user is able to click on the Shipping policy link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -51,7 +51,7 @@ Scenario: To Verify if user is able to click on the Shipping policy link
 Scenario: To Verify if user is able to click on the Return policy link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button
 	And user is navigated to Add to cart Notification popup 
@@ -67,7 +67,7 @@ Scenario: To Verify if user is able to click on the Return policy link
 Scenario: verify if user is able to view the accepted Payments Icons 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -87,7 +87,7 @@ Scenario: verify if user is able to view the accepted Payments Icons
 Scenario: Verify if user is  able to view following elements in order summary of cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -104,7 +104,7 @@ Scenario: Verify if user is  able to view following elements in order summary of
 Scenario: Verify if  user should be able to click on PayPal checkout if applicable 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 

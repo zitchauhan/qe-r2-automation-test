@@ -6,7 +6,7 @@ Scenario:
 	Verify that PayPal and More Options radio buttons are disabled when Gift Card is applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up 
@@ -35,7 +35,7 @@ Scenario:
 	Verify that PayPal and More Options radio buttons are enabled when Gift Card is removed 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	Then user change the quantity of item in PDP 
 	And user click on Add to Cart Button 
@@ -65,7 +65,7 @@ Scenario:
 	Verify that user can combine Gift Card payment with Credit/Debit Card only 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up 
@@ -114,7 +114,7 @@ Scenario: 	Verify that user cannot combine Gift Card payment with any non-Credit
 Scenario: Verify that user can use multiple gift cards to make the payment 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up 
@@ -142,7 +142,7 @@ Scenario: Verify that user can use multiple gift cards to make the payment
 Scenario: Verify that user cannot use more than one credit/debit card for single transaction 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up 

@@ -33,7 +33,7 @@ Scenario:
 	Verify user is able to checkout using PayPal with item-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -66,7 +66,7 @@ Scenario:
 Verify user is able to checkout using PayPal with shipping-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -160,7 +160,7 @@ Verify logged in user is able to select Paypal as Payment method on checkout for
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up 
@@ -172,7 +172,7 @@ Scenario:
 Verify guest user is able to proceed with Paypal as checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up 
@@ -189,7 +189,7 @@ Verify guest user is able to proceed with Paypal as checkout for non-SOF items
 Scenario: Verify the authenticated user cannot pay the remaining or partial order amount using PayPal in combination with Gift Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up  
@@ -248,7 +248,7 @@ Verify guest user cannot select Paypal as Payment method on checkout for SOF pro
 Scenario: Verify the user is navigated back to the Academy.com once PayPal payment process is done	
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up  

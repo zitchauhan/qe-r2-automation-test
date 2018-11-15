@@ -12,7 +12,7 @@ Scenario:
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -38,7 +38,7 @@ Scenario:
 	Verify if unauthenticated user be presented with the blank shipping address form fields 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	Then User clicks on the burger menu
-	#	And User navigates to LThree
+	#	And User navigates to L3
 	#   	Then user clicks on the product card and navigates to PDP
 	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
@@ -62,7 +62,7 @@ Scenario:
 	Verify Guest user should view zipcode pre-populated if previously provided on Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -130,7 +130,7 @@ Scenario:
 Scenario: Verify if user selects AVS address suggestion and checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#    Then User clicks on the burger menu
-	#		And User navigates to LThree
+	#		And User navigates to L3
 	#   	Then user clicks on the product card and navigates to PDP
 	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
@@ -161,7 +161,7 @@ Scenario: Verify if user selects AVS address suggestion and checkout
 Scenario: Verify if user selects AVS address suggestion and checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -193,7 +193,7 @@ Scenario:
 	Verify Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA, Shipping Method drawer gets open on successful validation 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 

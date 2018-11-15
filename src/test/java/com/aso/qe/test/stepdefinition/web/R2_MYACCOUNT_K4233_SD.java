@@ -218,6 +218,7 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 
 	@Then("^user clicks on create first wishlist button$")
 	public void user_clicks_on_create_first_wishlist_button() throws Throwable {
+		Thread.sleep(3000);
 		assertTrue(clickOnButton(r2MyAccountPo.btnCreateNewWishlist));
 
 	}

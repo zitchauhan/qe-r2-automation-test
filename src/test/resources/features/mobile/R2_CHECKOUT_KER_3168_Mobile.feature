@@ -4,7 +4,7 @@ Feature: Insert Payment Details (Credit/Debit Card) on checkout screen
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
 	      Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -25,7 +25,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
 	  Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -49,7 +49,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -73,7 +73,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
 	  Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -98,7 +98,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -123,7 +123,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -144,7 +144,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -166,7 +166,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
 	  Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -187,7 +187,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 

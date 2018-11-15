@@ -6,7 +6,7 @@ Feature: B04-350 - Display Simple Header on Checkout Page
 Scenario:  Verify the Elements present in Checkout footer
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 	    And User clicks on the burger menu 
-		And User navigates to LThree 
+		And User navigates to L3 
 		And user clicks on the product card and navigates to PDP 
 		Then user click on Add to Cart Button
 		Then user is navigated to Add to cart Notification popup  
@@ -33,7 +33,7 @@ Scenario:  Verify the Elements present in Checkout footer
 		Scenario:  Verify that user is able to open Privacy Policy Page from checkout page footer
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User clicks on the burger menu 
-		And User navigates to LThree 
+		And User navigates to L3 
 		And user clicks on the product card and navigates to PDP 
 		Then user click on Add to Cart Button
 		Then user is navigated to Add to cart Notification popup  
@@ -53,7 +53,7 @@ Scenario:  Verify the Elements present in Checkout footer
 		Scenario:  Verify that user is able to open Terms & Conditions Page from checkout page footer
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User clicks on the burger menu 
-		And User navigates to LThree 
+		And User navigates to L3 
 		And user clicks on the product card and navigates to PDP 
 		Then user click on Add to Cart Button
 		Then user is navigated to Add to cart Notification popup  
@@ -73,7 +73,7 @@ Scenario:  Verify the Elements present in Checkout footer
 		Scenario:  Verify that user is able to open Prop 65 Page from checkout page footer
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User clicks on the burger menu 
-		And User navigates to LThree 
+		And User navigates to L3 
 		And user clicks on the product card and navigates to PDP 
 		Then user click on Add to Cart Button
 		Then user is navigated to Add to cart Notification popup  
@@ -93,7 +93,7 @@ Scenario:  Verify the Elements present in Checkout footer
 		Scenario:  Verify that user is able to open chat modal from checkout page footer
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User clicks on the burger menu 
-		And User navigates to LThree 
+		And User navigates to L3 
 		And user clicks on the product card and navigates to PDP
 		Then user click on Add to Cart Button
 		Then user is navigated to Add to cart Notification popup  

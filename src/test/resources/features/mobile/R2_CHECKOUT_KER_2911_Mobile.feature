@@ -6,7 +6,7 @@ Scenario:
 Verify if the shipping price on Checkout screen is same as Order Summary on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	    And User clicks on the burger menu   
-	#		And User navigates to LThree
+	#		And User navigates to L3
 	#   	Then user clicks on the product card and navigates to PDP
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 

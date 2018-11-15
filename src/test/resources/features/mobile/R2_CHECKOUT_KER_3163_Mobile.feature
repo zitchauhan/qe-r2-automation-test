@@ -7,7 +7,7 @@ Scenario:
 Verify if user clicks "Go to Payment" without completing mandatory fields, system should accurate and displays relevant error messages. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	And User clicks on the burger menu   
-	#	And User navigates to LThree
+	#	And User navigates to L3
 	#   	Then user clicks on the product card and navigates to PDP
 	When User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
@@ -54,7 +54,7 @@ Verify if user clicks "Go to Payment" with incorrect details, system should accu
 Scenario: Verify user address verified by the system. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -84,7 +84,7 @@ Scenario:
 Verify user can select the suggested address or modify the address that has been filled. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -115,7 +115,7 @@ Verify user can select the suggested address or modify the address that has been
 Scenario: Verify user can redirect to address fields on clicking modify address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -145,7 +145,7 @@ Scenario:
 Verify user can continue checkout with the suggested address/ entered address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 

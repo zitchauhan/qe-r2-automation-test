@@ -7,7 +7,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user creates an account
 	And user navigate and deletes existing items in cart
 	Then User clicks on the burger menu
-	 And User navigates to LThree
+	 And User navigates to L3
     Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button
 	And user will click on View Cart button 
@@ -25,7 +25,7 @@ Scenario: To verify open field to enter promotion code
 	And user creates an account
 	And user navigate and deletes existing items in cart
 	Then User clicks on the burger menu
-	 And User navigates to LThree
+	 And User navigates to L3
     Then user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 

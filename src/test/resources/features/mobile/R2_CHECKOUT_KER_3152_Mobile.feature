@@ -30,7 +30,7 @@ Scenario:
 	And user enter Zipcode "UpdateZipcode" in address book
 	 And clicks on Add New Address button
 	 Then User clicks on the burger menu
-	And User navigates to LThree
+	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
    
      Then user click on Add to Cart Button
@@ -45,7 +45,7 @@ Scenario:
 	Verify that guest user is able to edit address in shipping address section on checkout page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
-	And User navigates to LThree
+	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
      Then user click on Add to Cart Button
 	And user will click on View Cart button
@@ -72,7 +72,7 @@ Scenario:
   Scenario: Verify while edit address Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA (as applicable) , AVS check should happen and user should see AVS modal
  Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
-	And User navigates to LThree
+	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
      Then user click on Add to Cart Button
      And user will click on View Cart button
@@ -100,7 +100,7 @@ Scenario:
   Scenario: Verify if an error is found in the address while edit. And AVS returns a suggestion
        Given user launches the browser and navigates to "ASO_HOME" page
 #    Then User clicks on the burger menu
-#	And User navigates to LThree
+#	And User navigates to L3
 #   	Then user clicks on the product card and navigates to PDP
 When User searches a product "productName" and navigates to PDP
      Then user click on Add to Cart Button
@@ -128,7 +128,7 @@ When User searches a product "productName" and navigates to PDP
   Scenario: Verify if user selects suggestion and checkout while edit address
    Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
-	And User navigates to LThree
+	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
      Then user click on Add to Cart Button
      And user will click on View Cart button

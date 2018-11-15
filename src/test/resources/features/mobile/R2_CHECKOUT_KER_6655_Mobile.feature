@@ -141,7 +141,7 @@ Scenario: Verify the Payment details modal if user does not have saved Shipping 
 	And user enter password "Password"
 	When clicks on Sign Up Button
 	 And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	When user clicks on the product card and navigates to PDP
     Then Verify below Sub/Main Module of PDP
     |Verify following elements in PDP page|

@@ -118,6 +118,17 @@ Scenario:
 	And  user click on signin button 
 	And User clicks on the burger menu 
 	And user navigates to payments in my account 
+	And user deletes all existing credit card 
+	And user clicks on Add New Credit Card button 
+	And User enters Credit Card number "CreditCardNumber" 
+	And User enters expiration date "ExpDate" 
+	And User enters CVV number "CVV" 
+	Then user enter First Name field "UpdateFirstName" 
+	And user enter Last Name field "UpdateLastName" 
+	And user enter Address field "UpdateAddress" 
+	And user enter ZipCode field "UpdateZipcode" 
+	And user enter PhoneNumber field "UpdatePhoneNumber" 
+	Then click on Add button on credit card page 
 	Then Verify below Sub/Main Module of My Account 
 		|#verify following elements in Payments page in My Account|
 		|AddCreditCardPage_BillingInformationHeader_txt	|

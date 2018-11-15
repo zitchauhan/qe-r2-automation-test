@@ -5,7 +5,7 @@ Feature: BOPIS Alternate Pickup Person
 Scenario: Verify customer must be able to select and Me + Alternate Pickup Person from Who Is Picking Up Dropdown during checkout
 Given user launches the browser and navigates to "ASO_HOME" page 
 #	And User clicks on the burger menu 
-#	And User navigates to LThree 
+#	And User navigates to L3 
 #	And user clicks on the product card and navigates to PDP 
 #	And user click on Add to cart button 
 #	Then user is navigated to Add to cart Notification popup 
@@ -22,7 +22,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 # Scenario: Verify after selecting Me + Alternate Pickup Person during checkout Alternate Pickup Person fields must display
 #	Given user launches the browser and navigates to "ASO_HOME" page 
 #	And User clicks on the burger menu 
-#	And User navigates to LThree 
+#	And User navigates to L3 
 #	And user clicks on the product card and navigates to PDP 
 #	And user click on Add to cart button 
 #	Then user is navigated to Add to cart Notification popup 
@@ -42,7 +42,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 # Scenario: Verify after selecting Me + Alternate Pickup Person during checkout Alternate Pickup Person fields must display
 #	Given user launches the browser and navigates to "ASO_HOME" page 
 #	And User clicks on the burger menu 
-#	And User navigates to LThree 
+#	And User navigates to L3 
 #	And user clicks on the product card and navigates to PDP 
 #	And user click on Add to cart button  
 #	Then user is navigated to Add to cart Notification popup 
@@ -68,7 +68,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 #Scenario: Verify Mandatory fields for alternative pick up person details
 #	Given user launches the browser and navigates to "ASO_HOME" page 
 #	And User clicks on the burger menu 
-#	And User navigates to LThree 
+#	And User navigates to L3 
 #	And user clicks on the product card and navigates to PDP 
 #	And user click on Add to cart button   
 #	Then user is navigated to Add to cart Notification popup 
@@ -92,7 +92,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 #Scenario: Verify No alternate pickup person may be entered for restricted products
 #Given user launches the browser and navigates to "ASO_HOME" page 
 #	And User clicks on the burger menu 
-#	And User navigates to LThree 
+#	And User navigates to L3 
 #	And user clicks on the product card and navigates to PDP 
 #	And user click on Add to cart button  
 #	Then user is navigated to Add to cart Notification popup  

@@ -4,7 +4,7 @@ Feature: B04-350 - Display Simple Header on Checkout Page
 Scenario:  Verify user should see Academy Business Logo on left top corner in the header
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		Then User clicks on the burger menu
-    	And User navigates to LThree
+    	And User navigates to L3
     	Then user clicks on the product card and navigates to PDP
 		Then user click on Add to Cart Button  
 		And user will click on View Cart button 
@@ -16,7 +16,7 @@ Scenario:  Verify user should see Academy Business Logo on left top corner in th
 Scenario: Verify when user click on the Logo should navigate user to Home Page
         Given user launches the browser and navigates to "ASO_HOME" page  
 		Then User clicks on the burger menu
-    	And User navigates to LThree
+    	And User navigates to L3
     	Then user clicks on the product card and navigates to PDP
 		Then user click on Add to Cart Button  
 		And user will click on View Cart button 
@@ -30,7 +30,7 @@ Scenario: Verify when user click on the Logo should navigate user to Home Page
 Scenario: Verify user should see the mini cart Icon with no. of items in cart notifier
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		Then User clicks on the burger menu
-    	And User navigates to LThree
+    	And User navigates to L3
     	Then user clicks on the product card and navigates to PDP
 		Then user click on Add to Cart Button  
 		And user will click on View Cart button 
@@ -41,7 +41,7 @@ Scenario: Verify user should see the mini cart Icon with no. of items in cart no
 Scenario: Verify user clicks on the mini cart Icon should navigates user to the cart page.
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		Then User clicks on the burger menu
-    	And User navigates to LThree
+    	And User navigates to L3
     	Then user clicks on the product card and navigates to PDP
 		Then user click on Add to Cart Button  
 		And user will click on View Cart button

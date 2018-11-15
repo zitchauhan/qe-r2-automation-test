@@ -199,12 +199,12 @@ Verify that user is not able to proceed with Billing Information addition withou
 	Then click on Add button on credit card page 
 	Then Verify the message on the page 
 		|# Following Error Message should show on the page|
-		|Please enter the First Name|
+		|Please enter a First Name|
 		|Please enter a Last Name|
 		|Please enter a phone number|
 		|Please enter a street address|
 		|Please enter a zip code|
-		|Please enter the City name|
+		|Please enter a city name|
 		|Please select a State|
 		
 		

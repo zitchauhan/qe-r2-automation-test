@@ -4,7 +4,7 @@ Feature: [Mobile] Verify Quantity Adjustment in Cart
 Scenario: Verify add quantity adjustment in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -22,7 +22,7 @@ Scenario: Verify add quantity adjustment in the Cart Page
 Scenario: Verify cart gets recalculated on applying promotions and updated discounts displayed on Cart Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -42,7 +42,7 @@ Scenario: Verify cart gets recalculated on applying promotions and updated disco
 Scenario: Verify Remove link in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -63,7 +63,7 @@ Scenario: Verify Quantity Zero in the Cart Page
 	And user click on signin button
 	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user is navigated to Add to cart Notification popup 
@@ -80,7 +80,7 @@ Scenario: Verify Quantity Zero in the Cart Page
 Scenario: Verify system does inventory check for product item added more than available 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -95,7 +95,7 @@ Scenario: Verify system does inventory check for product item added more than av
 Scenario: Verify Alphanumeric Quantity in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -107,7 +107,7 @@ Scenario: Verify Alphanumeric Quantity in the Cart Page
 Scenario: Verify Reduce quantity adjustment in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button   
 	And user will click on View Cart button 
@@ -127,7 +127,7 @@ Scenario:  Verify Remove quantity message in the Cart Page
 	And user click on signin button
 	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button   
 	And user will click on View Cart button 
@@ -141,7 +141,7 @@ Scenario:  Verify Remove quantity message in the Cart Page
 Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button   
 	And user will click on View Cart button 
@@ -154,7 +154,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button   
 	And user will click on View Cart button 
@@ -166,7 +166,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: To verify Reduce Quantity Adjustment - Via Open Field
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button   
 	And user will click on View Cart button 
@@ -180,7 +180,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario:  To verify Remove link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button   
 	And user will click on View Cart button 
@@ -195,7 +195,7 @@ Scenario:  To verify Remove link
 Scenario:  To verify Remove link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button   
 	And user will click on View Cart button 
@@ -209,7 +209,7 @@ Scenario:  To verify Remove link
 Scenario: Verify Quantity Zero in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button   
 	And user will click on View Cart button 
@@ -224,7 +224,7 @@ Scenario: Verify Quantity Zero in the Cart Page
 Scenario: To verify Inventory Check on Quantity update
 Given user launches the browser and navigates to "ASO_HOME" page  
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button   
 	And user will click on View Cart button 
@@ -236,7 +236,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify the user gets the error message if Product has limited stock available
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button   
 	And user will click on View Cart button 

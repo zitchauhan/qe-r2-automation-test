@@ -11,7 +11,7 @@ Scenario:
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	#	Then User clicks on the burger menu
-	#   And User navigates to LThree
+	#   And User navigates to L3
 	#	And user clicks on the product card and navigates to PDP 
 	And  User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
@@ -34,7 +34,7 @@ Scenario:
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	#    Then User clicks on the burger menu
-	#	 And User navigates to LThree
+	#	 And User navigates to L3
 	#	And user clicks on the product card and navigates to PDP 
 	And  User searches a product "productName" and navigates to PDP 
 	Then user click on Add to Cart Button 
@@ -58,7 +58,7 @@ Scenario:
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 

@@ -4,7 +4,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import static org.testng.Assert.assertTrue;
+
+import static org.junit.Assert.assertTrue;
+
+import org.apache.log4j.Logger;
+
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
@@ -16,11 +20,15 @@ import cucumber.api.java.en.Then;
 public class R2_MYACCOUNT_K4229_SD extends CommonActionHelper {
 	R2_MyAccount_PO r2_MyAccount_PO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	R2_R1_Fun_PO r2R1FunPo = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
-
+	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);
+	Actions keyAction = new Actions(getDriver());
+	private static final Logger logger = Logger.getLogger(R2_MYACCOUNT_K4229_SD.class);
+	
 	@Then("^user navigates to profile in my account$")
 	public void user_navigates_to_profile_in_my_account() throws Throwable {
 		Thread.sleep(Constants.thread_low);
 		if ("mobile".equalsIgnoreCase(testtype)) {
+			Thread.sleep(10000);
 			assertTrue(clickOnButton(r2_MyAccount_PO.myAccount_txt_Mobile));
 			assertTrue(clickOnButton(r2_MyAccount_PO.lnkProfile_Mobile));
 		} else {
@@ -47,12 +55,16 @@ public class R2_MYACCOUNT_K4229_SD extends CommonActionHelper {
 		}
 	}
 
+	// SID 15-Nov
 	@And("^Verify that (\\d+) orders are displayed per page$")
 	public void verify_that_orders_are_displayed_per_page(int arg1) throws Throwable {
 		int count = 0;
+		waitForElement(r2_MyAccount_PO.ordersHeading);
+		isDisplayed(r2_MyAccount_PO.ordersHeading);
 		for (WebElement viewOrderDetails : r2_MyAccount_PO.viewOrderDetailsBtn) {
 			count++;
 		}
+		System.err.println(count);
 		assertTrue(count <= arg1);
 	}
 
@@ -112,4 +124,5 @@ public class R2_MYACCOUNT_K4229_SD extends CommonActionHelper {
 		}
 		Thread.sleep(Constants.thread_low);
 	}
+	
 }

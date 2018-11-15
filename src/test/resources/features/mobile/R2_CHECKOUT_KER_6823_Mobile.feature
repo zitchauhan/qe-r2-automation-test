@@ -18,7 +18,7 @@ Scenario:
 	When user clicks on Add New Gift Card button 
 	Then user fill the gift card in My Account 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -45,7 +45,7 @@ Scenario: Verify one gift card applied and Balance is not covered in full
 	When user clicks on Add New Gift Card button 
 	Then user fill the gift card in My Account 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user click on checkout from ATC pop up 
@@ -72,7 +72,7 @@ Scenario:
 	When user clicks on Add New Gift Card button 
 	Then user fill the gift card in My Account 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	Then user change the quantity of item in PDP 
 	Then user click on Add to Cart Button 

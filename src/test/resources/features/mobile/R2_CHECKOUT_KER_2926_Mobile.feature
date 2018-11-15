@@ -4,7 +4,7 @@ Feature: [Mobile] My Account, Address Book
 Scenario: To Edit cart items from Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -21,7 +21,7 @@ Scenario: To Edit cart items from Order summary
 	Scenario: To view the Order Summary details on the Check out 
 		Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -39,7 +39,7 @@ Scenario: To Edit cart items from Order summary
 Scenario: To Remove cart items from Order summary
 		Given user launches the browser and navigates to "ASO_HOME" page  
 #		And User clicks on the burger menu
-#    	And User navigates to LThree
+#    	And User navigates to L3
 #   		And user clicks on the product card and navigates to PDP
 		When User searches a product "productName" and navigates to PDP
 		And user click on Add to Cart Button 
@@ -62,7 +62,7 @@ Scenario: To Remove cart items from Order summary
 Scenario: To view the item summary with number of items
 		Given user launches the browser and navigates to "ASO_HOME" page  
 #		And User clicks on the burger menu
-#    	And User navigates to LThree
+#    	And User navigates to L3
 #   		And user clicks on the product card and navigates to PDP
 		When User searches a product "productName" and navigates to PDP
 		And user click on Add to Cart Button 
@@ -79,7 +79,7 @@ Scenario: To view the item summary with number of items
 Scenario: Verify To view the item summary with number of pick up items
 		Given user launches the browser and navigates to "ASO_HOME" page  
 #		And User clicks on the burger menu
-#    	And User navigates to LThree
+#    	And User navigates to L3
 #   		And user clicks on the product card and navigates to PDP
 		When User searches a product "productName" and navigates to PDP
 		And user click on Add to Cart Button 

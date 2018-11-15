@@ -696,9 +696,13 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public WebElement txtCreditCardDetails;
 
 	// Start KER-4229 CR-GK 16 Sep
-	@FindBy(xpath = "//*[@data-auid='btnbutton-3']")
+	@FindBy(xpath = "//*[contains(text(),'VIEW DETAILS')]")
 	public List<WebElement> viewOrderDetailsBtn;
 
+	@FindBy(xpath = "//*[@data-auid='act_page']//*[contains(text(),'ORDERS')]")
+	public WebElement ordersHeading;
+	
+	
 	@FindBy(xpath = "//*[contains(text(),'Total Orders')]")
 	public WebElement totalNumberOfOrder;
 

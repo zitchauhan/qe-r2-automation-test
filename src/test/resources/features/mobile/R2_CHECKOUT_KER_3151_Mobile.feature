@@ -27,7 +27,7 @@ Scenario:
 	#And user click on set as default button
 	And clicks on Add New Address button 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -61,7 +61,7 @@ Scenario:
 	And user enter Zipcode "zipcode" in address book 
 	And clicks on Add New Address button 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -96,7 +96,7 @@ Scenario:
 	#And user click on set as default button
 	And clicks on Add New Address button 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -121,7 +121,7 @@ Scenario:
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -152,7 +152,7 @@ Scenario:
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -179,7 +179,7 @@ Scenario:
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 

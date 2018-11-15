@@ -122,7 +122,7 @@ Scenario: Verify user can do the logout using Flyout from My Account header
 Scenario: Verify user referenced back to the same page from where sign in is triggered
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And User clicks on the burger menu
 	And user clicks on SignIn link from global header

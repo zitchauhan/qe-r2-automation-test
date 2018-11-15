@@ -6,7 +6,7 @@ Scenario:
 	Verify The user must be able to input a valid email Id in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -92,7 +92,7 @@ Scenario:
 	Verify The user must see form field validations to ensure the e-mail address meets the desired format (domain provided) in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -137,7 +137,7 @@ Scenario:
 	Verify The user must be able to see the relevant errors when entering the email address in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
@@ -156,7 +156,7 @@ Scenario:
 	Verify The user must be able to see the relevant errors when entering the email address in Account create page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 

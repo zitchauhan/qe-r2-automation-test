@@ -26,7 +26,7 @@ Feature: [Mobile]Verify Automatic Store Locator for Unauthenticated User
 	And user enter the valid password "Password"
 	And user click on signin button 
   And User clicks on the burger menu
-   And User navigates to LThree 
+   And User navigates to L3 
      Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
 	Then user click on Add to Cart Button  

@@ -42,7 +42,7 @@ Verify that user can continue the shopping without re-authentication after chang
 	And user enters new password 
 	And user clicks on Update button 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	Then User clicks on the burger menu 
 	And user click on MyAccount 
@@ -330,12 +330,12 @@ Scenario:
 Verify that system keep the addresses intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	Then user should able to click on Signin button 
-	Then Verify below Sub/Main Module of My Account 
-		|# Verify following elements in Sign in/login page	|
-		|SignInPage_SignUp_btn								|
-		|SignInPage_EmailAddress_txt			   			| 
-		|SignInPage_Password_txt				   			|
+#	Then user should able to click on Signin button 
+#	Then Verify below Sub/Main Module of My Account 
+#		|# Verify following elements in Sign in/login page	|
+#		|SignInPage_SignUp_btn								|
+#		|SignInPage_EmailAddress_txt			   			| 
+#		|SignInPage_Password_txt				   			|
 	And user creates an account 
 	Then User clicks on the burger menu 
 	And user navigates to profile in my account 
@@ -364,12 +364,12 @@ Scenario:
 Verify that system keep the payments intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	Then user should able to click on Signin button 
-	Then Verify below Sub/Main Module of My Account 
-		|# Verify following elements in Sign in/login page	|
-		|SignInPage_SignUp_btn								|
-		|SignInPage_EmailAddress_txt			   			| 
-		|SignInPage_Password_txt				   			|
+#	Then user should able to click on Signin button 
+#	Then Verify below Sub/Main Module of My Account 
+#		|# Verify following elements in Sign in/login page	|
+#		|SignInPage_SignUp_btn								|
+#		|SignInPage_EmailAddress_txt			   			| 
+#		|SignInPage_Password_txt				   			|
 	And user creates an account  
 	Then User clicks on the burger menu 
 	And user navigates to profile in my account
@@ -394,12 +394,12 @@ Scenario:
 Verify that system keep the wish-list intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	Then user should able to click on Signin button 
-	Then Verify below Sub/Main Module of My Account 
-		|# Verify following elements in Sign in/login page	|
-		|SignInPage_SignUp_btn								|
-		|SignInPage_EmailAddress_txt			   			| 
-		|SignInPage_Password_txt				   			|
+#	Then user should able to click on Signin button 
+#	Then Verify below Sub/Main Module of My Account 
+#		|# Verify following elements in Sign in/login page	|
+#		|SignInPage_SignUp_btn								|
+#		|SignInPage_EmailAddress_txt			   			| 
+#		|SignInPage_Password_txt				   			|
 	And user creates an account
 	Then User clicks on the burger menu 
 	And user navigates to profile in my account
@@ -413,9 +413,9 @@ Verify that system keep the wish-list intact after changing the email address.
 	Then User clicks on the burger menu 
 	And user click on MyAccount 
 	Then user click on WishList 
-	Then Verify below Sub/Main Module of My Account 
-		|#Verify following elements in create a wishlist section		|
-		|WishlistItems_lnk												|
+#	Then Verify below Sub/Main Module of My Account 
+#		|#Verify following elements in create a wishlist section		|
+#		|WishlistItems_lnk												|
 		
 		
 @R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4230
@@ -424,13 +424,13 @@ Scenario:
 Verify that system keep the orders intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	Then user should able to click on Signin button 
-	Then Verify below Sub/Main Module of My Account 
-		|# Verify following elements in Sign in/login page	|
-		|SignInPage_SignIn_btn								|
-		|SignInPage_SignUp_btn								|
-		|SignInPage_EmailAddress_txt			   			| 
-		|SignInPage_Password_txt				   			|
+#	Then user should able to click on Signin button 
+#	Then Verify below Sub/Main Module of My Account 
+#		|# Verify following elements in Sign in/login page	|
+#		|SignInPage_SignIn_btn								|
+#		|SignInPage_SignUp_btn								|
+#		|SignInPage_EmailAddress_txt			   			| 
+#		|SignInPage_Password_txt				   			|
 	And user creates an account 
 	Then User clicks on the burger menu 
 	And user navigates to profile in my account 

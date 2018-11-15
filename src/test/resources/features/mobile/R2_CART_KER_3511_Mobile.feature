@@ -11,7 +11,7 @@ Feature: [Mobile] B05-350 Shipping Estimate in Cart
 	  And user lands on My Account page and click on adress
 	 Then user fill the Address book details 
 	Then User clicks on the burger menu
-	And User navigates to LThree
+	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
 		And user click on Add to Cart Button
 		And user is navigated to Add to cart Notification popup  
@@ -35,7 +35,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	  And user lands on My Account page and click on adress
 	 Then user fill the Address book details 
 	Then User clicks on the burger menu
-	And User navigates to LThree
+	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
 			And user click on Add to Cart Button
 		And user is navigated to Add to cart Notification popup  
@@ -54,7 +54,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password"
 	And user click on signin button 
    Then User clicks on the burger menu
-	And User navigates to LThree
+	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -73,7 +73,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Scenario: Verify if unauthenticated user can view estimated shipping cost based entered zip code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 Then User clicks on the burger menu
-	And User navigates to LThree
+	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP 
 	
 	And user click on Add to Cart Button 

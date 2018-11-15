@@ -4,7 +4,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
   Scenario: Verify the error message when user enters the invalid Gift card number
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -29,7 +29,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
   Scenario: Verify the error message when user enters the invalid Gift card number
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -77,7 +77,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
   Scenario: Verify the user can enter valid old Gift card in Checkout for payment
     Given user launches the browser and navigates to "ASO_HOME" page
      And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -99,7 +99,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
   Scenario: Verify the error message when user enters the Gift card number with insufficient funds
     Given user launches the browser and navigates to "ASO_HOME" page
      And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -124,7 +124,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
   Scenario: Verify user is not allowed to enter any non-numeric input to GIft card number
     Given user launches the browser and navigates to "ASO_HOME" page
      And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 

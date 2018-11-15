@@ -4,7 +4,7 @@ Feature: Verify Itemized Subtotal in Cart
 	Scenario: To view price of each item in cart
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
     Then user clicks on the product card and navigates to PDP
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -32,7 +32,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And user click on signin button 
     Then User clicks on ASO Logo and should be navigated to Home Page
     And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3 
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
 	And user click on Add to Cart Button  
@@ -40,7 +40,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And user navigate to Cart page     
 	Then User clicks on ASO Logo and should be navigated to Home Page
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -55,7 +55,7 @@ Feature: Verify Itemized Subtotal in Cart
 	Scenario: To verify if the Promo Code Discount is applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -75,7 +75,7 @@ Feature: Verify Itemized Subtotal in Cart
 	Scenario: To verify if the Military Discount is applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -100,7 +100,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And user click on signin button 
     Then User clicks on ASO Logo and should be navigated to Home Page
     And User clicks on the burger menu
-	And User navigates to LThree
+	And User navigates to L3
     And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -112,7 +112,7 @@ Feature: Verify Itemized Subtotal in Cart
 	Scenario: To verify Estimated Taxes for all the items in the Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
      Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
 	And user click on Add to Cart Button  
@@ -120,7 +120,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And user navigate to Cart page 
 	Then User clicks on ASO Logo and should be navigated to Home Page
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3 
 	 And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -135,7 +135,7 @@ Feature: Verify Itemized Subtotal in Cart
 	Scenario: To verify Total for all the items in the Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3 
      Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
 	And user click on Add to Cart Button  
@@ -143,7 +143,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And user navigate to Cart page 
 	Then User clicks on ASO Logo and should be navigated to Home Page
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -158,7 +158,7 @@ Then Verify below Sub/Main Module of Cart Page
 	Scenario: To verify updated estimated Tax when cart is edited
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
     And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -175,7 +175,7 @@ Then Verify below Sub/Main Module of Cart Page
 	Scenario: To verify Mixed Promo's discounts applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
     And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -215,7 +215,7 @@ Scenario: To verify Estimated Shipping greater than zero
 Scenario: To view the hierarchy of itemizations in Order Summary in Cart
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3 
     And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -231,7 +231,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3 
     And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -251,7 +251,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user click on signin button 
     Then User clicks on ASO Logo and should be navigated to Home Page
     And User clicks on the burger menu
-	And User navigates to LThree
+	And User navigates to L3
     And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button  
 	And user will click on View Cart button 

@@ -34,7 +34,7 @@ Verify that user should be able to fulfill an order when cart having multiple it
 	And user will click on View Cart button 
 	Then Shipping radio button is selected by default 
 	Then User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -178,7 +178,7 @@ Scenario:Verify that user should be able to fulfill an order when cart having mu
 	And user will click on View Cart button 
 	Then User clicks on the burger menu 
 	
-	And User navigates to LThree 
+	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 

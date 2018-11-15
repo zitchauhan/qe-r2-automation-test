@@ -4,7 +4,7 @@ Feature: To verify Remove Promo code in Order Summary
 Scenario: To verify Remove Promo code in Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button
 	And user is navigated to Add to cart Notification popup 
@@ -21,7 +21,7 @@ Scenario: To verify Remove Promo code in Order Summary
 Scenario: To verify Promo code applied in Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
@@ -36,7 +36,7 @@ Scenario: To verify Promo code applied in Order Summary
 Scenario: To verify Promo code Removed in Order Summary
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 

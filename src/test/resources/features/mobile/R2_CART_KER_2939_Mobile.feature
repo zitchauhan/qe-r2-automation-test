@@ -4,7 +4,7 @@ Feature: [Mobile] Verify Product Blade in Cart
 Scenario: To Verify Image for selected SKU is be displayed on product blade for  multi-variant product. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button 
 	And user will click on View Cart button 
@@ -18,7 +18,7 @@ Scenario: To Verify Image for selected SKU is be displayed on product blade for 
 Scenario: To view details specific to an item in the cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -49,7 +49,7 @@ To verify Shipping radio button - Authenticated user With store selected in My A
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button 
 	And user will click on View Cart button 
@@ -62,7 +62,7 @@ To verify Shipping radio button - Authenticated user With store selected in My A
 Scenario: Desktop - To verify Quantity input field 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button
 	And user will click on View Cart button 
@@ -80,7 +80,7 @@ Scenario: Desktop - To verify Quantity input field
 Scenario: To Verify Thumbnail Image 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button
 	And user will click on View Cart button
@@ -94,7 +94,7 @@ Scenario: To Verify Thumbnail Image
 Scenario: To verify Product name dynamic linking 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button
 	And user will click on View Cart button 
@@ -108,7 +108,7 @@ Scenario: To verify Product name dynamic linking
 Scenario: To verify Remove Link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to cart button
 	And user will click on View Cart button
@@ -132,7 +132,7 @@ Scenario: To verify In-store Pick up radio button - with My Store info on My Acc
 Scenario: To verify Shipping radio button - Unauthenticated user 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button  
 	And user will click on View Cart button 
@@ -151,7 +151,7 @@ Scenario: To verify Shipping radio button - Authenticated user With out store se
 	And user enter the valid password "Password" 
 	And user click on signin button 
     And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -165,7 +165,7 @@ Scenario: To verify Shipping radio button - Authenticated user With out store se
 Scenario: To verify Est.Arrival Tool Tip 
 	Given user launches the browser and navigates to "ASO_HOME" page 
     And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -178,7 +178,7 @@ Scenario: To verify Est.Arrival Tool Tip
 Scenario: To verify Quantity input field 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	 And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button  
@@ -197,7 +197,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	 And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button  
 	And user will click on View Cart button
@@ -216,7 +216,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button  
 	And user will click on View Cart button
@@ -232,7 +232,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify Product name dynamic display to product link
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
@@ -276,7 +276,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify the Product blade where In-store pick is not available
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button 
 	When user will click on View Cart button 
@@ -288,7 +288,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify the Product blade where shipping is not available
 Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
-	And User navigates to LThree 
+	And User navigates to L3  
 	And user clicks on the product card and navigates to PDP  
 	Then user click on Add to Cart Button 
 	When user will click on View Cart button 

@@ -90,7 +90,7 @@ Scenario: TC_6-Verify and Search an item and  navigate to  View Cart
 Scenario: TC_7-Verify and Search - Checkout from ATC Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	When user click on checkout button 
@@ -100,7 +100,7 @@ Scenario: TC_7-Verify and Search - Checkout from ATC Modal
 Scenario: TC_8-Verify Cat Nav - View Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User clicks on the burger menu 
-	And User navigates to LThree 
+	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
