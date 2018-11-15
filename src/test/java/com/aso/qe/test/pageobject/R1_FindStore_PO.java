@@ -14,18 +14,19 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(getDriver(),R1_GlobalElementHeader_Home_PO.class);
 
 	//@FindBy(xpath = "//*[contains(text(), 'Find a Store')]")public WebElement ovly_FindStore;/RKA 17 aug
-	@FindBy(xpath="(//*[contains(text(), 'Find A Store')])[2]")public WebElement ovly_FindStore;
+	@FindBy(xpath="(//*[contains(text(), 'Find A Store')])[2] | (//*[contains(text(), 'Find A Store')])[2]")public WebElement ovly_FindStore; //SID 14-Nov
 	@FindBy(xpath = "//input[@name='zipcode']")public WebElement ovly_searchTextBox;
 	@FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']/span")public WebElement ovly_btnCloseCross;
 	@FindBy(xpath = "//*[@data-auid='submit-zip-code']/span")public WebElement ovly_btnGO;
+	@FindBy(xpath = "//*[@class='academyicon icon-plus ']")public WebElement expandStore;
     @FindBy(xpath = "(//button[@aria-label='Make My Store'])[1]")public WebElement ovly_btnMakeMyStore_1;
 	//@FindBy(xpath = "//input[@placeholder='Enter Zip Code or City, State']/../../../../following-sibling::div[1]/div/div/h6")	public WebElement ovly_secStore;/RKA 22 aug
 	@FindBy(xpath="//input[@placeholder='Enter Zip Code or City, State']/preceding::*[1]/../following::*[1]//h6")public WebElement ovly_secStore;
-	@FindBy(xpath = "(//div[@data-auid='find-a-store-modal'])[2]/div[3]/div/div[text()='0 Stores were found within 250 miles of your search']")public WebElement txtNoStoreText;
+	@FindBy(xpath = "(//div[@data-auid='find-a-store-modal'])[2]/div[3]/div/div[text()='0 Stores were found within 250 miles of your search'] | (//div[@data-auid='find-a-store-modal'])[2]//*[text()='Sorry! There are no stores within 250 miles. Please order online or try new ZIP code.']")public WebElement txtNoStoreText; //SID Modified 14-Nov
     @FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']")public WebElement ovly_btnCloseContainer;
 	@FindBy(xpath = "//*[@data-auid='findAStore']/span[2]")public WebElement txtStroeText;
 	//@FindBy(xpath = "//*[@data-auid='findAStore_m']/span[2]")public WebElement txtStroeText_m;/RKA 17 aug
-	@FindBy(xpath="//*[@data-auid='findAStore_m']/*/*[1]/*[2]")public WebElement txtStroeText_m;
+	@FindBy(xpath="//*[@data-auid='findAStore_m']/*/*[1]/*[2] | //*[@data-auid='facetdrawerundefined']")public WebElement txtStroeText_m;
 	@FindBy(xpath="//*[@id='mainSearchText']") public WebElement txtStoreLocatorPage;
 	@FindBy(xpath="//*[@id='mainLoadStores']") public WebElement btnGoSearchStore;
 	@FindBy(xpath="//*[@class='myStoreLogo']//parent::div//following-sibling::ul//span[contains(@id,'screenReader')]") public WebElement imgMyStoreLogo;
@@ -53,6 +54,7 @@ public class R1_FindStore_PO extends CommonActionHelper {
 		setInputText(ovly_searchTextBox, value);
 		clickOnButton(ovly_btnGO);
 		String selectedStoreTitle = getText(ovly_secStore);
+		clickOnButton(expandStore);
 		clickOnButton(ovly_btnMakeMyStore_1);
 		clickOnButton(ovly_btnCloseContainer);
 		// Expected change the title should happen in the title

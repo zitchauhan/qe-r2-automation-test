@@ -44,36 +44,22 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 		Assert.assertTrue(isDisplayed);
 	}
 
-	@When("^User select store with Postal Code$")
-	public void User_select_store_with_Postal_Code() throws Throwable {
-		findStorePO.selectAStore("FL 32822");
+	@When("^User select store with \"(.*?)\"$")
+	public void User_select_store_with(String arg1) throws Throwable {
+		System.err.println(webPropHelper.getTestDataProperty(arg1));
+		findStorePO.selectAStore(webPropHelper.getTestDataProperty(arg1));
 	}
 
-	@When("^User select store with City$")
-	public void User_select_store_with_City() throws Throwable {
-		findStorePO.selectAStore("The Crosslands");
-	}
-
-	@When("^User select store with State$")
-	public void User_select_store_with_State() throws Throwable {
-		findStorePO.selectAStore("Florida");
-	}
 
 	@Then("^User should be able to see Selected_Store in the place of Find a Store link$")
-	// public void
-	// User_should_be_able_to_see_Selected_Store_in_the_place_of_Find_a_Store_link(String
-	// selectedStoreTitle) throws Throwable {
-	// String selectedStoreName = findStorePO.selectAStore(selectedStoreTitle);
-	// Common_Web_SD.globalElementHeader.validateStoreNameExist(selectedStoreName);
 	public void User_should_be_able_to_see_Selected_Store_in_the_place_of_Find_a_Store_link()
 			throws InterruptedException {
 		findStorePO.selectedStore();
 	}
 
-	@When("^User enters special character in Store Locator Modal$")
-	public void User_enters_special_character_in_Store_Locator_Modal() throws Throwable {
-		findStorePO.selectAStoreEmptyOrSpecialchars("@");
-		Thread.sleep(Constants.thread_medium); 
+	@When("^User enters \"(.*?)\" in Store Locator Modal$")
+	public void User_enters_in_Store_Locator_Modal(String arg1) throws Throwable {
+		findStorePO.selectAStoreEmptyOrSpecialchars(webPropHelper.getTestDataProperty(arg1));
 	}
 
 	@When("^User enters space in Store Locator Modal$")
@@ -86,9 +72,9 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 		findStorePO.validateErrorMsg();
 	}
 	
-	@When("^User select store with Postal Code in Find A Store page\"(.*?)\"$")
-	public void User_select_store_with_Postal_Code_in_Find_A_Store_page(String str) {
-		findStorePO.verifyFindaStoreFucntionalityFromFooter(str);
+	@When("^User select store with Postal Code in Find A Store page \"(.*?)\"$")
+	public void User_select_store_with_Postal_Code_in_Find_A_Store_page(String arg1) {
+		findStorePO.verifyFindaStoreFucntionalityFromFooter(webPropHelper.getTestDataProperty(arg1));
 	}
 	@Then("^close the find the store$")
 	public void close_the_find_the_store() throws Throwable {

@@ -181,15 +181,35 @@ waitForElement(globalElementHeader.magnifying_M);
 	    assertTrue(isDisplayed(globalElementHeader.btnDEALSBurgerMenu));
 	}
 	
+//	@Then("^User verify and click on weekly Ads$")
+//	public void user_verify_and_click_on_weekly_Ads() throws Throwable {
+//	   assertTrue(isDisplayed(globalElementHeader.txtWeeklyADBurgerMenu));
+//	   waitForElement(globalElementHeader.txtWeeklyADPopUp_M);
+//	   if(isDisplayed(globalElementHeader.txtWeeklyADPopUp_M)) {
+//		   assertTrue(clickOnButton(globalElementHeader.txtWeeklyADPopUpClick_M));
+//	   }
+//	   clickOnButton(globalElementHeader.txtWeeklyADBurgerMenu);
+//	    
+//	}
+	
+	//SID 14-Nov
 	@Then("^User verify and click on weekly Ads$")
 	public void user_verify_and_click_on_weekly_Ads() throws Throwable {
-	   assertTrue(isDisplayed(globalElementHeader.txtWeeklyADBurgerMenu));
-	   waitForElement(globalElementHeader.txtWeeklyADPopUp_M);
-	   if(isDisplayed(globalElementHeader.txtWeeklyADPopUp_M)) {
-		   assertTrue(clickOnButton(globalElementHeader.txtWeeklyADPopUpClick_M));
-	   }
-	   clickOnButton(globalElementHeader.txtWeeklyADBurgerMenu);
-	    
+		boolean flag =false;
+		assertTrue(clickOnButton(globalElementHeader.txtWeeklyADBurgerMenu));
+//		waitForElement(globalElementHeader.txtWeeklyADPopUp_M);
+		driver.switchTo().frame("flipp-iframe");
+		flag = isDisplayed(globalElementHeader.txtWeeklyADPopUp_M);
+		System.err.println(flag);
+		if (isDisplayed(globalElementHeader.txtWeeklyADPopUp_M)) {
+			System.err.println(flag);
+			//assertTrue(clickOnButton(globalElementHeader.txtWeeklyADPopUpClick_M));
+			Actions hover = new Actions(driver);
+			hover.moveToElement(globalElementHeader.txtWeeklyADPopUpClick_M).click().build().perform();
+			driver.switchTo().parentFrame();
+		} else {
+			clickOnButton(globalElementHeader.txtWeeklyADBurgerMenu);
+		}
 	}
 
 	@Then("^user verify myaccountlink from weekly Ads$")

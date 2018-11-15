@@ -105,7 +105,7 @@ public class Common_Web_SD extends CommonActionHelper
 			
 			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
 			Thread.sleep(2000);
-			assertTrue(clickOnButton(globalElementHeader.btnMen_Clothing_Shop));
+			assertTrue(clickOnButton(globalElementHeader.btnMen_Clothing_Shop_M));
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader. txtToNavigateMensBurgerMenuMobile));
 			Thread.sleep(2000);
@@ -183,13 +183,13 @@ public class Common_Web_SD extends CommonActionHelper
 	@Then ("^User navigates to L3$")
 	public void User_navigates_to_L3() throws Exception 
 	{
-		/*if("mobile".equalsIgnoreCase(testtype)){
+		if("mobile".equalsIgnoreCase(testtype)){
 		
 			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
 			Thread.sleep(2000);
-			assertTrue(clickOnButton(globalElementHeader.btnMen_Clothing_Shop));
+			assertTrue(clickOnButton(globalElementHeader.btnMen_Clothing_Shop_M));
 			Thread.sleep(2000);
-			assertTrue(clickOnButton(globalElementHeader.btnMensShirt_Men_Clothing_Shop));
+			assertTrue(clickOnButton(globalElementHeader.btnMensShirt_Men_Clothing_Shop_M));
 			Thread.sleep(2000);
 
 		}else{
@@ -200,9 +200,9 @@ public class Common_Web_SD extends CommonActionHelper
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.btnMensShirt_Men_Clothing_Shop));
 			Thread.sleep(2000);
-		}*/
+		}
 		
-		globalElementHeader.navigateL2HeaderToPLP();
+//		//globalElementHeader.navigateL2HeaderToPLP();
 
 	}
 	@And("^user navigate to L3 page$")

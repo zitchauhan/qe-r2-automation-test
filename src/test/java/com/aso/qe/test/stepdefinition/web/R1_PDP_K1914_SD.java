@@ -71,6 +71,10 @@ public class R1_PDP_K1914_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(globalElementHeader.btnMyAccountMobile));
 		assertTrue(clickOnButton(globalElementHeader.wishListFromMyAccount_Mobile));
 	}
+	@Then("^user select the wishlist$")
+	public void user_select_the_wishlist() {
+		assertTrue(clickOnButton(globalElementHeader.selectWishlist));
+	}
 	
 	@Then("^user check for the item SKU$")
 	public void user_check_for_the_item_SKU() {

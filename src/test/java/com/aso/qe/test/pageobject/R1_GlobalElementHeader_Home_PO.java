@@ -35,9 +35,9 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='weeklyAds_m']") public  WebElement txtWeeklyADBurgerMenu;
 	@FindBy(xpath="(//*[text()='Select Circulars from Academy Sports + Outdoors'])[1]") public  WebElement txtWeeklyADPopUp_D; //SID 7-September
 	@FindBy(xpath="(//*[text()='Select Circulars from Academy Sports + Outdoors'])[1]/parent::*//tr[1]") public  WebElement txtWeeklyADPopUpClick_D; //SID 7-September
-	@FindBy(xpath="//*[@id='flyer-runs-container']") public  WebElement txtWeeklyADPopUp_M; //SID 7-September
-	@FindBy(xpath="//*[@id='flyer-runs-container']/div[1]") public  WebElement txtWeeklyADPopUpClick_M; //SID 7-September
-	
+	@FindBy(xpath="//*[@id='flyer-runs-container'] | //*[@id='other_flyer_runs']") public  WebElement txtWeeklyADPopUp_M; //SID Modified 14-Nov
+	@FindBy(xpath="//*[@id='flyer-runs-container']/div[1] | //*[@id='other_flyer_runs']//tr[1]") public  WebElement txtWeeklyADPopUpClick_M; //SID Modified 14-Nov
+	@FindBy(xpath="//*[@data-auid='show_wish_list_btn']")public WebElement selectWishlist;  //SID 14-Nov
 	
 	
 
@@ -45,13 +45,15 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']") public WebElement btnBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']")  public WebElement btnXBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='level1Category-SHOP']") public WebElement btnShopCategory;
-	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m']/span | //*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING_m']/span | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //UAT9
+	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m']/span | //*[@data-auid='level2Category-CLOTHING_m']/span | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //SID Modified 14-Nov
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]/a | //*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop;//UAT9
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop_M; //SID 14-Nov
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shirts']|//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shorts']|//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop;
+	@FindBy(xpath="//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop_M;  //SID 14-Nov
 	@FindBy(xpath="//*[@data-auid='go-to-Womens_m']/a | //*[@data-auid=\"go-to-Women's Clothing_m\"]/a")public WebElement burgerMenu_GoToWomen_btn; //CR-SK, 11 Sep
 	@FindBy(xpath="//*[@data-auid='go-to-School Uniforms_m']/a")public WebElement burgerMenu_GoToSchoolUniform_btn; //CR-SK, 12 Sep
-	
-	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]| //*[@data-auid=\"level3Category-Men's Clothing\"]/a | //*[@data-auid='level3Category-Mens']/a")public WebElement btnMenClothingShop; //3Sep
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]")public WebElement btnMenClothingShop_M; //SID modified 14-Nov
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"] | //*[@data-auid=\"level3Category-Men's Clothing\"]/a | //*[@data-auid='level3Category-Mens']/a")public WebElement btnMenClothingShop; //3Sep
 	@FindBy(xpath="//*[@data-auid='level3Category-Womens']/a | //*[@data-auid=\"level3Category-Women's Clothing\"]/a")public WebElement btnWommenClothingShop; //3Sep
 //	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]| //*[@data-auid=\"level3Category-Men's Clothing\"]/a ")public WebElement btnMenClothingShop;
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//*[contains(@class,'c-product__description')])[2]")public WebElement imgMensShortShirt; 
@@ -64,7 +66,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='findAStore_m']")public WebElement btnFindAStoreBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='signInCta_m']") public  WebElement btnMyAccountBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='level1Category-SHOP_m']")public WebElement btnSHOPBurgerMenu;
-	@FindBy(xpath="//*[@data-auid='level1Category-TRENDING_m']") public  WebElement btnTRENDINGBurgerMenu;
+	@FindBy(xpath="//*[@data-auid='level1Category-TRENDING_m'] | //*[@data-auid='level1Category-EXPERT ADVICE_m']") public  WebElement btnTRENDINGBurgerMenu; // SID Modified 14-Nov
 	@FindBy(xpath="//*[@data-auid='level1Category-DEALS_m']") public  WebElement btnDEALSBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='logo_m']//img") public WebElement imgAcademyLogoMobile;
 	//	@FindBy(xpath="//*[@data-auid='logo_m']/*/*/*") public WebElement imgAcademyLogoMobile;
@@ -304,8 +306,8 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Shop Gift Cards']")public WebElement shopGiftCards_M;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Product Recalls']")public WebElement productRecalls_M;
 
-	@FindBy(xpath="//*[@id='logonSubmit']")public WebElement btmSignIn;
-	@FindBy(xpath="//*[@id='signup-link-from-login']")public WebElement linkSignUP;
+	@FindBy(xpath="//*[@id='logonSubmit'] | //*[@data-auid='btnemail-signin-button']")public WebElement btmSignIn;  //SID modified 14-Nov
+	@FindBy(xpath="//*[@id='signup-link-from-login'] | //*[@data-auid='signUp_btn']")public WebElement linkSignUP; //SID modified 14-Nov
 
 	//@FindBy(xpath="(//*[contains(text(),'Account Summary')])[3]")public WebElement btmkAccountSummary;/RKA 17 aug
 	@FindBy(xpath="//h1[contains(text(),'Account Summary')]")public WebElement btmkAccountSummary;
@@ -758,7 +760,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(btnClothingCategory)); //4Sep
 			Thread.sleep(Constants.thread_low);
-			assertTrue(clickOnButton(btnMenClothingShop));
+			assertTrue(clickOnButton(btnMenClothingShop_M)); //SID 14-Nov
 			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(Common_Web_SD.globalElementHeader.txtToNavigateMensBurgerMenuMobile));
 			Thread.sleep(Constants.thread_low);

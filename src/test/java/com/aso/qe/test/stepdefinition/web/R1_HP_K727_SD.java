@@ -63,7 +63,8 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 	@Then("^verify user to navigate to account summary page$")
 	public void verify_user_to_navigate_to_account_summary_page() throws Throwable {
 		
-		if("mobile".equalsIgnoreCase(testtype)){			
+		if("mobile".equalsIgnoreCase(testtype)){	
+			globalElementHeader.clickOnBurgerMenu(); //SID 14-Nov
 			clickOnButton(hp_p.btnMyaccountMenu_M)	;
 			assertTrue(isDisplayed(myAccount_PO.burgerMenu_Orders_lnk));
 			
@@ -93,6 +94,7 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 	public void verify_WishList_form_My_Account() throws Throwable {
 				
 		if("mobile".equalsIgnoreCase(testtype)){	
+			globalElementHeader.clickOnBurgerMenu(); //SID 14-Nov
 			clickOnButton(hp_p.btnMyaccountMenu_M)	;
 			assertTrue(isDisplayed(hp_p.tabWishListMobile));						
 			}else {
@@ -102,38 +104,37 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 	
 	@Then("^verify personal information form My Account$")
 	public void verify_personal_information_form_My_Account() throws Throwable {
-	
-		if("mobile".equalsIgnoreCase(testtype)){			
-		clickOnButton(hp_p.btnMyaccountMenu_M)	;
-		assertTrue(isDisplayed(hp_p.tabPersonalInformation_Mobile));
-		}else {
-			assertTrue(isDisplayed(hp_p.tabPersonalInformation));					
-	}
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			globalElementHeader.clickOnBurgerMenu(); //SID 14-Nov
+			clickOnButton(hp_p.btnMyaccountMenu_M);
+			assertTrue(isDisplayed(hp_p.tabPersonalInformation_Mobile));
+		} else {
+			assertTrue(isDisplayed(hp_p.tabPersonalInformation));
 		}
+	}
 
 	@Then("^verify Address book form My Account$")
 	public void verify_Address_book_form_My_Account() throws Throwable {
-			
-		if("mobile".equalsIgnoreCase(testtype)){			
-				clickOnButton(hp_p.btnMyaccountMenu_M)	;
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			globalElementHeader.clickOnBurgerMenu(); //SID 14-Nov
+			clickOnButton(hp_p.btnMyaccountMenu_M);
 			assertTrue(isDisplayed(hp_p.tabAddressBookMobile));
-				
-			}else {
-				assertTrue(isDisplayed(hp_p.tabAddressBook));				
-			}
+
+		} else {
+			assertTrue(isDisplayed(hp_p.tabAddressBook));
+		}
 	}
-
-		
-
 
 	@When("^user to be able to click forget password$")
 	public void user_to_be_able_to_click_forget_password() throws Throwable {
-	   clickOnButton(hp_p.textForgotPasword);
+		clickOnButton(hp_p.textForgotPasword);
 	}
 
 	@When("^user to enter email$")
 	public void user_to_enter_email() throws Throwable {
-	    setInputText(hp_p.inputForgetEmail, "   ");
+		setInputText(hp_p.inputForgetEmail, "   ");
 	}
 
 	@Then("^verify user to click submit button$")

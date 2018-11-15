@@ -24,8 +24,8 @@ public class R1_HomePage_PO {
 	@FindBy(xpath="//button[contains(text(),'Sign In')]  | //button[contains(text(),'Sign in')]") public WebElement buttonSignIn;  //SID 19-September
 	@FindBy(xpath="//*[@data-auid='Orders']") public WebElement txtAccountSummary;  //SID 19-September
 	@FindBy(xpath="//*[@id='logonErrorMessage'] | //*[contains(@role,'alert') and contains(text(),'incorrect')]")public WebElement msgVerifyIncorrect;  //SID 19-September
-	@FindBy(xpath="//*[@id='logonIdError'] | //*[contains(@role,'alert') and contains(text(),'Please enter email address')]") public WebElement msgVerifyEmail; //SID 19-September
-	@FindBy(xpath="//*[@id='logonPasswordError'] | //*[contains(@role,'alert') and contains(text(),'Please enter the Password')]")public WebElement msgVerifyPassword;  //SID 19-September
+	@FindBy(xpath="//*[@id='logonIdError'] | //*[contains(@role,'alert') and contains(text(),'Please enter email address')] | //*[@id='logonIdError'] | //*[contains(@role,'alert') and contains(text(),'Please enter an email address')]") public WebElement msgVerifyEmail; //SID modified 14-November
+	@FindBy(xpath="//*[@id='logonPasswordError'] | //*[contains(@role,'alert') and contains(text(),'Please enter the Password')] | //*[@id='logonPasswordError'] | //*[contains(@role,'alert') and contains(text(),'Please enter the password')]")public WebElement msgVerifyPassword;  //SID modified 14-November
 	@FindBy(xpath="//*[@data-auid='Profile']") public WebElement tabPersonalInformation;
 	@FindBy(xpath="//*[@data-auid='Profile_m']") public WebElement tabPersonalInformation_Mobile;//upadte anuj gupta 16 Oct
 	@FindBy(xpath="//*[@data-auid='Address Book_m']") public WebElement tabAddressBookMobile;
@@ -90,12 +90,12 @@ public class R1_HomePage_PO {
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand_m']")public WebElement brandFacet_M;
 //	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand_m']//*[@data-auid='drawer_Adidas_m']")public WebElement brandFacetAddidas_M;/RKA 24 aug
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Brand_m']//*[@data-auid='drawer_adidas_m']")public WebElement brandFacetAddidas_M;
-	@FindBy(xpath="//*[@data-auid='level2Category-Shoes_m']")public WebElement btnShop_M;
-	@FindBy(xpath="//*[contains(@data-auid,'level3Category-Men')]")public WebElement btnMenShoe_M;
+	@FindBy(xpath="//*[@data-auid='level2Category-Shoes_m'] | //*[@data-auid='level2Category-Shoes & Boots_m']")public WebElement btnShop_M;  //SID Modified 14-Nov
+	@FindBy(xpath="//*[contains(@data-auid,\"level3Category-Men's Shoes_m\")]")public WebElement btnMenShoe_M;  //SID Modified 14-Nov
 	@FindBy(xpath="//*[@data-auid=\"go-to-Men's Shoes_m\"]") public WebElement btnMenShoe_M_landing;  //SID 28-August
-	@FindBy(xpath="//*[@data-auid='level4Category-Athletic & Sneakers_m']")public WebElement btnAtheletic_Sneker_M;
-	
-	
+	@FindBy(xpath="//*[@data-auid='level4Category-Athletic & Sneakers_m']")public WebElement btnAtheletic_Sneker_M; //SID 14-Nov
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Shoes\"]//*[@data-auid='level4Category-Athletic & Sneakers'] | //*[@data-auid='level4Category-Athletic & Sneakers']")public WebElement btnAthleticBoyShoe; //Sid 14-Nov
+	@FindBy(xpath="//*[@data-auid='level4Category-Athletic & Sneakers_m']")public WebElement btnAthleticBoyShoe_M; //Sid 14-Nov
 	
 	
 	//KER -710 END
