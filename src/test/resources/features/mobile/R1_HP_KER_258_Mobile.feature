@@ -4,3 +4,6 @@
 #  Scenario: Verify the Product Carousel UI behavior for Desktop
 #   Given user launches the browser and navigates to "ASO_HOME" page
 #   Then Verify product carosel is appearing on home page for mobile  
+
+
+
