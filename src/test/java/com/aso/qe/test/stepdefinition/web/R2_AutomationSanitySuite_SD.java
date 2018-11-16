@@ -261,6 +261,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	
 	@Then("^user is navigated to checkout page$")
 	public void user_is_navigated_to_checkout_page() throws Throwable {
+		Thread.sleep(5000);
 		assertTrue(isDisplayed(r2SanityPo.headerCheckout));
 	}
 	

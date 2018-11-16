@@ -1,7 +1,6 @@
 Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios 
 
-@R2_Web @R2_WAST-01 @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040
-@CR-SK @AutomationSanityR2 
+@R2_Web @R2_WAST-01 @P-High @AutomationSanityR2 @AutomationSanity
 Scenario: TC_1- Verify Login Logout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -18,9 +17,7 @@ Scenario: TC_1- Verify Login Logout
 		|SignInPage_SignIn_btn								|
 		
 		
-@R2_Web @R2_WAST-03 @P-Highest @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149
-@CR-SK 
-@AutomationSanityR2 @C1-Message 
+@R2_Web @R2_WAST-02 @P-Highest @AutomationSanityR2 @AutomationSanity
 Scenario: TC_3- Verify User is able to create an account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -32,14 +29,13 @@ Scenario: TC_3- Verify User is able to create an account
 	Then user should see password masked 
 	When clicks on Sign Up Button 
 	Then user should be able to sign up successfully 
-	And Verify the message on the page 
-		|# Following Message should show on the page|
-		|CONGRATULATIONS                            |
-		|You have successfully registered with Academy.com|
-		|LET'S SHOP                                       |
+#	And Verify the message on the page 
+#		|# Following Message should show on the page|
+#		|CONGRATULATIONS                            |
+#		|You have successfully registered with Academy.com|
+#		|LET'S SHOP                                       |
 		
-@R2_Web @R2_WAST-04 @P-High @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418 @CR-SK 
-@AutomationSanityR2 
+@R2_Web @R2_WAST-03 @P-High @AutomationSanityR2 @AutomationSanity
 Scenario: TC_4- Verify User is able to Add Gift Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -55,8 +51,7 @@ Scenario: TC_4- Verify User is able to Add Gift Card
 	And there should be a Remove link with cross icon 
 	
 	
-@R2_Web @R2_WAST-05 @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK
-@AutomationSanityR2 
+@R2_Web @R2_WAST-04 @P-High @AutomationSanityR2 @AutomationSanity
 Scenario: TC_5-Verify Add Credit Card and added as a Default Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -68,7 +63,7 @@ Scenario: TC_5-Verify Add Credit Card and added as a Default Card
 	
 	
 	#===========unit testing pending as search is not working
-@R2_Web @R2_WAST-06 @P-High @CR-SK @AutomationSanityR2 
+@R2_Web @R2_WAST-05 @P-High @CR-SK @AutomationSanityR2 @AutomationSanity
 Scenario: TC_6-Verify and Search an item and  navigate to  View Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
@@ -79,7 +74,7 @@ Scenario: TC_6-Verify and Search an item and  navigate to  View Cart
 	Then user navigate to Cart page 
 	
 	#===========unit testing pending as search is not working
-@R2_Web @R2_WAST-07 @P-High @CR-SK @AutomationSanityR2 
+@R2_Web @R2_WAST-06 @P-High @AutomationSanityR2 @AutomationSanity
 Scenario: TC_7-Verify and Search - Checkout from ATC Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
@@ -90,7 +85,7 @@ Scenario: TC_7-Verify and Search - Checkout from ATC Modal
 	Then user is navigated to checkout page 
 	
 	
-@R2_Web @R2_WAST-08 @AutomationSanityR2 @CR-SK 
+@R2_Web @R2_WAST-07 @AutomationSanityR2 @AutomationSanity
 Scenario: TC_8-Verify Cat Nav - View Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
@@ -100,7 +95,7 @@ Scenario: TC_8-Verify Cat Nav - View Cart
 	Then user navigate to Cart page 
 	
 	
-@R2_Web @R2_WAST-09 @AutomationSanityR2 @CR-SK 
+@R2_Web @R2_WAST-08 @AutomationSanityR2 @AutomationSanity
 Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
@@ -110,8 +105,7 @@ Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal
 	Then user is navigated to checkout page 
 	
 	
-@R2_Web @R2_WAST-10 @P-High @C-Checkout @KER-3166 @ZYP_CART_K3166-9604 @CR-DPK 
-@AutomationSanityR2 
+@R2_Web @R2_WAST-09 @P-High @AutomationSanityR2 @AutomationSanity
 Scenario: TC_10-Verify Apply Promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
@@ -125,8 +119,7 @@ Scenario: TC_10-Verify Apply Promotion
 		|SubTotal_txt|
 		|EstimatedTaxes_txt|
 		
-@R2_Web @R2_WAST-11 @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8166 @CR-AKK 
-@AutomationSanityR2 
+@R2_Web @R2_WAST-10 @P-Highest @AutomationSanityR2 @AutomationSanity
 Scenario: TC_11- Verify Apply Promotion / Remove Promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
@@ -143,8 +136,7 @@ Scenario: TC_11- Verify Apply Promotion / Remove Promotion
 	
 	
 	
-@R2_Web @R2_WAST-12 @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @CR-AKK 
-@AutomationSanityR2 
+@R2_Web @R2_WAST-11 @P-Highest @AutomationSanityR2 @AutomationSanity
 Scenario: TC_12-Verify Update Quantity 
 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -161,8 +153,7 @@ Scenario: TC_12-Verify Update Quantity
 		|SubTotal_txt|
 	And  user should be able to see the increased quantity and Price in Cart Order summary 
 	
-@R2_Web @R2_WAST-13 @P-Highest @C-Cart @KER-2939 @ZYP_CART_K2939-9615 @CR-AKK 
-@AutomationSanityR2 
+@R2_Web @R2_WAST-12 @P-Highest @AutomationSanityR2 @AutomationSanity
 Scenario:
 TC_13-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -177,8 +168,7 @@ TC_13-To Verify Image for selected SKU is be displayed on product blade for mult
 	
 	
 	
-@R2_Web @R2_WAST-14 @P-Highest @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-AKK 
-@AutomationSanityR2 
+@R2_Web @R2_WAST-13 @P-Highest @AutomationSanityR2 @AutomationSanity
 Scenario: TC_14-Verify Remove Item from Cart 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
@@ -190,8 +180,7 @@ Scenario: TC_14-Verify Remove Item from Cart
 		|# Verify following elements in Cart page "Your Cart item details "|
 		|RemoveFromCart_Btn|
 		
-@R2_Web @R2_WAST-15 @P-Highest @C-Cart @KER-3127 @ZYP_CART_K3127-8168 @CR-AKK 
-@AutomationSanityR2 
+@R2_Web @R2_WAST-14 @P-Highest @AutomationSanityR2 @AutomationSanity
 Scenario: TC_15-Verify User Able to Checkout, if no errors in cart 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
@@ -202,8 +191,7 @@ Scenario: TC_15-Verify User Able to Checkout, if no errors in cart
 		|checkOutYourCart_Btn|
 	And  user click on checkout button in Cart page 
 	
-@R2_Web @R2_WAST-16 @P-Highest @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8177
-@CR-DPK @AutomationSanityR2 
+@R2_Web @R2_WAST-15 @P-Highest @AutomationSanityR2 @AutomationSanity
 Scenario: TC_16-Verify Add Shipping Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
@@ -219,9 +207,7 @@ Scenario: TC_16-Verify Add Shipping Address
 	And user click on Go To Shipping Method button in Checkout page 
 	
 	
-@R2_Web @R2_WAST-17 @P-High @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8629 
-@CR-DPK 
-@AutomationSanityR2 
+@R2_Web @R2_WAST-16 @P-High @AutomationSanityR2 @AutomationSanity
 Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
@@ -238,9 +224,7 @@ Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated
 	And user click on Apply button 
 	Then verify Gift Card in order summary page 
 	
-@R2_Web @R2_WAST-18 @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954
-@CR-GK 
-@AutomationSanityR2 
+@R2_Web @R2_WAST-17 @P-High @AutomationSanityR2 @AutomationSanity
 Scenario: TC_18-Verify Payment - Add Gift Card - Authenticated 
 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -260,9 +244,7 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Authenticated
 	Then gift card balance is applied towards the purchase 
 	
 	
-@R2_Web @R2_MAST-19 @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 
-@CR-RK 
-@AutomationSanityR2 
+@R2_Web @R2_MAST-18 @P-High @AutomationSanityR2 @AutomationSanity
 Scenario: TC_19-Verify Sign In During Checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
@@ -276,9 +258,7 @@ Scenario: TC_19-Verify Sign In During Checkout
 	And user click on signin button 
 	
 	
-@R2_Web @R2_WAST-20 @P-Highest @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 
-@CR-AKK @C1-Message @C1-Message 
-@AutomationSanityR2 
+@R2_Web @R2_WAST-19 @P-Highest @AutomationSanityR2 @AutomationSanity
 Scenario: TC_20- Verify Edit cart items from Order summary 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
@@ -288,13 +268,11 @@ Scenario: TC_20- Verify Edit cart items from Order summary
 	And  user will click on Checkout button and navigates to Checkout page 
 	When  user clicks on Edit My cart in Order Summary 
 	Then  user should navigates to the CartPage "CartTitle" 
-	Then  Verify the message on the page 
-		|# Following Message should show on the page|
-		|CartPage|
+#	Then  Verify the message on the page 
+#		|# Following Message should show on the page|
+#		|CartPage|
 		
-@R2_Web @R2_WAST-21 @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098 
-@CR-AKK 
-@AutomationSanityR2 
+@R2_Web @R2_WAST-20 @P-Low @AutomationSanityR2 @AutomationSanity
 Scenario: TC_21-Verify Order Summary 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
@@ -310,8 +288,7 @@ Scenario: TC_21-Verify Order Summary
 		
 		
 		
-@R2_Web @R2_WAST-22 @P-Highest @C-Cart @KER-2872 @ZYP_CART_K2872-8710 @CR-DPK 
-@AutomationSanityR2 
+@R2_Web @R2_WAST-21 @P-Highest @AutomationSanityR2 @AutomationSanity
 Scenario: TC_22-Verify Find a store 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 

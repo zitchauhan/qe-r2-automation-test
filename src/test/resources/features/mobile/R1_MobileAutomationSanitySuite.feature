@@ -1,86 +1,13 @@
 Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
-#
-#  @AutomationSanityR1 @AS1 @MAST-01 
-#   Scenario: TC_1- Verify all broken URL's on Home page
-#    Given user launches the browser and navigates to "ASO_HOME" page
-#    Then verfy all link url's status code is 200
-#        
-#  @AutomationSanityR1 @AS1 @MAST-02 
-#  Scenario: TC_2-Login and Logout
-#    Given user launches the browser and navigates to "ASO_HOME" page
-#    Then User clicks on the burger menu
-#    Then user should able to click on Signin button
-#    Then user should be able to enter the signin details "Login_username" "Login_pwd"
-#    Then User clicks on the burger menu
-#    Then user sign out from the website
-#
-#  @AutomationSanityR1 @AS2  @MAST-03 
-#  Scenario: TC_3-Registered user checkout process
-#    Given user launches the browser and navigates to "ASO_HOME" page
-#    Then User clicks on the burger menu
-#    Then user should able to click on Signin button
-#    And user should be able to enter the signin details
-#    Then User will verify the presence of ASO Logo and click on Logo
-#    Then User clicks on the burger menu
-#    And User navigates to L3
-#    Then user clicks on the product card and navigates to PDP of the product
-#    Then user click on Add to cart button
-#    Then user click on checkout button
-#    Then user should able to see shipping Address page
-#    Then user click on continue to shipping method button
-#    Then user click on continue checkout button
-#    And user should able to verify the shipping method
-#    Then user should be able verify the order summary details
-#    When user should be able see the the payment method page and enter the creditcard details
-#    Then user should click on continue to review button
-#    And user enter verified by visa password and click on submit button
-#    When user should should be able see Order summary page
-#    Then user should able to verify the Review shipping address
-#    And user should able to verify the Review shipping method
-#    When user should able to verify the billing address
-#    When user should able to verify the payment method
-#    Then user should be able verify the order summary details
-#    Then user should click on Place Order Now button
-#  
-#
-#  @AutomationSanityR1 @AS2 @MAST-04
-#  Scenario: TC_4-Guest user checkout process
-#    Given user launches the browser and navigates to "ASO_HOME" page
-#    Then User clicks on the burger menu
-#    Then User navigates to L3
-#    Then user clicks on the product card and navigates to PDP of the product
-#    Then user click on Add to cart button
-#    Then user click on checkout button
-#    Then user should verify the Guest checkout Page
-#    Then user click on Checkout as Guest button
-#    Then user should able to see shipping Address page
-#    Then user should be able verify the order summary details
-#    Then user should enter the shipping Address details
-#    Then user click on continue to shipping method button
-#    Then user click on continue checkout button
-#    Then user should able to verify the shipping address
-#    And user should able to verify the shipping method
-#    Then user should be able verify the order summary details
-#    Then user should able to click on Continue to Payment button
-#    When user should be able see the the payment method page and enter the creditcard details
-#    Then user should click on continue to review button
-#    And user enter verified by visa password and click on submit button
-#    When user should should be able see Order summary page
-#    Then user should able to verify the Review shipping address
-#    And user should able to verify the Review shipping method
-#    When user should able to verify the billing address
-#    When user should able to verify the payment method
-#    Then user should be able verify the order summary details
-#    Then user should click on Place Order Now button
 
-  @AutomationSanityR1 @AS1 @MAST-05
+  @AutomationSanityR1 @AS1 @MAST-01 @AutomationSanity
   Scenario: TC_5-Verify  Home Page Launch
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User will verify the presence of ASO Logo
     And User will verify the presence of search
     Then User clicks on the burger menu
 
-  @AutomationSanityR1 @AS2 @MAST-06 @1HR
+  @AutomationSanityR1 @AS2 @MAST-02 @1HR @AutomationSanity
   Scenario: TC_7-Verify  Global Header on All the pages(till PDP)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -99,7 +26,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User clicks on the burger menu
     Then User should be able to see FindStore Navigation Categories and MyAccount links
 
-  @AutomationSanityR1 @AS2 @MAST-07 @1HR
+  @AutomationSanityR1 @AS2 @MAST-03 @1HR @AutomationSanity
   Scenario: TC_8-Verify Global Footer on All the pages(till PDP)
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User will verify the presence of FIND A STORE
@@ -239,38 +166,38 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User will verify the presence of youtube icon
     Then User will verify the presence of instagram icon
 
-  @AutomationSanityR1 @AS1 @MAST-08
+  @AutomationSanityR1 @AS1 @MAST-04 @AutomationSanity
   Scenario: TC_8-Verify Navigation from Homepage to L1
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L1
 
-  @AutomationSanityR1 @AS1 @MAST-09
+  @AutomationSanityR1 @AS1 @MAST-05 @AutomationSanity
   Scenario: TC_9-Verify Navigation from Homepage to L2
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L2
 
-  @AutomationSanityR1 @AS1 @MAST-10
+  @AutomationSanityR1 @AS1 @MAST-06 @AutomationSanity
   Scenario: TC_10-Verify Navigation from Homepage to L3
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L3
 
-  @AutomationSanityR1 @AS1  @MAST-11
+  @AutomationSanityR1 @AS1  @MAST-07 @AutomationSanity
   Scenario: TC_11-Verify Navigation from Homepage to PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L3
     Then user clicks on the product card and navigates to PDP of the product
 
- @AutomationSanityR1 @AS1  @MAST-12
+ @AutomationSanityR1 @AS1  @MAST-08 @AutomationSanity
   Scenario: TC_12-Verify Search from Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
    Then User searches a product "productName" and navigates to PDP
     And user should be able to see the sku and item numbers for the given image
  
-  @AutomationSanityR1 @AS1 @MAST-13
+  @AutomationSanityR1 @AS1 @MAST-09 @AutomationSanity
   Scenario: TC_13-Verify Search Result Page(Facets, Sort and Pagination)
     Given user launches the browser and navigates to "ASO_HOME" page
     When user enters "productName" in the search box and navigates to PLP
@@ -278,21 +205,21 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User clicks on the filter flyout
     And User expands all Filter Options
 
-  @AutomationSanityR1 @AS1 @MAST-14
+  @AutomationSanityR1 @AS1 @MAST-10 @AutomationSanity
   Scenario: TC_14-Verify Navigation from L1 to L2
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L1
     Then user clicks on one of the subcategory and navigates to LTwo page
 
-  @AutomationSanityR1 @AS1 @MAST-15 @1HR
+  @AutomationSanityR1 @AS1 @MAST-11 @AutomationSanity @1HR
   Scenario: TC_15-Verify Breadcumb on L1 
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L1
     Then User click on the breadcrumb last link
 
-  @AutomationSanityR1 @AS1 @MAST-16 @1HR
+  @AutomationSanityR1 @AS1 @MAST-12 @AutomationSanity @1HR
   Scenario: TC_16-Verify Facets and Sorts on L2
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -302,7 +229,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     And User expands all Filter Options
   
 
-  @AutomationSanityR1 @AS1 @MAST-17
+  @AutomationSanityR1 @AS1 @MAST-13 @AutomationSanity
   Scenario: TC_17-Verify Pagination on L2
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -310,7 +237,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     And User scroll to pagination
     Then User should be able to see pagination links in L2 page
 
-  @AutomationSanityR1 @AS1 @MAST-18
+  @AutomationSanityR1 @AS1 @MAST-14 @AutomationSanity
   Scenario: TC_18-Verify Product grid on L2
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -320,21 +247,21 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     And User expands PRICE Filter Option
    
 
-  @AutomationSanityR1 @AS1 @MAST-19
+  @AutomationSanityR1 @AS1 @MAST-15 @AutomationSanity
   Scenario: TC_19-Verify Breadcrumb on L2
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L2
     Then User click on the breadcrumb last link
 
-  @AutomationSanityR1 @AS1 @MAST-20
+  @AutomationSanityR1 @AS1 @MAST-16 @AutomationSanity
   Scenario: TC_20-Verify Navigation from L2 to L3
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L2
     Then user clicks on one of the product category and navigates to LThree page
 
-  @AutomationSanityR1 @AS1 @MAST-21
+  @AutomationSanityR1 @AS1 @MAST-17 @AutomationSanity
   Scenario: TC_21-Verify Facets and Sorts on L3
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -346,7 +273,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     
   
 
-  @AutomationSanityR1 @AS1 @MAST-22
+  @AutomationSanityR1 @AS1 @MAST-18 @AutomationSanity
   Scenario: TC_22-Verify Pagination on L3
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -355,7 +282,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     And User scroll to pagination
     Then User should be able to see pagination links in L3 page
 
-  @AutomationSanityR1 @AS1 @MAST-23
+  @AutomationSanityR1 @AS1 @MAST-19 @AutomationSanity
   Scenario: TC_23-Verify Product grid on L3
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -368,7 +295,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     When User deselects multiple PRICE filter Options
     Then User should be able to see the deselected PRICE filter Options in deselected state
 
-  @AutomationSanityR1 @AS1 @MAST-24 @1HR
+  @AutomationSanityR1 @AS1 @MAST-20 @AutomationSanity @1HR
   Scenario: TC_24-Verify Breadcrumb on L3 
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -376,7 +303,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     And user navigate to L3 page
     Then User click on the breadcrumb last link
 
-  @AutomationSanityR1 @AS1 @MAST-25
+  @AutomationSanityR1 @AS1 @MAST-21 @AutomationSanity
   Scenario: TC_25-Verify L3 to PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -385,7 +312,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then user clicks on the product card and navigates to PDP of the product
     And user should be able to see PDP mention in the current url
 
-  @AutomationSanityR1 @AS1 @MAST-26 @1HR
+  @AutomationSanityR1 @AS1 @MAST-22 @AutomationSanity @1HR
   Scenario: TC_26-Verify PDP page 
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -399,7 +326,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     And user should be able to see Add to cart button and quantity section
     Then user should be able to see inventory status of the product
 
-  @AutomationSanityR1 @AS1 @MAST-27 @1HR
+  @AutomationSanityR1 @AS1 @MAST-23 @AutomationSanity @1HR
   Scenario: TC_27-Verify Navigation from PDP to Homepage by clicking on ASO logo
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -411,7 +338,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User clicks on ASO logo
     Then User should be navigated to Home_Page
 
-  @AutomationSanityR1 @AS1 @MAST-28
+  @AutomationSanityR1 @AS1 @MAST-24 @AutomationSanity
   Scenario: TC_28-Verify Navigation from L3 to Homepage by clicking on ASO logo
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -421,7 +348,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User clicks on ASO logo
     Then User should be navigated to Home_Page
 
-  @AutomationSanityR1 @AS1 @MAST-29
+  @AutomationSanityR1 @AS1 @MAST-25 @AutomationSanity
   Scenario: TC_29-Verify Navigation from L2 to Homepage by clicking on ASO logo
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -430,7 +357,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User clicks on ASO logo
     Then User should be navigated to Home_Page
 
-  @AutomationSanityR1 @AS1 @MAST-30
+  @AutomationSanityR1 @AS1 @MAST-26 @AutomationSanity
   Scenario: TC_30-Verify Navigation from L1 to Homepage by clicking on ASO logo
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -438,3 +365,78 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Then User is able to see the ASO_Logo
     Then User clicks on ASO logo
     Then User should be navigated to Home_Page
+    
+#
+#  @AutomationSanityR1 @AS1 @MAST-01 
+#   Scenario: TC_1- Verify all broken URL's on Home page
+#    Given user launches the browser and navigates to "ASO_HOME" page
+#    Then verfy all link url's status code is 200
+#        
+#  @AutomationSanityR1 @AS1 @MAST-02 
+#  Scenario: TC_2-Login and Logout
+#    Given user launches the browser and navigates to "ASO_HOME" page
+#    Then User clicks on the burger menu
+#    Then user should able to click on Signin button
+#    Then user should be able to enter the signin details "Login_username" "Login_pwd"
+#    Then User clicks on the burger menu
+#    Then user sign out from the website
+#
+#  @AutomationSanityR1 @AS2  @MAST-03 
+#  Scenario: TC_3-Registered user checkout process
+#    Given user launches the browser and navigates to "ASO_HOME" page
+#    Then User clicks on the burger menu
+#    Then user should able to click on Signin button
+#    And user should be able to enter the signin details
+#    Then User will verify the presence of ASO Logo and click on Logo
+#    Then User clicks on the burger menu
+#    And User navigates to L3
+#    Then user clicks on the product card and navigates to PDP of the product
+#    Then user click on Add to cart button
+#    Then user click on checkout button
+#    Then user should able to see shipping Address page
+#    Then user click on continue to shipping method button
+#    Then user click on continue checkout button
+#    And user should able to verify the shipping method
+#    Then user should be able verify the order summary details
+#    When user should be able see the the payment method page and enter the creditcard details
+#    Then user should click on continue to review button
+#    And user enter verified by visa password and click on submit button
+#    When user should should be able see Order summary page
+#    Then user should able to verify the Review shipping address
+#    And user should able to verify the Review shipping method
+#    When user should able to verify the billing address
+#    When user should able to verify the payment method
+#    Then user should be able verify the order summary details
+#    Then user should click on Place Order Now button
+#  
+#
+#  @AutomationSanityR1 @AS2 @MAST-04
+#  Scenario: TC_4-Guest user checkout process
+#    Given user launches the browser and navigates to "ASO_HOME" page
+#    Then User clicks on the burger menu
+#    Then User navigates to L3
+#    Then user clicks on the product card and navigates to PDP of the product
+#    Then user click on Add to cart button
+#    Then user click on checkout button
+#    Then user should verify the Guest checkout Page
+#    Then user click on Checkout as Guest button
+#    Then user should able to see shipping Address page
+#    Then user should be able verify the order summary details
+#    Then user should enter the shipping Address details
+#    Then user click on continue to shipping method button
+#    Then user click on continue checkout button
+#    Then user should able to verify the shipping address
+#    And user should able to verify the shipping method
+#    Then user should be able verify the order summary details
+#    Then user should able to click on Continue to Payment button
+#    When user should be able see the the payment method page and enter the creditcard details
+#    Then user should click on continue to review button
+#    And user enter verified by visa password and click on submit button
+#    When user should should be able see Order summary page
+#    Then user should able to verify the Review shipping address
+#    And user should able to verify the Review shipping method
+#    When user should able to verify the billing address
+#    When user should able to verify the payment method
+#    Then user should be able verify the order summary details
+#    Then user should click on Place Order Now button
+
