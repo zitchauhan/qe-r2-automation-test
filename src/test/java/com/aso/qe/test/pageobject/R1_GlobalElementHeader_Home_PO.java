@@ -1725,7 +1725,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			Thread.sleep(Constants.thread_low);
 			clickOnButton(btnClothingCategory); //4Sep
 			Thread.sleep(Constants.thread_low); 
-			clickOnButton(btnMenClothingShop);
+			clickOnButton(btnMenClothingShop_M);
 			Thread.sleep(Constants.thread_low); 
 			clickOnButton(Common_Web_SD.globalElementHeader.txtToNavigateMensBurgerMenuMobile);
 			Thread.sleep(Constants.thread_low); 
