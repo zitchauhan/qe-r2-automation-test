@@ -5,7 +5,9 @@ import static org.testng.Assert.assertTrue;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -44,6 +46,12 @@ public class Common_Web_SD extends CommonActionHelper
 		findStorePO= PageFactory.initElements(driver, R1_FindStore_PO.class);
 		globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 		searchProductPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			WebElement pop = driver.findElement(By.xpath("//*[text()='Message text']/following-sibling::a"));
+			waitForElement(pop);
+			isDisplayed(pop);
+			clickOnButton(pop);
+		} 
 	}
 
 	@Then("^User closes the web application$")
