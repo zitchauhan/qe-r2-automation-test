@@ -46,12 +46,25 @@ public class Common_Web_SD extends CommonActionHelper
 		findStorePO= PageFactory.initElements(driver, R1_FindStore_PO.class);
 		globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 		searchProductPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
-		if ("mobile".equalsIgnoreCase(testtype)) {
-			WebElement pop = driver.findElement(By.xpath("//*[text()='Message text']/following-sibling::a"));
-			waitForElement(pop);
-			isDisplayed(pop);
-			clickOnButton(pop);
-		} 
+	 
+			boolean flag = false;
+					WebElement pop;
+					try {
+						pop = driver.findElement(By.xpath("//*[text()='Message text']/following-sibling::a"));
+						flag = pop.isDisplayed();
+						if (flag) {
+							if (webPropHelper.getConfigPropProperty(url).contains("uat")) {
+								pop = driver.findElement(By.xpath("//*[text()='Message text']/following-sibling::a"));
+								waitForElement(pop);
+								isDisplayed(pop);
+								clickOnButton(pop);
+							}
+						}
+					} catch (Exception e) {
+
+					} 
+					 
+
 	}
 
 	@Then("^User closes the web application$")

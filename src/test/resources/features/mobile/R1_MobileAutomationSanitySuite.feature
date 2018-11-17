@@ -266,7 +266,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L3
-    And user navigate to L3 page
+#    And user navigate to L3 page
     And user scroll till filter flyout
     Then User clicks on the filter flyout
     And User expands all Filter Options
@@ -278,7 +278,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L3
-    And user navigate to L3 page
+#    And user navigate to L3 page
     And User scroll to pagination
     Then User should be able to see pagination links in L3 page
 
@@ -287,7 +287,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L3
-    And user navigate to L3 page
+#    And user navigate to L3 page
     Then User clicks on the filter flyout
     And User expands PRICE Filter Option
     When User selects multiple PRICE filter Options
@@ -300,7 +300,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L3
-    And user navigate to L3 page
+#    And user navigate to L3 page
     Then User click on the breadcrumb last link
 
   @AutomationSanityR1 @AS1 @MAST-21 @AutomationSanity
@@ -308,7 +308,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L3
-    And user navigate to L3 page
+#    And user navigate to L3 page
     Then user clicks on the product card and navigates to PDP of the product
     And user should be able to see PDP mention in the current url
 
@@ -317,7 +317,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L3
-    And user navigate to L3 page
+#    And user navigate to L3 page
     Then user clicks on the product card and navigates to PDP of the product
     And user should be able to see PDP mention in the current url
     Then user should be able to see Image of the product
@@ -331,7 +331,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L3
-    And user navigate to L3 page
+#    And user navigate to L3 page
     Then user clicks on the product card and navigates to PDP of the product
     And user should be able to see PDP mention in the current url
     Then User is able to see the ASO_Logo
@@ -343,7 +343,7 @@ Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     Then User navigates to L3
-    And user navigate to L3 page
+#    And user navigate to L3 page
     Then User is able to see the ASO_Logo
     Then User clicks on ASO logo
     Then User should be navigated to Home_Page
