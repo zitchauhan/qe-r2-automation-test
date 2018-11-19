@@ -1,8 +1,12 @@
 package com.aso.qe.test.pageobject;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
+
 import com.aso.qe.test.common.POMConstants;
 
 public class R1_HomePage_PO {
@@ -13,6 +17,8 @@ public class R1_HomePage_PO {
 	@FindBy(xpath="//div[@data-component='featuredCategory']//h3[text()='FEATURED CATEGORIES']")public WebElement secFeaturedCategory;
 	@FindBy(xpath="//div[@data-component='featuredCategory']//div[@class='container pb-5']/div")public WebElement prdTileFeaturedCategory_Row;
 	@FindBy(xpath="//a[@data-auid='HP_FC_Anchor_2']/h6")public WebElement prdTileFeaturedCategory;
+	@FindBy(xpath = "//*[contains(text(),'You might try')]//following-sibling::div//a") public List<WebElement> SLRresults;   //SID 19-October
+	
 	@FindBy(xpath = "//a[text()='golf']") public WebElement result1;
 	@FindBy(xpath = "//a[text()='good']") public WebElement result2;
 	@FindBy(xpath = "//a[text()='glo']") public WebElement result3;
@@ -51,7 +57,7 @@ public class R1_HomePage_PO {
 		//@FindBy(xpath="(//*[text()='SHOES'])[1]") public WebElement btnShoe;/RKA 8 aug
 		@FindBy(xpath="//*[@data-auid='level2Category-Shoes'] | //*[@data-auid='level2Category-Shoes & Boots']")public WebElement btnShoe;  //SID 1-Sept
 		//@FindBy(xpath="//*[text()='Boys Shoes']")public WebElement btnBoysShoe;/RKA 8 aug
-		@FindBy(xpath="//*[contains(@data-auid,'level3Category-Boys')]/*[1]")public WebElement btnBoysShoe;
+		@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Shoes\"]/a | //*[@data-auid=\"level3Category-Boys' Shoes_m\"]")public WebElement btnBoysShoe; //SID 19-Nov
 	
 	@FindBy(xpath="//*[@data-auid='shopByCategory_0']") public WebElement optionFirstClick;
 	@FindBy(xpath="//*[contains(text(),'Sort by')]/following-sibling::*[1]")public WebElement sortByOption;
@@ -68,6 +74,9 @@ public class R1_HomePage_PO {
 	@FindBy(xpath="(//*[@class='c-price__sub css-1f28zyy e1xaasfo1'])[2]/*[2]") public WebElement secondProductPrice;
 	@FindBy(xpath="(//*[@class='c-price__sub css-1f28zyy e1xaasfo1'])[3]/*[2]") public WebElement thirdProductPrice;
 	@FindBy(xpath="(//*[@class='c-price__sub css-1f28zyy e1xaasfo1'])[4]/*[2]") public WebElement forthProductPrice;
+	@FindBy(xpath="(//*[@class='c-price__sub css-1f28zyy e1xaasfo1'])/*[2]") public List<WebElement> productPrices;    //SID 25-October
+	@FindBy(xpath="(//*[@class='c-price__sub css-1f28zyy e1xaasfo1'])/*[2]/following-sibling::sup") public List<WebElement> productPricesCent;  //SID 25-October
+	
 	
 	@FindBy(xpath="(//*[contains(@class,'c-product__title')])[1]")public WebElement firstBrandName;
 	@FindBy(xpath="(//*[contains(@class,'c-product__title')])[2]")public WebElement secondBrandName;
@@ -118,6 +127,9 @@ public class R1_HomePage_PO {
 //	@FindBy(xpath="(//*[@data-auid='HP_PC_A_0'])[1]/ancestor::*[4]/following-sibling::*[1]")public WebElement productCarousel_left;/RKA 16 AUG
 	
 	@FindBy(xpath="//*[@data-component='recommendations']//button/parent::div//a") public WebElement productCarousel; //SID 4-September
+	@FindBy(xpath="//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(@id,'evergage')]//*[contains(@class,'swiper-slide-active')] | //*[contains(@id,'evergage')]//*[contains(@class,'swiper-slide-active')]") public WebElement productRecommendation; //SID Modified 21-October
+	
+	
 //	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[1]/*[1]")public WebElement productCarousel_1; //SID 4-September
 //	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[1]/*[2]")public WebElement productCarousel_2; //SID 4-September
 //	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[1]/*[3]")public WebElement productCarousel_3; //SID 4-September
@@ -169,43 +181,79 @@ public class R1_HomePage_PO {
 	// SID 1-September
 	public boolean comparePriceLowtohigh() {
 		Boolean flag = false;
-		String first = firstProductPrice.getText();
-		String Second = secondProductPrice.getText();
-		String third = thirdProductPrice.getText();
-		String forth = forthProductPrice.getText();
-		int first_f = Integer.parseInt(first);
-		int second_s = Integer.parseInt(Second);
-		int third_t = Integer.parseInt(third);
-		int forth_f = Integer.parseInt(forth);
-		System.err.println(first_f);
-		System.err.println(second_s);
-		System.err.println(third_t);
-		System.err.println(forth_f);
-		System.out.println(first_f + " " + second_s + " " + third_t + "  " + forth_f);
-		if ((first_f <= second_s) && (second_s <= third_t) && (third_t <= forth_f)) {
-			flag = true;
-		} else {
-			flag = false;
+		int min=0,price,count=0,cent=99,prevCent;
+		for(WebElement productPrice:productPrices) {
+			String priceString = productPrice.getText();
+		System.err.println(priceString);
+		price = Integer.parseInt(priceString);
+		prevCent = cent;
+		cent = Integer.parseInt(productPricesCent.get(count).getText());
+		System.err.println(price +"."+cent);
+		// System.err.println(third_t);
+		// System.err.println(forth_f);
+		if (min <= price) {
+			if (min == price) {
+				boolean flag1 = false;
+				if (prevCent <= cent) {
+					flag1 = true;
+					min = price;
+				}
+				else {
+					Assert.fail();
+				}
+			} else {
+				min = price;
+				flag = true;
+			}
 		}
-		return flag;
+		else {
+			flag = false;
+			break;
+		}
+		count++;
 	}
+	return flag;
+		
+		
+		
+	}
+	
+	
 	
 	// SID 1-September
 	public boolean comparePriceHighToLow() {
 		Boolean flag = false;
-		String first = firstProductPrice.getText();
-		String Second = secondProductPrice.getText();
-		String third = thirdProductPrice.getText();
-		String forth = forthProductPrice.getText();
-		Integer first_f = Integer.parseInt(first);
-		Integer second_s = Integer.parseInt(Second);
-		Integer third_t = Integer.parseInt(third);
-		Integer forth_f = Integer.parseInt(forth);
-		System.out.println(first_f + " " + second_s + " " + third_t + "  " + forth_f);
-		if ((first_f >= second_s) && (second_s >= third_t) && (third_t >= forth_f)) {
-			flag = true;
-		} else {
-			flag = false;
+		int max = 999999, price,count=0,cent=99,prevCent;
+		for (WebElement productPrice : productPrices) {
+			String priceString = productPrice.getText();
+			System.err.println(priceString);
+			price = Integer.parseInt(priceString);
+			prevCent = cent;
+			cent = Integer.parseInt(productPricesCent.get(count).getText());
+			System.err.println(price +"."+cent);
+			// System.err.println(third_t);
+			// System.err.println(forth_f);
+			if (max >= price) {
+				if (max == price) {
+					boolean flag1 = false;
+					if (prevCent >= cent) {
+						flag1 = true;
+						max = price;
+						
+					}
+					else {
+						Assert.fail();
+					}
+				} else {
+					max = price;
+					flag = true;
+				}
+			}
+			else {
+				flag = false;
+				break;
+			}
+			count++;
 		}
 		return flag;
 	}
