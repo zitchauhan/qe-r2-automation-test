@@ -125,10 +125,6 @@ Feature: [Desktop]Components - Header
     Then User verify hour of operation display in the place of find a store link
     Then User verify have to verify change link with pencil icon
 
-    Examples: 
-      | Postal_Code |
-      | 78710       |
-      
  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262 @CR-RKA @BrokenLink @Broken @TC_BL_01 
     Scenario: Verify all broken URL's on Home page
     Given user launches the browser and navigates to "ASO_HOME" page
