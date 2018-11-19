@@ -4,7 +4,7 @@ Feature: To Verify Bundles - Multi SKU Packages
 Scenario: Verify Bundle Product Title,Bundle SKU,Price,Bundle Product Image,Merchant controlled content at the Bundle level 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 
-	Then User navigates till PDP of multiple sku package 
+	Then User navigates till PLP of multiple sku package 
 #	Then User clicks on the filter flyout 
 #	And user click on category tab
 	And user click on football helmets
@@ -15,7 +15,7 @@ Scenario: Verify Bundle Product Title,Bundle SKU,Price,Bundle Product Image,Merc
 Scenario: To verify Multi SKU Packages - Verify Next Step button & functionality  
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
-	Then User navigates till PDP of multiple sku package 
+	Then User navigates till PLP of multiple sku package 
 #	Then User clicks on the filter flyout 
 #	And user click on category tab
 	And user click on football helmets

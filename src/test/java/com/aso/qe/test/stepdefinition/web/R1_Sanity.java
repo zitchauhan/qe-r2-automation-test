@@ -1,5 +1,6 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_ReskinPO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
 import cucumber.api.java.en.And;
@@ -20,7 +22,7 @@ public class R1_Sanity extends CommonActionHelper{
 	R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	//public ShoppingCartViewPO shoppingCartViewPO =  PageFactory.initElements(driver, ShoppingCartViewPO.class);
 	public R1_SearchProduct_PO searchProductPO =  PageFactory.initElements(driver, R1_SearchProduct_PO.class);
-
+	R1_ReskinPO rspo = PageFactory.initElements(getDriver(), R1_ReskinPO.class);
 
 	/*@When("^user clicks on one of the category and navigates to LOne page$")
 	public void user_clicks_on_one_of_the_category_and_navigates_to_LOne_page() throws Throwable {
@@ -29,6 +31,13 @@ public class R1_Sanity extends CommonActionHelper{
 
 	}*/
 
+	@Then("^verify the ATC button is enabled$")
+	public void verify_the_ATC_button_is_enabled() {
+		
+		assertFalse(rspo.baitATCbutton.isEnabled());
+		
+	}
+	
 	@Then("^User should be able to see L1 Page$")
 	public void user_should_be_able_to_see_L1_Page() throws Throwable {
 		globalElementHeader.verifypresenceofL1Page();
@@ -170,6 +179,19 @@ public class R1_Sanity extends CommonActionHelper{
 			scrollPageToWebElement(globalElementHeader.lnkL2Pagination);
 			Thread.sleep(Constants.thread_low); 
 		}
+	}
+	
+	@Given("^Increase the quanity in PDP$")
+	public void increase_the_quanity_in_PDP() throws InterruptedException  {
+		waitForElement(rspo.baitpdpqtyincrease);
+		assertTrue(clickOnButton(rspo.baitpdpqtyincrease));
+		Thread.sleep(3000);
+	}
+	
+	@Then("^User clicks on bait AddToCart Button$")
+	public void user_clicks_on_bait__AddToCart_Button() throws Throwable {
+		assertTrue(clickOnButton(rspo.baitATCbutton));
+		System.out.println(rspo.baitATCbutton);
 	}
 
 }

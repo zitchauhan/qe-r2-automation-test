@@ -14,8 +14,8 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	
-	@Then("^User navigates till PDP of multiple sku package$")
-	public void user_navigates_till_PDP_of_multiple_sku_package() throws Throwable {
+	@Then("^User navigates till PLP of multiple sku package$")
+	public void user_navigates_till_PLP_of_multiple_sku_package() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
 		pdpPageObj.navigateToMultipleSKU_Mobile();
 		}
@@ -24,6 +24,36 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 			pdpPageObj.navigateToMultipleSKU();
 		}
 	}
+	@Then("^User navigates till PLP of multiple sku$")
+	public void user_navigates_till_PLP_of_multiple_sku() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)) {
+		pdpPageObj.navigateToMultipleSKUSoccer_Mobile();
+		}
+		else
+		{
+			pdpPageObj.navigateToMultipleSKUSoccer();
+		}
+	}
+	@Then("^User click on the product image of sku$")
+	public void user_click_on_the_product_image_of_sku() throws Throwable {
+		pdpPageObj.clickOnImgSku();
+	}
+	
+	@Then("^verfiy add to cart functionality of multiple sku$")
+	public void verfiy_add_to_cart_functionality_of_multiple_sku() throws Throwable {
+		Actions hover=new Actions(getDriver());
+		hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
+		assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
+		pdpPageObj.checkBtnNext();
+		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
+		hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
+		assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
+		pdpPageObj.checkBtnNext();
+		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
+		pdpPageObj.addToCartAvailability();
+		assertTrue(clickOnButton(pdpPageObj.btnAddToCart1));
+	}
+	
 
 	@Then("^User click on the product image of sku package$")
 	public void user_click_on_the_product_image_of_sku_package() throws Throwable {
@@ -54,6 +84,12 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 			assertTrue(clickOnButton(pdpPageObj.btnAddToCart1));
 	}
 	
+	@Then("^Add to cart modal is displayed$")
+	public void Add_to_cart_modal_is_displayed() throws InterruptedException {
+		Thread.sleep(2000);
+		waitForElement(pdpPageObj.btnAddToCartModal);
+		assertTrue(isDisplayed(pdpPageObj.btnAddToCartModal));
+	}
 	
 	@Then("^user navigate to No diff selection product PLP$")
 	public void user_navigate_to_No_diff_selection_product_PLP() {

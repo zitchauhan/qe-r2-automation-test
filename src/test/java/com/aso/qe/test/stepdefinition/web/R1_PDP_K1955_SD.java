@@ -28,7 +28,7 @@ public class R1_PDP_K1955_SD extends CommonActionHelper{
 		logger.debug("selecting requried product from L3 page::");
 		clickOnButton(searchProductPO.productList.get(1));
 	}
-
+	
 	@Then("^User should be select the color$")
 	public void user_should_be_select_the_color() throws Throwable {
 		assertTrue(clickOnButton(pdp_po.btnDifferentColor));

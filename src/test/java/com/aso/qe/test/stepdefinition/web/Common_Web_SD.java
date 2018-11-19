@@ -46,24 +46,24 @@ public class Common_Web_SD extends CommonActionHelper
 		findStorePO= PageFactory.initElements(driver, R1_FindStore_PO.class);
 		globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 		searchProductPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
-	 
-			boolean flag = false;
-					WebElement pop;
-					try {
-						pop = driver.findElement(By.xpath("//*[text()='Message text']/following-sibling::a"));
-						flag = pop.isDisplayed();
-						if (flag) {
-							if (webPropHelper.getConfigPropProperty(url).contains("uat")) {
-								pop = driver.findElement(By.xpath("//*[text()='Message text']/following-sibling::a"));
-								waitForElement(pop);
-								isDisplayed(pop);
-								clickOnButton(pop);
-							}
-						}
-					} catch (Exception e) {
+		System.err.println(webPropHelper.getConfigPropProperty(url));
+		boolean flag = false;
+		WebElement pop;
+		try {
+			Thread.sleep(200);
+			pop = driver.findElement(By.xpath("//*[text()='Message text']/following-sibling::a"));
+			flag = pop.isDisplayed();
+			if (flag) {
+				if (webPropHelper.getConfigPropProperty(url).contains("uat")) {
+					pop = driver.findElement(By.xpath("//*[text()='Message text']/following-sibling::a"));
+					waitForElement(pop);
+					isDisplayed(pop);
+					clickOnButton(pop);
+				}
+			}
+		} catch (Exception e) {
 
-					} 
-					 
+		}
 
 	}
 
@@ -74,12 +74,11 @@ public class Common_Web_SD extends CommonActionHelper
 	}
 
 	@Then("^User navigates till PLP$")
-	public void User_navigates_till_PLP() throws Throwable 
-	{
+	public void User_navigates_till_PLP() throws Throwable {
 
-		if("mobile".equalsIgnoreCase(testtype)){
+		if ("mobile".equalsIgnoreCase(testtype)) {
 			globalElementHeader.navigateToPLPViaClick_Mobile();
-		} else{
+		} else {
 			globalElementHeader.navigateToPLPViaClick_Desktop();
 		}
 		
@@ -87,6 +86,8 @@ public class Common_Web_SD extends CommonActionHelper
 		//globalElementHeader.navigateL2HeaderToPLP();
 	}
 
+		// globalElementHeader.navigateL2HeaderToPLP();
+	}
 
 	@Then("^User clicks on the burger menu$")
 	public void User_clicks_on_the_burger_menu() throws Throwable {

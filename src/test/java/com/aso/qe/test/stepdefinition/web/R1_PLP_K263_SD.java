@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -20,8 +21,10 @@ public class R1_PLP_K263_SD extends CommonActionHelper{
 	@Then("^user clicks on one of the category and navigates to LOne page$")
 	public void user_clicks_on_one_of_the_category_and_navigates_to_LOne_page() throws Throwable {
 		Thread.sleep(Constants.thread_low);
+		Actions hover =new Actions(driver);
 		assertTrue((clickOnButton(globalElementHeader_HomePO.btnShopCategory)));
-		assertTrue(clickOnButton(globalElementHeader_HomePO.btnClothingCategory));
+		Thread.sleep(1000);
+		hover.moveToElement(globalElementHeader_HomePO.btnClothingCategory).click().build().perform();
 		waitForPageLoad(driver);
 
 	}

@@ -39,13 +39,15 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@id='flyer-runs-container']/div[1] | //*[@id='other_flyer_runs']//tr[1]") public  WebElement txtWeeklyADPopUpClick_M; //SID Modified 14-Nov
 	@FindBy(xpath="//*[@data-auid='show_wish_list_btn']")public WebElement selectWishlist;  //SID 14-Nov
 	
-	
+
+	@FindBy(xpath="//*[contains(@data-auid,'productCard_')]//*[contains(text(),'Gift Card')]")  public List<WebElement> giftCards; //SID 8-October
+	@FindBy(xpath="//*[@data-component='productDetailsGeneric']//*[contains(text(),'Out of Stock Online')]")public WebElement outOfStockMessage; //SID 8-October
 
 
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']") public WebElement btnBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']")  public WebElement btnXBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='level1Category-SHOP']") public WebElement btnShopCategory;
-	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m']/span | //*[@data-auid='level2Category-CLOTHING_m']/span | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //SID Modified 14-Nov
+	@FindBy(xpath="//*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //SID Modified 18-Nov
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]/a | //*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop;//UAT9
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop_M; //SID 14-Nov
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shirts']|//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shorts']|//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop;
@@ -112,7 +114,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='search-container']//input") public WebElement txtSearchBox;
 	@FindBy(xpath="//*[@data-auid='level1Category-DEALS']") public  WebElement btnDEALS;
 	@FindBy(xpath="//*[@data-auid='level1Category-DEALS_m']") public  WebElement btnDEALS_m;
-	@FindBy(xpath="//*[@data-auid='level1Category-TRENDING']") public  WebElement btnTRENDING;
+	@FindBy(xpath="//*[@data-auid='level1Category-TRENDING'] | //*[@data-auid='level1Category-EXPERT ADVICE']") public  WebElement btnTRENDING; //SID 18-Nov
 	@FindBy(xpath="//*[@data-auid='findAStore']")public WebElement btnFindAStore;
 	@FindBy(xpath="//*[@data-auid='WeeklyAds']")  public WebElement txtWeeklyAD;
 	@FindBy(xpath="//*[@id='react-tabs-0']") public WebElement tabdetailsandspecs;

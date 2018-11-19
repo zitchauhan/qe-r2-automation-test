@@ -146,7 +146,8 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[2]/*[1]/following-sibling::*[3]/following-sibling::*/*[1]") public WebElement btmCheckOutATCnotification;
 	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[1]")public WebElement  imgproductATCnotification;
 	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[1]/following-sibling::*/*[2]") public WebElement producrNameATCnotification;
-
+	@FindBy(xpath = "//*[@data-auid='level3Category-Soccer']//*[@data-auid='level4Category-Youth Soccer Packages']" )
+	public WebElement btnYouthSoccerPacakage;
 
 
 	//KER-3455Mobile @RKA
@@ -221,7 +222,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "(//*[contains(text(),'Checkout')])[1]")public WebElement btnCheckoutReskin;
 	
 	//***********************************************************************************************************//
-
+	@FindBy(xpath="//*[contains(@class,'ReactModal__Content ReactModa')]//*[@data-auid='btnviewCart']") public WebElement btnAddToCartModal; //SID Modified 17-October
 
 	//KER-1952 Start CR-AKK
 	@FindBy(xpath = "//button[contains(text(), 'Ask a question')]") public WebElement btnAskQuestion;
@@ -312,7 +313,8 @@ public class R1_PDP_PO extends CommonActionHelper
 
 	@FindBy(xpath="(//*[contains(text(),'Reviews')])[2]/../../following-sibling::*[1]/*[2]")public WebElement linkBeTheFirstTOReviewThisPRoduct;
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[*]/*[1]/*[2]/*[3]/*[1]/*/*[2]")public WebElement atLeastOneReview;
-
+	@FindBy(xpath = "//*[text()='adidas Green Soccer Package']")
+	public WebElement imgSoccerSKUCategory;  //SDK 9-October
 
 	//KER-1954Mob RKA
 	@FindBy(xpath="//*[@data-auid='Reviews_m']/*")public WebElement btnPlusReviews_M;
@@ -361,9 +363,10 @@ public class R1_PDP_PO extends CommonActionHelper
 	public WebElement btnIngroundHoops_M; //SID 28-August
 	@FindBy(xpath = "//*[text()='48-in Spalding Arena Series Glass In-Ground Basketball Hoop']")
 	public WebElement clickNoDiffProduct; //SID 28-August
-	
-	
-	
+	@FindBy(xpath = "//a[@data-auid='level4Category-Youth Soccer Packages_m']")
+	public WebElement YouthSoccerCategory_M;
+	@FindBy(xpath = "//a[@data-auid='level3Category-Soccer_m']")
+	public WebElement btnSoccerCategory_M;
 	
 	@FindBy(xpath = "//a[@data-auid='level4Category-Helmets & Masks_m']")
 	public WebElement HelmetsCategory_M;
@@ -788,7 +791,7 @@ public class R1_PDP_PO extends CommonActionHelper
 			 
 		 }
 	 }
-	 
+	
 	 //RKA 20 AUG
 	 public void verifySKUforallItem() {
 		 
@@ -1010,5 +1013,35 @@ public class R1_PDP_PO extends CommonActionHelper
 		logger.debug("Add to Cart buttion is visable::" + isAddtoCart);
 		return isAddtoCart;
 	}
-
+	
+	public void navigateToMultipleSKUSoccer_Mobile() throws Exception {
+		Thread.sleep(2000);
+		assertTrue(clickOnButton(btnSportsCategory_M));
+		Thread.sleep(2000);
+		assertTrue(clickOnButton(btnSoccerCategory_M));
+		Thread.sleep(2000);
+		assertTrue(clickOnButton(YouthSoccerCategory_M));
+		Thread.sleep(3000);
+	}
+	//SDK 9-October
+		public void navigateToMultipleSKUSoccer() throws Exception {
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(btnShopCategory1));
+			Thread.sleep(1000);
+			Actions hover = new Actions(getDriver());
+			hover.moveToElement(btnSportsCategory).build().perform();
+			Thread.sleep(1000);
+			hover.moveToElement(btnYouthSoccerPacakage).build().perform();
+			clickOnLink(btnYouthSoccerPacakage);
+			Thread.sleep(3000);
+		}
+		
+		//SDK - 9-October
+				public void clickOnImgSku() throws Exception {
+					scrollPageToWebElement(imgSoccerSKUCategory);
+					Actions hover = new Actions(getDriver());
+					hover.moveToElement(imgSoccerSKUCategory).click().build().perform();
+//					assertTrue(clickOnButton(imgHelmetSKUCategory));
+					Thread.sleep(2000);
+				}
 }

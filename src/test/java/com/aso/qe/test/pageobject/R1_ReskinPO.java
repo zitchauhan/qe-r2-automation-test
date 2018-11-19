@@ -38,7 +38,8 @@ public class R1_ReskinPO extends CommonActionHelper {
 	public WebElement removecartmsg;
 
 	// ENDS SUDHIR
-
+	@FindBy(xpath="//*[@data-auid=\"btnundefined\"]")
+	public WebElement baitATCbutton;
 	
 	@FindBy(xpath = "//*[@class='leftNavLinks']/*[4]/*")
 	public WebElement tabWishList;
@@ -82,6 +83,9 @@ public class R1_ReskinPO extends CommonActionHelper {
 	public WebElement updatePersonalInformation;
 	@FindBy(xpath = "//*[@id='personalInformationUpdateMessage']")
 	public WebElement personalInformationUpdateMessage;
+	@FindBy(xpath="//*[@data-auid=\"undefined_INC\"]")
+	public WebElement baitpdpqtyincrease;
+	
 	
 	public R1_ReskinPO(WebDriver webDriver) {
 		super();
