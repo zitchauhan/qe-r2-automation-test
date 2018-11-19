@@ -4,14 +4,14 @@ Feature: [Desktop]Components - Header
   Scenario: Desktop-To Verify the signout from MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "login" "password"
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then Verify signout from my account
 
   @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-1972 @CR-RKA
   Scenario: Desktop- To Verify user is able to Sign In with Valid user name and password by clicking in Sign In Link in the global header
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "login" "password"
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then verify user to navigate to account summary page
 
 
@@ -58,7 +58,7 @@ Feature: [Desktop]Components - Header
   Scenario: user to verify personal information  form My Account
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "login" "password"
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then verify personal information form My Account
 
 
@@ -66,14 +66,14 @@ Feature: [Desktop]Components - Header
   Scenario: user to verify Address book  form My Account
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "login" "password"
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then verify Address book form My Account
 
   @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-4070 @CR-RKA
   Scenario: user to verify WishList form My Account
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "login" "password"
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then verify , WishList form My Account
 
 
@@ -81,31 +81,24 @@ Feature: [Desktop]Components - Header
   Scenario: Desktop-Verify the Account Summary details from MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "login" "password"
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then verify account summary detail from my account
 
   
   @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-2729 @CR-RKA
-  Scenario Outline: Verify that the store details are displayed for guest user
+  Scenario: Verify that the store details are displayed for guest user
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to click on Find Store
-    When User select store with Postal Code
+    When User select store with "Postal_Code"
 
-    #    Then User should be able to see Selected_Store in the place of Find a Store link
-    Examples: 
-      | Postal_Code |
-      | 78710       |
 
   @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-2730 @CR-RKA
-  Scenario Outline: Verify that the store details are displayed for guest user
+  Scenario: Verify that the store details are displayed for guest user
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to click on Find Store
-    When User select store with Postal Code
+    When User select store with "Postal_Code"
     Then User verify hour of operation display in the place of find a store link
 
-    Examples: 
-      | Postal_Code |
-      | 78710       |
 
   @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-2734 @CR-RKA
   Scenario: Verify the UI for Find a store modal
@@ -115,23 +108,20 @@ Feature: [Desktop]Components - Header
     Then user verify element of find store popup
 
   @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-6530 @CR-RKA
-  Scenario Outline: Verify that the store details are displayed for Logged-in user
+  Scenario: Verify that the store details are displayed for Logged-in user
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "login" "password"
+    And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then User should be able to click on Find Store after sign in
-    When User select store with Postal Code
+    When User select store with "Postal_Code"
     Then User verify hour of operation display in the place of find a store link
 
-    Examples: 
-      | Postal_Code |
-      | 78710       |
 
  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-6533 @CR-SG @RBeta
-  Scenario Outline: Verify find a store UI navigation functionality
+  Scenario: Verify find a store UI navigation functionality
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to click on Find Store
-    When User select store with Postal Code
+    When User select store with "Postal_Code"
     Then User verify hour of operation display in the place of find a store link
     Then User verify have to verify change link with pencil icon
 

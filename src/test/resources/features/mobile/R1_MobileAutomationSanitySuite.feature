@@ -262,13 +262,13 @@ Scenario: To verify Standard Gift Cards
   @AutomationSanityR1 @AS1  @MAST-12 @AutomationSanity
   Scenario: TC_12-Verify Search from Home Page
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "SearchPDP" in the search box
+    When user enters "SearchPDP" in the searchbox
     And user should be able to see the sku and item numbers for the given image
  
   @AutomationSanityR1 @AS1 @MAST-13 @AutomationSanity
   Scenario: TC_13-Verify Search Result Page(Facets,  Sort and Pagination)
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "SearchTerm" in the search box
+    When user enters "SearchTerm" in the searchbox
     And user scroll till filter flyout
     Then User clicks on the filter flyout
     And User expands all Filter Options
@@ -530,7 +530,7 @@ And verfiy add to cart functionality of multiple sku
       @AutomationSanityR1 @AS1 @MAST-37 @AutomationSanity
   Scenario: TC_37-Verify the Bait Page
    Given user launches the browser and navigates to "ASO_HOME" page
-   When user enters "SearchBait" in the search box
+   When user enters "SearchBait" in the searchbox
    And User selects Required product in Product Listing Page
    Then verify the ATC button is enabled
    And Increase the quanity in PDP
