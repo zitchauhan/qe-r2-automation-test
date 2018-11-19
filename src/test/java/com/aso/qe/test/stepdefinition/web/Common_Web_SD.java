@@ -86,9 +86,6 @@ public class Common_Web_SD extends CommonActionHelper
 		//globalElementHeader.navigateL2HeaderToPLP();
 	}
 
-		// globalElementHeader.navigateL2HeaderToPLP();
-	}
-
 	@Then("^User clicks on the burger menu$")
 	public void User_clicks_on_the_burger_menu() throws Throwable {
 		globalElementHeader.clickOnBurgerMenu();
