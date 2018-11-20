@@ -10,7 +10,7 @@ Feature: To Verify the Add To Cart Functionality
            And User clicks on AddToCart Button
            Then User should be able to see ATC notification
            When User clicks on View_Cart Button
-           #Then User should be navigated to Cart Page
+        	Then User should be navigated to Cart Page
            Then User should be able to see added product in cart
                
                

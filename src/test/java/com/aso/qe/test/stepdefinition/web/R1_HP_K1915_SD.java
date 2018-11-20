@@ -47,6 +47,8 @@ public class R1_HP_K1915_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(pdpPageObj.btnAddToWishList));
 	}
 	
+	
+	
 	@Then("^user should not be able to see Add WishList link$")
 	public void user_should_not_be_able_to_see_Add_WishList_link() throws Throwable {
 		assertFalse(isDisplayed(pdpPageObj.btnAddToWishList));

@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -20,7 +21,7 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 	public R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	R1_HomePage_PO hp_p=PageFactory.initElements(getDriver(), R1_HomePage_PO.class);
 	public R2_MyAccount_PO myAccount_PO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
-	
+	Actions hover = new Actions(getDriver());
 	
 	@When("^user to click on sing in and navigate to sign in page$")
 	public void user_to_click_on_sing_in_and_navigate_to_sign_in_page() throws Throwable {
@@ -98,7 +99,10 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 			clickOnButton(hp_p.btnMyaccountMenu_M)	;
 			assertTrue(isDisplayed(hp_p.tabWishListMobile));						
 			}else {
-				assertTrue(isDisplayed(hp_p.tabWishList));	
+				assertTrue(clickOnButton(globalElementHeader.btnMyAccount)); //SDK-20th-Nov
+				hover.moveToElement(hp_p.tabWishList).click().build().perform();
+				Thread.sleep(2000);
+				assertTrue(isDisplayed(hp_p.myWishList));	
 			}
 	}
 	
@@ -110,7 +114,10 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 			clickOnButton(hp_p.btnMyaccountMenu_M);
 			assertTrue(isDisplayed(hp_p.tabPersonalInformation_Mobile));
 		} else {
-			assertTrue(isDisplayed(hp_p.tabPersonalInformation));
+			assertTrue(clickOnButton(globalElementHeader.btnMyAccount)); //SDK-20th-Nov
+			hover.moveToElement(hp_p.tabPersonalInformation).click().build().perform();
+			Thread.sleep(2000);
+			assertTrue(isDisplayed(hp_p.headerProfile)); 
 		}
 	}
 
@@ -123,7 +130,10 @@ public class R1_HP_K727_SD extends CommonActionHelper{
 			assertTrue(isDisplayed(hp_p.tabAddressBookMobile));
 
 		} else {
-			assertTrue(isDisplayed(hp_p.tabAddressBook));
+			assertTrue(clickOnButton(globalElementHeader.btnMyAccount)); //SDK-20th-Nov
+			hover.moveToElement(hp_p.tabAddressBook).click().build().perform();
+			Thread.sleep(2000);
+			assertTrue(isDisplayed(hp_p.myAddressBook));
 		}
 	}
 

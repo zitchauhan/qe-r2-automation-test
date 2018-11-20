@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
@@ -62,6 +63,8 @@ public class R1_PDP_K1955_SD extends CommonActionHelper{
 	@When("^User clicks on View_Cart Button$")
 	public void user_clicks_on_View_Cart_Button() throws Throwable {
 		assertTrue(clickOnButton(pdp_po.btnViewCart));
+		Thread.sleep(Constants.thread_highest);
+		
 	}
 
 	@Then("^User should be navigated to Cart Page$")
@@ -85,8 +88,8 @@ public class R1_PDP_K1955_SD extends CommonActionHelper{
 	}
 		else {
 			
-			waitForElement(driver.findElement(By.xpath("(//*[text()="+"\""+productName+"\""+"])[2]")));
-			WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[text()="+"\""+productName+"\""+"])[2]"));
+			waitForElement(driver.findElement(By.xpath("(//*[text()="+"\""+productName+"\""+"])"))); //SDK 20th-Nov
+			WebElement actualTitleInAddToCart = driver.findElement(By.xpath("(//*[text()="+"\""+productName+"\""+"])"));//SDK 20th-Nov
 			String modifiedActualTitleInAddToCart =actualTitleInAddToCart.getText().replace("'", "");
 			assertEquals(modifiedProductName, modifiedActualTitleInAddToCart);
 		}

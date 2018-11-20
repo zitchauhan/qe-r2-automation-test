@@ -4,6 +4,7 @@ import static org.testng.Assert.assertTrue;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,6 +14,8 @@ import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_SIT_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_HomePage_PO;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -20,6 +23,7 @@ import cucumber.api.java.en.When;
 public class R1_SD_SIT extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_SD_SIT.class);
 	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
+	R1_HomePage_PO hp_p=PageFactory.initElements(getDriver(), R1_HomePage_PO.class);
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	// SD_SIT_AddtoWishList Addsit_po= new SD_SIT_AddtoWishList();
 
@@ -306,6 +310,7 @@ public class R1_SD_SIT extends CommonActionHelper {
 		{
 			waitForElement(globalElementHeader.btnMyAccount);
 		assertTrue(isDisplayed(globalElementHeader.btnMyAccount));
+			
 		
 		}
 	} 

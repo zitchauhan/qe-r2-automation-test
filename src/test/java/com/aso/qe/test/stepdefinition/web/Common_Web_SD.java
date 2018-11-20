@@ -217,7 +217,8 @@ public class Common_Web_SD extends CommonActionHelper
 			Actions hover = new Actions(getDriver());
 			hover.moveToElement(globalElementHeader.btnClothingCategory).build().perform();
 			Thread.sleep(2000);
-			assertTrue(clickOnButton(globalElementHeader.btnMensShirt_Men_Clothing_Shop));
+//			hover.moveToElement(globalElementHeader.btnMensShirt_Men_Clothing_Shop).build().perform();
+			hover.moveToElement(globalElementHeader.btnMensShirt_Men_Clothing_Shop).click().build().perform();
 			Thread.sleep(2000);
 		}
 		

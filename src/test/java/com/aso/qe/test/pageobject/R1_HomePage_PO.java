@@ -33,11 +33,14 @@ public class R1_HomePage_PO {
 	@FindBy(xpath="//*[@id='logonIdError'] | //*[contains(@role,'alert') and contains(text(),'Please enter email address')] | //*[@id='logonIdError'] | //*[contains(@role,'alert') and contains(text(),'Please enter an email address')]") public WebElement msgVerifyEmail; //SID modified 14-November
 	@FindBy(xpath="//*[@id='logonPasswordError'] | //*[contains(@role,'alert') and contains(text(),'Please enter the Password')] | //*[@id='logonPasswordError'] | //*[contains(@role,'alert') and contains(text(),'Please enter the password')]")public WebElement msgVerifyPassword;  //SID modified 14-November
 	@FindBy(xpath="//*[@data-auid='Profile']") public WebElement tabPersonalInformation;
+	@FindBy(xpath="//h5[text()='PROFILE']") public WebElement headerProfile;
 	@FindBy(xpath="//*[@data-auid='Profile_m']") public WebElement tabPersonalInformation_Mobile;//upadte anuj gupta 16 Oct
 	@FindBy(xpath="//*[@data-auid='Address Book_m']") public WebElement tabAddressBookMobile;
 	@FindBy(xpath="//*[@data-auid='Address Book']") public WebElement tabAddressBook;
+	@FindBy(xpath="//h5[text()='ADDRESS BOOK']") public WebElement myAddressBook;
 	@FindBy(xpath="//*[@data-auid='Wish List_m']") public WebElement tabWishListMobile;
 	@FindBy(xpath="//*[@data-auid='Wish List']") public WebElement tabWishList;
+	@FindBy(xpath="//h5[text()='WISH LIST']") public WebElement myWishList;
 	@FindBy(xpath="//*[contains(text(),'Forgot your password?')] | //*[text()='Forgot your password ?']") public WebElement textForgotPasword; //SID 19-September
 	@FindBy(xpath="//*[@id='forgot-email'] | //*[@data-auid='email_input']") public WebElement inputForgetEmail; //SID 19-September
 	@FindBy(xpath="//*[@id='btnForgotPassword'] | //*[@data-auid='btnsubmit_btn']") public WebElement btnSubmit;  //SID 19-September

@@ -50,7 +50,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //SID Modified 18-Nov
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]/a | //*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop;//UAT9
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop_M; //SID 14-Nov
-	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shirts']|//*[@data-auid=\"level3Category-Boys' Clothing\"]//*[@data-auid='level4Category-Shorts']|//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop;
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]|//*[@data-auid='level4Category-Shirts']|//*[@data-auid=\"level3Category-Boys' Clothing\"]|//*[@data-auid='level4Category-Shorts']|//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop;
 	@FindBy(xpath="//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop_M;  //SID 14-Nov
 	@FindBy(xpath="//*[@data-auid='go-to-Womens_m']/a | //*[@data-auid=\"go-to-Women's Clothing_m\"]/a")public WebElement burgerMenu_GoToWomen_btn; //CR-SK, 11 Sep
 	@FindBy(xpath="//*[@data-auid='go-to-School Uniforms_m']/a")public WebElement burgerMenu_GoToSchoolUniform_btn; //CR-SK, 12 Sep
@@ -240,7 +240,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='level2Category-Brands']") public WebElement btnBrandCategory;
 	@FindBy(xpath="//*[@data-auid='level2Category-Brands_m']/parent::li") public WebElement btnBrandCategoryTab;
 	@FindBy(xpath="//*[@data-auid='breadCrumb_link_0_Academy']") public WebElement anchorAcademy; 
-	@FindBy(xpath="//*[@id='headerForScroll']//span[contains(text(),'Find a Store')]") public WebElement txtFindAStore; 
+	@FindBy(xpath="//*[@id='headerForScroll']//span[contains(text(),'Find a Store')]|//*[@data-auid='findAStore']//a") public WebElement txtFindAStore; 
 	@FindBy(xpath="//*[@data-auid='findAStore_m']//span[contains(text(),'Find a Store')]") public WebElement txtFindAStoreMobile;
 	@FindBy(xpath="//*[@tabindex='-1']/div[@data-auid='find-a-store-modal']") public WebElement findaStoreModal;
 	@FindBy(xpath="//*[@data-auid='find-a-store']/input[@placeholder='Enter Zip Code or City, State']") public WebElement enterPincode; 
@@ -1756,7 +1756,9 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		Actions hover = new Actions(getDriver());
 		hover.moveToElement(btnClothingCategory).build().perform();
 		Thread.sleep(Constants.thread_low); 
-		assertTrue(clickOnButton(btnMenClothingShop));
+//		assertTrue(clickOnButton(btnMenClothingShop));
+//		Thread.sleep(Constants.thread_low); 
+		hover.moveToElement(btnMensShirt_Men_Clothing_Shop).click().build().perform();
 		Thread.sleep(Constants.thread_low); 
 	}	
 

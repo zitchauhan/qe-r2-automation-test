@@ -10,7 +10,7 @@ import com.aso.qe.framework.common.CommonActionHelper;
 public class R1_ShoppingCartView_PO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_ShoppingCartView_PO.class);
 	//@FindBy(xpath="//div[@class='col-1 a-pad-right0 a-text-right a-pos-inherit']//a[@data_auid='mini_cart']") WebElement cartIcon;/RKA 25 JuLY
-	@FindBy(xpath="//*[@data-auid='miniCart']//a") public WebElement cartIcon;
+	@FindBy(xpath="//*[@data-auid='miniCart']//a |//*[@data-auid='miniCart']") public WebElement cartIcon;
 	
 	@FindBy(xpath="//*[contains(text(),'YOUR CART IS EMPTY')]") WebElement cartEmptyTxt;
 	@FindBy(xpath="//.[@class='cont-shop-link']") WebElement continueShoppingLink;

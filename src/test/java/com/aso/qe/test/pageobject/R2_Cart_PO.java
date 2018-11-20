@@ -269,7 +269,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//a[@data-auid='findAStore_m']//span[2]")
 	public WebElement lnkFindAStore_M; 
 	
-	@FindBy(xpath = "//input[@name='zipcode']")//*************find a store Duplicate 
+	@FindBy(xpath = "//input[@name='zipcode']|//*[@data-auid='find-a-store']/input")//*************find a store Duplicate 
 	public WebElement txtZipCode;
 
 	@FindBy(xpath = "//*[@data-auid='submit-zip-code']//span")//*************find a store Duplicate 
