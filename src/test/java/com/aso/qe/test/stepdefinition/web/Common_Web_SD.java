@@ -102,7 +102,7 @@ public class Common_Web_SD extends CommonActionHelper
 	public void User_navigates_to_L1() throws InterruptedException {
 		if("mobile".equalsIgnoreCase(testtype)){
 			
-			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
+			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory_M));
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.txtToNavigateClothingBurgerMenuMobile));
 			Thread.sleep(2000);
