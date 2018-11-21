@@ -394,7 +394,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 
 	@Then("^user should be able to see the search term in the product title$")
 	public void user_should_be_able_to_see_the_search_term_in_the_product_title() throws Throwable {
-		assertEquals("Columbia Sportswear Men's Dorado CVO PFG Boat Shoes", getText(pdp_po.txtProductTitle));
+		assertEquals(webPropHelper.getTestDataProperty("SearchPDP"), getText(pdp_po.txtProductTitle));
 		logger.debug("User entered search key :: " + searchKey + "and the search title is :: "
 				+ getText(pdp_po.txtProductTitle));
 	}

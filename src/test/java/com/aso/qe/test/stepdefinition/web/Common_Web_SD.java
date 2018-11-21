@@ -122,7 +122,7 @@ public class Common_Web_SD extends CommonActionHelper
 	public void User_navigate_to_L2() throws InterruptedException {
 		if("mobile".equalsIgnoreCase(testtype)){
 			
-			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
+			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory_M));
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.btnMen_Clothing_Shop_M));
 			Thread.sleep(2000);
@@ -179,11 +179,11 @@ public class Common_Web_SD extends CommonActionHelper
 	public void User_navigate_to_L2_Womens_clothing() throws InterruptedException {
 		if("mobile".equalsIgnoreCase(testtype)){
 			
-			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
+			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory_M));
 			Thread.sleep(2000);
-			assertTrue(clickOnButton(globalElementHeader.btnWommenClothingShop));
+			assertTrue(clickOnButton(globalElementHeader.txtToNavigateWoensCategoryMobile));
 			Thread.sleep(2000);
-			assertTrue(clickOnButton(globalElementHeader. txtToNavigateWoensCategoryMobile));
+			assertTrue(clickOnButton(globalElementHeader.burgerMenu_GoToWomen_btn ));
 			Thread.sleep(2000);
 
 		} else{
@@ -204,7 +204,7 @@ public class Common_Web_SD extends CommonActionHelper
 	{
 		if("mobile".equalsIgnoreCase(testtype)){
 		
-			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
+			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory_M));
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(globalElementHeader.btnMen_Clothing_Shop_M));
 			Thread.sleep(2000);

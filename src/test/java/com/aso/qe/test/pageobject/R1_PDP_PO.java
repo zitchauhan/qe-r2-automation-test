@@ -189,9 +189,9 @@ public class R1_PDP_PO extends CommonActionHelper
 	public WebElement txtPdpClearnacePrice;	
 	//KER-1925 End CR-AKK
 	// **SID*************************************************************************************************//
-	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']//img)[1]") public WebElement imgSrcSKUAttribute ;
+	@FindBy(xpath="//*[@data-auid='PDP_MediaClick']//img") public List<WebElement> imgSrcSKUAttribute ; //SID modified 20-Nov
 	@FindBy(xpath="(//*[contains(@class,'ReactModal__Overlay ReactModal__Overlay')]//img)[1]") public WebElement imgAddToCartPopup ;
-	@FindBy(xpath="(//*[@data-auid='PDP_ProductImage_m']//img)[3]") public WebElement imgproductPDPSRCMobile;  //SID 28-August
+	@FindBy(xpath="(//*[@data-auid='PDP_ProductImage_m']//img)") public List<WebElement> imgproductPDPSRCMobile;  //SID Modified 20-November
 
 
 	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']//*[@alt='Hover/Click to enlarge'])[1]") public WebElement imgClickToZoom;
@@ -613,10 +613,11 @@ public class R1_PDP_PO extends CommonActionHelper
 
 	//08-Aug Anuj  KER-1920 //Modified SID 28-August
 	public void addToCartProductValidationDesktop() throws InterruptedException {
-	
+		List<String> productImage = new ArrayList<String>();
 		addToCartAvailability();
-		String productImage = imgSrcSKUAttribute.getAttribute("src");
-		String[] productImageLink = productImage.split("\\?");  //SID
+		for (WebElement imgSrcAttribute : imgSrcSKUAttribute) {
+			productImage.add(imgSrcAttribute.getAttribute("src"));
+		}
 		String productPrice = getText( txtPdpprice);
 		String productTitle = getText( txtProductTitle);
 		assertTrue(clickOnButton(btnAddToCart));
@@ -629,28 +630,51 @@ public class R1_PDP_PO extends CommonActionHelper
 		System.err.println(actualTitleInAddToCart.getText());
 		assertEquals(productTitle, actualTitleInAddToCart.getText());//SID
 		assertEquals(productPrice, actualPriceInAddToCart.getText());//SID
-		assertTrue(productImageLink[0].contains(productImageAddToCartPopupLink[0])); //SID
+		int numberImages = productImage.size();
+		int calculateSize = 0;
+		Boolean flag = false;
+		while (calculateSize <= numberImages) {
+			String[] productImageLink = productImage.get(calculateSize).split("\\?"); // SID
+			System.err.println(productImageLink[0]);
+			flag = productImageLink[0].contains(productImageAddToCartPopupLink[0]);
+			if (flag == true) {
+				assertTrue(productImageLink[0].contains(productImageAddToCartPopupLink[0])); // SID
+				break;
+			}
+		}
 	}
 
-	//08-Aug Anuj  KER-1920  //Modified SID 28-August
+	// 08-Aug Anuj KER-1920 //Modified SID 28-August
 	public void addToCartProductValidationMobile() throws InterruptedException {
-
+		List<String> productImage = new ArrayList<String>();
 		addToCartAvailability();
-		String productImage = imgproductPDPSRCMobile.getAttribute("src");
-		String[] productImageLink = productImage.split("\\?");  //SID
-		String productPrice = getText( txtPdpprice);
-		String productTitle = getText( txtProductTitle);
+		for (WebElement imgproductPDPMobile : imgproductPDPSRCMobile) {
+			productImage.add(imgproductPDPMobile.getAttribute("src"));
+		}
+		String productPrice = getText(txtPdpprice);
+		String productTitle = getText(txtProductTitle);
 		assertTrue(clickOnButton(btnAddToCart));
-		Thread.sleep(Constants.thread_medium); 
+		Thread.sleep(7000);
+		logger.error("Add to cart modal is not coming");
 		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),"+"\""+productTitle+"\""+")]"));//SID
 		WebElement actualPriceInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),'"+productPrice+"')]"));
 		String productImageAddToCartPopup = imgAddToCartPopup.getAttribute("src");
 		String[] productImageAddToCartPopupLink = productImageAddToCartPopup.split("\\?");//SID
-		System.err.println(productImageLink[0]);
-		System.err.println(productImageAddToCartPopupLink[0]);
-		assertEquals(productTitle, actualTitleInAddToCart.getText());//SID
-		assertEquals(productPrice, actualPriceInAddToCart.getText());//SID
-		assertTrue(productImageLink[0].contains(productImageAddToCartPopupLink[0])); //SID
+		assertEquals(productTitle, actualTitleInAddToCart.getText());// SID
+		assertEquals(productPrice, actualPriceInAddToCart.getText());// SID
+		int numberImages = productImage.size();
+		int calculateSize = 0;
+		Boolean flag = false;
+		while (calculateSize <= numberImages) {
+			String[] productImageLink = productImage.get(calculateSize).split("\\?"); // SID
+			System.err.println(productImageLink[0]);
+			System.err.println(productImageAddToCartPopupLink[0]);
+			flag = productImageLink[0].contains(productImageAddToCartPopupLink[0]);
+			if (flag == true) {
+				assertTrue(productImageLink[0].contains(productImageAddToCartPopupLink[0])); // SID
+				break;
+			}
+		}
 	}
 
 	// SID 7-August-18
@@ -808,12 +832,19 @@ public class R1_PDP_PO extends CommonActionHelper
 	 
 	 //SID 28-August
 	 public void navigateToNoDiffPLP() {
+		 if("mobile".equals(testtype)) {
 		 assertTrue(clickOnButton(btnSportsCategory_M));
 		 waitForElement(btnBasketballCategory_M).isDisplayed();
 			assertTrue(clickOnButton(btnBasketballCategory_M));
 			waitForElement(plp_BasketballHoopsCategory_M).isDisplayed();
 			assertTrue(clickOnButton(plp_BasketballHoopsCategory_M));
-			
+		 }else {
+			 assertTrue(clickOnButton(btnSportsCategory_M));
+			 waitForElement(btnBasketballCategory_M).isDisplayed();
+				assertTrue(clickOnButton(btnBasketballCategory_M));
+				waitForElement(plp_BasketballHoopsCategory_M).isDisplayed();
+				assertTrue(clickOnButton(plp_BasketballHoopsCategory_M));
+		 }
 	 }
 	 
 	 
