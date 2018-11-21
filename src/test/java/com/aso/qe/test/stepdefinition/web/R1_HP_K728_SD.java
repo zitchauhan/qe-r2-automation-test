@@ -67,7 +67,13 @@ public class R1_HP_K728_SD extends CommonActionHelper{
 			homePageCurrentURL=homeURL.replace("?debug=aso","");
 			}
 		else if(homeURL.contains("/kermit")) {
-			 homePageCurrentURL=homeURL.replace("/kermit","");
+			 homePageCurrentURL=homeURL.replace("/kermit","/");
+		}
+		else if(homeURL.contains("/release1")) {
+			 homePageCurrentURL=homeURL.replace("/release1","/");
+		}
+		else if(homeURL.contains("/release2")) {
+			 homePageCurrentURL=homeURL.replace("/release2","/");
 		}
 		else {
 			homePageCurrentURL=homeURL;
