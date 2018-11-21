@@ -52,7 +52,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[text()='Questions']")	public   WebElement textQuestions;
 	@FindBy(xpath="//*[contains(@data-auid,'sku_')]")	public   WebElement txtProductSKU;
 	@FindBy(xpath="//*[contains(@data-auid,'item_')]")	public   WebElement txtProductItemNumber;
-	@FindBy(xpath="//*[@data-auid='PDP_Size_heading']//following-sibling::div//button[@aria-label='Medium']|//*[@data-auid='PDP_Shoe Size_Attribute']//span[text()='10']") 	public   WebElement secSize1;
+	@FindBy(xpath="//*[@data-auid='PDP_Size_heading']//following-sibling::div//button[@aria-label='Small']|//*[@data-auid='PDP_Shoe Size_Attribute']//span[text()='10']") 	public   WebElement secSize1;
 	@FindBy(xpath="//*[@data-auid='swatchButton-image-4286']|//*[@data-auid='swatchButton-image-4076']") 	public   WebElement secSize2;
 	@FindBy(xpath="//*[@data-auid='btnviewCart']") 	public WebElement btnViewCart;
 	@FindBy(xpath="//*[@data-auid='btncheckout'] | //*[@data-auid='crt_btnCheckoutTop']//*[@data-auid='btnCheckout']")   public WebElement btnCheckout;
@@ -442,8 +442,9 @@ public class R1_PDP_PO extends CommonActionHelper
 
 	//SID 28-AUgust
 	public void clickOnImgSkuItem() throws Exception {
+		waitForElement(imgHelmetSKUCategory);
 		scrollPageToWebElement(imgHelmetSKUCategory);
-		Actions hover = new Actions(getDriver());
+		Actions hover = new Actions(driver);
 		hover.moveToElement(imgHelmetSKUCategory).click().build().perform();
 //		assertTrue(clickOnButton(imgHelmetSKUCategory));
 		Thread.sleep(Constants.thread_low); 

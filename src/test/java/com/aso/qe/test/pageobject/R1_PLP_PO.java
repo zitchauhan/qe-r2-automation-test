@@ -85,7 +85,7 @@ public class R1_PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//*[@data-auid='facetsModalCTAS_M']/*[text()='Clear All']") public WebElement lnkClearAllMobile;
 	
 	//**SID*************************************************************************//
-	@FindBy(xpath="//*[@data-auid='drawer_Football Helmets_m']") public WebElement linkFootballHelmets;  //SID 28-August
+	@FindBy(xpath="//*[@data-auid='drawer_Football Helmets_m']/a") public WebElement linkFootballHelmets;  //SID 28-August
 	@FindBy(xpath="//*[@data-auid='drawer_Football Helmets']") public WebElement linkFootballHelmets_Desktop;  //SID 28-August
 	
 	//KER-621 9-August-18

@@ -51,26 +51,26 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 		pdpPageObj.checkBtnNext();
 		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
 		pdpPageObj.addToCartAvailability();
-		assertTrue(clickOnButton(pdpPageObj.btnAddToCart1));
+		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 	}
 	
 
 	@Then("^User click on the product image of sku package$")
 	public void user_click_on_the_product_image_of_sku_package() throws Throwable {
-		//pdpPageObj.clickOnImgSkuItem();
+		pdpPageObj.clickOnImgSkuItem();
 	}
 
 	@Then("^verfiy the product details and features$")
 	public void verfiy_the_product_details_and_features() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
-			scrollPageToWebElement(pdpPageObj.txtDetails);
-			assertTrue(isDisplayed(pdpPageObj.txtDetails));
+			scrollPageToWebElement(pdpPageObj.txtDetails_M);
+			assertTrue(isDisplayed(pdpPageObj.txtDetails_M));
 		}
 		else
 		{
 			assertTrue(isDisplayed(pdpPageObj.txtProdcutDetails));
-			scrollPageToWebElement(pdpPageObj.tabDetailsSpecs);
-			assertTrue(isDisplayed(pdpPageObj.tabDetailsSpecs));
+			scrollPageToWebElement(pdpPageObj.txtDetails);
+			assertTrue(isDisplayed(pdpPageObj.txtDetails));
 		}	
 		
 	}
@@ -81,7 +81,7 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 			hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
 			assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
 			assertTrue(clickOnButton(pdpPageObj.btnNextStep));
-			assertTrue(clickOnButton(pdpPageObj.btnAddToCart1));
+			assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 	}
 	
 	@Then("^Add to cart modal is displayed$")
