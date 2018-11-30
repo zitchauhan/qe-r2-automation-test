@@ -1913,7 +1913,12 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			}
 		}
 	}
-	
+	public void switchWindow() {
+	    for (String handle1 : driver.getWindowHandles()) {
+	     driver.switchTo().window(handle1);
+
+	     }
+		}
 	
 	
 	
