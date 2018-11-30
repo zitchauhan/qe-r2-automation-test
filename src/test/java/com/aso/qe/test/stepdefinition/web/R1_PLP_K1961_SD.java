@@ -40,7 +40,12 @@ public class R1_PLP_K1961_SD extends CommonActionHelper {
 
 	@Then("^User click on the nike name$")
 	public void User_click_on_the_nike_name() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(clickOnButton(globalElementHeader.selectBrand_M));
+		}
+		else {
 		assertTrue(clickOnButton(globalElementHeader.lnkBrandNike));
+	}
 	}
 
 	@Then("^User verify that anchor is academy in breadcrumb$")

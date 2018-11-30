@@ -14,7 +14,7 @@ import cucumber.api.java.en.Then;
 public class R1_PDP_K3344_SD extends CommonActionHelper{
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	R1_PLP_PO plpPO = PageFactory.initElements(getDriver(), R1_PLP_PO.class);
-	R1_SearchProduct_PO searchproductpo = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
+	
 		
 	@Then("^verify bundle product title and image$")
 	public void verify_bundle_product_title_and_image() throws Throwable {
@@ -30,25 +30,6 @@ public class R1_PDP_K3344_SD extends CommonActionHelper{
 		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
 		assertTrue(clickOnButton(pdpPageObj.btnEdit));
 		assertTrue(clickOnButton(pdpPageObj.btnEdit));
-	}
-	
-	//SID 28-August
-	@And("^user click on category tab$")
-	public void user_click_on_category_tab() {
-		assertTrue(clickOnButton(searchproductpo.openCategoryFacetMobile));
-	}
-
-	//SID 28-August
-	@And("^user click on football helmets$")
-	public void user_click_on_football_tab() {
-		if ("mobile".equalsIgnoreCase(testtype)) {
-			waitForElement(plpPO.linkFootballHelmets);
-			assertTrue(clickOnButton(plpPO.linkFootballHelmets));
-		} else {
-			waitForElement(plpPO.linkFootballHelmets_Desktop);
-			assertTrue(clickOnButton(plpPO.linkFootballHelmets_Desktop));
-		}
-
 	}
 }
 

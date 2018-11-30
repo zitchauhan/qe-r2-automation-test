@@ -1,4 +1,5 @@
 package com.aso.qe.test.stepdefinition.web;
+
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.interactions.Actions;
@@ -34,31 +35,17 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 			pdpPageObj.navigateToMultipleSKUSoccer();
 		}
 	}
-	@Then("^User click on the product image of sku$")
-	public void user_click_on_the_product_image_of_sku() throws Throwable {
-		pdpPageObj.clickOnImgSku();
-	}
-	
-	@Then("^verfiy add to cart functionality of multiple sku$")
-	public void verfiy_add_to_cart_functionality_of_multiple_sku() throws Throwable {
-		Actions hover=new Actions(getDriver());
-		hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
-		assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
-		pdpPageObj.checkBtnNext();
-		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
-		hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
-		assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
-		pdpPageObj.checkBtnNext();
-		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
-		pdpPageObj.addToCartAvailability();
-		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
-	}
-	
 
 	@Then("^User click on the product image of sku package$")
 	public void user_click_on_the_product_image_of_sku_package() throws Throwable {
 		pdpPageObj.clickOnImgSkuItem();
 	}
+
+	@Then("^User click on the product image of sku$")
+	public void user_click_on_the_product_image_of_sku() throws Throwable {
+		pdpPageObj.clickOnImgSku();
+	}
+	
 
 	@Then("^verfiy the product details and features$")
 	public void verfiy_the_product_details_and_features() throws Throwable {
@@ -75,20 +62,46 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 		
 	}
 	
-	@Then("^verfiy add to cart functionality$")
-	public void verfiy_add_to_cart_functionality() throws Throwable {
-			Actions hover=new Actions(getDriver());
-			hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
-			assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
-			assertTrue(clickOnButton(pdpPageObj.btnNextStep));
-			assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
-	}
-	
 	@Then("^Add to cart modal is displayed$")
 	public void Add_to_cart_modal_is_displayed() throws InterruptedException {
 		Thread.sleep(2000);
 		waitForElement(pdpPageObj.btnAddToCartModal);
 		assertTrue(isDisplayed(pdpPageObj.btnAddToCartModal));
+	}
+	
+	@Then("^verfiy add to cart functionality$")
+	public void verfiy_add_to_cart_functionality() throws Throwable {
+		Actions hover=new Actions(getDriver());
+		hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
+		assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
+		pdpPageObj.checkBtnNext();
+		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
+		pdpPageObj.addToCartAvailability();
+		assertTrue(clickOnButton(pdpPageObj.btnAddToCart1));
+	}
+	
+//	@Then("^verfiy add to cart functionality$")
+//	public void verfiy_add_to_cart_functionality() throws Throwable {
+//			Actions hover=new Actions(getDriver());
+//			hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
+//			assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
+//			assertTrue(clickOnButton(pdpPageObj.btnNextStep));
+//			assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+//	}
+	
+	@Then("^verfiy add to cart functionality of multiple sku$")
+	public void verfiy_add_to_cart_functionality_of_multiple_sku() throws Throwable {
+		Actions hover=new Actions(getDriver());
+		hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
+		assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
+		pdpPageObj.checkBtnNext();
+		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
+		hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
+		assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
+		pdpPageObj.checkBtnNext();
+		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
+		pdpPageObj.addToCartAvailability();
+		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 	}
 	
 	@Then("^user navigate to No diff selection product PLP$")
@@ -112,5 +125,18 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 		waitForElement(pdpPageObj.secAddToCartPopup);
 		assertTrue(isDisplayed(pdpPageObj.secAddToCartPopup));
 	}
+	@Then("^verfiy the product attribute of no diff$")
+	public void verfiy_the_product_attribute_of_no_diff() {
+		assertTrue(isDisplayed(pdpPageObj.btnAddToCart));
+//		assertTrue(isDisplayed(pdpPageObj.imgSrcSKUAttribute));
+		if("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(isDisplayed(pdpPageObj.txtDetails_M));
+		}
+		else
+		{
+			assertTrue(isDisplayed(pdpPageObj.tabDetailsSpecs));
+		}	
+	}
+	
 }
 

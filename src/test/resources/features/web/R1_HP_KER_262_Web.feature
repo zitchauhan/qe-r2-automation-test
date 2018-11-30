@@ -82,6 +82,7 @@ Feature: [Desktop]Components - Header
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
     And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user navigates to profile in my account
     Then verify account summary detail from my account
 
   

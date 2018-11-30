@@ -250,4 +250,7 @@ public class Common_Web_SD extends CommonActionHelper
 	public void verfy_all_image_link_url_s_status_code_is(int arg1) throws Throwable {
 		assertTrue(new ASOBrokenURLsLinks().getBrokenImageLinks(), ASOBrokenURLsLinks.errorText);
 	}
+	
+	
+	
 }

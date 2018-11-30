@@ -3,11 +3,15 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.junit.Assert.assertFalse;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
+
+import java.util.Set;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
+import com.aso.qe.test.pageobject.R1_FindStore_PO;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_HomePage_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
@@ -18,7 +22,8 @@ public class R1_PDP_K2339_SD extends CommonActionHelper {
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	public R1_HomePage_PO homepagePOM = PageFactory.initElements(driver, R1_HomePage_PO.class);
 	public R1_SearchProduct_PO searchProductPO = PageFactory.initElements(driver, R1_SearchProduct_PO.class);
-
+	public R1_FindStore_PO findStorePO = PageFactory.initElements(driver, R1_FindStore_PO.class);
+	
 	@Then("^User click on the product image$")
 	public void user_click_on_the_productimage() throws Throwable {
 		assertTrue(clickOnButton(globalElementHeader.imgMensShortShirt));
@@ -195,10 +200,9 @@ public class R1_PDP_K2339_SD extends CommonActionHelper {
 	@Then("^User click on see details$")
 	public void user_click_on_see_details() throws Throwable {
 		Thread.sleep(Constants.thread_medium);
-		for (WebElement storeResult : globalElementHeader.storeResults) {
-			assertTrue(clickOnButton(storeResult));
-			break;
-		}
+		assertTrue(clickOnButton(findStorePO.expandStore));
+			assertTrue(clickOnButton(findStorePO.clickStoreAddress));
+			globalElementHeader.switchWindow();
 	}
 
 	@Then("^User matches the order of breadcrumb$")
@@ -254,5 +258,5 @@ public class R1_PDP_K2339_SD extends CommonActionHelper {
 		assertEquals(globalElementHeader.academyBreadcrumb.getText().toLowerCase(), "academy");
 		assertEquals(globalElementHeader.storeLocatorBreadcrumb.getText().toLowerCase(), "store locator");
 	}
-
+	
 }

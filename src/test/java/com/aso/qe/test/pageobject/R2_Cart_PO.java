@@ -719,7 +719,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="(//*[text()='Color'])[1]/following::*[1]")public WebElement txtPrdColor;// txt_color input in color
 	@FindBy(xpath="(//*[text()='Size'])[1]/following::*[1]")public WebElement txtPrdSize;//txtPrdSize  txt_size input in size
 	@FindBy(xpath="//span[text()='Ship To Me']")public WebElement rbShipToMe;
-	@FindBy(xpath="//span[text()='In Store Pickup – FREE']")public WebElement rbInStorePickUp;//modified MS 26 Sep
+	@FindBy(xpath="//span[text()='In Store Pickup FREE']")public WebElement rbInStorePickUp;//modified MS 26 Sep
 	@FindBy(xpath="//*[text()='Ship To Store'] | //*[text()='Special Order Ships to Store']") public WebElement ShipToStore_radioBtn;
 	@FindBy(xpath="//input[@data-auid='crt_inputQty']")public WebElement input_Quantity;
 	@FindBy(xpath="(//*[@data-auid='crt_qtyField'])[1]")public WebElement txt_Quantity;
@@ -823,7 +823,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(),'YOUR CART IS EMPTY')]")public WebElement cartEmptyTxt;
 	@FindBy(xpath = "//button[@data-auid='btncrt_btnSignIn']")	public WebElement btnCrtSignIn;
 	@FindBy(xpath="//button[@data-auid='btncrt_btnCntinueShop']")public WebElement continueShopping_btn;
-	@FindBy(xpath="//*[@data-auid='cart_continue_shopping_link']")public WebElement continueShoppingForEmptyCart_link;
+	@FindBy(xpath="//*[@data-auid='cart_continue_shopping_link'] | //*[@data-auid='crt_lnkCntShopping']")public WebElement continueShoppingForEmptyCart_link;   //SID modified 30-November
 	@FindBy(xpath="//*[text()='Email Address']/following::*[3]")public WebElement WelcomeBackEmailAddress_Input;
 	@FindBy(xpath="//*[text()='Password']/following::*[2]")public WebElement WelcomeBackPassword_Input;
 	@FindBy(xpath="//*[@data-auid='btnemail-signin-button']")public WebElement WelcomeBackSignIN_Btn;

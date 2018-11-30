@@ -15,14 +15,10 @@ public class R1_PLP_K5271_SD extends CommonActionHelper {
 		plp_po.verifyFeaturedCategoriesText();
 	}
 
-	@Then("^click on mens clothes link and SearchDex link$")
-	public void click_on_mens_clothes_link_and_SearchDex_link() throws Throwable {
-		plp_po.clickMensClothes();
+	@Then("^click on SearchDex link$")
+	public void click_on_SearchDex_link() throws Throwable {
+		plp_po.clickSearchDexLink();
 	}
 
-	@Then("^click on mens pants link and SearchDex link$")
-	public void click_on_mens_pants_link_and_SearchDex_link() throws Throwable {
-		plp_po.clickMensPants();
-	}
 
 }

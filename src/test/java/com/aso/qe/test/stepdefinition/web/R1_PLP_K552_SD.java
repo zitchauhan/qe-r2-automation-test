@@ -2,12 +2,13 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
-
+import com.aso.qe.framework.common.Constants;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.framework.common.Constants;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_PLP_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -17,6 +18,10 @@ import cucumber.api.java.en.When;
 public class R1_PLP_K552_SD extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(R1_PLP_K552_SD.class);
 	R1_SearchProduct_PO searchProductPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
+	R1_PLP_PO plpPageObj = PageFactory.initElements(getDriver(), R1_PLP_PO.class);
+	R1_SearchProduct_PO searchproductpo = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
+	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
+	
 	@When("^User should be able to see the Number of items in each price range checkbox$")
 	public void user_should_be_able_to_see_the_Number_of_items_in_each_price_range_checkbox() throws Throwable {
 		String filterUnder10ProductCount = getText(searchProductPO.priceCheckBoxFrom10to20Count);
@@ -29,9 +34,9 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 		if("mobile".equalsIgnoreCase(testtype)) {
 		
 		//searchProductPO.expandFacetDrawer(searchProductPO.filterPricePlusBtnMobile);
-		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Color_CheckBox_ListMobile, arg1);
+		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Color_CheckBox_ListMobile, webPropHelper.getTestDataProperty(arg1));
 		}else {
-		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_List, arg1);
+		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_List, webPropHelper.getTestDataProperty(arg1));
 	}
 	}
 	
@@ -40,19 +45,20 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 		if("mobile".equalsIgnoreCase(testtype)) {
 		
 		//searchProductPO.expandFacetDrawer(searchProductPO.filterPricePlusBtnMobile);
-		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_ListMobile, arg1);
+		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_ListMobile, webPropHelper.getTestDataProperty(arg1));
 		}else {
-		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_List, arg1);
+		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_List, webPropHelper.getTestDataProperty(arg1));
 	}
 	}
 
 	@Then("^Verify the selected price range product is \"(.*?)\" displayed in product grid$")
 	public void verify_the_selected_price_range_product_is_displayed_in_product_grid(String priceRange) throws Throwable {
 		priceRange = priceRange.replaceAll("[\\-\\$:,]","");
-		logger.debug("priceRange::"+priceRange);
-		String priceRangeArray[] = priceRange.split("  ");
-		int min = Integer.valueOf(priceRangeArray[0]);
-		String maxstr= priceRangeArray[1];
+		logger.debug("priceRange::"+webPropHelper.getTestDataProperty(priceRange));
+		String range=webPropHelper.getTestDataProperty(priceRange);
+		String priceRangeArray[] = range.split("-");
+		int min = Integer.valueOf(priceRangeArray[0].replace("$", "").trim());
+		String maxstr= priceRangeArray[1].replace("$", "").trim();
 		int max = Integer.valueOf(maxstr.substring(0, maxstr.length()-3));
 		searchProductPO.checkLoadedProductsPrices(min, max);
 	}
@@ -65,16 +71,19 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	@Then("^user deselect the \"(.*?)\" filter$")
 	public void user_deselect_the_filter(String arg1) throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
-			searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_ListMobile,arg1);
+			searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_ListMobile,webPropHelper.getTestDataProperty(arg1));
 		}else {
-		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_price_CheckBox_List, arg1);
+		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_List, webPropHelper.getTestDataProperty(arg1));  //SID Modified 24-September
 	}
+		Thread.sleep(2000);
 	}
 
+	//SID Modified 24-September
 	@Then("^Verify the list of product is dispalyed are same as before filter$")
 	public void verify_the_list_of_product_is_dispalyed_are_same_as_before_filter() throws Throwable {
 		logger.debug("Before filter's Apply Items count::"+R1_SearchProduct_PO.productDisplayCount );
 		logger.debug("After filter's Remove Items count::"+R1_SearchProduct_PO.getItemsCount());
+		isDisplayed(plpPageObj.lnkClearAll);
 		assertEquals(R1_SearchProduct_PO.productDisplayCount, R1_SearchProduct_PO.getItemsCount());
 	}
 
@@ -96,7 +105,6 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 
 	@Given("^User collapses all Filter Options$")
 	public void user_collapses_all_Filter_Options() throws Throwable {
-
 		assertTrue(searchProductPO.clickAllMinusFilterOptions());
 	}
 
@@ -326,13 +334,64 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 		 scrollPageToWebElement(Common_Web_SD.searchProductPO.imgHero_CLP);
 	 }
 	@Then("^User clicks on the filter flyout$")
-	public void User_clicks_on_the_filter_flyout() throws Throwable{
-		waitForElement(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile);
-		assertTrue(isClickable(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile));
-		Thread.sleep(Constants.thread_low);
-		assertTrue(clickOnButton(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile));
-		
+	public void User_clicks_on_the_filter_flyout() throws Throwable {
+		Boolean flag = false;
+		try {
+			flag = pdpPageObj.imgHelmetSKUCategory.isDisplayed();
+			if (flag) {
+				scrollPageToWebElement(pdpPageObj.imgHelmetSKUCategory);
+			}
+		} catch (Exception e) {
+			waitForElement(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile);
+			assertTrue(isClickable(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile));
+			Thread.sleep(1500);
+			assertTrue(clickOnButton(Common_Web_SD.searchProductPO.btnFilterFlyoutMobile));
+		}
+	}
+
+	@And("^user click on category tab$")
+	public void user_click_on_category_tab() {
+		Boolean flag = false;
+		try {
+			flag = pdpPageObj.imgHelmetSKUCategory.isDisplayed();
+			if (flag) {
+				scrollPageToWebElement(pdpPageObj.imgHelmetSKUCategory);
+			}
+		} catch (Exception e) {
+			flag= isDisplayed(searchproductpo.openCategoryFacetMobile);
+			if(flag) {
+			assertTrue(clickOnButton(searchproductpo.openCategoryFacetMobile));
+			}
+		}
+	}
+
+	// SID 28-August
+	@And("^user click on football helmets$")
+
+	public void user_click_on_football_tab() {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			Boolean flag = false;
+			try {
+				flag = pdpPageObj.imgHelmetSKUCategory.isDisplayed();
+				if (flag) {
+					scrollPageToWebElement(pdpPageObj.imgHelmetSKUCategory);
+				}
+			} catch (Exception e) {
+				waitForElement(plpPageObj.linkFootballHelmets);
+				assertTrue(clickOnButton(plpPageObj.linkFootballHelmets));
+			}
+		} else {
+			Boolean flag = false;
+			try {
+				flag = pdpPageObj.imgHelmetSKUCategory.isDisplayed();
+				if (flag) {
+					scrollPageToWebElement(pdpPageObj.imgHelmetSKUCategory);
+				}
+			} catch (Exception e) {
+				waitForElement(plpPageObj.linkFootballHelmets_Desktop);
+				assertTrue(clickOnButton(plpPageObj.linkFootballHelmets_Desktop));
+			}
+		}
 	}
 }
-
-
