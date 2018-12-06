@@ -25,8 +25,8 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 	
 	R2_CheckOut_PO r2CheckOutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	R2_MyAccount_PO r2MyAccountPo=PageFactory.initElements(driver, R2_MyAccount_PO.class);
-	ArrayList<String> address = new ArrayList<>();
-	ArrayList<String> billingAddresses = new ArrayList<>();
+	ArrayList<String> address = new ArrayList<String>();
+	ArrayList<String> billingAddresses = new ArrayList<String>();
 	
 	
 	@Then("^user compare Shipping Address is same as Billing Address$")
@@ -118,8 +118,7 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 		while (checkSize >= k) {
 			boolean flag1= false;
 			if(flag1==true) {
-				int i=1;
-				if(i==1){
+				for (int i = 1; i <= 1; i++){
 					System.err.println(billingAddresses.get(k));
 					System.err.println(address.get(i));
 					flag1 = billingAddresses.get(k).contains(address.get(i));
