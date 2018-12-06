@@ -245,7 +245,7 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated
 	And User clicks on the burger menu 
 	And user should able to click on Signin button 
 	And user enter the valid emailaddress "SanityEmailAddress" 
-	And user enter the valid password "Password" 
+	And user enter the valid password "SanityPassword" 
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 
