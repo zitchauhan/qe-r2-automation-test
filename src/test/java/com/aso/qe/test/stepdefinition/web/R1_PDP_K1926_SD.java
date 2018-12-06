@@ -285,7 +285,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 //			clearText(searchTextBox);
 //			setInputTextWithEnterKey(searchTextBox, searchWord);
 			setInputText(searchTextBox, searchWord);
-			Thread.sleep(Constants.thread_low);
+			Thread.sleep(Constants.thread_medium);
 			assertTrue(clickOnButton(searchButton));
 			Thread.sleep(Constants.thread_low);
 			waitForPageLoad(driver);
