@@ -118,7 +118,8 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 		while (checkSize >= k) {
 			boolean flag1= false;
 			if(flag1==true) {
-				for (int i = 1; i <= 1; i++) {
+				int i=1;
+				if(i==1){
 					System.err.println(billingAddresses.get(k));
 					System.err.println(address.get(i));
 					flag1 = billingAddresses.get(k).contains(address.get(i));
