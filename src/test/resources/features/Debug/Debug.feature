@@ -1,11 +1,13 @@
 Feature: Debug Testing 
 
- @AutomationSanityR1 @AS1 @MAST-24 @AutomationSanity
-  Scenario: TC_28-Verify Navigation from L3 to Homepage by clicking on ASO logo
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then User clicks on the burger menu
-    Then User navigates to L3
-#    And user navigate to L3 page
-    Then User is able to see the ASO_Logo
-    Then User clicks on ASO logo
-    Then User should be navigated to Home_Page
+ @Web @Regression @KER-1933 @ZYP_PDP_K1933-3329 @C-PDP @CR-AG @1HR
+   Scenario Outline: To verify user is able to navigate to product details page when product card is clicked
+   Given user launches the browser and navigates to "ASO_HOME" page
+   Then User enter the search "<data>"
+    And User click on search icon
+#    And User click on the product image
+   And user should be able to see PDP mention in the current url
+   Then user able to see shipping/delivery related message in bulky product
+   Examples:
+   |data|
+   |Body-Solid EXM3000LPS Gym System|

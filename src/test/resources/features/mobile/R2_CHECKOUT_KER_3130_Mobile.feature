@@ -2,8 +2,7 @@ Feature: [Web] Billing Address Verification
 
 @R2_Mobile @R2_Regression @P-Medium @C-Checkout @KER-3130 @ZYP_CART_K3130-9552
 @CR-AG 
-Scenario:
-Verify user gets the form field validation error on leaving mandatory name/address fields blank 
+Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
@@ -11,14 +10,14 @@ Verify user gets the form field validation error on leaving mandatory name/addre
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	Then user uncheck the checkbox for Billing address different from shipping address 
+	And user clear the auto populated zipcode
 	Then user clicks on the Review order button 
 	And user validates error msg displayed for all required fields 
 	
 	
 @R2_Mobile @P-Highest @1HR_R2 @C-Order @CC-Checkout_Order @KER-3130
 @ZYP_CART_K3130-9554 @ZYP_CART_K3130-9557 @CR-AG 
-Scenario:
-Verify user gets the form field validation error on leaving mandatory name/address fields blank 
+Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
@@ -60,8 +59,7 @@ Verify user gets the form field validation error on leaving mandatory name/addre
 	
 @R2_Mobile @P-Medium @R2_Regression @C-Checkout @KER-3130 @ZYP_CART_K3130-9560
 @CR-AG 
-Scenario:
-Verify user gets the form field validation error on leaving mandatory name/address fields blank 
+Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 
@@ -81,8 +79,7 @@ Verify user gets the form field validation error on leaving mandatory name/addre
 	
 @R2_Mobile @P-Medium @R2_Regression @C-Checkout @KER-3130 @ZYP_CART_K3130-9564
 @CR-AG 
-Scenario:
-Verify user gets the form field validation error on leaving mandatory name/address fields blank 
+Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	And user click on Add to Cart Button 

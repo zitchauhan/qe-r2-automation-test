@@ -93,7 +93,7 @@ public class R1_PLP_PO extends CommonActionHelper{
 	
 	//**SID*************************************************************************//
 	@FindBy(xpath="//*[@data-auid='drawer_Football Helmets_m']/a") public WebElement linkFootballHelmets;  //SID 28-August
-	@FindBy(xpath="//*[@data-auid='drawer_Football Helmets']") public WebElement linkFootballHelmets_Desktop;  //SID 28-August
+	@FindBy(xpath="//*[@data-auid='drawer_Football Helmets']/a") public WebElement linkFootballHelmets_Desktop;  //SID 28-August
 	
 	//KER-621 9-August-18
 		@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Ad Feature']") public WebElement clickAdFeature;

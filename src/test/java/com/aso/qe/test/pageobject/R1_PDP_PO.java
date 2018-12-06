@@ -345,7 +345,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	public WebElement txtProdcutDetails;
 	@FindBy(xpath = "(//*[contains(text(),'DETAILS & SPECS')])[1]")
 	public WebElement txtDetails;
-	@FindBy(xpath = "//button[@data-auid='Detais and Specs_m'] | //*[contains(text(),'DETAILS & SPECS')]")
+	@FindBy(xpath = "//button[@data-auid='Detais and Specs_m']")
 	public WebElement txtDetails_M;  //SID Modified 30-November
 	@FindBy(xpath = "//button[@data-auid='btnstep']")
 	public WebElement btnNextStep;

@@ -282,7 +282,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="(//div[contains(@class,'breadCrumbComponent')]//*[1]//a)[1]") public WebElement l1LastActiveBreadcrumb;
 	@FindBy(xpath="//*[@data-auid='level2Category-Outdoors']") public WebElement btnOutdoorsCategory;
 	@FindBy(xpath="//*[@data-auid='level3Category-Automotive & Towing']/a ")public WebElement btnAutomotiveTowing_Shop;//UAT9
-	@FindBy(xpath="(//*[contains(@data-auid,'level3Category')])[1] ")public WebElement clickDealItem;//SID 13-September
+	@FindBy(xpath="//*[@data-auid='level2Category-Holiday Deals_m']")public WebElement clickDealItem;//SID modified 4-December
 	
 	
 	//**SID END*********************************************************************************************************************************************

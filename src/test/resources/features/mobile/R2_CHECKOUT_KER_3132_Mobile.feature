@@ -2,10 +2,8 @@ Feature: [Mobile] Populate Billing Address on Checkout page
 
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 
-@ZYP_CHECKOUT_K3132-8114 @CR-RKA 
-Scenario: 
-	Verify Billing address on check out page - pre-populated billing address 
+@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8114 @CR-RKA 
+Scenario: Verify Billing address on check out page - pre-populated billing address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -30,7 +28,7 @@ Scenario: Verify Billing address on check out Page - Same as Shipping Address
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	Then user should able to click on Signin button 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 
@@ -70,7 +68,7 @@ Scenario: Verify Billing address on check out Page - new address information
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	Then user should able to click on Signin button 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 
@@ -78,7 +76,8 @@ Scenario: Verify Billing address on check out Page - new address information
 	Then user click on checkout from ATC pop up 
 	Then user click on edit Payment link and click on billing information 
 	Then user fill billing information after clicking on change billing information text 
-	#only validation is nedded after clicking confirm btn
+	And user select the suggested address
+	Then user matches the address with the Billing information
 	
 	
 	

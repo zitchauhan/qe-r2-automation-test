@@ -22,7 +22,7 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 	// Start KER-3613 CR-RK
 	@FindBy(xpath = "//*[@data-auid='level2Category-OUTDOORS_m'] | //*[@data-auid='level2Category-OUTDOORS'] | //*[@data-auid='level2Category-Outdoors'] | //*[@data-auid='level2Category-Outdoors_m']")
 	public WebElement btnOutdoorCategory;//Area L1 // 5 sept CR-DPK
-	
+	@FindBy(xpath = "//*[@data-auid='level2Category-OUTDOORS_m'] | //*[@data-auid='level2Category-Outdoors_m']") public WebElement btnOutdoorCategory_M ; //SID 4-December
 
 	@FindBy(xpath = "//*[@data-auid='shopByCategory_tiles']//*[@data-auid='shopByCategory_9']")
 	public WebElement secCategory_CLP;//Area L2
@@ -79,7 +79,7 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 	//KER-4058 CR-RKA
 	@FindBy(xpath="//*[@data-auid='shopByCategory_0']")public WebElement btnShootingCategory;
 	@FindBy(xpath="//*[@data-auid='shopByCategory_0']")public WebElement ProductgunStorageSafty;
-   @FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[1]")public WebElement productSelection;
+   @FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[1] | //*[@data-auid='level3Category-Clothing Deals_m']")public WebElement productSelection;  //SID modified 4-December
 //   @FindBy(xpath="//*[@data-auid='level3Category-Shooting_m']")public WebElement shooting_M;
    @FindBy(xpath="//*[@data-auid='level4Category-Firearms_m']")public WebElement firearms_M;
    @FindBy(xpath="//*[@data-auid='level3Category-Boating']/*[1]")public WebElement boating_txt;
