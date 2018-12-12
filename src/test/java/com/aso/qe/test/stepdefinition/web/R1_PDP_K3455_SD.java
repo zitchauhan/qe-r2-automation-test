@@ -35,7 +35,7 @@ public class R1_PDP_K3455_SD extends CommonActionHelper{
 		if("mobile".equalsIgnoreCase(testtype)){	
 			assertTrue(isDisplayed(p_po.msgItemAddedSuccessfully_M));
 		}else {
-			assertTrue(isDisplayed(p_po.msgItemAddedSuccessfully));
+				assertTrue(isDisplayed(p_po.msgItemAddedSuccessfully));		
 		}
 	}
 

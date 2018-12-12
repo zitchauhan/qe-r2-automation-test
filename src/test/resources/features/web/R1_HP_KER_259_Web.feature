@@ -1,4 +1,4 @@
-Feature: [Desktop]Components - Hero Image (Carousel)
+#Feature: [Desktop]Components - Hero Image (Carousel)
 
 #  @Web  @C-HP @Regression @KER-259 @ZYP_HP_K259-2760 @CR-RKA 
 #  Scenario: Verify the UI behavior of Hero Image (Carousel) on Desktop

@@ -22,48 +22,37 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User closes the web application
 
   @Regression @Web @All @KER-552 @ZYP_PLP_K552-2900 @C-PLP
-  Scenario Outline: Verify user is able to filter by price for search
+  Scenario: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
     And User expands PRICE Filter Option
-    And user select the "<price>" in filter
-    Then Verify the selected price range product is "<price>" displayed in product grid
-    And user deselect the "<price>" filter
+    And user select the "PriceFilter" in filter
+    Then Verify the selected price range product is "PriceFilter" displayed in product grid
+    And user deselect the "PriceFilter" filter
     Then Verify the list of product is dispalyed are same as before filter
     Then User closes the web application
-
-    Examples: 
-      | price          |
-      | $100 - $199.99 |
 
   @Regression @Web @All @KER-552 @ZYP_PLP_K552-2902 @C-PLP
-  Scenario Outline: Verify user is able to filter by price for search
+  Scenario: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
     And User expands PRICE Filter Option
-    And user select the "<price>" in filter
-    Then Verify the selected price range product is "<price>" displayed in product grid
-    And user deselect the "<price>" filter
+    And user select the "PriceFilter" in filter
+    Then Verify the selected price range product is "PriceFilter" displayed in product grid
+    And user deselect the "PriceFilter" filter
     Then Verify the list of product is dispalyed are same as before filter
     Then User closes the web application
 
-    Examples: 
-      | price          |
-      | $100 - $199.99 |
-
   @Regression @Web @All @KER-552 @ZYP_PLP_K552-2897 @C-PLP
-  Scenario Outline: Verify user is able to filter by price for search
+  Scenario: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
     When user enters "productName" in the search box
     And User expands PRICE Filter Option
-    And user select the "<price>" in filter
-    Then Verify the selected price range product is "<price>" displayed in product grid
+    And user select the "PriceFilter" in filter
+    Then Verify the selected price range product is "PriceFilter" displayed in product grid
     Then User closes the web application
 
-    Examples: 
-      | price          |
-      | $100 - $199.99 |
 
   @Regression @Web @All @KER-552 @ZYP_PLP_K552-3580 @C-PLP
   Scenario: As a customer I should also be able to see how many items will populate within each price value prior to selecting it
@@ -95,33 +84,27 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User closes the web application
 
   @Regression @Web @All @KER-552 @ZYP_PLP_K552-6132 @1HR @C-PLP
-  Scenario Outline: Verify user is able to filter by price for search
+  Scenario: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2
     And User expands PRICE Filter Option
-    And user select the "<price>" in filter
-    Then Verify the selected price range product is "<price>" displayed in product grid
-    And user deselect the "<price>" filter
+    And user select the "PriceFilter" in filter
+    Then Verify the selected price range product is "PriceFilter" displayed in product grid
+    And user deselect the "PriceFilter" filter
+    And User expands BRAND Filter Option
     Then Verify the list of product is dispalyed are same as before filter
     Then User closes the web application
 
-    Examples: 
-      | price          |
-      | $100 - $199.99 |
-
   @Regression @Web @All @KER-552 @ZYP_PLP_K552-6134 @C-PLP
-  Scenario Outline: Verify user is able to filter by price for search
+  Scenario: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2
     When user enters "productName" in the search box
     And User expands PRICE Filter Option
-    And user select the "<price>" in filter
-    Then Verify the selected price range product is "<price>" displayed in product grid
+    And user select the "PriceFilter" in filter
+    Then Verify the selected price range product is "PriceFilter" displayed in product grid
     Then User closes the web application
 
-    Examples: 
-       | price          |
-       | $100 - $199.99 |
 
   @Regression @Web @All @KER-552 @ZYP_PLP_K552-6136 @C-PLP
   Scenario: As a customer I should also be able to see how many items will populate within each price value prior to selecting it
@@ -155,32 +138,26 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
 
 
   @Regression @Web @All @KER-552 @ZYP_PLP_K552-6133 @C-PLP @RBeta
-  Scenario Outline: Verify user is able to filter by price for search in Search Page
+  Scenario: Verify user is able to filter by price for search in Search Page
     Given user launches the browser and navigates to "ASO_HOME" page
     When user enters "productName" in the search box
     And User expands PRICE Filter Option
-    And user select the "<price>" in filter
-    Then Verify the selected price range product is "<price>" displayed in product grid
-    And user deselect the "<price>" filter
+    And user select the "PriceFilter" in filter
+    Then Verify the selected price range product is "PriceFilter" displayed in product grid
+    And user deselect the "PriceFilter" filter
     Then Verify the list of product is dispalyed are same as before filter
     Then User closes the web application
 
-    Examples: 
-       | price          |
-       | $100 - $199.99 |
 
   @Regression @Web @All @KER-552 @ZYP_PLP_K552-6135 @C-PLP
-  Scenario Outline: Verify user is able to filter by price for search in Search Page
+  Scenario: Verify user is able to filter by price for search in Search Page
     Given user launches the browser and navigates to "ASO_HOME" page
    	When user enters "productName" in the search box
     And User expands PRICE Filter Option
-    And user select the "<price>" in filter
-    Then Verify the selected price range product is "<price>" displayed in product grid
+    And user select the "PriceFilter" in filter
+    Then Verify the selected price range product is "PriceFilter" displayed in product grid
     Then User closes the web application
 
-    Examples: 
-     | price          |
-     | $100 - $199.99 |
 
   @Regression @Web @All @KER-552 @ZYP_PLP_K552-6137 @C-PLP
   Scenario: As a customer I should also be able to see how many items will populate within each price value prior to selecting it in Search Page

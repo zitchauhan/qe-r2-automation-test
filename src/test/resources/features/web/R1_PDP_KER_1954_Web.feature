@@ -12,13 +12,13 @@ Feature:  [Web]Components: PDP - Ratings & Reviews
  
    
    
-#   @Regression @Web @All @KER-1954 @C-PDP @ZYP_PDP_K1954-3999 @CR-RKA
-#   Scenario:  verify user is able to view Product details with No Reviews
-#    Given user launches the browser and navigates to "ASO_HOME" page
-#    When user navigates to PLP of any product
-#    Then User select the product with No reviews 
-#    When user clicks on Reviews tab
-#    Then User to verify Be the first to review this product       
-#
-#
-#
+   @Regression @Web @All @KER-1954 @C-PDP @ZYP_PDP_K1954-3999 @CR-RKA
+   Scenario:  verify user is able to view Product details with No Reviews
+    Given user launches the browser and navigates to "ASO_HOME" page
+    When user navigates to PLP of any product
+    Then User select the product with No reviews 
+    When user clicks on Reviews tab
+    Then User to verify Be the first to review this product       
+
+
+

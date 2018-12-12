@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
 import cucumber.api.java.en.Then;
@@ -13,22 +14,23 @@ import cucumber.api.java.en.Then;
 public class R1_SLR_K3270_SD extends CommonActionHelper{
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 	public R1_SearchProduct_PO searchProductPO = PageFactory.initElements(driver, R1_SearchProduct_PO.class);
+	public R1_PDP_PO pdpPO = PageFactory.initElements(driver, R1_PDP_PO.class);
 	String categoryName =  "";
 	
 	@Then("^User enter the search upper keyword \"(.*?)\"$")
 	public void user_enter_the_search_upper_keyword(String arg1) throws Throwable {
-		globalElementHeader.entertheSearchData("Shirt vs shirt");
+		globalElementHeader.entertheSearchData(webPropHelper.getTestDataProperty(arg1));
 	}
 	
 	@Then("^User is navigated to pdp page and verifies search result visible$")
 	public void user_is_navigated_to_pdp_page_and_verifies_search_result_visible() throws Throwable {
-		waitForElement(globalElementHeader.searchTitle);
-		assertTrue(isDisplayed(globalElementHeader.searchTitle)); 
+		waitForElement(pdpPO.SLRPDPRepresentative);
+		assertTrue(isDisplayed(pdpPO.SLRPDPRepresentative)); 
 	}
 	
 	@Then("^User enter the specific search keyword \"(.*?)\"$")
 	public void user_enter_the_specific_search_keyword(String arg1) throws Throwable {
-		globalElementHeader.entertheSearchData("gloves");
+		globalElementHeader.entertheSearchData(webPropHelper.getTestDataProperty(arg1));
 	}
 	
 	@Then("^navigated to pdp page$")
@@ -39,7 +41,7 @@ public class R1_SLR_K3270_SD extends CommonActionHelper{
 
 	@Then("^User enter the instead of search keyword \"(.*?)\"$")
 	public void user_enter_the_instead_of_search_keyword(String arg1) throws Throwable {
-		globalElementHeader.entertheSearchData("sketchers");
+		globalElementHeader.entertheSearchData(webPropHelper.getTestDataProperty(arg1));
 	}
 	
 	@Then("^User verifes the last breadcrumb in the series of keyword$")
@@ -68,14 +70,14 @@ public class R1_SLR_K3270_SD extends CommonActionHelper{
 			assertTrue(isDisplayed(globalElementHeader.mobileBreadcrumb));
 		}
 		else {
-		waitForElement(globalElementHeader.productName);
-		assertTrue(isDisplayed(globalElementHeader.productName));
+		waitForElement(globalElementHeader.searchTerm);
+		assertTrue(isDisplayed(globalElementHeader.searchTerm));
 		}
 	}
 	
 	@Then("^User enter the synonyms search keyword \"(.*?)\"$")
 	public void user_enter_the_synonyms_search_keyword(String arg1) throws Throwable {
-		globalElementHeader.entertheSearchData("frisbee");
+		globalElementHeader.entertheSearchData(webPropHelper.getTestDataProperty(arg1));
 	}
 	
 	@Then("^User is navigated to pdp page and verifies search result like disc$")

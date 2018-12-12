@@ -283,7 +283,8 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='level2Category-Outdoors']") public WebElement btnOutdoorsCategory;
 	@FindBy(xpath="//*[@data-auid='level3Category-Automotive & Towing']/a ")public WebElement btnAutomotiveTowing_Shop;//UAT9
 	@FindBy(xpath="//*[@data-auid='level2Category-Holiday Deals_m']")public WebElement clickDealItem;//SID modified 4-December
-	
+	@FindBy(xpath="//span[text()='Water Parks & Slides']") public WebElement searchTerm;
+	@FindBy(xpath="//div[@class='container css-tnijvs']//h2") public WebElement searchTerm_M;
 	
 	//**SID END*********************************************************************************************************************************************
 	//@FindBy(xpath="//*[(text()=\"Men's Shirts\")]") public WebElement txtMensShrit;/RKA 22 aug
