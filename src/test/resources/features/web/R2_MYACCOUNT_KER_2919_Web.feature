@@ -162,7 +162,7 @@ Scenario: Verify that user is not able to proceed with Billing Information addit
  	Then click on Add button on credit card page
 	Then Verify the message on the page
 	|# Following Error Message should show on the page|
-	|Please enter the First Name|
+	|Please enter a First Name|
 	|Please enter a Last Name|
 	|Please enter a phone number|
 	|Please enter a street address|

@@ -15,7 +15,7 @@ Scenario: To Edit cart items from Order summary
 	Then user should navigates to the CartPage "CartTitle" 
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
-     |CartPage|
+     |YOUR CART|
 	
 @R2_Mobile  @R2_Regression @R2_All @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098 @CR-AKK 
 	Scenario: To view the Order Summary details on the Check out 

@@ -139,7 +139,7 @@ Feature: Verify presence of Global Element Footer
    
    
      @Web  @Regression @C-HP  @All  @KER-720 @ZYP_HP_K720-1980 @Rerun  @CR-AG @1HR @RBeta
-  Scenario Outline: To Verify "Global Footer Elements"
+  Scenario: To Verify "Global Footer Elements"
     Given user launches the browser and navigates to "ASO_HOME" page
     And User will verify the presence of Facebook icon
     Then User will verify the presence of twitter icon
@@ -157,12 +157,10 @@ Feature: Verify presence of Global Element Footer
     Then user enter the data and click on submit
      And user verify the success message
      Then User should be able to click on Find Store in footer
-     When User select store with Postal Code in Find A Store page"<Postal_Code>"
+     When User select store with Postal Code in Find A Store page "Postal_Code"
      Then User verify hour of operation display in the place of find a store link    
      Then User verify have to verify change link with pencil icon 
      Then user click on the chat now and verify the chat now pop up is opened
-    Examples: 
-      | Postal_Code |
-      | FL 32822    |
+
    
    

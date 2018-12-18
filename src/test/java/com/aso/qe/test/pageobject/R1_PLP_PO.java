@@ -1,6 +1,7 @@
 package com.aso.qe.test.pageobject;
 
 import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertEquals;
 
 import java.util.List;
 
@@ -9,12 +10,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 
 public class R1_PLP_PO extends CommonActionHelper{
 
 	private static final Logger logger = Logger.getLogger(R1_PLP_PO.class);
+	public R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+	
 	@FindBy(xpath="//*[@data-auid='sort_by']")public   WebElement drpdwnSortBy;
 	@FindBy(xpath="//*[@data-auid='sort_by']")public   WebElement searchdrpdwnSortBy;
 	@FindBy(xpath="//*[@data-auid='sort_by_m']//i")public   WebElement drpdwnSortByMobile;
@@ -73,8 +78,10 @@ public class R1_PLP_PO extends CommonActionHelper{
 	//KER-737 End CR-AKK
 	
 	//KER-5271 Start CR-AKK
-	String expctedSearchDexLinkL1="https://uat9www.academy.com/categories/mens-clothes.jsp";
-	String expctedSearchDexLinkL2="https://uat9www.academy.com/categories/mens-pants.jsp";
+//	String expctedSearchDexLinkL1="https://uat9www.academy.com/categories/mens-clothes.jsp";
+//	String expctedSearchDexLinkL2="https://uat9www.academy.com/categories/mens-pants.jsp";
+	@FindBy(xpath="//*[text()='Featured Categories']/parent::nav//li[1]") public WebElement clickFeaturedCategoryLink;  //SID 30-November
+	
 	@FindBy(xpath="//*[text()='Featured Categories']") public WebElement txtFeaturedCategories;
 	@FindBy(xpath="//a[text()='Mens Clothes']") public WebElement lnkMensClothes;
 	@FindBy(xpath="//a[contains(text(),'Pants')]") public WebElement lnkMensPants;
@@ -86,7 +93,7 @@ public class R1_PLP_PO extends CommonActionHelper{
 	
 	//**SID*************************************************************************//
 	@FindBy(xpath="//*[@data-auid='drawer_Football Helmets_m']/a") public WebElement linkFootballHelmets;  //SID 28-August
-	@FindBy(xpath="//*[@data-auid='drawer_Football Helmets']") public WebElement linkFootballHelmets_Desktop;  //SID 28-August
+	@FindBy(xpath="//*[@data-auid='drawer_Football Helmets']/a") public WebElement linkFootballHelmets_Desktop;  //SID 28-August
 	
 	//KER-621 9-August-18
 		@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Ad Feature']") public WebElement clickAdFeature;
@@ -149,17 +156,20 @@ public class R1_PLP_PO extends CommonActionHelper{
 		}	
 	}
 	
-	public void clickMensClothes() throws Exception {
-		assertTrue(clickOnButton(lnkMensClothes));
-		String actualSearchDexLinkL1=getDriver().getCurrentUrl();
-		assertTrue(expctedSearchDexLinkL1.equals(actualSearchDexLinkL1));
+	public void clickSearchDexLink() throws Exception {
+		String searchDexLinkName = clickFeaturedCategoryLink.getText();
+		assertTrue(clickOnButton(clickFeaturedCategoryLink));
+		System.err.println("**********Actual :: "+globalElementHeader.mobileBreadcrumbpreviousTitle.getText()+" *********Expected :: "+ searchDexLinkName+" **********" );
+		assertEquals(globalElementHeader.mobileBreadcrumbpreviousTitle.getText(),searchDexLinkName);
+
+//		assertTrue(expctedSearchDexLinkL1.equals(actualSearchDexLinkL1));
 	}
 	
-	public void clickMensPants() throws Exception {
-		assertTrue(clickOnButton(lnkMensPants));
-		String actualSearchDexLinkL2=getDriver().getCurrentUrl();
-		assertTrue(expctedSearchDexLinkL2.equals(actualSearchDexLinkL2));
-	}
+//	public void clickMensPants() throws Exception {
+//		assertTrue(clickOnButton(lnkMensPants));
+//		String actualSearchDexLinkL2=getDriver().getCurrentUrl();
+//		assertTrue(expctedSearchDexLinkL2.equals(actualSearchDexLinkL2));
+//	}
 	//KER-5271 End CR-AKK
 	
 	public R1_PLP_PO(WebDriver webDriver) {

@@ -5,8 +5,8 @@ Scenario: TC_1- Verify Login Logout
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on the burger menu 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "SanityEmailAddress" 
-	And user enter the valid password "Password" 
+	And user enter the valid emailaddress "Login_username" 
+	And user enter the valid password "Login_pwd" 
 	And user click on signin button 
 	Then user should get logged in successfully 
 	When user clicks on signout link in myaccount list 
@@ -41,7 +41,7 @@ Scenario: TC_3- Verify User is able to create an account
 		
 		
 @R2_Mobile @R2_MAST-03 @P-High @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418_M 
-@CR-SK @AutomationSanityR2 @AutomationSanity
+@CR-SK @AutomationSanityR2 @AutomationSanity @Dummy
 Scenario: TC_4- Verify User is able to Add Gift Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -132,7 +132,7 @@ Scenario: TC_10-Verify Apply Promotion
 		|EstimatedTaxes_txt| 
 		
 @R2_Mobile @R2_MAST-10 @P-Highest @C-Cart @KER-3127 @ZYP_K3127-8166_M @CR-AKK 
-@AutomationSanityR2 @AutomationSanity
+@AutomationSanityR2 @AutomationSanity @Dummy
 Scenario: TC_11- Verify Apply Promotion / Remove Promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
@@ -223,7 +223,7 @@ Scenario: TC_16-Verify Add Shipping Address
 	
 	
 @R2_Mobile @R2_MAST-16 @P-High @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8629_M 
-@CR-DPK @AutomationSanityR2 @AutomationSanity
+@CR-DPK @AutomationSanityR2 @AutomationSanity @Dummy
 Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
@@ -238,14 +238,14 @@ Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated
 	And user click on Apply button 
 	Then verify Gift Card in order summary page 
 	
-@R2_Mobile @R2_MAST-17 @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954_M 
-@CR-GK @AutomationSanityR2 @AutomationSanity
+@R2_Mobile @R2_MAST-17 @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954_M @Dummy
+@CR-GK @AutomationSanityR2 @AutomationSanity @Dummy
 Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user should able to click on Signin button 
 	And user enter the valid emailaddress "SanityEmailAddress" 
-	And user enter the valid password "Password" 
+	And user enter the valid password "SanityPassword" 
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User clicks on the burger menu 

@@ -10,29 +10,19 @@ Scenario: user to verify Account summary after successful login from ASO_HOME pa
     
  
 @C-HP @Web  @Regression @KER-727  @ZYP_HP_K727-4055
-Scenario Outline: user to verify sing in  as invalid email address
+Scenario: user to verify sing in  as invalid email address
    Given user launches the browser and navigates to "ASO_HOME" page
    When user to click on sing in and navigate to sign in page
-   Then user to fill username "<username>" and password "<password>"
-   And click sign in
+   And user should be able to enter the signin details "Wrong_username" "Login_pwd"
    Then verify the validation message as incorrect  
-  Examples: 
-		   
-		    |username          |password| 
-		    |qaz1000@gmail.com |qazlee|
   	
   	
   @C-HP @Web  @Regression @KER-727  @ZYP_HP_K727-4061
-Scenario Outline: user to verify sing in  as invalid password address
+Scenario: user to verify sing in  as invalid password address
    Given user launches the browser and navigates to "ASO_HOME" page
    When user to click on sing in and navigate to sign in page
-   Then user to fill username "<username>" and password "<password>"
-   And click sign in
+   And user should be able to enter the signin details "Login_username" "Wrong_password"
    Then verify the validation message as incorrect  
-  Examples: 
-		   
-		    |username          |password| 
-		    |qaz2@gmail.com |qazlee111|
   			  
   		  
   @C-HP @Web  @Regression @KER-727  @ZYP_HP_K727-4063 @1HR

@@ -16,28 +16,20 @@ Feature: [Desktop]Components - Header
 
 
   @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-4055 @CR-RKA
-  Scenario Outline: user to verify sing in  as invalid email address
+  Scenario: user to verify sing in  as invalid email address
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    Then user to fill username "<username>" and password "<password>"
-    And click sign in
+     And user should be able to enter the signin details "Wrong_username" "Login_pwd"
     Then verify the validation message as incorrect
 
-    Examples: 
-      | username          | password |
-      | qaz1000@gmail.com | qazlee   |
 
   @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-4061 @CR-RKA
-  Scenario Outline: user to verify sing in  as invalid password address
+  Scenario: user to verify sing in  as invalid password address
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    Then user to fill username "<username>" and password "<password>"
-    And click sign in
+      And user should be able to enter the signin details "Login_username" "Wrong_password"
     Then verify the validation message as incorrect
 
-    Examples: 
-      | username       | password  |
-      | qaz2@gmail.com | qazlee111 |
 
   @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-4063 @CR-RKA
   Scenario: user to very sign in by keeping username and password empty and clicking on signin
@@ -82,6 +74,7 @@ Feature: [Desktop]Components - Header
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
     And user should be able to enter the signin details "Login_username" "Login_pwd"
+    And user navigates to profile in my account
     Then verify account summary detail from my account
 
   

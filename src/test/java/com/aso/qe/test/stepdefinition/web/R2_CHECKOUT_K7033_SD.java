@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -17,8 +18,10 @@ import cucumber.api.java.en.When;
 		
 		@When("^user does accepts the firearm specific compliance$")
 		public void user_does_accepts_the_firearm_specific_compliance() throws Throwable {
-			
-			assertTrue(clickOnButton(r2CheckoutPo.ShipToStoreforSOF_compliance_Txt));
+			Thread.sleep(4000);
+			Actions hover =new Actions(driver);
+			hover.moveToElement(r2CheckoutPo.selectShipToStore).click().build().perform();
+			//assertTrue(clickOnButton(r2CheckoutPo.ShipToStoreforSOF_compliance_Txt));
 		    
 		}
 

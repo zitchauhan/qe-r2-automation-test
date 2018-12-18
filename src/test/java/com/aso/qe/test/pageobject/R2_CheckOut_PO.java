@@ -143,6 +143,12 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='btncheckout_use_selected_address_btn'] | //*[@data-auid='btnsuggest_btn']")//CR-DPK 14-sept
 	public WebElement btnSelectedAddress;
 	
+	@FindBy(xpath = "//*[contains(@data-auid,'checkout_select_suggested_address')]/div/div/div//div") 
+	public List<WebElement> suggestedAddressName;  //SID 5-December
+	
+	@FindBy(xpath = "//*[text()='BILLING INFORMATION']/following-sibling::div/div/div") 
+	public List<WebElement> billingAddressCheck;  //SID 5-December
+	
 	@FindBy(xpath = "//*[@data-auid='checkout_modify_shipping_address_link']")//CR-DPK 19-sept
 	public WebElement lnkModifyAddress;
 	
@@ -526,6 +532,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[text()='BILLING INFORMATION']")public WebElement BillingInformation_Txt;
 	   @FindBy(xpath="//*[text()='Same As Shipping Address']/following::*[3]")public WebElement SameAsShippingAddress_Txt;
 	   @FindBy(xpath="//*[text()='Same As Shipping Address']/preceding::*[1]")public WebElement SameAsShippingAddress_checkBox;
+	   @FindBy(xpath="//*[@id='ship-to-store-check']")public WebElement selectShipToStore; //SID 5-December
+	   
 	   
 	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'First Name')]/following::*[2]")public WebElement FirstName_Input;
 	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'Last Name')]/following::*[2]")public WebElement LastName_Input;
@@ -670,7 +678,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button/parent::div//ul/li")public List<WebElement> WGServicesList; //SID 6-September
 	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button/parent::div//ul/li/*[contains(text(),'Scheduled')]")public WebElement WGScheduleService; //SID 5-September
 	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVETHRESHOLD']/p[1]")	public WebElement textScheduleDelivery; //SID 6-September
-	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVETHRESHOLD']/p[2]")	public WebElement textSchedukeDeliverMessage; //SID 6-September
+	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVETHRESHOLD']/p[2] | //*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVETHRESHOLD']/p//following-sibling::div")	public WebElement textScheduleDeliverMessage; //SID modified 4-December
 	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button/parent::div//ul/li/*[contains(text(),'Room')]")public WebElement WGRoomOfChoiceService; //SID 5-September
 	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/p[1]")	public WebElement textRoomOfChoiceDelivery; //SID 6-September
 	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/p[2] | //*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/div")	public WebElement textRoomOfChoiceDeliverMessage; //SID 6-September
@@ -714,9 +722,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		   waitForElement(textScheduleDelivery);
 		   isDisplayed(textScheduleDelivery);
 		   System.err.println(textScheduleDelivery.getText());
-		   System.err.println(textSchedukeDeliverMessage.getText());
+		   System.err.println(textScheduleDeliverMessage.getText());
 			assertTrue(isDisplayed(textScheduleDelivery));
-			assertTrue(isDisplayed(textSchedukeDeliverMessage));	
+			assertTrue(isDisplayed(textScheduleDeliverMessage));	
 	   }
 	   
 	 //SID 6-September
@@ -859,6 +867,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
     @FindBy(xpath = "//*[@id='billingLastName']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingLastNameErrorMsg;
     @FindBy(xpath = "//*[@id='billingPhoneNumber']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingPhoneNumberErrorMsg;
     @FindBy(xpath = "//*[@id='billingZipCode']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingZipCodeErrorMsg;
+    @FindBy(xpath = "//*[@id='billingZipCode']") public WebElement billingZzipCode;  //SID 4-December
+  
     @FindBy(xpath = "//*[@id='billingCity']//following-sibling::div//span[contains(text(),'Required')]") public WebElement txtBillingCityErrorMsg;
     @FindBy(xpath = "//*[@id='email']//parent::div//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingEmailAddressForOrderConfirmationErrorMsg;
     @FindBy(xpath = "//*[@id='billingAddress1']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingAddressErrorMsg;

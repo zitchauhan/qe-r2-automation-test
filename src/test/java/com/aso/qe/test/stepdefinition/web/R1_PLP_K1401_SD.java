@@ -36,7 +36,7 @@ public class R1_PLP_K1401_SD extends CommonActionHelper{
 	@Then("^user verify the title of L_TWO page as men shoe$")
 	public void user_verify_the_title_of_L_TWO_page_as_men_shoe() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
+			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory_M));
 			Thread.sleep(Constants.thread_low); 
 			assertTrue(clickOnButton(globalElementHeader.btnMensClothingMobile));
 			Thread.sleep(Constants.thread_low); 

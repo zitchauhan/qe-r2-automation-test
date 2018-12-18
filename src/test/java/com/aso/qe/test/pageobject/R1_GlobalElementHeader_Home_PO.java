@@ -236,6 +236,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 
 	//SID ADDED ********************************************************************************************************//
 	@FindBy(xpath="//*[@data-auid='level3Category-Carhartt Brand Shop']/span[contains(text(),'Carhartt Brand Shop')] | (//*[contains(@data-auid,'level3Category')])[1] ") public WebElement lnkBrandNike;
+	@FindBy(xpath="//*[@data-auid='go-to-Brands_m']/following-sibling::li[1]") public WebElement selectBrand_M;  //SID 30-November
 	@FindBy(xpath="//*[@data-auid='level3Category-Carhartt Brand Shop_m'] ") public WebElement btnBrand; 
 	@FindBy(xpath="//*[@data-auid='breadcrumb_m']") public WebElement mobileBreadcrumb; 
 	@FindBy(xpath="//*[@data-component='sectionTitle']//h1") public WebElement mobileBreadcrumbpreviousTitle;
@@ -247,7 +248,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@tabindex='-1']/div[@data-auid='find-a-store-modal']") public WebElement findaStoreModal;
 	@FindBy(xpath="//*[@data-auid='find-a-store']/input[@placeholder='Enter Zip Code or City, State']") public WebElement enterPincode; 
 	@FindBy(xpath="//*[@data-auid='submit-zip-code']/span") public WebElement clickSearchIcon;
-	@FindBy(xpath="//*[@tabindex='-1']/div[@data-auid='find-a-store-modal']//a[contains(text(),'Store Details')]") public List<WebElement> storeResults; 
+	@FindBy(xpath="//*[@tabindex='-1']/div[@data-auid='find-a-store-modal']//a[contains(text(),'Store Details')] | //*[@data-auid='facetdrawerundefined']") public List<WebElement> storeResults;  //SID modified 30-November	
 	@FindBy(xpath="//div[@id='selectedStoreDetails']//a[@id='storeAddress']/span[@itemprop='addressLocality']") public WebElement storeAddressLocality;
 	@FindBy(xpath="//div[@id='selectedStoreDetails']//a[@id='storeAddress']/span[@itemprop='addressRegion']") public WebElement storeAddressRegion; 
 	@FindBy(xpath="//div[@id='selectedStoreDetails']//h1") public WebElement storeName; 
@@ -281,8 +282,9 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="(//div[contains(@class,'breadCrumbComponent')]//*[1]//a)[1]") public WebElement l1LastActiveBreadcrumb;
 	@FindBy(xpath="//*[@data-auid='level2Category-Outdoors']") public WebElement btnOutdoorsCategory;
 	@FindBy(xpath="//*[@data-auid='level3Category-Automotive & Towing']/a ")public WebElement btnAutomotiveTowing_Shop;//UAT9
-	@FindBy(xpath="(//*[contains(@data-auid,'level3Category')])[1] ")public WebElement clickDealItem;//SID 13-September
-	
+	@FindBy(xpath="//*[@data-auid='level2Category-Holiday Deals_m']")public WebElement clickDealItem;//SID modified 4-December
+	@FindBy(xpath="//span[text()='Water Parks & Slides']") public WebElement searchTerm;
+	@FindBy(xpath="//div[@class='container css-tnijvs']//h2") public WebElement searchTerm_M;
 	
 	//**SID END*********************************************************************************************************************************************
 	//@FindBy(xpath="//*[(text()=\"Men's Shirts\")]") public WebElement txtMensShrit;/RKA 22 aug
@@ -298,9 +300,9 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	//KER-262 Start 
 
 	@FindBy(xpath="//*[@data-auid='findAStore']/*[2]")public WebElement hourOfOperationATHeader;
-	@FindBy(xpath="//*[@data-auid='find-a-store-modal']//*[contains(text(),'Find a Store')]") public WebElement txtFindAsTorePopUP;  //SID 24-August
+	@FindBy(xpath="//*[@data-auid='find-a-store-modal']//*[contains(text(),'Find a Store')] | //*[@data-auid='findAStore']//a") public WebElement txtFindAsTorePopUP;  //SID modified 28-November
     @FindBy(xpath="//*[@data-auid='find-a-store-modal']//*[@data-auid='find-a-store']")public WebElement searchboxFindAsTorePopUp; //SID 24-August
-	@FindBy(xpath="//*[@data-auid='findAStore']/*[1]/*[2]")public WebElement verifyFindStoreAfteLogin;
+	@FindBy(xpath="//*[@data-auid='findAStore']/*[1]/*[2] | //*[@data-auid='findAStore']//a")public WebElement verifyFindStoreAfteLogin; //SID modified 28-November
 	@FindBy(xpath="//*[@data-auid='findAStore']//*[contains(text(),'change')]/parent::*/child::*[contains(@class,'icon-pencil')]")public WebElement changeicon;// SID 30-August
 	@FindBy(xpath="//*[@data-auid='myAccountCta_m']")public WebElement btnMyAccountInWeeklyAds;
 
@@ -314,7 +316,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@id='signup-link-from-login'] | //*[@data-auid='signUp_btn']")public WebElement linkSignUP; //SID modified 14-Nov
 
 	//@FindBy(xpath="(//*[contains(text(),'Account Summary')])[3]")public WebElement btmkAccountSummary;/RKA 17 aug
-	@FindBy(xpath="//h1[contains(text(),'Account Summary')]")public WebElement btmkAccountSummary;
+	@FindBy(xpath="//h1[contains(text(),'Account Summary')]| //*[text()='PROFILE'] ")public WebElement btmkAccountSummary; //SID modified 28-Nov
 	@FindBy(xpath="(//*[contains(text(),'Account Summary')])[3]")public WebElement btmkAccountSummary_M;
 	//@FindBy(xpath="//*[@data-auid='myAccountCta_m']")public WebElement myAccountLink;
 	@FindBy(xpath="//*[@id='logonSubmit']") public WebElement signInBtm_M;
@@ -1912,7 +1914,12 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 			}
 		}
 	}
-	
+	public void switchWindow() {
+	    for (String handle1 : driver.getWindowHandles()) {
+	     driver.switchTo().window(handle1);
+
+	     }
+		}
 	
 	
 	

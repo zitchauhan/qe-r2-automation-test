@@ -29,7 +29,7 @@ public class R2_CHECKOUT_K4058_SD extends CommonActionHelper {
 		{			
 		 	
 			Thread.sleep(Constants.thread_low);
-			clickOnButton(r2_r1_fun_po.btnOutdoorCategory);
+			clickOnButton(r2_r1_fun_po.btnOutdoorCategory_M);
 			Thread.sleep(Constants.thread_low);
 			clickOnButton(r2_r1_fun_po.secCategory_CLPMobile);
 			Thread.sleep(Constants.thread_low);

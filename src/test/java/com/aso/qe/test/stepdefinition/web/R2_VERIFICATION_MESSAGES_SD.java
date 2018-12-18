@@ -29,7 +29,7 @@ public class R2_VERIFICATION_MESSAGES_SD extends CommonActionHelper {
 			List<List<String>> elements = arg1.raw();
 			for (int i = 1; i < elements.size(); i++) {
 				String currentElement = elements.get(i).get(0);
-
+				System.err.println(currentElement.trim());
 				VerifyTextPersent(currentElement.trim());
 				// assertTrue(isDisplayed(r2CartPo.link_ContinueShopping));
 			}

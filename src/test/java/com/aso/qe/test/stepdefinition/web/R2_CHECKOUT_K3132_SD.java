@@ -3,13 +3,19 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
+import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -18,7 +24,10 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 	//private static final Logger logger = Logger.getLogger(R2_CHECKOUT_K3132_SD.class);
 	
 	R2_CheckOut_PO r2CheckOutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
-
+	R2_MyAccount_PO r2MyAccountPo=PageFactory.initElements(driver, R2_MyAccount_PO.class);
+	ArrayList<String> address = new ArrayList<String>();
+	ArrayList<String> billingAddresses = new ArrayList<String>();
+	
 	
 	@Then("^user compare Shipping Address is same as Billing Address$")
 	public void user_compare_Shipping_Address_is_same_as_Billing_Address() throws Throwable {
@@ -48,6 +57,7 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 	   assertTrue(clickOnButton(r2CheckOutPo.ChangeBillingInformation_Txt));
 		}
 		else {
+			setInputText(r2MyAccountPo.txtCVV, webPropHelper.getTestDataProperty("ThreeDigitCVV"));
 			assertTrue(clickOnButton(r2CheckOutPo.ChangeBillingInformation_Txt));
 		}
 	}
@@ -83,4 +93,47 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 		setInputText(r2CheckOutPo.Cvv_Input,  webPropHelper.getTestDataProperty("CVV"));
 	}
 	
+	@And("^user select the suggested address$")
+	public void user_select_the_suggested_address() {
+		assertTrue(clickOnButton(r2CheckOutPo.selectSuggestedAddress));
+		for (WebElement suggestedAddress : r2CheckOutPo.suggestedAddressName) {
+			address.add(suggestedAddress.getText());
+		}
+		assertTrue(clickOnButton(r2CheckOutPo.btnSelectedAddress));
+	}
+	
+	@Then("^user matches the address with the Billing information$")
+	public void user_matches_the_address_with_the_Billing_information() throws InterruptedException {
+		Thread.sleep(10000);
+		for (WebElement billingAddress : r2CheckOutPo.billingAddressCheck) {
+//			Thread.sleep(5000);
+			System.err.println(billingAddress.getText());
+			
+			billingAddresses.add(billingAddress.getText());
+		}
+		Thread.sleep(5000);
+		int checkSize = billingAddresses.size();
+		int k=0;
+		System.err.println(checkSize);
+		while (checkSize >= k) {
+			boolean flag1= false;
+			if(flag1==true) {
+				for (int i = 1; i <= 1; i++){
+					System.err.println(billingAddresses.get(k));
+					System.err.println(address.get(i));
+					flag1 = billingAddresses.get(k).contains(address.get(i));
+					checkSize--;
+					break;
+				}
+			}else {
+			for (int i = 0; i <= 1; i++) {
+				System.err.println(billingAddresses.get(k));
+				System.err.println(address.get(i));
+				flag1 = billingAddresses.get(k).contains(address.get(i));
+				checkSize--;
+			}
+			}
+		}
+	}
+
 }

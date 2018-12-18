@@ -140,23 +140,23 @@ public class R1_PDP_PO extends CommonActionHelper
 	//KER-3455 @RKA
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[1]") public WebElement selectFirstItem;
 	@FindBy(xpath="//*[@data-auid='PDP_Size_heading']/following-sibling::*/*[2]") public WebElement Btm3Toddler;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[2]/*[1]")public WebElement msgItemAddedSuccessfully;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[2]/*[1]/following-sibling::*[3]/*")public WebElement msgBundleProductPRice;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[2]/*[1]/following-sibling::*[3]/following-sibling::*/*[2]") public WebElement btmViewcartATCnotificcation;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[2]/*[1]/following-sibling::*[3]/following-sibling::*/*[1]") public WebElement btmCheckOutATCnotification;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[1]")public WebElement  imgproductATCnotification;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[1]/following-sibling::*/*[2]") public WebElement producrNameATCnotification;
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[2]/*[1] | //*[@data-auid='close-addtocart-modal']/parent::*//h4")public WebElement msgItemAddedSuccessfully;   //SID modified 12-December
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[2]/*[1]/following-sibling::*[3]/* | //*[@data-auid='close-addtocart-modal']/following-sibling::*/*[2]/*[1]/following-sibling::*[1]/*/*[1]/following-sibling::*[1]/*[2]")public WebElement msgBundleProductPRice;  //SID Modified 12-December
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[2]/*[1]/following-sibling::*[3]/following-sibling::*/*[2] | //*[@data-auid='btnviewCart']") public WebElement btmViewcartATCnotificcation;   //SID modified 12-December
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[2]/*[1]/following-sibling::*[3]/following-sibling::*/*[1] | //*[@data-auid='btncheckout']") public WebElement btmCheckOutATCnotification;    //SID modified 12-December
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[1] | //*[@data-auid='btncheckout']/parent::*[1]/parent::*[1]/parent::*[1]/*[2]/*[2]//img")public WebElement  imgproductATCnotification;   //SID modified 12-December
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[1]/*[1]/*[1]/following-sibling::*/*[2] | //*[@data-auid='btncheckout']/parent::*/parent::*/following-sibling::*[1]/*[1]/*[1]") public WebElement producrNameATCnotification;   //SID modified 12-December
 	@FindBy(xpath = "//*[@data-auid='level3Category-Soccer']//*[@data-auid='level4Category-Youth Soccer Packages']" )
 	public WebElement btnYouthSoccerPacakage;
 
 
 	//KER-3455Mobile @RKA
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[2]")public WebElement msgItemAddedSuccessfully_M;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[3]/*[1]/*[2]/*")public WebElement msgBundleProductPRice_M;
-	@FindBy(xpath="//*[@data-auid='btncheckout']")public WebElement  btmCheckOutATCnotification_M;
-	@FindBy(xpath="//*[@data-auid='btnviewCart']")public WebElement btmViewcartATCnotificcation_M;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[3]/*[1]/*[3]/*")public WebElement  imgproductATCnotification_M;
-	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[3]/*[1]/*[1]")public WebElement  producrNameATCnotification_M;
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[2] | //*[@data-auid='close-addtocart-modal']/parent::*//h4")public WebElement msgItemAddedSuccessfully_M; //SID modified 12-December
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[3]/*[1]/*[2]/* | //*[@data-auid='close-addtocart-modal']/following-sibling::*/*[2]/*[1]/following-sibling::*[1]/*/*[1]/following-sibling::*[1]/*[2]")public WebElement msgBundleProductPRice_M;  //SID Modified 12-December
+	@FindBy(xpath="//*[@data-auid='btncheckout'] | //*[@data-auid='btncheckout_m']")public WebElement  btmCheckOutATCnotification_M;  //Sid modified 12-December
+	@FindBy(xpath="//*[@data-auid='btnviewCart'] |//*[@data-auid='btnviewCart_m']")public WebElement btmViewcartATCnotificcation_M; //Sid modified 12-December
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[3]/*[1]/*[3]/* | //*[@data-auid='btnviewCart_m']/parent::*[1]/parent::*[1]/parent::*[1]/*[2]/*[2]//img")public WebElement  imgproductATCnotification_M;   //SID modified 12-December
+	@FindBy(xpath="//*[@data-auid='ContinueShopping']/../following-sibling::*[3]/*[1]/*[1] | //*[@data-auid='btncheckout_m']/parent::*/parent::*/following-sibling::*[1]/*[1]/*[1]")public WebElement  producrNameATCnotification_M;  //SID modified 12-December
 
 
 	@FindBy(xpath="(//*[contains(@data-auid, 'productCard_')])[2]")  public WebElement btnPlpImage;
@@ -220,6 +220,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@id='productCardListing']//*[contains(text(),'Online Only')]")public List<WebElement> checkOnlineBadges;
 	@FindBy(xpath = "//*[@data-bv-show='inline_rating']/parent::div")public WebElement checkRating;
 	@FindBy(xpath = "(//*[contains(text(),'Checkout')])[1]")public WebElement btnCheckoutReskin;
+	@FindBy(xpath = "(//*[@data-auid='PDP_ProductImage_m']//img)[3]")public WebElement SLRPDPRepresentative;  //SID 19-October
 	
 	//***********************************************************************************************************//
 	@FindBy(xpath="//*[contains(@class,'ReactModal__Content ReactModa')]//*[@data-auid='btnviewCart']") public WebElement btnAddToCartModal; //SID Modified 17-October
@@ -346,7 +347,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "(//*[contains(text(),'DETAILS & SPECS')])[1]")
 	public WebElement txtDetails;
 	@FindBy(xpath = "//button[@data-auid='Detais and Specs_m']")
-	public WebElement txtDetails_M;
+	public WebElement txtDetails_M;  //SID Modified 30-November
 	@FindBy(xpath = "//button[@data-auid='btnstep']")
 	public WebElement btnNextStep;
 	@FindBy(xpath = "//button[@data-auid='add-to-cart']")

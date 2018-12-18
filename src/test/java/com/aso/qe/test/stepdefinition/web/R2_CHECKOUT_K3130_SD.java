@@ -27,6 +27,15 @@ public class R2_CHECKOUT_K3130_SD extends CommonActionHelper {
 		r2CheckOutPo.billingAddressErrorMsgValidation();
 
 	}
+	
+
+	@And("^user clear the auto populated zipcode$")
+	public void user_clear_the_auto_populated_zipcode() throws Throwable {
+	
+		r2CheckOutPo.billingZzipCode.clear();
+
+	}
+	
 
 
 	@Then("^user clicks on the Review order button$")
