@@ -2,10 +2,17 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ASO</groupId>
-	<artifactId>qe-r2-automation-test</artifactId>
+	<artifactId>qe-r1-automation-test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>qe-r2-automation-test</name>
+	<name>qe-r1-automation-test</name>
 
+	<properties>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+		<maven.compile.encoding>UTF-8</maven.compile.encoding>
+	</properties>
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -17,13 +24,14 @@
 					<includes>
 						<!-- <include>**/*APITestRunner.java</include> -->
 						<include>${testsuitnamefromci}</include>
+
 					</includes>
+
 					<!-- <suiteXmlFiles> <suiteXmkFile>{$testsuitnamefromjenkins}</suiteXmkFile> 
 						<suiteXmkFile>testsuit_web.xml</suiteXmkFile> </suiteXmlFiles> -->
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>
-			<!-- Following plugin executes the Cucumber Reprot -->
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
@@ -36,7 +44,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectName>qe-r2-automation-test</projectName>
+							<projectName>qe-r1-automation-test</projectName>
 							<outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
 							<cucumberOutput>${project.build.directory}/cucumber-reports/cucumber-html-reports/common.json</cucumberOutput>
 							<enableFlashCharts>True</enableFlashCharts>
@@ -90,11 +98,10 @@
 		</repository>
 	</repositories>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
-			<version>3.0.2</version>
+			<version>3.0.1</version>
 		</dependency>
 		<!-- used to parse Json Document -->
 		<dependency>
@@ -167,8 +174,8 @@
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
-			<version>3.0.2</version>
-			<scope>provided</scope>
+			<version>3.1.1</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -191,6 +198,11 @@
 			<groupId>ASO</groupId>
 			<artifactId>qe-automation-framework</artifactId>
 			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vimalselvam</groupId>
+			<artifactId>cucumber-extentsreport</artifactId>
+			<version>3.0.2</version>
 		</dependency>
 	</dependencies>
 </project>
