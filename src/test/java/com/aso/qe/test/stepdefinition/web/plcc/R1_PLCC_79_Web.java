@@ -59,7 +59,7 @@ public class R1_PLCC_79_Web extends CommonActionHelper {
 
 	@Then("^user enter Email Address \"(.*?)\"$")
 	public void user_enter_Email_Address(String arg1) throws Throwable {
-		plccPageObjects.enterEmailAddressTxtField(arg1);
+		plccPageObjects.enterEmailAddressTxtFieldAuto(arg1);
 		assertTrue(isDisplayed(plccPageObjects.emailIdTxtField));
 		waitForElement(plccPageObjects.emailIdTxtField);
 	}

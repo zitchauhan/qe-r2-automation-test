@@ -2,6 +2,9 @@ package com.aso.qe.test.pageobject;
 
 import static org.testng.Assert.assertTrue;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.apache.log4j.Logger;
@@ -16,42 +19,64 @@ import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD;
 
 public class R1_PLCC_PO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
-	R1_SIT_PO sit_po= PageFactory.initElements(driver, R1_SIT_PO.class);
-	R1_PDP_PO pdp_po= PageFactory.initElements(driver, R1_PDP_PO.class);
-	Common_Web_SD timer=new Common_Web_SD();
-	
+	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
+	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
+	Common_Web_SD timer = new Common_Web_SD();
+
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----START--------------------------------*/
 	// PLCC-41 (AddressCheckbox)
-	@FindBy(xpath = "//*[@data-auid='signInCta']")public WebElement myAccountLinkOnAsoHomePage;
-	@FindBy(xpath = "//*[@data-auid='signUp_btn']")public WebElement signUpLinkOnLoginPage;
-	@FindBy(xpath = "//*[text()='Add Address for Faster Checkout']")public WebElement addAddressCheckBox;
-	//@FindBy(xpath = "//*[@type='checkbox']")public WebElement addAddressCheckBox;
-	@FindBy(xpath = "//*[@data-auid='address_input']")public WebElement addressTxtField;
-	@FindBy(xpath = "//*[@data-auid='address_zipcode']")public WebElement addressZipCodeField;
-	@FindBy(xpath = "//*[@data-auid='address_city']")public WebElement addressCityField;
-	//@FindBy(xpath = "//*[@data-auid='address_state']")public WebElement addressStateDropdown;
-	@FindBy(xpath = "//button[@class='css-edkg4i']")public WebElement addressStateDropdown;
-	//@FindBy(xpath = "//*[text()='Select']")public WebElement addressStateDropdown;
-	@FindBy(xpath = "//*[@data-auid='address_phone']")public WebElement addressPhoneField;
-	@FindBy(xpath = "//*[@data-auid='btnsignup_btn']")public WebElement registerationSignUpBtn;
-	@FindBy(xpath = "//*[@data-auid='firstname_input']")public WebElement firstNameTxtField;
-	@FindBy(xpath = "//*[@data-auid='lastname_input']")public WebElement lastNameTxtField;
-	@FindBy(xpath = "//*[@data-auid='email_input']")public WebElement emailIdTxtField;
-	@FindBy(xpath = "//*[@data-auid='password_input']")public WebElement createPwdTxtField;
-	@FindBy(xpath = "//*[@data-auid='checkout_initial_selected_address']")public WebElement enteredAddress;
-	@FindBy(xpath = "//*[@data-auid='checkout_select_suggested_address_1']")public WebElement suggestedAddress;
-	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address_verification_modal_close']")public WebElement closeAddressSuggestionModalBtn;
-	@FindBy(xpath = "//*[@data-auid='btncheckout_use_selected_address_btn']")public WebElement userSelectedAddressBtn;
-	@FindBy(xpath = "//*[@data-auid='signin_signup_page']")public WebElement registrationConfirmationPage;
-	@FindBy(xpath = "//*[@data-auid='signup_address_add_more_details_link']")public WebElement addMoreAddressDetailsLink;
-	@FindBy(xpath = "//*[@data-auid='btnsingin_redirect_btn']")public WebElement letsShopBtn;
-	
-	
+	@FindBy(xpath = "//*[@data-auid='signInCta']")
+	public WebElement myAccountLinkOnAsoHomePage;
+	@FindBy(xpath = "//*[@data-auid='signUp_btn']")
+	public WebElement signUpLinkOnLoginPage;
+	@FindBy(xpath = "//*[text()='Add Address for Faster Checkout']")
+	public WebElement addAddressCheckBox;
+	// @FindBy(xpath = "//*[@type='checkbox']")public WebElement addAddressCheckBox;
+	@FindBy(xpath = "//*[@data-auid='address_input']")
+	public WebElement addressTxtField;
+	@FindBy(xpath = "//*[@data-auid='address_zipcode']")
+	public WebElement addressZipCodeField;
+	@FindBy(xpath = "//*[@data-auid='address_city']")
+	public WebElement addressCityField;
+	// @FindBy(xpath = "//*[@data-auid='address_state']")public WebElement
+	// addressStateDropdown;
+	@FindBy(xpath = "//button[@class='css-edkg4i']")
+	public WebElement addressStateDropdown;
+	// @FindBy(xpath = "//*[text()='Select']")public WebElement
+	// addressStateDropdown;
+	@FindBy(xpath = "//*[@data-auid='address_phone']")
+	public WebElement addressPhoneField;
+	@FindBy(xpath = "//*[@data-auid='btnsignup_btn']")
+	public WebElement registerationSignUpBtn;
+	@FindBy(xpath = "//*[@data-auid='firstname_input']")
+	public WebElement firstNameTxtField;
+	@FindBy(xpath = "//*[@data-auid='lastname_input']")
+	public WebElement lastNameTxtField;
+	@FindBy(xpath = "//*[@data-auid='email_input']")
+	public WebElement emailIdTxtField;
+	@FindBy(xpath = "//*[@data-auid='password_input']")
+	public WebElement createPwdTxtField;
+	@FindBy(xpath = "//*[@data-auid='checkout_initial_selected_address']")
+	public WebElement enteredAddress;
+	@FindBy(xpath = "//*[@data-auid='checkout_select_suggested_address_1']")
+	public WebElement suggestedAddress;
+	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address_verification_modal_close']")
+	public WebElement closeAddressSuggestionModalBtn;
+	@FindBy(xpath = "//*[@data-auid='btncheckout_use_selected_address_btn']")
+	public WebElement userSelectedAddressBtn;
+	@FindBy(xpath = "//*[@data-auid='signin_signup_page']")
+	public WebElement registrationConfirmationPage;
+	// By addMoreAddressDetailsLink1 =
+	// By.xpath("//*[@data-auid='signup_address_add_more_details_link'");
+	@FindBy(xpath = "//*[@data-auid='signup_address_add_more_details_link']")
+	public WebElement addMoreAddressDetailsLink;
+	@FindBy(xpath = "//*[@data-auid='btnsingin_redirect_btn']")
+	public WebElement letsShopBtn;
+
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
 
 	/*-------------------------------author:Vidya Siddaramappa (Mindtree QA)------------------------------------*/
 
-	
 	public void clickOnMyAccountLink() throws Exception {
 
 		{
@@ -88,11 +113,11 @@ public class R1_PLCC_PO extends CommonActionHelper {
 
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(addAddressCheckBox);
-			//assertTrue(isClickable(addAddressCheckBox));
+			// assertTrue(isClickable(addAddressCheckBox));
 			logger.debug("Add address checkbox is displayed");
 		} else {
 			isDisplayed(addAddressCheckBox);
-			//assertTrue(isClickable(addAddressCheckBox));
+			// assertTrue(isClickable(addAddressCheckBox));
 			logger.debug("Add address checkbox is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -100,15 +125,13 @@ public class R1_PLCC_PO extends CommonActionHelper {
 	public void selectAddAddressCheckBox() throws Exception {
 		try {
 			assertTrue(clickOnButton(addAddressCheckBox));
-			//System.out.println("AddressCheckBox is checked");
-			
+			// System.out.println("AddressCheckBox is checked");
+
 		} catch (Exception e) {
 			addAddressCheckBox.click();
-			
+
 		}
 	}
-	
-
 
 	public void unselectAddAddressCheckBox() throws Exception {
 		// assertTrue(selectByText(addAddressCheckBox,"Add Address for Faster
@@ -216,7 +239,8 @@ public class R1_PLCC_PO extends CommonActionHelper {
 			logger.debug("Add company name, Apt.Number, etc. (Optional) link is displayed");
 		} else {
 			isDisplayed(addMoreAddressDetailsLink);
-			logger.debug("Add company name, Apt.Number, etc. (Optional) link is not displayed++++++++++++++++++++++++==");
+			logger.debug(
+					"Add company name, Apt.Number, etc. (Optional) link is not displayed++++++++++++++++++++++++==");
 		}
 	}
 
@@ -226,12 +250,9 @@ public class R1_PLCC_PO extends CommonActionHelper {
 			assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
 			isClickable(addMoreAddressDetailsLink);
 			if (isDisplayed(addMoreAddressDetailsLink)) {
-				
-				//Thread.sleep(5000);
-				
-//				CommonActionHelper.waitUntilElePresent(driver, "//*[@data-auid='signup_address_add_more_details_link']", ELEMWAITTIME_MEDIUM);
-//				assertTrue(clickOnButton(addMoreAddressDetailsLink));
-				Thread.sleep(1000);
+				CommonActionHelper.waitUntilEleNotPresent(driver, addMoreAddressDetailsLink, ELEMWAITTIME_MEDIUM);
+				assertTrue(clickOnButton(addMoreAddressDetailsLink));
+				// Thread.sleep(1000);
 			} else {
 				driver.navigate().refresh();
 				Thread.sleep(1000);
@@ -244,6 +265,7 @@ public class R1_PLCC_PO extends CommonActionHelper {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(addressPhoneField);
 			logger.debug("Phone Number Text Field is displayed");
+			CommonActionHelper.waitUntilEleNotPresent(driver, addressPhoneField, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(addressPhoneField);
 			logger.debug("Phone Number Text Field is not displayed++++++++++++++++++++++++==");
@@ -301,7 +323,9 @@ public class R1_PLCC_PO extends CommonActionHelper {
 				driver.navigate().refresh();
 				Thread.sleep(1000);
 			}
-		}}
+		}
+	}
+
 	public void verifyPresenceOfUserSuggestedAddressBtn() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
@@ -326,7 +350,9 @@ public class R1_PLCC_PO extends CommonActionHelper {
 				driver.navigate().refresh();
 				Thread.sleep(1000);
 			}
-		}}
+		}
+	}
+
 	public void verifyPresenceOfUserEnteredAddressBtn() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
@@ -351,29 +377,31 @@ public class R1_PLCC_PO extends CommonActionHelper {
 				driver.navigate().refresh();
 				Thread.sleep(1000);
 			}
-		}}
-		public void verifyPresenceOfRegistrationConfirmation() throws Exception {
+		}
+	}
 
-			if ("web".equalsIgnoreCase(testtype)) {
-				isDisplayed(registrationConfirmationPage);
-				logger.debug("Registration Confirmation is displayed");
-			} else {
-				isDisplayed(registrationConfirmationPage);
-				logger.debug("Registration Confirmation is not displayed++++++++++++++++++++++++==");
-			}}
-		
-		public void verifyPresenceOfLetsShopButton() throws Exception {
+	public void verifyPresenceOfRegistrationConfirmation() throws Exception {
 
-				if ("web".equalsIgnoreCase(testtype)) {
-					isDisplayed(letsShopBtn);
-					logger.debug("LET'S SHOP Button is displayed");
-				} else {
-					isDisplayed(letsShopBtn);
-					logger.debug("LET'S SHOP Button is not displayed++++++++++++++++++++++++==");
-				}}
-		
-		
-		
+		if ("web".equalsIgnoreCase(testtype)) {
+			isDisplayed(registrationConfirmationPage);
+			logger.debug("Registration Confirmation is displayed");
+		} else {
+			isDisplayed(registrationConfirmationPage);
+			logger.debug("Registration Confirmation is not displayed++++++++++++++++++++++++==");
+		}
+	}
+
+	public void verifyPresenceOfLetsShopButton() throws Exception {
+
+		if ("web".equalsIgnoreCase(testtype)) {
+			isDisplayed(letsShopBtn);
+			logger.debug("LET'S SHOP Button is displayed");
+		} else {
+			isDisplayed(letsShopBtn);
+			logger.debug("LET'S SHOP Button is not displayed++++++++++++++++++++++++==");
+		}
+	}
+
 	// To enter test data - 1 String Value
 	// FirstName
 	public void enterFirstNameTxtField(String arg) throws Exception {
@@ -392,16 +420,16 @@ public class R1_PLCC_PO extends CommonActionHelper {
 
 	// EmailAddress
 	public void enterEmailAddressTxtField(String arg) throws Exception {
-	setInputText(emailIdTxtField, webPropHelper.getTestDataProperty(arg));	
+		setInputText(emailIdTxtField, webPropHelper.getTestDataProperty(arg));
 	}
-	
-//	//Enter New Email Address EveryTime
-//	public void enterEmailAddressTxtFieldAuto(String arg) throws Exception {
-//	setInputText(emailIdTxtField, webPropHelper.getTestDataProperty(arg));
-//	Date NewEmailEveryTime = new Date(System.currentTimeMillis());
-//	((WebElement) NewEmailEveryTime).sendKeys("classroomuser" + NewEmailEveryTime);
-//	}
-	
+
+	public void enterEmailAddressTxtFieldAuto(String arg) throws Exception {
+		Date NewEmailEveryTime = new Date(System.currentTimeMillis());
+		String NewEmailEveryTime2 = NewEmailEveryTime.toString().replaceAll("\\s+", "").replaceAll(":", "");
+		String NewEmailEveryTimeValue = "QA" + NewEmailEveryTime2 + "@gmail.com";
+		setInputText(emailIdTxtField, NewEmailEveryTimeValue);
+	}
+
 	// CreatePassword
 	public void enterCreatePwdTxtField(String arg) throws Exception {
 		setInputText(createPwdTxtField, webPropHelper.getTestDataProperty(arg));
@@ -417,4 +445,3 @@ public class R1_PLCC_PO extends CommonActionHelper {
 		setInputText(addressPhoneField, webPropHelper.getTestDataProperty(arg));
 	}
 }
-
