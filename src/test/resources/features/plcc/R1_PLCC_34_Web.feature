@@ -1,6 +1,14 @@
 Feature: Landing Page 
 
 @Regression @Web @All @C-Vidya @PLCC-34 
+Scenario: Verify user is able to navigate to PLCC landing page 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
+	Then user expect element FPO Apply Order section to be present
+	And user expect element Benefits section to be present
+	And user expect element prescreen section to be present
+	
+@Regression @Web @All @C-Vidya @PLCC-34 
 Scenario: Verify the display of Header components on PLCC landing page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 

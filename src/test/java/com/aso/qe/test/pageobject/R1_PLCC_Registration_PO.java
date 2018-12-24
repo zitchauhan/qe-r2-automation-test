@@ -1,23 +1,16 @@
 package com.aso.qe.test.pageobject;
 
 import static org.testng.Assert.assertTrue;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
-
 import org.apache.log4j.Logger;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD;
 
-public class R1_PLCC_PO extends CommonActionHelper {
+public class R1_PLCC_Registration_PO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
 	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
@@ -25,10 +18,8 @@ public class R1_PLCC_PO extends CommonActionHelper {
 
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----START--------------------------------*/
 	// PLCC-41 (AddressCheckbox)
-	@FindBy(xpath = "//*[@data-auid='signInCta']")
-	public WebElement myAccountLinkOnAsoHomePage;
-	@FindBy(xpath = "//*[@data-auid='signUp_btn']")
-	public WebElement signUpLinkOnLoginPage;
+	@FindBy(xpath = "//*[@data-auid='signInCta']")public WebElement myAccountLinkOnAsoHomePage;
+	@FindBy(xpath = "//*[@data-auid='signUp_btn']")public WebElement signUpLinkOnLoginPage;
 	@FindBy(xpath = "//*[text()='Add Address for Faster Checkout']")
 	public WebElement addAddressCheckBox;
 	// @FindBy(xpath = "//*[@type='checkbox']")public WebElement addAddressCheckBox;
@@ -66,8 +57,6 @@ public class R1_PLCC_PO extends CommonActionHelper {
 	public WebElement userSelectedAddressBtn;
 	@FindBy(xpath = "//*[@data-auid='signin_signup_page']")
 	public WebElement registrationConfirmationPage;
-	// By addMoreAddressDetailsLink1 =
-	// By.xpath("//*[@data-auid='signup_address_add_more_details_link'");
 	@FindBy(xpath = "//*[@data-auid='signup_address_add_more_details_link']")
 	public WebElement addMoreAddressDetailsLink;
 	@FindBy(xpath = "//*[@data-auid='btnsingin_redirect_btn']")
@@ -250,7 +239,7 @@ public class R1_PLCC_PO extends CommonActionHelper {
 			assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
 			isClickable(addMoreAddressDetailsLink);
 			if (isDisplayed(addMoreAddressDetailsLink)) {
-				CommonActionHelper.waitUntilEleNotPresent(driver, addMoreAddressDetailsLink, ELEMWAITTIME_MEDIUM);
+				CommonActionHelper.waitUntilElePresent(driver, addMoreAddressDetailsLink, ELEMWAITTIME_MEDIUM);
 				assertTrue(clickOnButton(addMoreAddressDetailsLink));
 				// Thread.sleep(1000);
 			} else {
@@ -265,7 +254,7 @@ public class R1_PLCC_PO extends CommonActionHelper {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(addressPhoneField);
 			logger.debug("Phone Number Text Field is displayed");
-			CommonActionHelper.waitUntilEleNotPresent(driver, addressPhoneField, ELEMWAITTIME_MEDIUM);
+			CommonActionHelper.waitUntilElePresent(driver, addressPhoneField, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(addressPhoneField);
 			logger.debug("Phone Number Text Field is not displayed++++++++++++++++++++++++==");
@@ -401,6 +390,18 @@ public class R1_PLCC_PO extends CommonActionHelper {
 			logger.debug("LET'S SHOP Button is not displayed++++++++++++++++++++++++==");
 		}
 	}
+	
+	public void verifyPresenceOfMyAccountLink() throws Exception {
+
+		if ("web".equalsIgnoreCase(testtype)) {
+			isDisplayed(myAccountLinkOnAsoHomePage);
+			logger.debug("My Account Link is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, myAccountLinkOnAsoHomePage, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(myAccountLinkOnAsoHomePage);
+			logger.debug("My Account Link is not displayed++++++++++++++++++++++++==");
+		}
+}
 
 	// To enter test data - 1 String Value
 	// FirstName
@@ -418,10 +419,10 @@ public class R1_PLCC_PO extends CommonActionHelper {
 		setInputText(addressZipCodeField, webPropHelper.getTestDataProperty(arg));
 	}
 
-	// EmailAddress
-	public void enterEmailAddressTxtField(String arg) throws Exception {
-		setInputText(emailIdTxtField, webPropHelper.getTestDataProperty(arg));
-	}
+//	// EmailAddress
+//	public void enterEmailAddressTxtField(String arg) throws Exception {
+//		setInputText(emailIdTxtField, webPropHelper.getTestDataProperty(arg));
+//	}
 
 	public void enterEmailAddressTxtFieldAuto(String arg) throws Exception {
 		Date NewEmailEveryTime = new Date(System.currentTimeMillis());

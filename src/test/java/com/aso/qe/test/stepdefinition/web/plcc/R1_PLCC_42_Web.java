@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
-import com.aso.qe.test.pageobject.R1_PLCC_PO;
+import com.aso.qe.test.pageobject.R1_PLCC_Registration_PO;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -16,7 +16,7 @@ public class R1_PLCC_42_Web extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
-	R1_PLCC_PO plccPageObjects = PageFactory.initElements(driver, R1_PLCC_PO.class);
+	R1_PLCC_Registration_PO plccPageObjects = PageFactory.initElements(driver, R1_PLCC_Registration_PO.class);
 
 	@Then("^user click on entered address$")
 	public void user_click_on_entered_address() throws Throwable {

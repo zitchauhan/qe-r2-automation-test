@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
-import com.aso.qe.test.pageobject.R1_PLCC_PO;
+import com.aso.qe.test.pageobject.R1_PLCC_Registration_PO;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -16,7 +16,7 @@ public class R1_PLCC_41_Web extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
-	R1_PLCC_PO plccPageObjects = PageFactory.initElements(driver, R1_PLCC_PO.class);
+	R1_PLCC_Registration_PO plccPageObjects = PageFactory.initElements(driver, R1_PLCC_Registration_PO.class);
 
 	@Then("^user click on Add Company name, Apt\\. Number, etc\\. \\(Optional\\) link$")
 	public void user_click_on_Add_Company_name_Apt_Number_etc_Optional_link() throws Throwable {

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
-import com.aso.qe.test.pageobject.R1_PLCC_PO;
+import com.aso.qe.test.pageobject.R1_PLCC_Registration_PO;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -16,7 +16,7 @@ public class R1_PLCC_79_Web extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
-	R1_PLCC_PO plccPageObjects = PageFactory.initElements(driver, R1_PLCC_PO.class);
+	R1_PLCC_Registration_PO plccPageObjects = PageFactory.initElements(driver, R1_PLCC_Registration_PO.class);
 
 	@When("^user click on My Account link$")
 	public void user_click_on_My_Account_link() throws Throwable {
