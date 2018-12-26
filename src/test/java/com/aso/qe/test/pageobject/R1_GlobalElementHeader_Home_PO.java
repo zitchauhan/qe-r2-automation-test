@@ -1190,6 +1190,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		Thread.sleep(Constants.thread_low);
 
 	}
+	
 	public void validatingOurhistory() throws Exception{
 
 		if("mobile".equalsIgnoreCase(testtype)){

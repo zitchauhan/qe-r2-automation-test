@@ -1,6 +1,6 @@
 package com.aso.qe.test.pageobject;
 
-import static org.testng.Assert.assertTrue;
+import static org.junit.Assert.assertTrue;
 import java.util.Date;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
@@ -18,7 +18,9 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----START--------------------------------*/
 	// PLCC-41 (AddressCheckbox)
-	@FindBy(xpath = "//*[@data-auid='signInCta']")public WebElement myAccountLinkOnAsoHomePage;
+	//@FindBy(xpath = "//*[@data-auid='signInCta']")public WebElement myAccountLinkOnAsoHomePage;
+	@FindBy(xpath = "//*[@data-auid='MyAccount']")public WebElement myAccountLinkOnAsoHomePage;
+	
 	@FindBy(xpath = "//*[@data-auid='signUp_btn']")public WebElement signUpLinkOnLoginPage;
 	@FindBy(xpath = "//*[text()='Add Address for Faster Checkout']")
 	public WebElement addAddressCheckBox;
@@ -61,7 +63,23 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 	public WebElement addMoreAddressDetailsLink;
 	@FindBy(xpath = "//*[@data-auid='btnsingin_redirect_btn']")
 	public WebElement letsShopBtn;
-
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_3_California Transparency in Supply Chain Act(SB 657)']")public WebElement californiaTranparencyActLink;
+	@FindBy(xpath="//*[text()='Sitemap']")public WebElement siteMapLink;
+	@FindBy(xpath="//*[text()='© 2018 Academy Sports + Outdoors. All Rights Reserved']")public WebElement asoRightsLink;
+	@FindBy(xpath="//*[text()='Product Index']")public WebElement productIndexLink;
+	@FindBy(xpath="//*[text()='Shopping Index']")public WebElement shoppingIndexLink;
+	@FindBy(xpath="//*[text()='Accessories & More']")public WebElement accessories$moreLink;
+	@FindBy(xpath="//*[text()='Shops']")public WebElement shopsLink;
+	@FindBy(xpath="//*[text()='Outdoors']")public WebElement outdoorsLink;
+	@FindBy(xpath="//*[text()='Shoes']")public WebElement shoesLink;
+	@FindBy(xpath="//*[text()='Sports Equipment']")public WebElement sportsEquipmentLink;
+	@FindBy(xpath="//*[text()='THIS IS ACADEMY']")public WebElement thisIsAcademy;
+	@FindBy(xpath="//*[text()='NEED HELP?']")public WebElement needHelp;
+	@FindBy(xpath="//*[text()='SERVICES']")public WebElement servicesFooterText;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_1-888-922-2336']")public WebElement contactFooterLink;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Check Gift Card Balance']") public WebElement lnkCheckGiftCardBalance;
+	@FindBy(xpath="//*[text()='Brands']")public WebElement brandsIndexLink;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Check Order Status']") public WebElement lnkcheckorderStatus;
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
 
 	/*-------------------------------author:Vidya Siddaramappa (Mindtree QA)------------------------------------*/
@@ -174,7 +192,167 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 		}
 
 	}
+	public void validatingPresenceOfThisAcademy() throws Exception{
 
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(thisIsAcademy);
+			logger.debug("This is Academy footer text is not displayed");
+		}else {
+			isDisplayed(thisIsAcademy);
+			logger.debug("This is Academy footer text is displayed");
+		}}
+	public void validatingPresenceOfNeedHelp() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(needHelp);
+			logger.debug("Need Help footer text is not displayed");
+		}else {
+			isDisplayed(needHelp);
+			logger.debug("Need Help footer text is displayed");
+		}}
+	public void validatingPresenceOfCheckGiftCardBalance() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(lnkCheckGiftCardBalance);
+			assertTrue(isClickable(lnkCheckGiftCardBalance));
+			logger.debug("Check Gift Card Balance link is not displayed");
+		}else {
+			isDisplayed(lnkCheckGiftCardBalance);
+			assertTrue(isClickable(lnkCheckGiftCardBalance));
+			logger.debug("Check Gift Card Balance link is displayed");
+		}}
+	public void validatingPresenceOfContactNumber() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(contactFooterLink);
+			assertTrue(isClickable(contactFooterLink));
+			logger.debug("Footer Contact Number is not displayed");
+		}else {
+			isDisplayed(contactFooterLink);
+			assertTrue(isClickable(contactFooterLink));
+			logger.debug("Footer Contact Number is displayed");
+		}}
+	public void validatingPresenceOfServices() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(servicesFooterText);
+			logger.debug("Services footer Text is not displayed");
+		}else {
+			isDisplayed(servicesFooterText);
+			logger.debug("Services footer text is displayed");
+		}}
+	public void validatingPresenceOfcaliforniaTranparencyActLink() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(californiaTranparencyActLink);
+			assertTrue(isClickable(californiaTranparencyActLink));
+			logger.debug("FOOTER_LINK_3_California Transparency in Supply Chain Act(SB 657)");
+		}else {
+			isDisplayed(californiaTranparencyActLink);
+			assertTrue(isClickable(californiaTranparencyActLink));
+			logger.debug("FOOTER_LINK_3_California Transparency in Supply Chain Act(SB 657)");
+		}}
+	public void validatingPresenceOfSiteMapLink() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(siteMapLink);
+			logger.debug("SiteMap Link is not displayed");
+		}else {
+			isDisplayed(siteMapLink);
+			logger.debug("SiteMap Link is displayed");
+		}}
+	public void validatingPresenceOfAsoRightsLink() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(asoRightsLink);
+			logger.debug("© 2018 Academy Sports + Outdoors. All Rights Reserved is not displayed");
+		}else {
+			isDisplayed(asoRightsLink);
+			logger.debug("© 2018 Academy Sports + Outdoors. All Rights Reserved is displayed");
+		}}
+	public void validatingPresenceOfProductIndexLink() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(productIndexLink);
+			logger.debug("Product Index is not displayed");
+		}else {
+			isDisplayed(productIndexLink);
+			logger.debug("Product Index is displayed");
+		}}
+	public void validatingPresenceOfAccessoriesAndmoreLink() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(accessories$moreLink);
+			logger.debug("Accessories And More Link is not displayed");
+		}else {
+			isDisplayed(accessories$moreLink);
+			logger.debug("Accessories And More Link is displayed");
+		}}
+	public void validatingCheckOrderStatus() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(lnkcheckorderStatus);
+			assertTrue(isClickable(lnkcheckorderStatus));
+			logger.debug("CheckOrder Status link is not displayed");
+		}else {
+			isDisplayed(lnkcheckorderStatus);
+			isClickable(lnkcheckorderStatus);
+			logger.debug("CheckOrder Status link is displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void validatingPresenceOfShopsLink() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(shopsLink);
+			logger.debug("Shops Link is not displayed");
+		}else {
+			isDisplayed(shopsLink);
+			logger.debug("Shops Link is displayed");
+		}}
+	public void validatingPresenceOfOutdoorsLink() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(outdoorsLink);
+			logger.debug("Outdoors Link is not displayed");
+		}else {
+			isDisplayed(outdoorsLink);
+			logger.debug("Outdoors Link is displayed");
+		}}
+	public void validatingPresenceOfShoesLink() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(shoesLink);
+			logger.debug("Shoes Link is not displayed");
+		}else {
+			isDisplayed(shoesLink);
+			logger.debug("Shoes Link is displayed");
+		}}
+	public void validatingPresenceOfSportsEquipmentLink() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(sportsEquipmentLink);
+			logger.debug("Sports Equipment Link is not displayed");
+		}else {
+			isDisplayed(sportsEquipmentLink);
+			logger.debug("Sports Equipment Link is displayed");
+		}}
+	public void validatingPresenceOfShoppingIndexLink() throws Exception{
+
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(shoppingIndexLink);
+			logger.debug("Shopping Index is not displayed");
+		}else {
+			isDisplayed(shoppingIndexLink);
+			logger.debug("Shopping Index is displayed");
+		}}
+	public void validatingPresenceOfBrandsIndexLink() throws Exception{
+
+			if("mobile".equalsIgnoreCase(testtype)){
+				isDisplayed(brandsIndexLink);
+				logger.debug("Brands Index is not displayed");
+			}else {
+				isDisplayed(brandsIndexLink);
+				logger.debug("Brands Index is displayed");
+			}}
 	public void verifyPresenceOfAddressTxtField() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
@@ -401,7 +579,8 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 			isDisplayed(myAccountLinkOnAsoHomePage);
 			logger.debug("My Account Link is not displayed++++++++++++++++++++++++==");
 		}
-}
+	}
+
 
 	// To enter test data - 1 String Value
 	// FirstName

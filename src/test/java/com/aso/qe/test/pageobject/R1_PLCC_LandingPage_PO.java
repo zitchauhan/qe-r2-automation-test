@@ -28,6 +28,9 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 		@FindBy(xpath="//*[@data-auid='level1Category-TRENDING']")public WebElement adviceTabInHeader;
 		@FindBy(xpath="//*[@data-auid='WeeklyAds']")public WebElement weeklyAdsLinkInHeader;
 		@FindBy(xpath="//*[@data-auid='findAStore']")public WebElement findAStoreLinkInHeader;
+		@FindBy(xpath="//*[@data-auid='applyNow']")public WebElement applyNowButton;
+		@FindBy(xpath="//*[@data-auid='manageCard']")public WebElement manageYourCardLink;
+		@FindBy(xpath="//*[@data-auid='plccImage']")public WebElement plccCreditCardImage;
 		
 		//SignIn Page
 		@FindBy(xpath = "//*[@data-auid='emailid_input']") public WebElement emailTxtField;
@@ -192,7 +195,39 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 		}
 
 	}
+	public void verifyPresenceOfApplyNowButton() throws Exception {
 
+		if ("web".equalsIgnoreCase(testtype)) {
+			isDisplayed(applyNowButton);
+			logger.debug("Apply Now button is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, applyNowButton, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(applyNowButton);
+			logger.debug("Apply Now button is not displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void verifyPresenceOfManageYourCardLink() throws Exception {
+
+		if ("web".equalsIgnoreCase(testtype)) {
+			isDisplayed(manageYourCardLink);
+			logger.debug("Manage your card is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, applyNowButton, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(manageYourCardLink);
+			logger.debug("Manage your card is not displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void verifyPresenceOfPLCCCreditCardImage() throws Exception {
+
+		if ("web".equalsIgnoreCase(testtype)) {
+			isDisplayed(plccCreditCardImage);
+			logger.debug("PLCC Credit Card Image is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, plccCreditCardImage, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(plccCreditCardImage);
+			logger.debug("PLCC Credit Card Image is not displayed++++++++++++++++++++++++==");
+		}
+	}
 	public void enterEmailTxtFieldOnSignInPage(String arg) throws Exception {
 		setInputText(emailTxtField, webPropHelper.getTestDataProperty(arg));
 	}

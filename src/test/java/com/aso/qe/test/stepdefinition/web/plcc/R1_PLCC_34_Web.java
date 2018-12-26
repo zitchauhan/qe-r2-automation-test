@@ -99,4 +99,183 @@ public class R1_PLCC_34_Web extends CommonActionHelper {
 	public void user_expect_element_WeeklyAd_Link_to_be_present() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOfWeeklyAdLink();
 	}
+	@Then("^user expect element ApplyNow_Btn to be present$")
+	public void user_expect_element_ApplyNow_Btn_to_be_present() throws Throwable {
+		plccLandingPageObjects.verifyPresenceOfApplyNowButton();
+	}
+
+	@Then("^user expect element ManageYourCardLink to be present$")
+	public void user_expect_element_ManageYourCardLink_to_be_present() throws Throwable {
+		plccLandingPageObjects.verifyPresenceOfManageYourCardLink();
+	}
+
+	@Then("^user expect element PLCCCreditCardImage to be present$")
+	public void user_expect_element_PLCCCreditCardImage_to_be_present() throws Throwable {
+		plccLandingPageObjects.verifyPresenceOfPLCCCreditCardImage();
+	}
+	
+	//Footer Link//
+	@Then("^user expect element ThisIsAcademy to be present$")
+	public void user_expect_element_ThisIsAcademy_to_be_present() throws Throwable {
+		plccPageObjects.validatingPresenceOfThisAcademy();
+	}
+
+	@Then("^user expect element NeedHelp to be present$")
+	public void user_expect_element_NeedHelp_to_be_present() throws Throwable {
+		plccPageObjects.validatingPresenceOfNeedHelp();
+	}
+
+	@Then("^user expect element PressReleases to be present$")
+	public void user_expect_element_PressReleases_to_be_present() throws Throwable {
+		globalElementHeader.validatingPressRoom();
+	}
+
+	@Then("^user expect element CheckOrder to be present$")
+	public void user_expect_element_CheckOrder_to_be_present() throws Throwable {
+		plccPageObjects.validatingCheckOrderStatus();
+	}
+
+	@Then("^user expect element ReturnPolicy to be present$")
+	public void user_expect_element_ReturnPolicy_to_be_present() throws Throwable {
+		globalElementHeader.validatingReturnPolicy();
+	}
+
+	@Then("^user expect element ProductRecall to be present$")
+	public void user_expect_element_ProductRecall_to_be_present() throws Throwable {
+		globalElementHeader.validatingProductRecall();
+	}
+
+	@Then("^user expect element Rebates to be present$")
+	public void user_expect_element_Rebates_to_be_present() throws Throwable {
+		globalElementHeader.validatingRebates();
+	}
+
+	@Then("^user expect element PhoneNumberL to be present$")
+	public void user_expect_element_PhoneNumberL_to_be_present() throws Throwable {
+		plccPageObjects.validatingPresenceOfContactNumber();
+	}
+
+	@Then("^user expect element CustomerCare to be present$")
+	public void user_expect_element_CustomerCare_to_be_present() throws Throwable {
+		globalElementHeader.validatingCustomercare();
+	}
+
+	@Then("^user expect element Services to be present$")
+	public void user_expect_element_Services_to_be_present() throws Throwable {
+		plccPageObjects.validatingPresenceOfServices();
+	}
+
+	@Then("^user expect element ShopGiftCards to be present$")
+	public void user_expect_element_ShopGiftCards_to_be_present() throws Throwable {
+		globalElementHeader.validatingGiftcards();
+	}
+
+	@Then("^user expect element CheckGiftCradBalance to be present$")
+	public void user_expect_element_CheckGiftCradBalance_to_be_present() throws Throwable {
+		plccPageObjects.validatingPresenceOfCheckGiftCardBalance();
+	}
+
+	@Then("^user expect element AcademyCreditCard to be present$")
+	public void user_expect_element_AcademyCreditCard_to_be_present() throws Throwable {
+		globalElementHeader.validatingAcademyCreditCard();
+	}
+
+	@Then("^user expect element StoreServicesLink to be present$")
+	public void user_expect_element_StoreServicesLink_to_be_present() throws Throwable {
+		globalElementHeader.validatingStoreServices();
+	}
+
+	@Then("^user expect element FindInStoreFooter to be present$")
+	public void user_expect_element_FindInStoreFooter_to_be_present() throws Throwable {
+		globalElementHeader.validatingFindaStore();
+	}
+
+	@Then("^user expect element SignUpForMoreDeals to be present$")
+	public void user_expect_element_SignUpForMoreDeals_to_be_present() throws Throwable {
+		globalElementHeader.validatingsignupformoredeals();
+	}
+
+	@Then("^user expect element ChatNoW to be present$")
+	public void user_expect_element_ChatNoW_to_be_present() throws Throwable {
+		globalElementHeader.validatingchatnow();
+	}
+
+	@Then("^user expect element FaceBook to be present$")
+	public void user_expect_element_FaceBook_to_be_present() throws Throwable {
+		globalElementHeader.verifypresenceoffacebookicon();
+	}
+
+	@Then("^user expect element Pinterest to be present$")
+	public void user_expect_element_Pinterest_to_be_present() throws Throwable {
+		globalElementHeader.verifypresenceofpinteresticon();
+	}
+
+	@Then("^user expect element YouTube to be present$")
+	public void user_expect_element_YouTube_to_be_present() throws Throwable {
+		globalElementHeader.verifypresenceofyoutubeicon();
+	}
+
+	@Then("^user expect element Instagram to be present$")
+	public void user_expect_element_Instagram_to_be_present() throws Throwable {
+		globalElementHeader.verifypresenceofinstagramicon();
+	}
+
+	@Then("^user expect element PrivacyPolicy to be present$")
+	public void user_expect_element_PrivacyPolicy_to_be_present() throws Throwable {
+		globalElementHeader.validatingPrivatPolicy();
+	}
+
+	@Then("^user expect element TermsAndCondition to be present$")
+	public void user_expect_element_TermsAndCondition_to_be_present() throws Throwable {
+		globalElementHeader.validatingTermsAndConditions();
+	}
+
+	@Then("^user expect element CaliforniaTransparencyinSupplyChainAct to be present$")
+	public void user_expect_element_CaliforniaTransparencyinSupplyChainAct_to_be_present() throws Throwable {
+		globalElementHeader.validatingLegalPolicy();
+	}
+
+	@Then("^user expect element © (\\d+) Academy Sports \\+ Outdoors\\. All Rights Reserved to be present$")
+	public void user_expect_element_Academy_Sports_Outdoors_All_Rights_Reserved_to_be_present(int arg1) throws Throwable {
+		plccPageObjects.validatingPresenceOfAsoRightsLink();
+	}
+
+	@Then("^user expect element Sitemap to be present$")
+	public void user_expect_element_Sitemap_to_be_present() throws Throwable {
+		plccPageObjects.validatingPresenceOfSiteMapLink();
+	}
+
+	@Then("^user expect element ProductIndex to be present$")
+	public void user_expect_element_ProductIndex_to_be_present() throws Throwable {
+		plccPageObjects.validatingPresenceOfProductIndexLink();
+	}
+
+	@Then("^user expect element ShoppingIndex to be present$")
+	public void user_expect_element_ShoppingIndex_to_be_present() throws Throwable {
+		plccPageObjects.validatingPresenceOfShoppingIndexLink();
+	}
+
+	@Then("^user expect element BrandsIndex to be present$")
+	public void user_expect_element_BrandsIndex_to_be_present() throws Throwable {
+		plccPageObjects.validatingPresenceOfBrandsIndexLink();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

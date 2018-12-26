@@ -20,3 +20,4 @@ Scenario: Verify the display of Header components on PLCC landing page
 	And user expect element Deals Tab to be present 
 	And user expect element My Account Link to be present 
 	And user expect element WeeklyAd Link to be present 
+	
