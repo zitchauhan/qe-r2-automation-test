@@ -65,6 +65,10 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 		Thread.sleep(Constants.thread_low);
 		//setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty(arg1));
 	}
+	@And("user delete the predefine zipcode$")
+	public void user_delete_the_predefine_zipcode() {
+		r2CheckOutPo.inputCheckoutZipCode.clear();
+	}
 
 	@And("^user enter Zipcode \"(.*?)\"$")
 	public void user_enter_Zipcode(String arg1) throws Throwable {

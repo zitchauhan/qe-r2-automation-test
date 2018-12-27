@@ -308,10 +308,10 @@ public class R1_SD_SIT extends CommonActionHelper {
 		}
 		else 
 		{
+			if(!isDisplayed(hp_p.msgVerifyIncorrect)) {
 			waitForElement(globalElementHeader.btnMyAccount);
 		assertTrue(isDisplayed(globalElementHeader.btnMyAccount));
-			
-		
+			}
 		}
 	} 
 

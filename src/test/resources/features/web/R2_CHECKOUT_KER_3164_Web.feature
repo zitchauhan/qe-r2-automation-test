@@ -84,7 +84,7 @@ Scenario: Verify if User is able to enter billing information
 	And  user is navigated to Add to cart Notification popup 
 	And  user click on checkout from ATC pop up 
 	And user clicks on edit shipping method cta 
-	And user click on go to payment present in shipping method 
+#	And user click on go to payment present in shipping method 
 	And user clicks on change billing info cta 
 	And user click on checkbox Same as shipping address 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -187,7 +187,7 @@ Scenario:
 	And user click on confirm billing address button 
 	Then Verify the message on the page 
 		|# Following Error Message should show on the page|
-		|Please enter email address|
+		|Please enter an email address|
 		
 		
 @R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 

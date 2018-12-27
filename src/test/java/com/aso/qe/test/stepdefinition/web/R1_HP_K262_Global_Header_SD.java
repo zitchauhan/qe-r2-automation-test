@@ -103,12 +103,13 @@ public class R1_HP_K262_Global_Header_SD extends CommonActionHelper{
 	public void user_to_click_on_search_button_after_putting_data() throws Throwable {
 	    
 	}
+	
 	@Then("^User to click on search button after putting data\"(.*?)\"$")
 	public void user_to_click_on_search_button_after_putting_data(String data) throws Throwable {
 		waitForPageLoad(driver);
 		Thread.sleep(Constants.thread_medium);
 		globalElementHeader.searchBox_M.clear();
-		globalElementHeader.searchBox_M.sendKeys(data);
+		globalElementHeader.searchBox_M.sendKeys(webPropHelper.getTestDataProperty(data));
 		clickOnButton(globalElementHeader.searchbtn_M);
 		//assertTrue(isDisplayed(globalElementHeader.searchResultText_M));
 		

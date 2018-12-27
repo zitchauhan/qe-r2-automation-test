@@ -9,12 +9,14 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_SIT_PO;
 
 import cucumber.api.java.en.Then;
 
 public class R1_PDP_K1921_SD extends CommonActionHelper{
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	private static final Logger logger = Logger.getLogger(R1_PDP_K1921_SD.class);
+	R1_SIT_PO sit_po=PageFactory.initElements(driver, R1_SIT_PO.class);
 	
 	@Then("^user search the data in search box\"(.*?)\"$")
 	public void user_search_the_data_in_search_box(String data) throws Throwable {
@@ -81,6 +83,14 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 		clickOnButton(pdpPageObj.selectNikeToddlerGirlDNAShirtandShortsSet);
 	}
 
+	//SID 24-September
+		@Then("^User select item of out of stock$")
+		public void user_select_item_of_out_of_stock() throws Throwable {
+			assertTrue(clickOnButton(sit_po.clickProuctCard));
+		//	clickOnButton(pdpPageObj.outOfStockSKU.get(0));
+		}
+
+	
 	@Then("^verify out of stock$")
 	public void verify_out_of_stock() throws Throwable {
 	  
@@ -93,25 +103,29 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 	
 	}
 
-	
-	
-	@Then("^user to verify add to cart is disable/enable when color and size is not avialable$")
-	public void user_to_verify_add_to_cart_is_disable_enable_when_color_and_size_is_not_avialable() throws Throwable {
-	    
-
-		if(getText(pdpPageObj.MsgOutOFStock).equals("Not Sold in Stores")) {
+	@Then("^user to verify add to cart is disable when color and size is not avialable$")
+	public void user_to_verify_add_to_cart_is_disable_when_color_and_size_is_not_avialable() throws Throwable {
+			pdpPageObj.checkAddtoCartDisabled();
 			assertTrue(isDisplayed(pdpPageObj.MsgOutOFStock));
 			logger.debug("product is out of stock:: add to cart buttom is not displayed");
 			
 		}
-		else if (getText(pdpPageObj.txtNotifiedBack).equalsIgnoreCase("Sold in Stores")) {
-			
-			
-			assertTrue(isDisplayed(pdpPageObj.btnAddToCart));
-			logger.debug("product is in  stock:: add to cart buttom is  displayed");
-		}
-
-	}
+	
+//	@Then("^user to verify add to cart is disable/enable when color and size is not avialable$")
+//	public void user_to_verify_add_to_cart_is_disable_enable_when_color_and_size_is_not_avialable() throws Throwable {
+//		if(getText(pdpPageObj.MsgOutOFStock).equals("Not Sold in Stores")) {
+//			assertTrue(isDisplayed(pdpPageObj.MsgOutOFStock));
+//			logger.debug("product is out of stock:: add to cart buttom is not displayed");
+//			
+//		}
+//		else if (getText(pdpPageObj.txtNotifiedBack).equalsIgnoreCase("Sold in Stores")) {
+//			
+//			
+//			assertTrue(isDisplayed(pdpPageObj.btnAddToCart));
+//			logger.debug("product is in  stock:: add to cart buttom is  displayed");
+//		}
+//
+//	}
 	@Then("^Verify SKU$")
 	public void verify_SKU() throws Throwable {
 	    assertTrue(isDisplayed(pdpPageObj.txtProductSKU));
