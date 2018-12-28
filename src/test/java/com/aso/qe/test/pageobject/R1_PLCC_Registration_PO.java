@@ -22,47 +22,29 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='MyAccount']")public WebElement myAccountLinkOnAsoHomePage;
 	
 	@FindBy(xpath = "//*[@data-auid='signUp_btn']")public WebElement signUpLinkOnLoginPage;
-	@FindBy(xpath = "//*[text()='Add Address for Faster Checkout']")
-	public WebElement addAddressCheckBox;
+	@FindBy(xpath = "//*[text()='Add Address for Faster Checkout']")public WebElement addAddressCheckBox;
 	// @FindBy(xpath = "//*[@type='checkbox']")public WebElement addAddressCheckBox;
-	@FindBy(xpath = "//*[@data-auid='address_input']")
-	public WebElement addressTxtField;
-	@FindBy(xpath = "//*[@data-auid='address_zipcode']")
-	public WebElement addressZipCodeField;
-	@FindBy(xpath = "//*[@data-auid='address_city']")
-	public WebElement addressCityField;
+	@FindBy(xpath = "//*[@data-auid='address_input']")public WebElement addressTxtField;
+	@FindBy(xpath = "//*[@data-auid='address_zipcode']")public WebElement addressZipCodeField;
+	@FindBy(xpath = "//*[@data-auid='address_city']")public WebElement addressCityField;
 	// @FindBy(xpath = "//*[@data-auid='address_state']")public WebElement
 	// addressStateDropdown;
-	@FindBy(xpath = "//button[@class='css-edkg4i']")
-	public WebElement addressStateDropdown;
+	@FindBy(xpath = "//button[@class='css-edkg4i']")public WebElement addressStateDropdown;
 	// @FindBy(xpath = "//*[text()='Select']")public WebElement
 	// addressStateDropdown;
-	@FindBy(xpath = "//*[@data-auid='address_phone']")
-	public WebElement addressPhoneField;
-	@FindBy(xpath = "//*[@data-auid='btnsignup_btn']")
-	public WebElement registerationSignUpBtn;
-	@FindBy(xpath = "//*[@data-auid='firstname_input']")
-	public WebElement firstNameTxtField;
-	@FindBy(xpath = "//*[@data-auid='lastname_input']")
-	public WebElement lastNameTxtField;
-	@FindBy(xpath = "//*[@data-auid='email_input']")
-	public WebElement emailIdTxtField;
-	@FindBy(xpath = "//*[@data-auid='password_input']")
-	public WebElement createPwdTxtField;
-	@FindBy(xpath = "//*[@data-auid='checkout_initial_selected_address']")
-	public WebElement enteredAddress;
-	@FindBy(xpath = "//*[@data-auid='checkout_select_suggested_address_1']")
-	public WebElement suggestedAddress;
-	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address_verification_modal_close']")
-	public WebElement closeAddressSuggestionModalBtn;
-	@FindBy(xpath = "//*[@data-auid='btncheckout_use_selected_address_btn']")
-	public WebElement userSelectedAddressBtn;
-	@FindBy(xpath = "//*[@data-auid='signin_signup_page']")
-	public WebElement registrationConfirmationPage;
-	@FindBy(xpath = "//*[@data-auid='signup_address_add_more_details_link']")
-	public WebElement addMoreAddressDetailsLink;
-	@FindBy(xpath = "//*[@data-auid='btnsingin_redirect_btn']")
-	public WebElement letsShopBtn;
+	@FindBy(xpath = "//*[@data-auid='address_phone']")public WebElement addressPhoneField;
+	@FindBy(xpath = "//*[@data-auid='btnsignup_btn']")public WebElement registerationSignUpBtn;
+	@FindBy(xpath = "//*[@data-auid='firstname_input']")public WebElement firstNameTxtField;
+	@FindBy(xpath = "//*[@data-auid='lastname_input']")public WebElement lastNameTxtField;
+	@FindBy(xpath = "//*[@data-auid='email_input']")public WebElement emailIdTxtField;
+	@FindBy(xpath = "//*[@data-auid='password_input']")public WebElement createPwdTxtField;
+	@FindBy(xpath = "//*[@data-auid='checkout_initial_selected_address']")public WebElement enteredAddress;
+	@FindBy(xpath = "//*[@data-auid='checkout_select_suggested_address_1']")public WebElement suggestedAddress;
+	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address_verification_modal_close']")public WebElement closeAddressSuggestionModalBtn;
+	@FindBy(xpath = "//*[@data-auid='btncheckout_use_selected_address_btn']")public WebElement userSelectedAddressBtn;
+	@FindBy(xpath = "//*[@data-auid='signin_signup_page']")public WebElement registrationConfirmationPage;
+	@FindBy(xpath = "//*[@data-auid='signup_address_add_more_details_link']")public WebElement addMoreAddressDetailsLink;
+	@FindBy(xpath = "//*[@data-auid='btnsingin_redirect_btn']")public WebElement letsShopBtn;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_3_California Transparency in Supply Chain Act(SB 657)']")public WebElement californiaTranparencyActLink;
 	@FindBy(xpath="//*[text()='Sitemap']")public WebElement siteMapLink;
 	@FindBy(xpath="//*[text()='© 2018 Academy Sports + Outdoors. All Rights Reserved']")public WebElement asoRightsLink;
@@ -80,6 +62,19 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Check Gift Card Balance']") public WebElement lnkCheckGiftCardBalance;
 	@FindBy(xpath="//*[text()='Brands']")public WebElement brandsIndexLink;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Check Order Status']") public WebElement lnkcheckorderStatus;
+
+	//Field Validation Errors
+		@FindBy(xpath="//*[text()='Please enter the First Name']") public WebElement firstNameErrorMessage;
+		@FindBy(xpath="//*[text()=' Please enter a Last Name']") public WebElement lastNameErrorMessage;
+		@FindBy(xpath="//*[text()='Please enter an email address']") public WebElement emailAddressErrorMessage;
+		@FindBy(xpath="//*[text()='Please enter the Password']") public WebElement passwordErrorMessage;
+		@FindBy(xpath="//*[text()='Address is required']") public WebElement addressErrorMessage;
+		@FindBy(xpath="//*[text()='Zip code is required']") public WebElement zipErrorMessage;
+		@FindBy(xpath="//*[text()='City is required']") public WebElement cityErrorMessage;
+		@FindBy(xpath="//*[text()='State is required']") public WebElement stateErrorMessage;
+		@FindBy(xpath="//*[text()='Mobile number is required']") public WebElement mobileErrorMessage;
+		@FindBy(xpath="//div[10]/div[5]/span") public WebElement invalidMobileNumberErrorMessage;
+		@FindBy(xpath="//*[text()='Invalid Zip code']") public WebElement invalidZipErrorMessage;
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
 
 	/*-------------------------------author:Vidya Siddaramappa (Mindtree QA)------------------------------------*/
@@ -598,16 +593,15 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 		setInputText(addressZipCodeField, webPropHelper.getTestDataProperty(arg));
 	}
 
-//	// EmailAddress
-//	public void enterEmailAddressTxtField(String arg) throws Exception {
-//		setInputText(emailIdTxtField, webPropHelper.getTestDataProperty(arg));
-//	}
-
 	public void enterEmailAddressTxtFieldAuto(String arg) throws Exception {
 		Date NewEmailEveryTime = new Date(System.currentTimeMillis());
 		String NewEmailEveryTime2 = NewEmailEveryTime.toString().replaceAll("\\s+", "").replaceAll(":", "");
 		String NewEmailEveryTimeValue = "QA" + NewEmailEveryTime2 + "@gmail.com";
 		setInputText(emailIdTxtField, NewEmailEveryTimeValue);
+	}
+	//Enter Invalid Phone Number
+	public void enterInvalidPhoneNumber(String arg) throws Exception {
+		setInputText(addressPhoneField, webPropHelper.getTestDataProperty(arg));
 	}
 
 	// CreatePassword
@@ -623,5 +617,108 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 	// PhoneNumber
 	public void enterPhoneNumberTxtField(String arg) throws Exception {
 		setInputText(addressPhoneField, webPropHelper.getTestDataProperty(arg));
+	}
+	
+	//Field Level Errors
+	
+	public void verifypresenceofFirstNameErrorMessage() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(firstNameErrorMessage);
+			logger.debug("Please enter the First Name error message is not displayed");
+		}else {
+			isDisplayed(firstNameErrorMessage);
+			logger.debug("Please enter the First Name error message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void verifypresenceofLastNameErrorMessage() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(lastNameErrorMessage);
+			logger.debug("Please enter a Last Name error message is not displayed");
+		}else {
+			isDisplayed(lastNameErrorMessage);
+			logger.debug("Please enter a Last Name error message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void verifypresenceofEmailAddressErrorMessage() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(emailAddressErrorMessage);
+			logger.debug("Please enter an email address error message is not displayed");
+		}else {
+			isDisplayed(emailAddressErrorMessage);
+			logger.debug("Please enter an email address error message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	
+	public void verifypresenceofPasswordErrorMessage() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(passwordErrorMessage);
+			logger.debug("Please enter the Password error message is not displayed");
+		}else {
+			isDisplayed(passwordErrorMessage);
+			logger.debug("Please enter the Password error message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void verifypresenceofAddressErrorMessage() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(addressErrorMessage);
+			logger.debug("Address is required error message is not displayed");
+		}else {
+			isDisplayed(addressErrorMessage);
+			logger.debug("Address is required error message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void verifypresenceofZipErrorMessage() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(zipErrorMessage);
+			logger.debug("Zip code is required error message is not displayed");
+		}else {
+			isDisplayed(zipErrorMessage);
+			logger.debug("Zip code is required error message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void verifypresenceofCityErrorMessage() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(cityErrorMessage);
+			logger.debug("City is required error message is not displayed");
+		}else {
+			isDisplayed(cityErrorMessage);
+			logger.debug("City is required error message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void verifypresenceofStateErrorMessage() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(stateErrorMessage);
+			logger.debug("State is required error message is not displayed");
+		}else {
+			isDisplayed(stateErrorMessage);
+			logger.debug("State is required error message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void verifypresenceofInvalidMobileNumberErrorMessage() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(invalidMobileNumberErrorMessage);
+			logger.debug("Mobile number can't be less than 10 digits error message is not displayed");
+		}else {
+			isDisplayed(invalidMobileNumberErrorMessage);
+			logger.debug("Mobile number can't be less than 10 digits error message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void verifypresenceofInvalidZipCodeErrorMessage() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(invalidZipErrorMessage);
+			logger.debug("Invalid Zip code error message is not displayed");
+		}else {
+			isDisplayed(invalidZipErrorMessage);
+			logger.debug("Invalid Zip code error message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void verifypresenceofMobileErrorMessage() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(invalidZipErrorMessage);
+			logger.debug("Invalid Zip code error message is not displayed");
+		}else {
+			isDisplayed(invalidZipErrorMessage);
+			logger.debug("Invalid Zip code message is displayed++++++++++++++++++++++++==");
+		}
 	}
 }

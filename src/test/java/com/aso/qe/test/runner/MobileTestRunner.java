@@ -22,7 +22,7 @@ import cucumber.api.junit.Cucumber;
 		)*/
 
 @CucumberOptions(
-		features="src/test/resources/features/mobile/",
+		features="src/test/resources/features/mobile/R1_HP_KER_1400_Mobile.feature",
 		glue="com.aso.qe.test.stepdefinition.web",
 		monochrome=true, 
 		format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
