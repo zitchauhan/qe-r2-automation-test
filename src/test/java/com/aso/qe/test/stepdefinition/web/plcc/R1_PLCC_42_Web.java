@@ -50,4 +50,23 @@ public class R1_PLCC_42_Web extends CommonActionHelper {
 	public void user_navigates_to_registration_confirmation_page() throws Throwable {
 		plccPageObjects.verifyPresenceOfRegistrationConfirmation();
 	}
+	@When("^user expect element entered address to be present$")
+	public void user_expect_element_entered_address_to_be_present() throws Throwable {
+		plccPageObjects.verifyPresenceOfUserEnteredAddressBtn();
+	}
+
+	@Then("^user expect element suggested address to be present$")
+	public void user_expect_element_suggested_address_to_be_present() throws Throwable {
+		plccPageObjects.verifyPresenceOfUserSuggestedAddressBtn();
+	}
+	@When("^user expect element LET'S SHOP button to be present$")
+	public void user_expect_element_LET_S_SHOP_button_to_be_present() throws Throwable {
+		plccPageObjects.verifyPresenceOfLetsShopButton();
+	}
+
+	@When("^click on LET'S SHOP button$")
+	public void click_on_LET_S_SHOP_button() throws Throwable {
+		plccPageObjects.letsShopBtn.click();
+	}
+
 }

@@ -659,22 +659,22 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(iconfacebook);
 			assertTrue(isClickable(iconfacebook));
-			logger.debug("our history link is not displayed");
+			logger.debug("facebook icon is not displayed");
 		}else {
 			isDisplayed(iconfacebook);
 			assertTrue(isClickable(iconfacebook));
-			logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			logger.debug("facebook icon is displayed++++++++++++++++++++++++==");
 		}
 	}
 	public void verifypresenceofpinteresticon() throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(iconpinterest);
 			assertTrue(isClickable(iconpinterest));
-			logger.debug("our history link is not displayed");
+			logger.debug("pinterest icon is not displayed");
 		}else {
 			isDisplayed(iconpinterest);
 			assertTrue(isClickable(iconpinterest));
-			logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			logger.debug("pnterest icon is displayed++++++++++++++++++++++++==");
 		}
 	}
 
@@ -682,33 +682,33 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(icontwitter);
 			assertTrue(isClickable(icontwitter));
-			logger.debug("our history link is not displayed");
+			logger.debug("twitter icon is not displayed");
 		}else {
 			isDisplayed(icontwitter);
 			assertTrue(isClickable(icontwitter));
-			logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			logger.debug("twitter icon is displayed++++++++++++++++++++++++==");
 		}
 	}
 	public void verifypresenceofyoutubeicon() throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(iconinstagram);
 			assertTrue(isClickable(iconinstagram));
-			logger.debug("our history link is not displayed");
+			logger.debug("YouTube icon is not displayed");
 		}else {
 			isDisplayed(iconinstagram);
 			assertTrue(isClickable(iconinstagram));
-			logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			logger.debug("YouTube icon is displayed++++++++++++++++++++++++==");
 		}
 	}
 	public void verifypresenceofinstagramicon() throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(iconinstagram);
 			assertTrue(isClickable(iconinstagram));
-			logger.debug("our history link is not displayed");
+			logger.debug("instagram icon is not displayed");
 		}else {
 			isDisplayed(iconinstagram);
 			assertTrue(isClickable(iconinstagram));
-			logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			logger.debug("instagram icon is displayed++++++++++++++++++++++++==");
 		}
 	}
 	/*public GlobalElementHeader_HomePO(WebDriver driver) {
@@ -1208,11 +1208,11 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnkcareers);
 			assertTrue(isClickable(lnkcareers));
-			logger.debug("our history link is not displayed");
+			logger.debug("Careers is not displayed");
 		}else {
 			isDisplayed(lnkcareers);
 			assertTrue(isClickable(lnkcareers));
-			logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			logger.debug("Careers link is displayed++++++++++++++++++++++++==");
 		}
 
 
@@ -1221,12 +1221,13 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	public void validatingPressRoom() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnkPressReleases);
+			CommonActionHelper.waitUntilElePresent(driver, lnkPressReleases, ELEMWAITTIME_MEDIUM);
 			assertTrue(isClickable(lnkPressReleases));
-			logger.debug("pressroom is not displayed");
+			logger.debug("press Releases is not displayed");
 		}else {
 			isDisplayed(lnkPressReleases);
 			assertTrue(isClickable(lnkPressReleases));
-			logger.debug("press room  link is displayed");
+			logger.debug("press Releases link is displayed");
 		}
 		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
 
@@ -1235,11 +1236,11 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnkInvestors);
 			assertTrue(isClickable(lnkInvestors));
-			logger.debug("our history link is not displayed");
+			logger.debug("Investers link is not displayed");
 		}else {
 			isDisplayed(lnkInvestors);
 			isClickable(lnkInvestors);
-			logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			logger.debug("Investers link is displayed++++++++++++++++++++++++==");
 		}
 		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
 

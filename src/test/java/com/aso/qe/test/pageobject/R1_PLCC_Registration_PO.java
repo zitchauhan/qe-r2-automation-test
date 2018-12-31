@@ -75,6 +75,10 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 		@FindBy(xpath="//*[text()='Mobile number is required']") public WebElement mobileErrorMessage;
 		@FindBy(xpath="//div[10]/div[5]/span") public WebElement invalidMobileNumberErrorMessage;
 		@FindBy(xpath="//*[text()='Invalid Zip code']") public WebElement invalidZipErrorMessage;
+		
+		@FindBy(xpath="//*[@data-auid='checkout_modify_shipping_address_link']") public WebElement modifyAddressLink;
+		@FindBy(xpath="//*[text()='We were unable to verify your address with the postal database. Using the address you entered may cause delays receiving your order.']") 
+		public WebElement addressVerificationModalTxt;
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
 
 	/*-------------------------------author:Vidya Siddaramappa (Mindtree QA)------------------------------------*/
@@ -719,6 +723,27 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 		}else {
 			isDisplayed(invalidZipErrorMessage);
 			logger.debug("Invalid Zip code message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	
+	public void verifyPresenceOfModifyAddressLink() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(modifyAddressLink);
+			logger.debug("Modify Address Link is dispalyed");
+		} else {
+			isDisplayed(modifyAddressLink);
+			logger.debug("Modify Address Link is displayed");
+		}
+	}
+	public void verifyPresenceOfAddressVerificationModalTxt() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(addressVerificationModalTxt);
+			logger.debug("We were unable to verify your address with the postal database. Using the address you entered may cause delays receiving your order.\r\n" + 
+					" is dispalyed");
+		} else {
+			isDisplayed(addressVerificationModalTxt);
+			logger.debug("We were unable to verify your address with the postal database. Using the address you entered may cause delays receiving your order.\r\n" + 
+					" is displayed");
 		}
 	}
 }

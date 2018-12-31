@@ -37,6 +37,10 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 		@FindBy(xpath = "//*[@data-auid='password_input']") public WebElement passwordTxtField;
 		@FindBy(xpath = "//*[@data-auid='btnemail-signin-button']") public WebElement signInButton;
 		
+		@FindBy(xpath = "//*[text()='Pre-screen information was not found. Please verify and try again.']") public WebElement prescreenErrorCode;
+		@FindBy(xpath = "//*[@id='preCode']") public WebElement prescreenCodeTextField;
+		@FindBy(xpath = "//*[@data-auid='btnundefined']") public WebElement acceptOfferBtn;
+		
 		/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
 	public void clickOnAcademyCreditCardFooterLink() throws Exception {
 
@@ -48,6 +52,19 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 				assertTrue(clickOnButton(academyCreditCardFooterLink));
 			} else {
 				CommonActionHelper.waitUntilElePresent(driver, academyCreditCardFooterLink, ELEMWAITTIME_MEDIUM);
+			}
+		}
+	}
+	public void clickOnASOLogo() throws Exception {
+
+		{
+			assertTrue(isDisplayed(academyCreditCardFooterLink));
+			isClickable(imgAcademyLogo);
+			if (isDisplayed(imgAcademyLogo)) {
+				CommonActionHelper.waitUntilElePresent(driver, imgAcademyLogo, ELEMWAITTIME_MEDIUM);
+				assertTrue(clickOnButton(imgAcademyLogo));
+			} else {
+				CommonActionHelper.waitUntilElePresent(driver, imgAcademyLogo, ELEMWAITTIME_MEDIUM);
 			}
 		}
 	}
@@ -235,4 +252,90 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 	public void enterPasswordTxtFieldOnSignInPage(String arg) throws Exception {
 		setInputText(passwordTxtField, webPropHelper.getTestDataProperty(arg));
 	}
+	
+	
+	public void verifyPresenceOfPreescreenErrorCode() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(prescreenErrorCode);
+			logger.debug("Pre-screen information was not found. Please verify and try again. is displayed");
+		} else {
+			isDisplayed(prescreenErrorCode);
+			logger.debug("Pre-screen information was not found. Please verify and try again. is displayed");
+		}
+	}
+
+	public void verifyPresenceOfPreescreenTextField() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(prescreenCodeTextField);
+			logger.debug("Pre-screen Text Field is displayed");
+		} else {
+			isDisplayed(prescreenCodeTextField);
+			logger.debug("Pre-screen Text Field is displayed");
+		}
+	}
+	public void verifyPresenceOfAcceptOffer() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(acceptOfferBtn);
+			logger.debug("Accept Offer is displayed");
+		} else {
+			isDisplayed(acceptOfferBtn);
+			logger.debug("Accept Offer is displayed");
+		}
+	}
+	public void enterPrescreenCode(String arg) throws Exception {
+		setInputText(prescreenCodeTextField, webPropHelper.getTestDataProperty(arg));
+	}
+	
+	
+	public void verifyPresenceOfAcademyCreditCardFooterLink() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(academyCreditCardFooterLink);
+			logger.debug("Academy Credit Card Footer Link is displayed");
+		} else {
+			isDisplayed(academyCreditCardFooterLink);
+			logger.debug("Academy Credit Card Footer Link is displayed");
+		}
+	}
+	//Footer link navigation:
+	public void verifyPresenceOfOurHistoryPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/en/store/company-info")) {
+			logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+	  
+	public void verifyPresenceOfCareersPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("careers.academy.com")) {
+			logger.debug("User is successfully navigated to Careers page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Careers Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+	public void verifyPresenceOfPressReleasesPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/browse/press-releases-new")) {
+			logger.debug("User is successfully navigated to Press Releases page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Press Releases Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+	public void verifyPresenceOfPressInvestersPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/en/store/investors")) {
+			logger.debug("User is successfully navigated to Press Investers page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Press Investers Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+	
+	
+	
+	
 }

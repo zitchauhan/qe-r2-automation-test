@@ -1,7 +1,7 @@
 Feature: Landing Page 
 
 @Regression @Web @All @C-Manju @PLCC-36 
-Scenario: Verify the display of Footer components on PLCC landing page 
+Scenario: Verify the display of container information on PLCC landing page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
 	And user expect element Email Address to be present 

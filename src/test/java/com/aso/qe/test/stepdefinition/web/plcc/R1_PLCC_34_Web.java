@@ -128,6 +128,7 @@ public class R1_PLCC_34_Web extends CommonActionHelper {
 	@Then("^user expect element PressReleases to be present$")
 	public void user_expect_element_PressReleases_to_be_present() throws Throwable {
 		globalElementHeader.validatingPressRoom();
+		
 	}
 
 	@Then("^user expect element CheckOrder to be present$")
@@ -260,15 +261,52 @@ public class R1_PLCC_34_Web extends CommonActionHelper {
 		plccPageObjects.validatingPresenceOfBrandsIndexLink();
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	//Footer navigation validations
+	@When("^user expect element Our History to be present$")
+	public void user_expect_element_Our_History_to_be_present() throws Throwable {
+		globalElementHeader.validatingOurhistory();
+	}
+
+	@Then("^user click on Our History and navigates to Our History Page$")
+	public void user_click_on_Our_History_and_navigates_to_Our_History_Page() throws Throwable {
+	  globalElementHeader.lnkourhistory.click();
+      plccLandingPageObjects.verifyPresenceOfOurHistoryPage();
+	}
+
+	@When("^user expect element Careers to be present$")
+	public void user_expect_element_Careers_to_be_present() throws Throwable {
+		globalElementHeader.validatingCareers();
+	}
+
+	@Then("^user click on Careers and navigates to Careers Page$")
+	public void user_click_on_Careers_and_navigates_to_Careers_Page() throws Throwable {
+		globalElementHeader.lnkcareers.click();
+		plccLandingPageObjects.verifyPresenceOfCareersPage();
+	}
+
+	@Then("^user click on PressReleases and navigates to PressReleases Page$")
+	public void user_click_on_PressReleases_and_navigates_to_PressReleases_Page() throws Throwable {
+		globalElementHeader.lnkPressReleases.click();
+		plccLandingPageObjects.verifyPresenceOfPressReleasesPage();
+	}
+
+	@When("^user expect element Investors to be present$")
+	public void user_expect_element_Investors_to_be_present() throws Throwable {
+		globalElementHeader.validatingInvestors();
+	}
+
+	@Then("^user click on Investors and navigates to Investors Page$")
+	public void user_click_on_Investors_and_navigates_to_Investors_Page() throws Throwable {
+		globalElementHeader.lnkInvestors.click();
+		plccLandingPageObjects.verifyPresenceOfPressInvestersPage();
+	}
+
+	@Then("^Navigate back to PLCC Landing Page$")
+	public void navigate_back_to_PLCC_LAnding_Page() throws Throwable {
+		plccLandingPageObjects.clickOnASOLogo();
+		plccLandingPageObjects.clickOnAcademyCreditCardFooterLink();
+		plccLandingPageObjects.verifyPresenceOfFPOApplyCardSection();
+	}
 	
 	
 	

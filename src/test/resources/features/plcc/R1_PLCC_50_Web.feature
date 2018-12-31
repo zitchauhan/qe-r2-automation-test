@@ -15,13 +15,12 @@ Background:
 	And user expect State is required to be present 
 	
 @Regression @Web @All @C-VidyaSiddaramappa @PLCC-50 @PLCC-127 
-Scenario: Validate errors providing fields empty value 
+Scenario: Verify an error message without providing mandatory fields.
 	And user expect Zip code is required Name to be present 
 	And user expect Mobile number is required to be present 
 	
 @Regression @Web @All @C-VidyaSiddaramappa @PLCC-50 @PLCC-128 
 Scenario: Validate errors providing invalid zip code field 
-	Then user select Add Address for Faster Checkout checkbox 
 	And user enter Zip Code "Invalid_ZipCode" 
 	And user expect Invalid Zip code to be present 
 	And user expect Mobile number is required to be present 
@@ -31,5 +30,4 @@ Scenario: Validate errors providing invalid phone number field
 	And user enter Phone number "Invalid_PhoneNumber" 
 	And user expect Mobile number can't be less than ten digits to be present 
 	And user expect Zip code is required Name to be present
-	
 	
