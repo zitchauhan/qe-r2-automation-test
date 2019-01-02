@@ -10,6 +10,7 @@ import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_FindStore_PO;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -17,7 +18,8 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_HP_K730_SD.class);
 	public R1_FindStore_PO findStorePO = PageFactory.initElements(getDriver(), R1_FindStore_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(getDriver(),R1_GlobalElementHeader_Home_PO.class);
-
+	String store = "";
+	
 	@Then("^User should be able to click on Find Store$")
 	public void User_should_be_able_to_see_Find_Store() throws Throwable {
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -47,8 +49,14 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 	@When("^User select store with \"(.*?)\"$")
 	public void User_select_store_with(String arg1) throws Throwable {
 		System.err.println(webPropHelper.getTestDataProperty(arg1));
-		findStorePO.selectAStore(webPropHelper.getTestDataProperty(arg1));
+		store = findStorePO.selectAStore(webPropHelper.getTestDataProperty(arg1));
 	}
+	
+	@And("^user verify the selected store$")
+		public void user_verify_the_selected_store() {
+		store.equalsIgnoreCase(findStorePO.selectedStoreNameinPDP.getText());
+	}
+	
 
 
 	@Then("^User should be able to see Selected_Store in the place of Find a Store link$")
