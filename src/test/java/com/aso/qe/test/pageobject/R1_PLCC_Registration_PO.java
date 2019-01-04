@@ -14,6 +14,7 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
 	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
+	R1_PLCC_LandingPage_PO plccLandingPageObjects = PageFactory.initElements(driver, R1_PLCC_LandingPage_PO.class);
 	Common_Web_SD timer = new Common_Web_SD();
 
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----START--------------------------------*/
@@ -586,6 +587,10 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 	public void enterFirstNameTxtField(String arg) throws Exception {
 		setInputText(firstNameTxtField, webPropHelper.getTestDataProperty(arg));
 	}
+	public void enterSearchItem(String arg) throws Exception {
+		setInputText(plccLandingPageObjects.searchBox, webPropHelper.getTestDataProperty(arg));
+	}
+
 
 	// LastName
 	public void enterLastNameTxtField(String arg) throws Exception {

@@ -58,11 +58,13 @@ public class R1_PLCC_34_Web extends CommonActionHelper {
 	@When("^user click on Signin-button$")
 	public void user_click_on_Signin_button() throws Throwable {
 		plccLandingPageObjects.clickOnSignInBtnSignInPage();
+		//CommonActionHelper.waitUntilElePresent(driver, Element, timeOutInSeconds);
 	}
 
 	@When("^user navigates to ASO-Home page$")
 	public void user_navigates_to_ASO_Home_page() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOfASOHomePage();
+		
 	}
 
 	@Then("^user expect element AcademyLogo to be present$")

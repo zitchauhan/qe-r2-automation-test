@@ -31,6 +31,8 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 		@FindBy(xpath="//*[@data-auid='applyNow']")public WebElement applyNowButton;
 		@FindBy(xpath="//*[@data-auid='manageCard']")public WebElement manageYourCardLink;
 		@FindBy(xpath="//*[@data-auid='plccImage']")public WebElement plccCreditCardImage;
+		@FindBy(xpath="//*[@data-auid='search-clear-button']")public WebElement searchIcon;
+		
 		
 		//SignIn Page
 		@FindBy(xpath = "//*[@data-auid='emailid_input']") public WebElement emailTxtField;
@@ -178,7 +180,17 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 			logger.debug("Search Field is not displayed++++++++++++++++++++++++==");
 		}
 	}
+	public void verifyPresenceOfSearchIcon() throws Exception {
 
+		if ("web".equalsIgnoreCase(testtype)) {
+			isDisplayed(searchIcon);
+			logger.debug("Search Icon is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(searchIcon);
+			logger.debug("Search Icon is not displayed++++++++++++++++++++++++==");
+		}
+	}
 	public void verifyPresenceOfDealsTab() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {

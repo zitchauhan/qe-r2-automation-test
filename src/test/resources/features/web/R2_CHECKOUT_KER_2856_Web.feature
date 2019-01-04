@@ -52,7 +52,7 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods BOPIS and S
 	And user is navigated to order confirmation page and captures order number 
 	
 	@C-BOPIS @R2_Web  @R2_All @P-High_B_Order @C-NonOrder @CC-Checkout_Order   @KER-2856 @ZYP_CHECKOUT_K2856-10867 @CR-RK
-Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Ship to Home
+    Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Ship to Home
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	When User searches a product "SOFSKUNumber" and navigates to PDP 

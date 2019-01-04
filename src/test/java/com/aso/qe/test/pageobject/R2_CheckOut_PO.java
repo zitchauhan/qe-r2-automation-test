@@ -640,8 +640,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 //Sep7 CR-RK KER-3151
 	
 	//Start Sep10 KER-6576 CR-RK
-		 @FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_Privacy Policy']")	public WebElement checkoutFooterLegalLinkPrivacyPolicy; // 10-September
-		   @FindBy(xpath = "//*[@data-auid='checkout_footer_chat_now_link']")	public WebElement checkoutFooterChatNowLink; // 10-September
+		  @FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_Privacy Policy']")	public WebElement checkoutFooterLegalLinkPrivacyPolicy; // 10-September
+		  @FindBy(xpath = "//*[@data-auid='checkout_footer_chat_now_link']")	public WebElement checkoutFooterChatNowLink; // 10-September
 		   @FindBy(xpath = "//*[@data-auid='checkout_footer_contact_number_link_m']")	public WebElement checkoutFooterContactNumberLink_mobile; // 10-September
 		   @FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_Terms & Conditions']")	public WebElement checkoutFooterLegalLinkTermsConditions; // 10-September
 		   @FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_California Proposition 65 California Transparency in Supply Chains Act (SB 657)']")	public WebElement checkoutFooterLegalLinkCaliforniaProposition65; // 10-September

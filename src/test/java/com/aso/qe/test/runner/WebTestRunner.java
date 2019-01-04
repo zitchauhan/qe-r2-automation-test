@@ -20,7 +20,7 @@ import cucumber.api.junit.Cucumber;
 		)*/
 
 @CucumberOptions(
-		features="src/test/resources/features/web/",
+		features="src/test/resources/features/web/R2_CHECKOUT_KER_2856_Web.feature",
 		glue="com.aso.qe.test.stepdefinition.web",
 		monochrome=true, 
 		format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
