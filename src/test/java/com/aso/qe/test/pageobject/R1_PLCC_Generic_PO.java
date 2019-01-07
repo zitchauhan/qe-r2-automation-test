@@ -8,12 +8,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD;
 
 public class R1_PLCC_Generic_PO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
 	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
+	private WebElement objElement;
 	Common_Web_SD timer = new Common_Web_SD();
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	@FindBy(xpath = "//*[text()='Credit Card Number']/following::*[1]")
@@ -233,13 +235,72 @@ public class R1_PLCC_Generic_PO extends CommonActionHelper {
 	public void verifyPresenceOfExpiryTextField() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(r2CheckOutPo.txtExpirationDate);
 			isDisplayed(r2CheckOutPo.txtExpirationDateInput);
 			logger.debug("Expiry Date Text Field is displayed++++++++++++++++++++++++==");
 		} else {
+			isDisplayed(r2CheckOutPo.txtExpirationDate);
 			isDisplayed(r2CheckOutPo.txtExpirationDateInput);
 			logger.debug("Expiry Date Text Field is displayed++++++++++++++++++++++++==");
 		}
 
+	}
+
+	public void verifyPresenceOfCvvTextField() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(r2CheckOutPo.txtCVVInput);
+			logger.debug("CVV Text Field is displayed++++++++++++++++++++++++==");
+		} else {
+			isDisplayed(r2CheckOutPo.txtCVVInput);
+			logger.debug("CVV Text Field is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+
+	public void verifyAbsenceOfExpiryTextField() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+
+			isNotDisplayed(r2CheckOutPo.txtExpirationDate);
+			isNotDisplayed(r2CheckOutPo.txtExpirationDateInput);
+			logger.debug("Expiry Date Text Field is not displayed++++++++++++++++++++++++==");
+		} else {
+			isNotDisplayed(r2CheckOutPo.txtExpirationDate);
+			isNotDisplayed(r2CheckOutPo.txtExpirationDateInput);
+			logger.debug("Expiry Date Text Field is not displayed++++++++++++++++++++++++==");
+		}
+
+	}
+
+	public void verifyAbsenceOfCvvTextField() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isNotDisplayed(r2CheckOutPo.txtCVVInput);
+			logger.debug("CVV Text Field is not displayed++++++++++++++++++++++++==");
+		} else {
+			isNotDisplayed(r2CheckOutPo.txtCVVInput);
+			logger.debug("CVV Text Field is not displayed++++++++++++++++++++++++==");
+		}
+
+	}
+
+	protected boolean isNotDisplayed(WebElement element) {
+		logger.info("Check if the Webelement is displayed");
+		boolean flag = true;
+		try {
+			this.objElement = waitForElement(element);
+			if (flag = this.objElement.isDisplayed())
+				flag = false;
+			if (flag) {
+				captureScreenShot(Constants.PASS);
+			} else {
+				captureScreenShot(Constants.FAIL);
+			}
+		} catch (Exception e) {
+			logger.error("Exception in  isDisplay msg::" + e.getMessage());
+		}
+		return flag;
 	}
 
 }

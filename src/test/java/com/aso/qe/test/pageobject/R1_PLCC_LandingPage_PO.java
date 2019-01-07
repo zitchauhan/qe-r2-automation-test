@@ -10,40 +10,60 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD;
 
-public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
-		private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
-		R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
-		R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
-		Common_Web_SD timer = new Common_Web_SD();
+public class R1_PLCC_LandingPage_PO extends CommonActionHelper {
+	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
+	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
+	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
+	Common_Web_SD timer = new Common_Web_SD();
 
-		/*----------------------author:Vidya(MindtreeQA)-PLCC-----START--------------------------------*/
-		@FindBy(xpath = "//*[@data-component='benefitSection']") public WebElement benefitSection;
-		@FindBy(xpath = "//*[@data-component='prescreen']") public WebElement prescreenCode;
-		@FindBy(xpath = "//*[@data-component='applyForCard']") public WebElement applyForCardSection;
-		@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Academy Credit Card']") public WebElement academyCreditCardFooterLink;
-		@FindBy(xpath="//*[@data-auid='logo']//img")public WebElement imgAcademyLogo;
-		@FindBy(xpath="//*[@data-auid='level1Category-SHOP']") public WebElement shopTabInHeader;
-		@FindBy(xpath="//*[@data-auid='search-input']")public WebElement searchBox;
-		@FindBy(xpath="//*[@data-auid='level1Category-DEALS']") public  WebElement dealsTabInHeader;
-		@FindBy(xpath="//*[@data-auid='level1Category-TRENDING']")public WebElement adviceTabInHeader;
-		@FindBy(xpath="//*[@data-auid='WeeklyAds']")public WebElement weeklyAdsLinkInHeader;
-		@FindBy(xpath="//*[@data-auid='findAStore']")public WebElement findAStoreLinkInHeader;
-		@FindBy(xpath="//*[@data-auid='applyNow']")public WebElement applyNowButton;
-		@FindBy(xpath="//*[@data-auid='manageCard']")public WebElement manageYourCardLink;
-		@FindBy(xpath="//*[@data-auid='plccImage']")public WebElement plccCreditCardImage;
-		@FindBy(xpath="//*[@data-auid='search-clear-button']")public WebElement searchIcon;
-		
-		
-		//SignIn Page
-		@FindBy(xpath = "//*[@data-auid='emailid_input']") public WebElement emailTxtField;
-		@FindBy(xpath = "//*[@data-auid='password_input']") public WebElement passwordTxtField;
-		@FindBy(xpath = "//*[@data-auid='btnemail-signin-button']") public WebElement signInButton;
-		
-		@FindBy(xpath = "//*[text()='Pre-screen information was not found. Please verify and try again.']") public WebElement prescreenErrorCode;
-		@FindBy(xpath = "//*[@id='preCode']") public WebElement prescreenCodeTextField;
-		@FindBy(xpath = "//*[@data-auid='btnundefined']") public WebElement acceptOfferBtn;
-		
-		/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
+	/*----------------------author:Vidya(MindtreeQA)-PLCC-----START--------------------------------*/
+	@FindBy(xpath = "//*[@data-component='benefitSection']")
+	public WebElement benefitSection;
+	@FindBy(xpath = "//*[@data-component='prescreen']")
+	public WebElement prescreenCode;
+	@FindBy(xpath = "//*[@data-component='applyForCard']")
+	public WebElement applyForCardSection;
+	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Academy Credit Card']")
+	public WebElement academyCreditCardFooterLink;
+	@FindBy(xpath = "//*[@data-auid='logo']//img")
+	public WebElement imgAcademyLogo;
+	@FindBy(xpath = "//*[@data-auid='level1Category-SHOP']")
+	public WebElement shopTabInHeader;
+	@FindBy(xpath = "//*[@data-auid='search-input']")
+	public WebElement searchBox;
+	@FindBy(xpath = "//*[@data-auid='level1Category-DEALS']")
+	public WebElement dealsTabInHeader;
+	@FindBy(xpath = "//*[@data-auid='level1Category-TRENDING']")
+	public WebElement adviceTabInHeader;
+	@FindBy(xpath = "//*[@data-auid='WeeklyAds']")
+	public WebElement weeklyAdsLinkInHeader;
+	@FindBy(xpath = "//*[@data-auid='findAStore']")
+	public WebElement findAStoreLinkInHeader;
+	@FindBy(xpath = "//*[@data-auid='applyNow']")
+	public WebElement applyNowButton;
+	@FindBy(xpath = "//*[@data-auid='manageCard']")
+	public WebElement manageYourCardLink;
+	@FindBy(xpath = "//*[@data-auid='plccImage']")
+	public WebElement plccCreditCardImage;
+	@FindBy(xpath = "//*[@data-auid='search-clear-button']")
+	public WebElement searchIcon;
+
+	// SignIn Page
+	@FindBy(xpath = "//*[@data-auid='emailid_input']")
+	public WebElement emailTxtField;
+	@FindBy(xpath = "//*[@data-auid='password_input']")
+	public WebElement passwordTxtField;
+	@FindBy(xpath = "//*[@data-auid='btnemail-signin-button']")
+	public WebElement signInButton;
+
+	@FindBy(xpath = "//*[text()='Pre-screen information was not found. Please verify and try again.']")
+	public WebElement prescreenErrorCode;
+	@FindBy(xpath = "//*[@id='preCode']")
+	public WebElement prescreenCodeTextField;
+	@FindBy(xpath = "//*[@data-auid='btnundefined']")
+	public WebElement acceptOfferBtn;
+
+	/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
 	public void clickOnAcademyCreditCardFooterLink() throws Exception {
 
 		{
@@ -57,6 +77,7 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 			}
 		}
 	}
+
 	public void clickOnASOLogo() throws Exception {
 
 		{
@@ -180,6 +201,7 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 			logger.debug("Search Field is not displayed++++++++++++++++++++++++==");
 		}
 	}
+
 	public void verifyPresenceOfSearchIcon() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
@@ -191,6 +213,7 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 			logger.debug("Search Icon is not displayed++++++++++++++++++++++++==");
 		}
 	}
+
 	public void verifyPresenceOfDealsTab() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
@@ -224,6 +247,7 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 		}
 
 	}
+
 	public void verifyPresenceOfApplyNowButton() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
@@ -235,6 +259,7 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 			logger.debug("Apply Now button is not displayed++++++++++++++++++++++++==");
 		}
 	}
+
 	public void verifyPresenceOfManageYourCardLink() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
@@ -246,6 +271,7 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 			logger.debug("Manage your card is not displayed++++++++++++++++++++++++==");
 		}
 	}
+
 	public void verifyPresenceOfPLCCCreditCardImage() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
@@ -257,6 +283,7 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 			logger.debug("PLCC Credit Card Image is not displayed++++++++++++++++++++++++==");
 		}
 	}
+
 	public void enterEmailTxtFieldOnSignInPage(String arg) throws Exception {
 		setInputText(emailTxtField, webPropHelper.getTestDataProperty(arg));
 	}
@@ -264,8 +291,7 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 	public void enterPasswordTxtFieldOnSignInPage(String arg) throws Exception {
 		setInputText(passwordTxtField, webPropHelper.getTestDataProperty(arg));
 	}
-	
-	
+
 	public void verifyPresenceOfPreescreenErrorCode() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(prescreenErrorCode);
@@ -285,6 +311,7 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 			logger.debug("Pre-screen Text Field is displayed");
 		}
 	}
+
 	public void verifyPresenceOfAcceptOffer() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(acceptOfferBtn);
@@ -294,11 +321,11 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 			logger.debug("Accept Offer is displayed");
 		}
 	}
+
 	public void enterPrescreenCode(String arg) throws Exception {
 		setInputText(prescreenCodeTextField, webPropHelper.getTestDataProperty(arg));
 	}
-	
-	
+
 	public void verifyPresenceOfAcademyCreditCardFooterLink() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(academyCreditCardFooterLink);
@@ -308,7 +335,8 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 			logger.debug("Academy Credit Card Footer Link is displayed");
 		}
 	}
-	//Footer link navigation:
+
+	// Footer link navigation:
 	public void verifyPresenceOfOurHistoryPage() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("/shop/en/store/company-info")) {
@@ -318,7 +346,7 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 		}
 
 	}
-	  
+
 	public void verifyPresenceOfCareersPage() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("careers.academy.com")) {
@@ -328,26 +356,27 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper{
 		}
 
 	}
+
 	public void verifyPresenceOfPressReleasesPage() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("/shop/browse/press-releases-new")) {
 			logger.debug("User is successfully navigated to Press Releases page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Press Releases Page instead navigated to URL :: " + currentURL);
+			logger.debug(
+					"User is not able to navigate to Press Releases Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
+
 	public void verifyPresenceOfPressInvestersPage() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("/shop/en/store/investors")) {
 			logger.debug("User is successfully navigated to Press Investers page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Press Investers Page instead navigated to URL :: " + currentURL);
+			logger.debug(
+					"User is not able to navigate to Press Investers Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
-	
-	
-	
-	
+
 }
