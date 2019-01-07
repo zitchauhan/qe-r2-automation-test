@@ -368,6 +368,9 @@ public class R1_PDP_PO extends CommonActionHelper
 	public WebElement YouthSoccerCategory_M;
 	@FindBy(xpath = "//a[@data-auid='level3Category-Soccer_m']")
 	public WebElement btnSoccerCategory_M;
+	@FindBy(xpath = "//*[@data-auid='tooltipproductBopisMsg']/following-sibling::*") 	public WebElement storeTimingPDP;  //SID 2-Jan
+	
+	
 	
 	@FindBy(xpath = "//a[@data-auid='level4Category-Helmets & Masks_m']")
 	public WebElement HelmetsCategory_M;
