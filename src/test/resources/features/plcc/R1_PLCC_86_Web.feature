@@ -12,30 +12,27 @@ Background:
 	Then user expect Landing page to be present 
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 
-	When user enter First Name on credit card Application Modal "FirstName"
-	And user enter Last Name user_enter_Last_Name "LastName" 
+	When user enter First Name "FirstName"
+	And user enter Last Name "LastName" 
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
-	And user enter Annual Income "AnnualIncome"
+	And user enter Annual Income "Annual Income"
 	And user enter Street Address "StreetAddress" 
 	And user enter Suite or Apartment "SuiteOrApartment"
 	And user enter City "City"
 	And user select State "State"
-	And user enter Zip Code on credit card Application Modal "ZipCode"
-	And user enter Email Address on credit card Application Modal "EmailId"
+	And user enter Zip Code "ZipCode"
+	And user enter Email Address "EmailId"
 	And user enter Confirm Email Address "ConfirmEmailId"
 	And user enter Mobile Phone "MobilePhone"
 	And user enter Alternate Phone "AlternatePhone"
 	And user click on CONTINUE button
 	And user select credit application modal agree message 
-	And user click on SUBMIT button
 	Then user navigates to credit card approval modal 
 	When user click on continue to checkout 
 	
 Scenario: Verify the default payment method when tries to  place an another order 
-	Then user navigates to cart page
-	#/shop/cart
-	When user click on continue shopping  button
+	And user clicks on checkout button and navigates to checkout page 
 	Then user navigates to ASO-Home page 
 	#And user expect element ASO Home Page Title to be present
 	When user enters "SKUIdOfProduct" in the search box 
@@ -43,4 +40,4 @@ Scenario: Verify the default payment method when tries to  place an another orde
 	And user click on Add to cart button 
 	And user click on checkout from ATC pop up 
 	And user clicks on checkout button and navigates to checkout page 
-	#And user selects credit card radio button 
+	#And user selects credit card radio button
