@@ -206,6 +206,58 @@ public WebElement DdFilter_M;
 @FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_Shipping & Pickup'] | //*[@data-auid='facetdrawer_drawer_Shipping & Pickup_m']")//CR-DPK 26-sept
 public WebElement txtShippingPickupFilterDrawer; 
 
+@FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_Shipping & Pickup']")
+public WebElement txtShippingPickupFilterDrawerPLP;   //SID 10-Jan
+
+@FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_Shipping & Pickup_m']")
+public WebElement txtShippingPickupFilterDrawer_M;   //SID 10-Jan
+
+@FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_Shipping & Pickup']//i")//CR-DPK 26-sept
+public WebElement txtShippingPickupFilterDrawerExpandIcon;   //SID 10-Jan
+
+
+@FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_Shipping & Pickup_m']//i")//CR-DPK 26-sept
+public WebElement txtShippingPickupFilterDrawerExpandIcon_M;   //SID 10-Jan
+
+
+@FindBy(xpath ="//*[@data-auid='drawer_Store Pickup']/input")//CR-DPK 26-sept
+public WebElement selectStorePickUp;   //SID 10-Jan
+
+@FindBy(xpath ="//*[@data-auid='drawer_Shipping']/input")//CR-DPK 26-sept
+public WebElement selectShipping;   //SID 10-Jan
+
+@FindBy(xpath ="//*[@data-auid='drawer_Store Pickup']//*[text()='Store Pickup']")//CR-DPK 26-sept
+public WebElement txtStorePickUp;   //SID 10-Jan
+
+@FindBy(xpath ="//*[@data-auid='drawer_Shipping']//*[text()='Shipping']")//CR-DPK 26-sept
+public WebElement txtShipping;   //SID 10-Jan
+
+
+@FindBy(xpath ="//*[@data-auid='clearAll']/parent::div//span[text()='Shipping']")//CR-DPK 26-sept
+public WebElement shippingFilterApplied;   //SID 10-Jan
+
+
+@FindBy(xpath ="//*[@data-auid='clearAll']/parent::div//span[text()='Store Pickup']")//CR-DPK 26-sept
+public WebElement storePickUpFilterApplied;   //SID 10-Jan
+
+
+
+@FindBy(xpath ="//*[@data-auid='drawer_Store Pickup']//a")//CR-DPK 26-sept
+public WebElement changePickUpLocationPLP;   //SID 10-Jan
+
+@FindBy(xpath ="//*[@data-auid='drawer_Store Pickup']//following-sibling::span/span[1]")//CR-DPK 26-sept
+public WebElement bopisStoreNamePLP;   //SID 10-Jan
+
+@FindBy(xpath ="(//*[@data-auid='facetdrawerundefined']/button/*/*/*[1])[2]")//CR-DPK 26-sept
+public WebElement storeNameStoreModalPLP;   //SID 10-Jan
+
+
+@FindBy(xpath ="//*[@id='productCardListing']/*")//CR-DPK 26-sept
+public WebElement bopisNoInventoryMesssagePLP;   //SID 10-Jan
+
+
+
+
 @FindBy(xpath ="//*[text()='Change Pickup Location']")//CR-DPK 26-sept
 public WebElement lnkPLPChangePickupLocation;
 //End KER-2872 CR-DPK

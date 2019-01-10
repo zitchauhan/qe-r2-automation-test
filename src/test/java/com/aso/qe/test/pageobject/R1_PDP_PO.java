@@ -222,6 +222,10 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "(//*[contains(text(),'Checkout')])[1]")public WebElement btnCheckoutReskin;
 	@FindBy(xpath = "(//*[@data-auid='PDP_ProductImage_m']//img)[3]")public WebElement SLRPDPRepresentative;  //SID 19-October
 	
+	@FindBy(xpath ="//*[@data-component='productDetailsGeneric']//*[@id='PMC']/*") public WebElement legalMessageAmmoPDP;  //SID 7-Jan
+	@FindBy(xpath ="//*[@data-auid='PDP_IventoryMessage']/following-sibling::div/a") public WebElement storeNameClick;  //SID 7-Jan
+	
+	
 	//***********************************************************************************************************//
 	@FindBy(xpath="//*[contains(@class,'ReactModal__Content ReactModa')]//*[@data-auid='btnviewCart']") public WebElement btnAddToCartModal; //SID Modified 17-October
 

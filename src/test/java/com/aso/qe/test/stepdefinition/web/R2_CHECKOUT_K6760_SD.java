@@ -63,7 +63,10 @@ public class R2_CHECKOUT_K6760_SD extends CommonActionHelper {
 
 	@And("^user click on go to payment present in shipping method$")
 	public void user_click_on_go_to_payment_present_in_shipping_method() throws InterruptedException {
-		if (isDisplayed(r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn))
+		boolean flag=false;
+		flag=isDisplayed(r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn);
+		System.err.println(flag);
+		if (flag)
 			assertTrue(clickOnButton(r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn));
 		     Thread.sleep(Constants.thread_low);
 	}

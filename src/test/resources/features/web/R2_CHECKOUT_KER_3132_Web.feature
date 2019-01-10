@@ -113,7 +113,7 @@ When user clicks on Find a Store
 	And user click on submit button
 	Then user click on plus icon in Store Address drawer
 	And user click on Make My store button	
-Then user navigate to GunStorageAndSafty L_Three   
+	Then user navigate to GunStorageAndSafty L_Three   
     Then user select the product from L_Three and navigate to PDP
     And user click on Add to Cart Button 
     	And user is navigated to Add to cart Notification popup 

@@ -223,6 +223,26 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	//KER-3238 Ak start
 	@FindBy(xpath="//*[@data-auid='level3Category-Shooting']/a") public WebElement txtShooting;
 	@FindBy(xpath="//*[@data-auid='level2Category-Outdoors_m']") public WebElement txtOutDoor_M;
+	@FindBy(xpath="//*[@data-auid='level3Category-Hunting']/a") public WebElement txtHunting;  //SID 7-Jan
+	@FindBy(xpath="//*[@data-auid='level3Category-Hunting_m']") public WebElement txtHunting_M;  //SID 7-Jan
+	@FindBy(xpath="//*[@data-auid='level4Category-Ammunition']") public WebElement clickAmmo;  //SID 7-Jan
+	@FindBy(xpath="//*[@data-auid='level4Category-Ammunition_m']") public WebElement clickAmmo_M;  //SID 7-Jan
+	@FindBy(xpath="//*[@data-auid='level3Category-Shooting_m']") public WebElement clickShooting_M;  //SID 7-Jan
+	@FindBy(xpath="//*[@data-auid='go-to-Hunting_m']") public WebElement clickHunting_M;  //SID 7-Jan
+	@FindBy(xpath="//img[@alt='Hunting Accessories']") public WebElement clickHuntingAccessories;  //SID 7-Jan
+	@FindBy(xpath="//*[@data-auid='drawer_Scents & Scent Eliminators']/a") public WebElement clickCategoryScentsEliminators;  //SID 7-Jan
+	@FindBy(xpath="//*[@data-auid='drawer_Scents & Scent Eliminators_m']/a") public WebElement clickCategoryScentsEliminators_M;  //SID 7-Jan
+	@FindBy(xpath="//*[@data-auid='drawer_Scents']/a") public WebElement clickCategoryScents;  //SID 7-Jan 
+	@FindBy(xpath="//*[@data-auid='drawer_Scents_m']/a") public WebElement clickCategoryScents_M;  //SID 7-Jan 
+	@FindBy(xpath="//*[@class='special_price']/*[1]") public WebElement forSpecialPricingMessage;  //SID 7-Jan 
+	@FindBy(xpath="//*[@class='special_price']/*[2]") public WebElement specialPriceMobileNumber;  //SID 7-Jan 
+	
+	
+	
+	
+	
+	
+	
 	@FindBy(xpath="//*[@data-auid='level2Category-Outdoors']") public WebElement txtOutDoor;
 	@FindBy(xpath="//*[@data-auid='level3Category-Shooting_m']") public WebElement txtShooting_M;
 	@FindBy(xpath="//*[@data-auid='go-to-Shooting_m']/a") public WebElement txtShootingNavg_M;
@@ -285,6 +305,10 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='level2Category-Holiday Deals_m']")public WebElement clickDealItem;//SID modified 4-December
 	@FindBy(xpath="//span[text()='Water Parks & Slides']") public WebElement searchTerm;
 	@FindBy(xpath="//div[@class='container css-tnijvs']//h2") public WebElement searchTerm_M;
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing\"]//*[@data-auid='level4Category-Shirt']") public WebElement plpMensShirt;    //SID 10-Jan
+	
+	
+	
 	
 	//**SID END*********************************************************************************************************************************************
 	//@FindBy(xpath="//*[(text()=\"Men's Shirts\")]") public WebElement txtMensShrit;/RKA 22 aug

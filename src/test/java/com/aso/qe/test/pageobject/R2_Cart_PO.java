@@ -172,11 +172,19 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='submit-zip-code']/span")//duplicate btnZipcodeSubmit
 	public WebElement submitZipCode;
 
-	@FindBy(xpath = "//*[@name='zipcode']")
-	public WebElement textzipCode;
+	@FindBy(xpath = "//*[@name='zipcode'] | //*[@data-auid='find-a-store']/input")
+	public WebElement textzipCode;  // SID Modified 8-Jan
 
 	@FindBy(xpath = "//*[text()='Closest Stores to Your Location']")
 	public WebElement storeDetails;
+	
+	@FindBy(xpath = "//*[@id='disclaimerMessaging']/*[1]")
+	public WebElement leaglMessageAmmoCart;   //SID 7-Jan
+	
+	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']//div[2]//span")
+	public WebElement clickInStorePickUp;   //SID 8-Jan
+	
+	
 
 	//********************find a store  end ********************************
 	
@@ -688,6 +696,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 			while(isDisplayed(btnRemoveCart)) {
 				clickOnButton(btnRemoveCart);
 				Thread.sleep(Constants.thread_highest);
+				Thread.sleep(Constants.thread_medium);
 				if(isDisplayed(cartEmptyTxt)) {
 					break;
 				}

@@ -59,27 +59,23 @@ Scenario: Verify My Store functionality and modal close behavior
 	And user verify Find a Store popup is closed
 	
 	
-@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872 @ZYP_CART_K2872-10617 @CR-DPK @C-BOPIS
-Scenario: Verify that user is able to seethe Change Location link on PLP BOPIS filter page
+@R2_Web @R2_All @P-High_B @C-PLP @KER-2872 @ZYP_CART_K2872-10617 @C-BOPIS
+Scenario: Verify that user is able to see the Change Location link on PLP BOPIS filter page
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on Find a Store
-	Then user enter "zipCode" in Find a Store Model
-	And user click on submit button
-	Then user click on plus icon in Store Address drawer
-	And user click on Make My store button	 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "Postal_Code"  
 	And User Navigates L2 form Homepage Header
 	When user lands on the PLP page with Filter Drawer 
 	And user is able to see Change Pickup Location link in PLP		
 	
 
-@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872 @ZYP_CART_K2872-10618 @CR-DPK @C-BOPIS
+@R2_Web @R2_All @P-High_B @C-PLP @KER-2872 @ZYP_CART_K2872-10618 @C-BOPIS
 Scenario: Verify that user is able to open the Find Store modal from PLP for BOPIS filter
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on Find a Store
-	Then user enter "zipCode" in Find a Store Model
-	And user click on submit button
-	Then user click on plus icon in Store Address drawer
-	And user click on Make My store button	 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "Postal_Code"  
 	And User Navigates L2 form Homepage Header
 	When user lands on the PLP page with Filter Drawer 
 	And clicks on the Change Pickup Location link in PLP
@@ -210,16 +206,15 @@ Scenario: Verify user is displayed with an error message when there is no store 
 	Then verify Static error message
 	
 	
-@R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-2872 @ZYP_CART_K2872-10726 @CR-DPK @C-BOPIS
+@R2_Web @R2_All @P-Low @C-Cart @KER-2872 @ZYP_CART_K2872-10726 @C-BOPIS
 Scenario: Verify user is able to see the BOPIS availability on store details drawer for the products added in cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	 When user enters "SOFSKUNumber" in the search box
-	Then user click on Add to Cart Button
-	And user will click on View Cart button 
-	And click on Change Location link
-	Then user enter "zipCode" in Find a Store Model
-	And user click on submit button
-	Then user click on all plus icon in Store Address drawer
+	When user enters "BOPIS_Product" in the search box 
+	Then user click on Add to Cart Button 
+	And user will click on View Cart button
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2"  
 	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
 	
 	
@@ -262,4 +257,14 @@ Scenario: Verify find a store Modal closes On Select "Close X" and If a user sel
 	And user verify Find a Store popup
 	Then Close X Find a store Modal 
 		
+		
+@C-BOPIS @R2_Web  @R2_All @P-Highest @CB-Cart @KER-2872 @ZYP_CART_K2872-9982
+Scenario: Verify user can change the store using Find in Store modal 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user enters "BOPIS_Product" in the searchbox
+	And user click on Add to Cart Button 
+	And user click on view cart
+	Then user select in store pickup option
+	Then user click on find a store option
+	When User select store with "BOPIS_Store2"
 	

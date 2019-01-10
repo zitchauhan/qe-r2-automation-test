@@ -71,6 +71,7 @@ R2_Cart_PO cartPO = PageFactory.initElements(driver, R2_Cart_PO.class);
 		}else
 		{
 			waitForElement(pdpPageObj.btnCheckout);
+			isDisplayed(pdpPageObj.btnCheckout);
 			assertTrue(clickOnButton(pdpPageObj.btnCheckout));
 		}
 

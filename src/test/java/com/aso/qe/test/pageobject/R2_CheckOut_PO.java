@@ -387,7 +387,12 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   public WebElement StoreNameandAddress_Txt;
 	   
 	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']")
-	   public WebElement ChangeLocation_Lnk;
+	   public WebElement ChangeLocation_Lnk;  //SID 8-Jan
+	   
+	   
+	   @FindBy(xpath="//*[@data-auid='cart_radio_button_div']//*[text()='Find a Store']")
+	   public WebElement findAStoreCart;  //SID 8-Jan
+	 
 	   
 	   @FindBy(xpath="//*[contains(text(),'Items for Pickup')]/..")
 	   public WebElement ItemsForPickup_Itemcount_Txt;
@@ -900,6 +905,11 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	  
 	  //End KER-2925 CR-AG 21-Sep
 	 
+		
+		@FindBy(xpath="//*[@data-auid='checkout_review_order']//input") public WebElement ageRestrictionCheckBox;  //SID 7-Jan 
+		
+		
+		
 	 
     /**AG KER-3130 Ends**************************************/
 

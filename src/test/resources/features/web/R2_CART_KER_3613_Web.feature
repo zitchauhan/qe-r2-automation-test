@@ -6,21 +6,20 @@ Scenario: Verify that user should be able to click select store in header & open
 	When clicks on the Select Store link in the header
 	Then user should be able to see the Find a Store modal prompting up
 
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10759 @CR-RK
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10759
 Scenario: Verify that the user should be able to search the store details by entering ZIP code
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When clicks on the Select Store link in the header
-	Then user enters ZIP "FindStoreZipcode" code manually in the search input bar
+	Then user enters ZIP "BOPIS_Store2" code manually in the search input bar
 	And Clicks submit button
-	And store results should get displayed on the basis of ZIPCode entered
+	Then user click on plus icon in Store Address drawer 
+	And user verify the store corresponding to zipcode entered "BOPIS_Store2"
 	
-	@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10758 @CR-RK	
+	
+	@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10758
 	Scenario: Verify that the user should be displayed with an  error message when there is no store within 250 miles (or configured value)
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne SOF
-    Then user clicks on one of the subcategory and navigates to LTwo SOF
-    Then user clicks on one of the product category and navigates to LThree SOF
-	Then User is navigated to pdp page
+	Given user launches the browser and navigates to "ASO_HOME" page
+	When user enters "BOPIS_Product" in the searchbox
 	And clicks on the Change Pickup Location link
 	Then user should be able to see the Find a Store modal
 	Then user enter "WrongzipCode" in Find a Store Model
@@ -38,18 +37,6 @@ When user clicks on one of the category and navigates to LOne SOF
 	And clicks on the Change Pickup Location link
 	Then user should be able to see the Find a Store modal
 	
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10759 @CR-RK        
-Scenario: Verify that  the user should be able to  search the store details by entering ZIP code
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on one of the category and navigates to LOne SOF
-    Then user clicks on one of the subcategory and navigates to LTwo SOF
-    Then user clicks on one of the product category and navigates to LThree SOF
-	Then User is navigated to pdp page
-	And clicks on the Change Pickup Location link
-	Then user should be able to see the Find a Store modal
-	Then user enter "zipCode" in Find a Store Model
-	And user click on submit button
-	Then verify the components in Find a Store Model
 
 	
 @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10769 @CR-RK 	

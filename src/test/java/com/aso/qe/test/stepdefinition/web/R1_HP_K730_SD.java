@@ -1,5 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertTrue;
+
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -9,6 +11,7 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_FindStore_PO;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -18,6 +21,7 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_HP_K730_SD.class);
 	public R1_FindStore_PO findStorePO = PageFactory.initElements(getDriver(), R1_FindStore_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(getDriver(),R1_GlobalElementHeader_Home_PO.class);
+	R2_R1_Fun_PO r2r1FunPo = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	String store = "";
 	
 	@Then("^User should be able to click on Find Store$")

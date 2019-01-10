@@ -7,10 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
+import com.aso.qe.test.pageobject.R1_FindStore_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
-
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -19,6 +20,7 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 	R2_Cart_PO r2CartPO=PageFactory.initElements(driver, R2_Cart_PO.class);
 	R2_R1_Fun_PO r2R1FunPO=PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	R2_Sanity_PO r2SanityPo=PageFactory.initElements(driver,R2_Sanity_PO.class);
+	R1_FindStore_PO findStorePo=PageFactory.initElements(driver,R1_FindStore_PO.class);
 	
 	@When("^clicks on the Select Store link in the header$")
 	public void clicks_on_the_Select_Store_link_in_the_header() throws Throwable {
@@ -107,6 +109,19 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 	@Then("^user should be able to see the Find a Store modal$")
 	public void user_should_be_able_to_see_the_Find_a_Store_modal() throws Throwable {
 		assertTrue(isDisplayed(r2CartPO.fieldStoreModal)); 
+	}
+	
+	@And("^user verify the store corresponding to zipcode entered \"(.*?)\"$")
+	public void user_verify_the_store_corresponding_to_zipcode_entered(String zipcode) {
+		boolean flag=false;
+		System.err.println("Expected: "+webPropHelper.getTestDataProperty(zipcode)+ " we get :" +findStorePo.storeZipCode.getText());
+		flag= findStorePo.storeZipCode.getText().contains(webPropHelper.getTestDataProperty(zipcode));
+		if(flag) {
+			assertTrue(flag);
+		}
+		else {
+			assertTrue(flag);
+		}
 	}
 
 }

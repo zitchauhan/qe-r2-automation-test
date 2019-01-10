@@ -1,5 +1,7 @@
 package com.aso.qe.test.pageobject;
 
+import static org.junit.Assert.assertTrue;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
+
+import cucumber.api.java.en.And;
 
 public class R1_FindStore_PO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_FindStore_PO.class);
@@ -36,6 +40,9 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	@FindBy(xpath="//*[@id='mainLoadStores']") public WebElement btnGoSearchStore;
 	@FindBy(xpath="//*[@class='myStoreLogo']//parent::div//following-sibling::ul//span[contains(@id,'screenReader')]") public WebElement imgMyStoreLogo;
 	@FindBy(xpath="//*[@data-auid='find-a-store-modal-close']")public WebElement findAstoreXBTN_M;
+	@FindBy(xpath="//*[@data-auid='find-a-store-modal']//*[contains(text(),'Closed')]")public WebElement storeClosed;  //SID 7-Jan
+	@FindBy(xpath="(//*[@data-auid='btnfind-a-store-mystore-button'])[1]/parent::div/*[1]/*[1]/*[1]/*/*[2]")public WebElement storeZipCode;  //SID 8-Jan
+	
 	
 	public R1_FindStore_PO(WebDriver webDriver) {
 		super();
@@ -120,6 +127,7 @@ public class R1_FindStore_PO extends CommonActionHelper {
 		}
 		
 	}
+	
 	
 	
 	

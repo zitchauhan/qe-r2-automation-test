@@ -245,7 +245,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));
 			Thread.sleep(2000);
-			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));//Due to existing defect clicking is required
+//			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));//Due to existing defect clicking is required
 			logger.debug("User entered search key :: " + searchText);
 		}
 	}

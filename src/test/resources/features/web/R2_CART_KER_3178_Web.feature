@@ -22,18 +22,20 @@ Given user launches the browser and navigates to "ASO_HOME" page
    And click on Change Location link
    Then Find in Store modal should get open
     
-    @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Highest @CB-Cart @KER-3178 @ZYP_CART_K3178-9942 @CR-AG
-Scenario: Verify user can change the store using Find in Store modal
-Given user launches the browser and navigates to "ASO_HOME" page 
-		When user clicks on SignIn link from global header 
-	And user logs in as "EmailAddress"
-	When User searches a product "productName" and navigates to PDP
+@C-BOPIS @R2_Web @R2_All @P-Highest @CB-Cart @KER-3178 @ZYP_CART_K3178-9942 
+Scenario: Verify user can change the store using Find in Store modal 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user logs in as "Bopis_Email" 
+	When user enters "BOPIS_Product" in the searchbox
 	And user click on Add to Cart Button 
+	And user click on view cart
+	Then user select in store pickup option
 	And user click on checkout button
-     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"   
-    When user navigates to checkout page
-    
-    
+	Then user click on change location button
+	When User select store with "BOPIS_Store2"
+	
+	
     @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-3178 @ZYP_CART_K3178-9943 @CR-AG
 Scenario: Verify the user is able to see the full inventory availability on Find a store modal
 Given user launches the browser and navigates to "ASO_HOME" page 
