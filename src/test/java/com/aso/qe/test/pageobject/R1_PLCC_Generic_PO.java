@@ -37,6 +37,9 @@ public class R1_PLCC_Generic_PO extends CommonActionHelper {
 	public WebElement plccCardOnCreditCardTxtField;
 	@FindBy(xpath = "//*[text()='Unrecognized card number']")
 	public WebElement invalidCardNumberErrorMsg;
+	// Footer
+	@FindBy(xpath = "//*[@data-auid='checkout_footer_accepted_card_PLCC_icon']")
+	public WebElement plccCreditCardImageFooter;
 
 //Payment Page Card Images
 	@FindBy(xpath = "//*[@src='/content/dam/academysports/cart-and-checkout/cards-accepted/plcc.png']")
@@ -301,6 +304,18 @@ public class R1_PLCC_Generic_PO extends CommonActionHelper {
 			logger.error("Exception in  isDisplay msg::" + e.getMessage());
 		}
 		return flag;
+	}
+
+	public void verifyPresenceOfPlccCreditCardInFooter() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(plccCreditCardImageFooter);
+			logger.debug("PLCC Credit Card Image in fooer is displayed++++++++++++++++++++++++==");
+		} else {
+			isDisplayed(plccCreditCardImageFooter);
+			logger.debug("PLCC Credit Card Image in fooer is displayed++++++++++++++++++++++++==");
+		}
+
 	}
 
 }
