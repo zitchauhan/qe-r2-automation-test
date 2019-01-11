@@ -17,7 +17,7 @@ Background: User Login and common steps for identifying card type entering BIN
 	#And user selects credit card radio button
 	And user expect element credit card text field is present 
 
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-83 
+@Regression @Web @All @C-VidyaSiddaramappa @PLCC-84 
 Scenario: Verify an error message when user enters wrong card number and click on review order button 
 	When user enter plcc card "InvalidCard" 
 	And user click on REVIEW ORDER button
