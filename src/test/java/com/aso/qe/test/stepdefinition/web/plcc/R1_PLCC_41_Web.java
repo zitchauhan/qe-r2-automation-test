@@ -42,5 +42,9 @@ public class R1_PLCC_41_Web extends CommonActionHelper {
 	public void user_expect_element_User_Select_Address_to_be_present() throws Throwable {
 		plccPageObjects.verifyPresenceOfUserSelectedAddressBtn();
 	}
-
+	@When("^user click on burger menu$")
+	public void user_click_on_burger_menu() throws Throwable {
+		globalElementHeader.clickOnBurgerMenu();
+	}
+	//validatePresenceOfMyAccountLink
 }
