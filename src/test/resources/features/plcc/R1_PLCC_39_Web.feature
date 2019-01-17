@@ -1,6 +1,6 @@
 Feature: Landing Page 
 
-@Regression @Web @All @C-Vidya @PLCC-39 
+@C-PLCC @Regression @All @PLCC-39 @CR-VS 
 Scenario: Verify URL Redirect links from CBCC to PLCC-Landing Page by clicking on Academy Credit Card link for logged in user 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 

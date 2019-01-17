@@ -1,6 +1,6 @@
 Feature: Landing Page 
 
-@Regression @Web @All @C-Vidya @PLCC-34 
+@C-PLCC @Regression @All @PLCC-34 @CR-VS
 Scenario: Verify user is able to navigate to PLCC landing page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
@@ -8,7 +8,7 @@ Scenario: Verify user is able to navigate to PLCC landing page
 	And user expect element Benefits section to be present
 	And user expect element prescreen section to be present
 	
-@Regression @Web @All @C-Vidya @PLCC-34 
+@C-PLCC @Regression @All @PLCC-34 @CR-VS 
 Scenario: Verify the display of Header components on PLCC landing page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
@@ -23,7 +23,7 @@ Scenario: Verify the display of Header components on PLCC landing page
 	And user expect element My Account Link to be present 
 	And user expect element WeeklyAd Link to be present 
 	
-@Regression @Web @All @C-Vidya @PLCC-34 
+@C-PLCC @Regression @All @PLCC-34 @CR-VS 
      Scenario: Verify the display of Hero Banner  on PLCC landing page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
@@ -32,7 +32,7 @@ Scenario: Verify the display of Header components on PLCC landing page
 	And user expect element ManageYourCardLink to be present 
 	And user expect element PLCCCreditCardImage to be present 
 	
-@Regression @Web @All @C-Vidya @PLCC-34  
+@C-PLCC @Regression @All @PLCC-34 @CR-VS  
 Scenario: Verify the display of Footer components on PLCC landing page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
@@ -67,7 +67,7 @@ Scenario: Verify the display of Footer components on PLCC landing page
 	And user expect element ShoppingIndex to be present 
 	And user expect element BrandsIndex to be present  
 	
-@Regression @Web @All @C-Vidya @PLCC-34  
+@C-PLCC @Regression @All @PLCC-34 @CR-VS  
 Scenario: Verify the navigation of Footer Links -ThisIsAcademy Section
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
@@ -79,7 +79,7 @@ Scenario: Verify the navigation of Footer Links -ThisIsAcademy Section
 	When user expect element PressReleases to be present
 	When user expect element Investors to be present
 	
-@Regression @Web @All @C-Vidya @PLCC-34  
+@C-PLCC @Regression @All @PLCC-34 @CR-VS  
 Scenario: Verify the navigation of Footer Links -NeedHelp Section
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
@@ -92,7 +92,7 @@ Scenario: Verify the navigation of Footer Links -NeedHelp Section
 	And user expect element PhoneNumberL to be present
 	And user expect element CustomerCare to be present
 	
-@Regression @Web @All @C-Vidya @PLCC-34  
+@C-PLCC @Regression @All @PLCC-34 @CR-VS  
 Scenario: Verify the navigation of Footer Links -Services Section
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
@@ -103,7 +103,7 @@ Scenario: Verify the navigation of Footer Links -Services Section
 	And user expect element AcademyCreditCard to be present 
 	And user expect element StoreServicesLink to be present
 	
-@Regression @Web @All @C-Vidya @PLCC-34  
+@C-PLCC @Regression @All @PLCC-34 @CR-VS 
 Scenario: Verify the navigation of Footer Links - General
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
@@ -112,7 +112,7 @@ Scenario: Verify the navigation of Footer Links - General
 	And user expect element SignUpForMoreDeals to be present 
 	And user expect element ChatNoW to be present 
 	 
-@Regression @Web @All @C-Vidya @PLCC-34  
+@C-PLCC @Regression @All @PLCC-34 @CR-VS  
 Scenario: Verify the navigation of Footer Links -Social Media Links	 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
@@ -122,7 +122,7 @@ Scenario: Verify the navigation of Footer Links -Social Media Links
 	And user expect element YouTube to be present 
 	And user expect element Instagram to be present 
 	
-@Regression @Web @All @C-Vidya @PLCC-34  
+@C-PLCC @Regression @All @PLCC-34 @CR-VS  
 Scenario: Verify the navigation of Footer Links -T&C Links
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
@@ -132,7 +132,7 @@ Scenario: Verify the navigation of Footer Links -T&C Links
 	And user expect element CaliforniaTransparencyinSupplyChainAct to be present 
 	And user expect element © 2018 Academy Sports + Outdoors. All Rights Reserved to be present
 	
-@Regression @Web @All @C-Vidya @PLCC-34 
+@C-PLCC @Regression @All @PLCC-34 @CR-VS 
 Scenario: Verify the navigation of Footer Links -Additional Links
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 

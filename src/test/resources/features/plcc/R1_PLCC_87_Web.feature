@@ -17,7 +17,7 @@ Background: User Login and common steps for identifying card type entering BIN
 	#And user selects credit card radio button
 	And user expect element credit card text field is present 
 
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-87 
+@C-PLCC @Regression @All @PLCC-87 @CR-VS 
 Scenario: Verify the PLCC card image in footer when customer is on checkout page 
 	Then user expect element plcc card image in footer to be present
 	

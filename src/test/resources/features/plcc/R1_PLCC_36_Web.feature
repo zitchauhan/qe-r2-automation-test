@@ -1,6 +1,6 @@
 Feature: Landing Page 
 
-@Regression @Web @All @C-Manju @PLCC-36 
+@C-PLCC @Regression @All @PLCC-36 @CR-VS 
 Scenario: Verify the display of container information on PLCC landing page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 

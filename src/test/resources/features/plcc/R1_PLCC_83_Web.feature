@@ -17,12 +17,12 @@ Background: User Login and common steps for identifying card type entering BIN
 	#And user selects credit card radio button
 	And user expect element credit card text field is present 
 	
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-83 
+@C-PLCC @Regression @All @PLCC-83 @CR-VS 
 Scenario: Verify the functionality of Hiding expiry date section when system identifies BIN number for PLCC Credit card 
 	When user enter plcc card "starting3digitsplccCard" 
 	Then user expect element expiry field to be not present 
 	
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-83 
+@C-PLCC @Regression @All @PLCC-83 @CR-VS 
 Scenario: Verify the system behavior of Hiding expiry date section when user enters different payment card other than PLCC credit card
 	When user enter visa card "starting2digitsvisaCard" 
 	Then user expect selected credit card image on credit card text field 

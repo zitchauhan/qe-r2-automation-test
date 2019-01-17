@@ -17,7 +17,7 @@ Background: User Login and common steps for identifying card type entering BIN
 	#And user selects credit card radio button
 	And user expect element credit card text field is present 
 	
- @Regression @Web @All @C-VidyaSiddaramappa @PLCC-81	
+@C-PLCC @Regression @All @PLCC-81 @CR-VS	
 Scenario: Verify the system behavior when user enter 778 as three digit BIN number 
 	When user enter plcc card "starting3digitsplccCard"
 	Then user expect selected credit card image on credit card text field  

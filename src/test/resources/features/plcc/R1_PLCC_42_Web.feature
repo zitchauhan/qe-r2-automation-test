@@ -27,30 +27,30 @@ Background:
 	And user expect element SIGN UP to be present 
 	And user click on SIGN UP 
 	
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-42 
+@C-PLCC @Regression @All @PLCC-42 @CR-VS 
 Scenario: Verify the display of address verification model after clicking on Sign Up button when AVS is unable to verify the provided address
 	And user expect element User Select Address to be present
 
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-42 
+@C-PLCC @Regression @All @PLCC-42 @CR-VS
 Scenario: Verify the elements available on Address Verification model 
 	When user expect element entered address to be present 
     Then user expect element suggested address to be present
 	And user expect element User Select Address to be present
 
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-42 
+@C-PLCC @Regression @All @PLCC-42 @CR-VS
 Scenario: Verify whether user able to select enetered address and proceed to register 
  	When user expect element entered address to be present 
     Then user expect element suggested address to be present
 	And user click on entered address 
 	
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-42 
+@C-PLCC @Regression @All @PLCC-42 @CR-VS 
 Scenario: Verify whether user able to select suggested address and proceed to register 
 	And user expect element User Select Address to be present 
 	And user click on suggested address 
 	When user click on User Select Address 
 	Then user navigates to registration confirmation page 
 	
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-42 
+@C-PLCC @Regression @All @PLCC-42 @CR-VS
 Scenario: Verify whether user able to navigate to registration confirmation page 
 	And user expect element User Select Address to be present 
 	And user click on suggested address 

@@ -63,6 +63,28 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement acceptOfferBtn;
 
+	// BENEFITS
+	@FindBy(xpath = "//*[@data-auid='LandingPage_Benefit-1']")
+	public WebElement benefit1Image;
+	@FindBy(xpath = "//*[@data-auid='LandingPage_Benefit-2']")
+	public WebElement benefit2Image;
+	@FindBy(xpath = "//*[@data-auid='LandingPage_Benefit-3']")
+	public WebElement benefit3Image;
+	// BENEFIT TEXT
+	@FindBy(xpath = "//*[@data-auid='card_benefit-1_Text']")
+	public WebElement benefit1Text;
+	@FindBy(xpath = "//*[@data-auid='card_benefit-2_Text']")
+	public WebElement benefit2Text;
+	@FindBy(xpath = "//*[@data-auid='card_benefit-3_Text']")
+	public WebElement benefit3Text;
+	// OFFER TEXT
+	@FindBy(xpath = "//*[@data-auid='offerText1']")
+	public WebElement offerText1;
+	@FindBy(xpath = "//*[@data-auid='offerText2']")
+	public WebElement offerText2;
+	@FindBy(xpath = "//*[@data-auid='offerText3']")
+	public WebElement offerText3;
+
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
 	public void clickOnAcademyCreditCardFooterLink() throws Exception {
 
@@ -378,12 +400,121 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper {
 		}
 
 	}
+
 	public void verifyPresenceOfLandingPage() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("/shop/store/academy-credit-card")) {
 			logger.debug("User is successfully navigated to ASO Home page with URL :: " + currentURL);
 		} else {
 			logger.debug("User is not able to navigate to ASO Home Page instead navigated to URL :: " + currentURL);
+		}
+	}
+
+	public void verifyPresenceOfBenefit1Image() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(benefit1Image);
+			logger.debug("Benefit 1 Image is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(benefit1Image);
+			logger.debug("Benefit 1 Image is displayed");
+		}
+
+	}
+	public void verifyPresenceOfBenefit2Image() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(benefit2Image);
+			logger.debug("Benefit 2 Image is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(benefit2Image);
+			logger.debug("Benefit 2 Image is displayed");
+		}
+
+	}
+	public void verifyPresenceOfBenefit3Image() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(benefit3Image);
+			logger.debug("Benefit 3 Image is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(benefit3Image);
+			logger.debug("Benefit 3 Image is displayed");
+		}
+
+	}
+	public void verifyPresenceOfBenefit1Text() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(benefit1Text);
+			logger.debug("Benefit text 1 is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(benefit1Text);
+			logger.debug("Benefit text 1 is displayed");
+		}
+
+	}
+	public void verifyPresenceOfBenefit2Text() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(benefit2Text);
+			logger.debug("Benefit text 2 is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(benefit2Text);
+			logger.debug("Benefit text 2 is displayed");
+		}
+
+	}
+	public void verifyPresenceOfBenefit3Text() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(benefit3Text);
+			logger.debug("Benefit text 3 is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(benefit3Text);
+			logger.debug("Benefit text 3 is displayed");
+		}
+
+	}
+	public void verifyPresenceOfOfferText1() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(offerText1);
+			logger.debug("Offer Text 1 is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(offerText1);
+			logger.debug("Offer Text 1 is displayed");
+		}
+
+	}
+	public void verifyPresenceOfOfferText2() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(offerText2);
+			logger.debug("Offer Text 2 is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(offerText2);
+			logger.debug("Offer Text 2 is displayed");
+		}
+
+	}
+	public void verifyPresenceOfOfferText3() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(offerText3);
+			logger.debug("Offer Text 3 is displayed");
+			CommonActionHelper.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(offerText3);
+			logger.debug("Offer Text 3 is displayed");
 		}
 
 	}

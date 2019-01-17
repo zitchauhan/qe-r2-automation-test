@@ -14,18 +14,18 @@ Background:
 	And user expect City is required Name to be present 
 	And user expect State is required to be present 
 	
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-50 @PLCC-127 
+@C-PLCC @Regression @All @PLCC-50 @CR-VS 
 Scenario: Verify an error message without providing mandatory fields.
 	And user expect Zip code is required Name to be present 
 	And user expect Mobile number is required to be present 
 	
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-50 @PLCC-128 
+@C-PLCC @Regression @All @PLCC-50 @CR-VS 
 Scenario: Validate errors providing invalid zip code field 
 	And user enter Zip Code "Invalid_ZipCode" 
 	And user expect Invalid Zip code to be present 
 	And user expect Mobile number is required to be present 
 	
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-50 @PLCC-129 
+@C-PLCC @Regression @All @PLCC-50 @CR-VS 
 Scenario: Validate errors providing invalid phone number field 
 	And user enter Phone number "Invalid_PhoneNumber" 
 	And user expect Mobile number can't be less than ten digits to be present 

@@ -1,6 +1,6 @@
 Feature: Registration 
 
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-41  
+@C-PLCC @Regression @All @PLCC-41 @CR-VS  
 Scenario: Verify the presence of Add Address for faster checkout process checkbox 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
@@ -8,14 +8,14 @@ Scenario: Verify the presence of Add Address for faster checkout process checkbo
 	Then user expect element Add Address for Faster Checkout checkbox to be present
 	 
 
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-41	
+@C-PLCC @Regression @All @PLCC-41 @CR-VS	
 Scenario: Verify Add Address for faster checkout process checkbox is checkable 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link
 	And  user click on Sign Up link  
 	Then user select Add Address for Faster Checkout checkbox
 
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-41
+@C-PLCC @Regression @All @PLCC-41 @CR-VS
 Scenario: Verify the system behavior when user selects Add Company Name, Apt. Number, etc. (Optional) link
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
@@ -24,7 +24,7 @@ Scenario: Verify the system behavior when user selects Add Company Name, Apt. Nu
 	And user click on Add Company name, Apt. Number, etc. (Optional) link
 	And user expect element Add company name, Apt.Number, etc. (Optional) to be present
 	
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-41	
+@C-PLCC @Regression @All @PLCC-41 @CR-VS
 Scenario: Verify the system behavior when user selects Add Address for faster checkout process  checkbox in registration page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 

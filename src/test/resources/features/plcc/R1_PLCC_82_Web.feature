@@ -17,12 +17,12 @@ Background: User Login and common steps for identifying card type entering BIN
 	#And user selects credit card radio button
 	And user expect element credit card text field is present 
 	
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-82
+@C-PLCC @Regression @All @PLCC-82 @CR-VS
 Scenario: Verify the functionality of Hiding CVV section when system identifies BIN number for PLCC Credit card 
 	When user enter plcc card "starting3digitsplccCard" 
 	Then user expect element cvv field to be not present 
 	
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-82 
+@C-PLCC @Regression @All @PLCC-82 @CR-VS
 Scenario: Verify the system behavior of hiding CVV section when user enters different payment card other than PLCC credit card 
 	When user enter visa card "starting2digitsvisaCard" 
 	Then user expect selected credit card image on credit card text field 

@@ -31,7 +31,7 @@ Background:
 	Then user navigates to credit card approval modal 
 	When user click on continue to checkout 
 
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-86
+@C-PLCC @Regression @All @PLCC-86 @CR-VS
 Scenario: Verify the default payment method when tries to  place an another order 
 	And user clicks on checkout button and navigates to checkout page 
 	Then user navigates to ASO-Home page 

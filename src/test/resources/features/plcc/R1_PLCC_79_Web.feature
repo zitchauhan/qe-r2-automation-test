@@ -1,6 +1,6 @@
 Feature: Registration 
 
-@Regression @Web @All @C-VidyaSiddaramappa @PLCC-79	
+@C-PLCC @Regression @All @PLCC-79 @CR-VS
 Scenario: Verify response after Add Address for faster checkout process checkbox is checked
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
@@ -24,7 +24,7 @@ Scenario: Verify response after Add Address for faster checkout process checkbox
 	And user expect element State to be present
 	And user expect element State text to equal "state"
 
- @Regression @Web @All @C-VidyaSiddaramappa @PLCC-79
+@C-PLCC @Regression @All @PLCC-79 @CR-VS
 Scenario: Validate errors providing invalid zip code field 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
