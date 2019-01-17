@@ -36,6 +36,11 @@ public class R1_PLP_PO extends CommonActionHelper{
 	
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//img)[1]") 	public   WebElement productPLP1_Mobile;
 
+	//KER-608
+	@FindBy(xpath="//*[@class='price_range']") public WebElement productPriceNotVisible;  //SID 29-December
+	@FindBy(xpath="(//*[@class='price_range']//*[contains(text(),'-')])[1]") public WebElement priceRange;  //SID 29-December
+	
+	
 	
 	//KER-224
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[1]/*/*/img") public WebElement productImage;

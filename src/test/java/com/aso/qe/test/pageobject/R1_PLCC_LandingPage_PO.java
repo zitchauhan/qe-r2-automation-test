@@ -400,6 +400,15 @@ public class R1_PLCC_LandingPage_PO extends CommonActionHelper {
 		}
 
 	}
+	public void verifyPresenceOfLandingPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/store/academy-credit-card")) {
+			logger.debug("User is successfully navigated to ASO Home page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to ASO Home Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
 
 	public void verifyPresenceOfLandingPage() throws Exception {
 		String currentURL = getCurrentPageURL();

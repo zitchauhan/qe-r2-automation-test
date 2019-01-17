@@ -24,4 +24,3 @@ Scenario: Verify an error message when user enters wrong card number and click o
 	
 	#clickOnButton(r2CheckOutPo.ReviewOrder_Btn);
 	
-	

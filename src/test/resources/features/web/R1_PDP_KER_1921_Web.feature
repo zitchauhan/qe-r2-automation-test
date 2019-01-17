@@ -19,7 +19,7 @@ Scenario: Verify the functionality of Add to Cart for "not sold online"
   @C-PDP @Web @Regression @KER-1921 @ZYP_PDP_K1921-5074 @CR-RKA @1HR
   Scenario: Verify the functionality of Add to Cart for "Out of Stock"
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "OutOfStockProduct" in the search box
+    When user enters "OutOfStockProduct" in the searchbox
     Then User select item of out of stock
     Then verify out of stock
 

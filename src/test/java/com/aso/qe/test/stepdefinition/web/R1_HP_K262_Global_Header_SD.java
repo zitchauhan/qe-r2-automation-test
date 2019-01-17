@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
 
 import cucumber.api.java.en.Then;
 
@@ -16,6 +17,7 @@ public class R1_HP_K262_Global_Header_SD extends CommonActionHelper{
 	//private static final Logger logger = Logger.getLogger(R1SP1_KER_728_Web_SD.class);
 
 	R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+	R1_PDP_PO pdpObj= PageFactory.initElements(driver, R1_PDP_PO.class);
 	//public ShoppingCartViewPO shoppingCartViewPO =  PageFactory.initElements(driver, ShoppingCartViewPO.class);
 
 
@@ -98,18 +100,21 @@ public class R1_HP_K262_Global_Header_SD extends CommonActionHelper{
 		
 	}
 	
-
-	@Then("^User to click on search button after putting data$")
-	public void user_to_click_on_search_button_after_putting_data() throws Throwable {
-	    
-	}
-	@Then("^User to click on search button after putting data\"(.*?)\"$")
+	
+	@Then("^User to click on search button after putting data \"(.*?)\"$")
 	public void user_to_click_on_search_button_after_putting_data(String data) throws Throwable {
 		waitForPageLoad(driver);
 		Thread.sleep(Constants.thread_medium);
+		if("mobile".equalsIgnoreCase(testtype)) {
 		globalElementHeader.searchBox_M.clear();
-		globalElementHeader.searchBox_M.sendKeys(data);
+		globalElementHeader.searchBox_M.sendKeys(webPropHelper.getTestDataProperty(data));
 		clickOnButton(globalElementHeader.searchbtn_M);
+		}
+		else {
+			pdpObj.searchbox.clear();
+			pdpObj.searchbox.sendKeys(webPropHelper.getTestDataProperty(data));
+			clickOnButton(globalElementHeader.btnSearchLens);
+		}
 		//assertTrue(isDisplayed(globalElementHeader.searchResultText_M));
 		
 	}

@@ -64,6 +64,7 @@ Scenario:
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
 	And user enter Address "Address" 
+	And user delete the predefine zipcode
 	Then user click on Go To Shipping Method button in Checkout page 
 	Then Verify the message on the page 
 		|# Following Error Message should show on the page|
@@ -127,11 +128,12 @@ Scenario:
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user click on checkout button in Cart page 
+	And user delete the predefine zipcode
 	And user click on Go To Shipping Method button in Checkout page 
 	Then Verify the message on the page 
 		|# Following Error Message should show on the page|
-		|Please enter the First Name|
-		|Please Enter a Last Name|
+		|Please enter a First Name|
+		|Please enter a Last Name|
 		|Please enter a phone number|
 		|Please enter a street address|
 		|Required|		
