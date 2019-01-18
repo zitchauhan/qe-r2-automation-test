@@ -15,6 +15,8 @@ public class R1_PLCC_Generic_PO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
 	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
+	R2_CheckOut_PO checkout_po = PageFactory.initElements(driver, R2_CheckOut_PO.class);
+
 	private WebElement objElement;
 	Common_Web_SD timer = new Common_Web_SD();
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
@@ -52,6 +54,16 @@ public class R1_PLCC_Generic_PO extends CommonActionHelper {
 	public WebElement discoverPalPaymentOption;
 	@FindBy(xpath = "//*[@src='/content/dam/academysports/cart-and-checkout/cards-accepted/mastercard.png']")
 	public WebElement masterPalPaymentOption;
+
+	// Confirmation Page
+	@FindBy(xpath = "//*[text()='a confirmation email is on its way']")
+	public WebElement emailOnItsWayTxt;
+	@FindBy(xpath = "//*[@data-auid='checkout_order_confirmation_print_orderDetails_link']")
+	public WebElement printLinkOnOrderConfirmationPage;
+	@FindBy(xpath = "//*[@data-auid='checkout_order_confirmation_create_account_link']")
+	public WebElement myAccountLinkOnOrderConfirmationPage;
+	@FindBy(xpath = "//*[@data-component='orderConfirmation']")
+	public WebElement orderConfirmationPage;
 
 	public void verifyPresenceOfCheckoutPage() throws Exception {
 		String currentURL = getCurrentPageURL();
@@ -318,4 +330,123 @@ public class R1_PLCC_Generic_PO extends CommonActionHelper {
 
 	}
 
+	public void verifyPresenceOfEmailOnItsWayTxt() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(emailOnItsWayTxt);
+			logger.debug("Email is on its way text is displayed");
+		} else {
+			isDisplayed(emailOnItsWayTxt);
+			logger.debug("Email is on its way text is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+
+	public void verifyPresenceOfEditPayment_Link() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(checkout_po.EditPayment_Link);
+			logger.debug("Edit link of payment section on checkout page is displayed");
+		} else {
+			isDisplayed(checkout_po.EditPayment_Link);
+			logger.debug("Edit link of payment section on checkout page is displayed");
+		}
+
+	}
+
+	public void verifyPresenceOfReviewOrderButton() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(checkout_po.ReviewOrder_Btn);
+			logger.debug("Edit link of payment section on checkout page is displayed");
+		} else {
+			isDisplayed(checkout_po.ReviewOrder_Btn);
+			logger.debug("Edit link of payment section on checkout page is displayed");
+		}
+	}
+
+	public void verifyPresenceOfPlaceOrderButton() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(checkout_po.btnPlaceOrderPaymentPage);
+			logger.debug("PLACE ORDER Button is displayed");
+		} else {
+			isDisplayed(checkout_po.btnPlaceOrderPaymentPage);
+			logger.debug("PLACE ORDER Button is displayed");
+		}
+	}
+
+	public void verifyPresenceOfOrderConfirmationPage() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(orderConfirmationPage);
+			logger.debug("Order Confirmation Page is displayed");
+		} else {
+			isDisplayed(orderConfirmationPage);
+			logger.debug("Order Confirmtion Page is displayed");
+		}
+	}
+
+	public void verifyPresenceOfOrderSuccesfullStatus() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(checkout_po.txtOrderSuccesfullStatus);
+			logger.debug("THANKS FOR SUBMITTING YOUR ORDER! is displayed");
+		} else {
+			isDisplayed(checkout_po.txtOrderSuccesfullStatus);
+			logger.debug("THANKS FOR SUBMITTING YOUR ORDER! is displayed");
+		}
+	}
+
+	public void verifyPresenceOfOrderNumber() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(checkout_po.orderSubmitted_OrderNumber);
+			logger.debug("Order Number is displayed");
+		} else {
+			isDisplayed(checkout_po.orderSubmitted_OrderNumber);
+			logger.debug("Order Number is displayed");
+		}
+	}
+
+	public void verifyPresenceOfEmailOnItsWayText() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(emailOnItsWayTxt);
+			logger.debug("a confirmation email is on its way Text is displayed");
+		} else {
+			isDisplayed(emailOnItsWayTxt);
+			logger.debug("a confirmation email is on its way Text is displayed");
+		}
+	}
+
+	public void verifyPresenceOfPrintLinkOnOrderConfirmationPage() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(printLinkOnOrderConfirmationPage);
+			logger.debug("Print Link on order confirmation Page is displayed");
+		} else {
+			isDisplayed(printLinkOnOrderConfirmationPage);
+			logger.debug("Print Link on order confirmation Page is displayed");
+		}
+	}
+
+	public void verifyPresenceOfMyAccountLinkOnOrderConfirmationPage() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(myAccountLinkOnOrderConfirmationPage);
+			logger.debug("My Account Link on order confirmation Page is displayed");
+		} else {
+			isDisplayed(myAccountLinkOnOrderConfirmationPage);
+			logger.debug("My Account Link on order confirmation Page is displayed");
+		}
+	}
+
+	public void enterExpiryDateField(String arg) throws Exception {
+		setInputText(r2CheckOutPo.txtExpirationDate, webPropHelper.getTestDataProperty(arg));
+	}
+
+	public void enterCVVField(String arg) throws Exception {
+		setInputText(r2CheckOutPo.txtCVVInput, webPropHelper.getTestDataProperty(arg));
+	}
 }

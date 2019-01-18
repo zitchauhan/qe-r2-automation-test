@@ -17,10 +17,59 @@ Background: User Login and common steps for identifying card type entering BIN
 	#And user selects credit card radio button
 	And user expect element credit card text field is present 
 
-@C-PLCC @Regression @All @PLCC-83 @CR-VS 
+@C-PLCC @Regression @All @PLCC-84 @CR-VS 
 Scenario: Verify an error message when user enters wrong card number and click on review order button 
 	When user enter plcc card "InvalidCard" 
 	And user click on REVIEW ORDER button
-	
+	Then user expect element error message to be present
+    #Print oder number 
 	#clickOnButton(r2CheckOutPo.ReviewOrder_Btn);
 	
+@C-PLCC @Regression @All @PLCC-84 @CR-VS 
+Scenario: Verify user is able to navigate to confirm order page by clicking on review order button by using existing PLCC card
+	When user enter plcc card "ValidPLCCCard" 
+	And user click on REVIEW ORDER button
+	And user click on confirm order button
+	Then user navigates to order confirmation page
+    #Print oder number 
+	#Address of existing PLCC card and address in your account should be same
+	
+@C-PLCC @Regression @All @PLCC-84 @CR-VS 
+Scenario: Verify user is able to navigate to confirm order page by using VISA Credit card card
+	When user enter plcc card "ValidVISACard"
+	And user enter expiry date "ExpiryDate" 
+	And user enter cvv "cvv"
+	And user click on REVIEW ORDER button
+	And user click on PLACE ORDER button
+	Then user navigates to order confirmation page
+    #Print oder number
+    
+ @C-PLCC @Regression @All @PLCC-84 @CR-VS 
+Scenario: Verify user is able to navigate to confirm order page by using Amex Credit card
+	When user enter plcc card "ValidAmexCard" 
+	And user enter expiry date "ExpiryDate" 
+	And user enter cvv "cvv"
+	And user click on REVIEW ORDER button
+	And user click on PLACE ORDER button
+	Then user navigates to order confirmation page
+    #Print oder number
+    
+@C-PLCC @Regression @All @PLCC-84 @CR-VS 
+Scenario: Verify user is able to navigate to confirm order page by using Master Credit card
+	When user enter plcc card "ValidMasterCard" 
+	And user enter expiry date "ExpiryDate" 
+	And user enter cvv "cvv"
+	And user click on REVIEW ORDER button
+	And user click on PLACE ORDER button
+	Then user navigates to order confirmation page
+    #Print oder number
+        
+@C-PLCC @Regression @All @PLCC-84 @CR-VS 
+Scenario: Verify user is able to navigate to confirm order page by using Discover Credit card
+	When user enter plcc card "ValidDiscoverCard" 
+	And user enter expiry date "ExpiryDate" 
+	And user enter cvv "cvv"
+	And user click on REVIEW ORDER button
+	And user click on PLACE ORDER button
+	Then user navigates to order confirmation page
+    #Print oder number
