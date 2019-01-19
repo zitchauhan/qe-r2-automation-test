@@ -255,6 +255,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 	@And("^User searches a product \"(.*?)\" and navigates to PDP$")
 	public void user_enters_in_the_search_box(String searchText) throws Throwable {
 		waitForPageLoad(driver);
+		Thread.sleep(2000);
 		searchKey = webPropHelper.getTestDataProperty(searchText);
 		String[] arrSearchKey = searchKey.split(",");
 

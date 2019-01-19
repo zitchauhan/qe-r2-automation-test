@@ -209,6 +209,9 @@ public WebElement txtShippingPickupFilterDrawer;
 @FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_Shipping & Pickup']")
 public WebElement txtShippingPickupFilterDrawerPLP;   //SID 10-Jan
 
+@FindBy(xpath = "(//*[@data-auid='PDP_FindAStore'])[2]")
+public WebElement lnkPickupLocationPDP;
+
 @FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_Shipping & Pickup_m']")
 public WebElement txtShippingPickupFilterDrawer_M;   //SID 10-Jan
 
@@ -262,8 +265,17 @@ public WebElement bopisNoInventoryMesssagePLP;   //SID 10-Jan
 public WebElement lnkPLPChangePickupLocation;
 //End KER-2872 CR-DPK
 
-@FindBy(xpath ="//*[@data-auid='PDP_FindAStore']")
-public WebElement ChooseLocation_Lnk;
+@FindBy(xpath ="(//*[@data-auid='PDP_IventoryMessage'])[2]/following-sibling::button")
+public WebElement ChooseLocation_Lnk;  //SID Modified 12-Jan
+
+@FindBy(xpath ="(//*[@data-auid='PDP_IventoryMessage'])[2]")
+public WebElement pdpInventoryMessage;  //SID 12-Jan
+
+@FindBy(xpath ="(//*[@data-auid='PDP_IventoryMessage'])[2]/following-sibling::div/a")
+public WebElement pdpStoreName;  //SID 12-Jan
+
+@FindBy(xpath ="//*[@data-auid='facetdrawerundefined']//*[contains(text(),'Not Available')]")
+public WebElement notAvailableMessageFindAStore;  //SID 12-Jan
 
 @FindBy(xpath ="//*[@data-auid='btnundefined']")
 public WebElement BuyNow_btn;

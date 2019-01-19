@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_FindStore_PO;
+import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_SIT_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
@@ -21,6 +23,11 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 	R2_R1_Fun_PO r2R1FunPO=PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	R2_Sanity_PO r2SanityPo=PageFactory.initElements(driver,R2_Sanity_PO.class);
 	R1_FindStore_PO findStorePo=PageFactory.initElements(driver,R1_FindStore_PO.class);
+	R1_PDP_PO pdpPo=PageFactory.initElements(driver,R1_PDP_PO.class);
+	
+	String limitedStockMessage="";
+	int addedQuantityInCart=0;
+	
 	
 	@When("^clicks on the Select Store link in the header$")
 	public void clicks_on_the_Select_Store_link_in_the_header() throws Throwable {
@@ -103,6 +110,7 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 	
 	@Then("^clicks on the Change Pickup Location link$")
 	public void clicks_on_the_Change_Pickup_Location_link() throws Throwable {
+		isDisplayed(r2R1FunPO.ChooseLocation_Lnk);
 		assertTrue(clickOnButton(r2R1FunPO.ChooseLocation_Lnk));   
 	}
 
@@ -123,5 +131,46 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 			assertTrue(flag);
 		}
 	}
+	
+	@Then("^user verify the limited stock message$")
+	public void user_verify_the_limited_stock_message() {
+		waitForElement(r2CartPO.txtLimitedStockPDP);
+		limitedStockMessage=r2CartPO.txtLimitedStockPDP.getText();
+		String arr[] = limitedStockMessage.split("to");
+		String arr1[]=arr[1].split(" ");
+		addedQuantityInCart=Integer.parseInt(arr1[1]);
+		assertTrue(isDisplayed(r2CartPO.txtLimitedStockPDP));
+	}
+	
+	
+	@And("^User verify that the limited quantity is added to cart$")
+	public void User_verify_that_the_limited_quantity_is_added_to_cart() {
+		System.err.println(r2CartPO.limitedQuantityAddedInCart.getAttribute("value"));
+		assertTrue(addedQuantityInCart==Integer.parseInt(r2CartPO.limitedQuantityAddedInCart.getAttribute("value")));
+			
+	}
+	
+	@And("^user Verify that Pickup icon must be greyed out$")
+	public void user_Verify_that_Pickup_icon_must_be_greyed_out() {
+		assertTrue(isDisplayed(pdpPo.pickUpIconGreyedOut));
+	}
+	
+	
+	@And("^message \"(.*?)\" with Store Name is displayed$")
+	public void message_with_Store_Name_is_displayed(String pdpMessage) {
+		assertTrue(r2R1FunPO.pdpInventoryMessage.getText().equalsIgnoreCase(webPropHelper.getTestDataProperty(pdpMessage)));
+		assertTrue(isDisplayed(r2R1FunPO.pdpStoreName));
+	}
+	
+	@And("^user should be able to see Item Not Available for Pickup message$")
+	public void user_should_be_able_to_see_Item_Not_Available_for_Pickup_message() {
+		assertTrue(isDisplayed(r2R1FunPO.notAvailableMessageFindAStore));
+	}
+	
+	@And("^user click on change Location link PDP$")
+	public void user_click_on_change_Location_link_PDP() {
+		assertTrue(clickOnButton(r2R1FunPO.lnkPickupLocationPDP));
+	}
+	
 
 }

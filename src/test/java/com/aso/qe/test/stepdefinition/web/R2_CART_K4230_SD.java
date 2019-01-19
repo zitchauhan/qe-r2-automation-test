@@ -63,7 +63,13 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 				changedPassword = "DefaultPassword";
 			}
 
-		}else if(emailID.contains("Bopis_Email")) {
+		}else if(emailID.contains("OutOfStockItemMail")) {
+			setInputText(r2MyAccountPo.txtEmailAddress,
+					webPropHelper.getTestDataProperty("OutOfStockItemMail"));
+			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("OutOfStockItemPass"));
+			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
+		}
+		else if(emailID.contains("Bopis_Email")) {
 			setInputText(r2MyAccountPo.txtEmailAddress,
 					webPropHelper.getTestDataProperty("Bopis_Email"));
 			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
