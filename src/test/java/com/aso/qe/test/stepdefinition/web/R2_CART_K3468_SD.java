@@ -12,7 +12,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class R2_CART_K3468_SD2 extends CommonActionHelper {
+public class R2_CART_K3468_SD extends CommonActionHelper {
 	R2_Cart_PO r2_cart_po = PageFactory.initElements(driver, R2_Cart_PO.class);
 	
 	
