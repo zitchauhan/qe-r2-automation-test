@@ -28,22 +28,32 @@ Scenario: Verify an error message when user enters wrong card number and click o
 @C-PLCC @Regression @All @PLCC-84 @CR-VS 
 Scenario: Verify user is able to navigate to confirm order page by clicking on review order button by using existing PLCC card
 	When user enter plcc card "ValidPLCCCard" 
-	And user click on REVIEW ORDER button
-	And user click on confirm order button
-	Then user navigates to order confirmation page
-    #Print oder number 
-	#Address of existing PLCC card and address in your account should be same
-	
-@C-PLCC @Regression @All @PLCC-84 @CR-VS 
-Scenario: Verify user is able to navigate to confirm order page by using VISA Credit card card
-	When user enter plcc card "ValidVISACard"
 	And user enter expiry date "ExpiryDate" 
 	And user enter cvv "cvv"
 	And user click on REVIEW ORDER button
 	And user click on PLACE ORDER button
 	Then user navigates to order confirmation page
-    #Print oder number
-    
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
+	And user expect element Order Number to be present
+	And user expect element a confirmation email is on its way to be present
+	And user expect element print link to be present
+	And user expect element my account link to be present
+	#Address of existing PLCC card and address in your account should be same
+	
+@C-PLCC @Regression @All @PLCC-84 @CR-VS 
+Scenario: Verify user is able to navigate to confirm order page by using VISA Credit card card
+	When user enter visa card "ValidVISACard"
+	And user enter expiry date "ExpiryDate" 
+	And user enter cvv "cvv"
+	And user click on REVIEW ORDER button
+	And user click on PLACE ORDER button
+	Then user navigates to order confirmation page
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
+	And user expect element Order Number to be present
+	And user expect element a confirmation email is on its way to be present
+	And user expect element print link to be present
+	And user expect element my account link to be present
+	
  @C-PLCC @Regression @All @PLCC-84 @CR-VS 
 Scenario: Verify user is able to navigate to confirm order page by using Amex Credit card
 	When user enter plcc card "ValidAmexCard" 

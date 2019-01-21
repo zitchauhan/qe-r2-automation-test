@@ -443,7 +443,7 @@ public class R1_PLCC_Generic_PO extends CommonActionHelper {
 	}
 
 	public void enterExpiryDateField(String arg) throws Exception {
-		setInputText(r2CheckOutPo.txtExpirationDate, webPropHelper.getTestDataProperty(arg));
+		setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty(arg));
 	}
 
 	public void enterCVVField(String arg) throws Exception {
