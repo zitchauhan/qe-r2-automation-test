@@ -27,13 +27,11 @@ public class createUserProfile extends JSONValidationUtils {
 	@Given("^\"(.*?)\" and post request \"(.*?)\" endpoint for create user profile$")
 	public void and_post_request_endpoint_for_create_user_profile(String RegistrationPageURI,
 			String createUserProfileRequest) throws Throwable {
-//		List<io.restassured.http.Cookie> restAssuredCookies = new createUserProfile().getGuestUserCookies_v1();
+	List<io.restassured.http.Cookie> restAssuredCookies = new createUserProfile().getGuestUserCookies_v1();
 		String endpoints = apiEndpointIP + loadProps.getTestDataProperty(RegistrationPageURI);
 		String postRequestStr = JSONValidationUtils
 				.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC + createUserProfileRequest + ".json");
 		logger.debug("END Point URL:" + endpoints);
-		// initiateRestPostAPICallWithoutSignIn(endpoints, restAssuredCookies,
-		// loadProps.getTestDataProperty(createUserProfileRequest));
 
 		initiateRestPostAPICallWithoutCookiesAndReqStr(endpoints, postRequestStr);
 

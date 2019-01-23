@@ -64,6 +64,9 @@ public class R1_PLCC_Generic_PO extends CommonActionHelper {
 	public WebElement myAccountLinkOnOrderConfirmationPage;
 	@FindBy(xpath = "//*[@data-component='orderConfirmation']")
 	public WebElement orderConfirmationPage;
+	
+	@FindBy(xpath = "//*[text()='Save Payment Info for Later']")
+	public WebElement savePaymentInfoForLaterCheckBox;
 
 	public void verifyPresenceOfCheckoutPage() throws Exception {
 		String currentURL = getCurrentPageURL();
@@ -72,6 +75,17 @@ public class R1_PLCC_Generic_PO extends CommonActionHelper {
 		} else {
 			logger.debug("User is not able to navigate to Checkout Page instead navigated to URL :: " + currentURL);
 		}
+	}
+	public void verifyPresenceOfSaveForLaterCheckBox() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(savePaymentInfoForLaterCheckBox);
+			logger.debug("Save Payment Info for Later CheckBox is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(savePaymentInfoForLaterCheckBox);
+			logger.debug("Save Payment Info for Later CheckBox is displayed++++++++++++++++++++++++==");
+		}
+
 	}
 
 	public void verifyPresenceOfCreditCardRadioButton() throws Exception {

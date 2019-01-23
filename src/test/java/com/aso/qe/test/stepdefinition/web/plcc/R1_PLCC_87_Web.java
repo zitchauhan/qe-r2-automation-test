@@ -97,9 +97,8 @@ public class R1_PLCC_87_Web extends CommonActionHelper {
 		genericPO.verifyPresenceOfMyAccountLinkOnOrderConfirmationPage();
 	
 	}
-
-	@Then("^user place fifty orders and see the response with \"(.*?)\"$")
-	public void user_place_fifty_orders_and_see_the_response_with(String searchText) throws Throwable {
+	@Then("^user place fifty orders and see the response with \"(.*?)\" with PLCC Card \"(.*?)\"$")
+	public void user_place_fifty_orders_and_see_the_response_with_with_PLCC_Card(String searchText, String plccCard) throws Throwable {
 		for(int n=1;n<=50;n++)
 		{
 		waitForPageLoad(driver);
@@ -155,7 +154,14 @@ public class R1_PLCC_87_Web extends CommonActionHelper {
 			waitForElement(pdpPageObj.btnAddToCart);
 			assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 			genericPO.clickOnCheckoutButton();
+			Thread.sleep(Constants.thread_medium);
 			genericPO.verifyPresenceOfCheckoutPage();
+			//CommonActionHelper.waitUntilElePresent(driver, checkout_po.btnPlaceOrderPaymentPage, ELEMWAITTIME_MEDIUM);
+			genericPO.verifyPresenceOfSaveForLaterCheckBox();
+			genericPO.enterCardBinNumber(plccCard);
+			assertTrue(isDisplayed(genericPO.CreditCardNumber_Input));
+			waitForElement(genericPO.CreditCardNumber_Input);
+			genericPO.savePaymentInfoForLaterCheckBox.click();
 			genericPO.verifyPresenceOfPlaceOrderButton();
 			checkout_po.btnPlaceOrderPaymentPage.click();
 			genericPO.verifyPresenceOfOrderConfirmationPage();
@@ -166,7 +172,11 @@ public class R1_PLCC_87_Web extends CommonActionHelper {
 			genericPO.verifyPresenceOfEmailOnItsWayTxt();
 			genericPO.verifyPresenceOfPrintLinkOnOrderConfirmationPage();
 			genericPO.verifyPresenceOfMyAccountLinkOnOrderConfirmationPage();
+	}}
+		@When("^user uncheck Save Payment Info for Later Checkbox$")
+		public void user_uncheck_Save_Payment_Info_for_Later_Checkbox() throws Throwable {
+		genericPO.savePaymentInfoForLaterCheckBox.click();
 	}
 
 
-	}}
+	}

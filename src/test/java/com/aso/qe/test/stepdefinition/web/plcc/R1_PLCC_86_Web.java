@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
@@ -86,7 +87,11 @@ public class R1_PLCC_86_Web extends CommonActionHelper {
 	public void user_select_State(String arg1) throws Throwable {
 		plccCCApplicationModalObjects.stateDropDownCCModal.click();
 		String stateName = plccCCApplicationModalObjects.stateDropDownListCCModal.getText();
-		plccCCApplicationModalObjects.stateDropDownPACCModal.click();
+		// plccCCApplicationModalObjects.stateDropDownPACCModal.click();
+
+		// Assigned elsewhere
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("plccCCApplicationModalObjects.stateDropDownPACCModal.click()");
 	}
 
 	@When("^user enter Confirm Email Address \"(.*?)\"$")

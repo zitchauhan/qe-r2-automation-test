@@ -35,9 +35,11 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement stateDropDownListCCModal;
 	@FindBy(xpath = "//*[contains(@role,'presentation')]")
 	public WebElement stateDropDownElementsCCModal;
-	@FindBy(xpath = "//*[@data-auid='undefined_listOption_42']")
+	@FindBy(xpath = "//*[@data-auid='li_listOption_42']")
 	public WebElement stateDropDownPACCModal;
-
+	@FindBy(xpath = "//*[@id='plcc_modal_cancel']")
+	public WebElement cancelLinkCCModal;
+	
 //	@FindAll({
 //		   @FindBy(xpath = "//*[@name='state']")
 //		   @FindBy(xpath = "//*[@data-auid='undefined_listOption_1']")
@@ -84,6 +86,24 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		} else {
 			isDisplayed(firstNameCCModal);
 			logger.debug("First Name Text Field on Credit Card Application Modal is displayed");
+		}
+	}
+	public void verifyPresenceOfCancelLinkCCModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(cancelLinkCCModal);
+			logger.debug("Cancel Link on Credit Card Application Modal is displayed");
+		} else {
+			isDisplayed(cancelLinkCCModal);
+			logger.debug("Cancel Link on Credit Card Application Modal is displayed");
+		}
+	}
+	public void verifyPresenceOfDOBTextField() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(dobCCModal);
+			logger.debug("DOB Text Field on Credit Card Application Modal is displayed");
+		} else {
+			isDisplayed(dobCCModal);
+			logger.debug("DOB Text Field on Credit Card Application Modal is displayed");
 		}
 	}
 	public void verifyPresenceOfSubmitButtonCCModal() throws Exception {
@@ -284,6 +304,15 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		} else {
 			isDisplayed(continueToCheckout);
 			logger.debug("Continue to Checkout button is displayed");
+		}
+	}
+	public void verifyPresenceOfStreetCCModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(streetAddressCCModal);
+			logger.debug("Street test field is displayed");
+		} else {
+			isDisplayed(streetAddressCCModal);
+			logger.debug("Street test field is displayed");
 		}
 	}
 
