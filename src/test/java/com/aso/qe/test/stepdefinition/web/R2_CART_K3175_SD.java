@@ -101,9 +101,10 @@ public class R2_CART_K3175_SD extends CommonActionHelper {
 	}
 
 	@And("^User select another store \"(.*?)\"$")
-	public void User_select_another_store(String store) {
+	public void User_select_another_store(String store) throws InterruptedException {
+		Thread.sleep(Constants.thread_high);
 		waitForElement(findStorePo.ovly_searchTextBox);
-		setInputText(findStorePo.ovly_searchTextBox, store);
+		setInputText(findStorePo.ovly_searchTextBox, webPropHelper.getTestDataProperty(store));
 		clickOnButton(findStorePo.ovly_btnGO);
 		String selectedStoreTitle = getText(findStorePo.ovly_secStore);
 		System.err.println(selectedStoreTitle);

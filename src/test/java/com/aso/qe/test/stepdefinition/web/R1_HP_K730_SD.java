@@ -11,6 +11,7 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_FindStore_PO;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
 import cucumber.api.java.en.And;
@@ -22,6 +23,7 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 	public R1_FindStore_PO findStorePO = PageFactory.initElements(getDriver(), R1_FindStore_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(getDriver(),R1_GlobalElementHeader_Home_PO.class);
 	R2_R1_Fun_PO r2r1FunPo = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
+	R2_Cart_PO r2cartPO = PageFactory.initElements(driver, R2_Cart_PO.class);
 	String store = "";
 	
 	@Then("^User should be able to click on Find Store$")
@@ -93,5 +95,10 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 	     waitForElement(findStorePO.findAstoreXBTN_M);
 	     clickOnButton(findStorePO.findAstoreXBTN_M);
 	     
+	}
+	
+	@And("^user verify the selected store in cart page$")
+	public void user_verify_the_selected_store_in_cart_page() {
+		assertTrue(r2cartPO.storeNameOnCartPageInStorePickUp.getText().equalsIgnoreCase(store));
 	}
 }

@@ -37,21 +37,23 @@ Verify that UnAuthenticated user is able to view  in-store pickup instructions o
 	Then Verify the message on the page 
 	
 	
-@R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-High_B_Order @KER-2868 @C-BOPIS
-@ZYP_CHECKOUT_K2868-10716 @CR-AKK 
-Scenario:
-Verify that UnAuthenticated user is able to view In-Store Pickup Information on Order confirmation page 
+@R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-High_B_Order @KER-2868 @C-BOPIS @ZYP_CHECKOUT_K2868-10716
+Scenario: Verify that UnAuthenticated user is able to view In-Store Pickup Information on Order confirmation page
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
-	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
+	Then user select in store pickup option 
 	Then verify user can begin checkout 
+	When user clicks on Go to payment CTA
 	And user fill the credit card detail in payment 
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "FindAsStoreZIPCode" , "EmailAddress" 
 	Then user click on review order button 
 	And user able to see the button place order 
-	Then Verify that In-Store Pickup Information is displayed 
+	And user should be able to see instore pickup information on order confirmation page
 	
 @R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-High_B_Order @KER-2868 @C-BOPIS
 @ZYP_CHECKOUT_K2868-10739 @CR-AKK 
@@ -70,21 +72,25 @@ Verify that UnAuthenticated user is able to view In-Store Pickup Information on 
 	And Verify that notes are displayed 
 	
 	
-@R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-High_B_Order @KER-2868 @C-BOPIS
-@ZYP_CHECKOUT_K2868-10740 @CR-AKK 
-Scenario:
-Verify that UnAuthenticated user is able to view   Payment Details  on Order confirmation page 
+@R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-High_B_Order @KER-2868 @C-BOPIS @ZYP_CHECKOUT_K2868-10740
+Scenario: Verify that UnAuthenticated user is able to view Payment Details/order summary details on Order confirmation page
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
-	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
+	Then user select in store pickup option 
 	Then verify user can begin checkout 
+	When user clicks on Go to payment CTA
 	And user fill the credit card detail in payment 
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "FindAsStoreZIPCode" , "EmailAddress" 
 	Then user click on review order button 
 	And user able to see the button place order 
-	And Verify that Order Summary displayed 
+	And user verify that item count is displayed in Order Summary
+	And user verify that product attributes are displayed in Order Summary
+	And user verify that other attributes are displayed in Order Summary
 	
 @R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-High_B_Order @KER-2868 @C-BOPIS
 @ZYP_CHECKOUT_K2868-10738 @CR-AKK 
@@ -103,16 +109,18 @@ Verify that UnAuthenticated user is able to view Payment Details on Order confir
 	And Verify that Payment Details is displayed 
 	
 	
-@R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-Low @KER-2868 @C-BOPIS @C1-Message_B
-@ZYP_CHECKOUT_K2868-10713 @CR-AKK 
-Scenario:
-Verify that UnAuthenticated user is able to view account section on Order confirmation page 
+@R2_Web @R2_All @P-Low @KER-2868 @C-BOPIS @ZYP_CHECKOUT_K2868-10713
+Scenario: Verify that UnAuthenticated user is able to view account section on Order confirmation page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user will click on View Cart button 
-	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
+	Then user select in store pickup option 
 	Then verify user can begin checkout 
+	When user clicks on Go to payment CTA
 	And user fill the credit card detail in payment 
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "FindAsStoreZIPCode" , "EmailAddress" 
 	Then user click on review order button 
@@ -120,9 +128,29 @@ Verify that UnAuthenticated user is able to view account section on Order confir
 	And registers for the account from the Order confirmation screen with "Password" 
 	Then Verify the message on the page 
 		|# Then guest user should be displayed with a banner message for successful account creation|
-		|created an account|
+		|Create an Account|
 		
+@R2_Web @R2_All @P-Low @KER-2868 @C-BOPIS @ZYP_CHECKOUT_K2868-10712
+Scenario: Verify that UnAuthenticated user is able to view in-store pickup instructions on order confirmation page
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user will click on View Cart button 
+	Then user select in store pickup option 
+	Then verify user can begin checkout 
+	When user clicks on Go to payment CTA
+	And user fill the credit card detail in payment 
+	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "FindAsStoreZIPCode" , "EmailAddress" 
+	Then user click on review order button 
+	And user able to see the button place order 
+	And registers for the account from the Order confirmation screen with "Password" 
+	Then Verify the message on the page 
+		|# Then guest user should be displayed with a IN STORE PICKUP INSTRUCTIONS|
+		|IN STORE PICKUP INSTRUCTIONS|
+	And user should be able to see the instore pickup instruction		
 		
-		
-		
+
 	

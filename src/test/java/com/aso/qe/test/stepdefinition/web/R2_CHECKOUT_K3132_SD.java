@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -134,6 +135,22 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 			}
 			}
 		}
+	}
+	
+	@And("^user should not be able to see Same as Shipping Address checkbox$")
+	public void user_should_not_be_able_to_see_Same_as_Shipping_Address_checkbox() {
+		boolean flag = true;
+		flag= isDisplayed(r2CheckOutPo.SameAsShippingAddress_checkBox);
+		if(flag) {
+			assertFalse(flag);
+		}else {
+			assertFalse(flag);
+		}
+	}
+
+	@And("^user expand gift card option$")
+	public void user_expand_gift_card_option() {
+		assertTrue(clickOnButton(r2CheckOutPo.expandGiftCardOptionOnCheckOutPage));
 	}
 
 }

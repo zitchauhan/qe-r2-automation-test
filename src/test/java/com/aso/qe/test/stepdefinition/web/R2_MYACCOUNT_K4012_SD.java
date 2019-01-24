@@ -55,6 +55,7 @@ public class R2_MYACCOUNT_K4012_SD extends CommonActionHelper {
 	public void user_is_navigated_to_order_confirmation_page_and_captures_order_number() throws Throwable {
 		waitForElement(r2CheckOutPO.orderConfirmationPage_OrderNumber);
 		actualOrderNumber=r2CheckOutPO.orderConfirmationPage_OrderNumber.getText();
+		System.err.println(actualOrderNumber);
 		
 	}
 	

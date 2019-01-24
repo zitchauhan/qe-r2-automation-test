@@ -104,6 +104,22 @@ Then user click on checkbox Same as shipping address
 Then user fill billing information after clicking on change billing information text
 #only validation is nedded after clicking confirm btn
 
+
+@R2_Web @R2_Regression @R2_All @P-Low @CB-Checkout @KER-3132 @ZYP_CART_K3132-10437 @C-BOPIS
+Scenario: Verify guest user is able to see the See In-Store Pickup Instructions section 
+	Given user launches the browser and navigates to "ASO_HOME" page
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	When user enters "BOPIS_Regular_Product" in the searchbox 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	Then user select in store pickup option
+	And user click on checkout button in Cart page 
+	When user clicks on Go to payment CTA
+	And user should not be able to see Same as Shipping Address checkbox
+
 @C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10439 @CR-RKA
 Scenario: Verify if 'Same as Shipping Address' checkbox is disabled for STS order
 
@@ -157,4 +173,26 @@ Then user navigate to GunStorageAndSafty L_Three
 		|EmailAddressforOrderConfirmation_Input|
 		|SignuptogetHotDeals_checkBox|
 		|ReviewOrder_Btn|
-		
+
+@R2_Web @R2_Regression @R2_All @P-Low @CB-Checkout @KER-3132 @ZYP_CART_K3132-10442 @C-BOPIS
+Scenario: Verify guest user is able to see the See In-Store Pickup Instructions section 
+	Given user launches the browser and navigates to "ASO_HOME" page
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	When user enters "BOPIS_Regular_Product" in the searchbox 
+	Then user click on Add to Cart Button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	Then user select in store pickup option
+	And user click on checkout button in Cart page 
+	When user clicks on Go to payment CTA
+	And user should not be able to see Same as Shipping Address checkbox
+	And user expand gift card option
+	And user enter Gift card Number "Valid16DigitGiftCardNumber" 
+	And user enter Pin Number "Valid8DigitGiftCardPIN" 
+	And user click on Apply button 
+	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
+	And user clicks on Review order button on checkout page
+	
+

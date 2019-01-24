@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_ShoppingCartView_PO;
 
@@ -55,7 +56,7 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 	@And("^user click on view cart$")
 	public void user_click_on_view_cart() throws Throwable {
 	   assertTrue(clickOnButton(pdp.btnViewCart));
-		
+		Thread.sleep(Constants.thread_highest);
 	}
 	
 

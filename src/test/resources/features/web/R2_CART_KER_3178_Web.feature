@@ -11,16 +11,18 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then Shipping radio button is selected by default 
 	Then in-stores radio button is deselected 
  
-    @C-BOPIS @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Highest @CB-Cart @KER-3178 @ZYP_CART_K3178-9941 @CR-AG
- Scenario: Verify that user view Find a Store modal from Change Location in Checkout
- Given user launches the browser and navigates to "ASO_HOME" page 
-		When user clicks on SignIn link from global header 
-	And user logs in as "EmailAddress"
-	When User searches a product "productName" and navigates to PDP
+@C-BOPIS @R2_Web @R2_All @P-Highest @CB-Cart @KER-3178 @ZYP_CART_K3178-9941
+Scenario: Verify that user view Find a Store modal from Change Location in Checkout 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user logs in as "Bopis_Email" 
+	When user enters "BOPIS_Product" in the searchbox
 	And user click on Add to Cart Button 
-	And user click on checkout button
-   And click on Change Location link
-   Then Find in Store modal should get open
+	And user click on view cart
+	Then user select in store pickup option
+	And user will click on Checkout button and navigates to Checkout page
+    Then user click on change location button
+    Then User is able to see Find a Store Modal
     
 @C-BOPIS @R2_Web @R2_All @P-Highest @CB-Cart @KER-3178 @ZYP_CART_K3178-9942 
 Scenario: Verify user can change the store using Find in Store modal 
@@ -36,15 +38,22 @@ Scenario: Verify user can change the store using Find in Store modal
 	When User select store with "BOPIS_Store2"
 	
 	
-    @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-3178 @ZYP_CART_K3178-9943 @CR-AG
+@C-BOPIS @R2_Web @R2_All @P-Highest @CB-Cart @KER-3178 @ZYP_CART_K3178-9943
 Scenario: Verify the user is able to see the full inventory availability on Find a store modal
-Given user launches the browser and navigates to "ASO_HOME" page 
-		When user clicks on SignIn link from global header 
-	And user logs in as "EmailAddress"
-	When User searches a product "productName" and navigates to PDP
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user logs in as "Bopis_Email" 
+	When user enters "BOPIS_Product" in the searchbox
 	And user click on Add to Cart Button 
-	And user click on checkout button
-     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"   
+	And user click on view cart
+	Then user select in store pickup option
+	And user will click on Checkout button and navigates to Checkout page
+	And user check the selected store name
+    Then user click on change location button
+    Then User is able to see Find a Store Modal
+    And user check that the selected store appear at the top
+    Then user check for the products count
+    
 
     
     @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-3178 @ZYP_CART_K3178-9944 @CR-AG
@@ -58,24 +67,39 @@ Given user launches the browser and navigates to "ASO_HOME" page
      When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"   
     
     
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Medium @CB-Cart @KER-3178 @ZYP_CART_K3178-9945 @CR-AG
+@C-BOPIS @R2_Web @R2_All @P-Highest @CB-Cart @KER-3178 @ZYP_CART_K3178-9945
 Scenario: Verify the user is able to see the partial inventory availability on Find a store modal
-Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user logs in as "EmailAddress"
-	When User searches a product "productName" and navigates to PDP
+	And user logs in as "Bopis_Email" 
+	When user enters "BOPIS_Product" in the searchbox
 	And user click on Add to Cart Button 
-	And user click on checkout button
-     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"   
-
-     
+	And then user close the add to cart popup
+	When user enters "NOT_BOPIS_Product" in the searchbox
+	And user click on Add to Cart Button 
+	And user click on view cart
+	Then user select in store pickup option
+	And user will click on Checkout button and navigates to Checkout page
+	And user check the selected store name
+    Then user click on change location button
+    Then User is able to see Find a Store Modal
+    And user check that the selected store appear at the top
+    Then user check for the products count and item available should be less 
          
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Medium @CB-Cart @KER-3178 @ZYP_CART_K3178-9946 @CR-AG
+@C-BOPIS @R2_Web @R2_All @P-Highest @CB-Cart @KER-3178 @ZYP_CART_K3178-9946
 Scenario: Verify the user is able to see no inventory availability on Find a store modal
-Given user launches the browser and navigates to "ASO_HOME" page 
-		When user clicks on SignIn link from global header 
-	And user logs in as "EmailAddress"
-	When User searches a product "productName" and navigates to PDP
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user logs in as "EmailAddress" 
+	And User empty the cart
+	Then user change the selected store "BOPIS_Store2"
+	When user enters "BOPIS_Product" in the searchbox
 	And user click on Add to Cart Button 
-	And user click on checkout button
-     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"   
+	And user click on view cart
+	Then user select in store pickup option
+	And user will click on Checkout button and navigates to Checkout page
+	And user check the selected store name
+    Then user click on change location button
+    Then User is able to see Find a Store Modal
+    And user check that the selected store appear at the top
+    Then user check for the products count and item not available should come

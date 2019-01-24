@@ -163,6 +163,9 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "(//*[@data-auid='crt_inputQty'])[1]")
 	public WebElement limitedQuantityAddedInCart;  //SID 12-Jan
 	
+	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']/*[2]/*[2]/*[2]")
+	public WebElement storeNameOnCartPageInStorePickUp;  //SID 23-Jan
+	
 	
 	
 	@FindBy(xpath = "//*[contains(text(),'Items Not Available for Pickup')]/div/img")
@@ -192,8 +195,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@id='disclaimerMessaging']/*[1]")
 	public WebElement leaglMessageAmmoCart;   //SID 7-Jan
 	
-	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']//div[2]//span")
-	public WebElement clickInStorePickUp;   //SID 8-Jan
+	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']//div[2]//input[@radioname='shipmentOptions']/following-sibling::label")
+	public List<WebElement> clickAllInStorePickUp;   //SID 8-Jan
 	
 	
 
@@ -472,6 +475,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	 * @throws InterruptedException ********************************/
 	
 	public void navigateAndDeleteAllProductsInCart() throws InterruptedException {
+		Thread.sleep(Constants.thread_high);
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(globalElementHeader.iconcart_m));
 

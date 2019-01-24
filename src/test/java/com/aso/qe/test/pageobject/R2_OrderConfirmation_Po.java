@@ -1,5 +1,7 @@
 package com.aso.qe.test.pageobject;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -52,6 +54,32 @@ public class R2_OrderConfirmation_Po extends CommonActionHelper {
 	@FindBy(xpath= "//*[contains(text(),'account has been created')]")
 	public WebElement orderConfirmation_AccountCreatedMessage_txt;
 	
+	@FindBy(xpath= "//*[contains(text(),'PICKUP INSTRUCTIONS')]/parent::*/parent::*/*[2]")
+	public WebElement storePickUpInstructionOrderConfirmationPage;  //SID 23-Jan
+	
+	@FindBy(xpath= "//*[text()='ORDER SUMMARY']/parent::*/parent::*/*[2]")
+	public WebElement itemCountOrderSummary;  //SID 23-Jan
+
+	@FindBy(xpath= "//*[text()='ORDER SUMMARY']/parent::*/parent::*/*[3]//strong")
+	public List<WebElement> productAttributes;  //SID 23-Jan
+	
+	@FindBy(xpath= "//*[text()='ORDER SUMMARY']/parent::*/parent::*/*[4]/*/*")
+	public List<WebElement> otherDetailsOfOrderSummary;  //SID 23-Jan
+	
+	@FindBy(xpath= "//*[text()='IN-STORE PICKUP']/parent::*/parent::*/*[2]/*[2]/*/*[1]/*[2]")
+	public WebElement pickupDate;  //SID 23-Jan
+	
+	@FindBy(xpath= "//*[text()='IN-STORE PICKUP']/parent::*/parent::*/*[2]/*[3]")
+	public WebElement pickupStore;  //SID 23-Jan
+	
+	@FindBy(xpath= "//*[text()='IN-STORE PICKUP']/parent::*/parent::*/*[2]/*[3]/*[4]/*")
+	public WebElement pickupStoreHourDropDown;  //SID 23-Jan
+	
+	@FindBy(xpath= "//*[text()='IN-STORE PICKUP']/parent::*/parent::*/*[2]/*[3]/*[4]/*[2]")
+	public WebElement pickupStoreHourTiming;  //SID 23-Jan
+	
+	@FindBy(xpath= "//*[text()='IN-STORE PICKUP']/parent::*/parent::*/*[2]/*[4]/*[1]")
+	public WebElement pickupPerson;  //SID 23-Jan
 	
 	
 //@

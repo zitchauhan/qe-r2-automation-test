@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -329,7 +330,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	
 	//****Start PayPal****//
-    @FindBy(xpath = "//*[@id='closeCart']")
+    @FindBy(xpath = "(//*[contains(@class,'paypal-checkout')]/a)[1]")
     public WebElement PaypalClose_icon;
     @FindBy(xpath = "//*[text()='Shipping discount']")
     public WebElement PaypalShippigDiscount_txt;
@@ -367,7 +368,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's Last Name\"]")
 	   public WebElement PickupAltrLatstname_input;
 	   
-	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's Email Address\"]")
+	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's Email Address\"] | //*[@type='email']")
 	   public WebElement PickupAltrEmail_input;
 	   
 	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's Phone Number\"]")
@@ -392,7 +393,32 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   @FindBy(xpath="//*[@data-auid='cart_radio_button_div']//*[text()='Find a Store']")
 	   public WebElement findAStoreCart;  //SID 8-Jan
+	   
+	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']/parent::*/*[1]")
+	   public WebElement selectedBOPISStore;  //SID 21-Jan
 	 
+	   @FindBy(xpath="(//*[@data-auid='find-a-store-modal']//*[@data-auid='facetdrawerundefined'])[1]/button/span/div/div[1]")
+	   public WebElement selectedBOPISStoreNameFAS;  //SID 21-Jan
+	   
+	   
+	   @FindBy(xpath="((//*[@data-auid='find-a-store-modal']//*[@data-auid='facetdrawerundefined'])[1]/button/span/div/div[2]//span)[1]")
+	   public WebElement productsAvailabelOnSelectedStore;  //SID 21-Jan
+	   
+	   @FindBy(xpath=" (//*[@data-auid='find-a-store-modal']//*[@data-auid='facetdrawerundefined'])[1]/div/*/*[2]/*/*/*")
+	   public WebElement productsNotAvailabelOnSelectedStore;  //SID 21-Jan
+	   
+	   @FindBy(xpath=" //*[@data-auid='checkout_payment_add_gift_card_icon']")
+	   public WebElement expandGiftCardOptionOnCheckOutPage;  //SID 23-Jan
+	   
+	   @FindBy(xpath="//*[contains(@class,'paypal-button')]")
+	   public WebElement paypalButton;  //SID 23-Jan
+	   
+	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[text()='Gift Card']")
+	   public WebElement giftCardApplyOrderSummary;  //SID 23-Jan
+	 
+	   
+	   @FindBys({ @FindBy(xpath = "//i[@class='academyicon icon-minus']") })
+		public WebElement collapse;  //SID 21-Jan
 	   
 	   @FindBy(xpath="//*[contains(text(),'Items for Pickup')]/..")
 	   public WebElement ItemsForPickup_Itemcount_Txt;
@@ -886,6 +912,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
     @FindBy(xpath="//*[contains(text(),'SPECIAL ORDER SHIP TO STORE')]")public WebElement ShipToStoreforSOF_Txt;
     @FindBy(xpath="//*[contains(text(),'You must be at least 18 years')]")public WebElement ShipToStoreforSOF_compliance_Txt;
     @FindBy(xpath="//*[@data-auid='btncheckout_ship_to_store_submit_button']")public WebElement ShipToStoreforSOF_Payment_Btn;
+    @FindBy(xpath="//*[@type='checkbox']")public WebElement selectCheckbox;  //Sid 22-Jan
+  
   //Only for SOF Item--Start KER-KER-7033 & KER-7031
 
 	 //Start KER-3174 CR-RK 19-Sep
