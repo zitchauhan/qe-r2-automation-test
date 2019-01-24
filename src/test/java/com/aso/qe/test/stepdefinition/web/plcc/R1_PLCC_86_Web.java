@@ -8,6 +8,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_PLCC_CreditCardApplicationModal_PO;
@@ -57,9 +59,10 @@ public class R1_PLCC_86_Web extends CommonActionHelper {
 
 	@When("^user enter Annual Income \"(.*?)\"$")
 	public void user_enter_Annual_Income(String arg1) throws Throwable {
-		plccCCApplicationModalObjects.enterAnnualIncomeCCModal(arg1);
+		
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.annualIncomeCCModal));
 		waitForElement(plccCCApplicationModalObjects.annualIncomeCCModal);
+		plccCCApplicationModalObjects.enterAnnualIncomeCCModal(arg1);
 	}
 
 	@When("^user enter Street Address \"(.*?)\"$")
@@ -87,11 +90,9 @@ public class R1_PLCC_86_Web extends CommonActionHelper {
 	public void user_select_State(String arg1) throws Throwable {
 		plccCCApplicationModalObjects.stateDropDownCCModal.click();
 		String stateName = plccCCApplicationModalObjects.stateDropDownListCCModal.getText();
-		// plccCCApplicationModalObjects.stateDropDownPACCModal.click();
-
-		// Assigned elsewhere
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("plccCCApplicationModalObjects.stateDropDownPACCModal.click()");
+		CommonActionHelper.waitUntilElePresent(driver, plccCCApplicationModalObjects.stateDropDownPACCModal,
+				ELEMWAITTIME_MEDIUM);
+		plccCCApplicationModalObjects.stateDropDownPACCModal.click();
 	}
 
 	@When("^user enter Confirm Email Address \"(.*?)\"$")
@@ -132,7 +133,7 @@ public class R1_PLCC_86_Web extends CommonActionHelper {
 	@When("^user click on CONTINUE button$")
 	public void user_click_on_CONTINUE_button() throws Throwable {
 		plccCCApplicationModalObjects.verifyPresenceOfContinueButtonCCModal();
-		// plccCCApplicationModalObjects.continueButtonCCModal.click();
+		plccCCApplicationModalObjects.continueButtonCCModal.click();
 		CommonActionHelper.waitUntilElePresent(driver, plccCCApplicationModalObjects.continueButtonCCModal,
 				ELEMWAITTIME_MEDIUM);
 		assertTrue(clickOnButton(plccCCApplicationModalObjects.continueButtonCCModal));
@@ -188,5 +189,10 @@ public class R1_PLCC_86_Web extends CommonActionHelper {
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.submitButton));
 		plccCCApplicationModalObjects.submitButton.click();
 	}
+	@Then("^user verify presence of STEP(\\d+): CONSENT$")
+	public void user_verify_presence_of_STEP_CONSENT(int arg1) throws Throwable {
+		plccCCApplicationModalObjects.verifyPresenceOfConsentModelPageLabel();
+	}
+
 
 }
