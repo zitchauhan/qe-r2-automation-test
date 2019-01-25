@@ -162,6 +162,8 @@ public class R1_PLCC_87_Web extends CommonActionHelper {
 			assertTrue(isDisplayed(genericPO.CreditCardNumber_Input));
 			waitForElement(genericPO.CreditCardNumber_Input);
 			genericPO.savePaymentInfoForLaterCheckBox.click();
+			genericPO.verifyPresenceOfReviewOrderButton();
+			checkout_po.ReviewOrder_Btn.click();
 			genericPO.verifyPresenceOfPlaceOrderButton();
 			checkout_po.btnPlaceOrderPaymentPage.click();
 			genericPO.verifyPresenceOfOrderConfirmationPage();

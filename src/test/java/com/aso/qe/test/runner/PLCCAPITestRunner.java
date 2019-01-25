@@ -6,10 +6,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-
-
-@CucumberOptions(features = "src/test/resources/features/plccAPIs",
-		glue = "com.aso.qe.test.stepdefinition.api.plcc",
+@CucumberOptions(features = "src/test/resources/features/plccAPIs/createUserProfile.feature",
+		glue = "com.aso.qe.test.stepdefinition.api",
 		monochrome = true, 
 		plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html", format = {
 				"pretty", "html:target/cucumber-reports/cucumber-html-reports",

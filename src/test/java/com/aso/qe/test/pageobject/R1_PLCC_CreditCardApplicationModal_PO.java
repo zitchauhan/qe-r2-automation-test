@@ -31,7 +31,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@name='state']")
 	public WebElement stateDropDownCCModal;
-	@FindBy(xpath = "//*[@data-auid='undefined_dropdownList']")
+	@FindBy(xpath = "//*[@id='customDropdownList']")
 	public WebElement stateDropDownListCCModal;
 	@FindBy(xpath = "//*[contains(@role,'presentation')]")
 	public WebElement stateDropDownElementsCCModal;
@@ -77,7 +77,18 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement TandCCheckBox;
 	@FindBy(xpath = "//*[text()='Submit']")
 	public WebElement submitButton;
+	@FindBy(xpath = "//*[text()=' STEP2: CONSENT ']")
+	public WebElement consentModelPageLabel;
 	
+	public void verifyPresenceOfConsentModelPageLabel() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(firstNameCCModal);
+			logger.debug("STEP2: CONSENT is displayed");
+		} else {
+			isDisplayed(firstNameCCModal);
+			logger.debug("STEP2: CONSENT is displayed");
+		}
+	}
 
 	public void verifyPresenceOfFirstNameCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {

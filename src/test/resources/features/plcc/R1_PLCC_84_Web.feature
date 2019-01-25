@@ -1,5 +1,4 @@
 Feature: PLCC: Checkout - Payment Using PLCC 
-
 Background: User Login and common steps for identifying card type entering BIN 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
@@ -16,34 +15,44 @@ Background: User Login and common steps for identifying card type entering BIN
 	And user clicks on checkout button and navigates to checkout page 
 	#And user selects credit card radio button
 	And user expect element credit card text field is present 
-
-@C-PLCC @Regression @All @PLCC-84 @CR-VS 
-Scenario: Verify an error message when user enters wrong card number and click on review order button 
-	When user enter plcc card "InvalidCard" 
-	And user click on REVIEW ORDER button
-	Then user expect element error message to be present
-    #Print oder number 
-	#clickOnButton(r2CheckOutPo.ReviewOrder_Btn);
-	
-@C-PLCC @Regression @All @PLCC-84 @CR-VS 
-Scenario: Verify user is able to navigate to confirm order page by clicking on review order button by using existing PLCC card
-	When user enter plcc card "ValidPLCCCard" 
-	And user enter expiry date "ExpiryDate" 
-	And user enter cvv "cvv"
-	And user click on REVIEW ORDER button
-	And user click on PLACE ORDER button
-	Then user navigates to order confirmation page
-	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
-	And user expect element Order Number to be present
-	And user expect element a confirmation email is on its way to be present
-	And user expect element print link to be present
-	And user expect element my account link to be present
-	#Address of existing PLCC card and address in your account should be same
 	
 @C-PLCC @Regression @All @PLCC-84 @CR-VS 
 Scenario: Verify user is able to navigate to confirm order page by using VISA Credit card card
 	When user enter visa card "ValidVISACard"
 	And user enter expiry date "ExpiryDate" 
+	And user enter cvv "cvvAmex"
+	And user click on REVIEW ORDER button
+	And user click on PLACE ORDER button
+	Then user navigates to order confirmation page
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
+	And user expect element Order Number to be present
+	And user expect element a confirmation email is on its way to be present
+	And user expect element print link to be present
+	And user expect element my account link to be present
+	When user click on My Account link
+	And user click on Payments link
+	Then delete all credit cards from My Account
+	#deleteAllCreditCardsFromMyAccount
+	
+@C-PLCC @Regression @All @PLCC-84 @CR-VS 
+Scenario: Verify user is able to navigate to confirm order page by clicking on review order button by using existing PLCC card
+	When user enter plcc card "ValidPLCCCard" 
+	And user click on REVIEW ORDER button
+	And user click on PLACE ORDER button
+	Then user navigates to order confirmation page
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
+	And user expect element Order Number to be present
+	And user expect element a confirmation email is on its way to be present
+	And user expect element print link to be present
+	And user expect element my account link to be present
+	When user click on My Account link
+	And user click on Payments link
+	Then delete all credit cards from My Account
+	
+	
+@C-PLCC @Regression @All @PLCC-84 @CR-VS 
+Scenario: Verify user is able to navigate to confirm order page by using Discover Credit card
+    When user enter visa card "ValidDiscoverCard"
 	And user enter cvv "cvv"
 	And user click on REVIEW ORDER button
 	And user click on PLACE ORDER button
@@ -53,21 +62,31 @@ Scenario: Verify user is able to navigate to confirm order page by using VISA Cr
 	And user expect element a confirmation email is on its way to be present
 	And user expect element print link to be present
 	And user expect element my account link to be present
+	When user click on My Account link
+	And user click on Payments link
+	Then delete all credit cards from My Account
+	
+@C-PLCC @Regression @All @PLCC-84 @CR-VS 
+Scenario: Verify user is able to navigate to confirm order page by using Master Credit card
+ 	When user enter visa card "ValidMasterCard"
+	And user enter expiry date "ExpiryDate" 
+	And user enter cvv "cvv"
+	And user click on REVIEW ORDER button
+	And user click on PLACE ORDER button
+	Then user navigates to order confirmation page
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
+	And user expect element Order Number to be present
+	And user expect element a confirmation email is on its way to be present
+	And user expect element print link to be present
+	And user expect element my account link to be present
+	When user click on My Account link
+	And user click on Payments link
+	Then delete all credit cards from My Account
+	
 	
  @C-PLCC @Regression @All @PLCC-84 @CR-VS 
 Scenario: Verify user is able to navigate to confirm order page by using Amex Credit card
-	When user enter plcc card "ValidAmexCard" 
-	And user enter expiry date "ExpiryDate" 
-	And user enter cvv "cvv"
-	And user click on REVIEW ORDER button
-	And user click on PLACE ORDER button
-	Then user navigates to order confirmation page
-    #Print oder number
-    
-
-@C-PLCC @Regression @All @PLCC-84 @CR-VS 
-Scenario: Verify user is able to navigate to confirm order page by using Master Credit card
-	When user enter visa card "ValidMasterCard"
+	 When user enter visa card "ValidAmexCard"
 	And user enter expiry date "ExpiryDate" 
 	And user enter cvv "cvv"
 	And user click on REVIEW ORDER button
@@ -78,16 +97,9 @@ Scenario: Verify user is able to navigate to confirm order page by using Master 
 	And user expect element a confirmation email is on its way to be present
 	And user expect element print link to be present
 	And user expect element my account link to be present
-        
-@C-PLCC @Regression @All @PLCC-84 @CR-VS 
-Scenario: Verify user is able to navigate to confirm order page by using Discover Credit card
-	When user enter plcc card "ValidDiscoverCard" 
-	And user enter expiry date "ExpiryDate" 
-	And user enter cvv "cvv"
-	And user click on REVIEW ORDER button
-	And user click on PLACE ORDER button
-	Then user navigates to order confirmation page
-    #Print oder number
+	When user click on My Account link
+	And user click on Payments link
+	Then delete all credit cards from My Account
 
 Scenario: Verify user is able to place bulk orders
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -104,6 +116,7 @@ Scenario: Verify user is able to place bulk orders
 	And user clicks on checkout button and navigates to checkout page 
 	And user expect element credit card text field is present 
 	When user enter plcc card "ValidPLCCCard" 
+	And user uncheck Save Payment Info for Later Checkbox
 	And user click on REVIEW ORDER button
 	And user click on PLACE ORDER button
 	Then user navigates to order confirmation page

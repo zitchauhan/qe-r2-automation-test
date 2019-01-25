@@ -1,79 +1,94 @@
 package com.aso.qe.test.stepdefinition.api.plcc;
 
 import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.assertNotNull;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-
+import java.io.IOException;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.Cookie;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
 import com.aso.qe.framework.api.helpers.JSONValidationUtils;
 import com.aso.qe.framework.api.json.JsonReaderCommon;
-import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.FrameWorkHelper;
-import com.aso.qe.test.stepdefinition.api.R2_Cart_API_SD;
+import com.aso.qe.test.stepdefinition.api.R1SP1_Categories_ProductsByCategorySD;
+import com.github.fge.jsonschema.core.exceptions.ProcessingException;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import io.restassured.path.json.JsonPath;
 
 public class createUserProfile extends JSONValidationUtils {
-	private static final Logger logger = Logger.getLogger(R2_Cart_API_SD.class);
-
-	@Given("^\"(.*?)\" and post request \"(.*?)\" endpoint for create user profile$")
-	public void and_post_request_endpoint_for_create_user_profile(String RegistrationPageURI,
-			String createUserProfileRequest) throws Throwable {
-	List<io.restassured.http.Cookie> restAssuredCookies = new createUserProfile().getGuestUserCookies_v1();
-		String endpoints = apiEndpointIP + loadProps.getTestDataProperty(RegistrationPageURI);
-		String postRequestStr = JSONValidationUtils
-				.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC + createUserProfileRequest + ".json");
-		logger.debug("END Point URL:" + endpoints);
+	private static final Logger logger = Logger.getLogger(R1SP1_Categories_ProductsByCategorySD.class);
+	public static String regEmailId;
+	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for user registration with plcc changes$")
+	public void endpoint_with_for_user_registration_with_plcc_changes(String PLCCRegistrationUrl, String PLCCRegistrationPostRequest) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCRegistrationUrl);
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
+		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
+		regEmailId= "PLCCQA"+FrameWorkHelper.getRandomAlphabetic(6).toLowerCase()+"@plccmail.com";
+		postRequestStr = postRequestStr.replace("REPLACE_LOGONID",regEmailId)
+				.replaceAll("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword"));
 
 		initiateRestPostAPICallWithoutCookiesAndReqStr(endpoints, postRequestStr);
-
 	}
 
-	@Then("^Verify response status code as (\\d+) after user profile created succefully$")
-	public void verify_response_status_code_as_after_user_profile_created_succefully(int statusCodeExpected)
-			throws Throwable {
+	@Then("^Verify response status code as (\\d+) for plcc$")
+	public void verify_response_status_code_as_for_plcc(int statusCodeExpected) throws Throwable {
 		boolean flag = validateStatusCode(statusCodeExpected);
-		logger.debug("FLAG::" + flag);
+		logger.debug("FLAG::"+flag);
 		assertTrue(flag);
 	}
 
-	public List<io.restassured.http.Cookie> getGuestUserCookies_v1() {
-		List<io.restassured.http.Cookie> restAssuredCookies = new ArrayList<io.restassured.http.Cookie>();
-		RemoteWebDriver webdriver = null;
+	@Then("^validate jsonSchema \"(.*?)\" for plcc$")
+	public void validate_jsonSchema_for_plcc(String jsonSchemaFilePath) throws Throwable {
 		try {
-			CommonActionHelper webActionHelper = new CommonActionHelper();
-			webdriver = webActionHelper.launchChromeBrowser(webActionHelper.getWebDriverFolderPath("chromedriver"));
-			webdriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			webdriver.manage().window().maximize();
-			webdriver.get(apiEndpointWebURL);
-			CommonActionHelper.waitForPageLoad(webdriver);
-			webdriver.manage();
-			Set<Cookie> seleniumCookies = webdriver.manage().getCookies();
-			logger.debug("Cookies:" + seleniumCookies);
-			for (org.openqa.selenium.Cookie cookie : seleniumCookies) {
-				logger.debug(cookie.getName() + " :: " + cookie.getValue());
-				restAssuredCookies
-						.add(new io.restassured.http.Cookie.Builder(cookie.getName(), cookie.getValue()).build());
-			}
-		} catch (Exception e) {
-			logger.error("getBrowserCookies Exception MSG::" + e.getMessage());
-		} catch (Throwable e) {
-			logger.error("getBrowserCookies Throwable MSG::" + e.getMessage());
-		} finally {
-			if (webdriver != null) {
-				// webdriver.close();
-				logger.debug("Web driver closed.");
-			}
+			boolean flag = isJsonValid(convertJsonFileToString(JsonReaderCommon.jsonSchemaFolderPathPLCC+ jsonSchemaFilePath+".json"), response.asString());
+			logger.info("schema file is"+JsonReaderCommon.jsonSchemaFolderPathPLCC+ jsonSchemaFilePath+".json");
+			logger.debug("JSON Schema Validate FLAG:: "+flag);
+			assertTrue(flag);
+		} catch (ProcessingException e) {
+			logger.debug("ProcessingException:: "+e.getMessage());
+		} catch (IOException e) {
+			logger.debug("IOException:: "+e.getMessage());
 		}
-		return restAssuredCookies;
+	}
+
+	@Then("^Validated response details of \"(.*?)\" for plcc$")
+	public void validated_response_details_of_for_plcc(String key) throws Throwable {
+		JsonPath jsonPathEvaluator = response.jsonPath();
+		Object propObj = jsonPathEvaluator.get(key);
+		logger.debug(key+"::"+ propObj);
+		assertNotNull(JSONValidationUtils.isNotNull(propObj));
+	}
+	@Then("^Verify Error response status code as (\\d+) for plcc$")
+	public void verify_Error_response_status_code_as_for_plcc(int statusCodeExpected) throws Throwable {
+		String errorTxt = getErrorTxt();
+		logger.debug("400 Error Text::"+errorTxt);
+		if(errorTxt != null && errorTxt.contains(String.valueOf(statusCodeExpected))){
+			logger.debug("400 error code validation PASS");
+			assertTrue(true);
+		}else{
+			logger.debug("400 error code validation FAIL");
+			assertTrue(false);
+		}
+	}
+	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for user registration with invalid data$")
+	public void endpoint_with_for_user_registration_with_invalid_data(String PLCCRegistrationUrl, String PLCCRegistrationPostRequest) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCRegistrationUrl);
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
+		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
+		regEmailId= "PLCCQA"+FrameWorkHelper.getRandomAlphabetic(6).toLowerCase()+"plccmail.com";
+		postRequestStr = postRequestStr.replace("REPLACE_LOGONID",regEmailId)
+				.replaceAll("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword"));
+		initiateRestPostAPICallWithoutCookiesAndReqStr(endpoints, postRequestStr);
+		String errorResp = initiateErrorRestAPICall(endpoints);
+		logger.debug("ERROR RESPONSE:: "+errorResp);
+		boolean flag = false;
+		if(errorResp!= null && errorResp.contains("400")){
+			flag= true;
+		}
+		assertTrue(flag);
 	}
 
 }
