@@ -8,14 +8,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
-import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD;
+import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
 
-public class R1_PLCC_Registration_PO extends CommonActionHelper {
+public class R1_PLCC_Registration_PO extends Common_Web_SD_PLCC {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
 	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
 	R1_PLCC_LandingPage_PO plccLandingPageObjects = PageFactory.initElements(driver, R1_PLCC_LandingPage_PO.class);
-	Common_Web_SD timer = new Common_Web_SD();
+	Common_Web_SD_PLCC timer = new Common_Web_SD_PLCC();
 
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----START--------------------------------*/
 	// PLCC-41 (AddressCheckbox)
@@ -501,7 +501,7 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 			assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
 			isClickable(addMoreAddressDetailsLink);
 			if (isDisplayed(addMoreAddressDetailsLink)) {
-				CommonActionHelper.waitUntilElePresent(driver, addMoreAddressDetailsLink, ELEMWAITTIME_MEDIUM);
+				Common_Web_SD_PLCC.waitUntilElePresent(driver, addMoreAddressDetailsLink, ELEMWAITTIME_MEDIUM);
 				assertTrue(clickOnButton(addMoreAddressDetailsLink));
 				// Thread.sleep(1000);
 			} else {
@@ -516,7 +516,7 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(addressPhoneField);
 			logger.debug("Phone Number Text Field is displayed");
-			CommonActionHelper.waitUntilElePresent(driver, addressPhoneField, ELEMWAITTIME_MEDIUM);
+			Common_Web_SD_PLCC.waitUntilElePresent(driver, addressPhoneField, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(addressPhoneField);
 			logger.debug("Phone Number Text Field is not displayed++++++++++++++++++++++++==");
@@ -658,7 +658,7 @@ public class R1_PLCC_Registration_PO extends CommonActionHelper {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(myAccountLinkOnAsoHomePage);
 			logger.debug("My Account Link is displayed");
-			CommonActionHelper.waitUntilElePresent(driver, myAccountLinkOnAsoHomePage, ELEMWAITTIME_MEDIUM);
+			Common_Web_SD_PLCC.waitUntilElePresent(driver, myAccountLinkOnAsoHomePage, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(myAccountLinkOnAsoHomePage);
 			logger.debug("My Account Link is not displayed++++++++++++++++++++++++==");

@@ -1,37 +1,20 @@
 {
 
-"firstName":"Bipinuat56",
-
-"lastName":"bipinuatln56",
-
-"logonId":"bipinuat56@gmail.com",
-
-"logonPassword":"Ammu@1234",
-
-"logonPasswordVerify":"Ammu@1234",
-
-"emailOptIn":"true",
-
+"firstName":"APIAutomation",
+"lastName":"Test",
+"logonId":"REPLACE_LOGONID",
+"logonPassword":"REPLACE_PASSWORD",
+"logonPasswordVerify":"REPLACE_PASSWORD",
 "challengeAnswer":"-",
-
 "challengeQuestion":"-",
-
 "addressType":"SB",
-
 "city":"Katy",
-
 "state":"TX",
-
 "zipCode":"77449",
-
 "country":"US",
-
 "phone1":"2018883511",
-
 "addressLine": [
-
   "1800 N Mason Rd","Academy Sport + Outdoor"
-
  ]
 
 }

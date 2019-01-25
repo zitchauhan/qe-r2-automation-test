@@ -20,7 +20,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class R1_PLCC_86_Web extends CommonActionHelper {
+public class R1_PLCC_86_Web extends Common_Web_SD_PLCC {
 	R1_PLCC_Generic_PO genericPO = PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
 	R1_PLCC_LandingPage_PO plccLandingPageObjects = PageFactory.initElements(driver, R1_PLCC_LandingPage_PO.class);
 	R1_PLCC_CreditCardApplicationModal_PO plccCCApplicationModalObjects = PageFactory.initElements(driver,
@@ -90,7 +90,7 @@ public class R1_PLCC_86_Web extends CommonActionHelper {
 	public void user_select_State(String arg1) throws Throwable {
 		plccCCApplicationModalObjects.stateDropDownCCModal.click();
 		String stateName = plccCCApplicationModalObjects.stateDropDownListCCModal.getText();
-		CommonActionHelper.waitUntilElePresent(driver, plccCCApplicationModalObjects.stateDropDownPACCModal,
+		Common_Web_SD_PLCC.waitUntilElePresent(driver, plccCCApplicationModalObjects.stateDropDownPACCModal,
 				ELEMWAITTIME_MEDIUM);
 		plccCCApplicationModalObjects.stateDropDownPACCModal.click();
 	}
@@ -134,7 +134,7 @@ public class R1_PLCC_86_Web extends CommonActionHelper {
 	public void user_click_on_CONTINUE_button() throws Throwable {
 		plccCCApplicationModalObjects.verifyPresenceOfContinueButtonCCModal();
 		plccCCApplicationModalObjects.continueButtonCCModal.click();
-		CommonActionHelper.waitUntilElePresent(driver, plccCCApplicationModalObjects.continueButtonCCModal,
+		Common_Web_SD_PLCC.waitUntilElePresent(driver, plccCCApplicationModalObjects.continueButtonCCModal,
 				ELEMWAITTIME_MEDIUM);
 		assertTrue(clickOnButton(plccCCApplicationModalObjects.continueButtonCCModal));
 	}
@@ -142,7 +142,7 @@ public class R1_PLCC_86_Web extends CommonActionHelper {
 	@When("^user select credit application modal agree message$")
 	public void user_select_credit_application_modal_agree_message() throws Throwable {
 		plccCCApplicationModalObjects.verifyPresenceOfAgreeApplicationModalCCModal();
-		CommonActionHelper.waitUntilElePresent(driver, plccCCApplicationModalObjects.TandCCheckBox,
+		Common_Web_SD_PLCC.waitUntilElePresent(driver, plccCCApplicationModalObjects.TandCCheckBox,
 				ELEMWAITTIME_MEDIUM);
 		assertTrue(clickOnButton(plccCCApplicationModalObjects.TandCCheckBox));
 	}

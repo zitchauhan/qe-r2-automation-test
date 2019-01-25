@@ -116,6 +116,7 @@ Scenario: Verify user is able to place bulk orders
 	And user clicks on checkout button and navigates to checkout page 
 	And user expect element credit card text field is present 
 	When user enter plcc card "ValidPLCCCard" 
+	And user uncheck Save Payment Info for Later Checkbox
 	And user click on REVIEW ORDER button
 	And user click on PLACE ORDER button
 	Then user navigates to order confirmation page
