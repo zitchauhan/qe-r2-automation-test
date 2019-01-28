@@ -2,14 +2,15 @@ Feature: BOPIS Change Store in CHECKOUT
 
 @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-Highest @CB-Cart @KER-3178 @ZYP_CART_K3178-9940 @CR-AG @1HR_R2 
 Scenario: Verify the user is able to view the Change Location under In-store Pick Up on Checkout
-Given user launches the browser and navigates to "ASO_HOME" page 
+    Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
-	And user logs in as "EmailAddress"
-	When User searches a product "productName" and navigates to PDP
+	And user logs in as "Cart_BopisEmail" 
+	When user enters "BOPIS_SOF_Product" in the searchbox
 	And user click on Add to Cart Button 
-	And user click on checkout button
-	Then Shipping radio button is selected by default 
-	Then in-stores radio button is deselected 
+	And user click on view cart
+	Then user select in store pickup option
+	When user will click on Checkout button and navigates to Checkout page
+	And user click on change location button
  
 @C-BOPIS @R2_Web @R2_All @P-Highest @CB-Cart @KER-3178 @ZYP_CART_K3178-9941
 Scenario: Verify that user view Find a Store modal from Change Location in Checkout 

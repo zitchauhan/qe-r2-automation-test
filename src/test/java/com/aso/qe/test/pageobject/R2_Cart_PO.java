@@ -150,6 +150,9 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='Change Location']")
 	public WebElement lnkChangeLocationCart;//DPK 24 Aug
 	
+	@FindBy(xpath="(//*[text()='Find a Store'])[2]") 
+	public WebElement cart_FindStore;
+	
 	
 	@FindBy(xpath = "//*[contains(text(),'Items Not Available for Pickup')]")
 	public List<WebElement> txtBopisAvailablity;//DPK 24 Aug
@@ -197,6 +200,9 @@ public class R2_Cart_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']//div[2]//input[@radioname='shipmentOptions']/following-sibling::label")
 	public List<WebElement> clickAllInStorePickUp;   //SID 8-Jan
+	
+	@FindBy(xpath = "//p[@class='m-0']")
+	public WebElement shiptohomeshippingfee;
 	
 	
 
@@ -666,6 +672,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	// Start KER-4231 CR-GK 5-Oct
 	public void selectStoreWithZipAndStoreName(String zipCode, String storeName) throws InterruptedException {
+		
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(lnkFindAStore_M));
 		} else {
@@ -682,6 +689,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 		}
 		assertTrue(clickOnButton(btnFindStoreClose));
 	}
+	
+
 	//This method selects the store and don't closes the findAStore Modal
 	public void selectStoreWithModalOpen(String zipCode, String storeName) throws InterruptedException {
 		if ("mobile".equalsIgnoreCase(testtype)) {

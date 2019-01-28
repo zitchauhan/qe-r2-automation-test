@@ -115,6 +115,7 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
 	
 	@And("^user fill the payment details for sof registered user$")
 	public void user_fill_the_payment_details_for_sof_registered_user() throws InterruptedException {
+		Thread.sleep(Constants.thread_medium);
 //		waitForElement(r2CheckoutPo.CreditCardNumber_Input);
 //		r2CheckoutPo.ZipCode_Input.clear();
 //		setInputText(r2CheckoutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));

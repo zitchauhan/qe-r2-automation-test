@@ -27,13 +27,26 @@ public class R2_CART_K3178_SD extends CommonActionHelper {
 	public void user_click_on_change_location_button() {
 		assertTrue(clickOnButton(r2CheckoutPo.ChangeLocation_Lnk));
 	}
+	
+	@Then("^user click on change location button on cart$")
+	public void user_click_on_change_location_button_on_cart() throws InterruptedException {
+		assertTrue(clickOnButton(cartPO.lnkChangeLocationCart));
+		Thread.sleep(Constants.thread_highest);
+	}
+	
+	@Then("^user click on find the store button on cart$")
+	public void user_click_on_find_the_store_button_on_cart() throws InterruptedException {
+		assertTrue(clickOnButton(cartPO.cart_FindStore));
+		Thread.sleep(Constants.thread_highest);
+	}
+	
 
 	@Then("^user select in store pickup option$")
 	public void user_select_in_store_pickup__option() throws InterruptedException {
 		Thread.sleep(Constants.thread_high);
 		for (WebElement clickInStorePickUp : cartPO.clickAllInStorePickUp) {
 			assertTrue(clickOnButton(clickInStorePickUp));
-			Thread.sleep(Constants.thread_high);
+			Thread.sleep(Constants.thread_highest);
 		}
 	}
 

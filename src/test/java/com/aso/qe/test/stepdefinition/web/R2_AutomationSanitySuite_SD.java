@@ -84,6 +84,34 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		r2SanityPo.AS_clkOutside.click();
 		Thread.sleep(Constants.thread_low); 
 	}
+	
+	@When("^enter the \"(.*?)\" to Y$")
+	public void enter_the_to_Y(String arg1) throws Throwable {
+		waitForElement(r2SanityPo.AS_txtQuantityPrice);
+		quantityprice = r2SanityPo.AS_txtQuantityPrice.getText();
+	    logger.info("Quantity:"+quantityprice);
+	    Thread.sleep(Constants.thread_low); 
+		r2SanityPo.AS_inputQty.clear();
+		Thread.sleep(Constants.thread_low); 
+		setInputText(r2SanityPo.AS_inputQty, webPropHelper.getTestDataProperty(arg1));
+		Thread.sleep(Constants.thread_low); 
+		r2SanityPo.AS_clkOutside.click();
+		Thread.sleep(Constants.thread_highest); 
+	}
+	
+	@When("^enter the \"(.*?)\" to Z$")
+	public void enter_the_to_Z(String arg1) throws Throwable {
+		waitForElement(r2SanityPo.AS_txtQuantityPrice);
+		quantityprice = r2SanityPo.AS_txtQuantityPrice.getText();
+	    logger.info("Quantity:"+quantityprice);
+	    Thread.sleep(Constants.thread_low); 
+		r2SanityPo.AS_inputQty.clear();
+		Thread.sleep(Constants.thread_low); 
+		setInputText(r2SanityPo.AS_inputQty, webPropHelper.getTestDataProperty(arg1));
+		Thread.sleep(Constants.thread_low); 
+		r2SanityPo.AS_clkOutside.click();
+		Thread.sleep(Constants.thread_highest); 
+	}
 
 	@And("^modified quantity should get updated$")
 	public void modified_quantity_should_get_updated() throws Throwable {

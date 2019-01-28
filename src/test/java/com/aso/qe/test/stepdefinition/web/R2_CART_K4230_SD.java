@@ -76,6 +76,13 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
 			cartR2PageObj.navigateAndDeleteAllProductsInCart();
 		}
+		else if(emailID.contains("Cart_BopisEmail")) {
+			setInputText(r2MyAccountPo.txtEmailAddress,
+					webPropHelper.getTestDataProperty("Cart_BopisEmail"));
+			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
+			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
+			cartR2PageObj.navigateAndDeleteAllProductsInCart();
+		}
 
 		else if (emailID.contains("UserWithZeroProductsInCart")) {
 			setInputText(r2MyAccountPo.txtEmailAddress,
