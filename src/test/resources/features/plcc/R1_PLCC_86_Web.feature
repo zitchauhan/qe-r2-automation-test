@@ -13,7 +13,7 @@ Background:
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 
 	When user enter First Name on credit card Application Modal "FirstName"
-	And user enter Last Name "LastName" 
+	Then user enter Last Name on credit card Application Modal "LastName"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "Annual Income"

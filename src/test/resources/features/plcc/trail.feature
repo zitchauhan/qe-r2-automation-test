@@ -1,27 +1,80 @@
-Feature: PLCC: Checkout - Payment Using PLCC 
+Feature: PLCC: Credit Card Application Modal
 
-Scenario: Verify user is able to place bulk orders
+Scenario: Verify the display of elements available on credit card application model 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user click on My Account link 
-	And user expect element Email Address to be present 
-	And user enter Email address in sign-in page "Email_Address_3" 
-	And user enter password in sign-in page "Password_1" 
-	And user click on Signin-button 
+	When user navigates to ASO-Home page 
+	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
+	Then user expect Landing page to be present 
+	When user click on APPLY NOW button 
+	Then user navigates to Generic Credit Card Application Modal 
+	And user expect element STEP1: APPLICATION FORM present 
+	And user expect element FirstName text Field on CC Aplication Modal to be present 
+	And user expect element LastName text Field on CC Aplication Modal to be present 
+	And user expect element SSN text Field on CC Aplication Modal to be present 
+	And user expect element DOB text Field on CC Aplication Modal to be present 
+	And user expect element Annual Income text Field on CC Aplication Modal to be present 
+	And user expect element Street Address text Field on CC Aplication Modal to be present 
+	And user expect element Suite or Apartment text Field on CC Aplication Modal to be present 
+	And user expect element city text Field on CC Aplication Modal to be present 
+	And user expect element state drop down on CC Aplication Modal to be present 
+	And user expect element zip code text field on CC Aplication Modal to be present 
+	And user expect element email text field on CC Aplication Modal to be present 
+	And user expect element confirm email text field on CC Aplication Modal to be present 
+	And user expect element Mobile Phone text field on CC Aplication Modal to be present 
+	And user expect element Alternate Phone text field on CC Aplication Modal to be present 
+	And user expect element CONTINUE on CC Aplication Modal to be present 
+	#And user expect element agree checkbox on CC Aplication Modal to be present
+	#And user expect element SUBMIT on CC Aplication Modal to be present
+	And user expect element CANCEL on CC Aplication Modal to be present
+		
+ Scenario: Verify user is able to Edit all the required information on credit card application model 
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	When user navigates to ASO-Home page
+	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
+	Then user expect Landing page to be present 
+	When user click on APPLY NOW button 
+	Then user navigates to Generic Credit Card Application Modal 
+	When user enter First Name on credit card Application Modal "FirstName"
+	Then user enter Last Name on credit card Application Modal "LastName"
+	And user enter Last four SSN "Last4DigitsOfSSN"
+	And user enetr Date of Birth "DOB" 
+	And user enter Annual Income "AnnualIncome"
+	And user enter Street Address "StreetAddress" 
+	And user enter Suite or Apartment "SuiteOrApartment"
+	And user enter City "City"
+	And user select State "State"
+	And user enter Zip Code on credit card Application Modal "ZipCode"
+	And user enter Email Address on credit card Application Modal "EmailId"
+	And user enter Confirm Email Address "ConfirmEmailId"
+	And user enter Mobile Phone "MobilePhone"
+	And user enter Alternate Phone "AlternatePhone"
+	And user click on CONTINUE button
+	
+Scenario: Verify the system behavior when user clicks on Continue button on Credit Card application model 1
+	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then user navigates to ASO-Home page 
-	When user enters "SKUIdOfProduct" in the search box 
-	And user click on search icon 
-	And user click on Add to cart button 
-	And user click on checkout from ATC pop up 
-	And user clicks on checkout button and navigates to checkout page 
-	And user expect element credit card text field is present 
-	When user enter plcc card "ValidPLCCCard"
-	#And user uncheck Save Payment Info for Later Checkbox 
-	And user click on REVIEW ORDER button
-	And user click on PLACE ORDER button
-	Then user navigates to order confirmation page
-	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
-	And user expect element Order Number to be present
-	And user expect element a confirmation email is on its way to be present
-	And user expect element print link to be present
-	And user expect element my account link to be present
-	And user place fifty orders and see the response with "SKUIdOfProduct1" with PLCC Card "ValidPLCCCard"
+	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
+	Then user expect Landing page to be present 
+	When user click on APPLY NOW button 
+	Then user navigates to Generic Credit Card Application Modal 
+	When user enter First Name on credit card Application Modal "FirstName" 
+	Then user enter Last Name on credit card Application Modal "LastName"
+	And user enter Last four SSN "Last4DigitsOfSSN"
+	And user enetr Date of Birth "DOB" 
+	And user enter Annual Income "AnnualIncome" 
+	And user enter Street Address "StreetAddress" 
+	And user enter Suite or Apartment "SuiteOrApartment" 
+	And user enter City "City" 
+	And user select State "State" 
+	And user enter Zip Code on credit card Application Modal "ZipCode" 
+	And user enter Email Address on credit card Application Modal "EmailId" 
+	And user enter Confirm Email Address "ConfirmEmailId" 
+	And user enter Mobile Phone "MobilePhone" 
+	And user enter Alternate Phone "AlternatePhone" 
+	And user click on CONTINUE button 
+	And user verify presence of STEP2: CONSENT
+	And user select credit application modal agree message 
+
+	
+	
+ 

@@ -9,16 +9,17 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
+import com.aso.qe.test.common.Common_Web_PLCC;
 import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
 
-public class R1_PLCC_Generic_PO extends Common_Web_SD_PLCC {
+public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
+	
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
 	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
 	R2_CheckOut_PO checkout_po = PageFactory.initElements(driver, R2_CheckOut_PO.class);
-
+	Common_Web_SD_PLCC timer=new Common_Web_SD_PLCC();
 	private WebElement objElement;
-	Common_Web_SD_PLCC timer = new Common_Web_SD_PLCC();
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	@FindBy(xpath = "//*[text()='Credit Card Number']/following::*[1]")
 	public WebElement CreditCardNumber_Input;
@@ -142,10 +143,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_SD_PLCC {
 			assertTrue(isDisplayed(checkoutBtnATC));
 			isClickable(checkoutBtnATC);
 			if (isDisplayed(checkoutBtnATC)) {
-				Common_Web_SD_PLCC.waitUntilElePresent(driver, checkoutBtnATC, ELEMWAITTIME_MEDIUM);
+				Common_Web_PLCC.waitUntilElePresent(driver, checkoutBtnATC, ELEMWAITTIME_MEDIUM);
 				assertTrue(clickOnButton(checkoutBtnATC));
 			} else {
-				Common_Web_SD_PLCC.waitUntilElePresent(driver, checkoutBtnATC, ELEMWAITTIME_MEDIUM);
+				Common_Web_PLCC.waitUntilElePresent(driver, checkoutBtnATC, ELEMWAITTIME_MEDIUM);
 			}
 		}
 

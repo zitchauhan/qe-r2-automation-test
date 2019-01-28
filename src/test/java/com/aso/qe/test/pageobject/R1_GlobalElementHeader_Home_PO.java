@@ -18,10 +18,11 @@ import org.testng.asserts.SoftAssert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
+import com.aso.qe.test.common.Common_Web_PLCC;
 import com.aso.qe.test.stepdefinition.web.Common_Web_SD;
 import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
 
-public class R1_GlobalElementHeader_Home_PO extends Common_Web_SD_PLCC 
+public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC 
 {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_SIT_PO sit_po= PageFactory.initElements(driver, R1_SIT_PO.class);
@@ -1222,7 +1223,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_SD_PLCC
 	public void validatingPressRoom() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnkPressReleases);
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, lnkPressReleases, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, lnkPressReleases, ELEMWAITTIME_MEDIUM);
 			assertTrue(isClickable(lnkPressReleases));
 			logger.debug("press Releases is not displayed");
 		}else {

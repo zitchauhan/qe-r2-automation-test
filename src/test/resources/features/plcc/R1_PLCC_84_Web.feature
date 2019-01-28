@@ -125,4 +125,4 @@ Scenario: Verify user is able to place bulk orders
 	And user expect element a confirmation email is on its way to be present
 	And user expect element print link to be present
 	And user expect element my account link to be present
-	And user place fifty orders and see the response with "SKUIdOfProduct1" with PLCC Card "ValidPLCCCard"
+	#And user place fifty orders and see the response with "SKUIdOfProduct1" with PLCC Card "ValidPLCCCard"
