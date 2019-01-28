@@ -40,6 +40,23 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@id='plcc_modal_cancel']")
 	public WebElement cancelLinkCCModal;
 	
+	
+	//Pre-Screen Credir Card Appliction Modal
+	@FindBy(xpath = "//*[@id='ads-notice']")
+	public WebElement noticeIFramePCCApplicationModal;
+	@FindBy(xpath = "//*[text()='Your Personal Information']")
+	public WebElement personalInfoPCCApplicationModal;
+	@FindBy(xpath = "//*[@name='confirmSsn']")
+	public WebElement confirmSSNPCCApplicationModal;
+	@FindBy(xpath = "//div[3]/div[2]/div[2]")
+	public WebElement disclosureTxt1PCCApplicationModal;
+	@FindBy(xpath = "//div[4]/div[6]")
+	public WebElement disclosureTxt2PCCApplicationModal;
+	@FindBy(xpath = "//*[text()=' STEP1:PRESCREEN ACCEPTANCE ']")
+	public WebElement pageLabelPCCApplicationModal;
+	 
+	
+	
 //	@FindAll({
 //		   @FindBy(xpath = "//*[@name='state']")
 //		   @FindBy(xpath = "//*[@data-auid='undefined_listOption_1']")
@@ -397,4 +414,58 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		}
 
 	}
-}
+	public void verifyPresenceOfNoticeIFramePCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(noticeIFramePCCApplicationModal);
+			logger.debug("Notice IFrame on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(noticeIFramePCCApplicationModal);
+			logger.debug("Notice IFrame on Pre-screen Credit card ApplicationModal is displayed");
+		}
+	}
+	public void verifyPresenceOfPersonalInfoPCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(personalInfoPCCApplicationModal);
+			logger.debug("Peronal Info Label on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(personalInfoPCCApplicationModal);
+			logger.debug("Peronal Info Label on Pre-screen Credit card ApplicationModal is displayed");
+		}
+	}
+	public void verifyPresenceOfConfirmSSNPCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(confirmSSNPCCApplicationModal);
+			logger.debug("Confirm SSN Field on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(confirmSSNPCCApplicationModal);
+			logger.debug("Confirm SSN Field on Pre-screen Credit card ApplicationModal is displayed");
+		}
+	}
+	public void verifyPresenceOfDisclosureTxt1PCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(disclosureTxt1PCCApplicationModal);
+			logger.debug("Disclosure text 1 on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(disclosureTxt1PCCApplicationModal);
+			logger.debug("Disclosure text 1 on Pre-screen Credit card ApplicationModal is displayed");
+		}
+	}
+	public void verifyPresenceOfDisclosureTxt2PCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(disclosureTxt2PCCApplicationModal);
+			logger.debug("Disclosure text 2 on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(disclosureTxt2PCCApplicationModal);
+			logger.debug("Disclosure text 2 on Pre-screen Credit card ApplicationModal is displayed");
+		}
+		
+	}
+	public void verifyPresenceOfPageLabelPCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(pageLabelPCCApplicationModal);
+			logger.debug(" STEP1:PRESCREEN ACCEPTANCE 2 on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(pageLabelPCCApplicationModal);
+			logger.debug(" STEP1:PRESCREEN ACCEPTANCE on Pre-screen Credit card ApplicationModal is displayed");
+		}
+}}

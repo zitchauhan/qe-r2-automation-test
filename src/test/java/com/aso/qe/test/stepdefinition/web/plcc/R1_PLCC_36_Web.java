@@ -14,22 +14,22 @@ public class R1_PLCC_36_Web extends CommonActionHelper {
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
 	R1_PLCC_LandingPage_PO plccLandingPageObjects = PageFactory.initElements(driver, R1_PLCC_LandingPage_PO.class);
-	@Then("^user expect element Benefit(\\d+)Image to be present$")
-	public void user_expect_element_Benefit_Image_to_be_present(int arg1) throws Throwable {
+	@Then("^user expect element Benefit Images to be present$")
+	public void user_expect_element_Benefit_Image_to_be_present() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOfBenefit1Image();
 		plccLandingPageObjects.verifyPresenceOfBenefit2Image();
 		plccLandingPageObjects.verifyPresenceOfBenefit3Image();
 	}
 
-	@Then("^user expect element Benefit(\\d+)Text to be present$")
-	public void user_expect_element_Benefit_Text_to_be_present(int arg1) throws Throwable {
+	@Then("^user expect element Benefit Texts to be present$")
+	public void user_expect_element_Benefit_Text_to_be_present() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOfBenefit1Text();
 		plccLandingPageObjects.verifyPresenceOfBenefit2Text();
 		plccLandingPageObjects.verifyPresenceOfBenefit3Text();
 	}
 
-	@Then("^user expect element OfferText(\\d+) to be present$")
-	public void user_expect_element_OfferText_to_be_present(int arg1) throws Throwable {
+	@Then("^user expect element OfferTexts to be present$")
+	public void user_expect_element_OfferText_to_be_present() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOfOfferText1();
 		plccLandingPageObjects.verifyPresenceOfOfferText2();
 		plccLandingPageObjects.verifyPresenceOfOfferText3();

@@ -38,7 +38,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement addressCityField;
 	// @FindBy(xpath = "//*[@data-auid='address_state']")public WebElement
 	// addressStateDropdown;
-	@FindBy(xpath = "//button[@class='css-edkg4i']")
+	@FindBy(xpath = "//button[@class='css-htysxx']")
 	public WebElement addressStateDropdown;
 	// @FindBy(xpath = "//*[text()='Select']")public WebElement
 	// addressStateDropdown;

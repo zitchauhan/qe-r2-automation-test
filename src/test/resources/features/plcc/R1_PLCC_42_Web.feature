@@ -19,9 +19,7 @@ Background:
 	And user expect element Zip Code to be present 
 	And user enter Zip Code "Zip_Code" 
 	And user expect element City to be present 
-	And user expect element City text to equal "city" 
 	And user expect element State to be present 
-	And user expect element State text to equal "state" 
 	And user expect element Phone number to be present 
 	And user enter Phone Number "Phone_Number" 
 	And user expect element SIGN UP to be present 
@@ -30,6 +28,7 @@ Background:
 @C-PLCC @Regression @All @PLCC-42 @CR-VS 
 Scenario: Verify the display of address verification model after clicking on Sign Up button when AVS is unable to verify the provided address
 	And user expect element User Select Address to be present
+
 
 @C-PLCC @Regression @All @PLCC-42 @CR-VS
 Scenario: Verify the elements available on Address Verification model 
