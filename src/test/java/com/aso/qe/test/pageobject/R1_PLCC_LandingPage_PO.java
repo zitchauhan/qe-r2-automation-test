@@ -8,9 +8,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.test.common.Common_Web_PLCC;
 import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
 
-public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
+public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
 	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
@@ -92,11 +93,11 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 			assertTrue(isDisplayed(academyCreditCardFooterLink));
 			isClickable(academyCreditCardFooterLink);
 			if (isDisplayed(academyCreditCardFooterLink)) {
-				Common_Web_SD_PLCC.waitUntilElePresent(driver, academyCreditCardFooterLink, ELEMWAITTIME_MEDIUM);
-				Common_Web_SD_PLCC.waitUntilElePresent(driver, academyCreditCardFooterLink, ELEMWAITTIME_MEDIUM);
+				Common_Web_PLCC.waitUntilElePresent(driver, academyCreditCardFooterLink, ELEMWAITTIME_MEDIUM);
+				Common_Web_PLCC.waitUntilElePresent(driver, academyCreditCardFooterLink, ELEMWAITTIME_MEDIUM);
 				assertTrue(clickOnButton(academyCreditCardFooterLink));
 			} else {
-				Common_Web_SD_PLCC.waitUntilElePresent(driver, academyCreditCardFooterLink, ELEMWAITTIME_MEDIUM);
+				Common_Web_PLCC.waitUntilElePresent(driver, academyCreditCardFooterLink, ELEMWAITTIME_MEDIUM);
 			}
 		}
 	}
@@ -107,10 +108,10 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 			assertTrue(isDisplayed(academyCreditCardFooterLink));
 			isClickable(imgAcademyLogo);
 			if (isDisplayed(imgAcademyLogo)) {
-				Common_Web_SD_PLCC.waitUntilElePresent(driver, imgAcademyLogo, ELEMWAITTIME_MEDIUM);
+				Common_Web_PLCC.waitUntilElePresent(driver, imgAcademyLogo, ELEMWAITTIME_MEDIUM);
 				assertTrue(clickOnButton(imgAcademyLogo));
 			} else {
-				Common_Web_SD_PLCC.waitUntilElePresent(driver, imgAcademyLogo, ELEMWAITTIME_MEDIUM);
+				Common_Web_PLCC.waitUntilElePresent(driver, imgAcademyLogo, ELEMWAITTIME_MEDIUM);
 			}
 		}
 	}
@@ -120,7 +121,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(applyForCardSection);
 			logger.debug("FPO Apply Card Section on Landing Page is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(applyForCardSection);
 			logger.debug("FPO Apply Card Section on Landing Page is not displayed++++++++++++++++++++++++==");
@@ -133,7 +134,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(benefitSection);
 			logger.debug("Benefits Section on Landing Page is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, benefitSection, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, benefitSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(benefitSection);
 			logger.debug("Benefits Section on Landing Page is not displayed++++++++++++++++++++++++==");
@@ -146,7 +147,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(benefitSection);
 			logger.debug("Preescreen Section on Landing Page is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, benefitSection, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, benefitSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(benefitSection);
 			logger.debug("Preescreen Section on Landing Page is not displayed++++++++++++++++++++++++==");
@@ -168,10 +169,10 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 			assertTrue(isDisplayed(signInButton));
 			isClickable(signInButton);
 			if (isDisplayed(signInButton)) {
-				Common_Web_SD_PLCC.waitUntilElePresent(driver, signInButton, ELEMWAITTIME_SLOW);
+				Common_Web_PLCC.waitUntilElePresent(driver, signInButton, ELEMWAITTIME_SLOW);
 				assertTrue(clickOnButton(signInButton));
 			} else {
-				Common_Web_SD_PLCC.waitUntilElePresent(driver, signInButton, ELEMWAITTIME_SLOW);
+				Common_Web_PLCC.waitUntilElePresent(driver, signInButton, ELEMWAITTIME_SLOW);
 			}
 		}
 	}
@@ -181,7 +182,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(imgAcademyLogo);
 			logger.debug("Academy Logo is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, imgAcademyLogo, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, imgAcademyLogo, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(imgAcademyLogo);
 			logger.debug("Academy Logo is not displayed++++++++++++++++++++++++==");
@@ -194,7 +195,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(findAStoreLinkInHeader);
 			logger.debug("Find A Store Link is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, findAStoreLinkInHeader, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, findAStoreLinkInHeader, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(findAStoreLinkInHeader);
 			logger.debug("Find A Store Link is not displayed++++++++++++++++++++++++==");
@@ -206,7 +207,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(shopTabInHeader);
 			logger.debug("SHOP Tab in header is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, shopTabInHeader, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, shopTabInHeader, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(shopTabInHeader);
 			logger.debug("SHOP Tab in header is not displayed++++++++++++++++++++++++==");
@@ -218,7 +219,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(searchBox);
 			logger.debug("Search Field is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(searchBox);
 			logger.debug("Search Field is not displayed++++++++++++++++++++++++==");
@@ -230,7 +231,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(searchIcon);
 			logger.debug("Search Icon is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(searchIcon);
 			logger.debug("Search Icon is not displayed++++++++++++++++++++++++==");
@@ -242,7 +243,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(dealsTabInHeader);
 			logger.debug("Deals Field is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, dealsTabInHeader, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, dealsTabInHeader, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(dealsTabInHeader);
 			logger.debug("Deals Field is not displayed++++++++++++++++++++++++==");
@@ -254,7 +255,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(weeklyAdsLinkInHeader);
 			logger.debug("WeeklyAd Link is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, weeklyAdsLinkInHeader, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, weeklyAdsLinkInHeader, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(weeklyAdsLinkInHeader);
 			logger.debug("WeeklyAd Link is not displayed++++++++++++++++++++++++==");
@@ -276,7 +277,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(applyNowButton);
 			logger.debug("Apply Now button is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, applyNowButton, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, applyNowButton, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(applyNowButton);
 			logger.debug("Apply Now button is not displayed++++++++++++++++++++++++==");
@@ -288,7 +289,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(manageYourCardLink);
 			logger.debug("Manage your card is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, applyNowButton, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, applyNowButton, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(manageYourCardLink);
 			logger.debug("Manage your card is not displayed++++++++++++++++++++++++==");
@@ -300,7 +301,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			isDisplayed(plccCreditCardImage);
 			logger.debug("PLCC Credit Card Image is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, plccCreditCardImage, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, plccCreditCardImage, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(plccCreditCardImage);
 			logger.debug("PLCC Credit Card Image is not displayed++++++++++++++++++++++++==");
@@ -416,7 +417,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(benefit1Image);
 			logger.debug("Benefit 1 Image is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(benefit1Image);
 			logger.debug("Benefit 1 Image is displayed");
@@ -428,7 +429,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(benefit2Image);
 			logger.debug("Benefit 2 Image is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(benefit2Image);
 			logger.debug("Benefit 2 Image is displayed");
@@ -440,7 +441,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(benefit3Image);
 			logger.debug("Benefit 3 Image is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(benefit3Image);
 			logger.debug("Benefit 3 Image is displayed");
@@ -452,7 +453,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(benefit1Text);
 			logger.debug("Benefit text 1 is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(benefit1Text);
 			logger.debug("Benefit text 1 is displayed");
@@ -464,7 +465,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(benefit2Text);
 			logger.debug("Benefit text 2 is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(benefit2Text);
 			logger.debug("Benefit text 2 is displayed");
@@ -476,7 +477,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(benefit3Text);
 			logger.debug("Benefit text 3 is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(benefit3Text);
 			logger.debug("Benefit text 3 is displayed");
@@ -488,7 +489,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(offerText1);
 			logger.debug("Offer Text 1 is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(offerText1);
 			logger.debug("Offer Text 1 is displayed");
@@ -500,7 +501,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(offerText2);
 			logger.debug("Offer Text 2 is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(offerText2);
 			logger.debug("Offer Text 2 is displayed");
@@ -512,7 +513,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_SD_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(offerText3);
 			logger.debug("Offer Text 3 is displayed");
-			Common_Web_SD_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(offerText3);
 			logger.debug("Offer Text 3 is displayed");
