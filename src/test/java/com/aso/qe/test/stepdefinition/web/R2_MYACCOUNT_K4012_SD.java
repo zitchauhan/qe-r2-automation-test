@@ -26,7 +26,7 @@ public class R2_MYACCOUNT_K4012_SD extends CommonActionHelper {
 	
 	@Then("^user click on view Details of List orders and verify the cancel order button$")
 	public void user_click_on_view_Details_of_List_orders_and_verify_the_cancel_order_button() throws Throwable {
-		
+		Thread.sleep(Constants.thread_highest); 
 		for(WebElement ViewOrder:r2MyAccountPo.viewOrderDetailsBtn ) {
 			
 			assertTrue(clickOnButton(ViewOrder));

@@ -126,7 +126,11 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2CheckoutPo.ShippingConfirm_btn));
 		Thread.sleep(Constants.thread_medium);
 	}
-
+	@And("^user verify the phone number on payment method$")
+	public void user_verify_the_phone_number_on_payment_method() throws Throwable {
+		assertTrue(isDisplayed(r2CheckoutPo.Bopisbillingaddres));
+	}
+	
 	@Then("^Verify that user navigate to payment drawer$")
 	public void verify_that_user_navigate_to_payment_drawer() throws Throwable {
 		assertTrue(isDisplayed(r2CheckoutPo.PaymentHeader_Txt));

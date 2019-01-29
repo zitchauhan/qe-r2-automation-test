@@ -520,6 +520,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		//******************Payment Method(Start)
 		@FindBy(xpath="//*[@data-auid='checkout_payment']/preceding::*[1] | //*[@data-auid='checkout_edit_payment']/preceding::*[1]")public WebElement PaymentHeader_Txt;
 		@FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'PAYMENT METHOD')] | //*[contains(text(),'PAYMENT')]")public WebElement PaymentMethodHeader_Txt; //CR-GK 9-Oct
+		@FindBy(xpath="//div[@class='mb-1']")public WebElement Bopisbillingaddres;
 		@FindBy(xpath="//*[text()='Credit Card']")public WebElement CreditCard_radioBtn;
 		@FindBy(xpath="//*[text()='PayPal']")public WebElement PayPal_radioBtn;
 		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]")public WebElement CreditCardNumber_Input;
