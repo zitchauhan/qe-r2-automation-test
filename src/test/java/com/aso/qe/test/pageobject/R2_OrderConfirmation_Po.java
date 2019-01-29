@@ -81,7 +81,19 @@ public class R2_OrderConfirmation_Po extends CommonActionHelper {
 	@FindBy(xpath= "//*[text()='IN-STORE PICKUP']/parent::*/parent::*/*[2]/*[4]/*[1]")
 	public WebElement pickupPerson;  //SID 23-Jan
 	
+	@FindBy(xpath= "//*[text()='For a faster checkout next time, create your account below']/parent::*/*/p")
+	public WebElement createAnAccountOrderConfirmation;  //SID 26-Jan
 	
-//@
+	@FindBy(xpath= "//*[text()='IN-STORE PICKUP']")
+	public WebElement inStorePickUpOrderConfirmation;  //SID 26-Jan
+	
+	@FindBy(xpath= "//*[text()='PAYMENT']")
+	public WebElement paymentOrderConfirmation;  //SID 26-Jan
+	
+	@FindBy(xpath= "//*[text()='View Order History']")
+	public WebElement orderHistoryOrderConfirmationPage;  //SID 28-Jan
+	
+	
+
 
 }

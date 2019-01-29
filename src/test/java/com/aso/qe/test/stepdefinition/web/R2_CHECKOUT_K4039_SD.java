@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -48,10 +49,31 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 	public void user_click_on_paypal_radiobtn() throws Throwable {
 	   clickOnButton(r2CheckOutPo.PayPal_radioBtn);
 	}
-	@Then("^user switch to iframe to verify paypalcheckoutBtn$")
-	public void user_switch_to_iframe_to_verify_paypalcheckoutBtn() throws Throwable {
-		Thread.sleep(Constants.thread_high);
-		driver.switchTo().frame(r2_r1_fun_po.paypalCheckoutFrame);
+	@Then("^user switch to iframe and enter the paypal login \"(.*?)\" \"(.*?)\"$")
+	public void user_switch_to_iframe_and_enter_the_paypal_login(String arg1, String arg2) throws Throwable {
+		String winHandleBefore = driver.getWindowHandle();
+		for(String winHandle : driver.getWindowHandles()){
+		    driver.switchTo().window(winHandle);
+		   System.err.println(driver.getTitle());
+		}
+		System.err.println(getTitle());
+		waitForElement(r2CheckOutPo.PaypalEmail_Input);
+		assertTrue(clickOnButton(r2CheckOutPo.PaypalEmail_Input));
+		setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty(arg1));
+		boolean flag=false;
+		flag=isDisplayed(r2CheckOutPo.PaypalNext_Btn);
+		if(flag) {
+		assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
+		}
+		setInputText(r2CheckOutPo.PaypalPassWord_Input, webPropHelper.getTestDataProperty(arg2));
+		assertTrue(clickOnButton(r2CheckOutPo.PaypalLogin_Btn));
+		isDisplayed(r2CheckOutPo.PayPalContinue_Btn);
+		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));	
+		Thread.sleep(Constants.thread_highest);
+		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));	
+		driver.switchTo().window(winHandleBefore);
+		 System.err.println(driver.getTitle());
+
 	}
 	@Then("^user click on ADD Another Gift Card$")
 	public void user_click_on_ADD_Another_Gift_Card() throws Throwable {

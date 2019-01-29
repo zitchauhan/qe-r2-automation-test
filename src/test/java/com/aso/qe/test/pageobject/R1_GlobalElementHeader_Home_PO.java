@@ -236,7 +236,7 @@ public class R1_GlobalElementHeader_Home_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='drawer_Scents_m']/a") public WebElement clickCategoryScents_M;  //SID 7-Jan 
 	@FindBy(xpath="//*[@class='special_price']/*[1]") public WebElement forSpecialPricingMessage;  //SID 7-Jan 
 	@FindBy(xpath="//*[@class='special_price']/*[2]") public WebElement specialPriceMobileNumber;  //SID 7-Jan 
-	
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing\"]//*[@data-auid='level4Category-Hoodies & Sweatshirts']") public WebElement sweatshirtsPLP;  //SID 7-Jan 
 	
 	
 	

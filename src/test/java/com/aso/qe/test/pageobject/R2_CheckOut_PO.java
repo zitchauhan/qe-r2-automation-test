@@ -359,8 +359,12 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   //Start KER-4271 AKK
 	   @FindBy(xpath="//a[@data-auid='checkout_edit_in_store_pickup']")
 	   public WebElement EditStorPickUp_Btn;
-	   @FindBy(xpath="(//button[@type='button'])[1]/div/div[1]")
-	   public WebElement MePickUp_Drpdwn;
+	   @FindBy(xpath="//*[@data-auid='ul_dropdownList']//*[contains(text(),'Me+Alternate')]")
+	   public WebElement mePlusAlternatePickUp_Drpdwn;  //SID Modified 29-Jan
+	   
+	   @FindBy(xpath=" (//button[@type='button'])[1]/div/div[1]")
+	   public WebElement clickOnDropDown;  //SID Modified 29-Jan
+	  
 	   
 	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's First Name\"]")
 	   public WebElement PickupAltrFirstname_input;
@@ -416,6 +420,30 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[text()='Gift Card']")
 	   public WebElement giftCardApplyOrderSummary;  //SID 23-Jan
 	 
+	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'ending in')]")
+	   public WebElement cardLast4Digit;  //SID 24-Jan
+	   
+	   @FindBy(xpath="//*[@data-auid='li_listOption_1']/a")
+	   public WebElement selectAnotherCard;  //SID 24-Jan
+	 
+	   @FindBy(xpath="//*[contains(text(),'PICKUP PERSON')]/following-sibling::*/*")
+	   public List<WebElement> alternatePersonDetails;  //SID 26-Jan
+	   
+	   
+	   @FindBy(xpath="//*[@data-auid='checkout_page']//h2[text()='IN-STORE PICKUP']")
+	   public WebElement inStorePickUpCheckOut;  //SID 26-Jan
+	   
+	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']/*[3]/*[2]")
+	   public WebElement totalAmountCheckout;  //SID 26-Jan
+	   
+	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']/*[2]/*[3]/*[2]")
+	   public WebElement taxAmountCheckout;  //SID 26-Jan
+	 
+	 
+	 
+	   @FindBy(xpath="//*[text()='PICKUP PERSON']/following-sibling::*")
+	   public WebElement pickupCurrentUser;  //SID 26-Jan
+	 
 	   
 	   @FindBys({ @FindBy(xpath = "//i[@class='academyicon icon-minus']") })
 		public WebElement collapse;  //SID 21-Jan
@@ -436,8 +464,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[text()='Please enter a valid 10 digit phone number']")
 	   public WebElement AlternatePhoneNumberErrorMsg_Txt;
 	  
-	   @FindBy(xpath="//*[contains(text(),'See In-Store Pickup Instructions')]/../div[3]/ol")
-	   public WebElement SeeInStorePickupInstructions_Msg; 
+	   @FindBy(xpath="//*[contains(text(),'See In-Store Pickup Instructions')]/parent::*/following-sibling::*/ol")
+	   public WebElement SeeInStorePickupInstructions_Msg;   //SID Modified 29-Jan
 	   
 	   //*****Start Modify Pickup Location*********//
 //

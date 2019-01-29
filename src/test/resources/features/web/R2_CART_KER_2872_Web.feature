@@ -124,18 +124,20 @@ Scenario: Verify that user view 'Find a Store' modal from Cart
 	Then Find in Store modal should get open
 	
 	
-@R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-2872 @ZYP_CART_K2872-10624 @CR-DPK @C-BOPIS
+@R2_Web @R2_All @P-Low @CB-Cart @KER-2872 @ZYP_CART_K2872-10624 @C-BOPIS
 Scenario: Verify user is able to see the BOPIS availability against the listed stores for the products added in cart
-Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User searches a product "SOFSKUNumber" and navigates to PDP
-	Then user click on Add to Cart Button
-	And user will click on View Cart button 
-	And click on Change Location link
-	Then user enter "zipCode" in Find a Store Model
-	And user click on submit button
-	Then user click on all plus icon in Store Address drawer
-	And user should be able to see the BOPIS availability as Cart Items available/Not available for Pickup with product image thumbnails	
-
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	When user enters "BOPIS_Regular_Product" in the searchbox
+	And user click on Add to Cart Button 
+	And user click on view cart
+	Then user select in store pickup option
+	And user click on change location link in order summery cart page
+    Then User is able to see Find a Store Modal
+    And user collapse the store name
+    Then user verify BOPIS availability in inventory as number of Cart items available for pick up or Not available against each listed store
 
 @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-2872 @ZYP_CHECKOUT_K2872-10647 @CR-DPK @C-BOPIS
 Scenario: Verify that user is not able to see the 'View Next 5 stores' button, if more stores are not available

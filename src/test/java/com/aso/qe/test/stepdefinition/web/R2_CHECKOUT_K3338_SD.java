@@ -57,15 +57,17 @@ public class R2_CHECKOUT_K3338_SD extends CommonActionHelper {
 	
 	@Then("^enter the paypal login \"(.*?)\" \"(.*?)\"$")
 	public void enter_the_paypal_login(String arg1, String arg2) throws Throwable {
-		assertTrue(clickOnButton(r2CheckOutPo.PaypalClose_icon));
-//		assertTrue(clickOnButton(r2CheckOutPo.PaypalScreenLogin_Btn));
+
 		waitForElement(r2CheckOutPo.PaypalEmail_Input);
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalEmail_Input));
 		setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty(arg1));
-//		assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
+		assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
 		setInputText(r2CheckOutPo.PaypalPassWord_Input, webPropHelper.getTestDataProperty(arg2));
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalLogin_Btn));
-		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));		
+		isDisplayed(r2CheckOutPo.PayPalContinue_Btn);
+		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));	
+		Thread.sleep(Constants.thread_highest);
+		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));	
 	}
 
 	

@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.support.PageFactory;
 
@@ -44,4 +45,21 @@ public class R2_CART_K3468_SD extends CommonActionHelper {
 		Thread.sleep(200);
 		assertTrue(!isDisplayed(r2_cart_po.outOfStockModal));
 	}
+
+	@And("^user will see the store error message \"(.*?)\"$")
+	public void user_will_see_the_store_error_message(String message) {
+		assertTrue(isDisplayed(r2_cart_po.bopisStoreNotSelectedErrorMessage));
+		String errorMessage = r2_cart_po.messageFlyout.getText();
+		System.err.println(" errorMessage " + errorMessage + " message " + webPropHelper.getTestDataProperty(message));
+		assertEquals(errorMessage, webPropHelper.getTestDataProperty(message));
+	}
+
+	@And("^user should be able to see out of stock error message \"(.*?)\"$")
+	public void user_should_be_able_to_see_out_of_stock_error_message(String message) {
+		assertTrue(isDisplayed(r2_cart_po.outOfStockMesssageCart));
+		String errorMessage = r2_cart_po.outOfStockMesssageCart.getText();
+		System.err.println(" errorMessage " + errorMessage + " message " + webPropHelper.getTestDataProperty(message));
+		assertEquals(errorMessage, webPropHelper.getTestDataProperty(message));
+	}
+
 }

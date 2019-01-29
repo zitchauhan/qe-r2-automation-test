@@ -225,7 +225,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	
 	@FindBy(xpath ="//*[@data-component='productDetailsGeneric']//*[@id='PMC']/*") public WebElement legalMessageAmmoPDP;  //SID 7-Jan
 	@FindBy(xpath ="//*[@data-auid='PDP_IventoryMessage']/following-sibling::div/a") public WebElement storeNameClick;  //SID 7-Jan
-	@FindBy(xpath ="//*[@class='css-mf7uih css-17a3g4d']") public WebElement pickUpIconGreyedOut;  //SID 12-Jan
+	@FindBy(xpath ="//*[@class='css-mf7uih css-17a3g4d'] | //*[contains(@class,'academyicon icon-store')]") public WebElement pickUpIconGreyedOut;  //SID 12-Jan
 	
 	
 	//***********************************************************************************************************//

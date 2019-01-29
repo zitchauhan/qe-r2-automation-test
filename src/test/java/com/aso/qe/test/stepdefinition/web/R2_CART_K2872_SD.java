@@ -286,5 +286,13 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	public void user_click_on_find_a_store_option() {
 		assertTrue(clickOnButton(r2CheckOutPo.findAStoreCart));
 	}
-		
+
+	@Then("^user verify BOPIS availability in inventory as number of Cart items available for pick up or Not available against each listed store$")
+	public void user_verify_BOPIS_availability_in_inventory_as_number_of_Cart_items_available_for_pick_up_or_Not_available_against_each_listed_store() {
+		assertTrue(clickOnButton(r2CartPo.btnViewTheNext5Stores));
+		for (WebElement inventoryAvailabilityBOPISStore : r2CartPo.inventoryAvailabilityBOPISStores) {
+			assertTrue(isDisplayed(inventoryAvailabilityBOPISStore));
+		}
+	}
+
 }

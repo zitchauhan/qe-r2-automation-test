@@ -163,7 +163,7 @@ Scenario: Verify that user sees appropriate message If shipping is unavailable f
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User should be able to see Search Box on Homepage 
-	Then User searches a product "ShiipingNotAvailableProduct" and navigates to PDP 
+	Then User searches a product "ShippingNotAvailableProduct" and navigates to PDP 
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
     |Shipping Not Available|

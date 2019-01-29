@@ -44,7 +44,7 @@ Feature: E03-150 - Order Cancellation Cancel Order Confirmation (Guest & Authent
     |Cancel_NO_Order_Btn|
     And user click on yes cancle my order button
     And Verify that the order cancellation confirmation page is displayed
-    And user should be able to see cancellation message
+   And user should be able to see cancellation message "BOPIS_Order_Cancel_Message"
     And Refund details should be displayed
    	Then Verify below Sub/Main Module of My Account
       | #Verify following elements in my account order details |
@@ -87,7 +87,7 @@ Feature: E03-150 - Order Cancellation Cancel Order Confirmation (Guest & Authent
     |Cancel_NO_Order_Btn|
     And user click on yes cancle my order button
     And Verify that the order cancellation confirmation page is displayed
-    And user should be able to see cancellation message
+   And user should be able to see cancellation message "BOPIS_Order_Cancel_Message"
     And Refund details should be displayed
    	Then Verify below Sub/Main Module of My Account
       | #Verify following elements in my account order details |

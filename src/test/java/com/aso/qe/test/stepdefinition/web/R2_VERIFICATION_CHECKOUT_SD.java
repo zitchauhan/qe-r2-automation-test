@@ -86,8 +86,10 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2CheckoutPo.Checkout_ShippingAddress_SaveShipping_chekbox));
 				//======================================
 				// In-Store Pickup(Start)
-				else if (currentElement.equalsIgnoreCase("MePickUp_Drpdwn"))
-					assertTrue(isDisplayed(r2CheckoutPo.MePickUp_Drpdwn));
+				else if (currentElement.equalsIgnoreCase("clickOnDropDown"))
+					assertTrue(isDisplayed(r2CheckoutPo.clickOnDropDown));
+				else if (currentElement.equalsIgnoreCase("CurrentUser"))
+					assertTrue(isDisplayed(r2CheckoutPo.pickupCurrentUser));
 				else if (currentElement.equalsIgnoreCase("StorePickupAlternatesFirstName_input"))
 					assertTrue(isDisplayed(r2CheckoutPo.PickupAltrFirstname_input));
 				else if (currentElement.equalsIgnoreCase("StorePickupAlternatesLastName_input"))

@@ -1,34 +1,63 @@
-Feature: [UI]- To Verify the Footer Email link functionality
+Feature: BOPIS Change Store in Cart 
 
-@C-BOPIS @R2_Web  @R2_All @P-Highest  @1HR_R2 @C-NonOrder @CC-Checkout_Order   @KER-2865 @ZYP_CHECKOUT_K2865-9977 @CR-RK 
-Scenario: Verify the user is able to view the 'Change Location' under In-store Pick Up on Checkout
-    Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on SignIn link from global header 
-	And user logs in as "Cart_BopisEmail" 
-	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
-	And user click on view cart
-	Then user select in store pickup option
-	And user click on change location button on cart
-	
-@C-BOPIS @R2_Web  @R2_All @P-Highest  @1HR_R2 @C-NonOrder @CC-Checkout_Order   @KER-2865 @ZYP_CHECKOUT_K2865-9978 @CR-RK 
-Scenario: Verify the user is able to view the 'Change Location' in Cart Order Summary
-    Given user launches the browser and navigates to "ASO_HOME" page
-	When user clicks on SignIn link from global header 
-	And user logs in as "Cart_BopisEmail" 
-	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
-	And user click on view cart
-	Then user select in store pickup option
-	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
-	
-	@C-BOPIS @R2_Web  @R2_All @P-Low @C-NonOrder @CC-MyAccount_Order   @KER-2865 @ZYP_MYACCOUNT_K2865-9979 @CR-MS @C1-MessageB
-Scenario: 
-	Verify that Authenticated user is able to view order details for BOPIS orders
+@R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-2865 @ZYP_CART_K2865-9980
+Scenario: Verify that user view 'Find a Store' modal from Change Location in Cart Order Summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user enters "BOPIS_Regular_Product" in the searchbox
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	When User searches a product "BOPIS_Regular_Product" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button
+	Then user select in store pickup option 
+	And user click on change location link in order summery cart page
+	And Find Store Modal should pop-up 
+
+@C-BOPIS @R2_Web @R2_All @P-Highest @CB-Cart @KER-2865 @ZYP_CART_K2865-9983
+Scenario: Verify the user is able to see the full inventory availability on Find a store modal
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2"
+	When user enters "BOPIS_SOF_Product" in the searchbox
 	And user click on Add to Cart Button 
 	And user click on view cart
 	Then user select in store pickup option
-	And user click on find the store button on cart
-	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
+    And user click on change location link in order summery cart page
+	And Find Store Modal should pop-up 
+    Then user check for the products count	
+    
+@C-BOPIS @R2_Web @R2_All @P-Highest @CB-Cart @KER-2865 @ZYP_CART_K2865-9984
+Scenario: Verify the user is able to see the partial inventory availability on Find a store modal
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2"
+	When user enters "BOPIS_Product" in the searchbox
+	And user click on Add to Cart Button 
+	And user click on view cart
+	When User searches a product "BOPIS_Regular_Product" and navigates to PDP 
+	And user click on Add to Cart Button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button
+	Then user select in store pickup option
+	And user click on change location link in view cart page
+    And user collapse the store name
+    Then user check for the products count and item available should be less
+   
+@C-BOPIS @R2_Web @R2_All @P-Highest @CB-Cart @KER-2865 @ZYP_CART_K2865-9985
+Scenario: Verify the user is able to see no inventory availability on Find a store modal
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2"
+	When user enters "BOPIS_Product" in the searchbox
+	And user click on Add to Cart Button 
+	And user click on view cart
+	Then user select in store pickup option
+	And user click on change location link in view cart page
+	Then User is able to see Find a Store Modal
+    Then user check for the products count and item not available should come   
+        
+	

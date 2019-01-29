@@ -169,6 +169,47 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']/*[2]/*[2]/*[2]")
 	public WebElement storeNameOnCartPageInStorePickUp;  //SID 23-Jan
 	
+	@FindBy(xpath = "//*[text()='Change Location']/parent::*")
+	public WebElement storeNameCartOrderSummary;  //SID 26-Jan
+	
+	@FindBy(xpath = "//*[text()='Change Location']/parent::*/following-sibling::*")
+	public WebElement instoreShippingChargesCartPage;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[contains(text(),'Items Available')]")
+	public List<WebElement> inventoryAvailabilityBOPISStores;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[@data-auid='facetdrawerundefined']")
+	public List<WebElement> storeNamesCartPage;  //SID 27-Jan
+
+	
+	@FindBy(xpath = "//*[@role='tooltip']")
+	public WebElement tooltip;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[@role='alert']")
+	public WebElement messageFlyout;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[@data-auid='store_not_selected']")
+	public WebElement bopisStoreNotSelectedErrorMessage;  //SID 27-Jan
+	
+	
+	@FindBy(xpath = "//*[@data-auid='tooltip-close-crt_rdTooltip_1']/parent::*")
+	public WebElement storeMessageFlyout;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[@data-auid='tooltipcrt_rdTooltip_1']/parent::*")
+	public WebElement storeNameCart;  //SID 27-Jan
+	
+	
+	@FindBy(xpath = "//*[@role='dialog']/*[2]/*[3]/*[1]")
+	public WebElement outOfStockMesssageCart;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[@data-auid='tooltipcrt_rdTooltip_1']")
+	public WebElement inStoreSelectedByDefault;  //SID 27-Jan
+	
+	@FindBy(xpath = "(//*[text()='Change Location']/parent::*/button)[1]")
+	public WebElement changeLocationViewCart;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[contains(@class,'academyicon icon-store')]")
+	public WebElement greyPickUpIcon;  //SID 27-Jan
 	
 	
 	@FindBy(xpath = "//*[contains(text(),'Items Not Available for Pickup')]/div/img")
@@ -892,6 +933,16 @@ public class R2_Cart_PO extends CommonActionHelper {
 		
 		@FindBy(xpath = "//*[@data-auid='btncrt_editInCartbtn']/parent::div/parent::div/parent::div/button")
 		public WebElement outOfStockModalCloseButton;  //SID 12-Jan
+		
+		@FindBy(xpath = "//*[@data-component='cart']//*[contains(text(),'removed')]")
+		public WebElement removedMessageCart;  //SID 27-Jan
+		
+		@FindBy(xpath = "//*[@data-component='cart']//*[contains(text(),'added')]")
+		public WebElement moveToWishlistMessageCart;  //SID 27-Jan
+		
+		
+		@FindBy(xpath = "//*[@data-component='cart']//*[contains(text(),'removed')]/*[2] | //*[@data-component='cart']//*[contains(text(),'added')]/*[2]")
+		public WebElement removedproductUndo;  //SID 27-Jan
 		
 		
 	

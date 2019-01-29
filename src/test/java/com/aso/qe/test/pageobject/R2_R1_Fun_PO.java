@@ -177,7 +177,8 @@ public class R2_R1_Fun_PO extends CommonActionHelper
    // End KER-6655-MS
     
     //KER-4039 CR-RKA
-    @FindBy(xpath="//*[@data-auid='checkout_payment']//iframe")public WebElement paypalCheckoutFrame;
+    @FindBy(xpath="//*[@data-auid='checkout_payment']//iframe")
+    public WebElement paypalCheckoutFrame;
     
     
 

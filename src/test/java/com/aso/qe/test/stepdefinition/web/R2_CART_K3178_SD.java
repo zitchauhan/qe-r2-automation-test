@@ -69,6 +69,7 @@ public class R2_CART_K3178_SD extends CommonActionHelper {
 	
 	@Then("^user check for the products count$")
 	public void user_check_for_the_products_count() throws InterruptedException {
+		Thread.sleep(Constants.thread_high);
 		assertTrue(clickOnButton(r2CheckoutPo.collapse));
 		Thread.sleep(Constants.thread_high);
 		String productCountMessage = r2CheckoutPo.productsAvailabelOnSelectedStore.getText();

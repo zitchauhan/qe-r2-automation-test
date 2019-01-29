@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
@@ -9,6 +10,7 @@ import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_FindStore_PO;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
+import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_PDP_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 import cucumber.api.java.en.And;
@@ -21,6 +23,7 @@ public class R2_CART_K3175_SD extends CommonActionHelper {
 	R2_R1_Fun_PO r2r1FunPo = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	R2_PDP_PO pdpPo = PageFactory.initElements(driver, R2_PDP_PO.class);
 	R1_PLP_PO plp_po = PageFactory.initElements(getDriver(), R1_PLP_PO.class);
+	R2_Cart_PO r2_cart_PO = PageFactory.initElements(driver, R2_Cart_PO.class);
 	Actions hover = new Actions(driver);
 	String count1="";
 	String storeName="";
@@ -112,7 +115,23 @@ public class R2_CART_K3175_SD extends CommonActionHelper {
 		storeName = r2r1FunPo.storeNameStoreModalPLP.getText();
 		System.err.println(findStorePo.selectedStoreNameinModal.getText());
 		clickOnButton(findStorePo.ovly_btnMakeMyStore_1);
+		Thread.sleep(Constants.thread_medium);
+		storeName = r2r1FunPo.storeNameStoreModalPLP.getText();
 		clickOnButton(findStorePo.ovly_btnCloseContainer);
+	}
+	
+	@And("^user verify the selected store is reflected$")
+	public void user_verify_the_selected_store_is_reflected() throws InterruptedException {
+		String storeDetails = r2_cart_PO.storeNameCartOrderSummary.getText();
+		
+		System.err.println(" storeDetails "+ storeDetails+" storeName "+ storeName);
+		assertTrue(storeDetails.contains(storeName));
+	}
+	
+	@And("^user verify the selected store is reflected for both the product$")
+	public void user_verify_the_selected_store_is_reflected_for_both_the_product() {
+		String store = r2_cart_PO.storeNameCart.getText();
+		assertEquals(store, storeName);
 	}
 
 	@And("^user verify the new selected location is displayed$")
