@@ -126,6 +126,16 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement invalidMobileNumberErrorMessage;
 	@FindBy(xpath = "//*[text()='Invalid Zip code']")
 	public WebElement invalidZipErrorMessage;
+	@FindBy(xpath = "//*[text()='Invalid SSN']")
+	public WebElement invalidSSNErrorMessage;
+	@FindBy(xpath = "//*[text()='Invalid mobile number']")
+	public WebElement invalidMobileNumber;
+	@FindBy(xpath = "//*[text()='Annual Income is required']")
+	public WebElement invalidAnnualIncomeNumber;
+	@FindBy(xpath = "//*[text()='Date of birth is required']")
+	public WebElement invalidDOBNumber;
+	
+	
 
 	@FindBy(xpath = "//*[@data-auid='checkout_modify_shipping_address_link']")
 	public WebElement modifyAddressLink;
@@ -734,7 +744,16 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 			logger.debug("Please enter a Last Name error message is displayed++++++++++++++++++++++++==");
 		}
 	}
-
+	public void verifypresenceofDOBErrorMessage() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(invalidDOBNumber);
+			logger.debug("Invalid DOB error message is not displayed");
+		} else {
+			isDisplayed(invalidDOBNumber);
+			logger.debug("Invalid DOB error message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	
 	public void verifypresenceofEmailAddressErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(emailAddressErrorMessage);
@@ -744,6 +763,16 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 			logger.debug("Please enter an email address error message is displayed++++++++++++++++++++++++==");
 		}
 	}
+	public void verifypresenceofInvalidSSNErrorMsg() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(invalidSSNErrorMessage);
+			logger.debug("Invalid SSN error message is not displayed");
+		} else {
+			isDisplayed(invalidSSNErrorMessage);
+			logger.debug("Invalid SSN error message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	
 
 	public void verifypresenceofPasswordErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -833,6 +862,24 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 		} else {
 			isDisplayed(modifyAddressLink);
 			logger.debug("Modify Address Link is displayed");
+		}
+	}
+	public void verifyPresenceOfMobilePhoneErrorMsg() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(invalidMobileNumber);
+			logger.debug("Invalid Mobile Number is dispalyed");
+		} else {
+			isDisplayed(invalidMobileNumber);
+			logger.debug("Invalid Mobile Number is displayed");
+		}
+	}
+	public void verifyPresenceOfAnnualIncomeErrorMsg() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(invalidAnnualIncomeNumber);
+			logger.debug("Invalid Annual Income is dispalyed");
+		} else {
+			isDisplayed(invalidAnnualIncomeNumber);
+			logger.debug("Invalid Annual Income is displayed");
 		}
 	}
 
