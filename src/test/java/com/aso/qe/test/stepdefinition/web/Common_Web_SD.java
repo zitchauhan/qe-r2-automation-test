@@ -251,6 +251,15 @@ public class Common_Web_SD extends CommonActionHelper
 		assertTrue(new ASOBrokenURLsLinks().getBrokenImageLinks(), ASOBrokenURLsLinks.errorText);
 	}
 	
-	
-	
+	@Then("^User navigates to Mens Clothing PLP$")
+	public void User_navigates_to_Mens_Clothing_PLP() throws Exception {
+		Thread.sleep(2000);
+		assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
+		Actions hover = new Actions(getDriver());
+		hover.moveToElement(globalElementHeader.btnClothingCategory).build().perform();
+		Thread.sleep(2000);
+		hover.moveToElement(globalElementHeader.plpMensShirt).click().build().perform();
+		Thread.sleep(2000);
+
+	}
 }

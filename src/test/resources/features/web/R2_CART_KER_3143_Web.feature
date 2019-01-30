@@ -1,13 +1,13 @@
 Feature: [Web] B06-100- Merge Cart
 
-@R2_Web @R2_NonRegression @CB-Cart @P-High_B @KER-3143 @ZYP_Cart_K3143-10257 @CR-RKA @1HR_R2 @C-BOPIS
+@R2_Web @C-Cart @P-High_B @KER-3143 @ZYP_Cart_K3143-10257 @1HR_R2 @C-BOPIS
 Scenario: Verify if Unauthenticated customer will be able to add items to cart for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
+	When user will verify in-store pick up radio button is selected with "BOPIS_Store2" 
 	Then user verify IN Store Pick Up-Free is enable 
 	Then Verify below Sub/Main Module of Cart Page
 	|#verify INStorePickup_FREE radio btn is enable# |
@@ -183,16 +183,14 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	@R2_Web @R2_Regression @P-High @KER-3143 @C-Cart  @ZYP_Cart_K3143-8160 @CR-RKA @C-BOPIS
 	Scenario: Verify if user must be able to view all items designated for BOPIS( Buy online and pick in store)
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
-	And user click on signin button 
-	When User Navigates L2 form Homepage Header 
-	And User clicks on product in PLP 
+	When user clicks on SignIn link from global header 
+	And user logs in as "Bopis_Email" 
+	When user enters "BOPIS_Product" in the search box 
 	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
-	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"  
+	And User select another store "BOPIS_Store1"
+	And user verify the new selected location is displayed
 	Then Verify below Sub/Main Module of Cart Page
    |Verify item for Bopis |
    |Items_txt|

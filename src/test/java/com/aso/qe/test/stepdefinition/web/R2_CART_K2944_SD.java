@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.web;
 
 //<<<<<<< Updated upstream
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
@@ -59,6 +60,10 @@ import cucumber.api.java.en.When;
 //
 //=======
 import cucumber.api.PendingException;
+
+import static org.junit.Assert.assertTrue;
+
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
@@ -71,13 +76,15 @@ public class R2_CART_K2944_SD extends CommonActionHelper {
 		globalElementHeader.entertheSearchData(searchSKU);
 	}
 	
+	@Then("^user navigate to Sweatshirts plp$")
+	public void user_navigate_to_Sweatshirts_plp() throws InterruptedException {
 
-	@Then("^verify that message Item is successfully added to wishlist is displayed$")
-	public void verify_that_message_Item_is_successfully_added_to_wishlist_is_displayed() throws Throwable {
-//		isDisplayed(element)
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-//>>>>>>> Stashed changes
+		Thread.sleep(Constants.thread_low);
+		assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
+		Thread.sleep(Constants.thread_low);
+		Actions hover = new Actions(getDriver());
+		hover.moveToElement((globalElementHeader.sweatshirtsPLP)).click().build().perform();;
+		Thread.sleep(Constants.thread_high);
 	}
 
 	@Then("^verify that item is added to wishlist$")

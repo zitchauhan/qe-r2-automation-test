@@ -85,6 +85,7 @@ public class R2_CART_K2927_SD extends CommonActionHelper {
 	@Given("^user makes a note of tax calculation$")
 	public void user_makes_a_note_of_tax_calculation() throws Throwable {
 		taxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
+		System.err.println(taxDisplayed);
 	}
 
 	@Given("^user makes a note of tax and total amount$")
@@ -101,9 +102,11 @@ public class R2_CART_K2927_SD extends CommonActionHelper {
 	@Then("^cart page displays updated tax$")
 	public void cart_page_displays_updated_tax() throws Throwable {
 		float currentTaxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
+		System.err.println(currentTaxDisplayed);
 		if (taxDisplayed != 0) {
 			assertTrue(taxDisplayed != currentTaxDisplayed);
 		}
+
 	}
 
 	@Then("^cart page displays increased tax$")

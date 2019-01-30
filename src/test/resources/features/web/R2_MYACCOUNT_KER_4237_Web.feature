@@ -148,6 +148,15 @@ Scenario:
 		|MyAccount_OrderDetailsPage_TaxAmount       |
 		|MyAccount_OrderDetailsPage_SubTotalAmount  |
 		
+@R2_Web @R2_All @P-High @CB-MyAccount @KER-4237 @ZYP_MYACCOUNT_K4237-10520 @C-BOPIS
+Scenario: Verify that Authenticated user is able to view store details for BOPIS orders
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user logs in as "Bopis_Email"
+	And user click on MyAccount  
+	When user click on Orders link
+	Then user click on view Details
+	And user click on view store details button
 		
 @R2_Web @C-Order @CC-MyAccount_Order @R2_All @P-High_Order   @KER-4237 
 @ZYP_MYACCOUNT_K4237-10526 @Order @CR-GK 
@@ -169,5 +178,46 @@ Scenario: Verify that UnAuthenticated user is able to print order receipt
 		|#Verify following elements in order section|
 		|MyAccount_OrderDetailsPage_PrintReceipt    |
 	And user click on print receipt link 
+	
+@R2_Web @R2_All @P-High @CB-MyAccount @KER-4237 @ZYP_MYACCOUNT_K4237-10527 @C-BOPIS
+Scenario: Verify that UnAuthenticated user is able to view order details for BOPIS orders
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then user click on the check order button available in footer
+	And user enter the orderid "BOPIS_OrderID" and billing zipcode "BOPIS_OrderID_Zipcode"
+	And user click on check button
+	Then Verify below Sub/Main Module of My Account 
+	|#Verify that Order Detail Page is displayed|
+	|MyAccount_OrderPage_OrderPlacedOnDate_txt  |
+	|MyAccount_OrderDetailsPage_OrderDate       |
+	|MyAccount_OrderPage_OrderNumber_txt        |
+	|MyAccount_OrderDetailsPage_OrderStatus     |
+	|MyAccount_OrderDetailsPage_SubTotalAmount  |
+	|MyAccount_OrderDetailsPage_TaxAmount       |
+	|MyAccount_OrderPage_OrderTotal_txt         |
+	|Order_Bopis_In_Store_Pickup_txt|
+	|MyAccount_OrderPage_OrderNumberInput       |
+	|MyAccount_OrderPage_OrderDetailsPage       |	
+	|Order_Bopis_Pickup_txt|
+	|Order_Bopis_Store_Hours_txt|
+	|Order_Bopis_Pickup_Information_Person_Details_Txt|
+	|Order_Bopis_View_Store_Btn|
+	|Order_Bopis_Print_Receipt_lnk|
+	|Order_Bopis_InStore_Pickup_Msg|
+	|Order_Bopis_Item_Img|
+	|Order_Bopis_Item_Details|
+
+@R2_Web @R2_All @P-High @CB-MyAccount @KER-4237 @ZYP_MYACCOUNT_K4237-10528 @C-BOPIS
+Scenario: Verify that UnAuthenticated user is able to view store details for BOPIS orders
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then user click on the check order button available in footer
+	And user enter the orderid "BOPIS_OrderID" and billing zipcode "BOPIS_OrderID_Zipcode"
+	And user click on check button
+	And user click on view store details button
+	
+
+		
+		
+		
+			
 	
 	
