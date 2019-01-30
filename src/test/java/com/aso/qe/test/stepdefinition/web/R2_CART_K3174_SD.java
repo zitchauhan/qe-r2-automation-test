@@ -3,6 +3,8 @@ package com.aso.qe.test.stepdefinition.web;
 
 
 import static org.junit.Assert.assertTrue;
+
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -12,6 +14,7 @@ import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -66,13 +69,14 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
         }
 		
 	}
-	
+
 	@Then("^user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers$")
-	public void user_should_see_unselected_checkbox_acknowledgement_with_appropriate_age_restriction_disclaimers() throws Throwable {
-	    assertTrue(isDisplayed(r2CheckoutPo.ShipToStoreforSOF_compliance_Txt));
-	   
+	public void user_should_see_unselected_checkbox_acknowledgement_with_appropriate_age_restriction_disclaimers()
+			throws Throwable {
+		assertTrue(isDisplayed(r2CheckoutPo.ShipToStoreforSOF_compliance_Txt));
+
 	}
-	
+
 	@Then("^user click on edit button in ship to store$")
 	public void user_click_on_edit_button_in_ship_to_store() throws Throwable {
 		assertTrue(clickOnButton(r2CheckoutPo.checkoutEditShipToStore_btn));
@@ -80,7 +84,8 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
 
 	@Then("^user click on checkbox in special order ship to store section$")
 	public void user_click_on_checkbox_in_special_order_ship_to_store_section() throws Throwable {
-		 assertTrue(clickOnButton(r2CheckoutPo.ShipToStoreforSOF_compliance_Txt));
+		Actions hover = new Actions(driver);
+		hover.moveToElement(r2CheckoutPo.selectCheckbox).click().build().perform();
 	}
 
 	@Then("^user click on go to payment section$")
@@ -88,4 +93,43 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2CheckoutPo.ShipToStoreforSOF_Payment_Btn));
 		
 	}
+
+	@And("^user fill the payment details for sof guest user$")
+	public void user_fill_the_payment_details_for_sof_guest_user() throws InterruptedException {
+		waitForElement(r2CheckoutPo.CreditCardNumber_Input);
+		r2CheckoutPo.ZipCode_Input.clear();
+		setInputText(r2CheckoutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
+		setInputText(r2CheckoutPo.ExpirationDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
+		setInputText(r2CheckoutPo.Cvv_Input, webPropHelper.getTestDataProperty("CVV"));
+		setInputText(r2CheckoutPo.FirstName_Input, webPropHelper.getTestDataProperty("FirstName"));
+		setInputText(r2CheckoutPo.LastName_Input, webPropHelper.getTestDataProperty("LastName"));
+		setInputText(r2CheckoutPo.PhoneNumber_Input, webPropHelper.getTestDataProperty("PhoneNumber"));
+		setInputText(r2CheckoutPo.Adderss_Input, webPropHelper.getTestDataProperty("Address"));
+		setInputText(r2CheckoutPo.ZipCode_Input, webPropHelper.getTestDataProperty("zipcode"));
+		Thread.sleep(Constants.thread_medium);
+		setInputText(r2CheckoutPo.EmailAddressforOrderConfirmation_Input,webPropHelper.getTestDataProperty("EmailAddress"));
+		Thread.sleep(Constants.thread_medium);
+		assertTrue(clickOnButton(r2CheckoutPo.ReviewOrder_Btn));
+		Thread.sleep(Constants.thread_highest);
 	}
+	
+	@And("^user fill the payment details for sof registered user$")
+	public void user_fill_the_payment_details_for_sof_registered_user() throws InterruptedException {
+		Thread.sleep(Constants.thread_medium);
+//		waitForElement(r2CheckoutPo.CreditCardNumber_Input);
+//		r2CheckoutPo.ZipCode_Input.clear();
+//		setInputText(r2CheckoutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
+//		setInputText(r2CheckoutPo.ExpirationDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
+		setInputText(r2CheckoutPo.Cvv_Input, webPropHelper.getTestDataProperty("CVV"));
+//		setInputText(r2CheckoutPo.FirstName_Input, webPropHelper.getTestDataProperty("FirstName"));
+//		setInputText(r2CheckoutPo.LastName_Input, webPropHelper.getTestDataProperty("LastName"));
+//		setInputText(r2CheckoutPo.PhoneNumber_Input, webPropHelper.getTestDataProperty("PhoneNumber"));
+//		setInputText(r2CheckoutPo.Adderss_Input, webPropHelper.getTestDataProperty("Address"));
+//		setInputText(r2CheckoutPo.ZipCode_Input, webPropHelper.getTestDataProperty("zipcode"));
+//		Thread.sleep(Constants.thread_medium);
+//		setInputText(r2CheckoutPo.EmailAddressforOrderConfirmation_Input,webPropHelper.getTestDataProperty("EmailAddress"));
+//		Thread.sleep(Constants.thread_medium);
+		assertTrue(clickOnButton(r2CheckoutPo.ReviewOrder_Btn));
+		Thread.sleep(Constants.thread_highest);
+	}
+}

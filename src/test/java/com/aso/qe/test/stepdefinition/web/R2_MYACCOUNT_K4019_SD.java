@@ -50,10 +50,10 @@ public class R2_MYACCOUNT_K4019_SD extends CommonActionHelper
 		assertTrue(isDisplayed(r2MyAccountPo.Order_Cancellation_page));
 	}
 	
-	@And("^user should be able to see cancellation message$")
-	public void user_should_be_able_to_see_cancellation_message() {
+	@And("^user should be able to see cancellation message \"(.*?)\"$")
+	public void user_should_be_able_to_see_cancellation_message(String Message) {
 		assertTrue(isDisplayed(r2MyAccountPo.Order_Cancellaton_Message));
-		assertEquals("Your Order Cancellation request has been received".toLowerCase(), r2MyAccountPo.Order_Cancellaton_Message.getText().toLowerCase());
+		assertTrue(r2MyAccountPo.Order_Cancellaton_Message.getText().toLowerCase().contains(webPropHelper.getTestDataProperty(Message).toLowerCase()));
 	}
 	
 	@And("^Refund details should be displayed$")

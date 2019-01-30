@@ -165,8 +165,12 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public WebElement lnkCreateAccount;
 
 	// Start KER-4011 CR-SK
-	@FindBy(xpath = "//*[@data-auid='emailid_input']")
-	public WebElement txtEmailAddress; // CR - SK, Date : 28 Aug
+	@FindBy(xpath = "//*[@data-auid='emailid_input'] | //*[@type='email']")
+	public WebElement txtEmailAddress; // Sid Modified 28-Jan
+	
+	@FindBy(xpath = "//*[contains(text(),'CANCEL THIS ORDER')]")
+	public WebElement cancelOrderModal; // Sid 28-Jan
+	
 
 	@FindBy(xpath = "//*[text()='SIGN IN']")
 	public WebElement headerSignIn;
@@ -742,7 +746,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public WebElement Order_Cancellation_page;
 
 	// SID 22-September
-	@FindBy(xpath = "//*[text()='Your order cancellation request has been received']")
+	@FindBy(xpath = "//*[text()='Your order cancelation request has been received']")
 	public WebElement Order_Cancellaton_Message;
 
 	// SID 22-September
@@ -794,8 +798,12 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = removeBtnForAddress) // CR-DPK 21-sept //CR-GK 15-Oct
 	public List<WebElement> addresRemove_Btn;
 
-	@FindBy(xpath = "//*[text()='Order Number']/../*[2] | //*[text()='Order Number']/../../*[2]") // CR-DPK 10oct
-	public WebElement OrderNumber_Input;
+	@FindBy(xpath = "//*[text()='Order Number']/../*[2] | //*[text()='Order Number']/../../*[2] | //*[contains(text(),'ORDER NUMBER')]") 
+	public WebElement OrderNumber_Input; //SID Modified 28-Jan
+	
+	@FindBy(xpath = "//*[contains(text(),'CANCELATION PLACED ON')]/parent::*/*[2]") 
+	public WebElement orderCancelationDate; //SID  28-Jan
+	
 
 	@FindBy(xpath = "//*[text()='Billing Zip Code']/../*[2] | //*[text()='Billing Zip Code']/../../*[2]") // CR-DPK
 																											// 10oct
@@ -814,8 +822,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(),'ORDER NUMBER')]")
 	public WebElement MyAccount_OrderPage_OrderNumber_txt;
 
-	@FindBy(xpath = "//*[contains(text(),'ORDER TOTAL')]")
-	public WebElement MyAccount_OrderPage_OrderTotal_txt;
+	@FindBy(xpath = "//*[contains(text(),'ORDER TOTAL')] | //*[contains(text(),'Total')]")
+	public WebElement MyAccount_OrderPage_OrderTotal_txt;  //SID Modified 28-Jan
 
 	@FindBy(xpath = "//*[contains(text(),'ORDER PLACED')]/../span[2]")
 	public WebElement MyAccount_OrderDetailsPage_OrderDate;
@@ -877,6 +885,14 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// CR-GK 9-Oct
 	@FindBy(xpath = xpathForDeleteGiftCardButton)
 	public WebElement MyAccount_GiftCardRemoveBtn;
+	
+	@FindBy(xpath = "//*[@name='orderId']")
+	public WebElement orderIdCheckOrderStatus;  //SID 28-Jan
+	
+	@FindBy(xpath = "//*[@name='zipCode']")
+	public WebElement zipCodeCheckOrderStatus;  //SID 28-Jan
+	
+	
 
 	// End KER-4330 CR-MS Sep25
 

@@ -73,7 +73,29 @@ Scenario: Verify Cancel Order link is not displayed after order is cancelled
 	And user click on Orders link
 	And user click on view Details	
     Then verify the cancel order link is not displayed
-	
+    
+@C-BOPIS @R2_Web  @R2_All @MYAccount   @KER-4012 @ZYP_MYACCOUNT_K4012-11157 @CR-RK 
+Scenario: To verify all items in the Order - Authenticated user
+   Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	When user enters "BOPIS_Regular_Product" in the searchbox
+	And user click on Add to Cart Button 
+	And user click on view cart
+	Then user select in store pickup option
+	And user will click on Checkout button and navigates to Checkout page
+	When user clicks on Go to payment CTA
+	Then user click on paypal radiobtn
+	And user click on paypal checkout button
+	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
+	And user able to see the button place order
+	And user is navigated to order confirmation page and captures order number
+	Then user click on order history
+	And user wait for two minute to cancel the order
+	When User Clicks on Cancel Order link
+	And user click on yes cancel my order button
+	And user should be able to see cancellation message "BOPIS_Order_Cancel_Message"
     
     
   

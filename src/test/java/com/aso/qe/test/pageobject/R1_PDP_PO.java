@@ -207,6 +207,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='PDP_close_wishList']")	public WebElement closeWishlistModal;
 	@FindBy(xpath = "//*[@data-auid='input_newWishListName']")	public WebElement txtWishlist;
 	@FindBy(xpath = "//*[@data-auid='btnwishListPopover_createList'] | //*[@data-auid='btnwishListPopover_createList_m']")	public WebElement createWishlist;
+	@FindBy(xpath = "//*[@data-auid='btnwishListPopover_createList']")	public WebElement createWishlistPDP;  //SID 12-Jan
 	@FindBy(xpath = "//h6[text()='This item has been added to']")	public WebElement successWishlistModal;
 	@FindBy(xpath = "//*[contains(@data-auid,'sku_')]/parent::div/span[2]")	public WebElement itemAddedSKU;
 	@FindBy(xpath = "//*[@data-auid=\"Wish List\"]")	public WebElement headerWishList;
@@ -221,6 +222,11 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-bv-show='inline_rating']/parent::div")public WebElement checkRating;
 	@FindBy(xpath = "(//*[contains(text(),'Checkout')])[1]")public WebElement btnCheckoutReskin;
 	@FindBy(xpath = "(//*[@data-auid='PDP_ProductImage_m']//img)[3]")public WebElement SLRPDPRepresentative;  //SID 19-October
+	
+	@FindBy(xpath ="//*[@data-component='productDetailsGeneric']//*[@id='PMC']/*") public WebElement legalMessageAmmoPDP;  //SID 7-Jan
+	@FindBy(xpath ="//*[@data-auid='PDP_IventoryMessage']/following-sibling::div/a") public WebElement storeNameClick;  //SID 7-Jan
+	@FindBy(xpath ="//*[@class='css-mf7uih css-17a3g4d'] | //*[contains(@class,'academyicon icon-store')]") public WebElement pickUpIconGreyedOut;  //SID 12-Jan
+	
 	
 	//***********************************************************************************************************//
 	@FindBy(xpath="//*[contains(@class,'ReactModal__Content ReactModa')]//*[@data-auid='btnviewCart']") public WebElement btnAddToCartModal; //SID Modified 17-October
@@ -684,8 +690,12 @@ public class R1_PDP_PO extends CommonActionHelper
 
 	// SID 7-August-18
 	public void createWishList() throws InterruptedException {
-		setInputText(txtWishlist, timeStamp);
-		assertTrue(clickOnButton(createWishlist));
+		Thread.sleep(2000);
+		txtWishlist.click();
+		Thread.sleep(2000);
+		txtWishlist.sendKeys(timeStamp);
+		Thread.sleep(2000);
+		assertTrue(clickOnButton(createWishlistPDP));
 
 	}
 

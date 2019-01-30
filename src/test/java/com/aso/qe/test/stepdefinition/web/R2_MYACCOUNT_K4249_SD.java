@@ -33,7 +33,7 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 		} else
 			assertTrue(clickOnButton(r2MyAccountPo.lnkSignIn));
 	}
-
+ 
 	@When("^clicks on SignUp link from SignIn page$")
 	public void clicks_on_Sign_Up_link_from_SignIn_page() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.lnkSignUp));
