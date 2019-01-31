@@ -11,7 +11,7 @@ Background:  Common Pre-requisite steps
 	
 @C-PLCC @Regression @All @PLCC-52 @CR-VS
 Scenario: Verify the display of elements available on Prescreen  model 
-	And user expect element STEP1: APPLICATION FORM present 
+	And user expect element STEP 1 :PRESCREEN ACCEPTANCE present 
 	And user expect element disclosure Text one on Pre-Screen Modal to be present
 	And user expect element notice iframe one to be present
 	And user expect element FirstName text Field on CC Aplication Modal to be present 

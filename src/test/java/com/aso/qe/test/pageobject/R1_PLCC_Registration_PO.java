@@ -134,6 +134,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement invalidAnnualIncomeNumber;
 	@FindBy(xpath = "//*[text()='Date of birth is required']")
 	public WebElement invalidDOBNumber;
+	@FindBy(xpath = "//*[text()='Invalid First Name']")
+	public WebElement firstNameErrorMessageCCAM;
+	@FindBy(xpath = "//*[text()='Invalid Last Name']")
+	public WebElement lastNameErrorMessageCCAM;
 	
 	
 
@@ -772,8 +776,24 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 			logger.debug("Invalid SSN error message is displayed++++++++++++++++++++++++==");
 		}
 	}
-	
-
+	public void verifypresenceofFNErrorMSgCCAMErrorMsg() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(invalidSSNErrorMessage);
+			logger.debug("Invalid First Name error message is not displayed");
+		} else {
+			isDisplayed(invalidSSNErrorMessage);
+			logger.debug("Invalid SSN error message is displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void verifypresenceofLNErrorMSgCCAMErrorMsg() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(invalidSSNErrorMessage);
+			logger.debug("Invalid Last Name error message is not displayed");
+		} else {
+			isDisplayed(invalidSSNErrorMessage);
+			logger.debug("Invalid SSN error message is displayed++++++++++++++++++++++++==");
+		}
+	}
 	public void verifypresenceofPasswordErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(passwordErrorMessage);

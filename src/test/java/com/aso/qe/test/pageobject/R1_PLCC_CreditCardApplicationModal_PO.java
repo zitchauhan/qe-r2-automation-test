@@ -62,6 +62,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='row css-pufki9']")
 	public WebElement progressIndicatorPCCApplicationModal;
 	
+	@FindBy(xpath = "//*[@class='css-1l4mqdj academyicon icon-checkbox-inactive null d-flex align-items-start']")
+	public WebElement t$CCheckBoxInactiveConsentModel;
+	
+	
 	
 	
 //	@FindAll({
@@ -103,6 +107,11 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement submitButton;
 	@FindBy(xpath = "//*[text()=' STEP2: CONSENT ']")
 	public WebElement consentModelPageLabel;
+	
+	
+	//CONSENT MODEL:
+	@FindBy(xpath = "//*[@id='plcc_modal_back']")
+	public WebElement backButtonConsentModel;
 	
 	public void verifyPresenceOfConsentModelPageLabel() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -495,11 +504,11 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(submitButton);
 			assertFalse(isClickable(submitButton));
-			logger.debug("Submit Button on Pre-Screen Conset Model is not clickable");
+			logger.debug("Submit Button on Pre-Screen Conset Modal is not clickable");
 		}else {
 			isDisplayed(submitButton);
 			assertFalse(isClickable(submitButton));
-			logger.debug("Submit Button on Pre-Screen Conset Model is not clickable");
+			logger.debug("Submit Button on Pre-Screen Conset Modal is not clickable");
 		}}
 	public void verifySubmitButtonIsEnabled() throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)){
@@ -511,6 +520,27 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			assertTrue(isClickable(submitButton));
 			logger.debug("Submit Button on Pre-Screen Conset Model is clickable");
 		}}
+	public void verifyTAndCCheckboxOnConsentModelInactive() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(t$CCheckBoxInactiveConsentModel);
+			logger.debug("I agree to Terms and Conditions Checkbox on Consent Modal is Inactive");
+		} else {
+			isDisplayed(t$CCheckBoxInactiveConsentModel);
+			logger.debug("I agree to Terms and Conditions Checkbox on Consent Modal is Inactive");
+		}
+		
+	}
+	public void verifyPresenceOfBackButtonConsentModel() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(backButtonConsentModel);
+			logger.debug("Back Button on Consent Modal Modal is displayed");
+		} else {
+			isDisplayed(backButtonConsentModel);
+			logger.debug("Back Button on Consent Modal Modal is displayed");
+		}
+		
+	}
+	
 	public void verifyPresenceOfPageLabelPCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(pageLabelPCCApplicationModal);
