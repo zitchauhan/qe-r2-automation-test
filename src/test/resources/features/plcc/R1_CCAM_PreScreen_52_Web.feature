@@ -47,7 +47,6 @@ Scenario: Verify the display of elements available on Prescreen  model
 	And user enter Zip Code on credit card Application Modal "ZipCode"
 	And user clear and enter Zip Code on credit card Application Modal "ZipCode"
 	And user enter Email Address on credit card Application Modal "EmailId"
-	And user enter Confirm Email Address "ConfirmEmailId"
 	And user enter Mobile Phone "MobilePhone"
 	And user enter Alternate Phone "AlternatePhone"
 	And user click on CONTINUE button

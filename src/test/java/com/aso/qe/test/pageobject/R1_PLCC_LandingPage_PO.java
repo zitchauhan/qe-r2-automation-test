@@ -57,7 +57,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[@data-auid='btnemail-signin-button']")
 	public WebElement signInButton;
 
-	@FindBy(xpath = "//*[text()='Pre-screen information was not found. Please verify and try again.']")
+	@FindBy(xpath = "//*[text()='Prescreen code cannot be less than 12 digits']")
 	public WebElement prescreenErrorCode;
 	@FindBy(xpath = "//*[@id='preCode']")
 	public WebElement prescreenCodeTextField;
