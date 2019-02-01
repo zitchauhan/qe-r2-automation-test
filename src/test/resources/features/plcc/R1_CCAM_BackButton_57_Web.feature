@@ -23,7 +23,7 @@ Feature: PLCC: Credit Card Application Modal
 	And user click on CONTINUE button
 	And user verify presence of STEP2: CONSENT
 	When user clisk on back button of consent modal
-	Then user expect element STEP 1 :PRESCREEN ACCEPTANCE present 
+	Then user expect element STEP 1 :PRESCREEN ACCEPTANCE present
 	
 
 @C-PLCC @Regression @All @PLCC-57 @CR-VS	
