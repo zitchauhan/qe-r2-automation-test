@@ -47,4 +47,46 @@ public class R1_PLCC_41_Web extends CommonActionHelper {
 		globalElementHeader.clickOnBurgerMenu();
 	}
 	//validatePresenceOfMyAccountLink
+	
+	@When("^user unselect Add Address for Faster Checkout checkbox$")
+	public void user_unselect_Add_Address_for_Faster_Checkout_checkbox() throws Throwable {
+		plccPageObjects.addAddressCheckBox.click();   
+	}
+
+	/**
+	 * 
+	 * Added new methods for Registration
+	 */
+	@Then("^user expect element Add company name, Apt\\.Number, etc\\. \\(Optional\\) to not be present$")
+	public void user_expect_element_Add_company_name_Apt_Number_etc_Optional_to_not_be_present() throws Throwable {
+		plccPageObjects.verifyAbsenceOfAddCompanyAptNumber(); 
+	}
+	@Then("^user expect element Address to not be present$")
+	public void user_expect_element_Address_to_not_be_present() throws Throwable {
+		plccPageObjects.verifyAbsenceOfAddress(); 
+	    
+	}
+
+	@Then("^user expect element Zip Code to not be present$")
+	public void user_expect_element_Zip_Code_to_not_be_present() throws Throwable {
+		plccPageObjects.verifyAbsenceOfZipcode();   
+	    
+	}
+
+	@Then("^user expect element City to not be present$")
+	public void user_expect_element_City_to_not_be_present() throws Throwable {
+		plccPageObjects.verifyAbsenceOfCity(); 
+	}
+
+	@Then("^user expect element State to not be present$")
+	public void user_expect_element_State_to_not_be_present() throws Throwable {
+		plccPageObjects.verifyAbsenceOfState(); 
+	}
+
+	@Then("^user expect element Phone number to not be present$")
+	public void user_expect_element_Phone_number_to_not_be_present() throws Throwable {
+		plccPageObjects.verifyAbsenceOfPhoneNumber(); 
+	}
+
+
 }
