@@ -83,27 +83,15 @@ Feature: B06-250 - BOPIS Order Details Page Impact
       | Order_Payment_txt                                      |
       | Order_Payment_Section                                  |
 
-  @C-BOPIS @R2_Web @R2_All @P-High_B_Order @C-NonOrder @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10934 @Order @CR-MS
-  Scenario: Verify that user is able to view BOPIS order details before pickup
-    Given user launches the browser and navigates to "ASO_HOME" page
-    When user clicks on SignIn link from global header
-    And user enter the valid emailaddress "EmailAddress"
-    And user enter the valid password "Password"
-    And user click on signin button
-    And user navigate and deletes existing items in cart
-    And User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
-    And user will click on View Cart button
-    When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
-    And user click on checkout button in Cart page
-    Then user click on review order button
-    And user able to see the button place order
-    And user navigates from Order successful page to Orders in my account
-    Then Verify below Sub/Main Module of My Account
-      | #Verify following elements in my account order details |
-      | Order_View_Details_Btn                                 |
-    When user click on view Details
-    Then Verify below Sub/Main Module of My Account
+@C-BOPIS @R2_Web @R2_All @CB-MyAccount @KER-4330 @ZYP_MYACCOUNT_K4330-10934
+Scenario: Verify that user is able to view BOPIS order details before pickup
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user logs in as "Bopis_Email" 
+	And user click on MyAccount  
+	When user click on Orders link
+	Then user click on view Details having orderid "BOPIS_Ready_For_PickedUp_Order"
+	Then Verify below Sub/Main Module of My Account
       | #Verify following elements in my account order details |
       | Order_Bopis_View_Store_Btn                             |
       | MyAccount_OrderDetailsPage_OrderNumber                 |
@@ -170,27 +158,15 @@ Feature: B06-250 - BOPIS Order Details Page Impact
       | Order_Bopis_Item_Img                                   |
       | Order_Bopis_Item_Details                               |
 
-  @C-BOPIS @R2_Web @R2_All @P-High_B_Order @C-NonOrder @CC-MyAccount_Order @KER-4330 @ZYP_MYACCOUNT_K4330-10935 @Order @CR-MS
-  Scenario: Verify the details in Order Summary section
-    Given user launches the browser and navigates to "ASO_HOME" page
-    When user clicks on SignIn link from global header
-    And user enter the valid emailaddress "EmailAddress"
-    And user enter the valid password "Password"
-    And user click on signin button
-    And user navigate and deletes existing items in cart
-    And User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
-    And user will click on View Cart button
-    When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
-    And user click on checkout button in Cart page
-    Then user click on review order button
-    And user able to see the button place order
-    And user navigates from Order successful page to Orders in my account
-    Then Verify below Sub/Main Module of My Account
-      | #Verify following elements in my account order details |
-      | Order_View_Details_Btn                                 |
-    When user click on view Details
-    Then Verify below Sub/Main Module of My Account
+@C-BOPIS @R2_Web @R2_All @CB-MyAccount @KER-4330 @ZYP_MYACCOUNT_K4330-10935
+Scenario: Verify the details in Order Summary section
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user logs in as "Bopis_Email" 
+	And user click on MyAccount  
+	When user click on Orders link
+	Then user click on view Details having orderid "BOPIS_PickedUp_Order"
+	Then Verify below Sub/Main Module of My Account
       | #Verify following elements in my account order details |
       | MyAccount_OrderDetailsPage_SubTotalAmount              |
       | Order_Taxes_Price                                      |

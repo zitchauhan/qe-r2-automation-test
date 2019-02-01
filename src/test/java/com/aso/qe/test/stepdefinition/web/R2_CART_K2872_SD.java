@@ -13,6 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
+import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_FindStore_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
@@ -25,6 +26,7 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	
 	private static final Logger logger = Logger.getLogger(R2_Cart_PO.class);
 	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
+	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	R2_FindStore_PO r2FindaStoretPo = PageFactory.initElements(driver, R2_FindStore_PO.class);
 	R2_R1_Fun_PO r2R1FunPO=PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	
@@ -154,8 +156,8 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	public void user_should_click_on_Driving_Direction() throws Throwable {
 		assertTrue(clickOnButton(r2CartPo.txtDrivingDirection));
 		Thread.sleep(Constants.thread_low); 
-		 Set handles= driver.getWindowHandles();
-		 for (String handle : driver.getWindowHandles()) {
+		 Set<String> handles= driver.getWindowHandles();
+		 for (String handle : handles) {
 			 	        	
 	        	driver.switchTo().window(handle);
 
@@ -280,5 +282,17 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CartPo.findStoreCart_Lnk));
 	}
 	
-		
+	@Then("^user click on find a store option$")
+	public void user_click_on_find_a_store_option() {
+		assertTrue(clickOnButton(r2CheckOutPo.findAStoreCart));
+	}
+
+	@Then("^user verify BOPIS availability in inventory as number of Cart items available for pick up or Not available against each listed store$")
+	public void user_verify_BOPIS_availability_in_inventory_as_number_of_Cart_items_available_for_pick_up_or_Not_available_against_each_listed_store() {
+		assertTrue(clickOnButton(r2CartPo.btnViewTheNext5Stores));
+		for (WebElement inventoryAvailabilityBOPISStore : r2CartPo.inventoryAvailabilityBOPISStores) {
+			assertTrue(isDisplayed(inventoryAvailabilityBOPISStore));
+		}
+	}
+
 }

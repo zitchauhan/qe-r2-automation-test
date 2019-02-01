@@ -29,7 +29,7 @@ Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
     When User Clicks on Cancel Order link
     And user click on yes cancle my order button
     Then Verify that the order cancellation confirmation page is displayed
-    And user should be able to see cancellation message
+    And user should be able to see cancellation message "BOPIS_Order_Cancel_Message"
     And Refund details should be displayed
     Then Verify below Sub/Main Module of My Account
       | #Verify following elements in my account order details |

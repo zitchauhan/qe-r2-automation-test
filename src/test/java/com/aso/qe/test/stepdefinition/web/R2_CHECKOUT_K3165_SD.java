@@ -88,7 +88,7 @@ public class R2_CHECKOUT_K3165_SD extends CommonActionHelper {
 			}
 
 		}
-		Thread.sleep(Constants.thread_high);
+		Thread.sleep(Constants.thread_highest);
 	}
 
 	@And("^user navigates from Order successful page to address book in my account$")

@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 
+import cucumber.api.java.en.Then;
+
 import java.util.Date;
 
 public class R1_ReskinPO extends CommonActionHelper {
@@ -22,7 +24,7 @@ public class R1_ReskinPO extends CommonActionHelper {
 	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());
 
 	// Sudhir 3-September
-	@FindBy(xpath = "//input[@id='qty_1']")
+	@FindBy(xpath = "//input[@id='qty_1'] | //input[@id='crt-input-Qty']")
 	public WebElement inputcartqty;
 	@FindBy(xpath = "//*[@class='item-price']")
 	public WebElement itemprice;
@@ -132,6 +134,21 @@ public class R1_ReskinPO extends CommonActionHelper {
 			flag = incqty2 > incqty1;
 			return flag;
 		}
+		
+		// Sudhir 3-September
+				public void qtyMaxIncreaseInputProductReskin() throws InterruptedException {
+					
+					
+					inputcartqty.clear();
+					inputcartqty.sendKeys("10000");
+					Thread.sleep(Constants.thread_medium);
+					
+				}
+				
+				@Then("^user increase the max qty by inputing the value$")
+				public void user_increase_the_max_qty_by_inputing_the_value() throws Throwable {
+					qtyMaxIncreaseInputProductReskin();
+				}
 
 		// Sudhir 3-September
 		public boolean qtyDecreaseMinusSignProductReskin() throws InterruptedException {
@@ -294,4 +311,5 @@ public class R1_ReskinPO extends CommonActionHelper {
 		return result;
 
 	}
+
 }

@@ -20,8 +20,9 @@ import cucumber.api.junit.Cucumber;
 		)*/
 
 @CucumberOptions(
-		features="src/test/resources/features/web/R2_CHECKOUT_KER_2856_Web.feature",
+		features="src/test/resources/features/web/",
 		glue="com.aso.qe.test.stepdefinition.web",
+				tags ="@C-PLCC",
 		monochrome=true, 
 		format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
 		) 

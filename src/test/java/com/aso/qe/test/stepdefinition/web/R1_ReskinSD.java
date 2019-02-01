@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_ReskinPO;
 
@@ -31,7 +32,8 @@ public class R1_ReskinSD extends CommonActionHelper
 	public void user_increase_the_qty_by_inputing_the_value() throws Throwable {
 		assertTrue(rspo.qtyIncreaseInputProductReskin());  
 	}
-
+	
+		
 	@Then("^user decrease the qty by clicking minus button$")
 	public void user_decrease_the_qty_by_clicking_minus_button() throws Throwable {
 		assertTrue(rspo.qtyDecreaseMinusSignProductReskin()); 

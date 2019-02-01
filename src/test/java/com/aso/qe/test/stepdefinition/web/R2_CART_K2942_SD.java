@@ -1,7 +1,9 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertEquals;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -124,4 +126,17 @@ public class R2_CART_K2942_SD extends CommonActionHelper {
 	public void user_verfiy_the_an_error_message() throws Throwable {
 		assertTrue(isDisplayed(r2CartPo.ErrorMsgLimitedStack));
 	}
+
+	@And("^user should be able to see out of stock error message on cart page \"(.*?)\" with add to wishlist and remove cart option$")
+	public void user_should_be_able_to_see_out_of_stock_error_message_on_cart_page_with_add_to_wishlist_and_remove_cart_option(String message) {
+		assertTrue(isDisplayed(r2CartPo.messageFlyout));
+		String errorMessage = r2CartPo.messageFlyout.getText();
+		System.err.println(" errorMessage " + errorMessage + " message " + webPropHelper.getTestDataProperty(message));
+		assertEquals(errorMessage, webPropHelper.getTestDataProperty(message));
+		assertTrue(isDisplayed(r2CartPo.lnkAddToWishList));
+		for (WebElement removeCartforOOSProduct_lst_btn : r2CartPo.removeCartforOOSProducts_lst_btn) {
+			assertTrue(isDisplayed(removeCartforOOSProduct_lst_btn));
+		}
+	}
+
 }
