@@ -286,14 +286,24 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfManageYourCardLink() throws Exception {
 
-		if ("web".equalsIgnoreCase(testtype)) {
+		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(manageYourCardLink);
-			logger.debug("Manage your card is displayed");
+			logger.debug("Manage your card Link is displayed");
 			Common_Web_PLCC.waitUntilElePresent(driver, applyNowButton, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(manageYourCardLink);
-			logger.debug("Manage your card is not displayed++++++++++++++++++++++++==");
+			logger.debug("Manage your card Link is displayed");
 		}
+	}
+	
+	public void verifyPresenceOfBankPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("d.comenity.net/academy/")) {
+			logger.debug("User is successfully navigated to Bank page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Our bank Page instead navigated to URL :: " + currentURL);
+		}
+
 	}
 
 	public void verifyPresenceOfPLCCCreditCardImage() throws Exception {

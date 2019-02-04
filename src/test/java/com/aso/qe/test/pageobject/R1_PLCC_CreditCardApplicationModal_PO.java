@@ -61,6 +61,46 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement acceptOfferButtonPCCApplicationModal;
 	@FindBy(xpath = "//*[@data-auid='row css-pufki9']")
 	public WebElement progressIndicatorPCCApplicationModal;
+	@FindBy(xpath = "//*[@class='academyicon icon-close']")
+	public WebElement closeButtonCCApplicationModal;
+	
+	
+//Credit Card Application Modal - Consent Modal
+	@FindBy(xpath = "//*[@class='mt-2 mb-2']")
+	public WebElement disclosureTxt1ConsentModal;
+	@FindBy(xpath = "//*[@class='ml-half undefined']")
+	public WebElement disclosureTxt2ConsentModal;
+
+	@FindBy(xpath = "//*[text()='CONSENT TO ACCOUNT TERMS AND CONDITIONS']")
+	public WebElement consentToAccountTAndCsLabelConsentModal;
+
+	@FindBy(xpath = "//*[@id='financialTerms']")
+	public WebElement consentToAccountIframeConsentModal;
+	
+	@FindBy(xpath = "//*[text()=' STEP 2 : CONSENT ']")
+	public WebElement pageLabelConsentModal;
+
+	@FindBy(xpath = "//*[@src='/content/dam/academysports/plcc_card.png']")
+	public WebElement plccCardImgCCAM;
+
+	@FindBy(xpath = "//*[text()='ACCOUNT TERMS AND CONDITIONS']")
+	public WebElement accountTAndCsLabelConsentModal;
+
+	@FindBy(xpath = "//*[text()='CONSENT TO FINANCIAL TERMS OF THE ACCOUNT']")
+	public WebElement accountToFinancialTAndCsLabelConsentModal;
+	@FindBy(xpath = "//*[@id='financialTerms']")
+	public WebElement consentToFinancialIframeConsentModal;
+	@FindBy(xpath = "//*[@id='plcc_modal_print']")
+	public WebElement printLinkConsentModal;	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@FindBy(xpath = "//*[@class='css-1l4mqdj academyicon icon-checkbox-inactive null d-flex align-items-start']")
 	public WebElement t$CCheckBoxInactiveConsentModel;
@@ -102,6 +142,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btncrt_btnCntinueShop']")
 	public WebElement continueShoppingBtn;
 	@FindBy(xpath = "//*[@class='ml-half undefined']")
+	//*[@name='creditApplicationModal']
 	public WebElement TandCCheckBox;
 	@FindBy(xpath = "//*[text()='Submit']")
 	public WebElement submitButton;
@@ -540,7 +581,97 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		}
 		
 	}
-	
+	public void verifyPresenceOfCloseIconCCAM() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(closeButtonCCApplicationModal);
+			logger.debug("Close icon on credit card Application modal is displayed");
+		} else {
+			isDisplayed(closeButtonCCApplicationModal);
+			logger.debug("Close icon on credit card Application modal is displayed");
+		}
+		
+	}
+	public void verifyPresenceOfDisclosureTxt1ConsentModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(disclosureTxt1ConsentModal);
+			logger.debug("Disclosure Text one on Consent modal is displayed");
+		} else {
+			isDisplayed(disclosureTxt1ConsentModal);
+			logger.debug("Disclosure Text one on Consent modal is displayed");
+		}
+		
+	}
+	public void verifyPresenceOfDisclosureTxt2ConsentModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(disclosureTxt2ConsentModal);
+			logger.debug("Disclosure Text two on Consent modal is displayed");
+		} else {
+			isDisplayed(disclosureTxt2ConsentModal);
+			logger.debug("Disclosure Text two on Consent modal is displayed");
+		}
+		
+	}
+	public void verifyPresenceOfConsentToAccountTAndCsLabelConsentModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(consentToAccountTAndCsLabelConsentModal);
+			logger.debug("CONSENT TO ACCOUNT TERMS AND CONDITIONS on Consent modal is displayed");
+		} else {
+			isDisplayed(consentToAccountTAndCsLabelConsentModal);
+			logger.debug("CONSENT TO ACCOUNT TERMS AND CONDITIONS on Consent modal is displayed");
+		}
+		
+	}
+	public void verifyPresenceOfAccountToFinancialTAndCsLabelConsentModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(accountToFinancialTAndCsLabelConsentModal);
+			logger.debug("CONSENT TO FINANCIAL TERMS OF THE ACCOUNT on Consent modal is displayed");
+		} else {
+			isDisplayed(accountToFinancialTAndCsLabelConsentModal);
+			logger.debug("CONSENT TO FINANCIAL TERMS OF THE ACCOUNT on Consent modal is displayed");
+		}
+		
+	}
+	public void verifyPresenceOfConsentToFinancialIframeConsentModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(consentToFinancialIframeConsentModal);
+			logger.debug("Account to Financial Iframe on Consent modal is displayed");
+		} else {
+			isDisplayed(consentToFinancialIframeConsentModal);
+			logger.debug("Account to Financial Iframe on Consent modal is displayed");
+		}
+		
+	}
+	public void verifyPresenceOfPrintLinkConsentModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(printLinkConsentModal);
+			logger.debug("Print link on Consent modal is displayed");
+		} else {
+			isDisplayed(printLinkConsentModal);
+			logger.debug("Print link on Consent modal is displayed");
+		}
+		
+	}
+	public void verifyPresenceOfAccountTAndCsLabelConsentModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(accountTAndCsLabelConsentModal);
+			logger.debug("ACCOUNT TERMS AND CONDITIONS on Consent modal is displayed");
+		} else {
+			isDisplayed(accountTAndCsLabelConsentModal);
+			logger.debug("ACCOUNT TERMS AND CONDITIONS on Consent modal is displayed");
+		}
+		
+	}
+	public void verifyPresenceOfPlccCardImgCCAM() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(plccCardImgCCAM);
+			logger.debug("plcc Card Image on Consent modal is displayed");
+		} else {
+			isDisplayed(plccCardImgCCAM);
+			logger.debug("plcc Card Image on Consent modal is displayed");
+		}
+		
+	}
+
 	public void verifyPresenceOfPageLabelPCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(pageLabelPCCApplicationModal);
@@ -549,4 +680,6 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(pageLabelPCCApplicationModal);
 			logger.debug(" STEP1:PRESCREEN ACCEPTANCE on Pre-screen Credit card ApplicationModal is displayed");
 		}
-}}
+}
+
+}

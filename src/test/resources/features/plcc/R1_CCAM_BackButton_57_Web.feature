@@ -27,7 +27,7 @@ Feature: PLCC: Credit Card Application Modal
 	
 
 @C-PLCC @Regression @All @PLCC-57 @CR-VS	
- Scenario: Verify the functionality of “I Consent” checkbox on consent model when user navigates from prescreen model by clicking on Back button in previous step
+ Scenario: Verify the functionality of I Consent checkbox on consent model when user navigates from prescreen model by clicking on Back button in previous step
  	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
