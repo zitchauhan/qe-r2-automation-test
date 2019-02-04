@@ -150,9 +150,67 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='Change Location']")
 	public WebElement lnkChangeLocationCart;//DPK 24 Aug
 	
+	@FindBy(xpath="(//*[text()='Find a Store'])[2]") 
+	public WebElement cart_FindStore;
+	
 	
 	@FindBy(xpath = "//*[contains(text(),'Items Not Available for Pickup')]")
 	public List<WebElement> txtBopisAvailablity;//DPK 24 Aug
+	
+	@FindBy(xpath = "//*[text()='Item Available for Pickup']")
+	public WebElement txtBopisAvailablityStoreModal;  //SID 11-Jan
+	
+	@FindBy(xpath = "//*[contains(text(),'limited')]")
+	public WebElement txtLimitedStockPDP;  //SID 12-Jan
+	
+	@FindBy(xpath = "(//*[@data-auid='crt_inputQty'])[1]")
+	public WebElement limitedQuantityAddedInCart;  //SID 12-Jan
+	
+	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']/*[2]/*[2]/*[2]")
+	public WebElement storeNameOnCartPageInStorePickUp;  //SID 23-Jan
+	
+	@FindBy(xpath = "//*[text()='Change Location']/parent::*")
+	public WebElement storeNameCartOrderSummary;  //SID 26-Jan
+	
+	@FindBy(xpath = "//*[text()='Change Location']/parent::*/following-sibling::*")
+	public WebElement instoreShippingChargesCartPage;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[contains(text(),'Items Available')]")
+	public List<WebElement> inventoryAvailabilityBOPISStores;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[@data-auid='facetdrawerundefined']")
+	public List<WebElement> storeNamesCartPage;  //SID 27-Jan
+
+	
+	@FindBy(xpath = "//*[@role='tooltip']")
+	public WebElement tooltip;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[@role='alert']")
+	public WebElement messageFlyout;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[@data-auid='store_not_selected']")
+	public WebElement bopisStoreNotSelectedErrorMessage;  //SID 27-Jan
+	
+	
+	@FindBy(xpath = "//*[@data-auid='tooltip-close-crt_rdTooltip_1']/parent::*")
+	public WebElement storeMessageFlyout;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[@data-auid='tooltipcrt_rdTooltip_1']/parent::*")
+	public WebElement storeNameCart;  //SID 27-Jan
+	
+	
+	@FindBy(xpath = "//*[@role='dialog']/*[2]/*[3]/*[1]")
+	public WebElement outOfStockMesssageCart;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[@data-auid='tooltipcrt_rdTooltip_1']")
+	public WebElement inStoreSelectedByDefault;  //SID 27-Jan
+	
+	@FindBy(xpath = "(//*[text()='Change Location']/parent::*/button)[1]")
+	public WebElement changeLocationViewCart;  //SID 27-Jan
+	
+	@FindBy(xpath = "//*[contains(@class,'academyicon icon-store')]")
+	public WebElement greyPickUpIcon;  //SID 27-Jan
+	
 	
 	@FindBy(xpath = "//*[contains(text(),'Items Not Available for Pickup')]/div/img")
 	public List<WebElement> txtBopisImageThumbnails;//DPK 24 Aug
@@ -172,11 +230,22 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='submit-zip-code']/span")//duplicate btnZipcodeSubmit
 	public WebElement submitZipCode;
 
-	@FindBy(xpath = "//*[@name='zipcode']")
-	public WebElement textzipCode;
+	@FindBy(xpath = "//*[@name='zipcode'] | //*[@data-auid='find-a-store']/input")
+	public WebElement textzipCode;  // SID Modified 8-Jan
 
 	@FindBy(xpath = "//*[text()='Closest Stores to Your Location']")
 	public WebElement storeDetails;
+	
+	@FindBy(xpath = "//*[@id='disclaimerMessaging']/*[1]")
+	public WebElement leaglMessageAmmoCart;   //SID 7-Jan
+	
+	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']//div[2]//input[@radioname='shipmentOptions']/following-sibling::label")
+	public List<WebElement> clickAllInStorePickUp;   //SID 8-Jan
+	
+	@FindBy(xpath = "//p[@class='m-0']")
+	public WebElement shiptohomeshippingfee;
+	
+	
 
 	//********************find a store  end ********************************
 	
@@ -453,6 +522,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	 * @throws InterruptedException ********************************/
 	
 	public void navigateAndDeleteAllProductsInCart() throws InterruptedException {
+		Thread.sleep(Constants.thread_high);
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(globalElementHeader.iconcart_m));
 
@@ -643,6 +713,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	// Start KER-4231 CR-GK 5-Oct
 	public void selectStoreWithZipAndStoreName(String zipCode, String storeName) throws InterruptedException {
+		
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(lnkFindAStore_M));
 		} else {
@@ -659,6 +730,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 		}
 		assertTrue(clickOnButton(btnFindStoreClose));
 	}
+	
+
 	//This method selects the store and don't closes the findAStore Modal
 	public void selectStoreWithModalOpen(String zipCode, String storeName) throws InterruptedException {
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -688,6 +761,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 			while(isDisplayed(btnRemoveCart)) {
 				clickOnButton(btnRemoveCart);
 				Thread.sleep(Constants.thread_highest);
+				Thread.sleep(Constants.thread_medium);
 				if(isDisplayed(cartEmptyTxt)) {
 					break;
 				}
@@ -719,7 +793,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="(//*[text()='Color'])[1]/following::*[1]")public WebElement txtPrdColor;// txt_color input in color
 	@FindBy(xpath="(//*[text()='Size'])[1]/following::*[1]")public WebElement txtPrdSize;//txtPrdSize  txt_size input in size
 	@FindBy(xpath="//span[text()='Ship To Me']")public WebElement rbShipToMe;
-	@FindBy(xpath="//span[text()='In Store Pickup FREE']")public WebElement rbInStorePickUp;//modified MS 26 Sep
+	@FindBy(xpath="//span[text()='Store Pickup – FREE']")public WebElement rbInStorePickUp; //SID Modified 12-Jan
 	@FindBy(xpath="//*[text()='Ship To Store'] | //*[text()='Special Order Ships to Store']") public WebElement ShipToStore_radioBtn;
 	@FindBy(xpath="//input[@data-auid='crt_inputQty']")public WebElement input_Quantity;
 	@FindBy(xpath="(//*[@data-auid='crt_qtyField'])[1]")public WebElement txt_Quantity;
@@ -734,7 +808,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//span[text()='Color']")public WebElement txtColor;
 	@FindBy(xpath = "//span[contains(text(),'Size')]")public WebElement txtSize;
 	@FindBy(xpath = "(//*[contains(text(),'Est. Arrival')])")public WebElement txtEstArrival;
-	@FindBy(xpath ="//div[contains(text(), \"We're sorry!\")]")public WebElement ErrorMsgLimitedStack;// KER-2942 CR-AKK 3Sep
+	@FindBy(xpath ="//*[contains(text(), \"We're sorry!\")]")public WebElement ErrorMsgLimitedStack;  // SID Modified 12-Jan
+	@FindBy(xpath ="//*[@data-auid='miniCart']//button")public WebElement clickCartIconFromGlobalHeader;  // SID 12-Jan
 	@FindBy(xpath ="//*[text()='Not available for In-Store pickup']") public WebElement Bopis_Rbn;
 		
 //	@FindBy(xpath = "//*[text()='$']/following::div")//duplicate Done
@@ -852,5 +927,23 @@ public class R2_Cart_PO extends CommonActionHelper {
 		
 		@FindBy(xpath = "//*[@data-auid='btncrt_editInCartbtn']")
 		public WebElement editInCart_btn;
+		
+		@FindBy(xpath = "//*[@data-auid='btncrt_editInCartbtn']/parent::div/parent::div/h4")
+		public WebElement outOfStockModal;  //SID 12-Jan
+		
+		@FindBy(xpath = "//*[@data-auid='btncrt_editInCartbtn']/parent::div/parent::div/parent::div/button")
+		public WebElement outOfStockModalCloseButton;  //SID 12-Jan
+		
+		@FindBy(xpath = "//*[@data-component='cart']//*[contains(text(),'removed')]")
+		public WebElement removedMessageCart;  //SID 27-Jan
+		
+		@FindBy(xpath = "//*[@data-component='cart']//*[contains(text(),'added')]")
+		public WebElement moveToWishlistMessageCart;  //SID 27-Jan
+		
+		
+		@FindBy(xpath = "//*[@data-component='cart']//*[contains(text(),'removed')]/*[2] | //*[@data-component='cart']//*[contains(text(),'added')]/*[2]")
+		public WebElement removedproductUndo;  //SID 27-Jan
+		
+		
 	
 }

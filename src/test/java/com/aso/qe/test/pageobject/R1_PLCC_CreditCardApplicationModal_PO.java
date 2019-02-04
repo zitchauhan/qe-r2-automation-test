@@ -1,5 +1,8 @@
 package com.aso.qe.test.pageobject;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -40,6 +43,31 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@id='plcc_modal_cancel']")
 	public WebElement cancelLinkCCModal;
 	
+	
+	//Pre-Screen Credir Card Appliction Modal
+	@FindBy(xpath = "//*[@id='ads-notice']")
+	public WebElement noticeIFramePCCApplicationModal;
+	@FindBy(xpath = "//*[text()='Your Personal Information']")
+	public WebElement personalInfoPCCApplicationModal;
+	@FindBy(xpath = "//*[@name='confirmSsn']")
+	public WebElement confirmSSNPCCApplicationModal;
+	@FindBy(xpath = "//div[3]/div[2]/div[2]")
+	public WebElement disclosureTxt1PCCApplicationModal;
+	@FindBy(xpath = "//div[4]/div[6]")
+	public WebElement disclosureTxt2PCCApplicationModal;
+	@FindBy(xpath = "//*[text()=' STEP1:PRESCREEN ACCEPTANCE ']")
+	public WebElement pageLabelPCCApplicationModal;
+	@FindBy(xpath = "//*[@data-auid='acceptOffer']")
+	public WebElement acceptOfferButtonPCCApplicationModal;
+	@FindBy(xpath = "//*[@data-auid='row css-pufki9']")
+	public WebElement progressIndicatorPCCApplicationModal;
+	
+	@FindBy(xpath = "//*[@class='css-1l4mqdj academyicon icon-checkbox-inactive null d-flex align-items-start']")
+	public WebElement t$CCheckBoxInactiveConsentModel;
+	
+	
+	
+	
 //	@FindAll({
 //		   @FindBy(xpath = "//*[@name='state']")
 //		   @FindBy(xpath = "//*[@data-auid='undefined_listOption_1']")
@@ -79,6 +107,11 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement submitButton;
 	@FindBy(xpath = "//*[text()=' STEP2: CONSENT ']")
 	public WebElement consentModelPageLabel;
+	
+	
+	//CONSENT MODEL:
+	@FindBy(xpath = "//*[@id='plcc_modal_back']")
+	public WebElement backButtonConsentModel;
 	
 	public void verifyPresenceOfConsentModelPageLabel() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -347,6 +380,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void enterSSNCCModal(String arg) throws Exception {
 		setInputText(ssnCCModal, webPropHelper.getTestDataProperty(arg));
 	}
+	
+	public void enterConfirmSSNCCModal(String arg) throws Exception {
+		setInputText(confirmSSNPCCApplicationModal, webPropHelper.getTestDataProperty(arg));
+	}
 
 	public void enterAnnualIncomeCCModal(String arg) throws Exception {
 		setInputText(annualIncomeCCModal, webPropHelper.getTestDataProperty(arg));
@@ -397,4 +434,119 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		}
 
 	}
-}
+	public void verifyPresenceOfNoticeIFramePCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(noticeIFramePCCApplicationModal);
+			logger.debug("Notice IFrame on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(noticeIFramePCCApplicationModal);
+			logger.debug("Notice IFrame on Pre-screen Credit card ApplicationModal is displayed");
+		}
+	}
+	public void verifyPresenceOfPersonalInfoPCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(personalInfoPCCApplicationModal);
+			logger.debug("Peronal Info Label on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(personalInfoPCCApplicationModal);
+			logger.debug("Peronal Info Label on Pre-screen Credit card ApplicationModal is displayed");
+		}
+	}
+	public void verifyPresenceOfConfirmSSNPCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(confirmSSNPCCApplicationModal);
+			logger.debug("Confirm SSN Field on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(confirmSSNPCCApplicationModal);
+			logger.debug("Confirm SSN Field on Pre-screen Credit card ApplicationModal is displayed");
+		}
+	}
+	public void verifyPresenceOfDisclosureTxt1PCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(disclosureTxt1PCCApplicationModal);
+			logger.debug("Disclosure text 1 on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(disclosureTxt1PCCApplicationModal);
+			logger.debug("Disclosure text 1 on Pre-screen Credit card ApplicationModal is displayed");
+		}
+	}
+	public void verifyPresenceOfDisclosureTxt2PCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(disclosureTxt2PCCApplicationModal);
+			logger.debug("Disclosure text 2 on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(disclosureTxt2PCCApplicationModal);
+			logger.debug("Disclosure text 2 on Pre-screen Credit card ApplicationModal is displayed");
+		}
+		
+	}
+	public void verifyPresenceOfNoticeIframeModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(noticeIFramePCCApplicationModal);
+			logger.debug("Notice Iframe on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(noticeIFramePCCApplicationModal);
+			logger.debug("Notice Iframe on Pre-screen Credit card ApplicationModal is displayed");
+		}
+		
+	}
+	public void verifyPresenceOfProgressIndicatorPCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(progressIndicatorPCCApplicationModal);
+			logger.debug("Progress Indicator on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(progressIndicatorPCCApplicationModal);
+			logger.debug("Progress Indicatior on Pre-screen Credit card ApplicationModal is displayed");
+		}
+		
+	}
+	public void verifySubmitButtonIsDisabled() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(submitButton);
+			assertFalse(isClickable(submitButton));
+			logger.debug("Submit Button on Pre-Screen Conset Modal is not clickable");
+		}else {
+			isDisplayed(submitButton);
+			assertFalse(isClickable(submitButton));
+			logger.debug("Submit Button on Pre-Screen Conset Modal is not clickable");
+		}}
+	public void verifySubmitButtonIsEnabled() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(submitButton);
+			assertTrue(isClickable(submitButton));
+			logger.debug("Submit Button on Pre-Screen Conset Model is clickable");
+		}else {
+			isDisplayed(submitButton);
+			assertTrue(isClickable(submitButton));
+			logger.debug("Submit Button on Pre-Screen Conset Model is clickable");
+		}}
+	public void verifyTAndCCheckboxOnConsentModelInactive() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(t$CCheckBoxInactiveConsentModel);
+			logger.debug("I agree to Terms and Conditions Checkbox on Consent Modal is Inactive");
+		} else {
+			isDisplayed(t$CCheckBoxInactiveConsentModel);
+			logger.debug("I agree to Terms and Conditions Checkbox on Consent Modal is Inactive");
+		}
+		
+	}
+	public void verifyPresenceOfBackButtonConsentModel() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(backButtonConsentModel);
+			logger.debug("Back Button on Consent Modal Modal is displayed");
+		} else {
+			isDisplayed(backButtonConsentModel);
+			logger.debug("Back Button on Consent Modal Modal is displayed");
+		}
+		
+	}
+	
+	public void verifyPresenceOfPageLabelPCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(pageLabelPCCApplicationModal);
+			logger.debug(" STEP1:PRESCREEN ACCEPTANCE 2 on Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(pageLabelPCCApplicationModal);
+			logger.debug(" STEP1:PRESCREEN ACCEPTANCE on Pre-screen Credit card ApplicationModal is displayed");
+		}
+}}

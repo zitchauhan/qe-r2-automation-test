@@ -197,10 +197,42 @@ When user enter First name "FirstName"
     |checkout_ShippingMethod_ItemImage_img|
 
 
+@R2_Web @R2_Regression @R2_All @P-High @CB-Checkout @C-BOPIS @KER-3779 @ZYP_CHECKOUT_K3779-10938
+Scenario: Verify that user should be able to fulfill an order when cart having single item fulfillment option(BOPIS)
+   Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	When user enters "BOPIS_Regular_Product" in the searchbox
+	And user click on Add to Cart Button 
+	And user click on view cart
+	Then user select in store pickup option
+	And user will click on Checkout button and navigates to Checkout page
+	When user clicks on Go to payment CTA
+	And user fill the payment details for sof guest user
+	And user able to see the button place order
 
 
-
-
+@C-BOPIS @R2_Web  @R2_All @P-High_B_Order @CB-Checkout @KER-3779 @ZYP_CHECKOUT_K23779-10942
+Scenario: Verify that user should be able to place an order when cart having multiple item with single fulfillment option(BOPIS)
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	When user enters "BOPIS_SOF_Product" in the searchbox
+	And user click on Add to Cart Button 
+	And user click on view cart
+	Then user select in store pickup option
+	When user enters "BOPIS_Regular_Product" in the searchbox
+	And user click on Add to Cart Button 
+	And user click on view cart
+	Then user select in store pickup option
+	And user will click on Checkout button and navigates to Checkout page
+    And user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers 
+	And user click on checkbox in special order ship to store section 
+	When user clicks on Go to payment CTA
+	And user fill the payment details for sof guest user
+	And user able to see the button place order
 
 
 

@@ -42,7 +42,7 @@ Scenario: Verify Checkout for Web
 		|checkout_ShippingAddress_AVSModelSelectAddress_btn         | 
 		
 		|#%%%%%%%  In-Store Pickup DropDown %%%%%%%%%% AKK|
-		|MePickUp_Drpdwn|
+		|clickOnDropDown|
 		|StorePickupAlternatesFirstName_input|
 		|StorePickupAlternatesLastName_input|
 		|StorePickupAlternatesEmail_input|

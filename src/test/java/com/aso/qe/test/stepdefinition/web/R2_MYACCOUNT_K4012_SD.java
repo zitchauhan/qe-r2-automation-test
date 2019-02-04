@@ -12,6 +12,7 @@ import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_PDP_PO;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -26,7 +27,7 @@ public class R2_MYACCOUNT_K4012_SD extends CommonActionHelper {
 	
 	@Then("^user click on view Details of List orders and verify the cancel order button$")
 	public void user_click_on_view_Details_of_List_orders_and_verify_the_cancel_order_button() throws Throwable {
-		
+		Thread.sleep(Constants.thread_highest); 
 		for(WebElement ViewOrder:r2MyAccountPo.viewOrderDetailsBtn ) {
 			
 			assertTrue(clickOnButton(ViewOrder));
@@ -55,6 +56,7 @@ public class R2_MYACCOUNT_K4012_SD extends CommonActionHelper {
 	public void user_is_navigated_to_order_confirmation_page_and_captures_order_number() throws Throwable {
 		waitForElement(r2CheckOutPO.orderConfirmationPage_OrderNumber);
 		actualOrderNumber=r2CheckOutPO.orderConfirmationPage_OrderNumber.getText();
+		System.err.println(actualOrderNumber);
 		
 	}
 	

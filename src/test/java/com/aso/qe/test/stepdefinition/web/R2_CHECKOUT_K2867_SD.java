@@ -34,7 +34,7 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 	
 	@Then("^user click on In-Store Pick up edit button$")
 	public void user_click_on_In_Store_Pick_up_edit_button() throws Throwable {
-		Thread.sleep(Constants.thread_medium);
+		isDisplayed(r2CheckoutPo.EditStorPickUp_Btn);
 		assertTrue(clickOnButton(r2CheckoutPo.EditStorPickUp_Btn));
 	}
 	
@@ -84,12 +84,12 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 		  logger.debug("Store Name and Address :: " + newStoreDetails);
 		  assertTrue(isDisplayed(r2CheckoutPo.StoreNameandAddress_Txt));
 		assertNotEquals(newStoreDetails,storeDetails);
-		
+	
 	}
 
 	@When("^user clicks on Who is picking up the order dropdown$")
 	public void user_clicks_on_Who_is_picking_up_the_order_dropdown() throws Throwable {
-		assertTrue(clickOnButton(r2CheckoutPo.MePickUp_Drpdwn));
+		assertTrue(clickOnButton(r2CheckoutPo.mePlusAlternatePickUp_Drpdwn));
 	}
 
 	@And("^user selects a new option from drop down$")
@@ -97,8 +97,8 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 		//assertTrue(clickOnButton(r2CheckoutPo.SeeInStorePickupInstructions_Select_Dd));
 		Thread.sleep(Constants.thread_medium);
 		Actions hover=new Actions(getDriver());
-		hover.click(r2CheckoutPo.MePickUp_Drpdwn).build().perform();
-		hover.click(r2CheckoutPo.MePickUp_Drpdwn).build().perform();
+		hover.click(r2CheckoutPo.mePlusAlternatePickUp_Drpdwn).build().perform();
+		hover.click(r2CheckoutPo.mePlusAlternatePickUp_Drpdwn).build().perform();
 		hover.sendKeys(Keys.DOWN,Keys.ENTER).build().perform();
 		//hover.sendKeys(r2CheckoutPo.MePickUp_Drpdwn, Keys.DOWN,Keys.ENTER).build().perform();
 		Thread.sleep(Constants.thread_medium);
@@ -106,7 +106,7 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 
 	@And("^the selected value is displayed$")
 	public void the_selected_value_is_displayed() throws Throwable {
-		assertTrue(isDisplayed(r2CheckoutPo.MePickUp_Drpdwn));
+		assertTrue(isDisplayed(r2CheckoutPo.mePlusAlternatePickUp_Drpdwn));
 		
 	}
 	
@@ -123,7 +123,11 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 
 	@When("^user clicks on Go to payment CTA$")
 	public void user_clicks_on_Go_to_payment_CTA() throws Throwable {
-		assertTrue(clickOnButton(r2CheckoutPo.ShippingConfirm_btn));
+		isDisplayed(r2CheckoutPo.checkout_CheckoutHeader_txt);
+		boolean flag = false;
+		flag = isDisplayed(r2CheckoutPo.ShippingConfirm_btn);
+		if(flag) {
+		assertTrue(clickOnButton(r2CheckoutPo.ShippingConfirm_btn));}
 		Thread.sleep(Constants.thread_medium);
 	}
 

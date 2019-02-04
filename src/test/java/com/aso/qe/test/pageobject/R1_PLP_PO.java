@@ -110,6 +110,7 @@ public class R1_PLP_PO extends CommonActionHelper{
 		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Online Only')])[1]") public WebElement colorOnline;
 		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Price Drop')])[1]") public WebElement colorPriceDrop;
 		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Ships to Store')])[1]") public WebElement colorShipToStore;
+		@FindBy(xpath="//*[contains(@data-auid,'productCard_')]//*[@class='css-1e1r9n3']") public List<WebElement> ppuMessagePLP;  //SID 7-Jan
 		
 		
 		//KER-615

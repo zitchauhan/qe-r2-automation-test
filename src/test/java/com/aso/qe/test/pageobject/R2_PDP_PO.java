@@ -1,5 +1,7 @@
 package com.aso.qe.test.pageobject;
 
+import static org.junit.Assert.assertTrue;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -86,10 +88,28 @@ public class R2_PDP_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "(//*[contains(text(),'Est. Arrival')])")public WebElement txtEstArrival;//CR-RK Oct 8 KER-2912
 
+	@FindBy(xpath = "(//*[@data-auid='PDP_IventoryMessage'])[2]")
+	public WebElement storePickUpAvailableMessage;   //SID 10-Jan
 	
+	@FindBy(xpath = "(//*[@data-auid='PDP_IventoryMessage'])[1]")
+	public WebElement shippingMessage;   //SID 10-Jan
 	
 	//End KER-6655 CR-MS	 
 	
 	/***************************** END XPAHTS **********************************/
+	
+	
+	public boolean shippingProducts(String product) {
+		boolean flag=false;
+		flag = isDisplayed(getfindElementByXPath("//*[contains(@data-auid,'productCard_')]//*[text()='"+product+"']"));
+		if(flag) {
+		assertTrue(clickOnButton(getfindElementByXPath("//*[contains(@data-auid,'productCard_')]//*[text()='"+product+"']")));
+		}else {
+			System.err.println("*************PRODUCT IS NOT AVAILABLE ON 1st PAGE*************");
+			flag=false;
+		}
+		return flag;
+	}
+	
 
 }

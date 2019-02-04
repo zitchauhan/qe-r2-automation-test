@@ -11,6 +11,11 @@ Feature: Create User Profile with address information
 #  Scenario: Verify user profile creation with PLCC Changes
 #    Given "PLCCRegistrationUrl" endpoint with "PLCCRegistrationPostRequest" for user registration with invalid data
 #    Then Verify Error response status code as 400 for plcc
+<<<<<<< HEAD
 ##    And validate jsonSchema "createUserProfileSchema" for plcc
 ##    Then Validated response details of "identity.userId" for plcc
+=======
+#    And validate jsonSchema "createUserProfileSchema" for plcc
+#    Then Validated response details of "identity.userId" for plcc
+>>>>>>> 93a9ab2cf76569609eb296cec472dfb4985cc3c9
 	
