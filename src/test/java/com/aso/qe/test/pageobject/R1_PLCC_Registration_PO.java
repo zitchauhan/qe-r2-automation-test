@@ -16,7 +16,9 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
 	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
 	R1_PLCC_LandingPage_PO plccLandingPageObjects = PageFactory.initElements(driver, R1_PLCC_LandingPage_PO.class);
+	R1_PLCC_Generic_PO plccGenericPageObjects = PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
 	Common_Web_SD_PLCC timer = new Common_Web_SD_PLCC();
+	
 
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----START--------------------------------*/
 	// PLCC-41 (AddressCheckbox)
@@ -916,4 +918,77 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 							+ " is displayed");
 		}
 	}
+	
+	public void verifyAbsenceOfAddCompanyAptNumber() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+
+			plccGenericPageObjects.isNotDisplayed(addMoreAddressDetailsLink);
+			logger.debug("Add more address details link is not displayed++++++++++++++++++++++++==");
+		} else {
+			plccGenericPageObjects.isNotDisplayed(addMoreAddressDetailsLink);
+			logger.debug("Add more address details link is not displayed++++++++++++++++++++++++==");
+		}
+
+}
+	public void verifyAbsenceOfAddress() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+
+			plccGenericPageObjects.isNotDisplayed(addMoreAddressDetailsLink);
+			logger.debug("Add more address details link is not displayed++++++++++++++++++++++++==");
+		} else {
+			plccGenericPageObjects.isNotDisplayed(addMoreAddressDetailsLink);
+			logger.debug("Add more address details link is not displayed++++++++++++++++++++++++==");
+		}
+
+}
+	public void verifyAbsenceOfZipcode() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+
+			plccGenericPageObjects.isNotDisplayed(addMoreAddressDetailsLink);
+			logger.debug("Add more address details link is not displayed++++++++++++++++++++++++==");
+		} else {
+			plccGenericPageObjects.isNotDisplayed(addMoreAddressDetailsLink);
+			logger.debug("Add more address details link is not displayed++++++++++++++++++++++++==");
+		}
+
+}
+	public void verifyAbsenceOfCity() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+
+			plccGenericPageObjects.isNotDisplayed(addMoreAddressDetailsLink);
+			logger.debug("Add more address details link is not displayed++++++++++++++++++++++++==");
+		} else {
+			plccGenericPageObjects.isNotDisplayed(addMoreAddressDetailsLink);
+			logger.debug("Add more address details link is not displayed++++++++++++++++++++++++==");
+		}
+
+}
+	public void verifyAbsenceOfState() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+
+			plccGenericPageObjects.isNotDisplayed(addMoreAddressDetailsLink);
+			logger.debug("Add more address details link is not displayed++++++++++++++++++++++++==");
+		} else {
+			plccGenericPageObjects.isNotDisplayed(addMoreAddressDetailsLink);
+			logger.debug("Add more address details link is not displayed++++++++++++++++++++++++==");
+		}
+
+}
+	public void verifyAbsenceOfPhoneNumber() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+
+			plccGenericPageObjects.isNotDisplayed(addMoreAddressDetailsLink);
+			logger.debug("Add more address details link is not displayed++++++++++++++++++++++++==");
+		} else {
+			plccGenericPageObjects.isNotDisplayed(addMoreAddressDetailsLink);
+			logger.debug("Add more address details link is not displayed++++++++++++++++++++++++==");
+		}
+
+}
 }
