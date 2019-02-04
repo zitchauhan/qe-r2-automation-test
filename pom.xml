@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ASO</groupId>
-	<artifactId>qe-r1-automation-test</artifactId>
+	<artifactId>qe-r2-automation-test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>qe-r1-automation-test</name>
+	<name>qe-r2-automation-test</name>
 
 	<properties>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -15,6 +15,15 @@
 	
 	<build>
 		<plugins>
+		      <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.7</source>
+      				<target>1.7</target>
+				</configuration>
+			  </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -44,7 +53,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectName>qe-r1-automation-test</projectName>
+							<projectName>qe-r2-automation-test</projectName>
 							<outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
 							<cucumberOutput>${project.build.directory}/cucumber-reports/cucumber-html-reports/common.json</cucumberOutput>
 							<enableFlashCharts>True</enableFlashCharts>
