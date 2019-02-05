@@ -42,9 +42,8 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement stateDropDownPACCModal;
 	@FindBy(xpath = "//*[@id='plcc_modal_cancel']")
 	public WebElement cancelLinkCCModal;
-	
-	
-	//Pre-Screen Credir Card Appliction Modal
+
+	// Pre-Screen Credir Card Appliction Modal
 	@FindBy(xpath = "//*[@id='ads-notice']")
 	public WebElement noticeIFramePCCApplicationModal;
 	@FindBy(xpath = "//*[text()='Your Personal Information']")
@@ -63,8 +62,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement progressIndicatorPCCApplicationModal;
 	@FindBy(xpath = "//*[@class='academyicon icon-close']")
 	public WebElement closeButtonCCApplicationModal;
-	
-	
+
 //Credit Card Application Modal - Consent Modal
 	@FindBy(xpath = "//*[@class='mt-2 mb-2']")
 	public WebElement disclosureTxt1ConsentModal;
@@ -76,7 +74,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@id='financialTerms']")
 	public WebElement consentToAccountIframeConsentModal;
-	
+
 	@FindBy(xpath = "//*[text()=' STEP 2 : CONSENT ']")
 	public WebElement pageLabelConsentModal;
 
@@ -91,23 +89,11 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@id='financialTerms']")
 	public WebElement consentToFinancialIframeConsentModal;
 	@FindBy(xpath = "//*[@id='plcc_modal_print']")
-	public WebElement printLinkConsentModal;	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public WebElement printLinkConsentModal;
+
 	@FindBy(xpath = "//*[@class='css-1l4mqdj academyicon icon-checkbox-inactive null d-flex align-items-start']")
 	public WebElement t$CCheckBoxInactiveConsentModel;
-	
-	
-	
-	
+
 //	@FindAll({
 //		   @FindBy(xpath = "//*[@name='state']")
 //		   @FindBy(xpath = "//*[@data-auid='undefined_listOption_1']")
@@ -142,18 +128,17 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='btncrt_btnCntinueShop']")
 	public WebElement continueShoppingBtn;
 	@FindBy(xpath = "//*[@class='ml-half undefined']")
-	//*[@name='creditApplicationModal']
+	// *[@name='creditApplicationModal']
 	public WebElement TandCCheckBox;
 	@FindBy(xpath = "//*[text()='Submit']")
 	public WebElement submitButton;
 	@FindBy(xpath = "//*[text()=' STEP2: CONSENT ']")
 	public WebElement consentModelPageLabel;
-	
-	
-	//CONSENT MODEL:
+
+	// CONSENT MODEL:
 	@FindBy(xpath = "//*[@id='plcc_modal_back']")
 	public WebElement backButtonConsentModel;
-	
+
 	public void verifyPresenceOfConsentModelPageLabel() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(firstNameCCModal);
@@ -173,6 +158,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			logger.debug("First Name Text Field on Credit Card Application Modal is displayed");
 		}
 	}
+
 	public void verifyPresenceOfCancelLinkCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(cancelLinkCCModal);
@@ -182,6 +168,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			logger.debug("Cancel Link on Credit Card Application Modal is displayed");
 		}
 	}
+
 	public void verifyPresenceOfDOBTextField() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(dobCCModal);
@@ -191,6 +178,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			logger.debug("DOB Text Field on Credit Card Application Modal is displayed");
 		}
 	}
+
 	public void verifyPresenceOfSubmitButtonCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(submitButton);
@@ -391,6 +379,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			logger.debug("Continue to Checkout button is displayed");
 		}
 	}
+
 	public void verifyPresenceOfStreetCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(streetAddressCCModal);
@@ -421,7 +410,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void enterSSNCCModal(String arg) throws Exception {
 		setInputText(ssnCCModal, webPropHelper.getTestDataProperty(arg));
 	}
-	
+
 	public void enterConfirmSSNCCModal(String arg) throws Exception {
 		setInputText(confirmSSNPCCApplicationModal, webPropHelper.getTestDataProperty(arg));
 	}
@@ -475,6 +464,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		}
 
 	}
+
 	public void verifyPresenceOfNoticeIFramePCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(noticeIFramePCCApplicationModal);
@@ -484,6 +474,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			logger.debug("Notice IFrame on Pre-screen Credit card ApplicationModal is displayed");
 		}
 	}
+
 	public void verifyPresenceOfPersonalInfoPCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(personalInfoPCCApplicationModal);
@@ -493,6 +484,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			logger.debug("Peronal Info Label on Pre-screen Credit card ApplicationModal is displayed");
 		}
 	}
+
 	public void verifyPresenceOfConfirmSSNPCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(confirmSSNPCCApplicationModal);
@@ -502,6 +494,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			logger.debug("Confirm SSN Field on Pre-screen Credit card ApplicationModal is displayed");
 		}
 	}
+
 	public void verifyPresenceOfDisclosureTxt1PCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(disclosureTxt1PCCApplicationModal);
@@ -511,6 +504,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			logger.debug("Disclosure text 1 on Pre-screen Credit card ApplicationModal is displayed");
 		}
 	}
+
 	public void verifyPresenceOfDisclosureTxt2PCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(disclosureTxt2PCCApplicationModal);
@@ -519,8 +513,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(disclosureTxt2PCCApplicationModal);
 			logger.debug("Disclosure text 2 on Pre-screen Credit card ApplicationModal is displayed");
 		}
-		
+
 	}
+
 	public void verifyPresenceOfNoticeIframeModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(noticeIFramePCCApplicationModal);
@@ -529,8 +524,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(noticeIFramePCCApplicationModal);
 			logger.debug("Notice Iframe on Pre-screen Credit card ApplicationModal is displayed");
 		}
-		
+
 	}
+
 	public void verifyPresenceOfProgressIndicatorPCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(progressIndicatorPCCApplicationModal);
@@ -539,28 +535,33 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(progressIndicatorPCCApplicationModal);
 			logger.debug("Progress Indicatior on Pre-screen Credit card ApplicationModal is displayed");
 		}
-		
+
 	}
+
 	public void verifySubmitButtonIsDisabled() throws Exception {
-		if("mobile".equalsIgnoreCase(testtype)){
+		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(submitButton);
 			assertFalse(isClickable(submitButton));
 			logger.debug("Submit Button on Pre-Screen Conset Modal is not clickable");
-		}else {
+		} else {
 			isDisplayed(submitButton);
 			assertFalse(isClickable(submitButton));
 			logger.debug("Submit Button on Pre-Screen Conset Modal is not clickable");
-		}}
+		}
+	}
+
 	public void verifySubmitButtonIsEnabled() throws Exception {
-		if("mobile".equalsIgnoreCase(testtype)){
+		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(submitButton);
 			assertTrue(isClickable(submitButton));
 			logger.debug("Submit Button on Pre-Screen Conset Model is clickable");
-		}else {
+		} else {
 			isDisplayed(submitButton);
 			assertTrue(isClickable(submitButton));
 			logger.debug("Submit Button on Pre-Screen Conset Model is clickable");
-		}}
+		}
+	}
+
 	public void verifyTAndCCheckboxOnConsentModelInactive() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(t$CCheckBoxInactiveConsentModel);
@@ -569,8 +570,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(t$CCheckBoxInactiveConsentModel);
 			logger.debug("I agree to Terms and Conditions Checkbox on Consent Modal is Inactive");
 		}
-		
+
 	}
+
 	public void verifyPresenceOfBackButtonConsentModel() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(backButtonConsentModel);
@@ -579,8 +581,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(backButtonConsentModel);
 			logger.debug("Back Button on Consent Modal Modal is displayed");
 		}
-		
+
 	}
+
 	public void verifyPresenceOfCloseIconCCAM() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(closeButtonCCApplicationModal);
@@ -589,8 +592,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(closeButtonCCApplicationModal);
 			logger.debug("Close icon on credit card Application modal is displayed");
 		}
-		
+
 	}
+
 	public void verifyPresenceOfDisclosureTxt1ConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(disclosureTxt1ConsentModal);
@@ -599,8 +603,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(disclosureTxt1ConsentModal);
 			logger.debug("Disclosure Text one on Consent modal is displayed");
 		}
-		
+
 	}
+
 	public void verifyPresenceOfDisclosureTxt2ConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(disclosureTxt2ConsentModal);
@@ -609,8 +614,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(disclosureTxt2ConsentModal);
 			logger.debug("Disclosure Text two on Consent modal is displayed");
 		}
-		
+
 	}
+
 	public void verifyPresenceOfConsentToAccountTAndCsLabelConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(consentToAccountTAndCsLabelConsentModal);
@@ -619,8 +625,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(consentToAccountTAndCsLabelConsentModal);
 			logger.debug("CONSENT TO ACCOUNT TERMS AND CONDITIONS on Consent modal is displayed");
 		}
-		
+
 	}
+
 	public void verifyPresenceOfAccountToFinancialTAndCsLabelConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(accountToFinancialTAndCsLabelConsentModal);
@@ -629,18 +636,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(accountToFinancialTAndCsLabelConsentModal);
 			logger.debug("CONSENT TO FINANCIAL TERMS OF THE ACCOUNT on Consent modal is displayed");
 		}
-		
+
 	}
-	public void verifyPresenceOfConsentToFinancialIframeConsentModal() throws Exception {
-		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(consentToFinancialIframeConsentModal);
-			logger.debug("Account to Financial Iframe on Consent modal is displayed");
-		} else {
-			isDisplayed(consentToFinancialIframeConsentModal);
-			logger.debug("Account to Financial Iframe on Consent modal is displayed");
-		}
-		
-	}
+
 	public void verifyPresenceOfPrintLinkConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(printLinkConsentModal);
@@ -649,8 +647,20 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(printLinkConsentModal);
 			logger.debug("Print link on Consent modal is displayed");
 		}
-		
+
 	}
+
+	public void verifyPresenceOfConsentToFinancialIframeConsentModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(consentToFinancialIframeConsentModal);
+			logger.debug("Account to Financial Iframe on Consent modal is displayed");
+		} else {
+			isDisplayed(consentToFinancialIframeConsentModal);
+			logger.debug("Account to Financial Iframe on Consent modal is displayed");
+		}
+
+	}
+
 	public void verifyPresenceOfAccountTAndCsLabelConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(accountTAndCsLabelConsentModal);
@@ -659,8 +669,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(accountTAndCsLabelConsentModal);
 			logger.debug("ACCOUNT TERMS AND CONDITIONS on Consent modal is displayed");
 		}
-		
+
 	}
+
 	public void verifyPresenceOfPlccCardImgCCAM() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(plccCardImgCCAM);
@@ -669,7 +680,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(plccCardImgCCAM);
 			logger.debug("plcc Card Image on Consent modal is displayed");
 		}
-		
+
 	}
 
 	public void verifyPresenceOfPageLabelPCCApplicationModal() throws Exception {
@@ -680,6 +691,6 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(pageLabelPCCApplicationModal);
 			logger.debug(" STEP1:PRESCREEN ACCEPTANCE on Pre-screen Credit card ApplicationModal is displayed");
 		}
-}
+	}
 
 }
