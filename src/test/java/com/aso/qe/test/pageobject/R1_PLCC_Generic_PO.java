@@ -55,6 +55,11 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement discoverPalPaymentOption;
 	@FindBy(xpath = "//*[@src='/content/dam/academysports/cart-and-checkout/cards-accepted/mastercard.png']")
 	public WebElement masterPalPaymentOption;
+	
+	//BuyNow:
+	
+	@FindBy(xpath = "//*[@data-auid='btnundefined']")
+	public WebElement buyNowButton;
 
 	// Confirmation Page
 	@FindBy(xpath = "//*[text()='a confirmation email is on its way']")
@@ -68,6 +73,55 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
 	@FindBy(xpath = "//*[text()='Save Payment Info for Later']")
 	public WebElement savePaymentInfoForLaterCheckBox;
+	@FindBy(xpath="//*[text()='WE ACCEPT']")
+	public WebElement weAcceptLabel;
+	@FindBy(xpath="//*[@src='/content/dam/academysports/cart-and-checkout/cards-accepted/plcc.png']")
+	public WebElement plccCardImageFooter;
+	@FindBy(xpath = "//*[@data-auid='btnviewCart']")
+	public WebElement viewCartButton;
+	public void verifyPresenceOfViewCartButton() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(viewCartButton);
+			logger.debug("View Cart Button is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(viewCartButton);
+			logger.debug("View Cart Button is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	
+	public void verifyPresenceOfPlccCardImageFooter() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(plccCardImageFooter);
+			logger.debug("plcc Card Image in footer of Cart Page is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(plccCardImageFooter);
+			logger.debug("plcc card Image in footer of Cart Page is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	public void verifyPresenceOfWeAcceptLabel() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(weAcceptLabel);
+			logger.debug("We Accept Label in footer of Cart Page is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(weAcceptLabel);
+			logger.debug("We Accept Label in footer of Cart Page is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	public void verifyPresenceOfCartPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/cart")) {
+			logger.debug("User is successfully navigated to Cart page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Cart Page instead navigated to URL :: " + currentURL);
+		}
+	}
+	
 
 	public void verifyPresenceOfCheckoutPage() throws Exception {
 		String currentURL = getCurrentPageURL();
@@ -456,6 +510,19 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 			logger.debug("My Account Link on order confirmation Page is displayed");
 		}
 	}
+	public void verifyPresenceOfBuyNowButton() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(buyNowButton);
+			logger.debug("Buy Now Button is displayed");
+		} else {
+			isDisplayed(buyNowButton);
+			logger.debug("Buy Now button is displayed");
+		}
+	}
+	
+	
+	
 
 	public void enterExpiryDateField(String arg) throws Exception {
 		setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty(arg));

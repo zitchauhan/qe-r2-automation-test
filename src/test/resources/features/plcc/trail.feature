@@ -1,23 +1,23 @@
-Feature: Registration 
-
-Background:  Common Pre-requisite steps
-    Given user launches the browser and navigates to "ASO_HOME" page 
-	When user click on My Account link 
-	And  user click on Sign Up link 
+Feature: Cart Page
 	
-@C-PLCC @Regression @All @PLCC-41 @CR-VS	
-Scenario: Verify the system behavior when user unselects Add Address for faster checkout process check box in registration page
-	When user select Add Address for Faster Checkout checkbox
-	Then user expect element Add company name, Apt.Number, etc. (Optional) to be present
-	Then user expect element Address to be present
-	And user expect element Zip Code to be present
-	And user expect element City to be present
-	And user expect element State to be present
-	And user expect element Phone number to be present
-	When user unselect Add Address for Faster Checkout checkbox
-	Then user expect element Add company name, Apt.Number, etc. (Optional) to not be present
-	And user expect element Address to not be present
-	And user expect element Zip Code to not be present
-	And user expect element City to not be present
-	And user expect element State to not be present
-	And user expect element Phone number to not be present
+Scenario: Verify the display of saved card on payment section of checkout page
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user click on My Account link 
+	Then Verify below Sub/Main Module of MyAccount 
+		|# Verify following elements in Sign in/login page	|
+		|SignInPage_SignIn_btn								|
+		|SignInPage_EmailAddress_txt			   			| 
+		|SignInPage_Password_txt				   			|
+	And user enter Email address in sign-in page "Email_Address_2" 
+	And user enter password in sign-in page "Password_2" 
+	And user click on Signin-button 
+	Then user navigates to ASO-Home page  
+	Then user click on MyAccount and navigate to payment 
+	Then Verify below Sub/Main Module of MyAccount 
+		|#Verify following elements in Payments > Add new credit card section	|
+		|PaymentPage_PaymentsHeader_label				|
+	And user verifies the credit card saved and set as default 
+	Then Verify below Sub/Main Module of MyAccount 
+		|#Verify following elements in Payment page		|
+		|PaymentPage_CrediCardList_txt|
+	

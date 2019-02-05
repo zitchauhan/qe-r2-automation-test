@@ -7,8 +7,9 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/resources/features/plcc", 
+@CucumberOptions(features = "src/test/resources/features/plcc/trail.feature", 
 glue = "com.aso.qe.test.stepdefinition.web.plcc", monochrome = true, 
+//tags= {"@PLCC-80,@PLCC-81,@PLCC-82,@PLCC-83,@PLCC-84,@PLCC-87"},
 		plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html", format = {
 				"pretty", "html:target/cucumber-reports/cucumber-html-reports",
 				"json:target/cucumber-reports/cucumber-html-reports/common.json" })

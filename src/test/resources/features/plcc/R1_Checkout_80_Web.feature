@@ -1,4 +1,4 @@
-Feature: PLCC: Checkout - Payment Using PLCC 
+Feature: PLCC: Checkout - Payment Using PLCC  
 
 
 Background:  Common Pre-requisite steps
