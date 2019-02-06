@@ -36,7 +36,8 @@ Scenario: Verify the display of elements available on Prescreen  model
  Scenario: Verify user is able to Edit prefilled data available on Prescreen model
 	And user clear and enter First Name on credit card Application Modal "FirstName"
 	And user clear and enter Last Name on credit card Application Modal "LastName"
-	And user enter Last four SSN "Last4DigitsOfSSN"
+	And user enter Last four SSN "Last4DigitsOfSSNP"
+	And user enter Confirm Last four SSN "ConfirmSSNP"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome"
 	And user enter Street Address "StreetAddress" 

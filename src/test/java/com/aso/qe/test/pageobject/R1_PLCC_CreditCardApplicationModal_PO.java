@@ -19,6 +19,8 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement lastNameCCModal;
 	@FindBy(xpath = "//*[@data-auid='credit_application_SSN']")
 	public WebElement ssnCCModal;
+	@FindBy(xpath = "//*[@data-auid='credit_application_SSN_confirm']")
+	public WebElement confirmSsnCCModal;
 	@FindBy(xpath = "//*[@data-auid='credit_application_date_of_birth']")
 	public WebElement dobCCModal;
 	@FindBy(xpath = "//*[@data-auid='credit_application_annual_income']")
@@ -49,8 +51,8 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='Your Personal Information']")
 	public WebElement personalInfoPCCApplicationModal;
 	@FindBy(xpath = "//*[@name='confirmSsn']")
-	public WebElement confirmSSNPCCApplicationModal;
-	@FindBy(xpath = "//div[3]/div[2]/div[2]")
+//	public WebElement confirmSSNPCCApplicationModal;
+	//@FindBy(xpath = "//div[3]/div[2]/div[2]")
 	public WebElement disclosureTxt1PCCApplicationModal;
 	@FindBy(xpath = "//div[4]/div[6]")
 	public WebElement disclosureTxt2PCCApplicationModal;
@@ -226,6 +228,15 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		} else {
 			isDisplayed(ssnCCModal);
 			logger.debug("SSN on Credit Card Application Modal is displayed");
+		}
+	}
+	public void verifyPresenceOfConfirmSSNCCModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(confirmSsnCCModal);
+			logger.debug("Confirm SSN on Credit Card Application Modal is displayed");
+		} else {
+			isDisplayed(confirmSsnCCModal);
+			logger.debug("Confirm SSN on Credit Card Application Modal is displayed");
 		}
 	}
 
@@ -412,7 +423,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	}
 
 	public void enterConfirmSSNCCModal(String arg) throws Exception {
-		setInputText(confirmSSNPCCApplicationModal, webPropHelper.getTestDataProperty(arg));
+		setInputText(confirmSsnCCModal, webPropHelper.getTestDataProperty(arg));
 	}
 
 	public void enterAnnualIncomeCCModal(String arg) throws Exception {
@@ -485,15 +496,6 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		}
 	}
 
-	public void verifyPresenceOfConfirmSSNPCCApplicationModal() throws Exception {
-		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(confirmSSNPCCApplicationModal);
-			logger.debug("Confirm SSN Field on Pre-screen Credit card ApplicationModal is displayed");
-		} else {
-			isDisplayed(confirmSSNPCCApplicationModal);
-			logger.debug("Confirm SSN Field on Pre-screen Credit card ApplicationModal is displayed");
-		}
-	}
 
 	public void verifyPresenceOfDisclosureTxt1PCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {

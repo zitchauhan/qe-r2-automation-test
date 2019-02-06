@@ -52,11 +52,22 @@ Scenario: Verify the system behavior when user reselects Add Address for faster 
 	And user expect element City to be present
 	And user expect element State to be present
 	And user expect element Phone number to be present
-	Then user select Add Address for Faster Checkout checkbox
+	When user unselect Add Address for Faster Checkout checkbox
+	Then user expect element Add company name, Apt.Number, etc. (Optional) to not be present
+	And user expect element Address to not be present
+	And user expect element Zip Code to not be present
+	And user expect element City to not be present
+	And user expect element State to not be present
+	And user expect element Phone number to not be present
+	When user select Add Address for Faster Checkout checkbox
+	Then user expect element Add company name, Apt.Number, etc. (Optional) to be present
+	And user expect element Address to be present
+	And user expect element Zip Code to be present
+	And user expect element City to be present
+	And user expect element State to be present
+	And user expect element Phone number to be present
 
-@C-PLCC @Regression @All @PLCC-41 @CR-VS  
-Scenario: Verify the system behavior when user reselects Add Address for faster checkout process check box  in registration page
-	Then user expect element Add Address for Faster Checkout checkbox to be present
+
 	 
 
 

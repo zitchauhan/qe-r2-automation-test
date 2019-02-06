@@ -85,6 +85,9 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public WebElement offerText2;
 	@FindBy(xpath = "//*[@data-auid='offerText3']")
 	public WebElement offerText3;
+	
+	//Landing Page Checkout
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Check Gift Card Balance']") public WebElement lnkCheckGiftCardBalance; //Manju-Feb-6
 
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
 	public void clickOnAcademyCreditCardFooterLink() throws Exception {
@@ -295,7 +298,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 			logger.debug("Manage your card Link is displayed");
 		}
 	}
-	
+
 	public void verifyPresenceOfBankPage() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("d.comenity.net/academy/")) {
@@ -412,6 +415,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void verifyPresenceOfLandingPage() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("/shop/store/academy-credit-card")) {
@@ -434,6 +438,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void verifyPresenceOfBenefit2Image() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -446,6 +451,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void verifyPresenceOfBenefit3Image() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -458,6 +464,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void verifyPresenceOfBenefit1Text() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -470,6 +477,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void verifyPresenceOfBenefit2Text() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -482,6 +490,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void verifyPresenceOfBenefit3Text() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -494,6 +503,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void verifyPresenceOfOfferText1() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -506,6 +516,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void verifyPresenceOfOfferText2() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -518,6 +529,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void verifyPresenceOfOfferText3() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -530,5 +542,117 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
+	/*
+	 * Newly created Method for Footer Links Navigation_Smeetha&Manju
+	 */
+	public void verifyPresenceOfTermsAndConditionsPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/app/answers/detail/a_id/206/kw/condition")) {
+			logger.debug("User is successfully navigated to ASO Home page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to ASO Home Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOfCheckOrderPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/myaccount/orders")) {
+			logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOfReturnPolicyPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/app/answers/detail/a_id/203")) {
+			logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOfProductRecallPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/en/store/product-recall-info")) {
+			logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOfRebatesPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/browse/rebates")) {
+			logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOfCustomerCarePage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("custhelp.com")) {
+			logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+	
+	// Footer link navigation:
+		public void verifyPresenceOfShopGiftCardsPage() throws Exception {
+			String currentURL = getCurrentPageURL();
+			if (currentURL.contains("/shop/browse/Gift-Cards")) {
+				logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
+			} else {
+				logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+			}
+
+		}
+		
+		// Footer link navigation:
+		public void verifyPresenceOfCheckGiftCradBalancePage() throws Exception {
+			String currentURL = getCurrentPageURL();
+			if (currentURL.contains("/webapp/wcs/stores/servlet/GCBView")) {
+				logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
+			} else {
+				logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+			}
+
+		}
+		
+		// Footer link navigation:
+		public void verifyPresenceOfAcademyCreditCardPage() throws Exception {
+			String currentURL = getCurrentPageURL();
+			if (currentURL.contains("/shop/store/academy-credit-card")) {
+				logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
+			} else {
+				logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+			}
+
+		}
+		
+		// Footer link navigation:
+		public void verifyPresenceOfStoreServicesLinkPage() throws Exception {
+			String currentURL = getCurrentPageURL();
+			if (currentURL.contains("/shop/en/store/instore-services")) {
+				logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
+			} else {
+				logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+			}
+
+		}
 
 }

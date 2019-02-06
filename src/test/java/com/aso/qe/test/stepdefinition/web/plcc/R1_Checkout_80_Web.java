@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
+import com.aso.qe.test.common.Common_Web_PLCC;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
@@ -49,7 +50,9 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 
 	@When("^user click on Add to cart button$")
 	public void user_click_on_Add_to_cart_button() throws Throwable {
-		pdpPageObj.addToCartAvailability();
+		//pdpPageObj.addToCartAvailability();
+		Thread.sleep(pageLoadWaitTime);
+		genericPO.addToCartButton.click();
 		waitForElement(pdpPageObj.btnAddToCart);
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 	}
@@ -791,9 +794,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		}
 else {
 assertTrue(clickOnButton(r2MyAccountPo.addNewCardCta));
-setInputText(r2MyAccountPo.txtCreditCardNumber, webPropHelper.getTestDataProperty("CreditCardNumber"));
-setInputText(r2MyAccountPo.txtExpiryDate, webPropHelper.getTestDataProperty("ExpDate"));
-setInputText(r2MyAccountPo.txtCVV, webPropHelper.getTestDataProperty("CVV"));
+setInputText(r2MyAccountPo.txtCreditCardNumber, webPropHelper.getTestDataProperty("ValidPLCCCard"));
 setInputText(r2MyAccountPo.txtFirstNameInAddCreditCard, webPropHelper.getTestDataProperty("UpdateFirstName"));
 setInputText(r2MyAccountPo.txtLastNameInAddCreditCard, webPropHelper.getTestDataProperty("UpdateLastName"));
 setInputText(r2MyAccountPo.txtAddressInAddCreditCard, webPropHelper.getTestDataProperty("UpdateAddress"));

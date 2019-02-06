@@ -5,10 +5,12 @@ Background:  Common Pre-requisite steps
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
-
 	
 @C-PLCC @Regression @All @PLCC-113 @CR-VS
 Scenario: Verify the system behavior when user clicks on Close button_Pre-Screen Consent Modal
+	And user expect Preescreen Code Text Field is to be present
+	And user enter Preescreen Code "Valid_PrescreenCode_1"
+	And user click on ACCEPT OFFER 
 	And user enter Last four SSN "Last4DigitsOfSSNP"
 	And user enter Confirm Last four SSN "ConfirmSSNP"
 	And user enetr Date of Birth "DOBP"

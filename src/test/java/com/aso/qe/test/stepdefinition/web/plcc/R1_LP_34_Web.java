@@ -238,7 +238,7 @@ public class R1_LP_34_Web extends CommonActionHelper {
 		globalElementHeader.validatingLegalPolicy();
 	}
 
-	@Then("^user expect element Â© (\\d+) Academy Sports \\+ Outdoors\\. All Rights Reserved to be present$")
+	@Then("^user expect element © (\\d+) Academy Sports \\+ Outdoors\\. All Rights Reserved to be present$")
 	public void user_expect_element_Academy_Sports_Outdoors_All_Rights_Reserved_to_be_present(int arg1) throws Throwable {
 		plccPageObjects.validatingPresenceOfAsoRightsLink();
 	}
@@ -309,11 +309,74 @@ public class R1_LP_34_Web extends CommonActionHelper {
 		plccLandingPageObjects.clickOnAcademyCreditCardFooterLink();
 		plccLandingPageObjects.verifyPresenceOfFPOApplyCardSection();
 	}
+	/*
+	 * Navigation Links Newly created for PLCC Landing Page by Smeetha and Manju
+	 */
+	@When("^user click on TermsAndCondition link in the footer section of ASO-Home page$")
+	public void user_click_on_TermsAndCondition_link_in_the_footer_section_of_ASO_Home_page() throws Throwable {
+		globalElementHeader.lnktermsandconditions.click();
+		
+	}
+
+	@Then("^user expect TermsAndConditions page to be present$")
+	public void user_expect_TermsAndConditions_page_to_be_present() throws Throwable {
+		plccLandingPageObjects.verifyPresenceOfTermsAndConditionsPage();
+	}
 	
+	@Then("^user click on CheckOrder and navigates to CheckOrder Page$")
+	public void user_click_on_CheckOrder_and_navigates_to_CheckOrder_Page() throws Throwable {
+		  globalElementHeader.lnkcheckorder.click();
+	      plccLandingPageObjects.verifyPresenceOfCheckOrderPage();
+	}
+
+	@Then("^user click on ReturnPolicy and navigates to ReturnPolicy Page$")
+	public void user_click_on_ReturnPolicy_and_navigates_to_ReturnPolicy_Page() throws Throwable {
+		 globalElementHeader.lnkreturnpolicy.click();
+	      plccLandingPageObjects.verifyPresenceOfReturnPolicyPage();
+		
+	}
+
+	@Then("^user click on ProductRecall and navigates to ProductRecall Page$")
+	public void user_click_on_ProductRecall_and_navigates_to_ProductRecall_Page() throws Throwable {
+		 globalElementHeader.lnkproductrecall.click();
+	      plccLandingPageObjects.verifyPresenceOfProductRecallPage();
+	}
+
+	@Then("^user click on Rebates and navigates to Rebates Page$")
+	public void user_click_on_Rebates_and_navigates_to_Rebates_Page() throws Throwable {
+		 globalElementHeader.lnkrebates.click();
+	      plccLandingPageObjects.verifyPresenceOfRebatesPage();
+	}
+
+	@Then("^user click on CustomerCare and navigates to CustomerCare Page$")
+	public void user_click_on_CustomerCare_and_navigates_to_CustomerCare_Page() throws Throwable {
+		 globalElementHeader.lnkcustomercare.click();
+	      plccLandingPageObjects.verifyPresenceOfCustomerCarePage();
+	}
 	
-	
-	
-	
+	@Then("^user click on ShopGiftCards and navigates to ShopGiftCards Page$")
+	public void user_click_on_ShopGiftCards_and_navigates_to_ShopGiftCards_Page() throws Throwable {
+		globalElementHeader.lnkgiftcards.click();
+	    plccLandingPageObjects.verifyPresenceOfShopGiftCardsPage();
+	}
+
+	@Then("^user click on CheckGiftCradBalance and navigates to CheckGiftCradBalance Page$")
+	public void user_click_on_CheckGiftCradBalance_and_navigates_to_CheckGiftCradBalance_Page() throws Throwable {
+		plccLandingPageObjects.lnkCheckGiftCardBalance.click();
+	      plccLandingPageObjects.verifyPresenceOfCheckGiftCradBalancePage();
+	}
+
+	@Then("^user click on AcademyCreditCard and navigates to AcademyCreditCard Page$")
+	public void user_click_on_AcademyCreditCard_and_navigates_to_AcademyCreditCard_Page() throws Throwable {
+		globalElementHeader.lnkAcademyCreditCards.click();
+	    plccLandingPageObjects.verifyPresenceOfAcademyCreditCardPage();
+	}
+
+	@Then("^user click on StoreServicesLink and navigates to StoreServicesLink Page$")
+	public void user_click_on_StoreServicesLink_and_navigates_to_StoreServicesLink_Page() throws Throwable {
+		globalElementHeader.lnkStoreServices.click();
+	    plccLandingPageObjects.verifyPresenceOfStoreServicesLinkPage();
+	}
 	
 	
 	

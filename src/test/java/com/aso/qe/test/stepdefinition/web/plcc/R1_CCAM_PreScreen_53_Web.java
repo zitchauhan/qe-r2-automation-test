@@ -27,8 +27,8 @@ public class R1_CCAM_PreScreen_53_Web extends CommonActionHelper {
 	@Then("^user enter Confirm Last four SSN \"(.*?)\"$")
 	public void user_enter_Confirm_Last_four_SSN(String arg1) throws Throwable {
 		ccAplicationModal_PO.enterConfirmSSNCCModal(arg1);
-		assertTrue(isDisplayed(ccAplicationModal_PO.confirmSSNPCCApplicationModal));
-		waitForElement(ccAplicationModal_PO.confirmSSNPCCApplicationModal);
+		assertTrue(isDisplayed(ccAplicationModal_PO.confirmSsnCCModal));
+		waitForElement(ccAplicationModal_PO.confirmSsnCCModal);
 	}
 	
 	@Then("^user expect error message on email id field$")

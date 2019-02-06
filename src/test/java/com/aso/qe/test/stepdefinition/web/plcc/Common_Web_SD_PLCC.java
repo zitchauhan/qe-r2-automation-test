@@ -255,6 +255,12 @@ public class Common_Web_SD_PLCC extends CommonActionHelper
 		assertTrue(new ASOBrokenURLsLinks().getBrokenImageLinks(), ASOBrokenURLsLinks.errorText);
 	}
 	
-	
+	//=================================================Browser back button============================//
+	@Then("^user click on browser back button$")
+	public void user_click_on_browser_back_button() throws Throwable {
+	driver.navigate().back();
+	logger.debug("User navigates back to Previous Page.............");
+
+	}
 	
 }

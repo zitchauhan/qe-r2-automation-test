@@ -55,6 +55,9 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement discoverPalPaymentOption;
 	@FindBy(xpath = "//*[@src='/content/dam/academysports/cart-and-checkout/cards-accepted/mastercard.png']")
 	public WebElement masterPalPaymentOption;
+	@FindBy(xpath = "//*[@data-auid='btnAddToCart']")
+	public WebElement addToCartButton;
+	
 	
 	//BuyNow:
 	
