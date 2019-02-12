@@ -1,6 +1,6 @@
 package com.aso.qe.test.stepdefinition.web.plcc;
 
-import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertTrue;
 
 import java.util.Iterator;
 import java.util.List;
@@ -12,7 +12,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
-import com.aso.qe.test.common.Common_Web_PLCC;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
@@ -56,7 +55,13 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		waitForElement(pdpPageObj.btnAddToCart);
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 	}
-
+	@When("^user click on Add to Cart button$")
+	public void user_click_on_Add_to_Cart_button() throws Throwable {
+		waitForPageLoad(getDriver());
+		pdpPageObj.addToCartAvailability();
+		waitForElement(pdpPageObj.btnAddToCart);
+		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+	}
 	@When("^user click on search icon$")
 	public void user_click_on_search_icon() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOfSearchIcon();
