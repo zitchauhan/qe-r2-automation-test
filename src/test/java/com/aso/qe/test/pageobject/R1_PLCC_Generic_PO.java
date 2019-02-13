@@ -45,8 +45,9 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement plccCreditCardImageFooter;
 	@FindBy(xpath="//*[@data-auid='checkout_payment_collapsed']")
 	public WebElement paymentScetionCheckoutPage;
-	
-	//*[contains(text(),'Academy Sports + Outdoors Credit Card ending in - ')] 
+	@FindBy(xpath="//*[contains(text(),'Academy Sports + Outdoors Credit Card ending in - ")
+	public WebElement savedCardCheckoutPage;
+	 
 	
 
 //Payment Page Card Images
@@ -528,6 +529,17 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 			logger.debug("Payment Scetion of Checkout Page is displayed");
 		}
 	}
+	public void verifyPresenceOfSavedCardCheckoutPage() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(savedCardCheckoutPage);
+			logger.debug("Saved Card on Checkout Page is displayed");
+		} else {
+			isDisplayed(savedCardCheckoutPage);
+			logger.debug("Saved Card on Checkout Page is displayed");
+		}
+	}
+	
 	
 	public void verifyPresenceOfBuyNowButton() throws Exception {
 

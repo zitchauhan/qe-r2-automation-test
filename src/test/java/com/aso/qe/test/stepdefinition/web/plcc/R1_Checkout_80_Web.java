@@ -819,13 +819,14 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	@When("^user check element payment section to be present$")
 	public void user_check_element_payment_section_to_be_present() throws Throwable {
 		genericPO.verifyPresenceOfPaymentSectionOnCheckoutPage();
-		String savedCard = genericPO.paymentScetionCheckoutPage.getText();
-		logger.debug(savedCard + " Saved card is displayed on payment page");
 	}
 
 	@Then("^user expect element saved card on payment section of checkout page to be present$")
 	public void user_expect_element_saved_card_on_payment_section_of_checkout_page_to_be_present() throws Throwable {
-	   
+		genericPO.verifyPresenceOfSavedCardCheckoutPage();
+		String savedCard = genericPO.savedCardCheckoutPage.getText();
+		logger.debug(savedCard + " Saved card is displayed on payment page");
+		
 	}
 
 }

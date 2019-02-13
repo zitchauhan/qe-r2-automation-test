@@ -72,3 +72,4 @@ Scenario: Verify the system behavior when user enter invalid digits as BIN numbe
 Scenario: Verify the display of saved card on payment section of checkout page
 When user check element payment section to be present
 Then user expect element saved card on payment section of checkout page to be present
+
