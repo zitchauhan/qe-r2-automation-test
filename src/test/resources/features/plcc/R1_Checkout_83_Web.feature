@@ -11,7 +11,7 @@ Background:  Common Pre-requisite steps
 	#And user expect element ASO Home Page Title to be present
 	When user enters "SKUIdOfProduct" in the search box 
 	And user click on search icon 
-	And user click on Add to cart button 
+	And user click on Add to Cart button
 	And user click on checkout from ATC pop up 
 	And user clicks on checkout button and navigates to checkout page 
 	#And user selects credit card radio button

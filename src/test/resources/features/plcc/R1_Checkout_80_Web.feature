@@ -9,13 +9,12 @@ Background:  Common Pre-requisite steps
 	And user enter password in sign-in page "Password_2" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
-	#And user expect element ASO Home Page Title to be present
 	When user enters "SKUIdOfProduct" in the search box 
 	And user click on search icon 
-	And user click on Add to cart button 
+	#And user click on Add to Cart Button 
+	And user click on Add to Cart button  
 	And user click on checkout from ATC pop up 
 	And user clicks on checkout button and navigates to checkout page 
-	#And user selects credit card radio button
 	And user expect element credit card text field is present 
 	
 @C-PLCC @Regression @All @PLCC-80 @CR-VS	
@@ -69,5 +68,7 @@ Scenario: Verify the system behavior when user enter invalid digits as BIN numbe
 	Then user click on remove from cart 
 
 
-#@C-PLCC @Regression @All @PLCC-80 @CR-VS	
-#Scenario: Verify the display of saved card on payment section of checkout page
+@C-PLCC @Regression @All @PLCC-80 @CR-VS	
+Scenario: Verify the display of saved card on payment section of checkout page
+When user check element payment section to be present
+Then user expect element saved card on payment section of checkout page to be present

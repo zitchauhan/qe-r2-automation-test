@@ -11,7 +11,7 @@ Scenario: Verify the display of PLCC card image under We Accept section
 	Then user navigates to ASO-Home page 
 	When user enters "SKUIdOfProduct" in the search box 
 	And user click on search icon 
-	When user click on Add to cart button 
+	And user click on Add to Cart button 
 	And user click on viewcart button
 	Then user navigates to Cart Page
 	Scenario: Verify the display of PLCC card image under We Accept section on cart image

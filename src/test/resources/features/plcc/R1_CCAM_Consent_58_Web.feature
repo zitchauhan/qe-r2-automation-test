@@ -9,11 +9,6 @@ Background:  Common Pre-requisite steps
 	
 @C-PLCC @Regression @All @PLCC-58 @CR-VS
  Scenario: Verify Submit button is not clickable when Terms and condition check box is unchecked_Pre-Screen Consent
- And user expect Preescreen Code Text Field is to be present
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user navigates to ASO-Home page 
-	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
-	Then user expect Landing page to be present 
 	And user expect Preescreen Code Text Field is to be present
 	And user enter Preescreen Code "Valid_PrescreenCode_1"
 	And user click on ACCEPT OFFER 
@@ -35,11 +30,7 @@ Background:  Common Pre-requisite steps
 	Then user expect submit button not clickable
 	
 @C-PLCC @Regression @All @PLCC-58 @CR-VS
- Scenario: Verify Submit button is clickable when Terms and condition check box is checked_Pre-Screen Consent
-   Given user launches the browser and navigates to "ASO_HOME" page 
-	When user navigates to ASO-Home page 
-	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
-	Then user expect Landing page to be present 
+ Scenario: Verify Submit button is clickable when Terms and condition check box is checked_Pre-Screen Consent 
 	And user expect Preescreen Code Text Field is to be present
 	And user enter Preescreen Code "Valid_PrescreenCode_1"
 	And user click on ACCEPT OFFER 
@@ -63,10 +54,6 @@ Background:  Common Pre-requisite steps
 	
 @C-PLCC @Regression @All @PLCC-58 @CR-VS
  Scenario: Verify Submit button is not clickable when Terms and condition check box is unchecked_Generic Consent
- 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user navigates to ASO-Home page 
-	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
-	Then user expect Landing page to be present 
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 
  	When user enter First Name on credit card Application Modal "FirstName" 
@@ -90,10 +77,6 @@ Background:  Common Pre-requisite steps
 	
 @C-PLCC @Regression @All @PLCC-58 @CR-VS
  Scenario: Verify Submit button is clickable when Terms and condition check box is checked_Generic Consent
-   	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user navigates to ASO-Home page 
-	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
-	Then user expect Landing page to be present 
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal  
     When user enter First Name on credit card Application Modal "FirstName" 
