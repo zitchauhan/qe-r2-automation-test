@@ -56,8 +56,8 @@ Scenario: Verify the display of Footer components on PLCC landing page
 	And user expect element PrivacyPolicy to be present 
 	And user expect element TermsAndCondition to be present 
 	And user expect element CaliforniaTransparencyinSupplyChainAct to be present 
-	And user expect element � 2018 Academy Sports + Outdoors. All Rights Reserved to be present
-	#And user expect element Sitemap to be present 
+	And user expect element 2018 Academy Sports + Outdoors. All Rights Reserved to be present
+	And user expect element Sitemap to be present 
 	And user expect element ProductIndex to be present 
 	And user expect element ShoppingIndex to be present 
 	And user expect element BrandsIndex to be present  

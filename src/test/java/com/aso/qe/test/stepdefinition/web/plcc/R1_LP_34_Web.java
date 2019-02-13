@@ -238,7 +238,7 @@ public class R1_LP_34_Web extends CommonActionHelper {
 		globalElementHeader.validatingLegalPolicy();
 	}
 
-	@Then("^user expect element © (\\d+) Academy Sports \\+ Outdoors\\. All Rights Reserved to be present$")
+	@Then("^user expect element (\\d+) Academy Sports \\+ Outdoors\\. All Rights Reserved to be present$")
 	public void user_expect_element_Academy_Sports_Outdoors_All_Rights_Reserved_to_be_present(int arg1) throws Throwable {
 		plccPageObjects.validatingPresenceOfAsoRightsLink();
 	}
