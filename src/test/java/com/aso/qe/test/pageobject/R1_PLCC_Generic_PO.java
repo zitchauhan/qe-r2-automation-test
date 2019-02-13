@@ -45,7 +45,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement plccCreditCardImageFooter;
 	@FindBy(xpath="//*[@data-auid='checkout_payment_collapsed']")
 	public WebElement paymentScetionCheckoutPage;
-	@FindBy(xpath="//*[contains(text(),'Academy Sports + Outdoors Credit Card ending in - ")
+	@FindBy(xpath="//*[contains(text(),'Academy Sports + Outdoors Credit Card ending in - ')]")
 	public WebElement savedCardCheckoutPage;
 	 
 	
