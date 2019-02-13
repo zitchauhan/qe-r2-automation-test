@@ -1,7 +1,7 @@
 package com.aso.qe.test.stepdefinition.web.plcc;
 
-import static org.testng.Assert.assertTrue;
-
+import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertFalse;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -17,6 +17,8 @@ import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_LandingPage_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Registration_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
+import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
@@ -27,7 +29,7 @@ import cucumber.api.java.en.When;
 import freemarker.template.utility.NullArgumentException;
 
 public class R1_Checkout_80_Web extends CommonActionHelper {
-	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);
+	R2_MyAccount_PO myAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
@@ -38,6 +40,8 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	R2_MyAccount_PO r2MyAccountPO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	R2_R1_Fun_PO r2_r1_fun_po = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
+	R1_SearchProduct_PO r1_SearchPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
+	R2_Cart_PO cartR2PageObj = PageFactory.initElements(driver, R2_Cart_PO.class);
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 
 	@When("^user enters \"(.*?)\" in the search box$")
@@ -49,12 +53,13 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 
 	@When("^user click on Add to cart button$")
 	public void user_click_on_Add_to_cart_button() throws Throwable {
-		//pdpPageObj.addToCartAvailability();
+		// pdpPageObj.addToCartAvailability();
 		Thread.sleep(pageLoadWaitTime);
 		genericPO.addToCartButton.click();
 		waitForElement(pdpPageObj.btnAddToCart);
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 	}
+
 	@When("^user click on Add to Cart button$")
 	public void user_click_on_Add_to_Cart_button() throws Throwable {
 		waitForPageLoad(getDriver());
@@ -62,6 +67,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		waitForElement(pdpPageObj.btnAddToCart);
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 	}
+
 	@When("^user click on search icon$")
 	public void user_click_on_search_icon() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOfSearchIcon();
@@ -197,7 +203,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 			if (isDisplayed(r2CheckOutPo.PaypalScreenLogin_Btn))
 				assertTrue(clickOnButton(r2CheckOutPo.PaypalScreenLogin_Btn));
 
-//				assertTrue(clickOnButton(r2CheckOutPo.PaypalScreenLogin_Btn));
+			// assertTrue(clickOnButton(r2CheckOutPo.PaypalScreenLogin_Btn));
 			waitForElement(r2CheckOutPo.PaypalEmail_Input);
 			assertTrue(clickOnButton(r2CheckOutPo.PaypalEmail_Input));
 			setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty("PayPalEmail"));
@@ -308,6 +314,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		genericPO.verifyPresenceOfRemoveFromCartLink();
 		r2CheckOutPo.AS_btnRemoveFromCart.click();
 	}
+
 	@When("^user click on expiry date text field$")
 	public void user_click_on_expiry_date_text_field() throws Throwable {
 		genericPO.verifyPresenceOfExpiryTextField();
@@ -318,6 +325,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	public void user_expect_element_Unrecognized_card_number_to_be_present() throws Throwable {
 		genericPO.verifyPresenceOfInvalidCardNumberErrorMsg();
 	}
+
 	@Then("^Verify below Sub/Main Module of MyAccount$")
 	public void verify_below_Sub_Main_Module_of_MyAccount(DataTable arg1) throws Throwable {
 		String currentElement = null;
@@ -631,7 +639,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 				else if (currentElement.equalsIgnoreCase("OrderPage_ShippingZipCode_txt"))
 					assertTrue(isDisplayed(r2MyAccountPo.txtShippingZipCode));
 				else if (currentElement.equalsIgnoreCase("OrderPage_BillingZipCode_txt"))
-					assertTrue(isDisplayed(r2MyAccountPo.BillindZipCode_Input)); 
+					assertTrue(isDisplayed(r2MyAccountPo.BillindZipCode_Input));
 				else if (currentElement.equalsIgnoreCase("OrderPage_Find_btn"))
 					assertTrue(isDisplayed(r2MyAccountPo.btnFind));
 				else if (currentElement.equalsIgnoreCase("OrderPage_TotalNumberOfOrder_txt"))
@@ -775,45 +783,49 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 			throw new AssertionError("Element <" + currentElement + "> is not present on application page .");
 		}
 	}
-	
 
 	@Then("^user click on MyAccount and navigate to payment$")
 	public void user_click_on_My_Account_and_navigate_to_payment() throws Throwable {
 
-		  if("mobile".equalsIgnoreCase(testtype))
-			{
-			  clickOnButton(myAccountPo.myAccount_txt_Mobile);
-			  clickOnButton(r2_r1_fun_po.payment_M_Txt);
-			  
-			}else
-			{
-				 clickOnButton(myAccountPo.lnkMyAccount);
-				  clickOnButton(r2_r1_fun_po.payment_Txt);
-			}
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			clickOnButton(myAccountPo.myAccount_txt_Mobile);
+			clickOnButton(r2_r1_fun_po.payment_M_Txt);
+
+		} else {
+			clickOnButton(myAccountPo.lnkMyAccount);
+			clickOnButton(r2_r1_fun_po.payment_Txt);
+		}
 	}
 
 	@Then("^user verifies the credit card saved and set as default$")
 	public void user_verifies_the_credit_card_saved_and_set_as_default() throws Throwable {
-		if(isDisplayed(r2MyAccountPo.txtDefaultDescription)) {
-			
+		if (isDisplayed(r2MyAccountPo.txtDefaultDescription)) {
+
+		} else {
+			assertTrue(clickOnButton(r2MyAccountPo.addNewCardCta));
+			setInputText(r2MyAccountPo.txtCreditCardNumber, webPropHelper.getTestDataProperty("ValidPLCCCard"));
+			setInputText(r2MyAccountPo.txtFirstNameInAddCreditCard,
+					webPropHelper.getTestDataProperty("UpdateFirstName"));
+			setInputText(r2MyAccountPo.txtLastNameInAddCreditCard, webPropHelper.getTestDataProperty("UpdateLastName"));
+			setInputText(r2MyAccountPo.txtAddressInAddCreditCard, webPropHelper.getTestDataProperty("UpdateAddress"));
+			setInputText(r2MyAccountPo.txtZipCodeInAddCreditCard, webPropHelper.getTestDataProperty("UpdateZipcode"));
+			setInputText(r2MyAccountPo.adr_inpPhoneNumber, webPropHelper.getTestDataProperty("UpdatePhoneNumber"));
+			assertTrue(clickOnButton(r2MyAccountPo.PaymentPage_AddCreditCard_Add_btn));
+			Thread.sleep(Constants.thread_medium);
+			assertTrue(isDisplayed(r2MyAccountPo.txtDefaultDescription));
 		}
-else {
-assertTrue(clickOnButton(r2MyAccountPo.addNewCardCta));
-setInputText(r2MyAccountPo.txtCreditCardNumber, webPropHelper.getTestDataProperty("ValidPLCCCard"));
-setInputText(r2MyAccountPo.txtFirstNameInAddCreditCard, webPropHelper.getTestDataProperty("UpdateFirstName"));
-setInputText(r2MyAccountPo.txtLastNameInAddCreditCard, webPropHelper.getTestDataProperty("UpdateLastName"));
-setInputText(r2MyAccountPo.txtAddressInAddCreditCard, webPropHelper.getTestDataProperty("UpdateAddress"));
-setInputText(r2MyAccountPo.txtZipCodeInAddCreditCard, webPropHelper.getTestDataProperty("UpdateZipcode"));
-setInputText(r2MyAccountPo.adr_inpPhoneNumber, webPropHelper.getTestDataProperty("UpdatePhoneNumber"));
-assertTrue(clickOnButton(r2MyAccountPo.PaymentPage_AddCreditCard_Add_btn));
-Thread.sleep(Constants.thread_medium);
-assertTrue(isDisplayed(r2MyAccountPo.txtDefaultDescription));
-}
 	}
-	
-	
-	
-	
+
+	@When("^user check element payment section to be present$")
+	public void user_check_element_payment_section_to_be_present() throws Throwable {
+		genericPO.verifyPresenceOfPaymentSectionOnCheckoutPage();
+		String savedCard = genericPO.paymentScetionCheckoutPage.getText();
+		logger.debug(savedCard + " Saved card is displayed on payment page");
+	}
+
+	@Then("^user expect element saved card on payment section of checkout page to be present$")
+	public void user_expect_element_saved_card_on_payment_section_of_checkout_page_to_be_present() throws Throwable {
+	   
+	}
+
 }
-
-

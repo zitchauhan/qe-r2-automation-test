@@ -68,5 +68,7 @@ Scenario: Verify the system behavior when user enter invalid digits as BIN numbe
 	Then user click on remove from cart 
 
 
-#@C-PLCC @Regression @All @PLCC-80 @CR-VS	
-#Scenario: Verify the display of saved card on payment section of checkout page
+@C-PLCC @Regression @All @PLCC-80 @CR-VS	
+Scenario: Verify the display of saved card on payment section of checkout page
+When user check element payment section to be present
+Then user expect element saved card on payment section of checkout page to be present
