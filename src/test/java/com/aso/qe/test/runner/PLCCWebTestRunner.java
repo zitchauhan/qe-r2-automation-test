@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/resources/features/plcc", 
+@CucumberOptions(features = "src/test/resources/features/plcc/workAround.feature", 
 glue = "com.aso.qe.test.stepdefinition.web.plcc", 
 monochrome = true,
 //tags= {"@PLCC-80,@PLCC-81,@PLCC-82,@PLCC-83,@PLCC-84,@PLCC-87"},

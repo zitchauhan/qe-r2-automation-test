@@ -66,8 +66,7 @@ Scenario: Verify the system behavior when user enter invalid digits as BIN numbe
 	Then user expect element Unrecognized card number to be present
 	When user click on edit my cart link 
 	Then user click on remove from cart 
-
-
+	
 @C-PLCC @Regression @All @PLCC-80 @CR-VS	
 Scenario: Verify the display of saved card on payment section of checkout page
 When user check element payment section to be present
