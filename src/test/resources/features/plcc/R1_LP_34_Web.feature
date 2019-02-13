@@ -90,8 +90,8 @@ Scenario: Verify the navigation of Footer Links -NeedHelp Section
 	Then user click on ReturnPolicy and navigates to ReturnPolicy Page
 	And user click on browser back button
 	And user expect Landing page to be present 
-	When user expect element ProductRecall to be present 
-	Then user click on ProductRecall and navigates to ProductRecall Page
+	#When user expect element ProductRecall to be present 
+	#Then user click on ProductRecall and navigates to ProductRecall Page
 	And user click on browser back button
 	And user expect Landing page to be present 
 	When user expect element Rebates to be present 
@@ -113,18 +113,25 @@ Scenario: Verify the navigation of Footer Links -Services Section
 	Then user click on AcademyCreditCard and navigates to AcademyCreditCard Page
 	And user click on browser back button
 	And user expect Landing page to be present
-	And user expect element StoreServicesLink to be present
-	Then user click on StoreServicesLink and navigates to StoreServicesLink Page
-	And user click on browser back button
-	And user expect Landing page to be present
-	When user expect element CheckGiftCradBalance to be present 
-	Then user click on CheckGiftCradBalance and navigates to CheckGiftCradBalance Page
+	#And user expect element StoreServicesLink to be present
+	#Then user click on StoreServicesLink and navigates to StoreServicesLink Page
+	#And user click on browser back button
+	#And user expect Landing page to be present
+	#When user expect element CheckGiftCradBalance to be present 
+	#Then user click on CheckGiftCradBalance and navigates to CheckGiftCradBalance Page
 	
 @C-PLCC @Regression @All @PLCC-34 @CR-VS 
 Scenario: Verify the navigation of Footer Links - General
-    And user expect element FindInStoreFooter to be present 
-	And user expect element SignUpForMoreDeals to be present 
-	And user expect element ChatNoW to be present 
+    #When user expect element FindInStoreFooter to be present 
+    #Then user click on FindInStoreFooter and navigates to FindInStoreFooter Page
+	#When user expect element ChatNoW to be present 
+	#Then user click on ChatNoW and navigates to ChatNoW Page
+	#And user click and navigates to child window
+	#And user verify the presence of ChatNow page
+	When user expect element SignUpForMoreDeals to be present 
+	Then user click on SignUpForMoreDeals and navigates to SignUpForMoreDeals Page
+	And user verify presence of getMoreDeals text to be present in the modal
+	
 	 
 @C-PLCC @Regression @All @PLCC-34 @CR-VS  
 Scenario: Verify the navigation of Footer Links -Social Media Links	 

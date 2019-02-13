@@ -325,7 +325,7 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	
 	@Then("^user click on CheckOrder and navigates to CheckOrder Page$")
 	public void user_click_on_CheckOrder_and_navigates_to_CheckOrder_Page() throws Throwable {
-		  globalElementHeader.lnkcheckorder.click();
+		  plccLandingPageObjects.lnkcheckorder.click();
 	      plccLandingPageObjects.verifyPresenceOfCheckOrderPage();
 	}
 
@@ -378,7 +378,29 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	    plccLandingPageObjects.verifyPresenceOfStoreServicesLinkPage();
 	}
 	
+	@Then("^user click on FindInStoreFooter and navigates to FindInStoreFooter Page$")
+	public void user_click_on_FindInStoreFooter_and_navigates_to_FindInStoreFooter_Page() throws Throwable {
+		globalElementHeader.lnkfindastore.click();
+		plccLandingPageObjects.verifyPresenceOflnkfindastorePage();		
+	}
+
+	@Then("^user click on SignUpForMoreDeals and navigates to SignUpForMoreDeals Page$")
+	public void user_click_on_SignUpForMoreDeals_and_navigates_to_SignUpForMoreDeals_Page() throws Throwable {
+		globalElementHeader.lnkSIGNUPFORMOREDEALS.click();
+	}
+
+	@Then("^user click on ChatNoW and navigates to ChatNoW Page$")
+	public void user_click_on_ChatNoW_and_navigates_to_ChatNoW_Page() throws Throwable {
+		globalElementHeader.lnkchatnow.click();
+	}
 	
+	@Then("^user verify the presence of ChatNow page$")
+	public void user_verify_the_presence_of_ChatNow_page() throws Throwable {
+		plccLandingPageObjects.verifyPresenceOflnkchatnowPage(); 
+	}
 	
-	
+	@Then("^user verify presence of getMoreDeals text to be present in the modal$")
+	public void user_verify_presence_of_getMoreDeals_text_to_be_present_in_the_modal() throws Throwable {
+		plccLandingPageObjects.verifyPresenceOflnkSIGNUPFORMOREDEALSPage();
+	}
 }

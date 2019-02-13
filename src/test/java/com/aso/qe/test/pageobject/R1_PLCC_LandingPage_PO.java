@@ -3,6 +3,8 @@ package com.aso.qe.test.pageobject;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -85,9 +87,16 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public WebElement offerText2;
 	@FindBy(xpath = "//*[@data-auid='offerText3']")
 	public WebElement offerText3;
+
+	// Landing Page Checkout
+	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Check Gift Card Balance']")
+	public WebElement lnkCheckGiftCardBalance; // Manju-Feb-6
+	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Check Order Status']")
+	public WebElement lnkcheckorder;//Manju-Feb-12
 	
-	//Landing Page Checkout
-	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Check Gift Card Balance']") public WebElement lnkCheckGiftCardBalance; //Manju-Feb-6
+	@FindBy(xpath = "//*[@data-auid='email-signup-main-modal-close']")
+	public WebElement emailSignUpModal;//Manju-Feb-12
+	
 
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
 	public void clickOnAcademyCreditCardFooterLink() throws Exception {
@@ -559,7 +568,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	// Footer link navigation:
 	public void verifyPresenceOfCheckOrderPage() throws Exception {
 		String currentURL = getCurrentPageURL();
-		if (currentURL.contains("/myaccount/orders")) {
+		if (currentURL.contains("myaccount/orders")) {
 			logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
 		} else {
 			logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
@@ -593,9 +602,9 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfRebatesPage() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("/shop/browse/rebates")) {
-			logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
+			logger.debug("User is successfully navigated to Rebates page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+			logger.debug("User is not able to navigate to Our Rebates Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
@@ -604,55 +613,97 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfCustomerCarePage() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("custhelp.com")) {
-			logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
+			logger.debug("User is successfully navigated to Customer care page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+			logger.debug("User is not able to navigate to Customer care Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
-	
+
 	// Footer link navigation:
-		public void verifyPresenceOfShopGiftCardsPage() throws Exception {
-			String currentURL = getCurrentPageURL();
-			if (currentURL.contains("/shop/browse/Gift-Cards")) {
-				logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
-			} else {
-				logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
-			}
+	public void verifyPresenceOfShopGiftCardsPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/browse/Gift-Cards")) {
+			logger.debug("User is successfully navigated to Shop gift Card page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Shop gift Card Page instead navigated to URL :: " + currentURL);
+		}
 
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOfCheckGiftCradBalancePage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/webapp/wcs/stores/servlet/GCBView")) {
+			logger.debug("User is successfully navigated to check Gift Card Balance page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to check Gift Card Balance Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOfAcademyCreditCardPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/store/academy-credit-card")) {
+			logger.debug("User is successfully navigated to Academy credit card page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Academy credit card Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOfStoreServicesLinkPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/en/store/instore-services")) {
+			logger.debug("User is successfully navigated to Store Services page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Store Services Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOflnkfindastorePage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/storelocator")) {
+			logger.debug("User is successfully navigated to find a store page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to find a store Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOflnkSIGNUPFORMOREDEALSPage() throws Exception {
+		String currentsignUpMoreDealsText= emailSignUpModal.getText();
+		System.out.println(currentsignUpMoreDealsText);
+		if (currentsignUpMoreDealsText.contains("GET MORE DEALS")) {
+			logger.debug("User is successfully verified GET MORE DEALS Text in email sign up modal :: " + currentsignUpMoreDealsText);
+		} else {
+			logger.debug("User is not able to verified GET MORE DEALS Text in email sign up modal  :: " + currentsignUpMoreDealsText);
 		}
 		
-		// Footer link navigation:
-		public void verifyPresenceOfCheckGiftCradBalancePage() throws Exception {
-			String currentURL = getCurrentPageURL();
-			if (currentURL.contains("/webapp/wcs/stores/servlet/GCBView")) {
-				logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
-			} else {
-				logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
-			}
+		closeAlertPopupBox();
 
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOflnkchatnowPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/app/chat/chat_launch")) {
+			logger.debug("User is successfully navigated to chat now page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to chat now Page instead navigated to URL :: " + currentURL);
 		}
-		
-		// Footer link navigation:
-		public void verifyPresenceOfAcademyCreditCardPage() throws Exception {
-			String currentURL = getCurrentPageURL();
-			if (currentURL.contains("/shop/store/academy-credit-card")) {
-				logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
-			} else {
-				logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
-			}
+		driver.close();
 
-		}
-		
-		// Footer link navigation:
-		public void verifyPresenceOfStoreServicesLinkPage() throws Exception {
-			String currentURL = getCurrentPageURL();
-			if (currentURL.contains("/shop/en/store/instore-services")) {
-				logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
-			} else {
-				logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
-			}
-
-		}
-
+	}
+	
+	public void closeAlertPopupBox()
+	{
+		emailSignUpModal.click();
+	}
+	
 }

@@ -2,6 +2,8 @@ package com.aso.qe.test.stepdefinition.web.plcc;
 //import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertTrue;
 
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
@@ -263,4 +265,20 @@ public class Common_Web_SD_PLCC extends CommonActionHelper
 
 	}
 	
+	//=================================================Switch to Window Handle============================//
+	
+	@Then("^user click and navigates to child window$")
+	public void user_click_and_navigates_to_child_window() throws Throwable 
+	{
+		String parentwindowhandle = driver.getWindowHandle();
+		String subWindowhandler= null;
+		Set<String> handles = driver.getWindowHandles();
+		Iterator<String> itertor = 	handles.iterator();
+		while(itertor.hasNext())
+		{
+			subWindowhandler = itertor.next();
+			driver.switchTo().window(subWindowhandler);
+			System.out.println(subWindowhandler);
+		}
+	}
 }
