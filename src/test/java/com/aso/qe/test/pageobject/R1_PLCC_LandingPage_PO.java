@@ -90,12 +90,12 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	// Landing Page Checkout
 	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Check Gift Card Balance']")
-	public WebElement lnkCheckGiftCardBalance; // Manju-Feb-6
+	public WebElement lnkCheckGiftCardBalance; 
 	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Check Order Status']")
-	public WebElement lnkcheckorder;//Manju-Feb-12
+	public WebElement lnkcheckorder;
 	
 	@FindBy(xpath = "//*[@data-auid='email-signup-main-modal-close']")
-	public WebElement emailSignUpModal;//Manju-Feb-12
+	public WebElement emailSignUpModal;
 	
 
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
