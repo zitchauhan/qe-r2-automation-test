@@ -1761,3 +1761,185 @@
 2019-02-13 12:22:52 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.quitDriver:: driver quit success.
 2019-02-13 12:22:52 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.AfterSteps:: Scenarion Execution End.
 2019-02-13 12:22:52 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.stopProxyServer:: EndBrowserProxy is Comentted
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.StartBrowserProxy:: StartBrowserProxy is Comentted
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Read all properties from file
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: properties file load Done.
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: testdatafilename::TD-PLCC_UAT8.properties
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Final testdatafilename::TD-PLCC_UAT8.properties
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGHEST::10000
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGH::7000
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_MEDIUM::4000
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_LOW::2000
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.BeforeSteps:: exection Start Scenario Name: Verify the navigation of Footer Links -T&C Links
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.BeforeSteps:: screenshortName Name::__
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: runBrowserHeadLess:: null
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: platformType:: web
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: browserType:: chrome
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeWebDriver:: initializeWebDriver() inside process......
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWebDriverFolderPath:: WebDriver Folder Path::D:\AcademySports\ASO Automation\UserCopy\qe-r2-automation-test/src/test/resources/drivers/windows/chromedriver.exe
+2019-02-13 16:26:41 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.launchChromeBrowser:: Launching Chrome Browser....................
+2019-02-13 16:26:46 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: Window size maximise........
+2019-02-13 16:26:47 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWaitTime:: WEBDRIVER_EXPLICIT_WAITTIME_SECONDS::30
+2019-02-13 16:26:47 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWaitTime:: PAGELOAD_WAITTIME_SECONDS::100
+2019-02-13 16:26:47 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: HEIGHT::876
+2019-02-13 16:26:47 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: WIDTH::1616
+2019-02-13 16:26:47 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: testURL:: null
+2019-02-13 16:26:47 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: Open Chrome browser with URL::https://uat7www.academy.com
+2019-02-13 16:26:52 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.waitForPageLoad:: Page load wait time seconds:100 :: isPageLoaded:true
+2019-02-13 16:26:52 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: URL page load time is: 4.75900 seconds
+2019-02-13 16:26:52 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.waitForPageLoad:: Page load wait time seconds:100 :: isPageLoaded:true
+2019-02-13 16:26:53 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-13 16:26:53 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (dddc38cbcb96e9ea798e3d32847bf3f9)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 16:26:53 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (dddc38cbcb96e9ea798e3d32847bf3f9)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 16:26:53 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-13 16:26:53 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='FOOTER_LINK_Academy Credit Card']
+2019-02-13 16:26:53 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-13 16:26:54 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 16:26:54 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 16:26:54 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (dddc38cbcb96e9ea798e3d32847bf3f9)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 16:26:54 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (dddc38cbcb96e9ea798e3d32847bf3f9)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 16:26:54 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-13 16:26:54 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='FOOTER_LINK_Academy Credit Card']
+2019-02-13 16:26:54 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-13 16:26:55 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 16:26:55 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.isClickable:: Element is clickable true
+2019-02-13 16:26:55 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-13 16:26:55 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (dddc38cbcb96e9ea798e3d32847bf3f9)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 16:26:55 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (dddc38cbcb96e9ea798e3d32847bf3f9)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 16:26:55 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-13 16:26:55 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='FOOTER_LINK_Academy Credit Card']
+2019-02-13 16:26:55 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-13 16:26:56 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 16:26:56 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 16:26:56 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.clickOnButton:: Click on the button
+2019-02-13 16:26:56 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (dddc38cbcb96e9ea798e3d32847bf3f9)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 16:26:56 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (dddc38cbcb96e9ea798e3d32847bf3f9)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 16:26:56 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-13 16:26:56 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='FOOTER_LINK_Academy Credit Card']
+2019-02-13 16:26:56 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-13 16:26:57 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 16:26:57 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (dddc38cbcb96e9ea798e3d32847bf3f9)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 16:26:57 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (dddc38cbcb96e9ea798e3d32847bf3f9)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 16:26:57 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-13 16:26:57 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='FOOTER_LINK_Academy Credit Card']
+2019-02-13 16:26:57 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-13 16:26:58 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 16:26:58 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.isClickable:: Element is clickable true
+2019-02-13 16:27:18 [main] ERROR com.aso.qe.framework.common.CommonActionHelper.clickOnButton:: clickOnButton exception msg::timeout
+  (Session info: chrome=72.0.3626.96)
+  (Driver info: chromedriver=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'VDI-SQA027E', ip: '10.1.243.234', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 73.0.3683.20 (8e2b610813e16..., userDataDir: V:\Users\C0015179\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54827}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.96, webStorageEnabled: true}
+Session ID: dddc38cbcb96e9ea798e3d32847bf3f9
+2019-02-13 16:27:18 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.AfterSteps:: exection End Scenario Name: Verify the navigation of Footer Links -T&C Links  :: Status:failed
+2019-02-13 16:27:18 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.embedScreenshot:: failed :Scenario isFailed::true
+2019-02-13 16:27:18 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.embedScreenshot:: Test Type::
+2019-02-13 16:27:38 [main] ERROR com.aso.qe.framework.common.CommonActionHelper.embedScreenshot:: embedScreenshot() inside WebDriverException while execution::timeout
+  (Session info: chrome=72.0.3626.96)
+  (Driver info: chromedriver=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'VDI-SQA027E', ip: '10.1.243.234', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 73.0.3683.20 (8e2b610813e16..., userDataDir: V:\Users\C0015179\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54827}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.96, webStorageEnabled: true}
+Session ID: dddc38cbcb96e9ea798e3d32847bf3f9
+2019-02-13 16:27:38 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.embedScreenshot:: EmbedScreenshot flag::false
+2019-02-13 16:27:38 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.AfterSteps:: Closing Webdriver or sessions.........
+2019-02-13 16:27:38 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.quitDriver:: inside teardown()....
+2019-02-13 16:27:39 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.quitDriver:: driver quit success.
+2019-02-13 16:27:39 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.AfterSteps:: Scenarion Execution End.
+2019-02-13 16:27:39 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.stopProxyServer:: EndBrowserProxy is Comentted
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.StartBrowserProxy:: StartBrowserProxy is Comentted
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Read all properties from file
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: properties file load Done.
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: testdatafilename::TD-PLCC_UAT8.properties
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Final testdatafilename::TD-PLCC_UAT8.properties
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGHEST::10000
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGH::7000
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_MEDIUM::4000
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_LOW::2000
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.BeforeSteps:: exection Start Scenario Name: Verify the navigation of Footer Links -T&C Links
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.BeforeSteps:: screenshortName Name::__
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: runBrowserHeadLess:: null
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: platformType:: web
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: browserType:: chrome
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeWebDriver:: initializeWebDriver() inside process......
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWebDriverFolderPath:: WebDriver Folder Path::D:\AcademySports\ASO Automation\UserCopy\qe-r2-automation-test/src/test/resources/drivers/windows/chromedriver.exe
+2019-02-13 17:16:33 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.launchChromeBrowser:: Launching Chrome Browser....................
+2019-02-13 17:16:36 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: Window size maximise........
+2019-02-13 17:16:37 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWaitTime:: WEBDRIVER_EXPLICIT_WAITTIME_SECONDS::30
+2019-02-13 17:16:37 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWaitTime:: PAGELOAD_WAITTIME_SECONDS::100
+2019-02-13 17:16:37 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: HEIGHT::876
+2019-02-13 17:16:37 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: WIDTH::1616
+2019-02-13 17:16:37 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: testURL:: null
+2019-02-13 17:16:37 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: Open Chrome browser with URL::https://uat7www.academy.com
+2019-02-13 17:16:41 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.waitForPageLoad:: Page load wait time seconds:100 :: isPageLoaded:true
+2019-02-13 17:16:41 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: URL page load time is: 3.86100 seconds
+2019-02-13 17:16:41 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.waitForPageLoad:: Page load wait time seconds:100 :: isPageLoaded:true
+2019-02-13 17:16:42 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-13 17:16:42 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (46724950cce56015ee83fc798965af31)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 17:16:42 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (46724950cce56015ee83fc798965af31)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 17:16:42 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-13 17:16:42 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='FOOTER_LINK_Academy Credit Card']
+2019-02-13 17:16:42 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-13 17:16:43 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 17:16:43 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 17:16:43 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (46724950cce56015ee83fc798965af31)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 17:16:43 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (46724950cce56015ee83fc798965af31)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 17:16:43 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-13 17:16:43 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='FOOTER_LINK_Academy Credit Card']
+2019-02-13 17:16:43 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-13 17:16:44 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 17:16:44 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.isClickable:: Element is clickable true
+2019-02-13 17:16:44 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-13 17:16:44 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (46724950cce56015ee83fc798965af31)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 17:16:44 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (46724950cce56015ee83fc798965af31)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 17:16:44 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-13 17:16:44 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='FOOTER_LINK_Academy Credit Card']
+2019-02-13 17:16:44 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-13 17:16:45 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 17:16:45 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 17:16:45 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.clickOnButton:: Click on the button
+2019-02-13 17:16:45 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (46724950cce56015ee83fc798965af31)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 17:16:45 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (46724950cce56015ee83fc798965af31)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 17:16:45 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-13 17:16:45 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='FOOTER_LINK_Academy Credit Card']
+2019-02-13 17:16:45 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-13 17:16:46 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 17:16:46 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (46724950cce56015ee83fc798965af31)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 17:16:46 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (46724950cce56015ee83fc798965af31)] -> xpath: //*[@data-auid='FOOTER_LINK_Academy Credit Card']]
+2019-02-13 17:16:46 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-13 17:16:46 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='FOOTER_LINK_Academy Credit Card']
+2019-02-13 17:16:46 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-13 17:16:47 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-13 17:16:47 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.isClickable:: Element is clickable true
+2019-02-13 17:17:07 [main] ERROR com.aso.qe.framework.common.CommonActionHelper.clickOnButton:: clickOnButton exception msg::timeout
+  (Session info: chrome=72.0.3626.96)
+  (Driver info: chromedriver=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'VDI-SQA027E', ip: '10.1.243.234', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 73.0.3683.20 (8e2b610813e16..., userDataDir: V:\Users\C0015179\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55373}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.96, webStorageEnabled: true}
+Session ID: 46724950cce56015ee83fc798965af31
+2019-02-13 17:17:07 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.AfterSteps:: exection End Scenario Name: Verify the navigation of Footer Links -T&C Links  :: Status:failed
+2019-02-13 17:17:07 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.embedScreenshot:: failed :Scenario isFailed::true
+2019-02-13 17:17:07 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.embedScreenshot:: Test Type::
+2019-02-13 17:17:27 [main] ERROR com.aso.qe.framework.common.CommonActionHelper.embedScreenshot:: embedScreenshot() inside WebDriverException while execution::timeout
+  (Session info: chrome=72.0.3626.96)
+  (Driver info: chromedriver=73.0.3683.20 (8e2b610813e167eee3619ac4ce6e42e3ec622017),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'VDI-SQA027E', ip: '10.1.243.234', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 73.0.3683.20 (8e2b610813e16..., userDataDir: V:\Users\C0015179\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55373}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.96, webStorageEnabled: true}
+Session ID: 46724950cce56015ee83fc798965af31
+2019-02-13 17:17:27 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.embedScreenshot:: EmbedScreenshot flag::false
+2019-02-13 17:17:27 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.AfterSteps:: Closing Webdriver or sessions.........
+2019-02-13 17:17:27 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.quitDriver:: inside teardown()....
+2019-02-13 17:17:28 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.quitDriver:: driver quit success.
+2019-02-13 17:17:28 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.AfterSteps:: Scenarion Execution End.
+2019-02-13 17:17:28 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.stopProxyServer:: EndBrowserProxy is Comentted

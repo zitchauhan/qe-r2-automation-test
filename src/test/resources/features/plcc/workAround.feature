@@ -1,22 +1,23 @@
-Feature: PLCC: Checkout - Payment Using PLCC 
+Feature: Landing Page 	
 
 Background:  Common Pre-requisite steps
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user click on My Account link 
-	And user expect element Email Address to be present 
-	And user enter Email address in sign-in page "plccSavedCard" 
-	And user enter password in sign-in page "Password_2" 
-	And user click on Signin-button 
-	Then user navigates to ASO-Home page 
-	When user enters "SKUIdOfProduct" in the search box 
-	And user click on search icon 
-	#And user click on Add to Cart Button 
-	And user click on Add to Cart button  
-	And user click on checkout from ATC pop up 
-	And user clicks on checkout button and navigates to checkout page 
-	And user expect element credit card text field is present
-	 
-@C-PLCC @Regression @All @PLCC-80 @CR-VS	
-Scenario: Verify the display of saved card on payment section of checkout page
-When user check element payment section to be present
-Then user expect element saved card on payment section of checkout page to be present
+Given user launches the browser and navigates to "ASO_HOME" page 
+When user click on AcademyCreditCard link in the footer section of ASO-Home page 
+Then user expect Landing page to be present 
+And user expect element FPO Apply Order section to be present 
+
+
+@C-PLCC @Regression @All @PLCC-34 @CR-VS  
+Scenario: Verify the navigation of Footer Links -T&C Links
+#	When user expect element PrivacyPolicy to be present 
+#	Then user click on PrivacyPolicy link in the footer section of ASO-Home page
+#	And user expect PrivacyPolicy page to be present 
+#	And user click on browser back button
+#	And user expect element TermsAndCondition to be present 
+#	When user click on TermsAndCondition link in the footer section of ASO-Home page
+#	Then user expect TermsAndConditions page to be present 
+#	And user click on browser back button 
+#	And user expect element CaliforniaTransparencyinSupplyChainAct to be present
+	And user click on California Transparency in Supply Chain Act(SB 657) link and navigates to CaliforniaTransparencyinSupplyChainAct page
+	
+	
