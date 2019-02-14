@@ -7,8 +7,8 @@ Feature: To verify user is able to see Shipping/Delivery Related Messaging in bu
     And User click on search icon
 #    And User click on the product image
    And user should be able to see PDP mention in the current url
-   Then user able to see shipping/delivery related message in bulky product
+   Then user able to see shipping/delivery related message in product type BULK
    Examples:
    |data|
-   |ProForm Cardio Strong Treadmill|
+   |ProForm Sport 4.0 Treadmill|
     
