@@ -59,7 +59,8 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	public void user_click_on_Signin_button() throws Throwable {
 		plccLandingPageObjects.clickOnSignInBtnSignInPage();
 		//CommonActionHelper.waitUntilElePresent(driver, Element, timeOutInSeconds);
-	}
+		Thread.sleep(5000);
+		}
 
 	@When("^user navigates to ASO-Home page$")
 	public void user_navigates_to_ASO_Home_page() throws Throwable {

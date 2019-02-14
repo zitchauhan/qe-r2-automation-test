@@ -17,11 +17,26 @@ Background:  Common Pre-requisite steps
 	#And user selects credit card radio button
 	And user expect element credit card text field is present 
 	
-#@C-PLCC @Regression @All @PLCC-84 @CR-VS 
-#Scenario: Verify an error message when user enters wrong card number and click on review order button
+@C-PLCC @Regression @All @PLCC-84 @CR-VS 
+Scenario: Verify an error message when user enters wrong card number and click on review order button
+When user enter visa card "InvalidCard"
+And user click on REVIEW ORDER button
+Then user expect element Unrecognized card number to be present 
 
 #@C-PLCC @Regression @All @PLCC-84 @CR-VS 
 #Scenario: Verify user is able to navigate to confirm order page by clicking on review order button
+When user enter visa card "ValidPLCCCard"
+	And user click on REVIEW ORDER button
+	And user click on PLACE ORDER button
+	Then user navigates to order confirmation page
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
+	And user expect element Order Number to be present
+	And user expect element a confirmation email is on its way to be present
+	And user expect element print link to be present
+	And user expect element my account link to be present
+	When user click on My Account link
+	And user click on Payments link
+	Then delete all credit cards from My Account
 
 #@C-PLCC @Regression @All @PLCC-84 @CR-VS 
 #Scenario: Verify an error message when user enters invalid shipping information and click on review order button
@@ -118,4 +133,4 @@ Scenario: Verify user is able to place Multiple orders using PLCC Card
 	And user expect element print link to be present
 	And user expect element my account link to be present
 	#And user place fifty orders and see the response with "SKUIdOfProduct1" with PLCC Card "ValidPLCCCard"
-
+	

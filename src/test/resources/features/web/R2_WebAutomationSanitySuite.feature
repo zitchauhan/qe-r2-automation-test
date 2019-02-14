@@ -396,3 +396,5 @@ Scenario: TC_30- Verify all broken Images on MyAccount page
 	And user click on signin button 
 	Then user click on My Account and navigate to payment 
 	Then verfy all Image link urls status code is 200 
+	
+
