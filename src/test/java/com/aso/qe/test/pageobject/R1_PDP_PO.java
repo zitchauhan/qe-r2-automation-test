@@ -197,8 +197,8 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']//*[@alt='Hover/Click to enlarge'])[1]") public WebElement imgClickToZoom;
 	@FindBy(xpath="(//*[@data-auid='PDP_ProductImage_m']//*[@alt='Hover/Click to enlarge'] )[3]") public WebElement imgClickToZoomMobile;
 	@FindBy(xpath="//*[@data-auid='PDP_Modal_closeIcon']/* | //*[@data-auid='PDP_ProductImage_m']//ancestor::div[@aria-modal='true']//button[contains(text(),'X')]") public WebElement btnCloseCrossZoom;
-	@FindBy(xpath="(//*[contains(text(),'days')])[1]") public WebElement txtShippingRelatedMsg;  //SID 7-September
-
+	@FindBy(xpath="//*[@class='row']//*[contains(text(),'Bulk Carrier Service')]") public WebElement txtShippingRelatedMsg;  //HP Feb_14_2019
+	//@FindBy(xpath="(//*[contains(text(),'days')])[1]") public WebElement txtShippingRelatedMsg;//SID 7-September
 	@FindBy(xpath = "//*[contains(@data-auid,'productCard_')]//span[contains(@class,'c-product__colors-available')and contains(text(),'colors')]")	public List<WebElement> colorsAvailablePLP; //SID 4-October
 	@FindBy(xpath = "//*[@data-auid='PDP_Color_Attribute']")	public WebElement visibilityAltColorPDP;
 	@FindBy(xpath = "//*[@data-auid='PDP_Color_Attribute']//button[contains(@data-auid,'swatchButton-image-')]//img")	public List<WebElement> altColorsPDP;
