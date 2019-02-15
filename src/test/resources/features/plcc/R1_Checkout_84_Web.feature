@@ -23,8 +23,8 @@ When user enter visa card "InvalidCard"
 And user click on REVIEW ORDER button
 Then user expect element Unrecognized card number to be present 
 
-#@C-PLCC @Regression @All @PLCC-84 @CR-VS 
-#Scenario: Verify user is able to navigate to confirm order page by clicking on review order button
+@C-PLCC @Regression @All @PLCC-84 @CR-VS 
+Scenario: Verify user is able to navigate to confirm order page by clicking on review order button
 When user enter visa card "ValidPLCCCard"
 	And user click on REVIEW ORDER button
 	And user click on PLACE ORDER button
@@ -45,7 +45,7 @@ When user enter visa card "ValidPLCCCard"
 Scenario: Verify user is able to navigate to confirm order page by using VISA Credit card card
 	When user enter visa card "ValidVISACard"
 	And user enter expiry date "ExpiryDate" 
-	And user enter cvv "cvvAmex"
+	And user enter cvv "cvv"
 	And user click on REVIEW ORDER button
 	And user click on PLACE ORDER button
 	Then user navigates to order confirmation page
@@ -62,7 +62,7 @@ Scenario: Verify user is able to navigate to confirm order page by using VISA Cr
 Scenario: Verify user is able to navigate to confirm order page by using Amex Credit card
 	 When user enter visa card "ValidAmexCard"
 	And user enter expiry date "ExpiryDate" 
-	And user enter cvv "cvv"
+	And user enter cvv "cvvAmex"
 	And user click on REVIEW ORDER button
 	And user click on PLACE ORDER button
 	Then user navigates to order confirmation page
@@ -108,6 +108,7 @@ Scenario: Verify user is able to navigate to confirm order page by using Discove
 	And user click on Payments link
 	Then delete all credit cards from My Account
 	
+@C-PLCC @Regression @All @PLCC-84 @CR-VS	
 Scenario: Verify user is able to place Multiple orders using PLCC Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 

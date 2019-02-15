@@ -140,7 +140,76 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	// CONSENT MODEL:
 	@FindBy(xpath = "//*[@id='plcc_modal_back']")
 	public WebElement backButtonConsentModel;
-
+	
+	
+	
+	//Creditcard Application Modal Response:
+	@FindBy(xpath = "//*[@aria-label='Error Modal']")
+	public WebElement errorModalCCAM;
+	@FindBy(xpath = "//*[@data-auid='errorModalImage']")
+	public WebElement errorModalImageCCAM;
+	@FindBy(xpath = "//*[text()='APPLICATION UNDER REVIEW (FPO)']")
+	public WebElement applicationUnderReviewText;
+	@FindBy(xpath = "//*[text()='Your credit application is under review. You will be notified by mail within 10 business days.']")
+	public WebElement disclosureMsgErrorModalCCAM;
+	@FindBy(xpath = "//*[@data-auid='error_modal_close']")
+	public WebElement closeIconErrorModal;
+	
+	
+	
+	
+			
+			
+					
+	
+	public void verifyPresenceOfErrorModalCCAM() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(errorModalCCAM);
+			logger.debug("Error Modal for declined/pending card approval is displayed");
+		} else {
+			isDisplayed(errorModalCCAM);
+			logger.debug("Error Modal for declined/pending card approval is displayed");
+		}
+	}
+	public void verifyPresenceOfCloseIconErrorModalCCAM() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(closeIconErrorModal);
+			logger.debug("Close Icon on Error Modal is displayed");
+		} else {
+			isDisplayed(closeIconErrorModal);
+			logger.debug("Close Icon on Error Modal is displayed");
+		}
+	}
+	
+					public void verifyPresenceOfErrorModalImageCCAM() throws Exception {
+						if ("mobile".equalsIgnoreCase(testtype)) {
+							isDisplayed(errorModalImageCCAM);
+							logger.debug("Error Modal Card Image is displayed");
+						} else {
+							isDisplayed(errorModalImageCCAM);
+							logger.debug("Error Modal Card Image is displayed");
+						}
+					}
+					public void verifyPresenceOfApplicationUnderReviewText() throws Exception {
+						if ("mobile".equalsIgnoreCase(testtype)) {
+							isDisplayed(applicationUnderReviewText);
+							logger.debug("Application Under Review Text is displayed");
+						} else {
+							isDisplayed(applicationUnderReviewText);
+							logger.debug("Application Under Review Text is displayed");
+						}
+					}
+					public void verifyPresenceOfDisclosureMsgErrorModalCCAM() throws Exception {
+						if ("mobile".equalsIgnoreCase(testtype)) {
+							isDisplayed(disclosureMsgErrorModalCCAM);
+							logger.debug("Disclosure Message on Error Modal is displayed");
+						} else {
+							isDisplayed(disclosureMsgErrorModalCCAM);
+							logger.debug("Disclosure Message on Error Modal is displayed");
+						}
+					}
+	
+					
 	public void verifyPresenceOfConsentModelPageLabel() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(firstNameCCModal);

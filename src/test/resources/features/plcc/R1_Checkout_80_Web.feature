@@ -1,6 +1,5 @@
 Feature: PLCC: Checkout - Payment Using PLCC  
 
-
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
