@@ -59,7 +59,8 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	public void user_click_on_Signin_button() throws Throwable {
 		plccLandingPageObjects.clickOnSignInBtnSignInPage();
 		//CommonActionHelper.waitUntilElePresent(driver, Element, timeOutInSeconds);
-	}
+		Thread.sleep(5000);
+		}
 
 	@When("^user navigates to ASO-Home page$")
 	public void user_navigates_to_ASO_Home_page() throws Throwable {
@@ -238,7 +239,11 @@ public class R1_LP_34_Web extends CommonActionHelper {
 		globalElementHeader.validatingLegalPolicy();
 	}
 
+<<<<<<< HEAD
 	@Then("^user expect element � (\\d+) Academy Sports \\+ Outdoors\\. All Rights Reserved to be present$")
+=======
+	@Then("^user expect element (\\d+) Academy Sports \\+ Outdoors\\. All Rights Reserved to be present$")
+>>>>>>> 438975ffd244ae57f3d2918a9c380a8a7c6e0520
 	public void user_expect_element_Academy_Sports_Outdoors_All_Rights_Reserved_to_be_present(int arg1) throws Throwable {
 		plccPageObjects.validatingPresenceOfAsoRightsLink();
 	}
@@ -403,6 +408,7 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	public void user_verify_presence_of_getMoreDeals_text_to_be_present_in_the_modal() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOflnkSIGNUPFORMOREDEALSPage();
 	}
+<<<<<<< HEAD
 	
 	@When("^user click on Facebook icon$")
 	public void user_click_on_Facebook_icon() throws Throwable {
@@ -425,4 +431,27 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	public void user_navigates_to_Pinterest_Page_and_validate_pinterest_page_url() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOfPinterestPage();
 	}
+=======
+	@Then("^user click on PrivacyPolicy link in the footer section of ASO-Home page$")
+	public void user_click_on_PrivacyPolicy_link_in_the_footer_section_of_ASO_Home_page() throws Throwable {
+		globalElementHeader.lnkprivatepolicy.click();
+
+	}
+
+	@Then("^user expect PrivacyPolicy page to be present$")
+	public void user_expect_PrivacyPolicy_page_to_be_present() throws Throwable {
+		plccLandingPageObjects.verifyPresenceOfPrivacyPolicyPage();
+	}
+
+	@Then("^user click on California Transparency in Supply Chain Act\\(SB (\\d+)\\) link and navigates to CaliforniaTransparencyinSupplyChainAct page$")
+	public void user_click_on_California_Transparency_in_Supply_Chain_Act_SB_link_and_navigates_to_CaliforniaTransparencyinSupplyChainAct_page(int arg1) throws Throwable {
+		globalElementHeader.lnklegalpolicy.click();
+		plccLandingPageObjects.verifyPresenceOflnkCaliforniaTransparencyinSupplyChainActPage();	
+	}
+
+	
+
+
+
+>>>>>>> 438975ffd244ae57f3d2918a9c380a8a7c6e0520
 }

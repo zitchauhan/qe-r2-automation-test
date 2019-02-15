@@ -194,6 +194,31 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 	public void user_verify_presence_of_STEP_CONSENT(int arg1) throws Throwable {
 		plccCCApplicationModalObjects.verifyPresenceOfConsentModelPageLabel();
 	}
+	
+	@When("^user clicks on edit link on payment section$")
+	public void user_clicks_on_edit_link_on_payment_section() throws Throwable {
+		genericPO.verifyPresenceOfEditLinkPaymentSectionCheckoutPage();
+		genericPO.editLinkPaymentSection.click();
+	}
+
+	@When("^user select add new card option$")
+	public void user_select_add_new_card_option() throws Throwable {
+		genericPO.verifyPresenceOfAddNewCreditCardOption();
+		genericPO.addNewCreditCardOption.click();
+	}
+
+	@When("^user click on confirm button$")
+	public void user_click_on_confirm_button() throws Throwable {
+		genericPO.verifyPresenceOfConfirmButton();
+		genericPO.confirmButton.click();
+	}
+	@When("^user click on credit card drop down$")
+	public void user_click_on_credit_card_drop_down() throws Throwable {
+		genericPO.verifyPresenceOfSavedCardCheckoutPage();
+		genericPO.savedCardCheckoutPage.click();
+	}
+	
+	
 
 
 }

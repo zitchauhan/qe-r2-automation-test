@@ -45,8 +45,9 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement plccCreditCardImageFooter;
 	@FindBy(xpath="//*[@data-auid='checkout_payment_collapsed']")
 	public WebElement paymentScetionCheckoutPage;
-	
-	//*[contains(text(),'Academy Sports + Outdoors Credit Card ending in - ')] 
+	@FindBy(xpath="//*[contains(text(),'Academy Sports + Outdoors Credit Card ending in - ')]")
+	public WebElement savedCardCheckoutPage;
+	 
 	
 
 //Payment Page Card Images
@@ -68,6 +69,19 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement buyNowButton;
+	
+	//Saved Card:
+	@FindBy(xpath = "//*[@data-auid='checkout_edit_payment']")
+	public WebElement editLinkPaymentSection;
+	@FindBy(xpath = "//*[text()='Add a New Credit Card']")
+	public WebElement addNewCreditCardOption;
+	@FindBy(xpath = "//*[text()='Confirm']")
+	public WebElement confirmButton;
+	
+	
+		
+	
+	
 
 	// Confirmation Page
 	@FindBy(xpath = "//*[text()='a confirmation email is on its way']")
@@ -87,6 +101,9 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement plccCardImageFooter;
 	@FindBy(xpath = "//*[@data-auid='btnviewCart']")
 	public WebElement viewCartButton;
+	@FindBy(xpath = "//*[@class='justify-content-end academyicon icon-chevron-down css-1zd88g']")
+	public WebElement creditCardDropDown;
+	
 	public void verifyPresenceOfViewCartButton() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -198,6 +215,18 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		}
 
 	}
+	public void verifyPresenceOfAddNewCreditCardOption() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(addNewCreditCardOption);
+			logger.debug("Add New Credit Card Option is displayed");
+		} else {
+			isDisplayed(addNewCreditCardOption);
+			logger.debug("Add New Credit Card Option is displayed");
+		}
+
+	}
+	
 
 	public void clickOnCheckoutButton() throws Exception {
 
@@ -496,6 +525,17 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 			logger.debug("a confirmation email is on its way Text is displayed");
 		}
 	}
+	public void verifyPresenceOfEditLinkPaymentSectionCheckoutPage() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(editLinkPaymentSection);
+			logger.debug("Edit Link Payment Scetion on Checkout Page is displayed");
+		} else {
+			isDisplayed(editLinkPaymentSection);
+			logger.debug("Edit Link Payment Scetion on Checkout Page is displayed");
+		}
+	}
+	
 
 	public void verifyPresenceOfPrintLinkOnOrderConfirmationPage() throws Exception {
 
@@ -526,6 +566,26 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		} else {
 			isDisplayed(paymentScetionCheckoutPage);
 			logger.debug("Payment Scetion of Checkout Page is displayed");
+		}
+	}
+	public void verifyPresenceOfSavedCardCheckoutPage() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(savedCardCheckoutPage);
+			logger.debug("Academy Sports + Outdoors Credit Card ending in - is displayed");
+		} else {
+			isDisplayed(savedCardCheckoutPage);
+			logger.debug("Academy Sports + Outdoors Credit Card ending in - is displayed");
+		}
+	}
+	public void verifyPresenceOfConfirmButton() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(confirmButton);
+			logger.debug("Confirm button on checkout page is displayed");
+		} else {
+			isDisplayed(confirmButton);
+			logger.debug("Confirm button on checkout page is displayed");
 		}
 	}
 	

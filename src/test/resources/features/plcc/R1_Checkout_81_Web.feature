@@ -20,5 +20,5 @@ Background: Common Pre-requisite steps
 @C-PLCC @Regression @All @PLCC-81 @CR-VS	
 Scenario: Verify the display of PLCC credit card image when user enter three digit(778) BIN number for new credit card 
 	When user enter plcc card "starting3digitsplccCard"
-	Then user expect selected credit card image on credit card text field  
+	#Then user expect selected credit card image on credit card text field  
 	And user expect element plcc credit card image on credit card text field to present 
