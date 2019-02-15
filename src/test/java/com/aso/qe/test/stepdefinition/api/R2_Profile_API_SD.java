@@ -57,7 +57,6 @@ public class R2_Profile_API_SD extends JSONValidationUtils{
 		regEmailId= "test"+FrameWorkHelper.getRandomAlphabetic(6).toLowerCase()+"@yopmail.com";
 		postRequestStr = postRequestStr.replace("REPLACE_LOGONID",regEmailId)
 				.replaceAll("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword"));
-
 		initiateRestPostAPICallWithoutCookiesAndReqStr(endpoints, postRequestStr);
 	}
 

@@ -72,6 +72,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	public void user_click_on_search_icon() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOfSearchIcon();
 		plccLandingPageObjects.searchIcon.click();
+		
 	}
 
 	@When("^user click on checkout from ATC pop up$")
