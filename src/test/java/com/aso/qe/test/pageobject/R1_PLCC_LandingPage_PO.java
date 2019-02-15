@@ -701,6 +701,28 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	}
 	
+	public void verifyPresenceOfPrivacyPolicyPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/app/answers/detail/a_id/649/kw/privacy")) {
+			logger.debug("User is successfully navigated to Privacy  page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Privacy Page instead navigated to URL :: " + currentURL);
+		}
+		
+
+	}
+	// Footer link navigation:
+	public void verifyPresenceOflnkCaliforniaTransparencyinSupplyChainActPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/en/store/california-transparency-in-supply-chains-act")) {
+			logger.debug("User is successfully navigated to find a store page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to find a store Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	
 	public void closeAlertPopupBox()
 	{
 		emailSignUpModal.click();

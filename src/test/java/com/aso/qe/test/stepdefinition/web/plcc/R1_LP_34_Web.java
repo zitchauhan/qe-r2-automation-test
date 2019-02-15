@@ -404,4 +404,25 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	public void user_verify_presence_of_getMoreDeals_text_to_be_present_in_the_modal() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOflnkSIGNUPFORMOREDEALSPage();
 	}
+	@Then("^user click on PrivacyPolicy link in the footer section of ASO-Home page$")
+	public void user_click_on_PrivacyPolicy_link_in_the_footer_section_of_ASO_Home_page() throws Throwable {
+		globalElementHeader.lnkprivatepolicy.click();
+
+	}
+
+	@Then("^user expect PrivacyPolicy page to be present$")
+	public void user_expect_PrivacyPolicy_page_to_be_present() throws Throwable {
+		plccLandingPageObjects.verifyPresenceOfPrivacyPolicyPage();
+	}
+
+	@Then("^user click on California Transparency in Supply Chain Act\\(SB (\\d+)\\) link and navigates to CaliforniaTransparencyinSupplyChainAct page$")
+	public void user_click_on_California_Transparency_in_Supply_Chain_Act_SB_link_and_navigates_to_CaliforniaTransparencyinSupplyChainAct_page(int arg1) throws Throwable {
+		globalElementHeader.lnklegalpolicy.click();
+		plccLandingPageObjects.verifyPresenceOflnkCaliforniaTransparencyinSupplyChainActPage();	
+	}
+
+	
+
+
+
 }
