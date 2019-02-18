@@ -404,6 +404,30 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	public void user_verify_presence_of_getMoreDeals_text_to_be_present_in_the_modal() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOflnkSIGNUPFORMOREDEALSPage();
 	}
+
+	
+	@When("^user click on Facebook icon$")
+	public void user_click_on_Facebook_icon() throws Throwable {
+		globalElementHeader.iconfacebook.click();
+		Thread.sleep(3000);
+	}
+
+	@Then("^user navigates to Facebook Page and validate facebook url$")
+	public void user_navigates_to_Facebook_Page_and_validate_facebook_url() throws Throwable {
+		plccLandingPageObjects.verifyPresenceOfFacebookPage();
+	}
+	
+	@When("^user click on Pinterest icon$")
+	public void user_click_on_Pinterest_icon() throws Throwable {
+		globalElementHeader.iconpinterest.click();
+		Thread.sleep(3000);
+	}
+
+	@Then("^user navigates to Pinterest Page and validate pinterest page url$")
+	public void user_navigates_to_Pinterest_Page_and_validate_pinterest_page_url() throws Throwable {
+		plccLandingPageObjects.verifyPresenceOfPinterestPage();
+	}
+
 	@Then("^user click on PrivacyPolicy link in the footer section of ASO-Home page$")
 	public void user_click_on_PrivacyPolicy_link_in_the_footer_section_of_ASO_Home_page() throws Throwable {
 		globalElementHeader.lnkprivatepolicy.click();
@@ -420,9 +444,5 @@ public class R1_LP_34_Web extends CommonActionHelper {
 		globalElementHeader.lnklegalpolicy.click();
 		plccLandingPageObjects.verifyPresenceOflnkCaliforniaTransparencyinSupplyChainActPage();	
 	}
-
-	
-
-
 
 }

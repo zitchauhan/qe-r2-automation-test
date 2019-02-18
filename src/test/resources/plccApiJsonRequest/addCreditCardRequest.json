@@ -1,0 +1,21 @@
+{  
+   "correlationId":"",
+   "expiryDate":"",
+   "token":"7788401330002257",
+   "type":"PLCC",
+   "creditCardHolderName":"vv vv",
+   "billingAddress":{  
+      "addressLine":[  
+         "4309 smorgans st",
+         ""
+      ],
+      "city":"Chicago",
+      "phoneNumber":"6666666666",
+      "state":"IL",
+      "zipCode":"60609",
+      "email":"pooja.raom@mindtree.com",
+      "firstName":"vv",
+      "lastName":"vv"
+   },
+   "creditCardNumber":"2257"
+}

@@ -2,7 +2,9 @@ package com.aso.qe.test.stepdefinition.web.plcc;
 //import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -280,5 +282,18 @@ public class Common_Web_SD_PLCC extends CommonActionHelper
 			driver.switchTo().window(subWindowhandler);
 			System.out.println(subWindowhandler);
 		}
+	}
+	@Then("^user close the newly opened tab$")
+	public void user_close_the_newly_opened_tab() throws Throwable {
+		Set<String> winSet = driver.getWindowHandles();
+		List<String> winList = new ArrayList<String>(winSet);
+		String newTab = winList.get(winList.size());
+		/*while(winList.contains(newTab))
+		{
+			subWindowhandler = itertor.next();
+			driver.switchTo().window(subWindowhandler);
+			System.out.println(subWindowhandler);
+		}*/
+		driver.close();
 	}
 }

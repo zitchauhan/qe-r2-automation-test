@@ -19,6 +19,7 @@ import io.restassured.path.json.JsonPath;
 public class createUserProfile extends JSONValidationUtils {
 	private static final Logger logger = Logger.getLogger(R1SP1_Categories_ProductsByCategorySD.class);
 	public static String regEmailId;
+	
 	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for user registration with plcc changes$")
 	public void endpoint_with_for_user_registration_with_plcc_changes(String PLCCRegistrationUrl, String PLCCRegistrationPostRequest) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCRegistrationUrl);
@@ -90,5 +91,22 @@ public class createUserProfile extends JSONValidationUtils {
 		}
 		assertTrue(flag);
 	}
+	
+	@Given("^\"(.*?)\" with \"(.*?)\" endpoint for login authenticate$")
+	public void with_endpoint_for_login_authenticate(String PLCCRegistrationUrl, String PLCCRegistrationPostRequest) throws Throwable {
+		System.setProperty("ProfileId", "");
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCRegistrationUrl);
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
+		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
+		JsonPath jsonPathEvaluator = response.jsonPath();
+		String  profileID = jsonPathEvaluator.get("identity.userId");
+		logger.debug("Profile ID::"+ profileID);
+		System.setProperty("ProfileId", profileID);
+		initiateRestPostAPICallWithoutCookiesAndReqStr(endpoints, postRequestStr);
+		
+		}
+		
+	
 
 }

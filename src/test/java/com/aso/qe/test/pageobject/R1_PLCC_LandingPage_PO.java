@@ -701,6 +701,29 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	}
 	
+	// Footer link navigation:
+		public void verifyPresenceOfFacebookPage() throws Exception {
+			String currentURL = getCurrentPageURL();
+			if (currentURL.contains("www.facebook.com/Academy/")) {
+				logger.debug("User is successfully navigated to Facebook page with URL :: " + currentURL);
+			} else {
+				logger.debug("User is not able to navigate to Facebook Page instead navigated to URL :: " + currentURL);
+			}
+			
+
+		}
+		// Footer link navigation:
+				public void verifyPresenceOfPinterestPage() throws Exception {
+					String currentURL = getCurrentPageURL();
+					if (currentURL.contains("www.pinterest.com")) {
+						logger.debug("User is successfully navigated to Pinterest page with URL :: " + currentURL);
+					} else {
+						logger.debug("User is not able to navigate to Pinterest Page instead navigated to URL :: " + currentURL);
+					}
+					
+
+				}
+
 	public void verifyPresenceOfPrivacyPolicyPage() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("/app/answers/detail/a_id/649/kw/privacy")) {
@@ -721,6 +744,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 
 	
 	public void closeAlertPopupBox()
