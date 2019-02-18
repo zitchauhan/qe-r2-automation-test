@@ -143,6 +143,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	
 	
 	
+	
+	
+	
 	//Creditcard Application Modal Response:
 	@FindBy(xpath = "//*[@aria-label='Error Modal']")
 	public WebElement errorModalCCAM;
@@ -154,14 +157,33 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement disclosureMsgErrorModalCCAM;
 	@FindBy(xpath = "//*[@data-auid='error_modal_close']")
 	public WebElement closeIconErrorModal;
+	@FindBy(xpath = "//*[text()='EXISTING ACCOUNT!']")
+	public WebElement existingAccount;
+	@FindBy(xpath = "//*[text()='Thank for your interest. Our records indicate that you already have an Academy Sports + Outdoors Credit Card. For your convenience, your account number has been pre-filled in the payment section at checkout.']")
+	public WebElement disclosureTxtExistingAccountModal;
+	
+
+	public void verifyPresenceOfDisclosureTextExistingAccount() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(disclosureTxtExistingAccountModal);
+			logger.debug("Thank for your interest. Our records indicate that you already have an Academy Sports + Outdoors Credit Card. For your convenience, your account number has been pre-filled in the payment section at checkout. Text is displayed");
+		} else {
+			isDisplayed(disclosureTxtExistingAccountModal);
+			logger.debug("Thank for your interest. Our records indicate that you already have an Academy Sports + Outdoors Credit Card. For your convenience, your account number has been pre-filled in the payment section at checkout. Text is displayed");
+		}
+	}
 	
 	
-	
-	
+	public void verifyPresenceOfCartPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("academy.com")) {
+			logger.debug("User is successfully navigated to Cart page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Cart Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
 			
-			
-					
-	
 	public void verifyPresenceOfErrorModalCCAM() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(errorModalCCAM);
@@ -544,7 +566,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		}
 
 	}
-
+	
 	public void verifyPresenceOfNoticeIFramePCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(noticeIFramePCCApplicationModal);
@@ -665,7 +687,17 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		}
 
 	}
+	public void verifyPresenceOfExistingCustomer() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(existingAccount);
+			logger.debug("EXISTING CUSTOMER TEXT is displayed");
+		} else {
+			isDisplayed(existingAccount);
+			logger.debug("EXISTING CUSTOMER TEXT is displayed");
+		}
 
+	}
+	
 	public void verifyPresenceOfDisclosureTxt1ConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(disclosureTxt1ConsentModal);

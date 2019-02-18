@@ -9,7 +9,7 @@ import com.aso.qe.test.pageobject.R1_PLCC_CreditCardApplicationModal_PO;
 
 import cucumber.api.java.en.Then;
 
-public class R1_CCAM_Response_95_Web extends CommonActionHelper {
+public class R1_CCAM_Response__UnderReview_95_Web extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_PLCC_CreditCardApplicationModal_PO ccAplicationModal_PO = PageFactory.initElements(driver,
 			R1_PLCC_CreditCardApplicationModal_PO.class);
@@ -45,6 +45,11 @@ public class R1_CCAM_Response_95_Web extends CommonActionHelper {
 	public void user_click_on_continue_icon_to_checkout_button() throws Throwable {
 		ccAplicationModal_PO.verifyPresenceOfContinueToCheckoutCCModal();
 		ccAplicationModal_PO.continueToCheckout.click();
+	}
+	@Then("^user click on close icon of error modal$")
+	public void user_click_on_close_icon_of_error_modal() throws Throwable {
+		ccAplicationModal_PO.verifyPresenceOfCloseIconErrorModalCCAM();
+		ccAplicationModal_PO.closeIconErrorModal.click();
 	}
 	
 }
