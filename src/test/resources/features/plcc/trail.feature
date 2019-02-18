@@ -8,14 +8,15 @@ And user expect element FPO Apply Order section to be present
 
 
 @C-PLCC @Regression @All @PLCC-34 @CR-VS  
-Scenario: Verify the navigation of Footer Links -Social Media Links	 
-	And user expect element FaceBook to be present 
-#	When user click on Facebook icon
-#	And user click and navigates to child window
-	Then user navigates to Facebook Page and validate facebook url
-    And user expect element Pinterest to be present 
-#    When user click on Pinterest icon
-#	And user click and navigates to child window
-#   Then user navigates to Pinterest Page and validate pinterest page url
-	And user expect element YouTube to be present 
-    And user expect element Instagram to be present 
+Scenario: Verify the navigation of Footer Links -T&C Links
+	When user expect element PrivacyPolicy to be present 
+	Then user click on PrivacyPolicy link in the footer section of ASO-Home page
+	And user expect PrivacyPolicy page to be present 
+	And user click on browser back button
+	And user expect element TermsAndCondition to be present 
+	When user click on TermsAndCondition link in the footer section of ASO-Home page
+	Then user expect TermsAndConditions page to be present 
+	And user expect element CaliforniaTransparencyinSupplyChainAct to be present 
+	And user click on browser back button 
+	And user expect element CaliforniaTransparencyinSupplyChainAct to be present
+	And user click on California Transparency in Supply Chain Act(SB 657) link and navigates to CaliforniaTransparencyinSupplyChainAct page

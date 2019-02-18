@@ -26,5 +26,10 @@ public class plccCardForGuestUser extends JSONValidationUtils {
 		logger.debug("END Point URL:"+endpoints);
 	}
 
+	@Given("^\"(.*?)\" endpoint for getting invalid plc card for guest user$")
+	public void endpoint_for_getting_invalid_plc_card_for_guest_user(String PLCCInvalidCardForGuestUser) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCInvalidCardForGuestUser);
+		logger.debug("END Point URL:"+endpoints);
+	}
 
 }

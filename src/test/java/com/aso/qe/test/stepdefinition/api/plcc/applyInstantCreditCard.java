@@ -26,6 +26,23 @@ public class applyInstantCreditCard extends JSONValidationUtils {
 		logger.debug("END Point URL:"+endpoints);
 		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCApplyInstantCardPostRequest)+".json");
 		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCApplyInstantCardPostRequest)+".json");
-		//initiateRestPostAPICallWithoutCookiesAndReqStr(endpoints, addressID);
 	}
+	
+	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for applying invalid instant credit card$")
+	public void endpoint_with_for_applying_invalid_instant_credit_card(String PLCCApplyMissingZipCodeInstantCardURLr2, String PLCCApplyMissingZipCodeInstantCardPostRequest) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCApplyMissingZipCodeInstantCardURLr2);
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCApplyMissingZipCodeInstantCardPostRequest)+".json");
+		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCApplyMissingZipCodeInstantCardPostRequest)+".json");
+	}
+	
+	@Given("^\"(.*?)\" endpoint with \"(.*?)\" Not found error for applying invalid instant credit card$")
+	public void endpoint_with_Not_found_error_for_applying_invalid_instant_credit_card(String PLCCApplyInvalidInstantCardInvalidURL, String PLCCApplyInvalidInstantCardPostRequest) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCApplyInvalidInstantCardInvalidURL);
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCApplyInvalidInstantCardPostRequest)+".json");
+		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCApplyInvalidInstantCardPostRequest)+".json");
+	}
+
+
 }

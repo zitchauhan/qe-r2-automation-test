@@ -49,5 +49,11 @@ public class MyAccountWallet extends JSONValidationUtils {
 		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCSetCardAsDefaultPostRequest)+".json");
 		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCSetCardAsDefaultPostRequest)+".json");
 	}
+	
+	@Given("^\"(.*?)\" endpoint for deleting a credit card$")
+	public void endpoint_for_deleting_a_credit_card(String PLCCDeleteCardURLr2) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCDeleteCardURLr2);
+		logger.debug("END Point URL:"+endpoints);
+	}
 
 }

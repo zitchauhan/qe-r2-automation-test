@@ -32,6 +32,13 @@ public class customerDataOnPrescreenID extends JSONValidationUtils {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCInvalidPrescreenID);
 		logger.debug("END Point URL:"+endpoints);
 	}
+	
+	@Given("^\"(.*?)\" endpoint for Invalid url with prescreenID$")
+	public void endpoint_for_Invalid_url_with_prescreenID(String PLCC404InvalidPrescreenID) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCC404InvalidPrescreenID);
+		logger.debug("END Point URL:"+endpoints);
+	}
+
 
 	@Then("^Verify response status (\\d+) for plcc$")
 	public void verify_response_status_for_plcc(int statusCodeExpected) throws Throwable {
