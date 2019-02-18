@@ -136,15 +136,15 @@ Scenario: Verify the navigation of Footer Links - General
 @C-PLCC @Regression @All @PLCC-34 @CR-VS  
 Scenario: Verify the navigation of Footer Links -Social Media Links	 
 	And user expect element FaceBook to be present 
-	When user click on Facebook icon
-	And user click and navigates to child window
-	Then user navigates to Facebook Page and validate facebook url
+#	When user click on Facebook icon
+#	And user click and navigates to child window
+#	Then user navigates to Facebook Page and validate facebook url
     And user expect element Pinterest to be present 
-    When user click on Pinterest icon
-	And user click and navigates to child window
-    Then user navigates to Pinterest Page and validate pinterest page url
-#	And user expect element YouTube to be present 
-#   And user expect element Instagram to be present
+#    When user click on Pinterest icon
+#	And user click and navigates to child window
+#   Then user navigates to Pinterest Page and validate pinterest page url
+	And user expect element YouTube to be present 
+    And user expect element Instagram to be present
 	
 @C-PLCC @Regression @All @PLCC-34 @CR-VS  
 Scenario: Verify the navigation of Footer Links -T&C Links

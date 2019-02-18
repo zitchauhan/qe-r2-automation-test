@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features/plccAPIs",
+@CucumberOptions(features = "src/test/resources/features/plccAPIs/ApplyInstantCreditCard.feature",
 		glue = "com.aso.qe.test.stepdefinition.api",
 		monochrome = true, 
 		plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html", format = {

@@ -41,5 +41,13 @@ public class MyAccountWallet extends JSONValidationUtils {
 		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCUpdateCreditCardPostRequest)+".json");
 		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCUpdateCreditCardPostRequest)+".json");
 	}
+	
+	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for Set a credit card as default$")
+	public void endpoint_with_for_Set_a_credit_card_as_default(String PLCCSetCardAsDefaultURLr2, String PLCCSetCardAsDefaultPostRequest) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCSetCardAsDefaultURLr2);
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCSetCardAsDefaultPostRequest)+".json");
+		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCSetCardAsDefaultPostRequest)+".json");
+	}
 
 }

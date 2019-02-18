@@ -1,0 +1,24 @@
+2019-02-18 11:04:51 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Read all properties from file
+2019-02-18 11:04:51 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: properties file load Done.
+2019-02-18 11:04:51 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: testdatafilename::TD-PLCC_UAT8.properties
+2019-02-18 11:04:51 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Final testdatafilename::TD-PLCC_UAT8.properties
+2019-02-18 11:04:51 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGHEST::10000
+2019-02-18 11:04:51 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGH::7000
+2019-02-18 11:04:51 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_MEDIUM::4000
+2019-02-18 11:04:51 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_LOW::2000
+2019-02-18 11:04:51 [main] DEBUG com.aso.qe.framework.api.helpers.APIJsonHelper.<init>:: API Endpoint IP Address:https://uat7www.academy.com
+2019-02-18 11:04:51 [main] DEBUG com.aso.qe.framework.api.helpers.APIJsonHelper.<init>:: API Endpoint WEB Address:https://uat7www.academy.com
+2019-02-18 11:04:51 [main] DEBUG com.aso.qe.test.stepdefinition.api.R1SP1_Categories_ProductsByCategorySD.endpoint_with_for_Set_a_credit_card_as_default:: END Point URL:https://uat7www.academy.com/api/profile/r2/1360025/creditCards/PUT/45101?makePrimary=true
+2019-02-18 11:04:51 [main] INFO  com.aso.qe.test.stepdefinition.api.R1SP1_Categories_ProductsByCategorySD.endpoint_with_for_Set_a_credit_card_as_default:: D:\AcademySports\ASO Automation\UserCopy\qe-r2-automation-test/src/test/resources/plccApiJsonRequest/updateCreditCardRequest.json
+2019-02-18 11:24:44 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Read all properties from file
+2019-02-18 11:24:44 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: properties file load Done.
+2019-02-18 11:24:44 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: testdatafilename::TD-PLCC_UAT8.properties
+2019-02-18 11:24:44 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Final testdatafilename::TD-PLCC_UAT8.properties
+2019-02-18 11:24:44 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGHEST::10000
+2019-02-18 11:24:44 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGH::7000
+2019-02-18 11:24:44 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_MEDIUM::4000
+2019-02-18 11:24:44 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_LOW::2000
+2019-02-18 11:24:44 [main] DEBUG com.aso.qe.framework.api.helpers.APIJsonHelper.<init>:: API Endpoint IP Address:https://uat7www.academy.com
+2019-02-18 11:24:44 [main] DEBUG com.aso.qe.framework.api.helpers.APIJsonHelper.<init>:: API Endpoint WEB Address:https://uat7www.academy.com
+2019-02-18 11:24:44 [main] DEBUG com.aso.qe.test.stepdefinition.api.R1SP1_Categories_ProductsByCategorySD.endpoint_with_for_applying_instant_credit_card:: END Point URL:https://uat7www.academy.com/api/profile/applyplcc
+2019-02-18 11:24:44 [main] INFO  com.aso.qe.test.stepdefinition.api.R1SP1_Categories_ProductsByCategorySD.endpoint_with_for_applying_instant_credit_card:: D:\AcademySports\ASO Automation\UserCopy\qe-r2-automation-test/src/test/resources/plccApiJsonRequest/applyInstantCreditCard.json
