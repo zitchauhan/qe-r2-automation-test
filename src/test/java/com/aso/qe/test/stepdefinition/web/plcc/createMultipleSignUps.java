@@ -19,7 +19,7 @@ public class createMultipleSignUps extends CommonActionHelper{
 		
 	@Then("^user expect two thousand registrations to be done by entering \"(.*?)\"  \"(.*?)\"  \"(.*?)\" \"(.*?)\" \"(.*?)\"  \"(.*?)\" \"(.*?)\"$")
 	public void user_expect_two_thousand_registrations_to_be_done_by_entering(String FN, String LN, String Email, String Pwd, String address, String zip, String Phone) throws Throwable {
-		for(int n=1;n<=2000;n++)
+		for(int n=1;n<=100;n++)
 		{
 			plccPageObjects.clickSignUpLinkOnLoginPage();
 			plccPageObjects.enterFirstNameTxtField(FN);
@@ -52,8 +52,14 @@ public class createMultipleSignUps extends CommonActionHelper{
 			assertTrue(isDisplayed(plccPageObjects.addressPhoneField));
 			waitForElement(plccPageObjects.addressPhoneField);
 			plccPageObjects.clickOnSignUpBtnRegistrationPage();
-			plccPageObjects.clickOnMyAccountLink();
-			plccPageObjects.signOutLink.click();
+			
+			try {
+				plccPageObjects.clickOnMyAccountLink();
+				plccPageObjects.signOutLink.click();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 		}
 	
