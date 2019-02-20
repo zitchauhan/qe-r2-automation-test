@@ -26,6 +26,8 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	// myAccountLinkOnAsoHomePage;
 	@FindBy(xpath = "//*[@data-auid='MyAccount']")
 	public WebElement myAccountLinkOnAsoHomePage;
+	@FindBy(xpath = "//*[@data-auid='Sign Out']")
+	public WebElement signOutLink; 
 
 	@FindBy(xpath = "//*[@data-auid='signUp_btn']")
 	public WebElement signUpLinkOnLoginPage;
@@ -705,7 +707,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void enterEmailAddressTxtFieldAuto(String arg) throws Exception {
 		Date NewEmailEveryTime = new Date(System.currentTimeMillis());
 		String NewEmailEveryTime2 = NewEmailEveryTime.toString().replaceAll("\\s+", "").replaceAll(":", "");
-		String NewEmailEveryTimeValue = "QA" + NewEmailEveryTime2 + "@gmail.com";
+		String NewEmailEveryTimeValue = "Perf" + NewEmailEveryTime2 + "@gmail.com";
 		setInputText(emailIdTxtField, NewEmailEveryTimeValue);
 	}
 
