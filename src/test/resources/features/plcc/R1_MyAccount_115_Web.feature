@@ -11,6 +11,7 @@ Background:  Common Pre-requisite steps
 	Then user expect Landing page to be present 
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 	
+	
 @C-PLCC @Regression @All @PLCC-115 @CR-VS
 Scenario: Verify PLCC card information saved under customer profile
 	When user enter First Name on credit card Application Modal "FirstName" 

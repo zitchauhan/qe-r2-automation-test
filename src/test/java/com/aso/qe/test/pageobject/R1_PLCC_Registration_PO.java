@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.FrameWorkHelper;
 import com.aso.qe.test.common.Common_Web_PLCC;
 import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
 
@@ -26,6 +27,8 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	// myAccountLinkOnAsoHomePage;
 	@FindBy(xpath = "//*[@data-auid='MyAccount']")
 	public WebElement myAccountLinkOnAsoHomePage;
+	@FindBy(xpath = "//*[@data-auid='Sign Out']")
+	public WebElement signOutLink; 
 
 	@FindBy(xpath = "//*[@data-auid='signUp_btn']")
 	public WebElement signUpLinkOnLoginPage;
@@ -149,8 +152,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[text()='We were unable to verify your address with the postal database. Using the address you entered may cause delays receiving your order.']")
 	public WebElement addressVerificationModalTxt;
 	
-	@FindBy(xpath = "//*[@data-auid='Sign Out']")
-	public WebElement signOutLink;
+	
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
 
 	/*-------------------------------author:Vidya Siddaramappa (Mindtree QA)------------------------------------*/
@@ -708,9 +710,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 
 	public void enterEmailAddressTxtFieldAuto(String arg) throws Exception {
 		Date NewEmailEveryTime = new Date(System.currentTimeMillis());
-		String NewEmailEveryTime2 = NewEmailEveryTime.toString().replaceAll("\\s+", "").replaceAll(":", "");
-		String NewEmailEveryTimeValue = "QA" + NewEmailEveryTime2 + "@gmail.com";
-		setInputText(emailIdTxtField, NewEmailEveryTimeValue);
+		//String NewEmailEveryTime2 = NewEmailEveryTime.toString().replaceAll("\\s+", "").replaceAll(":", "");
+		String NewEmailEveryTime2= "Perf"+FrameWorkHelper.getRandomAlphabetic(6).toLowerCase()+"@plccmail.com";
+		//String NewEmailEveryTimeValue = "Perf" + NewEmailEveryTime2 + "@gmail.com";
+		setInputText(emailIdTxtField, NewEmailEveryTime2);
 	}
 
 	// Enter Invalid Phone Number

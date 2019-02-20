@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/resources/features/plcc/trail.feature", 
+@CucumberOptions(features = "src/test/resources/features/plcc/multipleSignUps.feature", 
 
 glue = "com.aso.qe.test.stepdefinition.web.plcc", 
 monochrome = true,

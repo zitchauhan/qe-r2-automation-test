@@ -143,8 +143,7 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 	@When("^user select credit application modal agree message$")
 	public void user_select_credit_application_modal_agree_message() throws Throwable {
 		plccCCApplicationModalObjects.verifyPresenceOfAgreeApplicationModalCCModal();
-		Common_Web_PLCC.waitUntilElePresent(driver, plccCCApplicationModalObjects.TandCCheckBox,
-				ELEMWAITTIME_MEDIUM);
+		//Common_Web_PLCC.waitUntilElePresent(driver, plccCCApplicationModalObjects.TandCCheckBox,ELEMWAITTIME_MEDIUM);
 		assertTrue(clickOnButton(plccCCApplicationModalObjects.TandCCheckBox));
 	}
 
@@ -162,7 +161,7 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 
 	@Then("^user navigates to cart page$")
 	public void user_navigates_to_cart_page() throws Throwable {
-		plccCCApplicationModalObjects.verifyPresenceOfASOHomePage();
+		plccCCApplicationModalObjects.verifyPresenceOfCartPage();
 	}
 
 	@When("^user click on continue shopping  button$")
