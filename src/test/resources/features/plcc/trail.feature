@@ -1,22 +1,25 @@
-Feature: Landing Page 	
+Feature: My Account
 
-Background:  Common Pre-requisite steps
-Given user launches the browser and navigates to "ASO_HOME" page 
-When user click on AcademyCreditCard link in the footer section of ASO-Home page 
-Then user expect Landing page to be present 
-And user expect element FPO Apply Order section to be present
-
-
-@C-PLCC @Regression @All @PLCC-34 @CR-VS  
-Scenario: Verify the navigation of Footer Links -T&C Links
-	When user expect element PrivacyPolicy to be present 
-	Then user click on PrivacyPolicy link in the footer section of ASO-Home page
-	And user expect PrivacyPolicy page to be present 
-	And user click on browser back button
-	And user expect element TermsAndCondition to be present 
-	When user click on TermsAndCondition link in the footer section of ASO-Home page
-	Then user expect TermsAndConditions page to be present 
-	And user expect element CaliforniaTransparencyinSupplyChainAct to be present 
-	And user click on browser back button 
-	And user expect element CaliforniaTransparencyinSupplyChainAct to be present
-	And user click on California Transparency in Supply Chain Act(SB 657) link and navigates to CaliforniaTransparencyinSupplyChainAct page
+@C-PLCC @Regression @All @PLCC-86 @CR-VS
+Scenario: Verify PLCC card information saved under customer profile
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user click on My Account link 
+	Then Verify below Sub/Main Module of MyAccount 
+		|# Verify following elements in Sign in/login page	|
+		|SignInPage_SignIn_btn								|
+		|SignInPage_EmailAddress_txt			   			| 
+		|SignInPage_Password_txt				   			|
+	And user enter Email address in sign-in page "Email_Address_2" 
+	And user enter password in sign-in page "Password_2" 
+	And user click on Signin-button 
+	Then user navigates to ASO-Home page  
+	Then user click on MyAccount and navigate to payment 
+	Then Verify below Sub/Main Module of MyAccount 
+		|#Verify following elements in Payments > Add new credit card section	|
+		|PaymentPage_PaymentsHeader_label				|
+	And user verifies the credit card saved and set as default 
+	Then Verify below Sub/Main Module of MyAccount 
+		|#Verify following elements in Payment page		|
+		|PaymentPage_CrediCardList_txt|
+	And delete all credit cards from My Account
+	

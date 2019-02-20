@@ -31,6 +31,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement signUpLinkOnLoginPage;
 	@FindBy(xpath = "//*[text()='Add Address for Faster Checkout']")
 	public WebElement addAddressCheckBox;
+	
 	// @FindBy(xpath = "//*[@type='checkbox']")public WebElement addAddressCheckBox;
 	@FindBy(xpath = "//*[@data-auid='address_input']")
 	public WebElement addressTxtField;
@@ -147,6 +148,9 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement modifyAddressLink;
 	@FindBy(xpath = "//*[text()='We were unable to verify your address with the postal database. Using the address you entered may cause delays receiving your order.']")
 	public WebElement addressVerificationModalTxt;
+	
+	@FindBy(xpath = "//*[@data-auid='Sign Out']")
+	public WebElement signOutLink;
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
 
 	/*-------------------------------author:Vidya Siddaramappa (Mindtree QA)------------------------------------*/
