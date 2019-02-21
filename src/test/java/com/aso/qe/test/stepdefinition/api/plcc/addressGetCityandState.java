@@ -35,4 +35,16 @@ public class addressGetCityandState extends JSONValidationUtils {
 		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCAddressPostRequest)+".json");
 		//initiateRestPostAPICallWithoutCookiesAndReqStr(endpoints, addressID);
 	}
+	
+	@Given("^\"(.*?)\" endpoint for getting city and State for invalid address$")
+	public void endpoint_for_getting_city_and_State_for_invalid_address(String PLCCInvalidAddressCityAndState) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCInvalidAddressCityAndState);
+		logger.debug("END Point URL:"+endpoints);
+	}
+	
+	@Given("^\"(.*?)\" endpoint for getting city and State for invalid url for address$")
+	public void endpoint_for_getting_city_and_State_for_invalid_url_for_address(String PLCCInvalidURLAddressCityAndState) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCInvalidURLAddressCityAndState);
+		logger.debug("END Point URL:"+endpoints);
+	}
 }

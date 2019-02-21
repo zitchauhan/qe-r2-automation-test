@@ -8,13 +8,13 @@ Scenario: Verify to Retrive Customer Data based on PrescreenID
 @C-PLCC @Regression @All @API @CR-Manju 
 Scenario: Verify to response status 400 for invalid Prescreen code
 	Given "PLCCInvalidPrescreenID" endpoint for Invalid prescreenID
-	#Then Verify response status 400 for plcc
+	Then user expect response status as 400	
 	
 	
 @C-PLCC @Regression @All @API @CR-Manju 
 Scenario: Verify to response status 404 for invalid url with prescreenID
 	Given "PLCC404InvalidPrescreenID" endpoint for Invalid url with prescreenID
-	#Then Verify response status 404 for plcc	
+	Then user verify response status code as 404
 	
 	
 	

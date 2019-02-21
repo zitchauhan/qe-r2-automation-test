@@ -6,11 +6,12 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When user click on My Account link 
 	And user expect element Email Address to be present 
 	And user enter Email address in sign-in page "UserWithSavedAddressAndPayment" 
-	And user enter password in sign-in page "Password_2" 
+	And user enter password in sign-in page "BuynowPwd" 
 	Then user click on Signin-button 
 	And user navigates to ASO-Home page 
 	When user enters "SKUForBuyNow" in the search box 
-	And user click on search icon  
+	And user click on search icon 
+	And user click and navigates to child window 
 	And user click on Buy Now button
 	Then user navigates to order confirmation page
 	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present

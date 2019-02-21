@@ -132,5 +132,6 @@ public class R1SP1_CategoryDetailsSD extends JSONValidationUtils
 			assertTrue(categoryDetailsResponse.isSubCategoryPropertyValueNull(propName),Constants.API_ERROR_DESCRIPTION);
 		}
 	}
+	
 }
 

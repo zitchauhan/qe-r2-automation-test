@@ -5,6 +5,11 @@ Feature: Create User Profile with address information
     Given "PLCCRegistrationUrl" endpoint with "PLCCRegistrationPostRequest" for user registration with plcc changes
 	Then Validated response details of "identity.userId" for plcc 
 	
+@C-PLCC @Regression @All @API @CR-Manju
+  Scenario: Verify user profile creation with PLCC Changes for invalid address
+    Given "PLCCInvalidRegistrationUrl" endpoint with "PLCCInvalidRegistrationPostRequest" for user registration with plcc changes for invalid address
+	Then user get the response status code as 400
+	
 @C-PLCC @Regression @All @API @CR-Manju 
 Scenario: Verify for status code 400 for Bad Request for CategoryDetail for User Profile
 	Given "CategoryDetailFor400" endpoint for Category 

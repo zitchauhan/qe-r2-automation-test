@@ -43,6 +43,31 @@ public class applyInstantCreditCard extends JSONValidationUtils {
 		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCApplyInvalidInstantCardPostRequest)+".json");
 		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCApplyInvalidInstantCardPostRequest)+".json");
 	}
+	
+	@Then("^user get the response status code as (\\d+)$")
+	public void user_get_the_response_status_code_as(int statusCodeExpected) throws Throwable {
+		String errorTxt = getErrorTxt();
+		logger.debug("400 Error Text::"+errorTxt);
+		if(errorTxt != null && errorTxt.contains(String.valueOf(statusCodeExpected))){
+			logger.debug("400 error code validation PASS");
+			assertTrue(true);
+		}else{
+			logger.debug("400 error code validation FAIL");
+			assertTrue(false);
+		}
+	}
 
+	@Then("^verify user get the response status code as (\\d+)$")
+	public void verify_user_get_the_response_status_code_as(int statusCodeExpected) throws Throwable {
+		String errorTxt = getErrorTxt();
+		logger.debug("404 Error Text::"+errorTxt);
+		if(errorTxt != null && errorTxt.contains(String.valueOf(statusCodeExpected))){
+			logger.debug("404 error code validation PASS");
+			assertTrue(true);
+		}else{
+			logger.debug("404 error code validation FAIL");
+			assertTrue(false);
+		}
+	}
 
 }
