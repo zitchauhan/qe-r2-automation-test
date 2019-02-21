@@ -107,6 +107,13 @@ public class createUserProfile extends JSONValidationUtils {
 		
 		}
 		
-	
+	@Given("^\"(.*?)\" endpoint with \"(.*?)\" for user registration with plcc changes for invalid address$")
+	public void endpoint_with_for_user_registration_with_plcc_changes_for_invalid_address(String PLCCInvalidRegistrationUrl, String PLCCInvalidRegistrationPostRequest) throws Throwable {
+		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCInvalidRegistrationUrl);
+		logger.debug("END Point URL:"+endpoints);
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCInvalidRegistrationPostRequest)+".json");
+		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCInvalidRegistrationPostRequest)+".json");
+	}
+
 
 }

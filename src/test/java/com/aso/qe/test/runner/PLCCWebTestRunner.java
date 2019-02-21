@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/resources/features/plcc/multipleSignUps.feature", 
+@CucumberOptions(features = "src/test/resources/features/plcc/R1_Discounts_BuyNow_106_Web.feature", 
 
 glue = "com.aso.qe.test.stepdefinition.web.plcc", 
 monochrome = true,
@@ -17,5 +17,4 @@ monochrome = true,
 				"pretty", "html:target/cucumber-reports/cucumber-html-reports",
 				"json:target/cucumber-reports/cucumber-html-reports/common.json" })
 public class PLCCWebTestRunner {
-
 }

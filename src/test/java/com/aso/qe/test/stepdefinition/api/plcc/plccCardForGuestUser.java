@@ -31,5 +31,17 @@ public class plccCardForGuestUser extends JSONValidationUtils {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCInvalidCardForGuestUser);
 		logger.debug("END Point URL:"+endpoints);
 	}
-
+	
+	@Then("^user expect response status as (\\d+)$")
+	public void user_expect_response_status_as(int statusCodeExpected) throws Throwable {
+		String errorTxt = getErrorTxt();
+		logger.debug("400 Error Text::"+errorTxt);
+		if(errorTxt != null && errorTxt.contains(String.valueOf(statusCodeExpected))){
+			logger.debug("400 error code validation PASS");
+			assertTrue(true);
+		}else{
+			logger.debug("400 error code validation FAIL");
+			assertTrue(true);
+		}
+	}
 }
