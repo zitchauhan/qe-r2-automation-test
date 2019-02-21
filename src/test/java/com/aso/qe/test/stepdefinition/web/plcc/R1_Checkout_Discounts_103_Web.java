@@ -38,16 +38,16 @@ public void user_click_on_add_promo_code_link_on_cart_page() throws Throwable {
 	genericPO.viewCartBtn.click();
 }
 
-@When("^user enter promocode on cart page$")
-public void user_enter_promocode_on_cart_page() throws Throwable {
-	//	genericPO.enterPromoCode(arg1);
+@When("^user enter promocode \"(.*?)\" on cart page$")
+public void user_enter_promocode_on_cart_page(String arg1) throws Throwable {
 	assertTrue(isDisplayed(genericPO.promoCodeInputField));
 	waitForElement(genericPO.promoCodeInputField);
 }
 
 @When("^click on submit promo code button$")
 public void click_on_submit_promo_code_button() throws Throwable {
-    
+	genericPO.verifyPresenceOfSubmitPromoCard();
+	genericPO.submitPromoCode.click();
 }
 
 @Then("^user expect fifteen dollars discount$")

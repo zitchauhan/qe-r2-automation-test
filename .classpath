@@ -29,7 +29,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="jar/qe-automation-framework-1.0.1.jar"/>
-	<classpathentry kind="lib" path="jar/qe-automation-framework-1.0.1.pom"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
