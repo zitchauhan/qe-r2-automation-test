@@ -207,7 +207,7 @@
 			<groupId>ASO</groupId>
 			<artifactId>qe-automation-framework</artifactId>
 			<version>1.0.1</version>
-		</dependency>
+		</dependency> 
 		<dependency>
 			<groupId>com.vimalselvam</groupId>
 			<artifactId>cucumber-extentsreport</artifactId>

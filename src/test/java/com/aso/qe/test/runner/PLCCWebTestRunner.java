@@ -17,5 +17,4 @@ monochrome = true,
 				"pretty", "html:target/cucumber-reports/cucumber-html-reports",
 				"json:target/cucumber-reports/cucumber-html-reports/common.json" })
 public class PLCCWebTestRunner {
-
 }
