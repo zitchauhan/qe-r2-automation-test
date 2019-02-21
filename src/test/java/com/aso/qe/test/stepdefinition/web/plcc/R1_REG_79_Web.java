@@ -9,6 +9,8 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Registration_PO;
 
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -133,5 +135,10 @@ public class R1_REG_79_Web extends CommonActionHelper {
 		String prefilledState = plccPageObjects.addressStateDropdown.getText();
 		System.out.println("State value for selected zip is " + prefilledState);
 		logger.debug("Autofilled State Value is:: " + prefilledState);
+	}
+	
+	@And("^user click on Sign Out link$")
+	public void user_click_on_Sign_Out_link() throws Throwable {
+		plccPageObjects.signOutLink.click();
 	}
 }

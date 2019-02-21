@@ -17,9 +17,9 @@ public class createMultipleSignUps extends CommonActionHelper{
 			R1_GlobalElementHeader_Home_PO.class);
 	R1_PLCC_Registration_PO plccPageObjects = PageFactory.initElements(driver, R1_PLCC_Registration_PO.class);
 		
-	@Then("^user expect two thousand registrations to be done by entering \"(.*?)\"  \"(.*?)\"  \"(.*?)\" \"(.*?)\" \"(.*?)\"  \"(.*?)\" \"(.*?)\"$")
+	@Then("^user expect two thousand registrations to be done by entering \"(.*?)\"  \"(.*?)\"  \"(.*?)\" \"(.*?)\" \"(.*?)\" \"(.*?)\" \"(.*?)\"$")
 	public void user_expect_two_thousand_registrations_to_be_done_by_entering(String FN, String LN, String Email, String Pwd, String address, String zip, String Phone) throws Throwable {
-		for(int n=1;n<=100;n++)
+		for(int n=1;n<=500;n++)
 		{
 			plccPageObjects.clickSignUpLinkOnLoginPage();
 			plccPageObjects.enterFirstNameTxtField(FN);
@@ -61,7 +61,6 @@ public class createMultipleSignUps extends CommonActionHelper{
 				e.printStackTrace();
 			}
 			
-		}
-	
+		}  
 	}
 }
