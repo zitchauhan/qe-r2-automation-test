@@ -10,9 +10,9 @@ Scenario: Verify the Post Response for 400 error applying invalid instant credit
 	Given "PLCCApplyMissingZipCodeInstantCardURLr2" endpoint with "PLCCApplyMissingZipCodeInstantCardPostRequest" for applying invalid instant credit card
 	
 	
-#@C-PLCC @Regression @All @API @CR-Manju 
-#Scenario: Verify the Post Response for 404 error applying invalid instant credit card
-#	Given "PLCCApplyInvalidInstantCardInvalidURL" endpoint with "PLCCApplyInvalidInstantCardPostRequest" Not found error for applying invalid instant credit card
+@C-PLCC @Regression @All @API @CR-Manju 
+Scenario: Verify the Post Response for 404 error applying invalid instant credit card
+	Given "PLCCApplyInvalidInstantCardInvalidURL" endpoint with "PLCCApplyInvalidInstantCardPostRequest" Not found error for applying invalid instant credit card
 	
 	
 	

@@ -1,6 +1,5 @@
 Feature: Registration 
 
-
 @C-PLCC @Regression @All @API @CR-Manju 
 Scenario: Verify for status code 400 for Bad Request 
 	Given "CategoryDetailFor400" endpoint for Category 
