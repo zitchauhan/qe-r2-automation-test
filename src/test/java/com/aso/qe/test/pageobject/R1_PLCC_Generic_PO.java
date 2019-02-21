@@ -104,6 +104,115 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[@class='justify-content-end academyicon icon-chevron-down css-1zd88g']")
 	public WebElement creditCardDropDown;
 	
+	
+	//Promotions:
+	@FindBy(xpath = "//*[@data-auid='crt_btnAddPromo']")
+	public WebElement addPromoCodeLink;
+	@FindBy(xpath = "//*[@data-auid='crt_inputPromo']")
+	public WebElement promoCodeInputField;
+	@FindBy(xpath = "//*[@data-auid='btncrt_btnPromoSbmt']")
+	public WebElement submitPromoCode;
+	@FindBy(xpath = "//*[text()='Discount']")
+	public WebElement discountTxt;
+	@FindBy(xpath = "//*[text()='-$15.00']")
+	public WebElement fifteenPercentOff;
+	@FindBy(xpath = "//*[@data-auid='checkout_order_summary_section']")
+	public WebElement orderSummarySection;
+	@FindBy(xpath = "//*[@data-auid='btnviewCart']")
+	public WebElement viewCartBtn;
+	
+	//enter Prmo Code
+	public void enterPromoCode(String arg) throws Exception {
+		setInputText(promoCodeInputField, webPropHelper.getTestDataProperty(arg));
+	}
+
+	
+	
+	public void verifyPresenceOfViewCartBtn() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(viewCartBtn);
+			logger.debug("View Cart button is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(viewCartBtn);
+			logger.debug("View Cart button is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	
+
+	
+	
+	public void verifyPresenceOfDiscountText() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(discountTxt);
+			logger.debug("Discount Text is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(discountTxt);
+			logger.debug("Discount Text is displayed++++++++++++++++++++++++==");
+		}
+
+	}public void verifyPresenceOfFiftennDollarsOff() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(fifteenPercentOff);
+			logger.debug("15% Discount is applied++++++++++++++++++++++++");
+		} else {
+			isDisplayed(fifteenPercentOff);
+			logger.debug("15% Discount is applied++++++++++++++++++++++++==");
+		}
+
+	}
+	public void verifyPresenceOfAddPromoCodeButton() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(addPromoCodeLink);
+			logger.debug("Add Promo Code Link is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(addPromoCodeLink);
+			logger.debug("Add Promo Code Link is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	public void verifyPresenceOfPromoCodeInputField() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(promoCodeInputField);
+			logger.debug("Promo Card Input Field is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(promoCodeInputField);
+			logger.debug("Promo Card Input Field is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	public void verifyPresenceOfSubmitPromoCard() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(submitPromoCode);
+			logger.debug("Submit Promo Code Button is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(submitPromoCode);
+			logger.debug("Submit Promo Code Button is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	public void verifyPresenceOfOrderSummary() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(orderSummarySection);
+			logger.debug("Order Summary is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(orderSummarySection);
+			logger.debug("Order Summary is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+			
+			
+			
+		
+	
 	public void verifyPresenceOfViewCartButton() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {

@@ -2933,3 +2933,484 @@
 2019-02-21 11:26:35 [main] DEBUG com.aso.qe.test.stepdefinition.api.R1SP1_KER_725_MiniCartSD.getSignInUserCookies:: UserName:travi@ravi.com :Password:Qwerty@123
 2019-02-21 11:26:35 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWebDriverFolderPath:: WebDriver Folder Path::D:\PLCCAutomation\WorkSpaceCode\qe-r2-automation-test/src/test/resources/drivers/windows/chromedriver.exe
 2019-02-21 11:26:35 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.launchChromeBrowser:: Launching Chrome Browser....................
+2019-02-21 13:48:58 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.StartBrowserProxy:: StartBrowserProxy is Comentted
+2019-02-21 13:48:58 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Read all properties from file
+2019-02-21 13:48:58 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: properties file load Done.
+2019-02-21 13:48:58 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: testdatafilename::TD-PLCC_UAT8.properties
+2019-02-21 13:48:58 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Final testdatafilename::TD-PLCC_UAT8.properties
+2019-02-21 13:48:58 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGHEST::10000
+2019-02-21 13:48:58 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGH::7000
+2019-02-21 13:48:58 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_MEDIUM::4000
+2019-02-21 13:48:58 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_LOW::2000
+2019-02-21 13:48:58 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.BeforeSteps:: exection Start Scenario Name: Verify user is able to get Annual offer of $15 off by providing the promo code
+2019-02-21 13:48:58 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.BeforeSteps:: screenshortName Name::__
+2019-02-21 13:48:59 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: runBrowserHeadLess:: null
+2019-02-21 13:48:59 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: platformType:: web
+2019-02-21 13:48:59 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: browserType:: chrome
+2019-02-21 13:48:59 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeWebDriver:: initializeWebDriver() inside process......
+2019-02-21 13:48:59 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWebDriverFolderPath:: WebDriver Folder Path::D:\PLCCAutomation\WorkSpaceCode\qe-r2-automation-test/src/test/resources/drivers/windows/chromedriver.exe
+2019-02-21 13:48:59 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.launchChromeBrowser:: Launching Chrome Browser....................
+2019-02-21 13:49:03 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: Window size maximise........
+2019-02-21 13:49:03 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWaitTime:: WEBDRIVER_EXPLICIT_WAITTIME_SECONDS::30
+2019-02-21 13:49:03 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWaitTime:: PAGELOAD_WAITTIME_SECONDS::100
+2019-02-21 13:49:03 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: HEIGHT::698
+2019-02-21 13:49:03 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: WIDTH::1296
+2019-02-21 13:49:03 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: testURL:: null
+2019-02-21 13:49:03 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: Open Chrome browser with URL::https://perf.academy.com
+2019-02-21 13:49:06 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.waitForPageLoad:: Page load wait time seconds:100 :: isPageLoaded:true
+2019-02-21 13:49:06 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: URL page load time is: 3.19500 seconds
+2019-02-21 13:49:06 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.waitForPageLoad:: Page load wait time seconds:100 :: isPageLoaded:true
+2019-02-21 13:49:07 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 13:49:08 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 13:49:09 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 13:49:09 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:49:09 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='MyAccount']
+2019-02-21 13:49:09 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:49:10 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:49:10 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:49:10 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 13:49:10 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 13:49:10 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:49:10 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='MyAccount']
+2019-02-21 13:49:10 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:49:11 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:49:11 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.isClickable:: Element is clickable true
+2019-02-21 13:49:11 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 13:49:11 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 13:49:11 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 13:49:11 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:49:11 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='MyAccount']
+2019-02-21 13:49:12 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:49:13 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:49:13 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:49:18 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.clickOnButton:: Click on the button
+2019-02-21 13:49:18 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 13:49:18 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 13:49:18 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:49:18 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='MyAccount']
+2019-02-21 13:49:18 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:49:19 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:49:19 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 13:49:19 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 13:49:19 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:49:19 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='MyAccount']
+2019-02-21 13:49:19 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:49:20 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:49:20 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.isClickable:: Element is clickable true
+2019-02-21 13:49:26 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:49:27 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 13:49:28 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : Proxy element for: DefaultElementLocator 'By.xpath: //*[@data-auid='email_input']'
+2019-02-21 13:49:28 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: Proxy element for: DefaultElementLocator 'By.xpath: //*[@data-auid='email_input']'
+2019-02-21 13:49:28 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:49:28 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value:: //*[@data-auid='email_input']
+2019-02-21 13:49:58 [main] ERROR com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Exception in  isDisplay msg::Expected condition failed: waiting for presence of element located by: By.xpath: //*[@data-auid='email_input'] (tried for 30 second(s) with 500 milliseconds interval)
+2019-02-21 13:49:58 [main] DEBUG com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO.verifyPresenceOfEmailTxtField:: Email Text Field is displayed
+2019-02-21 13:49:58 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.setInputText:: Input the text box value : PLCCQAAutomation@gmail.com
+2019-02-21 13:49:58 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='emailid_input']]
+2019-02-21 13:49:58 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='emailid_input']]
+2019-02-21 13:49:58 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:49:58 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='emailid_input']
+2019-02-21 13:49:58 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:49:59 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:00 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:00 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 13:50:00 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='emailid_input']]
+2019-02-21 13:50:00 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='emailid_input']]
+2019-02-21 13:50:00 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:00 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='emailid_input']
+2019-02-21 13:50:00 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:01 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:01 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:01 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='emailid_input']]
+2019-02-21 13:50:01 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='emailid_input']]
+2019-02-21 13:50:01 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:01 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='emailid_input']
+2019-02-21 13:50:01 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:02 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:02 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.setInputText:: Input the text box value : Test@123
+2019-02-21 13:50:02 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='password_input']]
+2019-02-21 13:50:02 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='password_input']]
+2019-02-21 13:50:02 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:02 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='password_input']
+2019-02-21 13:50:02 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:03 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 13:50:03 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='password_input']]
+2019-02-21 13:50:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='password_input']]
+2019-02-21 13:50:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='password_input']
+2019-02-21 13:50:03 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:04 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:04 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:04 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='password_input']]
+2019-02-21 13:50:04 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='password_input']]
+2019-02-21 13:50:04 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:04 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='password_input']
+2019-02-21 13:50:04 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:05 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:05 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 13:50:05 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 13:50:05 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 13:50:05 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:05 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='btnemail-signin-button']
+2019-02-21 13:50:05 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:06 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:06 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:06 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 13:50:06 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 13:50:06 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:06 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='btnemail-signin-button']
+2019-02-21 13:50:06 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:07 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:07 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.isClickable:: Element is clickable true
+2019-02-21 13:50:07 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 13:50:07 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 13:50:07 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 13:50:07 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:07 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='btnemail-signin-button']
+2019-02-21 13:50:08 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:09 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:09 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:09 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.clickOnButton:: Click on the button
+2019-02-21 13:50:09 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 13:50:09 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 13:50:09 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:09 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='btnemail-signin-button']
+2019-02-21 13:50:09 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:10 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:10 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 13:50:10 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 13:50:10 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:10 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='btnemail-signin-button']
+2019-02-21 13:50:10 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:11 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:11 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.isClickable:: Element is clickable true
+2019-02-21 13:50:16 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:21 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.getCurrentPageURL:: Get the current page url
+2019-02-21 13:50:21 [main] DEBUG com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO.verifyPresenceOfASOHomePage:: User is successfully navigated to ASO Home page with URL :: https://perf.academy.com/shop/LogonForm
+2019-02-21 13:50:21 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.setInputText:: Input the text box value : 106914361
+2019-02-21 13:50:21 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='search-input']]
+2019-02-21 13:50:21 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='search-input']]
+2019-02-21 13:50:21 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:21 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='search-input']
+2019-02-21 13:50:21 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:22 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:22 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:22 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 13:50:22 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='search-input']]
+2019-02-21 13:50:22 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='search-input']]
+2019-02-21 13:50:22 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:22 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='search-input']
+2019-02-21 13:50:22 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:25 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:25 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:25 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='search-input']]
+2019-02-21 13:50:25 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='search-input']]
+2019-02-21 13:50:25 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:25 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='search-input']
+2019-02-21 13:50:25 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:27 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:27 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 13:50:27 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='search-clear-button']]
+2019-02-21 13:50:27 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (4d6d6e8495561388daa8d24962ba75e2)] -> xpath: //*[@data-auid='search-clear-button']]
+2019-02-21 13:50:27 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:27 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='search-clear-button']
+2019-02-21 13:50:27 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 13:50:28 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:28 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 13:50:28 [main] DEBUG com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO.verifyPresenceOfSearchIcon:: Search Icon is displayed
+2019-02-21 13:50:33 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.waitForPageLoad:: Page load wait time seconds:100 :: isPageLoaded:true
+2019-02-21 13:50:33 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : Proxy element for: DefaultElementLocator 'By.xpath: //*[@data-auid='PDP_MediaClick']//img | //*[@data-auid='PDP_ProductImage_m']//img | (//*[@data-component='productDetailsMultiSkuPackage']//img)[1] | (//*[@data-component='productDetailsMultiSku']//img)[1] | (//*[@data-auid='PDP_MediaClick']//img)[1]'
+2019-02-21 13:50:33 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: Proxy element for: DefaultElementLocator 'By.xpath: //*[@data-auid='PDP_MediaClick']//img | //*[@data-auid='PDP_ProductImage_m']//img | (//*[@data-component='productDetailsMultiSkuPackage']//img)[1] | (//*[@data-component='productDetailsMultiSku']//img)[1] | (//*[@data-auid='PDP_MediaClick']//img)[1]'
+2019-02-21 13:50:33 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:50:33 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value:: //*[@data-auid='PDP_MediaClick']//img | //*[@data-auid='PDP_ProductImage_m']//img | (//*[@data-component='productDetailsMultiSkuPackage']//img)[1] | (//*[@data-component='productDetailsMultiSku']//img)[1] | (//*[@data-auid='PDP_MediaClick']//img)[1]
+2019-02-21 13:51:03 [main] ERROR com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO.addToCartAvailability:: addToCartAvailability exception msg::Expected condition failed: waiting for presence of element located by: By.xpath: //*[@data-auid='PDP_MediaClick']//img | //*[@data-auid='PDP_ProductImage_m']//img | (//*[@data-component='productDetailsMultiSkuPackage']//img)[1] | (//*[@data-component='productDetailsMultiSku']//img)[1] | (//*[@data-auid='PDP_MediaClick']//img)[1] (tried for 30 second(s) with 500 milliseconds interval)
+2019-02-21 13:51:03 [main] DEBUG com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO.addToCartAvailability:: Add to Cart buttion is visable::false
+2019-02-21 13:51:03 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : Proxy element for: DefaultElementLocator 'By.xpath: //*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']'
+2019-02-21 13:51:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: Proxy element for: DefaultElementLocator 'By.xpath: //*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']'
+2019-02-21 13:51:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 13:51:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value:: //*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']
+2019-02-21 13:51:34 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.AfterSteps:: exection End Scenario Name: Verify user is able to get Annual offer of $15 off by providing the promo code  :: Status:failed
+2019-02-21 13:51:34 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.embedScreenshot:: failed :Scenario isFailed::true
+2019-02-21 13:51:34 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.embedScreenshot:: Test Type::
+2019-02-21 13:51:35 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.embedScreenshot:: EmbedScreenshot flag::true
+2019-02-21 13:51:35 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.AfterSteps:: Closing Webdriver or sessions.........
+2019-02-21 13:51:35 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.quitDriver:: inside teardown()....
+2019-02-21 13:51:36 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.quitDriver:: driver quit success.
+2019-02-21 13:51:36 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.AfterSteps:: Scenarion Execution End.
+2019-02-21 13:51:36 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.stopProxyServer:: EndBrowserProxy is Comentted
+2019-02-21 15:19:49 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.StartBrowserProxy:: StartBrowserProxy is Comentted
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Read all properties from file
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: properties file load Done.
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: testdatafilename::TD-PLCC_UAT8.properties
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Final testdatafilename::TD-PLCC_UAT8.properties
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGHEST::10000
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGH::7000
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_MEDIUM::4000
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_LOW::2000
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.BeforeSteps:: exection Start Scenario Name: Verify user is able to get Annual offer of $15 off by providing the promo code
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.BeforeSteps:: screenshortName Name::__
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: runBrowserHeadLess:: null
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: platformType:: web
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: browserType:: chrome
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeWebDriver:: initializeWebDriver() inside process......
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWebDriverFolderPath:: WebDriver Folder Path::D:\PLCCAutomation\WorkSpaceCode\qe-r2-automation-test/src/test/resources/drivers/windows/chromedriver.exe
+2019-02-21 15:19:50 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.launchChromeBrowser:: Launching Chrome Browser....................
+2019-02-21 15:19:54 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: Window size maximise........
+2019-02-21 15:19:54 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWaitTime:: WEBDRIVER_EXPLICIT_WAITTIME_SECONDS::30
+2019-02-21 15:19:54 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWaitTime:: PAGELOAD_WAITTIME_SECONDS::100
+2019-02-21 15:19:54 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: HEIGHT::698
+2019-02-21 15:19:54 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: WIDTH::1296
+2019-02-21 15:19:54 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: testURL:: null
+2019-02-21 15:19:54 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: Open Chrome browser with URL::https://perf.academy.com
+2019-02-21 15:19:59 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.waitForPageLoad:: Page load wait time seconds:100 :: isPageLoaded:true
+2019-02-21 15:19:59 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: URL page load time is: 4.75800 seconds
+2019-02-21 15:19:59 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.waitForPageLoad:: Page load wait time seconds:100 :: isPageLoaded:true
+2019-02-21 15:19:59 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 15:19:59 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 15:20:00 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 15:20:00 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:00 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='MyAccount']
+2019-02-21 15:20:00 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:01 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:01 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:01 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 15:20:01 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 15:20:01 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:01 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='MyAccount']
+2019-02-21 15:20:01 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:02 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:02 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.isClickable:: Element is clickable true
+2019-02-21 15:20:02 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 15:20:02 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 15:20:02 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 15:20:02 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:02 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='MyAccount']
+2019-02-21 15:20:02 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:08 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.clickOnButton:: Click on the button
+2019-02-21 15:20:08 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 15:20:08 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 15:20:08 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:08 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='MyAccount']
+2019-02-21 15:20:08 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:09 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:09 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 15:20:09 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 15:20:09 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:09 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='MyAccount']
+2019-02-21 15:20:09 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:10 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:10 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.isClickable:: Element is clickable true
+2019-02-21 15:20:11 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:12 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 15:20:13 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : Proxy element for: DefaultElementLocator 'By.xpath: //*[@data-auid='email_input']'
+2019-02-21 15:20:13 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: Proxy element for: DefaultElementLocator 'By.xpath: //*[@data-auid='email_input']'
+2019-02-21 15:20:13 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:13 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value:: //*[@data-auid='email_input']
+2019-02-21 15:20:43 [main] ERROR com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Exception in  isDisplay msg::Expected condition failed: waiting for presence of element located by: By.xpath: //*[@data-auid='email_input'] (tried for 30 second(s) with 500 milliseconds interval)
+2019-02-21 15:20:43 [main] DEBUG com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO.verifyPresenceOfEmailTxtField:: Email Text Field is displayed
+2019-02-21 15:20:43 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.setInputText:: Input the text box value : PLCCQAAutomation@gmail.com
+2019-02-21 15:20:43 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='emailid_input']]
+2019-02-21 15:20:43 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='emailid_input']]
+2019-02-21 15:20:43 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:43 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='emailid_input']
+2019-02-21 15:20:43 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:44 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:45 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:45 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 15:20:45 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='emailid_input']]
+2019-02-21 15:20:45 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='emailid_input']]
+2019-02-21 15:20:45 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:45 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='emailid_input']
+2019-02-21 15:20:45 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:46 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:46 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:46 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='emailid_input']]
+2019-02-21 15:20:46 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='emailid_input']]
+2019-02-21 15:20:46 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:46 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='emailid_input']
+2019-02-21 15:20:46 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:47 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:47 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.setInputText:: Input the text box value : Test@123
+2019-02-21 15:20:47 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='password_input']]
+2019-02-21 15:20:47 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='password_input']]
+2019-02-21 15:20:47 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:47 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='password_input']
+2019-02-21 15:20:47 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:48 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:48 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:48 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 15:20:48 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='password_input']]
+2019-02-21 15:20:48 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='password_input']]
+2019-02-21 15:20:48 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:48 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='password_input']
+2019-02-21 15:20:48 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:49 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:50 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:50 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='password_input']]
+2019-02-21 15:20:50 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='password_input']]
+2019-02-21 15:20:50 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:50 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='password_input']
+2019-02-21 15:20:50 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:51 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:51 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 15:20:51 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 15:20:51 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 15:20:51 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:51 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='btnemail-signin-button']
+2019-02-21 15:20:51 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:52 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:52 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:52 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 15:20:52 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 15:20:52 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:52 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='btnemail-signin-button']
+2019-02-21 15:20:52 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:53 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:53 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.isClickable:: Element is clickable true
+2019-02-21 15:20:53 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 15:20:53 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 15:20:53 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 15:20:53 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:53 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='btnemail-signin-button']
+2019-02-21 15:20:53 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:54 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:54 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:54 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.clickOnButton:: Click on the button
+2019-02-21 15:20:54 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 15:20:54 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 15:20:54 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:54 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='btnemail-signin-button']
+2019-02-21 15:20:54 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:55 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:55 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 15:20:55 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnemail-signin-button']]
+2019-02-21 15:20:55 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:20:55 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='btnemail-signin-button']
+2019-02-21 15:20:55 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:20:56 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:20:56 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.isClickable:: Element is clickable true
+2019-02-21 15:20:56 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:01 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.getCurrentPageURL:: Get the current page url
+2019-02-21 15:21:01 [main] DEBUG com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO.verifyPresenceOfASOHomePage:: User is successfully navigated to ASO Home page with URL :: https://perf.academy.com/
+2019-02-21 15:21:02 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.setInputText:: Input the text box value : 106914361
+2019-02-21 15:21:02 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='search-input']]
+2019-02-21 15:21:02 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='search-input']]
+2019-02-21 15:21:02 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:21:02 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='search-input']
+2019-02-21 15:21:02 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:21:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:03 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 15:21:03 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='search-input']]
+2019-02-21 15:21:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='search-input']]
+2019-02-21 15:21:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:21:03 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='search-input']
+2019-02-21 15:21:03 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:21:04 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:04 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:04 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='search-input']]
+2019-02-21 15:21:04 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='search-input']]
+2019-02-21 15:21:04 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:21:04 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='search-input']
+2019-02-21 15:21:04 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:21:06 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:06 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 15:21:06 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='search-clear-button']]
+2019-02-21 15:21:06 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='search-clear-button']]
+2019-02-21 15:21:06 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:21:06 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='search-clear-button']
+2019-02-21 15:21:06 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:21:07 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:07 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:07 [main] DEBUG com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO.verifyPresenceOfSearchIcon:: Search Icon is displayed
+2019-02-21 15:21:17 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.waitForPageLoad:: Page load wait time seconds:100 :: isPageLoaded:true
+2019-02-21 15:21:18 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='PDP_MediaClick']//img | //*[@data-auid='PDP_ProductImage_m']//img | (//*[@data-component='productDetailsMultiSkuPackage']//img)[1] | (//*[@data-component='productDetailsMultiSku']//img)[1] | (//*[@data-auid='PDP_MediaClick']//img)[1]]
+2019-02-21 15:21:18 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='PDP_MediaClick']//img | //*[@data-auid='PDP_ProductImage_m']//img | (//*[@data-component='productDetailsMultiSkuPackage']//img)[1] | (//*[@data-component='productDetailsMultiSku']//img)[1] | (//*[@data-auid='PDP_MediaClick']//img)[1]]
+2019-02-21 15:21:18 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:21:18 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='PDP_MediaClick']//img | //*[@data-auid='PDP_ProductImage_m']//img | (//*[@data-component='productDetailsMultiSkuPackage']//img)[1] | (//*[@data-component='productDetailsMultiSku']//img)[1] | (//*[@data-auid='PDP_MediaClick']//img)[1]
+2019-02-21 15:21:18 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:21:19 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:19 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 15:21:19 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='PDP_MediaClick']//img | //*[@data-auid='PDP_ProductImage_m']//img | (//*[@data-component='productDetailsMultiSkuPackage']//img)[1] | (//*[@data-component='productDetailsMultiSku']//img)[1] | (//*[@data-auid='PDP_MediaClick']//img)[1]]
+2019-02-21 15:21:19 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='PDP_MediaClick']//img | //*[@data-auid='PDP_ProductImage_m']//img | (//*[@data-component='productDetailsMultiSkuPackage']//img)[1] | (//*[@data-component='productDetailsMultiSku']//img)[1] | (//*[@data-auid='PDP_MediaClick']//img)[1]]
+2019-02-21 15:21:19 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:21:19 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='PDP_MediaClick']//img | //*[@data-auid='PDP_ProductImage_m']//img | (//*[@data-component='productDetailsMultiSkuPackage']//img)[1] | (//*[@data-component='productDetailsMultiSku']//img)[1] | (//*[@data-auid='PDP_MediaClick']//img)[1]
+2019-02-21 15:21:19 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:21:20 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:20 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:20 [main] DEBUG com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO.addToCartAvailability:: Add to Cart buttion is visable::true
+2019-02-21 15:21:20 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']]
+2019-02-21 15:21:20 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']]
+2019-02-21 15:21:20 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:21:20 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']
+2019-02-21 15:21:20 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:21:21 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:21 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.clickOnButton:: Click on the button
+2019-02-21 15:21:21 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']]
+2019-02-21 15:21:21 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']]
+2019-02-21 15:21:21 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:21:21 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']
+2019-02-21 15:21:21 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:21:22 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:22 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']]
+2019-02-21 15:21:22 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (fe751a0c4a6d4624a2f5253ae334508b)] -> xpath: //*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']]
+2019-02-21 15:21:22 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:21:22 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']
+2019-02-21 15:21:22 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:21:23 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:23 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.isClickable:: Element is clickable true
+2019-02-21 15:21:23 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:23 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 15:21:24 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : Proxy element for: DefaultElementLocator 'By.xpath: //*[@data-auid='btnviewCart']'
+2019-02-21 15:21:24 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: Proxy element for: DefaultElementLocator 'By.xpath: //*[@data-auid='btnviewCart']'
+2019-02-21 15:21:24 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:21:24 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value:: //*[@data-auid='btnviewCart']
+2019-02-21 15:21:33 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
+2019-02-21 15:21:43 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:47 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.captureScreenShot:: Status::PASS
+2019-02-21 15:21:47 [main] DEBUG com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO.verifyPresenceOfViewCartBtn:: View Cart button is displayed++++++++++++++++++++++++==
+2019-02-21 15:21:53 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.AfterSteps:: exection End Scenario Name: Verify user is able to get Annual offer of $15 off by providing the promo code  :: Status:undefined
+2019-02-21 15:21:53 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.embedScreenshot:: undefined :Scenario isFailed::false
+2019-02-21 15:21:53 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.embedScreenshot:: Test Type::
+2019-02-21 15:21:53 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.AfterSteps:: Closing Webdriver or sessions.........
+2019-02-21 15:21:53 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.quitDriver:: inside teardown()....
+2019-02-21 15:21:54 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.quitDriver:: driver quit success.
+2019-02-21 15:21:54 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.AfterSteps:: Scenarion Execution End.
+2019-02-21 15:21:54 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.stopProxyServer:: EndBrowserProxy is Comentted
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.StartBrowserProxy:: StartBrowserProxy is Comentted
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Read all properties from file
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: properties file load Done.
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: testdatafilename::TD-PLCC_UAT8.properties
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.<init>:: Final testdatafilename::TD-PLCC_UAT8.properties
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGHEST::10000
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_HIGH::7000
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_MEDIUM::4000
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.common.PropertiesHelper.getWaitTime:: THREAD_LOW::2000
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.BeforeSteps:: exection Start Scenario Name: Verify user is able to get Annual offer of $15 off by providing the promo code
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.test.stepdefinition.web.plcc.Hooks.BeforeSteps:: screenshortName Name::__
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: runBrowserHeadLess:: null
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: platformType:: web
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: browserType:: chrome
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeWebDriver:: initializeWebDriver() inside process......
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWebDriverFolderPath:: WebDriver Folder Path::D:\PLCCAutomation\WorkSpaceCode\qe-r2-automation-test/src/test/resources/drivers/windows/chromedriver.exe
+2019-02-21 15:22:34 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.launchChromeBrowser:: Launching Chrome Browser....................
+2019-02-21 15:22:37 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: Window size maximise........
+2019-02-21 15:22:38 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWaitTime:: WEBDRIVER_EXPLICIT_WAITTIME_SECONDS::30
+2019-02-21 15:22:38 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.getWaitTime:: PAGELOAD_WAITTIME_SECONDS::100
+2019-02-21 15:22:38 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: HEIGHT::698
+2019-02-21 15:22:38 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.initializeDriver:: WIDTH::1296
+2019-02-21 15:22:38 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: testURL:: null
+2019-02-21 15:22:38 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: Open Chrome browser with URL::https://perf.academy.com
+2019-02-21 15:22:41 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.waitForPageLoad:: Page load wait time seconds:100 :: isPageLoaded:true
+2019-02-21 15:22:41 [main] DEBUG com.aso.qe.framework.web.helpers.WebDriverHelper.openBaseURL:: URL page load time is: 3.52200 seconds
+2019-02-21 15:22:42 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.waitForPageLoad:: Page load wait time seconds:100 :: isPageLoaded:true
+2019-02-21 15:22:42 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.isDisplayed:: Check if the Webelement is displayed
+2019-02-21 15:22:42 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.waitForElement:: Waiting for element : [[ChromeDriver: chrome on XP (c2f0aa0d3eabff514319cd14a0083af7)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 15:22:43 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Element String:: [[ChromeDriver: chrome on XP (c2f0aa0d3eabff514319cd14a0083af7)] -> xpath: //*[@data-auid='MyAccount']]
+2019-02-21 15:22:43 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Type::xpath
+2019-02-21 15:22:43 [main] DEBUG com.aso.qe.framework.common.CommonActionHelper.getbjectLocator:: Locator Value::  //*[@data-auid='MyAccount']
+2019-02-21 15:22:43 [main] INFO  com.aso.qe.framework.common.CommonActionHelper.scrollPageToWebElement:: ScrollPage to Element
