@@ -9,6 +9,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -285,15 +286,17 @@ public class Common_Web_SD_PLCC extends CommonActionHelper
 	}
 	@Then("^user close the newly opened tab$")
 	public void user_close_the_newly_opened_tab() throws Throwable {
-		Set<String> winSet = driver.getWindowHandles();
+		/*Set<String> winSet = driver.getWindowHandles();
 		List<String> winList = new ArrayList<String>(winSet);
 		String newTab = winList.get(winList.size());
-		/*while(winList.contains(newTab))
+		while(winList.contains(newTab))
 		{
 			subWindowhandler = itertor.next();
 			driver.switchTo().window(subWindowhandler);
 			System.out.println(subWindowhandler);
-		}*/
-		driver.close();
+		}
+		driver.close();*/
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
 	}
 }

@@ -14,4 +14,8 @@ public class R1_Discounts_BuyNow_106_Web extends CommonActionHelper{
 		genericPO.verifyPresenceOfBuyNowButton();
 		genericPO.buyNowButton.click();
 	}
+	@When("^user click on Buy Now in pop up modal$")
+	public void user_click_on_Buy_Now_in_pop_up_modal() throws Throwable {
+		genericPO.buyNowButton.click();
+	}
 }
