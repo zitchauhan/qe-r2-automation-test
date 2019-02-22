@@ -1,17 +1,19 @@
 package com.aso.qe.test.stepdefinition.api.plcc;
 
-import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
+
 import org.apache.log4j.Logger;
+
 import com.aso.qe.framework.api.helpers.JSONValidationUtils;
 import com.aso.qe.framework.api.json.JsonReaderCommon;
 import com.aso.qe.framework.common.FrameWorkHelper;
+import com.aso.qe.test.common.JsonReaderCommonPlcc;
 import com.aso.qe.test.stepdefinition.api.R1SP1_Categories_ProductsByCategorySD;
 import com.github.fge.jsonschema.core.exceptions.ProcessingException;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import io.restassured.path.json.JsonPath;
@@ -24,8 +26,8 @@ public class createUserProfile extends JSONValidationUtils {
 	public void endpoint_with_for_user_registration_with_plcc_changes(String PLCCRegistrationUrl, String PLCCRegistrationPostRequest) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCRegistrationUrl);
 		logger.debug("END Point URL:"+endpoints);
-		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
-		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommonPlcc.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
+		logger.info(JsonReaderCommonPlcc.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
 		regEmailId= "PLCCQA"+FrameWorkHelper.getRandomAlphabetic(6).toLowerCase()+"@plccmail.com";
 		postRequestStr = postRequestStr.replace("REPLACE_LOGONID",regEmailId)
 				.replaceAll("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword"));
@@ -43,8 +45,8 @@ public class createUserProfile extends JSONValidationUtils {
 	@Then("^validate jsonSchema \"(.*?)\" for plcc$")
 	public void validate_jsonSchema_for_plcc(String jsonSchemaFilePath) throws Throwable {
 		try {
-			boolean flag = isJsonValid(convertJsonFileToString(JsonReaderCommon.jsonSchemaFolderPathPLCC+ jsonSchemaFilePath+".json"), response.asString());
-			logger.info("schema file is"+JsonReaderCommon.jsonSchemaFolderPathPLCC+ jsonSchemaFilePath+".json");
+			boolean flag = isJsonValid(convertJsonFileToString(JsonReaderCommonPlcc.jsonSchemaFolderPathPLCC+ jsonSchemaFilePath+".json"), response.asString());
+			logger.info("schema file is"+JsonReaderCommonPlcc.jsonSchemaFolderPathPLCC+ jsonSchemaFilePath+".json");
 			logger.debug("JSON Schema Validate FLAG:: "+flag);
 			assertTrue(flag);
 		} catch (ProcessingException e) {
@@ -77,8 +79,8 @@ public class createUserProfile extends JSONValidationUtils {
 	public void endpoint_with_for_user_registration_with_invalid_data(String PLCCRegistrationUrl, String PLCCRegistrationPostRequest) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCRegistrationUrl);
 		logger.debug("END Point URL:"+endpoints);
-		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
-		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommonPlcc.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
+		logger.info(JsonReaderCommonPlcc.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
 		regEmailId= "PLCCQA"+FrameWorkHelper.getRandomAlphabetic(6).toLowerCase()+"plccmail.com";
 		postRequestStr = postRequestStr.replace("REPLACE_LOGONID",regEmailId)
 				.replaceAll("REPLACE_PASSWORD", loadProps.getTestDataProperty("RegistrationUserPassword"));
@@ -97,8 +99,8 @@ public class createUserProfile extends JSONValidationUtils {
 		System.setProperty("ProfileId", "");
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCRegistrationUrl);
 		logger.debug("END Point URL:"+endpoints);
-		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
-		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommonPlcc.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
+		logger.info(JsonReaderCommonPlcc.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCRegistrationPostRequest)+".json");
 		JsonPath jsonPathEvaluator = response.jsonPath();
 		String  profileID = jsonPathEvaluator.get("identity.userId");
 		logger.debug("Profile ID::"+ profileID);
@@ -111,8 +113,8 @@ public class createUserProfile extends JSONValidationUtils {
 	public void endpoint_with_for_user_registration_with_plcc_changes_for_invalid_address(String PLCCInvalidRegistrationUrl, String PLCCInvalidRegistrationPostRequest) throws Throwable {
 		String endpoints=apiEndpointIP+loadProps.getTestDataProperty(PLCCInvalidRegistrationUrl);
 		logger.debug("END Point URL:"+endpoints);
-		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCInvalidRegistrationPostRequest)+".json");
-		logger.info(JsonReaderCommon.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCInvalidRegistrationPostRequest)+".json");
+		String postRequestStr = JSONValidationUtils.convertJsonFileToString(JsonReaderCommonPlcc.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCInvalidRegistrationPostRequest)+".json");
+		logger.info(JsonReaderCommonPlcc.jsonRequestFolderPathPLCC+ loadProps.getTestDataProperty(PLCCInvalidRegistrationPostRequest)+".json");
 	}
 
 

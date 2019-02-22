@@ -32,6 +32,9 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	// text().
 	@FindBy(xpath = "//*[@data-auid='btncheckout']")
 	public WebElement checkoutBtnATC;
+	@FindBy(xpath = "//*[@data-auid='btnCheckout']")
+	public WebElement checkoutBtnATCCartPage;
+	
 
 	@FindBy(xpath = "//*[text()='PayPal']")
 	public WebElement payPalPaymentOption;
@@ -106,7 +109,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
 	
 	//Promotions:
-	@FindBy(xpath = "//*[@data-auid='crt_btnAddPromo']")
+	@FindBy(xpath = "//*[text()='Add Promo code']")
 	public WebElement addPromoCodeLink;
 	@FindBy(xpath = "//*[@data-auid='crt_inputPromo']")
 	public WebElement promoCodeInputField;
@@ -120,13 +123,58 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement orderSummarySection;
 	@FindBy(xpath = "//*[@data-auid='btnviewCart']")
 	public WebElement viewCartBtn;
+	@FindBy(xpath = "//*[@class='container p-0 css-g2tac']")
+	public WebElement addPromoSection;
+	@FindBy(xpath = "//*[@data-auid='crt_btnRmPromo_0']")
+	public WebElement removePromoCodeLink;
+	@FindBy(xpath = "//*[@data-auid='crt_inputQty']")
+	public WebElement quantityInputField;
+	
 	
 	//enter Prmo Code
 	public void enterPromoCode(String arg) throws Exception {
 		setInputText(promoCodeInputField, webPropHelper.getTestDataProperty(arg));
 	}
 
+	public void verifyPresenceOfRemovePromoCard() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(removePromoCodeLink);
+			logger.debug("Remove Promo Card is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(removePromoCodeLink);
+			logger.debug("Remove Promo Card is displayed++++++++++++++++++++++++==");
+		}
+
+	}
 	
+	public void verifyPresenceOfCheckoutLinkOnCartPage() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(checkoutBtnATCCartPage);
+			logger.debug("Checkout Link is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(checkoutBtnATCCartPage);
+			logger.debug("Checkout Link is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	public void verifyPresenceOfQuantityInput() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(quantityInputField);
+			logger.debug("Quantity Input field is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(quantityInputField);
+			logger.debug("Quantity Input field is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	
+
+	public void enterItemQuantity(String arg) throws Exception {
+		setInputText(quantityInputField, webPropHelper.getTestDataProperty(arg));
+	}
 	
 	public void verifyPresenceOfViewCartBtn() throws Exception {
 
@@ -136,6 +184,17 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		} else {
 			isDisplayed(viewCartBtn);
 			logger.debug("View Cart button is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	public void verifyPresenceOfPromoCodeSection() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(addPromoSection);
+			logger.debug("Promo code section is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(addPromoSection);
+			logger.debug("Promo code section is displayed++++++++++++++++++++++++==");
 		}
 
 	}
