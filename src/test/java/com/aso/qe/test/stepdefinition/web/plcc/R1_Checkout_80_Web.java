@@ -67,6 +67,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		pdpPageObj.addToCartAvailability();
 		waitForElement(pdpPageObj.btnAddToCart);
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+		Thread.sleep(5000);
 	}
 
 	@When("^user click on search icon$")
