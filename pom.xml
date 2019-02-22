@@ -105,6 +105,9 @@
 			<id>sonatype-releases</id>
 			<url>https://oss.sonatype.org/content/repositories/releases/</url>
 		</repository>
+		<repository><id>localrepo</id>
+			<url>file://${basedir}/jar</url>
+			 </repository> 
 	</repositories>
 	<dependencies>
 		<dependency>
@@ -207,7 +210,9 @@
 			<groupId>ASO</groupId>
 			<artifactId>qe-automation-framework</artifactId>
 			<version>1.0.1</version>
+
 		</dependency> 
+
 		<dependency>
 			<groupId>com.vimalselvam</groupId>
 			<artifactId>cucumber-extentsreport</artifactId>
