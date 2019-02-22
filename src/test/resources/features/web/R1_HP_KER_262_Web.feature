@@ -1,3 +1,5 @@
+# Blocking this feaure in UAT7 Regression suite since this is a existing PROD defect
+@ignoreUAT7
 Feature: [Desktop]Components - Header
 
   @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-4072 @CR-RKA @1HR
