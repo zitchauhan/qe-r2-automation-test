@@ -1,5 +1,4 @@
-Feature: Response Modals_Success Modal
-
+Feature: PLCC: Response Modals_Success Modal
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
@@ -13,7 +12,7 @@ Background:  Common Pre-requisite steps
 	Then user navigates to Generic Credit Card Application Modal
 	 	
 @C-PLCC @Regression @All @PLCC-51 @CR-VS 
-Scenario: Verify the system behavior when user clicks on Continue button on Credit Card application model 1
+Scenario: Verify is able to navigate to Welcome, PHIL Collins !(FPO) model
 	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName"
 	And user enter Last four SSN "Last4DigitsOfSSN"
@@ -32,9 +31,5 @@ Scenario: Verify the system behavior when user clicks on Continue button on Cred
 	And user verify presence of STEP2: CONSENT
 	And user select credit application modal agree message 
 	Then user navigates to credit card approval modal 
-	When user click on continue to checkout 
+	#When user click on continue to checkout 
 	
-	
-	
-	
-

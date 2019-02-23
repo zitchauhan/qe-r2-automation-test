@@ -43,5 +43,10 @@ public class R1_CCAM_Response_Success_93_Web extends CommonActionHelper{
 	public void user_expect_element_continue_to_shopping_button_to_be_present() throws Throwable {
 		ccAplicationModal_PO.verifyPresenceOfContinueToShopping();
 }
+	@Then("^user click on return to application$")
+	public void user_click_on_return_to_application() throws Throwable {
+		ccAplicationModal_PO.returnToShoppingButton.click();
+}
+	
 	
 	}
