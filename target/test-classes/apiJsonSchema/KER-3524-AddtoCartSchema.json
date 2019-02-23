@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "addToCart": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        },
+        "errorMessage": {
+          "type": "string"
+        },
+        "orderTotal": {
+          "type": "string"
+        },
+        "itemCount": {
+          "type": "integer"
+        },
+        "orderId": {
+          "type": "array",
+          "items": {}
+        },
+        "items": {
+          "type": "array",
+          "items": {}
+        },
+        "totalQuantityAdded": {
+          "type": "string"
+        },
+        "totalCartQuantity": {
+          "type": "string"
+        },
+        "cartURL": {
+          "type": "string"
+        },
+        "displayPrice": {
+          "type": "string"
+        },
+        "checkoutURL": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "message",
+        "errorMessage",
+        "orderTotal",
+        "itemCount",
+        "orderId",
+        "items",
+        "totalQuantityAdded",
+        "totalCartQuantity",
+        "cartURL",
+        "displayPrice",
+        "checkoutURL"
+      ]
+    }
+  },
+  "required": [
+    "addToCart"
+  ]
+}

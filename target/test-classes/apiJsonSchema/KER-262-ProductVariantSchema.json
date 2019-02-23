@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "variantValue": {
+      "type": "string"
+    },
+    "variantType": {
+      "type": "string"
+    },
+    "productId": {
+      "type": "string"
+    },
+    "seoIdentifier": {
+      "type": "string"
+    },
+    "recordFound": {
+      "type": "string"
+    },
+    "itemId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "variantValue",
+    "variantType",
+    "productId",
+    "seoIdentifier",
+    "recordFound",
+    "itemId"
+  ]
+}

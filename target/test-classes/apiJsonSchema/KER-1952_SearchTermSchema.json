@@ -1,0 +1,3400 @@
+{
+  "recordSetTotal" : "12846",
+  "recordSetCount" : "50",
+  "isRedirect" : "false",
+  "sortByInfo" : [ {
+    "name" : "Most Relevant",
+    "id" : "0",
+    "selectedProperty" : "no"
+  }, {
+    "name" : "Brand (A-Z)",
+    "id" : "1",
+    "selectedProperty" : "no"
+  }, {
+    "name" : "Price (Low-High)",
+    "id" : "3",
+    "selectedProperty" : "no"
+  }, {
+    "name" : "Price (High-Low)",
+    "id" : "4",
+    "selectedProperty" : "no"
+  }, {
+    "name" : "Top Rated",
+    "id" : "5",
+    "selectedProperty" : "no"
+  }, {
+    "name" : "Most Viewed",
+    "id" : "6",
+    "selectedProperty" : "no"
+  }, {
+    "name" : "Best Selling",
+    "id" : "7",
+    "selectedProperty" : "no"
+  }, {
+    "name" : "New Arrivals",
+    "id" : "8",
+    "selectedProperty" : "no"
+  } ],
+  "facets" : [ {
+    "id" : "-1001",
+    "totalCount" : 50275,
+    "name" : "Category",
+    "allowMultipleValueSelection" : "false",
+    "displaySequence" : "-12.0",
+    "property" : "parentCatgroup_id_search",
+    "labels" : [ {
+      "property" : "15415",
+      "seoUrl" : "/shop/browse/search?searchTerm=shirt&langId=-1&currency=USD&catalogId=10051&storeId=10151&categoryId=15415",
+      "name" : "Fan Shop",
+      "count" : "9644",
+      "id" : "15415"
+    }, {
+      "property" : "15053",
+      "seoUrl" : "/shop/browse/search?searchTerm=shirt&langId=-1&currency=USD&catalogId=10051&storeId=10151&categoryId=15053",
+      "name" : "Clothing",
+      "count" : "2849",
+      "id" : "15053"
+    }, {
+      "property" : "146752",
+      "seoUrl" : "/shop/browse/search?searchTerm=shirt&langId=-1&currency=USD&catalogId=10051&storeId=10151&categoryId=146752",
+      "name" : "Brands",
+      "count" : "615",
+      "id" : "146752"
+    }, {
+      "property" : "220432",
+      "seoUrl" : "/shop/browse/search?searchTerm=shirt&langId=-1&currency=USD&catalogId=10051&storeId=10151&categoryId=220432",
+      "name" : "Sports",
+      "count" : "359",
+      "id" : "220432"
+    }, {
+      "property" : "197936",
+      "seoUrl" : "/shop/browse/search?searchTerm=shirt&langId=-1&currency=USD&catalogId=10051&storeId=10151&categoryId=197936",
+      "name" : "Shops",
+      "count" : "324",
+      "id" : "197936"
+    }, {
+      "property" : "3074457345616906598",
+      "seoUrl" : "/shop/browse/search?searchTerm=shirt&langId=-1&currency=USD&catalogId=10051&storeId=10151&categoryId=3074457345616906598",
+      "name" : "Test-Clearance",
+      "count" : "140",
+      "id" : "3074457345616906598"
+    }, {
+      "property" : "220431",
+      "seoUrl" : "/shop/browse/search?searchTerm=shirt&langId=-1&currency=USD&catalogId=10051&storeId=10151&categoryId=220431",
+      "name" : "Outdoors",
+      "count" : "91",
+      "id" : "220431"
+    } ]
+  }, {
+    "id" : "-1000",
+    "totalCount" : 12846,
+    "name" : "Brand",
+    "allowMultipleValueSelection" : "true",
+    "displaySequence" : "-11.0",
+    "property" : "mfName_ntk_cs",
+    "labels" : [ {
+      "property" : "mfName_ntk_cs%3A%22%2747%22",
+      "name" : "'47",
+      "count" : "426",
+      "id" : "-1002395255"
+    }, {
+      "property" : "mfName_ntk_cs%3A%223N2%22",
+      "name" : "3N2",
+      "count" : "4",
+      "id" : "-1002517850"
+    }, {
+      "property" : "mfName_ntk_cs%3A%225.11+Tactical%22",
+      "name" : "5.11 Tactical",
+      "count" : "22",
+      "id" : "-100253464949328497991161059997108"
+    }, {
+      "property" : "mfName_ntk_cs%3A%225th+%26+Ocean+Clothing%22",
+      "name" : "5th & Ocean Clothing",
+      "count" : "31",
+      "id" : "-1002531161043238327999101971103267108111116104105110103"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22AFTCO+Bluewater%22",
+      "name" : "AFTCO Bluewater",
+      "count" : "3",
+      "id" : "-10026570846779326610811710111997116101114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Above+Wings%22",
+      "name" : "Above Wings",
+      "count" : "1",
+      "id" : "-100265981111181013287105110103115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Academy+Sports+%2B+Outdoors%22",
+      "name" : "Academy Sports + Outdoors",
+      "count" : "8",
+      "id" : "-1002659997100101109121328311211111411611532433279117116100111111114115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Academy+Sports+%2B+Outdoors%E2%84%A2%22",
+      "name" : "Academy Sports + Outdoors™",
+      "count" : "14",
+      "id" : "-10026599971001011091213283112111114116115324332791171161001111111141158482"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Adidas%22",
+      "name" : "Adidas",
+      "count" : "1027",
+      "id" : "-10026510010510097115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22All+Star+Rods%22",
+      "name" : "All Star Rods",
+      "count" : "1",
+      "id" : "-1002651081083283116971143282111100115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Antigua%22",
+      "name" : "Antigua",
+      "count" : "880",
+      "id" : "-10026511011610510311797"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Ariat%22",
+      "name" : "Ariat",
+      "count" : "14",
+      "id" : "-10026511410597116"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Arnold+Palmer+Apparel%22",
+      "name" : "Arnold Palmer Apparel",
+      "count" : "6",
+      "id" : "-100265114110111108100328097108109101114326511211297114101108"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Atlanta+Hosiery+Company%22",
+      "name" : "Atlanta Hosiery Company",
+      "count" : "1",
+      "id" : "-10026511610897110116973272111115105101114121326711110911297110121"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Austin+Trading+Co.%22",
+      "name" : "Austin Trading Co.",
+      "count" : "14",
+      "id" : "-100265117115116105110328411497100105110103326711146"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22BCG%22",
+      "name" : "BCG",
+      "count" : "290",
+      "id" : "-1002666771"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Bayou+Apparel%22",
+      "name" : "Bayou Apparel",
+      "count" : "11",
+      "id" : "-10026697121111117326511211297114101108"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Ben%27s%22",
+      "name" : "Ben's",
+      "count" : "1",
+      "id" : "-10026610111039115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Berkley%22",
+      "name" : "Berkley",
+      "count" : "2",
+      "id" : "-100266101114107108101121"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Berne%22",
+      "name" : "Berne",
+      "count" : "3",
+      "id" : "-100266101114110101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Bianchi%22",
+      "name" : "Bianchi",
+      "count" : "12",
+      "id" : "-1002661059711099104105"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Big+Bend+Outfitters%22",
+      "name" : "Big Bend Outfitters",
+      "count" : "18",
+      "id" : "-10026610510332661011101003279117116102105116116101114115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Blackhawk%22",
+      "name" : "Blackhawk",
+      "count" : "2",
+      "id" : "-100266108979910710497119107"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Blackhawk%21%22",
+      "name" : "Blackhawk!",
+      "count" : "2",
+      "id" : "-10026610897991071049711910733"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Blue+84%22",
+      "name" : "Blue 84",
+      "count" : "165",
+      "id" : "-100266108117101325652"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Bone+Collector%22",
+      "name" : "Bone Collector",
+      "count" : "3",
+      "id" : "-100266111110101326711110810810199116111114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Boombah%22",
+      "name" : "Boombah",
+      "count" : "3",
+      "id" : "-1002661111111099897104"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Boxercraft%22",
+      "name" : "Boxercraft",
+      "count" : "16",
+      "id" : "-1002661111201011149911497102116"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Brava+Soccer%22",
+      "name" : "Brava Soccer",
+      "count" : "4",
+      "id" : "-100266114971189732831119999101114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Brazos%22",
+      "name" : "Brazos",
+      "count" : "2",
+      "id" : "-10026611497122111115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Browning%22",
+      "name" : "Browning",
+      "count" : "110",
+      "id" : "-100266114111119110105110103"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Buck+Commander%22",
+      "name" : "Buck Commander",
+      "count" : "1",
+      "id" : "-10026611799107326711110910997110100101114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Buck+Wear%22",
+      "name" : "Buck Wear",
+      "count" : "5",
+      "id" : "-10026611799107328710197114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22CCA%22",
+      "name" : "CCA",
+      "count" : "35",
+      "id" : "-1002676765"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22CCM%22",
+      "name" : "CCM",
+      "count" : "11",
+      "id" : "-1002676777"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22COED+Sportswear%22",
+      "name" : "COED Sportswear",
+      "count" : "20",
+      "id" : "-100267796968328311211111411611511910197114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Calcutta%22",
+      "name" : "Calcutta",
+      "count" : "1",
+      "id" : "-100267971089911711611697"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Callaway%22",
+      "name" : "Callaway",
+      "count" : "6",
+      "id" : "-100267971081089711997121"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Canari%22",
+      "name" : "Canari",
+      "count" : "4",
+      "id" : "-1002679711097114105"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Carhartt%22",
+      "name" : "Carhartt",
+      "count" : "52",
+      "id" : "-1002679711410497114116116"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Century%22",
+      "name" : "Century",
+      "count" : "8",
+      "id" : "-100267101110116117114121"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Champion%22",
+      "name" : "Champion",
+      "count" : "192",
+      "id" : "-10026710497109112105111110"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Changes%22",
+      "name" : "Changes",
+      "count" : "4",
+      "id" : "-10026710497110103101115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Chicka-d%22",
+      "name" : "Chicka-d",
+      "count" : "82",
+      "id" : "-100267104105991079745100"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Chiliwear%22",
+      "name" : "Chiliwear",
+      "count" : "1",
+      "id" : "-10026710410510810511910197114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Colosseum+Athletics%22",
+      "name" : "Colosseum Athletics",
+      "count" : "1338",
+      "id" : "-100267111108111115115101117109326511610410810111610599115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Columbia%22",
+      "name" : "Columbia",
+      "count" : "1",
+      "id" : "-1002671111081171099810597"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Columbia+Sportswear%22",
+      "name" : "Columbia Sportswear",
+      "count" : "364",
+      "id" : "-1002671111081171099810597328311211111411611511910197114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Concepts+Sport%22",
+      "name" : "Concepts Sport",
+      "count" : "14",
+      "id" : "-100267111110991011121161153283112111114116"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Costa+Del+Mar%22",
+      "name" : "Costa Del Mar",
+      "count" : "44",
+      "id" : "-100267111115116973268101108327797114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Dallas+Cowboys%22",
+      "name" : "Dallas Cowboys",
+      "count" : "29",
+      "id" : "-1002689710810897115326711111998111121115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22DeSantis+Gunhide%22",
+      "name" : "DeSantis Gunhide",
+      "count" : "2",
+      "id" : "-10026810183971101161051153271117110104105100101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Dickies%22",
+      "name" : "Dickies",
+      "count" : "25",
+      "id" : "-10026810599107105101115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Drake+Waterfowl%22",
+      "name" : "Drake Waterfowl",
+      "count" : "31",
+      "id" : "-10026811497107101328797116101114102111119108"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Duck+Commander%22",
+      "name" : "Duck Commander",
+      "count" : "6",
+      "id" : "-10026811799107326711110910997110100101114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Ducks+Unlimited%22",
+      "name" : "Ducks Unlimited",
+      "count" : "22",
+      "id" : "-100268117991071153285110108105109105116101100"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22E5%22",
+      "name" : "E5",
+      "count" : "11",
+      "id" : "-10026953"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Edna+Rose%22",
+      "name" : "Edna Rose",
+      "count" : "91",
+      "id" : "-100269100110973282111115101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Everlast%22",
+      "name" : "Everlast",
+      "count" : "1",
+      "id" : "-10026911810111410897115116"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22EvoShield%22",
+      "name" : "EvoShield",
+      "count" : "3",
+      "id" : "-10026911811183104105101108100"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22FireBrand+Apparel%22",
+      "name" : "FireBrand Apparel",
+      "count" : "7",
+      "id" : "-1002701051141016611497110100326511211297114101108"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22French+Toast%22",
+      "name" : "French Toast",
+      "count" : "52",
+      "id" : "-10027011410111099104328411197115116"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22G-III+Sports%22",
+      "name" : "G-III Sports",
+      "count" : "2",
+      "id" : "-100271457373733283112111114116115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22G-III+for+Her%22",
+      "name" : "G-III for Her",
+      "count" : "15",
+      "id" : "-10027145737373321021111143272101114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Game+Winner%22",
+      "name" : "Game Winner",
+      "count" : "17",
+      "id" : "-100271971091013287105110110101114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Gauge%22",
+      "name" : "Gauge",
+      "count" : "5",
+      "id" : "-10027197117103101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Gen2%22",
+      "name" : "Gen2",
+      "count" : "140",
+      "id" : "-10027110111050"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Genuine+Stuff%22",
+      "name" : "Genuine Stuff",
+      "count" : "1",
+      "id" : "-1002711011101171051101013283116117102102"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Gildan%22",
+      "name" : "Gildan",
+      "count" : "1",
+      "id" : "-10027110510810097110"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Glitter+Gear%22",
+      "name" : "Glitter Gear",
+      "count" : "14",
+      "id" : "-100271108105116116101114327110197114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Guy+Harvey%22",
+      "name" : "Guy Harvey",
+      "count" : "101",
+      "id" : "-100271117121327297114118101121"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22H2O+XPRESS%22",
+      "name" : "H2O XPRESS",
+      "count" : "1",
+      "id" : "-100272507932888082698383"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Hard+Core%22",
+      "name" : "Hard Core",
+      "count" : "1",
+      "id" : "-100272971141003267111114101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Heybo%22",
+      "name" : "Heybo",
+      "count" : "36",
+      "id" : "-10027210112198111"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Hot+Chillys%22",
+      "name" : "Hot Chillys",
+      "count" : "4",
+      "id" : "-1002721111163267104105108108121115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Huk%22",
+      "name" : "Huk",
+      "count" : "35",
+      "id" : "-100272117107"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Hurley%22",
+      "name" : "Hurley",
+      "count" : "1",
+      "id" : "-100272117114108101121"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Image+One%22",
+      "name" : "Image One",
+      "count" : "340",
+      "id" : "-100273109971031013279110101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Intensity%22",
+      "name" : "Intensity",
+      "count" : "2",
+      "id" : "-100273110116101110115105116121"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Jones+%26+Mitchell%22",
+      "name" : "Jones & Mitchell",
+      "count" : "6",
+      "id" : "-1002741111101011153238327710511699104101108108"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Knights+Apparel%22",
+      "name" : "Knights Apparel",
+      "count" : "6",
+      "id" : "-100275110105103104116115326511211297114101108"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Layer+8%22",
+      "name" : "Layer 8",
+      "count" : "4",
+      "id" : "-100276971211011143256"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Lee%22",
+      "name" : "Lee",
+      "count" : "9",
+      "id" : "-100276101101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Levelwear%22",
+      "name" : "Levelwear",
+      "count" : "3",
+      "id" : "-10027610111810110811910197114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Levi%27s%22",
+      "name" : "Levi's",
+      "count" : "2",
+      "id" : "-10027610111810539115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Life+is+good%22",
+      "name" : "Life is good",
+      "count" : "19",
+      "id" : "-1002761051021013210511532103111111100"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Live+Outside+the+Limits%22",
+      "name" : "Live Outside the Limits",
+      "count" : "6",
+      "id" : "-1002761051181013279117116115105100101321161041013276105109105116115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Love+%26+Pineapples%22",
+      "name" : "Love & Pineapples",
+      "count" : "29",
+      "id" : "-1002761111181013238328010511010197112112108101115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22MLB%22",
+      "name" : "MLB",
+      "count" : "99",
+      "id" : "-1002777666"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Magellan+Outdoors%22",
+      "name" : "Magellan Outdoors",
+      "count" : "188",
+      "id" : "-10027797103101108108971103279117116100111111114115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Majestic%22",
+      "name" : "Majestic",
+      "count" : "1388",
+      "id" : "-1002779710610111511610599"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Marmot%22",
+      "name" : "Marmot",
+      "count" : "8",
+      "id" : "-10027797114109111116"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Marucci%22",
+      "name" : "Marucci",
+      "count" : "4",
+      "id" : "-100277971141179999105"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Military+Veteran%22",
+      "name" : "Military Veteran",
+      "count" : "1",
+      "id" : "-10027710510810511697114121328610111610111497110"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Mizuno%22",
+      "name" : "Mizuno",
+      "count" : "11",
+      "id" : "-100277105122117110111"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Mossberg%22",
+      "name" : "Mossberg",
+      "count" : "1",
+      "id" : "-10027711111511598101114103"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Mountain+Hardwear%22",
+      "name" : "Mountain Hardwear",
+      "count" : "5",
+      "id" : "-1002771111171101169710511032729711410011910197114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22NBA%22",
+      "name" : "NBA",
+      "count" : "41",
+      "id" : "-1002786665"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22NCAA%22",
+      "name" : "NCAA",
+      "count" : "8",
+      "id" : "-100278676565"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22NFL%22",
+      "name" : "NFL",
+      "count" : "106",
+      "id" : "-1002787076"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22NHL%22",
+      "name" : "NHL",
+      "count" : "3",
+      "id" : "-1002787276"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22New+Balance%22",
+      "name" : "New Balance",
+      "count" : "1",
+      "id" : "-1002781011193266971089711099101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22New+World+Graphics%22",
+      "name" : "New World Graphics",
+      "count" : "699",
+      "id" : "-100278101119328711111410810032711149711210410599115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Nike%22",
+      "name" : "Nike",
+      "count" : "2176",
+      "id" : "-100278105107101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22O%27Rageous%22",
+      "name" : "O'Rageous",
+      "count" : "15",
+      "id" : "-100279398297103101111117115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22OVB%22",
+      "name" : "OVB",
+      "count" : "50",
+      "id" : "-1002798666"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Oakley%22",
+      "name" : "Oakley",
+      "count" : "5",
+      "id" : "-10027997107108101121"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Outhouse+Designs%22",
+      "name" : "Outhouse Designs",
+      "count" : "1",
+      "id" : "-1002791171161041111171151013268101115105103110115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22OutlineTheSky%22",
+      "name" : "OutlineTheSky",
+      "count" : "1",
+      "id" : "-1002791171161081051101018410410183107121"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22PAST%22",
+      "name" : "PAST",
+      "count" : "1",
+      "id" : "-100280658384"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22PENN%22",
+      "name" : "PENN",
+      "count" : "1",
+      "id" : "-100280697878"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22PGA+TOUR%22",
+      "name" : "PGA TOUR",
+      "count" : "2",
+      "id" : "-10028071653284798582"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22POINT+Sportswear%22",
+      "name" : "POINT Sportswear",
+      "count" : "1",
+      "id" : "-10028079737884328311211111411611511910197114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Porto+Cruz%22",
+      "name" : "Porto Cruz",
+      "count" : "2",
+      "id" : "-1002801111141161113267114117122"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Pressbox%22",
+      "name" : "Pressbox",
+      "count" : "2",
+      "id" : "-10028011410111511598111120"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Raw+State%22",
+      "name" : "Raw State",
+      "count" : "45",
+      "id" : "-10028297119328311697116101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Rawlings%22",
+      "name" : "Rawlings",
+      "count" : "21",
+      "id" : "-10028297119108105110103115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Rawlings%C2%AE%22",
+      "name" : "Rawlings®",
+      "count" : "1",
+      "id" : "-10028297119108105110103115174"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Realtree%22",
+      "name" : "Realtree",
+      "count" : "16",
+      "id" : "-10028210197108116114101101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Realtree+Girl%22",
+      "name" : "Realtree Girl",
+      "count" : "4",
+      "id" : "-100282101971081161141011013271105114108"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Realtree+Outfitters%22",
+      "name" : "Realtree Outfitters",
+      "count" : "3",
+      "id" : "-100282101971081161141011013279117116102105116116101114115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Red+Jacket+Firearms%22",
+      "name" : "Red Jacket Firearms",
+      "count" : "1",
+      "id" : "-10028210110032749799107101116327010511410197114109115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Reebok%22",
+      "name" : "Reebok",
+      "count" : "66",
+      "id" : "-10028210110198111107"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Remington%22",
+      "name" : "Remington",
+      "count" : "2",
+      "id" : "-100282101109105110103116111110"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Riddell%22",
+      "name" : "Riddell",
+      "count" : "2",
+      "id" : "-100282105100100101108108"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Rip+A+Lip%22",
+      "name" : "Rip A Lip",
+      "count" : "2",
+      "id" : "-10028210511232653276105112"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Royce%22",
+      "name" : "Royce",
+      "count" : "1",
+      "id" : "-10028211112199101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Ruger%22",
+      "name" : "Ruger",
+      "count" : "1",
+      "id" : "-100282117103101114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Russell+Athletic%22",
+      "name" : "Russell Athletic",
+      "count" : "4",
+      "id" : "-100282117115115101108108326511610410810111610599"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Salt+Life%22",
+      "name" : "Salt Life",
+      "count" : "94",
+      "id" : "-100283971081163276105102101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Schutt%22",
+      "name" : "Schutt",
+      "count" : "2",
+      "id" : "-10028399104117116116"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Section+101%22",
+      "name" : "Section 101",
+      "count" : "7",
+      "id" : "-1002831019911610511111032494849"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Simms%22",
+      "name" : "Simms",
+      "count" : "4",
+      "id" : "-100283105109109115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Simply+Southern%22",
+      "name" : "Simply Southern",
+      "count" : "42",
+      "id" : "-1002831051091121081213283111117116104101114110"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Smith+%26+Wesson%22",
+      "name" : "Smith & Wesson",
+      "count" : "12",
+      "id" : "-10028310910511610432383287101115115111110"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Soffe%22",
+      "name" : "Soffe",
+      "count" : "47",
+      "id" : "-100283111102102101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Soft+As+A+Grape%22",
+      "name" : "Soft As A Grape",
+      "count" : "6",
+      "id" : "-10028311110211632651153265327111497112101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Southern+Heritage%22",
+      "name" : "Southern Heritage",
+      "count" : "9",
+      "id" : "-100283111117116104101114110327210111410511697103101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Southern+by+Nature%22",
+      "name" : "Southern by Nature",
+      "count" : "1",
+      "id" : "-1002831111171161041011141103298121327897116117114101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Soybu%22",
+      "name" : "Soybu",
+      "count" : "1",
+      "id" : "-10028311112198117"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Speedo%22",
+      "name" : "Speedo",
+      "count" : "4",
+      "id" : "-100283112101101100111"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Spiderwire%22",
+      "name" : "Spiderwire",
+      "count" : "1",
+      "id" : "-100283112105100101114119105114101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22State+Love%22",
+      "name" : "State Love",
+      "count" : "14",
+      "id" : "-100283116971161013276111118101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Step+Ahead%22",
+      "name" : "Step Ahead",
+      "count" : "6",
+      "id" : "-100283116101112326510410197100"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Stitches%22",
+      "name" : "Stitches",
+      "count" : "6",
+      "id" : "-10028311610511699104101115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Swamp+People%22",
+      "name" : "Swamp People",
+      "count" : "1",
+      "id" : "-100283119971091123280101111112108101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22TITIN%22",
+      "name" : "TITIN",
+      "count" : "1",
+      "id" : "-10028473847378"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Tactical%22",
+      "name" : "Tactical",
+      "count" : "1",
+      "id" : "-10028497991161059997108"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Team+Beans%22",
+      "name" : "Team Beans",
+      "count" : "1",
+      "id" : "-10028410197109326610197110115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22The+North+Face%22",
+      "name" : "The North Face",
+      "count" : "56",
+      "id" : "-100284104101327811111411610432709799101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Three+Squared%22",
+      "name" : "Three Squared",
+      "count" : "336",
+      "id" : "-100284104114101101328311311797114101100"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Touch+by+Alyssa+Milano%22",
+      "name" : "Touch by Alyssa Milano",
+      "count" : "9",
+      "id" : "-100284111117991043298121326510812111511597327710510897110111"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Two+Feet+Ahead%22",
+      "name" : "Two Feet Ahead",
+      "count" : "23",
+      "id" : "-1002841191113270101101116326510410197100"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22U.S.+Air+Force%22",
+      "name" : "U.S. Air Force",
+      "count" : "1",
+      "id" : "-1002854683463265105114327011111499101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Ugly+Stik%22",
+      "name" : "Ugly Stik",
+      "count" : "1",
+      "id" : "-1002851031081213283116105107"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Under+Armour%22",
+      "name" : "Under Armour",
+      "count" : "619",
+      "id" : "-1002851101001011143265114109111117114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22University+of+Texas%22",
+      "name" : "University of Texas",
+      "count" : "1",
+      "id" : "-10028511010511810111411510511612132111102328410112097115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22VF+Imagewear%22",
+      "name" : "VF Imagewear",
+      "count" : "1",
+      "id" : "-1002867032731099710310111910197114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Venley%22",
+      "name" : "Venley",
+      "count" : "13",
+      "id" : "-100286101110108101121"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Viacom%22",
+      "name" : "Viacom",
+      "count" : "1",
+      "id" : "-1002861059799111109"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Viatran%22",
+      "name" : "Viatran",
+      "count" : "100",
+      "id" : "-1002861059711611497110"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Walls%22",
+      "name" : "Walls",
+      "count" : "6",
+      "id" : "-10028797108108115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22We+Are+Texas%22",
+      "name" : "We Are Texas",
+      "count" : "35",
+      "id" : "-1002871013265114101328410112097115"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Wolverine%22",
+      "name" : "Wolverine",
+      "count" : "13",
+      "id" : "-100287111108118101114105110101"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Woolrich%22",
+      "name" : "Woolrich",
+      "count" : "7",
+      "id" : "-10028711111110811410599104"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22Wrangler%22",
+      "name" : "Wrangler",
+      "count" : "11",
+      "id" : "-10028711497110103108101114"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22YETI%22",
+      "name" : "YETI",
+      "count" : "3",
+      "id" : "-100289698473"
+    }, {
+      "property" : "mfName_ntk_cs%3A%22adidas%22",
+      "name" : "adidas",
+      "count" : "2",
+      "id" : "-10029710010510097115"
+    } ]
+  }, {
+    "id" : "2501",
+    "totalCount" : 13047,
+    "name" : "Price",
+    "allowMultipleValueSelection" : "true",
+    "displaySequence" : "-10.0",
+    "property" : "product_prc_facet",
+    "labels" : [ {
+      "property" : "product_prc_facet%3A%221%22",
+      "name" : "Under $10",
+      "count" : "2358",
+      "id" : "1000349"
+    }, {
+      "property" : "product_prc_facet%3A%222%22",
+      "name" : "$10 - $19.99",
+      "count" : "3878",
+      "id" : "1000350"
+    }, {
+      "property" : "product_prc_facet%3A%223%22",
+      "name" : "$20 - $49.99",
+      "count" : "5307",
+      "id" : "1000351"
+    }, {
+      "property" : "product_prc_facet%3A%224%22",
+      "name" : "$50 - $99.99",
+      "count" : "859",
+      "id" : "1000352"
+    }, {
+      "property" : "product_prc_facet%3A%225%22",
+      "name" : "$100 - $199.99",
+      "count" : "644",
+      "id" : "1000353"
+    }, {
+      "property" : "product_prc_facet%3A%226%22",
+      "name" : "$200 - $499.99",
+      "count" : "1",
+      "id" : "1000354"
+    } ]
+  }, {
+    "id" : "2500",
+    "totalCount" : 4946,
+    "name" : "Ad Feature",
+    "allowMultipleValueSelection" : "true",
+    "displaySequence" : "-9.0",
+    "property" : "adbug",
+    "labels" : [ {
+      "property" : "adbug%3A%22c%22",
+      "name" : "Clearance",
+      "count" : "3297",
+      "id" : "1000199"
+    }, {
+      "property" : "adbug%3A%22o%22",
+      "name" : "Online Only",
+      "count" : "1643",
+      "id" : "10001111"
+    }, {
+      "property" : "adbug%3A%22h%22",
+      "name" : "Hot Deal",
+      "count" : "6",
+      "id" : "10001104"
+    } ]
+  }, {
+    "id" : "12508",
+    "totalCount" : 10860,
+    "name" : "Sleeve length",
+    "allowMultipleValueSelection" : "true",
+    "displaySequence" : "0.0",
+    "property" : "ads_f22001_ntk_cs",
+    "labels" : [ {
+      "property" : "ads_f22001_ntk_cs%3A%22Short+Sleeve%22",
+      "name" : "Short Sleeve",
+      "count" : "8728",
+      "id" : "-18802831041111141163283108101101118101"
+    }, {
+      "property" : "ads_f22001_ntk_cs%3A%22Long+Sleeve%22",
+      "name" : "Long Sleeve",
+      "count" : "1445",
+      "id" : "-18802761111101033283108101101118101"
+    }, {
+      "property" : "ads_f22001_ntk_cs%3A%22Sleeveless%22",
+      "name" : "Sleeveless",
+      "count" : "550",
+      "id" : "-1880283108101101118101108101115115"
+    }, {
+      "property" : "ads_f22001_ntk_cs%3A%223%2F4-Length+Sleeve%22",
+      "name" : "3/4-Length Sleeve",
+      "count" : "136",
+      "id" : "-1880251475245761011101031161043283108101101118101"
+    }, {
+      "property" : "ads_f22001_ntk_cs%3A%223%2F4%22",
+      "name" : "3/4",
+      "count" : "1",
+      "id" : "-18802514752"
+    } ]
+  }, {
+    "id" : "1505",
+    "totalCount" : 9906,
+    "name" : "Team",
+    "allowMultipleValueSelection" : "true",
+    "displaySequence" : "1.6",
+    "property" : "ads_f10505_ntk_cs",
+    "labels" : [ {
+      "property" : "ads_f10505_ntk_cs%3A%22Air+Force+Falcons%22",
+      "name" : "Air Force Falcons",
+      "count" : "1",
+      "id" : "-37236510511432701111149910132709710899111110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Alabama+Crimson+Tide%22",
+      "name" : "Alabama Crimson Tide",
+      "count" : "287",
+      "id" : "-3723651089798971099732671141051091151111103284105100101"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Appalachian+State+Mountaineers%22",
+      "name" : "Appalachian State Mountaineers",
+      "count" : "29",
+      "id" : "-37236511211297108979910410597110328311697116101327711111711011697105110101101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Arizona+Cardinals%22",
+      "name" : "Arizona Cardinals",
+      "count" : "8",
+      "id" : "-3723651141051221111109732679711410010511097108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Arizona+Diamondbacks%22",
+      "name" : "Arizona Diamondbacks",
+      "count" : "16",
+      "id" : "-37236511410512211111097326810597109111110100989799107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Arizona+State+Sun+Devils%22",
+      "name" : "Arizona State Sun Devils",
+      "count" : "1",
+      "id" : "-3723651141051221111109732831169711610132831171103268101118105108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Arkansas+Razorbacks%22",
+      "name" : "Arkansas Razorbacks",
+      "count" : "254",
+      "id" : "-3723651141079711011597115328297122111114989799107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Arkansas+State+Red+Wolves%22",
+      "name" : "Arkansas State Red Wolves",
+      "count" : "82",
+      "id" : "-372365114107971101159711532831169711610132821011003287111108118101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Army+Black+Knights%22",
+      "name" : "Army Black Knights",
+      "count" : "1",
+      "id" : "-372365114109121326610897991073275110105103104116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Atlanta+Braves%22",
+      "name" : "Atlanta Braves",
+      "count" : "129",
+      "id" : "-3723651161089711011697326611497118101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Atlanta+Falcons%22",
+      "name" : "Atlanta Falcons",
+      "count" : "87",
+      "id" : "-372365116108971101169732709710899111110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Atlanta+Hawks%22",
+      "name" : "Atlanta Hawks",
+      "count" : "47",
+      "id" : "-3723651161089711011697327297119107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Atlanta+United+FC%22",
+      "name" : "Atlanta United FC",
+      "count" : "41",
+      "id" : "-37236511610897110116973285110105116101100327067"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Auburn+Tigers%22",
+      "name" : "Auburn Tigers",
+      "count" : "111",
+      "id" : "-372365117981171141103284105103101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Austin+Peay+Governors%22",
+      "name" : "Austin Peay Governors",
+      "count" : "7",
+      "id" : "-3723651171151161051103280101971213271111118101114110111114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Baltimore+Orioles%22",
+      "name" : "Baltimore Orioles",
+      "count" : "50",
+      "id" : "-372366971081161051091111141013279114105111108101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Baltimore+Ravens%22",
+      "name" : "Baltimore Ravens",
+      "count" : "8",
+      "id" : "-37236697108116105109111114101328297118101110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Baylor+Bears%22",
+      "name" : "Baylor Bears",
+      "count" : "142",
+      "id" : "-37236697121108111114326610197114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Boise+State+Broncos%22",
+      "name" : "Boise State Broncos",
+      "count" : "1",
+      "id" : "-372366111105115101328311697116101326611411111099111115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Boston+Celtics%22",
+      "name" : "Boston Celtics",
+      "count" : "3",
+      "id" : "-372366111115116111110326710110811610599115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Boston+College+Eagles%22",
+      "name" : "Boston College Eagles",
+      "count" : "1",
+      "id" : "-3723661111151161111103267111108108101103101326997103108101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Boston+Red+Sox%22",
+      "name" : "Boston Red Sox",
+      "count" : "77",
+      "id" : "-37236611111511611111032821011003283111120"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Buffalo+Bills%22",
+      "name" : "Buffalo Bills",
+      "count" : "8",
+      "id" : "-372366117102102971081113266105108108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22California+Angels%22",
+      "name" : "California Angels",
+      "count" : "3",
+      "id" : "-37236797108105102111114110105973265110103101108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Carolina+Panthers%22",
+      "name" : "Carolina Panthers",
+      "count" : "90",
+      "id" : "-3723679711411110810511097328097110116104101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Central+Arkansas+Bears%22",
+      "name" : "Central Arkansas Bears",
+      "count" : "20",
+      "id" : "-3723671011101161149710832651141079711011597115326610197114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Charlotte+Hornets%22",
+      "name" : "Charlotte Hornets",
+      "count" : "57",
+      "id" : "-372367104971141081111161161013272111114110101116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Chicago+Bears%22",
+      "name" : "Chicago Bears",
+      "count" : "8",
+      "id" : "-3723671041059997103111326610197114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Chicago+Bulls%22",
+      "name" : "Chicago Bulls",
+      "count" : "4",
+      "id" : "-37236710410599971031113266117108108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Chicago+Cubs%22",
+      "name" : "Chicago Cubs",
+      "count" : "62",
+      "id" : "-3723671041059997103111326711798115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Chicago+White+Sox%22",
+      "name" : "Chicago White Sox",
+      "count" : "41",
+      "id" : "-372367104105999710311132871041051161013283111120"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Cincinnati+Bengals%22",
+      "name" : "Cincinnati Bengals",
+      "count" : "8",
+      "id" : "-3723671051109910511011097116105326610111010397108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Cincinnati+Reds%22",
+      "name" : "Cincinnati Reds",
+      "count" : "40",
+      "id" : "-37236710511099105110110971161053282101100115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Clemson+Tigers%22",
+      "name" : "Clemson Tigers",
+      "count" : "114",
+      "id" : "-3723671081011091151111103284105103101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Cleveland+Browns%22",
+      "name" : "Cleveland Browns",
+      "count" : "5",
+      "id" : "-372367108101118101108971101003266114111119110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Cleveland+Cavaliers%22",
+      "name" : "Cleveland Cavaliers",
+      "count" : "4",
+      "id" : "-3723671081011181011089711010032679711897108105101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Cleveland+Indians%22",
+      "name" : "Cleveland Indians",
+      "count" : "39",
+      "id" : "-37236710810111810110897110100327311010010597110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Colorado+Buffaloes%22",
+      "name" : "Colorado Buffaloes",
+      "count" : "1",
+      "id" : "-37236711110811111497100111326611710210297108111101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Colorado+Rockies%22",
+      "name" : "Colorado Rockies",
+      "count" : "9",
+      "id" : "-37236711110811111497100111328211199107105101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Dallas+Cowboys%22",
+      "name" : "Dallas Cowboys",
+      "count" : "98",
+      "id" : "-3723689710810897115326711111998111121115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Dallas+Mavericks%22",
+      "name" : "Dallas Mavericks",
+      "count" : "31",
+      "id" : "-372368971081089711532779711810111410599107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Dallas+Stars%22",
+      "name" : "Dallas Stars",
+      "count" : "46",
+      "id" : "-3723689710810897115328311697114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Dalton+State+Roadrunners%22",
+      "name" : "Dalton State Roadrunners",
+      "count" : "1",
+      "id" : "-37236897108116111110328311697116101328211197100114117110110101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Denver+Broncos%22",
+      "name" : "Denver Broncos",
+      "count" : "10",
+      "id" : "-372368101110118101114326611411111099111115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Detroit+Lions%22",
+      "name" : "Detroit Lions",
+      "count" : "9",
+      "id" : "-3723681011161141111051163276105111110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Detroit+Tigers%22",
+      "name" : "Detroit Tigers",
+      "count" : "34",
+      "id" : "-3723681011161141111051163284105103101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Duke+Blue+Devils%22",
+      "name" : "Duke Blue Devils",
+      "count" : "35",
+      "id" : "-37236811710710132661081171013268101118105108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22ETSU+Buccaneers%22",
+      "name" : "ETSU Buccaneers",
+      "count" : "46",
+      "id" : "-3723698483853266117999997110101101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22East+Carolina+Pirates%22",
+      "name" : "East Carolina Pirates",
+      "count" : "11",
+      "id" : "-3723699711511632679711411110810511097328010511497116101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Evansville+Aces%22",
+      "name" : "Evansville Aces",
+      "count" : "4",
+      "id" : "-37236911897110115118105108108101326599101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22FC+Dallas%22",
+      "name" : "FC Dallas",
+      "count" : "22",
+      "id" : "-3723706732689710810897115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Florida+A%26M+Rattlers%22",
+      "name" : "Florida A&M Rattlers",
+      "count" : "1",
+      "id" : "-3723701081111141051009732653877328297116116108101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Florida+Gators%22",
+      "name" : "Florida Gators",
+      "count" : "106",
+      "id" : "-37237010811111410510097327197116111114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Florida+State+Seminoles%22",
+      "name" : "Florida State Seminoles",
+      "count" : "152",
+      "id" : "-372370108111114105100973283116971161013283101109105110111108101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Furman+Paladins%22",
+      "name" : "Furman Paladins",
+      "count" : "8",
+      "id" : "-3723701171141099711032809710897100105110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Georgia+Bulldogs%22",
+      "name" : "Georgia Bulldogs",
+      "count" : "129",
+      "id" : "-372371101111114103105973266117108108100111103115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Georgia+Southern+Eagles%22",
+      "name" : "Georgia Southern Eagles",
+      "count" : "2",
+      "id" : "-372371101111114103105973283111117116104101114110326997103108101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Georgia+Tech+Yellow+Jackets%22",
+      "name" : "Georgia Tech Yellow Jackets",
+      "count" : "34",
+      "id" : "-37237110111111410310597328410199104328910110810811111932749799107101116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Golden+State+Warriors%22",
+      "name" : "Golden State Warriors",
+      "count" : "5",
+      "id" : "-372371111108100101110328311697116101328797114114105111114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Green+Bay+Packers%22",
+      "name" : "Green Bay Packers",
+      "count" : "10",
+      "id" : "-37237111410110111032669712132809799107101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Hawaii+Warriors%22",
+      "name" : "Hawaii Warriors",
+      "count" : "1",
+      "id" : "-3723729711997105105328797114114105111114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Houston+Astros%22",
+      "name" : "Houston Astros",
+      "count" : "203",
+      "id" : "-3723721111171151161111103265115116114111115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Houston+Cougars%22",
+      "name" : "Houston Cougars",
+      "count" : "178",
+      "id" : "-372372111117115116111110326711111710397114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Houston+Dynamo%22",
+      "name" : "Houston Dynamo",
+      "count" : "96",
+      "id" : "-372372111117115116111110326812111097109111"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Houston+Rockets%22",
+      "name" : "Houston Rockets",
+      "count" : "138",
+      "id" : "-372372111117115116111110328211199107101116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Houston+Texans%22",
+      "name" : "Houston Texans",
+      "count" : "158",
+      "id" : "-372372111117115116111110328410112097110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Indiana+Pacers%22",
+      "name" : "Indiana Pacers",
+      "count" : "12",
+      "id" : "-372373110100105971109732809799101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Indiana+State+Sycamores%22",
+      "name" : "Indiana State Sycamores",
+      "count" : "26",
+      "id" : "-372373110100105971109732831169711610132831219997109111114101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Indiana+University+Hoosiers%22",
+      "name" : "Indiana University Hoosiers",
+      "count" : "46",
+      "id" : "-372373110100105971109732851101051181011141151051161213272111111115105101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Indianapolis+Colts%22",
+      "name" : "Indianapolis Colts",
+      "count" : "16",
+      "id" : "-37237311010010597110971121111081051153267111108116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Iowa+Hawkeyes%22",
+      "name" : "Iowa Hawkeyes",
+      "count" : "1",
+      "id" : "-37237311111997327297119107101121101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Iowa+State+Cyclones%22",
+      "name" : "Iowa State Cyclones",
+      "count" : "1",
+      "id" : "-37237311111997328311697116101326712199108111110101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Jacksonville+Jaguars%22",
+      "name" : "Jacksonville Jaguars",
+      "count" : "47",
+      "id" : "-372374979910711511111011810510810810132749710311797114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Kansas+City+Chiefs%22",
+      "name" : "Kansas City Chiefs",
+      "count" : "62",
+      "id" : "-372375971101159711532671051161213267104105101102115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Kansas+City+Royals%22",
+      "name" : "Kansas City Royals",
+      "count" : "118",
+      "id" : "-37237597110115971153267105116121328211112197108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Kansas+Jayhawks%22",
+      "name" : "Kansas Jayhawks",
+      "count" : "53",
+      "id" : "-372375971101159711532749712110497119107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Kansas+State+Wildcats%22",
+      "name" : "Kansas State Wildcats",
+      "count" : "150",
+      "id" : "-372375971101159711532831169711610132871051081009997116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Kennesaw+State+Owls%22",
+      "name" : "Kennesaw State Owls",
+      "count" : "12",
+      "id" : "-372375101110110101115971193283116971161013279119108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Kentucky+Wildcats%22",
+      "name" : "Kentucky Wildcats",
+      "count" : "56",
+      "id" : "-3723751011101161179910712132871051081009997116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22LSU+Tigers%22",
+      "name" : "LSU Tigers",
+      "count" : "190",
+      "id" : "-37237683853284105103101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Lamar+Cardinals%22",
+      "name" : "Lamar Cardinals",
+      "count" : "118",
+      "id" : "-372376971099711432679711410010511097108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Los+Angeles+Angels%22",
+      "name" : "Los Angeles Angels",
+      "count" : "32",
+      "id" : "-37237611111532651101031011081011153265110103101108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Los+Angeles+Dodgers%22",
+      "name" : "Los Angeles Dodgers",
+      "count" : "67",
+      "id" : "-37237611111532651101031011081011153268111100103101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Los+Angeles+Lakers%22",
+      "name" : "Los Angeles Lakers",
+      "count" : "19",
+      "id" : "-3723761111153265110103101108101115327697107101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Louisiana+Tech+Bulldogs%22",
+      "name" : "Louisiana Tech Bulldogs",
+      "count" : "160",
+      "id" : "-37237611111710511510597110973284101991043266117108108100111103115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Louisiana-Lafayette+Ragin+Cajuns%22",
+      "name" : "Louisiana-Lafayette Ragin Cajuns",
+      "count" : "135",
+      "id" : "-372376111117105115105971109745769710297121101116116101328297103105110326797106117110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Louisiana-Monroe+Warhawks%22",
+      "name" : "Louisiana-Monroe Warhawks",
+      "count" : "103",
+      "id" : "-3723761111171051151059711097457711111011411110132879711410497119107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Louisville+Cardinals%22",
+      "name" : "Louisville Cardinals",
+      "count" : "113",
+      "id" : "-37237611111710511511810510810810132679711410010511097108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Marshall+University+Thundering+Herd%22",
+      "name" : "Marshall University Thundering Herd",
+      "count" : "1",
+      "id" : "-3723779711411510497108108328511010511810111411510511612132841041171101001011141051101033272101114100"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Maryland+Terrapins%22",
+      "name" : "Maryland Terrapins",
+      "count" : "1",
+      "id" : "-3723779711412110897110100328410111411497112105110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22McNeese+State+Cowboys%22",
+      "name" : "McNeese State Cowboys",
+      "count" : "145",
+      "id" : "-3723779978101101115101328311697116101326711111998111121115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Memphis+Grizzlies%22",
+      "name" : "Memphis Grizzlies",
+      "count" : "45",
+      "id" : "-3723771011091121041051153271114105122122108105101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Memphis+Tigers%22",
+      "name" : "Memphis Tigers",
+      "count" : "88",
+      "id" : "-3723771011091121041051153284105103101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Mercer+Bears%22",
+      "name" : "Mercer Bears",
+      "count" : "3",
+      "id" : "-37237710111499101114326610197114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Mexico%22",
+      "name" : "Mexico",
+      "count" : "1",
+      "id" : "-37237710112010599111"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Miami+Dolphins%22",
+      "name" : "Miami Dolphins",
+      "count" : "15",
+      "id" : "-372377105971091053268111108112104105110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Miami+Hurricanes%22",
+      "name" : "Miami Hurricanes",
+      "count" : "4",
+      "id" : "-3723771059710910532721171141141059997110101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Miami+Marlins%22",
+      "name" : "Miami Marlins",
+      "count" : "22",
+      "id" : "-37237710597109105327797114108105110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Michigan+State+Spartans%22",
+      "name" : "Michigan State Spartans",
+      "count" : "1",
+      "id" : "-372377105991041051039711032831169711610132831129711411697110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Michigan+Wolverines%22",
+      "name" : "Michigan Wolverines",
+      "count" : "1",
+      "id" : "-37237710599104105103971103287111108118101114105110101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Middle+Tennessee+State+Blue+Raiders%22",
+      "name" : "Middle Tennessee State Blue Raiders",
+      "count" : "17",
+      "id" : "-37237710510010010810132841011101101011151151011013283116971161013266108117101328297105100101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Midwestern+State+Mustangs%22",
+      "name" : "Midwestern State Mustangs",
+      "count" : "28",
+      "id" : "-372377105100119101115116101114110328311697116101327711711511697110103115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Milwaukee+Brewers%22",
+      "name" : "Milwaukee Brewers",
+      "count" : "28",
+      "id" : "-372377105108119971171071011013266114101119101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Milwaukee+Bucks%22",
+      "name" : "Milwaukee Bucks",
+      "count" : "1",
+      "id" : "-37237710510811997117107101101326611799107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Minnesota+Golden+Gophers%22",
+      "name" : "Minnesota Golden Gophers",
+      "count" : "1",
+      "id" : "-3723771051101101011151111169732711111081001011103271111112104101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Minnesota+Twins%22",
+      "name" : "Minnesota Twins",
+      "count" : "30",
+      "id" : "-372377105110110101115111116973284119105110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Minnesota+Vikings%22",
+      "name" : "Minnesota Vikings",
+      "count" : "7",
+      "id" : "-372377105110110101115111116973286105107105110103115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Mississippi+State+Bulldogs%22",
+      "name" : "Mississippi State Bulldogs",
+      "count" : "85",
+      "id" : "-3723771051151151051151151051121121053283116971161013266117108108100111103115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Missouri+State+Bears%22",
+      "name" : "Missouri State Bears",
+      "count" : "39",
+      "id" : "-372377105115115111117114105328311697116101326610197114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Missouri+Tigers%22",
+      "name" : "Missouri Tigers",
+      "count" : "54",
+      "id" : "-3723771051151151111171141053284105103101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Montreal+Expos%22",
+      "name" : "Montreal Expos",
+      "count" : "14",
+      "id" : "-372377111110116114101971083269120112111115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22NC+State+Wolfpack%22",
+      "name" : "NC State Wolfpack",
+      "count" : "36",
+      "id" : "-3723786732831169711610132871111081021129799107"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Nashville+Predators%22",
+      "name" : "Nashville Predators",
+      "count" : "58",
+      "id" : "-37237897115104118105108108101328011410110097116111114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Nebraska+Cornhuskers%22",
+      "name" : "Nebraska Cornhuskers",
+      "count" : "6",
+      "id" : "-3723781019811497115107973267111114110104117115107101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22New+England+Patriots%22",
+      "name" : "New England Patriots",
+      "count" : "7",
+      "id" : "-372378101119326911010310897110100328097116114105111116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22New+Mexico+Lobos%22",
+      "name" : "New Mexico Lobos",
+      "count" : "1",
+      "id" : "-372378101119327710112010599111327611198111115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22New+Mexico+State+Aggies%22",
+      "name" : "New Mexico State Aggies",
+      "count" : "1",
+      "id" : "-3723781011193277101120105991113283116971161013265103103105101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22New+Orleans+Pelicans%22",
+      "name" : "New Orleans Pelicans",
+      "count" : "57",
+      "id" : "-37237810111932791141081019711011532801011081059997110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22New+Orleans+Saints%22",
+      "name" : "New Orleans Saints",
+      "count" : "84",
+      "id" : "-372378101119327911410810197110115328397105110116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22New+York+Giants%22",
+      "name" : "New York Giants",
+      "count" : "9",
+      "id" : "-3723781011193289111114107327110597110116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22New+York+Jets%22",
+      "name" : "New York Jets",
+      "count" : "8",
+      "id" : "-37237810111932891111141073274101116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22New+York+Knicks%22",
+      "name" : "New York Knicks",
+      "count" : "2",
+      "id" : "-3723781011193289111114107327511010599107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22New+York+Mets%22",
+      "name" : "New York Mets",
+      "count" : "56",
+      "id" : "-37237810111932891111141073277101116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22New+York+Yankees%22",
+      "name" : "New York Yankees",
+      "count" : "77",
+      "id" : "-3723781011193289111114107328997110107101101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Nicholls+State+Colonels%22",
+      "name" : "Nicholls State Colonels",
+      "count" : "3",
+      "id" : "-372378105991041111081081153283116971161013267111108111110101108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22North+Carolina+Tar+Heels%22",
+      "name" : "North Carolina Tar Heels",
+      "count" : "52",
+      "id" : "-372378111114116104326797114111108105110973284971143272101101108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22North+Texas+Mean+Green%22",
+      "name" : "North Texas Mean Green",
+      "count" : "117",
+      "id" : "-3723781111141161043284101120971153277101971103271114101101110"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Northern+Iowa+Panthers%22",
+      "name" : "Northern Iowa Panthers",
+      "count" : "1",
+      "id" : "-372378111114116104101114110327311111997328097110116104101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Northwestern+Wildcats%22",
+      "name" : "Northwestern Wildcats",
+      "count" : "1",
+      "id" : "-37237811111411610411910111511610111411032871051081009997116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Notre+Dame+Fighting+Irish%22",
+      "name" : "Notre Dame Fighting Irish",
+      "count" : "5",
+      "id" : "-37237811111611410132689710910132701051031041161051101033273114105115104"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Oakland+A%27s%22",
+      "name" : "Oakland A's",
+      "count" : "18",
+      "id" : "-3723799710710897110100326539115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Oakland+Raiders%22",
+      "name" : "Oakland Raiders",
+      "count" : "5",
+      "id" : "-3723799710710897110100328297105100101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Ohio+State+Buckeyes%22",
+      "name" : "Ohio State Buckeyes",
+      "count" : "1",
+      "id" : "-372379104105111328311697116101326611799107101121101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Oklahoma+City+Thunder%22",
+      "name" : "Oklahoma City Thunder",
+      "count" : "93",
+      "id" : "-372379107108971041111099732671051161213284104117110100101114"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Oklahoma+Sooners%22",
+      "name" : "Oklahoma Sooners",
+      "count" : "126",
+      "id" : "-37237910710897104111109973283111111110101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Oklahoma+State+Cowboys%22",
+      "name" : "Oklahoma State Cowboys",
+      "count" : "155",
+      "id" : "-3723791071089710411110997328311697116101326711111998111121115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Ole+Miss+Rebels%22",
+      "name" : "Ole Miss Rebels",
+      "count" : "87",
+      "id" : "-3723791081013277105115115328210198101108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Oregon+Ducks%22",
+      "name" : "Oregon Ducks",
+      "count" : "1",
+      "id" : "-372379114101103111110326811799107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Oregon+State+Beavers%22",
+      "name" : "Oregon State Beavers",
+      "count" : "1",
+      "id" : "-372379114101103111110328311697116101326610197118101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Orlando+City+SC%22",
+      "name" : "Orlando City SC",
+      "count" : "35",
+      "id" : "-372379114108971101001113267105116121328367"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Orlando+Magic%22",
+      "name" : "Orlando Magic",
+      "count" : "15",
+      "id" : "-3723791141089711010011132779710310599"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Penn+State+Nittany+Lions%22",
+      "name" : "Penn State Nittany Lions",
+      "count" : "4",
+      "id" : "-3723801011101103283116971161013278105116116971101213276105111110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Philadelphia+76ers%22",
+      "name" : "Philadelphia 76ers",
+      "count" : "2",
+      "id" : "-3723801041051089710010110811210410597325554101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Philadelphia+Eagles%22",
+      "name" : "Philadelphia Eagles",
+      "count" : "7",
+      "id" : "-3723801041051089710010110811210410597326997103108101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Philadelphia+Phillies%22",
+      "name" : "Philadelphia Phillies",
+      "count" : "44",
+      "id" : "-37238010410510897100101108112104105973280104105108108105101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Pittsburgh+Pirates%22",
+      "name" : "Pittsburgh Pirates",
+      "count" : "36",
+      "id" : "-37238010511611611598117114103104328010511497116101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Pittsburgh+State+Gorillas%22",
+      "name" : "Pittsburgh State Gorillas",
+      "count" : "1",
+      "id" : "-37238010511611611598117114103104328311697116101327111111410510810897115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Pittsburgh+Steelers%22",
+      "name" : "Pittsburgh Steelers",
+      "count" : "8",
+      "id" : "-372380105116116115981171141031043283116101101108101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Portland+Trailblazers%22",
+      "name" : "Portland Trailblazers",
+      "count" : "2",
+      "id" : "-372380111114116108971101003284114971051089810897122101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Purdue+Boilermakers%22",
+      "name" : "Purdue Boilermakers",
+      "count" : "1",
+      "id" : "-372380117114100117101326611110510810111410997107101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Rice+Owls%22",
+      "name" : "Rice Owls",
+      "count" : "25",
+      "id" : "-372382105991013279119108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Rutgers+Scarlet+Knights%22",
+      "name" : "Rutgers Scarlet Knights",
+      "count" : "1",
+      "id" : "-372382117116103101114115328399971141081011163275110105103104116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22SMU+Mustangs%22",
+      "name" : "SMU Mustangs",
+      "count" : "14",
+      "id" : "-3723837785327711711511697110103115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Saint+Louis+Billikens%22",
+      "name" : "Saint Louis Billikens",
+      "count" : "30",
+      "id" : "-3723839710511011632761111171051153266105108108105107101110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Sam+Houston+State+Bearkats%22",
+      "name" : "Sam Houston State Bearkats",
+      "count" : "173",
+      "id" : "-37238397109327211111711511611111032831169711610132661019711410797116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22San+Antonio+Spurs%22",
+      "name" : "San Antonio Spurs",
+      "count" : "131",
+      "id" : "-3723839711032651101161111101051113283112117114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22San+Diego+Chargers%22",
+      "name" : "San Diego Chargers",
+      "count" : "6",
+      "id" : "-372383971103268105101103111326710497114103101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22San+Diego+Padres%22",
+      "name" : "San Diego Padres",
+      "count" : "12",
+      "id" : "-372383971103268105101103111328097100114101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22San+Diego+State+Aztecs%22",
+      "name" : "San Diego State Aztecs",
+      "count" : "1",
+      "id" : "-372383971103268105101103111328311697116101326512211610199115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22San+Francisco+49ers%22",
+      "name" : "San Francisco 49ers",
+      "count" : "9",
+      "id" : "-372383971103270114971109910511599111325257101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22San+Francisco+Giants%22",
+      "name" : "San Francisco Giants",
+      "count" : "50",
+      "id" : "-372383971103270114971109910511599111327110597110116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Seattle+Mariners%22",
+      "name" : "Seattle Mariners",
+      "count" : "19",
+      "id" : "-37238310197116116108101327797114105110101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Seattle+Seahawks%22",
+      "name" : "Seattle Seahawks",
+      "count" : "7",
+      "id" : "-3723831019711611610810132831019710497119107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22South+Alabama+Jaguars%22",
+      "name" : "South Alabama Jaguars",
+      "count" : "11",
+      "id" : "-37238311111711610432651089798971099732749710311797114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22South+Carolina+Gamecocks%22",
+      "name" : "South Carolina Gamecocks",
+      "count" : "95",
+      "id" : "-372383111117116104326797114111108105110973271971091019911199107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Southeastern+Louisiana+Lions%22",
+      "name" : "Southeastern Louisiana Lions",
+      "count" : "184",
+      "id" : "-37238311111711610410197115116101114110327611111710511510597110973276105111110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Southeastern+Missouri+State+Redhawks%22",
+      "name" : "Southeastern Missouri State Redhawks",
+      "count" : "2",
+      "id" : "-372383111117116104101971151161011141103277105115115111117114105328311697116101328210110010497119107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Southern+Miss+Golden+Eagles%22",
+      "name" : "Southern Miss Golden Eagles",
+      "count" : "69",
+      "id" : "-37238311111711610410111411032771051151153271111108100101110326997103108101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Sporting+Kansas+City%22",
+      "name" : "Sporting Kansas City",
+      "count" : "39",
+      "id" : "-372383112111114116105110103327597110115971153267105116121"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22St.+Louis+Blues%22",
+      "name" : "St. Louis Blues",
+      "count" : "19",
+      "id" : "-3723831164632761111171051153266108117101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22St.+Louis+Cardinals%22",
+      "name" : "St. Louis Cardinals",
+      "count" : "177",
+      "id" : "-37238311646327611111710511532679711410010511097108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22St.+Louis+Rams%22",
+      "name" : "St. Louis Rams",
+      "count" : "7",
+      "id" : "-372383116463276111117105115328297109115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Stanford+Cardinal%22",
+      "name" : "Stanford Cardinal",
+      "count" : "1",
+      "id" : "-3723831169711010211111410032679711410010511097108"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Stephen+F+Austin+Lumberjacks%22",
+      "name" : "Stephen F Austin Lumberjacks",
+      "count" : "126",
+      "id" : "-372383116101112104101110327032651171151161051103276117109981011141069799107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Tampa+Bay+Buccaneers%22",
+      "name" : "Tampa Bay Buccaneers",
+      "count" : "20",
+      "id" : "-37238497109112973266971213266117999997110101101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Tampa+Bay+Rays%22",
+      "name" : "Tampa Bay Rays",
+      "count" : "30",
+      "id" : "-3723849710911297326697121328297121115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Tennessee+Tech+Golden+Eagles%22",
+      "name" : "Tennessee Tech Golden Eagles",
+      "count" : "9",
+      "id" : "-3723841011101101011151151011013284101991043271111108100101110326997103108101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Tennessee+Titans%22",
+      "name" : "Tennessee Titans",
+      "count" : "38",
+      "id" : "-372384101110110101115115101101328410511697110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Tennessee+Volunteers%22",
+      "name" : "Tennessee Volunteers",
+      "count" : "134",
+      "id" : "-3723841011101101011151151011013286111108117110116101101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Texas+A%26M+Aggies%22",
+      "name" : "Texas A&M Aggies",
+      "count" : "219",
+      "id" : "-37238410112097115326538773265103103105101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Texas+A%26M+Corpus+Christi+Islanders%22",
+      "name" : "Texas A&M Corpus Christi Islanders",
+      "count" : "17",
+      "id" : "-372384101120971153265387732671111141121171153267104114105115116105327311510897110100101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Texas+A%26amp%3BM+Aggies%22",
+      "name" : "Texas A&amp;M Aggies",
+      "count" : "1",
+      "id" : "-372384101120971153265389710911259773265103103105101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Texas+Christian+Horned+Frogs%22",
+      "name" : "Texas Christian Horned Frogs",
+      "count" : "119",
+      "id" : "-3723841011209711532671041141051151161059711032721111141101011003270114111103115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Texas+Longhorns%22",
+      "name" : "Texas Longhorns",
+      "count" : "149",
+      "id" : "-372384101120971153276111110103104111114110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Texas+Rangers%22",
+      "name" : "Texas Rangers",
+      "count" : "183",
+      "id" : "-37238410112097115328297110103101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Texas+San+Antonio+Roadrunners%22",
+      "name" : "Texas San Antonio Roadrunners",
+      "count" : "76",
+      "id" : "-372384101120971153283971103265110116111110105111328211197100114117110110101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Texas+State+Bobcats%22",
+      "name" : "Texas State Bobcats",
+      "count" : "133",
+      "id" : "-372384101120971153283116971161013266111989997116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Texas+Tech+Red+Raiders%22",
+      "name" : "Texas Tech Red Raiders",
+      "count" : "119",
+      "id" : "-372384101120971153284101991043282101100328297105100101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Toronto+Blue+Jays%22",
+      "name" : "Toronto Blue Jays",
+      "count" : "46",
+      "id" : "-3723841111141111101161113266108117101327497121115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Toronto+Raptors%22",
+      "name" : "Toronto Raptors",
+      "count" : "1",
+      "id" : "-372384111114111110116111328297112116111114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Tulane+Green+Wave%22",
+      "name" : "Tulane Green Wave",
+      "count" : "36",
+      "id" : "-372384117108971101013271114101101110328797118101"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Tulsa+Golden+Hurricane%22",
+      "name" : "Tulsa Golden Hurricane",
+      "count" : "25",
+      "id" : "-37238411710811597327111110810010111032721171141141059997110101"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22UCF+Knights%22",
+      "name" : "UCF Knights",
+      "count" : "46",
+      "id" : "-37238567703275110105103104116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22UCLA+Bruins%22",
+      "name" : "UCLA Bruins",
+      "count" : "1",
+      "id" : "-3723856776653266114117105110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22UNA+Lions%22",
+      "name" : "UNA Lions",
+      "count" : "3",
+      "id" : "-37238578653276105111110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22UNC+Charlotte+49ers%22",
+      "name" : "UNC Charlotte 49ers",
+      "count" : "26",
+      "id" : "-3723857867326710497114108111116116101325257101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22UNC+Wilmington+Seahawks%22",
+      "name" : "UNC Wilmington Seahawks",
+      "count" : "4",
+      "id" : "-3723857867328710510810910511010311611111032831019710497119107115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22UNLV+Rebels%22",
+      "name" : "UNLV Rebels",
+      "count" : "1",
+      "id" : "-372385787686328210198101108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22USA%22",
+      "name" : "USA",
+      "count" : "1",
+      "id" : "-3723858365"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22USC+Trojans%22",
+      "name" : "USC Trojans",
+      "count" : "1",
+      "id" : "-3723858367328411411110697110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22UTEP+Miners%22",
+      "name" : "UTEP Miners",
+      "count" : "107",
+      "id" : "-3723858469803277105110101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22UTSA+Roadrunners%22",
+      "name" : "UTSA Roadrunners",
+      "count" : "7",
+      "id" : "-372385848365328211197100114117110110101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22University+Of+Tennessee%2C+Knoxville%22",
+      "name" : "University Of Tennessee, Knoxville",
+      "count" : "1",
+      "id" : "-37238511010511810111411510511612132791023284101110110101115115101101443275110111120118105108108101"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22University+of+Alabama-Birmingham+Blazers%22",
+      "name" : "University of Alabama-Birmingham Blazers",
+      "count" : "21",
+      "id" : "-37238511010511810111411510511612132111102326510897989710997456610511410910511010310497109326610897122101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22University+of+North+Carolina-Greensboro%22",
+      "name" : "University of North Carolina-Greensboro",
+      "count" : "5",
+      "id" : "-37238511010511810111411510511612132111102327811111411610432679711411110810511097457111410110111011598111114111"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22University+of+Tennessee-Chattanooga+Mocs%22",
+      "name" : "University of Tennessee-Chattanooga Mocs",
+      "count" : "11",
+      "id" : "-3723851101051181011141151051161213211110232841011101101011151151011014567104971161169711011111110397327711199115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Utah+Utes%22",
+      "name" : "Utah Utes",
+      "count" : "1",
+      "id" : "-372385116971043285116101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Valdosta+State+Blazers%22",
+      "name" : "Valdosta State Blazers",
+      "count" : "5",
+      "id" : "-3723869710810011111511697328311697116101326610897122101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Vanderbilt+Commodores%22",
+      "name" : "Vanderbilt Commodores",
+      "count" : "78",
+      "id" : "-37238697110100101114981051081163267111109109111100111114101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Villanova+Wildcats%22",
+      "name" : "Villanova Wildcats",
+      "count" : "1",
+      "id" : "-372386105108108971101111189732871051081009997116115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Virginia+Tech+Hokies%22",
+      "name" : "Virginia Tech Hokies",
+      "count" : "8",
+      "id" : "-372386105114103105110105973284101991043272111107105101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Wake+Forest+Demon+Deacons%22",
+      "name" : "Wake Forest Demon Deacons",
+      "count" : "1",
+      "id" : "-372387971071013270111114101115116326810110911111032681019799111110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Washburn+Ichabods%22",
+      "name" : "Washburn Ichabods",
+      "count" : "1",
+      "id" : "-37238797115104981171141103273991049798111100115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Washington+Huskies%22",
+      "name" : "Washington Huskies",
+      "count" : "1",
+      "id" : "-372387971151041051101031161111103272117115107105101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Washington+Nationals%22",
+      "name" : "Washington Nationals",
+      "count" : "42",
+      "id" : "-3723879711510410511010311611111032789711610511111097108115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Washington+Redskins%22",
+      "name" : "Washington Redskins",
+      "count" : "8",
+      "id" : "-372387971151041051101031161111103282101100115107105110115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Washington+State+Cougars%22",
+      "name" : "Washington State Cougars",
+      "count" : "1",
+      "id" : "-37238797115104105110103116111110328311697116101326711111710397114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22West+Texas+A%26M+Buffalo%22",
+      "name" : "West Texas A&M Buffalo",
+      "count" : "2",
+      "id" : "-37238710111511632841011209711532653877326611710210297108111"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Wichita+State+Shockers%22",
+      "name" : "Wichita State Shockers",
+      "count" : "100",
+      "id" : "-3723871059910410511697328311697116101328310411199107101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Winthrop+Eagles%22",
+      "name" : "Winthrop Eagles",
+      "count" : "1",
+      "id" : "-372387105110116104114111112326997103108101115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Wisconsin+Badgers%22",
+      "name" : "Wisconsin Badgers",
+      "count" : "1",
+      "id" : "-37238710511599111110115105110326697100103101114115"
+    }, {
+      "property" : "ads_f10505_ntk_cs%3A%22Wofford+Terriers%22",
+      "name" : "Wofford Terriers",
+      "count" : "2",
+      "id" : "-3723871111021021111141003284101114114105101114115"
+    } ]
+  }, {
+    "id" : "9509",
+    "totalCount" : 12810,
+    "name" : "Gender",
+    "allowMultipleValueSelection" : "true",
+    "displaySequence" : "2.0",
+    "property" : "ads_f19003_ntk_cs",
+    "labels" : [ {
+      "property" : "ads_f19003_ntk_cs%3A%22Boys%27%22",
+      "name" : "Boys'",
+      "count" : "1510",
+      "id" : "-187376611112111539"
+    }, {
+      "property" : "ads_f19003_ntk_cs%3A%22Girls%27%22",
+      "name" : "Girls'",
+      "count" : "607",
+      "id" : "-187377110511410811539"
+    }, {
+      "property" : "ads_f19003_ntk_cs%3A%22Kids%27%22",
+      "name" : "Kids'",
+      "count" : "3",
+      "id" : "-187377510510011539"
+    }, {
+      "property" : "ads_f19003_ntk_cs%3A%22Men%27s%22",
+      "name" : "Men's",
+      "count" : "8020",
+      "id" : "-187377710111039115"
+    }, {
+      "property" : "ads_f19003_ntk_cs%3A%22Toddlers%27%22",
+      "name" : "Toddlers'",
+      "count" : "9",
+      "id" : "-187378411110010010810111411539"
+    }, {
+      "property" : "ads_f19003_ntk_cs%3A%22Unisex%22",
+      "name" : "Unisex",
+      "count" : "28",
+      "id" : "-1873785110105115101120"
+    }, {
+      "property" : "ads_f19003_ntk_cs%3A%22Women%27s%22",
+      "name" : "Women's",
+      "count" : "2633",
+      "id" : "-187378711110910111039115"
+    } ]
+  }, {
+    "id" : "2506",
+    "totalCount" : 667,
+    "name" : "rating",
+    "allowMultipleValueSelection" : "true",
+    "displaySequence" : "2.0",
+    "property" : "ads_f10001_ntk_cs",
+    "labels" : [ {
+      "property" : "ads_f10001_ntk_cs%3A%225%22",
+      "name" : "5",
+      "count" : "353",
+      "id" : "-970053"
+    }, {
+      "property" : "ads_f10001_ntk_cs%3A%224%22",
+      "name" : "4",
+      "count" : "235",
+      "id" : "-970052"
+    }, {
+      "property" : "ads_f10001_ntk_cs%3A%223%22",
+      "name" : "3",
+      "count" : "39",
+      "id" : "-970051"
+    }, {
+      "property" : "ads_f10001_ntk_cs%3A%222%22",
+      "name" : "2",
+      "count" : "19",
+      "id" : "-970050"
+    }, {
+      "property" : "ads_f10001_ntk_cs%3A%221%22",
+      "name" : "1",
+      "count" : "21",
+      "id" : "-970049"
+    } ]
+  } ],
+  "breadcrumb" : [ {
+    "label" : "Search - shirt"
+  } ],
+  "productinfo" : [ {
+    "name" : "Columbia&Sportswear Mens Tamiami II Shirt",
+    "id" : "55744",
+    "sellable" : "true",
+    "colorCount" : "20",
+    "colorImages" : [ "4680086#Brown#//assets.academy.com/mgen/12/20003012.jpg#Y#40.00000#29.98000#40.00000", "4722206#Yellow#//assets.academy.com/mgen/86/20011586.jpg#Y#40.00000#29.98000#40.00000", "55746##//assets.academy.com/mgen/22/10067322.jpg#N#44.99000#40.00000#40.00000" ],
+    "skuCount" : "75",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Columbia Sportswear",
+    "defaultSku" : "55747",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "200098873",
+    "seoURL" : "/shop/pdp/columbia-sportswear-mens-tamiami-ii-shirt-200098873?defaultSKU=55747",
+    "imageURL" : "//assets.academy.com/mgen/22/10067322.jpg",
+    "imageAltDescription" : "Columbia&Sportswear Mens Tamiami II Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "40.00",
+      "priceMessage" : "clearanceStylesAvailable",
+      "savings" : "",
+      "listPrice" : "40.00"
+    },
+    "priceRange" : "4.98-40.00",
+    "adBug" : [ "Clearance", "Online Only" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Columbia Sportswear Men's Bonehead Shirt",
+    "id" : "55550",
+    "sellable" : "true",
+    "colorCount" : "7",
+    "colorImages" : [ "4578695#Blue#//assets.academy.com/mgen/76/10818176.jpg#Y#35.00000#24.98000#35.00000", "4699961##//assets.academy.com/mgen/94/20077794.jpg#Y#35.00000#24.98000#35.00000" ],
+    "skuCount" : "27",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Columbia Sportswear",
+    "defaultSku" : "55551",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "200027541",
+    "seoURL" : "/shop/pdp/columbia-sportswear-mens-bonehead™-shirt?defaultSKU=55551",
+    "imageURL" : "//assets.academy.com/mgen/86/20111886.jpg",
+    "imageAltDescription" : "Columbia Sportswear Men's Bonehead Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "35.00",
+      "priceMessage" : "clearanceStylesAvailable",
+      "savings" : "",
+      "listPrice" : "35.00"
+    },
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "BCG Men's Coaches Polo Shirt",
+    "id" : "512888",
+    "sellable" : "true",
+    "colorCount" : "11",
+    "colorImages" : "512889##//assets.academy.com/mgen/77/10186677.jpg#N#14.99000#14.99000#14.99000",
+    "skuCount" : "54",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "BCG",
+    "defaultSku" : "512889",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "201077505",
+    "seoURL" : "/shop/pdp/bcg™-mens-coaches-polo-shirt?defaultSKU=512889",
+    "imageURL" : "//assets.academy.com/mgen/77/10186677.jpg",
+    "imageAltDescription" : "BCG Men's Coaches Polo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "14.99",
+      "priceMessage" : "clearanceStylesAvailable",
+      "savings" : "",
+      "listPrice" : "14.99"
+    },
+    "priceRange" : "9.98-14.99",
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Under Armour Mens&Performance Polo Shirt",
+    "id" : "1019237",
+    "sellable" : "true",
+    "colorCount" : "12",
+    "colorImages" : "1019243##//assets.academy.com/mgen/52/10313552.jpg#Y#54.99000#54.99000#54.99000",
+    "skuCount" : "38",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Under Armour",
+    "defaultSku" : "1019243",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "201555916",
+    "seoURL" : "/shop/pdp/under-armour-mens-performance-polo-shirt-201555916?defaultSKU=1019243",
+    "imageURL" : "//assets.academy.com/mgen/52/10313552.jpg",
+    "imageAltDescription" : "Under Armour Mens&Performance Polo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "54.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "54.99"
+    },
+    "adBug" : [ "Online Only" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "3N2 Women's Practice Shirt",
+    "id" : "4180305",
+    "sellable" : "true",
+    "colorCount" : "3",
+    "colorImages" : "4180306##//assets.academy.com/mgen/30/10782330.jpg#N#0.00000#23.99000#23.99000",
+    "skuCount" : "14",
+    "isGiftCard" : "N",
+    "manufacturer" : "3N2",
+    "defaultSku" : "4180306",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "111801222",
+    "seoURL" : "/shop/pdp/3n2-womens-practice-shirt?defaultSKU=4180306",
+    "imageURL" : "//assets.academy.com/mgen/30/10782330.jpg",
+    "imageAltDescription" : "3N2 Women's Practice Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "23.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "23.99"
+    },
+    "adBug" : [ "Online Only" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "TITIN Force™ Shirt System",
+    "id" : "3421151",
+    "sellable" : "true",
+    "colorCount" : "1",
+    "colorImages" : "3421162##//assets.academy.com/mgen/86/10569686.jpg#Y#249.00000#179.98000#229.99000",
+    "skuCount" : "1",
+    "isGiftCard" : "N",
+    "manufacturer" : "TITIN",
+    "defaultSku" : "3421162",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "106801252",
+    "seoURL" : "/shop/pdp/titin-force™-shirt-system?defaultSKU=3421162",
+    "imageURL" : "//assets.academy.com/mgen/86/10569686.jpg",
+    "imageAltDescription" : "TITIN Force™ Shirt System",
+    "defaultSkuPrice" : {
+      "salePrice" : "179.98",
+      "priceMessage" : "priceInCart",
+      "savings" : "",
+      "listPrice" : "249.00"
+    },
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "BCG Boys' Compression Muscle Shirt",
+    "id" : "991516",
+    "sellable" : "true",
+    "colorCount" : "2",
+    "colorImages" : "991517##//assets.academy.com/mgen/22/10320922.jpg#N#9.99000#9.99000#9.99000",
+    "skuCount" : "10",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "BCG",
+    "defaultSku" : "991517",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "201601465",
+    "seoURL" : "/shop/pdp/bcg™-boys-compression-muscle-shirt?defaultSKU=991517",
+    "imageURL" : "//assets.academy.com/mgen/22/10320922.jpg",
+    "imageAltDescription" : "BCG Boys' Compression Muscle Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "9.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "9.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Carhartt Men's Trumbull Plaid Shirt",
+    "id" : "4128467",
+    "sellable" : "true",
+    "colorCount" : "3",
+    "colorImages" : "4757518##//assets.academy.com/mgen/14/20018414.jpg#N#39.99000#39.99000#39.99000",
+    "skuCount" : "10",
+    "isGiftCard" : "N",
+    "bvRating" : "5",
+    "manufacturer" : "Carhartt",
+    "defaultSku" : "4757518",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "111546305",
+    "seoURL" : "/shop/pdp/carhartt-mens-trumbull-plaid-shirt-111546305?defaultSKU=4757518",
+    "imageURL" : "//assets.academy.com/mgen/14/20018414.jpg",
+    "imageAltDescription" : "Carhartt Men's Trumbull Plaid Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "39.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "39.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Rawlings® Men's-test shir Shirt",
+    "id" : "151413",
+    "sellable" : "true",
+    "colorCount" : "3",
+    "colorImages" : "151414##//assets.academy.com/mgen/45/10138545.jpg#N#19.99000#24.99000#24.99000",
+    "skuCount" : "17",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Rawlings®",
+    "defaultSku" : "151414",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "200044034",
+    "seoURL" : "/shop/pdp/rawlings®-mens-test-shir-shirt?defaultSKU=151414",
+    "imageURL" : "//assets.academy.com/mgen/45/10138545.jpg",
+    "imageAltDescription" : "Rawlings® Men's-test shir Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "24.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "24.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Dickies Boys' Pique Polo Shirt",
+    "id" : "3794385",
+    "sellable" : "true",
+    "colorCount" : "4",
+    "colorImages" : "3839319##//assets.academy.com/mgen/59/10721459.jpg#N#0.00000#6.99000#6.99000",
+    "skuCount" : "12",
+    "isGiftCard" : "N",
+    "bvRating" : "5",
+    "manufacturer" : "Dickies",
+    "defaultSku" : "3839319",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "110434782",
+    "seoURL" : "/shop/pdp/dickies-boys-pique-polo-shirt?defaultSKU=3839319",
+    "imageURL" : "//assets.academy.com/mgen/59/10721459.jpg",
+    "imageAltDescription" : "Dickies Boys' Pique Polo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "6.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "6.99"
+    },
+    "adBug" : [ "Online Only" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Rawlings Young Men's 3/4 Sleeve Performance Shirt",
+    "id" : "3778553",
+    "sellable" : "true",
+    "colorCount" : "3",
+    "colorImages" : [ "3778728#Black#//assets.academy.com/mgen/17/10705317.jpg#N#0.00000#17.99000#17.99000", "3778730##//assets.academy.com/mgen/17/10705317.jpg#N#0.00000#17.99000#17.99000", "3778731#Blue#//assets.academy.com/mgen/18/10705318.jpg#N#0.00000#17.99000#17.99000", "3778736#Red#//assets.academy.com/mgen/19/10705319.jpg#N#0.00000#17.99000#17.99000" ],
+    "skuCount" : "12",
+    "isGiftCard" : "N",
+    "bvRating" : "1",
+    "manufacturer" : "Rawlings",
+    "defaultSku" : "3778728",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "109424341",
+    "seoURL" : "/shop/pdp/rawlings-young-mens-3-4-sleeve-performance-shirt?defaultSKU=3778728",
+    "imageURL" : "//assets.academy.com/mgen/17/10705317.jpg",
+    "imageAltDescription" : "Rawlings Young Men's 3/4 Sleeve Performance Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "17.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "17.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Rawlings Men's Long Sleeve Performance Shirt",
+    "id" : "3778551",
+    "sellable" : "true",
+    "colorCount" : "3",
+    "colorImages" : [ "3778713##//assets.academy.com/mgen/53/10698353.jpg#N#0.00000#19.99000#19.99000", "3778745#Red#//assets.academy.com/mgen/50/10700450.jpg#N#0.00000#19.99000#19.99000" ],
+    "skuCount" : "12",
+    "isGiftCard" : "N",
+    "bvRating" : "1",
+    "manufacturer" : "Rawlings",
+    "defaultSku" : "3778713",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "109423939",
+    "seoURL" : "/shop/pdp/rawlings-mens-long-sleeve-performance-shirt?defaultSKU=3778713",
+    "imageURL" : "//assets.academy.com/mgen/53/10698353.jpg",
+    "imageAltDescription" : "Rawlings Men's Long Sleeve Performance Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "19.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "19.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Under Armour Men's New Tech Polo Shirt",
+    "id" : "3768725",
+    "sellable" : "true",
+    "colorCount" : "26",
+    "colorImages" : [ "3918948##//assets.academy.com/mgen/62/20001462.jpg#N#0.00000#39.99000#39.99000", "4731023#Blue#//assets.academy.com/mgen/52/20012852.jpg#N#29.99000#39.99000#39.99000" ],
+    "skuCount" : "107",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Under Armour",
+    "defaultSku" : "3918948",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "109260480",
+    "seoURL" : "/shop/pdp/under-armour™-mens-new-tech-polo-shirt?defaultSKU=3918948",
+    "imageURL" : "//assets.academy.com/mgen/62/20001462.jpg",
+    "imageAltDescription" : "Under Armour Men's New Tech Polo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "39.99",
+      "priceMessage" : "clearanceStylesAvailable",
+      "savings" : "",
+      "listPrice" : "39.99"
+    },
+    "priceRange" : "29.98-39.99",
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Ariat Men's Flame Resistant Work Crew Shirt",
+    "id" : "1042109",
+    "sellable" : "true",
+    "colorCount" : "1",
+    "colorImages" : "1042111##//assets.academy.com/mgen/04/10334504.jpg#Y#69.95000#74.99000#74.99000",
+    "skuCount" : "3",
+    "isGiftCard" : "N",
+    "bvRating" : "3",
+    "manufacturer" : "Ariat",
+    "defaultSku" : "1042111",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "201777855",
+    "seoURL" : "/shop/pdp/ariat-mens-flame-resistant-work-crew-shirt?defaultSKU=1042111",
+    "imageURL" : "//assets.academy.com/mgen/04/10334504.jpg",
+    "imageAltDescription" : "Ariat Men's Flame Resistant Work Crew Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "74.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "74.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Ariat Men's Flame Resistant Work Crew Shirt",
+    "id" : "1042114",
+    "sellable" : "true",
+    "colorCount" : "2",
+    "colorImages" : "1042116##//assets.academy.com/mgen/05/10334505.jpg#Y#74.99000#74.99000#74.99000",
+    "skuCount" : "4",
+    "isGiftCard" : "N",
+    "bvRating" : "3",
+    "manufacturer" : "Ariat",
+    "defaultSku" : "1042116",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "201777856",
+    "seoURL" : "/shop/pdp/ariat-mens-flame-resistant-work-crew-shirt-201777856?defaultSKU=1042116",
+    "imageURL" : "//assets.academy.com/mgen/05/10334505.jpg",
+    "imageAltDescription" : "Ariat Men's Flame Resistant Work Crew Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "74.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "74.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "The North Face Women's Workout Shirt",
+    "id" : "5091070",
+    "sellable" : "true",
+    "colorCount" : "3",
+    "colorImages" : "5101455##//assets.academy.com/mgen/92/20098692.jpg#N#0.0#40.00000#40.00000",
+    "skuCount" : "10",
+    "isGiftCard" : "N",
+    "bvRating" : "3",
+    "manufacturer" : "The North Face",
+    "defaultSku" : "5101455",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "113581972",
+    "seoURL" : "/shop/pdp/the-north-face-womens-workout-shirt?defaultSKU=5101455",
+    "imageURL" : "//assets.academy.com/mgen/92/20098692.jpg",
+    "imageAltDescription" : "The North Face Women's Workout Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "40.00",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "40.00"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "BCG Women's Turbo Long-Sleeve Shirt",
+    "id" : "4936859",
+    "sellable" : "true",
+    "colorCount" : "5",
+    "colorImages" : [ "4936860#Blue#//assets.academy.com/mgen/49/20030149.jpg#N#0.00000#9.99000#9.99000", "4936866##//assets.academy.com/mgen/66/20030166.jpg#N#0.00000#9.99000#9.99000" ],
+    "skuCount" : "25",
+    "isGiftCard" : "N",
+    "bvRating" : "3",
+    "manufacturer" : "BCG",
+    "defaultSku" : "4936860",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "111076420",
+    "seoURL" : "/shop/pdp/bcg-womens-turbo-long-sleeve-shirt?defaultSKU=4936860",
+    "imageURL" : "//assets.academy.com/mgen/49/20030149.jpg",
+    "imageAltDescription" : "BCG Women's Turbo Long-Sleeve Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "9.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "9.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Lee Men's Short Sleeve Oxford Shirt",
+    "id" : "1250307",
+    "sellable" : "true",
+    "colorCount" : "1",
+    "colorImages" : "1250308##//assets.academy.com/mgen/80/10383980.jpg#N#0.00000#12.99000#12.99000",
+    "skuCount" : "2",
+    "isGiftCard" : "N",
+    "bvRating" : "3",
+    "manufacturer" : "Lee",
+    "defaultSku" : "1250308",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "201549383",
+    "seoURL" : "/shop/pdp/lee-mens-short-sleeve-oxford-shirt?defaultSKU=1250308",
+    "imageURL" : "//assets.academy.com/mgen/80/10383980.jpg",
+    "imageAltDescription" : "Lee Men's Short Sleeve Oxford Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "12.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "12.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "BCG Men's Body Mapping Reflective Running Shirt",
+    "id" : "4940280",
+    "sellable" : "true",
+    "colorCount" : "4",
+    "colorImages" : "4940281##//assets.academy.com/mgen/43/20028343.jpg#N#0.00000#16.99000#16.99000",
+    "skuCount" : "20",
+    "isGiftCard" : "N",
+    "bvRating" : "3",
+    "manufacturer" : "BCG",
+    "defaultSku" : "4940281",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "111385863",
+    "seoURL" : "/shop/pdp/bcg-mens-body-mapping-reflective-running-shirt?defaultSKU=4940281",
+    "imageURL" : "//assets.academy.com/mgen/43/20028343.jpg",
+    "imageAltDescription" : "BCG Men's Body Mapping Reflective Running Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "16.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "16.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Columbia Sportswear Men's Bahama II Shirt",
+    "id" : "55670",
+    "sellable" : "true",
+    "colorCount" : "12",
+    "colorImages" : "4834563##//assets.academy.com/mgen/98/20035298.jpg#Y#40.00000#29.98000#40.00000",
+    "skuCount" : "45",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Columbia Sportswear",
+    "defaultSku" : "55676",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "200027546",
+    "seoURL" : "/shop/pdp/columbia-sportswear-mens-bahama-ii-shirt?defaultSKU=55676",
+    "imageURL" : "//assets.academy.com/mgen/51/10067551.jpg",
+    "imageAltDescription" : "Columbia Sportswear Men's Bahama II Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "40.00",
+      "priceMessage" : "clearanceStylesAvailable",
+      "savings" : "",
+      "listPrice" : "40.00"
+    },
+    "priceRange" : "29.98-40.00",
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Magellan Outdoors Women's Laguna Madre Fishing Shirt",
+    "id" : "4325501",
+    "sellable" : "true",
+    "colorCount" : "15",
+    "colorImages" : [ "4325502##//assets.academy.com/mgen/71/20104871.jpg#N#0.00000#17.99000#17.99000", "4909021#Pink#//assets.academy.com/mgen/09/20051309.jpg#N#0.00000#17.99000#17.99000" ],
+    "skuCount" : "59",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Magellan Outdoors",
+    "defaultSku" : "4325502",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "109441694",
+    "seoURL" : "/shop/pdp/magellan-outdoors-womens-laguna-madre-fishing-shirt?defaultSKU=4325502",
+    "imageURL" : "//assets.academy.com/mgen/71/20104871.jpg",
+    "imageAltDescription" : "Magellan Outdoors Women's Laguna Madre Fishing Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "17.99",
+      "priceMessage" : "clearanceStylesAvailable",
+      "savings" : "",
+      "listPrice" : "17.99"
+    },
+    "priceRange" : "14.98-17.99",
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Oakley Men's Elemental Polo Shirt",
+    "id" : "1087288",
+    "sellable" : "true",
+    "colorCount" : "1",
+    "colorImages" : "1087321##//assets.academy.com/mgen/56/10352556.jpg#N#49.99000#49.99000#49.99000",
+    "skuCount" : "4",
+    "isGiftCard" : "N",
+    "manufacturer" : "Oakley",
+    "defaultSku" : "1087321",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "201560848",
+    "seoURL" : "/shop/pdp/oakley-mens-elemental-polo-shirt?defaultSKU=1087321",
+    "imageURL" : "//assets.academy.com/mgen/56/10352556.jpg",
+    "imageAltDescription" : "Oakley Men's Elemental Polo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "49.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "49.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Nike Boys' Fitted Pro Shirt",
+    "id" : "4820025",
+    "sellable" : "true",
+    "colorCount" : "5",
+    "colorImages" : "4914651##//assets.academy.com/mgen/05/20052405.jpg#Y#25.00000#19.99000#19.99000",
+    "skuCount" : "25",
+    "isGiftCard" : "N",
+    "manufacturer" : "Nike",
+    "defaultSku" : "4914651",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "113131496",
+    "seoURL" : "/shop/pdp/nike-boys-fitted-pro-shirt?defaultSKU=4914651",
+    "imageURL" : "//assets.academy.com/mgen/05/20052405.jpg",
+    "imageAltDescription" : "Nike Boys' Fitted Pro Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "19.99",
+      "priceMessage" : "priceInCart",
+      "savings" : "",
+      "listPrice" : "25.00"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "adidas Women's S2S Cropped Shirt",
+    "id" : "4999553",
+    "sellable" : "true",
+    "colorCount" : "2",
+    "colorImages" : "5033050##//assets.academy.com/mgen/26/20083526.jpg#N#0.0#39.99000#39.99000",
+    "skuCount" : "8",
+    "isGiftCard" : "N",
+    "manufacturer" : "Adidas",
+    "defaultSku" : "5033050",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "113539096",
+    "seoURL" : "/shop/pdp/adidas-womens-s2s-cropped-shirt?defaultSKU=5033050",
+    "imageURL" : "//assets.academy.com/mgen/26/20083526.jpg",
+    "imageAltDescription" : "adidas Women's S2S Cropped Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "39.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "39.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Nike Girls' Novelty Sportswear Shirt",
+    "id" : "4816519",
+    "sellable" : "true",
+    "colorCount" : "2",
+    "colorImages" : "5076551##//assets.academy.com/mgen/86/20091486.jpg#Y#30.00000#24.99000#24.99000",
+    "skuCount" : "10",
+    "isGiftCard" : "N",
+    "manufacturer" : "Nike",
+    "defaultSku" : "5076551",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "113146225",
+    "seoURL" : "/shop/pdp/nike-girls-novelty-sportswear-shirt?defaultSKU=5076551",
+    "imageURL" : "//assets.academy.com/mgen/86/20091486.jpg",
+    "imageAltDescription" : "Nike Girls' Novelty Sportswear Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "24.99",
+      "priceMessage" : "priceInCart",
+      "savings" : "",
+      "listPrice" : "30.00"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Carhartt Men's Trumbull Plaid Shirt",
+    "id" : "3417986",
+    "sellable" : "true",
+    "colorCount" : "2",
+    "colorImages" : "3493882##//assets.academy.com/mgen/13/10626613.jpg#Y#34.99000#19.98000#34.99000",
+    "skuCount" : "8",
+    "isGiftCard" : "N",
+    "manufacturer" : "Carhartt",
+    "defaultSku" : "3493882",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "108288405",
+    "seoURL" : "/shop/pdp/carhartt-mens-trumbull-plaid-shirt?defaultSKU=3493882",
+    "imageURL" : "//assets.academy.com/mgen/13/10626613.jpg",
+    "imageAltDescription" : "Carhartt Men's Trumbull Plaid Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "19.98",
+      "priceMessage" : "priceInCart",
+      "savings" : "",
+      "listPrice" : "34.99"
+    },
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Wolverine Men's Forrester Shirt Jac",
+    "id" : "868956",
+    "sellable" : "true",
+    "colorCount" : "2",
+    "colorImages" : "1185224##//assets.academy.com/mgen/24/10380624.jpg#N#34.99000#34.99000#34.99000",
+    "skuCount" : "2",
+    "isGiftCard" : "N",
+    "manufacturer" : "Wolverine",
+    "defaultSku" : "1185224",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "201465492",
+    "seoURL" : "/shop/pdp/wolverine-mens-forrester-shirt-jac?defaultSKU=1185224",
+    "imageURL" : "//assets.academy.com/mgen/24/10380624.jpg",
+    "imageAltDescription" : "Wolverine Men's Forrester Shirt Jac",
+    "defaultSkuPrice" : {
+      "salePrice" : "34.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "34.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Magellan Outdoors Men's Riptide Shirt",
+    "id" : "1393734",
+    "sellable" : "true",
+    "colorCount" : "1",
+    "colorImages" : "3339076##//assets.academy.com/mgen/63/10585863.jpg#N#0.00000#7.48000#16.99000",
+    "skuCount" : "1",
+    "isGiftCard" : "N",
+    "manufacturer" : "Magellan Outdoors",
+    "defaultSku" : "3339076",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "102448501",
+    "seoURL" : "/shop/pdp/magellan-outdoors™-mens-riptide-shirt?defaultSKU=3339076",
+    "imageURL" : "//assets.academy.com/mgen/63/10585863.jpg",
+    "imageAltDescription" : "Magellan Outdoors Men's Riptide Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "7.48",
+      "priceMessage" : "wasNowPrice",
+      "savings" : "55.97%",
+      "listPrice" : "16.99"
+    },
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Game Winner Kids' Twill Shirt",
+    "id" : "87694",
+    "sellable" : "true",
+    "skuCount" : "2",
+    "isGiftCard" : "N",
+    "manufacturer" : "Game Winner",
+    "defaultSku" : "810046",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "200730404",
+    "seoURL" : "/shop/pdp/game-winner-kids-twill-shirt?defaultSKU=810046",
+    "imageURL" : "//assets.academy.com/mgen/02/10274102.jpg",
+    "imageAltDescription" : "Game Winner Kids' Twill Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "15.98",
+      "priceMessage" : "wasNowPrice",
+      "savings" : "20.06%",
+      "listPrice" : "19.99"
+    },
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Wolverine Men's Newago Shirt Jac",
+    "id" : "1188900",
+    "sellable" : "true",
+    "colorCount" : "1",
+    "colorImages" : "1188901##//assets.academy.com/mgen/16/10381816.jpg#N#34.99000#34.99000#34.99000",
+    "skuCount" : "4",
+    "isGiftCard" : "N",
+    "manufacturer" : "Wolverine",
+    "defaultSku" : "1188901",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "201721214",
+    "seoURL" : "/shop/pdp/wolverine-mens-newago-shirt-jac?defaultSKU=1188901",
+    "imageURL" : "//assets.academy.com/mgen/16/10381816.jpg",
+    "imageAltDescription" : "Wolverine Men's Newago Shirt Jac",
+    "defaultSkuPrice" : {
+      "salePrice" : "34.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "34.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "BCG Women's Heather Turbo Shirt",
+    "id" : "4940535",
+    "sellable" : "true",
+    "colorCount" : "1",
+    "skuCount" : "5",
+    "isGiftCard" : "N",
+    "manufacturer" : "BCG",
+    "defaultSku" : "4940536",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "111863968",
+    "seoURL" : "/shop/pdp/bcg-womens-heather-turbo-shirt?defaultSKU=4940536",
+    "imageURL" : "//assets.academy.com/mgen/22/20034122.jpg",
+    "imageAltDescription" : "BCG Women's Heather Turbo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "9.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "9.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Speedo Men's Colorblock Swim Shirt",
+    "id" : "4986182",
+    "sellable" : "true",
+    "colorCount" : "1",
+    "colorImages" : "4986183##//assets.academy.com/mgen/38/20070238.jpg#N#0.0#29.99000#29.99000",
+    "skuCount" : "4",
+    "isGiftCard" : "N",
+    "manufacturer" : "Speedo",
+    "defaultSku" : "4986183",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "113737252",
+    "seoURL" : "/shop/pdp/speedo-mens-colorblock-swim-shirt?defaultSKU=4986183",
+    "imageURL" : "//assets.academy.com/mgen/38/20070238.jpg",
+    "imageAltDescription" : "Speedo Men's Colorblock Swim Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "29.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "29.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Carhartt Men's Active Shirt Jac",
+    "id" : "59703",
+    "sellable" : "true",
+    "colorCount" : "2",
+    "colorImages" : "59704##//assets.academy.com/mgen/08/10114508.jpg#Y#84.99000#74.99000#74.99000",
+    "skuCount" : "3",
+    "isGiftCard" : "N",
+    "manufacturer" : "Carhartt",
+    "defaultSku" : "59704",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "200023478",
+    "seoURL" : "/shop/pdp/carhartt-mens-active-shirt-jac?defaultSKU=59704",
+    "imageURL" : "//assets.academy.com/mgen/08/10114508.jpg",
+    "imageAltDescription" : "Carhartt Men's Active Shirt Jac",
+    "defaultSkuPrice" : {
+      "salePrice" : "74.99",
+      "priceMessage" : "priceInCart",
+      "savings" : "",
+      "listPrice" : "84.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "3N2 Men's Umpire Polo Shirt",
+    "id" : "4180150",
+    "sellable" : "true",
+    "colorCount" : "5",
+    "colorImages" : "4180151##//assets.academy.com/mgen/83/10782183.jpg#N#0.00000#24.99000#24.99000",
+    "skuCount" : "29",
+    "isGiftCard" : "N",
+    "manufacturer" : "3N2",
+    "defaultSku" : "4180151",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "111802751",
+    "seoURL" : "/shop/pdp/3n2-mens-umpire-polo-shirt?defaultSKU=4180151",
+    "imageURL" : "//assets.academy.com/mgen/83/10782183.jpg",
+    "imageAltDescription" : "3N2 Men's Umpire Polo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "24.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "24.99"
+    },
+    "adBug" : [ "Online Only" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Columbia Sportswear Men's Low Drag Offshore Shirt",
+    "id" : "976741",
+    "sellable" : "true",
+    "colorCount" : "13",
+    "colorImages" : "3802163##//assets.academy.com/mgen/08/10712508.jpg#Y#45.00000#29.98000#45.00000",
+    "skuCount" : "47",
+    "isGiftCard" : "N",
+    "bvRating" : "5",
+    "manufacturer" : "Columbia Sportswear",
+    "defaultSku" : "976742",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "201562070",
+    "seoURL" : "/shop/pdp/columbia-sportswear-mens-low-drag-offshore-shirt?defaultSKU=976742",
+    "imageURL" : "//assets.academy.com/mgen/43/10316543.jpg",
+    "imageAltDescription" : "Columbia Sportswear Men's Low Drag Offshore Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "45.00",
+      "priceMessage" : "clearanceStylesAvailable",
+      "savings" : "",
+      "listPrice" : "45.00"
+    },
+    "priceRange" : "29.98-45.00",
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Magellan Outdoors Men's Drifter Short Sleeve Shirt",
+    "id" : "3794297",
+    "sellable" : "true",
+    "colorCount" : "4",
+    "colorImages" : "3794392##//assets.academy.com/mgen/34/10677134.jpg#N#0.00000#14.98000#21.99000",
+    "skuCount" : "4",
+    "isGiftCard" : "N",
+    "bvRating" : "5",
+    "manufacturer" : "Magellan Outdoors",
+    "defaultSku" : "3794392",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "105892332",
+    "seoURL" : "/shop/pdp/magellan-outdoors™-mens-drifter-short-sleeve-shirt?defaultSKU=3794392",
+    "imageURL" : "//assets.academy.com/mgen/34/10677134.jpg",
+    "imageAltDescription" : "Magellan Outdoors Men's Drifter Short Sleeve Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "14.98",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "21.99"
+    },
+    "priceRange" : "14.98-17.98",
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Magellan Outdoors Men's Laguna Polo Shirt",
+    "id" : "4150356",
+    "sellable" : "true",
+    "colorCount" : "7",
+    "colorImages" : "4150550##//assets.academy.com/mgen/10/10760710.jpg#N#0.00000#19.99000#19.99000",
+    "skuCount" : "42",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Magellan Outdoors",
+    "defaultSku" : "4150550",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "109378111",
+    "seoURL" : "/shop/pdp/magellan-outdoors-mens-laguna-polo-shirt?defaultSKU=4150550",
+    "imageURL" : "//assets.academy.com/mgen/10/10760710.jpg",
+    "imageAltDescription" : "Magellan Outdoors Men's Laguna Polo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "19.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "19.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Under Armour Men's Playoff Polo Shirt",
+    "id" : "1419704",
+    "sellable" : "true",
+    "colorCount" : "53",
+    "colorImages" : [ "1425217##//assets.academy.com/mgen/03/10445003.jpg#N#64.99000#64.99000#64.99000", "4723092#Blue#//assets.academy.com/mgen/92/10825292.jpg#N#48.74000#64.99000#64.99000", "4780023#Red#//assets.academy.com/mgen/77/10825277.jpg#N#48.74000#64.99000#64.99000", "5001511#White#//assets.academy.com/mgen/00/20074900.jpg#N#64.99000#64.99000#64.99000" ],
+    "skuCount" : "193",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Under Armour",
+    "defaultSku" : "1425217",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "101928289",
+    "seoURL" : "/shop/pdp/under-armour-mens-playoff-polo-shirt-101928289?defaultSKU=1425217",
+    "imageURL" : "//assets.academy.com/mgen/03/10445003.jpg",
+    "imageAltDescription" : "Under Armour Men's Playoff Polo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "64.99",
+      "priceMessage" : "clearanceStylesAvailable",
+      "savings" : "",
+      "listPrice" : "64.99"
+    },
+    "priceRange" : "39.98-64.99",
+    "adBug" : [ "Clearance", "Online Only" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Columbia Sportswear Women's Tamiami Long Sleeve Shirt",
+    "id" : "69868",
+    "sellable" : "true",
+    "colorCount" : "8",
+    "colorImages" : [ "69869##//assets.academy.com/mgen/17/20107617.jpg#Y#44.99000#45.00000#45.00000", "3887108#Pink#//assets.academy.com/mgen/38/10740038.jpg#Y#45.00000#45.00000#45.00000" ],
+    "skuCount" : "32",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Columbia Sportswear",
+    "defaultSku" : "69869",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "200094035",
+    "seoURL" : "/shop/pdp/columbia-sportswear-womens-tamiami™-long-sleeve-shirt?defaultSKU=69869",
+    "imageURL" : "//assets.academy.com/mgen/17/20107617.jpg",
+    "imageAltDescription" : "Columbia Sportswear Women's Tamiami Long Sleeve Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "45.00",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "45.00"
+    },
+    "priceRange" : "44.99-45.00",
+    "storeId" : "10051"
+  }, {
+    "name" : "Columbia Sportswear Men's Tamiami II Shirt",
+    "id" : "55728",
+    "sellable" : "true",
+    "colorCount" : "17",
+    "colorImages" : [ "55729##//assets.academy.com/mgen/55/10089955.jpg#N#47.99000#48.00000#48.00000", "4765436#Blue#//assets.academy.com/mgen/18/20021018.jpg#Y#48.00000#48.00000#48.00000" ],
+    "skuCount" : "77",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Columbia Sportswear",
+    "defaultSku" : "55729",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "200098872",
+    "seoURL" : "/shop/pdp/columbia-sportswear-mens-tamiami™-ii-shirt?defaultSKU=55729",
+    "imageURL" : "//assets.academy.com/mgen/55/10089955.jpg",
+    "imageAltDescription" : "Columbia Sportswear Men's Tamiami II Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "48.00",
+      "priceMessage" : "clearanceStylesAvailable",
+      "savings" : "",
+      "listPrice" : "48.00"
+    },
+    "priceRange" : "31.98-48.00",
+    "adBug" : [ "Clearance", "Online Only" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "BCG Women's Short Sleeve Tennis Polo Shirt",
+    "id" : "1004748",
+    "sellable" : "true",
+    "colorCount" : "2",
+    "colorImages" : "1137364##//assets.academy.com/mgen/65/10366865.jpg#N#14.99000#14.99000#14.99000",
+    "skuCount" : "6",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "BCG",
+    "defaultSku" : "1137364",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "201587671",
+    "seoURL" : "/shop/pdp/bcg™-womens-short-sleeve-tennis-polo-shirt?defaultSKU=1137364",
+    "imageURL" : "//assets.academy.com/mgen/65/10366865.jpg",
+    "imageAltDescription" : "BCG Women's Short Sleeve Tennis Polo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "14.99",
+      "priceMessage" : "clearanceStylesAvailable",
+      "savings" : "",
+      "listPrice" : "14.99"
+    },
+    "priceRange" : "9.98-14.99",
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Magellan Outdoors Summerville Crosshatch Short Sleeve Shirt",
+    "id" : "4154296",
+    "sellable" : "true",
+    "colorCount" : "7",
+    "colorImages" : "4154986##//assets.academy.com/mgen/65/10758865.jpg#N#0.00000#9.98000#16.99000",
+    "skuCount" : "33",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Magellan Outdoors",
+    "defaultSku" : "4154986",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "109414485",
+    "seoURL" : "/shop/pdp/magellan-outdoors-summerville-crosshatch-short-sleeve-shirt?defaultSKU=4154986",
+    "imageURL" : "//assets.academy.com/mgen/65/10758865.jpg",
+    "imageAltDescription" : "Magellan Outdoors Summerville Crosshatch Short Sleeve Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "9.98",
+      "priceMessage" : "clearanceStylesAvailable",
+      "savings" : "",
+      "listPrice" : "16.99"
+    },
+    "priceRange" : "9.98-16.99",
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "BCG Men's Crew Neck Muscle Shirt",
+    "id" : "1023266",
+    "sellable" : "true",
+    "colorCount" : "7",
+    "colorImages" : "1023267##//assets.academy.com/mgen/15/10325615.jpg#N#4.99000#4.99000#4.99000",
+    "skuCount" : "42",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "BCG",
+    "defaultSku" : "1023267",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "201624780",
+    "seoURL" : "/shop/pdp/bcg™-mens-crew-neck-muscle-shirt?defaultSKU=1023267",
+    "imageURL" : "//assets.academy.com/mgen/15/10325615.jpg",
+    "imageAltDescription" : "BCG Men's Crew Neck Muscle Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "4.99",
+      "priceMessage" : "clearanceStylesAvailable",
+      "savings" : "",
+      "listPrice" : "4.99"
+    },
+    "priceRange" : "3.98-4.99",
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Columbia Sportswear Men's Utilizer Polo Shirt",
+    "id" : "5054921",
+    "sellable" : "true",
+    "colorCount" : "4",
+    "colorImages" : "5054922##//assets.academy.com/mgen/56/20050956.jpg#Y#34.99000#34.99000#34.99000",
+    "skuCount" : "20",
+    "isGiftCard" : "N",
+    "bvRating" : "5",
+    "manufacturer" : "Columbia Sportswear",
+    "defaultSku" : "5054922",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "113350314",
+    "seoURL" : "/shop/pdp/columbia-sportswear-mens-utilizer-polo-shirt-113350314?defaultSKU=5054922",
+    "imageURL" : "//assets.academy.com/mgen/56/20050956.jpg",
+    "imageAltDescription" : "Columbia Sportswear Men's Utilizer Polo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "34.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "34.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Dickies Men's Short Sleeve Work Shirt",
+    "id" : "192577",
+    "sellable" : "true",
+    "colorCount" : "14",
+    "colorImages" : "3762503##//assets.academy.com/mgen/48/10138648.jpg#Y#17.99000#36.00000#36.00000",
+    "skuCount" : "103",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Dickies",
+    "defaultSku" : "3762503",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "200923614",
+    "seoURL" : "/shop/pdp/dickies-mens-short-sleeve-work-shirt-200923614?defaultSKU=3762503",
+    "imageURL" : "//assets.academy.com/mgen/48/10138648.jpg",
+    "imageAltDescription" : "Dickies Men's Short Sleeve Work Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "36.00",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "36.00"
+    },
+    "adBug" : [ "Online Only" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "BCG Boys' Solid Short Sleeve Polo Shirt",
+    "id" : "4646038",
+    "sellable" : "true",
+    "colorCount" : "9",
+    "colorImages" : "4646120##//assets.academy.com/mgen/94/10829094.jpg#N#0.00000#9.99000#9.99000",
+    "skuCount" : "51",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "BCG",
+    "defaultSku" : "4646120",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "110995766",
+    "seoURL" : "/shop/pdp/bcg-boys-solid-short-sleeve-polo-shirt?defaultSKU=4646120",
+    "imageURL" : "//assets.academy.com/mgen/94/10829094.jpg",
+    "imageAltDescription" : "BCG Boys' Solid Short Sleeve Polo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "9.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "9.99"
+    },
+    "storeId" : "10051"
+  }, {
+    "name" : "Under Armour Boys' Match Play Polo Shirt",
+    "id" : "625353",
+    "sellable" : "true",
+    "colorCount" : "9",
+    "colorImages" : [ "625354##//assets.academy.com/mgen/35/10248235.jpg#Y#29.99000#29.99000#29.99000", "4144806#Grey#//assets.academy.com/mgen/14/10784114.jpg#Y#29.99000#29.99000#29.99000" ],
+    "skuCount" : "39",
+    "isGiftCard" : "N",
+    "bvRating" : "5",
+    "manufacturer" : "Under Armour",
+    "defaultSku" : "625354",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "201288590",
+    "seoURL" : "/shop/pdp/under-armour-boys-match-play-polo-shirt?defaultSKU=625354",
+    "imageURL" : "//assets.academy.com/mgen/35/10248235.jpg",
+    "imageAltDescription" : "Under Armour Boys' Match Play Polo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "29.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "29.99"
+    },
+    "adBug" : [ "Online Only" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Dickies Women's Solid Pique Polo Shirt",
+    "id" : "1319616",
+    "sellable" : "true",
+    "colorCount" : "7",
+    "colorImages" : "1319617##//assets.academy.com/mgen/77/10403177.jpg#Y#14.99000#14.99000#14.99000",
+    "skuCount" : "26",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Dickies",
+    "defaultSku" : "1319617",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "102873259",
+    "seoURL" : "/shop/pdp/dickies-womens-solid-pique-polo-shirt?defaultSKU=1319617",
+    "imageURL" : "//assets.academy.com/mgen/77/10403177.jpg",
+    "imageAltDescription" : "Dickies Women's Solid Pique Polo Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "14.99",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "14.99"
+    },
+    "adBug" : [ "Online Only" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Dickies Men's Long Sleeve Work Shirt",
+    "id" : "3836520",
+    "sellable" : "true",
+    "colorCount" : "11",
+    "colorImages" : "3839322##//assets.academy.com/mgen/68/10721468.jpg#Y#19.99000#40.00000#40.00000",
+    "skuCount" : "119",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Dickies",
+    "defaultSku" : "3839322",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "110450336",
+    "seoURL" : "/shop/pdp/dickies-mens-long-sleeve-work-shirt?defaultSKU=3839322",
+    "imageURL" : "//assets.academy.com/mgen/68/10721468.jpg",
+    "imageAltDescription" : "Dickies Men's Long Sleeve Work Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "40.00",
+      "priceMessage" : "",
+      "savings" : "",
+      "listPrice" : "40.00"
+    },
+    "adBug" : [ "Online Only" ],
+    "storeId" : "10051"
+  }, {
+    "name" : "Columbia Sportswear Men's Boulder Ridge Flannel Shirt",
+    "id" : "4150418",
+    "sellable" : "true",
+    "colorCount" : "4",
+    "colorImages" : [ "4582599#Grey#//assets.academy.com/mgen/67/10818567.jpg#Y#50.00000#34.98000#50.00000", "4582604##//assets.academy.com/mgen/64/10818564.jpg#Y#50.00000#34.98000#50.00000" ],
+    "skuCount" : "20",
+    "isGiftCard" : "N",
+    "bvRating" : "4",
+    "manufacturer" : "Columbia Sportswear",
+    "defaultSku" : "4582599",
+    "isSingleSkuProduct" : false,
+    "partNumber" : "111494154",
+    "seoURL" : "/shop/pdp/columbia-sportswear-mens-boulder-ridge-flannel-shirt?defaultSKU=4582599",
+    "imageURL" : "//assets.academy.com/mgen/67/10818567.jpg",
+    "imageAltDescription" : "Columbia Sportswear Men's Boulder Ridge Flannel Shirt",
+    "defaultSkuPrice" : {
+      "salePrice" : "34.98",
+      "priceMessage" : "priceInCart",
+      "savings" : "",
+      "listPrice" : "50.00"
+    },
+    "adBug" : [ "Clearance" ],
+    "storeId" : "10051"
+  } ]
+}

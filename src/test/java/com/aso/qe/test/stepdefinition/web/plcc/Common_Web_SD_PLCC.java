@@ -296,7 +296,8 @@ public class Common_Web_SD_PLCC extends CommonActionHelper
 			System.out.println(subWindowhandler);
 		}
 		driver.close();*/
-		Alert alert = driver.switchTo().alert();
+		Alert alert = (Alert) driver.switchTo().activeElement();
 		alert.accept();
+		
 	}
 }

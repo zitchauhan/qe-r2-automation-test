@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "inventory": {
+      "type": "object",
+      "properties": {
+        "online": {
+          "type": "array",
+          "items": {}
+        }
+      },
+      "required": [
+        "online"
+      ]
+    },
+    "product-info": {
+      "type": "object",
+      "properties": {
+        "productinfo": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "isGiftCard": {
+              "type": "string"
+            },
+            "ppuEnabled": {
+              "type": "boolean"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "longDescription": {
+              "type": "string"
+            },
+            "sellable": {
+              "type": "string"
+            },
+            "categoryId": {
+              "type": "string"
+            },
+            "colorCount": {
+              "type": "string"
+            },
+            "varianttype": {
+              "type": "string"
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "defaultSku": {
+              "type": "string"
+            },
+            "isSingleSkuProduct": {
+              "type": "boolean"
+            },
+            "partNumber": {
+              "type": "string"
+            },
+            "seoURL": {
+              "type": "string"
+            },
+            "parentCategoryURL": {
+              "type": "string"
+            },
+            "xfullimage": {
+              "type": "string"
+            },
+            "fullImage": {
+              "type": "string"
+            },
+            "thumbnail": {
+              "type": "string"
+            },
+            "imageAltDescription": {
+              "type": "string"
+            },
+            "productAttrGroups": {
+              "type": "array",
+              "items": {}
+            },
+            "keyword": {
+              "type": "string"
+            },
+            "wgFlag": {
+              "type": "string"
+            },
+            "productSpecifications": {
+              "type": "array",
+              "items": {}
+            },
+            "productAttrCombinationGroups": {
+              "type": "object",
+              "properties": {
+                "4143900": {
+                  "type": "string"
+                },
+                "4143902": {
+                  "type": "string"
+                },
+                "4134445": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "4143900",
+                "4143902",
+                "4134445"
+              ]
+            },
+            "productAttributes": {
+              "type": "array",
+              "items": {}
+            },
+            "productAttributeGroups": {
+              "type": "array",
+              "items": {}
+            },
+            "productPrice": {
+              "type": "object",
+              "properties": {
+                "salePrice": {
+                  "type": "string"
+                },
+                "priceMessage": {
+                  "type": "string"
+                },
+                "savings": {
+                  "type": "string"
+                },
+                "listPrice": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "salePrice",
+                "priceMessage",
+                "savings",
+                "listPrice"
+              ]
+            },
+            "sKUs": {
+              "type": "array",
+              "items": {}
+            },
+            "productType": {
+              "type": "string"
+            },
+            "showBIS": {
+              "type": "string"
+            },
+            "breadCrumb": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "isGiftCard",
+            "ppuEnabled",
+            "shortDescription",
+            "longDescription",
+            "sellable",
+            "categoryId",
+            "colorCount",
+            "varianttype",
+            "manufacturer",
+            "defaultSku",
+            "isSingleSkuProduct",
+            "partNumber",
+            "seoURL",
+            "parentCategoryURL",
+            "xfullimage",
+            "fullImage",
+            "thumbnail",
+            "imageAltDescription",
+            "productAttrGroups",
+            "keyword",
+            "wgFlag",
+            "productSpecifications",
+            "productAttrCombinationGroups",
+            "productAttributes",
+            "productAttributeGroups",
+            "productPrice",
+            "sKUs",
+            "productType",
+            "showBIS",
+            "breadCrumb"
+          ]
+        }
+      },
+      "required": [
+        "productinfo"
+      ]
+    }
+  },
+  "required": [
+    "inventory",
+    "product-info"
+  ]
+}

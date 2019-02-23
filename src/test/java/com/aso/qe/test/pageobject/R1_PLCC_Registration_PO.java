@@ -25,15 +25,27 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	// PLCC-41 (AddressCheckbox)
 	// @FindBy(xpath = "//*[@data-auid='signInCta']")public WebElement
 	// myAccountLinkOnAsoHomePage;
+	@FindBy(xpath="//*[@data-auid='billingEmail']")  public WebElement inputEmailAddressTxtBuynow;
 	@FindBy(xpath = "//*[@data-auid='MyAccount']")
 	public WebElement myAccountLinkOnAsoHomePage;
 	@FindBy(xpath = "//*[@data-auid='Sign Out']")
 	public WebElement signOutLink; 
-
+	
+	@FindBy(xpath = "//*[@data-auid='Address Book']")
+	public WebElement addressBookOnMyaccountLink;
+	@FindBy(xpath = "//*[@text='Address Book']")
+	public WebElement addressBooktext;
+	@FindBy(xpath = "//*[@data-auid='add_address_btn']")
+	public WebElement addaddresslink;
+	
+	@FindBy(xpath = "//*[contains(text()='HELLO,'])")
+	public WebElement hellotext;
+	
 	@FindBy(xpath = "//*[@data-auid='signUp_btn']")
 	public WebElement signUpLinkOnLoginPage;
 	@FindBy(xpath = "//*[text()='Add Address for Faster Checkout']")
 	public WebElement addAddressCheckBox;
+	
 	
 	// @FindBy(xpath = "//*[@type='checkbox']")public WebElement addAddressCheckBox;
 	@FindBy(xpath = "//*[@data-auid='address_input']")
@@ -711,9 +723,12 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void enterEmailAddressTxtFieldAuto(String arg) throws Exception {
 		Date NewEmailEveryTime = new Date(System.currentTimeMillis());
 		String NewEmailEveryTime2 = NewEmailEveryTime.toString().replaceAll("\\s+", "").replaceAll(":", "");
-		//String NewEmailEveryTime2= "Perf"+FrameWorkHelper.getRandomAlphabetic(6).toLowerCase()+"@plccmail.com";
-		//String NewEmailEveryTimeValue = "Perf" + NewEmailEveryTime2 + "@gmail.com";
-		setInputText(emailIdTxtField, NewEmailEveryTime2);
+		String NewEmailEveryTimeValue = "QA" + NewEmailEveryTime2 + "@gmail.com";
+		setInputText(emailIdTxtField, NewEmailEveryTimeValue);
+	}
+	//Enter Email Address for Enable BuyNow
+	public void enterEmailAddressTxtFieldEnableBuyNow(String arg) throws Exception {
+		setInputText(inputEmailAddressTxtBuynow, webPropHelper.getTestDataProperty(arg));
 	}
 
 	// Enter Invalid Phone Number
@@ -998,4 +1013,38 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 		}
 
 }
+	public void verifyPresenceOfAddressBookText() throws Exception {
+
+		if ("web".equalsIgnoreCase(testtype)) {
+			isDisplayed(addressBooktext);
+			logger.debug("Address Book Text is displayed");
+		} else {
+			isDisplayed(addressBooktext);
+			logger.debug("Address Book Text is not displayed++++++++++++++++++++++++==");
+		}
+	}
+	public void verifyPresenceOfAddNewAddressLink() throws Exception {
+
+		if ("web".equalsIgnoreCase(testtype)) {
+			isDisplayed(addaddresslink);
+			logger.debug("AddNewAddressLink Link is displayed");
+		} else {
+			isDisplayed(addaddresslink);
+			logger.debug("AddNewAddressLink Link is not displayed++++++++++++++++++++++++==");
+		}
+	}
+	/*public void verifyPresenceOfFirstAndLastName() throws Exception {
+
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/browse/rebates")) {
+			logger.debug("User is successfully navigated to Rebates page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Our Rebates Page instead navigated to URL :: " + currentURL);
+		}
+
+	}}*/
+	
+	
+	
+		
 }

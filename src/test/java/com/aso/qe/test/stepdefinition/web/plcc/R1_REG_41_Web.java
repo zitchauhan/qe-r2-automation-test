@@ -40,7 +40,12 @@ public class R1_REG_41_Web extends CommonActionHelper {
 
 	@Then("^user expect element User Select Address to be present$")
 	public void user_expect_element_User_Select_Address_to_be_present() throws Throwable {
-		plccPageObjects.verifyPresenceOfUserSelectedAddressBtn();
+		try {
+			plccPageObjects.verifyPresenceOfUserSelectedAddressBtn();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	@When("^user click on burger menu$")
 	public void user_click_on_burger_menu() throws Throwable {

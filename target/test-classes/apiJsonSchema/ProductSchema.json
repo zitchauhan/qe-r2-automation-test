@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "recordSetTotal": {
+      "type": "string"
+    },
+    "recordSetCount": {
+      "type": "string"
+    },
+    "sortByInfo": {
+      "type": "array",
+      "items": {}
+    },
+    "productinfo": {
+      "type": "array",
+      "items": {}
+    }
+  },
+  "required": [
+    "recordSetTotal",
+    "recordSetCount",
+    "sortByInfo",
+    "productinfo"
+  ]
+}

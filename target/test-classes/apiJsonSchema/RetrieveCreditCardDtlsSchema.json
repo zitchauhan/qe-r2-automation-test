@@ -1,0 +1,4862 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "profile": {
+      "type": "object",
+      "properties": {
+        "payment": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "correlationId": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "correlationId",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "billingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "address": {
+                      "type": "string"
+                    },
+                    "companyName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "nickName": {
+                      "type": "string"
+                    },
+                    "zipCode": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "phoneNumber": {
+                      "type": "string"
+                    },
+                    "addressType": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "addressId": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "address",
+                    "companyName",
+                    "lastName",
+                    "nickName",
+                    "zipCode",
+                    "state",
+                    "phoneNumber",
+                    "addressType",
+                    "firstName",
+                    "email",
+                    "addressId",
+                    "city"
+                  ]
+                },
+                "creditCardHolderName": {
+                  "type": "string"
+                },
+                "token": {
+                  "type": "string"
+                },
+                "expiryDate": {
+                  "type": "string"
+                },
+                "expired": {
+                  "type": "boolean"
+                },
+                "creditCardNumber": {
+                  "type": "string"
+                },
+                "defaultFlag": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "cardType": {
+                  "type": "string"
+                },
+                "xWalletId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "billingAddress",
+                "creditCardHolderName",
+                "token",
+                "expiryDate",
+                "expired",
+                "creditCardNumber",
+                "defaultFlag",
+                "type",
+                "cardType",
+                "xWalletId"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "payment"
+      ]
+    }
+  },
+  "required": [
+    "profile"
+  ]
+}

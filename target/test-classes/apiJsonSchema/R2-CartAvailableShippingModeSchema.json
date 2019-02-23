@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "availableshippingmode": {
+      "type": "object",
+      "properties": {
+        "results": {
+          "type": "object",
+          "properties": {
+            "orderItems": {
+              "type": "array",
+              "items": {}
+            },
+            "orderId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "orderItems",
+            "orderId"
+          ]
+        }
+      },
+      "required": [
+        "results"
+      ]
+    }
+  },
+  "required": [
+    "availableshippingmode"
+  ]
+}

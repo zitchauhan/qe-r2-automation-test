@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "identity": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "storeLocId": {
+          "type": "string"
+        },
+        "passwordExpiredFlag": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "userId",
+        "storeLocId",
+        "passwordExpiredFlag"
+      ]
+    }
+  },
+  "required": [
+    "identity"
+  ]
+}

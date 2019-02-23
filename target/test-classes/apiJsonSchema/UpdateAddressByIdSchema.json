@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "nickName": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "addressId": {
+      "type": "string"
+    },
+    "success": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "nickName",
+    "userId",
+    "addressId",
+    "success"
+  ]
+}

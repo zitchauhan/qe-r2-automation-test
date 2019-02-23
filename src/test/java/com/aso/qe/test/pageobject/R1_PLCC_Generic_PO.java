@@ -21,6 +21,12 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	Common_Web_SD_PLCC timer=new Common_Web_SD_PLCC();
 	private WebElement objElement;
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
+	
+	//@FindBy(xpath = "//*[@data-auid='sameAsShipping']")
+	@FindBy(xpath = "//*[text()='Same As Shipping Address']")
+	public WebElement selctsameAsShippingcheckbox;
+	@FindBy(xpath = "//*[@data-auid='btndefaultPaymentFormSubmit']")
+	public WebElement btndefaultPaymentFormSubmit;
 	@FindBy(xpath = "//*[text()='Credit Card Number']/following::*[1]")
 	public WebElement CreditCardNumber_Input;
 	// Checkout
@@ -69,9 +75,14 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
 	
 	//BuyNow:
-	
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement buyNowButton;
+	
+	@FindBy(xpath = "//form/button[@data-auid='btnundefined']||//form/button[@type='button']")
+	//@FindBy(xpath = "//form/button[@data-auid='btnundefined']")
+	//@FindBy(xpath = "//form/button[@class='css-1aboma9 em811yu0']")
+	public WebElement clickBuynowBtnInPopupModal;
+	
 	
 	//Saved Card:
 	@FindBy(xpath = "//*[@data-auid='checkout_edit_payment']")

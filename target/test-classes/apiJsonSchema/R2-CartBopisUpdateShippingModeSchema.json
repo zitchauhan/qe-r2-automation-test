@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "orderItem": {
+      "type": "object",
+      "properties": {
+        "orderItemId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "orderItemId"
+      ]
+    },
+    "orderId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "orderItem",
+    "orderId"
+  ]
+}

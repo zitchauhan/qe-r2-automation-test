@@ -25,7 +25,8 @@ public class R1_PDP_PO extends CommonActionHelper
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());  //Sid
 	private String sku;   //Sid
-
+	@FindBy(xpath="//*[@data-auid='btnbtnEnableBuyNow']")  public WebElement btnEnablebuynow;
+	
 	@FindBy(xpath="//*[@data-auid='PDP_MediaClick']|//ul[@class='slider animated']") public WebElement imgProductMainMixedMedia;
 	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']|//ul[@class='slider animated'])[2]") public WebElement imgProductMainMixedMedia_m;//9aug danush
 	@FindBy(xpath="//*[@data-auid='PDP_ProductName']") public WebElement txtProductTitle;
