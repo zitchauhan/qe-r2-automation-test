@@ -40,6 +40,7 @@ public void usr_click_on_view_cart_and_navigates_to_cart_page() throws Throwable
 @When("^user click on add promo code link on cart page$")
 public void user_click_on_add_promo_code_link_on_cart_page() throws Throwable {
 	genericPO.addPromoCodeLink.click();
+	Thread.sleep(10000);
 }
 
 @When("^user enter promocode \"(.*?)\" on cart page$")
@@ -76,6 +77,7 @@ public void user_expect_element_credit_card_text_field_is_present() throws Throw
 @Then("^user expect discount text to be present$")
 public void user_expect_discount_text_to_be_present() throws Throwable {
 	genericPO.verifyPresenceOfDiscountText();
+	Thread.sleep(5000);
 }
 @Then("^user clicks on checkout button on cart page$")
 public void user_clicks_on_checkout_button_on_cart_page() throws Throwable {

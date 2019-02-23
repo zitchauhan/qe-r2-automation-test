@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
+import com.aso.qe.test.common.Common_Web_PLCC;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
@@ -80,6 +81,8 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	@When("^user click on checkout from ATC pop up$")
 	public void user_click_on_checkout_from_ATC_pop_up() throws Throwable {
 		genericPO.clickOnCheckoutButton();
+		Thread.sleep(10000);
+		//Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_SLOW);
 	}
 
 	@When("^user selects credit card radio button$")

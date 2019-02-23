@@ -725,11 +725,13 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 		String NewEmailEveryTime2 = NewEmailEveryTime.toString().replaceAll("\\s+", "").replaceAll(":", "");
 		String NewEmailEveryTimeValue = "QA" + NewEmailEveryTime2 + "@gmail.com";
 		setInputText(emailIdTxtField, NewEmailEveryTimeValue);
+
 	}
 	//Enter Email Address for Enable BuyNow
 	public void enterEmailAddressTxtFieldEnableBuyNow(String arg) throws Exception {
 		setInputText(inputEmailAddressTxtBuynow, webPropHelper.getTestDataProperty(arg));
 	}
+
 
 	// Enter Invalid Phone Number
 	public void enterInvalidPhoneNumber(String arg) throws Exception {
