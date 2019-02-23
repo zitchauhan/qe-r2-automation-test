@@ -142,10 +142,6 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement backButtonConsentModel;
 	
 	
-	
-	
-	
-	
 	//Creditcard Application Modal Response:
 	@FindBy(xpath = "//*[@aria-label='Error Modal']")
 	public WebElement errorModalCCAM;
@@ -161,6 +157,79 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement existingAccount;
 	@FindBy(xpath = "//*[text()='Thank for your interest. Our records indicate that you already have an Academy Sports + Outdoors Credit Card. For your convenience, your account number has been pre-filled in the payment section at checkout.']")
 	public WebElement disclosureTxtExistingAccountModal;
+	
+	//SUCCESS Modal:
+	
+	@FindBy(xpath = "//*[text()='WELCOME ALWAYS APPROVE! ']")
+	public WebElement welcomeTxtSuccessModal;
+	@FindBy(xpath = "//*[text()='Your new Academy Sports + Outdoors Credit Card will arrive in the mail within the next 10 business days.']")
+	public WebElement disclosureTxt1SuccessModal;
+	@FindBy(xpath = "//*[text()='Your Academy Sports + Outdoors Credit Card Account has been ']")
+	public WebElement disclosureTxt2SuccessModal;
+	@FindBy(xpath = "//*[text()='approved with a $4500 credit limit.']")
+	public WebElement disclosureTxt3SuccessModal;
+	@FindBy(xpath = "//*[text()='If you'd like to add more items to your cart, click on 'Return to shopping' now. Otherwise, simply click 'Continue to Checkout' to complete your order now.']")
+	public WebElement disclosureTxt4SuccessModal;
+	
+	@FindBy(xpath = "//*[@data-auid='returntoshopping']")
+	public WebElement returntoShoppingButton;
+	
+	public void verifyPresenceOfContinueToShopping() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(returntoShoppingButton);
+			logger.debug("Continue to Shopping Button is displayed");
+		} else {
+			isDisplayed(returntoShoppingButton);
+			logger.debug("Continue to Shopping is displayed");
+		}
+	}	
+	
+	
+	public void verifyPresenceOfDisclosureTxt4SuccessModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(disclosureTxt4SuccessModal);
+			logger.debug("WELCOME ALWAYS APPROVE! is displayed");
+		} else {
+			isDisplayed(disclosureTxt4SuccessModal);
+			logger.debug("WELCOME ALWAYS APPROVE! is displayed");
+		}
+	}
+	public void verifyPresenceOfWelcomeTxt() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(welcomeTxtSuccessModal);
+			logger.debug("WELCOME ALWAYS APPROVE! is displayed");
+		} else {
+			isDisplayed(welcomeTxtSuccessModal);
+			logger.debug("WELCOME ALWAYS APPROVE! is displayed");
+		}
+	}
+	public void verifyPresenceOfDisclosureTxt1SuccessModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(disclosureTxt1SuccessModal);
+			logger.debug("Your new Academy Sports + Outdoors Credit Card will arrive in the mail within the next 10 business days. is displayed");
+		} else {
+			isDisplayed(disclosureTxt1SuccessModal);
+			logger.debug("Your new Academy Sports + Outdoors Credit Card will arrive in the mail within the next 10 business days. is displayed");
+		}
+	}
+	public void verifyPresenceOfDisclosureTxt2SuccessModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(disclosureTxt2SuccessModal);
+			logger.debug("Your Academy Sports + Outdoors Credit Card Account has been is displayed");
+		} else {
+			isDisplayed(disclosureTxt2SuccessModal);
+			logger.debug("Your Academy Sports + Outdoors Credit Card Account has been is displayed");
+		}
+	}
+	public void verifyPresenceOfDisclosureTxt3SuccessModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(disclosureTxt3SuccessModal);
+			logger.debug("If you'd like to add more items to your cart, click on 'Return to shopping' now. Otherwise, simply click 'Continue to Checkout' to complete your order now. is displayed");
+		} else {
+			isDisplayed(disclosureTxt3SuccessModal);
+			logger.debug("If you'd like to add more items to your cart, click on 'Return to shopping' now. Otherwise, simply click 'Continue to Checkout' to complete your order now. is displayed");
+		}
+	}
 	
 
 	public void verifyPresenceOfDisclosureTextExistingAccount() throws Exception {

@@ -711,10 +711,9 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void enterEmailAddressTxtFieldAuto(String arg) throws Exception {
 		Date NewEmailEveryTime = new Date(System.currentTimeMillis());
 		String NewEmailEveryTime2 = NewEmailEveryTime.toString().replaceAll("\\s+", "").replaceAll(":", "");
-		//String NewEmailEveryTime2= "Perf"+FrameWorkHelper.getRandomAlphabetic(6).toLowerCase()+"@plccmail.com";
-		//String NewEmailEveryTimeValue = "Perf" + NewEmailEveryTime2 + "@gmail.com";
-		setInputText(emailIdTxtField, NewEmailEveryTime2);
-	}
+		String NewEmailEveryTimeValue = "QA" + NewEmailEveryTime2 + "@gmail.com";
+		setInputText(emailIdTxtField, NewEmailEveryTimeValue);
+	} 
 
 	// Enter Invalid Phone Number
 	public void enterInvalidPhoneNumber(String arg) throws Exception {

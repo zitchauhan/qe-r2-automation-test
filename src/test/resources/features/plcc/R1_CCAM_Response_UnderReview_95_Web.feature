@@ -1,5 +1,4 @@
-Feature: PLCC: MyAccount
-
+Feature: PLCC: Response Modals_Apllication Under Review Modal
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
@@ -32,7 +31,6 @@ Scenario: Verify is able to navigate to Application Under Review model
 	And user verify presence of STEP2: CONSENT
 	And user select credit application modal agree message 
 	When user click on SUBMIT button
-	Then user navigates to credit card approval modal 
 	When user click on continue to checkout 
 	Then user navigates to error modal 
 

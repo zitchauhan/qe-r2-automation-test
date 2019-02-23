@@ -123,7 +123,7 @@ Scenario: To verify Promo code applied in Check out page
 		
 @R2_Web  @R2_All @P-High_Order @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9591 @CR-DPK 
 Scenario: Verify promotion got applied to the product when user applied %off promotion on product level in cart--with promocode
-Given user launches the browser and navigates to "ASO_HOME" page
+	Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Grills Outdoor cooking
 	And user clicks on one of the subcategory of Grills Outdoor
 	And user select the product
