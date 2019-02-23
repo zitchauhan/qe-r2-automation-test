@@ -130,12 +130,25 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[@data-auid='crt_inputQty']")
 	public WebElement quantityInputField;
 	
+	//Free Shipping:
+	@FindBy(xpath = "//*[@data-auid='freeShip']")
+	public WebElement freeShippingTxt;
 	
 	//enter Prmo Code
 	public void enterPromoCode(String arg) throws Exception {
 		setInputText(promoCodeInputField, webPropHelper.getTestDataProperty(arg));
 	}
+	public void verifyPresenceOfFreeShipping() throws Exception {
 
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(freeShippingTxt);
+			logger.debug("Free Shipping is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(freeShippingTxt);
+			logger.debug("Free Shipping is displayed++++++++++++++++++++++++==");
+		}
+
+	}
 	public void verifyPresenceOfRemovePromoCard() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {

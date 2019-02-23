@@ -46,6 +46,7 @@ public class R1_CCAM_Response_Success_93_Web extends CommonActionHelper{
 	@Then("^user click on return to application$")
 	public void user_click_on_return_to_application() throws Throwable {
 		ccAplicationModal_PO.returnToShoppingButton.click();
+		Thread.sleep(5000);
 }
 	@Then("^user click on close icon of success modal$")
 	public void user_click_on_close_icon_of_success_modal() throws Throwable {
