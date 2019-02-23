@@ -95,6 +95,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@class='css-1l4mqdj academyicon icon-checkbox-inactive null d-flex align-items-start']")
 	public WebElement t$CCheckBoxInactiveConsentModel;
+	@FindBy(xpath = "//*[@//*[@data-auid='success_modal_close']")
+	public WebElement closeIconSuccessModal;
+
 
 //	@FindAll({
 //		   @FindBy(xpath = "//*[@name='state']")
@@ -854,6 +857,17 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		}
 
 	}
+	public void verifyPresenceOfCloseIconSuccessModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(closeIconSuccessModal);
+			logger.debug("Close Icon of Sccess Modal is displayed");
+		} else {
+			isDisplayed(closeIconSuccessModal);
+			logger.debug("Close Icon of Sccess Modal is displayed");
+		}
+
+	}
+	
 
 	public void verifyPresenceOfPageLabelPCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {

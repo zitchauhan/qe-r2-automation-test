@@ -150,7 +150,7 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 	@Then("^user navigates to credit card approval modal$")
 	public void user_navigates_to_credit_card_approval_modal() throws Throwable {
 		plccCCApplicationModalObjects.verifyPresenceOfSuccessModalCCModal();
-		plccCCApplicationModalObjects.successModal.click();
+		//plccCCApplicationModalObjects.successModal.click();
 	}
 
 	@When("^user click on continue to checkout$")
