@@ -11,8 +11,9 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user navigates to ASO-Home page 
 	When user enters "SKUForBuyNow" in the search box 
 	And user click on search icon 
-	And user click and navigates to child window 
 	And user click on Buy Now button
+	Then user click and navigates to child window
+	Then user close the newly opened tab
 	Then user navigates to order confirmation page
 	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
 	And user expect element Order Number to be present
