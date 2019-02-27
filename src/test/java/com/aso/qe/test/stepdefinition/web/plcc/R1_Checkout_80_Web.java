@@ -46,16 +46,16 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	R2_Cart_PO cartR2PageObj = PageFactory.initElements(driver, R2_Cart_PO.class);
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 
-	@When("^user enters \"(.*?)\" in the search box$")
-	public void user_enters_in_the_search_box(String arg1) throws Throwable {
+	@When("^user enters \"(.*?)\" in the search box plcc$")
+	public void user_enters_in_the_search_box_plcc(String arg1) throws Throwable {
 		Thread.sleep(30);
 		plccPageObjects.enterSearchItem(arg1);
 		assertTrue(isDisplayed(plccLandingPageObjects.searchBox));
 		waitForElement(plccLandingPageObjects.searchBox);
 	}
 
-	@When("^user click on Add to cart button$")
-	public void user_click_on_Add_to_cart_button() throws Throwable {
+	@When("^user click on Add to cart button plcc$")
+	public void user_click_on_Add_to_cart_button_plcc() throws Throwable {
 		// pdpPageObj.addToCartAvailability();
 		Thread.sleep(pageLoadWaitTime);
 		genericPO.addToCartButton.click();
@@ -91,8 +91,8 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		
 	}
 
-	@When("^user click on checkout from ATC pop up$")
-	public void user_click_on_checkout_from_ATC_pop_up() throws Throwable {
+	@When("^user click on checkout from ATC pop up plcc$")
+	public void user_click_on_checkout_from_ATC_pop_up_plcc() throws Throwable {
 		genericPO.clickOnCheckoutButton();
 		Thread.sleep(10000);
 		//Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_SLOW);

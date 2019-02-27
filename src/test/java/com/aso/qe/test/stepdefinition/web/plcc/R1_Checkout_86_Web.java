@@ -206,8 +206,8 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 		genericPO.addNewCreditCardOption.click();
 	}
 
-	@When("^user click on confirm button$")
-	public void user_click_on_confirm_button() throws Throwable {
+	@When("^user click on confirm button plcc$")
+	public void user_click_on_confirm_button_plcc() throws Throwable {
 		genericPO.verifyPresenceOfConfirmButton();
 		genericPO.confirmButton.click();
 	}

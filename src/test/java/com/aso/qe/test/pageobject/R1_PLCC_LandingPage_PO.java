@@ -11,13 +11,13 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.common.Common_Web_PLCC;
-import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
+//import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
 
 public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
 	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
-	Common_Web_SD_PLCC timer = new Common_Web_SD_PLCC();
+	
 
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----START--------------------------------*/
 	@FindBy(xpath = "//*[@data-component='benefitSection']")

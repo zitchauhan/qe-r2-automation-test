@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
   {
     "line": 1,
@@ -369,3 +370,5 @@
     "uri": "src/test/resources/features/plcc/workAround.feature"
   }
 ]
+=======
+>>>>>>> f5bcfb54798f18775d019879fc276f7377b53a47
