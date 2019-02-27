@@ -1,5 +1,11 @@
 package com.aso.qe.test.stepdefinition.web.plcc;
 
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -41,13 +47,34 @@ public class R1_Discounts_BuyNow_106_Web extends CommonActionHelper{
 	
 	@Given("^user click on Buy Now button in pop up modal$")
 	public void user_click_on_Buy_Now_button_in_pop_up_modal() throws Throwable {
-		genericPO.clickBuynowBtnInPopupModal.click();
+		String MainWindow=driver.getWindowHandle();	
+		Set<String> s1=driver.getWindowHandles();		
+        Iterator<String> i1=s1.iterator();		
+        System.out.println("SET"+s1);
+        while(i1.hasNext())			
+        {		
+            String ChildWindow=i1.next();		
+            		
+            if(!MainWindow.equalsIgnoreCase(ChildWindow))			
+            {    		
+                    // Switching to Child window
+                    driver.switchTo().window(ChildWindow);
+                    genericPO.clickBuynowBtnInPopupModal.click();
+                    Thread.sleep(5000);
+            }
+        }
 	}
 	
 	@Given("^user click on Default PaymentFormSubmit Button for BuyNow$")
 	public void user_click_on_Default_PaymentFormSubmit_Button_for_BuyNow() throws Throwable {
 		genericPO.btndefaultPaymentFormSubmit.click();
 	}
+	
+	@Given("^user expect PLCCFreeShipping discount displayed$")
+	public void user_expect_PLCCFreeShipping_discount_displayed() throws Throwable {
+	   
+	}
+
 
 
 }

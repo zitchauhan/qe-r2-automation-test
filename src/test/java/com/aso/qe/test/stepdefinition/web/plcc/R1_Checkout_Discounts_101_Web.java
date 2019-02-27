@@ -18,12 +18,15 @@ import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
+import java.io.PrintStream;
+import java.math.BigDecimal;
+
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
-	private String plpPrice,pdpPrice,pdpClearnacePrice;
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
+	private String plpPrice,pdpPrice,pdpClearnacePrice;
 	R1_PLCC_CreditCardApplicationModal_PO plccCCApplicationModalObjects = PageFactory.initElements(driver,
 			R1_PLCC_CreditCardApplicationModal_PO.class);
 	R1_PLCC_Generic_PO genericPO = PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
@@ -35,8 +38,8 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
 		genericPO.verifyPresenceOfFreeShipping();
 	}
 	
-	@Then ("^User navigates to L2 page$")
-	public void User_navigate_to_L2() throws InterruptedException {
+	@Then ("^User navigates to L2 page plcc$")
+	public void User_navigate_to_L2_plcc() throws InterruptedException {
 		if("mobile".equalsIgnoreCase(testtype)){
 			
 			assertTrue(clickOnButton(globalElementHeader.btnClothingCategory_M));
@@ -67,22 +70,52 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
 		assertTrue(clickOnButton(pdpPageObj.filterClearence));
 
 }
-
-	@Then("^User should able to see Strike Through Price with Actual price$")
-	public void user_should_able_to_see_Strike_Through_Price_with_Actual_price() throws Throwable {
-//		assertTrue(isDisplayed(pdpPageObj.txtPdpClearnacePrice));
-//		pdpPrice=pdpPageObj.txtPdpprice.getText();
-//		pdpClearnacePrice=pdpPageObj.txtPdpClearnacePrice.getText();
-//		assertFalse(pdpPrice.contains(pdpClearnacePrice));	
-		//pdpPrice=pdpPageObj.txtPdpprice.getText();	
-		
-		//Fixed By RKA 14 Aug
-		
+	@Then("^User should able to see Strike Through Price with Actual price for plcc$")
+	public void user_should_able_to_see_Strike_Through_Price_with_Actual_price_for_plcc() throws Throwable {
 		assertTrue(isDisplayed(pdpPageObj.firstClearanceItem));
 		plpPrice=pdpPageObj.PriceOFfirstClearenceITem.getText();
 		assertTrue(clickOnButton(pdpPageObj.PriceOFfirstClearenceITem));
 		pdpPrice=pdpPageObj.txtPriceofPDP.getText();
 		assertEquals(plpPrice, pdpPrice);
+	}
+
+	@Then("^user expect five percent discount$")
+	public void user_expect_five_percent_discount() throws Throwable {
+		plccCCApplicationModalObjects.verifyPresenceOfSubTotalValue();
+		String subTotalValue = plccCCApplicationModalObjects.subtotalValue.getText().replace("$", "");
+		logger.debug("Subtotal value of the product is " + subTotalValue);
+		double convertedToDouble;
+		try {
+			convertedToDouble = Double.parseDouble(subTotalValue);
+		} catch (NumberFormatException e) {
+			convertedToDouble = 0;
+		}
+		float fivePercentDiscount = (float) ((5 * convertedToDouble) / 100);
+		BigDecimal bd=new BigDecimal(fivePercentDiscount);
+		BigDecimal actualValue = bd.setScale(2, BigDecimal.ROUND_HALF_EVEN );
+		logger.debug("Actual Value of Five Percent of Subtotal is " + fivePercentDiscount);
+		logger.debug("Round Of Value of Five Percent of Subtotal is " + actualValue);
+		genericPO.verifyPresenceOfDiscountValue();
+		String valueOnWeb = genericPO.discountValue.getText();
+	
+		BigDecimal expectedValue=new BigDecimal(valueOnWeb);
+		if(actualValue==expectedValue)
+		{
+			logger.debug("Discount on Web and Discount Calulated are matching");
+		}
+		else
+		{
+			logger.debug("Discount on Web and Discount Calulated are not matching");
+		}
 		
-	}	
+		
+	}
+	@When("^user expect calculated value and displayed discount value to match$")
+	public void user_expect_calculated_value_and_displayed_discount_value_to_match() throws Throwable {
+		genericPO.verifyPresenceOfDiscountValue();
+		String displayedValue = genericPO.discountValue.getText();
+		
+	}
+	
+
 }

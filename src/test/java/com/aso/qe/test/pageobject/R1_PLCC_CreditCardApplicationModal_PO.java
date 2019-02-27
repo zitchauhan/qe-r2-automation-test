@@ -97,6 +97,8 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement t$CCheckBoxInactiveConsentModel;
 	@FindBy(xpath = "//*[@//*[@data-auid='success_modal_close']")
 	public WebElement closeIconSuccessModal;
+	
+	//*[@data-auid="checkout_order_summary_section"]//div[1]/div[2]
 
 
 //	@FindAll({
@@ -174,9 +176,40 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='If you'd like to add more items to your cart, click on 'Return to shopping' now. Otherwise, simply click 'Continue to Checkout' to complete your order now.']")
 	public WebElement disclosureTxt4SuccessModal;
 	
+	
 	@FindBy(xpath = "//*[@data-auid='returntoshopping']")
 	public WebElement returntoShoppingButton;
 	
+	//ERROR MODAL:
+	@FindBy(xpath = "//*[text()='ERROR']")
+	public WebElement errorTextErrorModal;
+	@FindBy(xpath = "//*[text()='An error has occured.You may go back and try again. If you continue recieving this please call 1-888-922-2336 and speak with a customer service representative. Customer Service: 877-321-8509, TDD/TTY: 888-819-1918']")
+	public WebElement disclosureTxtErrorState;
+	
+	
+	// Order Summary:
+	@FindBy(xpath = "//*[@data-auid='checkout_order_summary_section']//div[1]/div[2]")
+	public WebElement subtotalValue;
+	
+	public void verifyPresenceOfSubTotalValue() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(subtotalValue);
+			logger.debug("Sub total value is displayed");
+		} else {
+			isDisplayed(subtotalValue);
+			logger.debug("Sub total value is displayed");
+		}
+	}	
+	
+	public void verifyPresenceOfErrorText() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(disclosureTxtErrorState);
+			logger.debug("Disclosure Text on Error Modal is displayed");
+		} else {
+			isDisplayed(disclosureTxtErrorState);
+			logger.debug("Error Text on Error Modal is displayed");
+		}
+	}	
 	public void verifyPresenceOfContinueToShopping() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(returntoShoppingButton);
