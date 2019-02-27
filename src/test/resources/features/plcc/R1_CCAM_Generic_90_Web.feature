@@ -29,7 +29,7 @@ Scenario: Verify the system behavior when user clicks on Continue button on Appl
 	And user select credit application modal agree message 
 	
 @C-PLCC @Regression @All @PLCC-90 @CR-VS 
-Scenario: Verify the system behavior when user clicks on Continue button on Application model by providing invalid information/details
+Scenario: Verify the system behavior when user clicks on Continue button on Application model by providing valid required information/details
 	When user enter First Name on credit card Application Modal "invalidFirstName" 
 	Then user enter Last Name on credit card Application Modal "invalidLastName"
 	And user enter Last four SSN "invalidSSNP"
@@ -73,4 +73,26 @@ Scenario: Verify the system behavior when user clicks on "Continue" button on Ap
 	And user click on CONTINUE button 
 	And user expect error message on first name field
 	And user expect error message on last name field
+
+@C-PLCC @Regression @All @PLCC-90 @CR-Manju 
+Scenario: Verify the system behavior when user clicks on Print button on Consent Page of Application Modal
+	When user enter First Name on credit card Application Modal "FirstName" 
+	Then user enter Last Name on credit card Application Modal "LastName"
+	And user enter Last four SSN "Last4DigitsOfSSN"
+	And user enetr Date of Birth "DOB" 
+	And user enter Annual Income "AnnualIncome" 
+	And user enter Street Address "StreetAddress" 
+	And user enter Suite or Apartment "SuiteOrApartment" 
+	And user enter City "City" 
+	And user select State "State" 
+	And user enter Zip Code on credit card Application Modal "ZipCode" 
+	And user enter Email Address on credit card Application Modal "EmailId" 
+	And user enter Confirm Email Address "ConfirmEmailId" 
+	And user enter Mobile Phone "MobilePhone" 
+	And user enter Alternate Phone "AlternatePhone" 
+	And user click on CONTINUE button 
+	And user verify presence of STEP2: CONSENT
+	And user select credit application modal agree message 
+	And user verify presence of Print icon
+	And user click on Print button
 	

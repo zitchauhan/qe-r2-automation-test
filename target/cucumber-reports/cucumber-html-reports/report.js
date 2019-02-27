@@ -1,143 +1,84 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/plcc/trail.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/plcc/workAround.feature");
 formatter.feature({
   "line": 1,
-  "name": "Registration",
+  "name": "Landing Page",
   "description": "",
-  "id": "registration",
+  "id": "landing-page",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 8918800,
+  "duration": 5555600,
   "status": "passed"
 });
 formatter.before({
-  "duration": 7903600,
+  "duration": 6829000,
+  "status": "passed"
+});
+formatter.background({
+  "line": 3,
+  "name": "Common Pre-requisite steps",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
+});
+formatter.step({
+  "line": 4,
+  "name": "user launches the browser and navigates to \"ASO_HOME\" page",
+  "keyword": "Given "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "ASO_HOME",
+      "offset": 44
+    }
+  ],
+  "location": "Common_Web_SD_PLCC.user_launches_the_browser_and_navigates_to_page(String)"
+});
+formatter.result({
+  "duration": 9493633200,
   "status": "passed"
 });
 formatter.scenario({
   "comments": [
     {
-      "line": 3,
-      "value": "#Background:  Common Pre-requisite steps"
-    },
-    {
-      "line": 4,
-      "value": "#\tGiven user launches the browser and navigates to \"ASO_HOME\" page"
-    },
-    {
       "line": 5,
-      "value": "#\tWhen user click on My Account link"
+      "value": "#When user click on AcademyCreditCard link in the footer section of ASO-Home page"
     },
     {
       "line": 6,
-      "value": "#\tAnd  user click on Sign Up link"
+      "value": "#Then user expect Landing page to be present"
     },
     {
       "line": 7,
-      "value": "#\tThen user expect element First Name to be present"
-    },
-    {
-      "line": 8,
-      "value": "#\tAnd user enter First Name \"First_Name\""
-    },
-    {
-      "line": 9,
-      "value": "#\tAnd user expect element Last Name to be present"
-    },
-    {
-      "line": 10,
-      "value": "#\tAnd user enter Last Name \"Last_Name\""
-    },
-    {
-      "line": 11,
-      "value": "#\tAnd user expect element Email Address to be present"
-    },
-    {
-      "line": 12,
-      "value": "#\tAnd user enter Email Address \"Email_Address\""
-    },
-    {
-      "line": 13,
-      "value": "#\tAnd user expect element Create Password to be present"
-    },
-    {
-      "line": 14,
-      "value": "#\tAnd user enter Password \"Create_Password\""
-    },
-    {
-      "line": 15,
-      "value": "#\tAnd user expect element Add Address for Faster Checkout checkbox to be present"
-    },
-    {
-      "line": 16,
-      "value": "#\tWhen user select Add Address for Faster Checkout checkbox"
-    },
-    {
-      "line": 17,
-      "value": "#\tThen user expect element Address to be present"
-    },
-    {
-      "line": 18,
-      "value": "#\tAnd user enter Address \"Address\""
-    },
-    {
-      "line": 19,
-      "value": "#\tAnd user expect element Zip Code to be present"
-    },
-    {
-      "line": 20,
-      "value": "#\tAnd user enter Zip Code \"Zip_Code\""
-    },
-    {
-      "line": 21,
-      "value": "#\tAnd user expect element City to be present"
-    },
-    {
-      "line": 22,
-      "value": "#\tAnd user expect element State to be present"
-    },
-    {
-      "line": 23,
-      "value": "#\tAnd user expect element Phone number to be present"
-    },
-    {
-      "line": 24,
-      "value": "#\tAnd user enter Phone Number \"Phone_Number\""
-    },
-    {
-      "line": 25,
-      "value": "#\tAnd user expect element SIGN UP to be present"
-    },
-    {
-      "line": 26,
-      "value": "#\tAnd user click on SIGN UP"
+      "value": "#And user expect element FPO Apply Order section to be present"
     }
   ],
-  "line": 30,
-  "name": "Verify the Address in MyAccount section",
+  "line": 10,
+  "name": "Verify the navigation of Footer Links -Social Media Links",
   "description": "",
-  "id": "registration;verify-the-address-in-myaccount-section",
+  "id": "landing-page;verify-the-navigation-of-footer-links--social-media-links",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 29,
+      "line": 9,
       "name": "@C-PLCC"
     },
     {
-      "line": 29,
+      "line": 9,
       "name": "@Regression"
     },
     {
-      "line": 29,
+      "line": 9,
       "name": "@All"
     },
     {
-      "line": 29,
-      "name": "@PLCC-42"
+      "line": 9,
+      "name": "@PLCC-34"
     },
     {
-      "line": 29,
+      "line": 9,
       "name": "@CR-VS"
     }
   ]
@@ -145,32 +86,24 @@ formatter.scenario({
 formatter.step({
   "comments": [
     {
-      "line": 31,
-      "value": "#\tWhen user expect element User Select Address to be present"
+      "line": 11,
+      "value": "#\tAnd user expect element FaceBook to be present"
     },
     {
-      "line": 32,
-      "value": "#\tThen user click on User Select Address"
+      "line": 12,
+      "value": "#\tWhen user click on Facebook icon"
     },
     {
-      "line": 33,
-      "value": "#\tWhen user click on My Account link"
+      "line": 13,
+      "value": "#\tAnd user click and navigates to child window"
     },
     {
-      "line": 34,
-      "value": "#    And user click on Address Book in MyAccount link"
-    },
-    {
-      "line": 35,
-      "value": "#    And user expect element Address Book to be present"
-    },
-    {
-      "line": 36,
-      "value": "#    And user expect element Add New Address link to be present"
+      "line": 14,
+      "value": "#\tThen user navigates to Facebook Page and validate facebook url"
     }
   ],
-  "line": 37,
-  "name": "user expect element for first name and Last name text",
+  "line": 15,
+  "name": "user switchback to parent window",
   "keyword": "And "
 });
 formatter.match({});
@@ -178,11 +111,11 @@ formatter.result({
   "status": "undefined"
 });
 formatter.after({
-  "duration": 3838700,
+  "duration": 838493500,
   "status": "passed"
 });
 formatter.after({
-  "duration": 179700,
+  "duration": 357900,
   "status": "passed"
 });
 });

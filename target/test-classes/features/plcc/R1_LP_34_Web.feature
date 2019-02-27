@@ -158,15 +158,25 @@ Scenario: Verify the navigation of Footer Links -T&C Links
 	And user expect element CaliforniaTransparencyinSupplyChainAct to be present 
 	And user click on browser back button 
 	And user expect element CaliforniaTransparencyinSupplyChainAct to be present
-	And user click on California Transparency in Supply Chain Act(SB 657) link and navigates to CaliforniaTransparencyinSupplyChainAct page
+	#And user click on California Transparency in Supply Chain Act(SB 657) link and navigates to CaliforniaTransparencyinSupplyChainAct page
 	
 @C-PLCC @Regression @All @PLCC-34 @CR-VS 
 Scenario: Verify the navigation of Footer Links -Additional Links
-	And user expect element Sitemap to be present 
-	And user expect element ProductIndex to be present 
-	And user expect element ShoppingIndex to be present 
-	And user expect element BrandsIndex to be present  
-	
+	When user expect element Sitemap to be present 
+	Then user click on Sitemap and navigates to Sitemap Page
+	And user click on browser back button
+	When user expect element ProductIndex to be present
+	Then user click on ProductIndex and navigates to ProductIndex Page 
+	And user click on browser back button
+	When user expect element ShoppingIndex to be present
+	Then user click on ShoppingIndex and navigates to ShoppingIndex Page 
+	And user click on browser back button
+	And user click on Outdoors and navigates to Outdoors Page  
+	And user click on browser back button
+	And user click on Shoes and navigates to Shoes Page
+	And user click on browser back button
+	And user click on SportsEquipment and navigates to SportsEquipment Page
+	And user click on browser back button
 
 	
 	

@@ -12,6 +12,7 @@ import com.aso.qe.test.pageobject.R1_PLCC_Registration_PO;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.java.en.Given;
 
 public class R1_LP_34_Web extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
@@ -444,5 +445,55 @@ public class R1_LP_34_Web extends CommonActionHelper {
 		globalElementHeader.lnklegalpolicy.click();
 		plccLandingPageObjects.verifyPresenceOflnkCaliforniaTransparencyinSupplyChainActPage();	
 	}
+	
+	@Then("^user click on Sitemap and navigates to Sitemap Page$")
+	public void user_click_on_Sitemap_and_navigates_to_Sitemap_Page() throws Throwable {
+		plccPageObjects.siteMapLink.click();
+		plccLandingPageObjects.verifyPresenceOflnkSiteMapIndex();	
+	}
+	@Then("^user click on ProductIndex and navigates to ProductIndex Page$")
+	public void user_click_on_ProductIndex_and_navigates_to_ProductIndex_Page() throws Throwable {
+		plccPageObjects.productIndexLink.click();
+		plccLandingPageObjects.verifyPresenceOflnkProductIndex();
+	}
+
+	@Then("^user click on ShoppingIndex and navigates to ShoppingIndex Page$")
+	public void user_click_on_ShoppingIndex_and_navigates_to_ShoppingIndex_Page() throws Throwable {
+		plccPageObjects.shoppingIndexLink.click();
+		plccLandingPageObjects.verifyPresenceOflnkShoppingIndex();
+	}
+	
+	@Then("^user click on Outdoors and navigates to Outdoors Page$")
+	public void user_click_on_Outdoors_and_navigates_to_Outdoors_Page() throws Throwable {
+		try {
+			plccPageObjects.outdoorsLink.click();
+			plccLandingPageObjects.verifyPresenceOflnkOutdoors();
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
+	}
+	
+	@Given("^user click on Shoes and navigates to Shoes Page$")
+	public void user_click_on_Shoes_and_navigates_to_Shoes_Page() throws Throwable {
+		try {
+			plccPageObjects.shoesLink.click();
+			plccLandingPageObjects.verifyPresenceOflnkShoes();
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+
+		}
+	}
+
+	@Given("^user click on SportsEquipment and navigates to SportsEquipment Page$")
+	public void user_click_on_SportsEquipment_and_navigates_to_SportsEquipment_Page() throws Throwable {
+		try {
+			plccPageObjects.sportsEquipmentLink.click();
+			plccLandingPageObjects.verifyPresenceOflnkSportsEquipment();
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
+	}
+
+
 
 }

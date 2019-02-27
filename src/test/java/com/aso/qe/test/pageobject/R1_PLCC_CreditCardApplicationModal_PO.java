@@ -93,6 +93,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@id='plcc_modal_print']")
 	public WebElement printLinkConsentModal;
 
+	@FindBy(xpath = "//*[@id='button-strip']/paper-button[2]")
+	public WebElement CancelLink;
+	
 	@FindBy(xpath = "//*[@class='css-1l4mqdj academyicon icon-checkbox-inactive null d-flex align-items-start']")
 	public WebElement t$CCheckBoxInactiveConsentModel;
 	@FindBy(xpath = "//*[@//*[@data-auid='success_modal_close']")
@@ -878,5 +881,14 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			logger.debug(" STEP1:PRESCREEN ACCEPTANCE on Pre-screen Credit card ApplicationModal is displayed");
 		}
 	}
+	public void verifyPresenceOfPrintIconPLCCApplicationModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(printLinkConsentModal);
+			logger.debug("Print Icon on  Pre-screen Credit card ApplicationModal is displayed");
+		} else {
+			isDisplayed(printLinkConsentModal);
+			logger.debug("Print Icon on  Pre-screen Credit card ApplicationModal is not displayed");
+		}
 
+	}
 }

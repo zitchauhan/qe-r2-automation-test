@@ -10,6 +10,7 @@ import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_CreditCardApplicationModal_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Registration_PO;
 
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class R1_CCAM_PreScreen_53_Web extends CommonActionHelper {
@@ -92,5 +93,31 @@ public void user_expect_element_disclosure_Text_two_on_Pre_Screen_Modal_to_be_pr
 	ccAplicationModal_PO.verifyPresenceOfDisclosureTxt2PCCApplicationModal();
 }
 
+@Given("^user verify presence of Print icon$")
+public void user_verify_presence_of_Print_icon() throws Throwable {
+	try {
+		ccAplicationModal_PO.verifyPresenceOfPrintIconPLCCApplicationModal();
+	} catch (Exception e) {
+		System.out.println("Exception Message:"+e.getMessage());
+	}
+}
 
+@Given("^user click on Print button$")
+public void user_click_on_Print_button() throws Throwable {
+	try {
+		ccAplicationModal_PO.printLinkConsentModal.click();
+		driver.close();
+	} catch (Exception e) {
+		System.out.println("Exception Message:"+e.getMessage());
+	}
+}
+@Given("^user click on Cancel button$")
+public void user_click_on_Cancel_button() throws Throwable {
+	try {
+		ccAplicationModal_PO.CancelLink.click();
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
 }

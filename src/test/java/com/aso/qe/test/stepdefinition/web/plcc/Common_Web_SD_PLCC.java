@@ -264,6 +264,7 @@ public class Common_Web_SD_PLCC extends CommonActionHelper
 	@Then("^user click on browser back button$")
 	public void user_click_on_browser_back_button() throws Throwable {
 	driver.navigate().back();
+	Thread.sleep(2000);
 	logger.debug("User navigates back to Previous Page.............");
 
 	}
@@ -284,6 +285,28 @@ public class Common_Web_SD_PLCC extends CommonActionHelper
 			System.out.println(subWindowhandler);
 		}
 	}
+	
+	/*@Then("^user click and navigates to child test window$")
+	public void user_click_and_navigates_to_child_TEst_window() throws Throwable 
+	{
+		
+		String MainWindow=driver.getWindowHandle();	
+		Set<String> s1=driver.getWindowHandles();		
+        Iterator<String> i1=s1.iterator();		
+        		
+        while(i1.hasNext())			
+        {		
+            String ChildWindow=i1.next();		
+            		
+            if(!MainWindow.equalsIgnoreCase(ChildWindow))			
+            {    		
+                 
+                    // Switching to Child window
+                    driver.switchTo().window(ChildWindow);
+                    driver.findElement(by)
+            }
+        }
+	}*/
 	@Then("^user close the newly opened tab$")
 	public void user_close_the_newly_opened_tab() throws Throwable {
 		/*Set<String> winSet = driver.getWindowHandles();

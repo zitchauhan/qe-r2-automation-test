@@ -78,7 +78,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement buyNowButton;
 	
-	@FindBy(xpath = "//form/button[@data-auid='btnundefined']||//form/button[@type='button']")
+	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	//@FindBy(xpath = "//form/button[@data-auid='btnundefined']")
 	//@FindBy(xpath = "//form/button[@class='css-1aboma9 em811yu0']")
 	public WebElement clickBuynowBtnInPopupModal;
@@ -675,7 +675,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	}
 
 	public void verifyPresenceOfOrderConfirmationPage() throws Exception {
-
+		Thread.sleep(10000);
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(orderConfirmationPage);
 			logger.debug("Order Confirmation Page is displayed");

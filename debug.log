@@ -743,3 +743,7 @@
 [0213/172912.378:ERROR:exception_snapshot_win.cc(88)] thread ID 24320 not found in process
 [0213/172912.378:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
 >>>>>>> 438975ffd244ae57f3d2918a9c380a8a7c6e0520
+[0225/134957.401:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0225/134957.401:ERROR:process_info.cc(550)] ReadMemoryInfo failed
+[0225/134957.401:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0225/134957.401:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)

@@ -48,7 +48,17 @@ Scenario: Verify the system behavior when user clicks on Continue button on Pres
 	And user expect error message on email id field
 	And user expect error message on ssn field
 	
-	
-	
-	
- 
+@C-PLCC @Regression @All @PLCC-53 @CR-Manju
+ Scenario: Verify the system behavior when user clicks on Print button on Consent Page of Prescreen Modal
+	And user enter Last four SSN "Last4DigitsOfSSNP"
+	And user enter Confirm Last four SSN "ConfirmSSNP"
+	And user enetr Date of Birth "DOBP"
+	And user enter Annual Income "AnnualIncomeP"
+	And user enter Email Address on credit card Application Modal "EmailIdP"
+	And user enter Mobile Phone "MobilePhoneP"
+	And user enter Alternate Phone "AlternatePhoneP"
+	And user click on CONTINUE button
+	And user verify presence of STEP2: CONSENT
+	And user select credit application modal agree message 
+#	And user verify presence of Print icon
+	And user click on Print button

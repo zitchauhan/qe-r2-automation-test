@@ -12,10 +12,9 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When user enters "SKUForBuyNow" in the search box 
 	And user click on search icon 
 	And user click on Buy Now button
-	And user click on Buy Now button in pop up modal
-#	Then user navigates to order confirmation page
-#	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
-#	And user expect element Order Number to be present
-#	And user expect element a confirmation email is on its way to be present
-#	And user expect element print link to be present
-#	And user expect element my account link to be present
+	And user click on Buy Now button in pop up modal	
+	#Then user navigates to order confirmation page
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
+	And user expect element Order Number to be present
+	And user expect element a confirmation email is on its way to be present
+	And user expect PLCCFreeShipping discount displayed 
