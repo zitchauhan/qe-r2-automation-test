@@ -4,8 +4,8 @@ Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
 	And user expect element Email Address to be present 
-	And user enter Email address in sign-in page "Email_Address_Promotions" 
-	And user enter password in sign-in page "Password_2" 
+	And user enter Email address in sign-in page "Email_Promotions" 
+	And user enter password in sign-in page "password" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
 	#And user expect element ASO Home Page Title to be present
