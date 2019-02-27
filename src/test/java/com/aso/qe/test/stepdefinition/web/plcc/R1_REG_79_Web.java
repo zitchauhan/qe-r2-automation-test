@@ -93,8 +93,8 @@ public class R1_REG_79_Web extends CommonActionHelper {
 		plccPageObjects.verifyPresenceOfAddressTxtField();
 	}
 
-	@Then("^user enter Address \"(.*?)\"$")
-	public void user_enter_Address(String arg1) throws Throwable {
+	@Then("^user enter Address plcc \"(.*?)\"$")
+	public void user_enter_Address_plcc(String arg1) throws Throwable {
 		plccPageObjects.enterAddressField(arg1);
 		assertTrue(isDisplayed(plccPageObjects.addressTxtField));
 		waitForElement(plccPageObjects.addressTxtField);
