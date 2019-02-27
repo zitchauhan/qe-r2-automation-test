@@ -54,14 +54,14 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		waitForElement(plccLandingPageObjects.searchBox);
 	}
 
-	@When("^user click on Add to cart button plcc$")
+	/*@When("^user click on Add to cart button plcc$")
 	public void user_click_on_Add_to_cart_button_plcc() throws Throwable {
 		// pdpPageObj.addToCartAvailability();
 		Thread.sleep(pageLoadWaitTime);
 		genericPO.addToCartButton.click();
 		waitForElement(pdpPageObj.btnAddToCart);
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
-	}
+	}*/
 
 	@When("^user click on Add to Cart button$")
 	public void user_click_on_Add_to_Cart_button() throws Throwable {

@@ -13,7 +13,7 @@ Background:  Common Pre-requisite steps
 	Then user navigates to Generic Credit Card Application Modal
 	
 @C-PLCC @Regression @All @PLCC-95 @CR-VS
-Scenario: Verify is able to navigate to Application Under Review model
+Scenario: Verify is able to navigate to Existing Account modal
 	When user enter First Name on credit card Application Modal "FirstNameEX" 
 	Then user enter Last Name on credit card Application Modal "LastNameEX"
 	And user enter Last four SSN "Last4DigitsOfSSNEX"
@@ -36,7 +36,7 @@ Scenario: Verify is able to navigate to Application Under Review model
 
 @C-PLCC @Regression @All @PLCC-95 @CR-VS
 Scenario: Verify the elements available on  Existing Account(FPO) model
-	When uFirst Name on credit card Application Modal "FirstNser enter ameEX" 
+	When First Name on credit card Application Modal "FirstNser enter ameEX" 
 	Then user enter Last Name on credit card Application Modal "LastNameEX"
 	And user enter Last four SSN "Last4DigitsOfSSNEX"
 	And user enetr Date of Birth "DOBEX" 
@@ -62,7 +62,7 @@ Scenario: Verify the elements available on  Existing Account(FPO) model
 	
 @C-PLCC @Regression @All @PLCC-95 @CR-VS
 Scenario: Verify user is able to navigate to cart page after clicking on Continue to Checkout button
-	When First Name on credit card Application Modal "FirstNser enter ameEX" 
+	When user enter First Name on credit card Application Modal "FirstNser enter ameEX" 
 	Then user enter Last Name on credit card Application Modal "LastNameEX"
 	And user enter Last four SSN "Last4DigitsOfSSNEX"
 	And user enetr Date of Birth "DOBEX" 
@@ -88,7 +88,7 @@ Scenario: Verify user is able to navigate to cart page after clicking on Continu
 	
 @C-PLCC @Regression @All @PLCC-95 @CR-VS
 Scenario: Verify user is able to close  Existing Account(FPO) model after clicking on Close button
-	When First Name on credit card Application Modal "FirstNser enter ameEX" 
+	When user enter First Name on credit card Application Modal "FirstNser enter ameEX" 
 	Then user enter Last Name on credit card Application Modal "LastNameEX"
 	And user enter Last four SSN "Last4DigitsOfSSNEX"
 	And user enetr Date of Birth "DOBEX" 

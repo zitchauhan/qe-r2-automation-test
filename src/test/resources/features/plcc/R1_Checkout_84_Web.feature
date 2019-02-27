@@ -117,10 +117,10 @@ Scenario: Verify user is able to place Multiple orders using PLCC Card
 	And user enter password in sign-in page "password" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
-	When user enters "SKUIdOfProduct" in the search box 
+	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
-	And user click on Add to cart button 
-	And user click on checkout from ATC pop up 
+	And user click on Add to Cart button 
+	And user click on checkout from ATC pop up plcc
 	And user clicks on checkout button and navigates to checkout page 
 	And user expect element credit card text field is present 
 	When user enter plcc card "ValidPLCCCard" 
