@@ -1,7 +1,0 @@
-{
-"logonId":"REPLACE_LOGONID",
-"logonPassword":"REPLACE_PASSWORD",
-"logonPasswordVerify":"REPLACE_PASSWORD",
-"firstName":"Automation",
-"lastName":"TestAPI"
-}
