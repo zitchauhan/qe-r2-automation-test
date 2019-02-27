@@ -28,7 +28,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user expect element User Select Address to be present 
 	And user click on suggested address 
 	When user click on User Select Address
-	When user enters "SKUIdOfProduct" in the search box 
+	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
 	And user click on Enable BuyNow button
 	When user enter plcc card "ValidPLCCCard"

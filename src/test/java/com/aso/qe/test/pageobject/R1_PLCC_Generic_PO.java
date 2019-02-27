@@ -162,6 +162,17 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		}
 
 	}
+	public boolean  verifyFreeShippingisNotApplied() throws Exception {
+
+		try {
+			isDisplayed(freeShippingTxt);
+	        return true;
+	    } catch (org.openqa.selenium.NoSuchElementException e)
+		{
+	        return false;
+	    }
+
+	}
 	public void verifyPresenceOfDiscountValue() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {

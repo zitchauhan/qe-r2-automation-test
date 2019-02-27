@@ -8,11 +8,11 @@ Feature: PLCC: Checkout - Payment Using PLCC
 	And user enter password in sign-in page "Password_2" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
-	When user enters "SKUIdOfProduct" in the search box 
+	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
 	#And user click on Add to Cart Button 
 	And user click on Add to Cart button  
-	And user click on checkout from ATC pop up 
+	And user click on checkout from ATC pop up plcc
 	And user clicks on checkout button and navigates to checkout page 
 	And user expect element credit card text field is present 
 	

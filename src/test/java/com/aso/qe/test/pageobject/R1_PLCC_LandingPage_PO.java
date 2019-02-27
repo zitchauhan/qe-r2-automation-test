@@ -729,6 +729,27 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	}
 
+	// Footer link navigation:
+	public void verifyPresenceOfTwitterPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("twitter.com/academy")) {
+			logger.debug("User is successfully navigated to Twitter page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Twitter Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+	// Footer link navigation:
+		public void verifyPresenceOfInstagramPage() throws Exception {
+			String currentURL = getCurrentPageURL();
+			if (currentURL.contains("www.instagram.com/academy/")) {
+				logger.debug("User is successfully navigated to Twitter page with URL :: " + currentURL);
+			} else {
+				logger.debug("User is not able to navigate to Twitter Page instead navigated to URL :: " + currentURL);
+			}
+
+		}
+
 	public void verifyPresenceOfPrivacyPolicyPage() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("/app/answers/detail/a_id/649/kw/privacy")) {
@@ -783,6 +804,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void verifyPresenceOflnkOutdoors() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("/categories/outdoors.jsp")) {
@@ -792,6 +814,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void verifyPresenceOflnkShoes() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("/categories/shoes.jsp")) {
@@ -801,6 +824,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void verifyPresenceOflnkSportsEquipment() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("/categories/sports-equipment.jsp")) {
@@ -810,6 +834,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void closeAlertPopupBox() {
 		emailSignUpModal.click();
 	}

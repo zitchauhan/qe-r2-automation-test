@@ -9,7 +9,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter password in sign-in page "BuynowPwd" 
 	Then user click on Signin-button 
 	And user navigates to ASO-Home page 
-	When user enters "SKUForBuyNow" in the search box 
+	When user enters "SKUForBuyNow" in the search box plcc
 	And user click on search icon 
 	And user click on Buy Now button
 	And user click on Buy Now button in pop up modal	

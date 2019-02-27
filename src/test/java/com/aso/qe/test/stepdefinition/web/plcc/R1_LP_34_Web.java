@@ -2,6 +2,9 @@ package com.aso.qe.test.stepdefinition.web.plcc;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.Iterator;
+import java.util.Set;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
@@ -415,7 +418,23 @@ public class R1_LP_34_Web extends CommonActionHelper {
 
 	@Then("^user navigates to Facebook Page and validate facebook url$")
 	public void user_navigates_to_Facebook_Page_and_validate_facebook_url() throws Throwable {
-		plccLandingPageObjects.verifyPresenceOfFacebookPage();
+		try {
+			String parentwindowhandle = driver.getWindowHandle();
+			String subWindowhandler= null;
+			Set<String> handles = driver.getWindowHandles();
+			Iterator<String> itertor = 	handles.iterator();
+			while(itertor.hasNext())
+			{
+				subWindowhandler = itertor.next();
+				driver.switchTo().window(subWindowhandler);
+				System.out.println(subWindowhandler);
+			}
+			plccLandingPageObjects.verifyPresenceOfFacebookPage();
+			driver.close();
+			driver.switchTo().window(parentwindowhandle);
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
 	}
 	
 	@When("^user click on Pinterest icon$")
@@ -426,7 +445,24 @@ public class R1_LP_34_Web extends CommonActionHelper {
 
 	@Then("^user navigates to Pinterest Page and validate pinterest page url$")
 	public void user_navigates_to_Pinterest_Page_and_validate_pinterest_page_url() throws Throwable {
-		plccLandingPageObjects.verifyPresenceOfPinterestPage();
+		try {
+			String parentwindowhandle = driver.getWindowHandle();
+			String subWindowhandler= null;
+			Set<String> handles = driver.getWindowHandles();
+			Iterator<String> itertor = 	handles.iterator();
+			while(itertor.hasNext())
+			{
+				subWindowhandler = itertor.next();
+				driver.switchTo().window(subWindowhandler);
+				System.out.println(subWindowhandler);
+			}
+			plccLandingPageObjects.verifyPresenceOfPinterestPage();
+			driver.close();
+			driver.switchTo().window(parentwindowhandle);
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
+
 	}
 
 	@Then("^user click on PrivacyPolicy link in the footer section of ASO-Home page$")
@@ -494,6 +530,55 @@ public class R1_LP_34_Web extends CommonActionHelper {
 		}
 	}
 
+	@When("^user click on twitter$")
+	public void user_click_on_twitter() throws Throwable {
+		globalElementHeader.icontwitter.click();
+	}
 
+	@Then("^user navigates to twitter page and validate twitter page url$")
+	public void user_navigates_to_twitter_page_and_validate_twitter_page_url() throws Throwable {
+		try {
+			String parentwindowhandle = driver.getWindowHandle();
+			String subWindowhandler= null;
+			Set<String> handles = driver.getWindowHandles();
+			Iterator<String> itertor = 	handles.iterator();
+			while(itertor.hasNext())
+			{
+				subWindowhandler = itertor.next();
+				driver.switchTo().window(subWindowhandler);
+				System.out.println(subWindowhandler);
+			}
+			plccLandingPageObjects.verifyPresenceOfTwitterPage();
+			driver.close();
+			driver.switchTo().window(parentwindowhandle);
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
+	}
+	@When("^user click on instagram icon$")
+	public void user_click_on_instagram_icon() throws Throwable {
+		globalElementHeader.iconinstagram.click();
+	}
+
+	@Then("^user navigates to instagram page and validate instagram page url$")
+	public void user_navigates_to_instagram_page_and_validate_instagram_page_url() throws Throwable {
+		try {
+			String parentwindowhandle = driver.getWindowHandle();
+			String subWindowhandler= null;
+			Set<String> handles = driver.getWindowHandles();
+			Iterator<String> itertor = 	handles.iterator();
+			while(itertor.hasNext())
+			{
+				subWindowhandler = itertor.next();
+				driver.switchTo().window(subWindowhandler);
+				System.out.println(subWindowhandler);
+			}
+			plccLandingPageObjects.verifyPresenceOfInstagramPage();
+			driver.close();
+			driver.switchTo().window(parentwindowhandle);
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
+	}
 
 }

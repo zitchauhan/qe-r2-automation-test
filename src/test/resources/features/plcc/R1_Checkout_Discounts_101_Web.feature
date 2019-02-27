@@ -4,8 +4,8 @@ Background: Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
 	And user expect element Email Address to be present 
-	And user enter Email address in sign-in page "Email_Address_Promotions" 
-	And user enter password in sign-in page "Password_2" 
+	And user enter Email address in sign-in page "Email_Promotions" 
+	And user enter password in sign-in page "password" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
@@ -36,10 +36,10 @@ Background: Common Pre-requisite steps
 	
 @C-PLCC @Regression @All @PLCC-106 @CR-VS	
 Scenario: Verify user is able to get Annual offer of $15 off by providing the promo code 
-     When user enters "SKUIdOfProductLs15" in the search box 
+     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
 	And user click on Add to Cart button
-	And user click on checkout from ATC pop up 
+	And user click on checkout from ATC pop up plcc
 	And user clicks on checkout button and navigates to checkout page 
 	When user enter plcc card "ValidPLCCCard" 
  	And user click on REVIEW ORDER button
@@ -62,10 +62,10 @@ Scenario: Verify user is able to get Annual offer of $15 off by providing the pr
   	
 @C-PLCC @Regression @All @PLCC-101 @CR-VS 
 Scenario: Verify the First Purchase offer when cart total is <=$15 
-	When user enters "SKUIdOfProductLs15" in the search box 
+	When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
 	And user click on Add to Cart button 
-	And user click on checkout from ATC pop up 
+	And user click on checkout from ATC pop up plcc
 	And user clicks on checkout button and navigates to checkout page 
 	When user enter plcc card "ValidPLCCCard" 
 	And user click on REVIEW ORDER button 

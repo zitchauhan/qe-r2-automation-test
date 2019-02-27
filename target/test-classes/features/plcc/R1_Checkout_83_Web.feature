@@ -9,10 +9,10 @@ Background:  Common Pre-requisite steps
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
 	#And user expect element ASO Home Page Title to be present
-	When user enters "SKUIdOfProduct" in the search box 
+	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
 	And user click on Add to Cart button
-	And user click on checkout from ATC pop up 
+	And user click on checkout from ATC pop up plcc
 	And user clicks on checkout button and navigates to checkout page 
 	#And user selects credit card radio button
 	And user expect element credit card text field is present 

@@ -21,6 +21,7 @@ import com.aso.qe.test.pageobject.R2_Sanity_PO;
 import java.io.PrintStream;
 import java.math.BigDecimal;
 
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -33,9 +34,23 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	R1_PLP_PO plpPageObj = PageFactory.initElements(getDriver(), R1_PLP_PO.class);
 	public static R1_GlobalElementHeader_Home_PO globalElementHeader;
+	
 	@When("^user expect element free shipping should be available$")
 	public void user_expect_element_free_shipping_should_be_available() throws Throwable {
-		genericPO.verifyPresenceOfFreeShipping();
+		try {
+			genericPO.verifyPresenceOfFreeShipping();
+		} catch (Exception e) {
+			System.out.println("Free shipping is not Applied:" +e.getMessage());
+		}
+	}
+	
+	@Given("^user expect element free shipping should not be available$")
+	public void user_expect_element_free_shipping_should_not_be_available() throws Throwable {
+		try {
+			genericPO.verifyPresenceOfFreeShipping();
+		} catch (Exception e) {
+			System.out.println("Free shipping is not working:" +e.getMessage());
+		} 
 	}
 	
 	@Then ("^User navigates to L2 page plcc$")

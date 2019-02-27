@@ -9,7 +9,7 @@ Scenario: Verify the display of PLCC card image under We Accept section
 	And user enter password in sign-in page "Password_2" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
-	When user enters "SKUIdOfProduct" in the search box 
+	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
 	And user click on Add to Cart button 
 	And user click on viewcart button

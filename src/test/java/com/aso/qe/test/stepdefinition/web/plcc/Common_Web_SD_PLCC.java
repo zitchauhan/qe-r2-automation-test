@@ -286,27 +286,11 @@ public class Common_Web_SD_PLCC extends CommonActionHelper
 		}
 	}
 	
-	/*@Then("^user click and navigates to child test window$")
-	public void user_click_and_navigates_to_child_TEst_window() throws Throwable 
-	{
-		
-		String MainWindow=driver.getWindowHandle();	
-		Set<String> s1=driver.getWindowHandles();		
-        Iterator<String> i1=s1.iterator();		
-        		
-        while(i1.hasNext())			
-        {		
-            String ChildWindow=i1.next();		
-            		
-            if(!MainWindow.equalsIgnoreCase(ChildWindow))			
-            {    		
-                 
-                    // Switching to Child window
-                    driver.switchTo().window(ChildWindow);
-                    driver.findElement(by)
-            }
-        }
-	}*/
+	@Given("^user switchback to parent window$")
+	public void user_switchback_to_parent_window(String parentwindowhandle) throws Throwable {
+		driver.close();
+		driver.switchTo().window(parentwindowhandle);
+	}
 	@Then("^user close the newly opened tab$")
 	public void user_close_the_newly_opened_tab() throws Throwable {
 		/*Set<String> winSet = driver.getWindowHandles();

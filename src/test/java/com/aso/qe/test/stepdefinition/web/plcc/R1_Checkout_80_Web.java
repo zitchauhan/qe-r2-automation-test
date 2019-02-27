@@ -25,6 +25,7 @@ import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
 import cucumber.api.DataTable;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import freemarker.template.utility.NullArgumentException;
@@ -70,6 +71,18 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 		Thread.sleep(5000);
 	}
+	
+	@Given("^user click on Add an Item to cart Button$")
+	public void user_click_on_Add_an_Item_to_cart_Button() throws Throwable {
+		try {
+			waitForElement(pdpPageObj.AddToCartBtn);
+			assertTrue(clickOnButton(pdpPageObj.AddToCartBtn));
+			Thread.sleep(5000);
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
+	}
+	
 
 	@When("^user click on search icon$")
 	public void user_click_on_search_icon() throws Throwable {

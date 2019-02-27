@@ -1,21 +1,52 @@
-Feature: Landing Page 	
+Feature: PLCC: Checkout - Payment Using PLCC 
 
 Background:  Common Pre-requisite steps
-Given user launches the browser and navigates to "ASO_HOME" page 
-#When user click on AcademyCreditCard link in the footer section of ASO-Home page 
-#Then user expect Landing page to be present 
-#And user expect element FPO Apply Order section to be present 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user click on My Account link 
+	And user expect element Email Address to be present 
+	And user enter Email address in sign-in page "UserWithSavedAddressAndPayment" 
+	And user enter password in sign-in page "BuynowPwd" 
+	And user click on Signin-button 
+	Then user navigates to ASO-Home page 
+		
+#@C-PLCC @Regression @All @PLCC-99 @CR-Manju
+#Scenario: Verify user is able to get Free shipping offer with Item value greater than 15$ 
+#    When user enters "SKUIdOfProductGr15" in the search box 
+#	And user click on search icon 
+#	And user click on Add an Item to cart Button
+#	And user click on checkout from ATC pop up 
+#	And user clicks on checkout button and navigates to checkout page 
+#	And user click on REVIEW ORDER button 
+#	And user expect element free shipping should be available
+#	And user expect discount text to be present
+#	When user click on edit my cart link 
+#	Then user click on remove from cart 
 	
-@C-PLCC @Regression @All @PLCC-34 @CR-VS  
-Scenario: Verify the navigation of Footer Links -Social Media Links	 
-#	And user expect element FaceBook to be present 
-#	When user click on Facebook icon
-#	And user click and navigates to child window
-#	Then user navigates to Facebook Page and validate facebook url
-	And user switchback to parent window
-#   And user expect element Pinterest to be present 
-#   When user click on Pinterest icon
-#	And user click and navigates to child window
-#   Then user navigates to Pinterest Page and validate pinterest page url
-#	And user expect element YouTube to be present 
-#    And user expect element Instagram to be present
+@C-PLCC @Regression @All @PLCC-99 @CR-Manju
+Scenario: Verify user is unable to get Free shipping offer with Item value lesser than 15$ 
+    When user enters "SKUIdOfProductLs15" in the search box 
+	And user click on search icon 
+	And user click on Add an Item to cart Button
+	And user click on checkout from ATC pop up 
+	And user clicks on checkout button and navigates to checkout page 
+	And user click on REVIEW ORDER button 
+	And user expect element free shipping should not be available
+	And user expect discount text to be present
+	When user click on edit my cart link 
+	Then user click on remove from cart 
+	
+#@C-PLCC @Regression @All @PLCC-99 @CR-Manju
+#Scenario: Verify user is unable to get Free shipping offer with Item value lesser than 15$ 
+#    When user enters "SKUIdOfProductGr25" in the search box 
+#	And user click on search icon 
+#	And user click on Add an Item to cart Button
+#	And user click on checkout from ATC pop up 
+#	And user clicks on checkout button and navigates to checkout page 
+#	And user click on REVIEW ORDER button 
+#	And user expect element free shipping should be available
+#	And user expect discount text to be present
+#	When user click on edit my cart link 
+#	And user expect element Standard Free shipping applied Greater than 25$
+#	Then user click on remove from cart 
+ 	
+	
