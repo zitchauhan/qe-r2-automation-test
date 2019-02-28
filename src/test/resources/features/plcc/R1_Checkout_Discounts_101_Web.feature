@@ -57,7 +57,10 @@ Scenario: Verify user is able to get Annual offer of $15 off by providing the pr
     Given user launches the browser and navigates to "ASO_HOME" page 
     Then User navigates to L2 page plcc
     Then Navigate to PLP and select one product with clearance for plcc
-    And User should able to see Strike Through Price with Actual price for plcc 
+    And User should able to see Strike Through Price with Actual price for plcc
+    When user click on My Account link
+	And user click on Payments link
+	Then delete all credit cards from My Account
     
   	
 @C-PLCC @Regression @All @PLCC-101 @CR-VS 

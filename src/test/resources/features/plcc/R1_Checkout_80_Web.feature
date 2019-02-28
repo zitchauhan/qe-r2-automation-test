@@ -55,7 +55,9 @@ Scenario: Verify the system behavior when user enter 34 as two digit BIN number
 Scenario: Verify the system behavior when user enter 65 as two digit BIN number 
 	When user enter discover card "starting2digitsdiscoverCard" 
 	Then user expect selected credit card image on credit card text field 
-	And user expect element discover card image on credit card text field to present 
+	And user expect element discover card image on credit card text field to present
+	When user click on edit my cart link 
+	Then user click on remove from cart 
 
 @C-PLCC @Regression @All @PLCC-80 @CR-VS	
 Scenario: Verify the system behavior when user enter invalid digits as BIN number 
