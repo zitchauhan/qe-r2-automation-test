@@ -40,7 +40,6 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	
 	@FindBy(xpath = "//*[contains(text()='HELLO,'])")
 	public WebElement hellotext;
-	
 	@FindBy(xpath = "//*[@data-auid='signUp_btn']")
 	public WebElement signUpLinkOnLoginPage;
 	@FindBy(xpath = "//*[text()='Add Address for Faster Checkout']")

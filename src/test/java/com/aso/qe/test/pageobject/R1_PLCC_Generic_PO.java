@@ -6,7 +6,6 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.common.Common_Web_PLCC;
@@ -21,12 +20,6 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	Common_Web_SD_PLCC timer=new Common_Web_SD_PLCC();
 	private WebElement objElement;
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
-	
-	//@FindBy(xpath = "//*[@data-auid='sameAsShipping']")
-	@FindBy(xpath = "//*[text()='Same As Shipping Address']")
-	public WebElement selctsameAsShippingcheckbox;
-	@FindBy(xpath = "//*[@data-auid='btndefaultPaymentFormSubmit']")
-	public WebElement btndefaultPaymentFormSubmit;
 	@FindBy(xpath = "//*[text()='Credit Card Number']/following::*[1]")
 	public WebElement CreditCardNumber_Input;
 	// Checkout
@@ -56,6 +49,12 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement paymentScetionCheckoutPage;
 	@FindBy(xpath="//*[contains(text(),'Academy Sports + Outdoors Credit Card ending in - ')]")
 	public WebElement savedCardCheckoutPage;
+	
+	//Buy Now
+	@FindBy(xpath = "//*[text()='Same As Shipping Address']")
+	public WebElement selctsameAsShippingcheckbox;
+	@FindBy(xpath = "//*[@data-auid='btndefaultPaymentFormSubmit']")
+	public WebElement btndefaultPaymentFormSubmit;
 	 
 	
 
@@ -75,14 +74,9 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
 	
 	//BuyNow:
+	
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement buyNowButton;
-	
-	@FindBy(xpath = "//form/button[@data-auid='btnundefined']||//form/button[@type='button']")
-	//@FindBy(xpath = "//form/button[@data-auid='btnundefined']")
-	//@FindBy(xpath = "//form/button[@class='css-1aboma9 em811yu0']")
-	public WebElement clickBuynowBtnInPopupModal;
-	
 	
 	//Saved Card:
 	@FindBy(xpath = "//*[@data-auid='checkout_edit_payment']")
@@ -93,7 +87,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement confirmButton;
 	
 	
-		
+	@FindBy(xpath = "//*[@data-auid='btnundefined']")
+	//@FindBy(xpath = "//form/button[@data-auid='btnundefined']")
+	//@FindBy(xpath = "//form/button[@class='css-1aboma9 em811yu0']")
+	public WebElement clickBuynowBtnInPopupModal; 
 	
 	
 
@@ -141,6 +138,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[@data-auid='crt_inputQty']")
 	public WebElement quantityInputField;
 	
+	// Order Summary:
+		@FindBy(xpath = "//*[@data-auid='checkout_order_summary_section']//div[4]/div[2]")
+		public WebElement discountValue;
+	
 	//Free Shipping:
 	@FindBy(xpath = "//*[@data-auid='freeShip']")
 	public WebElement freeShippingTxt;
@@ -157,6 +158,17 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		} else {
 			isDisplayed(freeShippingTxt);
 			logger.debug("Free Shipping is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	public void verifyPresenceOfDiscountValue() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(discountValue);
+			logger.debug("Discount Value is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(discountValue);
+			logger.debug("Discount Value is displayed++++++++++++++++++++++++==");
 		}
 
 	}
