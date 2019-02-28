@@ -16,19 +16,19 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user expect element Add Address for Faster Checkout checkbox to be present 
 	When user select Add Address for Faster Checkout checkbox 
 	Then user expect element Address to be present 
-	And user enter Address "Address" 
+	And user enter Address plcc "Address"
 	And user expect element Zip Code to be present 
 	And user enter Zip Code "Zip_Code" 
 	And user expect element City to be present 
 	And user expect element State to be present 
 	And user expect element Phone number to be present 
-	And user enter Phone Number "Phone_Number" 
+	And user enters Phone Number "Phone_Number" 
 	And user expect element SIGN UP to be present 
 	And user click on SIGN UP 
 	And user expect element User Select Address to be present 
 	And user click on suggested address 
 	When user click on User Select Address
-	When user enters "SKUIdOfProduct" in the search box 
+	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
 	And user click on Enable BuyNow button
 	When user enter plcc card "ValidPLCCCard"

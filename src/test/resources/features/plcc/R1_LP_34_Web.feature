@@ -133,18 +133,17 @@ Scenario: Verify the navigation of Footer Links - General
 	And user verify presence of getMoreDeals text to be present in the modal
 	
 	 
-@C-PLCC @Regression @All @PLCC-34 @CR-VS  
+@C-PLCC @Regression @All @PLCC-34 @CR-Manju  
 Scenario: Verify the navigation of Footer Links -Social Media Links	 
 	And user expect element FaceBook to be present 
-#	When user click on Facebook icon
-#	And user click and navigates to child window
-#	Then user navigates to Facebook Page and validate facebook url
-    And user expect element Pinterest to be present 
-#    When user click on Pinterest icon
-#	And user click and navigates to child window
-#   Then user navigates to Pinterest Page and validate pinterest page url
-	And user expect element YouTube to be present 
-    And user expect element Instagram to be present
+	When user click on Facebook icon
+	Then user navigates to Facebook Page and validate facebook url
+   	When user click on Pinterest icon
+    Then user navigates to Pinterest Page and validate pinterest page url
+	When user click on twitter 
+	Then user navigates to twitter page and validate twitter page url
+	When user click on instagram icon
+	Then user navigates to instagram page and validate instagram page url
 	
 @C-PLCC @Regression @All @PLCC-34 @CR-VS  
 Scenario: Verify the navigation of Footer Links -T&C Links
@@ -158,15 +157,25 @@ Scenario: Verify the navigation of Footer Links -T&C Links
 	And user expect element CaliforniaTransparencyinSupplyChainAct to be present 
 	And user click on browser back button 
 	And user expect element CaliforniaTransparencyinSupplyChainAct to be present
-	And user click on California Transparency in Supply Chain Act(SB 657) link and navigates to CaliforniaTransparencyinSupplyChainAct page
+	#And user click on California Transparency in Supply Chain Act(SB 657) link and navigates to CaliforniaTransparencyinSupplyChainAct page
 	
 @C-PLCC @Regression @All @PLCC-34 @CR-VS 
 Scenario: Verify the navigation of Footer Links -Additional Links
-	And user expect element Sitemap to be present 
-	And user expect element ProductIndex to be present 
-	And user expect element ShoppingIndex to be present 
-	And user expect element BrandsIndex to be present  
-	
+	When user expect element Sitemap to be present 
+	Then user click on Sitemap and navigates to Sitemap Page
+	And user click on browser back button
+	When user expect element ProductIndex to be present
+	Then user click on ProductIndex and navigates to ProductIndex Page 
+	And user click on browser back button
+	When user expect element ShoppingIndex to be present
+	Then user click on ShoppingIndex and navigates to ShoppingIndex Page 
+	And user click on browser back button
+	And user click on Outdoors and navigates to Outdoors Page  
+	And user click on browser back button
+	And user click on Shoes and navigates to Shoes Page
+	And user click on browser back button
+	And user click on SportsEquipment and navigates to SportsEquipment Page
+	And user click on browser back button
 
 	
 	

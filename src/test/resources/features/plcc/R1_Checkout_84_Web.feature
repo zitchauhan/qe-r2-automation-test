@@ -4,15 +4,15 @@ Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
 	And user expect element Email Address to be present 
-	And user enter Email address in sign-in page "Email_Address_2" 
-	And user enter password in sign-in page "Password_2" 
+	And user enter Email address in sign-in page "Email_OrderPlacement" 
+	And user enter password in sign-in page "password" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
 	#And user expect element ASO Home Page Title to be present
-	When user enters "SKUIdOfProduct" in the search box 
+	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
 	And user click on Add to Cart button 
-	And user click on checkout from ATC pop up 
+	And user click on checkout from ATC pop up plcc
 	And user clicks on checkout button and navigates to checkout page 
 	#And user selects credit card radio button
 	And user expect element credit card text field is present 
@@ -113,14 +113,14 @@ Scenario: Verify user is able to place Multiple orders using PLCC Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
 	And user expect element Email Address to be present 
-	And user enter Email address in sign-in page "Email_Address_1" 
-	And user enter password in sign-in page "Password_1" 
+	And user enter Email address in sign-in page "Email_OrderPlacement" 
+	And user enter password in sign-in page "password" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
-	When user enters "SKUIdOfProduct" in the search box 
+	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
-	And user click on Add to cart button 
-	And user click on checkout from ATC pop up 
+	And user click on Add to Cart button 
+	And user click on checkout from ATC pop up plcc
 	And user clicks on checkout button and navigates to checkout page 
 	And user expect element credit card text field is present 
 	When user enter plcc card "ValidPLCCCard" 
@@ -133,5 +133,5 @@ Scenario: Verify user is able to place Multiple orders using PLCC Card
 	And user expect element a confirmation email is on its way to be present
 	And user expect element print link to be present
 	And user expect element my account link to be present
-	#And user place fifty orders and see the response with "SKUIdOfProduct1" with PLCC Card "ValidPLCCCard"
+	And user place fifty orders and see the response with "SKUIdOfProduct1" with PLCC Card "ValidPLCCCard"
 	

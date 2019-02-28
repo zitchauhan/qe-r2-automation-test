@@ -18,7 +18,7 @@ Scenario: Verify auto population of city and state when user provides valid zip 
 	And user expect element Add Address for Faster Checkout checkbox to be present
 	And user select Add Address for Faster Checkout checkbox
 	And user expect element Address to be present
-	And user enter Address "Address"
+	And user enter Address plcc "Address"
 	And user expect element Zip Code to be present
 	And user enter Zip Code "Zip_Code"
 	And user expect element City to be present

@@ -35,8 +35,8 @@ public class R1_REG_42_Web extends CommonActionHelper {
 		}
 	}
 
-	@Then("^user enter Phone Number \"(.*?)\"$")
-	public void user_enter_Phone_Number(String arg1) throws Throwable {
+	@Then("^user enters Phone Number \"(.*?)\"$")
+	public void user_enters_Phone_Number(String arg1) throws Throwable {
 		plccPageObjects.enterPhoneNumberTxtField(arg1);
 		assertTrue(isDisplayed(plccPageObjects.addressPhoneField));
 		waitForElement(plccPageObjects.addressPhoneField);

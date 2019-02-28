@@ -11,13 +11,13 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.common.Common_Web_PLCC;
-import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
+//import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
 
 public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
 	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
-	Common_Web_SD_PLCC timer = new Common_Web_SD_PLCC();
+	
 
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----START--------------------------------*/
 	@FindBy(xpath = "//*[@data-component='benefitSection']")
@@ -90,13 +90,12 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	// Landing Page Checkout
 	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Check Gift Card Balance']")
-	public WebElement lnkCheckGiftCardBalance; 
+	public WebElement lnkCheckGiftCardBalance;
 	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Check Order Status']")
 	public WebElement lnkcheckorder;
-	
+
 	@FindBy(xpath = "//*[@data-auid='email-signup-main-modal-close']")
 	public WebElement emailSignUpModal;
-	
 
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
 	public void clickOnAcademyCreditCardFooterLink() throws Exception {
@@ -615,7 +614,8 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("custhelp.com")) {
 			logger.debug("User is successfully navigated to Customer care page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Customer care Page instead navigated to URL :: " + currentURL);
+			logger.debug(
+					"User is not able to navigate to Customer care Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
@@ -626,7 +626,8 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/shop/browse/Gift-Cards")) {
 			logger.debug("User is successfully navigated to Shop gift Card page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Shop gift Card Page instead navigated to URL :: " + currentURL);
+			logger.debug(
+					"User is not able to navigate to Shop gift Card Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
@@ -637,7 +638,8 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/webapp/wcs/stores/servlet/GCBView")) {
 			logger.debug("User is successfully navigated to check Gift Card Balance page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to check Gift Card Balance Page instead navigated to URL :: " + currentURL);
+			logger.debug("User is not able to navigate to check Gift Card Balance Page instead navigated to URL :: "
+					+ currentURL);
 		}
 
 	}
@@ -648,7 +650,8 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/shop/store/academy-credit-card")) {
 			logger.debug("User is successfully navigated to Academy credit card page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Academy credit card Page instead navigated to URL :: " + currentURL);
+			logger.debug("User is not able to navigate to Academy credit card Page instead navigated to URL :: "
+					+ currentURL);
 		}
 
 	}
@@ -659,7 +662,8 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/shop/en/store/instore-services")) {
 			logger.debug("User is successfully navigated to Store Services page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Store Services Page instead navigated to URL :: " + currentURL);
+			logger.debug(
+					"User is not able to navigate to Store Services Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
@@ -677,14 +681,16 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	// Footer link navigation:
 	public void verifyPresenceOflnkSIGNUPFORMOREDEALSPage() throws Exception {
-		String currentsignUpMoreDealsText= emailSignUpModal.getText();
+		String currentsignUpMoreDealsText = emailSignUpModal.getText();
 		System.out.println(currentsignUpMoreDealsText);
 		if (currentsignUpMoreDealsText.contains("GET MORE DEALS")) {
-			logger.debug("User is successfully verified GET MORE DEALS Text in email sign up modal :: " + currentsignUpMoreDealsText);
+			logger.debug("User is successfully verified GET MORE DEALS Text in email sign up modal :: "
+					+ currentsignUpMoreDealsText);
 		} else {
-			logger.debug("User is not able to verified GET MORE DEALS Text in email sign up modal  :: " + currentsignUpMoreDealsText);
+			logger.debug("User is not able to verified GET MORE DEALS Text in email sign up modal  :: "
+					+ currentsignUpMoreDealsText);
 		}
-		
+
 		closeAlertPopupBox();
 
 	}
@@ -700,29 +706,49 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		driver.close();
 
 	}
-	
+
 	// Footer link navigation:
-		public void verifyPresenceOfFacebookPage() throws Exception {
+	public void verifyPresenceOfFacebookPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("www.facebook.com/Academy/")) {
+			logger.debug("User is successfully navigated to Facebook page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Facebook Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOfPinterestPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("www.pinterest.com")) {
+			logger.debug("User is successfully navigated to Pinterest page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Pinterest Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOfTwitterPage() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("twitter.com/academy")) {
+			logger.debug("User is successfully navigated to Twitter page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Twitter Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+	// Footer link navigation:
+		public void verifyPresenceOfInstagramPage() throws Exception {
 			String currentURL = getCurrentPageURL();
-			if (currentURL.contains("www.facebook.com/Academy/")) {
-				logger.debug("User is successfully navigated to Facebook page with URL :: " + currentURL);
+			if (currentURL.contains("www.instagram.com/academy/")) {
+				logger.debug("User is successfully navigated to Twitter page with URL :: " + currentURL);
 			} else {
-				logger.debug("User is not able to navigate to Facebook Page instead navigated to URL :: " + currentURL);
+				logger.debug("User is not able to navigate to Twitter Page instead navigated to URL :: " + currentURL);
 			}
-			
 
 		}
-		// Footer link navigation:
-				public void verifyPresenceOfPinterestPage() throws Exception {
-					String currentURL = getCurrentPageURL();
-					if (currentURL.contains("www.pinterest.com")) {
-						logger.debug("User is successfully navigated to Pinterest page with URL :: " + currentURL);
-					} else {
-						logger.debug("User is not able to navigate to Pinterest Page instead navigated to URL :: " + currentURL);
-					}
-					
-
-				}
 
 	public void verifyPresenceOfPrivacyPolicyPage() throws Exception {
 		String currentURL = getCurrentPageURL();
@@ -731,9 +757,9 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		} else {
 			logger.debug("User is not able to navigate to Privacy Page instead navigated to URL :: " + currentURL);
 		}
-		
 
 	}
+
 	// Footer link navigation:
 	public void verifyPresenceOflnkCaliforniaTransparencyinSupplyChainActPage() throws Exception {
 		String currentURL = getCurrentPageURL();
@@ -745,11 +771,72 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	}
 
+	// Footer link navigation:
+	public void verifyPresenceOflnkSiteMapIndex() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/shop/browse/sitemap")) {
+			logger.debug("User is successfully navigated to ShoppingIndex page with URL :: " + currentURL);
+		} else {
+			logger.debug(
+					"User is not able to navigate to ShoppingIndex Page instead navigated to URL :: " + currentURL);
+		}
 
-	
-	public void closeAlertPopupBox()
-	{
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOflnkProductIndex() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/categories/index.jsp")) {
+			logger.debug("User is successfully navigated to ProductIndex page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to ProductIndex Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	// Footer link navigation:
+	public void verifyPresenceOflnkShoppingIndex() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/categories/shopping-index.jsp")) {
+			logger.debug("User is successfully navigated to ProductIndex page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to ProductIndex Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	public void verifyPresenceOflnkOutdoors() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/categories/outdoors.jsp")) {
+			logger.debug("User is successfully navigated to Outdoors page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Outdoors Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	public void verifyPresenceOflnkShoes() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/categories/shoes.jsp")) {
+			logger.debug("User is successfully navigated to Outdoors page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Outdoors Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	public void verifyPresenceOflnkSportsEquipment() throws Exception {
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("/categories/sports-equipment.jsp")) {
+			logger.debug("User is successfully navigated to Outdoors page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to Outdoors Page instead navigated to URL :: " + currentURL);
+		}
+
+	}
+
+	public void closeAlertPopupBox() {
 		emailSignUpModal.click();
 	}
-	
+
 }

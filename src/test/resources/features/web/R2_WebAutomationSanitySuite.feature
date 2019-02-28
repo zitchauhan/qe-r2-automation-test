@@ -397,6 +397,16 @@ Scenario: TC_30- Verify all broken Images on MyAccount page
 	Then user click on My Account and navigate to payment 
 	Then verfy all Image link urls status code is 200 
 	
+@R2_WAST-27 @BrokenLink @Broken @TC_BIM_08 
+Scenario: TC_30- Verify all broken Images on MyAccount page 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then user click on My Account and navigate to payment 
+	Then verfy all Image link urls status code is 200 
+	
 @C-PLCC @Regression @All @PLCC-84 @CR-VS 
 Scenario: Verify user is able to place order using PLCC card
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -426,5 +436,3 @@ Scenario: Verify user is able to place order using PLCC card
 	When user click on My Account link
 	And user click on Payments link
 	Then delete all credit cards from My Account
-	
-

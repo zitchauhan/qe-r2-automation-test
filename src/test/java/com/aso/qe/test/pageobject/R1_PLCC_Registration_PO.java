@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.FrameWorkHelper;
 import com.aso.qe.test.common.Common_Web_PLCC;
-import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
+//import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
 
 public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
@@ -18,7 +18,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
 	R1_PLCC_LandingPage_PO plccLandingPageObjects = PageFactory.initElements(driver, R1_PLCC_LandingPage_PO.class);
 	R1_PLCC_Generic_PO plccGenericPageObjects = PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
-	Common_Web_SD_PLCC timer = new Common_Web_SD_PLCC();
+	//Common_Web_SD_PLCC timer = new Common_Web_SD_PLCC();
 	
 
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----START--------------------------------*/

@@ -4,15 +4,15 @@ Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
 	And user expect element Email Address to be present 
-	And user enter Email address in sign-in page "Email_Address_2" 
-	And user enter password in sign-in page "Password_2" 
+	And user enter Email address in sign-in page "Email_IdentifyCardType" 
+	And user enter password in sign-in page "password" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
-	When user enters "SKUIdOfProduct" in the search box 
+	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
 	#And user click on Add to Cart Button 
 	And user click on Add to Cart button  
-	And user click on checkout from ATC pop up 
+	And user click on checkout from ATC pop up plcc
 	And user clicks on checkout button and navigates to checkout page 
 	And user expect element credit card text field is present 
 	
@@ -55,7 +55,9 @@ Scenario: Verify the system behavior when user enter 34 as two digit BIN number
 Scenario: Verify the system behavior when user enter 65 as two digit BIN number 
 	When user enter discover card "starting2digitsdiscoverCard" 
 	Then user expect selected credit card image on credit card text field 
-	And user expect element discover card image on credit card text field to present 
+	And user expect element discover card image on credit card text field to present
+	When user click on edit my cart link 
+	Then user click on remove from cart 
 
 @C-PLCC @Regression @All @PLCC-80 @CR-VS	
 Scenario: Verify the system behavior when user enter invalid digits as BIN number 

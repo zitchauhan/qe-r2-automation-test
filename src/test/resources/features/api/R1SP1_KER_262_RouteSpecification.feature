@@ -1,6 +1,5 @@
 Feature: API Route Specification
 
-
   @api @Regression @Sanity @All @KER-262 @ZYP-3079 @C-PDP
   Scenario Outline: : Verify status code 200 for success scenario for Route variantType and variantValue
     Given "RouteVariant" endpoint with variant"<RouteTypeAndValue>"

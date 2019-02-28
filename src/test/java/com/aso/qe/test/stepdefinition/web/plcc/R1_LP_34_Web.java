@@ -2,6 +2,9 @@ package com.aso.qe.test.stepdefinition.web.plcc;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.Iterator;
+import java.util.Set;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
@@ -12,6 +15,7 @@ import com.aso.qe.test.pageobject.R1_PLCC_Registration_PO;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.java.en.Given;
 
 public class R1_LP_34_Web extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
@@ -414,7 +418,23 @@ public class R1_LP_34_Web extends CommonActionHelper {
 
 	@Then("^user navigates to Facebook Page and validate facebook url$")
 	public void user_navigates_to_Facebook_Page_and_validate_facebook_url() throws Throwable {
-		plccLandingPageObjects.verifyPresenceOfFacebookPage();
+		try {
+			String parentwindowhandle = driver.getWindowHandle();
+			String subWindowhandler= null;
+			Set<String> handles = driver.getWindowHandles();
+			Iterator<String> itertor = 	handles.iterator();
+			while(itertor.hasNext())
+			{
+				subWindowhandler = itertor.next();
+				driver.switchTo().window(subWindowhandler);
+				System.out.println(subWindowhandler);
+			}
+			plccLandingPageObjects.verifyPresenceOfFacebookPage();
+			driver.close();
+			driver.switchTo().window(parentwindowhandle);
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
 	}
 	
 	@When("^user click on Pinterest icon$")
@@ -425,7 +445,24 @@ public class R1_LP_34_Web extends CommonActionHelper {
 
 	@Then("^user navigates to Pinterest Page and validate pinterest page url$")
 	public void user_navigates_to_Pinterest_Page_and_validate_pinterest_page_url() throws Throwable {
-		plccLandingPageObjects.verifyPresenceOfPinterestPage();
+		try {
+			String parentwindowhandle = driver.getWindowHandle();
+			String subWindowhandler= null;
+			Set<String> handles = driver.getWindowHandles();
+			Iterator<String> itertor = 	handles.iterator();
+			while(itertor.hasNext())
+			{
+				subWindowhandler = itertor.next();
+				driver.switchTo().window(subWindowhandler);
+				System.out.println(subWindowhandler);
+			}
+			plccLandingPageObjects.verifyPresenceOfPinterestPage();
+			driver.close();
+			driver.switchTo().window(parentwindowhandle);
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
+
 	}
 
 	@Then("^user click on PrivacyPolicy link in the footer section of ASO-Home page$")
@@ -443,6 +480,105 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	public void user_click_on_California_Transparency_in_Supply_Chain_Act_SB_link_and_navigates_to_CaliforniaTransparencyinSupplyChainAct_page(int arg1) throws Throwable {
 		globalElementHeader.lnklegalpolicy.click();
 		plccLandingPageObjects.verifyPresenceOflnkCaliforniaTransparencyinSupplyChainActPage();	
+	}
+	
+	@Then("^user click on Sitemap and navigates to Sitemap Page$")
+	public void user_click_on_Sitemap_and_navigates_to_Sitemap_Page() throws Throwable {
+		plccPageObjects.siteMapLink.click();
+		plccLandingPageObjects.verifyPresenceOflnkSiteMapIndex();	
+	}
+	@Then("^user click on ProductIndex and navigates to ProductIndex Page$")
+	public void user_click_on_ProductIndex_and_navigates_to_ProductIndex_Page() throws Throwable {
+		plccPageObjects.productIndexLink.click();
+		plccLandingPageObjects.verifyPresenceOflnkProductIndex();
+	}
+
+	@Then("^user click on ShoppingIndex and navigates to ShoppingIndex Page$")
+	public void user_click_on_ShoppingIndex_and_navigates_to_ShoppingIndex_Page() throws Throwable {
+		plccPageObjects.shoppingIndexLink.click();
+		plccLandingPageObjects.verifyPresenceOflnkShoppingIndex();
+	}
+	
+	@Then("^user click on Outdoors and navigates to Outdoors Page$")
+	public void user_click_on_Outdoors_and_navigates_to_Outdoors_Page() throws Throwable {
+		try {
+			plccPageObjects.outdoorsLink.click();
+			plccLandingPageObjects.verifyPresenceOflnkOutdoors();
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
+	}
+	
+	@Given("^user click on Shoes and navigates to Shoes Page$")
+	public void user_click_on_Shoes_and_navigates_to_Shoes_Page() throws Throwable {
+		try {
+			plccPageObjects.shoesLink.click();
+			plccLandingPageObjects.verifyPresenceOflnkShoes();
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+
+		}
+	}
+
+	@Given("^user click on SportsEquipment and navigates to SportsEquipment Page$")
+	public void user_click_on_SportsEquipment_and_navigates_to_SportsEquipment_Page() throws Throwable {
+		try {
+			plccPageObjects.sportsEquipmentLink.click();
+			plccLandingPageObjects.verifyPresenceOflnkSportsEquipment();
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
+	}
+
+	@When("^user click on twitter$")
+	public void user_click_on_twitter() throws Throwable {
+		globalElementHeader.icontwitter.click();
+	}
+
+	@Then("^user navigates to twitter page and validate twitter page url$")
+	public void user_navigates_to_twitter_page_and_validate_twitter_page_url() throws Throwable {
+		try {
+			String parentwindowhandle = driver.getWindowHandle();
+			String subWindowhandler= null;
+			Set<String> handles = driver.getWindowHandles();
+			Iterator<String> itertor = 	handles.iterator();
+			while(itertor.hasNext())
+			{
+				subWindowhandler = itertor.next();
+				driver.switchTo().window(subWindowhandler);
+				System.out.println(subWindowhandler);
+			}
+			plccLandingPageObjects.verifyPresenceOfTwitterPage();
+			driver.close();
+			driver.switchTo().window(parentwindowhandle);
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
+	}
+	@When("^user click on instagram icon$")
+	public void user_click_on_instagram_icon() throws Throwable {
+		globalElementHeader.iconinstagram.click();
+	}
+
+	@Then("^user navigates to instagram page and validate instagram page url$")
+	public void user_navigates_to_instagram_page_and_validate_instagram_page_url() throws Throwable {
+		try {
+			String parentwindowhandle = driver.getWindowHandle();
+			String subWindowhandler= null;
+			Set<String> handles = driver.getWindowHandles();
+			Iterator<String> itertor = 	handles.iterator();
+			while(itertor.hasNext())
+			{
+				subWindowhandler = itertor.next();
+				driver.switchTo().window(subWindowhandler);
+				System.out.println(subWindowhandler);
+			}
+			plccLandingPageObjects.verifyPresenceOfInstagramPage();
+			driver.close();
+			driver.switchTo().window(parentwindowhandle);
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
 	}
 
 }

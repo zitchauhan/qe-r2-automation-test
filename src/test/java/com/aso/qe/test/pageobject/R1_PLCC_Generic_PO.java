@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.common.Common_Web_PLCC;
-import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
+//import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
 
 public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
@@ -17,7 +17,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	R1_SIT_PO sit_po = PageFactory.initElements(driver, R1_SIT_PO.class);
 	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
 	R2_CheckOut_PO checkout_po = PageFactory.initElements(driver, R2_CheckOut_PO.class);
-	Common_Web_SD_PLCC timer=new Common_Web_SD_PLCC();
+	
 	private WebElement objElement;
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	@FindBy(xpath = "//*[text()='Credit Card Number']/following::*[1]")
@@ -78,6 +78,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement buyNowButton;
 	
+<<<<<<< HEAD
+=======
+
+>>>>>>> dcd62c5ddb2d2da39933c6dc06bbad9428630711
 	//Saved Card:
 	@FindBy(xpath = "//*[@data-auid='checkout_edit_payment']")
 	public WebElement editLinkPaymentSection;
@@ -161,6 +165,20 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		}
 
 	}
+<<<<<<< HEAD
+=======
+	public boolean  verifyFreeShippingisNotApplied() throws Exception {
+
+		try {
+			isDisplayed(freeShippingTxt);
+	        return true;
+	    } catch (org.openqa.selenium.NoSuchElementException e)
+		{
+	        return false;
+	    }
+
+	}
+>>>>>>> dcd62c5ddb2d2da39933c6dc06bbad9428630711
 	public void verifyPresenceOfDiscountValue() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -687,7 +705,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	}
 
 	public void verifyPresenceOfOrderConfirmationPage() throws Exception {
-
+		Thread.sleep(10000);
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(orderConfirmationPage);
 			logger.debug("Order Confirmation Page is displayed");

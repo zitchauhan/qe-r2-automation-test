@@ -64,8 +64,8 @@ public class R1_REG_50_Web extends CommonActionHelper {
 	}
 	
 	//PLCC-129
-	@Then("^user enter Phone number \"(.*?)\"$")
-	public void user_enter_Phone_number(String arg1) throws Throwable {
+	@Then("^user enter Phone number plcc \"(.*?)\"$")
+	public void user_enter_Phone_number_plcc(String arg1) throws Throwable {
 		plccPageObjects.enterInvalidPhoneNumber(arg1);
 		assertTrue(isDisplayed(plccPageObjects.addressPhoneField));
 		waitForElement(plccPageObjects.addressPhoneField);

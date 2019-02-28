@@ -12,8 +12,8 @@ Background:  Common Pre-requisite steps
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal
 	
-@C-PLCC @Regression @All @PLCC-95 @CR-VS
-Scenario: Verify is able to navigate to Application Under Review model
+@C-PLCC @Regression @All @PLCC-94 @CR-VS
+Scenario: Verify user is able to navigate to Existing Account modal
 	When user enter First Name on credit card Application Modal "FirstNameEX" 
 	Then user enter Last Name on credit card Application Modal "LastNameEX"
 	And user enter Last four SSN "Last4DigitsOfSSNEX"
@@ -34,9 +34,9 @@ Scenario: Verify is able to navigate to Application Under Review model
 	When user click on SUBMIT button
 	Then user navigates to existing account modal
 
-@C-PLCC @Regression @All @PLCC-95 @CR-VS
+@C-PLCC @Regression @All @PLCC-94 @CR-VS
 Scenario: Verify the elements available on  Existing Account(FPO) model
-	When uFirst Name on credit card Application Modal "FirstNser enter ameEX" 
+	When user enter First Name on credit card Application Modal "FirstNameEX"  
 	Then user enter Last Name on credit card Application Modal "LastNameEX"
 	And user enter Last four SSN "Last4DigitsOfSSNEX"
 	And user enetr Date of Birth "DOBEX" 
@@ -60,9 +60,9 @@ Scenario: Verify the elements available on  Existing Account(FPO) model
 	And user expect element continue To Checkout button to be present
 	And user expect element close icon on error modal is present
 	
-@C-PLCC @Regression @All @PLCC-95 @CR-VS
+@C-PLCC @Regression @All @PLCC-94 @CR-VS
 Scenario: Verify user is able to navigate to cart page after clicking on Continue to Checkout button
-	When First Name on credit card Application Modal "FirstNser enter ameEX" 
+	When user enter First Name on credit card Application Modal "FirstNameEX" 
 	Then user enter Last Name on credit card Application Modal "LastNameEX"
 	And user enter Last four SSN "Last4DigitsOfSSNEX"
 	And user enetr Date of Birth "DOBEX" 
@@ -86,9 +86,9 @@ Scenario: Verify user is able to navigate to cart page after clicking on Continu
 	And user navigates to cart page
 
 	
-@C-PLCC @Regression @All @PLCC-95 @CR-VS
+@C-PLCC @Regression @All @PLCC-94 @CR-VS
 Scenario: Verify user is able to close  Existing Account(FPO) model after clicking on Close button
-	When First Name on credit card Application Modal "FirstNser enter ameEX" 
+	When user enter First Name on credit card Application Modal "FirstNameEX"  
 	Then user enter Last Name on credit card Application Modal "LastNameEX"
 	And user enter Last four SSN "Last4DigitsOfSSNEX"
 	And user enetr Date of Birth "DOBEX" 

@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.web.plcc;
 
 import static org.junit.Assert.assertTrue;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -19,6 +20,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class R1_Checkout_87_Web extends CommonActionHelper {
+	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_PLCC_Generic_PO genericPO = PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
 	R2_CheckOut_PO checkout_po = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	R1_SearchProduct_PO r1_SearchPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
@@ -55,8 +57,12 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 
 	@When("^user click on REVIEW ORDER button$")
 	public void user_click_on_REVIEW_ORDER_button() throws Throwable {
-		genericPO.verifyPresenceOfReviewOrderButton();
-		checkout_po.ReviewOrder_Btn.click();
+		try {
+			genericPO.verifyPresenceOfReviewOrderButton();
+			checkout_po.ReviewOrder_Btn.click();
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
 	}
 
 	@When("^user click on PLACE ORDER button$")
@@ -101,6 +107,7 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 	public void user_place_fifty_orders_and_see_the_response_with_with_PLCC_Card(String searchText, String plccCard) throws Throwable {
 		for(int n=1;n<=50;n++)
 		{
+		logger.debug("Number of Orders successfully Placed:"+n);	
 		waitForPageLoad(driver);
 		searchKey = webPropHelper.getTestDataProperty(searchText);
 		String[] arrSearchKey = searchKey.split(",");
