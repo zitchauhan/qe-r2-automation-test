@@ -34,7 +34,7 @@ Background: Common Pre-requisite steps
 	When user click on return to application
 	Then user navigates to ASO-Home page
 	
-@C-PLCC @Regression @All @PLCC-106 @CR-VS	
+@C-PLCC @Regression @All @PLCC-101 @CR-VS	
 Scenario: Verify user is able to get Annual offer of $15 off by providing the promo code 
      When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
