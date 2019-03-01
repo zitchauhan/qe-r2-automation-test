@@ -9,7 +9,7 @@ Background: Common Pre-requisite steps
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
 
-@C-PLCC @Regression @All @PLCC-101 @CR-VS	
+@C-PLCC @Regression @All @PLCC-100 @CR-VS	
 Scenario: Verify user is able to get 5% discount for any of the item in academy application
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
@@ -28,7 +28,7 @@ Scenario: Verify user is able to get 5% discount for any of the item in academy 
 	And user click on Payments link
 	Then delete all credit cards from My Account
 	
-@C-PLCC @Regression @All @PLCC-101 @CR-VS	
+@C-PLCC @Regression @All @PLCC-100 @CR-VS	
 Scenario: Verify user is able to apply 5% discount with along with free shipping offer
     When user enters "SKUIdOfProductGr15" in the search box plcc
 	And user click on search icon 

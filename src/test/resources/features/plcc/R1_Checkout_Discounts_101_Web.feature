@@ -1,4 +1,4 @@
-Feature: PLCC: Checkout - Payment Using PLCC 
+Feature: PLCC: Discounts_First time promotions 
 
 Background: Common Pre-requisite steps 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -35,48 +35,51 @@ Background: Common Pre-requisite steps
 	Then user navigates to ASO-Home page
 
 @C-PLCC @Regression @All @PLCC-101 @CR-VS	
-Scenario: Verify user is able to get Annual offer of $15 off by providing the promo code 
-     When user enters "SKUIdOfProductLs15" in the search box plcc
+Scenario: First Time Promotion Available for item less than or equal to <=$15
+    When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
 	And user click on Add to Cart button
 	And user click on checkout from ATC pop up plcc
 	And user clicks on checkout button and navigates to checkout page 
-	When user enter plcc card "ValidPLCCCard" 
- 	And user click on REVIEW ORDER button
-	And user expect element free shipping should be available
-	And user expect discount text to be present
- 	Then user expect fifteen dollars discount 
+	When user enter plcc card "ValidPLCCCard"
+	And user click on REVIEW ORDER button
+	And user expect element Order Summary to be present
+	And user expect discount text to be present 
+	Then user expect five percent discount 
+	And user expect element free shipping should not be available 
 	When user click on edit my cart link 
 	Then user click on remove from cart 
 	When user click on My Account link
 	And user click on Payments link
 	Then delete all credit cards from My Account
 	
-@C-PLCC @Regression @All @PLCC-101 @CR-VS 
-    Scenario: To verify Celarance Product price on PDP
-    Given user launches the browser and navigates to "ASO_HOME" page 
-    Then User navigates to L2 page plcc
-    Then Navigate to PLP and select one product with clearance for plcc
-    And User should able to see Strike Through Price with Actual price for plcc
-    When user click on My Account link
-	And user click on Payments link
-	Then delete all credit cards from My Account
-    
-  	
-@C-PLCC @Regression @All @PLCC-101 @CR-VS 
-Scenario: Verify the First Purchase offer when cart total is <=$15 
-	When user enters "SKUIdOfProductLs15" in the search box plcc
+@C-PLCC @Regression @All @PLCC-101 @CR-VS	
+Scenario: First Time Promotion Available for item greater than >$15
+    When user enters "SKUIdOfProductGr15" in the search box plcc
 	And user click on search icon 
-	And user click on Add to Cart button 
+	And user click on Add to Cart button
 	And user click on checkout from ATC pop up plcc
 	And user clicks on checkout button and navigates to checkout page 
-	When user enter plcc card "ValidPLCCCard" 
-	And user click on REVIEW ORDER button 
+	When user enter plcc card "ValidPLCCCard"
+	And user click on REVIEW ORDER button
+	And user expect element Order Summary to be present
+	And user expect element free shipping should be available 
 	And user expect discount text to be present 
-	Then user expect five percent discount 
+ 	Then user expect fifteen dollars discount
 	When user click on edit my cart link 
 	Then user click on remove from cart 
-	When user click on My Account link 
-	And user click on Payments link 
-	Then delete all credit cards from My Account 
+	When user click on My Account link
+	And user click on Payments link
+	Then delete all credit cards from My Account	
+	
+	
+#@C-PLCC @Regression @All @PLCC-101 @CR-VS 
+#    Scenario: To verify Celarance Product price on PDP
+#    Given user launches the browser and navigates to "ASO_HOME" page 
+#    Then User navigates to L2 page plcc
+#    Then Navigate to PLP and select one product with clearance for plcc
+#    And User should able to see Strike Through Price with Actual price for plcc
+#    When user click on My Account link
+#	And user click on Payments link
+#	Then delete all credit cards from My Account
 	

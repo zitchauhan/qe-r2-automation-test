@@ -303,6 +303,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		}
 
 	}
+	
 	public void verifyPresenceOfOrderSummary() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -314,8 +315,6 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		}
 
 	}
-			
-			
 			
 		
 	

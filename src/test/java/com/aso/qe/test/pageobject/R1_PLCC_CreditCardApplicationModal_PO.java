@@ -33,6 +33,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement apartmentNameCCModal;
 	@FindBy(xpath = "//*[@data-auid='credit_application_city']")
 	public WebElement cityCModal;
+	@FindBy(xpath = "//*[@data-auid='banner_desktop']")
+	public WebElement bannerCartPage;
+	
 
 	@FindBy(xpath = "//*[@name='state']")
 	public WebElement stateDropDownCCModal;
@@ -202,17 +205,35 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			isDisplayed(subtotalValue);
 			logger.debug("Sub total value is displayed");
 		}
-	}	
+	}
+	public void verifyPresenceOfBannerOnCartPage() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(bannerCartPage);
+			logger.debug("Banner on Cart Page is displayed");
+		} else {
+			isDisplayed(bannerCartPage);
+			logger.debug("Banner on Cart Page is displayed");
+		}
+	}
 	
 	public void verifyPresenceOfErrorText() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(errorTextErrorModal);
+			logger.debug("Error Text on Error Modal is displayed");
+		} else {
+			isDisplayed(errorTextErrorModal);
+			logger.debug("Error Text on Error Modal is displayed");
+		}
+	}	
+	public void verifyPresenceOfDisclosureText() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(disclosureTxtErrorState);
 			logger.debug("Disclosure Text on Error Modal is displayed");
 		} else {
 			isDisplayed(disclosureTxtErrorState);
-			logger.debug("Error Text on Error Modal is displayed");
+			logger.debug("Disclosure Text on Error Modal is displayed");
 		}
-	}	
+	}
 	public void verifyPresenceOfContinueToShopping() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(returntoShoppingButton);

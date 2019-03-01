@@ -57,7 +57,7 @@ Scenario: Verify the system behavior when user clicks on Continue button on Appl
 	And user expect error message on dob field
 	
 @C-PLCC @Regression @All @PLCC-90 @CR-VS 
-Scenario: Verify the system behavior when user clicks on "Continue" button on Application model by missing any of the mandatory field
+Scenario: Verify the system behavior when user clicks on Continue button on Application model by missing any of the mandatory field
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 

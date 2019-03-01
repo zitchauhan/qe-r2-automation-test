@@ -16,6 +16,7 @@ import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -187,5 +188,10 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 		genericPO.savePaymentInfoForLaterCheckBox.click();
 	}
 
+		@Given("^user expect element Order Summary to be present$")
 
+        public void user_expect_element_Order_Summary_to_be_present() throws Throwable {
+                       genericPO.verifyPresenceOfOrderSummary();
+
+        }
 	}

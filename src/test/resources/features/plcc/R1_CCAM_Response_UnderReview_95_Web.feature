@@ -15,7 +15,7 @@ Background:  Common Pre-requisite steps
 @C-PLCC @Regression @All @PLCC-95 @CR-VS
 Scenario: Verify is able to navigate to Application Under Review model
 	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName2"
+	Then user enter Last Name on credit card Application Modal "LastName"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 

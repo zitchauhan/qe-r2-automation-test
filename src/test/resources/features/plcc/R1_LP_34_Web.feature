@@ -29,6 +29,8 @@ Scenario: Verify the display of elements available under Hero Banner on PLCC lan
 	And user expect element ApplyNow_Btn to be present 
 	And user expect element ManageYourCardLink to be present 
 	And user expect element PLCCCreditCardImage to be present 
+	And user verify element landing page banner to be present
+	And user expect label above plcc card to be present
 	
 @C-PLCC @Regression @All @PLCC-34 @CR-VS  
 Scenario: Verify the display of Footer components on PLCC landing page 

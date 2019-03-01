@@ -50,7 +50,12 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public WebElement plccCreditCardImage;
 	@FindBy(xpath = "//*[@data-auid='search-clear-button']")
 	public WebElement searchIcon;
-
+	@FindBy(xpath = "//*[@data-auid='banner_desktop']")
+	public WebElement landingPageBanner;
+	@FindBy(xpath = "//*[@data-auid='applyToday']")
+	public WebElement labelAboveCardImage;
+	
+	
 	// SignIn Page
 	@FindBy(xpath = "//*[@data-auid='emailid_input']")
 	public WebElement emailTxtField;
@@ -129,13 +134,13 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfFPOApplyCardSection() throws Exception {
 
-		if ("web".equalsIgnoreCase(testtype)) {
+		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(applyForCardSection);
 			logger.debug("FPO Apply Card Section on Landing Page is displayed");
 			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(applyForCardSection);
-			logger.debug("FPO Apply Card Section on Landing Page is not displayed++++++++++++++++++++++++==");
+			logger.debug("FPO Apply Card Section on Landing Page is displayed++++++++++++++++++++++++==");
 		}
 
 	}
@@ -155,13 +160,37 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfPrescreenSection() throws Exception {
 
-		if ("web".equalsIgnoreCase(testtype)) {
+		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(benefitSection);
 			logger.debug("Preescreen Section on Landing Page is displayed");
 			Common_Web_PLCC.waitUntilElePresent(driver, benefitSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(benefitSection);
-			logger.debug("Preescreen Section on Landing Page is not displayed++++++++++++++++++++++++==");
+			logger.debug("Preescreen Section on Landing Page is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	public void verifyPresenceOfLandingPageBanner() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(landingPageBanner);
+			logger.debug("Landing Page Banner is displayed");
+			Common_Web_PLCC.waitUntilElePresent(driver, benefitSection, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(landingPageBanner);
+			logger.debug("Landing Page Banner is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	public void verifyPresenceOfLabelAboveCardImage() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(labelAboveCardImage);
+			logger.debug("Label above card Image is displayed");
+			Common_Web_PLCC.waitUntilElePresent(driver, benefitSection, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(labelAboveCardImage);
+			logger.debug("Label above card image is displayed++++++++++++++++++++++++==");
 		}
 
 	}

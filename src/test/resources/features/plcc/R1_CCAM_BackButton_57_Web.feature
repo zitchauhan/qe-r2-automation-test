@@ -55,6 +55,8 @@ Feature: PLCC: Credit Card Application Modal
 	And user enter Alternate Phone "AlternatePhone"
 	And user click on CONTINUE button
 	And user verify presence of STEP2: CONSENT
+	When user clisk on back button of consent modal
+	And user click on CONTINUE button
 	And user expect element Accept Terms and Conditions checkbox to be unchecked 
 	Then user expect submit button not clickable
 	

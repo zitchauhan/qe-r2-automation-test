@@ -44,6 +44,18 @@ public class R1_LP_34_Web extends CommonActionHelper {
 		plccLandingPageObjects.verifyPresenceOfPrescreenSection();
 
 	}
+	
+	@Then("^user verify element landing page banner to be present$")
+	public void user_verify_element_landing_page_banner_to_be_present() throws Throwable {
+		plccLandingPageObjects.verifyPresenceOfLandingPageBanner();
+	}
+
+	@Then("^user expect label above plcc card to be present$")
+	public void user_expect_label_above_plcc_card_to_be_present() throws Throwable {
+		plccLandingPageObjects.verifyPresenceOfLabelAboveCardImage();
+	}
+
+
 
 	@When("^user enter Email address in sign-in page \"(.*?)\"$")
 	public void user_enter_Email_address_in_sign_in_page(String arg1) throws Throwable {
