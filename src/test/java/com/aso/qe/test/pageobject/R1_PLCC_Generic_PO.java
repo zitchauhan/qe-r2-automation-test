@@ -77,11 +77,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement buyNowButton;
-	
-<<<<<<< HEAD
-=======
 
->>>>>>> dcd62c5ddb2d2da39933c6dc06bbad9428630711
 	//Saved Card:
 	@FindBy(xpath = "//*[@data-auid='checkout_edit_payment']")
 	public WebElement editLinkPaymentSection;
@@ -165,8 +161,6 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		}
 
 	}
-<<<<<<< HEAD
-=======
 	public boolean  verifyFreeShippingisNotApplied() throws Exception {
 
 		try {
@@ -178,7 +172,6 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	    }
 
 	}
->>>>>>> dcd62c5ddb2d2da39933c6dc06bbad9428630711
 	public void verifyPresenceOfDiscountValue() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {

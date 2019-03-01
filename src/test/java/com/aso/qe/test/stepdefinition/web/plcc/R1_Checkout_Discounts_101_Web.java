@@ -21,10 +21,7 @@ import com.aso.qe.test.pageobject.R2_Sanity_PO;
 import java.io.PrintStream;
 import java.math.BigDecimal;
 
-<<<<<<< HEAD
-=======
 import cucumber.api.java.en.Given;
->>>>>>> dcd62c5ddb2d2da39933c6dc06bbad9428630711
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -125,13 +122,7 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
 		{
 			logger.debug("Discount on Web and Discount Calulated are not matching");
 		}
-<<<<<<< HEAD
-		
-		
-=======
-		
-		
->>>>>>> dcd62c5ddb2d2da39933c6dc06bbad9428630711
+
 	}
 	@When("^user expect calculated value and displayed discount value to match$")
 	public void user_expect_calculated_value_and_displayed_discount_value_to_match() throws Throwable {
