@@ -247,8 +247,8 @@ Scenario: Verify the system behavior when user clicks on Back button on Consent 
 Scenario: Verify the display of Print link on consent model  when user navigates to CCAM from cart page
 And user navigates to Generic Credit Card Application Modal
 	And user expect element print link to be present on Credit card application modal 
-	
-@C-PLCC @Regression @All @PLCC-58 @CR-VS
+		
+@C-PLCC @Regression @All @PLCC-112 @CR-VS
  Scenario: Verify Submit button is not clickable when Terms and condition check box is unchecked when user navigates to CCAM from cart page
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 
@@ -271,7 +271,7 @@ And user navigates to Generic Credit Card Application Modal
 	When user click on SUBMIT button
 	Then user expect submit button not clickable
 	
-@C-PLCC @Regression @All @PLCC-58 @CR-VS
+@C-PLCC @Regression @All @PLCC-112 @CR-VS
  Scenario: Verify Submit button is clickable when Terms and condition check box is checked when user navigates to CCAM from cart page
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal  
@@ -293,5 +293,7 @@ And user navigates to Generic Credit Card Application Modal
 	And user verify presence of STEP2: CONSENT
 	And user select credit application modal agree message 
 	Then user expect submit button clickable
+	
+
 	
 	
