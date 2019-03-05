@@ -3,8 +3,8 @@ Feature: PLCC: Response Modals_Success Modal
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
-	And user enter Email address in sign-in page "Email_Address_2" 
-	And user enter password in sign-in page "Password_2" 
+	And user enter Email address in sign-in page "Email_Generic" 
+	And user enter password in sign-in page "password" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
@@ -12,7 +12,7 @@ Background:  Common Pre-requisite steps
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal
 	 	
-@C-PLCC @Regression @All @PLCC-51 @CR-VS 
+@C-PLCC @Regression @All @PLCC-93 @CR-VS 
 Scenario: Verify is able to navigate to Welcome, PHIL Collins FPO model
 	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName"
@@ -87,7 +87,7 @@ Scenario: Verify user is able to navigate to checkout page after clicking on Con
 	Then user navigates to cart page
 	
 @C-PLCC @Regression @All @PLCC-93 @CR-VS 
-Scenario: Verify user is able to navigate to checkout page after clicking on Continue to Checkout button
+Scenario: Verify user is able to navigate to checkout page after clicking on Continue Shopping button
 	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName"
 	And user enter Last four SSN "Last4DigitsOfSSN"
@@ -131,8 +131,6 @@ Scenario: Verify user is able to navigate to checkout page after clicking on Con
 	And user select credit application modal agree message 
 	When user click on SUBMIT button
 	Then user navigates to credit card approval modal
-	When user click on return to application
-	Then user navigates to ASO-Home page
 	When user click on close icon of success modal
 	Then user expect Landing page to be present 
 	

@@ -86,7 +86,7 @@ Scenario: Verify user is able to navigate to checkout page after clicking on Con
 	And user select credit application modal agree message 
 	When user click on SUBMIT button
 	Then user navigates to error modal 
-	When user click on continue to checkout button
+	When user click on continue to checkout button on error modal
 	Then user navigates to cart page
 	
 @C-PLCC @Regression @All @PLCC-96 @CR-VS 
@@ -110,13 +110,11 @@ Scenario: Verify user is able to navigate to checkout page after clicking on Ret
 	And user select credit application modal agree message 
 	When user click on SUBMIT button
 	Then user navigates to error modal 
-	When user click on continue to checkout button
-	Then user navigates to cart page
-	When user click on return to application
+	When user click on return to application on error modal
 	Then user navigates to ASO-Home page
 	
 @C-PLCC @Regression @All @PLCC-96 @CR-VS 
-Scenario: Verify user is able to close Application Under Review model after clicking on Close button
+Scenario: Verify user is able to close Application Error model after clicking on Close button
 	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastNameEr"
 	And user enter Last four SSN "Last4DigitsOfSSN"
@@ -136,8 +134,6 @@ Scenario: Verify user is able to close Application Under Review model after clic
 	And user select credit application modal agree message 
 	When user click on SUBMIT button
 	Then user navigates to error modal 
-	When user click on continue to checkout button
-	Then user navigates to cart page
 	When user click on close icon of error modal
 	Then user expect Landing page to be present
 	

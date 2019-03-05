@@ -50,6 +50,9 @@ Scenario: Verify the system behavior when user enter 34 as two digit BIN number
 	When user enter amex card "starting2digitamexCard2" 
 	Then user expect selected credit card image on credit card text field 
 	And user expect element amex card image on credit card text field to present
+	When user click on My Account link 
+	And user click on Payments link 
+	Then delete all credit cards from My Account 
 	
 @C-PLCC @Regression @All @PLCC-80 @CR-VS
 Scenario: Verify the system behavior when user enter 65 as two digit BIN number 
@@ -70,6 +73,11 @@ Scenario: Verify the system behavior when user enter invalid digits as BIN numbe
 	
 @C-PLCC @Regression @All @PLCC-80 @CR-VS	
 Scenario: Verify the display of saved card on payment section of checkout page
-When user check element payment section to be present
-Then user expect element saved card on payment section of checkout page to be present
-
+	When user enter visa card "ValidPLCCCard" 
+	And user check element payment section to be present 
+	And user click on REVIEW ORDER button
+	Then user expect element saved card on payment section of checkout page to be present 
+	When user click on My Account link 
+	And user click on Payments link 
+	Then delete all credit cards from My Account 
+	

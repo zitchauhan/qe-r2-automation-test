@@ -23,4 +23,9 @@ public class R1_CCAM_Response_ExistingCustomer_94_Web extends CommonActionHelper
 	public void user_expect_element_disclosure_text_on_existing_account_modal_to_be_present() throws Throwable {
 		ccAplicationModal_PO.verifyPresenceOfDisclosureTextExistingAccount();
 	}
+	@Then("^user click on continue to checkout button on existing user modal$")
+	public void user_click_on_continue_to_checkout_button_on_existing_user_modal() throws Throwable {
+		ccAplicationModal_PO.verifyPresenceOfContinueToCheckoutExistingUser();
+		ccAplicationModal_PO.continueBtnExistingUser.click();
+	}
 }

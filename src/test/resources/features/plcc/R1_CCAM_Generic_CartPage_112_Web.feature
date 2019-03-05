@@ -39,8 +39,6 @@ Scenario: Verify the display of elements available on credit card application mo
 	And user expect element Mobile Phone text field on CC Aplication Modal to be present 
 	And user expect element Alternate Phone text field on CC Aplication Modal to be present 
 	And user expect element CONTINUE on CC Aplication Modal to be present 
-	#And user expect element agree checkbox on CC Aplication Modal to be present
-	#And user expect element SUBMIT on CC Aplication Modal to be present
 	And user expect element CANCEL on CC Aplication Modal to be present
 	
 @C-PLCC @Regression @All @PLCC-112 @CR-VS 
