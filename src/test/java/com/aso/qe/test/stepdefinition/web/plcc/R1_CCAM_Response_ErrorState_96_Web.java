@@ -28,5 +28,15 @@ public class R1_CCAM_Response_ErrorState_96_Web extends CommonActionHelper  {
 	public void user_expect_element_return_to_application_to_be_present() throws Throwable {
 		ccAplicationModal_PO.verifyPresenceOfDisclosureText();
 	}
+	@When("^user click on continue to checkout button on error modal$")
+	public void user_click_on_continue_to_checkout_button_on_error_modal() throws Throwable {
+		ccAplicationModal_PO.verifyPresenceOfContinueToCheckoutErrorModal();
+		ccAplicationModal_PO.continueToCheckoutBtnErrorModal.click();
+	}
+	@When("^user click on return to application on error modal$")
+	public void user_click_on_return_to_application_on_error_modal() throws Throwable {
+		ccAplicationModal_PO.verifyPresenceOfReturnToApplicationErrorModal();
+		ccAplicationModal_PO.returnToApplicationErrorModal.click();
+	}
 	
 }

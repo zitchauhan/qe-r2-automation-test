@@ -35,6 +35,13 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement cityCModal;
 	@FindBy(xpath = "//*[@data-auid='banner_desktop']")
 	public WebElement bannerCartPage;
+	@FindBy(xpath = "//*[@data-auid='continuetocheckout_existing_user']")
+	public WebElement continueBtnExistingUser;
+	@FindBy(xpath = "//*[@data-auid='continuetocheckout_']")
+	public WebElement continueToCheckoutBtnErrorModal;
+	
+	
+	
 	
 
 	@FindBy(xpath = "//*[@name='state']")
@@ -135,6 +142,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='WELCOME ALWAYS APPROVE! (FPO) ']")
 	public WebElement welcomeAlwaysText;
 	@FindBy(xpath = "//*[@data-auid='returntoshopping']")
+	
 	public WebElement returnToShoppingButton;
 	@FindBy(xpath = "//*[@aria-label='Credit Application Modal']")
 	public WebElement creditCardApplicationModal;
@@ -151,7 +159,8 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	// CONSENT MODEL:
 	@FindBy(xpath = "//*[@id='plcc_modal_back']")
 	public WebElement backButtonConsentModel;
-	
+	@FindBy(xpath = "//*[@data-auid='returntoapplication']")
+	public WebElement returnToApplicationErrorModal;
 	
 	//Creditcard Application Modal Response:
 	@FindBy(xpath = "//*[@aria-label='Error Modal']")
@@ -206,6 +215,37 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			logger.debug("Sub total value is displayed");
 		}
 	}
+	public void verifyPresenceOfReturnToApplicationErrorModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(returnToApplicationErrorModal);
+			logger.debug("Return To Application on Error Modal is displayed");
+		} else {
+			isDisplayed(returnToApplicationErrorModal);
+			logger.debug("Return To Application on Error Modal is displayed");
+		}
+	}
+	
+	public void verifyPresenceOfContinueToCheckoutExistingUser() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(continueBtnExistingUser);
+			logger.debug("Continue to Checkout button on Existing User Modal is displayed");
+		} else {
+			isDisplayed(continueBtnExistingUser);
+			logger.debug("Continue to Checkout button on Existing User Modal is displayed");
+		}
+	}
+	public void verifyPresenceOfContinueToCheckoutErrorModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(continueToCheckoutBtnErrorModal);
+			logger.debug("Continue to Checkout button on Error Modal is displayed");
+		} else {
+			isDisplayed(continueToCheckoutBtnErrorModal);
+			logger.debug("Continue to Checkout button on Error User Modal is displayed");
+		}
+	}
+	
+	
+	
 	public void verifyPresenceOfBannerOnCartPage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(bannerCartPage);

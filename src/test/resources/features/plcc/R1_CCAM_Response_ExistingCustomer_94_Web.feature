@@ -82,7 +82,7 @@ Scenario: Verify user is able to navigate to cart page after clicking on Continu
 	When user click on SUBMIT button
 	Then user navigates to existing account modal
 	And user expect element disclosure text on existing account modal to be present
-	And user click on continue to checkout button
+	And user click on continue to checkout button on existing user modal
 	And user navigates to cart page
 
 	

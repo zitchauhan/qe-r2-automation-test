@@ -842,8 +842,8 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 
 	@Then("^user expect element saved card on payment section of checkout page to be present$")
 	public void user_expect_element_saved_card_on_payment_section_of_checkout_page_to_be_present() throws Throwable {
-		genericPO.verifyPresenceOfSavedCardCheckoutPage();
-		String savedCard = genericPO.savedCardCheckoutPage.getText();
+		genericPO.verifyPresenceOfPaymentCardTypeLabel();
+		String savedCard = genericPO.paymentCardTypeLabel.getText();
 		logger.debug(savedCard + " Saved card is displayed on payment page");
 		
 	}

@@ -141,6 +141,11 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	// Order Summary:
 		@FindBy(xpath = "//*[@data-auid='checkout_order_summary_section']//div[4]/div[2]")
 		public WebElement discountValue;
+		
+	//Checkout - Save card
+		@FindBy(xpath = "//*[@data-auid='payment_type_with_card']")
+		public WebElement paymentCardTypeLabel;
+		
 	
 	//Free Shipping:
 	@FindBy(xpath = "//*[@data-auid='freeShip']")
@@ -158,6 +163,17 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		} else {
 			isDisplayed(freeShippingTxt);
 			logger.debug("Free Shipping is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	public void verifyPresenceOfPaymentCardTypeLabel() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(paymentCardTypeLabel);
+			logger.debug("Saved Card Type is dispalyed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(paymentCardTypeLabel);
+			logger.debug("Saved Card Type is dispalyed++++++++++++++++++++++++");
 		}
 
 	}
