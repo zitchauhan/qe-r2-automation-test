@@ -68,6 +68,7 @@ Scenario: Verify the Signin Link for Guest user available on Check out page
 	And user clicks on checkout button and navigates to checkout page
 	And user expect element Order Summary to be present
 	And user expecte element Sign in link for guest user
+	#And user expect element
 		
 
 	
