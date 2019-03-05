@@ -17,4 +17,6 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
 	And user expect element Order Number to be present
 	And user expect element a confirmation email is on its way to be present
-	And user expect PLCCFreeShipping discount displayed 
+	And user expect element free shipping should be available
+	And user expect discount text to be present
+	Then user expect five percent discount 

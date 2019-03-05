@@ -847,5 +847,31 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		logger.debug(savedCard + " Saved card is displayed on payment page");
 		
 	}
+	
+	@Then("^user click on gift card link$")
+	public void user_click_on_gift_card_link() throws Throwable {
+		genericPO.gitCardLink.click();
+	}
+
+	@When("^user enter Gift card \"(.*?)\"$")
+	public void user_enter_Gift_card(String arg1) throws Throwable {
+		genericPO.enterGiftCardNumber(arg1);
+	}
+
+	@When("^user enter CVV number for Gift card \"(.*?)\"$")
+	public void user_enter_CVV_number_for_Gift_card(String arg1) throws Throwable {
+		genericPO.enterCVVNumber(arg1);
+	}
+
+	@When("^user click on gift card Apply Button$")
+	public void user_click_on_gift_card_Apply_Button() throws Throwable {
+		genericPO.giftCardApplyButton.click();
+		Thread.sleep(3000);
+	}
+	
+	@Then("^user expect element Gift card payment applied meesage to be present$")
+	public void user_expect_element_Gift_card_payment_applied_meesage_to_be_present() throws Throwable {
+		genericPO.verifyGiftCardPaymentAppliedMessageCheckoutPage();
+	}
 
 }

@@ -20,6 +20,25 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
 	private WebElement objElement;
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
+	
+	/*@FindBy(xpath = "//*[@data-auid='checkout_payment_add_gift_card_icon']")
+	public WebElement gitCardLink;*/
+	
+	@FindBy(xpath = "//span[text()='Enter a Gift Card']")
+	public WebElement gitCardLink;
+	
+	@FindBy(xpath = "//*[@id='paymentGiftCardForm']/div/div[1]/div[1]")
+	public WebElement giftCardPaymentAppliedMessage;
+	
+	@FindBy(xpath = "//*[@data-auid='checkout_payment_gift_card_number_field']")
+	public WebElement GiftCardNumber_Input;
+	
+	@FindBy(xpath = "//*[@data-auid='checkout_payment_gift_card_pin_field']")
+	public WebElement CVVNumber_Input;
+	
+	@FindBy(xpath = "//*[@data-auid='btncheckout_payment_apply_gift_card_btn']")
+	public WebElement giftCardApplyButton;
+	
 	@FindBy(xpath = "//*[text()='Credit Card Number']/following::*[1]")
 	public WebElement CreditCardNumber_Input;
 	// Checkout
@@ -129,6 +148,8 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement fifteenPercentOff;
 	@FindBy(xpath = "//*[@data-auid='checkout_order_summary_section']")
 	public WebElement orderSummarySection;
+	@FindBy(xpath = "//*[@data-auid='checkout_unauth_description_signin_link']")
+	public WebElement SingInLinkForGuestuser;
 	@FindBy(xpath = "//*[@data-auid='btnviewCart']")
 	public WebElement viewCartBtn;
 	@FindBy(xpath = "//*[@class='container p-0 css-g2tac']")
@@ -172,6 +193,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	    }
 
 	}
+	
 	public void verifyPresenceOfDiscountValue() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
@@ -259,7 +281,20 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 			logger.debug("Discount Text is displayed++++++++++++++++++++++++==");
 		}
 
-	}public void verifyPresenceOfFiftennDollarsOff() throws Exception {
+	}
+	public boolean  verifyAbsenceOfDiscountText() throws Exception {
+
+		try {
+			isDisplayed(discountTxt);
+	        return true;
+	    } catch (org.openqa.selenium.NoSuchElementException e)
+		{
+	        return false;
+	    }
+
+	}
+
+	public void verifyPresenceOfFiftennDollarsOff() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(fifteenPercentOff);
@@ -270,7 +305,8 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		}
 
 	}
-	public void verifyPresenceOfAddPromoCodeButton() throws Exception {
+	
+		public void verifyPresenceOfAddPromoCodeButton() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(addPromoCodeLink);
@@ -312,6 +348,18 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		} else {
 			isDisplayed(orderSummarySection);
 			logger.debug("Order Summary is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	
+	public void verifyPresenceOfSignInLinkForGuestUser() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(SingInLinkForGuestuser);
+			logger.debug("Signin Link displayed for Guest User++++++++++++++++++++++++");
+		} else {
+			isDisplayed(SingInLinkForGuestuser);
+			logger.debug("Signin Link displayed for Guest User++++++++++++++++++++++++==");
 		}
 
 	}
@@ -813,8 +861,29 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 			logger.debug("Buy Now button is displayed");
 		}
 	}
+	public void verifyGiftCardPaymentAppliedMessageCheckoutPage() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(giftCardPaymentAppliedMessage);
+			logger.debug("Gift Card XXXX - XXXX - XXXX - XXXX added - is displayed");
+		} else {
+			isDisplayed(giftCardPaymentAppliedMessage);
+			try {
+				System.out.println("Giftcard Payment Applied Message: "+ giftCardPaymentAppliedMessage);
+			} catch (Exception e) {
+				System.out.println("Exception Message: "+e.getMessage());
+			}
+			logger.debug("Gift Card XXXX - XXXX - XXXX - XXXX added - is displayed");
+		}
+	}
 	
+	public void enterGiftCardNumber(String arg) throws Exception {
+		setInputText(GiftCardNumber_Input, webPropHelper.getTestDataProperty(arg));
+	}
 	
+	public void enterCVVNumber(String arg) throws Exception {
+		setInputText(CVVNumber_Input, webPropHelper.getTestDataProperty(arg));
+	}
 	
 
 	public void enterExpiryDateField(String arg) throws Exception {

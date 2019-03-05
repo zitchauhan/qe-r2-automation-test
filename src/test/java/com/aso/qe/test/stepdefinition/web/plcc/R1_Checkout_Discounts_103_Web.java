@@ -55,6 +55,7 @@ public void user_enter_promocode_on_cart_page(String arg1) throws Throwable {
 public void click_on_submit_promo_code_button() throws Throwable {
 	genericPO.verifyPresenceOfSubmitPromoCard();
 	genericPO.submitPromoCode.click();
+	Thread.sleep(5000);
 }
 
 @Then("^user expect fifteen dollars discount$")
@@ -73,6 +74,7 @@ public void user_element_expect_promo_code_section_to_be_present() throws Throwa
 public void user_expect_element_credit_card_text_field_is_present() throws Throwable {
 	genericPO.verifyPresenceOfRemovePromoCard();
 	genericPO.removePromoCodeLink.click();
+	Thread.sleep(3000);
 }
 @Then("^user expect discount text to be present$")
 public void user_expect_discount_text_to_be_present() throws Throwable {

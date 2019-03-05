@@ -52,6 +52,14 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
 			System.out.println("Free shipping is not working:" +e.getMessage());
 		} 
 	}
+	@Then("^user expect element Discount not to be present$")
+	public void user_expect_element_Discount_not_to_be_present() throws Throwable {
+		try {
+			genericPO.verifyAbsenceOfDiscountText();
+		} catch (Exception e) {
+			System.out.println("Validate Absence of Discount text:" +e.getMessage());
+		}
+	}
 	
 	@Then ("^User navigates to L2 page plcc$")
 	public void User_navigate_to_L2_plcc() throws InterruptedException {
@@ -123,6 +131,39 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
 			logger.debug("Discount on Web and Discount Calulated are not matching");
 		}
 
+	}
+	@Then("^user expect ten percent discount$")
+	public void user_expect_ten_percent_discount() throws Throwable {
+		try {
+			plccCCApplicationModalObjects.verifyPresenceOfSubTotalValue();
+			String subTotalValue = plccCCApplicationModalObjects.subtotalValue.getText().replace("$", "");
+			logger.debug("Subtotal value of the product is " + subTotalValue);
+			double convertedToDouble;
+			try {
+				convertedToDouble = Double.parseDouble(subTotalValue);
+			} catch (NumberFormatException e) {
+				convertedToDouble = 0;
+			}
+			float tenPercentDiscount = (float) ((10 * convertedToDouble) / 100);
+			BigDecimal bd=new BigDecimal(tenPercentDiscount);
+			BigDecimal actualValue = bd.setScale(2, BigDecimal.ROUND_HALF_EVEN );
+			logger.debug("Actual Value of Five Percent of Subtotal is " + tenPercentDiscount);
+			logger.debug("Round Of Value of Five Percent of Subtotal is " + actualValue);
+			genericPO.verifyPresenceOfDiscountValue();
+			String valueOnWeb = genericPO.discountValue.getText();
+
+			BigDecimal expectedValue=new BigDecimal(valueOnWeb);
+			if(actualValue==expectedValue)
+			{
+				logger.debug("Discount on Web and Discount Calulated are matching");
+			}
+			else
+			{
+				logger.debug("Discount on Web and Discount Calulated are not matching");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
 	}
 	@When("^user expect calculated value and displayed discount value to match$")
 	public void user_expect_calculated_value_and_displayed_discount_value_to_match() throws Throwable {
