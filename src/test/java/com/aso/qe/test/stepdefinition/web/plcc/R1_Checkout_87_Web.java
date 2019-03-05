@@ -32,6 +32,7 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	String expectedSKU = "";
 	String searchKey = "";
+
 	@Then("^user expect element plcc card image in footer to be present$")
 	public void user_expect_element_plcc_card_image_in_footer_to_be_present() throws Throwable {
 		genericPO.verifyPresenceOfPlccCreditCardInFooter();
@@ -62,7 +63,7 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 			genericPO.verifyPresenceOfReviewOrderButton();
 			checkout_po.ReviewOrder_Btn.click();
 		} catch (Exception e) {
-			System.out.println("Exception Message:"+e.getMessage());
+			System.out.println("Exception Message:" + e.getMessage());
 		}
 	}
 
@@ -102,59 +103,60 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 	@Then("^user expect element my account link to be present$")
 	public void user_expect_element_my_account_link_to_be_present() throws Throwable {
 		genericPO.verifyPresenceOfMyAccountLinkOnOrderConfirmationPage();
-	
+
 	}
+
 	@Then("^user place fifty orders and see the response with \"(.*?)\" with PLCC Card \"(.*?)\"$")
-	public void user_place_fifty_orders_and_see_the_response_with_with_PLCC_Card(String searchText, String plccCard) throws Throwable {
-		for(int n=1;n<=50;n++)
-		{
-		logger.debug("Number of Orders successfully Placed:"+n);	
-		waitForPageLoad(driver);
-		searchKey = webPropHelper.getTestDataProperty(searchText);
-		String[] arrSearchKey = searchKey.split(",");
-
-		WebElement searchTextBox = null;
-		WebElement searchButton = null;
-		// WebElement
-
-		if ("mobile".equalsIgnoreCase(testtype)) {
-			// assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtnMobile));
-			if (!isDisplayed(R1_SearchProduct_PO.searchTextBoxMobile))
-				assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
-			Thread.sleep(Constants.thread_low); 
-			searchTextBox = R1_SearchProduct_PO.searchTextBoxMobile;
-			searchButton = R1_SearchProduct_PO.submitGOBtnMobile;
-		} else {
+	public void user_place_fifty_orders_and_see_the_response_with_with_PLCC_Card(String searchText, String plccCard)
+			throws Throwable {
+		for (int n = 1; n <= 50; n++) {
+			logger.debug("Number of Orders successfully Placed:" + n);
 			waitForPageLoad(driver);
-			Thread.sleep(Constants.thread_low); 
-			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtn));
-			searchTextBox = R1_SearchProduct_PO.searchTextBox;
-			searchButton = R1_SearchProduct_PO.submitGOBtn;
-		}
+			searchKey = webPropHelper.getTestDataProperty(searchText);
+			String[] arrSearchKey = searchKey.split(",");
 
-		for (String searchWord : arrSearchKey) {
+			WebElement searchTextBox = null;
+			WebElement searchButton = null;
+			// WebElement
+
 			if ("mobile".equalsIgnoreCase(testtype)) {
+				// assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtnMobile));
 				if (!isDisplayed(R1_SearchProduct_PO.searchTextBoxMobile))
 					assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
-			}
-//			clearText(searchTextBox);
-//			setInputTextWithEnterKey(searchTextBox, searchWord);
-			setInputText(searchTextBox, searchWord);
-			Thread.sleep(Constants.thread_medium);
-			assertTrue(clickOnButton(searchButton));
-			Thread.sleep(Constants.thread_low);
-			waitForPageLoad(driver);
-			boolean checkStock=false;
-			checkStock=isDisplayed(globalElementHeader_HomePO.outOfStockMessage);
-			if (r1_SearchPO.verifyTextDisplayedOnPage("We couldn't find anything for")) {
-			}else if(checkStock) {
+				Thread.sleep(Constants.thread_low);
+				searchTextBox = R1_SearchProduct_PO.searchTextBoxMobile;
+				searchButton = R1_SearchProduct_PO.submitGOBtnMobile;
 			} else {
-				break;
+				waitForPageLoad(driver);
+				Thread.sleep(Constants.thread_low);
+				assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtn));
+				searchTextBox = R1_SearchProduct_PO.searchTextBox;
+				searchButton = R1_SearchProduct_PO.submitGOBtn;
 			}
 
-		}
-		if (!(searchText.toLowerCase().contains("sku")))
-			clickOnButton(r2SanityPo.AS_productPLP1);
+			for (String searchWord : arrSearchKey) {
+				if ("mobile".equalsIgnoreCase(testtype)) {
+					if (!isDisplayed(R1_SearchProduct_PO.searchTextBoxMobile))
+						assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
+				}
+				// clearText(searchTextBox);
+				// setInputTextWithEnterKey(searchTextBox, searchWord);
+				setInputText(searchTextBox, searchWord);
+				Thread.sleep(Constants.thread_medium);
+				assertTrue(clickOnButton(searchButton));
+				Thread.sleep(Constants.thread_low);
+				waitForPageLoad(driver);
+				boolean checkStock = false;
+				checkStock = isDisplayed(globalElementHeader_HomePO.outOfStockMessage);
+				if (r1_SearchPO.verifyTextDisplayedOnPage("We couldn't find anything for")) {
+				} else if (checkStock) {
+				} else {
+					break;
+				}
+
+			}
+			if (!(searchText.toLowerCase().contains("sku")))
+				clickOnButton(r2SanityPo.AS_productPLP1);
 			Thread.sleep(Constants.thread_medium);
 			assertTrue(isDisplayed(plccLandingPageObjects.searchBox));
 			waitForElement(plccLandingPageObjects.searchBox);
@@ -164,7 +166,8 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 			genericPO.clickOnCheckoutButton();
 			Thread.sleep(Constants.thread_medium);
 			genericPO.verifyPresenceOfCheckoutPage();
-			//CommonActionHelper.waitUntilElePresent(driver, checkout_po.btnPlaceOrderPaymentPage, ELEMWAITTIME_MEDIUM);
+			// CommonActionHelper.waitUntilElePresent(driver,
+			// checkout_po.btnPlaceOrderPaymentPage, ELEMWAITTIME_MEDIUM);
 			genericPO.verifyPresenceOfSaveForLaterCheckBox();
 			genericPO.enterCardBinNumber(plccCard);
 			assertTrue(isDisplayed(genericPO.CreditCardNumber_Input));
@@ -182,16 +185,26 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 			genericPO.verifyPresenceOfEmailOnItsWayTxt();
 			genericPO.verifyPresenceOfPrintLinkOnOrderConfirmationPage();
 			genericPO.verifyPresenceOfMyAccountLinkOnOrderConfirmationPage();
-	}}
-		@When("^user uncheck Save Payment Info for Later Checkbox$")
-		public void user_uncheck_Save_Payment_Info_for_Later_Checkbox() throws Throwable {
+		}
+	}
+
+	@When("^user uncheck Save Payment Info for Later Checkbox$")
+	public void user_uncheck_Save_Payment_Info_for_Later_Checkbox() throws Throwable {
 		genericPO.savePaymentInfoForLaterCheckBox.click();
 	}
 
-		@Given("^user expect element Order Summary to be present$")
-
-        public void user_expect_element_Order_Summary_to_be_present() throws Throwable {
-                       genericPO.verifyPresenceOfOrderSummary();
-
-        }
+	@Given("^user expect element Order Summary to be present$")
+	public void user_expect_element_Order_Summary_to_be_present() throws Throwable {
+		genericPO.verifyPresenceOfOrderSummary();
 	}
+
+	@When("^user expecte element Sign in link for guest user$")
+	public void user_expecte_element_Sign_in_link_for_guest_user() throws Throwable {
+		try {
+			genericPO.verifyPresenceOfSignInLinkForGuestUser();
+		} catch (Exception e) {
+			System.out.println("Exception Message: "+e.getMessage());
+		}
+	}
+
+}

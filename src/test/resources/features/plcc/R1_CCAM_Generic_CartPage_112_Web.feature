@@ -269,7 +269,7 @@ And user navigates to Generic Credit Card Application Modal
 	Then user expect submit button not clickable
 	
 @C-PLCC @Regression @All @PLCC-112 @CR-VS
- Scenario: Verify Submit button is clickable when Terms and condition check box is checked when user navigates to CCAM from cart pag 
+ Scenario: Verify Submit button is clickable when Terms and condition check box is checked when user navigates to CCAM from cart page 
 	Then user navigates to Generic Credit Card Application Modal  
     When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName"
