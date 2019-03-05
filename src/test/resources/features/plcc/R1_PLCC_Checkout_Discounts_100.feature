@@ -29,7 +29,7 @@ Scenario: Verify user is able to get 5% discount for any of the item in academy 
 	Then delete all credit cards from My Account
 	
 @C-PLCC @Regression @All @PLCC-100 @CR-VS	
-Scenario: Verify user is able to apply 5% discount with along with free shipping offer
+Scenario: Verify user is able to apply 5% discount along with free shipping offer
     When user enters "SKUIdOfProductGr15" in the search box plcc
 	And user click on search icon 
 	And user click on Add to Cart button

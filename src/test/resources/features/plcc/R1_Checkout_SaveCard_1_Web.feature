@@ -53,7 +53,7 @@ Scenario: Verify the default payment method when user tries to place an another 
 	And user navigates to order confirmation page
 	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
 	And user expect element Order Number to be present
-	And user expect element a confirmation email is on its way to be present
+	And user expect element a confirsmation email is on its way to be present
 	And user expect element print link to be present
 	And user expect element my account link to be present
 	When user enters "SKUIdOfProduct" in the search box plcc 

@@ -108,7 +108,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "//*[@class='css-1l4mqdj academyicon icon-checkbox-inactive null d-flex align-items-start']")
 	public WebElement t$CCheckBoxInactiveConsentModel;
-	@FindBy(xpath = "//*[@//*[@data-auid='success_modal_close']")
+	@FindBy(xpath = "//*[@data-auid='success_modal_close']")
 	public WebElement closeIconSuccessModal;
 	
 	//*[@data-auid="checkout_order_summary_section"]//div[1]/div[2]
