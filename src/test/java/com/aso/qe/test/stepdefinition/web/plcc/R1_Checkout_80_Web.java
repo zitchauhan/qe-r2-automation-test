@@ -94,7 +94,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	@When("^user click on checkout from ATC pop up plcc$")
 	public void user_click_on_checkout_from_ATC_pop_up_plcc() throws Throwable {
 		genericPO.clickOnCheckoutButton();
-		Thread.sleep(10000);
+		Thread.sleep(13000);
 		//Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_SLOW);
 	}
 
@@ -876,10 +876,11 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	}
 	@Then("^user clears everything in cart$")
 	public void user_clears_everything_in_cart() throws Throwable {
-		genericPO.verifyPresenceOfCartIcon();
-		genericPO.cartIcon.click();
-		Thread.sleep(10000);
+		
 		try {
+			genericPO.verifyPresenceOfCartIcon();
+			genericPO.cartIcon.click();
+			Thread.sleep(10000);
 			r2CheckOutPo.AS_btnRemoveFromCart.click();
 			Thread.sleep(10000);
 		} catch (Exception e) {
