@@ -4,7 +4,7 @@
 Feature: Back in Stock Notifications on the PDP - Email
 
 
-@Web  @C-PDP @RegressionHP @KER-2334 @ZYP_PDP_K2334-3422 @CR-RKA @RBeta
+@Web  @C-PDP @Regression @KER-2334 @ZYP_PDP_K2334-3422 @CR-RKA @RBeta
 Scenario: To verify BIS Notifications on the PDP - Single email notification
 Given user launches the browser and navigates to "ASO_HOME" page
  When user enters "OutOfStockProduct" in the search box
@@ -13,7 +13,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
  Then Verify customer is able to enter email after clicking on get notified    
           
                
-  @Web  @C-PDP @RegressionHP @KER-2334 @ZYP_PDP_K2334-3423 @CR-RKA @RBeta
+  @Web  @C-PDP @Regression @KER-2334 @ZYP_PDP_K2334-3423 @CR-RKA @RBeta
 Scenario:  To verify BIS Notifications on the PDP - Individual signup for each SKU
 Given user launches the browser and navigates to "ASO_HOME" page
  When user enters "OutOfStockProduct" in the search box
