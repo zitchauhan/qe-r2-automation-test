@@ -1,8 +1,8 @@
 # Blocking this feaure in UAT7 Regression suite since this is a existing PROD defect
-@ignoreUAT7
+#@ignoreUAT7
 Feature: [Desktop]Components - Header
 
-  @C-HP @Web @RegressionHP @KER-262 @ZYP_HP_K262-4072 @CR-RKA @1HR
+  @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-4072 @CR-RKA @1HR @KER-1915
   Scenario: Desktop-To Verify the signout from MyAccount
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
