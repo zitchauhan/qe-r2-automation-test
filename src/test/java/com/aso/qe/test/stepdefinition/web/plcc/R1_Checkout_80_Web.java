@@ -48,7 +48,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 
 	@When("^user enters \"(.*?)\" in the search box plcc$")
 	public void user_enters_in_the_search_box_plcc(String arg1) throws Throwable {
-		Thread.sleep(30);
+		Thread.sleep(5000);
 		plccPageObjects.enterSearchItem(arg1);
 		assertTrue(isDisplayed(plccLandingPageObjects.searchBox));
 		waitForElement(plccLandingPageObjects.searchBox);
