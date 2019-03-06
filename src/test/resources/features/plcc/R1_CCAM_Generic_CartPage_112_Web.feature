@@ -252,7 +252,6 @@ And user navigates to Generic Credit Card Application Modal
 		
 @C-PLCC @Regression @All @PLCC-112 @CR-VS
  Scenario: Verify Submit button is not clickable when Terms and condition check box is unchecked when user navigates to CCAM from cart page
-	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 
  	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName"
@@ -294,6 +293,174 @@ And user navigates to Generic Credit Card Application Modal
 	And user verify presence of STEP2: CONSENT
 	And user select credit application modal agree message 
 	Then user expect submit button clickable
+	
+
+@C-PLCC @Regression @All @PLCC-112 @CR-VS
+ Scenario: Verify user able to navigate to Success Modal when nvaigate to CCAM from Cart Page 
+	When user enter First Name on credit card Application Modal "FirstName" 
+	Then user enter Last Name on credit card Application Modal "LastName"
+	And user enter Last four SSN "Last4DigitsOfSSN"
+	And user enetr Date of Birth "DOB" 
+	And user enter Annual Income "AnnualIncome" 
+	And user enter Street Address "StreetAddress" 
+	And user enter Suite or Apartment "SuiteOrApartment" 
+	And user enter City "City" 
+	And user select State "State" 
+	And user enter Zip Code on credit card Application Modal "ZipCode" 
+	And user enter Email Address on credit card Application Modal "EmailId" 
+	And user enter Confirm Email Address "ConfirmEmailId" 
+	And user enter Mobile Phone "MobilePhone" 
+	And user enter Alternate Phone "AlternatePhone" 
+	And user click on CONTINUE button 
+	And user verify presence of STEP2: CONSENT
+	And user select credit application modal agree message 
+	Then user navigates to credit card approval modal 
+	
+@C-PLCC @Regression @All @PLCC-112 @CR-VS
+ Scenario: Verify user able to navigate to Application Under Review Modal when nvaigate to CCAM from Cart Page 
+	When user enter First Name on credit card Application Modal "FirstNameUR" 
+	Then user enter Last Name on credit card Application Modal "LastNameUR"
+	And user enter Last four SSN "Last4DigitsOfSSNUR"
+	And user enetr Date of Birth "DOB" 
+	And user enter Annual Income "AnnualIncomeUR" 
+	And user enter Street Address "StreetAddress" 
+	And user enter Suite or Apartment "SuiteOrApartment" 
+	And user enter City "CityUR" 
+	And user select State "State" 
+	And user enter Zip Code on credit card Application Modal "ZipCodeUR" 
+	And user enter Email Address on credit card Application Modal "EmailIdUR" 
+	And user enter Confirm Email Address "ConfirmEmailIdUR" 
+	And user enter Mobile Phone "MobilePhone" 
+	And user enter Alternate Phone "AlternatePhone" 
+	And user click on CONTINUE button 
+	And user verify presence of STEP2: CONSENT
+	And user select credit application modal agree message 
+	When user click on SUBMIT button
+	Then user navigates to error modal
+	
+@C-PLCC @Regression @All @PLCC-112 @CR-VS
+ Scenario: Verify user able to navigate to Error state Modal when nvaigate to CCAM from Cart Page 
+	When user enter First Name on credit card Application Modal "FirstName" 
+	Then user enter Last Name on credit card Application Modal "LastNameEr"
+	And user enter Last four SSN "Last4DigitsOfSSN"
+	And user enetr Date of Birth "DOB" 
+	And user enter Annual Income "AnnualIncome" 
+	And user enter Street Address "StreetAddress" 
+	And user enter Suite or Apartment "SuiteOrApartment" 
+	And user enter City "City" 
+	And user select State "State" 
+	And user enter Zip Code on credit card Application Modal "ZipCode" 
+	And user enter Email Address on credit card Application Modal "EmailId" 
+	And user enter Confirm Email Address "ConfirmEmailId" 
+	And user enter Mobile Phone "MobilePhone" 
+	And user enter Alternate Phone "AlternatePhone" 
+	And user click on CONTINUE button 
+	And user verify presence of STEP2: CONSENT
+	And user select credit application modal agree message 
+	When user click on SUBMIT button
+	Then user navigates to error modal 
+	And user expect element disclosure text on error modal to be present
+	And user expect error text to be present
+	
+@C-PLCC @Regression @All @PLCC-112 @CR-VS
+ Scenario: Verify user able to navigate to Existing Account Modal when nvaigate to CCAM from Cart Page 
+	When user enter First Name on credit card Application Modal "FirstNameEX" 
+	Then user enter Last Name on credit card Application Modal "LastNameEX"
+	And user enter Last four SSN "Last4DigitsOfSSNEX"
+	And user enetr Date of Birth "DOBEX" 
+	And user enter Annual Income "AnnualIncomeEX" 
+	And user enter Street Address "StreetAddressEX" 
+	And user enter Suite or Apartment "SuiteOrApartmentEX" 
+	And user enter City "CityEX" 
+	And user select State "State" 
+	And user enter Zip Code on credit card Application Modal "ZipCode" 
+	And user enter Email Address on credit card Application Modal "EmailId" 
+	And user enter Confirm Email Address "ConfirmEmailId" 
+	And user enter Mobile Phone "MobilePhone" 
+	And user enter Alternate Phone "AlternatePhone" 
+	And user click on CONTINUE button 
+	And user verify presence of STEP2: CONSENT
+	And user select credit application modal agree message 
+	When user click on SUBMIT button
+	Then user navigates to existing account modal
+	
+@C-PLCC @Regression @All @PLCC-112 @CR-VS
+ Scenario: Verify user able to close Existing Account Modal when nvaigate to CCAM from Cart Page 
+	When user enter First Name on credit card Application Modal "FirstNameEX"  
+	Then user enter Last Name on credit card Application Modal "LastNameEX"
+	And user enter Last four SSN "Last4DigitsOfSSNEX"
+	And user enetr Date of Birth "DOBEX" 
+	And user enter Annual Income "AnnualIncomeEX" 
+	And user enter Street Address "StreetAddressEX" 
+	And user enter Suite or Apartment "SuiteOrApartmentEX" 
+	And user enter City "CityEX" 
+	And user select State "State" 
+	And user enter Zip Code on credit card Application Modal "ZipCode" 
+	And user enter Email Address on credit card Application Modal "EmailId" 
+	And user enter Confirm Email Address "ConfirmEmailId" 
+	And user enter Mobile Phone "MobilePhone" 
+	And user enter Alternate Phone "AlternatePhone" 
+	And user click on CONTINUE button 
+	And user verify presence of STEP2: CONSENT
+	And user select credit application modal agree message 
+	When user click on SUBMIT button
+	Then user navigates to existing account modal
+	And user expect element disclosure text on existing account modal to be present
+	When user click on close icon of error modal
+	Then user expect Landing page to be present 
+	
+@C-PLCC @Regression @All @PLCC-112 @CR-VS
+ Scenario: Verify user able to close Error state Modal when nvaigate to CCAM from Cart Page 
+ 	When user enter First Name on credit card Application Modal "FirstName" 
+	Then user enter Last Name on credit card Application Modal "LastNameEr"
+	And user enter Last four SSN "Last4DigitsOfSSN"
+	And user enetr Date of Birth "DOB" 
+	And user enter Annual Income "AnnualIncome" 
+	And user enter Street Address "StreetAddress" 
+	And user enter Suite or Apartment "SuiteOrApartment" 
+	And user enter City "City" 
+	And user select State "State" 
+	And user enter Zip Code on credit card Application Modal "ZipCode" 
+	And user enter Email Address on credit card Application Modal "EmailId" 
+	And user enter Confirm Email Address "ConfirmEmailId" 
+	And user enter Mobile Phone "MobilePhone" 
+	And user enter Alternate Phone "AlternatePhone" 
+	And user click on CONTINUE button 
+	And user verify presence of STEP2: CONSENT
+	And user select credit application modal agree message 
+	When user click on SUBMIT button
+	Then user navigates to error modal 
+	When user click on close icon of error modal
+	Then user expect Landing page to be present
+
+@C-PLCC @Regression @All @PLCC-112 @CR-VS
+ Scenario: Verify user able to close Success Modal when nvaigate to CCAM from Cart Page 
+ 	When user enter First Name on credit card Application Modal "FirstName" 
+	Then user enter Last Name on credit card Application Modal "LastName"
+	And user enter Last four SSN "Last4DigitsOfSSN"
+	And user enetr Date of Birth "DOB" 
+	And user enter Annual Income "AnnualIncome" 
+	And user enter Street Address "StreetAddress" 
+	And user enter Suite or Apartment "SuiteOrApartment" 
+	And user enter City "City" 
+	And user select State "State" 
+	And user enter Zip Code on credit card Application Modal "ZipCode" 
+	And user enter Email Address on credit card Application Modal "EmailId" 
+	And user enter Confirm Email Address "ConfirmEmailId" 
+	And user enter Mobile Phone "MobilePhone" 
+	And user enter Alternate Phone "AlternatePhone" 
+	And user click on CONTINUE button 
+	And user verify presence of STEP2: CONSENT
+	And user select credit application modal agree message 
+	When user click on SUBMIT button
+	Then user navigates to credit card approval modal
+	When user click on close icon of success modal
+	Then user expect Landing page to be present
+	
+#@C-PLCC @Regression @All @PLCC-112 @CR-VS
+ #Scenario: Verify user able to close Application under Modal when navigate to CCAM from Cart Page 
+
+
 	
 
 	

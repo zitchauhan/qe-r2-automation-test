@@ -118,6 +118,7 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
 		BigDecimal actualValue = bd.setScale(2, BigDecimal.ROUND_HALF_EVEN );
 		logger.debug("Actual Value of Five Percent of Subtotal is " + fivePercentDiscount);
 		logger.debug("Round Of Value of Five Percent of Subtotal is " + actualValue);
+		
 		genericPO.verifyPresenceOfDiscountValue();
 		String valueOnWeb = genericPO.discountValue.getText().replace("-$", "").trim();
 	

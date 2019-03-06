@@ -39,6 +39,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement continueBtnExistingUser;
 	@FindBy(xpath = "//*[@data-auid='continuetocheckout_']")
 	public WebElement continueToCheckoutBtnErrorModal;
+	@FindBy(xpath = "//*[@data-auid='continuetocheckout_declined']")
+	public WebElement continueToCheckoutBtnURModal;
+	
 	
 	@FindBy(xpath = "//*[@name='state']")
 	public WebElement stateDropDownCCModal;
@@ -104,7 +107,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "//*[@class='css-1l4mqdj academyicon icon-checkbox-inactive null d-flex align-items-start']")
 	public WebElement t$CCheckBoxInactiveConsentModel;
-	@FindBy(xpath = "//*[@//*[@data-auid='success_modal_close']")
+	@FindBy(xpath = "//*[@data-auid='success_modal_close']")
 	public WebElement closeIconSuccessModal;
 	
 	//*[@data-auid="checkout_order_summary_section"]//div[1]/div[2]
@@ -211,6 +214,16 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			logger.debug("Sub total value is displayed");
 		}
 	}
+	public void verifyPresenceOfContnueToCheckoutURModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(continueToCheckoutBtnURModal);
+			logger.debug("Continue to checkout button on application under review modal");
+		} else {
+			isDisplayed(continueToCheckoutBtnURModal);
+			logger.debug("Continue to checkout button on application under review modal");
+		}
+	}
+	
 	public void verifyPresenceOfReturnToApplicationErrorModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(returnToApplicationErrorModal);

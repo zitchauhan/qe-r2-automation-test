@@ -115,7 +115,7 @@ Scenario: Verify user is able to navigate to checkout page after clicking on Con
 	Then user navigates to ASO-Home page
 	
 @C-PLCC @Regression @All @PLCC-93 @CR-VS 
-Scenario: Verify user is able to navigate to checkout page after clicking on Continue to Checkout button
+Scenario: Verify user is able to close success modal after clicking on close icon
 	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName"
 	And user enter Last four SSN "Last4DigitsOfSSN"

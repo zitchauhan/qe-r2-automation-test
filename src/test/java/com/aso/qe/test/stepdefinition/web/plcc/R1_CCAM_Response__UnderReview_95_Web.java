@@ -27,6 +27,11 @@ public class R1_CCAM_Response__UnderReview_95_Web extends CommonActionHelper {
 	public void user_expect_element_Application_Under_Review_Text_to_be_present() throws Throwable {
 		ccAplicationModal_PO.verifyPresenceOfApplicationUnderReviewText();
 	}
+	@Then("^user click on continue to checkout button of application under review$")
+	public void user_click_on_continue_to_checkout_button_of_application_under_review() throws Throwable {
+		ccAplicationModal_PO.verifyPresenceOfContnueToCheckoutURModal();
+		ccAplicationModal_PO.continueToCheckoutBtnURModal.click();
+	}
 
 	@Then("^user expect element disclosure Message on Error Modal to be present$")
 	public void user_expect_element_disclosure_Message_on_Error_Modal_to_be_present() throws Throwable {

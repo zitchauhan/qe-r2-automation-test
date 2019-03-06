@@ -8,14 +8,17 @@ Background: User Login and common steps for identifying card type entering BIN
 	And user enter password in sign-in page "password" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
-	#And user expect element ASO Home Page Title to be present
+	When user click on My Account link
+	And user click on Payments link
+	Then delete all credit cards from My Account
+	And user clears everything in cart
 	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
-	And user click on Add to Cart button 
+	#And user click on Add to Cart Button 
+	And user click on Add to Cart button  
 	And user click on checkout from ATC pop up plcc
 	And user clicks on checkout button and navigates to checkout page 
-	#And user selects credit card radio button
-	And user expect element credit card text field is present 
+	 
 
 @C-PLCC @Regression @All @PLCC-87 @CR-VS 
 Scenario: Verify the PLCC card image in footer when customer is on checkout page 
