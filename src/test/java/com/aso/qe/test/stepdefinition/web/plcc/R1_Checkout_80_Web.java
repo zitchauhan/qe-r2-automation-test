@@ -332,6 +332,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	public void user_click_on_remove_from_cart() throws Throwable {
 		genericPO.verifyPresenceOfRemoveFromCartLink();
 		r2CheckOutPo.AS_btnRemoveFromCart.click();
+		
 	}
 
 	@When("^user click on expiry date text field$")
@@ -872,6 +873,38 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	@Then("^user expect element Gift card payment applied meesage to be present$")
 	public void user_expect_element_Gift_card_payment_applied_meesage_to_be_present() throws Throwable {
 		genericPO.verifyGiftCardPaymentAppliedMessageCheckoutPage();
+	}
+	@Then("^user clears everything in cart$")
+	public void user_clears_everything_in_cart() throws Throwable {
+		genericPO.verifyPresenceOfCartIcon();
+		genericPO.cartIcon.click();
+		try {
+			r2CheckOutPo.AS_btnRemoveFromCart.click();
+			Thread.sleep(5000);
+		} catch (Exception e) {
+		
+			e.printStackTrace();
+		}
+		
+	}
+	
+	@Then("^user handles adding new card \"(.*?)\" if already card is saved$")
+	public void user_handles_adding_new_card_if_already_card_is_saved(String arg1) throws Throwable {
+		try {
+			if (genericPO.CreditCardNumber_Input.isDisplayed()) {
+				genericPO.enterCardBinNumber(arg1);
+				assertTrue(isDisplayed(genericPO.CreditCardNumber_Input));
+				waitForElement(genericPO.CreditCardNumber_Input);
+
+			} else {
+				genericPO.savedCardDropDown.click();
+				genericPO.addNewCardOption.click();
+				genericPO.enterCardBinNumber(arg1);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

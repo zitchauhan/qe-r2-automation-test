@@ -4,10 +4,13 @@ Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
 	And user expect element Email Address to be present 
-	And user enter Email address in sign-in page "UserWithSavedAddressAndPayment" 
+	And user enter Email address in sign-in page "Email_UserWithSavedAddressAndPayment" 
 	And user enter password in sign-in page "BuynowPwd" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
+	When user click on My Account link
+	And user click on Payments link
+	Then delete all credit cards from My Account 
 		
 @C-PLCC @Regression @All @PLCC-99 @CR-Manju
 Scenario: Verify user is able to get Free shipping offer with Item value greater than 15$ 

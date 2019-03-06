@@ -32,7 +32,11 @@ Background: Common Pre-requisite steps
 	When user click on SUBMIT button
 	Then user navigates to credit card approval modal 
 	When user click on return to application
-	Then user navigates to ASO-Home page
+	When user click on My Account link 
+	And user click on Payments link 
+	Then delete all credit cards from My Account 
+	And user clears everything in cart 
+	  
 
 @C-PLCC @Regression @All @PLCC-101 @CR-VS	
 Scenario: First Time Promotion Available for item less than or equal to <=$15
@@ -41,7 +45,7 @@ Scenario: First Time Promotion Available for item less than or equal to <=$15
 	And user click on Add to Cart button
 	And user click on checkout from ATC pop up plcc
 	And user clicks on checkout button and navigates to checkout page 
-	When user enter plcc card "ValidPLCCCard"
+	When user handles adding new card "ValidPLCCCard" if already card is saved
 	And user click on REVIEW ORDER button
 	And user expect element Order Summary to be present
 	And user expect discount text to be present 
@@ -60,7 +64,7 @@ Scenario: First Time Promotion Available for item greater than >$15
 	And user click on Add to Cart button
 	And user click on checkout from ATC pop up plcc
 	And user clicks on checkout button and navigates to checkout page 
-	When user enter plcc card "ValidPLCCCard"
+	When user handles adding new card "ValidPLCCCard" if already card is saved
 	And user click on REVIEW ORDER button
 	And user expect element Order Summary to be present
 	And user expect element free shipping should be available 

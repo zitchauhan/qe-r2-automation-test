@@ -68,12 +68,23 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement paymentScetionCheckoutPage;
 	@FindBy(xpath="//*[contains(text(),'Academy Sports + Outdoors Credit Card ending in - ')]")
 	public WebElement savedCardCheckoutPage;
+	@FindBy(xpath="//*[@id='checkout-payment-drawer']//div[3]/div[1]//button")
+	public WebElement savedCardDropDown;
 	
 	//Buy Now
 	@FindBy(xpath = "//*[text()='Same As Shipping Address']")
 	public WebElement selctsameAsShippingcheckbox;
 	@FindBy(xpath = "//*[@data-auid='btndefaultPaymentFormSubmit']")
 	public WebElement btndefaultPaymentFormSubmit;
+	
+	@FindBy(xpath = "//*[@id='headerForScroll']/nav[1]//li[5]//button/span[2]")
+	public WebElement cartIcon;
+	@FindBy(xpath = "//*[text()='Add a New Credit Card']")
+	public WebElement addNewCardOption;
+	
+	@FindBy(xpath = "//*[text()='Remove from Cart'] | //*[@data-auid='crt_btnRmvFromCart_710320043']")
+	public WebElement RemoveFromCartBtn;
+	
 	 
 	
 
@@ -198,6 +209,18 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		}
 
 	}
+	public void verifyPresenceOfCartIcon() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(cartIcon);
+			logger.debug("Cart Icon is dispalyed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(cartIcon);
+			logger.debug("Cart Icon is dispalyed++++++++++++++++++++++++");
+		}
+
+	}
+	
 	public boolean  verifyFreeShippingisNotApplied() throws Exception {
 
 		try {

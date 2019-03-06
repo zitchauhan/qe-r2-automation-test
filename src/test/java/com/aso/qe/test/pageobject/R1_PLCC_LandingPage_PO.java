@@ -54,6 +54,8 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public WebElement landingPageBanner;
 	@FindBy(xpath = "//*[@data-auid='applyToday']")
 	public WebElement labelAboveCardImage;
+	@FindBy(xpath = "//*[@class='academyicon icon-cart']")
+	public WebElement cartIcon;
 	
 	
 	// SignIn Page

@@ -39,6 +39,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement continueBtnExistingUser;
 	@FindBy(xpath = "//*[@data-auid='continuetocheckout_']")
 	public WebElement continueToCheckoutBtnErrorModal;
+	@FindBy(xpath = "//*[@data-auid='continuetocheckout_declined']")
+	public WebElement continueToCheckoutBtnURModal;
+	
 	
 	
 	
@@ -215,6 +218,16 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			logger.debug("Sub total value is displayed");
 		}
 	}
+	public void verifyPresenceOfContnueToCheckoutURModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(continueToCheckoutBtnURModal);
+			logger.debug("Continue to checkout button on application under review modal");
+		} else {
+			isDisplayed(continueToCheckoutBtnURModal);
+			logger.debug("Continue to checkout button on application under review modal");
+		}
+	}
+	
 	public void verifyPresenceOfReturnToApplicationErrorModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(returnToApplicationErrorModal);

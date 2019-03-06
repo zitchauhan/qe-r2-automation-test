@@ -31,7 +31,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
 	And user click on Enable BuyNow button
-	When user enter plcc card "ValidPLCCCard"
+	When user handles adding new card "ValidPLCCCard" if already card is saved 
 	And user select SameAsShippingAddress checkbox
 	And user enter Email Address "EnableBuyNowEmail_Address" for Enable BuyNow page
 	And user click on Default PaymentFormSubmit Button for BuyNow
