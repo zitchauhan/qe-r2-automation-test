@@ -532,7 +532,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void clickOnAddMoreAddressDetails() throws Exception {
 
 		{
-			assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
+			assertTrue(isDisplayed(addMoreAddressDetailsLink));
 			isClickable(addMoreAddressDetailsLink);
 			if (isDisplayed(addMoreAddressDetailsLink)) {
 				Common_Web_PLCC.waitUntilElePresent(driver, addMoreAddressDetailsLink, ELEMWAITTIME_MEDIUM);

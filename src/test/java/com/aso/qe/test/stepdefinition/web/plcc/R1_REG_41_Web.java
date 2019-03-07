@@ -60,6 +60,7 @@ public class R1_REG_41_Web extends CommonActionHelper {
 
 	@When("^user unselect Add Address for Faster Checkout checkbox$")
 	public void user_unselect_Add_Address_for_Faster_Checkout_checkbox() throws Throwable {
+		plccPageObjects.verifyPresenceOfAddAddressCheckBox();
 		plccPageObjects.addAddressCheckBox.click();
 	}
 
