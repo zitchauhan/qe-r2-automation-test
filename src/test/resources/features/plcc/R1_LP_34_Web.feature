@@ -8,7 +8,7 @@ And user expect element FPO Apply Order section to be present
 
 @C-PLCC @Regression @All @PLCC-34 @CR-VS 
 Scenario: Verify the display of elements available under Header component on PLCC landing page 
-	And user expect element Benefits section to be present
+	#And user expect element Benefits section to be present
 	And user expect element prescreen section to be present
 	And user expect element AcademyLogo to be present 
 	And user expect element FindAStoreLink to be present 
