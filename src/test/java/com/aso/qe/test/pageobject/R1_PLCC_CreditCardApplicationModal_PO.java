@@ -258,9 +258,11 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfBannerOnCartPage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(bannerCartPage);
+			bannerCartPage.click();
 			logger.debug("Banner on Cart Page is displayed");
 		} else {
 			isDisplayed(bannerCartPage);
+			bannerCartPage.click();
 			logger.debug("Banner on Cart Page is displayed");
 		}
 	}

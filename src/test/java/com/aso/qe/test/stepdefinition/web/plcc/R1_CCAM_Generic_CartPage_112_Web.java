@@ -18,6 +18,6 @@ public class R1_CCAM_Generic_CartPage_112_Web extends CommonActionHelper {
 	@Then("^user click on plcc banner of cart button$")
 	public void user_click_on_plcc_banner_of_cart_button() throws Throwable {
 		ccAplicationModal_PO.verifyPresenceOfBannerOnCartPage();
-		ccAplicationModal_PO.bannerCartPage.click();
+		//ccAplicationModal_PO.bannerCartPage.click();
 	}
 }
