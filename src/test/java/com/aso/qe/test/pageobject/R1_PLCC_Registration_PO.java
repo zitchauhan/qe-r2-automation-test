@@ -202,10 +202,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfAddAddressCheckBox() throws Exception {
 
-		if ("web".equalsIgnoreCase(testtype)) {
+		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(addAddressCheckBox);
 			// assertTrue(isClickable(addAddressCheckBox));
-			logger.debug("Add address checkbox is displayed");
+			logger.debug("Add address checkbox is displayed on Mobile");
 		} else {
 			isDisplayed(addAddressCheckBox);
 			// assertTrue(isClickable(addAddressCheckBox));
@@ -532,7 +532,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void clickOnAddMoreAddressDetails() throws Exception {
 
 		{
-			assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
+			assertTrue(isDisplayed(addMoreAddressDetailsLink));
 			isClickable(addMoreAddressDetailsLink);
 			if (isDisplayed(addMoreAddressDetailsLink)) {
 				Common_Web_PLCC.waitUntilElePresent(driver, addMoreAddressDetailsLink, ELEMWAITTIME_MEDIUM);

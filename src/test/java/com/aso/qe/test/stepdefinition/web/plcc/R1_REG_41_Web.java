@@ -7,7 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PLCC_Mobile_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Registration_PO;
+import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -17,6 +19,8 @@ public class R1_REG_41_Web extends CommonActionHelper {
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
 	R1_PLCC_Registration_PO plccPageObjects = PageFactory.initElements(driver, R1_PLCC_Registration_PO.class);
+	R2_MyAccount_PO myAccount_po = PageFactory.initElements(driver, R2_MyAccount_PO.class);
+	R1_PLCC_Mobile_PO plccMobile_po = PageFactory.initElements(driver, R1_PLCC_Mobile_PO.class);
 
 	@Then("^user click on Add Company name, Apt\\. Number, etc\\. \\(Optional\\) link$")
 	public void user_click_on_Add_Company_name_Apt_Number_etc_Optional_link() throws Throwable {
@@ -47,15 +51,17 @@ public class R1_REG_41_Web extends CommonActionHelper {
 			e.printStackTrace();
 		}
 	}
+
 	@When("^user click on burger menu$")
 	public void user_click_on_burger_menu() throws Throwable {
 		globalElementHeader.clickOnBurgerMenu();
 	}
-	//validatePresenceOfMyAccountLink
-	
+	// validatePresenceOfMyAccountLink
+
 	@When("^user unselect Add Address for Faster Checkout checkbox$")
 	public void user_unselect_Add_Address_for_Faster_Checkout_checkbox() throws Throwable {
-		plccPageObjects.addAddressCheckBox.click();   
+		plccPageObjects.verifyPresenceOfAddAddressCheckBox();
+		plccPageObjects.addAddressCheckBox.click();
 	}
 
 	/**
@@ -64,34 +70,42 @@ public class R1_REG_41_Web extends CommonActionHelper {
 	 */
 	@Then("^user expect element Add company name, Apt\\.Number, etc\\. \\(Optional\\) to not be present$")
 	public void user_expect_element_Add_company_name_Apt_Number_etc_Optional_to_not_be_present() throws Throwable {
-		plccPageObjects.verifyAbsenceOfAddCompanyAptNumber(); 
+		plccPageObjects.verifyAbsenceOfAddCompanyAptNumber();
 	}
+
 	@Then("^user expect element Address to not be present$")
 	public void user_expect_element_Address_to_not_be_present() throws Throwable {
-		plccPageObjects.verifyAbsenceOfAddress(); 
-	    
+		plccPageObjects.verifyAbsenceOfAddress();
+
 	}
 
 	@Then("^user expect element Zip Code to not be present$")
 	public void user_expect_element_Zip_Code_to_not_be_present() throws Throwable {
-		plccPageObjects.verifyAbsenceOfZipcode();   
-	    
+		plccPageObjects.verifyAbsenceOfZipcode();
+
 	}
 
 	@Then("^user expect element City to not be present$")
 	public void user_expect_element_City_to_not_be_present() throws Throwable {
-		plccPageObjects.verifyAbsenceOfCity(); 
+		plccPageObjects.verifyAbsenceOfCity();
 	}
 
 	@Then("^user expect element State to not be present$")
 	public void user_expect_element_State_to_not_be_present() throws Throwable {
-		plccPageObjects.verifyAbsenceOfState(); 
+		plccPageObjects.verifyAbsenceOfState();
 	}
 
 	@Then("^user expect element Phone number to not be present$")
 	public void user_expect_element_Phone_number_to_not_be_present() throws Throwable {
-		plccPageObjects.verifyAbsenceOfPhoneNumber(); 
+		plccPageObjects.verifyAbsenceOfPhoneNumber();
 	}
 
-
+	/*
+	 * Mobile Implementation
+	 */
+	@When("^user click on My Account link of mobile$")
+	public void user_click_on_My_Account_link_of_mobile() throws Throwable {
+		plccMobile_po.verifyPresenceOfMyAccountLinkOnMobile();
+		myAccount_po.myAccount_txt_Mobile.click();
+	}
 }

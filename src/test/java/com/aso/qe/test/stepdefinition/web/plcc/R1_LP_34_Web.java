@@ -569,7 +569,12 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	}
 	@When("^user click on instagram icon$")
 	public void user_click_on_instagram_icon() throws Throwable {
-		globalElementHeader.iconinstagram.click();
+		try {
+			Thread.sleep(5000);
+			globalElementHeader.iconinstagram.click();
+		} catch (Exception e) {
+			
+		}
 	}
 
 	@Then("^user navigates to instagram page and validate instagram page url$")

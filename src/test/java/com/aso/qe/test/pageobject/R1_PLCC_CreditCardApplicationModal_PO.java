@@ -33,17 +33,16 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement apartmentNameCCModal;
 	@FindBy(xpath = "//*[@data-auid='credit_application_city']")
 	public WebElement cityCModal;
-	@FindBy(xpath = "//*[@data-auid='banner_desktop']")
+	@FindBy(xpath = "//*[@data-auid='banner_desktop'] | //img[@src='/content/dam/academysports/banner-desktop.jpg']")
 	public WebElement bannerCartPage;
 	@FindBy(xpath = "//*[@data-auid='continuetocheckout_existing_user']")
 	public WebElement continueBtnExistingUser;
 	@FindBy(xpath = "//*[@data-auid='continuetocheckout_']")
 	public WebElement continueToCheckoutBtnErrorModal;
+	@FindBy(xpath = "//*[@data-auid='continuetocheckout_declined']")
+	public WebElement continueToCheckoutBtnURModal;
 	
 	
-	
-	
-
 	@FindBy(xpath = "//*[@name='state']")
 	public WebElement stateDropDownCCModal;
 	@FindBy(xpath = "//*[@id='customDropdownList']")
@@ -215,6 +214,16 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			logger.debug("Sub total value is displayed");
 		}
 	}
+	public void verifyPresenceOfContnueToCheckoutURModal() throws Exception {
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(continueToCheckoutBtnURModal);
+			logger.debug("Continue to checkout button on application under review modal");
+		} else {
+			isDisplayed(continueToCheckoutBtnURModal);
+			logger.debug("Continue to checkout button on application under review modal");
+		}
+	}
+	
 	public void verifyPresenceOfReturnToApplicationErrorModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(returnToApplicationErrorModal);
@@ -249,9 +258,11 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfBannerOnCartPage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(bannerCartPage);
+			bannerCartPage.click();
 			logger.debug("Banner on Cart Page is displayed");
 		} else {
 			isDisplayed(bannerCartPage);
+			bannerCartPage.click();
 			logger.debug("Banner on Cart Page is displayed");
 		}
 	}

@@ -8,6 +8,10 @@ Background:  Common Pre-requisite steps
 	And user enter password in sign-in page "password" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
+	When user click on My Account link 
+    And user click on Payments link 
+    Then delete all credit cards from My Account 
+    And user clears everything in cart 
 	#And user expect element ASO Home Page Title to be present
 	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
