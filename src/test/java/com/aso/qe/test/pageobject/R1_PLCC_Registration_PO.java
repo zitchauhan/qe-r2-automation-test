@@ -202,10 +202,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfAddAddressCheckBox() throws Exception {
 
-		if ("web".equalsIgnoreCase(testtype)) {
+		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(addAddressCheckBox);
 			// assertTrue(isClickable(addAddressCheckBox));
-			logger.debug("Add address checkbox is displayed");
+			logger.debug("Add address checkbox is displayed on Mobile");
 		} else {
 			isDisplayed(addAddressCheckBox);
 			// assertTrue(isClickable(addAddressCheckBox));
