@@ -22,7 +22,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user expect element City to be present 
 	And user expect element State to be present 
 	And user expect element Phone number to be present 
-	And user enter Phone Number plcc "Phone_Number" 
+	And user enters Phone Number "Phone_Number" 
 	And user expect element SIGN UP to be present 
 	And user click on SIGN UP 
 	And user expect element User Select Address to be present 
