@@ -7,8 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-
-@CucumberOptions(features = "src/test/resources/features/plccMobile",
+@CucumberOptions(features = "src/test/resources/features/plccMobile/R1_CCAM_Response_ExistingCustomer_94_Mobile.feature",
 		glue = "com.aso.qe.test.stepdefinition.web.plcc",
 		monochrome = true, 
 		plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html", format = {

@@ -4,6 +4,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -259,10 +261,14 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(bannerCartPage);
 			bannerCartPage.click();
+			//driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-desktop.jpg']")).click();
 			logger.debug("Banner on Cart Page is displayed");
 		} else {
 			isDisplayed(bannerCartPage);
-			bannerCartPage.click();
+			//bannerCartPage.click();
+			WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-desktop.jpg']"));
+			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();", element);
 			logger.debug("Banner on Cart Page is displayed");
 		}
 	}
@@ -415,7 +421,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfConsentModelPageLabel() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(firstNameCCModal);
-			logger.debug("STEP2: CONSENT is displayed");
+			logger.debug("STEP2: CONSENT is displayed for Mobile");
 		} else {
 			isDisplayed(firstNameCCModal);
 			logger.debug("STEP2: CONSENT is displayed");
@@ -614,7 +620,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfContinueButtonCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(continueButtonCCModal);
-			logger.debug("Continue Button on Credit Card Application Modal is displayed");
+			logger.debug("Continue Button on Credit Card Application Modal is displayed for Mobile");
 		} else {
 			isDisplayed(continueButtonCCModal);
 			logger.debug("Continue button on Credit Card Application Modal is displayed");
@@ -635,7 +641,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfAgreeApplicationModalCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(TandCCheckBox);
-			logger.debug("Agree T&C is displayed");
+			logger.debug("Agree T&C is displayed for Mobile");
 		} else {
 			isDisplayed(TandCCheckBox);
 			logger.debug("Agree T&C is displayed is displayed");
@@ -881,7 +887,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfDisclosureTxt1ConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(disclosureTxt1ConsentModal);
-			logger.debug("Disclosure Text one on Consent modal is displayed");
+			logger.debug("Disclosure Text one on Consent modal is displayed for Mobile");
 		} else {
 			isDisplayed(disclosureTxt1ConsentModal);
 			logger.debug("Disclosure Text one on Consent modal is displayed");
@@ -892,7 +898,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfDisclosureTxt2ConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(disclosureTxt2ConsentModal);
-			logger.debug("Disclosure Text two on Consent modal is displayed");
+			logger.debug("Disclosure Text two on Consent modal is displayed for Mobile");
 		} else {
 			isDisplayed(disclosureTxt2ConsentModal);
 			logger.debug("Disclosure Text two on Consent modal is displayed");
@@ -947,7 +953,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfAccountTAndCsLabelConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(accountTAndCsLabelConsentModal);
-			logger.debug("ACCOUNT TERMS AND CONDITIONS on Consent modal is displayed");
+			logger.debug("ACCOUNT TERMS AND CONDITIONS on Consent modal is displayed for Mobile");
 		} else {
 			isDisplayed(accountTAndCsLabelConsentModal);
 			logger.debug("ACCOUNT TERMS AND CONDITIONS on Consent modal is displayed");
