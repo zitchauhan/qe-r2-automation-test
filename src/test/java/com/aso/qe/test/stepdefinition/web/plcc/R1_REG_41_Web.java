@@ -7,8 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PLCC_Mobile_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Registration_PO;
+import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -17,6 +20,8 @@ public class R1_REG_41_Web extends CommonActionHelper {
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
 	R1_PLCC_Registration_PO plccPageObjects = PageFactory.initElements(driver, R1_PLCC_Registration_PO.class);
+	R2_MyAccount_PO myAccount_po= PageFactory.initElements(driver, R2_MyAccount_PO.class);
+	R1_PLCC_Mobile_PO plccMobile_po= PageFactory.initElements(driver, R1_PLCC_Mobile_PO.class);
 
 	@Then("^user click on Add Company name, Apt\\. Number, etc\\. \\(Optional\\) link$")
 	public void user_click_on_Add_Company_name_Apt_Number_etc_Optional_link() throws Throwable {
@@ -52,7 +57,10 @@ public class R1_REG_41_Web extends CommonActionHelper {
 		globalElementHeader.clickOnBurgerMenu();
 	}
 	//validatePresenceOfMyAccountLink
-	
+	@Given("^user click on expand all Academy services$")
+	public void user_click_on_expand_all_Academy_services() throws Throwable {
+		globalElementHeader.clickOnExpandAllAcademyServices();
+	}
 	@When("^user unselect Add Address for Faster Checkout checkbox$")
 	public void user_unselect_Add_Address_for_Faster_Checkout_checkbox() throws Throwable {
 		plccPageObjects.addAddressCheckBox.click();   
@@ -92,6 +100,13 @@ public class R1_REG_41_Web extends CommonActionHelper {
 	public void user_expect_element_Phone_number_to_not_be_present() throws Throwable {
 		plccPageObjects.verifyAbsenceOfPhoneNumber(); 
 	}
-
+	
+	
+	
+	@When("^user click on My Account link of mobile$")
+	public void user_click_on_My_Account_link_of_mobile() throws Throwable {
+		plccMobile_po.verifyPresenceOfMyAccountLinkOnMobile();
+		myAccount_po.myAccount_txt_Mobile.click();
+	}
 
 }

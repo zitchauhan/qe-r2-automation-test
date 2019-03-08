@@ -425,7 +425,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfFirstNameCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(firstNameCCModal);
-			logger.debug("First Name Text Field on Credit Card Application Modal is displayed");
+			logger.debug("First Name Text Field on Credit Card Application Modal is displayed for Mobile");
 		} else {
 			isDisplayed(firstNameCCModal);
 			logger.debug("First Name Text Field on Credit Card Application Modal is displayed");
@@ -465,7 +465,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfGenericCreditCardApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(creditCardApplicationModal);
-			logger.debug("Generic Credit Card Application Modal is displayed");
+			logger.debug("Generic Credit Card Application Modal is displayed for Mobile");
 		} else {
 			isDisplayed(creditCardApplicationModal);
 			logger.debug("Generic Credit Card Application Modal is displayed");
@@ -980,7 +980,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfPageLabelPCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(pageLabelPCCApplicationModal);
-			logger.debug(" STEP1:PRESCREEN ACCEPTANCE 2 on Pre-screen Credit card ApplicationModal is displayed");
+			logger.debug(" STEP1:PRESCREEN ACCEPTANCE 2 on Pre-screen Credit card ApplicationModal is displayed for Mobile");
 		} else {
 			isDisplayed(pageLabelPCCApplicationModal);
 			logger.debug(" STEP1:PRESCREEN ACCEPTANCE on Pre-screen Credit card ApplicationModal is displayed");

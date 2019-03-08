@@ -1917,6 +1917,18 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 				Thread.sleep(Constants.thread_low);
 			}
 	}
+	public void clickOnExpandAllAcademyServices() throws InterruptedException {
+		isClickable(expandall_Academy_services);
+		if(isDisplayed(expandall_Academy_services)) {
+			Thread.sleep(3000);
+			assertTrue(clickOnButton(expandall_Academy_services));
+			Thread.sleep(Constants.thread_low);
+			}
+			else {
+				driver.navigate().refresh();
+				Thread.sleep(Constants.thread_low);
+			}
+	}
 	//SID UserJourney 22-August
 
 	public void verifyMyAccount()
