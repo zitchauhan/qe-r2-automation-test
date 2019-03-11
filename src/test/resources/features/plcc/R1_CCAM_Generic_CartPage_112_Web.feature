@@ -20,7 +20,7 @@ Background:  Common Pre-requisite steps
 	Then user navigates to Cart Page 
 	And user click on plcc banner of cart button
 	
-@C-PLCC @Regression @All @PLCC-112 @CR-VS 
+@C-PLCC @Regression @All @PLCC-112 @CR-VS
 Scenario: Verify the display of generic banner on cart page
 	And user navigates to Generic Credit Card Application Modal
 	
