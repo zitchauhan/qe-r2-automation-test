@@ -1,8 +1,9 @@
-Feature: PLCC: Credit Card Application Modal_Cart Page
+Feature: PLCC: Credit Card Application Modal_Cart Page for Mobile
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user navigates to ASO-Home page 
+	And user click on expand all Academy services
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
 	And user expect Preescreen Code Text Field is to be present
@@ -10,12 +11,12 @@ Background:  Common Pre-requisite steps
 	And user click on ACCEPT OFFER 
 
 	
-@C-PLCC @Regression @All @PLCC-226 @CR-Manju 
+@C-PLCC @Regression @All @PLCC-226 @CR-Manju @Mobile
 Scenario: Verify Prescreen Modal when user enter invalid pre screen code
 	And user navigates to Generic Credit Card Application Modal
 	
 	
-@C-PLCC @Regression @All @PLCC-226 @CR-Manju
+@C-PLCC @Regression @All @PLCC-226 @CR-Manju @Mobile
 Scenario: Verify the display of elements available on Prescreen  model 
 	And user expect element STEP 1 :PRESCREEN ACCEPTANCE present 
 	And user expect element disclosure Text one on Pre-Screen Modal to be present
@@ -40,7 +41,7 @@ Scenario: Verify the display of elements available on Prescreen  model
 	
 
 	
-@C-PLCC @Regression @All @PLCC-226 @CR-Manju
+@C-PLCC @Regression @All @PLCC-226 @CR-Manju @Mobile
  Scenario: Verify the system behavior when user clicks on Continue button on Prescreen model by missing any of the mandatory field
  	And user enter Last four SSN "invalidSSNP"
 	And user enter Email Address on credit card Application Modal "invalidEmailP"
@@ -48,7 +49,7 @@ Scenario: Verify the display of elements available on Prescreen  model
 	And user expect error message on email id field
 	And user expect error message on ssn field
 	
-@C-PLCC @Regression @All @PLCC-226 @CR-Manju 
+@C-PLCC @Regression @All @PLCC-226 @CR-Manju @Mobile
 Scenario: Verify the system behavior when user clicks on Continue button on Prescreen modal 1 
 	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName"
@@ -68,7 +69,7 @@ Scenario: Verify the system behavior when user clicks on Continue button on Pres
 	And user verify presence of STEP2: CONSENT
 	And user select credit application modal agree message 
 	
-@C-PLCC @Regression @All @PLCC-226 @CR-Manju 
+@C-PLCC @Regression @All @PLCC-226 @CR-Manju @Mobile
 Scenario: Verify the display of elements available on consent modal from cart page
 	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName"
@@ -141,11 +142,11 @@ Scenario: Verify the system behavior when user clicks on Continue button on Pres
 	And user verify presence of STEP2: CONSENT
 	Then user expect submit button not clickable 
 
-@C-PLCC @Regression @All @PLCC-226 @CR-Manju 
-Scenario: Verify the system behavior when user click on cancel link in Prescreen modal
-	And user navigates to Generic Credit Card Application Modal
-	When user click on cancel link
-	Then user navigates to Cart Page
+#@C-PLCC @Regression @All @PLCC-226 @CR-Manju 
+#Scenario: Verify the system behavior when user click on cancel link in Prescreen modal
+#	And user navigates to Generic Credit Card Application Modal
+#	When user click on cancel link
+#	Then user navigates to Cart Page
 	
 	
 	

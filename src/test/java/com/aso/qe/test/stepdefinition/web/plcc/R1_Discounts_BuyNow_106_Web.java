@@ -22,8 +22,12 @@ public class R1_Discounts_BuyNow_106_Web extends CommonActionHelper{
 	R1_PDP_PO PDPpagePO = PageFactory.initElements(driver, R1_PDP_PO.class);
 	@When("^user click on Buy Now button$")
 	public void user_clicks_on_Buy_Now_button() throws Throwable {
-		genericPO.verifyPresenceOfBuyNowButton();
-		genericPO.buyNowButton.click();
+		try {
+			genericPO.verifyPresenceOfBuyNowButton();
+			genericPO.buyNowButton.click();
+		} catch (Exception e) {
+			System.out.println("Exception Message: "+e.getMessage());
+		}
 	}
 	@When("^user click on Buy Now in pop up modal$")
 	public void user_click_on_Buy_Now_in_pop_up_modal() throws Throwable {
@@ -47,22 +51,26 @@ public class R1_Discounts_BuyNow_106_Web extends CommonActionHelper{
 	
 	@Given("^user click on Buy Now button in pop up modal$")
 	public void user_click_on_Buy_Now_button_in_pop_up_modal() throws Throwable {
-		String MainWindow=driver.getWindowHandle();	
-		Set<String> s1=driver.getWindowHandles();		
-        Iterator<String> i1=s1.iterator();		
-        System.out.println("SET"+s1);
-        while(i1.hasNext())			
-        {		
-            String ChildWindow=i1.next();		
-            		
-            if(!MainWindow.equalsIgnoreCase(ChildWindow))			
-            {    		
-                    // Switching to Child window
-                    driver.switchTo().window(ChildWindow);
-                    genericPO.clickBuynowBtnInPopupModal.click();
-                    Thread.sleep(5000);
-            }
-        }
+		try {
+			String MainWindow=driver.getWindowHandle();	
+			Set<String> s1=driver.getWindowHandles();		
+			Iterator<String> i1=s1.iterator();		
+			System.out.println("SET"+s1);
+			while(i1.hasNext())			
+			{		
+			    String ChildWindow=i1.next();		
+			    		
+			    if(!MainWindow.equalsIgnoreCase(ChildWindow))			
+			    {    		
+			            // Switching to Child window
+			            driver.switchTo().window(ChildWindow);
+			            genericPO.clickBuynowBtnInPopupModal.click();
+			            Thread.sleep(5000);
+			    }
+			}
+		} catch (Exception e) {
+			
+		}
 	}
 	
 	@Given("^user click on Default PaymentFormSubmit Button for BuyNow$")

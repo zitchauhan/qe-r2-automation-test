@@ -72,7 +72,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public WebElement prescreenCodeTextField;
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement acceptOfferBtn;
-
+	
 	// BENEFITS
 	@FindBy(xpath = "//*[@data-auid='LandingPage_Benefit-1']")
 	public WebElement benefit1Image;
@@ -316,9 +316,9 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfApplyNowButton() throws Exception {
 
-		if ("web".equalsIgnoreCase(testtype)) {
+		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(applyNowButton);
-			logger.debug("Apply Now button is displayed");
+			logger.debug("Apply Now button is displayed for Mobile");
 			Common_Web_PLCC.waitUntilElePresent(driver, applyNowButton, ELEMWAITTIME_MEDIUM);
 		} else {
 			isDisplayed(applyNowButton);
@@ -381,7 +381,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfPreescreenTextField() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(prescreenCodeTextField);
-			logger.debug("Pre-screen Text Field is displayed");
+			logger.debug("Pre-screen Text Field is displayed for Mobile");
 		} else {
 			isDisplayed(prescreenCodeTextField);
 			logger.debug("Pre-screen Text Field is displayed");
@@ -458,9 +458,9 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfLandingPage() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("/shop/store/academy-credit-card")) {
-			logger.debug("User is successfully navigated to ASO Home page with URL :: " + currentURL);
+			logger.debug("User is successfully navigated to Landing page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to ASO Home Page instead navigated to URL :: " + currentURL);
+			logger.debug("User is not able to navigate to Landing Page instead navigated to URL :: " + currentURL);
 		}
 
 	}

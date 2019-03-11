@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_CreditCardApplicationModal_PO;
+import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.Then;
 
@@ -15,6 +16,8 @@ public class R1_CCAM_Response_ExistingCustomer_94_Web extends CommonActionHelper
 			R1_PLCC_CreditCardApplicationModal_PO.class);
 	R1_PLCC_CreditCardApplicationModal_PO plccCCApplicationModalObjects = PageFactory.initElements(driver,
 			R1_PLCC_CreditCardApplicationModal_PO.class);
+	R2_MyAccount_PO myAccount_po = PageFactory.initElements(driver,R2_MyAccount_PO.class);
+	
 	@Then("^user navigates to existing account modal$")
 	public void user_navigates_to_existing_account_modal() throws Throwable {
 		ccAplicationModal_PO.verifyPresenceOfExistingCustomer();
@@ -27,5 +30,11 @@ public class R1_CCAM_Response_ExistingCustomer_94_Web extends CommonActionHelper
 	public void user_click_on_continue_to_checkout_button_on_existing_user_modal() throws Throwable {
 		ccAplicationModal_PO.verifyPresenceOfContinueToCheckoutExistingUser();
 		ccAplicationModal_PO.continueBtnExistingUser.click();
+	}
+	
+	//mobile implementation
+	@Then("^user click on Payments link on mobile$")
+	public void user_click_on_Payments_link_on_mobile() throws Throwable {
+		myAccount_po.lnkPayment_Mobile.click();
 	}
 }

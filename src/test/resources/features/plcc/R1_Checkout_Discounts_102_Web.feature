@@ -16,7 +16,7 @@ Background:  Common Pre-requisite steps
 	And user click on Payments link
 	Then delete all credit cards from My Account 
 	
-
+@C-PLCC @Regression @All @PLCC-102 @CR-VS	
 Scenario: Verify user is able to get Annual offer of $15 off by providing the promo code
  	And usr click on view cart and navigates to cart page
  	Then user navigates to cart page
@@ -33,7 +33,4 @@ Scenario: Verify user is able to get Annual offer of $15 off by providing the pr
 	When user click on edit my cart link 
 	And user click on remove promo card link
 	Then user click on remove from cart 
-	When user click on My Account link
-	And user click on Payments link
-	Then delete all credit cards from My Account
 	

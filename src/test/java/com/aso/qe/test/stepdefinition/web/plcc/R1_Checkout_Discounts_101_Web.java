@@ -104,32 +104,36 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
 
 	@Then("^user expect five percent discount$")
 	public void user_expect_five_percent_discount() throws Throwable {
-		plccCCApplicationModalObjects.verifyPresenceOfSubTotalValue();
-		String subTotalValue = plccCCApplicationModalObjects.subtotalValue.getText().replace("$", "").trim();
-		logger.debug("Subtotal value of the product is " + subTotalValue);
-		double convertedToDouble;
 		try {
-			convertedToDouble = Double.parseDouble(subTotalValue);
-		} catch (NumberFormatException e) {
-			convertedToDouble = 0;
-		}
-		float fivePercentDiscount = (float) ((5 * convertedToDouble) / 100);
-		BigDecimal bd=new BigDecimal(fivePercentDiscount);
-		BigDecimal actualValue = bd.setScale(2, BigDecimal.ROUND_HALF_EVEN );
-		logger.debug("Actual Value of Five Percent of Subtotal is " + fivePercentDiscount);
-		logger.debug("Round Of Value of Five Percent of Subtotal is " + actualValue);
-		
-		genericPO.verifyPresenceOfDiscountValue();
-		String valueOnWeb = genericPO.discountValue.getText().replace("-$", "").trim();
-	
-		BigDecimal expectedValue=new BigDecimal(valueOnWeb);
-		if(actualValue==expectedValue)
-		{
-			logger.debug("Discount on Web and Discount Calulated are matching");
-		}
-		else
-		{
-			logger.debug("Discount on Web and Discount Calulated are not matching");
+			plccCCApplicationModalObjects.verifyPresenceOfSubTotalValue();
+			String subTotalValue = plccCCApplicationModalObjects.subtotalValue.getText().replace("$", "").trim();
+			logger.debug("Subtotal value of the product is " + subTotalValue);
+			double convertedToDouble;
+			try {
+				convertedToDouble = Double.parseDouble(subTotalValue);
+			} catch (NumberFormatException e) {
+				convertedToDouble = 0;
+			}
+			float fivePercentDiscount = (float) ((5 * convertedToDouble) / 100);
+			BigDecimal bd=new BigDecimal(fivePercentDiscount);
+			BigDecimal actualValue = bd.setScale(2, BigDecimal.ROUND_HALF_EVEN );
+			logger.debug("Actual Value of Five Percent of Subtotal is " + fivePercentDiscount);
+			logger.debug("Round Of Value of Five Percent of Subtotal is " + actualValue);
+			
+			genericPO.verifyPresenceOfDiscountValue();
+			String valueOnWeb = genericPO.discountValue.getText().replace("-$", "").trim();
+
+			BigDecimal expectedValue=new BigDecimal(valueOnWeb);
+			if(actualValue==expectedValue)
+			{
+				logger.debug("Discount on Web and Discount Calulated are matching");
+			}
+			else
+			{
+				logger.debug("Discount on Web and Discount Calulated are not matching");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception Message: "+e.getMessage());
 		}
 
 	}

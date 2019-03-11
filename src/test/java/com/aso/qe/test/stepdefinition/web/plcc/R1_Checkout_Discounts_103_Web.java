@@ -78,8 +78,13 @@ public void user_expect_element_credit_card_text_field_is_present() throws Throw
 }
 @Then("^user expect discount text to be present$")
 public void user_expect_discount_text_to_be_present() throws Throwable {
-	genericPO.verifyPresenceOfDiscountText();
-	Thread.sleep(5000);
+	try {
+		genericPO.verifyPresenceOfDiscountText();
+		Thread.sleep(5000);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 }
 @Then("^user clicks on checkout button on cart page$")
 public void user_clicks_on_checkout_button_on_cart_page() throws Throwable {
