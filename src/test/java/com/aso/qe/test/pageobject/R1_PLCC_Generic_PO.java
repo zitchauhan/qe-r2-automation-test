@@ -170,6 +170,14 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[@data-auid='crt_inputQty']")
 	public WebElement quantityInputField;
 	
+	
+	//Error -Invalid PreScreen Code
+	
+	@FindBy(xpath = "//*[@data-auid='prescreen_error'] | //*[text()='Your Prescreen ID was not found. You may complete a credit application.']" )
+	public WebElement errorInvalidPreScreenCode;
+	
+	
+	
 	// Order Summary:
 		@FindBy(xpath = "//*[@data-auid='checkout_order_summary_section']//div[4]/div[2]")
 		public WebElement discountValue;
@@ -182,6 +190,19 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	//Free Shipping:
 	@FindBy(xpath = "//*[@data-auid='freeShip']")
 	public WebElement freeShippingTxt;
+	
+	//Invalid PreScreen Code:
+	public void verifyPresenceOfErrorInvalidPreScreenCode() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(errorInvalidPreScreenCode);
+			logger.debug("Error messgage when user enter invalid Pre-screen is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(errorInvalidPreScreenCode);
+			logger.debug("Error messgage when user enter invalid Pre-screen is displayed++++++++++++++++++++++++");
+		}
+
+	}
 	
 	//enter Prmo Code
 	public void enterPromoCode(String arg) throws Exception {

@@ -37,7 +37,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement bannerCartPage;
 	@FindBy(xpath = "//*[@data-auid='continuetocheckout_existing_user']")
 	public WebElement continueBtnExistingUser;
-	@FindBy(xpath = "//*[@data-auid='continuetocheckout_']")
+	@FindBy(xpath = "//*[@data-auid='continuetocheckout_error']")
 	public WebElement continueToCheckoutBtnErrorModal;
 	@FindBy(xpath = "//*[@data-auid='continuetocheckout_declined']")
 	public WebElement continueToCheckoutBtnURModal;
@@ -415,7 +415,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfConsentModelPageLabel() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(firstNameCCModal);
-			logger.debug("STEP2: CONSENT is displayed");
+			logger.debug("STEP2: CONSENT is displayed on mobile");
 		} else {
 			isDisplayed(firstNameCCModal);
 			logger.debug("STEP2: CONSENT is displayed");
@@ -614,7 +614,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfContinueButtonCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(continueButtonCCModal);
-			logger.debug("Continue Button on Credit Card Application Modal is displayed");
+			logger.debug("Continue Button on Credit Card Application Modal is displayed on Mobile");
 		} else {
 			isDisplayed(continueButtonCCModal);
 			logger.debug("Continue button on Credit Card Application Modal is displayed");
@@ -645,7 +645,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfSuccessModalCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(successModal);
-			logger.debug("Credit Card Application Form Submit Success Modal is displayed");
+			logger.debug("Credit Card Application Form Submit Success Modal is displayed on mobile");
 		} else {
 			isDisplayed(successModal);
 			logger.debug("Credit Card Application Form Submit Success Modal is displayed");

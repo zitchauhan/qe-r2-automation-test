@@ -124,7 +124,7 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 	@Then("^user place fifty orders and see the response with \"(.*?)\" with PLCC Card \"(.*?)\"$")
 	public void user_place_fifty_orders_and_see_the_response_with_with_PLCC_Card(String searchText, String plccCard)
 			throws Throwable {
-		for (int n = 1; n <= 50; n++) {
+		for (int n = 1; n <= 3; n++) {
 			logger.debug("Number of Orders successfully Placed:" + n);
 			waitForPageLoad(driver);
 			searchKey = webPropHelper.getTestDataProperty(searchText);
@@ -183,7 +183,7 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 			genericPO.verifyPresenceOfCheckoutPage();
 			// CommonActionHelper.waitUntilElePresent(driver,
 			// checkout_po.btnPlaceOrderPaymentPage, ELEMWAITTIME_MEDIUM);
-			genericPO.verifyPresenceOfSaveForLaterCheckBox();
+			//genericPO.verifyPresenceOfSaveForLaterCheckBox();
 			genericPO.enterCardBinNumber(plccCard);
 			assertTrue(isDisplayed(genericPO.CreditCardNumber_Input));
 			waitForElement(genericPO.CreditCardNumber_Input);
