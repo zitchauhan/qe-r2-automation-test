@@ -48,8 +48,13 @@ public class R1_CCAM_Response__UnderReview_95_Web extends CommonActionHelper {
 	}
 	@Then("^user click on continue to checkout button$")
 	public void user_click_on_continue_icon_to_checkout_button() throws Throwable {
-		ccAplicationModal_PO.verifyPresenceOfContinueToCheckoutCCModal();
-		ccAplicationModal_PO.continueToCheckout.click();
+		try {
+			ccAplicationModal_PO.verifyPresenceOfContinueToCheckoutCCModal();
+			ccAplicationModal_PO.continueToCheckout.click();
+		} catch (Exception e) {
+			logger.debug("Exception Message: "+e.getMessage());
+		}
+		Thread.sleep(3000);
 	}
 	@Then("^user click on close icon of error modal$")
 	public void user_click_on_close_icon_of_error_modal() throws Throwable {

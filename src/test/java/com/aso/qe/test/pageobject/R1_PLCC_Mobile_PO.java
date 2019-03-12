@@ -1,6 +1,8 @@
 package com.aso.qe.test.pageobject;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -11,6 +13,11 @@ public class R1_PLCC_Mobile_PO extends CommonActionHelper{
 	R1_PDP_PO pdp_po= PageFactory.initElements(driver, R1_PDP_PO.class);
 	R2_MyAccount_PO myAccount_po= PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	
+	@FindBy(xpath="//*[@data-auid='search-input_m']")  
+	public WebElement searchInputfieldMobile;	
+	
+	@FindBy(xpath="//*[@data-auid='search-clear-button_m']")  
+	public WebElement searchIconMobile;
 	
 	public void verifyPresenceOfMyAccountLinkOnMobile() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {

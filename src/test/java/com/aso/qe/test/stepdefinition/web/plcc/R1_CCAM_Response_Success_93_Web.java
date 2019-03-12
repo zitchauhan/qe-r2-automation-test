@@ -50,7 +50,11 @@ public class R1_CCAM_Response_Success_93_Web extends CommonActionHelper{
 }
 	@Then("^user click on close icon of success modal$")
 	public void user_click_on_close_icon_of_success_modal() throws Throwable {
-		ccAplicationModal_PO.closeIconSuccessModal.click();
+		try {
+			ccAplicationModal_PO.closeIconSuccessModal.click();
+		} catch (Exception e) {
+			logger.debug("Exception Message for not clicking Close icon in success Modal: "+e.getMessage());
+		}
 }
 	
 	

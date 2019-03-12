@@ -17,6 +17,7 @@ import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_LandingPage_PO;
+import com.aso.qe.test.pageobject.R1_PLCC_Mobile_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Registration_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
@@ -44,6 +45,8 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	R2_R1_Fun_PO r2_r1_fun_po = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	R1_SearchProduct_PO r1_SearchPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
 	R2_Cart_PO cartR2PageObj = PageFactory.initElements(driver, R2_Cart_PO.class);
+	R1_PLCC_Mobile_PO plccMobile_PO = PageFactory.initElements(driver, R1_PLCC_Mobile_PO.class);
+	 
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 
 	@When("^user enters \"(.*?)\" in the search box plcc$")
@@ -53,6 +56,21 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		assertTrue(isDisplayed(plccLandingPageObjects.searchBox));
 		waitForElement(plccLandingPageObjects.searchBox);
 	}
+	
+	@When("^user enters \"(.*?)\" in the search box plcc for mobile$")
+	public void user_enters_in_the_search_box_plcc_for_mobile(String arg1) throws Throwable {
+		Thread.sleep(5000);
+		plccPageObjects.enterSearchItemMobile(arg1);
+		assertTrue(isDisplayed(plccMobile_PO.searchInputfieldMobile));
+		waitForElement(plccMobile_PO.searchInputfieldMobile);
+	}
+
+	@When("^user click on search icon for mobile$")
+	public void user_click_on_search_icon_for_mobile() throws Throwable {
+		plccMobile_PO.searchIconMobile.click();
+		Thread.sleep(3000);
+	}
+
 
 	/*@When("^user click on Add to cart button plcc$")
 	public void user_click_on_Add_to_cart_button_plcc() throws Throwable {
@@ -69,7 +87,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		pdpPageObj.addToCartAvailability();
 		waitForElement(pdpPageObj.btnAddToCart);
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 	}
 	
 	@Given("^user click on Add an Item to cart Button$")
@@ -94,7 +112,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	@When("^user click on checkout from ATC pop up plcc$")
 	public void user_click_on_checkout_from_ATC_pop_up_plcc() throws Throwable {
 		genericPO.clickOnCheckoutButton();
-		Thread.sleep(13000);
+		Thread.sleep(14000);
 		//Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_SLOW);
 	}
 
@@ -856,17 +874,29 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 
 	@When("^user enter Gift card \"(.*?)\"$")
 	public void user_enter_Gift_card(String arg1) throws Throwable {
-		genericPO.enterGiftCardNumber(arg1);
+		try {
+			genericPO.enterGiftCardNumber(arg1);
+		} catch (Exception e) {
+			logger.debug("Exception Message:"+e.getMessage());
+		}
 	}
 
 	@When("^user enter CVV number for Gift card \"(.*?)\"$")
 	public void user_enter_CVV_number_for_Gift_card(String arg1) throws Throwable {
-		genericPO.enterCVVNumber(arg1);
+		try {
+			genericPO.enterCVVNumber(arg1);
+		} catch (Exception e) {
+			logger.debug("Exception Message:"+e.getMessage());
+		}
 	}
 
 	@When("^user click on gift card Apply Button$")
 	public void user_click_on_gift_card_Apply_Button() throws Throwable {
-		genericPO.giftCardApplyButton.click();
+		try {
+			genericPO.giftCardApplyButton.click();
+		} catch (Exception e) {
+			logger.debug("Exception Message:"+e.getMessage());
+		}
 		Thread.sleep(3000);
 	}
 	

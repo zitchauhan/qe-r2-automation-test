@@ -441,7 +441,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public void verifyPresenceOfCancelLinkCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(cancelLinkCCModal);
-			logger.debug("Cancel Link on Credit Card Application Modal is displayed");
+			logger.debug("Cancel Link on Credit Card Application Modal is displayed for Mobile");
 		} else {
 			isDisplayed(cancelLinkCCModal);
 			logger.debug("Cancel Link on Credit Card Application Modal is displayed");
