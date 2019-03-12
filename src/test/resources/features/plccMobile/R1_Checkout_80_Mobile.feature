@@ -8,17 +8,12 @@ Background:  Common Pre-requisite steps
 	And user enter password in sign-in page "password" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
-	And user click on My Account link of mobile
-	And user click on Payments link
-	Then delete all credit cards from My Account
-	And user clears everything in cart
-	When user enters "SKUIdOfProduct" in the search box plcc
-	And user click on search icon 
+	When user enters "SKUIdOfProduct" in the search box plcc for mobile
+    And user click on search icon for mobile
 	#And user click on Add to Cart Button 
 	And user click on Add to Cart button  
 	And user click on checkout from ATC pop up plcc
-	And user clicks on checkout button and navigates to checkout page 
-	
+	And user clicks on checkout button and navigates to checkout page 	
 	
 @C-PLCC @Regression @All @PLCC-80 @CR-VS	
 Scenario: Verify the system behavior when user enter 778 as three digit BIN number 

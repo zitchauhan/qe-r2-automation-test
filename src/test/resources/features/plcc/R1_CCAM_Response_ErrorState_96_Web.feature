@@ -62,7 +62,7 @@ Scenario: Verify the elements available on Time Out/Processing Error modal
 	When user click on SUBMIT button
 	Then user navigates to error modal 
 	And user expect element disclosure text on error modal to be present
-	And user expect error text to be presentk
+	And user expect error text to be present
 	And user expect element Error Card Modal Image to be present
 	And user expect element close icon on error modal is present
 	And user expect element continue To Checkout button to be present

@@ -24,9 +24,3 @@ Scenario: Verify the functionality of Hiding CVV section when system identifies 
 	When user handles adding new card "starting3digitsplccCard" if already card is saved
 	Then user expect element cvv field to be not present 
 	
-@C-PLCC @Regression @All @PLCC-82 @CR-VS
-Scenario: Verify the system behavior of hiding CVV section when user enters different payment card other than PLCC credit card 
-	When user handles adding new card "starting3digitsplccCard" if already card is saved
-	Then user expect selected credit card image on credit card text field 
-	And user expect element visa card image on credit card text field to present 
-	And user expect element cvv field to be present
