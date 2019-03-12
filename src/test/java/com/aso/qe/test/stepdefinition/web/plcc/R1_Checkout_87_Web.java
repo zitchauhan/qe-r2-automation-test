@@ -183,7 +183,7 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 			genericPO.verifyPresenceOfCheckoutPage();
 			// CommonActionHelper.waitUntilElePresent(driver,
 			// checkout_po.btnPlaceOrderPaymentPage, ELEMWAITTIME_MEDIUM);
-			genericPO.verifyPresenceOfSaveForLaterCheckBox();
+			//genericPO.verifyPresenceOfSaveForLaterCheckBox();
 			genericPO.enterCardBinNumber(plccCard);
 			assertTrue(isDisplayed(genericPO.CreditCardNumber_Input));
 			waitForElement(genericPO.CreditCardNumber_Input);

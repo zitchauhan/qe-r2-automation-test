@@ -22,7 +22,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src/test/resources/features/web/R1_PDP_KER_3849_Web.feature",
 		glue="com.aso.qe.test.stepdefinition.web",
-				//tags ="@C-PLCC",
+				//tags ="@AutomationSanityR2",
 		monochrome=true, 
 		format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
 		) 

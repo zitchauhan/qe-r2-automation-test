@@ -458,9 +458,9 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfLandingPage() throws Exception {
 		String currentURL = getCurrentPageURL();
 		if (currentURL.contains("/shop/store/academy-credit-card")) {
-			logger.debug("User is successfully navigated to ASO Home page with URL :: " + currentURL);
+			logger.debug("User is successfully navigated to Landing page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to ASO Home Page instead navigated to URL :: " + currentURL);
+			logger.debug("User is not able to navigate to Landing Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
