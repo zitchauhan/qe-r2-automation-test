@@ -1,5 +1,5 @@
 Feature: PLCC: Checkout - Payment Using PLCC 
-		
+                
 @C-PLCC @Regression @All @PLCC-84 @CR-VS @PlaceMultiOrders
 Scenario: Verify user is able to place Multiple orders using PLCC Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 

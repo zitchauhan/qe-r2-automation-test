@@ -342,14 +342,22 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 
 	@When("^user click on edit my cart link$")
 	public void user_click_on_edit_my_cart_link() throws Throwable {
-		genericPO.verifyPresenceOfEditMyCartLink();
-		r2CheckOutPo.btnEditCart.click();
+		try {
+			genericPO.verifyPresenceOfEditMyCartLink();
+			r2CheckOutPo.btnEditCart.click();
+		} catch (Exception e) {
+			logger.debug("Exception Message: "+e.getMessage());
+		}
 	}
 
 	@When("^user click on remove from cart$")
 	public void user_click_on_remove_from_cart() throws Throwable {
-		genericPO.verifyPresenceOfRemoveFromCartLink();
-		r2CheckOutPo.AS_btnRemoveFromCart.click();
+		try {
+			genericPO.verifyPresenceOfRemoveFromCartLink();
+			r2CheckOutPo.AS_btnRemoveFromCart.click();
+		} catch (Exception e) {
+			logger.debug("Exception Message: "+e.getMessage());
+		}
 		
 	}
 
@@ -906,7 +914,6 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	}
 	@Then("^user clears everything in cart$")
 	public void user_clears_everything_in_cart() throws Throwable {
-		
 		try {
 			genericPO.verifyPresenceOfCartIcon();
 			genericPO.cartIcon.click();
@@ -915,9 +922,16 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 			Thread.sleep(10000);
 		} catch (Exception e) {
 		
+			logger.debug("Exception Message: "+ e.getMessage());
+		}
+	}
+	@Given("^user click on Academy Logo Icon$")
+	public void user_click_on_Academy_Logo_Icon() throws Throwable {
+		try {
+			genericPO.academyLogoIcon.click();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
 	@Then("^user handles adding new card \"(.*?)\" if already card is saved$")
