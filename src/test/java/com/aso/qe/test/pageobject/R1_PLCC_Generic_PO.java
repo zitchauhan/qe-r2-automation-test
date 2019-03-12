@@ -85,7 +85,8 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[text()='Remove from Cart'] | //*[@data-auid='crt_btnRmvFromCart_710320043']")
 	public WebElement RemoveFromCartBtn;
 	
-	 
+	@FindBy(xpath = "//img[@src='/content/dam/academysports/Logo.png']")
+	public WebElement academyLogoIcon; 
 	
 
 //Payment Page Card Images
