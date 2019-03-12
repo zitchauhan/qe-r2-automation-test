@@ -18,6 +18,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	R1_PDP_PO pdp_po = PageFactory.initElements(driver, R1_PDP_PO.class);
 	R1_PLCC_LandingPage_PO plccLandingPageObjects = PageFactory.initElements(driver, R1_PLCC_LandingPage_PO.class);
 	R1_PLCC_Generic_PO plccGenericPageObjects = PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
+	R1_PLCC_Mobile_PO plccMobile_PO = PageFactory.initElements(driver, R1_PLCC_Mobile_PO.class);
 	//Common_Web_SD_PLCC timer = new Common_Web_SD_PLCC();
 	
 
@@ -708,7 +709,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void enterSearchItem(String arg) throws Exception {
 		setInputText(plccLandingPageObjects.searchBox, webPropHelper.getTestDataProperty(arg));
 	}
-
+	public void enterSearchItemMobile(String arg) throws Exception {
+		setInputText(plccMobile_PO.searchInputfieldMobile, webPropHelper.getTestDataProperty(arg));
+	}
+	
 	// LastName
 	public void enterLastNameTxtField(String arg) throws Exception {
 		setInputText(lastNameTxtField, webPropHelper.getTestDataProperty(arg));
