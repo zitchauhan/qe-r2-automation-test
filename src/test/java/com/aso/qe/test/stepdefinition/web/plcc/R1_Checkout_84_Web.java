@@ -23,13 +23,18 @@ public class R1_Checkout_84_Web extends CommonActionHelper{
 	public void delete_all_credit_cards_from_My_Account() throws Throwable {
 		try {
 			myAccountPage_po.deleteAllCreditCardsFromMyAccount();
+			Thread.sleep(3000);
 		} catch (Exception e) {
 			logger.debug("Exception Message: "+e.getMessage());
 		}
 	}
 	@When("^user click on Payments link$")
 	public void user_click_on_Payments_link() throws Throwable {
-		myAccountPage_po.myAccount_MyAccountList_Payment_lnk.click();
+		try {
+			myAccountPage_po.myAccount_MyAccountList_Payment_lnk.click();
+		} catch (Exception e) {
+			logger.debug("Exception Message: "+e.getMessage());
+		}
 	}
 	
 }
