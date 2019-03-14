@@ -18,6 +18,7 @@ public class R1_CCAM_Generic_CartPage_112_Web extends CommonActionHelper {
 	R1_PLCC_Registration_PO plccRegistration_PO = PageFactory.initElements(driver,R1_PLCC_Registration_PO.class);
 	@Then("^user click on plcc banner of cart button$")
 	public void user_click_on_plcc_banner_of_cart_button() throws Throwable {
+		Thread.sleep(5000);
 		ccAplicationModal_PO.verifyPresenceOfBannerOnCartPage();
 		//ccAplicationModal_PO.bannerCartPage.click();
 	}

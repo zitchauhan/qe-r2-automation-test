@@ -26,6 +26,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	// PLCC-41 (AddressCheckbox)
 	// @FindBy(xpath = "//*[@data-auid='signInCta']")public WebElement
 	// myAccountLinkOnAsoHomePage;
+	@FindBy(xpath="//*[@data-auid='expand-search_m']/span")  public WebElement expandSearchIcon;
 	@FindBy(xpath="//*[@data-auid='billingEmail']")  public WebElement inputEmailAddressTxtBuynow;
 	@FindBy(xpath = "//*[@data-auid='MyAccount']")
 	public WebElement myAccountLinkOnAsoHomePage;

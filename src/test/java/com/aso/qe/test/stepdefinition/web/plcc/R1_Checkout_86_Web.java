@@ -161,7 +161,11 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 
 	@Then("^user navigates to cart page$")
 	public void user_navigates_to_cart_page() throws Throwable {
-		plccCCApplicationModalObjects.verifyPresenceOfCartPage();
+		try {
+			plccCCApplicationModalObjects.verifyPresenceOfCartPage();
+		} catch (Exception e) {
+			System.out.println("Exception Message: "+e.getMessage());
+		}
 	}
 
 	@When("^user click on continue shopping  button$")

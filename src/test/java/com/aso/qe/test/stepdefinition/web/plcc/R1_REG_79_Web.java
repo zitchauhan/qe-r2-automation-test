@@ -3,6 +3,9 @@ package com.aso.qe.test.stepdefinition.web.plcc;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -140,5 +143,18 @@ public class R1_REG_79_Web extends CommonActionHelper {
 	@And("^user click on Sign Out link$")
 	public void user_click_on_Sign_Out_link() throws Throwable {
 		plccPageObjects.signOutLink.click();
+	}
+	
+
+	@Given("^user click on expand academy search icon$")
+	public void user_click_on_expand_academy_search_icon() throws Throwable {
+		//plccPageObjects.expandSearchIcon.click();
+		try {
+			WebElement element = driver.findElement(By.xpath("//*[@id='headerForScroll']/nav[2]/div/div/ul/li[3]/button/span"));
+			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();", element);
+		} catch (Exception e) {
+			logger.debug("Exception message:: " + e.getMessage());
+		}
 	}
 }

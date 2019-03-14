@@ -1,4 +1,4 @@
-Feature: PLCC:Credit Card Application Modal_Consent Model for Mobile
+Feature: PLCC:Credit Card Application Modal - Submit button Application Consent Modal for Mobile
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 

@@ -1,9 +1,10 @@
-Feature: Registration for Field Mobile
+Feature: Registration for Mobile Field level Errors Mobile 
 
 Background: Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user click on My Account link 
-	And  user click on Sign Up link 
+	When user click on burger menu
+	And user click on My Account link of mobile
+	And user click on Sign Up link  
 	Then user select Add Address for Faster Checkout checkbox 
 	And user click on SIGN UP 
 	And user expect Please enter the First Name to be present 
@@ -14,13 +15,13 @@ Background: Common Pre-requisite steps
 	And user expect City is required Name to be present 
 	And user expect State is required to be present 
 	
-@C-PLCC @Regression @All @PLCC-50 @CR-VS 
+@C-PLCC @Regression @All @PLCC-50 @CR-Manju @Mobile
 Scenario: Verify an error message without providing mandatory fields.
 #<Note: without providing ADDRESS, Zip Code, CITY, State and Phone number>
 	And user expect Zip code is required Name to be present 
 	And user expect Mobile number is required to be present 
 	
-@C-PLCC @Regression @All @PLCC-50 @CR-VS 
+@C-PLCC @Regression @All @PLCC-50 @CR-Manju @Mobile
 Scenario: Verify an error message when user provides invalid data
 #<Note: Provided invalid ADDRESS, Zip Code, CITY, State and Phone number>
 	And user enter Zip Code "Invalid_ZipCode" 
