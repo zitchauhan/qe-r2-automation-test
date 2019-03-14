@@ -928,7 +928,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	@Given("^user click on Academy Logo Icon$")
 	public void user_click_on_Academy_Logo_Icon() throws Throwable {
 		try {
-			genericPO.academyLogoIcon.click();
+			plccLandingPageObjects.imgAcademyLogo.click();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
