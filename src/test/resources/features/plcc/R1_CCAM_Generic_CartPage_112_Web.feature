@@ -180,7 +180,7 @@ Scenario: Verify the system behavior when user clicks on Close button when user 
 	Then user navigates to Cart Page
 
 @C-PLCC @Regression @All @PLCC-112 @CR-VS 
-Scenario: Verify the system behavior when user clicks on Cancel link on consenr modal when user navigates to CCAM from cart page
+Scenario: Verify the system behavior when user clicks on Cancel link on consent modal when user navigates to CCAM from cart page
 	And user navigates to Generic Credit Card Application Modal
 	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName" 
@@ -378,7 +378,7 @@ And user navigates to Generic Credit Card Application Modal
 	And user enter Confirm Email Address "ConfirmEmailId" 
 	And user enter Mobile Phone "MobilePhone" 
 	And user enter Alternate Phone "AlternatePhone" 
-	And user click on CONTINUE button 
+	And user click on CONTINUE button
 	And user verify presence of STEP2: CONSENT
 	And user select credit application modal agree message 
 	When user click on SUBMIT button

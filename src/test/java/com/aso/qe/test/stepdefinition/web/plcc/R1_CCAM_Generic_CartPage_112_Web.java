@@ -22,4 +22,9 @@ public class R1_CCAM_Generic_CartPage_112_Web extends CommonActionHelper {
 		ccAplicationModal_PO.verifyPresenceOfBannerOnCartPage();
 		//ccAplicationModal_PO.bannerCartPage.click();
 	}
+	
+	@Then("^user expect plcc credit banner on cart page$")
+public void user_expect_plcc_credit_banner_on_cart_page() throws Throwable {
+		ccAplicationModal_PO.verifyPresenceOfBannerOnCartPage();
+}
 }

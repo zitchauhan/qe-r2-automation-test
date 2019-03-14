@@ -930,11 +930,13 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	@Given("^user click on Academy Logo Icon$")
 	public void user_click_on_Academy_Logo_Icon() throws Throwable {
 		try {
+
 			//plccLandingPageObjects.imgAcademyLogo.click();
 			WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/Logo.png']"));
 			JavascriptExecutor executor = (JavascriptExecutor)driver;
 			executor.executeScript("arguments[0].click();", element);
 			logger.debug("Academy Logo icon is displayed");
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
