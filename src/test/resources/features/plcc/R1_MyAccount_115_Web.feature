@@ -1,4 +1,4 @@
-Feature: PLCC: MyAccount
+Feature: PLCC: MyAccount PLCC card information saved under customer profile 
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
