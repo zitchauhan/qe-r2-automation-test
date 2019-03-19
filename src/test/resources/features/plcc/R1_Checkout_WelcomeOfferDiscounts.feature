@@ -9,7 +9,7 @@ Background:  Common Pre-requisite steps
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page
 	 
-@C-PLCC @Regression @All @PLCC-101 @CR-Manju	
+@C-PLCC @Regression @All @PLCC-101 @CR-Manju @AutomationSanityR2
 Scenario: Verify user is able to get Welcome offer of ten Percent off by providing the promo code
 	When user enters "skuIdGr150" in the search box plcc
 	And user click on search icon 

@@ -1,6 +1,6 @@
 Feature: PLCC Discounts Buy now 
 
-@C-PLCC @Regression @All @PLCC-106 @CR-Manju
+@C-PLCC @Regression @All @PLCC-106 @CR-Manju @AutomationSanityR2
 Scenario: Verify user can process the order
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 

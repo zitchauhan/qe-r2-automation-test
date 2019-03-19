@@ -67,7 +67,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement disclosureTxt1PCCApplicationModal;
 	@FindBy(xpath = "//div[4]/div[6]")
 	public WebElement disclosureTxt2PCCApplicationModal;
-	@FindBy(xpath = "//*[text()=' STEP1:PRESCREEN ACCEPTANCE ']")
+	@FindBy(xpath = "//*[text()=' STEP 1 : PRESCREEN ACCEPTANCE ']")
 	public WebElement pageLabelPCCApplicationModal;
 	@FindBy(xpath = "//*[@data-auid='acceptOffer']")
 	public WebElement acceptOfferButtonPCCApplicationModal;

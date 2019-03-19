@@ -31,7 +31,7 @@ Scenario: Verify the system behavior when user selects Add Company Name, Apt. Nu
 Scenario: Verify the system behavior when user unselects Add Address for faster checkout process check box in registration page
 	When user select Add Address for Faster Checkout checkbox
 	Then user expect element Add company name, Apt.Number, etc. (Optional) to be present
-	Then user expect element Address to be present
+	And user expect element Address to be present
 	And user expect element Zip Code to be present
 	And user expect element City to be present
 	And user expect element State to be present

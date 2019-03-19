@@ -12,7 +12,7 @@ Background: Common Pre-requisite steps
 	And user click on Payments link
 	Then delete all credit cards from My Account
 
-@C-PLCC @Regression @All @PLCC-100 @CR-VS	
+@C-PLCC @Regression @All @PLCC-100 @CR-VS @AutomationSanityR2
 Scenario: Verify user is able to get 5% discount for any of the item in academy application
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
@@ -31,7 +31,7 @@ Scenario: Verify user is able to get 5% discount for any of the item in academy 
 	And user click on Payments link
 	Then delete all credit cards from My Account
 	
-@C-PLCC @Regression @All @PLCC-100 @CR-VS	
+@C-PLCC @Regression @All @PLCC-100 @CR-VS @AutomationSanityR2
 Scenario: Verify user is able to apply 5% discount along with free shipping offer
     When user enters "SKUIdOfProductGr15" in the search box plcc
 	And user click on search icon 
@@ -50,7 +50,7 @@ Scenario: Verify user is able to apply 5% discount along with free shipping offe
 	And user click on Payments link
 	Then delete all credit cards from My Account	
 	
-@C-PLCC @Regression @All @PLCC-100 @CR-Manju	
+@C-PLCC @Regression @All @PLCC-100 @CR-Manju @AutomationSanityR2	
 Scenario: Verify user is unable to get 5% discount for Gift card details any of the item in academy application
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
@@ -71,7 +71,7 @@ Scenario: Verify user is unable to get 5% discount for Gift card details any of 
 	And user click on Payments link
 	Then delete all credit cards from My Account
 
-@C-PLCC @Regression @All @PLCC-100 @CR-Manju	
+@C-PLCC @Regression @All @PLCC-100 @CR-Manju @AutomationSanityR2
 Scenario: Verify message when user applied gift card along with the discount
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 

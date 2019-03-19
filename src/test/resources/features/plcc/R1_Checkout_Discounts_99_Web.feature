@@ -12,7 +12,7 @@ Background:  Common Pre-requisite steps
 	And user click on Payments link
 	Then delete all credit cards from My Account 
 		
-@C-PLCC @Regression @All @PLCC-99 @CR-Manju
+@C-PLCC @Regression @All @PLCC-99 @CR-Manju @AutomationSanityR2
 Scenario: Verify user is able to get Free shipping offer with Item value greater than 15$ 
     When user enters "SKUIdOfProductGr15" in the search box plcc
 	And user click on search icon 
@@ -25,7 +25,7 @@ Scenario: Verify user is able to get Free shipping offer with Item value greater
 	When user click on edit my cart link 
 	Then user click on remove from cart 
 	
-@C-PLCC @Regression @All @PLCC-99 @CR-Manju
+@C-PLCC @Regression @All @PLCC-99 @CR-Manju @AutomationSanityR2
 Scenario: Verify user is unable to get Free shipping offer with Item value lesser than 15$ 
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 

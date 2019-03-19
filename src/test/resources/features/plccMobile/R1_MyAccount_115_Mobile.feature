@@ -2,21 +2,21 @@ Feature: PLCC: MyAccount
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user click on My Account link 
+	When user click on burger menu 
+	And user click on My Account link of mobile
 	And user enter Email address in sign-in page "Email_Generic" 
 	And user enter password in sign-in page "password" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page
-	When user click on My Account link 
-    And user click on Payments link 
-    Then delete all credit cards from My Account 
-    And user clears everything in cart            
-	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
+	And user clears everything in cart
+	And user click on Academy Logo Icon 
+	And user click on expand all Academy services
+	When user click on AcademyCreditCard link in the footer section of ASO-Home page  
 	Then user expect Landing page to be present 
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal
 	
-@C-PLCC @Regression @All @PLCC-115 @CR-VS @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-115 @CR-VS @Mobile
 Scenario: Verify PLCC card information saved under customer profile
 	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName"
@@ -38,7 +38,8 @@ Scenario: Verify PLCC card information saved under customer profile
 	When user click on SUBMIT button
 	Then user navigates to credit card approval modal 
 	When user click on continue to checkout 
-	When user click on My Account link 
+	And user click on Academy Logo Icon
+	And user click on My Account link of mobile
     And user click on Payments link 
 	Then user expect plcc card to be save in payments section of my account
 	

@@ -24,6 +24,11 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	/*@FindBy(xpath = "//*[@data-auid='checkout_payment_add_gift_card_icon']")
 	public WebElement gitCardLink;*/
 	
+	
+			
+	@FindBy(xpath = "//*[@data-auid='btnShipIt']")
+	public WebElement shipItButton;
+	
 	@FindBy(xpath = "//span[text()='Enter a Gift Card']")
 	public WebElement gitCardLink;
 	

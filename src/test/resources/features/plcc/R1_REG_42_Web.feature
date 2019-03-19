@@ -47,7 +47,7 @@ Scenario: Verify user is able to navigates to shopping bag after clicking on Let
 	And click on LET'S SHOP button
 	And user navigates to ASO-Home page 
 	
-@C-PLCC @Regression @All @PLCC-42 @CR-Manju
+@C-PLCC @Regression @All @PLCC-42 @CR-Manju @AutomationSanityR2
 Scenario: Verify the Address in MyAccount section
 	When user expect element User Select Address to be present 
 	Then user click on User Select Address
@@ -55,3 +55,13 @@ Scenario: Verify the Address in MyAccount section
     And user click on Address Book in MyAccount link
     And user expect element Address Book to be present
     And user expect element Add New Address link to be present
+    
+   	
+@C-PLCC @Regression @All @PLCC-42 @CR-Manju @AutomationSanityR2
+Scenario: Verify the Address in MyAccount section
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user click on My Account link 
+	And user expect element Email Address to be present 
+	And user enter Email address in sign-in page "Email_IdentifyCardType" 
+	And user enter password in sign-in page "password" 
+	And user click on Signin-button 

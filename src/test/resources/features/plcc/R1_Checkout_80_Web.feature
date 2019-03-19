@@ -20,7 +20,7 @@ Background:  Common Pre-requisite steps
 	And user clicks on checkout button and navigates to checkout page 
 	
 	
-@C-PLCC @Regression @All @PLCC-80 @CR-VS	
+@C-PLCC @Regression @All @PLCC-80 @CR-VS @AutomationSanityR2
 Scenario: Verify the system behavior when user enter 778 as three digit BIN number 
 	And user handles adding new card "starting3digitsplccCard" if already card is saved
 	Then user expect selected credit card image on credit card text field  
@@ -58,7 +58,7 @@ Scenario: Verify the system behavior when user enter 34 as two digit BIN number
 	And user click on Payments link 
 	Then delete all credit cards from My Account 
 	
-@C-PLCC @Regression @All @PLCC-80 @CR-VS
+@C-PLCC @Regression @All @PLCC-80 @CR-VS @AutomationSanityR2
 Scenario: Verify the system behavior when user enter 65 as two digit BIN number 
 	And user handles adding new card "starting2digitsdiscoverCard" if already card is saved
 	Then user expect selected credit card image on credit card text field 
@@ -66,7 +66,7 @@ Scenario: Verify the system behavior when user enter 65 as two digit BIN number
 	When user click on edit my cart link 
 	Then user click on remove from cart 
 
-@C-PLCC @Regression @All @PLCC-80 @CR-VS	
+@C-PLCC @Regression @All @PLCC-80 @CR-VS
 Scenario: Verify the system behavior when user enter invalid digits as BIN number 
 	And user handles adding new card "InvalidCard" if already card is saved
 	Then user expect element invalid card type error message to present 

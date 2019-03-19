@@ -9,6 +9,6 @@ Background:  Common Pre-requisite steps
 	And user enter Preescreen Code "InvalidValid_PrescreenCode_1"
 	And user click on ACCEPT OFFER 
 
-@C-PLCC @Regression @All @PLCC-577 @CR-Manju 
+@C-PLCC @Regression @All @PLCC-577 @CR-Manju @AutomationSanityR2
 Scenario: Verify Prescreen Modal when user enter invalid pre screen code
 	And user expect element error message for invalid prescreen code to be present

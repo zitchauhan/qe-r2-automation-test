@@ -20,8 +20,8 @@ Background:  Common Pre-requisite steps
 	Then user navigates to Cart Page 
 	And user click on plcc banner of cart button
 	
-@C-PLCC @Regression @All @PLCC-112 @CR-VS
-Scenario: Verify the display of generic banner on cart page
+@C-PLCC @Regression @All @PLCC-112 @CR-VS @AutomationSanityR2
+Scenario: Verify the display of generic banner via cart page apply now banner
 	And user navigates to Generic Credit Card Application Modal
 	
 @C-PLCC @Regression @All @PLCC-112 @CR-VS 
@@ -295,7 +295,7 @@ And user navigates to Generic Credit Card Application Modal
 	Then user expect submit button clickable
 	
 
-@C-PLCC @Regression @All @PLCC-112 @CR-VS
+@C-PLCC @Regression @All @PLCC-112 @CR-VS @AutomationSanityR2
  Scenario: Verify user able to navigate to Success Modal when nvaigate to CCAM from Cart Page 
 	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName"

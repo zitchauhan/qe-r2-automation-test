@@ -19,6 +19,9 @@ public class R1_PLCC_Mobile_PO extends CommonActionHelper{
 	@FindBy(xpath="//*[@data-auid='search-clear-button_m']")  
 	public WebElement searchIconMobile;
 	
+	@FindBy(xpath = "//*[@data-auid='Payments_m']") // CR-RK 8 Sep
+	public WebElement myAccount_MyAccountList_Payment_lnk_mobile; 
+	
 	public void verifyPresenceOfMyAccountLinkOnMobile() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(myAccount_po.myAccount_txt_Mobile);
