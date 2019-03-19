@@ -1,4 +1,4 @@
-Feature: Landing Page 
+Feature: PLCC : Landing Page Prescreen Code 
 
 Background:  Common Pre-requisite steps
 Given user launches the browser and navigates to "ASO_HOME" page 

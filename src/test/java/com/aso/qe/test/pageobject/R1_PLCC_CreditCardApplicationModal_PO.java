@@ -258,18 +258,30 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	
 	
 	public void verifyPresenceOfBannerOnCartPage() throws Exception {
-		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(bannerCartPage);
-			bannerCartPage.click();
-			//driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-desktop.jpg']")).click();
-			logger.debug("Banner on Cart Page is displayed");
-		} else {
-			isDisplayed(bannerCartPage);
-			//bannerCartPage.click();
-			WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-desktop.jpg']"));
-			JavascriptExecutor executor = (JavascriptExecutor)driver;
-			executor.executeScript("arguments[0].click();", element);
-			logger.debug("Banner on Cart Page is displayed");
+		if ("mobile".equalsIgnoreCase(testtype)) 
+		{
+			try {
+				bannerCartPage.click();
+				logger.debug("Banner on Cart Page is displayed");
+			} catch (Exception e) {
+				isDisplayed(bannerCartPage);
+				WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-desktop.jpg']"));
+				JavascriptExecutor executor = (JavascriptExecutor)driver;
+				executor.executeScript("arguments[0].click();", element);
+				logger.debug("Banner on Cart Page is displayed");
+			}
+		} 
+		else 
+		{
+			try {
+				bannerCartPage.click();
+			} catch (Exception e) {
+				isDisplayed(bannerCartPage);
+				WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-desktop.jpg']"));
+				JavascriptExecutor executor = (JavascriptExecutor)driver;
+				executor.executeScript("arguments[0].click();", element);
+				logger.debug("Banner on Cart Page is displayed");
+			}
 		}
 	}
 	

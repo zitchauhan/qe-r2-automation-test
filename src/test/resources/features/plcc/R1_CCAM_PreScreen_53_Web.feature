@@ -1,4 +1,4 @@
-Feature: PLCC: Credit Card Application Modal
+Feature: PLCC: CCAM_Pre-Screen Credit Credit Card Application Modal
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 

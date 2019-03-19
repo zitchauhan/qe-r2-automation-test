@@ -1,4 +1,4 @@
-Feature: PLCC: Checkout - Payment Using PLCC : Hide CVV
+Feature: PLCC: Checkout_Payment Using PLCC : Hide CVV
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 

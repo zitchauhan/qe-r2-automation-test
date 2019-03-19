@@ -170,19 +170,24 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 
 	/*-------------------------------author:Vidya Siddaramappa (Mindtree QA)------------------------------------*/
 
-	public void clickOnMyAccountLink() throws Exception {
-
-		{
-			assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
-			isClickable(myAccountLinkOnAsoHomePage);
-			if (isDisplayed(myAccountLinkOnAsoHomePage)) {
-				Thread.sleep(5000);
-				assertTrue(clickOnButton(myAccountLinkOnAsoHomePage));
-				Thread.sleep(1000);
-			} else {
-				driver.navigate().refresh();
-				Thread.sleep(1000);
+	public void clickOnMyAccountLink() throws Exception 
+	{
+		try {
+			{
+				assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
+				isClickable(myAccountLinkOnAsoHomePage);
+				if (isDisplayed(myAccountLinkOnAsoHomePage)) 
+				{
+					Thread.sleep(5000);
+					assertTrue(clickOnButton(myAccountLinkOnAsoHomePage));
+					Thread.sleep(1000);
+				} else {
+					driver.navigate().refresh();
+					Thread.sleep(1000);
+				}
 			}
+		} catch (Exception e) {
+			logger.debug("Exception Message: "+e.getMessage());
 		}
 	}
 

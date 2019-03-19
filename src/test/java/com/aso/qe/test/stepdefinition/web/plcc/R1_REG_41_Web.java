@@ -118,5 +118,14 @@ public class R1_REG_41_Web extends CommonActionHelper {
 		plccMobile_po.verifyPresenceOfMyAccountLinkOnMobile();
 		myAccount_po.myAccount_txt_Mobile.click();
 	}
+	@When("^user click on This Academy expand icon plcc$")
+	public void user_click_on_This_Academy_expand_icon_plcc() throws Throwable {
+		globalElementHeader.clickOnExpandAllThisIsAcademy();
+	}
+	
+	@When("^user click on Need Help expand icon$")
+	public void user_click_on_Need_Help_expand_icon() throws Throwable {
+		globalElementHeader.clickOnExpandAllNeedHelp();
+	} 
 
 }

@@ -19,6 +19,5 @@ Scenario: Verify the system behavior when user enters valid 12 digits, numeric p
 	And user click on ACCEPT OFFER
 	And user expect element STEP 1 :PRESCREEN ACCEPTANCE present
 	
-#Invalid Pre-screen code capture in PLCC-226 Scenario
 	 
  

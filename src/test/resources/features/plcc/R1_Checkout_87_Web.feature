@@ -1,4 +1,4 @@
-Feature: PLCC: Checkout - Payment Using PLCC 
+Feature: PLCC: Checkout_Payment Using PLCC 
 
 Background: User Login and common steps for identifying card type entering BIN 
 	Given user launches the browser and navigates to "ASO_HOME" page 

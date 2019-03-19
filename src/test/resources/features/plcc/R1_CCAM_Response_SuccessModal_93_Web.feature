@@ -1,4 +1,4 @@
-Feature: PLCC: Response Modals_Success Modal
+Feature: PLCC: CCAM_Response Modals_Success Modal
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 

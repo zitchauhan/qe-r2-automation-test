@@ -1962,7 +1962,31 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		}
 	
 	
+	public void clickOnExpandAllThisIsAcademy() throws InterruptedException {
+		isClickable(expandall_Academy_academy);
+		if(isDisplayed(expandall_Academy_academy)) {
+			Thread.sleep(3000);
+			assertTrue(clickOnButton(expandall_Academy_academy));
+			Thread.sleep(Constants.thread_low);
+			}
+			else {
+				driver.navigate().refresh();
+				Thread.sleep(Constants.thread_low);
+			}
+	} 
 	
+	public void clickOnExpandAllNeedHelp() throws InterruptedException {
+		isClickable(expandall_Academy_needhelp);
+		if(isDisplayed(expandall_Academy_needhelp)) {
+			Thread.sleep(3000);
+			assertTrue(clickOnButton(expandall_Academy_needhelp));
+			Thread.sleep(Constants.thread_low);
+			}
+			else {
+				driver.navigate().refresh();
+				Thread.sleep(Constants.thread_low);
+			}
+	} 
 	
 	
 	

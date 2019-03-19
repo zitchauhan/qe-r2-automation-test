@@ -1,4 +1,4 @@
-Feature: Landing Page 
+Feature: PLCC : Landing Page
 
 @C-PLCC @Regression @All @PLCC-39 @CR-VS 
 Scenario: Verify URL Redirect links from CBCC to PLCC-Landing Page by clicking on Academy Credit Card link for logged in use

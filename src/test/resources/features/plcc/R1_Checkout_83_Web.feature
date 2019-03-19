@@ -1,4 +1,4 @@
-Feature: PLCC: Checkout - Payment Using PLCC : Hide Expire Date
+Feature: PLCC: Checkout_Payment Using PLCC : Hide Expire Date
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 

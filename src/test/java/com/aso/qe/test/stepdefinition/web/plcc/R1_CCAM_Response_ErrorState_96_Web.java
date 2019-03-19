@@ -30,8 +30,12 @@ public class R1_CCAM_Response_ErrorState_96_Web extends CommonActionHelper  {
 	}
 	@When("^user click on continue to checkout button on error modal$")
 	public void user_click_on_continue_to_checkout_button_on_error_modal() throws Throwable {
-		ccAplicationModal_PO.verifyPresenceOfContinueToCheckoutErrorModal();
-		ccAplicationModal_PO.continueToCheckoutBtnErrorModal.click();
+		try {
+			ccAplicationModal_PO.verifyPresenceOfContinueToCheckoutErrorModal();
+			ccAplicationModal_PO.continueToCheckoutBtnErrorModal.click();
+		} catch (Exception e) {
+			logger.debug("Exception Message: "+e.getMessage());
+		}
 	}
 	@When("^user click on return to application on error modal$")
 	public void user_click_on_return_to_application_on_error_modal() throws Throwable {

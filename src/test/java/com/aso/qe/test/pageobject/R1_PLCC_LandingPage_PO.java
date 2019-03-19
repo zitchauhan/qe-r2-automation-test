@@ -104,7 +104,20 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[@data-auid='email-signup-main-modal-close']")
 	public WebElement emailSignUpModal;
 
+	@FindBy(xpath = "//*[@text='Grand Parkway']")
+	public WebElement GrandParkwayLinkInHeader; 
 	/*----------------------author:Vidya(MindtreeQA)-PLCC-----END--------------------------------*/
+	public void verifyPresenceOfGrand_Parkway() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(GrandParkwayLinkInHeader);
+			logger.debug("GrandParkway Link is displayed in mobile");
+			Common_Web_PLCC.waitUntilElePresent(driver, GrandParkwayLinkInHeader, ELEMWAITTIME_MEDIUM);
+		} else {
+			isDisplayed(GrandParkwayLinkInHeader);
+			logger.debug("WeeklyAd Link is not displayed++++++++++++++++++++++++==");
+		}
+	} 
 	public void clickOnAcademyCreditCardFooterLink() throws Exception {
 
 		{

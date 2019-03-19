@@ -52,3 +52,18 @@ Scenario: Verify user is able to apply 5% discount along with free shipping offe
 	And user click on Payments link
 	Then delete all credit cards from My Account
 	
+
+@C-PLCC @Regression @All @PLCC-100 @CR-Manju @Mobile
+Scenario: Verify message when user applied gift card along with the discount
+	When user enters "SKUIdOfProductLs15" in the search box plcc for mobile
+	And user click on search icon for mobile
+	And user click on Add to Cart button  
+	And user click on checkout from ATC pop up plcc
+	And user clicks on checkout button and navigates to checkout page
+	And user click on gift card link
+	When user enter Gift card "ValidGiftCard"
+	And user enter CVV number for Gift card "GiftCardCVV"
+	And user click on gift card Apply Button
+	And user expect element Gift card payment applied meesage to be present 
+	
+

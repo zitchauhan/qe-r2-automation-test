@@ -18,8 +18,7 @@ public class R1_Checkout_84_Web extends CommonActionHelper{
 	R2_CheckOut_PO checkout_po = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	R2_MyAccount_PO myAccountPage_po = PageFactory.initElements(getDriver(), R2_MyAccount_PO.class);
 	private static final Logger logger = Logger.getLogger(Common_Web_SD.class);
-	R1_PLCC_Mobile_PO plccMobile_po= PageFactory.initElements(driver, R1_PLCC_Mobile_PO.class); 
-	
+	R1_PLCC_Mobile_PO plccMobile_po= PageFactory.initElements(driver, R1_PLCC_Mobile_PO.class);
 	
 	@Then("^delete all credit cards from My Account$")
 	public void delete_all_credit_cards_from_My_Account() throws Throwable {
@@ -37,15 +36,8 @@ public class R1_Checkout_84_Web extends CommonActionHelper{
 		} catch (Exception e) {
 			logger.debug("Exception Message: "+e.getMessage());
 		}*/
-		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(plccMobile_po.myAccount_MyAccountList_Payment_lnk_mobile);
-			plccMobile_po.myAccount_MyAccountList_Payment_lnk_mobile.click();
-			logger.debug("Payment link in My account section is displayed for mobile");
-		} else {
-			isDisplayed(checkout_po.ReviewOrder_Btn);
-			myAccountPage_po.myAccount_MyAccountList_Payment_lnk.click();
-			logger.debug("Payment link in My account section is displayed");
-		}
-	} 
+
+		plccMobile_po.verifyPresenceOfPaymentLink();
+	}
 	
 }

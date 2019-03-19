@@ -1,4 +1,4 @@
-Feature: PLCC: Checkout - Payment Using PLCC : Identify Card Image in Footer
+Feature: PLCC: Checkout_Payment Using PLCC : Identify Card Image in Footer
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
