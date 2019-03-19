@@ -119,7 +119,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement lnkCheckGiftCardBalance;
 	@FindBy(xpath = "//*[text()='Brands']")
 	public WebElement brandsIndexLink;
-	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Check Order Status']")
+	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Check Order']")
 	public WebElement lnkcheckorderStatus;
 
 	// Field Validation Errors
