@@ -1,7 +1,7 @@
-Feature: PLCC Discounts Buy now 
+Feature: PLCC: Discounts for Buy now 
 
 @C-PLCC @Regression @All @PLCC-106 @CR-Manju
-Scenario: Verify user can process the order
+Scenario: Verify user can process the order for Buy Now
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
 	And user expect element Email Address to be present 

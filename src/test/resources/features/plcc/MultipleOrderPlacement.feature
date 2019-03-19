@@ -1,4 +1,4 @@
-Feature: PLCC: Checkout - Payment Using PLCC 
+Feature: PLCC: Checkout_Payment with Multiple Order Placement
                 
 @C-PLCC @Regression @All @PLCC-84 @CR-VS @PlaceMultiOrders
 Scenario: Verify user is able to place Multiple orders using PLCC Card 

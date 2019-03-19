@@ -1,4 +1,4 @@
-Feature: PLCC: Response Modals_Application Under Review Modal
+Feature: PLCC: CCAM_Response Modals_Application Under Review Modal
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 

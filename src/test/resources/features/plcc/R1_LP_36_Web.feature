@@ -1,4 +1,4 @@
-Feature: Landing Page 
+Feature: PLCC : Landing Page Benifits Section
 
 @C-PLCC @Regression @All @PLCC-36 @CR-VS 
 Scenario: Verify the display of container information on PLCC landing page

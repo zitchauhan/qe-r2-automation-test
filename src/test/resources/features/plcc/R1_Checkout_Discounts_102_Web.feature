@@ -1,4 +1,4 @@
-Feature: PLCC: Checkout - Payment Using PLCC 
+Feature: PLCC: Checkout_Payment Welcome offer of $15
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -17,7 +17,7 @@ Background:  Common Pre-requisite steps
 	Then delete all credit cards from My Account 
 	
 @C-PLCC @Regression @All @PLCC-102 @CR-VS	
-Scenario: Verify user is able to get Annual offer of $15 off by providing the promo code
+Scenario: Verify user is able to get Welcome offer of 15% when Basket<=$100
  	And usr click on view cart and navigates to cart page
  	Then user navigates to cart page
  	And user increases quantity "ItemQuantity" of product

@@ -1,4 +1,4 @@
-Feature: My Account
+Feature: PLCC: MyAccount
 
 @C-PLCC @Regression @All @PLCC-86 @CR-VS
 Scenario: Verify PLCC card information saved under customer profile

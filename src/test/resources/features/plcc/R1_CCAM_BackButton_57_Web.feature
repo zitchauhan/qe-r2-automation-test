@@ -1,4 +1,4 @@
-Feature: PLCC: Credit Card Application Modal
+Feature: PLCC: CCAM-Prescreen Modal_Back Button 
 
 @C-PLCC @Regression @All @PLCC-57 @CR-VS	
  Scenario: Verify the system behavior when user clicks on Back button_Pre-Screen

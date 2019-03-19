@@ -1,4 +1,4 @@
-Feature: PLCC:Credit Card Application Modal_Consent Model 
+Feature: PLCC: Validation in Credit Card Application Modal Consent Modal
 	
 @C-PLCC @Regression @All @PLCC-56 @CR-VS 
 Scenario: Verify the display of elements available on consent model_Generic Consent Modal

@@ -1,4 +1,4 @@
-Feature: PLCC Discounts for Enable BuyNow
+Feature: PLCC: Discounts for Enable BuyNow
 
 @C-PLCC @Regression @All @PLCC-106 @CR-VS
 Scenario: Verify user can process the order using Enable Buy Now

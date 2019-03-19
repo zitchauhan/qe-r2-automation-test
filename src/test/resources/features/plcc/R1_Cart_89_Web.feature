@@ -1,4 +1,4 @@
-Feature: Cart Page
+Feature: PLCC Card image_Cart Page
 
 @C-PLCC @Regression @All @PLCC-89 @CR-VS 
 Scenario: Verify the display of PLCC card image under We Accept section  

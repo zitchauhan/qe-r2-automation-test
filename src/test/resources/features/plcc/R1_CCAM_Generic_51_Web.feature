@@ -1,4 +1,4 @@
-Feature: PLCC: Credit Card Application Modal
+Feature: PLCC: Validation of Generic Credit Card Application Modal elements
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page 
