@@ -19,7 +19,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter Address plcc "Address"
 	And user expect element Zip Code to be present 
 	And user enter Zip Code "Zip_Code" 
-	And user expect element City to be present 
+	#And user expect element City to be present 
 	And user expect element State to be present 
 	And user expect element Phone number to be present 
 	And user enters Phone Number "Phone_Number" 

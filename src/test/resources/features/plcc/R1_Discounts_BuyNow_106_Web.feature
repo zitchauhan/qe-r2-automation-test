@@ -5,7 +5,7 @@ Feature: PLCC: Discounts for Buy now
 Scenario: Verify user can process the order for Buy Now
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When user click on My Account link 
-	And user expect element Email Address to be present 
+	#And user expect element Email Address to be present 
 	And user enter Email address in sign-in page "Email_UserWithSavedAddressAndPayment" 
 	And user enter password in sign-in page "BuynowPwd" 
 	Then user click on Signin-button 

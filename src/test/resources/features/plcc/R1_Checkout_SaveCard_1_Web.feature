@@ -3,8 +3,9 @@ Feature: PLCC: Checkout_Saved Card
 Background: Common Pre-requisite steps 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	
-@C-PLCC @Regression @All @PLCC-1 @CR-VS @AutomationSanityR2
-Scenario: Default ASO/PLcc credit card should be displayed on payment section for faster checkout process 
+@C-PLCC @Regression @All @PLCC-1 @CR-VS @AutomationSanityR2 
+Scenario:
+Default ASO/PLcc credit card should be displayed on payment section for faster checkout process 
 	When user enters "SKUIdOfProduct" in the search box plcc 
 	And user click on search icon 
 	And user click on Add to Cart button 
@@ -23,8 +24,10 @@ Scenario: Default ASO/PLcc credit card should be displayed on payment section fo
 	And user expect element my account link to be present 
 	When user enters "SKUIdOfProduct" in the search box plcc 
 	And user click on search icon 
-	And user click on Add to Cart button 
-	And user click on checkout from ATC pop up plcc 
+	And user click on ship it button 
+	And user click on viewcart button 
+	Then user navigates to Cart Page 
+	And user clicks on checkout button on cart page 
 	And user clicks on checkout button and navigates to checkout page 
 	Then user expect element saved card on payment section of checkout page to be present 
 	And user click on PLACE ORDER button 
@@ -39,11 +42,14 @@ Scenario: Default ASO/PLcc credit card should be displayed on payment section fo
 	Then delete all credit cards from My Account 
 	
 @C-PLCC @Regression @All @PLCC-1 @CR-VS 
-Scenario: Verify the default payment method when user tries to place an another order with the different session 
+Scenario:
+Verify the default payment method when user tries to place an another order with the different session 
 	When user enters "SKUIdOfProduct" in the search box plcc 
 	And user click on search icon 
-	And user click on Add to Cart button 
-	And user click on checkout from ATC pop up plcc 
+	And user click on ship it button 
+	And user click on viewcart button 
+	Then user navigates to Cart Page 
+	And user clicks on checkout button on cart page 
 	And user clicks on checkout button and navigates to checkout page 
 	And user expect element credit card text field is present 
 	When user handles adding new card "ValidPLCCCard" if already card is saved 
@@ -58,8 +64,10 @@ Scenario: Verify the default payment method when user tries to place an another 
 	And user expect element my account link to be present 
 	When user enters "SKUIdOfProduct" in the search box plcc 
 	And user click on search icon 
-	And user click on Add to Cart button 
-	And user click on checkout from ATC pop up plcc 
+	And user click on ship it button 
+	And user click on viewcart button 
+	Then user navigates to Cart Page 
+	And user clicks on checkout button on cart page 
 	And user clicks on checkout button and navigates to checkout page 
 	Then user expect element saved card on payment section of checkout page to be present 
 	And user click on PLACE ORDER button 
@@ -104,8 +112,10 @@ Scenario: Verify User is able to get the Approved Modal for guest User
 	Then user navigates to cart page 
 	When user enters "SKUForBuyNow" in the search box plcc 
 	And user click on search icon 
-	And user click on Add to Cart button 
-	And user click on checkout from ATC pop up plcc 
+	And user click on ship it button 
+	And user click on viewcart button 
+	Then user navigates to Cart Page 
+	And user clicks on checkout button on cart page 
 	And user clicks on checkout button and navigates to checkout page 
 	And user expecte element Sign in link for guest user 
 	
@@ -139,8 +149,10 @@ Scenario: Verify the Signin Link for Guest user available on Check out page
 	Then user navigates to cart page 
 	When user enters "SKUForBuyNow" in the search box plcc 
 	And user click on search icon 
-	And user click on Add to Cart button 
-	And user click on checkout from ATC pop up plcc 
+	And user click on ship it button 
+	And user click on viewcart button 
+	Then user navigates to Cart Page 
+	And user clicks on checkout button on cart page 
 	And user clicks on checkout button and navigates to checkout page 
 	And user expect element Order Summary to be present 
 	And user expecte element Sign in link for guest user 
