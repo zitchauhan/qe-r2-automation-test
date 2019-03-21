@@ -20,7 +20,7 @@ import cucumber.api.junit.Cucumber;
 		)*/
 
 @CucumberOptions(
-		features="src/test/resources/features/web/R1_PDP_KER_3849_Web.feature",
+		features="src/test/resources/features/web",
 		glue="com.aso.qe.test.stepdefinition.web",
 				//tags ="@AutomationSanityR2",
 		monochrome=true, 

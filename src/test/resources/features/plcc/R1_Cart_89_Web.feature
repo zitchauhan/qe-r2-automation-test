@@ -2,7 +2,7 @@ Feature: PLCC Card image_Cart Page
 
 @C-PLCC @Regression @All @PLCC-89 @CR-VS 
 Scenario: Verify the display of PLCC card image under We Accept section  
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page
 	When user click on My Account link 
 	And user expect element Email Address to be present 
 	And user enter Email address in sign-in page "Email_Generic" 
