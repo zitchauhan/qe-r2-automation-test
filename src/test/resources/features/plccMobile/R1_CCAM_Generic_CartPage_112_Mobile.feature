@@ -14,7 +14,9 @@ Background:  Common Pre-requisite step
     And user click on search icon for mobile
     And user click on ship it button
 	And user click on viewcart button
-	Then user navigates to Cart Page 
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user clicks on checkout button and navigates to checkout page
 	And user click on plcc banner of cart button
 	
 @C-PLCC @Regression @All @PLCC-112 @CR-VS @Mobile
