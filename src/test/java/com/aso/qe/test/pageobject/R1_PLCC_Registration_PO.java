@@ -402,12 +402,12 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 
 	public void validatingCheckOrderStatus() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(lnkcheckorderStatus);
-			assertTrue(isClickable(lnkcheckorderStatus));
+			isDisplayed(globalElementHeader.lnkcheckorder);
+			assertTrue(isClickable(globalElementHeader.lnkcheckorder));
 			logger.debug("CheckOrder Status link is not displayed");
 		} else {
-			isDisplayed(lnkcheckorderStatus);
-			isClickable(lnkcheckorderStatus);
+			isDisplayed(globalElementHeader.lnkcheckorder);
+			isClickable(globalElementHeader.lnkcheckorder);
 			logger.debug("CheckOrder Status link is displayed++++++++++++++++++++++++==");
 		}
 	}

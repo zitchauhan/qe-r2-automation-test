@@ -15,9 +15,9 @@ Background:  Common Pre-requisite steps
 	#And user expect element ASO Home Page Title to be present
 	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
-	And user click on Add to Cart button 
+	And user click on ship it button
 	And user click on viewcart button
-	Then user navigates to Cart Page 
+	Then user navigates to Cart Page
 	And user click on plcc banner of cart button
 	
 @C-PLCC @Regression @All @PLCC-112 @CR-VS @AutomationSanityR2

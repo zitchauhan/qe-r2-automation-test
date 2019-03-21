@@ -15,8 +15,11 @@ Scenario: Verify user is able to place Multiple orders using PLCC Card
 	And user clears everything in cart
 	When user enters "SKUIdOfProduct" in the search box plcc 
 	And user click on search icon 
-	And user click on Add to Cart button 
-	And user click on checkout from ATC pop up plcc 
+	#And user click on Add to Cart button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user clicks on checkout button and navigates to checkout page 
 	And user expect element credit card text field is present 
 	When user handles adding new card "ValidPLCCCard" if already card is saved 

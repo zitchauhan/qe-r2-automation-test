@@ -129,6 +129,7 @@ And user click on expand all Academy services
 Scenario: Verify the system behavior when user clicks on Cancel link_Generic 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user navigates to ASO-Home page 
+	And user click on expand all Academy services
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
 	When user click on APPLY NOW button 

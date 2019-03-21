@@ -342,8 +342,8 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	
 	@Then("^user click on CheckOrder and navigates to CheckOrder Page$")
 	public void user_click_on_CheckOrder_and_navigates_to_CheckOrder_Page() throws Throwable {
-		  plccLandingPageObjects.lnkcheckorder.click();
-	      plccLandingPageObjects.verifyPresenceOfCheckOrderPage();
+		globalElementHeader.lnkcheckorder.click();
+	
 	}
 
 	@Then("^user click on ReturnPolicy and navigates to ReturnPolicy Page$")

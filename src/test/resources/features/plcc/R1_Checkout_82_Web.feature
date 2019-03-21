@@ -15,9 +15,11 @@ Background:  Common Pre-requisite steps
 	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
 	#And user click on Add to Cart Button 
-	And user click on Add to Cart button  
-	And user click on checkout from ATC pop up plcc
-	And user clicks on checkout button and navigates to checkout page 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user clicks on checkout button and navigates to checkout page
 	
 @C-PLCC @Regression @All @PLCC-82 @CR-VS
 Scenario: Verify the functionality of Hiding CVV section when system identifies BIN number for PLCC Credit card  
