@@ -1,7 +1,7 @@
 Feature: PLCC : Landing Page Prescreen Code 
 
 Background:  Common Pre-requisite steps
-Given user launches the browser and navigates to "ASO_HOME" page 
+Given user launches the browser and navigates to "ASO_HOME" page plcc
 When user click on AcademyCreditCard link in the footer section of ASO-Home page 
 Then user expect Landing page to be present 
 And user expect element FPO Apply Order section to be present 

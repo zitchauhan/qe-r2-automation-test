@@ -1,7 +1,7 @@
 Feature: PLCC : Landing Page Academy credit card Link
 
 Background:  Common Pre-requisite steps
-Given user launches the browser and navigates to "ASO_HOME" page 
+Given user launches the browser and navigates to "ASO_HOME" page plcc
 	
 @C-PLCC @Regression @All @PLCC-38 @CR-VS  
 Scenario: Verify the system behavior when user clicks on Academy Credit Card link

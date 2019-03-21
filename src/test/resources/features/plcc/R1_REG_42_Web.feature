@@ -1,7 +1,7 @@
 Feature: PLCC: Registration-Address Verification Modal
 
 Background:  Common Pre-requisite steps
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user click on My Account link 
 	And  user click on Sign Up link 
 	Then user expect element First Name to be present 	

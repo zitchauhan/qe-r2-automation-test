@@ -2,7 +2,7 @@ Feature: PLCC: Validation in Credit Card Application Modal Consent Modal
 	
 @C-PLCC @Regression @All @PLCC-56 @CR-VS 
 Scenario: Verify the display of elements available on consent model_Generic Consent Modal
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page pllc
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 

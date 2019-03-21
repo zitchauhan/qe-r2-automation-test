@@ -1,7 +1,7 @@
 Feature: PLCC: Checkout_Saved Card 
 
 Background: Common Pre-requisite steps 
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	
 @C-PLCC @Regression @All @PLCC-1 @CR-VS @AutomationSanityR2 
 Scenario:

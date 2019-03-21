@@ -2,7 +2,7 @@ Feature: PLCC: MyAccount
 
 @C-PLCC @Regression @All @PLCC-86 @CR-VS
 Scenario: Verify PLCC card information saved under customer profile
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user click on My Account link 
 	Then Verify below Sub/Main Module of MyAccount 
 		|# Verify following elements in Sign in/login page	|

@@ -2,7 +2,7 @@ Feature: PLCC: Checkout_Payment with Multiple Order Placement
                 
 @C-PLCC @Regression @All @PLCC-84 @CR-VS @PlaceMultiOrders
 Scenario: Verify user is able to place Multiple orders using PLCC Card 
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc 
 	When user click on My Account link 
 	And user expect element Email Address to be present 
 	And user enter Email address in sign-in page "Email_MultiOderPlacement" 
