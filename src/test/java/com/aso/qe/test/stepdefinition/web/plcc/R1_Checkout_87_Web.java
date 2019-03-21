@@ -179,21 +179,16 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 			Thread.sleep(Constants.thread_medium);
 			assertTrue(isDisplayed(plccLandingPageObjects.searchBox));
 			waitForElement(plccLandingPageObjects.searchBox);
-			pdpPageObj.addToCartAvailability();
-			waitForElement(pdpPageObj.btnAddToCart);
-			assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
-			genericPO.clickOnCheckoutButton();
-			Thread.sleep(Constants.thread_medium);
+			//pdpPageObj.addToCartAvailability();
+			genericPO.shipItButton.click();
+			genericPO.viewCartButton.click();
+			genericPO.checkoutBtnATCCartPage.click();
+			
+			//waitForElement(pdpPageObj.btnAddToCart);
+			//assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+			//genericPO.clickOnCheckoutButton();
+			//Thread.sleep(Constants.thread_medium);
 			genericPO.verifyPresenceOfCheckoutPage();
-			// CommonActionHelper.waitUntilElePresent(driver,
-			// checkout_po.btnPlaceOrderPaymentPage, ELEMWAITTIME_MEDIUM);
-			//genericPO.verifyPresenceOfSaveForLaterCheckBox();
-			//genericPO.enterCardBinNumber(plccCard);
-			//assertTrue(isDisplayed(genericPO.CreditCardNumber_Input));
-			//waitForElement(genericPO.CreditCardNumber_Input);
-			//genericPO.savePaymentInfoForLaterCheckBox.click();
-			//genericPO.verifyPresenceOfReviewOrderButton();
-			//checkout_po.ReviewOrder_Btn.click();
 			genericPO.verifyPresenceOfPlaceOrderButton();
 			checkout_po.btnPlaceOrderPaymentPage.click();
 			genericPO.verifyPresenceOfOrderConfirmationPage();

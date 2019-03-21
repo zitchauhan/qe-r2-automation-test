@@ -37,7 +37,7 @@ Scenario: Verify the display of Footer components on PLCC landing page
 	And user expect element ThisIsAcademy to be present 
 	And user expect element NeedHelp to be present
 	And user expect element PressReleases to be present 
-	And user expect element CheckOrder to be present 
+	And user expect element CheckOrder to be present
 	And user expect element ReturnPolicy to be present 
 	And user expect element ProductRecall to be present 
 	And user expect element Rebates to be present 

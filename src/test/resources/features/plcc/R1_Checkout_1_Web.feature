@@ -33,8 +33,11 @@ Scenario: Verify User is able to get the Approved Modal for guest User
 	Then user navigates to cart page
 	When user enters "SKUForBuyNow" in the search box plcc
 	And user click on search icon
-	And user click on Add to Cart button
-	And user click on checkout from ATC pop up plcc
+	#And user click on Add to Cart button
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user clicks on checkout button and navigates to checkout page
 	And user expecte element Sign in link for guest user
 	
@@ -63,8 +66,10 @@ Scenario: Verify the Signin Link for Guest user available on Check out page
 	Then user navigates to cart page
 	When user enters "SKUForBuyNow" in the search box plcc
 	And user click on search icon
-	And user click on Add to Cart button
-	And user click on checkout from ATC pop up plcc
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user clicks on checkout button and navigates to checkout page
 	And user expect element Order Summary to be present
 	And user expecte element Sign in link for guest user

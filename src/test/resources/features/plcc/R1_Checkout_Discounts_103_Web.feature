@@ -11,15 +11,17 @@ Background:  Common Pre-requisite steps
 	#And user expect element ASO Home Page Title to be present
 	When user enters "skuIdGr150" in the search box plcc
 	And user click on search icon 
-	And user click on Add to Cart button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
 	When user click on My Account link
 	And user click on Payments link
 	Then delete all credit cards from My Account
+	When user clicks on cart icon
+ 	Then user navigates to cart page
 	
 @C-PLCC @Regression @All @PLCC-102 @CR-VS @AutomationSanityR2
 Scenario: Verify user is able to get Annual offer of $15 off by providing the promo code 
- 	And usr click on view cart and navigates to cart page
- 	Then user navigates to cart page
  	And user increases quantity "ItemQuantity1" of product
  	And user click on add promo code link on cart page
  	And user element expect promo code section to be present

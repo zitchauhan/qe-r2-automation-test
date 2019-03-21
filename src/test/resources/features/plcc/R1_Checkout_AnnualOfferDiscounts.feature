@@ -13,9 +13,9 @@ Background:  Common Pre-requisite steps
 Scenario: Verify user is able to get Annual offer of ten Percent off by providing the promo code
 	When user enters "skuIdGr150" in the search box plcc
 	And user click on search icon 
-	And user click on Add to Cart button 
- 	And usr click on view cart and navigates to cart page
- 	Then user navigates to cart page
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
  	#And user increases quantity "ItemQuantity" of product
  	And user click on add promo code link on cart page
  	And user element expect promo code section to be present

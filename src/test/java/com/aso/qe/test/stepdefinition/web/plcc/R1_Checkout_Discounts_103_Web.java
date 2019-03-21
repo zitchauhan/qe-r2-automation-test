@@ -126,5 +126,8 @@ public void user_increases_quantity_of_product(String arg1) throws Throwable {
 	waitForElement(genericPO.quantityInputField);
 	Thread.sleep(10000);
 }
-
+@When("^user clicks on cart icon$")
+public void user_clicks_on_cart_icon() throws Throwable {
+	genericPO.cartIcon.click();
+}
 }

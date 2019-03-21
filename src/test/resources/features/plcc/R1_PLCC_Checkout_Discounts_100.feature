@@ -16,8 +16,10 @@ Background: Common Pre-requisite steps
 Scenario: Verify user is able to get 5% discount for any of the item in academy application
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
-	And user click on Add to Cart button
-	And user click on checkout from ATC pop up plcc
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user clicks on checkout button and navigates to checkout page 
 	When user enter plcc card "ValidPLCCCard"
 	And user click on REVIEW ORDER button
@@ -35,9 +37,11 @@ Scenario: Verify user is able to get 5% discount for any of the item in academy 
 Scenario: Verify user is able to apply 5% discount along with free shipping offer
     When user enters "SKUIdOfProductGr15" in the search box plcc
 	And user click on search icon 
-	And user click on Add to Cart button
-	And user click on checkout from ATC pop up plcc
-	And user clicks on checkout button and navigates to checkout page 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user clicks on checkout button and navigates to checkout page
 	When user enter plcc card "ValidPLCCCard"
 	And user click on REVIEW ORDER button
 	And user expect element Order Summary to be present
@@ -54,9 +58,11 @@ Scenario: Verify user is able to apply 5% discount along with free shipping offe
 Scenario: Verify user is unable to get 5% discount for Gift card details any of the item in academy application
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
-	And user click on Add to Cart button
-	And user click on checkout from ATC pop up plcc
-	And user clicks on checkout button and navigates to checkout page 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user clicks on checkout button and navigates to checkout page
 	And user click on gift card link
 	When user enter Gift card "ValidGiftCard"
 	And user enter CVV number for Gift card "GiftCardCVV"
@@ -75,9 +81,11 @@ Scenario: Verify user is unable to get 5% discount for Gift card details any of 
 Scenario: Verify message when user applied gift card along with the discount
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
-	And user click on Add to Cart button
-	And user click on checkout from ATC pop up plcc
-	And user clicks on checkout button and navigates to checkout page 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user clicks on checkout button and navigates to checkout page
 	And user click on gift card link
 	When user enter Gift card "ValidGiftCard"
 	And user enter CVV number for Gift card "GiftCardCVV"
