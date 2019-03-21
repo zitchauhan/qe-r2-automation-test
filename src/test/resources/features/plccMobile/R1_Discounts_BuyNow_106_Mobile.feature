@@ -2,7 +2,7 @@ Feature: PLCC Discounts Buy now For Mobile
 
 @C-PLCC @Regression @All @PLCC-106 @CR-Manju @Mobile
 Scenario: Verify user can process the order
-Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user click on burger menu
 	And user click on My Account link of mobile
 	And user expect element Email Address to be present 

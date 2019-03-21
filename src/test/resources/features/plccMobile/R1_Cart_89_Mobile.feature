@@ -2,7 +2,7 @@ Feature: Cart Page - Display PLCC Image for mobile
 
 @C-PLCC @Regression @All @PLCC-89 @CR-Manju @Mobile 
 Scenario: Verify the display of PLCC card image under We Accept section  
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc 
 	When user click on burger menu
 	And user click on My Account link of mobile
 	And user expect element Email Address to be present 

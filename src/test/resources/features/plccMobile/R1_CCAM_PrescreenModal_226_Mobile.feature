@@ -1,7 +1,7 @@
 Feature: PLCC: Credit Card Application Modal_Cart Page Invalid Prescreen Code for Mobile
 
 Background:  Common Pre-requisite steps
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc 
 	When user navigates to ASO-Home page 
 	And user click on expand all Academy services
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
