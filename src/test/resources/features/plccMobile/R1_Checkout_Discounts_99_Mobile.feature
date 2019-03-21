@@ -19,9 +19,11 @@ Scenario: Verify user is able to get Free shipping offer with Item value greater
 #	And user click on Academy Logo Icon
 	When user enters "SKUIdOfProductGr15" in the search box plcc for mobile
     And user click on search icon for mobile
-	And user click on Add an Item to cart Button
-	And user click on checkout from ATC pop up plcc
-	And user clicks on checkout button and navigates to checkout page 
+	And user click on ship it button 
+	And user click on viewcart button 
+	Then user navigates to Cart Page 
+	And user clicks on checkout button on cart page
+ 	And user clicks on checkout button and navigates to checkout page
 	And user click on REVIEW ORDER button 
 	And user expect element free shipping should be available
 	And user expect discount text to be present
@@ -34,9 +36,11 @@ Scenario: Verify user is unable to get Free shipping offer with Item value lesse
 	And user click on Academy Logo Icon
 	When user enters "SKUIdOfProductLs15" in the search box plcc for mobile
     And user click on search icon for mobile
-	And user click on Add an Item to cart Button
-	And user click on checkout from ATC pop up plcc
-	And user clicks on checkout button and navigates to checkout page 
+	And user click on ship it button 
+	And user click on viewcart button 
+	Then user navigates to Cart Page 
+	And user clicks on checkout button on cart page
+ 	And user clicks on checkout button and navigates to checkout page
 	And user click on REVIEW ORDER button 
 	And user expect element free shipping should not be available
 	And user expect discount text to be present

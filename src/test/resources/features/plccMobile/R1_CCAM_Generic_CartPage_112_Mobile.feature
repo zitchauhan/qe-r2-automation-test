@@ -12,7 +12,7 @@ Background:  Common Pre-requisite step
 	And user click on Academy Logo Icon
 	When user enters "SKUIdOfProduct" in the search box plcc for mobile
     And user click on search icon for mobile
-    And user click on Add to Cart button  
+    And user click on ship it button
 	And user click on viewcart button
 	Then user navigates to Cart Page 
 	And user click on plcc banner of cart button
