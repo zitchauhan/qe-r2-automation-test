@@ -130,7 +130,7 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 	@Then("^user place fifty orders and see the response with \"(.*?)\" with PLCC Card \"(.*?)\"$")
 	public void user_place_fifty_orders_and_see_the_response_with_with_PLCC_Card(String searchText, String plccCard)
 			throws Throwable {
-		for (int n = 1; n <= 3; n++) {
+		for (int n = 1; n <= 100; n++) {
 			try {
 				//plccLandingPageObjects.imgAcademyLogo.click();
 				WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/Logo.png']"));
