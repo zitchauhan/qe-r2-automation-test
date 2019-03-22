@@ -7,7 +7,8 @@ Scenario: Verify that UnAuthenticated user is able to create an account on Order
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -25,7 +26,8 @@ Scenario:
 Verify that UnAuthenticated user is able to view  in-store pickup instructions on order confirmation page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then verify user can begin checkout 
@@ -44,7 +46,8 @@ Scenario: Verify that UnAuthenticated user is able to view In-Store Pickup Infor
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user will click on View Cart button 
 	Then user select in store pickup option 
 	Then verify user can begin checkout 
@@ -61,7 +64,8 @@ Scenario:
 Verify that UnAuthenticated user is able to view In-Store Pickup Information on Order confirmation page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then verify user can begin checkout 
@@ -79,7 +83,8 @@ Scenario: Verify that UnAuthenticated user is able to view Payment Details/order
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user select in store pickup option 
 	Then verify user can begin checkout 
@@ -98,7 +103,8 @@ Scenario:
 Verify that UnAuthenticated user is able to view Payment Details on Order confirmation page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then verify user can begin checkout 
@@ -116,7 +122,8 @@ Scenario: Verify that UnAuthenticated user is able to view account section on Or
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user select in store pickup option 
 	Then verify user can begin checkout 
@@ -137,7 +144,8 @@ Scenario: Verify that UnAuthenticated user is able to view in-store pickup instr
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user select in store pickup option 
 	Then verify user can begin checkout 

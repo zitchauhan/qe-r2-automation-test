@@ -7,7 +7,8 @@ Scenario: Verify guest user is able to see the See In-Store Pickup Instructions 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user verify the selected store in cart page
@@ -22,7 +23,8 @@ Scenario: Verify that user view Find a Store modal from Change Location in Check
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#When user click on Add to cart button 
+	And user click on ship it button  
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -36,7 +38,8 @@ Scenario: Verify the guest user is able to select the Credit Card payment method
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -53,7 +56,8 @@ Scenario: Verify the guest user is able to select the PayPal payment method in o
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -70,7 +74,8 @@ Scenario: Verify the guest user is able to select the Gift Card payment method i
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox 
-	Then user click on Add to Cart Button 
+#When user click on Add to cart button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user select in store pickup option
@@ -91,7 +96,8 @@ Scenario: Verify the guest user is able to add new Credit Card as payment method
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -107,7 +113,8 @@ Scenario: Verify the guest user is able to select the Gift Card payment method i
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product_SKU_Costly" in the searchbox 
-	Then user click on Add to Cart Button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user select in store pickup option
@@ -128,7 +135,8 @@ Scenario: Verify the guest user is able to enter a different Billing address on 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -145,7 +153,8 @@ Scenario: Verify the guest user is able to place the order for BOPIS
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -163,7 +172,8 @@ Scenario: Verify if User is able to select a Payment method on One Page Checkout
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -179,7 +189,8 @@ Scenario: Verify if User is able to enter billing information for BOPIS
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -197,7 +208,8 @@ Scenario: Verify if User is able to enter new billing information in Payment for
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -218,7 +230,8 @@ Scenario: Verify if the user is able to review and place order from One Page Che
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
