@@ -15,8 +15,10 @@ Scenario: Verify Billing address on check out page - pre-populated billing addre
 #	    And user clicks on one of the product category and navigates to LThree
 #		And User is navigated to pdp page
 When User searches a product "productName" and navigates to PDP
- And user click on Add to Cart Button 
-Then user click on checkout from ATC pop up
+#And user click on Add to Cart Button 
+ And user click on ship it button 
+And user click on viewcart button 
+And user click on checkout button
 Then user click on edit Payment link and click on billing information
 Then user fill billing information after clicking on change billing information text 
 Then Verify below Sub/Main Module of Checkout Page
@@ -35,8 +37,10 @@ Given user launches the browser and navigates to "ASO_HOME" page
 When User Navigates L2 form Homepage Header
 And User clicks on product in PLP
 		And User is navigated to pdp page
- And user click on Add to Cart Button 
-Then user click on checkout from ATC pop up
+ #And user click on Add to Cart Button 
+ And user click on ship it button 
+And user click on viewcart button 
+And user click on checkout button
 Then user click on edit Payment link and click on billing information
 Then user click on checkbox Same as shipping address 
 Then Verify below Sub/Main Module of Checkout Page
@@ -49,7 +53,8 @@ Scenario: Verify Billing address on check out Page - Same as Shipping Address
       When User Navigates L2 form Homepage Header
 And User clicks on product in PLP
 		And User is navigated to pdp page
-		And user click on Add to Cart Button
+		#And user click on Add to Cart Button 
+ And user click on ship it button 
 		And user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 	    And user click on checkout button in Cart page
@@ -79,8 +84,10 @@ And user clicks on one of the category and navigates to LOne
 	    And user is able to see the product category name in section title
 	    And user clicks on one of the product category and navigates to LThree
 		And User is navigated to pdp page
- And user click on Add to Cart Button 
-Then user click on checkout from ATC pop up
+ #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	And user click on checkout button
 Then user click on edit Payment link and click on billing information
 Then user fill billing information after clicking on change billing information text
 #only validation is nedded after clicking confirm btn
@@ -91,7 +98,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 When User Navigates L2 form Homepage Header
 And User clicks on product in PLP
 And User is navigated to pdp page
- And user click on Add to Cart Button 
+ #And user click on Add to Cart Button 
+	And user click on ship it button
  And user is navigated to Add to cart Notification popup  
 And user will click on View Cart button 
 And user click on checkout button in Cart page
@@ -112,7 +120,8 @@ Scenario: Verify guest user is able to see the See In-Store Pickup Instructions 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user select in store pickup option
@@ -131,7 +140,8 @@ When user clicks on Find a Store
 	And user click on Make My store button	
 	Then user navigate to GunStorageAndSafty L_Three   
     Then user select the product from L_Three and navigate to PDP
-    And user click on Add to Cart Button 
+    #And user click on Add to Cart Button 
+	And user click on ship it button
     	And user is navigated to Add to cart Notification popup 
 	Then user click on checkout from ATC pop up
 	And user does accepts the firearm specific compliance 
@@ -153,7 +163,8 @@ When user clicks on Find a Store
 	And user click on Make My store button	
 Then user navigate to GunStorageAndSafty L_Three   
     Then user select the product from L_Three and navigate to PDP
-    And user click on Add to Cart Button 
+    #And user click on Add to Cart Button 
+	And user click on ship it button
     	And user is navigated to Add to cart Notification popup 
 	Then user click on checkout from ATC pop up
 	And user does accepts the firearm specific compliance 
@@ -181,7 +192,8 @@ Scenario: Verify guest user is able to see the See In-Store Pickup Instructions 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user select in store pickup option

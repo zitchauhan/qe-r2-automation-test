@@ -9,7 +9,8 @@ Scenario: To verify change billing Address CTA
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -43,7 +44,8 @@ Scenario: To verify all fields in Billing Address Form
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -76,7 +78,8 @@ Scenario: To verify change billing Address CTA
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -101,7 +104,8 @@ Scenario: To verify user can add new billing address information
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -125,7 +129,8 @@ Scenario: To verify Extra fields in Billing Address Form
 	And   user click on signin button 
 	And user navigate and deletes existing items in cart 
 	When   User searches a product "productName" and navigates to PDP 
-	And   user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And   user is navigated to Add to cart Notification popup 
 	And   user will click on View Cart button 
 	And   user navigate to Cart page 

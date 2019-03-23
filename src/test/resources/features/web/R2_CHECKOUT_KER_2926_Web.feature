@@ -4,7 +4,8 @@ Feature: E02-100 - My Account, Address Book
 Scenario: To Edit cart items from Order summary
 	    Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user will click on Checkout button and navigates to Checkout page 

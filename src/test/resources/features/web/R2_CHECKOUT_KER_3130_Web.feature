@@ -4,7 +4,9 @@ Feature: [Web] Billing Address Verification
   Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
+   #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button 
     And user click on checkout button
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
@@ -16,8 +18,10 @@ Feature: [Web] Billing Address Verification
   Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	And user click on checkout button
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     And user verifies visa card entery in the card fields
@@ -55,8 +59,10 @@ Feature: [Web] Billing Address Verification
   Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	And user click on checkout button
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     And user verifies visa card entery in the card fields
@@ -73,8 +79,10 @@ Feature: [Web] Billing Address Verification
   Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	And user click on checkout button
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     And user verifies visa card entery in the card fields

@@ -13,7 +13,8 @@ Scenario: Verify if  for authenticated User tax line item on checkout page is sa
 		And user click on signin button
 		Then User searches a product "productName" and navigates to PDP
 		And User is navigated to pdp page
-		And user click on Add to Cart Button
+		#And user click on Add to Cart Button 
+		And user click on ship it button
 		And user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 		And user navigate to Cart page
@@ -35,11 +36,13 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 		And User navigates to L2 Mens clothing
 	   Then User searches a product "productName" and navigates to PDP
 		And User is navigated to pdp page
-		And user click on Add to Cart Button
+		#And user click on Add to Cart Button 
+	And user click on ship it button
 		And user click on continue shopping
 		And User searches a product "SOFSKUNumber" and navigates to PDP
 		Then User is navigated to pdp page
-		And user click on Add to Cart Button
+		#And user click on Add to Cart Button 
+	And user click on ship it button
 		And user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 		And user navigate to Cart page
@@ -55,7 +58,8 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user click on view cart
 	Then user select in store pickup option
 	Then User should verify the tax on cart order Summary page
@@ -68,7 +72,8 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And user navigate to Cart page
@@ -84,7 +89,8 @@ Scenario: To verify Tax recalculation when user switches from Shipping to store 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page
@@ -106,7 +112,8 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	And User searches a product "SKUForATaxableProduct" and navigates to PDP 
 	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user navigate to Cart page 
 	When user enters "FindStoreZipcode" in change zipcode field in cart page 
 	Then cart page displays updated tax 
@@ -120,7 +127,8 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User searches a product "productName" and navigates to PDP
 	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page
@@ -139,7 +147,8 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	And user click on signin button 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -153,7 +162,8 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP
 	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page
@@ -174,7 +184,8 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	And user click on signin button 
 	Then User searches a product "productName" and navigates to PDP 
 	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 

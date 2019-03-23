@@ -5,7 +5,8 @@ Scenario: Verify if the shipping price on Checkout screen is same as Order Summa
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User Navigates L2 form Homepage Header 
     	 And User clicks on product in PLP
-		Then user click on Add to Cart Button
+		#And user click on Add to Cart Button 
+	And user click on ship it button
 		And user will click on View Cart button 
 		When user views Estimated Shipping in the Item Subtotal
 		And user click on checkout button in Cart page 
@@ -37,7 +38,8 @@ Verify the shipping price for each shipping method for Ship 2 Store items
 	Then user click on plus icon in Store Address drawer 
 	And user click on Make My store button 
 	When User searches a product "SOFSKUNumber" and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -66,7 +68,8 @@ Verify the shipping price for each shipping method for SOF items
 	Then user click on plus icon in Store Address drawer 
 	And user click on Make My store button 
 	When User searches a product "SOFSKUNumber" and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -86,7 +89,8 @@ Scenario:
 Verify the shipping price for each shipping method for Gift Card items
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "SKUForGiftCard" in the search box 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -110,7 +114,8 @@ Verify the shipping price for each shipping method for White glove items where S
 	And User navigates to L2 Grills Outdoor cooking 
 	And user clicks on one of the subcategory of Grills Outdoor 
 	And user select the product 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page
 	When user enter First name "FirstName" 

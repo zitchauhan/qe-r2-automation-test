@@ -12,7 +12,8 @@ Verify the Shipping address form that authenticated user can view on adding new 
 	And user click on signin button 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	And User clicks on edit CTA 
@@ -38,7 +39,8 @@ Verify if unauthenticated user be presented with the blank shipping address form
 	#	And User Navigates L2 form Homepage Header 
 	#     And User clicks on product in PLP
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	Then user click on Go To Shipping Method button in Checkout page 
@@ -58,7 +60,8 @@ Verify Guest user should view zipcode pre-populated if previously provided on Ca
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -81,7 +84,8 @@ Verify guest user, if after placing order, registers the account saves the addre
 	#	And User Navigates L2 form Homepage Header 
 	#     And User clicks on product in PLP
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	When user enter First name "FirstName" 
@@ -99,7 +103,8 @@ Scenario:
 Verify User needs to enter Zip code(it is mandatory) if not provided on cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on checkout button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Shipping Address	|
@@ -122,7 +127,8 @@ Scenario: Verify if user selects AVS address suggestion and checkout
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -150,7 +156,8 @@ Scenario: Verify if user selects AVS address suggestion and checkout
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -181,7 +188,8 @@ Verify Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA, Shipping Me
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	When user enter First name "FirstName" 

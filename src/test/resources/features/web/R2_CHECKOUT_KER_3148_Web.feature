@@ -4,7 +4,8 @@ Feature: Verify that business user can display the inline shipping messages and 
 Scenario: Verify that business user can display the inline shipping messages and disclaimers in the shipping method section
     Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user click on checkout from ATC pop up 
 	And  user enter First name "FirstName" 

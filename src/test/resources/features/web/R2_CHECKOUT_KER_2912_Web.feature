@@ -9,7 +9,8 @@ Scenario:
 	Then Verify below Sub/Main Module of PDP 
 		|# Verify following elements in PDP page |
 		|EstArrival_txt|
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -23,7 +24,8 @@ Scenario:
 	Verify that user is able to see delivery dates on checkout and post transactional pages
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user click on checkout from ATC pop up 
 	And  user enter First name "FirstName" 
