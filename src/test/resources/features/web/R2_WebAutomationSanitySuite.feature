@@ -59,30 +59,30 @@ Scenario: TC_5-Verify Add Credit Card and added as a Default Card
 	And user clicks on SignIn link from global header 
 	And user logs in as "EmailAddress" 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	And user click on Ship It Button 
 	And user click on checkout button 
 	And user clicks on edit payment cta 
 	
 	
-	#===========unit testing pending as search is not working
+
 @R2_Web @R2_WAST-05 @P-High @AutomationSanityR2 @AutomationSanity
 Scenario: TC_6-Verify and Search an item and  navigate to  View Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
 	When User searches a product "productName" and navigates to PDP 
 	And user verifies the entered SKU id 
-	And user click on Add to Cart Button 
+	And user click on Ship It Button 
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
 	
-	#===========unit testing pending as search is not working
+	
 @R2_Web @R2_WAST-06 @P-High @AutomationSanityR2 @AutomationSanity
 Scenario: TC_7-Verify and Search - Checkout from ATC Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
 	When User searches a product "productName" and navigates to PDP 
 	And user verifies the entered SKU id 
-	And user click on Add to Cart Button 
+	And user click on Ship It Button 
 	When user click on checkout button 
 	Then user is navigated to checkout page 
 	
@@ -92,7 +92,7 @@ Scenario: TC_8-Verify Cat Nav - View Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	And user click on Ship It Button 
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
 	
@@ -102,7 +102,7 @@ Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	And user click on Ship It Button 
 	When user click on checkout button 
 	Then user is navigated to checkout page 
 	
@@ -112,7 +112,7 @@ Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal
 Scenario: TC_10-Verify Apply Promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	Then user click on Ship It Button 
 	And user will click on View Cart button 
 	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity" 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -126,7 +126,7 @@ Scenario: TC_10-Verify Apply Promotion
 Scenario: TC_11- Verify Apply Promotion / Remove Promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	Then user click on Ship It Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "EnterQuantityGreaterThenOne" to X 
@@ -144,7 +144,7 @@ Scenario: TC_12-Verify Update Quantity
 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	Then  user click on Add to Cart Button 
+	Then  user click on Ship It Button 
 	And  user will click on View Cart button 
 	And  user navigate to Cart page 
 	Then  user view the items in order summary details (Subtotal, Estimated Shipping/In-Store Pickup, Estimated Taxes) 
@@ -161,7 +161,7 @@ Scenario:
 TC_13-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	Then user click on Ship It Button 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -175,7 +175,7 @@ TC_13-To Verify Image for selected SKU is be displayed on product blade for mult
 Scenario: TC_14-Verify Remove Item from Cart 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	Then  user click on Add to Cart Button 
+	Then  user click on Ship It Button 
 	And  user will click on View Cart button 
 	And  user navigate to Cart page 
 	And  verify the Remove Quantity link 
@@ -187,7 +187,7 @@ Scenario: TC_14-Verify Remove Item from Cart
 Scenario: TC_15-Verify User Able to Checkout, if no errors in cart 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	Then  user click on Add to Cart Button 
+	Then  user click on Ship It Button 
 	When  user click on view cart button 
 	Then  Verify below Sub/Main Module of Cart Page 
 		|# Verify following elements in Cart page "Your Cart item details "| 
@@ -198,7 +198,7 @@ Scenario: TC_15-Verify User Able to Checkout, if no errors in cart
 Scenario: TC_16-Verify Add Shipping Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	Then user click on Ship It Button 
 	And user will click on View Cart button 
 	Then user navigate to Cart page 
 	Then user click on checkout button in Cart page 
@@ -214,7 +214,7 @@ Scenario: TC_16-Verify Add Shipping Address
 Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	Then user click on Ship It Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user click on checkout button 
@@ -236,7 +236,7 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Authenticated
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	Then User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	Then user click on Ship It Button 
 	And user click on checkout button 
 	Then user click on go to payment present in shipping method 
 	Then user click on GiftCard Plus icon in Checkout page 
@@ -251,7 +251,7 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Authenticated
 Scenario: TC_19-Verify Sign In During Checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	Then user click on Ship It Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user will click on Checkout button and navigates to Checkout page 
@@ -265,7 +265,7 @@ Scenario: TC_19-Verify Sign In During Checkout
 Scenario: TC_20- Verify Edit cart items from Order summary 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	And  user click on Add to Cart Button 
+	And  user click on Ship It Button 
 	And  user will click on View Cart button 
 	And  user navigate to Cart page 
 	And  user will click on Checkout button and navigates to Checkout page 
@@ -280,7 +280,7 @@ Scenario: TC_20- Verify Edit cart items from Order summary
 Scenario: TC_21-Verify Order Summary 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	And  user click on Add to Cart Button 
+	And  user click on Ship It Button 
 	And  user will click on View Cart button 
 	And  user navigate to Cart page 
 	When  user will click on Checkout button and navigates to Checkout page 
@@ -345,7 +345,7 @@ Scenario: TC_22-Verify Find a store
 Scenario: TC_25- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	And user click on Ship It Button 
 	And user will click on View Cart button 
 	Then verfy all link url's status code is 200 
 	
@@ -353,7 +353,7 @@ Scenario: TC_25- Verify all broken URL's on Cart page
 Scenario: TC_26- Verify all broken URL's on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	Then user click on Ship It Button 
 	And user click on view cart button 
 	When user click on checkout button in Cart page 
 	Then user is navigated to checkout page 
@@ -373,7 +373,7 @@ Scenario: TC_27- Verify all broken URL's on MyAccount page
 Scenario: TC_28- Verify all broken Images on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	And user click on Ship It Button 
 	And user will click on View Cart button 
 	Then verfy all Image link urls status code is 200 
 	
@@ -381,7 +381,7 @@ Scenario: TC_28- Verify all broken Images on Cart page
 Scenario: TC_29- Verify all broken Images on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	Then user click on Ship It Button 
 	And user click on view cart button 
 	When user click on checkout button in Cart page 
 	Then user is navigated to checkout page 
@@ -419,7 +419,7 @@ Scenario: Verify user is able to place order using PLCC card
 	#And user expect element ASO Home Page Title to be present
 	When user enters "SKUIdOfProduct" in the search box 
 	And user click on search icon 
-	And user click on Add to Cart button 
+	And user click on Ship It button 
 	And user click on checkout from ATC pop up 
 	And user clicks on checkout button and navigates to checkout page 
 	#And user selects credit card radio button

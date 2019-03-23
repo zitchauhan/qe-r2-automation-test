@@ -1,6 +1,6 @@
 Feature:  BOPIS Payment
 
-@R2_Web @R2_Regression @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10480 @C-BOPIS
+@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10480 @C-BOPIS
 Scenario: Verify guest user is able to see the See In-Store Pickup Instructions section 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
@@ -67,7 +67,7 @@ Scenario: Verify the guest user is able to select the PayPal payment method in o
 	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
 	And user able to see the button place order
 	
-@R2_Web @R2_Regression @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10501 @C-BOPIS
+@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10501 @C-BOPIS
 Scenario: Verify the guest user is able to select the Gift Card payment method in order to place the order for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 

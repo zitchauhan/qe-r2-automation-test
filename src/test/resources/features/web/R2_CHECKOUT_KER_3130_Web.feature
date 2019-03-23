@@ -1,6 +1,6 @@
 Feature: [Web] Billing Address Verification
 
-  @R2_Web @R2_Regression @P-Medium @C-Checkout @KER-3130 @ZYP_CART_K3132-9552 @CR-AG
+  @R2_Web  @P-Medium @C-Checkout @KER-3130 @ZYP_CART_K3132-9552 @CR-AG
   Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
@@ -35,7 +35,7 @@ Feature: [Web] Billing Address Verification
     Then user clicks on the Review order button
     And user able to see the button place order
 
-  #@R2_Web @R2_Regression @P-High @C-Checkout @KER-3130 @ZYP_CART_K3132-9557 @CR-AG
+  #@R2_Web  @P-High @C-Checkout @KER-3130 @ZYP_CART_K3132-9557 @CR-AG
   #Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank
   #Given user launches the browser and navigates to "ASO_HOME" page
   # When User searches a product "productName" and navigates to PDP
@@ -55,7 +55,7 @@ Feature: [Web] Billing Address Verification
   #	And user able to see the button place order
   
   
-  @R2_Web  @P-Medium  @R2_Regression @C-Checkout @KER-3130 @ZYP_CART_K3132-9560 @CR-AG
+  @R2_Web  @P-Medium   @C-Checkout @KER-3130 @ZYP_CART_K3132-9560 @CR-AG
   Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
@@ -75,7 +75,7 @@ Feature: [Web] Billing Address Verification
     And user enter alternative person Email "PickupEmail"
     And User verifies that city and State are populated automatically
 
-  @R2_Web   @P-Medium @R2_Regression @C-Checkout @KER-3130 @ZYP_CART_K3132-9564 @CR-AG
+  @R2_Web   @P-Medium  @C-Checkout @KER-3130 @ZYP_CART_K3132-9564 @CR-AG
   Scenario: Verify user gets the form field validation error on leaving mandatory name/address fields blank
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP

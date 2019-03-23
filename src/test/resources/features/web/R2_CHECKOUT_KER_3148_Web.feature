@@ -1,6 +1,6 @@
 Feature: Verify that business user can display the inline shipping messages and disclaimers in the shipping method section
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3148 @ZYP_CHECKOUT_K3148-8265 @CR-MS
+@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3148 @ZYP_CHECKOUT_K3148-8265 @CR-MS
 Scenario: Verify that business user can display the inline shipping messages and disclaimers in the shipping method section
     Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 

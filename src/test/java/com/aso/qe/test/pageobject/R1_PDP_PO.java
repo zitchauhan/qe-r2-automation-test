@@ -33,6 +33,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='PDP_ProductName']") public WebElement txtProductTitle;
 	@FindBy(xpath="//*[contains(@data-auid,'Size_Attribute')]") public WebElement secProductAttributeSizes;
 	@FindBy(xpath="//*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']") public WebElement btnAddToCart;//modified SK - 24 Sep
+	@FindBy(xpath = "//*[@data-auid='btnShipIt']")public WebElement shipItButton; //HP 03_23_19
 	@FindBy(xpath="//*[@data-auid='PDP_QC_DEC']") public WebElement btnQuantityDec;
 	@FindBy(xpath="//*[@data-auid='PDP_QC_INC']") public   WebElement btnQuantityInc;
 	@FindBy(xpath="//input[@aria-label='Enter Desired Quantity' and @value='1']") public   WebElement txtDesiredQtyValue_1;
@@ -521,7 +522,7 @@ public class R1_PDP_PO extends CommonActionHelper
 			waitForElement(selectedSwatchRepresentative);
 			isDisplayed(selectedSwatchRepresentative);
 
-			if (btnAddToCart.isDisplayed()) 
+			if (shipItButton.isDisplayed()) 
 			{
 				isAddtoCart=true;
 				
@@ -559,7 +560,7 @@ public class R1_PDP_PO extends CommonActionHelper
 				{
 					logger.debug("Product Size Txt::"+sizeElement.getText());
 					clickOnButton(sizeElement);
-					if(isDisplayed(btnAddToCart))
+					if(isDisplayed(shipItButton))
 					{
 						isAddtoCart=true;
 						break;
@@ -576,7 +577,7 @@ public class R1_PDP_PO extends CommonActionHelper
 		{
 			logger.error("addToCartAvailability exception msg::"+e.getMessage());
 		}
-		logger.debug("Add to Cart buttion is visable::"+isAddtoCart);
+		logger.debug("Ship It buttion is visible::"+isAddtoCart);
 		return isAddtoCart;
 	}
 
@@ -1058,7 +1059,7 @@ public class R1_PDP_PO extends CommonActionHelper
 		} catch (Exception e) {
 			logger.error("addToCartAvailability exception msg::" + e.getMessage());
 		}
-		logger.debug("Add to Cart buttion is visable::" + isAddtoCart);
+		logger.debug("Add to Cart buttion is visible::" + isAddtoCart);
 		return isAddtoCart;
 	}
 	

@@ -3,7 +3,7 @@ Feature: To verify the Add to Cart API Services
   @Regression @Sanity @All @api @KER-3524 @ZYP-7159 @C-PDP 
   Scenario Outline: : Verify Add to Cart with sign-in user for status code 200
     Given "<AddToCartSummaryUrl>" and post request "<addtocartRequestJson>" endpoint for Add to Cart with Sign-in user "<UserName>""<Password>"
-    Then Verify response status code as 200 for Add to Cart
+    Then Verify response status code as 200 for Ship To
 
     Examples: 
       | AddToCartSummaryUrl | addtocartRequestJson | UserName                     | Password   |
