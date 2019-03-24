@@ -10,7 +10,8 @@ Scenario:
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user click on checkout from ATC pop up 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -37,7 +38,8 @@ Scenario: Verify that authenticated user is able view/select shipping method
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user click on checkout from ATC pop up 
 	And user clicks on edit shipping method cta 
@@ -61,7 +63,8 @@ Scenario:
 	And  user clicks on SignIn link from global header 
 	And user logs in as "EmailAddress"
 	And  User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button 
 	And user click on checkout button 
 	And user clicks on edit shipping method cta 
 	And user click on go to payment present in shipping method 
@@ -80,7 +83,8 @@ Scenario: Verify if User is able to enter billing information
 	And  user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And  User searches a product "productName" and navigates to PDP 
-	And  user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And  user is navigated to Add to cart Notification popup 
 	And  user click on checkout from ATC pop up 
 	And user clicks on edit shipping method cta 
@@ -124,7 +128,8 @@ Scenario:
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user click on checkout button 
 	And user adds shipment address on checkout page for "newly registered" user 
@@ -140,7 +145,8 @@ Scenario:
 	Verify that user should be displayed with the validation error message if they try to enter invalid email id for order confirmation field in checkout page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -170,7 +176,8 @@ Scenario:
 	Verify that user should be displayed with the error message if they try to save billing info without entering the email id for order confirmation field in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And  user is navigated to Add to cart Notification popup 
 	And  user click on checkout from ATC pop up 
 	And  user enter First name "FirstName" 
@@ -196,7 +203,8 @@ Scenario:
 	Verify the validation error message for the email id for order confirmation field in the shipping address drawer in checkout page if we edit without passing the email id 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And  user is navigated to Add to cart Notification popup 
 	And  user click on checkout from ATC pop up 
 	And  user enter First name "FirstName" 
@@ -223,7 +231,8 @@ Scenario:
 	Verify the validation error message for the email id for order confirmation field in the shipping address drawer in checkout page if we edit without passing the email id 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button 
 	And  user is navigated to Add to cart Notification popup 
 	And  user click on checkout from ATC pop up 
 	And  user enter First name "FirstName" 

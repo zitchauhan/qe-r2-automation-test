@@ -32,7 +32,8 @@ Verify if authenticated user can select a shipping address from the dropdown
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user click on checkout button 
 	And user should see the order summary page with the default address 
@@ -63,7 +64,8 @@ Verify if authenticated user can  view all the shipping addresses at checkout
 	And clicks on Add New Address button 
 	And User navigates to LThree 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup
 	And user click on checkout button
 	And user click on edit button in shipping address section 
@@ -96,7 +98,8 @@ Verify for authenticated user default address will always be displayed on top
 	And clicks on Add New Address button 
 	And User navigates to LThree 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup
 	And user click on checkout button
 	And user should see the order summary page with the default address 
@@ -121,7 +124,8 @@ Verify  If the user has already changed/ added an address within an active/ inco
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user click on checkout button 
 	And user click on edit button in shipping address section 
@@ -153,7 +157,8 @@ Verify that  authenticated user is able to view default address in dropdown in s
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user click on checkout button 
 	And user click on edit button in shipping address section 
@@ -180,7 +185,8 @@ Verify that  authenticated user is able to select address in dropdown in shippin
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user click on checkout button 
 	And user click on edit button in shipping address section 
@@ -226,7 +232,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user is able to see the product category name in section title 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user click on checkout button 
 	And user click on edit button in shipping address section 

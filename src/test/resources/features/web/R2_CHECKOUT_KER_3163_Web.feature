@@ -7,7 +7,8 @@ Scenario: Verify if user clicks "Go to Payment" without completing mandatory fie
 	And User navigates to L2 Mens clothing
    Then user clicks on one of the subcategory and navigates to LTwo
      Then user clicks on one of the product category and navigates to LThree
-	Then user click on Add to Cart Button
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
 	Then user click on Go To Shipping Method button in Checkout page
@@ -29,7 +30,8 @@ Scenario: Verify if user clicks "Go to Payment" with incorrect details, system s
 #   Then user clicks on one of the subcategory and navigates to LTwo
 #     Then user clicks on one of the product category and navigates to LThree
 When User searches a product "productName" and navigates to PDP
-	Then user click on Add to Cart Button
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
 	 When user enter First name "InvalidFirstName" 
@@ -53,7 +55,8 @@ When User searches a product "productName" and navigates to PDP
     And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-     Then user click on Add to Cart Button
+     #	And user click on Add to Cart Button
+	And user click on ship it button
      And user will click on View Cart button
      Then user click on checkout button in Cart page
      Then Verify below Sub/Main Module of Checkout Page
@@ -81,7 +84,8 @@ When User searches a product "productName" and navigates to PDP
     And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-     Then user click on Add to Cart Button
+     #	And user click on Add to Cart Button
+	And user click on ship it button
      And user will click on View Cart button
     Then user click on checkout button in Cart page
     Then Verify below Sub/Main Module of Checkout Page
@@ -111,7 +115,8 @@ When User searches a product "productName" and navigates to PDP
     And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-     Then user click on Add to Cart Button
+     #	And user click on Add to Cart Button
+	And user click on ship it button
      And user will click on View Cart button
     Then user click on checkout button in Cart page
      When user enter First name "FirstName"
@@ -139,7 +144,8 @@ When User searches a product "productName" and navigates to PDP
     And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-     Then user click on Add to Cart Button
+     #	And user click on Add to Cart Button
+	And user click on ship it button
      And user will click on View Cart button
     Then user click on checkout button in Cart page
     Then Verify below Sub/Main Module of Checkout Page
