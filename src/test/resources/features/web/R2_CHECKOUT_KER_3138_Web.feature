@@ -145,7 +145,7 @@ Verify if user enters the debit card, the system should accept and treat it as a
 	And user verifies discover card entery in the card fields 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3138
+@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-3138
 @ZYP_CART_K3138-8210 @CR-AG 
 Scenario:
 Verify if user enters the debit card, the system should accept and treat it as a credit card 
@@ -172,7 +172,7 @@ Verify if user enters the debit card, the system should accept and treat it as a
 	Then user validate all the required fields in the Payment section to be visible 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3138 @ZYP_CART_K3138-8211
+@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3138 @ZYP_CART_K3138-8211
 @CR-AG 
 Scenario:
 Verify if user enters the debit card, the system should accept and treat it as a credit card 
@@ -200,7 +200,7 @@ Verify if user enters the debit card, the system should accept and treat it as a
 	Then user enter two digits in cvv and verifies the card image displayed in the credit card input section 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3138 @ZYP_CART_K3138-8212
+@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3138 @ZYP_CART_K3138-8212
 @CR-AG 
 Scenario:
 Verify if user enters the debit card, the system should accept and treat it as a credit card 
@@ -227,7 +227,7 @@ Verify if user enters the debit card, the system should accept and treat it as a
 	#	Then user validate all the required fields in the Payment section to be visible
 	Then user hover on the toop tip icon of CVV and verify tool tip display 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3138
+@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-3138
 @ZYP_CART_K3138-8218 @CR-AG 
 Scenario:
 Verify if user enters the debit card, the system should accept and treat it as a credit card 

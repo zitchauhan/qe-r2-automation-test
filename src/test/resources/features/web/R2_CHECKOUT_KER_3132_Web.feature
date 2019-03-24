@@ -2,7 +2,7 @@ Feature: [Web] Populate Billing Address on Checkout page
 
 
 
-@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8114 @CR-RKA
+@R2_Web @Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8114 @CR-RKA
 Scenario: Verify Billing address on check out page - pre-populated billing address
  Given user launches the browser and navigates to "ASO_HOME" page 
  Then user should able to click on Signin button
@@ -26,7 +26,7 @@ Then Verify below Sub/Main Module of Checkout Page
 |AddressVerificationSystemModelPopUp|
 
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8115 @CR-RKA
+@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8115 @CR-RKA
 Scenario: Verify Billing address on check out Page - Same as Shipping Address
 
 Given user launches the browser and navigates to "ASO_HOME" page 
@@ -47,7 +47,7 @@ Then Verify below Sub/Main Module of Checkout Page
 |#verify shipping address is displying|
 |SameAsShippingAddress_Txt|
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8116 @CR-RKA
+@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8116 @CR-RKA
 Scenario: Verify Billing address on check out Page - Same as Shipping Address
         Given user launches the browser and navigates to "ASO_HOME" page 
       When User Navigates L2 form Homepage Header
@@ -71,7 +71,7 @@ And User clicks on product in PLP
       |SameAsShippingAddress_Txt|
       
       
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8117 @CR-RKA
+@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8117 @CR-RKA
 Scenario: Verify Billing address on check out Page - new address information
 
 Given user launches the browser and navigates to "ASO_HOME" page 
@@ -92,7 +92,7 @@ Then user click on edit Payment link and click on billing information
 Then user fill billing information after clicking on change billing information text
 #only validation is nedded after clicking confirm btn
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8118 @CR-RKA
+@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8118 @CR-RKA
 Scenario: Verify Billing address on check out Page - new address information
 Given user launches the browser and navigates to "ASO_HOME" page
 When User Navigates L2 form Homepage Header
@@ -113,7 +113,7 @@ Then user fill billing information after clicking on change billing information 
 #only validation is nedded after clicking confirm btn
 
 
-@R2_Web @R2_Regression @R2_All @P-Low @CB-Checkout @KER-3132 @ZYP_CART_K3132-10437 @C-BOPIS
+@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-3132 @ZYP_CART_K3132-10437 @C-BOPIS
 Scenario: Verify guest user is able to see the See In-Store Pickup Instructions section 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
@@ -129,7 +129,7 @@ Scenario: Verify guest user is able to see the See In-Store Pickup Instructions 
 	When user clicks on Go to payment CTA
 	And user should not be able to see Same as Shipping Address checkbox
 
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10439 @CR-RKA
+@C-BOPIS @R2_Web @Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10439 @CR-RKA
 Scenario: Verify if 'Same as Shipping Address' checkbox is disabled for STS order
 
 Given user launches the browser and navigates to "ASO_HOME" page
@@ -152,7 +152,7 @@ When user clicks on Find a Store
 		|ShipToStoreforSOF_Txt|
 	
 	
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10440 @CR-RKA
+@C-BOPIS @R2_Web @Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10440 @CR-RKA
 Scenario: Verify if 'Same as Shipping Address' checkbox is disabled for STS order
 
 Given user launches the browser and navigates to "ASO_HOME" page
@@ -185,7 +185,7 @@ Then user navigate to GunStorageAndSafty L_Three
 		|SignuptogetHotDeals_checkBox|
 		|ReviewOrder_Btn|
 
-@R2_Web @R2_Regression @R2_All @P-Low @CB-Checkout @KER-3132 @ZYP_CART_K3132-10442 @C-BOPIS
+@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-3132 @ZYP_CART_K3132-10442 @C-BOPIS
 Scenario: Verify guest user is able to see the See In-Store Pickup Instructions section 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 

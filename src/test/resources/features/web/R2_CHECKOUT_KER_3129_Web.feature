@@ -1,6 +1,6 @@
 Feature: B07-525- Display Final Tax and Total on Checkout 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-8011 @CR-RK
+@R2_Web  @R2_All @P-High @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-8011 @CR-RK
 Scenario: Verify if  for authenticated User tax line item on checkout page is same as that in cart page
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 	    And user clicks on SignIn link from global header
@@ -22,7 +22,7 @@ Scenario: Verify if  for authenticated User tax line item on checkout page is sa
 		And user will click on Checkout button and navigates to Checkout page
 #		And User should have same tax on Checkout Page Order Summary
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9551 @CR-RK
+@R2_Web  @R2_All @P-High @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9551 @CR-RK
 Scenario: Verify if  User can  view tax line item in order summary section on checkout (Mixed Cart).
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 	    And user clicks on SignIn link from global header
@@ -67,7 +67,7 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 	And user will click on Checkout button and navigates to Checkout page
    	And user verify the total amount and tax in checkout page
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9561 @CR-RK	
+@R2_Web  @R2_All @P-Low @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9561 @CR-RK	
 	Scenario: Verify if  User can  view updated tax and order total in order summary section on checkout if user switches from store pickup to Shipping
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
@@ -84,7 +84,7 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 #	When user navigates to checkout page
 #	Then checkout page displays updated tax	
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9562 @CR-RK	        
+@R2_Web  @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9562 @CR-RK	        
 Scenario: To verify Tax recalculation when user switches from Shipping to store pickup 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
@@ -102,7 +102,7 @@ Scenario: To verify Tax recalculation when user switches from Shipping to store 
 #	Then checkout page displays updated tax
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8009 @CR-RK
+@R2_Web  @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8009 @CR-RK
 Scenario: Verify if authenticated User can  view tax line item in order summary section on checkout. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -122,7 +122,7 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	When user navigates to checkout page 
 #	Then tax and total amount displayed in checkout page is same as cart page
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8010 @CR-RK 	
+@R2_Web  @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8010 @CR-RK 	
 	Scenario: Verify if  User can  view tax line item in order summary section on checkout.	
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User searches a product "productName" and navigates to PDP
@@ -138,7 +138,7 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	Then user verifies estimated tax and total on checkout page
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8013 @CR-RK 	
+	@R2_Web  @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8013 @CR-RK 	
 	Scenario: Verify if  User can  view updated tax and order total in order summary section on checkout if zip code is updated.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -157,7 +157,7 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	Then user verifies estimated tax and total on checkout page 
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8014 @CR-RK 	
+	@R2_Web  @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8014 @CR-RK 	
 	Scenario: Verify if  User can  view updated tax and order total in order summary section on checkout if items are updated. 	
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP
@@ -174,7 +174,7 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	Then checkout page displays updated tax
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8015 @CR-RK 	
+	@R2_Web  @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8015 @CR-RK 	
 	Scenario: Verify if  User can  view updated tax and order total in order summary section on checkout if zip code is updated.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -194,7 +194,7 @@ Scenario: Verify if authenticated User can  view tax line item in order summary 
 	Then user verifies estimated tax and total on checkout page 
 	
 	
-	@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8016 @CR-RK 	
+	@R2_Web  @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8016 @CR-RK 	
 	Scenario: Verify if  the tax information flows in order details in MY Account
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header	

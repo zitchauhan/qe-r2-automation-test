@@ -1,6 +1,6 @@
 Feature: B03-685- Display Estimated Delivery Dates on PDP and Cart 
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2912 
+@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-2912 
 @ZYP_CHECKOUT_K2912-10761 @CR-GK 
 Scenario: 
 	Verify that user is able to see transparent estimated delivery dates on pdp and cart
@@ -18,7 +18,7 @@ Scenario:
 		|EstArrival_txt|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2912 
+@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-2912 
 @ZYP_CHECKOUT_K2912-10763 @CR-GK @1HR_R2
 Scenario: 
 	Verify that user is able to see delivery dates on checkout and post transactional pages
