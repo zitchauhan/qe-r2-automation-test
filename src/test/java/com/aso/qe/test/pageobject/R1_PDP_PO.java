@@ -232,8 +232,9 @@ public class R1_PDP_PO extends CommonActionHelper
 	
 	
 	//***********************************************************************************************************//
+	//DELETE below Xpath when all Add to Cart has been cahnged to Ship It
 	@FindBy(xpath="//*[contains(@class,'ReactModal__Content ReactModa')]//*[@data-auid='btnviewCart']") public WebElement btnAddToCartModal; //SID Modified 17-October
-
+	@FindBy(xpath="//*[contains(@class,'ReactModal__Content ReactModa')]//*[@data-auid='btnviewCart']") public WebElement btnViewCartCheckout;
 	//KER-1952 Start CR-AKK
 	@FindBy(xpath = "//button[contains(text(), 'Ask a question')]") public WebElement btnAskQuestion;
 	@FindBy(xpath = "//button[contains(text(), ' Answer this Question')]") public WebElement btnAnswerQuestion;

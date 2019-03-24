@@ -1,4 +1,4 @@
-Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios 
+Feature: Web Automation Sanity Test Cases Mimicking manual Scenarios 
 
 @R2_Web @R2_WAST-01 @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @AutomationSanityR2 @AutomationSanity
 Scenario: TC_1- Verify Login Logout 
@@ -60,7 +60,8 @@ Scenario: TC_5-Verify Add Credit Card and added as a Default Card
 	And user logs in as "EmailAddress" 
 	And User searches a product "productName" and navigates to PDP 
 	And user click on Ship It Button 
-	And user click on checkout button 
+	And user click on view cart and checkout button
+	Then user click on checkout button 
 	And user clicks on edit payment cta 
 	
 	
@@ -83,6 +84,7 @@ Scenario: TC_7-Verify and Search - Checkout from ATC Modal
 	When User searches a product "productName" and navigates to PDP 
 	And user verifies the entered SKU id 
 	And user click on Ship It Button 
+	And user click on view cart and checkout button
 	When user click on checkout button 
 	Then user is navigated to checkout page 
 	
@@ -103,6 +105,7 @@ Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
 	And user click on Ship It Button 
+	And user click on view cart and checkout button
 	When user click on checkout button 
 	Then user is navigated to checkout page 
 	
