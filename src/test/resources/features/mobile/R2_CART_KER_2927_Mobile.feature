@@ -6,7 +6,8 @@ Feature: Display Estimated Tax and Total in Cart
 Scenario: To verify Tax recalculation when items are edited 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And  user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -23,7 +24,8 @@ Scenario: To verify Tax recalculation when items are edited
 Scenario: To verify Tax recalculation when items are edited 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -39,7 +41,8 @@ Scenario: To verify Tax recalculation when items are edited
 Scenario: To verify Tax recalculation when quantity is 0 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And  user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -59,7 +62,8 @@ To Verify Estimated Tax under the Order Summary in Cart - Authentic User
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
@@ -77,7 +81,8 @@ To verify Tax recalculation when switch between Shipping & Store Pick up
 	And user clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -97,7 +102,8 @@ To verify Tax recalculation when user switches from Shipping to store pickup
 	And user clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -117,7 +123,8 @@ To verify Tax recalculation when user switches from store pickup to  Shipping
 	And user clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -135,7 +142,8 @@ Scenario:
 To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
@@ -154,7 +162,8 @@ Scenario:
 To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -175,7 +184,8 @@ Scenario: To Verify Available Taxes and Tax is > $0.00 - Authenticated User
 	And user clicks on SignIn link from global header 
 	And user logs in as "UserWithTaxableAddress" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	When user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -192,7 +202,8 @@ Scenario:
 To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user enters "SKUForBopisProduct" in the search box 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 

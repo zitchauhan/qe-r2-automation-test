@@ -9,7 +9,8 @@ Feature: Verify Checkout Login Interstitial
    And user is able to see the product category name in section title
    Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user navigate to Cart page 
@@ -25,7 +26,8 @@ Feature: Verify Checkout Login Interstitial
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
-	Then user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup
 	And user will click on View Cart button
 	Then user navigate to Cart page 
@@ -46,7 +48,8 @@ Scenario: Verify the  User must view Sign-In/Interstitial Modal
 	
 	When User searches a product "productName" and navigates to PDP 
 	Then User is navigated to pdp page 
-	Then user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -62,7 +65,8 @@ Scenario: Verify the  User must view Sign-In/Interstitial Modal
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
-	Then user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup
 	And user will click on View Cart button
 	Then user navigate to Cart page 
@@ -79,7 +83,8 @@ Scenario: Verify the  User must view Sign-In/Interstitial Modal
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
-	Then user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup
 	And user will click on View Cart button
 	Then user navigate to Cart page 
@@ -104,7 +109,8 @@ Scenario: Verify the  User must view Sign-In/Interstitial Modal
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -128,7 +134,8 @@ Scenario: Verify the  User must view Sign-In/Interstitial Modal
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -151,7 +158,8 @@ Scenario: Verify the  User must view Sign-In/Interstitial Modal
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -169,7 +177,8 @@ Scenario: Verify the  User must view Sign-In/Interstitial Modal
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
 	Then User is navigated to pdp page
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -184,7 +193,8 @@ Scenario: Verify the  User must view Sign-In/Interstitial Modal
 	Given user launches the browser and navigates to "ASO_HOME" page
 	 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
 	When user click on SignIn link

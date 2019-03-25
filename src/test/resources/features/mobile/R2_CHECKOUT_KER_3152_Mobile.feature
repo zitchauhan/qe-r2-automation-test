@@ -33,9 +33,10 @@ Scenario:
 	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
    
-     Then user click on Add to Cart Button
-	And user will click on View Cart button 
-	And user click on checkout button in Cart page
+     #And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button
 	And user click on edit button in shipping address section 
 	And user verifies all the saved addresses in my account should be displayed in the dropdown
 	And User verify edit CTA 
@@ -47,9 +48,11 @@ Scenario:
 	Then User clicks on the burger menu
 	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
-     Then user click on Add to Cart Button
-	And user will click on View Cart button
-	Then user click on checkout button in Cart page
+     #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	When user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -74,9 +77,11 @@ Scenario:
     Then User clicks on the burger menu
 	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
-     Then user click on Add to Cart Button
-     And user will click on View Cart button
-     Then user click on checkout button in Cart page
+     #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
      Then Verify below Sub/Main Module of Checkout Page
     |# Verify following elements in Checkout > Shipping Address	|
 		|checkout_ShippingAddress_FirstName_txt						|
@@ -103,9 +108,11 @@ Scenario:
 #	And User navigates to L3
 #   	Then user clicks on the product card and navigates to PDP
 When User searches a product "productName" and navigates to PDP
-     Then user click on Add to Cart Button
-     And user will click on View Cart button
-     Then user click on checkout button in Cart page
+     #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
      Then Verify below Sub/Main Module of Checkout Page
     |# Verify following elements in Checkout > Shipping Address	|
 		|checkout_ShippingAddress_FirstName_txt						|
@@ -130,9 +137,11 @@ When User searches a product "productName" and navigates to PDP
     Then User clicks on the burger menu
 	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
-     Then user click on Add to Cart Button
-     And user will click on View Cart button
-    Then user click on checkout button in Cart page
+     #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
     When user enter First name "FirstName"
     And user enter Last name "LastName"
     And user enter Phone number "PhoneNumber"

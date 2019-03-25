@@ -8,7 +8,9 @@ Feature: [Web]Payment restrictions
     And user is able to see the product category name in section title
     And user clicks on one of the product category and navigates to LThree
     And User is navigated to pdp page
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button
+    And user click on ship it button
+    And user click on viewcart button
     Then user click on checkout from ATC pop up
     And user enter First name "FirstName"
     And user enter Last name "LastName"
@@ -36,7 +38,9 @@ Feature: [Web]Payment restrictions
     And user clicks on one of the product category and navigates to LThree
     And User is navigated to pdp page
     Then user change the quantity of item in PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button
+    And user click on ship it button
+    And user click on viewcart button
     Then user click on checkout from ATC pop up
     And user enter First name "FirstName"
     And user enter Last name "LastName"
@@ -64,7 +68,9 @@ Feature: [Web]Payment restrictions
     And user is able to see the product category name in section title
     And user clicks on one of the product category and navigates to LThree
     And User is navigated to pdp page
-    And user click on Add to Cart Button
+   #And user click on Add to Cart Button
+    And user click on ship it button
+    And user click on viewcart button
     Then user click on checkout from ATC pop up
     And user enter First name "FirstName"
     And user enter Last name "LastName"
@@ -91,7 +97,9 @@ Feature: [Web]Payment restrictions
     And user is able to see the product category name in section title
     And user clicks on one of the product category and navigates to LThree
     And User is navigated to pdp page
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button
+    And user click on ship it button
+    And user click on viewcart button
     Then user click on checkout from ATC pop up
     And user enter First name "FirstName"
     And user enter Last name "LastName"
@@ -114,7 +122,9 @@ Feature: [Web]Payment restrictions
     And user is able to see the product category name in section title
     And user clicks on one of the product category and navigates to LThree
     And User is navigated to pdp page
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button
+    And user click on ship it button
+    And user click on viewcart button
     Then user click on checkout from ATC pop up
     And user enter First name "FirstName"
     And user enter Last name "LastName"
@@ -143,7 +153,9 @@ Feature: [Web]Payment restrictions
     And user is able to see the product category name in section title
     And user clicks on one of the product category and navigates to LThree
     And User is navigated to pdp page
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button
+    And user click on ship it button
+    And user click on viewcart button
     Then user click on checkout from ATC pop up
     And user enter First name "FirstName"
     And user enter Last name "LastName"
@@ -169,7 +181,9 @@ Feature: [Web]Payment restrictions
     And user is able to see the product category name in section title
     And user clicks on one of the product category and navigates to LThree
     And User is navigated to pdp page
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button
+    And user click on ship it button
+    And user click on viewcart button
     Then user click on checkout from ATC pop up
     And user enter First name "FirstName"
     And user enter Last name "LastName"
@@ -189,7 +203,9 @@ Feature: [Web]Payment restrictions
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
     And User is navigated to pdp page
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button
+    And user click on ship it button
+    And user click on viewcart button
     Then user click on checkout from ATC pop up
     And user enter First name "FirstName"
     And user enter Last name "LastName"

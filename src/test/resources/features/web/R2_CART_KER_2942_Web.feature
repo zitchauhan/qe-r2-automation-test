@@ -5,7 +5,8 @@ Scenario: Verify add quantity adjustment in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then user view the items in order summary details (Subtotal, Estimated Shipping/In-Store Pickup, Estimated Taxes) 
@@ -22,7 +23,8 @@ Scenario: Verify cart gets recalculated on applying promotions and updated disco
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button   
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -42,7 +44,8 @@ Scenario: Verify Remove link in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP   
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And verify the Remove Quantity link
@@ -62,7 +65,8 @@ Scenario: Verify Quantity Zero in the Cart Page
 	Then User clicks on ASO Logo and should be navigated to Home Page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -79,7 +83,8 @@ Scenario: Verify system does inventory check for product item added more than av
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
 	#	And product has 'X' inventory available in stock 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "MoreThanThresholdQuantity" to X 
@@ -94,7 +99,8 @@ Scenario: Verify Alphanumeric Quantity in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	When enter the "AlphanumericQuantity" to X 
 	Then user should not be allowed to enter any non-numeric value in the input 
@@ -105,7 +111,8 @@ Scenario: Verify Reduce quantity adjustment in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -125,7 +132,8 @@ Scenario:  Verify Remove quantity message in the Cart Page
 	Then User clicks on ASO Logo and should be navigated to Home Page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -139,7 +147,8 @@ Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -151,7 +160,8 @@ Scenario: To verify the field type accepted for Quantity in the Cart - Numeric
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -163,7 +173,8 @@ Scenario: To verify Reduce Quantity Adjustment - Via Open Field
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -177,7 +188,8 @@ Scenario:  To verify Remove link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button   
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
@@ -191,7 +203,8 @@ Scenario:  To verify Remove link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -205,7 +218,8 @@ Scenario: Verify Quantity Zero in the Cart Page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -219,7 +233,8 @@ Scenario: To verify Inventory Check on Quantity update
 Given user launches the browser and navigates to "ASO_HOME" page  
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -231,7 +246,8 @@ Scenario: Verify the user gets the error message if Product has limited stock av
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "MoreThanThresholdQuantity" to X 

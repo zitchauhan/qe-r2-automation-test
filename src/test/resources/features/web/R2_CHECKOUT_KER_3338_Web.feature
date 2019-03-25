@@ -6,7 +6,8 @@ Scenario:
 	Verify user is able to checkout using PayPal with Order level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "EnterQuantityGreaterThenOne" to X 
@@ -37,7 +38,8 @@ Scenario:
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "EnterQuantityGreaterThenOne" to X 
@@ -68,7 +70,8 @@ Scenario:
 	Verify user is able to checkout using PayPal with shipping-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button  
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then user click on checkout button in Cart page 
@@ -100,7 +103,8 @@ Scenario:
 	Verify guest user is able to select Paypal as Payment method on checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user click on checkout from ATC pop up 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
@@ -121,7 +125,8 @@ Scenario:
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user click on checkout from ATC pop up 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
@@ -136,7 +141,8 @@ Scenario:
 Scenario: Verify the user is navigated to the PayPal page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user click on checkout from ATC pop up 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
@@ -155,7 +161,8 @@ Scenario:
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user creates an account 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user click on checkout from ATC pop up 
 	And user adds shipment address on checkout page for "newly registered" user 
 	And user selects shipment method on check out page for "newly registered" user 
@@ -181,7 +188,9 @@ Scenario:
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button 
 	Then user click on checkout from ATC pop up 
 	Then user click on paypal radiobtn 
 	
@@ -195,7 +204,9 @@ Verify the authenticated user cannot pay the remaining or partial order amount u
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
 	Then user click on checkout from ATC pop up 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
@@ -213,7 +224,9 @@ Scenario:
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
 	Then user click on checkout from ATC pop up 
 	And user selects terms and conditions checkbox for SOF items 
 	#	And user enter First name "FirstName" 
@@ -233,7 +246,9 @@ Verify guest user cannot select Paypal as Payment method on checkout for SOF pro
 	And user creates an account
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
 	Then user click on checkout from ATC pop up 
 	And user selects terms and conditions checkbox for SOF items 
 	#	And user enter First name "FirstName" 
@@ -251,7 +266,9 @@ Scenario:
 Verify the user is navigated back to the Academy.com once PayPal payment process is done 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button 
 	Then user click on checkout from ATC pop up 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 

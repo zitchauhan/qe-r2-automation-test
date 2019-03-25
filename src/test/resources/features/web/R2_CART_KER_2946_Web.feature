@@ -5,7 +5,8 @@ Scenario: Verify if unauthenticated user can view Accepted Payment Methods
     Given user launches the browser and navigates to "ASO_HOME" page 
     When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button 
     And user click on view cart button  
     Then Verify below Sub/Main Module of Cart Page 
 	    |# user should see all payment icons on cart page|
@@ -27,7 +28,8 @@ Scenario: Verify if authenticated user can view Accepted Payment Methods
 		And user click on signin button 
        When User Navigates L2 form Homepage Header 
 	   And User clicks on product in PLP 
-	    Then user click on Add to Cart Button 
+	    #	And user click on Add to Cart Button
+	And user click on ship it button
         And user click on view cart button  
        Then Verify below Sub/Main Module of Cart Page 
 	    |# user should see all payment icons on cart page|

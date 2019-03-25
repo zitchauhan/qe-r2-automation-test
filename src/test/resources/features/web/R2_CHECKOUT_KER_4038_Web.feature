@@ -6,8 +6,10 @@ Scenario:
 Verify that user is not able to add another gift card once the applied GCs cover the entire transaction amount 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	And user click on checkout button 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
@@ -27,8 +29,10 @@ Scenario:
 Verify that user is not able to add another gift if single Gift card covers the order Total 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	And user click on checkout button 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
@@ -49,8 +53,10 @@ Scenario:
 Verify that payment details(Credit card) is suppressed if single Gift card covers the order Total 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	And user click on checkout button 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 

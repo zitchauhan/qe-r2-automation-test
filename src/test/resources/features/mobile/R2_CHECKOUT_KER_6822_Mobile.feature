@@ -11,11 +11,11 @@ Scenario: Verify Gift card fields displayed - No Previous Gift Cards Saved
 	And user click on signin button 
 	And user navigate and deletes existing items in cart
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user click on checkout button in Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user is navigated to order summary page 
 	And user clicks on edit payment cta 
 	And user click on GiftCard Plus icon in Checkout page 
@@ -34,10 +34,11 @@ Scenario: Verify Valid gift card is applied for purchases
 	And user click on signin button 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user click on checkout button in Cart page 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user is navigated to order summary page 
 	And user clicks on edit payment cta 
 	And user click on GiftCard Plus icon in Checkout page 
@@ -57,9 +58,11 @@ Scenario:
 	Verify the user can enter valid new Gift card with 13 or 16 digit in Checkout for payment  
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And verify user can begin checkout 
 	And user is navigated to order summary page 
 	And user enter First name "FirstName" 

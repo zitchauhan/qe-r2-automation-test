@@ -7,11 +7,10 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/resources/features/plcc",
-
+@CucumberOptions(features = "src/test/resources/features/plcc/R1_CCAM_Generic_CartPage_112_Web.feature",
 		glue = "com.aso.qe.test.stepdefinition.web.plcc", 
 		monochrome = true,
-		//tags= {"@PLCC-50"},
+		//tags= {"@OrderManju"},
 		plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html", 
 		format = {"pretty", "html:target/cucumber-reports/cucumber-html-reports",
         "json:target/cucumber-reports/cucumber-html-reports/common.json" })

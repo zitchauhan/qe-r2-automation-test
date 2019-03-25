@@ -11,9 +11,10 @@ Scenario:
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Shipping Address	|
 		|checkout_ShippingAddress_Edit_lnk		|
@@ -39,9 +40,10 @@ Scenario: Verify that authenticated user is able view/select shipping method
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button
 	And user clicks on edit shipping method cta 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Shipping Method	|
@@ -67,9 +69,10 @@ Scenario:
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And  User searches a product "productName" and navigates to PDP 
-	And  user click on Add to Cart Button 
-	And  user is navigated to Add to cart Notification popup 
-	And  user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button 
 	And user clicks on edit shipping method cta 
 	And user click on go to payment present in shipping method 
 	And User Clicks on credit card dropwdown and selects another card 
@@ -88,9 +91,10 @@ Scenario: Verify if User is able to enter billing information
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And  User searches a product "productName" and navigates to PDP 
-	And  user click on Add to Cart Button 
-	And  user is navigated to Add to cart Notification popup 
-	And  user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button 
 	And user clicks on edit shipping method cta 
 	And user click on go to payment present in shipping method 
 	And user clicks on change billing info cta 
@@ -134,9 +138,10 @@ Scenario:
 	And user clicks on the burger menu 
 	When user creates an account 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button
 	And user adds shipment address on checkout page for "newly registered" user 
 	And user selects shipment method on check out page for "newly registered" user 
 	And user add "Credit Card" details in payment method for "newly registered" user 
@@ -151,11 +156,10 @@ Scenario:
 		try to enter invalid email id for order confirmation field in checkout page 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	When  User searches a product "productName" and navigates to PDP 
-	And  user click on Add to Cart Button 
-	And  user is navigated to Add to cart Notification popup 
-	And  user will click on View Cart button 
-	And  user navigate to Cart page 
-	And  user click on checkout button in Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button 
 	And   user enter First name "FirstName" 
 	And   user enter Last name "LastName" 
 	And   user enter Phone number "PhoneNumber" 
@@ -182,9 +186,10 @@ Scenario:
 		in checkout page 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	When  User searches a product "productName" and navigates to PDP 
-	And  user click on Add to Cart Button 
-	And   user is navigated to Add to cart Notification popup 
-	And   user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button
 	And   user enter First name "FirstName" 
 	And   user enter Last name "LastName" 
 	And   user enter Phone number "PhoneNumber" 
@@ -210,9 +215,10 @@ Scenario:
 		passing the email id 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	When  User searches a product "productName" and navigates to PDP 
-	And  user click on Add to Cart Button 
-	And   user is navigated to Add to cart Notification popup 
-	And   user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button
 	And   user enter First name "FirstName" 
 	And   user enter Last name "LastName" 
 	And   user enter Phone number "PhoneNumber" 
@@ -239,9 +245,10 @@ Scenario:
 		passing the email id 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	When  User searches a product "productName" and navigates to PDP 
-	And  user click on Add to Cart Button 
-	And   user is navigated to Add to cart Notification popup 
-	And   user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button
 	And   user enter First name "FirstName" 
 	And   user enter Last name "LastName" 
 	And   user enter Phone number "PhoneNumber" 

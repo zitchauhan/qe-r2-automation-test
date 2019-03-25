@@ -4,9 +4,11 @@ Feature: Guest registration Post Checkout from Order Confirmation Page
 Scenario: Verify if user gets proper validation message for empty password
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	And user add "PayPal" details in payment method for "guest" user
@@ -25,9 +27,11 @@ Scenario:
 Verify if user gets proper validation message for password less than 8 characters 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page  
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	And user add "PayPal" details in payment method for "guest" user
@@ -45,9 +49,11 @@ Verify if user gets proper validation message for password less than 8 character
 Scenario: Verify if user can create account from Order Confirmation Page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	And user add "PayPal" details in payment method for "guest" user
@@ -64,9 +70,11 @@ Scenario: Verify if user can create account from Order Confirmation Page
 Scenario: Verify the available customer details
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	When user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	And user add "PayPal" details in payment method for "guest" user
@@ -79,9 +87,11 @@ Scenario: Verify the available customer details
 Scenario: verify the account register with out Email News letter 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	And user add "Credit Card" details in payment method for "guest" user 
@@ -101,9 +111,11 @@ Scenario:
 Verify if user gets proper validation message for invalid password
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	And user add "PayPal" details in payment method for "guest" user

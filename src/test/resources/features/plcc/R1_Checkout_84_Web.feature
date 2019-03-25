@@ -27,7 +27,7 @@ Scenario: Verify an error message when user enters wrong card number and click o
 	And user click on REVIEW ORDER button 
 	Then user expect element Unrecognized card number to be present 
 	
-@C-PLCC @Regression @All @PLCC-84 @CR-VS @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-84 @CR-VS @AutomationSanityR2 @OrderManju
 Scenario: Verify user is able to navigate to confirm order page by clicking on review order button 
 	When user handles adding new card "ValidPLCCCard" if already card is saved 
 	And user click on REVIEW ORDER button 

@@ -4,9 +4,10 @@ Feature: Verify Gift Card - Payment Processing
   Scenario: Verify applied gift cards should be displayed to the users
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user is navigated to Add to cart Notification popup
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     When user click on GiftCard Plus icon in Checkout page
@@ -20,8 +21,10 @@ Feature: Verify Gift Card - Payment Processing
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "productName" and navigates to PDP
     And user click on Add to Cart Button
-    And user is navigated to Add to cart Notification popup
-    And user click on checkout button
+   #And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     When user click on GiftCard Plus icon in Checkout page
@@ -35,9 +38,10 @@ Feature: Verify Gift Card - Payment Processing
   Scenario: Verify  click on remove gift card, the respective gift card should no longer be applied to the transaction
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user is navigated to Add to cart Notification popup
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     And user click on GiftCard Plus icon in Checkout page
@@ -51,9 +55,10 @@ Feature: Verify Gift Card - Payment Processing
   Scenario: Verify for full payment using Gift Card, Billing address is still required
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user is navigated to Add to cart Notification popup
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     When user click on GiftCard Plus icon in Checkout page
@@ -72,9 +77,10 @@ Feature: Verify Gift Card - Payment Processing
   Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Guest user
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user is navigated to Add to cart Notification popup
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     When user click on GiftCard Plus icon in Checkout page
@@ -89,9 +95,10 @@ Feature: Verify Gift Card - Payment Processing
   Scenario: Verify user is prompted with message to retain the physical gift card
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user is navigated to Add to cart Notification popup
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     When user click on GiftCard Plus icon in Checkout page
@@ -108,8 +115,9 @@ Feature: Verify Gift Card - Payment Processing
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP
     And user click on Add to Cart Button for "MultiSKUProduct"
-    And user is navigated to Add to cart Notification popup
-    And user click on checkout button
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     When user click on GiftCard Plus icon in Checkout page
@@ -130,8 +138,9 @@ Feature: Verify Gift Card - Payment Processing
     When user creates an account
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP
     And user click on Add to Cart Button for "MultiSKUProduct"
-    And user is navigated to Add to cart Notification popup
-    When user click on checkout button
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "newly registered" user
     And user selects shipment method on check out page for "newly registered" user
     When user click on GiftCard Plus icon in Checkout page
@@ -151,8 +160,9 @@ Feature: Verify Gift Card - Payment Processing
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP
     And user click on Add to Cart Button for "MultiSKUProduct"
-    And user is navigated to Add to cart Notification popup
-    When user click on checkout button
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     When user click on GiftCard Plus icon in Checkout page
@@ -171,8 +181,9 @@ Feature: Verify Gift Card - Payment Processing
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP
     And user click on Add to Cart Button for "MultiSKUProduct"
-    And user is navigated to Add to cart Notification popup
-    When user click on checkout button
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     When user click on GiftCard Plus icon in Checkout page
@@ -190,8 +201,9 @@ Feature: Verify Gift Card - Payment Processing
     And user creates an account
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP
     And user click on Add to Cart Button for "MultiSKUProduct"
-    And user is navigated to Add to cart Notification popup
-    When user click on checkout button
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "newly registered" user
     And user selects shipment method on check out page for "newly registered" user
     When user click on GiftCard Plus icon in Checkout page
@@ -207,8 +219,9 @@ Feature: Verify Gift Card - Payment Processing
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP
     And user click on Add to Cart Button for "MultiSKUProduct"
-    And user is navigated to Add to cart Notification popup
-    When user click on checkout button
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     When user click on GiftCard Plus icon in Checkout page
@@ -225,8 +238,9 @@ Feature: Verify Gift Card - Payment Processing
     And user creates an account
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP
     And user click on Add to Cart Button for "MultiSKUProduct"
-    And user is navigated to Add to cart Notification popup
-    When user click on checkout button
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "newly registered" user
     And user selects shipment method on check out page for "newly registered" user
     When user click on GiftCard Plus icon in Checkout page
@@ -241,8 +255,9 @@ Feature: Verify Gift Card - Payment Processing
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP
     And user click on Add to Cart Button for "MultiSKUProduct"
-    And user is navigated to Add to cart Notification popup
-    And user click on checkout button
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     When user click on GiftCard Plus icon in Checkout page
@@ -259,8 +274,9 @@ Feature: Verify Gift Card - Payment Processing
     And user creates an account
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP
     And user click on Add to Cart Button for "MultiSKUProduct"
-    And user is navigated to Add to cart Notification popup
-    And user click on checkout button
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     When user click on GiftCard Plus icon in Checkout page
@@ -276,9 +292,11 @@ Feature: Verify Gift Card - Payment Processing
     And user clicks on the burger menu
     And user creates an account
     And User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user is navigated to Add to cart Notification popup
-    And user click on checkout button
+  #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     When user click on GiftCard Plus icon in Checkout page

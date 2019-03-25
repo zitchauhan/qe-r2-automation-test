@@ -4,9 +4,11 @@ Feature: Gift Card application
 Scenario: Verify that user is not able to add another gift card once the applied GCs cover the entire transaction amount
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user enters "productName" in the search box
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	When user click on GiftCard Plus icon in Checkout page 
@@ -23,9 +25,11 @@ Scenario: Verify that user is not able to add another gift card once the applied
 Scenario: Verify that user is not able to add another gift if single Gift card covers the order Total
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user enters "productName" in the search box
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	When user click on GiftCard Plus icon in Checkout page 
@@ -43,9 +47,11 @@ Scenario: Verify that user is not able to add another gift if single Gift card c
 Scenario: Verify that payment details(Credit card) is suppressed if single Gift card covers the order Total
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user enters "productName" in the search box
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	When user click on GiftCard Plus icon in Checkout page 
@@ -68,8 +74,9 @@ Verify that User is able to add multiple Gift Cards having 13 and 16 digit with 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct" 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	When user click on GiftCard Plus icon in Checkout page 
@@ -90,8 +97,9 @@ Verify that User is able to view cumulative deduction from the gift cards in sin
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct" 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	When user click on GiftCard Plus icon in Checkout page 

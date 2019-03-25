@@ -7,9 +7,11 @@ Feature: Verify Checkout Login Interstitial
 	And User clicks on the burger menu 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
-	And user will click on View Cart button
-	Then user click on checkout button in Cart page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#Verify following elements in checkout page|
 		|checkout_YouAreCheckingOutAsGuest_txt		|
@@ -22,9 +24,11 @@ Feature: Verify Checkout Login Interstitial
 	And User clicks on the burger menu 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button
-	Then user click on checkout button in Cart page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	When user click on SignIn link
 	And user enter the emailaddress "EmailAddress" from checkout page
 	And user enter the password "Password" from checkout page
@@ -37,9 +41,11 @@ Feature: Verify Checkout Login Interstitial
 	And User clicks on the burger menu 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
-	And user will click on View Cart button 
-	Then user click on checkout button in Cart page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	When user click on SignIn link
 	Then Verify below Sub/Main Module of Checkout Page 
 	|#Verify following elements in checkout page|
@@ -55,9 +61,11 @@ Feature: Verify Checkout Login Interstitial
 	And User clicks on the burger menu 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button
-	Then user click on checkout button in Cart page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	When user click on SignIn link
 	And user click on Create a Account link
 	Then Verify below Sub/Main Module of My Account 
@@ -73,9 +81,11 @@ Feature: Verify Checkout Login Interstitial
 	And User clicks on the burger menu 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
-	And user will click on View Cart button 
-	Then user click on checkout button in Cart page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	When user click on SignIn link	
 	When user enter the valid Emailaddress "UnregisteredEmailAddress"
 	And user enter the valid Password "Password" 
@@ -92,9 +102,11 @@ Feature: Verify Checkout Login Interstitial
 	And User clicks on the burger menu 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
-	And user will click on View Cart button 
-	Then user click on checkout button in Cart page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	When user click on SignIn link	
 	When user enter the Invalid emailaddress "EmailAddress"
 	And user enter the Invalid password "IncorrectPassword" 
@@ -110,9 +122,11 @@ Feature: Verify Checkout Login Interstitial
 	And User clicks on the burger menu 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
-	And user will click on View Cart button 
-	Then user click on checkout button in Cart page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	When user click on SignIn link
 	Then Verify below Sub/Main Module of Checkout Page 
 	|#Verify following elements in checkout page|
@@ -130,9 +144,11 @@ Feature: Verify Checkout Login Interstitial
 	And User clicks on the burger menu 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
-	And user will click on View Cart button 
-	Then user click on checkout button in Cart page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	When user click on SignIn link
 	And user click on signin button
 	Then Verify the message on the page
@@ -147,9 +163,11 @@ Feature: Verify Checkout Login Interstitial
 	And User clicks on the burger menu 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button
-	Then user click on checkout button in Cart page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	When user click on SignIn link
 	And user click on Create a Account link
 	When user enter first "FirstName" 
@@ -166,9 +184,11 @@ Feature: Verify Checkout Login Interstitial
 	And User clicks on the burger menu 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button
-	Then user click on checkout button in Cart page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	When user click on SignIn link
 	When user clicks on Forgot your password link on the Sign in for checkout page
 	Then Verify below Sub/Main Module of My Account 

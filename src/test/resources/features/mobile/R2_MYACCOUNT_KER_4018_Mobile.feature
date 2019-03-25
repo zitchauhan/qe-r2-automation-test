@@ -72,11 +72,11 @@ Scenario:
 Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
 Given user launches the browser and navigates to "ASO_HOME" page 
 When User searches a product "productName" and navigates to PDP 
-And user click on Add to Cart Button 
-And user is navigated to Add to cart Notification popup 
-And user will click on View Cart button 
-And user navigate to Cart page 
-And user click on checkout button in Cart page 
+#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 And  user enter First name "FirstName" 
 And  user enter Last name "LastName" 
 And  user enter Phone number "PhoneNumber" 

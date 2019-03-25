@@ -5,7 +5,8 @@ Feature: [Mobile] B06-100- Merge Cart
 Scenario: Verify if Unauthenticated customer will be able to add items to cart for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
@@ -46,7 +47,8 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	Then User clicks on the burger menu
 	 And User navigates to L3
 	Then user clicks on the product card and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -62,7 +64,8 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	Then User clicks on the burger menu
 	 And User navigates to L3
 	 Then user clicks on the product card and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -83,7 +86,8 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	Then User clicks on the burger menu
 	 And User navigates to L3
 	 Then user clicks on the product card and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then Verify below Sub/Main Module of Cart Page
@@ -102,7 +106,8 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	Then User clicks on the burger menu
 	 And User navigates to L3
 	 Then user clicks on the product card and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
    Then user verify sucessfully added item MSG 
 	Then Verify the message on the page
@@ -120,13 +125,15 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
      Then User clicks on the burger menu
      And User navigates to L3
 	 Then user clicks on the product card and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then Verify signout from my account
 	 And User navigates to L3
 	Then user clicks on the product card and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user clicks on SignIn link from global header
@@ -148,7 +155,8 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	Then User clicks on the burger menu
      And User navigates to L3
       Then user clicks on the product card and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page
@@ -171,7 +179,8 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	Then User clicks on the burger menu
      And User navigates to L3
       Then user clicks on the product card and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
    Then user verify sucessfully added item MSG 
 	Then Verify the message on the page
@@ -190,7 +199,8 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	Then User clicks on the burger menu
      And User navigates to L3
       Then user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 	
+	#And user click on Add to Cart Button 
+	And user click on ship it button	
 	And user is navigated to Add to cart Notification popup
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page
@@ -208,7 +218,8 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	Then User clicks on the burger menu
     And User navigates to L3
     Then user clicks on the product card and navigates to PDP  
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"  
@@ -228,7 +239,8 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
     And User navigates to L3
     Then user clicks on the product card and navigates to PDP  
 	Then User is navigated to pdp page 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	Then Verify below Sub/Main Module of Cart Page
 	|#user verify ShipToStore |
@@ -246,7 +258,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
     And User navigates to L3
     Then user clicks on the product card and navigates to PDP  
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
     When User searches a product "productName" and navigates to PDP  
@@ -268,12 +281,14 @@ Then User clicks on the burger menu
 	Then User clicks on the burger menu
     And User navigates to L3
     Then user clicks on the product card and navigates to PDP  
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button	
 	Then user will empty the cart if product is in cart
 	When User searches a product "productName" and navigates to PDP  
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
  	And user will click on View Cart button
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify total item  in Cart page |

@@ -5,7 +5,8 @@ Feature: [Mobile]Verify Automatic Store Locator for Unauthenticated User
 	Scenario:  Verify if unauthenticated user can view Accepted Payment Methods[For Guest User] 
 	Given user launches the browser and navigates to "ASO_HOME" page
   When User searches a product "productName" and navigates to PDP
-   	Then user click on Add to Cart Button  
+   	#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -29,7 +30,8 @@ Feature: [Mobile]Verify Automatic Store Locator for Unauthenticated User
    And User navigates to L3 
      Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-	Then user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page 

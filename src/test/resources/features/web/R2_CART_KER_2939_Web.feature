@@ -5,7 +5,8 @@ Scenario: To Verify Image for selected SKU is be displayed on product blade for 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+#	And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -17,7 +18,8 @@ Scenario: To Verify Image for selected SKU is be displayed on product blade for 
 Scenario: To view details specific to an item in the cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "SanitySKUNumber" in the search box
-	And user click on Add to Cart Button
+#	And user click on Add to Cart Button
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user views the details specific to the item(Thumbnail image) 
 	And user verify prodcut name and prodcut link 
@@ -40,7 +42,8 @@ To verify Shipping radio button - Authenticated user With store selected in My A
 	And user enter the valid password "Password" 
 	And user click on signin button
 	When user enters "SKUForBopisProduct" in the search box
-	And user click on Add to Cart Button
+#	And user click on Add to Cart Button
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then Shipping radio button is selected by default 
@@ -55,7 +58,8 @@ Scenario: Desktop - To verify Quantity input field
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And modified quantity should get updated 
@@ -73,7 +77,8 @@ Scenario: To Verify Thumbnail Image
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page "Your Cart item details "|  
@@ -86,7 +91,8 @@ Scenario: To verify Product name dynamic linking
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page  
 	|# Verify following elements in Cart page "Your Cart item details "|
@@ -99,7 +105,8 @@ Scenario: To verify Remove Link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page "Your Cart item details "|
@@ -112,7 +119,8 @@ Scenario: To verify Remove Link
 Scenario: To verify In-store Pick up radio button - with My Store info on My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "SKUForBopisProduct" in the search box
-	And user click on Add to Cart Button
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	#When user will verify in-store pick up radio button is selected with "Zipcode" 
 	And user will verify Shipping radio button is deselected 
@@ -124,7 +132,8 @@ Scenario: To verify Shipping radio button - Unauthenticated user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And Shipping radio button is selected by default 
 	Then Verify below Sub/Main Module of Cart Page
@@ -141,7 +150,8 @@ Scenario: To verify Shipping radio button - Authenticated user With out store se
 	And user click on signin button 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And Shipping radio button is selected by default 
 	Then Verify below Sub/Main Module of Cart Page
@@ -154,7 +164,8 @@ Scenario: To verify Est.Arrival Tool Tip
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button  
+	#	And user click on Add to Cart Button
+	And user click on ship it button   
 	And user will click on View Cart button 
 	Then Shipping radio button is selected by default 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -167,7 +178,8 @@ Scenario: To verify Quantity input field
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button  
 	When user selects the Quantity field 
 	And verfiy quantiy field is activated
@@ -184,7 +196,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user click on signin button 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button
     When user clicks on Move to Wish list
 	And user enter the Wishlist name 
@@ -201,7 +214,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user click on signin button 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then user will verify Shipping radio button is deselected 
@@ -216,7 +230,8 @@ Scenario: Verify Product name dynamic display to product link
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user views the details specific to the item(Thumbnail image)  
@@ -233,7 +248,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user click on signin button
 	And user navigate and deletes existing items in cart 
 	Then User searches a product "SOFSKUNumber" and navigates to PDP	
-	And user click on Add to Cart Button
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page
@@ -255,7 +271,8 @@ Scenario: Verify the Product blade where In-store pick is not available
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	When user will click on View Cart button 
 	And user navigate to Cart page 
 #	Then in Product blade, radio button against In-store Pick-up should be suppressed
@@ -266,7 +283,8 @@ Scenario: Verify the Product blade where shipping is not available
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	When user will click on View Cart button 
 	And user navigate to Cart page 
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
@@ -291,7 +309,8 @@ And user clicks on SignIn link from global header
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When user enters "SKUForBopisProduct" in the search box
-	And user click on Add to Cart Button
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page

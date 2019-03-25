@@ -14,7 +14,8 @@ Feature: B06-225- BOPIS Age Restriction Flag in Checkout
 	And user click on signin button
 	And user navigate and deletes existing items in cart
 	And User searches a product "SOFSKUNumber" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup
 	And user will click on View Cart button 
 	And user navigate to Cart page
@@ -26,7 +27,8 @@ Feature: B06-225- BOPIS Age Restriction Flag in Checkout
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     And User searches a product "SOFSKUNumber" and navigates to PDP
-    Then user click on Add to Cart Button
+   #And user click on Add to Cart Button 
+	And user click on ship it button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -46,7 +48,8 @@ Feature: B06-225- BOPIS Age Restriction Flag in Checkout
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     And User searches a product "SOFSKUNumber" and navigates to PDP
-    Then user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -78,7 +81,8 @@ Feature: B06-225- BOPIS Age Restriction Flag in Checkout
 	And user click on signin button
 	And user navigate and deletes existing items in cart
     And User searches a product "SOFSKUNumber" and navigates to PDP
-    Then user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -103,7 +107,8 @@ Scenario: Verify without checking acknowledgement, user is not able to place the
 	And user click on signin button
 	And user navigate and deletes existing items in cart
 	And User searches a product "SOFSKUNumber" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 

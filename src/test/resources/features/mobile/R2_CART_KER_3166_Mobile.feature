@@ -7,7 +7,8 @@ Scenario: To verify Add Promotion Code
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When user clicks on Add Promo code link under Cart Order Summary 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -26,7 +27,8 @@ Scenario: To verify open field to enter promotion code
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page 
 		|# Verify following elements in Cart page"Order Summary"|	
@@ -41,7 +43,8 @@ Scenario: To verify open field to enter promotion code
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user view and Applied Promotions/Discounts "WrongPromocode" 
 	Then Verify the message on the page 
@@ -56,7 +59,8 @@ Scenario: To verify open field to enter promotion code
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "Promocode" 
@@ -75,7 +79,8 @@ Scenario: To verify Item level description
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount" 
@@ -103,7 +108,8 @@ Scenario: verify Item/order Promo code applied in Order Summary
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount" 
@@ -123,7 +129,8 @@ Scenario: To verify Promo code applied in Check out page
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "Promocode" 
@@ -144,7 +151,8 @@ Verify promotion got applied to the product when user applied %off promotion on 
 	Then User clicks on the burger menu 
 	And User navigates to L3
     And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "Promocode" 
@@ -161,7 +169,8 @@ Verify promotion got applied to the Catagory when user applied %off promotion on
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then User navigates to LThree Mens Watches 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "Promocode" 
@@ -180,7 +189,8 @@ Verify promotion got applied for order level when user applied %off promotion on
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "Promocode" 
@@ -200,7 +210,8 @@ Verify promotion got applied to the product when user applied $ Amount off promo
 	And User navigates to L2 Grills Outdoor cooking 
 	And user clicks on one of the subcategory of Grills Outdoor 
 	And user select the product 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "AmountLevelDiscount" 
@@ -219,7 +230,8 @@ Verify promotion got applied to the Category when user applied $ amount off prom
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then User navigates to LThree Mens Watches 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "AmountLevelDiscount" 
@@ -237,7 +249,8 @@ Verify promotion got applied for order level when user applied $ amount off prom
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "AmountLevelDiscount" 
@@ -257,7 +270,8 @@ Verify implicit %off promotion got applied to the product when user adds eligibl
 	And User navigates to L2 Grills Outdoor cooking 
 	And user clicks on one of the subcategory of Grills Outdoor 
 	And user select the product 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -273,7 +287,8 @@ Verify promotion got applied to the Category when user applied %off promotion on
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -289,7 +304,8 @@ Verify promotion got applied for order level when user applied %off promotion on
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -308,7 +324,8 @@ Verify promotion got applied to the product when user applied $ Amount off promo
 	And User navigates to L2 Grills Outdoor cooking 
 	And user clicks on one of the subcategory of Grills Outdoor 
 	And user select the product 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -326,7 +343,8 @@ Verify promotion got applied to the Category when user applied $ amount off prom
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then User navigates to LThree Mens Watches 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -346,7 +364,8 @@ Verify promotion got applied for order level when user creates $ amount off prom
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page 

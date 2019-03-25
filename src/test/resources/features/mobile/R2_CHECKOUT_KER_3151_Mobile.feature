@@ -29,9 +29,11 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	And user click on viewcart button
+	And user click on checkout button  
 	And user should see the order summary page with the default address 
 	
 	
@@ -63,8 +65,10 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	And user click on checkout button 
 	And user click on edit button in shipping address section 
 	And user verifies all the saved addresses in my account should be displayed in the dropdown 
@@ -98,8 +102,10 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
-	Then user is navigated to Add to cart Notification popup 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup
+	And user click on viewcart button 
 	And user click on checkout button 
 	And user should see the order summary page with the default address 
 	
@@ -123,9 +129,11 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	And user click on viewcart button
+	And user click on checkout button
 	And user click on edit button in shipping address section 
 	And user click on Add a new Shipping Address button in the shipping address drop down 
 	When user enter First name "FirstName" 
@@ -154,9 +162,11 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	And user click on viewcart button
+	And user click on checkout button
 	And user click on edit button in shipping address section 
 	And user verifies the default shipping address in the drop down 
 	
@@ -181,9 +191,11 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	And user click on viewcart button
+	And user click on checkout button
 	And user click on edit button in shipping address section 
 	And user select the shipping address in the drop down 
 	And user click on confirm button 
@@ -223,8 +235,10 @@ Scenario: Verify The list of addresses will be from newest added to oldest.
 	And user enter Zipcode "FindAsStoreZIPCode" in address book 
 	And clicks on Add New Address button 
 	And User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	And user click on viewcart button
+	And user click on checkout button
 	And user click on edit button in shipping address section 
 	And user verifies the default shipping address in the drop down

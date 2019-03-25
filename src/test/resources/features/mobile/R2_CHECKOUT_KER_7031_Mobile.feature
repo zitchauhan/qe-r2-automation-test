@@ -11,9 +11,10 @@ Scenario: To verify checkout landing variations - shipping drawer hidden for SOF
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	Then User searches a product "SOFSKUNumber" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	When user will click on Checkout button and navigates to Checkout page 
 	Then user should not be allowed to view shipping method drawer if only SOF items are in the cart 
 	
@@ -24,9 +25,10 @@ Scenario: To verify checkout landing variations - Guest User
 	Then User searches a product "SOFSKUNumber" and navigates to PDP 
 	Then User clicks on the burger menu 
 	And user selects a store with ZIP "zipCode" 
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	When user will click on Checkout button and navigates to Checkout page 
 	And Verify below Sub/Main Module of Checkout Page 
 		| # Verify following section SPECIAL ORDER SHIP TO STORE in checkout page |
@@ -43,9 +45,10 @@ Scenario: To verify checkout landing variations - Authenticated user
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	Then User searches a product "SOFSKUNumber" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	When user will click on Checkout button and navigates to Checkout page 
 	And Verify below Sub/Main Module of Checkout Page 
 		| # Verify following section SPECIAL ORDER SHIP TO STORE in checkout page |

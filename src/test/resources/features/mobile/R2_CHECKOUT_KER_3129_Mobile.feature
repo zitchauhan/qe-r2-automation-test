@@ -15,7 +15,8 @@ Verify if  for authenticated User tax line item on checkout page is same as that
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -39,11 +40,13 @@ Scenario:
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on continue shopping on item added successfully popup 
 	And User searches a product "SOFSKUNumber" and navigates to PDP 
 	Then User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -66,7 +69,8 @@ Verify if  User can  view tax line item in order summary section on checkout (BO
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -124,7 +128,8 @@ Verify if authenticated User can  view tax line item in order summary section on
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And User searches a product "SKUForATaxableProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -144,7 +149,8 @@ Verify if  User can  view tax line item in order summary section on checkout.
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -166,7 +172,8 @@ Verify if  User can  view updated tax and order total in order summary section o
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -184,7 +191,8 @@ Verify if  User can  view updated tax and order total in order summary section o
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -208,7 +216,8 @@ Verify if  User can  view updated tax and order total in order summary section o
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 

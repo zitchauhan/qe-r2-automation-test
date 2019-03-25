@@ -8,11 +8,11 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user click on checkout button in Cart page 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on SignIn link 
 	And user enter the emailaddress "EmailAddress" in signin page 
 	And user enter the password "Password" 
@@ -50,11 +50,11 @@ Scenario:
 	Verify The user must see form field validations to ensure the e-mail address meets the desired format '@'provided in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user click on checkout button in Cart page 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on SignIn link 
 	And user enter the emailaddress "InvalidEmailAddress" in signin page 
 	And user enter the password "Password" 
@@ -94,11 +94,11 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user click on checkout button in Cart page 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on SignIn link 
 	And user enter the emailaddress "InvalidEmailAddresswithoutdomain" in signin page 
 	And user enter the password "Password" 
@@ -139,11 +139,11 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user click on checkout button in Cart page 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on SignIn link 
 	When user enter the emailaddress "InvalidEmailAddress" in signin page 
 	And user enter the password "Password" 
@@ -158,11 +158,11 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user click on checkout button in Cart page 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on SignIn link 
 	And user click on Create a Account link 
 	When user enter random "InvalidEmailAddress" in signup page 

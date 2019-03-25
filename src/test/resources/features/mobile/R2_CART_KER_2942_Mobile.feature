@@ -6,7 +6,8 @@ Scenario: Verify add quantity adjustment in the Cart Page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user view the items in order summary details (Subtotal, Estimated Shipping/In-Store Pickup, Estimated Taxes) 
@@ -24,7 +25,8 @@ Scenario: Verify cart gets recalculated on applying promotions and updated disco
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -44,7 +46,8 @@ Scenario: Verify Remove link in the Cart Page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -65,7 +68,8 @@ Scenario: Verify Quantity Zero in the Cart Page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -82,7 +86,8 @@ Scenario: Verify system does inventory check for product item added more than av
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "MoreThanThresholdQuantity" to X 
@@ -97,7 +102,8 @@ Scenario: Verify Alphanumeric Quantity in the Cart Page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "AlphanumericQuantity" to X 
@@ -109,7 +115,8 @@ Scenario: Verify Reduce quantity adjustment in the Cart Page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button   
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "EnterQuantityGreaterThenOne" to X 
@@ -129,7 +136,8 @@ Scenario:  Verify Remove quantity message in the Cart Page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button   
+	#And user click on Add to Cart Button 
+	And user click on ship it button   
 	And user will click on View Cart button 
 	And user navigate to Cart page  
 	When click the Remove from cart link
@@ -143,7 +151,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button   
+	#And user click on Add to Cart Button 
+	And user click on ship it button   
 	And user will click on View Cart button 
 	And user navigate to Cart page  
 	When enter the "EnterQuantityGreaterThenOne" to X 	
@@ -156,7 +165,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button   
+	#And user click on Add to Cart Button 
+	And user click on ship it button   
 	And user will click on View Cart button 
 	And user navigate to Cart page   
 	When enter the "EnterQuantityAlphaNumeric" to X 	 
@@ -168,7 +178,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button   
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "EnterQuantityGreaterThenOne" to X 
@@ -182,7 +193,8 @@ Scenario:  To verify Remove link
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button   
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page
@@ -197,7 +209,8 @@ Scenario:  To verify Remove link
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button   
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When click the Remove from cart link 
@@ -211,7 +224,8 @@ Scenario: Verify Quantity Zero in the Cart Page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button   
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page  
 	When enter the "ZeroQuantity" to X 
@@ -226,7 +240,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button   
+	#And user click on Add to Cart Button 
+	And user click on ship it button   
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "EnterQuantityGreaterThenOne" to X 
@@ -238,7 +253,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button   
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "MoreThanThresholdQuantity" to X 

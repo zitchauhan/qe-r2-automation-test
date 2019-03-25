@@ -11,10 +11,11 @@ Scenario:  Verify that the user is able to see the firearm specific compliance r
 	And user click on signin button
 	And user navigate and deletes existing items in cart
 	Then User searches a product "SOFSKUNumber" and navigates to PDP
-	And user click on Add to Cart Button
-	And user will click on View Cart button 
-	And user navigate to Cart page  
-	When user will click on Checkout button and navigates to Checkout page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	    And Verify below Sub/Main Module of Checkout Page 
 		|# Following button and success message on checkout page|
 		|ShipToStoreforSOF_Txt|
@@ -32,10 +33,11 @@ Scenario:  Verify that user is able to proceed to checkout after accepting the f
 	And user click on signin button
 	And user navigate and deletes existing items in cart
 	Then User searches a product "SOFSKUNumber" and navigates to PDP
-	And user click on Add to Cart Button
-	And user will click on View Cart button 
-	And user navigate to Cart page  
-	When user will click on Checkout button and navigates to Checkout page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	    And Verify below Sub/Main Module of Checkout Page 
 		|# Following button and success message on checkout page|
 		|ShipToStoreforSOF_Txt|
@@ -57,10 +59,11 @@ Scenario:  Verify that user is able to proceed to checkout after accepting the f
 	And user click on signin button
 	And user navigate and deletes existing items in cart
 	Then User searches a product "SOFSKUNumber" and navigates to PDP
-	And user click on Add to Cart Button
-	And user will click on View Cart button 
-	And user navigate to Cart page  
-	When user will click on Checkout button and navigates to Checkout page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	    And Verify below Sub/Main Module of Checkout Page 
 		|# Following button and success message on checkout page|
 		|ShipToStoreforSOF_Txt|

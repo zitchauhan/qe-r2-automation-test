@@ -6,9 +6,10 @@ Scenario:
 Verify user is able to checkout using PayPal with Order level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then user click on checkout button in Cart page 
 	And user enter First name "FirstName" 
@@ -35,9 +36,10 @@ Scenario:
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then user click on checkout button in Cart page 
 	And user enter First name "FirstName" 
@@ -68,9 +70,10 @@ Verify user is able to checkout using PayPal with shipping-level Promotion appli
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then user click on checkout button in Cart page 
 	And user enter First name "FirstName" 
@@ -101,8 +104,10 @@ Verify authenticated user is able to proceed with Paypal as checkout for non-SOF
 	And user clicks on the burger menu
 	And user creates an account 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	And user adds shipment address on checkout page for "newly registered" user
 	And user selects shipment method on check out page for "newly registered" user
 	Then user click on paypal radiobtn 
@@ -117,8 +122,10 @@ Verify authenticated user is able to proceed with Paypal as checkout for non-SOF
 Scenario: Verify the user is navigated to the PayPal page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	Then user click on paypal radiobtn 
@@ -137,8 +144,10 @@ Verify authenticated user is able to proceed with Paypal as checkout for non-SOF
 	And User clicks on the burger menu  
 	And user creates an account 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	And user adds shipment address on checkout page for "newly registered" user
 	And user selects shipment method on check out page for "newly registered" user
 	Then user click on paypal radiobtn 
@@ -162,8 +171,11 @@ Verify logged in user is able to select Paypal as Payment method on checkout for
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	Then user click on paypal radiobtn 
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
@@ -174,8 +186,11 @@ Verify guest user is able to proceed with Paypal as checkout for non-SOF items
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -191,8 +206,11 @@ Scenario: Verify the authenticated user cannot pay the remaining or partial orde
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up  
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button  
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -211,8 +229,11 @@ Verify guest user cannot select Paypal as Payment method on checkout for SOF pro
 	And user clicks on the burger menu
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	And user selects terms and conditions checkbox for SOF items 
 	#	And user enter First name "FirstName" 
 	#	And user enter Last name "LastName" 
@@ -232,8 +253,11 @@ Verify guest user cannot select Paypal as Payment method on checkout for SOF pro
 	And user clicks on the burger menu
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
 	And user selects terms and conditions checkbox for SOF items 
 	#	And user enter First name "FirstName" 
 	#	And user enter Last name "LastName" 
@@ -250,8 +274,11 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up  
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 

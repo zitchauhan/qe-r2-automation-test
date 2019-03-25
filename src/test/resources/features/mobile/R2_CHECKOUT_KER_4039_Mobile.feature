@@ -8,8 +8,10 @@ Scenario:
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -38,8 +40,10 @@ Scenario:
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	Then user change the quantity of item in PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -67,8 +71,10 @@ Scenario:
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -92,8 +98,10 @@ Scenario:
 Scenario: 	Verify that user cannot combine Gift Card payment with any non-Credit/Debit Card only 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page  
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -116,8 +124,10 @@ Scenario: Verify that user can use multiple gift cards to make the payment
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -144,8 +154,10 @@ Scenario: Verify that user cannot use more than one credit/debit card for single
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -168,8 +180,10 @@ Scenario: Verify that user cannot use more than one credit/debit card for single
 Scenario: Verify that user cannot combine PayPal payment with any other payment option 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -191,8 +205,10 @@ Scenario: Verify that user cannot see More Options payment option in Payment dra
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 

@@ -13,8 +13,10 @@ Feature: B06-250 - BOPIS Order Details Page Impact
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
-    And user will click on View Cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then verify user can begin checkout
     Then user click on review order button
@@ -40,8 +42,10 @@ Feature: B06-250 - BOPIS Order Details Page Impact
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
-    And user will click on View Cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then verify user can begin checkout
     Then user click on review order button
@@ -82,8 +86,10 @@ Feature: B06-250 - BOPIS Order Details Page Impact
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
-    And user will click on View Cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then verify user can begin checkout
     Then user click on review order button
@@ -110,8 +116,10 @@ Feature: B06-250 - BOPIS Order Details Page Impact
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
-    And user will click on View Cart button
+   #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then verify user can begin checkout
     Then user click on review order button
@@ -142,8 +150,10 @@ Feature: B06-250 - BOPIS Order Details Page Impact
     And user click on signin button
     And user navigate and deletes existing items in cart
     And User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
-    And user will click on View Cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     And user click on checkout button in Cart page
     Then user click on review order button
@@ -171,8 +181,10 @@ Feature: B06-250 - BOPIS Order Details Page Impact
     And user click on signin button
     And user navigate and deletes existing items in cart
     And User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
-    And user will click on View Cart button
+   #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     And user click on checkout button in Cart page
     Then user click on review order button
@@ -203,8 +215,10 @@ Feature: B06-250 - BOPIS Order Details Page Impact
     And user click on signin button
     And user navigate and deletes existing items in cart
     And User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
-    And user will click on View Cart button
+   #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     And user click on checkout button in Cart page
     Then user click on review order button

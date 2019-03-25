@@ -6,9 +6,10 @@ Scenario:
 Verify that user should be able to fulfill an order when cart having single item with single fulfillment option(Ship to home) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
+	And user click on viewcart button
 	Then Shipping radio button is selected by default 
 	When user will click on Checkout button and navigates to Checkout page 
 	When user enter First name "FirstName" 
@@ -29,16 +30,18 @@ Scenario:
 Verify that user should be able to fulfill an order when cart having multiple item with single fulfillment option(Ship to home) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
+	And user click on viewcart button
 	Then Shipping radio button is selected by default 
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
-	Then Shipping radio button is selected by default 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	When user will click on Checkout button and navigates to Checkout page 
 	When user enter First name "FirstName" 
 	And user enter Last name "LastName" 
@@ -59,9 +62,10 @@ Scenario:
 Verify that user should be able to fulfill an order when cart having items with single fulfillment option(dropship to home) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
+	And user click on viewcart button
 	Then Shipping radio button is selected by default 
 	When user will click on Checkout button and navigates to Checkout page 
 	When user enter First name "FirstName" 
@@ -82,9 +86,10 @@ Scenario:
 Verify that user should be able to fulfill an order when cart having single item with single fulfillment option(dropship to home) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
+	And user click on viewcart button
 	
 	Then Shipping radio button is selected by default 
 	When user will click on Checkout button and navigates to Checkout page 
@@ -111,8 +116,10 @@ Scenario:
 	Then User clicks on the burger menu 
 	Then user navigate to GunStorageAndSafty L_Three 
 	Then user select the product from L_Three and navigate to PDP 
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	When user will click on Checkout button and navigates to Checkout page 
 	And user does accepts the firearm specific compliance 
 	And user clicks on Continue button 
@@ -143,8 +150,10 @@ Verify that user should be able to fulfill an order when cart having multiple it
 	Then User clicks on the burger menu 
 	Then user navigate to GunStorageAndSafty L_Three 
 	Then user select the product from L_Three and navigate to PDP 
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	When user will click on Checkout button and navigates to Checkout page 
 	And user does accepts the firearm specific compliance 
 	And user clicks on Continue button 
@@ -174,14 +183,18 @@ Scenario:Verify that user should be able to fulfill an order when cart having mu
 	Then User clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	Then User clicks on the burger menu 
 	
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	When user will click on Checkout button and navigates to Checkout page 
 	When user enter First name "FirstName" 
 	And user enter Last name "LastName" 

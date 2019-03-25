@@ -14,9 +14,11 @@ Scenario:
 	#   And User navigates to L3
 	#	And user clicks on the product card and navigates to PDP 
 	And  User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	Then user click on checkout from ATC pop up 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	Then user click on edit payment metnod 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify  credit card is selected  | 
@@ -37,9 +39,11 @@ Scenario:
 	#	 And User navigates to L3
 	#	And user clicks on the product card and navigates to PDP 
 	And  User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	Then user click on checkout from ATC pop up 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	Then user click on edit payment metnod 
 	Then user click on credit card dropdown 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -60,9 +64,11 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
-	Then user click on checkout from ATC pop up 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on credit card dropdown and selects and new credit card 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify credit card number ,expirydate and cvv input box is displayed|
@@ -83,8 +89,11 @@ Scenario:
 	And  user enter the valid password "Password" 
 	And  user click on signin button 
 	And  User searches a product "productName" and navigates to PDP 
-	And  user click on Add to Cart Button 
-	And  user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on confirm billing address button 
 	And user able to see the button place order 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -113,8 +122,11 @@ Scenario:
 	Then click on Add button on credit card page 
 	Then User clicks on ASO logo 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And User Clicks on credit card dropwdown and selects another card 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Payment Drawer|

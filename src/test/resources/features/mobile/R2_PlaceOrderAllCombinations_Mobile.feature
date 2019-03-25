@@ -7,9 +7,11 @@ Scenario Outline: Verify if authenticated user is able to place an order for sin
 	And user clicks on the burger menu
 	When user creates an account
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user adds shipment address on checkout page for "newly registered" user
 	And user selects shipment method on check out page for "newly registered" user
 	And user add "<Payment Type>" details in payment method for "newly registered" user

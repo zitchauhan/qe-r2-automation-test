@@ -6,7 +6,8 @@ Scenario: Verify if user should be able to checkout if there are no errors
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	When user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	When user click on view cart button 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page "Your Cart item details "| 
@@ -20,7 +21,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "EnterQuantityGreaterThenOne" to X 
@@ -37,7 +39,8 @@ Scenario: To Verify if user is able to click on the Shipping policy link
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -53,7 +56,8 @@ Scenario: To Verify if user is able to click on the Return policy link
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -69,7 +73,8 @@ Scenario: verify if user is able to view the accepted Payments Icons
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
@@ -89,7 +94,8 @@ Scenario: Verify if user is  able to view following elements in order summary of
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user click on view cart button 
 	Then Verify below Sub/Main Module of Cart Page
@@ -106,7 +112,8 @@ Scenario: Verify if  user should be able to click on PayPal checkout if applicab
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user click on view cart button 
 	And user click on checkout button in Cart page 

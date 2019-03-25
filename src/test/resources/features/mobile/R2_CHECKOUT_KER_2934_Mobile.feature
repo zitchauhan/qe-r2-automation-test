@@ -14,7 +14,8 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	And User clicks on edit CTA 
@@ -41,7 +42,8 @@ Scenario:
 	#	And User navigates to L3
 	#   	Then user clicks on the product card and navigates to PDP
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	Then user click on Go To Shipping Method button in Checkout page 
@@ -64,7 +66,8 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -85,7 +88,8 @@ Scenario:
 	Verify guest user, if after placing order, registers the account saves the address in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	When user enter First name "FirstName" 
@@ -106,7 +110,8 @@ Scenario:
 	Verify User needs to enter Zip code(it is mandatory) if not provided on cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -133,7 +138,8 @@ Scenario: Verify if user selects AVS address suggestion and checkout
 	#		And User navigates to L3
 	#   	Then user clicks on the product card and navigates to PDP
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -163,7 +169,8 @@ Scenario: Verify if user selects AVS address suggestion and checkout
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -195,7 +202,8 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	When user enter First name "FirstName" 

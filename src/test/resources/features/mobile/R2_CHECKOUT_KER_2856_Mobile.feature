@@ -15,7 +15,8 @@ Feature: B06-175- Mixed Cart - Order Confirmation screen
     Then user is navigated to Add to cart Notification popup
     And user click on continue shopping
     When user enters "productName" in the search box
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button 
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user click on checkout button in Cart page
@@ -36,11 +37,13 @@ Feature: B06-175- Mixed Cart - Order Confirmation screen
     Then User clicks on the burger menu
     And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
     When User searches a product "SOFSKUNumber" and navigates to PDP
-    And user click on Add to Cart Button
+   #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user is navigated to Add to cart Notification popup
     And user click on continue shopping
     When user enters "SKUForBopisProduct" in the search box
-    When user click on Add to cart button
+   #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user will click on View Cart button
     And user navigate to Cart page
     When user will click on Checkout button and navigates to Checkout page
@@ -62,11 +65,13 @@ Feature: B06-175- Mixed Cart - Order Confirmation screen
     Then User clicks on the burger menu
     And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
     When User searches a product "SOFSKUNumber" and navigates to PDP
-    And user click on Add to Cart Button
+   #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user is navigated to Add to cart Notification popup
     And user click on continue shopping
     When user enters "productName" in the search box
-    When user click on Add to cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user will click on View Cart button
     And user navigate to Cart page
     When user will click on Checkout button and navigates to Checkout page
@@ -85,11 +90,13 @@ Feature: B06-175- Mixed Cart - Order Confirmation screen
     Then User clicks on the burger menu
     And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
     When User searches a product "SOFSKUNumber" and navigates to PDP
-    And user click on Add to Cart Button
+  #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user is navigated to Add to cart Notification popup
     And user click on continue shopping
     When user enters "productName" in the search box
-    When user click on Add to cart button
+   #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user will click on View Cart button
     And user navigate to Cart page
     When user will click on Checkout button and navigates to Checkout page
@@ -115,11 +122,13 @@ Feature: B06-175- Mixed Cart - Order Confirmation screen
     And user clicks on the burger menu
     And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
     When User searches a product "SOFSKUNumber" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user is navigated to Add to cart Notification popup
     And user click on continue shopping
     When user enters "productName" in the search box
-    When user click on Add to cart button
+   #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user will click on View Cart button
     And user navigate to Cart page
     When user will click on Checkout button and navigates to Checkout page

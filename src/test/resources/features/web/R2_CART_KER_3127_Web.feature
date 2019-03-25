@@ -5,7 +5,8 @@ Scenario: To Verify if user is able to click on the Shipping policy link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -20,7 +21,8 @@ Scenario: To Verify if user is able to click on the Return policy link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -36,7 +38,8 @@ Scenario: verify if user is able to view the accepted Payments Icons
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	And user click on Add to Cart Button 
+#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page 
@@ -55,7 +58,8 @@ Scenario: Verify if user should be able to apply or remove a promotion code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "EnterQuantityGreaterThenOne" to X 
@@ -71,7 +75,8 @@ Scenario: Verify if user is  able to view following elements in order summary of
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user click on view cart button 
 	Then Verify below Sub/Main Module of Cart Page
@@ -87,7 +92,8 @@ Scenario: Verify if user should be able to checkout if there are no errors
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	When user click on view cart button 
 	Then Verify below Sub/Main Module of Cart Page
 	|# Verify following elements in Cart page "Your Cart item details "| 
@@ -100,7 +106,8 @@ Scenario: Verify if  user should be able to click on PayPal checkout if applicab
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user click on view cart button 
 	And user click on checkout button in Cart page
