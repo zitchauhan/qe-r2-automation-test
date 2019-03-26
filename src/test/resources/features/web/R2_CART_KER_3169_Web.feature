@@ -8,7 +8,8 @@ Scenario: To verify open field to enter promotion code
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
@@ -25,7 +26,8 @@ Scenario: To verify open field to enter promotion code
 	And User navigates to L2 Mens clothing
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button
 	When user clicks on Add Promo code link under Cart Order Summary
 	Then Verify below Sub/Main Module of Cart Page

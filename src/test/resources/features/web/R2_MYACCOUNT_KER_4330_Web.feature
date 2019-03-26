@@ -13,7 +13,8 @@ Feature: B06-250 - BOPIS Order Details Page Impact
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
     And user will click on View Cart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then user click on checkout button
@@ -37,7 +38,8 @@ Feature: B06-250 - BOPIS Order Details Page Impact
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
     And user will click on View Cart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then user click on checkout button
@@ -109,7 +111,8 @@ Scenario: Verify that user is able to view BOPIS order details before pickup
     And user click on signin button
     And user navigate and deletes existing items in cart
     And User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
     And user will click on View Cart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     And user click on checkout button in Cart page
@@ -136,7 +139,8 @@ Scenario: Verify that user is able to view BOPIS order details before pickup
     And user click on signin button
     And user navigate and deletes existing items in cart
     And User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
     And user will click on View Cart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     And user click on checkout button in Cart page

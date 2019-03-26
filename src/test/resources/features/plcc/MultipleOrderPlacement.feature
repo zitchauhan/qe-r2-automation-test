@@ -13,7 +13,7 @@ Scenario: Verify user is able to place Multiple orders using PLCC Card
 	And user click on Payments link
 	Then delete all credit cards from My Account
 	And user clears everything in cart
-	When user enters "SKUIdOfProduct" in the search box plcc 
+	When user enters "SKUIdOfProduct1" in the search box plcc 
 	And user click on search icon 
 	#And user click on Add to Cart button 
 	And user click on ship it button

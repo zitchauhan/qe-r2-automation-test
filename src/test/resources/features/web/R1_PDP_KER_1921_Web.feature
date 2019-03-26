@@ -35,7 +35,8 @@ Scenario: Verify the functionality of Add to Cart for "not sold online"
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP of any product
     Then user clicks on the product card and navigates to PDP of the product
-    Then user should be able to see Add to cart button and quantity section
+    #Then user should be able to see Add to cart button and quantity section
+    And user should be able to see ship it button and quantity section
 
   @C-PDP @Web @Regression @KER-1921 @ZYP_PDP_K1921-5079 @CR-RKA
   Scenario: Verify selected SKU(item) should be added to cart.

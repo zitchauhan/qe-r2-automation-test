@@ -16,7 +16,7 @@ Background:  Common Pre-requisite steps
 		
 @C-PLCC @Regression @All @PLCC-99 @CR-Manju
 Scenario: Verify user is able to get Free shipping offer with Item value greater than 15$ 
-#	And user click on Academy Logo Icon
+	#And user click on Academy Logo Icon
 	When user enters "SKUIdOfProductGr15" in the search box plcc for mobile
     And user click on search icon for mobile
 	And user click on ship it button 

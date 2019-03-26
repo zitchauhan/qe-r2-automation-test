@@ -8,6 +8,8 @@ import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_HomePage_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
@@ -17,6 +19,8 @@ public class R1_HP_K3184_SD extends CommonActionHelper {
 	R1_HomePage_PO hp_p = PageFactory.initElements(driver, R1_HomePage_PO.class);
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	private static final Logger logger = Logger.getLogger(R1_HP_K3184_SD.class);
+	R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
+	
 
 	@Then("^User click on shop Gift Cards Link and navigate to Gift Card LAnding page$")
 	public void user_click_on_shop_Gift_Cards_Link_and_navigate_to_Gift_Card_LAnding_page() throws Throwable {
@@ -43,7 +47,7 @@ public class R1_HP_K3184_SD extends CommonActionHelper {
 	public void user_add_it_to_cart() throws InterruptedException {
 		Boolean flag = pdpPageObj.giftCardColor();
 		if (flag) {
-			assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+			assertTrue(clickOnButton(generic_po.shipItButton));
 			waitForElement(pdpPageObj.secAddToCartPopup);
 			assertTrue(isDisplayed(pdpPageObj.secAddToCartPopup));
 		} else {
@@ -130,7 +134,7 @@ public class R1_HP_K3184_SD extends CommonActionHelper {
 						}
 					}
 				} catch (Exception e) {
-					assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+					assertTrue(clickOnButton(generic_po.shipItButton));
 					waitForElement(pdpPageObj.secAddToCartPopup);
 					assertTrue(isDisplayed(pdpPageObj.secAddToCartPopup));
 					break;

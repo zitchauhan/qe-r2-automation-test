@@ -29,9 +29,13 @@ Scenario Outline: Verify if authenticated user is able to place an order for sin
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
+#	And user click on Add to Cart Button 
+#	And user is navigated to Add to cart Notification popup 
+#	When user click on checkout button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "Newly Registered" user
 	And user selects shipment method on check out page for "Newly Registered" user
 	And user add "<Payment Type>" details in payment method for "Newly Registered" user
@@ -52,8 +56,11 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct" 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
+#	And user is navigated to Add to cart Notification popup 
+#	When user click on checkout button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	And user add "<Payment Type>" details in payment method for "guest" user
@@ -76,8 +83,11 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bundle 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
 	And user click on Add to Cart Button for "Bundle Product" 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	#	And user is navigated to Add to cart Notification popup 
+#	When user click on checkout button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	And user add "<Payment Type>" details in payment method for "guest" user
@@ -99,9 +109,13 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bundle 
 Scenario Outline: Verify if unauthenticated user is able to place an for standard gift card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUForGiftCard" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+#	And user click on Add to Cart Button 
+#	And user is navigated to Add to cart Notification popup 
+#	And user click on checkout button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	And user add "<Payment Type>" details in payment method for "guest" user
@@ -121,9 +135,13 @@ Scenario Outline: Verify if unauthenticated user is able to place an for standar
 Scenario Outline: Verify if unauthenticated user is able to place an for bulk gift card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUForBulkGiftCard" and navigates to PDP
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	#	And user click on Add to Cart Button 
+#	And user is navigated to Add to cart Notification popup 
+#	And user click on checkout button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	And user add "<Payment Type>" details in payment method for "guest" user
@@ -144,8 +162,13 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bait pr
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUForBaitProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "Bait Product" 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	#	And user click on Add to Cart Button 
+#	And user is navigated to Add to cart Notification popup 
+#	And user click on checkout button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	And user add "<Payment Type>" details in payment method for "guest" user

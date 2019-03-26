@@ -25,7 +25,8 @@ Scenario: To verify add to cart functionality on PDP - Multiple SKU package
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 
 	And verfiy add to cart functionality 
-	Then Add to cart modal is displayed
+	#Then Add to cart modal is displayed
+	Then verify ship it button is displayed
 	
 	
 	@AutomationSanityR1 @AS1 @MAST-04 @1HR @AutomationSanity
@@ -391,7 +392,8 @@ Scenario: To verify Standard Gift Cards
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-    And user should be able to see Add to cart button and quantity section
+    #And user should be able to see Add to cart button and quantity section
+    And user should be able to see ship it button and quantity section
     Then user should be able to see inventory status of the product
 
   @AutomationSanityR1 @AS1 @MAST-27 @1HR @AutomationSanity

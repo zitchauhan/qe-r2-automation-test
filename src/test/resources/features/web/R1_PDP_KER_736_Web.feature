@@ -11,4 +11,7 @@ Feature: To Validate Quick Look / View and user is able to add the product to ca
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page
     Then User click on Quick view button
-    Then verify addcart button is displayed
+    #Then verify addcart button is displayed
+  	Then verify ship it button is displayed
+    
+   

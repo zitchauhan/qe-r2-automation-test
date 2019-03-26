@@ -1,7 +1,4 @@
-
 Feature: B04-350 - Display Simple Header on Checkout Page
-
-
 	
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2  @C-Checkout @KER-6576 @ZYP_CHECKOUT_K6576-8739 @CR-RK	@1HR_R2
 Scenario:  Verify the Elements present in Checkout footer
@@ -11,7 +8,8 @@ Scenario:  Verify the Elements present in Checkout footer
 	    And user is able to see the product category name in section title
 	    Then user clicks on one of the product category and navigates to LThree
 		Then User is navigated to pdp page
-		Then user click on Add to Cart Button
+		#Then user click on Add to Cart Button
+		And user click on ship it button
 		Then user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 		And user navigate to Cart page
@@ -41,7 +39,8 @@ Scenario:  Verify the Elements present in Checkout footer
 	    And user is able to see the product category name in section title
 	    Then user clicks on one of the product category and navigates to LThree
 		Then User is navigated to pdp page
-		Then user click on Add to Cart Button
+		#Then user click on Add to Cart Button
+		And user click on ship it button
 		Then user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 		And user navigate to Cart page
@@ -62,7 +61,8 @@ Scenario:  Verify the Elements present in Checkout footer
 	    And user is able to see the product category name in section title
 	    Then user clicks on one of the product category and navigates to LThree
 		Then User is navigated to pdp page
-		Then user click on Add to Cart Button
+		#Then user click on Add to Cart Button
+		And user click on ship it button
 		Then user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 		And user navigate to Cart page
@@ -84,7 +84,8 @@ Scenario:  Verify the Elements present in Checkout footer
 	    And user is able to see the product category name in section title
 	    Then user clicks on one of the product category and navigates to LThree
 		Then User is navigated to pdp page
-		Then user click on Add to Cart Button
+		#Then user click on Add to Cart Button
+		And user click on ship it button
 		Then user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 		And user navigate to Cart page
@@ -106,7 +107,8 @@ Scenario:  Verify the Elements present in Checkout footer
 	    And user is able to see the product category name in section title
 	    Then user clicks on one of the product category and navigates to LThree
 		Then User is navigated to pdp page
-		Then user click on Add to Cart Button
+		#Then user click on Add to Cart Button
+		And user click on ship it button
 		Then user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 		And user navigate to Cart page

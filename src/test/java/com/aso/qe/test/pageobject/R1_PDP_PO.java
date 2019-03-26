@@ -16,6 +16,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
+import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
@@ -24,6 +25,8 @@ public class R1_PDP_PO extends CommonActionHelper
 {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());  //Sid
+	R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
+	R1_PLCC_Generic_PO genericPO = PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
 	private String sku;   //Sid
 	@FindBy(xpath="//*[@data-auid='btnAddToCart']") public WebElement AddToCartBtn;
 	@FindBy(xpath="//*[@data-auid='btnbtnEnableBuyNow']")  public WebElement btnEnablebuynow;
@@ -660,13 +663,13 @@ public class R1_PDP_PO extends CommonActionHelper
 	// 08-Aug Anuj KER-1920 //Modified SID 28-August
 	public void addToCartProductValidationMobile() throws InterruptedException {
 		List<String> productImage = new ArrayList<String>();
-		addToCartAvailability();
+		//addToCartAvailability(); -- PLCC Team
 		for (WebElement imgproductPDPMobile : imgproductPDPSRCMobile) {
 			productImage.add(imgproductPDPMobile.getAttribute("src"));
 		}
 		String productPrice = getText(txtPdpprice);
 		String productTitle = getText(txtProductTitle);
-		assertTrue(clickOnButton(btnAddToCart));
+		assertTrue(clickOnButton(generic_po.shipItButton));
 		Thread.sleep(7000);
 		logger.error("Add to cart modal is not coming");
 		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),"+"\""+productTitle+"\""+")]"));//SID
@@ -999,14 +1002,14 @@ public class R1_PDP_PO extends CommonActionHelper
 			waitForElement(selectedSwatchRepresentative);
 			isDisplayed(selectedSwatchRepresentative);
 
-			if (!btnAddToCart.isDisplayed()) {
+			if (!genericPO.shipItButton.isDisplayed()) {
 				isAddtoCart = true;
 
 			} else {
 				for (WebElement sizeElement : sizeNotAvailable) {
 					logger.debug("Product Size Txt::" + sizeElement.getText());
 					clickOnButton(sizeElement);
-					if (!isDisplayed(btnAddToCart)) {
+					if (!isDisplayed(genericPO.shipItButton)) {
 						isAddtoCart = true;
 						break;
 					}
@@ -1016,7 +1019,7 @@ public class R1_PDP_PO extends CommonActionHelper
 			for (WebElement sizeElement : sizeNotAvailable) {
 				logger.debug("Product Size Txt::" + sizeElement.getText());
 				clickOnButton(sizeElement);
-				if (!btnAddToCart.isDisplayed()) {
+				if (!genericPO.shipItButton.isDisplayed()) {
 					isAddtoCart = true;
 					break;
 				}

@@ -10,7 +10,8 @@ Scenario:  Verify that the user is able to see the firearm specific compliance r
 	And user click on signin button
 	And user navigate and deletes existing items in cart
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button
+    And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And user navigate to Cart page 
@@ -31,7 +32,8 @@ Scenario: Verify that user is able to proceed to checkout after accepting the fi
 	And user click on signin button
 	And user navigate and deletes existing items in cart
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
-    And user click on Add to Cart Button
+     #And user click on Add to Cart Button
+    And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And user navigate to Cart page 
@@ -55,7 +57,8 @@ Scenario: Verify that the user is not able to proceed to checkout without accept
 	And user click on signin button
 	And user navigate and deletes existing items in cart
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
-    And user click on Add to Cart Button
+     #And user click on Add to Cart Button
+    And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And user navigate to Cart page 

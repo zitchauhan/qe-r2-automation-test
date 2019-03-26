@@ -7,7 +7,8 @@ Scenario:
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -52,7 +53,8 @@ Scenario:
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -101,7 +103,8 @@ Scenario:
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -147,7 +150,8 @@ Scenario:
 	And user clicks on one of the category and navigates to LOne 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -170,7 +174,8 @@ Scenario:
 	And user clicks on one of the category and navigates to LOne 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 

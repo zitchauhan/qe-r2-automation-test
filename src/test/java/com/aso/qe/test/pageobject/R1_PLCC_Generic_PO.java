@@ -236,6 +236,17 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		}
 
 	}
+	public void verifyPresenceOfShipItButton() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(shipItButton);
+			logger.debug("Ship It button on cart page is dispalyed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(shipItButton);
+			logger.debug("Ship It button on cart page is dispalyed++++++++++++++++++++++++");
+		}
+
+	}
 	public void verifyPresenceOfCartIcon() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {

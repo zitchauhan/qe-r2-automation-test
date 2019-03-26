@@ -7,7 +7,8 @@ Scenario: Verify guest user is able to see the See In-Store Pickup Instructions 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	And User searches a product "SOFSKUNumber" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user click on checkout button in Cart page 
@@ -20,7 +21,8 @@ Scenario: Verify guest user is able to place the BOPIS order
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	And User searches a product "SOFSKUNumber" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#Then user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -37,7 +39,8 @@ Scenario: Verify guest user is able to see the See In-Store Pickup Instructions 
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	And User searches a product "SOFSKUNumber" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user click on checkout button in Cart page 
@@ -49,7 +52,8 @@ Scenario: Verify guest user is able to see the See In-Store Pickup Instructions 
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	And User searches a product "SOFSKUNumber" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#Then user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user click on checkout button in Cart page 
@@ -73,7 +77,8 @@ Scenario: Verify without checking acknowledgement, user is not able to place the
 	And user click on signin button
 	And user navigate and deletes existing items in cart
 	And User searches a product "SOFSKUNumber" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 

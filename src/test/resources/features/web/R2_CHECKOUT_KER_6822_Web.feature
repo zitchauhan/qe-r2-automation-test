@@ -9,7 +9,8 @@ Scenario: Verify Add new Gift Card fields
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#Then user click on Add to Cart Button 
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -33,10 +34,11 @@ Scenario: Verify Gift card balance is Stored in My account
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#Then user click on Add to Cart Button 
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
+	And user navigate to Cart page
 	And user will click on Checkout button and navigates to Checkout page 
 	And user is navigated to order summary page 
 	And user clicks on edit payment cta 
@@ -62,7 +64,8 @@ Scenario: Verify Gift card fields displayed - No Previous Gift Cards Saved
 	Then user click on My Account and navigate to payment 
 	And user deletes all the GiftCards in MyAccount Payment page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#Then user click on Add to Cart Button 
+	And user click on ship it button   
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -85,7 +88,8 @@ Scenario: Verify Add new gift card during checkout user has Saved Gift Cards
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#Then user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -111,7 +115,8 @@ Scenario: Verify Valid gift card is applied for purchases
 	And user navigates to payments in my account 
 	And user deletes all the GiftCards in MyAccount Payment page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#Then user click on Add to Cart Button 
+	And user click on ship it button   
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -135,7 +140,8 @@ Scenario:
 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#Then user click on Add to Cart Button 
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 

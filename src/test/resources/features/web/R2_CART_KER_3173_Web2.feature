@@ -10,7 +10,8 @@ Scenario: Verify that the Store Pickup Checkbox is selected by default if User S
 	When user lands on the PLP page with Filter Drawer 
 	And user should be able to select the store pickup "store pickup" filter
 	Then user clicks on the product card and navigates to PDP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -24,7 +25,8 @@ Scenario: Verify that User is able to change shipping zip code
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user click on view cart
 	And user makes a note of tax calculation
 	When user enters "BOPIS_Store1" in change zipcode field in cart page 
@@ -37,7 +39,8 @@ Scenario: Verify that User is able to change pickup location
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	When user click on Add to cart button 
+	#When user click on Add to cart button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
@@ -52,7 +55,8 @@ Scenario: Verify that User is able to change pickup location
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	When user click on Add to cart button 
+	#When user click on Add to cart button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user click on tooltip
@@ -64,7 +68,8 @@ Scenario: Verify that Store Information Tool Tip
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	When user click on Add to cart button 
+	#When user click on Add to cart button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option
@@ -77,7 +82,8 @@ Scenario: Verify that User is able to remove Items from cart
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	When user click on Add to cart button 
+	#When user click on Add to cart button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And user click on the remove button in cart page
@@ -89,7 +95,8 @@ Scenario: Verify that User is able to add cart item to wishlist
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	When user click on Add to cart button 
+	#When user click on Add to cart button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And user note the product name
@@ -103,7 +110,8 @@ Scenario: Verify that user is able to view the cart variation when item is Not a
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email"
 	When user enters "NOT_BOPIS_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user click on view cart
 	And user should be able to see the grey icon
 	And user should not be able to see the radio button	for store pickup
@@ -122,7 +130,8 @@ Scenario: Verify that user is able to view the cart variation when item is Not A
 	When User select store with "BOPIS_Store2"  
 	And User should be able to see Search Box on Homepage 
 	When user enters "Not_Available_Product" in the searchbox	
-	When user click on Add to cart button 
+	#When user click on Add to cart button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And user should be able to see the grey icon
@@ -145,7 +154,8 @@ Scenario: Verify that user is able to view the cart variation when limited stock
 	When User select store with "BOPIS_Store2"  
 	And User should be able to see Search Box on Homepage 
 	When user enters "BOPIS_Regular_Product" in the searchbox	
-	When user click on Add to cart button 
+	#When user click on Add to cart button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And user input the quantity more than available "MoreThanThresholdQuantity"
@@ -167,7 +177,8 @@ Scenario: Verify request cancellation of order types - BOPIS Orders
 	When user clicks on SignIn link from global header 
 	And user logs in as "Cart_BopisEmail" 
 	When User searches a product "BOPIS_Shipping_Not_Availiable" and navigates to PDP 
-	When user click on Add to cart button 
+	#When user click on Add to cart button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then user verify BOPIS radio button		

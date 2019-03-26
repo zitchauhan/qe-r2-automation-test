@@ -5,9 +5,12 @@ Feature: Verify Gift Card - Payment Processing
 Scenario: Verify applied gift cards should be displayed to the users
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	 #And user click on Add to Cart Button
+    And user click on ship it button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	#Then user click on checkout from ATC pop up 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	When user click on GiftCard Plus icon in Checkout page
@@ -21,9 +24,12 @@ Scenario: Verify applied gift cards should be displayed to the users
 Scenario: Verify Once a gift card is applied, a Remove option should be displayed to the user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	 #And user click on Add to Cart Button
+   And user click on ship it button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	#Then user click on checkout from ATC pop up 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
@@ -38,9 +44,11 @@ Scenario: Verify Once a gift card is applied, a Remove option should be displaye
 Scenario: Verify  click on remove gift card, the respective gift card should no longer be applied to the transaction.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	 #And user click on Add to Cart Button
+    And user click on ship it button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user
 	And user click on GiftCard Plus icon in Checkout page
@@ -55,9 +63,11 @@ Scenario: Verify  click on remove gift card, the respective gift card should no 
 Scenario: Verify for full payment using Gift Card, Billing address is still required
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	 #And user click on Add to Cart Button
+    And user click on ship it button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
@@ -77,9 +87,11 @@ Scenario: Verify for full payment using Gift Card, Billing address is still requ
 Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Guest user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	 #And user click on Add to Cart Button
+    And user click on ship it button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart pagen 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
@@ -94,9 +106,11 @@ Scenario: Verify If a gift card covers the full transaction, the amount applied 
 Scenario: Verify user is prompted with message to retain the physical gift card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	 #And user click on Add to Cart Button
+   And user click on ship it button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
@@ -158,8 +172,9 @@ Scenario: Verify System should integrate with RTS/First data for existing gift c
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct" 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page 
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
@@ -179,8 +194,9 @@ Scenario: Verify for guest user If the balance on the provided gift cards doesn'
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct" 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
+And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
@@ -199,8 +215,9 @@ Scenario: Verify for Sign in user If the balance on the provided gift cards does
 	And user creates an account
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct" 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "newly registered" user
 	And user selects shipment method on check out page for "newly registered" user
 	When user click on GiftCard Plus icon in Checkout page
@@ -217,8 +234,9 @@ Scenario: Verify for guest user If the balance on the provided Gift cards doesn'
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct" 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
+And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
@@ -234,8 +252,9 @@ Scenario: Verify the Authenticated user cannot pay the remaining or partial orde
 	And user creates an account
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct" 
-	And user is navigated to Add to cart Notification popup 
-	When user click on checkout button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "newly registered" user
 	And user selects shipment method on check out page for "newly registered" user
 	When user click on GiftCard Plus icon in Checkout page
@@ -251,8 +270,9 @@ Scenario: Verify If a gift card does not cover the full transaction, the amount 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct"
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
@@ -285,7 +305,8 @@ Scenario: Verify If a gift card covers the full transaction, the amount applied 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user creates an account
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user click on checkout button 
 	And user adds shipment address on checkout page for "guest" user 

@@ -28,7 +28,8 @@ Scenario:
 	And user navigate and deletes existing items in cart 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -45,7 +46,8 @@ Scenario: Verify Authenticated user able to see the BOPIS items for pickup
 	And user navigate and deletes existing items in cart 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -64,7 +66,8 @@ Scenario:
 	And user navigate and deletes existing items in cart 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	
