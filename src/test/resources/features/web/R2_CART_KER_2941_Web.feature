@@ -5,7 +5,8 @@ Feature: Verify Promotional Messaging in Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	When user clicks on Add Promo code link under Cart Order Summary
 	Then Verify below Sub/Main Module of Cart Page
@@ -22,7 +23,8 @@ Feature: Verify Promotional Messaging in Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	When user clicks on Add Promo code link under Cart Order Summary
 	Then Verify below Sub/Main Module of Cart Page
@@ -39,7 +41,8 @@ Feature: Verify Promotional Messaging in Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -55,7 +58,8 @@ Feature: Verify Promotional Messaging in Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"    
@@ -73,7 +77,8 @@ Feature: Verify Promotional Messaging in Cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button
 	When enter the "EnterQuantityGreaterThenOne" to X  
 	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount"    

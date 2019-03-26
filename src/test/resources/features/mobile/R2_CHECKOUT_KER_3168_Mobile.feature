@@ -6,11 +6,11 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
   	    And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -27,11 +27,11 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
   	    And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -51,11 +51,11 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
   	    And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -75,11 +75,11 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button 
   	    And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -100,11 +100,11 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
   	    And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -125,11 +125,11 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
   	    And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -146,11 +146,11 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button 
   	    And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -168,11 +168,11 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
   	    And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -189,11 +189,11 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	And user click on checkout button
   	    And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 

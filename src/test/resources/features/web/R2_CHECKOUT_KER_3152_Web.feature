@@ -29,7 +29,8 @@ Scenario:
 	And clicks on Add New Address button 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user click on checkout button in Cart page 
 	And user click on edit button in shipping address section 
@@ -42,7 +43,8 @@ Scenario:
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button
 	Then user click on checkout button in Cart page
 	When user enter First name "FirstName" 
@@ -69,7 +71,8 @@ Scenario:
     Given user launches the browser and navigates to "ASO_HOME" page
    And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
+	#	And user click on Add to Cart Button
+	And user click on ship it button
      And user will click on View Cart button
      Then user click on checkout button in Cart page
      Then Verify below Sub/Main Module of Checkout Page
@@ -96,7 +99,8 @@ Scenario:
     Given user launches the browser and navigates to "ASO_HOME" page
     And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
+	#	And user click on Add to Cart Button
+	And user click on ship it button
       And user will click on View Cart button
      Then user click on checkout button in Cart page
      Then Verify below Sub/Main Module of Checkout Page
@@ -122,7 +126,8 @@ Scenario:
     Given user launches the browser and navigates to "ASO_HOME" page
     And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
+	#	And user click on Add to Cart Button
+	And user click on ship it button
      And user will click on View Cart button
      Then user click on checkout button in Cart page
      When user enter First name "FirstName"

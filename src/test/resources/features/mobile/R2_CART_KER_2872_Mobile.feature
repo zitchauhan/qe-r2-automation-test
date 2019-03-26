@@ -81,7 +81,8 @@ Scenario: Verify the user is able to view the 'Change Location' under In-store P
 	And User clicks on the burger menu 
 	 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button 
 	Then verify Change Location link
 	
@@ -91,7 +92,8 @@ Scenario: Verify that user view 'Find a Store' modal from Cart
 	And User clicks on the burger menu 
 	 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And click on Change Location link
 	Then Find in Store modal should get open
@@ -181,7 +183,8 @@ Scenario: Verify the user is able to view the 'Change Location' under In-store P
 	And User clicks on the burger menu 
 	 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button   
 	And user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page

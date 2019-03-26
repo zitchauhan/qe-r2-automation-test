@@ -6,7 +6,8 @@ Scenario: To Edit cart items from Order summary
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And user will click on Checkout button and navigates to Checkout page 
@@ -23,7 +24,8 @@ Scenario: To Edit cart items from Order summary
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When user will click on Checkout button and navigates to Checkout page 
@@ -42,7 +44,8 @@ Scenario: To Remove cart items from Order summary
 #    	And User navigates to L3
 #   		And user clicks on the product card and navigates to PDP
 		When User searches a product "productName" and navigates to PDP
-		And user click on Add to Cart Button 
+		#And user click on Add to Cart Button 
+	And user click on ship it button 
 		And user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 		And user navigate to Cart page
@@ -67,7 +70,8 @@ Scenario: To view the item summary with number of items
 		When User searches a product "productName" and navigates to PDP
 		And user click on Add to Cart Button 
 		And user is navigated to Add to cart Notification popup  
-		And user will click on View Cart button 
+		#And user click on Add to Cart Button 
+	And user click on ship it button 
 		And user navigate to Cart page
 		When user will click on Checkout button and navigates to Checkout page
 		Then user clicks on items
@@ -82,7 +86,8 @@ Scenario: Verify To view the item summary with number of pick up items
 #    	And User navigates to L3
 #   		And user clicks on the product card and navigates to PDP
 		When User searches a product "productName" and navigates to PDP
-		And user click on Add to Cart Button 
+		#And user click on Add to Cart Button 
+		And user click on ship it button 
 		And user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 		And user navigate to Cart page

@@ -8,7 +8,8 @@ Scenario: To verify Remove Promo code in Order Summary
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page and changes the quantity to "OrderLevelQuantity" 
@@ -27,7 +28,8 @@ Scenario: To verify Promo code applied in Order Summary
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user navigate to Cart page and changes the quantity to "OrderLevelQuantity" 
@@ -44,7 +46,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page and changes the quantity to "OrderLevelQuantity" 

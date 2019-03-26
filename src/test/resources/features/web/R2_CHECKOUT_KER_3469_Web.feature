@@ -6,7 +6,8 @@ Scenario: Verify BOPIS Pick Up Person - Authenticated user - Person Placed Order
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email"  
 	When User searches a product "BOPIS_Regular_Product" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
@@ -22,7 +23,8 @@ Scenario: Verify BOPIS Pick Up Person - Authenticated user -Alternate Person
 	When user clicks on SignIn link from global header 
 	And user logs in as "RawUser" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
@@ -44,7 +46,8 @@ Scenario: Verify BOPIS Pick Up Person - Un Authenticated user
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	And User searches a product "BOPIS_Regular_Product" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
@@ -73,7 +76,8 @@ Scenario: Verify BOPIS Pick Up Person - Un Authenticated user - Alternate Pick u
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user select in store pickup option 
@@ -95,7 +99,8 @@ Scenario: Verify BOPIS Pick Up Person - Continue to Complete Payment Information
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user select in store pickup option 

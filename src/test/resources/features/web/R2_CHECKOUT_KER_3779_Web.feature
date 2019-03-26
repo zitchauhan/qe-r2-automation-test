@@ -4,7 +4,8 @@ Feature: BO6-125 - Fulfillment Options
 Scenario: Verify that user should be able to fulfill an order when cart having single item with single fulfillment option(Ship to home)
 Given user launches the browser and navigates to "ASO_HOME" page 
 When User searches a product "productName" and navigates to PDP
-Then user click on Add to Cart Button 
+#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then Shipping radio button is selected by default
@@ -25,7 +26,8 @@ Then user click on Add to Cart Button
     Scenario: Verify that user should be able to fulfill an order when cart having multiple item with single fulfillment option(Ship to home)
     Given user launches the browser and navigates to "ASO_HOME" page 
     When User searches a product "productName" and navigates to PDP
-    Then user click on Add to Cart Button 
+    #And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
     Then Shipping radio button is selected by default
@@ -34,7 +36,8 @@ Then user click on Add to Cart Button
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
     And User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button
     Then Shipping radio button is selected by default
 When user will click on Checkout button and navigates to Checkout page
@@ -55,7 +58,8 @@ When user will click on Checkout button and navigates to Checkout page
 Scenario: Verify that user should be able to fulfill an order when cart having items with single fulfillment option(dropship to home)
 Given user launches the browser and navigates to "ASO_HOME" page 
 When User searches a product "productName" and navigates to PDP
-Then user click on Add to Cart Button 
+#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then Shipping radio button is selected by default
@@ -76,7 +80,8 @@ Then user click on Add to Cart Button
 Scenario: Verify that user should be able to fulfill an order when cart having single item with single fulfillment option(dropship to home)
 Given user launches the browser and navigates to "ASO_HOME" page 
 When User searches a product "productName" and navigates to PDP
-Then user click on Add to Cart Button 
+#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	
@@ -108,7 +113,8 @@ When user clicks on Find a Store
 #    Then user select the product from L_Three and navigate to PDP
  
  When User searches a product "SOFSKUNumber" and navigates to PDP
-    And user click on Add to Cart Button 
+    #And user click on Add to Cart Button 
+	And user click on ship it button 
    And user will click on View Cart button
    When user will click on Checkout button and navigates to Checkout page
 And user does accepts the firearm specific compliance 
@@ -142,7 +148,8 @@ When user clicks on Find a Store
 #Then user navigate to GunStorageAndSafty L_Three   
 #    Then user select the product from L_Three and navigate to PDP
  When User searches a product "SOFSKUNumber" and navigates to PDP
-    And user click on Add to Cart Button 
+    #And user click on Add to Cart Button 
+	And user click on ship it button 
    And user will click on View Cart button
 When user will click on Checkout button and navigates to Checkout page
 And user does accepts the firearm specific compliance 
@@ -174,14 +181,16 @@ When user clicks on Find a Store
 	Then user click on plus icon in Store Address drawer
 	And user click on Make My store button	
 	When User searches a product "productName" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button
  And user clicks on one of the category and navigates to LOne page
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
     And User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button
  When user will click on Checkout button and navigates to Checkout page
 When user enter First name "FirstName"
@@ -204,7 +213,8 @@ Scenario: Verify that user should be able to fulfill an order when cart having s
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -220,11 +230,13 @@ Scenario: Verify that user should be able to place an order when cart having mul
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page

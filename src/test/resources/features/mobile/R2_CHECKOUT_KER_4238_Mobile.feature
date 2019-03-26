@@ -14,10 +14,10 @@ Scenario:
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	#	And user verify the employee discount is visible at item level
-	And user will click on Checkout button 
+	Then user click on Add to Cart Button #And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	#	And user verify the employee discount in order summery
 	
 	
@@ -35,7 +35,8 @@ To verify that an existing ASO employee is able to see the employee discount on 
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
 	And then user close the add to cart popup 
 	Then user click on Deals tab 

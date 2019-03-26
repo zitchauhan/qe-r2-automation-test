@@ -8,11 +8,11 @@ Scenario:  Verify the Elements present in Checkout footer
 	    And User clicks on the burger menu 
 		And User navigates to L3 
 		And user clicks on the product card and navigates to PDP 
-		Then user click on Add to Cart Button
-		Then user is navigated to Add to cart Notification popup  
-		And user will click on View Cart button 
-		And user navigate to Cart page
-		And user will click on Checkout button and navigates to Checkout page
+		#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 		Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout page"We Accept"|
 		|Visa_img|
@@ -35,11 +35,11 @@ Scenario:  Verify the Elements present in Checkout footer
 		And User clicks on the burger menu 
 		And User navigates to L3 
 		And user clicks on the product card and navigates to PDP 
-		Then user click on Add to Cart Button
-		Then user is navigated to Add to cart Notification popup  
-		And user will click on View Cart button 
-		And user navigate to Cart page
-		And user will click on Checkout button and navigates to Checkout page
+		#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 		Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout footer_Lnk|
 		|CheckoutFooterLegalLinkPrivacyPolicy_Lnk|
@@ -55,11 +55,11 @@ Scenario:  Verify the Elements present in Checkout footer
 		And User clicks on the burger menu 
 		And User navigates to L3 
 		And user clicks on the product card and navigates to PDP 
-		Then user click on Add to Cart Button
-		Then user is navigated to Add to cart Notification popup  
-		And user will click on View Cart button 
-		And user navigate to Cart page
-		And user will click on Checkout button and navigates to Checkout page
+		#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 		Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout footer_Lnk|
 		|CheckoutFooterLegalLinkTermsConditions_lnk|
@@ -75,11 +75,11 @@ Scenario:  Verify the Elements present in Checkout footer
 		And User clicks on the burger menu 
 		And User navigates to L3 
 		And user clicks on the product card and navigates to PDP 
-		Then user click on Add to Cart Button
-		Then user is navigated to Add to cart Notification popup  
-		And user will click on View Cart button 
-		And user navigate to Cart page
-		And user will click on Checkout button and navigates to Checkout page
+		#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 		Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout footer_Lnk|
 		|CheckoutFooterLegalLinkCaliforniaProposition65_Lnk|
@@ -95,11 +95,11 @@ Scenario:  Verify the Elements present in Checkout footer
 		And User clicks on the burger menu 
 		And User navigates to L3 
 		And user clicks on the product card and navigates to PDP
-		Then user click on Add to Cart Button
-		Then user is navigated to Add to cart Notification popup  
-		And user will click on View Cart button 
-		And user navigate to Cart page
-		And user will click on Checkout button and navigates to Checkout page
+		#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 		Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout footer_Lnk|
 		|CheckoutFooterChatNowLink_lnk|

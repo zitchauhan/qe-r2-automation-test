@@ -5,9 +5,11 @@ Feature: B06-225 - BOPIS: SMS Capture
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to cart button
-    Then user is navigated to Add to cart Notification popup
-    And user will click on View Cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then Verify below Sub/Main Module of Cart Page
       | #Verify below element in cart page |
@@ -25,9 +27,11 @@ Feature: B06-225 - BOPIS: SMS Capture
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to cart button
-    Then user is navigated to Add to cart Notification popup
-    And user will click on View Cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then Verify below Sub/Main Module of Cart Page
       | #Verify below element in cart page |
@@ -53,9 +57,11 @@ Feature: B06-225 - BOPIS: SMS Capture
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to cart button
-    Then user is navigated to Add to cart Notification popup
-    And user will click on View Cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then Verify below Sub/Main Module of Cart Page
       | #Verify below element in cart page |
@@ -73,9 +79,11 @@ Feature: B06-225 - BOPIS: SMS Capture
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to cart button
-    Then user is navigated to Add to cart Notification popup
-    And user will click on View Cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then Verify below Sub/Main Module of Cart Page
       | #Verify below element in cart page |
@@ -101,9 +109,11 @@ Feature: B06-225 - BOPIS: SMS Capture
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to cart button
-    Then user is navigated to Add to cart Notification popup
-    And user will click on View Cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then Verify below Sub/Main Module of Cart Page
       | #Verify below element in cart page |
@@ -130,9 +140,11 @@ Feature: B06-225 - BOPIS: SMS Capture
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to cart button
-    Then user is navigated to Add to cart Notification popup
-    And user will click on View Cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then Verify below Sub/Main Module of Cart Page
       | #Verify below element in cart page |
@@ -159,9 +171,11 @@ Feature: B06-225 - BOPIS: SMS Capture
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to cart button
-    Then user is navigated to Add to cart Notification popup
-    And user will click on View Cart button
+   #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then Verify below Sub/Main Module of Cart Page
       | #Verify below element in cart page |
@@ -188,9 +202,11 @@ Feature: B06-225 - BOPIS: SMS Capture
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to cart button
-    Then user is navigated to Add to cart Notification popup
-    And user will click on View Cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then Verify below Sub/Main Module of Cart Page
       | #Verify below element in cart page |
@@ -220,9 +236,11 @@ Feature: B06-225 - BOPIS: SMS Capture
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to cart button
-    Then user is navigated to Add to cart Notification popup
-    And user will click on View Cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then Verify below Sub/Main Module of Cart Page
       | #Verify below element in cart page |
@@ -245,9 +263,11 @@ Feature: B06-225 - BOPIS: SMS Capture
     And user click on signin button
     And user navigate and deletes existing items in cart
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to cart button
-    Then user is navigated to Add to cart Notification popup
-    And user will click on View Cart button
+    #And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
     And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then Verify below Sub/Main Module of Cart Page
       | #Verify below element in cart page |

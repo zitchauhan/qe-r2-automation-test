@@ -9,7 +9,8 @@ Verify if the shipping price on Checkout screen is same as Order Summary on Cart
 	#		And User navigates to L3
 	#   	Then user clicks on the product card and navigates to PDP
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When user views Estimated Shipping in the Item Subtotal 
 	And user will click on Checkout button and navigates to Checkout page 
@@ -36,7 +37,8 @@ Scenario:
 	And User clicks on the burger menu 
 	Then user navigate to GunStorageAndSafty L_Three 
 	Then user select the product from L_Three and navigate to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -58,7 +60,8 @@ Scenario:
 	Then User clicks on the burger menu 
 	And user selects a store with ZIP "zipCode" 
 	Then User searches a product "SOFSKUNumber" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -78,7 +81,8 @@ Scenario:
 	Verify the shipping price for each shipping method for Gift Card items
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "SKUForGiftCard" in the search box 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -103,7 +107,8 @@ Scenario:
 	And User navigates to L2 Grills Outdoor cooking 
 	And user clicks on one of the subcategory of Grills Outdoor 
 	And user select the product 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page 
 	When user enter First name "FirstName" 

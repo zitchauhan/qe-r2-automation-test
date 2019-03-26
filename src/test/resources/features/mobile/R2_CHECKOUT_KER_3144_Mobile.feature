@@ -13,7 +13,8 @@ Scenario:
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -46,7 +47,8 @@ Scenario:
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -79,7 +81,8 @@ Scenario:
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 

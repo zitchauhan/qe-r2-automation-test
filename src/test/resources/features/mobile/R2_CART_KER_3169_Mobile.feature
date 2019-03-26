@@ -9,7 +9,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
 	 And User navigates to L3
     Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
@@ -27,7 +28,8 @@ Scenario: To verify open field to enter promotion code
 	Then User clicks on the burger menu
 	 And User navigates to L3
     Then user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When user clicks on Add Promo code link under Cart Order Summary
 	Then Verify below Sub/Main Module of Cart Page

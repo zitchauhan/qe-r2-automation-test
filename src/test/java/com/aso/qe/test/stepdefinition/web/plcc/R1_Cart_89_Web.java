@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.web.plcc;
 
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
@@ -10,6 +11,7 @@ import cucumber.api.java.en.When;
 
 public class R1_Cart_89_Web extends CommonActionHelper{
 	R1_PLCC_Generic_PO genericPO = PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
+	WebDriverWait wait = new WebDriverWait(driver, 20);
 	@Then("^user navigates to Cart Page$")
 	public void user_navigates_to_Cart_Page() throws Throwable {
 		genericPO.verifyPresenceOfCartPage();
@@ -29,5 +31,6 @@ public class R1_Cart_89_Web extends CommonActionHelper{
 	public void user_click_on_viewcart_button() throws Throwable {
 		genericPO.verifyPresenceOfViewCartButton();
 		genericPO.viewCartButton.click();
+		//Thread.sleep(15000);
 	}
 }

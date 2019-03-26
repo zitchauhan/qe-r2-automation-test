@@ -20,9 +20,11 @@ Scenario:
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on GiftCard Plus icon in Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify in choose gift card dropdown default gift card is showing|
@@ -47,8 +49,10 @@ Scenario: Verify one gift card applied and Balance is not covered in full
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on GiftCard Plus icon in Checkout page 
 	Then user click on choose Gift card Dropdown 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -75,9 +79,11 @@ Scenario:
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
 	Then user change the quantity of item in PDP 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	#  Then user click on checkout from ATC pop up
 	And user click on GiftCard Plus icon in Checkout page 
 	Then user click on choose Gift card Dropdown 
@@ -103,10 +109,10 @@ Scenario:
 	Then user fill the gift card in My Account 
 	Then User clicks on ASO Logo and should be navigated to Home Page 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
-	#  And user will click on View Cart button
-	#  And user will click on Checkout button and navigates to Checkout page
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on GiftCard Plus icon in Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify user is able to see choose gift card Drop down|
@@ -130,10 +136,10 @@ Scenario: Verify No second Saved Gift Card for Authenticated user
 	Then user fill the gift card in My Account 
 	#	Then User clicks on ASO Logo and should be navigated to Home Page 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
-	#  Then user click on checkout from ATC pop up
-	And user will click on View Cart button 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on GiftCard Plus icon in Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify user is able to see Gift cart ending digit in choose gift card Dropdown|
@@ -156,10 +162,10 @@ Scenario: Verify +Add another Gift card is Suppressed
 	Then user fill the gift card in My Account 
 	#	Then User clicks on ASO Logo and should be navigated to Home Page 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
-	#  Then user click on checkout from ATC pop up
-	And user will click on View Cart button 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page  
 	And user click on GiftCard Plus icon in Checkout page 
 	Then user click on apply giftcard button 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -184,10 +190,10 @@ Scenario: Verify remove all gift cards
 	Then user fill the gift card in My Account 
 	#	Then User clicks on ASO Logo and should be navigated to Home Page 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
-	#  Then user click on checkout from ATC pop up
-	And user will click on View Cart button 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on GiftCard Plus icon in Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify user is able to see choose gift card Drop down|
@@ -210,10 +216,10 @@ Scenario: Verify Gift Card Chronology and Balance
 	Then user fill the gift card in My Account 
 	#	Then User clicks on ASO Logo and should be navigated to Home Page 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
-	#  Then user click on checkout from ATC pop up
-	And user will click on View Cart button 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on GiftCard Plus icon in Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify user is able to see chronology and balance in choose gift card|
@@ -236,11 +242,10 @@ Scenario: Verify Gift card drop down supressed
 	Then user fill the gift card in My Account 
 	#	Then User clicks on ASO Logo and should be navigated to Home Page 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
-	#  Then user click on checkout from ATC pop up
-	And user will click on View Cart button 
-	And user will click on Checkout button and navigates to Checkout page 
-	And user click on GiftCard Plus icon in Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	Then user click on apply giftcard button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify gift card drop down supressed|

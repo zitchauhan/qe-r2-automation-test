@@ -11,11 +11,10 @@ Scenario: To verify change billing Address CTA
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user click on checkout button in Cart page 
+	Then user click on checkout button in Cart page 
 	And user is navigated to order summary page 
 	And user click on edit Payment link and click on billing information 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -45,10 +44,10 @@ Scenario: To verify all fields in Billing Address Form
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
+	Then user click on checkout button in Cart page 
 	And user click on checkout button in Cart page 
 	And user is navigated to order summary page 
 	And user click on edit Payment link and click on billing information 
@@ -80,11 +79,10 @@ Scenario: To verify change billing Address CTA
 	And user click on signin button 
 	And user navigate and deletes existing items in cart
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user click on checkout button in Cart page 
+	Then user click on checkout button in Cart page 
 	And user is navigated to order summary page 
 	And user click on edit Payment link and click on billing information 
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
@@ -106,11 +104,10 @@ Scenario: To verify user can add new billing address information
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And user click on checkout button in Cart page 
+	Then user click on checkout button in Cart page 
 	And user is navigated to order summary page 
 	And user click on edit Payment link and click on billing information 
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "AVSAddress" , "zipcode" , "EmailAddress" 
@@ -131,11 +128,10 @@ Scenario: To verify Extra fields in Billing Address Form
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
-	And   user click on Add to Cart Button 
-	And   user is navigated to Add to cart Notification popup 
-	And   user will click on View Cart button 
-	And   user navigate to Cart page 
-	And   user click on checkout button in Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	And   user is navigated to order summary page 
 	And   user click on edit Payment link and click on billing information 
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "zipcode" , "EmailAddress" 

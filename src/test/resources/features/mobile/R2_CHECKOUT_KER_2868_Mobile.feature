@@ -5,7 +5,8 @@ Feature: B06-225- BOPIS Order Confirmation Impact
     Given user launches the browser and navigates to "ASO_HOME" page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user will click on View Cart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then verify user can begin checkout
@@ -22,7 +23,8 @@ Feature: B06-225- BOPIS Order Confirmation Impact
   Scenario: Verify that UnAuthenticated user is able to create an account on Order Confirmation page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user will click on View Cart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then verify user can begin checkout
@@ -37,7 +39,8 @@ Feature: B06-225- BOPIS Order Confirmation Impact
   Scenario: Verify that UnAuthenticated user is able to view In-Store Pickup Information on Order confirmation page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user will click on View Cart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then verify user can begin checkout
@@ -53,7 +56,8 @@ Feature: B06-225- BOPIS Order Confirmation Impact
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
+   #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user will click on View Cart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then verify user can begin checkout
@@ -68,7 +72,8 @@ Feature: B06-225- BOPIS Order Confirmation Impact
     Given user launches the browser and navigates to "ASO_HOME" page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
+   #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user will click on View Cart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then verify user can begin checkout
@@ -83,7 +88,8 @@ Feature: B06-225- BOPIS Order Confirmation Impact
     Given user launches the browser and navigates to "ASO_HOME" page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user will click on View Cart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then verify user can begin checkout
@@ -99,7 +105,8 @@ Feature: B06-225- BOPIS Order Confirmation Impact
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-    And user click on Add to Cart Button
+   #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user will click on View Cart button
     When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
     Then verify user can begin checkout

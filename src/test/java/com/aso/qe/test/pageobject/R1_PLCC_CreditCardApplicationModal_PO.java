@@ -8,11 +8,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
 public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
+	WebDriverWait wait = new WebDriverWait(driver, 20);
 	@FindBy(xpath = "//*[@data-auid='credit_application_first_name']")
 	public WebElement firstNameCCModal;
 	@FindBy(xpath = "//*[@data-auid='credit_application_middle_name']")
@@ -261,10 +264,12 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		if ("mobile".equalsIgnoreCase(testtype)) 
 		{
 			try {
+				wait.until(ExpectedConditions.visibilityOf(bannerCartPage));
 				bannerCartPage.click();
 				logger.debug("Banner on Cart Page is displayed");
 			} catch (Exception e) {
 				isDisplayed(bannerCartPage);
+				wait.until(ExpectedConditions.visibilityOf(bannerCartPage));
 				WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-desktop.jpg']"));
 				JavascriptExecutor executor = (JavascriptExecutor)driver;
 				executor.executeScript("arguments[0].click();", element);
@@ -274,9 +279,11 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		else 
 		{
 			try {
+				wait.until(ExpectedConditions.visibilityOf(bannerCartPage));
 				bannerCartPage.click();
 			} catch (Exception e) {
 				isDisplayed(bannerCartPage);
+				wait.until(ExpectedConditions.visibilityOf(bannerCartPage));
 				WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-desktop.jpg']"));
 				JavascriptExecutor executor = (JavascriptExecutor)driver;
 				executor.executeScript("arguments[0].click();", element);

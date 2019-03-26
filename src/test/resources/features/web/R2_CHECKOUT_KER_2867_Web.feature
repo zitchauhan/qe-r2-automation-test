@@ -7,7 +7,8 @@ Scenario: Verify that UnAuthenticated user is able to view the instore pickup dr
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -30,7 +31,8 @@ Scenario: Verify that UnAuthenticated user is able to change the Pickup location
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -47,7 +49,8 @@ Scenario: Verify that UnAuthenticated user is able to select and enter informati
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -68,7 +71,8 @@ Scenario: Verify that UnAuthenticated user is able to view Pickup Instructions d
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -93,7 +97,8 @@ Scenario: Verify that UnAuthenticated user is able to select Go To Payment CTA a
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -107,7 +112,8 @@ Scenario: Verify that Authenticated user is able to view the instore pickup draw
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -129,7 +135,8 @@ Scenario: Verify that Authenticated user is able to change the Pickup location
 	When user clicks on SignIn link from global header 
 	And user logs in as "RawUser" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -144,7 +151,8 @@ Scenario: Verify that Authenticated user is able to select and enter information
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -163,7 +171,8 @@ Scenario: Verify that Authenticated user is able to view Pickup Instructions det
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -190,7 +199,8 @@ Scenario: Verify that Authenticated user is able to select Go To Payment CTA and
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page

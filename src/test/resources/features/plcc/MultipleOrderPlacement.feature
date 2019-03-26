@@ -13,24 +13,24 @@ Scenario: Verify user is able to place Multiple orders using PLCC Card
 	And user click on Payments link
 	Then delete all credit cards from My Account
 	And user clears everything in cart
-	When user enters "SKUIdOfProduct1" in the search box plcc 
-	And user click on search icon 
-	#And user click on Add to Cart button 
-	And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
-	And user clicks on checkout button and navigates to checkout page 
-	And user expect element credit card text field is present 
-	When user handles adding new card "ValidPLCCCard" if already card is saved 
-	#And user uncheck Save Payment Info for Later Checkbox 
-	And user click on REVIEW ORDER button 
-	And user click on PLACE ORDER button 
-	Then user navigates to order confirmation page 
-	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present 
-	And user expect element Order Number to be present 
-	And user expect element a confirmation email is on its way to be present 
-	And user expect element print link to be present 
-	And user expect element my account link to be present 
+#	When user enters "SKUIdOfProduct1" in the search box plcc 
+#	And user click on search icon 
+#	#And user click on Add to Cart button 
+#	And user click on ship it button
+#	And user click on viewcart button
+#	Then user navigates to Cart Page
+#	And user clicks on checkout button on cart page
+#	And user clicks on checkout button and navigates to checkout page 
+#	And user expect element credit card text field is present 
+#	When user handles adding new card "ValidPLCCCard" if already card is saved 
+#	#And user uncheck Save Payment Info for Later Checkbox 
+#	And user click on REVIEW ORDER button 
+#	And user click on PLACE ORDER button 
+#	Then user navigates to order confirmation page 
+#	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present 
+#	And user expect element Order Number to be present 
+#	And user expect element a confirmation email is on its way to be present 
+#	And user expect element print link to be present 
+#	And user expect element my account link to be present 
 	And user place fifty orders and see the response with "SKUIdOfProduct1" with PLCC Card "ValidPLCCCard"
 	

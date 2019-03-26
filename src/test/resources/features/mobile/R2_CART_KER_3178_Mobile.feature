@@ -7,7 +7,9 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
 	And user logs in as "EmailAddress"
 	When User searches a product "productName" and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
+	And user will click on View Cart button 
 	And user click on checkout button
 	Then Shipping radio button is selected by default 
 	Then in-stores radio button is deselected 
@@ -19,7 +21,9 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
 	And user logs in as "EmailAddress"
 	When User searches a product "productName" and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
+	And user will click on View Cart button
 	And user click on checkout button
    And click on Change Location link
    Then Find in Store modal should get open
@@ -31,7 +35,9 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
 	And user logs in as "EmailAddress"
 	When User searches a product "productName" and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
+	And user will click on View Cart button
 	And user click on checkout button
      When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"   
     When user navigates to checkout page

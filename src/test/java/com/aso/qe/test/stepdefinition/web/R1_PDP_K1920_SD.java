@@ -75,7 +75,22 @@ R2_Cart_PO cartPO = PageFactory.initElements(driver, R2_Cart_PO.class);
 			assertTrue(clickOnButton(pdpPageObj.btnCheckout));
 		}
 
-	}
+	  }
+	@Then("^user click on view cart and checkout button$")
+	public void user_click_on_view_cart_and_checkout_button() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)){
+			scrollPageToWebElement(pdpPageObj.btnCheckout);
+			Thread.sleep(Constants.thread_highest);
+			waitForElement(pdpPageObj.btnCheckout);
+			assertTrue(clickOnButton(pdpPageObj.btnCheckout));
+		}else
+		{
+			waitForElement(pdpPageObj.btmViewcartATCnotificcation);
+			isDisplayed(pdpPageObj.btmViewcartATCnotificcation);
+			assertTrue(clickOnButton(pdpPageObj.btmViewcartATCnotificcation));
+		}
+
+	  }
 	@Then("^User check for the Add to cart title$")
 	public void User_check_for_the_Add_to_cart_title() throws Throwable {
 		assertTrue(isDisplayed(pdpPageObj.addtocarttitle));

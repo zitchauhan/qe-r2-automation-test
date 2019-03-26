@@ -10,9 +10,10 @@ Verify if user clicks "Go to Payment" without completing mandatory fields, syste
 	#	And User navigates to L3
 	#   	Then user clicks on the product card and navigates to PDP
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	Then user click on checkout button in Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button
 	Then user click on Go To Shipping Method button in Checkout page 
 	Then Verify the message on the page 
 		|# Following Error Message should show on the page|
@@ -31,9 +32,10 @@ Scenario:
 Verify if user clicks "Go to Payment" with incorrect details, system should accurate and displays relevant error messages. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	Then user click on checkout button in Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button
 	When user enter First name "InvalidFirstName" 
 	And user enter Last name "InvalidLastName" 
 	And user enter Phone number "InvalidPhoneNumber" 
@@ -56,9 +58,10 @@ Scenario: Verify user address verified by the system.
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	Then user click on checkout button in Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Shipping Address	|
 		|checkout_ShippingAddress_FirstName_txt						|
@@ -86,9 +89,10 @@ Verify user can select the suggested address or modify the address that has been
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	Then user click on checkout button in Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Shipping Address	|
 		|checkout_ShippingAddress_FirstName_txt						|
@@ -117,9 +121,10 @@ Scenario: Verify user can redirect to address fields on clicking modify address.
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	Then user click on checkout button in Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button
 	When user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -147,9 +152,10 @@ Verify user can continue checkout with the suggested address/ entered address.
 	And User clicks on the burger menu 
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button 
-	And user will click on View Cart button 
-	Then user click on checkout button in Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	And user click on checkout button
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Shipping Address	|
 		|checkout_ShippingAddress_FirstName_txt						|

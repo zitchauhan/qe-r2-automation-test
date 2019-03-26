@@ -13,9 +13,10 @@ Scenario: Verify Authenticated user able to see the BOPIS items for pickup
 	And User clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+    And user is navigated to Add to cart Notification popup
+    And user will click on View Cart button
 	Then user navigate to Cart page 
 	
 @C-BOPIS @R2_Mobile @R2_NonRegression @R2_All @P-Medium @CB-Cart @KER-4231 
@@ -32,9 +33,10 @@ Scenario:
 	And User clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+    And user is navigated to Add to cart Notification popup
+    And user will click on View Cart button
 	And user navigate to Cart page 
 	Then user should be able to see In-Store Pick up enabled 
 	
@@ -52,9 +54,10 @@ Scenario: Verify Authenticated user able to see the BOPIS items for pickup
 	And User clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+    And user is navigated to Add to cart Notification popup
+    And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then user should be able to see In-Store Pick up enabled 
 	
@@ -73,9 +76,10 @@ Scenario:
 	And User clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+    And user is navigated to Add to cart Notification popup
+    And user will click on View Cart button
 	
 	
 @C-BOPIS @R2_Mobile @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-4231 @ZYP_CART_K4231-8887 
@@ -93,8 +97,9 @@ Scenario: Verify Authenticated user can change their favorite store in PLP
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And User clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+    And user is navigated to Add to cart Notification popup
+    And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then user should be able to see In-Store Pick up enabled 

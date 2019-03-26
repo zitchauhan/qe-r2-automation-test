@@ -5,7 +5,8 @@ Feature: B04-250- Guest Checkout Flow
 Scenario: Verify the guest user is able to view the Zipcode on checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -21,7 +22,8 @@ Scenario:
 	Verify the guest user is able to view the Checkout Header and Footer on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user click on checkout button in Cart page 
@@ -38,7 +40,8 @@ Scenario:
 	Verify the guest user is able to see the pre-populated City/State with Zipcode 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -55,7 +58,8 @@ Scenario:
 	Verify the guest user is able to enter the shipping address details on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -77,7 +81,8 @@ Scenario:
 	Verify the system triggers the Address Verification (AVS) to guest user on wrong address entry 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -101,7 +106,8 @@ Scenario:
 	Verify the guest user is able to edit the Saved address in the Shipping address
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -123,7 +129,8 @@ Scenario:
 	Verify the guest user is displayed with required validations and errors on shipping address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -159,7 +166,8 @@ Scenario:
 	Verify the guest user is able to select the shipping method from the list
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -189,7 +197,8 @@ Scenario:
 	Verify the guest user is able to select the Credit Card payment method in order to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -224,7 +233,8 @@ Scenario:
 	Verify the guest user is able to select the PayPal payment method in order to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -253,7 +263,8 @@ Scenario:
 	Verify the guest user is able to select the Gift Card payment method in order to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -286,7 +297,8 @@ Scenario:
 	Verify the guest user is able to add new Credit Card as payment method in order to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -313,7 +325,8 @@ Scenario:
 	Verify the guest user is able to enter a different Billing address on Payment drawer 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -341,7 +354,8 @@ Scenario:
 Scenario: Verify the guest user is able to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	When user click on checkout button 
 	And user adds shipment address on checkout page for "guest" user
@@ -357,7 +371,8 @@ Scenario:
 	Verify the guest user is notified with an error on entering restricted address for the items in cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -379,7 +394,8 @@ Scenario:
 	Verify the shipping method has no drop-down for single method available 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUForGiftCard" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user click on checkout from ATC pop up 
 	And  user enter First name "FirstName" 
@@ -399,7 +415,8 @@ Scenario:
 Scenario: Verify the guest user's address is saved in My Address on registering from Order confirmation 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user click on checkout from ATC pop up 
 	And  user enter First name "FirstName" 

@@ -6,7 +6,8 @@ Feature: Verify Promotional Messaging in Cart
 	 Then User clicks on the burger menu
     Then User navigates to L3
     Then user clicks on the product card and navigates to PDP
-	Then user click on Add to Cart Button
+#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When user clicks on Add Promo code link under Cart Order Summary
 	Then Verify below Sub/Main Module of Cart Page
@@ -22,7 +23,8 @@ Feature: Verify Promotional Messaging in Cart
 	Then User clicks on the burger menu
     Then User navigates to L3
     Then user clicks on the product card and navigates to PDP
-	Then user click on Add to Cart Button
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When user clicks on Add Promo code link under Cart Order Summary
 	Then Verify below Sub/Main Module of Cart Page
@@ -40,7 +42,8 @@ Feature: Verify Promotional Messaging in Cart
 	Then User clicks on the burger menu
     Then User navigates to L3
     Then user clicks on the product card and navigates to PDP
-	Then user click on Add to Cart Button
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -56,7 +59,8 @@ Feature: Verify Promotional Messaging in Cart
 	Then User clicks on the burger menu
     Then User navigates to L3
     Then user clicks on the product card and navigates to PDP
-	Then user click on Add to Cart Button
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity"    
@@ -75,7 +79,8 @@ Feature: Verify Promotional Messaging in Cart
 	Then User clicks on the burger menu
     Then User navigates to L3
     Then user clicks on the product card and navigates to PDP
-	Then user click on Add to Cart Button
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "SanityItemLevelPromoCodeDiscount"    

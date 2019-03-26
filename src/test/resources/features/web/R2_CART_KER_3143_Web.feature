@@ -4,7 +4,8 @@ Feature: [Web] B06-100- Merge Cart
 Scenario: Verify if Unauthenticated customer will be able to add items to cart for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "BOPIS_Store2" 
@@ -41,7 +42,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -56,7 +58,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		Given user launches the browser and navigates to "ASO_HOME" page
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -76,7 +79,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		Given user launches the browser and navigates to "ASO_HOME" page
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then Verify below Sub/Main Module of Cart Page
@@ -95,7 +99,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
    Then user verify sucessfully added item MSG 
 	Then Verify the message on the page
@@ -111,13 +116,15 @@ Given user launches the browser and navigates to "ASO_HOME" page
     And user click on signin button
    When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then Verify signout from my account
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user clicks on SignIn link from global header
@@ -139,7 +146,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page
@@ -156,7 +164,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
     And user click on signin button
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	And user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
    Then user verify sucessfully added item MSG 
 	Then Verify the message on the page
@@ -173,7 +182,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
     And user click on signin button
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	And user click on Add to Cart Button 	
+	#	And user click on Add to Cart Button
+	And user click on ship it button	
 	And user is navigated to Add to cart Notification popup
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page
@@ -186,7 +196,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Product" in the search box 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And User select another store "BOPIS_Store1"
@@ -200,7 +211,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
     Given user launches the browser and navigates to "ASO_HOME" page
     When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	Then Verify below Sub/Main Module of Cart Page
 	|#user verify ShipToStore |
@@ -212,7 +224,8 @@ Scenario: Verify if cart has one or more common item(s), the cart should show si
 Given user launches the browser and navigates to "ASO_HOME" page
 When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 #    And user clicks on one of the category and navigates to LOne 
@@ -231,7 +244,8 @@ Scenario: Verify if one or more item(s) from my previously added session is dele
 Given user launches the browser and navigates to "ASO_HOME" page
 When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button	
 	Then Verify below Sub/Main Module of Cart Page

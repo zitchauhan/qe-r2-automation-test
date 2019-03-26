@@ -221,7 +221,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		Thread.sleep(Constants.thread_medium);
 	}
 	
-	
+	//DELETE BELOW AFTER ALL "Add to Cart" has been changed to Ship It
 	@Then("^user click on Add to Cart Button$")
 	public void user_click_on_Add_to_cart_button() throws Throwable 
 	{
@@ -229,6 +229,16 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		pdpPageObj.addToCartAvailability();
 		waitForElement(pdpPageObj.btnAddToCart);
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+		//Thread.sleep(2000);
+	}
+	
+	@Then("^user click on Ship It Button$")
+	public void user_click_on_Ship_It_button() throws Throwable 
+	{
+		waitForPageLoad(getDriver());
+		pdpPageObj.addToCartAvailability();
+		waitForElement(pdpPageObj.shipItButton);
+		assertTrue(clickOnButton(pdpPageObj.shipItButton));
 		//Thread.sleep(2000);
 	}
 	

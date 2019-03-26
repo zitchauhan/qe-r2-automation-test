@@ -6,8 +6,10 @@ Scenario:
 Verify the invalid(invalid due to non-number input) Card number due to incorrect digit length in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	#	Then user validate all the required fields in the Payment section to be visible
@@ -19,8 +21,10 @@ Scenario:
 Verify the invalid (due to incorrect digit length)Card number due to incorrect digit length in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	#	Then user validate all the required fields in the Payment section to be visible
@@ -34,8 +38,10 @@ Verify the invalid (due to incorrect digit length)Card number due to incorrect d
 Scenario: Verify Expiration date invalid due to past expiration date 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	#	Then user enters invalid expiration date and validated error msg
@@ -47,8 +53,10 @@ Scenario: Verify Expiration date invalid due to past expiration date
 Scenario: Verify Expiration date invalid due to non-existent date values 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	#	Then user enter invalid non existent expiration date and verifies error msg
@@ -60,8 +68,10 @@ Scenario: Verify CVV invalid due to incorrect digit length
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	#	Then user enteres invalid CVV and validates the error msg
@@ -72,8 +82,10 @@ Scenario: Verify if CVV invalid due to non-number input
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	Then user verify entering special characters inside cvv input section 

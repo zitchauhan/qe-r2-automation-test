@@ -11,8 +11,11 @@ Scenario:
 	And user logs in as "RawUser" 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	When user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Shipping Address	|
 		|checkout_ShippingInformation_Header_txt					|
@@ -48,8 +51,11 @@ Scenario:
 	And user logs in as "UserWithSavedAddressAndPayment" 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	When user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout|
 		|PaymentHeader_Txt						|
@@ -66,8 +72,11 @@ Scenario:
 	And user logs in as "UserWithSavedAddressAndPayment" 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	When user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	Then Verify the message on the page 
 		|# Following shipping message should show on the page	|
 		|Ground shipping										|
@@ -82,8 +91,11 @@ Scenario:
 	And user logs in as "UserWithSavedAddressAndPayment" 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "SKUForWhiteGlove" and navigates to PDP 
-	And user click on Add to Cart Button 
-	When user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	Then Verify the message on the page 
 		|# Following shipping message should show on the page					|
 		|We will deliver to your door with no appointment or signature required	|		
@@ -99,8 +111,11 @@ Scenario:
 	And user logs in as "UserWithDefaultCaliforniaAddress" 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	#	Then user is navigated to checkout page
 	And Verify the message on the page 
 		|# Following shipping message should show on the page														|
@@ -117,8 +132,11 @@ Scenario:
 	And user logs in as "UserWithSavedAddressAndPayment" 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	When user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on edit button of shipping method 
 	And user modifies shipping method 
 	And user click on go to payment present in shipping method 
@@ -136,8 +154,11 @@ Scenario:
 	And user logs in as "UserWithSavedAddressAndPayment" 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	When user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on edit payment metnod 
 	Then user is able to modify payment method 
 	
@@ -151,7 +172,10 @@ Scenario:
 	And user logs in as "UserWithSavedAddressAndPayment" 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	When user click on checkout button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	And user click on edit button of shipping address 
 	Then user is able to modify shipping address 

@@ -12,8 +12,10 @@ Scenario: Verify Billing address on check out page - pre-populated billing addre
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	Then user click on edit Payment link and click on billing information 
 	Then user fill billing information after clicking on change billing information text 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -32,8 +34,10 @@ Scenario: Verify Billing address on check out Page - Same as Shipping Address
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	Then user click on edit Payment link and click on billing information 
 	Then user click on checkbox Same as shipping address 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -45,10 +49,10 @@ Scenario: Verify Billing address on check out Page - Same as Shipping Address
 Scenario: Verify Billing address on check out Page - Same as Shipping Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
-	And user click on checkout button in Cart page 
+	Then user click on checkout button in Cart page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -72,8 +76,10 @@ Scenario: Verify Billing address on check out Page - new address information
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	Then user click on edit Payment link and click on billing information 
 	Then user fill billing information after clicking on change billing information text 
 	And user select the suggested address
@@ -87,8 +93,10 @@ Scenario: Verify Billing address on check out Page - new address information
 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -118,9 +126,10 @@ Scenario:
 	And User clicks on the burger menu 
 	Then user navigate to GunStorageAndSafty L_Three 
 	Then user select the product from L_Three and navigate to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	And user does accepts the firearm specific compliance 
 	And user clicks on Continue button 
 	Then verify that user navigates to payment drawer 
@@ -144,9 +153,10 @@ Scenario:
 	Then User clicks on the burger menu 
 	Then user navigate to GunStorageAndSafty L_Three 
 	Then user select the product from L_Three and navigate to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	Then user click on checkout from ATC pop up 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	And user does accepts the firearm specific compliance 
 	And user clicks on Continue button 
 	Then verify that user navigates to payment drawer 

@@ -6,8 +6,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	  And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -28,8 +30,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	Then User clicks on the burger menu 
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	  And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -47,8 +51,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	  And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -66,8 +72,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	  And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -86,8 +94,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	  And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -104,8 +114,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	  And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -123,8 +135,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	  And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -141,8 +155,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	  And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 
@@ -159,8 +175,10 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	Then User clicks on the burger menu
 	Then user navigate to L_Three Kayak  
 	Then usr select the kayak and navigate to PDP page 
-	And user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page 
 	  And user enter First name "FirstName" 
      	And user enter Last name "LastName" 
     	And user enter Phone number "PhoneNumber" 

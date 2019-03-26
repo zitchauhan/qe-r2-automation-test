@@ -4,7 +4,8 @@ Feature: Verify B06-225 Display BOPIS Pickup Information Drawer in Checkout
 Scenario: Verify that UnAuthenticated user is able to view the instore pickup drawer details
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
@@ -29,7 +30,8 @@ Scenario: Verify that UnAuthenticated user is able to change the Pickup location
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
@@ -57,7 +59,8 @@ Scenario: Verify that UnAuthenticated user is able to change the Pickup location
 Scenario: Verify that UnAuthenticated user is able to select and enter information for who is picking up an order
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
@@ -84,7 +87,8 @@ Scenario: Verify that UnAuthenticated user is able to select and enter informati
 Scenario: Verify that UnAuthenticated user is able to view Pickup Instructions details
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button   
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
@@ -111,7 +115,8 @@ Scenario: Verify that UnAuthenticated user is able to view Pickup Instructions d
 Scenario: Verify that UnAuthenticated user is able to select "Go To Payment" CTA and continue to payment drawer
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
@@ -143,7 +148,8 @@ Scenario: Verify that Authenticated user is able to view the instore pickup draw
     And user click on signin button
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
@@ -173,7 +179,8 @@ Scenario: Verify that Authenticated user is able to change the Pickup location
     And user click on signin button
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
@@ -207,7 +214,8 @@ Scenario: Verify that Authenticated user is able to select and enter information
     And user click on signin button
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
@@ -240,7 +248,8 @@ Scenario: Verify that Authenticated user is able to view Pickup Instructions det
     And user click on signin button
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
@@ -274,7 +283,8 @@ Scenario: Verify that Authenticated user is able to select "Go To Payment" CTA a
     And user click on signin button
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 

@@ -2,7 +2,7 @@ Feature: [Web] Populate Billing Address on Checkout page
 
 
 
-@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8114 @CR-RKA
+@R2_Web @Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8114 @CR-RKA
 Scenario: Verify Billing address on check out page - pre-populated billing address
  Given user launches the browser and navigates to "ASO_HOME" page 
  Then user should able to click on Signin button
@@ -15,8 +15,10 @@ Scenario: Verify Billing address on check out page - pre-populated billing addre
 #	    And user clicks on one of the product category and navigates to LThree
 #		And User is navigated to pdp page
 When User searches a product "productName" and navigates to PDP
- And user click on Add to Cart Button 
-Then user click on checkout from ATC pop up
+#And user click on Add to Cart Button 
+ And user click on ship it button 
+And user click on viewcart button 
+And user click on checkout button
 Then user click on edit Payment link and click on billing information
 Then user fill billing information after clicking on change billing information text 
 Then Verify below Sub/Main Module of Checkout Page
@@ -24,7 +26,7 @@ Then Verify below Sub/Main Module of Checkout Page
 |AddressVerificationSystemModelPopUp|
 
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8115 @CR-RKA
+@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8115 @CR-RKA
 Scenario: Verify Billing address on check out Page - Same as Shipping Address
 
 Given user launches the browser and navigates to "ASO_HOME" page 
@@ -35,21 +37,24 @@ Given user launches the browser and navigates to "ASO_HOME" page
 When User Navigates L2 form Homepage Header
 And User clicks on product in PLP
 		And User is navigated to pdp page
- And user click on Add to Cart Button 
-Then user click on checkout from ATC pop up
+ #And user click on Add to Cart Button 
+ And user click on ship it button 
+And user click on viewcart button 
+And user click on checkout button
 Then user click on edit Payment link and click on billing information
 Then user click on checkbox Same as shipping address 
 Then Verify below Sub/Main Module of Checkout Page
 |#verify shipping address is displying|
 |SameAsShippingAddress_Txt|
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8116 @CR-RKA
+@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8116 @CR-RKA
 Scenario: Verify Billing address on check out Page - Same as Shipping Address
         Given user launches the browser and navigates to "ASO_HOME" page 
       When User Navigates L2 form Homepage Header
 And User clicks on product in PLP
 		And User is navigated to pdp page
-		And user click on Add to Cart Button
+		#And user click on Add to Cart Button 
+ And user click on ship it button 
 		And user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 	    And user click on checkout button in Cart page
@@ -66,7 +71,7 @@ And User clicks on product in PLP
       |SameAsShippingAddress_Txt|
       
       
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8117 @CR-RKA
+@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8117 @CR-RKA
 Scenario: Verify Billing address on check out Page - new address information
 
 Given user launches the browser and navigates to "ASO_HOME" page 
@@ -79,19 +84,22 @@ And user clicks on one of the category and navigates to LOne
 	    And user is able to see the product category name in section title
 	    And user clicks on one of the product category and navigates to LThree
 		And User is navigated to pdp page
- And user click on Add to Cart Button 
-Then user click on checkout from ATC pop up
+ #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	And user click on checkout button
 Then user click on edit Payment link and click on billing information
 Then user fill billing information after clicking on change billing information text
 #only validation is nedded after clicking confirm btn
 
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8118 @CR-RKA
+@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8118 @CR-RKA
 Scenario: Verify Billing address on check out Page - new address information
 Given user launches the browser and navigates to "ASO_HOME" page
 When User Navigates L2 form Homepage Header
 And User clicks on product in PLP
 And User is navigated to pdp page
- And user click on Add to Cart Button 
+ #And user click on Add to Cart Button 
+	And user click on ship it button
  And user is navigated to Add to cart Notification popup  
 And user will click on View Cart button 
 And user click on checkout button in Cart page
@@ -105,14 +113,15 @@ Then user fill billing information after clicking on change billing information 
 #only validation is nedded after clicking confirm btn
 
 
-@R2_Web @R2_Regression @R2_All @P-Low @CB-Checkout @KER-3132 @ZYP_CART_K3132-10437 @C-BOPIS
+@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-3132 @ZYP_CART_K3132-10437 @C-BOPIS
 Scenario: Verify guest user is able to see the See In-Store Pickup Instructions section 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user select in store pickup option
@@ -120,7 +129,7 @@ Scenario: Verify guest user is able to see the See In-Store Pickup Instructions 
 	When user clicks on Go to payment CTA
 	And user should not be able to see Same as Shipping Address checkbox
 
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10439 @CR-RKA
+@C-BOPIS @R2_Web @Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10439 @CR-RKA
 Scenario: Verify if 'Same as Shipping Address' checkbox is disabled for STS order
 
 Given user launches the browser and navigates to "ASO_HOME" page
@@ -131,7 +140,8 @@ When user clicks on Find a Store
 	And user click on Make My store button	
 	Then user navigate to GunStorageAndSafty L_Three   
     Then user select the product from L_Three and navigate to PDP
-    And user click on Add to Cart Button 
+    #And user click on Add to Cart Button 
+	And user click on ship it button
     	And user is navigated to Add to cart Notification popup 
 	Then user click on checkout from ATC pop up
 	And user does accepts the firearm specific compliance 
@@ -142,7 +152,7 @@ When user clicks on Find a Store
 		|ShipToStoreforSOF_Txt|
 	
 	
-@C-BOPIS @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10440 @CR-RKA
+@C-BOPIS @R2_Web @Regression @R2_All @P-High @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10440 @CR-RKA
 Scenario: Verify if 'Same as Shipping Address' checkbox is disabled for STS order
 
 Given user launches the browser and navigates to "ASO_HOME" page
@@ -153,7 +163,8 @@ When user clicks on Find a Store
 	And user click on Make My store button	
 Then user navigate to GunStorageAndSafty L_Three   
     Then user select the product from L_Three and navigate to PDP
-    And user click on Add to Cart Button 
+    #And user click on Add to Cart Button 
+	And user click on ship it button
     	And user is navigated to Add to cart Notification popup 
 	Then user click on checkout from ATC pop up
 	And user does accepts the firearm specific compliance 
@@ -174,14 +185,15 @@ Then user navigate to GunStorageAndSafty L_Three
 		|SignuptogetHotDeals_checkBox|
 		|ReviewOrder_Btn|
 
-@R2_Web @R2_Regression @R2_All @P-Low @CB-Checkout @KER-3132 @ZYP_CART_K3132-10442 @C-BOPIS
+@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-3132 @ZYP_CART_K3132-10442 @C-BOPIS
 Scenario: Verify guest user is able to see the See In-Store Pickup Instructions section 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user select in store pickup option

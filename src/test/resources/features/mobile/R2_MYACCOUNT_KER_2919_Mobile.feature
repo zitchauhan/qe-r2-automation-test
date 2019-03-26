@@ -324,9 +324,11 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	Then click on Add button on credit card page 
 	#	/hen User clicks on ASO Logo and should be navigated to Home Page
 	And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user will click on View Cart button 
-	And user will click on Checkout button and navigates to Checkout page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
+	When user will click on Checkout button and navigates to Checkout page  
 	And user click on edit payment metnod 
 	Then User verifies that in Payment section credit card "CreditCardNumber" is pre-populated by default 
 	

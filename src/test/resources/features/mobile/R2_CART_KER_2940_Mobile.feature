@@ -6,12 +6,14 @@ Feature: Verify Itemized Subtotal in Cart
 	And User clicks on the burger menu 
 	And User navigates to L3 
     Then user clicks on the product card and navigates to PDP
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then User clicks on ASO Logo and should be navigated to Home Page
     And User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page      
 	Then verify price of each item in the cart
@@ -35,14 +37,16 @@ Feature: Verify Itemized Subtotal in Cart
 	And User navigates to L3 
     Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page     
 	Then User clicks on ASO Logo and should be navigated to Home Page
 	And User clicks on the burger menu
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -57,7 +61,8 @@ Feature: Verify Itemized Subtotal in Cart
 	And User clicks on the burger menu
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page  
 	And verify Order Summary in Cart 
@@ -77,7 +82,8 @@ Feature: Verify Itemized Subtotal in Cart
 	And User clicks on the burger menu
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page
 	When enter the "EnterQuantityGreaterThenOne" to X  
@@ -102,7 +108,8 @@ Feature: Verify Itemized Subtotal in Cart
     And User clicks on the burger menu
 	And User navigates to L3
     And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And verify Shipping charges as FREE in cart page
@@ -115,14 +122,16 @@ Feature: Verify Itemized Subtotal in Cart
 	And User navigates to L3 
      Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then User clicks on ASO Logo and should be navigated to Home Page
 	And User clicks on the burger menu
 	And User navigates to L3 
 	 And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And Verify estimated taxes on the cart page 
@@ -138,14 +147,16 @@ Feature: Verify Itemized Subtotal in Cart
 	And User navigates to L3 
      Then user clicks on one of the subcategory and navigates to LTwo
     Then user clicks on one of the product category and navigates to LThree
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then User clicks on ASO Logo and should be navigated to Home Page
 	And User clicks on the burger menu
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page
 	And Verify Total for all items on the cart page 
@@ -160,7 +171,8 @@ Then Verify below Sub/Main Module of Cart Page
 	And User clicks on the burger menu 
 	And User navigates to L3 
     And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page       
 #	And user click on Checkout button
@@ -177,7 +189,8 @@ Then Verify below Sub/Main Module of Cart Page
 	And User clicks on the burger menu 
 	And User navigates to L3 
     And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page
 	When enter the "EnterQuantityGreaterThenOne" to X
@@ -217,7 +230,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
 	And User navigates to L3 
     And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page
 	Then verify that the hierarchy of itemizations in Order Summary in Cart Page
@@ -233,7 +247,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
 	And User navigates to L3 
     And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page
 	When enter the "EnterQuantityGreaterThenOne" to X 
@@ -253,7 +268,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu
 	And User navigates to L3
     And user clicks on the product card and navigates to PDP 
-	And user click on Add to Cart Button  
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	And verify Employee discount is appiled 	

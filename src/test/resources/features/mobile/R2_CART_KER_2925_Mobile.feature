@@ -6,7 +6,10 @@ Feature: Place Order
 Scenario Outline: verify if user should be able to submit the order on the checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
 	And user click on checkout button 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
@@ -66,8 +69,11 @@ Scenario Outline: verify if user should be able to submit the order on the check
   Scenario: Verify if Order status is updated in 'My account'
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user click on checkout button
     And user fill the PO box in shipping address
     And user click on Go To Shipping Method button in Checkout page
     Then user click on go to payment present in shipping method
@@ -85,8 +91,11 @@ Scenario Outline: verify if user should be able to submit the order on the check
   Scenario: Verify if user can see legal disclaimer while placing the order
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user click on checkout button
     And user fill the PO box in shipping address
     And user click on Go To Shipping Method button in Checkout page
     Then user click on go to payment present in shipping method
@@ -103,8 +112,11 @@ Scenario Outline: verify if user should be able to submit the order on the check
   Scenario Outline: Verify if user can click the legal disclaimer Terms and Conditions is clickable
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user click on checkout button
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     And user add "<Payment Type>" details in payment method for "guest" user
@@ -129,8 +141,11 @@ Scenario Outline: verify if user should be able to submit the order on the check
   Scenario Outline: Verify if user can click the legal disclaimer Privacy policy is clickable
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user click on checkout button
     And user adds shipment address on checkout page for "guest" user
     And user selects shipment method on check out page for "guest" user
     And user add "<Payment Type>" details in payment method for "guest" user
@@ -155,8 +170,11 @@ Scenario Outline: verify if user should be able to submit the order on the check
   Scenario: Verify The customer should be taken to order confirmation page after successfully submitting the order
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user click on checkout button
     And user fill the PO box in shipping address
     And user click on Go To Shipping Method button in Checkout page
     Then user click on go to payment present in shipping method
@@ -187,8 +205,11 @@ Scenario Outline: verify if user should be able to submit the order on the check
        And user click on signin button
        And user navigate and deletes existing items in cart
     When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user click on checkout button
     Then user fill email address in payment
     Then user clicks on the Review order button
     And User clicks on edit CTA
@@ -217,8 +238,11 @@ Scenario Outline: verify if user should be able to submit the order on the check
        And user click on signin button
        And user navigate and deletes existing items in cart
     When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user click on checkout button
     Then user fill email address in payment
     Then user clicks on the Review order button
     And user clicks on edit shipping method cta
@@ -241,8 +265,11 @@ Scenario Outline: verify if user should be able to submit the order on the check
        And user click on signin button
        And user navigate and deletes existing items in cart"
     When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
-    And user click on checkout button
+    #And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user click on checkout button
     Then user fill email address in payment
     Then user clicks on the Review order button
     And user clicks on edit payment cta

@@ -13,7 +13,8 @@ Feature: [Mobile] B05-350 Shipping Estimate in Cart
 	Then User clicks on the burger menu
 	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
-		And user click on Add to Cart Button
+		#And user click on Add to Cart Button 
+	And user click on ship it button 
 		And user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 		Then Verify below Sub/Main Module of Cart Page
@@ -37,7 +38,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
 	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
-			And user click on Add to Cart Button
+			#And user click on Add to Cart Button 
+	And user click on ship it button 
 		And user is navigated to Add to cart Notification popup  
 		And user will click on View Cart button 
 		Then user change zip code  
@@ -56,7 +58,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
    Then User clicks on the burger menu
 	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -76,7 +79,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L3
    	Then user clicks on the product card and navigates to PDP 
 	
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -92,7 +96,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify if geo location is not selected as US
 Given user launches the browser and navigates to "ASO_HOME" page 
  When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
+   #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
 Then user click on change zip code and fill the zip code outside the US
@@ -106,7 +111,8 @@ Then user click on change zip code and fill the zip code outside the US
 Scenario: Verify if user selected zip code other than US states
 Given user launches the browser and navigates to "ASO_HOME" page 
  When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
 Then user click on change zip code and fill the zip code outside the US
@@ -120,7 +126,8 @@ Then Verify below Sub/Main Module of Cart Page
 Scenario: verify if proper validation message is displayed if user already has products in his cart and tries to add a Zip code"
 Given user launches the browser and navigates to "ASO_HOME" page 
  When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button 
+	And user click on ship it button 
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
 Then user click on zip code and fill the zip code of restricted state

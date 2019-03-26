@@ -55,7 +55,9 @@ Scenario: Verify that the user is able to view "Add to Wish list" CTA on PDP
 	And user click on signin button 
 	And User should be able to see Search Box on Homepage 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
+	And user will click on View Cart button
 	
 
 @R2_Mobile @R2_NonRegression @R2_All @P-High_B @C-BOPIS @CB-Checkout @KER-2869
@@ -83,7 +85,8 @@ Scenario: Verify that the user is able add item to cart if available
 	And user click on signin button 
 	And User should be able to see Search Box on Homepage 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page 
 		| #Item is moved from cart to the wish list |
@@ -100,7 +103,8 @@ Verify that the user is able add item to cart if items are low in stock
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	When enter the "MoreThanThresholdQuantity" to X 
 	Then Verify the message on the page 
@@ -125,7 +129,8 @@ Verify customer must see messaging when attempting to add more inventory of an i
 	And User should be able to see Search Box on Homepage 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user change the quantity of item in PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	When enter the "MoreThanThresholdQuantity" to X 
 	Then Verify the message on the page 

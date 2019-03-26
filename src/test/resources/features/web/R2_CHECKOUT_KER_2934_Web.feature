@@ -1,7 +1,7 @@
 Feature: Add Shipping Address in Checkout 
 
 
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-8177 @CR-DPK 
 Scenario:
 Verify the Shipping address form that authenticated user can view on adding new shipping address during checkout 
@@ -12,7 +12,8 @@ Verify the Shipping address form that authenticated user can view on adding new 
 	And user click on signin button 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	And User clicks on edit CTA 
@@ -30,7 +31,7 @@ Verify the Shipping address form that authenticated user can view on adding new 
 		
 		
 		
-@R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-8178 @CR-DPK @C1-Message 
 Scenario:
 Verify if unauthenticated user be presented with the blank shipping address form fields 
@@ -38,7 +39,8 @@ Verify if unauthenticated user be presented with the blank shipping address form
 	#	And User Navigates L2 form Homepage Header 
 	#     And User clicks on product in PLP
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	Then user click on Go To Shipping Method button in Checkout page 
@@ -51,14 +53,15 @@ Verify if unauthenticated user be presented with the blank shipping address form
 		#	|Please enter a zip code|
 		|Required|	
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-8179 @CR-DPK 
 Scenario:
 Verify Guest user should view zipcode pre-populated if previously provided on Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -73,7 +76,7 @@ Verify Guest user should view zipcode pre-populated if previously provided on Ca
 	And user should see the Zip code pre-populated in Shipping Address drawer 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-9681 @CR-DPK 
 Scenario:
 Verify guest user, if after placing order, registers the account saves the address in My Account 
@@ -81,7 +84,8 @@ Verify guest user, if after placing order, registers the account saves the addre
 	#	And User Navigates L2 form Homepage Header 
 	#     And User clicks on product in PLP
 	When User searches a product "productName" and navigates to PDP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	When user enter First name "FirstName" 
@@ -93,13 +97,14 @@ Verify guest user, if after placing order, registers the account saves the addre
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @1HR_R2 @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P-Highest @1HR_R2 @1HR_R2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-9683 @CR-DPK 
 Scenario:
 Verify User needs to enter Zip code(it is mandatory) if not provided on cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on checkout button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Shipping Address	|
@@ -116,13 +121,14 @@ Verify User needs to enter Zip code(it is mandatory) if not provided on cart pag
 	Then user click on Go To Shipping Method button in Checkout page 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-10382 @CR-DPK 
 Scenario: Verify if user selects AVS address suggestion and checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -144,13 +150,14 @@ Scenario: Verify if user selects AVS address suggestion and checkout
 	And user verify the suggested address 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-10383 @CR-DPK 
 Scenario: Verify if user selects AVS address suggestion and checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -174,14 +181,15 @@ Scenario: Verify if user selects AVS address suggestion and checkout
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-11681 @CR-DPK 
 Scenario:
 Verify Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA, Shipping Method drawer gets open on successful validation 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	Then user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	When user enter First name "FirstName" 

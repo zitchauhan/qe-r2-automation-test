@@ -6,12 +6,14 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods Ship to Hom
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "SKUForBopisProduct" in the search box 
-	When user click on Add to cart button 
+#	When user click on Add to cart button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
 	When user enters "productName" in the search box 
-	And user click on Add to Cart Button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user click on checkout button in Cart page 
@@ -27,12 +29,14 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods BOPIS and S
 	And user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When User searches a product "BOPIS_SOF_Product" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
 	When user enters "SKUForBopisProduct" in the search box 
-	When user click on Add to cart button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When user will click on Checkout button and navigates to Checkout page 
@@ -48,11 +52,13 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods BOPIS and S
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user click on continue shopping 
 	When user enters "productName" in the search box 
-	When user click on Add to cart button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When user will click on Checkout button and navigates to Checkout page 
@@ -72,12 +78,14 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods for BOPIS, 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When User searches a product "BOPIS_SOF_Product" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
 	When user enters "SKUForBopisProduct" in the search box 
-	When user click on Add to cart button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When user will click on Checkout button and navigates to Checkout page 
@@ -96,11 +104,13 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Shi
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user click on continue shopping 
 	When user enters "productName" in the search box 
-	When user click on Add to cart button 
+	#When user click on Add to cart button 
+	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When user will click on Checkout button and navigates to Checkout page 

@@ -5,7 +5,8 @@ Scenario: verify if User is prompted to remove the OOS item from cart to proceed
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP  
-	Then user click on Add to Cart Button 
+	#	And user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then user view the items in order summary details (Subtotal, Estimated Shipping/In-Store Pickup, Estimated Taxes) 

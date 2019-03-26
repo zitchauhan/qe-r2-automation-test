@@ -8,9 +8,10 @@ Scenario: Verify BOPIS Pick Up Person - Authenticated user -Alternate Person
 	And user clicks on sign in link from burger menu 
 	And user logs in as "RawUser" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	And user click on checkout button in Cart page 
 	And user is navigated to order summary page 
@@ -30,9 +31,10 @@ Scenario:
 	Verify BOPIS Pick Up Person - Un Authenticated user - Alternate Pick up 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	And user click on checkout button in Cart page 
 	And user is navigated to order summary page 
@@ -51,10 +53,10 @@ Scenario:
 Scenario: Verify BOPIS Pick Up Person - Continue to Complete Payment 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
-	And user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
+	#And user click on Add to Cart Button 
+	And user click on ship it button  
+	Then user is navigated to Add to cart Notification popup 
+	And user click on viewcart button
 	And user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	And user click on checkout button in Cart page 
 	And user is navigated to order summary page 
