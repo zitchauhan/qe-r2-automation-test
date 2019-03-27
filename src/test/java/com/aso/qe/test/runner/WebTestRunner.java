@@ -20,7 +20,7 @@ import cucumber.api.junit.Cucumber;
 		)*/
 
 @CucumberOptions(
-		features="src/test/resources/features/web",
+		features="src/test/resources/features/web/R2_WebAutomationSanitySuite.feature",
 		glue="com.aso.qe.test.stepdefinition.web",
 				//tags ="@AutomationSanityR2",
 		monochrome=true, 

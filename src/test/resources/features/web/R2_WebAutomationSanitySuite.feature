@@ -259,8 +259,10 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Authenticated
 	And user click on signin button 
 	Then User searches a product "productName" and navigates to PDP 
 	#Then user click on Add to Cart Button
-	And user click on ship it button 
-	And user click on checkout button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	Then user click on go to payment present in shipping method 
 	Then user click on GiftCard Plus icon in Checkout page 
 	And user enter Gift card Number "Valid16DigitGiftCardNumber" 
