@@ -16,6 +16,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
+import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO; 
+import org.openqa.selenium.support.PageFactory; 
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
@@ -24,7 +26,10 @@ public class R1_PDP_PO extends CommonActionHelper
 {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());  //Sid
+	//R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
 	private String sku;   //Sid
+	@FindBy(xpath = "//*[@data-auid='btnShipIt']")
+	public WebElement shipItButton;
 	@FindBy(xpath="//*[@data-auid='btnAddToCart']") public WebElement AddToCartBtn;
 	@FindBy(xpath="//*[@data-auid='btnbtnEnableBuyNow']")  public WebElement btnEnablebuynow;
 	
@@ -33,7 +38,6 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='PDP_ProductName']") public WebElement txtProductTitle;
 	@FindBy(xpath="//*[contains(@data-auid,'Size_Attribute')]") public WebElement secProductAttributeSizes;
 	@FindBy(xpath="//*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']") public WebElement btnAddToCart;//modified SK - 24 Sep
-	@FindBy(xpath = "//*[@data-auid='btnShipIt']")public WebElement shipItButton; //HP 03_23_19
 	@FindBy(xpath="//*[@data-auid='PDP_QC_DEC']") public WebElement btnQuantityDec;
 	@FindBy(xpath="//*[@data-auid='PDP_QC_INC']") public   WebElement btnQuantityInc;
 	@FindBy(xpath="//input[@aria-label='Enter Desired Quantity' and @value='1']") public   WebElement txtDesiredQtyValue_1;
@@ -232,9 +236,8 @@ public class R1_PDP_PO extends CommonActionHelper
 	
 	
 	//***********************************************************************************************************//
-	//DELETE below Xpath when all Add to Cart has been cahnged to Ship It
 	@FindBy(xpath="//*[contains(@class,'ReactModal__Content ReactModa')]//*[@data-auid='btnviewCart']") public WebElement btnAddToCartModal; //SID Modified 17-October
-	@FindBy(xpath="//*[contains(@class,'ReactModal__Content ReactModa')]//*[@data-auid='btnviewCart']") public WebElement btnViewCartCheckout;
+
 	//KER-1952 Start CR-AKK
 	@FindBy(xpath = "//button[contains(text(), 'Ask a question')]") public WebElement btnAskQuestion;
 	@FindBy(xpath = "//button[contains(text(), ' Answer this Question')]") public WebElement btnAnswerQuestion;
@@ -523,7 +526,7 @@ public class R1_PDP_PO extends CommonActionHelper
 			waitForElement(selectedSwatchRepresentative);
 			isDisplayed(selectedSwatchRepresentative);
 
-			if (shipItButton.isDisplayed()) 
+			if (btnAddToCart.isDisplayed()) 
 			{
 				isAddtoCart=true;
 				
@@ -561,7 +564,7 @@ public class R1_PDP_PO extends CommonActionHelper
 				{
 					logger.debug("Product Size Txt::"+sizeElement.getText());
 					clickOnButton(sizeElement);
-					if(isDisplayed(shipItButton))
+					if(isDisplayed(btnAddToCart))
 					{
 						isAddtoCart=true;
 						break;
@@ -578,7 +581,7 @@ public class R1_PDP_PO extends CommonActionHelper
 		{
 			logger.error("addToCartAvailability exception msg::"+e.getMessage());
 		}
-		logger.debug("Ship It buttion is visible::"+isAddtoCart);
+		logger.debug("Add to Cart buttion is visable::"+isAddtoCart);
 		return isAddtoCart;
 	}
 
@@ -635,7 +638,8 @@ public class R1_PDP_PO extends CommonActionHelper
 		}
 		String productPrice = getText( txtPdpprice);
 		String productTitle = getText( txtProductTitle);
-		assertTrue(clickOnButton(btnAddToCart));
+		//assertTrue(clickOnButton(btnAddToCart));
+		assertTrue(clickOnButton(shipItButton));
 		Thread.sleep(Constants.thread_medium); 
 		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),"+"\""+productTitle+"\""+")]"));//SID
 		WebElement actualPriceInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),'"+productPrice+"')]"));
@@ -662,13 +666,13 @@ public class R1_PDP_PO extends CommonActionHelper
 	// 08-Aug Anuj KER-1920 //Modified SID 28-August
 	public void addToCartProductValidationMobile() throws InterruptedException {
 		List<String> productImage = new ArrayList<String>();
-		addToCartAvailability();
+		//addToCartAvailability(); -- PLCC Team
 		for (WebElement imgproductPDPMobile : imgproductPDPSRCMobile) {
 			productImage.add(imgproductPDPMobile.getAttribute("src"));
 		}
 		String productPrice = getText(txtPdpprice);
 		String productTitle = getText(txtProductTitle);
-		assertTrue(clickOnButton(btnAddToCart));
+		assertTrue(clickOnButton(shipItButton));
 		Thread.sleep(7000);
 		logger.error("Add to cart modal is not coming");
 		WebElement actualTitleInAddToCart = driver.findElement(By.xpath("//*[contains(@class,'ReactModal__Content ReactModa')]//*[contains(text(),"+"\""+productTitle+"\""+")]"));//SID
@@ -1001,14 +1005,14 @@ public class R1_PDP_PO extends CommonActionHelper
 			waitForElement(selectedSwatchRepresentative);
 			isDisplayed(selectedSwatchRepresentative);
 
-			if (!btnAddToCart.isDisplayed()) {
+			if (!shipItButton.isDisplayed()) {
 				isAddtoCart = true;
 
 			} else {
 				for (WebElement sizeElement : sizeNotAvailable) {
 					logger.debug("Product Size Txt::" + sizeElement.getText());
 					clickOnButton(sizeElement);
-					if (!isDisplayed(btnAddToCart)) {
+					if (!isDisplayed(shipItButton)) {
 						isAddtoCart = true;
 						break;
 					}
@@ -1018,7 +1022,7 @@ public class R1_PDP_PO extends CommonActionHelper
 			for (WebElement sizeElement : sizeNotAvailable) {
 				logger.debug("Product Size Txt::" + sizeElement.getText());
 				clickOnButton(sizeElement);
-				if (!btnAddToCart.isDisplayed()) {
+				if (!shipItButton.isDisplayed()) {
 					isAddtoCart = true;
 					break;
 				}
@@ -1060,7 +1064,7 @@ public class R1_PDP_PO extends CommonActionHelper
 		} catch (Exception e) {
 			logger.error("addToCartAvailability exception msg::" + e.getMessage());
 		}
-		logger.debug("Add to Cart buttion is visible::" + isAddtoCart);
+		logger.debug("Add to Cart buttion is visable::" + isAddtoCart);
 		return isAddtoCart;
 	}
 	

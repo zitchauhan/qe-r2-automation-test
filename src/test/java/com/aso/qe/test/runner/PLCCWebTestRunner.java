@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/resources/features/plcc/R1_CCAM_Generic_CartPage_112_Web.feature",
+@CucumberOptions(features = "src/test/resources/features",
 		glue = "com.aso.qe.test.stepdefinition.web.plcc", 
 		monochrome = true,
 		//tags= {"@OrderManju"},
