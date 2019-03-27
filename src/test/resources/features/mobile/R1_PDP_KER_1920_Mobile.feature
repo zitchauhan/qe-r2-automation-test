@@ -5,8 +5,7 @@ Feature: To Verify the Add To Cart Functionality
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
     And User click on the product image
-    #Then user click on Add to cart button
-    And user click on ship it button
+    Then user click on Add to cart button
     Then User closes the web application
 
   @Regression @C-PDP @1HR @Mobile @All @KER-1920  @ZYP_PDP_K1920-5265 @CR-AG
@@ -14,8 +13,7 @@ Feature: To Verify the Add To Cart Functionality
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
     And User click on the product image
-     #Then user click on Add to cart button
-    And user click on ship it button
+    Then user click on Add to cart button
     And user click on view cart button
     Then User closes the web application
 
@@ -24,8 +22,7 @@ Feature: To Verify the Add To Cart Functionality
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
     And User click on the product image
-    #Then user click on Add to cart button
-    And user click on ship it button
+    Then user click on Add to cart button
     And user click on checkout button
     Then User closes the web application
   
@@ -59,8 +56,7 @@ Feature: To Verify the Add To Cart Functionality
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
     And User click on the product image
-    #Then user click on Add to cart button
-    And user click on ship it button
+    Then user click on Add to cart button
     And then user close the add to cart popup
     
       @Regression @C-PDP @Mobile @All @KER-1920 @ZYP_PDP_K1920-3439 @CR-AG @1HR
@@ -69,8 +65,6 @@ Feature: To Verify the Add To Cart Functionality
     Then User navigates till PLP
     And User click on the product image
     Then User add product to cart and validate the price title and image of the product
-    #And user click on checkout button
-    And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+    And user click on checkout button
+   
   

@@ -11,8 +11,7 @@ Scenario:
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode" 
 	Then user click on checkout button 
@@ -33,8 +32,7 @@ Scenario: Verify that Authenticated User is able to navigate back to order detai
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -82,8 +80,7 @@ Scenario: BOPIS-Verify that order is gets cancelled if user clicks on Yes, Cance
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page

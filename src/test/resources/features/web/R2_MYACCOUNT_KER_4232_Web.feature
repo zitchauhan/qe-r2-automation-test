@@ -46,8 +46,7 @@ Scenario: Verify Authenticated user has Address given through SOF
 	And user navigate and deletes existing items in cart 
 	And User searches a product "SOFSKUNumber" and navigates to PDP 
 	And user selects a store with ZIP "zipCode" 
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user click on view cart button 
 	And user navigates to address book in my account 
 	Then user Clicks on Add New Address link 
@@ -254,8 +253,7 @@ Scenario: Verify Authenticated user has Address given through SOF
 	And user click on submit button 
 	Then user click on plus icon in Store Address drawer 
 	And user click on Make My store button 
-	#And user click on Add to Cart Button 
-	And user click on ship it button 
+	And user click on Add to Cart Button 
 	And user click on view cart button 
 	And user click on MyAccount 
 	Then user lands on My Account page and click on adress 

@@ -8,12 +8,8 @@ Verify authenticated user with no information saved in my account is able to nav
 	And user clicks on SignIn link from global header 
 	And user logs in as "RawUser" 
 	And User searches a product "productName" and navigates to PDP 
-#	And user click on Add to Cart Button 
-#	When user click on checkout button 
-	And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+	And user click on Add to Cart Button 
+	When user click on checkout button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Shipping Address	|
 		|checkout_ShippingInformation_Header_txt					|
@@ -29,12 +25,8 @@ Verify authenticated user with address details saved in my account is able to na
 	And user clicks on SignIn link from global header 
 	And user logs in as "UserWithTaxableAddress" 
 	And User searches a product "productName" and navigates to PDP 
-	#	And user click on Add to Cart Button 
-#	When user click on checkout button 
-	And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+	And user click on Add to Cart Button 
+	When user click on checkout button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout|
 		|PaymentHeader_Txt						|
@@ -52,12 +44,8 @@ Verify authenticated user with address details and payment details saved in my a
 	And user logs in as "UserWithSavedAddressAndPayment" 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	#	And user click on Add to Cart Button 
-#	When user click on checkout button 
-	And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+	And user click on Add to Cart Button 
+	When user click on checkout button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout|
 		|checkout_ShippingAddress_txt			|
@@ -76,12 +64,8 @@ Scenario:
 	And user navigate and deletes existing items in cart 
 	And user navigates to address book in my account 
 	And User searches a product "productName" and navigates to PDP 
-	#	And user click on Add to Cart Button 
-#	When user click on checkout button 
-	And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+	And user click on Add to Cart Button 
+	When user click on checkout button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#Verify below elements on checkout page	|
 		|Checkout_ShippingAddress_Edit_lnk			|
@@ -97,12 +81,8 @@ Verify the primary default shipping options should be utilized while quick check
 	And user navigate and deletes existing items in cart 
 	And user navigates to address book in my account 
 	And User searches a product "SKUForWhiteGlove" and navigates to PDP 
-	#	And user click on Add to Cart Button 
-#	When user click on checkout button 
-	And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+	And user click on Add to Cart Button 
+	When user click on checkout button 
 	Then Verify the message on the page 
 		|# Following shipping message should show on the page					|
 		|We will deliver to your door with no appointment or signature required	|
@@ -117,12 +97,8 @@ Verify during quick checkout error message will display for shipping address sec
 	And user logs in as "UserWithDefaultCaliforniaAddress" 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
-	#	And user click on Add to Cart Button 
-#	When user click on checkout button 
-	And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+	And user click on Add to Cart Button 
+	And user click on checkout button 
 	Then user is navigated to checkout page 
 	And Verify the message on the page 
 		|# Following shipping message should show on the page														|
@@ -138,12 +114,8 @@ Verify user can able to edit shipping address method landing on order summary du
 	And user logs in as "UserWithSavedAddressAndPayment" 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	#	And user click on Add to Cart Button 
-#	When user click on checkout button 
-	And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+	And user click on Add to Cart Button 
+	When user click on checkout button 
 	And user click on edit button of shipping method 
 	And user modifies shipping method 
 	And user click on go to payment present in shipping method 
@@ -161,12 +133,8 @@ Verify user can able to edit Payment Methods after landing on order summary duri
 	And user logs in as "UserWithSavedAddressAndPayment" 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	#	And user click on Add to Cart Button 
-#	When user click on checkout button 
-	And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+	And user click on Add to Cart Button 
+	When user click on checkout button 
 	And user click on edit button of shipping method 
 	Then user is able to modify payment method 
 	
@@ -179,11 +147,7 @@ Verify user can able to edit shipping address after landing on order summary dur
 	And user logs in as "UserWithSavedAddressAndPayment" 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	#	And user click on Add to Cart Button 
-#	When user click on checkout button 
-	And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+	And user click on Add to Cart Button 
+	When user click on checkout button 
 	And user click on edit button of shipping address 
 	Then user is able to modify shipping address 

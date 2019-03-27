@@ -9,8 +9,7 @@ Feature: To Verify the Add To Cart Functionality
            Then User should be select the color
            Then User should be select the size
            Then User should be select the Quantity
-           #And User clicks on AddToCart Button
-           And user click on ship it button
+           And User clicks on AddToCart Button
            Then User should be able to see ATC notification
            When User clicks on View_Cart Button
            Then User should be navigated to Cart Page

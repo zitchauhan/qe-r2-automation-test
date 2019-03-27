@@ -13,11 +13,8 @@ Scenario: Guest user ,Ability for system to navigate to shopping cart when custo
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates to L3 from home page 
 	And User clicks on required product in L3 Page 
-	#Then user click on Add to cart button 
-	And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	#And user click on view cart 
+	Then user click on Add to cart button 
+	And user click on view cart 
 	And User clicks on the minicart icon and navigated to minicart 
 	Then user click on checkout button 
 	

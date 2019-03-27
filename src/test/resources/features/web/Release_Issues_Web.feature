@@ -7,7 +7,7 @@ Feature: Release issues which were fixed in different releases
 #	And User clicks on product in PLP 
 #	Then user click on Add to Cart Button 
 #	And user will click on View Cart button 
-#	And user click on checkout button
+#	And user click on checkout button 
 #	And user adds shipment address on checkout page for "guest" user 
 #	And user selects shipment method on check out page for "guest" user 
 #	
@@ -24,8 +24,7 @@ Scenario: Check mobile number for special pricing
 Scenario: Verify that 100% promo is workinhg for guest user and user is able to checkout using Gift card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "itemwithFreeshipping" in the searchbox
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -54,8 +53,7 @@ Scenario: Verify that 100% promo is workinhg for guest user and user is able to 
 Scenario: Verify Age restriction checkbox on checkoutpage for ammo
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "ammoSKU" in the searchbox
-	#And user click on Add to Cart Button 
-	And user click on ship it button 
+	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -78,8 +76,7 @@ Scenario: Verify ammo disclaimer should appear in PDP and View cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "ammoSKU" in the searchbox
 	And user verify the ammo disclaimer on PDP
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 

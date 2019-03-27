@@ -14,8 +14,7 @@ Scenario:
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	#Then user click on Add to Cart Button
-	And user click on ship it button 
+	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	#	And user verify the employee discount is visible at item level 
 	And user will click on Checkout button 
@@ -39,15 +38,13 @@ Scenario:
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	#Then user click on Add to Cart Button
-	And user click on ship it button  
+	Then user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And then user close the add to cart popup 
 	Then user click on Deals tab 
 	And user select a product from deal tab 
 	Then User is navigated to pdp page 
-	#Then user click on Add to Cart Button
-	And user click on ship it button  
+	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	#	And user verify the employee discount is visible at item level when deal items are there 
 	And user will click on Checkout button 
@@ -68,8 +65,7 @@ Scenario:
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	#Then user click on Add to Cart Button
-	And user click on ship it button 
+	And user click on Add to cart button 
 	And user click on view cart button 
 	#	When user clicks on Cart icon 
 	#	Then user navigate to Cart page 
@@ -91,8 +87,7 @@ Scenario:
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	#Then user click on Add to Cart Button
-	And user click on ship it button 
+	And user click on Add to cart button 
 	And user click on view cart button 
 	#	When user clicks on Cart icon 
 	#	Then user navigate to Cart page 

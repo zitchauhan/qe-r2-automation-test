@@ -8,8 +8,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
     Then User is navigated to pdp page
-    #Then user click on Add to Cart Button 
-	And user click on ship it button  
+    Then user click on Add to Cart Button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -33,8 +32,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
   Scenario: Verify the error message when user enters the invalid Gift card number
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    #Then user click on Add to Cart Button 
-	And user click on ship it button  
+    Then user click on Add to Cart Button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -56,8 +54,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	#Then user click on Add to Cart Button 
-	And user click on ship it button   
+	And user click on Add to Cart Button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -85,8 +82,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
     Then User is navigated to pdp page
-    #Then user click on Add to Cart Button 
-	And user click on ship it button  
+    Then user click on Add to Cart Button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -111,8 +107,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
     Then User is navigated to pdp page
-    #Then user click on Add to Cart Button 
-	And user click on ship it button  
+    Then user click on Add to Cart Button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -140,8 +135,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user is able to see the product category name in section title
     Then user clicks on one of the product category and navigates to LThree
     Then User is navigated to pdp page
-    #Then user click on Add to Cart Button 
-	And user click on ship it button  
+    Then user click on Add to Cart Button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page

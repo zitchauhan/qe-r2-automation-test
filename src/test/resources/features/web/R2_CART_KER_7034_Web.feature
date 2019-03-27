@@ -7,8 +7,7 @@ Scenario: Verify for SOF items System should check the store eligibility for BOP
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store1" 
 	When user enters "BOPIS_SOF_Product" in the searchbox 
-	#And user click on Add to Cart Button
-	And user click on ship it button 
+	And user click on Add to Cart Button 
 	And then user close the add to cart popup 
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 

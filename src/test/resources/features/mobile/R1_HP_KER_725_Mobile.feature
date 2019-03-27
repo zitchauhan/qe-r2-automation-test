@@ -16,8 +16,7 @@ Feature: To Verify the functionality of "Mini Cart" in the Global Header
     Then User clicks on the burger menu    
     Then User navigates to L3
     Then user clicks on the product card and navigates to PDP of the product
-    #Then user click on Add to cart button
-    And user click on ship it button
+    Then user click on Add to cart button
     And user click on view cart     
     And User clicks on the minicart icon and navigated to minicart
     Then User check for the view cart title

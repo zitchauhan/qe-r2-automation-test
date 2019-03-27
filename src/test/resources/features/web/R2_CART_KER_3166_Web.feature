@@ -3,10 +3,9 @@ Feature: Verify Item/Order Level Promotion Calculation
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-8086 @CR-DPK @1HR_R2
 Scenario: To verify Add Promotion Code
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User Navigates L2 form Homepage Header 
+		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When user clicks on Add Promo code link under Cart Order Summary
 	Then Verify below Sub/Main Module of Cart Page
@@ -21,8 +20,7 @@ Scenario: To verify open field to enter promotion code
 Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	#Then user click on Add to Cart Button
-	And user click on ship it button
+	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page 
 	|# Verify following elements in Cart page"Order Summary"|	
@@ -35,8 +33,7 @@ Scenario: To verify open field to enter promotion code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 
     And User clicks on product in PLP
-	#Then user click on Add to Cart Button
-	And user click on ship it button
+	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	And user view and Applied Promotions/Discounts "WrongPromocode"
 	Then Verify the message on the page
@@ -50,8 +47,7 @@ Scenario: To verify Submit Promotion code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	#Then user click on Add to Cart Button
-	And user click on ship it button
+	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "Promocode"    
@@ -68,8 +64,7 @@ Scenario: To verify Item level description
 	Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	#Then user click on Add to Cart Button
-	And user click on ship it button
+	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "Promocode"    
@@ -95,8 +90,7 @@ Scenario: verify Item/order Promo code applied in Order Summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	#Then user click on Add to Cart Button
-	And user click on ship it button
+	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "Promocode"    
@@ -113,8 +107,7 @@ Scenario: To verify Promo code applied in Check out page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	#Then user click on Add to Cart Button
-	And user click on ship it button
+	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "Promocode"
@@ -134,8 +127,7 @@ Scenario: Verify promotion got applied to the product when user applied %off pro
 	And User navigates to L2 Grills Outdoor cooking
 	And user clicks on one of the subcategory of Grills Outdoor
 	And user select the product
-	#And user click on Add to Cart Button
-	And user click on ship it button 
+	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	And user view and Applied Promotions/Discounts "Promocode" 
@@ -151,8 +143,7 @@ Scenario: Verify promotion got applied to the Catagory when user applied %off pr
 Given user launches the browser and navigates to "ASO_HOME" page
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user will click on View Cart button	
 	When enter the "EnterQuantityGreaterThenOne" to X  
 	And user view and Applied Promotions/Discounts "Promocode" 
@@ -167,8 +158,7 @@ Scenario: Verify promotion got applied for order level when user applied %off pr
 Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	#Then user click on Add to Cart Button
-	And user click on ship it button
+	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X  
 	And user view and Applied Promotions/Discounts "Promocode" 
@@ -187,8 +177,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Grills Outdoor cooking
 	And user clicks on one of the subcategory of Grills Outdoor
 	And user select the product
-	#And user click on Add to Cart Button
-	And user click on ship it button 
+	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X  
 	And user view and Applied Promotions/Discounts "AmountLevelDiscount" 
@@ -204,8 +193,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify promotion got applied to the Category when user applied $ amount off promotion on Category level in cart -- with promocode
 Given user launches the browser and navigates to "ASO_HOME" page 
 Then User navigates to LThree Mens Watches 
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user will click on View Cart button	
 	When enter the "EnterQuantityGreaterThenOne" to X  
 	And user view and Applied Promotions/Discounts "AmountLevelDiscount" 
@@ -221,8 +209,7 @@ Scenario: Verify promotion got applied for order level when user applied $ amoun
 Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X  
 	And user view and Applied Promotions/Discounts "AmountLevelDiscount" 
@@ -237,8 +224,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Grills Outdoor cooking
 	And user clicks on one of the subcategory of Grills Outdoor
 	And user select the product
-	#And user click on Add to Cart Button
-	And user click on ship it button 
+	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page
@@ -250,8 +236,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify promotion got applied to the Category when user applied %off promotion on Category level in cart -- Implicit promotion
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates to LThree Mens Watches 
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X 
 	Then Verify below Sub/Main Module of Cart Page
@@ -263,8 +248,7 @@ Scenario: Verify promotion got applied for order level when user applied %off pr
 Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	#Then user click on Add to Cart Button
-	And user click on ship it button
+	Then user click on Add to Cart Button
 	And user will click on View Cart button 
 	When enter the "OrderLevelQuantity" to X 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -279,8 +263,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Grills Outdoor cooking
 	And user clicks on one of the subcategory of Grills Outdoor
 	And user select the product
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When enter the "OrderLevelQuantity" to X 
 	Then Verify below Sub/Main Module of Cart Page
@@ -295,8 +278,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify promotion got applied to the Category when user applied $ amount off promotion on Category level in cart -- Implicit promotion
 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates to LThree Mens Watches 
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user will click on View Cart button
 	When enter the "OrderLevelQuantity" to X  
 	Then Verify below Sub/Main Module of Cart Page
@@ -313,8 +295,7 @@ Scenario: Verify promotion got applied for order level when user creates $ amoun
 Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	#And user click on Add to Cart Button
-	And user click on ship it button 
+	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	When enter the "EnterQuantityGreaterThenOne" to X  
 	Then Verify below Sub/Main Module of Cart Page

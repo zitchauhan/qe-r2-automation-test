@@ -5,7 +5,7 @@ Feature: To To verify Quick View - Product Image
     Given user launches the browser and navigates to "ASO_HOME" page
      Then User navigates to L3 from home page
      Then User click on Quick view button
-     #Then verify addcart button is displayed 
-	 Then verify ship it button is displayed
+     Then verify addcart button is displayed 
+
 
  

@@ -10,10 +10,9 @@ Scenario: Verify that User is able to open the Diff Selection modal from PLP
 	And user click on signin button 
 	Then User Navigates L2 form Homepage Header 
 	Then User click on Quick view button 
-	#Then verify addcart button is displayed
-	Then verify ship it button is displayed 
-	#Then Verify that Add to Cart CTA is displayed 
-		
+	Then verify addcart button is displayed 
+	Then Verify that Add to Cart CTA is displayed 
+	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4119
 @ZYP_CHECKOUT_K4119-8643 @CR-AKK 
 Scenario:
@@ -25,9 +24,8 @@ Verify that User is able to add item to cart after making selections on Diff Mod
 	And user click on signin button 
 	Then User Navigates L2 form Homepage Header 
 	Then User click on Quick view button 
-	#Then verify addcart button is displayed 
-	#And Verify that Add to Cart CTA is displayed 
-	Then verify ship it button is displayed
+	Then verify addcart button is displayed 
+	And Verify that Add to Cart CTA is displayed 
 	Then user verify item added successfully 
 	Then verify that View Cart and Checkout CTA is displayed 
 	
@@ -43,9 +41,8 @@ Verify that User is able to view the cart after adding item to cart from PLP
 	And user click on signin button 
 	Then User Navigates L2 form Homepage Header 
 	Then User click on Quick view button 
-	#Then verify addcart button is displayed 
-	#And Verify that Add to Cart CTA is displayed 
-	Then verify ship it button is displayed
+	Then verify addcart button is displayed 
+	And Verify that Add to Cart CTA is displayed 
 	And user click on view cart button 
 	Then Verify below Sub/Main Module of Cart Page 
 		|# Verify following elements in Cart page "Your Cart "|

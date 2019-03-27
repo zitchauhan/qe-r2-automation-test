@@ -4,8 +4,7 @@ Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
   Scenario: Verify that order is gets cancelled if Guest user clicks on Yes, Cancel my Order CTA on confirmation modal
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    #And user click on Add to Cart Button
-	And user click on ship it button
+    And user click on Add to Cart Button
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -40,8 +39,7 @@ Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
   Scenario: Verify that Guest User is able to navigate back to order details page from cancellation confirmation page
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    #And user click on Add to Cart Button
-	And user click on ship it button
+    And user click on Add to Cart Button
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -73,8 +71,7 @@ Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
   Scenario: Verify that for Guest user Cancel Order CTA is displayed for orders in remorse period
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    #And user click on Add to Cart Button
-	And user click on ship it button
+    And user click on Add to Cart Button
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -104,8 +101,7 @@ Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
   Scenario: Verify that for Guest user Cancel Order CTA is not displayed for fully shipped orders
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-   #And user click on Add to Cart Button
-	And user click on ship it button
+    And user click on Add to Cart Button
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -133,8 +129,7 @@ Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
   Scenario: Verify that for Guest user Cancel Order CTA is NOT displayed for partially shipped orders
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-   #And user click on Add to Cart Button
-	And user click on ship it button
+    And user click on Add to Cart Button
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -175,8 +170,7 @@ Feature: E03-150 - Order Cancellation Order Cancellation by Guest Customer
   Scenario: Verify that order is not cancelled if Guest user clicks on No CTA on confirmation modal
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
-    #And user click on Add to Cart Button
-	And user click on ship it button
+    And user click on Add to Cart Button
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page

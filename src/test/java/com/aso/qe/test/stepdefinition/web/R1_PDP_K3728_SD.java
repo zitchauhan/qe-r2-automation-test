@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
-import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -15,7 +14,7 @@ import cucumber.api.java.en.Then;
 public class R1_PDP_K3728_SD extends CommonActionHelper{
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
-	R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
+	
 	@Then("^User navigates till PLP of multiple sku package$")
 	public void user_navigates_till_PLP_of_multiple_sku_package() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {
@@ -77,8 +76,8 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 		assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
 		pdpPageObj.checkBtnNext();
 		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
-		//pdpPageObj.addToCartAvailability();
-		assertTrue(clickOnButton(generic_po.shipItButton));
+		pdpPageObj.addToCartAvailability();
+		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 	}
 	
 //	@Then("^verfiy add to cart functionality$")
@@ -101,8 +100,8 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 		assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
 		pdpPageObj.checkBtnNext();
 		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
-		//pdpPageObj.addToCartAvailability();
-		assertTrue(clickOnButton(generic_po.shipItButton));
+		pdpPageObj.addToCartAvailability();
+		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 	}
 	
 	@Then("^user navigate to No diff selection product PLP$")
@@ -122,13 +121,13 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 	
 	@And("^user add the item to cart$")
 	public void user_add_the_item_to_cart() {
-		assertTrue(clickOnButton(generic_po.shipItButton));
+		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 		waitForElement(pdpPageObj.secAddToCartPopup);
 		assertTrue(isDisplayed(pdpPageObj.secAddToCartPopup));
 	}
 	@Then("^verfiy the product attribute of no diff$")
 	public void verfiy_the_product_attribute_of_no_diff() {
-		assertTrue(isDisplayed(generic_po.shipItButton));
+		assertTrue(isDisplayed(pdpPageObj.btnAddToCart));
 //		assertTrue(isDisplayed(pdpPageObj.imgSrcSKUAttribute));
 		if("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(pdpPageObj.txtDetails_M));

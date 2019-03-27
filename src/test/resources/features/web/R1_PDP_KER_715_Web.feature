@@ -6,8 +6,7 @@ Scenario: To verify user is able to navigate to product details page when produc
 	Then User navigates till PLP 
 	And User click on the product image 
 	And user should be able to see PDP mention in the current url 
-	#And user should be able to see Add to cart button and quantity section 
-	And user should be able to see ship it button and quantity section 
+	And user should be able to see Add to cart button and quantity section 
 	
 	
    

@@ -9,8 +9,7 @@ Feature: To verify basic functionalities of PDP
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-    #And user should be able to see Add to cart button and quantity section
-    And user should be able to see ship it button and quantity section 
+    And user should be able to see Add to cart button and quantity section
     Then user should be able to see inventory status of the product
 
 @Regression  @C-PDP  @Web @KER-1926 @ZYP_PDP_K1926-5544 @All @Rerun @1HR  @CR-AG
@@ -21,8 +20,7 @@ Feature: To verify basic functionalities of PDP
     Then user should be able to see Image of the product
     And user should be able to see the search term in the product title
     Then user should see different attribute and size of the product
-    #And user should be able to see Add to cart button and quantity section
-    And user should be able to see ship it button and quantity section 
+    And user should be able to see Add to cart button and quantity section
     Then user should be able to see inventory status of the product
 
 

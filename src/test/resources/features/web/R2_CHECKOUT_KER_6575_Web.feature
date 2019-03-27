@@ -33,8 +33,7 @@ Scenario: Verify user should see the mini cart Icon with no. of items in cart no
 		And User navigates to L2 Mens clothing
 	    Then user clicks on one of the subcategory and navigates to LTwo
 	    Then user clicks on one of the product category and navigates to LThree
-		#Then user click on Add to Cart Button
-		And user click on ship it button
+		Then user click on Add to Cart Button
 		And user will click on View Cart button 
 		And user will click on Checkout button and navigates to Checkout page
 		Then user should see the mini cart Icon with no. of items in cart notifier    		
@@ -45,8 +44,7 @@ Scenario: Verify user clicks on the mini cart Icon should navigates user to the 
 		And User navigates to L2 Mens clothing
 	    Then user clicks on one of the subcategory and navigates to LTwo
 	    Then user clicks on one of the product category and navigates to LThree
-		#Then user click on Add to Cart Button
-		And user click on ship it button
+		Then user click on Add to Cart Button
 		And user will click on View Cart button 
 		And user will click on Checkout button and navigates to Checkout page
 		And user clicks on mini cart Icon in checkout page

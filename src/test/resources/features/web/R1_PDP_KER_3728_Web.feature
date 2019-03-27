@@ -12,6 +12,5 @@ Scenario: To verify add to cart functionality on PDP - No Different Selection
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "NodiffSelectionProd" in the searchbox
 	Then verfiy the product attribute of no diff 
-	#Then user click on Add to cart button
-	And user click on ship it button
+	Then user click on Add to cart button
 	Then Add to cart modal is displayed  

@@ -3,8 +3,7 @@ Feature: E03-150 - Order Cancellation Cancel Order Confirmation (Guest & Authent
   Scenario: Verify that Guest User is able to view Cancellation Confirmation page
   Given user launches the browser and navigates to "ASO_HOME" page 
   When User searches a product "productName" and navigates to PDP 
-	#And user click on Add to Cart Button
-	And user click on ship it button
+	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 

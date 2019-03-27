@@ -9,14 +9,9 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-     #And user should be able to see Add to cart button and quantity section
-    And user should be able to see ship it button and quantity section
-#    When user click on Add to cart button
-#    Then user click on checkout button
-    And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+    And user should be able to see Add to cart button and quantity section
+    When user click on Add to cart button
+    Then user click on checkout button
     Then user should verify the Guest checkout Page
     Then user click on Checkout as Guest button
     Then user should able to see shipping Address page
@@ -53,14 +48,9 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-    #And user should be able to see Add to cart button and quantity section
-    And user should be able to see ship it button and quantity section
-#    When user click on Add to cart button
-#    Then user click on checkout button
-    And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+    And  user should be able to see Add to cart button and quantity section
+    When user click on Add to cart button
+    Then user click on checkout button
     Then user should verify the Guest checkout Page
     Then user click on Checkout as Guest button
     Then user should able to see shipping Address page
@@ -116,14 +106,9 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-    #And user should be able to see Add to cart button and quantity section
-    And user should be able to see ship it button and quantity section
-#    When user click on Add to cart button
-#    Then user click on checkout button
-    And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+    And user should be able to see Add to cart button and quantity section
+    When user click on Add to cart button
+    Then user click on checkout button
     Then user should verify the Guest checkout Page
     Then user click on Checkout as Guest button
     Then user should able to see shipping Address page
@@ -234,8 +219,7 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-    #And user should be able to see Add to cart button and quantity section
-    And user should be able to see ship it button and quantity section
+    And user should be able to see Add to cart button and quantity section
     Then user click on Add to Wish List/Sign In
     Then user should create a WishList
     Then User is able to see the ASO_Logo
@@ -257,14 +241,9 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-    #And user should be able to see Add to cart button and quantity section
-    And user should be able to see ship it button and quantity section
-#    When user click on Add to cart button
-#    Then user click on checkout button
-    And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+    And user should be able to see Add to cart button and quantity section
+    When user click on Add to cart button
+    Then user click on checkout button
     #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
     #Then user should enter the shipping Address details
@@ -302,14 +281,9 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-     #And user should be able to see Add to cart button and quantity section
-    And user should be able to see ship it button and quantity section
-#    When user click on Add to cart button
-#    Then user click on checkout button
-    And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+    And user should be able to see Add to cart button and quantity section
+    When user click on Add to cart button
+    Then user click on checkout button
     #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
     #Then user should enter the shipping Address details
@@ -366,14 +340,9 @@ Feature: To Verify Unauthenticated/Authenticated UserJourney
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-    #And user should be able to see Add to cart button and quantity section
-    And user should be able to see ship it button and quantity section
-#    When user click on Add to cart button
-#    Then user click on checkout button
-    And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+    And user should be able to see Add to cart button and quantity section
+    When user click on Add to cart button
+    Then user click on checkout button
     #Then user should able to see shipping Address page
     Then user should be able verify the order summary details
     #Then user should enter the shipping Address details

@@ -19,12 +19,8 @@ Scenario:
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	#Then user click on Add to Cart Button 
-	And user click on ship it button 
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
-	#Then user click on checkout from ATC pop up 
+	Then user click on Add to Cart Button 
+	Then user click on checkout from ATC pop up 
 	And user click on GiftCard Plus icon in Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify in choose gift card dropdown default gift card is showing|
@@ -75,8 +71,7 @@ Scenario:
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
 	Then user change the quantity of item in PDP 
-	#Then user click on Add to Cart Button 
-	And user click on ship it button 
+	Then user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page 
 	#  Then user click on checkout from ATC pop up
@@ -103,8 +98,7 @@ Scenario:
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	#Then user click on Add to Cart Button 
-	And user click on ship it button 
+	Then user click on Add to Cart Button 
 	#  Then user click on checkout from ATC pop up
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page 
@@ -131,8 +125,7 @@ Scenario: Verify No second Saved Gift Card for Authenticated user
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	#Then user click on Add to Cart Button
-	And user click on ship it button  
+	Then user click on Add to Cart Button 
 	#  Then user click on checkout from ATC pop up
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page 
@@ -158,12 +151,8 @@ Scenario: Verify +Add another Gift card is Suppressed
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
-	#And user click on Add to Cart Button 
-	And user click on ship it button 
-	And user click on viewcart button
-	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
-	#Then user click on checkout from ATC pop up 
+	And user click on Add to Cart Button 
+	And user click on checkout from ATC pop up 
 	And user clicks on edit payment cta 
 	And user click on GiftCard Plus icon in Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
@@ -189,8 +178,7 @@ Scenario: Verify remove all gift cards
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	#Then user click on Add to Cart Button 
-	And user click on ship it button 
+	Then user click on Add to Cart Button 
 	#  Then user click on checkout from ATC pop up
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page 
@@ -216,8 +204,7 @@ Scenario: Verify Gift Card Chronology and Balance
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	#Then user click on Add to Cart Button 
-	And user click on ship it button 
+	Then user click on Add to Cart Button 
 	#  Then user click on checkout from ATC pop up
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page 
@@ -244,8 +231,7 @@ Scenario: Verify Gift card drop down supressed
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	#Then user click on Add to Cart Button 
-	And user click on ship it button  
+	Then user click on Add to Cart Button 
 	#  Then user click on checkout from ATC pop up
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page 

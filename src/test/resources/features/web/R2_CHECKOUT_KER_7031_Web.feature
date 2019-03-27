@@ -11,8 +11,7 @@ Scenario: To verify checkout landing variations - shipping drawer hidden for SOF
 	And user navigate and deletes existing items in cart 
 	Then User searches a product "SOFSKUNumber" and navigates to PDP 
 	And user selects a store with ZIP "FindStoreZipcode" 
-	 #And user click on Add to Cart Button
-    And user click on ship it button 
+	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -25,8 +24,7 @@ Scenario: To verify checkout landing variations - Guest User
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SOFSKUNumber" and navigates to PDP 
 	And user selects a store with ZIP "zipCode" 
-	 #And user click on Add to Cart Button
-    And user click on ship it button
+	And user click on Add to Cart Button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When user will click on Checkout button and navigates to Checkout page 
@@ -44,8 +42,7 @@ Scenario: To verify checkout landing variations - Authenticated user
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	Then User searches a product "SOFSKUNumber" and navigates to PDP 
-	#And user click on Add to Cart Button
-    And user click on ship it button 
+	And user click on Add to Cart Button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
