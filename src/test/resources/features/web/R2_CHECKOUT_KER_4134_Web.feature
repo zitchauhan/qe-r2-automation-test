@@ -6,7 +6,8 @@ Scenario: To verify all items in the Order - Un-Authenticated user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user selects store with "FindStoreZipcode" and "BOPIS_Store_Selection" 
 	When User searches a product "SKUForBopisProduct" and navigates to PDP 
-	When user click on Add to cart button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button  
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	Then user select in store pickup option
@@ -23,7 +24,8 @@ Scenario: Verify Phone number associated with BOPIS
 	And user click on signin button
 	And user navigate and deletes existing items in cart 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	And user will click on View Cart button
 	And user navigate to Cart page
 	Then user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
@@ -49,7 +51,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
 	And user logs in as "Cart_BopisEmail"  
 	And User searches a product "BOPIS_Regular_Product" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
@@ -67,7 +70,8 @@ Scenario: Verify Phone number associated with BOPIS - Alternative Person
 	And user click on signin button
 	And user navigate and deletes existing items in cart 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	And user will click on View Cart button
 	And user navigate to Cart page
 	Then user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
@@ -92,7 +96,8 @@ Scenario: Verify Phone number field validation
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	And User searches a product "BOPIS_Regular_Product" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
@@ -117,7 +122,8 @@ Scenario: Verify SMS check box display with Primary and Alternative Person
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user selects store with "FindStoreZipcode" and "BOPIS_Store_Selection" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
@@ -147,7 +153,8 @@ Scenario: Verify Phone number field validation
 	And user click on signin button
 	And user navigate and deletes existing items in cart 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	And user will click on View Cart button
 	And user navigate to Cart page
 	Then user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"
@@ -172,7 +179,8 @@ Scenario: Verify Phone number associated with BOPIS - Alternative pick up Person
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user selects store with "FindStoreZipcode" and "BOPIS_Store_Selection" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
@@ -197,7 +205,8 @@ Scenario: Verify SMS check box display with Primary and Alternative Person
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user selects store with "FindStoreZipcode" and "BOPIS_Store_Selection" 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#Then user click on Add to Cart Button
+	And user click on ship it button  
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
@@ -226,7 +235,8 @@ Scenario: Verify Phone number associated with BOPIS - Change Billing address
 	When user clicks on SignIn link from global header 
 	And user logs in as "Cart_BopisEmail"  
 	And User searches a product "BOPIS_Regular_Product" and navigates to PDP 
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	And user will click on View Cart button
 	And user navigate to Cart page
 	Then user select in store pickup option 

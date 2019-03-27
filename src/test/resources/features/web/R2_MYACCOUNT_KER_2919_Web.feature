@@ -275,7 +275,8 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	Then User clicks on ASO Logo and should be navigated to Home Page
 	And user navigate and deletes existing items in cart
 	And User searches a product "SanitySKUNumber" and navigates to PDP
-	And user click on Add to Cart Button
+	#And user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user click on checkout button in Cart page     
 	Then User verifies that in Payment section credit card "CreditCardNumber" is pre-populated by default

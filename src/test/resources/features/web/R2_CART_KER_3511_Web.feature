@@ -8,8 +8,9 @@ Scenario: Verify if authenticated user can view updated estimated shipping when 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	And User Navigates L2 form Homepage Header 
-     And User clicks on product in PLP
-	Then user click on Add to Cart Button
+    And User clicks on product in PLP
+	#Then user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When user clicks on Change Zip Code link in Estimated shipping section of Order Summary section on Cart page
@@ -24,7 +25,8 @@ Scenario: Verify if authenticated user can view updated estimated shipping when 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button 
 	When user clicks on Change Zip Code link in Estimated shipping section of Order Summary section on Cart page
 	And user enters new "Zipcode" in Change ZIP Code modal overlay 
@@ -45,8 +47,8 @@ Scenario: Verify if authenticated user can view estimated shipping based on zip 
 	Then user fill the Address book details 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Cart Page 
@@ -67,7 +69,8 @@ Scenario: Verify if authenticated user can view updated estimated shipping based
 	Then user fill the Address book details 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user change zip code 
@@ -83,7 +86,8 @@ Scenario: Verify if authenticated user can view updated estimated shipping based
 Scenario: Verify if geo location is not selected as US
 Given user launches the browser and navigates to "ASO_HOME" page 
  When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button
+    And user click on ship it button
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
 Then user click on change zip code and fill the zip code outside the US
@@ -95,7 +99,8 @@ Then user click on change zip code and fill the zip code outside the US
 Scenario: Verify if user selected zip code other than US states
 Given user launches the browser and navigates to "ASO_HOME" page 
  When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button
+    And user click on ship it button
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
 Then user click on change zip code and fill the zip code outside the US
@@ -107,7 +112,8 @@ Then Verify below Sub/Main Module of Cart Page
 Scenario: verify if proper validation message is displayed if user already has products in his cart and tries to add a Zip code"
 Given user launches the browser and navigates to "ASO_HOME" page 
  When User searches a product "productName" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button
+    And user click on ship it button
     And user is navigated to Add to cart Notification popup
     And user will click on View Cart button
 Then user click on zip code and fill the zip code of restricted state

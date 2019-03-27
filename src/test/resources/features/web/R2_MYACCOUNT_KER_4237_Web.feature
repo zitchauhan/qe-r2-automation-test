@@ -50,7 +50,8 @@ Scenario:
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	Then User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user click on checkout from ATC pop up 
 	Then user click on review order button 
 	And user able to see the button place order 
@@ -79,7 +80,8 @@ Scenario:
 	Verify that Guest user is not able to view shipping and Billing Details of an order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
@@ -115,7 +117,8 @@ Scenario: Verify that Authenticated user is able to Print Order receipt
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	Then User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	And user click on checkout from ATC pop up 
 	Then user click on review order button 
 	And user able to see the button place order 
@@ -168,7 +171,8 @@ Scenario: Verify that UnAuthenticated user is able to print order receipt
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	Then User searches a product "productName" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user click on checkout from ATC pop up 
 	Then user click on review order button 
 	And user able to see the button place order 

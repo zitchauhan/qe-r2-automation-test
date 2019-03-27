@@ -62,8 +62,10 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-    And user should be able to see Add to cart button and quantity section
-    When user click on Add to cart button
+    #And user should be able to see Add to cart button and quantity section
+    And user should be able to see ship it button and quantity section
+    #When user click on Add to cart button
+    And user click on ship it button
     Then user click on checkout button
     Then user should verify the Guest checkout Page
     Then user click on Checkout as Guest button
@@ -156,8 +158,10 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-    And user should be able to see Add to cart button and quantity section
-    When user click on Add to cart button
+#    And user should be able to see Add to cart button and quantity section
+#    When user click on Add to cart button
+    And user should be able to see ship it button and quantity section
+	And user click on ship it button	
     Then user click on checkout button
     Then user should verify the Guest checkout Page
     Then user click on Checkout as Guest button
@@ -192,8 +196,10 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-    And user should be able to see Add to cart button and quantity section
-    When user click on Add to cart button
+#    And user should be able to see Add to cart button and quantity section
+#    When user click on Add to cart button
+    And user should be able to see ship it button and quantity section
+	And user click on ship it button
     Then user click on checkout button
     Then user should verify the Guest checkout Page
     Then user click on Checkout as Guest button
@@ -228,7 +234,8 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-    And user should be able to see Add to cart button and quantity section
+    #And user should be able to see Add to cart button and quantity section
+    And user should be able to see ship it button and quantity section
     Then User is able to see the ASO_Logo
     Then User clicks on ASO Logo and should be navigated to Home Page
     Then User is able to see the ASO_Logo
@@ -243,8 +250,10 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
-    And user should be able to see Add to cart button and quantity section
-    When user click on Add to cart button
+    #And user should be able to see Add to cart button and quantity section
+    #When user click on Add to cart button
+    And user should be able to see ship it button and quantity section
+	And user click on ship it button
     Then user click on checkout button
     And user verify the shipping address
     And user verify order summary

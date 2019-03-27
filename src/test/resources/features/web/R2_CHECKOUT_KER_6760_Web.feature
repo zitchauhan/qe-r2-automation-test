@@ -16,7 +16,8 @@ Scenario:
 #	And user clicks on one of the subcategory of Grills Outdoor 
 #	And user select the product 
 #	And User is navigated to pdp page 
-	And user click on Add to Cart Button 
+	#Then user click on Add to Cart Button 
+	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user navigate to Cart page 

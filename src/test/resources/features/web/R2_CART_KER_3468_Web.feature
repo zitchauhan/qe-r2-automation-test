@@ -6,7 +6,8 @@ Scenario: Verify user is able to see the error messages on Cart for insufficient
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
 	 When user enters "SOFSKUNumber" in the search box
   	And User is navigated to pdp page 
-	Then user click on Add to Cart Button 
+	#Then user click on Add to Cart Button 
+	And user click on ship it button
 	And user will click on View Cart button 
 	And user navigate to Cart page 
 	When enter the "MoreThanThresholdQuantity" to X 
@@ -24,7 +25,8 @@ Scenario: verify user is able to see the error messages on Cart for OOS item
 	And user should be able to click on shipping and pickup drawer
 	And user should be able to select the store pickup "store pickup" filter
 	Then user clicks on the product card and navigates to PDP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -36,7 +38,8 @@ Scenario: verify user is able to see the error messages on Cart for OOS item
 Scenario: Verify the user is able to see no inventory availability on Find a store modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "BOPIS_Regular_Product" and navigates to PDP 
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button
+	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
@@ -51,7 +54,8 @@ Scenario: Verify user is able to see the error messages for item available in le
 	When User select store with "BOPIS_Store2"  
 	And User should be able to see Search Box on Homepage 
 	When user enters "BOPIS_SOF_Product" in the searchbox	
-	When user click on Add to cart button 
+	#When user click on Add to cart button
+	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	And user input the quantity more than available "MoreThanThresholdQuantity"

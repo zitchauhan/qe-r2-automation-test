@@ -7,10 +7,14 @@ Scenario: Verify the Add To Cart functionality
 	Then User navigates to L3 
 	And User selects Required product in Product Listing Page 
 	Then User should be select the Quantity 
-	And User clicks on AddToCart Button 
-	Then Add to cart modal is displayed 
-	When User clicks on View_Cart Button 
-	Then User should be navigated to Cart Page 
+#	And User clicks on AddToCart Button 
+#	Then Add to cart modal is displayed 
+#	When User clicks on View_Cart Button 
+#	Then User should be navigated to Cart Page 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
 	Then User should be able to see added product in cart 
 	
 	

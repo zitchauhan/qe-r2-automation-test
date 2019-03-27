@@ -72,7 +72,8 @@ Scenario: Verify that user should be able to view  proper error message while ad
 	Then User searches a product "LimitedStockItemBOPIS" and navigates to PDP	
 	And user verify that limitied stock message "Limited_Stock_Message" is displayed
 	When enter the "MoreThanAvailableQuantity" in PDP page
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user verify the limited stock message
 
 	
@@ -87,7 +88,8 @@ Scenario: Verify that user should be able to see an error message while adding m
 	Then User searches a product "limitedQuantityRestriction_CMC" and navigates to PDP	
 	And user verify that limitied stock message "Limited_Stock_Message" is displayed
 	When enter the "MoreThanAvailableQuantity" in PDP page
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button 
 	Then user verify the limited stock message
 	And user will click on View Cart button 
 	When user navigate to Cart page 

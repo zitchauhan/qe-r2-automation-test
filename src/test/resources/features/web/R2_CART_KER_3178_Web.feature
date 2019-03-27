@@ -6,7 +6,8 @@ Scenario: Verify the user is able to view the Change Location under In-store Pic
 	When user clicks on SignIn link from global header 
 	And user logs in as "Cart_BopisEmail" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user click on view cart
 	Then user select in store pickup option
 	When user will click on Checkout button and navigates to Checkout page
@@ -18,7 +19,8 @@ Scenario: Verify that user view Find a Store modal from Change Location in Check
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -31,7 +33,8 @@ Scenario: Verify user can change the store using Find in Store modal
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user click on view cart
 	Then user select in store pickup option
 	And user click on checkout button
@@ -45,7 +48,8 @@ Scenario: Verify the user is able to see the full inventory availability on Find
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button
+	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -63,7 +67,8 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		When user clicks on SignIn link from global header 
 	And user logs in as "EmailAddress"
 	When User searches a product "productName" and navigates to PDP
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user click on checkout button
      When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"   
     
@@ -74,10 +79,12 @@ Scenario: Verify the user is able to see the partial inventory availability on F
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button
+	And user click on ship it button 
 	And then user close the add to cart popup
 	When user enters "NOT_BOPIS_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
@@ -95,7 +102,8 @@ Scenario: Verify the user is able to see no inventory availability on Find a sto
 	And User empty the cart
 	Then user change the selected store "BOPIS_Store2"
 	When user enters "BOPIS_Product" in the searchbox
-	And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
+	And user click on ship it button
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page

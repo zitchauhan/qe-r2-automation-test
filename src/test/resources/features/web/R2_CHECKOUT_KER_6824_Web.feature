@@ -6,7 +6,8 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	 And User Navigates L2 form Homepage Header 
      And User clicks on product in PLP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page
 	When user enter First name "FirstName" 
@@ -34,7 +35,8 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 #	And User Navigates L2 form Homepage Header 
 #    And User clicks on product in PLP
 	When User searches a product "productName" and navigates to PDP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page
 	When user enter First name "FirstName" 
@@ -60,7 +62,8 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	And User Navigates L2 form Homepage Header 
     And User clicks on product in PLP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page
 	When user enter First name "FirstName" 
@@ -84,7 +87,8 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	And User Navigates L2 form Homepage Header 
     And User clicks on product in PLP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page
 	When user enter First name "FirstName" 
@@ -111,7 +115,8 @@ Scenario: Verify the Hide Gift Card CTA behavior
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	And User Navigates L2 form Homepage Header 
     And User clicks on product in PLP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page
 	When user enter First name "FirstName" 
@@ -141,7 +146,8 @@ Scenario: Verify the Hide Gift Card CTA behavior
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	And User Navigates L2 form Homepage Header 
    And User clicks on product in PLP
-	Then user click on Add to Cart Button
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page
 	And user adds shipment address on checkout page for "guest" user
@@ -162,7 +168,8 @@ Scenario: Verify the Hide Gift Card CTA behavior
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	And User Navigates L2 form Homepage Header 
     And User clicks on product in PLP
-	Then user click on Add to Cart Button  
+	#Then user click on Add to Cart Button  
+	And user click on ship it button 
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page
 	When user enter First name "FirstName" 

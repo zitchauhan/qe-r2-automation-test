@@ -33,7 +33,7 @@ Scenario: Verify user can see the Individual SKU's within Bundle in cart page
 Scenario: 
 	Verify user can see the Thumbnail image, Product title, Product attributes for the products included within the Bundle/ Kit in cart page.
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user navigate and deletes existing items in cart 
+	And user navigate and deletes existing items in cart
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
 	And user click on Add to Cart Button for "Bundle Product" 
 	And user will click on View Cart button 
