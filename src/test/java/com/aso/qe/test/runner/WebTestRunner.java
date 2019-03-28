@@ -20,10 +20,12 @@ import cucumber.api.junit.Cucumber;
                              )*/
 
 @CucumberOptions(
-              features="src/test/resources/features/web",
-                             glue="com.aso.qe.test.stepdefinition.web",
-                             //tags ="@KER-2856",// @KER-2866
-                             plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html",
+
+		features="src/test/resources/features/web",
+		glue="com.aso.qe.test.stepdefinition.web",
+		//tags ="@KER-2856",// @KER-2866
+		plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html",
+
 format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
 ) 
 public class WebTestRunner{     

@@ -28,6 +28,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());  //Sid
 	//R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
 	private String sku;   //Sid
+
 	//@FindBy(xpath = "//*[@data-auid='btnShipIt']")
 	//public WebElement shipItButton;
 	
