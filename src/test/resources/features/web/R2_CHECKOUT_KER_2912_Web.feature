@@ -2,8 +2,7 @@ Feature: B03-685- Display Estimated Delivery Dates on PDP and Cart
 
 @R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-2912 
 @ZYP_CHECKOUT_K2912-10761 @CR-GK 
-Scenario: 
-	Verify that user is able to see transparent estimated delivery dates on pdp and cart
+Scenario: Verify that user is able to see transparent estimated delivery dates on pdp and cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
 	Then Verify below Sub/Main Module of PDP 
@@ -20,14 +19,16 @@ Scenario:
 		
 @R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-2912 
 @ZYP_CHECKOUT_K2912-10763 @CR-GK @1HR_R2
-Scenario: 
-	Verify that user is able to see delivery dates on checkout and post transactional pages
+Scenario: Verify that user is able to see delivery dates on checkout and post transactional pages
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout from ATC pop up 
+#	And user is navigated to Add to cart Notification popup 
+#	And user click on checkout from ATC pop up
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page 
 	And  user enter First name "FirstName" 
 	And  user enter Last name "LastName" 
 	And  user enter Phone number "PhoneNumber" 

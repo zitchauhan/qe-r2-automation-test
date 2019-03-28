@@ -3,8 +3,7 @@ Feature: Add Shipping Address in Checkout
 
 @R2_Web @Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-8177 @CR-DPK 
-Scenario:
-Verify the Shipping address form that authenticated user can view on adding new shipping address during checkout 
+Scenario: Verify the Shipping address form that authenticated user can view on adding new shipping address during checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
@@ -33,8 +32,7 @@ Verify the Shipping address form that authenticated user can view on adding new 
 		
 @R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-8178 @CR-DPK @C1-Message 
-Scenario:
-Verify if unauthenticated user be presented with the blank shipping address form fields 
+Scenario: Verify if unauthenticated user be presented with the blank shipping address form fields 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	And User Navigates L2 form Homepage Header 
 	#     And User clicks on product in PLP
@@ -55,8 +53,7 @@ Verify if unauthenticated user be presented with the blank shipping address form
 		
 @R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-8179 @CR-DPK 
-Scenario:
-Verify Guest user should view zipcode pre-populated if previously provided on Cart 
+Scenario: Verify Guest user should view zipcode pre-populated if previously provided on Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
@@ -78,8 +75,7 @@ Verify Guest user should view zipcode pre-populated if previously provided on Ca
 	
 @R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-9681 @CR-DPK 
-Scenario:
-Verify guest user, if after placing order, registers the account saves the address in My Account 
+Scenario: Verify guest user, if after placing order, registers the account saves the address in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	And User Navigates L2 form Homepage Header 
 	#     And User clicks on product in PLP
@@ -99,13 +95,13 @@ Verify guest user, if after placing order, registers the account saves the addre
 	
 @R2_Web @Regression @R2_All @P-Highest @1HR_R2 @1HR_R2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-9683 @CR-DPK 
-Scenario:
-Verify User needs to enter Zip code(it is mandatory) if not provided on cart page 
+Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided on cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button 
-	And user click on checkout button 
+	And user will click on View Cart button 
+	Then user click on checkout button in Cart page 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Shipping Address	|
 		|checkout_ShippingAddress_FirstName_txt						|
@@ -118,7 +114,7 @@ Verify User needs to enter Zip code(it is mandatory) if not provided on cart pag
 	And user adds shipment address on checkout page for "guest" user without zipcode 
 	And verify the error message for mandatory field 
 	And user enter Zipcode "ZIPCODE" 
-	Then user click on Go To Shipping Method button in Checkout page 
+	Then user click on Go To Shipping Method button in Checkout page
 	
 	
 @R2_Web @Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934
@@ -183,8 +179,7 @@ Scenario: Verify if user selects AVS address suggestion and checkout
 	
 @R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-11681 @CR-DPK 
-Scenario:
-Verify Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA, Shipping Method drawer gets open on successful validation 
+Scenario: Verify Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA, Shipping Method drawer gets open on successful validation 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 

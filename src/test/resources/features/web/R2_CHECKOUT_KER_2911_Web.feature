@@ -6,7 +6,7 @@ Scenario: Verify if the shipping price on Checkout screen is same as Order Summa
 		And User Navigates L2 form Homepage Header 
     	 And User clicks on product in PLP
 		#And user click on Add to Cart Button 
-	And user click on ship it button
+		And user click on ship it button
 		And user will click on View Cart button 
 		When user views Estimated Shipping in the Item Subtotal
 		And user click on checkout button in Cart page 
@@ -89,8 +89,8 @@ Scenario:
 Verify the shipping price for each shipping method for Gift Card items
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "SKUForGiftCard" in the search box 
-	#And user click on Add to Cart Button 
-	And user click on ship it button
+	And user click on Add to Cart Button 
+	#And user click on ship it button
 	And user will click on View Cart button 
 	And user will click on Checkout button and navigates to Checkout page
 	Then Verify below Sub/Main Module of Checkout Page 

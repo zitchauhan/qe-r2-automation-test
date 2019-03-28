@@ -86,7 +86,9 @@ public class R2_PDP_PO extends CommonActionHelper {
 	@FindBy(xpath = "(//*[@data-auid='btnundefined'])[2]")
 	public WebElement Add_Default_Payment_Option_btn;
 	
-	@FindBy(xpath = "(//*[contains(text(),'Est. Arrival')])")public WebElement txtEstArrival;//CR-RK Oct 8 KER-2912
+	//@FindBy(xpath = "(//*[contains(text(),'Est. Arrival')])")public WebElement txtEstArrival;//CR-RK Oct 8 KER-2912
+	@FindBy(xpath = "(//*[contains(text(),'Estimated arrival')])")public WebElement txtEstArrival;//Vidya
+	
 
 	@FindBy(xpath = "(//*[@data-auid='PDP_IventoryMessage'])[2]")
 	public WebElement storePickUpAvailableMessage;   //SID 10-Jan
