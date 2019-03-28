@@ -8,7 +8,7 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods Ship to Hom
 	When user enters "SKUForBopisProduct" in the search box 
 #	When user click on Add to cart button 
 	And user click on ship it button 
-	Then user is navigated to Add to cart Notification popup 
+	Then user is navigated to Add to 	cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
 	When user enters "productName" in the search box 

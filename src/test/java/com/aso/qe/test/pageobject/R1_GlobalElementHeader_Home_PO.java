@@ -265,7 +265,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='level2Category-Brands']") public WebElement btnBrandCategory;
 	@FindBy(xpath="//*[@data-auid='level2Category-Brands_m']/parent::li") public WebElement btnBrandCategoryTab;
 	@FindBy(xpath="//*[@data-auid='breadCrumb_link_0_Academy']") public WebElement anchorAcademy; 
-	@FindBy(xpath="//*[@id='headerForScroll']//span[contains(text(),'Find a Store')]|//*[@data-auid='findAStore']//a") public WebElement txtFindAStore; 
+	//@FindBy(xpath="//*[@id='headerForScroll']//span[contains(text(),'Find a Store')]|//*[@data-auid='findAStore']//a") public WebElement txtFindAStore;
+	@FindBy(xpath="//*[@data-auid='findAStore']") public WebElement txtFindAStore;
 	@FindBy(xpath="//*[@data-auid='findAStore_m']//span[contains(text(),'Find a Store')]") public WebElement txtFindAStoreMobile;
 	@FindBy(xpath="//*[@tabindex='-1']/div[@data-auid='find-a-store-modal']") public WebElement findaStoreModal;
 	@FindBy(xpath="//*[@data-auid='find-a-store']/input[@placeholder='Enter Zip Code or City, State']") public WebElement enterPincode; 
@@ -1514,7 +1515,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	
 	public void findAndClickStoreinMobile() throws InterruptedException {
 		if(isDisplayed(txtFindAStoreMobile)) {	
-			scrollPageToWebElement(txtFindAStoreMobile);
+			//scrollPageToWebElement(txtFindAStoreMobile);
 			waitForElement(txtFindAStoreMobile);
 			Thread.sleep(Constants.thread_low); 
            
