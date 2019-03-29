@@ -89,7 +89,7 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper {
 				// //Your Cart (Start)
 
 				if (currentElement.equalsIgnoreCase("ContinueShopping_Link"))
-					assertTrue(isDisplayed(r2CartPo.link_ContinueShopping));
+					assertTrue(isDisplayed(r2CartPo.ATC_ContinueShopping));
 
 				else if (currentElement.equalsIgnoreCase("YourCart_Header"))
 					assertTrue(isDisplayed(r2CartPo.txt_YourCart));
