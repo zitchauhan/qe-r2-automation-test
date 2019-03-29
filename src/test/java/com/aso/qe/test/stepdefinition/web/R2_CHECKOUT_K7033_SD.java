@@ -16,14 +16,14 @@ import cucumber.api.java.en.When;
 		
 		R2_CheckOut_PO r2CheckoutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
 		
-//		@When("^user does accepts the firearm specific compliance$")
-//		public void user_does_accepts_the_firearm_specific_compliance() throws Throwable {
-//			Thread.sleep(4000);
-//			Actions hover =new Actions(driver);
-//			hover.moveToElement(r2CheckoutPo.selectShipToStore).click().build().perform();
+	@When("^user does accepts the firearm specific compliance$")
+	public void user_does_accepts_the_firearm_specific_compliance() throws Throwable {
+		Thread.sleep(4000);
+			Actions hover =new Actions(driver);
+			hover.moveToElement(r2CheckoutPo.selectShipToStore).click().build().perform();
 			//assertTrue(clickOnButton(r2CheckoutPo.ShipToStoreforSOF_compliance_Txt));
 		    
-//		}
+		}
 
 		@When("^user clicks on Continue button$")
 		public void user_clicks_on_Continue_button() throws Throwable {
