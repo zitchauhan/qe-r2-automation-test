@@ -18,18 +18,13 @@ public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 	R1_PLCC_Generic_PO genericPO = PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
 	
 
-	@FindBy(xpath="//*[@data-auid='btnShipIt']|//*[starts-with(@data-auid,'btnShipIt')]") 
-	public  WebElement shipItButton;
 	
 	@When("^user click on ship it button$")
 	public void user_click_on_ship_it_button() throws Throwable {
-	try {
+		Thread.sleep(3000);
+		isDisplayed(genericPO.shipItButton);
 		genericPO.shipItButton.click();
 		
-	} catch (Exception e) {
-		WebElement element = driver.findElement(By.xpath("//*[starts-with(@data-auid,'btnShipIt')]"));
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
-		executor.executeScript("arguments[0].click();", element);
-	}
+	
 	}
 }
