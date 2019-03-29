@@ -29,7 +29,7 @@ Feature: PLCC: CCAM-Prescreen Modal_Back Button
 
 @C-PLCC @Regression @All @PLCC-57 @CR-VS	
  Scenario: Verify the functionality of I Consent checkbox on consent model when user navigates from prescreen model by clicking on Back button in previous step
- 	Given user launches the browser and navigates to "ASO_HOME" page 
+ 	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
@@ -63,7 +63,7 @@ Feature: PLCC: CCAM-Prescreen Modal_Back Button
 
 @C-PLCC @Regression @All @PLCC-57 @CR-VS	
  Scenario: Verify the system behavior when user clicks on Back button_Generic
- 	Given user launches the browser and navigates to "ASO_HOME" page 
+ 	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 

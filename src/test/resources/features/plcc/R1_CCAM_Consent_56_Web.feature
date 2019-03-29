@@ -2,7 +2,7 @@ Feature: PLCC: Validation in Credit Card Application Modal Consent Modal
 	
 @C-PLCC @Regression @All @PLCC-56 @CR-VS 
 Scenario: Verify the display of elements available on consent model_Generic Consent Modal
-	Given user launches the browser and navigates to "ASO_HOME" page pllc
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
@@ -39,7 +39,7 @@ Scenario: Verify the display of elements available on consent model_Generic Cons
 	
 @C-PLCC @Regression @All @PLCC-56 @CR-VS 
 Scenario: Verify user is able to select check box to accept terms and condition_Generic Consent Modal
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
@@ -67,7 +67,7 @@ Scenario: Verify user is able to select check box to accept terms and condition_
 	
 @C-PLCC @Regression @All @PLCC-56 @CR-VS 
 Scenario: Verify the application behavior when user unselects the check box on consent model
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
@@ -93,7 +93,7 @@ Scenario: Verify the application behavior when user unselects the check box on c
 	
 @C-PLCC @Regression @All @PLCC-56 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Cancel link_Pre-Screen Modal
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
@@ -105,7 +105,7 @@ Scenario: Verify the system behavior when user clicks on Cancel link_Pre-Screen 
 	
 @C-PLCC @Regression @All @PLCC-56 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Close button_Pre-Screen Modal
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
@@ -117,7 +117,7 @@ Scenario: Verify the system behavior when user clicks on Close button_Pre-Screen
 	
 @C-PLCC @Regression @All @PLCC-56 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Cancel link_Pre-Screen Consent
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
@@ -138,7 +138,7 @@ Scenario: Verify the system behavior when user clicks on Cancel link_Pre-Screen 
 	
 @C-PLCC @Regression @All @PLCC-56 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Cancel link_Generic 
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
@@ -149,7 +149,7 @@ Scenario: Verify the system behavior when user clicks on Cancel link_Generic
 	
 @C-PLCC @Regression @All @PLCC-56 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Close icon_Generic 
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
@@ -160,7 +160,7 @@ Scenario: Verify the system behavior when user clicks on Close icon_Generic
 	
 @C-PLCC @Regression @All @PLCC-56 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Close button_Generic Consent
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
@@ -187,7 +187,7 @@ Scenario: Verify the system behavior when user clicks on Close button_Generic Co
 	
 @C-PLCC @Regression @All @PLCC-56 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Cancel link_Generic Consent
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 

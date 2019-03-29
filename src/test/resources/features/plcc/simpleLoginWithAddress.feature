@@ -1,4 +1,4 @@
-Feature: Registration 
+Feature: Login 
 
 @C-PLCC @Regression @All @PLCC-50 @CR-VS @AutomationSanityR2
 Scenario: Verify user is able to login with entered address during registration

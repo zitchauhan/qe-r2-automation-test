@@ -3,7 +3,7 @@ Feature: API-Address-Get City State
 @C-PLCC @Regression @All @API @CR-Manju 
 Scenario: Verify to Retrive City and State of the users address
 	Given "PLCCAddressCityAndState" endpoint for getting city and State of users address
-	Then Verify response status code as 200 message for plcc changes
+	Then Verify response status code as 201 for plcc changes
 	#Then Verify response status code as 201 
 		
 @C-PLCC @Regression @All @API @CR-Manju 
