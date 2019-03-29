@@ -16,15 +16,12 @@ import cucumber.api.java.en.When;
 public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_PLCC_Generic_PO genericPO = PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
-	
-
-	
+		
 	@When("^user click on ship it button$")
 	public void user_click_on_ship_it_button() throws Throwable {
 		Thread.sleep(3000);
 		isDisplayed(genericPO.shipItButton);
 		genericPO.shipItButton.click();
 		
-	
 	}
 }
