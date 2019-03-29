@@ -56,7 +56,7 @@ public class R2_CART_K3143_SD extends CommonActionHelper {
 //	}
 	@Then("^user click on continue shopping$")
 	public void user_click_on_continue_shopping() throws Throwable {
-	   assertTrue(clickOnButton(r2CartPo.link_ContinueShopping));
+	   assertTrue(clickOnButton(r2CartPo.ATC_ContinueShopping));
 	  
 	   
 	}

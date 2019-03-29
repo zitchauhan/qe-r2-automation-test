@@ -540,8 +540,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	}
 
 	public void compareContinueShoppingLinkTxt(String exceptedTxt) throws Exception {
-		String actualCartTxt = getText(link_ContinueShopping);
-		logger.debug("continueShoppingLinkText:: " + actualCartTxt);
+		String actualCartTxt = getText(ATC_ContinueShopping);
+		logger.debug("continueShoppingBtnText:: " + actualCartTxt);
 		Assert.assertEquals(actualCartTxt, exceptedTxt);
 	}
 
@@ -775,8 +775,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	//&&&&&&&&&&&&&&&&&&&&&&&********@CR-RKA******&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 	//Your Cart (Start)
 	//KER-3143 auid is changed @CR-MS
-	@FindBy(xpath = "//*[@data-auid='crt_lnkCntShopping'] | //*[@data-auid='ContinueShopping']")
-	public WebElement link_ContinueShopping;
+	@FindBy(xpath = "//*[@data-auid='crt_lnkCntShopping'] | //*[@data-auid='btncontinueShopping']")
+	public WebElement ATC_ContinueShopping;
 	
 	@FindBy(xpath="//*[.='YOUR CART']")public WebElement txt_YourCart;
 	@FindBy(xpath="//*[@data-auid='crt_btnCheckoutTop']/preceding::*[2]")public WebElement txt_items;
