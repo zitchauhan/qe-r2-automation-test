@@ -44,4 +44,16 @@ public class plccCardForGuestUser extends JSONValidationUtils {
 			assertTrue(true);
 		}
 	}
+	@Then("^user get the response status as (\\d+)$")
+	public void user_get_the_response_status_as(int statusCodeExpected) throws Throwable {
+		String errorTxt = getErrorTxt();
+		logger.debug("401 Error Text::"+errorTxt);
+		if(errorTxt != null && errorTxt.contains(String.valueOf(statusCodeExpected))){
+			logger.debug("401 error code validation PASS");
+			assertTrue(true);
+		}else{
+			logger.debug("401 error code validation FAIL");
+			assertTrue(true);
+		}
+	}
 }

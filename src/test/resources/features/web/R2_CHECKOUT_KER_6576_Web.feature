@@ -116,4 +116,4 @@ Scenario:  Verify the Elements present in Checkout footer
 		Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout footer_Lnk|
 		|CheckoutFooterChatNowLink_lnk|
-		#And user click on Chat modal link in checkout page
+#		#And user click on Chat modal link in checkout page
