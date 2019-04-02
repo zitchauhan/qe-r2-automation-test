@@ -7,7 +7,7 @@ Scenario: Verify the display of PLCC card image under We Accept section
 	And user click on My Account link of mobile
 	And user expect element Email Address to be present 
 	And user enter Email address in sign-in page "Email_Generic" 
-	And user enter password in sign-in page "password" 
+	And user enter password in sign-in page "passwordPlcc" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
 	When user enters "SKUIdOfProduct" in the search box plcc for mobile
