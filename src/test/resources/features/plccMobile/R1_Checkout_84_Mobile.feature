@@ -28,7 +28,7 @@ Scenario: Verify user is able to navigate to confirm order page by clicking on r
 	And user expect element print link to be present 
 	And user expect element my account link to be present 
 	
-@C-PLCC @Regression @All @PLCC-84 @CR-VS 
+@C-PLCC @Regression @All @PLCC-84 @CR-VS @Mobile
 Scenario: Verify user is able to navigate to confirm order page by using Amex Credit card  
 When user handles adding new card "ValidAmexCard" if already card is saved 
 	And user enter expiry date "ExpiryDate" 

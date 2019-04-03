@@ -89,7 +89,7 @@ Scenario: Verify user is able to navigate to checkout page after clicking on Con
 	When user click on continue to checkout button of application under review
 	Then user navigates to cart page
 	
-@C-PLCC @Regression @All @PLCC-95 @CR-VS
+@C-PLCC @Regression @All @PLCC-95 @CR-VS @Mobile
 Scenario: Verify user is able to close Application Under Review model after clicking on Close button
 	When user enter First Name on credit card Application Modal "FirstNameUR" 
 	Then user enter Last Name on credit card Application Modal "LastNameUR"

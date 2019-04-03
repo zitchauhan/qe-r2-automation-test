@@ -33,8 +33,7 @@ Scenario: Verify the display of elements available on Prescreen  model
 	And user expect element CANCEL on CC Aplication Modal to be present 
 	
 @C-PLCC @Regression @All @PLCC-52 @CR-VS @Mobile 
-Scenario: 
-	Verify the system behavior when user clicks on Continue button on Prescreen model by providing valid required information/details 
+Scenario: Verify the system behavior when user clicks on Continue button on Prescreen model by providing valid required information/details 
 	And user enter Last four SSN "Last4DigitsOfSSNP" 
 	And user enter Confirm Last four SSN "ConfirmSSNP" 
 	And user enetr Date of Birth "DOBP" 

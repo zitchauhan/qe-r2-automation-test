@@ -17,7 +17,7 @@ Scenario: Verify user is able to get Annual offer of $15 off by providing the pr
     And user click on ship it button 
 	And user click on viewcart button 
 	Then user navigates to Cart Page 
-# 	And user increases quantity "ItemQuantity" of product
+    #And user increases quantity "ItemQuantity" of product
  	And user click on add promo code link on cart page
  	And user element expect promo code section to be present
  	And user enter promocode "promocodeA" on cart page

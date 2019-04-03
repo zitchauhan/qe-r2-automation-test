@@ -125,7 +125,7 @@ And user click on expand all Academy services
 	When user click on cancel link
 	Then user expect Landing page to be present
 	
-@C-PLCC @Regression @All @PLCC-56 @CR-VS 
+@C-PLCC @Regression @All @PLCC-56 @CR-VS @Mobile
 Scenario: Verify the system behavior when user clicks on Cancel link_Generic 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user navigates to ASO-Home page 
@@ -137,7 +137,7 @@ Scenario: Verify the system behavior when user clicks on Cancel link_Generic
 	When user click on cancel link
 	Then user expect Landing page to be present 
 	
-@C-PLCC @Regression @All @PLCC-56 @CR-VS 
+@C-PLCC @Regression @All @PLCC-56 @CR-VS @Mobile
 Scenario: Verify the system behavior when user clicks on Cancel link_Generic Consent
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user navigates to ASO-Home page 
