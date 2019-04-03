@@ -1,4 +1,4 @@
-Feature: PLCC: Checkout_Payment using Free Shipping 
+Feature: PLCC: Checkout - Free Shipping 
 
 Background: Common Pre-requisite steps 
 	Given user launches the browser and navigates to "ASO_HOME" page plcc
@@ -13,8 +13,7 @@ Background: Common Pre-requisite steps
 	Then delete all credit cards from My Account 
 	
 @C-PLCC @Regression @All @PLCC-99 @CR-Manju @AutomationSanityR2 
-Scenario:
-Verify user is able to get Free shipping offer with Item value greater than 15$ 
+Scenario: Verify user is able to get Free shipping offer with Item value >15$ 
 	When user enters "SKUIdOfProductGr15" in the search box plcc 
 	And user click on search icon 
 	And user click on ship it button 
@@ -29,8 +28,7 @@ Verify user is able to get Free shipping offer with Item value greater than 15$
 	Then user click on remove from cart 
 	
 @C-PLCC @Regression @All @PLCC-99 @CR-Manju @AutomationSanityR2 
-Scenario:
-Verify user is unable to get Free shipping offer with Item value lesser than 15$ 
+Scenario: Verify user is unable to get Free shipping offer with Item value <15$ 
 	When user enters "SKUIdOfProductLs15" in the search box plcc 
 	And user click on search icon 
 	And user click on ship it button 

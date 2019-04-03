@@ -21,7 +21,7 @@ Scenario: Verify user is able to get 5% discount for any of the item in academy 
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
 	And user clicks on checkout button and navigates to checkout page 
-	When user enter plcc card "ValidPLCCCard"
+	When user handles adding new card "ValidPLCCCard" if already card is saved 
 	And user click on REVIEW ORDER button
 	And user expect element Order Summary to be present
 	And user expect discount text to be present 
@@ -42,7 +42,7 @@ Scenario: Verify user is able to apply 5% discount along with free shipping offe
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
 	And user clicks on checkout button and navigates to checkout page
-	When user enter plcc card "ValidPLCCCard"
+	When user handles adding new card "ValidPLCCCard" if already card is saved 
 	And user click on REVIEW ORDER button
 	And user expect element Order Summary to be present
 	And user expect element free shipping should be available 

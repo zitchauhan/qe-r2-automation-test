@@ -29,7 +29,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement shipItButton; 
 	
 
-	@FindBy(xpath = "//span[text()='Enter a Gift Card']")
+	@FindBy(xpath = "//*[text()='Enter a Gift Card']")
 	public WebElement gitCardLink;
 	
 	@FindBy(xpath = "//*[@id='paymentGiftCardForm']/div/div[1]/div[1]")
@@ -75,6 +75,9 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement savedCardCheckoutPage;
 	@FindBy(xpath="//*[@id='checkout-payment-drawer']//div[3]/div[1]//button")
 	public WebElement savedCardDropDown;
+	@FindBy(xpath="//*[contains(text(),'Gift Card Ending In - ')]")
+	public WebElement savedGiftCardDropDown;
+	
 	
 	//Buy Now
 	@FindBy(xpath = "//*[text()='Same As Shipping Address']")
@@ -86,6 +89,9 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement cartIcon;
 	@FindBy(xpath = "//*[text()='Add a New Credit Card']")
 	public WebElement addNewCardOption;
+	@FindBy(xpath = "//*[text()='Add a New Gift Card']")
+	public WebElement addNewGiftCardOption;
+	
 	
 	@FindBy(xpath = "//*[text()='Remove from Cart'] | //*[@data-auid='crt_btnRmvFromCart_710320043']")
 	public WebElement RemoveFromCartBtn;
@@ -196,6 +202,8 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	//Free Shipping:
 	@FindBy(xpath = "//*[@data-auid='freeShip']")
 	public WebElement freeShippingTxt;
+	@FindBy(xpath = "//*[@data-auid='freeShipValue']")
+	public WebElement freeShipValue;
 	
 	//Invalid PreScreen Code:
 	public void verifyPresenceOfErrorInvalidPreScreenCode() throws Exception {

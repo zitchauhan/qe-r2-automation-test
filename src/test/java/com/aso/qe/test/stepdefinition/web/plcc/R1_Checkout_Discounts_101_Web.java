@@ -39,8 +39,19 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
 	public void user_expect_element_free_shipping_should_be_available() throws Throwable {
 		try {
 			genericPO.verifyPresenceOfFreeShipping();
+			String freeShipValue = genericPO.freeShipValue.getText();
+			logger.debug("FreeShip Value is " + freeShipValue);
+			if (freeShipValue.equalsIgnoreCase("FREE"))
+			{
+				logger.debug("Item Available for free shipping");
+			}
+			else
+			{
+				logger.debug("Item is not Available for free shipping");
+			}
+			
 		} catch (Exception e) {
-			System.out.println("Free shipping is not Applied:" +e.getMessage());
+			
 		}
 	}
 	
