@@ -28,7 +28,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	// myAccountLinkOnAsoHomePage;
 	@FindBy(xpath="//*[@data-auid='expand-search_m']/span")  public WebElement expandSearchIcon;
 	@FindBy(xpath="//*[@data-auid='billingEmail']")  public WebElement inputEmailAddressTxtBuynow;
-	@FindBy(xpath = "//*[@data-auid='MyAccount']")
+	@FindBy(xpath = "//*[@data-auid='MyAccount']|//*[@text='My Account']")
 	public WebElement myAccountLinkOnAsoHomePage;
 	@FindBy(xpath = "//*[@data-auid='Sign Out']")
 	public WebElement signOutLink; 
@@ -42,7 +42,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	
 	@FindBy(xpath = "//*[contains(text()='HELLO,'])")
 	public WebElement hellotext;
-	@FindBy(xpath = "//*[@data-auid='signUp_btn']")
+	@FindBy(xpath = "//*[@data-auid='signUp_btn']|//*[@text='Sign Up']")
 	public WebElement signUpLinkOnLoginPage;
 	@FindBy(xpath = "//*[text()='Add Address for Faster Checkout']")
 	public WebElement addAddressCheckBox;

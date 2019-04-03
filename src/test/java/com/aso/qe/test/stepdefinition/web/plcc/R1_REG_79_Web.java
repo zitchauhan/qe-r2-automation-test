@@ -30,7 +30,11 @@ public class R1_REG_79_Web extends CommonActionHelper {
 
 	@When("^user click on Sign Up link$")
 	public void user_click_on_Sign_Up_link() throws Throwable {
-		plccPageObjects.clickSignUpLinkOnLoginPage();
+		try {
+			plccPageObjects.clickSignUpLinkOnLoginPage();
+		} catch (Exception e) {
+			
+		}
 	}
 
 	@Then("^user expect element First Name to be present$")

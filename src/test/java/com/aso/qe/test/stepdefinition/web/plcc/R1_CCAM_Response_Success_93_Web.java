@@ -41,12 +41,22 @@ public class R1_CCAM_Response_Success_93_Web extends CommonActionHelper{
 }
 	@Then("^user expect element continue to shopping button to be present$")
 	public void user_expect_element_continue_to_shopping_button_to_be_present() throws Throwable {
-		ccAplicationModal_PO.verifyPresenceOfContinueToShopping();
+		try {
+			ccAplicationModal_PO.verifyPresenceOfContinueToShopping();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 }
 	@Then("^user click on return to application$")
 	public void user_click_on_return_to_application() throws Throwable {
-		ccAplicationModal_PO.returnToShoppingButton.click();
-		Thread.sleep(5000);
+		try {
+			ccAplicationModal_PO.returnToShoppingButton.click();
+			Thread.sleep(5000);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 }
 	@Then("^user click on close icon of success modal$")
 	public void user_click_on_close_icon_of_success_modal() throws Throwable {

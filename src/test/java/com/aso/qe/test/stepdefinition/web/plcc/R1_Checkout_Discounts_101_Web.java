@@ -149,13 +149,13 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
 			} catch (NumberFormatException e) {
 				convertedToDouble = 0;
 			}
-			float tenPercentDiscount = (float) ((10 * convertedToDouble) / 100);
-			BigDecimal bd=new BigDecimal(tenPercentDiscount);
+			float fifteenPercentDiscount = (float) ((15 * convertedToDouble) / 100);
+			BigDecimal bd=new BigDecimal(fifteenPercentDiscount);
 			BigDecimal actualValue = bd.setScale(2, BigDecimal.ROUND_HALF_EVEN );
-			logger.debug("Actual Value of Five Percent of Subtotal is " + tenPercentDiscount);
-			logger.debug("Round Of Value of Five Percent of Subtotal is " + actualValue);
+			logger.debug("Actual Value of fifteen Percent of Subtotal is " + fifteenPercentDiscount);
+			logger.debug("Round Of Value of fifteen Percent of Subtotal is " + actualValue);
 			genericPO.verifyPresenceOfDiscountValue();
-			String valueOnWeb = genericPO.discountValue.getText();
+			String valueOnWeb = genericPO.discountValue.getText().replace("-$", "").trim();;
 
 			BigDecimal expectedValue=new BigDecimal(valueOnWeb);
 			if(actualValue==expectedValue)
