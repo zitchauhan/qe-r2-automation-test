@@ -10,7 +10,7 @@ Scenario: Verify PLCC card information saved under customer profile
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
 	And user enter Email address in sign-in page "Email_Address_2" 
-	And user enter password in sign-in page "Password_2" 
+	And user enter password in sign-in page "passwordPlcc" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page  
 	Then user click on MyAccount and navigate to payment 

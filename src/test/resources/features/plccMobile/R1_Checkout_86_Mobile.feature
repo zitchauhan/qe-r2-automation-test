@@ -5,7 +5,7 @@ Feature: PLCC: Checkout -Default Payment as PLCC _Mobile
 	When user click on burger menu 
 	And user click on My Account link of mobile
 	And user enter Email address in sign-in page "Email_OrderPlacement" 
-	And user enter password in sign-in page "password" 
+	And user enter password in sign-in page "passwordPlcc" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page
 	And user clears everything in cart

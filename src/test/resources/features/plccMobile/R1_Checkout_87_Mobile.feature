@@ -1,11 +1,11 @@
-Feature: PLCC: Checkout - Payment Using PLCC 
+ Feature: PLCC: Checkout - Payment Using PLCC 
 
 Background: Common Pre-requisite steps 
 	Given user launches the browser and navigates to "ASO_HOME" page plcc 
 	When user click on burger menu 
 	And user click on My Account link of mobile 
 	And user enter Email address in sign-in page "Email_Generic" 
-	And user enter password in sign-in page "password" 
+	And user enter password in sign-in page "passwordPlcc" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
 	When user enters "SKUIdOfProduct" in the search box plcc for mobile 

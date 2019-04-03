@@ -5,7 +5,7 @@ Feature: PLCC: Checkout_Payment Using PLCC
 	When user click on My Account link 
 	And user expect element Email Address to be present 
 	And user enter Email address in sign-in page "Email_OrderPlacement" 
-	And user enter password in sign-in page "password" 
+	And user enter password in sign-in page "passwordPlcc" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
 	When user click on My Account link 

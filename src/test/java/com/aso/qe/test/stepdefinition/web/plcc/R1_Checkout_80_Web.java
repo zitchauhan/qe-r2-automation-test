@@ -48,7 +48,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	R1_SearchProduct_PO r1_SearchPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
 	R2_Cart_PO cartR2PageObj = PageFactory.initElements(driver, R2_Cart_PO.class);
 	R1_PLCC_Mobile_PO plccMobile_PO = PageFactory.initElements(driver, R1_PLCC_Mobile_PO.class);
-	 
+
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 
 	@When("^user enters \"(.*?)\" in the search box plcc$")
@@ -58,7 +58,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		assertTrue(isDisplayed(plccLandingPageObjects.searchBox));
 		waitForElement(plccLandingPageObjects.searchBox);
 	}
-	
+
 	@When("^user enters \"(.*?)\" in the search box plcc for mobile$")
 	public void user_enters_in_the_search_box_plcc_for_mobile(String arg1) throws Throwable {
 		Thread.sleep(5000);
@@ -73,15 +73,13 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		Thread.sleep(3000);
 	}
 
-
-	/*@When("^user click on Add to cart button plcc$")
-	public void user_click_on_Add_to_cart_button_plcc() throws Throwable {
-		// pdpPageObj.addToCartAvailability();
-		Thread.sleep(pageLoadWaitTime);
-		genericPO.addToCartButton.click();
-		waitForElement(pdpPageObj.btnAddToCart);
-		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
-	}*/
+	/*
+	 * @When("^user click on Add to cart button plcc$") public void
+	 * user_click_on_Add_to_cart_button_plcc() throws Throwable { //
+	 * pdpPageObj.addToCartAvailability(); Thread.sleep(pageLoadWaitTime);
+	 * genericPO.addToCartButton.click(); waitForElement(pdpPageObj.btnAddToCart);
+	 * assertTrue(clickOnButton(pdpPageObj.btnAddToCart)); }
+	 */
 
 	@When("^user click on Add to Cart button$")
 	public void user_click_on_Add_to_Cart_button() throws Throwable {
@@ -91,7 +89,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 		Thread.sleep(7000);
 	}
-	
+
 	@Given("^user click on Add an Item to cart Button$")
 	public void user_click_on_Add_an_Item_to_cart_Button() throws Throwable {
 		try {
@@ -99,23 +97,22 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 			assertTrue(clickOnButton(pdpPageObj.AddToCartBtn));
 			Thread.sleep(5000);
 		} catch (Exception e) {
-			System.out.println("Exception Message:"+e.getMessage());
+			System.out.println("Exception Message:" + e.getMessage());
 		}
 	}
-	
 
 	@When("^user click on search icon$")
 	public void user_click_on_search_icon() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOfSearchIcon();
 		plccLandingPageObjects.searchIcon.click();
-		
+
 	}
 
 	@When("^user click on checkout from ATC pop up plcc$")
 	public void user_click_on_checkout_from_ATC_pop_up_plcc() throws Throwable {
 		genericPO.clickOnCheckoutButton();
 		Thread.sleep(14000);
-		//Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_SLOW);
+		// Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_SLOW);
 	}
 
 	@When("^user selects credit card radio button$")
@@ -348,7 +345,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 			genericPO.verifyPresenceOfEditMyCartLink();
 			r2CheckOutPo.btnEditCart.click();
 		} catch (Exception e) {
-			logger.debug("Exception Message: "+e.getMessage());
+			logger.debug("Exception Message: " + e.getMessage());
 		}
 	}
 
@@ -358,9 +355,9 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 			genericPO.verifyPresenceOfRemoveFromCartLink();
 			r2CheckOutPo.AS_btnRemoveFromCart.click();
 		} catch (Exception e) {
-			logger.debug("Exception Message: "+e.getMessage());
+			logger.debug("Exception Message: " + e.getMessage());
 		}
-		
+
 	}
 
 	@When("^user click on expiry date text field$")
@@ -874,9 +871,9 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		genericPO.verifyPresenceOfPaymentCardTypeLabel();
 		String savedCard = genericPO.paymentCardTypeLabel.getText();
 		logger.debug(savedCard + " Saved card is displayed on payment page");
-		
+
 	}
-	
+
 	@Then("^user click on gift card link$")
 	public void user_click_on_gift_card_link() throws Throwable {
 		genericPO.gitCardLink.click();
@@ -884,10 +881,23 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 
 	@When("^user enter Gift card \"(.*?)\"$")
 	public void user_enter_Gift_card(String arg1) throws Throwable {
+		
 		try {
-			genericPO.enterGiftCardNumber(arg1);
+			if (genericPO.GiftCardNumber_Input.isDisplayed()) {
+				genericPO.enterGiftCardNumber(arg1);
+				Thread.sleep(8000);
+				assertTrue(isDisplayed(genericPO.GiftCardNumber_Input));
+				waitForElement(genericPO.GiftCardNumber_Input);
+
+			} 
+			else {
+				genericPO.savedGiftCardDropDown.click();
+				genericPO.addNewGiftCardOption.click();
+				genericPO.enterGiftCardNumber(arg1);
+			}
+
 		} catch (Exception e) {
-			logger.debug("Exception Message:"+e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
@@ -896,7 +906,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		try {
 			genericPO.enterCVVNumber(arg1);
 		} catch (Exception e) {
-			logger.debug("Exception Message:"+e.getMessage());
+			logger.debug("Exception Message:" + e.getMessage());
 		}
 	}
 
@@ -905,15 +915,16 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		try {
 			genericPO.giftCardApplyButton.click();
 		} catch (Exception e) {
-			logger.debug("Exception Message:"+e.getMessage());
+			logger.debug("Exception Message:" + e.getMessage());
 		}
 		Thread.sleep(3000);
 	}
-	
+
 	@Then("^user expect element Gift card payment applied meesage to be present$")
 	public void user_expect_element_Gift_card_payment_applied_meesage_to_be_present() throws Throwable {
 		genericPO.verifyGiftCardPaymentAppliedMessageCheckoutPage();
 	}
+
 	@Then("^user clears everything in cart$")
 	public void user_clears_everything_in_cart() throws Throwable {
 		try {
@@ -923,17 +934,18 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 			r2CheckOutPo.AS_btnRemoveFromCart.click();
 			Thread.sleep(10000);
 		} catch (Exception e) {
-		
-			logger.debug("Exception Message: "+ e.getMessage());
+
+			logger.debug("Exception Message: " + e.getMessage());
 		}
 	}
+
 	@Given("^user click on Academy Logo Icon$")
 	public void user_click_on_Academy_Logo_Icon() throws Throwable {
 		try {
 
-			//plccLandingPageObjects.imgAcademyLogo.click();
+			// plccLandingPageObjects.imgAcademyLogo.click();
 			WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/Logo.png']"));
-			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			JavascriptExecutor executor = (JavascriptExecutor) driver;
 			executor.executeScript("arguments[0].click();", element);
 			logger.debug("Academy Logo icon is displayed");
 
@@ -941,7 +953,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Then("^user handles adding new card \"(.*?)\" if already card is saved$")
 	public void user_handles_adding_new_card_if_already_card_is_saved(String arg1) throws Throwable {
 		try {
@@ -951,7 +963,15 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 				assertTrue(isDisplayed(genericPO.CreditCardNumber_Input));
 				waitForElement(genericPO.CreditCardNumber_Input);
 
-			} else {
+			} else if (genericPO.editLinkPaymentSection.isDisplayed()) {
+				genericPO.verifyPresenceOfEditLinkPaymentSectionCheckoutPage();
+				genericPO.editLinkPaymentSection.click();
+				genericPO.savedCardDropDown.click();
+				genericPO.addNewCardOption.click();
+				genericPO.enterCardBinNumber(arg1);
+				
+			}
+			else {
 				genericPO.savedCardDropDown.click();
 				genericPO.addNewCardOption.click();
 				genericPO.enterCardBinNumber(arg1);

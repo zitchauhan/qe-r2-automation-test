@@ -4,7 +4,7 @@ Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page plcc 
 	When user click on My Account link 
 	And user enter Email address in sign-in page "Email_Address_2" 
-	And user enter password in sign-in page "Password_2" 
+	And user enter password in sign-in page "passwordPlcc" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page
 	When user click on My Account link 

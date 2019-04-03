@@ -5,7 +5,7 @@ Background: Common Pre-requisite steps
 	When user click on My Account link 
 	And user expect element Email Address to be present 
 	And user enter Email address in sign-in page "Email_FirstTimePromotions" 
-	And user enter password in sign-in page "password" 
+	And user enter password in sign-in page "passwordPlcc" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
@@ -39,7 +39,7 @@ Background: Common Pre-requisite steps
 	  
 
 @C-PLCC @Regression @All @PLCC-101 @CR-VS @AutomationSanityR2	
-Scenario: First Time Promotion Available for item less than or equal to <=$15
+Scenario: First Time Promotion Available for item less than or equal to <15$
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
 	And user click on ship it button
@@ -60,7 +60,7 @@ Scenario: First Time Promotion Available for item less than or equal to <=$15
 	Then delete all credit cards from My Account
 	
 @C-PLCC @Regression @All @PLCC-101 @CR-VS @AutomationSanityR2
-Scenario: First Time Promotion Available for item greater than >$15
+Scenario: First Time Promotion Available for item greater than >15$
     When user enters "SKUIdOfProductGr15" in the search box plcc
 	And user click on search icon 
 	And user click on ship it button
@@ -78,7 +78,9 @@ Scenario: First Time Promotion Available for item greater than >$15
 	Then user click on remove from cart 
 	When user click on My Account link
 	And user click on Payments link
-	Then delete all credit cards from My Account	
+	Then delete all credit cards from My Account
+	
+	
 	
 	
 #@C-PLCC @Regression @All @PLCC-101 @CR-VS 
