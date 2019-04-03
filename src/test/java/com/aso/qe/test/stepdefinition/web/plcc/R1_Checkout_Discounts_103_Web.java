@@ -79,6 +79,14 @@ public void user_expect_fifteen_dollars_discount() throws Throwable {
 		logger.debug("Exception message for Fifteen dollers: "+e.getMessage());
 	}
 }
+@Then("^user expect ten dollars discount$")
+public void user_expect_ten_dollars_discount() throws Throwable {
+	try {
+		genericPO.verifyPresenceOfFiftennDollarsOff();
+	} catch (Exception e) {
+		logger.debug("Exception message for Fifteen dollers: "+e.getMessage());
+	}
+}
 @When("^user element expect promo code section to be present$")
 public void user_element_expect_promo_code_section_to_be_present() throws Throwable {
 	try {

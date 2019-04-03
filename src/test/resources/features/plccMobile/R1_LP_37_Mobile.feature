@@ -12,7 +12,7 @@ Background:  Common Pre-requisite steps
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present
 
-@C-PLCC @Mobile @Regression @All @PLCC-37 @CR-Manju
+@C-PLCC @Mobile @Regression @All @PLCC-37 @CR-Manju @Mobile
 Scenario: Verify the system behavior when user enters valid 12 digits, numeric prescreen code and clicked on Accept offer button
 	And user expect Preescreen Code Text Field is to be present
 	And user enter Preescreen Code "Valid_PrescreenCode_1"

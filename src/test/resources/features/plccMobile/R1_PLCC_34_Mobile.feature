@@ -1,6 +1,6 @@
 Feature: Landing Page
 
-@C-PLCC @Regression @All @PLCC-34 @CR-Smeetha  @Mobile 
+@C-PLCC @Regression @All @PLCC-34 @CR-Smeetha @Mobile 
 Scenario: Verify user is able to navigate to PLCC landing page  
     Given user launches the browser and navigates to "ASO_HOME" page plcc
 	And user click on expand all Academy services

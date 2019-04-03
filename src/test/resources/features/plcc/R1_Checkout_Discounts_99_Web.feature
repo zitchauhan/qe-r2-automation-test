@@ -41,3 +41,17 @@ Scenario: Verify user is unable to get Free shipping offer with Item value <15$
 	And user expect discount text to be present 
 	When user click on edit my cart link 
 	Then user click on remove from cart 
+	
+	@C-PLCC @Regression @All @PLCC-99 @CR-Manju @AutomationSanityR2 
+Scenario: Verify user is unable to get Free shipping offer with Item value <15$ 
+	When user enters "SKUIdOfProductGr25" in the search box plcc 
+	And user click on search icon 
+	And user click on ship it button 
+	And user click on viewcart button 
+	Then user navigates to Cart Page 
+	And user clicks on checkout button on cart page 
+	And user clicks on checkout button and navigates to checkout page 
+	And user expect element free shipping should be available
+	When user click on edit my cart link
+	And user expect Standard free shipping over 25$ 
+	Then user click on remove from cart
