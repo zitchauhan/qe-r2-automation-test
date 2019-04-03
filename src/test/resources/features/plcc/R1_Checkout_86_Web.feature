@@ -35,9 +35,11 @@ Feature: PLCC: Checkout_Payment Using PLCC
 	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
 	#And user click on Add to Cart Button 
-	And user click on Add to Cart button  
-	And user click on checkout from ATC pop up plcc
-	And user clicks on checkout button and navigates to checkout page 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user clicks on checkout button and navigates to checkout page
 	And user click on PLACE ORDER button
 	Then user navigates to order confirmation page
 	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
@@ -63,9 +65,11 @@ Feature: PLCC: Checkout_Payment Using PLCC
 	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 
 	#And user click on Add to Cart Button 
-	And user click on Add to Cart button  
-	And user click on checkout from ATC pop up plcc
-	And user clicks on checkout button and navigates to checkout page 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user clicks on checkout button and navigates to checkout page
 	And user clicks on edit link on payment section
 	And user select add new card option
 	When user handles adding new card "ValidPLCCCard" if already card is saved

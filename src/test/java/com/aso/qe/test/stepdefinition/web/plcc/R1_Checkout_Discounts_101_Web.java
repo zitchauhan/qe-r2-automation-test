@@ -148,6 +148,41 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
 		}
 
 	}
+
+	@Then("^user expect ten percent discount$")
+	public void user_expect_ten_percent_discount() throws Throwable {
+		try {
+			plccCCApplicationModalObjects.verifyPresenceOfSubTotalValue();
+			String subTotalValue = plccCCApplicationModalObjects.subtotalValue.getText().replace("$", "");
+			logger.debug("Subtotal value of the product is " + subTotalValue);
+			double convertedToDouble;
+			try {
+				convertedToDouble = Double.parseDouble(subTotalValue);
+			} catch (NumberFormatException e) {
+				convertedToDouble = 0;
+			}
+			float fifteenPercentDiscount = (float) ((15 * convertedToDouble) / 100);
+			BigDecimal bd=new BigDecimal(fifteenPercentDiscount);
+			BigDecimal actualValue = bd.setScale(2, BigDecimal.ROUND_HALF_EVEN );
+			logger.debug("Actual Value of fifteen Percent of Subtotal is " + fifteenPercentDiscount);
+			logger.debug("Round Of Value of fifteen Percent of Subtotal is " + actualValue);
+			genericPO.verifyPresenceOfDiscountValue();
+			String valueOnWeb = genericPO.discountValue.getText().replace("-$", "").trim();;
+
+			BigDecimal expectedValue=new BigDecimal(valueOnWeb);
+			if(actualValue==expectedValue)
+			{
+				logger.debug("Discount on Web and Discount Calulated are matching");
+			}
+			else
+			{
+				logger.debug("Discount on Web and Discount Calulated are not matching");
+			}
+		} catch (Exception e) {
+			System.out.println("Exception Message:"+e.getMessage());
+		}
+	}
+
 	@When("^user expect calculated value and displayed discount value to match$")
 	public void user_expect_calculated_value_and_displayed_discount_value_to_match() throws Throwable {
 		genericPO.verifyPresenceOfDiscountValue();

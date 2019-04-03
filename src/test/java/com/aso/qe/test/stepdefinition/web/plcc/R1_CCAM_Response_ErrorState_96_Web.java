@@ -26,7 +26,12 @@ public class R1_CCAM_Response_ErrorState_96_Web extends CommonActionHelper  {
 
 	@When("^user expect element return to application to be present$")
 	public void user_expect_element_return_to_application_to_be_present() throws Throwable {
-		ccAplicationModal_PO.verifyPresenceOfDisclosureText();
+		try {
+			ccAplicationModal_PO.verifyPresenceOfDisclosureText();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	@When("^user click on continue to checkout button on error modal$")
 	public void user_click_on_continue_to_checkout_button_on_error_modal() throws Throwable {
