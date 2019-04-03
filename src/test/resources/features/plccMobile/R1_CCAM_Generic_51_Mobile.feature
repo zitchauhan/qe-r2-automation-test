@@ -8,7 +8,7 @@ Background:  Common Pre-requisite steps
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal
 	
-@C-PLCC @Mobile @Regression @All @PLCC-51 @CR-Manju 
+@C-PLCC @Mobile @Regression @All @PLCC-51 @CR-Manju @Mobile
 Scenario: Verify the display of elements available on credit card application model
 	And user expect element STEP1: APPLICATION FORM present 
 	And user expect element FirstName text Field on CC Aplication Modal to be present 
@@ -28,7 +28,7 @@ Scenario: Verify the display of elements available on credit card application mo
 	And user expect element CONTINUE on CC Aplication Modal to be present 
 	And user expect element CANCEL on CC Aplication Modal to be present
 	
-@C-PLCC @Regression @All @PLCC-51 @CR-VS 		
+@C-PLCC @Regression @All @PLCC-51 @CR-VS @Mobile		
  Scenario: Verify user is able to Edit all the required information on credit card application model
 	When user enter First Name on credit card Application Modal "FirstName"
 	Then user enter Last Name on credit card Application Modal "LastName"
@@ -46,7 +46,7 @@ Scenario: Verify the display of elements available on credit card application mo
 	And user enter Alternate Phone "AlternatePhone"
 	And user click on CONTINUE button
 
-@C-PLCC @Regression @All @PLCC-51 @CR-VS 
+@C-PLCC @Regression @All @PLCC-51 @CR-VS @Mobile
 Scenario: Verify the system behavior when user clicks on Continue button on Credit Card application model 1
 	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName"

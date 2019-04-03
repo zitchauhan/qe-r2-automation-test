@@ -4,8 +4,7 @@ Background: Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	
 @C-PLCC @Regression @All @PLCC-1 @CR-VS @AutomationSanityR2 
-Scenario:
-Default ASO/PLcc credit card should be displayed on payment section for faster checkout process 
+Scenario: Default ASO/PLcc credit card should be displayed on payment section for faster checkout process 
 	When user enters "SKUIdOfProduct" in the search box plcc 
 	And user click on search icon 
 	And user click on Add to Cart button 
@@ -42,8 +41,7 @@ Default ASO/PLcc credit card should be displayed on payment section for faster c
 	Then delete all credit cards from My Account 
 	
 @C-PLCC @Regression @All @PLCC-1 @CR-VS 
-Scenario:
-Verify the default payment method when user tries to place an another order with the different session 
+Scenario: Verify the default payment method when user tries to place an another order with the different session 
 	When user enters "SKUIdOfProduct" in the search box plcc 
 	And user click on search icon 
 	And user click on ship it button 

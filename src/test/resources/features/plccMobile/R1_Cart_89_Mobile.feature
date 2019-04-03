@@ -16,6 +16,7 @@ Scenario: Verify the display of PLCC card image under We Accept section
 	And user click on viewcart button
 	Then user navigates to Cart Page
 	
+@C-PLCC @Regression @All @PLCC-89 @CR-Manju @Mobile 
 Scenario: Verify the display of PLCC card image under We Accept section on cart image
 	And user expect element We Accept Label to be present
 	And user expect element plcc card image to be present in footer

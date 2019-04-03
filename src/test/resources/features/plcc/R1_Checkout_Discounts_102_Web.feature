@@ -1,4 +1,4 @@
-Feature: PLCC: Checkout_Payment Welcome offer of $15
+Feature: PLCC: Checkout - Payment Welcome offer
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page plcc 
@@ -21,8 +21,8 @@ Background:  Common Pre-requisite steps
  	Then user navigates to cart page
 	
 @C-PLCC @Regression @All @PLCC-102 @CR-VS	
-Scenario: Verify user is able to get Welcome offer of 15% when Basket<=$100
- 	And user increases quantity "ItemQuantity" of product
+Scenario: Verify user is able to get Welcome offer of 15% when Basket <=$100
+ 	And user increases quantity "ItemQuantity3" of product
  	And user click on add promo code link on cart page
  	And user element expect promo code section to be present
  	And user enter promocode "promocodeW" on cart page
@@ -31,7 +31,23 @@ Scenario: Verify user is able to get Welcome offer of 15% when Basket<=$100
  	When user handles adding new card "ValidPLCCCard" if already card is saved
  	And user click on REVIEW ORDER button
  	And user expect discount text to be present
- 	Then user expect fifteen dollars discount 
+ 	Then user expect fifteen percent discount 
+	When user click on edit my cart link 
+	And user click on remove promo card link
+	Then user click on remove from cart 
+	
+@C-PLCC @Regression @All @PLCC-102 @CR-VS	
+Scenario: Verify user is able to get Welcome offer of 15$ when Basket >$100
+ 	And user increases quantity "ItemQuantity1" of product
+ 	And user click on add promo code link on cart page
+ 	And user element expect promo code section to be present
+ 	And user enter promocode "promocodeW" on cart page
+ 	And click on submit promo code button
+ 	And user clicks on checkout button on cart page
+ 	When user handles adding new card "ValidPLCCCard" if already card is saved
+ 	And user click on REVIEW ORDER button
+ 	And user expect discount text to be present
+ 	Then user expect fifteen dollars discount
 	When user click on edit my cart link 
 	And user click on remove promo card link
 	Then user click on remove from cart 

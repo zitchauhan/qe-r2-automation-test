@@ -30,7 +30,7 @@ Background:  Common Pre-requisite steps
 	Then user expect submit button not clickable
 	
 	
-@C-PLCC @Regression @All @PLCC-58 @CR-VS
+@C-PLCC @Regression @All @PLCC-58 @CR-VS @Mobile
  Scenario: Verify Submit button is not clickable when Terms and condition check box is unchecked_Generic Consent
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 

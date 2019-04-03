@@ -154,6 +154,9 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
 	}
 	@Then("^user expect fifteen percent discount$")
 	public void user_expect_fifteen_percent_discount() throws Throwable {
+
+
+	
 		try {
 			plccCCApplicationModalObjects.verifyPresenceOfSubTotalValue();
 			String subTotalValue = plccCCApplicationModalObjects.subtotalValue.getText().replace("$", "");
@@ -185,6 +188,7 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
 			System.out.println("Exception Message:"+e.getMessage());
 		}
 	}
+
 	@Then("^user expect ten percent discount$")
     public void user_expect_ten_percent_discount() throws Throwable {
           try {
@@ -218,6 +222,7 @@ public class R1_Checkout_Discounts_101_Web extends CommonActionHelper {
                  System.out.println("Exception Message:"+e.getMessage());
           }
     }
+
 
 	@When("^user expect calculated value and displayed discount value to match$")
 	public void user_expect_calculated_value_and_displayed_discount_value_to_match() throws Throwable {

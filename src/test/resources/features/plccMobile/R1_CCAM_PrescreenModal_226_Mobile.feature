@@ -101,7 +101,7 @@ Scenario: Verify the display of elements available on consent modal from cart pa
 	And user expect element Cancel link to be present 
 	And user expect element print link to be present on Credit card application modal
 
-@C-PLCC @Regression @All @PLCC-226 @CR-Manju 
+@C-PLCC @Regression @All @PLCC-226 @CR-Manju @Mobile
 Scenario: Verify the system behavior when user clicks on Continue button on Prescreen modal 1 
 	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName"

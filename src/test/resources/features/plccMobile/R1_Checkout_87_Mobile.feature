@@ -17,6 +17,7 @@ Background: Common Pre-requisite steps
 	And user clicks on checkout button and navigates to checkout page 
 	
 	
-@C-PLCC @Regression @All @PLCC-87 @CR-VS @Mobile
+
+@C-PLCC @Regression @All @PLCC-87 @CR-VS @Mobile 
 Scenario: Verify the PLCC card image in footer when customer is on checkout page 
 	Then user expect element plcc card image in footer to be present 
