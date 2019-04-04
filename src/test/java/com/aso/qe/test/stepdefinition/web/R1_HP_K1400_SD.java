@@ -27,7 +27,7 @@ public class R1_HP_K1400_SD extends CommonActionHelper
 	public void user_enter_the_data_and_click_on_submit() throws InterruptedException {
 		assertTrue(clickOnButton(globalElementHeader.lnkSIGNUPFORMOREDEALSEMAIL));
 		assertTrue(clickOnButton(globalElementHeader.lnkSIGNUPFORMOREDEALSEMAIL));
-		setInputText(globalElementHeader.lnkSIGNUPFORMOREDEALSEMAIL, "qaz2@gmail.com");
+		setInputText(globalElementHeader.lnkSIGNUPFORMOREDEALSEMAIL, "SignUpTest@gmail.com");
 		assertTrue(clickOnButton(globalElementHeader.lnkSIGNUPFORMOREDEALSZIPCODE));
 		setInputText(globalElementHeader.lnkSIGNUPFORMOREDEALSZIPCODE, "78235");
 		assertTrue(clickOnButton(globalElementHeader.lnkSIGNUPFORMOREDEALSSUBMIT));
