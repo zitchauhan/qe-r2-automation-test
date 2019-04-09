@@ -26,8 +26,10 @@ public class R1_PDP_PO extends CommonActionHelper
 {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());  //Sid
+	R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
 	//R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
 	private String sku;   //Sid
+	
 	@FindBy(xpath = "//*[@data-auid='btnShipIt']|//*[text()='Ship It']|//*[starts-with(@data-auid,'btnShipIt')]")
 	public WebElement shipItButton; 
 
@@ -527,7 +529,7 @@ public class R1_PDP_PO extends CommonActionHelper
 			waitForElement(selectedSwatchRepresentative);
 			isDisplayed(selectedSwatchRepresentative);
 
-			if (btnAddToCart.isDisplayed()) 
+			if (generic_po.shipItButton.isDisplayed()) 
 			{
 				isAddtoCart=true;
 				
@@ -542,7 +544,7 @@ public class R1_PDP_PO extends CommonActionHelper
 					{
 						logger.debug("Product Size Txt::"+sizeElement.getText());
 						clickOnButton(sizeElement);
-						if(isDisplayed(btnAddToCart))
+						if(isDisplayed(generic_po.shipItButton))
 						{
 							isAddtoCart=true;
 							break;
