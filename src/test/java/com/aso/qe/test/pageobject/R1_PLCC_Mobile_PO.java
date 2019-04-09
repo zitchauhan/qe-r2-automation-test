@@ -39,7 +39,7 @@ public class R1_PLCC_Mobile_PO extends CommonActionHelper{
 			myAccount_MyAccountList_Payment_lnk_mobile.click();
 			logger.debug("Payment link in My account section is displayed for mobile");
 		} else {
-			isDisplayed(checkout_po.ReviewOrder_Btn);
+			isDisplayed(myAccountPage_po.myAccount_MyAccountList_Payment_lnk);
 			myAccountPage_po.myAccount_MyAccountList_Payment_lnk.click();
 			logger.debug("Payment link in My account section is displayed");
 		}

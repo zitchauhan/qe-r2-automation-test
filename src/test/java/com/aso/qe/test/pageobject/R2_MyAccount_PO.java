@@ -621,7 +621,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='Address Book']")
 	public WebElement myAccount_MyAccountList_AddressBook_lnk;
 
-	@FindBy(xpath = "//*[@data-auid='Payments']") // CR-RK 8 Sep
+	@FindBy(xpath = "//*[@data-auid='Payments']|//*[text()='Payments']") // CR-RK 8 Sep
 	public WebElement myAccount_MyAccountList_Payment_lnk; // Updated Cr-RK Sep12 KER-4230
 
 	@FindBy(xpath = "//*[@data-auid='Profile']") // CR-RK 8 Sep

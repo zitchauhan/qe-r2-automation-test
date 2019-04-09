@@ -69,8 +69,12 @@ public class Common_Web_SD extends CommonActionHelper
 
 	@Then("^User closes the web application$")
 	public void user_closes_the_web_application() throws Throwable {
-		logger.debug("User closes the application & Browser.............");
-		close();
+		try {
+			logger.debug("User closes the application & Browser.............");
+			close();
+		} catch (Exception e) {
+			logger.debug("User logged the Expection Message:"+e.getMessage());
+		}
 	}
 
 	@Then("^User navigates till PLP$")

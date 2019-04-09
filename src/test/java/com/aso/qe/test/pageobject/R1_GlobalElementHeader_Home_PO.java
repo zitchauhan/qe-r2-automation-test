@@ -107,7 +107,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Rebates']") public WebElement lnkrebates;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Product Recalls']") public WebElement lnkproductrecall;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Return Policy']") public WebElement lnkreturnpolicy;
-	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Check Order']|//*[text()='Check Order'") public WebElement lnkcheckorder;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Check Order']|//*[text()='Check Order']") public WebElement lnkcheckorder;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Giving Back']") public WebElement lnkgivingback;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Investors']") public WebElement lnkInvestors;//Anuj 09-Aug
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Press Releases']") public WebElement lnkPressReleases;
@@ -1820,20 +1820,24 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 
 	public void verifypresenceofPDPPage() throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)){
-			assertTrue(isDisplayed(pdp_po.btnAddToCart));
+			//assertTrue(isDisplayed(pdp_po.btnAddToCart));
+			assertTrue(isDisplayed(pdp_po.shipItButton));
 			logger.debug("PDP Page is not displayed");
 		}else {
-			assertTrue(isDisplayed(pdp_po.btnAddToCart));
+			//assertTrue(isDisplayed(pdp_po.btnAddToCart));
+			assertTrue(isDisplayed(pdp_po.shipItButton));
 			logger.debug("PDP Page is not displayed");
 		}
 	}
 
 	public void verifypresenceofPDPComponents() throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)){
-			assertTrue(isDisplayed(pdp_po.btnAddToCart));
+			//assertTrue(isDisplayed(pdp_po.btnAddToCart));
+			assertTrue(isDisplayed(pdp_po.shipItButton));
 			logger.debug("PDP Page is not displayed");
 		}else {
-			assertTrue(isDisplayed(pdp_po.btnAddToCart));
+			//assertTrue(isDisplayed(pdp_po.btnAddToCart));
+			assertTrue(isDisplayed(pdp_po.shipItButton));
 			logger.debug("PDP Page is not displayed");
 		}
 	}

@@ -25,7 +25,7 @@ Feature:  Add to Cart - Error Messages (PDP)
 
       
       
-      @C-PDP @Web @Regression @KER-1919 @ZYP_HP_K1919-3443 @CR-RKA
+     @C-PDP @Web @Regression @KER-1919 @ZYP_HP_K1919-3443 @CR-RKA
       Scenario: Verify Add to Cart -messaging confirming the restriction
       Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page
