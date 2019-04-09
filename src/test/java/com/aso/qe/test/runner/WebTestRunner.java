@@ -25,7 +25,7 @@ import cucumber.api.junit.Cucumber;
 
 format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
 ) 
-public class WebTestRunner{     
+public class WebTestRunner{
               
 }
 
