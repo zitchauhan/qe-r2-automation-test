@@ -17,7 +17,11 @@ Background:  Common Pre-requisite steps
 	And user clicks on checkout button on cart page
 	And user clicks on checkout button and navigates to checkout page	
 	
+<<<<<<< HEAD
+@C-PLCC @Regression @All @PLCC-80 @CR-VS @Mobile
+=======
 @C-PLCC @Regression @All @PLCC-80 @CR-VS @Mobile	
+>>>>>>> 6e4c76f77105fd00c81c30d333fdd34627a278c4
 Scenario: Verify the system behavior when user enter 778 as three digit BIN number 
 	And user handles adding new card "starting3digitsplccCard" if already card is saved
 	Then user expect selected credit card image on credit card text field  

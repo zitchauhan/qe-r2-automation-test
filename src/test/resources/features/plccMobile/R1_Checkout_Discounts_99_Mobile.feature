@@ -14,7 +14,7 @@ Background:  Common Pre-requisite steps
 #	Then delete all credit cards from My Account
 #	And user clears everything in cart
 		
-@C-PLCC @Regression @All @PLCC-99 @CR-Manju
+@C-PLCC @Regression @All @PLCC-99 @CR-Manju @Mobile
 Scenario: Verify user is able to get Free shipping offer with Item value greater than 15$ 
 	#And user click on Academy Logo Icon
 	When user enters "SKUIdOfProductGr15" in the search box plcc for mobile
@@ -30,7 +30,7 @@ Scenario: Verify user is able to get Free shipping offer with Item value greater
 	And user clears everything in cart
  
 	
-@C-PLCC @Regression @All @PLCC-99 @CR-Manju
+@C-PLCC @Regression @All @PLCC-99 @CR-Manju @Mobile
 Scenario: Verify user is unable to get Free shipping offer with Item value lesser than 15$ 
 	And user clears everything in cart
 	And user click on Academy Logo Icon

@@ -204,6 +204,9 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[@data-auid='freeShipValue']")
 	public WebElement freeShipValue;
 	
+	@FindBy(xpath="//*[contains(text(),' Free Shipping on footwear and orders over')]")
+	public WebElement standardFreeShipValue;
+	
 	//Invalid PreScreen Code:
 	public void verifyPresenceOfErrorInvalidPreScreenCode() throws Exception {
 
@@ -228,6 +231,17 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 			logger.debug("Free Shipping is displayed++++++++++++++++++++++++");
 		} else {
 			isDisplayed(freeShippingTxt);
+			logger.debug("Free Shipping is displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	public void verifyPresenceOfStandardFreeShipping() throws Exception {
+
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			isDisplayed(standardFreeShipValue);
+			logger.debug("Free Shipping is displayed++++++++++++++++++++++++");
+		} else {
+			isDisplayed(standardFreeShipValue);
 			logger.debug("Free Shipping is displayed++++++++++++++++++++++++==");
 		}
 
