@@ -56,10 +56,11 @@ public class R1_CCAM_Response__UnderReview_95_Web extends CommonActionHelper {
 		try {
 			ccAplicationModal_PO.verifyPresenceOfContinueToCheckoutCCModal();
 			ccAplicationModal_PO.continueToCheckout.click();
+			driver.navigate().refresh();
 		} catch (Exception e) {
 			logger.debug("Exception Message: "+e.getMessage());
 		}
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 	}
 	@Then("^user click on close icon of error modal$")
 	public void user_click_on_close_icon_of_error_modal() throws Throwable {

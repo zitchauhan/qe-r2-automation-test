@@ -314,8 +314,10 @@ public class R1_PDP_PO extends CommonActionHelper
 
 	//KER-1954 RKA
 	//@FindBy(xpath="//*[contains(text(),'you recommend this product to a friend')]/../../following-sibling::*[2]/*/*/*[1]")public WebElement btnRecommendToAFriend;
+	@FindBy(xpath="//*[contains(text(),' Write a review   ')]|//button[text()=' Write a review   ']|//*[@class='bv-write-review bv-focusable bv-submission-button']")public WebElement btnWriteAReview;
+	//@FindBy(xpath="//*[contains(text(),'Overall Rating')]/../../following-sibling::*[2]/*[1]/*[1]/*[5]")public WebElement btnExcellentStar;
+	//@FindBy(xpath="//*[contains(text(),'you recommend this product to a friend')]/../../following-sibling::*[2]/*/*/*[1]")public WebElement btnRecommendToAFriend;
 	@FindBy(xpath="//*[@id=\"bv-radio-isrecommended-true-label\"]")public WebElement btnRecommendToAFriend;//Updated by HP 04_03_19
-	@FindBy(xpath="//*[contains(text(),'Write a review')]")public WebElement btnWriteAReview;
 	//@FindBy(xpath="//*[contains(text(),'Overall Rating')]/../../following-sibling::*[2]/*[1]/*[1]/*[5]")public WebElement btnExcellentStar;
 	@FindBy(xpath="//*//*[@id=\"bv-radio-rating-5\"]")public WebElement btnExcellentStar;// Updated by HP 04_03_19
 	@FindBy(xpath="//*[contains(text(),'Review Title* ')]/../../following-sibling::*[2]")public WebElement inputReviewTitle;
@@ -328,7 +330,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[contains(text(),'Your review was submitted')]/parent::*/parent::*/parent::*/parent::*/parent::*/parent::*/*[1]")public WebElement x_yourReviewSubmited;
 	//@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[3]")public WebElement itemWithNoReview;/RKA 10 aug
 	//@FindBy(xpath="(//*[@class='c-product__colors-available m-noratings'])[1]")public WebElement itemWithNoReview;
-@FindBy(xpath="(//*[contains(@class,'c-product__colors')])[1]")public WebElement itemWithNoReview;
+	@FindBy(xpath="(//*[contains(@class,'c-product__colors')])[1]")public WebElement itemWithNoReview;
 
 	@FindBy(xpath="(//*[contains(text(),'Reviews')])[2]/../../following-sibling::*[1]/*[2]")public WebElement linkBeTheFirstTOReviewThisPRoduct;
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[*]/*[1]/*[2]/*[3]/*[1]/*/*[2]")public WebElement atLeastOneReview;
@@ -594,23 +596,27 @@ public class R1_PDP_PO extends CommonActionHelper
 	// SID 05-August-2018
 	public void altColorMatch() throws InterruptedException 
 	{
-		int colorCount = 0;
-		for (WebElement colorAvailablePLP : colorsAvailablePLP) 
-		{
-			String altcolorAvailable = colorAvailablePLP.getText();
-			String[] altColorNumber = altcolorAvailable.split(" ");
-			try {
-				colorCount = Integer.parseInt(altColorNumber[0]);
-			} catch (Exception e) {
-				logger.debug("Color Count Exception");
+		try {
+			int colorCount = 0;
+			for (WebElement colorAvailablePLP : colorsAvailablePLP) 
+			{
+				String altcolorAvailable = colorAvailablePLP.getText();
+				String[] altColorNumber = altcolorAvailable.split(" ");
+				try {
+					colorCount = Integer.parseInt(altColorNumber[0]);
+				} catch (Exception e) {
+					logger.debug("Color Count Exception");
+				}
+				logger.debug("Click on the Product card having alternative color");
+				assertTrue(clickOnButton(colorAvailablePLP));
+				logger.debug("Redirect the User to PDP");
+				break;
 			}
-			logger.debug("Click on the Product card having alternative color");
-			assertTrue(clickOnButton(colorAvailablePLP));
-			logger.debug("Redirect the User to PDP");
-			break;
+			waitForElement(visibilityAltColorPDP);
+			assertEquals(altColorsPDP.size(), colorCount);
+		} catch (Exception e) {
+			logger.debug("Getting Colors Exceptional Message: "+e.getMessage());
 		}
-		waitForElement(visibilityAltColorPDP);
-		assertEquals(altColorsPDP.size(), colorCount);
 	}
 
 	// SID 05-August-2018
