@@ -3,6 +3,8 @@ Feature:  Add to Cart - Error Messages (PDP)
   @C-PDP @Web @Regression @KER-1919 @ZYP_HP_K1919-5040 @CR-AG 
   Scenario: [UI-Desktop]- Verify Add to Cart -message to inform the user that the item is OOS(Out of Stock)
     Given user launches the browser and navigates to "ASO_HOME" page
+    #"OutOfStockProduct" needs to be a product that does not have diffs
+    # This product may get dropped from WCS after being OOS for 3 or 7 days, so this is a constant data req
     When user enters "OutOfStockProduct" in the search box
  	Then User select out of stock PDP 
 
