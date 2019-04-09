@@ -11,6 +11,7 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
@@ -26,6 +27,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 	R1_SearchProduct_PO r1_SearchPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
 	R1_GlobalElementHeader_Home_PO globalElementHeader_HomePO = PageFactory.initElements(getDriver(),
 			R1_GlobalElementHeader_Home_PO.class);
+	R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
 	R1_PLP_PO plp_po = PageFactory.initElements(getDriver(), R1_PLP_PO.class);
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
 	String expectedSKU = "";
@@ -70,6 +72,16 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 	public void user_should_be_able_to_see_Add_to_cart_button_and_quantity_section() throws Throwable {
 		pdp_po.addToCartAvailability();
 		assertTrue(isDisplayed(pdp_po.btnAddToCart));
+		assertTrue(isDisplayed(pdp_po.btnQuantityDec));
+		assertTrue(isDisplayed(pdp_po.btnQuantityInc));
+		assertTrue(isDisplayed(pdp_po.txtDesiredQtyValue_1));
+
+	}
+	
+	@Then("^user should be able to see ship it button and quantity section$")
+	public void user_should_be_able_to_see_ship_it_button_and_quantity_section() throws Throwable {
+		pdp_po.addToCartAvailability();
+		assertTrue(isDisplayed(generic_po.shipItButton));
 		assertTrue(isDisplayed(pdp_po.btnQuantityDec));
 		assertTrue(isDisplayed(pdp_po.btnQuantityInc));
 		assertTrue(isDisplayed(pdp_po.txtDesiredQtyValue_1));

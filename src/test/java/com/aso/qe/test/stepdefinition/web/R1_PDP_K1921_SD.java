@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 import com.aso.qe.test.pageobject.R1_SIT_PO;
 
 import cucumber.api.java.en.Then;
@@ -17,6 +18,7 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	private static final Logger logger = Logger.getLogger(R1_PDP_K1921_SD.class);
 	R1_SIT_PO sit_po=PageFactory.initElements(driver, R1_SIT_PO.class);
+	R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
 	
 	@Then("^user search the data in search box\"(.*?)\"$")
 	public void user_search_the_data_in_search_box(String data) throws Throwable {
@@ -147,8 +149,8 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 	public void user_put_the_quantity_on_PDP() throws Throwable {
 		pdpPageObj.addToCartAvailability();
 		setInputText(pdpPageObj.quantityInput, "110");
-		waitForElement(pdpPageObj.btnAddToCart);
-		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+		waitForElement(generic_po.shipItButton);
+		assertTrue(clickOnButton(generic_po.shipItButton));
 		
 		waitForElement(pdpPageObj.MsgquantityLimitation);
 		isDisplayed(pdpPageObj.MsgquantityLimitation);

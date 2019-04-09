@@ -8,4 +8,5 @@ Feature: To To verify Quick View - Product Image
      #Then verify addcart button is displayed 
 	 Then verify ship it button is displayed
 
+
  

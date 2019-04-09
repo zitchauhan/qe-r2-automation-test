@@ -26,8 +26,10 @@ public class R1_PDP_PO extends CommonActionHelper
 {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());  //Sid
+	R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
 	//R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
 	private String sku;   //Sid
+	
 	@FindBy(xpath = "//*[@data-auid='btnShipIt']|//*[text()='Ship It']|//*[starts-with(@data-auid,'btnShipIt')]")
 	public WebElement shipItButton; 
 
@@ -311,16 +313,20 @@ public class R1_PDP_PO extends CommonActionHelper
 
 
 	//KER-1954 RKA
-	@FindBy(xpath="//*[contains(text(),'you recommend this product to a friend')]/../../following-sibling::*[2]/*/*/*[1]")public WebElement btnRecommendToAFriend;
+	//@FindBy(xpath="//*[contains(text(),'you recommend this product to a friend')]/../../following-sibling::*[2]/*/*/*[1]")public WebElement btnRecommendToAFriend;
 	@FindBy(xpath="//*[contains(text(),' Write a review   ')]|//button[text()=' Write a review   ']|//*[@class='bv-write-review bv-focusable bv-submission-button']")public WebElement btnWriteAReview;
-	@FindBy(xpath="//*[contains(text(),'Overall Rating')]/../../following-sibling::*[2]/*[1]/*[1]/*[5]")public WebElement btnExcellentStar;
+	//@FindBy(xpath="//*[contains(text(),'Overall Rating')]/../../following-sibling::*[2]/*[1]/*[1]/*[5]")public WebElement btnExcellentStar;
+	//@FindBy(xpath="//*[contains(text(),'you recommend this product to a friend')]/../../following-sibling::*[2]/*/*/*[1]")public WebElement btnRecommendToAFriend;
+	@FindBy(xpath="//*[@id=\"bv-radio-isrecommended-true-label\"]")public WebElement btnRecommendToAFriend;//Updated by HP 04_03_19
+	//@FindBy(xpath="//*[contains(text(),'Overall Rating')]/../../following-sibling::*[2]/*[1]/*[1]/*[5]")public WebElement btnExcellentStar;
+	@FindBy(xpath="//*//*[@id=\"bv-radio-rating-5\"]")public WebElement btnExcellentStar;// Updated by HP 04_03_19
 	@FindBy(xpath="//*[contains(text(),'Review Title* ')]/../../following-sibling::*[2]")public WebElement inputReviewTitle;
 	@FindBy(xpath="//*[contains(text(),'Review*')]/../../following-sibling::*[2]/*[1]")public WebElement inputReview;
 	@FindBy(xpath="//*[contains(text(),'Nickname')]/../../following-sibling::*[2]")public WebElement inputNickName;
 	@FindBy(xpath="//*[contains(text(),'Email')]/../../following-sibling::*[2]")public WebElement inputEmail;
 	@FindBy(xpath="//*[contains(text(),'Phone Number')]/../../following-sibling::*[2]")public WebElement inputPhoneNumber;
 	@FindBy(xpath="//*[contains(text(),'Post Review')]")public WebElement btnPostReview;
-	@FindBy(xpath="//*[contains(text(),'terms & conditions')]/../preceding-sibling::*")public WebElement btnTerms_conditions;
+	@FindBy(xpath="//*[@id=\"bv-checkbox-reviews-termsAndConditions\"]")public WebElement btnTerms_conditions;// Updated by HP 04_03_19
 	@FindBy(xpath="//*[contains(text(),'Your review was submitted')]/parent::*/parent::*/parent::*/parent::*/parent::*/parent::*/*[1]")public WebElement x_yourReviewSubmited;
 	//@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[3]")public WebElement itemWithNoReview;/RKA 10 aug
 	//@FindBy(xpath="(//*[@class='c-product__colors-available m-noratings'])[1]")public WebElement itemWithNoReview;
@@ -527,7 +533,7 @@ public class R1_PDP_PO extends CommonActionHelper
 			waitForElement(selectedSwatchRepresentative);
 			isDisplayed(selectedSwatchRepresentative);
 
-			if (btnAddToCart.isDisplayed()) 
+			if (generic_po.shipItButton.isDisplayed()) 
 			{
 				isAddtoCart=true;
 				
@@ -542,7 +548,7 @@ public class R1_PDP_PO extends CommonActionHelper
 					{
 						logger.debug("Product Size Txt::"+sizeElement.getText());
 						clickOnButton(sizeElement);
-						if(isDisplayed(btnAddToCart))
+						if(isDisplayed(generic_po.shipItButton))
 						{
 							isAddtoCart=true;
 							break;

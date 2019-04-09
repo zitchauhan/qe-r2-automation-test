@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 
 import cucumber.api.java.en.Then;
 
@@ -15,6 +16,7 @@ public class R1_PLP_K732_SD extends CommonActionHelper {
 
 	public R1_PDP_PO pdp_po = PageFactory.initElements(getDriver(), R1_PDP_PO.class);;
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
+	R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
 	
 	@Then("^User click on Quick view button$")
 	public void user_click_on_Quick_view_button() throws Throwable {
@@ -33,4 +35,12 @@ public class R1_PLP_K732_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(pdp_po.btnAddToCart));
 	}
 
+	@Then("^verify ship it button is displayed$")
+	public void verify_ship_it_button_is_displayed() throws Throwable 
+	{
+		assertTrue(isDisplayed(generic_po.shipItButton));
+	}
+	
+
 }
+

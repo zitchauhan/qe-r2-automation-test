@@ -291,10 +291,11 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@id='email-address']") public WebElement lnkSIGNUPFORMOREDEALSEMAIL;
 	@FindBy(xpath="//*[@id='zip-code']") public WebElement lnkSIGNUPFORMOREDEALSZIPCODE;
 	@FindBy(xpath="//*[@data-auid='btnemail-signup-button']") public WebElement lnkSIGNUPFORMOREDEALSSUBMIT;
-	@FindBy(xpath="(//*[@data-auid='email-signup-sucess-modal']//*[local-name()='svg'])[2]") public WebElement lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE_D;
-	@FindBy(xpath="(//*[@data-auid='email-signup-sucess-modal']//*[local-name()='svg'])[1]") public WebElement lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE_M;
+	@FindBy(xpath="//*[@class='container'][@data-auid='email-signup-sucess-modal']") public WebElement lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE_D;//Updated by HP 04_03_2019
+	
+	@FindBy(xpath="(//*[@data-auid='email-signup-sucess-modal']") public WebElement lnkSIGNUPFORMOREDEALSSUCCESSMESSAGE_M;
 	@FindBy(xpath="//*[@data-component='footer']//a") public List<WebElement> footerLinks; //10 Aug 
-	@FindBy(xpath="//*[@data-auid='email-signup-sucess-modal']//span") public WebElement btnCloseCrossSuccess;//Anuj 13Aug
+	@FindBy(xpath="//*[@data-auid='email-signup-success-modal-close']") public WebElement btnCloseCrossSuccess;//Updated by HP 04_03_2019
 	
 	//Automation Sanity  SID 20-August
 	@FindBy(xpath="//*[contains(text(),'Welcome,')]") public WebElement txtWelcome;
@@ -1828,6 +1829,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			assertTrue(isDisplayed(pdp_po.shipItButton));
 			logger.debug("PDP Page is not displayed");
 		}
+		
 	}
 
 	public void verifypresenceofPDPComponents() throws Exception {
