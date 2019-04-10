@@ -10,8 +10,8 @@ Background:  Common Pre-requisite steps
 	
 @C-PLCC @Regression @All @PLCC-1 @CR-Manju @Mobile
 Scenario: Verify User is able to get the Approved Modal for guest User
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 

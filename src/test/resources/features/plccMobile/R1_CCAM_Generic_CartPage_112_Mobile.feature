@@ -105,7 +105,7 @@ Scenario: Verify the display of elements available on consent modal from cart pa
 	
 @C-PLCC @Regression @All @PLCC-112 @CR-VS @Mobile
  Scenario: Verify user able to navigate to Error state Modal when nvaigate to CCAM from Cart Page 
-	When user enter First Name on credit card Application Modal "FirstName" 
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNameEr"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
@@ -151,8 +151,8 @@ Scenario: Verify the display of elements available on consent modal from cart pa
 	
 @C-PLCC @Regression @All @PLCC-112 @CR-VS @Mobile
  Scenario: Verify user able to close Success Modal when nvaigate to CCAM from Cart Page 
- 	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+ 	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
