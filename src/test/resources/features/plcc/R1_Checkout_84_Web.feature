@@ -42,8 +42,6 @@ Scenario: Verify user is able to navigate to confirm order page by clicking on r
 	And user click on Payments link 
 	Then delete all credit cards from My Account 
 	
-	#@C-PLCC @Regression @All @PLCC-84 @CR-VS 
-	#Scenario: Verify an error message when user enters invalid shipping information and click on review order button
 	
 @C-PLCC @Regression @All @PLCC-84 @CR-VS @AutomationSanityR2
 Scenario: Verify user is able to navigate to confirm order page by using VISA Credit card card 
@@ -112,4 +110,3 @@ Scenario: Verify user is able to navigate to confirm order page by using Discove
 	When user click on My Account link 
 	And user click on Payments link 
 	Then delete all credit cards from My Account 
-	

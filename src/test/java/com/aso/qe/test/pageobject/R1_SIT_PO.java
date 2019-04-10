@@ -43,7 +43,7 @@ public class R1_SIT_PO extends CommonActionHelper{
 	
 	
 	//@FindBy(xpath="(//*[@id='productCardListing']/*/a)[3]") public WebElement clickProuctCard;
-	@FindBy(xpath="(//*[@id='productCardListing']/*[1]") public WebElement clickProuctCard; //Updated by HP 03_31_2019
+	@FindBy(xpath="//*[@id='productCardListing']/*[1]") public WebElement clickProuctCard; //Updated by HP 03_31_2019
 	
 	
 	@FindBy(xpath="//h3[text()='Order Summary']") public WebElement ordersummary;

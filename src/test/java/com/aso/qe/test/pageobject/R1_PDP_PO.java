@@ -131,7 +131,7 @@ public class R1_PDP_PO extends CommonActionHelper
 
 	@FindBy(xpath="//*[@data-auid='search-input']") public WebElement searchbox;
 	@FindBy(xpath="//*[@data-auid='search-clear-button']")public WebElement searchMagnifyingBtm;
-	@FindBy(xpath="//*[@data-auid='productCard_14402']") public WebElement selectMagellanOutdoorsMenNeopreneWadingBoots ;
+	@FindBy(xpath="//*[@data-auid='productCard_']") public WebElement selectMagellanOutdoorsMenNeopreneWadingBoots ;
 	@FindBy(xpath="//*[@data-auid='PDP_QC_INC']/preceding-sibling::*[1]/*")public WebElement quantityInput;
 	@FindBy(xpath="//*[contains(text(),'limited to 4 per order')]")public WebElement MsgSelectedItemLimited;
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[1]")public WebElement selectSCCY_CPX_2CB9mmPistol;
@@ -571,7 +571,7 @@ public class R1_PDP_PO extends CommonActionHelper
 				{
 					logger.debug("Product Size Txt::"+sizeElement.getText());
 					clickOnButton(sizeElement);
-					if(isDisplayed(btnAddToCart))
+					if(isDisplayed(shipItButton))
 					{
 						isAddtoCart=true;
 						break;
@@ -1052,7 +1052,7 @@ public class R1_PDP_PO extends CommonActionHelper
 			waitForElement(selectedSwatchRepresentative);
 			isDisplayed(selectedSwatchRepresentative);
 
-			if (btnAddToCart.isDisplayed()) {
+			if (shipItButton.isDisplayed()) {
 				isAddtoCart = true;
 
 			} else {

@@ -303,6 +303,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(searchButton));
 			Thread.sleep(Constants.thread_low);
 			waitForPageLoad(driver);
+			driver.navigate().refresh();
 			boolean checkStock=false;
 			checkStock=isDisplayed(globalElementHeader_HomePO.outOfStockMessage);
 			if (r1_SearchPO.verifyTextDisplayedOnPage("We couldn't find anything for")) {
