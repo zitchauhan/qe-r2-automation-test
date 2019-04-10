@@ -48,8 +48,8 @@ Scenario: Verify the display of elements available on credit card application mo
 @C-PLCC @Regression @All @PLCC-112 @CR-VS 
 Scenario: Verify user is able to Edit all the required information on credit card application modal from cart page
 	And user navigates to Generic Credit Card Application Modal
-	When user enter First Name on credit card Application Modal "FirstName"
-	Then user enter Last Name on credit card Application Modal "LastName"
+	When user enter First Name on credit card Application Modal "FirstNamePlcc"
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome"
@@ -87,8 +87,8 @@ Scenario: Verify the system behavior when user clicks on Continue button on Cred
 @C-PLCC @Regression @All @PLCC-112 @CR-VS 
 Scenario: Verify the display of elements available on consent modal from cart page
 	And user navigates to Generic Credit Card Application Modal
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName" 
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc" 
 	And user enter Last four SSN "Last4DigitsOfSSN" 
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -119,8 +119,8 @@ Scenario: Verify the display of elements available on consent modal from cart pa
 @C-PLCC @Regression @All @PLCC-112 @CR-VS 
 Scenario: Verify user is able to select check box to accept terms and condition when navigated to CCAM from cart page
 	And user navigates to Generic Credit Card Application Modal
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName" 
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc" 
 	And user enter Last four SSN "Last4DigitsOfSSN" 
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -142,8 +142,8 @@ Scenario: Verify user is able to select check box to accept terms and condition 
 @C-PLCC @Regression @All @PLCC-112 @CR-VS 
 Scenario: Verify the application behavior when user unselects the check box on consent model when user navigates to CCAM from cart page
 	And user navigates to Generic Credit Card Application Modal
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName" 
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc" 
 	And user enter Last four SSN "Last4DigitsOfSSN" 
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -182,8 +182,8 @@ Scenario: Verify the system behavior when user clicks on Close button when user 
 @C-PLCC @Regression @All @PLCC-112 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Cancel link on consent modal when user navigates to CCAM from cart page
 	And user navigates to Generic Credit Card Application Modal
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName" 
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc" 
 	And user enter Last four SSN "Last4DigitsOfSSN" 
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -204,8 +204,8 @@ Scenario: Verify the system behavior when user clicks on Cancel link on consent 
 @C-PLCC @Regression @All @PLCC-112 @CR-VS 
 Scenario: Verify the system behaviour when uer clicks in close button on consent model when user navigates to CCAM from cart page
 	And user navigates to Generic Credit Card Application Modal
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName" 
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc" 
 	And user enter Last four SSN "Last4DigitsOfSSN" 
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -226,8 +226,8 @@ Scenario: Verify the system behaviour when uer clicks in close button on consent
 @C-PLCC @Regression @All @PLCC-112 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Back button on Consent modal when user navigates to CCAM from cart page
 	And user navigates to Generic Credit Card Application Modal
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName" 
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc" 
 	And user enter Last four SSN "Last4DigitsOfSSN" 
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -253,8 +253,8 @@ And user navigates to Generic Credit Card Application Modal
 @C-PLCC @Regression @All @PLCC-112 @CR-VS
  Scenario: Verify Submit button is not clickable when Terms and condition check box is unchecked when user navigates to CCAM from cart page
 	Then user navigates to Generic Credit Card Application Modal 
- 	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+ 	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -275,8 +275,8 @@ And user navigates to Generic Credit Card Application Modal
 @C-PLCC @Regression @All @PLCC-112 @CR-VS
  Scenario: Verify Submit button is clickable when Terms and condition check box is checked when user navigates to CCAM from cart page 
 	Then user navigates to Generic Credit Card Application Modal  
-    When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+    When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -297,8 +297,8 @@ And user navigates to Generic Credit Card Application Modal
 
 @C-PLCC @Regression @All @PLCC-112 @CR-VS @AutomationSanityR2
  Scenario: Verify user able to navigate to Success Modal when nvaigate to CCAM from Cart Page 
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -435,8 +435,8 @@ And user navigates to Generic Credit Card Application Modal
 
 @C-PLCC @Regression @All @PLCC-112 @CR-VS
  Scenario: Verify user able to close Success Modal when nvaigate to CCAM from Cart Page 
- 	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+ 	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 

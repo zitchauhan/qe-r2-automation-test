@@ -8,8 +8,8 @@ Scenario: Verify the display of elements available on consent model_Generic Cons
 	Then user expect Landing page to be present 
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName" 
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc" 
 	And user enter Last four SSN "Last4DigitsOfSSN" 
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 

@@ -32,8 +32,8 @@ Scenario: Verify the display of elements available on credit card application mo
 	
 @C-PLCC @Regression @All @PLCC-51 @CR-VS 		
  Scenario: Verify user is able to Edit all the required information on credit card application model
-	When user enter First Name on credit card Application Modal "FirstName"
-	Then user enter Last Name on credit card Application Modal "LastName"
+	When user enter First Name on credit card Application Modal "FirstNamePlcc"
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome"
@@ -50,8 +50,8 @@ Scenario: Verify the display of elements available on credit card application mo
 
 @C-PLCC @Regression @All @PLCC-51 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Continue button on Credit Card application model 1
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 

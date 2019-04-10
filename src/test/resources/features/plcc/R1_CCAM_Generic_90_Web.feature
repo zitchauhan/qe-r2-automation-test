@@ -10,8 +10,8 @@ Background:  Common Pre-requisite steps
 	
 @C-PLCC @Regression @All @PLCC-90 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Continue button on Application model by providing valid required information/details
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -76,8 +76,8 @@ Scenario: Verify the system behavior when user clicks on Continue button on Appl
 
 @C-PLCC @Regression @All @PLCC-90 @CR-Manju 
 Scenario: Verify the system behavior when user clicks on Print button on Consent Page of Application Modal
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 

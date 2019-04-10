@@ -13,8 +13,8 @@ Background:  Common Pre-requisite steps
 Scenario: Verify the system behavior when user clicks on Cancel link_Generic Consent Modal
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
