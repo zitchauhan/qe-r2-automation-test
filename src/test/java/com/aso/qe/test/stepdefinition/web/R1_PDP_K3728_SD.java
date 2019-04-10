@@ -77,7 +77,8 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 		pdpPageObj.checkBtnNext();
 		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
 		pdpPageObj.addToCartAvailability();
-		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+		//assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+		assertTrue(clickOnButton(pdpPageObj.shipItButton));
 	}
 	
 //	@Then("^verfiy add to cart functionality$")

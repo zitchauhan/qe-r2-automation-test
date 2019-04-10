@@ -6,7 +6,7 @@ Background:  Common Pre-requisite steps
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
 	
-@C-PLCC @Regression @All @PLCC-34 @CR-Smeetha @Mobile 
+@C-PLCC @Regression @All @PLCC-38 @CR-Smeetha @Mobile 
 Scenario: Verify the display of elements available under Header component on PLCC landing page 
 	#And user expect element Benefits section to be present
 	And user expect element AcademyLogo to be present 
@@ -18,13 +18,13 @@ Scenario: Verify the display of elements available under Header component on PLC
 	And user expect element WeeklyAd Link to be present 
 	And user expect element Grand Parkway to be present
 
-@C-PLCC @Regression @All @PLCC-34 @CR-Smeetha @Mobile 
+@C-PLCC @Regression @All @PLCC-38 @CR-Smeetha @Mobile 
 Scenario: Verify the display of body of the  PLCC landing page 
 	And user expect element Benefit Images to be present 
 	And user expect element Benefit Texts to be present 
 	And user expect element OfferTexts to be present 
 	
-@C-PLCC @Regression @All @PLCC-34 @CR-Smeetha @Mobile 
+@C-PLCC @Regression @All @PLCC-38 @CR-Smeetha @Mobile 
 Scenario: Verify the display of elements available under Hero Banner on PLCC landing page
 	And user expect element ApplyNow_Btn to be present 
 	And user expect element ManageYourCardLink to be present 
@@ -32,7 +32,7 @@ Scenario: Verify the display of elements available under Hero Banner on PLCC lan
 	And user verify element landing page banner to be present
 	And user expect label above plcc card to be present
 		
-@C-PLCC @Regression @All @PLCC-34 @CR-Smeetha @Mobile  
+@C-PLCC @Regression @All @PLCC-38 @CR-Smeetha @Mobile  
 Scenario: Verify the display of Footer components on PLCC landing page 
 	And user expect element ThisIsAcademy to be present 
 	When user click on This Academy expand icon plcc
@@ -63,12 +63,12 @@ Scenario: Verify the display of Footer components on PLCC landing page
 	And user expect element Instagram to be present 
 	And user expect element PrivacyPolicy to be present 
 	And user expect element TermsAndCondition to be present 
-	And user expect element CaliforniaTransparencyinSupplyChainAct to be present 
-	And user expect element 2018 Academy Sports + Outdoors. All Rights Reserved to be present
-	And user expect element Sitemap to be present 
-	And user expect element ProductIndex to be present 
-	And user expect element ShoppingIndex to be present 
-	And user expect element BrandsIndex to be present 
+#	And user expect element CaliforniaTransparencyinSupplyChainAct to be present 
+#	And user expect element 2018 Academy Sports + Outdoors. All Rights Reserved to be present
+#	And user expect element Sitemap to be present 
+#	And user expect element ProductIndex to be present 
+#	And user expect element ShoppingIndex to be present 
+#	And user expect element BrandsIndex to be present 
 	
 
 	

@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
@@ -975,13 +976,17 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 				assertTrue(isDisplayed(genericPO.CreditCardNumber_Input));
 				waitForElement(genericPO.CreditCardNumber_Input);
 
-			} else if (genericPO.editLinkPaymentSection.isDisplayed()) {
-				genericPO.verifyPresenceOfEditLinkPaymentSectionCheckoutPage();
-				genericPO.editLinkPaymentSection.click();
+			} else if (driver.findElement(By.xpath("//*[@data-auid='checkout_edit_payment']")).isDisplayed()) {
+				//wait.until(ExpectedConditions.visibilityOf(genericPO.editLinkPaymentSection));
+				WebElement element = driver.findElement(By.xpath("//*[@data-auid='checkout_edit_payment']"));
+				JavascriptExecutor executor = (JavascriptExecutor)driver;
+				executor.executeScript("arguments[0].click();", element);
+//				genericPO.verifyPresenceOfEditLinkPaymentSectionCheckoutPage();
+//				genericPO.editLinkPaymentSection.click();
 				genericPO.savedCardDropDown.click();
 				genericPO.addNewCardOption.click();
 				genericPO.enterCardBinNumber(arg1);
-				
+								
 			}
 			else {
 				genericPO.savedCardDropDown.click();

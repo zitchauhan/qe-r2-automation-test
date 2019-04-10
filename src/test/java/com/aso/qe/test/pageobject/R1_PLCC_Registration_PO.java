@@ -594,9 +594,9 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfUserSelectedAddressBtn() throws Exception {
 
-		if ("web".equalsIgnoreCase(testtype)) {
+		if ("mobile".equalsIgnoreCase(testtype)) {
 			isDisplayed(userSelectedAddressBtn);
-			logger.debug("User selected address button is displayed");
+			logger.debug("User selected address button is displayed for mobile");
 		} else {
 			isDisplayed(userSelectedAddressBtn);
 			logger.debug("User selected address button is not displayed++++++++++++++++++++++++==");

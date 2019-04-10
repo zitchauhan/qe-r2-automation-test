@@ -146,11 +146,16 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 
 	@When("^user clicks on Reviews tab$")
 	public void user_clicks_on_Reviews_tab() throws Throwable {
-		scrollPageToWebElement(pdp_po.txtNotifiedBack);
-		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(clickOnButton(pdp_po.tabReviewsMobile));
-		} else {
-			assertTrue(clickOnButton(pdp_po.tabReviews));
+		try {
+			scrollPageToWebElement(pdp_po.txtNotifiedBack);
+			if ("mobile".equalsIgnoreCase(testtype)) {
+				assertTrue(clickOnButton(pdp_po.tabReviewsMobile));
+			} else {
+				assertTrue(clickOnButton(pdp_po.tabReviews));
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 	}
