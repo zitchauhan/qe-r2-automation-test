@@ -18,7 +18,7 @@ Background:  Common Pre-requisite steps
 
 @C-PLCC @Regression @All @PLCC-96 @CR-VS 
 Scenario: Verify is able to navigate to Time Out/Processing Error model
-	When user enter First Name on credit card Application Modal "FirstName" 
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNameEr"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
@@ -42,7 +42,7 @@ Scenario: Verify is able to navigate to Time Out/Processing Error model
 	
 @C-PLCC @Regression @All @PLCC-96 @CR-VS 
 Scenario: Verify the elements available on Time Out/Processing Error modal
-	When user enter First Name on credit card Application Modal "FirstName" 
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNameEr"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
@@ -71,7 +71,7 @@ Scenario: Verify the elements available on Time Out/Processing Error modal
 	
 @C-PLCC @Regression @All @PLCC-96 @CR-VS 
 Scenario: Verify user is able to navigate to checkout page after clicking on Continue to Checkout button
-	When user enter First Name on credit card Application Modal "FirstName" 
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNameEr"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
@@ -95,7 +95,7 @@ Scenario: Verify user is able to navigate to checkout page after clicking on Con
 	
 @C-PLCC @Regression @All @PLCC-96 @CR-VS 
 Scenario: Verify user is able to navigate to checkout page after clicking on Return to Application button
-	When user enter First Name on credit card Application Modal "FirstName" 
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNameEr"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
@@ -119,7 +119,7 @@ Scenario: Verify user is able to navigate to checkout page after clicking on Ret
 	
 @C-PLCC @Regression @All @PLCC-96 @CR-VS 
 Scenario: Verify user is able to close Application Error model after clicking on Close button
-	When user enter First Name on credit card Application Modal "FirstName" 
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNameEr"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 

@@ -1,4 +1,4 @@
-Feature:  Add to Cart - Error Messages (PDP)
+Feature: Add to Cart - Error Messages (PDP) 
 
   @C-PDP @Web @Regression @KER-1919 @ZYP_HP_K1919-5040 @CR-AG 
   Scenario: [UI-Desktop]- Verify Add to Cart -message to inform the user that the item is OOS(Out of Stock)
@@ -35,4 +35,4 @@ Feature:  Add to Cart - Error Messages (PDP)
      And User clicks on required product in L3 Page
      Then user put the quantity on PDP 
      
-      
+

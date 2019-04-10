@@ -38,7 +38,7 @@ Background: Common Pre-requisite steps
 	And user clears everything in cart 
 	  
 
-@C-PLCC @Regression @All @PLCC-101 @CR-VS @AutomationSanityR2	
+@C-PLCC @Regression @All @PLCC-101 @CR-VS @AutomationSanityR2 
 Scenario: First Time Promotion Available for item less than or equal to <15$
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
@@ -81,15 +81,4 @@ Scenario: First Time Promotion Available for item greater than >15$
 	Then delete all credit cards from My Account
 	
 	
-	
-	
-#@C-PLCC @Regression @All @PLCC-101 @CR-VS 
-#    Scenario: To verify Celarance Product price on PDP
-#    Given user launches the browser and navigates to "ASO_HOME" page 
-#    Then User navigates to L2 page plcc
-#    Then Navigate to PLP and select one product with clearance for plcc
-#    And User should able to see Strike Through Price with Actual price for plcc
-#    When user click on My Account link
-#	And user click on Payments link
-#	Then delete all credit cards from My Account
 	

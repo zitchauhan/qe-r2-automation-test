@@ -18,8 +18,8 @@ Background:  Common Pre-requisite steps
 	 	
 @C-PLCC @Regression @All @PLCC-93 @CR-VS @AutomationSanityR2
 Scenario: Verify is able to navigate to Welcome, PHIL Collins FPO model
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -39,8 +39,8 @@ Scenario: Verify is able to navigate to Welcome, PHIL Collins FPO model
 
 @C-PLCC @Regression @All @PLCC-93 @CR-VS 
 Scenario: Verify the elements available on approval model
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -68,8 +68,8 @@ Scenario: Verify the elements available on approval model
 	
 @C-PLCC @Regression @All @PLCC-93 @CR-VS 
 Scenario: Verify user is able to navigate to checkout page after clicking on Continue to Checkout button
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -92,8 +92,8 @@ Scenario: Verify user is able to navigate to checkout page after clicking on Con
 	
 @C-PLCC @Regression @All @PLCC-93 @CR-VS 
 Scenario: Verify user is able to navigate to checkout page after clicking on Continue Shopping button
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 
@@ -116,8 +116,8 @@ Scenario: Verify user is able to navigate to checkout page after clicking on Con
 	
 @C-PLCC @Regression @All @PLCC-93 @CR-VS 
 Scenario: Verify user is able to close success modal after clicking on close icon
-	When user enter First Name on credit card Application Modal "FirstName" 
-	Then user enter Last Name on credit card Application Modal "LastName"
+	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
+	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSN"
 	And user enetr Date of Birth "DOB" 
 	And user enter Annual Income "AnnualIncome" 

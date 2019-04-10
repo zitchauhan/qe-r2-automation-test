@@ -34,8 +34,8 @@ Scenario: Verify the display of elements available on Prescreen  model
 	
 @C-PLCC @Regression @All @PLCC-52 @CR-VS	
  Scenario: Verify user is able to Edit prefilled data available on Prescreen model
-	And user clear and enter First Name on credit card Application Modal "FirstName"
-	And user clear and enter Last Name on credit card Application Modal "LastName"
+	And user clear and enter First Name on credit card Application Modal "FirstNamePlcc"
+	And user clear and enter Last Name on credit card Application Modal "LastNamePlcc"
 	And user enter Last four SSN "Last4DigitsOfSSNP"
 	And user enter Confirm Last four SSN "ConfirmSSNP"
 	And user enetr Date of Birth "DOB" 
