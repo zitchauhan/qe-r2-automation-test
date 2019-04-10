@@ -224,7 +224,7 @@ public class R1_HomePage_PO {
 	
 	
 	// SID 1-September
-	public boolean comparePriceHighToLow() {
+	public boolean comparePriceHighToLow() throws Exception {
 		Boolean flag = false;
 		int max = 999999, price,count=0,cent=99,prevCent;
 		for (WebElement productPrice : productPrices) {
@@ -257,6 +257,7 @@ public class R1_HomePage_PO {
 				break;
 			}
 			count++;
+			Thread.sleep(3000);
 		}
 		return flag;
 	}

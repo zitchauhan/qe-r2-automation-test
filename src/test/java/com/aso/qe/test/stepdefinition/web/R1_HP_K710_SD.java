@@ -108,28 +108,38 @@ public class R1_HP_K710_SD extends CommonActionHelper{
 	}
 	@Then("^User should be able to sort by brand A to Z$")
 	public void user_should_be_able_to_sort_by_brand_A_to_Z() throws Throwable {
-		scrollPageToWebElement(hp_p.sortByOption);
-		   clickOnButton(hp_p.sortByOption);
-		   Thread.sleep(3000);
-		   clickOnButton(hp_p.selAtoB);  
-		   
-		   Thread.sleep(3000);
+		try {
+			scrollPageToWebElement(hp_p.sortByOption);
+			   clickOnButton(hp_p.sortByOption);
+			   Thread.sleep(3000);
+			   clickOnButton(hp_p.selAtoB);  
+			   
+			   Thread.sleep(3000);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@Then("^User compare the product baised on A to Z$")
 	public void user_compare_the_product_baised_on_A_to_Z() throws Throwable {
-	    String first=getText(hp_p.firstBrandName);
-	    String second=getText(hp_p.secondBrandName);
-	    String third=getText(hp_p.thirdBrandName);	    
-	    String forth=getText(hp_p.forthBrandName);
-	    
-	    TreeSet<String> tree=new TreeSet<String>();
-	    tree.add(first);
-	    tree.add(second);
-	    tree.add(third);
-	    tree.add(forth);
+	    try {
+			String first=getText(hp_p.firstBrandName);
+			String second=getText(hp_p.secondBrandName);
+			String third=getText(hp_p.thirdBrandName);	    
+			String forth=getText(hp_p.forthBrandName);
+			
+			TreeSet<String> tree=new TreeSet<String>();
+			tree.add(first);
+			tree.add(second);
+			tree.add(third);
+			tree.add(forth);
 
-	    System.err.println(tree);
+			System.err.println(tree);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	
     
 	    
@@ -206,19 +216,23 @@ public class R1_HP_K710_SD extends CommonActionHelper{
 	
 	@And("^user select the brand \"(.*?)\"$")
 	public void user_select_the_brand(String arg1) throws InterruptedException {
-		if("mobile".equalsIgnoreCase(testtype)){	
-			assertTrue(clickOnButton(hp_p.brandFacet_M )); 
-			System.err.println(driver.findElement(By.xpath("//*[@data-auid='drawer_"+webPropHelper.getTestDataProperty(arg1)+"_m']")));
-			   assertTrue(clickOnButton(driver.findElement(By.xpath("//*[@data-auid='drawer_"+webPropHelper.getTestDataProperty(arg1)+"_m']"))));
-			   Thread.sleep(3000);
-		}else {
-			waitForElement(hp_p.brandFacet);
-			   assertTrue(clickOnButton(hp_p.brandFacet ));
-			   System.err.println(driver.findElement(By.xpath("//*[@data-auid='drawer_"+webPropHelper.getTestDataProperty(arg1)+"']")));
-			   Thread.sleep(3000);
-			   assertTrue(clickOnButton(driver.findElement(By.xpath("//*[@data-auid='drawer_"+webPropHelper.getTestDataProperty(arg1)+"']"))));
-			   Thread.sleep(3000);
-				
+		try {
+			if("mobile".equalsIgnoreCase(testtype)){	
+				assertTrue(clickOnButton(hp_p.brandFacet_M )); 
+				System.err.println(driver.findElement(By.xpath("//*[@data-auid='drawer_"+webPropHelper.getTestDataProperty(arg1)+"_m']")));
+				   assertTrue(clickOnButton(driver.findElement(By.xpath("//*[@data-auid='drawer_"+webPropHelper.getTestDataProperty(arg1)+"_m']"))));
+				   Thread.sleep(3000);
+			}else {
+				waitForElement(hp_p.brandFacet);
+				   assertTrue(clickOnButton(hp_p.brandFacet ));
+				   System.err.println(driver.findElement(By.xpath("//*[@data-auid='drawer_"+webPropHelper.getTestDataProperty(arg1)+"']")));
+				   Thread.sleep(3000);
+				   assertTrue(clickOnButton(driver.findElement(By.xpath("//*[@data-auid='drawer_"+webPropHelper.getTestDataProperty(arg1)+"']"))));
+				   Thread.sleep(3000);
+					
+			}
+		} catch (Exception e) {
+			
 		}
 		
 	}

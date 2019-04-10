@@ -157,8 +157,15 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 
 	@When("^user click on continue to checkout$")
 	public void user_click_on_continue_to_checkout() throws Throwable {
-		plccCCApplicationModalObjects.verifyPresenceOfContinueToCheckoutCCModal();
-		plccCCApplicationModalObjects.continueToCheckout.click();
+		try {
+			plccCCApplicationModalObjects.verifyPresenceOfContinueToCheckoutCCModal();
+			plccCCApplicationModalObjects.continueToCheckout.click();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.navigate().refresh();
+		Thread.sleep(3000);
 	}
 
 	@Then("^user navigates to cart page$")

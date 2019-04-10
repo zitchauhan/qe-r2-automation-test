@@ -103,9 +103,15 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 
 	@When("^user click on search icon$")
 	public void user_click_on_search_icon() throws Throwable {
-		plccLandingPageObjects.verifyPresenceOfSearchIcon();
-		plccLandingPageObjects.searchIcon.click();
-
+		try {
+			plccLandingPageObjects.verifyPresenceOfSearchIcon();
+			plccLandingPageObjects.searchIcon.click();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.navigate().refresh();
+		Thread.sleep(5000);
 	}
 
 	@When("^user click on checkout from ATC pop up plcc$")
@@ -256,7 +262,13 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 
 	@When("^user clicks on checkout button and navigates to checkout page$")
 	public void user_clicks_on_checkout_button_and_navigates_to_checkout_page() throws Throwable {
-		genericPO.verifyPresenceOfCheckoutPage();
+		try {
+			genericPO.verifyPresenceOfCheckoutPage();
+			Thread.sleep(5000);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@When("^user expect credit card text field is present$")
