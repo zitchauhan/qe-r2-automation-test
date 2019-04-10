@@ -110,8 +110,8 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver.navigate().refresh();
-		Thread.sleep(5000);
+		//driver.navigate().refresh();
+		//Thread.sleep(5000);
 	}
 
 	@When("^user click on checkout from ATC pop up plcc$")
