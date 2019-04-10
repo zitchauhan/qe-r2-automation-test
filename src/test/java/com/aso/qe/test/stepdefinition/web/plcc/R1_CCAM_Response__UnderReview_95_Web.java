@@ -15,27 +15,52 @@ public class R1_CCAM_Response__UnderReview_95_Web extends CommonActionHelper {
 			R1_PLCC_CreditCardApplicationModal_PO.class);
 	@Then("^user navigates to error modal$")
 	public void user_navigates_to_error_modal() throws Throwable {
-		ccAplicationModal_PO.verifyPresenceOfErrorModalCCAM();
+		try {
+			ccAplicationModal_PO.verifyPresenceOfErrorModalCCAM();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element Error Card Modal Image to be present$")
 	public void user_expect_element_Error_Card_Modal_Image_to_be_present() throws Throwable {
-		ccAplicationModal_PO.verifyPresenceOfErrorModalImageCCAM();
+		try {
+			ccAplicationModal_PO.verifyPresenceOfErrorModalImageCCAM();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element Application Under Review Text to be present$")
 	public void user_expect_element_Application_Under_Review_Text_to_be_present() throws Throwable {
-		ccAplicationModal_PO.verifyPresenceOfApplicationUnderReviewText();
+		try {
+			ccAplicationModal_PO.verifyPresenceOfApplicationUnderReviewText();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	@Then("^user click on continue to checkout button of application under review$")
 	public void user_click_on_continue_to_checkout_button_of_application_under_review() throws Throwable {
-		ccAplicationModal_PO.verifyPresenceOfContnueToCheckoutURModal();
-		ccAplicationModal_PO.continueToCheckoutBtnURModal.click();
+		try {
+			ccAplicationModal_PO.verifyPresenceOfContnueToCheckoutURModal();
+			ccAplicationModal_PO.continueToCheckoutBtnURModal.click();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element disclosure Message on Error Modal to be present$")
 	public void user_expect_element_disclosure_Message_on_Error_Modal_to_be_present() throws Throwable {
-		ccAplicationModal_PO.verifyPresenceOfDisclosureMsgErrorModalCCAM();
+		try {
+			ccAplicationModal_PO.verifyPresenceOfDisclosureMsgErrorModalCCAM();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element continue To Checkout button to be present$")
@@ -49,7 +74,12 @@ public class R1_CCAM_Response__UnderReview_95_Web extends CommonActionHelper {
 	}
 	@Then("^user expect element close icon on error modal is present$")
 	public void user_expect_element_close_icon_on_error_modal_is_present() throws Throwable {
-		ccAplicationModal_PO.verifyPresenceOfCloseIconErrorModalCCAM();
+		try {
+			ccAplicationModal_PO.verifyPresenceOfCloseIconErrorModalCCAM();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	@Then("^user click on continue to checkout button$")
 	public void user_click_on_continue_icon_to_checkout_button() throws Throwable {
@@ -64,8 +94,13 @@ public class R1_CCAM_Response__UnderReview_95_Web extends CommonActionHelper {
 	}
 	@Then("^user click on close icon of error modal$")
 	public void user_click_on_close_icon_of_error_modal() throws Throwable {
-		ccAplicationModal_PO.verifyPresenceOfCloseIconErrorModalCCAM();
-		ccAplicationModal_PO.closeIconErrorModal.click();
+		try {
+			ccAplicationModal_PO.verifyPresenceOfCloseIconErrorModalCCAM();
+			ccAplicationModal_PO.closeIconErrorModal.click();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }

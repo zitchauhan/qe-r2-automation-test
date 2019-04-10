@@ -21,7 +21,12 @@ public class R1_CCAM_Response_ErrorState_96_Web extends CommonActionHelper  {
 	}
 	@Then("^user expect error text to be present$")
 	public void user_expect_error_text_to_be_present() throws Throwable {
-		ccAplicationModal_PO.verifyPresenceOfErrorText();
+		try {
+			ccAplicationModal_PO.verifyPresenceOfErrorText();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@When("^user expect element return to application to be present$")
@@ -44,8 +49,12 @@ public class R1_CCAM_Response_ErrorState_96_Web extends CommonActionHelper  {
 	}
 	@When("^user click on return to application on error modal$")
 	public void user_click_on_return_to_application_on_error_modal() throws Throwable {
-		ccAplicationModal_PO.verifyPresenceOfReturnToApplicationErrorModal();
-		ccAplicationModal_PO.returnToApplicationErrorModal.click();
+		try {
+			ccAplicationModal_PO.verifyPresenceOfReturnToApplicationErrorModal();
+			ccAplicationModal_PO.returnToApplicationErrorModal.click();
+		} catch (Exception e) {
+			logger.debug("Exception Message: "+e.getMessage());
+		}
 	}
 	
 }

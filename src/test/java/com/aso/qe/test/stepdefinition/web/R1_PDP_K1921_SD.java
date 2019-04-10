@@ -20,13 +20,13 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 	R1_SIT_PO sit_po=PageFactory.initElements(driver, R1_SIT_PO.class);
 	R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
 	
-	@Then("^user search the data in search box\"(.*?)\"$")
-	public void user_search_the_data_in_search_box(String data) throws Throwable {
-	  waitForPageLoad(driver);
-	  Thread.sleep(Constants.thread_medium);
-		pdpPageObj.searchbox.sendKeys(data);
-	   clickOnButton(pdpPageObj.searchMagnifyingBtm);
-		
+
+	@Then("^user search the data in search box \"(.*?)\"$")
+	public void user_search_the_data_in_search_box(String OOSData) throws Throwable {
+		waitForPageLoad(driver);
+		  Thread.sleep(Constants.thread_medium);
+			pdpPageObj.searchbox.sendKeys(OOSData);
+		   clickOnButton(pdpPageObj.searchMagnifyingBtm);
 	}
 
 	@Then("^User to select the product$")

@@ -26,7 +26,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public WebElement prescreenCode;
 	@FindBy(xpath = "//*[@data-component='applyForCard']")
 	public WebElement applyForCardSection;
-	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Academy Credit Card']")
+	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Academy Credit Card']|//*[text()='Academy Credit Card']")
 	public WebElement academyCreditCardFooterLink;
 	@FindBy(xpath = "//*[@data-auid='logo_m']")
 	public WebElement imgAcademyLogo;
