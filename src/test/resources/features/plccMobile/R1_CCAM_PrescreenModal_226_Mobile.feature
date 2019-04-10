@@ -13,7 +13,7 @@ Background:  Common Pre-requisite steps
 	
 @C-PLCC @Regression @All @PLCC-226 @CR-Manju @Mobile
 Scenario: Verify Prescreen Modal when user enter invalid pre screen code
-	And user navigates to Generic Credit Card Application Modal
+	And user expect element error message for invalid prescreen code to be present
 	
 	
 @C-PLCC @Regression @All @PLCC-226 @CR-Manju @Mobile

@@ -61,9 +61,11 @@ Scenario: Verify user is able to apply 5% discount along with free shipping offe
 Scenario: Verify message when user applied gift card along with the discount
 	When user enters "SKUIdOfProductLs15" in the search box plcc for mobile
 	And user click on search icon for mobile
-	And user click on Add to Cart button  
-	And user click on checkout from ATC pop up plcc
-	And user clicks on checkout button and navigates to checkout page
+	And user click on ship it button 
+	And user click on viewcart button 
+	Then user navigates to Cart Page 
+	And user clicks on checkout button on cart page
+ 	And user clicks on checkout button and navigates to checkout page
 	And user click on gift card link
 	When user enter Gift card "ValidGiftCard"
 	And user enter CVV number for Gift card "GiftCardCVV"
