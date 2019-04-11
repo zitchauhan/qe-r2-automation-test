@@ -10,7 +10,7 @@ Scenario: Verify user can process the order
 	And user enter password in sign-in page "BuynowPwd" 
 	Then user click on Signin-button 
 	And user navigates to ASO-Home page 
-	When user enters "SKUForBuyNow" in the search box plcc for mobile
+	When user enters "SKUForBuyNowPlcc" in the search box plcc for mobile
 	And user click on search icon for mobile
 	And user click on Buy Now button
 	And user click on Buy Now button in pop up modal	

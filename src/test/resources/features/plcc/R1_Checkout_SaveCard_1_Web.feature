@@ -7,8 +7,12 @@ Background: Common Pre-requisite steps
 Scenario: Default ASO/PLcc credit card should be displayed on payment section for faster checkout process 
 	When user enters "SKUIdOfProduct" in the search box plcc 
 	And user click on search icon 
-	And user click on Add to Cart button 
-	And user click on checkout from ATC pop up plcc 
+	#And user click on Add to Cart button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+#	And user click on checkout from ATC pop up plcc 
 	And user clicks on checkout button and navigates to checkout page 
 	And user expect element credit card text field is present 
 	When user handles adding new card "ValidPLCCCard" if already card is saved 
@@ -108,7 +112,7 @@ Scenario: Verify User is able to get the Approved Modal for guest User
 	#Then user navigates to credit card approval modal
 	When user click on continue to checkout button 
 	Then user navigates to cart page 
-	When user enters "SKUForBuyNow" in the search box plcc 
+	When user enters "SKUForBuyNowPlcc" in the search box plcc 
 	And user click on search icon 
 	And user click on ship it button 
 	And user click on viewcart button 
@@ -145,7 +149,7 @@ Scenario: Verify the Signin Link for Guest user available on Check out page
 	#Then user navigates to credit card approval modal
 	When user click on continue to checkout button 
 	Then user navigates to cart page 
-	When user enters "SKUForBuyNow" in the search box plcc 
+	When user enters "SKUForBuyNowPlcc" in the search box plcc 
 	And user click on search icon 
 	And user click on ship it button 
 	And user click on viewcart button 

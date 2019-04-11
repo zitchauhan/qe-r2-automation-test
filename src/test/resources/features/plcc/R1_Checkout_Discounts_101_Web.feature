@@ -55,9 +55,7 @@ Scenario: First Time Promotion Available for item less than or equal to <15$
 	And user expect element free shipping should not be available 
 	When user click on edit my cart link 
 	Then user click on remove from cart 
-	When user click on My Account link
-	And user click on Payments link
-	Then delete all credit cards from My Account
+
 	
 @C-PLCC @Regression @All @PLCC-101 @CR-VS @AutomationSanityR2
 Scenario: First Time Promotion Available for item greater than >15$

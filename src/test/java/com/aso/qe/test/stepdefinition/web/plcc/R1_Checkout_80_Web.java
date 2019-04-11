@@ -980,24 +980,27 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	@Then("^user handles adding new card \"(.*?)\" if already card is saved$")
 	public void user_handles_adding_new_card_if_already_card_is_saved(String arg1) throws Throwable {
 		try {
-			if (genericPO.CreditCardNumber_Input.isDisplayed()) {
+			
+			if(genericPO.editLinkPaymentSection.isDisplayed())
+			{
+				genericPO.verifyPresenceOfEditLinkPaymentSectionCheckoutPage();
+				genericPO.editLinkPaymentSection.click();
+				try {
+					genericPO.savedCardDropDown.click();
+					genericPO.addNewCardOption.click();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				Thread.sleep(3000);
+				genericPO.enterCardBinNumber(arg1);
+			}
+			else if (genericPO.CreditCardNumber_Input.isDisplayed()) {
 				genericPO.enterCardBinNumber(arg1);
 				Thread.sleep(8000);
 				assertTrue(isDisplayed(genericPO.CreditCardNumber_Input));
 				waitForElement(genericPO.CreditCardNumber_Input);
-
-			} else if (driver.findElement(By.xpath("//*[@data-auid='checkout_edit_payment']")).isDisplayed()) {
-				//wait.until(ExpectedConditions.visibilityOf(genericPO.editLinkPaymentSection));
-				WebElement element = driver.findElement(By.xpath("//*[@data-auid='checkout_edit_payment']"));
-				JavascriptExecutor executor = (JavascriptExecutor)driver;
-				executor.executeScript("arguments[0].click();", element);
-//				genericPO.verifyPresenceOfEditLinkPaymentSectionCheckoutPage();
-//				genericPO.editLinkPaymentSection.click();
-				genericPO.savedCardDropDown.click();
-				genericPO.addNewCardOption.click();
-				genericPO.enterCardBinNumber(arg1);
-								
-			}
+			} 
 			else {
 				genericPO.savedCardDropDown.click();
 				genericPO.addNewCardOption.click();

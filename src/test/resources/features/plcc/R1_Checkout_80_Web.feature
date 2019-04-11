@@ -82,7 +82,5 @@ Scenario: Verify the display of saved card on payment section of checkout page
 	And user check element payment section to be present 
 	And user click on REVIEW ORDER button
 	Then user expect element saved card on payment section of checkout page to be present 
-	When user click on My Account link 
-	And user click on Payments link 
-	Then delete all credit cards from My Account 
+	
 	
