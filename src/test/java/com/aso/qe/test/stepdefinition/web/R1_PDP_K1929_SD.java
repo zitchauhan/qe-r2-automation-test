@@ -29,6 +29,18 @@ public class R1_PDP_K1929_SD extends CommonActionHelper {
 			assertTrue(false);
 		}
 	}
+	@And("^user verify the inventory message")
+	public void user_verify_the_inventory_message() {
+		assertTrue(isDisplayed(sitObj.inventoryMessage));
+		String pdpMessage = sitObj.inventoryMessage.getText();
+		String message=webPropHelper.getTestDataProperty("OutOfStock");
+		System.err.println(message + "  but found "+pdpMessage);
+		if(message.equalsIgnoreCase(pdpMessage)) {
+			assertTrue(true);
+		}else {
+			assertTrue(false);
+		}
+	}
 	
 	@And("^below inventory message user see find a store option$")
 	public void below_inventory_message_user_see_find_a_store_option() {

@@ -84,7 +84,7 @@ public class R2_CHECKOUT_K2934_SD extends CommonActionHelper {
 			setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty("Address"));
 			// setInputText(r2CheckOutPo.inputCheckoutZipCode,
 			// webPropHelper.getTestDataProperty("zipcode"));
-			assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
+			//assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
 		}
 	}
 
