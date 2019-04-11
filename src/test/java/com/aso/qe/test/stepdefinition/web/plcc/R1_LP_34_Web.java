@@ -177,124 +177,244 @@ public class R1_LP_34_Web extends CommonActionHelper {
 
 	@Then("^user expect element PhoneNumberL to be present$")
 	public void user_expect_element_PhoneNumberL_to_be_present() throws Throwable {
-		plccPageObjects.validatingPresenceOfContactNumber();
+		try {
+			plccPageObjects.validatingPresenceOfContactNumber();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element CustomerCare to be present$")
 	public void user_expect_element_CustomerCare_to_be_present() throws Throwable {
-		globalElementHeader.validatingCustomercare();
+		try {
+			globalElementHeader.validatingCustomercare();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element Services to be present$")
 	public void user_expect_element_Services_to_be_present() throws Throwable {
-		plccPageObjects.validatingPresenceOfServices();
+		try {
+			plccPageObjects.validatingPresenceOfServices();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element ShopGiftCards to be present$")
 	public void user_expect_element_ShopGiftCards_to_be_present() throws Throwable {
-		globalElementHeader.validatingGiftcards();
+		try {
+			globalElementHeader.validatingGiftcards();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element CheckGiftCradBalance to be present$")
 	public void user_expect_element_CheckGiftCradBalance_to_be_present() throws Throwable {
-		plccPageObjects.validatingPresenceOfCheckGiftCardBalance();
+		try {
+			plccPageObjects.validatingPresenceOfCheckGiftCardBalance();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element AcademyCreditCard to be present$")
 	public void user_expect_element_AcademyCreditCard_to_be_present() throws Throwable {
-		globalElementHeader.validatingAcademyCreditCard();
+		try {
+			globalElementHeader.validatingAcademyCreditCard();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element StoreServicesLink to be present$")
 	public void user_expect_element_StoreServicesLink_to_be_present() throws Throwable {
-		globalElementHeader.validatingStoreServices();
+		try {
+			globalElementHeader.validatingStoreServices();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element FindInStoreFooter to be present$")
 	public void user_expect_element_FindInStoreFooter_to_be_present() throws Throwable {
-		globalElementHeader.validatingFindaStore();
+		try {
+			globalElementHeader.validatingFindaStore();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element SignUpForMoreDeals to be present$")
 	public void user_expect_element_SignUpForMoreDeals_to_be_present() throws Throwable {
-		globalElementHeader.validatingsignupformoredeals();
+		try {
+			globalElementHeader.validatingsignupformoredeals();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element ChatNoW to be present$")
 	public void user_expect_element_ChatNoW_to_be_present() throws Throwable {
-		globalElementHeader.validatingchatnow();
+		try {
+			globalElementHeader.validatingchatnow();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element FaceBook to be present$")
 	public void user_expect_element_FaceBook_to_be_present() throws Throwable {
-		globalElementHeader.verifypresenceoffacebookicon();
+		try {
+			globalElementHeader.verifypresenceoffacebookicon();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element Pinterest to be present$")
 	public void user_expect_element_Pinterest_to_be_present() throws Throwable {
-		globalElementHeader.verifypresenceofpinteresticon();
+		try {
+			globalElementHeader.verifypresenceofpinteresticon();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element YouTube to be present$")
 	public void user_expect_element_YouTube_to_be_present() throws Throwable {
-		globalElementHeader.verifypresenceofyoutubeicon();
+		try {
+			globalElementHeader.verifypresenceofyoutubeicon();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element Instagram to be present$")
 	public void user_expect_element_Instagram_to_be_present() throws Throwable {
-		globalElementHeader.verifypresenceofinstagramicon();
+		try {
+			globalElementHeader.verifypresenceofinstagramicon();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element PrivacyPolicy to be present$")
 	public void user_expect_element_PrivacyPolicy_to_be_present() throws Throwable {
-		globalElementHeader.validatingPrivatPolicy();
+		try {
+			globalElementHeader.validatingPrivatPolicy();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element TermsAndCondition to be present$")
 	public void user_expect_element_TermsAndCondition_to_be_present() throws Throwable {
-		globalElementHeader.validatingTermsAndConditions();
+		try {
+			globalElementHeader.validatingTermsAndConditions();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element CaliforniaTransparencyinSupplyChainAct to be present$")
 	public void user_expect_element_CaliforniaTransparencyinSupplyChainAct_to_be_present() throws Throwable {
-		globalElementHeader.validatingLegalPolicy();
+		try {
+			globalElementHeader.validatingLegalPolicy();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element (\\d+) Academy Sports \\+ Outdoors\\. All Rights Reserved to be present$")
 	public void user_expect_element_Academy_Sports_Outdoors_All_Rights_Reserved_to_be_present(int arg1) throws Throwable {
-		plccPageObjects.validatingPresenceOfAsoRightsLink();
+		try {
+			plccPageObjects.validatingPresenceOfAsoRightsLink();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element Sitemap to be present$")
 	public void user_expect_element_Sitemap_to_be_present() throws Throwable {
-		plccPageObjects.validatingPresenceOfSiteMapLink();
+		try {
+			plccPageObjects.validatingPresenceOfSiteMapLink();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element ProductIndex to be present$")
 	public void user_expect_element_ProductIndex_to_be_present() throws Throwable {
-		plccPageObjects.validatingPresenceOfProductIndexLink();
+		try {
+			plccPageObjects.validatingPresenceOfProductIndexLink();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element ShoppingIndex to be present$")
 	public void user_expect_element_ShoppingIndex_to_be_present() throws Throwable {
-		plccPageObjects.validatingPresenceOfShoppingIndexLink();
+		try {
+			plccPageObjects.validatingPresenceOfShoppingIndexLink();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user expect element BrandsIndex to be present$")
 	public void user_expect_element_BrandsIndex_to_be_present() throws Throwable {
-		plccPageObjects.validatingPresenceOfBrandsIndexLink();
+		try {
+			plccPageObjects.validatingPresenceOfBrandsIndexLink();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	//Footer navigation validations
 	@When("^user expect element Our History to be present$")
 	public void user_expect_element_Our_History_to_be_present() throws Throwable {
-		globalElementHeader.validatingOurhistory();
+		try {
+			globalElementHeader.validatingOurhistory();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^user click on Our History and navigates to Our History Page$")
 	public void user_click_on_Our_History_and_navigates_to_Our_History_Page() throws Throwable {
-	  globalElementHeader.lnkourhistory.click();
-      plccLandingPageObjects.verifyPresenceOfOurHistoryPage();
+	  try {
+		globalElementHeader.lnkourhistory.click();
+		  plccLandingPageObjects.verifyPresenceOfOurHistoryPage();
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	}
 
 	@When("^user expect element Careers to be present$")
