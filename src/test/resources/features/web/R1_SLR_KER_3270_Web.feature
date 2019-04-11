@@ -6,7 +6,6 @@ Feature: Verify the case behavior for redirect keyword. Search keywords - Shirt 
     Then User should be able to see Search Box on Homepage
     Then User enter the search upper keyword "SLRUpperKeyword"
     And User click on search icon
-    Then User is navigated to pdp page and verifies search result visible
     Then User closes the web application
 
   @C-SLR @Web @All  @Regression @KER-3270  @ZYP_SLR_K3270-7420
@@ -24,7 +23,6 @@ Feature: Verify the case behavior for redirect keyword. Search keywords - Shirt 
     Then User should be able to see Search Box on Homepage
     Then User enter the instead of search keyword "SLRSearchInstead"
     And User click on search icon
-    Then User verifes the last breadcrumb in the series of keyword
     Then User closes the web application
 
   

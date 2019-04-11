@@ -18,10 +18,8 @@ Feature: To verify basic functionalities of PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP of any product
     Then user clicks on the product card and navigates to PDP of the product
-    And user should be able to see PDP mention in the current url
-    And user should be able to see the sku and item numbers for the given image
-    When user select any other size and color of the product varient
-    Then user should be able to see the changed value of the sku and item
+    
+   
 
   @Regression  @C-PDP @Mobile @All  @ZYP_PDP_K1953-4137 @KER-1953 @CR-AG
   Scenario: To verify sku and item value

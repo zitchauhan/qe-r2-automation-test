@@ -24,9 +24,7 @@ Feature: Verify the Should display max 4 suggestion terms , Applicable category 
    Then user enter "go" in search box and wait for auto suggest pop up for first data 
    Then user verify the product image name and price  
    Then user enter "shi" in search box and wait for auto suggest pop up for second data
-   Then user verify the product image name and price 
-   Then user enter "golf" in search box and wait for auto suggest pop up for third data 
-   Then user verify the product image name and price
+   
     
    
     @C-SLR @Web @All  @Regression @KER-3276  @ZYP_SLR_K3276-4349 @CR-RKA

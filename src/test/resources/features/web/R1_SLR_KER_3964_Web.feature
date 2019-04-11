@@ -24,8 +24,6 @@ Feature: Verify the user should be able to view a search results page when the u
     Then User should be able to see Search Box on Homepage
     Then User enter the null data
     And User click on search icon
-    Then User is navigated to null page
-    Then User closes the web application
 
   @C-SLR @Web  @Regression @KER-3964  @ZYP_SLR_K3964-4964 @All
   Scenario: Verify the user should search by color

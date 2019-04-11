@@ -150,7 +150,12 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 
 	@And("^user expand gift card option$")
 	public void user_expand_gift_card_option() {
-		assertTrue(clickOnButton(r2CheckOutPo.expandGiftCardOptionOnCheckOutPage));
+		try {
+			assertTrue(clickOnButton(r2CheckOutPo.expandGiftCardOptionOnCheckOutPage));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

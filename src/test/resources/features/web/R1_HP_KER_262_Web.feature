@@ -11,8 +11,7 @@ Feature: [Desktop]Components - Header
   Scenario: Desktop- To Verify user is able to Sign In with Valid user name and password by clicking in Sign In Link in the global header
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-    And user should be able to enter the signin details "Login_username" "Login_pwd"
-    Then verify user to navigate to account summary page
+    
 
 
   @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-4055 @CR-RKA
@@ -116,7 +115,6 @@ Feature: [Desktop]Components - Header
     Then User should be able to click on Find Store
     When User select store with "Postal_Code"
     Then User verify hour of operation display in the place of find a store link
-    Then User verify have to verify change link with pencil icon
 
 #Commented out by HP 04_03_19  We shouldn't be running UI scripts to check status code & broken image URL's etc.
  #@Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262 @CR-RKA @BrokenLink @Broken @TC_BL_01 

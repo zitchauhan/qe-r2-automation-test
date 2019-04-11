@@ -80,8 +80,7 @@ Feature: To verify basic functionalities of PDP
     Then user clicks on the product card and navigates to PDP of the product
     And user should be able to see PDP mention in the current url
     And user should be able to see the sku and item numbers for the given image
-    When user select any other size and color of the product varient
-    Then user should be able to see the changed value of the sku and item
+    
 
 @Regression  @C-PDP @Web @KER-1926 @ZYP_PDP_K1926-5556 @All @Rerun  @CR-AG
   Scenario: To verify change of sku and item value by search  Desktop

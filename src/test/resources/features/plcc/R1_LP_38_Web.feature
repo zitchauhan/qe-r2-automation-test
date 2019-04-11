@@ -3,7 +3,7 @@ Feature: PLCC : Landing Page Academy credit card Link
 Background:  Common Pre-requisite steps
 Given user launches the browser and navigates to "ASO_HOME" page plcc
 	
-@C-PLCC @Regression @All @PLCC-38 @CR-VS  
+@C-PLCC @Regression @All @PLCC-38 @CR-Smeetha  
 Scenario: Verify the system behavior when user clicks on Academy Credit Card link
 	And user expect element AcademyCreditCard link to be present 
 	When user click on AcademyCreditCard link in the footer section of ASO-Home page 

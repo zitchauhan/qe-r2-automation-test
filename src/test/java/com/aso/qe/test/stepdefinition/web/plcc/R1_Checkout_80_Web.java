@@ -62,10 +62,15 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 
 	@When("^user enters \"(.*?)\" in the search box plcc for mobile$")
 	public void user_enters_in_the_search_box_plcc_for_mobile(String arg1) throws Throwable {
-		Thread.sleep(5000);
-		plccPageObjects.enterSearchItemMobile(arg1);
-		assertTrue(isDisplayed(plccMobile_PO.searchInputfieldMobile));
-		waitForElement(plccMobile_PO.searchInputfieldMobile);
+		try {
+			Thread.sleep(5000);
+			plccPageObjects.enterSearchItemMobile(arg1);
+			assertTrue(isDisplayed(plccMobile_PO.searchInputfieldMobile));
+			waitForElement(plccMobile_PO.searchInputfieldMobile);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@When("^user click on search icon for mobile$")

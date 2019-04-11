@@ -40,14 +40,15 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement cityCModal;
 	@FindBy(xpath = "//*[@data-auid='banner_desktop'] | //img[@src='/content/dam/academysports/banner-desktop.jpg']")
 	public WebElement bannerCartPage;
+	@FindBy(xpath = "//img[@src='/content/dam/academysports/banner-mobile.jpg']")
+	public WebElement bannerCartPage_m;
 	@FindBy(xpath = "//*[@data-auid='continuetocheckout_existing_user']")
 	public WebElement continueBtnExistingUser;
 	@FindBy(xpath = "//*[@data-auid='continuetocheckout_error']")
 	public WebElement continueToCheckoutBtnErrorModal;
 	@FindBy(xpath = "//*[@data-auid='continuetocheckout_declined']")
 	public WebElement continueToCheckoutBtnURModal;
-	
-	
+		
 	@FindBy(xpath = "//*[@name='state']")
 	public WebElement stateDropDownCCModal;
 	@FindBy(xpath = "//*[@id='customDropdownList']")
@@ -264,12 +265,12 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		if ("mobile".equalsIgnoreCase(testtype)) 
 		{
 			try {
-				wait.until(ExpectedConditions.visibilityOf(bannerCartPage));
-				bannerCartPage.click();
+				wait.until(ExpectedConditions.visibilityOf(bannerCartPage_m));
+				bannerCartPage_m.click();
 				logger.debug("Banner on Cart Page is displayed");
 			} catch (Exception e) {
-				isDisplayed(bannerCartPage);
-				wait.until(ExpectedConditions.visibilityOf(bannerCartPage));
+				isDisplayed(bannerCartPage_m);
+				wait.until(ExpectedConditions.visibilityOf(bannerCartPage_m));
 				WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-mobile.jpg']"));
 				JavascriptExecutor executor = (JavascriptExecutor)driver;
 				executor.executeScript("arguments[0].click();", element);
