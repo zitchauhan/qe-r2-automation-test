@@ -599,9 +599,6 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='DEFAULT']")
 	public WebElement default_txt;
 
-	//@FindBy(xpath = "//*[@data-auid='myAccountCta_m'] | //*[@data-auid='signInCta_m']")
-	//public WebElement myAccount_txt_Mobile;
-	
 	@FindBy(xpath = "//*[@data-auid='signInCta_m']")
 	public WebElement myAccount_txt_Mobile;
 	
