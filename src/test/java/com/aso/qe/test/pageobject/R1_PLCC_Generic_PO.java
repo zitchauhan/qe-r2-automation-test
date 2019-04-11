@@ -120,7 +120,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement buyNowButton;
 
 	//Saved Card:
-	@FindBy(xpath = "//*[@data-auid='checkout_edit_payment']")
+	@FindBy(xpath = "//li[3]//div[1]/a")
 	public WebElement editLinkPaymentSection;
 	@FindBy(xpath = "//*[text()='Add a New Credit Card']")
 	public WebElement addNewCreditCardOption;

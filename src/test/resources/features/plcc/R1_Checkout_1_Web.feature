@@ -31,7 +31,7 @@ Scenario: Verify User is able to get the Approved Modal for guest User
 	#Then user navigates to credit card approval modal
 	When user click on continue to checkout button
 	Then user navigates to cart page
-	When user enters "SKUForBuyNow" in the search box plcc
+	When user enters "SKUForBuyNowPlcc" in the search box plcc
 	And user click on search icon
 	#And user click on Add to Cart button
 	And user click on ship it button
@@ -64,7 +64,7 @@ Scenario: Verify the Signin Link for Guest user available on Check out page
 	#Then user navigates to credit card approval modal
 	When user click on continue to checkout button
 	Then user navigates to cart page
-	When user enters "SKUForBuyNow" in the search box plcc
+	When user enters "SKUForBuyNowPlcc" in the search box plcc
 	And user click on search icon
 	And user click on ship it button
 	And user click on viewcart button
