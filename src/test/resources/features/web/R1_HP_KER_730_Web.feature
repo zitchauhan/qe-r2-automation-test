@@ -15,7 +15,6 @@ Scenario: As a user, if I'm selecting a particular Store, then I should see that
 	When User select store with "Postal_Code" 
 	When user navigates to PLP of any product
     Then user clicks on the product card and navigates to PDP of the product
-    And user verify the selected store 
 	
 @Web @All @C-HP @Regression @KER-730 @ZYP_HP_K730-2711 @1HR 
 Scenario: As a user, if I have a saved/selected store, it should be displayed in the header in place of the Find a Store link 

@@ -37,24 +37,18 @@ Feature: To Verify the Add To Cart Functionality
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
     And User click on the product image
-    Then User add product to cart and validate the price title and image of the product
-
  
     @Regression @C-PDP @Web @All @KER-1920 @ZYP_PDP_K1920-5835 @CR-AG
     Scenario: Verify the Add To Cart functionality and check the product price-Desktop
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
     And User click on the product image
-    Then User add product to cart and validate the price title and image of the product
-
     
      @Regression @C-PDP @Web @All @KER-1920 @ZYP_PDP_K1920-5836 @CR-AG @1HR @RBeta
     Scenario: Verify the Add To Cart functionality and check the product name-Desktop
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
     And User click on the product image
-    Then User add product to cart and validate the price title and image of the product
-
     
     @Regression @C-PDP @Web @All @KER-1920 @ZYP_PDP_K1920-5840 @CR-AG
     Scenario: Verify the Add To Cart functionality and close the popup-Desktop
@@ -65,7 +59,7 @@ Feature: To Verify the Add To Cart Functionality
     And user click on ship it button
     And then user close the add to cart popup
     
-      @Regression @C-PDP @Web @All @KER-1920 @ZYP_PDP_K1920-5270 @CR-AG
+    @Regression @C-PDP @Web @All @KER-1920 @ZYP_PDP_K1920-5270 @CR-AG
     Scenario:  Verify the  checkout functionality-Desktop
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -73,6 +67,5 @@ Feature: To Verify the Add To Cart Functionality
     #Then user click on Add to cart button
     And user click on ship it button
 	And user click on viewcart button
-     And user click on checkout button
    
   
