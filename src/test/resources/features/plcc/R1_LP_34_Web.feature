@@ -81,7 +81,7 @@ Scenario: Verify the navigation of Footer Links -ThisIsAcademy Section
 	Then user click on Investors and navigates to Investors Page
 	
 	
-@C-PLCC @Regression @All @PLCC-34 @CR-VS  
+@C-PLCC @Regression @All @PLCC-34 @CR-Manju 
 Scenario: Verify the navigation of Footer Links -NeedHelp Section
 	When user expect element NeedHelp to be present
 	And user expect element CheckOrder to be present 
@@ -104,7 +104,7 @@ Scenario: Verify the navigation of Footer Links -NeedHelp Section
 	When user expect element CustomerCare to be present
 	Then user click on CustomerCare and navigates to CustomerCare Page
 	
-@C-PLCC @Regression @All @PLCC-34 @CR-VS  
+@C-PLCC @Regression @All @PLCC-34 @CR-Manju
 Scenario: Verify the navigation of Footer Links -Services Section
 	And user expect element Services to be present
 	When user expect element ShopGiftCards to be present 
@@ -122,7 +122,7 @@ Scenario: Verify the navigation of Footer Links -Services Section
 	#When user expect element CheckGiftCradBalance to be present 
 	#Then user click on CheckGiftCradBalance and navigates to CheckGiftCradBalance Page
 	
-@C-PLCC @Regression @All @PLCC-34 @CR-VS 
+@C-PLCC @Regression @All @PLCC-34 @CR-Manju
 Scenario: Verify the navigation of Footer Links - General
     #When user expect element FindInStoreFooter to be present 
     #Then user click on FindInStoreFooter and navigates to FindInStoreFooter Page
@@ -147,7 +147,7 @@ Scenario: Verify the navigation of Footer Links -Social Media Links
 	When user click on instagram icon
 	Then user navigates to instagram page and validate instagram page url
 	
-@C-PLCC @Regression @All @PLCC-34 @CR-VS  
+@C-PLCC @Regression @All @PLCC-34 @CR-Manju
 Scenario: Verify the navigation of Footer Links -T&C Links
 	When user expect element PrivacyPolicy to be present 
 	Then user click on PrivacyPolicy link in the footer section of ASO-Home page
