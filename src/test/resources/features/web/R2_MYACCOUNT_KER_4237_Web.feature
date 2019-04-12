@@ -1,6 +1,6 @@
 Feature: E03-100 - My Account, Order Details 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Web @Regression @R2_All @P-High @C-MyAccount @KER-4237 
 @ZYP_MYACCOUNT_K4237-10510 @CR-GK 
 Scenario: Verify that Authenticated User is able to view order list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -24,7 +24,7 @@ Scenario: Verify that Authenticated User is able to view order list
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Web @Regression @R2_All @P-High @C-MyAccount @KER-4237 
 @ZYP_MYACCOUNT_K4237-10511 @CR-GK @1HR_R2 
 Scenario: 
 	Verify that Order search field is displayed if Authenticated user does not have any orders 
@@ -52,7 +52,9 @@ Scenario:
 	Then User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button
-	And user click on checkout from ATC pop up 
+	And user will click on View Cart button
+	And user click on checkout button in Cart page
+	And user enters valid cvv value "ThreeDigitCVV"  
 	Then user click on review order button 
 	And user able to see the button place order 
 	And user navigates from Order successful page to Orders in my account 
@@ -119,7 +121,9 @@ Scenario: Verify that Authenticated user is able to Print Order receipt
 	Then User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button 
-	And user click on checkout from ATC pop up 
+	And user will click on View Cart button
+	And user click on checkout button in Cart page
+	And user enters valid cvv value "ThreeDigitCVV" 
 	Then user click on review order button 
 	And user able to see the button place order 
 	And user navigates from Order successful page to Orders in my account 
@@ -173,7 +177,8 @@ Scenario: Verify that UnAuthenticated user is able to print order receipt
 	Then User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button
-	And user click on checkout from ATC pop up 
+	And user will click on View Cart button
+	And user click on checkout button in Cart page 
 	Then user click on review order button 
 	And user able to see the button place order 
 	And user navigates from Order successful page to Orders in my account 

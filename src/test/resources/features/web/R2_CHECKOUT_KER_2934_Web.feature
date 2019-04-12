@@ -37,7 +37,7 @@ Scenario: Verify if unauthenticated user be presented with the blank shipping ad
 	#	And User Navigates L2 form Homepage Header 
 	#     And User clicks on product in PLP
 	When User searches a product "productName" and navigates to PDP 
-	#And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 	
 	And user click on ship it button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 

@@ -848,7 +848,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	// Start KER-4330 CR-MS Sep25
 
-	@FindBy(xpath = "//*[contains(text(),'IN-STORE PICKUP')]")
+	//@FindBy(xpath = "//*[contains(text(),'IN-STORE PICKUP')]")
+	@FindBy(xpath = "//*[contains(text(),'Store Pickup from')]")//Modified by HP 04/11/19 to fix KER-4237
 	public WebElement Order_Bopis_In_Store_Pickup_txt;
 
 	@FindBy(xpath = "//*[contains(text(),'PICKUP INFORMATION')]")
