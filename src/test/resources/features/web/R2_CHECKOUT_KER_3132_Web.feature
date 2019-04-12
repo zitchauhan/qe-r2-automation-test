@@ -200,11 +200,11 @@ Scenario: Verify guest user is able to see the See In-Store Pickup Instructions 
 	And user click on checkout button in Cart page 
 	When user clicks on Go to payment CTA
 	And user should not be able to see Same as Shipping Address checkbox
-	And user expand gift card option
-	And user enter Gift card Number "Valid16DigitGiftCardNumber" 
-	And user enter Pin Number "Valid8DigitGiftCardPIN" 
-	And user click on Apply button 
-	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
-	And user clicks on Review order button on checkout page
+#	And user expand gift card option
+#	And user enter Gift card Number "Valid16DigitGiftCardNumber" 
+#	And user enter Pin Number "Valid8DigitGiftCardPIN" 
+#	And user click on Apply button 
+#	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
+#	And user clicks on Review order button on checkout page
 	
 

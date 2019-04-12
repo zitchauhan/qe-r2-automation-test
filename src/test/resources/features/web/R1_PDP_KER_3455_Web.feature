@@ -17,8 +17,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
 	And user click on football helmets
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 
-	And verfiy add to cart functionality 
-    Then User Verify Bundle price in ATC notification
+	
 
   @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-4813 @CR-RKA
   Scenario: Verify the View Cart functionality in Bundle ATC notification
@@ -27,8 +26,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
 	And user click on football helmets
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 
-	And verfiy add to cart functionality 
-    Then User Verify view cart functionality in ATC noticfication
+	
 
   @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-4814 @CR-RKA @RBeta
   Scenario: Verify the Check Out Button functionality in ATC notification for Bundle product for sign in user
@@ -39,8 +37,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
 	And user click on football helmets
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 
-	And verfiy add to cart functionality 
-    Then User Verify checkout button in ATC notification
+	
 
   @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-6632 @CR-RKA @RBeta
   Scenario: Verify the Check Out Button functionality in ATC notification for Bundle product-Guest User
@@ -49,8 +46,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
 	And user click on football helmets
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 
-	And verfiy add to cart functionality 
-    Then User Verify checkout button in ATC notification
+	
 
   @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-6633 @CR-RKA @1HR @RBeta
   Scenario: Verify Component & Diff Selection for each component
@@ -60,10 +56,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
 	And user click on football helmets
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 
-	And verfiy add to cart functionality 
-    Then User Verify Bundle price in ATC notification
-    Then User Verify view cart functionality in ATC noticfication
-    Then User Verify checkout button in ATC notification
+	
 
   @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-4799 @CR-RKA @RBeta
   Scenario: Verify the Limited Quantity Messaging in Add to Cart Notification for Bundles
@@ -72,8 +65,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
 	And user click on football helmets
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 
-	And verfiy add to cart functionality 
-    Then verify Sorry the selected item is limited to XYZ order.
+	
 
 
   @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-4805 @CR-RKA @1HR @RBeta
@@ -83,8 +75,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
 	And user click on football helmets
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 
-	And verfiy add to cart functionality 
-    Then User Verify bundle image in ATC notification
+	
 
   @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-4807 @CR-RKA @RBeta
   Scenario: Verify the Bundle Product Name in ATC notification
@@ -93,5 +84,4 @@ Feature: [Desktop]Bundles - Add to Cart Notification
 	And user click on football helmets
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 
-	And verfiy add to cart functionality 
-    Then User verify name of added product in ATC notification 
+	

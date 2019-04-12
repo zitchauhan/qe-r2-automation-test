@@ -155,12 +155,7 @@ Feature: Verify presence of Global Element Footer
     Then User will verify the presence of sign up for more deals
     And User click on sign up for more deals and verify the modal
     Then user enter the data and click on submit
-     And user verify the success message
-     Then User should be able to click on Find Store in footer
-     When User select store with Postal Code in Find A Store page "Postal_Code"
-     Then User verify hour of operation display in the place of find a store link    
-     Then User verify have to verify change link with pencil icon 
-     Then user click on the chat now and verify the chat now pop up is opened
+     
 
    
    

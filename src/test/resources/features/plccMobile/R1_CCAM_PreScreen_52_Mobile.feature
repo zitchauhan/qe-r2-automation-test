@@ -45,6 +45,48 @@ Scenario: Verify the system behavior when user clicks on Continue button on Pres
 	And user verify presence of STEP2: CONSENT 
 	And user select credit application modal agree message 
 	
+	@C-PLCC @Regression @All @PLCC-52 @CR-Manju	
+	 Scenario: Verify the system behavior when user clicks on Cancel link on Prescreen Modal
+		And user clear and enter First Name on credit card Application Modal "FirstName"
+		And user clear and enter Last Name on credit card Application Modal "LastName"
+		And user enter Last four SSN "Last4DigitsOfSSNP"
+		And user enter Confirm Last four SSN "ConfirmSSNP"
+		And user enetr Date of Birth "DOB" 
+		And user enter Annual Income "AnnualIncome"
+		And user enter Street Address "StreetAddress" 
+		And user clear and enter Street Address "StreetAddress" 
+		And user enter Suite or Apartment "SuiteOrApartment"
+		And user clear and enter City "City"
+		And user select State "State"
+		And user enter Zip Code on credit card Application Modal "ZipCode"
+		And user clear and enter Zip Code on credit card Application Modal "ZipCode"
+		And user enter Email Address on credit card Application Modal "EmailId"
+		And user enter Mobile Phone "MobilePhone"
+		And user enter Alternate Phone "AlternatePhone"
+		When user click on cancel link
+		Then user expect Landing page to be present
+		
+	 Scenario: Verify the system behavior when user clicks on Cancel link on Prescreen Consent Modal
+		And user clear and enter First Name on credit card Application Modal "FirstName"
+		And user clear and enter Last Name on credit card Application Modal "LastName"
+		And user enter Last four SSN "Last4DigitsOfSSNP"
+		And user enter Confirm Last four SSN "ConfirmSSNP"
+		And user enetr Date of Birth "DOB" 
+		And user enter Annual Income "AnnualIncome"
+		And user enter Street Address "StreetAddress" 
+		And user clear and enter Street Address "StreetAddress" 
+		And user enter Suite or Apartment "SuiteOrApartment"
+		And user clear and enter City "City"
+		And user select State "State"
+		And user enter Zip Code on credit card Application Modal "ZipCode"
+		And user clear and enter Zip Code on credit card Application Modal "ZipCode"
+		And user enter Email Address on credit card Application Modal "EmailId"
+		And user enter Mobile Phone "MobilePhone"
+		And user enter Alternate Phone "AlternatePhone"
+		And user click on CONTINUE button
+		When user click on cancel link
+		Then user expect Landing page to be present
+	
 	#@C-PLCC @Regression @All @PLCC-52 @CR-Manju	@Mobile
 	# Scenario: Verify user is able to Edit prefilled data available on Prescreen model
 	#	And user clear and enter First Name on credit card Application Modal "FirstName"
@@ -64,51 +106,6 @@ Scenario: Verify the system behavior when user clicks on Continue button on Pres
 	#	And user enter Mobile Phone "MobilePhone"
 	#	And user enter Alternate Phone "AlternatePhone"
 	#	And user click on CONTINUE button
-	#	
-	#
-	#@C-PLCC @Regression @All @PLCC-52 @CR-Manju	
-	# Scenario: Verify the system behavior when user clicks on Cancel link on Prescreen Modal
-	#	And user clear and enter First Name on credit card Application Modal "FirstName"
-	#	And user clear and enter Last Name on credit card Application Modal "LastName"
-	#	And user enter Last four SSN "Last4DigitsOfSSNP"
-	#	And user enter Confirm Last four SSN "ConfirmSSNP"
-	#	And user enetr Date of Birth "DOB" 
-	#	And user enter Annual Income "AnnualIncome"
-	#	And user enter Street Address "StreetAddress" 
-	#	And user clear and enter Street Address "StreetAddress" 
-	#	And user enter Suite or Apartment "SuiteOrApartment"
-	#	And user clear and enter City "City"
-	#	And user select State "State"
-	#	And user enter Zip Code on credit card Application Modal "ZipCode"
-	#	And user clear and enter Zip Code on credit card Application Modal "ZipCode"
-	#	And user enter Email Address on credit card Application Modal "EmailId"
-	#	And user enter Mobile Phone "MobilePhone"
-	#	And user enter Alternate Phone "AlternatePhone"
-	#	When user click on cancel link
-	#	Then user expect Landing page to be present
-	#	
-	#@C-PLCC @Regression @All @PLCC-52 @CR-Manju	@Mobile
-	# Scenario: Verify the system behavior when user clicks on Cancel link on Prescreen Consent Modal
-	#	And user clear and enter First Name on credit card Application Modal "FirstName"
-	#	And user clear and enter Last Name on credit card Application Modal "LastName"
-	#	And user enter Last four SSN "Last4DigitsOfSSNP"
-	#	And user enter Confirm Last four SSN "ConfirmSSNP"
-	#	And user enetr Date of Birth "DOB" 
-	#	And user enter Annual Income "AnnualIncome"
-	#	And user enter Street Address "StreetAddress" 
-	#	And user clear and enter Street Address "StreetAddress" 
-	#	And user enter Suite or Apartment "SuiteOrApartment"
-	#	And user clear and enter City "City"
-	#	And user select State "State"
-	#	And user enter Zip Code on credit card Application Modal "ZipCode"
-	#	And user clear and enter Zip Code on credit card Application Modal "ZipCode"
-	#	And user enter Email Address on credit card Application Modal "EmailId"
-	#	And user enter Mobile Phone "MobilePhone"
-	#	And user enter Alternate Phone "AlternatePhone"
-	#	And user click on CONTINUE button
-	#	When user click on cancel link
-	#	Then user expect Landing page to be present
-	#	
 	#@C-PLCC @Regression @All @PLCC-52 @CR-Manju	@Mobile
 	# Scenario: Verify the system behavior when user clicks on Cancel link_Generic Credit Card Modal
 	#	When user click on cancel link

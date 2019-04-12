@@ -32,10 +32,15 @@ public class R1_PDP_K3455_SD extends CommonActionHelper{
 	}
 	@Then("^User to verify product is successfully added in cart$")
 	public void user_to_verify_product_is_successfully_added_in_cart() throws Throwable {
-		if("mobile".equalsIgnoreCase(testtype)){	
-			assertTrue(isDisplayed(p_po.msgItemAddedSuccessfully_M));
-		}else {
-				assertTrue(isDisplayed(p_po.msgItemAddedSuccessfully));		
+		try {
+			if("mobile".equalsIgnoreCase(testtype)){	
+				assertTrue(isDisplayed(p_po.msgItemAddedSuccessfully_M));
+			}else {
+					assertTrue(isDisplayed(p_po.msgItemAddedSuccessfully));		
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 

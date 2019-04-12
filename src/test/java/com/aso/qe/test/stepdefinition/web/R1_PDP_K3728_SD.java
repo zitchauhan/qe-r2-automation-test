@@ -71,14 +71,19 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 	
 	@Then("^verfiy add to cart functionality$")
 	public void verfiy_add_to_cart_functionality() throws Throwable {
-		Actions hover=new Actions(getDriver());
-		hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
-		assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
-		pdpPageObj.checkBtnNext();
-		assertTrue(clickOnButton(pdpPageObj.btnNextStep));
-		pdpPageObj.addToCartAvailability();
-		//assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
-		assertTrue(clickOnButton(pdpPageObj.shipItButton));
+		try {
+			Actions hover=new Actions(getDriver());
+			hover.moveToElement(pdpPageObj.imgSubHelmetsCategory);
+			assertTrue(clickOnButton(pdpPageObj.imgSubHelmetsCategory));
+			pdpPageObj.checkBtnNext();
+			assertTrue(clickOnButton(pdpPageObj.btnNextStep));
+			pdpPageObj.addToCartAvailability();
+			//assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+			assertTrue(clickOnButton(pdpPageObj.shipItButton));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 //	@Then("^verfiy add to cart functionality$")

@@ -83,17 +83,27 @@ public class R1_PLP_K555_SD extends CommonActionHelper{
 	@Then("^Verify the selected filtered products \"(.*?)\"\"(.*?)\"\"(.*?)\"are displayed in product grid$")
 	public void verify_the_selected_filtered_products_are_displayed_in_product_grid(String price, String brandName, String color) throws Throwable {
 
-		boolean flag = searchProductPO.checkedselectedfacet_container(searchProductPO.selectedfacet_containerList,price,brandName,color);
-		logger.debug("selected filters are found:"+flag);
+		try {
+			boolean flag = searchProductPO.checkedselectedfacet_container(searchProductPO.selectedfacet_containerList,price,brandName,color);
+			logger.debug("selected filters are found:"+flag);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@Then("^User should be able to unselect \"(.*?)\"\"(.*?)\"\"(.*?)\" the same checkbox for all the filters$")
 	public void user_should_be_able_to_unselect_the_same_checkbox_for_all_the_filters(String price, String brandName, String color) throws Throwable {
-		if("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(clickOnButton(searchProductPO.clearAllfacet_containerMobile));
-			//clickOnButton(searchProductPO.applyFilterfacet_containerMobile);
-		}else{
-			searchProductPO.checkedselectedfacet_containerClearAll(searchProductPO.selectedfacet_containerList);	
+		try {
+			if("mobile".equalsIgnoreCase(testtype)) {
+				assertTrue(clickOnButton(searchProductPO.clearAllfacet_containerMobile));
+				//clickOnButton(searchProductPO.applyFilterfacet_containerMobile);
+			}else{
+				searchProductPO.checkedselectedfacet_containerClearAll(searchProductPO.selectedfacet_containerList);	
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 		

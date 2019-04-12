@@ -12,7 +12,6 @@ Scenario: To verify Product Wish List - Guest/PA User Flow (PDP) - Signup
 	And user confirm the successfully added modal
 	And user read the SKU number
 	Then User navigate to wishlist from header
-	Then user check for the item SKU
                
               
                  

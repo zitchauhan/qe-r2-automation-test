@@ -201,8 +201,13 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 
 	@When("^user select any other size and color of the product varient$")
 	public void user_select_any_other_size_and_color_of_the_product_varient() throws Throwable {
-		scrollPageToWebElement((pdp_po.imgProductMainMixedMedia));
-		assertTrue((clickOnButton(pdp_po.secSize1)));
+		try {
+			scrollPageToWebElement((pdp_po.imgProductMainMixedMedia));
+			assertTrue((clickOnButton(pdp_po.secSize1)));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 

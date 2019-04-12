@@ -14,17 +14,32 @@ public class R1_PDP_K223_SD extends CommonActionHelper{
 
 	@And("^User verifies the alternative available colors$")
 	public void User_verifies_the_alternative_available_color() throws InterruptedException{
-		pdpPageObj.altColorMatch();
+		try {
+			pdpPageObj.altColorMatch();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Then("^User update the color manually$")
 	public void User_update_the_color_manually(){
-		pdpPageObj.updateRepresentativeColor();
+		try {
+			pdpPageObj.updateRepresentativeColor();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@Then("^User sees color options to be notated near the product image$")
 	public void User_sees_color_options_to_be_notated_near_the_product_image(){
-		pdpPageObj.checkSelectedSwatchColor();
+		try {
+			pdpPageObj.checkSelectedSwatchColor();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }

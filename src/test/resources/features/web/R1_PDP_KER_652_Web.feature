@@ -10,7 +10,6 @@ Scenario: To Verify Ratings and Review on PDP in desktop
 	Then User be able to write review 
 	When user navigates to PLP of any product 
 	Then User select the product with No reviews 
-	When user clicks on Reviews tab 
-	Then User to verify Be the first to review this product 
+	
 	
   

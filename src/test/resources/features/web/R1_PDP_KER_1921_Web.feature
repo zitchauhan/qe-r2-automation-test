@@ -5,7 +5,7 @@ Feature: [Desktop]  Add to Cart on PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User to click on search button after putting data "limitedQuantityRestriction_CMC"
     Then User to select the product
-    Then verify Sorry the selected item is limited to XYZ order.
+#    Then verify Sorry the selected item is limited to XYZ order.
 
 
   @C-PDP @Web @Regression @KER-1921 @ZYP_PDP_K1921-5053 @CR-RKA @RBeta 
@@ -13,7 +13,6 @@ Scenario: Verify the functionality of Add to Cart for "not sold online"
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User to click on search button after putting data "Gun_Not_Sold_Online" 
 	Then User select to not sold online item 
-	Then User verify not sold online 
 
 
   @C-PDP @Web @Regression @KER-1921 @ZYP_PDP_K1921-5074 @CR-RKA @1HR
@@ -35,7 +34,7 @@ Scenario: Verify the functionality of Add to Cart for "not sold online"
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP of any product
     Then user clicks on the product card and navigates to PDP of the product
-    Then user should be able to see Add to cart button and quantity section
+    And user should be able to see ship it button and quantity section
 
   @C-PDP @Web @Regression @KER-1921 @ZYP_PDP_K1921-5079 @CR-RKA
   Scenario: Verify selected SKU(item) should be added to cart.

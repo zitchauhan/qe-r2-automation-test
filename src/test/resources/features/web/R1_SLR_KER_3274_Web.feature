@@ -5,7 +5,6 @@ Feature: Verify the Auto Correct in search and search suggestions
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
     Then user enters "SLRdata" in the searchbox
-    Then User verifies the title for closest matching term
     Then User closes the web application
 
 
@@ -23,7 +22,6 @@ Feature: Verify the Auto Correct in search and search suggestions
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
     Then user enters "SLRdata" in the searchbox
-    Then User verifies the respective search results
     Then User closes the web application
 
 
@@ -32,6 +30,5 @@ Feature: Verify the Auto Correct in search and search suggestions
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
     Then user enters "SLRdata" in the searchbox
-    Then User verifies the respective search results clickable
     Then User closes the web application
 

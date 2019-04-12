@@ -31,13 +31,18 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 
 	@Then("^user select the \"(.*?)\" in filter$")
 	public void user_select_the_in_filters(String arg1) throws Throwable {
-		if("mobile".equalsIgnoreCase(testtype)) {
-		
-		//searchProductPO.expandFacetDrawer(searchProductPO.filterPricePlusBtnMobile);
-		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Color_CheckBox_ListMobile, webPropHelper.getTestDataProperty(arg1));
-		}else {
-		searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_List, webPropHelper.getTestDataProperty(arg1));
-	}
+		try {
+			if("mobile".equalsIgnoreCase(testtype)) {
+			
+			//searchProductPO.expandFacetDrawer(searchProductPO.filterPricePlusBtnMobile);
+			searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Color_CheckBox_ListMobile, webPropHelper.getTestDataProperty(arg1));
+			}else {
+			searchProductPO.selectUnselectFacetCheckBoxByIndex(searchProductPO.facet_Price_CheckBox_List, webPropHelper.getTestDataProperty(arg1));
+}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@Then("^user selects the \"(.*?)\" in filter$")
