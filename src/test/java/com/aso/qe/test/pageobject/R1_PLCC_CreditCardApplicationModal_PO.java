@@ -283,7 +283,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		else 
 		{
 			try {
-				WebElement element = driver.findElement(By.xpath("/content/dam/academysports/banner-mobile.jpg"));
+				WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-mobile.jpg']"));
 				JavascriptExecutor executor = (JavascriptExecutor)driver;
 				executor.executeScript("arguments[0].click();", element);
 				Thread.sleep(3000);
