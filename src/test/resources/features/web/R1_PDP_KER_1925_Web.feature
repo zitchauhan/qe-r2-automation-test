@@ -12,4 +12,3 @@ Feature: To verify Product Pricing Display on PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2
     Then Navigate to PLP and select one product with clearance
-    And User should able to see Strike Through Price with Actual price 

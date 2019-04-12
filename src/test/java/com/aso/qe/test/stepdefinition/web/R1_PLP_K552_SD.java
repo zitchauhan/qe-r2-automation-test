@@ -99,7 +99,12 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	
 	@Given("^User expands all Filter Options$")
 	public void user_expands_all_Filter_Options() throws Throwable {
-		assertTrue(searchProductPO.clickAllPlusFilterOptions());
+		try {
+			assertTrue(searchProductPO.clickAllPlusFilterOptions());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
@@ -154,15 +159,20 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 	@Given("^User expands PRICE Filter Option$")
 	public void user_expands_PRICE_Filter_Option() throws Throwable {
 		//searchProductPO.clickAllMinusFilterOptions();
-		R1_SearchProduct_PO.productDisplayCount = R1_SearchProduct_PO.getItemsCount();
-		if("mobile".equalsIgnoreCase(testtype)) {
-			driver =(RemoteWebDriver) driver.switchTo().defaultContent();
-			scrollPageToWebElement(Common_Web_SD.searchProductPO.filterPricePlusBtnMobile);	
-			assertTrue(clickOnButton(Common_Web_SD.searchProductPO.filterPricePlusBtnMobile));
-		}else {
-			searchProductPO.clickAllMinusFilterOptions();
-		assertTrue(clickOnButton(searchProductPO.filterPricePlusBtn));
-		
+		try {
+			R1_SearchProduct_PO.productDisplayCount = R1_SearchProduct_PO.getItemsCount();
+			if("mobile".equalsIgnoreCase(testtype)) {
+				driver =(RemoteWebDriver) driver.switchTo().defaultContent();
+				scrollPageToWebElement(Common_Web_SD.searchProductPO.filterPricePlusBtnMobile);	
+				assertTrue(clickOnButton(Common_Web_SD.searchProductPO.filterPricePlusBtnMobile));
+			}else {
+				searchProductPO.clickAllMinusFilterOptions();
+			assertTrue(clickOnButton(searchProductPO.filterPricePlusBtn));
+			
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 

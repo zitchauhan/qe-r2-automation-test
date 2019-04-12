@@ -3,6 +3,8 @@ package com.aso.qe.test.pageobject;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -38,7 +40,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement apartmentNameCCModal;
 	@FindBy(xpath = "//*[@data-auid='credit_application_city']")
 	public WebElement cityCModal;
-	@FindBy(xpath = "//img[src='/content/dam/academysports/banner-desktop.jpg']|//img[@class='css-ducv57']")
+	@FindBy(xpath = "//img[src='/content/dam/academysports/banner-desktop.jpg']|//img[@class='css-ducv57']|//img[@src='/content/dam/academysports/banner-tablet.jpg']|//img[@src='/content/dam/academysports/banner-mobile.jpg']")
 	//@FindBy(xpath = "//img[@alt='Banner']")
 	public WebElement bannerCartPage;
 	@FindBy(xpath = "//img[@src='/content/dam/academysports/banner-mobile.jpg']")
@@ -281,11 +283,12 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		else 
 		{
 			try {
-				WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-desktop.jpg']"));
+				WebElement element = driver.findElement(By.xpath("//img[src='/content/dam/academysports/banner-desktop.jpg']"));
 				JavascriptExecutor executor = (JavascriptExecutor)driver;
 				executor.executeScript("arguments[0].click();", element);
+				Thread.sleep(3000);
 				logger.debug("Banner on Cart Page is displayed");
-				
+								
 			} catch (Exception e) {
 				wait.until(ExpectedConditions.visibilityOf(bannerCartPage));
 				bannerCartPage.click();

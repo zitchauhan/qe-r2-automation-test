@@ -39,6 +39,7 @@ Scenario: Verify PLCC card information saved under customer profile
 	Then user navigates to credit card approval modal 
 	When user click on continue to checkout 
 	And user click on Academy Logo Icon
+	When user click on burger menu
 	And user click on My Account link of mobile
     And user click on Payments link 
 	Then user expect plcc card to be save in payments section of my account

@@ -10,5 +10,4 @@ Feature: To verify Detailed Product Content - Q&A Tab
     When user clicks on QandA tab
     Then user clicks should be able to see QandA section
     Then verfiy the Ask a question button
-    Then verfiy the answer this question
-    Then close the answer this question popup
+    

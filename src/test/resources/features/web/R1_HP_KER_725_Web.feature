@@ -27,6 +27,3 @@ Scenario: Sign In user, Ability for system to display No items in cart page with
 	Then user should able to click on Signin button
     And user should be able to enter the signin details "Login_username" "Login_pwd"
     And User clicks on the minicart icon and navigated to minicart 
-	Then User should be dispalyed with message Your Shopping Cart is Empty 
-	
-   

@@ -13,8 +13,7 @@ Feature: To verify Product Badging and Status - Ad Feature Display
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2
     And user expands the Ad badge filter
-    Then user click on price badge
-    And user verify the price badge color
+    
 
   @Web @All @KER-621 @ZYP_PLP_K621-6182 @Regression @C-PLP @CR-SG
   Scenario Outline: Verify the color of SHIP TO STORE BADGE

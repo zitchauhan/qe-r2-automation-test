@@ -18,7 +18,7 @@ When User searches a product "productName" and navigates to PDP
 #And user click on Add to Cart Button 
  And user click on ship it button 
 And user click on viewcart button 
-And user click on checkout button
+When user will click on Checkout button and navigates to Checkout page
 Then user click on edit Payment link and click on billing information
 Then user fill billing information after clicking on change billing information text 
 Then Verify below Sub/Main Module of Checkout Page
@@ -40,7 +40,7 @@ And User clicks on product in PLP
  #And user click on Add to Cart Button 
  And user click on ship it button 
 And user click on viewcart button 
-And user click on checkout button
+When user will click on Checkout button and navigates to Checkout page
 Then user click on edit Payment link and click on billing information
 Then user click on checkbox Same as shipping address 
 Then Verify below Sub/Main Module of Checkout Page
@@ -87,7 +87,7 @@ And user clicks on one of the category and navigates to LOne
  #And user click on Add to Cart Button 
 	And user click on ship it button
 	And user click on viewcart button
-	And user click on checkout button
+	When user will click on Checkout button and navigates to Checkout page
 Then user click on edit Payment link and click on billing information
 Then user fill billing information after clicking on change billing information text
 #only validation is nedded after clicking confirm btn
