@@ -104,7 +104,7 @@ Scenario:
 	And User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button 
-	Then user click on checkout from ATC pop up 
+	Then user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	Then user click on paypal radiobtn 
@@ -126,7 +126,7 @@ Scenario:
 	And User is navigated to pdp page 
 	#And user click on Add to Cart Button 
 	And user click on ship it button 
-	Then user click on checkout from ATC pop up 
+	Then user click on checkout button in Cart page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -142,7 +142,7 @@ Scenario: Verify the user is navigated to the PayPal page
 	And User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button 
-	Then user click on checkout from ATC pop up 
+	Then user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	Then user click on paypal radiobtn 
@@ -162,7 +162,7 @@ Scenario:
 	And User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button 
-	Then user click on checkout from ATC pop up 
+	Then user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "newly registered" user 
 	And user selects shipment method on check out page for "newly registered" user 
 	Then user click on paypal radiobtn 
@@ -190,7 +190,7 @@ Scenario:
 	#And user click on Add to Cart Button 
 	And user click on ship it button
 	And user click on viewcart button 
-	Then user click on checkout from ATC pop up 
+	Then user click on checkout button in Cart page 
 	Then user click on paypal radiobtn 
 	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
@@ -206,7 +206,7 @@ Verify the authenticated user cannot pay the remaining or partial order amount u
 	#And user click on Add to Cart Button 
 	And user click on ship it button
 	And user click on viewcart button
-	Then user click on checkout from ATC pop up 
+	Then user click on checkout button in Cart page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
@@ -226,7 +226,7 @@ Scenario:
 	#And user click on Add to Cart Button 
 	And user click on ship it button
 	And user click on viewcart button
-	Then user click on checkout from ATC pop up 
+	Then user click on checkout button in Cart page 
 	And user selects terms and conditions checkbox for SOF items 
 	#	And user enter First name "FirstName" 
 	#	And user enter Last name "LastName" 
@@ -248,7 +248,7 @@ Verify guest user cannot select Paypal as Payment method on checkout for SOF pro
 	#And user click on Add to Cart Button 
 	And user click on ship it button
 	And user click on viewcart button
-	Then user click on checkout from ATC pop up 
+	Then user click on checkout button in Cart page 
 	And user selects terms and conditions checkbox for SOF items 
 	#	And user enter First name "FirstName" 
 	#	And user enter Last name "LastName" 
@@ -268,7 +268,7 @@ Verify the user is navigated back to the Academy.com once PayPal payment process
 	#And user click on Add to Cart Button 
 	And user click on ship it button
 	And user click on viewcart button 
-	Then user click on checkout from ATC pop up 
+	Then user click on checkout button in Cart page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
 	And user enter Phone number "PhoneNumber" 
