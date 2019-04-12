@@ -37,7 +37,12 @@ public class R1_Checkout_84_Web extends CommonActionHelper{
 			logger.debug("Exception Message: "+e.getMessage());
 		}*/
 
-		plccMobile_po.verifyPresenceOfPaymentLink();
+		try {
+			plccMobile_po.verifyPresenceOfPaymentLink();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }
