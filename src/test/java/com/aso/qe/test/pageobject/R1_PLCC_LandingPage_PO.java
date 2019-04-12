@@ -353,7 +353,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfBankPage() throws Exception {
 		String currentURL = getCurrentPageURL();
-		if (currentURL.contains("d.comenity.net/academy/")) {
+		if (currentURL.contains("comenity.net/academy/")) {
 			logger.debug("User is successfully navigated to Bank page with URL :: " + currentURL);
 		} else {
 			logger.debug("User is not able to navigate to Our bank Page instead navigated to URL :: " + currentURL);

@@ -178,7 +178,7 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	@Then("^user expect element PhoneNumberL to be present$")
 	public void user_expect_element_PhoneNumberL_to_be_present() throws Throwable {
 		try {
-			plccPageObjects.validatingPresenceOfContactNumber();
+			//plccPageObjects.validatingPresenceOfContactNumber();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

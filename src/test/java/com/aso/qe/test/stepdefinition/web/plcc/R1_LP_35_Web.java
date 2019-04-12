@@ -1,11 +1,16 @@
 package com.aso.qe.test.stepdefinition.web.plcc;
 
+import java.awt.Robot;
+import java.awt.datatransfer.StringSelection;
+
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_LandingPage_PO;
+import com.sun.glass.ui.Clipboard;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -20,6 +25,23 @@ public class R1_LP_35_Web extends CommonActionHelper{
 		plccLandingPageObjects.verifyPresenceOfManageYourCardLink();
 		plccLandingPageObjects.manageYourCardLink.click();
 	}
+//	@When("^user switch to the alert popup$")
+//	public void user_switch_to_the_alert_popup() throws Throwable {
+//			http://username:password@the-site.com 
+//	
+//			public void login(String uname, String pwd){
+//			  String URL = "__http://" + uname + ":" + pwd + "@" + TEST_ENVIRONMENT;
+//			  driver.get(URL);
+//			} 
+			 
+
+	//}
+	
+//	@When("^user switch to the alert popup with \"(.*?)\" and \"(.*?)\"$")
+//	public void user_switch_to_the_alert_popup_with_and(String uname, String pwd) throws Throwable {
+//		
+//
+//	}
 	@Then("^user navigates to bank page$")
 	public void user_navigates_to_bank_page() throws Throwable {
 		try {

@@ -73,7 +73,7 @@ public class R1_HP_K262_Global_Footer_SD extends CommonActionHelper{
 	}
 	@Then("^User will verify the presence of Contact Us$")
 	public void user_will_verify_the_presence_of_Contact_Us() throws Throwable {
-	//	globalElementHeader.validatingContactUs();
+		//globalElementHeader.validatingContactUs();
 
 
 	}
