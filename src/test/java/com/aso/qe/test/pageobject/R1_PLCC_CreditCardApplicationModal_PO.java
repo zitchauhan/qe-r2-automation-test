@@ -39,8 +39,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='credit_application_city']")
 	public WebElement cityCModal;
 	//@FindBy(xpath = "//img[contains(@src,'/content/dam/academysports/banner-desktop.jpg')]|//img[@class='css-ducv57']")
-	//@FindBy(xpath = "//img[@alt='Banner']")
-	@FindBy(xpath = "//img[@alt='Banner'")
+	@FindBy(xpath = "//img[@alt='Banner']")
 	public WebElement bannerCartPage;
 	@FindBy(xpath = "//img[@src='/content/dam/academysports/banner-mobile.jpg']")
 	public WebElement bannerCartPage_m;
