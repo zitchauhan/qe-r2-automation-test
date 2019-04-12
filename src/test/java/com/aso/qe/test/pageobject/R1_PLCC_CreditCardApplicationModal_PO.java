@@ -38,8 +38,8 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement apartmentNameCCModal;
 	@FindBy(xpath = "//*[@data-auid='credit_application_city']")
 	public WebElement cityCModal;
-	//@FindBy(xpath = "//img[contains(@src,'/content/dam/academysports/banner-desktop.jpg')]|//img[@class='css-ducv57']")
-	@FindBy(xpath = "//img[@alt='Banner']")
+	@FindBy(xpath = "//img[src='/content/dam/academysports/banner-desktop.jpg']|//img[@class='css-ducv57']")
+	//@FindBy(xpath = "//img[@alt='Banner']")
 	public WebElement bannerCartPage;
 	@FindBy(xpath = "//img[@src='/content/dam/academysports/banner-mobile.jpg']")
 	public WebElement bannerCartPage_m;
@@ -281,15 +281,14 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		else 
 		{
 			try {
-				wait.until(ExpectedConditions.visibilityOf(bannerCartPage));
-				bannerCartPage.click();
-			} catch (Exception e) {
-				isDisplayed(bannerCartPage);
-				wait.until(ExpectedConditions.visibilityOf(bannerCartPage));
 				WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-desktop.jpg']"));
 				JavascriptExecutor executor = (JavascriptExecutor)driver;
 				executor.executeScript("arguments[0].click();", element);
 				logger.debug("Banner on Cart Page is displayed");
+				
+			} catch (Exception e) {
+				wait.until(ExpectedConditions.visibilityOf(bannerCartPage));
+				bannerCartPage.click();
 			}
 		}
 	}
