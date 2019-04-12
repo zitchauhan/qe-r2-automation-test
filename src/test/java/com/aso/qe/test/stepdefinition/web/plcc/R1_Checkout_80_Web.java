@@ -276,6 +276,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 			e.printStackTrace();
 		}
 	}
+	
 
 	@When("^user expect credit card text field is present$")
 	public void user_expect_credit_card_text_field_is_present() throws Throwable {
@@ -1015,6 +1016,18 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
-
+	@Then("^user adds shipment address on checkout page for guest user plcc$")
+	public void user_adds_shipment_address_on_checkout_page_for_guest_user_plcc() throws Throwable {
+		setInputText(r2CheckOutPo.inputCheckoutFirstName, webPropHelper.getTestDataProperty("FirstName"));
+		setInputText(r2CheckOutPo.inputCheckoutLasttName, webPropHelper.getTestDataProperty("LastName"));
+		setInputText(r2CheckOutPo.inputCheckoutPhoneNumber, r2MyAccountPO.generateRandomMobileNumber());
+		setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty("Address"));
+		setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("zipcode"));
+		assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
+		Thread.sleep(9000);
+		r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn.click();
+	
+	}
 }

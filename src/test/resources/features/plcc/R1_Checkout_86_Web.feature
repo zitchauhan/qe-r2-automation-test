@@ -101,9 +101,7 @@ Feature: PLCC: Checkout_Payment Using PLCC
 	When user handles adding new card "ValidDiscoverCard" if already card is saved
 	And user enter cvv "cvv"
 	And user click on confirm button plcc
-	When user click on My Account link
-	And user click on Payments link
-	Then delete all credit cards from My Account
+
 	
 	
 	

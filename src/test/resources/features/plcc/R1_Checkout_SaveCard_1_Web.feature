@@ -12,9 +12,8 @@ Scenario: Default ASO/PLcc credit card should be displayed on payment section fo
 	And user click on viewcart button
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
-#	And user click on checkout from ATC pop up plcc 
-	And user clicks on checkout button and navigates to checkout page 
-	And user expect element credit card text field is present 
+	And user clicks on checkout button and navigates to checkout page
+	And user adds shipment address on checkout page for guest user plcc
 	When user handles adding new card "ValidPLCCCard" if already card is saved 
 	And user check element payment section to be present 
 	And user click on REVIEW ORDER button 
@@ -52,7 +51,8 @@ Scenario: Verify the default payment method when user tries to place an another 
 	And user click on viewcart button 
 	Then user navigates to Cart Page 
 	And user clicks on checkout button on cart page 
-	And user clicks on checkout button and navigates to checkout page 
+	And user clicks on checkout button and navigates to checkout page
+	And user adds shipment address on checkout page for guest user plcc
 	And user expect element credit card text field is present 
 	When user handles adding new card "ValidPLCCCard" if already card is saved 
 	And user check element payment section to be present 

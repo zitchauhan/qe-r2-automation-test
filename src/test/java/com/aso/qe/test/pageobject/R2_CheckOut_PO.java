@@ -84,6 +84,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 
 	@FindBy(xpath = "//*[@name='city']")
 	public WebElement inputCheckoutCity;
+	
 
 	@FindBy(xpath = "//*[@data-auid='btncheckout_goto_shipping_method_btn']")
 	public WebElement btnGoToShippingMethod;

@@ -44,7 +44,7 @@ Scenario: Verify user is able to navigate to confirm order page by clicking on r
 	Then delete all credit cards from My Account 
 	
 	
-@C-PLCC @Regression @All @PLCC-84 @CR-VS @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-84 @CR-VS @AutomationSanityR2 
 Scenario: Verify user is able to navigate to confirm order page by using VISA Credit card card 
 	When user handles adding new card "ValidVISACard" if already card is saved 
 	And user enter expiry date "ExpiryDate" 

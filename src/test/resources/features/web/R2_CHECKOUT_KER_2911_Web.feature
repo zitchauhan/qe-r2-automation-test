@@ -1,4 +1,4 @@
-Feature: Verify Accurate Shipping Prices at Checkout
+ Feature: Verify Accurate Shipping Prices at Checkout
 
 @R2_Web @Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-2911 @ZYP_CHECKOUT_K2911-8229 @CR-DPK
 Scenario: Verify if the shipping price on Checkout screen is same as Order Summary on Cart page

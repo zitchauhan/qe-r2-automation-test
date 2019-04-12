@@ -53,7 +53,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
 		}
 	}
-
+	
 	@And("^user selects shipment method on check out page for \"(.*?)\" user$")
 	public void user_selects_shipment_method_on_check_out_page_for_user(String arg1) throws Throwable {
 		boolean userWithoutExistingShippingMethod = false;
@@ -70,6 +70,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		if (userWithoutExistingShippingMethod)
 			assertTrue(clickOnButton(r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn));
 	}
+
 
 	////// Implemented only for guest, and newly registered user
 	@And("^user add \"(.*?)\" details in payment method for \"(.*?)\" user$")
