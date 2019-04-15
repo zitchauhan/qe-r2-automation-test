@@ -112,6 +112,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		try {
 			plccLandingPageObjects.verifyPresenceOfSearchIcon();
 			plccLandingPageObjects.searchIcon.click();
+			driver.navigate().refresh();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

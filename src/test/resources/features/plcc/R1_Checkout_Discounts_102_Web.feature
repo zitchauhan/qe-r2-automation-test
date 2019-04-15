@@ -8,7 +8,7 @@ Background:  Common Pre-requisite steps
 	And user enter password in sign-in page "passwordPlcc" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
-	#And user expect element ASO Home Page Title to be present
+	#And user expect element ASO Home Page Title wto be present
 	When user enters "skuIdGr150" in the search box plcc
 	And user click on search icon 
 	And user click on ship it button
@@ -19,7 +19,7 @@ Background:  Common Pre-requisite steps
 	Then delete all credit cards from My Account
 	When user clicks on cart icon
  	Then user navigates to cart page
-	
+ 		
 @C-PLCC @Regression @All @PLCC-102 @CR-VS	
 Scenario: Verify user is able to get Welcome offer of 15% when Basket <=$100
  	And user increases quantity "ItemQuantity3" of product
