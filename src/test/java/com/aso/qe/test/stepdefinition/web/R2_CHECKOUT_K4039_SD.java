@@ -31,12 +31,12 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 	
 	}
 
-	@Then("^user click on paypal$")
+	/*@Then("^user click on paypal$")
 	public void user_click_on_paypal() throws Throwable {
 //	    waitForElement(r2CheckOutPo.PayPal_radioBtn);
 		clickOnButton(r2CheckOutPo.PayPal_radioBtn);
 		Thread.sleep(Constants.thread_medium);
-	}
+	}*/ //Duplicate of below at line 48
 	
 	@Then("^user change the quantity of item in PDP$")
 	public void user_change_the_quantity_of_item_in_PDP() throws Throwable {
@@ -48,7 +48,9 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 	@Then("^user click on paypal radiobtn$")
 	public void user_click_on_paypal_radiobtn() throws Throwable {
 	   clickOnButton(r2CheckOutPo.PayPal_radioBtn);
+	   Thread.sleep(Constants.thread_medium);
 	}
+	
 	@Then("^user switch to iframe and enter the paypal login \"(.*?)\" \"(.*?)\"$")
 	public void user_switch_to_iframe_and_enter_the_paypal_login(String arg1, String arg2) throws Throwable {
 		String winHandleBefore = driver.getWindowHandle();
