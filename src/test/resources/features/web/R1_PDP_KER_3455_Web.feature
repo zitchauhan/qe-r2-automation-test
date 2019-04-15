@@ -7,8 +7,6 @@ Feature: [Desktop]Bundles - Add to Cart Notification
 	And user click on football helmets
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 
-	And verfiy add to cart functionality 
-    Then User to verify product is successfully added in cart
 
   @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-4812 @CR-RKA @1HR
   Scenario: Verify the Bundle Price in ATC notification

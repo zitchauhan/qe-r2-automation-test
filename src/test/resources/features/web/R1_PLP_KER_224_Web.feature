@@ -68,7 +68,6 @@ Feature: [Web]  Product Card
   Scenario: Verify the Alternative color option in Product Card
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3
-    And User verifies the alternative available colors
 
   @C-PLP @Web @Regression @KER-224 @ZYP_PLP_K224-2893 @CR-RKA
   Scenario: Verify BazaarVoice Customer Review Ratings

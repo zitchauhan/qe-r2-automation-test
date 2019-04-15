@@ -7,5 +7,4 @@ Feature: verify ability to hide certain categories on homepage, LHN and Category
     Then user clicks on the shooting and navigates to PDP of the product
     Then user should be able to see PDP mention in the current url
     And User should add affcode into current url
-    Then User should not able to see shooting products
     Then User closes the web application

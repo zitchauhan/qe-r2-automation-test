@@ -47,10 +47,6 @@ Scenario: To verify user is able to filter on Sub category landing page(L2)
 Scenario: To verify user is able to sort & filter on Sub category landing page(L2) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates to L2 from home page 
-	Then User should be able to see L2 Page 
-	Then navigate to sort by and navigate to best selling 
-	And user select the brand "brandName" 
-	
 	
 @Web @Regression @KER-710 @ZYP_HP_K710-2723 @C-HP @CR-RKA 
 Scenario: To verify user is able to sort & filter on Product Listing/landing page(L3) 
