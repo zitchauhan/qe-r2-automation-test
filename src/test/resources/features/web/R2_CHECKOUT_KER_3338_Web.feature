@@ -103,7 +103,8 @@ Scenario:
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
-	And user click on ship it button 
+	And user click on ship it button
+	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
@@ -125,7 +126,8 @@ Scenario:
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
 	#And user click on Add to Cart Button 
-	And user click on ship it button 
+	And user click on ship it button
+	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
@@ -141,7 +143,8 @@ Scenario: Verify the user is navigated to the PayPal page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
-	And user click on ship it button 
+	And user click on ship it button
+	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
@@ -161,7 +164,8 @@ Scenario:
 	And user creates an account 
 	And User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
-	And user click on ship it button 
+	And user click on ship it button
+	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "newly registered" user 
 	And user selects shipment method on check out page for "newly registered" user 
