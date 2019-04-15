@@ -56,7 +56,7 @@ Scenario:
 	And user enter Pin Number "Valid8DigitGiftCardPIN" 
 	And user click on Apply button 
 	And user click on remove gift card on checkout page 
-	Then user click on paypal 
+	Then user click on paypal radiobtn 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify Radio btn in checkout page|
 		|CreditCard_radioBtn|

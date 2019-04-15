@@ -241,7 +241,7 @@ Scenario:
 	And  clicks on Use Selected Address button 
 	And user clicks on edit shipping method cta 
 	And user click on go to payment present in shipping method 
-	Then user click on paypal 
+	Then user click on paypal radiobtn 
 	And user switch to iframe to verify paypalcheckoutBtn 
 	And  Verify below Sub/Main Module of Checkout Page 
 		|#%%%%%%   Verify user is able to see paypal checkout button %%%%%%%%%%|
