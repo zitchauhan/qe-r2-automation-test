@@ -29,13 +29,25 @@ public class R1_PDP_K1929_SD extends CommonActionHelper {
 			assertTrue(false);
 		}
 	}
+	@And("^user verify the inventory message for Pickup not available")
+	public void user_verify_the_inventory_message_for_Pickup_not_available() {
+		assertTrue(isDisplayed(sitObj.inventoryMessage));
+		String pdpMessage = sitObj.inventoryMessage.getText();
+		String message=webPropHelper.getTestDataProperty("Pickup not available");
+		System.err.println(message + "  but found "+pdpMessage);
+		if(message.equalsIgnoreCase(pdpMessage)) {
+			assertTrue(true);
+		}else {
+			assertTrue(false);
+		}
+	}
 	@And("^user verify the inventory message")
 	public void user_verify_the_inventory_message() {
 		assertTrue(isDisplayed(sitObj.inventoryMessage));
 		String pdpMessage = sitObj.inventoryMessage.getText();
-		String message=webPropHelper.getTestDataProperty("OutOfStock");
+		String message=webPropHelper.getTestDataProperty("OutOfStock1");
 		System.err.println(message + "  but found "+pdpMessage);
-		if(message.equalsIgnoreCase(pdpMessage)) {
+		if(message.contains(pdpMessage)) {
 			assertTrue(true);
 		}else {
 			assertTrue(false);

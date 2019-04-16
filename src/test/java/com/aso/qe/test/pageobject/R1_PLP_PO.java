@@ -32,7 +32,7 @@ public class R1_PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//*[@data-auid='sectionTitle']") public   WebElement txtSectionTitle; //SID 27-August
 	@FindBy(xpath="//*[@data-auid='shopbycategorysection']//*[@data-auid='shopByCategory_0']") public WebElement secCategory_CLP;//9aug danush
 	//@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]/parent::div)[3]") 	public   WebElement productPLP1;/RKA 16 aug
-	@FindBy(xpath="(//*[@id='productCardListing']/*/a)[2]")public   WebElement productPLP1;
+	@FindBy(xpath="(//*[@id='productCardListing']/*/a)[2]") public   WebElement productPLP1;
 	
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//img)[1]") 	public   WebElement productPLP1_Mobile;
 

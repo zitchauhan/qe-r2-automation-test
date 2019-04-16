@@ -26,8 +26,10 @@ Scenario: To verify Find a Store CTA for LSI message Limited Stock- Desktop
 @C-PDP @Web @Regression @KER-1929 @ZYP_HP_K1929-4319
 Scenario:  To verify Find a Store CTA for LSI message Not Sold in Stores- Desktop
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user enters "Not_Sold_in_Store" in the searchbox
-	And user verify the inventory message "Not Sold in Stores"
+#	When user enters "Not_Sold_in_Store" in the searchbox
+	When user enters "Not_Sold_in_Store" in the search box plcc
+	And user click on search icon
+	And user verify the inventory message
 	
 @C-PDP @Web @Regression @KER-1929 @ZYP_HP_K1929-4297 
 Scenario: To verify Find a Store CTA for LSI message Available Today- Desktop
@@ -41,17 +43,3 @@ Scenario: To verify Find a Store CTA for LSI message Available Today- Desktop
 	And user verify the "more stores" option is displayed
 	
 	
-	
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
-
