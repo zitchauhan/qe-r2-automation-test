@@ -20,6 +20,7 @@ public class R1_SLR_K3964_SD extends CommonActionHelper{
 	@Then("^User should be able to see Search Box on Homepage$")
 	public void User_should_be_able_to_see_Search_Box_on_Homepage() throws Throwable {
 		globalElementHeader.validatingTxtSearchBox();
+	
 
 	}
 	@Then("^User should be able to see Search Lens$")
