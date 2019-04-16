@@ -137,15 +137,17 @@ When user clicks on Find a Store
 	Then user enter "zipCode" in Find a Store Model
 	And user click on submit button
 	Then user click on plus icon in Store Address drawer
-	And user click on Make My store button	
-	Then user navigate to GunStorageAndSafty L_Three   
-    Then user select the product from L_Three and navigate to PDP
-    #And user click on Add to Cart Button 
-	And user click on ship it button
-    	And user is navigated to Add to cart Notification popup 
-	Then user click on checkout from ATC pop up
+	And user click on Make My store button
+	When user enters "SOFSKUNumber" in the searchbox
+	######NOTE:- Above 1 line was added in lieu of Below 2 lines because the item below lines were finding
+###### was not a STS item in UAT7. If any other env has STS item uncomment these & delete above 1 line	
+	#Then user navigate to GunStorageAndSafty L_Three   
+   # Then user select the product from L_Three and navigate to PDP  
+	And user click on ship it button 
+	And user click on viewcart button
+	And user click on checkout button in Cart page
 	And user does accepts the firearm specific compliance 
-	And user clicks on Continue button	
+	And user click on go to payment present in shipping method	
     Then verify that user navigates to payment drawer
 		And Verify below Sub/Main Module of Checkout Page 
 		|# Verify following section SPECIAL ORDER SHIP TO STORE in checkout page|
@@ -161,14 +163,16 @@ When user clicks on Find a Store
 	And user click on submit button
 	Then user click on plus icon in Store Address drawer
 	And user click on Make My store button	
-Then user navigate to GunStorageAndSafty L_Three   
-    Then user select the product from L_Three and navigate to PDP
-    #And user click on Add to Cart Button 
+When user enters "SOFSKUNumber" in the searchbox
+######NOTE:- Above 1 line was added in lieu of Below 2 lines because the item below lines were finding
+###### was not a STS item in UAT7. If any other env has STS item uncomment these & delete above 1 line	
+	#Then user navigate to GunStorageAndSafty L_Three   
+   # Then user select the product from L_Three and navigate to PDP
 	And user click on ship it button
-    	And user is navigated to Add to cart Notification popup 
-	Then user click on checkout from ATC pop up
+    	And user click on viewcart button
+	And user click on checkout button in Cart page
 	And user does accepts the firearm specific compliance 
-	And user clicks on Continue button	
+	And user click on go to payment present in shipping method	
     Then verify that user navigates to payment drawer
 		And Verify below Sub/Main Module of Checkout Page 
 	|#verify following element is display after click on checkout page|
