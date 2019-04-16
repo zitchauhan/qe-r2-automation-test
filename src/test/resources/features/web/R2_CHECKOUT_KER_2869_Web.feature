@@ -1,6 +1,6 @@
 Feature: PDP BOPIS Messaging & Variations to Customer
 
-@C-BOPIS @R2_Web @Regression @R2_All @P-High_B @1HR_R2 @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10686 @CR-AKK
+@C-BOPIS @R2_Web @Regression @R2_All @P-High_B @1HR_R2 @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10686 @CR-AKK 
 Scenario: Verify that the user is able to increase the item quantity on PDP
 Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -18,8 +18,10 @@ Scenario: Verify that the user is able to decrease the item quantity on PDP
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User should be able to see Search Box on Homepage 
-	Then User searches a product "SKUForBopisProduct" and navigates to PDP
+#	And User should be able to see Search Box on Homepage 
+#	Then User searches a product "SKUForBopisProduct" and navigates to PDP
+	And user enters "SKUForBopisProduct" in the search box plcc
+	And user click on search icon 
 	And user change the quantity of item in PDP
 	Then user decrease the quantity of item in PDP 
 	
