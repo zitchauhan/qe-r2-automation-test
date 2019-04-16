@@ -64,6 +64,10 @@ public class R1_Sanity extends CommonActionHelper{
 	public void user_navigates_to_L3_from_home_page() throws Throwable {
 		globalElementHeader.navigateToL3ViaClick_DesktopHomepage();
 	}
+	@Then("^User Verify product recommendation$")
+	public void user_Verify_product_recommendation() throws Throwable {
+		globalElementHeader.navigateToProductRecomendations(); 
+	}
 
 	@Then("^User should be able to see L3 Page$")
 	public void user_should_be_able_to_see_L3_Page() throws Throwable {

@@ -1717,7 +1717,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		}
 	}
 
-
 	public void verifypresenceofL2Page() throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)){
 			assertTrue(isDisplayed(ContainerL2));
@@ -1752,9 +1751,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	
 	public void navigateL2HeaderToPLP() throws Exception
 	{
-
 		//////////////////////-hitain-CR----------->
-		
 		if("mobile".equalsIgnoreCase(testtype))
 		{
 			Thread.sleep(Constants.thread_low);
@@ -1777,8 +1774,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			clickOnButton(btnMenClothingShop);
 			Thread.sleep(Constants.thread_low); 
 			//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
-			
-			
 		}
 	}	
 
@@ -1794,6 +1789,21 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		hover.moveToElement(btnMensShirt_Men_Clothing_Shop).click().build().perform();
 		Thread.sleep(Constants.thread_low); 
 	}	
+	
+	public void navigateToProductRecomendations() throws Exception{
+		try {
+			Thread.sleep(Constants.thread_low); 
+			assertTrue(clickOnButton(btnShopCategory));
+			Actions hover = new Actions(getDriver());
+			hover.moveToElement(btnClothingCategory).build().perform();
+			Thread.sleep(Constants.thread_low); 
+			assertTrue(clickOnButton(btnWommenClothingShop));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 
 	public void enterthePDPSearchData() throws Exception{
 		txtSearchBox.sendKeys("Nike Women's Nike Cheer Scorpion Cheerleading Shoes");
