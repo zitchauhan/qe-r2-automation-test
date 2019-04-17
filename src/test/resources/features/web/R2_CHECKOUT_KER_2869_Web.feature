@@ -7,8 +7,10 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	And User should be able to see Search Box on Homepage 
-	Then User searches a product "SKUForBopisProduct" and navigates to PDP
+#	And User should be able to see Search Box on Homepage 
+#	Then User searches a product "SKUForBopisProduct" and navigates to PDP
+	And user enters "SKUForBopisProduct" in the search box plcc
+	And user click on search icon
 	Then user change the quantity of item in PDP
 
 @C-BOPIS @R2_Web @Regression @R2_All @P-High_B @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10687 
