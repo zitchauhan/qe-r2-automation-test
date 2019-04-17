@@ -6,11 +6,7 @@ Feature: To To verify Quick View - Product Attributes
     Then User navigates to L3 from home page
     Then User click on Quick view button
     Then verify addcart button is displayed
-<<<<<<< HEAD
     #Then verify ship it button is displayed
-=======
-#    Then verify ship it button is displayed
->>>>>>> 8c59f47179b176ba9d512ed261d2bcb618640fbe
     Then user is able to see color and size attributes
     And user is able to see full product details attribute
     And user is able to see quantity attribute
@@ -29,9 +25,3 @@ Feature: To To verify Quick View - Product Attributes
     Then User navigates to L3 from home page
      Then User click on Quick view button
     Then verify addcart button is displayed
-<<<<<<< HEAD
-    #Then verify ship it button is displayed
-=======
-#    Then verify ship it button is displayed
->>>>>>> 8c59f47179b176ba9d512ed261d2bcb618640fbe
- 
