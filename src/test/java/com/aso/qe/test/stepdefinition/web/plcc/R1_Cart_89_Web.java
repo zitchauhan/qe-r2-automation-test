@@ -31,6 +31,6 @@ public class R1_Cart_89_Web extends CommonActionHelper{
 	public void user_click_on_viewcart_button() throws Throwable {
 		genericPO.verifyPresenceOfViewCartButton();
 		genericPO.viewCartButton.click();
-		//Thread.sleep(15000);
+		Thread.sleep(5000);
 	}
 }

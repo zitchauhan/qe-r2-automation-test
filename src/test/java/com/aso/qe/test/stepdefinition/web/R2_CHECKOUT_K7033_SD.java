@@ -18,9 +18,10 @@ import cucumber.api.java.en.When;
 		
 	@When("^user does accepts the firearm specific compliance$")
 	public void user_does_accepts_the_firearm_specific_compliance() throws Throwable {
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 			Actions hover =new Actions(driver);
 			hover.moveToElement(r2CheckoutPo.selectShipToStore).click().build().perform();
+			
 			//assertTrue(clickOnButton(r2CheckoutPo.ShipToStoreforSOF_compliance_Txt));
 		    
 		}

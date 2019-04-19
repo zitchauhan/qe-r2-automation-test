@@ -6,7 +6,7 @@ Scenario: Desktop PLP L3- Validating Product Recommendation functionality
 	Then User navigates to L3 from home page 
 	Then User Verify product recommendation
 	
-@C-PLP @Web @Regression @KER-2338 @ZYP_PLP_K2338-6152 @CR-RKA @RBeta 
+@C-PLP @Web @Regression @KER-2338 @ZYP_PLP_K2338-6152 @CR-RKA @RBeta
 Scenario: Desktop L2- Validating Product Recommendation functionality 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates to L2 from home page 
