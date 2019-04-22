@@ -19,41 +19,76 @@ public class R1_SLR_K3964_SD extends CommonActionHelper{
 
 	@Then("^User should be able to see Search Box on Homepage$")
 	public void User_should_be_able_to_see_Search_Box_on_Homepage() throws Throwable {
-		globalElementHeader.validatingTxtSearchBox();
+		try {
+			globalElementHeader.validatingTxtSearchBox();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	
 
 	}
 	@Then("^User should be able to see Search Lens$")
 	public void User_should_be_able_to_see_Search_Lens() throws Throwable {
-		globalElementHeader.validitingClickingOnSearchLens();
+		try {
+			globalElementHeader.validitingClickingOnSearchLens();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 	
 	@Then("^User enter the search data$")
 	public void User_enter_the_search_data() throws Throwable {
-		globalElementHeader.entertheSearchData();
+		try {
+			globalElementHeader.entertheSearchData();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 	
 	@Then("^User enter the data$")
 	public void User_enter_the_data() throws Throwable {
-		globalElementHeader.entertheData();
+		try {
+			globalElementHeader.entertheData();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 	@Then("^User enter the search data which has pagination$")
 	public void User_enter_the_search_data_which_has_pagination() throws Throwable {
-		globalElementHeader.entertheSearchDataForPagination();
+		try {
+			globalElementHeader.entertheSearchDataForPagination();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 
 	}
 	@Then("^User enter the null data$")
 	public void User_enter_the_null_data() throws Throwable {
-		globalElementHeader.entertheNullData();
+		try {
+			globalElementHeader.entertheNullData();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 	@Then("^User enter the color$")
 	public void User_enter_the_color() throws Throwable {
-		globalElementHeader.entertheColor();
+		try {
+			globalElementHeader.entertheColor();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 	@And("^User click on search icon$")

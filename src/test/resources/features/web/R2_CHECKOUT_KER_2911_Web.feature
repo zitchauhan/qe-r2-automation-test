@@ -20,7 +20,7 @@ Scenario: Verify if the shipping price on Checkout screen is same as Order Summa
 		|EstimatedPrice_Txt|
 		|Total_price|
 		|Total_txt|
-		And User should have same Shipping price on Cart Page Order Summary
+		#And User should have same Shipping price on Cart Page Order Summary
 		
 		
 	
@@ -31,7 +31,6 @@ Verify the shipping price for each shipping method for Ship 2 Store items
 	Given user launches the browser and navigates to "ASO_HOME" page 
 #	Then user navigate to GunStorageAndSafty L_Three 
 #	Then user select the product from L_Three and navigate to PDP SOFSKUNumber
-
 	When user clicks on Find a Store 
 	Then user enter "zipCode" in Find a Store Model 
 	And user click on submit button 

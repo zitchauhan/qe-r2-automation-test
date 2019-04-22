@@ -14,8 +14,6 @@ Scenario: user to verify sing in  as invalid email address
    Given user launches the browser and navigates to "ASO_HOME" page
    When user to click on sing in and navigate to sign in page
    And user should be able to enter the signin details "Wrong_username" "Login_pwd"
-   Then verify the validation message as incorrect  
-  	
   	
   @C-HP @Web  @Regression @KER-727  @ZYP_HP_K727-4061
 Scenario: user to verify sing in  as invalid password address
@@ -43,10 +41,35 @@ Scenario: user to verify sing in  as invalid password address
 
 @C-HP @Web  @Regression  @KER-727 @ZYP_HP_K727-4069 
  Scenario: user to verify Address book  form My Account
-  Given user launches the browser and navigates to "ASO_HOME" page 
-  When user to click on sing in and navigate to sign in page  		  
-  And user should be able to enter the signin details "Login_username" "Login_pwd"
-  Then verify Address book form My Account
+  	Given user launches the browser and navigates to "ASO_HOME" page
+	When user click on My Account link 
+	And  user click on Sign Up link 
+	Then user expect element First Name to be present 	
+	And user enter First Name "First_Name" 
+	And user expect element Last Name to be present 
+	And user enter Last Name "Last_Name" 
+	And user expect element Email Address to be present 
+	And user enter Email Address "Email_Address" 
+	And user expect element Create Password to be present 
+	And user enter Password "Create_Password" 
+	And user expect element Add Address for Faster Checkout checkbox to be present 
+	When user select Add Address for Faster Checkout checkbox 
+	Then user expect element Address to be present 
+	And user enter Address plcc "Address"
+	And user expect element Zip Code to be present 
+	And user enter Zip Code "Zip_Code" 
+	And user expect element City to be present 
+	And user expect element State to be present 
+	And user expect element Phone number to be present 
+	And user enters Phone Number "Phone_Number" 
+	And user expect element SIGN UP to be present 
+	And user click on SIGN UP
+  	When user expect element User Select Address to be present 
+	Then user click on User Select Address
+	When user click on My Account link  
+    And user click on Address Book in MyAccount link
+    And user expect element Address Book to be present
+    And user expect element Add New Address link to be present
 
   	    
   	 @C-HP @Web  @Regression  @KER-727 @ZYP_HP_K727-4070 

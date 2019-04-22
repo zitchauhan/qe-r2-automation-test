@@ -110,10 +110,15 @@ public class R1_SLR_K3276_SD extends CommonActionHelper {
 
 	@Then("^user click on first image from autosuggestion flyout on home page$")
 	public void user_click_on_first_image_from_autosuggestion_flyout_on_home_page() throws Throwable {
-	  clickOnButton(globalElementHeader.imgAutosuggest_HomePage);
+	  try {
+		clickOnButton(globalElementHeader.imgAutosuggest_HomePage);
 //	  String actData=getText(globalElementHeader.productNameAutoSuggest_HomePage);
-	  String expData=getText(globalElementHeader.txtProductNameOnPDP);
-	  assertEquals(actData, expData);
+		  String expData=getText(globalElementHeader.txtProductNameOnPDP);
+		  assertEquals(actData, expData);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	}
 	
 	@Then("^user click on Go button and verify relevent search item present in product catagory$")

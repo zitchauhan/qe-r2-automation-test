@@ -42,36 +42,66 @@ public class R1_SLR_K3237_SD extends CommonActionHelper{
 	
 	@And("^User verifies the predictive suggestions for matching keyword$")
 	public void User_verifies_the_predictive_suggestions_for_matching_keyword() throws Throwable {
-		assertTrue(globalElementHeader.verifySuggestionPage("Shoes"));
+		try {
+			assertTrue(globalElementHeader.verifySuggestionPage("Shoes"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 	
 	
 	@And("^User should not see duplicates within predictive suggestions$")
 	public void User_should_not_see_duplicates_within_predictive_suggestions() throws Throwable {
-		globalElementHeader.verifyDuplicateSuggestion("Clothing");
+		try {
+			globalElementHeader.verifyDuplicateSuggestion("Clothing");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 	@And("^User verifies the predictive suggestions for matching category$")
 	public void User_verifies_the_predictive_suggestions_for_matching_category() throws Throwable {
-		globalElementHeader.verifySuggestionPage("shirt");
+		try {
+			globalElementHeader.verifySuggestionPage("shirt");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 	
 	@And("^User verifies the predictive suggestions for matching brand$")
 	public void User_verifies_the_predictive_suggestions_for_matching_brand() throws Throwable {
-		globalElementHeader.verifySuggestionPage("Adidas");
+		try {
+			globalElementHeader.verifySuggestionPage("Adidas");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 	@Then("^User click on the matching keyword$")
 	public void User_click_on_the_matching_keyword() throws Throwable {
-		globalElementHeader.clickOnSuggestion("shirt");
+		try {
+			globalElementHeader.clickOnSuggestion("shirt");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
 	@Then("^User click on clear all button$")
 	public void User_click_on_clear_all_button() throws Throwable{
-		globalElementHeader.clickClearAllButton();		
+		try {
+			globalElementHeader.clickClearAllButton();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
 	}
 
 }

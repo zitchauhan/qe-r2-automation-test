@@ -41,11 +41,12 @@ Feature: [Desktop]Components - Header
     Then verify user to click submit button
 
   @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-4067 @CR-RKA
-  Scenario: user to verify personal information  form My Account
+  Scenario: user to verify profile information  form My Account
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
     And user should be able to enter the signin details "Login_username" "Login_pwd"
-    Then verify personal information form My Account
+    And user navigates to profile in my account
+    Then verify account summary detail from my account
 
 
   @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-4069 @CR-RKA

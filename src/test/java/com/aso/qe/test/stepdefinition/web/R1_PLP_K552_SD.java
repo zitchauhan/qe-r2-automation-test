@@ -205,49 +205,72 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 
 	@Given("^User expands BRAND Filter Option$")
 	public void user_expands_BRAND_Filter_Option() throws Throwable {
-		R1_SearchProduct_PO.productDisplayCount = R1_SearchProduct_PO.getItemsCount();
-		searchProductPO.clickAllMinusFilterOptions();
-		if("mobile".equalsIgnoreCase(testtype)) {
-			driver =(RemoteWebDriver) driver.switchTo().defaultContent();
-			scrollPageToWebElement(searchProductPO.filterBrandPlusBtnMobile);
-			//driver =(RemoteWebDriver) driver.switchTo().defaultContent();
-			assertTrue(clickOnButton(searchProductPO.filterBrandPlusBtnMobile));
-		}else{
-			assertTrue(clickOnButton(searchProductPO.filterBrandPlusBtn));
+		try {
+			R1_SearchProduct_PO.productDisplayCount = R1_SearchProduct_PO.getItemsCount();
+			searchProductPO.clickAllMinusFilterOptions();
+			if("mobile".equalsIgnoreCase(testtype)) {
+				driver =(RemoteWebDriver) driver.switchTo().defaultContent();
+				scrollPageToWebElement(searchProductPO.filterBrandPlusBtnMobile);
+				//driver =(RemoteWebDriver) driver.switchTo().defaultContent();
+				assertTrue(clickOnButton(searchProductPO.filterBrandPlusBtnMobile));
+			}else{
+				assertTrue(clickOnButton(searchProductPO.filterBrandPlusBtn));
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 	
 	@Given("^User expands COLOR Filter Option$")
 	public void user_expands_COLOR_Filter_Option() throws Throwable {
-		R1_SearchProduct_PO.productDisplayCount = R1_SearchProduct_PO.getItemsCount();
-		searchProductPO.clickAllMinusFilterOptions();
-		if("mobile".equalsIgnoreCase(testtype)) {
-			driver =(RemoteWebDriver) driver.switchTo().defaultContent();
-			scrollPageToWebElement(searchProductPO.filterColorPlusBtnMobile);
-			
-			assertTrue(clickOnButton(searchProductPO.filterColorPlusBtnMobile));
-		}else{
-		assertTrue(clickOnButton(searchProductPO.filterColorPlusBtn));
+		try {
+			R1_SearchProduct_PO.productDisplayCount = R1_SearchProduct_PO.getItemsCount();
+			searchProductPO.clickAllMinusFilterOptions();
+			if("mobile".equalsIgnoreCase(testtype)) {
+				driver =(RemoteWebDriver) driver.switchTo().defaultContent();
+				scrollPageToWebElement(searchProductPO.filterColorPlusBtnMobile);
+				
+				assertTrue(clickOnButton(searchProductPO.filterColorPlusBtnMobile));
+			}else{
+			assertTrue(clickOnButton(searchProductPO.filterColorPlusBtn));
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
 	@Then("^User should be able to see Related Categories facet$")
 	public void user_should_be_able_to_see_Related_Categories_facet() throws Throwable {
-		
-		assertTrue(isDisplayed(searchProductPO.chkbox_RelatedCategories));
+		try {
+			assertTrue(isDisplayed(searchProductPO.chkbox_RelatedCategories));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-
 
 	@Given("^User selects the price option in the filter$")
 	public void User_selects_the_price_option_in_the_filter() throws Throwable {
-			assertTrue(clickOnButton(searchProductPO.filterPricePlusBtn));
+			try {
+				assertTrue(clickOnButton(searchProductPO.filterPricePlusBtn));
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	}
 
 	@Given("^User verify \"(.*?)\" Filter is selected$")
 	public void user_verify_Filter_is_selected(String arg1) throws Throwable {
 			//li[@data-auid='drawer_$10 - $19.99']//i[contains(@class,'icon-checkbox-active')]
-		String xpath="//li[contains(text(),'"+arg1+"')]//i[contains(@class,'icon-checkbox-active')]";
-		logger.debug("Check Filter check xpath::"+xpath);
+		try {
+			String xpath="//li[contains(text(),'"+arg1+"')]//i[contains(@class,'icon-checkbox-active')]";
+			logger.debug("Check Filter check xpath::"+xpath);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		//assertTrue(searchProductPO.isFilterSelected(xpath));
 	}
 

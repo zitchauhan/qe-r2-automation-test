@@ -31,7 +31,6 @@ Feature: Verify the case behavior for redirect keyword. Search keywords - Shirt 
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
     When user enters "SearchTerm" in the searchbox
-    Then User verifes the last breadcrumb keyword
     Then User closes the web application
 
   @C-SLR @Web @All  @Regression @KER-3270  @ZYP_SLR_K3270-7423

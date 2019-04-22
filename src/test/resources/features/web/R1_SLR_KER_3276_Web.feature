@@ -21,9 +21,9 @@ Feature: Verify the Should display max 4 suggestion terms , Applicable category 
     Scenario: To verify that search is updated as user inputs additional characters
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
-   Then user enter "go" in search box and wait for auto suggest pop up for first data 
-   Then user verify the product image name and price  
-   Then user enter "shi" in search box and wait for auto suggest pop up for second data
+   	Then user enter "go" in search box and wait for auto suggest pop up for first data 
+   	Then user verify the product image name and price  
+   	Then user enter "shi" in search box and wait for auto suggest pop up for second data
    
     
    
