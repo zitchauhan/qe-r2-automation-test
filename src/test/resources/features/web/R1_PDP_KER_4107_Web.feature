@@ -9,4 +9,3 @@ Scenario: To verify Product Recommendations - ATC Modal on adding item to cart
 	#Then user click on Add to cart button 
 	And user click on ship it button
 	Then Add to cart modal is displayed 
-	Then User Verify product recommendation

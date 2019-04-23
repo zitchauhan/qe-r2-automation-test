@@ -127,13 +127,13 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 	
 	@And("^user add the item to cart$")
 	public void user_add_the_item_to_cart() {
-		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+		assertTrue(clickOnButton(pdpPageObj.shipItButton));
 		waitForElement(pdpPageObj.secAddToCartPopup);
 		assertTrue(isDisplayed(pdpPageObj.secAddToCartPopup));
 	}
 	@Then("^verfiy the product attribute of no diff$")
 	public void verfiy_the_product_attribute_of_no_diff() {
-		assertTrue(isDisplayed(pdpPageObj.btnAddToCart));
+		assertTrue(isDisplayed(pdpPageObj.shipItButton));
 //		assertTrue(isDisplayed(pdpPageObj.imgSrcSKUAttribute));
 		if("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(pdpPageObj.txtDetails_M));

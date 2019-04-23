@@ -1,6 +1,5 @@
 Feature: To Verify the Alternative Color Views on PLP
 
-
 @Regression @Web @All @C-PDP @KER-223 @ZYP_PDP_K223-2021  @Rerun @CR-SG @1HR
 Scenario: verify user is able to view all available colors and select it for a product on PLP
 	Given user launches the browser and navigates to "ASO_HOME" page 
