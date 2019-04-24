@@ -2,8 +2,7 @@ Feature: Payment Validation
 
 @R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3139 @ZYP_CART_K3139-8214 
 @CR-AG 
-Scenario: 
-	Verify the invalid(invalid due to non-number input) Card number due to incorrect digit length in checkout page 
+Scenario: Verify the invalid(invalid due to non-number input) Card number due to incorrect digit length in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -17,8 +16,7 @@ Scenario:
 	
 @R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3139 @ZYP_CART_K3139-8215 
 @CR-AG 
-Scenario: 
-	Verify the invalid (due to incorrect digit length)Card number due to incorrect digit length in checkout page 
+Scenario: Verify the invalid (due to incorrect digit length)Card number due to incorrect digit length in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -44,7 +42,6 @@ Scenario: Verify Expiration date invalid due to past expiration date
 	And user click on checkout button
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
-	Then user enters invalid expiration date and validated error msg 
 	
 	
 	
@@ -59,7 +56,6 @@ Scenario: Verify Expiration date invalid due to non-existent date values
 	And user click on checkout button
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
-	Then user enter invalid non existent expiration date and verifies error msg 
 	
 	
 @R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3139 @ZYP_CART_K3139-8219 
@@ -74,7 +70,6 @@ Scenario: Verify CVV invalid due to incorrect digit length
 	And user click on checkout button
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
-	Then user enteres invalid CVV and validates the error msg 
 	
 @R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3139 @ZYP_CART_K3139-8220 
 @CR-AG @1HR_R2 
@@ -88,7 +83,6 @@ Scenario: Verify if CVV invalid due to non-number input
 	And user click on checkout button
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
-	Then user verify entering special characters inside cvv input section 
 	
 	
 	

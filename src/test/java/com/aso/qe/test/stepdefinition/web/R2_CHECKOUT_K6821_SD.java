@@ -39,8 +39,7 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 	public void user_enter_First_name(String arg1) throws Throwable 
 	{
 		setInputText(r2CheckOutPo.inputCheckoutFirstName, webPropHelper.getTestDataProperty(arg1));
-		
-		//moveHover(element)
+				//moveHover(element)
 	}
 
 	@And("^user enter Last name \"(.*?)\"$")
@@ -86,6 +85,15 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 	public void user_click_on_Go_To_Shipping_Method_button_in_Checkout_page() throws Throwable {
 		try {
 			assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
+			Thread.sleep(Constants.thread_medium);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+	}
+	@Then("^user click on Go To Payment button in Checkout page$")
+	public void user_click_on_Go_To_Payment_button_in_Checkout_page() throws Throwable {
+		try {
+			assertTrue(clickOnButton(r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn));
 			Thread.sleep(Constants.thread_medium);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -151,13 +159,13 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 	    assertTrue(str.isEmpty());
 	}
 	
-	@Then("^user will click on Paypal radio button$")
-	public void user_will_click_on_Paypal_radio_button() throws Throwable {
-		Thread.sleep(Constants.thread_low);
-		waitForElement(r2CheckOutPo.rdPaypal);
-		assertTrue(clickOnButton(r2CheckOutPo.rdPaypal));
-	}
+//	@Then("^user will click on Paypal radio button$")
+//	public void user_will_click_on_Paypal_radio_button() throws Throwable {
+//		Thread.sleep(Constants.thread_low);
+//		waitForElement(r2CheckOutPo.rdPaypal);
+//		assertTrue(clickOnButton(r2CheckOutPo.rdPaypal));
+//	}
 
 	
-
+	
 }

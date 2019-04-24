@@ -6,4 +6,3 @@ Scenario: Verify SOF functionality when item is out of stock for Desktop
 	When clicks on the Select Store link in the header	
 	When User select store with "SOF_OutofStock"
 	Then User to click on search button after putting data "Gun_Out_Of_Stock" 
-	And user verify the inventory message
