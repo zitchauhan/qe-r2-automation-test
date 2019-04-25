@@ -10,9 +10,6 @@ Scenario: To verify user is able to navigate to product details page when produc
 	And user click on ship it button 
 	And user click on viewcart button 
 	Then user navigates to Cart Page 
-	And user should be able to see ship it button and quantity section 
-	#And user should be able to see Add to cart button and quantity section 
-	
 	
 @Web @Regression @KER-714 @ZYP_HP_K714-1984 @C-HP @CR-RKA @RBeta 
 Scenario: To verify user is able to view product cards as grids on product listing page 
@@ -23,7 +20,4 @@ Scenario: To verify user is able to view product cards as grids on product listi
 	And user click on ship it button 
 	And user click on viewcart button 
 	Then user navigates to Cart Page 
-	And user should be able to see ship it button and quantity section 
-	
-	
 	

@@ -95,9 +95,10 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
   @Regression @Web @1HR @All @KER-552 @ZYP_PLP_K552-6129 @C-PLP
   Scenario: Verify user is able to expand/collapse filter options in Search Page
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "productName" in the search box
-    And User expands all Filter Options
-
+    Then User navigates to L2
+    And User expands PRICE Filter Option
+    Then User closes the web application
+    
   @Regression @Web @All @KER-552 @ZYP_PLP_K552-6131 @C-PLP
   Scenario: Verify As a User I should be able to select/deselect multiple price values in Search Page
     Given user launches the browser and navigates to "ASO_HOME" page

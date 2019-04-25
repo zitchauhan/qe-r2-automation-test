@@ -17,8 +17,9 @@ Scenario: Verify user is able to see Academy as anchor for all breadcrumbs(ex. b
 @Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-9098 @CR-SG @ZYP_PDP_K1921-3432_1 @RBeta
 Scenario: Verify user is able to see breadcrumb for the subsequent store details page 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
-	When user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
-    Then user is able to see nearest store location "FindStoreZipcodeNearestStore"
+	Then User navigates till PLP 
+	Then User click on the product image 
+	Then User verify the last breadcrumb in the series should not be an active link for last link
 	
 @Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-6685 @CR-SG @RBeta
 Scenario: Verify should be able to see breadcrumb from Search as: Academy> search -search term used-Desktop 

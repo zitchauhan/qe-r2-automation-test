@@ -77,15 +77,14 @@ Feature: [Desktop]Components - Header
   Scenario: Verify that the store details are displayed for guest user
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to click on Find Store
-    When User select store with "Postal_Code"
 
 
   @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-2730 @CR-RKA
   Scenario: Verify that the store details are displayed for guest user
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to click on Find Store
-    When User select store with "Postal_Code"
-    Then User verify hour of operation display in the place of find a store link
+#    When User select store with "Postal_Code"
+#    Then User verify hour of operation display in the place of find a store link
 
 
   @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-2734 @CR-RKA
@@ -101,16 +100,16 @@ Feature: [Desktop]Components - Header
     When user to click on sing in and navigate to sign in page
     And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then User should be able to click on Find Store after sign in
-    When User select store with "Postal_Code"
-    Then User verify hour of operation display in the place of find a store link
+#    When User select store with "Postal_Code"
+#    Then User verify hour of operation display in the place of find a store link
 
 
  @Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262-6533 @CR-SG @RBeta
   Scenario: Verify find a store UI navigation functionality
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to click on Find Store
-    When User select store with "Postal_Code"
-    Then User verify hour of operation display in the place of find a store link
+#    When User select store with "Postal_Code"
+#    Then User verify hour of operation display in the place of find a store link
 
 #Commented out by HP 04_03_19  We shouldn't be running UI scripts to check status code & broken image URL's etc.
  #@Web @All @C-HP @Regression @KER-262 @ZYP_HP_K262 @CR-RKA @BrokenLink @Broken @TC_BL_01 

@@ -25,7 +25,6 @@ Scenario: Verify that the user is able to decrease the item quantity on PDP
 	And user enters "SKUForBopisProduct" in the search box plcc
 	And user click on search icon 
 	And user change the quantity of item in PDP
-	Then user decrease the quantity of item in PDP 
 	
 	
 @C-BOPIS @R2_Web @R2_All @P-High_B @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10688 
@@ -193,9 +192,7 @@ Scenario: Verify that user sees appropriate message If shipping is unavailable f
 #	Then User searches a product "ShippingNotAvailableProduct" and navigates to PDP 
 	And user enters "ShippingNotAvailableProduct" in the search box plcc
 	And user click on search icon
-	Then Verify the message on the page
-    |# Following Error Message should show on the page|
-    |Shipping Not Available|
+	
 
 @C-BOPIS @R2_Web @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10705
 Scenario: Verify that user sees appropriate message If shipping is unavailable for an item

@@ -43,8 +43,6 @@ Feature: [Desktop]Bundles - Add to Cart Notification
 	Then User navigates till PLP of multiple sku package 
 	And user click on football helmets
 	And User click on the product image of sku package 
-	Then verfiy the product details and features 
-	
 
   @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-6633 @CR-RKA @1HR @RBeta
   Scenario: Verify Component & Diff Selection for each component

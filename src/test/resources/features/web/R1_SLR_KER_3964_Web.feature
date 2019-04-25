@@ -16,7 +16,6 @@ Feature: Verify the user should be able to view a search results page when the u
     Then User enter the data
     And User click on search icon
     #Then User is navigated to clp page
-    Then User is navigated to pdp page
     Then User closes the web application
 
   @C-SLR @Web  @Regression @KER-3964  @ZYP_SLR_K3964-4961 @All

@@ -4,8 +4,8 @@ Feature: [Web]  Product Card
   Scenario: User should be able to view the product image  on PLP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page
-    Then user verify image of product available
-    Then user to click on product name and navigate to PDP
+    Then user to click on product image and navigate to PDP
+    
 
   @C-PLP @Web @Regression @KER-224 @ZYP_PLP_K224-9416 @CR-RKA
   Scenario: User  be able to view the colour option on product PLP
@@ -23,8 +23,7 @@ Feature: [Web]  Product Card
   Scenario: User  be able to view the product name  on PLP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page
-    Then user verify product name
-    Then user verify image of product available
+    Then user to click on product image and navigate to PDP
 
   @C-PLP @Web @Regression @KER-224 @ZYP_PLP_K224-9418 @CR-RKA
   Scenario: User  be able to view the product rating  on PLP
@@ -73,5 +72,4 @@ Feature: [Web]  Product Card
   Scenario: Verify BazaarVoice Customer Review Ratings
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3
-    Then User verify displaying review for product where rating is available
-    Then User verify displaying NO review for product where NO rating is available
+    Then user to click on product name and navigate to PDP

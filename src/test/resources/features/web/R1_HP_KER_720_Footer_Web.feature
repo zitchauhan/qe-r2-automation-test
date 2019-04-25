@@ -3,6 +3,7 @@ Feature: Verify presence of Global Element Footer
   @Web @Regression @C-HP  @All @KER-720 @ZYP_HP_K720-4338 @Rerun @CR-AG
   Scenario: Verify presence of Global Element Footer under this is Academy from Homepage
     Given user launches the browser and navigates to "ASO_HOME" page
+   	Then User navigates till PLP
     Then User will verify the presence of Our history
     And User will verify the presence of Careers
     Then User will verify the presence of Press Room

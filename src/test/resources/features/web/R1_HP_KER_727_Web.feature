@@ -65,13 +65,7 @@ Scenario: user to verify sing in  as invalid password address
 	And user expect element SIGN UP to be present 
 	And user click on SIGN UP
   	When user expect element User Select Address to be present 
-	Then user click on User Select Address
-	When user click on My Account link  
-    And user click on Address Book in MyAccount link
-    And user expect element Address Book to be present
-    And user expect element Add New Address link to be present
-
-  	    
+	  	    
   	 @C-HP @Web  @Regression  @KER-727 @ZYP_HP_K727-4070 
 	 Scenario: user to verify WishList form My Account
 	  Given user launches the browser and navigates to "ASO_HOME" page 
