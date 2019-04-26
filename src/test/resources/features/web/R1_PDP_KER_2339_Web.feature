@@ -29,24 +29,24 @@ Scenario: Verify should be able to see breadcrumb from Search as: Academy> searc
 @Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-6675 @CR-SG
 Scenario: [UI]-Verify the breadcrumb on L1 page-Desktop 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User navigates to L1 
+	Then User navigates till PLP 
+	Then User click on the product image 
 	And User verify the last breadcrumb in the series should not be an active link for last link
-	Then User click on the breadcrumb last active link in L1
 	
 	
 @Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-6678 @CR-SG
 Scenario: [UI]-Verify the breadcrumb on L2 page-Desktop 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User navigates to L2 
+	Then User navigates till PLP 
+	Then User click on the product image
 	And User verify the last breadcrumb in the series should not be an active link for last link
-	Then User click on the breadcrumb last active link in L2
 	
 @Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-6679 @CR-SG
 Scenario: [UI]-Verify the breadcrumb on L3 page-Desktop 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates till PLP 
+	Then User click on the product image 
 	And User verify the last breadcrumb in the series should not be an active link for last link
-	Then User click on the breadcrumb last active link in L3
 	
 @Regression @Sanity @Web @All @KER-2339 @C-PDP  @ZYP_PDP_K2339-6683 @CR-SG
 Scenario: [UI]- Verify user should be able to see breadcrumb from store Locator landing page-Desktop 

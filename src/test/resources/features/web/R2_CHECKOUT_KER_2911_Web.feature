@@ -26,8 +26,7 @@ Scenario: Verify if the shipping price on Checkout screen is same as Order Summa
 	
 @R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2911
 @ZYP_CHECKOUT_K2911-8230 @CR-DPK 
-Scenario:
-Verify the shipping price for each shipping method for Ship 2 Store items 
+Scenario: Verify the shipping price for each shipping method for Ship 2 Store items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 #	Then user navigate to GunStorageAndSafty L_Three 
 #	Then user select the product from L_Three and navigate to PDP SOFSKUNumber
@@ -56,8 +55,7 @@ Verify the shipping price for each shipping method for Ship 2 Store items
 		
 @R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-2911
 @ZYP_CHECKOUT_K2911-8231 @CR-DPK 
-Scenario:
-Verify the shipping price for each shipping method for SOF items 
+Scenario: Verify the shipping price for each shipping method for SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 #	Then user navigate to GunStorageAndSafty L_Three 
 #	Then user select the product from L_Three and navigate to PDP 
@@ -84,8 +82,7 @@ Verify the shipping price for each shipping method for SOF items
 
 @R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2911
 @ZYP_CHECKOUT_K2911-8232 @CR-DPK 
-Scenario:
-Verify the shipping price for each shipping method for Gift Card items
+Scenario: Verify the shipping price for each shipping method for Gift Card items
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "SKUForGiftCard" in the search box 
 	And user click on Add to Cart Button 
@@ -107,8 +104,7 @@ Verify the shipping price for each shipping method for Gift Card items
 	
 @R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-2911
 @ZYP_CHECKOUT_K2911-8233 @CR-DPK 
-Scenario:
-Verify the shipping price for each shipping method for White glove items where Shipping Exception table exists
+Scenario: Verify the shipping price for each shipping method for White glove items where Shipping Exception table exists
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Grills Outdoor cooking 
 	And user clicks on one of the subcategory of Grills Outdoor 

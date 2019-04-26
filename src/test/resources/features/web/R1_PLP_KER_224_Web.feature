@@ -51,9 +51,11 @@ Feature: [Web]  Product Card
     Then user to navigate to verify Ad feature
 
   @C-PLP @Web @Regression @KER-224 @ZYP_PLP_K224-2976 @CR-RKA
-  Scenario: Product Cards for Gift Cards should display the following on the Gift Card PLP
+  Scenario: Product Cards for should display
     Given user launches the browser and navigates to "ASO_HOME" page
-    Then user to navigate to giftcart
+    Then User navigates to L2 from home page
+    Then User should be able to see L2 Page
+   
 
   @C-PLP @Web @Regression @KER-224 @ZYP_PLP_K224-2892 @CR-RKA
   Scenario: Entire Product Card should be clickable and the user should be brought to PDP Page

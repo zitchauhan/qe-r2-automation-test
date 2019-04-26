@@ -31,9 +31,6 @@ Scenario: To verify user is able to sort on Product Listing/landing page
 	Then user enters "SearchForSort" in the searchbox 
 	Then navigate to sort by and navigate to best selling 
 	And user select the brand "brandName" 
-	Then compare the price is in Low to high mode 
-	Then navigate to sort by and navigate to best selling in high to low 
-	
 	
 @Web @Regression @KER-710 @ZYP_HP_K710-2622 @C-HP @CR-RKA 
 Scenario: To verify user is able to filter on Sub category landing page(L2) 
