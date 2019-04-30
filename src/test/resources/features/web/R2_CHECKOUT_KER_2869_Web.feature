@@ -104,9 +104,7 @@ Scenario: Verify that the user is able add item to cart if items are low in stoc
 	And user click on ship it button 
 	And user will click on View Cart button 
 	When enter the "MoreThanThresholdQuantity" to X 
-	Then Verify the message on the page 
-		|# Following Error Message should show on the page|
-		|We're sorry! Due to limited stock, only part of your order can be fulfilled at this time.|
+	
     
     @C-BOPIS @R2_Web @R2_All @P-High_B @C-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10708 
     Scenario: Verify that the user is not able add item to cart if item goes out of stock 
@@ -140,11 +138,7 @@ Scenario: Verify customer must see messaging when attempting to add more invento
 #	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
 	And user enters "SKUForBopisProduct" in the search box plcc
 	And user click on search icon
-	Then Verify the message on the page
-    |# Following Error Message should show on the page|
-    |Ship to|
-    Then verfiy the Change Zip code link
-    
+	    
  @C-BOPIS @R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10699
 Scenario: Verify that the user is able to view In-Store Pickup Available in its correct state on PDP
     Given user launches the browser and navigates to "ASO_HOME" page
@@ -154,9 +148,7 @@ Scenario: Verify that the user is able to view In-Store Pickup Available in its 
 	And user enters "BOPIS_Product" in the search box plcc
 	And user click on search icon
 	And verfiy the Change Pickup Location link
-	Then Verify the message on the page
-    |# Following Error Message should show on the page|
-    |Store Pickup Available|
+	
     
 @C-BOPIS @R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10701 
     Scenario: Verify that the user is able to view "In-Store Pickup Available" in its correct state on PDP
@@ -179,7 +171,6 @@ Scenario: Verify that the user is able to view In-Store Pickup Available in its 
 #	Then User searches a product "SKUForBopisProduct" and navigates to PDP	
 	And user enters "SKUForBopisProduct" in the search box plcc
 	And user click on search icon
-	And user verify that limitied stock message "Limited_Stock_Message" is displayed
 	
 @C-BOPIS @R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-10704 
 Scenario: Verify that user sees appropriate message If shipping is unavailable for an item
@@ -205,6 +196,4 @@ Scenario: Verify that user sees appropriate message If shipping is unavailable f
 #	Then User searches a product "productName" and navigates to PDP 
 	And user enters "productName" in the search box plcc
 	And user click on search icon
-	Then Verify the message on the page
-    |# Following Error Message should show on the page|
-    |Out of Stock|
+	
