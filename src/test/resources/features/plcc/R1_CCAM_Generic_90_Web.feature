@@ -29,7 +29,7 @@ Scenario: Verify the system behavior when user clicks on Continue button on Appl
 	And user select credit application modal agree message 
 	
 @C-PLCC @Regression @All @PLCC-90 @CR-VS 
-Scenario: Verify the system behavior when user clicks on Continue button on Application model by providing valid required information/details
+Scenario: Verify the system behavior when user clicks on Continue button on Application model by providing Invalid required information/details
 	When user enter First Name on credit card Application Modal "invalidFirstName" 
 	Then user enter Last Name on credit card Application Modal "invalidLastName"
 	And user enter Last four SSN "invalidSSNP"
