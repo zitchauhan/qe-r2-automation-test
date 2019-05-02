@@ -147,7 +147,6 @@ Scenario: Verify that the user is able to view In-Store Pickup Available in its 
 #	When user enters "BOPIS_Product" in the searchbox	
 	And user enters "BOPIS_Product" in the search box plcc
 	And user click on search icon
-	And verfiy the Change Pickup Location link
 	
     
 @C-BOPIS @R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10701 
@@ -157,8 +156,6 @@ Scenario: Verify that the user is able to view In-Store Pickup Available in its 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Product" in the searchbox	
 	And user click on search icon
-	When User clicks on choose location
-	Then verify that Find a Store Modal is displayed
 	
 @C-BOPIS @R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2869 @ZYP_CHECKOUT_K2869-KER-10702
     Scenario: Verify that user sees appropriate message if a product has limited stock for pick-up
