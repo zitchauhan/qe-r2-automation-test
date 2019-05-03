@@ -28,9 +28,6 @@ Scenario: Verify if user cannot add AK/HI/ PR address in the shipping details se
 	And user enter Address "Address" 
 	And user enter Zipcode "ShippingRestrictedZipCode" 
 	And user click on Go To Shipping Method button in Checkout page 
-#	Then Verify the message on the page 
-#		|# Following error Message should show on the page	|
-#		|We are unable to ship to AK, HI and PR. Please change your shipping address.	|
 		
 		
 @R2_Web @Regression @R2_All @P-Medium @C-Checkout @KER-3144 
@@ -61,11 +58,7 @@ Scenario: verify if proper validation message is displayed if user already has p
 	And user enter Address "Address" 
 	And user enter Zipcode "ShippingRestrictedZipCode" 
 	And user click on Go To Shipping Method button in Checkout page 
-#	Then Verify the message on the page 
-#		|# Following error Message should show on the page	|
-#		|We are unable to ship to AK, HI and PR. Please change your shipping address.	|
-		
-		
+
 @R2_Web @Regression @R2_All @P-Medium @C-Checkout @KER-3144 
 @ZYP_CHECKOUT_K3144-9649 @CR-GK @C1-Message
 Scenario: verify if proper validation message is displayed if user already has address selected and tries to add products to his cart by violates the State-Product rules 
@@ -95,10 +88,7 @@ Scenario: verify if proper validation message is displayed if user already has a
 	And user enter Address "Address" 
 	And user enter Zipcode "ShippingRestrictedZipCode" 
 	And user click on Go To Shipping Method button in Checkout page 
-#	Then Verify the message on the page 
-#		|# Following error Message should show on the page	|
-#		|We are unable to ship to AK, HI and PR. Please change your shipping address.	|
-		
+
 		
 @R2_Web @Regression @R2_All @P-Medium @C-Checkout @KER-3144 
 @ZYP_CHECKOUT_K3144-9638 @CR-GK @C1-Message
@@ -117,9 +107,4 @@ Scenario: Verify user receive error message after adding a shipping address with
 	And user enter Address "Address" in address book 
 	And user enter Zipcode "ShippingRestrictedZipCode" 
 	And clicks on Add New Address button 
-	Then Verify the message on the page 
-		|# Following error Message should show on the page	|
-		|We are unable to ship to AK, HI and PR. Please change your shipping address.	|
-		
-		
 	

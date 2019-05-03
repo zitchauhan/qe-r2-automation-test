@@ -1,4 +1,5 @@
 package com.aso.qe.test.pageobject;
+import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
@@ -18,25 +19,24 @@ public class R2_Paypal_initializeElements_PO extends CommonActionHelper{
 	private static final Logger logger = Logger.getLogger(R2_Paypal_initializeElements_PO.class);
 
 	//-------------------STARTS XPATH-----------------------//
-	@FindBy(xpath = "//*[@name='firstName']")
+	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address_first_name']")
 	public WebElement inputCheckoutFirstName;
 
-	@FindBy(xpath = "//*[@name='lastName']")
+	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address_last_name']")
 	public WebElement inputCheckoutLasttName;
 
-	@FindBy(xpath = "//*[@name='phoneNumber']")
+	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address_phone_number']")
 	public WebElement inputCheckoutPhoneNumber;
 
-	@FindBy(xpath = "//*[@name='address']")
+	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address_address']")
 	public WebElement inputCheckoutAddress;
 
-	@FindBy(xpath = "//*[@name='zipCode']")
+	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address_zip_code']")
 	public WebElement inputCheckoutZipCode;
 
-	@FindBy(xpath = "//*[@name='city']")
-	public WebElement inputCheckoutCity;
+	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address_city']")
+	public WebElement inputCheckoutCity;	
 	
-
 	@FindBy(xpath = "//*[@data-auid='btncheckout_goto_shipping_method_btn']")
 	public WebElement btnGoToShippingMethod;
 	@FindBy(xpath = "//*[@data-auid='btncheckout_goto_payment button-1'] | //*[@data-auid='btncheckout_ship_to_store_submit_button']")
@@ -65,11 +65,10 @@ public class R2_Paypal_initializeElements_PO extends CommonActionHelper{
     //****End PayPal****//
 	
 
-	@And("^user enter First name \"(.*?)\" for paypal$")
+	@Then("^user enter First name \"(.*?)\" for paypal$")
 	public void user_enter_First_name_for_paypal(String arg1) throws Throwable {
 		setInputText(inputCheckoutFirstName, webPropHelper.getTestDataProperty(arg1));
 	}
-
 	@And("^user enter Last name \"(.*?)\" for paypal$")
 	public void user_enter_Last_name_for_paypal(String arg1) throws Throwable {
 		setInputText(inputCheckoutLasttName, webPropHelper.getTestDataProperty(arg1));
@@ -104,7 +103,7 @@ public class R2_Paypal_initializeElements_PO extends CommonActionHelper{
 	@And("^user click on Go To Shipping Method button in Checkout page$")
 	public void user_click_on_Go_To_Shipping_Method_button_in_Checkout_page() throws Throwable {
 		try {
-			assertTrue(clickOnButton(btnGoToShippingMethod));
+			btnGoToShippingMethod.click();
 			Thread.sleep(Constants.thread_medium);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -114,7 +113,7 @@ public class R2_Paypal_initializeElements_PO extends CommonActionHelper{
 	@Then("^user click on Go To Payment button in Checkout page$")
 	public void user_click_on_Go_To_Payment_button_in_Checkout_page() throws Throwable {
 		try {
-			assertTrue(clickOnButton(checkout_ShippingMethod_GoToPayment_btn));
+			checkout_ShippingMethod_GoToPayment_btn.click();
 			Thread.sleep(Constants.thread_medium);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -125,14 +124,14 @@ public class R2_Paypal_initializeElements_PO extends CommonActionHelper{
 	public void user_will_click_on_Paypal_radio_button() throws Throwable {
 		Thread.sleep(Constants.thread_low);
 		waitForElement(rdPaypal);
-		assertTrue(clickOnButton(rdPaypal));
+		rdPaypal.click();
 	}
 
 	@Then("^user will click on Paypal Checkout button$")
 	public void user_will_click_on_Paypal_Checkout_button() throws Throwable {
 		Thread.sleep(Constants.thread_low);
 		waitForElement(PayPalCheckOut_Btn);
-		assertTrue(clickOnButton(PayPalCheckOut_Btn));
+		PayPalCheckOut_Btn.click();
 	}
 
 	@When("^user enter Paypal Email \"(.*?)\"$")
@@ -149,7 +148,7 @@ public class R2_Paypal_initializeElements_PO extends CommonActionHelper{
 	public void user_will_click_on_Paypal_Login_button() throws Throwable {
 		Thread.sleep(Constants.thread_low);
 		waitForElement(PaypalLogin_Btn);
-		assertTrue(clickOnButton(PaypalLogin_Btn));
+		PaypalLogin_Btn.click();
 		Thread.sleep(Constants.thread_medium);
 	}
 
@@ -157,7 +156,7 @@ public class R2_Paypal_initializeElements_PO extends CommonActionHelper{
 	public void user_will_click_on_Paypal_Continue_button() throws Throwable {
 		Thread.sleep(Constants.thread_low);
 		waitForElement(PayPalContinue_Btn);
-		assertTrue(clickOnButton(PayPalContinue_Btn));
+		PayPalContinue_Btn.click();
 		Thread.sleep(Constants.thread_medium);
 	}
 }

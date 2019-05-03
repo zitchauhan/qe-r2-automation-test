@@ -10,9 +10,7 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	And user will click on View Cart button 
 	When user will verify in-store pick up radio button is selected with "BOPIS_Store2" 
 	Then user verify IN Store Pick Up-Free is enable 
-	Then Verify below Sub/Main Module of Cart Page
-	|#verify INStorePickup_FREE radio btn is enable# |
-	|InStorePickup_FREE_radioBtn |
+	
 
 @R2_Web @R2_Regression @C-Cart   @KER-3143 @P-Low @ZYP_Cart_K3143-10263 @CR-RKA
 Scenario: Verify if Un-Authenticated user must be able to sign into their account from MyAccount in header
@@ -22,9 +20,6 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My account link 
-    Then Verify below Sub/Main Module of My Account
-	|#verify INStorePickup_FREE radio btn is enable# |
-	|myAccount_MyAccountList_Orders_lnk			 		|
 	
 	@R2_Web @R2_Regression @C-Cart   @P-Low  @KER-3143 @ZYP_Cart_K3143-12506 @CR-RKA
 	Scenario: Verify Unauthenticated user is able to Sign in from empty cart
