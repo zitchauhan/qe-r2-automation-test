@@ -9,7 +9,7 @@ Background:  Common Pre-requisite steps
 	And user enter Preescreen Code "Valid_PrescreenCode_1"
 	And user click on ACCEPT OFFER 
 	
-@C-PLCC @Regression @All @PLCC-52 @CR-VS @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-52 @CR-VS @Tempdisabled
 Scenario: Verify the display of elements available on Prescreen  model 
 	And user expect element STEP 1 :PRESCREEN ACCEPTANCE present 
 	And user expect element disclosure Text one on Pre-Screen Modal to be present

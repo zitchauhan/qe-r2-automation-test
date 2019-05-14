@@ -3,7 +3,7 @@ Feature: PLCC: Checkout_Saved Card
 Background: Common Pre-requisite steps 
 	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	
-@C-PLCC @Regression @All @PLCC-1 @CR-VS @AutomationSanityR2 
+@C-PLCC @Regression @All @PLCC-1 @CR-VS @Tempdisabled 
 Scenario: Default ASO/PLcc credit card should be displayed on payment section for faster checkout process 
 	When user enters "SKUIdOfProduct" in the search box plcc 
 	And user click on search icon 

@@ -8,7 +8,7 @@ Background:  Common Pre-requisite steps
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 
 	
-@C-PLCC @Regression @All @PLCC-51 @CR-VS @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-51 @CR-VS @Tempdisabled
 Scenario: Verify the display of elements available on credit card application model
 	And user expect element STEP1: APPLICATION FORM present 
 	And user expect element FirstName text Field on CC Aplication Modal to be present 

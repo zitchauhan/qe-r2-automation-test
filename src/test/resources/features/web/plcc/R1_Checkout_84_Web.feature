@@ -28,7 +28,7 @@ Scenario: Verify an error message when user enters wrong card number and click o
 	Then user expect element Unrecognized card number to be present 
 	
 
-@C-PLCC @Regression @All @PLCC-84 @CR-VS @AutomationSanityR2 
+@C-PLCC @Regression @All @PLCC-84 @CR-VS @Tempdisabled 
 Scenario: Verify user is able to navigate to confirm order page by clicking on review order button 
 	When user handles adding new card "ValidPLCCCard" if already card is saved 
 	And user click on REVIEW ORDER button 
@@ -44,7 +44,7 @@ Scenario: Verify user is able to navigate to confirm order page by clicking on r
 	Then delete all credit cards from My Account 
 	
 	
-@C-PLCC @Regression @All @PLCC-84 @CR-VS @AutomationSanityR2 
+@C-PLCC @Regression @All @PLCC-84 @CR-VS @Tempdisabled 
 Scenario: Verify user is able to navigate to confirm order page by using VISA Credit card card 
 	When user handles adding new card "ValidVISACard" if already card is saved 
 	And user enter expiry date "ExpiryDate" 
@@ -61,7 +61,7 @@ Scenario: Verify user is able to navigate to confirm order page by using VISA Cr
 	And user click on Payments link 
 	Then delete all credit cards from My Account 
 	
-@C-PLCC @Regression @All @PLCC-84 @CR-VS @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-84 @CR-VS @Tempdisabled
 Scenario: Verify user is able to navigate to confirm order page by using Amex Credit card  
 	When user handles adding new card "ValidAmexCard" if already card is saved 
 	And user enter expiry date "ExpiryDate" 
@@ -78,7 +78,7 @@ Scenario: Verify user is able to navigate to confirm order page by using Amex Cr
 	And user click on Payments link 
 	Then delete all credit cards from My Account 
 	
-@C-PLCC @Regression @All @PLCC-84 @CR-VS @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-84 @CR-VS @Tempdisabled
 Scenario: Verify user is able to navigate to confirm order page by using Master Credit card 
 	When user handles adding new card "ValidMasterCard" if already card is saved  
 	And user enter expiry date "ExpiryDate" 
@@ -95,7 +95,7 @@ Scenario: Verify user is able to navigate to confirm order page by using Master 
 	And user click on Payments link 
 	Then delete all credit cards from My Account 
 	
-@C-PLCC @Regression @All @PLCC-84 @CR-VS @AutomationSanityR2 
+@C-PLCC @Regression @All @PLCC-84 @CR-VS @Tempdisabled 
 Scenario: Verify user is able to navigate to confirm order page by using Discover Credit card 
 	When user handles adding new card "ValidDiscoverCard" if already card is saved 
 	And user enter expiry date "ExpiryDate" 

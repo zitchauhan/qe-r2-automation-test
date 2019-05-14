@@ -47,7 +47,7 @@ Scenario: Verify user is able to navigates to shopping bag after clicking on Let
 	And click on LET'S SHOP button
 	And user navigates to ASO-Home page 
 	
-@C-PLCC @Regression @All @PLCC-42 @CR-Manju @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-42 @CR-Manju @Tempdisabled
 Scenario: Verify the Address in MyAccount section
 	When user expect element User Select Address to be present 
 	Then user click on User Select Address
@@ -57,7 +57,7 @@ Scenario: Verify the Address in MyAccount section
     And user expect element Add New Address link to be present
     
    	
-@C-PLCC @Regression @All @PLCC-42 @CR-Manju @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-42 @CR-Manju @Tempdisabled
 Scenario: Verify the Address in MyAccount section
 	When user click on My Account link 
 	And user expect element Email Address to be present 

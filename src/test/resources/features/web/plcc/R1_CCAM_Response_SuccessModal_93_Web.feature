@@ -16,7 +16,7 @@ Background:  Common Pre-requisite steps
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal
 	 	
-@C-PLCC @Regression @All @PLCC-93 @CR-VS @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-93 @CR-VS @Tempdisabled
 Scenario: Verify is able to navigate to Welcome, PHIL Collins FPO model
 	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNamePlcc"

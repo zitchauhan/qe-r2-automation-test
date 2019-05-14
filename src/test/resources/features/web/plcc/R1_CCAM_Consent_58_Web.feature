@@ -29,7 +29,7 @@ Background:  Common Pre-requisite steps
 	When user click on SUBMIT button
 	Then user expect submit button not clickable
 	
-@C-PLCC @Regression @All @PLCC-58 @CR-VS @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-58 @CR-VS @Tempdisabled
  Scenario: Verify Submit button is clickable when Terms and condition check box is checked_Pre-Screen Consent 
 	And user expect Preescreen Code Text Field is to be present
 	And user enter Preescreen Code "Valid_PrescreenCode_1"

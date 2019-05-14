@@ -16,7 +16,7 @@ Background:  Common Pre-requisite steps
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal
 	
-@C-PLCC @Regression @All @PLCC-115 @CR-VS @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-115 @CR-VS @Tempdisabled
 Scenario: Verify PLCC card information saved under customer profile
 	When user enter First Name on credit card Application Modal "FirstName" 
 	Then user enter Last Name on credit card Application Modal "LastName"

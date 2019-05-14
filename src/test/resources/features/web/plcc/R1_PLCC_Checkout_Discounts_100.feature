@@ -12,7 +12,7 @@ Background: Common Pre-requisite steps
 	And user click on Payments link
 	Then delete all credit cards from My Account
 
-@C-PLCC @Regression @All @PLCC-100 @CR-VS @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-100 @CR-VS @Tempdisabled
 Scenario: Verify user is able to get 5% discount for any of the item not included in exclusion list
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
@@ -33,7 +33,7 @@ Scenario: Verify user is able to get 5% discount for any of the item not include
 	And user click on Payments link
 	Then delete all credit cards from My Account
 	
-@C-PLCC @Regression @All @PLCC-100 @CR-VS @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-100 @CR-VS @Tempdisabled
 Scenario: Verify user is able to get 5% discount along with free shipping offer
     When user enters "SKUIdOfProductGr15" in the search box plcc
 	And user click on search icon 
@@ -54,7 +54,7 @@ Scenario: Verify user is able to get 5% discount along with free shipping offer
 	And user click on Payments link
 	Then delete all credit cards from My Account	
 	
-@C-PLCC @Regression @All @PLCC-100 @CR-Manju @AutomationSanityR2	
+@C-PLCC @Regression @All @PLCC-100 @CR-Manju @Tempdisabled	
 Scenario: Verify user is unable to get 5% discount for Gift card details on any of the item 
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
@@ -77,7 +77,7 @@ Scenario: Verify user is unable to get 5% discount for Gift card details on any 
 	And user click on Payments link
 	Then delete all credit cards from My Account
 
-@C-PLCC @Regression @All @PLCC-100 @CR-Manju @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-100 @CR-Manju @Tempdisabled
 Scenario: Verify message when user applied gift card along with the discount
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
@@ -97,7 +97,7 @@ Scenario: Verify message when user applied gift card along with the discount
 	And user click on Payments link
 	Then delete all credit cards from My Account
 	
-#@C-PLCC @Regression @All @PLCC-100 @CR-Manju @AutomationSanityR2	
+#@C-PLCC @Regression @All @PLCC-100 @CR-Manju @Tempdisabled	
 #Scenario: Verify user is not receiving an instant Credit of $15 or 15% when paid using Gift Card and PLCC
 #    When user enters "SKUIdOfProductLs15" in the search box plcc
 #	And user click on search icon 

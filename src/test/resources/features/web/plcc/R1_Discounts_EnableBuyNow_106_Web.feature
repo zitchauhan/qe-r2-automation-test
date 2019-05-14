@@ -1,6 +1,6 @@
 Feature: PLCC: Discounts for Enable BuyNow
 
-@C-PLCC @Regression @All @PLCC-106 @CR-VS @AutomationSanityR2
+@C-PLCC @Regression @All @PLCC-106 @CR-VS @Tempdisabled
 Scenario: Verify user can process the order using Enable Buy Now
  	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user click on My Account link 
