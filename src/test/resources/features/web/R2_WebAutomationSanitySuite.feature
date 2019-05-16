@@ -1,4 +1,4 @@
-Feature: Web Automation Sanity Test Cases Mimicing manual Scenarios 
+Feature: Web Automation Smoke Test Cases Mimicking manual Scenarios 
 
 @R2_Web @R2_WAST-01 @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @AutomationSanityR2 @AutomationSanity
 Scenario: TC_1- Verify Login Logout 
