@@ -60,8 +60,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 
 @R2_Web  @R2_All @P-Highest @1HR_R2 @C-Order @CC-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10659 @CR-AKK @1HR_R2
-Scenario:
-Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
+Scenario: Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button
@@ -93,8 +92,7 @@ Verify that the error message is displayed if Guest user enters order detail not
 	
 @R2_Web  @R2_All @P-Highest @1HR_R2 @C-Order @CC-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10660 @CR-AKK 
-Scenario:
-Verify that Authenticated user is able to view order details if clicks check order status in footer. 
+Scenario: Verify that Authenticated user is able to view order details if clicks check order status in footer. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 

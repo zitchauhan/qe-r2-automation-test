@@ -22,8 +22,7 @@ Scenario: Verify that UnAuthenticated user is able to create an account on Order
 		
 @R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-Highest @1HR_R2 @C-BOPIS @C1-Message_B
 @KER-2868 @ZYP_CHECKOUT_K2868-10709 @CR-AKK 
-Scenario:
-Verify that UnAuthenticated user is able to view  in-store pickup instructions on order confirmation page 
+Scenario: Verify that UnAuthenticated user is able to view  in-store pickup instructions on order confirmation page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -60,8 +59,7 @@ Scenario: Verify that UnAuthenticated user is able to view In-Store Pickup Infor
 	
 @R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-High_B_Order @KER-2868 @C-BOPIS
 @ZYP_CHECKOUT_K2868-10739 @CR-AKK 
-Scenario:
-Verify that UnAuthenticated user is able to view In-Store Pickup Information on Order confirmation page 
+Scenario: Verify that UnAuthenticated user is able to view In-Store Pickup Information on Order confirmation page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -99,8 +97,7 @@ Scenario: Verify that UnAuthenticated user is able to view Payment Details/order
 	
 @R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-High_B_Order @KER-2868 @C-BOPIS
 @ZYP_CHECKOUT_K2868-10738 @CR-AKK 
-Scenario:
-Verify that UnAuthenticated user is able to view Payment Details on Order confirmation page 
+Scenario: Verify that UnAuthenticated user is able to view Payment Details on Order confirmation page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "SKUForBopisProduct" and navigates to PDP 
 	#And user click on Add to Cart Button 
