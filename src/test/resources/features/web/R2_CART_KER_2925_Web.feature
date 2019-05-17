@@ -3,8 +3,7 @@ Feature: Place Order
 @R2_Web @C1-Message @P-High_Order @C-Order @CC-Cart_Order @KER-2925
 @ZYP_CART_K2925-8190 @ZYP_CART_K2925-8191 @ZYP_CART_K2925-8192
 @ZYP_CART_K2925-8194 @ZYP_CART_K2925-11126 @CR-AG @1HR_R2 
-Scenario Outline:
-verify if user should be able to submit the order on the checkout page 
+Scenario Outline: verify if user should be able to submit the order on the checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#    And user click on Add to Cart Button
@@ -99,8 +98,7 @@ verify if user should be able to submit the order on the checkout page
 		#    |Privacy Policy|
 		@R2_Web @P-Low @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8195 @CR-AG
 		@C1-Message 
-		Scenario Outline:
-		Verify if user can click the legal disclaimer Terms and Conditions is clickable 
+Scenario Outline: Verify if user can click the legal disclaimer Terms and Conditions is clickable 
 			Given user launches the browser and navigates to "ASO_HOME" page 
 			When User searches a product "productName" and navigates to PDP 
 			#    And user click on Add to Cart Button
@@ -128,8 +126,7 @@ verify if user should be able to submit the order on the checkout page
 				
 				@R2_Web @P-Low @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8196 @CR-AG
 				@C1-Message 
-				Scenario Outline:
-				Verify if user can click the legal disclaimer Privacy policy is clickable 
+Scenario Outline: Verify if user can click the legal disclaimer Privacy policy is clickable 
 					Given user launches the browser and navigates to "ASO_HOME" page 
 					When User searches a product "productName" and navigates to PDP 
 					#    And user click on Add to Cart Button
@@ -171,8 +168,7 @@ verify if user should be able to submit the order on the checkout page
 						#	And user check order confirmation status in order summary page
 						@R2_Web @P-High_Order @C-Order @CC-Cart_Order @KER-2925
 						@ZYP_CART_K2925-10284 @CR-AG 
-						Scenario Outline:
-						Verify In case Partial inventories are available for one or more item(s) in cart, display limited stock message to the user in checkout page. 
+Scenario Outline: Verify In case Partial inventories are available for one or more item(s) in cart, display limited stock message to the user in checkout page. 
 							Given user launches the browser and navigates to "ASO_HOME" page 
 							Then user search the data in search box"<data>" 
 							Then User to select the product 
@@ -184,8 +180,7 @@ verify if user should be able to submit the order on the checkout page
 								
 								@R2_Web @P-Highest @C-Order @CC-Cart_Order @KER-2925
 								@ZYP_CART_K2925-10294 @CR-AG 
-								Scenario:
-								Verify Before clicking 'Place Order', if the user edits shipping address, the same should be updated in the order summary. 
+Scenario: Verify Before clicking 'Place Order', if the user edits shipping address, the same should be updated in the order summary. 
 									Given user launches the browser and navigates to "ASO_HOME" page 
 									And user clicks on SignIn link from global header 
 									# And user logs in as "EmailAddress"
@@ -216,8 +211,7 @@ verify if user should be able to submit the order on the checkout page
 									
 								@R2_Web @P-Highest @C-Order @CC-Cart_Order @KER-2925
 								@ZYP_CART_K2925-10295 @CR-AG @C1-Message 
-								Scenario:
-								Verify Before clicking 'Place Order', if the user edits shipping method, the same should be updated in the order summary. 
+Scenario: Verify Before clicking 'Place Order', if the user edits shipping method, the same should be updated in the order summary. 
 									Given user launches the browser and navigates to "ASO_HOME" page 
 									And user clicks on SignIn link from global header 
 									#And user logs in as "EmailAddress"
@@ -243,8 +237,7 @@ verify if user should be able to submit the order on the checkout page
 										
 								@R2_Web @P-Highest @C-Order @CC-Cart_Order @KER-2925
 								@ZYP_CART_K2925-10297 @CR-AG @C1-Message 
-								Scenario:
-								Verify Before clicking 'Place Order', if the user edits payment method, the same should be updated in the order summary. Payment will be authorized to the updated payment method only upon click on Place Order. 
+Scenario: Verify Before clicking 'Place Order', if the user edits payment method, the same should be updated in the order summary. Payment will be authorized to the updated payment method only upon click on Place Order. 
 									Given user launches the browser and navigates to "ASO_HOME" page 
 									And user clicks on SignIn link from global header 
 									And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
