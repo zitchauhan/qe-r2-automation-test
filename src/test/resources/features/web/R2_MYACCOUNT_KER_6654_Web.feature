@@ -28,9 +28,7 @@ Scenario: Verify the user is able to see the password strength info bubble
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10178 @CR-RKA @1HR_R2 @C1-Message
-Scenario: 
-	Verify the user gets the error message on entering the password not meeting the requirements of min. characters 
-
+Scenario: Verify the user gets the error message on entering the password not meeting the requirements of min. characters 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 
 	And user logs in as "EmailAddressForChangePassword" 
@@ -45,8 +43,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10179 @CR-RKA 
-Scenario: 
-	Verify the user enters the valid password and resets the password successfully 
+Scenario: Verify the user enters the valid password and resets the password successfully 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 
 	And user logs in as "EmailAddressForChangePassword" 
@@ -92,8 +89,7 @@ Scenario: Verify the user is not able to sign with the old password
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10182 @CR-RKA 
-Scenario: 
-	Verify the user gets the error message on entering the password not meeting the requirements of same as email address 
+Scenario: Verify the user gets the error message on entering the password not meeting the requirements of same as email address 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 
 	And user logs in as "EmailAddressForChangePassword" 
@@ -125,8 +121,7 @@ Scenario: Verify user can set the new password same as old password of 8 digits
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10185 @CR-RKA @C1-Message
-Scenario: 
-	Verify user not allowed to set the new password same as old password of 6 digits 
+Scenario: Verify user not allowed to set the new password same as old password of 6 digits 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 
 	And user logs in as "EmailAddressForChangePassword" 
@@ -147,7 +142,6 @@ Scenario:
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10176 @CR-RKA 
 Scenario: Verify the user is able to see the unmasked password 
-
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 
 	And user logs in as "EmailAddressForChangePassword" 
@@ -163,7 +157,6 @@ Scenario: Verify the user is able to see the unmasked password
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10183 @CR-RKA @C1-Message
 Scenario: Verify the user gets the error message on blank password 
-
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 
 	And user logs in as "EmailAddressForChangePassword" 

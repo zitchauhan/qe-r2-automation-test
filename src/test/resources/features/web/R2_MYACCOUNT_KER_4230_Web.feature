@@ -2,8 +2,7 @@ Feature: verify Forgotten Password functionality
 
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-10576 @CR-RK 
-Scenario: 
-	Verify user is able to enter the Forgot Password page from Forgot Password link 
+Scenario: Verify user is able to enter the Forgot Password page from Forgot Password link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -20,8 +19,7 @@ Scenario:
 	
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-11120 @CR-RK 
-Scenario: 
-	Verify that user can continue the shopping without re-authentication after changing the password 
+Scenario: Verify that user can continue the shopping without re-authentication after changing the password 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -93,8 +91,7 @@ Scenario: Verify that user can see the error message in First name input field.
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-10567 @CR-RK @C1-Message @C1-Message 
-Scenario: 
-	Verify that user can see the error message in First name field if user enters "1" character in input field. 
+Scenario: Verify that user can see the error message in First name field if user enters "1" character in input field. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -116,8 +113,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-10568 @CR-RK 
-Scenario: 
-	Verify that user can see the error message in First name field if user enters "51" character in input field. 
+Scenario: Verify that user can see the error message in First name field if user enters "51" character in input field. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -156,8 +152,7 @@ Scenario: Verify that user can see the error message in last name input field.
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-10570 @CR-RK @C1-Message 
-Scenario: 
-	Verify that user can see the error message in Last name field if user enters 1 character in input field. 
+Scenario: Verify that user can see the error message in Last name field if user enters 1 character in input field. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -179,8 +174,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-10571 @CR-RK 
-Scenario: 
-	Verify that user can see the error message in Last name field if user enters 51 character in input field. 
+Scenario: Verify that user can see the error message in Last name field if user enters 51 character in input field. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -202,8 +196,7 @@ Scenario:
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-10572 @CR-RK @C1-Message 
-Scenario: 
-	Verify that user can see the error message if user enters the email id in New Email and Confirm Email input fields with non-alpha + character. 
+Scenario: Verify that user can see the error message if user enters the email id in New Email and Confirm Email input fields with non-alpha + character. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -229,8 +222,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-10573 @CR-RK @C1-Message 
-Scenario: 
-	Verify that user can see the error message if user enters the email id  more than 255 Characters in New Email and Confirm Email input fields. 
+Scenario: Verify that user can see the error message if user enters the email id  more than 255 Characters in New Email and Confirm Email input fields. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -292,8 +284,7 @@ Scenario: Verify that user can see the error message in password field.
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-11115 @CR-RK 
-Scenario: 
-	Verify that system keep the addresses intact after changing the email address. 
+Scenario: Verify that system keep the addresses intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -325,8 +316,7 @@ Scenario:
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-11116 @CR-RK 
-Scenario: 
-	Verify that system keep the payments intact after changing the email address. 
+Scenario: Verify that system keep the payments intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -351,8 +341,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-11117 @CR-RK 
-Scenario: 
-	Verify that system keep the wish-list intact after changing the email address. 
+Scenario: Verify that system keep the wish-list intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -378,8 +367,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-11118 @CR-RK 
-Scenario: 
-	Verify that system keep the orders intact after changing the email address. 
+Scenario: Verify that system keep the orders intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 

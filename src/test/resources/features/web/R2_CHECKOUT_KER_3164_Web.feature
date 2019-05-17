@@ -2,8 +2,7 @@ Feature: B04-300- Authenticated Checkout Flow
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-8027 @CR-GK 
-Scenario: 
-	Verify that authenticated user is able to select address in dropdown in shipping address section 
+Scenario: Verify that authenticated user is able to select address in dropdown in shipping address section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
@@ -57,8 +56,7 @@ Scenario: Verify that authenticated user is able view/select shipping method
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-8029 @CR-GK @1HR_R2
-Scenario: 
-	Verify if User is able to select a Payment method on One Page Checkout Screen 
+Scenario: Verify if User is able to select a Payment method on One Page Checkout Screen 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  user clicks on SignIn link from global header 
 	And user logs in as "EmailAddress"
@@ -123,8 +121,7 @@ Scenario: Verify if User is able to enter billing information
 	
 @R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Highest   @KER-3164 
 @ZYP_CHECKOUT_K3164-8031 @CR-GK 
-Scenario: 
-	Verify if the user is able to reviw and place order from One Page Checkout Screen
+Scenario: Verify if the user is able to reviw and place order from One Page Checkout Screen
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account 
 	When User searches a product "productName" and navigates to PDP 
@@ -141,8 +138,7 @@ Scenario:
 		
 @R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Medium   @KER-3164 
 @ZYP_CHECKOUT_K3164-13296 @CR-GK @C1-Message
-Scenario: 
-	Verify that user should be displayed with the validation error message if they try to enter invalid email id for order confirmation field in checkout page
+Scenario: Verify that user should be displayed with the validation error message if they try to enter invalid email id for order confirmation field in checkout page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#	And user click on Add to Cart Button
@@ -172,8 +168,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-13295 @CR-GK @C1-Message
-Scenario: 
-	Verify that user should be displayed with the error message if they try to save billing info without entering the email id for order confirmation field in checkout page 
+Scenario: Verify that user should be displayed with the error message if they try to save billing info without entering the email id for order confirmation field in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#	And user click on Add to Cart Button
@@ -199,8 +194,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-13293 @CR-GK @C1-Message
-Scenario: 
-	Verify the validation error message for the email id for order confirmation field in the shipping address drawer in checkout page if we edit without passing the email id 
+Scenario: Verify the validation error message for the email id for order confirmation field in the shipping address drawer in checkout page if we edit without passing the email id 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#	And user click on Add to Cart Button
@@ -227,8 +221,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-13290 @CR-GK 
-Scenario: 
-	Verify the validation error message for the email id for order confirmation field in the shipping address drawer in checkout page if we edit without passing the email id 
+Scenario: Verify the validation error message for the email id for order confirmation field in the shipping address drawer in checkout page if we edit without passing the email id 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#	And user click on Add to Cart Button

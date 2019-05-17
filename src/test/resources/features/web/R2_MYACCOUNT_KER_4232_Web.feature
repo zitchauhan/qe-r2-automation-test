@@ -2,8 +2,7 @@ Feature: E02-100 - My Account, Address Book
 
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9194 @CR-RK 
-Scenario: 
-	Verify Authenticated user can Manage Address Book - View existing Address details 
+Scenario: Verify Authenticated user can Manage Address Book - View existing Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
 	Then Verify below Sub/Main Module of My Account 
@@ -62,8 +61,7 @@ Scenario: Verify Authenticated user has Address given through SOF
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9191 @CR-MS 
-Scenario: 
-	Verify Authenticated user can Manage Address Book - View existing Address details 
+Scenario: Verify Authenticated user can Manage Address Book - View existing Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
 	Then Verify below Sub/Main Module of My Account 
@@ -97,8 +95,7 @@ Scenario:
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9334 @CR-RK 
-Scenario: 
-	Verify Authenticated user can Manage Address Book - Add new Address details - Validation Messages 
+Scenario: Verify Authenticated user can Manage Address Book - Add new Address details - Validation Messages 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
 	Then Verify below Sub/Main Module of My Account 
@@ -168,8 +165,7 @@ Scenario: Verify Authenticated user can Manage Address Book -Set Default Address
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9332 @CR-RK @C1-Message 
-Scenario: 
-	Verify Authenticated user can Manage Address Book - Delete Address details - Undo 
+Scenario: Verify Authenticated user can Manage Address Book - Delete Address details - Undo 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
 	Then Verify below Sub/Main Module of My Account 
@@ -215,8 +211,7 @@ Scenario: Verify Authenticated user can -Set Default Address
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9193 @CR-RK @C1-Message 
-Scenario: 
-	Verify Authenticated user can Manage Address Book - Delete Address details 
+Scenario: Verify Authenticated user can Manage Address Book - Delete Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
 	Then Verify below Sub/Main Module of My Account 
@@ -264,8 +259,7 @@ Scenario: Verify Authenticated user has Address given through SOF
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-12772 @CR-RK 
-Scenario: 
-	Verify My Account Address Book - Delete only saved address that is Default Address 
+Scenario: Verify My Account Address Book - Delete only saved address that is Default Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 

@@ -24,8 +24,7 @@ Scenario: Verify Mixed cart items on cart -Order Summary (BOPIS and SOF)
 	
 @R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-2930
 @ZYP_CART_K2930-10852 
-Scenario:
-Verify Mixed cart items on cart - BOPIS and Regular item , user changes location for BOPIS 
+Scenario: Verify Mixed cart items on cart - BOPIS and Regular item , user changes location for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
@@ -49,8 +48,7 @@ Verify Mixed cart items on cart - BOPIS and Regular item , user changes location
 	
 @R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-2930
 @ZYP_CART_K2930-10853 
-Scenario:
-Verify Mixed cart items on cart - BOPIS and SOF item , user changes location for BOPIS 
+Scenario: Verify Mixed cart items on cart - BOPIS and SOF item , user changes location for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 

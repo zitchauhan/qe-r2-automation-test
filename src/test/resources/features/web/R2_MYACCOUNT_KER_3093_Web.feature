@@ -61,8 +61,7 @@ Scenario: Verify that user returns to the empty Wallet on Cancel
 		
 @R2_Web @R2_All @P-Low @C-Order @CC-MyAccount_Order @KER-3093 
 @ZYP_MYACCOUNT_K3093-10420 @CR-RKA @C1-Message 
-Scenario: 
-	Verify that user gets the error message on entering in-store credit gift card entry 
+Scenario: Verify that user gets the error message on entering in-store credit gift card entry 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user logs in as "RawUser" 
@@ -75,8 +74,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-3093 
 @ZYP_MYACCOUNT_K3093-10421 @CR-RKA @C1-Message 
-Scenario: 
-	Verify that user gets the error message on entering incorrect GC number 
+Scenario: Verify that user gets the error message on entering incorrect GC number 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user logs in as "RawUser" 
@@ -103,8 +101,7 @@ Scenario: Verify that user gets the error message on entering incorrect PIN
 		
 @R2_Web @R2_All @P-Low @C-Order @CC-MyAccount_Order @KER-3093 
 @ZYP_MYACCOUNT_K3093-10424 @CR-RKA @C1-Message 
-Scenario: 
-	Verify that user gets the error message on entering ZERO balance GC number 
+Scenario: Verify that user gets the error message on entering ZERO balance GC number 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user logs in as "RawUser" 
@@ -137,8 +134,7 @@ Scenario: Verify that user gets the error message on blank GC number
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-3093 
 @ZYP_MYACCOUNT_K3093-10425 @CR-RKA @C1-Message 
-Scenario: 
-	Verify that user gets the error message on entering invalid/non-existing GC number 
+Scenario: Verify that user gets the error message on entering invalid/non-existing GC number 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
@@ -189,8 +185,7 @@ Scenario: Verify that user gets the error message on blank GC# and PIN
 		
 @R2_Web @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-3093 
 @ZYP_MYACCOUNT_K3093-10415 @CR-RKA 
-Scenario: 
-	Verify that user is able to add a new GC having 16 digit with 4 or 8 digit PIN and old GC having 13 digit with 4 digit PIN in My Account 
+Scenario: Verify that user is able to add a new GC having 16 digit with 4 or 8 digit PIN and old GC having 13 digit with 4 digit PIN in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
@@ -209,8 +204,7 @@ Scenario:
 	
 @R2_Web @R2_All @P-Low @C-Order @CC-MyAccount_Order @KER-3093 
 @ZYP_MYACCOUNT_K3093-10417 @CR-RKA 
-Scenario: 
-	Verify that user returns to the empty Wallet on Cancel with existing card 
+Scenario: Verify that user returns to the empty Wallet on Cancel with existing card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
@@ -229,8 +223,7 @@ Scenario:
 		
 @R2_Web @R2_All @P-High_Order @C-Order @CC-MyAccount_Order @KER-3093 
 @ZYP_MYACCOUNT_K3093-10419 @CR-RKA 
-Scenario: 
-	Verify that user is able to add a new gift card having 16 digit with 4 or 8 digit PIN in My Account with existing card 
+Scenario: Verify that user is able to add a new gift card having 16 digit with 4 or 8 digit PIN in My Account with existing card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 

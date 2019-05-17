@@ -34,8 +34,7 @@ Scenario: To view details specific to an item in the cart
 	  
 	
 @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2939 @ZYP_CART_K2939-8077 @CR-AKK @C-BOPIS
-Scenario:
-To verify Shipping radio button - Authenticated user With store selected in My Account 
+Scenario: To verify Shipping radio button - Authenticated user With store selected in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 

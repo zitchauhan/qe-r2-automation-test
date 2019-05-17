@@ -257,8 +257,7 @@ Scenario: Verify that Authenticated User is able to Remove items from Wish List
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 
 @ZYP_MYACCOUNT_K4233-11102 @ZYP_MYACCOUNT_K4233-10487 @CR-MS 
-Scenario: 
-	Verify that Authenticated User is able to restore Removed item in Wish List 
+Scenario: Verify that Authenticated User is able to restore Removed item in Wish List 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 

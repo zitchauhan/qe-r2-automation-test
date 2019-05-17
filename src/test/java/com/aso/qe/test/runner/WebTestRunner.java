@@ -22,7 +22,7 @@ import cucumber.api.junit.Cucumber;
 		glue="com.aso.qe.test.stepdefinition.web",
 		plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html",
         tags = "@P-High",
-        //dryRun = true,
+        //dryRun = false,
         //strict = true,
 format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
 ) 

@@ -4,8 +4,7 @@ Feature: View/Select Shipping Address in Checkout
 
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151
 @ZYP_CHECKOUT_K3151-8189 @CR-RK 
-Scenario:
-Verify if authenticated user can select a shipping address from the dropdown 
+Scenario: Verify if authenticated user can select a shipping address from the dropdown 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -40,8 +39,7 @@ Verify if authenticated user can select a shipping address from the dropdown
 	
 @R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3151
 @ZYP_CHECKOUT_K3151-8188 @CR-RK 
-Scenario:
-Verify if authenticated user can  view all the shipping addresses at checkout 
+Scenario: Verify if authenticated user can  view all the shipping addresses at checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -73,8 +71,7 @@ Verify if authenticated user can  view all the shipping addresses at checkout
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151
 @ZYP_CHECKOUT_K3151-10645 @CR-RK 
-Scenario:
-Verify for authenticated user default address will always be displayed on top 
+Scenario: Verify for authenticated user default address will always be displayed on top 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -106,8 +103,7 @@ Verify for authenticated user default address will always be displayed on top
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3151
 @ZYP_CHECKOUT_K3151-10651 @CR-RK 
-Scenario:
-Verify  If the user has already changed/ added an address within an active/ incomplete order, the same would be displayed instead of default address. 
+Scenario: Verify  If the user has already changed/ added an address within an active/ incomplete order, the same would be displayed instead of default address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -139,8 +135,7 @@ Verify  If the user has already changed/ added an address within an active/ inco
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151
 @ZYP_CHECKOUT_K3151-8023 @CR-RK 
-Scenario:
-Verify that  authenticated user is able to view default address in dropdown in shipping address section 
+Scenario: Verify that  authenticated user is able to view default address in dropdown in shipping address section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -167,8 +162,7 @@ Verify that  authenticated user is able to view default address in dropdown in s
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3151
 @ZYP_CHECKOUT_K3151-8024 @CR-RK 
-Scenario:
-Verify that  authenticated user is able to select address in dropdown in shipping address section 
+Scenario: Verify that  authenticated user is able to select address in dropdown in shipping address section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 

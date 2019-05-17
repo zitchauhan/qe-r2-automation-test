@@ -1,8 +1,7 @@
 Feature: Insert Payment Details (Credit/Debit Card) on checkout screen 
 
 @R2_Web @R2_All @P-High @C-Checkout @KER-3138 @ZYP_CART_K3138-8205 @CR-AG 
-Scenario:
-Verify if user enters the debit card, the system should accept and treat it as a credit card 
+Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	And User navigates to L2 Mens clothing
 	#	And user clicks on one of the subcategory and navigates to LTwo 
@@ -28,8 +27,7 @@ Verify if user enters the debit card, the system should accept and treat it as a
 	
 @R2_Web @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3138 @ZYP_CART_K3138-8206
 @CR-AG 
-Scenario:
-Verify if user enters the debit card, the system should accept and treat it as a credit card 
+Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	And User navigates to L2 Mens clothing
 	#	And user clicks on one of the subcategory and navigates to LTwo 
@@ -57,8 +55,7 @@ Verify if user enters the debit card, the system should accept and treat it as a
 	Then user clicks on the submit button 
 	
 @R2_Web @R2_All @P-Low @C-Checkout @KER-3138 @ZYP_CART_K3138-8207 @CR-AG 
-Scenario:
-Verify if user enters the debit card, the system should accept and treat it as a credit card 
+Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	And User navigates to L2 Mens clothing
 	#	And user clicks on one of the subcategory and navigates to LTwo 
@@ -86,8 +83,7 @@ Verify if user enters the debit card, the system should accept and treat it as a
 	Then user clicks on the submit button 
 	
 @R2_Web @R2_All @P-Highest @C-Checkout @KER-3138 @ZYP_CART_K3138-8208 @CR-AG 
-Scenario:
-Verify if user enters the debit card, the system should accept and treat it as a credit card 
+Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	And User navigates to L2 Mens clothing
 	#	And user clicks on one of the subcategory and navigates to LTwo 
@@ -116,8 +112,7 @@ Verify if user enters the debit card, the system should accept and treat it as a
 	
 	
 @R2_Web @R2_All @P-High @C-Checkout @KER-3138 @ZYP_CART_K3138-8209 @CR-AG 
-Scenario:
-Verify if user enters the debit card, the system should accept and treat it as a credit card 
+Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	And User navigates to L2 Mens clothing
 	#	And user clicks on one of the subcategory and navigates to LTwo 
@@ -147,8 +142,7 @@ Verify if user enters the debit card, the system should accept and treat it as a
 	
 @R2_Web @Regression @R2_All @P-High @C-Checkout @KER-3138
 @ZYP_CART_K3138-8210 @CR-AG 
-Scenario:
-Verify if user enters the debit card, the system should accept and treat it as a credit card 
+Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	And User navigates to L2 Mens clothing
 	#	And user clicks on one of the subcategory and navigates to LTwo 
@@ -174,8 +168,7 @@ Verify if user enters the debit card, the system should accept and treat it as a
 	
 @R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3138 @ZYP_CART_K3138-8211
 @CR-AG 
-Scenario:
-Verify if user enters the debit card, the system should accept and treat it as a credit card 
+Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	And User navigates to L2 Mens clothing
 	#	And user clicks on one of the subcategory and navigates to LTwo 
@@ -202,8 +195,7 @@ Verify if user enters the debit card, the system should accept and treat it as a
 	
 @R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3138 @ZYP_CART_K3138-8212
 @CR-AG 
-Scenario:
-Verify if user enters the debit card, the system should accept and treat it as a credit card 
+Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	And User navigates to L2 Mens clothing
 	#	And user clicks on one of the subcategory and navigates to LTwo 
@@ -229,8 +221,7 @@ Verify if user enters the debit card, the system should accept and treat it as a
 	
 @R2_Web @Regression @R2_All @P-High @C-Checkout @KER-3138
 @ZYP_CART_K3138-8218 @CR-AG 
-Scenario:
-Verify if user enters the debit card, the system should accept and treat it as a credit card 
+Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	And User navigates to L2 Mens clothing
 	#	And user clicks on one of the subcategory and navigates to LTwo 

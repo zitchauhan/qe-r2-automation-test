@@ -2,8 +2,7 @@ Feature: [Web] B07-200 Checkout| Signed In User| Pay using saved Credit Card
 
 @R2_Web @R2_Regression @R2_All @P-Higest @1HR @C-Checkout @KER-5892 
 @ZYP_CHECKOUT_K5892-8201 @CR-RKA 
-Scenario: 
-	Verify user is able to see the list of saved credit cards on Checkout while Payment 
+Scenario: Verify user is able to see the list of saved credit cards on Checkout while Payment 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
@@ -29,8 +28,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-5892 
 @ZYP_CHECKOUT_K5892-8203 @CR-RKA 
-Scenario: 
-	Verify user selected credit card is visually indicated in the drop-down 
+Scenario: Verify user selected credit card is visually indicated in the drop-down 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
@@ -56,8 +54,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-5892 
 @ZYP_CHECKOUT_K5892-10814 @CR-RKA @1HR_R2 
-Scenario: 
-	Verify the user is able to add a new credit card while payment that is displayed in active order only 
+Scenario: Verify the user is able to add a new credit card while payment that is displayed in active order only 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
@@ -84,8 +81,7 @@ Scenario:
 		
 @R2_Web @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-5892 
 @ZYP_CHECKOUT_K5892-10816 @CR-RKA 
-Scenario: 
-	Verify the user is able to add a new credit card while payment that is displayed in active order only 
+Scenario: Verify the user is able to add a new credit card while payment that is displayed in active order only 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  user clicks on SignIn link from global header 
 	And  user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
@@ -110,8 +106,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-Highest @1HR @C-Checkout @KER-5892 
 @ZYP_CHECKOUT_K5892-13288 @CR-RKA 
-Scenario: 
-	Verify expired credit card behavior in checkout page - Payment section (Single Credit Card) 
+Scenario: Verify expired credit card behavior in checkout page - Payment section (Single Credit Card) 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  user clicks on SignIn link from global header 
 	And  user enter the valid emailaddress "UserWithSavedAddressAndPayment" 

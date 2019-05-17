@@ -47,7 +47,7 @@ public class Common_Web_SD extends CommonActionHelper
 		globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 		searchProductPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
 		System.err.println(webPropHelper.getConfigPropProperty(url));
-		boolean flag = false;
+boolean flag = false;
 		WebElement pop;
 		try {
 			Thread.sleep(200);

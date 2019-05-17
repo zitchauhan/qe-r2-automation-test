@@ -2,8 +2,7 @@ Feature: verify Forgotten Password functionality
 
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011
 @ZYP_MYACCOUNT_K4023-10078 @CR-RK 
-Scenario:
-Verify user is able to enter the Forgot Password page from Forgot Password link 
+Scenario: Verify user is able to enter the Forgot Password page from Forgot Password link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -34,8 +33,7 @@ Scenario: Verify the available elements on the Forgot Password page
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011
 @ZYP_MYACCOUNT_K4023-10082 @CR-RK @C1-Message
-Scenario:
-Verify the user gets the error message when both email id and Password are incorrect 
+Scenario: Verify the user gets the error message when both email id and Password are incorrect 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -69,8 +67,7 @@ Scenario: Verify the user gets the error message when Email Id is left blank
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4023
 @ZYP_MYACCOUNT_K4023-10083 @CR-RK @C1-Message
-Scenario:
-Verify the user gets the error message on entering non-registered email id 
+Scenario: Verify the user gets the error message on entering non-registered email id 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 

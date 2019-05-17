@@ -29,8 +29,7 @@ Scenario: Verify user is able to checkout using PayPal with Order level Promotio
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-11741 @CR-AKK @C1-Message
-Scenario: 
-	Verify user is able to checkout using PayPal with item-level Promotion applied 
+Scenario: Verify user is able to checkout using PayPal with item-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
@@ -65,8 +64,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-11742 @CR-AKK @C1-Message
-Scenario: 
-	Verify user is able to checkout using PayPal with shipping-level Promotion applied 
+Scenario: Verify user is able to checkout using PayPal with shipping-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP
 	#And user click on Add to Cart Button 
@@ -98,8 +96,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8256 @CR-AKK 
-Scenario: 
-	Verify guest user is able to select Paypal as Payment method on checkout for non-SOF items 
+Scenario: Verify guest user is able to select Paypal as Payment method on checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -117,8 +114,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8258 @CR-AKK 
-Scenario: 
-	Verify guest user is able to proceed with Paypal as checkout for non-SOF items 
+Scenario: Verify guest user is able to proceed with Paypal as checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
@@ -158,8 +154,7 @@ Scenario: Verify the user is navigated to the PayPal page
 	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8261 @CR-AKK 
-Scenario: 
-	Verify authenticated user is able to proceed with Paypal as checkout for non-SOF items 
+Scenario: Verify authenticated user is able to proceed with Paypal as checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user creates an account 
 	And User searches a product "productName" and navigates to PDP 
@@ -179,8 +174,7 @@ Scenario:
 	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8259 @CR-AKK 
-Scenario: 
-	Verify logged in user is able to select Paypal as Payment method on checkout for non-SOF items 
+Scenario: Verify logged in user is able to select Paypal as Payment method on checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
@@ -199,8 +193,7 @@ Scenario:
 	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-10270 @CR-AKK 
-Scenario:
-Verify the authenticated user cannot pay the remaining or partial order amount using PayPal in combination with Gift Card 
+Scenario: Verify the authenticated user cannot pay the remaining or partial order amount using PayPal in combination with Gift Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
@@ -222,8 +215,7 @@ Verify the authenticated user cannot pay the remaining or partial order amount u
 	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8257 @CR-AKK 
-Scenario: 
-	Verify guest user cannot select Paypal as Payment method on checkout for SOF products 
+Scenario: Verify guest user cannot select Paypal as Payment method on checkout for SOF products 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
 	When User searches a product "SOFSKUNumber" and navigates to PDP 
@@ -243,8 +235,7 @@ Scenario:
 	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8260 @CR-AKK
-Scenario:
-Verify guest user cannot select Paypal as Payment method on checkout for SOF products 
+Scenario: Verify guest user cannot select Paypal as Payment method on checkout for SOF products 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user creates an account
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
@@ -265,8 +256,7 @@ Verify guest user cannot select Paypal as Payment method on checkout for SOF pro
 	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8263 @CR-AKK 
-Scenario:
-Verify the user is navigated back to the Academy.com once PayPal payment process is done 
+Scenario: Verify the user is navigated back to the Academy.com once PayPal payment process is done 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP
 	#And user click on Add to Cart Button 

@@ -116,8 +116,7 @@ Scenario: Verify that Authenticated User is able to view the Wish List
 		
 @R2_Web @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10478 @CR-GK 
-Scenario: 
-	Verify that Authenticated User is able to view the Saved payment options 
+Scenario: Verify that Authenticated User is able to view the Saved payment options 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 
 	And user enter the valid emailaddress "EmailAddress" 
@@ -135,8 +134,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10489 @CR-GK 
-Scenario: 
-	Verify that Authenticated User is able to create new password in My Account Menu. 
+Scenario: Verify that Authenticated User is able to create new password in My Account Menu. 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 
 	And user logs in as "EmailAddressForChangePassword" 
@@ -152,8 +150,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10512 @CR-GK 
-Scenario: 
-	Verify that Authenticated User is able to view and search existing orders. 
+Scenario: Verify that Authenticated User is able to view and search existing orders. 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 
 	And user enter the valid emailaddress "EmailAddress" 

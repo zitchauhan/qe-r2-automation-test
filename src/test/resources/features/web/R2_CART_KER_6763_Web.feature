@@ -2,8 +2,7 @@ Feature: B11-800 Improved Bundles Experience Display Bundled & Kit Items in Cart
 
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-4231 @ZYP_CART_K4231-9342 
 @CR-GK 
-Scenario: 
-	Verify that if a user adds same bundle to cart with different color/ size variation of products, the same should be added as separate product blade in the cart.
+Scenario: Verify that if a user adds same bundle to cart with different color/ size variation of products, the same should be added as separate product blade in the cart.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
@@ -30,8 +29,7 @@ Scenario: Verify user can see the Individual SKU's within Bundle in cart page
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-4231 @ZYP_CART_K4231-9344 
 @CR-GK 
-Scenario: 
-	Verify user can see the Thumbnail image, Product title, Product attributes for the products included within the Bundle/ Kit in cart page.
+Scenario: Verify user can see the Thumbnail image, Product title, Product attributes for the products included within the Bundle/ Kit in cart page.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user navigate and deletes existing items in cart
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
@@ -47,8 +45,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-4231 @ZYP_CART_K4231-9345 
 @CR-GK 
-Scenario: 
-	Verify user can see the Included text for the bundle/KIT products in cart page. 
+Scenario: Verify user can see the Included text for the bundle/KIT products in cart page. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
@@ -63,8 +60,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-4231 @ZYP_CART_K4231-9346 
 @CR-GK 
-Scenario: 
-	Verify user unable to delete the product that is part of the bundle/ kit 
+Scenario: Verify user unable to delete the product that is part of the bundle/ kit 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
@@ -80,8 +76,7 @@ Scenario:
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-4231 @ZYP_CART_K4231-9353 
 @CR-GK 
-Scenario: 
-	Verify ASO application displays consistent visual treatment for bundle/Kit in Cart,Checkout & Post Transaction
+Scenario: Verify ASO application displays consistent visual treatment for bundle/Kit in Cart,Checkout & Post Transaction
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 

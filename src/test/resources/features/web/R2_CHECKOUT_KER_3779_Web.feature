@@ -138,7 +138,6 @@ And user does accepts the firearm specific compliance
 		
 @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10913 @CR-RKA
 Scenario: Verify that user should be able to fulfill an order when cart having multiple items like SOF products with single fulfillment option(dropship to store)
-
 Given user launches the browser and navigates to "ASO_HOME" page
 When user clicks on Find a Store
 	Then user enter "zipCode" in Find a Store Model

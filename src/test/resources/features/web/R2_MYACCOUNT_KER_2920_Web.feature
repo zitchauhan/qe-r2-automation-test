@@ -73,8 +73,7 @@ Scenario: Verify that user is able to remove the only saved CC from My Account
 	
 @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2920 
 @ZYP_MYACCOUNT_K2920-10545 @CR-RK @1HR_R2 
-Scenario: 
-	Verify user is able to see the list of saved credit cards on the Payment page under My Account 
+Scenario: Verify user is able to see the list of saved credit cards on the Payment page under My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
@@ -121,8 +120,7 @@ Scenario: Verify deleted CC retains in the saved CC list in My Account on Undo
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2920 
 @ZYP_MYACCOUNT_K2920-10554 @CR-RK 
-Scenario: 
-	Verify last added credit card in saved list becomes the default on deletion of Default credit card 
+Scenario: Verify last added credit card in saved list becomes the default on deletion of Default credit card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	Then Verify below Sub/Main Module of My Account 
