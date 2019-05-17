@@ -174,8 +174,7 @@ Scenario: TC_12-Verify Update Quantity
 	And  user should be able to see the increased quantity and Price in Cart Order summary 
 	
 @R2_Web @R2_WAST-12 @P-Highest @C-Cart @KER-2939 @ZYP_CART_K2939-9615 @AutomationSanityR2 @AutomationSanity
-Scenario:
-TC_13-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
+Scenario: TC_13-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
 	#Then user click on Add to Cart Button
