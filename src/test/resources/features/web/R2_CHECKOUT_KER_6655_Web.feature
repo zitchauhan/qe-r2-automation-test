@@ -1,6 +1,6 @@
 Feature: B10-550 - Enable Buy Now Checkout
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8666 @CR-MS
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8666 @CR-MS
 Scenario: Verify that Authenticated user is able to view Enable Buy Now button on PDP if user does not have saved payment and Shipping Address details
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
@@ -12,7 +12,7 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|
     
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8668 @CR-MS
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8668 @CR-MS
 Scenario: Verify that Authenticated user is able to view Enable Buy Now button on PDP if user does not have saved Shipping Address but has saved payment details
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 
@@ -24,7 +24,7 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|
     
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8667 @CR-MS
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8667 @CR-MS
 Scenario: Verify that Authenticated user is able to view Enable Buy Now button on PDP if user does not have saved payment details but has saved Shipping Address
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 

@@ -1,9 +1,8 @@
 Feature: B11-800 Improved Bundles Experience Display Bundled & Kit Items in Cart 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-6763 @ZYP_CART_K6763-9342 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-6763 @ZYP_CART_K6763-9342 
 @CR-GK 
-Scenario: 
-	Verify that if a user adds same bundle to cart with different color/ size variation of products, the same should be added as separate product blade in the cart.
+Scenario: Verify that if a user adds same bundle to cart with different color/ size variation of products, the same should be added as separate product blade in the cart.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
@@ -15,7 +14,7 @@ Scenario:
 		|CartProductName_Link |
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-6763 @ZYP_CART_K6763-9343 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-6763 @ZYP_CART_K6763-9343 
 @CR-GK 
 Scenario: Verify user can see the Individual SKU's within Bundle in cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -28,10 +27,9 @@ Scenario: Verify user can see the Individual SKU's within Bundle in cart page
 		|Color_txt|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-6763 @ZYP_CART_K6763-9344 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-6763 @ZYP_CART_K6763-9344 
 @CR-GK 
-Scenario: 
-	Verify user can see the Thumbnail image, Product title, Product attributes for the products included within the Bundle/ Kit in cart page.
+Scenario: Verify user can see the Thumbnail image, Product title, Product attributes for the products included within the Bundle/ Kit in cart page.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
@@ -45,10 +43,9 @@ Scenario:
 		|Size_txt|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-6763 @ZYP_CART_K6763-9345 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-6763 @ZYP_CART_K6763-9345 
 @CR-GK 
-Scenario: 
-	Verify user can see the Included text for the bundle/KIT products in cart page. 
+Scenario: Verify user can see the Included text for the bundle/KIT products in cart page. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
@@ -61,10 +58,9 @@ Scenario:
 		|Cart_IncludedTxt|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-6763 @ZYP_CART_K6763-9346 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-6763 @ZYP_CART_K6763-9346 
 @CR-GK 
-Scenario: 
-	Verify user unable to delete the product that is part of the bundle/ kit 
+Scenario: Verify user unable to delete the product that is part of the bundle/ kit 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
@@ -78,10 +74,9 @@ Scenario:
 		|Quantity_input_txt|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-6763 @ZYP_CART_K6763-9353 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-6763 @ZYP_CART_K6763-9353 
 @CR-GK 
-Scenario: 
-	Verify ASO application displays consistent visual treatment for bundle/Kit in Cart,Checkout & Post Transaction
+Scenario: Verify ASO application displays consistent visual treatment for bundle/Kit in Cart,Checkout & Post Transaction
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user navigate and deletes existing items in cart 
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
@@ -113,7 +108,7 @@ Scenario:
 		|Item_Txt                                   |	
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-6763 @ZYP_CART_K6763-9354 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-6763 @ZYP_CART_K6763-9354 
 @CR-GK 
 Scenario: Verify the Visual treatment to be specific to PDP type 
 	Given user launches the browser and navigates to "ASO_HOME" page 

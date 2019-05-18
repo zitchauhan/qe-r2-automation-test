@@ -16,7 +16,7 @@ Scenario: Verify the guest user is able to view the Zipcode on checkout page
 	Then Guest User should be able to see the "FindAsStoreZIPCode" zipcode pre-populated on Checkout page 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8239 @CR-GK 
 Scenario: Verify the guest user is able to view the Checkout Header and Footer on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -33,7 +33,7 @@ Scenario: Verify the guest user is able to view the Checkout Header and Footer o
 		|CheckOut_CheckOutFooter                    |
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8240 @CR-GK 
 Scenario: Verify the guest user is able to see the pre-populated City/State with Zipcode 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -50,7 +50,7 @@ Scenario: Verify the guest user is able to see the pre-populated City/State with
 	And City/State on the basis of the Zipcode should also be pre-populated on Checkout page 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8241 @CR-GK @C1-Message
 Scenario: Verify the guest user is able to enter the shipping address details on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -72,7 +72,7 @@ Scenario: Verify the guest user is able to enter the shipping address details on
 		|Please enter a zip code|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8242 @CR-GK 
 Scenario: Verify the system triggers the Address Verification (AVS) to guest user on wrong address entry 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -154,7 +154,7 @@ Scenario: Verify the guest user is displayed with required validations and error
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P1 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8246 @CR-GK @1HR_R2 
 Scenario: Verify the guest user is able to select the shipping method from the list
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -281,7 +281,7 @@ Scenario: Verify the guest user is able to select the Gift Card payment method i
 		|ReviewOrder_Btn        |
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8251 @CR-GK 
 Scenario: Verify the guest user is able to add new Credit Card as payment method in order to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -353,7 +353,7 @@ Scenario: Verify the guest user is able to place the order
 	Then verify user is able to successfully place the order 
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8243 @CR-GK @C1-Message
 Scenario: Verify the guest user is notified with an error on entering restricted address for the items in cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 

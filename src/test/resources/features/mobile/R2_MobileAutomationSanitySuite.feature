@@ -1,6 +1,6 @@
 Feature: Mobile Automation Sanity Test Cases Mimicing manual Scenarios 
 
-@R2_Mobile @R2_MAST-01 @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK @AutomationSanityR2 @AutomationSanity
+@R2_Mobile @R2_MAST-01 @P2 @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK @AutomationSanityR2 @AutomationSanity
 Scenario: TC_1- Verify Login Logout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on the burger menu 
@@ -19,7 +19,7 @@ Scenario: TC_1- Verify Login Logout
 		|SignInPage_SignIn_btn								|
 		
 		
-@R2_Mobile @R2_MAST-02 @P-Highest @C-MyAccount @KER-4249 
+@R2_Mobile @R2_MAST-02 @P1 @C-MyAccount @KER-4249 
 @ZYP_MYACCOUNT_K4249-10149_M @CR-SK @AutomationSanityR2 @AutomationSanity
 Scenario: TC_3- Verify User is able to create an account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -40,7 +40,7 @@ Scenario: TC_3- Verify User is able to create an account
 #		|LET'S SHOP                                       |
 		
 		
-@R2_Mobile @R2_MAST-03 @P-High @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418_M 
+@R2_Mobile @R2_MAST-03 @P2 @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418_M 
 @CR-SK @AutomationSanityR2 @AutomationSanity @Dummy
 Scenario: TC_4- Verify User is able to Add Gift Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -58,7 +58,7 @@ Scenario: TC_4- Verify User is able to Add Gift Card
 	And user should be able to see available balance 
 	And there should be a Remove link with cross icon 
 	
-@R2_Mobile @R2_WAST-04 @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 
+@R2_Mobile @R2_WAST-04 @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 
 @CR-DPK @AutomationSanityR2 @AutomationSanity
 Scenario: TC_5-Verify Add Credit Card and added as a Default Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -74,7 +74,7 @@ Scenario: TC_5-Verify Add Credit Card and added as a Default Card
 	
 	
 	#===========unit testing pending as search is not working
-@R2_Mobile @R2_MAST-05 @P-High @CR-SK @AutomationSanityR2 @AutomationSanity
+@R2_Mobile @R2_MAST-05 @P2 @CR-SK @AutomationSanityR2 @AutomationSanity
 Scenario: TC_6-Verify and Search an item and  navigate to  View Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
@@ -87,7 +87,7 @@ Scenario: TC_6-Verify and Search an item and  navigate to  View Cart
 	
 	
 	#===========unit testing pending as search is not working
-@R2_Mobile @R2_MAST-06 @P-High @CR-SK @AutomationSanityR2 @AutomationSanity
+@R2_Mobile @R2_MAST-06 @P2 @CR-SK @AutomationSanityR2 @AutomationSanity
 Scenario: TC_7-Verify and Search - Checkout from ATC Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User clicks on the burger menu 
@@ -119,7 +119,7 @@ Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal
 	
 	
 	
-@R2_Mobile @R2_MAST-09 @P-High @C-Cart @KER-3166 @ZYP_K3166-9604_M @CR-DP 
+@R2_Mobile @R2_MAST-09 @P2 @C-Cart @KER-3166 @ZYP_K3166-9604_M @CR-DP 
 @AutomationSanityR2 @AutomationSanity
 Scenario: TC_10-Verify Apply Promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -136,7 +136,7 @@ Scenario: TC_10-Verify Apply Promotion
 		|SubTotal_txt|
 		|EstimatedTaxes_txt| 
 		
-@R2_Mobile @R2_MAST-10 @P-Highest @C-Cart @KER-3127 @ZYP_K3127-8166_M @CR-AKK 
+@R2_Mobile @R2_MAST-10 @P1 @C-Cart @KER-3127 @ZYP_K3127-8166_M @CR-AKK 
 @AutomationSanityR2 @AutomationSanity @Dummy
 Scenario: TC_11- Verify Apply Promotion / Remove Promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -155,7 +155,7 @@ Scenario: TC_11- Verify Apply Promotion / Remove Promotion
 	Then Promo code is Removed 
 	
 	
-@R2_Mobile @R2_MAST-11 @P-Highest @C-Cart @KER-2942 @ZYP_K2942-8044_M @CR-AKK 
+@R2_Mobile @R2_MAST-11 @P1 @C-Cart @KER-2942 @ZYP_K2942-8044_M @CR-AKK 
 @AutomationSanityR2 @AutomationSanity
 Scenario: TC_12-Verify Update Quantity 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -174,10 +174,9 @@ Scenario: TC_12-Verify Update Quantity
 		|SubTotal_txt|
 	And user should be able to see the increased quantity and Price in Cart Order summary 
 	
-@R2_Mobile @R2_MAST-12 @P-Highest @C-Cart @KER-2939 @ZYP-K2939_9615_M @CR-AKK 
+@R2_Mobile @R2_MAST-12 @P1 @C-Cart @KER-2939 @ZYP-K2939_9615_M @CR-AKK 
 @AutomationSanityR2 @AutomationSanity
-Scenario: 
-	TC_13-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
+Scenario: TC_13-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -190,7 +189,7 @@ Scenario:
 		|CartProductName_Link   |
 	Then User is able to see the selected variant image as thumbnail 
 	
-@R2_Mobile @R2_MAST-13 @P-Highest @C-Cart @KER-2942 @ZYP_K2942-8047_M @CR-DP 
+@R2_Mobile @R2_MAST-13 @P1 @C-Cart @KER-2942 @ZYP_K2942-8047_M @CR-DP 
 @AutomationSanityR2 
 Scenario: TC_14-Verify Remove Item from Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -205,7 +204,7 @@ Scenario: TC_14-Verify Remove Item from Cart
 		|# Verify following elements in Cart page "Your Cart item details "|
 		|RemoveFromCart_Btn|
 		
-@R2_Mobile @R2_MAST-14 @P-Highest @C-Cart @KER-3127 @ZYP_K3127-8168_M @CR-AKK 
+@R2_Mobile @R2_MAST-14 @P1 @C-Cart @KER-3127 @ZYP_K3127-8168_M @CR-AKK 
 @AutomationSanityR2 @AutomationSanity
 Scenario: TC_15-Verify User Able to Checkout, if no errors in cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -219,7 +218,7 @@ Scenario: TC_15-Verify User Able to Checkout, if no errors in cart
 		|checkOut_OrderSummary_btn|
 	And user click on checkout button in Cart page 
 	
-@R2_Mobile @R2_MAST-15 @P-Highest @C-Checkout @KER-2934 
+@R2_Mobile @R2_MAST-15 @P1 @C-Checkout @KER-2934 
 @ZYP_CHECKOUT_K2934-8177_M @CR-DPK @AutomationSanityR2 
 Scenario: TC_16-Verify Add Shipping Address
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -238,7 +237,7 @@ Scenario: TC_16-Verify Add Shipping Address
 	
 	
 	
-@R2_Mobile @R2_MAST-16 @P-High @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8629_M 
+@R2_Mobile @R2_MAST-16 @P2 @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6821-8629_M 
 @CR-DPK @AutomationSanityR2 @AutomationSanity @Dummy
 Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -257,7 +256,7 @@ Scenario: TC_17-Verify Payment - Add Gift Card - Unathenticated
 	And user click on Apply button 
 	Then verify Gift Card in order summary page 
 	
-@R2_Mobile @R2_MAST-17 @P-High @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954_M @Dummy
+@R2_Mobile @R2_MAST-17 @P2 @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954_M @Dummy
 @CR-GK @AutomationSanityR2 @AutomationSanity @Dummy
 Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -286,7 +285,7 @@ Scenario: TC_18-Verify Payment - Add Gift Card - Athenticated
 	Then gift card balance is applied towards the purchase 
 	
 	
-@R2_Mobile @R2_MAST-18 @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147_M 
+@R2_Mobile @R2_MAST-18 @P2 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147_M 
 @CR-RK @AutomationSanity @AutomationSanityR2 
 Scenario: TC_19-Verify Sign In During Checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -302,7 +301,7 @@ Scenario: TC_19-Verify Sign In During Checkout
 	And user click on signin button 
 	
 	
-@R2_Mobile @R2_MAST-19 @P-Highest @C-Checkout @KER-2926 
+@R2_Mobile @R2_MAST-19 @P1 @C-Checkout @KER-2926 
 @ZYP_CHECKOUT_K2926-8100_M @CR-AKK @AutomationSanity @AutomationSanityR2 
 Scenario: TC_20- Verify Edit cart items from Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -336,10 +335,9 @@ Scenario: TC_21-Verify Order Summary
 		|EstimatedTax_Txt |
 		
 		
-@R2_Mobile @R2_MAST-21 @P-Highest @C-Cart @KER-2872 @ZYP_CART_K2872-8710_M 
+@R2_Mobile @R2_MAST-21 @P1 @C-Cart @KER-2872 @ZYP_CART_K2872-8710_M 
 @CR-DPK @AutomationSanity @AutomationSanityR2 
-Scenario: 
-	TC_22-Verify Find a store 
+Scenario: TC_22-Verify Find a store 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then User should be able to click on Find Store 

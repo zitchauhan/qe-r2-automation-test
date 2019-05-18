@@ -1,7 +1,7 @@
 Feature: [Mobile]Verify Automatic Store Locator for Unauthenticated User 
 
 	
-	@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2946 @ZYP_CART_K2946-7993 @CR-RKA 
+	@R2_Mobile @R2_Regression @R2_All @P1 @1HR_R2 @C-Cart @KER-2946 @ZYP_CART_K2946-7993 @CR-RKA 
 	Scenario:  Verify if unauthenticated user can view Accepted Payment Methods[For Guest User] 
 	Given user launches the browser and navigates to "ASO_HOME" page
   When User searches a product "productName" and navigates to PDP
@@ -18,7 +18,7 @@ Feature: [Mobile]Verify Automatic Store Locator for Unauthenticated User
 		|AmericanExpress_img|
 		|Discover_img|
 	
-	@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2946 @ZYP_CART_K2946-7994 @CR-RKA 
+	@R2_Mobile @R2_Regression @R2_All @P1 @1HR_R2 @C-Cart @KER-2946 @ZYP_CART_K2946-7994 @CR-RKA 
     Scenario:  Verify if Authenticated user can view Accepted Payment Methods[For Existing User]
     Given user launches the browser and navigates to "ASO_HOME" page
      Then User clicks on the burger menu  

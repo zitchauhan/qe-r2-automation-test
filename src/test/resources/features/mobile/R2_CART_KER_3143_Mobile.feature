@@ -80,7 +80,7 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 		|checkout_ShippingAddress_City_txt							|
 		|checkOut_ShippingAddress_GoToShippingMethod_btn			|
 
-	@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-12571 @CR-RKA
+	@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-3143  @ZYP_Cart_K3143-12571 @CR-RKA
 	Scenario: Verify all the components available on the Order Summary of the Cart
 		Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
@@ -100,7 +100,7 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	    |ShippingPolicy_link|
 		|ReturnPolicy_link|
 		
-	@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Cart @KER-3143  @ZYP_Cart_K3143-8155 @CR-RKA
+	@R2_Mobile @R2_Regression @R2_All @P2 @1HR_R2 @C-Cart @KER-3143  @ZYP_Cart_K3143-8155 @CR-RKA
 	Scenario: Verify if Unauthenticated customer will be able to add items to cart for shipping
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
@@ -168,7 +168,7 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 		|WelcomeBackSignIN_Btn|
     Then user sign in on my cart page 
     
-    @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8158 @CR-RKA
+    @R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-3143  @ZYP_Cart_K3143-8158 @CR-RKA
     Scenario: Verify if Authenticated user must be able to view cart the items added 
     Given user launches the browser and navigates to "ASO_HOME" page
      Then User clicks on the burger menu
@@ -188,7 +188,7 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	 | Item Added Successfully|
 
   
-   @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8159 @CR-RKA
+   @R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-3143  @ZYP_Cart_K3143-8159 @CR-RKA
     Scenario: Verify if Authenticated user must be able to view all items designated for shipping    
 	Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -247,7 +247,7 @@ Scenario: Verify if Unauthenticated customer will be able to add items to cart f
 	|InStorePickup_FREE_radioBtn |
 	|#Change location pending|
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8162 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-3143  @ZYP_Cart_K3143-8162 @CR-RKA
 Scenario: Verify if cart has one or more common item(s), the cart should show single
 Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
@@ -270,7 +270,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|# Verify total item  in Cart page |
 	|Items_txt|
 	
- @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3143  @ZYP_Cart_K3143-8163 @CR-RKA
+ @R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-3143  @ZYP_Cart_K3143-8163 @CR-RKA
 Scenario: Verify if one or more item(s) from my previously added session is deleted or removed from catalog, the user should not see those as part of merged cart
 Given user launches the browser and navigates to "ASO_HOME" page
 Then User clicks on the burger menu

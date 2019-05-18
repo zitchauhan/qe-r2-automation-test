@@ -38,7 +38,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
 		| Payment Type      |
 		| Credit Card 		|
 
-#  @R2_Mobile @P-Highest @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8192 @CR-AG
+#  @R2_Mobile @P1 @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8192 @CR-AG
 #  Scenario: Verify if Order status is updated in 'My account'
 #    Given user launches the browser and navigates to "ASO_HOME" page
 #    And user clicks on the burger menu
@@ -87,7 +87,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
       | Your confirmation email is on its way             |
 
   #########################################################################################
-  @R2_Mobile @R2_Regression @P-High @C-Cart @KER-2925 @ZYP_CART_K2925-8194 @CR-AG
+  @R2_Mobile @R2_Regression @P2 @C-Cart @KER-2925 @ZYP_CART_K2925-8194 @CR-AG
   Scenario: Verify if user can see legal disclaimer while placing the order
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP
@@ -184,7 +184,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
     And user able to see the button place order
     And user check order confirmation status in order summary page
 
-  @R2_Mobile @R2_Regression @P-High @C-Cart @KER-2925 @ZYP_CART_K2925-10284 @CR-AG
+  @R2_Mobile @R2_Regression @P2 @C-Cart @KER-2925 @ZYP_CART_K2925-10284 @CR-AG
   Scenario Outline: Verify In case Partial inventories are available for one or more item(s) in cart, display limited stock message to the user in checkout page.
     Given user launches the browser and navigates to "ASO_HOME" page
     Then user search the data in search box"<data>"
@@ -195,7 +195,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
       | data                                          |
       | Magellan Outdoors Men's Neoprene Wading Boots |
 
-  @R2_Mobile @P-Highest @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-10294 @CR-AG
+  @R2_Mobile @P1 @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-10294 @CR-AG
   Scenario: Verify Before clicking 'Place Order', if the user edits shipping address, the same should be updated in the order summary.
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on the burger menu
@@ -228,7 +228,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
     Then user able to see the same order ID in My order section
     And user validate the same updated shipping address in my orders page
 
-  @R2_Mobile @P-Highest @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-10295 @CR-AG
+  @R2_Mobile @P1 @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-10295 @CR-AG
   Scenario: Verify Before clicking 'Place Order', if the user edits shipping method, the same should be updated in the order summary.
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on the burger menu
@@ -255,7 +255,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
       | # Following Error Message should show on the page |
       | Order Number                                      |
 
-  @R2_Mobile @P-Highest @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-10297 @CR-AG
+  @R2_Mobile @P1 @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-10297 @CR-AG
   Scenario: Verify Before clicking 'Place Order', if the user edits payment method, the same should be updated in the order summary. Payment will be authorized to the updated payment method only upon click on Place Order.
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on the burger menu

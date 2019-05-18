@@ -1,6 +1,6 @@
  Feature: Verify Accurate Shipping Prices at Checkout
 
-@R2_Web @Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-2911 @ZYP_CHECKOUT_K2911-8229 @CR-DPK
+@R2_Web @Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-2911 @ZYP_CHECKOUT_K2911-8229 @CR-DPK
 Scenario: Verify if the shipping price on Checkout screen is same as Order Summary on Cart page
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User Navigates L2 form Homepage Header 
@@ -24,7 +24,7 @@ Scenario: Verify if the shipping price on Checkout screen is same as Order Summa
 		
 		
 	
-@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2911
+@R2_Web @Regression @R2_All @P2 @C-Checkout @KER-2911
 @ZYP_CHECKOUT_K2911-8230 @CR-DPK 
 Scenario: Verify the shipping price for each shipping method for Ship 2 Store items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -80,7 +80,7 @@ Scenario: Verify the shipping price for each shipping method for SOF items
 	Then User verify the fixed shipping price value set in DB for the selected shipping method from DB
 
 
-@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2911
+@R2_Web @Regression @R2_All @P2 @C-Checkout @KER-2911
 @ZYP_CHECKOUT_K2911-8232 @CR-DPK 
 Scenario: Verify the shipping price for each shipping method for Gift Card items
 	Given user launches the browser and navigates to "ASO_HOME" page 

@@ -1,6 +1,6 @@
 Feature: Verify Itemized Subtotal in Cart 
 
-@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940
+@R2_Web @R2_Regression @R2_All @P2 @R2 @C-Cart @KER-2940
 @ZYP_CART_K2940-8052 @CR-AKK @1HR_R2 
 Scenario: To view price of each item in cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -24,7 +24,7 @@ Scenario: To view price of each item in cart
 		| SecondQuantityPrice_Txt                                 |
 	And verify the price format each item is $XX.XX 
 	
-@R2_Web @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940
+@R2_Web @R2_Regression @R2_All @P2 @R2 @C-Cart @KER-2940
 @ZYP_CART_K2940-8054 @CR-AKK 
 Scenario: To verify the Sub-total for all items in cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -89,7 +89,7 @@ Scenario: To verify if the Military Discount is applied
 		| # Verify following elements in Cart page"Order Summary" |
 		| Total_txt                                               |
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8061
+@R2_Web @R2_Regression @R2_All @P2 @C-Cart @KER-2940 @ZYP_CART_K2940-8061
 @CR-AKK 
 Scenario: To verify Shipping charges for in-Store Pickup 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -106,7 +106,7 @@ Scenario: To verify Shipping charges for in-Store Pickup
 	Then user navigate to Cart page 
 	And verify Shipping charges as FREE in cart page 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8062
+@R2_Web @R2_Regression @R2_All @P2 @C-Cart @KER-2940 @ZYP_CART_K2940-8062
 @CR-AKK 
 Scenario: To verify Estimated Taxes for all the items in the Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -130,7 +130,7 @@ Scenario: To verify Estimated Taxes for all the items in the Order summary
 		| EstimatedTaxes_txt                                      |
 	And the Estimated Taxes are in $XX.XX format 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8063
+@R2_Web @R2_Regression @R2_All @P2 @C-Cart @KER-2940 @ZYP_CART_K2940-8063
 @CR-AKK 
 Scenario: To verify Total for all the items in the Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -187,7 +187,7 @@ Scenario: To verify Mixed Promo's discounts applied
 	And user view and Applied Promotions/Discounts "PromoCode" 
 	And verify that Mixed promo discounts are applied for respective items 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8054
+@R2_Web @R2_Regression @R2_All @P2 @C-Cart @KER-2940 @ZYP_CART_K2940-8054
 @CR-AKK 
 Scenario: To verify the Sub-total for all items in cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 

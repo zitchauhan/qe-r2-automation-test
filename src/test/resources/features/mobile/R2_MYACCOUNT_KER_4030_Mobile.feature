@@ -1,10 +1,9 @@
 Feature: Quick Checkout 
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-11496 @CR-SK 
-Scenario: 
-	Verify authenticated user with no information saved in my account is able to navigate to shipping address drawer during quick checkout 
+Scenario: Verify authenticated user with no information saved in my account is able to navigate to shipping address drawer during quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu 
@@ -23,10 +22,9 @@ Scenario:
 		|checkout_ShippingAddress_LastName_txt						|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-11498 @CR-SK 
-Scenario: 
-	Verify authenticated user with address details saved in my account is able to navigate to Billing address drawer during express checkout 
+Scenario: Verify authenticated user with address details saved in my account is able to navigate to Billing address drawer during express checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu 
@@ -41,10 +39,9 @@ Scenario:
 		|checkout_ShippingAddress_txt			|
 		|checkout_ShippingMethod_ShippingDetails|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-4030 
+@R2_Mobile @R2_Regression @R2_All @P2 @1HR_R2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-11499 @CR-SK 
-Scenario: 
-	Verify authenticated user with address details and payment details saved in my account is able to navigate to order summary page during express checkout 
+Scenario: Verify authenticated user with address details and payment details saved in my account is able to navigate to order summary page during express checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu 
@@ -62,10 +59,9 @@ Scenario:
 		|checkout_ShippingAddress_txt			|
 		|checkout_ShippingMethod_ShippingDetails|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-11502 @CR-SK 
-Scenario: 
-	Verify the primary default shipping options should be utilized while quick checkout 
+Scenario: Verify the primary default shipping options should be utilized while quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu 
@@ -81,10 +77,9 @@ Scenario:
 		|# Following shipping message should show on the page	|
 		|Ground shipping										|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-11503 @CR-SK 
-Scenario: 
-	Verify the primary default shipping options should be utilized while quick checkout for WG products 
+Scenario: Verify the primary default shipping options should be utilized while quick checkout for WG products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu 
@@ -101,10 +96,9 @@ Scenario:
 		|We will deliver to your door with no appointment or signature required	|		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-12817 @CR-SK 
-Scenario: 
-	Verify during quick checkout error message will display for shipping address section for Items do not have prop 65 
+Scenario: Verify during quick checkout error message will display for shipping address section for Items do not have prop 65 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu 
@@ -122,10 +116,9 @@ Scenario:
 		|Due to restrictions imposed by Prop65 by the state of California, we cannot ship this item to California.	|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-KER-12809 @CR-SK 
-Scenario: 
-	Verify user can able to edit shipping method after landing on order summary during quick checkout 
+Scenario: Verify user can able to edit shipping method after landing on order summary during quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu 
@@ -144,10 +137,9 @@ Scenario:
 		|#Payment section should be displayed in checkout page	|
 		|PaymentMethodHeader_Txt								|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-KER-12810 @CR-SK 
-Scenario: 
-	Verify user can able to edit Payment Methods after landing on order summary during quick checkout 
+Scenario: Verify user can able to edit Payment Methods after landing on order summary during quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on the burger menu 
 	And user clicks on sign in link from burger menu 
@@ -162,10 +154,9 @@ Scenario:
 	And user click on edit payment metnod 
 	Then user is able to modify payment method 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-KER-12808 @CR-SK 
-Scenario: 
-	Verify user can able to edit shipping address after landing on order summary during quick checkout 
+Scenario: Verify user can able to edit shipping address after landing on order summary during quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu 

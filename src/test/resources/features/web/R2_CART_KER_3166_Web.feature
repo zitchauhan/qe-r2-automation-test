@@ -1,6 +1,6 @@
 Feature: Verify Item/Order Level Promotion Calculation
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3166 @ZYP_CART_K3166-8086 @CR-DPK @1HR_R2
+@R2_Web @R2_Regression @R2_All @P2 @C-Cart @KER-3166 @ZYP_CART_K3166-8086 @CR-DPK @1HR_R2
 Scenario: To verify Add Promotion Code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User Navigates L2 form Homepage Header 

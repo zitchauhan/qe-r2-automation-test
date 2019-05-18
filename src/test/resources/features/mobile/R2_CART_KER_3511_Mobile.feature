@@ -1,5 +1,5 @@
 Feature: [Mobile] B05-350 Shipping Estimate in Cart
-	@R2_Mobile @R2_Regression  @C-Cart @P-High @KER-3511 @1HR_R2 @ZYP_CART_K3511-7989 @CR-RKA	 
+	@R2_Mobile @R2_Regression  @C-Cart @P2 @KER-3511 @1HR_R2 @ZYP_CART_K3511-7989 @CR-RKA	 
 	Scenario: Verify if authenticated user can view estimated shipping based on zip code saved to their account
 	 Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu  
@@ -47,7 +47,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
          |#Verify Estimated Shipping amount is displayed #|
          |EstimatedShippingPrice_Txt|
         
-@R2_Mobile @R2_Regression  @C-Cart @P-High @1HR_R2 @KER-3511 @ZYP_CART_K3511-7991 @CR-RKA	 
+@R2_Mobile @R2_Regression  @C-Cart @P2 @1HR_R2 @KER-3511 @ZYP_CART_K3511-7991 @CR-RKA	 
  Scenario: Verify if authenticated user can view updated estimated shipping when zip code updated on cart page in order summary section.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu  

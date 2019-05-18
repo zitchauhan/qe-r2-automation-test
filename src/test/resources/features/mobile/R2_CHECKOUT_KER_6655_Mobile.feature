@@ -1,6 +1,6 @@
 Feature: B10-550 - Enable Buy Now Checkout
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8666 @CR-MS
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8666 @CR-MS
 Scenario: Verify that Authenticated user is able to view Enable Buy Now button on PDP if user does not have saved payment and Shipping Address details
    	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
@@ -14,7 +14,7 @@ Scenario: Verify that Authenticated user is able to view Enable Buy Now button o
     |EnableBuyNow_btn|
 	
     
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8668 @CR-MS
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8668 @CR-MS
 Scenario: Verify that Authenticated user is able to view "Enable Buy Now" button on PDP if user does not have saved Shipping Address but has saved payment details
     Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -27,7 +27,7 @@ Scenario: Verify that Authenticated user is able to view "Enable Buy Now" button
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|
     
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8667 @CR-MS
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8667 @CR-MS
 Scenario: Verify that Authenticated user is able to view "Enable Buy Now" button on PDP if user does not have saved payment details but has saved Shipping Address
     Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -87,7 +87,7 @@ Scenario: Verify the shipping details modal if user does not have saved Shipping
     |Add_Default_Payment_Option_btn|
 
 #Defect-KER-13488    
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12348 @CR-MS
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12348 @CR-MS
 Scenario: Verify Enable Buy Now is not applicable for following items SOF Age Restriction Items Item(s) having only In store Inventory while loading PDP
     Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -98,7 +98,7 @@ Scenario: Verify Enable Buy Now is not applicable for following items SOF Age Re
 	When User searches a product "SOFSKUNumber" and navigates to PDP
     Then user should not able to see the Enable BUY NOW button on the PDP
     
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12346 @CR-MS @1HR_R2 @1HR_R2
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12346 @CR-MS @1HR_R2 @1HR_R2
 Scenario: Verify Enable Buy Now is applicable for Baits
      Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -114,7 +114,7 @@ Scenario: Verify Enable Buy Now is applicable for Baits
     |#Verify following elements in PDP modal popup|
     |Default_Payment_Option_btn|    
  
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-6655 
 @ZYP_CHECKOUT_K6655-12347 @CR-MS 
 Scenario: Verify Enable Buy Now is applicable for Gift cards 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -241,7 +241,7 @@ Scenario: Verify that Authenticated user is able proceed to checkout by adding p
     |#Verify following elements in PDP page|
     |PaymentFormSubmit_btn|     
     
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12345 @CR-MS @1HR_R2 @1HR_R2
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-12345 @CR-MS @1HR_R2 @1HR_R2
 Scenario: Verify that Authenticated user is able proceed to checkout by adding payment details in Payment Form modal if user does not have saved Payment Address but has saved Shipping details
     Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 
@@ -255,7 +255,7 @@ Scenario: Verify that Authenticated user is able proceed to checkout by adding p
     |#Verify following elements in PDP page|
     |EnableBuyNow_btn|        
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8735 @CR-MS
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-6655 @ZYP_CHECKOUT_K6655-8735 @CR-MS
 Scenario: Verify that Authenticated user is able to view Enable Buy Now button on PDP if user does not have saved payment and Shipping Address details
    	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu 

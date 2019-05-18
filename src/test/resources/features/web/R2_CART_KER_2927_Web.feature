@@ -116,7 +116,7 @@ Scenario: To verify Tax recalculation when user switches from Shipping to store 
 	When user navigates to checkout page 
 	Then checkout page displays updated tax 
 	
-@R2_Mobile @R2_NonRegression @R2_All @1HR_R2 @P-Highest @CB-Cart @KER-2927
+@R2_Mobile @R2_NonRegression @R2_All @1HR_R2 @P1 @CB-Cart @KER-2927
 @ZYP_CART_K2927-9653 @CR-SK @C-BOPIS 
 Scenario: To verify Tax recalculation when user switches from store pickup to  Shipping 
 	Given user launches the browser and navigates to "ASO_HOME" page 

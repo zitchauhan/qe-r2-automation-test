@@ -1,12 +1,12 @@
 Feature: Verify Login/Sign in page and functionality
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10038 @CR-SK @1HR_R2
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10038 @CR-SK @1HR_R2
 Scenario: Verify user is able to enter the Sign In page from Sign In link 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header
 	Then Sign in page should open 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10039 @CR-SK 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10039 @CR-SK 
 Scenario: Verify available elements on the Sign in page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header
@@ -19,7 +19,7 @@ Scenario: Verify available elements on the Sign in page
 		|SignInPage_SignUp_btn								|
 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK 
 Scenario: Verify the user is able to sign in successfully with valid credentials
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -29,7 +29,7 @@ Scenario: Verify the user is able to sign in successfully with valid credentials
 	Then user should get logged in successfully
 #	And a greeting message should be displayed
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10046 @CR-SK
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10046 @CR-SK
 Scenario: Verify the user gets the error message when both email id and Password are incorrect 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -92,7 +92,7 @@ Scenario: Verify the user gets the error message when Password is left blank
 		|# Following error Message should show on the page	|
 		|Please enter the password								|
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4011
 @ZYP_MYACCOUNT_K4011-10301 @CR-SK 
 Scenario: Verify user can do the logout using Flyout from My Account header 
 	Given user launches the browser and navigates to "ASO_HOME" page 

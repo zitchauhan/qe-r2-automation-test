@@ -1,7 +1,7 @@
 Feature: Add Shipping Address in Checkout 
 
 
-@R2_Web @Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P1 @1HR_R2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-8177 @CR-DPK 
 Scenario: Verify the Shipping address form that authenticated user can view on adding new shipping address during checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -51,7 +51,7 @@ Scenario: Verify if unauthenticated user be presented with the blank shipping ad
 		#	|Please enter a zip code|
 		|Required|	
 		
-@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-8179 @CR-DPK 
 Scenario: Verify Guest user should view zipcode pre-populated if previously provided on Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -73,7 +73,7 @@ Scenario: Verify Guest user should view zipcode pre-populated if previously prov
 	And user should see the Zip code pre-populated in Shipping Address drawer 
 	
 	
-@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-9681 @CR-DPK 
 Scenario: Verify guest user, if after placing order, registers the account saves the address in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -93,7 +93,7 @@ Scenario: Verify guest user, if after placing order, registers the account saves
 	
 	
 	
-@R2_Web @Regression @R2_All @P-Highest @1HR_R2 @1HR_R2 @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P1 @1HR_R2 @1HR_R2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-9683 @CR-DPK 
 Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided on cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -117,7 +117,7 @@ Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided o
 	Then user click on Go To Shipping Method button in Checkout page
 	
 	
-@R2_Web @Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P1 @1HR_R2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-10382 @CR-DPK 
 Scenario: Verify if user selects AVS address suggestion and checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -146,7 +146,7 @@ Scenario: Verify if user selects AVS address suggestion and checkout
 	And user verify the suggested address 
 	
 	
-@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-10383 @CR-DPK 
 Scenario: Verify if user selects AVS address suggestion and checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -177,7 +177,7 @@ Scenario: Verify if user selects AVS address suggestion and checkout
 	
 	
 	
-@R2_Web @Regression @R2_All @P-High @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-11681 @CR-DPK 
 Scenario: Verify Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA, Shipping Method drawer gets open on successful validation 
 	Given user launches the browser and navigates to "ASO_HOME" page 

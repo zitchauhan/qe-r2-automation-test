@@ -1,6 +1,6 @@
 Feature: [Mobile]Restricted shipping to PO,APO , FPO boxes
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9833 @CR-RKA
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9833 @CR-RKA
 Scenario: Verify user will be prevented from adding restricted products to PO box in shipping address.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -24,7 +24,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	
 	
 	
-	@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9834 @CR-RKA
+	@R2_Mobile @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9834 @CR-RKA
 	Scenario: Verify user will be prevented from adding restricted products to APO box in shipping address.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
@@ -45,7 +45,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    |Please select a different state or remove the item(s) from cart.|
 	   
 	   
-	@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9835 @CR-RKA
+	@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9835 @CR-RKA
 	   Scenario: Verify user will be prevented from adding restricted products to FPO box in shipping address
 	   Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -65,7 +65,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    |#verify following MSG should come|
 	     |Please select a different state or remove the item(s) from cart.|
 	   
-	   @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9836 @CR-RKA
+	   @R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9836 @CR-RKA
 	   Scenario: Verify if user selected PO Box address in shipping section, user can see the error message when adding the restricted items in cart.
 	   
 	    Given user launches the browser and navigates to "ASO_HOME" page 
@@ -87,7 +87,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 #	   |Please select a different state or remove the item(s) from cart.|
 	   
 	   
-	   @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9837 @CR-RKA
+	   @R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9837 @CR-RKA
 	   Scenario: Verify if user selected APO Box address in shipping section, user can see the error message when adding the restricted items in cart.
 	   
 	       Given user launches the browser and navigates to "ASO_HOME" page 
@@ -108,7 +108,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    |#verify following MSG should come|
 	    |Please select a different state or remove the item(s) from cart.|
 	   
-	   @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9839 @CR-RKA
+	   @R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9839 @CR-RKA
 	  Scenario: Verify if user selected FPO Box address in shipping section,user can see the error message when adding the restricted items in cart. 
 	          Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -128,7 +128,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    |#verify following MSG should come|
 	    |Please select a different state or remove the item(s) from cart.|
 	   
-	     @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9840 @CR-RKA
+	     @R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9840 @CR-RKA
 	   Scenario: Verify if unauthenticated user selected PO Box address in shipping section, unauthenticated user can see the error message when sign in on checkout page.
 	   
 	             Given user launches the browser and navigates to "ASO_HOME" page 
@@ -149,7 +149,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 #	    |#verify following MSG should come|
 #	     |Please select a different state or remove the item(s) from cart.|
 	  
-	   @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9842 @CR-RKA
+	   @R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9842 @CR-RKA
 	  Scenario: Verify if unauthenticated user selected APO Box address in shipping section, unauthenticated user can see the error message when sign in on checkout page. 
 	                Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -169,7 +169,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	    |#verify following MSG should come|
 	     |Please select a different state or remove the item(s) from cart.|
 	  
-	   @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9843 @CR-RKA
+	   @R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-4058 @ZYP_CHECKOUT_K4058-9843 @CR-RKA
 	  Scenario: Verify if unauthenticated user selected FPO Box address in shipping section, unauthenticated user can see the error message when sign in on checkout page.
 	                   Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu

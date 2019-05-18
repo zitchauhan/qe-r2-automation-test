@@ -1,13 +1,13 @@
 Feature: Verify Login/Sign in page and functionality
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10038 @CR-SK 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10038 @CR-SK 
 Scenario: Verify user is able to enter the Sign In page from Sign In link 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
 	When user clicks on sign in link from burger menu
 	Then Sign in page should open 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10039 @CR-SK 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10039 @CR-SK 
 Scenario: Verify available elements on the Sign in page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu
@@ -21,7 +21,7 @@ Scenario: Verify available elements on the Sign in page
 		|SignInPage_SignUp_btn								|
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK 
 Scenario: Verify the user is able to sign in successfully with valid credentials
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -30,7 +30,7 @@ Scenario: Verify the user is able to sign in successfully with valid credentials
 	And user enter the valid password "Password" 
 	And user click on signin button
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10046 @CR-SK
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10046 @CR-SK
 Scenario: Verify the user gets the error message when both email id and Password are incorrect 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu

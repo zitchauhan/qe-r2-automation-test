@@ -1,6 +1,6 @@
 Feature: Verify Gift Card - Payment Processing 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-6941 
 @ZYP_MYACCOUNT_K6941-8922 @CR-RK 
 Scenario: Verify The user must be able to input a valid email Id in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -21,7 +21,7 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 	And user click on signin button 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-6941 
 @ZYP_MYACCOUNT_K6941-8923 @CR-RK @1HR_R2 
 Scenario: Verify The user must be able to input a valid email Id while creating account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -44,7 +44,7 @@ Scenario: Verify The user must be able to input a valid email Id while creating 
 	And clicks on Sign Up Button 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-6941 
 @ZYP_MYACCOUNT_K6941-8924 @CR-RK @C1-Message 
 Scenario: Verify The user must see form field validations to ensure the e-mail address meets the desired format '@'provided in checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -67,7 +67,7 @@ Scenario: Verify The user must see form field validations to ensure the e-mail a
 		|# Following Error Message should show on the page|
 		|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6941 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-6941 
 @ZYP_MYACCOUNT_K6941-8925 @CR-RK @C1-Message 
 Scenario: Verify The user must see form field validations to ensure the e-mail address meets the desired format e.g.@ provided in creating account page 
 	Given user launches the browser and navigates to "ASO_HOME" page 

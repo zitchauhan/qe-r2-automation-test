@@ -18,7 +18,7 @@ Feature: Verify Checkout Login Interstitial
 		|checkout_SignIn_lnk						|
 	
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 @CR-RK 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 @CR-RK 
 	Scenario: Verify is user can Sign-In for faster checkout experience
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
@@ -35,7 +35,7 @@ Feature: Verify Checkout Login Interstitial
 	And user click on signin button 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8148 @CR-DPK 
+@R2_Mobile @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8148 @CR-DPK 
 	Scenario: Verify the  User must view Sign-In/Interstitial Modal
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
@@ -55,7 +55,7 @@ Feature: Verify Checkout Login Interstitial
 		|WelcomeBackPassword_Input|
 		|WelcomeBackSignIN_Btn|
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8149 @CR-RK 
+@R2_Mobile @R2_Regression @R2_All @P1 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8149 @CR-RK 
 	Scenario: Verify if user can create an account from Not a member? Create an account link
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
@@ -157,7 +157,7 @@ Feature: Verify Checkout Login Interstitial
     |Please enter the password|
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-10423 @CR-RK 	
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-10423 @CR-RK 	
 	Scenario: Verify that user is able to navigate back to checkout page after creating new account 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 

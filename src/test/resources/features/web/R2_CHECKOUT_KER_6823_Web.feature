@@ -1,7 +1,7 @@
 Feature: B07-250 - Gift Card - Authenticated User Using Saved GC at Checkout 
 
 
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR @C-Checkout @KER-6823 
+@R2_Web @R2_Regression @R2_All @P1 @1HR @C-Checkout @KER-6823 
 @ZYP_CHECKOUT_K6823-8657 @CR-RKA @1HR_R2 
 Scenario: Verify choose gift card option for authenticated User with 13 and 16 digit Gift Card having 4 or 8 digit PIN 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -30,7 +30,7 @@ Scenario: Verify choose gift card option for authenticated User with 13 and 16 d
 		|ChoosegiftCard_Dd|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6823 
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-6823 
 @ZYP_CHECKOUT_K6823-8671 @CR-RKA 
 Scenario: Verify one gift card applied and Balance is not covered in full 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -54,7 +54,7 @@ Scenario: Verify one gift card applied and Balance is not covered in full
 		|#verify add new giftcard is displayed |
 		|AddAnewGiftCard_Txt|
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6823 
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-6823 
 @ZYP_CHECKOUT_K6823-11184 @CR-RKA 
 Scenario: To verify the GC in 'Choose Gift Card' drop down should be disabled for an authenticated user if full balance of the GC utilized in order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -84,7 +84,7 @@ Scenario: To verify the GC in 'Choose Gift Card' drop down should be disabled fo
 		|#verify add new giftcard is displayed |
 		|AddAnewGiftCard_Txt|
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6823 
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-6823 
 @ZYP_CHECKOUT_K6823-8672 @CR-RKA 
 Scenario: Verify saved another gift card drop down having 13 and 16 digit GC with 4 or 8 digit PIN 
 	Given user launches the browser and navigates to "ASO_HOME" page 

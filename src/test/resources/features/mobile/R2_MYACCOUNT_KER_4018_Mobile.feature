@@ -2,8 +2,7 @@ Feature: Order Cancellation Guest Customer Order Search
 
 @R2_Mobile  @R2_All @P-Low @C-Order @CC-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10658 @CR-AKK 
-Scenario Outline:
-Verify that the error message is displayed if Guest user enters invalid Order number or Billing Zip Code 
+Scenario Outline: Verify that the error message is displayed if Guest user enters invalid Order number or Billing Zip Code 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to Check Oder status Page 
 	When user enter "<InvalidOrdernumber>" and "<InvalidBillingZipcode>" 
@@ -15,8 +14,7 @@ Verify that the error message is displayed if Guest user enters invalid Order nu
 		
 @R2_Mobile  @R2_All @P-Low @C-Order @CC-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-KER-10653 @CR-AKK 
-Scenario:
-Verify that the Guest user is able to navigate to check order status page. 
+Scenario: Verify that the Guest user is able to navigate to check order status page. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to Check Oder status Page 
 	Then Verify the message on the page 
@@ -26,8 +24,7 @@ Verify that the Guest user is able to navigate to check order status page.
 		
 @R2_Mobile  @R2_All @P-High_Order @C-Order @CC-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10657 @CR-AKK 
-Scenario Outline:
-Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
+Scenario Outline: Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 And User navigates to Check Oder status Page 
 When user enter "<InvalidOrdernumber>" and "<ValidBillingZipcode>" 
@@ -40,8 +37,7 @@ Examples:
 	
 	@R2_Mobile  @R2_All @P-Low @C-Order @CC-MyAccount_Order   @KER-4018 
 	@ZYP_MYACCOUNT_K4018-10654 @CR-AKK 
-	Scenario Outline:
-	Verify that the Guest user is not able to enter non numerical values in Order number and Billing Zip code fields. 
+Scenario Outline: Verify that the Guest user is not able to enter non numerical values in Order number and Billing Zip code fields. 
 		Given user launches the browser and navigates to "ASO_HOME" page 
 And User navigates to Check Oder status Page 
 When user enter "InvalidOrdernumber" and "InvalidBillingZipcode" 
@@ -53,8 +49,7 @@ Examples:
 	
 	@R2_Mobile  @R2_All @P-High_Order @C-Order @CC-MyAccount_Order   @KER-4018 
 	@ZYP_MYACCOUNT_K4018-10656 @CR-AKK 
-	Scenario Outline:
-	Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
+Scenario Outline: Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
 		Given user launches the browser and navigates to "ASO_HOME" page 
 And User navigates to Check Oder status Page 
 When user enter "<ValidOrdernumber>" and "<InvalidBillingZipcode>" 
@@ -65,11 +60,10 @@ Examples:
 	|9052176008		   | 77450			  	  |
 	
 	
-@R2_Mobile  @R2_All @P-Highest @1HR_R2 @C-Order @CC-MyAccount_Order  
+@R2_Mobile  @R2_All @P1 @1HR_R2 @C-Order @CC-MyAccount_Order  
 @KER-4018 
 @ZYP_MYACCOUNT_K4018-10659 @CR-AKK 
-Scenario:
-Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
+Scenario: Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
 Given user launches the browser and navigates to "ASO_HOME" page 
 When User searches a product "productName" and navigates to PDP 
 #And user click on Add to Cart Button 
@@ -98,11 +92,10 @@ Then System Generate ordernumber "GeneratedOrdernumber" and "zipcode"
 	And Billing information associated with order should NOT be displayed 
 	
 	
-@R2_Mobile  @R2_All @P-Highest @1HR_R2 @C-Order @CC-MyAccount_Order  
+@R2_Mobile  @R2_All @P1 @1HR_R2 @C-Order @CC-MyAccount_Order  
 @KER-4018 
 @ZYP_MYACCOUNT_K4018-10660 @CR-AKK 
-Scenario:
-Verify that Authenticated user is able to view order details if clicks check order status in footer. 
+Scenario: Verify that Authenticated user is able to view order details if clicks check order status in footer. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 Then User clicks on the burger menu 
 And user clicks on SignIn link from global header 

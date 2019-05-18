@@ -18,7 +18,7 @@ Feature: Verify Checkout Login Interstitial
 	And user will verify the message for Sign-in
 	
 
-@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 @CR-RK 
 	Scenario: Verify is user can Sign-In for faster checkout experience
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Mens clothing
@@ -37,7 +37,7 @@ Feature: Verify Checkout Login Interstitial
 	And user enter the password "Password" from checkout page
 	And user click on signin button
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3392
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3392
 @ZYP_CHECKOUT_K3392-8148 @CR-DPK 
 Scenario: Verify the  User must view Sign-In/Interstitial Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -57,7 +57,7 @@ Scenario: Verify the  User must view Sign-In/Interstitial Modal
 	When user click on SignIn link 
 	And  user will verify the fields in SignIn popup 
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8149 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P1 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8149 @CR-RK 
 	Scenario: Verify if user can create an account from Not a member? Create an account link
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Mens clothing
@@ -75,7 +75,7 @@ Scenario: Verify the  User must view Sign-In/Interstitial Modal
 	And user click on Create a Account link
 	Then User is navigated to Create a Account page
 
-	@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-10423 @CR-RK 	
+	@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-10423 @CR-RK 	
 	Scenario: Verify that user is able to navigate back to checkout page after creating new account 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Mens clothing

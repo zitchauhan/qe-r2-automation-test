@@ -2,8 +2,7 @@ Feature: B06-280 - BOPIS Authenticated Order Cancellation
 
 @C-BOPIS @R2_Mobile @R2_All @P-High_B_Order @C-NonOrder @CC-MyAccount_Order @KER-4327 
 @ZYP_MYACCOUNT_K4327-10912 @CR-MS 
-Scenario: 
-	Verify that for Authenticated user Cancel Order CTA is displayed for orders having BOPIS items 
+Scenario: Verify that for Authenticated user Cancel Order CTA is displayed for orders having BOPIS items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -32,8 +31,7 @@ Scenario:
 		
 @C-BOPIS @R2_Mobile @R2_All @P-High_B_Order @1HR_R2 @C-NonOrder @CC-MyAccount_Order @KER-4327 
 @ZYP_MYACCOUNT_K4327-10917 @CR-MS 
-Scenario: 
-	BOPIS-Verify that Authenticated User is able to navigate back to order details page from cancellation confirmation page 
+Scenario: BOPIS-Verify that Authenticated User is able to navigate back to order details page from cancellation confirmation page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -56,8 +54,7 @@ Scenario:
 		
 @C-BOPIS @R2_Mobile @R2_All @P-High_B_Order @C-NonOrder @CC-MyAccount_Order @KER-4327 
 @ZYP_MYACCOUNT_K4327-10915 @CR-MS 
-Scenario: 
-	BOPIS-Verify that order is not cancelled if user clicks on No CTA on confirmation modal 
+Scenario: BOPIS-Verify that order is not cancelled if user clicks on No CTA on confirmation modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -128,8 +125,7 @@ Scenario: BOPIS-Verify the elements of order cancel confirmation modal
 		#Defect-KER-13721
 @C-BOPIS @R2_Mobile @R2_All @P-Low @C-NonOrder @CC-MyAccount_Order @KER-4327 
 @ZYP_MYACCOUNT_K4327-10914 @CR-MS 
-Scenario: 
-	BOPIS-Verify that order is gets cancelled if user clicks on Yes, Cancel my Order CTA on confirmation modal 
+Scenario: BOPIS-Verify that order is gets cancelled if user clicks on Yes, Cancel my Order CTA on confirmation modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -164,10 +160,9 @@ Scenario:
 		|#Verify following elements in my account order details|
 		|Order_Back_To_Order_Lnk|
 		
-@C-BOPIS @R2_Mobile @R2_All @P-Highest @C-NonOrder @CC-MyAccount_Order @KER-4327 
+@C-BOPIS @R2_Mobile @R2_All @P1 @C-NonOrder @CC-MyAccount_Order @KER-4327 
 @ZYP_MYACCOUNT_K4327-10920 @CR-MS 
-Scenario: 
-	Verify that the Guest user is able to navigate to check order status page 
+Scenario: Verify that the Guest user is able to navigate to check order status page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User navigates to Check Oder status Page 
 	Then Verify the message on the page 

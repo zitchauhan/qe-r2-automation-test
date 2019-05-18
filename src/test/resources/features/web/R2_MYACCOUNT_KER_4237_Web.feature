@@ -1,6 +1,6 @@
 Feature: E03-100 - My Account, Order Details 
 
-@R2_Web @Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Web @Regression @R2_All @P2 @C-MyAccount @KER-4237 
 @ZYP_MYACCOUNT_K4237-10510 @CR-GK 
 Scenario: Verify that Authenticated User is able to view order list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -24,7 +24,7 @@ Scenario: Verify that Authenticated User is able to view order list
 	
 	
 	
-@R2_Web @Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Web @Regression @R2_All @P2 @C-MyAccount @KER-4237 
 @ZYP_MYACCOUNT_K4237-10511 @CR-GK @1HR_R2 
 Scenario: Verify that Order search field is displayed if Authenticated user does not have any orders 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -151,7 +151,7 @@ Scenario: Verify that Authenticated user is able to view order details for BOPIS
 		|MyAccount_OrderDetailsPage_TaxAmount       |
 		|MyAccount_OrderDetailsPage_SubTotalAmount  |
 		
-@R2_Web @R2_All @P-High @CB-MyAccount @KER-4237 @ZYP_MYACCOUNT_K4237-10520 @C-BOPIS
+@R2_Web @R2_All @P2 @CB-MyAccount @KER-4237 @ZYP_MYACCOUNT_K4237-10520 @C-BOPIS
 Scenario: Verify that Authenticated user is able to view store details for BOPIS orders
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -184,7 +184,7 @@ Scenario: Verify that UnAuthenticated user is able to print order receipt
 		|MyAccount_OrderDetailsPage_PrintReceipt    |
 	And user click on print receipt link 
 	
-@R2_Web @R2_All @P-High @CB-MyAccount @KER-4237 @ZYP_MYACCOUNT_K4237-10527 @C-BOPIS
+@R2_Web @R2_All @P2 @CB-MyAccount @KER-4237 @ZYP_MYACCOUNT_K4237-10527 @C-BOPIS
 Scenario: Verify that UnAuthenticated user is able to view order details for BOPIS orders
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then user click on the check order button available in footer
@@ -211,7 +211,7 @@ Scenario: Verify that UnAuthenticated user is able to view order details for BOP
 	|Order_Bopis_Item_Img|
 	|Order_Bopis_Item_Details|
 
-@R2_Web @R2_All @P-High @CB-MyAccount @KER-4237 @ZYP_MYACCOUNT_K4237-10528 @C-BOPIS
+@R2_Web @R2_All @P2 @CB-MyAccount @KER-4237 @ZYP_MYACCOUNT_K4237-10528 @C-BOPIS
 Scenario: Verify that UnAuthenticated user is able to view store details for BOPIS orders
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then user click on the check order button available in footer

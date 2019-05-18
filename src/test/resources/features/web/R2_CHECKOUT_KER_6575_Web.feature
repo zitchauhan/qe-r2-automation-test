@@ -1,6 +1,6 @@
 Feature: B04-350 - Display Simple Header on Checkout Page
 
-#@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6575 @ZYP_CHECKOUT_K6575-8633 @CR-DPK	
+#@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-6575 @ZYP_CHECKOUT_K6575-8633 @CR-DPK	
 #Scenario:  Verify user should see Academy Business Logo on left top corner in the header
 #	    Given user launches the browser and navigates to "ASO_HOME" page  
 #		And User navigates to L2 Mens clothing
@@ -28,7 +28,7 @@ Feature: B04-350 - Display Simple Header on Checkout Page
 #    	
 # 
    	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6575 @ZYP_CHECKOUT_K6575-8638 @CR-DPK @1HR_R2
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-6575 @ZYP_CHECKOUT_K6575-8638 @CR-DPK @1HR_R2
 Scenario: Verify user should see the mini cart Icon with no. of items in cart notifier
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User navigates to L2 Mens clothing
@@ -40,7 +40,7 @@ Scenario: Verify user should see the mini cart Icon with no. of items in cart no
 		And user will click on Checkout button and navigates to Checkout page
 		Then user should see the mini cart Icon with no. of items in cart notifier    		
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6575 @ZYP_CHECKOUT_K6575-8639 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-6575 @ZYP_CHECKOUT_K6575-8639 @CR-DPK
 Scenario: Verify user clicks on the mini cart Icon should navigates user to the cart page.
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 		And User navigates to L2 Mens clothing

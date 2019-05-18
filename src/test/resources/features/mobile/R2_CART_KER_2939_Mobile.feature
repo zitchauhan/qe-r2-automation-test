@@ -1,6 +1,6 @@
 Feature: [Mobile] Verify Product Blade in Cart 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2939 @ZYP_CART_K2939_9615 @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P1 @1HR_R2 @C-Cart @KER-2939 @ZYP_CART_K2939_9615 @CR-AKK 
 Scenario: To Verify Image for selected SKU is be displayed on product blade for  multi-variant product. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -15,7 +15,7 @@ Scenario: To Verify Image for selected SKU is be displayed on product blade for 
 	|CartProductName_Link   |
 	Then User is able to see the selected variant image as thumbnail 
 
-	@C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8071 @CR-AKK 
+	@C-BOPIS @R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-2939 @ZYP_CART_K2939-8071 @CR-AKK 
 Scenario: To view details specific to an item in the cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -41,9 +41,8 @@ Scenario: To view details specific to an item in the cart
 #	Then user verify BOPIS radio button 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8077 @CR-AKK 
-Scenario:
-To verify Shipping radio button - Authenticated user With store selected in My Account 
+@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P2 @C-Cart @KER-2939 @ZYP_CART_K2939-8077 @CR-AKK 
+Scenario: To verify Shipping radio button - Authenticated user With store selected in My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -110,7 +109,7 @@ Scenario: To verify Product name dynamic linking
 	When user click on the product name in cart page
 	Then User is navigated to pdp page 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8082 @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-2939 @ZYP_CART_K2939-8082 @CR-AKK 
 Scenario: To verify Remove Link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -124,7 +123,7 @@ Scenario: To verify Remove Link
 	When click the Remove Quantity link 
 	Then verify item is removed from the cart 
 	
-@C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8078 @CR-AKK 
+@C-BOPIS @R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-2939 @ZYP_CART_K2939-8078 @CR-AKK 
 Scenario: To verify In-store Pick up radio button - with My Store info on My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "SKUForBopisProduct" in the search box
@@ -323,7 +322,7 @@ Scenario: To Verify that Move to Wishlist Link is not displayed for Gift Card(s)
     Then Verify that Move to Wishlist Link is not displayed for Gift Card(s) and Bundle Item(s)
     
     
-    @C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-12746 @C-BOPIS @CR-AKK 
+    @C-BOPIS @R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-2939 @ZYP_CART_K2939-12746 @C-BOPIS @CR-AKK 
 Scenario: To verify Ship to store radio button - Authenticated user With store selected in My Account
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu

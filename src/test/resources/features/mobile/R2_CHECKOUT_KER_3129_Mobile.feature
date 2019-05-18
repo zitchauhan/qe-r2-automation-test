@@ -1,9 +1,8 @@
 Feature: B07-525- Display Final Tax and Total on Checkout 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3129
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3129
 @ZYP_CHECKOUT_K3129-8011 @CR-RK 
-Scenario:
-Verify if  for authenticated User tax line item on checkout page is same as that in cart page 
+Scenario: Verify if  for authenticated User tax line item on checkout page is same as that in cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -24,10 +23,9 @@ Verify if  for authenticated User tax line item on checkout page is same as that
 	And user will click on Checkout button and navigates to Checkout page 
 #	And User should have same tax on Checkout Page Order Summary 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3129 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3129 
 @ZYP_CHECKOUT_K3129-9551 @CR-RK 
-Scenario: 
-	Verify if  User can  view tax line item in order summary section on checkout (Mixed Cart). 
+Scenario: Verify if  User can  view tax line item in order summary section on checkout (Mixed Cart). 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -54,10 +52,9 @@ Scenario:
 	And user will click on Checkout button and navigates to Checkout page 
 #	And User should have same tax on Checkout Page Order Summary 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3129
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3129
 @ZYP_CHECKOUT_K3129-9550 @CR-RK 
-Scenario:
-Verify if  User can  view tax line item in order summary section on checkout (BOPIS Cart). 
+Scenario: Verify if  User can  view tax line item in order summary section on checkout (BOPIS Cart). 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -96,7 +93,7 @@ Verify if  User can  view tax line item in order summary section on checkout (BO
 #	When user navigates to checkout page 
 #	Then checkout page displays updated tax 
 	
-#@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3129
+#@R2_Mobile @R2_Regression @R2_All @P1 @1HR_R2 @C-Checkout @KER-3129
 #@ZYP_CHECKOUT_K3129-9562 @CR-RK 
 #Scenario:
 #Verify if  User can  view updated tax and order total in order summary section on checkout if user switches from shipping to store pickup 
@@ -115,8 +112,7 @@ Verify if  User can  view tax line item in order summary section on checkout (BO
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8009
 @CR-RK 
-Scenario:
-Verify if authenticated User can  view tax line item in order summary section on checkout. 
+Scenario: Verify if authenticated User can  view tax line item in order summary section on checkout. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -143,8 +139,7 @@ Verify if authenticated User can  view tax line item in order summary section on
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8010
 @CR-RK 
-Scenario:
-Verify if  User can  view tax line item in order summary section on checkout. 
+Scenario: Verify if  User can  view tax line item in order summary section on checkout. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to L3 
@@ -159,10 +154,9 @@ Verify if  User can  view tax line item in order summary section on checkout.
 	When user navigates to checkout page 
 	Then user verifies estimated tax and total on checkout page 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8013
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-3129 @ZYP_CART_K3129-8013
 @CR-RK 
-Scenario:
-Verify if  User can  view updated tax and order total in order summary section on checkout if zip code is updated. 
+Scenario: Verify if  User can  view updated tax and order total in order summary section on checkout if zip code is updated. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -185,8 +179,7 @@ Verify if  User can  view updated tax and order total in order summary section o
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8014
 @CR-RK 
-Scenario:
-Verify if  User can  view updated tax and order total in order summary section on checkout if items are updated. 
+Scenario: Verify if  User can  view updated tax and order total in order summary section on checkout if items are updated. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to L3 
@@ -203,10 +196,9 @@ Verify if  User can  view updated tax and order total in order summary section o
 	Then checkout page displays updated tax 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8015
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-3129 @ZYP_CART_K3129-8015
 @CR-RK 
-Scenario:
-Verify if  User can  view updated tax and order total in order summary section on checkout if shipping method is changed. 
+Scenario: Verify if  User can  view updated tax and order total in order summary section on checkout if shipping method is changed. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -226,7 +218,7 @@ Verify if  User can  view updated tax and order total in order summary section o
 	Then user verifies estimated tax and total on checkout page 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-3129 @ZYP_CART_K3129-8016
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-3129 @ZYP_CART_K3129-8016
 @CR-RK 
 Scenario: Verify if  the tax information flows in order details in MY Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 

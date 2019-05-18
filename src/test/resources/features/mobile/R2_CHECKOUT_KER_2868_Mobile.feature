@@ -1,6 +1,6 @@
 Feature: B06-225- BOPIS Order Confirmation Impact
 
-  @C-BOPIS @R2_Mobile @CC-Checkout_Order @R2_All @P-Highest @1HR_R2 @KER-2868 @ZYP_CHECKOUT_K2868-10722 @CR-AKK
+  @C-BOPIS @R2_Mobile @CC-Checkout_Order @R2_All @P1 @1HR_R2 @KER-2868 @ZYP_CHECKOUT_K2868-10722 @CR-AKK
   Scenario: Verify that UnAuthenticated user is able to create an account on Order Confirmation page
     Given user launches the browser and navigates to "ASO_HOME" page
     Given user launches the browser and navigates to "ASO_HOME" page
@@ -19,7 +19,7 @@ Feature: B06-225- BOPIS Order Confirmation Impact
 
   #		|# Then guest user should be displayed with a banner message for successful account creation|
   #		|created an account|
-  @C-BOPIS @R2_Mobile @CC-Checkout_Order @R2_All @P-Highest @1HR_R2 @KER-2868 @ZYP_CHECKOUT_K2868-10709 @CR-AKK
+  @C-BOPIS @R2_Mobile @CC-Checkout_Order @R2_All @P1 @1HR_R2 @KER-2868 @ZYP_CHECKOUT_K2868-10709 @CR-AKK
   Scenario: Verify that UnAuthenticated user is able to create an account on Order Confirmation page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User searches a product "SKUForBopisProduct" and navigates to PDP

@@ -1,6 +1,6 @@
 Feature: [Mobile] My Account, Address Book 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @CR-AKK  
+@R2_Mobile @R2_Regression @R2_All @P1 @1HR_R2 @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @CR-AKK  
 Scenario: To Edit cart items from Order summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

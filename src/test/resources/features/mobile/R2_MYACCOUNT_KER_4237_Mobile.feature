@@ -1,6 +1,6 @@
 Feature: E03-100 - My Account, Order Details 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4237 
 @ZYP_MYACCOUNT_K4237-10510 @CR-GK 
 Scenario: Verify that Authenticated User is able to view order list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -20,10 +20,9 @@ Scenario: Verify that Authenticated User is able to view order list
 	And Verify that 10 orders are displayed per page 
 	And Oldest sorting option is available 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4237 
 @ZYP_MYACCOUNT_K4237-10511 @CR-GK 
-Scenario: 
-	Verify that Order search field is displayed if Authenticated user does not have any orders
+Scenario: Verify that Order search field is displayed if Authenticated user does not have any orders
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu 
@@ -36,10 +35,9 @@ Scenario:
 		| MyAccount_OrderPage_OrderNumberInput        |
 		| OrderPage_Find_btn                          |
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4237 
 @ZYP_MYACCOUNT_K4237-10513 @CR-GK 
-Scenario: 
-	Verify that Authenticated user is able to view shipping and Billing Details of an order
+Scenario: Verify that Authenticated user is able to view shipping and Billing Details of an order
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on sign in link from burger menu 
@@ -66,8 +64,7 @@ Scenario:
 		
 @R2_Mobile @C-Order @CC-MyAccount_Order @R2_All @P-High_Order @KER-4237 
 @ZYP_MYACCOUNT_K4237-10514 @CR-GK @1HR_R2 
-Scenario: 
-	Verify that Guest user is not able to view shipping and Billing Details of an order
+Scenario: Verify that Guest user is not able to view shipping and Billing Details of an order
 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
@@ -96,7 +93,7 @@ Scenario:
 		| MyAccount_OrderDetailsPage_ShippingAddress  |
 		| Order_OrderTotal                            |
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4237 
 @ZYP_MYACCOUNT_K4237-10518 @CR-GK 
 Scenario: Verify that Authenticated user is able to Print Order receipt 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -115,8 +112,7 @@ Scenario: Verify that Authenticated user is able to Print Order receipt
 	
 @C-BOPIS @R2_Mobile @R2_NonRegression @R2_All @P-High_B @CB-MyAccount @KER-4237 
 @ZYP_MYACCOUNT_K4237-10519 @CR-GK 
-Scenario: 
-	Verify that Authenticated user is able to view order details for BOPIS orders
+Scenario: Verify that Authenticated user is able to view order details for BOPIS orders
 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -137,7 +133,7 @@ Scenario:
 		| MyAccount_OrderDetailsPage_TaxAmount             |
 		| MyAccount_OrderDetailsPage_SubTotalAmount        |
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4237 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4237 
 @ZYP_MYACCOUNT_K4237-10526 @CR-GK 
 Scenario: Verify that UnAuthenticated user is able to print order receipt 
 	Given user launches the browser and navigates to "ASO_HOME" page 

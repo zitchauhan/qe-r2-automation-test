@@ -1,7 +1,7 @@
 Feature: Verfiy Edit Shipping Address in Checkout 
 
 
-@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3152
+@R2_Web @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-3152
 @ZYP_CHECKOUT_K3152-8025 @CR-DPK 
 Scenario: Verify that authenticated user is able to edit address in shipping address section on checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -64,7 +64,7 @@ Scenario: Verify that guest user is able to edit address in shipping address sec
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10627 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10627 @CR-DPK
   Scenario: Verify while edit address Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA (as applicable) , AVS check should happen and user should see AVS modal
     Given user launches the browser and navigates to "ASO_HOME" page
    And User Navigates L2 form Homepage Header 
@@ -92,7 +92,7 @@ Scenario: Verify that guest user is able to edit address in shipping address sec
 	And user verify the suggested address	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10628 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10628 @CR-DPK
   Scenario: Verify if an error is found in the address while edit. And AVS returns a suggestion
     Given user launches the browser and navigates to "ASO_HOME" page
     And User Navigates L2 form Homepage Header 
@@ -119,7 +119,7 @@ Scenario: Verify that guest user is able to edit address in shipping address sec
 	And error is found in the shipping address		
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10629 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10629 @CR-DPK
   Scenario: Verify if user selects suggestion and checkout while edit address
     Given user launches the browser and navigates to "ASO_HOME" page
     And User Navigates L2 form Homepage Header 

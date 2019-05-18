@@ -2,8 +2,7 @@ Feature: [Mobile]Payment restrictions
 
 @R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order @KER-4039 
 @ZYP_CHECKOUT_K4039-10454 @CR-RKA @1HR_R2 
-Scenario: 
-	Verify that PayPal and More Options radio buttons are disabled when Gift Card is applied 
+Scenario: Verify that PayPal and More Options radio buttons are disabled when Gift Card is applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to L3 
@@ -33,8 +32,7 @@ Scenario:
 		
 @R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order @KER-4039 
 @ZYP_CHECKOUT_K4039-10455 @CR-RKA 
-Scenario: 
-	Verify that PayPal and More Options radio buttons are enabled when Gift Card is removed 
+Scenario: Verify that PayPal and More Options radio buttons are enabled when Gift Card is removed 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to L3 
@@ -65,8 +63,7 @@ Scenario:
 		
 @R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High_Order @KER-4039 
 @ZYP_CHECKOUT_K4039-9876 @CR-RKA 
-Scenario: 
-	Verify that user can combine Gift Card payment with Credit/Debit Card only 
+Scenario: Verify that user can combine Gift Card payment with Credit/Debit Card only 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to L3 
@@ -93,9 +90,9 @@ Scenario:
 		|ExpirationDate_Input|
 		|Cvv_Input|
 		
-@R2_Mobile @R2_Regression @C-Checkout @R2_All @P-High @KER-4039 
+@R2_Mobile @R2_Regression @C-Checkout @R2_All @P2 @KER-4039 
 @ZYP_CHECKOUT_K4039-9885 @CR-RKA 
-Scenario: 	Verify that user cannot combine Gift Card payment with any non-Credit/Debit Card only 
+Scenario: Verify that user cannot combine Gift Card payment with any non-Credit/Debit Card only 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -175,7 +172,7 @@ Scenario: Verify that user cannot use more than one credit/debit card for single
 		|BillingInformation_Txt|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4039 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-4039 
 @ZYP_CHECKOUT_K4039-9920 @CR-RKA 
 Scenario: Verify that user cannot combine PayPal payment with any other payment option 
 	Given user launches the browser and navigates to "ASO_HOME" page 

@@ -1,6 +1,6 @@
 Feature: Add Credit/Debit Card in Account 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-2919
+@R2_Mobile @R2_Regression @R2_All @P2 @1HR_R2 @C-MyAccount @KER-2919
 @ZYP_CART_K2919-10675 @CR-DPK 
 Scenario: Verify that authenticated user is able to navigate to "Payments" Page. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -53,8 +53,7 @@ Scenario: Verify CVV Tool Tip
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919
 @ZYP_CART_K2919-10678 @CR-DPK 
-Scenario:
-Verify that user is not able to proceed  with Credit card addition without valid credit card details 
+Scenario: Verify that user is not able to proceed  with Credit card addition without valid credit card details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -72,10 +71,9 @@ Verify that user is not able to proceed  with Credit card addition without valid
 		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919
 @ZYP_CART_K2919-10679 @CR-DPK 
-Scenario:
-Verify that user is not able to proceed with Credit card addition with past expiration date 
+Scenario: Verify that user is not able to proceed with Credit card addition with past expiration date 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -94,10 +92,9 @@ Verify that user is not able to proceed with Credit card addition with past expi
 		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919
 @ZYP_CART_K2919-10680 @CR-DPK 
-Scenario:
-Verify that user is not able to proceed with Credit card addition without valid credit card expiration date 
+Scenario: Verify that user is not able to proceed with Credit card addition without valid credit card expiration date 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -116,8 +113,7 @@ Verify that user is not able to proceed with Credit card addition without valid 
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919
 @ZYP_CART_K2919-10682 @CR-DPK 
-Scenario:
-Verify that user is not able to proceed with Credit card addition with non number credit card expiration date 
+Scenario: Verify that user is not able to proceed with Credit card addition with non number credit card expiration date 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -138,8 +134,7 @@ Verify that user is not able to proceed with Credit card addition with non numbe
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919
 @ZYP_CART_K2919-10683 @CR-DPK 
-Scenario:
-Verify that user is not able to proceed with Credit card addition with invalid credit card CVV length 
+Scenario: Verify that user is not able to proceed with Credit card addition with invalid credit card CVV length 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -160,8 +155,7 @@ Verify that user is not able to proceed with Credit card addition with invalid c
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919
 @ZYP_CART_K2919-10685 @CR-DPK 
-Scenario:
-Verify that user is not able to proceed with Credit card addition with non number CVV 
+Scenario: Verify that user is not able to proceed with Credit card addition with non number CVV 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -179,10 +173,9 @@ Verify that user is not able to proceed with Credit card addition with non numbe
 		|# Following Error Message should show on the page|
 		|Please enter a security code|	
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919
 @ZYP_CART_K2919-10689 @CR-DPK 
-Scenario:
-Verify that user is not able to proceed with Billing Information addition without entering all the required fields 
+Scenario: Verify that user is not able to proceed with Billing Information addition without entering all the required fields 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -208,7 +201,7 @@ Verify that user is not able to proceed with Billing Information addition withou
 		|Please select a State|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919
 @ZYP_CART_K2919-10690 @CR-DPK 
 Scenario: Verify that Payment Details are not saved if User clicks on Cancel CTA 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -233,7 +226,7 @@ Scenario: Verify that Payment Details are not saved if User clicks on Cancel CTA
 	
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919
 @ZYP_CART_K2919-10692 @CR-DPK 
 Scenario: Verify that Payment Details are not saved if User clicks on Cancel CTA 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -259,7 +252,7 @@ Scenario: Verify that Payment Details are not saved if User clicks on Cancel CTA
 	
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919
 @ZYP_CART_K2919-10693 @CR-DPK 
 Scenario: Verify if entered address is validated by AVS 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -287,7 +280,7 @@ Scenario: Verify if entered address is validated by AVS
 	And Verify that Credit Card details as entered are saved in User Profile. 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919 
 @ZYP_CART_K2919-10696 @CR-DPK 
 Scenario: TC_7-Verify Add Credit Card and added as a Default Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -337,8 +330,7 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2919
 @ZYP_CART_K2919-10698 @CR-DPK 
-Scenario:
-Verify that the City and State are auto populated when Zip Code is entered 
+Scenario: Verify that the City and State are auto populated when Zip Code is entered 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 

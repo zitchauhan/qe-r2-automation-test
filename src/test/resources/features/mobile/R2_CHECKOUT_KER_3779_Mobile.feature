@@ -1,9 +1,8 @@
 Feature: BO6-125 - Fulfillment Options 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3779
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3779
 @ZYP_CHECKOUT_K3779-10813 @CR-RKA 
-Scenario:
-Verify that user should be able to fulfill an order when cart having single item with single fulfillment option(Ship to home) 
+Scenario: Verify that user should be able to fulfill an order when cart having single item with single fulfillment option(Ship to home) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -24,10 +23,9 @@ Verify that user should be able to fulfill an order when cart having single item
 		|checkout_ShippingMethod_GoToPayment_btn|
 		|checkout_ShippingMethod_ItemImage_img|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3779
+@R2_Mobile @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-3779
 @ZYP_CHECKOUT_K3779-10815 @CR-RKA 
-Scenario:
-Verify that user should be able to fulfill an order when cart having multiple item with single fulfillment option(Ship to home) 
+Scenario: Verify that user should be able to fulfill an order when cart having multiple item with single fulfillment option(Ship to home) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -56,10 +54,9 @@ Verify that user should be able to fulfill an order when cart having multiple it
 		|checkout_ShippingMethod_ItemImage_img|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR @C-Checkout @KER-3779
+@R2_Mobile @R2_Regression @R2_All @P1 @1HR @C-Checkout @KER-3779
 @ZYP_CHECKOUT_K3779-10817 @CR-RKA 
-Scenario:
-Verify that user should be able to fulfill an order when cart having items with single fulfillment option(dropship to home) 
+Scenario: Verify that user should be able to fulfill an order when cart having items with single fulfillment option(dropship to home) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -80,10 +77,9 @@ Verify that user should be able to fulfill an order when cart having items with 
 		|checkout_ShippingMethod_GoToPayment_btn|
 		|checkout_ShippingMethod_ItemImage_img|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3779
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3779
 @ZYP_CHECKOUT_K3779-10877 @CR-RKA 
-Scenario:
-Verify that user should be able to fulfill an order when cart having single item with single fulfillment option(dropship to home) 
+Scenario: Verify that user should be able to fulfill an order when cart having single item with single fulfillment option(dropship to home) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -106,10 +102,9 @@ Verify that user should be able to fulfill an order when cart having single item
 		|checkout_ShippingMethod_ItemImage_img|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3779 
 @ZYP_CHECKOUT_K3779-10878 @CR-RKA 
-Scenario: 
-	Verify that user should be able to fulfill an order when cart having single item like SOF products with single fulfillment option(dropship to store) 
+Scenario: Verify that user should be able to fulfill an order when cart having single item like SOF products with single fulfillment option(dropship to store) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user selects a store with ZIP "FindStoreZipcode" 
@@ -139,11 +134,9 @@ Scenario:
 		|ReviewOrder_Btn|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3779
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3779
 @ZYP_CHECKOUT_K3779-10913 @CR-RKA 
-Scenario:
-Verify that user should be able to fulfill an order when cart having multiple items like SOF products with single fulfillment option(dropship to store) 
-
+Scenario: Verify that user should be able to fulfill an order when cart having multiple items like SOF products with single fulfillment option(dropship to store) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
@@ -175,10 +168,9 @@ Verify that user should be able to fulfill an order when cart having multiple it
 		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3779
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3779
 @ZYP_CHECKOUT_K3779-10932 @CR-RKA 
-Scenario:
-Scenario:Verify that user should be able to fulfill an order when cart having multiple item with single fulfillment option( ship from store) 
+Scenario: Verify that user should be able to fulfill an order when cart having multiple item with single fulfillment option( ship from store) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
@@ -188,7 +180,6 @@ Scenario:Verify that user should be able to fulfill an order when cart having mu
 	Then user is navigated to Add to cart Notification popup 
 	And user click on viewcart button
 	Then User clicks on the burger menu 
-	
 	And User navigates to L3 
 	Then user clicks on the product card and navigates to PDP 
 	#And user click on Add to Cart Button 

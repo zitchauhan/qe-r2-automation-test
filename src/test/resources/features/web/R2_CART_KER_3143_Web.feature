@@ -69,7 +69,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|checkout_ShippingAddress_City_txt							|
 		|checkOut_ShippingAddress_GoToShippingMethod_btn			|
 	
-	@R2_Web @R2_Regression @P-High @C-Cart  @KER-3143 @ZYP_Cart_K3143-12571 @CR-RKA
+	@R2_Web @R2_Regression @P2 @C-Cart  @KER-3143 @ZYP_Cart_K3143-12571 @CR-RKA
 	Scenario: Verify all the components available on the Order Summary of the Cart
 		Given user launches the browser and navigates to "ASO_HOME" page
 	When User Navigates L2 form Homepage Header 
@@ -89,7 +89,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|ReturnPolicy_link|
 		
 	
-	@R2_Web @R2_Regression  @P-High @C-Cart  @KER-3143 @ZYP_Cart_K3143-8155 @CR-RKA @C1-Message
+	@R2_Web @R2_Regression  @P2 @C-Cart  @KER-3143 @ZYP_Cart_K3143-8155 @CR-RKA @C1-Message
 	Scenario: Verify if Unauthenticated customer will be able to add items to cart for shipping
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When User Navigates L2 form Homepage Header 
@@ -149,7 +149,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
     Then user sign in from checkout page 
     
     
-    @R2_Web @R2_Regression @P-High @KER-3143 @C-Cart  @ZYP_Cart_K3143-8158 @CR-RKA @C1-Message
+    @R2_Web @R2_Regression @P2 @KER-3143 @C-Cart  @ZYP_Cart_K3143-8158 @CR-RKA @C1-Message
     Scenario: Verify if Authenticated user must be able to view cart the items added
     
     Given user launches the browser and navigates to "ASO_HOME" page
@@ -167,7 +167,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|#verify item added successfully MSG#|
 	 | Item Added Successfully|
    
-    @R2_Web @R2_Regression @P-High  @KER-3143 @C-Cart  @ZYP_Cart_K3143-8159 @CR-RKA
+    @R2_Web @R2_Regression @P2  @KER-3143 @C-Cart  @ZYP_Cart_K3143-8159 @CR-RKA
     Scenario: Verify if Authenticated user must be able to view all items designated for shipping
         
 	Given user launches the browser and navigates to "ASO_HOME" page
@@ -185,7 +185,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|# Verify following elements in Cart page "Item in Cart "|
 	|Items_txt|
 	
-	@R2_Web @R2_Regression @P-High @KER-3143 @C-Cart  @ZYP_Cart_K3143-8160 @CR-RKA @C-BOPIS
+	@R2_Web @R2_Regression @P2 @KER-3143 @C-Cart  @ZYP_Cart_K3143-8160 @CR-RKA @C-BOPIS
 	Scenario: Verify if user must be able to view all items designated for BOPIS( Buy online and pick in store)
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -214,7 +214,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	|InStorePickup_FREE_radioBtn |
 	|#Change location pending|
 
-@R2_Web @R2_Regression  @KER-3143 @P-High @C-Cart  @ZYP_Cart_K3143-8162 @CR-RKA
+@R2_Web @R2_Regression  @KER-3143 @P2 @C-Cart  @ZYP_Cart_K3143-8162 @CR-RKA
 Scenario: Verify if cart has one or more common item(s), the cart should show single
 Given user launches the browser and navigates to "ASO_HOME" page
 When User Navigates L2 form Homepage Header 
@@ -234,7 +234,7 @@ When User Navigates L2 form Homepage Header
 	|# Verify total item  in Cart page |
 	|Items_txt|
 
-@R2_Web @R2_Regression @P-High @KER-3143 @C-Cart  @ZYP_Cart_K3143-8163 @CR-RKA
+@R2_Web @R2_Regression @P2 @KER-3143 @C-Cart  @ZYP_Cart_K3143-8163 @CR-RKA
 Scenario: Verify if one or more item(s) from my previously added session is deleted or removed from catalog, the user should not see those as part of merged cart
 Given user launches the browser and navigates to "ASO_HOME" page
 When User Navigates L2 form Homepage Header 

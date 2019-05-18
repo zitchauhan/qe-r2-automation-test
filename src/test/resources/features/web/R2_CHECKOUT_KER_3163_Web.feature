@@ -1,7 +1,7 @@
 Feature: View/Select Shipping Address in Checkout
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9406 @CR-DPK @C1-Message
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9406 @CR-DPK @C1-Message
 Scenario: Verify if user clicks "Go to Payment" without completing mandatory fields, system should accurate and displays relevant error messages.
  	Given user launches the browser and navigates to "ASO_HOME" page
 	And User navigates to L2 Mens clothing
@@ -23,7 +23,7 @@ Scenario: Verify if user clicks "Go to Payment" without completing mandatory fie
 	
 	 
 
- @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9407 @CR-DPK @C1-Message
+ @R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9407 @CR-DPK @C1-Message
 Scenario: Verify if user clicks "Go to Payment" with incorrect details, system should accurate and displays relevant error messages.
 	 Given user launches the browser and navigates to "ASO_HOME" page
 #	And User navigates to L2 Mens clothing
@@ -49,7 +49,7 @@ When User searches a product "productName" and navigates to PDP
 	|Invalid zip code, please enter a valid zip code|
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9408 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9408 @CR-DPK
   Scenario: Verify user address verified by the system.
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing
@@ -78,7 +78,7 @@ When User searches a product "productName" and navigates to PDP
 	And user verify the suggested address	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9409 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9409 @CR-DPK
   Scenario: Verify user can select the suggested address or modify the address that has been filled.
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing
@@ -109,7 +109,7 @@ When User searches a product "productName" and navigates to PDP
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9410 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9410 @CR-DPK
   Scenario: Verify user can redirect to address fields on clicking modify address.
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing
@@ -138,7 +138,7 @@ When User searches a product "productName" and navigates to PDP
 		|checkOut_ShippingAddress_GoToShippingMethod_btn			|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9413 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-Checkout @KER-3163 @ZYP_CHECKOUT_K3163-9413 @CR-DPK
   Scenario: Verify user can continue checkout with the suggested address/ entered address.
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing

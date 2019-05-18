@@ -1,6 +1,6 @@
 Feature: B03-300- Out of Stock
 
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2944-8044 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2944-8044 @CR-AKK 
 Scenario: verify if User is prompted to remove the OOS item from cart to proceed to checkout (BOPIS)
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
@@ -18,7 +18,7 @@ Scenario: verify if User is prompted to remove the OOS item from cart to proceed
 		|SubTotal_txt|
 	And user should be able to see the increased quantity and Price in Cart Order summary 
 
-@R2_Web @R2_All @P-Highest @1HR_R2 @CB-Cart @KER-2942 @ZYP_CART_K2944-9813 @C-BOPIS
+@R2_Web @R2_All @P1 @1HR_R2 @CB-Cart @KER-2942 @ZYP_CART_K2944-9813 @C-BOPIS
 Scenario: verify if User is prompted to remove the OOS item from cart to proceed to checkout (BOPIS)
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header

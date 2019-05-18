@@ -37,7 +37,7 @@ Scenario: Verify if authenticated user can select a shipping address from the dr
 	And user click on checkout button 
 	And user should see the order summary page with the default address 
 	
-@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3151
+@R2_Web @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-3151
 @ZYP_CHECKOUT_K3151-8188 @CR-RK 
 Scenario: Verify if authenticated user can  view all the shipping addresses at checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -101,7 +101,7 @@ Scenario: Verify for authenticated user default address will always be displayed
 	And user click on checkout button
 	And user should see the order summary page with the default address 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3151
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3151
 @ZYP_CHECKOUT_K3151-10651 @CR-RK 
 Scenario: Verify  If the user has already changed/ added an address within an active/ incomplete order, the same would be displayed instead of default address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 

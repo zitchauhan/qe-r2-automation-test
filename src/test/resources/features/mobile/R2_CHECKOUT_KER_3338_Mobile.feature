@@ -1,9 +1,8 @@
 Feature: PayPal on Checkout page 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3338 
+@R2_Mobile @R2_Regression @R2_All @P1 @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-11739 @CR-AKK 
-Scenario:
-Verify user is able to checkout using PayPal with Order level Promotion applied 
+Scenario: Verify user is able to checkout using PayPal with Order level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP
 	#And user click on Add to Cart Button 
@@ -28,10 +27,9 @@ Verify user is able to checkout using PayPal with Order level Promotion applied
 	Then user switch to window of paypal 
 	Then user verify the element of paypal window 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3338 
+@R2_Mobile @R2_Regression @R2_All @P1 @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-11741 @CR-AKK 
-Scenario: 
-	Verify user is able to checkout using PayPal with item-level Promotion applied 
+Scenario: Verify user is able to checkout using PayPal with item-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to L3 
@@ -62,10 +60,9 @@ Scenario:
 		|# Following Message should show on the page|  
 		|Paypal account|
 		
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3338 
+@R2_Mobile @R2_Regression @R2_All @P1 @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-11742 @CR-AKK 
-Scenario:
-Verify user is able to checkout using PayPal with shipping-level Promotion applied 
+Scenario: Verify user is able to checkout using PayPal with shipping-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to L3 
@@ -96,10 +93,9 @@ Verify user is able to checkout using PayPal with shipping-level Promotion appli
 		|# Following Message should show on the page|  
 		|Paypal account|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
+@R2_Mobile @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8256 @CR-AKK 
-Scenario:
-Verify authenticated user is able to proceed with Paypal as checkout for non-SOF items 
+Scenario: Verify authenticated user is able to proceed with Paypal as checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on the burger menu
 	And user creates an account 
@@ -138,8 +134,7 @@ Scenario: Verify the user is navigated to the PayPal page
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8261 @CR-AKK 
-Scenario:
-Verify authenticated user is able to proceed with Paypal as checkout for non-SOF items 
+Scenario: Verify authenticated user is able to proceed with Paypal as checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu  
 	And user creates an account 
@@ -160,8 +155,7 @@ Verify authenticated user is able to proceed with Paypal as checkout for non-SOF
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8259 @CR-AKK 
-Scenario:
-Verify logged in user is able to select Paypal as Payment method on checkout for non-SOF items 
+Scenario: Verify logged in user is able to select Paypal as Payment method on checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -180,8 +174,7 @@ Verify logged in user is able to select Paypal as Payment method on checkout for
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8258 @CR-AKK 
-Scenario:
-Verify guest user is able to proceed with Paypal as checkout for non-SOF items 
+Scenario: Verify guest user is able to proceed with Paypal as checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And User navigates to L3 
@@ -223,8 +216,7 @@ Scenario: Verify the authenticated user cannot pay the remaining or partial orde
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8257 @CR-AKK 
-Scenario:
-Verify guest user cannot select Paypal as Payment method on checkout for SOF products 
+Scenario: Verify guest user cannot select Paypal as Payment method on checkout for SOF products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on the burger menu
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
@@ -245,8 +237,7 @@ Verify guest user cannot select Paypal as Payment method on checkout for SOF pro
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8260 @CR-AKK
-Scenario:
-Verify guest user cannot select Paypal as Payment method on checkout for SOF products 
+Scenario: Verify guest user cannot select Paypal as Payment method on checkout for SOF products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on the burger menu
 	And user creates an account

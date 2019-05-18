@@ -2,9 +2,8 @@ Feature: Verfiy Edit Shipping Address in Checkout
 
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-8025 @CR-DPK @1HR_R2
-Scenario: 
-	Verify that authenticated user is able to edit address in shipping address section on checkout page 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-8025 @CR-DPK @1HR_R2
+Scenario: Verify that authenticated user is able to edit address in shipping address section on checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
 	When user clicks on SignIn link from global header 
@@ -42,8 +41,7 @@ Scenario:
 	And User verify edit CTA 
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-8026 @CR-DPK
-Scenario: 
-	Verify that guest user is able to edit address in shipping address section on checkout page
+Scenario: Verify that guest user is able to edit address in shipping address section on checkout page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User clicks on the burger menu
 	And User navigates to L3
@@ -71,7 +69,7 @@ Scenario:
 		|checkOut_ShippingAddress_GoToShippingMethod_btn			|	
 		
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10627 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10627 @CR-DPK
   Scenario: Verify while edit address Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA (as applicable) , AVS check should happen and user should see AVS modal
  Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
@@ -101,7 +99,7 @@ Scenario:
 	And user verify the suggested address	
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10628 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10628 @CR-DPK
   Scenario: Verify if an error is found in the address while edit. And AVS returns a suggestion
        Given user launches the browser and navigates to "ASO_HOME" page
 #    Then User clicks on the burger menu
@@ -131,7 +129,7 @@ When User searches a product "productName" and navigates to PDP
 	And error is found in the shipping address		
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10629 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3152 @ZYP_CHECKOUT_K3152-10629 @CR-DPK
   Scenario: Verify if user selects suggestion and checkout while edit address
    Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

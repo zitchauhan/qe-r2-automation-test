@@ -2,7 +2,7 @@ Feature: B04-350 - Display Simple Header on Checkout Page
 
 
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2  @C-Checkout @KER-6576 @ZYP_CHECKOUT_K6576-8739 @CR-RK	
+@R2_Mobile @R2_Regression @R2_All @P1 @1HR_R2  @C-Checkout @KER-6576 @ZYP_CHECKOUT_K6576-8739 @CR-RK	
 Scenario:  Verify the Elements present in Checkout footer
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 	    And User clicks on the burger menu 

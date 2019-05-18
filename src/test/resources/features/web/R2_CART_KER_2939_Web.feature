@@ -1,6 +1,6 @@
 Feature: Verify Product Blade in Cart 
 
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2939 @ZYP_CART_K2939-9615 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-Cart @KER-2939 @ZYP_CART_K2939-9615 @CR-AKK 
 Scenario: To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
@@ -14,7 +14,7 @@ Scenario: To Verify Image for selected SKU is be displayed on product blade for 
 	|CartProductName_Link   |
 	And User is able to see the selected variant image as thumbnail  
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8071 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @P2 @C-Cart @KER-2939 @ZYP_CART_K2939-8071 @CR-AKK 
 Scenario: To view details specific to an item in the cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "SanitySKUNumber" in the search box
@@ -99,7 +99,7 @@ Scenario: To verify Product name dynamic linking
 	When user click on the product name in cart page 
 	Then User is navigated to pdp page 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2939 @ZYP_CART_K2939-8082 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @P2 @C-Cart @KER-2939 @ZYP_CART_K2939-8082 @CR-AKK 
 Scenario: To verify Remove Link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 

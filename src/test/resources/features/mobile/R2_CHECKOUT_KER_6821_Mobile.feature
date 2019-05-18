@@ -26,7 +26,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
       | # user should be displayed with inline error message |
       | InvalidGiftCardNumber_Txt                            |
 
-  @R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-Highest @1HR_R2   @KER-6821 @ZYP_CHECKOUT_K6821-10203 @CR-AKK
+  @R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P1 @1HR_R2   @KER-6821 @ZYP_CHECKOUT_K6821-10203 @CR-AKK
   Scenario: Verify the error message when user enters the invalid Gift card number
     Given user launches the browser and navigates to "ASO_HOME" page
     And User clicks on the burger menu 

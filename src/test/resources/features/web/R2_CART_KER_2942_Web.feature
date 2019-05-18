@@ -1,6 +1,6 @@
 Feature: Verify Quantity Adjustment in Cart 
 
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @CR-AKK 
 Scenario: Verify add quantity adjustment in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
@@ -39,7 +39,7 @@ Scenario: Verify cart gets recalculated on applying promotions and updated disco
 	|Promocode_Txt|
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-AKK 
 Scenario: Verify Remove link in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
@@ -54,7 +54,7 @@ Scenario: Verify Remove link in the Cart Page
 		|RemoveFromCart_Btn|
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-8049 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @P2 @C-Cart @KER-2942 @ZYP_CART_K2942-8049 @CR-AKK 
 Scenario: Verify Quantity Zero in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -77,7 +77,7 @@ Scenario: Verify Quantity Zero in the Cart Page
 	|# Verify cart is empty|
 	|YourCartIsEmpty_Txt|
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-9357 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @P2 @C-Cart @KER-2942 @ZYP_CART_K2942-9357 @CR-AKK 
 Scenario: Verify system does inventory check for product item added more than available 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
@@ -213,7 +213,7 @@ Scenario:  To verify Remove link
     |# verify the remove quantity message|
     |Undo|
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-6867 @CR-AKK @C1-Message
+@R2_Web @R2_Regression @R2_All @P2 @C-Cart @KER-2942 @ZYP_CART_K2942-6867 @CR-AKK @C1-Message
 Scenario: Verify Quantity Zero in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
@@ -228,7 +228,7 @@ Scenario: Verify Quantity Zero in the Cart Page
     |# verify the item is removed|
     |Undo|
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-2942 @ZYP_CART_K2942-6914 @CR-AKK
+@R2_Web @R2_Regression @R2_All @P2 @C-Cart @KER-2942 @ZYP_CART_K2942-6914 @CR-AKK
 Scenario: To verify Inventory Check on Quantity update
 Given user launches the browser and navigates to "ASO_HOME" page  
 	When User Navigates L2 form Homepage Header 

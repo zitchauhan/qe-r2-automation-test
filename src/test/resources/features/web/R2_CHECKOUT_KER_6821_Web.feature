@@ -26,7 +26,7 @@ Feature: Verfiy Gift Card - Payment Validation in Checkout
     And user enter Pin Number "WrongPinNumber"
     And user click on Apply button
 
-  @R2_Web  @R2_All @P-Highest @1HR_R2 @C-Order @CC-Checkout_Order @KER-6821 @ZYP_CHECKOUT_K6821-10203 @CR-AKK
+  @R2_Web  @R2_All @P1 @1HR_R2 @C-Order @CC-Checkout_Order @KER-6821 @ZYP_CHECKOUT_K6821-10203 @CR-AKK
   Scenario: Verify the error message when user enters the invalid Gift card number
     Given user launches the browser and navigates to "ASO_HOME" page
     When User searches a product "productName" and navigates to PDP

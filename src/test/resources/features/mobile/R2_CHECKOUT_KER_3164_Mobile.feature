@@ -2,8 +2,7 @@ Feature: B04-300- Authenticated Checkout Flow
 
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-8027 @CR-GK @1HR_R2 
-Scenario: 
-	Verify that authenticated user is able to select address in dropdown in shipping address section 
+Scenario: Verify that authenticated user is able to select address in dropdown in shipping address section 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user should able to click on Signin button 
@@ -57,10 +56,9 @@ Scenario: Verify that authenticated user is able view/select shipping method
 		|checkout_ShippingMethod_GoToPayment_btn					|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3164 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-8029 @CR-GK 
-Scenario: 
-	Verify if User is able to select a Payment method on One Page Checkout Screen 
+Scenario: Verify if User is able to select a Payment method on One Page Checkout Screen 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user should able to click on Signin button 
@@ -130,10 +128,9 @@ Scenario: Verify if User is able to enter billing information
 	And user click on confirm billing address button 
 	
 	
-@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-Highest @KER-3164 
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P1 @KER-3164 
 @ZYP_CHECKOUT_K3164-8031 @CR-GK 
-Scenario: 
-	Verify if the user is able to reviw and place order from One Page Checkout Screen 
+Scenario: Verify if the user is able to reviw and place order from One Page Checkout Screen 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on the burger menu 
 	When user creates an account 
@@ -151,8 +148,7 @@ Scenario:
 	
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-13296 @CR-GK 
-Scenario: 
-	Verify that user should be displayed with the validation error message if they
+Scenario: Verify that user should be displayed with the validation error message if they
 		try to enter invalid email id for order confirmation field in checkout page 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	When  User searches a product "productName" and navigates to PDP 
@@ -180,8 +176,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-13295 @CR-GK 
-Scenario: 
-	Verify that user should be displayed with the error message if they try to
+Scenario: Verify that user should be displayed with the error message if they try to
 		save billing info without entering the email id for order confirmation field
 		in checkout page 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -209,8 +204,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-13293 @CR-GK 
-Scenario: 
-	Verify the validation error message for the email id for order confirmation
+Scenario: Verify the validation error message for the email id for order confirmation
 		field in the shipping address drawer in checkout page if we edit without
 		passing the email id 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -239,8 +233,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-Checkout @KER-3164 
 @ZYP_CHECKOUT_K3164-13290 @CR-GK 
-Scenario: 
-	Verify the validation error message for the email id for order confirmation
+Scenario: Verify the validation error message for the email id for order confirmation
 		field in the shipping address drawer in checkout page if we edit without
 		passing the email id 
 	Given  user launches the browser and navigates to "ASO_HOME" page 

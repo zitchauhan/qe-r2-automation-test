@@ -1,6 +1,6 @@
 Feature: B06-200 - Add Item from PLP to Cart 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4119
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-4119
 @ZYP_CHECKOUT_K4119-8642 @CR-AKK 
 Scenario: Verify that User is able to open the Diff Selection modal from PLP 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -14,7 +14,7 @@ Scenario: Verify that User is able to open the Diff Selection modal from PLP
 	Then verify ship it button is displayed 
 	#Then Verify that Add to Cart CTA is displayed 
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4119
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-4119
 @ZYP_CHECKOUT_K4119-8643 @CR-AKK 
 Scenario: Verify that User is able to add item to cart after making selections on Diff Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -31,7 +31,7 @@ Scenario: Verify that User is able to add item to cart after making selections o
 	Then verify that View Cart and Checkout CTA is displayed 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-4119
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-4119
 @ZYP_CHECKOUT_K4119-8645 @CR-AKK  @1HR_R2
 Scenario: Verify that User is able to view the cart after adding item to cart from PLP 
 	Given user launches the browser and navigates to "ASO_HOME" page 

@@ -1,6 +1,6 @@
 Feature: B07-500- Change Billing Address 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3135 @1HR_R2 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3135 @1HR_R2 
 @ZYP_CHECKOUT_K3135-8108 @CR-GK 
 Scenario: To verify change billing Address CTA 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -33,7 +33,7 @@ Scenario: To verify change billing Address CTA
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
 	And user click on confirm billing address button 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3135 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3135 
 @ZYP_CHECKOUT_K3135-8109 @CR-GK 
 Scenario: To verify all fields in Billing Address Form 
 	Given user launches the browser and navigates to "ASO_HOME" page 

@@ -1,6 +1,6 @@
 Feature: [Web]B05-350 Shipping Estimate in Cart
  
-@R2_Web @R2_Regression @R2_All @P-High @C-Cart @KER-3511 @ZYP_CART_K3511-7991 @CR-DPK @1HR_R2
+@R2_Web @R2_Regression @R2_All @P2 @C-Cart @KER-3511 @ZYP_CART_K3511-7991 @CR-DPK @1HR_R2
 Scenario: Verify if authenticated user can view updated estimated shipping when zip code updated on cart page in order summary section.
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header
@@ -35,7 +35,7 @@ Scenario: Verify if authenticated user can view updated estimated shipping when 
 	
 	
 
-@R2_Web @R2_Regression @C-Cart @P-High @KER-3511 @ZYP_CART_K3511-7989 @CR-RKA 
+@R2_Web @R2_Regression @C-Cart @P2 @KER-3511 @ZYP_CART_K3511-7989 @CR-RKA 
 Scenario: Verify if authenticated user can view estimated shipping based on zip code saved to their account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 

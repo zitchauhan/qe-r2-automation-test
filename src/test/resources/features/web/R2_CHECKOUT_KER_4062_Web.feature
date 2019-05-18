@@ -106,7 +106,7 @@ Scenario: verify the account register with out Email News letter
 	
 	
 	
-@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-High @KER-4062 @ZYP_CART_K4062-8104
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P2 @KER-4062 @ZYP_CART_K4062-8104
 @CR-SK @C1-Message
 Scenario: Verify if user gets proper validation message for invalid password
 	Given user launches the browser and navigates to "ASO_HOME" page 

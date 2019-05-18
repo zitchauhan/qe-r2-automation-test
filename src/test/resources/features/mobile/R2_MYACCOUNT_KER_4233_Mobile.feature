@@ -1,6 +1,6 @@
 Feature: E02-100 - My Account, Wish List 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4233 
+@R2_Mobile @R2_Regression @R2_All @P1 @1HR_R2 @C-MyAccount @KER-4233 
 @ZYP_MYACCOUNT_K4233-10484 @ZYP_MYACCOUNT_K4233-11099 @CR-MS 
 Scenario: Verify that Authenticated User is able to view the Wish List page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -18,7 +18,7 @@ Scenario: Verify that Authenticated User is able to view the Wish List page
 	Then Verify that Create Your First Wish List button 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4233 
+@R2_Mobile @R2_Regression @R2_All @P1 @1HR_R2 @C-MyAccount @KER-4233 
 @ZYP_MYACCOUNT_K4233-10504 @ZYP_MYACCOUNT_K4233-11113 @CR-MS 
 Scenario: Verify that Authenticated user can create first wish list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -42,7 +42,7 @@ Scenario: Verify that Authenticated user can create first wish list
 		|WishlistItems_lnk|
 	And verify the created list 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4233 
 @ZYP_MYACCOUNT_K4233-10488 @ZYP_MYACCOUNT_K4233-11103 @CR-MS 
 Scenario: Verify that Authenticated User is able to rename a Wish List 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -101,7 +101,7 @@ Scenario: Verify that Authenticated User is able to cancel deleting a Wish List
 		|#Verify following element in wishlist section|
 		|Wishlist_icn|			
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4233 
 @ZYP_MYACCOUNT_K4233-10492 @ZYP_MYACCOUNT_K4233-11105 @CR-MS 
 Scenario: Verify that Authenticated User is able to delete a Wish List 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -125,7 +125,7 @@ Scenario: Verify that Authenticated User is able to delete a Wish List
 	And user clicks on Delete WishList 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4233 
 @ZYP_MYACCOUNT_K4233-10505 @ZYP_MYACCOUNT_K4233-11114 @CR-MS 
 Scenario: Verify that Authenticated user can create additional wish list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -147,10 +147,9 @@ Scenario: Verify that Authenticated user can create additional wish list
 	And user clicks on WishListItems 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4233 
 @ZYP_MYACCOUNT_K4233-11102 @ZYP_MYACCOUNT_K4233-10487 @CR-MS 
-Scenario: 
-	Verify that Authenticated User is able to restore Removed item in Wish List 
+Scenario: Verify that Authenticated User is able to restore Removed item in Wish List 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -187,7 +186,7 @@ Scenario: Verify that Authenticated User is able to Remove items from Wish List
 		|#Verify following element in wishlist section|
 		|browse_products_btn|   
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4233 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4233 
 @ZYP_MYACCOUNT_K4233-10485 @ZYP_MYACCOUNT_K4233-11100 @CR-MS 
 Scenario: Verify that Authenticated User is able to view the Wish List Details 
 	Given user launches the browser and navigates to "ASO_HOME" page 

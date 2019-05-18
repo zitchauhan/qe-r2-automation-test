@@ -1,6 +1,6 @@
 Feature: B07-250 - Gift Card - Authenticated User: Add New Gift Card at Checkout 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6822 @1HR_R2 
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-6822 @1HR_R2 
 @ZYP_CHECKOUT_K6822-7949 @CR-GK 
 Scenario: Verify Add new Gift Card fields 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -79,7 +79,7 @@ Scenario: Verify Gift card fields displayed - No Previous Gift Cards Saved
 		| Pin_Input                                          |
 		| Apply_Btn                                          |
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-6822 
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-6822 
 @ZYP_CHECKOUT_K6822-7917 @CR-GK 
 Scenario: Verify Add new gift card during checkout user has Saved Gift Cards 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -132,7 +132,7 @@ Scenario: Verify Valid gift card is applied for purchases
 		| # Following button and success message on checkout page |
 		| GiftCardAppliedSuccessMsg                               |
 		
-@R2_Web @R2_All @P-Highest @1HR @C-Order @CC-Checkout_Order @KER-6822 
+@R2_Web @R2_All @P1 @1HR @C-Order @CC-Checkout_Order @KER-6822 
 @ZYP_CHECKOUT_K6822-10193 @CR-GK @C1-Message 
 Scenario: Verify the user can enter valid new Gift card with 13 or 16 digit in Checkout for payment 
     	verify the display of error message when an unauthenticated user is trying to add a GC that starts with 777 series at checkout

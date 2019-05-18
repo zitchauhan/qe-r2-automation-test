@@ -1,6 +1,6 @@
 Feature: B10-500 - Buy Now on PDP
 
-@R2_Mobile  @R2_All @P-Highest @C-Order @CC-Checkout_Order   @KER-4332 @ZYP_CHECKOUT_K4332-9524 @CR-AKK
+@R2_Mobile  @R2_All @P1 @C-Order @CC-Checkout_Order   @KER-4332 @ZYP_CHECKOUT_K4332-9524 @CR-AKK
 Scenario: Verify user can navigates to Order confirmation page
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
@@ -14,7 +14,7 @@ Scenario: Verify user can navigates to Order confirmation page
     |# Following Error Message should show on the page|
 	|Order Number|
 	
-	@R2_Mobile  @R2_All @P-Highest @C-Order @CC-Checkout_Order   @KER-4332 @ZYP_CHECKOUT_K4332-9525 @CR-AKK
+	@R2_Mobile  @R2_All @P1 @C-Order @CC-Checkout_Order   @KER-4332 @ZYP_CHECKOUT_K4332-9525 @CR-AKK
 Scenario: Verify user can see order placed for selected single SKU on the PDP
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu

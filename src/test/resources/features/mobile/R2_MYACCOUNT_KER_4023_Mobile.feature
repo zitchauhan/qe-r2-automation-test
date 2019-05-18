@@ -1,9 +1,8 @@
 Feature: verify Forgotten Password functionality 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4011
 @ZYP_MYACCOUNT_K4023-10078 @CR-RK 
-Scenario:
-Verify user is able to enter the Forgot Password page from Forgot Password link 
+Scenario: Verify user is able to enter the Forgot Password page from Forgot Password link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -16,7 +15,7 @@ Verify user is able to enter the Forgot Password page from Forgot Password link
 		|ForgotPasswordPage_EmailAddress_txt				|
 		|ForgotPasswordPage_Submit_btn						|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4011
 @ZYP_MYACCOUNT_K4023-10079 @CR-RK 
 Scenario: Verify the available elements on the Forgot Password page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -32,10 +31,9 @@ Scenario: Verify the available elements on the Forgot Password page
 		|ForgotPasswordPage_Submit_btn						|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4011
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4011
 @ZYP_MYACCOUNT_K4023-10082 @CR-RK 
-Scenario:
-Verify the user gets the error message when both email id and Password are incorrect 
+Scenario: Verify the user gets the error message when both email id and Password are incorrect 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -68,10 +66,9 @@ Scenario: Verify the user gets the error message when Email Id is left blank
 		|# Following Error Message should show on the page|
 		|Please enter an email address|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-4023
+@R2_Mobile @R2_Regression @R2_All @P2 @1HR_R2 @C-MyAccount @KER-4023
 @ZYP_MYACCOUNT_K4023-10083 @CR-RK 
-Scenario:
-Verify the user gets the error message on entering non-registered email id 
+Scenario: Verify the user gets the error message on entering non-registered email id 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 

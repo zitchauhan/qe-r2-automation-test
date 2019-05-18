@@ -1,6 +1,6 @@
 Feature: BOPIS Cart Blade Impact and Variations in Cart
 
-@R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10940
+@R2_Web @R2_Regression @R2_All @P2 @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10940
 Scenario: Verify that the Store Pickup Checkbox is selected by default if User Selected In Store Pickup on PDP page
     Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -18,7 +18,7 @@ Scenario: Verify that the Store Pickup Checkbox is selected by default if User S
     And user should be able to see instore radio button bydefault selected
     
     
-@R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10941
+@R2_Web @R2_Regression @R2_All @P2 @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10941
 Scenario: Verify that User is able to change shipping zip code
     Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -33,7 +33,7 @@ Scenario: Verify that User is able to change shipping zip code
 	Then cart page displays updated tax
 	And estimated tax Is populated separately under Order Summary
 	
-@R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10943
+@R2_Web @R2_Regression @R2_All @P2 @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10943
 Scenario: Verify that User is able to change pickup location
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -48,7 +48,7 @@ Scenario: Verify that User is able to change pickup location
 	And User select another store "BOPIS_Store1"
 	And user verify the selected store is reflected	
 	
-@R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10944
+@R2_Web @R2_Regression @R2_All @P2 @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10944
 Scenario: Verify that User is able to change pickup location
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -62,7 +62,7 @@ Scenario: Verify that User is able to change pickup location
 	Then user click on tooltip
 	And user should be able to see the message flyout	
 	
-@R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10945
+@R2_Web @R2_Regression @R2_All @P2 @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10945
 Scenario: Verify that Store Information Tool Tip
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -76,7 +76,7 @@ Scenario: Verify that Store Information Tool Tip
 	Then user click on tooltip
 	And user should be able to see the store message flyout	
 	
-@R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10946
+@R2_Web @R2_Regression @R2_All @P2 @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10946
 Scenario: Verify that User is able to remove Items from cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -89,7 +89,7 @@ Scenario: Verify that User is able to remove Items from cart
 	And user click on the remove button in cart page
 	And user should be able to see remove message with undo CTA	
 	
-@R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10947
+@R2_Web @R2_Regression @R2_All @P2 @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10947
 Scenario: Verify that User is able to add cart item to wishlist
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -104,7 +104,7 @@ Scenario: Verify that User is able to add cart item to wishlist
 	And user enter the Wishlist name 
 	And user verify the wishlist moved message is displayed
 	
-@R2_Web @R2_All @P-High @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10950
+@R2_Web @R2_All @P2 @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10950
 Scenario: Verify that user is able to view the cart variation when item is Not available for in-store pickup
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -116,7 +116,7 @@ Scenario: Verify that user is able to view the cart variation when item is Not a
 	And user should be able to see the grey icon
 	And user should not be able to see the radio button	for store pickup
 	
-@R2_Web @R2_All @P-High @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10953
+@R2_Web @R2_All @P2 @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10953
 Scenario: Verify that user is able to view the cart variation when item is Not Available At selected store
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
@@ -140,7 +140,7 @@ Scenario: Verify that user is able to view the cart variation when item is Not A
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store1" 
 	
-@R2_Web @R2_All @P-High @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10954
+@R2_Web @R2_All @P2 @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10954
 Scenario: Verify that user is able to view the cart variation when limited stock of item is added to cart
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
@@ -162,7 +162,7 @@ Scenario: Verify that user is able to view the cart variation when limited stock
 	And user should be able to see the limited quantity message "limited_quantity_Message_Cart"	
 		
 	
-@R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10955
+@R2_Web @R2_Regression @R2_All @P2 @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10955
 Scenario: Verify that user is able to view the cart variation when item is OOS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header

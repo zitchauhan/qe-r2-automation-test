@@ -21,7 +21,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 #	Then user validate all the required fields in the Payment section to be visible
     And user enters "DebitCardNumber" details and verify it is getting entered in Credit card section
 
-    @R2_Mobile  @R2_All @P-Highest @1HR_R2 @C-Order @CC-Checkout_Order @KER-3138 @ZYP_CART_K3138-8206 @CR-AG 
+    @R2_Mobile  @R2_All @P1 @1HR_R2 @C-Order @CC-Checkout_Order @KER-3138 @ZYP_CART_K3138-8206 @CR-AG 
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
 	  Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -69,7 +69,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     And user enters valid cvv value "CVV"
     Then user clicks on the submit button
 
-    @R2_Mobile  @R2_All @P-Highest @C-Order @CC-Checkout_Order @KER-3138 @ZYP_CART_K3138-8208 @CR-AG 
+    @R2_Mobile  @R2_All @P1 @C-Order @CC-Checkout_Order @KER-3138 @ZYP_CART_K3138-8208 @CR-AG 
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
 	  Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -119,7 +119,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
     And user verifies discover card entery in the card fields
 
     
-     @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3138 @ZYP_CART_K3138-8210 @CR-AG 
+     @R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3138 @ZYP_CART_K3138-8210 @CR-AG 
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -183,7 +183,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 #	Then user validate all the required fields in the Payment section to be visible
 #    Then user hover on the toop tip icon of CVV and verify tool tip display
     
-         @R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3138 @ZYP_CART_K3138-8218 @CR-AG 
+         @R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3138 @ZYP_CART_K3138-8218 @CR-AG 
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 

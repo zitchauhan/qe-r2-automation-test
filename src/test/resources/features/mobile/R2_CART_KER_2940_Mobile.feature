@@ -1,6 +1,6 @@
 Feature: Verify Itemized Subtotal in Cart 
 
-	@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8052 @CR-AKK
+	@R2_Mobile @R2_Regression @R2_All @P2 @1HR_R2 @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8052 @CR-AKK
 	Scenario: To view price of each item in cart
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And User clicks on the burger menu 
@@ -24,7 +24,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And verify the price format each item is $XX.XX  
 	
 		
-	@R2_Mobile @R2_Regression @R2_All @P-High @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8054 @CR-AKK
+	@R2_Mobile @R2_Regression @R2_All @P2 @R2 @C-Cart @KER-2940 @ZYP_CART_K2940-8054 @CR-AKK
 	Scenario: To verify the Sub-total for all items in cart
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -55,7 +55,7 @@ Feature: Verify Itemized Subtotal in Cart
 	|SecondQuantityPrice_Txt|  
 	Then verify that itemized subtotal for each item in cart is displayed  
 
-	@R2_Mobile  @C-Order @CC-Cart_Order @R2_All @P-High @R2   @KER-2940 @ZYP_CART_K2940-8055 @CR-AKK
+	@R2_Mobile  @C-Order @CC-Cart_Order @R2_All @P2 @R2   @KER-2940 @ZYP_CART_K2940-8055 @CR-AKK
 	Scenario: To verify if the Promo Code Discount is applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -76,7 +76,7 @@ Feature: Verify Itemized Subtotal in Cart
 	|Total_txt|
 
 	
-	@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High @R2  @KER-2940 @ZYP_CART_K2940-8056 @CR-AKK
+	@R2_Mobile @C-Order @CC-Cart_Order @R2_All @P2 @R2  @KER-2940 @ZYP_CART_K2940-8056 @CR-AKK
 	Scenario: To verify if the Military Discount is applied
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -96,7 +96,7 @@ Feature: Verify Itemized Subtotal in Cart
 	
 	
 
-	@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8061 @CR-AKK
+	@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-2940 @ZYP_CART_K2940-8061 @CR-AKK
 	Scenario: To verify Shipping charges for in-Store Pickup
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -115,7 +115,7 @@ Feature: Verify Itemized Subtotal in Cart
 	And verify Shipping charges as FREE in cart page
 	
 	
-	@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8062 @CR-AKK
+	@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-2940 @ZYP_CART_K2940-8062 @CR-AKK
 	Scenario: To verify Estimated Taxes for all the items in the Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -140,7 +140,7 @@ Feature: Verify Itemized Subtotal in Cart
 	|EstimatedTaxes_txt|
 	And the Estimated Taxes are in $XX.XX format
 	
-	@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8063 @CR-AKK
+	@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P2 @C-Cart @KER-2940 @ZYP_CART_K2940-8063 @CR-AKK
 	Scenario: To verify Total for all the items in the Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu
@@ -198,7 +198,7 @@ Then Verify below Sub/Main Module of Cart Page
 	And verify that Mixed promo discounts are applied for respective items
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8054 @CR-AKK 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-2940 @ZYP_CART_K2940-8054 @CR-AKK 
 Scenario: To verify the Sub-total for all items in cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
@@ -256,7 +256,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then verify Shipping charges for the items in the cart page is Zero and FREE is displayed
 	
 	
-@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-High @C-Cart @KER-2940 @ZYP_CART_K2940-8057 @CR-AKK
+@R2_Mobile @R2_Regression @R2_All @1HR_R2 @P2 @C-Cart @KER-2940 @ZYP_CART_K2940-8057 @CR-AKK
 	Scenario: To verify Shipping charges for in-Store Pickup
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu

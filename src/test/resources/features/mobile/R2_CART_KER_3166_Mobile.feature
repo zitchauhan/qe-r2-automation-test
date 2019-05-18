@@ -1,6 +1,6 @@
 Feature: Verify Item/Order Level Promotion Calculation 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-Cart @KER-3166
+@R2_Mobile @R2_Regression @R2_All @P2 @1HR_R2 @C-Cart @KER-3166
 @ZYP_CART_K3166-8086 @CR-DPK 
 Scenario: To verify Add Promotion Code 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -145,8 +145,7 @@ Scenario: To verify Promo code applied in Check out page
 		
 @R2_Mobile   @R2_All @P-High_Order @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9591
 @CR-DPK 
-Scenario:
-Verify promotion got applied to the product when user applied %off promotion on product level in cart--with promocode 
+Scenario: Verify promotion got applied to the product when user applied %off promotion on product level in cart--with promocode 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User navigates to L3
@@ -164,8 +163,7 @@ Verify promotion got applied to the product when user applied %off promotion on 
 		
 @R2_Mobile  @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9593
 @CR-DPK 
-Scenario:
-Verify promotion got applied to the Catagory when user applied %off promotion on Category level in cart--with promocode 
+Scenario: Verify promotion got applied to the Catagory when user applied %off promotion on Category level in cart--with promocode 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then User navigates to LThree Mens Watches 
@@ -183,8 +181,7 @@ Verify promotion got applied to the Catagory when user applied %off promotion on
 		
 @R2_Mobile   @R2_All @P-High_Order @C-Order @CC-Cart_Order @KER-3166 @ZYP_CART_K3166-9595
 @CR-DPK 
-Scenario:
-Verify promotion got applied for order level when user applied %off promotion on order -- with promocode 
+Scenario: Verify promotion got applied for order level when user applied %off promotion on order -- with promocode 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
@@ -203,8 +200,7 @@ Verify promotion got applied for order level when user applied %off promotion on
 		
 @R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High_Order   @KER-3166 @ZYP_CART_K3166-9596
 @CR-DPK 
-Scenario:
-Verify promotion got applied to the product when user applied $ Amount off promotion on product level in cart -- with Promocode 
+Scenario: Verify promotion got applied to the product when user applied $ Amount off promotion on product level in cart -- with Promocode 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User navigates to L2 Grills Outdoor cooking 
@@ -225,8 +221,7 @@ Verify promotion got applied to the product when user applied $ Amount off promo
 		
 @R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High_Order  @KER-3166 @ZYP_CART_K3166-9597
 @CR-DPK 
-Scenario:
-Verify promotion got applied to the Category when user applied $ amount off promotion on Category level in cart -- with promocode 
+Scenario: Verify promotion got applied to the Category when user applied $ amount off promotion on Category level in cart -- with promocode 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then User navigates to LThree Mens Watches 
@@ -243,8 +238,7 @@ Verify promotion got applied to the Category when user applied $ amount off prom
 		
 @R2_Mobile @C-Order @CC-Cart_Order @R2_All @P-High_Order   @KER-3166 @ZYP_CART_K3166-9598
 @CR-DPK 
-Scenario:
-Verify promotion got applied for order level when user applied $ amount off promotion on order -- with promocode 
+Scenario: Verify promotion got applied for order level when user applied $ amount off promotion on order -- with promocode 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
@@ -263,8 +257,7 @@ Verify promotion got applied for order level when user applied $ amount off prom
 		
 @R2_Mobile @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9602
 @CR-DPK 
-Scenario:
-Verify implicit %off promotion got applied to the product when user adds eligible product in cart-- Implicit promotion 
+Scenario: Verify implicit %off promotion got applied to the product when user adds eligible product in cart-- Implicit promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User navigates to L2 Grills Outdoor cooking 
@@ -281,8 +274,7 @@ Verify implicit %off promotion got applied to the product when user adds eligibl
 		
 @R2_Mobile  @R2_All @P-Low @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9603
 @CR-DPK 
-Scenario:
-Verify promotion got applied to the Category when user applied %off promotion on Category level in cart -- Implicit promotion 
+Scenario: Verify promotion got applied to the Category when user applied %off promotion on Category level in cart -- Implicit promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
@@ -298,8 +290,7 @@ Verify promotion got applied to the Category when user applied %off promotion on
 		
 @R2_Mobile @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9604
 @CR-DPK 
-Scenario:
-Verify promotion got applied for order level when user applied %off promotion on order -- Implicit promotion 
+Scenario: Verify promotion got applied for order level when user applied %off promotion on order -- Implicit promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 
@@ -317,8 +308,7 @@ Verify promotion got applied for order level when user applied %off promotion on
 		
 @R2_Mobile   @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9605
 @CR-DPK 
-Scenario:
-Verify promotion got applied to the product when user applied $ Amount off promotion on product level in cart -- Implicit promotion 
+Scenario: Verify promotion got applied to the product when user applied $ Amount off promotion on product level in cart -- Implicit promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User navigates to L2 Grills Outdoor cooking 
@@ -338,8 +328,7 @@ Verify promotion got applied to the product when user applied $ Amount off promo
 		
 @R2_Mobile @R2_All @P-High_Order @CC-Cart_Order @C-Order @KER-3166 @ZYP_CART_K3166-9606
 @CR-DPK 
-Scenario:
-Verify promotion got applied to the Category when user applied $ amount off promotion on Category level in cart -- Implicit promotion 
+Scenario: Verify promotion got applied to the Category when user applied $ amount off promotion on Category level in cart -- Implicit promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then User navigates to LThree Mens Watches 
@@ -358,8 +347,7 @@ Verify promotion got applied to the Category when user applied $ amount off prom
 		
 @R2_Mobile @R2_All @P-High_Order @CC-Cart_Order @C-Order @C-Cart @KER-3166 @ZYP_CART_K3166-9607
 @CR-DPK 
-Scenario:
-Verify promotion got applied for order level when user creates $ amount off promo eligible order-- Implicit promotion 
+Scenario: Verify promotion got applied for order level when user creates $ amount off promo eligible order-- Implicit promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And User Navigates L2 form Homepage Header 

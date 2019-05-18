@@ -1,5 +1,5 @@
 Feature: E03-150 - Order Cancellation Cancel Order Confirmation (Guest & Authenticated Customers)
-@R2_Web  @R2_All @P-Highest @1HR_R2 @C-Order @CC-MyAccount_Order   @KER-4021 @ZYP_MYACCOUNT_K4021-10637 @CR-RK @C1-Message
+@R2_Web  @R2_All @P1 @1HR_R2 @C-Order @CC-MyAccount_Order   @KER-4021 @ZYP_MYACCOUNT_K4021-10637 @CR-RK @C1-Message
   Scenario: Verify that Guest User is able to view Cancellation Confirmation page
   Given user launches the browser and navigates to "ASO_HOME" page 
   When User searches a product "productName" and navigates to PDP 

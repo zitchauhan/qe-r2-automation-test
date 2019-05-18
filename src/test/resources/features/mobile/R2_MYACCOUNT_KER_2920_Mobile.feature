@@ -1,6 +1,6 @@
 Feature: Verfiy  View/Delete/Set Default Credit/Debit Card in Account 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-2920 
+@R2_Mobile @R2_Regression @R2_All @P1 @1HR_R2 @C-MyAccount @KER-2920 
 @ZYP_MYACCOUNT_K2920-10549 @CR-RK 
 Scenario: Verify user is able to remove the saved credit card from My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -75,10 +75,9 @@ Scenario: Verify that user is able to remove the only saved CC from My Account
 	Then user clicks Remove button in payment page 
 	And user should see the proper message 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2920
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-2920
 @ZYP_MYACCOUNT_K2920-10545 @CR-RK 
-Scenario:
-Verify user is able to see the list of saved credit cards on the Payment page under My Account 
+Scenario: Verify user is able to see the list of saved credit cards on the Payment page under My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -100,7 +99,7 @@ Verify user is able to see the list of saved credit cards on the Payment page un
 		|PaymentPage_CrediCardList_txt|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-2920
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-2920
 @ZYP_MYACCOUNT_K2920-10552 @CR-RK 
 Scenario: Verify deleted CC retains in the saved CC list in My Account on Undo 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -127,8 +126,7 @@ Scenario: Verify deleted CC retains in the saved CC list in My Account on Undo
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2920
 @ZYP_MYACCOUNT_K2920-10554 @CR-RK 
-Scenario:
-Verify last added credit card in saved list becomes the default on deletion of Default credit card 
+Scenario: Verify last added credit card in saved list becomes the default on deletion of Default credit card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user clicks on SignIn link from global header 

@@ -1,6 +1,6 @@
 Feature: Add Credit/Debit Card in Account 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10675 @CR-DPK 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10675 @CR-DPK 
 Scenario: Verify that authenticated user is able to navigate to "Payments" Page.
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -60,7 +60,7 @@ Scenario: Verify that user is not able to proceed  with Credit card addition wit
 	|Unrecognized card number|
 	
 	
- @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10679 @CR-DPK @1HR_R2 @C1-Message
+ @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10679 @CR-DPK @1HR_R2 @C1-Message
 Scenario: Verify that user is not able to proceed with Credit card addition with past expiration date 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -77,7 +77,7 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 	|Past expiration date|	
 	
 	
- @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10680 @CR-DPK @C1-Message
+ @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10680 @CR-DPK @C1-Message
 Scenario: Verify that user is not able to proceed with Credit card addition without valid credit card expiration date
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -146,7 +146,7 @@ Scenario: Verify that user is not able to proceed with Credit card addition with
 
 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10689 @CR-DPK @C1-Message
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10689 @CR-DPK @C1-Message
 Scenario: Verify that user is not able to proceed with Billing Information addition without entering all the required fields
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -172,7 +172,7 @@ Scenario: Verify that user is not able to proceed with Billing Information addit
 	
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10690 @CR-DPK 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10690 @CR-DPK 
 Scenario: Verify that Payment Details are not saved if User clicks on Cancel CTA
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -194,7 +194,7 @@ Scenario: Verify that Payment Details are not saved if User clicks on Cancel CTA
 
  	
  	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10692 @CR-DPK 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10692 @CR-DPK 
 Scenario: Verify if  Payment Details are saved if User clicks on Add CTA when AVS is down
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -216,7 +216,7 @@ Scenario: Verify if  Payment Details are saved if User clicks on Add CTA when AV
  	And Verify that Credit Card details as entered are saved in User Profile.
  	
  	 	
- @R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10693 @CR-DPK 
+ @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10693 @CR-DPK 
 Scenario: Verify if entered address is validated by AVS
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -241,7 +241,7 @@ Scenario: Verify if entered address is validated by AVS
  	And Verify that Credit Card details as entered are saved in User Profile.
  	
  	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK
 Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header

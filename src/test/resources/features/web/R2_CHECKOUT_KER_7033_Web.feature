@@ -1,7 +1,7 @@
 Feature: B03-500-SOF Checkout landing and variations
 
 #KER-12636
-@R2_Web @R2_Regression @R2_All @P-Highest @C-Checkout @KER-7033 @ZYP_CHECKOUT_K7033-10043 @CR-MS @1HR_R2
+@R2_Web @R2_Regression @R2_All @P1 @C-Checkout @KER-7033 @ZYP_CHECKOUT_K7033-10043 @CR-MS @1HR_R2
 Scenario:  Verify that the user is able to see the firearm specific compliance rules
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header 

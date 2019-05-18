@@ -2,7 +2,7 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 
 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6824-8628 @CR-DPK
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6824-8628 @CR-DPK
 	Scenario: Verify the gift card fields displayed to Unauthenticated user
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	 And User clicks on the burger menu 
@@ -32,7 +32,7 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 		|Apply_Btn|
 		
 		
-@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-Highest @1HR_R2   @KER-6824 @ZYP_CHECKOUT_K6824-8629 @CR-DPK
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P1 @1HR_R2   @KER-6824 @ZYP_CHECKOUT_K6824-8629 @CR-DPK
 	Scenario: Verify 13 or 16 digit Gift Card with 4 or 8 digit PIN applied is reflected on Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	 And User clicks on the burger menu 
@@ -86,7 +86,7 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 	|Plus_AddAnotherGiftCard_Txt|
 	
 
-@R2_Mobile  @R2_All @P-Highest @1HR_R2  @C-Order @CC-Checkout_Order @KER-6824 @ZYP_CHECKOUT_K6824-8631 @CR-DPK
+@R2_Mobile  @R2_All @P1 @1HR_R2  @C-Order @CC-Checkout_Order @KER-6824 @ZYP_CHECKOUT_K6824-8631 @CR-DPK
 	Scenario: Verify +Add Another Gift card link is Suppressed in non-availability of remaining order amount
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	 And User clicks on the burger menu 
@@ -115,7 +115,7 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 	
 	
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6824-8632 @CR-DPK 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-6824 @ZYP_CHECKOUT_K6824-8632 @CR-DPK 
 Scenario: Verify the Hide Gift Card CTA behavior
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	And User clicks on the burger menu 
@@ -146,7 +146,7 @@ Scenario: Verify the Hide Gift Card CTA behavior
 	Then user click on GiftCard Minus icon in Checkout page	
 	
 	
-@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-Highest @1HR_R2   @KER-6824 @ZYP_CHECKOUT_K6824-8646 @CR-DPK
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P1 @1HR_R2   @KER-6824 @ZYP_CHECKOUT_K6824-8646 @CR-DPK
 	Scenario: Verify Remove Gift Card behavior for 13 and 16 digit gift card with 4 or 8 digit PIN
 	Given user launches the browser and navigates to "ASO_HOME" page  
 	And User clicks on the burger menu 

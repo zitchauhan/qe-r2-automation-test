@@ -26,7 +26,7 @@ Scenario: Verify the user is able to see the password strength info bubble
 	And user enters new password 
 	Then user click on anywhere in change password 
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10178 @CR-RKA @1HR_R2 @C1-Message
 Scenario: Verify the user gets the error message on entering the password not meeting the requirements of min. characters 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -41,7 +41,7 @@ Scenario: Verify the user gets the error message on entering the password not me
 		|#Verify the following MSG is display when password is less then 8 caharacter|
 		|Password must be at least 8 characters long|
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10179 @CR-RKA 
 Scenario: Verify the user enters the valid password and resets the password successfully 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -56,7 +56,7 @@ Scenario: Verify the user enters the valid password and resets the password succ
 		|#verify following elements in Payments page in My Account|
 		|ProfilePage_ChangePassword_btn|
 		
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR @C-MyAccount @KER-6654 
+@R2_Web @R2_Regression @R2_All @P1 @1HR @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10180 @CR-RKA 
 Scenario: Verify the user is able to sign with the new password 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -74,7 +74,7 @@ Scenario: Verify the user is able to sign with the new password
 		|#verify user to be able to login with change password |
 		|ProfilePage_ChangePassword_btn|
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10181 @CR-RKA @C1-Message
 Scenario: Verify the user is not able to sign with the old password 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -87,7 +87,7 @@ Scenario: Verify the user is not able to sign with the old password
 		|The combination of Email Address and Password is incorrect. Please try again.|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10182 @CR-RKA 
 Scenario: Verify the user gets the error message on entering the password not meeting the requirements of same as email address 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -119,7 +119,7 @@ Scenario: Verify user can set the new password same as old password of 8 digits
 		|For maximum security, please enter a Password different from the previous one|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10185 @CR-RKA @C1-Message
 Scenario: Verify user not allowed to set the new password same as old password of 6 digits 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -154,7 +154,7 @@ Scenario: Verify the user is able to see the unmasked password
 		|# verify user can unmask the new password after clicking on show btn|
 		|ChangePassworPage_NewPassword_txt								|
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-6654 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-6654 
 @ZYP_MYACCOUNT_K6654-10183 @CR-RKA @C1-Message
 Scenario: Verify the user gets the error message on blank password 
 	Given  user launches the browser and navigates to "ASO_HOME" page 

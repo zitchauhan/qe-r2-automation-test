@@ -16,10 +16,9 @@ Scenario: Verify the guest user is able to view the Zipcode on checkout page
 	Then Guest User should be able to see the "FindAsStoreZIPCode" zipcode pre-populated on Checkout page 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8239 @CR-GK 
-Scenario: 
-	Verify the guest user is able to view the Checkout Header and Footer on Checkout page 
+Scenario: Verify the guest user is able to view the Checkout Header and Footer on Checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -34,10 +33,9 @@ Scenario:
 		|CheckOut_CheckOutFooter                    |
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8240 @CR-GK 
-Scenario: 
-	Verify the guest user is able to see the pre-populated City/State with Zipcode 
+Scenario: Verify the guest user is able to see the pre-populated City/State with Zipcode 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -52,10 +50,9 @@ Scenario:
 	And City/State on the basis of the Zipcode should also be pre-populated on Checkout page 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8241 @CR-GK 
-Scenario: 
-	Verify the guest user is able to enter the shipping address details on Checkout page
+Scenario: Verify the guest user is able to enter the shipping address details on Checkout page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -74,10 +71,9 @@ Scenario:
 		|Please enter a zip code|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8242 @CR-GK 
-Scenario: 
-	Verify the system triggers the Address Verification (AVS) to guest user on wrong address entry 
+Scenario: Verify the system triggers the Address Verification (AVS) to guest user on wrong address entry 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -100,8 +96,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8244 @CR-GK 
-Scenario: 
-	Verify the guest user is able to edit the Saved address in the Shipping address
+Scenario: Verify the guest user is able to edit the Saved address in the Shipping address
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -122,8 +117,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8245 @CR-GK 
-Scenario: 
-	Verify the guest user is displayed with required validations and errors on shipping address 
+Scenario: Verify the guest user is displayed with required validations and errors on shipping address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -155,10 +149,9 @@ Scenario:
 	
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3165 
+@R2_Mobile @R2_Regression @R2_All @P1 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8246 @CR-GK 
-Scenario: 
-	Verify the guest user is able to select the shipping method from the list
+Scenario: Verify the guest user is able to select the shipping method from the list
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -185,10 +178,9 @@ Scenario:
 		|checkout_ShippingMethod_GoToPayment_btn					|		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Checkout @KER-3165 
+@R2_Mobile @R2_Regression @R2_All @P1 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8248 @CR-GK 
-Scenario: 
-	Verify the guest user is able to select the Credit Card payment method in order to place the order 
+Scenario: Verify the guest user is able to select the Credit Card payment method in order to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -222,8 +214,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8249 @CR-GK 
-Scenario: 
-	Verify the guest user is able to select the PayPal payment method in order to place the order 
+Scenario: Verify the guest user is able to select the PayPal payment method in order to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -251,8 +242,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8250 @CR-GK 
-Scenario: 
-	Verify the guest user is able to select the Gift Card payment method in order to place the order 
+Scenario: Verify the guest user is able to select the Gift Card payment method in order to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -282,10 +272,9 @@ Scenario:
 		|ReviewOrder_Btn        |
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8251 @CR-GK 
-Scenario: 
-	Verify the guest user is able to add new Credit Card as payment method in order to place the order 
+Scenario: Verify the guest user is able to add new Credit Card as payment method in order to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -311,8 +300,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8253 @CR-GK 
-Scenario: 
-	Verify the guest user is able to enter a different Billing address on Payment drawer 
+Scenario: Verify the guest user is able to enter a different Billing address on Payment drawer 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -356,10 +344,9 @@ Scenario: Verify the guest user is able to place the order
 
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-3165 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8243 @CR-GK 
-Scenario: 
-	Verify the guest user is notified with an error on entering restricted address for the items in cart 
+Scenario: Verify the guest user is notified with an error on entering restricted address for the items in cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -380,8 +367,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
 @ZYP_CHECKOUT_K3165-8247 @CR-GK 
-Scenario: 
-	Verify the shipping method has no drop-down for single method available 
+Scenario: Verify the shipping method has no drop-down for single method available 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUForGiftCard" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -403,8 +389,7 @@ Scenario:
 	
 @R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-Low   @KER-3165 
 @ZYP_CHECKOUT_K3165-8255 @CR-GK 
-Scenario: 
-	Verify the guest user's address is saved in My Address on registering from Order confirmation 
+Scenario: Verify the guest user's address is saved in My Address on registering from Order confirmation 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 

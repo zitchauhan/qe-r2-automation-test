@@ -1,9 +1,7 @@
 Feature: E02-250 - Edit Credit/Debit Card in Account
 
-  @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-6841 @ZYP_MYACCOUNT_K6841-10630 @CR-RKA
-  Scenario: 
-    Verify that authenticated user is able to view the saved credit/debit cards.
-
+  @R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-6841 @ZYP_MYACCOUNT_K6841-10630 @CR-RKA
+  Scenario: Verify that authenticated user is able to view the saved credit/debit cards.
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu
     When user clicks on SignIn link from global header
@@ -16,9 +14,8 @@ Feature: E02-250 - Edit Credit/Debit Card in Account
       | #Verify following elements in Payments > Add new credit card section |
       | AddCreditCardPage_BillingInformationHeader_txt                       |
 
-  @R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-6841 @ZYP_MYACCOUNT_K6841-10631 @CR-RKA
-  Scenario: 
-    Verify that authenticated user is able to edit the saved credit/debit cards
+  @R2_Mobile @R2_Regression @R2_All @P2 @1HR_R2 @C-MyAccount @KER-6841 @ZYP_MYACCOUNT_K6841-10631 @CR-RKA
+  Scenario: Verify that authenticated user is able to edit the saved credit/debit cards
     Given user launches the browser and navigates to "ASO_HOME" page
    Then User clicks on the burger menu
     When user clicks on SignIn link from global header
@@ -46,7 +43,7 @@ Feature: E02-250 - Edit Credit/Debit Card in Account
  
     And user verify all the form fields are pre-populated
 
-  @R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-6841 @ZYP_MYACCOUNT_K6841-10632 @CR-RKA
+  @R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-6841 @ZYP_MYACCOUNT_K6841-10632 @CR-RKA
   Scenario: Verify that Payment Details are not updated if User clicks on Cancel CTA
   Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu

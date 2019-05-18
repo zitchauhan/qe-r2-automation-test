@@ -20,7 +20,7 @@ Scenario: Verify that UnAuthenticated user is able to create an account on Order
 	When user clicks on submit button on order confirmation page
 	Then user verify the account is created "Unregistered_User_Account_Created_Checkout"
 		
-@R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P-Highest @1HR_R2 @C-BOPIS @C1-Message_B
+@R2_Web @C-NonOrder @CC-Checkout_Order @R2_All @P1 @1HR_R2 @C-BOPIS @C1-Message_B
 @KER-2868 @ZYP_CHECKOUT_K2868-10709 @CR-AKK 
 Scenario: Verify that UnAuthenticated user is able to view  in-store pickup instructions on order confirmation page 
 	Given user launches the browser and navigates to "ASO_HOME" page 

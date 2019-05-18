@@ -1,6 +1,6 @@
 Feature: verify Forgotten Password functionality 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest   @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10576 @CR-RK
+@R2_Mobile @R2_Regression @R2_All @P1   @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10576 @CR-RK
 Scenario: Verify user is able to enter the Forgot Password page from Forgot Password link
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu
@@ -21,10 +21,9 @@ Scenario: Verify user is able to enter the Forgot Password page from Forgot Pass
 	And user clicks on Update button 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P1 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-11120 @CR-RK 
-Scenario:
-Verify that user can continue the shopping without re-authentication after changing the password 
+Scenario: Verify that user can continue the shopping without re-authentication after changing the password 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -48,7 +47,7 @@ Verify that user can continue the shopping without re-authentication after chang
 	And user click on MyAccount 
 	And user is not logged out
 	
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P1 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-10565 @CR-RK 
 Scenario: Verify that user able to update the profile 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -106,10 +105,9 @@ Scenario: Verify that user can see the error message in First name input field.
 		|# Following Error Message should show on the page|
 		|Not a valid name|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-10567 @CR-RK 
-Scenario:
-Verify that user can see the error message in First name field if user enters "1" character in input field. 
+Scenario: Verify that user can see the error message in First name field if user enters "1" character in input field. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -134,10 +132,9 @@ Verify that user can see the error message in First name field if user enters "1
 		|Not a valid name|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-10568 @CR-RK 
-Scenario:
-Verify that user can see the error message in First name field if user enters "51" character in input field. 
+Scenario: Verify that user can see the error message in First name field if user enters "51" character in input field. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -160,7 +157,7 @@ Verify that user can see the error message in First name field if user enters "5
 	Then Verify First Name field should not accept more than fifty character 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-10569 @CR-RK 
 Scenario: Verify that user can see the error message in last name input field. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -186,10 +183,9 @@ Scenario: Verify that user can see the error message in last name input field.
 		|# Following Error Message should show on the page|
 		|Not a valid name|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-10570 @CR-RK 
-Scenario:
-Verify that user can see the error message in Last name field if user enters "1" character in input field. 
+Scenario: Verify that user can see the error message in Last name field if user enters "1" character in input field. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -213,10 +209,9 @@ Verify that user can see the error message in Last name field if user enters "1"
 		|# Following Error Message should show on the page|
 		|Not a valid name|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-10571 @CR-RK 
-Scenario:
-Verify that user can see the error message in Last name field if user enters "51" character in input field. 
+Scenario: Verify that user can see the error message in Last name field if user enters "51" character in input field. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -239,10 +234,9 @@ Verify that user can see the error message in Last name field if user enters "51
 	Then Verify Last Name field should not accept more than fifty character 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-10572 @CR-RK 
-Scenario:
-Verify that user can see the error message if user enters the email id in New Email and Confirm Email input fields with non-alpha + character. 
+Scenario: Verify that user can see the error message if user enters the email id in New Email and Confirm Email input fields with non-alpha + character. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -268,10 +262,9 @@ Verify that user can see the error message if user enters the email id in New Em
 		|# Following Error Message should show on the page|
 		|Please enter the Email Address in a valid format (ex. abc@xyz.com)| 
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-10573 @CR-RK 
-Scenario:
-Verify that user can see the error message if user enters the email id  more than 255 Characters in New Email and Confirm Email input fields. 
+Scenario: Verify that user can see the error message if user enters the email id  more than 255 Characters in New Email and Confirm Email input fields. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	Then user should able to click on Signin button 
@@ -298,7 +291,7 @@ Verify that user can see the error message if user enters the email id  more tha
 		|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-10577 @CR-RK 
 Scenario: Verify that user can see the error message in password field. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -324,10 +317,9 @@ Scenario: Verify that user can see the error message in password field.
 		|# Following Error Message should show on the page|
 		|8 characters minimum|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-11115 @CR-RK 
-Scenario:
-Verify that system keep the addresses intact after changing the email address. 
+Scenario: Verify that system keep the addresses intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 #	Then user should able to click on Signin button 
@@ -358,10 +350,9 @@ Verify that system keep the addresses intact after changing the email address.
 	And clicks on Add New Address button 
 	And user verifies the First address provided is set as default 
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-11116 @CR-RK 
-Scenario:
-Verify that system keep the payments intact after changing the email address. 
+Scenario: Verify that system keep the payments intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 #	Then user should able to click on Signin button 
@@ -388,10 +379,9 @@ Verify that system keep the payments intact after changing the email address.
 		
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-11117 @CR-RK 
-Scenario:
-Verify that system keep the wish-list intact after changing the email address. 
+Scenario: Verify that system keep the wish-list intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 #	Then user should able to click on Signin button 
@@ -418,10 +408,9 @@ Verify that system keep the wish-list intact after changing the email address.
 #		|WishlistItems_lnk												|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Highest @1HR_R2 @C-MyAccount @KER-4230
+@R2_Mobile @R2_Regression @R2_All @P1 @1HR_R2 @C-MyAccount @KER-4230
 @ZYP_MYACCOUNT_K4230-11118 @CR-RK 
-Scenario:
-Verify that system keep the orders intact after changing the email address. 
+Scenario: Verify that system keep the orders intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 #	Then user should able to click on Signin button 

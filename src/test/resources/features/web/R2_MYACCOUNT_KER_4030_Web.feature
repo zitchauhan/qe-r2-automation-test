@@ -1,6 +1,6 @@
 Feature: Quick Checkout 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 @1HR_R2 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 @1HR_R2 
 @ZYP_MYACCOUNT_K4030-11496 @CR-SK 
 Scenario: Verify authenticated user with no information saved in my account is able to navigate to shipping address drawer during quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -20,7 +20,7 @@ Scenario: Verify authenticated user with no information saved in my account is a
 		|checkout_ShippingAddress_LastName_txt						|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-11498 @CR-SK 
 Scenario: Verify authenticated user with address details saved in my account is able to navigate to Billing address drawer during express checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -41,7 +41,7 @@ Scenario: Verify authenticated user with address details saved in my account is 
 		|checkout_ShippingMethod_ShippingDetails|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-11499 @CR-SK 
 Scenario: Verify authenticated user with address details and payment details saved in my account is able to navigate to order summary page during express checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -63,7 +63,7 @@ Scenario: Verify authenticated user with address details and payment details sav
 		
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-11502 @CR-SK 
 Scenario: Verify the primary default shipping options should be utilized while quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -83,7 +83,7 @@ Scenario: Verify the primary default shipping options should be utilized while q
 		|Checkout_ShippingAddress_Edit_lnk			|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 @C1-Message
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 @C1-Message
 @ZYP_MYACCOUNT_K4030-11503 @CR-SK @C1-Message
 Scenario: Verify the primary default shipping options should be utilized while quick checkout for WG products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -103,7 +103,7 @@ Scenario: Verify the primary default shipping options should be utilized while q
 		|We will deliver to your door with no appointment or signature required	|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-12817 @CR-SK @C1-Message @C1-Message
 Scenario: Verify during quick checkout error message will display for shipping address section for Items do not have prop 65 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -123,7 +123,7 @@ Scenario: Verify during quick checkout error message will display for shipping a
 		|Due to restrictions imposed by Prop65 by the state of California, we cannot ship this item to California.	|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-12809 @CR-SK 
 Scenario: Verify user can able to edit shipping address method landing on order summary during quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -145,7 +145,7 @@ Scenario: Verify user can able to edit shipping address method landing on order 
 		|PaymentMethodHeader_Txt								|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-12810 @CR-SK 
 Scenario: Verify user can able to edit Payment Methods after landing on order summary during quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -162,7 +162,7 @@ Scenario: Verify user can able to edit Payment Methods after landing on order su
 	And user click on edit button of shipping method 
 	Then user is able to modify payment method 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4030 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
 @ZYP_MYACCOUNT_K4030-12808 @CR-SK 
 Scenario: Verify user can able to edit shipping address after landing on order summary during quick checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 

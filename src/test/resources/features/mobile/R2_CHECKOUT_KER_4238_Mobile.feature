@@ -1,9 +1,8 @@
 Feature: Employee Discount 
 
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-Checkout @KER-4238 
+@R2_Mobile @R2_Regression @R2_All @P1 @C-Checkout @KER-4238 
 @ZYP_CHECKOUT_K4238-10742 @CR-SG @1HR_R2 
-Scenario: 
-	To verify that an existing ASO employee is able to see the employee discount on cart page 
+Scenario: To verify that an existing ASO employee is able to see the employee discount on cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -21,10 +20,9 @@ Scenario:
 	#	And user verify the employee discount in order summery
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4238
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-4238
 @ZYP_CHECKOUT_K4238-10743 @CR-SG 
-Scenario:
-To verify that an existing ASO employee is able to see the employee discount on cart page when only few of the items are applied with employee discount 
+Scenario: To verify that an existing ASO employee is able to see the employee discount on cart page when only few of the items are applied with employee discount 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -50,8 +48,7 @@ To verify that an existing ASO employee is able to see the employee discount on 
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4238
 @ZYP_CHECKOUT_K4238-8053 @CR-AKK 
-Scenario:
-To verify that an existing ASO employee is able to see the employee discount on cart page when only few of the items are applied with employee discount 
+Scenario: To verify that an existing ASO employee is able to see the employee discount on cart page when only few of the items are applied with employee discount 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -67,10 +64,9 @@ To verify that an existing ASO employee is able to see the employee discount on 
 		|EstimatedTaxes_txt|
 		|Total_txt|
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-Checkout @KER-4238
+@R2_Mobile @R2_Regression @R2_All @P2 @C-Checkout @KER-4238
 @ZYP_CHECKOUT_K4238-10747 @CR-AKK 
-Scenario:
-To verify that 'Free Shipping' is not applied through promotion for an ASO employee if received employee discount on cart page 
+Scenario: To verify that 'Free Shipping' is not applied through promotion for an ASO employee if received employee discount on cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user clicks on SignIn link from global header 
@@ -84,8 +80,7 @@ To verify that 'Free Shipping' is not applied through promotion for an ASO emplo
 	
 @R2_Mobile @R2_Regression @R2_All @P-Low @C-Checkout @KER-4238
 @ZYP_CHECKOUT_K4238-10745 @CR-AKK 
-Scenario:
-To verify that an academy user who is not an ASO employee should not see the employee discount on cart page 
+Scenario: To verify that an academy user who is not an ASO employee should not see the employee discount on cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
 	And user clicks on SignIn link from global header 

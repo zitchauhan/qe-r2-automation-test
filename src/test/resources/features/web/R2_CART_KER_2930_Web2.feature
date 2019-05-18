@@ -1,6 +1,6 @@
 Feature: Mixed Cart - Cart screen 
 
-@R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-2930
+@R2_Web @R2_Regression @R2_All @P2 @CB-Cart @C-BOPIS @KER-2930
 @ZYP_CART_K2930-10850 
 Scenario: Verify Mixed cart items on cart -Order Summary (BOPIS and SOF) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -22,7 +22,7 @@ Scenario: Verify Mixed cart items on cart -Order Summary (BOPIS and SOF)
 	Then user select in store pickup option 
 	And user verify that shipping charges for instore is coming as free 
 	
-@R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-2930
+@R2_Web @R2_Regression @R2_All @P2 @CB-Cart @C-BOPIS @KER-2930
 @ZYP_CART_K2930-10852 
 Scenario: Verify Mixed cart items on cart - BOPIS and Regular item , user changes location for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -46,7 +46,7 @@ Scenario: Verify Mixed cart items on cart - BOPIS and Regular item , user change
 	And Find Store Modal should pop-up 
 	And user verify that pickup location for items are displayed 
 	
-@R2_Web @R2_Regression @R2_All @P-High @CB-Cart @C-BOPIS @KER-2930
+@R2_Web @R2_Regression @R2_All @P2 @CB-Cart @C-BOPIS @KER-2930
 @ZYP_CART_K2930-10853 
 Scenario: Verify Mixed cart items on cart - BOPIS and SOF item , user changes location for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -71,7 +71,7 @@ Scenario: Verify Mixed cart items on cart - BOPIS and SOF item , user changes lo
 	And User select another store "BOPIS_Store1" 
 	And user verify the selected store is reflected for both the product 
 	
-@C-BOPIS @R2_Web @R2_All @P-Highest @1HR_R2 @C-NonOrder @CC-Checkout_Order
+@C-BOPIS @R2_Web @R2_All @P1 @1HR_R2 @C-NonOrder @CC-Checkout_Order
 @KER-2930 @ZYP_CHECKOUT_K2930-10848 @CR-RK 
 Scenario: Verify Shipping Fee is applicable only for Ship to Home 
 	Given user launches the browser and navigates to "ASO_HOME" page 

@@ -1,6 +1,6 @@
 Feature: PayPal on Checkout page 
 
-@R2_Web @R2_Regression @R2_All @P-Highest @1HR_R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-11739 @CR-AKK 
 Scenario: Verify user is able to checkout using PayPal with Order level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -27,7 +27,7 @@ Scenario: Verify user is able to checkout using PayPal with Order level Promotio
 	Then user switch to window of paypal 
 	Then user verify the element of paypal window 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-11741 @CR-AKK @C1-Message
 Scenario: Verify user is able to checkout using PayPal with item-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -62,7 +62,7 @@ Scenario: Verify user is able to checkout using PayPal with item-level Promotion
 		|# Following Message should show on the page|  
 		|Paypal account|
 		
-@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-11742 @CR-AKK @C1-Message
 Scenario: Verify user is able to checkout using PayPal with shipping-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -94,7 +94,7 @@ Scenario: Verify user is able to checkout using PayPal with shipping-level Promo
 		
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8256 @CR-AKK 
 Scenario: Verify guest user is able to select Paypal as Payment method on checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -112,7 +112,7 @@ Scenario: Verify guest user is able to select Paypal as Payment method on checko
 		|PayPalCheckOut_Btn|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8258 @CR-AKK 
 Scenario: Verify guest user is able to proceed with Paypal as checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 

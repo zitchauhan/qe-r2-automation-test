@@ -1,6 +1,6 @@
 Feature: E02-100 - MYACCOUNT Page 
 
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4229 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10471 @CR-GK 
 Scenario: Verify that My Account option is available for Guest User 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -23,7 +23,7 @@ Scenario: Verify that My Account option is available for Authenticated User
 		|BurgerMenu_MyAccount_txt	        |
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-High @C-MyAccount @KER-4229 
+@R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10474 @CR-GK 
 Scenario: Verify that Authenticated User is able to view order list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -43,7 +43,7 @@ Scenario: Verify that Authenticated User is able to view order list
 	And Oldest sorting option is available 
 	
 	
-@R2_Mobile @R2_Regression @R2_All @P-High @1HR_R2 @C-MyAccount @KER-4229 
+@R2_Mobile @R2_Regression @R2_All @P2 @1HR_R2 @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10475 @CR-GK 
 Scenario: Verify that Authenticated User is able to navigate to Profile page 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -66,7 +66,7 @@ Scenario: Verify that Authenticated User is able to navigate to Profile page
 		|ProfilePage_MaskedPassword                   |
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4229 
+@R2_Mobile @R2_Regression @R2_All @P1 @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10476 @CR-GK 
 Scenario: Verify that Authenticated User is able to view the address book 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -85,7 +85,7 @@ Scenario: Verify that Authenticated User is able to view the address book
 		|AddressPage_Default_txt					|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4229 
+@R2_Mobile @R2_Regression @R2_All @P1 @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10477 @CR-GK 
 Scenario: Verify that Authenticated User is able to view the Wish List 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -106,10 +106,9 @@ Scenario: Verify that Authenticated User is able to view the Wish List
 		|Wishlist_createlist_lnk|
 		
 		
-@R2_Mobile @R2_Regression @R2_All @P-Highest @C-MyAccount @KER-4229 
+@R2_Mobile @R2_Regression @R2_All @P1 @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10478 @CR-GK 
-Scenario: 
-	Verify that Authenticated User is able to view the Saved payment options 
+Scenario: Verify that Authenticated User is able to view the Saved payment options 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user should able to click on Signin button 
@@ -139,8 +138,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10489 @CR-GK 
-Scenario: 
-	Verify that Authenticated User is able to create new password in My Account Menu. 
+Scenario: Verify that Authenticated User is able to create new password in My Account Menu. 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user should able to click on Signin button 
@@ -158,8 +156,7 @@ Scenario:
 		
 @R2_Mobile @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10512 @CR-GK 
-Scenario: 
-	Verify that Authenticated User is able to view and search existing orders. 
+Scenario: Verify that Authenticated User is able to view and search existing orders. 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user should able to click on Signin button 

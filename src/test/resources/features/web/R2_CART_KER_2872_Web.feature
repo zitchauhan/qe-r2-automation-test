@@ -8,7 +8,7 @@ Scenario: Verify that user is able to open the Find Store modal from the header
 	And user verify Find a Store popup 
 	
 	
-@R2_Web @R2_NonRegression @R2_All @P-Highest @1HR_R2 @CB-Cart @KER-2872
+@R2_Web @R2_NonRegression @R2_All @P1 @1HR_R2 @CB-Cart @KER-2872
 @ZYP_CHECKOUT_K2872-8710 @CR-DPK @C-BOPIS 
 Scenario: Verify that the user should be able to search the store details by entering ZIP code 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -178,7 +178,7 @@ Scenario: Verify the system behaviour on click of 'View Next 5 Stores' CTA
 	
 	
 	
-@R2_Web @R2_NonRegression @R2_All @P-Highest @1HR_R2 @CB-Cart @KER-2872
+@R2_Web @R2_NonRegression @R2_All @P1 @1HR_R2 @CB-Cart @KER-2872
 @ZYP_CHECKOUT_K2872-10661 @CR-DPK @C-BOPIS 
 Scenario: Verify if the user can search the store details by entering City & state 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -291,7 +291,7 @@ Scenario: Verify find a store Modal closes On Select "Close X" and If a user sel
 	Then Close X Find a store Modal 
 	
 	
-@C-BOPIS @R2_Web @R2_All @P-Highest @CB-Cart @KER-2872 @ZYP_CART_K2872-9982 
+@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2872 @ZYP_CART_K2872-9982 
 Scenario: Verify user can change the store using Find in Store modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "BOPIS_Product" in the searchbox 

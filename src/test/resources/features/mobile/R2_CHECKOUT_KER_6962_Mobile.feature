@@ -155,7 +155,7 @@ Feature: Verify Gift Card - Payment Processing
     And user click on Apply button
     Then applied gift card "Valid16DigitGiftCardNumber" should be displayed for second gift card
 
-  @R2_Mobile @R2_All @P-Highest @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8882 @CR-SK
+  @R2_Mobile @R2_All @P1 @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8882 @CR-SK
   Scenario: Verify System should integrate with RTS/First data for existing gift card payment processing flow
     Given user launches the browser and navigates to "ASO_HOME" page
     And User searches a product "SKUForMultiSKUProduct" and navigates to PDP

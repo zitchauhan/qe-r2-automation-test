@@ -1,6 +1,6 @@
 Feature: BO6-125 - Fulfillment Options
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10813 @CR-RKA
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10813 @CR-RKA
 Scenario: Verify that user should be able to fulfill an order when cart having single item with single fulfillment option(Ship to home)
 Given user launches the browser and navigates to "ASO_HOME" page 
 When User searches a product "productName" and navigates to PDP
@@ -22,7 +22,7 @@ When User searches a product "productName" and navigates to PDP
     |checkout_ShippingMethod_GoToPayment_btn|
     |checkout_ShippingMethod_ItemImage_img|
         
-    @R2_Web @R2_Regression @R2_All @P-High @1HR_R2 @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10815 @CR-RKA
+    @R2_Web @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10815 @CR-RKA
     Scenario: Verify that user should be able to fulfill an order when cart having multiple item with single fulfillment option(Ship to home)
     Given user launches the browser and navigates to "ASO_HOME" page 
     When User searches a product "productName" and navigates to PDP
@@ -54,7 +54,7 @@ When user will click on Checkout button and navigates to Checkout page
     |checkout_ShippingMethod_ItemImage_img|
 
 
- @R2_Web @R2_Regression @R2_All @P-Highest @1HR @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10817 @CR-RKA
+ @R2_Web @R2_Regression @R2_All @P1 @1HR @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10817 @CR-RKA
 Scenario: Verify that user should be able to fulfill an order when cart having items with single fulfillment option(dropship to home)
 Given user launches the browser and navigates to "ASO_HOME" page 
 When User searches a product "productName" and navigates to PDP
@@ -76,7 +76,7 @@ When User searches a product "productName" and navigates to PDP
     |checkout_ShippingMethod_GoToPayment_btn|
     |checkout_ShippingMethod_ItemImage_img|
         
- @R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10877 @CR-RKA
+ @R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10877 @CR-RKA
 Scenario: Verify that user should be able to fulfill an order when cart having single item with single fulfillment option(dropship to home)
 Given user launches the browser and navigates to "ASO_HOME" page 
 When User searches a product "productName" and navigates to PDP
@@ -100,7 +100,7 @@ When User searches a product "productName" and navigates to PDP
     |checkout_ShippingMethod_ItemImage_img|
 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10878 @CR-RKA
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10878 @CR-RKA
 Scenario: Verify that user should be able to fulfill an order when cart having single item like SOF products with single fulfillment option(dropship to store)
 
 Given user launches the browser and navigates to "ASO_HOME" page
@@ -136,7 +136,7 @@ And user does accepts the firearm specific compliance
 		|ReviewOrder_Btn|
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10913 @CR-RKA
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10913 @CR-RKA
 Scenario: Verify that user should be able to fulfill an order when cart having multiple items like SOF products with single fulfillment option(dropship to store)
 Given user launches the browser and navigates to "ASO_HOME" page
 When user clicks on Find a Store
@@ -171,7 +171,7 @@ And user does accepts the firearm specific compliance
 
 
   
-@R2_Web @R2_Regression @R2_All @P-High @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10932 @CR-RKA
+@R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10932 @CR-RKA
 Scenario: Scenario:Verify that user should be able to fulfill an order when cart having multiple item with single fulfillment option( ship from store)
 Given user launches the browser and navigates to "ASO_HOME" page
 When user clicks on Find a Store
@@ -205,7 +205,7 @@ When user enter First name "FirstName"
     |checkout_ShippingMethod_ItemImage_img|
 
 
-@R2_Web @R2_Regression @R2_All @P-High @CB-Checkout @C-BOPIS @KER-3779 @ZYP_CHECKOUT_K3779-10938
+@R2_Web @R2_Regression @R2_All @P2 @CB-Checkout @C-BOPIS @KER-3779 @ZYP_CHECKOUT_K3779-10938
 Scenario: Verify that user should be able to fulfill an order when cart having single item fulfillment option(BOPIS)
    Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 

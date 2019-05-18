@@ -1,6 +1,6 @@
 Feature: E02-100 - My Account, Address Book 
 
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9194 @CR-RK 
 Scenario: Verify Authenticated user can Manage Address Book - View existing Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -29,7 +29,7 @@ Scenario: Verify Authenticated user can Manage Address Book - View existing Addr
 		
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9196 @CR-RK 
 Scenario: Verify Authenticated user has Address given through SOF 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -59,7 +59,7 @@ Scenario: Verify Authenticated user has Address given through SOF
 	And clicks on Add New Address button 
 	And user verifies the First address provided is set as default 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9191 @CR-MS 
 Scenario: Verify Authenticated user can Manage Address Book - View existing Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -93,7 +93,7 @@ Scenario: Verify Authenticated user can Manage Address Book - View existing Addr
 	#	 Then the new address gets saved
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9334 @CR-RK 
 Scenario: Verify Authenticated user can Manage Address Book - Add new Address details - Validation Messages 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -126,7 +126,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Add new Address de
 	Then user views validation message on all fields 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9333 @CR-RK 
 Scenario: Verify Authenticated user can Manage Address Book -Set Default Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -163,7 +163,7 @@ Scenario: Verify Authenticated user can Manage Address Book -Set Default Address
 	And clicks on Add New Address button 
 	And user verifies the First address provided is set as default 
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9332 @CR-RK @C1-Message 
 Scenario: Verify Authenticated user can Manage Address Book - Delete Address details - Undo 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -188,7 +188,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 		
 		
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9195 @CR-RK 
 Scenario: Verify Authenticated user can -Set Default Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -209,7 +209,7 @@ Scenario: Verify Authenticated user can -Set Default Address
 	And user click on set as default button 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9193 @CR-RK @C1-Message 
 Scenario: Verify Authenticated user can Manage Address Book - Delete Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -229,7 +229,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 		|# verify the remove quantity message|
 		|Undo|
 		
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9196 @CR-RK 
 Scenario: Verify Authenticated user has Address given through SOF 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -257,7 +257,7 @@ Scenario: Verify Authenticated user has Address given through SOF
 	And user verifies the First address provided is set as default 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-High @C-MyAccount @KER-4232 
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-12772 @CR-RK 
 Scenario: Verify My Account Address Book - Delete only saved address that is Default Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 

@@ -23,8 +23,7 @@ Scenario: Verify if user gets proper validation message for empty password
 
 @R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-Low @KER-4062 @ZYP_CART_K4062-10300
 @CR-SK 
-Scenario:
-Verify if user gets proper validation message for password less than 8 characters 
+Scenario: Verify if user gets proper validation message for password less than 8 characters 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -105,10 +104,9 @@ Scenario: verify the account register with out Email News letter
 		|# Following Error Message should show on the page|
 		|account has been created|
 
-@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P-High @KER-4062 @ZYP_CART_K4062-8104
+@R2_Mobile @C-Order @CC-Checkout_Order @R2_All @P2 @KER-4062 @ZYP_CART_K4062-8104
 @CR-SK 
-Scenario:
-Verify if user gets proper validation message for invalid password
+Scenario: Verify if user gets proper validation message for invalid password
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 

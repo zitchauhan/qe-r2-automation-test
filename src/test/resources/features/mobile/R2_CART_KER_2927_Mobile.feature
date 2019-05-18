@@ -1,7 +1,7 @@
 Feature: Display Estimated Tax and Total in Cart 
 
 ####Executed
-@C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2927
+@C-BOPIS @R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-2927
 @ZYP_CART_K2927-8126 @CR-SK 
 Scenario: To verify Tax recalculation when items are edited 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -53,8 +53,7 @@ Scenario: To verify Tax recalculation when quantity is 0
 	########Executed	
 @C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2927
 @ZYP_CART_K2927-8119 @CR-SK 
-Scenario:
-To Verify Estimated Tax under the Order Summary in Cart - Authentic User 
+Scenario: To Verify Estimated Tax under the Order Summary in Cart - Authentic User 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User clicks on the burger menu 
 	And user should able to click on Signin button 
@@ -73,10 +72,9 @@ To Verify Estimated Tax under the Order Summary in Cart - Authentic User
 	Then user verifies estimated tax and total on checkout page 
 	
 	#########Executed
-@C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2927
+@C-BOPIS @R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-2927
 @ZYP_CART_K2927-8129 @CR-SK 
-Scenario:
-To verify Tax recalculation when switch between Shipping & Store Pick up 
+Scenario: To verify Tax recalculation when switch between Shipping & Store Pick up 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
@@ -94,10 +92,9 @@ To verify Tax recalculation when switch between Shipping & Store Pick up
 #	Then checkout page displays updated tax
 	
 	############# Failing - Manual as well - Taxes are being displayed as 0
-@C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-High @C-Cart @KER-2927
+@C-BOPIS @R2_Mobile @R2_Regression @R2_All @P2 @C-Cart @KER-2927
 @ZYP_CART_K2927-9652 @CR-SK 
-Scenario:
-To verify Tax recalculation when user switches from Shipping to store pickup 
+Scenario: To verify Tax recalculation when user switches from Shipping to store pickup 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
@@ -115,10 +112,9 @@ To verify Tax recalculation when user switches from Shipping to store pickup
 	Then checkout page displays updated tax 
 	
 	
-@C-BOPIS @R2_Mobile @R2_Regression @R2_All @1HR_R2 @P-Highest @C-Cart @KER-2927
+@C-BOPIS @R2_Mobile @R2_Regression @R2_All @1HR_R2 @P1 @C-Cart @KER-2927
 @ZYP_CART_K2927-9653 @CR-SK 
-Scenario:
-To verify Tax recalculation when user switches from store pickup to  Shipping 
+Scenario: To verify Tax recalculation when user switches from store pickup to  Shipping 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on the burger menu 
 	And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore" 
@@ -138,8 +134,7 @@ To verify Tax recalculation when user switches from store pickup to  Shipping
 	
 @C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2927
 @ZYP_CART_K2927-8120 @CR-SK 
-Scenario:
-To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User 
+Scenario: To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -158,8 +153,7 @@ To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User
 	
 @C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-Low @C-Cart @KER-2927
 @ZYP_CART_K2927-8125 @CR-SK 
-Scenario:
-To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User 
+Scenario: To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
 	#And user click on Add to Cart Button 
@@ -198,8 +192,7 @@ Scenario: To Verify Available Taxes and Tax is > $0.00 - Authenticated User
 	
 @C-BOPIS @R2_Mobile @R2_Regression @R2_All @P-Low @1HR_R2 @C-Cart @KER-2927
 @ZYP_CART_K2927-8121 @CR-SK 
-Scenario:
-To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User 
+Scenario: To Verify Estimated Tax under the Order Summary in Cart - Unauthenticated User 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user enters "SKUForBopisProduct" in the search box 
 	#And user click on Add to Cart Button 
