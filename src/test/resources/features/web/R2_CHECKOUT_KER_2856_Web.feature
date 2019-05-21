@@ -2,9 +2,13 @@ Feature: B06-175- Mixed Cart - Order Confirmation screen
 
 @C-BOPIS @R2_Web  @R2_All @P1 @CC-Checkout_Order  @KER-2856 @ZYP_CHECKOUT_K2856-10865 
 Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods Ship to Home and BOPIS 
-	Given user launches the browser and navigates to "ASO_HOME" page 
+	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
+	#HP Added below 3 lines to make sure BOPIS items is available in that Store 05_21_19
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
 	When user enters "SKUForBopisProduct" in the search box 
 #	When user click on Add to cart button 
 	And user click on ship it button 
