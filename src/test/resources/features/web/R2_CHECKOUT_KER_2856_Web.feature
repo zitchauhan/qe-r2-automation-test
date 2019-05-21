@@ -5,7 +5,7 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods Ship to Hom
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
-	#HP Added below 3 lines to make sure BOPIS items is available in that Store 05_21_19
+	#HP Added below 3 lines to make sure "SKUForBopisProduct" items is available in that Store 05_21_19
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
