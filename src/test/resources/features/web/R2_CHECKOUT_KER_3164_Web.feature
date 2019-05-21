@@ -12,7 +12,7 @@ Scenario: Verify that authenticated user is able to select address in dropdown i
 	#	And user click on Add to Cart Button
 	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
-	And user click on checkout from ATC pop up 
+	And user will click on View Cart button 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Shipping Address	|
 		|checkout_ShippingAddress_Edit_lnk		|
@@ -121,15 +121,16 @@ Scenario: Verify if User is able to enter billing information
 	
 @R2_Web @C-Order @CC-Checkout_Order @R2_All @P1   @KER-3164 
 @ZYP_CHECKOUT_K3164-8031 @CR-GK 
-Scenario: Verify if the user is able to reviw and place order from One Page Checkout Screen
+Scenario: Verify if the user is able to review and place order from One Page Checkout Screen
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account 
 	When User searches a product "productName" and navigates to PDP 
 	#	And user click on Add to Cart Button
 	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
-	And user adds shipment address on checkout page for "newly registered" user 
+	And user will click on View Cart button
+	And user click on checkout button in Cart page 
+	And user adds shipment address on checkout page for "newly registered" user
 	And user selects shipment method on check out page for "newly registered" user 
 	And user add "Credit Card" details in payment method for "newly registered" user 
 	And user clicks on place order on checkout page 
