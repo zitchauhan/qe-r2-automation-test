@@ -31,13 +31,27 @@ public class R2_CHECKOUT_K4332_SD extends CommonActionHelper {
 		if(isEnabled(r2R1FunPO.BuyNow_btn)) {
 			assertTrue(clickOnButton(r2R1FunPO.BuyNow_btn));
 			Thread.sleep(Constants.thread_highest);
-			Thread.sleep(Constants.thread_highest);
-			Thread.sleep(Constants.thread_highest);
+			//Thread.sleep(Constants.thread_highest);
+			Thread.sleep(Constants.thread_low);
 		}
 		
 	}
 	
+	@And("^user enters CVV \"(.*?)\" on Buy Now Popup modal$")
+	public void user_enters_CVV_on_Buy_Now_Popup_modal(String CVV) throws Throwable {
+		r2CheckOutPo.enterCVVBuyNowModal(webPropHelper.getTestDataProperty(CVV));
+		
+	}
 	
-
+	@Then("^user clicks Buy Now button on Buy Now Popup modal$")
+	public void user_clicks_Buy_Now_button_on_Buy_Now_Popup_modal() throws Throwable {
+		if(isEnabled(r2CheckOutPo.BuyNow_Modal)) {
+			assertTrue(clickOnButton(r2CheckOutPo.BuyNow_Modal));
+			Thread.sleep(Constants.thread_highest);
+			//Thread.sleep(Constants.thread_highest);
+			Thread.sleep(Constants.thread_low);
+		}
+	    
+	}
 	
 }
