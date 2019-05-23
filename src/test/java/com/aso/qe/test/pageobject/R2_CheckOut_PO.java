@@ -819,8 +819,11 @@ public class R2_CheckOut_PO extends CommonActionHelper
        @FindBy(xpath = "//*[@placeholder='MM/YY']") public WebElement txtExpirationPlaceholders;
        @FindBy(xpath = "//*[@id='expirationDate']//parent::label//following-sibling::div/span[contains(text(),'Past expiration date')]") public WebElement txtErrorMsgForPastDates;
        @FindBy(xpath = "//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']/following::*[1]") public WebElement txtCVVInput;
+       @FindBy(xpath="//*[@data-auid='creditCardCVV']")public WebElement Cvv_BuyNow_Modal;
        @FindBy(xpath = "//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']") public WebElement btnCVVToolTip;
        @FindBy(xpath = "//*[text()='The 3 digit code found on far right of signature box']") public WebElement txtCVVToolTipMsg;
+       @FindBy(xpath ="//*[@data-auid=\"btnundefined\"][@class=contains(text(),'BUY NOW')]")public WebElement BuyNow_Modal;//Added by HP for @KER-4332
+       
       
        /**AG KER-3138 Ends**************************************/
 
@@ -863,6 +866,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 
 	public void enterCVVValue(String cvv) {
 		setInputText(txtCVVInput,cvv);
+	}
+	
+	public void enterCVVBuyNowModal(String cvv) {
+		setInputText(Cvv_BuyNow_Modal,cvv);
 	}
 
 	public void verifyCVVTooltip() {
