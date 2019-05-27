@@ -142,7 +142,8 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement printLinkOnOrderConfirmationPage;
 	@FindBy(xpath = "//*[@data-auid='checkout_order_confirmation_create_account_link']")
 	public WebElement myAccountLinkOnOrderConfirmationPage;
-	@FindBy(xpath = "//*[@data-component='orderConfirmation']")
+	//@FindBy(xpath = "//*[@data-component='orderConfirmation']") commented by HP 05_27_19
+	@FindBy(xpath = "//*[@class=contains(text(),'orderConfirmation')] //*[@data-component='orderConfirmation']")
 	public WebElement orderConfirmationPage;
 	
 	@FindBy(xpath = "//*[text()='Save Payment Info for Later']")
