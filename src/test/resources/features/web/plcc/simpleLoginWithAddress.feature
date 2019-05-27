@@ -1,6 +1,6 @@
 Feature: Login 
 
-@C-PLCC @All @PLCC-50 @CR-VS @AutomationSanity @Movefile1
+@C-PLCC @All @PLCC-50 @CR-VS @AutomationSmoke @Movefile1
 Scenario: Verify user is able to login with entered address during registration
 	Given user launches the browser and navigates to "ASO_HOME" page plcc 
 	When user click on My Account link 
