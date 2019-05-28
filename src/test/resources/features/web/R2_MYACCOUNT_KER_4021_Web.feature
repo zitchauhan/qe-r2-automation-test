@@ -1,5 +1,5 @@
 Feature: E03-150 - Order Cancellation Cancel Order Confirmation (Guest & Authenticated Customers)
-@R2_Web  @R2_All @P1 @1HR_R2 @C-Order @CC-MyAccount_Order   @KER-4021 @ZYP_MYACCOUNT_K4021-10637 @CR-RK @C1-Message
+@R2_Web  @R2_All @P1 @1HR_R2 @C-Order @CC-MyAccount_Order   @KER-4021 @ZYP_MYACCOUNT_K4021-10637 @CR-HP @C1-Message
   Scenario: Verify that Guest User is able to view Cancellation Confirmation page
   Given user launches the browser and navigates to "ASO_HOME" page 
   When User searches a product "productName" and navigates to PDP 
@@ -17,7 +17,7 @@ Feature: E03-150 - Order Cancellation Cancel Order Confirmation (Guest & Authent
 	And  user click on Go To Shipping Method button in Checkout page 
 	And  user selects the suggested address instead of entered address 
 	And  clicks on Use Selected Address button 
-	And user clicks on edit shipping method cta 
+	#And user clicks on edit shipping method cta 
 	And user click on go to payment present in shipping method 
 	And user fill the credit card detail in payment 
 	And user fill the email address for shipment and click on review order btn 
