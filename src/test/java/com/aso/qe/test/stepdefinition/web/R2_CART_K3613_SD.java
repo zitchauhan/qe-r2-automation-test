@@ -142,8 +142,8 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CartPO.txtLimitedStockPDP));
 	}
 	
-	@And("^user verify the shipping fee for the ship to home$")
-	public void user_verify_the_shipping_fee_for_the_ship_to_home()  {
+	@And("^user verify shipping fee for the ship to home product$")
+	public void user_verify_shipping_fee_for_the_ship_to_home_product()  {
 		waitForElement(r2CartPO.shiptohomeshippingfee);
 		limitedStockMessage=r2CartPO.shiptohomeshippingfee.getText();
 		String arr[] = limitedStockMessage.split("$");
