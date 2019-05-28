@@ -71,7 +71,7 @@ Scenario: Verify Mixed cart items on cart - BOPIS and SOF item , user changes lo
 	And User select another store "BOPIS_Store1" 
 	And user verify the selected store is reflected for both the product 
 	
-@C-BOPIS @R2_Web @R2_All @P1 @1HR_R2 @C-NonOrder @CC-Checkout_Order
+@C-BOPIS @R2_Web @R2_All @P2 @1HR_R2 @C-NonOrder @CC-Checkout_Order
 @KER-2930 @ZYP_CHECKOUT_K2930-10848 @CR-RK 
 Scenario: Verify Shipping Fee is applicable only for Ship to Home 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -82,10 +82,10 @@ Scenario: Verify Shipping Fee is applicable only for Ship to Home
 	#	When user click on Add to cart button 
 	#	And user click on view cart
 	And user click on ship it button 
-	And user click on viewcart button 
+	And user click on continue shopping 
 	When user enters "BOPIS_SOF_Product" in the searchbox 
-	When user click on Add to cart button 
-	And user click on view cart 
+	And user click on ship it button 
+	And user click on continue shopping 
 	When user enters "SKUForShiptohome" in the searchbox 
 	#	When user click on Add to cart button
 	#	And user click on view cart
@@ -95,4 +95,4 @@ Scenario: Verify Shipping Fee is applicable only for Ship to Home
 	When user will click on Checkout button and navigates to Checkout page 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
-	And user verify the shipping fee for the ship to home 
+	And user verify shipping fee for the ship to home product
