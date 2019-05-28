@@ -242,7 +242,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']//div[2]//input[@radioname='shipmentOptions']/following-sibling::label")
 	public List<WebElement> clickAllInStorePickUp;   //SID 8-Jan
 	
-	@FindBy(xpath = "//p[@class='m-0']")
+	//@FindBy(xpath = "//p[@class='m-0']")
+	@FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVE']//*[@class =contains(text(),'Basic Delivery')]")
 	public WebElement shiptohomeshippingfee;
 	
 	
