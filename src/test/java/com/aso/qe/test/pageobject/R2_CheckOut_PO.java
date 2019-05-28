@@ -749,7 +749,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	  
 		//*************KER-2915*********************//
-		@FindBy(xpath = "//*[@data-component='orderConfirmation']//*[text()='THANKS FOR SUBMITTING YOUR ORDER']")
+		@FindBy(xpath = "//*[@data-component='orderConfirmation']//*[text()='THANKS FOR SUBMITTING YOUR ORDER!']")
 		public WebElement txtOrderSuccesfullStatus;
 		
 		@FindBy(xpath = "(//*[@data-component='orderConfirmation']//*)[6]")
