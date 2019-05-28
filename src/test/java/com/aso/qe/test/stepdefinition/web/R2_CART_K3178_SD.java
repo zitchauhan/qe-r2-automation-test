@@ -46,7 +46,7 @@ public class R2_CART_K3178_SD extends CommonActionHelper {
 		Thread.sleep(Constants.thread_high);
 		for (WebElement clickInStorePickUp : cartPO.clickAllInStorePickUp) {
 			assertTrue(clickOnButton(clickInStorePickUp));
-			Thread.sleep(Constants.thread_highest);
+			Thread.sleep(Constants.thread_high);
 		}
 	}
 
