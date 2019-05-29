@@ -58,7 +58,7 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 	@And("^user click on view cart$")
 	public void user_click_on_view_cart() throws Throwable {
 	   assertTrue(clickOnButton(pdp.btnViewCart));
-		Thread.sleep(Constants.thread_highest);
+		Thread.sleep(Constants.thread_high);
 		isDisplayed(r2CheckoutPo.checkout_CheckoutHeader_txt);
 	}
 	

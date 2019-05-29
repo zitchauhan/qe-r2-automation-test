@@ -268,8 +268,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@name ='state']/button")
 	public WebElement checkout_ShippingAddress_State_btn;
 //	
-	@FindBy(xpath = "//*[text()='CHECKOUT']")
-	public WebElement checkout_CheckoutHeader_txt;//CR_DPK 08-oct
+	@FindBy(xpath = "//*[@data-auid='crt_btnCheckoutTop']")
+	public WebElement checkout_CheckoutHeader_txt;//CR_HP 29-May_19
 	
 	@FindBy(xpath = "//*[contains(text(), 'Forgot your password')]")
 	public WebElement checkout_SignIn_ForgotYourPassword_lnk;

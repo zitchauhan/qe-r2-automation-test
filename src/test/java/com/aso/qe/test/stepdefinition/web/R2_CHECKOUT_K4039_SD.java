@@ -62,17 +62,18 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		waitForElement(r2CheckOutPo.PaypalEmail_Input);
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalEmail_Input));
 		setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty(arg1));
-		boolean flag=false;
-		flag=isDisplayed(r2CheckOutPo.PaypalNext_Btn);
-		if(flag) {
-		assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
-		}
+		//boolean flag=false;
+		//flag=isDisplayed(r2CheckOutPo.PaypalNext_Btn);
+		//if(flag) {
+		//assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
+		//}
 		setInputText(r2CheckOutPo.PaypalPassWord_Input, webPropHelper.getTestDataProperty(arg2));
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalLogin_Btn));
+		Thread.sleep(Constants.thread_high);
 		isDisplayed(r2CheckOutPo.PayPalContinue_Btn);
 		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));	
 		Thread.sleep(Constants.thread_highest);
-		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));	
+		//assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));	
 		driver.switchTo().window(winHandleBefore);
 		 System.err.println(driver.getTitle());
 

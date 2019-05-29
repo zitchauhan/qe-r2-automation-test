@@ -31,12 +31,12 @@ Scenario: 	BOPIS-Verify that order is not cancelled if user clicks on No CTA on 
       | MyAccount_OrderDetailsPage_SubTotalAmount              |
       | Order_Bopis_Print_Receipt_lnk                          |	
       
-@C-BOPIS @R2_Web @R2_All @CB-MyAccount @KER-4328 @ZYP_MYACCOUNT_K4328-10924
+@C-BOPIS @R2_Web @R2_All @CB-MyAccount @KER-4328 @ZYP_MYACCOUNT_K4328-10924 @HP
 Scenario: BOPIS-Verify that order is gets cancelled if user clicks on Yes, Cancel my Order CTA on confirmation modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
-	When User select store with "BOPIS_Store2" 
+	#When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
 	#And user click on Add to Cart Button 
 	And user click on ship it button

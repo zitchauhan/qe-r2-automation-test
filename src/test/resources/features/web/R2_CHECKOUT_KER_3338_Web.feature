@@ -254,7 +254,7 @@ Scenario: Verify guest user cannot select Paypal as Payment method on checkout f
 	Then verify the paypal radio option is not displayed 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
+@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 @HP
 @ZYP_CHECKOUT_3338-8263 @CR-AKK 
 Scenario: Verify the user is navigated back to the Academy.com once PayPal payment process is done 
 	Given user launches the browser and navigates to "ASO_HOME" page 

@@ -322,49 +322,27 @@ Scenario: TC_22-Verify Find a store
 	Then user enter "zipCode" in Find a Store Model 
 	And user click on submit button 
 	Then user verify the results based on entering zipcode 
+
+	 @R2_Web @R2_WAST-24 @P1 @C-Checkout @KER-2926 @AutomationSmoke @CR-HP @HP
+	Scenario:  TC_24-Verify if unauthenticated user is able to place PAYPAL order
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	#Then User should be able to click on Find Store 
+	#And Find Store Modal should pop-up 
+	#When User select store with "BOPIS_Store2" 
+	When user enters "BOPIS_Regular_Product" in the searchbox
+	#And user click on Add to Cart Button 
+	And user click on ship it button
+	And user click on view cart
+	Then user select in store pickup option
+	And user will click on Checkout button and navigates to Checkout page
+	When user clicks on Go to payment CTA
+	Then user click on paypal radiobtn
+	And user click on paypal checkout button
+	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
+	And user able to see the button place order
+	And user is navigated to order confirmation page and captures order number
 	
-	#	@R2_Web @R2_All @R2_Order @CR-SK 
-	#Scenario Outline: TC_23- Verify if authenticated user is able to place an order for single SKU product 
-	#	Given user launches the browser and navigates to "ASO_HOME" page 
-	#	When user creates an account
-	#	And User searches a product "productName" and navigates to PDP 
-	#	And user click on Add to Cart Button 
-	#	And user is navigated to Add to cart Notification popup 
-	#	When user click on checkout button 
-	#	And user adds shipment address on checkout page for "newly registered" user
-	#	And user selects shipment method on check out page for "newly registered" user
-	#	And user add "<Payment Type>" details in payment method for "newly registered" user
-	#	And user clicks on place order on checkout page 
-	#	Then verify user is able to successfully place the order 
-	#	Then Verify the message on the page 
-	#		|# Message for successful order is displayed		|
-	#		|THANKS FOR SUBMITTING YOUR ORDER					|
-	#	Examples: 
-	#		|Payment Type	|
-	#		|PayPal			|
-	#	
-	#	@R2_Web @R2_All @R2_Order  
-	#@CR-SK 
-	#Scenario Outline:  TC_24-Verify if unauthenticated user is able to place an order for single SKU product 
-	#	Given user launches the browser and navigates to "ASO_HOME" page 
-	#	When User searches a product "productName" and navigates to PDP 
-	#	And user click on Add to Cart Button 
-	#	And user is navigated to Add to cart Notification popup 
-	#	And user click on checkout button 
-	#	And user adds shipment address on checkout page for "guest" user
-	#	And user selects shipment method on check out page for "guest" user
-	#	And user add "<Payment Type>" details in payment method for "guest" user
-	#	And user clicks on place order on checkout page 
-	#	Then verify user is able to successfully place the order 
-	#	And Verify the message on the page 
-	#		|# Message for successful order is displayed		|
-	#		|THANKS FOR SUBMITTING YOUR ORDER					|
-	#	Examples: 
-	#		|Payment Type	|
-	#		|PayPal			|
-	#		
-	
-@R2_WAST-22 @BrokenLink @Broken @TC_BL_06 
+ @R2_WAST-22 @BrokenLink @Broken @TC_BL_06 
 Scenario: TC_25- Verify all broken URL's on Cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
