@@ -308,8 +308,10 @@ public class R1_SD_SIT extends CommonActionHelper {
 		}
 		else 
 		{
-			if(!isDisplayed(hp_p.msgVerifyIncorrect)) {
-			waitForElement(globalElementHeader.btnMyAccount);
+			//if(!isDisplayed(hp_p.msgVerifyIncorrect)) //Commented out by HP June 18. This was making scripts wait for 30 secs after successful login
+			                                            //Need better way to verify if Login is successful.
+			{
+			waitForElement(globalElementHeader.btnMyAccount);//Remove these 2 lines onece better way to verify if Login is successful is implemented.
 		assertTrue(isDisplayed(globalElementHeader.btnMyAccount));
 			}
 		}
