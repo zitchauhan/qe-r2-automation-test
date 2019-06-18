@@ -3,6 +3,7 @@ package com.aso.qe.test.pageobject;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -28,6 +29,7 @@ public class R1_HomePage_PO {
 	@FindBy(xpath="//input[@id='logonId']")public WebElement inputEmail;
 	@FindBy(xpath="//input[@id='logonPassword']") public WebElement inputPassword;
 	@FindBy(xpath="//button[contains(text(),'Sign In')]  | //button[contains(text(),'Sign in')]") public WebElement buttonSignIn;  //SID 19-September
+	@FindBy(xpath="//*[@data-auid='Sign Out']") public WebElement buttonSignOut;// Added by HP 18 June_2019
 	@FindBy(xpath="//*[@data-auid='Orders']") public WebElement txtAccountSummary;  //SID 19-September
 	@FindBy(xpath="//*[@id='logonErrorMessage'] | //*[contains(@role,'alert') and contains(text(),'incorrect')]")public WebElement msgVerifyIncorrect;  //SID 19-September
 	@FindBy(xpath="//*[@id='logonIdError'] | //*[contains(@role,'alert') and contains(text(),'Please enter email address')] | //*[@id='logonIdError'] | //*[contains(@role,'alert') and contains(text(),'Please enter an email address')]") public WebElement msgVerifyEmail; //SID modified 14-November
