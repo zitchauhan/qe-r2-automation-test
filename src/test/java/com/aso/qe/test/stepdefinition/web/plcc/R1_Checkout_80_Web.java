@@ -52,12 +52,15 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 
+	/*The below method should be written on the page level*/
+	/**Modified by Rahul Singh**/
 	@When("^user enters \"(.*?)\" in the search box plcc$")
 	public void user_enters_in_the_search_box_plcc(String arg1) throws Throwable {
-		Thread.sleep(5000);
-		plccPageObjects.enterSearchItem(arg1);
+		//Thread.sleep(5000);
 		assertTrue(isDisplayed(plccLandingPageObjects.searchBox));
-		waitForElement(plccLandingPageObjects.searchBox);
+		plccPageObjects.enterSearchItem(arg1);
+		
+		//waitForElement(plccLandingPageObjects.searchBox);
 	}
 
 	@When("^user enters \"(.*?)\" in the search box plcc for mobile$")
@@ -107,12 +110,14 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		}
 	}
 
+	/**Modified by Rahul Singh**/
 	@When("^user click on search icon$")
 	public void user_click_on_search_icon() throws Throwable {
 		try {
 			plccLandingPageObjects.verifyPresenceOfSearchIcon();
 			plccLandingPageObjects.searchIcon.click();
-			driver.navigate().refresh();
+			
+			//driver.navigate().refresh();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

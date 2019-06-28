@@ -15,7 +15,7 @@ public class R1_Cart_89_Web extends CommonActionHelper{
 	@Then("^user navigates to Cart Page$")
 	public void user_navigates_to_Cart_Page() throws Throwable {
 		genericPO.verifyPresenceOfCartPage();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 	}
 
 	@Then("^user expect element We Accept Label to be present$")
@@ -31,6 +31,6 @@ public class R1_Cart_89_Web extends CommonActionHelper{
 	public void user_click_on_viewcart_button() throws Throwable {
 		genericPO.verifyPresenceOfViewCartButton();
 		genericPO.viewCartButton.click();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 	}
 }

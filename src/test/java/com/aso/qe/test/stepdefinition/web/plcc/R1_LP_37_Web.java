@@ -22,7 +22,7 @@ public class R1_LP_37_Web  extends CommonActionHelper  {
 	public void user_enter_Preescreen_Code(String arg1) throws Throwable {
 		plccLandingPageObjects.enterPrescreenCode(arg1);
 		assertTrue(isDisplayed(plccLandingPageObjects.prescreenCodeTextField));
-		waitForElement(plccLandingPageObjects.prescreenCodeTextField);
+		//waitForElement(plccLandingPageObjects.prescreenCodeTextField);
 	}
 	@Then("^user expect Preescreen Error Code is to be present$")
 	public void user_expect_Preescreen_Error_Code_is_to_be_present() throws Throwable {
