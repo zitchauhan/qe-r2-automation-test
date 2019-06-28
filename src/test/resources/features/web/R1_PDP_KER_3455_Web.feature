@@ -53,14 +53,14 @@ Feature: [Desktop]Bundles - Add to Cart Notification
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 
 	
-
-  @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-4799 @CR-RKA @RBeta
-  Scenario: Verify the Limited Quantity Messaging in Add to Cart Notification for Bundles
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then User navigates till PLP of multiple sku package 
-	And user click on football helmets
-	And User click on the product image of sku package 
-	Then verfiy the product details and features 
+#This is a rare & complex data scenario to test, should be handled manually HP
+#  @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-4799 @CR-RKA @RBeta
+#  Scenario: Verify the Limited Quantity Messaging in Add to Cart Notification for Bundles
+#    Given user launches the browser and navigates to "ASO_HOME" page
+#    Then User navigates till PLP of multiple sku package 
+#	And user click on football helmets
+#	And User click on the product image of sku package 
+#	Then verfiy the product details and features 
 	
 
 
