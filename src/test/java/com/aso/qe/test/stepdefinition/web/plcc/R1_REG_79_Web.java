@@ -68,9 +68,10 @@ public class R1_REG_79_Web extends CommonActionHelper {
 
 	@Then("^user enter Email Address \"(.*?)\"$")
 	public void user_enter_Email_Address(String arg1) throws Throwable {
-		plccPageObjects.enterEmailAddressTxtFieldAuto(arg1);
 		assertTrue(isDisplayed(plccPageObjects.emailIdTxtField));
-		waitForElement(plccPageObjects.emailIdTxtField);
+		plccPageObjects.enterEmailAddressTxtFieldAuto(arg1);
+		
+		//waitForElement(plccPageObjects.emailIdTxtField);
 	}
 
 	@Then("^user expect element Create Password to be present$")
@@ -80,9 +81,10 @@ public class R1_REG_79_Web extends CommonActionHelper {
 
 	@Then("^user enter Password \"(.*?)\"$")
 	public void user_enter_Password(String arg1) throws Throwable {
-		plccPageObjects.enterCreatePwdTxtField(arg1);
 		assertTrue(isDisplayed(plccPageObjects.createPwdTxtField));
-		waitForElement(plccPageObjects.createPwdTxtField);
+		plccPageObjects.enterCreatePwdTxtField(arg1);
+		
+		//waitForElement(plccPageObjects.createPwdTxtField);
 	}
 
 	@Then("^user expect element Add Address for Faster Checkout checkbox to be present$")

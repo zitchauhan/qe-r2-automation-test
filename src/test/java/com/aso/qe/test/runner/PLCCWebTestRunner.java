@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/resources/features/web/plcc/R1_CCAM_Generic_90_Web.feature",
+@CucumberOptions(features = "src/test/resources/features/web/R2_CART_KER_2942_Web.feature",
 		glue = "com.aso.qe.test.stepdefinition.web", 
 		monochrome = true,
 		//tags = "@Upendra",

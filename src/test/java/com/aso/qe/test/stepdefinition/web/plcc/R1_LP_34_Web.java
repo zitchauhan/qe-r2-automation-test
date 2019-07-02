@@ -59,23 +59,25 @@ public class R1_LP_34_Web extends CommonActionHelper {
 
 	@When("^user enter Email address in sign-in page \"(.*?)\"$")
 	public void user_enter_Email_address_in_sign_in_page(String arg1) throws Throwable {
-		plccLandingPageObjects.enterEmailTxtFieldOnSignInPage(arg1);
 		assertTrue(isDisplayed(plccLandingPageObjects.emailTxtField));
-		waitForElement(plccLandingPageObjects.emailTxtField);
+		plccLandingPageObjects.enterEmailTxtFieldOnSignInPage(arg1);
+		
+		//waitForElement(plccLandingPageObjects.emailTxtField);
 	}
 
 	@When("^user enter password in sign-in page \"(.*?)\"$")
 	public void user_enter_password_in_sign_in_page(String arg1) throws Throwable {
-		plccLandingPageObjects.enterPasswordTxtFieldOnSignInPage(arg1);
 		assertTrue(isDisplayed(plccLandingPageObjects.passwordTxtField));
-		waitForElement(plccLandingPageObjects.passwordTxtField);
+		plccLandingPageObjects.enterPasswordTxtFieldOnSignInPage(arg1);
+		
+		//waitForElement(plccLandingPageObjects.passwordTxtField);
 	}
 
 	@When("^user click on Signin-button$")
 	public void user_click_on_Signin_button() throws Throwable {
 		plccLandingPageObjects.clickOnSignInBtnSignInPage();
 		//CommonActionHelper.waitUntilElePresent(driver, Element, timeOutInSeconds);
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		}
 
 	@When("^user navigates to ASO-Home page$")
