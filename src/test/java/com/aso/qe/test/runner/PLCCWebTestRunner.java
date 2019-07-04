@@ -7,10 +7,10 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/resources/features/web/R2_CART_KER_2942_Web.feature",
+@CucumberOptions(features = "src/test/resources/features/web",
 		glue = "com.aso.qe.test.stepdefinition.web", 
 		monochrome = true,
-		//tags = "@Upendra",
+		//tags = "@AutomationSmoke",
 		plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html", 
 		format = {"pretty", "html:target/cucumber-reports/cucumber-html-reports",
         "json:target/cucumber-reports/cucumber-html-reports/common.json" })

@@ -241,7 +241,7 @@ Scenario: Verify if entered address is validated by AVS
  	And Verify that Credit Card details as entered are saved in User Profile.
  	
  	
-@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK
+@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @CR-DPK 
 Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -302,6 +302,22 @@ Scenario: Verify that the City and State are auto populated when Zip Code is ent
  	And user enter ZipCode field "UpdateZipcode"
  	Then User verifies that city and State are populated automatically 	
  	
-		
+#=================================Sanity============================================##
+@R2_Web @R2_WAST-04 @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @AutomationSmoke
+Scenario: TC_5-Verify Add Credit Card and added as a Default Card 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	And user logs in as "EmailAddress" 
+	And User searches a product "productName" and navigates to PDP 
+#	And user click on Add to Cart Button 
+#	And user click on checkout button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user clicks on edit payment cta 
+	
+	
+	#===========unit testing pending as search is not working
 
 

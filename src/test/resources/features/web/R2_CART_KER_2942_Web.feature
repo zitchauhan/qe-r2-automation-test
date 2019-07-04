@@ -258,5 +258,37 @@ Given user launches the browser and navigates to "ASO_HOME" page
     |ErrorMsgLimitedStack|
 
 	
-		
+#=========================================================Sanity==============================#
+@R2_Web @R2_WAST-11 @P1 @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @AutomationSmoke
+Scenario: TC_12-Verify Update Quantity 
+
+	Given  user launches the browser and navigates to "ASO_HOME" page 
+	Then User searches a product "productName" and navigates to PDP 
+	#Then user click on Add to Cart Button
+	And user click on ship it button 
+	And  user will click on View Cart button 
+	And  user navigate to Cart page 
+	Then  user view the items in order summary details (Subtotal, Estimated Shipping/In-Store Pickup, Estimated Taxes) 
+	When  enter the "EnterQuantityGreaterThenOne" to X 
+	And  modified quantity should get updated 
+	Then  Order Summary should get recalculated 
+	Then  Verify below Sub/Main Module of Cart Page 
+		|# Verify following elements in Cart page"Order Summary"|
+		|SubTotal_txt|
+	And  user should be able to see the increased quantity and Price in Cart Order summary 
+	
+@R2_Web @R2_WAST-13 @P1 @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @AutomationSmoke
+Scenario: TC_14-Verify Remove Item from Cart 
+	Given  user launches the browser and navigates to "ASO_HOME" page 
+	Then User searches a product "productName" and navigates to PDP 
+	#Then user click on Add to Cart Button
+	And user click on ship it button
+	And  user will click on View Cart button 
+	And  user navigate to Cart page 
+	And  verify the Remove Quantity link 
+	Then  Verify below Sub/Main Module of Cart Page 
+		|# Verify following elements in Cart page "Your Cart item details "|
+		|RemoveFromCart_Btn|
+	
+	
 	

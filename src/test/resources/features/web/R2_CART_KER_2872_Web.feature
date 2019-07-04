@@ -302,3 +302,32 @@ Scenario: Verify user can change the store using Find in Store modal
 	Then user click on find a store option 
 	When User select store with "BOPIS_Store2" 
 	
+	
+#=====================Sanity=================================================#
+@R2_Web @R2_WAST-21 @P1 @C-Cart @KER-2872 @ZYP_CART_K2872-8710 @AutomationSmoke
+Scenario: TC_22-Verify Find a store 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on Find a Store 
+	Then user enter "zipCode" in Find a Store Model 
+	And user click on submit button 
+	Then user verify the results based on entering zipcode 
+
+#	 @R2_Web @R2_WAST-24 @P1 @C-Checkout @KER-2926 @AutomationSmoke @CR-HP @HP
+#	Scenario:  TC_24-Verify if unauthenticated user is able to place PAYPAL order
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	#Then User should be able to click on Find Store 
+#	#And Find Store Modal should pop-up 
+#	#When User select store with "BOPIS_Store2" 
+#	When user enters "BOPIS_Regular_Product" in the searchbox
+#	#And user click on Add to Cart Button 
+#	And user click on ship it button
+#	And user click on view cart
+#	Then user select in store pickup option
+#	And user will click on Checkout button and navigates to Checkout page
+#	When user clicks on Go to payment CTA
+#	Then user click on paypal radiobtn
+#	And user click on paypal checkout button
+#	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
+#	And user able to see the button place order
+#	And user is navigated to order confirmation page and captures order number
+	

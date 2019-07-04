@@ -17,24 +17,44 @@ Scenario: Verify the available fields on the Sign Up page
 		|SignUpPage_SignInNow_lnk						|
 
 
-@R2_Web @R2_Regression @R2_All @1HR_R2 @P1 @P1 @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @CR-SK @C1-Message
-Scenario: Verify user is able to create an account with all valid data 
+#@R2_Web @R2_Regression @R2_All @1HR_R2 @P1 @P1 @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @CR-SK @C1-Message
+#Scenario: Verify user is able to create an account with all valid data 
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	When user clicks on SignIn link from global header 
+#	And clicks on SignUp link from SignIn page 
+#	And user enter first "FirstName" 
+#	And user enter last "LastName" 
+#	And user enter random email Address
+#	And user enter password "Password"
+#	Then user should see password masked 
+#	When clicks on Sign Up Button
+#	#Then user should be able to sign up successfully
+#	And Verify the message on the page
+#	    |# Following Message should show on the page|
+#	    |Play Ball!							|
+#	    |Your academy.com account has been created|
+#	    |LET'S SHOP									|
+
+#===========================================Sanity===============================================#
+
+@R2_Web @R2_WAST-02 @P1 @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @AutomationSmoke @C1-Message 
+Scenario: TC_3- Verify User is able to create an account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And clicks on SignUp link from SignIn page 
-	And user enter first "FirstName" 
-	And user enter last "LastName" 
-	And user enter random email Address
-	And user enter password "Password"
+	And user enter first "SanityFirstName" 
+	And user enter last "SanityLastName" 
+	And user enter random email Address 
+	And user enter password "SanityPassword" 
 	Then user should see password masked 
-	When clicks on Sign Up Button
-	#Then user should be able to sign up successfully
-	And Verify the message on the page
-	    |# Following Message should show on the page|
-	    |Play Ball!							|
-	    |Your academy.com account has been created|
-	    |LET'S SHOP									|
-
+	When clicks on Sign Up Button 
+	Then user should be able to sign up successfully 
+#	And Verify the message on the page 
+#		|# Following Message should show on the page|
+#		|CONGRATULATIONS                            |
+#		|You have successfully registered with Academy.com|
+#		|LET'S SHOP                                       |
+#===================================================================================================#
 
 @R2_Web @R2_Regression @R2_All @1HR_R2 @P1 @P1 @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10163 @CR-SK
 Scenario: Verify the user is able to sign with the new created account 

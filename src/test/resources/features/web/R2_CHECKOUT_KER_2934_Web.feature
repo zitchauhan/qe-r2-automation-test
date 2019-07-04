@@ -201,5 +201,23 @@ Scenario: Verify Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA, S
 		|checkout_ShippingInformation_Header_txt					|
 		|checkout_ShippingAddress_txt								|
 		
+#================================Sanity================================#
+@R2_Web @R2_WAST-15 @P1 @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8177 @AutomationSmoke
+Scenario: TC_16-Verify Add Shipping Address 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User searches a product "productName" and navigates to PDP 
+	#Then user click on Add to Cart Button
+	And user click on ship it button
+	And user will click on View Cart button 
+	Then user navigate to Cart page 
+	Then user click on checkout button in Cart page 
+	And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "zipcode" 
+	And user click on Go To Shipping Method button in Checkout page 
+	
+	
 		
 		

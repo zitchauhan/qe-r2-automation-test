@@ -163,3 +163,25 @@ Scenario: Verify the user can enter valid new Gift card with 13 or 16 digit in C
 		| # Following button and success message on checkout page |
 		| GiftCardAppliedSuccessMsg                               |
 		| btnToRemoveGiftCardOnCheckoutPage                       |
+
+#================================================Sanity===================================#
+@R2_Web @R2_WAST-17 @P2 @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954 @AutomationSmoke
+Scenario: TC_18-Verify Payment - Add Gift Card - Authenticated 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then User searches a product "productName" and navigates to PDP 
+	#Then user click on Add to Cart Button
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	Then user click on go to payment present in shipping method 
+	Then user click on GiftCard Plus icon in Checkout page 
+	And user enter Gift card Number "Valid16DigitGiftCardNumber" 
+	And user enter Pin Number "Valid8DigitGiftCardPIN" 
+	And user click on Apply button 
+	Then applied gift card "Valid16DigitGiftCardNumber" should be displayed 
+	Then gift card balance is applied towards the purchase 

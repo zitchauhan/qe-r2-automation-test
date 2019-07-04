@@ -132,4 +132,21 @@ Scenario: Verify the user gets the error message when both email id and Password
 		|# Following error Message should show on the page	|
 		|Please enter an email address							|
 		|Please enter the password								|
+		
+#=========================Sanity=====================================#
+@R2_Web @R2_WAST-01 @P2 @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @AutomationSmoke
+Scenario: TC_1- Verify Login Logout 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "Login_username" 
+	And user enter the valid password "Login_pwd" 
+	And user click on signin button 
+	Then user should get logged in successfully 
+	When user clicks on signout link in myaccount list 
+	And user clicks on SignIn link from global header 
+	Then Verify below Sub/Main Module of My Account 
+		|# Verify following elements in Sign in/login page	|
+		|SignInPage_EmailAddress_txt			   			| 
+		|SignInPage_Password_txt				   			|
+		|SignInPage_SignIn_btn								|
 	

@@ -1,18 +1,33 @@
 Feature: Verify Product Blade in Cart 
 
-@R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-Cart @KER-2939 @ZYP_CART_K2939-9615 @CR-AKK 
-Scenario: To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
+#@R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-Cart @KER-2939 @ZYP_CART_K2939-9615 @CR-AKK 
+#Scenario: To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	When User Navigates L2 form Homepage Header 
+#	And User clicks on product in PLP 
+##	And user click on Add to Cart Button 
+#	And user click on ship it button 
+#	And user will click on View Cart button 
+#	When user navigate to Cart page 
+#	Then Verify below Sub/Main Module of Cart Page 
+#	|# Verify following elements in Cart page "Your Cart item details "|
+#	|CartProductName_Link   |
+#	And User is able to see the selected variant image as thumbnail  
+
+#==============================================Sanity============================================#
+	
+@R2_Web @R2_WAST-12 @P1 @C-Cart @KER-2939 @ZYP_CART_K2939-9615 @AutomationSmoke
+Scenario: TC_13-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When User Navigates L2 form Homepage Header 
-	And User clicks on product in PLP 
-#	And user click on Add to Cart Button 
-	And user click on ship it button 
+	Then User searches a product "productName" and navigates to PDP 
+	#Then user click on Add to Cart Button
+	And user click on ship it button
 	And user will click on View Cart button 
 	When user navigate to Cart page 
 	Then Verify below Sub/Main Module of Cart Page 
-	|# Verify following elements in Cart page "Your Cart item details "|
-	|CartProductName_Link   |
-	And User is able to see the selected variant image as thumbnail  
+		|# Verify following elements in Cart page "Your Cart item details "|
+		|CartProductName_Link   |
+	And User is able to see the selected variant image as thumbnail
 	
 #@R2_Web @R2_Regression @R2_All @P2 @C-Cart @KER-2939 @ZYP_CART_K2939-8071 @CR-AKK 
 #Scenario: To view details specific to an item in the cart 

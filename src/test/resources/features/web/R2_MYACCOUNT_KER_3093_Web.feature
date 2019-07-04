@@ -240,3 +240,18 @@ Scenario: Verify that user is able to add a new gift card having 16 digit with 4
 		|PaymentPage_GiftCardHeader_label				|
 		|PaymentPage_AddedGiftCards_txtList				|
 		
+#===================================================Sanity=====================================#
+@R2_Web @R2_WAST-03 @P2 @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418 @AutomationSmoke 
+Scenario: TC_4- Verify User is able to Add Gift Card 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	And user logs in as "RawUser" 
+	Then user click on My Account and navigate to payment 
+	And User has empty wallet with no Gift Card added 
+	When user clicks on Add New Gift Card button 
+	And user enter valid "Valid16DigitGiftCardNumber" in Gift Card Number text field 
+	And user enter valid "Valid8DigitGiftCardPIN" in Gift Card PIN text field 
+	And clicks on Add button to add gift card 
+	Then user should be able to see "Valid16DigitGiftCardNumber" Gift card
+	And user should be able to see available balance 
+	And there should be a Remove link with cross icon

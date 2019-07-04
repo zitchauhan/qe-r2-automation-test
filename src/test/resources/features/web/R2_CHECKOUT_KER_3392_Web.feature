@@ -205,7 +205,23 @@ Scenario: Verify the  User must view Sign-In/Interstitial Modal
 	|ForgotPasswordPage_Submit_btn						|
 	
 
-
+#=============================================Sanity============================================#
+	
+@R2_Web @R2_MAST-18 @P2 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 @AutomationSmoke
+Scenario: TC_19-Verify Sign In During Checkout 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User searches a product "productName" and navigates to PDP 
+	#Then user click on Add to Cart Button
+	And user click on ship it button
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user will click on Checkout button and navigates to Checkout page 
+	When user click on SignIn link 
+	And user enter the valid emailaddress "SanityEmailAddress" from checkout page 
+	And user enter the valid password "Password" from checkout page 
+	And user click on signin button
+	
+	
    
     
  

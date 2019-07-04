@@ -319,7 +319,24 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When enter the "EnterQuantityGreaterThenOne" to X  
 	Then Verify below Sub/Main Module of Cart Page
 	|# Then discount is displayed in Order Summary|
-	|Discount_Txt|			
+	|Discount_Txt|		
+	
+#===========================================Sanity==========================================#
+	
+@R2_Web @R2_WAST-09 @P2 @C-Checkout @KER-3166 @ZYP_CART_K3166-9604 @AutomationSmoke
+Scenario: TC_10-Verify Apply Promotion 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User searches a product "productName" and navigates to PDP 
+	#Then user click on Add to Cart Button
+	And user click on ship it button
+	And user will click on View Cart button 
+	And user view and Applied Promotions/Discounts "SanityOrderLevelQuantity" 
+	Then Verify below Sub/Main Module of Cart Page 
+		|# Verify following elements in Cart page"Order Summary"|	
+		|checkOut_OrderSummary_btn|	
+		|Total_txt|
+		|SubTotal_txt|
+		|EstimatedTaxes_txt|	
 			
 	
 	
