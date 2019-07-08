@@ -991,11 +991,11 @@ public class R2_CheckOut_PO extends CommonActionHelper
     	assertTrue(isDisplayed(txtBillingFirstNameErrorMsg));
     	assertTrue(isDisplayed(txtBillingLastNameErrorMsg));
     	assertTrue(isDisplayed(txtBillingPhoneNumberErrorMsg));
-    	assertTrue(isDisplayed(txtBillingZipCodeErrorMsg));
-    	assertTrue(isDisplayed(txtBillingCityErrorMsg));
+    	//assertTrue(isDisplayed(txtBillingZipCodeErrorMsg));
+    	//assertTrue(isDisplayed(txtBillingCityErrorMsg));
     	assertTrue(isDisplayed(txtBillingEmailAddressForOrderConfirmationErrorMsg));
     	assertTrue(isDisplayed(txtBillingAddressErrorMsg));
-    	assertTrue(isDisplayed(txtBillingStateErrorMsg));
+    	//assertTrue(isDisplayed(txtBillingStateErrorMsg));
     	
     }
 	

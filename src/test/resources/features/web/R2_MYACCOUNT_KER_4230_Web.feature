@@ -245,8 +245,7 @@ Scenario: Verify that user can see the error message if user enters the email id
 		|# Following Error Message should show on the page|
 		|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 		
-@R2_Web @R2_Regression @R2_All @P1 @1HR @C-MyAccount @KER-4230 
-@ZYP_MYACCOUNT_K4230-10576 @CR-RK 
+@R2_Web @R2_Regression @R2_All @P1 @1HR @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10576 @CR-RK 
 Scenario: Verify that user can change the password in Profile section. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
