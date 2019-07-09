@@ -57,7 +57,7 @@ Scenario: Verify the user enters the valid password and resets the password succ
 		|ProfilePage_ChangePassword_btn|
 		
 @R2_Web @R2_Regression @R2_All @P1 @1HR @C-MyAccount @KER-6654 
-@ZYP_MYACCOUNT_K6654-10180 @CR-RKA 
+@ZYP_MYACCOUNT_K6654-10180 @CR-RKA
 Scenario: Verify the user is able to sign with the new password 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 

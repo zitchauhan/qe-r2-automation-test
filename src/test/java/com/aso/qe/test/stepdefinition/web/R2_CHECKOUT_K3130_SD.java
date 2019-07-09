@@ -48,6 +48,8 @@ public class R2_CHECKOUT_K3130_SD extends CommonActionHelper {
 	public void user_uncheck_the_checkbox_for_Billing_address_different_from_shipping_address() throws Throwable{
 		
 		clickOnButton(r2CheckOutPo.SameAsShippingAddress_checkBox);
+		clickOnButton(r2CheckOutPo.SameAsShippingAddress_checkBox);
+		clickOnButton(r2CheckOutPo.SameAsShippingAddress_checkBox);
 	}
 
 

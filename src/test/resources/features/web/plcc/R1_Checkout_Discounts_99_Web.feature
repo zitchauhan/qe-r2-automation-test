@@ -27,7 +27,7 @@ Scenario: Verify user is able to get Free shipping offer with Item value >15$
 	When user click on edit my cart link 
 	Then user click on remove from cart 
 	
-@C-PLCC @All @PLCC-99 @CR-Manju @AutomationSmoke
+@C-PLCC @All @PLCC-99 @CR-Manju @AutomationSmoke 
 Scenario: Verify user is unable to get Free shipping offer with Item value <15$ 
 	When user enters "SKUIdOfProductLs15" in the search box plcc 
 	And user click on search icon 
