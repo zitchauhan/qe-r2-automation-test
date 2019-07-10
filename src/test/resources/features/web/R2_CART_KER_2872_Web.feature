@@ -312,22 +312,25 @@ Scenario: TC_22-Verify Find a store
 	And user click on submit button 
 	Then user verify the results based on entering zipcode 
 
-#	 @R2_Web @R2_WAST-24 @P1 @C-Checkout @KER-2926 @AutomationSmoke @CR-HP @HP
-#	Scenario:  TC_24-Verify if unauthenticated user is able to place PAYPAL order
-#	Given user launches the browser and navigates to "ASO_HOME" page 
-#	#Then User should be able to click on Find Store 
-#	#And Find Store Modal should pop-up 
-#	#When User select store with "BOPIS_Store2" 
-#	When user enters "BOPIS_Regular_Product" in the searchbox
+	@R2_Web @R2_WAST-24 @P1 @C-Checkout @KER-2926 @AutomationSmoke @CR-HP @HP @vidya
+	Scenario:  TC_24-Verify if unauthenticated user is able to place PAYPAL order
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	#Then User should be able to click on Find Store 
+	#And Find Store Modal should pop-up 
+	#When User select store with "BOPIS_Store2" 
+	When user enters "BOPIS_Regular_Product" in the searchbox
 #	#And user click on Add to Cart Button 
-#	And user click on ship it button
-#	And user click on view cart
-#	Then user select in store pickup option
-#	And user will click on Checkout button and navigates to Checkout page
-#	When user clicks on Go to payment CTA
-#	Then user click on paypal radiobtn
-#	And user click on paypal checkout button
-#	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
-#	And user able to see the button place order
-#	And user is navigated to order confirmation page and captures order number
+	And user click on ship it button
+	And user click on view cart
+	Then user select in store pickup option
+	And user will click on Checkout button and navigates to Checkout page
+	And user adds shipment address on checkout page for "guest" user
+	Then user click on go to payment present in shipping method 
+	When user clicks on Go to payment CTA
+	Then user click on paypal radiobtn
+	And user click on paypal checkout button
+	#And enter the paypal login "PayPalEmail" "PayPalPassword" 
+	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
+	And user able to see the button place order
+	And user is navigated to order confirmation page and captures order number
 	

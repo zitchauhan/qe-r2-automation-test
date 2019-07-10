@@ -5,6 +5,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -23,6 +25,7 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 	R2_R1_Fun_PO r2_r1_fun_po=PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	R2_CheckOut_PO r2CheckOutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	R1_PDP_PO pdp_po =PageFactory.initElements(driver, R1_PDP_PO.class);
+	
 	@Then("^user verify all the paypal and more radio btn is disable$")
 	public void user_verify_all_the_paypal_and_more_radio_btn_is_disable() throws Throwable {
 	 assertTrue(isEnabled(r2CheckOutPo.CreditCard_radioBtn)); 
@@ -57,25 +60,32 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		for(String winHandle : driver.getWindowHandles()){
 		    driver.switchTo().window(winHandle);
 		   System.err.println(driver.getTitle());
+		 
 		}
 		System.err.println(getTitle());
 		waitForElement(r2CheckOutPo.PaypalEmail_Input);
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalEmail_Input));
+		
+		
+		
 		setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty(arg1));
-		//boolean flag=false;
-		//flag=isDisplayed(r2CheckOutPo.PaypalNext_Btn);
-		//if(flag) {
-		//assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
-		//}
+		assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
 		setInputText(r2CheckOutPo.PaypalPassWord_Input, webPropHelper.getTestDataProperty(arg2));
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalLogin_Btn));
 		Thread.sleep(Constants.thread_high);
-		isDisplayed(r2CheckOutPo.PayPalContinue_Btn);
-		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));	
+		driver.manage().window().maximize();
+		Thread.sleep(Constants.thread_high);
+
+		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Thread.sleep(Constants.thread_high);
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		Thread.sleep(Constants.thread_high);
+		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));
 		Thread.sleep(Constants.thread_highest);
-		//assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));	
 		driver.switchTo().window(winHandleBefore);
-		 System.err.println(driver.getTitle());
+		System.err.println(driver.getTitle());
 
 	}
 	@Then("^user click on ADD Another Gift Card$")

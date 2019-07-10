@@ -345,7 +345,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
     public WebElement PaypalPassWord_Input;
     @FindBy(xpath ="//*[@id='btnLogin']")
     public WebElement PaypalLogin_Btn;
-    @FindBy(xpath ="//*[@id='button']/*")
+    @FindBy(xpath ="//*[@id='confirmButtonTop']")
     public WebElement PayPalContinue_Btn;
     
     
