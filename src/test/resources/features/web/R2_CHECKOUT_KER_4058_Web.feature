@@ -6,6 +6,7 @@ Scenario: Verify user will be prevented from adding restricted products to PO bo
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then user navigate to L_Three Kayak 
 	Then usr select the kayak and navigate to PDP page 
+	#Updated by VSN on 07-11-19
 	#And user click on Add to Cart Button
 	And user click on ship it button 
 	And user click on viewcart button 
