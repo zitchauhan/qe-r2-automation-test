@@ -65,7 +65,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='PDP_Size_heading']//following-sibling::div//button[@aria-label='Small']|//*[@data-auid='PDP_Shoe Size_Attribute']//span[text()='10']") 	public   WebElement secSize1;
 	@FindBy(xpath="//*[@data-auid='swatchButton-image-4286']|//*[@data-auid='swatchButton-image-4076']") 	public   WebElement secSize2;
 	@FindBy(xpath="//*[@data-auid='btnviewCart']") 	public WebElement btnViewCart;
-	@FindBy(xpath="//*[@data-auid='btncheckout'] | //*[@data-auid='crt_btnCheckoutTop']//*[@data-auid='btnCheckout']")   public WebElement btnCheckout;
+	@FindBy(xpath="//*[@data-auid='btncheckout'] | //*[@data-auid='crt_btnCheckoutTop'] | //*[@data-auid='btnCheckout']")   public WebElement btnCheckout; //Updated by VSN on 07-11-19
 	@FindBy(xpath="//*[@data-auid='PDP_AddToWishList']") 	public WebElement btnAddToWishList; //Anuj Added for KER-1953
 	@FindBy(xpath="(//*[@data-auid='PDP_Color_Attribute']//*[contains(@data-auid,'swatchButton-image-')])[1]") public WebElement btnDifferentColor;
 	@FindBy(xpath="//*[contains(@data-auid,'swatchButton-image-')]/span[text()='Medium']") public WebElement btnMediumSize;

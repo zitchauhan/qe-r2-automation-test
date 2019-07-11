@@ -29,7 +29,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	@FindBy(xpath="//*[@data-auid='expand-search_m']/span")  public WebElement expandSearchIcon;
 	@FindBy(xpath="//*[@data-auid='billingEmail']")  public WebElement inputEmailAddressTxtBuynow;
 	//@FindBy(xpath = "//*[@data-auid='signInCta']|//*[@text='My Account']")
-	@FindBy(xpath = "//*[contains(text(),'My Account')]|//*[@data-auid='signInCta']")
+	@FindBy(xpath = "//*[contains(text(),'My Account')]|//*[@data-auid='myAccountCta']") //Updated by VSN on 07-10-19
 	public WebElement myAccountLinkOnAsoHomePage;
 	@FindBy(xpath = "//*[@data-auid='Sign Out']")
 	public WebElement signOutLink; 
@@ -175,6 +175,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	{
 		try {
 			{
+				Thread.sleep(5000); //Added by VSN on 07-10-19
 				assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
 				isClickable(myAccountLinkOnAsoHomePage);
 				if (isDisplayed(myAccountLinkOnAsoHomePage)) 

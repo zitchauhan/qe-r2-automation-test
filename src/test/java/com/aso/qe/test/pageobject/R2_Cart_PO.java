@@ -483,7 +483,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	// End KER-2871 CR-SK
 
 	// Start KER-2940 CR-AKK
-	@FindBy(xpath = "//li[@data-auid='miniCart']/div/a/span")// global header
+	@FindBy(xpath = "//li[@data-auid='miniCart']/div/button")// global header //VSN updated on 07-10-19
 	public WebElement iconMiniCart;
 	// End KER-2940 CR-AKK
 
