@@ -268,7 +268,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@name ='state']/button")
 	public WebElement checkout_ShippingAddress_State_btn;
 //	
-	@FindBy(xpath = "//*[@data-auid='crt_btnCheckoutTop']")
+	//@FindBy(xpath = "//*[@data-auid='crt_btnCheckoutTop']")
+	@FindBy(xpath = "//*[@data-auid='checkout_page']//div/div/div/div/h1 | //*[text()='CHECKOUT']")
 	public WebElement checkout_CheckoutHeader_txt;//CR_HP 29-May_19
 	
 	@FindBy(xpath = "//*[contains(text(), 'Forgot your password')]")
@@ -295,16 +296,16 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='checkout_edit_shipping_method']")
 	public WebElement checkout_ShippingMethod_Edit_lnk;
 	
-	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']//*[@data-auid='undefined_dropdownList']")
+	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container'] | //*[@data-auid='undefined_dropdownList']")
 	public WebElement checkout_ShippingMethod_List_dd;
 	
-	@FindBy(xpath = "//*[@data-auid='checkout_payment']//*[@data-auid='undefined_dropdownList']")
+	@FindBy(xpath = "//*[@data-auid='checkout_payment'] | //*[@data-auid='undefined_dropdownList']")
 	public WebElement checkout_PaymentMethod_List_dd;
 	
-	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address']//*[@data-auid='undefined_dropdownList']")
+	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address'] | //*[@data-auid='undefined_dropdownList']")
 	public WebElement checkout_ShippingAddress_List_dd;
 	
-	@FindBy(xpath = "//*[@data-auid='checkout_payment']//*[@data-auid='undefined_dropdownList']")
+	@FindBy(xpath = "//*[@data-auid='checkout_payment'] | //*[@data-auid='undefined_dropdownList']")
 	public WebElement checkout_GiftCard_List_dd;
 	
 	
@@ -551,7 +552,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'PAYMENT METHOD')] | //*[contains(text(),'PAYMENT')]")public WebElement PaymentMethodHeader_Txt; //CR-GK 9-Oct
 		@FindBy(xpath="//div[@class='mb-1']")public WebElement Bopisbillingaddres;
 		@FindBy(xpath="//*[text()='Credit Card']")public WebElement CreditCard_radioBtn;
-		@FindBy(xpath="//*[text()='PayPal']")public WebElement PayPal_radioBtn;
+		@FindBy(xpath="//*[@data-auid='checkout_payment_options_radio_button_PayPal']")public WebElement PayPal_radioBtn; //updated by MJR on 15/7/19
 		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]")public WebElement CreditCardNumber_Input;
 		@FindBy(xpath="//*[text()='Exp Date']/following::*[1]")public WebElement ExpirationDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[text()='CVV']/following::*[3]")public WebElement Cvv_Input;
@@ -560,7 +561,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[text()='Please enter an expiration date']")public WebElement PastExpirationDate_Txt;//CR-RK Oct11 KER-3139
 		@FindBy(xpath="//*[text()='Please enter a valid security code']")public WebElement PleaseEnteRaValidSecurityCode_Txt; 
 		@FindBy(xpath="//*[text()='Choose Card']/..//button")public WebElement chooseCreditcard_Dd; //modified SK 22 Sep
-		@FindBy(xpath="//*[text()='SHIPPING ADDRESS']/..//button")public WebElement chooseShippingAddress_Dd; //CR-SK 22 Sep
+		@FindBy(xpath="//*[@data-auid='checkout_shipping_address']/..//button")public WebElement chooseShippingAddress_Dd; //CR-SK 22 Sep //updated by MJR on 15/7/19
 		@FindBy(xpath="//*[@name='Dropdown']")public WebElement chooseShippingAddress_Dd_Mob; //CR-GK 13Oct
         @FindBy(xpath="//*[@data-auid='undefined_listOption_1']")public WebElement AddNewCreditCard_Txt;
         @FindBy(xpath="//*[@name='creditcardField']/../span[2]/img")public WebElement Checkout_CreditCardPay_ImgLogo;
