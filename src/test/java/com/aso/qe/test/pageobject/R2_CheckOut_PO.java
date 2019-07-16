@@ -76,7 +76,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@name='phoneNumber']")
 	public WebElement inputCheckoutPhoneNumber;
 
-	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address_address']")
+	@FindBy(xpath = "//*[@data-auid='address']")
 	public WebElement inputCheckoutAddress;
 
 	@FindBy(xpath = "//*[@name='zipCode']")
