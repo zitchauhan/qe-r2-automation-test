@@ -87,7 +87,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="(//*[contains(@data-auid, 'quickview')]//preceding-sibling::img)[1]")  public  WebElement pdpImage; //SID 27-August
 //	@FindBy(xpath="(//*[contains(@class,'c-price__sub')])[1]/../parent::*/preceding-sibling::*")public  WebElement pdpImage;  //SID 27-August
 	
-	@FindBy(xpath="(//*[contains(@data-auid, 'quickview')])[1]")  public  WebElement btnQuickView; //SID 27-August
+	@FindBy(xpath="//*[contains(@data-auid, 'quickview')]")  public  WebElement btnQuickView; //SID 27-August //MJR 16/7/19
 //	@FindBy(xpath="(//*[contains(@class,'c-price__sub')])[1]/../parent::*/preceding-sibling::*//button") public  WebElement btnQuickView; //SID 27-August
 	@FindBy(xpath="//*[@data-auid='btnundefined']") public  WebElement btnSeeDetails;
 

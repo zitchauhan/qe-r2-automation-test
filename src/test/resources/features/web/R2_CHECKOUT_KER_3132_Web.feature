@@ -176,7 +176,8 @@ Scenario: Verify if 'Same as Shipping Address' checkbox is disabled for STS orde
 		|FirstName_Input|
 		|LastName_Input|
 		|PhoneNumber_Input|
-		|SendSMSTextUpdatesAboutMyOrder_checkbox|
+		|#updated by MJR on 16/7/19|
+		|#SendSMSTextUpdatesAboutMyOrder_checkbox|
 		|Adderss_Input|
 		|ZipCode_Input|
 		|City_Input|

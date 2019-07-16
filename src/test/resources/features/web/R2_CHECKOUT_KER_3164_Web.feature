@@ -63,6 +63,8 @@ Scenario: Verify if User is able to select a Payment method on One Page Checkout
 	And  User searches a product "productName" and navigates to PDP 
 	#	And user click on Add to Cart Button
 	And user click on ship it button 
+	#updated by MJR on 16/7/19
+	And user will click on View Cart button
 	And user click on checkout button 
 	And user clicks on edit shipping method cta 
 	And user click on go to payment present in shipping method 

@@ -167,7 +167,8 @@ Scenario: Verify that user is not able to proceed with Billing Information addit
 	|Please enter a phone number|
 	|Please enter a street address|
 	|Please enter a zip code|
-	|Please enter the City name|
+	|#updated by MJR on 16/7/19|
+	|Please enter a city name|
 	|Please select a State|
 	
 	
