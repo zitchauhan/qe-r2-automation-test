@@ -21,8 +21,9 @@ public class R1_PLP_K732_SD extends CommonActionHelper {
 	@Then("^User click on Quick view button$")
 	public void user_click_on_Quick_view_button() throws Throwable {
 		Actions actions = new Actions(driver);
-		actions.moveToElement(pdp_po.pdpImage).build().perform();
-		actions.moveToElement(pdp_po.btnQuickView).click().build().perform();
+		//actions.moveToElement(pdp_po.pdpImage).build().perform();
+		//actions.moveToElement(pdp_po.btnQuickView).click().build().perform();
+		clickOnButton(pdp_po.btnQuickView); //MJR -16/7/19
 //	  moveHover(pdp_po.pdpImage);
 //	  moveHover(pdp_po.btnQuickView);
 //	  clickOnLink(pdp_po.btnQuickView);

@@ -64,7 +64,9 @@ Scenario: Verify if authenticated user can  view all the shipping addresses at c
 	Then user clicks on the product card and navigates to PDP 
 	#	And user click on Add to Cart Button
 	And user click on ship it button 
-	Then user is navigated to Add to cart Notification popup
+	# Updated by MJR -16/7/19
+	#Then user is navigated to Add to cart Notification popup
+	And user will click on View Cart button
 	And user click on checkout button
 	And user click on edit button in shipping address section 
 	And user verifies all the saved addresses in my account should be displayed in the dropdown 
@@ -122,7 +124,9 @@ Scenario: Verify  If the user has already changed/ added an address within an ac
 	Then User is navigated to pdp page 
 	#	And user click on Add to Cart Button
 	And user click on ship it button 
-	Then user is navigated to Add to cart Notification popup 
+	# Updated by MJR -16/7/19
+	#Then user is navigated to Add to cart Notification popup
+	And user will click on View Cart button 
 	And user click on checkout button 
 	And user click on edit button in shipping address section 
 	And user click on Add a new Shipping Address button in the shipping address drop down 

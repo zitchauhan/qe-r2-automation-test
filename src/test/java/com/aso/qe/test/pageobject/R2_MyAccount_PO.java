@@ -867,7 +867,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()= 'Print a Receipt']")
 	public WebElement Order_Bopis_Print_Receipt_lnk;
 
-	@FindBy(xpath = "//*[contains(text(),'In-Store Pickup from')]")
+	@FindBy(xpath = "//*[contains(text(),'Store Pickup from')]") //updated by MJR on 16/7/19
 	public WebElement Order_Bopis_InStore_Pickup_Msg;
 
 	@FindBy(xpath = " //*[@data-auid='btnundefined']/../following-sibling::*[1]/*/*[1]")

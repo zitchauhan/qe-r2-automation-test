@@ -48,7 +48,7 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	public WebElement AS_secCategory_CLP;
 	
 	//@FindBy(xpath = "//*[contains(@data-auid,'productCard_')]")
-	@FindBy(xpath = "//*[contains(@data-auid,'productCard_') and not (contains(@type,'button'))]")
+	@FindBy(xpath = "//*[contains(@data-auid,'productCard_') and not (contains(@type,'button'))] | //*[contains(@data-auid,'productCard_')]") //updated by MJR on 16/7/19
 	public WebElement AS_productPLP1;
 
 	@FindBy(xpath = "//*[contains(@data-auid,'productCard_')]") //28 Aug2018
