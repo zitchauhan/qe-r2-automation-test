@@ -155,7 +155,7 @@ public class R2_R1_Fun_PO extends CommonActionHelper
    }
  //End KER-3166 CR-DPK
    //KER-5892  CR-RKA
-   @FindBy(xpath="//*[@data-auid='btncheckout'] | //*[@data-auid='btnCheckout']") public WebElement checkoutBtnATC;
+   @FindBy(xpath="//*[@data-auid='btncheckout'] | //*[@data-auid='btnCheckout']")public WebElement checkoutBtnATC; //Updated by VSN on 07-12-19
    //KER-5892  CR-RKA end
    
    // Start KER-6655-MS

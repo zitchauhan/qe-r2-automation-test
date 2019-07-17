@@ -268,8 +268,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@name ='state']/button")
 	public WebElement checkout_ShippingAddress_State_btn;
 //	
-	//@FindBy(xpath = "//*[@data-auid='crt_btnCheckoutTop']")
-	@FindBy(xpath = "//*[@data-auid='checkout_page']//div/div/div/div/h1 | //*[text()='CHECKOUT']")
+	@FindBy(xpath = "//*[@data-auid='checkout_page']//div/div/div/div/h1 | //*[text()='CHECKOUT']") //Updated by VSN on 07-12-19
 	public WebElement checkout_CheckoutHeader_txt;//CR_HP 29-May_19
 	
 	@FindBy(xpath = "//*[contains(text(), 'Forgot your password')]")
@@ -305,7 +304,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address'] | //*[@data-auid='undefined_dropdownList']")//updated by MJR on 16/7/19
 	public WebElement checkout_ShippingAddress_List_dd;
 	
-	@FindBy(xpath = "//*[@data-auid='checkout_payment'] | //*[@data-auid='undefined_dropdownList']")//updated by MJR on 16/7/19
+	@FindBy(xpath = "//*[@data-auid='checkout_payment'] | //*[@data-auid='undefined_dropdownList']") //Updated by VSN on 07-12-19
 	public WebElement checkout_GiftCard_List_dd;
 	
 	
