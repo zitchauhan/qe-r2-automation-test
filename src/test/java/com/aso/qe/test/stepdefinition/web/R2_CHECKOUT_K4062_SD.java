@@ -167,6 +167,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			}
 
 		} else if (arg1.equalsIgnoreCase("PayPal")) {
+			Thread.sleep(Constants.thread_low);
 			clickOnButton(r2CheckOutPo.PayPal_radioBtn);
 			Thread.sleep(Constants.thread_low);
 			driver.switchTo().frame(r2_r1_fun_po.paypalCheckoutFrame);
@@ -194,6 +195,9 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2CheckOutPo.PaypalLogin_Btn));
 			waitForPageLoad(driver);
 			assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));
+			if (isDisplayed(r2CheckOutPo.PayPalContinue_Btn)) { //Updated by MJR on 17/7/19
+				clickOnButton(r2CheckOutPo.PayPalContinue_Btn);
+			}
 			driver.switchTo().window(parentWindow);
 		}
 		waitForElement(r2CheckOutPo.btnPlaceOrderPaymentPage);

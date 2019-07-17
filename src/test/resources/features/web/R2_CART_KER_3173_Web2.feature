@@ -11,7 +11,9 @@ Scenario: Verify that the Store Pickup Checkbox is selected by default if User S
 	And user should be able to select the store pickup "store pickup" filter
 	Then user clicks on the product card and navigates to PDP
 	#Then user click on Add to Cart Button
-	And user click on ship it button
+	#Updated by MJR-17/7-19
+	#And user click on ship it button
+	  Then user click on pickup button
     Then user is navigated to Add to cart Notification popup
     And user will click on View Cart button
     And user navigate to Cart page
@@ -114,7 +116,7 @@ Scenario: Verify that user is able to view the cart variation when item is Not a
 	And user click on ship it button
 	And user click on view cart
 	And user should be able to see the grey icon
-	And user should not be able to see the radio button	for store pickup
+	And user should not be able to see the radio button for store pickup
 	
 @R2_Web @R2_All @P2 @CB-Cart @C-BOPIS @KER-3173 @ZYP_CART_K3173-10953
 Scenario: Verify that user is able to view the cart variation when item is Not Available At selected store
