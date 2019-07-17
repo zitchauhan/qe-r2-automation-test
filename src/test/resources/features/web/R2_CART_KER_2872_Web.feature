@@ -289,18 +289,18 @@ Scenario: Verify find a store Modal closes On Select "Close X" and If a user sel
 	When user clicks on Find a Store 
 	And user verify Find a Store popup 
 	Then Close X Find a store Modal 
-	
-	
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2872 @ZYP_CART_K2872-9982 
-Scenario: Verify user can change the store using Find in Store modal 
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user enters "BOPIS_Product" in the searchbox 
-#		And user click on Add to Cart Button
-	And user click on ship it button 
-	And user click on view cart 
-	Then user select in store pickup option 
-	Then user click on find a store option 
-	When User select store with "BOPIS_Store2" 
+
+#	Need to pass test data which is available for store pick u option	
+#@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2872 @ZYP_CART_K2872-9982
+#Scenario: Verify user can change the store using Find in Store modal 
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	When user enters "BOPIS_Product" in the searchbox 
+##		And user click on Add to Cart Button
+#	And user click on ship it button 
+#	And user click on view cart 
+#	Then user select in store pickup option 
+#	Then user click on find a store option 
+#	When User select store with "BOPIS_Store2" 
 	
 	
 #=====================Sanity=================================================#
@@ -310,7 +310,7 @@ Scenario: TC_22-Verify Find a store
 	When user clicks on Find a Store 
 	Then user enter "zipCode" in Find a Store Model 
 	And user click on submit button 
-	Then user verify the results based on entering zipcode 
+	Then user verify the results based on entering zipcode
 
 	@R2_Web @R2_WAST-24 @P1 @C-Checkout @KER-2926 @AutomationSmoke @CR-HP @HP @vidya
 	Scenario:  TC_24-Verify if unauthenticated user is able to place PAYPAL order
