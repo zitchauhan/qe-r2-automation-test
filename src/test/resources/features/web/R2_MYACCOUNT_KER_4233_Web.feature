@@ -159,7 +159,8 @@ Scenario: Verify the elements of Share wishlist modal
 	When User Clicks on Share List Link 
 	Then Verify the message on the page 
 		|#Verify the message on the popup modal|
-		|SHARE YOUR WISHLIST|	 
+		#Updated by MJR - 17/7/19
+		|SHARE YOUR WISH LIST|	 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following element in wishlist section|
 		|Email_input_txt|
