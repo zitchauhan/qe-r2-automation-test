@@ -46,7 +46,7 @@ When User searches a product "productName" and navigates to PDP
  	 |First name and Last name can only contain letters|
 	|Please enter a valid 10 digit phone number|
 	#updated by MJR on 16/7/19
-	|#Please enter a valid street address|
+	#|Please enter a valid street address|
 	|Please enter a full street address (ex: 1 Example Rd). P.O. Box or Military Address (PSC, CMR, or UNIT).|
 	|Invalid zip code, please enter a valid zip code|
 	
