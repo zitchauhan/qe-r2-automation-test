@@ -195,7 +195,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='tooltip-close-crt_rdTooltip_1']/parent::*")
 	public WebElement storeMessageFlyout;  //SID 27-Jan
 	
-	@FindBy(xpath = "//*[@data-auid='tooltipcrt_rdTooltip_1']/parent::*")
+	@FindBy(xpath = "//*[@data-auid='tooltipcrt_rdTooltip_1']/parent::* | //*[@data-auid='cart_radio_button_div']//div[2]/span") //Updated by MJR - 17/7/19
 	public WebElement storeNameCart;  //SID 27-Jan
 	
 	
