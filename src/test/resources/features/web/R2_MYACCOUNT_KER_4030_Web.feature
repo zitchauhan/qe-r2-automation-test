@@ -120,7 +120,9 @@ Scenario: Verify during quick checkout error message will display for shipping a
 	Then user is navigated to checkout page 
 	And Verify the message on the page 
 		|# Following shipping message should show on the page														|
-		|Due to restrictions imposed by Prop65 by the state of California, we cannot ship this item to California.	|
+		|#updated by MJR on 16/7/19|
+		#|Due to restrictions imposed by Prop65 by the state of California, we cannot ship this item to California.	|
+		|Due to warning requirements imposed in California by Proposition 65, we cannot ship any items to California at this time. We're sorry for the inconvenience.|
 		
 		
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
@@ -159,7 +161,7 @@ Scenario: Verify user can able to edit Payment Methods after landing on order su
 	And user click on viewcart button
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
-	And user click on edit button of shipping method 
+	#And user click on edit button of shipping method #updated by MJR on 15/7/19
 	Then user is able to modify payment method 
 	
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 

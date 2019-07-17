@@ -249,7 +249,7 @@ public WebElement storePickUpFilterApplied;   //SID 10-Jan
 @FindBy(xpath ="//*[@data-auid='drawer_Store Pickup']//a")//CR-DPK 26-sept
 public WebElement changePickUpLocationPLP;   //SID 10-Jan
 
-@FindBy(xpath ="//*[@data-auid='drawer_Store Pickup']//following-sibling::span/span[1]")//CR-DPK 26-sept
+@FindBy(xpath ="//*[@data-auid='drawer_Store Pickup']//following-sibling::span[1]")//CR-DPK 26-sept//updated by MJR on 16/7/19
 public WebElement bopisStoreNamePLP;   //SID 10-Jan
 
 @FindBy(xpath ="(//*[@data-auid='facetdrawerundefined']/button/*/*/*[1])[2]")//CR-DPK 26-sept

@@ -92,10 +92,12 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	@R2_Web @R2_Regression  @P2 @C-Cart  @KER-3143 @ZYP_Cart_K3143-8155 @CR-RKA @C1-Message
 	Scenario: Verify if Unauthenticated customer will be able to add items to cart for shipping
 	Given user launches the browser and navigates to "ASO_HOME" page
-	When User Navigates L2 form Homepage Header 
-	And User clicks on product in PLP 
-	#	And user click on Add to Cart Button
-	And user click on ship it button
+	When User Navigates L2 form Homepage Header
+	#updated by MJR -16/7/19 
+	#And User clicks on product in PLP 
+	Then User click on Quick view button
+	And user click on Add to Cart Button
+	#And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
    Then user verify sucessfully added item MSG 
 	Then Verify the message on the page
@@ -158,9 +160,10 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid password "Password" 
     And user click on signin button
 	When User Navigates L2 form Homepage Header 
-	And User clicks on product in PLP  
-	#	And user click on Add to Cart Button
-	And user click on ship it button
+	#And User clicks on product in PLP 
+	Then User click on Quick view button 
+	And user click on Add to Cart Button
+	#And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
    Then user verify sucessfully added item MSG 
 	Then Verify the message on the page
@@ -195,8 +198,11 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user click on ship it button
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
+	#updated by MJR on 16/7/19
+	And user click on change location link in order summery cart page
 	And User select another store "BOPIS_Store1"
-	And user verify the new selected location is displayed
+	#And user verify the new selected location is displayed
+	And user verify the selected store is reflected
 	Then Verify below Sub/Main Module of Cart Page
    |Verify item for Bopis |
    |Items_txt|

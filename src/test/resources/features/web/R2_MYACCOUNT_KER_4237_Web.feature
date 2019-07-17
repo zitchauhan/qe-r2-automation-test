@@ -5,7 +5,8 @@ Feature: E03-100 - My Account, Order Details
 Scenario: Verify that Authenticated User is able to view order list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	#Updated by MJR on 15/7/19
+	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user navigates to orders in my account 
