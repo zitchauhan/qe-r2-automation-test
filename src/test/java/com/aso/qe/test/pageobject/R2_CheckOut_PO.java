@@ -295,13 +295,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='checkout_edit_shipping_method']")
 	public WebElement checkout_ShippingMethod_Edit_lnk;
 	
-	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container'] | //*[@data-auid='undefined_dropdownList']") //updated by MJR on 16/7/19
-	public WebElement checkout_ShippingMethod_List_dd;
-	
-	@FindBy(xpath = "//*[@data-auid='checkout_payment'] | //*[@data-auid='undefined_dropdownList']")//updated by MJR on 16/7/19
-	public WebElement checkout_PaymentMethod_List_dd;
-	
-	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address'] | //*[@data-auid='undefined_dropdownList']")//updated by MJR on 16/7/19
+ 	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']|//*[@data-auid='undefined_dropdownList']") //Updated by VSN on 07-12-19
+ 	public WebElement checkout_ShippingMethod_List_dd;
+ 	
+ 	@FindBy(xpath = "//*[@data-auid='checkout_payment'] | //*[@data-auid='undefined_dropdownList']") //Updated by VSN on 07-12-19
+ 	public WebElement checkout_PaymentMethod_List_dd;
+ 	
+ 	@FindBy(xpath = "//*[@data-auid='checkout_shipping_address'] | //*[@data-auid='undefined_dropdownList']") //Updated by VSN on 07-12-19
 	public WebElement checkout_ShippingAddress_List_dd;
 	
 	@FindBy(xpath = "//*[@data-auid='checkout_payment'] | //*[@data-auid='undefined_dropdownList']") //Updated by VSN on 07-12-19
