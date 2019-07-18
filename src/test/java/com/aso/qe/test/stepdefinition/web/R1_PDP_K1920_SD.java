@@ -172,6 +172,9 @@ R2_Cart_PO cartPO = PageFactory.initElements(driver, R2_Cart_PO.class);
 		 public void user_able_to_see_item_added_in_the_cart() throws Throwable{
 			 assertTrue(isDisplayed(pdpPageObj.addtocarttitle));
 		 }
-	
+	@Then("^user click on pickup button$") //CR MJR-17/7/19
+		public void user_click_on_pickup_button() throws Throwable{
+			clickOnButton(pdpPageObj.pickupBtn);
+		}
 }
 
