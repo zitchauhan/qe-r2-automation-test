@@ -46,8 +46,12 @@ Scenario: Verify one gift card applied and Balance is not covered in full
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	Then user clicks on one of the product category and navigates to LThree 
 	Then User is navigated to pdp page 
-	Then user click on Add to Cart Button 
-	Then user click on checkout from ATC pop up 
+	#updated by MJR on 16/7/19
+	#Then user click on Add to Cart Button
+	Then user click on ship it button
+	Then user will click on View Cart button
+	And user clicks on checkout button on cart page
+	#Then user click on checkout from ATC pop up 
 	And user click on GiftCard Plus icon in Checkout page 
 	Then user click on choose Gift card Dropdown 
 	Then Verify below Sub/Main Module of Checkout Page 

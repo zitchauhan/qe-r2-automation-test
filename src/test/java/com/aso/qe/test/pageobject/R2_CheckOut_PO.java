@@ -308,10 +308,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	public WebElement checkout_GiftCard_List_dd;
 	
 	
-	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']//*[contains(text(), 'Shipment')]")
+	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container'] | //*[contains(text(), 'Shipment')]")//updated by MJR on 16/7/19
 	public WebElement checkout_ShippingMethod_Shipment_txt;
 	
-	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']//*[contains(text(), 'Shipment')]/following-sibling::p")
+	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container'] | //*[contains(text(), 'Shipment')]/following-sibling::p")//updated by MJR on 16/7/19
 	public WebElement checkout_ShippingMethod_Items_txt;
 	
 	@FindBy(xpath = "//*[contains(@data-auid,'shipping_method_shipment_item_image')]")
@@ -551,7 +551,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'PAYMENT METHOD')] | //*[contains(text(),'PAYMENT')]")public WebElement PaymentMethodHeader_Txt; //CR-GK 9-Oct
 		@FindBy(xpath="//div[@class='mb-1']")public WebElement Bopisbillingaddres;
 		@FindBy(xpath="//*[text()='Credit Card']")public WebElement CreditCard_radioBtn;
-		@FindBy(xpath="//*[text()='PayPal']")public WebElement PayPal_radioBtn;
+		@FindBy(xpath="//*[@data-auid='checkout_payment_options_radio_button_PayPal']")public WebElement PayPal_radioBtn; //updated by MJR on 15/7/19
 		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]")public WebElement CreditCardNumber_Input;
 		@FindBy(xpath="//*[text()='Exp Date']/following::*[1]")public WebElement ExpirationDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[text()='CVV']/following::*[3]")public WebElement Cvv_Input;
@@ -560,7 +560,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[text()='Please enter an expiration date']")public WebElement PastExpirationDate_Txt;//CR-RK Oct11 KER-3139
 		@FindBy(xpath="//*[text()='Please enter a valid security code']")public WebElement PleaseEnteRaValidSecurityCode_Txt; 
 		@FindBy(xpath="//*[text()='Choose Card']/..//button")public WebElement chooseCreditcard_Dd; //modified SK 22 Sep
-		@FindBy(xpath="//*[text()='SHIPPING ADDRESS']/..//button")public WebElement chooseShippingAddress_Dd; //CR-SK 22 Sep
+		@FindBy(xpath="//*[@data-auid='checkout_shipping_address']/..//button")public WebElement chooseShippingAddress_Dd; //CR-SK 22 Sep //updated by MJR on 15/7/19
 		@FindBy(xpath="//*[@name='Dropdown']")public WebElement chooseShippingAddress_Dd_Mob; //CR-GK 13Oct
         @FindBy(xpath="//*[@data-auid='undefined_listOption_1']")public WebElement AddNewCreditCard_Txt;
         @FindBy(xpath="//*[@name='creditcardField']/../span[2]/img")public WebElement Checkout_CreditCardPay_ImgLogo;
@@ -868,7 +868,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		setInputText(txtCVVInput,cvv);
 	}
 	
+	/*Added assert for element to be displayed on 18.07.19*/
 	public void enterCVVBuyNowModal(String cvv) {
+		assertTrue(isDisplayed(Cvv_BuyNow_Modal));
 		setInputText(Cvv_BuyNow_Modal,cvv);
 	}
 

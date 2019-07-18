@@ -46,7 +46,8 @@ public class R2_MYACCOUNT_K4237_SD extends CommonActionHelper {
 	@And("^user click on view store details button$")
 	public void user_click_on_view_store_details_button() throws InterruptedException{
 		assertTrue(clickOnButton(r2MyAccountPo.Order_Bopis_View_Store_Btn));
-		String winHandleBefore = driver.getWindowHandle();
+		Thread.sleep(Constants.thread_low); //updated by MJR on 15/7/19
+		//String winHandleBefore = driver.getWindowHandle();
 		for(String winHandle : driver.getWindowHandles()){
 		    driver.switchTo().window(winHandle);
 		}

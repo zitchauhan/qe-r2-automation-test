@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/resources/features/web/R2_CHECKOUT_KER_3338_Web.feature",
+@CucumberOptions(features = "src/test/resources/features/web/R2_CHECKOUT_KER_4332_Web.feature",
 		glue = "com.aso.qe.test.stepdefinition.web", 
 		monochrome = true,
 		tags = "@Rahul",
