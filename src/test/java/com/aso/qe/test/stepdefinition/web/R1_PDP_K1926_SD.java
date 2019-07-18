@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import static org.junit.Assert.assertEquals;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -307,13 +308,13 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 			}
 //			clearText(searchTextBox);
 //			setInputTextWithEnterKey(searchTextBox, searchWord);
-			Thread.sleep(Constants.thread_medium);
+			//Thread.sleep(Constants.thread_medium);
 			setInputText(searchTextBox, searchWord);
-			Thread.sleep(Constants.thread_medium);
+			//Thread.sleep(Constants.thread_medium);
 			assertTrue(clickOnButton(searchButton));
-			Thread.sleep(Constants.thread_low);
-			waitForPageLoad(driver);
-			driver.navigate().refresh();
+			//Thread.sleep(Constants.thread_low);
+			//waitForPageLoad(driver);
+			//driver.navigate().refresh();
 			boolean checkStock=false;
 			checkStock=isDisplayed(globalElementHeader_HomePO.outOfStockMessage);
 			if (r1_SearchPO.verifyTextDisplayedOnPage("We couldn't find anything for")) {
@@ -469,7 +470,9 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 	@Then("^User refresh the page$")
 	public void User_refresh_the_page() throws Throwable {
 		driver.navigate().refresh();
+
 	}
+	
 
 	/*
 	 * // //KER-1926 Start CR-AKK // @Then("^verfiy the Ask a question button$") //

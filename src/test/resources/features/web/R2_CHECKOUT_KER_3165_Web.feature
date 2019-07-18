@@ -400,11 +400,13 @@ Scenario: Verify the shipping method has no drop-down for single method availabl
 @ZYP_CHECKOUT_K3165-8255 @CR-GK 
 Scenario: Verify the guest user's address is saved in My Address on registering from Order confirmation 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When User searches a product "productName" and navigates to PDP 
+		When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
-	And user click on checkout from ATC pop up 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user click on checkout button in Cart page
 	And  user enter First name "FirstName" 
 	And  user enter Last name "LastName" 
 	And  user enter Phone number "PhoneNumber" 
