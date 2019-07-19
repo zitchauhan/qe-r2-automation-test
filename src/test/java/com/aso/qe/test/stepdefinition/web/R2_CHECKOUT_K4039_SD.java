@@ -51,7 +51,7 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 	@Then("^user click on paypal radiobtn$")
 	public void user_click_on_paypal_radiobtn() throws Throwable {
 	   clickOnButton(r2CheckOutPo.PayPal_radioBtn);
-	   Thread.sleep(Constants.thread_low);
+	   Thread.sleep(Constants.thread_high);
 	}
 	
 	@Then("^user switch to iframe and enter the paypal login \"(.*?)\" \"(.*?)\"$")
