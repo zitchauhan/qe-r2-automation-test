@@ -24,13 +24,13 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 	public void user_click_on_checkout_button_in_Cart_page() throws Throwable {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 		assertTrue(clickOnButton(r2CartPo.btnCartCheckout));
-		Thread.sleep(Constants.thread_highest);
+		//Thread.sleep(Constants.thread_highest);
 		}//KER-6941 CR-GK 1Oct
 		
 		else
 		{
 			assertTrue(clickOnButton(r2CartPo.btnCartCheckout));
-			Thread.sleep(Constants.thread_highest);
+			//Thread.sleep(Constants.thread_highest);
 		}
 		waitForPageLoad(driver);
 	}

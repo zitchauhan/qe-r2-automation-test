@@ -30,9 +30,10 @@ public class R2_CHECKOUT_K4332_SD extends CommonActionHelper {
 	public void verify_the_buy_now_button_is_clickable() throws Throwable {
 		if(isEnabled(r2R1FunPO.BuyNow_btn)) {
 			assertTrue(clickOnButton(r2R1FunPO.BuyNow_btn));
-			Thread.sleep(Constants.thread_highest);
+			//Commented by Rahul on 18.07.19
 			//Thread.sleep(Constants.thread_highest);
-			Thread.sleep(Constants.thread_low);
+			//Thread.sleep(Constants.thread_highest);
+			//Thread.sleep(Constants.thread_low);
 		}
 		
 	}
@@ -49,7 +50,7 @@ public class R2_CHECKOUT_K4332_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2CheckOutPo.BuyNow_Modal));
 			Thread.sleep(Constants.thread_highest);
 			//Thread.sleep(Constants.thread_highest);
-			Thread.sleep(Constants.thread_low);
+			//Thread.sleep(Constants.thread_low);
 		}
 	    
 	}
