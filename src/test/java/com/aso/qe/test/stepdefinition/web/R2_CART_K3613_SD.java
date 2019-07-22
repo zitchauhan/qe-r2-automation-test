@@ -146,9 +146,10 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 	public void user_verify_shipping_fee_for_the_ship_to_home_product()  {
 		waitForElement(r2CartPO.shiptohomeshippingfee);
 		limitedStockMessage=r2CartPO.shiptohomeshippingfee.getText();
-		String arr[] = limitedStockMessage.split("$");
-		String arr1[]=arr[1].split(" ");
-			
+		System.err.println(limitedStockMessage);
+		//String arr[] = limitedStockMessage.split("$");
+		//String arr1[]=arr[1].split(" ");
+		assertTrue((limitedStockMessage.contains("$")));
 	    
 	}
 	

@@ -198,10 +198,11 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	#updated by MJR on 16/7/19
-	And user click on change location link in order summery cart page
-	And User select another store "BOPIS_Store1"
+	Then user select in store pickup option
+	#And user click on change location link in order summery cart page
+	#And User select another store "BOPIS_Store1"
 	#And user verify the new selected location is displayed
-	And user verify the selected store is reflected
+	#And user verify the selected store is reflected
 	Then Verify below Sub/Main Module of Cart Page
    |Verify item for Bopis |
    |Items_txt|
