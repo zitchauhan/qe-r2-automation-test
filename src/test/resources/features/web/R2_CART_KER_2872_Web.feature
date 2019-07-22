@@ -322,7 +322,7 @@ Scenario: TC_22-Verify Find a store
 #	#And user click on Add to Cart Button 
 	And user click on ship it button
 	And user click on view cart
-	#Updated by VSN on 07-19-19
+	#Updated by VSN on 07-22-19 for smoke test fix
 	#Then user select in store pickup option 
 	And user will click on Checkout button and navigates to Checkout page
 	And user adds shipment address on checkout page for "guest" user
