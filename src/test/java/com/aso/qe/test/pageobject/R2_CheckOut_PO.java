@@ -379,7 +379,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's Phone Number\"]")
 	   public WebElement PickupAltrPhone_input;
 	   
-	   @FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']")
+	   @FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']|//button[@data-auid='btncheckout_ship_to_store_submit_button']")
 	   public WebElement ShippingConfirm_btn;
 	   
 	   @FindBy(xpath="//span[text()='Required']")

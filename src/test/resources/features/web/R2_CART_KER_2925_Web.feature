@@ -7,7 +7,8 @@ Scenario Outline: verify if user should be able to submit the order on the check
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#    And user click on Add to Cart Button
-	And user click on ship it button 
+	And user click on ship it button
+	And user click on view cart 
 	And user click on checkout button 
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
@@ -102,7 +103,8 @@ Scenario Outline: Verify if user can click the legal disclaimer Terms and Condit
 			Given user launches the browser and navigates to "ASO_HOME" page 
 			When User searches a product "productName" and navigates to PDP 
 			#    And user click on Add to Cart Button
-			And user click on ship it button 
+			And user click on ship it button
+			And user click on view cart 
 			And user click on checkout button 
 			And user adds shipment address on checkout page for "guest" user 
 			And user selects shipment method on check out page for "guest" user 
@@ -130,7 +132,8 @@ Scenario Outline: Verify if user can click the legal disclaimer Privacy policy i
 					Given user launches the browser and navigates to "ASO_HOME" page 
 					When User searches a product "productName" and navigates to PDP 
 					#    And user click on Add to Cart Button
-					And user click on ship it button 
+					And user click on ship it button
+					And user click on view cart 
 					And user click on checkout button 
 					And user adds shipment address on checkout page for "guest" user 
 					And user selects shipment method on check out page for "guest" user 
@@ -190,14 +193,17 @@ Scenario: Verify Before clicking 'Place Order', if the user edits shipping addre
 									And user navigate and deletes existing items in cart 
 									When User searches a product "productName" and navigates to PDP 
 									#    And user click on Add to Cart Button
-									And user click on ship it button 
-									And user click on checkout button 
-									Then user fill email address in payment 
+									And user click on ship it button
+									And user click on view cart 
+									And user click on checkout button
+									And User enters CVV number "CVV" 
+									#Then user fill email address in payment 
 									Then user clicks on the Review order button 
 									And User clicks on edit CTA 
 									Then user modify the shipping address 
 									And user fill the PO box in shipping address 
-									And user click on Go To Shipping Method button in Checkout page 
+									And user click on Go To Shipping Method button in Checkout page
+									And User enters CVV number "CVV"
 									Then user clicks on the Review order button 
 									And user able to see the button place order 
 									And user check order confirmation status in order summary page 
@@ -221,9 +227,10 @@ Scenario: Verify Before clicking 'Place Order', if the user edits shipping metho
 									And user navigate and deletes existing items in cart 
 									When User searches a product "productName" and navigates to PDP 
 									#    And user click on Add to Cart Button
-									And user click on ship it button 
+									And user click on ship it button
+									And user click on view cart 
 									And user click on checkout button 
-									Then user fill email address in payment 
+									And User enters CVV number "CVV" 
 									Then user clicks on the Review order button 
 									And user clicks on edit shipping method cta 
 									Then user modifies shipping method 
@@ -246,13 +253,15 @@ Scenario: Verify Before clicking 'Place Order', if the user edits payment method
 									And user navigate and deletes existing items in cart 
 									When User searches a product "productName" and navigates to PDP 
 									#    And user click on Add to Cart Button
-									And user click on ship it button 
+									And user click on ship it button
+									And user click on view cart 
 									And user click on checkout button 
-									Then user fill email address in payment 
+									And User enters CVV number "CVV" 
 									Then user clicks on the Review order button 
 									And user clicks on edit payment cta 
 									Then user is able to modify payment method 
 									#And user click on Go To Shipping Method button in Checkout page
+									And User enters CVV number "CVV"
 									Then user clicks on the Review order button 
 									And user able to see the button place order 
 									And user check order confirmation status in order summary page 
