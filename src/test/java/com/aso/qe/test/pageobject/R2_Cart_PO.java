@@ -690,8 +690,11 @@ public class R2_Cart_PO extends CommonActionHelper {
 		} else {
 			assertTrue(clickOnButton(lnkFindAStore));
 		}
-		waitForElement(txtZipCode);
-		txtZipCode.clear();
+		/** No need to wait for element as when we invoke setInputText methode which comes with the explicit wait of 60 secs
+		
+		//waitForElement(txtZipCode);
+		/**No need of clear() as its present in setInputText()*/
+		//txtZipCode.clear();
 		setInputText(txtZipCode, zipCode);
 		assertTrue(clickOnButton(btnZipCode));
 		Thread.sleep(Constants.thread_high);
@@ -720,8 +723,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 		} else {
 			assertTrue(clickOnButton(selectStoreMiniBalloon));
 		}
-		waitForElement(txtZipCode);
-		txtZipCode.clear();
+		//waitForElement(txtZipCode);
+		//txtZipCode.clear();
 		setInputText(txtZipCode, zipCode);
 		assertTrue(clickOnButton(btnZipCode));
 		Thread.sleep(3000);
@@ -740,8 +743,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 		} else {
 			assertTrue(clickOnButton(selectStoreMiniBalloon));
 		}
-		waitForElement(txtZipCode);
-		txtZipCode.clear();
+		//waitForElement(txtZipCode);
+		//txtZipCode.clear();
 		setInputText(txtZipCode, zipCode);
 		assertTrue(clickOnButton(btnZipCode));
 		Thread.sleep(3000);
@@ -762,7 +765,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 			while(isDisplayed(btnRemoveCart)) {
 				clickOnButton(btnRemoveCart);
 				Thread.sleep(Constants.thread_highest);
-				Thread.sleep(Constants.thread_medium);
+				//Thread.sleep(Constants.thread_medium);
 				if(isDisplayed(cartEmptyTxt)) {
 					break;
 				}

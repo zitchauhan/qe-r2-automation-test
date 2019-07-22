@@ -8,7 +8,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 	#	And user is able to see the product category name in section title 
 	#	And user clicks on one of the product category and navigates to LThree 
 	#	And User is navigated to pdp page 
-	When User searches a product "productName" and navigates to PDP 
+	When User searches a product "product" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 

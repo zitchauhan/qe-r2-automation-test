@@ -162,7 +162,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	When User Navigates L2 form Homepage Header 
 	#And User clicks on product in PLP 
 	Then User click on Quick view button 
-	And user click on Add to Cart Button
+	And user click on Add to Cart Button	 
 	#And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
    Then user verify sucessfully added item MSG 
@@ -172,8 +172,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    
     @R2_Web @R2_Regression @P2  @KER-3143 @C-Cart  @ZYP_Cart_K3143-8159 @CR-RKA
     Scenario: Verify if Authenticated user must be able to view all items designated for shipping
-        
-	Given user launches the browser and navigates to "ASO_HOME" page
+    Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on SignIn link from global header
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 

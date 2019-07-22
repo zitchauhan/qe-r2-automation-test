@@ -270,6 +270,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 //	
 	@FindBy(xpath = "//*[@data-auid='checkout_page']//div/div/div/div/h1 | //*[text()='CHECKOUT']") //Updated by VSN on 07-12-19
 	public WebElement checkout_CheckoutHeader_txt;//CR_HP 29-May_19
+
 	
 	@FindBy(xpath = "//*[contains(text(), 'Forgot your password')]")
 	public WebElement checkout_SignIn_ForgotYourPassword_lnk;

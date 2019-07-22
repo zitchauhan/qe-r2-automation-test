@@ -4,6 +4,7 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.testng.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -57,10 +58,17 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 	
 	@And("^user click on view cart$")
 	public void user_click_on_view_cart() throws Throwable {
-	   assertTrue(clickOnButton(pdp.btnViewCart));
+	    assertTrue(clickOnButton(pdp.btnViewCart));
 		Thread.sleep(Constants.thread_high);
-		isDisplayed(r2CheckoutPo.checkout_CheckoutHeader_txt);
-	}
+		/**Modified from here***/
+		WebElement el=driver.findElementByXPath("//h1[contains(@class,\"css-gi6fx0 mt-1 mb-0\")]");
+		System.out.println(el.getText());
+		assertTrue(isDisplayed(el));
+		
+		}
+		
+		
+	
 	
 
 

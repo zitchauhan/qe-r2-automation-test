@@ -6,6 +6,7 @@ import static org.testng.Assert.assertTrue;
 import java.security.KeyStore.SecretKeyEntry;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
@@ -15,6 +16,7 @@ import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_HomePage_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
+import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
@@ -31,21 +33,19 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	R2_Cart_PO r2CartPo = PageFactory.initElements(getDriver(), R2_Cart_PO.class);
 	R1_HomePage_PO r1HomePagePO = PageFactory.initElements(getDriver(), R1_HomePage_PO.class);
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
+	R2_CheckOut_PO r2CheckoutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	
 	public String quantityprice;
 	public String modifiedQuantityprice;
-	
 	
 	@Then("^user clicks on the burger menu$")
 	public void user_clicks_on_the_burger_menu() throws Throwable {
 		assertTrue(clickOnButton(globalElementHeader.btnBurgerMenu));
 	}
-	
 	@And("^verify Order Summary in Cart$")
 	public void verify_Order_Summary_in_Cart() throws Throwable {
 		r2SanityPo.verifyOrderSummaryOnCartPage();
 	}
-
 	@Then("^user is navigated to Add to cart Notification popup$")
 	public void user_is_navigated_to_Add_to_cart_Notification_popup() throws Throwable 
 	{
@@ -55,22 +55,22 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		assertTrue(isDisplayed(pdpPageObj.btnCheckout));*/
 		
 	}
-
+	/*Modified by rahul on 22.07.19*/
 	@And("^user will click on View Cart button$")
 	public void user_will_click_on_View_Cart_button() throws Throwable {
 		Thread.sleep(Constants.thread_medium); 
 		assertTrue(clickOnButton(pdpPageObj.btnViewCart));
-		Thread.sleep(Constants.thread_highest);
+        /**Modified from here***/
+		Thread.sleep(6000);
+		WebElement el=driver.findElementByXPath("//h1[contains(@class,\"css-gi6fx0 mt-1 mb-0\")]");
+		System.out.println(el.getText());
+		assertTrue(isDisplayed(el));
 	}
-	
 	@And("^user navigate to Cart page$")
 	public void user_navigate_to_Cart_page() throws Throwable {
 		//Thread.sleep(2000);
 		//assertTrue(isDisplayed(r2SanityPo.AS_txtYourCart));
 	}
-	
-		
-	
 	@When("^enter the \"(.*?)\" to X$")
 	public void enter_the_to_X(String arg1) throws Throwable {
 		waitForElement(r2SanityPo.AS_txtQuantityPrice);
