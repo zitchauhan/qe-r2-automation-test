@@ -109,7 +109,7 @@ Feature: [Web]Payment restrictions
     And user click on Go To Shipping Method button in Checkout page
     Given user selects shipment method on check out page
     Then user click on paypal radiobtn
-    Then user switch to iframe to verify paypalcheckoutBtn
+  	#Then user switch to iframe to verify paypalcheckoutBtn  
     Then Verify below Sub/Main Module of Checkout Page
       | #verify gift card related things are not displayed |
       | PayPalCheckOut_Btn                                 |
@@ -193,7 +193,7 @@ Feature: [Web]Payment restrictions
     And user click on Go To Shipping Method button in Checkout page
     Given user selects shipment method on check out page
     Then user click on paypal radiobtn
-    Then user switch to iframe to verify paypalcheckoutBtn
+    #Then user switch to iframe to verify paypalcheckoutBtn
     Then Verify below Sub/Main Module of Checkout Page
       | #verify only paypal related things are displayed |
       | PayPalCheckOut_Btn                               |

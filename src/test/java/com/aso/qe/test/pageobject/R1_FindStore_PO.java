@@ -26,11 +26,12 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@class='academyicon icon-plus ']")public WebElement expandStore;
 	@FindBy(xpath="//*[@data-auid='facetdrawerundefined']/button/following-sibling::*//a/p[1]") public WebElement clickStoreAddress;  //SID 30-November
     @FindBy(xpath = "(//button[@aria-label='Make My Store'])[1]")public WebElement ovly_btnMakeMyStore_1;
-    @FindBy(xpath = "(//*[@data-auid='facetdrawerundefined']/button/*/*/*[1])[1]")public WebElement selectedStoreNameinModal;  //SID 28-December
+    @FindBy(xpath = "(//*[@data-auid='facetdrawerundefined']/button/*/*/*[1])[2]")public WebElement selectedStoreNameinModal;  //SID 28-December //Updated by MJR 23/7/19
     @FindBy(xpath = "//*[@data-auid='PDP_IventoryMessage']/parent::*//a")public WebElement selectedStoreNameinPDP;  //SID 28-December
   
 	//@FindBy(xpath = "//input[@placeholder='Enter Zip Code or City, State']/../../../../following-sibling::div[1]/div/div/h6")	public WebElement ovly_secStore;/RKA 22 aug
-	@FindBy(xpath="//input[@placeholder='Enter Zip Code or City, State']/preceding::*[1]/../following::*[1]//h6")public WebElement ovly_secStore;
+	//@FindBy(xpath="//input[@placeholder='Enter Zip Code or City, State']/preceding::*[1]/../following::*[1]//h6")
+    @FindBy(xpath="(//*[@data-auid='facetdrawerundefined']/button/span/div/div[1])[1]")public WebElement ovly_secStore; //Updated by MJR 23/7/19
 	@FindBy(xpath = "(//div[@data-auid='find-a-store-modal'])[2]/div[3]/div/div[text()='0 Stores were found within 250 miles of your search'] | (//div[@data-auid='find-a-store-modal'])[2]//*[text()='Sorry! There are no stores within 250 miles. Please order online or try new ZIP code.']")public WebElement txtNoStoreText; //SID Modified 14-Nov
     @FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']")public WebElement ovly_btnCloseContainer;
 	@FindBy(xpath = "//*[@data-auid='findAStore']/span[2]")public WebElement txtStroeText;

@@ -116,7 +116,7 @@ public class R2_CART_K3175_SD extends CommonActionHelper {
 		System.err.println(findStorePo.selectedStoreNameinModal.getText());
 		clickOnButton(findStorePo.ovly_btnMakeMyStore_1);
 		Thread.sleep(Constants.thread_medium);
-		storeName = r2r1FunPo.storeNameStoreModalPLP.getText();
+		//storeName = r2r1FunPo.storeNameStoreModalPLP.getText(); //Updated by MJR 23/7/19
 		clickOnButton(findStorePo.ovly_btnCloseContainer);
 	}
 	
@@ -129,7 +129,8 @@ public class R2_CART_K3175_SD extends CommonActionHelper {
 	}
 	
 	@And("^user verify the selected store is reflected for both the product$")
-	public void user_verify_the_selected_store_is_reflected_for_both_the_product() {
+	public void user_verify_the_selected_store_is_reflected_for_both_the_product() throws InterruptedException {
+		Thread.sleep(Constants.thread_low);
 		String store = r2_cart_PO.storeNameCart.getText();
 		assertEquals(store, storeName);
 	}

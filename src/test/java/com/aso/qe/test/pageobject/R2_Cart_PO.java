@@ -516,6 +516,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	// CR-RKA 10-Oct
 	@FindBy(xpath = "//*[@data-auid='ContinueShopping']")
 	public WebElement continueShoppingItemSuccessufllyAddedPopUP;
+	
+	@FindBy(xpath="//button[text()='X']") public WebElement btnClose; //CR-MJR 23/7/19
 
 	/***************************** END XPAHTS ********************************/
 
@@ -529,6 +531,10 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 		} else {
 			assertTrue(clickOnButton(globalElementHeader.iconcart));
+			Thread.sleep(Constants.thread_medium);//Updated by MJR 23/7/19
+				if(isDisplayed(btnClose)) {				
+					clickOnButton(btnClose);
+				}
 
 		}
 		emptyCart();

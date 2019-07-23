@@ -2,10 +2,12 @@ package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
@@ -20,10 +22,14 @@ public class R1_PLP_K732_SD extends CommonActionHelper {
 	
 	@Then("^User click on Quick view button$")
 	public void user_click_on_Quick_view_button() throws Throwable {
-		Actions actions = new Actions(driver);
+		Thread.sleep(Constants.thread_low); //Updated by MJR 23/7/19
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		 js.executeScript("arguments[0].scrollIntoView(true);", pdp_po.btnQuickView);
+	        js.executeScript("arguments[0].click();", pdp_po.btnQuickView);
+		//Actions actions = new Actions(driver);
 		//actions.moveToElement(pdp_po.pdpImage).build().perform();
 		//actions.moveToElement(pdp_po.btnQuickView).click().build().perform();
-		clickOnButton(pdp_po.btnQuickView); //MJR -16/7/19
+		//clickOnButton(pdp_po.btnQuickView); //MJR -16/7/19
 //	  moveHover(pdp_po.pdpImage);
 //	  moveHover(pdp_po.btnQuickView);
 //	  clickOnLink(pdp_po.btnQuickView);

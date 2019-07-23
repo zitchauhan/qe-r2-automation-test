@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -94,8 +96,15 @@ if("mobile".equalsIgnoreCase(testtype)){
 		clickOnButton(r2_r1_fun_po.pelican_txt_M);
 		Thread.sleep(Constants.thread_medium);
 		}else {
-		clickOnButton(r2_r1_fun_po.intexKayak_txt);
-		Thread.sleep(Constants.thread_medium);
+			Thread.sleep(Constants.thread_medium);
+		//Actions a=new Actions(driver);
+		//a.moveToElement(r2_r1_fun_po.intexKayak_txt).click().build().perform();
+		//clickOnLink(r2_r1_fun_po.intexKayak_txt);
+			JavascriptExecutor je = (JavascriptExecutor) driver; //Updated by MJR 23/7/19
+			je.executeScript("arguments[0].scrollIntoView(true);",r2_r1_fun_po.intexKayak_txt);
+			je.executeScript("arguments[0].click();",r2_r1_fun_po.intexKayak_txt);
+			 
+		
 		}
 	}
 
