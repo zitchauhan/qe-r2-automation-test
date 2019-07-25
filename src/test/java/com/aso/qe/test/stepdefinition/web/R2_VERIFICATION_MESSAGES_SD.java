@@ -24,7 +24,7 @@ public class R2_VERIFICATION_MESSAGES_SD extends CommonActionHelper {
 	public void Verify_the_message_on_the_page(DataTable arg1) throws Throwable 
 	{
 		//Commiting code till the time error message does not fixed.
-		//Thread.sleep(Constants.thread_highest); //Updated by MJR on 07/15/19
+		Thread.sleep(Constants.thread_highest);
 		try {
 			List<List<String>> elements = arg1.raw();
 			for (int i = 1; i < elements.size(); i++) {
