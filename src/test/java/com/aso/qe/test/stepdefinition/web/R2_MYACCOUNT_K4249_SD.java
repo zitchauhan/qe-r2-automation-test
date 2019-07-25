@@ -46,7 +46,7 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 
 	@When("^user enter create password$")
 	public void user_enter_create_password() throws Throwable {
-		String password = PropertiesHelper.getInstance().getTestDataProperty("password");
+		String password = PropertiesHelper.getInstance().getTestDataProperty("Password");
 		setInputText(r2MyAccountPo.inputCreatePassword, password);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
