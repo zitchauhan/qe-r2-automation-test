@@ -1,6 +1,6 @@
 Feature: B06-175- Mixed Cart - Order Confirmation screen
 
-@C-BOPIS @R2_Web  @R2_All @P1 @CC-Checkout_Order  @KER-2856 @ZYP_CHECKOUT_K2856-10865 
+@C-BOPIS @R2_Web  @R2_All @P1 @CC-Checkout_Order  @KER-2856 @ZYP_CHECKOUT_K2856-10865
 Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods Ship to Home and BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
