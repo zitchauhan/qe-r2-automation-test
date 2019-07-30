@@ -648,7 +648,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='pop_over_btn']")
 	public WebElement Wishlist_icn;
 
-	@FindBy(xpath = "//*[@data-auid='pop_over_toggle_btn']")
+	@FindBy(xpath = "//*[@data-auid='pop_over_toggle_btn'] | //*[@data-auid='btnmodal_open_btn']")
 	public WebElement Wishlist_createlist_lnk;
 
 	@FindBy(xpath = "//*[@data-auid='Wish_list_name_input']")
