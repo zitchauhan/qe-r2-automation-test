@@ -24,7 +24,7 @@ Feature: Place order
 #		|Credit Card	|
 #		|PayPal			|
 
-@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @CR-SK @C1-Message
+@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @Dev
 Scenario Outline: Verify if authenticated user is able to place an order for single SKU product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account
@@ -46,9 +46,9 @@ Scenario Outline: Verify if authenticated user is able to place an order for sin
 #		|THANKS FOR SUBMITTING YOUR ORDER					|
 	Examples: 
 		|Payment Type	|
-#		|Gift Card		|
-		|Credit Card - Master	|
-		|PayPal			|
+		|Gift Card		|
+		|Credit Card - VISA	|
+#		|PayPal			|
 		
 @R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order @C1-Message
 @CR-SK 

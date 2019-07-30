@@ -13,6 +13,8 @@ Scenario: Verify that authenticated user is able to select address in dropdown i
 	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
+
+	
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# Verify following elements in Checkout > Shipping Address	|
 		|checkout_ShippingAddress_Edit_lnk		|

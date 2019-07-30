@@ -135,7 +135,7 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 				else if (currentElement.equalsIgnoreCase("checkout_ShippingMethod_ShippingMethodHeader_txt"))
 					assertTrue(isDisplayed(r2CheckoutPo.checkout_ShippingMethod_ShippingMethodHeader_txt));
 				else if (currentElement.equalsIgnoreCase("checkout_ShippingMethod_Edit_lnk"))
-					assertTrue(isDisplayed(r2CheckoutPo.checkout_ShippingMethod_Edit_lnk));
+			    	assertTrue(isDisplayed(r2CheckoutPo.checkout_ShippingMethod_Edit_lnk));
 				else if (currentElement.equalsIgnoreCase("checkout_ShippingMethod_Shipment_txt"))
 					assertTrue(isDisplayed(r2CheckoutPo.checkout_ShippingMethod_Shipment_txt));
 				else if (currentElement.equalsIgnoreCase("checkout_ShippingMethod_Items_txt"))

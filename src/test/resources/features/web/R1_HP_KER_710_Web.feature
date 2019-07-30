@@ -1,6 +1,6 @@
 Feature: [Desktop]Verify product in grid are sorted 
 
-@Web @Regression @KER-710 @ZYP_HP_K710-3656 @C-HP @CR-SG 
+@Web @Regression @KER-710 @ZYP_HP_K710-3656 @C-HP @CR-SG @Dev
 Scenario: [Web]Verify the product in grid are sorted by Price "Low-High" 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "SearchForSort" in the searchbox 
@@ -55,7 +55,7 @@ Scenario: To verify user is able to sort & filter on Product Listing/landing pag
 	
 	
 	
-@Web @Regression @KER-710 @ZYP_HP_K710-5533 @C-HP @CR-RKA 
+@Web @Regression @KER-710 @ZYP_HP_K710-5533 @C-HP 
 Scenario: To verify user is able to filter on Product Listing/landing page(L3) 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates to L3 from home page for grid sorting 
@@ -63,7 +63,7 @@ Scenario: To verify user is able to filter on Product Listing/landing page(L3)
 	Then User should be able to sort by brand A to Z 
 	Then User compare the product baised on A to Z 
 	
-@Web @Regression @KER-710 @ZYP_HP_K710-3657 @C-HP @CR-RKA 
+@Web @Regression @KER-710 @ZYP_HP_K710-3657 @C-HP 
 Scenario: Verify the product in grid are sorted by"Brand (A-Z)L2 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates to L2 from home page 

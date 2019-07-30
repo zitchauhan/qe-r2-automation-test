@@ -270,6 +270,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 //	
 	@FindBy(xpath = "//*[@data-auid='checkout_page']//div/div/div/div/h1 | //*[text()='CHECKOUT']") //Updated by VSN on 07-12-19
 	public WebElement checkout_CheckoutHeader_txt;//CR_HP 29-May_19
+
 	
 	@FindBy(xpath = "//*[contains(text(), 'Forgot your password')]")
 	public WebElement checkout_SignIn_ForgotYourPassword_lnk;
@@ -379,7 +380,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's Phone Number\"]")
 	   public WebElement PickupAltrPhone_input;
 	   
-	   @FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']")
+	   @FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']|//button[@data-auid='btncheckout_ship_to_store_submit_button']")
 	   public WebElement ShippingConfirm_btn;
 	   
 	   @FindBy(xpath="//span[text()='Required']")
@@ -551,7 +552,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'PAYMENT METHOD')] | //*[contains(text(),'PAYMENT')]")public WebElement PaymentMethodHeader_Txt; //CR-GK 9-Oct
 		@FindBy(xpath="//div[@class='mb-1']")public WebElement Bopisbillingaddres;
 		@FindBy(xpath="//*[text()='Credit Card']")public WebElement CreditCard_radioBtn;
-		@FindBy(xpath="//*[@data-auid='checkout_payment_options_radio_button_PayPal']")public WebElement PayPal_radioBtn; //updated by MJR on 15/7/19
+		@FindBy(xpath="(//*[text()='PayPal'])[1]")public WebElement PayPal_radioBtn; //Updated by VSN on 07-22-19 for smoke test fix //updated by MJR on 15/7/19
 		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]")public WebElement CreditCardNumber_Input;
 		@FindBy(xpath="//*[text()='Exp Date']/following::*[1]")public WebElement ExpirationDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[text()='CVV']/following::*[3]")public WebElement Cvv_Input;
@@ -868,7 +869,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		setInputText(txtCVVInput,cvv);
 	}
 	
+	/*Added assert for element to be displayed on 18.07.19*/
 	public void enterCVVBuyNowModal(String cvv) {
+		assertTrue(isDisplayed(Cvv_BuyNow_Modal));
 		setInputText(Cvv_BuyNow_Modal,cvv);
 	}
 

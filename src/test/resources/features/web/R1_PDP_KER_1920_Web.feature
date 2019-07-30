@@ -1,6 +1,7 @@
 Feature: To Verify the Add To Cart Functionality
 
  @Regression @C-PDP @Web @All @KER-1920 @ZYP_PDP_K1920-5269 @Rerun @CR-AG @sample
+ @Rahul
   Scenario: Verify the Add To Cart functionality
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
