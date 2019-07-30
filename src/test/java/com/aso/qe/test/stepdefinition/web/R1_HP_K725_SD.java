@@ -61,7 +61,7 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 	    assertTrue(clickOnButton(pdp.btnViewCart));
 		Thread.sleep(Constants.thread_high);
 		/**Modified from here***/
-		WebElement el=driver.findElementByXPath("//h1[contains(@class,\"css-gi6fx0 mt-1 mb-0\")]");
+		WebElement el=driver.findElementByXPath("//h1[contains(text(),'YOUR CART')]");
 		System.out.println(el.getText());
 		assertTrue(isDisplayed(el));
 		

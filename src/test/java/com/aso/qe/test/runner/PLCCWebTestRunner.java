@@ -7,10 +7,12 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
+
 @CucumberOptions(features = "src/test/resources/features/web/R2_CHECKOUT_KER_6962_Web.feature",
 		glue = "com.aso.qe.test.stepdefinition.web", 
 		monochrome = true,
 	//	tags = "@Rishikesh",
+
 		plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html", 
 		format = {"pretty", "html:target/cucumber-reports/cucumber-html-reports",
         "json:target/cucumber-reports/cucumber-html-reports/common.json" })
