@@ -1,6 +1,6 @@
 Feature: Verify the user search for Customer Keyword/SKU Search
 
-  @C-SLR @Web @All  @Regression @KER-3267  @ZYP_SLR_K3267-6329 @Rerun @1HR @CR-AG
+  @C-SLR @Web @All  @Regression @KER-3267  @ZYP_SLR_K3267-6329 @Dev @1HR 
   Scenario Outline: Verify the user search for Customer Keyword/SKU Search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
@@ -12,6 +12,7 @@ Feature: Verify the user search for Customer Keyword/SKU Search
     Examples:
     |data|
     |112766238|
+    |nike mens compression|
 
   @C-SLR @Web @All @Regression  @KER-3267  @ZYP_SLR_K3267-6333 @Rerun @1HR @CR-AG
   Scenario Outline:Verify the user search for invalid Customer Keyword/SKU Search

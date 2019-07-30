@@ -313,7 +313,7 @@ Scenario: TC_22-Verify Find a store
 	Then user verify the results based on entering zipcode
 
 	@R2_Web @R2_WAST-24 @P1 @C-Checkout @KER-2926 @AutomationSmoke @CR-HP @HP @vidya
-	@Rahul
+	@Rahul @Dev
 	Scenario:  TC_24-Verify if unauthenticated user is able to place PAYPAL order
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#Then User should be able to click on Find Store 

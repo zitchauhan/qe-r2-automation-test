@@ -1,6 +1,6 @@
 Feature: Verify the UI behavior of Footer components for Desktop
 
- @Web @Regression @C-HP  @All @KER-266 @ZYP_HP_K266-2743 @Rerun @1HR @CR-AG
+ @Web @Regression @C-HP  @All @KER-266 @ZYP_HP_K266-2743 @Rerun @1HR
   Scenario: Verify presence of Global Element Footer under this is Academy from Homepage
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User will verify the presence of Our history

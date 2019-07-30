@@ -82,7 +82,6 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods for BOPIS, 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When User searches a product "BOPIS_SOF_Product" and navigates to PDP 
-	#When user click on Add to cart button 
 	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
@@ -92,7 +91,7 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods for BOPIS, 
 	And user click on ship it button 
 	And user will click on View Cart button 
 	And user navigate to Cart page 
-	When user will click on Checkout button and navigates to Checkout page 
+	When user will click on Checkout button and navigates to Checkout page
 	And user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers 
 	And user click on checkbox in special order ship to store section 
 	When user clicks on Go to payment CTA
@@ -130,3 +129,25 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Shi
 		|# Following Message should show on the page|
 		|SPECIAL ORDER SHIP TO STORE				|
 		|SHIPPING ITEMS								|
+
+		
+@C-BOPIS @R2_Web  @R2_All @P1 @CC-Checkout_Order  @KER-2856 @ZYP_CHECKOUT_K2856-10865 @Dev
+Scenario: Verify BOPIS Order Confirmation
+	Given user launches the browser and navigates to "ASO_HOME" page
+	When user clicks on SignIn link from global header 
+	And user logs in as "Bopis_Email" 
+	#HP Added below 3 lines to make sure "SKUForBopisProduct" items is available in that Store 05_21_19
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	When user enters "SKUForBopisProduct" in the search box 
+#	When user click on Add to cart button 
+	And user click on ship it button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button
+	Then user select in store pickup option 
+	And user click on checkout button in Cart page 
+	And User enters CVV number "ThreeDigitCVV"
+	And user clicks on Review order button on checkout page
+	And user able to see the button place order 
+	And user is navigated to order confirmation page and captures order number 
