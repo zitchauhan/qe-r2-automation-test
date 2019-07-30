@@ -396,6 +396,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']")
 	   public WebElement ChangeLocation_Lnk;  //SID 8-Jan
 	   
+	   @FindBy(xpath = "//*[contains(text(),'Change Location')]")
+		public WebElement ChangeLocation_Lnks; //Rishi
+	   
 	   
 	   @FindBy(xpath="//*[@data-auid='cart_radio_button_div']//*[text()='Find a Store']")
 	   public WebElement findAStoreCart;  //SID 8-Jan
@@ -622,6 +625,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='btnundefined']")public WebElement ReviewOrder_Btn;
 	   @FindBy(xpath="//*[@data-auid='checkout_edit_payment']")public WebElement EditPayment_Link;
 	   @FindBy(xpath="//*[text()='Change Billing Information']")public WebElement ChangeBillingInformation_Txt;
+	   @FindBy(xpath="//*[contains(text(),'Change Billing Information')]")public WebElement ChangeBillingInformations_Txt;//Rishi
 	   
 	   @FindBy(xpath="//input[@id='paypal']/..")public WebElement rdPaypal;// PayPal_radioBtm;
 	   @FindBy(xpath="//*[text()=' Checkout']/..")public WebElement PayPalCheckOut_Btn;

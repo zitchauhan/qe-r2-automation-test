@@ -13,7 +13,7 @@ Scenario: Verify the user is able to view the Change Location under In-store Pic
 	When user will click on Checkout button and navigates to Checkout page
 	And user click on change location button
  
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-3178 @ZYP_CART_K3178-9941
+@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-3178 @ZYP_CART_K3178-9941 @Rishikesh
 Scenario: Verify that user view Find a Store modal from Change Location in Checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
