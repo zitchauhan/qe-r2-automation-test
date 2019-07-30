@@ -392,8 +392,12 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   @FindBy(xpath="//*[text()='PICKUP LOCATION']/../div")
 	   public WebElement StoreNameandAddress_Txt;
+	  
+	   /** Older x-path to click on chenge link on CHECKOUT PAGE*/
+//	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']")
+//	   public WebElement ChangeLocation_Lnk;  //SID 8-Jan
 	   
-	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']")
+	   @FindBy(xpath="//*[contains(text(),'Change Location')] | //*[contains(@class,'o-copy__14reg css-13uwz5u')]")
 	   public WebElement ChangeLocation_Lnk;  //SID 8-Jan
 	   
 	   
