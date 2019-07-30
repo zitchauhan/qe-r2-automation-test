@@ -608,7 +608,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'Last Name')]/following::*[2]")public WebElement LastName_Input;
 	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'Phone Number')]/following::*[2]")public WebElement PhoneNumber_Input;
 	   
-	   @FindBy(xpath=" //*[contains(text(),'Send SMS text updates about my order')]/preceding::*[1]")public WebElement SendSMSTextUpdatesAboutMyOrder_checkbox;
+	   @FindBy(xpath=" //*[contains(text(),'Send SMS text updates about my order')]/preceding::*[1] | //*[contains(text(),'text notifications')]/preceding::*[1]")public WebElement SendSMSTextUpdatesAboutMyOrder_checkbox;
 	   @FindBy(xpath="//*[@name='billingAddress1']")public WebElement Adderss_Input;
 	   
 	   //CR-GK 11-Oct
