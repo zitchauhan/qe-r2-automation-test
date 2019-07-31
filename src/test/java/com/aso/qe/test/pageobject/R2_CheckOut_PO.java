@@ -392,9 +392,16 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   @FindBy(xpath="//*[text()='PICKUP LOCATION']/../div")
 	   public WebElement StoreNameandAddress_Txt;
+	  
+	   /** Older x-path to click on chenge link on CHECKOUT PAGE*/
+//	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']")
+//	   public WebElement ChangeLocation_Lnk;  //SID 8-Jan
 	   
-	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']")
+	   @FindBy(xpath="//*[contains(text(),'Change Location')] | //*[contains(@class,'o-copy__14reg css-13uwz5u')]")
 	   public WebElement ChangeLocation_Lnk;  //SID 8-Jan
+	   
+	   @FindBy(xpath = "//*[contains(text(),'Change Location')]")
+		public WebElement ChangeLocation_Lnks; //Rishi
 	   
 	   
 	   @FindBy(xpath="//*[@data-auid='cart_radio_button_div']//*[text()='Find a Store']")
@@ -622,6 +629,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='btnundefined']")public WebElement ReviewOrder_Btn;
 	   @FindBy(xpath="//*[@data-auid='checkout_edit_payment']")public WebElement EditPayment_Link;
 	   @FindBy(xpath="//*[text()='Change Billing Information']")public WebElement ChangeBillingInformation_Txt;
+	   @FindBy(xpath="//*[contains(text(),'Change Billing Information')]")public WebElement ChangeBillingInformations_Txt;//Rishi
 	   
 	   @FindBy(xpath="//input[@id='paypal']/..")public WebElement rdPaypal;// PayPal_radioBtm;
 	   @FindBy(xpath="//*[text()=' Checkout']/..")public WebElement PayPalCheckOut_Btn;

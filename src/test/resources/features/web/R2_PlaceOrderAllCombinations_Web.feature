@@ -24,7 +24,7 @@ Feature: Place order
 #		|Credit Card	|
 #		|PayPal			|
 
-@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @Dev
+@R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @DevORIG
 Scenario Outline: Verify if authenticated user is able to place an order for single SKU product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account

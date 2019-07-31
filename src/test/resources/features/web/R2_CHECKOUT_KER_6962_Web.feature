@@ -168,7 +168,7 @@ Scenario: Verify Sign in Users should be able to enter an unlimited number of gi
 	
 	
 	
-@R2_Web   @R2_All @P1 @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8882 @CR-SK @Rahul
+@R2_Web   @R2_All @P1 @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8882 @CR-SK 
 Scenario: Verify System should integrate with RTS/First data for existing gift card payment processing flow
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
