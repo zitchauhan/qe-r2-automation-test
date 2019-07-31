@@ -67,7 +67,9 @@ Scenario: Checkout -  Registered user BOPIS Order with VISA as tender
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button
 	Then user select in store pickup option 
-	And user click on checkout button in Cart page 
+	And user click on checkout button in Cart page
+	#Updated by MJR 31/7/19 
+	Then user click on go to payment present in shipping method
 	And User enters CVV number "ThreeDigitCVV"
 	And user clicks on Review order button on checkout page
 	And user able to see the button place order 

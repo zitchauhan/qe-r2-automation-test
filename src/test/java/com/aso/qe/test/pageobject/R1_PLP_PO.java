@@ -91,7 +91,7 @@ public class R1_PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//a[text()='Mens Clothes']") public WebElement lnkMensClothes;
 	@FindBy(xpath="//a[contains(text(),'Pants')]") public WebElement lnkMensPants;
 	
-	
+	@FindBy(xpath="//*[@itemprop='itemListElement']") public List<WebElement> categoryLevel; //CR-MJR 31/7/19
 	/////////////////////////////////////Anuj//////////////////////////////////////////////
 	@FindBy(xpath="//*[@data-auid='clearAll']") public WebElement lnkClearAll;
 	@FindBy(xpath="//*[@data-auid='facetsModalCTAS_M']/*[text()='Clear All']") public WebElement lnkClearAllMobile;
@@ -149,7 +149,7 @@ public class R1_PLP_PO extends CommonActionHelper{
 //KER-4120 end
 //*****************************************************************************//
 	
-	public void verifyFeaturedCategoriesText() throws Exception {
+	public void verifyFeaturedCategoriesText(String str) throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)){
 			Actions hover=new Actions(getDriver());
 			hover.moveToElement(txtFeaturedCategories);
@@ -157,7 +157,16 @@ public class R1_PLP_PO extends CommonActionHelper{
 		}
 		else
 		{
-			scrollPageToWebElement(txtFeaturedCategories);
+			//MJR 31/7/19
+			int levelcount=categoryLevel.size();
+			if(str.equals("L1")) {
+				assertEquals(levelcount,1);
+			}else if(str.equals("L2")) {
+				assertEquals(levelcount,2);
+			}else if(str.equals("L3")) {
+				assertEquals(levelcount,3);
+			}
+			//scrollPageToWebElement(txtFeaturedCategories);
 			Thread.sleep(Constants.thread_low);
 		}	
 	}
