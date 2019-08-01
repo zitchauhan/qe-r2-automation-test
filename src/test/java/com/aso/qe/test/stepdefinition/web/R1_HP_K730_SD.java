@@ -55,7 +55,7 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 	@When("^User select store with \"(.*?)\"$")
 	public void User_select_store_with(String arg1) throws Throwable {
 		System.err.println(webPropHelper.getTestDataProperty(arg1));
-		store = findStorePO.selectAStore(webPropHelper.getTestDataProperty(arg1));
+		store = findStorePO.testWorkaround(webPropHelper.getTestDataProperty(arg1));
 	}
 	
 	@And("^user verify the selected store$")

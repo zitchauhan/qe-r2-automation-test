@@ -394,13 +394,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   public WebElement StoreNameandAddress_Txt;
 	  
 	   /** Older x-path to click on chenge link on CHECKOUT PAGE*/
-//	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']")
-//	   public WebElement ChangeLocation_Lnk;  //SID 8-Jan
-	   
-	   @FindBy(xpath="//*[contains(text(),'Change Location')] | //*[contains(@class,'o-copy__14reg css-13uwz5u')]")
+	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']")
 	   public WebElement ChangeLocation_Lnk;  //SID 8-Jan
 	   
-	   
+	  
 	   @FindBy(xpath="//*[@data-auid='cart_radio_button_div']//*[text()='Find a Store']")
 	   public WebElement findAStoreCart;  //SID 8-Jan
 	   
