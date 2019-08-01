@@ -7,7 +7,7 @@ Scenario Outline: From Home Page perform Keyword and SKU Search
     Then User enter the SKU search "<data>"
     And User click on search icon
     And user should be able to see PDP mention in the current url
-    And user verifies the entered SKU id
+    And user verifies the entered SKU id "<data>"
     Then User closes the web application
     Examples:
     |data|
