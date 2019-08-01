@@ -25,7 +25,7 @@ public class R2_CART_K3178_SD extends CommonActionHelper {
 	
 	@Then("^user click on change location button$")
 	public void user_click_on_change_location_button() {
-		assertTrue(clickOnButton(r2CheckoutPo.ChangeLocation_Lnks));
+		assertTrue(clickOnButton(r2CheckoutPo.ChangeLocation_Lnk));
 	}
 	
 	@Then("^user click on change location button on cart$")
