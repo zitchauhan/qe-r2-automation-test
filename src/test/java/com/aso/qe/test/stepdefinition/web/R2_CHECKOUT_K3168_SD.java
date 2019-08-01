@@ -5,6 +5,7 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
 import cucumber.api.java.en.And;
@@ -30,6 +31,7 @@ public class R2_CHECKOUT_K3168_SD extends CommonActionHelper {
 	@Then("^user clicks on the submit button$")
 	@When("^user clicks on Review order button on checkout page$")
 	public void user_clicks_on_the_submit_button() throws Throwable {
+		Thread.sleep(Constants.thread_medium); 
 		assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
 	}
 
@@ -40,6 +42,7 @@ public class R2_CHECKOUT_K3168_SD extends CommonActionHelper {
 
 	@Then("^user enters valid cvv value \"(.*?)\"$")
 	public void user_enters_valid_cvv_value(String CVV) throws Throwable {
+		Thread.sleep(Constants.thread_medium); 
 		r2CheckOutPo.enterCVVValue(webPropHelper.getTestDataProperty(CVV));
 	}
 

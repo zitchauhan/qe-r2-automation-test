@@ -150,6 +150,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='Change Location']")
 	public WebElement lnkChangeLocationCart;//DPK 24 Aug
 	
+	
 	@FindBy(xpath="(//*[text()='Find a Store'])[2]") 
 	public WebElement cart_FindStore;
 	

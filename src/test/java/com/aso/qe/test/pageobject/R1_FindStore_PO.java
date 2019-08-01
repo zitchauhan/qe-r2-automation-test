@@ -67,6 +67,7 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	// get the store name
 	// Click on close
 
+<<<<<<< HEAD
 //	public String selectAStore(String value) {
 //		waitForElement(ovly_searchTextBox);
 //		setInputText(ovly_searchTextBox, value);
@@ -121,7 +122,60 @@ public class R1_FindStore_PO extends CommonActionHelper {
 		clickOnButton(ovly_btnCloseContainer);
 		// Expected change the title should happen in the title
 		return storeName;
+=======
+	public String selectAStore(String value) {
+		String selectedStoreTitle = getText(ovly_secStore);
+          System.out.println("-------------------------------------------------->"+ selectedStoreTitle );
+          if (selectedStoreTitle.equalsIgnoreCase("Grand Parkway")) 
+          {
+                 clickOnButton(ovly_btnCloseContainer);
+          }
+          else
+          {
+                 waitForElement(ovly_searchTextBox);
+                 setInputText(ovly_searchTextBox, value);
+                 clickOnButton(ovly_btnGO);
+                 String selectedStoreTitle1 = getText(ovly_secStore);
+                 System.err.println(selectedStoreTitle1);
+                 clickOnButton(expandStore);
+                 storeName = selectedStoreNameinModal.getText();
+                 System.err.println(selectedStoreNameinModal.getText());
+                 clickOnButton(ovly_btnMakeMyStore_1);
+                 clickOnButton(ovly_btnCloseContainer);
+                 // Expected change the title should happen in the title
+                 return storeName;
+          }
+          return selectedStoreTitle;
+>>>>>>> 36bd92a94d76926191e23a2cc49653dba24c2d53
 	}
+	/*
+	public String testWorkaround(String value)
+    {
+          String selectedStoreTitle = getText(ovly_secStore);
+          System.out.println("-------------------------------------------------->"+ selectedStoreTitle );
+          if (selectedStoreTitle.equalsIgnoreCase("Grand Parkway")) 
+          {
+                 clickOnButton(ovly_btnCloseContainer);
+          }
+          else
+          {
+                 waitForElement(ovly_searchTextBox);
+                 setInputText(ovly_searchTextBox, value);
+                 clickOnButton(ovly_btnGO);
+                 String selectedStoreTitle1 = getText(ovly_secStore);
+                 System.err.println(selectedStoreTitle1);
+                 clickOnButton(expandStore);
+                 storeName = selectedStoreNameinModal.getText();
+                 System.err.println(selectedStoreNameinModal.getText());
+                 clickOnButton(ovly_btnMakeMyStore_1);
+                 clickOnButton(ovly_btnCloseContainer);
+                 // Expected change the title should happen in the title
+                 return storeName;
+          }
+          return selectedStoreTitle;
+          
+    } */
+
 
 	// Ak 18july
 	public void selectAStoreEmptyOrSpecialchars(String value) {
