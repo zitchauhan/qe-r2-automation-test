@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
@@ -33,6 +34,7 @@ public class R1_SLR_K3267_SD extends CommonActionHelper {
 	public void user_verifies_the_entered_SKU_id(String str) throws Throwable {
 		//MJR 8/01/19
 		//assertTrue(isDisplayed(pdp_po.txtProductSKU));
+		Thread.sleep(Constants.thread_medium);
 		String searchterm=pdp_po.txtProductSKU.getText();
 		assertTrue(searchterm.contains(str));
 			
