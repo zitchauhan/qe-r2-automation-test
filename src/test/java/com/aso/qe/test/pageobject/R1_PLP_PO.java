@@ -158,6 +158,7 @@ public class R1_PLP_PO extends CommonActionHelper{
 		else
 		{
 			//MJR 31/7/19
+			Thread.sleep(Constants.thread_medium);
 			int levelcount=categoryLevel.size();
 			if(str.equals("L1")) {
 				assertEquals(levelcount,1);
@@ -167,7 +168,7 @@ public class R1_PLP_PO extends CommonActionHelper{
 				assertEquals(levelcount,3);
 			}
 			//scrollPageToWebElement(txtFeaturedCategories);
-			Thread.sleep(Constants.thread_low);
+			
 		}	
 	}
 	

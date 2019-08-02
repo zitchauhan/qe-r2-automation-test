@@ -20,11 +20,12 @@ public class R1_PLP_K263_SD extends CommonActionHelper{
 
 	@Then("^user clicks on one of the category and navigates to LOne page$")
 	public void user_clicks_on_one_of_the_category_and_navigates_to_LOne_page() throws Throwable {
-		Thread.sleep(Constants.thread_low);
-		Actions hover =new Actions(driver);
+		Thread.sleep(Constants.thread_medium);
+		//Actions hover =new Actions(driver);
 		assertTrue((clickOnButton(globalElementHeader_HomePO.btnShopCategory)));
-		Thread.sleep(1000);
-		hover.moveToElement(globalElementHeader_HomePO.btnClothingCategory).click().build().perform();
+		Thread.sleep(Constants.thread_high);
+		//hover.moveToElement(globalElementHeader_HomePO.btnClothingCategory).click().build().perform();
+		assertTrue((clickOnButton(globalElementHeader_HomePO.btnClothingCategory)));
 		waitForPageLoad(driver);
 
 	}
