@@ -394,16 +394,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   public WebElement StoreNameandAddress_Txt;
 	  
 	   /** Older x-path to click on chenge link on CHECKOUT PAGE*/
-//	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']")
-//	   public WebElement ChangeLocation_Lnk;  //SID 8-Jan
-	   
-	   @FindBy(xpath="//*[contains(text(),'Change Location')] | //*[contains(@class,'o-copy__14reg css-13uwz5u')]")
+	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']")
 	   public WebElement ChangeLocation_Lnk;  //SID 8-Jan
 	   
-	   @FindBy(xpath = "//*[contains(text(),'Change Location')]")
-		public WebElement ChangeLocation_Lnks; //Rishi
-	   
-	   
+	  
 	   @FindBy(xpath="//*[@data-auid='cart_radio_button_div']//*[text()='Find a Store']")
 	   public WebElement findAStoreCart;  //SID 8-Jan
 	   
@@ -608,7 +602,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'Last Name')]/following::*[2]")public WebElement LastName_Input;
 	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'Phone Number')]/following::*[2]")public WebElement PhoneNumber_Input;
 	   
-	   @FindBy(xpath=" //*[contains(text(),'Send SMS text updates about my order')]/preceding::*[1] | //*[contains(text(),'text notifications')]/preceding::*[1]")public WebElement SendSMSTextUpdatesAboutMyOrder_checkbox;
+	   @FindBy(xpath=" //*[contains(text(),'Send SMS text updates about my order')]/preceding::*[1]")public WebElement SendSMSTextUpdatesAboutMyOrder_checkbox;
 	   @FindBy(xpath="//*[@name='billingAddress1']")public WebElement Adderss_Input;
 	   
 	   //CR-GK 11-Oct
@@ -629,7 +623,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='btnundefined']")public WebElement ReviewOrder_Btn;
 	   @FindBy(xpath="//*[@data-auid='checkout_edit_payment']")public WebElement EditPayment_Link;
 	   @FindBy(xpath="//*[text()='Change Billing Information']")public WebElement ChangeBillingInformation_Txt;
-	   @FindBy(xpath="//*[contains(text(),'Change Billing Information')]")public WebElement ChangeBillingInformations_Txt;//Rishi
 	   
 	   @FindBy(xpath="//input[@id='paypal']/..")public WebElement rdPaypal;// PayPal_radioBtm;
 	   @FindBy(xpath="//*[text()=' Checkout']/..")public WebElement PayPalCheckOut_Btn;

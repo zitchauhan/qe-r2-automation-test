@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -30,9 +31,10 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 	public void User_should_be_able_to_see_Find_Store() throws Throwable {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			Common_Web_SD.globalElementHeader.findAndClickStoreinMobile();
-		} else {
+		} 
+		else {
 			Common_Web_SD.globalElementHeader.findAndClickStoreinGH();
-		}
+			}
 	}
 	
 	@Then("^User should be able to click on Find Store in footer$")
@@ -48,14 +50,13 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 			logger.debug("Find A store overlay is displayed");
 		else
 			logger.debug("Find A store overlay is NOT displayed");
-
-		Assert.assertTrue(isDisplayed);
+		Assert.assertTrue(isDisplayed);	
 	}
 
 	@When("^User select store with \"(.*?)\"$")
 	public void User_select_store_with(String arg1) throws Throwable {
 		System.err.println(webPropHelper.getTestDataProperty(arg1));
-		store = findStorePO.selectAStore(webPropHelper.getTestDataProperty(arg1));
+		store = findStorePO.testWorkaround(webPropHelper.getTestDataProperty(arg1));
 	}
 	
 	@And("^user verify the selected store$")
