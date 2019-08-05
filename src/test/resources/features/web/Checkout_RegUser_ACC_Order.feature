@@ -15,7 +15,7 @@ Scenario: Checkout -  Registered user Place Order with ACC as tender
 	And user click on ship it button
 	And user click on viewcart button
 	Then user navigates to Cart Page
-	And user clicks on checkout button on cart page
+	#And user clicks on checkout button on cart page
 	And user clicks on checkout button and navigates to checkout page 
 	And user expect element credit card text field is present 
 	When user handles adding new card "ValidPLCCCard" if already card is saved 

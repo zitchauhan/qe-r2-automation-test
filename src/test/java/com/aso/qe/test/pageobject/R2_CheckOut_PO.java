@@ -210,7 +210,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	public WebElement btnChekOut;
 	// End KER-2940 CR-AKK
 
-	@FindBy(xpath = "//div[contains(text(), 'has been applied')]")
+	@FindBy(xpath = "//div[contains(text(), 'has been applied')] | //div[contains(text(), 'Ending In')]") //MJR 8/5/19
 	public WebElement txtGiftCardAppliedSuccessMessage;
 	
 	@FindBy(xpath = "(//div[contains(text(), 'has been applied')])[2]")

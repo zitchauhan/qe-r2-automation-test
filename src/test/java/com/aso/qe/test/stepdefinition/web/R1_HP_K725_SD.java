@@ -12,6 +12,7 @@ import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_ShoppingCartView_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
+import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -22,6 +23,7 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 	public R1_ShoppingCartView_PO shoppingCartViewPO =  PageFactory.initElements(getDriver(), R1_ShoppingCartView_PO.class);
     public R1_PDP_PO pdp=PageFactory.initElements(getDriver(), R1_PDP_PO.class);
     R2_CheckOut_PO r2CheckoutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
+    public R2_Sanity_PO sanity=PageFactory.initElements(getDriver(), R2_Sanity_PO.class);
 	@Then("^User should be able to click on MiniCart icon and navigate to My cart page and Validate Shopping Cart$")
 	public void user_should_be_able_to_click_on_MiniCart_icon_and_navigate_to_My_cart_page_and_Validate_Shopping_Cart() throws Throwable {
 		logger.debug("user_should_be_able_to_click_on_MiniCart_icon_and_navigate_to_My_cart_page_and_Validate_Shopping_Cart");
@@ -61,9 +63,9 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 	    assertTrue(clickOnButton(pdp.btnViewCart));
 		Thread.sleep(Constants.thread_high);
 		/**Modified from here***/
-		WebElement el=driver.findElementByXPath("//h1[contains(text(),'YOUR CART')]");
-		System.out.println(el.getText());
-		assertTrue(isDisplayed(el));
+		//WebElement el=driver.findElementByXPath("//h1[contains(text(),'YOUR CART')]");
+		System.out.println(sanity.AS_txtYourCart.getText());
+		assertTrue(isDisplayed(sanity.AS_txtYourCart));
 		
 		}
 		
