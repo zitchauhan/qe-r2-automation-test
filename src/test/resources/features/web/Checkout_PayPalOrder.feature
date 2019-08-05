@@ -1,6 +1,6 @@
 Feature: CHECKOUT Guest user BOPIS item PAYPAL as tender
 
-@Dev	
+@AutomationSmoke	
 Scenario:  Checkout - Guest User PAYPAL order Regular BOPIS item
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#Then User should be able to click on Find Store 

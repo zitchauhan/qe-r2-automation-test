@@ -304,7 +304,7 @@ Scenario: Verify find a store Modal closes On Select "Close X" and If a user sel
 	
 	
 #=====================Sanity=================================================#
-@R2_Web @R2_WAST-21 @P1 @C-Cart @KER-2872 @ZYP_CART_K2872-8710 @AutomationSmoke
+@R2_Web @R2_WAST-21 @P1 @C-Cart @KER-2872 @ZYP_CART_K2872-8710 @AutomationSmokeORIG
 Scenario: TC_22-Verify Find a store 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
@@ -312,7 +312,7 @@ Scenario: TC_22-Verify Find a store
 	And user click on submit button 
 	Then user verify the results based on entering zipcode
 
-	@R2_Web @R2_WAST-24 @P1 @C-Checkout @KER-2926 @AutomationSmoke @CR-HP @HP @vidya
+	@R2_Web @R2_WAST-24 @P1 @C-Checkout @KER-2926 @AutomationSmokeORIG @CR-HP @HP @vidya
 	@Rahul @DevORIG
 	Scenario:  TC_24-Verify if unauthenticated user is able to place PAYPAL order
 	Given user launches the browser and navigates to "ASO_HOME" page 

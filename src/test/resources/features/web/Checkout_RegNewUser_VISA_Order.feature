@@ -1,6 +1,6 @@
 Feature: CHECKOUT - Regsiter New User and Credit Card Order
 
-@Dev
+@AutomationSmoke
 Scenario Outline: Checkout - Regsiter New User & Place VISA Order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account

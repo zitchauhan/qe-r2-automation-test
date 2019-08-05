@@ -323,7 +323,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	
 #===========================================Sanity==========================================#
 	
-@R2_Web @R2_WAST-09 @P2 @C-Checkout @KER-3166 @ZYP_CART_K3166-9604 @AutomationSmoke
+@R2_Web @R2_WAST-09 @P2 @C-Checkout @KER-3166 @ZYP_CART_K3166-9604 @AutomationSmokeORIG
 Scenario: TC_10-Verify Apply Promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 

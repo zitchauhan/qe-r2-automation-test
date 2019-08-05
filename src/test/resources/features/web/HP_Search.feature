@@ -1,6 +1,6 @@
 Feature: Home Page Search
 
-@Dev 
+@AutomationSmoke 
 Scenario Outline: From Home Page perform Keyword and SKU Search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
