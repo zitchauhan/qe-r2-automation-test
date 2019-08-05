@@ -70,7 +70,7 @@ public class R1_HP_K710_SD extends CommonActionHelper{
 			Thread.sleep(4000);
 		}else{
 			
-			 scrollPageToWebElement(hp_p.sortByOption);
+			  //scrollPageToWebElement(hp_p.sortByOption);
 			   clickOnButton(hp_p.sortByOption);
 			   Thread.sleep(3000);
 			   clickOnButton(hp_p.selPriceLowToHigh);
