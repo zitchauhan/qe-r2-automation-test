@@ -30,13 +30,14 @@ public class R1_SLR_K3267_SD extends CommonActionHelper {
 
 	}
 
-	@Then("^user verifies the entered SKU id \"(.*?)\"$")
-	public void user_verifies_the_entered_SKU_id(String str) throws Throwable {
+	@Then("^user verifies the entered SKU id$")
+	public void user_verifies_the_entered_SKU_id() throws Throwable {
 		//MJR 8/01/19
-		//assertTrue(isDisplayed(pdp_po.txtProductSKU));
 		Thread.sleep(Constants.thread_medium);
-		String searchterm=pdp_po.txtProductSKU.getText();
-		assertTrue(searchterm.contains(str));
+		assertTrue(isDisplayed(pdp_po.txtProductSKU));
+		
+//		String searchterm=pdp_po.txtProductSKU.getText();
+//		assertTrue(searchterm.contains(str));
 			
 		}
 
