@@ -44,8 +44,10 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 
 	@FindBy(xpath="//*[contains(@data-auid,'productCard_')]//*[contains(text(),'Gift Card')]")  public List<WebElement> giftCards; //SID 8-October
 	//@FindBy(xpath="//*[@data-component='productDetailsGeneric']//*[contains(text(),'Out of Stock Online')]")public WebElement outOfStockMessage; //SID 8-October
-	@FindBy(xpath="//*[@data-component='productDetailsGeneric']//*[contains(text(),'Out of stock')]")public WebElement outOfStockMessage; //Vidya 9-April 2019
+	//@FindBy(xpath="//*[@data-component='productDetailsGeneric']|//*[contains(text(),'Out of stock')]")public WebElement outOfStockMessage; //Vidya 9-April 2019
+	@FindBy(xpath="//div[2]/span/span")public WebElement outOfStockMessage;
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']") public WebElement btnBurgerMenu;
+	
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']")  public WebElement btnXBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='level1Category-SHOP']") public WebElement btnShopCategory;
 	@FindBy(xpath="//*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //SID Modified 18-Nov

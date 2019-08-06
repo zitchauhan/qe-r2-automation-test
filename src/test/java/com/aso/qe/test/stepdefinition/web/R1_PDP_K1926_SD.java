@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import static org.junit.Assert.assertEquals;
 import org.apache.log4j.Logger;
+import org.junit.internal.matchers.StacktracePrintingMatcher;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -278,7 +279,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 	@And("^User searches a product \"(.*?)\" and navigates to PDP$")
 	public void user_enters_in_the_search_box(String searchText) throws Throwable {
 		waitForPageLoad(driver);
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		searchKey = webPropHelper.getTestDataProperty(searchText);
 		String[] arrSearchKey = searchKey.split(",");
 
@@ -296,6 +297,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 		} else {
 			waitForPageLoad(driver);
 			Thread.sleep(Constants.thread_low); 
+			//Verifying for the search text and search btn
 			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtn));
 			searchTextBox = R1_SearchProduct_PO.searchTextBox;
 			searchButton = R1_SearchProduct_PO.submitGOBtn;
@@ -307,19 +309,23 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 					assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
 			}
 //			clearText(searchTextBox);
-//			setInputTextWithEnterKey(searchTextBox, searchWord);
-			//Thread.sleep(Constants.thread_medium);
+			//setInputTextWithEnterKey(searchTextBox, searchWord);
 			setInputText(searchTextBox, searchWord);
-			//Thread.sleep(Constants.thread_medium);
 			assertTrue(clickOnButton(searchButton));
-			//Thread.sleep(Constants.thread_low);
-			//waitForPageLoad(driver);
-			//driver.navigate().refresh();
 			boolean checkStock=false;
-			checkStock=isDisplayed(globalElementHeader_HomePO.outOfStockMessage);
-			if (r1_SearchPO.verifyTextDisplayedOnPage("We couldn't find anything for")) {
-			}else if(checkStock) {
-			} else {
+			checkStock=isDisplayed(globalElementHeader_HomePO.outOfStockMessage);//out of stock validation which returns boolean result
+			System.out.println("priting the DOM value of Out of Stock"+globalElementHeader_HomePO.outOfStockMessage.getText());
+			System.out.println("Printing boolean value"+ checkStock);
+			if (r1_SearchPO.verifyTextDisplayedOnPage("We couldn't find anything for")) //if product is not available--invalid search
+			{
+				System.out.println("product is not available in the application");
+			}
+			else if(checkStock) 
+			{
+				System.out.println("out of stock scenarieo is verified successfully");
+			} 
+			else 
+			{
 				break;
 			}
 
