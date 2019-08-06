@@ -128,7 +128,7 @@ Scenario: Verify if  user should be able to click on PayPal checkout if applicab
 	
 	
 #=============================================Sanity===============================#
-@R2_Web @R2_WAST-10 @P1 @C-Cart @KER-3127 @ZYP_CART_K3127-8166 @AutomationSmoke
+@R2_Web @R2_WAST-10 @P1 @C-Cart @KER-3127 @ZYP_CART_K3127-8166 @AutomationSmokeORIG
 Scenario: TC_11- Verify Apply Promotion / Remove Promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
@@ -144,7 +144,7 @@ Scenario: TC_11- Verify Apply Promotion / Remove Promotion
 	And User clicks on Remove Promo code link 
 	Then Promo code is Removed 
 	
-@R2_Web @R2_WAST-14 @P1 @C-Cart @KER-3127 @ZYP_CART_K3127-8168 @AutomationSmoke
+@R2_Web @R2_WAST-14 @P1 @C-Cart @KER-3127 @ZYP_CART_K3127-8168 @AutomationSmokeORIG
 Scenario: TC_15-Verify User Able to Checkout, if no errors in cart 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 

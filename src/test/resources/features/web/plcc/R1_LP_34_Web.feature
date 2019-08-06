@@ -6,7 +6,7 @@ When user click on AcademyCreditCard link in the footer section of ASO-Home page
 Then user expect Landing page to be present 
 And user expect element FPO Apply Order section to be present 
 
-@C-PLCC @All @PLCC-34 @CR-VS @AutomationSmoke
+@C-PLCC @All @PLCC-34 @CR-VS @AutomationSmokeORIG
 Scenario: Verify the display of elements available under Header component on PLCC landing page 
 	#And user expect element Benefits section to be present
 	And user expect element prescreen section to be present

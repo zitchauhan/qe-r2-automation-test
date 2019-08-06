@@ -16,7 +16,7 @@ Feature: Verify Product Blade in Cart
 
 #==============================================Sanity============================================#
 	
-@R2_Web @R2_WAST-12 @P1 @C-Cart @KER-2939 @ZYP_CART_K2939-9615 @AutomationSmoke
+@R2_Web @R2_WAST-12 @P1 @C-Cart @KER-2939 @ZYP_CART_K2939-9615 @AutomationSmokeORIG
 Scenario: TC_13-To Verify Image for selected SKU is be displayed on product blade for multi-variant product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 

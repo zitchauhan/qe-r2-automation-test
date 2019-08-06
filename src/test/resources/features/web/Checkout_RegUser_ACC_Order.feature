@@ -1,6 +1,6 @@
 Feature: CHECKOUT Registered user Academy Credit Card Tender
 
-@Dev
+@AutomationSmoke
 Scenario: Checkout -  Registered user Place Order with ACC as tender 
 	Given user launches the browser and navigates to "ASO_HOME" page plcc 
 	When user click on My Account link 

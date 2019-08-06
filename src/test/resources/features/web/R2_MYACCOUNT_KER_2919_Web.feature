@@ -304,7 +304,7 @@ Scenario: Verify that the City and State are auto populated when Zip Code is ent
  	Then User verifies that city and State are populated automatically 	
  	
 #=================================Sanity============================================##
-@R2_Web @R2_WAST-04 @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @AutomationSmoke
+@R2_Web @R2_WAST-04 @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10696 @AutomationSmokeORIG
 Scenario: TC_5-Verify Add Credit Card and added as a Default Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

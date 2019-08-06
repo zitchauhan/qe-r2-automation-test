@@ -259,7 +259,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 
 	
 #=========================================================Sanity==============================#
-@R2_Web @R2_WAST-11 @P1 @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @AutomationSmoke
+@R2_Web @R2_WAST-11 @P1 @C-Cart @KER-2942 @ZYP_CART_K2942-8044 @AutomationSmokeORIG
 Scenario: TC_12-Verify Update Quantity 
 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -277,7 +277,7 @@ Scenario: TC_12-Verify Update Quantity
 		|SubTotal_txt|
 	And  user should be able to see the increased quantity and Price in Cart Order summary 
 	
-@R2_Web @R2_WAST-13 @P1 @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @AutomationSmoke
+@R2_Web @R2_WAST-13 @P1 @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @AutomationSmokeORIG
 Scenario: TC_14-Verify Remove Item from Cart 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
