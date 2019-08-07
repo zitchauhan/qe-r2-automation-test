@@ -6,6 +6,7 @@ import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
+import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -15,7 +16,7 @@ public class R1_PDP_K1920_SD extends CommonActionHelper{
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 R2_Cart_PO cartPO = PageFactory.initElements(driver, R2_Cart_PO.class);
-	
+public R2_Sanity_PO sanity=PageFactory.initElements(getDriver(), R2_Sanity_PO.class);
 	
 	String productTitle = "";
 	String productPrice= "";
@@ -58,6 +59,9 @@ R2_Cart_PO cartPO = PageFactory.initElements(driver, R2_Cart_PO.class);
 		{
 			waitForElement(pdpPageObj.btnViewCart);
 			assertTrue(clickOnButton(pdpPageObj.btnViewCart));
+			//modified for loop issue
+			System.out.println(sanity.AS_txtYourCart.getText());
+			assertTrue(isDisplayed(sanity.AS_txtYourCart));
 		}
 	}
 

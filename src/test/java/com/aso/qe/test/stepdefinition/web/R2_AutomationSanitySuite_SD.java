@@ -63,10 +63,11 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		/**Modified from here***/
 		/*
 		Thread.sleep(6000);
-		WebElement el=driver.findElementByXPath("//h1[contains(@class,'css-gi6fx0 mt-1 mb-0')] | //h1[text()='YOUR CART']");
-		System.out.println(el.getText());
-		assertTrue(isDisplayed(el));
-		*/
+		WebElement el=driver.findElementByXPath("//h1[contains(@class,'css-gi6fx0 mt-1 mb-0')] | //h1[text()='YOUR CART']");*/
+		System.out.println(r2SanityPo.AS_txtYourCart.getText());
+		assertTrue(isDisplayed(r2SanityPo.AS_txtYourCart));
+		
+		
 	}
 	@And("^user navigate to Cart page$")
 	public void user_navigate_to_Cart_page() throws Throwable {
