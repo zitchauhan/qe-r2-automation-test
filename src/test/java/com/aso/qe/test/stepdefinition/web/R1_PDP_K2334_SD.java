@@ -52,6 +52,10 @@ public class R1_PDP_K2334_SD extends CommonActionHelper{
 	public void user_verify_and_click_on_get_notified() throws Throwable {
 	   	try {
 			assertTrue(isDisplayed(pd_po.lnkGetNotified));
+			assertTrue(clickOnButton(pd_po.lnkGetNotified));
+			System.out.println("clicked successfully");
+			Thread.sleep(4000);
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -61,10 +65,11 @@ public class R1_PDP_K2334_SD extends CommonActionHelper{
 	@Then("^Verify customer is able to enter email after clicking on get notified$")
 	public void verify_customer_is_able_to_enter_email_after_clicking_on_get_notified() throws Throwable {
 	  try {
-		assertTrue(clickOnButton(pd_po.lnkGetNotified));
+		
 		  setInputText(pd_po.emailOFgetNotified, "xyz@gmail.com");
 		  assertTrue(clickOnButton(pd_po.btnSubmitGetNotification));
 		  assertEquals(getText(pd_po.txtYouAreAllSet), "YOU'RE ALL SET");
+		  System.out.println("Notification message has been verified successfully");
 	} catch (Exception e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
