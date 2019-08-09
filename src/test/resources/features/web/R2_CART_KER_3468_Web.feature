@@ -15,7 +15,7 @@ Scenario: Verify user is able to see the error messages on Cart for insufficient
     |# Following Error Message should show on the page|
     |ErrorMsgLimitedStack|   
 
-@R2_Web @R2_All @CB-Cart @KER-3468 @ZYP_CART_K3468-9926 @C-BOPIS@
+@R2_Web @R2_All @CB-Cart @KER-3468 @ZYP_CART_K3468-9926 @C-BOPIS
 Scenario: verify user is able to see the error messages on Cart for OOS item
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -91,7 +91,7 @@ Scenario: Verify that on clicking close in error modal closes the modal
 	And user verify the outofstock modal should not appear
 	
 @C-BOPIS @R2_Web @R2_All @C-Cart @KER-3468 @ZYP_CART_K3468-9939 
-Scenario: Verify that clicking anywhere outside the modal, closes the error modal
+Scenario: Verify that clicking anywhere outside the modal closes the error modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header
 	And user logs in as "OutOfStockItemMail"
