@@ -15,7 +15,7 @@ Scenario: Verify user is able to see the error messages on Cart for insufficient
     |# Following Error Message should show on the page|
     |ErrorMsgLimitedStack|   
 
-@R2_Web @R2_All @CB-Cart @KER-3468 @ZYP_CART_K3468-9926 @C-BOPIS
+@R2_Web @R2_All @CB-Cart @KER-3468 @ZYP_CART_K3468-9926 @C-BOPIS@
 Scenario: verify user is able to see the error messages on Cart for OOS item
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
