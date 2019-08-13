@@ -122,7 +122,7 @@ public class R2_Sanity_PO extends CommonActionHelper {
 //	@FindBy(xpath = "//*[contains(text(),'YOUR CART')]")
 //	public WebElement AS_txtYourCart;
 	
-	@FindBy(xpath = "//h1[contains(@class,'css-gi6fx0 mt-1 mb-0')] | //h1[text()='YOUR CART']")
+	@FindBy(xpath = "//h1[contains(@class,'css-gi6fx0 mt-1 mb-0')] | //*[contains(text(),'YOUR CART')]")
 	public WebElement AS_txtYourCart;
 	
 	@FindBy(xpath = "//*[text()='CHECKOUT']")   
