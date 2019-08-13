@@ -29,6 +29,7 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 		
 		else
 		{
+			Thread.sleep(Constants.thread_highest);
 			assertTrue(clickOnButton(r2CartPo.btnCartCheckout));
 			//Thread.sleep(Constants.thread_highest);
 		}

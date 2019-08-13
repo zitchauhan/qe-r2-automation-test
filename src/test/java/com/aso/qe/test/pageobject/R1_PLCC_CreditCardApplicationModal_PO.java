@@ -272,7 +272,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 				bannerCartPage_m.click();
 				logger.debug("Banner on Cart Page is displayed");
 			} catch (Exception e) {
-				isDisplayed(bannerCartPage_m);
+				//isDisplayed(bannerCartPage_m);
 				wait.until(ExpectedConditions.visibilityOf(bannerCartPage_m));
 				WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-mobile.jpg']"));
 				JavascriptExecutor executor = (JavascriptExecutor)driver;
@@ -283,13 +283,15 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		else 
 		{
 			try {
-				WebElement element = driver.findElement(By.xpath("//img[src='/content/dam/academysports/banner-desktop.jpg']"));
+				
+				WebElement element = driver.findElement(By.xpath("//img[@src='/content/dam/academysports/banner-desktop.jpg']"));
 				JavascriptExecutor executor = (JavascriptExecutor)driver;
 				executor.executeScript("arguments[0].click();", element);
 				Thread.sleep(3000);
 				logger.debug("Banner on Cart Page is displayed");
 								
 			} catch (Exception e) {
+				e.printStackTrace();
 				wait.until(ExpectedConditions.visibilityOf(bannerCartPage));
 				bannerCartPage.click();
 			}

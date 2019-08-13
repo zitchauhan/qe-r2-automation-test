@@ -13,7 +13,7 @@ Scenario: To verify change billing Address CTA
 	And user click on ship it button 
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
-	And user navigate to Cart page 
+#	And user navigate to Cart page   ----- Method is empty 
 	And user click on checkout button in Cart page 
 	And user is navigated to order summary page 
 	And user clicks on edit shipping method cta 

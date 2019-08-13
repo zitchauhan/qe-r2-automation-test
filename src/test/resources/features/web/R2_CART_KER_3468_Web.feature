@@ -91,7 +91,7 @@ Scenario: Verify that on clicking close in error modal closes the modal
 	And user verify the outofstock modal should not appear
 	
 @C-BOPIS @R2_Web @R2_All @C-Cart @KER-3468 @ZYP_CART_K3468-9939 
-Scenario: Verify that clicking anywhere outside the modal, closes the error modal
+Scenario: Verify that clicking anywhere outside the modal closes the error modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header
 	And user logs in as "OutOfStockItemMail"

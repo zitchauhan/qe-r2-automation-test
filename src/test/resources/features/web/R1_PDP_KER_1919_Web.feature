@@ -13,7 +13,7 @@ Feature: Add to Cart - Error Messages (PDP)
 	#Then user search the data in search box "limitedQuantityRestriction_cmc"
 	When user enters "limitedQuantityRestriction_cmc" in the search box 
 	Then User to select the product 
-	Then verify Sorry the selected item is limited to XYZ order. 
+	Then verify Sorry the selected item is limited to XYZ order.   
       
           
   @C-PDP @Web @Regression @KER-1919 @ZYP_HP_K1919-5039 @CR-AG @RBeta
@@ -21,7 +21,7 @@ Feature: Add to Cart - Error Messages (PDP)
      Given user launches the browser and navigates to "ASO_HOME" page 
 	#Then user search the data in search box "limitedQuantityRestriction_cmc"
 	When user enters "limitedQuantityRestriction_cmc" in the search box 
-	Then User to select the product 
+#	Then User to select the product 
 	Then verify Sorry the selected item is limited to XYZ order.
 
       
