@@ -7,5 +7,5 @@ Feature:  [Web] Components: PDP - Detailed Product Content - Reviews - Name Flyo
     And user should be able to see PDP mention in the current url
      Then user verify detail and specs tab and its content is displayed      
      When user clicks on Reviews tab
-     Then user do mousehover on review having name    
+#     Then user do mousehover on review having name    
  

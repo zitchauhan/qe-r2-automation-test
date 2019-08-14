@@ -64,11 +64,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		/*
 		Thread.sleep(6000);
 		WebElement el=driver.findElementByXPath("//h1[contains(@class,'css-gi6fx0 mt-1 mb-0')] | //h1[text()='YOUR CART']");*/
-<<<<<<< HEAD
-		Thread.sleep(6000);
-=======
-		Thread.sleep(Constants.thread_highest);
->>>>>>> a55cd7d8476b70b18e719d9eea338bf7c1ac9f4a
+
 		System.out.println(r2SanityPo.AS_txtYourCart.getText());
 		Thread.sleep(Constants.thread_medium);
 		assertTrue(isDisplayed(r2SanityPo.AS_txtYourCart));

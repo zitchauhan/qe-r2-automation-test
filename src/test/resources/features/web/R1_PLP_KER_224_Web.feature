@@ -23,7 +23,7 @@ Feature: [Web]  Product Card
   Scenario: User  be able to view the product name  on PLP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page
-    Then user to click on product image and navigate to PDP
+#    Then user to click on product image and navigate to PDP
 
   @C-PLP @Web @Regression @KER-224 @ZYP_PLP_K224-9418 @CR-RKA
   Scenario: User  be able to view the product rating  on PLP
@@ -35,13 +35,13 @@ Feature: [Web]  Product Card
   Scenario: User  be able to navigate to PDP by clicking on image of product
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page
-    Then user to click on product image and navigate to PDP
+#    Then user to click on product image and navigate to PDP
 
   @C-PLP @Web @Regression @KER-224 @ZYP_PLP_K224-2979 @CR-RKA
   Scenario: User be able to navigate to PDP by clicking on Name of product
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page
-    Then user to click on product name and navigate to PDP
+#    Then user to click on product name and navigate to PDP
 
   @C-PLP @Web @Regression @KER-224 @ZYP_PLP_K224-2891 @CR-RKA
   Scenario: Verify the Product Ad badge component on L2 page
@@ -61,9 +61,9 @@ Feature: [Web]  Product Card
   Scenario: Entire Product Card should be clickable and the user should be brought to PDP Page
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page
-    Then user to click on product image and navigate to PDP
-    Then user verify product rating
-    Then user to click on product name and navigate to PDP
+#    Then user to click on product image and navigate to PDP
+#    Then user verify product rating
+#    Then user to click on product name and navigate to PDP
 
   @C-PLP @Web @Regression @KER-224 @ZYP_PLP_K224-2890 @CR-RKA
   Scenario: Verify the Alternative color option in Product Card
@@ -74,4 +74,4 @@ Feature: [Web]  Product Card
   Scenario: Verify BazaarVoice Customer Review Ratings
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3
-    Then user to click on product name and navigate to PDP
+#    Then user to click on product name and navigate to PDP
