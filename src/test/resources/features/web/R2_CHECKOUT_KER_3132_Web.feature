@@ -46,12 +46,22 @@ Scenario: Verify Billing address on check out Page - Same as Shipping Address
 
 @R2_Web @Regression @R2_All @P2 @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8116 @CR-RKA
 Scenario: Verify Billing address on check out Page - Same as Shipping Address
-    Given user launches the browser and navigates to "ASO_HOME" page 
-	When User Navigates L2 form Homepage Header 
-	And User clicks on product in PLP 
-	And User is navigated to pdp page 
+#    Given user launches the browser and navigates to "ASO_HOME" page 
+#	When User Navigates L2 form Homepage Header 
+#	And User clicks on product in PLP 
+#	And User is navigated to pdp page 
+#	#And user click on Add to Cart Button 
+#	And user click on ship it button 
+
+Given user launches the browser and navigates to "ASO_HOME" page
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	When user enters "BOPIS_Regular_Product" in the searchbox 
 	#And user click on Add to Cart Button 
-	And user click on ship it button 
+	And user click on ship it button
+
+
 	And user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	And user click on checkout button in Cart page 
@@ -91,13 +101,24 @@ Then user fill billing information after clicking on change billing information 
 
 @R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8118 @CR-RKA
 Scenario: Verify Billing address on check out Page - new address information
+#Given user launches the browser and navigates to "ASO_HOME" page
+#When User Navigates L2 form Homepage Header
+#And User clicks on product in PLP
+#And User is navigated to pdp page
+# And user click on Add to Cart Button 
+#	#And user click on ship it button
+## And user is navigated to Add to cart Notification popup  
+
+###### The above product is failing as ADD to cart needs to be clicked on the PDP pop up which is not yet taken care in automation script 
 Given user launches the browser and navigates to "ASO_HOME" page
-When User Navigates L2 form Homepage Header
-And User clicks on product in PLP
-And User is navigated to pdp page
- #And user click on Add to Cart Button 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	When user enters "BOPIS_Regular_Product" in the searchbox 
+	#And user click on Add to Cart Button 
 	And user click on ship it button
- And user is navigated to Add to cart Notification popup  
+
+
 And user will click on View Cart button 
 And user click on checkout button in Cart page
 And user adds shipment address on checkout page for "guest" user

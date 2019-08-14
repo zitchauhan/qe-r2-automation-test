@@ -19,6 +19,8 @@ public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 		
 	@When("^user click on ship it button$")
 	public void user_click_on_ship_it_button() throws Throwable {
+		
+		Thread.sleep(4000);
 		isDisplayed(genericPO.shipItButton);
 		genericPO.shipItButton.click();
 		
