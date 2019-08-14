@@ -535,7 +535,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='City']/..//input") // CR-SK 28 Aug
 	public WebElement txtCityInAddCreditCard;
 
-	final String xpathForDeleteGiftCardButton = "//div[text()= 'GIFT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'GIFT CARDS']/../following-sibling::*//*[text()='Remove'] | //*[text()= 'Gift Card']/../following-sibling::*//*[text()='Remove']";
+	final String xpathForDeleteGiftCardButton = "//div[text()= 'GIFT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[contains(text(),'Remove')] | //*[text()= 'Gift Card']/../following-sibling::*//*[text()='Remove']";
 	@FindBy(xpath = xpathForDeleteGiftCardButton) // CR-SK
 													// 29
 													// Aug
@@ -982,7 +982,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 		int nonDefaultaddressCountInProfile = addresRemove_Btn.size();
 		while (nonDefaultaddressCountInProfile > 0) {
 			assertTrue(clickOnButton(btnRemove));
-			Thread.sleep(Constants.thread_low);
+			Thread.sleep(Constants.thread_high);
 			nonDefaultaddressCountInProfile--;
 		}
 	}
