@@ -1,7 +1,7 @@
 Feature: B05-400- State level shipping restrictions 
 
 @R2_Web @Regression @R2_All @P-Medium @C-Checkout @KER-3144 
-@ZYP_CHECKOUT_K3144-9624 @CR-GK @1HR_R2 @C1-Message
+@ZYP_CHECKOUT_K3144-9624 @CR-GK @1HR_R2 @C1-Message 
 Scenario: Verify if user cannot add AK/HI/ PR address in the shipping details section on Checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -31,7 +31,7 @@ Scenario: Verify if user cannot add AK/HI/ PR address in the shipping details se
 		
 		
 @R2_Web @Regression @R2_All @P-Medium @C-Checkout @KER-3144 
-@ZYP_CHECKOUT_K3144-9648 @CR-GK @C1-Message
+@ZYP_CHECKOUT_K3144-9648 @CR-GK @C1-Message 
 Scenario: verify if proper validation message is displayed if user already has products in his cart and tries to add a restricted address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

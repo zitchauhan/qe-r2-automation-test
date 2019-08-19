@@ -60,6 +60,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	public void user_will_click_on_View_Cart_button() throws Throwable {
 		Thread.sleep(Constants.thread_medium); 
 		assertTrue(clickOnButton(pdpPageObj.btnViewCart));
+		Thread.sleep(Constants.thread_medium);
 		/**Modified from here***/
 		/*
 		Thread.sleep(6000);
@@ -235,6 +236,12 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		waitForElement(pdpPageObj.btnAddToCart);
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 		//Thread.sleep(2000);
+	}
+	@Then("^user click on checkout button in continue shopping$")
+	public void user_click_on_checkout_button_in_continue_shopping() throws Throwable {
+		waitForPageLoad(getDriver());
+		assertTrue(clickOnButton(pdpPageObj.btnCheckoutbuttonon_continueshopping));
+	   
 	}
 
 	@Then("^user click on Ship It Button$")

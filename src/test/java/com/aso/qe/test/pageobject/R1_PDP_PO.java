@@ -41,6 +41,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='PDP_ProductName']") public WebElement txtProductTitle;
 	@FindBy(xpath="//*[contains(@data-auid,'Size_Attribute')]") public WebElement secProductAttributeSizes;
 	@FindBy(xpath="//*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']") public WebElement btnAddToCart;//modified SK - 24 Sep
+	@FindBy(xpath="//*[@data-auid='btncheckout']") public WebElement btnCheckoutbuttonon_continueshopping;//Rishi
 	@FindBy(xpath="//*[@data-auid='PDP_QC_DEC']") public WebElement btnQuantityDec;
 	@FindBy(xpath="//*[@data-auid='PDP_QC_INC']") public   WebElement btnQuantityInc;
 	@FindBy(xpath="//input[@aria-label='Enter Desired Quantity' and @value='1']") public   WebElement txtDesiredQtyValue_1;
