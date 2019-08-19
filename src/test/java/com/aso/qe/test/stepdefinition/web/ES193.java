@@ -17,12 +17,10 @@ public class ES193 extends CommonActionHelper  {
 	
 		@Then("^Verify paypal button on Cart Page$")
 		public void verify_paypal_button_on_Cart_Page() throws Throwable  {
-		
 			assertTrue(isDisplayed(r2CartPo.btnCartPaypal));
-			
-			
-		    
+		   
 		}
+		
 
 	}
 
