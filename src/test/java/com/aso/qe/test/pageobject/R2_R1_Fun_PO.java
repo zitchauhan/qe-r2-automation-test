@@ -83,8 +83,8 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 //   @FindBy(xpath="//*[@data-auid='level3Category-Shooting_m']")public WebElement shooting_M;
    @FindBy(xpath="//*[@data-auid='level4Category-Firearms_m']")public WebElement firearms_M;
    @FindBy(xpath="//*[@data-auid='level3Category-Boating']/*[1]")public WebElement boating_txt;
-   @FindBy(xpath="//*[@data-auid='shopByCategory_tiles']//*[contains(text(),'Kayaks & Canoes')]")public WebElement kayakCanoes_txt;
-   @FindBy(xpath="//*[@data-auid='productCard_4189200']|(//*[starts-with(@data-auid,'productCard_')])[1]")public WebElement intexKayak_txt;
+   @FindBy(xpath="//*[@data-auid='shopByCategory_tiles']|//*[contains(text(),'Kayaks & Canoes')]")public WebElement kayakCanoes_txt;
+   @FindBy(xpath="//*[@data-auid='productCard_1296205']|(//*[starts-with(@data-auid,'productCard_')])[1]")public WebElement intexKayak_txt;
    @FindBy(xpath="//*[@data-auid='level3Category-Boating_m']")public WebElement boating_txt_M;
    @FindBy(xpath="//*[@data-auid='level4Category-Kayaks & Canoes_m']")public WebElement kayakCanoes_txt_M;
    @FindBy(xpath="//*[@data-auid='productCard_242901']|//*[starts-with(@data-auid,'productCard_')]")public WebElement pelican_txt_M;

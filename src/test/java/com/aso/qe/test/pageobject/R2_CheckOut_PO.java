@@ -747,7 +747,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/p[2] | //*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/div")	public WebElement textRoomOfChoiceDeliverMessage; //SID 6-September
 	   @FindBy(xpath="(//*[@data-component='cart']//*[text()='Employee Discount applied'])[1]")public WebElement employeeDiscountItemLevel_CartPage; //SID 13-September
 	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Employee Discount')]")public WebElement employeeDiscountOrderSummerPage; //SID 13-September
-	   @FindBy(xpath="(//*[contains(@data-auid,'level3Category')])[1]//img")public WebElement dealTabProduct; //SID 5-September
+	   @FindBy(xpath="//*[contains(@data-auid,'level2Category-Hot Deals')]")public WebElement dealTabProduct; //SID 5-September//MJR-20/08
 	   
 	  
 		//*************KER-2915*********************//
