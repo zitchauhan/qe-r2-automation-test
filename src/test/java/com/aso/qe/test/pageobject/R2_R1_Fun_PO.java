@@ -266,8 +266,9 @@ public WebElement bopisNoInventoryMesssagePLP;   //SID 10-Jan
 public WebElement lnkPLPChangePickupLocation;
 //End KER-2872 CR-DPK
 
-@FindBy(xpath ="(//*[@data-auid='PDP_IventoryMessage'])[2]/following-sibling::button")
-public WebElement ChooseLocation_Lnk;  //SID Modified 12-Jan
+//@FindBy(xpath ="(//*[@data-auid='PDP_IventoryMessage'])[2]/following-sibling::button") 
+@FindBy(xpath ="//*[@data-auid='PDP_FindAStore']")
+public WebElement ChooseLocation_Lnk;  //Rishi
 
 @FindBy(xpath ="(//*[@data-auid='PDP_IventoryMessage'])[2]")
 public WebElement pdpInventoryMessage;  //SID 12-Jan

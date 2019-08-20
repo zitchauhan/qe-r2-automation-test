@@ -27,7 +27,7 @@ Scenario: Verify that the user should be able to search the store details by ent
 	Then verify Static error message
 
 
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P1 @CB-Cart @KER-3613 @ZYP_CART_K3613-10728 @CR-RK @1HR_R2
+@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P1 @CB-Cart @KER-3613 @ZYP_CART_K3613-10728 @CR-RK @1HR_R2 
 Scenario: Verify that user should be able to open the Find Store modal from PDP for BOPIS
 Given user launches the browser and navigates to "ASO_HOME" page 
 When user clicks on one of the category and navigates to LOne SOF
