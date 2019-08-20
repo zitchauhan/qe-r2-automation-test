@@ -307,7 +307,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="(//div[contains(@class,'breadCrumbComponent')]//*[1]//a)[1]") public WebElement l1LastActiveBreadcrumb;
 	@FindBy(xpath="//*[@data-auid='level2Category-Outdoors']") public WebElement btnOutdoorsCategory;
 	@FindBy(xpath="//*[@data-auid='level3Category-Automotive & Towing']/a ")public WebElement btnAutomotiveTowing_Shop;//UAT9
-	@FindBy(xpath="//*[@data-auid='level2Category-Holiday Deals_m']")public WebElement clickDealItem;//SID modified 4-December
+	@FindBy(xpath="//*[@data-auid='level2Category-Holiday Deals_m'] | (//*[@data-auid='level2Category-Hot Deals'])[2]")public WebElement clickDealItem;//SID modified 4-December //MJR-20/08
 	@FindBy(xpath="//span[text()='Water Parks & Slides']") public WebElement searchTerm;
 	@FindBy(xpath="//div[@class='container css-tnijvs']//h2") public WebElement searchTerm_M;
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing\"]//*[@data-auid='level4Category-Shirt']") public WebElement plpMensShirt;    //SID 10-Jan
