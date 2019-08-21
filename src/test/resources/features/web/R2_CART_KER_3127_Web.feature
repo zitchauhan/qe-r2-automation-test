@@ -151,7 +151,7 @@ Scenario: TC_15-Verify User Able to Checkout, if no errors in cart
 	#Then user click on Add to Cart Button
 	And user click on ship it button
 	When  user click on view cart button 
-	Then  Verify below Sub/Main Module of Cart Page 
+#	Then  Verify below Sub/Main Module of Cart Page 
 		|# Verify following elements in Cart page "Your Cart item details "| 
 		|checkOutYourCart_Btn|
 	And  user click on checkout button in Cart page 
