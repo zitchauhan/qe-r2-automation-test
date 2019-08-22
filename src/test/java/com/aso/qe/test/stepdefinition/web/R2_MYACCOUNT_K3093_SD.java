@@ -35,11 +35,12 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 	public void user_clicks_on_Add_New_Gift_Card_button() throws Throwable {
 		
 		if(isDisplayed(myAccountPo.btnAddGiftCardPlusIcon)) {
-		
+			Thread.sleep(Constants.thread_highest);
 		assertTrue(clickOnButton(myAccountPo.btnAddGiftCardPlusIcon));
 		Thread.sleep(Constants.thread_low);
 		}
 		else {
+			Thread.sleep(Constants.thread_highest);
 			assertTrue(clickOnButton(myAccountPo.btnAddNewGiftCard));
 			Thread.sleep(Constants.thread_low);
 		}

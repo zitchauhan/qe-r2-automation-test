@@ -62,9 +62,8 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 	public void user_click_on_view_cart() throws Throwable {
 	    assertTrue(clickOnButton(pdp.btnViewCart));
 		Thread.sleep(Constants.thread_high);
-		/**Modified from here***/
-		//WebElement el=driver.findElementByXPath("//h1[contains(text(),'YOUR CART')]");
 		System.out.println(sanity.AS_txtYourCart.getText());
+		Thread.sleep(Constants.thread_highest);
 		assertTrue(isDisplayed(sanity.AS_txtYourCart));
 		
 		}
