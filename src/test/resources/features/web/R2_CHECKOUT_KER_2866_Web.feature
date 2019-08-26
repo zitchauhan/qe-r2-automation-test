@@ -183,7 +183,7 @@ Scenario: Verify if User is able to select a Payment method on One Page Checkout
 	And user should be able to see card last four digit
 	And user select another credit card from the drop down
 
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Checkout @KER-2866 @ZYP_CART_K2866-10540 
+@C-BOPIS @R2_Web @R2_All @P1 @CB-Checkout @KER-2866 @ZYP_CART_K2866-10540 @Rishikesh
 Scenario: Verify if User is able to enter billing information for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

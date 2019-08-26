@@ -102,7 +102,7 @@ public class R2_CART_K2927_SD extends CommonActionHelper {
 	@Then("^cart page displays updated tax$")
 	public void cart_page_displays_updated_tax() throws Throwable {
 		Thread.sleep(Constants.thread_medium);
-		float currentTaxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage();
+		float currentTaxDisplayed = cartR2PageObj.getEstimatedTaxOnCartPage(); 
 		System.err.println(currentTaxDisplayed);
 		if (taxDisplayed != 0) {
 			assertTrue(taxDisplayed != currentTaxDisplayed);

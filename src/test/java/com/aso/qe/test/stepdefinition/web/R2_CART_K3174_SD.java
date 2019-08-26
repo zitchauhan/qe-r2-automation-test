@@ -128,7 +128,7 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
 //		setInputText(r2CheckoutPo.ZipCode_Input, webPropHelper.getTestDataProperty("zipcode"));
 //		Thread.sleep(Constants.thread_medium);
 //		setInputText(r2CheckoutPo.EmailAddressforOrderConfirmation_Input,webPropHelper.getTestDataProperty("EmailAddress"));
-//		Thread.sleep(Constants.thread_medium);
+		Thread.sleep(Constants.thread_medium);
 		assertTrue(clickOnButton(r2CheckoutPo.ReviewOrder_Btn));
 		Thread.sleep(Constants.thread_highest);
 	}
