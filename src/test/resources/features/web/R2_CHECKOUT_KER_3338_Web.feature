@@ -172,7 +172,7 @@ Scenario: Verify authenticated user is able to proceed with Paypal as checkout f
 	Then Verify paypal button is clicked 
 	
 	
-@R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
+@R2_Web @Regression @R2_All @P1 @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8259 @CR-AKK 
 Scenario: Verify logged in user is able to select Paypal as Payment method on checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -189,7 +189,13 @@ Scenario: Verify logged in user is able to select Paypal as Payment method on ch
 	And user click on ship it button
 	And user click on viewcart button 
 	Then user click on checkout button in Cart page 
-	Then user click on paypal radiobtn 
+	Then user click on paypal radiobtn
+	And user click on paypal checkout button
+	#And enter the paypal login "PayPalEmail" "PayPalPassword" 
+	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
+	And user able to see the button place order
+	And user is navigated to order confirmation page and captures order number
+	 
 	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-10270 @CR-AKK 
