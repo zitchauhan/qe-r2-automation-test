@@ -11,6 +11,6 @@ Scenario Outline: From Home Page perform Keyword and SKU Search
     Then User closes the web application
     Examples:
     |data|
-    |112766238|
+    |112290495|
     |nike mens compression|
     
