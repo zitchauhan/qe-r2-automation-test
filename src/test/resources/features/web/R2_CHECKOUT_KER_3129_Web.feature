@@ -1,6 +1,6 @@
 Feature: B07-525- Display Final Tax and Total on Checkout 
 
-@R2_Web  @R2_All @P2 @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-8011 @CR-RK
+@R2_Web  @R2_All @P2 @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-8011 @CR-RK 
 Scenario: Verify if  for authenticated User tax line item on checkout page is same as that in cart page
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 	    And user clicks on SignIn link from global header
@@ -22,7 +22,7 @@ Scenario: Verify if  for authenticated User tax line item on checkout page is sa
 		And user will click on Checkout button and navigates to Checkout page
 #		And User should have same tax on Checkout Page Order Summary
 		
-@R2_Web  @R2_All @P2 @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9551 @CR-RK
+@R2_Web  @R2_All @P2 @C-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9551 @CR-RK 
 Scenario: Verify if  User can  view tax line item in order summary section on checkout (Mixed Cart).
 	    Given user launches the browser and navigates to "ASO_HOME" page  
 	    And user clicks on SignIn link from global header
@@ -51,7 +51,7 @@ Scenario: Verify if  User can  view tax line item in order summary section on ch
 #		And User should have same tax on Checkout Page Order Summary	
 
 
-@R2_Web @R2_All @P-High_B @CB-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9550 @C-BOPIS
+@R2_Web @R2_All @P-High_B @CB-Checkout @KER-3129 @ZYP_CHECKOUT_K3129-9550 @C-BOPIS 
 Scenario: Verify if  User can  view tax line item in order summary section on checkout (BOPIS Cart).
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -102,7 +102,7 @@ Scenario: To verify Tax recalculation when user switches from Shipping to store 
 #	Then checkout page displays updated tax
 	
 	
-@R2_Web  @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8009 @CR-RK
+@R2_Web  @R2_All @P-Low @C-Cart @KER-3129 @ZYP_CART_K3129-8009 @CR-RK 
 Scenario: Verify if authenticated User can  view tax line item in order summary section on checkout. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
