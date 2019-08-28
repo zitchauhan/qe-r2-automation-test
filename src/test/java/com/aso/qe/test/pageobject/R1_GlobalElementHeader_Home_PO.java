@@ -49,7 +49,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']") public WebElement btnBurgerMenu;
 	
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']")  public WebElement btnXBurgerMenu;
-	@FindBy(xpath="//*[@data-auid='level1Category-SHOP']") public WebElement btnShopCategory;
+	@FindBy(xpath="//*[@data-auid='level1Category-SHOP']|//*[@data-auid='level1Category-Shop']") public WebElement btnShopCategory;
 	@FindBy(xpath="//*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //SID Modified 18-Nov
 	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m']")public WebElement btnClothingCategory_M; //SID 20-Nov
 	
