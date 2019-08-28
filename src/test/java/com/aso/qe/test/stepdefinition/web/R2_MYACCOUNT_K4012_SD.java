@@ -12,6 +12,8 @@ import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_PDP_PO;
 
+import cucumber.api.Scenario;
+import com.aso.qe.test.stepdefinition.web.plcc.Hooks;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -23,6 +25,7 @@ public class R2_MYACCOUNT_K4012_SD extends CommonActionHelper {
 	R2_CheckOut_PO r2CheckOutPO = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	String actualOrderNumber;
 	//R2_MYACCOUNT_K4327_SD r2MyAccount_SD = PageFactory.initElements(driver, R2_MYACCOUNT_K4327_SD.class);
+	private Scenario scenario;
 	
 	
 	@Then("^user click on view Details of List orders and verify the cancel order button$")
@@ -58,6 +61,8 @@ public class R2_MYACCOUNT_K4012_SD extends CommonActionHelper {
 		waitForElement(r2CheckOutPO.orderConfirmationPage_OrderNumber);
 		actualOrderNumber=r2CheckOutPO.orderConfirmationPage_OrderNumber.getText();
 		System.err.println(actualOrderNumber);
+		scenario = Hooks.scenario;
+		scenario.write(actualOrderNumber);
 		
 	}
 	
