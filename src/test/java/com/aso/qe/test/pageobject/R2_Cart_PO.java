@@ -33,7 +33,11 @@ public class R2_Cart_PO extends CommonActionHelper {
 //	public	WebElement continueShoppingLink;
 	@FindBy(xpath = "//a[@id='checkoutGuestButton']")//not clear not be their
 	public WebElement btnBeginCheckout;
-
+	 
+	@FindBy(xpath = "//*[@class='px-1 px-sm-0 mb-2 d-flex flex-row cart-header']/div[2]/div[1]/div[1]/div[1]")
+	//@FindBy(xpath ="//*[contains(@data-layout,'horizontal')][1]")
+	public WebElement btnCartPaypal;
+	
 //	@FindBy(xpath = "//div[text()='Subtotal']/../div[2]")//***
 //	public WebElement txtSubtotalCart;
 

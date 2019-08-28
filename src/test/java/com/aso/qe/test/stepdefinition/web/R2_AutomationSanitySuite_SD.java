@@ -60,7 +60,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	public void user_will_click_on_View_Cart_button() throws Throwable {
 		Thread.sleep(Constants.thread_medium); 
 		assertTrue(clickOnButton(pdpPageObj.btnViewCart));
-		Thread.sleep(Constants.thread_medium);
+
 		/**Modified from here***/
 		/*
 		
@@ -71,6 +71,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		assertTrue(isDisplayed(r2SanityPo.AS_txtYourCart));
 		
 		
+
 	}
 	@And("^user navigate to Cart page$")
 	public void user_navigate_to_Cart_page() throws Throwable {

@@ -21,6 +21,7 @@ public class R1_HP_K1400_SD extends CommonActionHelper
 	public void User_click_on_sign_up_for_more_deals_and_verify_the_modal() {
 		assertTrue(clickOnButton(globalElementHeader.lnkSIGNUPFORMOREDEALS));
 		assertTrue(isDisplayed(globalElementHeader.lnkSIGNUPFORMOREDEALSMODAL));
+		
 	}
 
 	@Then("^user enter the data and click on submit$")
