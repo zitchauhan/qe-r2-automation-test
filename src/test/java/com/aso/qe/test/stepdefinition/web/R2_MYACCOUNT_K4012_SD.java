@@ -62,7 +62,7 @@ public class R2_MYACCOUNT_K4012_SD extends CommonActionHelper {
 		actualOrderNumber=r2CheckOutPO.orderConfirmationPage_OrderNumber.getText();
 		System.err.println(actualOrderNumber);
 		scenario = Hooks.scenario;
-		scenario.write(actualOrderNumber);
+		scenario.write("Order No = "+actualOrderNumber); //MJR 08/30/19
 		
 	}
 	
