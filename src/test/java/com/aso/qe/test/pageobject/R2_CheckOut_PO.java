@@ -81,10 +81,14 @@ public class R2_CheckOut_PO extends CommonActionHelper
 
 	@FindBy(xpath = "//*[@name='zipCode']")
 	public WebElement inputCheckoutZipCode;
+	
 
 	@FindBy(xpath = "//*[@name='city']")
 	public WebElement inputCheckoutCity;
 	
+	
+    @FindBy(xpath = "//*[@id='shippingAddressRequired']//div[1]//section[1]")
+    public WebElement shippingerrormessage;
 
 	@FindBy(xpath = "//*[@data-auid='btncheckout_goto_shipping_method_btn']")
 	public WebElement btnGoToShippingMethod;

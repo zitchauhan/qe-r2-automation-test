@@ -4,9 +4,11 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.tools.ant.util.SymbolicLinkUtils;
+import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
@@ -39,10 +41,8 @@ public class ES194 extends CommonActionHelper{
 			 
 			}
 			System.err.println(getTitle());
-			String APaypaltitle= driver.getTitle();
-			Thread.sleep(2000);
-			  String Epaypaltitle="PayPal" ;
-			  assertEquals(APaypaltitle, Epaypaltitle);
+			Thread.sleep(Constants.thread_medium);
+			Assert.assertTrue(isDisplayed(r2CartPo.PaypalHomepage));
 			
 		    
 		    
