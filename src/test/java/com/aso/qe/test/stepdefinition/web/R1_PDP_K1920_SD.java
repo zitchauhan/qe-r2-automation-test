@@ -60,8 +60,8 @@ public R2_Sanity_PO sanity=PageFactory.initElements(getDriver(), R2_Sanity_PO.cl
 			waitForElement(pdpPageObj.btnViewCart);
 			assertTrue(clickOnButton(pdpPageObj.btnViewCart));
 			//modified for loop issue
-			System.out.println(sanity.AS_txtYourCart.getText());
-			assertTrue(isDisplayed(sanity.AS_txtYourCart));
+			//We are validating the checkout btn here for checkpoint
+			assertTrue(isDisplayed(sanity.AS_btnCheckOutTop));
 		}
 	}
 

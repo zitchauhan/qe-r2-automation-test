@@ -144,15 +144,26 @@ Scenario: TC_11- Verify Apply Promotion / Remove Promotion
 	And User clicks on Remove Promo code link 
 	Then Promo code is Removed 
 	
-@R2_Web @R2_WAST-14 @P1 @C-Cart @KER-3127 @ZYP_CART_K3127-8168 @AutomationSmokeORIG
+@R2_Web @R2_WAST-14 @P1 @C-Cart @KER-3127 @ZYP_CART_K3127-8168 @AutomationSmokeORIG@Rahul
 Scenario: TC_15-Verify User Able to Checkout, if no errors in cart 
-	Given  user launches the browser and navigates to "ASO_HOME" page 
-	Then User searches a product "productName" and navigates to PDP 
-	#Then user click on Add to Cart Button
+#	Given  user launches the browser and navigates to "ASO_HOME" page 
+#	Then User searches a product "productName" and navigates to PDP 
+#	#Then user click on Add to Cart Button
+#	And user click on ship it button
+#	And user will click on View Cart button 
+##	Then  Verify below Sub/Main Module of Cart Page 
+#		|# Verify following elements in Cart page "Your Cart item details "| 
+#		|checkOutYourCart_Btn|
+#	And  user click on checkout button in Cart page 
+
+Given user launches the browser and navigates to "ASO_HOME" page 
+	When User Navigates L2 form Homepage Header 
+	And User clicks on product in PLP  
+	#	And user click on Add to Cart Button
 	And user click on ship it button
-	When  user click on view cart button 
-#	Then  Verify below Sub/Main Module of Cart Page 
-		|# Verify following elements in Cart page "Your Cart item details "| 
-		|checkOutYourCart_Btn|
-	And  user click on checkout button in Cart page 
+	When user click on view cart button 
+	Then Verify below Sub/Main Module of Cart Page
+	|# Verify following elements in Cart page "Your Cart item details "| 
+	|checkOutYourCart_Btn|
+	And user click on checkout button in Cart page 
 	

@@ -32,10 +32,10 @@ Scenario: Verify that user should be able to open the Find Store modal from PDP 
 Given user launches the browser and navigates to "ASO_HOME" page 
 When user clicks on one of the category and navigates to LOne SOF
     Then user clicks on one of the subcategory and navigates to LTwo SOF
-    Then user clicks on one of the product category and navigates to LThree SOF
-	Then User is navigated to pdp page
-	And clicks on the Change Pickup Location link
-	Then user should be able to see the Find a Store modal
+#    Then user clicks on one of the product category and navigates to LThree SOF
+#	Then User is navigated to pdp page
+#	And clicks on the Change Pickup Location link
+#	Then user should be able to see the Find a Store modal
 	
 
 	
