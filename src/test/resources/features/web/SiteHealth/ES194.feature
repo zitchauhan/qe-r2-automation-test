@@ -10,8 +10,9 @@ Scenario: verify if user is redirecting to paypal home page by clicking on paypa
     When user navigate to Cart page 
     Then Verify paypal button on Cart Page 
 	Then User click on paypal button on cart page
+	Then user switch to iframe and verify PayPal Home page
 	
-   # Then user switch to window of paypal 
-	# Then user verify the element of paypal window
-	#Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
-   # Then Verify User is navigated to paypal home page.
+	
+	
+	
+	
