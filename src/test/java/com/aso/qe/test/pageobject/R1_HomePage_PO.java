@@ -57,7 +57,7 @@ public class R1_HomePage_PO {
 	// KER- 727 END
 	//KER-710 Start
 	//@FindBy(xpath="//*[text()='SHOP']") public WebElement btnShop;/RKA 8 aug
-		@FindBy(xpath="//*[@data-auid='level1Category-SHOP']/*[1]")public WebElement btnShop;
+		@FindBy(xpath="//*[@data-auid='level1Category-SHOP']/*[1] | //*[@data-auid='level1Category-Shop']")public WebElement btnShop;
 		
 		//@FindBy(xpath="(//*[text()='SHOES'])[1]") public WebElement btnShoe;/RKA 8 aug
 		@FindBy(xpath="//*[@data-auid='level2Category-Shoes'] | //*[@data-auid='level2Category-Shoes & Boots']")public WebElement btnShoe;  //SID 1-Sept
