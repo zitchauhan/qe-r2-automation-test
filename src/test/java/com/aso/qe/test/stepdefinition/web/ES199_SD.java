@@ -24,16 +24,26 @@ public class ES199_SD extends CommonActionHelper{
 
 	@Then("^User click on Cancel and return to Academy Sports Outdoor's Test Store link on paypal home page$")
 	public void user_click_on_Cancel_and_return_to_Academy_Sports_Outdoor_s_Test_Store_link_on_paypal_home_page() throws Throwable {
+		String winHandleBefore = driver.getWindowHandle();
+		for(String winHandle : driver.getWindowHandles()){
+		    driver.switchTo().window(winHandle);
+		   System.err.println(driver.getTitle());
+		 
+		}
+		System.err.println(getTitle());
 		Thread.sleep(Constants.thread_medium);
 		driver.manage().window().maximize();
 		Thread.sleep(Constants.thread_medium);
 		Assert.assertTrue(isDisplayed(r2CartPo.Paypalteststorelink));
 		clickOnLink(r2CartPo.Paypalteststorelink); 
+		driver.switchTo().window(winHandleBefore);
+		
+		
 	}
 
 	@Then("^Verify user will navigated to cart page$")
 	public void verify_user_will_navigated_to_cart_page() throws Throwable {
-		Thread.sleep(Constants.thread_highest);
+		Thread.sleep(Constants.thread_low);
 		System.err.println(driver.getTitle());		
 		genericPO.verifyPresenceOfCartPage();
 	    

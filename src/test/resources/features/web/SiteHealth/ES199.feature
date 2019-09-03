@@ -10,7 +10,6 @@ Scenario: verify if user is redirecting to cart page by clicking on Cancel and r
     When user navigate to Cart page 
     Then Verify paypal button on Cart Page 
 	Then User click on paypal button on cart page
-	Then user switch to iframe and verify PayPal Home page
 	Then User click on Cancel and return to Academy Sports Outdoor's Test Store link on paypal home page
 	Then Verify user will navigated to cart page
 	
