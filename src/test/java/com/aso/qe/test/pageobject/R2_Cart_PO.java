@@ -38,6 +38,12 @@ public class R2_Cart_PO extends CommonActionHelper {
 	//@FindBy(xpath ="//*[contains(@data-layout,'horizontal')][1]")
 	public WebElement btnCartPaypal;
 	
+	@FindBy(xpath = "//*[text()='Pay with PayPal']")
+	public WebElement PaypalHomepage; 
+	
+	@FindBy(xpath = "//*[text()='Pay with Debit or Credit Card']//following::a[1]")
+	public WebElement Paypalteststorelink;
+	
 //	@FindBy(xpath = "//div[text()='Subtotal']/../div[2]")//***
 //	public WebElement txtSubtotalCart;
 

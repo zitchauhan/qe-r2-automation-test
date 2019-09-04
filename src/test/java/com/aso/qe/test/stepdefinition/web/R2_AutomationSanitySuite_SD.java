@@ -62,13 +62,9 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		assertTrue(clickOnButton(pdpPageObj.btnViewCart));
 
 		/**Modified from here***/
-		/*
 		
-		WebElement el=driver.findElementByXPath("//h1[contains(@class,'css-gi6fx0 mt-1 mb-0')] | //h1[text()='YOUR CART']");*/
-		Thread.sleep(4000);
-		System.out.println(r2SanityPo.AS_txtYourCart.getText());
 		Thread.sleep(Constants.thread_medium);
-		assertTrue(isDisplayed(r2SanityPo.AS_txtYourCart));
+		assertTrue(isDisplayed(r2SanityPo.AS_btnCheckOutTop));
 		
 		
 

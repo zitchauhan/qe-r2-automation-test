@@ -74,7 +74,7 @@ public R2_Sanity_PO sanity=PageFactory.initElements(getDriver(), R2_Sanity_PO.cl
 			assertTrue(clickOnButton(pdpPageObj.btnCheckout));
 		}else
 		{
-			waitForElement(pdpPageObj.btnCheckout);
+			 waitForElement(pdpPageObj.btnCheckout);
 			isDisplayed(pdpPageObj.btnCheckout);
 			assertTrue(clickOnButton(pdpPageObj.btnCheckout));
 		}
