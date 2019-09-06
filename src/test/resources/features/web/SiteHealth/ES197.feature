@@ -10,7 +10,7 @@ Scenario: Verify Accurate Shipping and Tax on Order Review After Arriving from P
     When user navigate to Cart page 
     Then Verify paypal button on Cart Page 
 	Then User click on paypal button on cart page
-	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
-	Then capture order summary in paypal
+#	Then user switch to iframe and enter the paypal login "PayPalEmail1" "PaypalPassword1" 
+	Then user enter the paypal login "PayPalEmail1" "PayPalPassword" and capture order summary in paypal
 	Then capture order summary in checkout after arriving from paypal
 	Then verify order summary in checkout should be same as in paypal
