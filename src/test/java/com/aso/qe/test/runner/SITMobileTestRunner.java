@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 		features="src/test/resources/features/sit_mobile/",
 		glue="com.aso.qe.test.stepdefinition.web",
 		monochrome=true, 
-		plugin={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
+		format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
 		) 
 public class SITMobileTestRunner {
 	

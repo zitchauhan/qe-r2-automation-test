@@ -17,7 +17,7 @@ import cucumber.api.junit.Cucumber;
 //			   	"html:target/cucumber-report/runapiat",
 //		        "json:target/cucumber-report/runapiat/android.json",
 //                "rerun:target/cucumber-report/runapiat/rerun.txt"}
-			plugin =	{"pretty","html:target/Destination", "json:target/cucumber.json"}
+			format =	{"pretty","html:target/Destination", "json:target/cucumber.json"}
 		)
 public class AndroidTestRunner {
 

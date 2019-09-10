@@ -31,7 +31,7 @@ plugin = {"html:target/automation-report/cucumber-pretty","json:target/cucumber.
 		features="src/test/resources/features/api/",
 		glue="com.aso.qe.test.stepdefinition.api",
 		monochrome=true, 
-		plugin={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
+		format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
 		) 
 
 /*@CucumberOptions(features = "src/test/resources/features/api/",

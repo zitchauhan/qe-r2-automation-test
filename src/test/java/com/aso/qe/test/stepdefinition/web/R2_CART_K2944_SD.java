@@ -3,7 +3,8 @@ package com.aso.qe.test.stepdefinition.web;
 //<<<<<<< Updated upstream
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
-//import io.cucumber.datatable.DataTable;
+
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;

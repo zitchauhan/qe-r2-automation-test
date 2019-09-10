@@ -10,8 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R2_PDP_PO;
 
-//import cucumber.api.DataTable;
-import io.cucumber.datatable.*;
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Then;
 import freemarker.template.utility.NullArgumentException;
 
@@ -25,7 +24,7 @@ public class R2_VERIFICATION_PDP_SD extends CommonActionHelper {
 	public void Verify_below_Sub_Main_Module_of_My_Account(DataTable arg1) throws Throwable {
 
 		try {
-			List<List<String>> elements = arg1.asLists();
+			List<List<String>> elements = arg1.raw();
 			for (int i = 1; i < elements.size(); i++) {
 				String currentElement = elements.get(i).get(0);
 				// ===============================================================================
