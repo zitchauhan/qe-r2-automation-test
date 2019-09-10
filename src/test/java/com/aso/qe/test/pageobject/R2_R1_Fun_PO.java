@@ -24,7 +24,7 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 	public WebElement btnOutdoorCategory;//Area L1 // 5 sept CR-DPK
 	@FindBy(xpath = "//*[@data-auid='level2Category-OUTDOORS_m'] | //*[@data-auid='level2Category-Outdoors_m']") public WebElement btnOutdoorCategory_M ; //SID 4-December
 
-	@FindBy(xpath = "//*[@data-auid='shopByCategory_tiles']//*[@data-auid='shopByCategory_9']")
+	@FindBy(xpath = "//*[@data-auid='shopByCategory_tiles']| //*[@data-auid='level3Category-Shooting']")
 	public WebElement secCategory_CLP;//Area L2
 	@FindBy(xpath = "//*[@data-auid='level3Category-Shooting_m']")
 	public WebElement secCategory_CLPMobile;//Area L2 // 5 sept CR-DPK
