@@ -50,6 +50,8 @@ public class R1_Sanity extends CommonActionHelper{
 	{
 		//////////////////////-hitain-CR----------->
 		//globalElementHeader.navigateToL2ViaClick_DesktopHomepage();
+		/*RS-9/10/19*/
+		Thread.sleep(4000);
 		globalElementHeader.navigateL2HeaderToPLP();
 	}
 
