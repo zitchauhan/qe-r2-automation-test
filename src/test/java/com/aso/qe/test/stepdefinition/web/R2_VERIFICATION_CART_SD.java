@@ -16,7 +16,7 @@ import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
-import cucumber.api.DataTable;
+import io.cucumber.datatable.*;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import freemarker.template.utility.NullArgumentException;
@@ -81,7 +81,7 @@ public class R2_VERIFICATION_CART_SD extends CommonActionHelper {
 		String currentElement = null;
 
 		try {
-			List<List<String>> elements = arg1.raw();
+			List<List<String>> elements = arg1.asLists(String.class);
 			for (int i = 1; i < elements.size(); i++) {
 				currentElement = elements.get(i).get(0);
 

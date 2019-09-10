@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
-import cucumber.api.DataTable;
+import io.cucumber.datatable.*;
 import cucumber.api.java.en.Then;
 import freemarker.template.utility.NullArgumentException;
 
@@ -23,7 +23,7 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 	public void verify_below_Sub_Main_Module_of_Checkout_Page(DataTable arg1) throws Throwable {
 		String currentElement = null;
 		try {
-			List<List<String>> elements = arg1.raw();
+			List<List<String>> elements = arg1.asLists();
 			for (int i = 1; i < elements.size(); i++) {
 				currentElement = elements.get(i).get(0);
 				//////////////////////////// Starts CR-SK

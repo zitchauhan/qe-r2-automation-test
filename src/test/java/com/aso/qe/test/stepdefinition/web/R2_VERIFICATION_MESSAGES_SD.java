@@ -11,7 +11,7 @@ import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
-import cucumber.api.DataTable;
+import io.cucumber.datatable.*;
 import cucumber.api.java.en.Then;
 import freemarker.template.utility.NullArgumentException;
 
@@ -26,7 +26,7 @@ public class R2_VERIFICATION_MESSAGES_SD extends CommonActionHelper {
 		//Commiting code till the time error message does not fixed.
 		Thread.sleep(Constants.thread_highest);
 		try {
-			List<List<String>> elements = arg1.raw();
+			List<List<String>> elements = arg1.asLists();
 			for (int i = 1; i < elements.size(); i++) {
 				String currentElement = elements.get(i).get(0);
 				System.err.println(currentElement.trim());
@@ -44,7 +44,7 @@ public class R2_VERIFICATION_MESSAGES_SD extends CommonActionHelper {
 		//Commiting code till the time error message does not fixed.
 
 		try {
-			List<List<String>> messages = arg1.raw();
+			List<List<String>> messages = arg1.asLists();
 			for (int i = 1; i < messages.size(); i++) {
 				String currentMessage = messages.get(i).get(0);
 				VerifyTextNotPersent(currentMessage.trim());

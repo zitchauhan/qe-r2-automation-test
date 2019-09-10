@@ -28,7 +28,7 @@ import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
-import cucumber.api.DataTable;
+import io.cucumber.datatable.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -400,7 +400,7 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	public void verify_below_Sub_Main_Module_of_MyAccount(DataTable arg1) throws Throwable {
 		String currentElement = null;
 		try {
-			List<List<String>> elements = arg1.raw();
+			List<List<String>> elements = arg1.asLists();
 			for (int i = 1; i < elements.size(); i++) {
 				currentElement = elements.get(i).get(0);
 				// ===============================================================================

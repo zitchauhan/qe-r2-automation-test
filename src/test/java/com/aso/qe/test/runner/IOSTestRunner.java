@@ -18,7 +18,7 @@ import cucumber.api.junit.Cucumber;
 //		        "json:target/cucumber-report/runapiat/ios.json",
 //                "rerun:target/cucumber-report/runapiat/rerun.txt"}
 		
-				format =	{"pretty","html:target/Destination", "json:target/cucumber.json"}
+				plugin =	{"pretty","html:target/Destination", "json:target/cucumber.json"}
 		)
 
 public class IOSTestRunner {
