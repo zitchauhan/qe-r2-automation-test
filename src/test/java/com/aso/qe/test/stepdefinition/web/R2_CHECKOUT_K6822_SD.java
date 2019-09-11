@@ -38,7 +38,8 @@ public class R2_CHECKOUT_K6822_SD extends CommonActionHelper {
 
 	@And("^user clicks on edit payment cta$")
 	public void user_clicks_on_edit_payment_cta() throws Throwable {
-		scrollPageToWebElement(r2CheckOutPo.secPaymentHeading);
+		Thread.sleep(Constants.thread_high);
+	//	scrollPageToWebElement(r2CheckOutPo.secPaymentHeading);
 		if (isDisplayed(r2CheckOutPo.EditPayment_Link)) {
 			assertTrue(clickOnButton(r2CheckOutPo.EditPayment_Link));
 		}
