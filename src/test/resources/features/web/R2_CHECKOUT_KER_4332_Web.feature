@@ -1,9 +1,8 @@
-Feature: B10-500 - Buy Now on PDP
-
-
-@R2_Web  @R2_All @P1 @C-Order @CC-Checkout_Order   @KER-4332 @ZYP_CHECKOUT_K4332-9524 @CR-AKK @C1-Message @AutomationSmokeORIG
-
-Scenario: FIX STEP Capture Order No & check it in MyAccount Verify user can navigate to Order confirmation page upon clicking Buy Now and can see order in MyAccount
+	Feature: B10-500 - Buy Now on PDP
+	
+	
+	@R2_Web  @R2_All @P1 @C-Order @CC-Checkout_Order   @KER-4332 @ZYP_CHECKOUT_K4332-9524 @CR-AKK @C1-Message @AutomationSmokeORIG
+	Scenario: FIX STEP Capture Order No & check it in MyAccount Verify user can navigate to Order confirmation page upon clicking Buy Now and can see order in MyAccount
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
