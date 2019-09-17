@@ -5,7 +5,7 @@ Scenario: To verify Find a Store CTA for LSI message Sold in Stores- Desktop
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then user navigates to PLP of any product
     Then user clicks on the product card and navigates to PDP of the product
-	And user verify the inventory message "Sold in Store"
+	And user verify the inventory message "Ships to Store"
 	And below inventory message user see find a store option
 	Then user click on find a store option available on pdp below inventory message
 	Then User is able to see Find a Store Modal

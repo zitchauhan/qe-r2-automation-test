@@ -178,7 +178,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	//KER-1925 REdesign By RKA 14 AUg
 	@FindBy(xpath="(//*[@class='c-price__sub css-1f28zyy e1xaasfo1'])[1]")public WebElement imgWithoutPRomotion_PRice;
     @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Ad Feature']")public WebElement filterADfeature; 
-	@FindBy(xpath="//*[@data-auid='drawer_Clearance']")public WebElement filterClearence;
+	@FindBy(xpath="//*[@data-auid='drawer_Clearance'] | //*[starts-with(@class,'badge') and contains(text(),'Clearance')]")public WebElement filterClearence;//MJR-09/16/19
 	@FindBy(xpath="(//*[contains(@class,'badge css-')])[1]")public WebElement firstClearanceItem;
 	@FindBy(xpath="(//*[contains(@class,'badge css-')])[1]/../following-sibling::*/section/*/*[1]/*[2]")public WebElement PriceOFfirstClearenceITem;
 	@FindBy(xpath="//*[@class='css-115kh7q e1xidll61']")public WebElement txtPriceofPDP;
@@ -353,7 +353,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@role='tooltip']")	public WebElement reviewFlyout;  //SID 28-August
 	
 	// KER-3728 Start CR-AKK
-	@FindBy(xpath = "//*[@data-auid='level1Category-SHOP']")
+	@FindBy(xpath = "//*[@data-auid='level1Category-SHOP'] | //*[@data-auid='level1Category-Shop']") //MJR-09/16/19
 	public WebElement btnShopCategory1;
 	@FindBy(xpath = "//a[@data-auid='level2Category-Sports']")
 	public WebElement btnSportsCategory;

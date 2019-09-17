@@ -50,7 +50,7 @@ public class R1_PDP_K1925_SD extends CommonActionHelper {
 		//plpPageObj.clickShirtImage();
 		//clickOnButton(pdpPageObj.imgWithoutPRomotion_PRice);
 		//Fixed By RKA 14 Aug
-		assertTrue(clickOnButton(pdpPageObj.filterADfeature));
+		//assertTrue(clickOnButton(pdpPageObj.filterADfeature));
 		assertTrue(clickOnButton(pdpPageObj.filterClearence));
 		
 		
