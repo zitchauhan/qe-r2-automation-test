@@ -24,7 +24,8 @@ Feature: To verify Product Badging and Status - Ad Feature Display
 
     Examples: 
       | data |
-      | guns |
+      #| guns |
+      |firearms|
 
   @Web @All @KER-621 @ZYP_PLP_K621-6183 @Regression @C-PLP @CR-SG
   Scenario: Verify the color of ONLINE BADGE
