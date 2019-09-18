@@ -58,7 +58,7 @@ public class R2_CHECKOUT_K5892_SD extends CommonActionHelper {
 	@Then("^user fill expired credit card detail$")
 	public void user_fill_expired_credit_card_detail() throws Throwable {
 		setInputText(mpo.txtCreditCardNumber, webPropHelper.getTestDataProperty("CardVISA"));
-		setInputText(mpo.txtExpiryDate, "1018");
+		setInputText(mpo.txtExpiryDate, "1030");
 		setInputText(mpo.txtCVV, webPropHelper.getTestDataProperty("ThreeDigitCVV"));
 
 	}

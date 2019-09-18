@@ -18,7 +18,8 @@ Scenario: Verify that user view Find a Store modal from Change Location in Check
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
-	When user enters "BOPIS_Product" in the searchbox
+	When user enters "BOPIS_SOF_Product" in the searchbox
+	#When user enters "BOPIS_Product" in the searchbox
 	#And user click on Add to Cart Button 
 	And user click on ship it button
 	And user click on view cart
@@ -32,12 +33,14 @@ Scenario: Verify user can change the store using Find in Store modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
-	When user enters "BOPIS_Product" in the searchbox
+	When user enters "BOPIS_SOF_Product" in the searchbox
+	#When user enters "BOPIS_Product" in the searchbox
 	#And user click on Add to Cart Button 
 	And user click on ship it button
 	And user click on view cart
 	Then user select in store pickup option
-	And user click on checkout button
+	#And user click on checkout button
+	And user will click on Checkout button and navigates to Checkout page
 	Then user click on change location button
 	When User select store with "BOPIS_Store2"
 	
@@ -47,13 +50,14 @@ Scenario: Verify the user is able to see the full inventory availability on Find
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
-	When user enters "BOPIS_Product" in the searchbox
+	When user enters "BOPIS_SOF_Product" in the searchbox
+	#When user enters "BOPIS_Product" in the searchbox
 	#And user click on Add to Cart Button
 	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
-	And user check the selected store name
+#	And user check the selected store name
     Then user click on change location button
     Then User is able to see Find a Store Modal
     And user check that the selected store appear at the top
