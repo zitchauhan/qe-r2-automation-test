@@ -115,12 +115,13 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
 	
 	@And("^user fill the payment details for sof registered user$")
 	public void user_fill_the_payment_details_for_sof_registered_user() throws InterruptedException {
-		Thread.sleep(Constants.thread_medium);
+		try {
+			Thread.sleep(Constants.thread_medium);
 //		waitForElement(r2CheckoutPo.CreditCardNumber_Input);
 //		r2CheckoutPo.ZipCode_Input.clear();
 //		setInputText(r2CheckoutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
 //		setInputText(r2CheckoutPo.ExpirationDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
-		setInputText(r2CheckoutPo.Cvv_Input, webPropHelper.getTestDataProperty("CVV"));
+			setInputText(r2CheckoutPo.Cvv_Input, webPropHelper.getTestDataProperty("CVV"));
 //		setInputText(r2CheckoutPo.FirstName_Input, webPropHelper.getTestDataProperty("FirstName"));
 //		setInputText(r2CheckoutPo.LastName_Input, webPropHelper.getTestDataProperty("LastName"));
 //		setInputText(r2CheckoutPo.PhoneNumber_Input, webPropHelper.getTestDataProperty("PhoneNumber"));
@@ -128,8 +129,12 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
 //		setInputText(r2CheckoutPo.ZipCode_Input, webPropHelper.getTestDataProperty("zipcode"));
 //		Thread.sleep(Constants.thread_medium);
 //		setInputText(r2CheckoutPo.EmailAddressforOrderConfirmation_Input,webPropHelper.getTestDataProperty("EmailAddress"));
-		Thread.sleep(Constants.thread_medium);
-		assertTrue(clickOnButton(r2CheckoutPo.ReviewOrder_Btn));
-		Thread.sleep(Constants.thread_highest);
+			Thread.sleep(Constants.thread_medium);
+			assertTrue(clickOnButton(r2CheckoutPo.ReviewOrder_Btn));
+			Thread.sleep(Constants.thread_highest);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
