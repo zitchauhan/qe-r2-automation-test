@@ -15,7 +15,7 @@ Scenario: Verify Accurate Shipping and Tax on Order Review After Arriving from P
 	Then capture order summary in checkout after arriving from paypal
 	Then verify order summary in checkout should be same as in paypal
 	
-	 @ES197 @CR-NN 
+	 @ES197 @CR-NN @P1 @P1Temp
 Scenario: Place order using Paypal express
 
     Given user launches the browser and navigates to "ASO" page 
