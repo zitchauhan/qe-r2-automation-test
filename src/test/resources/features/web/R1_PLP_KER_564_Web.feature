@@ -1,7 +1,7 @@
 Feature: Faceted Navigation - Refresh products whenever the filters values changed
 
 
- @Web @Regression @KER-564  @ZYP_PLP_K564-2874 @C-PLP @CR-RKA
+ @Web @Regression @KER-564  @ZYP_PLP_K564-2874 @C-PLP @CR-RKA @P1 @P1Temp
 Scenario: Verify Faceted Navigation - Refresh products whenever the filters values changed for Desktop
     Given user launches the browser and navigates to "ASO_HOME" page    
     Then User navigates to L3 from home page for grid sorting

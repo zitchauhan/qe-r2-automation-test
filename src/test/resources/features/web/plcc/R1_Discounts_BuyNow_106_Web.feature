@@ -1,7 +1,7 @@
 Feature: PLCC: Discounts for Buy now 
 
 
-@C-PLCC @Regression @All @PLCC-106 @CR-Manju
+@C-PLCC @Regression @All @PLCC-106 @CR-Manju @Rahul
 Scenario: Verify user can process the order for Buy Now
 	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user click on My Account link 
@@ -9,7 +9,8 @@ Scenario: Verify user can process the order for Buy Now
 	And user enter Email address in sign-in page "Email_UserWithSavedAddressAndPayment" 
 	And user enter password in sign-in page "BuynowPwd" 
 	Then user click on Signin-button 
-	And user navigates to ASO-Home page 
+	Then user should get logged in successfully
+#	And user navigates to ASO-Home page 
 	When user enters "SKUForBuyNow" in the search box plcc
 	And user click on search icon 
 	And user click on Buy Now button

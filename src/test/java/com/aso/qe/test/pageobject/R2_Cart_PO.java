@@ -177,7 +177,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "(//*[@data-auid='crt_inputQty'])[1]")
 	public WebElement limitedQuantityAddedInCart;  //SID 12-Jan
 	
-	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']/*[2]/*[2]/*[2]")
+	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']/*[2]/*[2]") //MJR-09/16/19
 	public WebElement storeNameOnCartPageInStorePickUp;  //SID 23-Jan
 	
 	@FindBy(xpath = "//*[text()='Change Location']/parent::*")
@@ -815,7 +815,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath="(//*[text()='Color'])[1]/following::*[1]")public WebElement txtPrdColor;// txt_color input in color
 	@FindBy(xpath="(//*[text()='Size'])[1]/following::*[1]")public WebElement txtPrdSize;//txtPrdSize  txt_size input in size
 	@FindBy(xpath="//span[text()='Ship To Me']")public WebElement rbShipToMe;
-	@FindBy(xpath="//span[text()='Store Pickup – FREE']")public WebElement rbInStorePickUp; //SID Modified 12-Jan
+	@FindBy(xpath="//span[text()='Store Pickup FREE']")public WebElement rbInStorePickUp; //SID Modified 12-Jan
 	@FindBy(xpath="//*[text()='Ship To Store'] | //*[text()='Special Order Ships to Store']") public WebElement ShipToStore_radioBtn;
 	@FindBy(xpath="//input[@data-auid='crt_inputQty']")public WebElement input_Quantity;
 	@FindBy(xpath="(//*[@data-auid='crt_qtyField'])[1]")public WebElement txt_Quantity;

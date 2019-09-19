@@ -1,13 +1,13 @@
 Feature: [Web] Page Auto Scroll 
 
-@Regression @Web @KER-4041 @ZYP_PLP_K4041-6279 @C-PLP @1HR @Rahul
+@Regression @Web @KER-4041 @ZYP_PLP_K4041-6279 @C-PLP @1HR 
 Scenario: Verify the Page Auto Scroll functionality in L2 page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User to navigate to bottom 
 	Then verify Auto scroll 
 	Then user click on Auto scroll button 
 	
-@Regression @Web @KER-4041 @ZYP_PLP_K4041-4873 @C-PLP @1HR @Rahul
+@Regression @Web @KER-4041 @ZYP_PLP_K4041-4873 @C-PLP @1HR 
 Scenario: Verify the Page Auto Scroll functionality in Home page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User to navigate to bottom 

@@ -23,7 +23,7 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	// Start Sanity CR-DPK
 	@FindBy(xpath = "//button[@data-auid='hamburgerMenuToggleBtn_m']")
 	public WebElement AS_btnXBurgerMenu;
-	@FindBy(xpath = "//*[@data-auid='level1Category-SHOP']")
+	@FindBy(xpath = "//*[@data-auid='level1Category-SHOP'] | //*[@data-auid='level1Category-Shop']") //MJR-08/30/19
 	public WebElement AS_btnShopCategory;
 	@FindBy(xpath = "//*[@data-auid='level2Category-CLOTHING_m'] | //*[@data-auid='level2Category-CLOTHING'] | //*[@data-auid='level2Category-Clothing'] | //*[@data-auid='go-to-Clothing_m'] | //*[@data-auid='level2Category-Clothing_m']") //4Sep
 	public WebElement AS_btnClothingCategory;

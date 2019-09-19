@@ -361,6 +361,7 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 						else if (currentElement.equalsIgnoreCase("rdPaypal"))
 						assertTrue(isDisplayed(r2CheckoutPo.rdPaypal));
 					else if (currentElement.equalsIgnoreCase("PayPalCheckOut_Btn"))
+					
 						assertTrue(isDisplayed(r2CheckoutPo.PayPalCheckOut_Btn));
 				else if (currentElement.equalsIgnoreCase("SavePaymentInfoForLater_checkBox"))
 					assertTrue(isDisplayed(r2CheckoutPo.savePaymentInfoForLater_checkBox));

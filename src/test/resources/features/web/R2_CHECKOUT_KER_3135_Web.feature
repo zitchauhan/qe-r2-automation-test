@@ -32,7 +32,7 @@ Scenario: To verify change billing Address CTA
 		|City_Input|
 		|State_DD|
 		#|SignuptogetHotDeals_checkBox|
-		|SendSMSTextUpdatesAboutMyOrder_checkbox|
+		#|SendSMSTextUpdatesAboutMyOrder_checkbox|
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
 	And user click on confirm billing address button 
 	
@@ -66,7 +66,7 @@ Scenario: To verify all fields in Billing Address Form
 		|City_Input|
 		|State_DD|
 		#|SignuptogetHotDeals_checkBox|
-		|SendSMSTextUpdatesAboutMyOrder_checkbox|
+		#|SendSMSTextUpdatesAboutMyOrder_checkbox|
 		|SavePaymentInfoForLater_checkBox|
 		|ReviewOrder_Btn|
 		

@@ -1,6 +1,6 @@
 Feature: B03-300- Out of Stock
 
-@R2_Web @R2_All @P1 @1HR_R2 @CB-Cart @KER-2944 @ZYP_CART_K2944-9813 @C-BOPIS@Rahul
+@R2_Web @R2_All @P1 @1HR_R2 @CB-Cart @KER-2944 @ZYP_CART_K2944-9813 @C-BOPIS 
 Scenario: verify if User is prompted to remove the OOS item from cart to proceed to checkout (BOPIS)
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header

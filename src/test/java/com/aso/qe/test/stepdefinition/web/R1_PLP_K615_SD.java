@@ -76,7 +76,8 @@ public class R1_PLP_K615_SD extends CommonActionHelper{
 	
 	@Then("^User Check for the by default value as Best Selling$")
 	public void user_Check_for_the_by_default_value_as_Best_Selling() throws Throwable {
-	   assertEquals(PLP_PO.sortby_bestSelling.getText(), "Best Selling");
+		String Bestselling=PLP_PO.sortby_bestSelling.getText();
+	   assertEquals(Bestselling , "Best Selling");
 	}
 
 

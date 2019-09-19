@@ -45,7 +45,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement bannerCartPage;
 	@FindBy(xpath = "//img[@src='/content/dam/academysports/banner-mobile.jpg']")
 	public WebElement bannerCartPage_m;
-	@FindBy(xpath = "//*[@data-auid='continuetocheckout_existing_user']")
+	@FindBy(xpath = "//*[@data-auid='continuetocheckout_existing_user'] | //*[@data-auid='continuetocheckout_under_investigation'] ") //MJR-09/16/19
 	public WebElement continueBtnExistingUser;
 	@FindBy(xpath = "//*[@data-auid='continuetocheckout_error']")
 	public WebElement continueToCheckoutBtnErrorModal;

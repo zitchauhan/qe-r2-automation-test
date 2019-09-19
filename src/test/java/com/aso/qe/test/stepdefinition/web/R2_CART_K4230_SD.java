@@ -56,6 +56,7 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 			setInputText(r2MyAccountPo.inputEmailAddress_SignIn,webPropHelper.getTestDataProperty("EmailAddressForChangePassword"));
 			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("DefaultPassword"));
 			clickOnButton(r2MyAccountPo.btnSignIn);
+			Thread.sleep(3000);
 			if (isDisplayed(r2MyAccountPo.txtIncorrectCombinationError)) {
 				setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("ChangedPassword"));
 				clickOnButton(r2MyAccountPo.btnSignIn);
