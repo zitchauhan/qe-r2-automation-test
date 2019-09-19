@@ -84,6 +84,27 @@ public class ES197_SD extends CommonActionHelper {
 		Assert.assertEquals(paypaltaxvalidation, checkouttaxvalidation, 0.0);
 		Assert.assertEquals(paypalshippingvalidation, checkoutshippingvalidation, 0.0);
 	}
+	@Then("^user enter the paypal login \"(.*?)\" \"(.*?)\" and click on Continue button$")
+	public void user_enter_the_paypal_login_and_click_on_Continue_button(String arg1, String arg2) throws Throwable {
+		String winHandleBefore = driver.getWindowHandle();
+		for(String winHandle : driver.getWindowHandles()){
+		    driver.switchTo().window(winHandle);
+		   System.err.println(driver.getTitle());
+		 
+		}
+	
+		setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty(arg1));
+		assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
+		setInputText(r2CheckOutPo.PaypalPassWord_Input, webPropHelper.getTestDataProperty(arg2));
+		assertTrue(clickOnButton(r2CheckOutPo.PaypalLogin_Btn));
+		Thread.sleep(Constants.thread_high);
+		driver.manage().window().maximize();
+		Thread.sleep(Constants.thread_high);
+		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));
+		Thread.sleep(Constants.thread_highest);
+		driver.switchTo().window(winHandleBefore);
+		System.err.println(driver.getTitle()); 
+	}
 		
 	    
 	}
