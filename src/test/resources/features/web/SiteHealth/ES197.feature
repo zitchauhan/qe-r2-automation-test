@@ -16,7 +16,7 @@ Scenario: Verify Accurate Shipping and Tax on Order Review After Arriving from P
 	Then verify order summary in checkout should be same as in paypal
 	
 	 @ES197 @CR-NN 
-Scenario: Place order using Paypal express
+Scenario: Place rder using Paypal express
 
     Given user launches the browser and navigates to "ASO" page 
 	When User searches a product "productNameSTH" and navigates to PDP
