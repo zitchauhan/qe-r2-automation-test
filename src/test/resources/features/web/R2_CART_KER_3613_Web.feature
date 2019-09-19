@@ -77,7 +77,7 @@ Scenario: Verify that user should be able to view  proper error message while ad
 	Then user verify the limited stock message
 
 	
-@C-BOPIS @R2_Web @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10766@Rahul
+@C-BOPIS @R2_Web @R2_All @P-Low @CB-Cart @KER-3613 @ZYP_CART_K3613-10766
 Scenario: Verify that user should be able to see an error message while adding more inventory of an item to their cart surpassing its existing inventory items for the selected store
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 

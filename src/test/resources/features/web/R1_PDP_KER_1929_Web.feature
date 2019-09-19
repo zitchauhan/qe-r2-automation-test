@@ -22,7 +22,7 @@ Scenario: To verify Find a Store CTA for LSI message Sold in Stores- Desktop
 
 	
 	
-@C-PDP @Web @Regression @KER-1929 @ZYP_HP_K1929-4318 @Rahul
+@C-PDP @Web @Regression @KER-1929 @ZYP_HP_K1929-4318 
 Scenario: To verify Find a Store CTA for LSI message Limited Stock- Desktop
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then user navigates to PLP of any product 

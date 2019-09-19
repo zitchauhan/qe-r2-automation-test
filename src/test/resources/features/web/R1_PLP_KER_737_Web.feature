@@ -18,7 +18,7 @@ Feature: To To verify Quick View - Product Attributes
     Then User click on Quick view button
     Then verify addcart button is displayed 
 
-   @C-PLP @Web @Regression @KER-737 @ZYP_PLP_K737-6059 @CR-AKK @RBeta @vidya
+   @C-PLP @Web @Regression @KER-737 @ZYP_PLP_K737-6059 @CR-AKK @RBeta
   Scenario: Verify OOS states for quick view
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page

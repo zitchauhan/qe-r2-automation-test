@@ -172,7 +172,7 @@ When user clicks on Find a Store
 		|ShipToStoreforSOF_Txt|
 	
 	
-@C-BOPIS @R2_Web @Regression @R2_All @P2 @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10440 @CR-RKA @vidya
+@C-BOPIS @R2_Web @Regression @R2_All @P2 @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10440 @CR-RKA 
 Scenario: Verify if 'Same as Shipping Address' checkbox is disabled for STS order
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 

@@ -2,7 +2,6 @@ Feature: BOPIS Change Store in Cart
 
 @R2_Web @R2_Regression @R2_All @P2 @CB-Cart @C-BOPIS @KER-2865
 @ZYP_CART_K2865-9980 
-@Rahul
 Scenario: Verify that user view 'Find a Store' modal from Change Location in Cart Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 

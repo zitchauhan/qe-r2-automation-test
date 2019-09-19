@@ -196,7 +196,7 @@ Feature: [Web]Payment restrictions
     #Then user switch to iframe to verify paypalcheckoutBtn
     Then Verify below Sub/Main Module of Checkout Page
       | #verify only paypal related things are displayed |
-      | PayPalCheckOut_Btn                               |
+#      | PayPalCheckOut_Btn                               |
 
   @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-4039 @ZYP_CHECKOUT_K4039-9921 @CR-RKA
   Scenario: Verify that user cannot see More Options payment option in Payment drawer section

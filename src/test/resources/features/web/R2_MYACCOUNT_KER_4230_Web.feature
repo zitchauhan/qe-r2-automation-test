@@ -1,7 +1,7 @@
 Feature: verify Forgotten Password functionality 
 
 @R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-MyAccount @KER-4230 
-@ZYP_MYACCOUNT_K4230-10576 @CR-RK @Rahul
+@ZYP_MYACCOUNT_K4230-10576 @CR-RK 
 Scenario: Verify user is able to enter the Forgot Password page from Forgot Password link 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
