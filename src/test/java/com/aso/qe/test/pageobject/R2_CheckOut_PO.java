@@ -629,7 +629,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[text()='Change Billing Information']")public WebElement ChangeBillingInformation_Txt;
 	   
 	   @FindBy(xpath="//input[@id='paypal']/..")public WebElement rdPaypal;// PayPal_radioBtm;
-	   @FindBy(xpath="//*[text()=' Checkout']/.. | //*[contains(@class,'paypal-button')]")public WebElement PayPalCheckOut_Btn;
+	   @FindBy(xpath="//*[text()=' Checkout']/.. | | //*[contains(@class,'paypal-button')]")public WebElement PayPalCheckOut_Btn;
+ 	   //@FindBy(xpath="//span[@class='paypal-button-text']")public WebElement PayPalCheckOut_Btn;
+	   
 	@FindBy(xpath = "//*[contains(text(),'Save Payment Info for Later')]")public WebElement savePaymentInfoForLater_checkBox;
 	 
 	@FindBy(xpath = "//*[text()='Order Number']/../p[3]")public WebElement orderConfirmationPage_OrderNumber;
