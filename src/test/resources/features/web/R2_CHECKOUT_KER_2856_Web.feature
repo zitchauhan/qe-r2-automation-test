@@ -131,7 +131,7 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods SOF and Shi
 		|SHIPPING ITEMS								|
 
 		
-@C-BOPIS @R2_Web  @R2_All @P1 @CC-Checkout_Order  @KER-2856 @ZYP_CHECKOUT_K2856-10865 @DevORIG 
+@C-BOPIS @R2_Web  @R2_All @P1 @CC-Checkout_Order  @KER-2856 @ZYP_CHECKOUT_K2856-10865 @DevORIG
 Scenario: Verify BOPIS Order Confirmation
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 

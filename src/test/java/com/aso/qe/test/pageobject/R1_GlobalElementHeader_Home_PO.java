@@ -203,7 +203,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='product-listing']") public WebElement txtSearchResults;
 	@FindBy(xpath="//*[@data-auid='shopByCategory_tiles']//*[@data-auid='shopByCategory_0']") public WebElement CategoryL1; //Anuj 3 Aug
 	//	@FindBy(xpath="//*[@data-auid='shopByCategory_tiles']//*[@data-auid='shopByCategory_0']") public WebElement CategoryL2; //Anuj 3 Aug
-	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//img)[1]")  public WebElement PLPProduct;
+	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[1]")  public WebElement PLPProduct; //MJR-09/16/19
 	@FindBy(xpath="//div[@data-component='searchResult']") public WebElement txtSearchPage;
 	@FindBy(linkText="Academy") public WebElement lnkbreadcrumbtext;
 	@FindBy(xpath="//div[@class='breadCrumbComponent offset-sm-1 px-4']") public WebElement lnkbreadcrumb;

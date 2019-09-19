@@ -177,7 +177,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "(//*[@data-auid='crt_inputQty'])[1]")
 	public WebElement limitedQuantityAddedInCart;  //SID 12-Jan
 	
-	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']/*[2]/*[2]/*[2]")
+	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']/*[2]/*[2]") //MJR-09/16/19
 	public WebElement storeNameOnCartPageInStorePickUp;  //SID 23-Jan
 	
 	@FindBy(xpath = "//*[text()='Change Location']/parent::*")
