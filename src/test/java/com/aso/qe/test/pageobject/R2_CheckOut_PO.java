@@ -352,6 +352,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
     public WebElement PaypalLogin_Btn;
     @FindBy(xpath ="//*[text()='Continue'] | //*[@id='confirmButtonTop']") //Updated by VSN on 07-11-19
     public WebElement PayPalContinue_Btn;
+    @FindBy(xpath ="//*[text()='Tax']//following::span[2]") 
+    public WebElement PayPaltaxprice;
+    @FindBy(xpath ="//*[text()='Shipping']//following::span[2]") //Updated by VSN on 07-11-19
+    public WebElement PayPalshippingprice;
     
     
     //****End PayPal****//
