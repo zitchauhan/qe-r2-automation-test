@@ -117,7 +117,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='miniCart']") public WebElement iconcart;//danush
 	@FindBy(xpath="//*[@data-auid='miniCart_m']") public WebElement iconcart_m;//danush
 	@FindBy(xpath="//*[@data-auid='search-container']//input") public WebElement txtSearchBox;
-	@FindBy(xpath="//*[@data-auid='level1Category-DEALS']") public  WebElement btnDEALS;
+	@FindBy(xpath="//*[@data-auid='level1Category-DEALS']/a") public  WebElement btnDEALS;
 	@FindBy(xpath="//*[@data-auid='level1Category-DEALS_m']") public  WebElement btnDEALS_m;
 	@FindBy(xpath="//*[@data-auid='level1Category-TRENDING'] | //*[@data-auid='level1Category-EXPERT ADVICE']") public  WebElement btnTRENDING; //SID 18-Nov
 	@FindBy(xpath="//*[@data-auid='findAStore']")public WebElement btnFindAStore;

@@ -56,11 +56,11 @@ Scenario: Verify user is able to checkout using PayPal with item-level Promotion
 		|PayPalCheckOut_Btn| 
 	Then Verify paypal button is clicked 
 	Then user switch to window of paypal 
-	Then user verify the element of paypal window 
+	#Then user verify the element of paypal window 
 	And enter the paypal login "PayPalEmail" "PayPalPassword" 
 	Then Verify the message on the page 
 		|# Following Message should show on the page|  
-		|Paypal account|
+		|PayPal account|
 		
 @R2_Web @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-11742 @CR-AKK @C1-Message
