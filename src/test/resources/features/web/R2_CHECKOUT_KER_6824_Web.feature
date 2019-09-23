@@ -29,7 +29,7 @@ Feature: Verfiy Gift Card - Unauthenticated User Applying Gift Card at Checkout
 		|toolTip_pin|
 		|Apply_Btn|
 	
-@R2_Web  @R2_All @P1 @1HR_R2 @C-Order @CC-Checkout_Order @KER-6824 @ZYP_CHECKOUT_K6824-8629 @CR-DPK
+@R2_Web  @R2_All @P1 @P1Temp @1HR_R2 @C-Order @CC-Checkout_Order @KER-6824 @ZYP_CHECKOUT_K6824-8629 @CR-DPK
 	Scenario: Verify 13 or 16 digit Gift Card with 4 or 8 digit PIN applied is reflected on Order summary
 	Given user launches the browser and navigates to "ASO_HOME" page  
 #	And User Navigates L2 form Homepage Header 
