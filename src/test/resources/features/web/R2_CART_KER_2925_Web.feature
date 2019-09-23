@@ -196,14 +196,14 @@ Scenario: Verify Before clicking 'Place Order', if the user edits shipping addre
 									And user click on ship it button
 									And user click on view cart 
 									And user click on checkout button
-									And User enters CVV number "CVV" 
+									And User enters CVV number "ThreeDigitCVV" 
 									#Then user fill email address in payment 
 									Then user clicks on the Review order button 
 									And User clicks on edit CTA 
 									Then user modify the shipping address 
 									And user fill the PO box in shipping address 
 									And user click on Go To Shipping Method button in Checkout page
-									And User enters CVV number "CVV"
+									And User enters CVV number "ThreeDigitCVV"
 									Then user clicks on the Review order button 
 									And user able to see the button place order 
 									And user check order confirmation status in order summary page 
@@ -230,7 +230,7 @@ Scenario: Verify Before clicking 'Place Order', if the user edits shipping metho
 									And user click on ship it button
 									And user click on view cart 
 									And user click on checkout button 
-									And User enters CVV number "CVV" 
+									And User enters CVV number "ThreeDigitCVV" 
 									Then user clicks on the Review order button 
 									And user clicks on edit shipping method cta 
 									Then user modifies shipping method 
@@ -256,12 +256,12 @@ Scenario: Verify Before clicking 'Place Order', if the user edits payment method
 									And user click on ship it button
 									And user click on view cart 
 									And user click on checkout button 
-									And User enters CVV number "CVV" 
+									And User enters CVV number "ThreeDigitCVV" 
 									Then user clicks on the Review order button 
 									And user clicks on edit payment cta 
 									Then user is able to modify payment method 
 									#And user click on Go To Shipping Method button in Checkout page
-									And User enters CVV number "CVV"
+									And User enters CVV number "ThreeDigitCVV"
 									Then user clicks on the Review order button 
 									And user able to see the button place order 
 									And user check order confirmation status in order summary page 

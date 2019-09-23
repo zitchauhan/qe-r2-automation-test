@@ -336,7 +336,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	
 	//****Start PayPal****//
-    @FindBy(xpath = "(//*[contains(@class,'paypal-checkout')]/a)[1]")
+    @FindBy(xpath = "(//*[contains(@class,'paypal-checkout')]/a)[1] | //*[@id='cancelLink'] | //*[@class='cancelUrl']/a")
     public WebElement PaypalClose_icon;
     @FindBy(xpath = "//*[text()='Shipping discount']")
     public WebElement PaypalShippigDiscount_txt;
@@ -493,8 +493,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 		
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Order Summary')]")public WebElement OrderSummary_Txt;
-		@FindBy(xpath = "//*[text()='Subtotal']/..")public WebElement txtSubTotal;//subtotal_txt
-		@FindBy(xpath="//*[text()='Subtotal']/../*[2]")public WebElement SubTotalPrice_Txt;//subtotal_price
+		@FindBy(xpath = "//*[text()='Subtotal']/.. | //*[@data-auid='subtotal']")public WebElement txtSubTotal;//subtotal_txt
+		@FindBy(xpath="//*[text()='Subtotal']/../*[2] | //*[@data-auid='subtotalValue']")public WebElement SubTotalPrice_Txt;//subtotal_price
 		
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Shipping')]")public WebElement Shipping_Txt;
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Shipping')]/following-sibling::*[1]")public WebElement ShippingPrice_Txt;
@@ -633,9 +633,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[text()='Change Billing Information']")public WebElement ChangeBillingInformation_Txt;
 	   
 	   @FindBy(xpath="//input[@id='paypal']/..")public WebElement rdPaypal;// PayPal_radioBtm;
-	   @FindBy(xpath="//*[text()=' Checkout']/..")public WebElement PayPalCheckOut_Btn;
+	   @FindBy(xpath="//*[text()=' Checkout']/.. | //*[contains(@class,'paypal-button')]")public WebElement PayPalCheckOut_Btn;
 	   //@FindBy(xpath="//span[@class='paypal-button-text']")public WebElement PayPalCheckOut_Btn;
-	 
+	   
 	@FindBy(xpath = "//*[contains(text(),'Save Payment Info for Later')]")public WebElement savePaymentInfoForLater_checkBox;
 	 
 	@FindBy(xpath = "//*[text()='Order Number']/../p[3]")public WebElement orderConfirmationPage_OrderNumber;

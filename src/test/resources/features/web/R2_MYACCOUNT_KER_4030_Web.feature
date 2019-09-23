@@ -161,7 +161,7 @@ Scenario: Verify user can able to edit Payment Methods after landing on order su
 	And user click on viewcart button
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
-	#And user click on edit button of shipping method #updated by MJR on 15/7/19
+	And user click on edit payment metnod 
 	Then user is able to modify payment method 
 	
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4030 
