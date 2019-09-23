@@ -172,7 +172,7 @@ Scenario: Verify authenticated user is able to proceed with Paypal as checkout f
 	Then Verify paypal button is clicked 
 	
 	
-@R2_Web @Regression @R2_All @P1 @1HR_R2 @C-Checkout @KER-3338 
+@R2_Web @Regression @R2_All @P1 @P1Temp @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8259 @CR-AKK 
 Scenario: Verify logged in user is able to select Paypal as Payment method on checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
