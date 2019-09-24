@@ -1,7 +1,7 @@
 Feature: Add Shipping Address in Checkout 
 
 
-@R2_Web @Regression @R2_All @P1 @1HR_R2 @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P1 @P1Temp @1HR_R2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-8177 @CR-DPK 
 Scenario: Verify the Shipping address form that authenticated user can view on adding new shipping address during checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -95,7 +95,7 @@ Scenario: Verify guest user, if after placing order, registers the account saves
 	
 	
 	
-@R2_Web @Regression @R2_All @P1 @1HR_R2 @1HR_R2 @C-Checkout @KER-2934
+@R2_Web @Regression @R2_All @P1 @P1Temp @1HR_R2 @1HR_R2 @C-Checkout @KER-2934
 @ZYP_CHECKOUT_K2934-9683 @CR-DPK 
 Scenario: Verify User needs to enter Zip code(it is mandatory) if not provided on cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -204,7 +204,7 @@ Scenario: Verify Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA, S
 		|checkout_ShippingAddress_txt								|
 		
 #================================Sanity================================#
-@R2_Web @R2_WAST-15 @P1 @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8177 @AutomationSmokeORIG
+@R2_Web @R2_WAST-15 @P1 @P1Temp @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8177 @AutomationSmokeORIG
 Scenario: TC_16-Verify Add Shipping Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
