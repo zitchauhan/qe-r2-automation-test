@@ -2,10 +2,13 @@ package com.aso.qe.test.runner;
 
 import org.junit.runner.RunWith;
 
+import com.github.mkolisnyk.cucumber.runner.ExtendedCucumber;
+import com.github.mkolisnyk.cucumber.runner.ExtendedCucumberOptions;
+
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
-@RunWith(Cucumber.class)
+//@RunWith(Cucumber.class)
 
 /*@CucumberOptions(
 		features="src/test/resources/features/web/",
@@ -18,6 +21,16 @@ import cucumber.api.junit.Cucumber;
 //                "rerun:target/cucumber-report/runapiat/rerun.txt"}
 				format =	{"pretty","html:target/Destination", "json:target/cucumber.json"}
 		)*/
+
+@RunWith(ExtendedCucumber.class)
+@ExtendedCucumberOptions(
+       jsonReport = "target/cucumber-reports/cucumber-html-reports/common.json",
+        usageReport = true,
+        detailedReport = true,
+        detailedAggregatedReport = true,
+        overviewReport = true,
+        overviewChartsReport = true,
+        retryCount = 2)
 
 @CucumberOptions(
 		features="src/test/resources/features/web/", //R1_HP_KER_1915_Web.feature",//R1_PDP_KER_2334_Web.feature",
