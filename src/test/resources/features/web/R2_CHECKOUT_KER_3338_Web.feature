@@ -130,7 +130,8 @@ Scenario: Verify guest user is able to proceed with Paypal as checkout for non-S
 	And user enter Phone number "PhoneNumber" 
 	And user enter Address "Address" 
 	And user enter Zipcode "zipcode" 
-	And user click on Go To Shipping Method button in Checkout page 
+	And user click on Go To Shipping Method button in Checkout page
+	And user click on go to payment present in shipping method 
 	Then user click on paypal radiobtn 
 	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
