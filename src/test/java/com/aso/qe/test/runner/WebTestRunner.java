@@ -37,8 +37,8 @@ import cucumber.api.junit.Cucumber;
 		glue="com.aso.qe.test.stepdefinition.web",
 		//tags= {"@KER-2871"},
 		monochrome=true,
-				//plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html",
-		plugin={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
+				plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html",
+		format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
 		) 
 public class WebTestRunner{	
 	
