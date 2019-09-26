@@ -11,6 +11,7 @@ import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 import com.aso.qe.test.pageobject.R1_SIT_PO;
+import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
 import cucumber.api.java.en.Then;
 
@@ -24,10 +25,14 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 	@Then("^user search the data in search box \"(.*?)\"$")
 	public void user_search_the_data_in_search_box(String OOSData) throws Throwable {
 		waitForPageLoad(driver);
-		  Thread.sleep(Constants.thread_medium);
-			pdpPageObj.searchbox.sendKeys(OOSData);
+		  Thread.sleep(Constants.thread_medium);	 
+		//	pdpPageObj.searchbox.sendKeys(OOSData);
+			setInputTextWithEnterKey(pdpPageObj.searchbox, webPropHelper.getTestDataProperty(OOSData));	  
 		   clickOnButton(pdpPageObj.searchMagnifyingBtm);
 	}
+	
+	
+
 
 	@Then("^User to select the product$")
 	public void user_to_select_the_product() throws Throwable {

@@ -1,6 +1,6 @@
 Feature: [Desktop]  Add to Cart on PDP
 
-    @C-PDP @Web @Regression @KER-1921 @ZYP_PDP_K1921-3432 @CR-RKA  @1HR @RBeta
+    @C-PDP @Web @Regression @KER-1921 @ZYP_PDP_K1921-3432 @CR-RKA  @1HR @RBeta @Rishikesh
   Scenario: Verify the functionality of Add to Cart- inventory/quantity restrictions are in place, then add the maximum available/allowable
     Given user launches the browser and navigates to "ASO_HOME" page
 #    Then User to click on search button after putting data "limitedQuantityRestriction_CMC"
