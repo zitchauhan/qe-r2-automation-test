@@ -24,13 +24,13 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(ExtendedCucumber.class)
 @ExtendedCucumberOptions(
-       jsonReport = "target/cucumber-reports/cucumber-html-reports/common.json",
+    //   jsonReport = "target/cucumber-reports/cucumber-html-reports/common.json",
     //    usageReport = true,
-        detailedReport = true,
-        detailedAggregatedReport = true,
-        overviewReport = true,
-        overviewChartsReport = true,
-        retryCount = 2)
+   //     detailedReport = true,
+   //     detailedAggregatedReport = true,
+   //     overviewReport = true,
+    //    overviewChartsReport = true,
+        retryCount = 1)
 
 @CucumberOptions(
 		features="src/test/resources/features/web/", //R1_HP_KER_1915_Web.feature",//R1_PDP_KER_2334_Web.feature",

@@ -20,13 +20,13 @@ import cucumber.api.junit.Cucumber;
 @RunWith(ExtendedCucumber.class)
 
 @ExtendedCucumberOptions(
-       jsonReport = "target/cucumber-reports/cucumber-html-reports/common.json",
+  //    jsonReport = "target/cucumber-reports/cucumber-html-reports/common.json",
    //     usageReport = true,
-        detailedReport = true,
-        detailedAggregatedReport = true,
-        overviewReport = true,
-        overviewChartsReport = true,
-        retryCount = 2)
+  //      detailedReport = true,
+   //     detailedAggregatedReport = true,
+  //      overviewReport = true,
+   //     overviewChartsReport = true,
+        retryCount = 1)
 
 
 
