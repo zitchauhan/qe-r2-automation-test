@@ -7,7 +7,7 @@ Feature: [Desktop]Components - Header
     And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then Verify signout from my account
 
-  @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-1972 @CR-RKA
+  @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-1972 @CR-RKA @rishikesh
   Scenario: Desktop- To Verify user is able to Sign In clicking in Sign In Link in the global header
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
