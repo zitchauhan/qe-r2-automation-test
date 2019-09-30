@@ -295,6 +295,12 @@ public class R1_SD_SIT extends CommonActionHelper {
 		}
 
 	}
+	@And("^user should be able to enter the wrong signin details \"([^\"]*)\" \"([^\"]*)\"$")
+	public void user_should_be_able_to_enter_the_wrong_signin_details(String arg1, String arg2) throws Throwable {
+		sit_po.verifySigninpage();
+		globalElementHeader.enterEmailAddressandPassword(arg1, arg2);
+		globalElementHeader.clickSubmitButton();
+	}
 
 	@Then("^user should be able to enter the signin details \"(.*?)\" \"(.*?)\"$")
 	public void user_should_be_able_to_enter_the_signin_details(String arg1, String arg2) throws Throwable 

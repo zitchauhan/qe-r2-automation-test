@@ -1,6 +1,6 @@
 Feature: To verify Product Pricing Display on PDP
 
-@Regression @Sanity @C-PDP  @Web @ZYP_PDP_K1925-3428 @KER-1925 @All  @CR-RKA @1HR
+@Regression @Sanity @C-PDP  @Web @ZYP_PDP_K1925-3428 @KER-1925 @All  @CR-RKA @1HR 
   Scenario: To verify Product price on PDP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2
