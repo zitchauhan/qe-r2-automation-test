@@ -68,9 +68,9 @@ public class R2_CHECKOUT_K3151_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd));
 		Thread.sleep(Constants.thread_high);
 		Actions hover = new Actions(getDriver());
-		hover.sendKeys(Keys.UP, Keys.ENTER).build().perform(); //Added by Rishi
-	//	hover.clickAndHold(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress).build().perform();
-	//	hover.sendKeys(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress, Keys.DOWN, Keys.ENTER).build().perform(); //Updated by MJR - 17/7/19
+		//hover.sendKeys(Keys.UP, Keys.ENTER).build().perform(); //Added by Rishi
+		hover.clickAndHold(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress).build().perform();
+		hover.sendKeys(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress, Keys.DOWN, Keys.ENTER).build().perform(); //Updated by MJR - 17/7/19
 	}
 
 	@Then("^user click on confirm button in shipping address$")

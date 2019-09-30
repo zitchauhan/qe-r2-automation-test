@@ -2,7 +2,7 @@ Feature: Add Shipping Address in Checkout
 
 
 @R2_Web @Regression @R2_All @P1 @P1Temp @1HR_R2 @C-Checkout @KER-2934
-@ZYP_CHECKOUT_K2934-8177 @CR-DPK 
+@ZYP_CHECKOUT_K2934-8177 @CR-DPK
 Scenario: Verify the Shipping address form that authenticated user can view on adding new shipping address during checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
