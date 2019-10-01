@@ -493,7 +493,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 		
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Order Summary')]")public WebElement OrderSummary_Txt;
-		@FindBy(xpath = "//*[text()='Subtotal']/.. | //*[@data-auid='subtotal']")public WebElement txtSubTotal;//subtotal_txt
+		//@FindBy(xpath = "//*[text()='Subtotal']/.. | //*[@data-auid='subtotal']")public WebElement txtSubTotal;//subtotal_txt
+		@FindBy(xpath = "//*[@data-auid='checkout_order_summary_section']/*[3]/*[2]")public WebElement txtSubTotal;//subtotal_txt
 		@FindBy(xpath="//*[text()='Subtotal']/../*[2] | //*[@data-auid='subtotalValue']")public WebElement SubTotalPrice_Txt;//subtotal_price
 		
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Shipping')]")public WebElement Shipping_Txt;
