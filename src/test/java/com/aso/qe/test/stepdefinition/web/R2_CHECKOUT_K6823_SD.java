@@ -18,7 +18,7 @@ public class R2_CHECKOUT_K6823_SD extends CommonActionHelper {
 	R2_CheckOut_PO checkout_po=PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	@Then("^user fill the gift card in My Account$")
 	public void user_fill_the_gift_card_in_My_Account() throws Throwable {
-		//MJR-10/01/19
+		//MJR-10/01/19 
 		for(WebElement txtAddedGiftCard: myAccountPo.txtAddedGiftCardList) {
 	    	//already added giftcards
 			if(isDisplayed(txtAddedGiftCard)) {
