@@ -13,13 +13,14 @@ Scenario: user to verify Account summary after successful login from ASO_HOME pa
 Scenario: user to verify sing in  as invalid email address
    Given user launches the browser and navigates to "ASO_HOME" page
    When user to click on sing in and navigate to sign in page
-   And user should be able to enter the signin details "Wrong_username" "Login_pwd"
+   And user should be able to enter the wrong signin details "Wrong_username" "Login_pwd"
   	
   @C-HP @Web  @Regression @KER-727  @ZYP_HP_K727-4061
 Scenario: user to verify sing in  as invalid password address
    Given user launches the browser and navigates to "ASO_HOME" page
    When user to click on sing in and navigate to sign in page
-   And user should be able to enter the signin details "Login_username" "Wrong_password"
+   And user should be able to enter the wrong signin details "Wrong_username" "Login_pwd"
+ #  And user should be able to enter the signin details "Login_username" "Wrong_password"
    Then verify the validation message as incorrect  
   			  
   		  

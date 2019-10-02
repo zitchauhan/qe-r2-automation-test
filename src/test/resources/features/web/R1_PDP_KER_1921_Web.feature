@@ -24,7 +24,7 @@ Scenario: Verify the functionality of Add to Cart for "not sold online"
   #  Then verify out of stock       
  
 
-  @C-PDP @Web @Regression @KER-1921 @ZYP_PDP_K1921-5075 @CR-RKA @1HR
+  @C-PDP @Web @Regression @KER-1921 @ZYP_PDP_K1921-5075 @CR-RKA @1HR 
   Scenario: Verify the functionality of Add to Cart for "size not available and color available"
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP of any product

@@ -7,7 +7,7 @@ Feature: [Desktop]Components - Header
     And user should be able to enter the signin details "Login_username" "Login_pwd"
     Then Verify signout from my account
 
-  @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-1972 @CR-RKA
+  @C-HP @Web @Regression @KER-262 @ZYP_HP_K262-1972 @CR-RKA 
   Scenario: Desktop- To Verify user is able to Sign In clicking in Sign In Link in the global header
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
@@ -21,7 +21,8 @@ Feature: [Desktop]Components - Header
   Scenario: user to verify sing in  as invalid password address
     Given user launches the browser and navigates to "ASO_HOME" page
     When user to click on sing in and navigate to sign in page
-      And user should be able to enter the signin details "Login_username" "Wrong_password"
+    And user should be able to enter the wrong signin details "Wrong_username" "Login_pwd"
+ #     And user should be able to enter the signin details "Login_username" "Wrong_password
     Then verify the validation message as incorrect
 
 
