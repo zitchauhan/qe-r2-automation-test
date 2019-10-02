@@ -16,7 +16,7 @@ Scenario: To verify Add Promotion Code
 		|Submit_PromoCode_btn|
 	
 	
-@R2_Web @C-Order @CC-Cart_Order @R2_All @P-High_Order  @KER-3166 @ZYP_CART_K3166-8087 @CR-DPK
+@R2_Web @C-Order @CC-Cart_Order @R2_All @P-High_Order  @KER-3166 @ZYP_CART_K3166-8087 @CR-DPK @Promocode
 Scenario: To verify open field to enter promotion code
 Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 
@@ -45,7 +45,7 @@ Scenario: To verify open field to enter promotion code
     
     
     
-@R2_Web @C-Order @CC-Cart_Order @R2_All @P-Low   @KER-3166 @ZYP_CART_K3166-8089 @CR-DPK
+@R2_Web @C-Order @CC-Cart_Order @R2_All @P-Low   @KER-3166 @ZYP_CART_K3166-8089 @CR-DPK @Promocode
 Scenario: To verify Submit Promotion code
 	Given user launches the browser and navigates to "ASO_HOME" page 
 		 And User Navigates L2 form Homepage Header 

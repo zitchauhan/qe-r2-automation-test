@@ -36,7 +36,7 @@ Feature: Verify Promotional Messaging in Cart
 	And user click on Hide promo code field
 	
 	
-	@R2_Web @C-Order @CC-Cart_Order @R2_All @P-Low  @KER-2941 @ZYP_CART_K2941-8068 @CR-DPK
+	@R2_Web @C-Order @CC-Cart_Order @R2_All @P-Low  @KER-2941 @ZYP_CART_K2941-8068 @CR-DPK @Promocode
     Scenario: To verify the limit of the Promo codes in cart Page         
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 

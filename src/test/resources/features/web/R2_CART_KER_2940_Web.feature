@@ -52,7 +52,7 @@ Scenario: To verify the Sub-total for all items in cart
 	Then verify that itemized subtotal for each item in cart is displayed 
 	
 @R2_Web @C-Order @CC-Cart_Order @R2_All @P-High_Order @R2 @KER-2940
-@ZYP_CART_K2940-8055 @CR-AKK 
+@ZYP_CART_K2940-8055 @CR-AKK @Promocode 
 Scenario: To verify if the Promo Code Discount is applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 

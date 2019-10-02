@@ -1,6 +1,7 @@
 Feature: To verify Remove Promo code in Order Summary 
 
-@R2_Web   @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3167 @ZYP_CHECKOUT_K3167-8094 @CR-AKK @P1 @P1Temp
+@R2_Web   @R2_All @P-Low @C-Order @CC-Cart_Order @KER-3167 @ZYP_CHECKOUT_K3167-8094 @CR-AKK @P1 @P1Temp 
+@Promocode
 Scenario: To verify Remove Promo code in Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
