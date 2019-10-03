@@ -127,8 +127,10 @@ public void user_clicks_on_checkout_button_on_cart_page() throws Throwable {
 }
 @Then("^user increases quantity \"(.*?)\" of product$")
 public void user_increases_quantity_of_product(String arg1) throws Throwable {
-	clearInputBox(genericPO.quantityInputField);
+	Thread.sleep(2000);
 	genericPO.quantityInputField.click();
+	clearInputBox(genericPO.quantityInputField);
+//	genericPO.quantityInputField.click();
 	genericPO.enterItemQuantity(arg1);
 	assertTrue(isDisplayed(genericPO.quantityInputField));
 	waitForElement(genericPO.quantityInputField);
