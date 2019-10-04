@@ -60,7 +60,8 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 			addressToEnter = "!!!!!";
 		else
 			addressToEnter = webPropHelper.getTestDataProperty(arg1);
-		r2CheckOutPo.inputCheckoutAddress.clear();
+		Thread.sleep(Constants.thread_low);
+//		r2CheckOutPo.inputCheckoutAddress.clear();
 		setInputText(r2CheckOutPo.inputCheckoutAddress, addressToEnter);
 		Thread.sleep(Constants.thread_low);
 		//setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty(arg1));

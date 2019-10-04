@@ -710,6 +710,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='checkout_edit_shipping_address']")public WebElement Checkout_ShippingAddress_Edit;
 	@FindBy(xpath="//*[@data-auid='checkout_edit_shipping_address']/../../div[2]")public WebElement Checkout_ShippingAddress_Default;
 	@FindBy(xpath="//*[@name='Dropdown']/button")public WebElement Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd;
+	@FindBy(xpath="//*[@id='customDropdownList']")public WebElement Checkout_ShippingAddressAfterEditdropdownelement;
 	@FindBy(xpath="//*[text()='Add a New Shipping Address']")public WebElement Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress;
 //Sep7 CR-RK KER-3151
 	

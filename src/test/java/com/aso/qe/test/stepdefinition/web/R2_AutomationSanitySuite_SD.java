@@ -185,7 +185,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		waitForElement(r2SanityPo.AS_btnShopCategory);
 		assertTrue((clickOnButton(r2SanityPo.AS_btnShopCategory)));
 		assertTrue(clickOnButton(r2SanityPo.AS_btnClothingCategory));
-		//Thread.sleep(3000);
+		Thread.sleep(3000);
 
 	}
 
