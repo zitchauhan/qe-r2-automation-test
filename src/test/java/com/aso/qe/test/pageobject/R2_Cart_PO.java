@@ -1,6 +1,7 @@
 package com.aso.qe.test.pageobject;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.util.List;
 
@@ -19,6 +20,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	/**************** START LOCAL OBJETCS AND DECLARATIONS ***********************/
 	private static final Logger logger = Logger.getLogger(R2_Cart_PO.class);
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
+	R1_PLCC_Generic_PO genericpo=PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
 	R1_FindStore_PO r1FindStorePO = PageFactory.initElements(driver, R1_FindStore_PO.class);
@@ -782,6 +784,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 		else {
 			while(isDisplayed(btnRemoveCart)) {
 				clickOnButton(btnRemoveCart);
+				Thread.sleep(Constants.thread_medium);
+				Assert.assertTrue(isDisplayed(cartEmptyTxt));			
 				Thread.sleep(Constants.thread_highest);
 				//Thread.sleep(Constants.thread_medium);
 				if(isDisplayed(cartEmptyTxt)) {
@@ -790,6 +794,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 			}
 		}
 		}
+	
 	/***************************** END METHODS *********************************/
 	
 	
@@ -917,7 +922,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 //********************************************************************************************************************
 	//When cart is empty (Start)
 	
-	@FindBy(xpath = "//*[contains(text(),'YOUR CART IS EMPTY')]")public WebElement cartEmptyTxt;
+	@FindBy(xpath = "//*[contains(text(),'YOUR CART IS EMPTY')]")public WebElement cartEmptyTxt;	
+	@FindBy(xpath = "//*[contains(text(),'Sorry, Something went wrong. Please try after sometime')]")public WebElement cartemptyerrormsgTxt;
 	@FindBy(xpath = "//button[@data-auid='btncrt_btnSignIn']")	public WebElement btnCrtSignIn;
 	@FindBy(xpath="//button[@data-auid='btncrt_btnCntinueShop']")public WebElement continueShopping_btn;
 	@FindBy(xpath="//*[@data-auid='cart_continue_shopping_link'] | //*[@data-auid='crt_lnkCntShopping']")public WebElement continueShoppingForEmptyCart_link;   //SID modified 30-November
