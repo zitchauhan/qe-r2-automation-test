@@ -183,7 +183,7 @@ Scenario Outline: Verify In case Partial inventories are available for one or mo
 								
 								@R2_Web @P1 @C-Order @CC-Cart_Order @KER-2925
 								@ZYP_CART_K2925-10294 @CR-AG 
-Scenario: Verify Before clicking 'Place Order', if the user edits shipping address, the same should be updated in the order summary. 
+Scenario: Verify Before clicking 'Place Order', if the user edits Shipping Address, the same should be updated in the order summary. 
 									Given user launches the browser and navigates to "ASO_HOME" page 
 									And user clicks on SignIn link from global header 
 									# And user logs in as "EmailAddress"
@@ -217,7 +217,7 @@ Scenario: Verify Before clicking 'Place Order', if the user edits shipping addre
 									
 								@R2_Web @P1 @C-Order @CC-Cart_Order @KER-2925
 								@ZYP_CART_K2925-10295 @CR-AG @C1-Message 
-Scenario: Verify Before clicking 'Place Order', if the user edits shipping method, the same should be updated in the order summary. 
+Scenario: Verify Before clicking 'Place Order', if the user edits Shipping Method, the same should be updated in the order summary. 
 									Given user launches the browser and navigates to "ASO_HOME" page 
 									And user clicks on SignIn link from global header 
 									#And user logs in as "EmailAddress"
@@ -234,7 +234,8 @@ Scenario: Verify Before clicking 'Place Order', if the user edits shipping metho
 									Then user clicks on the Review order button 
 									And user clicks on edit shipping method cta 
 									Then user modifies shipping method 
-									When user selects shipment method on check out page 
+									When user selects shipment method on check out page
+									And User enters CVV number "ThreeDigitCVV" 
 									Then user clicks on the Review order button 
 									And user able to see the button place order 
 									And user check order confirmation status in order summary page 
