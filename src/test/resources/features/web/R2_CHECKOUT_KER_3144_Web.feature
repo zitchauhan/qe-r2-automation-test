@@ -60,16 +60,16 @@ Scenario: verify if proper validation message is displayed if user already has p
 	And user click on Go To Shipping Method button in Checkout page 
 
 @R2_Web @Regression @R2_All @P-Medium @C-Checkout @KER-3144 
-@ZYP_CHECKOUT_K3144-9649 @CR-GK @C1-Message
+@ZYP_CHECKOUT_K3144-9649 @CR-GK @C1-Message @Rishikesh
 Scenario: verify if proper validation message is displayed if user already has address selected and tries to add products to his cart by violates the State-Product rules 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Given user launches the browser and navigates to "ASO_HOME" page 
+#	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user clicks on one of the category and navigates to LOne 
-	And user clicks on one of the subcategory and navigates to LTwo 
+#	And user clicks on one of the subcategory and navigates to LTwo 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
 	#	And user click on Add to Cart Button

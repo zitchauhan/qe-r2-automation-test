@@ -66,13 +66,17 @@ public class R2_CHECKOUT_K3151_SD extends CommonActionHelper {
 	@Given("^user click on Add a new Shipping Address button in the shipping address drop down$")
 	public void user_click_on_Add_a_new_Shipping_Address_button_in_the_shipping_address_drop_down() throws Throwable {
 		assertTrue(clickOnButton(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd));	
-    	Thread.sleep(Constants.thread_high);
-		Actions hover = new Actions(getDriver());
-    	hover.sendKeys(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress,Keys.UP, Keys.ENTER).build().perform(); 
-    	Thread.sleep(Constants.thread_high);
+		Thread.sleep(Constants.thread_high);
+		assertTrue(clickOnButton(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress));
+ //   	Thread.sleep(Constants.thread_high);
+//		Actions hover = new Actions(getDriver());
+ //   	hover.sendKeys(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress,Keys.UP, Keys.ENTER).build().perform(); 
+ //   	Thread.sleep(Constants.thread_high);
+ //   	assertTrue(isDisplayed((WebElement) r2CheckOutPo.Checkout_ShippingAddressAfterEditdropdownelement));
 //		hover.clickAndHold(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress).build().perform();
 //		hover.sendKeys(r2CheckOutPo.Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress, Keys.DOWN, Keys.ENTER).build().perform(); //Updated by MJR - 17/7/19
-	}
+		
+		}
 
 	@Then("^user click on confirm button in shipping address$")
 	public void user_click_on_confirm_button() throws Throwable {
