@@ -400,7 +400,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   /** Older x-path to click on chenge link on CHECKOUT PAGE*/
  	   @FindBy(xpath="//*[text()='Change Location']")
  	   public WebElement ChangeLocation_Lnk;  //Rishi
-	  
+ 	   
+ 	   	   
 	   @FindBy(xpath="//*[@data-auid='cart_radio_button_div']//*[text()='Find a Store']")
 	   public WebElement findAStoreCart;  //SID 8-Jan
 	   
