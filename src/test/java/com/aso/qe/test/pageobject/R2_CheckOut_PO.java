@@ -398,7 +398,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   public WebElement StoreNameandAddress_Txt;
 	  
 	   /** Older x-path to click on chenge link on CHECKOUT PAGE*/
- 	   @FindBy(xpath="//*[text()='Change Location']") 
+ 	   @FindBy(xpath="//a[text()='Change Location']") 
  	   public WebElement ChangeLocation_Lnk;  //Rishi
 	   
 	  
