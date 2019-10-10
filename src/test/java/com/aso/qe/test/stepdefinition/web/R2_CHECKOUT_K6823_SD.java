@@ -1,8 +1,7 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.junit.Assert.assertTrue;
-
-
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -19,10 +18,28 @@ public class R2_CHECKOUT_K6823_SD extends CommonActionHelper {
 	R2_CheckOut_PO checkout_po=PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	@Then("^user fill the gift card in My Account$")
 	public void user_fill_the_gift_card_in_My_Account() throws Throwable {
-	   
-		 setInputText(myAccountPo.txtGiftCardNumber, webPropHelper.getTestDataProperty("Valid16DigitGiftCardNumber"));
-		 setInputText(myAccountPo.txtGifCardPin, webPropHelper.getTestDataProperty("Valid8DigitGiftCardPIN"));
-		 assertTrue(clickOnButton((myAccountPo.btnAddGiftCard)));
+		//MJR-10/01/19 
+		for(WebElement txtAddedGiftCard: myAccountPo.txtAddedGiftCardList) {
+	    	//already added giftcards
+			if(isDisplayed(txtAddedGiftCard)) {
+	    		String lastFourCharacters = webPropHelper.getTestDataProperty("Valid16DigitGiftCardNumber").substring(webPropHelper.getTestDataProperty("Valid16DigitGiftCardNumber").length() - 4);
+	    		if(getText(txtAddedGiftCard).contains(lastFourCharacters)) {
+	    			break;
+	    		}
+	    		else {
+	    			setInputText(myAccountPo.txtGiftCardNumber, webPropHelper.getTestDataProperty("Valid16DigitGiftCardNumber"));
+	    			 setInputText(myAccountPo.txtGifCardPin, webPropHelper.getTestDataProperty("Valid8DigitGiftCardPIN"));
+	    			 assertTrue(clickOnButton((myAccountPo.btnAddGiftCard)));
+	    		}
+	    	}
+			//if there are no added cards
+			else{
+	    	 setInputText(myAccountPo.txtGiftCardNumber, webPropHelper.getTestDataProperty("Valid16DigitGiftCardNumber"));
+   			 setInputText(myAccountPo.txtGifCardPin, webPropHelper.getTestDataProperty("Valid8DigitGiftCardPIN"));
+   			 assertTrue(clickOnButton((myAccountPo.btnAddGiftCard)));
+	    	}
+		}
+		 
 	}
 
 	@Then("^user click on choose Gift card Dropdown$")

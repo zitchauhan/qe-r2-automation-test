@@ -279,7 +279,8 @@ Scenario: TC_7-Verify Add Credit Card and added as a Default Card
 	#And user click on Add to Cart Button
 	And user click on ship it button
 	And user will click on View Cart button 
-	And user click on checkout button in Cart page     
+	And user click on checkout button in Cart page  
+	And user clicks on edit payment cta   
 	Then User verifies that in Payment section credit card "CreditCardNumber" is pre-populated by default
 	
 	
