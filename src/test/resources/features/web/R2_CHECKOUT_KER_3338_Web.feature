@@ -19,16 +19,17 @@ Scenario: Verify user is able to checkout using PayPal with Order level Promotio
 	And user click on Go To Shipping Method button in Checkout page 
 	And user click on go to payment present in shipping method 
 	Then user click on paypal radiobtn 
-	#Then user switch to iframe to verify paypalcheckoutBtn 
+#	Then user switch to iframe to verify paypalcheckoutBtn 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify gift card related things are not displayed |
 		|PayPalCheckOut_Btn| 
 	Then Verify paypal button is clicked 
-	Then user switch to window of paypal 
-	Then user verify the element of paypal window 
+	Then user switch to iframe and verify PayPal Home page
+#	Then user switch to window of paypal 
+#	Then user verify the element of paypal window 
 	
 @R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-3338 
-@ZYP_CHECKOUT_3338-11741 @CR-AKK @C1-Message
+@ZYP_CHECKOUT_3338-11741 @CR-AKK @C1-Message 
 Scenario: Verify user is able to checkout using PayPal with item-level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 

@@ -59,14 +59,15 @@ Given user launches the browser and navigates to "ASO_HOME" page
     |ABNNC		   | BAV		  	  |
 
 @R2_Web  @R2_All @P1 @1HR_R2 @C-Order @CC-MyAccount_Order   @KER-4018 
-@ZYP_MYACCOUNT_K4018-10659 @CR-AKK @1HR_R2
+@ZYP_MYACCOUNT_K4018-10659 @CR-AKK @1HR_R2 
 Scenario: Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button
 	And user click on ship it button
 	And user is navigated to Add to cart Notification popup 
-	And user will click on View  button 
+	And user will click on View Cart button
+#	And user will click on View  button 
 	And user navigate to Cart page 
 	And user click on checkout button in Cart page 
 	And  user enter First name "FirstName" 
