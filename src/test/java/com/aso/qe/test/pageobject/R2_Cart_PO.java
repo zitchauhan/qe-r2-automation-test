@@ -84,8 +84,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 //	@FindBy(xpath = "//*[contains(text(),'Promocode')]/..")// Duplicate Done
 //	public WebElement txtPromocode;
 
-	@FindBy(xpath = "//*[text()='$']/following::div")
-	public WebElement txtActualPrice;
+	@FindBy(xpath = "//*[text()='$']/following::div | //*[contains(text(),'Subtotal')]//following::*")
+	public WebElement txtActualPrice; //MJR-10/09/19
 
 //	@FindBy(xpath = "(//*[text()='$'])[1]")//duplicate
 //	public WebElement txtPromoPrice;
@@ -189,7 +189,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(),'Items Available')]")
 	public List<WebElement> inventoryAvailabilityBOPISStores;  //SID 27-Jan
 	
-	@FindBy(xpath = "//*[@data-auid='facetdrawerundefined']")
+	@FindBy(xpath = "//*[contains(@data-auid, 'tooltipcrt_rdTooltip_')]/parent::* | //*[@data-auid='facetdrawerundefined']") //MJR-10/10/19
 	public List<WebElement> storeNamesCartPage;  //SID 27-Jan
 
 	

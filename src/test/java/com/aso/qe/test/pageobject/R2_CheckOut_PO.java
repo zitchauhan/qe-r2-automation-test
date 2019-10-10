@@ -398,14 +398,14 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   public WebElement StoreNameandAddress_Txt;
 	  
 	   /** Older x-path to click on chenge link on CHECKOUT PAGE*/
-	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']")
+	   @FindBy(xpath="//a[text()='Change Location'] | //*[@data-auid='checkout_in_store_pickup_change_location']") //MJR-10/10/19
 	   public WebElement ChangeLocation_Lnk;  //SID 8-Jan
 	   
 	  
 	   @FindBy(xpath="//*[@data-auid='cart_radio_button_div']//*[text()='Find a Store']")
 	   public WebElement findAStoreCart;  //SID 8-Jan
 	   
-	   @FindBy(xpath="//*[@data-auid='checkout_in_store_pickup_change_location']/parent::*/*[1]")
+	   @FindBy(xpath="//*[text()='Change Location']/parent::*/*[1] | //*[@data-auid='checkout_in_store_pickup_change_location']/parent::*/*[1]")//MJR-10/10/19
 	   public WebElement selectedBOPISStore;  //SID 21-Jan
 	 
 	   @FindBy(xpath="(//*[@data-auid='find-a-store-modal']//*[@data-auid='facetdrawerundefined'])[1]/button/span/div/div[1]")
@@ -565,7 +565,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[text()='Unrecognized card number']")public WebElement UnrecognizedCardNumber_Txt; 
 		@FindBy(xpath="//*[text()='Please enter an expiration date']")public WebElement PastExpirationDate_Txt;//CR-RK Oct11 KER-3139
 		@FindBy(xpath="//*[text()='Please enter a valid security code']")public WebElement PleaseEnteRaValidSecurityCode_Txt; 
-		@FindBy(xpath="//*[text()='Choose Card']/..//button")public WebElement chooseCreditcard_Dd; //modified SK 22 Sep
+		@FindBy(xpath="//*[text()='Choose Card']/..//button | //*[@data-auid='payment_type_with_card']")public WebElement chooseCreditcard_Dd; //modified SK 22 Sep //MJR-10/10/19
 		@FindBy(xpath="//*[@data-auid='checkout_shipping_address']/..//button")public WebElement chooseShippingAddress_Dd; //CR-SK 22 Sep //updated by MJR on 15/7/19
 		@FindBy(xpath="//*[@name='Dropdown']")public WebElement chooseShippingAddress_Dd_Mob; //CR-GK 13Oct
         @FindBy(xpath="//*[@data-auid='undefined_listOption_1']")public WebElement AddNewCreditCard_Txt;
