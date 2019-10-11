@@ -25,6 +25,7 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(getDriver(),R1_GlobalElementHeader_Home_PO.class);
 	R2_R1_Fun_PO r2r1FunPo = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	R2_Cart_PO r2cartPO = PageFactory.initElements(driver, R2_Cart_PO.class);
+	R2_Cart_PO r2CartPo = PageFactory.initElements(driver, R2_Cart_PO.class);
 	String store = "";
 	
 	@Then("^User should be able to click on Find Store$")
@@ -56,8 +57,20 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 	@When("^User select store with \"(.*?)\"$")
 	public void User_select_store_with(String arg1) throws Throwable {
 		Thread.sleep(Constants.thread_high);
+		if(isDisplayed(findStorePO.californiaaddress)) {
+			Thread.sleep(Constants.thread_high);
+			setInputText(r2CartPo.inputFindaStoreHomePage, webPropHelper.getTestDataProperty(arg1));
+			assertTrue(clickOnButton(r2CartPo.btnZipcodesearch));
+			Thread.sleep(Constants.thread_high);
+            assertTrue(clickOnButton(findStorePO.expandStore));
+            assertTrue(clickOnButton(r2CartPo.btnstore));
+            assertTrue(clickOnButton(findStorePO.ovly_btnCloseCross));
+         					
+		}
+		else {
 		System.err.println(webPropHelper.getTestDataProperty(arg1));
 		store = findStorePO.testWorkaround(webPropHelper.getTestDataProperty(arg1));
+		}
 	}
 	
 	@And("^user verify the selected store$")
