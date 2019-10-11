@@ -359,11 +359,11 @@ public class R1_PDP_PO extends CommonActionHelper
 	public WebElement btnSportsCategory;
 	@FindBy(xpath = "//*[@data-auid='level3Category-Baseball']//*[@data-auid='level4Category-Helmets']")
 	public WebElement btnHelmetsCategory;
-	@FindBy(xpath = "//*[@data-auid='level3Category-Football']//*[@data-auid='level4Category-Helmets & Masks']")
+	@FindBy(xpath = "//*[@data-auid='level4Category-Helmets & Protective Gear']") //MJR-10/11/19
 	public WebElement btnFootballHelmetsCategory;
-	@FindBy(xpath = "//*[text()='Schutt Youth DNA Recruit Hybrid Football Helmet with ROPO Facemask']")
+	@FindBy(xpath = "//*[text()='Schutt Youth Vengeance A3 Football Helmet with VROPO-DW Facemask']") //MJR-10/11/19
 	public WebElement imgHelmetSKUCategory;  //SID 28-August
-	@FindBy(xpath = "//h2[text()='Schutt Youth DNA Recruit Hybrid Football Helmet with ROPO Facemask']")
+	@FindBy(xpath = "//h2[text()='Schutt Youth Vengeance A3 Football Helmet with VROPO-DW Facemask']") //MJR-10/11/19
 	public WebElement txtProdcutDetails;
 	@FindBy(xpath = "(//*[contains(text(),'DETAILS & SPECS')])[1]")
 	public WebElement txtDetails;
