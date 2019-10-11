@@ -11,7 +11,7 @@ Feature: Verify the user search for Customer Keyword/SKU Search
     Then User closes the web application
     Examples:
     |data|
-    |112766238|
+    |109273651|
     |nike mens compression|
 
   @C-SLR @Web @All @Regression  @KER-3267  @ZYP_SLR_K3267-6333 @Rerun @1HR @CR-AG
