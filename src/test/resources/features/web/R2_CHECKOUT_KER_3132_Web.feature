@@ -6,7 +6,8 @@ Scenario: Verify Billing address on check out page - pre-populated billing addre
 	Then user should able to click on Signin button 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user click on signin button
+	Given user navigate and deletes existing items in cart 
 	#  And user clicks on one of the category and navigates to LOne
 	#	    And user clicks on one of the subcategory and navigates to LTwo
 	#	    And user is able to see the product category name in section title
@@ -30,7 +31,8 @@ Scenario: Verify Billing address on check out Page - Same as Shipping Address
 	Then user should able to click on Signin button 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user click on signin button
+	Given user navigate and deletes existing items in cart 
 	When User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
 	And User is navigated to pdp page 
@@ -86,6 +88,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
+	Given user navigate and deletes existing items in cart
 And user clicks on one of the category and navigates to LOne
 	    And user clicks on one of the subcategory and navigates to LTwo
 	    And user is able to see the product category name in section title
