@@ -320,16 +320,10 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfASOHomePage() throws Exception {
 		String currentURL = getCurrentPageURL();
-<<<<<<< HEAD
+
 		try {
 			Assert.assertTrue(currentURL.contains("academy.com"));
 		}catch(Exception e) {
-=======
-		if (currentURL.contains("academy.com"))
-			{
-			logger.debug("User is successfully navigated to ASO Home page with URL :: " + currentURL);
-		} else {
->>>>>>> 96c52157dd82c81c8f1317c7c08f401bdaa95cd0
 			logger.debug("User is not able to navigate to ASO Home Page instead navigated to URL :: " + currentURL);
 			e.printStackTrace();
 		
