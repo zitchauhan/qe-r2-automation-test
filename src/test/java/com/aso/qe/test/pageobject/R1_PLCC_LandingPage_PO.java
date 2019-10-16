@@ -3,6 +3,7 @@ package com.aso.qe.test.pageobject;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -319,10 +320,12 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfASOHomePage() throws Exception {
 		String currentURL = getCurrentPageURL();
-		if (currentURL.contains("academy.com")) {
-			logger.debug("User is successfully navigated to ASO Home page with URL :: " + currentURL);
-		} else {
+		try {
+			Assert.assertTrue(currentURL.contains("academy.com"));
+		}catch(Exception e) {
 			logger.debug("User is not able to navigate to ASO Home Page instead navigated to URL :: " + currentURL);
+			e.printStackTrace();
+		
 		}
 
 	}
