@@ -391,6 +391,13 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='PDP_ProductName']")public WebElement txtProductNameOnPDP;
 	@FindBy(xpath="//*[@data-auid='shopByCategory_tiles']/*//*[contains(@class,'o-copy__')]")public List<WebElement> txtProductCatagoryinPLP;
 	//KER-3276 END
+	
+	//OMNI-1070
+	@FindBy(xpath="//*[@data-auid='pageBanner']")public WebElement pagePromotionBanner;
+	@FindBy(xpath="//*[@data-auid='pageBanner']//*[contains(text(),'FREE SHIPPING')]") public WebElement promotionBannerFreeShippingSection;
+	@FindBy(xpath="//*[@data-auid='pageBanner']//*[contains(text(),'FREE STORE PICKUP')]") public WebElement promotionBannerBopisMessage;
+	@FindBy(xpath="//*[@data-auid='bannerFindAStore']") public WebElement bannerFindaStore;
+	
 	public void accountSummaryDeatils(String exceptedAccountSummaryTxt) throws Exception {
 		String actualAccountSummaryTxt = getText(accountSummaryTxt);
 		logger.debug("accountSummaryTxt:: " + actualAccountSummaryTxt);
