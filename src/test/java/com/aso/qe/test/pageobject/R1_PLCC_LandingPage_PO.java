@@ -222,7 +222,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 		{
 			assertTrue(isDisplayed(signInButton));
-			isClickable(signInButton);
+			assertTrue(isClickable(signInButton));
 			if (isDisplayed(signInButton)) {
 				Common_Web_PLCC.waitUntilElePresent(driver, signInButton, ELEMWAITTIME_SLOW);
 				assertTrue(clickOnButton(signInButton));
@@ -284,11 +284,11 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfSearchIcon() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			isDisplayed(searchIcon);
+			assertTrue(isDisplayed(searchIcon));
 			logger.debug("Search Icon is displayed");
 			Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(searchIcon);
+			assertTrue(isDisplayed(searchIcon));
 			logger.debug("Search Icon is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -319,7 +319,8 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfASOHomePage() throws Exception {
 		String currentURL = getCurrentPageURL();
-		if (currentURL.contains("academy.com")) {
+		if (currentURL.contains("academy.com"))
+			{
 			logger.debug("User is successfully navigated to ASO Home page with URL :: " + currentURL);
 		} else {
 			logger.debug("User is not able to navigate to ASO Home Page instead navigated to URL :: " + currentURL);

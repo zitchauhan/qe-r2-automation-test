@@ -3,6 +3,7 @@ package com.aso.qe.test.pageobject;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -457,10 +458,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfViewCartButton() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(viewCartButton);
+			assertTrue(isDisplayed(viewCartButton));
 			logger.debug("View Cart Button is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(viewCartButton);
+			assertTrue(isDisplayed(viewCartButton));
 			logger.debug("View Cart Button is displayed++++++++++++++++++++++++==");
 		}
 
@@ -469,10 +470,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfPlccCardImageFooter() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(plccCardImageFooter);
+			assertTrue(isDisplayed(plccCardImageFooter));
 			logger.debug("plcc Card Image in footer of Cart Page is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(plccCardImageFooter);
+			assertTrue(isDisplayed(plccCardImageFooter));
 			logger.debug("plcc card Image in footer of Cart Page is displayed++++++++++++++++++++++++==");
 		}
 
@@ -488,12 +489,14 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		}
 
 	}
+
 	public void verifyPresenceOfCartPage() throws Exception {
 		String currentURL = getCurrentPageURL();
-		if (currentURL.contains("/shop/cart")) {
-			logger.debug("User is successfully navigated to Cart page with URL :: " + currentURL);
-		} else {
+		try {
+			Assert.assertTrue(currentURL.contains("/shop/cart"));
+				} catch (Exception e) {
 			logger.debug("User is not able to navigate to Cart Page instead navigated to URL :: " + currentURL);
+			logger.error(">>>>>>>>>>>>>>>>>>>>"+ e.getMessage());
 		}
 	}
 	
