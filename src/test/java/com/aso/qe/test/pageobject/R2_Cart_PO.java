@@ -110,6 +110,17 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='submit-zip-code']")
 	public WebElement btnZipcodeSubmit;
+	
+	
+	@FindBy(xpath = "//*[@data-auid='submit-zip-code']//span[1]")
+	public WebElement btnZipcodesearch;
+	
+	@FindBy(xpath = "//div[text()='Grand Parkway']//following::i[1]")
+	public WebElement btnplus;
+	
+	@FindBy(xpath = "//*[@aria-label='Make My Store']")
+	public WebElement btnstore;
+	
 
 	@FindBy(xpath = "(//*[@data-auid='find-a-store-modal'])[2]/../div[1]/div[2]")
 	public WebElement txtStoreResult;
@@ -179,7 +190,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath = "(//*[@data-auid='crt_inputQty'])[1]")
 	public WebElement limitedQuantityAddedInCart;  //SID 12-Jan
 	
-	@FindBy(xpath = "//*[@data-auid='cart_radio_button_div']/*[2]/*[2]") //MJR-09/16/19
+	@FindBy(xpath = "//*[contains(@data-auid, 'tooltipcrt_rdTooltip_')]/parent::*") //MJR-09/16/19
 	public WebElement storeNameOnCartPageInStorePickUp;  //SID 23-Jan
 	
 	@FindBy(xpath = "//*[text()='Change Location']/parent::*")

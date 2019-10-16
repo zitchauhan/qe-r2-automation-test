@@ -57,7 +57,7 @@ Scenario: Verify that Authenticated user is able to view shipping and Billing De
 		| MyAccount_OrderDetailsPage_ShippingAmount   |
 		| MyAccount_OrderDetailsPage_TaxAmount        |
 		| MyAccount_OrderDetailsPage_SubTotalAmount   |
-		| MyAccount_OrderDetailsPage_PrintReceipt     |
+		| #MyAccount_OrderDetailsPage_PrintReceipt     |
 		| MyAccount_OrderDetailsPage_ShippingAddress  |
 		| MyAccount_OrderDetailsPage_BillingInfo      |
 		| MyAccount_OrderDetailsPage_EmailOrPhone     |
@@ -107,8 +107,8 @@ Scenario: Verify that Authenticated user is able to Print Order receipt
 	And User clicks on View Details CTA for an order 
 	Then Verify below Sub/Main Module of My Account 
 		| #Verify following elements in order section |
-		| MyAccount_OrderDetailsPage_PrintReceipt     |
-	And user click on print receipt link 
+		#| #MyAccount_OrderDetailsPage_PrintReceipt     |
+	#And user click on print receipt link 
 	
 @C-BOPIS @R2_Mobile @R2_NonRegression @R2_All @P-High_B @CB-MyAccount @KER-4237 
 @ZYP_MYACCOUNT_K4237-10519 @CR-GK 
@@ -147,5 +147,5 @@ Scenario: Verify that UnAuthenticated user is able to print order receipt
 	And User clicks on View Details CTA for an order 
 	Then Verify below Sub/Main Module of My Account 
 		| #Verify following elements in order section |
-		| MyAccount_OrderDetailsPage_PrintReceipt     |
-	And user click on print receipt link 
+		#| #MyAccount_OrderDetailsPage_PrintReceipt     |
+	#And user click on print receipt link 

@@ -7,7 +7,8 @@ Scenario: To verify change billing Address CTA
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user click on signin button
+	Given user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button 
@@ -43,7 +44,8 @@ Scenario: To verify all fields in Billing Address Form
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user click on signin button
+	Given user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button 
@@ -78,7 +80,8 @@ Scenario: To verify change billing Address CTA
 	When user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-	And user click on signin button 
+	And user click on signin button
+	Given user navigate and deletes existing items in cart 
 	When User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button 

@@ -25,6 +25,6 @@ Scenario: Verify Customer must be able to select "Print Receipt" from Order Deta
 	|#Verify following elements in order section|
 	|Order_Taxes_Price|
 	|Order_OrderTotal|	
-	And user click on print receipt link
+	#And user click on print receipt link
 	
 	

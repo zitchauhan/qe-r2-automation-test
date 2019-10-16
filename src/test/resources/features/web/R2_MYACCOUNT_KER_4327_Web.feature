@@ -74,7 +74,7 @@ Scenario: 	BOPIS-Verify that order is not cancelled if user clicks on No CTA on 
       | Order_OrderTotal                                       |
       | Order_Bopis_In_Store_Pickup_txt                        |
       | MyAccount_OrderDetailsPage_SubTotalAmount              |
-      | Order_Bopis_Print_Receipt_lnk                          |
+      #| #Order_Bopis_Print_Receipt_lnk                          |
 		
 @C-BOPIS @R2_Web @R2_All @CB-MyAccount @KER-4327 @ZYP_MYACCOUNT_K4327-10916
 Scenario: BOPIS-Verify that order is gets cancelled if user clicks on Yes, Cancel my Order CTA on confirmation modal

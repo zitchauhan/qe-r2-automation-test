@@ -16,7 +16,7 @@ Scenario: Verify that user view 'Find a Store' modal from Change Location in Car
 	Then user select in store pickup option 
 	And user click on change location link in order summery cart page 
 	And Find Store Modal should pop-up Verify the user is able to see the full inventory availability on Find a store modal 
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2865 @ZYP_CART_K2865-9983 
+@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2865 @ZYP_CART_K2865-9983 @Rishikesh
 Scenario: Verify the user is able to see the full inventory availability on Find a store modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 

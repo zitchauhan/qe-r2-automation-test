@@ -44,6 +44,7 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	@FindBy(xpath="//*[@data-auid='find-a-store-modal']//*[contains(text(),'Closed')]")public WebElement storeClosed;  //SID 7-Jan
 	@FindBy(xpath="(//*[@data-auid='btnfind-a-store-mystore-button'])[1]/parent::div/*[1]/*[1]/*[1]/*/*[2]")public WebElement storeZipCode;  //SID 8-Jan
 	@FindBy(xpath="(//*[@data-auid='find-a-store-modal'])[2]/*[4]/*[2]/*[2]/*[1]/*[1]/*[1]/*[1]/*/*[2]")public WebElement selectedStoreZipCode;  //SID 21-Jan
+	@FindBy(xpath="//*[text()='Sorry! There are no stores within 250 miles. Please order online or try new ZIP code.']") public WebElement californiaaddress;
 	
 	@FindBy(xpath="(//*[@data-auid='facetdrawerundefined'])[2]")public WebElement selectChangedStore;  //SID 7-Jan
 	

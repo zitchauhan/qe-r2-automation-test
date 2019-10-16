@@ -68,7 +68,7 @@ Scenario: Verify that Authenticated user is able to view shipping and Billing De
 		|MyAccount_OrderDetailsPage_ShippingAmount  |
 		|MyAccount_OrderDetailsPage_TaxAmount       |
 		|MyAccount_OrderDetailsPage_SubTotalAmount  |
-		|MyAccount_OrderDetailsPage_PrintReceipt    |
+		#|#MyAccount_OrderDetailsPage_PrintReceipt    |
 		|MyAccount_OrderDetailsPage_ShippingAddress |
 		|MyAccount_OrderDetailsPage_BillingInfo     |
 		|MyAccount_OrderDetailsPage_EmailOrPhone    |
@@ -128,8 +128,8 @@ Scenario: Verify that Authenticated user is able to Print Order receipt
 	And User clicks on View Details CTA for an order 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in order section|
-		|MyAccount_OrderDetailsPage_PrintReceipt    |
-	And user click on print receipt link 
+		#|#MyAccount_OrderDetailsPage_PrintReceipt    |
+	#And user click on print receipt link 
 	
 	
 @C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-MyAccount @KER-4237 
@@ -182,8 +182,8 @@ Scenario: Verify that UnAuthenticated user is able to print order receipt
 	And User clicks on View Details CTA for an order 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in order section|
-		|MyAccount_OrderDetailsPage_PrintReceipt    |
-	And user click on print receipt link 
+		#|#MyAccount_OrderDetailsPage_PrintReceipt    |
+	#And user click on print receipt link 
 	
 @R2_Web @R2_All @P2 @CB-MyAccount @KER-4237 @ZYP_MYACCOUNT_K4237-10527 @C-BOPIS
 Scenario: Verify that UnAuthenticated user is able to view order details for BOPIS orders
@@ -207,7 +207,7 @@ Scenario: Verify that UnAuthenticated user is able to view order details for BOP
 	|Order_Bopis_Store_Hours_txt|
 	|Order_Bopis_Pickup_Information_Person_Details_Txt|
 	|Order_Bopis_View_Store_Btn|
-	|Order_Bopis_Print_Receipt_lnk|
+	#|#Order_Bopis_Print_Receipt_lnk|
 	|Order_Bopis_InStore_Pickup_Msg|
 	|Order_Bopis_Item_Img|
 	|Order_Bopis_Item_Details|
