@@ -177,4 +177,4 @@ Scenario: Verify the details in Order Summary section
       | Order_OrderTotal                                       |
       | Order_Bopis_In_Store_Pickup_txt                        |
       | MyAccount_OrderDetailsPage_SubTotalAmount              |
-      | Order_Bopis_Print_Receipt_lnk                          |
+      #| #Order_Bopis_Print_Receipt_lnk                          |

@@ -22,7 +22,7 @@ Scenario: Default ASO/PLcc credit card should be displayed on payment section fo
 	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present 
 	And user expect element Order Number to be present 
 	And user expect element a confirmation email is on its way to be present 
-	And user expect element print link to be present 
+	#And user expect element print link to be present 
 	And user expect element my account link to be present 
 	When user enters "SKUIdOfProduct" in the search box plcc 
 	And user click on search icon 
@@ -37,7 +37,7 @@ Scenario: Default ASO/PLcc credit card should be displayed on payment section fo
 	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present 
 	And user expect element Order Number to be present 
 	And user expect element a confirmation email is on its way to be present 
-	And user expect element print link to be present 
+	#And user expect element print link to be present 
 	And user expect element my account link to be present 
 	When user click on My Account link 
 	And user click on Payments link 
@@ -62,7 +62,7 @@ Scenario: Verify the default payment method when user tries to place an another 
 	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present 
 	And user expect element Order Number to be present 
 	And user expect element a confirmation email is on its way to be present 
-	And user expect element print link to be present 
+	#And user expect element print link to be present 
 	And user expect element my account link to be present 
 	When user enters "SKUIdOfProduct" in the search box plcc 
 	And user click on search icon 
@@ -77,7 +77,7 @@ Scenario: Verify the default payment method when user tries to place an another 
 	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present 
 	And user expect element Order Number to be present 
 	And user expect element a confirmation email is on its way to be present 
-	And user expect element print link to be present 
+	#And user expect element print link to be present 
 	And user expect element my account link to be present 
 	When user click on My Account link 
 	And user click on Payments link 
