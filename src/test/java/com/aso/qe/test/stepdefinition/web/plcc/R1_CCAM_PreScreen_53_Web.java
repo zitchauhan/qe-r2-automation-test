@@ -27,9 +27,9 @@ public class R1_CCAM_PreScreen_53_Web extends CommonActionHelper {
 	
 	@Then("^user enter Confirm Last four SSN \"(.*?)\"$")
 	public void user_enter_Confirm_Last_four_SSN(String arg1) throws Throwable {
-		ccAplicationModal_PO.enterConfirmSSNCCModal(arg1);
 		assertTrue(isDisplayed(ccAplicationModal_PO.confirmSsnCCModal));
-		waitForElement(ccAplicationModal_PO.confirmSsnCCModal);
+		ccAplicationModal_PO.enterConfirmSSNCCModal(arg1);
+		//waitForElement(ccAplicationModal_PO.confirmSsnCCModal);
 	}
 	
 	
@@ -48,7 +48,8 @@ public class R1_CCAM_PreScreen_53_Web extends CommonActionHelper {
 	}
 @Then("^user click on ACCEPT OFFER$")
 public void user_click_on_ACCEPT_OFFER() throws Throwable {
-	ccAplicationModal_PO.acceptOfferButtonPCCApplicationModal.click();
+	assertTrue(clickOnButton(ccAplicationModal_PO.acceptOfferButtonPCCApplicationModal));
+	//ccAplicationModal_PO.acceptOfferButtonPCCApplicationModal.click();
 }
 @Then("^user expect error message on mobile phone field$")
 public void user_expect_error_message_on_mobile_phone_field() throws Throwable {

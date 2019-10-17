@@ -48,11 +48,11 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 	@When("^user enter Last four SSN \"(.*?)\"$")
 	public void user_enter_Last_SSN(String arg2) throws Throwable {
 		Thread.sleep(5000);
-		plccCCApplicationModalObjects.ssnCCModal.click();
-		plccCCApplicationModalObjects.enterSSNCCModal(arg2);
+		//plccCCApplicationModalObjects.ssnCCModal.click();
+		assertTrue(clickOnButton(plccCCApplicationModalObjects.ssnCCModal));
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.ssnCCModal));
-		waitForElement(plccCCApplicationModalObjects.ssnCCModal);
-	}
+		plccCCApplicationModalObjects.enterSSNCCModal(arg2);
+			}
 
 	@When("^user enetr Date of Birth \"(.*?)\"$")
 	public void user_enetr_Date_of_Birth(String arg1) throws Throwable {
@@ -101,9 +101,9 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 
 	@When("^user enter Confirm Email Address \"(.*?)\"$")
 	public void user_enter_Confirm_Email_Address(String arg1) throws Throwable {
-		plccCCApplicationModalObjects.enterConfirmEmailIdCCModal(arg1);
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.confirmEmailIdCCModal));
-		waitForElement(plccCCApplicationModalObjects.confirmEmailIdCCModal);
+		plccCCApplicationModalObjects.enterConfirmEmailIdCCModal(arg1);
+		//waitForElement(plccCCApplicationModalObjects.confirmEmailIdCCModal);
 	}
 
 	@When("^user enter Mobile Phone \"(.*?)\"$")

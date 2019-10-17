@@ -19,6 +19,7 @@ Feature: PLCC: CCAM-Prescreen Modal_Back Button
 	And user select State "State"
 	And user enter Zip Code on credit card Application Modal "ZipCode"
 	And user enter Email Address on credit card Application Modal "EmailId"
+	And user enter Confirm Email Address "ConfirmEmailId" 
 	And user enter Mobile Phone "MobilePhone"
 	And user enter Alternate Phone "AlternatePhone"
 	And user click on CONTINUE button
@@ -51,6 +52,7 @@ Feature: PLCC: CCAM-Prescreen Modal_Back Button
 	And user enter Zip Code on credit card Application Modal "ZipCode"
 	And user clear and enter Zip Code on credit card Application Modal "ZipCode"
 	And user enter Email Address on credit card Application Modal "EmailId"
+	And user enter Confirm Email Address "ConfirmEmailId" 
 	And user enter Mobile Phone "MobilePhone"
 	And user enter Alternate Phone "AlternatePhone"
 	And user click on CONTINUE button
@@ -61,7 +63,7 @@ Feature: PLCC: CCAM-Prescreen Modal_Back Button
 	Then user expect submit button not clickable
 	
 
-@C-PLCC @Regression @All @PLCC-57 @CR-VS	
+@C-PLCC @Regression @All @PLCC-57 @CR-VS @vidya
  Scenario: Verify the system behavior when user clicks on Back button_Generic
  	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
@@ -82,6 +84,7 @@ Feature: PLCC: CCAM-Prescreen Modal_Back Button
 	And user enter Zip Code on credit card Application Modal "ZipCode"
 	And user clear and enter Zip Code on credit card Application Modal "ZipCode"
 	And user enter Email Address on credit card Application Modal "EmailId"
+	And user enter Confirm Email Address "ConfirmEmailId" 
 	And user enter Mobile Phone "MobilePhone"
 	And user enter Alternate Phone "AlternatePhone"
 	And user click on CONTINUE button
