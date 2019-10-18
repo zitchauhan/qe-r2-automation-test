@@ -57,7 +57,7 @@ Scenario: First Time Promotion Available for item less than or equal to <15$
 	Then user click on remove from cart 
 
 	
-@C-PLCC @Regression @All @PLCC-101 @CR-VS @Tempdisabled
+@C-PLCC @Regression @All @PLCC-101 @CR-VS @Tempdisabled@Rishikesh
 Scenario: First Time Promotion Available for item greater than >15$
     When user enters "SKUIdOfProductGr15" in the search box plcc
 	And user click on search icon 

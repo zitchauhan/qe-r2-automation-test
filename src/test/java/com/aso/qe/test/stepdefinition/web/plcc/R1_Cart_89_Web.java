@@ -35,7 +35,8 @@ public class R1_Cart_89_Web extends CommonActionHelper{
 	@When("^user click on viewcart button$")
 	public void user_click_on_viewcart_button() throws Throwable {
 		genericPO.verifyPresenceOfViewCartButton();
-		genericPO.viewCartButton.click();
+		clickOnButton(genericPO.viewCartButton);
+		
 		/**Modified from here***/
 		Thread.sleep(6000);
 		/*Temp commented out by HP 07/26/19*/

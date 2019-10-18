@@ -119,7 +119,7 @@ public void user_expect_discount_text_to_be_present() throws Throwable {
 public void user_clicks_on_checkout_button_on_cart_page() throws Throwable {
 	try {
 		genericPO.verifyPresenceOfCheckoutLinkOnCartPage();
-		genericPO.checkoutBtnATCCartPage.click();
+		clickOnButton(genericPO.checkoutBtnATCCartPage);
 		Thread.sleep(8000);
 	} catch (Exception e) {
 		logger.debug("Exception Message: "+e.getMessage());
@@ -128,7 +128,7 @@ public void user_clicks_on_checkout_button_on_cart_page() throws Throwable {
 @Then("^user increases quantity \"(.*?)\" of product$")
 public void user_increases_quantity_of_product(String arg1) throws Throwable {
 	Thread.sleep(2000);
-	genericPO.quantityInputField.click();
+	clickOnButton(genericPO.quantityInputField);
 	clearInputBox(genericPO.quantityInputField);
 //	genericPO.quantityInputField.click();
 	genericPO.enterItemQuantity(arg1);
