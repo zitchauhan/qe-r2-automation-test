@@ -3,6 +3,7 @@ package com.aso.qe.test.pageobject;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -122,17 +123,19 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 		{
 			assertTrue(isDisplayed(academyCreditCardFooterLink));
-			isClickable(academyCreditCardFooterLink);
-			if (isDisplayed(academyCreditCardFooterLink)) {
-				Common_Web_PLCC.waitUntilElePresent(driver, academyCreditCardFooterLink, ELEMWAITTIME_MEDIUM);
-				Common_Web_PLCC.waitUntilElePresent(driver, academyCreditCardFooterLink, ELEMWAITTIME_MEDIUM);
-				assertTrue(clickOnButton(academyCreditCardFooterLink));
-			} else {
-				Common_Web_PLCC.waitUntilElePresent(driver, academyCreditCardFooterLink, ELEMWAITTIME_MEDIUM);
-			}
+			assertTrue(isClickable(academyCreditCardFooterLink));
+			assertTrue(clickOnButton(academyCreditCardFooterLink));
+			
+//			
+//			if (isDisplayed(academyCreditCardFooterLink)) {
+//				Common_Web_PLCC.waitUntilElePresent(driver, academyCreditCardFooterLink, ELEMWAITTIME_MEDIUM);
+//				assertTrue(clickOnButton(academyCreditCardFooterLink));
+//			} else {
+//				Common_Web_PLCC.waitUntilElePresent(driver, academyCreditCardFooterLink, ELEMWAITTIME_MEDIUM);
+//			}
 		}
 	}
-
+		
 	public void clickOnASOLogo() throws Exception {
 
 		{
@@ -222,7 +225,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 		{
 			assertTrue(isDisplayed(signInButton));
-			isClickable(signInButton);
+			assertTrue(isClickable(signInButton));
 			if (isDisplayed(signInButton)) {
 				Common_Web_PLCC.waitUntilElePresent(driver, signInButton, ELEMWAITTIME_SLOW);
 				assertTrue(clickOnButton(signInButton));
@@ -284,11 +287,11 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfSearchIcon() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			isDisplayed(searchIcon);
+			assertTrue(isDisplayed(searchIcon));
 			logger.debug("Search Icon is displayed");
 			Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(searchIcon);
+			assertTrue(isDisplayed(searchIcon));
 			logger.debug("Search Icon is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -319,10 +322,13 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfASOHomePage() throws Exception {
 		String currentURL = getCurrentPageURL();
-		if (currentURL.contains("academy.com")) {
-			logger.debug("User is successfully navigated to ASO Home page with URL :: " + currentURL);
-		} else {
+
+		try {
+			Assert.assertTrue(currentURL.contains("academy.com"));
+		}catch(Exception e) {
 			logger.debug("User is not able to navigate to ASO Home Page instead navigated to URL :: " + currentURL);
+			e.printStackTrace();
+		
 		}
 
 	}
@@ -393,10 +399,10 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfPreescreenTextField() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(prescreenCodeTextField);
+			assertTrue(isDisplayed(prescreenCodeTextField));
 			logger.debug("Pre-screen Text Field is displayed for Mobile");
 		} else {
-			isDisplayed(prescreenCodeTextField);
+			assertTrue(isDisplayed(prescreenCodeTextField));
 			logger.debug("Pre-screen Text Field is displayed");
 		}
 	}
@@ -470,10 +476,11 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	public void verifyPresenceOfLandingPage() throws Exception {
 		String currentURL = getCurrentPageURL();
-		if (currentURL.contains("/shop/store/academy-credit-card")) {
-			logger.debug("User is successfully navigated to Landing page with URL :: " + currentURL);
-		} else {
+		try {
+			Assert.assertTrue(currentURL.contains("/shop/browse/academy-credit-card"));
+				} catch (Exception e) {
 			logger.debug("User is not able to navigate to Landing Page instead navigated to URL :: " + currentURL);
+			logger.error(">>>>>>>>>>>>>>>>>>>>"+ e.getMessage());
 		}
 
 	}

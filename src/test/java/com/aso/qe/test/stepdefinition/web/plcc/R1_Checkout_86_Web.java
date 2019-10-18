@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -36,7 +37,8 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 	@When("^user click on APPLY NOW button$")
 	public void user_click_on_APPLY_NOW_button() throws Throwable {
 		plccLandingPageObjects.verifyPresenceOfApplyNowButton();
-		plccLandingPageObjects.applyNowButton.click();
+		clickOnButton(plccLandingPageObjects.applyNowButton);
+	//	plccLandingPageObjects.applyNowButton.click();
 
 	}
 
@@ -48,46 +50,46 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 	@When("^user enter Last four SSN \"(.*?)\"$")
 	public void user_enter_Last_SSN(String arg2) throws Throwable {
 		Thread.sleep(5000);
-		plccCCApplicationModalObjects.ssnCCModal.click();
+
+		clickOnButton(plccCCApplicationModalObjects.ssnCCModal);
+	//	plccCCApplicationModalObjects.ssnCCModal.click();
 		plccCCApplicationModalObjects.enterSSNCCModal(arg2);
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.ssnCCModal));
-		waitForElement(plccCCApplicationModalObjects.ssnCCModal);
+	//	waitForElement(plccCCApplicationModalObjects.ssnCCModal);
 	}
 
 	@When("^user enetr Date of Birth \"(.*?)\"$")
 	public void user_enetr_Date_of_Birth(String arg1) throws Throwable {
-		plccCCApplicationModalObjects.enterDOBCCModal(arg1);
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.dobCCModal));
-		waitForElement(plccCCApplicationModalObjects.dobCCModal);
+		plccCCApplicationModalObjects.enterDOBCCModal(arg1);
 	}
 
 	@When("^user enter Annual Income \"(.*?)\"$")
-	public void user_enter_Annual_Income(String arg1) throws Throwable {
-		
+	public void user_enter_Annual_Income(String arg1) throws Throwable {		
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.annualIncomeCCModal));
-		waitForElement(plccCCApplicationModalObjects.annualIncomeCCModal);
 		plccCCApplicationModalObjects.enterAnnualIncomeCCModal(arg1);
 	}
 
 	@When("^user enter Street Address \"(.*?)\"$")
 	public void user_enter_Street_Address(String arg1) throws Throwable {
-		plccCCApplicationModalObjects.enterStreetAddressCCModal(arg1);
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.streetAddressCCModal));
-		waitForElement(plccCCApplicationModalObjects.streetAddressCCModal);
+		plccCCApplicationModalObjects.enterStreetAddressCCModal(arg1);	
+//	waitForElement(plccCCApplicationModalObjects.streetAddressCCModal);
 	}
 
 	@When("^user enter Suite or Apartment \"(.*?)\"$")
 	public void user_enter_Suite_or_Apartment(String arg1) throws Throwable {
-		plccCCApplicationModalObjects.enterApartmentNameCCModal(arg1);
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.apartmentNameCCModal));
-		waitForElement(plccCCApplicationModalObjects.apartmentNameCCModal);
+		plccCCApplicationModalObjects.enterApartmentNameCCModal(arg1);
+		
+		
 	}
 
 	@When("^user enter City \"(.*?)\"$")
 	public void user_enter_City(String arg1) throws Throwable {
-		plccCCApplicationModalObjects.enterCityCCModal(arg1);
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.cityCModal));
-		waitForElement(plccCCApplicationModalObjects.cityCModal);
+		plccCCApplicationModalObjects.enterCityCCModal(arg1);
+	//	waitForElement(plccCCApplicationModalObjects.cityCModal);
 	}
 
 	@When("^user select State \"(.*?)\"$")
@@ -101,30 +103,32 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 
 	@When("^user enter Confirm Email Address \"(.*?)\"$")
 	public void user_enter_Confirm_Email_Address(String arg1) throws Throwable {
-		plccCCApplicationModalObjects.enterConfirmEmailIdCCModal(arg1);
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.confirmEmailIdCCModal));
-		waitForElement(plccCCApplicationModalObjects.confirmEmailIdCCModal);
+
+		plccCCApplicationModalObjects.enterConfirmEmailIdCCModal(arg1);	
+	//	waitForElement(plccCCApplicationModalObjects.confirmEmailIdCCModal);
+
 	}
 
 	@When("^user enter Mobile Phone \"(.*?)\"$")
 	public void user_enter_Mobile_Phone(String arg1) throws Throwable {
-		plccCCApplicationModalObjects.enterMobilePhoneCCModal(arg1);
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.mobilePhoneCCModal));
-		waitForElement(plccCCApplicationModalObjects.mobilePhoneCCModal);
+		plccCCApplicationModalObjects.enterMobilePhoneCCModal(arg1);	
+	//	waitForElement(plccCCApplicationModalObjects.mobilePhoneCCModal);
 	}
 
 	@When("^user enter First Name on credit card Application Modal \"(.*?)\"$")
 	public void user_enter_First_Name_on_credit_card_Application_Modal(String arg1) throws Throwable {
-		plccCCApplicationModalObjects.enterFNCCModal(arg1);
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.firstNameCCModal));
-		waitForElement(plccCCApplicationModalObjects.firstNameCCModal);
+		plccCCApplicationModalObjects.enterFNCCModal(arg1);	
+	//	waitForElement(plccCCApplicationModalObjects.firstNameCCModal);
 	}
 
 	@When("^user enter Last Name user_enter_Last_Name \"(.*?)\"$")
 	public void user_enter_Last_Name_user_enter_Last_Name(String arg1) throws Throwable {
-		plccCCApplicationModalObjects.enterLNCCModal(arg1);
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.lastNameCCModal));
-		waitForElement(plccCCApplicationModalObjects.lastNameCCModal);
+		plccCCApplicationModalObjects.enterLNCCModal(arg1);		
+//		waitForElement(plccCCApplicationModalObjects.lastNameCCModal);
 	}
 
 	@When("^user enter Alternate Phone \"(.*?)\"$")
@@ -137,7 +141,7 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 	@When("^user click on CONTINUE button$")
 	public void user_click_on_CONTINUE_button() throws Throwable {
 		plccCCApplicationModalObjects.verifyPresenceOfContinueButtonCCModal();
-		plccCCApplicationModalObjects.continueButtonCCModal.click();
+		assertTrue(clickOnButton(plccCCApplicationModalObjects.continueButtonCCModal));
 		Common_Web_PLCC.waitUntilElePresent(driver, plccCCApplicationModalObjects.continueButtonCCModal,
 				ELEMWAITTIME_MEDIUM);
 		//assertTrue(clickOnButton(plccCCApplicationModalObjects.continueButtonCCModal));
@@ -225,9 +229,9 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 			try {
 				genericPO.verifyPresenceOfEditLinkPaymentSectionCheckoutPage();
 				wait.until(ExpectedConditions.visibilityOf(genericPO.editLinkPaymentSection));
-				genericPO.editLinkPaymentSection.click();
+				clickOnLink(genericPO.editLinkPaymentSection);
 			} catch (Exception e) {
-				isDisplayed(genericPO.editLinkPaymentSection);
+				assertTrue(isDisplayed(genericPO.editLinkPaymentSection));
 				wait.until(ExpectedConditions.visibilityOf(genericPO.editLinkPaymentSection));
 				WebElement element = driver.findElement(By.xpath("//*[@data-auid='checkout_edit_payment']"));
 				JavascriptExecutor executor = (JavascriptExecutor)driver;
@@ -235,11 +239,13 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 			}
 	}
 
+	
+
 	@When("^user select add new card option$")
 	public void user_select_add_new_card_option() throws Throwable {
 		try {
 			genericPO.verifyPresenceOfAddNewCreditCardOption();
-			genericPO.addNewCreditCardOption.click();
+			assertTrue(clickOnButton(genericPO.addNewCreditCardOption));	
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -250,7 +256,7 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 	public void user_click_on_confirm_button_plcc() throws Throwable {
 		try {
 			genericPO.verifyPresenceOfConfirmButton();
-			genericPO.confirmButton.click();
+			assertTrue(clickOnButton(genericPO.confirmButton));	
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -260,7 +266,8 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 	public void user_click_on_credit_card_drop_down() throws Throwable {
 		try {
 			genericPO.verifyPresenceOfSavedCardCheckoutPage();
-			genericPO.savedCardCheckoutPage.click();
+			assertTrue(clickOnButton(genericPO.savedCardCheckoutPage));			
+		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -265,7 +265,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfEmailTxtField() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			isDisplayed(emailIdTxtField);
+			assertTrue(isDisplayed(plccLandingPageObjects.emailTxtField));
 			logger.debug("Email Text Field is displayed");
 		} else {
 			isDisplayed(emailIdTxtField);

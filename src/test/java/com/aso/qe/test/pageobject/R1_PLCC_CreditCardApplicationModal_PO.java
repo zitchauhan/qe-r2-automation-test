@@ -495,10 +495,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfGenericCreditCardApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(creditCardApplicationModal);
+			assertTrue(isDisplayed(creditCardApplicationModal));
 			logger.debug("Generic Credit Card Application Modal is displayed for Mobile");
 		} else {
-			isDisplayed(creditCardApplicationModal);
+			assertTrue(isDisplayed(creditCardApplicationModal));
 			logger.debug("Generic Credit Card Application Modal is displayed");
 		}
 	}
@@ -655,30 +655,30 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfContinueShoppingBtnCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(continueShoppingBtn);
+			assertTrue(isDisplayed(continueShoppingBtn));
 			logger.debug("Continue Shopping button is displayed");
 		} else {
-			isDisplayed(continueShoppingBtn);
+			assertTrue(isDisplayed(continueShoppingBtn));
 			logger.debug("Continue Shopping button is displayed");
 		}
 	}
 
 	public void verifyPresenceOfAgreeApplicationModalCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(TandCCheckBox);
+			assertTrue(isDisplayed(TandCCheckBox));
 			logger.debug("Agree T&C is displayed for Mobile");
 		} else {
-			isDisplayed(TandCCheckBox);
+			assertTrue(isDisplayed(TandCCheckBox));
 			logger.debug("Agree T&C is displayed is displayed");
 		}
 	}
 
 	public void verifyPresenceOfSuccessModalCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(successModal);
+			assertTrue(isDisplayed(successModal));
 			logger.debug("Credit Card Application Form Submit Success Modal is displayed on mobile");
 		} else {
-			isDisplayed(successModal);
+			assertTrue(isDisplayed(successModal));
 			logger.debug("Credit Card Application Form Submit Success Modal is displayed");
 		}
 	}
@@ -868,10 +868,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyTAndCCheckboxOnConsentModelInactive() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(t$CCheckBoxInactiveConsentModel);
+			assertTrue(isDisplayed(t$CCheckBoxInactiveConsentModel));
 			logger.debug("I agree to Terms and Conditions Checkbox on Consent Modal is Inactive");
 		} else {
-			isDisplayed(t$CCheckBoxInactiveConsentModel);
+			assertTrue(isDisplayed(t$CCheckBoxInactiveConsentModel));
 			logger.debug("I agree to Terms and Conditions Checkbox on Consent Modal is Inactive");
 		}
 
@@ -879,10 +879,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfBackButtonConsentModel() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(backButtonConsentModel);
+			assertTrue(isDisplayed(backButtonConsentModel));
 			logger.debug("Back Button on Consent Modal Modal is displayed");
 		} else {
-			isDisplayed(backButtonConsentModel);
+			assertTrue(isDisplayed(backButtonConsentModel));
 			logger.debug("Back Button on Consent Modal Modal is displayed");
 		}
 
@@ -998,10 +998,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	}
 	public void verifyPresenceOfCloseIconSuccessModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(closeIconSuccessModal);
+			assertTrue(isDisplayed(closeIconSuccessModal));
 			logger.debug("Close Icon of Sccess Modal is displayed");
 		} else {
-			isDisplayed(closeIconSuccessModal);
+			assertTrue(isDisplayed(closeIconSuccessModal));
 			logger.debug("Close Icon of Sccess Modal is displayed");
 		}
 
@@ -1010,19 +1010,19 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfPageLabelPCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(pageLabelPCCApplicationModal);
+			assertTrue(isDisplayed(pageLabelPCCApplicationModal));
 			logger.debug(" STEP1:PRESCREEN ACCEPTANCE 2 on Pre-screen Credit card ApplicationModal is displayed for Mobile");
 		} else {
-			isDisplayed(pageLabelPCCApplicationModal);
+			assertTrue(isDisplayed(pageLabelPCCApplicationModal));
 			logger.debug(" STEP1:PRESCREEN ACCEPTANCE on Pre-screen Credit card ApplicationModal is displayed");
 		}
 	}
 	public void verifyPresenceOfPrintIconPLCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(printLinkConsentModal);
+			assertTrue(isDisplayed(printLinkConsentModal));
 			logger.debug("Print Icon on  Pre-screen Credit card ApplicationModal is displayed");
 		} else {
-			isDisplayed(printLinkConsentModal);
+			assertTrue(isDisplayed(printLinkConsentModal));
 			logger.debug("Print Icon on  Pre-screen Credit card ApplicationModal is not displayed");
 		}
 
