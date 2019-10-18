@@ -269,7 +269,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 		{
 			try {
 				wait.until(ExpectedConditions.visibilityOf(bannerCartPage_m));
-				bannerCartPage_m.click();
+				clickOnButton(bannerCartPage_m);
 				logger.debug("Banner on Cart Page is displayed");
 			} catch (Exception e) {
 				//isDisplayed(bannerCartPage_m);
@@ -293,6 +293,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			} catch (Exception e) {
 				e.printStackTrace();
 				wait.until(ExpectedConditions.visibilityOf(bannerCartPage));
+				
 				bannerCartPage.click();
 			}
 		}
@@ -445,50 +446,50 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 					
 	public void verifyPresenceOfConsentModelPageLabel() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(firstNameCCModal);
+			assertTrue(isDisplayed(firstNameCCModal));
 			logger.debug("STEP2: CONSENT is displayed for Mobile");
 		} else {
-			isDisplayed(firstNameCCModal);
+			assertTrue(isDisplayed(firstNameCCModal));
 			logger.debug("STEP2: CONSENT is displayed");
 		}
 	}
 
 	public void verifyPresenceOfFirstNameCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(firstNameCCModal);
+			assertTrue(isDisplayed(firstNameCCModal));
 			logger.debug("First Name Text Field on Credit Card Application Modal is displayed for Mobile");
 		} else {
-			isDisplayed(firstNameCCModal);
+			assertTrue(isDisplayed(firstNameCCModal));
 			logger.debug("First Name Text Field on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfCancelLinkCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(cancelLinkCCModal);
+			assertTrue(isDisplayed(cancelLinkCCModal));
 			logger.debug("Cancel Link on Credit Card Application Modal is displayed for Mobile");
 		} else {
-			isDisplayed(cancelLinkCCModal);
+			assertTrue(isDisplayed(cancelLinkCCModal));
 			logger.debug("Cancel Link on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfDOBTextField() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(dobCCModal);
+			assertTrue(isDisplayed(dobCCModal));
 			logger.debug("DOB Text Field on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(dobCCModal);
+			assertTrue(isDisplayed(dobCCModal));
 			logger.debug("DOB Text Field on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfSubmitButtonCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(submitButton);
+			assertTrue(isDisplayed(submitButton));
 			logger.debug("Submit button is displayed");
 		} else {
-			isDisplayed(submitButton);
+			assertTrue(isDisplayed(submitButton));
 			logger.debug("Submit button is displayed");
 		}
 	}
@@ -505,149 +506,149 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfLastNameCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(lastNameCCModal);
+			assertTrue(isDisplayed(lastNameCCModal));
 			logger.debug("Last Name Text Field on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(lastNameCCModal);
+			assertTrue(isDisplayed(lastNameCCModal));
 			logger.debug("Last Name Text Field on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfMiddleNameCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(middleNameCCModal);
+			assertTrue(isDisplayed(middleNameCCModal));
 			logger.debug("Middle Name Text Field on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(middleNameCCModal);
+			assertTrue(isDisplayed(middleNameCCModal));
 			logger.debug("Middle Name Text Field on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfSSNCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(ssnCCModal);
+			assertTrue(isDisplayed(ssnCCModal));
 			logger.debug("SSN on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(ssnCCModal);
+			assertTrue(isDisplayed(ssnCCModal));
 			logger.debug("SSN on Credit Card Application Modal is displayed");
 		}
 	}
 	public void verifyPresenceOfConfirmSSNCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(confirmSsnCCModal);
+			assertTrue(isDisplayed(confirmSsnCCModal));
 			logger.debug("Confirm SSN on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(confirmSsnCCModal);
+			assertTrue(isDisplayed(confirmSsnCCModal));
 			logger.debug("Confirm SSN on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfAnnualIncomeCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(annualIncomeCCModal);
+			assertTrue(isDisplayed(annualIncomeCCModal));
 			logger.debug("Annual Income on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(annualIncomeCCModal);
+			assertTrue(isDisplayed(annualIncomeCCModal));
 			logger.debug("Annual Income on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfPersonalTitleCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(personalTitleCCModal);
+			assertTrue(isDisplayed(personalTitleCCModal));
 			logger.debug("Personal Title on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(personalTitleCCModal);
+			assertTrue(isDisplayed(personalTitleCCModal));
 			logger.debug("Personal Title on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfApartmentNameCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(apartmentNameCCModal);
+			assertTrue(isDisplayed(apartmentNameCCModal));
 			logger.debug("ApartmentName on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(apartmentNameCCModal);
+			assertTrue(isDisplayed(apartmentNameCCModal));
 			logger.debug("Apartment name on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfCityCModalCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(cityCModal);
+			assertTrue(isDisplayed(cityCModal));
 			logger.debug("City on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(cityCModal);
+			assertTrue(isDisplayed(cityCModal));
 			logger.debug("city on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfStateDropDownCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(stateDropDownCCModal);
+			assertTrue(isDisplayed(stateDropDownCCModal));
 			logger.debug("State Drop Downon Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(stateDropDownCCModal);
+			assertTrue(isDisplayed(stateDropDownCCModal));
 			logger.debug("State Drop Down on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfZipCodeCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(zipCodeCCModal);
+			assertTrue(isDisplayed(zipCodeCCModal));
 			logger.debug("Zip Code on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(zipCodeCCModal);
+			assertTrue(isDisplayed(zipCodeCCModal));
 			logger.debug("zip code on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfEmailIdCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(emailIdCCModal);
+			assertTrue(isDisplayed(emailIdCCModal));
 			logger.debug("Email Code on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(emailIdCCModal);
+			assertTrue(isDisplayed(emailIdCCModal));
 			logger.debug("Email code on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfConfirmEmailIdCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(confirmEmailIdCCModal);
+			assertTrue(isDisplayed(confirmEmailIdCCModal));
 			logger.debug("Confirmed Email ID on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(confirmEmailIdCCModal);
+			assertTrue(isDisplayed(confirmEmailIdCCModal));
 			logger.debug("Confirmed Email ID on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfMobilePhoneCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(mobilePhoneCCModal);
+			assertTrue(isDisplayed(mobilePhoneCCModal));
 			logger.debug("Mobile Phone Number on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(mobilePhoneCCModal);
+			assertTrue(isDisplayed(mobilePhoneCCModal));
 			logger.debug("Mobile Phone Number on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfAlternatePhoneCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(alternatePhoneCCModal);
+			assertTrue(isDisplayed(alternatePhoneCCModal));
 			logger.debug("Alternate Phone Number on Credit Card Application Modal is displayed");
 		} else {
-			isDisplayed(alternatePhoneCCModal);
+			assertTrue(isDisplayed(alternatePhoneCCModal));
 			logger.debug("Alternate Phone Number on Credit Card Application Modal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfContinueButtonCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(continueButtonCCModal);
+			assertTrue(isDisplayed(continueButtonCCModal));
 			logger.debug("Continue Button on Credit Card Application Modal is displayed for Mobile");
 		} else {
-			isDisplayed(continueButtonCCModal);
+			assertTrue(isDisplayed(continueButtonCCModal));
 			logger.debug("Continue button on Credit Card Application Modal is displayed");
 		}
 
@@ -685,20 +686,20 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfContinueToCheckoutCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(continueToCheckout);
+			assertTrue(isDisplayed(continueToCheckout));
 			logger.debug("Continue to Checkout button is displayed");
 		} else {
-			isDisplayed(continueToCheckout);
+			assertTrue(isDisplayed(continueToCheckout));
 			logger.debug("Continue to Checkout button is displayed");
 		}
 	}
 
 	public void verifyPresenceOfStreetCCModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(streetAddressCCModal);
+			assertTrue(isDisplayed(streetAddressCCModal));
 			logger.debug("Street test field is displayed");
 		} else {
-			isDisplayed(streetAddressCCModal);
+			assertTrue(isDisplayed(streetAddressCCModal));
 			logger.debug("Street test field is displayed");
 		}
 	}
@@ -822,10 +823,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfNoticeIframeModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(noticeIFramePCCApplicationModal);
+			assertTrue(isDisplayed(noticeIFramePCCApplicationModal));
 			logger.debug("Notice Iframe on Pre-screen Credit card ApplicationModal is displayed");
 		} else {
-			isDisplayed(noticeIFramePCCApplicationModal);
+			assertTrue(isDisplayed(noticeIFramePCCApplicationModal));
 			logger.debug("Notice Iframe on Pre-screen Credit card ApplicationModal is displayed");
 		}
 
@@ -833,10 +834,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfProgressIndicatorPCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(progressIndicatorPCCApplicationModal);
+			assertTrue(isDisplayed(progressIndicatorPCCApplicationModal));
 			logger.debug("Progress Indicator on Pre-screen Credit card ApplicationModal is displayed");
 		} else {
-			isDisplayed(progressIndicatorPCCApplicationModal);
+			assertTrue(isDisplayed(progressIndicatorPCCApplicationModal));
 			logger.debug("Progress Indicatior on Pre-screen Credit card ApplicationModal is displayed");
 		}
 
@@ -890,20 +891,20 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfCloseIconCCAM() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(closeButtonCCApplicationModal);
+			assertTrue(isDisplayed(closeButtonCCApplicationModal));
 			logger.debug("Close icon on credit card Application modal is displayed");
 		} else {
-			isDisplayed(closeButtonCCApplicationModal);
+			assertTrue(isDisplayed(closeButtonCCApplicationModal));
 			logger.debug("Close icon on credit card Application modal is displayed");
 		}
 
 	}
 	public void verifyPresenceOfExistingCustomer() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(existingAccount);
+			assertTrue(isDisplayed(existingAccount));
 			logger.debug("EXISTING CUSTOMER TEXT is displayed");
 		} else {
-			isDisplayed(existingAccount);
+			assertTrue(isDisplayed(existingAccount));
 			logger.debug("EXISTING CUSTOMER TEXT is displayed");
 		}
 
@@ -911,10 +912,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	
 	public void verifyPresenceOfDisclosureTxt1ConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(disclosureTxt1ConsentModal);
+			assertTrue(isDisplayed(disclosureTxt1ConsentModal));
 			logger.debug("Disclosure Text one on Consent modal is displayed for Mobile");
 		} else {
-			isDisplayed(disclosureTxt1ConsentModal);
+			assertTrue(isDisplayed(disclosureTxt1ConsentModal));
 			logger.debug("Disclosure Text one on Consent modal is displayed");
 		}
 
@@ -922,10 +923,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfDisclosureTxt2ConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(disclosureTxt2ConsentModal);
+			assertTrue(isDisplayed(disclosureTxt2ConsentModal));
 			logger.debug("Disclosure Text two on Consent modal is displayed for Mobile");
 		} else {
-			isDisplayed(disclosureTxt2ConsentModal);
+			assertTrue(isDisplayed(disclosureTxt2ConsentModal));
 			logger.debug("Disclosure Text two on Consent modal is displayed");
 		}
 
@@ -933,10 +934,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfConsentToAccountTAndCsLabelConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(consentToAccountTAndCsLabelConsentModal);
+			assertTrue(isDisplayed(consentToAccountTAndCsLabelConsentModal));
 			logger.debug("CONSENT TO ACCOUNT TERMS AND CONDITIONS on Consent modal is displayed");
 		} else {
-			isDisplayed(consentToAccountTAndCsLabelConsentModal);
+			assertTrue(isDisplayed(consentToAccountTAndCsLabelConsentModal));
 			logger.debug("CONSENT TO ACCOUNT TERMS AND CONDITIONS on Consent modal is displayed");
 		}
 
@@ -944,10 +945,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfAccountToFinancialTAndCsLabelConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(accountToFinancialTAndCsLabelConsentModal);
+			assertTrue(isDisplayed(accountToFinancialTAndCsLabelConsentModal));
 			logger.debug("CONSENT TO FINANCIAL TERMS OF THE ACCOUNT on Consent modal is displayed");
 		} else {
-			isDisplayed(accountToFinancialTAndCsLabelConsentModal);
+			assertTrue(isDisplayed(accountToFinancialTAndCsLabelConsentModal));
 			logger.debug("CONSENT TO FINANCIAL TERMS OF THE ACCOUNT on Consent modal is displayed");
 		}
 
@@ -955,10 +956,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfPrintLinkConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(printLinkConsentModal);
+			assertTrue(isDisplayed(printLinkConsentModal));
 			logger.debug("Print link on Consent modal is displayed");
 		} else {
-			isDisplayed(printLinkConsentModal);
+			assertTrue(isDisplayed(printLinkConsentModal));
 			logger.debug("Print link on Consent modal is displayed");
 		}
 
@@ -966,10 +967,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfConsentToFinancialIframeConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(consentToFinancialIframeConsentModal);
+			assertTrue(isDisplayed(consentToFinancialIframeConsentModal));
 			logger.debug("Account to Financial Iframe on Consent modal is displayed");
 		} else {
-			isDisplayed(consentToFinancialIframeConsentModal);
+			assertTrue(isDisplayed(consentToFinancialIframeConsentModal));
 			logger.debug("Account to Financial Iframe on Consent modal is displayed");
 		}
 
@@ -977,10 +978,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfAccountTAndCsLabelConsentModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(accountTAndCsLabelConsentModal);
+			assertTrue(isDisplayed(accountTAndCsLabelConsentModal));
 			logger.debug("ACCOUNT TERMS AND CONDITIONS on Consent modal is displayed for Mobile");
 		} else {
-			isDisplayed(accountTAndCsLabelConsentModal);
+			assertTrue(isDisplayed(accountTAndCsLabelConsentModal));
 			logger.debug("ACCOUNT TERMS AND CONDITIONS on Consent modal is displayed");
 		}
 
@@ -988,10 +989,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfPlccCardImgCCAM() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(plccCardImgCCAM);
+			assertTrue(isDisplayed(plccCardImgCCAM));
 			logger.debug("plcc Card Image on Consent modal is displayed");
 		} else {
-			isDisplayed(plccCardImgCCAM);
+			assertTrue(isDisplayed(plccCardImgCCAM));
 			logger.debug("plcc Card Image on Consent modal is displayed");
 		}
 

@@ -63,7 +63,7 @@ Feature: PLCC: CCAM-Prescreen Modal_Back Button
 	Then user expect submit button not clickable
 	
 
-@C-PLCC @Regression @All @PLCC-57 @CR-VS @vidya
+@C-PLCC @Regression @All @PLCC-57 @CR-VS
  Scenario: Verify the system behavior when user clicks on Back button_Generic
  	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	When user navigates to ASO-Home page 
