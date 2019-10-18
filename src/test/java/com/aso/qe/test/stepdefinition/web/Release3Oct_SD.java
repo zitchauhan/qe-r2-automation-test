@@ -95,6 +95,7 @@ public class Release3Oct_SD extends CommonActionHelper {
 	@Then("^user verify order summay is updated$")
 	public void user_verify_order_summay_is_updated() {
 		assertTrue(subTotalBeforeShippingMethodChange.equalsIgnoreCase(getText(r2CheckoutPo.SubTotalPrice_Txt)));
+		System.out.println(subTotalBeforeShippingMethodChange + " " + getText(r2CheckoutPo.ShippingPrice_Txt) + " "+selectedMethodValue);
 		assertTrue(getText(r2CheckoutPo.ShippingPrice_Txt).contains(selectedMethodValue));
 		if(!shippingChargesBeforeShippingMethodChanged.equals(selectedMethodValue))
 			assertTrue(!taxBeforeShippingMethodChanged.equals(getText(r2CheckoutPo.TaxesPrice_Txt)));
