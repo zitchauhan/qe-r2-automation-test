@@ -964,7 +964,8 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	public void user_clears_everything_in_cart() throws Throwable {
 		try {
 			genericPO.verifyPresenceOfCartIcon();
-			genericPO.cartIcon.click();
+			clickOnButton(genericPO.cartIcon);
+		//	genericPO.cartIcon.click();
 			Thread.sleep(10000);
 			r2CheckOutPo.AS_btnRemoveFromCart.click();
 			Thread.sleep(10000);

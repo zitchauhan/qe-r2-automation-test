@@ -44,7 +44,7 @@ Scenario: Verify the system behavior when user clicks on Continue button on Appl
 	And user enter Mobile Phone "invalidMobilePhoneP" 
 	And user enter Alternate Phone "invalidAlternateMobilePhoneP" 
 	And user click on CONTINUE button  
-	And user click on CONTINUE button
+	#user click on CONTINUE button
 	And user expect error message on first name field
 	And user expect error message on last name field
 	And user expect error message on email id field
