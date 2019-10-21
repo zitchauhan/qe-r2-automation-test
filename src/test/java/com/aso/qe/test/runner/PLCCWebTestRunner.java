@@ -19,8 +19,8 @@ import cucumber.api.junit.Cucumber;
 		)*/
 
 @CucumberOptions(
-		features="src/test/resources/features/web/", //R1_HP_KER_1915_Web.feature",//R1_PDP_KER_2334_Web.feature",
-		glue="com.aso.qe.test.stepdefinition.web",
+		features="src/test/resources/features/web/plcc/", //R1_HP_KER_1915_Web.feature",//R1_PDP_KER_2334_Web.feature",
+		glue="com.aso.qe.test.stepdefinition.web.plcc",
 		//tags= {"@Regression", "~@ignoreUAT7 "},
 		monochrome=true, 
 				plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html",
