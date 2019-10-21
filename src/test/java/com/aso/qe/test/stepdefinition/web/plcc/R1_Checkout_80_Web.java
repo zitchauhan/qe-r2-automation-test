@@ -115,7 +115,8 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 	public void user_click_on_search_icon() throws Throwable {
 		try {
 			plccLandingPageObjects.verifyPresenceOfSearchIcon();
-			plccLandingPageObjects.searchIcon.click();
+			clickOnButton(plccLandingPageObjects.searchIcon);
+		//	plccLandingPageObjects.searchIcon.click();
 			
 			//driver.navigate().refresh();
 		} catch (Exception e) {
@@ -997,10 +998,10 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 			if(genericPO.editLinkPaymentSection.isDisplayed())
 			{
 				genericPO.verifyPresenceOfEditLinkPaymentSectionCheckoutPage();
-				genericPO.editLinkPaymentSection.click();
+				clickOnButton(genericPO.editLinkPaymentSection);
 				try {
-					genericPO.savedCardDropDown.click();
-					genericPO.addNewCardOption.click();
+					clickOnButton(genericPO.savedCardDropDown);
+					clickOnButton(genericPO.addNewCardOption);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -1012,11 +1013,11 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 				genericPO.enterCardBinNumber(arg1);
 				Thread.sleep(8000);
 				assertTrue(isDisplayed(genericPO.CreditCardNumber_Input));
-				waitForElement(genericPO.CreditCardNumber_Input);
+			//	waitForElement(genericPO.CreditCardNumber_Input);
 			} 
 			else {
-				genericPO.savedCardDropDown.click();
-				genericPO.addNewCardOption.click();
+				clickOnButton(genericPO.savedCardDropDown);
+				clickOnButton(genericPO.addNewCardOption);
 				genericPO.enterCardBinNumber(arg1);
 			}
 
@@ -1034,7 +1035,8 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("zipcode"));
 		assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
 		Thread.sleep(9000);
-		r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn.click();
+		clickOnButton(r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn);
+	
 	
 	}
 }

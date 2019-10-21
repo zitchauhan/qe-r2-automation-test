@@ -213,10 +213,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfErrorInvalidPreScreenCode() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(errorInvalidPreScreenCode);
+			Assert.assertTrue(isDisplayed(errorInvalidPreScreenCode));
 			logger.debug("Error messgage when user enter invalid Pre-screen is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(errorInvalidPreScreenCode);
+			Assert.assertTrue(isDisplayed(errorInvalidPreScreenCode));
 			logger.debug("Error messgage when user enter invalid Pre-screen is displayed++++++++++++++++++++++++");
 		}
 
@@ -229,10 +229,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfFreeShipping() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(freeShippingTxt);
+			Assert.assertTrue(isDisplayed(freeShippingTxt));
 			logger.debug("Free Shipping is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(freeShippingTxt);
+			Assert.assertTrue(isDisplayed(freeShippingTxt));
 			logger.debug("Free Shipping is displayed++++++++++++++++++++++++==");
 		}
 
@@ -240,10 +240,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfStandardFreeShipping() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(standardFreeShipValue);
+			Assert.assertTrue(isDisplayed(standardFreeShipValue));
 			logger.debug("Free Shipping is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(standardFreeShipValue);
+			Assert.assertTrue(isDisplayed(standardFreeShipValue));
 			logger.debug("Free Shipping is displayed++++++++++++++++++++++++==");
 		}
 
@@ -251,10 +251,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfPaymentCardTypeLabel() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(paymentCardTypeLabel);
+			Assert.assertTrue(isDisplayed(paymentCardTypeLabel));
 			logger.debug("Saved Card Type is dispalyed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(paymentCardTypeLabel);
+			Assert.assertTrue(isDisplayed(paymentCardTypeLabel));
 			logger.debug("Saved Card Type is dispalyed++++++++++++++++++++++++");
 		}
 
@@ -262,10 +262,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfCartIcon() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(cartIcon);
+			Assert.assertTrue(isDisplayed(cartIcon));
 			logger.debug("Cart Icon is dispalyed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(cartIcon);
+			Assert.assertTrue(isDisplayed(cartIcon));
 			logger.debug("Cart Icon is dispalyed++++++++++++++++++++++++");
 		}
 
@@ -274,7 +274,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public boolean  verifyFreeShippingisNotApplied() throws Exception {
 
 		try {
-			isDisplayed(freeShippingTxt);
+			Assert.assertTrue(isDisplayed(freeShippingTxt));
 	        return true;
 	    } catch (org.openqa.selenium.NoSuchElementException e)
 		{
@@ -432,10 +432,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfOrderSummary() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(orderSummarySection);
+			Assert.assertTrue(isDisplayed(orderSummarySection));
 			logger.debug("Order Summary is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(orderSummarySection);
+			Assert.assertTrue(isDisplayed(orderSummarySection));
 			logger.debug("Order Summary is displayed++++++++++++++++++++++++==");
 		}
 
@@ -444,10 +444,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfSignInLinkForGuestUser() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(SingInLinkForGuestuser);
+			Assert.assertTrue(isDisplayed(SingInLinkForGuestuser));
 			logger.debug("Signin Link displayed for Guest User++++++++++++++++++++++++");
 		} else {
-			isDisplayed(SingInLinkForGuestuser);
+			Assert.assertTrue(isDisplayed(SingInLinkForGuestuser));
 			logger.debug("Signin Link displayed for Guest User++++++++++++++++++++++++==");
 		}
 
@@ -481,10 +481,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfWeAcceptLabel() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(weAcceptLabel);
+			Assert.assertTrue(isDisplayed(weAcceptLabel));
 			logger.debug("We Accept Label in footer of Cart Page is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(weAcceptLabel);
+			Assert.assertTrue(isDisplayed(weAcceptLabel));
 			logger.debug("We Accept Label in footer of Cart Page is displayed++++++++++++++++++++++++==");
 		}
 
