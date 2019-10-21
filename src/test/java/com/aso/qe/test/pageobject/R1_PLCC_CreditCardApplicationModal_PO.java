@@ -216,48 +216,48 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	
 	public void verifyPresenceOfSubTotalValue() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(subtotalValue));
+			isDisplayed(subtotalValue);
 			logger.debug("Sub total value is displayed");
 		} else {
-			assertTrue(isDisplayed(subtotalValue));
+			isDisplayed(subtotalValue);
 			logger.debug("Sub total value is displayed");
 		}
 	}
 	public void verifyPresenceOfContnueToCheckoutURModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(continueToCheckoutBtnURModal));
+			isDisplayed(continueToCheckoutBtnURModal);
 			logger.debug("Continue to checkout button on application under review modal");
 		} else {
-			assertTrue(isDisplayed(continueToCheckoutBtnURModal));
+			isDisplayed(continueToCheckoutBtnURModal);
 			logger.debug("Continue to checkout button on application under review modal");
 		}
 	}
 	
 	public void verifyPresenceOfReturnToApplicationErrorModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(returnToApplicationErrorModal));
+			isDisplayed(returnToApplicationErrorModal);
 			logger.debug("Return To Application on Error Modal is displayed");
 		} else {
-			assertTrue(isDisplayed(returnToApplicationErrorModal));
+			isDisplayed(returnToApplicationErrorModal);
 			logger.debug("Return To Application on Error Modal is displayed");
 		}
 	}
 	
 	public void verifyPresenceOfContinueToCheckoutExistingUser() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(continueBtnExistingUser));
+			isDisplayed(continueBtnExistingUser);
 			logger.debug("Continue to Checkout button on Existing User Modal is displayed");
 		} else {
-			assertTrue(isDisplayed(continueBtnExistingUser));
+			isDisplayed(continueBtnExistingUser);
 			logger.debug("Continue to Checkout button on Existing User Modal is displayed");
 		}
 	}
 	public void verifyPresenceOfContinueToCheckoutErrorModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(continueToCheckoutBtnErrorModal));
+			isDisplayed(continueToCheckoutBtnErrorModal);
 			logger.debug("Continue to Checkout button on Error Modal is displayed");
 		} else {
-			assertTrue(isDisplayed(continueToCheckoutBtnErrorModal));
+			isDisplayed(continueToCheckoutBtnErrorModal);
 			logger.debug("Continue to Checkout button on Error User Modal is displayed");
 		}
 	}
@@ -301,28 +301,28 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	
 	public void verifyPresenceOfErrorText() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-        assertTrue(isDisplayed(errorTextErrorModal));
+			isDisplayed(errorTextErrorModal);
 			logger.debug("Error Text on Error Modal is displayed");
 		} else {
-			assertTrue(isDisplayed(errorTextErrorModal));
+			isDisplayed(errorTextErrorModal);
 			logger.debug("Error Text on Error Modal is displayed");
 		}
 	}	
 	public void verifyPresenceOfDisclosureText() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(disclosureTxtErrorState));
+			isDisplayed(disclosureTxtErrorState);
 			logger.debug("Disclosure Text on Error Modal is displayed");
 		} else {
-			assertTrue(isDisplayed(disclosureTxtErrorState));
+			isDisplayed(disclosureTxtErrorState);
 			logger.debug("Disclosure Text on Error Modal is displayed");
 		}
 	}
 	public void verifyPresenceOfContinueToShopping() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(returntoShoppingButton));
+			isDisplayed(returntoShoppingButton);
 			logger.debug("Continue to Shopping Button is displayed");
 		} else {
-			assertTrue(isDisplayed(returntoShoppingButton));
+			isDisplayed(returntoShoppingButton);
 			logger.debug("Continue to Shopping is displayed");
 		}
 	}	
@@ -330,46 +330,46 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	
 	public void verifyPresenceOfDisclosureTxt4SuccessModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(disclosureTxt4SuccessModal));
+			isDisplayed(disclosureTxt4SuccessModal);
 			logger.debug("WELCOME ALWAYS APPROVE! is displayed");
 		} else {
-			assertTrue(isDisplayed(disclosureTxt4SuccessModal));
+			isDisplayed(disclosureTxt4SuccessModal);
 			logger.debug("WELCOME ALWAYS APPROVE! is displayed");
 		}
 	}
 	public void verifyPresenceOfWelcomeTxt() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(welcomeTxtSuccessModal));
+			isDisplayed(welcomeTxtSuccessModal);
 			logger.debug("WELCOME ALWAYS APPROVE! is displayed");
 		} else {
-			assertTrue(isDisplayed(welcomeTxtSuccessModal));
+			isDisplayed(welcomeTxtSuccessModal);
 			logger.debug("WELCOME ALWAYS APPROVE! is displayed");
 		}
 	}
 	public void verifyPresenceOfDisclosureTxt1SuccessModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(disclosureTxt1SuccessModal));
+			isDisplayed(disclosureTxt1SuccessModal);
 			logger.debug("Your new Academy Sports + Outdoors Credit Card will arrive in the mail within the next 10 business days. is displayed");
 		} else {
-			assertTrue(isDisplayed(disclosureTxt1SuccessModal));
+			isDisplayed(disclosureTxt1SuccessModal);
 			logger.debug("Your new Academy Sports + Outdoors Credit Card will arrive in the mail within the next 10 business days. is displayed");
 		}
 	}
 	public void verifyPresenceOfDisclosureTxt2SuccessModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(disclosureTxt2SuccessModal));
+			isDisplayed(disclosureTxt2SuccessModal);
 			logger.debug("Your Academy Sports + Outdoors Credit Card Account has been is displayed");
 		} else {
-			assertTrue(isDisplayed(disclosureTxt2SuccessModal));
+			isDisplayed(disclosureTxt2SuccessModal);
 			logger.debug("Your Academy Sports + Outdoors Credit Card Account has been is displayed");
 		}
 	}
 	public void verifyPresenceOfDisclosureTxt3SuccessModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(disclosureTxt3SuccessModal));
+			isDisplayed(disclosureTxt3SuccessModal);
 			logger.debug("If you'd like to add more items to your cart, click on 'Return to shopping' now. Otherwise, simply click 'Continue to Checkout' to complete your order now. is displayed");
 		} else {
-			assertTrue(isDisplayed(disclosureTxt3SuccessModal));
+			isDisplayed(disclosureTxt3SuccessModal);
 			logger.debug("If you'd like to add more items to your cart, click on 'Return to shopping' now. Otherwise, simply click 'Continue to Checkout' to complete your order now. is displayed");
 		}
 	}
@@ -377,10 +377,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfDisclosureTextExistingAccount() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(disclosureTxtExistingAccountModal));
+			isDisplayed(disclosureTxtExistingAccountModal);
 			logger.debug("Thank for your interest. Our records indicate that you already have an Academy Sports + Outdoors Credit Card. For your convenience, your account number has been pre-filled in the payment section at checkout. Text is displayed");
 		} else {
-			assertTrue(isDisplayed(disclosureTxtExistingAccountModal));
+			isDisplayed(disclosureTxtExistingAccountModal);
 			logger.debug("Thank for your interest. Our records indicate that you already have an Academy Sports + Outdoors Credit Card. For your convenience, your account number has been pre-filled in the payment section at checkout. Text is displayed");
 		}
 	}
@@ -398,47 +398,47 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			
 	public void verifyPresenceOfErrorModalCCAM() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(errorModalCCAM));
+			isDisplayed(errorModalCCAM);
 			logger.debug("Error Modal for declined/pending card approval is displayed");
 		} else {
-			assertTrue(isDisplayed(errorModalCCAM));
+			isDisplayed(errorModalCCAM);
 			logger.debug("Error Modal for declined/pending card approval is displayed");
 		}
 	}
 	public void verifyPresenceOfCloseIconErrorModalCCAM() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(closeIconErrorModal));
+			isDisplayed(closeIconErrorModal);
 			logger.debug("Close Icon on Error Modal is displayed");
 		} else {
-			assertTrue(isDisplayed(closeIconErrorModal));
+			isDisplayed(closeIconErrorModal);
 			logger.debug("Close Icon on Error Modal is displayed");
 		}
 	}
 	
 					public void verifyPresenceOfErrorModalImageCCAM() throws Exception {
 						if ("mobile".equalsIgnoreCase(testtype)) {
-							assertTrue(isDisplayed(errorModalImageCCAM));
+							isDisplayed(errorModalImageCCAM);
 							logger.debug("Error Modal Card Image is displayed");
 						} else {
-							assertTrue(isDisplayed(errorModalImageCCAM));
+							isDisplayed(errorModalImageCCAM);
 							logger.debug("Error Modal Card Image is displayed");
 						}
 					}
 					public void verifyPresenceOfApplicationUnderReviewText() throws Exception {
 						if ("mobile".equalsIgnoreCase(testtype)) {
-							assertTrue(isDisplayed(applicationUnderReviewText));
+							isDisplayed(applicationUnderReviewText);
 							logger.debug("Application Under Review Text is displayed");
 						} else {
-							assertTrue(isDisplayed(applicationUnderReviewText));
+							isDisplayed(applicationUnderReviewText);
 							logger.debug("Application Under Review Text is displayed");
 						}
 					}
 					public void verifyPresenceOfDisclosureMsgErrorModalCCAM() throws Exception {
 						if ("mobile".equalsIgnoreCase(testtype)) {
-							assertTrue(isDisplayed(disclosureMsgErrorModalCCAM));
+							isDisplayed(disclosureMsgErrorModalCCAM);
 							logger.debug("Disclosure Message on Error Modal is displayed");
 						} else {
-							assertTrue(isDisplayed(disclosureMsgErrorModalCCAM));
+							isDisplayed(disclosureMsgErrorModalCCAM);
 							logger.debug("Disclosure Message on Error Modal is displayed");
 						}
 					}
@@ -781,20 +781,20 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	
 	public void verifyPresenceOfNoticeIFramePCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(noticeIFramePCCApplicationModal));
+			isDisplayed(noticeIFramePCCApplicationModal);
 			logger.debug("Notice IFrame on Pre-screen Credit card ApplicationModal is displayed");
 		} else {
-			assertTrue(isDisplayed(noticeIFramePCCApplicationModal));
+			isDisplayed(noticeIFramePCCApplicationModal);
 			logger.debug("Notice IFrame on Pre-screen Credit card ApplicationModal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfPersonalInfoPCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(personalInfoPCCApplicationModal));
+			isDisplayed(personalInfoPCCApplicationModal);
 			logger.debug("Peronal Info Label on Pre-screen Credit card ApplicationModal is displayed");
 		} else {
-			assertTrue(isDisplayed(personalInfoPCCApplicationModal));
+			isDisplayed(personalInfoPCCApplicationModal);
 			logger.debug("Peronal Info Label on Pre-screen Credit card ApplicationModal is displayed");
 		}
 	}
@@ -802,20 +802,20 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifyPresenceOfDisclosureTxt1PCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(disclosureTxt1PCCApplicationModal));
+			isDisplayed(disclosureTxt1PCCApplicationModal);
 			logger.debug("Disclosure text 1 on Pre-screen Credit card ApplicationModal is displayed");
 		} else {
-			assertTrue(isDisplayed(disclosureTxt1PCCApplicationModal));
+			isDisplayed(disclosureTxt1PCCApplicationModal);
 			logger.debug("Disclosure text 1 on Pre-screen Credit card ApplicationModal is displayed");
 		}
 	}
 
 	public void verifyPresenceOfDisclosureTxt2PCCApplicationModal() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(disclosureTxt2PCCApplicationModal));
+			isDisplayed(disclosureTxt2PCCApplicationModal);
 			logger.debug("Disclosure text 2 on Pre-screen Credit card ApplicationModal is displayed");
 		} else {
-			assertTrue(isDisplayed(disclosureTxt2PCCApplicationModal));
+			isDisplayed(disclosureTxt2PCCApplicationModal);
 			logger.debug("Disclosure text 2 on Pre-screen Credit card ApplicationModal is displayed");
 		}
 

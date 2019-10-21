@@ -268,7 +268,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 			assertTrue(isDisplayed(plccLandingPageObjects.emailTxtField));
 			logger.debug("Email Text Field is displayed");
 		} else {
-			assertTrue(isDisplayed(emailIdTxtField));
+			isDisplayed(emailIdTxtField);
 			logger.debug("Email Text Field is not displayed++++++++++++++++++++++++==");
 		}
 
@@ -277,10 +277,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfCrestePwdTxtField() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(createPwdTxtField));
+			isDisplayed(createPwdTxtField);
 			logger.debug("Create Text Field is displayed");
 		} else {
-			assertTrue(isDisplayed(createPwdTxtField));
+			isDisplayed(createPwdTxtField);
 			logger.debug("Create Text Field is not displayed++++++++++++++++++++++++==");
 		}
 
@@ -289,10 +289,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfThisAcademy() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(thisIsAcademy));
+			isDisplayed(thisIsAcademy);
 			logger.debug("This is Academy footer text is not displayed");
 		} else {
-			assertTrue(isDisplayed(thisIsAcademy));
+			isDisplayed(thisIsAcademy);
 			logger.debug("This is Academy footer text is displayed");
 		}
 	}
@@ -300,10 +300,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfNeedHelp() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(needHelp));
+			isDisplayed(needHelp);
 			logger.debug("Need Help footer text is not displayed");
 		} else {
-			assertTrue(isDisplayed(needHelp));
+			isDisplayed(needHelp);
 			logger.debug("Need Help footer text is displayed");
 		}
 	}
@@ -337,10 +337,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfServices() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(servicesFooterText));
+			isDisplayed(servicesFooterText);
 			logger.debug("Services footer Text is not displayed");
 		} else {
-			assertTrue(isDisplayed(servicesFooterText));
+			isDisplayed(servicesFooterText);
 			logger.debug("Services footer text is displayed");
 		}
 	}
@@ -361,10 +361,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfSiteMapLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(siteMapLink));
+			isDisplayed(siteMapLink);
 			logger.debug("SiteMap Link is not displayed");
 		} else {
-			assertTrue(isDisplayed(siteMapLink));
+			isDisplayed(siteMapLink);
 			logger.debug("SiteMap Link is displayed");
 		}
 	}
@@ -372,10 +372,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfAsoRightsLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(asoRightsLink));
+			isDisplayed(asoRightsLink);
 			logger.debug("© 2018 Academy Sports + Outdoors. All Rights Reserved is not displayed");
 		} else {
-			assertTrue(isDisplayed(asoRightsLink));
+			isDisplayed(asoRightsLink);
 			logger.debug("© 2018 Academy Sports + Outdoors. All Rights Reserved is displayed");
 		}
 	}
@@ -383,10 +383,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfProductIndexLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(productIndexLink));
+			isDisplayed(productIndexLink);
 			logger.debug("Product Index is not displayed");
 		} else {
-			assertTrue(isDisplayed(productIndexLink));
+			isDisplayed(productIndexLink);
 			logger.debug("Product Index is displayed");
 		}
 	}
@@ -394,10 +394,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfAccessoriesAndmoreLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(accessories$moreLink));
+			isDisplayed(accessories$moreLink);
 			logger.debug("Accessories And More Link is not displayed");
 		} else {
-			assertTrue(isDisplayed(accessories$moreLink));
+			isDisplayed(accessories$moreLink);
 			logger.debug("Accessories And More Link is displayed");
 		}
 	}
@@ -417,10 +417,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfShopsLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(shopsLink));
+			isDisplayed(shopsLink);
 			logger.debug("Shops Link is not displayed");
 		} else {
-			assertTrue(isDisplayed(shopsLink));
+			isDisplayed(shopsLink);
 			logger.debug("Shops Link is displayed");
 		}
 	}
@@ -428,10 +428,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfOutdoorsLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(outdoorsLink));
+			isDisplayed(outdoorsLink);
 			logger.debug("Outdoors Link is not displayed");
 		} else {
-			assertTrue(isDisplayed(outdoorsLink));
+			isDisplayed(outdoorsLink);
 			logger.debug("Outdoors Link is displayed");
 		}
 	}
@@ -439,10 +439,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfShoesLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(shoesLink));
+			isDisplayed(shoesLink);
 			logger.debug("Shoes Link is not displayed");
 		} else {
-			assertTrue(isDisplayed(shoesLink));
+			isDisplayed(shoesLink);
 			logger.debug("Shoes Link is displayed");
 		}
 	}
@@ -450,10 +450,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfSportsEquipmentLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(sportsEquipmentLink));
+			isDisplayed(sportsEquipmentLink);
 			logger.debug("Sports Equipment Link is not displayed");
 		} else {
-			assertTrue(isDisplayed(sportsEquipmentLink));
+			isDisplayed(sportsEquipmentLink);
 			logger.debug("Sports Equipment Link is displayed");
 		}
 	}
@@ -461,10 +461,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfShoppingIndexLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(shoppingIndexLink));
+			isDisplayed(shoppingIndexLink);
 			logger.debug("Shopping Index is not displayed");
 		} else {
-			assertTrue(isDisplayed(shoppingIndexLink));
+			isDisplayed(shoppingIndexLink);
 			logger.debug("Shopping Index is displayed");
 		}
 	}
@@ -472,10 +472,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfBrandsIndexLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(brandsIndexLink));
+			isDisplayed(brandsIndexLink);
 			logger.debug("Brands Index is not displayed");
 		} else {
-			assertTrue(isDisplayed(brandsIndexLink));
+			isDisplayed(brandsIndexLink);
 			logger.debug("Brands Index is displayed");
 		}
 	}
@@ -483,10 +483,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfAddressTxtField() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(addressTxtField));
+			isDisplayed(addressTxtField);
 			logger.debug("Add Address Text Field is displayed");
 		} else {
-			assertTrue(isDisplayed(addressTxtField));
+			isDisplayed(addressTxtField);
 			logger.debug("Add Address Text Field is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -494,10 +494,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfZipTxtField() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(addressZipCodeField));
+			isDisplayed(addressZipCodeField);
 			logger.debug("Zip Text Field is displayed");
 		} else {
-			assertTrue(isDisplayed(addressZipCodeField));
+			isDisplayed(addressZipCodeField);
 			logger.debug("Zip Text Field is not displayed++++++++++++++++++++++++==");
 		}
 
@@ -506,10 +506,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfStateDrpdwn() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(addressStateDropdown));
+			isDisplayed(addressStateDropdown);
 			logger.debug("State Drop down is displayed");
 		} else {
-			assertTrue(isDisplayed(addressStateDropdown));
+			isDisplayed(addressStateDropdown);
 			logger.debug("State Drop down is not displayed++++++++++++++++++++++++==");
 		}
 
@@ -518,10 +518,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfCityTxtField() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(addressZipCodeField));
+			isDisplayed(addressZipCodeField);
 			logger.debug("City Text Field is displayed");
 		} else {
-			assertTrue(isDisplayed(addressZipCodeField));
+			isDisplayed(addressZipCodeField);
 			logger.debug("City Text Field is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -529,10 +529,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfAddMoreAddressDetails() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(addMoreAddressDetailsLink));
+			isDisplayed(addMoreAddressDetailsLink);
 			logger.debug("Add company name, Apt.Number, etc. (Optional) link is displayed");
 		} else {
-			assertTrue(isDisplayed(addMoreAddressDetailsLink));
+			isDisplayed(addMoreAddressDetailsLink);
 			logger.debug(
 					"Add company name, Apt.Number, etc. (Optional) link is not displayed++++++++++++++++++++++++==");
 		}
@@ -557,11 +557,11 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfPhoneNumberTxtField() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(addressPhoneField));
+			isDisplayed(addressPhoneField);
 			logger.debug("Phone Number Text Field is displayed");
 			Common_Web_PLCC.waitUntilElePresent(driver, addressPhoneField, ELEMWAITTIME_MEDIUM);
 		} else {
-			assertTrue(isDisplayed(addressPhoneField));
+			isDisplayed(addressPhoneField);
 			logger.debug("Phone Number Text Field is not displayed++++++++++++++++++++++++==");
 		}
 
@@ -570,10 +570,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfSignUpBtnRegistrationPage() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(registerationSignUpBtn));
+			isDisplayed(registerationSignUpBtn);
 			logger.debug("Sign Up Button on Registration Page is displayed");
 		} else {
-			assertTrue(isDisplayed(registerationSignUpBtn));
+			isDisplayed(registerationSignUpBtn);
 			logger.debug("Sign Up Button on Registration Page is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -596,10 +596,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfUserSelectedAddressBtn() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(userSelectedAddressBtn));
+			isDisplayed(userSelectedAddressBtn);
 			logger.debug("User selected address button is displayed for mobile");
 		} else {
-			assertTrue(isDisplayed(userSelectedAddressBtn));
+			isDisplayed(userSelectedAddressBtn);
 			logger.debug("User selected address button is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -623,10 +623,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfUserSuggestedAddressBtn() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(suggestedAddress));
+			isDisplayed(suggestedAddress);
 			logger.debug("User clicked on suggested adress");
 		} else {
-			assertTrue(isDisplayed(suggestedAddress));
+			isDisplayed(suggestedAddress);
 			logger.debug("User did not click on suggested address++++++++++++++++++++++++==");
 		}
 	}
@@ -650,10 +650,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfUserEnteredAddressBtn() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(enteredAddress));
+			isDisplayed(enteredAddress);
 			logger.debug("User clicked on entered adress");
 		} else {
-			assertTrue(isDisplayed(enteredAddress));
+			isDisplayed(enteredAddress);
 			logger.debug("User did not click on entered address++++++++++++++++++++++++==");
 		}
 	}
@@ -677,10 +677,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfRegistrationConfirmation() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(registrationConfirmationPage));
+			isDisplayed(registrationConfirmationPage);
 			logger.debug("Registration Confirmation is displayed");
 		} else {
-			assertTrue(isDisplayed(registrationConfirmationPage));
+			isDisplayed(registrationConfirmationPage);
 			logger.debug("Registration Confirmation is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -688,10 +688,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfLetsShopButton() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(letsShopBtn));
+			isDisplayed(letsShopBtn);
 			logger.debug("LET'S SHOP Button is displayed");
 		} else {
-			assertTrue(isDisplayed(letsShopBtn));
+			isDisplayed(letsShopBtn);
 			logger.debug("LET'S SHOP Button is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -699,11 +699,11 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfMyAccountLink() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
+			isDisplayed(myAccountLinkOnAsoHomePage);
 			logger.debug("My Account Link is displayed");
 			Common_Web_PLCC.waitUntilElePresent(driver, myAccountLinkOnAsoHomePage, ELEMWAITTIME_MEDIUM);
 		} else {
-			assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
+			isDisplayed(myAccountLinkOnAsoHomePage);
 			logger.debug("My Account Link is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -768,125 +768,125 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 
 	public void verifypresenceofFirstNameErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(firstNameErrorMessage));
+			isDisplayed(firstNameErrorMessage);
 			logger.debug("Please enter the First Name error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(firstNameErrorMessage));
+			isDisplayed(firstNameErrorMessage);
 			logger.debug("Please enter the First Name error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 
 	public void verifypresenceofLastNameErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(lastNameErrorMessage));
+			isDisplayed(lastNameErrorMessage);
 			logger.debug("Please enter a Last Name error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(lastNameErrorMessage));
+			isDisplayed(lastNameErrorMessage);
 			logger.debug("Please enter a Last Name error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 	public void verifypresenceofDOBErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(invalidDOBNumber));
+			isDisplayed(invalidDOBNumber);
 			logger.debug("Invalid DOB error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(invalidDOBNumber));
+			isDisplayed(invalidDOBNumber);
 			logger.debug("Invalid DOB error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 	
 	public void verifypresenceofEmailAddressErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(emailAddressErrorMessage));
+			isDisplayed(emailAddressErrorMessage);
 			logger.debug("Please enter an email address error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(emailAddressErrorMessage));
+			isDisplayed(emailAddressErrorMessage);
 			logger.debug("Please enter an email address error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 	public void verifypresenceofInvalidSSNErrorMsg() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
+			isDisplayed(invalidSSNErrorMessage);
 			logger.debug("Invalid SSN error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
+			isDisplayed(invalidSSNErrorMessage);
 			logger.debug("Invalid SSN error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 	public void verifypresenceofFNErrorMSgCCAMErrorMsg() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
+			isDisplayed(invalidSSNErrorMessage);
 			logger.debug("Invalid First Name error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
+			isDisplayed(invalidSSNErrorMessage);
 			logger.debug("Invalid SSN error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 	public void verifypresenceofLNErrorMSgCCAMErrorMsg() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
+			isDisplayed(invalidSSNErrorMessage);
 			logger.debug("Invalid Last Name error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
+			isDisplayed(invalidSSNErrorMessage);
 			logger.debug("Invalid SSN error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 	public void verifypresenceofPasswordErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(passwordErrorMessage));
+			isDisplayed(passwordErrorMessage);
 			logger.debug("Please enter the Password error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(passwordErrorMessage));
+			isDisplayed(passwordErrorMessage);
 			logger.debug("Please enter the Password error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 
 	public void verifypresenceofAddressErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(addressErrorMessage));
+			isDisplayed(addressErrorMessage);
 			logger.debug("Address is required error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(addressErrorMessage));
+			isDisplayed(addressErrorMessage);
 			logger.debug("Address is required error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 
 	public void verifypresenceofZipErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(zipErrorMessage));
+			isDisplayed(zipErrorMessage);
 			logger.debug("Zip code is required error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(zipErrorMessage));
+			isDisplayed(zipErrorMessage);
 			logger.debug("Zip code is required error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 
 	public void verifypresenceofCityErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(cityErrorMessage));
+			isDisplayed(cityErrorMessage);
 			logger.debug("City is required error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(cityErrorMessage));
+			isDisplayed(cityErrorMessage);
 			logger.debug("City is required error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 
 	public void verifypresenceofStateErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(stateErrorMessage));
+			isDisplayed(stateErrorMessage);
 			logger.debug("State is required error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(stateErrorMessage));
+			isDisplayed(stateErrorMessage);
 			logger.debug("State is required error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 
 	public void verifypresenceofInvalidMobileNumberErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(invalidMobileNumberErrorMessage));
+			isDisplayed(invalidMobileNumberErrorMessage);
 			logger.debug("Mobile number can't be less than 10 digits error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(invalidMobileNumberErrorMessage));
+			isDisplayed(invalidMobileNumberErrorMessage);
 			logger.debug(
 					"Mobile number can't be less than 10 digits error message is displayed++++++++++++++++++++++++==");
 		}
@@ -894,60 +894,60 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 
 	public void verifypresenceofInvalidZipCodeErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(invalidZipErrorMessage));
+			isDisplayed(invalidZipErrorMessage);
 			logger.debug("Invalid Zip code error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(invalidZipErrorMessage));
+			isDisplayed(invalidZipErrorMessage);
 			logger.debug("Invalid Zip code error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 
 	public void verifypresenceofMobileErrorMessage() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(invalidZipErrorMessage));
+			isDisplayed(invalidZipErrorMessage);
 			logger.debug("Invalid Zip code error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(invalidZipErrorMessage));
+			isDisplayed(invalidZipErrorMessage);
 			logger.debug("Invalid Zip code message is displayed++++++++++++++++++++++++==");
 		}
 	}
 
 	public void verifyPresenceOfModifyAddressLink() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(modifyAddressLink));
+			isDisplayed(modifyAddressLink);
 			logger.debug("Modify Address Link is dispalyed");
 		} else {
-			assertTrue(isDisplayed(modifyAddressLink));
+			isDisplayed(modifyAddressLink);
 			logger.debug("Modify Address Link is displayed");
 		}
 	}
 	public void verifyPresenceOfMobilePhoneErrorMsg() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(invalidMobileNumber));
+			isDisplayed(invalidMobileNumber);
 			logger.debug("Invalid Mobile Number is dispalyed");
 		} else {
-			assertTrue(isDisplayed(invalidMobileNumber));
+			isDisplayed(invalidMobileNumber);
 			logger.debug("Invalid Mobile Number is displayed");
 		}
 	}
 	public void verifyPresenceOfAnnualIncomeErrorMsg() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(invalidAnnualIncomeNumber));
+			isDisplayed(invalidAnnualIncomeNumber);
 			logger.debug("Invalid Annual Income is dispalyed");
 		} else {
-			assertTrue(isDisplayed(invalidAnnualIncomeNumber));
+			isDisplayed(invalidAnnualIncomeNumber);
 			logger.debug("Invalid Annual Income is displayed");
 		}
 	}
 
 	public void verifyPresenceOfAddressVerificationModalTxt() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(addressVerificationModalTxt));
+			isDisplayed(addressVerificationModalTxt);
 			logger.debug(
 					"We were unable to verify your address with the postal database. Using the address you entered may cause delays receiving your order.\r\n"
 							+ " is dispalyed");
 		} else {
-			assertTrue(isDisplayed(addressVerificationModalTxt));
+			isDisplayed(addressVerificationModalTxt);
 			logger.debug(
 					"We were unable to verify your address with the postal database. Using the address you entered may cause delays receiving your order.\r\n"
 							+ " is displayed");
@@ -1029,20 +1029,20 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfAddressBookText() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(addressBooktext));
+			isDisplayed(addressBooktext);
 			logger.debug("Address Book Text is displayed");
 		} else {
-			assertTrue(isDisplayed(addressBooktext));
+			isDisplayed(addressBooktext);
 			logger.debug("Address Book Text is not displayed++++++++++++++++++++++++==");
 		}
 	}
 	public void verifyPresenceOfAddNewAddressLink() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(addaddresslink));
+			isDisplayed(addaddresslink);
 			logger.debug("AddNewAddressLink Link is displayed");
 		} else {
-			assertTrue(isDisplayed(addaddresslink));
+			isDisplayed(addaddresslink);
 			logger.debug("AddNewAddressLink Link is not displayed++++++++++++++++++++++++==");
 		}
 	}
