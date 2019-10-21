@@ -1,4 +1,4 @@
-/*
+
 
 package com.aso.qe.test.runner;
 
@@ -9,9 +9,9 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features="src/test/resources/features/web/R2_CHECKOUT_KER_2866_Web.feature", //R1_HP_KER_1915_Web.feature",//R1_PDP_KER_2334_Web.feature",
+@CucumberOptions(features="src/test/resources/features/web/R2_HP_KER_15867.feature", //R1_HP_KER_1915_Web.feature",//R1_PDP_KER_2334_Web.feature",
 glue="com.aso.qe.test.stepdefinition.web",
-tags= {"@Rishikesh"},
+tags= {"@Navya"},
 monochrome=true,
 plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html",
 format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"})
@@ -20,4 +20,3 @@ format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:tar
 public class PLCCWebTestRunner {
 }
 	
-*/
