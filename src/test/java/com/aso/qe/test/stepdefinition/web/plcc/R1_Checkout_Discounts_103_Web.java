@@ -1,8 +1,10 @@
 package com.aso.qe.test.stepdefinition.web.plcc;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -40,7 +42,7 @@ public void usr_click_on_view_cart_and_navigates_to_cart_page() throws Throwable
 @When("^user click on add promo code link on cart page$")
 public void user_click_on_add_promo_code_link_on_cart_page() throws Throwable {
 	try {
-		genericPO.addPromoCodeLink.click();
+		clickOnButton(genericPO.addPromoCodeLink);
 		Thread.sleep(10000);
 	} catch (Exception e) {
 		// TODO Auto-generated catch block
@@ -54,9 +56,9 @@ public void user_enter_promocode_on_cart_page(String arg1) throws Throwable {
 		genericPO.promoCodeInputField.click();
 		genericPO.enterPromoCode(arg1);
 		assertTrue(isDisplayed(genericPO.promoCodeInputField));
-		waitForElement(genericPO.promoCodeInputField);
+//		waitForElement(genericPO.promoCodeInputField);
 	} catch (Exception e) {
-		logger.debug("Exception Message");
+		logger.debug("Exception Message"+e.getMessage());
 	}
 }
 
@@ -66,6 +68,8 @@ public void click_on_submit_promo_code_button() throws Throwable {
 		genericPO.verifyPresenceOfSubmitPromoCard();
 		genericPO.submitPromoCode.click();
 		Thread.sleep(5000);
+		assertTrue(isDisplayed(genericPO.removepromo));
+//	Thread.sleep(5000);
 	} catch (Exception e) {
 		logger.debug("Exception Message"+e.getMessage());
 	}

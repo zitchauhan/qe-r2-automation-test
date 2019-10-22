@@ -1,6 +1,7 @@
 package com.aso.qe.test.pageobject;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
@@ -111,11 +112,11 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfGrand_Parkway() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(GrandParkwayLinkInHeader);
+			assertTrue(isDisplayed(GrandParkwayLinkInHeader));
 			logger.debug("GrandParkway Link is displayed in mobile");
 			Common_Web_PLCC.waitUntilElePresent(driver, GrandParkwayLinkInHeader, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(GrandParkwayLinkInHeader);
+			assertTrue(isDisplayed(GrandParkwayLinkInHeader));
 			logger.debug("WeeklyAd Link is not displayed++++++++++++++++++++++++==");
 		}
 	} 
@@ -139,25 +140,27 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void clickOnASOLogo() throws Exception {
 
 		{
-			assertTrue(isDisplayed(academyCreditCardFooterLink));
+			assertTrue(isDisplayed(imgAcademyLogo));
 			isClickable(imgAcademyLogo);
+			assertTrue(clickOnButton(imgAcademyLogo));
+			/*
 			if (isDisplayed(imgAcademyLogo)) {
 				Common_Web_PLCC.waitUntilElePresent(driver, imgAcademyLogo, ELEMWAITTIME_MEDIUM);
 				assertTrue(clickOnButton(imgAcademyLogo));
 			} else {
 				Common_Web_PLCC.waitUntilElePresent(driver, imgAcademyLogo, ELEMWAITTIME_MEDIUM);
 			}
+			*/
 		}
 	}
 
 	public void verifyPresenceOfFPOApplyCardSection() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(applyForCardSection);
+			assertTrue(isDisplayed(applyForCardSection));
 			logger.debug("FPO Apply Card Section on Landing Page is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(applyForCardSection);
+			assertTrue(isDisplayed(applyForCardSection));
 			logger.debug("FPO Apply Card Section on Landing Page is displayed++++++++++++++++++++++++==");
 		}
 
@@ -166,11 +169,10 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfBenefitsSection() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			isDisplayed(benefitSection);
+			assertTrue(isDisplayed(benefitSection));
 			logger.debug("Benefits Section on Landing Page is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, benefitSection, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(benefitSection);
+			assertTrue(isDisplayed(benefitSection));
 			logger.debug("Benefits Section on Landing Page is not displayed++++++++++++++++++++++++==");
 		}
 
@@ -179,11 +181,10 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfPrescreenSection() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(benefitSection);
+			assertTrue(isDisplayed(benefitSection));
 			logger.debug("Preescreen Section on Landing Page is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, benefitSection, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(benefitSection);
+			assertTrue(isDisplayed(benefitSection));
 			logger.debug("Preescreen Section on Landing Page is displayed++++++++++++++++++++++++==");
 		}
 
@@ -191,11 +192,10 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfLandingPageBanner() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(landingPageBanner);
+			assertTrue(isDisplayed(landingPageBanner));
 			logger.debug("Landing Page Banner is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, benefitSection, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(landingPageBanner);
+			assertTrue(isDisplayed(landingPageBanner));
 			logger.debug("Landing Page Banner is displayed++++++++++++++++++++++++==");
 		}
 
@@ -203,11 +203,10 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfLabelAboveCardImage() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(labelAboveCardImage);
+			assertTrue(isDisplayed(labelAboveCardImage));
 			logger.debug("Label above card Image is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, benefitSection, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(labelAboveCardImage);
+			assertTrue(isDisplayed(labelAboveCardImage));
 			logger.debug("Label above card image is displayed++++++++++++++++++++++++==");
 		}
 
@@ -238,11 +237,10 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfAcademyLogo() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			isDisplayed(imgAcademyLogo);
+			assertTrue(clickOnButton(imgAcademyLogo));
 			logger.debug("Academy Logo is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, imgAcademyLogo, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(imgAcademyLogo);
+			assertTrue(clickOnButton(imgAcademyLogo));
 			logger.debug("Academy Logo is not displayed++++++++++++++++++++++++==");
 		}
 
@@ -251,11 +249,11 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfFindAStoreLink() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			isDisplayed(findAStoreLinkInHeader);
+			assertTrue(clickOnButton(findAStoreLinkInHeader));
 			logger.debug("Find A Store Link is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, findAStoreLinkInHeader, ELEMWAITTIME_MEDIUM);
+//			Common_Web_PLCC.waitUntilElePresent(driver, findAStoreLinkInHeader, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(findAStoreLinkInHeader);
+			assertTrue(clickOnButton(findAStoreLinkInHeader));
 			logger.debug("Find A Store Link is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -275,11 +273,11 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfSearchField() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			isDisplayed(searchBox);
+			assertTrue(clickOnButton(searchBox));
 			logger.debug("Search Field is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_MEDIUM);
+	//		Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(searchBox);
+			assertTrue(clickOnButton(searchBox));
 			logger.debug("Search Field is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -289,7 +287,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(searchIcon));
 			logger.debug("Search Icon is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_MEDIUM);
+//			Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(isDisplayed(searchIcon));
 			logger.debug("Search Icon is not displayed++++++++++++++++++++++++==");
@@ -299,11 +297,10 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfDealsTab() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			isDisplayed(dealsTabInHeader);
+			assertTrue(clickOnButton(dealsTabInHeader));
 			logger.debug("Deals Field is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, dealsTabInHeader, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(dealsTabInHeader);
+			assertTrue(clickOnButton(dealsTabInHeader));
 			logger.debug("Deals Field is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -311,11 +308,10 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfWeeklyAdLink() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			isDisplayed(weeklyAdsLinkInHeader);
+			assertTrue(clickOnButton(weeklyAdsLinkInHeader));
 			logger.debug("WeeklyAd Link is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, weeklyAdsLinkInHeader, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(weeklyAdsLinkInHeader);
+			assertTrue(clickOnButton(weeklyAdsLinkInHeader));
 			logger.debug("WeeklyAd Link is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -338,7 +334,6 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(applyNowButton));
 			logger.debug("Apply Now button is displayed for Mobile");
-			Common_Web_PLCC.waitUntilElePresent(driver, applyNowButton, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(isDisplayed(applyNowButton));
 			logger.debug("Apply Now button is not displayed++++++++++++++++++++++++==");
@@ -350,7 +345,6 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(manageYourCardLink));
 			logger.debug("Manage your card Link is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, applyNowButton, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(isDisplayed(manageYourCardLink));
 			logger.debug("Manage your card Link is displayed");
@@ -372,7 +366,6 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(plccCreditCardImage));
 			logger.debug("PLCC Credit Card Image is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, plccCreditCardImage, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(isDisplayed(plccCreditCardImage));
 			logger.debug("PLCC Credit Card Image is not displayed++++++++++++++++++++++++==");
@@ -480,7 +473,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 			Assert.assertTrue(currentURL.contains("/shop/browse/academy-credit-card"));
 				} catch (Exception e) {
 			logger.debug("User is not able to navigate to Landing Page instead navigated to URL :: " + currentURL);
-			logger.error(">>>>>>>>>>>>>>>>>>>>"+ e.getMessage());
+			logger.error(e.getMessage());
 		}
 
 	}
@@ -490,7 +483,6 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(benefit1Image));
 			logger.debug("Benefit 1 Image is displayed");
-			//Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(isDisplayed(benefit1Image));
 			logger.debug("Benefit 1 Image is displayed");
@@ -516,7 +508,6 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(benefit3Image));
 			logger.debug("Benefit 3 Image is displayed");
-			//Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(isDisplayed(benefit3Image));
 			logger.debug("Benefit 3 Image is displayed");
@@ -594,7 +585,6 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(offerText3));
 			logger.debug("Offer Text 3 is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(isDisplayed(offerText3));
 			logger.debug("Offer Text 3 is displayed");
@@ -887,7 +877,8 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	}
 
 	public void closeAlertPopupBox() {
-		emailSignUpModal.click();
+		assertTrue(clickOnButton(emailSignUpModal));
+		
 	}
 
 }

@@ -165,7 +165,9 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[@data-auid='crt_inputPromo']")
 	public WebElement promoCodeInputField;
 	@FindBy(xpath = "//*[@data-auid='btncrt_btnPromoSbmt']")
-	public WebElement submitPromoCode;
+	public WebElement submitPromoCode;	
+	@FindBy(xpath = "//*[text()='Remove']")
+	public WebElement removepromo;
 	@FindBy(xpath = "//*[text()='Discount']")
 	public WebElement discountTxt;
 	@FindBy(xpath = "//*[text()='-$15.00']")
@@ -309,10 +311,11 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfCheckoutLinkOnCartPage() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(checkoutBtnATCCartPage);
+			Assert.assertTrue(isDisplayed(checkoutBtnATCCartPage));
+			
 			logger.debug("Checkout Link is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(checkoutBtnATCCartPage);
+			Assert.assertTrue(isDisplayed(checkoutBtnATCCartPage));
 			logger.debug("Checkout Link is displayed++++++++++++++++++++++++==");
 		}
 
@@ -348,10 +351,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfPromoCodeSection() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(addPromoSection);
+			Assert.assertTrue(isDisplayed(addPromoSection));
 			logger.debug("Promo code section is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(addPromoSection);
+			Assert.assertTrue(isDisplayed(addPromoSection));
 			logger.debug("Promo code section is displayed++++++++++++++++++++++++==");
 		}
 
@@ -420,10 +423,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfSubmitPromoCard() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(submitPromoCode);
+			Assert.assertTrue(isDisplayed(submitPromoCode));
 			logger.debug("Submit Promo Code Button is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(submitPromoCode);
+			Assert.assertTrue(isDisplayed(submitPromoCode));
 			logger.debug("Submit Promo Code Button is displayed++++++++++++++++++++++++==");
 		}
 
