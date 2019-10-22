@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
         detailedAggregatedReport = true,
         overviewReport = true,
         overviewChartsReport = true,
-        retryCount = 2)
+        retryCount = 0)
 
 @CucumberOptions(
 		features="src/test/resources/features/web/", 
