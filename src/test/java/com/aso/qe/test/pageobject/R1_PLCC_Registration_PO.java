@@ -212,11 +212,11 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfAddAddressCheckBox() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(addAddressCheckBox);
+			assertTrue(isDisplayed(addAddressCheckBox));
 			// assertTrue(isClickable(addAddressCheckBox));
 			logger.debug("Add address checkbox is displayed on Mobile");
 		} else {
-			isDisplayed(addAddressCheckBox);
+			assertTrue(isDisplayed(addAddressCheckBox));
 			// assertTrue(isClickable(addAddressCheckBox));
 			logger.debug("Add address checkbox is not displayed++++++++++++++++++++++++==");
 		}
@@ -228,7 +228,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 			// System.out.println("AddressCheckBox is checked");
 
 		} catch (Exception e) {
-			addAddressCheckBox.click();
+			assertTrue(clickOnButton(addAddressCheckBox));
 
 		}
 	}
@@ -242,10 +242,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfFirstNameTxtField() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			isDisplayed(firstNameTxtField);
+			assertTrue(isDisplayed(firstNameTxtField));
 			logger.debug("FirstName Text Field is not displayed");
 		} else {
-			isDisplayed(firstNameTxtField);
+			assertTrue(isDisplayed(firstNameTxtField));
 			logger.debug("FirstName Text Field is displayed++++++++++++++++++++++++==");
 		}
 
@@ -254,10 +254,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfLastNameTxtField() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			isDisplayed(lastNameTxtField);
+			assertTrue(isDisplayed(lastNameTxtField));
 			logger.debug("LastName Text Field is not displayed");
 		} else {
-			isDisplayed(lastNameTxtField);
+			assertTrue(isDisplayed(lastNameTxtField));
 			logger.debug("LastName Text Field is displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -337,10 +337,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfServices() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(servicesFooterText));
+			isDisplayed(servicesFooterText);
 			logger.debug("Services footer Text is not displayed");
 		} else {
-			assertTrue(isDisplayed(servicesFooterText));
+			isDisplayed(servicesFooterText);
 			logger.debug("Services footer text is displayed");
 		}
 	}
@@ -361,10 +361,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfSiteMapLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(siteMapLink));
+			isDisplayed(siteMapLink);
 			logger.debug("SiteMap Link is not displayed");
 		} else {
-			assertTrue(isDisplayed(siteMapLink));
+			isDisplayed(siteMapLink);
 			logger.debug("SiteMap Link is displayed");
 		}
 	}
@@ -372,10 +372,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfAsoRightsLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(asoRightsLink));
+			isDisplayed(asoRightsLink);
 			logger.debug("© 2018 Academy Sports + Outdoors. All Rights Reserved is not displayed");
 		} else {
-			assertTrue(isDisplayed(asoRightsLink));
+			isDisplayed(asoRightsLink);
 			logger.debug("© 2018 Academy Sports + Outdoors. All Rights Reserved is displayed");
 		}
 	}
@@ -383,10 +383,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfProductIndexLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(productIndexLink));
+			isDisplayed(productIndexLink);
 			logger.debug("Product Index is not displayed");
 		} else {
-			assertTrue(isDisplayed(productIndexLink));
+			isDisplayed(productIndexLink);
 			logger.debug("Product Index is displayed");
 		}
 	}
@@ -394,22 +394,22 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfAccessoriesAndmoreLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(accessories$moreLink));
+			isDisplayed(accessories$moreLink);
 			logger.debug("Accessories And More Link is not displayed");
 		} else {
-			assertTrue(isDisplayed(accessories$moreLink));
+			isDisplayed(accessories$moreLink);
 			logger.debug("Accessories And More Link is displayed");
 		}
 	}
 
 	public void validatingCheckOrderStatus() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(globalElementHeader.lnkcheckorder);
+			assertTrue(isDisplayed(globalElementHeader.lnkcheckorder));
 			assertTrue(isClickable(globalElementHeader.lnkcheckorder));
 			logger.debug("CheckOrder Status link is not displayed");
 		} else {
-			isDisplayed(globalElementHeader.lnkcheckorder);
-			isClickable(globalElementHeader.lnkcheckorder);
+			assertTrue(isDisplayed(globalElementHeader.lnkcheckorder));
+			assertTrue(isClickable(globalElementHeader.lnkcheckorder));
 			logger.debug("CheckOrder Status link is displayed++++++++++++++++++++++++==");
 		}
 	}

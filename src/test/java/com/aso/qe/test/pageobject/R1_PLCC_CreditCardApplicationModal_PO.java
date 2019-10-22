@@ -156,12 +156,17 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement creditCardApplicationModal;
 	@FindBy(xpath = "//*[@data-auid='btncrt_btnCntinueShop']")
 	public WebElement continueShoppingBtn;
+//	@FindBy(xpath = "//*[@class='ml-half undefined']")
+//	// *[@name='creditApplicationModal']
+//	public WebElement TandCCheckBox;
+	
 	@FindBy(xpath = "//*[@class='ml-half undefined']")
 	// *[@name='creditApplicationModal']
 	public WebElement TandCCheckBox;
+	
 	@FindBy(xpath = "//*[text()='Submit']")
 	public WebElement submitButton;
-	@FindBy(xpath = "//*[text()=' STEP2: CONSENT ']")
+	@FindBy(xpath = "//*[text()=' STEP 2 : CONSENT ']")
 	public WebElement consentModelPageLabel;
 
 	// CONSENT MODEL:
@@ -301,7 +306,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	
 	public void verifyPresenceOfErrorText() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-        assertTrue(isDisplayed(errorTextErrorModal));
+			assertTrue(isDisplayed(errorTextErrorModal));
 			logger.debug("Error Text on Error Modal is displayed");
 		} else {
 			assertTrue(isDisplayed(errorTextErrorModal));
@@ -446,10 +451,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 					
 	public void verifyPresenceOfConsentModelPageLabel() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(firstNameCCModal));
+			isDisplayed(consentModelPageLabel);
 			logger.debug("STEP2: CONSENT is displayed for Mobile");
 		} else {
-			assertTrue(isDisplayed(firstNameCCModal));
+			isDisplayed(consentModelPageLabel);
 			logger.debug("STEP2: CONSENT is displayed");
 		}
 	}
@@ -845,11 +850,11 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifySubmitButtonIsDisabled() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(submitButton);
+			assertTrue(isDisplayed(submitButton));
 			assertFalse(isClickable(submitButton));
 			logger.debug("Submit Button on Pre-Screen Conset Modal is not clickable");
 		} else {
-			isDisplayed(submitButton);
+			assertTrue(isDisplayed(submitButton));
 			assertFalse(isClickable(submitButton));
 			logger.debug("Submit Button on Pre-Screen Conset Modal is not clickable");
 		}
@@ -857,11 +862,11 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 
 	public void verifySubmitButtonIsEnabled() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(submitButton);
+			assertTrue(isDisplayed(submitButton));
 			assertTrue(isClickable(submitButton));
 			logger.debug("Submit Button on Pre-Screen Conset Model is clickable");
 		} else {
-			isDisplayed(submitButton);
+			assertTrue(isDisplayed(submitButton));
 			assertTrue(isClickable(submitButton));
 			logger.debug("Submit Button on Pre-Screen Conset Model is clickable");
 		}

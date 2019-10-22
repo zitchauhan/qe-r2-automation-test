@@ -54,7 +54,7 @@ Background:  Common Pre-requisite steps
 	And user select credit application modal agree message 
 	Then user expect submit button clickable
 	
-@C-PLCC @Regression @All @PLCC-58 @CR-VS
+@C-PLCC @Regression @All @PLCC-58 @CR-VS 
  Scenario: Verify Submit button is not clickable when Terms and condition check box is unchecked_Generic Consent
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 
@@ -77,7 +77,7 @@ Background:  Common Pre-requisite steps
 	When user click on SUBMIT button
 	Then user expect submit button not clickable
 	
-@C-PLCC @Regression @All @PLCC-58 @CR-VS
+@C-PLCC @Regression @All @PLCC-58 @CR-VS @vidya
  Scenario: Verify Submit button is clickable when Terms and condition check box is checked_Generic Consent
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal  

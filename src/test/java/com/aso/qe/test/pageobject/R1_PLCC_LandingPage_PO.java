@@ -263,11 +263,11 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfShopTab() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
-			isDisplayed(shopTabInHeader);
+			assertTrue(isDisplayed(shopTabInHeader));
 			logger.debug("SHOP Tab in header is displayed");
 			Common_Web_PLCC.waitUntilElePresent(driver, shopTabInHeader, ELEMWAITTIME_MEDIUM);
 		} else {
-			isDisplayed(shopTabInHeader);
+			assertTrue(isDisplayed(shopTabInHeader));
 			logger.debug("SHOP Tab in header is not displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -490,7 +490,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(benefit1Image));
 			logger.debug("Benefit 1 Image is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+			//Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(isDisplayed(benefit1Image));
 			logger.debug("Benefit 1 Image is displayed");
@@ -503,7 +503,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(benefit2Image));
 			logger.debug("Benefit 2 Image is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+			//Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(isDisplayed(benefit2Image));
 			logger.debug("Benefit 2 Image is displayed");
@@ -516,7 +516,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(benefit3Image));
 			logger.debug("Benefit 3 Image is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
+			//Common_Web_PLCC.waitUntilElePresent(driver, applyForCardSection, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(isDisplayed(benefit3Image));
 			logger.debug("Benefit 3 Image is displayed");
