@@ -8,24 +8,20 @@ import com.github.mkolisnyk.cucumber.runner.ExtendedCucumberOptions;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
-//@RunWith(Cucumber.class)
-
-
 @RunWith(ExtendedCucumber.class)
 @ExtendedCucumberOptions(
-    //   jsonReport = "target/cucumber-reports/cucumber-html-reports/common.json",
-    //    usageReport = true,
-   //     detailedReport = true,
-   //     detailedAggregatedReport = true,
-   //     overviewReport = true,
-    //    overviewChartsReport = true,
+       jsonReport = "target/cucumber-reports/cucumber-html-reports/common.json",
+        usageReport = true,
+        detailedReport = true,
+        detailedAggregatedReport = true,
+        overviewReport = true,
+        overviewChartsReport = true,
         retryCount = 0)
 
 @CucumberOptions(
 		features="src/test/resources/features/web/", 
 		glue="com.aso.qe.test.stepdefinition.web",
-		//tags= {"@Promocode"},
-		//dryRun = true,
+		//tags= {"@KER-2871"},
 		monochrome=true,
 				plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html",
 		format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
@@ -33,3 +29,4 @@ import cucumber.api.junit.Cucumber;
 public class WebTestRunner{	
 	
 }
+

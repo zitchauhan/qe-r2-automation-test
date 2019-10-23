@@ -63,7 +63,7 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 	public void user_click_on_REVIEW_ORDER_button() throws Throwable {
 		try {
 			genericPO.verifyPresenceOfReviewOrderButton();
-			checkout_po.ReviewOrder_Btn.click();
+			clickOnButton(checkout_po.ReviewOrder_Btn);
 		} catch (Exception e) {
 			System.out.println("Exception Message:" + e.getMessage());
 		}
@@ -73,7 +73,7 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 	public void user_click_on_PLACE_ORDER_button() throws Throwable {
 		try {
 			genericPO.verifyPresenceOfPlaceOrderButton();
-			checkout_po.btnPlaceOrderPaymentPage.click();
+			clickOnButton(checkout_po.btnPlaceOrderPaymentPage);
 		} catch (Exception e) {
 			logger.debug("Exception Message: "+e.getMessage());
 		}
@@ -197,21 +197,21 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 			assertTrue(isDisplayed(plccLandingPageObjects.searchBox));
 			waitForElement(plccLandingPageObjects.searchBox);
 			//pdpPageObj.addToCartAvailability();
-			genericPO.shipItButton.click();
-			genericPO.viewCartButton.click();
+			clickOnButton(genericPO.shipItButton);
+			clickOnButton(genericPO.viewCartButton);
 			Thread.sleep(15000);
-			genericPO.checkoutBtnATCCartPage.click();
+			clickOnButton(genericPO.checkoutBtnATCCartPage);
 			Thread.sleep(13000);
 			try {
 				if (genericPO.CreditCardNumber_Input.isDisplayed()) {
 					genericPO.enterCardBinNumber(plccCard);
 					Thread.sleep(8000);
 					assertTrue(isDisplayed(genericPO.CreditCardNumber_Input));
-					waitForElement(genericPO.CreditCardNumber_Input);
+			//		waitForElement(genericPO.CreditCardNumber_Input);
 
 				} else {
-					genericPO.savedCardDropDown.click();
-					genericPO.addNewCardOption.click();
+					clickOnButton(genericPO.savedCardDropDown);
+					clickOnButton(genericPO.addNewCardOption);
 					genericPO.enterCardBinNumber(plccCard);
 				}
 
@@ -219,13 +219,13 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 				e.printStackTrace();
 			}
 			try {
-				checkout_po.ReviewOrder_Btn.click();
+				clickOnButton(checkout_po.ReviewOrder_Btn);
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			Thread.sleep(6000);
-			checkout_po.btnPlaceOrderPaymentPage.click();
+			clickOnButton(checkout_po.btnPlaceOrderPaymentPage);
 			Thread.sleep(8000);
 /*			try {
 				genericPO.verifyPresenceOfOrderConfirmationPage();
@@ -241,7 +241,7 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 
 	@When("^user uncheck Save Payment Info for Later Checkbox$")
 	public void user_uncheck_Save_Payment_Info_for_Later_Checkbox() throws Throwable {
-		genericPO.savePaymentInfoForLaterCheckBox.click();
+		clickOnButton(genericPO.savePaymentInfoForLaterCheckBox);
 	}
 
 	@Given("^user expect element Order Summary to be present$")

@@ -541,7 +541,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']//*[contains(text(),'Quantity')]/following-sibling::*[1]")public WebElement QuantityInput_Txt;
 		
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_shipping_items']//*[contains(text(),'$')]")public WebElement  PriceShippingItemAvailable_Txt;
-		@FindBy(xpath = "(//*[@data-auid='checkout_order_summary_edit_cart_link'])[2]/*")public WebElement btnEditCart;//EditMyCart_Link
+		@FindBy(xpath = "(//*[@data-auid='checkout_order_summary_edit_cart_link'])[2]")public WebElement btnEditCart;//EditMyCart_Link
 		@FindBy(xpath = "(//*[@data-auid='checkout_order_summary_edit_cart_link'])[1]")
 		public WebElement btnEditCart_m;
 		
