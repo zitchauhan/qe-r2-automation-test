@@ -1,6 +1,6 @@
-Feature: OMNI-1062, OMNI-167 & OMNI-1070 
+Feature: Free shipping and Bopis messaging banner in header
 
-@OMNI-1070 
+@OMNI-1062 @C-Order @Regression @CR-NS @C-GlobalHeader
 Scenario: Verify Free Shipping and BOPIS Messaging in the Header
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then verify Free Shipping and BOPIS Messaging is displayed in the Header

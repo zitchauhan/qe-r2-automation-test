@@ -1,6 +1,6 @@
-Feature: OMNI-1062
+Feature: Verify selecting a shipping method update Order Summary
 
-@OMNI-1062 
+@OMNI-1070 @C-Order @Regression @CR-NS @C-GlobalHeader
 Scenario: Verify order summary update when customer selects an upgrade their shipping method in checkout
     Given user launches the browser and navigates to "ASO_HOME" page	
     And User navigates to L2 Grills Outdoor cooking 
@@ -16,6 +16,8 @@ Scenario: Verify order summary update when customer selects an upgrade their shi
 	And user enter Address "Address" 
 	And user enter Zipcode "ZIPCODE"
 	Then user click on Go To Shipping Method button in Checkout page
+	And user fetch the order summary details
+	#Then user modifies shipping method
 	And user upgrade the shipping method from the shipping method dropdown 
 	And user verify order summay is updated 
 

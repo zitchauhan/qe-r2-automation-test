@@ -1,19 +1,6 @@
-Feature: OMNI-167 Verify discount label is displaying when discount is less than $1
+Feature: Verify discount label is displaying when discount is less than $1
 
-@C-Order @OMNI-167 @Regression @CR-MT @C-Cart
-Scenario: Verify less than $1 discount is applied and displayed in order details
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When User searches a product "SKUIdOfProductLs15" and navigates to PDP 
-	And user click on ship it button 
-	Then user is navigated to Add to cart Notification popup 
-	And user will click on View Cart button 
-	And user navigate to Cart page 
-	And verify Order Summary in Cart 
-	Then user verifiy Order Total 
-	And user view and Applied Promotions/Discounts "Promocode" 
-	Then verify Promo code discount is applied
-
-@C-Order @OMNI-167 @Regression @CR-MT @C-Cart
+@C-Order @OMNI-167 @Regression @CR-MT @C-Checkout
 Scenario: To verify if less than $1 discount is applied and displayed in order confirmation page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUIdOfProductLs15" and navigates to PDP 
