@@ -24,11 +24,7 @@ public class GlobalHeader_OMNI_1062_SD extends CommonActionHelper {
 	
 	@Then("^verify Free Shipping and BOPIS Messaging is displayed in the Header$")
 	public void verify_Free_Shipping_and_BOPIS_Messaging_is_displayed_in_the_Header() {
-		//if(isDisplayed(r1GlobalHeader.pagePromotionBanner)) {
 			assertTrue(isDisplayed(r1GlobalHeader.pagePromotionBanner));
-		//}
-		//else
-		//	assertFalse(isDisplayed(r1GlobalHeader.pagePromotionBanner));
 	}
 
 	@When("^user clicks on \"([^\"]*)\" half of promotion message$")
@@ -45,23 +41,14 @@ public class GlobalHeader_OMNI_1062_SD extends CommonActionHelper {
 	public void user_lands_on_free_shipping_promotional_disclaimer_page() throws InterruptedException {
 		Thread.sleep(Constants.thread_medium);
 		String pageTitle = getTitle();
-		if(pageTitle.equalsIgnoreCase("Shipping Returns")) {
-			//assertTrue(pageTitle.equalsIgnoreCase("Shipping Returns"));
-		assertTrue(true);
-		}else {
-			assertFalse(true);
-		}
+		assertTrue(pageTitle.equalsIgnoreCase("shipping-returns"));
 	}
 
 	@When("^user lands on pick up for messaging page$")
 	public void user_lands_on_pick_up_for_messaging_page() throws InterruptedException {
 		Thread.sleep(Constants.thread_medium);
 		String pageTitle = getTitle();
-		if(pageTitle.equalsIgnoreCase("BOPIS")) {
-			assertTrue(true);
-		}else {
-			assertFalse(true);
-		}
+		assertTrue(pageTitle.equalsIgnoreCase("buy-online-pick-up-in-store"));
 	}
 
 	@When("^when user clicks on select a store link on promtion message$")

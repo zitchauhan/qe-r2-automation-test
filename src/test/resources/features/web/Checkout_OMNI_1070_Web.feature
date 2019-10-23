@@ -16,9 +16,8 @@ Scenario: Verify order summary update when customer selects an upgrade their shi
 	And user enter Address "Address" 
 	And user enter Zipcode "ZIPCODE"
 	Then user click on Go To Shipping Method button in Checkout page
-	And user fetch the order summary details
-	#Then user modifies shipping method
-	And user upgrade the shipping method from the shipping method dropdown 
+	And user get order summary details
+	Then user modifies shipping method
 	And user verify order summay is updated 
 
 

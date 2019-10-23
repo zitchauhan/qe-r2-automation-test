@@ -1125,25 +1125,4 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	        }
 	    }
 	
-	public String selectNextAvaiableShippingMethod() {
-		List<WebElement> avaiableShippingMethod = new ArrayList<>();
-		
-		avaiableShippingMethod = driver.findElements(By.xpath("//*[@data-auid='shipping_method_shipment_item_1_container']//li/a"));
-		if(avaiableShippingMethod.size()>1) {
-			String  methodvalue= avaiableShippingMethod.get(avaiableShippingMethod.size()-1).getAttribute("aria-label");
-			if(methodvalue.contains("FREE")) {
-				methodvalue = "FREE";
-			}else {
-				int i = methodvalue.indexOf('$');
-				methodvalue = methodvalue.substring(i, methodvalue.length()-1);
-				assertTrue(clickOnButton(avaiableShippingMethod.get(avaiableShippingMethod.size()-1)));
-			}
-			return methodvalue;
-			
-		}else {
-			assertTrue(false);
-			return null;
-		}
-		
-	}
 }
