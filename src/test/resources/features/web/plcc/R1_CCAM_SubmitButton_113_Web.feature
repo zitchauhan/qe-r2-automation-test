@@ -6,7 +6,7 @@ Background:  Common Pre-requisite steps
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
 	
-@C-PLCC @Regression @All @PLCC-113 @CR-VS
+@C-PLCC @Regression @All @PLCC-113 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Close button_Pre-Screen Consent Modal
 	And user expect Preescreen Code Text Field is to be present
 	And user enter Preescreen Code "Valid_PrescreenCode_1"
@@ -23,7 +23,7 @@ Scenario: Verify the system behavior when user clicks on Close button_Pre-Screen
 	When user click on close icon 
 	Then user expect Landing page to be present 
 	
-@C-PLCC @Regression @All @PLCC-113 @CR-VS
+@C-PLCC @Regression @All @PLCC-113 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Cancel link_Generic Consent Modal
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 
@@ -46,7 +46,7 @@ Scenario: Verify the system behavior when user clicks on Cancel link_Generic Con
 	When user click on cancel link
 	Then user expect Landing page to be present 
 	
-@C-PLCC @Regression @All @PLCC-113 @CR-VS
+@C-PLCC @Regression @All @PLCC-113 @CR-VS 
 Scenario: Verify the system behavior when user clicks on Close button_Generic Consent Modal
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 
@@ -90,13 +90,13 @@ Scenario: Verify Generic credit card application modal providing all field as em
 	And user enter Mobile Phone "invalidMobilePhoneP" 
 	And user enter Alternate Phone "invalidAlternateMobilePhoneP" 
 	And user click on CONTINUE button  
-	And user click on CONTINUE button
+	#And user click on CONTINUE button
 	And user expect error message on first name field
 	And user expect error message on last name field
 	And user expect error message on email id field
-	And user expect error message on email id field
+	#And user expect error message on email id field
 	And user expect error message on ssn field
-	And user expect error message on confirm ssn field
+	#And user expect error message on confirm ssn field
 	And user expect error message on mobile phone field
 	And user expect error message on alternate phone field
 	And user expect error message on annual income field

@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import static org.junit.Assert.assertTrue;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 
@@ -26,21 +27,21 @@ public class R1_PLCC_Mobile_PO extends CommonActionHelper{
 	
 	public void verifyPresenceOfMyAccountLinkOnMobile() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(myAccount_po.myAccount_txt_Mobile);
+			assertTrue(isDisplayed(myAccount_po.myAccount_txt_Mobile));
 			logger.debug("My Account link on mobile is displayed");
 		} else {
-			isDisplayed(myAccount_po.myAccount_txt_Mobile);
+			assertTrue(isDisplayed(myAccount_po.myAccount_txt_Mobile));
 			logger.debug("My Account link on mobile is displayed");
 		}
 	}
 	public void verifyPresenceOfPaymentLink() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(myAccount_MyAccountList_Payment_lnk_mobile);
-			myAccount_MyAccountList_Payment_lnk_mobile.click();
+			assertTrue(isDisplayed(myAccount_MyAccountList_Payment_lnk_mobile));
+			assertTrue(clickOnButton(myAccount_MyAccountList_Payment_lnk_mobile));
 			logger.debug("Payment link in My account section is displayed for mobile");
 		} else {
-			isDisplayed(myAccountPage_po.myAccount_MyAccountList_Payment_lnk);
-			myAccountPage_po.myAccount_MyAccountList_Payment_lnk.click();
+			assertTrue(isDisplayed(myAccountPage_po.myAccount_MyAccountList_Payment_lnk));
+			assertTrue(clickOnButton(myAccountPage_po.myAccount_MyAccountList_Payment_lnk));
 			logger.debug("Payment link in My account section is displayed");
 		}
 	}
