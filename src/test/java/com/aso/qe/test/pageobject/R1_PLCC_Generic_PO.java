@@ -288,10 +288,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfDiscountValue() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(discountValue);
+			assertTrue(isDisplayed(discountValue));
 			logger.debug("Discount Value is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(discountValue);
+			assertTrue(isDisplayed(discountValue));
 			logger.debug("Discount Value is displayed++++++++++++++++++++++++==");
 		}
 
@@ -299,10 +299,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfRemovePromoCard() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(removePromoCodeLink);
+			assertTrue(isDisplayed(removePromoCodeLink));
 			logger.debug("Remove Promo Card is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(removePromoCodeLink);
+			assertTrue(isDisplayed(removePromoCodeLink));
 			logger.debug("Remove Promo Card is displayed++++++++++++++++++++++++==");
 		}
 
@@ -323,10 +323,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfQuantityInput() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(quantityInputField);
+			assertTrue(isDisplayed(quantityInputField));
 			logger.debug("Quantity Input field is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(quantityInputField);
+			assertTrue(isDisplayed(quantityInputField));
 			logger.debug("Quantity Input field is displayed++++++++++++++++++++++++==");
 		}
 
@@ -340,10 +340,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfViewCartBtn() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(viewCartBtn);
+			assertTrue(isDisplayed(viewCartBtn));
 			logger.debug("View Cart button is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(viewCartBtn);
+			assertTrue(isDisplayed(viewCartBtn));
 			logger.debug("View Cart button is displayed++++++++++++++++++++++++==");
 		}
 
@@ -366,10 +366,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfDiscountText() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(discountTxt);
+			assertTrue(isDisplayed(discountTxt));
 			logger.debug("Discount Text is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(discountTxt);
+			assertTrue(isDisplayed(discountTxt));
 			logger.debug("Discount Text is displayed++++++++++++++++++++++++==");
 		}
 
@@ -389,10 +389,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfFiftennDollarsOff() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(fifteenPercentOff);
+			assertTrue(isDisplayed(fifteenPercentOff));
 			logger.debug("15% Discount is applied++++++++++++++++++++++++");
 		} else {
-			isDisplayed(fifteenPercentOff);
+			assertTrue(isDisplayed(fifteenPercentOff));
 			logger.debug("15% Discount is applied++++++++++++++++++++++++==");
 		}
 
@@ -401,10 +401,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		public void verifyPresenceOfAddPromoCodeButton() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(addPromoCodeLink);
+			assertTrue(isDisplayed(addPromoCodeLink));
 			logger.debug("Add Promo Code Link is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(addPromoCodeLink);
+			assertTrue(isDisplayed(addPromoCodeLink));
 			logger.debug("Add Promo Code Link is displayed++++++++++++++++++++++++==");
 		}
 
@@ -412,10 +412,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfPromoCodeInputField() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(promoCodeInputField);
+			assertTrue(isDisplayed(promoCodeInputField));
 			logger.debug("Promo Card Input Field is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(promoCodeInputField);
+			assertTrue(isDisplayed(promoCodeInputField));
 			logger.debug("Promo Card Input Field is displayed++++++++++++++++++++++++==");
 		}
 
@@ -515,10 +515,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfSaveForLaterCheckBox() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(savePaymentInfoForLaterCheckBox);
+			assertTrue(isDisplayed(savePaymentInfoForLaterCheckBox));
 			logger.debug("Save Payment Info for Later CheckBox is displayed++++++++++++++++++++++++");
 		} else {
-			isDisplayed(savePaymentInfoForLaterCheckBox);
+			assertTrue(isDisplayed(savePaymentInfoForLaterCheckBox));
 			logger.debug("Save Payment Info for Later CheckBox is displayed++++++++++++++++++++++++==");
 		}
 
@@ -527,10 +527,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfCreditCardRadioButton() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(CreditCard_radioBtn);
+			assertTrue(isDisplayed(CreditCard_radioBtn));
 			logger.debug("Credit Card  Radio button is displayed");
 		} else {
-			isDisplayed(CreditCard_radioBtn);
+			assertTrue(isDisplayed(CreditCard_radioBtn));
 			logger.debug("Credit Card Radio button is displayed++++++++++++++++++++++++==");
 		}
 
@@ -539,10 +539,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfInvalidCardNumberErrorMsg() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(invalidCardNumberErrorMsg);
+			assertTrue(isDisplayed(invalidCardNumberErrorMsg));
 			logger.debug("Unrecognized card number is displayed");
 		} else {
-			isDisplayed(invalidCardNumberErrorMsg);
+			assertTrue(isDisplayed(invalidCardNumberErrorMsg));
 			logger.debug("Unrecognized card number is displayed++++++++++++++++++++++++==");
 		}
 
@@ -551,10 +551,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfPlccCardOnCreditCardTxtField() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(plccCardOnCreditCardTxtField);
+			assertTrue(isDisplayed(plccCardOnCreditCardTxtField));
 			logger.debug("PLCC Card on Credit Card Text Field is displayed");
 		} else {
-			isDisplayed(plccCardOnCreditCardTxtField);
+			assertTrue(isDisplayed(plccCardOnCreditCardTxtField));
 			logger.debug("PLCC Card on Credit Card Text Field is displayed++++++++++++++++++++++++==");
 		}
 
@@ -563,10 +563,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfCreditCardTextField() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(CreditCardNumber_Input);
+			assertTrue(isDisplayed(CreditCardNumber_Input));
 			logger.debug("Credit Card Text Field is displayed");
 		} else {
-			isDisplayed(CreditCardNumber_Input);
+			assertTrue(isDisplayed(CreditCardNumber_Input));
 			logger.debug("Credit Card Text Field is displayed++++++++++++++++++++++++==");
 		}
 
@@ -574,10 +574,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfAddNewCreditCardOption() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(addNewCreditCardOption);
+			assertTrue(isDisplayed(addNewCreditCardOption));
 			logger.debug("Add New Credit Card Option is displayed");
 		} else {
-			isDisplayed(addNewCreditCardOption);
+			assertTrue(isDisplayed(addNewCreditCardOption));
 			logger.debug("Add New Credit Card Option is displayed");
 		}
 
@@ -588,13 +588,8 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 
 		{
 			assertTrue(isDisplayed(checkoutBtnATC));
-			isClickable(checkoutBtnATC);
-			if (isDisplayed(checkoutBtnATC)) {
-				Common_Web_PLCC.waitUntilElePresent(driver, checkoutBtnATC, ELEMWAITTIME_MEDIUM);
-				assertTrue(clickOnButton(checkoutBtnATC));
-			} else {
-				Common_Web_PLCC.waitUntilElePresent(driver, checkoutBtnATC, ELEMWAITTIME_MEDIUM);
-			}
+			assertTrue(isClickable(checkoutBtnATC));
+			assertTrue(clickOnButton(checkoutBtnATC));
 		}
 
 	}
@@ -607,10 +602,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfPlccCardImageOnCCField() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(plccCardImageOnCCField);
+			assertTrue(isDisplayed(plccCardImageOnCCField));
 			logger.debug("PLCC Card Image on Credit Card Text Field is displayed++++++++++++++++++++++++==");
 		} else {
-			isDisplayed(plccCardImageOnCCField);
+			assertTrue(isDisplayed(plccCardImageOnCCField));
 			logger.debug("PLCC Card Image on Credit Card Text Field is displayed++++++++++++++++++++++++==");
 		}
 
@@ -619,10 +614,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfVisaCardImageOnCCField() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(visaCardImageOnCCField);
+			assertTrue(isDisplayed(visaCardImageOnCCField));
 			logger.debug("VISA Card Image on Credit Card Text Field is displayed++++++++++++++++++++++++==");
 		} else {
-			isDisplayed(visaCardImageOnCCField);
+			assertTrue(isDisplayed(visaCardImageOnCCField));
 			logger.debug("VISA Card Image on Credit Card Text Field is displayed++++++++++++++++++++++++==");
 		}
 
@@ -631,10 +626,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfMasterCardImageOnCCField() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(masterPalPaymentOption);
+			assertTrue(isDisplayed(masterPalPaymentOption));
 			logger.debug("Master Card Image on Credit Card Text Field is displayed++++++++++++++++++++++++==");
 		} else {
-			isDisplayed(masterPalPaymentOption);
+			assertTrue(isDisplayed(masterPalPaymentOption));
 			logger.debug("Master Card Image on Credit Card Text Field is displayed++++++++++++++++++++++++==");
 		}
 
@@ -643,10 +638,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfDiscoveCardImageOnCCField() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(discoverPalPaymentOption);
+			assertTrue(isDisplayed(discoverPalPaymentOption));
 			logger.debug("Discover Card Image on Credit Card Text Field is displayed++++++++++++++++++++++++==");
 		} else {
-			isDisplayed(discoverPalPaymentOption);
+			assertTrue(isDisplayed(discoverPalPaymentOption));
 			logger.debug("Discover Card Image on Credit Card Text Field is displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -654,10 +649,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfAmexCardImageOnCCField() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(amexCardImageOnCCField);
+			assertTrue(isDisplayed(amexCardImageOnCCField));
 			logger.debug("Amex Card Image on Credit Card Text Field is displayed++++++++++++++++++++++++==");
 		} else {
-			isDisplayed(amexCardImageOnCCField);
+			assertTrue(isDisplayed(amexCardImageOnCCField));
 			logger.debug("Amex Card Image on Credit Card Text Field is displayed++++++++++++++++++++++++==");
 		}
 
@@ -666,10 +661,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfInvalidErrorMessageOnCCField() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(r2CheckOutPo.UnrecognizedCardNumber_Txt);
+			assertTrue(isDisplayed(r2CheckOutPo.UnrecognizedCardNumber_Txt));
 			logger.debug("Unrecognized card number error message is displayed++++++++++++++++++++++++==");
 		} else {
-			isDisplayed(r2CheckOutPo.UnrecognizedCardNumber_Txt);
+			assertTrue(isDisplayed(r2CheckOutPo.UnrecognizedCardNumber_Txt));
 			logger.debug("Unrecognized card number error message is displayed++++++++++++++++++++++++==");
 		}
 
@@ -678,10 +673,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfCreditCardImageOnCCField() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(r2CheckOutPo.Checkout_CreditCardPay_ImgLogo);
+			assertTrue(isDisplayed(r2CheckOutPo.Checkout_CreditCardPay_ImgLogo));
 			logger.debug("Credit Card Image on credit card Text Field is displayed++++++++++++++++++++++++==");
 		} else {
-			isDisplayed(r2CheckOutPo.Checkout_CreditCardPay_ImgLogo);
+			assertTrue(isDisplayed(r2CheckOutPo.Checkout_CreditCardPay_ImgLogo));
 			logger.debug("Credit Card Image on credit card Text Field is displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -689,10 +684,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfEditMyCartLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(r2CheckOutPo.btnEditCart);
+			assertTrue(isDisplayed(r2CheckOutPo.btnEditCart));
 			logger.debug("Edit My Cart Link is displayed++++++++++++++++++++++++==");
 		} else {
-			isDisplayed(r2CheckOutPo.btnEditCart);
+			assertTrue(isDisplayed(r2CheckOutPo.btnEditCart));
 			logger.debug("Edit My Cart Link  is displayed++++++++++++++++++++++++==");
 		}
 	}
@@ -700,10 +695,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfRemoveFromCartLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(r2CheckOutPo.AS_btnRemoveFromCart);
+			assertTrue(isDisplayed(r2CheckOutPo.AS_btnRemoveFromCart));
 			logger.debug("Remove from Cart Link is displayed++++++++++++++++++++++++==");
 		} else {
-			isDisplayed(r2CheckOutPo.AS_btnRemoveFromCart);
+			assertTrue(isDisplayed(r2CheckOutPo.AS_btnRemoveFromCart));
 			logger.debug("Remove from cart Link is displayed++++++++++++++++++++++++==");
 		}
 
@@ -712,12 +707,12 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfExpiryTextField() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(r2CheckOutPo.txtExpirationDate);
-			isDisplayed(r2CheckOutPo.txtExpirationDateInput);
+			assertTrue(isDisplayed(r2CheckOutPo.txtExpirationDate));
+			assertTrue(isDisplayed(r2CheckOutPo.txtExpirationDateInput));
 			logger.debug("Expiry Date Text Field is displayed++++++++++++++++++++++++==");
 		} else {
-			isDisplayed(r2CheckOutPo.txtExpirationDate);
-			isDisplayed(r2CheckOutPo.txtExpirationDateInput);
+			assertTrue(isDisplayed(r2CheckOutPo.txtExpirationDate));
+			assertTrue(isDisplayed(r2CheckOutPo.txtExpirationDateInput));
 			logger.debug("Expiry Date Text Field is displayed++++++++++++++++++++++++==");
 		}
 
@@ -726,10 +721,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfCvvTextField() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(r2CheckOutPo.txtCVVInput);
+			assertTrue(isDisplayed(r2CheckOutPo.txtCVVInput));
 			logger.debug("CVV Text Field is displayed++++++++++++++++++++++++==");
 		} else {
-			isDisplayed(r2CheckOutPo.txtCVVInput);
+			assertTrue(isDisplayed(r2CheckOutPo.txtCVVInput));
 			logger.debug("CVV Text Field is displayed++++++++++++++++++++++++==");
 		}
 
@@ -783,10 +778,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfPlccCreditCardInFooter() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(plccCreditCardImageFooter);
+			assertTrue(isDisplayed(plccCreditCardImageFooter));
 			logger.debug("PLCC Credit Card Image in fooer is displayed++++++++++++++++++++++++==");
 		} else {
-			isDisplayed(plccCreditCardImageFooter);
+			assertTrue(isDisplayed(plccCreditCardImageFooter));
 			logger.debug("PLCC Credit Card Image in fooer is displayed++++++++++++++++++++++++==");
 		}
 
@@ -795,10 +790,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfEmailOnItsWayTxt() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(emailOnItsWayTxt);
+			assertTrue(isDisplayed(emailOnItsWayTxt));
 			logger.debug("Email is on its way text is displayed");
 		} else {
-			isDisplayed(emailOnItsWayTxt);
+			assertTrue(isDisplayed(emailOnItsWayTxt));
 			logger.debug("Email is on its way text is displayed++++++++++++++++++++++++==");
 		}
 
@@ -807,10 +802,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfEditPayment_Link() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(checkout_po.EditPayment_Link);
+			assertTrue(isDisplayed(checkout_po.EditPayment_Link));
 			logger.debug("Edit link of payment section on checkout page is displayed");
 		} else {
-			isDisplayed(checkout_po.EditPayment_Link);
+			assertTrue(isDisplayed(checkout_po.EditPayment_Link));
 			logger.debug("Edit link of payment section on checkout page is displayed");
 		}
 
@@ -819,10 +814,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfReviewOrderButton() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(checkout_po.ReviewOrder_Btn);
+			assertTrue(isDisplayed(checkout_po.ReviewOrder_Btn));
 			logger.debug("Edit link of payment section on checkout page is displayed");
 		} else {
-			isDisplayed(checkout_po.ReviewOrder_Btn);
+			assertTrue(isDisplayed(checkout_po.ReviewOrder_Btn));
 			logger.debug("Edit link of payment section on checkout page is displayed");
 		}
 	}
@@ -830,10 +825,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfPlaceOrderButton() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(checkout_po.btnPlaceOrderPaymentPage);
+			assertTrue(isDisplayed(checkout_po.btnPlaceOrderPaymentPage));
 			logger.debug("PLACE ORDER Button is displayed");
 		} else {
-			isDisplayed(checkout_po.btnPlaceOrderPaymentPage);
+			assertTrue(isDisplayed(checkout_po.btnPlaceOrderPaymentPage));
 			logger.debug("PLACE ORDER Button is displayed");
 		}
 	}
@@ -841,10 +836,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfOrderConfirmationPage() throws Exception {
 		Thread.sleep(10000);
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(orderConfirmationPage);
+			assertTrue(isDisplayed(orderConfirmationPage));
 			logger.debug("Order Confirmation Page is displayed");
 		} else {
-			isDisplayed(orderConfirmationPage);
+			assertTrue(isDisplayed(orderConfirmationPage));
 			logger.debug("Order Confirmtion Page is displayed");
 		}
 	}
@@ -852,10 +847,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfOrderSuccesfullStatus() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(checkout_po.txtOrderSuccesfullStatus);
+			assertTrue(isDisplayed(checkout_po.txtOrderSuccesfullStatus));
 			logger.debug("THANKS FOR SUBMITTING YOUR ORDER! is displayed");
 		} else {
-			isDisplayed(checkout_po.txtOrderSuccesfullStatus);
+			assertTrue(isDisplayed(checkout_po.txtOrderSuccesfullStatus));
 			logger.debug("THANKS FOR SUBMITTING YOUR ORDER! is displayed");
 		}
 	}
@@ -863,10 +858,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfOrderNumber() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(checkout_po.orderSubmitted_OrderNumber);
+			assertTrue(isDisplayed(checkout_po.orderSubmitted_OrderNumber));
 			logger.debug("Order Number is displayed");
 		} else {
-			isDisplayed(checkout_po.orderSubmitted_OrderNumber);
+			assertTrue(isDisplayed(checkout_po.orderSubmitted_OrderNumber));
 			logger.debug("Order Number is displayed");
 		}
 	}
@@ -874,20 +869,20 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfEmailOnItsWayText() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(emailOnItsWayTxt);
+			assertTrue(isDisplayed(emailOnItsWayTxt));
 			logger.debug("a confirmation email is on its way Text is displayed");
 		} else {
-			isDisplayed(emailOnItsWayTxt);
+			assertTrue(isDisplayed(emailOnItsWayTxt));
 			logger.debug("a confirmation email is on its way Text is displayed");
 		}
 	}
 	public void verifyPresenceOfEditLinkPaymentSectionCheckoutPage() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(editLinkPaymentSection);
+			assertTrue(isDisplayed(editLinkPaymentSection));
 			logger.debug("Edit Link Payment Scetion on Checkout Page is displayed");
 		} else {
-			isDisplayed(editLinkPaymentSection);
+			assertTrue(isDisplayed(editLinkPaymentSection));
 			logger.debug("Edit Link Payment Scetion on Checkout Page is displayed");
 		}
 	}
@@ -896,10 +891,10 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfPrintLinkOnOrderConfirmationPage() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(printLinkOnOrderConfirmationPage);
+			assertTrue(isDisplayed(printLinkOnOrderConfirmationPage));
 			logger.debug("Print Link on order confirmation Page is displayed");
 		} else {
-			isDisplayed(printLinkOnOrderConfirmationPage);
+			assertTrue(isDisplayed(printLinkOnOrderConfirmationPage));
 			logger.debug("Print Link on order confirmation Page is displayed");
 		}
 	}
@@ -907,40 +902,40 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfMyAccountLinkOnOrderConfirmationPage() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(myAccountLinkOnOrderConfirmationPage);
+			assertTrue(isDisplayed(myAccountLinkOnOrderConfirmationPage));
 			logger.debug("My Account Link on order confirmation Page is displayed");
 		} else {
-			isDisplayed(myAccountLinkOnOrderConfirmationPage);
+			assertTrue(isDisplayed(myAccountLinkOnOrderConfirmationPage));
 			logger.debug("My Account Link on order confirmation Page is displayed");
 		}
 	}
 	public void verifyPresenceOfPaymentSectionOnCheckoutPage() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(paymentScetionCheckoutPage);
+			assertTrue(isDisplayed(paymentScetionCheckoutPage));
 			logger.debug("Payment Scetion of Checkout Page is displayed");
 		} else {
-			isDisplayed(paymentScetionCheckoutPage);
+			assertTrue(isDisplayed(paymentScetionCheckoutPage));
 			logger.debug("Payment Scetion of Checkout Page is displayed");
 		}
 	}
 	public void verifyPresenceOfSavedCardCheckoutPage() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(savedCardCheckoutPage);
+			assertTrue(isDisplayed(savedCardCheckoutPage));
 			logger.debug("Academy Sports + Outdoors Credit Card ending in - is displayed");
 		} else {
-			isDisplayed(savedCardCheckoutPage);
+			assertTrue(isDisplayed(savedCardCheckoutPage));
 			logger.debug("Academy Sports + Outdoors Credit Card ending in - is displayed");
 		}
 	}
 	public void verifyPresenceOfConfirmButton() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(confirmButton);
+			assertTrue(isDisplayed(confirmButton));
 			logger.debug("Confirm button on checkout page is displayed");
 		} else {
-			isDisplayed(confirmButton);
+			assertTrue(isDisplayed(confirmButton));
 			logger.debug("Confirm button on checkout page is displayed");
 		}
 	}
@@ -948,20 +943,20 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfBuyNowButton() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(buyNowButton);
+			assertTrue(isDisplayed(buyNowButton));
 			logger.debug("Buy Now Button is displayed");
 		} else {
-			isDisplayed(buyNowButton);
+			assertTrue(isDisplayed(buyNowButton));
 			logger.debug("Buy Now button is displayed");
 		}
 	}
 	public void verifyGiftCardPaymentAppliedMessageCheckoutPage() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(giftCardPaymentAppliedMessage);
+			assertTrue(isDisplayed(giftCardPaymentAppliedMessage));
 			logger.debug("Gift Card XXXX - XXXX - XXXX - XXXX added - is displayed");
 		} else {
-			isDisplayed(giftCardPaymentAppliedMessage);
+			assertTrue(isDisplayed(giftCardPaymentAppliedMessage));
 			try {
 				System.out.println("Giftcard Payment Applied Message: "+ giftCardPaymentAppliedMessage);
 			} catch (Exception e) {
