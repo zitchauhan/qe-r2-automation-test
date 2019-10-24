@@ -19,7 +19,7 @@ Background:  Common Pre-requisite steps
 	When user clicks on cart icon
  	Then user navigates to cart page
 	
-@C-PLCC @Regression @All @PLCC-102 @CR-VS @Tempdisabled
+@C-PLCC @Regression @All @PLCC-103 @CR-VS @Tempdisabled 
 Scenario: Verify user is able to get Welcome offer of 10% when Basket <=$150
  	And user increases quantity "ItemQuantity2" of product
  	And user click on add promo code link on cart page

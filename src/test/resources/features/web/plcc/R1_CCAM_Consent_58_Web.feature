@@ -7,7 +7,7 @@ Background:  Common Pre-requisite steps
 	Then user expect Landing page to be present 
 	
 	
-@C-PLCC @Regression @All @PLCC-58 @CR-VS
+@C-PLCC @Regression @All @PLCC-58 @CR-VS 
  Scenario: Verify Submit button is not clickable when Terms and condition check box is unchecked_Pre-Screen Consent
 	And user expect Preescreen Code Text Field is to be present
 	And user enter Preescreen Code "Valid_PrescreenCode_1"
@@ -22,6 +22,7 @@ Background:  Common Pre-requisite steps
 	And user select State "State"
 	And user enter Zip Code on credit card Application Modal "ZipCode"
 	And user enter Email Address on credit card Application Modal "EmailId"
+	And user enter Confirm Email Address "ConfirmEmailId"
 	And user enter Mobile Phone "MobilePhone"
 	And user enter Alternate Phone "AlternatePhone"
 	And user click on CONTINUE button
@@ -44,6 +45,7 @@ Background:  Common Pre-requisite steps
 	And user select State "State"
 	And user enter Zip Code on credit card Application Modal "ZipCode"
 	And user enter Email Address on credit card Application Modal "EmailId"
+	And user enter Confirm Email Address "ConfirmEmailId"
 	And user enter Mobile Phone "MobilePhone"
 	And user enter Alternate Phone "AlternatePhone"
 	And user click on CONTINUE button
@@ -52,7 +54,7 @@ Background:  Common Pre-requisite steps
 	And user select credit application modal agree message 
 	Then user expect submit button clickable
 	
-@C-PLCC @Regression @All @PLCC-58 @CR-VS
+@C-PLCC @Regression @All @PLCC-58 @CR-VS 
  Scenario: Verify Submit button is not clickable when Terms and condition check box is unchecked_Generic Consent
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal 
@@ -75,7 +77,7 @@ Background:  Common Pre-requisite steps
 	When user click on SUBMIT button
 	Then user expect submit button not clickable
 	
-@C-PLCC @Regression @All @PLCC-58 @CR-VS
+@C-PLCC @Regression @All @PLCC-58 @CR-VS @vidya
  Scenario: Verify Submit button is clickable when Terms and condition check box is checked_Generic Consent
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal  

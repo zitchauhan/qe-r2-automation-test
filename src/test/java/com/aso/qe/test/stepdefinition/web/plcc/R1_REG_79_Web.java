@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
@@ -33,6 +34,7 @@ public class R1_REG_79_Web extends CommonActionHelper {
 		try {
 			plccPageObjects.clickSignUpLinkOnLoginPage();
 		} catch (Exception e) {
+			e.printStackTrace();
 			
 		}
 	}
@@ -70,6 +72,7 @@ public class R1_REG_79_Web extends CommonActionHelper {
 	public void user_enter_Email_Address(String arg1) throws Throwable {
 		assertTrue(isDisplayed(plccPageObjects.emailIdTxtField));
 		plccPageObjects.enterEmailAddressTxtFieldAuto(arg1);
+		
 		
 		//waitForElement(plccPageObjects.emailIdTxtField);
 	}

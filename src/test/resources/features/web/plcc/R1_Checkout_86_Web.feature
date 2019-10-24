@@ -51,7 +51,7 @@ Feature: PLCC: Checkout_Payment Using PLCC
 	And user click on Payments link
 	Then delete all credit cards from My Account
 	
-	@C-PLCC @Regression @All @PLCC-86 @CR-VS
+	@C-PLCC @Regression @All @PLCC-86 @CR-VS 
 	Scenario: Verify user is able to change default PLCC credit card to other credit on payment section of checkout page
 	When user handles adding new card "ValidPLCCCard" if already card is saved
 	And user click on REVIEW ORDER button
