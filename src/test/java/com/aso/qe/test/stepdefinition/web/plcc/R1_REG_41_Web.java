@@ -32,7 +32,7 @@ public class R1_REG_41_Web extends CommonActionHelper {
 
 	@Then("^user expect element Add company name, Apt\\.Number, etc\\. \\(Optional\\) to be present$")
 	public void user_expect_element_Add_company_name_Apt_Number_etc_Optional_to_be_present() throws Throwable {
-		plccPageObjects.verifyPresenceOfAddMoreAddressDetails();
+		plccPageObjects.verifyPresenceOfAddMoreAddressTxtField();
 	}
 
 	@Then("^user expect element Phone number to be present$")

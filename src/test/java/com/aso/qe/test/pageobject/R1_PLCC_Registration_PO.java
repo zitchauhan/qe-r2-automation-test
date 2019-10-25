@@ -36,9 +36,9 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	
 	@FindBy(xpath = "//*[@data-auid='Address Book']")
 	public WebElement addressBookOnMyaccountLink;
-	@FindBy(xpath = "//*[@text='Address Book']")
+	@FindBy(xpath = "//*[text()='ADDRESS BOOK']")
 	public WebElement addressBooktext;
-	@FindBy(xpath = "//*[@data-auid='add_address_btn']")
+	@FindBy(xpath = "//*[text()='ADD NEW ADDRESS']")
 	public WebElement addaddresslink;
 	
 	@FindBy(xpath = "//*[contains(text()='HELLO,'])")
@@ -86,6 +86,8 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement registrationConfirmationPage;
 	@FindBy(xpath = "//*[@data-auid='signup_address_add_more_details_link']")
 	public WebElement addMoreAddressDetailsLink;
+	@FindBy(xpath = "//*[@data-auid='signup_address_add_more_details']")
+	public WebElement addMoreAddressDetailsTxtField;
 	@FindBy(xpath = "//*[@data-auid='btnsingin_redirect_btn']")
 	public WebElement letsShopBtn;
 	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_3_California Transparency in Supply Chain Act(SB 657)']")
@@ -124,23 +126,23 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement lnkcheckorderStatus;
 
 	// Field Validation Errors
-	@FindBy(xpath = "//*[text()='Please enter the First Name']")
+	@FindBy(xpath = "//*[text()='Invalid First Name']")
 	public WebElement firstNameErrorMessage;
-	@FindBy(xpath = "//*[text()=' Please enter a Last Name']")
+	@FindBy(xpath = "//*[text()='Invalid Last Name']")
 	public WebElement lastNameErrorMessage;
-	@FindBy(xpath = "//*[text()='Please enter an email address']")
+	@FindBy(xpath = "//*[text()='Invalid email address']")
 	public WebElement emailAddressErrorMessage;
 	@FindBy(xpath = "//*[text()='Please enter the Password']")
 	public WebElement passwordErrorMessage;
 	@FindBy(xpath = "//*[text()='Address is required']")
 	public WebElement addressErrorMessage;
-	@FindBy(xpath = "//*[text()='Zip code is required']")
+	@FindBy(xpath = "//*[text()='Invalid zip code']")
 	public WebElement zipErrorMessage;
 	@FindBy(xpath = "//*[text()='City is required']")
 	public WebElement cityErrorMessage;
 	@FindBy(xpath = "//*[text()='State is required']")
 	public WebElement stateErrorMessage;
-	@FindBy(xpath = "//*[text()='Mobile number is required']")
+	@FindBy(xpath = "//*[text()='Invalid mobile number']")
 	public WebElement mobileErrorMessage;
 	@FindBy(xpath = "//div[10]/div[5]/span")
 	public WebElement invalidMobileNumberErrorMessage;
@@ -152,7 +154,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement invalidMobileNumber;
 	@FindBy(xpath = "//*[text()='Annual Income is required']")
 	public WebElement invalidAnnualIncomeNumber;
-	@FindBy(xpath = "//*[text()='Date of birth is required']")
+	@FindBy(xpath = "//*[text()='Invalid Date of birth']")
 	public WebElement invalidDOBNumber;
 	@FindBy(xpath = "//*[text()='Invalid First Name']")
 	public WebElement firstNameErrorMessageCCAM;
@@ -537,6 +539,19 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 					"Add company name, Apt.Number, etc. (Optional) link is not displayed++++++++++++++++++++++++==");
 		}
 	}
+	
+	public void verifyPresenceOfAddMoreAddressTxtField() throws Exception {
+
+		if ("web".equalsIgnoreCase(testtype)) {
+			assertTrue(isDisplayed(addMoreAddressDetailsTxtField));
+			logger.debug("Add company name, Apt.Number, etc. (Optional) link is displayed");
+		} else {
+			assertTrue(isDisplayed(addMoreAddressDetailsTxtField));
+			logger.debug(
+					"Add company name, Apt.Number, etc. (Optional) link is not displayed++++++++++++++++++++++++==");
+		}
+	}
+
 
 	public void clickOnAddMoreAddressDetails() throws Exception {
 
@@ -815,20 +830,20 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	}
 	public void verifypresenceofFNErrorMSgCCAMErrorMsg() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
+			assertTrue(isDisplayed(firstNameErrorMessage));
 			logger.debug("Invalid First Name error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
-			logger.debug("Invalid SSN error message is displayed++++++++++++++++++++++++==");
+			assertTrue(isDisplayed(firstNameErrorMessage));
+			logger.debug("Invalid First Name error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 	public void verifypresenceofLNErrorMSgCCAMErrorMsg() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
+			assertTrue(isDisplayed(lastNameErrorMessage));
 			logger.debug("Invalid Last Name error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
-			logger.debug("Invalid SSN error message is displayed++++++++++++++++++++++++==");
+			assertTrue(isDisplayed(lastNameErrorMessage));
+			logger.debug("Invalid Last Name error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 	public void verifypresenceofPasswordErrorMessage() throws Exception {

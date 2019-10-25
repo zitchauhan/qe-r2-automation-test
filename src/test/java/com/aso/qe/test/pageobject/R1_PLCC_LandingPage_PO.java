@@ -61,7 +61,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	
 	
 	// SignIn Page
-	@FindBy(xpath = "//*[@data-auid='emailid_input']")
+	@FindBy(xpath = "//*[@data-auid='email_input']")
 	public WebElement emailTxtField;
 	@FindBy(xpath = "//*[@data-auid='password_input']")
 	public WebElement passwordTxtField;
@@ -114,7 +114,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(GrandParkwayLinkInHeader));
 			logger.debug("GrandParkway Link is displayed in mobile");
-			Common_Web_PLCC.waitUntilElePresent(driver, GrandParkwayLinkInHeader, ELEMWAITTIME_MEDIUM);
+		//	Common_Web_PLCC.waitUntilElePresent(driver, GrandParkwayLinkInHeader, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(isDisplayed(GrandParkwayLinkInHeader));
 			logger.debug("WeeklyAd Link is not displayed++++++++++++++++++++++++==");
@@ -263,7 +263,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if ("web".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(shopTabInHeader));
 			logger.debug("SHOP Tab in header is displayed");
-			Common_Web_PLCC.waitUntilElePresent(driver, shopTabInHeader, ELEMWAITTIME_MEDIUM);
+	//		Common_Web_PLCC.waitUntilElePresent(driver, shopTabInHeader, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(isDisplayed(shopTabInHeader));
 			logger.debug("SHOP Tab in header is not displayed++++++++++++++++++++++++==");
@@ -278,7 +278,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	//		Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(clickOnButton(searchBox));
-			logger.debug("Search Field is not displayed++++++++++++++++++++++++==");
+			logger.debug("Search Field is displayed++++++++++++++++++++++++==");
 		}
 	}
 
@@ -290,7 +290,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 //			Common_Web_PLCC.waitUntilElePresent(driver, searchBox, ELEMWAITTIME_MEDIUM);
 		} else {
 			assertTrue(isDisplayed(searchIcon));
-			logger.debug("Search Icon is not displayed++++++++++++++++++++++++==");
+			logger.debug("Search Icon is displayed++++++++++++++++++++++++==");
 		}
 	}
 
@@ -301,7 +301,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 			logger.debug("Deals Field is displayed");
 		} else {
 			assertTrue(clickOnButton(dealsTabInHeader));
-			logger.debug("Deals Field is not displayed++++++++++++++++++++++++==");
+			logger.debug("Deals Field is displayed++++++++++++++++++++++++==");
 		}
 	}
 
@@ -312,7 +312,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 			logger.debug("WeeklyAd Link is displayed");
 		} else {
 			assertTrue(clickOnButton(weeklyAdsLinkInHeader));
-			logger.debug("WeeklyAd Link is not displayed++++++++++++++++++++++++==");
+			logger.debug("WeeklyAd Link is displayed++++++++++++++++++++++++==");
 		}
 	}
 
@@ -431,6 +431,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 			logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
 		} else {
 			logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+			Assert.fail();
 		}
 
 	}
@@ -441,6 +442,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 			logger.debug("User is successfully navigated to Careers page with URL :: " + currentURL);
 		} else {
 			logger.debug("User is not able to navigate to Careers Page instead navigated to URL :: " + currentURL);
+			Assert.fail();
 		}
 
 	}
@@ -452,6 +454,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		} else {
 			logger.debug(
 					"User is not able to navigate to Press Releases Page instead navigated to URL :: " + currentURL);
+			Assert.fail();
 		}
 
 	}
@@ -463,6 +466,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		} else {
 			logger.debug(
 					"User is not able to navigate to Press Investers Page instead navigated to URL :: " + currentURL);
+			Assert.fail();
 		}
 
 	}
@@ -600,7 +604,8 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/app/answers/detail/a_id/206/kw/condition")) {
 			logger.debug("User is successfully navigated to ASO Home page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to ASO Home Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to ASO Home Page instead navigated to URL :: " + currentURL);
+
 		}
 
 	}
@@ -611,7 +616,8 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("myaccount/orders")) {
 			logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+
 		}
 
 	}
@@ -622,7 +628,8 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/app/answers/detail/a_id/203")) {
 			logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+
 		}
 
 	}
@@ -633,7 +640,8 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/shop/en/store/product-recall-info")) {
 			logger.debug("User is successfully navigated to Our History page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to Our History Page instead navigated to URL :: " + currentURL);
+
 		}
 
 	}
@@ -644,7 +652,8 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/shop/browse/rebates")) {
 			logger.debug("User is successfully navigated to Rebates page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Our Rebates Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to Our Rebates Page instead navigated to URL :: " + currentURL);
+
 		}
 
 	}
@@ -655,7 +664,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("custhelp.com")) {
 			logger.debug("User is successfully navigated to Customer care page with URL :: " + currentURL);
 		} else {
-			logger.debug(
+			Assert.fail(
 					"User is not able to navigate to Customer care Page instead navigated to URL :: " + currentURL);
 		}
 
@@ -667,8 +676,9 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/shop/browse/Gift-Cards")) {
 			logger.debug("User is successfully navigated to Shop gift Card page with URL :: " + currentURL);
 		} else {
-			logger.debug(
+			Assert.fail(
 					"User is not able to navigate to Shop gift Card Page instead navigated to URL :: " + currentURL);
+
 		}
 
 	}
@@ -679,7 +689,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/webapp/wcs/stores/servlet/GCBView")) {
 			logger.debug("User is successfully navigated to check Gift Card Balance page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to check Gift Card Balance Page instead navigated to URL :: "
+			Assert.fail("User is not able to navigate to check Gift Card Balance Page instead navigated to URL :: "
 					+ currentURL);
 		}
 
@@ -691,8 +701,9 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/shop/store/academy-credit-card")) {
 			logger.debug("User is successfully navigated to Academy credit card page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Academy credit card Page instead navigated to URL :: "
+			Assert.fail("User is not able to navigate to Academy credit card Page instead navigated to URL :: "
 					+ currentURL);
+
 		}
 
 	}
@@ -703,8 +714,9 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/shop/en/store/instore-services")) {
 			logger.debug("User is successfully navigated to Store Services page with URL :: " + currentURL);
 		} else {
-			logger.debug(
+			Assert.fail(
 					"User is not able to navigate to Store Services Page instead navigated to URL :: " + currentURL);
+
 		}
 
 	}
@@ -715,24 +727,22 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/shop/storelocator")) {
 			logger.debug("User is successfully navigated to find a store page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to find a store Page instead navigated to URL :: " + currentURL);
-		}
+			Assert.fail("User is not able to navigate to find a store Page instead navigated to URL :: " + currentURL);
+	}
 
 	}
 
 	// Footer link navigation:
 	public void verifyPresenceOflnkSIGNUPFORMOREDEALSPage() throws Exception {
 		String currentsignUpMoreDealsText = emailSignUpModal.getText();
-		System.out.println(currentsignUpMoreDealsText);
+//		System.out.println(currentsignUpMoreDealsText);
 		if (currentsignUpMoreDealsText.contains("GET MORE DEALS")) {
 			logger.debug("User is successfully verified GET MORE DEALS Text in email sign up modal :: "
 					+ currentsignUpMoreDealsText);
 		} else {
-			logger.debug("User is not able to verified GET MORE DEALS Text in email sign up modal  :: "
-					+ currentsignUpMoreDealsText);
+			Assert.fail("User is not able to verified GET MORE DEALS Text in email sign up modal  :: "+currentsignUpMoreDealsText);
 		}
 
-		closeAlertPopupBox();
 
 	}
 
@@ -742,9 +752,9 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/app/chat/chat_launch")) {
 			logger.debug("User is successfully navigated to chat now page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to chat now Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to chat now Page instead navigated to URL :: " + currentURL);
 		}
-		driver.close();
+	
 
 	}
 
@@ -754,7 +764,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("www.facebook.com/Academy/")) {
 			logger.debug("User is successfully navigated to Facebook page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Facebook Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to Facebook Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
@@ -765,7 +775,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("www.pinterest.com")) {
 			logger.debug("User is successfully navigated to Pinterest page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Pinterest Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to Pinterest Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
@@ -776,7 +786,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("twitter.com/academy")) {
 			logger.debug("User is successfully navigated to Twitter page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Twitter Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to Twitter Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
@@ -786,7 +796,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 			if (currentURL.contains("www.instagram.com/academy/")) {
 				logger.debug("User is successfully navigated to Twitter page with URL :: " + currentURL);
 			} else {
-				logger.debug("User is not able to navigate to Twitter Page instead navigated to URL :: " + currentURL);
+				Assert.fail("User is not able to navigate to Twitter Page instead navigated to URL :: " + currentURL);
 			}
 
 		}
@@ -796,7 +806,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/app/answers/detail/a_id/649/kw/privacy")) {
 			logger.debug("User is successfully navigated to Privacy  page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Privacy Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to Privacy Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
@@ -807,7 +817,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/shop/en/store/california-transparency-in-supply-chains-act")) {
 			logger.debug("User is successfully navigated to find a store page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to find a store Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to find a store Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
@@ -818,7 +828,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/shop/browse/sitemap")) {
 			logger.debug("User is successfully navigated to ShoppingIndex page with URL :: " + currentURL);
 		} else {
-			logger.debug(
+			Assert.fail(
 					"User is not able to navigate to ShoppingIndex Page instead navigated to URL :: " + currentURL);
 		}
 
@@ -830,7 +840,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/categories/index.jsp")) {
 			logger.debug("User is successfully navigated to ProductIndex page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to ProductIndex Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to ProductIndex Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
@@ -841,7 +851,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/categories/shopping-index.jsp")) {
 			logger.debug("User is successfully navigated to ProductIndex page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to ProductIndex Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to ProductIndex Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
@@ -851,7 +861,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/categories/outdoors.jsp")) {
 			logger.debug("User is successfully navigated to Outdoors page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Outdoors Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to Outdoors Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
@@ -861,7 +871,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/categories/shoes.jsp")) {
 			logger.debug("User is successfully navigated to Outdoors page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Outdoors Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to Outdoors Page instead navigated to URL :: " + currentURL);
 		}
 
 	}
@@ -871,7 +881,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 		if (currentURL.contains("/categories/sports-equipment.jsp")) {
 			logger.debug("User is successfully navigated to Outdoors page with URL :: " + currentURL);
 		} else {
-			logger.debug("User is not able to navigate to Outdoors Page instead navigated to URL :: " + currentURL);
+			Assert.fail("User is not able to navigate to Outdoors Page instead navigated to URL :: " + currentURL);
 		}
 
 	}

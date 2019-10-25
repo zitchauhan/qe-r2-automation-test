@@ -50,12 +50,9 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 	@When("^user enter Last four SSN \"(.*?)\"$")
 	public void user_enter_Last_SSN(String arg2) throws Throwable {
 		Thread.sleep(5000);
-
 		clickOnButton(plccCCApplicationModalObjects.ssnCCModal);
-	//	plccCCApplicationModalObjects.ssnCCModal.click();
 		plccCCApplicationModalObjects.enterSSNCCModal(arg2);
 		assertTrue(isDisplayed(plccCCApplicationModalObjects.ssnCCModal));
-	//	waitForElement(plccCCApplicationModalObjects.ssnCCModal);
 	}
 
 	@When("^user enetr Date of Birth \"(.*?)\"$")
