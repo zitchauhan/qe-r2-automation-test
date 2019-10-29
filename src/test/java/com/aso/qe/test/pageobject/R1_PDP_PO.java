@@ -30,6 +30,10 @@ public class R1_PDP_PO extends CommonActionHelper
 	//R1_PLCC_Generic_PO generic_po = PageFactory.initElements(getDriver(), R1_PLCC_Generic_PO.class);
 	private String sku;   //Sid
 	
+
+	@FindBy(xpath = "//span[contains(text(),'Limited Stock')]")//RS
+	public WebElement limitedStock; 
+	
 	@FindBy(xpath = "//*[@data-auid='btnShipIt']|//*[text()='Ship It']|//*[starts-with(@data-auid,'btnShipIt')]")
 	public WebElement shipItButton; 
 	@FindBy(xpath="//*[@data-auid='btnPickUpATC']")public WebElement pickupBtn; //CR MJR-17/7/19

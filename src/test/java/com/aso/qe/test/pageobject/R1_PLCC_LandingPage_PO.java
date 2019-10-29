@@ -107,7 +107,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_Check Order Status']")
 	public WebElement lnkcheckorder;
 
-	@FindBy(xpath = "//*[@data-auid='email-signup-main-modal-close']")
+	@FindBy(xpath = "//*[text()='GET MORE DEALS']")
 	public WebElement emailSignUpModal;
 
 	@FindBy(xpath = "//*[@text='Grand Parkway']")
@@ -738,8 +738,9 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 
 	// Footer link navigation:
 	public void verifyPresenceOflnkSIGNUPFORMOREDEALSPage() throws Exception {
+		
 		String currentsignUpMoreDealsText = emailSignUpModal.getText();
-//		System.out.println(currentsignUpMoreDealsText);
+		System.out.println(currentsignUpMoreDealsText);
 		if (currentsignUpMoreDealsText.contains("GET MORE DEALS")) {
 			logger.debug("User is successfully verified GET MORE DEALS Text in email sign up modal :: "
 					+ currentsignUpMoreDealsText);
