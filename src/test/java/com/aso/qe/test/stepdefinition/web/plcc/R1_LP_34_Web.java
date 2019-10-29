@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -76,6 +77,8 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	@When("^user click on Signin-button$")
 	public void user_click_on_Signin_button() throws Throwable {
 		plccLandingPageObjects.clickOnSignInBtnSignInPage();
+		plccPageObjects.clickOnMyAccountLink();
+		Assert.assertTrue(isDisplayed(plccPageObjects.signOutLink));
 		//CommonActionHelper.waitUntilElePresent(driver, Element, timeOutInSeconds);
 		//Thread.sleep(5000);
 		}
@@ -564,18 +567,18 @@ public class R1_LP_34_Web extends CommonActionHelper {
 	
 	@Then("^user click on FindInStoreFooter and navigates to FindInStoreFooter Page$")
 	public void user_click_on_FindInStoreFooter_and_navigates_to_FindInStoreFooter_Page() throws Throwable {
-		globalElementHeader.lnkfindastore.click();
+		Assert.assertTrue(clickOnButton(globalElementHeader.lnkfindastore));
 		plccLandingPageObjects.verifyPresenceOflnkfindastorePage();		
 	}
 
 	@Then("^user click on SignUpForMoreDeals and navigates to SignUpForMoreDeals Page$")
 	public void user_click_on_SignUpForMoreDeals_and_navigates_to_SignUpForMoreDeals_Page() throws Throwable {
-		globalElementHeader.lnkSIGNUPFORMOREDEALS.click();
+		Assert.assertTrue(clickOnButton(globalElementHeader.lnkSIGNUPFORMOREDEALS));
 	}
 
 	@Then("^user click on ChatNoW and navigates to ChatNoW Page$")
 	public void user_click_on_ChatNoW_and_navigates_to_ChatNoW_Page() throws Throwable {
-		globalElementHeader.lnkchatnow.click();
+		Assert.assertTrue(clickOnButton(globalElementHeader.lnkchatnow));
 	}
 	
 	@Then("^user verify the presence of ChatNow page$")

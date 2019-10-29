@@ -122,7 +122,7 @@ Scenario: Verify the navigation of Footer Links -Services Section
 	#When user expect element CheckGiftCradBalance to be present 
 	#Then user click on CheckGiftCradBalance and navigates to CheckGiftCradBalance Page
 	
-@C-PLCC @Regression @All @PLCC-34 @CR-Manju
+@C-PLCC @Regression @All @PLCC-34 @CR-Manju @Rishikesh
 Scenario: Verify the navigation of Footer Links - General
     #When user expect element FindInStoreFooter to be present 
     #Then user click on FindInStoreFooter and navigates to FindInStoreFooter Page

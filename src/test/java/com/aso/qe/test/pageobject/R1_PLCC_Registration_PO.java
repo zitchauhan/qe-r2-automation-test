@@ -177,14 +177,12 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	{
 		try {
 			{
-				Thread.sleep(5000); //Added by VSN on 07-10-19
+				Thread.sleep(2000); //Added by VSN on 07-10-19
 				assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
 				isClickable(myAccountLinkOnAsoHomePage);
 				if (isDisplayed(myAccountLinkOnAsoHomePage)) 
 				{
-					Thread.sleep(5000);
 					assertTrue(clickOnButton(myAccountLinkOnAsoHomePage));
-					Thread.sleep(1000);
 				} else {
 					driver.navigate().refresh();
 					Thread.sleep(1000);
