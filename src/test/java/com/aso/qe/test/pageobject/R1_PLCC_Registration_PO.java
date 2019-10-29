@@ -126,17 +126,17 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement lnkcheckorderStatus;
 
 	// Field Validation Errors
-	@FindBy(xpath = "//*[text()='Invalid First Name']")
+	@FindBy(xpath = "//*[text()='Please enter a First Name']")
 	public WebElement firstNameErrorMessage;
-	@FindBy(xpath = "//*[text()='Invalid Last Name']")
+	@FindBy(xpath = "//*[text()=' Please enter a Last Name']")
 	public WebElement lastNameErrorMessage;
-	@FindBy(xpath = "//*[text()='Invalid email address']")
+	@FindBy(xpath = "//*[text()='Please enter an email address']")
 	public WebElement emailAddressErrorMessage;
-	@FindBy(xpath = "//*[text()='Please enter the Password']")
+	@FindBy(xpath = "//*[text()='Please enter a Password']")
 	public WebElement passwordErrorMessage;
 	@FindBy(xpath = "//*[text()='Address is required']")
 	public WebElement addressErrorMessage;
-	@FindBy(xpath = "//*[text()='Invalid zip code']")
+	@FindBy(xpath = "//*[text()='Zip code is required']")
 	public WebElement zipErrorMessage;
 	@FindBy(xpath = "//*[text()='City is required']")
 	public WebElement cityErrorMessage;
@@ -146,7 +146,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement mobileErrorMessage;
 	@FindBy(xpath = "//div[10]/div[5]/span")
 	public WebElement invalidMobileNumberErrorMessage;
-	@FindBy(xpath = "//*[text()='Invalid Zip code']")
+	@FindBy(xpath = "//*[text()='Phone number is required']")
 	public WebElement invalidZipErrorMessage;
 	@FindBy(xpath = "//*[text()='Invalid SSN']")
 	public WebElement invalidSSNErrorMessage;
@@ -271,6 +271,18 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 			logger.debug("Email Text Field is displayed");
 		} else {
 			assertTrue(isDisplayed(emailIdTxtField));
+			logger.debug("Email Text Field is not displayed++++++++++++++++++++++++==");
+		}
+
+	}
+	
+	public void verifyPresenceOfEmailTxtFieldSignUp() throws Exception {
+
+		if ("web".equalsIgnoreCase(testtype)) {
+			assertTrue(isDisplayed(plccLandingPageObjects.emailTxtFieldSignUp));
+			logger.debug("Email Text Field is displayed");
+		} else {
+			assertTrue(isDisplayed(plccLandingPageObjects.emailTxtFieldSignUp));
 			logger.debug("Email Text Field is not displayed++++++++++++++++++++++++==");
 		}
 

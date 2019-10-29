@@ -8,15 +8,15 @@ Background:  Common Pre-requisite steps
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page
 	When user click on My Account link 
-    And user click on Payments link 
-    Then delete all credit cards from My Account 
-    And user clears everything in cart            
+    #And user click on Payments link 
+    #Then delete all credit cards from My Account 
+    #SAnd user clears everything in cart            
 	And user click on AcademyCreditCard link in the footer section of ASO-Home page 
 	Then user expect Landing page to be present 
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal
 	 	
-@C-PLCC @Regression @All @PLCC-93 @CR-VS @Tempdisabled
+@C-PLCC @Regression @All @PLCC-93 @CR-VS @Tempdisabled 
 Scenario: Verify is able to navigate to Welcome, PHIL Collins FPO model
 	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNamePlcc"

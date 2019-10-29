@@ -61,8 +61,12 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	
 	
 	// SignIn Page
-	@FindBy(xpath = "//*[@data-auid='email_input']")
+	@FindBy(xpath = "//*[@data-auid='emailid_input']")
 	public WebElement emailTxtField;
+	
+	@FindBy(xpath = "//*[@data-auid='email_input']")
+	public WebElement emailTxtFieldSignUp;
+	
 	@FindBy(xpath = "//*[@data-auid='password_input']")
 	public WebElement passwordTxtField;
 	@FindBy(xpath = "//*[@data-auid='btnemail-signin-button']")
