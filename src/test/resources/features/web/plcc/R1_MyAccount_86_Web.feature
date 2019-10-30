@@ -13,7 +13,8 @@ Scenario: Verify PLCC card information saved under customer profile
 	And user enter password in sign-in page "passwordPlcc" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page  
-	Then user click on MyAccount and navigate to payment 
+	When user click on My Account link 
+    And user click on Payments link 
 	Then Verify below Sub/Main Module of MyAccount 
 		|#Verify following elements in Payments > Add new credit card section	|
 		|PaymentPage_PaymentsHeader_label				|

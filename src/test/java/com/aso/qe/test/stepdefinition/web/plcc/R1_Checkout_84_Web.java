@@ -39,6 +39,7 @@ public class R1_Checkout_84_Web extends CommonActionHelper{
 		}*/
 
 		try {
+			Thread.sleep(2000);
 			plccMobile_po.verifyPresenceOfPaymentLink();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

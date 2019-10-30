@@ -178,8 +178,8 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 		try {
 			{
 				Thread.sleep(2000); //Added by VSN on 07-10-19
-				assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
-				isClickable(myAccountLinkOnAsoHomePage);
+		//		assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
+		//		isClickable(myAccountLinkOnAsoHomePage);
 				if (isDisplayed(myAccountLinkOnAsoHomePage)) 
 				{
 					assertTrue(clickOnButton(myAccountLinkOnAsoHomePage));
@@ -323,11 +323,11 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfCheckGiftCardBalance() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(lnkCheckGiftCardBalance);
+			assertTrue(isDisplayed(lnkCheckGiftCardBalance));
 			assertTrue(isClickable(lnkCheckGiftCardBalance));
 			logger.debug("Check Gift Card Balance link is not displayed");
 		} else {
-			isDisplayed(lnkCheckGiftCardBalance);
+			assertTrue(isDisplayed(lnkCheckGiftCardBalance));
 			assertTrue(isClickable(lnkCheckGiftCardBalance));
 			logger.debug("Check Gift Card Balance link is displayed");
 		}
@@ -336,11 +336,11 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfContactNumber() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(contactFooterLink);
+			assertTrue(isDisplayed(contactFooterLink));
 			assertTrue(isClickable(contactFooterLink));
 			logger.debug("Footer Contact Number is not displayed");
 		} else {
-			isDisplayed(contactFooterLink);
+			assertTrue(isDisplayed(contactFooterLink));
 			assertTrue(isClickable(contactFooterLink));
 			logger.debug("Footer Contact Number is displayed");
 		}
@@ -349,10 +349,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfServices() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(servicesFooterText);
+			assertTrue(isDisplayed(servicesFooterText));
 			logger.debug("Services footer Text is not displayed");
 		} else {
-			isDisplayed(servicesFooterText);
+			assertTrue(isDisplayed(servicesFooterText));
 			logger.debug("Services footer text is displayed");
 		}
 	}
@@ -360,11 +360,11 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfcaliforniaTranparencyActLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(californiaTranparencyActLink);
+			assertTrue(isDisplayed(californiaTranparencyActLink));
 			assertTrue(isClickable(californiaTranparencyActLink));
 			logger.debug("FOOTER_LINK_3_California Transparency in Supply Chain Act(SB 657)");
 		} else {
-			isDisplayed(californiaTranparencyActLink);
+			assertTrue(isDisplayed(californiaTranparencyActLink));
 			assertTrue(isClickable(californiaTranparencyActLink));
 			logger.debug("FOOTER_LINK_3_California Transparency in Supply Chain Act(SB 657)");
 		}
@@ -373,10 +373,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfSiteMapLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(siteMapLink);
+			assertTrue(isDisplayed(siteMapLink));
 			logger.debug("SiteMap Link is not displayed");
 		} else {
-			isDisplayed(siteMapLink);
+			assertTrue(isDisplayed(siteMapLink));
 			logger.debug("SiteMap Link is displayed");
 		}
 	}
@@ -384,10 +384,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfAsoRightsLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(asoRightsLink);
+			assertTrue(isDisplayed(asoRightsLink));
 			logger.debug("© 2018 Academy Sports + Outdoors. All Rights Reserved is not displayed");
 		} else {
-			isDisplayed(asoRightsLink);
+			assertTrue(isDisplayed(asoRightsLink));
 			logger.debug("© 2018 Academy Sports + Outdoors. All Rights Reserved is displayed");
 		}
 	}
@@ -395,10 +395,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfProductIndexLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(productIndexLink);
+			assertTrue(isDisplayed(productIndexLink));
 			logger.debug("Product Index is not displayed");
 		} else {
-			isDisplayed(productIndexLink);
+			assertTrue(isDisplayed(productIndexLink));
 			logger.debug("Product Index is displayed");
 		}
 	}
@@ -406,10 +406,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfAccessoriesAndmoreLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(accessories$moreLink);
+			assertTrue(isDisplayed(accessories$moreLink));
 			logger.debug("Accessories And More Link is not displayed");
 		} else {
-			isDisplayed(accessories$moreLink);
+			assertTrue(isDisplayed(accessories$moreLink));
 			logger.debug("Accessories And More Link is displayed");
 		}
 	}
