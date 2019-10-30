@@ -255,20 +255,20 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 			if(!isDisplayed(R1_SearchProduct_PO.searchTextBoxMobile)) 
 			{
 				assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
-				Thread.sleep(1000);
+				//Thread.sleep(1000);
 			}
 			setInputText(R1_SearchProduct_PO.searchTextBoxMobile, webPropHelper.getTestDataProperty(searchText)); 
 			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtnMobile));
 			logger.debug("User entered search key :: " + searchText);
-			Thread.sleep(3000);
+			
 		}else {
 			waitForPageLoad(driver);
-			Thread.sleep(2000);
+			//Thread.sleep(2000);
 			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtn));
 			R1_SearchProduct_PO.searchTextBox.sendKeys(webPropHelper.getTestDataProperty(searchText));
 			Thread.sleep(2000);
 			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));
-			Thread.sleep(2000);
+			//Thread.sleep(2000);
 //			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));//Due to existing defect clicking is required
 			logger.debug("User entered search key :: " + searchText);
 		}
