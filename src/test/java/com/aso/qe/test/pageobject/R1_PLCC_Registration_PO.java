@@ -178,8 +178,8 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 		try {
 			{
 				Thread.sleep(2000); //Added by VSN on 07-10-19
-				assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
-				isClickable(myAccountLinkOnAsoHomePage);
+		//		assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
+		//		isClickable(myAccountLinkOnAsoHomePage);
 				if (isDisplayed(myAccountLinkOnAsoHomePage)) 
 				{
 					assertTrue(clickOnButton(myAccountLinkOnAsoHomePage));

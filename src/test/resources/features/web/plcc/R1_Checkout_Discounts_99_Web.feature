@@ -12,7 +12,7 @@ Background: Common Pre-requisite steps
 	And user click on Payments link 
 	Then delete all credit cards from My Account 
 	
-@C-PLCC @All @PLCC-99 @CR-Manju @AutomationSmokeORIG
+@C-PLCC @All @PLCC-99 @CR-Manju @AutomationSmokeORIG @Rishikesh
 Scenario: Verify user is able to get Free shipping offer with Item value >15$ 
 	When user enters "SKUIdOfProductGr15" in the search box plcc 
 	And user click on search icon 
