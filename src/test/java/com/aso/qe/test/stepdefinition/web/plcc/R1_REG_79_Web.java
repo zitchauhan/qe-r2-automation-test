@@ -11,6 +11,7 @@ import org.testng.Assert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R1_PLCC_LandingPage_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Registration_PO;
 
 import cucumber.api.java.en.And;
@@ -23,6 +24,7 @@ public class R1_REG_79_Web extends CommonActionHelper {
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
 	R1_PLCC_Registration_PO plccPageObjects = PageFactory.initElements(driver, R1_PLCC_Registration_PO.class);
+	R1_PLCC_LandingPage_PO plccLandingPageObjects = PageFactory.initElements(driver, R1_PLCC_LandingPage_PO.class);
 
 	@When("^user click on My Account link$")
 	public void user_click_on_My_Account_link() throws Throwable {
@@ -67,10 +69,23 @@ public class R1_REG_79_Web extends CommonActionHelper {
 	public void user_expect_element_Email_Address_to_be_present() throws Throwable {
 		plccPageObjects.verifyPresenceOfEmailTxtField();
 	}
-
+	
+	@Then("^user expect element Email Address to be present signup$")
+	public void user_expect_element_Email_Address_to_be_present_signup() throws Throwable {
+		plccPageObjects.verifyPresenceOfEmailTxtFieldSignUp();
+	}
+	
 	@Then("^user enter Email Address \"(.*?)\"$")
 	public void user_enter_Email_Address(String arg1) throws Throwable {
 		assertTrue(isDisplayed(plccPageObjects.emailIdTxtField));
+		plccPageObjects.enterEmailAddressTxtFieldAuto(arg1);
+		
+		
+		//waitForElement(plccPageObjects.emailIdTxtField);
+	}
+	@Then("^user enter signup Email Address \"(.*?)\"$")
+	public void user_enter_signup_Email_Address(String arg1) throws Throwable {
+		assertTrue(isDisplayed(plccLandingPageObjects.emailTxtFieldSignUp));
 		plccPageObjects.enterEmailAddressTxtFieldAuto(arg1);
 		
 		

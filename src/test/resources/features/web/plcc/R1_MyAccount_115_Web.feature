@@ -2,10 +2,16 @@ Feature: PLCC: MyAccount Card Information in Customer profile
 
 Background:  Common Pre-requisite steps
 	Given user launches the browser and navigates to "ASO_HOME" page plcc
-	When user click on My Account link 
-	And user enter Email address in sign-in page "Email_Generic" 
-	And user enter password in sign-in page "passwordPlcc" 
-	And user click on Signin-button 
+#	When user click on My Account link 
+#	And user enter Email address in sign-in page "Email_Generic" 
+#	And user enter password in sign-in page "passwordPlcc" 
+#	And user click on Signin-button 
+	
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "Email_Generic" 
+	And user enter the valid password "passwordPlcc" 
+	And user click on signin button
+	
 	Then user navigates to ASO-Home page
 	When user click on My Account link 
     And user click on Payments link 

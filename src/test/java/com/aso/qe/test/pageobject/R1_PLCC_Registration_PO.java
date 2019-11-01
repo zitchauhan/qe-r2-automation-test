@@ -126,17 +126,17 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement lnkcheckorderStatus;
 
 	// Field Validation Errors
-	@FindBy(xpath = "//*[text()='Invalid First Name']")
+	@FindBy(xpath = "//*[text()='Please enter a First Name']")
 	public WebElement firstNameErrorMessage;
-	@FindBy(xpath = "//*[text()='Invalid Last Name']")
+	@FindBy(xpath = "//*[text()=' Please enter a Last Name']")
 	public WebElement lastNameErrorMessage;
-	@FindBy(xpath = "//*[text()='Invalid email address']")
+	@FindBy(xpath = "//*[text()='Please enter an email address']")
 	public WebElement emailAddressErrorMessage;
-	@FindBy(xpath = "//*[text()='Please enter the Password']")
+	@FindBy(xpath = "//*[text()='Please enter a Password']")
 	public WebElement passwordErrorMessage;
 	@FindBy(xpath = "//*[text()='Address is required']")
 	public WebElement addressErrorMessage;
-	@FindBy(xpath = "//*[text()='Invalid zip code']")
+	@FindBy(xpath = "//*[text()='Zip code is required']")
 	public WebElement zipErrorMessage;
 	@FindBy(xpath = "//*[text()='City is required']")
 	public WebElement cityErrorMessage;
@@ -146,7 +146,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement mobileErrorMessage;
 	@FindBy(xpath = "//div[10]/div[5]/span")
 	public WebElement invalidMobileNumberErrorMessage;
-	@FindBy(xpath = "//*[text()='Invalid Zip code']")
+	@FindBy(xpath = "//*[text()='Phone number is required']")
 	public WebElement invalidZipErrorMessage;
 	@FindBy(xpath = "//*[text()='Invalid SSN']")
 	public WebElement invalidSSNErrorMessage;
@@ -177,14 +177,12 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	{
 		try {
 			{
-				Thread.sleep(5000); //Added by VSN on 07-10-19
-				assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
-				isClickable(myAccountLinkOnAsoHomePage);
+				Thread.sleep(2000); //Added by VSN on 07-10-19
+		//		assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
+		//		isClickable(myAccountLinkOnAsoHomePage);
 				if (isDisplayed(myAccountLinkOnAsoHomePage)) 
 				{
-					Thread.sleep(5000);
 					assertTrue(clickOnButton(myAccountLinkOnAsoHomePage));
-					Thread.sleep(1000);
 				} else {
 					driver.navigate().refresh();
 					Thread.sleep(1000);
@@ -275,6 +273,18 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 		}
 
 	}
+	
+	public void verifyPresenceOfEmailTxtFieldSignUp() throws Exception {
+
+		if ("web".equalsIgnoreCase(testtype)) {
+			assertTrue(isDisplayed(plccLandingPageObjects.emailTxtFieldSignUp));
+			logger.debug("Email Text Field is displayed");
+		} else {
+			assertTrue(isDisplayed(plccLandingPageObjects.emailTxtFieldSignUp));
+			logger.debug("Email Text Field is not displayed++++++++++++++++++++++++==");
+		}
+
+	}
 
 	public void verifyPresenceOfCrestePwdTxtField() throws Exception {
 
@@ -313,11 +323,11 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfCheckGiftCardBalance() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(lnkCheckGiftCardBalance);
+			assertTrue(isDisplayed(lnkCheckGiftCardBalance));
 			assertTrue(isClickable(lnkCheckGiftCardBalance));
 			logger.debug("Check Gift Card Balance link is not displayed");
 		} else {
-			isDisplayed(lnkCheckGiftCardBalance);
+			assertTrue(isDisplayed(lnkCheckGiftCardBalance));
 			assertTrue(isClickable(lnkCheckGiftCardBalance));
 			logger.debug("Check Gift Card Balance link is displayed");
 		}
@@ -326,11 +336,11 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfContactNumber() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(contactFooterLink);
+			assertTrue(isDisplayed(contactFooterLink));
 			assertTrue(isClickable(contactFooterLink));
 			logger.debug("Footer Contact Number is not displayed");
 		} else {
-			isDisplayed(contactFooterLink);
+			assertTrue(isDisplayed(contactFooterLink));
 			assertTrue(isClickable(contactFooterLink));
 			logger.debug("Footer Contact Number is displayed");
 		}
@@ -339,10 +349,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfServices() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(servicesFooterText);
+			assertTrue(isDisplayed(servicesFooterText));
 			logger.debug("Services footer Text is not displayed");
 		} else {
-			isDisplayed(servicesFooterText);
+			assertTrue(isDisplayed(servicesFooterText));
 			logger.debug("Services footer text is displayed");
 		}
 	}
@@ -350,11 +360,11 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfcaliforniaTranparencyActLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(californiaTranparencyActLink);
+			assertTrue(isDisplayed(californiaTranparencyActLink));
 			assertTrue(isClickable(californiaTranparencyActLink));
 			logger.debug("FOOTER_LINK_3_California Transparency in Supply Chain Act(SB 657)");
 		} else {
-			isDisplayed(californiaTranparencyActLink);
+			assertTrue(isDisplayed(californiaTranparencyActLink));
 			assertTrue(isClickable(californiaTranparencyActLink));
 			logger.debug("FOOTER_LINK_3_California Transparency in Supply Chain Act(SB 657)");
 		}
@@ -363,10 +373,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfSiteMapLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(siteMapLink);
+			assertTrue(isDisplayed(siteMapLink));
 			logger.debug("SiteMap Link is not displayed");
 		} else {
-			isDisplayed(siteMapLink);
+			assertTrue(isDisplayed(siteMapLink));
 			logger.debug("SiteMap Link is displayed");
 		}
 	}
@@ -374,10 +384,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfAsoRightsLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(asoRightsLink);
+			assertTrue(isDisplayed(asoRightsLink));
 			logger.debug("© 2018 Academy Sports + Outdoors. All Rights Reserved is not displayed");
 		} else {
-			isDisplayed(asoRightsLink);
+			assertTrue(isDisplayed(asoRightsLink));
 			logger.debug("© 2018 Academy Sports + Outdoors. All Rights Reserved is displayed");
 		}
 	}
@@ -385,10 +395,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfProductIndexLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(productIndexLink);
+			assertTrue(isDisplayed(productIndexLink));
 			logger.debug("Product Index is not displayed");
 		} else {
-			isDisplayed(productIndexLink);
+			assertTrue(isDisplayed(productIndexLink));
 			logger.debug("Product Index is displayed");
 		}
 	}
@@ -396,10 +406,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfAccessoriesAndmoreLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(accessories$moreLink);
+			assertTrue(isDisplayed(accessories$moreLink));
 			logger.debug("Accessories And More Link is not displayed");
 		} else {
-			isDisplayed(accessories$moreLink);
+			assertTrue(isDisplayed(accessories$moreLink));
 			logger.debug("Accessories And More Link is displayed");
 		}
 	}

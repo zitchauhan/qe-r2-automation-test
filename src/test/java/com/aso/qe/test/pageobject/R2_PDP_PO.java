@@ -94,7 +94,14 @@ public class R2_PDP_PO extends CommonActionHelper {
 	public WebElement storePickUpAvailableMessage;   //SID 10-Jan
 	
 	@FindBy(xpath = "(//*[@data-auid='PDP_IventoryMessage'])[1]")
-	public WebElement shippingMessage;   //SID 10-Jan
+	public WebElement shippingMessage;//SID 10-Jan
+	
+	@FindBy(xpath = "//div[@data-auid='PDP_AdBug']")//RS-currently not in use
+	public WebElement shipToStoreLabel; 
+	
+
+	
+	
 	
 	//End KER-6655 CR-MS	 
 	

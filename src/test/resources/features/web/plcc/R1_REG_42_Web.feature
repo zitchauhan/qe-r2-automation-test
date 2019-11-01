@@ -8,8 +8,9 @@ Background:  Common Pre-requisite steps
 	And user enter First Name "First_Name" 
 	And user expect element Last Name to be present 
 	And user enter Last Name "Last_Name" 
-	And user expect element Email Address to be present 
-	And user enter Email Address "Email_Address" 
+#	And user expect element Email Address to be present 
+	And user expect element Email Address to be present signup
+	And user enter signup Email Address "Email_Address" 
 	And user expect element Create Password to be present 
 	And user enter Password "Create_Password" 
 	And user expect element Add Address for Faster Checkout checkbox to be present 
@@ -31,7 +32,7 @@ Scenario: Verify the elements available on Address Verification model
     Then user expect element suggested address to be present
 	And user expect element User Select Address to be present
 
-@C-PLCC @Regression @All @PLCC-42 @CR-VS 
+@C-PLCC @Regression @All @PLCC-42 @CR-VS
 Scenario: Verify user is able to select user entered address
  	When user expect element entered address to be present 
     Then user expect element suggested address to be present

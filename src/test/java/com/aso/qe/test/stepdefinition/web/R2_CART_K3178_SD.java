@@ -43,10 +43,10 @@ public class R2_CART_K3178_SD extends CommonActionHelper {
 
 	@Then("^user select in store pickup option$")
 	public void user_select_in_store_pickup__option() throws InterruptedException {
-		Thread.sleep(Constants.thread_high);
+		//Thread.sleep(Constants.thread_high);
 		for (WebElement clickInStorePickUp : cartPO.clickAllInStorePickUp) {
 			assertTrue(clickOnButton(clickInStorePickUp));
-			Thread.sleep(Constants.thread_high);
+			//Thread.sleep(Constants.thread_high);
 		}
 	}
 
