@@ -7,6 +7,8 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 import static org.junit.Assert.assertTrue;
+
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 
 public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
@@ -20,4 +22,7 @@ public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 		assertTrue(isDisplayed(genericPO.shipItButton));
 		assertTrue(clickOnButton(genericPO.shipItButton));
 	}
-}
+	
+	
+	
+		}

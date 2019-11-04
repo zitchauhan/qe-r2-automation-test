@@ -1,3 +1,4 @@
+
 package com.aso.qe.test.runner;
 import org.junit.runner.RunWith;
 
@@ -30,7 +31,3 @@ public class PLCCWebTestRunner{
 	
 }
 
-/*@CucumberOptions(features = "src/test/resources/features/web/",
-plugin = {"html:target/automation-report/cucumber-pretty","json:target/cucumber.json"},
-strict = true,monochrome = true,
-glue = "com.aso.qe.test.stepdefinition.web")*/
