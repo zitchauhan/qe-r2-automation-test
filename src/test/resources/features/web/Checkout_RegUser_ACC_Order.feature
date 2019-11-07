@@ -12,7 +12,7 @@ Scenario: Checkout -  Registered user Place Order with ACC as tender
 	And user clears everything in cart
 	When user enters "SKUIdOfProduct1" in the search box plcc 
 	And user click on search icon 
-	And user click on ship it button
+	And user click on ship it button 
 	And user click on viewcart button
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
