@@ -3,17 +3,23 @@ Feature: PLCC: Checkout_Payment with Multiple Order Placement
 @C-PLCC @Regression @All @CR-VS @PlaceMultiOrders @Upendra
 Scenario: Verify user is able to place Multiple orders using PLCC Card 
 	Given user launches the browser and navigates to "ASO_HOME" page plcc 
-	When user click on My Account link 
-	And user expect element Email Address to be present 
-	And user enter Email address in sign-in page "Email_MultiOderPlacement" 
-	And user enter password in sign-in page "passwordPlcc" 
-	And user click on Signin-button 
+#	When user click on My Account link 
+#	And user expect element Email Address to be present 
+#	And user enter Email address in sign-in page "Email_MultiOderPlacement" 
+#	And user enter password in sign-in page "passwordPlcc" 
+#	And user click on Signin-button 
+	
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "Email_MultiOderPlacement" 
+	And user enter the valid password "passwordPlcc" 
+	And user click on signin button 
+	
 	Then user navigates to ASO-Home page 
 	#Below 3 lines commented out by HP to make it faster 04_24
 	#When user click on My Account link
 	#And user click on Payments link
 	#Then delete all credit cards from My Account
-	And user clears everything in cart
+	#And user clears everything in cart
 	When user enters "SKUIdOfProduct1" in the search box plcc 
 	And user click on search icon 
 	And user click on ship it button

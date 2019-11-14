@@ -298,8 +298,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 			} catch (Exception e) {
 				e.printStackTrace();
 				wait.until(ExpectedConditions.visibilityOf(bannerCartPage));
+				//bannerCartPage.click();
+				clickOnButton(bannerCartPage);
 				
-				bannerCartPage.click();
 			}
 		}
 	}
@@ -451,10 +452,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 					
 	public void verifyPresenceOfConsentModelPageLabel() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(consentModelPageLabel);
+			assertTrue(isDisplayed(consentModelPageLabel));
 			logger.debug("STEP2: CONSENT is displayed for Mobile");
 		} else {
-			isDisplayed(consentModelPageLabel);
+			assertTrue(isDisplayed(consentModelPageLabel));
 			logger.debug("STEP2: CONSENT is displayed");
 		}
 	}

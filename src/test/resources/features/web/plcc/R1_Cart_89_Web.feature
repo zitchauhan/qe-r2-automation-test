@@ -3,11 +3,17 @@ Feature: PLCC Card image_Cart Page
 @C-PLCC @Regression @All @PLCC-89 @CR-VS 
 Scenario: Verify the display of PLCC card image under We Accept section  
 	Given user launches the browser and navigates to "ASO_HOME" page plcc
-	When user click on My Account link 
-	And user expect element Email Address to be present 
-	And user enter Email address in sign-in page "Email_Generic" 
-	And user enter password in sign-in page "passwordPlcc" 
-	And user click on Signin-button 
+#	When user click on My Account link 
+#	And user expect element Email Address to be present 
+#	And user enter Email address in sign-in page "Email_Generic" 
+#	And user enter password in sign-in page "passwordPlcc" 
+#	And user click on Signin-button 
+	
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "Email_Generic" 
+	And user enter the valid password "passwordPlcc" 
+	And user click on signin button
+	
 	Then user navigates to ASO-Home page 
 	When user enters "SKUIdOfProduct" in the search box plcc
 	And user click on search icon 

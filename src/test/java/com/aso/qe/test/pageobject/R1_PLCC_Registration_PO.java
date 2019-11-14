@@ -36,9 +36,9 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	
 	@FindBy(xpath = "//*[@data-auid='Address Book']")
 	public WebElement addressBookOnMyaccountLink;
-	@FindBy(xpath = "//*[@text='Address Book']")
+	@FindBy(xpath = "//*[text()='ADDRESS BOOK']")
 	public WebElement addressBooktext;
-	@FindBy(xpath = "//*[@data-auid='add_address_btn']")
+	@FindBy(xpath = "//*[text()='ADD NEW ADDRESS']")
 	public WebElement addaddresslink;
 	
 	@FindBy(xpath = "//*[contains(text()='HELLO,'])")
@@ -86,6 +86,8 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement registrationConfirmationPage;
 	@FindBy(xpath = "//*[@data-auid='signup_address_add_more_details_link']")
 	public WebElement addMoreAddressDetailsLink;
+	@FindBy(xpath = "//*[@data-auid='signup_address_add_more_details']")
+	public WebElement addMoreAddressDetailsTxtField;
 	@FindBy(xpath = "//*[@data-auid='btnsingin_redirect_btn']")
 	public WebElement letsShopBtn;
 	@FindBy(xpath = "//*[@data-auid='FOOTER_LINK_3_California Transparency in Supply Chain Act(SB 657)']")
@@ -124,13 +126,13 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement lnkcheckorderStatus;
 
 	// Field Validation Errors
-	@FindBy(xpath = "//*[text()='Please enter the First Name']")
+	@FindBy(xpath = "//*[text()='Please enter a First Name']")
 	public WebElement firstNameErrorMessage;
 	@FindBy(xpath = "//*[text()=' Please enter a Last Name']")
 	public WebElement lastNameErrorMessage;
 	@FindBy(xpath = "//*[text()='Please enter an email address']")
 	public WebElement emailAddressErrorMessage;
-	@FindBy(xpath = "//*[text()='Please enter the Password']")
+	@FindBy(xpath = "//*[text()='Please enter a Password']")
 	public WebElement passwordErrorMessage;
 	@FindBy(xpath = "//*[text()='Address is required']")
 	public WebElement addressErrorMessage;
@@ -140,11 +142,11 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement cityErrorMessage;
 	@FindBy(xpath = "//*[text()='State is required']")
 	public WebElement stateErrorMessage;
-	@FindBy(xpath = "//*[text()='Mobile number is required']")
+	@FindBy(xpath = "//*[text()='Invalid mobile number']")
 	public WebElement mobileErrorMessage;
 	@FindBy(xpath = "//div[10]/div[5]/span")
 	public WebElement invalidMobileNumberErrorMessage;
-	@FindBy(xpath = "//*[text()='Invalid Zip code']")
+	@FindBy(xpath = "//*[text()='Phone number is required']")
 	public WebElement invalidZipErrorMessage;
 	@FindBy(xpath = "//*[text()='Invalid SSN']")
 	public WebElement invalidSSNErrorMessage;
@@ -152,7 +154,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public WebElement invalidMobileNumber;
 	@FindBy(xpath = "//*[text()='Annual Income is required']")
 	public WebElement invalidAnnualIncomeNumber;
-	@FindBy(xpath = "//*[text()='Date of birth is required']")
+	@FindBy(xpath = "//*[text()='Invalid Date of birth']")
 	public WebElement invalidDOBNumber;
 	@FindBy(xpath = "//*[text()='Invalid First Name']")
 	public WebElement firstNameErrorMessageCCAM;
@@ -175,14 +177,12 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	{
 		try {
 			{
-				Thread.sleep(5000); //Added by VSN on 07-10-19
-				assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
-				isClickable(myAccountLinkOnAsoHomePage);
+				Thread.sleep(2000); //Added by VSN on 07-10-19
+		//		assertTrue(isDisplayed(myAccountLinkOnAsoHomePage));
+		//		isClickable(myAccountLinkOnAsoHomePage);
 				if (isDisplayed(myAccountLinkOnAsoHomePage)) 
 				{
-					Thread.sleep(5000);
 					assertTrue(clickOnButton(myAccountLinkOnAsoHomePage));
-					Thread.sleep(1000);
 				} else {
 					driver.navigate().refresh();
 					Thread.sleep(1000);
@@ -273,6 +273,18 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 		}
 
 	}
+	
+	public void verifyPresenceOfEmailTxtFieldSignUp() throws Exception {
+
+		if ("web".equalsIgnoreCase(testtype)) {
+			assertTrue(isDisplayed(plccLandingPageObjects.emailTxtFieldSignUp));
+			logger.debug("Email Text Field is displayed");
+		} else {
+			assertTrue(isDisplayed(plccLandingPageObjects.emailTxtFieldSignUp));
+			logger.debug("Email Text Field is not displayed++++++++++++++++++++++++==");
+		}
+
+	}
 
 	public void verifyPresenceOfCrestePwdTxtField() throws Exception {
 
@@ -311,11 +323,11 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfCheckGiftCardBalance() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(lnkCheckGiftCardBalance);
+			assertTrue(isDisplayed(lnkCheckGiftCardBalance));
 			assertTrue(isClickable(lnkCheckGiftCardBalance));
 			logger.debug("Check Gift Card Balance link is not displayed");
 		} else {
-			isDisplayed(lnkCheckGiftCardBalance);
+			assertTrue(isDisplayed(lnkCheckGiftCardBalance));
 			assertTrue(isClickable(lnkCheckGiftCardBalance));
 			logger.debug("Check Gift Card Balance link is displayed");
 		}
@@ -324,11 +336,11 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfContactNumber() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(contactFooterLink);
+			assertTrue(isDisplayed(contactFooterLink));
 			assertTrue(isClickable(contactFooterLink));
 			logger.debug("Footer Contact Number is not displayed");
 		} else {
-			isDisplayed(contactFooterLink);
+			assertTrue(isDisplayed(contactFooterLink));
 			assertTrue(isClickable(contactFooterLink));
 			logger.debug("Footer Contact Number is displayed");
 		}
@@ -337,10 +349,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfServices() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(servicesFooterText);
+			assertTrue(isDisplayed(servicesFooterText));
 			logger.debug("Services footer Text is not displayed");
 		} else {
-			isDisplayed(servicesFooterText);
+			assertTrue(isDisplayed(servicesFooterText));
 			logger.debug("Services footer text is displayed");
 		}
 	}
@@ -348,11 +360,11 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfcaliforniaTranparencyActLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(californiaTranparencyActLink);
+			assertTrue(isDisplayed(californiaTranparencyActLink));
 			assertTrue(isClickable(californiaTranparencyActLink));
 			logger.debug("FOOTER_LINK_3_California Transparency in Supply Chain Act(SB 657)");
 		} else {
-			isDisplayed(californiaTranparencyActLink);
+			assertTrue(isDisplayed(californiaTranparencyActLink));
 			assertTrue(isClickable(californiaTranparencyActLink));
 			logger.debug("FOOTER_LINK_3_California Transparency in Supply Chain Act(SB 657)");
 		}
@@ -361,10 +373,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfSiteMapLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(siteMapLink);
+			assertTrue(isDisplayed(siteMapLink));
 			logger.debug("SiteMap Link is not displayed");
 		} else {
-			isDisplayed(siteMapLink);
+			assertTrue(isDisplayed(siteMapLink));
 			logger.debug("SiteMap Link is displayed");
 		}
 	}
@@ -372,10 +384,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfAsoRightsLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(asoRightsLink);
+			assertTrue(isDisplayed(asoRightsLink));
 			logger.debug("© 2018 Academy Sports + Outdoors. All Rights Reserved is not displayed");
 		} else {
-			isDisplayed(asoRightsLink);
+			assertTrue(isDisplayed(asoRightsLink));
 			logger.debug("© 2018 Academy Sports + Outdoors. All Rights Reserved is displayed");
 		}
 	}
@@ -383,10 +395,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfProductIndexLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(productIndexLink);
+			assertTrue(isDisplayed(productIndexLink));
 			logger.debug("Product Index is not displayed");
 		} else {
-			isDisplayed(productIndexLink);
+			assertTrue(isDisplayed(productIndexLink));
 			logger.debug("Product Index is displayed");
 		}
 	}
@@ -394,10 +406,10 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void validatingPresenceOfAccessoriesAndmoreLink() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			isDisplayed(accessories$moreLink);
+			assertTrue(isDisplayed(accessories$moreLink));
 			logger.debug("Accessories And More Link is not displayed");
 		} else {
-			isDisplayed(accessories$moreLink);
+			assertTrue(isDisplayed(accessories$moreLink));
 			logger.debug("Accessories And More Link is displayed");
 		}
 	}
@@ -537,6 +549,19 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 					"Add company name, Apt.Number, etc. (Optional) link is not displayed++++++++++++++++++++++++==");
 		}
 	}
+	
+	public void verifyPresenceOfAddMoreAddressTxtField() throws Exception {
+
+		if ("web".equalsIgnoreCase(testtype)) {
+			assertTrue(isDisplayed(addMoreAddressDetailsTxtField));
+			logger.debug("Add company name, Apt.Number, etc. (Optional) link is displayed");
+		} else {
+			assertTrue(isDisplayed(addMoreAddressDetailsTxtField));
+			logger.debug(
+					"Add company name, Apt.Number, etc. (Optional) link is not displayed++++++++++++++++++++++++==");
+		}
+	}
+
 
 	public void clickOnAddMoreAddressDetails() throws Exception {
 
@@ -815,20 +840,20 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	}
 	public void verifypresenceofFNErrorMSgCCAMErrorMsg() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
+			assertTrue(isDisplayed(firstNameErrorMessage));
 			logger.debug("Invalid First Name error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
-			logger.debug("Invalid SSN error message is displayed++++++++++++++++++++++++==");
+			assertTrue(isDisplayed(firstNameErrorMessage));
+			logger.debug("Invalid First Name error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 	public void verifypresenceofLNErrorMSgCCAMErrorMsg() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
+			assertTrue(isDisplayed(lastNameErrorMessage));
 			logger.debug("Invalid Last Name error message is not displayed");
 		} else {
-			assertTrue(isDisplayed(invalidSSNErrorMessage));
-			logger.debug("Invalid SSN error message is displayed++++++++++++++++++++++++==");
+			assertTrue(isDisplayed(lastNameErrorMessage));
+			logger.debug("Invalid Last Name error message is displayed++++++++++++++++++++++++==");
 		}
 	}
 	public void verifypresenceofPasswordErrorMessage() throws Exception {

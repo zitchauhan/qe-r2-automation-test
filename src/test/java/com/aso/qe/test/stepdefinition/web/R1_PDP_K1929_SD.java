@@ -29,6 +29,14 @@ public class R1_PDP_K1929_SD extends CommonActionHelper {
 			assertTrue(false);
 		}
 	}
+	
+	@And("^user verify the limited Stock message \"(.*?)\"$")
+	public void user_verify_the_Limited_Stock_message() {
+		assertTrue(isDisplayed(pdpObj.limitedStock));
+		String limitedStock = pdpObj.limitedStock.getText();
+		System.out.println(limitedStock);
+	}
+	
 	@And("^user verify the inventory message for Pickup not available")
 	public void user_verify_the_inventory_message_for_Pickup_not_available() {
 		assertTrue(isDisplayed(sitObj.inventoryMessage));

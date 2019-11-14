@@ -67,6 +67,7 @@ public class R1_REG_42_Web extends CommonActionHelper {
 		try {
 			plccPageObjects.verifyPresenceOfUserEnteredAddressBtn();
 		} catch (Exception e) {
+			e.getMessage();
 			
 		}
 	}

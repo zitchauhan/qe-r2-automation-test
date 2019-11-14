@@ -11,8 +11,8 @@ Scenario: Verify auto population of city and state when user provides valid zip 
 	And user enter First Name "First_Name" 
 	And user expect element Last Name to be present
 	And user enter Last Name "Last_Name"
-	And user expect element Email Address to be present
-	And user enter Email Address "Email_Address"
+	And user expect element Email Address to be present signup
+	And user enter signup Email Address "Email_Address"
 	And user expect element Create Password to be present
 	And user enter Password "Create_Password"
 	And user expect element Add Address for Faster Checkout checkbox to be present
