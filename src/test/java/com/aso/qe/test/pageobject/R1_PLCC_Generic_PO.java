@@ -90,7 +90,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	@FindBy(xpath = "//*[@data-auid='btndefaultPaymentFormSubmit']")
 	public WebElement btndefaultPaymentFormSubmit;
 	
-	@FindBy(xpath = "//*[@id='headerForScroll']/nav[1]//li[5]//button/span | //*[@class='academyicon icon-cart']") //MJR 9/4/19
+	@FindBy(xpath = "//button[@class='mini-cart'] | //*[@class='academyicon icon-cart']") //MJR 11/15/19
 	public WebElement cartIcon;
 	@FindBy(xpath = "//*[text()='Add a New Credit Card']")
 	public WebElement addNewCardOption;
