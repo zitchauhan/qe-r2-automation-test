@@ -79,6 +79,7 @@ public class R1_LP_34_Web extends CommonActionHelper {
 		plccLandingPageObjects.clickOnSignInBtnSignInPage();
 		plccPageObjects.clickOnMyAccountLink();
 		Assert.assertTrue(isDisplayed(plccPageObjects.signOutLink));
+		plccPageObjects.clickOnMyAccountLink(); // <ns> To close the my account drop down
 		//CommonActionHelper.waitUntilElePresent(driver, Element, timeOutInSeconds);
 		//Thread.sleep(5000);
 		}

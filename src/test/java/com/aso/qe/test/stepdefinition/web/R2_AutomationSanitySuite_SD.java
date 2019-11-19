@@ -15,6 +15,7 @@ import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_HomePage_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
@@ -34,6 +35,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	R1_HomePage_PO r1HomePagePO = PageFactory.initElements(getDriver(), R1_HomePage_PO.class);
 	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	R2_CheckOut_PO r2CheckoutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
+	R1_PLCC_Generic_PO genericPO = PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
 
 	public String quantityprice;
 	public String modifiedQuantityprice;
@@ -69,6 +71,27 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		
 
 	}
+	
+	@And("^user click on pick up  pdp button$")
+	public void user_click_on_pick_up_pdp_button() throws Throwable {
+		Thread.sleep(4000);
+		isDisplayed(genericPO.PICKUPButtonPDP);
+		genericPO.PICKUPButtonPDP.click(); 
+	}
+	
+	@Then("verify shipping text in Add to cart popup$")
+	public void verifyShippingTextInCartPopup() throws InterruptedException 
+	{
+		Thread.sleep(Constants.thread_medium);
+		assertTrue(isDisplayed(pdpPageObj.shippingTxtInCartPopup));
+	}
+	
+	@Then("verify pick up text in Add to cart popup$")
+	public void verify_pick_up_text_in_Add_to_cart_popup() throws InterruptedException{
+		Thread.sleep(Constants.thread_medium);
+		assertTrue(isDisplayed(pdpPageObj.pickupTxtInCartPopup));
+	}
+	
 	@And("^user navigate to Cart page$")
 	public void user_navigate_to_Cart_page() throws Throwable {
 		//Thread.sleep(2000);
