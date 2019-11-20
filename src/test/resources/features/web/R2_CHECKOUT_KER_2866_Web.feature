@@ -247,6 +247,7 @@ Scenario: Verify if the user is able to review and place order from One Page Che
 	And user clicks on change billing info cta 
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
 	And user fill the payment details for sof registered user
+	Then user should click on continue to review button
 	And user able to see the button place order
 	And user is navigated to order confirmation page and captures order number 
 	
