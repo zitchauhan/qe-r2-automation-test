@@ -19,12 +19,11 @@ public class Checkout_OMNI_1070_SD extends CommonActionHelper {
 	public void user_verify_order_summay_is_updated() {
 		assertTrue(subTotalBeforeShippingMethodChange.equalsIgnoreCase(getText(r2CheckoutPo.SubTotalPrice_Txt)));
 		selectedShippingMethod = getText(r2CheckoutPo.checkout_ShippingMethod_ShippingMethodType_btn);
-		System.out.println(selectedShippingMethod);
 		if(selectedShippingMethod.contains("FREE")) {
 			selectedShippingMethod = "FREE";
 		}else {
 			int i = selectedShippingMethod.indexOf('$');
-			selectedShippingMethod = selectedShippingMethod.substring(i, selectedShippingMethod.length()-1);
+			selectedShippingMethod = selectedShippingMethod.substring(i, selectedShippingMethod.length());
 			selectedShippingMethod = selectedShippingMethod.substring(0, selectedShippingMethod.indexOf('\n')).trim();
 			
 		}

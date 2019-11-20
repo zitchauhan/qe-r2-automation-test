@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,7 @@ import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 
 public class R2_CheckOut_PO extends CommonActionHelper 
 {
@@ -388,7 +390,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's Phone Number\"]")
 	   public WebElement PickupAltrPhone_input;
 	   
-	   @FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']|//button[@data-auid='btncheckout_ship_to_store_submit_button']")
+	   @FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']|//button[@data-auid='btncheckout_ship_to_store_submit_button']|//button[@data-auid='btncheckout_goto_payment button-1']")
 	   public WebElement ShippingConfirm_btn;
 	   
 	   @FindBy(xpath="//span[text()='Required']")
@@ -967,6 +969,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
     @FindBy(xpath="//*[contains(text(),'You must be at least 18 years')]")public WebElement ShipToStoreforSOF_compliance_Txt;
     @FindBy(xpath="//*[@data-auid='btncheckout_ship_to_store_submit_button']")public WebElement ShipToStoreforSOF_Payment_Btn;
     @FindBy(xpath="//*[@type='checkbox']")public WebElement selectCheckbox;  //Sid 22-Jan
+    
+    @FindBy (xpath="//*[contains(@data-auid,'shipping_method_shipment_item_')]//p[contains(text(),'$') or contains(text(),'FREE')] | //*[contains(@data-auid,'checkout_shipping_method_shipment_item') and not (contains(@data-auid,'image'))]/p")
+    public List<WebElement> shippingMethodText;
   
   //Only for SOF Item--Start KER-KER-7033 & KER-7031
 
@@ -1125,5 +1130,35 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 	        }
 	    }
+	
+	public String getTheShippingMenthodSumValueOnCheckout() throws InterruptedException {
+		String expectedShippingPrice ="" ;
+		DecimalFormat df2 = new DecimalFormat("###.##");
+		double shippingPrice=0.00;
+		Thread.sleep(Constants.thread_medium);
+		for (WebElement webElement : shippingMethodText) {
+			expectedShippingPrice =getText(webElement);
+			if(expectedShippingPrice.contains("FREE")) {
+				shippingPrice = 0;
+			}
+			else {
+				int i = expectedShippingPrice.indexOf('$');
+				expectedShippingPrice = expectedShippingPrice.substring(i+1, expectedShippingPrice.length());
+				System.out.println(expectedShippingPrice);
+				if (expectedShippingPrice.matches("[A-Za-z]+")) {
+					expectedShippingPrice = expectedShippingPrice.substring(0,expectedShippingPrice.indexOf('\n'));
+				}	
+				shippingPrice = shippingPrice + Double.parseDouble(expectedShippingPrice);
+			}
+		}
+		if(shippingPrice == 0) {
+			expectedShippingPrice = "FREE";
+		}else {
+			expectedShippingPrice= df2.format(shippingPrice);
+		}
+		
+		return (expectedShippingPrice);
+	}
+
 	
 }
