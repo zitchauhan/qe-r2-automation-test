@@ -50,8 +50,8 @@ Scenario: Verify the user is able to see the full inventory availability on Find
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
-	When user enters "BOPIS_SOF_Product" in the searchbox
-	#When user enters "BOPIS_Product" in the searchbox
+	#When user enters "BOPIS_SOF_Product" in the searchbox
+	When user enters "BOPIS_Product" in the searchbox
 	#And user click on Add to Cart Button
 	And user click on ship it button 
 	And user click on view cart
@@ -86,12 +86,13 @@ Scenario: Verify the user is able to see the partial inventory availability on F
 	#And user click on Add to Cart Button
 	And user click on ship it button 
 	And then user close the add to cart popup
-	When user enters "NOT_BOPIS_Product" in the searchbox
+	When user enters "LimitedStockItemBOPIS" in the searchbox
 	#And user click on Add to Cart Button 
 	And user click on ship it button
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
+	And user clicks on edit shipping method cta  
 	And user check the selected store name
     Then user click on change location button
     Then User is able to see Find a Store Modal
@@ -105,7 +106,7 @@ Scenario: Verify the user is able to see no inventory availability on Find a sto
 	And user logs in as "EmailAddress" 
 	And User empty the cart
 	Then user change the selected store "BOPIS_Store2"
-	When user enters "BOPIS_Product" in the searchbox
+	When user enters "LimitedStockItemBOPIS" in the searchbox
 	#And user click on Add to Cart Button 
 	And user click on ship it button
 	And user click on view cart
