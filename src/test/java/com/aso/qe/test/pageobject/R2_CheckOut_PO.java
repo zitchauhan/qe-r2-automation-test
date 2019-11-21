@@ -458,7 +458,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   public WebElement pickupCurrentUser;  //SID 26-Jan
 	 
 	   
-	  // @FindBys({ @FindBy(xpath = "//i[@class='academyicon icon-minus']") })
 	   @FindBy(xpath = "//*[@class='academyicon icon-minus']")
 		public WebElement collapse;  //SID 21-Jan
 	   

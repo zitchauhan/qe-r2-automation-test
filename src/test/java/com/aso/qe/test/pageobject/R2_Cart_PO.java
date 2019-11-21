@@ -685,6 +685,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	public void selectInStorPickUp() {
 		clickOnRadioButton(rbInStorePickUp);
+		
 	}
 
 	public boolean clickOnCheckoutButton() {
