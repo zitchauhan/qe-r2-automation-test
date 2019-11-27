@@ -60,7 +60,7 @@ Scenario: Verify the user is able to see no inventory availability on Find a sto
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
-	When user enters "LimitedStockItemBOPIS" in the searchbox 
+	When user enters "BOPIS_SOF_Product" in the searchbox 
 	#	And user click on Add to Cart Button 
 	#	And user click on view cart
 	And user click on ship it button 
