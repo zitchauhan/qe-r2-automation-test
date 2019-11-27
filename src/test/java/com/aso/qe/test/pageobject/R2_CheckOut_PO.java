@@ -1158,6 +1158,15 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 		return (expectedShippingPrice);
 	}
+	
+	//Google Pay
+		@FindBy(xpath="//*[@id='identifierId']")public WebElement googlePayEmail_Txtbox_gpmodal;;
+		@FindBy(xpath="//*[@id='password']//input")public WebElement googlePayPassword_TxtBox_gpmodal;
+		@FindBy(xpath="//*[@id='identifierNext']")public WebElement googlePay_nextBtn_gpmodal;
+		@FindBy(xpath="//*[@id='passwordNext']") public WebElement googlePay_nextBtn_password_gpmodal;
+		@FindBy(xpath="//*[contains(@class,'submit-button')]") public WebElement googlePayContinueBtn_gpmodal;
+		@FindBy(xpath="//*[@data-auid='checkout_payment_options_radio_button_Google Pay']/../label") public WebElement googlePayRadiobtn;
+		@FindBy(xpath="//*[@data-auid='checkout_payment_google_pay_btn']") public WebElement googlePayBtn;
 
 	
 }
