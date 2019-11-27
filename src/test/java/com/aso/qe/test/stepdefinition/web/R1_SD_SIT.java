@@ -406,6 +406,13 @@ public class R1_SD_SIT extends CommonActionHelper {
 		Thread.sleep(Constants.thread_low); 
 	}
 	
+	@Then("^user should click on continue to review btn$")
+	public void user_should_click_on_continue_to_review_BTN() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		assertTrue(clickOnButton(sit_po.continuetoreviewbtn));
+		Thread.sleep(Constants.thread_low); 
+	}
+	
 	@Then("^user should able to see shipping Address page$")
 	public void user_should_able_to_see_shipping_Address_page() throws Throwable {
 		sit_po.verifyShippingAddressPage() ;
