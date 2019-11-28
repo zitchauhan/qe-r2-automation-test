@@ -19,7 +19,7 @@ Scenario: Verify user is able to checkout using PayPal with Order level Promotio
 	And user click on Go To Shipping Method button in Checkout page 
 	And user click on go to payment present in shipping method 
 	Then user click on paypal radiobtn 
-	Then user switch to iframe to verify paypalcheckoutBtn 
+	#Then user switch to iframe to verify paypalcheckoutBtn 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify gift card related things are not displayed |
 		|PayPalCheckOut_Btn| 
@@ -48,7 +48,7 @@ Scenario: Verify user is able to checkout using PayPal with item-level Promotion
 	And user click on Go To Shipping Method button in Checkout page 
 	And user click on go to payment present in shipping method 
 	Then user click on paypal radiobtn 
-	Then user switch to iframe to verify paypalcheckoutBtn 
+	#Then user switch to iframe to verify paypalcheckoutBtn 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify gift card related things are not displayed |
 		|PayPalCheckOut_Btn| 
@@ -81,7 +81,7 @@ Scenario: Verify user is able to checkout using PayPal with shipping-level Promo
 	And user click on Go To Shipping Method button in Checkout page 
 	And user click on go to payment present in shipping method 
 	Then user click on paypal radiobtn 
-	Then user switch to iframe to verify paypalcheckoutBtn 
+	#Then user switch to iframe to verify paypalcheckoutBtn 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|#verify gift card related things are not displayed |
 		|PayPalCheckOut_Btn| 

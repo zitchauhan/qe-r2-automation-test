@@ -11,7 +11,7 @@ Feature: B06-175- Mixed Cart - Order Confirmation screen
     Then User clicks on the burger menu
     And user selects store with "FindStoreZipcode" and "FindStoreZipcodeNearestStore"
     When user enters "SKUForBopisProduct" in the search box
-    When user click on Add to cart button
+    And user click on ship it button
     Then user is navigated to Add to cart Notification popup
     And user click on continue shopping
     When user enters "productName" in the search box

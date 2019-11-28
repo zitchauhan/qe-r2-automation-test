@@ -62,7 +62,7 @@ Scenario: Verify the user can enter valid new Gift card with 13 or 16 digit in C
 	Then user is navigated to Add to cart Notification popup 
 	And user click on viewcart button
 	When user will click on Checkout button and navigates to Checkout page 
-	And verify user can begin checkout 
+	#And verify user can begin checkout 
 	And user is navigated to order summary page 
 	And user enter First name "FirstName" 
 	And user enter Last name "LastName" 
@@ -78,7 +78,7 @@ Scenario: Verify the user can enter valid new Gift card with 13 or 16 digit in C
 	When user click on Apply button 
 	Then Verify the message on the page 
 		|# Following physical gift card retention message should show on the page	|
-		|Please keep your physical gift card for future reference to assit with any returns or oder cancellations.	|
+		|Please keep your physical gift card for future reference to assist with any returns or order cancelations.|
 	And Verify below Sub/Main Module of Checkout Page 
 		|# Following button and success message on checkout page|
 		|GiftCardAppliedSuccessMsg|
