@@ -1090,9 +1090,19 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		String modifiedPhoneNumber= webPropHelper.getTestDataProperty("PhoneNumber");
 		String modifiedAddress= webPropHelper.getTestDataProperty("PO_ADDRESS");
 		String modifiedZipcode= webPropHelper.getTestDataProperty("PO_ZIPCODE");
-
+		
+		//regression fix <NS>
 		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedFirstName+"')]"))));
-		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedSecondName+"')]"))));
+		String actualname = getText(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedFirstName+"')]")));
+		assertTrue(actualname.toLowerCase().contains(modifiedFirstName.toLowerCase()));
+		assertTrue(actualname.toLowerCase().contains(modifiedSecondName.toLowerCase()));
+			
+		StringBuilder sb = new StringBuilder();
+		sb.append(modifiedPhoneNumber.substring(0, 3)).append("-").append(modifiedPhoneNumber.substring(3 , 6)).append("-").append(modifiedPhoneNumber.substring(6, 10));
+		modifiedPhoneNumber = sb.toString(); 
+
+		//assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedFirstName+"')]"))));
+		//assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedSecondName+"')]"))));
 		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedPhoneNumber+"')]"))));
 		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedAddress+"')]"))));
 		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedZipcode+"')]"))));

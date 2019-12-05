@@ -1,6 +1,6 @@
 Feature: Verify Google Pay as payment mode 
 
-@googlePay @Web @Regression @CR-NS @C-Checkout @C-Order
+@googlePay @Web @CR-NS @C-Order
 Scenario: Checkout - Guest User Google Pay order Regular item
   Given user launches the browser and navigates to "ASO_HOME" page 
 	And user enters "BOPIS_Regular_Product" in the searchbox  
@@ -14,7 +14,7 @@ Scenario: Checkout - Guest User Google Pay order Regular item
 	Then user switch to iframe and enter the google login "GooglePayEmail" "GooglePayPassword" 
 	And user is navigated to order confirmation page and captures order number
 
-@OMNI-2300 @googlePay @Web @Regression @CR-NS @C-Checkout @C-Order
+@OMNI-2300 @Web @CR-NS @C-Order
 Scenario: Verify GooglePay option should not display in checkout for ammunition 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user enters "ammoSKU" in the searchbox  
@@ -25,7 +25,7 @@ Scenario: Verify GooglePay option should not display in checkout for ammunition
 	Then user click on go to payment present in shipping method
 	And user verify "GooglePay" option is not displayed
 	
-@OMNI-2299 @googlePay @Web @Regression @CR-NS @C-Checkout @C-Order
+@OMNI-2299 @Web @CR-NS @C-Order
 Scenario: Verify GooglePay option should not display in checkout for firearms 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
