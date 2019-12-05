@@ -42,6 +42,7 @@ public class R2_CHECKOUT_K4030_SD extends CommonActionHelper {
 				break;
 			}
 		}
+		Thread.sleep(Constants.thread_medium);
 	}
 
 	@When("^user is able to modify payment method$")

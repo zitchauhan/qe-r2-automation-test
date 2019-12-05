@@ -62,7 +62,7 @@ Scenario:  To verify Find a Store CTA for LSI message Not Sold in Stores- Deskto
 #	When user enters "Not_Sold_in_Store" in the searchbox
 	When user enters "Not_Sold_in_Store" in the search box plcc
 	And user click on search icon
-	And user verify the inventory message "Not_Sold_in_Store"
+	And user verify the inventory message "Not Sold In Stores"
 	
 #@C-PDP @Web @Regression @KER-1929 @ZYP_HP_K1929-4297 
 #Scenario: To verify Find a Store CTA for LSI message Available Today- Desktop
