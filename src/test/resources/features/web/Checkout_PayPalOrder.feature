@@ -8,7 +8,7 @@ Scenario:  Checkout - Guest User PAYPAL order Regular BOPIS item
 	#When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
 #	#And user click on Add to Cart Button 
-	Then user click on pickup button
+	Then user click on pickup button 
 	And user click on view cart
 	#Updated by VSN on 07-22-19 for smoke test fix
 	#Then user select in store pickup option 
