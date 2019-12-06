@@ -260,14 +260,14 @@ Scenario Outline: verify if user should be able to submit the order on the check
     Given user launches the browser and navigates to "ASO_HOME" page
     And user clicks on the burger menu
     And user clicks on SignIn link from global header
-   And user enter the valid emailaddress "UserWithSavedAddressAndPayment"
-    	And user enter the valid password "Password"
-       And user click on signin button
-       And user navigate and deletes existing items in cart"
+    And user enter the valid emailaddress "UserWithSavedAddressAndPayment"
+    And user enter the valid password "Password"
+    And user click on signin button
+    And user navigate and deletes existing items in cart
     When User searches a product "productName" and navigates to PDP
     #And user click on Add to Cart Button 
 	And user click on ship it button
-	And user click on viewcart button
+	And user click on view cart button
 	Then user navigates to Cart Page
 	And user click on checkout button
     Then user fill email address in payment
