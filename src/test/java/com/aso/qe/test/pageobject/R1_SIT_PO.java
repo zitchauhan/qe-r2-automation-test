@@ -386,7 +386,7 @@ public void cleartext() throws Exception{
 	@FindBy(xpath="//input[@id='creditCardInput']") public WebElement cardnumber;
 	@FindBy(xpath="//input[@id='expInput']") public WebElement expiration;
 	@FindBy(xpath="//input[@id='CVVInput']") public WebElement cvv;
-	@FindBy(xpath="//button[@id='rwdBillingContinue_Btn']") public WebElement btncontinuetoreview;
+	@FindBy(xpath="//button[@id='rwdBillingContinue_Btn'] | //*[text()='Continue to Review']") public WebElement btncontinuetoreview;
 	@FindBy(xpath="//font[text()='test1']") public WebElement txtusername;
 	@FindBy(xpath="//input[@type='password']") public WebElement txtpwd;
 	@FindBy(xpath="//input[@type='submit']") public WebElement btnsubmit;

@@ -409,7 +409,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='cart_radio_button_div']//*[text()='Find a Store']")
 	   public WebElement findAStoreCart;  //SID 8-Jan
 	   
-	   @FindBy(xpath="//*[text()='Change Location']/parent::*/*[1] | //*[text()='PICKUP LOCATION']/following::*")//MJR-10/10/19
+	   @FindBy(xpath="//*[text()='Change Location']/parent::*/*[1] | //*[text()='PICKUP LOCATION']/following::*[2]")//MJR-10/10/19
 	   public WebElement selectedBOPISStore;  //SID 21-Jan
 	 
 	   @FindBy(xpath="(//*[@data-auid='find-a-store-modal']//*[@data-auid='facetdrawerundefined'])[1]/button/span/div/div[1]")
