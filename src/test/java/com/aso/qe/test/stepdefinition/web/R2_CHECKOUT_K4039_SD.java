@@ -50,6 +50,7 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 	
 	@Then("^user click on paypal radiobtn$")
 	public void user_click_on_paypal_radiobtn() throws Throwable {
+		Thread.sleep(Constants.thread_medium);
 		assertTrue(clickOnButton(r2CheckOutPo.PayPal_radioBtn));
 	    Thread.sleep(Constants.thread_high);
 	}
