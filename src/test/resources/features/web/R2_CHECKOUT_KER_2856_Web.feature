@@ -150,6 +150,6 @@ Scenario: Verify BOPIS Order Confirmation
 	And user click on checkout button in Cart page 
 	When user clicks on Go to payment CTA
 	And User enters CVV number "ThreeDigitCVV"
-	And user clicks on Review order button on checkout page
+	When user clicks on Review order button on checkout page
 	And user able to see the button place order 
 	And user is navigated to order confirmation page and captures order number 

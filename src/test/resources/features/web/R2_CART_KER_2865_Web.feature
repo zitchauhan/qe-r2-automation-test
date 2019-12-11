@@ -65,9 +65,9 @@ Scenario: Verify the user is able to see no inventory availability on Find a sto
 	#	And user click on view cart
 	And user click on ship it button 
 	And user click on viewcart button 
-	Then user select in store pickup option 
+	#Then user select in store pickup option 
 	And user click on change location link in view cart page 
-	Then User is able to see Find a Store Modal 
+	Then User is able to see Find a Store Modal
 	Then user check for the products count and item not available should come 
 	
 	

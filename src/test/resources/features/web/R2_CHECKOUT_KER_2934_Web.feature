@@ -11,10 +11,10 @@ Scenario: Verify the Shipping address form that authenticated user can view on a
 	And user click on signin button 
 	And User Navigates L2 form Homepage Header 
 	And User clicks on product in PLP 
+
+	#And user click on Add to Cart Button 
 	
-#	And user click on Add to Cart Button 
-	
-	And user click on ship it button
+  And user click on ship it button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
 	And User clicks on edit CTA 

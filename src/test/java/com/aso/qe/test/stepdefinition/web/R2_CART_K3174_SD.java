@@ -73,6 +73,7 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
 	@Then("^user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers$")
 	public void user_should_see_unselected_checkbox_acknowledgement_with_appropriate_age_restriction_disclaimers()
 			throws Throwable {
+		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(r2CheckoutPo.ShipToStoreforSOF_compliance_Txt));
 
 	}
