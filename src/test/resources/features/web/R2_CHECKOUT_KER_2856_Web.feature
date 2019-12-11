@@ -1,6 +1,6 @@
 Feature: B06-175- Mixed Cart - Order Confirmation screen
 
-@C-BOPIS @R2_Web  @R2_All @P1 @CC-Checkout_Order  @KER-2856 @ZYP_CHECKOUT_K2856-10865
+@C-BOPIS @R2_Web  @R2_All @P1 @CC-Checkout_Order  @KER-2856 @ZYP_CHECKOUT_K2856-10865 
 Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods Ship to Home and BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header 
@@ -23,6 +23,7 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods Ship to Hom
 	And user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "authenticated" user 
 	And user selects shipment method on check out page for "authenticated" user 
+	When user clicks on Go to payment CTA
 	And user fill the payment details for sof registered user
 	And user able to see the button place order 
 	And user is navigated to order confirmation page and captures order number 
@@ -147,6 +148,7 @@ Scenario: Verify BOPIS Order Confirmation
 	And user will click on View Cart button
 	Then user select in store pickup option 
 	And user click on checkout button in Cart page 
+	When user clicks on Go to payment CTA
 	And User enters CVV number "ThreeDigitCVV"
 	And user clicks on Review order button on checkout page
 	And user able to see the button place order 
