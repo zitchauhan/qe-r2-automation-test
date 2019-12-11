@@ -23,6 +23,7 @@ Scenario: Verify Mixed Cart Order Confirmation - Fullfilment methods Ship to Hom
 	And user click on checkout button in Cart page 
 	And user adds shipment address on checkout page for "authenticated" user 
 	And user selects shipment method on check out page for "authenticated" user 
+	When user clicks on Go to payment CTA
 	And user fill the payment details for sof registered user
 	And user able to see the button place order 
 	And user is navigated to order confirmation page and captures order number 
