@@ -18,6 +18,7 @@ Scenario: Checkout -  Registered user Place Order with ACC as tender
 	When user will click on Checkout button and navigates to Checkout page
 	When user handles adding new card "ValidPLCCCard" if already card is saved 
 	#And user uncheck Save Payment Info for Later Checkbox 
+	And user click on go to payment present in shipping method
 	And user click on REVIEW ORDER button 
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
