@@ -1,12 +1,10 @@
 Feature: Home Page Search
 
 @MobileAutomationSmoke 
-Scenario Outline: 
-Mobile-Verify the Keyword search from home page 
+Scenario Outline: Mobile-Verify the Keyword search from home page 
 Given user launches the browser and navigates to "ASO_HOME" page 
 Then User to verify serch option box is available 
 Then User to verify search for any requirement"<data>" 
-
 Examples: 
 	| data |
 	| pant |

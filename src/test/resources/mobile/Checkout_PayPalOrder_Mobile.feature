@@ -23,6 +23,6 @@ Scenario Outline: Verify if authenticated user is able to place an order for sin
 		|Payment Type	|
 #		|Gift Card		|
 #		|Credit Card - VISA	|
-		|PayPal
+		|PayPal         |
 
 	
