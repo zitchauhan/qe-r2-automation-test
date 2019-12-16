@@ -61,6 +61,8 @@ Scenario: Verify the guest user is able to select the PayPal payment method in o
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
+	And user adds shipment address on checkout page for "guest" user  
+	And user selects shipment method on check out page for "guest" user  
 	When user clicks on Go to payment CTA
 	Then user click on paypal radiobtn
 	And user click on paypal checkout button
@@ -245,9 +247,9 @@ Scenario: Verify if the user is able to review and place order from One Page Che
 	|#Verify the billing information is already displayed|
 	|ChangeBillingInformation_Txt|
 	And user clicks on change billing info cta 
-	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
+	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "zipCode" , "EmailAddress" 
 	And user fill the payment details for sof registered user
-	Then user should click on continue to review btn
+	#Then user should click on continue to review button 
 	And user able to see the button place order
 	And user is navigated to order confirmation page and captures order number 
 	

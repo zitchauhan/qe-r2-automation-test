@@ -115,7 +115,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Careers']") public WebElement lnkcareers;
 	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Our History']") public WebElement lnkourhistory;
 	@FindBy(xpath="//*[@data-auid='miniCart']") public WebElement iconcart;//danush
-	@FindBy(xpath="//*[@data-auid='miniCart_m']") public WebElement iconcart_m;//danush
+	@FindBy(xpath="//*[@data-auid='miniCart_m']//button") public WebElement iconcart_m;//danush //MJR 11/20/19
 	@FindBy(xpath="//*[@data-auid='search-container']//input") public WebElement txtSearchBox;
 	@FindBy(xpath="//*[@data-auid='level1Category-DEALS']/a") public  WebElement btnDEALS;
 	@FindBy(xpath="//*[@data-auid='level1Category-DEALS_m']") public  WebElement btnDEALS_m;
@@ -268,7 +268,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='breadCrumb_link_0_Academy']") public WebElement anchorAcademy; 
 	//@FindBy(xpath="//*[@id='headerForScroll']//span[contains(text(),'Find a Store')]|//*[@data-auid='findAStore']//a") public WebElement txtFindAStore;
 	@FindBy(xpath="//*[@data-auid='findAStore']") public WebElement txtFindAStore;
-	@FindBy(xpath="//*[@data-auid='findAStore_m']//span[contains(text(),'Find a Store')]") public WebElement txtFindAStoreMobile;
+	@FindBy(xpath="//*[@data-auid='findAStore_m'] | //span[contains(text(),'Find a Store')]") public WebElement txtFindAStoreMobile; //MJR-11/28/19
 	@FindBy(xpath="//*[@tabindex='-1']/div[@data-auid='find-a-store-modal']") public WebElement findaStoreModal;
 	@FindBy(xpath="//*[@data-auid='find-a-store']/input[@placeholder='Enter Zip Code or City, State']") public WebElement enterPincode; 
 	@FindBy(xpath="//*[@data-auid='submit-zip-code']/span") public WebElement clickSearchIcon;
@@ -1524,12 +1524,12 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	
 	public void findAndClickStoreinMobile() throws InterruptedException {
 		if(isDisplayed(txtFindAStoreMobile)) {	
-			//scrollPageToWebElement(txtFindAStoreMobile);
-			waitForElement(txtFindAStoreMobile);
+			scrollPageToWebElement(txtFindAStoreMobile);
+			//waitForElement(txtFindAStoreMobile);
 			Thread.sleep(Constants.thread_low); 
            
 			moveHover(txtFindAStoreMobile);
-			clickOnLink(txtFindAStoreMobile);
+			clickOnButton(txtFindAStoreMobile);
            
 		}else
 			logger.debug("Find A store link is not displayed ");	

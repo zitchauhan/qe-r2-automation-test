@@ -13,7 +13,7 @@ Scenario: To verify that an existing ASO employee is able to see the employee di
 	Then User clicks on the burger menu 
 	And User navigates to L3 
 	And user clicks on the product card and navigates to PDP 
-	Then user click on Add to Cart Button #And user click on Add to Cart Button 
+	#And user click on Add to Cart Button 
 	And user click on ship it button  
 	And user click on viewcart button
 	When user will click on Checkout button and navigates to Checkout page 

@@ -12,12 +12,13 @@ Scenario: To verify that an existing ASO employee is able to see the employee di
 	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
-	#Then user click on Add to Cart Button
-	And user click on ship it button 
+	#Then user clicks on the product card and navigates to PDP of the product
+	#Then User is navigated to pdp page 
+	Then user click on Add to Cart Button
+	#And user click on ship it button 
 	And user will click on View Cart button 
-	#	And user verify the employee discount is visible at item level 
-	And user will click on Checkout button 
+	And user verify the employee discount is visible at item level 
+	And user will click on Checkout button and navigates to Checkout page 
 	Then Verify below Sub/Main Module of Checkout Page 
 		|# user verifies item summary of Shipping items|
 		|DetailOrderSummary_txt|
