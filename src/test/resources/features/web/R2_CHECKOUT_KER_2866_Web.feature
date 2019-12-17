@@ -63,7 +63,7 @@ Scenario: Verify the guest user is able to select the PayPal payment method in o
 	And user will click on Checkout button and navigates to Checkout page
 	And user adds shipment address on checkout page for "guest" user  
 	And user selects shipment method on check out page for "guest" user  
-	When user clicks on Go to payment CTA
+	#When user clicks on Go to payment CTA
 	Then user click on paypal radiobtn
 	And user click on paypal checkout button
 	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
