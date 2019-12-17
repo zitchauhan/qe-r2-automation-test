@@ -57,7 +57,7 @@ Scenario: Verify the user is able to see the full inventory availability on Find
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
-#	And user check the selected store name
+	And user check the selected store name
     Then user click on change location button
     Then User is able to see Find a Store Modal
     And user check that the selected store appear at the top
@@ -81,7 +81,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 Scenario: Verify the user is able to see the partial inventory availability on Find a store modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user logs in as "Bopis_Email" 
+	#And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_Product" in the searchbox
 	#And user click on Add to Cart Button
 	And user click on ship it button 
@@ -92,10 +92,13 @@ Scenario: Verify the user is able to see the partial inventory availability on F
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
+	And user adds shipment address on checkout page for "guest" user 
+	And user selects shipment method on check out page for "guest" user
 	And user check the selected store name
     Then user click on change location button
     Then User is able to see Find a Store Modal
     And user check that the selected store appear at the top
+    And user collapse the store name  
     Then user check for the products count and item available should be less 
          
 @C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-3178 @ZYP_CART_K3178-9946

@@ -599,7 +599,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='DEFAULT']")
 	public WebElement default_txt;
 
-	@FindBy(xpath = "//*[@data-auid='signInCta_m']")
+	@FindBy(xpath = "//*[@data-auid='signInCta_m'] | //*[@data-auid='myAccountCta_m']") //MJR-11/28/19
 	public WebElement myAccount_txt_Mobile;
 	
 	@FindBy(xpath = "//*[@data-auid='Address Book_m']")
@@ -743,18 +743,18 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public WebElement Order_Back_To_Order_Lnk;
 
 	// SID 22-September
-	@FindBy(xpath = "//*[text()='ORDER CANCELLATION']")
+	@FindBy(xpath = "//*[text()='ORDER CANCELLATION'] | //*[text()='Order Cancellation']")
 	public WebElement Order_Cancellation_page;
 
 	// SID 22-September
-	@FindBy(xpath = "//*[text()='Your order cancelation request has been received']")
+	@FindBy(xpath = "//*[text()='Your order cancellation request has been received']")
 	public WebElement Order_Cancellaton_Message;
 
 	// SID 22-September
-	@FindBy(xpath = "//*[@data-component='myaccount']//*[text()='REFUND PAYMENT']")
+	@FindBy(xpath = "//*[@data-component='myaccount']//*[text()='Refund Amount:'] | //*[@data-component='myaccount']//*[text()='REFUND PAYMENT']")
 	public WebElement Cancellation_Page_Refund_Payment_Details;
 
-	@FindBy(xpath = "//*[@data-auid='Orders_m']")
+	@FindBy(xpath = "//a//*[text()='Back to order'] | //*[@data-auid='Orders_m']")
 	public WebElement Order_Back_To_Order_Lnk_M;
 
 	@FindBy(xpath = "//*[text()='After your item is ready for pickup, it will be held in our store for 7 days.']")

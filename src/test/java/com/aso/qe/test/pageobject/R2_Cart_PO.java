@@ -685,6 +685,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	public void selectInStorPickUp() {
 		clickOnRadioButton(rbInStorePickUp);
+		
 	}
 
 	public boolean clickOnCheckoutButton() {
@@ -796,7 +797,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 			while(isDisplayed(btnRemoveCart)) {
 				clickOnButton(btnRemoveCart);
 				Thread.sleep(Constants.thread_medium);
-				Assert.assertTrue(isDisplayed(cartEmptyTxt));			
+				//Assert.assertTrue(isDisplayed(cartEmptyTxt));			
 				Thread.sleep(Constants.thread_highest);
 				//Thread.sleep(Constants.thread_medium);
 				if(isDisplayed(cartEmptyTxt)) {

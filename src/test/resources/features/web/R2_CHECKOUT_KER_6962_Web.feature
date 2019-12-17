@@ -179,10 +179,10 @@ Scenario: Verify System should integrate with RTS/First data for existing gift c
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
-	And user enter Gift card Number "LowBalanceGiftCard"
-	And user enter Pin Number "LowBalanceGiftCardPin" 
+	And user enter Gift card Number "GiftCardwithLessBalanceThenCart"
+	And user enter Pin Number "GiftCardwithLessBalanceThenCartPin" 
 	And user click on Apply button
-	Then applied gift card "LowBalanceGiftCard" should be displayed
+	Then applied gift card "GiftCardwithLessBalanceThenCart" should be displayed
 	And user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "Valid16DigitGiftCardNumber"
 	And user enter Pin Number "Valid8DigitGiftCardPIN"

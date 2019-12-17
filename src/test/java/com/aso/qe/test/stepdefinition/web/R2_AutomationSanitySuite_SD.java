@@ -60,16 +60,24 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	/*Modified by rahul on 22.07.19*/
 	@And("^user will click on View Cart button$")
 	public void user_will_click_on_View_Cart_button() throws Throwable {
-		Thread.sleep(Constants.thread_medium); 
-		assertTrue(clickOnButton(pdpPageObj.btnViewCart));
+		if("mobile".equalsIgnoreCase(testtype)) 
+		{
+			Thread.sleep(Constants.thread_medium); 
+			assertTrue(clickOnButton(pdpPageObj.btnViewCart));
+			
+			Thread.sleep(Constants.thread_medium);
+			assertTrue(isDisplayed(r2CartPo.btnCartCheckout));
+		}
+		else 
+		{
+			Thread.sleep(Constants.thread_medium); 
+			assertTrue(clickOnButton(pdpPageObj.btnViewCart));
 
-		/**Modified from here***/
-		
-		Thread.sleep(Constants.thread_medium);
-		assertTrue(isDisplayed(r2SanityPo.AS_btnCheckOutTop));
-		
-		
-
+			/**Modified from here***/
+			
+			Thread.sleep(Constants.thread_medium);
+			assertTrue(isDisplayed(r2SanityPo.AS_btnCheckOutTop));
+		}
 	}
 	
 	@And("^user click on pick up  pdp button$")

@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,7 @@ import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 
 public class R2_CheckOut_PO extends CommonActionHelper 
 {
@@ -388,7 +390,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//input[@data-auid=\"checkout_in_store_pickup_input_Alternate's Phone Number\"]")
 	   public WebElement PickupAltrPhone_input;
 	   
-	   @FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']|//button[@data-auid='btncheckout_ship_to_store_submit_button']")
+	   @FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']|//button[@data-auid='btncheckout_ship_to_store_submit_button']|//button[@data-auid='btncheckout_goto_payment button-1']")
 	   public WebElement ShippingConfirm_btn;
 	   
 	   @FindBy(xpath="//span[text()='Required']")
@@ -409,7 +411,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='cart_radio_button_div']//*[text()='Find a Store']")
 	   public WebElement findAStoreCart;  //SID 8-Jan
 	   
-	   @FindBy(xpath="//*[text()='Change Location']/parent::*/*[1] | //*[text()='PICKUP LOCATION']/following::*")//MJR-10/10/19
+	   @FindBy(xpath="//*[text()='Change Location']/parent::*/*[1]")//MJR-10/10/19
 	   public WebElement selectedBOPISStore;  //SID 21-Jan
 	 
 	   @FindBy(xpath="(//*[@data-auid='find-a-store-modal']//*[@data-auid='facetdrawerundefined'])[1]/button/span/div/div[1]")
@@ -456,7 +458,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   public WebElement pickupCurrentUser;  //SID 26-Jan
 	 
 	   
-	  // @FindBys({ @FindBy(xpath = "//i[@class='academyicon icon-minus']") })
 	   @FindBy(xpath = "//*[@class='academyicon icon-minus']")
 		public WebElement collapse;  //SID 21-Jan
 	   
@@ -758,7 +759,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button/parent::div//ul/li/*[contains(text(),'Room')]")public WebElement WGRoomOfChoiceService; //SID 5-September
 	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/p[1]")	public WebElement textRoomOfChoiceDelivery; //SID 6-September
 	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/p[2] | //*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/div")	public WebElement textRoomOfChoiceDeliverMessage; //SID 6-September
-	   @FindBy(xpath="(//*[@data-component='cart']//*[text()='Employee Discount applied'])[1]")public WebElement employeeDiscountItemLevel_CartPage; //SID 13-September
+	   @FindBy(xpath="(//*[@data-component='cart']//*[text()=' Academy Employee Discount Applied'])[2]")public WebElement employeeDiscountItemLevel_CartPage; //SID 13-September
 	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Employee Discount')]")public WebElement employeeDiscountOrderSummerPage; //SID 13-September
 	   @FindBy(xpath="//*[contains(@data-auid,'level2Category-Hot Deals')]")public WebElement dealTabProduct; //SID 5-September//MJR-20/08
 	   
@@ -967,6 +968,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
     @FindBy(xpath="//*[contains(text(),'You must be at least 18 years')]")public WebElement ShipToStoreforSOF_compliance_Txt;
     @FindBy(xpath="//*[@data-auid='btncheckout_ship_to_store_submit_button']")public WebElement ShipToStoreforSOF_Payment_Btn;
     @FindBy(xpath="//*[@type='checkbox']")public WebElement selectCheckbox;  //Sid 22-Jan
+    
+    @FindBy (xpath="//*[contains(@data-auid,'shipping_method_shipment_item_')]//p[contains(text(),'$') or contains(text(),'FREE')] | //*[contains(@data-auid,'checkout_shipping_method_shipment_item') and not (contains(@data-auid,'image'))]/p")
+    public List<WebElement> shippingMethodText;
   
   //Only for SOF Item--Start KER-KER-7033 & KER-7031
 
@@ -1086,10 +1090,11 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		String modifiedPhoneNumber= webPropHelper.getTestDataProperty("PhoneNumber");
 		String modifiedAddress= webPropHelper.getTestDataProperty("PO_ADDRESS");
 		String modifiedZipcode= webPropHelper.getTestDataProperty("PO_ZIPCODE");
-
+		String phoneNumber = modifiedPhoneNumber.substring(0, 3)+"-"+modifiedPhoneNumber.substring(3, 6)+"-"+modifiedPhoneNumber.substring(6, 10);
+		System.out.println("Assert Phone number = "+ phoneNumber);
 		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedFirstName+"')]"))));
-		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedSecondName+"')]"))));
-		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedPhoneNumber+"')]"))));
+		//assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedSecondName+"')]"))));
+		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+phoneNumber+"')]"))));
 		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedAddress+"')]"))));
 		assertTrue(isDisplayed(driver.findElement(By.xpath("//*[text()='SHIPPING ADDRESS']//parent::div//*[contains(text(),'"+modifiedZipcode+"')]"))));
 
@@ -1125,5 +1130,44 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 	        }
 	    }
+	
+	public String getTheShippingMenthodSumValueOnCheckout() throws InterruptedException {
+		String expectedShippingPrice ="" ;
+		DecimalFormat df2 = new DecimalFormat("###.##");
+		double shippingPrice=0.00;
+		Thread.sleep(Constants.thread_medium);
+		for (WebElement webElement : shippingMethodText) {
+			expectedShippingPrice =getText(webElement);
+			if(expectedShippingPrice.contains("FREE")) {
+				shippingPrice = 0;
+			}
+			else {
+				int i = expectedShippingPrice.indexOf('$');
+				expectedShippingPrice = expectedShippingPrice.substring(i+1, expectedShippingPrice.length());
+				System.out.println(expectedShippingPrice);
+				if (expectedShippingPrice.matches("[A-Za-z]+")) {
+					expectedShippingPrice = expectedShippingPrice.substring(0,expectedShippingPrice.indexOf('\n'));
+				}	
+				shippingPrice = shippingPrice + Double.parseDouble(expectedShippingPrice);
+			}
+		}
+		if(shippingPrice == 0) {
+			expectedShippingPrice = "FREE";
+		}else {
+			expectedShippingPrice= df2.format(shippingPrice);
+		}
+		
+		return (expectedShippingPrice);
+	}
+	
+	//Google Pay
+		@FindBy(xpath="//*[@id='identifierId']")public WebElement googlePayEmail_Txtbox_gpmodal;;
+		@FindBy(xpath="//*[@id='password']//input")public WebElement googlePayPassword_TxtBox_gpmodal;
+		@FindBy(xpath="//*[@id='identifierNext']")public WebElement googlePay_nextBtn_gpmodal;
+		@FindBy(xpath="//*[@id='passwordNext']") public WebElement googlePay_nextBtn_password_gpmodal;
+		@FindBy(xpath="//*[contains(@class,'submit-button')]") public WebElement googlePayContinueBtn_gpmodal;
+		@FindBy(xpath="//*[@data-auid='checkout_payment_options_radio_button_Google Pay']/../label") public WebElement googlePayRadiobtn;
+		@FindBy(xpath="//*[@data-auid='checkout_payment_google_pay_btn']") public WebElement googlePayBtn;
+
 	
 }

@@ -71,7 +71,7 @@ public R2_Sanity_PO sanity=PageFactory.initElements(getDriver(), R2_Sanity_PO.cl
 			scrollPageToWebElement(pdpPageObj.btnCheckout);
 			Thread.sleep(Constants.thread_highest);
 			waitForElement(pdpPageObj.btnCheckout);
-			assertTrue(clickOnButton(pdpPageObj.btnCheckout));
+			assertTrue(clickOnButton(cartPO.btnCartCheckout));
 		}else
 		{
 			 waitForElement(pdpPageObj.btnCheckout);
