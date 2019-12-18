@@ -60,7 +60,7 @@ public class R1_HomePage_PO {
 		@FindBy(xpath="//*[@data-auid='level1Category-SHOP']/*[1] | //*[@data-auid='level1Category-Shop']")public WebElement btnShop;
 		
 		//@FindBy(xpath="(//*[text()='SHOES'])[1]") public WebElement btnShoe;/RKA 8 aug
-		@FindBy(xpath="//*[@data-auid='level2Category-Shoes'] | //*[@data-auid='level2Category-Shoes & Boots']")public WebElement btnShoe;  //SID 1-Sept
+		@FindBy(xpath="//*[@data-auid='level2Category-Shoes'] | //*[@data-auid='level2Category-Shoes & Boots']  | //*[@data-auid='level2Category-Shoes + Boots'] ")public WebElement btnShoe;  //SID 1-Sept
 		//@FindBy(xpath="//*[text()='Boys Shoes']")public WebElement btnBoysShoe;/RKA 8 aug
 		@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Shoes\"]/a | //*[@data-auid=\"level3Category-Boys' Shoes_m\"]")public WebElement btnBoysShoe; //SID 19-Nov
 	

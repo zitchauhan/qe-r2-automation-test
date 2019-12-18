@@ -108,7 +108,7 @@ Scenario: Verify the user is able to see no inventory availability on Find a sto
 	And user logs in as "EmailAddress" 
 	And User empty the cart
 	Then user change the selected store "BOPIS_Store2"
-	When user enters "BOPIS_SOF_Product" in the searchbox
+	When user enters "BOPIS_Regular_Product" in the searchbox
 	#And user click on Add to Cart Button 
 	And user click on ship it button
 	And user click on view cart

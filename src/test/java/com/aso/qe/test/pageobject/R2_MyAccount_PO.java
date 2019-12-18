@@ -743,11 +743,11 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public WebElement Order_Back_To_Order_Lnk;
 
 	// SID 22-September
-	@FindBy(xpath = "//*[text()='ORDER CANCELATION'] | //*[text()='ORDER CANCELLATION']")
+	@FindBy(xpath = "//*[text()='ORDER CANCELLATION'] | //*[text()='Order Cancellation']")
 	public WebElement Order_Cancellation_page;
 
 	// SID 22-September
-	@FindBy(xpath = "//*[text()='Your order cancelation request has been received']")
+	@FindBy(xpath = "//*[text()='Your order cancellation request has been received']")
 	public WebElement Order_Cancellaton_Message;
 
 	// SID 22-September
