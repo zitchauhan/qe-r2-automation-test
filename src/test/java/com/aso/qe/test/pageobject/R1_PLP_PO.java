@@ -158,6 +158,7 @@ public class R1_PLP_PO extends CommonActionHelper{
 		else
 		{
 			//MJR 31/7/19
+			Thread.sleep(10000);
 			Thread.sleep(Constants.thread_high);  //[NS] Increased wait as script were failing on gcp due to page load issue 
 			int levelcount=categoryLevel.size();
 			if(str.equals("L1")) {
