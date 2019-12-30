@@ -78,14 +78,15 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		Thread.sleep(Constants.thread_high);
 
 		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));
-
+		
+		driver.switchTo().window(winHandleBefore);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Thread.sleep(Constants.thread_high);
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		Thread.sleep(Constants.thread_high);
-		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));
+		//assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));
 		Thread.sleep(Constants.thread_highest);
-		driver.switchTo().window(winHandleBefore);
+		
 		System.err.println(driver.getTitle());
 
 	}
