@@ -33,7 +33,7 @@ public class R1_PLP_K737_SD extends CommonActionHelper {
 
 	@Then("^user is able to see quantity attribute$")
 	public void user_is_able_to_see_quantity_attribute() throws Throwable {
-		assertTrue(isDisplayed(pdp_po.btnAddToCart));
+		assertTrue(isDisplayed(pdp_po.quantityInput));
 		assertTrue(isDisplayed(pdp_po.btnQuantityDec));
 		assertTrue(isDisplayed(pdp_po.btnQuantityInc));
 	}
