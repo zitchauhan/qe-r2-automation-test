@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -13,6 +14,7 @@ import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 import com.aso.qe.test.pageobject.R1_SIT_PO;
 import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
 public class R1_PDP_K1921_SD extends CommonActionHelper{
@@ -42,6 +44,42 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 	   Thread.sleep(Constants.thread_low); 
 		pdpPageObj.quantityInput.sendKeys("100");
 	    clickOnButton(pdpPageObj.btnAddToCart);
+	}
+	
+	@And("^user sets up Cookie$")
+	public void user_sets_Cookie() throws InterruptedException
+	{
+		Thread.sleep(4000);
+		driver.manage().addCookie(new Cookie("pdpFacelift", "true"));
+		System.out.println("cookie setup successful");	
+		
+		for(Cookie ck: driver.manage().getCookies()) {
+			System.out.println(ck.getName());
+		}
+	}
+	
+	@Then("^user navigates to new PDP page URL$")
+	public void navigateToNew_URL(){
+		String CurUrl = driver.getCurrentUrl();
+		System.out.println("Current page URL = "+CurUrl);
+		int position = CurUrl.indexOf("#"); 
+		String appendUrl = CurUrl.substring(position);		
+		String newURL = CurUrl.substring(0, position)+"?cokieAd=True"+appendUrl;
+		
+		System.out.println("new url = " +newURL);
+		driver.navigate().to(newURL);
+		System.out.println("navigated to new URL");
+	}
+	
+	@Then("^user navigates to new PDP page URL \"(.*?)\"$")
+	public void navigateToNew_PDP_Page(String SKU){
+		String CurUrl = driver.getCurrentUrl();
+		System.out.println("Current page URL = "+CurUrl);
+		String newURL = CurUrl+"?cokieAd=True#repChildCatSku="+SKU;
+		
+		System.out.println("new url = " +newURL);
+		driver.navigate().to(newURL);
+		System.out.println("navigated to new URL");
 	}
 	
 	@Then ("^User to selects the product from PLP and add product in cart with access quantity$")
