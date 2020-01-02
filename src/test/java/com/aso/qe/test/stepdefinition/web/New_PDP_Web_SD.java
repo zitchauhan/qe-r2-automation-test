@@ -1,6 +1,5 @@
 package com.aso.qe.test.stepdefinition.web;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
@@ -17,8 +16,14 @@ public class New_PDP_Web_SD extends CommonActionHelper
 
 	
 		@Then("^user increase the quantity of item in PDP$")
-		public void user_decrease_the_quantity_of_item_in_PDP() throws Throwable {
+		public void user_increase_the_quantity_of_item_in_PDP() throws Throwable {
 			 assertTrue(clickOnButton(pdp_po.btnQuantityInc));
+			 
+		}
+		
+		@Then("^user decrease the quantity of item in PDP$")
+		public void user_decrease_the_quantity_of_item_in_PDP() throws Throwable {
+			
 			 assertTrue(clickOnButton(pdp_po.btnQuantityDec));
 		}
 		
@@ -59,7 +64,7 @@ public class New_PDP_Web_SD extends CommonActionHelper
 		@And("^user validate \"(.*?)\" is disabled in PDP$")
 		public void user_validate_disabled_in_PDP(String arg) throws Throwable {
 			String quantity = webPropHelper.getTestDataProperty(arg);
-			
+			///
 		}
 		
 		
