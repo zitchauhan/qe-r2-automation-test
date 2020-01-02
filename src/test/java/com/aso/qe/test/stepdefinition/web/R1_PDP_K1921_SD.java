@@ -75,8 +75,9 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 	public void navigateToNew_PDP_Page(String SKU){
 		String CurUrl = driver.getCurrentUrl();
 		System.out.println("Current page URL = "+CurUrl);
-		String newURL = CurUrl+"?cokieAd=True#repChildCatSku="+SKU;
-		
+		int position = CurUrl.indexOf("#"); 
+		String appendUrl = CurUrl.substring(position);		
+		String newURL = CurUrl.substring(0, position)+"?cokieAd=True"+appendUrl;
 		System.out.println("new url = " +newURL);
 		driver.navigate().to(newURL);
 		System.out.println("navigated to new URL");
