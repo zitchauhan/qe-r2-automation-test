@@ -114,7 +114,7 @@ public class R1_PLP_PO extends CommonActionHelper{
 		
 		
 		//KER-615
-		@FindBy(xpath="(//*[@data-auid='product-sort-dropdown'])[1]/*[2]/*/*/*[1]")public WebElement sortby_bestSelling;
+		@FindBy(xpath="(//*[@data-auid='product-sort-dropdown'])[1]/*[2]/*/*/*[1] | (//*[@data-auid='product-sort-dropdown'])[1]/span")public WebElement sortby_bestSelling;
 		
 	//KER-615 end
 		
