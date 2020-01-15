@@ -51,8 +51,10 @@ public class R2_MYACCOUNT_K4019_SD extends CommonActionHelper
 	}
 	
 	@And("^user should be able to see cancellation message \"(.*?)\"$")
-	public void user_should_be_able_to_see_cancellation_message(String Message) {
+	public void user_should_be_able_to_see_cancellation_message(String Message) throws InterruptedException {
 		assertTrue(isDisplayed(r2MyAccountPo.Order_Cancellaton_Message));
+		Thread.sleep(5000);
+		System.out.println(r2MyAccountPo.Order_Cancellaton_Message.getText());
 		assertTrue(r2MyAccountPo.Order_Cancellaton_Message.getText().toLowerCase().contains(webPropHelper.getTestDataProperty(Message).toLowerCase()));
 	}
 	

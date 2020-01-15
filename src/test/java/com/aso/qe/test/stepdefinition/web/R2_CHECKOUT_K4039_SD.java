@@ -78,6 +78,7 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		Thread.sleep(Constants.thread_high);
 
 		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));
+		Thread.sleep(Constants.thread_high);
 		
 		driver.switchTo().window(winHandleBefore);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
