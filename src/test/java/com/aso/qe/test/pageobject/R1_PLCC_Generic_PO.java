@@ -1,6 +1,9 @@
 package com.aso.qe.test.pageobject;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
@@ -986,5 +989,40 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 
 	public void enterCVVField(String arg) throws Exception {
 		setInputText(r2CheckOutPo.txtCVVInput, webPropHelper.getTestDataProperty(arg));
+	}
+	
+	public void verifyPresenceOfCaliforniaRestrictionDisclaimer() {
+		String actualCaliforniaDisclaimer = getText(californiaDisclaimerMessage);
+		String expectedDisclaimerMessage = webPropHelper.getTestDataProperty("CaliforniaRestrictionDisclaimerMessage");
+		assertTrue(actualCaliforniaDisclaimer.equals(expectedDisclaimerMessage));
+	}
+	
+	public void verifyPresenceOfCaliforniaRestrictionDisclaimerOnPrescreenForm() {
+		String actualCaliforniaDisclaimer = getText(californiaDisclaimerMessagePreScreen);
+		String expectedDisclaimerMessage = webPropHelper.getTestDataProperty("CaliforniaRestrictionDisclaimerMessage");
+		assertTrue(actualCaliforniaDisclaimer.equals(expectedDisclaimerMessage));
+	}
+	
+	@FindBy(xpath="(//form[@name='creditApplicationModal']//p[contains(@text(),'')])[4]")
+	public WebElement californiaDisclaimerMessage;
+	@FindBy(xpath="(//form[@name='creditApplicationModal']//p[contains(@text(),'')])[2]") public WebElement californiaDisclaimerMessagePreScreen;
+	@FindBy(xpath="//div[@name='state']//button") public WebElement accmodal_statedropdownbtn;
+	@FindBy(xpath="//div[@name='state']//li[@class='dp_list_options ']//span") public List<WebElement> acc_modal_stateDropDownList;
+	@FindBy(xpath="//*[@data-auid='credit_application_zipcode']//..//..//..//p") public WebElement caZIPRestrictionError;
+	
+	
+	public void verifyCaliforniaStateCodeIsNotPresentInStateDropdown() {
+		String californiaStateCode = webPropHelper.getTestDataProperty("californiaStateCode");
+		assertTrue(isDisplayed(accmodal_statedropdownbtn));
+		clickOnButton(accmodal_statedropdownbtn);
+		System.out.println(acc_modal_stateDropDownList.size());
+		for (WebElement stateCodes : acc_modal_stateDropDownList) {
+			assertFalse(getText(stateCodes).equalsIgnoreCase(californiaStateCode));
+		}
+	}
+	
+	public void verifyCaliforniaRestrictionErrorMessageIsDisplayedBelowZIPTextBox() {
+		assertTrue(isDisplayed(caZIPRestrictionError));
+		assertTrue(getText(caZIPRestrictionError).equals(webPropHelper.getTestDataProperty("ErrorMessageOncaliforniaZIPCode")));
 	}
 }
