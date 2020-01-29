@@ -1,5 +1,6 @@
 Feature: Prevent customers with a California shipping or billing state from purchasing online
 
+#InProgress
   
   Scenario: Verify Global State Restriction message is displayed if user trying to move from shipping address
     			with state from restriction lists
