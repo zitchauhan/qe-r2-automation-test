@@ -178,7 +178,7 @@ public R2_Sanity_PO sanity=PageFactory.initElements(getDriver(), R2_Sanity_PO.cl
 		 }
 	@Then("^user click on pickup button$") //CR MJR-17/7/19
 		public void user_click_on_pickup_button() throws Throwable{
-			clickOnButton(pdpPageObj.pickupBtn);
+			clickOnButton(pdpPageObj.pickupBtn_m);
 		}
 }
 

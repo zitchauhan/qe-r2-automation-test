@@ -84,7 +84,7 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 	}
 
 	@Then("^user click on Go To Shipping Method button in Checkout page$")
-	public void user_click_on_Go_To_Shipping_Method_button_in_Checkout_page() throws Throwable {
+	public void user_clicks_Go_To_Shipping_Method_button_in_Checkout_page() throws Throwable {
 		try {
 			assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
 			Thread.sleep(Constants.thread_medium);
@@ -93,7 +93,7 @@ public class R2_CHECKOUT_K6821_SD extends CommonActionHelper {
 		} 
 	}
 	@Then("^user click on Go To Payment button in Checkout page$")
-	public void user_click_on_Go_To_Payment_button_in_Checkout_page() throws Throwable {
+	public void user_clicks_Go_To_Payment_button_in_Checkout_page() throws Throwable {
 		try {
 			assertTrue(clickOnButton(r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn));
 			Thread.sleep(Constants.thread_medium);

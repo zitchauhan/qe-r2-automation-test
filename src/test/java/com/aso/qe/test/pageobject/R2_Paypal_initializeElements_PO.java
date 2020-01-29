@@ -100,7 +100,7 @@ public class R2_Paypal_initializeElements_PO extends CommonActionHelper{
 	}
 
 
-	@And("^user click on Go To Shipping Method button in Checkout page$")
+	@And("^user clicks Go To Shipping Method button in Checkout page$")
 	public void user_click_on_Go_To_Shipping_Method_button_in_Checkout_page() throws Throwable {
 		try {
 			btnGoToShippingMethod.click();
@@ -110,7 +110,7 @@ public class R2_Paypal_initializeElements_PO extends CommonActionHelper{
 		} 
 	}
 
-	@Then("^user click on Go To Payment button in Checkout page$")
+	@Then("^user clicks Go To Payment button in Checkout page$")
 	public void user_click_on_Go_To_Payment_button_in_Checkout_page() throws Throwable {
 		try {
 			checkout_ShippingMethod_GoToPayment_btn.click();

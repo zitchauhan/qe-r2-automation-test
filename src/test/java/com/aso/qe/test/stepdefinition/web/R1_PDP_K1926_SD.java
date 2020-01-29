@@ -77,7 +77,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(pdp_po.btnQuantityDec));
 		assertTrue(isDisplayed(pdp_po.btnQuantityInc));
 		assertTrue(isDisplayed(pdp_po.txtDesiredQtyValue_1));
-
+		
 	}
 	
 	@Then("^user should be able to see ship it button and quantity section$")
@@ -244,6 +244,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 	}
 	
 	
+	
 	//SID ADDED AS REQUIRED FOR R1 CODES
 	@When("^user enters \"(.*?)\" in the searchbox$")
 	public void user_enters_in_the_searchbox(String searchText) throws Throwable 
@@ -251,10 +252,11 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 		searchKey=webPropHelper.getTestDataProperty(searchText);   //SID 24-August;
 		if("mobile".equalsIgnoreCase(testtype)) 
 		{
-			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtnMobile));
+			//assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtnMobile));
 			if(!isDisplayed(R1_SearchProduct_PO.searchTextBoxMobile)) 
 			{
-				assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
+				//assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
+				clickOnButton(globalElementHeader_HomePO.magnifying_M);
 				//Thread.sleep(1000);
 			}
 			setInputText(R1_SearchProduct_PO.searchTextBoxMobile, webPropHelper.getTestDataProperty(searchText)); 
@@ -280,16 +282,19 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 	public void user_enters_in_the_search_box(String searchText) throws Throwable {
 		waitForPageLoad(driver);
 		//Thread.sleep(2000);
+		System.out.println("text to search =" +searchText);
 		searchKey = webPropHelper.getTestDataProperty(searchText);
 		String[] arrSearchKey = searchKey.split(",");
 
 		WebElement searchTextBox = null;
 		WebElement searchButton = null;
-		// WebElement
+		
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			// assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtnMobile));
 			if (!isDisplayed(R1_SearchProduct_PO.searchTextBoxMobile))
+				System.out.println("clicking magnify symbol");
+			System.out.println("magnify xpath=  "+globalElementHeader_HomePO.magnifying_M);
 				assertTrue(clickOnButton(globalElementHeader_HomePO.magnifying_M));
 			Thread.sleep(Constants.thread_low); 
 			searchTextBox = R1_SearchProduct_PO.searchTextBoxMobile;

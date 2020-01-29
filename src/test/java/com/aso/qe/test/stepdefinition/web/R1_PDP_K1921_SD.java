@@ -34,7 +34,7 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 	}
 	
 	
-
+	
 
 	@Then("^User to select the product$")
 	public void user_to_select_the_product() throws Throwable {
@@ -46,7 +46,7 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 	    clickOnButton(pdpPageObj.btnAddToCart);
 	}
 	
-	@And("^user sets up Cookie$")
+	/*@And("^user sets up Cookie$")*/
 	public void user_sets_Cookie() throws InterruptedException
 	{
 		Thread.sleep(4000);
@@ -58,7 +58,7 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 		}
 	}
 	
-	@Then("^user navigates to new PDP page URL$")
+	/*@Then("^user navigates to new PDP page URL$")*/
 	public void navigateToNew_URL(){
 		String CurUrl = driver.getCurrentUrl();
 		System.out.println("Current page URL = "+CurUrl);
@@ -71,7 +71,7 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 		System.out.println("navigated to new URL");
 	}
 	
-	@Then("^user navigates to new PDP page URL \"(.*?)\"$")
+	/*@Then("^user navigates to new PDP page URL \"(.*?)\"$")*/
 	public void navigateToNew_PDP_Page(String SKU){
 		String CurUrl = driver.getCurrentUrl();
 		System.out.println("Current page URL = "+CurUrl);
