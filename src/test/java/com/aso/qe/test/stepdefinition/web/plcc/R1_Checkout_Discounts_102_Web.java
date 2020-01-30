@@ -18,11 +18,16 @@ public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 	@When("^user click on ship it button$")
 	public void user_click_on_ship_it_button() throws Throwable {
 		
-		Thread.sleep(4000);
-		assertTrue(isDisplayed(genericPO.shipItButton));
-		assertTrue(clickOnButton(genericPO.shipItButton));
+		if("mobile".equalsIgnoreCase(testtype)) {
+			Thread.sleep(4000);
+			assertTrue(isDisplayed(genericPO.shipToHome_m));
+			assertTrue(clickOnButton(genericPO.shipToHome_m));
+		}else {
+			Thread.sleep(4000);
+			assertTrue(isDisplayed(genericPO.shipItButton));
+			assertTrue(clickOnButton(genericPO.shipItButton));
+		}
+		
 	}
-	
-	
 	
 		}

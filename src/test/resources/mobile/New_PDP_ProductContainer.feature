@@ -3,7 +3,7 @@ Feature: To verify Name, Title,price,Product attributes and their behavior
 @Web @CR-Anirudh @PDPFacelift
   Scenario: To verify URL, Image, Attributes ,Add to cart button section by navigation Desktop
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user enters "NormalSKU" in the search box
+    When user enters "NormalSKU" in the searchbox
     And user sets up cookie
 	Then user navigates to new pdp page url "NormalSKU"
     And user verifies star rating is present
@@ -17,7 +17,7 @@ Feature: To verify Name, Title,price,Product attributes and their behavior
 @Web @CR-Anirudh @PDPFaceLift   
 	Scenario: To verify Sticky behavior of Title, Price and Star ratings,Product attribute buttons
 	Given user launches the browser and navigates to "ASO_HOME" page
-     When user enters "BOPIS_Product" in the search box
+     When user enters "BOPIS_Product" in the searchbox
     And user should be able to see the sku and item numbers for the given image
 	And user sets up cookie
 	Then user navigates to new pdp page url "BOPIS_Product"
@@ -28,7 +28,7 @@ Feature: To verify Name, Title,price,Product attributes and their behavior
 @Web @CR-Anirudh @PDPFaceLift 
 	Scenario: To verify Sticky behavior of AddToCart buttons
 	Given user launches the browser and navigates to "ASO_HOME" page
-     When user enters "BOPIS_Product" in the search box
+     When user enters "BOPIS_Product" in the searchbox
     And user should be able to see the sku and item numbers for the given image
 	And user sets up cookie
 	Then user navigates to new pdp page url "BOPIS_Product"
@@ -39,7 +39,7 @@ Feature: To verify Name, Title,price,Product attributes and their behavior
 @Web @CR-Anirudh @PDPFaceLift 
 	Scenario: To verify non Sticky behavior of save and clearance tag
 	Given user launches the browser and navigates to "ASO_HOME" page
-     When user enters "SkuWIthClearanceBadge" in the search box
+     When user enters "SkuWIthClearanceBadge" in the searchbox
     #And user should be able to see the sku and item numbers for the given image
 	And user sets up cookie
 	Then user navigates to new pdp page url "SkuWIthClearanceBadge"

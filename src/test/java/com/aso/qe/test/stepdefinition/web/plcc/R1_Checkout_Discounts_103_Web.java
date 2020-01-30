@@ -3,6 +3,9 @@ package com.aso.qe.test.stepdefinition.web.plcc;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
@@ -139,6 +142,8 @@ public void user_increases_quantity_of_product(String arg1) throws Throwable {
 	assertTrue(isDisplayed(genericPO.quantityInputField));
 	waitForElement(genericPO.quantityInputField);
 	Thread.sleep(10000);
+	Robot r= new Robot();
+	r.keyPress(KeyEvent.VK_ENTER);
 }
 @When("^user clicks on cart icon$")
 public void user_clicks_on_cart_icon() throws Throwable {

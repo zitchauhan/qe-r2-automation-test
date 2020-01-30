@@ -3,7 +3,7 @@ Feature: To verify promotional messages on PDP page
 @Web @CR-Anirudh @PDPFaceLift 
 	Scenario: To verify presence of promotional messages - ship for fixed price
 	Given user launches the browser and navigates to "ASO_HOME" page
-     When user enters "shipFrFixedPriceSKU" in the search box
+     When user enters "shipFrFixedPriceSKU" in the searchbox
     And user should be able to see the sku and item numbers for the given image
 	And user sets up cookie
 	Then user navigates to new pdp page url "shipFrFixedPriceSKU"
@@ -13,7 +13,7 @@ Feature: To verify promotional messages on PDP page
 @Web @CR-Anirudh @PDPFaceLift 
 	Scenario: Validate ToolTip present for detailed message
 	Given user launches the browser and navigates to "ASO_HOME" page
-     When user enters "shipFrFixedPriceSKU" in the search box
+     When user enters "shipFrFixedPriceSKU" in the searchbox
     And user should be able to see the sku and item numbers for the given image
 	And user sets up cookie
 	Then user navigates to new pdp page url "shipFrFixedPriceSKU"
@@ -21,10 +21,10 @@ Feature: To verify promotional messages on PDP page
 	And user should see ToolTip near promotional msg 
 	
 	
-	@Web @CR-Anirudh @PDPFaceLift @unq
+	@Web @CR-Anirudh @PDPFaceLift 
 	Scenario: To verify presence of promotional messages stacking
 	Given user launches the browser and navigates to "ASO_HOME" page
-     When user enters "MultiplePromoMsgSku" in the search box
+     When user enters "MultiplePromoMsgSku" in the searchbox
     And user should be able to see the sku and item numbers for the given image
 	And user sets up cookie
 	Then user navigates to new pdp page url "MultiplePromoMsgSku"
@@ -33,7 +33,7 @@ Feature: To verify promotional messages on PDP page
 #	@Web @CR-Anirudh @PDPFaceLift 
 #	Scenario: To verify presence of promotional messages - ship for free
 #	Given user launches the browser and navigates to "ASO_HOME" page
-#     When user enters "shipForFreeMsgSKU" in the search box
+#     When user enters "shipForFreeMsgSKU" in the searchbox
 #    And user should be able to see the sku and item numbers for the given image
 #	And user sets up cookie
 #	Then user navigates to new pdp page url "shipForFreeMsgSKU"

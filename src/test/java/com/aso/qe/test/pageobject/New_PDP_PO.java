@@ -46,6 +46,9 @@ public class New_PDP_PO extends CommonActionHelper
 	
 	@FindBy(xpath="//*[contains(@data-auid,'PDP_OnlineMessage')] | //div[@id='renderShipItAtc']") public WebElement addToCartButton;
 	
+	@FindBy(xpath="(//*[contains(@data-auid,'PDP_OnlineMessage')] | //div[@id='renderShipItAtc'])[2]") public WebElement addToCartButton_m;
+	
+	
 	@FindBy(xpath="//h1[@data-auid='PDP_ProductName']") public WebElement productTitle;
 	
 	@FindBy(xpath="//div[@data-auid='PDP_SaveBadge']") public WebElement saveBadge;
@@ -135,6 +138,9 @@ public class New_PDP_PO extends CommonActionHelper
 		
 		@FindBy(xpath="(//*[@data-auid='PDP_Color_Attribute'][1])[2]") public WebElement color_attr;
 		@FindBy(xpath="(//*[@data-auid='PDP_Color_Attribute'][2])[1]") public WebElement alt_color;
+		
+		@FindBy(xpath="(//div[@data-auid='PDP_Color_Attribute'][2])[2]") public WebElement alt_color_m;
+		
 				
 		//@FindBy(xpath="//*[@data-auid='PDP_Color_Attribute' and contains(@class,'swiper-slide position-relative')][2]") public WebElement color_attr;
 		
@@ -159,10 +165,10 @@ public class New_PDP_PO extends CommonActionHelper
 			By selector = By.xpath("//*[@data-auid='promotional-message']");
 			List<WebElement>promoMsgs =driver.findElements(selector);
 			
-			for(int i=0;i<promoMsgs.size();i++) {
-				WebElement elemnt = driver.findElement(By.xpath("//*[@data-auid='promotional-message']("+i+")"));
-			assertTrue(isDisplayed(elemnt));
-			System.out.println("promo messages present = "+elemnt.getText());
+			for(int i=1;i<=promoMsgs.size();i++) {
+				WebElement elemnt = driver.findElement(By.xpath("(//*[@data-auid='promotional-message'])["+i+"]"));
+				assertTrue(isDisplayed(elemnt));
+				System.out.println("promo messages present = "+elemnt.getText());
 			}
 			
 		}

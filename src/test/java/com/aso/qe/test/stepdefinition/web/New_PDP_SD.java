@@ -190,7 +190,7 @@ public class New_PDP_SD extends CommonActionHelper {
 	@And("^user is able to see Add to cart button$")
 	public void user_verify_AddToCart_button_present() {
 		if("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(newPDP.addToCartButton));
+			assertTrue(isDisplayed(newPDP.addToCartButton_m));
 		}else {
 			assertTrue(isDisplayed(newPDP.addToCartButton));
 		}
@@ -792,8 +792,8 @@ public class New_PDP_SD extends CommonActionHelper {
 	@And("^user verifies image is updated on selecting different colour$")
 	public void verify_diff_color() {
 		if("mobile".equalsIgnoreCase(testtype)) {
-			assertTrue(isDisplayed(newPDP.alt_color));
-			assertTrue(clickOnButton(newPDP.alt_color));
+			assertTrue(isDisplayed(newPDP.alt_color_m));
+			assertTrue(clickOnButton(newPDP.alt_color_m));
 		}else {
 			assertTrue(isDisplayed(newPDP.alt_color));
 			assertTrue(clickOnButton(newPDP.alt_color));

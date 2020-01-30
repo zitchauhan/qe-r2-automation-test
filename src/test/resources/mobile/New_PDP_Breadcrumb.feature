@@ -7,7 +7,8 @@ Scenario: Verify that user view breadcrumb
 #	And verify discount is displayed Test
 #	And Find Store Modal should pop-up 
 #	When User select store with "BOPIS_Store2" 
-	And User searches a product "BOPIS_Regular_Product" and navigates to PDP
+	When user enters "BOPIS_Regular_Product" in the searchbox
+#	And User searches a product "BOPIS_Regular_Product" and navigates to PDP
 	And user sets up cookie
     Then user navigates to new pdp page url "BOPIS_Regular_Product"
     Then User verifies breadcrumb is present for the product
