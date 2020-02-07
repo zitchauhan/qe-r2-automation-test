@@ -10,6 +10,7 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
@@ -22,6 +23,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.appium.java_client.functions.ExpectedCondition;
 import io.restassured.internal.assertion.PathFragmentEscaper;
 
 public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
@@ -91,6 +93,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 
 		if (arg1.toLowerCase().contains(("credit card"))) {
 			String creditCardNumber;
+			String FirstName = "First_Name";
 			String cvv = "CVV";
 			//// Credit card to be picked
 			if (arg1.toLowerCase().contains(("visa")))
@@ -111,10 +114,28 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 					chooseCreditCard = true;
 			}
 
-			if (chooseCreditCard | userWithoutExistingPaymentDetails) {
+			if (chooseCreditCard | userWithoutExistingPaymentDetails) {			
+				//switching to the iframe for card holder name - updated by Sachin to fix smoke test failure
+				Thread.sleep(Constants.thread_high);
+				driver.switchTo().frame(r2CheckOutPo.NameField_Frame);
+				setInputText(r2CheckOutPo.CardHolderName_Input, webPropHelper.getTestDataProperty(FirstName));
+				driver.switchTo().defaultContent();
+				
+				Thread.sleep(Constants.thread_low);
+				driver.switchTo().frame(r2CheckOutPo.CardField_Frame);
 				setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty(creditCardNumber));
+				driver.switchTo().defaultContent();
+				
+				Thread.sleep(Constants.thread_medium);
+				driver.switchTo().frame(r2CheckOutPo.ExpField_Frame);
 				setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
+				driver.switchTo().defaultContent();
+				
+				Thread.sleep(Constants.thread_low);
+				driver.switchTo().frame(r2CheckOutPo.CVVField_Frame);
 				setInputText(r2CheckOutPo.Cvv_Input, webPropHelper.getTestDataProperty(cvv));
+				driver.switchTo().defaultContent();
+				
 				if (arg2.equalsIgnoreCase("guest") | arg2.equalsIgnoreCase("unauthenticated")) {
 					setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
 							r2MyAccountPO.generateRandomEmailId());

@@ -20,6 +20,7 @@ import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_LandingPage_PO;
 
 import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -270,6 +271,49 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 			e.printStackTrace();
 		}
 	}
+	
+	@Then("^user verify california restriction disclaimer is displayed$")
+	public void user_verify_california_restriction_disclaimer_is_displayed() throws Throwable{
+		try {
+			genericPO.verifyPresenceOfCaliforniaRestrictionDisclaimer();
+		
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+	
+	}
+	
+	@Then("^user verify california restriction disclaimer is displayed on Prescreen form$")
+	public void user_verify_california_restriction_disclaimer_is_displayed_on_Prescreen_form() throws Throwable{
+		try {
+			genericPO.verifyPresenceOfCaliforniaRestrictionDisclaimerOnPrescreenForm();
+		
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+	
+	}
+
+	@And("^user verify California state code is not present in state dropdown$")
+	public void user_verify_California_state_code_is_not_present_in_state_dropdown() throws Throwable{
+		try {
+			genericPO.verifyCaliforniaStateCodeIsNotPresentInStateDropdown();
+		
+		}catch (Exception e){
+			e.printStackTrace();
+	}
+	}
+
+	@And("^User verify california restriction error message is displayed below ZIP textbox$")
+	public void User_verify_california_restriction_error_message_is_displayed_below_ZIP_textbox() throws Throwable{
+		try {
+			genericPO.verifyCaliforniaRestrictionErrorMessageIsDisplayedBelowZIPTextBox();
+		
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+	}
+
 	
 	
 
