@@ -47,6 +47,14 @@ public class R2_PDP_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='wishListPopover_add_to_wishList_0']")
 	public WebElement WishList_Pop_Item_Lnk;
 	
+	@FindBy(xpath="//*[@data-auid='plccCardNumber']")
+	public WebElement Academy_Credit_CardNumber_txt;
+	
+	@FindBy(xpath="//*[text()='Cardholder Name']/following::*[1]")public WebElement CreditCardHolder_txt;
+	@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]")public WebElement CreditCardNumber_txt;
+	@FindBy(xpath="//*[text()='Expiration Date']/following::*[1]")public WebElement ExpirationDate_txt;
+	@FindBy(xpath="//*[text()='CVV']/following::*[3]")public WebElement Cvv_txt;
+	
 	@FindBy(xpath="//*[@data-auid='creditCardNumber']")
 	public WebElement Credit_CardNumber_txt;
 	
