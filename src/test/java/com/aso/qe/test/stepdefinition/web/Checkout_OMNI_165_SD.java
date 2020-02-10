@@ -8,7 +8,10 @@ import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+
 
 public class Checkout_OMNI_165_SD extends CommonActionHelper {
 	
@@ -32,18 +35,31 @@ public class Checkout_OMNI_165_SD extends CommonActionHelper {
 			setInputText(r2CheckOutPo.inputCheckoutLasttName, webPropHelper.getTestDataProperty("LastName"));
 			setInputText(r2CheckOutPo.inputCheckoutPhoneNumber, r2MyAccountPO.generateRandomMobileNumber());
 			setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty("Address"));
+			clearText(r2CheckOutPo.inputCheckoutZipCode);
 			setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("StateRestrictionZipList"));
 			assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
 		}
 		
 	}
 	
-	@Then("^global restriction error message is displayed$")
-	public void global_restriction_error_message_is_displayed() throws Throwable {
-		String expectedErrorMessage = webPropHelper.getTestDataProperty("StateRestrictionMessage");
-		expectedErrorMessage.replace("CA", webPropHelper.getTestDataProperty("StateRestrictionList"));
-		//Add assert statement 
+	@Then("^global restriction error message is displayed for \"(.*?)\" on \"(.*?)\" section$")
+	public void global_restriction_error_message_is_displayed(String arg1, String arg2) throws Throwable {
+		if(arg2 == "shipping")
+		{
+		String actualErrorMessage = (r2CheckOutPo.Shipping_StateRestriction_Message).getText();		
+		String expectedErrorMessage = webPropHelper.getTestDataProperty("StateRestrictionMessage_Shipping");
+		expectedErrorMessage.replace("CA", arg1);
+		assertEquals(expectedErrorMessage, actualErrorMessage);
+		}
+		else if(arg2 == "payment")
+		{
+			String actualErrorMessage = (r2CheckOutPo.Payment_StateRestriction_Message).getText();		
+			String expectedErrorMessage = webPropHelper.getTestDataProperty("StateRestrictionMessage_Payment");
+			expectedErrorMessage.replace("CA", arg1);
+			assertEquals(expectedErrorMessage, actualErrorMessage);
+		}
 	}
+	
 	
 	@And("^user adds restricted billing address on checkout page$")
 	public void user_adds_restricted_billing_address_on_checkout_page() throws Throwable {
@@ -58,7 +74,7 @@ public class Checkout_OMNI_165_SD extends CommonActionHelper {
 		setInputText(r2CheckOutPo.LastName_Input, webPropHelper.getTestDataProperty("LastName"));
 		setInputText(r2CheckOutPo.PhoneNumber_Input, webPropHelper.getTestDataProperty("PhoneNumber"));
 		setInputText(r2CheckOutPo.Adderss_Input, webPropHelper.getTestDataProperty("Address"));
-		setInputText(r2CheckOutPo.ZipCode_Input, webPropHelper.getTestDataProperty("ShippingRestrictedZipCode"));
+		setInputText(r2CheckOutPo.ZipCode_Input, webPropHelper.getTestDataProperty("StateRestrictionZipList"));
 		if (r1_SearchPO.verifyTextDisplayedOnPage("Email Address for Order Confirmation")) {
 			setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty("EmailAddress"));
 		}

@@ -30,7 +30,8 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
 	
 	//@FindBy(xpath = "//*[@data-auid='btnShipIt']|//*[text()='Ship It']|//*[starts-with(@data-auid,'btnShipIt')]")
-	@FindBy(xpath="//section[@class='css-b7k0vt']//button[contains(@class,'d-flex flex-row css-m')]")
+	//@FindBy(xpath="//section[@class='css-b7k0vt']//button[contains(@class,'d-flex flex-row css-m')]")
+	@FindBy(xpath="//div[@class='large']//*[text()='Home delivery']")
 	public WebElement shipItButton; 
 	
 	@FindBy(xpath = "//*[@data-auid='btnPickUpATC']")

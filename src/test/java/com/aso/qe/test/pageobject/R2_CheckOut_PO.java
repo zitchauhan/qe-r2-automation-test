@@ -1168,10 +1168,15 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[contains(@class,'submit-button')]") public WebElement googlePayContinueBtn_gpmodal;
 		@FindBy(xpath="//*[@data-auid='checkout_payment_options_radio_button_Google Pay']/../label") public WebElement googlePayRadiobtn;
 		@FindBy(xpath="//*[@data-auid='checkout_payment_google_pay_btn']") public WebElement googlePayBtn;
+		
+		
+	//added By Sachin	
 		@FindBy(xpath="//*[@id='name']")public WebElement CardHolderName_Input; //added by Sachin on 23/1/2020 for smoke fix
 		@FindBy(id="first-data-payment-field-name")public WebElement NameField_Frame;//added by Sachin
 		@FindBy(id="first-data-payment-field-card")public WebElement CardField_Frame;//added by Sachin
 		@FindBy(id="first-data-payment-field-exp")public WebElement ExpField_Frame;//added by Sachin
 		@FindBy(id="first-data-payment-field-cvv")public WebElement CVVField_Frame;//added by Sachin
+		@FindBy(xpath="//div[1]//div[6]//*[contains(@class,'css-')]")public WebElement Shipping_StateRestriction_Message;
+		@FindBy(xpath="//span[@class='css-12w8fd6 text-danger']") public WebElement Payment_StateRestriction_Message;
   
 }
