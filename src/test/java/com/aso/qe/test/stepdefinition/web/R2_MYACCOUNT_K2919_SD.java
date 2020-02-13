@@ -59,34 +59,48 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	
 	@And("^User enters Credit Card number \"(.*?)\"$")
 	public void user_enters_Credit_Card_number(String text) throws Throwable {
-		setInputText(myAccountPo.txtCreditCardNumber, webPropHelper.getTestDataProperty(text));
-		keyAction.sendKeys(Keys.TAB).build().perform();
-			}
-	
-		
+//		setInputText(myAccountPo.txtCreditCardNumber, webPropHelper.getTestDataProperty(text));
+//		keyAction.sendKeys(Keys.TAB).build().perform();
+//			}
+
+		//changes done by Sachin for payeezyv2 switching to iframe on 11-2-2020
+		Thread.sleep(Constants.thread_low);
+		driver.switchTo().frame(r2CheckOutPo.CardField_Frame);
+		setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty(text));
+		driver.switchTo().defaultContent();
+	}	
 		
 	@And("^User enters expiration date \"(.*?)\"$")
 	public void user_enters_expiration_date(String arg1) throws Throwable {
-		setInputText(myAccountPo.txtExpiryDate, webPropHelper.getTestDataProperty(arg1));
-		keyAction.sendKeys(Keys.TAB).build().perform();
+		//changes done by Sachin for payeezyv2 switching to iframe on 11-2-2020
+		Thread.sleep(Constants.thread_low);
+		driver.switchTo().frame(r2CheckOutPo.ExpField_Frame);
+		setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty(arg1));
+		driver.switchTo().defaultContent();
 	}
 
 		
 	@Given("^User enters CVV number \"(.*?)\"$")
 	public void user_enters_CVV_number(String arg1) throws Throwable {
+		//changes done by Sachin for payeezyv2 switching to iframe on 11-2-2020
+		Thread.sleep(Constants.thread_low);
+		driver.switchTo().frame(r2CheckOutPo.CVVField_Frame);
 		setInputText(myAccountPo.txtCVV, webPropHelper.getTestDataProperty(arg1));
-		keyAction.sendKeys(Keys.TAB).build().perform();
+		driver.switchTo().defaultContent();
 	}
 
 	
 	@Then("^verify that the field population does not happen$")
 	public void verify_that_the_field_population_does_not_happen() throws Throwable {
+		//changes done by Sachin for payeezyv2 switching to iframe on 11-2-2020
+		driver.switchTo().frame(r2CheckOutPo.CVVField_Frame);
 	    String cvv = myAccountPo.txtCVV.getAttribute("Value");
 		if(cvv.isEmpty()) {
 			  logger.info("CVV field is Empty");
 		   }else {
 			  	  logger.info("CVV field is not Empty");
 		   }
+		driver.switchTo().defaultContent();
 	}
 	
 	

@@ -81,7 +81,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@name='address']")
 	public WebElement inputCheckoutAddress;
 
-	@FindBy(xpath = "//*[@name='zipCode']")
+	@FindBy(xpath = "//*[@name='zipCode'] | //*[@data-auid='address_zipcode']")
 	public WebElement inputCheckoutZipCode;
 	
 
@@ -563,8 +563,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='checkout_payment']/preceding::*[1] | //*[@data-auid='checkout_edit_payment']/preceding::*[1]")public WebElement PaymentHeader_Txt;
 		@FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'PAYMENT METHOD')] | //*[contains(text(),'PAYMENT')]")public WebElement PaymentMethodHeader_Txt; //CR-GK 9-Oct
 		@FindBy(xpath="//div[@class='mb-1']")public WebElement Bopisbillingaddres;
+		@FindBy(xpath="//*[text()='Academy Credit Card']")public WebElement Academy_CreditCard_radioBtn;
 		@FindBy(xpath="//*[text()='Credit Card']")public WebElement CreditCard_radioBtn;
 		@FindBy(xpath="(//*[text()='PayPal'])[1]")public WebElement PayPal_radioBtn; //Updated by VSN on 07-22-19 for smoke test fix //updated by MJR on 15/7/19
+		@FindBy(xpath="//*[text()='Cardholder Name']/following::*[1]")public WebElement CreditCardHolder_Input;
 		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1] | //input[@id='card']") public WebElement CreditCardNumber_Input;
 		@FindBy(xpath="//*[text()='Exp Date']/following::*[1]")public WebElement ExpirationDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[@id='cc-cvv'] | //*[@id='cvv']")public WebElement Cvv_Input; //updated by Sachin on 01-23-20 for smoke test fix
@@ -576,7 +578,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='checkout_shipping_address']/..//button")public WebElement chooseShippingAddress_Dd; //CR-SK 22 Sep //updated by MJR on 15/7/19
 		@FindBy(xpath="//*[@name='Dropdown']")public WebElement chooseShippingAddress_Dd_Mob; //CR-GK 13Oct
         @FindBy(xpath="//*[@data-auid='undefined_listOption_1']")public WebElement AddNewCreditCard_Txt;
-        @FindBy(xpath="//*[@name='creditcardField']/../span[2]/img")public WebElement Checkout_CreditCardPay_ImgLogo;
+        @FindBy(xpath="//*[@name='creditcardField']/../span[2]/img | //img[@class='css-1lzwx1m'] | //*[@name='plccCardField']/../span[2]/img")public WebElement Checkout_CreditCardPay_ImgLogo;
         @FindBy(xpath="//*[contains(text(),'Choose Card')]/following::*[2]")public WebElement Checkout_CreditCard_DropDown; 
         
 
@@ -1168,10 +1170,20 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[contains(@class,'submit-button')]") public WebElement googlePayContinueBtn_gpmodal;
 		@FindBy(xpath="//*[@data-auid='checkout_payment_options_radio_button_Google Pay']/../label") public WebElement googlePayRadiobtn;
 		@FindBy(xpath="//*[@data-auid='checkout_payment_google_pay_btn']") public WebElement googlePayBtn;
-		@FindBy(xpath="//*[@id='name']")public WebElement CardHolderName_Input; //added by Sachin on 23/1/2020 for smoke fix
-		@FindBy(id="first-data-payment-field-name")public WebElement NameField_Frame;//added by Sachin
-		@FindBy(id="first-data-payment-field-card")public WebElement CardField_Frame;//added by Sachin
-		@FindBy(id="first-data-payment-field-exp")public WebElement ExpField_Frame;//added by Sachin
-		@FindBy(id="first-data-payment-field-cvv")public WebElement CVVField_Frame;//added by Sachin
+		
+		
+	//added By Sachin	
+		@FindBy(xpath="//*[@id='name']")public WebElement CardHolderName_Input; //added on 23/1/2020 for smoke fix
+		@FindBy(id="first-data-payment-field-name")public WebElement NameField_Frame;
+		@FindBy(id="first-data-payment-field-card")public WebElement CardField_Frame;
+		@FindBy(id="first-data-payment-field-exp")public WebElement ExpField_Frame;
+		@FindBy(id="first-data-payment-field-cvv")public WebElement CVVField_Frame;
+		@FindBy(xpath="//div[1]//div[6]//*[contains(@class,'css-')] | //*[@role='alert']")public WebElement Shipping_StateRestriction_Message;
+		@FindBy(xpath="//span[@class='css-12w8fd6 text-danger']") public WebElement Payment_StateRestriction_Message;
+		@FindBy(xpath="//button[@xpath='1']") public WebElement MyAccount_AddAddress;
+		@FindBy(xpath="//span[contains(@class,'danger')]") public WebElement MyAccount_Address_RestrictionMsg;
+		@FindBy(xpath="//span[@class='linkStyle'][text()='Edit']") public WebElement MyAccount_Address_Edit;
+		@FindBy(xpath="//*[@name='billingZipCode']") public WebElement inputCheckoutBillingZipCode;
+		
   
 }

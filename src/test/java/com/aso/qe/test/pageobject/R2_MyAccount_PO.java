@@ -416,6 +416,10 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	// @FindBy(xpath = "//h5[text()='PAYMENTS']")
 	// public WebElement headerPayments;
+	
+	@FindBy(xpath="//*[text()='DEFAULT']/following::div[5]")public WebElement defaultCreditCard;
+	
+	@FindBy(xpath="//button[@class='css-7frz9w']")public WebElement defaultCreditCardChkoutPayment;
 
 	@FindBy(xpath = "//*[text() = 'CREDIT CARDS']")
 	public WebElement headerCreditCards;

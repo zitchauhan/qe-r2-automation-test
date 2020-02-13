@@ -58,7 +58,18 @@ public class R2_VERIFICATION_PDP_SD extends CommonActionHelper {
 				else if (currentElement.equalsIgnoreCase("PaymentFormSubmit_btn"))
 					assertTrue(isDisplayed(r2PdpPo.PaymentFormSubmit_btn));
 				else if (currentElement.equalsIgnoreCase("EnableBuyNow_btn"))
-					assertTrue(isDisplayed(r2PdpPo.EnableBuyNow_btn));				
+					assertTrue(isDisplayed(r2PdpPo.EnableBuyNow_btn));		
+				else if (currentElement.equalsIgnoreCase("Academy_Credit_CardNumber_txt"))
+					assertTrue(isDisplayed(r2PdpPo.Academy_Credit_CardNumber_txt));
+				else if (currentElement.equalsIgnoreCase("CreditCardHolder_txt"))
+					assertTrue(isDisplayed(r2PdpPo.CreditCardHolder_txt));
+				else if (currentElement.equalsIgnoreCase("CreditCardNumber_txt"))
+					assertTrue(isDisplayed(r2PdpPo.CreditCardNumber_txt));
+				else if (currentElement.equalsIgnoreCase("ExpirationDate_txt"))
+					assertTrue(isDisplayed(r2PdpPo.ExpirationDate_txt));
+				else if (currentElement.equalsIgnoreCase("Cvv_txt"))
+					assertTrue(isDisplayed(r2PdpPo.Cvv_txt));
+				
 				else if (currentElement.equalsIgnoreCase("Credit_CardNumber_txt"))
 					assertTrue(isDisplayed(r2PdpPo.Credit_CardNumber_txt));
 				else if (currentElement.equalsIgnoreCase("Credit_Card_Expriration_txt"))
