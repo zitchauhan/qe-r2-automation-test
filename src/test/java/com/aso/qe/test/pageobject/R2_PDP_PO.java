@@ -54,6 +54,7 @@ public class R2_PDP_PO extends CommonActionHelper {
 	@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]")public WebElement CreditCardNumber_txt;
 	@FindBy(xpath="//*[text()='Expiration Date']/following::*[1]")public WebElement ExpirationDate_txt;
 	@FindBy(xpath="//*[text()='CVV']/following::*[3]")public WebElement Cvv_txt;
+	@FindBy(xpath="//img[@class='css-rzmjwh'] | //span[@class='creditCardImage']//img")public WebElement EBN_CreditCardPay_ImgLogo;
 	
 	@FindBy(xpath="//*[@data-auid='creditCardNumber']")
 	public WebElement Credit_CardNumber_txt;

@@ -578,7 +578,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='checkout_shipping_address']/..//button")public WebElement chooseShippingAddress_Dd; //CR-SK 22 Sep //updated by MJR on 15/7/19
 		@FindBy(xpath="//*[@name='Dropdown']")public WebElement chooseShippingAddress_Dd_Mob; //CR-GK 13Oct
         @FindBy(xpath="//*[@data-auid='undefined_listOption_1']")public WebElement AddNewCreditCard_Txt;
-        @FindBy(xpath="//*[@name='creditcardField']/../span[2]/img")public WebElement Checkout_CreditCardPay_ImgLogo;
+        @FindBy(xpath="//*[@name='creditcardField']/../span[2]/img | //img[@class='css-1lzwx1m'] | //*[@name='plccCardField']/../span[2]/img")public WebElement Checkout_CreditCardPay_ImgLogo;
         @FindBy(xpath="//*[contains(text(),'Choose Card')]/following::*[2]")public WebElement Checkout_CreditCard_DropDown; 
         
 
