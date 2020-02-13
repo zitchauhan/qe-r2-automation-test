@@ -311,7 +311,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	@FindBy(xpath = "//*[@data-auid='Sign Out_m']")
 	public WebElement signOut_Mobile_lnk;
-
+	
 	// End KER-3152 CR-AKK
 
 	// Start KER-4249 CR-RK
@@ -894,8 +894,56 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@name='zipCode']")
 	public WebElement zipCodeCheckOrderStatus;  //SID 28-Jan
 	
+	@FindBy(xpath = "//span[text()='Academy Credit Card']")
+	public WebElement plcc_Radio_Button;
 	
-
+	@FindBy(xpath = "//input[@id='creditcardField']")
+	public WebElement plccCreditCardTextBox;
+	
+	@FindBy(xpath = "//img[@class='loadcardInfo']")
+	public WebElement plccLogoImg;
+	
+	@FindBy(xpath = "//span[text()='Unrecognized card number']")
+	public WebElement plccErrorUnrecognizedCardNo;
+	
+	@FindBy(xpath = "//input[@id='firstName']")
+	public WebElement billingAddressFirstName;
+	
+	@FindBy(xpath = "//input[@id='lastName']")
+	public WebElement billingAddressLastName;
+	
+	@FindBy(xpath = "//input[@id='address']")
+	public WebElement billingAddressAddress;
+	
+	@FindBy(xpath = "//input[@id='zipCode']")
+	public WebElement billingAddressZipCode;
+	
+	@FindBy(xpath = "//input[@id='city']")
+	public WebElement billingAddressCity;
+	
+	@FindBy(xpath = "//input[@id='phoneNumber']")
+	public WebElement billingPhoneNumber;
+	
+	@FindBy(xpath = "//span[text()='Credit Card']")
+	public WebElement cc_Radio_Button;
+	
+	@FindBy(xpath = "//*[text()='Cardholder Name']/following::*[1]")
+	public WebElement ccCardHolderName;
+	
+	@FindBy(xpath = "//*[text()='Credit Card Number']/following::*[1] | //input[@id='card']")
+	public WebElement ccCreditCardNumber;
+	
+	@FindBy(xpath = "//*[text()='Exp. Date']/following::*[1]")
+	public WebElement ccCreditCardExpiry;
+	
+	@FindBy(xpath = "//*[text()='CVV']/following::*[3]")
+	public WebElement ccCreditCardCvv;
+	
+	@FindBy(xpath = "//span[@class='creditCardImage']/img")
+	public WebElement ccLogoImg;
+	
+	@FindBy(id="first-data-payment-field-card")public WebElement CardField_Frame;
+	
 	// End KER-4330 CR-MS Sep25
 
 	/***************************** END XPAHTS ***********************************/
