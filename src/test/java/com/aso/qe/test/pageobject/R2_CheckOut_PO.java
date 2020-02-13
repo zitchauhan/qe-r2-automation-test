@@ -565,9 +565,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//div[@class='mb-1']")public WebElement Bopisbillingaddres;
 		@FindBy(xpath="//*[text()='Credit Card']")public WebElement CreditCard_radioBtn;
 		@FindBy(xpath="(//*[text()='PayPal'])[1]")public WebElement PayPal_radioBtn; //Updated by VSN on 07-22-19 for smoke test fix //updated by MJR on 15/7/19
-		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]")public WebElement CreditCardNumber_Input;
-		@FindBy(xpath="//*[text()='Exp Date']/following::*[1]")public WebElement ExpirationDate_Input;//CR-Rk Sep28
-		@FindBy(xpath="//*[text()='CVV']/following::*[3]")public WebElement Cvv_Input;
+		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]] | //*[@id='card']")public WebElement CreditCardNumber_Input;
+		@FindBy(xpath="//*[@id='card']")public WebElement CreditCardDetails_Input;
+		@FindBy(xpath="//*[@id='name']")public WebElement CardholderName_Input;
+		@FindBy(xpath="//*[text()='Exp Date']/following::*[1] | //*[@id='exp']")public WebElement ExpirationDate_Input;//CR-Rk Sep28
+		@FindBy(xpath="//*[@id='exp']")public WebElement ExpDate_Input;//CR-Rk Sep28
+		@FindBy(xpath="//*[text()='CVV']/following::*[3] | //*[@id='cvv']")public WebElement Cvv_Input;
+		@FindBy(xpath="//*[@id='cvv']")public WebElement PassCvv_Input;
 		@FindBy(xpath="//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']")public WebElement CvvToolTip;
 		@FindBy(xpath="//*[text()='Unrecognized card number']")public WebElement UnrecognizedCardNumber_Txt; 
 		@FindBy(xpath="//*[text()='Please enter an expiration date']")public WebElement PastExpirationDate_Txt;//CR-RK Oct11 KER-3139

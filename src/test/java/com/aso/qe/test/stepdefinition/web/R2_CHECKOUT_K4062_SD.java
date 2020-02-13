@@ -112,9 +112,22 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			}
 
 			if (chooseCreditCard | userWithoutExistingPaymentDetails) {
-				setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty(creditCardNumber));
-				setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
-				setInputText(r2CheckOutPo.Cvv_Input, webPropHelper.getTestDataProperty(cvv));
+				Thread.sleep(5000);
+				String name = webPropHelper.getTestDataProperty("CardholderName");
+				driver.switchTo().frame("first-data-payment-field-name");
+				setInputText(r2CheckOutPo.CardholderName_Input, name);
+				System.out.println("CardHoldername="+webPropHelper.getTestDataProperty("CardholderName"));
+				driver.switchTo().defaultContent();
+				driver.switchTo().frame("first-data-payment-field-card");
+				setInputText(r2CheckOutPo.CreditCardDetails_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
+				System.out.println("CardNumber="+webPropHelper.getTestDataProperty("CreditCardNumber"));
+				driver.switchTo().defaultContent();
+				driver.switchTo().frame("first-data-payment-field-exp");	
+				setInputText(r2CheckOutPo.ExpDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
+				driver.switchTo().defaultContent();
+				driver.switchTo().frame("first-data-payment-field-cvv");
+				setInputText(r2CheckOutPo.PassCvv_Input, webPropHelper.getTestDataProperty("cvv"));
+				driver.switchTo().defaultContent();
 				if (arg2.equalsIgnoreCase("guest") | arg2.equalsIgnoreCase("unauthenticated")) {
 					setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
 							r2MyAccountPO.generateRandomEmailId());
