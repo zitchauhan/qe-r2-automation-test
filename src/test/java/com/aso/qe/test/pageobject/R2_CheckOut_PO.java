@@ -81,7 +81,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@name='address']")
 	public WebElement inputCheckoutAddress;
 
-	@FindBy(xpath = "//*[@name='zipCode']")
+	@FindBy(xpath = "//*[@name='zipCode'] | //*[@data-auid='address_zipcode']")
 	public WebElement inputCheckoutZipCode;
 	
 
@@ -1173,12 +1173,17 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 		
 	//added By Sachin	
-		@FindBy(xpath="//*[@id='name']")public WebElement CardHolderName_Input; //added by Sachin on 23/1/2020 for smoke fix
-		@FindBy(id="first-data-payment-field-name")public WebElement NameField_Frame;//added by Sachin
-		@FindBy(id="first-data-payment-field-card")public WebElement CardField_Frame;//added by Sachin
-		@FindBy(id="first-data-payment-field-exp")public WebElement ExpField_Frame;//added by Sachin
-		@FindBy(id="first-data-payment-field-cvv")public WebElement CVVField_Frame;//added by Sachin
-		@FindBy(xpath="//div[1]//div[6]//*[contains(@class,'css-')]")public WebElement Shipping_StateRestriction_Message;
+		@FindBy(xpath="//*[@id='name']")public WebElement CardHolderName_Input; //added on 23/1/2020 for smoke fix
+		@FindBy(id="first-data-payment-field-name")public WebElement NameField_Frame;
+		@FindBy(id="first-data-payment-field-card")public WebElement CardField_Frame;
+		@FindBy(id="first-data-payment-field-exp")public WebElement ExpField_Frame;
+		@FindBy(id="first-data-payment-field-cvv")public WebElement CVVField_Frame;
+		@FindBy(xpath="//div[1]//div[6]//*[contains(@class,'css-')] | //*[@role='alert']")public WebElement Shipping_StateRestriction_Message;
 		@FindBy(xpath="//span[@class='css-12w8fd6 text-danger']") public WebElement Payment_StateRestriction_Message;
+		@FindBy(xpath="//button[@xpath='1']") public WebElement MyAccount_AddAddress;
+		@FindBy(xpath="//span[contains(@class,'danger')]") public WebElement MyAccount_Address_RestrictionMsg;
+		@FindBy(xpath="//span[@class='linkStyle'][text()='Edit']") public WebElement MyAccount_Address_Edit;
+		@FindBy(xpath="//*[@name='billingZipCode']") public WebElement inputCheckoutBillingZipCode;
+		
   
 }
