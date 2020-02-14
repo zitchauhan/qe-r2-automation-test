@@ -144,7 +144,7 @@ public class Checkout_OMNI_165_SD extends CommonActionHelper {
 		String FirstName = "First_Name";
 		Thread.sleep(Constants.thread_low);
 		driver.switchTo().frame(r2CheckOutPo.NameField_Frame);
-		setInputText(r2CheckOutPo.CardHolderName_Input, webPropHelper.getTestDataProperty(FirstName));
+		setInputText(r2CheckOutPo.CardholderName_Input, webPropHelper.getTestDataProperty(FirstName));
 		driver.switchTo().defaultContent();
 	}
 	
@@ -171,6 +171,15 @@ public class Checkout_OMNI_165_SD extends CommonActionHelper {
 		setInputText(r2CheckOutPo.inputCheckoutBillingZipCode, webPropHelper.getTestDataProperty("StateRestrictionZipList"));
 		Thread.sleep(Constants.thread_medium);
 		
+	}
+	
+	@And("^user enter restricted ZipCode field for faster checkout$")
+	public void zipcode_field_faster_checkout() throws Throwable
+	{
+		Thread.sleep(Constants.thread_medium);
+		clearText(r2CheckOutPo.inputFastCheckout_zipcode);
+		setInputText(r2CheckOutPo.inputFastCheckout_zipcode, webPropHelper.getTestDataProperty("StateRestrictionZipList"));
+		Thread.sleep(Constants.thread_medium);
 	}
 	
 

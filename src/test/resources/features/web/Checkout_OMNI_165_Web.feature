@@ -162,7 +162,7 @@ Feature: Prevent customers with a California shipping or billing state from purc
 		|SignUpPage_AlreadyHaveAnAccount_txt|
 		|SignUpPage_SignInNow_lnk						|
 	Then user select Add Address for Faster Checkout checkbox
-	And user enter restricted ZipCode field in my account
+	And user enter restricted ZipCode field for faster checkout
 	Then global restriction error message is displayed for "CA" on "shipping" section
 	
 		
