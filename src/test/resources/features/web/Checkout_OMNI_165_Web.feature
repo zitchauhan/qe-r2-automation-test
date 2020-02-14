@@ -1,8 +1,7 @@
 Feature: Prevent customers with a California shipping or billing state from purchasing online
 
-#InProgress
  
-	@OMNI-165 @C-Order @Regression @CR-NS @C-Checkout @Web  
+	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web  
 	Scenario: Verify Global State Restriction message is displayed if guest user tries to proceed from shipping address 
 	with state from restriction lists
 	
@@ -20,7 +19,7 @@ Feature: Prevent customers with a California shipping or billing state from purc
   	Then global restriction error message is displayed for "CA" on "shipping" section
 
 	
-	@OMNI-165 @C-Order @Regression @CR-NS @C-Checkout @Web 
+	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web 
   Scenario: Verify Global State Restriction message is displayed if guest user tries to proceed from billing address 
   with state from restriction lists
 
@@ -38,7 +37,7 @@ Feature: Prevent customers with a California shipping or billing state from purc
     Then global restriction error message is displayed for "CA" on "payment" section
     
 
-	@OMNI-165T @C-Order @Regression @CR-NS @C-Checkout @Web 
+	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web 
   Scenario: Verify Global State Restriction message is displayed if registered user try to add address in my account 
   with state from restriction lists
   
@@ -66,7 +65,7 @@ Feature: Prevent customers with a California shipping or billing state from purc
   	Then global restriction error message is displayed for "CA" on "myaccountaddress" section
 		
 	
-	@OMNI-165 @C-Order @Regression @CR-NS @C-Checkout @Web 
+	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web 
 	Scenario: Verify Global State Restriction message is displayed if registered user try to edit address in my account 
   with state from restriction lists
 
@@ -82,7 +81,7 @@ Feature: Prevent customers with a California shipping or billing state from purc
 		Then global restriction error message is displayed for "CA" on "myaccountaddress" section
 
  
-  @OMNI-165 @C-Order @Regression @CR-NS @C-Checkout @Web 
+  @OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web 
   Scenario: Verify Global State Restriction message is displayed if regsitered user try to add payment in my account 
   with state from restriction lists in billing address
   
@@ -108,7 +107,7 @@ Feature: Prevent customers with a California shipping or billing state from purc
  	Then global restriction error message is displayed for "CA" on "myaccountbilling" section
 		
 		
-	@OMNI-165 @C-Order @Regression @CR-NS @C-Checkout @Web 
+	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web 
  	Scenario: Verify Global State Restriction message is displayed if registered user try to edit payment in my account 
   with state from restriction lists in billing address
   
@@ -123,7 +122,7 @@ Feature: Prevent customers with a California shipping or billing state from purc
 	Then global restriction error message is displayed for "CA" on "myaccountbilling" section
 	
 	
-	@OMNI-165 @C-Order @Regression @CR-NS @C-Checkout @Web 	
+	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web 	
 	Scenario: Verify Global State Restriction message is displayed if user try edit billing address with restricted address
 	on order summary during checkout 
 	
@@ -132,8 +131,6 @@ Feature: Prevent customers with a California shipping or billing state from purc
 	And user logs in as "UserWithSavedAddressAndPayment" 
 	And user navigate and deletes existing items in cart 
 	And User searches a product "productName" and navigates to PDP 
-	#	And user click on Add to Cart Button 
-	#	When user click on checkout button 
 	And user click on ship it button
 	And user click on viewcart button
 	Then user navigates to Cart Page
@@ -147,7 +144,7 @@ Feature: Prevent customers with a California shipping or billing state from purc
   Then global restriction error message is displayed for "CA" on "payment" section
   
   
-  @OMNI-165 @C-Order @Regression @CR-NS @C-Checkout @Web 	
+  @OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web 	
   Scenario: Verify Global State Restriction message is displayed if user tries to add restricted zip code on faster checkout 
   while registering user
   
