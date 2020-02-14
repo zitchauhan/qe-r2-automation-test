@@ -171,7 +171,7 @@ public class Checkout_OMNI_165_SD extends CommonActionHelper {
 		setInputText(r2CheckOutPo.inputCheckoutBillingZipCode, webPropHelper.getTestDataProperty("StateRestrictionZipList"));
 		Thread.sleep(Constants.thread_medium);
 		
-	}
+	}	
 	
 	@And("^user enter restricted ZipCode field for faster checkout$")
 	public void zipcode_field_faster_checkout() throws Throwable
