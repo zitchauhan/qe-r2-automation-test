@@ -11,5 +11,5 @@ Scenario: Verify that authenticated user is able to navigate to "Payments" Page.
     And user deletes all existing credit card
 	And user clicks on Add New Credit Card button
 	And validate the radio button Academy Credit Card and Credit Card
-	And user validates the Academy Credit Card and Credit Card modules
-	
+	And user validates the "Academy Credit Card"
+	And user validates the "Credit Card"
