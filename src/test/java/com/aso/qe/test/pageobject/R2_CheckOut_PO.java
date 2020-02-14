@@ -563,15 +563,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='checkout_payment']/preceding::*[1] | //*[@data-auid='checkout_edit_payment']/preceding::*[1]")public WebElement PaymentHeader_Txt;
 		@FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'PAYMENT METHOD')] | //*[contains(text(),'PAYMENT')]")public WebElement PaymentMethodHeader_Txt; //CR-GK 9-Oct
 		@FindBy(xpath="//div[@class='mb-1']")public WebElement Bopisbillingaddres;
+		@FindBy(xpath="//*[text()='Academy Credit Card']")public WebElement Academy_CreditCard_radioBtn;
 		@FindBy(xpath="//*[text()='Credit Card']")public WebElement CreditCard_radioBtn;
 		@FindBy(xpath="(//*[text()='PayPal'])[1]")public WebElement PayPal_radioBtn; //Updated by VSN on 07-22-19 for smoke test fix //updated by MJR on 15/7/19
-		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]")public WebElement CreditCardNumber_Input;
-		@FindBy(xpath="//*[text()='Exp Date']/following::*[1]")public WebElement ExpirationDate_Input;//CR-Rk Sep28
-		@FindBy(xpath="//*[text()='CVV']/following::*[3]")public WebElement Cvv_Input;
 
-		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1]] | //*[@id='card']")public WebElement CreditCardNumber_Input;
+		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1] | //*[@id='card']")public WebElement CreditCardNumber_Input;
 		@FindBy(xpath="//*[@id='card']")public WebElement CreditCardDetails_Input;
-		@FindBy(xpath="//*[@id='name']")public WebElement CardholderName_Input;
+		@FindBy(xpath="//*[text()='Cardholder Name']/following::*[1] | //*[@id='name']")public WebElement CardholderName_Input;
 		@FindBy(xpath="//*[text()='Exp Date']/following::*[1] | //*[@id='exp']")public WebElement ExpirationDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[@id='exp']")public WebElement ExpDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[text()='CVV']/following::*[3] | //*[@id='cvv']")public WebElement Cvv_Input;

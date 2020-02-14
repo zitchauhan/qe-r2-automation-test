@@ -259,7 +259,7 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 					else if (currentElement.equalsIgnoreCase("PayPal_radioBtn"))
 						assertTrue(isDisplayed(r2CheckoutPo.PayPal_radioBtn));
 					else if (currentElement.equalsIgnoreCase("CreditCardHolder_Input"))
-						assertTrue(isDisplayed(r2CheckoutPo.CreditCardHolder_Input));
+						assertTrue(isDisplayed(r2CheckoutPo.CardholderName_Input));
 					else if (currentElement.equalsIgnoreCase("CreditCardNumber_Input"))
 						assertTrue(isDisplayed(r2CheckoutPo.CreditCardNumber_Input));
 					else if (currentElement.equalsIgnoreCase("ExpirationDate_Input"))

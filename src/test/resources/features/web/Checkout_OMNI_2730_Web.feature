@@ -27,7 +27,7 @@ Scenario: Verify ACC is display as seperate option in enable buy now when ACC is
 		
 		
 @Web @Regression @OMNI-2730_2 @CR-MT @C-Checkout @C-Order
-Scenario: Verify ACC is display as seperate option in enable buy now when ACC is selected
+Scenario: Verify ACC is display as seperate option in enable buy now when CC is selected
 	 Given user launches the browser and navigates to "ASO_HOME" page
    And user clicks on SignIn link from global header 
 	 And user enter the valid emailaddress "Email_Address_2" 

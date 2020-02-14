@@ -44,7 +44,7 @@ public class Checkout_OMNI_2729_SD  extends CommonActionHelper  {
 	public void user_fills_the_credit_card_details_in_iframe_of_payment() throws Throwable {
 		
 		Thread.sleep(Constants.thread_low);
-		getDriver().switchTo().frame(r2CheckOutPo.CardField_Frame);
+		getDriver().switchTo().frame("first-data-payment-field-card");
 		setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty("CardVISA"));
 		getDriver().switchTo().defaultContent();
 	}
@@ -65,7 +65,7 @@ public class Checkout_OMNI_2729_SD  extends CommonActionHelper  {
 	public void user_fills_the_invalid_credit_card_details_in_iframe_of_payment() throws Throwable {
 		
 		Thread.sleep(Constants.thread_low);
-		getDriver().switchTo().frame(r2CheckOutPo.CardField_Frame);
+		getDriver().switchTo().frame("first-data-payment-field-card");
 		setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty("CardPlcc"));
 		getDriver().switchTo().defaultContent();
 	}
