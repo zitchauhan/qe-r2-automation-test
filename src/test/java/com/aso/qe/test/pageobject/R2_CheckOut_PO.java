@@ -567,6 +567,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[text()='Credit Card']")public WebElement CreditCard_radioBtn;
 		@FindBy(xpath="(//*[text()='PayPal'])[1]")public WebElement PayPal_radioBtn; //Updated by VSN on 07-22-19 for smoke test fix //updated by MJR on 15/7/19
 
+
 		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1] | //*[@id='card']")public WebElement CreditCardNumber_Input;
 		@FindBy(xpath="//*[@id='card']")public WebElement CreditCardDetails_Input;
 		@FindBy(xpath="//*[text()='Cardholder Name']/following::*[1] | //*[@id='name']")public WebElement CardholderName_Input;
@@ -1175,5 +1176,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='checkout_payment_options_radio_button_Google Pay']/../label") public WebElement googlePayRadiobtn;
 		@FindBy(xpath="//*[@data-auid='checkout_payment_google_pay_btn']") public WebElement googlePayBtn;
 
-	
+	//added by Sachin
+		@FindBy(xpath="//div[1]//div[6]//*[contains(@class,'css-')] | //*[@role='alert']")public WebElement Shipping_StateRestriction_Message;
+		@FindBy(xpath="//span[@class='css-12w8fd6 text-danger']") public WebElement Payment_StateRestriction_Message;
+		@FindBy(xpath="//span[contains(@class,'danger')]") public WebElement MyAccount_Address_RestrictionMsg;
+		@FindBy(id="first-data-payment-field-name")public WebElement NameField_Frame;
+		@FindBy(xpath="//span[@class='linkStyle'][text()='Edit']") public WebElement MyAccount_Address_Edit;
+		@FindBy(xpath="//*[@name='billingZipCode']") public WebElement inputCheckoutBillingZipCode;
+		
+
 }
