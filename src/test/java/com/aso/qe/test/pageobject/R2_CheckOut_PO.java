@@ -1183,6 +1183,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(id="first-data-payment-field-name")public WebElement NameField_Frame;
 		@FindBy(xpath="//span[@class='linkStyle'][text()='Edit']") public WebElement MyAccount_Address_Edit;
 		@FindBy(xpath="//*[@name='billingZipCode']") public WebElement inputCheckoutBillingZipCode;
+		@FindBy(xpath="//*[@id='signup-zipcode']") public WebElement inputFastCheckout_zipcode;
 		
 
 }
