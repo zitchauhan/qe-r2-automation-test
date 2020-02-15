@@ -1,6 +1,6 @@
 Feature: Add Credit/Debit Card in Account 
 
-@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2731 @ZYP_Checkout_2731 @CR-SK
+@OMNI-2731 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2731 @ZYP_Checkout_2731 @CR-SK
 Scenario: Verify that authenticated user is able to navigate to "Payments" Page.
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
