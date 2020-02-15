@@ -58,6 +58,7 @@ public class Checkout_OMNI_2729_SD  extends CommonActionHelper  {
 	
 	@Then("^user verifies the credit card logo image$")
 	public void user_verifies_the_credit_card_logo_image() throws Throwable {
+		waitForElement(r2CheckOutPo.Checkout_CreditCardPay_ImgLogo);
 		assertTrue(isDisplayed(r2CheckOutPo.Checkout_CreditCardPay_ImgLogo)); 
 	}
 	
