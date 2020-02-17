@@ -89,9 +89,18 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 	@Then("^user fill the credit card detail in payment$")
 	public void user_fill_the_credit_card_detail_in_payment() throws Throwable {
 		
-		setInputText(r2CheckOutPo.CreditCardNumber_Input,  webPropHelper.getTestDataProperty("CreditCardNumber"));
-		setInputText(r2CheckOutPo.ExpirationDate_Input,  webPropHelper.getTestDataProperty("ExpDate"));
-		setInputText(r2CheckOutPo.Cvv_Input,  webPropHelper.getTestDataProperty("CVV"));
+		driver.switchTo().frame("first-data-payment-field-name");
+		setInputText(r2CheckOutPo.CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("first-data-payment-field-card");
+		setInputText(r2CheckOutPo.CreditCardDetails_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("first-data-payment-field-exp");
+		setInputText(r2CheckOutPo.ExpDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("first-data-payment-field-cvv");
+		setInputText(r2CheckOutPo.PassCvv_Input, webPropHelper.getTestDataProperty("CVV"));
+		driver.switchTo().defaultContent();
 	}
 	
 	@And("^user select the suggested address$")
