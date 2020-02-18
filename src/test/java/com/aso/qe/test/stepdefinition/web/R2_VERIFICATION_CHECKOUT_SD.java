@@ -252,10 +252,14 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 					assertTrue(isDisplayed(r2CheckoutPo.PaymentHeader_Txt));
 				else if (currentElement.equalsIgnoreCase("PaymentMethodHeader_Txt"))
 					assertTrue(isDisplayed(r2CheckoutPo.PaymentMethodHeader_Txt));
+				else if (currentElement.equalsIgnoreCase("Academy_CreditCard_radioBtn"))
+					assertTrue(isDisplayed(r2CheckoutPo.Academy_CreditCard_radioBtn));
 				else if (currentElement.equalsIgnoreCase("CreditCard_radioBtn"))
 						assertTrue(isDisplayed(r2CheckoutPo.CreditCard_radioBtn));
 					else if (currentElement.equalsIgnoreCase("PayPal_radioBtn"))
 						assertTrue(isDisplayed(r2CheckoutPo.PayPal_radioBtn));
+					else if (currentElement.equalsIgnoreCase("CreditCardHolder_Input"))
+						assertTrue(isDisplayed(r2CheckoutPo.CardholderName_Input));
 					else if (currentElement.equalsIgnoreCase("CreditCardNumber_Input"))
 						assertTrue(isDisplayed(r2CheckoutPo.CreditCardNumber_Input));
 					else if (currentElement.equalsIgnoreCase("ExpirationDate_Input"))
@@ -436,5 +440,6 @@ public class R2_VERIFICATION_CHECKOUT_SD extends CommonActionHelper {
 			throw new AssertionError("Element <" + currentElement + "> is not present on application page .");
 		}
 	}
+		
 
 }
