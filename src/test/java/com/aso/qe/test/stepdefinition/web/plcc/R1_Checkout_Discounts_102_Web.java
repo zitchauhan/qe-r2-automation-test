@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.web.plcc;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -18,16 +19,11 @@ public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 	@When("^user click on ship it button$")
 	public void user_click_on_ship_it_button() throws Throwable {
 		
-		if("mobile".equalsIgnoreCase(testtype)) {
-			Thread.sleep(4000);
-			assertTrue(isDisplayed(genericPO.shipToHome_m));
-			assertTrue(clickOnButton(genericPO.shipToHome_m));
-		}else {
-			Thread.sleep(4000);
-			assertTrue(isDisplayed(genericPO.shipItButton));
-			assertTrue(clickOnButton(genericPO.shipItButton));
-		}
-		
+		Thread.sleep(4000);
+		assertTrue(isDisplayed(genericPO.shipItButton));
+		//assertTrue(clickOnButton(genericPO.shipItButton));  //Sachin
+		driver.findElement(By.xpath("//div[@class='large']//*[text()='Home delivery'] ")).click();
+
 	}
 	
 		}
