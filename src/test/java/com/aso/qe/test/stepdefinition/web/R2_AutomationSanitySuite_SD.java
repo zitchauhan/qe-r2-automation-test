@@ -62,8 +62,9 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	public void user_will_click_on_View_Cart_button() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) 
 		{
-			Thread.sleep(Constants.thread_medium); 
-			assertTrue(clickOnButton(pdpPageObj.btnViewCart));
+			Thread.sleep(Constants.thread_high); 
+			assertTrue(isDisplayed(pdpPageObj.btnViewCart_m));
+			assertTrue(clickOnButton(pdpPageObj.btnViewCart_m));
 			
 			Thread.sleep(Constants.thread_medium);
 			assertTrue(isDisplayed(r2CartPo.btnCartCheckout));

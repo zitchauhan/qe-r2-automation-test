@@ -26,6 +26,4 @@ public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 
 	}
 	
-	
-	
 		}
