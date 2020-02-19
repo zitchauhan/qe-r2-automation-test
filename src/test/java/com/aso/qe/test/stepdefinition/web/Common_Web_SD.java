@@ -47,16 +47,16 @@ public void user_launches_the_browser_and_navigates_to_page(String url) throws T
  * 
  * 
 */
-	//openBaseURL(url);
+	openBaseURL(url);
 	
-	try {
+	//try {
 		 
-		driver.get("https://uat6www.academy.com/?debug=aso");
-		driver.switchTo().alert().accept();
+		//driver.get("https://uat6www.academy.com/?debug=aso");
+		//driver.switchTo().alert().accept();
 
-	}catch(Exception e){
+	//}catch(Exception e){
 
-	}
+	//}
 
 
 //driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
