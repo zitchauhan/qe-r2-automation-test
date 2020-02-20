@@ -22,7 +22,7 @@ public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 		Thread.sleep(4000);
 		assertTrue(isDisplayed(genericPO.shipItButton));
 		//assertTrue(clickOnButton(genericPO.shipItButton));  //Sachin
-		driver.findElement(By.xpath("//div[@class='large']//*[text()='Home delivery'] ")).click();
+		driver.findElement(By.xpath("//div[@class='large']//*[text()='Home delivery'] | (//div[text()='Home delivery'])[3] ")).click();
 
 	}
 	

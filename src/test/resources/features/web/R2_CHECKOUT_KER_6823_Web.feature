@@ -17,7 +17,7 @@ Scenario: Verify choose gift card option for authenticated User with 13 and 16 d
 	And User navigates to L2 Mens clothing 
 	Then user clicks on one of the subcategory and navigates to LTwo 
 	Then user clicks on one of the product category and navigates to LThree 
-	Then User is navigated to pdp page 
+	#Then User is navigated to pdp page 
 	#Then user click on Add to Cart Button 
 	#And user click on viewcart button
 	And user click on ship it button 
