@@ -574,7 +574,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[text()='Exp Date']/following::*[1] | //*[@id='exp']")public WebElement ExpirationDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[@id='exp']")public WebElement ExpDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[text()='CVV']/following::*[3] | //*[@id='cvv']")public WebElement Cvv_Input;
-		@FindBy(xpath="//*[@id='cvv']")public WebElement PassCvv_Input;
+		@FindBy(xpath="//*[@id='cvv'] | //*[@id='cvvField']")public WebElement PassCvv_Input;
 		@FindBy(xpath="//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']")public WebElement CvvToolTip;
 		@FindBy(xpath="//*[text()='Unrecognized card number']")public WebElement UnrecognizedCardNumber_Txt; 
 		@FindBy(xpath="//*[text()='Please enter an expiration date']")public WebElement PastExpirationDate_Txt;//CR-RK Oct11 KER-3139
@@ -767,7 +767,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[contains(text(),'Basic Delivery')]/ancestor::button/parent::div//ul/li/*[contains(text(),'Room')]")public WebElement WGRoomOfChoiceService; //SID 5-September
 	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/p[1]")	public WebElement textRoomOfChoiceDelivery; //SID 6-September
 	   @FindBy(xpath = "//*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/p[2] | //*[@data-auid='checkout_shipping_method_shipment_itemWHITEGLOVEROC']/div")	public WebElement textRoomOfChoiceDeliverMessage; //SID 6-September
-	   @FindBy(xpath="(//*[@data-component='cart']//*[text()='Employee Discount Applied'])[2]")public WebElement employeeDiscountItemLevel_CartPage; //SID 13-September
+	   @FindBy(xpath="(//*[@data-component='cart']//*[text()='Employee Discount Applied'])[2] | (//div[contains(text(),' Academy Employee Discount Applied')])[2]") public WebElement employeeDiscountItemLevel_CartPage; //SID 13-September
 	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Employee Discount')]")public WebElement employeeDiscountOrderSummerPage; //SID 13-September
 	   @FindBy(xpath="//*[contains(@data-auid,'level2Category-Hot Deals')]")public WebElement dealTabProduct; //SID 5-September//MJR-20/08
 	   
