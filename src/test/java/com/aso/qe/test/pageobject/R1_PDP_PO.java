@@ -37,6 +37,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='btnShipIt']|//*[text()='Ship It']|//*[starts-with(@data-auid,'btnShipIt')]")
 	public WebElement shipItButton; 
 	@FindBy(xpath="//*[@data-auid='btnPickUpATC']")public WebElement pickupBtn; //CR MJR-17/7/19
+	@FindBy(xpath="//*[@data-auid='btnPickUpATC'] |(//button[@class='d-flex flex-row css-12r2ery'])[3] | (//*[text()='free store pickup'])/parent::*[1]/parent::*[1]/parent::*[1]/parent::*/parent::*[1]") public WebElement pickupBtn_m;
 	@FindBy(xpath="//*[@data-auid='btnAddToCart']") public WebElement AddToCartBtn;
 	@FindBy(xpath="//*[@data-auid='btnbtnEnableBuyNow']")  public WebElement btnEnablebuynow;
 	
@@ -44,7 +45,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']|//ul[@class='slider animated'])[2]") public WebElement imgProductMainMixedMedia_m;//9aug danush
 	@FindBy(xpath="//*[@data-auid='PDP_ProductName']") public WebElement txtProductTitle;
 	@FindBy(xpath="//*[contains(@data-auid,'Size_Attribute')]") public WebElement secProductAttributeSizes;
-	@FindBy(xpath="//*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']") public WebElement btnAddToCart;//modified SK - 24 Sep
+	@FindBy(xpath="//*[@data-auid='btnAddToCart'] | //*[@data-auid='btnadd-to-cart']|//div[contains(@data-auid,'PDP_OnlineMessage')]") public WebElement btnAddToCart;//modified SK - 24 Sep
 	@FindBy(xpath="//*[@data-auid='btncheckout']") public WebElement btnCheckoutbuttonon_continueshopping;//Rishi
 	@FindBy(xpath="//*[@data-auid='PDP_QC_DEC']") public WebElement btnQuantityDec;
 	@FindBy(xpath="//*[@data-auid='PDP_QC_INC']") public   WebElement btnQuantityInc;
@@ -65,11 +66,13 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//img[@class='bv-trustmarkIcon-image']") 	public   WebElement ImgHallmark;
 	@FindBy(xpath="//*[text()='Reviews']") 	public   WebElement textReviews;
 	@FindBy(xpath="//*[text()='Questions']")	public   WebElement textQuestions;
-	@FindBy(xpath="(//*[contains(@data-auid,'sku_')]/following-sibling::span)[1] | //*[contains(text(),'Results for')]/b")	public   WebElement txtProductSKU; //MJR 31/7/19
+	@FindBy(xpath="(//*[contains(@data-auid,'sku_')]/following-sibling::span)[1] | //*[contains(text(),'Results for')]/b | //span[@data-auid='skuId']")	public   WebElement txtProductSKU; //MJR 31/7/19
+	@FindBy(xpath="(//*[@data-auid='skuId'] | //*[contains(text(),'Results for')]/b")	public   WebElement txtSKU;
 	@FindBy(xpath="//*[contains(@data-auid,'item_')]")	public   WebElement txtProductItemNumber;
 	@FindBy(xpath="//*[@data-auid='PDP_Size_heading']//following-sibling::div//button[@aria-label='Medium']|//*[@data-auid='PDP_Shoe Size_Attribute']//span[text()='10']") 	public   WebElement secSize1;
 	@FindBy(xpath="//*[@data-auid='swatchButton-image-4286']|//*[@data-auid='swatchButton-image-4076']") 	public   WebElement secSize2;
 	@FindBy(xpath="//*[@data-auid='btnviewCart']") 	public WebElement btnViewCart;
+	@FindBy(xpath="//*[@data-auid='btnviewCart_m'] | //*[@data-auid='btnviewCart']") 	public WebElement btnViewCart_m;
 	@FindBy(xpath="//*[text()='Shipping']") 	public WebElement shippingTxtInCartPopup;
 	@FindBy(xpath="//*[text()='Pick up']") 	public WebElement pickupTxtInCartPopup;
 	@FindBy(xpath="//*[@data-auid='btncheckout'] | //*[@data-auid='crt_btnCheckoutTop'] | //*[@data-auid='btnCheckout']")   public WebElement btnCheckout; //Updated by VSN on 07-11-19
