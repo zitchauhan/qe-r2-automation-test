@@ -24,9 +24,10 @@ Scenario: Verify that user view Find a Store modal from Change Location in Check
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
 	#When user click on Add to cart button 
-	And user click on ship it button  
+	#And user click on ship it button 
+	Then user click on pickup button 
 	And user click on view cart
-	Then user select in store pickup option
+	#Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
     Then user click on change location button
     Then User is able to see Find a Store Modal
@@ -100,9 +101,10 @@ Scenario: Verify the guest user is able to add new Credit Card as payment method
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
 	#When user click on Add to cart button 
-	And user click on ship it button 
+	#And user click on ship it button 
+	Then user click on pickup button
 	And user click on view cart
-	Then user select in store pickup option
+	#Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
     And user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers 
 	And user click on checkbox in special order ship to store section 
