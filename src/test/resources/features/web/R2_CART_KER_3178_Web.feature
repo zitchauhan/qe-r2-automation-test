@@ -7,7 +7,8 @@ Scenario: Verify the user is able to view the Change Location under In-store Pic
 	And user logs in as "Cart_BopisEmail" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
 	#And user click on Add to Cart Button 
-	And user click on ship it button
+	#And user click on ship it button
+	Then user click on pickup button
 	And user click on view cart
 	Then user select in store pickup option
 	When user will click on Checkout button and navigates to Checkout page
@@ -21,9 +22,10 @@ Scenario: Verify that user view Find a Store modal from Change Location in Check
 	When user enters "BOPIS_SOF_Product" in the searchbox
 	#When user enters "BOPIS_Product" in the searchbox
 	#And user click on Add to Cart Button 
-	And user click on ship it button
+	#And user click on ship it button
+	Then user click on pickup button
 	And user click on view cart
-	Then user select in store pickup option
+	#Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
     Then user click on change location button
     Then User is able to see Find a Store Modal
@@ -36,9 +38,10 @@ Scenario: Verify user can change the store using Find in Store modal
 	When user enters "BOPIS_SOF_Product" in the searchbox
 	#When user enters "BOPIS_Product" in the searchbox
 	#And user click on Add to Cart Button 
-	And user click on ship it button
+	#And user click on ship it button
+	Then user click on pickup button
 	And user click on view cart
-	Then user select in store pickup option
+	#Then user select in store pickup option
 	#And user click on checkout button
 	And user will click on Checkout button and navigates to Checkout page
 	Then user click on change location button

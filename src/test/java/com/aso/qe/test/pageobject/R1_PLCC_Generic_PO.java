@@ -34,6 +34,12 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	@FindBy(xpath="//div[@class='large']//*[text()='Home delivery']")
 	public WebElement shipItButton; 
 	
+	@FindBy(xpath = "//*[@data-auid='btnShipIt']|//*[text()='Ship It']|//*[starts-with(@data-auid,'btnShipIt')]|//*[@data-auid='PDP_OnlineMessage']")
+	public WebElement shipItButton_m; 
+	
+	@FindBy(xpath = "(//*[@data-auid='PDP_OnlineMessage' and @id='renderShipItAtc'])[2]")
+	public WebElement shipToHome_m; 
+	
 	@FindBy(xpath = "//*[@data-auid='btnPickUpATC']")
 			public WebElement PICKUPButtonPDP; 
 	
