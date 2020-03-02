@@ -1,4 +1,4 @@
-Feature: Add Credit/Debit Card in Account 
+Feature: Academy Credit Card should display as a separate option (from Credit Card) in My Account 
 
 @OMNI-2731 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2731 @ZYP_Checkout_2731 @CR-SK
 Scenario: Verify that authenticated user is able to navigate to "Payments" Page.
