@@ -1,5 +1,6 @@
 Feature: Academy credit card should display as seperate option in Enable buy now
 
+#Following scripts will be executed when Enable buy now is incorporated in the new PDP
 
 @Web @Regression @OMNI-2730_1 @CR-MT @C-Checkout @C-Order
 Scenario: Verify ACC is display as seperate option in enable buy now when ACC is selected

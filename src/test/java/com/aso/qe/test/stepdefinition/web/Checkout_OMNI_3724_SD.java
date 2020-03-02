@@ -33,6 +33,9 @@ public class Checkout_OMNI_3724_SD extends CommonActionHelper {
 		{
 			driver.get(webPropHelper.getTestDataProperty("AddToCartURL_ForTwo"));
 			Thread.sleep(Constants.thread_highest);
+		} else if(arg1.equalsIgnoreCase("three")) {
+			driver.get(webPropHelper.getTestDataProperty("AddToCartURL_ForThree"));
+			Thread.sleep(Constants.thread_highest);
 		}
 		
 	}
@@ -72,6 +75,48 @@ public class Checkout_OMNI_3724_SD extends CommonActionHelper {
 			String spliturlb = currenturlb.substring(50, currenturlb.length()-10);	
 			System.out.println("product id and qt is " +spliturlb);
 			//117397048_1,103379341_2
+			
+			String[] prodandqty = spliturlb.split(",");
+			ArrayList<String> arrayofqty = new ArrayList<String>();
+			for(int i=0; i<prodandqty.length; i++)
+			{
+				//System.out.println(prodandqty[i]);
+				String[] extractedproductid = prodandqty[i].split("_");
+				//System.out.println(extractedproductid.length);
+				
+				for(int row=1; row<2; row++)
+				{
+					for(int col=1; col<2; col++ )
+					{
+					System.out.println(extractedproductid[col]);
+				     
+				     arrayofqty.add(extractedproductid[col]);
+					}
+				}
+			}
+			System.out.println(arrayofqty.get(0));
+			System.out.println(arrayofqty.get(1));
+			String urlqtyone = arrayofqty.get(0);
+			String urlqtytwo = arrayofqty.get(1);
+			
+			String actualqtyone =r2CheckOutPo.cartQtyValue.get(0).getAttribute("value");
+			String actualqtytwo = r2CheckOutPo.cartQtyValue.get(1).getAttribute("value");
+			
+			try {
+			assertEquals(urlqtytwo, actualqtyone);
+			assertEquals(urlqtyone, actualqtytwo);
+			}
+			catch(AssertionError e)
+			{
+				System.out.println("Quantity visible on the cart page is NOT equal to what is given in the add to cart via URL");
+			}
+			System.out.println("Quantity visible on the cart page is MATCHES to what is given in the add to cart via URL");
+			
+		} else if(arg1.equalsIgnoreCase("three")) {
+			String currenturlb = webPropHelper.getTestDataProperty("AddToCartURL_ForThree");
+			
+			String spliturlb = currenturlb.substring(62, currenturlb.length()-10);	
+			System.out.println("product id and qt is " +spliturlb);
 			
 			String[] prodandqty = spliturlb.split(",");
 			ArrayList<String> arrayofqty = new ArrayList<String>();
