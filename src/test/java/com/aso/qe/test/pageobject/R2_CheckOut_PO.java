@@ -837,12 +837,16 @@ public class R2_CheckOut_PO extends CommonActionHelper
        @FindBy(xpath = "//*[text()='Google Pay']") public WebElement txtGooglePay;
        @FindBy(xpath = "//*[text()='Credit Card Number']") public WebElement txtCreditCardHeading;
        @FindBy(xpath = "//*[@id='creditcardField'] | //*[text()='Credit Card Number']/following::*[1]") public WebElement txtCreditCardInput; //CR-RKA 10-Oct
+       @FindBy(xpath = "//*[@id='name']") public WebElement creditCardHolderInput;
+       @FindBy(xpath = "//*[@id='card']") public WebElement creditCardNumInput;
        @FindBy(xpath = "//*[@id='creditcardField']//following-sibling::span/img[contains(@src,'visa')]") public WebElement imgVisaCreditCardInput;
        @FindBy(xpath = "//*[text()='Expiration Date'] | //*[text()='Exp Date']") public WebElement txtExpirationDate;
        @FindBy(xpath = "//*[@id='expirationDate'] | //*[@id='expiryField']") public WebElement txtExpirationDateInput;
+       @FindBy(xpath = "//*[@id='exp']") public WebElement creditCardExpInput;
        @FindBy(xpath = "//*[@placeholder='MM/YY']") public WebElement txtExpirationPlaceholders;
        @FindBy(xpath = "//*[@id='expirationDate']//parent::label//following-sibling::div/span[contains(text(),'Past expiration date')]") public WebElement txtErrorMsgForPastDates;
        @FindBy(xpath = "//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']/following::*[1]") public WebElement txtCVVInput;
+       @FindBy(xpath = "//*[@id='cvv']") public WebElement creditCardCVVInput;
        @FindBy(xpath="//*[@data-auid='creditCardCVV']")public WebElement Cvv_BuyNow_Modal;
        @FindBy(xpath = "//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']") public WebElement btnCVVToolTip;
        @FindBy(xpath = "//*[text()='The 3 digit code found on far right of signature box']") public WebElement txtCVVToolTipMsg;
@@ -924,9 +928,18 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	}
 	
 	public void enterVisaCardDetails() {
-		setInputText(txtCreditCardInput, webPropHelper.getTestDataProperty("CardVISA"));
-		setInputText(txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
-		setInputText(txtCVVInput,webPropHelper.getTestDataProperty("ThreeDigitCVV"));
+		driver.switchTo().frame("first-data-payment-field-name");
+		setInputText(creditCardHolderInput, webPropHelper.getTestDataProperty("CardholderName"));
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("first-data-payment-field-card");
+		setInputText(creditCardNumInput, webPropHelper.getTestDataProperty("CardVISA"));
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("first-data-payment-field-exp");
+		setInputText(creditCardExpInput, webPropHelper.getTestDataProperty("ExpDate"));
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("first-data-payment-field-cvv");
+		setInputText(creditCardCVVInput,webPropHelper.getTestDataProperty("ThreeDigitCVV"));
+		driver.switchTo().defaultContent();
 	}
 	public void enterAmexCardDetails() {
 		setInputText(txtCreditCardInput, webPropHelper.getTestDataProperty("CardAmex"));
