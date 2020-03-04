@@ -33,6 +33,8 @@ Feature: Add to cart via URL for simple products - Non Signed in user
 		Examples: 
 		|Payment Type	|
 		|Credit Card - MASTER	| 
+		
+		
   	
   
 	
