@@ -1186,7 +1186,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@name='billingZipCode']") public WebElement inputCheckoutBillingZipCode;
 		@FindBy(xpath="//*[@id='signup-zipcode']") public WebElement inputFastCheckout_zipcode;
 		@FindBy(xpath="//*[@data-auid='crt_inputQty']") public List <WebElement> cartQtyValue;
-		
+		@FindBy(xpath="(//*[@class='o-copy__20reg'])[2]") public WebElement estimateTax_Cart;
+		@FindBy(xpath="//*[@data-auid='taxesvalue']") public WebElement estimateTax_Checkout;
+		@FindBy(xpath = "(//*[@class='academyicon icon-plus '])[4]")public WebElement expandStoreFour;
 		
 
 }

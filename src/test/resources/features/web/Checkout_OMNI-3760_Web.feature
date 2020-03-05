@@ -1,4 +1,4 @@
-Feature: Add to cart via URL for simple products - Non Signed in user
+Feature: Add to cart via URL for simple products - Signed in user
 
  
 	@OMNI-3760 @C-Order @Regression @CR-SB @C-Checkout @Web
