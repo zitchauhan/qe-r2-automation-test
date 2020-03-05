@@ -69,14 +69,7 @@ public class Checkout_OMNI_1996_SD  extends CommonActionHelper {
 	public void user_validate_taxes_for_current_store_are_same_as_before_on_checkout_page() throws Throwable
 	{
 		String taxvalue_second_oncheckout = r2CheckOutPo.estimateTax_Checkout.getText();
-		try {
-		assertEquals(taxvalueoncart,taxvalue_second_oncheckout);
-		}
-		catch(AssertionError e)
-		{
-			System.out.println("Taxes are not same on checkout page for the same store");
-		}
-		System.out.println("Taxes on checkout page are same for the same store when store is changed multiple times");
+		assertTrue("Taxes for the same store are NOT same before and after", taxvalueoncart.equals(taxvalue_second_oncheckout));
 		Thread.sleep(Constants.thread_high);
 	}
 	
