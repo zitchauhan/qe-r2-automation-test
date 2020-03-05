@@ -131,7 +131,7 @@ Scenario: Verify if  user should be able to click on PayPal checkout if applicab
 @R2_Web @R2_WAST-10 @P1 @C-Cart @KER-3127 @ZYP_CART_K3127-8166 @AutomationSmokeORIG
 Scenario: TC_11- Verify Apply Promotion / Remove Promotion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	Then User searches a product "productName" and navigates to PDP 
+	Then User searches a product "DiscountlessSKU" and navigates to PDP 
 	#Then user click on Add to Cart Button
 	And user click on ship it button
 	And user will click on View Cart button 
