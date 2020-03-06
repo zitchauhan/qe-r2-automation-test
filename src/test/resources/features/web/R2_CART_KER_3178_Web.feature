@@ -60,6 +60,7 @@ Scenario: Verify the user is able to see the full inventory availability on Find
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
+	And user click on edit link
 	And user check the selected store name
     Then user click on change location button
     Then User is able to see Find a Store Modal

@@ -413,6 +413,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   @FindBy(xpath="//*[text()='Change Location']/parent::*/*[1]")//MJR-10/10/19
 	   public WebElement selectedBOPISStore;  //SID 21-Jan
+	   
+	   @FindBy(xpath="//*[@data-auid='checkout_edit_in_store_pickup']")//MJR-10/10/19
+	   public WebElement clickEditlink;  //SID 21-Jan
 	 
 	   @FindBy(xpath="(//*[@data-auid='find-a-store-modal']//*[@data-auid='facetdrawerundefined'])[1]/button/span/div/div[1]")
 	   public WebElement selectedBOPISStoreNameFAS;  //SID 21-Jan
