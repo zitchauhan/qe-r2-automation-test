@@ -58,6 +58,15 @@ public class R2_CART_K3178_SD extends CommonActionHelper {
 		selectedStoreName =	r2CheckoutPo.selectedBOPISStore.getText();
 	}
 	
+	@And("^user click on edit link$")
+	public void user_click_on_edit_link () {
+		waitForElement(r2CheckoutPo.clickEditlink);
+		isDisplayed(r2CheckoutPo.clickEditlink);
+		clickOnButton(r2CheckoutPo.clickEditlink);
+	}
+	
+	
+	
 	@And("^user check that the selected store appear at the top$")
 	public void user_check_that_the_selected_store_appear_at_the_top() throws InterruptedException {
 		Thread.sleep(Constants.thread_high);
