@@ -74,7 +74,7 @@ public class R2_PlaceOrderAllCombinations_SD extends CommonActionHelper {
 		setInputText(r2MyAccountPo.inputFirstName, webPropHelper.getTestDataProperty("FirstName"));
 		setInputText(r2MyAccountPo.inputLastName, webPropHelper.getTestDataProperty("LastName"));
 		setInputText(r2MyAccountPo.inputEmailAddress, r2MyAccountPo.generateRandomEmailId());
-		setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty("NewPassword"));
+		setInputText(r2MyAccountPo.inputCreatePassword, webPropHelper.getTestDataProperty("Password"));
 		assertTrue(clickOnButton(r2MyAccountPo.btnSignUp));
 		Thread.sleep(Constants.thread_medium);
 		assertTrue(isDisplayed(r2MyAccountPo.myAccount_SignUp_CongratulationsMessage_txt));
