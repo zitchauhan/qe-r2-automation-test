@@ -61,13 +61,8 @@ public class Checkout_OMNI_3724_SD extends CommonActionHelper {
 			
 			//String actualproductid = ; how to verify correct product is visible?
 			
-			try {
-				assertEquals(urlquantity, actualqty); 	
-			}
-			catch(AssertionError e) {
-				System.out.println("Quantity visible on the cart page is NOT equal to what is given in the add to cart via URL");
-			}
-			System.out.println("Quantity visible on cart page is Equal to what is in the add to cart URL");
+			assertTrue("Quantity visible on the cart page is NOT equal to what is given in the add to cart via URL", urlquantity.equals(actualqty));
+           
 		}
 		
 		else if(arg1.equalsIgnoreCase("two")) {
@@ -104,16 +99,9 @@ public class Checkout_OMNI_3724_SD extends CommonActionHelper {
 			String actualqtyone =r2CheckOutPo.cartQtyValue.get(0).getAttribute("value");
 			String actualqtytwo = r2CheckOutPo.cartQtyValue.get(1).getAttribute("value");
 			
-			try {
-			assertEquals(urlqtytwo, actualqtyone);
-			assertEquals(urlqtyone, actualqtytwo);
-			}
-			catch(AssertionError e)
-			{
-				System.out.println("Quantity visible on the cart page is NOT equal to what is given in the add to cart via URL");
-			}
-			System.out.println("Quantity visible on the cart page is MATCHES to what is given in the add to cart via URL");
-			
+			assertTrue("Quantity visible on the cart page is NOT equal to what is given in the add to cart via URL", urlqtytwo.equals(actualqtyone));
+            assertTrue("Quantity visible on the cart page is NOT equal to what is given in the add to cart via URL", urlqtyone.equals(actualqtytwo));
+               
 		}
 		else if(arg1.equalsIgnoreCase("three")) {
             String currenturlb = webPropHelper.getTestDataProperty("AddToCartURL_ForThree");
@@ -147,21 +135,6 @@ public class Checkout_OMNI_3724_SD extends CommonActionHelper {
             String actualqtyone =r2CheckOutPo.cartQtyValue.get(0).getAttribute("value");
             String actualqtytwo = r2CheckOutPo.cartQtyValue.get(1).getAttribute("value");
             
-            try {
-            assertEquals(urlqtytwo, actualqtyone);
-            assertEquals(urlqtyone, actualqtytwo);
-            }
-            catch(AssertionError ae)
-            {
-                            System.out.println("Quantity visible on the cart page is NOT equal to what is given in the add to cart via URL");
-            }
-            System.out.println("Quantity visible on the cart page is MATCHES to what is given in the add to cart via URL");
-            
-}
-
-		
-	}
-	
-	
-
-}
+            assertTrue("Quantity visible on the cart page is NOT equal to what is given in the add to cart via URL", urlqtytwo.equals(actualqtyone));
+            assertTrue("Quantity visible on the cart page is NOT equal to what is given in the add to cart via URL", urlqtyone.equals(actualqtytwo));	
+		}}}
