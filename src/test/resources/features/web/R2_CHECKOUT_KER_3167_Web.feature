@@ -4,7 +4,8 @@ Feature: To verify Remove Promo code in Order Summary
 @Promocode
 Scenario: To verify Remove Promo code in Order Summary 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User navigates to L2 Mens clothing 
+	#And User navigates to L2 Mens clothing 
+	And User navigates to DiscountLess product
 	And user clicks on one of the subcategory and navigates to LTwo 
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 

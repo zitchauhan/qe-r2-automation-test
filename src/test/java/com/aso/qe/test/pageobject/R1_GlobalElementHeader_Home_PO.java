@@ -53,6 +53,11 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //SID Modified 18-Nov
 	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m']")public WebElement btnClothingCategory_M; //SID 20-Nov
 	
+	@FindBy(xpath="//*[@data-auid='level2Category-Home & Backyard']")public WebElement btnHomeBackyard; //Ranj
+	@FindBy(xpath="//*[@data-auid='level4Category-Griddles']")public WebElement btnGriddles; //Ranj
+	@FindBy(xpath="//*[@data-auid='level4Category-Folding Chairs']")public WebElement btnFoldingChair; //Ranj
+	
+	
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]/a | //*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop;//UAT9
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop_M; //SID 14-Nov
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]|//*[@data-auid='level4Category-Shirts']|//*[@data-auid=\"level3Category-Boys' Clothing\"]|//*[@data-auid='level4Category-Shorts']|//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop;
@@ -1785,8 +1790,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 		}
 	}	
-
-
+	
 	public void navigateToL3ViaClick_DesktopHomepage() throws Exception{
 		Thread.sleep(Constants.thread_low); 
 		assertTrue(clickOnButton(btnShopCategory));

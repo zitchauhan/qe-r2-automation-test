@@ -549,6 +549,17 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// CR-GK 9-Oct
 
 	public List<WebElement> btnRemoveGiftCardList;
+	
+	final String xpathForDeleteGiftCardButtonNew = "//*[text()= 'Gift Card']/../following-sibling::*//*[text()='Remove']";
+	@FindBy(xpath = xpathForDeleteGiftCardButtonNew) // CR-SK
+													// 29
+													// Aug
+													// //
+	// Modified RKA 12
+	// // Sep Modified
+	// CR-GK 9-Oct
+
+	public List<WebElement> btnRemoveGiftCardOptionList;
 
 	final String xpathForDeleteCreditCardButton = "//*[text()= 'CREDIT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'CREDIT CARDS']/../following-sibling::*//*[text()='Remove']/preceding-sibling::i";
 	@FindBy(xpath = xpathForDeleteCreditCardButton) // CR-SK
@@ -889,7 +900,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public WebElement MyAccount_CreditCardRemoveBtn;
 
 	// CR-GK 9-Oct
-	@FindBy(xpath = xpathForDeleteGiftCardButton)
+	@FindBy(xpath = xpathForDeleteGiftCardButtonNew)
 	public WebElement MyAccount_GiftCardRemoveBtn;
 	
 	@FindBy(xpath = "//*[@name='orderId']")
@@ -1021,7 +1032,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// CR-GK 9-Oct
 	public void deleteAllGiftCardsFromMyAccount() throws InterruptedException {
 		Thread.sleep(Constants.thread_low);
-		int giftCardsCount = btnRemoveGiftCardList.size();
+		int giftCardsCount = btnRemoveGiftCardOptionList.size();
 		while (giftCardsCount > 0) {
 			assertTrue(clickOnButton(MyAccount_GiftCardRemoveBtn));
 			Thread.sleep(Constants.thread_medium);
