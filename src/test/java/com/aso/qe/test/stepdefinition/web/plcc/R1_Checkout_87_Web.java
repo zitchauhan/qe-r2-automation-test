@@ -244,6 +244,11 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 		clickOnButton(genericPO.savePaymentInfoForLaterCheckBox);
 	}
 
+	@When("^user check same as shipping address$")
+	public void user_check_same_as_shipping_address() throws Throwable {
+		clickOnButton(genericPO.checkSameAsShippingAddress);
+	}
+	
 	@Given("^user expect element Order Summary to be present$")
 	public void user_expect_element_Order_Summary_to_be_present() throws Throwable {
 		try {
