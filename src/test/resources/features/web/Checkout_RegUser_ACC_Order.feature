@@ -5,8 +5,8 @@ Scenario: Checkout -  Registered user Place Order with ACC as tender
 	Given user launches the browser and navigates to "ASO_HOME" page plcc 
 	When user click on My Account link 
 	And user expect element Email Address to be present 
-	And user enter Email address in sign-in page "PLCCEmailAccount" 
-	And user enter password in sign-in page "NewPassword" 
+	And user enter Email address in sign-in page "Email_Address_2" 
+	And user enter password in sign-in page "Password_2" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
 	And user clears everything in cart
