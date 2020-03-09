@@ -165,6 +165,8 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
 	@FindBy(xpath = "//*[text()='Save Payment Info for Later']")
 	public WebElement savePaymentInfoForLaterCheckBox;
+	@FindBy(xpath = "//*[text()='Same As Shipping Address']")
+	public WebElement checkSameAsShippingAddress;
 	@FindBy(xpath="//*[text()='WE ACCEPT']")
 	public WebElement weAcceptLabel;
 	@FindBy(xpath="//*[@src='/content/dam/academysports/cart-and-checkout/cards-accepted/plcc.png']")
