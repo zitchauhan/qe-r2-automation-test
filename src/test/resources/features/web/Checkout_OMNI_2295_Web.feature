@@ -19,8 +19,7 @@ Feature: Google Pay option should not be visible for DSV items with vendor lead 
 		
 	@OMNI-2295 @C-Order @Regression @CR-SB @C-Checkout @Web 
 	Scenario Outline: Verify for DSV item from vendor which have lead day greater than 3, google pay option is not visible under payments in checkout page and user places order with other payment option
-	
-#payment is not working current because of captcha visible on review order	
+		
 		Given user launches the browser and navigates to "ASO_HOME" page
 		And User searches a product "DSV_Vendor" and navigates to PDP
 		And user click on ship it button
@@ -74,7 +73,6 @@ Feature: Google Pay option should not be visible for DSV items with vendor lead 
 	@OMNI-2295 @C-Order @Regression @CR-SB @C-Checkout @Web
 	Scenario: Verify GooglePay option is not visible for DSV item from vendor which have lead day greater than 3 for logged in user
 	
-	#login is not working current because of captch
 		Given user launches the browser and navigates to "ASO_HOME" page
 		And user clicks on SignIn link from global header 
 		And user logs in as "UserWithSavedAddressAndPayment" 
@@ -83,7 +81,6 @@ Feature: Google Pay option should not be visible for DSV items with vendor lead 
 		And user click on ship it button
 		And user click on viewcart button
 		Then user navigates to Cart Page
-		And user clicks on checkout button on cart page
 		And user clicks on checkout button on cart page
  		And user clicks on edit shipping method cta 
 		And user click on go to payment present in shipping method
