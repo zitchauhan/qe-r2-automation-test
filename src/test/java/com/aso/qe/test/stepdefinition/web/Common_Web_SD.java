@@ -193,7 +193,17 @@ Thread.sleep(2000);
 
 }
 
-
+@Then("^User navigates to DiscountLess product$")
+public void User_navigates_to_DiscountLess_product() throws Exception {
+Thread.sleep(2000);
+assertTrue(clickOnButton(globalElementHeader.btnShopCategory));
+waitForPageLoad(getDriver());
+Actions hover = new Actions(getDriver());
+hover.moveToElement(globalElementHeader.btnHomeBackyard).build().perform();
+Thread.sleep(2000);
+hover.moveToElement(globalElementHeader.btnGriddles).click().build().perform();
+Thread.sleep(2000);
+}
 
 
 

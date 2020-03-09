@@ -1,4 +1,4 @@
-Feature: Add to cart via URL for simple products - Non Signed in user
+Feature: Google Pay option should not be visible for DSV items with vendor lead day greater than 3
 
  
 	@OMNI-2295 @C-Order @Regression @CR-SB @C-Checkout @Web
@@ -84,8 +84,9 @@ Feature: Add to cart via URL for simple products - Non Signed in user
 		And user click on viewcart button
 		Then user navigates to Cart Page
 		And user clicks on checkout button on cart page
-		And user adds shipment address on checkout page for "guest" user
-		And user selects shipment method on check out page for "guest" user
+		And user clicks on checkout button on cart page
+ 		And user clicks on edit shipping method cta 
+		And user click on go to payment present in shipping method
 		And user verify "GooglePay" option is not displayed
   
 	
