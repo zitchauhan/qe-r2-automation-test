@@ -642,7 +642,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   @FindBy(xpath="//*[contains(text(),'Sign up to get Hot Deals')]/preceding::*[1]")public WebElement SignuptogetHotDeals_checkBox;
 	   
-	   @FindBy(xpath="//*[@data-auid='btnundefined']")public WebElement ReviewOrder_Btn;
+	   @FindBy(xpath="//*[@data-auid='btnundefined'] | //*[@data-auid='btncheckout_goto_order_review_submit_button']")public WebElement ReviewOrder_Btn;
 	   @FindBy(xpath="//*[@data-auid='checkout_edit_payment']")public WebElement EditPayment_Link;
 	   @FindBy(xpath="//*[text()='Change Billing Information']")public WebElement ChangeBillingInformation_Txt;
 	   
