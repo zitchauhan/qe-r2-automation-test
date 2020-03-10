@@ -228,7 +228,14 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		waitForPageLoad(getDriver());
 		globalElementHeader.navigateL2HeaderToPLP();
 	}
-
+	
+	@Then ("^User Navigates L2 Dicountless product from Homepage Header$")
+	public void User_Navigates_L2_Dicountless_product_from_HomepageHeader() throws Exception 
+	{
+		waitForPageLoad(getDriver());
+		globalElementHeader.navigateL2DicountLessHeaderToPLP();
+	}
+	
 	@Then ("^User clicks on product in PLP$")
 	public void User_clicks_on_product_in_PLP() throws Exception 
 	{
