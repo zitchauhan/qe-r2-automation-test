@@ -1028,6 +1028,17 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		}
 		
 	}
+	
+	@When("^user enters a corresponding billing address$")
+	public void user_enters_a_corresponding_billing_address() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		setInputText(r2CheckOutPo.FirstName_Input, webPropHelper.getTestDataProperty("plccBillingFirstName"));
+		setInputText(r2CheckOutPo.LastName_Input, webPropHelper.getTestDataProperty("plccBillingLastName"));
+		setInputText(r2CheckOutPo.PhoneNumber_Input, r2MyAccountPO.generateRandomMobileNumber());
+		setInputText(r2CheckOutPo.Adderss_Input, webPropHelper.getTestDataProperty("plccBillingAddress"));
+		setInputText(r2CheckOutPo.ZipCode_Input, webPropHelper.getTestDataProperty("plccBillingZipCode"));
+	}
+
 	@Then("^user adds shipment address on checkout page for guest user plcc$")
 	public void user_adds_shipment_address_on_checkout_page_for_guest_user_plcc() throws Throwable {
 		setInputText(r2CheckOutPo.inputCheckoutFirstName, webPropHelper.getTestDataProperty("FirstName"));
