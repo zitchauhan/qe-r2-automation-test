@@ -31,7 +31,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
 	//@FindBy(xpath = "//*[@data-auid='btnShipIt']|//*[text()='Ship It']|//*[starts-with(@data-auid,'btnShipIt')]")
 	//@FindBy(xpath="//section[@class='css-b7k0vt']//button[contains(@class,'d-flex flex-row css-m')]")
-	@FindBy(xpath="//div[@class='large']//*[text()='Home delivery']")
+	@FindBy(xpath="//div[@class='large']//*[text()='Home delivery'] | (//div[text()='Home delivery'])[3] | (//div[contains(text(),'Ship to Store')])[1]")
 	public WebElement shipItButton; 
 	
 	@FindBy(xpath = "//*[@data-auid='btnShipIt']|//*[text()='Ship It']|//*[starts-with(@data-auid,'btnShipIt')]|//*[@data-auid='PDP_OnlineMessage']")
@@ -165,6 +165,8 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
 	@FindBy(xpath = "//*[text()='Save Payment Info for Later']")
 	public WebElement savePaymentInfoForLaterCheckBox;
+	@FindBy(xpath = "//*[text()='Same As Shipping Address']")
+	public WebElement checkSameAsShippingAddress;
 	@FindBy(xpath="//*[text()='WE ACCEPT']")
 	public WebElement weAcceptLabel;
 	@FindBy(xpath="//*[@src='/content/dam/academysports/cart-and-checkout/cards-accepted/plcc.png']")

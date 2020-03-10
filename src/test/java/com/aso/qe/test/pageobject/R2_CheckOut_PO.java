@@ -642,7 +642,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   @FindBy(xpath="//*[contains(text(),'Sign up to get Hot Deals')]/preceding::*[1]")public WebElement SignuptogetHotDeals_checkBox;
 	   
-	   @FindBy(xpath="//*[@data-auid='btnundefined'] | //*[@data-auid='btncheckout_goto_order_review_submit_button']")public WebElement ReviewOrder_Btn;
+	   @FindBy(xpath="//*[@data-auid='btnundefined'] | //*[@data-auid='btncheckout_goto_order_review_submit_button'] | //*[contains(text(),'Review Order')]")public WebElement ReviewOrder_Btn;
 	   @FindBy(xpath="//*[@data-auid='checkout_edit_payment']")public WebElement EditPayment_Link;
 	   @FindBy(xpath="//*[text()='Change Billing Information']")public WebElement ChangeBillingInformation_Txt;
 	   
@@ -984,7 +984,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
     @FindBy(xpath = "//*[@id='billingAddress1']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingAddressErrorMsg;
     @FindBy(xpath = "//*[@id='billingState']//following-sibling::div//span[contains(text(),'Required')]") public WebElement txtBillingStateErrorMsg;
     @FindBy(xpath="//*[@id='billingAddress1']")public WebElement txtEmailAddressforOrderConfirmationInput;
-    @FindBy(xpath="//*[@data-auid='btnPlace_Order']")public WebElement btnPlaceOrderPaymentPage;
+    @FindBy(xpath="//*[@data-auid='btnPlace_Order'] | //*[text()='Place Order']")public WebElement btnPlaceOrderPaymentPage;
     @FindBy(xpath = "//*[@id='billingZipCode']//following-sibling::*[contains(text(),'Invalid')]") public WebElement txtBillingZipCodeInvalidErrorMsg;
     @FindBy(xpath = "//*[@id='email']//parent::div//following-sibling::*[contains(text(),'Enter a valid email')]") public WebElement txtBillingEmailAddressForOrderConfirmationInvalidErrorMsg;
     //Only for SOF Item--Start KER-KER-7033 & KER-7031
