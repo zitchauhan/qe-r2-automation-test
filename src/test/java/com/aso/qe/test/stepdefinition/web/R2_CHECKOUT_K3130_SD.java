@@ -66,4 +66,10 @@ public class R2_CHECKOUT_K3130_SD extends CommonActionHelper {
 		
 	}
 	
+	@Then("user see the form validation error for email field")
+	public void user_see_the_form_validation_error_for_email_fiedl() throws Throwable{
+		Thread.sleep(Constants.thread_low);
+		assertTrue(isDisplayed(r2CheckOutPo.enterEmailAddressBillingForm));
+	}
+	
 }

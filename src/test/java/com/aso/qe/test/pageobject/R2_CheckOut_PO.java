@@ -622,7 +622,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'First Name')]/following::*[2]")public WebElement FirstName_Input;
 	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'Last Name')]/following::*[2]")public WebElement LastName_Input;
-	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'Phone Number')]/following::*[2]")public WebElement PhoneNumber_Input;
+	   @FindBy(xpath="//*[@data-auid='checkout_payment']//*[contains(text(),'Phone Number')]/following::*[2] | //*[contains(@id,'billingPhone')]")public WebElement PhoneNumber_Input;
 	   
 	   @FindBy(xpath=" //*[contains(text(),'Send SMS text updates about my order')]/preceding::*[1]")public WebElement SendSMSTextUpdatesAboutMyOrder_checkbox;
 	   @FindBy(xpath="//*[@name='billingAddress1']")public WebElement Adderss_Input;
@@ -930,7 +930,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		setInputText(txtCVVInput,webPropHelper.getTestDataProperty("ThreeDigitCVV"));
 	}
 	
-	public void enterVisaCardDetails() {
+	public void enterVisaCardDetails() throws Throwable {
+		Thread.sleep(Constants.thread_low);
 		driver.switchTo().frame("first-data-payment-field-name");
 		setInputText(creditCardHolderInput, webPropHelper.getTestDataProperty("CardholderName"));
 		driver.switchTo().defaultContent();
@@ -1205,6 +1206,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="(//*[@class='o-copy__20reg'])[2]") public WebElement estimateTax_Cart;
 		@FindBy(xpath="//*[@data-auid='taxesvalue']") public WebElement estimateTax_Checkout;
 		@FindBy(xpath = "(//*[@class='academyicon icon-plus '])[4]")public WebElement expandStoreFour;
+		@FindBy(xpath = "//*[contains(text(),'Please enter an email address')]")public WebElement enterEmailAddressBillingForm;
 		
 
 }
