@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 import static org.junit.Assert.assertTrue;
@@ -19,7 +20,7 @@ public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 	@When("^user click on ship it button$")
 	public void user_click_on_ship_it_button() throws Throwable {
 		
-		Thread.sleep(4000);
+		Thread.sleep(Constants.thread_high);
 		assertTrue(isDisplayed(genericPO.shipItButton));
 		//assertTrue(clickOnButton(genericPO.shipItButton));  //Sachin
 		clickOnButton(genericPO.shipItButton);
