@@ -17,7 +17,7 @@ Feature: [Web] Billing Address Verification
   @R2_Web   @P1 @1HR_R2 @C-Order @CC-Checkout_Order @KER-3130 @ZYP_CART_K3132-9554 @ZYP_CART_K3132-9557 @CR-AG
   Scenario Outline: Verify user gets the form field validation error on leaving mandatory name/address fields blank
     Given user launches the browser and navigates to "ASO_HOME" page
-    When User searches a product "productName" and navigates to PDP
+    When User searches a product "SKUIdOfProductLs15" and navigates to PDP
     #And user click on Add to Cart Button 
 		And user click on ship it button
 		And user click on viewcart button

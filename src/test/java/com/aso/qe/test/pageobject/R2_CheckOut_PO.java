@@ -931,7 +931,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	}
 	
 	public void enterVisaCardDetails() throws Throwable {
-		Thread.sleep(Constants.thread_low);
+		Thread.sleep(Constants.thread_medium);
 		driver.switchTo().frame("first-data-payment-field-name");
 		setInputText(creditCardHolderInput, webPropHelper.getTestDataProperty("CardholderName"));
 		driver.switchTo().defaultContent();
