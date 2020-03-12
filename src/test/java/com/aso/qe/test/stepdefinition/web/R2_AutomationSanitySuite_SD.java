@@ -259,6 +259,7 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 	public void user_clicks_on_one_of_the_product_category_and_navigates_to_LThree_page() throws Throwable {
 		waitForElement(r2SanityPo.AS_productPLP1);
 		waitForPageLoad(getDriver());
+		Thread.sleep(Constants.thread_medium);
 		assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
 		Thread.sleep(Constants.thread_medium);
 	}
