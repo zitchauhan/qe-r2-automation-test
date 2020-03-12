@@ -37,7 +37,7 @@ Scenario: Verify the available fields on the Sign Up page
 
 #===========================================Sanity===============================================#
 
-@R2_Web @R2_WAST-02 @P1 @P1Temp @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @AutomationSmokeORIG @C1-Message 
+@R2_Web @R2_WAST-02 @P1 @P1Temp @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @AutomationSmokeORIG @C1-Message
 Scenario: TC_3- Verify User is able to create an account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -45,7 +45,7 @@ Scenario: TC_3- Verify User is able to create an account
 	And user enter first "SanityFirstName" 
 	And user enter last "SanityLastName" 
 	And user enter random email Address 
-	And user enter password "SanityPassword" 
+	And user enter password "NewPassword" 
 	Then user should see password masked 
 	When clicks on Sign Up Button 
 	Then user should be able to sign up successfully 
