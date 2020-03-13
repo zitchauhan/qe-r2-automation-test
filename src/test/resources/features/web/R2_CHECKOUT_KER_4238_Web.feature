@@ -5,8 +5,8 @@ Feature: Employee Discount
 Scenario: To verify that an existing ASO employee is able to see the employee discount on cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
-	And user enter the valid emailaddress "EmployeeEmailAddressNew" 
-	And user enter the valid password "EmployeePasswordNew" 
+	And user enter the valid emailaddress "EmployeeEmailAddress" 
+	And user enter the valid password "EmployeePassword" 
 	And user click on signin button 
 	And user navigate and deletes existing items in cart 
 	And User navigates to L2 Mens clothing 
