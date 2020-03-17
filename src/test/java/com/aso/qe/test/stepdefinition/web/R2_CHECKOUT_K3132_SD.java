@@ -88,7 +88,7 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 	
 	@Then("^user fill the credit card detail in payment$")
 	public void user_fill_the_credit_card_detail_in_payment() throws Throwable {
-		
+		Thread.sleep(10000);
 		driver.switchTo().frame("first-data-payment-field-name");
 		setInputText(r2CheckOutPo.CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
 		driver.switchTo().defaultContent();
