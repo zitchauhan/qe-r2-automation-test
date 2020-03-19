@@ -55,7 +55,7 @@ Scenario: Verify the user is able to see the partial inventory availability on F
 	Then user check for the products count and item available should be less 
 	
 @C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2865 @ZYP_CART_K2865-9985 
-Scenario: Verify the user is able to see no inventory availability on Find a store modal 
+Scenario: Verify the user is able to see no inventory availability on Find a store modal - Cart page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
