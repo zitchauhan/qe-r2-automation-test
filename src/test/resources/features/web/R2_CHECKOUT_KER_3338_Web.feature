@@ -175,7 +175,7 @@ Scenario: Verify authenticated user is able to proceed with Paypal as checkout f
 	
 	
 @R2_Web @Regression @R2_All @P1 @P1Temp @1HR_R2 @C-Checkout @KER-3338 
-@ZYP_CHECKOUT_3338-8259 @CR-AKK 
+@ZYP_CHECKOUT_3338-8259 @CR-AKK
 Scenario: Verify logged in user is able to select Paypal as Payment method on checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -185,7 +185,7 @@ Scenario: Verify logged in user is able to select Paypal as Payment method on ch
 	And user navigate and deletes existing items in cart
 	And User navigates to L2 Mens clothing 
 	And user clicks on one of the subcategory and navigates to LTwo 
-	And user is able to see the product category name in section title 
+	#And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	#And User is navigated to pdp page 
 	#And user click on Add to Cart Button 
