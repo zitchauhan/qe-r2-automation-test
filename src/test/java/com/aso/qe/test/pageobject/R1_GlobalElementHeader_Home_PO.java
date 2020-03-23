@@ -54,7 +54,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m']")public WebElement btnClothingCategory_M; //SID 20-Nov
 	
 	
-	@FindBy(xpath="//*[@data-auid='level2Category-Home & Backyard']")public WebElement btnHomeBackyard;
+	@FindBy(xpath="//*[@data-auid='level2Category-Home & Backyard'] | //*[@data-auid='level2Category-Home + Backyard']")public WebElement btnHomeBackyard;
 	@FindBy(xpath="//*[@data-auid='level4Category-Tables']")public WebElement btnTables;//Ranj
 	@FindBy(xpath="//*[@data-auid='level4Category-Griddles']")public WebElement btnGriddles; //Ranj
 	@FindBy(xpath="//*[@data-auid='level4Category-Folding Chairs']")public WebElement btnFoldingChair; //Ranj
