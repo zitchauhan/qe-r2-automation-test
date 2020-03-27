@@ -54,9 +54,10 @@ Scenario: Verify the user is able to see the full inventory availability on Find
 	#When user enters "BOPIS_SOF_Product" in the searchbox
 	When user enters "BOPIS_Product" in the searchbox
 	#And user click on Add to Cart Button
-	And user click on ship it button 
+    Then user click on pickup button
+	#And user click on ship it button 
 	And user click on view cart
-	Then user select in store pickup option
+	#Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
 	#And user click on edit link
 	And user check the selected store name
