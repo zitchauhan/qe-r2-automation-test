@@ -144,6 +144,7 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 
 	@When("^user enter the valid emailaddress \"(.*?)\"$")
 	public void user_enter_the_valid_emailaddress(String arg1) throws Throwable {
+		Thread.sleep(Constants.thread_low);
 		if (arg1 != "BlankEmailAddress")
 			setInputText(r2MyAccountPo.inputEmailAddress_SignIn, webPropHelper.getTestDataProperty(arg1));
 	}
