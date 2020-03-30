@@ -2,7 +2,11 @@ package com.aso.qe.test.stepdefinition.web.plcc;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
@@ -19,8 +23,8 @@ public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 		
 	@When("^user click on ship it button$")
 	public void user_click_on_ship_it_button() throws Throwable {
-		
-		Thread.sleep(Constants.thread_high);
+		waitForPageLoad(driver);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(genericPO.shipItButton));
 		//assertTrue(clickOnButton(genericPO.shipItButton));  //Sachin
 		clickOnButton(genericPO.shipItButton);
