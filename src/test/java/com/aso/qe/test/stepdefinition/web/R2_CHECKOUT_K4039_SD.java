@@ -71,6 +71,7 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		
 		setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
+		Thread.sleep(Constants.thread_medium); //inserted by sachin
 		setInputText(r2CheckOutPo.PaypalPassWord_Input, webPropHelper.getTestDataProperty(arg2));
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalLogin_Btn));
 		Thread.sleep(Constants.thread_high);
