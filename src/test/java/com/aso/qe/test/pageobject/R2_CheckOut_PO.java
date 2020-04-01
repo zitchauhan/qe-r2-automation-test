@@ -424,7 +424,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="((//*[@data-auid='find-a-store-modal']//*[@data-auid='facetdrawerundefined'])[1]/button/span/div/div[2]//span)[1]")
 	   public WebElement productsAvailabelOnSelectedStore;  //SID 21-Jan
 	   
-	   @FindBy(xpath=" (//*[@data-auid='find-a-store-modal']//*[@data-auid='facetdrawerundefined'])[1]/div/*/*[2]/*/*/*]")
+	   @FindBy(xpath=" (//*[@data-auid='find-a-store-modal']//*[@data-auid='facetdrawerundefined'])[1]/div/*/*[2]/*/*/*")
 	   public WebElement productsNotAvailabelOnSelectedStore;  //SID 21-Jan
 	   
 	   @FindBy(xpath=" //*[@data-auid='checkout_payment_add_gift_card_icon']")
