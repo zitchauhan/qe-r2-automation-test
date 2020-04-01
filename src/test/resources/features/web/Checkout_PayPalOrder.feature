@@ -1,6 +1,6 @@
 Feature: CHECKOUT Guest user BOPIS item PAYPAL as tender
 
-@AutomationSmoke	
+@AutomationSmoke 
 Scenario:  Checkout - Guest User PAYPAL order Regular BOPIS item
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -22,4 +22,10 @@ Scenario:  Checkout - Guest User PAYPAL order Regular BOPIS item
 	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
 	And user able to see the button place order
 	And user is navigated to order confirmation page and captures order number
-	
+	Then user able to see order number 
+	And User navigates to Check Oder status Page 
+	Then System Generate ordernumber "GeneratedOrdernumber" and "zipcode" 
+	And User clicks on Check button
+	When User Clicks on Cancel Order link
+	And user click on yes cancle my order button
+    And Verify that the order cancellation confirmation page is displayed

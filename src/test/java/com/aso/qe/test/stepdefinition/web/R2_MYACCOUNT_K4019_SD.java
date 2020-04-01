@@ -45,9 +45,10 @@ public class R2_MYACCOUNT_K4019_SD extends CommonActionHelper
 	}
 	
 	@Then("^Verify that the order cancellation confirmation page is displayed$")
-	public void Verify_that_the_order_cancellation_confirmation_page_is_displayed() {
+	public void Verify_that_the_order_cancellation_confirmation_page_is_displayed() throws InterruptedException {
 		//waitForElement(r2MyAccountPo.Order_Cancellation_page);
 		assertTrue(isDisplayed(r2MyAccountPo.Order_Cancellation_page));
+		Thread.sleep(3000);
 	}
 	
 	@And("^user should be able to see cancellation message \"(.*?)\"$")
