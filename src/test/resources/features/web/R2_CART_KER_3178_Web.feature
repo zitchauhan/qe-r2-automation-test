@@ -29,7 +29,7 @@ Scenario: Verify that user view Find a Store modal from Change Location in Check
   Then user click on change location button
   Then User is able to see Find a Store Modal
     
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-3178 @ZYP_CART_K3178-9942 
+@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-3178 @ZYP_CART_K3178-9942
 Scenario: Verify user can change the store using Find in Store modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -67,25 +67,25 @@ Scenario: Verify the user is able to see the full inventory availability on Find
     
 
     
-@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-3178 @ZYP_CART_K3178-9944 @CR-AG
-Scenario: After searching for a couple of different keywords the header stops displaying
-	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on SignIn link from global header 
-	And user logs in as "EmailAddress"
-	When User searches a product "productName" and navigates to PDP
-	#And user click on Add to Cart Button 
-	And user click on ship it button
-	And user click on view cart
-	And user click on checkout button
-  When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"   
+#@C-BOPIS @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-3178 @ZYP_CART_K3178-9944 @CR-AG
+#Scenario: After searching for a couple of different keywords the header stops displaying
+#	Given user launches the browser and navigates to "ASO_HOME" page 
+#	When user clicks on SignIn link from global header 
+#	And user logs in as "EmailAddress"
+#	When User searches a product "productName" and navigates to PDP
+#	#And user click on Add to Cart Button 
+#	And user click on ship it button
+#	And user click on view cart
+#	And user click on checkout button
+  #When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"   
     
     
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-3178 @ZYP_CART_K3178-9945
+@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-3178 @ZYP_CART_K3178-9945 
 Scenario: Verify the user is able to see the partial inventory availability on Find a store modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	#And user logs in as "Bopis_Email" 
-	When user enters "BOPIS_Product" in the searchbox
+	And user logs in as "Bopis_Email" 
+	When user enters "productName" in the searchbox
 	#And user click on Add to Cart Button
 	And user click on ship it button 
 	And then user close the add to cart popup
@@ -95,8 +95,6 @@ Scenario: Verify the user is able to see the partial inventory availability on F
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
-	And user adds shipment address on checkout page for "guest" user 
-	And user selects shipment method on check out page for "guest" user
 	And user check the selected store name
   Then user click on change location button
   Then User is able to see Find a Store Modal
@@ -109,7 +107,7 @@ Scenario: Verify the user is able to see no inventory availability on Find a sto
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
 	And user logs in as "Cart_BopisEmail" 
-	And User empty the cart
+	#And User empty the cart
 	Then user change the selected store "BOPIS_Store2"
 	When user enters "BOPIS_Regular_Product" in the searchbox
 	#And user click on Add to Cart Button 
@@ -117,8 +115,10 @@ Scenario: Verify the user is able to see no inventory availability on Find a sto
 	And user click on view cart
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
+	And user clicks on edit link on store pickup section
 	And user check the selected store name
   Then user click on change location button
   Then User is able to see Find a Store Modal
   And user check that the selected store appear at the top
-  Then user check for the products count and item not available should come
+  #Then user check for the products count and item not available should come
+  Then user check for the zero product count on the Find a Store Modal

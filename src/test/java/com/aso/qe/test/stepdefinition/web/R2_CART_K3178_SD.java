@@ -148,4 +148,21 @@ public class R2_CART_K3178_SD extends CommonActionHelper {
 		cartPO.navigateAndDeleteAllProductsInCart();
 	}
 
+	@And("^user clicks on edit link on store pickup section$")
+	public void user_clicks_on_edit_link_on_store_pickup_section() throws InterruptedException{
+		Thread.sleep(Constants.thread_medium);
+		assertTrue(clickOnButton(r2CheckoutPo.checkoutStoreEdit));
+	}
+	
+	@Then("^user check for the zero product count on the Find a Store Modal$")
+	public void user_check_for_the_zero_product_count_on_the_find_a_store_modal() throws InterruptedException{
+		Thread.sleep(Constants.thread_high);
+		String availableMessage = r2CheckoutPo.zeroItemAvailableFindStoreModal.getText();
+		System.err.println("availableMessage " + availableMessage);
+		if (availableMessage.toLowerCase().contains("0 of 1 items")) {
+			assertTrue(true);
+		} else {
+			assertTrue(false);
+		}
+	}
 }

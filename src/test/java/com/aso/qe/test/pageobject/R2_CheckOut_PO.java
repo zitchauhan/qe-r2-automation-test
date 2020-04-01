@@ -424,7 +424,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="((//*[@data-auid='find-a-store-modal']//*[@data-auid='facetdrawerundefined'])[1]/button/span/div/div[2]//span)[1]")
 	   public WebElement productsAvailabelOnSelectedStore;  //SID 21-Jan
 	   
-	   @FindBy(xpath=" (//*[@data-auid='find-a-store-modal']//*[@data-auid='facetdrawerundefined'])[1]/div/*/*[2]/*/*/*")
+	   @FindBy(xpath=" (//*[@data-auid='find-a-store-modal']//*[@data-auid='facetdrawerundefined'])[1]/div/*/*[2]/*/*/*]")
 	   public WebElement productsNotAvailabelOnSelectedStore;  //SID 21-Jan
 	   
 	   @FindBy(xpath=" //*[@data-auid='checkout_payment_add_gift_card_icon']")
@@ -1207,6 +1207,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='taxesvalue']") public WebElement estimateTax_Checkout;
 		@FindBy(xpath = "(//*[@class='academyicon icon-plus '])[4]")public WebElement expandStoreFour;
 		@FindBy(xpath = "//*[contains(text(),'Please enter an email address')]")public WebElement enterEmailAddressBillingForm;
+		@FindBy(xpath = "//*[@data-auid='checkout_edit_in_store_pickup']")public WebElement checkoutStoreEdit;
+		@FindBy(xpath = "//*[contains(@class,'pr-half css-17ijryf')]")public WebElement zeroItemAvailableFindStoreModal;
 		
 
 }
