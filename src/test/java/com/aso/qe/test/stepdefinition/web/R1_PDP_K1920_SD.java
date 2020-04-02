@@ -180,6 +180,7 @@ public R2_Sanity_PO sanity=PageFactory.initElements(getDriver(), R2_Sanity_PO.cl
 		public void user_click_on_pickup_button() throws Throwable{
 		//Thread.sleep(5000);
 		waitForPageLoad(driver);
+		Thread.sleep(Constants.thread_highest);
 		clickOnButton(pdpPageObj.pickupBtn_m);
 		}
 }

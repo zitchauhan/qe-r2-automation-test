@@ -1207,6 +1207,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='taxesvalue']") public WebElement estimateTax_Checkout;
 		@FindBy(xpath = "(//*[@class='academyicon icon-plus '])[4]")public WebElement expandStoreFour;
 		@FindBy(xpath = "//*[contains(text(),'Please enter an email address')]")public WebElement enterEmailAddressBillingForm;
+		@FindBy(xpath = "//*[@data-auid='checkout_edit_in_store_pickup']")public WebElement checkoutStoreEdit;
+		@FindBy(xpath = "//*[contains(@class,'pr-half css-17ijryf')]")public WebElement zeroItemAvailableFindStoreModal;
 		
 
 }
