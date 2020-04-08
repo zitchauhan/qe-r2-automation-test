@@ -1,7 +1,7 @@
 Feature: CHECKOUT - Regsiter New User & Place Order GC as Tender
 
 
-@AutomationSmoke
+@AutomationSmoke  
 Scenario Outline: Checkout - Regsiter New User & Place Gift Card Order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account
@@ -21,6 +21,13 @@ Scenario Outline: Checkout - Regsiter New User & Place Gift Card Order
 #	Then Verify the message on the page 
 #		|# Message for successful order is displayed		|
 #		|THANKS FOR SUBMITTING YOUR ORDER					|
+    Then user able to see order number 
+	And User navigates to Check Oder status Page
+	Then System Generate ordernumber "GeneratedOrdernumber" and "zipcode" 
+	And User clicks on Check button
+	When User Clicks on Cancel Order link
+	And user click on yes cancle my order button
+    And Verify that the order cancellation confirmation page is displayed 
 	Examples: 
 		|Payment Type	|
 		|Gift Card		|
