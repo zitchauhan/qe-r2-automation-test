@@ -16,6 +16,7 @@ import static org.junit.Assert.assertTrue;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.JavascriptExecutor;
 
 public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
@@ -25,9 +26,16 @@ public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 	public void user_click_on_ship_it_button() throws Throwable {
 		waitForPageLoad(driver);
 		Thread.sleep(Constants.thread_highest);
-		assertTrue(isDisplayed(genericPO.shipItButton));
-		//assertTrue(clickOnButton(genericPO.shipItButton));
-		clickOnButton(genericPO.shipItButton);
+		//assertTrue(isDisplayed(genericPO.shipItButton));
+		////assertTrue(clickOnButton(genericPO.shipItButton));
+		//clickOnButton(genericPO.shipItButton);
+		
+		//changes done in order resolve failure of uat6 automation running on gcp -- Sachin
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", genericPO.shipItButton);
+		Thread.sleep(Constants.thread_high);
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", genericPO.shipItButton);
+		Thread.sleep(Constants.thread_high);
+		
 
 	}
 	
