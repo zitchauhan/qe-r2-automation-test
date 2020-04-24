@@ -732,7 +732,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		  @FindBy(xpath = "//*[@data-auid='checkout_footer_chat_now_link']")	public WebElement checkoutFooterChatNowLink; // 10-September
 		   @FindBy(xpath = "//*[@data-auid='checkout_footer_contact_number_link_m']")	public WebElement checkoutFooterContactNumberLink_mobile; // 10-September
 		   @FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_Terms & Conditions']")	public WebElement checkoutFooterLegalLinkTermsConditions; // 10-September
-		   @FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_California Proposition 65 California Transparency in Supply Chains Act (SB 657)']")	public WebElement checkoutFooterLegalLinkCaliforniaProposition65; // 10-September
+		   @FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_California Proposition 65 California Transparency in Supply Chains Act (SB 657)'] | //*[@data-auid='checkout_footer_legal_link_California Disclosures']")	public WebElement checkoutFooterLegalLinkCaliforniaProposition65; // 10-September
 		   @FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Visa_icon']") public WebElement iconVisa;
 			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Master Card_icon']") public WebElement iconMasterCard;
 			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Paypal_icon']") public WebElement iconPaypal;
