@@ -27,18 +27,12 @@ public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 	@When("^user click on ship it button$")
 	public void user_click_on_ship_it_button() throws Throwable {
 		waitForPageLoad(driver);
-		Thread.sleep(Constants.thread_highest);
-		//assertTrue(isDisplayed(genericPO.shipItButton));
-		////assertTrue(clickOnButton(genericPO.shipItButton));
-		//clickOnButton(genericPO.shipItButton);
-		
-		//changes done in order resolve failure of uat6 automation running on gcp -- Sachin
-		System.out.println("size of the CTA " + driver.findElements(By.xpath("//*[@class='large']//*[text()='Home delivery'] | (//*[text()='Home delivery'])[3] | (//*[contains(text(),'Ship to Store')])[1]")).size());
-		//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", genericPO.shipItButton);
-		Thread.sleep(Constants.thread_high);	
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", genericPO.shipItButton);
+
 		Thread.sleep(Constants.thread_high);
-		
+		assertTrue(isDisplayed(genericPO.shipItButton));
+		//assertTrue(clickOnButton(genericPO.shipItButton));  //Sachin
+		clickOnButton(genericPO.shipItButton);
+
 
 	}
 
