@@ -215,7 +215,7 @@ Scenario: Verify if User is able to enter billing information for BOPIS
 @C-BOPIS @R2_Web @R2_All @P1 @CB-Checkout @KER-2866 @ZYP_CART_K2866-10541 
 Scenario: Verify if User is able to enter new billing information in Payment for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on SignIn link
+	When user clicks on SignIn link from global header 
 	And user logs in as "Bopis_Email" 
 	When user enters "BOPIS_SOF_Product" in the searchbox
 	#And user click on Add to Cart Button 
