@@ -181,7 +181,7 @@ public R2_Sanity_PO sanity=PageFactory.initElements(getDriver(), R2_Sanity_PO.cl
 		//Thread.sleep(5000);
 		waitForPageLoad(driver);
 		Thread.sleep(Constants.thread_highest);
-		clickOnButton(pdpPageObj.pickupBtn_m);
+		assertTrue(clickOnButton(pdpPageObj.pickupBtn_m));
 		}
 }
 
