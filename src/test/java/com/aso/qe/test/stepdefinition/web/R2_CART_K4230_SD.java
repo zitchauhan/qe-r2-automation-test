@@ -73,14 +73,14 @@ public class R2_CART_K4230_SD extends CommonActionHelper {
 		else if(emailID.contains("Bopis_Email")) {
 			System.out.println(); setInputText(r2MyAccountPo.txtEmailAddress,webPropHelper.getTestDataProperty("Bopis_Email"));
 			
-			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
+			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Bopis_Email_Password"));
 			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
 			cartR2PageObj.navigateAndDeleteAllProductsInCart();
 		}
 		else if(emailID.contains("Cart_BopisEmail")) {
 			setInputText(r2MyAccountPo.txtEmailAddress,
 					webPropHelper.getTestDataProperty("Cart_BopisEmail"));
-			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Password"));
+			setInputText(r2MyAccountPo.inputPassword, webPropHelper.getTestDataProperty("Cart_BopisPassword"));
 			assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
 			cartR2PageObj.navigateAndDeleteAllProductsInCart();
 		}

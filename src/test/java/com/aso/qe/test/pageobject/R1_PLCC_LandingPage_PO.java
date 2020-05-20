@@ -227,6 +227,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 	public void clickOnSignInBtnSignInPage() throws Exception {
 
 		{
+			Thread.sleep(5000);
 			assertTrue(isDisplayed(signInButton));
 			assertTrue(isClickable(signInButton));
 			if (isDisplayed(signInButton)) {
