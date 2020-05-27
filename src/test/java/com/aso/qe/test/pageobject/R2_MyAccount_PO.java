@@ -939,6 +939,19 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//input[@id='phoneNumber']")
 	public WebElement billingPhoneNumber;
 	
+	@FindBy(xpath = "//button[@data-auid='btnsubmit-btn']")
+	public WebElement addAccButton;
+		
+	@FindBy(xpath = "//div[text()=\"Clarissa Alter\"]")
+	public WebElement plccValidateName;
+	
+	@FindBy(xpath = "//p[contains(text(),\"8 Kiko Pl\")]")
+	public WebElement plccValidateAddress;
+	
+	@FindBy(xpath = "//p[text()=\"12524\"]")
+	public WebElement plccValidateZip;
+	
+	
 	@FindBy(xpath = "//span[text()='Credit Card']")
 	public WebElement cc_Radio_Button;
 	
