@@ -145,3 +145,18 @@ Scenario: Verify last added credit card in saved list becomes the default on del
 	And user verifies the credit card saved is set as default 
 	And user clicks Remove button in payment page 
 	And user verifies the credit card saved is set as default
+	
+
+@Web @Regression @CR-MT	
+Scenario: Verify user is able to remove the saved academy credit card from My Account 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then user click on My Account and navigate to payment 
+	Then Verify below Sub/Main Module of My Account 
+		|#Verify following elements in Payments > Add new credit card section	|
+		|PaymentPage_PaymentsHeader_label				|
+	Then user clicks Remove acc button in payment page
+	And user should see the proper message

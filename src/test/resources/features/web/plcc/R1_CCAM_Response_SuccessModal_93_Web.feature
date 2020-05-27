@@ -43,7 +43,7 @@ Scenario: Verify is able to navigate to Welcome, PHIL Collins FPO model
 	And user select credit application modal agree message 
 	Then user navigates to credit card approval modal 
 
-@C-PLCC @Regression @All @PLCC-93 @CR-VS 
+@C-PLCC @Regression @All @PLCC-93 @CR-VS @PLCC @P1
 Scenario: Verify the elements available on approval model
 	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
@@ -54,7 +54,7 @@ Scenario: Verify the elements available on approval model
 	And user enter Suite or Apartment "SuiteOrApartment" 
 	And user enter City "City" 
 	And user select State "State" 
-	And user enter Zip Code on credit card Application Modal "ZipCode" 
+	And user enter Zip Code on credit card Application Modal "zipcode" 
 	And user enter Email Address on credit card Application Modal "EmailId" 
 	And user enter Confirm Email Address "ConfirmEmailId" 
 	And user enter Mobile Phone "MobilePhone" 
@@ -68,7 +68,7 @@ Scenario: Verify the elements available on approval model
 	And user expect element disclosure text one to be present
 	And user expect element disclosure text two to be present
 	And user expect element disclosure text three to be present
-	And user expect element disclosure text four to be present
+	#And user expect element disclosure text four to be present
 	And user expect element continue To Checkout button to be present
 	And user expect element continue to shopping button to be present
 	
