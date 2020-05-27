@@ -22,7 +22,7 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
 	
-	String newFirstName = myAccountPo.generateRandomString();
+	String newFirstName = "";
 
 	@Given("^clicks on SignIn button in home page$")
 	public void clicks_on_SignIn_button_in_home_page() throws Throwable {
@@ -167,6 +167,7 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 
 	@And("^user should see the new First name$")
 	public void user_should_see_the_new_First_name() throws Throwable {
+		Thread.sleep(Constants.thread_medium);
 		String firstLastName = myAccountPo.adr_inpFirstNameLastName.getText();
 		assertTrue(firstLastName.contains(newFirstName));	   
 	}
