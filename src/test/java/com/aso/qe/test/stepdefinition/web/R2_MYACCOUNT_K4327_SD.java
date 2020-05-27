@@ -50,7 +50,7 @@ public class R2_MYACCOUNT_K4327_SD extends CommonActionHelper {
 	
 	@When("^User Clicks on Cancel Order link$")
 	public void user_Clicks_on_Cancel_Order_link() throws Throwable {
-		Thread.sleep(300000); // Order will be eligible for cancellation after 4-5 mins of order placement as order take same time to reach sterling  
+		Thread.sleep(600000); // Order will be eligible for cancellation after 4-5 mins of order placement as order take same time to reach sterling  
 		assertTrue(clickOnButton(r2MyAccountPo.Order_Cancel_lnk));
 	    
 	}
