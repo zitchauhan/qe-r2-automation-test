@@ -235,6 +235,7 @@ public class R1_PLCC_LandingPage_PO extends Common_Web_PLCC {
 				assertTrue(clickOnButton(signInButton));
 			} else {
 				Common_Web_PLCC.waitUntilElePresent(driver, signInButton, ELEMWAITTIME_SLOW);
+				assertTrue(clickOnButton(signInButton));
 			}
 		}
 	}
