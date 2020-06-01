@@ -295,7 +295,7 @@ Scenario: Verify the user does not get the error message when First name filled 
 @R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10165 @CR-SK
 Scenario: Verify the user gets the error message when First name filled with more than 50 characters
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on SignIn link from global header 
+	When user clicks on SignIn link from global header
 	And clicks on SignUp link from SignIn page
 	And user enter last "NameHavingMoreThan50Characters"
 	Then Verify "First Name" text field does not accept more than 50 characters
@@ -306,4 +306,22 @@ Scenario: Verify the user gets the error message when last name filled with more
 	When user clicks on SignIn link from global header 
 	And clicks on SignUp link from SignIn page
 	And user enter last "NameHavingMoreThan50Characters"
-	And Verify "Last Name" text field does not accept more than 50 characters	    		    
+	And Verify "Last Name" text field does not accept more than 50 characters	    	
+	
+
+@Web @Regression @CR-MT	
+Scenario: Register new user with address information for faster checkout
+  	Given user launches the browser and navigates to "ASO_HOME" page
+	When user click on My Account link 
+	And  user click on Sign Up link
+	And user enter First Name "First_Name"
+	And user enter Last Name "Last_Name"
+	And user enter Email Address "Email_Address" 
+	And user enter Password "NewPassword"
+	When user select Add Address for Faster Checkout checkbox 
+	And user enter Address plcc "Address" 
+	And user enter Zip Code "Zip_Code" 
+	And user enters Phone Number "Phone_Number" 
+	And user click on SIGN UP
+	Then user verify success message
+		    
