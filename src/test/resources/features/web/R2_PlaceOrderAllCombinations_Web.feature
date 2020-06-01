@@ -77,7 +77,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 				
 				
 @Regression @P1 @CR-SK @Checkout
-Scenario Outline: Verify if unauthenticated user is able to place an for multi SKU products 
+Scenario Outline: Verify if order placement for a AMEX Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct" 
@@ -99,7 +99,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 		|Amex      	|
 
 @Regression @P1 @CR-SK @Checkout
-Scenario Outline: Verify if unauthenticated user is able to place an for multi SKU products 
+Scenario Outline: Verify if order placement for a VISA Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct" 
@@ -121,7 +121,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 		|Visa      	|
 		
 @Regression @P1 @CR-SK @Checkout
-Scenario Outline: Verify if unauthenticated user is able to place an for multi SKU products 
+Scenario Outline: Verify if order placement for a DISCOVER Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct" 
@@ -144,7 +144,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 
 		
 @Regression @P1 @CR-SK @Checkout
-Scenario Outline: Verify if unauthenticated user is able to place an for multi SKU products 
+Scenario Outline: Verify if order placement for a master Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
 	And user click on Add to Cart Button for "MultiSKUProduct" 
