@@ -76,7 +76,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 		|PayPal			|
 				
 				
-@temp_suchee
+@Regression @P1 @CR-SK @Checkout
 Scenario Outline: Verify if unauthenticated user is able to place an for multi SKU products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
@@ -98,7 +98,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 		|Card Type	|
 		|Amex      	|
 
-@temp_suchee1
+@Regression @P1 @CR-SK @Checkout
 Scenario Outline: Verify if unauthenticated user is able to place an for multi SKU products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
@@ -120,7 +120,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 		|Card Type	|
 		|Visa      	|
 		
-@temp_suchee2
+@Regression @P1 @CR-SK @Checkout
 Scenario Outline: Verify if unauthenticated user is able to place an for multi SKU products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
@@ -143,7 +143,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 		|discover    	|
 
 		
-@temp_suchee3
+@Regression @P1 @CR-SK @Checkout
 Scenario Outline: Verify if unauthenticated user is able to place an for multi SKU products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
