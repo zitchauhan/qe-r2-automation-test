@@ -295,7 +295,7 @@ Scenario: Verify the user does not get the error message when First name filled 
 @R2_Web @R2_Regression @R2_All @P-Medium @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10165 @CR-SK
 Scenario: Verify the user gets the error message when First name filled with more than 50 characters
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user clicks on SignIn link from global header And user click on SIGN UP
+	When user clicks on SignIn link from global header
 	And clicks on SignUp link from SignIn page
 	And user enter last "NameHavingMoreThan50Characters"
 	Then Verify "First Name" text field does not accept more than 50 characters
