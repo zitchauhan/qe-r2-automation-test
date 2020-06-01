@@ -55,7 +55,7 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 		}
 		else
 		{
-			assertTrue(isDisplayed(pdpPageObj.txtProdcutDetails));
+			//assertTrue(isDisplayed(pdpPageObj.txtProdcutDetails));
 			scrollPageToWebElement(pdpPageObj.txtDetails);
 			assertTrue(isDisplayed(pdpPageObj.txtDetails));
 		}	

@@ -9,6 +9,12 @@ Scenario: To verify user is able to navigate to product details page when produc
 	#And user should be able to see Add to cart button and quantity section 
 	And user should be able to see ship it button and quantity section 
 	
-	
+@Web @Regression @CR-SB @P1 @PDP
+  Scenario: To verify All of the elements are present on the PDP page
+  	Given user launches the browser and navigates to "ASO_HOME" page 
+		And User searches a product "productName" and navigates to PDP 
+    Then verify addcart button is displayed
+		Then User verifies breadcrumb is present for the product
+		Then verfiy the product details and features
    
     
