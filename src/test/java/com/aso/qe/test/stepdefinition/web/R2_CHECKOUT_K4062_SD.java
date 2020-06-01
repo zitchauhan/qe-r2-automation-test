@@ -71,7 +71,55 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn));
 	}
 
+	
+	//guest user and different card types
+	@Then("^user add \"([^\"]*)\" details for a guest user$")
+	public void user_add_details_for_a_guest_user(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		String creditCardNumber="CardVISA";
+		String cvv = "CVV";
+		//// Credit card to be picked
+		if (arg1.toLowerCase().contains(("visa")))
+			creditCardNumber = "CardVISA";
+		else if (arg1.toLowerCase().contains(("master")))
+			creditCardNumber = "CardMaster";
+		else if (arg1.toLowerCase().contains(("amex"))) 
+		{
+			creditCardNumber = "CardAmex";
+			cvv = "FourDigitCVV";
+		} else if (arg1.toLowerCase().contains(("discover")))
+			creditCardNumber = "CardDiscover";
+		//else
+			//creditCardNumber = "CreditCardNumber";
+		
+		setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty(creditCardNumber));
+		setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
+		setInputText(r2CheckOutPo.Cvv_Input, webPropHelper.getTestDataProperty(cvv));
+		Thread.sleep(5000);
+		String name = webPropHelper.getTestDataProperty("CardholderName");
+		driver.switchTo().frame("first-data-payment-field-name");
+		setInputText(r2CheckOutPo.CardholderName_Input, name);
+		System.out.println("CardHoldername="+webPropHelper.getTestDataProperty("CardholderName"));
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("first-data-payment-field-card");
+		setInputText(r2CheckOutPo.CreditCardDetails_Input, webPropHelper.getTestDataProperty(creditCardNumber));
+		System.out.println("CardNumber="+webPropHelper.getTestDataProperty(creditCardNumber));
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("first-data-payment-field-exp");	
+		setInputText(r2CheckOutPo.ExpDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame("first-data-payment-field-cvv");
+		setInputText(r2CheckOutPo.PassCvv_Input, webPropHelper.getTestDataProperty(cvv));
+		driver.switchTo().defaultContent();
+		setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
+				r2MyAccountPO.generateRandomEmailId());
+		
+		if (isDisplayed(r2CheckOutPo.ReviewOrder_Btn))
+			assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
+	}
 
+
+	
 	////// Implemented only for guest, and newly registered user
 	@And("^user add \"(.*?)\" details in payment method for \"(.*?)\" user$")
 	public void user_add_details_in_payment_method_for_user(String arg1, String arg2) throws Throwable {
