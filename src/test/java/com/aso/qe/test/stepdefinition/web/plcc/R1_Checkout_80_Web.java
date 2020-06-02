@@ -1,7 +1,7 @@
 package com.aso.qe.test.stepdefinition.web.plcc;
 
 import static org.junit.Assert.assertTrue;
-import static org.testng.Assert.assertFalse;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -11,11 +11,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
-import com.aso.qe.test.common.Common_Web_PLCC;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
@@ -29,6 +27,8 @@ import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
 import cucumber.api.DataTable;
+import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -1051,5 +1051,11 @@ public class R1_Checkout_80_Web extends CommonActionHelper {
 		clickOnButton(r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn);
 	
 	
+	}
+	
+	@And("^user enters order confirmation email$")
+	public void user_enters_order_confirmation_email() throws Throwable {
+		setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
+				r2MyAccountPO.generateRandomEmailId());
 	}
 }
