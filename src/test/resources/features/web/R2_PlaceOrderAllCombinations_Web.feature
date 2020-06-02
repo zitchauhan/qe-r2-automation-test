@@ -166,7 +166,7 @@ Scenario Outline: Verify if order placement for a master Card
 		|master     	|
 
 
-@ES197 @CR-SK1 @P1 @P1Temp @temp_suchee
+@Regression @P1 @CR-SK @Checkout
 Scenario: Place order as a registered user using Paypal express as tender
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productNameSTH" and navigates to PDP
