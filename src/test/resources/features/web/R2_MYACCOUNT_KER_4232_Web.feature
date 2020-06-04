@@ -285,7 +285,7 @@ Scenario: Verify My Account Address Book - Delete only saved address that is Def
 		|AddressPage_Default_txt					|	
 	And user verifies that remove button is not available 
 	
-@Web @Regression @CR-MT
+@Web @Regression @P1 @CR-MT
 Scenario: Verify My Account Address Book - Changes in the Default Address should be saved 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

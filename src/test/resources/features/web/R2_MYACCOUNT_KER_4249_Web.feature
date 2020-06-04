@@ -309,7 +309,7 @@ Scenario: Verify the user gets the error message when last name filled with more
 	And Verify "Last Name" text field does not accept more than 50 characters	    	
 	
 
-@Web @Regression @CR-MT	
+@Web @Regression @P1 @CR-MT	
 Scenario: Register new user with address information for faster checkout
   	Given user launches the browser and navigates to "ASO_HOME" page
 	When user click on My Account link 

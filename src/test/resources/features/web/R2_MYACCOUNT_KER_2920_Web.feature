@@ -147,7 +147,7 @@ Scenario: Verify last added credit card in saved list becomes the default on del
 	And user verifies the credit card saved is set as default
 	
 
-@Web @Regression @CR-MT	
+@Web @Regression @P1 @CR-MT	
 Scenario: Verify user is able to remove the saved academy credit card from My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

@@ -1,6 +1,6 @@
 Feature: CHECKOUT - Apply discount for guest user on Academy Credit Card as Tender type
 
-@Web @Regression @CR-MT	
+@Web @Regression @P1 @CR-MT	
 Scenario: Verfiy discount is applied for guest user place order with ACC as tender 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
