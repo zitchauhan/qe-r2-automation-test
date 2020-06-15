@@ -1037,4 +1037,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		assertTrue(isDisplayed(caZIPRestrictionError));
 		assertTrue(getText(caZIPRestrictionError).equals(webPropHelper.getTestDataProperty("ErrorMessageOncaliforniaZIPCode")));
 	}
+	
+	@FindBy(xpath="//*[text()='Academy Credit Card']") public WebElement ACCRadioBtn;
+	@FindBy(xpath="//*[text()='Choose Card']") public WebElement ChooseCardCheckout;
 }

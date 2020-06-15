@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -71,20 +72,36 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		
 		setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
-		Thread.sleep(Constants.thread_medium); //inserted by sachin
+		Thread.sleep(Constants.thread_medium); 
 		setInputText(r2CheckOutPo.PaypalPassWord_Input, webPropHelper.getTestDataProperty(arg2));
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalLogin_Btn));
 		Thread.sleep(Constants.thread_high);
 		driver.manage().window().maximize();
-		Thread.sleep(Constants.thread_high);
-
-		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));
-		Thread.sleep(Constants.thread_high);
+		Thread.sleep(Constants.thread_highest);
+		
+		if(isDisplayed(r2CheckOutPo.PayPalAcceptCookie))   //changes done by sachin on 06/15/2020
+		{
+			clickOnButton(r2CheckOutPo.PayPalAcceptCookie);
+		}
+		Thread.sleep(Constants.thread_low);
+		System.out.println("now click on Continue button");
+		
+		try {
+			assertTrue(isDisplayed(r2CheckOutPo.PayPalContinue_Btn));	
+		} catch (AssertionError e) {
+			System.out.println("Not displayed");
+			throw e;
+		}
+		System.out.println("Continue button is displayed");
+		Thread.sleep(Constants.thread_low);
+		clickOnButton(r2CheckOutPo.PayPalContinue_Btn);
+		
+		Thread.sleep(Constants.thread_highest);
 		
 		driver.switchTo().window(winHandleBefore);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		JavascriptExecutor jsb = (JavascriptExecutor) driver;
 		Thread.sleep(Constants.thread_high);
-		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		jsb.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		Thread.sleep(Constants.thread_high);
 		//assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));
 		Thread.sleep(Constants.thread_highest);
@@ -100,6 +117,5 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 	public void user_fill_email_address_in_payment() throws Throwable {
 	   setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty("EmailWithExistingCreditCard"));
 	}
-
-
+	
 }
