@@ -352,7 +352,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
     public WebElement PaypalPassWord_Input;
     @FindBy(xpath ="//*[@id='btnLogin']")
     public WebElement PaypalLogin_Btn;
-    @FindBy(xpath ="//*[text()='Continue'] | //*[@id='confirmButtonTop']") //Updated by VSN on 07-11-19
+    @FindBy(xpath ="//*[@id='payment-submit-btn'] | //*[@data-testid='submit-button-initial']") //Updated by Sachin on 06-15-20
     public WebElement PayPalContinue_Btn;
     @FindBy(xpath ="//*[text()='Tax']//following::span[2]") 
     public WebElement PayPaltaxprice;
@@ -1209,6 +1209,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath = "//*[contains(text(),'Please enter an email address')]")public WebElement enterEmailAddressBillingForm;
 		@FindBy(xpath = "//*[@data-auid='checkout_edit_in_store_pickup']")public WebElement checkoutStoreEdit;
 		@FindBy(xpath = "//*[contains(@class,'pr-half css-17ijryf')]")public WebElement zeroItemAvailableFindStoreModal;
-		
+		@FindBy(xpath = "//*[@id='acceptAllButton']")public WebElement PayPalAcceptCookie;
 
 }

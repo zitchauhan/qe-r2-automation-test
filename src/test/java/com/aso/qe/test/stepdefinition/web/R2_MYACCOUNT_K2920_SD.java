@@ -68,6 +68,11 @@ public class R2_MYACCOUNT_K2920_SD extends CommonActionHelper
 		assertTrue(clickOnButton(r2MyAccountPo.btnRemove));
 	}
 	
+	@When("^user clicks Remove acc button in payment page$")
+	public void user_clicks_Remove_acc_button_in_payment_page() throws Throwable {
+		assertTrue(clickOnButton(r2MyAccountPo.btnAccRemove));
+	}
+	
 	/*@Then("^user click on set as default button$")
 	public void user_click_on_set_as_default_button() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.btnSetAsDefault)); 

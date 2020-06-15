@@ -199,5 +199,11 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	    assertTrue(maxLength == arg2);
 	    
 	}
+	
+	@Then("^user verify success message$")
+	public void user_verify_success_message() throws Throwable {
+		Thread.sleep(Constants.thread_medium);
+		assertTrue(isDisplayed(r2MyAccountPo.myAccount_SignUp_CongratulationsMessage_txt));
+	}
 
 }

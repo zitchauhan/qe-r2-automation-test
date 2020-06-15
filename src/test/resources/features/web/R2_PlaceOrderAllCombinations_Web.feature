@@ -50,7 +50,7 @@ Scenario Outline: Verify if authenticated user is able to place an order for sin
 		|Credit Card - VISA	|
 #		|PayPal			|
 		
-@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order @C1-Message
+@R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order @C1-Message 
 @CR-SK 
 Scenario Outline: Verify if unauthenticated user is able to place an for multi SKU products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -76,7 +76,115 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 		|PayPal			|
 				
 				
-				
+@Regression @P1 @CR-SK @Checkout
+Scenario Outline: Verify if order placement for a AMEX Card
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And user click on Add to Cart Button for "MultiSKUProduct" 
+#	And user is navigated to Add to cart Notification popup 
+#	When user click on checkout button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	And user add "<Card Type>" details for a guest user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+#	Then Verify the message on the page 
+#		|# Message for successful order is displayed		|
+#		|THANKS FOR SUBMITTING YOUR ORDER					|
+	Examples: 
+		|Card Type	|
+		|Amex      	|
+
+@Regression @P1 @CR-SK @Checkout
+Scenario Outline: Verify if order placement for a VISA Card 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And user click on Add to Cart Button for "MultiSKUProduct" 
+#	And user is navigated to Add to cart Notification popup 
+#	When user click on checkout button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	And user add "<Card Type>" details for a guest user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+#	Then Verify the message on the page 
+#		|# Message for successful order is displayed		|
+#		|THANKS FOR SUBMITTING YOUR ORDER					|
+	Examples: 
+		|Card Type	|
+		|Visa      	|
+		
+@Regression @P1 @CR-SK @Checkout
+Scenario Outline: Verify if order placement for a DISCOVER Card 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And user click on Add to Cart Button for "MultiSKUProduct" 
+#	And user is navigated to Add to cart Notification popup 
+#	When user click on checkout button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	And user add "<Card Type>" details for a guest user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+#	Then Verify the message on the page 
+#		|# Message for successful order is displayed		|
+#		|THANKS FOR SUBMITTING YOUR ORDER					|
+	Examples: 
+		|Card Type	|
+		|discover    	|
+
+		
+@Regression @P1 @CR-SK @Checkout
+Scenario Outline: Verify if order placement for a master Card 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And user click on Add to Cart Button for "MultiSKUProduct" 
+#	And user is navigated to Add to cart Notification popup 
+#	When user click on checkout button 
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	And user add "<Card Type>" details for a guest user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+#	Then Verify the message on the page 
+#		|# Message for successful order is displayed		|
+#		|THANKS FOR SUBMITTING YOUR ORDER					|
+	Examples: 
+		|Card Type	|
+		|master     	|
+
+
+@Regression @P1 @CR-SK @Checkout @temp_suchee
+Scenario: Place order as a registered user using Paypal express as tender
+    Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productNameSTH" and navigates to PDP
+	And User gets a product name for "productNameSTH"
+	And user click on ship it button 
+	And user will click on View Cart button 
+    When user navigate to Cart page 
+    #Then user should able to click on Signin button
+    #And user should be able to enter the signin details "EmailAddress1" "Password"
+    #And User clicks on the minicart icon and navigated to minicart 
+    Then Verify paypal button on Cart Page 
+	Then User click on paypal button on cart page
+	And user enter the paypal login "PayPalEmail" "PayPalPassword" and click on Continue button
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order
+
+
+		
 @R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order @C1-Message
  @CR-SK 
 Scenario Outline: Verify if unauthenticated user is able to place an for bundle products 

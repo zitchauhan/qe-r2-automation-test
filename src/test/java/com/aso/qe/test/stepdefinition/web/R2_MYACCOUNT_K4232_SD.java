@@ -11,6 +11,7 @@ import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -20,6 +21,8 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 	R2_MyAccount_PO myAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
+	
+	String newFirstName = "";
 
 	@Given("^clicks on SignIn button in home page$")
 	public void clicks_on_SignIn_button_in_home_page() throws Throwable {
@@ -148,5 +151,24 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 			assertFalse(isDisplayed(myAccountPo.btnRemove));
 		}
 	}
+	
+	@And("^user click on edit default address link$")
+	public void user_click_on_edit_default_address_link() throws Throwable {
+		assertTrue(clickOnButton(myAccountPo.btnEditDefaultAddress));	   
+	}
+	
+	@And("^user enter new First name in address book$")
+	public void user_enter_new_First_name_in_address_book() throws Throwable {
+		String firstName = myAccountPo.generateRandomString();
+		setInputText(myAccountPo.adr_inpFirstName, firstName);
+		newFirstName = firstName;
+		
+	}
 
+	@And("^user should see the new First name$")
+	public void user_should_see_the_new_First_name() throws Throwable {
+		Thread.sleep(Constants.thread_medium);
+		String firstLastName = myAccountPo.adr_inpFirstNameLastName.getText();
+		assertTrue(firstLastName.contains(newFirstName));	   
+	}
 }

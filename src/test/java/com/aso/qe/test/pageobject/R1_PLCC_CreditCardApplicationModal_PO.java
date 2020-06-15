@@ -193,15 +193,15 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	
 	//SUCCESS Modal:
 	
-	@FindBy(xpath = "//*[text()='WELCOME ALWAYS APPROVE! ']")
+	@FindBy(xpath = "//*[text()='WELCOME ALWAYS APPROVE! '] | //*[text()='WELCOME']")  
 	public WebElement welcomeTxtSuccessModal;
-	@FindBy(xpath = "//*[text()='Your new Academy Sports + Outdoors Credit Card will arrive in the mail within the next 10 business days.']")
+	@FindBy(xpath = "//*[text()='Your new Academy Sports + Outdoors Credit Card will arrive in the mail within the next 10 business days.'] | //*[text()='. Your new Academy Sports + Outdoors Credit Card will arrive in the mail within the next 10 business days.']")
 	public WebElement disclosureTxt1SuccessModal;
 	@FindBy(xpath = "//*[text()='Your Academy Sports + Outdoors Credit Card Account has been ']")
 	public WebElement disclosureTxt2SuccessModal;
-	@FindBy(xpath = "//*[text()='approved with a $4500 credit limit.']")
+	@FindBy(xpath = "//*[text()='approved with a $4500 credit limit.'] | //*[text()='approved with a $4500 credit limit']")
 	public WebElement disclosureTxt3SuccessModal;
-	@FindBy(xpath = "//*[text()='If you'd like to add more items to your cart, click on 'Return to shopping' now. Otherwise, simply click 'Continue to Checkout' to complete your order now.']")
+	@FindBy(xpath = "//*/div/p[2]/text()")
 	public WebElement disclosureTxt4SuccessModal;
 	
 	

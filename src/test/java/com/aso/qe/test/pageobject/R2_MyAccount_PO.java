@@ -118,6 +118,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='firstName']") // CR-SK, 28 Aug 2018 //CR-RK KER-3151 Sep 18
 	public WebElement adr_inpFirstName;
 
+	@FindBy(xpath = "//*[text()='DEFAULT']/../div/div/div[1]/div/div[1]") // CR-SK, 28 Aug 2018 //CR-RK KER-3151 Sep 18
+	public WebElement adr_inpFirstNameLastName;
+	
 	@FindBy(xpath = "//*[@data-auid='lastName']") // CR-SK, 28 Aug 2018 //CR-RK KER-3151 Sep 18
 	public WebElement adr_inpLastName;
 
@@ -345,6 +348,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	final String removeBtnForAddress = "//*[text()='Remove']";
 	@FindBy(xpath = removeBtnForAddress)
 	public WebElement btnRemove;
+	
+	@FindBy(xpath = "//*[contains(text(),'Academy Sports + Outdoors Credit Card ending in')]/../../../div[2]/div/button[2]")
+	public WebElement btnAccRemove;		
 
 	@FindBy(xpath = "//*[text()='Edit']")
 	public WebElement btnEdit;
@@ -939,6 +945,19 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//input[@id='phoneNumber']")
 	public WebElement billingPhoneNumber;
 	
+	@FindBy(xpath = "//button[@data-auid='btnsubmit-btn']")
+	public WebElement addAccButton;
+		
+	@FindBy(xpath = "//div[text()=\"Clarissa Alter\"]")
+	public WebElement plccValidateName;
+	
+	@FindBy(xpath = "//p[contains(text(),\"8 Kiko Pl\")]")
+	public WebElement plccValidateAddress;
+	
+	@FindBy(xpath = "//p[text()=\"12524\"]")
+	public WebElement plccValidateZip;
+	
+	
 	@FindBy(xpath = "//span[text()='Credit Card']")
 	public WebElement cc_Radio_Button;
 	
@@ -1002,6 +1021,14 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 		randomGeneratedMobileNumber = "6" + randomGeneratedMobileNumber;
 		logger.debug("The new random generated mobile number is " + randomGeneratedMobileNumber);
 		return randomGeneratedMobileNumber;
+
+	}
+	
+	public String generateRandomString() {
+
+		String randomGeneratedString = RandomStringUtils.randomAlphabetic(10);
+		logger.debug("The new random generated string is " + randomGeneratedString);
+		return randomGeneratedString;
 
 	}
 
