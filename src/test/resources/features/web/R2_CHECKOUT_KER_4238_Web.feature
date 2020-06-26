@@ -77,6 +77,7 @@ Scenario: To verify that an existing ASO employee is able to see the employee di
 		|EstimatedShipping_txt|
 		|EstimatedTaxes_txt|
 		|Total_txt|
+		|Discount_Txt|
 		
 @R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-4238 
 @ZYP_CHECKOUT_K4238-10747 @CR-AKK 
