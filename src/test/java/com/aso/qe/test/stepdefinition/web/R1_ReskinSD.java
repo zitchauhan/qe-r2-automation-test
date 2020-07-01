@@ -22,6 +22,12 @@ public class R1_ReskinSD extends CommonActionHelper
 	public void remove_the_product_from_cart() throws Throwable {
 		assertTrue(rspo.removeProductReskin());		
 	}
+	
+	@Then("^remove the product added from cart$")
+	public void remove_the_product_added_from_cart() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		assertTrue(rspo.removeProduct());	
+	}
 
 	@Then("^user increase the qty by clicking plus button$")
 	public void user_increase_the_qty_by_clicking_plus_button() throws Throwable {

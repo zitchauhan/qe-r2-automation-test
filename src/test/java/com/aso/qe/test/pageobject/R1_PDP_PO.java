@@ -87,7 +87,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='close-addtocart-modal']") public  WebElement closeicon;
 	@FindBy(xpath="//img[@class='css-14pbatb e908uih3'][contains(@src,'')]") public  WebElement productimage;
 	@FindBy(xpath="//div[@class='css-sgomgw e908uih6']") public  WebElement productprice;
-	@FindBy(xpath="//div[contains(text(),\"Magellan Outdoors\")]") public  WebElement productname;
+	@FindBy(xpath="//div[contains(text(),\"Magellan Outdoors\")] | //h1[@data-auid='PDP_ProductName']/div") public  WebElement productname;
 	@FindBy(xpath="//*[contains(text(),'Item Added Successfully')]") public  WebElement addtocarttitle;
 	@FindBy(xpath="//h1[text()='Shopping Cart']") public  WebElement viewcarttitle;
 	@FindBy(xpath="//div[@class='message'][contains(text(),'Sorry')]") public  WebElement checkouttitle;
