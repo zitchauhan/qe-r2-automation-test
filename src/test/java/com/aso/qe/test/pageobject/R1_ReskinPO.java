@@ -34,7 +34,7 @@ public class R1_ReskinPO extends CommonActionHelper {
 	public WebElement btntoincreaseqty;
 	@FindBy(xpath = "//div[@class='qty-stepper']/button[1]")
 	public WebElement btntodecreaseqty;
-	@FindBy(xpath = "//a[@id='removeitem_1']")
+	@FindBy(xpath = "//a[@id='removeitem_1'] | //span[text()='Remove from Cart']")
 	public WebElement cartremove;
 	@FindBy(xpath = "//h1[contains(text(),'The item was removed from the Shopping Cart.')][1]")
 	public WebElement removecartmsg;
@@ -105,6 +105,17 @@ public class R1_ReskinPO extends CommonActionHelper {
 			flag = filtercartmsg.contentEquals(filterActualRemoveCartMsg);
 			return flag;
 		}
+		
+		public boolean removeProduct() throws InterruptedException {
+			Boolean flag = true;
+			waitForElement(cartremove);
+			assertTrue(clickOnButton(cartremove));
+			Thread.sleep(Constants.thread_medium);
+			
+			return flag;
+		}
+		
+		
 
 		// Sudhir 3-September
 		public boolean qtyIncreasePlusSignProductReskin() throws InterruptedException {
