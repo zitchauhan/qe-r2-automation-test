@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
@@ -70,11 +71,7 @@ public class R2_CHECKOUT_K2868_SD extends CommonActionHelper {
 	
 	@Then("^user enter payment details having random mailing address$")
 	public void user_enter_payment_details_having_random_mailing_address() throws InterruptedException {
-		waitForElement(r2CheckOutPo.CreditCardNumber_Input);
-		r2CheckOutPo.ZipCode_Input.clear();
-		setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
-		setInputText(r2CheckOutPo.ExpirationDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
-		setInputText(r2CheckOutPo.Cvv_Input, webPropHelper.getTestDataProperty("CVV"));
+
 		setInputText(r2CheckOutPo.FirstName_Input, webPropHelper.getTestDataProperty("FirstName"));
 		setInputText(r2CheckOutPo.LastName_Input, webPropHelper.getTestDataProperty("LastName"));
 		setInputText(r2CheckOutPo.PhoneNumber_Input, webPropHelper.getTestDataProperty("PhoneNumber"));
@@ -88,7 +85,8 @@ public class R2_CHECKOUT_K2868_SD extends CommonActionHelper {
 	}
 	
 	@Then("^user verify the account is created \"(.*?)\"$")
-	public void user_verify_the_account_is_created(String message) {
+	public void user_verify_the_account_is_created(String message) throws InterruptedException {
+		Thread.sleep(Constants.thread_low);
 		assertTrue(r2CartPo.messageFlyout.getText().contains(webPropHelper.getTestDataProperty(message)));
 	}
 	

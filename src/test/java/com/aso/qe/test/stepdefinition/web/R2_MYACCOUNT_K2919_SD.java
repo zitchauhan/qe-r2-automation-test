@@ -84,10 +84,10 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 	@Given("^User enters CVV number \"(.*?)\"$")
 	public void user_enters_CVV_number(String arg1) throws Throwable {
 		//updated by Sachin
-		Thread.sleep(Constants.thread_medium);
-		//driver.switchTo().frame("first-data-payment-field-cvv");
+		Thread.sleep(Constants.thread_low);
+		driver.switchTo().frame("first-data-payment-field-cvv");
 		setInputText(r2CheckOutPo.PassCvv_Input, webPropHelper.getTestDataProperty("cvv"));
-		//driver.switchTo().defaultContent();
+		driver.switchTo().defaultContent();
 	}
 
 	
