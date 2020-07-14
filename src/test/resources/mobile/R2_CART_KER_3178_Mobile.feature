@@ -28,7 +28,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
    And click on Change Location link
    Then Find in Store modal should get open
     
-    @C-BOPIS @R2_Mobile  @R2_All @P1 @CB-Cart @KER-3178 @ZYP_CART_K3178-9942 @CR-AG
+    @C-BOPIS @R2_Mobile  @R2_All @CB-Cart @KER-3178 @ZYP_CART_K3178-9942 @CR-AG
 Scenario: Verify user can change the store using Find in Store modal
 Given user launches the browser and navigates to "ASO_HOME" page
     Then User clicks on the burger menu 
