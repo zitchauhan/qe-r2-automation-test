@@ -204,7 +204,7 @@ Scenario: Verify Once user clicks on 'Confirm' or 'Go to Shipping Method' CTA, S
 		|checkout_ShippingAddress_txt								|
 		
 #================================Sanity================================#
-@R2_Web @R2_WAST-15 @P1 @P1Temp @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8177 @AutomationSmokeORIG
+@R2_Web @R2_WAST-15 @P1Temp @C-Checkout @KER-2934 @ZYP_CHECKOUT_K2934-8177 @AutomationSmokeORIG
 Scenario: TC_16-Verify Add Shipping Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 

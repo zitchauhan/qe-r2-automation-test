@@ -54,7 +54,7 @@ When user will click on Checkout button and navigates to Checkout page
     |checkout_ShippingMethod_ItemImage_img|
 
 
- @R2_Web @R2_Regression @R2_All @P1 @1HR @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10817 @CR-RKA
+ @R2_Web @R2_Regression @R2_All @1HR @C-Checkout @KER-3779 @ZYP_CHECKOUT_K3779-10817 @CR-RKA
 Scenario: Verify that user should be able to fulfill an order when cart having items with single fulfillment option(dropship to home)
 Given user launches the browser and navigates to "ASO_HOME" page 
 When User searches a product "productName" and navigates to PDP

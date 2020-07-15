@@ -82,7 +82,7 @@ Scenario: To Edit cart items from Order summary
 #
 
 #=====================================================Sanity==========================================#
-@R2_Web @R2_WAST-19 @P1 @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @C1-Message @C1-Message @AutomationSmokeORIG  
+@R2_Web @R2_WAST-19 @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @C1-Message @C1-Message @AutomationSmokeORIG  
 Scenario: TC_20- Verify Edit cart items from Order summary 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 

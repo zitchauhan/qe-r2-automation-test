@@ -1,6 +1,6 @@
 Feature: Employee Discount 
 
-@R2_Web @R2_Regression @R2_All @P1 @C-Checkout @KER-4238 
+@R2_Web @R2_Regression @R2_All @C-Checkout @KER-4238 
 @ZYP_CHECKOUT_K4238-10742 @CR-SG @P1Temp
 Scenario: To verify that an existing ASO employee is able to see the employee discount on cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 

@@ -168,7 +168,7 @@ Scenario: Verify Sign in Users should be able to enter an unlimited number of gi
 	
 	
 	
-@R2_Web   @R2_All @P1 @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8882 @CR-SK 
+@R2_Web @R2_All @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8882 @CR-SK 
 Scenario: Verify System should integrate with RTS/First data for existing gift card payment processing flow
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
@@ -301,7 +301,7 @@ Scenario: Verify If a gift card does not cover the full transaction, the amount 
 	Then applied gift card "LowBalanceGiftCard" should be displayed
 	And Applied amount should be displayed in order summary
 	
-@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8897 @CR-SK 
+@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8897 @CR-SK @P1 
 Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Sign in user
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user creates an account

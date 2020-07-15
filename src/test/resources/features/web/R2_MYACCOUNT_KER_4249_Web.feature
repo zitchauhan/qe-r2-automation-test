@@ -65,7 +65,7 @@ Scenario: Verify the user is able to sign with the new created account
 	And user click on signin button 
 	Then user should get logged in successfully
 	
-@R2_Web @R2_Regression @R2_All @1HR_R2 @P1 @P1Temp @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10161 @CR-SK
+@R2_Web @R2_Regression @R2_All @1HR_R2 @P1Temp @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10161 @CR-SK
 Scenario: Verify the user is able to see the unmasked password 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

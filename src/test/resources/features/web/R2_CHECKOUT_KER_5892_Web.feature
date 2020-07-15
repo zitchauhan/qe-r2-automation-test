@@ -104,7 +104,7 @@ Scenario: Verify the user is able to add a new credit card while payment that is
 		|#%%  verify order below attributes on order confirmation page %%|
 		|OrderConfirmationPage_OrderNumber|
 		
-@R2_Web @R2_Regression @R2_All @P1 @1HR @C-Checkout @KER-5892 
+@R2_Web @R2_Regression @R2_All @1HR @C-Checkout @KER-5892 
 @ZYP_CHECKOUT_K5892-13288 @CR-RKA 
 Scenario: Verify expired credit card behavior in checkout page - Payment section (Single Credit Card) 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
