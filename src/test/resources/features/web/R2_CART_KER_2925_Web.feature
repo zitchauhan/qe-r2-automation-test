@@ -215,7 +215,7 @@ Scenario: Verify Before clicking 'Place Order', if the user edits Shipping Addre
 									And user click on view Details 
 									And user validate the same updated shipping address in my orders page 
 									
-								@R2_Web @P1 @C-Order @CC-Cart_Order @KER-2925
+								@R2_Web @C-Order @CC-Cart_Order @KER-2925
 								@ZYP_CART_K2925-10295 @CR-AG @C1-Message 
 Scenario: Verify Before clicking 'Place Order', if the user edits Shipping Method, the same should be updated in the order summary. 
 									Given user launches the browser and navigates to "ASO_HOME" page 

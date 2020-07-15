@@ -1,6 +1,6 @@
 Feature: B06-225- BOPIS Order Confirmation Impact 
 
-@R2_Web @CB-MyAccount @R2_All @1HR_R2 @C-BOPIS @KER-2868 @ZYP_MYACCOUNT_K2868-10722 
+@R2_Web @CB-MyAccount @R2_All @1HR_R2 @C-BOPIS @KER-2868 @ZYP_MYACCOUNT_K2868-10722 @P1
 Scenario: Verify that UnAuthenticated user is able to create an account on Order Confirmation page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -13,6 +13,11 @@ Scenario: Verify that UnAuthenticated user is able to create an account on Order
 	Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
 	When user clicks on Go to payment CTA
+	And user clicks on "CreditCard" radio button
+	And user enters Card Holder name
+	And User enters Credit Card number "CreditCardNumber"
+ 	And User enters expiration date "ExpDate"
+ 	And User enters CVV number "CVV"
 	Then user enter payment details having random mailing address
 	And user able to see the button place order
 	And user is navigated to order confirmation page and captures order number

@@ -14,7 +14,7 @@ Scenario: Verify the user is able to view the Change Location under In-store Pic
 	When user will click on Checkout button and navigates to Checkout page
 	And user click on change location button
  
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-3178 @ZYP_CART_K3178-9941 
+@C-BOPIS @R2_Web @R2_All @CB-Cart @KER-3178 @ZYP_CART_K3178-9941 
 Scenario: Verify that user view Find a Store modal from Change Location in Checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -46,7 +46,7 @@ Scenario: Verify user can change the store using Find in Store modal
 	When User select store with "BOPIS_Store2"
 	
 	
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-3178 @ZYP_CART_K3178-9943 
+@C-BOPIS @R2_Web @R2_All @CB-Cart @KER-3178 @ZYP_CART_K3178-9943 
 Scenario: Verify the user is able to see the full inventory availability on Find a store modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -81,7 +81,7 @@ Scenario: Verify the user is able to see the full inventory availability on Find
   #When user will verify in-store pick up radio button is selected with "FindAsStoreZIPCode"   
     
     
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-3178 @ZYP_CART_K3178-9945 
+@C-BOPIS @R2_Web @R2_All @CB-Cart @KER-3178 @ZYP_CART_K3178-9945 
 Scenario: Verify the user is able to see the partial inventory availability on Find a store modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -103,7 +103,7 @@ Scenario: Verify the user is able to see the partial inventory availability on F
   And user collapse the store name  
   Then user check for the products count and item available should be less 
          
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-3178 @ZYP_CART_K3178-9946
+@C-BOPIS @R2_Web @R2_All @CB-Cart @KER-3178 @ZYP_CART_K3178-9946
 Scenario: Verify the user is able to see no inventory availability on Find a store modal
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

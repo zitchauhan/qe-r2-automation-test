@@ -39,7 +39,7 @@ Scenario: Verify cart gets recalculated on applying promotions and updated disco
 	|Promocode_Txt|
 	
 	
-@R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-AKK 
+@R2_Web @R2_Regression @R2_All @1HR_R2 @C-Cart @KER-2942 @ZYP_CART_K2942-8047 @CR-AKK 
 Scenario: Verify Remove link in the Cart Page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 

@@ -1,6 +1,6 @@
 Feature: To To verify Quick View - Product Attributes
 
-  @C-PLP @Web @Regression @KER-737 @ZYP_PLP_K737-3508 @CR-AKK @RBeta @P1 @P1Temp
+  @C-PLP @Web @Regression @KER-737 @ZYP_PLP_K737-3508 @CR-AKK @RBeta @P1Temp
   Scenario: To verify All of the products defining attributes in Quick View
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page

@@ -178,7 +178,7 @@ Scenario: Verify the system behaviour on click of 'View Next 5 Stores' CTA
 	
 	
 	
-@R2_Web @R2_NonRegression @R2_All @P1 @1HR_R2 @CB-Cart @KER-2872
+@R2_Web @R2_NonRegression @R2_All @1HR_R2 @CB-Cart @KER-2872
 @ZYP_CHECKOUT_K2872-10661 @CR-DPK @C-BOPIS 
 Scenario: Verify if the user can search the store details by entering City & state 
 	Given user launches the browser and navigates to "ASO_HOME" page 
