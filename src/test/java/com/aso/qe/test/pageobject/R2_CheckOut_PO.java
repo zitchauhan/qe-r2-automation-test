@@ -1210,5 +1210,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath = "//*[@data-auid='checkout_edit_in_store_pickup']")public WebElement checkoutStoreEdit;
 		@FindBy(xpath = "//*[contains(@class,'pr-half css-17ijryf')]")public WebElement zeroItemAvailableFindStoreModal;
 		@FindBy(xpath = "//*[@id='acceptAllButton']")public WebElement PayPalAcceptCookie;
+		@FindBy(xpath = "//*[@id='closeCart']") public WebElement PayPal_PopUpClose;
+		@FindBy(xpath = "//*[@class='span11 alignRight baslLoginButtonContainer']") public WebElement PayPal_Login;
 
 }

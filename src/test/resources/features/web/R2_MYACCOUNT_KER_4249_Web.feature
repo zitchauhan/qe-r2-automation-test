@@ -1,6 +1,6 @@
 Feature: Verify  Customer Registration/ Sign Up 
 
-@R2_Web @R2_Regression @R2_All @P2 @P2 @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10148 @CR-SK 
+@R2_Web @R2_Regression @R2_All @P1 @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10148 @CR-SK 
 Scenario: Verify the available fields on the Sign Up page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -65,7 +65,7 @@ Scenario: Verify the user is able to sign with the new created account
 	And user click on signin button 
 	Then user should get logged in successfully
 	
-@R2_Web @R2_Regression @R2_All @1HR_R2 @P1Temp @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10161 @CR-SK
+@R2_Web @R2_Regression @R2_All @1HR_R2 @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10161 @CR-SK
 Scenario: Verify the user is able to see the unmasked password 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

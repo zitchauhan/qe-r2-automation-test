@@ -17,7 +17,7 @@ Scenario: Verify user is able to enter the Forgot Password page from Forgot Pass
 	And user enters new password 
 	And user clicks on Update button 
 	
-@R2_Web @R2_Regression @R2_All @P1Temp @1HR_R2 @C-MyAccount @KER-4230 
+@R2_Web @R2_Regression @R2_All @1HR_R2 @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-11120 @CR-RK 
 Scenario: Verify that user can continue the shopping without re-authentication after changing the password 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -39,7 +39,7 @@ Scenario: Verify that user can continue the shopping without re-authentication a
 	And user click on MyAccount 
 	And user is not logged out 
 	
-@R2_Web @R2_Regression @R2_All @P1Temp @1HR_R2 @C-MyAccount @KER-4230 
+@R2_Web @R2_Regression @R2_All @1HR_R2 @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-10565 @CR-RK 
 Scenario: Verify that user able to update the profile 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -364,7 +364,7 @@ Scenario: Verify that system keep the wish-list intact after changing the email 
 		|WishlistItems_lnk												|
 		
 		
-@R2_Web @R2_Regression @R2_All @P1Temp @1HR_R2 @C-MyAccount @KER-4230 
+@R2_Web @R2_Regression @R2_All @1HR_R2 @C-MyAccount @KER-4230 
 @ZYP_MYACCOUNT_K4230-11118 @CR-RK 
 Scenario: Verify that system keep the orders intact after changing the email address. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
