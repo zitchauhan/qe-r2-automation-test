@@ -25,7 +25,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 	#	Then user validate all the required fields in the Payment section to be visible
 	And user enters "DebitCardNumber" details and verify it is getting entered in Credit card section 
 	
-@R2_Web @R2_All @P1 @P1Temp @1HR_R2 @C-Checkout @KER-3138 @ZYP_CART_K3138-8206
+@R2_Web @R2_All @1HR_R2 @C-Checkout @KER-3138 @ZYP_CART_K3138-8206
 @CR-AG 
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -82,7 +82,7 @@ Scenario: Verify if user enters the debit card, the system should accept and tre
 	And user enters valid cvv value "CVV" 
 	Then user clicks on the submit button 
 	
-@R2_Web @R2_All @P1 @C-Checkout @KER-3138 @ZYP_CART_K3138-8208 @CR-AG 
+@R2_Web @R2_All @C-Checkout @KER-3138 @ZYP_CART_K3138-8208 @CR-AG 
 Scenario: Verify if user enters the debit card, the system should accept and treat it as a credit card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#	And User navigates to L2 Mens clothing

@@ -65,11 +65,12 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		 
 		}
 		System.err.println(getTitle());
+		waitForElement(r2CheckOutPo.PayPal_PopUpClose);
+		assertTrue(clickOnButton(r2CheckOutPo.PayPal_PopUpClose));
+		assertTrue("Login button is not present or xpath is wrong",clickOnButton(r2CheckOutPo.PayPal_Login));
+		Thread.sleep(Constants.thread_low);
 		waitForElement(r2CheckOutPo.PaypalEmail_Input);
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalEmail_Input));
-		
-		
-		
 		setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
 		Thread.sleep(Constants.thread_medium); 

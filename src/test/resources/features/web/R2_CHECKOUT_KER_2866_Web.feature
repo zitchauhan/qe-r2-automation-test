@@ -71,7 +71,7 @@ Scenario: Verify the guest user is able to select the PayPal payment method in o
 	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
 	And user able to see the button place order
 	
-@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10501 @C-BOPIS
+@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10501 @C-BOPIS @P1
 Scenario: Verify the guest user is able to select the Gift Card payment method in order to place the order for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
@@ -93,7 +93,7 @@ Scenario: Verify the guest user is able to select the Gift Card payment method i
 	And user clicks on Review order button on checkout page
 	
 	
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Checkout @KER-2866 @ZYP_CART_K2866-10507
+@C-BOPIS @R2_Web @R2_All @CB-Checkout @KER-2866 @ZYP_CART_K2866-10507
 Scenario: Verify the guest user is able to add new Credit Card as payment method in order to place the order for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -173,7 +173,7 @@ Scenario: Verify the guest user is able to place the order for BOPIS
 	And user is navigated to order confirmation page and captures order number 
 	
 	
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Checkout @KER-2866 @ZYP_CART_K2866-10538 
+@C-BOPIS @R2_Web @R2_All @CB-Checkout @KER-2866 @ZYP_CART_K2866-10538 
 Scenario: Verify if User is able to select a Payment method on One Page Checkout Screen for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -191,7 +191,7 @@ Scenario: Verify if User is able to select a Payment method on One Page Checkout
 	And user should be able to see card last four digit
 	And user select another credit card from the drop down
 
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Checkout @KER-2866 @ZYP_CART_K2866-10540 
+@C-BOPIS @R2_Web @R2_All @CB-Checkout @KER-2866 @ZYP_CART_K2866-10540 
 Scenario: Verify if User is able to enter billing information for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -212,7 +212,7 @@ Scenario: Verify if User is able to enter billing information for BOPIS
 	|#Verify the billing information is already displayed|
 	|ChangeBillingInformation_Txt|
 	
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Checkout @KER-2866 @ZYP_CART_K2866-10541 
+@C-BOPIS @R2_Web @R2_All @CB-Checkout @KER-2866 @ZYP_CART_K2866-10541 
 Scenario: Verify if User is able to enter new billing information in Payment for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -236,7 +236,7 @@ Scenario: Verify if User is able to enter new billing information in Payment for
 	And user fill the payment details for sof registered user
 	Then user click on review order button
 	
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Checkout @KER-2866 @ZYP_CART_K2866-10542 
+@C-BOPIS @R2_Web @R2_All @CB-Checkout @KER-2866 @ZYP_CART_K2866-10542 
 Scenario: Verify if the user is able to review and place order from One Page Checkout Screen for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

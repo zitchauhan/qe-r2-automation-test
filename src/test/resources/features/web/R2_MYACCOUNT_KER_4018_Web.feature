@@ -58,7 +58,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
     |InvalidOrdernumber|InValidBillingZipcode   |
     |ABNNC		   | BAV		  	  |
 
-@R2_Web  @R2_All @P1 @1HR_R2 @C-Order @CC-MyAccount_Order   @KER-4018 
+@R2_Web @R2_All @1HR_R2 @C-Order @CC-MyAccount_Order   @KER-4018 
 @ZYP_MYACCOUNT_K4018-10659 @CR-AKK @1HR_R2 
 Scenario: Verify that the error message is displayed if Guest user enters order detail not matching with valid order 
 	Given user launches the browser and navigates to "ASO_HOME" page 

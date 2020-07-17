@@ -82,7 +82,7 @@ Scenario: Verify that Authenticated User is able to navigate to Profile page
 		|ProfilePage_MaskedPassword                   |
 		
 		
-@R2_Web @R2_Regression @R2_All @P1 @C-MyAccount @KER-4229 
+@R2_Web @R2_Regression @R2_All @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10476 @CR-GK 
 Scenario: Verify that Authenticated User is able to view the address book 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
@@ -99,7 +99,7 @@ Scenario: Verify that Authenticated User is able to view the address book
 		|AddressPage_Default_txt					|
 		
 		
-@R2_Web @R2_Regression @R2_All @P1 @C-MyAccount @KER-4229 
+@R2_Web @R2_Regression @R2_All @C-MyAccount @KER-4229 
 @ZYP_MYACCOUNT_K4229-10477 @CR-GK 
 Scenario: Verify that Authenticated User is able to view the Wish List 
 	Given  user launches the browser and navigates to "ASO_HOME" page 

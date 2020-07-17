@@ -123,7 +123,7 @@ Scenario: Verify if User is able to enter billing information
 	And user click on confirm billing address button
 	
 	
-@R2_Web @C-Order @CC-Checkout_Order @R2_All @P1   @KER-3164 
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @KER-3164 
 @ZYP_CHECKOUT_K3164-8031 @CR-GK 
 Scenario: Verify if the user is able to review and place order from One Page Checkout Screen
 	Given user launches the browser and navigates to "ASO_HOME" page 

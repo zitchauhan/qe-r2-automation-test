@@ -1,15 +1,13 @@
 Feature: Verify BOPIS PDP Store Selection 
 
-@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872
-@ZYP_CHECKOUT_K2872-8706 @CR-DPK @C-BOPIS 
+@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8706 @CR-DPK @C-BOPIS @P1
 Scenario: Verify that user is able to open the Find Store modal from the header 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
 	And user verify Find a Store popup 
 	
 	
-@R2_Web @R2_NonRegression @R2_All @P1 @1HR_R2 @CB-Cart @KER-2872
-@ZYP_CHECKOUT_K2872-8710 @CR-DPK @C-BOPIS 
+@R2_Web @R2_NonRegression @R2_All @P1 @1HR_R2 @CB-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8710 @CR-DPK @C-BOPIS 
 Scenario: Verify that the user should be able to search the store details by entering ZIP code 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
@@ -19,8 +17,7 @@ Scenario: Verify that the user should be able to search the store details by ent
 	
 	
 	
-@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872
-@ZYP_CHECKOUT_K2872-8717 @CR-DPK @C-BOPIS 
+@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8717 @CR-DPK @C-BOPIS 
 Scenario: Verify the components user see on the 'Find a Store' modal with search input location 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
@@ -30,8 +27,7 @@ Scenario: Verify the components user see on the 'Find a Store' modal with search
 	
 	
 	
-@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872
-@ZYP_CHECKOUT_K2872-8718 @CR-DPK @C-BOPIS 
+@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8718 @CR-DPK @C-BOPIS 
 Scenario: Verify that user is able to see the 'View Next 5 stores' button, if stores are available 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
@@ -41,8 +37,7 @@ Scenario: Verify that user is able to see the 'View Next 5 stores' button, if st
 	And user should be able to see the View Next five Stores button 
 	
 	
-@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872
-@ZYP_CART_K2872-8719 @CR-DPK @C-BOPIS 
+@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872 @ZYP_CART_K2872-8719 @CR-DPK @C-BOPIS 
 Scenario: Verify the user is able to see the store address of any of the listed store in 'Find a Store' modal through store accordion 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
@@ -54,7 +49,7 @@ Scenario: Verify the user is able to see the store address of any of the listed 
 	
 	
 @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-2872
-@ZYP_CHECKOUT_K2872-8725 @CR-DPK @C-BOPIS 
+@ZYP_CHECKOUT_K2872-8725 @CR-DPK @C-BOPIS @P1
 Scenario: Verify My Store functionality and modal close behavior 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
