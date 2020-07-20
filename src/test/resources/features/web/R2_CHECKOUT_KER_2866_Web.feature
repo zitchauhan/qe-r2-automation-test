@@ -263,7 +263,50 @@ Scenario: Verify if the user is able to review and place order from One Page Che
 	And user is navigated to order confirmation page and captures order number 
 	
 	
-		
+@Web @Regression @P1 @CR-MT
+Scenario: Verfiy bopis place order for guest user with ACC as tender 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	When user enters "BOPIS_Regular_Product" in the searchbox
+	#And user click on Add to Cart Button 
+	Then user click on pickup button
+	And user click on view cart
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	When user clicks on Go to payment CTA
+	And user click on academy creditcard radiobtn 
+	And user fills the academy credit card details in payment 
+	And user enters a corresponding billing address
+	And user enters order confirmation email
+	And user click on REVIEW ORDER button
+	And user click on PLACE ORDER button 
+	Then user navigates to order confirmation page
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
+	Then user able to see order number	
+	
+	
+@Web @Regression @P1 @CR-MT
+Scenario: Verfiy bopis place order for guest user with CC as tender 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	When user enters "BOPIS_Regular_Product" in the searchbox
+	#And user click on Add to Cart Button 
+	Then user click on pickup button
+	And user click on view cart
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	When user clicks on Go to payment CTA
+	And user fill the credit card detail in payment  
+	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "FindAsStoreZIPCode" , "EmailAddress"
+	And user click on REVIEW ORDER button
+	And user click on PLACE ORDER button 
+	Then user navigates to order confirmation page
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
+	Then user able to see order number			
 	
 	
 	
