@@ -21,7 +21,7 @@ Scenario: Place order using Paypal express
    
     
 
-@ES197 @CR-SK1 @P1 @P1Temp @Regression 
+@ES197 @CR-SK1 @P1 @P1Temp @Regression @RegressionP1
 Scenario: Verify Cart merge
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productNameSTH" and navigates to PDP

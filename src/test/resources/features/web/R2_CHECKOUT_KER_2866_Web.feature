@@ -32,7 +32,7 @@ Scenario: Verify that user view Find a Store modal from Change Location in Check
     Then user click on change location button
     Then User is able to see Find a Store Modal
     
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10482
+@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10482 @RegressionP1
 Scenario: Verify the guest user is able to select the Credit Card payment method in order to place the order for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -71,7 +71,7 @@ Scenario: Verify the guest user is able to select the PayPal payment method in o
 	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
 	And user able to see the button place order
 	
-@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10501 @C-BOPIS @P1
+@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @C-BOPIS @P1 @RegressionP1
 Scenario: Verify the guest user is able to select the Gift Card payment method in order to place the order for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
@@ -263,7 +263,7 @@ Scenario: Verify if the user is able to review and place order from One Page Che
 	And user is navigated to order confirmation page and captures order number 
 	
 	
-@Web @Regression @P1 @CR-MT
+@Web @Regression @P1 @CR-MT @RegressionP1
 Scenario: Verfiy bopis place order for guest user with ACC as tender 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -287,7 +287,7 @@ Scenario: Verfiy bopis place order for guest user with ACC as tender
 	Then user able to see order number	
 	
 	
-@Web @Regression @P1 @CR-MT
+@Web @Regression @P1 @CR-MT @RegressionP1
 Scenario: Verfiy bopis place order for guest user with CC as tender 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
