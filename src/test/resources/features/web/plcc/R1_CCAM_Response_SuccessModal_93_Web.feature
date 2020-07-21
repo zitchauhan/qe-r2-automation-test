@@ -43,7 +43,7 @@ Scenario: Verify is able to navigate to Welcome, PHIL Collins FPO model
 	And user select credit application modal agree message 
 	Then user navigates to credit card approval modal 
 
-@C-PLCC @Regression @All @PLCC-93 @CR-VS @PLCC @P1
+@C-PLCC @Regression @All @PLCC-93 @CR-VS @PLCC @P1 @RegressionP1
 Scenario: Verify the elements available on approval model
 	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
