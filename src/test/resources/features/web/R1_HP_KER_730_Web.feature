@@ -7,7 +7,7 @@ Scenario: As a User when clicked on Find a Store then user should be navigated t
 	And Find Store Modal should pop-up 
 	Then User closes the web application 
 	
-@Web @All @C-HP @Regression @KER-730 @ZYP_HP_K730-2848 @P1
+@Web @All @C-HP @Regression @KER-730 @ZYP_HP_K730-2848 @P1 @RegressionP1
 Scenario: As a user, if I'm selecting a particular Store, then I should see that store as My Store
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
