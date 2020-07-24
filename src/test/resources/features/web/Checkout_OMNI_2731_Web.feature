@@ -15,11 +15,11 @@ Scenario: Verify that authenticated user is able to navigate to "Payments" Page.
 	And user validates the "Credit Card"
 	
 	
-@Web @Regression @CR-SK @P1
+@Web @Regression @CR-SK @P1 @RegressionP1
 Scenario: Verify that acc card can be added from My accounts
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "EmailAddress1" 
 	And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment

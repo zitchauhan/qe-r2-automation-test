@@ -1,6 +1,6 @@
 Feature: Verify the case behavior for redirect keyword. Search keywords - Shirt vs shirt
 
-  @C-SLR @Web @All  @Regression @KER-3270  @ZYP_SLR_K3270-7419 @RBeta @P1
+  @C-SLR @Web @All  @Regression @KER-3270  @ZYP_SLR_K3270-7419 @RBeta @P1 @RegressionP1
   Scenario: Verify the user search for Customer Keyword like Shirt
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage

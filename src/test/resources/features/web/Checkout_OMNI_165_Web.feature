@@ -1,7 +1,7 @@
 Feature: Prevent customers with a California shipping or billing state from purchasing online
 
  
-	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web  
+	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web @RegressionP1
 	Scenario: Verify Global State Restriction message is displayed if guest user tries to proceed from shipping address 
 	with state from restriction lists
 	
@@ -19,7 +19,7 @@ Feature: Prevent customers with a California shipping or billing state from purc
   	Then global restriction error message is displayed for "CA" on "shipping" section
 
 	
-	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web 
+	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web @RegressionP1
   Scenario: Verify Global State Restriction message is displayed if guest user tries to proceed from billing address 
   with state from restriction lists
 

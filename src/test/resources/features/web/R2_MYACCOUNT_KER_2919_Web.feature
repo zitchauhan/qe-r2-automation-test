@@ -217,7 +217,7 @@ Scenario: Verify if  Payment Details are saved if User clicks on Add CTA when AV
  	And Verify that Credit Card details as entered are saved in User Profile.
  	
  	 	
- @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10693 @CR-DPK 
+ @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919 @ZYP_CART_K2919-10693 @CR-DPK @RegressionP1
 Scenario: Verify if entered address is validated by AVS
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -227,6 +227,7 @@ Scenario: Verify if entered address is validated by AVS
 	Then user click on My Account and navigate to payment
 	And user deletes all existing credit card
 	And user clicks on Add New Credit Card button	
+	And user click on creditcard radiobtn
 	And User enters Credit Card number "CreditCardNumber"
  	And User enters expiration date "ExpDate"
  	And User enters CVV number "CVV"

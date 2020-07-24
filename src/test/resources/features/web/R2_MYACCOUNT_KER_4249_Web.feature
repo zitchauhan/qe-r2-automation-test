@@ -37,7 +37,7 @@ Scenario: Verify the available fields on the Sign Up page
 
 #===========================================Sanity===============================================#
 
-@R2_Web @R2_WAST-02 @P1 @P1Temp @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @AutomationSmokeORIG @C1-Message
+@R2_Web @R2_WAST-02 @P1 @P1Temp @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @AutomationSmokeORIG @C1-Message @RegressionP1
 Scenario: TC_3- Verify User is able to create an account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -309,7 +309,7 @@ Scenario: Verify the user gets the error message when last name filled with more
 	And Verify "Last Name" text field does not accept more than 50 characters	    	
 	
 
-@Web @Regression @P1 @CR-MT	
+@Web @Regression @P1 @CR-MT	@RegressionP1
 Scenario: Register new user with address information for faster checkout
   	Given user launches the browser and navigates to "ASO_HOME" page
 	When user click on My Account link 

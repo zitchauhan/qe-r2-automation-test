@@ -1,7 +1,7 @@
 Feature: Verfiy  View/Delete/Set Default Credit/Debit Card in Account 
 
 @R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-MyAccount @KER-2920 
-@ZYP_MYACCOUNT_K2920-10549 @CR-RK 
+@ZYP_MYACCOUNT_K2920-10549 @CR-RK @RegressionP1
 Scenario: Verify user is able to remove the saved credit card from My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -147,7 +147,7 @@ Scenario: Verify last added credit card in saved list becomes the default on del
 	And user verifies the credit card saved is set as default
 	
 
-@Web @Regression @P1 @CR-MT	
+@Web @Regression @P1 @CR-MT	@RegressionP1
 Scenario: Verify user is able to remove the saved academy credit card from My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
