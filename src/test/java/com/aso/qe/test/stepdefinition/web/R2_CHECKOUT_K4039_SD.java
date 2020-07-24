@@ -65,12 +65,8 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		 
 		}
 		System.err.println(getTitle());
-		waitForElement(r2CheckOutPo.PayPal_PopUpClose);
-		assertTrue(clickOnButton(r2CheckOutPo.PayPal_PopUpClose));
-		assertTrue("Login button is not present or xpath is wrong",clickOnButton(r2CheckOutPo.PayPal_Login));
-		Thread.sleep(Constants.thread_low);
 		waitForElement(r2CheckOutPo.PaypalEmail_Input);
-		assertTrue(clickOnButton(r2CheckOutPo.PaypalEmail_Input));
+
 		setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
 		Thread.sleep(Constants.thread_medium); 
@@ -78,26 +74,10 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalLogin_Btn));
 		Thread.sleep(Constants.thread_high);
 		driver.manage().window().maximize();
-		Thread.sleep(Constants.thread_highest);
+		Thread.sleep(Constants.thread_high);
 		
-		if(isDisplayed(r2CheckOutPo.PayPalAcceptCookie))   //changes done by sachin on 06/15/2020
-		{
-			clickOnButton(r2CheckOutPo.PayPalAcceptCookie);
-		}
-		Thread.sleep(Constants.thread_low);
-		System.out.println("now click on Continue button");
-		
-		try {
-			assertTrue(isDisplayed(r2CheckOutPo.PayPalContinue_Btn));	
-		} catch (AssertionError e) {
-			System.out.println("Not displayed");
-			throw e;
-		}
-		System.out.println("Continue button is displayed");
-		Thread.sleep(Constants.thread_low);
 		clickOnButton(r2CheckOutPo.PayPalContinue_Btn);
-		
-		Thread.sleep(Constants.thread_highest);
+		Thread.sleep(Constants.thread_high);
 		
 		driver.switchTo().window(winHandleBefore);
 		JavascriptExecutor jsb = (JavascriptExecutor) driver;
