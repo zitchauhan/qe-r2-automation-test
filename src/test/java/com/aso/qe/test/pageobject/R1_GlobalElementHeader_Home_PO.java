@@ -2033,7 +2033,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			}
 	} 
 	
-	
+	@FindBy(xpath="//*[@data-auid='level2Category-Shoes + Boots']")public WebElement btnShoesBootsCategory;
 	
 	
 }
