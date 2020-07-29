@@ -25,7 +25,7 @@ public class R1_PLP_K263_SD extends CommonActionHelper{
 		assertTrue((clickOnButton(globalElementHeader_HomePO.btnShopCategory)));
 		Thread.sleep(Constants.thread_high);
 		//hover.moveToElement(globalElementHeader_HomePO.btnClothingCategory).click().build().perform();
-		assertTrue((clickOnButton(globalElementHeader_HomePO.btnClothingCategory)));
+		assertTrue((clickOnButton(globalElementHeader_HomePO.btnShoesBootsCategory)));
 		waitForPageLoad(driver);
 
 	}
