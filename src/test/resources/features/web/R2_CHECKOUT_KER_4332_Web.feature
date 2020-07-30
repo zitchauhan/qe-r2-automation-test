@@ -1,7 +1,7 @@
 	Feature: B10-500 - Buy Now on PDP
 	
 	
-	@R2_Web  @R2_All @P1 @P1Temp @C-Order @CC-Checkout_Order   @KER-4332 @ZYP_CHECKOUT_K4332-9524 @CR-AKK @C1-Message @AutomationSmokeORIG @RegressionP1 
+	@R2_Web  @R2_All @P1 @P1Temp @C-Order @CC-Checkout_Order   @KER-4332 @ZYP_CHECKOUT_K4332-9524 @CR-AKK @C1-Message @AutomationSmokeORIG @RegressionP1
 	Scenario: FIX STEP Capture Order No & check it in MyAccount Verify user can navigate to Order confirmation page upon clicking Buy Now and can see order in MyAccount
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -12,9 +12,8 @@
 	Then verify the buy now button is clickable
 	And user enters CVV "CVV" on Buy Now Popup modal
 	And user clicks Buy Now button on Buy Now Popup modal
-	Then Verify the message on the page
-    |# Following Error Message should show on the page|
-	|Order Number|
+	Then user navigates to order confirmation page
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
 	
 #	@R2_Web  @R2_All @P1 @C-Order @CC-Checkout_Order   @KER-4332 @ZYP_CHECKOUT_K4332-9525 @CR-AKK @C1-Message
 #Scenario: FIX STEP Capture Order No & check it in MyAccount Verify user can see order placed in MyAccount for selected single SKU
@@ -100,9 +99,8 @@ Scenario: FIX STEPS FOR THIS SCENARIO Verify The persistent cart should not be a
 	And user click on signin button
 	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then verify the buy now button is clickable
-	Then Verify the message on the page
-    |# Following Error Message should show on the page|
-	|Order Number|
+	Then user navigates to order confirmation page
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
 	And user click on MyAccount
 	And user click on Orders link
 	Then Verify the message on the page
@@ -120,9 +118,8 @@ Scenario: FIX STEPS FOR THIS SCENARIO Verify The mini cart icon on the order con
 	And user click on signin button
 	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then verify the buy now button is clickable
-	Then Verify the message on the page
-    |# Following Error Message should show on the page|
-	|Order Number|
+	Then user navigates to order confirmation page
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
 	And User clicks on the minicart icon and navigated to minicart
 	Then Verify the message on the page
     |# Following Error Message should show on the page|
@@ -168,9 +165,11 @@ Scenario: FIX STEPS FOR THIS SCENARIO Verify Shipping address and method has err
 	And user click on signin button
 	When User searches a product "SKUForBuyNow" and navigates to PDP
 	Then verify the buy now button is clickable
-	Then Verify the message on the page
+	#Then Verify the message on the page
     |# Following Error Message should show on the page|
-	|Order Number|
+	#|Order Number|
+	Then user navigates to order confirmation page
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
 	
 	
 	
