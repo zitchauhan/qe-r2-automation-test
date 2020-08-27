@@ -9,11 +9,14 @@ import java.util.List;
 import java.util.UUID;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.asserts.SoftAssert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -24,9 +27,12 @@ import com.aso.qe.test.stepdefinition.web.Common_Web_SD;
 
 public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC 
 {
-	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
-	R1_SIT_PO sit_po= PageFactory.initElements(driver, R1_SIT_PO.class);
-	R1_PDP_PO pdp_po= PageFactory.initElements(driver, R1_PDP_PO.class);
+	
+	 private static final Logger logger =
+	 Logger.getLogger(R1_GlobalElementHeader_Home_PO.class); R1_SIT_PO sit_po=
+	 PageFactory.initElements(driver, R1_SIT_PO.class); R1_PDP_PO pdp_po=
+	 PageFactory.initElements(driver, R1_PDP_PO.class);
+	 
 	
 	String timeStamp = new SimpleDateFormat("MM.dd.HH.mm.ss").format(new Date());
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing\"]|//*[@data-auid=\"level3Category-Men's Clothing_m\"] | //*[@data-auid='level3Category-Mens_m'] | //*[@data-auid='level3Category-Mens']/a ") public WebElement btnMens_Clothing_Shop;
@@ -2035,5 +2041,49 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	
 	@FindBy(xpath="//*[@data-auid='level2Category-Shoes + Boots']")public WebElement btnShoesBootsCategory;
 	
+	// *******************************************************************
+		@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']") public WebElement facet_select_Price_Filter;
+		
+			@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']//ul/li[1]")
+			public WebElement facet_Price_CheckBox1_List; 
+		
+
+		@FindBy(xpath="//span[contains(text(),'New Arrivals')]") public WebElement eleSelectSortByValue;
+			@FindBy(xpath="//div[contains(@class,'css-1ttjkoh')]") public WebElement eleSortBySelectedtext;
+		
+			@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Category']") public WebElement eleLeftFilterCategorttext;
+			@FindBy(xpath="//li[(@data-auid='drawer_Brands')]") public WebElement eleLeftFilterCategortItem1;
+		
+			@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']")public WebElement priceFacet;
+		    @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']")public WebElement priceFacet_M;
+			
+			
+			public void expandPriceFilterAndSelect() throws InterruptedException
+		{
+			Thread.sleep(2000);
+			waitForElement(facet_select_Price_Filter);
+			assertTrue(clickOnButton(facet_select_Price_Filter ));
+			Thread.sleep(2000);
+	        assertTrue(clickOnButton(driver.findElement(By.xpath("//span[contains(text(),'Under $10')]"))));
+	        Thread.sleep(3000);
+		}
+		
+		public boolean expandCategoryFilterAndSelect() throws InterruptedException
+		{
+			boolean flag=false; 
+			Thread.sleep(2000);
+			waitForElement(eleLeftFilterCategorttext);
+			   assertTrue(clickOnButton(eleLeftFilterCategorttext ));
+			   Thread.sleep(2000);
+			eleLeftFilterCategortItem1.click();
+			  Thread.sleep(2000); 
+			flag= eleLeftFilterCategortItem1.isSelected();
+			return flag;
+		}
+		
+		
+	//************************************************************
 	
 }
+	
+	
