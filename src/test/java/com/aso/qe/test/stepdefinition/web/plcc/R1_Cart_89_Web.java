@@ -1,5 +1,6 @@
 package com.aso.qe.test.stepdefinition.web.plcc;
 
+import static org.junit.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebElement;
@@ -7,9 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -44,4 +47,13 @@ public class R1_Cart_89_Web extends CommonActionHelper{
 		System.out.println(el.getText());
 		assertTrue(isDisplayed(el));*/
 		}
+	
+	@And("user validate the WG bulk message is visible on cart page$")
+	public void user_validate_the_WG_bulk_message_is_visible_on_cart_page() throws Throwable {
+		Thread.sleep(Constants.thread_low);
+		String actualBulkMessage = (r2CheckoutPo.WGBulkMessage).getText();		
+		String expectedBulkMessage = webPropHelper.getTestDataProperty("WGBulkMsgCart");
+		assertEquals(expectedBulkMessage, actualBulkMessage);
+		System.out.println("Correct bulk message is displayed");
+	}
 }
