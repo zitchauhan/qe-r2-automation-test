@@ -41,15 +41,17 @@ Scenario: Verify the guest user is able to select the Credit Card payment method
 	When user enters "BOPIS_SOF_Product" in the searchbox
 	#When user click on Add to cart button 
 	#When user click on ship it button 
-    Then user click on pickup button
+  Then user click on pickup button
 	And user click on view cart
 	#Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
-    And user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers 
+  And user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers 
 	And user click on checkbox in special order ship to store section 
 	When user clicks on Go to payment CTA
 	And user fill the payment details for sof guest user
 	And user able to see the button place order
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order
 	
 @C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10491
 Scenario: Verify the guest user is able to select the PayPal payment method in order to place the order for BOPIS
@@ -307,6 +309,25 @@ Scenario: Verfiy bopis place order for guest user with CC as tender
 	Then user navigates to order confirmation page
 	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
 	Then user able to see order number			
+	
+@RegressionP2 @WhiteGlove
+Scenario Outline: Verify the guest user is able to place White Glove order using Credit Card
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User searches a product "SKUForWhiteGlove" and navigates to PDP
+	When user click on ship it button 
+	And user click on view cart
+	Then user navigates to Cart Page
+	And user validate the WG bulk message is visible on cart page
+	And user clicks on checkout button on cart page
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	And user add "<Payment Type>" details in payment method for "guest" user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	Examples: 
+		|Payment Type	|
+		|Credit Card	|
+
 	
 	
 	

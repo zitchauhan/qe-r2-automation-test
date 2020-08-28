@@ -1040,4 +1040,5 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
 	@FindBy(xpath="//*[text()='Academy Credit Card']") public WebElement ACCRadioBtn;
 	@FindBy(xpath="//*[text()='Choose Card']") public WebElement ChooseCardCheckout;
+	
 }

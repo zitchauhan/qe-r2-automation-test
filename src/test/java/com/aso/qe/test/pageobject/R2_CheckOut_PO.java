@@ -1212,5 +1212,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath = "//*[@id='acceptAllButton']")public WebElement PayPalAcceptCookie;
 		@FindBy(xpath = "//*[@id='closeCart']") public WebElement PayPal_PopUpClose;
 		@FindBy(xpath = "//*[@class='span11 alignRight baslLoginButtonContainer']") public WebElement PayPal_Login;
+		@FindBy(xpath="//div[@class='css-13o7eu2'][1]") public WebElement WGBulkMessage;
 
 }

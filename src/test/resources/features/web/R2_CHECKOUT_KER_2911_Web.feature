@@ -103,7 +103,7 @@ Scenario: Verify the shipping price for each shipping method for Gift Card items
 	
 	
 @R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-2911
-@ZYP_CHECKOUT_K2911-8233 @CR-DPK 
+@ZYP_CHECKOUT_K2911-8233 @CR-DPK
 Scenario: Verify the shipping price for each shipping method for White glove items where Shipping Exception table exists
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Grills Outdoor cooking 
@@ -128,3 +128,6 @@ Scenario: Verify the shipping price for each shipping method for White glove ite
 		|TaxesPrice_Txt|
 		|Total_price|
 		|Total_txt|	
+		
+		
+		
