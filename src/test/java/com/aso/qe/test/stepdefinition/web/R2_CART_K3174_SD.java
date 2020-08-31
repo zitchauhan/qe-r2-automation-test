@@ -98,9 +98,11 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
 	@And("^user fill the payment details for sof guest user$")
 	public void user_fill_the_payment_details_for_sof_guest_user() throws InterruptedException {
 		waitForElement(r2CheckoutPo.CardholderName_Input);
+		waitForElement(r2CheckoutPo.ZipCode_Input);
 		r2CheckoutPo.ZipCode_Input.clear();
-		
+		Thread.sleep(5000);
 		driver.switchTo().frame("first-data-payment-field-name");
+		waitForElement(r2CheckoutPo.CardholderName_Input);
 		setInputText(r2CheckoutPo.CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame("first-data-payment-field-card");
@@ -121,6 +123,7 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
 		Thread.sleep(Constants.thread_medium);
 		setInputText(r2CheckoutPo.EmailAddressforOrderConfirmation_Input,webPropHelper.getTestDataProperty("EmailAddress"));
 		Thread.sleep(Constants.thread_medium);
+		waitForElement(r2CheckoutPo.ReviewOrder_Btn);
 		assertTrue(clickOnButton(r2CheckoutPo.ReviewOrder_Btn));
 		Thread.sleep(Constants.thread_highest);
 	}

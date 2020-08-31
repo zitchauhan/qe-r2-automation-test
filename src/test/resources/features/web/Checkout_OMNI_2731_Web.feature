@@ -19,10 +19,10 @@ Scenario: Verify that authenticated user is able to navigate to "Payments" Page.
 Scenario: Verify that acc card can be added from My accounts
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
-	And user enter the valid emailaddress "EmailAddress1" 
-	And user enter the valid password "Password" 
+	And user enter the valid emailaddress "Login_username" 
+	And user enter the valid password "Login_pwd" 
     And user click on signin button
-    Then user click on My Account and navigate to payment
+    Then user click on My Account and navigate payment
     And user deletes all existing credit card
 	And user clicks on Add New Credit Card button
 	#And validate the radio button Academy Credit Card and Credit Card
