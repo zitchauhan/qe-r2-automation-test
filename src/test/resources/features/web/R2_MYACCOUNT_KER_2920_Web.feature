@@ -10,10 +10,10 @@ Scenario: Verify user is able to remove the saved credit card from My Account
 		|SignInPage_SignIn_btn								|
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
+	And user enter the valid emailaddress "Login_username" 
+	And user enter the valid password "Login_pwd" 
 	And user click on signin button 
-	Then user click on My Account and navigate to payment 
+	Then user click on My Account and navigate payment 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in Payments > Add new credit card section	|
 		|PaymentPage_PaymentsHeader_label				|

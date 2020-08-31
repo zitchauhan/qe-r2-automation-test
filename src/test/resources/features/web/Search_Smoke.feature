@@ -1,7 +1,7 @@
 Feature: Perform Search smoke test
 
-  @smoke1  
-    Scenario Outline: Verify Search for cloth search items 
+  @RegressionP2 
+  Scenario Outline: Verify Search for cloth search items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to view Search Box on Homepage 
 	Then User enter the "<data>" text for search
@@ -10,12 +10,12 @@ Feature: Perform Search smoke test
 	And User expands PRICE Filter and Select Option
 	Then User should be able to sort by brand A to Z 
 
-    Examples:	
+  Examples:	
 	|data|
-    |men cloths|
+  |men cloths|
     
-  @smoke1  
-    Scenario Outline: Verify Search for bundle search items 
+  @RegressionP2  
+  Scenario Outline: Verify Search for bundle search items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to view Search Box on Homepage 
 	Then User enter the "<data>" text for search
@@ -23,8 +23,8 @@ Feature: Perform Search smoke test
 	And User expands category Filter and Select option
 	Then navigate to sort by and navigate to best selling 
 
-    Examples:	
+  Examples:	
 	|data|
-    |Bundle|
+  |Bundle|
     
  

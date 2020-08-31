@@ -129,6 +129,26 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 		}
 	}
 	
+	@Then("^user click on My Account and navigate payment$")
+	public void user_click_on_My_Account_and_navigate_payment() throws Throwable {
+	 
+	  if("mobile".equalsIgnoreCase(testtype))
+		{
+		  clickOnButton(myAccountPo.myAccount_txt_Mobile);
+		  clickOnButton(r2_r1_fun_po.payment_M_Txt);
+		  
+		}else
+		{
+			
+			 clickOnButton(myAccountPo.lnkMyAccount);
+			 waitForElement(myAccountPo.lnkMyAccount);
+			 clickOnButton(myAccountPo.lnkMyAccount);
+			 waitForElement(r2_r1_fun_po.payment_tab_Txt);
+			  clickOnButton(r2_r1_fun_po.payment_tab_Txt);
+		}
+	}//Uves P1 Scenario Fix 8/27
+	
+	
 
 	@Then("^user click on cancel Gift card button$")
 	public void user_click_on_cancel_Gift_card_button() throws Throwable {
