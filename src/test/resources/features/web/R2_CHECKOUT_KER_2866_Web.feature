@@ -307,7 +307,7 @@ Scenario: Verfiy bopis place order for guest user with CC as tender
 	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
 	Then user able to see order number			
 	
-@RegressionP2 @WhiteGlove
+@RegressionP2 @WhiteGlove @AutomationSmoke
 Scenario Outline: Verify the guest user is able to place White Glove order using Credit Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForWhiteGlove" and navigates to PDP
