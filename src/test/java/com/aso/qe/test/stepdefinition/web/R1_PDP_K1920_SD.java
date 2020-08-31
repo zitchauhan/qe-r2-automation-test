@@ -176,12 +176,13 @@ public R2_Sanity_PO sanity=PageFactory.initElements(getDriver(), R2_Sanity_PO.cl
 		 public void user_able_to_see_item_added_in_the_cart() throws Throwable{
 			 assertTrue(isDisplayed(pdpPageObj.addtocarttitle));
 		 }
-	@Then("^user click on pickup button$") //CR MJR-17/7/19
-		public void user_click_on_pickup_button() throws Throwable{
-		//Thread.sleep(5000);
-		waitForPageLoad(driver);
-		Thread.sleep(Constants.thread_low);
-		assertTrue(clickOnButton(pdpPageObj.pickupBtn_m));
-		}
+		 @Then("^user click on pickup button$") //CR MJR-17/7/19
+			public void user_click_on_pickup_button() throws Throwable{
+			//Thread.sleep(5000);
+			waitForPageLoad(driver);
+			Thread.sleep(Constants.thread_low);
+			waitForElement(pdpPageObj.pickupBtn_m);
+			assertTrue(clickOnButton(pdpPageObj.pickupBtn_m));
+			}
 }
 

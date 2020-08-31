@@ -95,7 +95,9 @@ public class R2_R1_Fun_PO extends CommonActionHelper
    @FindBy(xpath="//*[@data-auid='Payments']")public WebElement payment_Txt; // CR-DPK 12-sept
    @FindBy(xpath="//*[@data-auid='Payments_m']")public WebElement payment_M_Txt; // CR-DPK 12-sept
    //KER-3093 CR-RKA
-   
+   //
+   @FindBy(xpath="//a[contains(text(),'PAYMENT')]")public WebElement payment_tab_Txt; // Uves P1 Scenario Fix 8/27
+   //
    //KER-2939 CR-AKK
    @FindBy(xpath="//div[@id='PMC']") public WebElement Disclaimer_Txt;
    @FindBy(xpath="//span[text()='See more']") public WebElement SeeMore_lnk;

@@ -17,16 +17,8 @@ Scenario Outline: Checkout - Regsiter New User & Place VISA Order
 	And user add "<Payment Type>" details in payment method for "Newly Registered" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order
-#	Then Verify the message on the page 
-#		|# Message for successful order is displayed		|
-#		|THANKS FOR SUBMITTING YOUR ORDER					|
-    Then user able to see order number 
+  Then user able to see order number 
 	And User navigates to Check Oder status Page
-	Then System Generate ordernumber "GeneratedOrdernumber" and "zipcode" 
-	And User clicks on Check button
-	When User Clicks on Cancel Order link
-	And user click on yes cancle my order button
-    And Verify that the order cancellation confirmation page is displayed 
 	Examples: 
 		|Payment Type	|
 		|Credit Card - VISA	|

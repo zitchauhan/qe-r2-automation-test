@@ -430,7 +430,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath=" //*[@data-auid='checkout_payment_add_gift_card_icon']")
 	   public WebElement expandGiftCardOptionOnCheckOutPage;  //SID 23-Jan
 	   
-	   @FindBy(xpath="//*[contains(@class,'paypal-button')]")
+	   @FindBy(xpath="//div[@class='paypal-button paypal-button-context-iframe paypal-button-label-checkout paypal-button-size-responsive paypal-button-layout-horizontal']") //Uves RegressionP1 28-Aug
 	   public WebElement paypalButton;  //SID 23-Jan
 	   
 	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[text()='Gift Card']")
