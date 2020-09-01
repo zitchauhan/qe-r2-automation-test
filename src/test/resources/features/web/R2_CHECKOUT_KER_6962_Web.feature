@@ -124,7 +124,7 @@ Scenario: Verify user is prompted with message to retain the physical gift card
 	|Please keep your physical gift card for future reference to assist with any returns or order cancelations.	|	
 	
 
-@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8883 @CR-SK 
+@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8883 @CR-SK
 Scenario: Verify Guest Users should be able to enter an unlimited number of gift cards on any transaction
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
@@ -284,7 +284,7 @@ Scenario: Verify If a gift card does not cover the full transaction, the amount 
 	And Applied amount should be displayed in order summary	
 	
 	
-@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8893 @CR-SK 
+@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8893 @CR-SK
 Scenario: Verify If a gift card does not cover the full transaction, the amount applied should be displayed and also applied amount should displayed in order summary subtotals for Sign in user
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user creates an account
@@ -308,8 +308,9 @@ Scenario: Verify If a gift card covers the full transaction, the amount applied 
 	And User searches a product "productName" and navigates to PDP 
 	#And user click on Add to Cart Button 
 	And user click on ship it button 
-	And user is navigated to Add to cart Notification popup 
-	And user click on checkout button 
+	And user is navigated to Add to cart Notification popup
+	And user click on view cart and checkout button
+	And user click on checkout button
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user
 	When user click on GiftCard Plus icon in Checkout page
