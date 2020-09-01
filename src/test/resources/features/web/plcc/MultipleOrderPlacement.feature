@@ -44,7 +44,7 @@ Scenario: Verify user is able to place Multiple orders using PLCC Card
 	#And user expect element my account link to be present 
 	#And user place fifty orders and see the response with "SKUIdOfProduct1" with PLCC Card "ValidPLCCCard"
 	
-	@C-PLCC @All @CR-HP @PlacePLCCOrder @AutomationSmokeORIG @DevORIG
+	@C-PLCC @All @CR-HP @PlacePLCCOrder @DevORIG
 Scenario: Verify user is able to place order using PLCC Card 
 	Given user launches the browser and navigates to "ASO_HOME" page plcc 
 	When user click on My Account link 

@@ -3,6 +3,8 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.Set;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -62,7 +64,7 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		for(String winHandle : driver.getWindowHandles()){
 		    driver.switchTo().window(winHandle);
 		   System.err.println(driver.getTitle());
-		 
+		   
 		}
 		System.err.println(getTitle());
 		waitForElement(r2CheckOutPo.PaypalEmail_Input);
@@ -74,10 +76,22 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalLogin_Btn));
 		Thread.sleep(Constants.thread_high);
 		driver.manage().window().maximize();
+		//driver.getTitle();
 		Thread.sleep(Constants.thread_high);
 		
-		clickOnButton(r2CheckOutPo.PayPalContinue_Btn);
-		Thread.sleep(Constants.thread_high);
+		Set<String> winHandles = driver.getWindowHandles();
+        // Loop through all handles
+        for(String handle: winHandles){
+            if(!handle.equals(winHandleBefore)){
+            driver.switchTo().window(handle);
+            Thread.sleep(1000);
+            System.out.println("Title of the new window: " +
+driver.getTitle());
+            waitForElement(r2CheckOutPo.PayPalContinue_Btn);
+    		clickOnButton(r2CheckOutPo.PayPalContinue_Btn);
+    		Thread.sleep(Constants.thread_high);
+            }
+		
 		
 		driver.switchTo().window(winHandleBefore);
 		JavascriptExecutor jsb = (JavascriptExecutor) driver;
@@ -88,7 +102,8 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		Thread.sleep(Constants.thread_highest);
 		
 		System.err.println(driver.getTitle());
-
+		
+        }
 	}
 	@Then("^user click on ADD Another Gift Card$")
 	public void user_click_on_ADD_Another_Gift_Card() throws Throwable {

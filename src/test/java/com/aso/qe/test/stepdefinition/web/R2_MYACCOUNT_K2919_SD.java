@@ -45,6 +45,20 @@ public class R2_MYACCOUNT_K2919_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(myAccountPo.btnAddNewCreditCard));
 	}
 	
+	@Then("^user enters Cardholder name \"([^\"]*)\"$")
+	public void user_enters_Cardholder_name(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		
+		Thread.sleep(Constants.thread_low);
+		
+		String name = webPropHelper.getTestDataProperty("CardholderName");
+		driver.switchTo().frame("first-data-payment-field-name");
+		setInputText(r2CheckOutPo.CardholderName_Input, name);
+		System.out.println("CardHoldername="+webPropHelper.getTestDataProperty("CardholderName"));
+		driver.switchTo().defaultContent();
+	}
+	
+	
 	@And("^user clicks the CVV Tool Tip$")
 	public void user_clicks_the_CVV_Tool_Tip() throws Throwable {
 		assertTrue(clickOnButton(myAccountPo.iconCVVToolTip));

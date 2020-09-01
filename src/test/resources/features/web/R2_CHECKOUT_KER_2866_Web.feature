@@ -32,25 +32,21 @@ Scenario: Verify that user view Find a Store modal from Change Location in Check
     Then user click on change location button
     Then User is able to see Find a Store Modal
     
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10482 @RegressionP1
+@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10482 @RegressionP1 @AutomationSmoke
 Scenario: Verify the guest user is able to select the Credit Card payment method in order to place the order for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
-	When user enters "BOPIS_SOF_Product" in the searchbox
-	#When user click on Add to cart button 
-	#When user click on ship it button 
+	When user enters "BOPIS_SOF_Product" in the searchbox 
   Then user click on pickup button
 	And user click on view cart
-	#Then user select in store pickup option
 	And user will click on Checkout button and navigates to Checkout page
   And user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers 
 	And user click on checkbox in special order ship to store section 
 	When user clicks on Go to payment CTA
 	And user fill the payment details for sof guest user
 	And user able to see the button place order
-	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order
 	
 @C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10491
@@ -310,7 +306,7 @@ Scenario: Verfiy bopis place order for guest user with CC as tender
 	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
 	Then user able to see order number			
 	
-@RegressionP2 @WhiteGlove
+@RegressionP2 @WhiteGlove @AutomationSmoke
 Scenario Outline: Verify the guest user is able to place White Glove order using Credit Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForWhiteGlove" and navigates to PDP
