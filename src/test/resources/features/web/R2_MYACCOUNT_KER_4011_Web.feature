@@ -23,7 +23,7 @@ Scenario: Verify available elements on the Sign in page
 Scenario: Verify the user is able to sign in successfully with valid credentials
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithDefaultAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	Then user should get logged in successfully

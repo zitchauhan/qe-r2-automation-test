@@ -349,6 +349,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = removeBtnForAddress)
 	public WebElement btnRemove;
 	
+	@FindBy(xpath = "(//*[text()='Remove'])[2]")
+	public WebElement removeBtnForGiftCard;
+	
 	@FindBy(xpath = "//*[contains(text(),'Academy Sports + Outdoors Credit Card ending in')]/../../../div[2]/div/button[2]")
 	public WebElement btnAccRemove;		
 
@@ -865,7 +868,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(),'SHIPPING ADDRESS')]")
 	public WebElement MyAccount_OrderDetailsPage_ShippingAddress;
 
-	@FindBy(xpath = "//*[contains(text(),'SHIPPING ADDRESS')]/following-sibling::div/div[1]/div[4]")
+	@FindBy(xpath = "//div[contains(text(),'SHIPPING ADDRESS')]//parent::div/following-sibling::div/div[5]")
 	public WebElement MyAccount_OrderDetailsPage_EmailOrPhone;
 
 	// Start KER-4330 CR-MS Sep25
