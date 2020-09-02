@@ -1,8 +1,8 @@
 Feature: CHECKOUT - Guest user, add STS Order
 
 
-@AutomationSmoke @RegressionP1
-Scenario:  Checkout - Guest User PAYPAL order Regular STS item
+@AutomationSmoke @RegressionP1 @abc
+Scenario:  Checkout - Guest User order placement for Regular STS item
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
@@ -13,12 +13,9 @@ Scenario:  Checkout - Guest User PAYPAL order Regular STS item
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
 	When user clicks on Go to payment CTA
-	Then user click on paypal radiobtn
-	And user click on paypal checkout button
-	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
+	And user fill the payment details for sof guest user
 	And user able to see the button place order
-	And user is navigated to order confirmation page and captures order number
-	Then user able to see order number 
+	Then verify user is able to successfully place the order
 	
 	
 	
