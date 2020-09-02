@@ -1,7 +1,7 @@
 Feature: E03-100 - My Account, Order Details 
 
 @R2_Web @Regression @R2_All @P2 @C-MyAccount @KER-4237 
-@ZYP_MYACCOUNT_K4237-10510 @CR-GK
+@ZYP_MYACCOUNT_K4237-10510 @CR-GK 
 Scenario: Verify that Authenticated User is able to view order list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -59,7 +59,7 @@ Scenario: Verify that Authenticated user is able to view shipping and Billing De
 	And user navigates from Order successful page to Orders in my account 
 	And User clicks on View Details CTA for an order 
 	Then Verify below Sub/Main Module of My Account 
-#		|#Verify following elements in order section|
+		|#Verify following elements in order section|
 		|MyAccount_OrderPage_OrderDetailsPage       |
 		|MyAccount_OrderDetailsPage_OrderDate       |
 		|MyAccount_OrderDetailsPage_OrderNumber     |
@@ -68,7 +68,7 @@ Scenario: Verify that Authenticated user is able to view shipping and Billing De
 		|MyAccount_OrderDetailsPage_ShippingAmount  |
 		|MyAccount_OrderDetailsPage_TaxAmount       |
 		|MyAccount_OrderDetailsPage_SubTotalAmount  |
-		#|#MyAccount_OrderDetailsPage_PrintReceipt    | 
+		#|#MyAccount_OrderDetailsPage_PrintReceipt    |
 		|MyAccount_OrderDetailsPage_ShippingAddress |
 		|MyAccount_OrderDetailsPage_BillingInfo     |
 		|MyAccount_OrderDetailsPage_EmailOrPhone    |

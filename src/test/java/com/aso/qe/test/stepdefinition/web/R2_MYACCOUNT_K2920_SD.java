@@ -68,11 +68,6 @@ public class R2_MYACCOUNT_K2920_SD extends CommonActionHelper
 		assertTrue(clickOnButton(r2MyAccountPo.btnRemove));
 	}
 	
-	@When("^user clicks Gift Card Remove button in payment page$")
-	public void user_clicks_Gift_Card_Remove_button_in_payment_page() throws Throwable {
-	assertTrue(clickOnButton(r2MyAccountPo.removeBtnForGiftCard));
-	}
-	
 	@When("^user clicks Remove acc button in payment page$")
 	public void user_clicks_Remove_acc_button_in_payment_page() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.btnAccRemove));

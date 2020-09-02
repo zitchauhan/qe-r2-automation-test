@@ -77,7 +77,6 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[text()='Shipping']") 	public WebElement shippingTxtInCartPopup;
 	@FindBy(xpath="//*[text()='Pick up']") 	public WebElement pickupTxtInCartPopup;
 	@FindBy(xpath="//*[@data-auid='btncheckout'] | //*[@data-auid='crt_btnCheckoutTop'] | //*[@data-auid='btnCheckout']")   public WebElement btnCheckout; //Updated by VSN on 07-11-19
-	@FindBy(xpath="//*[@data-auid='btnviewCart']")	public WebElement viewCartAndCheckout;
 	@FindBy(xpath="//*[@data-auid='PDP_AddToWishList']") 	public WebElement btnAddToWishList; //Anuj Added for KER-1953
 	@FindBy(xpath="(//*[@data-auid='PDP_Color_Attribute']//*[contains(@data-auid,'swatchButton-image-')])[1]") public WebElement btnDifferentColor;
 	@FindBy(xpath="//*[contains(@data-auid,'swatchButton-image-')]/span[text()='Medium']") public WebElement btnMediumSize;
@@ -458,9 +457,22 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='PDP_IventoryMessage']")public WebElement txtNotSoldInStore;
 	
 	
+	// PDP Search Smoke 24 - August
 	
-	
-	
+	@FindBy(xpath="//h2[@class='mt-4 css-r66vq6']")public WebElement txtProductTitleBundle;
+	@FindBy(xpath="(//div[@class='row css-1xhj18k'])[2]")public WebElement secProductAttributeSizesBundle;
+	@FindBy(xpath="(//div[@data-auid='breadcrumb'])[1]")public WebElement Breadcrumb;
+	@FindBy(xpath="//div[@id='renderShipItAtc']")public WebElement HomeDeliveryButton;
+	@FindBy(xpath="//div[@class='css-hboir5']")public WebElement StoreSelectButton;
+	@FindBy(xpath="//li[@data-auid='PDP_Q&A']")public WebElement QandALink;
+	@FindBy(xpath="//span[@data-auid='skuId']")public WebElement SKUid;
+	@FindBy(xpath="//span[@data-auid='itemId']")public WebElement ItemValue;
+	@FindBy(xpath="(//div[@data-auid='PDP_Color_Attribute'])[1]")public WebElement Color;
+	@FindBy(xpath="(//span[contains(text(),'See all reviews')]")public WebElement Review;
+	@FindBy(xpath="(//div[@data-auid='Rating Stars']")public WebElement Rating;
+	@FindBy(xpath="//*[@data-auid='PDP_ProductName']") public WebElement txtProductTitleGift;
+	@FindBy(xpath="//*[@data-auid='PDP_ProductName']") public WebElement txtProductTitlenew;
+	@FindBy(xpath ="//div[@data-auid='PDP_Disclaimer']") public WebElement AmmoDisclaimer;
 	
 	
 	//SID 28-August
@@ -1121,4 +1133,97 @@ public class R1_PDP_PO extends CommonActionHelper
 //					assertTrue(clickOnButton(imgHelmetSKUCategory));
 					Thread.sleep(2000);
 				}
+				
+				// PDP Search Smoke 24 - August
+				
+				public boolean DetailsandSpecsDisplayed()
+				{
+					boolean flag= false;
+					if(tabDetailsSpecs.isDisplayed())
+						flag =true;
+					return flag;
+						
+				}
+				
+				public boolean BreadCrumbDisplayed()
+				{
+					boolean flag= false;
+					if(Breadcrumb.isDisplayed())
+						flag =true;
+					return flag;
+						
+				}
+				public boolean HomeDeliveryOptionDisplayed()
+				{
+					boolean flag= false;
+					if(HomeDeliveryButton.isDisplayed())
+						flag =true;
+					return flag;
+						
+				}
+				
+				public boolean StoreOptionDisplayed()
+				{
+					boolean flag= false;
+					if(StoreSelectButton.isDisplayed())
+						flag =true;
+					return flag;
+						
+				}
+				
+				public boolean QuesAnsDisplayed()
+				{
+					boolean flag= false;
+					if(QandALink.isDisplayed())
+						flag =true;
+					return flag;
+						
+				}
+				
+				public boolean ItemValueDisplayed()
+				{
+					boolean flag= false;
+					if(ItemValue.isDisplayed())
+						flag =true;
+					return flag;
+						
+				}
+				
+				public boolean ColorDisplayed()
+				{
+					boolean flag= false;
+					if(Color.isDisplayed())
+						flag =true;
+					return flag;
+						
+				}
+				
+				public boolean RatingDisplayed()
+				{
+					boolean flag= false;
+					if(Color.isDisplayed())
+						flag =true;
+					return flag;
+						
+				}
+				
+				public boolean ReviewDisplayed()
+				{
+					boolean flag= false;
+					if(Color.isDisplayed())
+						flag =true;
+					return flag;
+						
+				}
+				
+				public boolean AmmoDisclaimerdisplayed()
+				{
+					boolean flag= false;
+					if(AmmoDisclaimer.isDisplayed())
+						flag =true;
+					return flag;
+						
+				}
+				
+				
 }
