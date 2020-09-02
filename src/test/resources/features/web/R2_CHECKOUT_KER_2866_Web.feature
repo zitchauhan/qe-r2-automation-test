@@ -47,7 +47,6 @@ Scenario: Verify the guest user is able to select the Credit Card payment method
 	When user clicks on Go to payment CTA
 	And user fill the payment details for sof guest user
 	And user able to see the button place order
-	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order
 	
 @C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10491
