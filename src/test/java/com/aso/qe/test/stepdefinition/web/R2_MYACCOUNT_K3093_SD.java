@@ -139,10 +139,8 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 		  
 		}else
 		{
-			
-			 clickOnButton(myAccountPo.lnkMyAccount);
-			 waitForElement(myAccountPo.lnkMyAccount);
-			 clickOnButton(myAccountPo.lnkMyAccount);
+			clickOnButton(myAccountPo.lnkMyAccount);
+			  clickOnButton(r2_r1_fun_po.payment_Txt);
 			 waitForElement(r2_r1_fun_po.payment_tab_Txt);
 			  clickOnButton(r2_r1_fun_po.payment_tab_Txt);
 		}

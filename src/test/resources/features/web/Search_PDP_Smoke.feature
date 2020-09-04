@@ -105,7 +105,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the Store Option
    
    
-   @RegressionP2
+   @RegressionP3
    Scenario: Navigate to a product pdp page and verify the Question and Answer section on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
    When user navigates to PLP of any product

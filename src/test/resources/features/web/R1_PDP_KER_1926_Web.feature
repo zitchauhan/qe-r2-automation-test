@@ -1,17 +1,23 @@
 Feature: To verify basic functionalities of PDP
 
-@Regression @1HR @C-PDP  @Web @ZYP_PDP_K1926-4341 @KER-1926 @All  @Rerun  @CR-AG @1HR
-  Scenario: To verify URL, Image, Attributes ,Add to cart button section by navigation Desktop
+@Regression @1HR @C-PDP  @Web @ZYP_PDP_K1926-4341 @KER-1926 @All  @Rerun  @CR-AG @1HR @RegressionP2  @eee
+  Scenario: Verify whether the PDP page with proper elements  are displayed properly for a product
     Given user launches the browser and navigates to "ASO_HOME" page
-    When user navigates to PLP of any product
-    Then user clicks on the product card and navigates to PDP of the product
-    And user should be able to see PDP mention in the current url
-    Then user should be able to see Image of the product
+    When user enters "SearchPDP" in the search box
+    Then user should be able to see PDP mention in the current url
+    #Then user should be able to see Image of the product
     And user should be able to see the name of the product in title
     Then user should see different attribute and size of the product
     #And user should be able to see Add to cart button and quantity section
     And user should be able to see ship it button and quantity section 
     Then user should be able to see inventory status of the product
+    And user should be able to see the sku and item numbers for the given image
+    And user should see details and specs
+    Then user clicks should be able to see QandA section
+    Then verfiy the Ask a question button
+    
+    
+    
 
 @Regression  @C-PDP  @Web @KER-1926 @ZYP_PDP_K1926-5544 @All @Rerun @1HR  @CR-AG
   Scenario: To verify URL, Image, Attributes, Add to cart button section by search

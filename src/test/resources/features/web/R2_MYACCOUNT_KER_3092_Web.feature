@@ -16,18 +16,18 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 		
 		
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-3092
-@ZYP_MYACCOUNT_K3092-10462 @CR-RKA @1HR_R2 
-Scenario: Verify that user is able to remove the added GC from My Account 
+@ZYP_MYACCOUNT_K3092-10462 @CR-RKA @1HR_R2  @RegressionP2
+Scenario: verify whether the user is able to delete a gift card from payment page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
-	And user enter the valid password "Password" 
+	And user enter the valid emailaddress "Login_username" 
+	And user enter the valid password "Login_pwd" 
 	And user click on signin button 
-	Then user click on My Account and navigate to payment 
-	Then user remove the gift card 
+	Then user click on My Account and navigate payment
+	Then user remove the GC 
 	Then Verify below Sub/Main Module of My Account 
 		|#verify Add gift cart button is displaying after click on remove BTN|
-		|PaymentPage_AddedGiftCards_txtList				|
+		|PaymentPage_AddedGiftCards_txtList		|
 		
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-3092
 @ZYP_MYACCOUNT_K3092-10459 @CR-RKA 

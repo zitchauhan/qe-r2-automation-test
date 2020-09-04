@@ -29,9 +29,38 @@ public class Search_PDP_Smoke_SD extends CommonActionHelper {
 	    Assert.assertTrue(r1pdppo.DetailsandSpecsDisplayed());
 	}
 	
+	
+	@Then("^user should see details and specs for Bundle Product$")
+	public void user_should_see_details_and_specs_for_Bundle_Product() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    Assert.assertTrue(r1pdppo.DetailsandSpecsDisplayedBundleProduct());
+	}
+	
+	
 	@Then("^user should be able to see the search term in the product title for Bundle Product$")
 	public void user_should_be_able_to_see_the_search_term_in_the_product_title_Bundle() throws Throwable {
 		assertEquals(webPropHelper.getTestDataProperty("SKUForBundleProductTitle"), getText(r1pdppo.txtProductTitleBundle));
+		logger.debug("User entered search key :: " + searchKey + "and the search title is :: "
+				+ getText(r1pdppo.txtProductTitle));
+	}
+	
+	@Then("^user should be able to see the search term in the SOF Item title$")
+	public void user_should_be_able_to_see_the_search_term_in_the_product_title_SOF() throws Throwable {
+		assertEquals(webPropHelper.getTestDataProperty("SKUForSOFProductTitle"), getText(r1pdppo.txtProductTitleSOF));
+		logger.debug("User entered search key :: " + searchKey + "and the search title is :: "
+				+ getText(r1pdppo.txtProductTitle));
+	}
+	
+	@Then("^user should be able to see the search term in the Clearence Item title$")
+	public void user_should_be_able_to_see_the_search_term_in_the_product_title_Clearence() throws Throwable {
+		assertEquals(webPropHelper.getTestDataProperty("SKUForClearenceProductTitle"), getText(r1pdppo.txtProductTitleSOF));
+		logger.debug("User entered search key :: " + searchKey + "and the search title is :: "
+				+ getText(r1pdppo.txtProductTitle));
+	}
+	
+	@Then("^user should be able to see the search term in the Hot Deal Item title$")
+	public void user_should_be_able_to_see_the_search_term_in_the_Hot_deal_Item_Title() throws Throwable {
+		assertEquals(webPropHelper.getTestDataProperty("SKUForHotDealProductTitle"), getText(r1pdppo.txtProductTitleSOF));
 		logger.debug("User entered search key :: " + searchKey + "and the search title is :: "
 				+ getText(r1pdppo.txtProductTitle));
 	}

@@ -25,6 +25,21 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 			pdpPageObj.navigateToMultipleSKU();
 		}
 	}
+	
+	@Then("^user navigates till PLP of Baits SKU$")
+	public void user_navigates_till_PLP_of_Baits_sku() throws Throwable {
+				
+			pdpPageObj.navigateToBaitsSKU();
+		
+	}
+	
+	@Then("^user navigates till PLP of White Glove SKU$")
+	public void user_navigates_till_PLP_of_WhiteGlove_sku() throws Throwable {
+				
+			pdpPageObj.navigateToWhiteGloveSKU();
+		
+	}
+	
 	@Then("^User navigates till PLP of multiple sku$")
 	public void user_navigates_till_PLP_of_multiple_sku() throws Throwable {
 		if("mobile".equalsIgnoreCase(testtype)) {

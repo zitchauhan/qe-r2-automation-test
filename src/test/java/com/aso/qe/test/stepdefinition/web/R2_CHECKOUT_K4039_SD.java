@@ -79,18 +79,12 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		//driver.getTitle();
 		Thread.sleep(Constants.thread_high);
 		
-		Set<String> winHandles = driver.getWindowHandles();
-        // Loop through all handles
-        for(String handle: winHandles){
-            if(!handle.equals(winHandleBefore)){
-            driver.switchTo().window(handle);
-            Thread.sleep(1000);
-            System.out.println("Title of the new window: " +
-driver.getTitle());
-            waitForElement(r2CheckOutPo.PayPalContinue_Btn);
-    		clickOnButton(r2CheckOutPo.PayPalContinue_Btn);
-    		Thread.sleep(Constants.thread_high);
-            }
+		
+
+
+		
+		 waitForElement(r2CheckOutPo.PayPalContinue_Btn);
+		clickOnButton(r2CheckOutPo.PayPalContinue_Btn);
 		
 		
 		driver.switchTo().window(winHandleBefore);
@@ -103,7 +97,7 @@ driver.getTitle());
 		
 		System.err.println(driver.getTitle());
 		
-        }
+        
 	}
 	@Then("^user click on ADD Another Gift Card$")
 	public void user_click_on_ADD_Another_Gift_Card() throws Throwable {
