@@ -1,5 +1,46 @@
 Feature: E02-100 - My Account, Address Book 
 
+# ******* Venkat *************
+
+@RegressionP2
+Scenario Outline:  Edit Non Default Shipping Address and Verify
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And clicks on SignIn button in home page 
+	Then Verify below Sub/Main Module of My Account 
+		|# Verify following elements in Sign in/login page	|
+		|SignInPage_EmailAddress_txt			   			| 
+		|SignInPage_Password_txt				   			|
+		|SignInPage_SignIn_btn								|
+	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And user click on MyAccount 
+	Then user lands on My Account page and click on adress 
+	Then user Clicks on Add New Address link 
+	Then Verify below Sub/Main Module of My Account 
+		|# Verify following elements in address page|
+		|AddressPage_FirstName_txt				   	|
+		|AddressPage_LastName_txt					|
+		|AddressPage_PhoneNumber_txt				|
+		|AddressPage_Address_txt 					|
+		|AddressPage_ZipCode_txt			   		|
+		|AddressPage_City_txt						|
+		|AddressPage_State_txt						|
+	When user enter First name "FirstName" in address book 
+	And user enter Last name "LastName" in address book 
+	And user enter Phone number "PhoneNumber" in address book 
+	And user enter Address "Address" in address book 
+	And user enter Zipcode "zipcode" in address book 
+	And clicks on Add New Address button 
+	Then user edits non default shipping Address and verify <data1>,<data2>,<data3>,<data4>,<data5>
+         Examples:
+		|data1    |data2    |data3      |data4  |data5    |		 
+		|FNameEdit|LNameEdit|AddressEdit|60660  |9087653217|
+	
+# ******* Venkat End *********
+
+
+
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
 @ZYP_MYACCOUNT_K4232-9194 @CR-RK 
 Scenario: Verify Authenticated user can Manage Address Book - View existing Address details 

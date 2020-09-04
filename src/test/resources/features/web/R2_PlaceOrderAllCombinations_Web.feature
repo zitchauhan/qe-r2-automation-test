@@ -24,6 +24,35 @@ Feature: Place order
 #		|Credit Card	|
 #		|PayPal			|
 
+#  *********************Venkat***************
+@RegressionP2
+Scenario Outline: Verify if authenticated user is able to place an order for single SKU product 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user creates an account
+	And User searches a product "productName" and navigates to PDP 
+#	And user click on Add to Cart Button 
+#	And user is navigated to Add to cart Notification popup 
+#	When user click on checkout button 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user adds shipment address on checkout page for "Newly Registered" user
+	And user selects shipment method on check out page for "Newly Registered" user
+	And user add "<Payment Type>" details in payment method for "Newly Registered" user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	Then user validates shipping address
+#	Then Verify the message on the page 
+#		|# Message for successful order is displayed		|
+#		|THANKS FOR SUBMITTING YOUR ORDER					|
+	Examples: 
+		|Payment Type	|
+
+#********************Venkat End******************
+
+
+
 @R2_Web @R2_All @R2_PlaceOrderAuthenticated @R2_PlaceOrderAllCombinations @R2_Order @DevORIG
 Scenario Outline: Verify if authenticated user is able to place an order for single SKU product 
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -47,9 +76,9 @@ Scenario Outline: Verify if authenticated user is able to place an order for sin
 	Examples: 
 		|Payment Type	|
 		|Gift Card		|
-		|Credit Card - VISA	|
+#		|Credit Card - VISA	|
 #		|PayPal			|
-		
+	
 @R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order @C1-Message 
 @CR-SK 
 Scenario Outline: Verify if unauthenticated user is able to place an for multi SKU products 

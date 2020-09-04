@@ -1,18 +1,20 @@
 package com.aso.qe.test.pageobject;
 
-import static org.testng.Assert.assertTrue;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.stepdefinition.web.Common_Web_SD;
 
 public class R2_MyAccount_PO extends CommonActionHelper {
+	//R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);  //-venkat
 
 	/**************** START LOCAL OBJETCS AND DECLARATIONS ***********************/
 	private static final Logger logger = Logger.getLogger(Common_Web_SD.class);
@@ -978,12 +980,86 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	
 	@FindBy(id="first-data-payment-field-card")public WebElement CardField_Frame;
 	
+
+	// *********** Venkat **************
+	
+		@FindBy(xpath= "//div[@class='p-1']//p[@class='o-copy__14bold mb-0 text-capitalize']") public WebElement shippingAddressNameConfirmationPage; 
+		@FindBy(xpath= "//div[@class='p-1']//p[@class='o-copy__14reg mb-0 pb-0 text-capitalize'][1]") public WebElement shippingaddress1ConfirmationPage;
+		@FindBy(xpath= "//div[@class='p-1']//p[@class='o-copy__14reg mb-0 pb-0 text-capitalize'][2]") public WebElement shippingaddress2ConfirmationPage;
+		@FindBy(xpath= "//div[@class='p-1']//p[@class='o-copy__14reg mb-0 pb-0']") public WebElement shippingPhoneEmailConfirmationPage;
+		
+		@FindBy(xpath= "//div[@class='col-12 col-md-8']") public WebElement shippingAddressAddressPage;
+		
+		@FindBy(xpath = "//i[@class='academyicon icon-pencil pr-half css-1uwna80'][1]")public WebElement btnEditNonDefaultAddress;
+		@FindBy(xpath = "//input[@id='myaccount-firstname']")public WebElement NonDefaultFName;
+		@FindBy(xpath = "//input[@id='myaccount-lastname']")public WebElement NonDefaultLName;
+		@FindBy(xpath = "//input[@id='myaccount-address']")public WebElement NonDefaultAddress;
+		@FindBy(xpath = "//input[@id='myaccount-zipcode']")public WebElement NonDefaultZip;
+		@FindBy(xpath = "//input[@id='myaccount-city']")public WebElement btnEditNonDefaultPhNumber;
+		@FindBy(xpath = "//button[@data-auid='btnsubmit_btn']")public WebElement btnUpdateNonDefault;
+		@FindBy(xpath = "(//div[@class='col-12 col-md-8'])[2]")public WebElement NonDefaultShippingAddress;
+		
+		
+	// ***************** End Venkat	**************************	
+	
 	// End KER-4330 CR-MS Sep25
 
 	/***************************** END XPAHTS ***********************************/
 
 	/***************************** START METHODS ********************************/
 
+	// Venkat	
+	public void retriveAddressOnConfirmationPageAndVerifyOnMyAccountPage(){
+		
+		String AddName = shippingAddressNameConfirmationPage.getText();
+		String ConfAddress1 = shippingaddress1ConfirmationPage.getText();
+		String ConfAddress2 = shippingaddress2ConfirmationPage.getText();
+		String ConfMobile = shippingPhoneEmailConfirmationPage.getText();		
+		clickOnButton(lnkMyAccount);
+		clickOnButton(myAccount_MyAccountList_AddressBook_lnk);
+		String ShippingAddress = NonDefaultShippingAddress.getText();
+		if(ShippingAddress.contains(AddName)){
+			   System.out.println("Shipping Name is"+AddName);
+		 }
+		if(ShippingAddress.contains(ConfAddress1)){
+			   System.out.println("Shipping Address is"+ConfAddress1);
+		 }
+		if(ShippingAddress.contains(ConfAddress2)){
+			   System.out.println("Shipping Address is"+ConfAddress2);
+		 }
+		if(ShippingAddress.contains(ConfMobile)){
+			   System.out.println("Shipping Address is"+ConfMobile);
+		 }
+	}
+	
+	public void editNonDefaultShippingAddressAndVerify(String FName,String LName,String Address,String zip,String PhNumber){
+	
+		NonDefaultFName.sendKeys(FName);	
+		NonDefaultLName.sendKeys(LName);
+		NonDefaultAddress.sendKeys(Address);
+		NonDefaultZip.sendKeys(zip);
+		btnEditNonDefaultPhNumber.sendKeys(PhNumber);
+		clickOnButton(btnUpdateNonDefault);
+		String ShippingAddress = shippingAddressAddressPage.getText();
+		if(ShippingAddress.contains(FName)){
+			   System.out.println("Shipping Name is"+FName);
+		 }
+		if(ShippingAddress.contains(LName)){
+			   System.out.println("Shipping Address is"+LName);
+		 }
+		if(ShippingAddress.contains(Address)){
+			   System.out.println("Shipping Address is"+Address);
+		 }
+		if(ShippingAddress.contains(zip)){
+			   System.out.println("Shipping Address is"+zip);
+		 }
+		if(ShippingAddress.contains(PhNumber)){
+			   System.out.println("Shipping Address is"+PhNumber);
+		 }
+		
+	}
+	// Venkat End
+	
 	public boolean validatePasswordStrength(String expectedColor) {
 		waitForElement(SignUpPage_PasswordStrengthBar_txt);
 		String styleAttribute = SignUpPage_PasswordStrengthBar_txt.getAttribute("style");

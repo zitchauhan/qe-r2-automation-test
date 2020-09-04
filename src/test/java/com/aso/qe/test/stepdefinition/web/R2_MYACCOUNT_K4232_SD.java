@@ -21,6 +21,8 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 	R2_MyAccount_PO myAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 	R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
+	R2_MyAccount_PO r2MyAccountPo = PageFactory.initElements(driver, R2_MyAccount_PO.class);  //-venkat
+
 	
 	String newFirstName = "";
 
@@ -170,5 +172,10 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 		Thread.sleep(Constants.thread_medium);
 		String firstLastName = myAccountPo.adr_inpFirstNameLastName.getText();
 		assertTrue(firstLastName.contains(newFirstName));	   
+	}
+	
+	@Then ("^user edits non default shipping Address and verify  \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
+	public void user_edits_non_default_shipping_Address_and_verify(String FName,String LName,String Address,String zip,String PhNumber) throws Throwable {
+		r2MyAccountPo.editNonDefaultShippingAddressAndVerify(FName,LName,Address,zip,PhNumber);
 	}
 }

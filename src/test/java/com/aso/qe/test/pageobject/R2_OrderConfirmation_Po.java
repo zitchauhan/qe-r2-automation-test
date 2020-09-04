@@ -93,7 +93,6 @@ public class R2_OrderConfirmation_Po extends CommonActionHelper {
 	@FindBy(xpath= "//*[text()='View Order History']")
 	public WebElement orderHistoryOrderConfirmationPage;  //SID 28-Jan
 	
+
 	
-
-
 }
