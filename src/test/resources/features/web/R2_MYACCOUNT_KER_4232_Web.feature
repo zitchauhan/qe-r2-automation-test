@@ -330,7 +330,7 @@ Scenario: Verify My Account Address Book - Delete only saved address that is Def
 Scenario: Verify My Account Address Book - Changes in the Default Address should be saved 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithDefaultAddress"
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user click on MyAccount 
