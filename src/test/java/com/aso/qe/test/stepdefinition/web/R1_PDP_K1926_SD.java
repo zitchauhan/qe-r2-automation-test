@@ -118,7 +118,8 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(pdp_po.tabDetailsSpecsMobile));
 		} else {
-			assertTrue(clickOnButton(pdp_po.tabDetailsSpecs));
+			waitForElement(pdp_po.tabDetailsSpecs);
+			assertTrue(isDisplayed(pdp_po.tabDetailsSpecs));
 		}
 
 	}
@@ -188,7 +189,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 		// scrollPageToWebElement(pdp_po.txtProductSKU);
 		// assert(isDisplayed(pdp_po.textQuestions)); // Functionality is not displayed
 		// without Host Enteries. Bazar voice
-
+		assertTrue((clickOnButton(pdp_po.QALink)));
 	}
 
 	@Given("^user should be able to see the sku and item numbers for the given image$")
@@ -237,6 +238,7 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(plp_po.productPLP1_Mobile));
 		} else {
 			Thread.sleep(Constants.thread_low);
+			waitForElement(plp_po.productPLP1);
 			assertTrue(clickOnButton(plp_po.productPLP1));
 			Thread.sleep(Constants.thread_low);
 		}
@@ -437,6 +439,24 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 		assertEquals(webPropHelper.getTestDataProperty("SearchPDP"), getText(pdp_po.txtProductTitle));
 		logger.debug("User entered search key :: " + searchKey + "and the search title is :: "
 				+ getText(pdp_po.txtProductTitle));
+	}
+	
+	@When("^user Navigate to the shop Gift Card from footer$")
+	public void user_Navigate_to_the_shop_Gift_Card_From_Footer() throws Throwable {
+		
+		assertTrue((clickOnButton(pdp_po.ShopGiftCardLink)));
+	}
+	
+	@And("^user click on the available Gift Card$")
+	public void user_click_on_the_available_Gift_Card() throws Throwable {
+		
+		assertTrue((clickOnButton(pdp_po.GiftCardAvailable)));
+	}
+	
+	@And("^user click on the available Bulk Gift Card$")
+	public void user_click_on_the_available_Bulk_Gift_Card() throws Throwable {
+		
+		assertTrue((clickOnButton(pdp_po.BulkGiftCardAvailable)));
 	}
 
 	@Given("^user is able to see three tabs in the detail content section$")

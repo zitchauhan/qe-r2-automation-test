@@ -19,8 +19,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
 		|Payment Type	|
 		|Credit Card - VISA	|
 
-				
-
+			
 #	And user fill the PO box in shipping address 
 #	And user click on Go To Shipping Method button in Checkout page
 #	Then user click on go to payment present in shipping method
@@ -31,7 +30,13 @@ Scenario Outline: verify if user should be able to submit the order on the check
 #	And user check order confirmation status in order summary page
 	
 		
-
+   @www
+Scenario: Verify SKU is displayed for all the line items in cart page
+    Given user launches the browser and navigates to "ASO_HOME" page 
+    When User searches a product "productName" and navigates to PDP
+    And user click on Add to Cart Button
+    And user click on checkout button
+    Then verify child SKU of the product is displayed on the Cart pages
 
 	
 				

@@ -72,11 +72,140 @@ Feature: [Desktop]Bundles - Add to Cart Notification
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 
 	
+	
+	
+	@RegressionP2 
+	Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a Bundle product PDP
+  #Given user launches the browser and navigates to "ASO_HOME" page
+  Given user launches the browser and navigates to "ASO_HOME" page 
+	#Then User navigates till PLP of multiple sku package 
+	#And user click on football helmets
+	#And User click on the product image of sku package  
+  When User searches a product "SKUForBundleProductsSmoke" and navigates to PDP
+  Then user should be able to see PDP mention in the current url
+  And user should be able to see the search term in the product title for Bundle Product
+  And user should see different attribute and size of the Bundle Product
+  And user should see details and specs for Bundle Product
+ 
+	
+	
+	 @RegressionP2
+  Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a Bait product PDP
+   Given user launches the browser and navigates to "ASO_HOME" page
+   When user navigates till PLP of Baits SKU
+   And user click on soft Baits
+   And user click on first Baits product
+   #When User searches a product "SKUForBaitProduct" and navigates to PDP
+   Then user should be able to see PDP mention in the current url
+   #And user should be able to see the search term in the product title for Baits Product
+   And user should be able to see the sku and item numbers for the given image
+   And user should be able to see Color
+   And user should be able to see the rating
+   And user should be able to see the reviews
+   Then verfiy the product details and features 
+	
+	
+	@RegressionP2
+   Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a White Glove product PDP
+   Given user launches the browser and navigates to "ASO_HOME" page
+   And User searches a product "SKUForWhiteGlove" and navigates to PDP
+   Then user should be able to see PDP mention in the current url
+   And user should be able to see Image of the product
+   And user should be able to see the search term in the White Glove product title
+   And user should be able to see Color
+   And user should be able to see the sku and item numbers for the given image
+   And user should be able to see the rating
+   And user should be able to see the reviews
+   And user should see details and specs
+   Then user clicks should be able to see QandA section
+   Then verfiy the Ask a question button
+   
+   
+   
+   @RegressionP2
+   Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a dropship product PDP
+   Given user launches the browser and navigates to "ASO_HOME" page 
+   When User searches a product "dsv_sku" and navigates to PDP
+   Then user should be able to see PDP mention in the current url
+   And user should be able to see Image of the product
+   And user should be able to see the search term in the DSV product title
+   And user should see different attribute and size of the product
+   And user should be able to see the rating
+   And user should be able to see the reviews
+   And user should be able to see the sku and item numbers for the given image
+   And user should see details and specs
+   Then user clicks should be able to see QandA section
+   Then verfiy the Ask a question button
+   
+   
+   @RegressionP2
+   Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a gift card product PDP
+   Given user launches the browser and navigates to "ASO_HOME" page 
+   #When User searches a product "SKUForGiftCard" and navigates to PDP
+   When user Navigate to the shop Gift Card from footer
+   And user click on the available Gift Card
+   Then user should be able to see PDP mention in the current url
+   And user should be able to see Image of the product
+   And user should be able to see the sku and item numbers for the given image
+   Then user clicks should be able to see QandA section
+   Then verfiy the Ask a question button
+   
+   
+   
+   
+   @RegressionP2
+   Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a bulk gift card product PDP
+   Given user launches the browser and navigates to "ASO_HOME" page 
+   #When User searches a product "SKUForGiftCard" and navigates to PDP
+   When user Navigate to the shop Gift Card from footer
+   And user click on the available Bulk Gift Card
+   Then user should be able to see PDP mention in the current url
+   #And user should be able to see Image of the product
+   And user should be able to see the sku and item numbers for the given image
+   Then user clicks should be able to see QandA section
+   Then verfiy the Ask a question button
+   
+   
+   
+   @RegressionP2
+   Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a Special Order Firearm PDP
+   Given user launches the browser and navigates to "ASO_HOME" page 
+   When User searches a product "BOPIS_SOF_Product" and navigates to PDP
+   Then user should be able to see PDP mention in the current url
+   And user should be able to see Image of the product
+   And user should be able to see the search term in the SOF Item title
+   Then user clicks should be able to see QandA section
+   Then verfiy the Ask a question button
+   
+   
+   @RegressionP2 
+   Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a clearance product PDP
+   Given user launches the browser and navigates to "ASO_HOME" page 
+   When User searches a product "ClearenceItemSKU" and navigates to PDP
+   Then user should be able to see PDP mention in the current url
+   And user should be able to see Image of the product
+   And user should be able to see the search term in the Clearence Item title
+   And user should be able to see the sku and item numbers for the given image
+   Then user clicks should be able to see QandA section
+   Then verfiy the Ask a question button
+   
+   
+   @RegressionP2
+   Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a hot deal product PDP
+   Given user launches the browser and navigates to "ASO_HOME" page 
+   When User searches a product "HotDealItemSKU" and navigates to PDP
+   Then user should be able to see PDP mention in the current url
+   And user should be able to see Image of the product
+   And user should be able to see the search term in the Hot Deal Item title
+   And user should be able to see the sku and item numbers for the given image
+   Then user clicks should be able to see QandA section
+   Then verfiy the Ask a question button
+   
 
   @Web @C-HP @Regression @KER-3455 @ZYP_PDP_K3455-4807 @CR-RKA @RBeta
   Scenario: Verify the Bundle Product Name in ATC notification
-    Given user launches the browser and navigates to "ASO_HOME" page
-    Then User navigates till PLP of multiple sku package 
+  Given user launches the browser and navigates to "ASO_HOME" page
+  Then User navigates till PLP of multiple sku package 
 	And user click on football helmets
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 

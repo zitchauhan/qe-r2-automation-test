@@ -51,5 +51,21 @@ public class R2_MYACCOUNT_K3092_SD extends CommonActionHelper {
 			clickOnButton(myAccountPo.btnRemove);
 		}
 	}
+	
+	@Then("^user remove the GC$")
+	public void user_remove_the_GC() throws Throwable {
+		if (isDisplayed(myAccountPo.MyAccount_GiftCardRemoveBtn)) {
+			clickOnButton(myAccountPo.MyAccount_GiftCardRemoveBtn);
+
+		} else if (isDisplayed(myAccountPo.btnAddNewGiftCard)) {
+			assertTrue(clickOnButton(myAccountPo.btnAddNewGiftCard));
+			setInputText(myAccountPo.txtGiftCardNumber, webPropHelper.getTestDataProperty("GIFTCARDNUMBER"));
+			setInputText(myAccountPo.txtGifCardPin, webPropHelper.getTestDataProperty("GIFTCARDPIN"));
+			assertTrue(clickOnButton((myAccountPo.btnAddGiftCard)));
+			Thread.sleep(Constants.thread_highest);
+			clickOnButton(myAccountPo.MyAccount_GiftCardRemoveBtn);
+		}
+	}
+
 
 }

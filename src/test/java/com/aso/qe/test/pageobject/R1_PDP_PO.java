@@ -52,7 +52,8 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//input[@aria-label='Enter Desired Quantity' and @value='1']") public   WebElement txtDesiredQtyValue_1;
 	//@FindBy(xpath="//*[@data-auid='PDP_getNotifiedBackInStock']") public   WebElement txtNotifiedBack;/RKA 18 aug
 	@FindBy(xpath="//*[@data-auid='PDP_IventoryMessage']") public   WebElement txtNotifiedBack;
-	@FindBy(xpath="//*[@data-auid='PDP_DetailsAndSpecs']") public   WebElement tabDetailsSpecs;
+	@FindBy(xpath="(//*[@aria-label='Product_Detail_Content']/div)[1]") public   WebElement tabDetailsSpecs;
+	@FindBy(xpath="//span[contains(text(),'DETAILS & SPECS')]") public   WebElement tabDetailsSpecsBundle;
 	@FindBy(xpath="//*[@data-auid='Detais and Specs_m']") public   WebElement tabDetailsSpecsMobile;
 	@FindBy(xpath="//*[@data-auid='PDP_Reviews']")	public   WebElement tabReviews;
 	@FindBy(xpath="//*[@data-auid='Reviews_m']")	public   WebElement tabReviewsMobile;
@@ -105,6 +106,14 @@ public class R1_PDP_PO extends CommonActionHelper
 	//KER-714 Start CR-AKK
 	//@FindBy(xpath="(//*[@data-auid='HP_PC_A_1']//img)[2]") public WebElement btnProdctimage;/RKA 17 aug
 	@FindBy(xpath="(//*[contains(@class,'d-none d-md-block')]/*[3]//*[@class='c-price__sub'])[1]")public WebElement btnProdctimage;
+	
+	
+	@FindBy(xpath="//li[@data-auid='PDP_Q&A']")public WebElement QALink;
+	
+	@FindBy(xpath="//a[@data-auid='FOOTER_LINK_Shop Gift Cards']")public WebElement ShopGiftCardLink;
+	@FindBy(xpath="(//section[@id='productCardListing']/div/a)[2]")public WebElement GiftCardAvailable;
+	@FindBy(xpath="(//section[@id='productCardListing']/div/a)[1]")public WebElement BulkGiftCardAvailable;
+	
 
 	public void clickProdcutCardimage() throws Exception {
 		assertTrue(clickOnButton(btnProdctimage));
@@ -253,7 +262,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[contains(@class,'ReactModal__Content ReactModa')]//*[@data-auid='btnviewCart']") public WebElement btnAddToCartModal; //SID Modified 17-October
 
 	//KER-1952 Start CR-AKK
-	@FindBy(xpath = "//button[contains(text(), 'Ask a question')]") public WebElement btnAskQuestion;
+	@FindBy(xpath = "//button[@class='bv-ask-question bv-focusable bv-submission-button']") public WebElement btnAskQuestion;
 	@FindBy(xpath = "//button[contains(text(), ' Answer this Question')]") public WebElement btnAnswerQuestion;
 	@FindBy(xpath = "//button[@name='Cancel']") public WebElement btnCancel;
 	
@@ -369,9 +378,9 @@ public class R1_PDP_PO extends CommonActionHelper
 	public WebElement btnSportsCategory;
 	@FindBy(xpath = "//*[@data-auid='level3Category-Baseball']//*[@data-auid='level4Category-Helmets']")
 	public WebElement btnHelmetsCategory;
-	@FindBy(xpath = "//*[@data-auid='level4Category-Helmets & Protective Gear']") //MJR-10/11/19
+	@FindBy(xpath = "//*[@data-auid='level4Category-Helmets + Acces.']") //MJR-10/11/19
 	public WebElement btnFootballHelmetsCategory;
-	@FindBy(xpath = "//*[text()='Schutt Youth Vengeance A3 Football Helmet with VROPO-DW Facemask']") //MJR-10/11/19
+	@FindBy(xpath = "(//section[@id='productCardListing']/div)[1]") //MJR-10/11/19
 	public WebElement imgHelmetSKUCategory;  //SID 28-August
 	@FindBy(xpath = "//h2[text()='Schutt Youth Vengeance A3 Football Helmet with VROPO-DW Facemask']") //MJR-10/11/19
 	public WebElement txtProdcutDetails;
@@ -460,6 +469,8 @@ public class R1_PDP_PO extends CommonActionHelper
 	// PDP Search Smoke 24 - August
 	
 	@FindBy(xpath="//h2[@class='mt-4 css-r66vq6']")public WebElement txtProductTitleBundle;
+
+	@FindBy(xpath="//h1[@data-auid='PDP_ProductName']")public WebElement txtProductTitleSOF;
 	@FindBy(xpath="(//div[@class='row css-1xhj18k'])[2]")public WebElement secProductAttributeSizesBundle;
 	@FindBy(xpath="(//div[@data-auid='breadcrumb'])[1]")public WebElement Breadcrumb;
 	@FindBy(xpath="//div[@id='renderShipItAtc']")public WebElement HomeDeliveryButton;
@@ -474,6 +485,11 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='PDP_ProductName']") public WebElement txtProductTitlenew;
 	@FindBy(xpath ="//div[@data-auid='PDP_Disclaimer']") public WebElement AmmoDisclaimer;
 	
+	@FindBy(xpath ="//a[@data-auid='level2Category-Outdoors']") public WebElement btnOutdoorCategory;
+	@FindBy(xpath ="//a[@data-auid='level4Category-Baits + Lures']") public WebElement btnbaitsluresCategory;
+	@FindBy(xpath ="//a[@data-auid='level4Category-Grills']") public WebElement btngrillsCategory;
+	
+	
 	
 	//SID 28-August
 	public void navigateToMultipleSKU() throws Exception {
@@ -487,6 +503,31 @@ public class R1_PDP_PO extends CommonActionHelper
 		clickOnLink(btnFootballHelmetsCategory);
 		Thread.sleep(Constants.thread_medium);
 	}
+	
+	public void navigateToBaitsSKU() throws Exception {
+		Thread.sleep(Constants.thread_low);
+		assertTrue(clickOnButton(btnShopCategory1));
+		Thread.sleep(Constants.thread_low);
+		Actions hover = new Actions(getDriver());
+		hover.moveToElement(btnOutdoorCategory).build().perform();
+		Thread.sleep(Constants.thread_low);
+		hover.moveToElement(btnbaitsluresCategory).build().perform();
+		clickOnLink(btnbaitsluresCategory);
+		Thread.sleep(Constants.thread_medium);
+	}
+	
+	public void navigateToWhiteGloveSKU() throws Exception {
+		Thread.sleep(Constants.thread_low);
+		assertTrue(clickOnButton(btnShopCategory1));
+		Thread.sleep(Constants.thread_low);
+		Actions hover = new Actions(getDriver());
+		hover.moveToElement(btnOutdoorCategory).build().perform();
+		Thread.sleep(Constants.thread_low);
+		hover.moveToElement(btngrillsCategory).build().perform();
+		clickOnLink(btngrillsCategory);
+		Thread.sleep(Constants.thread_medium);
+	}
+
 
 	//SID 28-AUgust
 	public void clickOnImgSkuItem() throws Exception {
@@ -1140,6 +1181,15 @@ public class R1_PDP_PO extends CommonActionHelper
 				{
 					boolean flag= false;
 					if(tabDetailsSpecs.isDisplayed())
+						flag =true;
+					return flag;
+						
+				}
+				
+				public boolean DetailsandSpecsDisplayedBundleProduct()
+				{
+					boolean flag= false;
+					if(tabDetailsSpecsBundle.isDisplayed())
 						flag =true;
 					return flag;
 						

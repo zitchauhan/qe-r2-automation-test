@@ -432,4 +432,37 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 			}
 		}
 	}
+	
+	@And("^user click on soft Baits$")
+
+	public void user_click_on_soft_Baits() {
+		waitForElement(searchProductPO.softBaitsoption);
+		assertTrue(clickOnButton(searchProductPO.softBaitsoption));
+	
+	}
+	
+	@And("^user click on Gas Grills$")
+
+	public void user_click_on_Gas_Grills() {
+		waitForElement(searchProductPO.GasGrillsoption);
+		assertTrue(clickOnButton(searchProductPO.GasGrillsoption));
+	
+	}
+	
+	@And("^user click on first Baits product$")
+
+	public void user_click_on_first_Baits_product() {
+		waitForElement(searchProductPO.firstBaitsproduct);
+		assertTrue(clickOnButton(searchProductPO.firstBaitsproduct));
+	
+	}
+	
+	@And("^user click on first White Glove product$")
+
+	public void user_click_on_first_Whiteglove_product() {
+		waitForElement(searchProductPO.whitegloveproduct);
+		assertTrue(clickOnButton(searchProductPO.whitegloveproduct));
+	
+	}
+	
 }
