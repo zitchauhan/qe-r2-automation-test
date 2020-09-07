@@ -21,6 +21,22 @@ public class R1_ShoppingCartView_PO extends CommonActionHelper {
    //KER 725
 	@FindBy(xpath="//*[@data-auid='miniCart_m']")public WebElement cartIcon_M;
 	
+	@FindBy(xpath = "(//span[contains(text(),'SKU')]//parent::div/span[2])[1]")
+	public WebElement childskucartfirst;
+	
+	@FindBy(xpath = "(//span[contains(text(),'SKU')]//parent::div/span[2])[2]")
+	public WebElement childskucartsecond;
+	
+	
+	@FindBy(xpath = "//p[@id='disclaimerMessaging']/div[starts-with(text(),'Ships')]")
+	public WebElement whiteglovemessage;
+	
+	
+	@FindBy(xpath = "//p[@id='disclaimerMessaging']/div[starts-with(text(),'This item may ship')]")
+	public WebElement DSVmessage;
+	
+	@FindBy(xpath = "//button[@data-auid='PDP_close_Addtocart_Modal']")
+	public WebElement closepopup;
 	
 	public void clickOnCartIcon() throws Exception{
 
