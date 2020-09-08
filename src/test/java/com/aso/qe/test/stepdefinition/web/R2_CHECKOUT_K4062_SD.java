@@ -478,4 +478,12 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 	public void user_selects_the_gift_card_which_is_not_exhausted() throws Throwable {
 		r2CheckOutPo.validGiftCardSelection();
 	}
+
+// ********************Venkat *************
+	@Then("^user validates shipping address$")
+	public void user_validates_shipping_address() throws Throwable {
+		r2MyAccountPO.retriveAddressOnConfirmationPageAndVerifyOnMyAccountPage();
+	}
+	
+// ********Venkat ***************	
 }

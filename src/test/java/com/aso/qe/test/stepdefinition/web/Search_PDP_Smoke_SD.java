@@ -15,6 +15,7 @@ import com.aso.qe.test.pageobject.R1_PDP_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class Search_PDP_Smoke_SD extends CommonActionHelper {
 
@@ -162,6 +163,99 @@ public class Search_PDP_Smoke_SD extends CommonActionHelper {
 	}
 		
 
+    @Then("^Verify the Brand name in Breadcrumb$")
+    public void Verify_the_Brand_name_in_Breadcrumb() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+    	assertTrue(isDisplayed(r1pdppo.NikeBrandBreadCrumb));
     
+    }
+    
+    @Then("^Verify the category name in Breadcrumb$")
+    public void Verify_the_category_name_in_Breadcrumb() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+    	assertTrue(isDisplayed(r1pdppo.SportsBreadCrumb));
+    
+    }
+    
+    @Then("^Verify the Hot Deal in Breadcrumb$")
+    public void Verify_the_Hot_Deal_in_Breadcrumb() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+    	assertTrue(isDisplayed(r1pdppo.HotdealsBreadCrumb));
+    
+    }
+    
+    @Then("^Verify the clothing in Breadcrumb$")
+    public void Verify_the_clothing_in_Breadcrumb() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+    	assertTrue(isDisplayed(r1pdppo.clothingBreadCrumb));
+    
+    }
+    
+    
+    @Then("^Verify that the PLP page of baits is displayed$")
+    public void verify_that_the_PLP_page_of_baits_is_displayed() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        //throw new PendingException();
+    	assertTrue(isDisplayed(r1pdppo.BaitsLuresBreadCrumb));
+    }
+    
+    @Then("^Verify that the PLP page of the Soft Baits is displayed$")
+    public void verify_that_the_PLP_page_of_soft_baits_is_displayed() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        //throw new PendingException();
+    	assertTrue(isDisplayed(r1pdppo.SoftBaitsBreadCrumb));
+    }
+
+    @When("^user navigates to PLP page of Hot Deals$")
+    public void user_navigates_to_PLP_page_of_Hot_Deals() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        //throw new PendingException();
+    	r1pdppo.navigateToHotdeals();
+    	
+    }
+    
+    @When("^user navigates to PLP page of clothing$")
+    public void user_navigates_to_PLP_page_of_clothing() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        //throw new PendingException();
+    	r1pdppo.navigateToClothing();
+    	
+    }
+    
+    @And("^user should be able to see Hot Deals mention in the current url$")
+	public void user_should_be_able_to_see_HotDeals_mention_in_the_current_url() throws Throwable {
+
+		String currentURL = getCurrentPageURL();
+		if (currentURL.contains("hot-deals")) {
+			logger.debug("User is successfully navigated to HotDeals PLP page with URL :: " + currentURL);
+		} else {
+			logger.debug("User is not able to navigate to HotDeals PLP instead navigated to URL :: " + currentURL);
+		}
+	}
+
+    @Then("^Verify that selected PLP of Brand should be displayed$")
+    public void verify_that_selected_PLP_of_Brand_should_be_displayed() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+       // throw new PendingException();
+    	assertTrue(isDisplayed(r1pdppo.CrocsBreadCrumb));
+    	assertTrue(isDisplayed(r1pdppo.BrandsBreadCrumb));
+    }
+
+    @Then("^Verify that the title for baits is displayed$")
+    public void verify_that_the_title_for_baits_is_displayed() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+       // throw new PendingException();
+    	waitForElement(r1pdppo.BaitsTitle);
+    	assertTrue(isDisplayed(r1pdppo.BaitsTitle));
+    
+    }
+    
+    @Then("^Verify that the title for soft baits is displayed$")
+    public void verify_that_the_title_for_soft_baits_is_displayed() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+       // throw new PendingException();
+    	waitForElement(r1pdppo.SoftBaitsTitle);
+    	assertTrue(isDisplayed(r1pdppo.SoftBaitsTitle));
+    }
     
 }

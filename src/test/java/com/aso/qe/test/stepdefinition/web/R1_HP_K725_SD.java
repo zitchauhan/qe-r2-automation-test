@@ -69,12 +69,33 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 		}
 		
 		
+	@Then("^verify child SKU of the product is displayed on the Cart page$")
+	public void verify_child_SKU_of_the_product_is_displayed_on_Cart_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		waitForElement(shoppingCartViewPO.childskucartfirst);
+	   assertTrue(isDisplayed(shoppingCartViewPO.childskucartfirst));
+	   assertTrue(isDisplayed(shoppingCartViewPO.childskucartsecond));
+	}
+	
+	@And("^close the pop up$")
+	public void close_the_pop_up() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		assertTrue(clickOnButton(shoppingCartViewPO.closepopup));
+	}
+
+	
+	@Then("^verify the message for whiteGlove item and DSV item on the cart page$")
+	public void verify_the_message_for_whiteGlove_item_and_DSV_item_on_the_cart_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		waitForElement(shoppingCartViewPO.whiteglovemessage);
+	   assertTrue(isDisplayed(shoppingCartViewPO.whiteglovemessage));
+	   
+	   waitForElement(shoppingCartViewPO.DSVmessage);
+	   assertTrue(isDisplayed(shoppingCartViewPO.DSVmessage));
+	}
+
 	
 	
-
-
-	
-
 	
 	
 }
