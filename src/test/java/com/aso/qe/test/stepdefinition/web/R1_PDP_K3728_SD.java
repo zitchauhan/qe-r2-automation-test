@@ -33,6 +33,13 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 		
 	}
 	
+	@Then("^user navigates till PLP of Brands$")
+	public void user_navigates_till_PLP_of_Brands() throws Throwable {
+				
+			pdpPageObj.navigateToBrands();
+		
+	}
+	
 	@Then("^user navigates till PLP of White Glove SKU$")
 	public void user_navigates_till_PLP_of_WhiteGlove_sku() throws Throwable {
 				
@@ -158,6 +165,8 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 			assertTrue(isDisplayed(pdpPageObj.tabDetailsSpecs));
 		}	
 	}
+	
+	
 	
 }
 

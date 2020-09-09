@@ -68,13 +68,80 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 		
 		}
 		
+	@And("^user select the option for Store pick up$")
+	public void user_select_the_option_for_Storepickup() throws Throwable {
+	    assertTrue(clickOnButton(pdp.StorePickupCheckboxCart));
+		Thread.sleep(Constants.thread_high);
 		
+		}
+	
+	@And("^Verify that user should be able to navigate to the cart page and the item should be successfully added to cart$")
+	public void Verify_that_user_able_to_navigate_to_cart_page_and_the_item_should_be_successfully_added_to_cart() throws Throwable {
+	    assertTrue(isDisplayed(pdp.CartTitle));
+		Thread.sleep(Constants.thread_high);
+		assertTrue(isDisplayed(pdp.WGItemOnCart));
+		}
 	
 	
-
+	@And("^Verify that the Store pick up is selected and Home delivery option is unselected$")
+	public void Verify_that_the_Store_pick_up_is_selected_and_Home_delivery_option_is_unselected() throws Throwable {
+	    assertTrue(clickOnButton(pdp.StorePickupEstimate));
+		Thread.sleep(Constants.thread_high);
+		assertTrue(!isSelected(pdp.ShipToMe));
+		assertTrue(isSelected(pdp.StorePickupEstimate));
+		}
+	
+	@And("^Verify that after selecting the Home delivery option again the Store pick up option should be unselected$")
+	public void Verify_that_after_selecting_Homedelivery_Storepick_up_option_should_be_unselected() throws Throwable {
+	    assertTrue(clickOnButton(pdp.ShipToMe));
+		Thread.sleep(Constants.thread_high);
+		assertTrue(!isSelected(pdp.StorePickupEstimate));
+		assertTrue(!isSelected(pdp.ShipToMe));
+		}
+	
+		
+	@Then("^verify child SKU of the product is displayed on the Cart page$")
+	public void verify_child_SKU_of_the_product_is_displayed_on_Cart_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		waitForElement(shoppingCartViewPO.childskucartfirst);
+	   assertTrue(isDisplayed(shoppingCartViewPO.childskucartfirst));
+	   assertTrue(isDisplayed(shoppingCartViewPO.childskucartsecond));
+	}
+	
+	@And("^close the pop up$")
+	public void close_the_pop_up() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		assertTrue(clickOnButton(shoppingCartViewPO.closepopup));
+	}
 
 	
+	@Then("^verify the message for whiteGlove item and DSV item on the cart page$")
+	public void verify_the_message_for_whiteGlove_item_and_DSV_item_on_the_cart_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		waitForElement(shoppingCartViewPO.whiteglovemessage);
+	   assertTrue(isDisplayed(shoppingCartViewPO.whiteglovemessage));
+	   
+	   waitForElement(shoppingCartViewPO.DSVmessage);
+	   assertTrue(isDisplayed(shoppingCartViewPO.DSVmessage));
+	}
 
+	@Then("^Verify that the Category level promotion is applied and displayed on cart page$")
+	public void verify_the_Category_level_promotion_is_displayed_on_Cart_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		waitForElement(shoppingCartViewPO.CMCPromotion);
+	   assertTrue(isDisplayed(shoppingCartViewPO.CMCPromotion));
+	 
+	}
+	
+	@Then("^Verify the Category level promotion is applied and displayed on Order Summary section$")
+	public void verify_the_Category_level_promotion_is_displayed_on_Order_Summary_Section() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		
+		waitForElement(shoppingCartViewPO.DiscountOrderSummary);
+		assertTrue(clickOnButton(shoppingCartViewPO.DiscountOrderSummary));
+	   assertTrue(isDisplayed(shoppingCartViewPO.DiscountPromotionOrderSummary));
+	 
+	}
 	
 	
 }

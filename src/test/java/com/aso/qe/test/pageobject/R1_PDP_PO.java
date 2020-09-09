@@ -486,10 +486,31 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath ="//div[@data-auid='PDP_Disclaimer']") public WebElement AmmoDisclaimer;
 	
 	@FindBy(xpath ="//a[@data-auid='level2Category-Outdoors']") public WebElement btnOutdoorCategory;
+	@FindBy(xpath ="//a[@data-auid='level2Category-Brands']") public WebElement btnBrandsCategory;
+	@FindBy(xpath ="(//a[@data-auid='level2Category-Hot Deals'])[1]") public WebElement btnHotDealCategory;
 	@FindBy(xpath ="//a[@data-auid='level4Category-Baits + Lures']") public WebElement btnbaitsluresCategory;
+	@FindBy(xpath ="//a[@data-auid='level3Category-Crocs']") public WebElement btncrocsCategory;
 	@FindBy(xpath ="//a[@data-auid='level4Category-Grills']") public WebElement btngrillsCategory;
+	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Nike')]")public WebElement NikeBrandBreadCrumb;
+	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Sports')]")public WebElement SportsBreadCrumb;
+	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Hot Deals')]")public WebElement HotdealsBreadCrumb;
+	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Soft Baits')]")public WebElement SoftBaitsBreadCrumb;
+	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Crocs')]")public WebElement CrocsBreadCrumb;
+	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Brands')]")public WebElement BrandsBreadCrumb;
+	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Baits + Lures')]")public WebElement BaitsLuresBreadCrumb;
+	@FindBy(xpath="//a[@data-auid='seeAllLink']")public WebElement SeeAll;
+	@FindBy(xpath="//h1[contains(text(),'Baits + Lures')]")public WebElement BaitsTitle;
+	@FindBy(xpath="//h1[contains(text(),'Soft Baits')]")public WebElement SoftBaitsTitle;
+	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Clothing')]")public WebElement clothingBreadCrumb;
+	@FindBy(xpath="//button[@aria-label='DEALS']")public WebElement DealsLeftNav;
+	@FindBy(xpath="//li[@data-auid='drawer_Price Drop']")public WebElement PriceDropLeftNav;
+	@FindBy(xpath="//span[.='Price Drop']")public WebElement PriceDropfilterapplied;
 	
-	
+	@FindBy(xpath="//span[contains(text(),'Store Pick Up - FREE')]") 	public WebElement StorePickupCheckboxCart;
+	@FindBy(xpath="//span[contains(text(),'Estimated Pick Up : ')]") 	public WebElement StorePickupEstimate;
+	@FindBy(xpath="//span[contains(text(),'Ship To Me')]") 	public WebElement ShipToMe;
+	@FindBy(xpath="//h1[contains(text(),'CART')] | //h1[contains(text(),'cart')]") 	public WebElement CartTitle;
+	@FindBy(xpath="//a[contains(text(),'Outdoor Gourmet 6-Burner Gas Grill')]") 	public WebElement WGItemOnCart;
 	
 	//SID 28-August
 	public void navigateToMultipleSKU() throws Exception {
@@ -513,6 +534,19 @@ public class R1_PDP_PO extends CommonActionHelper
 		Thread.sleep(Constants.thread_low);
 		hover.moveToElement(btnbaitsluresCategory).build().perform();
 		clickOnLink(btnbaitsluresCategory);
+		Thread.sleep(Constants.thread_medium);
+	}
+	
+	
+	public void navigateToBrands() throws Exception {
+		Thread.sleep(Constants.thread_low);
+		assertTrue(clickOnButton(btnShopCategory1));
+		Thread.sleep(Constants.thread_low);
+		Actions hover = new Actions(getDriver());
+		hover.moveToElement(btnBrandsCategory).build().perform();
+		Thread.sleep(Constants.thread_low);
+		hover.moveToElement(btncrocsCategory).build().perform();
+		clickOnLink(btncrocsCategory);
 		Thread.sleep(Constants.thread_medium);
 	}
 	
@@ -1274,6 +1308,24 @@ public class R1_PDP_PO extends CommonActionHelper
 					return flag;
 						
 				}
+				
+				public void navigateToHotdeals() throws Exception {
+					Thread.sleep(Constants.thread_low);
+					assertTrue(clickOnButton(btnShopCategory1));
+					Thread.sleep(Constants.thread_low);
+					
+				
+					assertTrue(clickOnButton(btnHotDealCategory));
+					Thread.sleep(Constants.thread_low);
+				}
+				
+				public void navigateToClothing() throws Exception {
+					Thread.sleep(Constants.thread_low);
+					assertTrue(clickOnButton(btnShopCategory1));
+					Thread.sleep(Constants.thread_low);
+					assertTrue(clickOnButton(SeeAll));
+				}
+				
 				
 				
 }
