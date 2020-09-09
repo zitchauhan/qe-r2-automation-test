@@ -502,7 +502,15 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//h1[contains(text(),'Baits + Lures')]")public WebElement BaitsTitle;
 	@FindBy(xpath="//h1[contains(text(),'Soft Baits')]")public WebElement SoftBaitsTitle;
 	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Clothing')]")public WebElement clothingBreadCrumb;
+	@FindBy(xpath="//button[@aria-label='DEALS']")public WebElement DealsLeftNav;
+	@FindBy(xpath="//li[@data-auid='drawer_Price Drop']")public WebElement PriceDropLeftNav;
+	@FindBy(xpath="//span[.='Price Drop']")public WebElement PriceDropfilterapplied;
 	
+	@FindBy(xpath="//span[contains(text(),'Store Pick Up - FREE')]") 	public WebElement StorePickupCheckboxCart;
+	@FindBy(xpath="//span[contains(text(),'Estimated Pick Up : ')]") 	public WebElement StorePickupEstimate;
+	@FindBy(xpath="//span[contains(text(),'Ship To Me')]") 	public WebElement ShipToMe;
+	@FindBy(xpath="//h1[contains(text(),'CART')] | //h1[contains(text(),'cart')]") 	public WebElement CartTitle;
+	@FindBy(xpath="//a[contains(text(),'Outdoor Gourmet 6-Burner Gas Grill')]") 	public WebElement WGItemOnCart;
 	
 	//SID 28-August
 	public void navigateToMultipleSKU() throws Exception {
@@ -1317,4 +1325,7 @@ public class R1_PDP_PO extends CommonActionHelper
 					Thread.sleep(Constants.thread_low);
 					assertTrue(clickOnButton(SeeAll));
 				}
+				
+				
+				
 }
