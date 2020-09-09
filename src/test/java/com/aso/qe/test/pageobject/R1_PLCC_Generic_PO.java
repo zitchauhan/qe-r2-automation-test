@@ -231,6 +231,53 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	@FindBy(xpath="//*[contains(text(),' Free Shipping on footwear and orders over')]")
 	public WebElement standardFreeShipValue;
 	
+	@FindBy(xpath ="//*[contains(text(),'New Credit Card')]")public WebElement Payment_SelectAddNewCreditCard;
+	@FindBy(xpath ="//input[@id='creditcardField']")public WebElement Payment_AccCreditCardNumber;
+	@FindBy(xpath ="//input[@id='firstName']")public WebElement Payment_AccCreditCardFname;
+	@FindBy(xpath ="//input[@id='lastName']")public WebElement Payment_AccCreditCardLname;
+	@FindBy(xpath ="//input[@id='address']")public WebElement Payment_AccCreditCardAddress;
+	@FindBy(xpath ="//input[@id='zipCode']")public WebElement Payment_AccCreditCardZip;
+	@FindBy(xpath ="//input[@id='phoneNumber']")public WebElement Payment_AccCreditCardPhoneNo;
+	@FindBy(xpath ="//button[@data-auid='btnsubmit-btn']")public WebElement Payment_AccCreditCardAddbtn;
+	@FindBy(xpath ="(//*[@class='css-yg98kr mb-half px-3'])[1]")public WebElement Payment_DefaultCreditCard;
+	
+	
+	
+	public void clickOnAddNewCreditCardOnPaymentPage() throws Exception {
+			assertTrue(isDisplayed(Payment_SelectAddNewCreditCard));
+			assertTrue(clickOnButton(Payment_SelectAddNewCreditCard));
+		}
+	
+	public void verifyAccademyCreditAsDefault() throws Exception {
+		String AccDefaultCardDetails = Payment_DefaultCreditCard.getText();
+		
+		String ACCEndingNum =	webPropHelper.getTestDataProperty("AcademyCreditCardEnding");		
+		if(AccDefaultCardDetails.contains(ACCEndingNum)){
+			   System.out.println("ACC ending number is" + ACCEndingNum);
+		 }
+		if(AccDefaultCardDetails.contains("DEFAULT")){
+			   System.out.println("ACC is DEFAULT");
+		 }
+		
+	}
+	
+	
+
+	public void enterAccademyCreditcardDetails() throws Exception {
+		Payment_AccCreditCardNumber.sendKeys(webPropHelper.getTestDataProperty("AcademyCreditCard"));
+		Payment_AccCreditCardFname.sendKeys(webPropHelper.getTestDataProperty("ACCFirstName"));
+		Payment_AccCreditCardLname.sendKeys(webPropHelper.getTestDataProperty("AccLastName"));
+		Payment_AccCreditCardAddress.sendKeys(webPropHelper.getTestDataProperty("AccademyAddress"));
+		Payment_AccCreditCardZip.sendKeys(webPropHelper.getTestDataProperty("AccZip"));
+		Thread.sleep(2000);
+		Payment_AccCreditCardPhoneNo.sendKeys(webPropHelper.getTestDataProperty("AccPhoneNumber"));
+	  }
+	
+	public void userClickonAddCreditCard () throws Exception {
+		assertTrue(isDisplayed(Payment_AccCreditCardAddbtn));
+		assertTrue(clickOnButton(Payment_AccCreditCardAddbtn));
+	  }
+	
 	//Invalid PreScreen Code:
 	public void verifyPresenceOfErrorInvalidPreScreenCode() throws Exception {
 

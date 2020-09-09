@@ -178,4 +178,14 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 	public void user_edits_non_default_shipping_Address_and_verify(String FName,String LName,String Address,String zip,String PhNumber) throws Throwable {
 		r2MyAccountPo.editNonDefaultShippingAddressAndVerify(FName,LName,Address,zip,PhNumber);
 	}
+	
+	@Then ("^user verify SignUp Address in MyAccount$") 
+	public void user_verify_SignUp_Address_in_MyAccount() throws Throwable {
+		r2MyAccountPo.verifySignUpAddressinMyAccount();
+	}
+	
+	@Then ("^user verify PLCC Credit card details in Payments$")
+	public void user_verify_PLCC_Credit_card_details_in_Payments() throws Throwable {
+		r2MyAccountPo.verifyPLCCCardDetailOnMyAccount();
+	}
 }

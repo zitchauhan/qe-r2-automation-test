@@ -1,5 +1,7 @@
 package com.aso.qe.test.pageobject;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -162,6 +164,9 @@ public class R1_HomePage_PO {
 	@FindBy(xpath="//*[@data-component='recommendations']//button/parent::div//span[@role='button']")public WebElement productRecommendationIndicator; //SID 4-September
 //	@FindBy(xpath="//*[contains(@class,'swiper-container d')]/*[2]/*[1]")public WebElement productCarouselIndicator_1;  //SID 4-September
 	
+	@FindBy(xpath="//*[@class='css-bqgxsk']")public WebElement BranditemCount; 	
+	
+
 	//KER-259 End
 	
 	public int getCategoryTileCount(WebElement categoryTileCount){
