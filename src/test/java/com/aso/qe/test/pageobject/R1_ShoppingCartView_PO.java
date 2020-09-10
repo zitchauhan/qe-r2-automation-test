@@ -24,6 +24,15 @@ public class R1_ShoppingCartView_PO extends CommonActionHelper {
 	@FindBy(xpath = "(//span[contains(text(),'SKU')]//parent::div/span[2])[1]")
 	public WebElement childskucartfirst;
 	
+	@FindBy(xpath = "//span[contains(text(),'20% off Test Promotion')]")
+	public WebElement CMCPromotion;
+	
+	@FindBy(xpath = "(//div[@data-auid='discount'])[1]")
+	public WebElement DiscountOrderSummary;
+	
+	@FindBy(xpath = "(//div[@data-auid='discount'])[2]")
+	public WebElement DiscountPromotionOrderSummary;
+	
 	@FindBy(xpath = "(//span[contains(text(),'SKU')]//parent::div/span[2])[2]")
 	public WebElement childskucartsecond;
 	

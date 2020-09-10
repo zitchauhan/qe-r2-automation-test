@@ -222,6 +222,24 @@ public class Search_PDP_Smoke_SD extends CommonActionHelper {
     	
     }
     
+    @Then("^user expand Deals from Left Nav and select Price Drop Filter$")
+    public void user_expand_Deals_from_Left_Nav_and_select_Price_Drop_Filter() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        //throw new PendingException();
+    	
+    	assertTrue(clickOnButton(r1pdppo.DealsLeftNav));
+    	assertTrue(clickOnButton(r1pdppo.PriceDropLeftNav));
+    }
+    
+    @Then("^Verify that Price Drop Filter is applied$")
+    public void Verify_that_Price_Drop_Filter_is_applied() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        //throw new PendingException();
+    	
+    	assertTrue(isDisplayed(r1pdppo.PriceDropfilterapplied));
+    	
+    }
+    
     @And("^user should be able to see Hot Deals mention in the current url$")
 	public void user_should_be_able_to_see_HotDeals_mention_in_the_current_url() throws Throwable {
 

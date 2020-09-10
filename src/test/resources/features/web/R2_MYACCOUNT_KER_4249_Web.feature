@@ -1,5 +1,32 @@
 Feature: Verify  Customer Registration/ Sign Up 
 
+# ************* Venkat *****************
+@RegressionP2
+Scenario: verify whether the address information provided in Signup page is saved in My Account - Address book page
+  	Given user launches the browser and navigates to "ASO_HOME" page
+	When user click on My Account link 
+	And  user click on Sign Up link
+	And user enter First Name "First_Name"
+	And user enter Last Name "Last_Name"
+	And user enter Email Address "Email_Address" 
+	And user enter Password "NewPassword"
+	When user select Add Address for Faster Checkout checkbox 
+	And user enter Address plcc "Address" 
+	And user enter Zip Code "Zip_Code" 
+	And user enters Phone Number "Phone_Number" 
+	And user click on SIGN UP
+	Then user verify success message
+	And user click on MyAccount 
+	Then user lands on My Account page and click on adress
+	Then user verify SignUp Address in MyAccount
+	
+	
+	
+#************** End Venkat ********************	
+
+
+
+
 @R2_Web @R2_Regression @R2_All @P1 @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10148 @CR-SK 
 Scenario: Verify the available fields on the Sign Up page 
 	Given user launches the browser and navigates to "ASO_HOME" page 

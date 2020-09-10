@@ -202,3 +202,11 @@ Feature: PDP Scenarios based on searching the products
     Given user launches the browser and navigates to "ASO_HOME" page 
     When user navigates till PLP of Brands
     Then Verify that selected PLP of Brand should be displayed
+    
+    @RegressionP2
+  Scenario: Verify whether the grid with only selected Deals is displayed when the user filters using deals in left hand panel
+    Given user launches the browser and navigates to "ASO_HOME" page
+    When user navigates to PLP page of clothing
+    Then user expand Deals from Left Nav and select Price Drop Filter
+    And Verify that Price Drop Filter is applied
+    

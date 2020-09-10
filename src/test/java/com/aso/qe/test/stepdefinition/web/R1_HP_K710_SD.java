@@ -1,10 +1,14 @@
 package com.aso.qe.test.stepdefinition.web;
 
 import static org.testng.Assert.assertTrue;
+
+import java.util.Arrays;
 import java.util.TreeSet;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
@@ -213,6 +217,38 @@ public class R1_HP_K710_SD extends CommonActionHelper{
 		assertTrue(clickOnButton(hp_p.btnMenShoe_M_landing));  //SID 28-August
 		 
 	}
+	
+	@Then("^user validates selected facets \"(.*?)\"$") 
+	public void	user_validates_select_Brand(String arg1)	throws InterruptedException {
+	WebElement CatagoryBrand = driver.findElement(By.xpath("//*[@data-auid='drawer_"+webPropHelper.getTestDataProperty(arg1)+"']+//*[@class='o-copy__14reg pl-1 w-100']"));
+	String CatagoryBrandText = CatagoryBrand.getText();
+    
+	String[] BrandArray = CatagoryBrandText.split("(");
+	String Brandval = BrandArray[1];
+	
+	String[] BrandArray1;
+	BrandArray1 = Brandval.split(")");
+	String Brandval1 = BrandArray1[0];	
+	assertTrue(clickOnButton(driver.findElement(By.xpath("//*[@class='css-2311qf']//*[contains(text(),"+webPropHelper.getTestDataProperty(arg1)+")]"))));
+	String Branditemnumber = hp_p.BranditemCount.getText();	
+	String BrandCnt = Branditemnumber.replace(",", "");
+	if(BrandCnt.contains(Brandval1)){
+		   System.out.println("Brand count is "+Brandval1);
+	 }	
+	}
+	
+	
+	@And("^user select the deal \"(.*?)\"$")
+	public void user_select_the_deal(String arg1) throws InterruptedException {
+		waitForElement(hp_p.brandFacet);
+		assertTrue(clickOnButton(hp_p.brandFacet ));
+		System.err.println(driver.findElement(By.xpath("//*[@data-auid='drawer_"+webPropHelper.getTestDataProperty(arg1)+"']")));
+		Thread.sleep(3000);
+		assertTrue(clickOnButton(driver.findElement(By.xpath("//*[@data-auid='drawer_"+webPropHelper.getTestDataProperty(arg1)+"']"))));
+		Thread.sleep(3000);
+		}
+		
+	
 	
 	@And("^user select the brand \"(.*?)\"$")
 	public void user_select_the_brand(String arg1) throws InterruptedException {

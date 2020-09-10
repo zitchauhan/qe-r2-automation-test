@@ -30,8 +30,19 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 	R2_FindStore_PO r2FindaStoretPo = PageFactory.initElements(driver, R2_FindStore_PO.class);
 	R2_R1_Fun_PO r2R1FunPO=PageFactory.initElements(driver, R2_R1_Fun_PO.class);
 	
+// **************Venkat ************
+
+	@Then("^user Select Store Location In PLP$")
+	public void user_Select_Store_Location_In_PLP() throws Throwable {
+		r2CartPo.selectStoreLocationinPLP();
+	}
 	
+	@Then("^user Verify Store Locator in PDP$")
+	public void user_Verify_Store_Locator_in_PDP() throws Throwable {
+		r2CartPo.verifystoreLocatorinPDP();
+	}
 	
+// ******* venkat End **********	
 	@When("^user clicks on Find a Store$")
 	public void user_clicks_on_Find_a_Store() throws Throwable {
 		assertTrue(clickOnButton(r2CartPo.lnkFindaStoreHomePage));

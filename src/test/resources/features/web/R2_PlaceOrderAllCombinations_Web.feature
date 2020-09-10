@@ -26,7 +26,7 @@ Feature: Place order
 
 #  *********************Venkat***************
 @RegressionP2
-Scenario Outline: Verify if authenticated user is able to place an order for single SKU product 
+Scenario Outline: Verify whether the new address entered in Checkout page gets saved in My account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account
 	And User searches a product "productName" and navigates to PDP 
