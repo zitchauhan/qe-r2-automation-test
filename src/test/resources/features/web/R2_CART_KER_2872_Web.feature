@@ -1,5 +1,22 @@
 Feature: Verify BOPIS PDP Store Selection 
 
+#****************Venkat**************
+@RegressionP2 
+Scenario: Verify whether the user is able to change the store location successfully from store locatoor modal invoked in PDP 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on Find a Store 
+	Then user enter "zipCode" in Find a Store Model 
+	And user click on submit button 
+	Then user verify the results based on entering zipcode 
+	Then verify the components in Find a Store Model
+	Then user Select Store Location In PLP
+	Then User searches a product "SOFSKUNumber" and navigates to PDP 
+	Then User is navigated to pdp page 
+	Then user Verify Store Locator in PDP	
+	
+# *************** End Venkat **************** 
+	
+
 @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8706 @CR-DPK @C-BOPIS @P1 @RegressionP1
 Scenario: Verify that user is able to open the Find Store modal from the header 
 	Given user launches the browser and navigates to "ASO_HOME" page 

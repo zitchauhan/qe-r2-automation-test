@@ -111,8 +111,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// @FindBy(xpath = "//*[@data-auid='setAsDefault_btn']")
 	// public WebElement setAsDefaultBtn;// RKA 3 aug added //GK 17Sept
 
-	@FindBy(xpath = "//h5[text()='PAYMENT']") // CR-RK KER-2920 Sep18
-	public WebElement headerPayments;
+	@FindBy(xpath = "//h5[text()='']") // CR-RK KER-2920 Sep18
+	public WebElement headers;
 
 	@FindBy(xpath = "//*[@data-auid='defaultAddress'] | //*[text()='DEFAULT']")
 	public WebElement setAsDefaultBtn;// RKA 3 aug added //GK 17Sept //CR-RK KER-3151 Sep 18 //CR-DPK 09-oct
@@ -235,8 +235,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// End KER-4249 CR-GK 3-Oct
 
 	// Start KER-3092
-	@FindBy(xpath = "//*[.='PAYMENT']/a ")
-	public WebElement lnkPayment; //// CR-SK 29 Aug-18
+	@FindBy(xpath = "//*[.='']/a ")
+	public WebElement lnk; //// CR-SK 29 Aug-18
 
 	@FindBy(xpath = "//div[.='You have no gift cards listed.']")
 	public WebElement txtNoGiftCardListed; // 25 Aug
@@ -425,12 +425,12 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "(//*[text()='Confirm Email']/following-sibling::div//input)[1]") // CR - RK Sep 6 KER-4230
 	public WebElement txtConfirmEmail;
 
-	// @FindBy(xpath = "//h5[text()='PAYMENTS']")
-	// public WebElement headerPayments;
+	// @FindBy(xpath = "//h5[text()='S']")
+	// public WebElement headers;
 	
 	@FindBy(xpath="//*[text()='DEFAULT']/following::div[5]")public WebElement defaultCreditCard;
 	
-	@FindBy(xpath="//button[@class='css-7frz9w']")public WebElement defaultCreditCardChkoutPayment;
+	@FindBy(xpath="//button[@class='css-7frz9w']")public WebElement defaultCreditCardChkout;
 
 	@FindBy(xpath = "//*[text() = 'CREDIT CARDS']")
 	public WebElement headerCreditCards;
@@ -473,7 +473,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public WebElement txtPhoneNumberInAddCreditCard;
 
 	@FindBy(xpath = "//*[@data-auid='btnsubmit-btn']")
-	public WebElement PaymentPage_AddCreditCard_Add_btn;
+	public WebElement Page_AddCreditCard_Add_btn;
 
 	@FindBy(xpath = "//button[.='CANCEL']")
 	public WebElement btnCancelInAddCreditCard; // CR-SK 29 Aug-18
@@ -514,11 +514,11 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "(//*[text()='order']/following-sibling::input)[1]")
 	public WebElement txtOrderNumber;
 
-	@FindBy(xpath = "(//*[text()='PAYMENT'])[2]")
-	public WebElement Order_Payment_txt;
+	@FindBy(xpath = "(//*[text()=''])[2]")
+	public WebElement Order__txt;
 
-	@FindBy(xpath = "(//*[text()='PAYMENT'])[2]/following-sibling::*[2]")
-	public WebElement Order_Payment_Section;
+	@FindBy(xpath = "(//*[text()=''])[2]/following-sibling::*[2]")
+	public WebElement Order__Section;
 
 	@FindBy(xpath = "(//*[text()='Shipping Zip Code']/following-sibling::input)[1]")
 	public WebElement txtShippingZipCode;
@@ -582,7 +582,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// // // Sep
 	// Modified // GK //
 	// 17Sep
-	public List<WebElement> PaymentPage_CreditCard_Remove_list;
+	public List<WebElement> Page_CreditCard_Remove_list;
 
 	@FindBy(xpath = "//*[contains(text(),'Gift Card ending in')]") // CR-SK 29 Aug
 	public List<WebElement> txtAddedGiftCardList;
@@ -610,7 +610,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	// End Page validation CR-SK
 
-	@FindBy(xpath = "//*[@data-auid='tooltipmyAct_payment_crdtCard_cvv']")
+	@FindBy(xpath = "//*[@data-auid='tooltipmyAct__crdtCard_cvv']")
 	public WebElement iconCVVToolTip;// 28Aug danush
 
 	@FindBy(xpath = "//*[@data-auid='tooltipsample tooltip']/div")
@@ -631,8 +631,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='Address Book_m']")
 	public WebElement addressBook_M;
 
-	@FindBy(xpath = "//*[@data-auid='Payments_m']")
-	public WebElement lnkPayment_Mobile; // CR-RK KER-2920 Sep 4 //CR-Rk Sep24 KER-2920
+	@FindBy(xpath = "//*[@data-auid='s_m']")
+	public WebElement lnk_Mobile; // CR-RK KER-2920 Sep 4 //CR-Rk Sep24 KER-2920
 
 	@FindBy(xpath = "//*[@data-auid='Profile_m']")
 	public WebElement lnkProfile_Mobile; // CR-RK KER-4230 Sep 5
@@ -981,7 +981,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//span[@class='creditCardImage']/img")
 	public WebElement ccLogoImg;
 	
-	@FindBy(id="first-data-payment-field-card")public WebElement CardField_Frame;
+	@FindBy(id="first-data--field-card")public WebElement CardField_Frame;
 	
 
 	// *********** Venkat **************
@@ -1003,6 +1003,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 		@FindBy(xpath = "(//div[@class='col-12 col-md-8'])[2]")public WebElement NonDefaultShippingAddress;
 		
 		
+		@FindBy(xpath = "//*[@class='col-12 col-md-8']")public WebElement PaymentCarddetails;
+		
+		
 	// ***************** End Venkat	**************************	
 	
 	// End KER-4330 CR-MS Sep25
@@ -1012,6 +1015,61 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	/***************************** START METHODS ********************************/
 
 	// Venkat	
+		
+		public void verifyPLCCCardDetailOnMyAccount(){
+			String PaymentCardDetails = PaymentCarddetails.getText();
+		String paymentCardFname =	webPropHelper.getTestDataProperty("FirstNameEX");		
+			if(PaymentCardDetails.contains(paymentCardFname)){
+				   System.out.println("Payment First Name is" + paymentCardFname);
+			 }
+		String paymentCardLname =	webPropHelper.getTestDataProperty("LastNameEX");	
+			if(PaymentCardDetails.contains(paymentCardLname)){
+				   System.out.println("Payment Last Name is"+paymentCardLname);
+			 }
+				
+		String paymentCardAddress =	webPropHelper.getTestDataProperty("StreetAddressEX");			
+			if(PaymentCardDetails.contains(paymentCardAddress)){
+				   System.out.println("Shipping Email is"+paymentCardAddress);
+			 }
+			String paymentCardZip =	webPropHelper.getTestDataProperty("ZipCode");				
+			if(PaymentCardDetails.contains(paymentCardZip)){
+				   System.out.println("Shipping Zip is"+paymentCardZip);
+			 }	
+			}			
+			
+
+		
+		
+		public void verifySignUpAddressinMyAccount(){
+			
+			String ShippingAddress = NonDefaultShippingAddress.getText();
+		String SignupFname =	webPropHelper.getTestDataProperty("First_Name");		
+			if(ShippingAddress.contains(SignupFname)){
+				   System.out.println("Shipping First Name is" + SignupFname);
+			 }
+		String SignupLname =	webPropHelper.getTestDataProperty("Last_Name");	
+			if(ShippingAddress.contains(SignupLname)){
+				   System.out.println("Shipping Last Name is"+SignupLname);
+			 }
+				
+		String SignupEmailAdd =	webPropHelper.getTestDataProperty("Email_Address");			
+			if(ShippingAddress.contains(SignupEmailAdd)){
+				   System.out.println("Shipping Email is"+SignupEmailAdd);
+			 }
+		String SignupAddress =	webPropHelper.getTestDataProperty("Address");				
+			if(ShippingAddress.contains(SignupAddress)){
+				   System.out.println("Shipping Address is"+SignupAddress);
+			 }
+			String SignupZip =	webPropHelper.getTestDataProperty("Zip_Code");				
+			if(ShippingAddress.contains(SignupZip)){
+				   System.out.println("Shipping Zip is"+SignupZip);
+			 }	
+			String SignupPhNumber =	webPropHelper.getTestDataProperty("Phone_Number");				
+			if(ShippingAddress.contains(SignupPhNumber)){
+				   System.out.println("Shipping Phone Number is"+SignupPhNumber);
+			 }			
+		}
+		
 	public void retriveAddressOnConfirmationPageAndVerifyOnMyAccountPage(){
 		
 		String AddName = shippingAddressNameConfirmationPage.getText();
@@ -1127,7 +1185,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 
 	// CR-GK 9-Oct
 	public void deleteAllCreditCardsFromMyAccount() throws InterruptedException {
-		int cardsCount = PaymentPage_CreditCard_Remove_list.size();
+		int cardsCount = Page_CreditCard_Remove_list.size();
 		while (cardsCount > 0) {
 			assertTrue(clickOnButton(MyAccount_CreditCardRemoveBtn));
 			Thread.sleep(Constants.thread_highest);

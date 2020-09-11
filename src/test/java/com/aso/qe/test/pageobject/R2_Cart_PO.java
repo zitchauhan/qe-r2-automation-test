@@ -24,6 +24,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
 	R1_FindStore_PO r1FindStorePO = PageFactory.initElements(driver, R1_FindStore_PO.class);
+	String StorelocatorNamePopup; 
 	/*************** END LOCAL OBJETCS AND DECLARATIONS **************************/
 
 	/***************************** START XPAHTS **********************************/
@@ -542,11 +543,38 @@ public class R2_Cart_PO extends CommonActionHelper {
 	public WebElement continueShoppingItemSuccessufllyAddedPopUP;
 	
 	@FindBy(xpath="//button[text()='X']") public WebElement btnClose; //CR-MJR 23/7/19
+	
+// ********** Venkat ************
+	@FindBy(xpath="//span[@class='o-copy__12reg mt-quarter icon-text align-middle float-left find-store-hover']") public WebElement LocationText;
+	@FindBy(xpath="(//div[@class=' o-copy__14bold mr-auto'])[2]") public WebElement StoreTextFindAStore;
+	@FindBy(xpath="//button[@class='css-rd24ah e12jmf1e0']//i[contains(@class,'academyicon icon-plus')]") public WebElement btnExpaandLocation2;
+	               //button[@class='css-gk8hdk e12jmf1e0']//i[contains(@class,'academyicon icon-plus')]
+	@FindBy(xpath="//span[@class='academyicon icon-close icon a-close-icon']") public WebElement btnPopupClose;
+	
+//	@FindBy(xpath = "//*[@aria-label='Make My Store']")
+//	public WebElement btnstore;
+	
+		
+	
+// ***********End Venkat ************	
 
 	/***************************** END XPAHTS ********************************/
 
 	/***************************** START METHODS 
 	 * @throws InterruptedException ********************************/
+	public void selectStoreLocationinPLP() throws InterruptedException {
+	clickOnButton(btnExpaandLocation2);
+	String StoreNamePopup = StoreTextFindAStore.getText(); 
+	clickOnButton(btnstore);
+	clickOnButton(btnPopupClose);
+	StorelocatorNamePopup = StoreNamePopup;
+	}
+	
+	public void verifystoreLocatorinPDP() throws InterruptedException {
+		String LocationTextHeader = LocationText.getText();
+		assertTrue(LocationTextHeader == StorelocatorNamePopup);			
+	}
+	
 	
 	public void navigateAndDeleteAllProductsInCart() throws InterruptedException {
 		Thread.sleep(Constants.thread_high);
