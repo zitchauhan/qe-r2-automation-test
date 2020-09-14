@@ -111,8 +111,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// @FindBy(xpath = "//*[@data-auid='setAsDefault_btn']")
 	// public WebElement setAsDefaultBtn;// RKA 3 aug added //GK 17Sept
 
-	@FindBy(xpath = "//h5[text()='']") // CR-RK KER-2920 Sep18
-	public WebElement headers;
+	@FindBy(xpath = "//h5[text()='PAYMENT']") // CR-RK KER-2920 Sep18
+	public WebElement headerPayments;
 
 	@FindBy(xpath = "//*[@data-auid='defaultAddress'] | //*[text()='DEFAULT']")
 	public WebElement setAsDefaultBtn;// RKA 3 aug added //GK 17Sept //CR-RK KER-3151 Sep 18 //CR-DPK 09-oct
@@ -429,12 +429,22 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// public WebElement headers;
 	
 	@FindBy(xpath="//*[text()='DEFAULT']/following::div[5]")public WebElement defaultCreditCard;
+	@FindBy(xpath="//button[@class='css-7frz9w']")public WebElement defaultCreditCardChkoutPayment;
 	
 	@FindBy(xpath="//button[@class='css-7frz9w']")public WebElement defaultCreditCardChkout;
 
+	@FindBy(xpath = "//*[@data-auid='btnsubmit-btn']")public WebElement PaymentPage_AddCreditCard_Add_btn;
+	
 	@FindBy(xpath = "//*[text() = 'CREDIT CARDS']")
 	public WebElement headerCreditCards;
 
+	@FindBy(xpath = "//*[.='PAYMENT']/a ")public WebElement lnkPayment; //// CR-SK 29 Aug-18
+	
+	@FindBy(xpath = "(//*[text()='PAYMENT'])[2]")public WebElement Order_Payment_txt;
+	
+	@FindBy(xpath = "(//*[text()='PAYMENT'])[2]/following-sibling::*[2]")public WebElement Order_Payment_Section;
+	
+	@FindBy(xpath = "//*[@data-auid='Payments_m']")public WebElement lnkPayment_Mobile; // CR-RK KER-2920 Sep 4 //CR-Rk Sep24 KER-2920
 	@FindBy(xpath = "//*[text() = 'You have no credit cards listed.']")
 	public WebElement txtNoCreditCardListed;
 

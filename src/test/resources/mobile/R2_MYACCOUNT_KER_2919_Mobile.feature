@@ -253,7 +253,7 @@ Scenario: Verify that Payment Details are not saved if User clicks on Cancel CTA
 	
 	
 @R2_Mobile @R2_Regression @R2_All @P2 @C-MyAccount @KER-2919
-@ZYP_CART_K2919-10693 @CR-DPK 
+@ZYP_CART_K2919-10693 @CR-DPK  @kkk
 Scenario: Verify if entered address is validated by AVS 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User clicks on the burger menu 
