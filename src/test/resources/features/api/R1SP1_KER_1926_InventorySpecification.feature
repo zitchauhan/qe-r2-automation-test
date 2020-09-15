@@ -9,7 +9,7 @@ Feature: To verify the Inventory Specification API Services
       | InventorySpecificationUrl |
       | /api/inventory/4134286    |
 
-  @Regression @Sanity @All @api @KER-1926 @ZYP-6991 @C-PDP 
+  @Regression @Sanity @All @api @KER-1926 @ZYP-6991 @C-PDP  @ccc
   Scenario Outline: : validate the Inventory Specification json schema
     Given "<InventorySpecificationUrl>" endpoint for Inventory Specification
     And validate jsonSchema "KER_1926_InventorySpecificationSchema" for Inventory Specification
@@ -42,7 +42,7 @@ Feature: To verify the Inventory Specification API Services
       | InventoryStoreUrl                            |
       | /api/inventory/store/66209?productId=4134286 |
 
-  @Regression @Sanity @All @api @KER-1926 @ZYP-6994 @C-PDP 
+  @Regression @Sanity @All @api @KER-1926 @ZYP-6994 @C-PDP
   Scenario Outline: : validate the Inventory Store Specification json schema
     Given "<InventoryStoreUrl>" endpoint for Inventory Store Specification
     And validate jsonSchema "KER_1926_InventoryStoreSchema" for Inventory Store Specification
@@ -70,7 +70,7 @@ Feature: To verify the Inventory Specification API Services
   Scenario Outline: : Verify Inventory Product Store Specification for status code 200
     Given "<InventoryProductStoreUrl>" endpoint for Inventory Product Store Specification
     Then Verify response status code as 200 for Inventory Product Store Specification
-
+	
     Examples: 
       | InventoryProductStoreUrl                       |
       | /api/inventory?productId=4134286&storeId=66209 |
