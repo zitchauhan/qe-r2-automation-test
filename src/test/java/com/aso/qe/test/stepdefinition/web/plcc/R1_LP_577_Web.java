@@ -34,7 +34,7 @@ public class R1_LP_577_Web  extends CommonActionHelper{
 		genericPO.userClickonAddCreditCard();
 	}
 	
-	@Then ("^user verify ACC Default Card$)")
+	@Then ("^user verify ACC Default Card$")
 	public void user_verify_ACC_Default_Card() throws Throwable {
 		genericPO.verifyAccademyCreditAsDefault();
 	}
