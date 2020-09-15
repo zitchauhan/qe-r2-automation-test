@@ -37,6 +37,16 @@ public class R1SP1_CategoryDetailsSD extends JSONValidationUtils
 		assertTrue(flag);
 		
 	}
+	
+	@Then("^Verify response status code as (\\d+) for Algolia API$")
+	public void verify_response_status_code_as_for_Algolia_API(int statusCodeExpected)
+	{
+		boolean flag = validateStatusCode(statusCodeExpected);
+		logger.debug("Status Code FLAG::"+flag);
+		assertTrue(flag);
+		
+	}
+	
 
 	@Then("^validate jsonSchema \"(.*?)\" for CategoryDetail$")
 	public void validate_jsonSchema_for_CategoryDetail(String jsonSchemaFilePath)
