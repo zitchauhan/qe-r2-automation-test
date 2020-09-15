@@ -108,10 +108,10 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 Scenario Outline: Verify if order placement for a Different Card Types
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
-	And user click on Add to Cart Button for "MultiSKUProduct" 
-#	And user is navigated to Add to cart Notification popup 
-#	When user click on checkout button 
-	And user click on viewcart button
+	#And user click on Add to Cart Button for "MultiSKUProduct" 
+	And user click on ship it button 
+	And user click on view cart button 
+	#And user click on viewcart button
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
@@ -133,16 +133,13 @@ Scenario Outline: Verify if order placement for a Different Card Types
 
 @Regression @P1 @CR-SK @Checkout @RegressionP1
 Scenario: Place order as a registered user using Paypal express as tender
-    Given user launches the browser and navigates to "ASO_HOME" page 
+  Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productNameSTH" and navigates to PDP
 	And User gets a product name for "productNameSTH"
 	And user click on ship it button 
 	And user will click on View Cart button 
-    When user navigate to Cart page 
-    #Then user should able to click on Signin button
-    #And user should be able to enter the signin details "EmailAddress1" "Password"
-    #And User clicks on the minicart icon and navigated to minicart 
-    Then Verify paypal button on Cart Page 
+  When user navigate to Cart page 
+  Then Verify paypal button on Cart Page 
 	Then User click on paypal button on cart page
 	And user enter the paypal login "PayPalEmail" "PayPalPassword" and click on Continue button
 	And user clicks on place order on checkout page 
