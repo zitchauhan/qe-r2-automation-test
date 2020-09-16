@@ -1,7 +1,7 @@
 Feature: Verfiy  View/Delete/Set Default Credit/Debit Card in Account 
 
 @R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-MyAccount @KER-2920 
-@ZYP_MYACCOUNT_K2920-10549 @CR-RK @RegressionP1 @abc
+@ZYP_MYACCOUNT_K2920-10549 @CR-RK @RegressionP1
 Scenario: Verify user is able to remove the saved credit card from My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header

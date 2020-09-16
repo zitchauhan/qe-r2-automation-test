@@ -5,7 +5,7 @@ Feature: E02-250 - Edit Credit/Debit Card in Account
 
     Given user launches the browser and navigates to "ASO_HOME" page
     When user clicks on SignIn link from global header
-    And user enter the valid emailaddress "EmailAddress1" 
+    And user enter the valid emailaddress "UserWithDefaultAddress" 
 		And user enter the valid password "Password" 
     And user click on signin button
     Then user click on My Account and navigate to payment
