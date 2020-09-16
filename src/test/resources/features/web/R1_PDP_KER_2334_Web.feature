@@ -1,3 +1,6 @@
+# Blocking this feaure in UAT7 Regression suite since this is a existing PROD defect
+@ignoreUAT
+
 Feature: Back in Stock Notifications on the PDP - Email
 
 
