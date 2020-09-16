@@ -1010,7 +1010,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 		@FindBy(xpath = "//input[@id='myaccount-zipcode']")public WebElement NonDefaultZip;
 		@FindBy(xpath = "//input[@id='myaccount-city']")public WebElement btnEditNonDefaultPhNumber;
 		@FindBy(xpath = "//button[@data-auid='btnsubmit_btn']")public WebElement btnUpdateNonDefault;
-		@FindBy(xpath = "(//div[@class='col-12 col-md-8'])[2]")public WebElement NonDefaultShippingAddress;
+		@FindBy(xpath = "//div[@class='col-12 col-md-8'][2] | //div[@class='col-12 col-md-8']")public WebElement NonDefaultShippingAddress;
 		
 		
 		@FindBy(xpath = "//*[@class='col-12 col-md-8']")public WebElement PaymentCarddetails;
