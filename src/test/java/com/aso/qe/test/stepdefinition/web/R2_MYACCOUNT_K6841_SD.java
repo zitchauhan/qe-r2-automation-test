@@ -11,6 +11,7 @@ import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.DataTable;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -156,4 +157,22 @@ public class R2_MYACCOUNT_K6841_SD extends CommonActionHelper {
 		assertTrue(zip != webPropHelper.getTestDataProperty("updateZipCode"));
 		assertTrue(phone != webPropHelper.getTestDataProperty("updatePhoneNumber"));
 	}
+	
+
+	@Then("^user clicks on Add new Gift Card CTA$")
+	public void user_clicks_on_Add_new_Gift_Card_CTA() throws Throwable{
+		// fetch the existing values
+		assertTrue(clickOnButton(r2_MyAccount_PO.MyAccount_Page_AddGC));
+		Thread.sleep(Constants.thread_low);
+	}
+
+	@Then("^user add gift card \"(.*?)\" and pin \"(.*?)\"$")
+	public void user_adds_gc_and_pin(String arg1, String arg2) throws Throwable {
+		Thread.sleep(Constants.thread_low);
+		assertTrue(isDisplayed(r2_MyAccount_PO.MyAccount_Page_GCTextBox));
+		setInputText(r2_MyAccount_PO.MyAccount_Page_GCTextBox, webPropHelper.getTestDataProperty(arg1));
+		setInputText(r2_MyAccount_PO.MyAccount_Page_GCPinBox, webPropHelper.getTestDataProperty(arg2));
+		clickOnButton(r2_MyAccount_PO.MyAccount_Page_GCAddCTA);
+		Thread.sleep(Constants.thread_low);
+			}
 }

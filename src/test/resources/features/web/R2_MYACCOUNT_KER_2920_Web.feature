@@ -1,35 +1,24 @@
 Feature: Verfiy  View/Delete/Set Default Credit/Debit Card in Account 
 
 @R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-MyAccount @KER-2920 
-@ZYP_MYACCOUNT_K2920-10549 @CR-RK @RegressionP1
+@ZYP_MYACCOUNT_K2920-10549 @CR-RK @RegressionP1 @abc
 Scenario: Verify user is able to remove the saved credit card from My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
 	And user enter the valid emailaddress "Login_username" 
 	And user enter the valid password "Login_pwd" 
-    And user click on signin button
-    Then user click on My Account and navigate to payment
-	#When user clicks on SignIn link from global header 
-	#Then Verify below Sub/Main Module of My Account 
-		|# Verify following elements in Sign in/login page	|
-		|SignInPage_SignIn_btn								|
-		|SignInPage_EmailAddress_txt			   			| 
-		|SignInPage_Password_txt				   			|
-	#And user enter the valid emailaddress "Login_username" 
-	#And user enter the valid password "Login_pwd" 
-    #And user click on signin button
-	#Then user click on My Account and navigate payment 
-	#Then Verify below Sub/Main Module of My Account 
+  And user click on signin button
+  Then user click on My Account and navigate to payment 
+	Then Verify below Sub/Main Module of My Account 
 		|#Verify following elements in Payments > Add new credit card section	|
 		|PaymentPage_PaymentsHeader_label				|
 	And user clicks on Add New Credit Card button
-	#And validate the radio button Academy Credit Card and Credit Card
-	#And user validates the "Academy Credit Card"
-    And user adds the "Credit Card"
-    And  user enter Address "AVSAddress"
-    And validate the acc card added
+  And user validates the "Credit Card"
+  And user adds the "Credit Card"
+  #And  user enter Address "AVSAddress"
+  #And validate the acc card added
 	Then user clicks Remove button in payment page 
-	And user should see the proper message 
+	And user should see "credit card" removed message 
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2920 
 @ZYP_MYACCOUNT_K2920-10553 @CR-RK 
@@ -158,17 +147,15 @@ Scenario: Verify last added credit card in saved list becomes the default on del
 	And user verifies the credit card saved is set as default
 	
 
-@Web @Regression @P1 @CR-MT	@RegressionP1  @nnn
-Scenario: Verify user is able to remove the saved academy credit card from My Account
+@Web @Regression @P1 @CR-MT	@RegressionP1
+Scenario: Verify user is able to remove the saved academy gift card from My Account
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header
 	And user enter the valid emailaddress "UserWithDefaultAddress"
 	And user enter the valid password "Password"
 	And user click on signin button
 	Then user click on My Account and navigate to payment
-	Then Verify below Sub/Main Module of My Account
-		|#Verify following elements in Payments > Add new credit card section	|
-		|PaymentPage_PaymentsHeader_label				|
-#	Then user clicks Remove acc button in payment page
 	Then user clicks Gift Card Remove button in payment page
 	And user should see the proper message
+	Then user clicks on Add new Gift Card CTA
+	Then user add gift card "Valid16DigitGiftCardNumber" and pin "Valid8DigitGiftCardPIN"
