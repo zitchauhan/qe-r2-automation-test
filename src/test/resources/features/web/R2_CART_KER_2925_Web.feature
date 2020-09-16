@@ -35,68 +35,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
 		| Payment Type       |
 		| Credit Card - VISA |
 		
-		#   	@R2_Web  @P1 @C-Order @CC-Cart_Order   @KER-2925 @ZYP_CART_K2925-8192 @CR-AG
-		#Scenario: Verify if Order status is updated in 'My account'
-		#    Given user launches the browser and navigates to "ASO_HOME" page
-		#    And user clicks on SignIn link from global header
-		#	And user enter the valid emailaddress "EmailAddress"
-		#	And user enter the valid password "Password"
-		#    And user click on signin button
-		#	When User searches a product "productName" and navigates to PDP
-		#	And user click on Add to Cart Button
-		#	And user click on checkout button
-		#	Then user fill email address in payment
-		#	Then user clicks on the Review order button
-		#	And user able to see the button place order
-		#	And user check order confirmation status in order summary page
-		#	Then Verify the message on the page
-		#    |# Following Error Message should show on the page|
-		#    |Your confirmation email is on its way|
-		#    And user click on MyAccount
-		#	And user click on Orders link
-		#	Then Verify below Sub/Main Module of My Account
-		#    |#Verify following elements in my account order details|
-		#    |Order_View_Details_Btn|
-		#	And user click on view Details
-		#    Then user able to see the same order ID in My order section
-		################ Below one has to enter wrong payment details which will accept the payment but reject in order confirmation page ########
-		#    @R2_Web  @P-Low @C-Order @CC-Cart_Order   @KER-2925 @ZYP_CART_K2925-8193 @CR-AG
-		#Scenario: Verify if Order status is updated in 'My account'
-		#    Given user launches the browser and navigates to "ASO_HOME" page
-		#	When User searches a product "productName" and navigates to PDP
-		#	And user click on Add to Cart Button
-		#	And user click on checkout button
-		#	And user fill the PO box in shipping address
-		#	And user click on Go To Shipping Method button in Checkout page
-		#	Then user click on go to payment present in shipping method
-		#	And user verifies master card entery in the card fields
-		#	Then user fill email address in payment
-		#	Then user clicks on the Review order button
-		#	And user able to see the button place order
-		#	And user check order confirmation status in order summary page
-		#	Then Verify the message on the page
-		#    |# Following Error Message should show on the page|
-		#    |Your confirmation email is on its way|
-		#    #Unable to get any error msgs
-		#
-		###########################################################################################
-		# @R2_Web  @P-High_Order @C-Order @CC-Cart_Order   @KER-2925 @ZYP_CART_K2925-8194 @CR-AG
-		#Scenario: Verify if user can see legal disclaimer while placing the order
-		#    Given user launches the browser and navigates to "ASO_HOME" page
-		#	When User searches a product "productName" and navigates to PDP
-		#	And user click on Add to Cart Button
-		#	And user click on checkout button
-		#	And user fill the PO box in shipping address
-		#	And user click on Go To Shipping Method button in Checkout page
-		#	Then user click on go to payment present in shipping method
-		#	And user verifies master card entery in the card fields
-		#	Then user fill email address in payment
-		#	Then user clicks on the Review order button
-		#	Then Verify the message on the page
-		#    |# Following Message should show on the page|
-		#    |By placing this order, I accept Academy's|
-		#    |Terms and Conditions|
-		#    |Privacy Policy|
+		
 		@R2_Web @P-Low @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8195 @CR-AG
 		@C1-Message 
 Scenario Outline: Verify if user can click the legal disclaimer Terms and Conditions is clickable 

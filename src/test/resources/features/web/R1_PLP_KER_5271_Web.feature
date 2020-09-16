@@ -1,3 +1,5 @@
+# Blocking this feaure in UAT7 Regression suite since this is a existing PROD defect
+@ignoreUAT7
 Feature: To Verify SearchDex: Brand Pages 
 
  @Regression @Web @All @C-PLP @KER-5271 @ZYP_PLP_K5271-6390 @CR-AKK @DevORIG
