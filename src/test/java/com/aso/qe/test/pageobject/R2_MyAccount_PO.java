@@ -351,7 +351,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = removeBtnForAddress)
 	public WebElement btnRemove;
 	
-	@FindBy(xpath = "(//*[text()='Remove'])[2]")
+	@FindBy(xpath = "(//*[text()='Remove'])[2] | //*[text()='Remove']")
 	public WebElement removeBtnForGiftCard;
 	
 	@FindBy(xpath = "//*[contains(text(),'Academy Sports + Outdoors Credit Card ending in')]/../../../div[2]/div/button[2]")
@@ -1225,6 +1225,16 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 		}
 	}
 
-	/***************************** END METHODS *********************************/
+	@FindBy(xpath = "//*[@id='ADD NEW GIFT CARD']")
+	public WebElement MyAccount_Page_AddGC;
+	
+	@FindBy(xpath = "//*[@id='myaccount-gcnumber']")
+	public WebElement MyAccount_Page_GCTextBox;
+	
+	@FindBy(xpath = "//*[@id='myaccount-gcpin']")
+	public WebElement MyAccount_Page_GCPinBox;
+	
+	@FindBy(xpath = "//*[@data-auid='btnundefined']")
+	public WebElement MyAccount_Page_GCAddCTA;
 
 }

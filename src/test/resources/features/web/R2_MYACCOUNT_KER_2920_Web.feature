@@ -158,7 +158,7 @@ Scenario: Verify last added credit card in saved list becomes the default on del
 	And user verifies the credit card saved is set as default
 	
 
-@Web @Regression @P1 @CR-MT	@RegressionP1  @nnn
+@Web @Regression @P1 @CR-MT	@RegressionP1 @abc
 Scenario: Verify user is able to remove the saved academy credit card from My Account
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header
@@ -166,9 +166,7 @@ Scenario: Verify user is able to remove the saved academy credit card from My Ac
 	And user enter the valid password "Password"
 	And user click on signin button
 	Then user click on My Account and navigate to payment
-	Then Verify below Sub/Main Module of My Account
-		|#Verify following elements in Payments > Add new credit card section	|
-		|PaymentPage_PaymentsHeader_label				|
-#	Then user clicks Remove acc button in payment page
 	Then user clicks Gift Card Remove button in payment page
 	And user should see the proper message
+	Then user clicks on Add new Gift Card CTA
+	Then user add gift card "Valid16DigitGiftCardNumber" and pin "Valid8DigitGiftCardPIN"
