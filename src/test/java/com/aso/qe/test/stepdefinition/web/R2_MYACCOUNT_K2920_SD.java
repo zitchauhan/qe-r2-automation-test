@@ -27,9 +27,12 @@ public class R2_MYACCOUNT_K2920_SD extends CommonActionHelper
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
 
-	@Then("^user should see the proper message$")
-	public void user_should_see_the_proper_message() throws Throwable {
-	    //assertTrue(isDisplayed(r2MyAccountPo.txtCreditCardRemoved));
+	@Then("^user should see \"([^\"]*)\" removed message$")
+	public void user_should_see_the_proper_message(String arg1) throws Throwable {
+	    if(arg1.equalsIgnoreCase("Credit Card"))
+	    	{
+	    	assertTrue(isDisplayed(r2MyAccountPo.txtCreditCardRemoved));
+	    	}
 	}
 	
 	@Then("^user verifies the credit card saved is set as default$")
