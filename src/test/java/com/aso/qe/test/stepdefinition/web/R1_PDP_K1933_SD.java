@@ -10,7 +10,7 @@ public class R1_PDP_K1933_SD extends CommonActionHelper{
 
 	R1_PDP_PO pdp_po = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 
-	@Then("^user able to see shipping/delivery related message in bulky product$")
+	@Then("^user able to see shipping/delivery related message in product type BULK$")
 	public void user_able_to_see_shipping_delivery_related_message_in_bulky_product() throws Throwable {
 
     assertTrue(isDisplayed(pdp_po.txtShippingRelatedMsg));
