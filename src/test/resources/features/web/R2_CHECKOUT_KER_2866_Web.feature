@@ -45,9 +45,13 @@ Scenario: Verify the guest user is able to select the Credit Card payment method
   And user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers 
 	And user click on checkbox in special order ship to store section 
 	When user clicks on Go to payment CTA
-	And user fill the payment details for sof guest user
-	And user able to see the button place order
-	Then verify user is able to successfully place the order
+	And user fill the payment details for sof guest user	
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	Then Verify the message on the page 
+		| # Message for successful order is displayed |
+		| Order Number                                |			
+	
 	
 @C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10491
 Scenario: Verify the guest user is able to select the PayPal payment method in order to place the order for BOPIS
@@ -89,6 +93,12 @@ Scenario: Verify the guest user is able to select the Gift Card payment method i
 	And user click on Apply button 
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
 	And user clicks on Review order button on checkout page
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	Then Verify the message on the page 
+		| # Message for successful order is displayed |
+		| Order Number                                |			
+	
 	
 	
 @C-BOPIS @R2_Web @R2_All @CB-Checkout @KER-2866 @ZYP_CART_K2866-10507
@@ -279,10 +289,12 @@ Scenario: Verfiy bopis place order for guest user with ACC as tender
 	And user enters a corresponding billing address
 	And user enters order confirmation email
 	And user click on REVIEW ORDER button
-	And user click on PLACE ORDER button 
-	Then user navigates to order confirmation page
-	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
-	Then user able to see order number	
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	Then Verify the message on the page 
+		| # Message for successful order is displayed |
+		| Order Number                                |			
+	
 	
 	
 @Web @Regression @P1 @CR-MT @RegressionP1
@@ -301,10 +313,11 @@ Scenario: Verfiy bopis place order for guest user with CC as tender
 	And user fill the credit card detail in payment  
 	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "FindAsStoreZIPCode" , "EmailAddress"
 	And user click on REVIEW ORDER button
-	And user click on PLACE ORDER button 
-	Then user navigates to order confirmation page
-	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
-	Then user able to see order number			
+  And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	Then Verify the message on the page 
+		| # Message for successful order is displayed |
+		| Order Number                                |			
 	
 @RegressionP2 @WhiteGlove @AutomationSmoke
 Scenario Outline: Verify the guest user is able to place White Glove order using Credit Card
@@ -320,13 +333,13 @@ Scenario Outline: Verify the guest user is able to place White Glove order using
 	And user add "<Payment Type>" details in payment method for "guest" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
+	Then Verify the message on the page 
+		| # Message for successful order is displayed |
+		| Order Number                                |			
 	Examples: 
 		|Payment Type	|
 		|Credit Card	|
 
-	
-	
-	
 	
 	
 
