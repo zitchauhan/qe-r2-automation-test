@@ -16,6 +16,7 @@ Scenario:  Checkout - Guest User PAYPAL order Regular BOPIS item
 	Then user click on paypal radiobtn
 	And user click on paypal checkout button
 	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
+	And user clicks on ok button of order not complete modal
 	And user able to see the button place order
 	And user is navigated to order confirmation page and captures order number
 	Then user able to see order number 
