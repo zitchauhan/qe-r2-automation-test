@@ -249,7 +249,7 @@ Scenario: Verify the guest user is able to select the PayPal payment method in o
 		
 		
 @R2_Web @R2_Regression @R2_All @P-Low @C-Checkout @KER-3165 
-@ZYP_CHECKOUT_K3165-8250 @CR-GK 
+@ZYP_CHECKOUT_K3165-8250 @CR-GK @RegressionP2
 Scenario: Verify the guest user is able to select the Gift Card payment method in order to place the order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 

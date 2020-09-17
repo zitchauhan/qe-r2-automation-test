@@ -80,9 +80,9 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		driver.manage().window().maximize();
 		//driver.getTitle();
 		
-		Thread.sleep(Constants.thread_highest);		
+		Thread.sleep(Constants.thread_highest);
 		waitForElement(r2CheckOutPo.PayPalContinue_Btn);
-	
+		
 		r2CheckOutPo.PayPalContinue_Btn.click();
 		
 		driver.switchTo().window(winHandleBefore);

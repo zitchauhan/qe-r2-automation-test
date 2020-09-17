@@ -41,7 +41,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='btnAddToCart']") public WebElement AddToCartBtn;
 	@FindBy(xpath="//*[@data-auid='btnbtnEnableBuyNow']")  public WebElement btnEnablebuynow;
 	
-	@FindBy(xpath="//*[@data-auid='PDP_MediaClick']|//ul[@class='slider animated'] | (//*[@class='css-3jgf49'])[1] | //*[@class='css-4obycp']") public WebElement imgProductMainMixedMedia;
+	@FindBy(xpath="//*[@data-auid='PDP_MediaClick']|//ul[@class='slider animated'] | (//*[@class='css-3jgf49'])[1] | //*[@class='css-4obycp'] |  //div[contains(@class,'swiper-slide d-flex justify-content-center swiper-slide-active')]") public WebElement imgProductMainMixedMedia;
 	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']|//ul[@class='slider animated'])[2]") public WebElement imgProductMainMixedMedia_m;//9aug danush
 	@FindBy(xpath="//*[@data-auid='PDP_ProductName']") public WebElement txtProductTitle;
 	@FindBy(xpath="//*[contains(@data-auid,'Size_Attribute')]") public WebElement secProductAttributeSizes;
@@ -493,7 +493,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath ="//a[@data-auid='level4Category-Grills']") public WebElement btngrillsCategory;
 	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Nike')]")public WebElement NikeBrandBreadCrumb;
 	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Sports')]")public WebElement SportsBreadCrumb;
-	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Hot Deals')] | //span[contains(text(),'hotdeals')] | //span[contains(text(),'hot deals')]")public WebElement HotdealsBreadCrumb;
+	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Hot Deals')]")public WebElement HotdealsBreadCrumb;
 	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Soft Baits')]")public WebElement SoftBaitsBreadCrumb;
 	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Crocs')]")public WebElement CrocsBreadCrumb;
 	@FindBy(xpath="//div[@class='container breadCrumbComponent']//span[contains(text(),'Brands')]")public WebElement BrandsBreadCrumb;

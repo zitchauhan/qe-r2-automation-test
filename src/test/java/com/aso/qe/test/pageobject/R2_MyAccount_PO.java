@@ -1236,5 +1236,15 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "//*[@data-auid='btnundefined']")
 	public WebElement MyAccount_Page_GCAddCTA;
+	
+	@FindBy(xpath = "//*[text()='ADDRESS VERIFICATION']")
+	public WebElement AVS_Modal;
+
+	@FindBy(xpath = "//*[@data-auid='btncheckout_use_selected_address_btn']")
+	public WebElement AVS_UseSelectedAddress;
+	
+	@FindBy(xpath = "//*[text()='You have no gift cards listed.']")
+	public WebElement MyAccount_NoGCMsg;
+	
 
 }

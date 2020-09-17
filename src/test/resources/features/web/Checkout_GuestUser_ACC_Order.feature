@@ -17,8 +17,7 @@ Scenario: Verfiy discount is applied for guest user place order with ACC as tend
 	And user click on REVIEW ORDER button
 	And user expect discount text to be present 
 	And user clicks on place order on checkout page
-	Then verify user is able to successfully place the order
-	
+  Then verify user is able to successfully place the order 
 	
 	
 	

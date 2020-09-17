@@ -72,9 +72,9 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 		//for popup modal after review for SOF orders
 		if(isDisplayed(r2CheckoutPo.ContinueReviewCTA))
 		{
-			assertTrue(clickOnButton(r2CheckoutPo.ContinueReviewCTA));
-			Thread.sleep(Constants.thread_high);
-		}
+				assertTrue(clickOnButton(r2CheckoutPo.ContinueReviewCTA));
+				Thread.sleep(Constants.thread_high);
+			}
 	}
 
 	@When("^user click on PLACE ORDER button$")

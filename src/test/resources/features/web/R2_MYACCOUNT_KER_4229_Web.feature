@@ -43,7 +43,7 @@ Scenario: Verify that Authenticated User is able to navigate to My Account page
 		
 		
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4229 
-@ZYP_MYACCOUNT_K4229-10474 @CR-GK  @RegressionP2 
+@ZYP_MYACCOUNT_K4229-10474 @CR-GK @RegressionP2
 Scenario: Verify that Authenticated User is able to view order list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

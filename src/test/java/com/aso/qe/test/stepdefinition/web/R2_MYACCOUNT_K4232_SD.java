@@ -101,6 +101,18 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 
 		assertTrue(clickOnButton(myAccountPo.btnAdd));
 		Thread.sleep(Constants.thread_low);
+		
+		//if AVS modal pops up
+		if(isDisplayed(myAccountPo.AVS_Modal)) 
+			{
+					
+					assertTrue(clickOnButton(myAccountPo.AVS_UseSelectedAddress));
+					Thread.sleep(Constants.thread_low);
+					//issue exist on site - done to avoid that
+					assertTrue(clickOnButton(myAccountPo.AVS_UseSelectedAddress));
+					waitForElement(myAccountPo.addressBook);
+					
+			}
 	}
 
 	@Given("^user views validation message on all fields$")
