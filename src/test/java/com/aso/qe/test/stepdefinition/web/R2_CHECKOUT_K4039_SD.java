@@ -68,6 +68,7 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		   
 		}
 		System.err.println(getTitle());
+		Thread.sleep(Constants.thread_high);
 		waitForElement(r2CheckOutPo.PaypalEmail_Input);
 
 		setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty(arg1));
@@ -78,9 +79,10 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		Thread.sleep(Constants.thread_high);
 		driver.manage().window().maximize();
 		//driver.getTitle();
-				
-		waitForElement(r2CheckOutPo.PayPalContinue_Btn);
+		
 		Thread.sleep(Constants.thread_highest);
+		waitForElement(r2CheckOutPo.PayPalContinue_Btn);
+		
 		r2CheckOutPo.PayPalContinue_Btn.click();
 		
 		driver.switchTo().window(winHandleBefore);

@@ -17,6 +17,7 @@ import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
@@ -92,5 +93,11 @@ public class R2_MYACCOUNT_K2920_SD extends CommonActionHelper
 	- Billing Information, i.e. name and billing address
 	- Two links: Edit with edit icon and Remove link with cross icon
 	- Any saved card which is not default with a CTA:{color:#59afe1} SET AS DEFAULT"{color} */
-		 
+	
+	@And("^user should see the proper message after GC delete$")
+	public void user_should_see_the_proper_message() throws Throwable
+	{
+		Thread.sleep(Constants.thread_medium);
+		assertTrue(isDisplayed(r2MyAccountPo.MyAccount_NoGCMsg));
+	}
 }
