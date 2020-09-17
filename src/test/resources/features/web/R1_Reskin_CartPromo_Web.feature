@@ -1,7 +1,7 @@
 Feature: To Verify the Cart Add item/Remove item/Increase and decrease qty & Apply promo code 
 
 
- @Sanity @C-Reskin @Web @All @Rerun @CR-SDK 
+ @Sanity @C-Reskin @Web @All @Rerun @CR-SDK @RegressionP2
 Scenario: Verify the Add To Cart functionality and validate the product. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User navigates to L3 

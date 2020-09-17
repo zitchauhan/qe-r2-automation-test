@@ -17,7 +17,7 @@ Scenario: [Web]Verify the product in grid are sorted by Price "High-Low"
 	
 	
 	
-@Web @Regression @KER-710 @ZYP_HP_K710-3649 @C-HP @CR-RKA 
+@Web @Regression @KER-710 @ZYP_HP_K710-3649 @C-HP @CR-RKA @RegressionP2
 Scenario: [Web]Verify the product in grid are sorted by "Brand (A-Z)" 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then user enters "SearchForSort" in the searchbox 
