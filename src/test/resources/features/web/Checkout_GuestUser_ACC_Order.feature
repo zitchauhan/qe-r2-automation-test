@@ -16,10 +16,9 @@ Scenario: Verfiy discount is applied for guest user place order with ACC as tend
 	And user enters order confirmation email
 	And user click on REVIEW ORDER button
 	And user expect discount text to be present 
-	And user click on PLACE ORDER button 
-	Then user navigates to order confirmation page
-	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
-	Then user able to see order number 
+	And user clicks on place order on checkout page
+	Then verify user is able to successfully place the order
+	
 	
 	
 	

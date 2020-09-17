@@ -430,7 +430,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath=" //*[@data-auid='checkout_payment_add_gift_card_icon']")
 	   public WebElement expandGiftCardOptionOnCheckOutPage;  //SID 23-Jan
 	   
-	   @FindBy(xpath="//div[@class='paypal-button paypal-button-context-iframe paypal-button-label-checkout paypal-button-size-responsive paypal-button-layout-horizontal']") //Uves RegressionP1 28-Aug
+	   @FindBy(xpath="//div[@class='paypal-button paypal-button-context-iframe paypal-button-label-checkout paypal-button-size-responsive paypal-button-layout-horizontal'] | //div[contains(@id,'zoid-paypal-button')]") 
+	   //@FindBy(xpath="//div[contains(@id,'zoid-paypal-button')]")
 	   public WebElement paypalButton;  //SID 23-Jan
 	   
 	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[text()='Gift Card']")
@@ -1214,5 +1215,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath = "//*[@id='closeCart']") public WebElement PayPal_PopUpClose;
 		@FindBy(xpath = "//*[@class='span11 alignRight baslLoginButtonContainer']") public WebElement PayPal_Login;
 		@FindBy(xpath="//div[@class='css-13o7eu2'][1]") public WebElement WGBulkMessage;
+		@FindBy(xpath="//*[@data-auid='btnbuttonOneSixFour'][2]") public WebElement ContinueReviewCTA;
 
 }

@@ -45,7 +45,7 @@ Feature: PDP Scenarios based on searching the products
    
    
    
-   @RegressionP2
+   @RegressionP2 
    Scenario: Search a Gift card and verify URL,Image,Attributes on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page 
    When User searches a product "SKUForGiftCard" and navigates to PDP
@@ -87,7 +87,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the reviews
    
    
-  @RegressionP2
+  @RegressionP2  
    Scenario: Navigate to a product pdp page and verify the Home Delivery Option on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
    When user navigates to PLP of any product
@@ -138,7 +138,7 @@ Feature: PDP Scenarios based on searching the products
   |category|
   |Sports|
   
-  
+    
   @RegressionP2
  Scenario Outline: Verify whether the grid with hot deal items displayed when the user search for Hot Deals
 	Given user launches the browser and navigates to "ASO_HOME" page 
