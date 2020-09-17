@@ -126,6 +126,13 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
 		waitForElement(r2CheckoutPo.ReviewOrder_Btn);
 		assertTrue(clickOnButton(r2CheckoutPo.ReviewOrder_Btn));
 		Thread.sleep(Constants.thread_highest);
+		
+		//for popup modal after review for SOF orders
+		if(isDisplayed(r2CheckoutPo.ContinueReviewCTA))
+		{
+			assertTrue(clickOnButton(r2CheckoutPo.ContinueReviewCTA));
+			Thread.sleep(Constants.thread_high);
+		}
 	}
 	
 	@And("^user fill the payment details for sof registered user$")
