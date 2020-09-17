@@ -148,7 +148,7 @@ Scenario: Place order as a registered user using Paypal express as tender
 
 		
 @R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order @C1-Message
- @CR-SK 
+ @CR-SK @RegressionP3
 Scenario Outline: Verify if unauthenticated user is able to place an for bundle products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
@@ -227,7 +227,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bulk gi
 		|PayPal			|
 		
 @R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order 
- @CR-SK @C1-Message
+ @CR-SK @C1-Message @RegressionP3
 Scenario Outline: Verify if unauthenticated user is able to place an for bait products
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUForBaitProduct" and navigates to PDP 

@@ -161,7 +161,7 @@ Feature: PDP Scenarios based on searching the products
   
   
   
-   @RegressionP2
+   @RegressionP3
   Scenario: User should be able to select a category or sub-category and navigates from PLP page as well
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates till PLP of Baits SKU
