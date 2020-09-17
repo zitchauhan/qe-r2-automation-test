@@ -23,6 +23,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class R1_Checkout_87_Web extends CommonActionHelper {
+	R2_CheckOut_PO r2CheckoutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_PLCC_Generic_PO genericPO = PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
 	R2_CheckOut_PO checkout_po = PageFactory.initElements(driver, R2_CheckOut_PO.class);
@@ -66,6 +67,13 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 			clickOnButton(checkout_po.ReviewOrder_Btn);
 		} catch (Exception e) {
 			System.out.println("Exception Message:" + e.getMessage());
+		}
+		
+		//for popup modal after review for SOF orders
+		if(isDisplayed(r2CheckoutPo.ContinueReviewCTA))
+		{
+			assertTrue(clickOnButton(r2CheckoutPo.ContinueReviewCTA));
+			Thread.sleep(Constants.thread_high);
 		}
 	}
 
