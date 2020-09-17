@@ -119,7 +119,7 @@ Scenario: Verify the guest user is able to add new Credit Card as payment method
 	When user clicks on Go to payment CTA
 	And user fill the payment details for sof guest user	
 	
-@R2_Web  @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10508 @C-BOPIS
+@R2_Web  @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10508 @C-BOPIS @RegressionP2
 Scenario: Verify the guest user is able to select the Gift Card payment method in order to place the order for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 

@@ -101,7 +101,7 @@ Scenario: Verify Authenticated user has Address given through SOF
 	And user verifies the First address provided is set as default 
 	
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
-@ZYP_MYACCOUNT_K4232-9191 @CR-MS 
+@ZYP_MYACCOUNT_K4232-9191 @CR-MS @RegressionP2
 Scenario: Verify Authenticated user can Manage Address Book - View existing Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -168,7 +168,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Add new Address de
 	
 	
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
-@ZYP_MYACCOUNT_K4232-9333 @CR-RK 
+@ZYP_MYACCOUNT_K4232-9333 @CR-RK @RegressionP2
 Scenario: Verify Authenticated user can Manage Address Book -Set Default Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -251,7 +251,7 @@ Scenario: Verify Authenticated user can -Set Default Address
 	
 	
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
-@ZYP_MYACCOUNT_K4232-9193 @CR-RK @C1-Message 
+@ZYP_MYACCOUNT_K4232-9193 @CR-RK @C1-Message @RegressionP2
 Scenario: Verify Authenticated user can Manage Address Book - Delete Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 

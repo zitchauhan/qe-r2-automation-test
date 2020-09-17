@@ -114,7 +114,7 @@ Feature: [Web]Payment restrictions
       | #verify gift card related things are not displayed |
       | PayPalCheckOut_Btn                                 |
 
-  @R2_Web @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-4039 @ZYP_CHECKOUT_K4039-9889 @CR-RKA
+  @R2_Web @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-4039 @ZYP_CHECKOUT_K4039-9889 @CR-RKA @RegressionP2
   Scenario: Verify that user can use multiple gift cards to make the payment
     Given user launches the browser and navigates to "ASO_HOME" page
     And User navigates to L2 Mens clothing

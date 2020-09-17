@@ -18,7 +18,7 @@ Scenario: To verify Tax recalculation when items are edited
 	Then checkout page displays updated tax 
 	
 @R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-2927 @ZYP_CART_K2927-8127
-@CR-SK @C-BOPIS 
+@CR-SK @C-BOPIS @RegressionP2
 Scenario: To verify Tax recalculation when items are edited 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
