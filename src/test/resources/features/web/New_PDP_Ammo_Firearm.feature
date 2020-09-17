@@ -1,6 +1,6 @@
 Feature: To verify Ammo disclaimer on PDP page
  
- @Web @PDPFaceLift @CR-Anirudh 
+ @Web @PDPFaceLift @CR-Anirudh @RegressionP2
 Scenario: Verify ammo disclaimer is present and I agree button is clickable
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "ammoSKU" in the searchbox

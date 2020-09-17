@@ -27,7 +27,7 @@ Scenario: Verify that the User is able to expand the Shipping & Pickup drawer on
 	And user should be able to deselect the store pickup "store pickup" filter
 	
 	
-@R2_Web @R2_All @C-PLP @KER-3175 @ZYP_PLP_K3175-10960 @C-BOPIS 
+@R2_Web @R2_All @C-PLP @KER-3175 @ZYP_PLP_K3175-10960 @C-BOPIS @RegressionP2
 Scenario: Verify that the User is able to filter the PLP list by "Shipping" items
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -39,7 +39,7 @@ Scenario: Verify that the User is able to filter the PLP list by "Shipping" item
 	And user should be able to select the shipping "shipping" filter
 	And user verify that only shipping item are displayed
 
-@R2_Web @R2_All @C-PLP @KER-3175 @ZYP_PLP_K3175-10961 @C-BOPIS 
+@R2_Web @R2_All @C-PLP @KER-3175 @ZYP_PLP_K3175-10961 @C-BOPIS @RegressionP2
 Scenario: Verify that the User is able to change store pickup location on PLP under In-Store Pickup checkbox
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
