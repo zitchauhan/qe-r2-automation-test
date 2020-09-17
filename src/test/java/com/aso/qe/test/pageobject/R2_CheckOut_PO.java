@@ -590,6 +590,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
         @FindBy(xpath="//*[@name='creditcardField']/../span[2]/img | //img[@class='loadcardInfo'] | //span[@class='creditCardImage']/img")public WebElement Checkout_CreditCardPay_ImgLogo;
         @FindBy(xpath="//*[contains(text(),'Choose Card')]/following::*[2]")public WebElement Checkout_CreditCard_DropDown; 
         
+        @FindBy(xpath="//*[@data-auid='btncheckout_goto_order_review_from_paypal_modal']")public WebElement OkButtonReturnFromPaypal;
 
         //*****************Payment Method (END)
 		
