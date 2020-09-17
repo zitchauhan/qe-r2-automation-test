@@ -42,7 +42,7 @@ Scenario Outline:  Edit Non Default Shipping Address and Verify
 
 
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
-@ZYP_MYACCOUNT_K4232-9194 @CR-RK 
+@ZYP_MYACCOUNT_K4232-9194 @CR-RK @RegressionP2
 Scenario: Verify Authenticated user can Manage Address Book - View existing Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -168,7 +168,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Add new Address de
 	
 	
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
-@ZYP_MYACCOUNT_K4232-9333 @CR-RK 
+@ZYP_MYACCOUNT_K4232-9333 @CR-RK @RegressionP2
 Scenario: Verify Authenticated user can Manage Address Book -Set Default Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -230,7 +230,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 		
 		
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
-@ZYP_MYACCOUNT_K4232-9195 @CR-RK 
+@ZYP_MYACCOUNT_K4232-9195 @CR-RK @RegressionP2
 Scenario: Verify Authenticated user can -Set Default Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -251,7 +251,7 @@ Scenario: Verify Authenticated user can -Set Default Address
 	
 	
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
-@ZYP_MYACCOUNT_K4232-9193 @CR-RK @C1-Message 
+@ZYP_MYACCOUNT_K4232-9193 @CR-RK @C1-Message @RegressionP2
 Scenario: Verify Authenticated user can Manage Address Book - Delete Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 

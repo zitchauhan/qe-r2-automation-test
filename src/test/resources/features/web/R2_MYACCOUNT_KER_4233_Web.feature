@@ -277,7 +277,7 @@ Scenario: Verify that Authenticated User is able to restore Removed item in Wish
 		
 		
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4233 
-@ZYP_MYACCOUNT_K4233-11100 @ZYP_MYACCOUNT_K4233-10485 @CR-MS 
+@ZYP_MYACCOUNT_K4233-11100 @ZYP_MYACCOUNT_K4233-10485 @CR-MS @RegressionP2
 Scenario: Verify that Authenticated User is able to view the Wish List Details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -305,7 +305,7 @@ Scenario: Verify that Authenticated User is able to view the Wish List Details
 		|WishList_Product_Price|	
 		
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4233 
-@ZYP_MYACCOUNT_K4233-11109 @ZYP_MYACCOUNT_K4233-10498 @CR-MS 
+@ZYP_MYACCOUNT_K4233-11109 @ZYP_MYACCOUNT_K4233-10498 @CR-MS @RegressionP2
 Scenario: Verify the User is able to move item from wish list to cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
