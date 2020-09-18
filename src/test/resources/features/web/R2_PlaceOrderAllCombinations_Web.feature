@@ -141,9 +141,12 @@ Scenario: Place order as a registered user using Paypal express as tender
   When user navigate to Cart page 
   Then Verify paypal button on Cart Page 
 	Then User click on paypal button on cart page
-	And user enter the paypal login "PayPalEmail" "PayPalPassword" and click on Continue button
+	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword"
 	And user clicks on place order on checkout page 
-	Then verify user is able to successfully place the order
+	Then verify user is able to successfully place the order 
+	Then Verify the message on the page 
+		| # Message for successful order is displayed |
+		| Order Number |
 
 
 		
