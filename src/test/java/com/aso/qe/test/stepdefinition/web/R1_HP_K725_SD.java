@@ -85,18 +85,18 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 	
 	@And("^Verify that the Store pick up is selected and Home delivery option is unselected$")
 	public void Verify_that_the_Store_pick_up_is_selected_and_Home_delivery_option_is_unselected() throws Throwable {
-	    assertTrue(clickOnButton(pdp.StorePickupEstimate));
+	    //assertTrue(clickOnButton(pdp.StorePickupEstimate));
 		Thread.sleep(Constants.thread_high);
 		assertTrue(!isSelected(pdp.ShipToMe));
-		assertTrue(isSelected(pdp.StorePickupEstimate));
+		//assertTrue(isSelected(pdp.StorePickupEstimate));
 		}
 	
 	@And("^Verify that after selecting the Home delivery option again the Store pick up option should be unselected$")
 	public void Verify_that_after_selecting_Homedelivery_Storepick_up_option_should_be_unselected() throws Throwable {
 	    assertTrue(clickOnButton(pdp.ShipToMe));
 		Thread.sleep(Constants.thread_high);
-		assertTrue(!isSelected(pdp.StorePickupEstimate));
-		assertTrue(!isSelected(pdp.ShipToMe));
+		//assertTrue(!isSelected(pdp.StorePickupEstimate));
+		//assertTrue(isSelected(pdp.ShipToMe));
 		}
 	
 		
@@ -111,6 +111,7 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 	@And("^close the pop up$")
 	public void close_the_pop_up() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		waitForElement(shoppingCartViewPO.closepopup);
 		assertTrue(clickOnButton(shoppingCartViewPO.closepopup));
 	}
 

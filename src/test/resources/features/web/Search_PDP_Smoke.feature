@@ -87,7 +87,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the reviews
    
    
-  @RegressionP2
+  @RegressionP2 
    Scenario: Navigate to a product pdp page and verify the Home Delivery Option on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
    When user navigates to PLP of any product
@@ -126,7 +126,7 @@ Feature: PDP Scenarios based on searching the products
   |Nike|
  
  
- @RegressionP2  
+ @RegressionP2
  Scenario Outline: Verify whether the grid with relevant items displayed when the user search a category
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to view Search Box on Homepage 

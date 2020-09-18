@@ -10,7 +10,7 @@ Scenario: Verify whether the user is able to change the store location successfu
 	Then user verify the results based on entering zipcode 
 	Then verify the components in Find a Store Model
 	Then user Select Store Location In PLP
-	Then User searches a product "SOFSKUNumber" and navigates to PDP 
+	Then User searches a product "BOPIS_SOF_Product" and navigates to PDP 
 	Then User is navigated to pdp page 
 	Then user Verify Store Locator in PDP	
 	
