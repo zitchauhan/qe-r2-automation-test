@@ -42,7 +42,7 @@ public class R2_CHECKOUT_K3168_SD extends CommonActionHelper {
 
 	@Then("^user enters valid cvv value \"(.*?)\"$")
 	public void user_enters_valid_cvv_value(String CVV) throws Throwable {
-		Thread.sleep(Constants.thread_medium); 
+		Thread.sleep(Constants.thread_high); 
 		r2CheckOutPo.enterCVVValue(webPropHelper.getTestDataProperty(CVV));
 	}
 

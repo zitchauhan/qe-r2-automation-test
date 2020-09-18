@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -976,19 +977,19 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//span[text()='Credit Card']")
 	public WebElement cc_Radio_Button;
 	
-	@FindBy(xpath = "//*[text()='Cardholder Name']/following::*[1]")
+	@FindBy(xpath = "//*[text()='Cardholder Name']/following::*[1] | //*[@id='name']")
 	public WebElement ccCardHolderName;
 	
 	@FindBy(xpath = "//*[text()='Credit Card Number']/following::*[1] | //input[@id='card']")
 	public WebElement ccCreditCardNumber;
 	
-	@FindBy(xpath = "//*[text()='Exp. Date']/following::*[1]")
+	@FindBy(xpath = "//*[text()='Exp. Date']/following::*[1] | //*[@id='exp']")
 	public WebElement ccCreditCardExpiry;
 	
-	@FindBy(xpath = "//*[text()='CVV']/following::*[3]")
+	@FindBy(xpath = "//*[text()='CVV']/following::*[3] | //*[@id='cvv']")
 	public WebElement ccCreditCardCvv;
 	
-	@FindBy(xpath = "//span[@class='creditCardImage']/img")
+	@FindBy(xpath = "//span[@class='creditCardImage']/img | //*[@id='payment_form']//span[2]/img")
 	public WebElement ccLogoImg;
 	
 	@FindBy(id="first-data--field-card")public WebElement CardField_Frame;
@@ -1248,6 +1249,11 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "//*[contains(text(),'Unfortunately, the Gift Card')]")
 	public WebElement GCService_down;
+	
+	 
+	@FindBy(xpath = "//*[@id='first-data-payment-field-name']")
+	public WebElement CardHolderNameFrame;
+
 		
 
 }
