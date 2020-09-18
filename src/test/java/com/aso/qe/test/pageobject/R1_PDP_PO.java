@@ -70,7 +70,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="(//*[contains(@data-auid,'sku_')]/following-sibling::span)[1] | //*[contains(text(),'Results for')]/b | //span[@data-auid='skuId']")	public   WebElement txtProductSKU; //MJR 31/7/19
 
 	@FindBy(xpath="(//*[@data-auid='skuId'] | //*[contains(text(),'Results for')]/b")	public   WebElement txtSKU;
-	@FindBy(xpath="//*[contains(@data-auid,'item_')]")	public   WebElement txtProductItemNumber;
+	@FindBy(xpath="//*[contains(@data-auid,'item_')] | //*[@data-auid='itemId']")	public   WebElement txtProductItemNumber;
 	@FindBy(xpath="//*[@data-auid='PDP_Size_heading']//following-sibling::div//button[@aria-label='Medium']|//*[@data-auid='PDP_Shoe Size_Attribute']//span[text()='10']") 	public   WebElement secSize1;
 	@FindBy(xpath="//*[@data-auid='swatchButton-image-4286']|//*[@data-auid='swatchButton-image-4076']") 	public   WebElement secSize2;
 	@FindBy(xpath="//*[@data-auid='btnviewCart']") 	public WebElement btnViewCart;
@@ -1326,6 +1326,6 @@ public class R1_PDP_PO extends CommonActionHelper
 					assertTrue(clickOnButton(SeeAll));
 				}
 				
-				
+			@FindBy(xpath="//*[text()='Out of Stock Online']") public WebElement GCOutOfStock;
 				
 }
