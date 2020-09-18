@@ -1246,5 +1246,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[text()='You have no gift cards listed.']")
 	public WebElement MyAccount_NoGCMsg;
 	
+	@FindBy(xpath = "//*[contains(text(),'Unfortunately, the Gift Card')]")
+	public WebElement GCService_down;
+		
 
 }
