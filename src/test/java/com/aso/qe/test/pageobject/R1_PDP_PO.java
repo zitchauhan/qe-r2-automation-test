@@ -1327,5 +1327,7 @@ public class R1_PDP_PO extends CommonActionHelper
 				}
 				
 			@FindBy(xpath="//*[text()='Out of Stock Online']") public WebElement GCOutOfStock;
+			@FindBy(xpath="//*[@data-auid='qtyResMsg']") public WebElement LimitedQtyMsgPDP;
+			@FindBy(xpath="//*[contains(text(),'Limit 1 per customer')]") public WebElement LimitedQtyMsgCart;
 				
 }
