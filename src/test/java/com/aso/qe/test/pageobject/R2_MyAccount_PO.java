@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -111,8 +112,8 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// @FindBy(xpath = "//*[@data-auid='setAsDefault_btn']")
 	// public WebElement setAsDefaultBtn;// RKA 3 aug added //GK 17Sept
 
-	@FindBy(xpath = "//h5[text()='']") // CR-RK KER-2920 Sep18
-	public WebElement headers;
+	@FindBy(xpath = "//h5[text()='PAYMENT']") // CR-RK KER-2920 Sep18
+	public WebElement headerPayments;
 
 	@FindBy(xpath = "//*[@data-auid='defaultAddress'] | //*[text()='DEFAULT']")
 	public WebElement setAsDefaultBtn;// RKA 3 aug added //GK 17Sept //CR-RK KER-3151 Sep 18 //CR-DPK 09-oct
@@ -351,7 +352,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = removeBtnForAddress)
 	public WebElement btnRemove;
 	
-	@FindBy(xpath = "(//*[text()='Remove'])[2]")
+	@FindBy(xpath = "(//*[text()='Remove'])[2] | //*[text()='Remove']")
 	public WebElement removeBtnForGiftCard;
 	
 	@FindBy(xpath = "//*[contains(text(),'Academy Sports + Outdoors Credit Card ending in')]/../../../div[2]/div/button[2]")
@@ -429,12 +430,22 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	// public WebElement headers;
 	
 	@FindBy(xpath="//*[text()='DEFAULT']/following::div[5]")public WebElement defaultCreditCard;
+	@FindBy(xpath="//button[@class='css-7frz9w']")public WebElement defaultCreditCardChkoutPayment;
 	
 	@FindBy(xpath="//button[@class='css-7frz9w']")public WebElement defaultCreditCardChkout;
 
+	@FindBy(xpath = "//*[@data-auid='btnsubmit-btn']")public WebElement PaymentPage_AddCreditCard_Add_btn;
+	
 	@FindBy(xpath = "//*[text() = 'CREDIT CARDS']")
 	public WebElement headerCreditCards;
 
+	@FindBy(xpath = "//*[.='PAYMENT']/a ")public WebElement lnkPayment; //// CR-SK 29 Aug-18
+	
+	@FindBy(xpath = "(//*[text()='PAYMENT'])[2]")public WebElement Order_Payment_txt;
+	
+	@FindBy(xpath = "(//*[text()='PAYMENT'])[2]/following-sibling::*[2]")public WebElement Order_Payment_Section;
+	
+	@FindBy(xpath = "//*[@data-auid='Payments_m']")public WebElement lnkPayment_Mobile; // CR-RK KER-2920 Sep 4 //CR-Rk Sep24 KER-2920
 	@FindBy(xpath = "//*[text() = 'You have no credit cards listed.']")
 	public WebElement txtNoCreditCardListed;
 
@@ -966,19 +977,19 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//span[text()='Credit Card']")
 	public WebElement cc_Radio_Button;
 	
-	@FindBy(xpath = "//*[text()='Cardholder Name']/following::*[1]")
+	@FindBy(xpath = "//*[text()='Cardholder Name']/following::*[1] | //*[@id='name']")
 	public WebElement ccCardHolderName;
 	
 	@FindBy(xpath = "//*[text()='Credit Card Number']/following::*[1] | //input[@id='card']")
 	public WebElement ccCreditCardNumber;
 	
-	@FindBy(xpath = "//*[text()='Exp. Date']/following::*[1]")
+	@FindBy(xpath = "//*[text()='Exp. Date']/following::*[1] | //*[@id='exp']")
 	public WebElement ccCreditCardExpiry;
 	
-	@FindBy(xpath = "//*[text()='CVV']/following::*[3]")
+	@FindBy(xpath = "//*[text()='CVV']/following::*[3] | //*[@id='cvv']")
 	public WebElement ccCreditCardCvv;
 	
-	@FindBy(xpath = "//span[@class='creditCardImage']/img")
+	@FindBy(xpath = "//span[@class='creditCardImage']/img | //*[@id='payment_form']//span[2]/img")
 	public WebElement ccLogoImg;
 	
 	@FindBy(id="first-data--field-card")public WebElement CardField_Frame;
@@ -1000,7 +1011,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 		@FindBy(xpath = "//input[@id='myaccount-zipcode']")public WebElement NonDefaultZip;
 		@FindBy(xpath = "//input[@id='myaccount-city']")public WebElement btnEditNonDefaultPhNumber;
 		@FindBy(xpath = "//button[@data-auid='btnsubmit_btn']")public WebElement btnUpdateNonDefault;
-		@FindBy(xpath = "(//div[@class='col-12 col-md-8'])[2]")public WebElement NonDefaultShippingAddress;
+		@FindBy(xpath = "//div[@class='col-12 col-md-8'][2] | //div[@class='col-12 col-md-8']")public WebElement NonDefaultShippingAddress;
 		
 		
 		@FindBy(xpath = "//*[@class='col-12 col-md-8']")public WebElement PaymentCarddetails;
@@ -1215,6 +1226,34 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 		}
 	}
 
-	/***************************** END METHODS *********************************/
+	@FindBy(xpath = "//*[@id='ADD NEW GIFT CARD']")
+	public WebElement MyAccount_Page_AddGC;
+	
+	@FindBy(xpath = "//*[@id='myaccount-gcnumber']")
+	public WebElement MyAccount_Page_GCTextBox;
+	
+	@FindBy(xpath = "//*[@id='myaccount-gcpin']")
+	public WebElement MyAccount_Page_GCPinBox;
+	
+	@FindBy(xpath = "//*[@data-auid='btnundefined']")
+	public WebElement MyAccount_Page_GCAddCTA;
+	
+	@FindBy(xpath = "//*[text()='ADDRESS VERIFICATION']")
+	public WebElement AVS_Modal;
+
+	@FindBy(xpath = "//*[@data-auid='btncheckout_use_selected_address_btn']")
+	public WebElement AVS_UseSelectedAddress;
+	
+	@FindBy(xpath = "//*[text()='You have no gift cards listed.']")
+	public WebElement MyAccount_NoGCMsg;
+	
+	@FindBy(xpath = "//*[contains(text(),'Unfortunately, the Gift Card')]")
+	public WebElement GCService_down;
+	
+	 
+	@FindBy(xpath = "//*[@id='first-data-payment-field-name']")
+	public WebElement CardHolderNameFrame;
+
+		
 
 }

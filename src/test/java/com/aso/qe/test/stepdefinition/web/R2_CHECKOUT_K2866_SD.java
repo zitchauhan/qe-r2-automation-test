@@ -18,7 +18,6 @@ public class R2_CHECKOUT_K2866_SD extends CommonActionHelper {
 
 	@And("^user click on paypal checkout button$")
 	public void user_click_on_paypal_checkout_button() throws InterruptedException {
-		Thread.sleep(Constants.thread_medium);
 		waitForElement(r2CheckoutPo.paypalButton);
 		assertTrue(clickOnButton(r2CheckoutPo.paypalButton));
 	}

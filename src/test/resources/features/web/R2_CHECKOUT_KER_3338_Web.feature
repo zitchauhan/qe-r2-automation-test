@@ -114,7 +114,7 @@ Scenario: Verify guest user is able to select Paypal as Payment method on checko
 		
 		
 @R2_Web @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-3338 
-@ZYP_CHECKOUT_3338-8258 @CR-AKK @P1
+@ZYP_CHECKOUT_3338-8258 @CR-AKK @P1 @RegressionP1
 Scenario: Verify guest user is able to proceed with Paypal as checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 
@@ -122,7 +122,6 @@ Scenario: Verify guest user is able to proceed with Paypal as checkout for non-S
 	And user is able to see the product category name in section title 
 	And user clicks on one of the product category and navigates to LThree 
 	And User is navigated to pdp page 
-	#And user click on Add to Cart Button 
 	And user click on ship it button
 	And user will click on View Cart button 
 	Then user click on checkout button in Cart page 
@@ -134,6 +133,15 @@ Scenario: Verify guest user is able to proceed with Paypal as checkout for non-S
 	And user click on Go To Shipping Method button in Checkout page
 	And user click on go to payment present in shipping method 
 	Then user click on paypal radiobtn 
+	And user click on paypal checkout button
+	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
+	And user clicks on ok button of order not complete modal
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	Then Verify the message on the page 
+		| # Message for successful order is displayed |
+		| Order Number |
+	
 	
 @R2_Web @R2_Regression @R2_All @P-Low @1HR_R2 @C-Checkout @KER-3338 
 @ZYP_CHECKOUT_3338-8262 @CR-AKK 

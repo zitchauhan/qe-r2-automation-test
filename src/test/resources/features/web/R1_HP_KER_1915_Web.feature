@@ -1,6 +1,8 @@
+# Blocking this feaure in UAT7 Regression suite since this is a existing PROD defect
+@ignoreUAT7
 Feature: To Verify Product Wish List - Signed In User Flow (PDP) 
 
-@Web @All @C-HP @Regression @KER-1915 @ZYP_HP_K1915-3445 @CR-AKK 
+@Web @All @C-HP @Regression @KER-1915 @ZYP_HP_K1915-3445 @CR-AKK @RegressionP3
 Scenario: To verfiy Create new wish list for signed in customer 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user to click on sing in and navigate to sign in page 

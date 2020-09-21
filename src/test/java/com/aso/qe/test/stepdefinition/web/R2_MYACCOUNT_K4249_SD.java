@@ -70,6 +70,7 @@ public class R2_MYACCOUNT_K4249_SD extends CommonActionHelper {
 	@When("^user click on signin button$")
 	public void user_click_on_signin_button() throws Throwable {
 		assertTrue(clickOnButton(r2MyAccountPo.btnSignIn));
+		Thread.sleep(Constants.thread_medium);
 	}
 
 	@Then("^user should get logged in successfully$")

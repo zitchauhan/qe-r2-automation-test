@@ -194,10 +194,20 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 
 	@Given("^user should be able to see the sku and item numbers for the given image$")
 	public String user_should_be_able_to_see_the_sku_and_item_numbers_for_the_given_image() throws Throwable {
+		String itemID = "";
+		if(isDisplayed(pdp_po.GCOutOfStock))
+		{
+			expectedSKU = getText(pdp_po.txtProductSKU);
+			itemID = getText(pdp_po.txtProductItemNumber);	
+		}
+		
+		else
+		{
 		scrollPageToWebElement(pdp_po.btnAddToCart);
 		expectedSKU = getText(pdp_po.txtProductSKU);
-		String itemID = getText(pdp_po.txtProductItemNumber);
-
+		itemID = getText(pdp_po.txtProductItemNumber);
+		}
+		
 		logger.debug("This product SKU is " + expectedSKU + " and Item number is " + itemID);
 		return expectedSKU;
 	}

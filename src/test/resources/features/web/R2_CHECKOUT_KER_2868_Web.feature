@@ -1,6 +1,6 @@
 Feature: B06-225- BOPIS Order Confirmation Impact 
 
-@R2_Web @CB-MyAccount @R2_All @1HR_R2 @C-BOPIS @KER-2868 @ZYP_MYACCOUNT_K2868-10722 @P1
+@R2_Web @CB-MyAccount @R2_All @1HR_R2 @C-BOPIS @KER-2868 @ZYP_MYACCOUNT_K2868-10722 @P1 @RegressionP1
 Scenario: Verify that UnAuthenticated user is able to create an account on Order Confirmation page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 

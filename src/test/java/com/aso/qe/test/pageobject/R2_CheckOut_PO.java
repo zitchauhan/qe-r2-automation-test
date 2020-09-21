@@ -430,7 +430,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath=" //*[@data-auid='checkout_payment_add_gift_card_icon']")
 	   public WebElement expandGiftCardOptionOnCheckOutPage;  //SID 23-Jan
 	   
-	   @FindBy(xpath="//div[@class='paypal-button paypal-button-context-iframe paypal-button-label-checkout paypal-button-size-responsive paypal-button-layout-horizontal']") //Uves RegressionP1 28-Aug
+	   @FindBy(xpath="//div[@class='paypal-button paypal-button-context-iframe paypal-button-label-checkout paypal-button-size-responsive paypal-button-layout-horizontal'] | //div[contains(@id,'zoid-paypal-button')]") //Uves RegressionP1 28-Aug
 	   public WebElement paypalButton;  //SID 23-Jan
 	   
 	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[text()='Gift Card']")
@@ -590,6 +590,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
         @FindBy(xpath="//*[@name='creditcardField']/../span[2]/img | //img[@class='loadcardInfo'] | //span[@class='creditCardImage']/img")public WebElement Checkout_CreditCardPay_ImgLogo;
         @FindBy(xpath="//*[contains(text(),'Choose Card')]/following::*[2]")public WebElement Checkout_CreditCard_DropDown; 
         
+        @FindBy(xpath="//*[@data-auid='btncheckout_goto_order_review_from_paypal_modal']")public WebElement OkButtonReturnFromPaypal;
 
         //*****************Payment Method (END)
 		
@@ -1213,5 +1214,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath = "//*[@id='closeCart']") public WebElement PayPal_PopUpClose;
 		@FindBy(xpath = "//*[@class='span11 alignRight baslLoginButtonContainer']") public WebElement PayPal_Login;
 		@FindBy(xpath="//div[@class='css-13o7eu2'][1]") public WebElement WGBulkMessage;
+		@FindBy(xpath="//*[@data-auid='btnbuttonOneSixFour'][2]") public WebElement ContinueReviewCTA;
 
 }

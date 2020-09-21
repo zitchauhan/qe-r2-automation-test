@@ -8,4 +8,3 @@
 #    And User click on the product image
    And user should be able to see PDP mention in the current url
    
-    

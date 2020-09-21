@@ -19,6 +19,7 @@ import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -67,6 +68,7 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		   
 		}
 		System.err.println(getTitle());
+		Thread.sleep(Constants.thread_high);
 		waitForElement(r2CheckOutPo.PaypalEmail_Input);
 
 		setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty(arg1));
@@ -77,23 +79,17 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		Thread.sleep(Constants.thread_high);
 		driver.manage().window().maximize();
 		//driver.getTitle();
-		Thread.sleep(Constants.thread_high);
 		
+		Thread.sleep(Constants.thread_highest);
+		waitForElement(r2CheckOutPo.PayPalContinue_Btn);
 		
-
-
-		
-		 waitForElement(r2CheckOutPo.PayPalContinue_Btn);
-		clickOnButton(r2CheckOutPo.PayPalContinue_Btn);
-		
+		r2CheckOutPo.PayPalContinue_Btn.click();
 		
 		driver.switchTo().window(winHandleBefore);
 		JavascriptExecutor jsb = (JavascriptExecutor) driver;
 		Thread.sleep(Constants.thread_high);
 		jsb.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		Thread.sleep(Constants.thread_high);
-		//assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));
-		Thread.sleep(Constants.thread_highest);
 		
 		System.err.println(driver.getTitle());
 		
@@ -106,6 +102,11 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 	@Then("^user fill email address in payment$")
 	public void user_fill_email_address_in_payment() throws Throwable {
 	   setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty("EmailWithExistingCreditCard"));
+	}
+	
+	@And("^user clicks on ok button of order not complete modal$")
+	public void user_clicks_on_ok_button_of_order_not_complete_modal() throws Throwable {
+		assertTrue(clickOnButton(r2CheckOutPo.OkButtonReturnFromPaypal));
 	}
 	
 }

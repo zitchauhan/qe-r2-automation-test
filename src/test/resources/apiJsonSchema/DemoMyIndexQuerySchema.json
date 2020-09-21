@@ -1,0 +1,307 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1600067091.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"hits",
+		"nbHits",
+		"page",
+		"nbPages",
+		"hitsPerPage",
+		"exhaustiveNbHits",
+		"query",
+		"params",
+		"processingTimeMS"
+	],
+	"properties": {
+		"hits": {
+			"$id": "#root/hits", 
+			"title": "Hits", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/hits/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"PID",
+					"Pname",
+					"Desc",
+					"Code",
+					"ku",
+					"objectID",
+					"_highlightResult"
+				],
+				"properties": {
+					"PID": {
+						"$id": "#root/hits/items/PID", 
+						"title": "Pid", 
+						"type": "integer",
+						"examples": [
+							2
+						],
+						"default": 0
+					},
+					"Pname": {
+						"$id": "#root/hits/items/Pname", 
+						"title": "Pname", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Car"
+						],
+						"pattern": "^.*$"
+					},
+					"Desc": {
+						"$id": "#root/hits/items/Desc", 
+						"title": "Desc", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"kmmmnnb"
+						],
+						"pattern": "^.*$"
+					},
+					"Code": {
+						"$id": "#root/hits/items/Code", 
+						"title": "Code", 
+						"type": "integer",
+						"examples": [
+							129845
+						],
+						"default": 0
+					},
+					"ku": {
+						"$id": "#root/hits/items/ku", 
+						"title": "Ku", 
+						"type": "object",
+						"required": [
+							"size",
+							"color"
+						],
+						"properties": {
+							"size": {
+								"$id": "#root/hits/items/ku/size", 
+								"title": "Size", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"XL"
+								],
+								"pattern": "^.*$"
+							},
+							"color": {
+								"$id": "#root/hits/items/ku/color", 
+								"title": "Color", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"Red"
+								],
+								"pattern": "^.*$"
+							}
+						}
+					}
+,
+					"objectID": {
+						"$id": "#root/hits/items/objectID", 
+						"title": "Objectid", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"4277709000"
+						],
+						"pattern": "^.*$"
+					},
+					"_highlightResult": {
+						"$id": "#root/hits/items/_highlightResult", 
+						"title": "_highlightresult", 
+						"type": "object",
+						"required": [
+							"PID",
+							"Pname"
+						],
+						"properties": {
+							"PID": {
+								"$id": "#root/hits/items/_highlightResult/PID", 
+								"title": "Pid", 
+								"type": "object",
+								"required": [
+									"value",
+									"matchLevel",
+									"matchedWords"
+								],
+								"properties": {
+									"value": {
+										"$id": "#root/hits/items/_highlightResult/PID/value", 
+										"title": "Value", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"2"
+										],
+										"pattern": "^.*$"
+									},
+									"matchLevel": {
+										"$id": "#root/hits/items/_highlightResult/PID/matchLevel", 
+										"title": "Matchlevel", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"none"
+										],
+										"pattern": "^.*$"
+									},
+									"matchedWords": {
+										"$id": "#root/hits/items/_highlightResult/PID/matchedWords", 
+										"title": "Matchedwords", 
+										"type": "array",
+										"default": []
+									}
+								}
+							}
+,
+							"Pname": {
+								"$id": "#root/hits/items/_highlightResult/Pname", 
+								"title": "Pname", 
+								"type": "object",
+								"required": [
+									"value",
+									"matchLevel",
+									"fullyHighlighted",
+									"matchedWords"
+								],
+								"properties": {
+									"value": {
+										"$id": "#root/hits/items/_highlightResult/Pname/value", 
+										"title": "Value", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"<em>Car</em>"
+										],
+										"pattern": "^.*$"
+									},
+									"matchLevel": {
+										"$id": "#root/hits/items/_highlightResult/Pname/matchLevel", 
+										"title": "Matchlevel", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"full"
+										],
+										"pattern": "^.*$"
+									},
+									"fullyHighlighted": {
+										"$id": "#root/hits/items/_highlightResult/Pname/fullyHighlighted", 
+										"title": "Fullyhighlighted", 
+										"type": "boolean",
+										"examples": [
+											true
+										],
+										"default": true
+									},
+									"matchedWords": {
+										"$id": "#root/hits/items/_highlightResult/Pname/matchedWords", 
+										"title": "Matchedwords", 
+										"type": "array",
+										"default": [],
+										"items":{
+											"$id": "#root/hits/items/_highlightResult/Pname/matchedWords/items", 
+											"title": "Items", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"car"
+											],
+											"pattern": "^.*$"
+										}
+									}
+								}
+							}
+
+						}
+					}
+
+				}
+			}
+
+		},
+		"nbHits": {
+			"$id": "#root/nbHits", 
+			"title": "Nbhits", 
+			"type": "integer",
+			"examples": [
+				1
+			],
+			"default": 0
+		},
+		"page": {
+			"$id": "#root/page", 
+			"title": "Page", 
+			"type": "integer",
+			"examples": [
+				0
+			],
+			"default": 0
+		},
+		"nbPages": {
+			"$id": "#root/nbPages", 
+			"title": "Nbpages", 
+			"type": "integer",
+			"examples": [
+				1
+			],
+			"default": 0
+		},
+		"hitsPerPage": {
+			"$id": "#root/hitsPerPage", 
+			"title": "Hitsperpage", 
+			"type": "integer",
+			"examples": [
+				20
+			],
+			"default": 0
+		},
+		"exhaustiveNbHits": {
+			"$id": "#root/exhaustiveNbHits", 
+			"title": "Exhaustivenbhits", 
+			"type": "boolean",
+			"examples": [
+				true
+			],
+			"default": true
+		},
+		"query": {
+			"$id": "#root/query", 
+			"title": "Query", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"Car"
+			],
+			"pattern": "^.*$"
+		},
+		"params": {
+			"$id": "#root/params", 
+			"title": "Params", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"query=Car"
+			],
+			"pattern": "^.*$"
+		},
+		"processingTimeMS": {
+			"$id": "#root/processingTimeMS", 
+			"title": "Processingtimems", 
+			"type": "integer",
+			"examples": [
+				1
+			],
+			"default": 0
+		}
+	}
+}

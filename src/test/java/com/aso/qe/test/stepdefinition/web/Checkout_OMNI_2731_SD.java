@@ -3,8 +3,10 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.SendKeysAction;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -25,9 +27,9 @@ public void validate_the_radio_button_Academy_Credit_Card_and_Credit_Card() thro
 	assertTrue(isDisplayed(r2_myaccount_PO.plcc_Radio_Button));
 	assertTrue(isDisplayed(r2_myaccount_PO.cc_Radio_Button));
 }
-@Then("^user adds the \"([^\"]*)\"$")
-public void user_adds_the(String arg1) throws Throwable {
-    // Write code here that turns the phrase above into concrete actions
+
+@Then("^user now adds the \"([^\"]*)\"$")
+public void user_now_adds_the(String arg1) throws Throwable {
 	 if (arg1.equalsIgnoreCase("Academy Credit Card"))
 	 {
 		 if (isDisplayed(r2_myaccount_PO.plcc_Radio_Button))
@@ -76,7 +78,54 @@ public void user_adds_the(String arg1) throws Throwable {
 			clickOnButton(r2_myaccount_PO.addAccButton);
 			}
 	 }
-}
+	 
+
+	 
+		 else if (arg1.equalsIgnoreCase("Credit Card")) {
+			 	
+			 	waitForElement(r2_myaccount_PO.cc_Radio_Button);	 	
+			 	getDriver().switchTo().frame(r2_myaccount_PO.CardHolderNameFrame);
+			 	//waitForElement(r2_myaccount_PO.ccCardHolderName);
+			 	setInputText(r2_myaccount_PO.ccCardHolderName, webPropHelper.getTestDataProperty("CardholderName"));
+			 	getDriver().switchTo().defaultContent();
+			 	
+			 	getDriver().switchTo().frame("first-data-payment-field-card");
+			 	//waitForElement(r2_myaccount_PO.ccCreditCardNumber);
+				setInputText(r2_myaccount_PO.ccCreditCardNumber,webPropHelper.getTestDataProperty("CreditCardNumber"));
+				getDriver().switchTo().defaultContent();
+				assertTrue(isDisplayed(r2_myaccount_PO.ccLogoImg));
+				
+				getDriver().switchTo().frame("first-data-payment-field-exp");
+				//waitForElement(r2_myaccount_PO.ccCreditCardExpiry);
+				setInputText(r2_myaccount_PO.ccCreditCardExpiry,webPropHelper.getTestDataProperty("ExpDate"));
+				getDriver().switchTo().defaultContent();
+				
+				getDriver().switchTo().frame("first-data-payment-field-cvv");
+				//waitForElement(r2_myaccount_PO.ccCreditCardCvv);
+				setInputText(r2_myaccount_PO.ccCreditCardCvv,webPropHelper.getTestDataProperty("CVV"));
+				getDriver().switchTo().defaultContent();				
+		    	
+				assertTrue(isDisplayed(r2_myaccount_PO.billingAddressFirstName));
+				setInputText(r2_myaccount_PO.billingAddressFirstName,webPropHelper.getTestDataProperty("FirstName"));
+
+				assertTrue(isDisplayed(r2_myaccount_PO.billingAddressLastName));
+				setInputText(r2_myaccount_PO.billingAddressLastName,webPropHelper.getTestDataProperty("LastName"));
+
+				assertTrue(isDisplayed(r2_myaccount_PO.billingAddressAddress));
+				setInputText(r2_myaccount_PO.billingAddressAddress,webPropHelper.getTestDataProperty("Address"));
+
+				assertTrue(isDisplayed(r2_myaccount_PO.billingAddressZipCode));
+				setInputText(r2_myaccount_PO.billingAddressZipCode,webPropHelper.getTestDataProperty("zip_1"));
+				
+				assertTrue(isDisplayed(r2_myaccount_PO.billingPhoneNumber));
+				setInputText(r2_myaccount_PO.billingPhoneNumber,webPropHelper.getTestDataProperty("Phone_Number"));
+				
+				clickOnButton(r2_myaccount_PO.PaymentPage_AddCreditCard_Add_btn);
+				Thread.sleep(Constants.thread_medium);
+				
+				
+		 }
+	 }
 
 
 @Then("^validate the acc card added$")
@@ -139,66 +188,26 @@ public void user_validates_the(String arg1) throws Throwable {
  }
  else if (arg1.equalsIgnoreCase("Credit Card"))
  {
+	 waitForElement(r2_myaccount_PO.cc_Radio_Button);
 	 if (isDisplayed(r2_myaccount_PO.cc_Radio_Button))
 		{ 
-			waitForElement(r2_myaccount_PO.cc_Radio_Button);
+			
 			clickOnRadioButton(r2_myaccount_PO.cc_Radio_Button);
 			
 			waitForElement(r2_myaccount_PO.ccCardHolderName);
 			assertTrue(isDisplayed(r2_myaccount_PO.ccCardHolderName));
-		 
+
+			assertTrue(isDisplayed(r2_myaccount_PO.ccCreditCardNumber));
+			//driver.switchTo().defaultContent();
+
 			waitForElement(r2_myaccount_PO.ccCreditCardExpiry);
 			assertTrue(isDisplayed(r2_myaccount_PO.ccCreditCardExpiry));
 			
-			waitForElement(r2_myaccount_PO.ccCreditCardCvv);
 			assertTrue(isDisplayed(r2_myaccount_PO.ccCreditCardCvv));
-			
-			Thread.sleep(Constants.thread_low);
-			driver.switchTo().frame(r2_myaccount_PO.CardField_Frame);
-			waitForElement(r2_myaccount_PO.ccCreditCardNumber);
-			assertTrue(isDisplayed(r2_myaccount_PO.ccCreditCardNumber));
-			setInputText(r2_myaccount_PO.ccCreditCardNumber,webPropHelper.getTestDataProperty("CardPlcc"));
-			tabInputBox(r2_myaccount_PO.plccCreditCardTextBox);
-			driver.switchTo().defaultContent();
-			
-			Thread.sleep(Constants.thread_low);
-			waitForElement(r2_myaccount_PO.plccErrorUnrecognizedCardNo);
-			assertTrue(isDisplayed(r2_myaccount_PO.plccErrorUnrecognizedCardNo));
-			
-			Thread.sleep(Constants.thread_low);
-			driver.switchTo().frame(r2_myaccount_PO.CardField_Frame);
-			waitForElement(r2_myaccount_PO.ccCreditCardNumber);
-			assertTrue(isDisplayed(r2_myaccount_PO.ccCreditCardNumber));
-			setInputText(r2_myaccount_PO.ccCreditCardNumber,webPropHelper.getTestDataProperty("CardVISA"));
-			tabInputBox(r2_myaccount_PO.plccCreditCardTextBox);
-			driver.switchTo().defaultContent();
-			
-			//driver.switchTo().frame(r2_myaccount_PO.CardField_Frame);
-			waitForElement(r2_myaccount_PO.ccLogoImg);
-			assertTrue(isDisplayed(r2_myaccount_PO.ccLogoImg));	
-			//driver.switchTo().defaultContent();
-			
-	    	waitForElement(r2_myaccount_PO.billingAddressFirstName);
-			assertTrue(isDisplayed(r2_myaccount_PO.billingAddressFirstName));
-			//setInputText(r2_myaccount_PO.billingAddressFirstName,webPropHelper.getTestDataProperty("FirstName"));
-			
-			waitForElement(r2_myaccount_PO.billingAddressLastName);
-			assertTrue(isDisplayed(r2_myaccount_PO.billingAddressLastName));
-			//setInputText(r2_myaccount_PO.billingAddressLastName,webPropHelper.getTestDataProperty("LastName"));
-			
-			waitForElement(r2_myaccount_PO.billingAddressAddress);
-			assertTrue(isDisplayed(r2_myaccount_PO.billingAddressAddress));
-			//setInputText(r2_myaccount_PO.billingAddressAddress,webPropHelper.getTestDataProperty("Address"));
-			
-			waitForElement(r2_myaccount_PO.billingAddressZipCode);
-			assertTrue(isDisplayed(r2_myaccount_PO.billingAddressZipCode));
-			//setInputText(r2_myaccount_PO.billingAddressZipCode,webPropHelper.getTestDataProperty("zip_1"));
-			
-			waitForElement(r2_myaccount_PO.billingPhoneNumber);
-			assertTrue(isDisplayed(r2_myaccount_PO.billingPhoneNumber));
 			
 		}
  }
+
 }
 }
 

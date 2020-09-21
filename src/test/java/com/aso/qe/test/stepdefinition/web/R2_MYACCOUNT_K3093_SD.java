@@ -1,14 +1,18 @@
 package com.aso.qe.test.stepdefinition.web;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-
+import org.apache.log4j.Logger;
+import org.hamcrest.core.IsNot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
+import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
 
@@ -16,8 +20,10 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
+	private static final Logger logger = Logger.getLogger(R2_MyAccount_PO.class);
 	R2_R1_Fun_PO r2_r1_fun_po=PageFactory.initElements(driver,R2_R1_Fun_PO.class );
 	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);
+	String GCDownMsg = "";
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(getDriver(),R1_GlobalElementHeader_Home_PO.class);
 	@Given("^user clicks on payment tab$")
 	public void user_clicks_on_payment_tab() throws Throwable {
@@ -72,10 +78,16 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 	public void clicks_on_Add_button_to_add_gift_card() throws Throwable {
 		if(isDisplayed(myAccountPo.btnAddGiftCard)) 
 			assertTrue(clickOnButton((myAccountPo.btnAddGiftCard)));
-		else
-			assertTrue(clickOnButton((myAccountPo.btnAddGiftCardPlusIcon)));
+		else if(clickOnButton(myAccountPo.btnAddGiftCardPlusIcon));
 		
-	   
+		Thread.sleep(Constants.thread_medium);
+		if(isDisplayed(myAccountPo.GCService_down));
+		{
+			logger.debug("Error Message for GC down is" + GCDownMsg);
+			assertTrue(!isDisplayed(myAccountPo.GCService_down));
+			
+		}
+		
 	}
 
 
@@ -124,6 +136,7 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 		  
 		}else
 		{
+			waitForElement(myAccountPo.lnkMyAccount);
 			 clickOnButton(myAccountPo.lnkMyAccount);
 			  clickOnButton(r2_r1_fun_po.payment_Txt);
 		}
@@ -139,6 +152,7 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 		  
 		}else
 		{
+			waitForElement(myAccountPo.lnkMyAccount);
 			clickOnButton(myAccountPo.lnkMyAccount);
 			  clickOnButton(r2_r1_fun_po.payment_Txt);
 			 waitForElement(r2_r1_fun_po.payment_tab_Txt);

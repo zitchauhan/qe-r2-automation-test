@@ -41,7 +41,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='btnAddToCart']") public WebElement AddToCartBtn;
 	@FindBy(xpath="//*[@data-auid='btnbtnEnableBuyNow']")  public WebElement btnEnablebuynow;
 	
-	@FindBy(xpath="//*[@data-auid='PDP_MediaClick']|//ul[@class='slider animated'] | (//*[@class='css-3jgf49'])[1] | //*[@class='css-4obycp']") public WebElement imgProductMainMixedMedia;
+	@FindBy(xpath="//*[@data-auid='PDP_MediaClick']|//ul[@class='slider animated'] | (//*[@class='css-3jgf49'])[1] | //*[@class='css-4obycp'] |  //div[contains(@class,'swiper-slide d-flex justify-content-center swiper-slide-active')]") public WebElement imgProductMainMixedMedia;
 	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']|//ul[@class='slider animated'])[2]") public WebElement imgProductMainMixedMedia_m;//9aug danush
 	@FindBy(xpath="//*[@data-auid='PDP_ProductName']") public WebElement txtProductTitle;
 	@FindBy(xpath="//*[contains(@data-auid,'Size_Attribute')]") public WebElement secProductAttributeSizes;
@@ -70,7 +70,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="(//*[contains(@data-auid,'sku_')]/following-sibling::span)[1] | //*[contains(text(),'Results for')]/b | //span[@data-auid='skuId']")	public   WebElement txtProductSKU; //MJR 31/7/19
 
 	@FindBy(xpath="(//*[@data-auid='skuId'] | //*[contains(text(),'Results for')]/b")	public   WebElement txtSKU;
-	@FindBy(xpath="//*[contains(@data-auid,'item_')]")	public   WebElement txtProductItemNumber;
+	@FindBy(xpath="//*[contains(@data-auid,'item_')] | //*[@data-auid='itemId']")	public   WebElement txtProductItemNumber;
 	@FindBy(xpath="//*[@data-auid='PDP_Size_heading']//following-sibling::div//button[@aria-label='Medium']|//*[@data-auid='PDP_Shoe Size_Attribute']//span[text()='10']") 	public   WebElement secSize1;
 	@FindBy(xpath="//*[@data-auid='swatchButton-image-4286']|//*[@data-auid='swatchButton-image-4076']") 	public   WebElement secSize2;
 	@FindBy(xpath="//*[@data-auid='btnviewCart']") 	public WebElement btnViewCart;
@@ -227,8 +227,8 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="(//*[@data-auid='PDP_MediaClick']//*[@alt='Hover/Click to enlarge'])[1]") public WebElement imgClickToZoom;
 	@FindBy(xpath="(//*[@data-auid='PDP_ProductImage_m']//*[@alt='Hover/Click to enlarge'] )[3]") public WebElement imgClickToZoomMobile;
 	@FindBy(xpath="//*[@data-auid='PDP_Modal_closeIcon']/* | //*[@data-auid='PDP_ProductImage_m']//ancestor::div[@aria-modal='true']//button[contains(text(),'X')]") public WebElement btnCloseCrossZoom;
-	@FindBy(xpath="(//*[contains(text(),'days')])[1]") public WebElement txtShippingRelatedMsg;  //SID 7-September
-
+	@FindBy(xpath="//*[@class='row']//*[contains(text(),'Bulk Carrier Service')]") public WebElement txtShippingRelatedMsg;  //HP Feb_14_2019
+	//@FindBy(xpath="(//*[contains(text(),'days')])[1]") public WebElement txtShippingRelatedMsg;//SID 7-September
 	@FindBy(xpath = "//*[contains(@data-auid,'productCard_')]//span[contains(@class,'c-product__colors-available')and contains(text(),'colors')]")	public List<WebElement> colorsAvailablePLP; //SID 4-October
 	@FindBy(xpath = "//*[@data-auid='PDP_Color_Attribute']")	public WebElement visibilityAltColorPDP;
 	@FindBy(xpath = "//*[@data-auid='PDP_Color_Attribute']//button[contains(@data-auid,'swatchButton-image-')]//img")	public List<WebElement> altColorsPDP;
@@ -506,7 +506,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//li[@data-auid='drawer_Price Drop']")public WebElement PriceDropLeftNav;
 	@FindBy(xpath="//span[.='Price Drop']")public WebElement PriceDropfilterapplied;
 	
-	@FindBy(xpath="//span[contains(text(),'Store Pick Up - FREE')]") 	public WebElement StorePickupCheckboxCart;
+	@FindBy(xpath="//span[contains(text(),'Store Pick Up – FREE')]") 	public WebElement StorePickupCheckboxCart;
 	@FindBy(xpath="//span[contains(text(),'Estimated Pick Up : ')]") 	public WebElement StorePickupEstimate;
 	@FindBy(xpath="//span[contains(text(),'Ship To Me')]") 	public WebElement ShipToMe;
 	@FindBy(xpath="//h1[contains(text(),'CART')] | //h1[contains(text(),'cart')]") 	public WebElement CartTitle;
@@ -1326,6 +1326,6 @@ public class R1_PDP_PO extends CommonActionHelper
 					assertTrue(clickOnButton(SeeAll));
 				}
 				
-				
+			@FindBy(xpath="//*[text()='Out of Stock Online']") public WebElement GCOutOfStock;
 				
 }

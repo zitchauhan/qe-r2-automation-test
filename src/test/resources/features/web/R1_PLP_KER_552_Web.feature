@@ -21,7 +21,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be able to see the deselected PRICE filter Options in deselected state
     Then User closes the web application
 
-  @Regression @Web @All @KER-552 @ZYP_PLP_K552-2900 @C-PLP
+  @Regression @Web @All @KER-552 @ZYP_PLP_K552-2900 @C-PLP @RegressionP2
   Scenario: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -76,7 +76,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User navigates to L2
     Then User closes the web application
 
-  @Regression @Web @All @KER-552 @ZYP_PLP_K552-6134 @C-PLP
+  @RegressionP2 @Web @All @KER-552 @ZYP_PLP_K552-6134 @C-PLP
   Scenario: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2
