@@ -43,8 +43,8 @@ Scenario Outline: verify if user should be able to submit the order on the check
     Then verify child SKU of the product is displayed on the Cart page
 
 	
- @RegressionP2  
- Scenario Outline: Verify mixed items in the cart and their messages under each line item
+	@RegressionP2  
+ Scenario: Verify mixed items in the cart and their messages under each line item
     Given user launches the browser and navigates to "ASO_HOME" page
     And User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
@@ -62,14 +62,13 @@ Scenario Outline: verify if user should be able to submit the order on the check
 	And user clicks on checkout button on cart page
   	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
-	And user add "<Card Type>" details for a guest user 
-	And user clicks on place order on checkout page 
-	Then verify user is able to successfully place the order 
-	Then Verify the message on the page 
-		| Order Number | 		
-	Examples: 
-		|Card Type	|
-		|Visa      	|	
+	#And user add "<Payment Type>" details in payment method for "guest" user
+	#And user clicks on place order on checkout page 
+	#Then verify user is able to successfully place the order
+		#Examples: 
+		#|Payment Type	|
+		#|Credit Card - VISA	| 		
+		
 	
 	
 	@RegressionP2
@@ -87,12 +86,12 @@ Scenario Outline: verify if user should be able to submit the order on the check
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order
 		Examples: 
-		|Payment Type	|
+		#|Payment Type	|
 		|Credit Card - VISA	|
 		
 		
 	
-@RegressionP2
+	@RegressionP2
  Scenario: Validate user is able to change ship modes of an STS added item to Store Pickup or Home Delivery on cart page
     Given user launches the browser and navigates to "ASO_HOME" page
     And User should be able to click on Find Store 
@@ -107,7 +106,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
     
     
     
- @RegressionP2
+    @RegressionP2
  Scenario: Validate whether BOPIS WG item is getting successfully added to cart and is not showing OOS
     Given user launches the browser and navigates to "ASO_HOME" page
     And User should be able to click on Find Store 
@@ -117,24 +116,4 @@ Scenario Outline: verify if user should be able to submit the order on the check
 	Then user click on pickup button 
 	And user click on view cart
 	And Verify that user should be able to navigate to the cart page and the item should be successfully added to cart
-	
-	
-  @RegressionP1  @abc
- Scenario: Ship alone items should appear in separate package and not combined with 
- other items and order should be placed successfully
-    Given user launches the browser and navigates to "ASO_HOME" page
-	And User searches a product "ShipAloneItem" and navigates to PDP 
-	And user click on ship it button
-	And close the pop up
-	And User searches a product "productNameSTH" and navigates to PDP 
-	And user click on ship it button
-	And user click on viewcart button
-	Then user navigates to Cart Page
-    And user view and Applied Promotions/Discounts "Promocode" 
-	And verify Promo code discount is applied 
-	And verify Promo code discount is applied
-	And user clicks on checkout button on cart page
-	And user adds shipment address on checkout page for "guest" user
-	And user verifies multiple packages are visible
-	
 	

@@ -113,7 +113,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//a[@data-auid='FOOTER_LINK_Shop Gift Cards']")public WebElement ShopGiftCardLink;
 	@FindBy(xpath="(//section[@id='productCardListing']/div/a)[2]")public WebElement GiftCardAvailable;
 	@FindBy(xpath="(//section[@id='productCardListing']/div/a)[1]")public WebElement BulkGiftCardAvailable;
-	
+	@FindBy(xpath="(//a[@aria-label='Shoes + Boots'])[2]") public   WebElement Shoeboatsflyout;
 
 	public void clickProdcutCardimage() throws Exception {
 		assertTrue(clickOnButton(btnProdctimage));

@@ -58,7 +58,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='level1Category-SHOP']|//*[@data-auid='level1Category-Shop']") public WebElement btnShopCategory;
 	@FindBy(xpath="//*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //SID Modified 18-Nov
 	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m']")public WebElement btnClothingCategory_M; //SID 20-Nov
-	
+	@FindBy(xpath="//a[@data-auid='level2Category-Shoes + Boots']") public   WebElement ShoesBootsCategory;
 	
 	@FindBy(xpath="//*[@data-auid='level2Category-Home & Backyard'] | //*[@data-auid='level2Category-Home + Backyard']")public WebElement btnHomeBackyard;
 	@FindBy(xpath="//*[@data-auid='level4Category-Tables']")public WebElement btnTables;//Ranj
@@ -2081,6 +2081,24 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			return flag;
 		}
 		
+		
+		public void hoverCategory() throws Exception
+		{
+			
+			
+				Thread.sleep(Constants.thread_low); 
+				clickOnButton(btnShopCategory);
+				Thread.sleep(Constants.thread_low); 
+				//Actions hover = new Actions(getDriver());
+				moveHover(ShoesBootsCategory);
+				Thread.sleep(Constants.thread_low); 
+				//clickOnButton(btnMenClothingShop);
+				//Thread.sleep(Constants.thread_low); 
+				//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
+			
+		}	
+		
+	
 		
 	//************************************************************
 	
