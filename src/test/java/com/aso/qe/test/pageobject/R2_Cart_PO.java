@@ -546,8 +546,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 	
 // ********** Venkat ************
 	@FindBy(xpath="//span[@class='o-copy__12reg mt-quarter icon-text align-middle float-left find-store-hover']") public WebElement LocationText;
-	@FindBy(xpath="(//div[@class=' o-copy__14bold mr-auto'])[2]") public WebElement StoreTextFindAStore;
-	@FindBy(xpath="//button[@class='css-rd24ah e12jmf1e0']//i[contains(@class,'academyicon icon-plus')]") public WebElement btnExpaandLocation2;
+	@FindBy(xpath="(//div[@class=' o-copy__14bold mr-auto'])[1]") public WebElement StoreTextFindAStore;
+	@FindBy(xpath="(//button[@class='css-gk8hdk e12jmf1e0'])[1]") public WebElement btnExpaandLocation2;
 	               //button[@class='css-gk8hdk e12jmf1e0']//i[contains(@class,'academyicon icon-plus')]
 	@FindBy(xpath="//span[@class='academyicon icon-close icon a-close-icon']") public WebElement btnPopupClose;
 	
@@ -572,7 +572,9 @@ public class R2_Cart_PO extends CommonActionHelper {
 	
 	public void verifystoreLocatorinPDP() throws InterruptedException {
 		String LocationTextHeader = LocationText.getText();
-		assertTrue(LocationTextHeader == StorelocatorNamePopup);			
+		System.out.println(LocationTextHeader);
+		System.out.println(StorelocatorNamePopup);
+		assertTrue(LocationTextHeader.equals(StorelocatorNamePopup));			
 	}
 	
 	
