@@ -1,7 +1,7 @@
 Feature: Verify BOPIS PDP Store Selection 
 
 #****************Venkat**************
-@RegressionP2 
+@RegressionP2 @ppp
 Scenario: Verify whether the user is able to change the store location successfully from store locatoor modal invoked in PDP 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
