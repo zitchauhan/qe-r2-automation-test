@@ -205,5 +205,17 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 		isDisplayed(pdpPageObj.MsgquantityLimitation);
 	}
 
+	@And("^user verifies the restricted message is visible on \"(.*?)\"$")
+	public void user_verifies_the_restricted_message_is_visible_on_PDP(String page) throws Throwable
+	{
+		if(page.equalsIgnoreCase("PDP"))
+		{
+		assertTrue(isDisplayed(pdpPageObj.LimitedQtyMsgPDP));
+		}
+		else if(page.equalsIgnoreCase("Cart"))
+		{
+			assertTrue(isDisplayed(pdpPageObj.LimitedQtyMsgCart));
+		}
+	}
 }
 
