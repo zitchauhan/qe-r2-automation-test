@@ -10,6 +10,7 @@ import com.aso.qe.test.pageobject.R1_PDP_PO;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class R1_PDP_K3728_SD extends CommonActionHelper{
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
@@ -166,7 +167,20 @@ public class R1_PDP_K3728_SD extends CommonActionHelper{
 		}	
 	}
 	
-	
+	@When("^user mouse on one category on the page$")
+	public void user_mouse_on_one_category_on_the_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   // throw new PendingException();
+		globalElementHeader.hoverCategory();
+		
+	}
+
+	@Then("^Verify the category text in the fly out$")
+	public void verify_the_category_text_in_the_fly_out() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new PendingException();
+		assertTrue(isDisplayed(pdpPageObj.Shoeboatsflyout));
+	}
 	
 }
 

@@ -105,7 +105,7 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	@FindBy(xpath = "//div[@class='col-12 col-md-5 px-0 pl-md-1']")
 	public WebElement AS_txtOrdersummaryCart;
 
-	@FindBy(xpath = "//*[@data-auid='crt_btnAddPromo']")
+	@FindBy(xpath = "//*[@data-auid='crt_btnAddPromo'] | //*[text()='Enter Promo Code']")
 	public WebElement AS_txtAddPromoCode;
 
 	@FindBy(xpath = "//*[@data-auid='crt_btnAddPromo']/span")
@@ -165,7 +165,7 @@ public class R2_Sanity_PO extends CommonActionHelper {
 
 	public void verifyAppliedPromoOnCartPage(String arg1) throws InterruptedException {
 		assertTrue(isDisplayed(AS_txtAddPromoCode));
-		assertTrue(clickOnButton(AS_iconPlusPromoCode));
+		//assertTrue(clickOnButton(AS_iconPlusPromoCode));
 		setInputText(AS_inputPromoCode, webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(AS_btnCartSubmit));
 		Thread.sleep(2000);

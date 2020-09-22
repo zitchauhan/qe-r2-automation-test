@@ -186,7 +186,7 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 		assertTrue(firstLastName.contains(newFirstName));	   
 	}
 	
-	@Then ("^user edits non default shipping Address and verify  \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
+	@Then ("^user edits non default shipping Address and verify \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
 	public void user_edits_non_default_shipping_Address_and_verify(String FName,String LName,String Address,String zip,String PhNumber) throws Throwable {
 		r2MyAccountPo.editNonDefaultShippingAddressAndVerify(FName,LName,Address,zip,PhNumber);
 	}

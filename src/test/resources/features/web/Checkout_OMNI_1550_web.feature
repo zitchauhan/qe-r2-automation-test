@@ -1,7 +1,6 @@
 Feature: PayPal on Cart: Display Accurate Shipping and Tax on Order Review After Arriving from PayPal 
 
 @CR-SK1 @P1 @P1Temp 
-
 Scenario: Place order using Paypal express
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productNameSTH" and navigates to PDP
@@ -35,3 +34,29 @@ Scenario: Verify Cart merge
   And User clicks on the minicart icon and navigated to minicart 
   And user should be able to validate the cart merge
   Then remove the product added from cart 
+  
+  
+  
+  
+    
+@RegressionP2
+Scenario: Verify cart merge happens when user signs in
+Given user launches the browser and navigates to "ASO_HOME" page
+When User searches a product "productNameSTH" and navigates to PDP
+And User gets a product name for "productNameSTH"
+And user click on ship it button
+And user click on viewcart button
+Then user navigates to Cart Page
+And User clicks on the minicart icon and navigated to minicart
+Then user should able to click on Signin button
+And user should be able to enter the signin details "Login_username" "Login_pwd"
+And User clicks on the minicart icon and navigated to minicart
+And user should be able to validate the cart merge
+When User searches a product "SOFSKUNumber" and navigates to PDP
+And User gets a product name for "SOFSKUNumber"
+And user click on ship it button
+And user click on viewcart button
+Then user navigates to Cart Page
+And User clicks on the minicart icon and navigated to minicart
+And user should be able to validate the cart merge
+  
