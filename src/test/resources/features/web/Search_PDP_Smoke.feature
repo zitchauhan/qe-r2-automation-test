@@ -1,7 +1,7 @@
 Feature: PDP Scenarios based on searching the products
   
 
-   @RegressionP2  
+   @RegressionP2
   Scenario: Search for a regular product and verify URL,Image,Reviews,Rating,Attributes and Details&Specs on the PDP page
     Given user launches the browser and navigates to "ASO_HOME" page
  	When user enters "SearchPDP" in the search box
@@ -31,6 +31,10 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see Color
    And user should be able to see the rating
    And user should be able to see the reviews
+   
+
+   
+   
    
    
    @RegressionP2
@@ -96,7 +100,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the HomeDelivery Option
    
    
-  @RegressionP2
+  @RegressionP2 
    Scenario: Navigate to a product pdp page and verify the Select Store Option on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
    When user navigates to PLP of any product
@@ -113,7 +117,7 @@ Feature: PDP Scenarios based on searching the products
    And user should see the Question and Answer section
    
    
-       @RegressionP2  
+   @RegressionP2  
   Scenario Outline: Verify whether the grid with relevant items displayed when the user search a Brand
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to view Search Box on Homepage 
@@ -197,7 +201,7 @@ Feature: PDP Scenarios based on searching the products
     Then Verify the clothing in Breadcrumb
    
    
-  @RegressionP2
+  @RegressionP2  
   Scenario: Validate that Brands category will navigate the user to the list of all brands and selecting any brand will navigate to the corresponding PLP page
     Given user launches the browser and navigates to "ASO_HOME" page 
     When user navigates till PLP of Brands
@@ -209,4 +213,48 @@ Feature: PDP Scenarios based on searching the products
     When user navigates to PLP page of clothing
     Then user expand Deals from Left Nav and select Price Drop Filter
     And Verify that Price Drop Filter is applied
+    
+    
+    @RegressionP2
+   Scenario Outline: Verify guest user can place Gift card order using CC as tender type
+     Given user launches the browser and navigates to "ASO_HOME" page 
+     When User searches a product "SKUForGiftCard" and navigates to PDP
+     And user click on Add to Cart Button
+     And user click on view cart
+     And user clicks on checkout button on cart page
+  	 And user adds shipment address on checkout page for "guest" user
+	   And user selects shipment method on check out page for "guest" user
+	   And user add "<Payment Type>" details in payment method for "guest" user
+	   And Verify the Category level promotion is applied and displayed on Order Summary section
+	   And user clicks on place order on checkout page 
+	   Then verify user is able to successfully place the order
+		   Examples: 
+		    |Payment Type	      |
+		    |Credit Card - VISA	|
+		
+		
+		
+		@RegressionP2
+   Scenario Outline: Verify guest user can place DSV order using CC as tender type
+   Given user launches the browser and navigates to "ASO_HOME" page 
+   When User searches a product "dsv_sku" and navigates to PDP
+   And user click on Add to Cart Button
+   And user click on view cart
+   And user clicks on checkout button on cart page
+  	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	And user add "<Payment Type>" details in payment method for "guest" user
+	And Verify the Category level promotion is applied and displayed on Order Summary section
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order
+		Examples: 
+		|Payment Type	|
+		|Credit Card - VISA	|
+		
+		
+		@RegressionP2 
+		Scenario: User hovers a mouse on one Category on the page and validate that category text should fly-out
+		Given user launches the browser and navigates to "ASO_HOME" page
+    When user mouse on one category on the page
+    Then Verify the category text in the fly out
     

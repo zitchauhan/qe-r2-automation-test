@@ -2,7 +2,7 @@ Feature: E02-100 - My Account, Address Book
 
 # ******* Venkat *************
 
-@temp111
+@temp111  @RegressionP2
 Scenario Outline:  Edit Non Default Shipping Address and Verify
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -32,8 +32,8 @@ Scenario Outline:  Edit Non Default Shipping Address and Verify
 	And user enter Address "Address" in address book 
 	And user enter Zipcode "zipcode" in address book 
 	And clicks on Add New Address button 
-	Then user edits non default shipping Address and verify"<data1>", "<data2>", "<data3>", "<data4>", "<data5>"
-     Examples:
+	Then user edits non default shipping Address and verify "<data1>", "<data2>", "<data3>", "<data4>", "<data5>"
+    Examples:
 		|data1    |data2    |data3      |data4  |data5     |		 
 		|FNameEdit|LNameEdit|AddressEdit|60660  |9087653217|
 	
