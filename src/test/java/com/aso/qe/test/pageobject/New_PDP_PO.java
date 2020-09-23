@@ -172,5 +172,9 @@ public class New_PDP_PO extends CommonActionHelper
 			}
 			
 		}
+		
+		@FindBy(xpath="//*[contains(text(),'Estimated Pick Up:')]") public WebElement EstimatePickUpPDP;
+		@FindBy(xpath="//*[text()='Estimated Pick Up : ']") public WebElement EstimatePickUpCart;
+		
 
 }
