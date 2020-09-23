@@ -56,36 +56,36 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	
 	@FindBy(xpath="//*[@data-auid='hamburgerMenuToggleBtn_m']")  public WebElement btnXBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='level1Category-SHOP']|//*[@data-auid='level1Category-Shop']") public WebElement btnShopCategory;
-	@FindBy(xpath="//*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory; //SID Modified 18-Nov
-	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m']")public WebElement btnClothingCategory_M; //SID 20-Nov
-	@FindBy(xpath="//a[@data-auid='level2Category-Shoes + Boots']") public   WebElement ShoesBootsCategory;
+	@FindBy(xpath="//*[@data-auid='level2Category-Clothing'] | //*[@data-auid='level2Category-CLOTHING']") public WebElement btnClothingCategory; //SID Modified 18-Nov
+	@FindBy(xpath="//*[@data-auid='level2Category-Clothing_m']") public WebElement btnClothingCategory_M; //SID 20-Nov
+	@FindBy(xpath="//a[@data-auid='level2Category-Shoes + Boots']") public WebElement ShoesBootsCategory;
 	
-	@FindBy(xpath="//*[@data-auid='level2Category-Home & Backyard'] | //*[@data-auid='level2Category-Home + Backyard']")public WebElement btnHomeBackyard;
-	@FindBy(xpath="//*[@data-auid='level4Category-Tables']")public WebElement btnTables;//Ranj
-	@FindBy(xpath="//*[@data-auid='level4Category-Griddles']")public WebElement btnGriddles; //Ranj
-	@FindBy(xpath="//*[@data-auid='level4Category-Folding Chairs']")public WebElement btnFoldingChair; //Ranj
+	@FindBy(xpath="//*[@data-auid='level2Category-Home & Backyard'] | //*[@data-auid='level2Category-Home + Backyard']") public WebElement btnHomeBackyard;
+	@FindBy(xpath="//*[@data-auid='level4Category-Tables']") public WebElement btnTables;//Ranj
+	@FindBy(xpath="//*[@data-auid='level4Category-Griddles']") public WebElement btnGriddles; //Ranj
+	@FindBy(xpath="//*[@data-auid='level4Category-Folding Chairs']") public WebElement btnFoldingChair; //Ranj
 	
 	
-	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]/a | //*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop;//UAT9
-	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing_m\"]")public WebElement btnMen_Clothing_Shop_M; //SID 14-Nov
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]/a | //*[@data-auid=\"level3Category-Boys' Clothing_m\"]") public WebElement btnMen_Clothing_Shop;//UAT9
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing_m\"]") public WebElement btnMen_Clothing_Shop_M; //SID 14-Nov
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Boys' Clothing\"]|//*[@data-auid='level4Category-Shirts']|//*[@data-auid=\"level3Category-Boys' Clothing\"]|//*[@data-auid='level4Category-Shorts']|//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop;
-	@FindBy(xpath="//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop_M;  //SID 14-Nov
-	@FindBy(xpath="//*[@data-auid='go-to-Womens_m']/a | //*[@data-auid=\"go-to-Women's Clothing_m\"]/a")public WebElement burgerMenu_GoToWomen_btn; //CR-SK, 11 Sep
-	@FindBy(xpath="//*[@data-auid='go-to-School Uniforms_m']/a")public WebElement burgerMenu_GoToSchoolUniform_btn; //CR-SK, 12 Sep
-	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]")public WebElement btnMenClothingShop_M; //SID modified 14-Nov
-	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing\"]/a | //*[@data-auid='level3Category-Mens']/a")public WebElement btnMenClothingShop; //3Sep
-	@FindBy(xpath="//*[@data-auid='level3Category-Womens']/a | //*[@data-auid=\"level3Category-Women's Clothing\"]/a")public WebElement btnWommenClothingShop; //3Sep
-//	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]| //*[@data-auid=\"level3Category-Men's Clothing\"]/a ")public WebElement btnMenClothingShop;
-	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//*[contains(@class,'c-product__description')])[2]")public WebElement imgMensShortShirt; 
+	@FindBy(xpath="//*[@data-auid=\"level4Category-Shirts_m\"] |//*[@data-auid=\"level4Category-Shorts_m\"]") public WebElement btnMensShirt_Men_Clothing_Shop_M;  //SID 14-Nov
+	@FindBy(xpath="//*[@data-auid='go-to-Womens_m']/a | //*[@data-auid=\"go-to-Women's Clothing_m\"]/a") public WebElement burgerMenu_GoToWomen_btn; //CR-SK, 11 Sep
+	@FindBy(xpath="//*[@data-auid='go-to-School Uniforms_m']/a") public WebElement burgerMenu_GoToSchoolUniform_btn; //CR-SK, 12 Sep
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]") public WebElement btnMenClothingShop_M; //SID modified 14-Nov
+	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing\"]/a | //*[@data-auid='level3Category-Mens']/a") public WebElement btnMenClothingShop; //3Sep
+	@FindBy(xpath="//*[@data-auid='level3Category-Womens']/a | //*[@data-auid=\"level3Category-Women's Clothing\"]/a") public WebElement btnWommenClothingShop; //3Sep
+//	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]| //*[@data-auid=\"level3Category-Men's Clothing\"]/a ") public WebElement btnMenClothingShop;
+	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//*[contains(@class,'c-product__description')])[2]") public WebElement imgMensShortShirt; 
 	@FindBy(xpath="//div[contains(@class,'breadCrumbComponent')]//span[@class='line-separator']//following-sibling::span//preceding-sibling::a") public WebElement lnkMensShirts;
 	@FindBy(xpath="((//span[@class='line-separator'])[3]/following::span)[1]") public WebElement lnkMensShirtsnotclickable;
 	//@FindBy(xpath="//*[@data-auid='breadcrumb_m'] | //a[text()=\"Father's Day Gifts\"]") public WebElement lnkMensClothing;
 	@FindBy(xpath="//*[@data-auid='BreadCrumb_Academy']//a | //span[text()=\"Father's Day Gifts\"]") public WebElement lnkMensClothing; 
 
-	@FindBy(xpath="//span[@class='facet-trigger']")public WebElement btnFilterFacet;
-	@FindBy(xpath="//*[@data-auid='findAStore_m']")public WebElement btnFindAStoreBurgerMenu;
+	@FindBy(xpath="//span[@class='facet-trigger']") public WebElement btnFilterFacet;
+	@FindBy(xpath="//*[@data-auid='findAStore_m']") public WebElement btnFindAStoreBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='signInCta_m']") public  WebElement btnMyAccountBurgerMenu;
-	@FindBy(xpath="//*[@data-auid='level1Category-SHOP_m']")public WebElement btnSHOPBurgerMenu;
+	@FindBy(xpath="//*[@data-auid='level1Category-SHOP_m']") public WebElement btnSHOPBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='level1Category-TRENDING_m'] | //*[@data-auid='level1Category-EXPERT ADVICE_m']") public  WebElement btnTRENDINGBurgerMenu; // SID Modified 14-Nov
 	@FindBy(xpath="//*[@data-auid='level1Category-DEALS_m']") public  WebElement btnDEALSBurgerMenu;
 	@FindBy(xpath="//*[@data-auid='logo_m']//img") public WebElement imgAcademyLogoMobile;
@@ -95,7 +95,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		@FindBy(linkText="Academy Sports Outdoors Brand Logo") 
 	} )
 	public List<WebElement> academyLogoList;
-	@FindBy(xpath="//*[@id='newUserSubmit']")public WebElement btnSignUp;
+	@FindBy(xpath="//*[@id='newUserSubmit']") public WebElement btnSignUp;
 	@FindBy(xpath="//div[contains(@class,'mobile-search')]") public WebElement ovlySearchTextBarMobile;
 	@FindBy(xpath="//*[@data-auid='go-to-CLOTHING_m']/a | //*[@data-auid='go-to-Clothing_m']/a") public WebElement txtToNavigateClothingBurgerMenuMobile;
 	@FindBy(xpath="//*[contains(@data-auid,'go-to-Men')]/a | //*[@data-auid=\"go-to-Boys' Clothing_m\"]/a" ) public WebElement txtToNavigateMensBurgerMenuMobile;
@@ -130,7 +130,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='miniCart']") public WebElement iconcart;//danush
 	@FindBy(xpath="//*[@data-auid='miniCart_m']//button") public WebElement iconcart_m;//danush //MJR 11/20/19
 	@FindBy(xpath="//*[@data-auid='search-container']//input") public WebElement txtSearchBox;
-	@FindBy(xpath="//*[@data-auid='level1Category-DEALS']/a") public  WebElement btnDEALS;
+	@FindBy(xpath="//*[@data-auid='level1Category-DEALS']/a | //*[@data-auid='level1Category-Deals']") public  WebElement btnDEALS;
 	@FindBy(xpath="//*[@data-auid='level1Category-DEALS_m']") public  WebElement btnDEALS_m;
 	@FindBy(xpath="//*[@data-auid='level1Category-TRENDING'] | //*[@data-auid='level1Category-EXPERT ADVICE']") public  WebElement btnTRENDING; //SID 18-Nov
 	@FindBy(xpath="//*[@data-auid='findAStore']")public WebElement btnFindAStore;
@@ -145,39 +145,39 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath ="//input[@type='email'][@class='fields email required z-form-control m-b1 m-rauto m-lauto show-block']") public WebElement enteremail;
 	@FindBy(xpath ="//input[@name='postal_code']") public WebElement enterpostal;
 	@FindBy(xpath ="//input[@value='SUBMIT'][@class='z-btn z-btn-ghost-white m-rauto m-lauto show-block']") public WebElement clicksubmit;
-	@FindBy(xpath ="//div[@class='leftNav leftColumn']")public WebElement myAccountMenu;
-	@FindBy(xpath="//*[@id='rh-signin-link-xs-signout']")public WebElement btnsignout_mobile;
-	@FindBy(xpath="//*[@id='rh-signin-inout-btn']")public WebElement btnsignout;
+	@FindBy(xpath ="//div[@class='leftNav leftColumn']") public WebElement myAccountMenu;
+	@FindBy(xpath="//*[@id='rh-signin-link-xs-signout']") public WebElement btnsignout_mobile;
+	@FindBy(xpath="//*[@id='rh-signin-inout-btn']") public WebElement btnsignout;
 	@FindBy(xpath="//*[@id='myAccountQuickLink']")	public WebElement accountSummaryFromMyAccount;
-	@FindBy(xpath="//*[@id='rh-signin-link-xs']")public WebElement accountSummaryFromMyAccount_Mobile;
-	@FindBy(xpath="//*[@data-auid='Wish List']")public WebElement wishListFromMyAccount;// SID 22-August
-	@FindBy(xpath = "//*[@data-auid='Wish List_m']")public WebElement wishListFromMyAccount_Mobile;
-	@FindBy(xpath ="//*[@id ='rh-signin-link-in'] | //*[contains(text(),'MY ACCOUNT MENU')]")public WebElement myAccountDropDown;//danush
-	@FindBy(xpath="//*[@id='btnForgotPassword']")public WebElement btnForgotPasswordSubmit;
-	@FindBy(xpath="//*[@id='forgot-email']")public WebElement txtForgotEmail;
-	@FindBy(xpath = "//a[@class='z-link btnforgot-pw-container']")public WebElement lnkForgotYourPassword;
-	@FindBy(xpath="//*[@id='newUserSubmit']")public WebElement btnSignupbutton;
-	@FindBy(xpath="//*[@id='passwordRegisterField']")public WebElement txtPasswordForSignUp;
-	@FindBy(xpath="//*[@id='emailRegisterField']")public WebElement txtEmail;
-	@FindBy(xpath = "//input[@name='logonPasswordVerify']")public WebElement txtConfirmPassword;
-	@FindBy(xpath = "//input[@name='lastName']")public WebElement txtLastName;
-	@FindBy(xpath = "//input[@name='firstName']")public WebElement txtFirstName;
-	@FindBy(xpath="//*[@id='signup-link-from-login']")public WebElement lnkSignUp;
-	@FindBy(xpath = "//*[@id='logonSubmit'] |//*[@data-auid='btnemail-signin-button']")public WebElement btnSubmit;
-	@FindBy(xpath = "//input[@type='password']")	public WebElement txtPassword;
-	@FindBy(xpath = "//input[@type='email']")	public WebElement txtEmailAddress;
+	@FindBy(xpath="//*[@id='rh-signin-link-xs']") public WebElement accountSummaryFromMyAccount_Mobile;
+	@FindBy(xpath="//*[@data-auid='Wish List']") public WebElement wishListFromMyAccount;// SID 22-August
+	@FindBy(xpath = "//*[@data-auid='Wish List_m']") public WebElement wishListFromMyAccount_Mobile;
+	@FindBy(xpath ="//*[@id ='rh-signin-link-in'] | //*[contains(text(),'MY ACCOUNT MENU')]") public WebElement myAccountDropDown;//danush
+	@FindBy(xpath="//*[@id='btnForgotPassword']") public WebElement btnForgotPasswordSubmit;
+	@FindBy(xpath="//*[@id='forgot-email']") public WebElement txtForgotEmail;
+	@FindBy(xpath = "//a[@class='z-link btnforgot-pw-container']") public WebElement lnkForgotYourPassword;
+	@FindBy(xpath="//*[@id='newUserSubmit']") public WebElement btnSignupbutton;
+	@FindBy(xpath="//*[@id='passwordRegisterField']") public WebElement txtPasswordForSignUp;
+	@FindBy(xpath="//*[@id='emailRegisterField']") public WebElement txtEmail;
+	@FindBy(xpath = "//input[@name='logonPasswordVerify']") public WebElement txtConfirmPassword;
+	@FindBy(xpath = "//input[@name='lastName']") public WebElement txtLastName;
+	@FindBy(xpath = "//input[@name='firstName']") public WebElement txtFirstName;
+	@FindBy(xpath="//*[@id='signup-link-from-login']") public WebElement lnkSignUp;
+	@FindBy(xpath = "//*[@id='logonSubmit'] |//*[@data-auid='btnemail-signin-button']") public WebElement btnSubmit;
+	@FindBy(xpath = "//input[@type='password']") public WebElement txtPassword;
+	@FindBy(xpath = "//input[@type='email']") public WebElement txtEmailAddress;
 	@FindBy(xpath = "//*[@data-auid='signInCta']") public WebElement btnSignIn;
-	@FindBy(xpath="//*[@id='rh-signin-link-xs']")public WebElement btnSignIn_Mobile;
-	@FindBy(xpath="//*[@id='logonErrorMessage']")public WebElement errormessage;
-	@FindBy(xpath="//*[@id='logonIdError']")public WebElement errormessage_email;
-	@FindBy(xpath="//*[@id='logonPasswordError']")public WebElement errormessage_password;
+	@FindBy(xpath="//*[@id='rh-signin-link-xs']") public WebElement btnSignIn_Mobile;
+	@FindBy(xpath="//*[@id='logonErrorMessage']") public WebElement errormessage;
+	@FindBy(xpath="//*[@id='logonIdError']") public WebElement errormessage_email;
+	@FindBy(xpath="//*[@id='logonPasswordError']") public WebElement errormessage_password;
 	@FindBy(xpath = "//h1[@id='landingTitle']")	public WebElement accountSummaryTxt;
-	@FindBy(xpath = "//h1[@id='landingTitle']")public WebElement personalInformationTxt;
-	@FindBy(xpath = "//h1[@id='landingTitle']")public WebElement addressBookTxt;
-	@FindBy(xpath = "//h1[@id='landingTitle']")public WebElement wishlistsTxt;
-	@FindBy(xpath = "//a[@id='personalInformation']")public WebElement lnkPersonalInformation;
-	@FindBy(xpath = "//a[@id='addressBook']")public WebElement lnkAddressBookInformation;
-	@FindBy(xpath = "//a[@id='wishLists']")public WebElement lnkwishlistsInformation;
+	@FindBy(xpath = "//h1[@id='landingTitle']") public WebElement personalInformationTxt;
+	@FindBy(xpath = "//h1[@id='landingTitle']") public WebElement addressBookTxt;
+	@FindBy(xpath = "//h1[@id='landingTitle']") public WebElement wishlistsTxt;
+	@FindBy(xpath = "//a[@id='personalInformation']") public WebElement lnkPersonalInformation;
+	@FindBy(xpath = "//a[@id='addressBook']") public WebElement lnkAddressBookInformation;
+	@FindBy(xpath = "//a[@id='wishLists']") public WebElement lnkwishlistsInformation;
 
 	//KER-3964
 	@FindBy(xpath="//a[@tabindex='0'][contains(text(),'Next >')]") public WebElement btnNext;
@@ -197,7 +197,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[text()='NEED HELP?']//parent::div//span") public WebElement expandall_Academy_needhelp;
 	@FindBy(xpath="//*[text()='THIS IS ACADEMY']//parent::div//span") public WebElement expandall_Academy_academy;
 	@FindBy(xpath="(//*[@data-component='heroImage'])[4]") public WebElement scrollingForFooterExpanding;
-   @FindBy(xpath="//*[@data-auid='expand-search_m']/*|//*[@data-auid='search-clear-button_m']/span")public WebElement  magnify_M;
+   @FindBy(xpath="//*[@data-auid='expand-search_m']/*|//*[@data-auid='search-clear-button_m']/span") public WebElement  magnify_M;
 	//KER-3274
 	@FindBy(xpath="(//*[text()='You might try:'])[1]") public WebElement labelforsearchMobile;
 	@FindBy(xpath="(//*[text()='You might try:'])[2]") public WebElement labelforsearch;
@@ -253,11 +253,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@class='special_price']/*[1]") public WebElement forSpecialPricingMessage;  //SID 7-Jan 
 	@FindBy(xpath="//*[@class='special_price']/*[2]") public WebElement specialPriceMobileNumber;  //SID 7-Jan 
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing\"]//*[@data-auid='level4Category-Hoodies & Sweatshirts']") public WebElement sweatshirtsPLP;  //SID 7-Jan 
-	
-	
-	
-	
-	
 	
 	@FindBy(xpath="//*[@data-auid='level2Category-Outdoors']") public WebElement txtOutDoor;
 	@FindBy(xpath="//*[@data-auid='level3Category-Shooting_m']") public WebElement txtShooting_M;
@@ -326,8 +321,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing\"]//*[@data-auid='level4Category-Shirt']") public WebElement plpMensShirt;    //SID 10-Jan
 	
 	
-	
-	
 	//**SID END*********************************************************************************************************************************************
 	//@FindBy(xpath="//*[(text()=\"Men's Shirts\")]") public WebElement txtMensShrit;/RKA 22 aug
 	@FindBy(xpath="//*[@data-auid='sectionTitle']")public WebElement txtMensShrit;
@@ -341,35 +334,35 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='level1Category-SHOP_m']//span[contains(@class,'minus')]") public WebElement btnSHOPBurgerMenuMinusIcon;
 	//KER-262 Start 
 
-	@FindBy(xpath="//*[@data-auid='findAStore']/*[2]")public WebElement hourOfOperationATHeader;
+	@FindBy(xpath="//*[@data-auid='findAStore']/*[2]") public WebElement hourOfOperationATHeader;
 	@FindBy(xpath="//*[@data-auid='find-a-store-modal']//*[contains(text(),'Find a Store')] | //*[@data-auid='findAStore']//a") public WebElement txtFindAsTorePopUP;  //SID modified 28-November
-    @FindBy(xpath="//*[@data-auid='find-a-store-modal']//*[@data-auid='find-a-store']")public WebElement searchboxFindAsTorePopUp; //SID 24-August
-	@FindBy(xpath="//*[@data-auid='findAStore']/*[1]/*[2] | //*[@data-auid='findAStore']//a")public WebElement verifyFindStoreAfteLogin; //SID modified 28-November
-	@FindBy(xpath="//*[@data-auid='findAStore']//*[contains(text(),'change')]/parent::*/child::*[contains(@class,'icon-pencil')]")public WebElement changeicon;// SID 30-August
-	@FindBy(xpath="//*[@data-auid='myAccountCta_m']")public WebElement btnMyAccountInWeeklyAds;
+    @FindBy(xpath="//*[@data-auid='find-a-store-modal']//*[@data-auid='find-a-store']") public WebElement searchboxFindAsTorePopUp; //SID 24-August
+	@FindBy(xpath="//*[@data-auid='findAStore']/*[1]/*[2] | //*[@data-auid='findAStore']//a") public WebElement verifyFindStoreAfteLogin; //SID modified 28-November
+	@FindBy(xpath="//*[@data-auid='findAStore']//*[contains(text(),'change')]/parent::*/child::*[contains(@class,'icon-pencil')]") public WebElement changeicon;// SID 30-August
+	@FindBy(xpath="//*[@data-auid='myAccountCta_m']") public WebElement btnMyAccountInWeeklyAds;
 
-	@FindBy(xpath="//*[contains(text(),'THIS IS ACADEMY')]")public WebElement expandAcademyPlus_M;
-	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Press Releases']")public WebElement pressRelease_M;
-	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Investors']")public WebElement inventors_M;
-	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Shop Gift Cards']")public WebElement shopGiftCards_M;
-	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Product Recalls']")public WebElement productRecalls_M;
+	@FindBy(xpath="//*[contains(text(),'THIS IS ACADEMY')]") public WebElement expandAcademyPlus_M;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Press Releases']") public WebElement pressRelease_M;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Investors']") public WebElement inventors_M;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Shop Gift Cards']") public WebElement shopGiftCards_M;
+	@FindBy(xpath="//*[@data-auid='FOOTER_LINK_Product Recalls']") public WebElement productRecalls_M;
 
-	@FindBy(xpath="//*[@id='logonSubmit'] | //*[@data-auid='btnemail-signin-button']")public WebElement btmSignIn;  //SID modified 14-Nov
-	@FindBy(xpath="//*[@id='signup-link-from-login'] | //*[@data-auid='signUp_btn']")public WebElement linkSignUP; //SID modified 14-Nov
+	@FindBy(xpath="//*[@id='logonSubmit'] | //*[@data-auid='btnemail-signin-button']") public WebElement btmSignIn;  //SID modified 14-Nov
+	@FindBy(xpath="//*[@id='signup-link-from-login'] | //*[@data-auid='signUp_btn']") public WebElement linkSignUP; //SID modified 14-Nov
 
 	//@FindBy(xpath="(//*[contains(text(),'Account Summary')])[3]")public WebElement btmkAccountSummary;/RKA 17 aug
-	@FindBy(xpath="//h1[contains(text(),'Account Summary')]| //*[text()='PROFILE'] ")public WebElement btmkAccountSummary; //SID modified 28-Nov
-	@FindBy(xpath="(//*[contains(text(),'Account Summary')])[3]")public WebElement btmkAccountSummary_M;
+	@FindBy(xpath="//h1[contains(text(),'Account Summary')]| //*[text()='PROFILE'] ") public WebElement btmkAccountSummary; //SID modified 28-Nov
+	@FindBy(xpath="(//*[contains(text(),'Account Summary')])[3]") public WebElement btmkAccountSummary_M;
 	//@FindBy(xpath="//*[@data-auid='myAccountCta_m']")public WebElement myAccountLink;
 	@FindBy(xpath="//*[@id='logonSubmit']") public WebElement signInBtm_M;
-	@FindBy(xpath="//*[@id='signup-link-from-login']")public WebElement signUpText_M;
-	@FindBy(xpath="//*[@data-auid='search-input_m']")public WebElement searchBox_M;
-	//@FindBy(xpath="//*[@data-auid='search-container_m']")public WebElement searchBox;
+	@FindBy(xpath="//*[@id='signup-link-from-login']") public WebElement signUpText_M;
+	@FindBy(xpath="//*[@data-auid='search-input_m']") public WebElement searchBox_M;
+	//@FindBy(xpath="//*[@data-auid='search-container_m']") public WebElement searchBox;
 
 	@FindBy(xpath="//*[@data-auid='autoSuggestions_pant']/*") public WebElement verifyPantInSearch_M;
 	@FindBy(xpath="//*[@data-auid='search-clear-button_m']") public WebElement searchbtn_M;
-	@FindBy(xpath="//*[contains(text(),'Results for ')]/*")public WebElement searchResultText_M;
-	@FindBy(xpath="//*[@data-auid='expand-search_m']")public WebElement magnifying_M;
+	@FindBy(xpath="//*[contains(text(),'Results for ')]/*") public WebElement searchResultText_M;
+	@FindBy(xpath="//*[@data-auid='expand-search_m']") public WebElement magnifying_M;
 
 	//KER-4041
 	@FindBy(xpath="//*[@id='scrollTopBtn']") public WebElement autoscroll;
@@ -381,11 +374,11 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	//KER-1915 End CR-AKK
 	//KER-1401 RKA Start
 	
-	@FindBy(xpath="//*[contains(@data-auid,'level3Category-Men')]/*[1]")public WebElement TxtMenShoeL2;
-	@FindBy(xpath="//*[@data-auid='sectionTitle']")public WebElement txtPageHeaderAsMenShoe;
-	//@FindBy(xpath="//*[contains(@data-auid,'breadCrumb_link_1_')]//ancestor::span//following-sibling::span[@itemprop='itemListElement']//span[@itemprop='name']")public WebElement txtBreadCrumbMenShoe;?RKA 21 aug
+	@FindBy(xpath="//*[contains(@data-auid,'level3Category-Men')]/*[1]") public WebElement TxtMenShoeL2;
+	@FindBy(xpath="//*[@data-auid='sectionTitle']") public WebElement txtPageHeaderAsMenShoe;
+	//@FindBy(xpath="//*[contains(@data-auid,'breadCrumb_link_1_')]//ancestor::span//following-sibling::span[@itemprop='itemListElement']//span[@itemprop='name']") public WebElement txtBreadCrumbMenShoe;?RKA 21 aug
 	
-	@FindBy(xpath="//*[contains(@data-auid,'breadCrumb_link_1_')]/../../following::*[contains(text(),'Shoes')]")public WebElement txtBreadCrumbMenShoe;
+	@FindBy(xpath="//*[contains(@data-auid,'breadCrumb_link_1_')]/../../following::*[contains(text(),'Shoes')]") public WebElement txtBreadCrumbMenShoe;
 	
 	//KER-1401 END
 	
@@ -396,21 +389,29 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid=\"level3Category-Men's Clothing_m\"]") public WebElement  btnMensClothingMobile; 
 			
 	
-	
 	//KER-3276 Start
-	@FindBy(xpath="(//*[contains(@data-auid,'visual_guided_')])[1]//img")public WebElement imgAutosuggest_HomePage;
-	@FindBy(xpath="(//*[contains(@data-auid,'visual_guided_')])[1]//figcaption[1]")public WebElement productNameAutoSuggest_HomePage;
-	@FindBy(xpath="(//*[contains(@data-auid,'visual_guided_')])[1]//figcaption[2]/*")public WebElement productPriceAutoSuggest_HomePage;
-	@FindBy(xpath="//*[@data-auid='PDP_ProductName']")public WebElement txtProductNameOnPDP;
-	@FindBy(xpath="//*[@data-auid='shopByCategory_tiles']/*//*[contains(@class,'o-copy__')]")public List<WebElement> txtProductCatagoryinPLP;
+	@FindBy(xpath="(//*[contains(@data-auid,'visual_guided_')])[1]//img") public WebElement imgAutosuggest_HomePage;
+	@FindBy(xpath="(//*[contains(@data-auid,'visual_guided_')])[1]//figcaption[1]") public WebElement productNameAutoSuggest_HomePage;
+	@FindBy(xpath="(//*[contains(@data-auid,'visual_guided_')])[1]//figcaption[2]/*") public WebElement productPriceAutoSuggest_HomePage;
+	@FindBy(xpath="//*[@data-auid='PDP_ProductName']") public WebElement txtProductNameOnPDP;
+	@FindBy(xpath="//*[@data-auid='shopByCategory_tiles']/*//*[contains(@class,'o-copy__')]") public List<WebElement> txtProductCatagoryinPLP;
 	//KER-3276 END
 	
 	//OMNI-1070
-	@FindBy(xpath="//*[@data-auid='pageBanner']")public WebElement pagePromotionBanner;
+	@FindBy(xpath="//*[@data-auid='pageBanner']") public WebElement pagePromotionBanner;
 	@FindBy(xpath="//*[@data-auid='pageBanner']//*[contains(text(),'FREE SHIPPING')]") public WebElement promotionBannerFreeShippingSection;
 	@FindBy(xpath="//*[@data-auid='pageBanner']//*[contains(text(),'FREE STORE PICKUP')]") public WebElement promotionBannerBopisMessage;
 	@FindBy(xpath="//*[@data-auid='bannerFindAStore']") public WebElement bannerFindaStore;
 	
+	// RegressionP2	- Dilpreet
+	//	@FindBy(xpath="//*[@data-auid='level1Category-Deals']/a") public WebElement btnDeals;
+	@FindBy(xpath="(//a[@data-auid='level2Category-Hot Deals'])[2]") public WebElement btnHotDeals;
+	@FindBy(xpath="//a[@data-auid='level2Category-Outdoors']") public WebElement btnOutdoors;
+	@FindBy(xpath="//a[@data-auid='level2Category-") public WebElement btnL2Category;
+	@FindBy(xpath="//*[@data-auid='shopByCategory_title']") public WebElement shopByCategory;
+	@FindBy(xpath="//*[@data-auid='seeAllLink']") public WebElement linkSeeAll;
+	@FindBy(xpath="//*[@data-auid='sectionTitle']") public WebElement sectionTitleOnPDP;
+
 	public void accountSummaryDeatils(String exceptedAccountSummaryTxt) throws Exception {
 		String actualAccountSummaryTxt = getText(accountSummaryTxt);
 		logger.debug("accountSummaryTxt:: " + actualAccountSummaryTxt);
@@ -582,13 +583,11 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 
 		setInputText(txtFirstName, timeStamp);
 
-
 	}
 
 	public void enterLastName() throws Exception {
-
+		
 		setInputText(txtLastName, timeStamp);
-
 
 	}
 
@@ -596,13 +595,11 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 
 		setInputText(txtPassword, "rashika@123");
 
-
 	}
 
 	public void enterPasswordForSignUp() throws Exception {
 
 		setInputText(txtPasswordForSignUp, "abcd@123");
-
 
 	}
 
@@ -615,7 +612,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	public void enterInvalidPassword() throws Exception {
 
 		setInputText(txtPassword, "123456");
-
 
 	}
 
@@ -715,6 +711,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("facebook icon is displayed++++++++++++++++++++++++==");
 		}
 	}
+	
 	public void verifypresenceofpinteresticon() throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(iconpinterest);
@@ -749,6 +746,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("YouTube icon is displayed++++++++++++++++++++++++==");
 		}
 	}
+	
 	public void verifypresenceofinstagramicon() throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(iconinstagram);
@@ -760,6 +758,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("instagram icon is displayed++++++++++++++++++++++++==");
 		}
 	}
+	
 	/*public GlobalElementHeader_HomePO(WebDriver driver) {
 
 	}*/
@@ -807,7 +806,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		Thread.sleep(Constants.thread_low);
 		assertTrue(clickOnButton(btnMensShirt_Men_Clothing_Shop));
 		Thread.sleep(Constants.thread_low);*/
-		
 		
 		if("mobile".equalsIgnoreCase(testtype))
 		{
@@ -872,8 +870,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		else
 			logger.debug("Academy logo is NOT displayed");	
 
-
 	}
+	
 	public void clickASO_LOGOAndValidateHomePage() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			assertTrue(clickOnButton(imgAcademyLogo_m));
@@ -884,8 +882,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("Logo is clicked");
 			//assertEquals("http://35.202.244.154/", getCurrentPageURL());//30th july danush
 		}
-
-
 	}
 
 	public void validatingWeeklyAdAndFindStore() throws Exception{
@@ -905,7 +901,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
 
 	}
-
 	
 	public void entertheSearchData() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
@@ -929,8 +924,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 
 	}
 
-
-
 	public void entertheData() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			//			Actions actions = new Actions(driver);
@@ -950,10 +943,9 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			actions.click();
 			actions.sendKeys("Clothing");
 			actions.build().perform();
-
 		}
-
 	}
+	
 	public void entertheSearchDataForPagination() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			Actions actions = new Actions(driver);
@@ -983,6 +975,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		}
 
 	}
+	
 	public void entertheNullData() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			Actions actions = new Actions(driver);
@@ -999,10 +992,9 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			actions.click();
 			actions.sendKeys("null");
 			actions.build().perform();
-
 		}
-
 	}
+
 	public void entertheColor() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			Actions actions = new Actions(driver);
@@ -1019,10 +1011,9 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			actions.click();
 			actions.sendKeys("red");
 			actions.build().perform();
-
 		}
-
 	}
+	
 	public void clickOnButton() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			Thread.sleep(Constants.thread_low);
@@ -1033,7 +1024,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			assertTrue(clickOnButton(btnGO));
 			logger.debug("btnGO is clicked");
 		}
-
 	}
 
 	public void clickClearAllButton() throws Exception{
@@ -1054,30 +1044,23 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	//SID 10-September
 	public void verifyThePDPPage() throws Exception{
 		String currentURL = getCurrentPageURL();
-		if(currentURL.contains("pdp")) 
-		{
+		if(currentURL.contains("pdp"))	{
 			logger.debug("User is successfully navigated to PDP page with URL :: " + currentURL  );
 		}
-		else 
-		{
+		else {
 			logger.debug("User is not able to navigate to PDP instead navigated to URL :: " + currentURL  );
 		}
-		if ("mobile".equalsIgnoreCase(testtype)) 
-		{
+		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(pdp_po.imgProductMainMixedMedia_m));
 		} 
-		else 
-		{
+		else {
 			assertTrue(isDisplayed(pdp_po.imgProductMainMixedMedia));
 		}
-
+		
 	}
 
-
-
 	public void clickOnSuggestion(String searchItemTxt) throws Exception{
-
-
+		
 		String searchItemXpath = "//a[contains(@data-auid,'autoSuggestions_"+searchItemTxt+"')]";
 		System.out.println("&&&&&&&&&&**********************searchItemXpath:: "+searchItemXpath);
 		assertTrue(clickOnButton(getfindElementByXPath(searchItemXpath)));
@@ -1109,11 +1092,11 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 						flag=txt.getText().toLowerCase().contains(inputSearchTxt.toLowerCase());
 					}
 				}
-				}
-				else {
+			} else {
 					flag=false;
 				}
-		}else {
+		}
+		else {
 			txtSearchBox.clear();//anil
 			Actions actions = new Actions(driver);
 			actions.moveToElement(txtSearchBox);
@@ -1161,7 +1144,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 						seachMap.put(txt.getText(), txt.getText());
 						flag = true;
 					}
-
 				}
 			}
 			}
@@ -1191,17 +1173,18 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		}
 		return flag;	
 	}
+	
 	public void verifyTheCLPPage() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			assertTrue(isDisplayed(categorydescription));
 			logger.debug("categorydescription is displayed");
-		}else {
-
+		}
+		else {
 			assertTrue(isDisplayed(categorydescription));
 			logger.debug("categorydescription is displayed");
 		}
-
 	}
+	
 	public void verifyTheNullPage() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			assertTrue(nulldescription.getText().contains("We couldn't find anything for"));
@@ -1222,8 +1205,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			assertTrue(isDisplayed(nulldescription));
 			logger.debug("Description is displayed");
 		}
-
 	}
+	
 	public void validatingAddtoCartIcon() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(iconcart);
@@ -1231,7 +1214,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		}else {
 			isDisplayed(iconcart);
 			logger.debug("iconcart is displayed");
-		}}
+		}
+	}
 
 	public void clickexpandall_academy() throws Exception{
 		Thread.sleep(Constants.thread_low);
@@ -1251,8 +1235,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			assertTrue(isClickable(lnkourhistory));
 			logger.debug("our history link is displayed");
 		}
-
 	}
+	
 	public void validatingCareers() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnkcareers);
@@ -1263,8 +1247,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			assertTrue(isClickable(lnkcareers));
 			logger.debug("Careers link is displayed++++++++++++++++++++++++==");
 		}
-
-
 	}
 
 	public void validatingPressRoom() throws Exception{
@@ -1279,8 +1261,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("press Releases link is displayed");
 		}
 		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
-
 	}
+
 	public void validatingInvestors() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnkInvestors);
@@ -1292,8 +1274,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("Investers link is displayed++++++++++++++++++++++++==");
 		}
 		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
-
 	}
+
 	public void validatingCheckOrder() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnkcheckorder);
@@ -1305,6 +1287,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("CheckOrder link is displayed++++++++++++++++++++++++==");
 		}
 	}
+	
 	public void validatingReturnPolicy() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnkreturnpolicy);
@@ -1330,8 +1313,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("lnkproductrecall link is displayed++++++++++++++++++++++++==");
 		}
 		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
-
 	}
+	
 	public void validatingRebates() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnkrebates);
@@ -1355,9 +1338,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			isClickable(lnkcontactus);
 			logger.debug("lnkproductrecall link is displayed++++++++++++++++++++++++==");
 		}
-
-
 	}
+
 	public void validatingCustomercare() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnkcustomercare);
@@ -1368,8 +1350,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			isClickable(lnkcustomercare);
 			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
 		}
-
-
 	}
 
 	public void validatingGiftcards() throws Exception{
@@ -1382,8 +1362,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			isClickable(lnkgiftcards);
 			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
 		}
-
-
 	}
 
 	public void validatingAcademyCreditCard() throws Exception{
@@ -1396,9 +1374,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			isClickable(lnkAcademyCreditCards);
 			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
 		}
-
-
 	}
+
 	public void validatingStoreServices() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnkStoreServices);
@@ -1409,8 +1386,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			isClickable(lnkStoreServices);
 			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
 		}
-
-
 	}
 
 	public void validatingFindaStore() throws Exception{
@@ -1423,8 +1398,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			isClickable(lnkfindastore);
 			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
 		}
-
-
 	}
 
 	public void validatingsignupformoredeals() throws Exception{
@@ -1440,8 +1413,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			isClickable(lnkSIGNUPFORMOREDEALS);
 			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
 		}
-
-
 	}
 
 	public void validatingchatnow() throws Exception{
@@ -1464,8 +1435,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	
 	}
 	
-	
-	
 	public void validatingShopCategory() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(btnShopCategory);
@@ -1475,8 +1444,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("shop is displayed");
 		}
 		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
-
 	}
+
 	public void validatingTrendingCategory() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(btnTRENDINGBurgerMenu);
@@ -1486,7 +1455,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("trending is displayed");
 		}
 		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
-
 	}
 
 	public void validatingDealsCategory() throws Exception{
@@ -1498,10 +1466,9 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("deals is displayed");
 		}
 		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
-
 	}
-	public void validatingShopByDepartmentSlide_BurgerMenu() throws Exception{
 
+	public void validatingShopByDepartmentSlide_BurgerMenu() throws Exception{
 		//	Assert.assertEquals("Validating the presence for available Categories ");//Framework Method need to be used
 		//	Assert.assertEquals("Validating the presence for MyAccount ");//Framework Method need to be used
 		//	Assert.assertEquals("Validating the presence for SignIn");//Framework Method need to be used
@@ -1510,7 +1477,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	public void validitingClickingOnSearchLens() throws Exception{
 		clickOnButton(btnExpandSearchLensInSearchPage);
 		//	Assert.assertEquals("Validating the presence for serach text box should display ");//Framework Method need to be used
-
 	}
 
 	public void findAndClickStoreinGH() throws Exception{
@@ -1518,7 +1484,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		Thread.sleep(Constants.thread_low); 
 
 		if(isDisplayed(txtFindAStore)) {
-
 			assertTrue(clickOnButton(txtFindAStore));
 		}else
 			logger.debug("Find A store link is not displayed ");	
@@ -1526,9 +1491,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	}
 	
 	public void findAndClickStoreinFooter() throws Exception{
-
+		
 		if(isDisplayed(lnkfindastore)) {
-
 			assertTrue(clickOnButton(lnkfindastore));
 		}else
 			logger.debug("Find A store link is not displayed ");	
@@ -1540,14 +1504,12 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			scrollPageToWebElement(txtFindAStoreMobile);
 			//waitForElement(txtFindAStoreMobile);
 			Thread.sleep(Constants.thread_low); 
-           
 			moveHover(txtFindAStoreMobile);
 			clickOnButton(txtFindAStoreMobile);
            
 		}else
 			logger.debug("Find A store link is not displayed ");	
 	}
-
 
 	public void validateStoreNameExist(String expectedStoreName) throws Exception{
 		String actualStoreName = getText(txtFindAStore);
@@ -1556,7 +1518,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("User is selected the store succesfully");	
 		else
 			logger.debug("User is NOT selected the store succesfully");	
-
 
 	}
 
@@ -1568,7 +1529,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			assertTrue(isDisplayed(txtWeeklyAD));
 		}
 	}
-
 
 	public void validatingPresenceOfTextSearchBox() {
 
@@ -1584,9 +1544,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			}    else 
 				logger.debug("Fluid Search text bar is NOT displayed");	
 		}
-
 	}
-
 
 	public void validatePreseneceOfFindStore() {
 		if("mobile".equalsIgnoreCase(testtype)){
@@ -1597,7 +1555,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("Find A Store link is displayed");
 		}
 	}
-
 
 	public void validatePresenceOfNavigationCategories() {
 		if(isDisplayed(btnDEALSBurgerMenu)&&isDisplayed(btnSHOPBurgerMenu)&&isDisplayed(btnTRENDINGBurgerMenu))
@@ -1613,8 +1570,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			logger.debug("My Account link is displayed in Mobile BurgerMenu");	
 		else
 			logger.debug("My Account link is NOT displayed in Mobile BurgerMenu");	
-
 	}
+	
 	public void validatingPrivatPolicy() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnkprivatepolicy);
@@ -1625,9 +1582,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			isClickable(lnkprivatepolicy);
 			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
 		}
-
-
 	}
+	
 	public void validatingTermsAndConditions() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnktermsandconditions);
@@ -1638,9 +1594,8 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			isClickable(lnktermsandconditions);
 			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
 		}
-
-
 	}
+	
 	public void validatingLegalPolicy() throws Exception{
 		if("mobile".equalsIgnoreCase(testtype)){
 			isDisplayed(lnklegalpolicy);
@@ -1651,8 +1606,6 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			isClickable(lnklegalpolicy);
 			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
 		}
-
-
 	}
 
 	//Anuj changes on 26/06/2018 KER-721 
@@ -1667,12 +1620,13 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			}    else 
 				logger.debug("Fluid Search text bar is NOT displayed");	
 		}
-
 	}
+	
 	//Rashika's changes for 720 footer 
 	public void clickexpandall_services() throws Exception{
 		assertTrue(clickOnButton(expandall_Academy_services));
 	}
+	
 	public void clickexpandall_needhelp() throws Exception{
 		assertTrue(clickOnButton(expandall_Academy_needhelp));
 	}
@@ -1688,18 +1642,17 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			assertTrue(isDisplayed(labelforsearch));
 			logger.debug("label is displayed");
 		}
-
 	}
 
 	public void verifySuggestionPage_Productcard(String inputSearchTxt) throws Exception{
-		//		Actions actions = new Actions(driver);
-		//		actions.click();
-		//		actions.sendKeys(Keys.BACK_SPACE);
-		//		actions.sendKeys(Keys.BACK_SPACE);
-		//		actions.sendKeys(inputSearchTxt);
-		//		Thread.sleep(Constants.thread_low); 
-		//		actions.build().perform();
-		//		Thread.sleep(Constants.thread_low); 
+//		Actions actions = new Actions(driver);
+//		actions.click();
+//		actions.sendKeys(Keys.BACK_SPACE);
+//		actions.sendKeys(Keys.BACK_SPACE);
+//		actions.sendKeys(inputSearchTxt);
+//		Thread.sleep(Constants.thread_low); 
+//		actions.build().perform();
+//		Thread.sleep(Constants.thread_low); 
 		assertTrue(isDisplayed(listsuggestion_productcard));
 		assertTrue(clickOnButton(listsuggestion_productcard));
 
@@ -1724,9 +1677,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
                actions.sendKeys(str);
                actions.build().perform();
         }
- }
-	
-	
+ }	
 	
 	//Rashmi Sanity changes
 	public void verifypresenceofL1Page() throws Exception {
@@ -1926,6 +1877,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	public void clickSignupButton() throws Exception {
 		assertTrue(clickOnButton(btnSignUp));
 	}
+	
 	//SID 8-August-18
 	public void softAssertFotterLink() {
 		int count=0;
@@ -1968,6 +1920,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 				Thread.sleep(Constants.thread_low);
 			}
 	}
+	
 	public void clickOnExpandAllAcademyServices() throws InterruptedException {
 		isClickable(expandall_Academy_services);
 		if(isDisplayed(expandall_Academy_services)) {
@@ -1990,6 +1943,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		assertTrue(isDisplayed(sit_po.wishLists));
 		assertTrue(isDisplayed(sit_po.addressBook));
 	}
+	
 	//RKA 21 aug
 	public void getProductName() {
 		
@@ -2005,13 +1959,13 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			}
 		}
 	}
+	
 	public void switchWindow() {
 	    for (String handle1 : driver.getWindowHandles()) {
-	     driver.switchTo().window(handle1);
+	    driver.switchTo().window(handle1);
 
 	     }
-		}
-	
+	}
 	
 	public void clickOnExpandAllThisIsAcademy() throws InterruptedException {
 		isClickable(expandall_Academy_academy);
@@ -2020,10 +1974,10 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			assertTrue(clickOnButton(expandall_Academy_academy));
 			Thread.sleep(Constants.thread_low);
 			}
-			else {
-				driver.navigate().refresh();
-				Thread.sleep(Constants.thread_low);
-			}
+		else {
+			driver.navigate().refresh();
+			Thread.sleep(Constants.thread_low);
+		}
 	} 
 	
 	public void clickOnExpandAllNeedHelp() throws InterruptedException {
@@ -2032,76 +1986,60 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 			Thread.sleep(3000);
 			assertTrue(clickOnButton(expandall_Academy_needhelp));
 			Thread.sleep(Constants.thread_low);
-			}
-			else {
-				driver.navigate().refresh();
-				Thread.sleep(Constants.thread_low);
-			}
+		}
+		else {
+			driver.navigate().refresh();
+			Thread.sleep(Constants.thread_low);
+		}
 	} 
 	
-	@FindBy(xpath="//*[@data-auid='level2Category-Shoes + Boots']")public WebElement btnShoesBootsCategory;
-	
+	@FindBy(xpath="//*[@data-auid='level2Category-Shoes + Boots']") public WebElement btnShoesBootsCategory;
 	// *******************************************************************
-		@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']") public WebElement facet_select_Price_Filter;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']") public WebElement facet_select_Price_Filter;	
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']//ul/li[1]") public WebElement facet_Price_CheckBox1_List; 
+	@FindBy(xpath="//span[contains(text(),'New Arrivals')]") public WebElement eleSelectSortByValue;
+	@FindBy(xpath="//div[contains(@class,'css-1ttjkoh')]") public WebElement eleSortBySelectedtext;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Category']") public WebElement eleLeftFilterCategorttext;
+	@FindBy(xpath="//li[(@data-auid='drawer_Brands')]") public WebElement eleLeftFilterCategortItem1;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']") public WebElement priceFacet;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']") public WebElement priceFacet_M;
+			
+	public void expandPriceFilterAndSelect() throws InterruptedException {
+		Thread.sleep(2000);
+		waitForElement(facet_select_Price_Filter);
+		assertTrue(clickOnButton(facet_select_Price_Filter ));
+		Thread.sleep(2000);
+	    assertTrue(clickOnButton(driver.findElement(By.xpath("//span[contains(text(),'Under $10')]"))));
+	    Thread.sleep(3000);
+	}
 		
-			@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']//ul/li[1]")
-			public WebElement facet_Price_CheckBox1_List; 
+	public boolean expandCategoryFilterAndSelect() throws InterruptedException {
+		boolean flag=false; 
+		Thread.sleep(2000);
+		waitForElement(eleLeftFilterCategorttext);
+		assertTrue(clickOnButton(eleLeftFilterCategorttext ));
+		Thread.sleep(2000);
+		eleLeftFilterCategortItem1.click();
+		Thread.sleep(2000); 
+		flag= eleLeftFilterCategortItem1.isSelected();
+		return flag;
+	}
 		
+	public void hoverCategory() throws Exception {	
+		Thread.sleep(Constants.thread_low); 
+		clickOnButton(btnShopCategory);
+		Thread.sleep(Constants.thread_low); 
+		//Actions hover = new Actions(getDriver());
+		moveHover(ShoesBootsCategory);
+		Thread.sleep(Constants.thread_low); 
+		//clickOnButton(btnMenClothingShop);
+		//Thread.sleep(Constants.thread_low); 
+		//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));	
+	}
+		
+	public void verifypresenceofShopByCategorySection() throws Exception {
+		assertTrue(isDisplayed(ContainerL3));
+		logger.debug("L3 Page is not displayed");
+	}		
 
-		@FindBy(xpath="//span[contains(text(),'New Arrivals')]") public WebElement eleSelectSortByValue;
-			@FindBy(xpath="//div[contains(@class,'css-1ttjkoh')]") public WebElement eleSortBySelectedtext;
-		
-			@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Category']") public WebElement eleLeftFilterCategorttext;
-			@FindBy(xpath="//li[(@data-auid='drawer_Brands')]") public WebElement eleLeftFilterCategortItem1;
-		
-			@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']")public WebElement priceFacet;
-		    @FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']")public WebElement priceFacet_M;
-			
-			
-			public void expandPriceFilterAndSelect() throws InterruptedException
-		{
-			Thread.sleep(2000);
-			waitForElement(facet_select_Price_Filter);
-			assertTrue(clickOnButton(facet_select_Price_Filter ));
-			Thread.sleep(2000);
-	        assertTrue(clickOnButton(driver.findElement(By.xpath("//span[contains(text(),'Under $10')]"))));
-	        Thread.sleep(3000);
-		}
-		
-		public boolean expandCategoryFilterAndSelect() throws InterruptedException
-		{
-			boolean flag=false; 
-			Thread.sleep(2000);
-			waitForElement(eleLeftFilterCategorttext);
-			   assertTrue(clickOnButton(eleLeftFilterCategorttext ));
-			   Thread.sleep(2000);
-			eleLeftFilterCategortItem1.click();
-			  Thread.sleep(2000); 
-			flag= eleLeftFilterCategortItem1.isSelected();
-			return flag;
-		}
-		
-		
-		public void hoverCategory() throws Exception
-		{
-			
-			
-				Thread.sleep(Constants.thread_low); 
-				clickOnButton(btnShopCategory);
-				Thread.sleep(Constants.thread_low); 
-				//Actions hover = new Actions(getDriver());
-				moveHover(ShoesBootsCategory);
-				Thread.sleep(Constants.thread_low); 
-				//clickOnButton(btnMenClothingShop);
-				//Thread.sleep(Constants.thread_low); 
-				//assertTrue(clickOnButton(r2SanityPo.AS_productPLP1));
-			
-		}	
-		
-	
-		
-	//************************************************************
-	
 }
-	
-	

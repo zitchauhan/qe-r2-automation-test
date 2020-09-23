@@ -799,5 +799,27 @@ public class New_PDP_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(newPDP.alt_color));
 		}
 	}
+	
+	@Then("^user validates estimated date is visible on \"(.*?)\"$")
+	public void user_validates_estimated_date_is_visible_on(String arg1) throws Throwable
+	{
+		String PDPdate = newPDP.EstimatePickUpPDP.getText();;
+		if(arg1.equalsIgnoreCase("PDP"))
+		{
+			assertTrue(isDisplayed(newPDP.EstimatePickUpPDP));
+			System.out.println("Estimated date on PDP is" + PDPdate);
+		}
+		else if(arg1.equalsIgnoreCase("Cart"))
+		{
+			Thread.sleep(Constants.thread_medium);
+			assertTrue(isDisplayed(newPDP.EstimatePickUpCart));
+//			String date = newPDP.EstimatePickUpCart.getText();
+//			if(date.contains(PDPdate))
+//			{
+//			System.out.println("Estimated is same on both PDP and Cart Page" + date);
+//			}
+		}
+		
+	}
 
 }

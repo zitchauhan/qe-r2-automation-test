@@ -6,6 +6,7 @@ import static org.testng.Assert.assertEquals;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -33,15 +34,13 @@ public class R1_PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//*[@data-auid='shopbycategorysection']//*[@data-auid='shopByCategory_0']") public WebElement secCategory_CLP;//9aug danush
 	//@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]/parent::div)[3]") 	public   WebElement productPLP1;/RKA 16 aug
 	//@FindBy(xpath="(//*[@id='productCardListing']/*/a)[2] | (//*[starts-with(@data-auid,'productCard_')])[3]") public WebElement productPLP1;
-	@FindBy(xpath="(//section[@id='productCardListing']/div)[2]/a") public WebElement productPLP1;
 	
+	@FindBy(xpath="(//section[@id='productCardListing']/div)[2]/a") public WebElement productPLP1;
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')]//img)[1]") 	public   WebElement productPLP1_Mobile;
 
 	//KER-608
 	@FindBy(xpath="//*[@class='price_range']") public WebElement productPriceNotVisible;  //SID 29-December
 	@FindBy(xpath="(//*[@class='price_range']//*[contains(text(),'-')])[1]") public WebElement priceRange;  //SID 29-December
-	
-	
 	
 	//KER-224
 	@FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[1]//*//img") public WebElement productImage; //MJR-09/17/19
@@ -60,14 +59,9 @@ public class R1_PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//span[contains(text(),'Gift Card Shop')]")public WebElement giftCardShopBreadCrum;
 	@FindBy(xpath="//div[@class='css-1jc6cii']")public WebElement reviewRatingStars;
 	
-	
-	
 	@FindBy(xpath="//*[@class='col-12 col-md-4 d-flex']")public List<WebElement> totalNumberOfItemInGrid;
 	@FindBy(xpath="//*[@class='col-12 col-md-4 d-flex']//*[contains(@aria-label,'stars out of 5')]/*/*[2]")public List<WebElement> totalNumberOFItemHAving_Star;
 	@FindBy(xpath="(//*[@class='col-12 col-md-4 d-flex']//*[contains(@aria-label,'stars out of 5')])[1]")public WebElement firstStarRatingAvailiblity;
-	
-	
-	
 	
 	//KER-224 Mobile
 	@FindBy(xpath="(//*[@class='academyicon icon-plus'])[3]")public WebElement servicesPlus_M;
@@ -102,54 +96,51 @@ public class R1_PLP_PO extends CommonActionHelper{
 	@FindBy(xpath="//*[@data-auid='drawer_Football Helmets']/a") public WebElement linkFootballHelmets_Desktop;  //SID 28-August
 	
 	//KER-621 9-August-18
-		@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Deals']") public WebElement clickAdFeature; //MJR-09/16/19
-		@FindBy(xpath="//*[@data-auid='drawer_Clearance']") public WebElement btnClearance;
-		@FindBy(xpath="//*[@data-auid='drawer_Online Only']") public WebElement btnOnline;
-		@FindBy(xpath="//*[@data-auid='drawer_Price Drop']") public WebElement btnPriceDrop;
-		//@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Clearance')])[1]") public WebElement colorClearance;/RKA 17 aug
-		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Clearance') and contains(@class,'badge')])[1]") public WebElement colorClearance; //MJR-09/16/19
-		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Online Only')])[1]") public WebElement colorOnline;
-		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Price Drop')])[1]") public WebElement colorPriceDrop;
-		@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Ships to Store')])[1]") public WebElement colorShipToStore;
-		@FindBy(xpath="//*[contains(@data-auid,'productCard_')]//*[@class='css-1e1r9n3']") public List<WebElement> ppuMessagePLP;  //SID 7-Jan
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Deals']") public WebElement clickAdFeature; //MJR-09/16/19
+	@FindBy(xpath="//*[@data-auid='drawer_Clearance']") public WebElement btnClearance;
+	@FindBy(xpath="//*[@data-auid='drawer_Online Only']") public WebElement btnOnline;
+	@FindBy(xpath="//*[@data-auid='drawer_Price Drop']") public WebElement btnPriceDrop;
+	//@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Clearance')])[1]") public WebElement colorClearance;/RKA 17 aug
+	@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Clearance') and contains(@class,'badge')])[1]") public WebElement colorClearance; //MJR-09/16/19
+	@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Online Only')])[1]") public WebElement colorOnline;
+	@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Price Drop')])[1]") public WebElement colorPriceDrop;
+	@FindBy(xpath="(//*[@id='productCardListing']//*[contains(text(),'Ships to Store')])[1]") public WebElement colorShipToStore;
+	@FindBy(xpath="//*[contains(@data-auid,'productCard_')]//*[@class='css-1e1r9n3']") public List<WebElement> ppuMessagePLP;  //SID 7-Jan
 		
-		
-		//KER-615
-		@FindBy(xpath="(//*[@data-auid='product-sort-dropdown'])[1]/*[2]/*/*/*[1] | (//*[@data-auid='product-sort-dropdown'])[1]/span")public WebElement sortby_bestSelling;
-		
+	//KER-615
+	@FindBy(xpath="(//*[@data-auid='product-sort-dropdown'])[1]/*[2]/*/*/*[1] | (//*[@data-auid='product-sort-dropdown'])[1]/span")public WebElement sortby_bestSelling;	
 	//KER-615 end
-		
-		
-		//KER-564
-				@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color']")public WebElement colorFacet;
-				@FindBy(xpath="//*[@data-auid='drawer_Black']")public WebElement blackColorFacet;
-				@FindBy(xpath="//*[@data-auid='clearAll']/preceding-sibling::*")public WebElement verifyBlackFromClearAll;
-				@FindBy(xpath="//*[@data-auid='listingPagination']/*/*[3]")public WebElement paginationForPage_2;
-				
-				@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color_m']")public WebElement colorFacet_M;
-				@FindBy(xpath="//*[@data-auid='drawer_Black_m']")public WebElement blackColorFacet_M;
+	
+	//KER-564
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color']")public WebElement colorFacet;
+	@FindBy(xpath="//*[@data-auid='drawer_Black']")public WebElement blackColorFacet;
+	@FindBy(xpath="//*[@data-auid='clearAll']/preceding-sibling::*")public WebElement verifyBlackFromClearAll;
+	@FindBy(xpath="//*[@data-auid='listingPagination']/*/*[3]")public WebElement paginationForPage_2;
+	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Color_m']")public WebElement colorFacet_M;
+	@FindBy(xpath="//*[@data-auid='drawer_Black_m']")public WebElement blackColorFacet_M;		
+	//KER-564
+	
+	//KER-2728 Anuj 14 Aug
+	@FindBy(xpath="(//*[contains(@data-auid,'productCard')]//*[text()='Buy 1 Get 1 Free'])[1]")public WebElement prdctWithPromoOffer;
 			
-		//KER-564
-		
-		//KER-2728 Anuj 14 Aug
-		@FindBy(xpath="(//*[contains(@data-auid,'productCard')]//*[text()='Buy 1 Get 1 Free'])[1]")public WebElement prdctWithPromoOffer;
-				
-		//KER-3101 Anuj 15 Aug
-		
-		@FindBy(xpath="//*[@id='BVSpotlightsContainer']")public WebElement secBazaarVoiceSpotlight;
-		@FindBy(xpath="//*[@id='BVSpotlightsContainer']//*[contains(@class,'chevron-right')]")public WebElement btnScrollRightBVCarousel;
-		@FindBy(xpath="//*[@id='BVSpotlightsContainer']//*[contains(@class,'bv-animated bv-fadeIn')]")public WebElement secBVFadedReviews;
-		
-		
-					
+	//KER-3101 Anuj 15 Aug
+	
+	@FindBy(xpath="//*[@id='BVSpotlightsContainer']")public WebElement secBazaarVoiceSpotlight;
+	@FindBy(xpath="//*[@id='BVSpotlightsContainer']//*[contains(@class,'chevron-right')]")public WebElement btnScrollRightBVCarousel;
+	@FindBy(xpath="//*[@id='BVSpotlightsContainer']//*[contains(@class,'bv-animated bv-fadeIn')]")public WebElement secBVFadedReviews;
+	
+	//KER-4120 Start
+	@FindBy(xpath="//*[@class='c-product_promomsg']")public WebElement textPromotionMsg;
+	//KER-4120 end
+
+	//Regression P2 -  Dilpreet
+	@FindBy(tagName="title") public WebElement currentPage;
+	@FindBy(xpath="//*[@id='productCardListing']")public WebElement productList;
+	@FindBy(xpath="//*[@class='container breadCrumbComponent']") public WebElement breadCrumb;
+	@FindBy(xpath="//*[@class='container breadCrumbComponent']/div[1]/div/span[2]") public WebElement secondElementBreadCrumb;
+	
 	//*****************************************************************************//
-	
-		//KER-4120 Start
-		@FindBy(xpath="//*[@class='c-product_promomsg']")public WebElement textPromotionMsg;
 		
-//KER-4120 end
-//*****************************************************************************//
-	
 	public void verifyFeaturedCategoriesText(String str) throws Exception {
 		if("mobile".equalsIgnoreCase(testtype)){
 			Actions hover=new Actions(getDriver());
@@ -229,26 +220,42 @@ public class R1_PLP_PO extends CommonActionHelper{
 	}
 	
 	
-	
-	public void segregateTheProductHaving_Rating_and_NoRating() {
-		
+	public void segregateTheProductHaving_Rating_and_NoRating() {	
 		int totalnumberOfGridInPLP=totalNumberOfItemInGrid.size();
 		
 		System.out.println(totalnumberOfGridInPLP);
 	
 		if(isDisplayed(firstStarRatingAvailiblity)) {
-		
-			int i= totalNumberOFItemHAving_Star.size();
-			
+			int i= totalNumberOFItemHAving_Star.size();			
 			System.out.println("Total number of item having star"+i);
-		
-		
-			int z=totalnumberOfGridInPLP -i;
-	System.out.println("Total number of item NOT having star"+ z);
 			
+			int z=totalnumberOfGridInPLP -i;
+			System.out.println("Total number of item NOT having star"+ z);	
 		}
-	
-		
 	}
 	
+//	public void navigateToBaitsSKU() throws Exception {
+//		Thread.sleep(Constants.thread_low);
+//		assertTrue(clickOnButton(btnShopCategory1));
+//		Thread.sleep(Constants.thread_low);
+//		Actions hover = new Actions(getDriver());
+//		hover.moveToElement(btnOutdoorCategory).build().perform();
+//		Thread.sleep(Constants.thread_low);
+//		hover.moveToElement(btnbaitsluresCategory).build().perform();
+//	}
+	
+	public void validateTheSectionTitle(String expected) {
+		String actTitle = (globalElementHeader.sectionTitleOnPDP).getText();
+		System.out.println("Section title displayed is: "+actTitle);
+		
+		assertTrue(expected.equalsIgnoreCase(actTitle));	
+	}
+	
+	public void validateBreadCrumbs(String expected) {
+		System.out.println("Bread Crumb on screen: "+breadCrumb.getText());	
+		System.out.println("Second element of Bread Crumb (followed by 'Academy/'): "+secondElementBreadCrumb.getText());
+		
+		assertTrue(expected.equalsIgnoreCase(secondElementBreadCrumb.getText()));
+	}
+
 }

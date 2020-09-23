@@ -485,5 +485,11 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		r2MyAccountPO.retriveAddressOnConfirmationPageAndVerifyOnMyAccountPage();
 	}
 	
+	@Then("^user sees the restriction error message on checkout page$")
+	public void user_sees_the_restricition_error_message_on_checkout_page() throws Throwable {
+		waitForElement(r2CheckOutPo.DailyQtyErrorMsg);
+		assertTrue(isDisplayed(r2CheckOutPo.DailyQtyErrorMsg));
+	}
+	
 // ********Venkat ***************	
 }

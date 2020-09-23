@@ -1215,5 +1215,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath = "//*[@class='span11 alignRight baslLoginButtonContainer']") public WebElement PayPal_Login;
 		@FindBy(xpath="//div[@class='css-13o7eu2'][1]") public WebElement WGBulkMessage;
 		@FindBy(xpath="//*[@data-auid='btnbuttonOneSixFour'][2]") public WebElement ContinueReviewCTA;
+		@FindBy(xpath="//*[contains(text(),'You have already ordered the daily quantity limit for the below item(s)')]") public WebElement DailyQtyErrorMsg;
 
 }
