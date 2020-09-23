@@ -51,4 +51,27 @@ order for more than the limit in a single day with the same billing address
 	Examples: 
 		|Card Type	|
 		|Visa      	|
-	
+		
+@RegressionP1
+Scenario Outline: Ship alone items should appear in separate package and not combined with other items and order should be placed successfully
+	Given user launches the browser and navigates to "ASO_HOME" page plcc 
+  When user creates an account
+	When User searches a product "ShipAloneItem" and navigates to PDP
+	And user click on ship it button 
+	And then user close the add to cart popup
+	When User searches a product "productName" and navigates to PDP
+	And user click on ship it button 
+	And user will click on View Cart button 
+  When user navigate to Cart page 
+  #When user clicks on Add Promo code link under Cart Order Summary
+  And user view and Applied Promotions/Discounts "Promocode" 
+	And verify Promo code discount is applied 
+	And user clicks on checkout button on cart page
+	And user adds shipment address on checkout page for "Newly Registered" user
+	And user selects shipment method on check out page for "Newly Registered" user
+	And user add "<Payment Type>" details in payment method for "Newly Registered" user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+		Examples: 
+		|Payment Type	|
+		|Credit Card	|

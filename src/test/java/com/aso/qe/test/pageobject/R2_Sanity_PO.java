@@ -166,9 +166,10 @@ public class R2_Sanity_PO extends CommonActionHelper {
 	public void verifyAppliedPromoOnCartPage(String arg1) throws InterruptedException {
 		assertTrue(isDisplayed(AS_txtAddPromoCode));
 		//assertTrue(clickOnButton(AS_iconPlusPromoCode));
+		Thread.sleep(Constants.thread_medium);
 		setInputText(AS_inputPromoCode, webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(AS_btnCartSubmit));
-		Thread.sleep(2000);
+		Thread.sleep(Constants.thread_high);
 	}
 	/***************************** END METHODS*********************************/
 
