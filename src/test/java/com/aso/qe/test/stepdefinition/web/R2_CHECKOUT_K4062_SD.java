@@ -92,9 +92,9 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		//else
 			//creditCardNumber = "CreditCardNumber";
 		
-		setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty(creditCardNumber));
-		setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
-		setInputText(r2CheckOutPo.Cvv_Input, webPropHelper.getTestDataProperty(cvv));
+//		setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty(creditCardNumber));
+//		setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
+//		setInputText(r2CheckOutPo.Cvv_Input, webPropHelper.getTestDataProperty(cvv));
 		Thread.sleep(5000);
 		String name = webPropHelper.getTestDataProperty("CardholderName");
 		driver.switchTo().frame("first-data-payment-field-name");
@@ -192,7 +192,8 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			}
 			Thread.sleep(Constants.thread_medium);
 
-		} else if (arg1.equalsIgnoreCase("gift card")) {
+		} 
+		else if (arg1.equalsIgnoreCase("gift card")) {
 			boolean chooseGiftCard = true;
 			if (!(userWithoutExistingPaymentDetails)) {
 				if (isDisplayed(r2CheckOutPo.plusIconGiftCard)) {

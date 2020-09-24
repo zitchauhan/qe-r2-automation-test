@@ -21,12 +21,12 @@ Scenario: Verify that acc card can be added from My accounts
 	And user clicks on SignIn link from global header
 	And user enter the valid emailaddress "Login_username" 
 	And user enter the valid password "Login_pwd" 
-    And user click on signin button
-    Then user click on My Account and navigate payment
-    And user deletes all existing credit card
+  And user click on signin button
+  Then user click on My Account and navigate payment
+  And user deletes all existing credit card
 	And user clicks on Add New Credit Card button
 	#And validate the radio button Academy Credit Card and Credit Card
 	#And user validates the "Academy Credit Card"
-    And user adds the "Academy Credit Card"
-    And  user enter Address "AVSAddress"
-    And validate the acc card added
+  And user adds the "Academy Credit Card"
+  And  user enter Address "AVSAddress"
+  And validate the acc card added

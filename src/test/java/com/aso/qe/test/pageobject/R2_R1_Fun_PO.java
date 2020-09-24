@@ -77,7 +77,7 @@ public class R2_R1_Fun_PO extends CommonActionHelper
 	
 	
 	//KER-4058 CR-RKA
-	@FindBy(xpath="//*[@data-auid='shopByCategory_0']")public WebElement btnShootingCategory;
+	@FindBy(xpath="//*[@data-auid='shopByCategory_1']")public WebElement btnShootingCategory;
 	@FindBy(xpath="//*[@data-auid='shopByCategory_0']")public WebElement ProductgunStorageSafty;
    @FindBy(xpath="(//*[contains(@data-auid,'productCard_')])[1] | //*[@data-auid='level3Category-Clothing Deals_m']")public WebElement productSelection;  //SID modified 4-December
 //   @FindBy(xpath="//*[@data-auid='level3Category-Shooting_m']")public WebElement shooting_M;
@@ -209,7 +209,7 @@ public WebElement DdFilter_M;
 @FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_Shipping & Pickup'] | //*[@data-auid='facetdrawer_drawer_Shipping & Pickup_m']")//CR-DPK 26-sept
 public WebElement txtShippingPickupFilterDrawer; 
 
-@FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_Shipping & Pickup']")
+@FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_DELIVERY & PICK UP']")
 public WebElement txtShippingPickupFilterDrawerPLP;   //SID 10-Jan
 
 @FindBy(xpath = "(//*[@data-auid='PDP_FindAStore'])[2]")
@@ -218,7 +218,7 @@ public WebElement lnkPickupLocationPDP;
 @FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_Shipping & Pickup_m']")
 public WebElement txtShippingPickupFilterDrawer_M;   //SID 10-Jan
 
-@FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_Shipping & Pickup']//i")//CR-DPK 26-sept
+@FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_DELIVERY & PICK UP']//i")//CR-DPK 26-sept
 public WebElement txtShippingPickupFilterDrawerExpandIcon;   //SID 10-Jan
 
 
@@ -229,7 +229,7 @@ public WebElement txtShippingPickupFilterDrawerExpandIcon_M;   //SID 10-Jan
 @FindBy(xpath ="//*[@data-auid='drawer_Store Pickup']/input")//CR-DPK 26-sept
 public WebElement selectStorePickUp;   //SID 10-Jan
 
-@FindBy(xpath ="//*[@data-auid='drawer_Shipping']/input")//CR-DPK 26-sept
+@FindBy(xpath ="//*[@data-auid='drawer_Home Delivery']")//CR-DPK 26-sept
 public WebElement selectShipping;   //SID 10-Jan
 
 @FindBy(xpath ="//*[@data-auid='drawer_Store Pickup']//*[text()='Store Pickup']")//CR-DPK 26-sept
@@ -239,7 +239,7 @@ public WebElement txtStorePickUp;   //SID 10-Jan
 public WebElement txtShipping;   //SID 10-Jan
 
 
-@FindBy(xpath ="//*[@data-auid='clearAll']/parent::div//span[text()='Shipping']")//CR-DPK 26-sept
+@FindBy(xpath ="//*[@data-auid='clearAll']/parent::div//span[text()='Home Delivery']")//CR-DPK 26-sept
 public WebElement shippingFilterApplied;   //SID 10-Jan
 
 
@@ -248,10 +248,10 @@ public WebElement storePickUpFilterApplied;   //SID 10-Jan
 
 
 
-@FindBy(xpath ="//*[@data-auid='drawer_Store Pickup']//a")//CR-DPK 26-sept
+@FindBy(xpath ="//*[@data-auid='drawer_Store Pickup']//a | //*[text()='Change Pick Up Location']")//CR-DPK 26-sept
 public WebElement changePickUpLocationPLP;   //SID 10-Jan
 
-@FindBy(xpath ="//*[@data-auid='drawer_Store Pickup']//following-sibling::span[1]")//CR-DPK 26-sept//updated by MJR on 16/7/19
+@FindBy(xpath ="//*[@data-auid='drawer_Free Pick Up Today']//following-sibling::span[1]/span")//CR-DPK 26-sept//updated by MJR on 16/7/19
 public WebElement bopisStoreNamePLP;   //SID 10-Jan
 
 @FindBy(xpath ="(//*[@data-auid='facetdrawerundefined']/button/*/*/*[1])[2]")//CR-DPK 26-sept
