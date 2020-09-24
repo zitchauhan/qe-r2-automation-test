@@ -52,7 +52,8 @@ public class R2_CART_K3175_SD extends CommonActionHelper {
 	@And("^user should be able to select the shipping \"(.*?)\" filter$")
 	public void user_should_be_able_to_select_the_shipping_filter(String arg1) throws InterruptedException {
 		count1 = searchProductPo.itemscount.getText();
-		hover.moveToElement(r2r1FunPo.selectShipping).click().build().perform();
+		Thread.sleep(2000);
+		assertTrue(clickOnButton(r2r1FunPo.selectShipping));
 		Thread.sleep(2000);
 		assertTrue(arg1.equalsIgnoreCase(r2r1FunPo.shippingFilterApplied.getText()));
 		System.err.println(r2r1FunPo.shippingFilterApplied.getText());
@@ -137,7 +138,7 @@ public class R2_CART_K3175_SD extends CommonActionHelper {
 
 	@And("^user verify the new selected location is displayed$")
 	public void user_verify_the_new_selected_location_is_displayed() {
-		System.err.println("storeName " + storeName + " r2r1FunPo.bopisStoreNamePLP.getText() "	+ r2r1FunPo.bopisStoreNamePLP.getText());
+		System.err.println("storeName " + storeName + " store name visible on PLP "	+ r2r1FunPo.bopisStoreNamePLP.getText());
 		assertTrue(storeName.equalsIgnoreCase(r2r1FunPo.bopisStoreNamePLP.getText()));
 	}
 	

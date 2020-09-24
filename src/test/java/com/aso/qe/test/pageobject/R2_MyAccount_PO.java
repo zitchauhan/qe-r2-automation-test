@@ -1104,8 +1104,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 		 }
 	}
 	
-	public void editNonDefaultShippingAddressAndVerify(String FName,String LName,String Address,String zip,String PhNumber){
-	
+	public void editNonDefaultShippingAddressAndVerify(String FName,String LName,String Address,String zip,String PhNumber) throws Throwable{
+		clickOnButton(EditButtonNonDefaultAddress);
+		Thread.sleep(Constants.thread_low);
 		NonDefaultFName.sendKeys(FName);	
 		NonDefaultLName.sendKeys(LName);
 		NonDefaultAddress.sendKeys(Address);
@@ -1253,7 +1254,9 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	 
 	@FindBy(xpath = "//*[@id='first-data-payment-field-name']")
 	public WebElement CardHolderNameFrame;
+	
+	@FindBy(xpath = "//*[contains(text(),'There are no orders associated with this')]") public WebElement NoOrdersMyAccount;
 
-		
+	@FindBy(xpath="//div[1]//div[3]//div[2]//div[2]//button[1]") public WebElement EditButtonNonDefaultAddress;	
 
 }

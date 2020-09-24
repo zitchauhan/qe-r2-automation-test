@@ -36,7 +36,7 @@ Scenario: Verify that the User is able to filter the PLP list by "Shipping" item
 	Then user navigate to GunStorageAndSafty L_Three   
 	And user verify the shipping and pickup drawer 
 	And user should be able to click on shipping and pickup drawer
-	And user should be able to select the shipping "shipping" filter
+	And user should be able to select the shipping "Home Delivery" filter
 	And user verify that only shipping item are displayed
 
 @R2_Web @R2_All @C-PLP @KER-3175 @ZYP_PLP_K3175-10961 @C-BOPIS @RegressionP2

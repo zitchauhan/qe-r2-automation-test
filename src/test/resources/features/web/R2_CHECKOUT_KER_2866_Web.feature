@@ -125,9 +125,8 @@ Scenario: Verify the guest user is able to select the Gift Card payment method i
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
-	When user enters "BOPIS_Regular_Product_SKU_Costly" in the searchbox 
-	#When user click on Add to cart button 
-	And user click on ship it button 
+	When user enters "BOPIS_Regular_Product_SKU_Costly" in the searchbox
+	Then user click on pickup button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user select in store pickup option
@@ -139,7 +138,13 @@ Scenario: Verify the guest user is able to select the Gift Card payment method i
 	And user click on Apply button 
 	And user should be able to see applied gift card in order summary
 	And user fill the payment details for sof guest user
-	And user able to see the button place order	
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order 
+	Then Verify the message on the page 
+		| # Message for successful order is displayed |
+		| Order Number |
+
+		
 	
 @C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10509
 Scenario: Verify the guest user is able to enter a different Billing address on Payment drawer for BOPIS
@@ -330,15 +335,12 @@ Scenario Outline: Verify the guest user is able to place White Glove order using
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
 	And user selects shipment method on check out page for "guest" user
-	And user add "<Payment Type>" details in payment method for "guest" user
+	And user add "<Card Type>" details for a guest user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-	Then Verify the message on the page 
-		| # Message for successful order is displayed |
-		| Order Number                                |			
 	Examples: 
-		|Payment Type	|
-		|Credit Card	|
+		|Card Type	|
+		|Visa      	|
 
 	
 	
