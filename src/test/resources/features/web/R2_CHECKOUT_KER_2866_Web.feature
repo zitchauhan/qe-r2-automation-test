@@ -324,7 +324,7 @@ Scenario: Verfiy bopis place order for guest user with CC as tender
 		| # Message for successful order is displayed |
 		| Order Number                                |			
 	
-@RegressionP2 @WhiteGlove @AutomationSmoke @abc
+@RegressionP2 @WhiteGlove @AutomationSmoke
 Scenario Outline: Verify the guest user is able to place White Glove order using Credit Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForWhiteGlove" and navigates to PDP

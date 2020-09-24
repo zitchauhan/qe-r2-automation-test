@@ -2,7 +2,7 @@ Feature: E02-100 - My Account, Address Book
 
 # ******* Venkat *************
 
-@temp111  @RegressionP2
+@temp111  @RegressionP2 @abc
 Scenario Outline:  Edit Non Default Shipping Address and Verify
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 

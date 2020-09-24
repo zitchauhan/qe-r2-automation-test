@@ -50,32 +50,51 @@ public class R2_MYACCOUNT_K4229_SD extends CommonActionHelper {
 
 	@Then("^Verify that list of orders are displayed in the right section of the page$")
 	public void verify_that_list_of_orders_are_displayed_in_the_right_section_of_the_page() throws Throwable {
-		for (WebElement viewOrderDetails : r2_MyAccount_PO.viewOrderDetailsBtn) {
+		if(isDisplayed(r2_MyAccount_PO.NoOrdersMyAccount))
+		{
+			System.out.println("No orders exist for this user");
+		}
+		else {
+			for (WebElement viewOrderDetails : r2_MyAccount_PO.viewOrderDetailsBtn) {
 			isDisplayed(viewOrderDetails);
+			}
 		}
 	}
 
 	// SID 15-Nov
 	@And("^Verify that (\\d+) orders are displayed per page$")
 	public void verify_that_orders_are_displayed_per_page(int arg1) throws Throwable {
+		if(isDisplayed(r2_MyAccount_PO.NoOrdersMyAccount))
+		{
+			System.out.println("No orders exist for this user");
+		}
+		
+		else {
 		int count = 0;
 		waitForElement(r2_MyAccount_PO.ordersHeading);
 		isDisplayed(r2_MyAccount_PO.ordersHeading);
-		for (WebElement viewOrderDetails : r2_MyAccount_PO.viewOrderDetailsBtn) {
+			for (WebElement viewOrderDetails : r2_MyAccount_PO.viewOrderDetailsBtn) {
 			count++;
-		}
+			}
 		System.err.println(count);
 		assertTrue(count <= arg1);
+		}
 	}
 
 	@And("^Oldest sorting option is available$")
 	public void oldest_sorting_option_is_available() throws Throwable {
+		if(isDisplayed(r2_MyAccount_PO.NoOrdersMyAccount))
+		{
+			System.out.println("No orders exist for this user");
+		}
+		else {
 		scrollPageToWebElement(r2_MyAccount_PO.ordersDropDownNewest);
 		Actions hover = new Actions(getDriver());
 		hover.click(r2_MyAccount_PO.ordersDropDownNewest).build().perform();
 		hover.sendKeys(Keys.DOWN, Keys.ENTER).build().perform();
 		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(r2_MyAccount_PO.ordersDropDownOldest));
+		}
 	}
 
 	@And("^user navigates to address book in my account$")
