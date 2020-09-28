@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_PLP_PO;
@@ -88,7 +89,7 @@ public class RegressionP2Scenarios_SD extends CommonActionHelper {
 
 	@And("^user should be navigated to \\\"([^\\\"]*)\\\" PLP$")
 	public void user_should_be_navigated_to_specific_PLP(String plpPage) throws Throwable{
-		
+		Thread.sleep(Constants.thread_high);
 		r1plppo.validateTheSectionTitle(plpPage);
 		r1plppo.validateBreadCrumbs(plpPage);
 	}
