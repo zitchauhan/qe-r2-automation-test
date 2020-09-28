@@ -584,15 +584,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	public List<WebElement> btnRemoveGiftCardOptionList;
 
 	final String xpathForDeleteCreditCardButton = "//*[text()= 'CREDIT CARDS']/../following-sibling::div//*[text()='Remove']/i | //*[text()= 'CREDIT CARDS']/../following-sibling::*//*[text()='Remove']/preceding-sibling::i";
-	@FindBy(xpath = xpathForDeleteCreditCardButton) // CR-SK
-													// 29
-													// Aug
-													// //
-													// //
-	// Modified RKA 12
-	// // // Sep
-	// Modified // GK //
-	// 17Sep
+	@FindBy(xpath = xpathForDeleteCreditCardButton)
 	public List<WebElement> Page_CreditCard_Remove_list;
 
 	@FindBy(xpath = "//*[contains(text(),'Gift Card ending in')]") // CR-SK 29 Aug
