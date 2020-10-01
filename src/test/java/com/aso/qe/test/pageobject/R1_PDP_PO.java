@@ -445,7 +445,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@data-auid='PDP_getNotifiedBackInStock']")public WebElement lnkGetNotified;
 	@FindBy(xpath="//*[@name='emailId']")public WebElement emailOFgetNotified;
 	@FindBy(xpath="//*[@data-auid='btnemail-signup-button']")public WebElement btnSubmitGetNotification;
-	@FindBy(xpath="//*[contains(text(),'RE ALL SET')]")public WebElement txtYouAreAllSet;
+	@FindBy(xpath="//*[contains(text(),'re All Set!')]")public WebElement txtYouAreAllSet;
 	@FindBy(xpath="(//*[contains(@data-auid,'Size')]//*[contains(@data-auid,'swatchButton')])[3]")public WebElement clickOtherSize; //SID 28-August
 	//KER-2334 End
 	
