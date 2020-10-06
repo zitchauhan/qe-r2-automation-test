@@ -19,7 +19,7 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	String storeName="";
 	
 	//@FindBy(xpath = "//*[contains(text(), 'Find a Store')]")public WebElement ovly_FindStore;/RKA 17 aug
-	@FindBy(xpath="(//*[contains(text(), 'Find A Store')])[1] | (//*[contains(text(), 'Find A Store')])[2]")public WebElement ovly_FindStore; //SID 14-Nov
+	@FindBy(xpath="//*[@data-auid='find-a-store-modal']/div//h2")public WebElement ovly_FindStore; //SID 14-Nov
 	@FindBy(xpath = "//input[@name='zipcode'] | //*[@data-auid='find-a-store']/input")public WebElement ovly_searchTextBox; //Sid 19-Nov
 	@FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']/span")public WebElement ovly_btnCloseCross;
 	@FindBy(xpath = "//*[@data-auid='submit-zip-code']/span")public WebElement ovly_btnGO;
@@ -31,7 +31,7 @@ public class R1_FindStore_PO extends CommonActionHelper {
   
 	//@FindBy(xpath = "//input[@placeholder='Enter Zip Code or City, State']/../../../../following-sibling::div[1]/div/div/h6")	public WebElement ovly_secStore;/RKA 22 aug
 	//@FindBy(xpath="//input[@placeholder='Enter Zip Code or City, State']/preceding::*[1]/../following::*[1]//h6")
-    @FindBy(xpath="(//*[@data-auid='facetdrawerundefined']/button/span/div/div")public WebElement ovly_secStore; //Updated by MJR 23/7/19
+    @FindBy(xpath="(//div[contains(@class,' o-copy__14bold mr-auto')]")public WebElement ovly_secStore; //Updated by MJR 23/7/19
 	@FindBy(xpath = "(//div[@data-auid='find-a-store-modal'])[2]/div[3]/div/div[text()='0 Stores were found within 250 miles of your search'] | (//div[@data-auid='find-a-store-modal'])[2]//*[text()='Sorry! There are no stores within 250 miles. Please order online or try new ZIP code.']")public WebElement txtNoStoreText; //SID Modified 14-Nov
     @FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']")public WebElement ovly_btnCloseContainer;
 	@FindBy(xpath = "//*[@data-auid='findAStore']/span[2]")public WebElement txtStroeText;
@@ -44,7 +44,7 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	@FindBy(xpath="//*[@data-auid='find-a-store-modal']//*[contains(text(),'Closed')]")public WebElement storeClosed;  //SID 7-Jan
 	@FindBy(xpath="(//*[@data-auid='btnfind-a-store-mystore-button'])[1]/parent::div/*[1]/*[1]/*[1]/*/*[2]")public WebElement storeZipCode;  //SID 8-Jan
 	@FindBy(xpath="(//*[@data-auid='find-a-store-modal'])[2]/*[4]/*[2]/*[2]/*[1]/*[1]/*[1]/*[1]/*/*[2]")public WebElement selectedStoreZipCode;  //SID 21-Jan
-	@FindBy(xpath="//*[text()='Sorry! There are no stores within 250 miles. Please order online or try new ZIP code.']") public WebElement californiaaddress;
+	@FindBy(xpath="//*[contains(text(),'There are no stores within 250 miles')]") public WebElement californiaaddress;
 	
 	@FindBy(xpath="(//*[@data-auid='facetdrawerundefined'])[2]")public WebElement selectChangedStore;  //SID 7-Jan
 	
@@ -83,32 +83,63 @@ public class R1_FindStore_PO extends CommonActionHelper {
 //		return storeName;
 //	}
 //	
-	public String testWorkaround(String value)
+//	public String testWorkaround(String value) throws Throwable
+//	{
+//		Thread.sleep(Constants.thread_low);
+//		String selectedStoreTitle = (ovly_secStore).getText();
+//		System.out.println("Default selected store is "+ selectedStoreTitle );
+//		if (selectedStoreTitle.equalsIgnoreCase("Grand Parkway")) 
+//		{
+//			clickOnButton(ovly_btnCloseContainer);
+//		}
+//		else
+//		{
+//			waitForElement(ovly_searchTextBox);
+//			setInputText(ovly_searchTextBox, value);
+//			clickOnButton(ovly_btnGO);
+//			String selectedStoreTitle1 = getText(ovly_secStore);
+//			System.err.println(selectedStoreTitle1);
+//			clickOnButton(expandStore);
+//			storeName = selectedStoreNameinModal.getText();
+//			System.err.println(selectedStoreNameinModal.getText());
+//			clickOnButton(ovly_btnMakeMyStore_1);
+//			clickOnButton(ovly_btnCloseContainer);
+//			// Expected change the title should happen in the title
+//			return storeName;
+//		}
+//		return selectedStoreTitle;
+//		
+//	}
+	
+	public String testWorkaround(String value) throws Throwable
 	{
-		String selectedStoreTitle = getText(ovly_secStore);
-		System.out.println("-------------------------------------------------->"+ selectedStoreTitle );
-		if (selectedStoreTitle.equalsIgnoreCase("Grand Parkway")) 
-		{
-			clickOnButton(ovly_btnCloseContainer);
-		}
-		else
-		{
-			waitForElement(ovly_searchTextBox);
-			setInputText(ovly_searchTextBox, value);
-			clickOnButton(ovly_btnGO);
-			String selectedStoreTitle1 = getText(ovly_secStore);
-			System.err.println(selectedStoreTitle1);
-			clickOnButton(expandStore);
-			storeName = selectedStoreNameinModal.getText();
-			System.err.println(selectedStoreNameinModal.getText());
-			clickOnButton(ovly_btnMakeMyStore_1);
-			clickOnButton(ovly_btnCloseContainer);
-			// Expected change the title should happen in the title
-			return storeName;
-		}
-		return selectedStoreTitle;
-		
+	System.out.println("zip code to enter is" +webPropHelper.getTestDataProperty(value));	
+	Thread.sleep(Constants.thread_low);
+	String selectedStoreTitle = (ovly_secStore).getText();
+	System.out.println("Default selected store is "+ selectedStoreTitle );
+	if (selectedStoreTitle.equalsIgnoreCase("Grand Parkway")) 
+	{
+		clickOnButton(ovly_btnCloseContainer);
 	}
+	else
+	{
+		waitForElement(ovly_searchTextBox);
+		setInputText(ovly_searchTextBox, value);
+		clickOnButton(ovly_btnGO);
+		String selectedStoreTitle1 = getText(ovly_secStore);
+		System.err.println(selectedStoreTitle1);
+		clickOnButton(expandStore);
+		storeName = (selectedStoreNameinModal).getText();
+		System.err.println(storeName);
+		clickOnButton(ovly_btnMakeMyStore_1);
+		clickOnButton(ovly_btnCloseContainer);
+		// Expected change the title should happen in the title
+		return storeName;
+	}
+	return selectedStoreTitle;
+	
+}
+	
 	public String selectAStorewithoutCinoRanch(String value) {
 		waitForElement(ovly_searchTextBox);
 		setInputText(ovly_searchTextBox, value);
@@ -177,6 +208,7 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	}
 	
 	
+	@FindBy(xpath="//*[contains(text(),'Closest Stores to Your Location')]") public WebElement StoresNearLocation;
 	
 	
 	

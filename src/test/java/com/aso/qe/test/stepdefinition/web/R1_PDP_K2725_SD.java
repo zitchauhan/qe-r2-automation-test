@@ -11,6 +11,7 @@ import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_SIT_PO;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
 public class R1_PDP_K2725_SD extends CommonActionHelper {
@@ -78,5 +79,10 @@ public class R1_PDP_K2725_SD extends CommonActionHelper {
 	{
 		assertTrue(pdpPageObj.checkPresence());
 		
-	} 
+	}
+	
+	@And("^user click on \\\"([^\\\"]*)\\\" category$") 
+	public void user_click_on_specific_category(String ctgry) throws Throwable{
+		assertTrue(clickOnButton(globalElementHeader.btnBrandCategory));
+	}
 }

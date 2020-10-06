@@ -106,10 +106,10 @@ Scenario Outline: verify if user should be able to submit the order on the check
     
     
     
-    @RegressionP2
+ @RegressionP2
  Scenario: Validate whether BOPIS WG item is getting successfully added to cart and is not showing OOS
-    Given user launches the browser and navigates to "ASO_HOME" page
-    And User should be able to click on Find Store 
+  Given user launches the browser and navigates to "ASO_HOME" page
+  And User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2"
 	When User searches a product "SKUForWhiteGlovenew" and navigates to PDP

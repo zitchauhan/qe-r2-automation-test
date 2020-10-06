@@ -21,6 +21,7 @@ import cucumber.api.java.en.When;
 
 public class R1_HP_K730_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R1_HP_K730_SD.class);
+	String storeName="";
 	public R1_FindStore_PO findStorePO = PageFactory.initElements(getDriver(), R1_FindStore_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(getDriver(),R1_GlobalElementHeader_Home_PO.class);
 	R2_R1_Fun_PO r2r1FunPo = PageFactory.initElements(driver, R2_R1_Fun_PO.class);
@@ -56,8 +57,13 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 
 	@When("^User select store with \"(.*?)\"$")
 	public void User_select_store_with(String arg1) throws Throwable {
+		Thread.sleep(Constants.thread_medium);
+		if(isDisplayed(findStorePO.ovly_secStore))
+		{
+			findStorePO.testWorkaround(arg1);
+		}
 		
-		if(isDisplayed(findStorePO.californiaaddress)) {
+		else if(isDisplayed(findStorePO.californiaaddress)) {
 			
 			setInputText(r2CartPo.inputFindaStoreHomePage, webPropHelper.getTestDataProperty(arg1));
 			assertTrue(clickOnButton(r2CartPo.btnZipcodesearch));
@@ -65,13 +71,10 @@ public class R1_HP_K730_SD extends CommonActionHelper {
             assertTrue(clickOnButton(findStorePO.expandStore));
             assertTrue(clickOnButton(r2CartPo.btnstore));
             assertTrue(clickOnButton(findStorePO.ovly_btnCloseCross));
-         					
 		}
-		else {
-		System.err.println(webPropHelper.getTestDataProperty(arg1));
-		store = findStorePO.testWorkaround(webPropHelper.getTestDataProperty(arg1));
 		}
-	}
+		
+
 	
 	@And("^user verify the selected store$")
 		public void user_verify_the_selected_store() {

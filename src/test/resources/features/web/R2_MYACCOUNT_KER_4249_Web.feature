@@ -1,7 +1,7 @@
 Feature: Verify  Customer Registration/ Sign Up 
 
 # ************* Venkat *****************
-@RegressionP2
+@RegressionP2 @abcd
 Scenario: verify whether the address information provided in Signup page is saved in My Account - Address book page
   	Given user launches the browser and navigates to "ASO_HOME" page
 	When user click on My Account link 

@@ -122,7 +122,7 @@ public class New_PDP_PO extends CommonActionHelper
 		@FindBy(xpath="//button[contains(@class,'swiper-slide btn')][2]/img") public WebElement thumbNailImg;
 		//button[contains(@class,'swiper-slide btn')][2]/img
 		
-		
+		@FindBy(xpath="(//div[contains(@class,'swiper-wrapper')])[1]") public WebElement galleryList;
 		
 		//@FindBy(xpath="//div[@data-auid='PDP_MediaClick']/div/img") public WebElement imageLink;
 		@FindBy(xpath="(//div[contains(@class,'swiper-slide swiper-slide-active')]//img)[2]") public WebElement imageLink;
