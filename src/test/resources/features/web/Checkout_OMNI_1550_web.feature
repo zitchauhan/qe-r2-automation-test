@@ -39,7 +39,7 @@ Scenario: Verify Cart merge
   
   
     
-@RegressionP2 @abc
+@RegressionP2
 Scenario: Verify cart merge happens when user signs in
 Given user launches the browser and navigates to "ASO_HOME" page
 When User searches a product "productNameSTH" and navigates to PDP
