@@ -8,7 +8,7 @@ Scenario:  Checkout - Guest User order placement for Regular STS item
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 	
 	When user enters "STS_Regular_Product" in the searchbox
-	Then user validates estimated date is visible on "PDP" 
+	Then user validates estimated date is visible on "PDP"
 	Then user click on pickup button
 	And user click on viewcart button
 	Then user navigates to Cart Page

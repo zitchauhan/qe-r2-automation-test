@@ -22,6 +22,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the search term in the product title for Bundle Product
    And user should see different attribute and size of the Bundle Product
 
+
    @RegressionP2
   Scenario: Search a Baits product and verify URL,Ratings,Review,Color and Title of the searched item on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
@@ -31,10 +32,6 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see Color
    And user should be able to see the rating
    And user should be able to see the reviews
-   
-
-   
-   
    
    
    @RegressionP2
@@ -46,8 +43,6 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the search term in the DSV product title
    And user should see different attribute and size of the product
     
-   
-   
    
    @RegressionP2
    Scenario: Search a Gift card and verify URL,Image,Attributes on the PDP page
@@ -74,6 +69,7 @@ Feature: PDP Scenarios based on searching the products
    Then user should be able to see PDP mention in the current url
    And user should be able to see Image of the product
    And user should be able to see the search term in the White Glove product title
+   
    
    @RegressionP2
    Scenario: Search for a product and verify addcart button,breadcrumb and product details on the PDP page
@@ -162,8 +158,7 @@ Feature: PDP Scenarios based on searching the products
     When user navigates to PLP page of Hot Deals
     Then user should be able to see Hot Deals mention in the current url
     Then Verify the Hot Deal in Breadcrumb
-  
-  
+    
   
    @RegressionP3
   Scenario: User should be able to select a category or sub-category and navigates from PLP page as well
@@ -180,8 +175,7 @@ Feature: PDP Scenarios based on searching the products
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP page of Hot Deals
     Then Verify the Hot Deal in Breadcrumb
-    
-    
+     
     
     @RegressionP3
   Scenario: Validate the Title listed on PLP page post selecting a category or sub-category(below Bread-crumbs)
@@ -201,13 +195,14 @@ Feature: PDP Scenarios based on searching the products
     Then Verify the clothing in Breadcrumb
    
    
-  @RegressionP2  
+  @RegressionP2 @PDP
   Scenario: Validate that Brands category will navigate the user to the list of all brands and selecting any brand will navigate to the corresponding PLP page
     Given user launches the browser and navigates to "ASO_HOME" page 
     When user navigates till PLP of Brands
     Then Verify that selected PLP of Brand should be displayed
     
-    @RegressionP2
+    
+  @RegressionP2
   Scenario: Verify whether the grid with only selected Deals is displayed when the user filters using deals in left hand panel
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP page of clothing
@@ -223,39 +218,38 @@ Feature: PDP Scenarios based on searching the products
      And user click on view cart
      And user clicks on checkout button on cart page
   	 And user adds shipment address on checkout page for "guest" user
-	   And user selects shipment method on check out page for "guest" user
-	   And user add "<Payment Type>" details in payment method for "guest" user
-	   And Verify the Category level promotion is applied and displayed on Order Summary section
-	   And user clicks on place order on checkout page 
-	   Then verify user is able to successfully place the order
-		   Examples: 
-		    |Payment Type	      |
+	 And user selects shipment method on check out page for "guest" user
+	 And user add "<Payment Type>" details in payment method for "guest" user
+	 And Verify the Category level promotion is applied and displayed on Order Summary section
+	 And user clicks on place order on checkout page 
+	 Then verify user is able to successfully place the order
+	   Examples: 
+		    |Payment Type	    |
 		    |Credit Card - VISA	|
+			
 		
-		
-		
-	 @RegressionP2
+	@RegressionP2
    Scenario Outline: Verify guest user can place DSV order using CC as tender type
    Given user launches the browser and navigates to "ASO_HOME" page 
    When User searches a product "dsv_sku" and navigates to PDP
    And user click on ship it button
-	 And user click on viewcart button
-	 Then user navigates to Cart Page
+   And user click on viewcart button
+   Then user navigates to Cart Page
    And user clicks on checkout button on cart page
    And user adds shipment address on checkout page for "guest" user
-	 And user selects shipment method on check out page for "guest" user
-	 And user add "<Payment Type>" details in payment method for "guest" user
-	 #And Verify the Category level promotion is applied and displayed on Order Summary section
-	 And user clicks on place order on checkout page 
-	 Then verify user is able to successfully place the order
-		Examples: 
+   And user selects shipment method on check out page for "guest" user
+   And user add "<Payment Type>" details in payment method for "guest" user
+   #And Verify the Category level promotion is applied and displayed on Order Summary section
+   And user clicks on place order on checkout page 
+   Then verify user is able to successfully place the order
+	Examples: 
 		|Payment Type	|
 		|Credit Card - VISA	|
 		
 		
-		@RegressionP2 
-		Scenario: User hovers a mouse on one Category on the page and validate that category text should fly-out
-		Given user launches the browser and navigates to "ASO_HOME" page
+	@RegressionP2 
+	Scenario: User hovers a mouse on one Category on the page and validate that category text should fly-out
+	Given user launches the browser and navigates to "ASO_HOME" page
     When user mouse on one category on the page
     Then Verify the category text in the fly out
     
