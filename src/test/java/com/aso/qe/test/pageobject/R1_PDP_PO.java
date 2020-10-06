@@ -37,7 +37,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='btnShipIt']|//*[text()='Ship It']|//*[starts-with(@data-auid,'btnShipIt')]")
 	public WebElement shipItButton; 
 	@FindBy(xpath="//*[@data-auid='btnPickUpATC']")public WebElement pickupBtn; //CR MJR-17/7/19
-	@FindBy(xpath="//div[@class='css-18vvx1w'] | //*[contains(text(),'Store Pick up')]") public WebElement pickupBtn_m;//Uves P1 Regression Fixes 28 Aug 2020
+	@FindBy(xpath="(//div[@class='css-18vvx1w'] | //*[contains(text(),'Store Pick up')])[1]") public WebElement pickupBtn_m;//Uves P1 Regression Fixes 28 Aug 2020
 	@FindBy(xpath="//*[@data-auid='btnAddToCart']") public WebElement AddToCartBtn;
 	@FindBy(xpath="//*[@data-auid='btnbtnEnableBuyNow']")  public WebElement btnEnablebuynow;
 	

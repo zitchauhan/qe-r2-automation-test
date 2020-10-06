@@ -32,7 +32,7 @@ Scenario: Verify that user view Find a Store modal from Change Location in Check
     Then user click on change location button
     Then User is able to see Find a Store Modal
     
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10482 @RegressionP1 @AutomationSmoke
+@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10482 @RegressionP1 @AutomationSmoke 
 Scenario: Verify the guest user is able to select the Credit Card payment method in order to place the order for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -324,10 +324,10 @@ Scenario: Verfiy bopis place order for guest user with CC as tender
 		| # Message for successful order is displayed |
 		| Order Number                                |			
 	
-@RegressionP2 @WhiteGlove @AutomationSmoke
+@RegressionP2 @WhiteGlove @AutomationSmoke 
 Scenario Outline: Verify the guest user is able to place White Glove order using Credit Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User searches a product "SKUForWhiteGlove" and navigates to PDP
+	And User searches a product "SKUForWhiteGlovenew" and navigates to PDP
 	When user click on ship it button 
 	And user click on view cart
 	Then user navigates to Cart Page

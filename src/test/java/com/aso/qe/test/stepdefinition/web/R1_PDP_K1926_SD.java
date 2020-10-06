@@ -281,9 +281,10 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 			assertTrue(isDisplayed(R1_SearchProduct_PO.submitGOBtn));
 			R1_SearchProduct_PO.searchTextBox.sendKeys(webPropHelper.getTestDataProperty(searchText));
 			Thread.sleep(2000);
+			waitForElement(R1_SearchProduct_PO.submitGOBtn);
 			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));
-			//Thread.sleep(2000);
-//			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));//Due to existing defect clicking is required
+			Thread.sleep(2000);
+			assertTrue(clickOnButton(R1_SearchProduct_PO.submitGOBtn));//Due to existing defect clicking is required
 			logger.debug("User entered search key :: " + searchText);
 		}
 	}
