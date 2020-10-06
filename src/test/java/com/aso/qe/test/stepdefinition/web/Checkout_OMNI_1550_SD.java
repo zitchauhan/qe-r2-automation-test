@@ -28,15 +28,17 @@ public class Checkout_OMNI_1550_SD extends CommonActionHelper{
 	    // Write code here that turns the phrase above into concrete actions
 		//productName= r2_cart_PO.lnkProducttext.getText();;
 		productName = r1_pdp_PO.productname.getText();
-		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+productName);
+		System.out.println("Product name on PDP is "+productName);
 	}
 
 	@Then("^user should be able to validate the cart merge$")
 	public void user_should_be_able_to_validate_the_cart_merge() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Thread.sleep(3000);
-		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"+getDriver().getPageSource().contains(productName));
-		assertTrue(getDriver().getPageSource().contains(productName));
+		System.out.println("%%%%%%%%%%%%"+getDriver().getPageSource().contains(productName));
+		String productNameOnCart = (r1_pdp_PO.productNameCartPage).getText();
+		System.out.println("Product name on cart page is " +productNameOnCart);
+		assertTrue(productNameOnCart.contains(productName));
 	}
 
 
