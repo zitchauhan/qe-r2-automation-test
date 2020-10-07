@@ -229,16 +229,13 @@ Scenario: Verify that user is able to add a new gift card having 16 digit with 4
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
-	Then user click on My Account and navigate to payment 
+	Then user click on My Account and navigate to payment
 	When user clicks on Add New Gift Card button 
 	And user enter valid "Valid16DigitGiftCardNumber" in Gift Card Number text field 
 	And user enter valid "Valid8DigitGiftCardPIN" in Gift Card PIN text field 
 	And clicks on Add button to add gift card 
-	Then Verify below Sub/Main Module of My Account 
-		|#verify the following|
-		|PaymentPage_RemoveGiftCards_btnList			|
-		|PaymentPage_GiftCardHeader_label				|
-		|PaymentPage_AddedGiftCards_txtList				|
+	Then user clicks Gift Card Remove button in payment page
+	And user should see the proper message after GC delete 
 		
 #===================================================Sanity=====================================#
 @R2_Web @R2_WAST-03 @P2 @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418 @AutomationSmokeORIG 

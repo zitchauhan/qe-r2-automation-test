@@ -76,12 +76,13 @@ public class R2_MYACCOUNT_K3093_SD extends CommonActionHelper {
 
 	@Given("^clicks on Add button to add gift card$")
 	public void clicks_on_Add_button_to_add_gift_card() throws Throwable {
-		if(isDisplayed(myAccountPo.btnAddGiftCard)) 
+		if(isDisplayed(myAccountPo.btnAddGiftCard)) {
 			assertTrue(clickOnButton((myAccountPo.btnAddGiftCard)));
-		else if(clickOnButton(myAccountPo.btnAddGiftCardPlusIcon));
+		//else if(clickOnButton(myAccountPo.btnAddGiftCardPlusIcon));
+			Thread.sleep(Constants.thread_medium);
+		}
 		
-		Thread.sleep(Constants.thread_medium);
-		if(isDisplayed(myAccountPo.GCService_down));
+		else if(isDisplayed(myAccountPo.GCService_down))
 		{
 			logger.debug("Error Message for GC down is" + GCDownMsg);
 			assertTrue(!isDisplayed(myAccountPo.GCService_down));

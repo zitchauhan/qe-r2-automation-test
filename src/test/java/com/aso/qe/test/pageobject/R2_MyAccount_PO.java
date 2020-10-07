@@ -256,7 +256,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "(//*[text()='ADD NEW GIFT CARD'])[1]")
 	public WebElement btnAddGiftCardPlusIcon;
 
-	@FindBy(xpath = "//*[@data-auid='btnundefined']")
+	@FindBy(xpath = "//*[text()='Add']")
 	public WebElement btnAddGiftCard; // 25 Aug
 
 	@FindBy(xpath = "//*[@data-auid='btnundefined']/preceding::*[1]")
