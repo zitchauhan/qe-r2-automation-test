@@ -174,7 +174,7 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 		// webPropHelper.getTestDataProperty(arg1));
 		// assertTrue(clickOnButton(r2CartPo.btnCreatelist));
 		assertTrue(clickOnButton(r2PdpPo.WishList_Pop_Item_Lnk));
-		Thread.sleep(Constants.thread_medium);
+		Thread.sleep(Constants.thread_low);
 		assertTrue(isDisplayed(pdp_po.successWishlistModal));
 
 		if ("mobile".equalsIgnoreCase(testtype)) {

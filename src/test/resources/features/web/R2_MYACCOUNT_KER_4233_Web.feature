@@ -295,6 +295,10 @@ Scenario: Verify that Authenticated User is able to view the Wish List Details
 		|Wishlist_createlist_lnk|
 		|WishlistItems_lnk|
 	And User searches a product "productName" and navigates to PDP 
+	And user click on ship it button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page
 	And user add an item to wishlist "WishlistName" and navigates to wishlist 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following element in wishlist section|

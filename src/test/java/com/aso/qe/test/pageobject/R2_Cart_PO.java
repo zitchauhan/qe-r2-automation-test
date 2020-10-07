@@ -382,7 +382,7 @@ public class R2_Cart_PO extends CommonActionHelper {
     public WebElement makeMyStore_btn; 
 
 	//CR-AKK 25Aug
-	@FindBy(xpath = "//*[@data-auid='PDP_AddToWishList']")
+	@FindBy(xpath = "//*[text()='Add to Wish List']")
 	public WebElement lnkAddToWishList;
 	
 	@FindBy(xpath = "//input[@data-auid='input_newWishListName']")

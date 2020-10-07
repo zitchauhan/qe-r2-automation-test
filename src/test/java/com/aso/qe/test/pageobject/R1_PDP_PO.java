@@ -238,7 +238,7 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='input_newWishListName']")	public WebElement txtWishlist;
 	@FindBy(xpath = "//*[@data-auid='btnwishListPopover_createList'] | //*[@data-auid='btnwishListPopover_createList_m']")	public WebElement createWishlist;
 	@FindBy(xpath = "//*[@data-auid='btnwishListPopover_createList']")	public WebElement createWishlistPDP;  //SID 12-Jan
-	@FindBy(xpath = "//h6[text()='This item has been added to']")	public WebElement successWishlistModal;
+	@FindBy(xpath = "//*[contains(text(),'has been added to')]")	public WebElement successWishlistModal;
 	@FindBy(xpath = "//*[contains(@data-auid,'sku_')]/parent::div/span[2]")	public WebElement itemAddedSKU;
 	@FindBy(xpath = "//*[@data-auid=\"Wish List\"]")	public WebElement headerWishList;
 	@FindBy(xpath = "//*[@id='wishListSelect']")	public WebElement selectWishList;
