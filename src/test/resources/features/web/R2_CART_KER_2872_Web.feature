@@ -13,6 +13,9 @@ Scenario: Verify whether the user is able to change the store location successfu
 	Then User searches a product "BOPIS_SOF_Product" and navigates to PDP 
 	Then User is navigated to pdp page 
 	Then user Verify Store Locator in PDP	
+	And user click on Find a Store in PDP page
+	When User select store with "BOPIS_Store1"
+	Then user verify store on PDP is changed to a new store	
 	
 	
 
@@ -87,7 +90,7 @@ Scenario: Verify that user is able to see the Change Location link on PLP BOPIS 
 	And user is able to see Change Pickup Location link in PLP 
 	
 	
-@R2_Web @R2_All @P-High_B @C-PLP @KER-2872 @ZYP_CART_K2872-10618 @C-BOPIS @RegressionP2 @abcd
+@R2_Web @R2_All @P-High_B @C-PLP @KER-2872 @ZYP_CART_K2872-10618 @C-BOPIS @RegressionP2
 Scenario: Verify that user is able to open the Find Store modal from PLP for BOPIS filter 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 

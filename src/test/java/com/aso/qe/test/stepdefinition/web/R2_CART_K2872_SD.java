@@ -306,4 +306,8 @@ public class R2_CART_K2872_SD extends CommonActionHelper {
 		}
 	}
 
+	@Then("^user verify store on PDP is changed to a new store$")
+	public void user_Verify_Store_on_PDP_is_changed_to_new_store() throws Throwable {
+		r2CartPo.verifystoreChangedOnPDP();
+	}
 }

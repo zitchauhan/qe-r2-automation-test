@@ -24,7 +24,9 @@ public class R2_Cart_PO extends CommonActionHelper {
 	public R1_GlobalElementHeader_Home_PO globalElementHeader = PageFactory.initElements(driver,
 			R1_GlobalElementHeader_Home_PO.class);
 	R1_FindStore_PO r1FindStorePO = PageFactory.initElements(driver, R1_FindStore_PO.class);
-	String StorelocatorNamePopup; 
+	String StorelocatorNamePopup;
+	String StoreNameOnPDP;
+	String NewStoreNameOnPDP;
 	/*************** END LOCAL OBJETCS AND DECLARATIONS **************************/
 
 	/***************************** START XPAHTS **********************************/
@@ -572,9 +574,10 @@ public class R2_Cart_PO extends CommonActionHelper {
 	
 	public void verifystoreLocatorinPDP() throws InterruptedException {
 		String LocationTextHeader = LocationText.getText();
+		StoreNameOnPDP = StoreNameVisibleOnPDP.getText();
 		System.out.println(LocationTextHeader);
 		System.out.println(StorelocatorNamePopup);
-		assertTrue(LocationTextHeader.equals(StorelocatorNamePopup));			
+		assertTrue(LocationTextHeader.equals(StoreNameOnPDP));		
 	}
 	
 	
@@ -1017,6 +1020,12 @@ public class R2_Cart_PO extends CommonActionHelper {
 		@FindBy(xpath="//span[text()='Discount']")
 		public WebElement orderCnfDiscount_Txt;
 		
+		@FindBy(xpath="//*[@data-auid='PDP_StoreInfo_Address']/div[1]") public WebElement StoreNameVisibleOnPDP;
 		
+		public void verifystoreChangedOnPDP() throws InterruptedException {
+			NewStoreNameOnPDP = StoreNameVisibleOnPDP.getText();
+			System.out.println("New Store on PDP is" +NewStoreNameOnPDP);
+			assertTrue(!NewStoreNameOnPDP.equals(StoreNameOnPDP));			
+		}
 	
 }

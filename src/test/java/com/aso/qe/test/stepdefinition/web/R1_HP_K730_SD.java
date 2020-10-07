@@ -58,7 +58,7 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 	@When("^User select store with \"(.*?)\"$")
 	public void User_select_store_with(String arg1) throws Throwable {
 		Thread.sleep(Constants.thread_medium);
-		if(isDisplayed(findStorePO.ovly_secStore))
+		if(isDisplayed(findStorePO.StoresNearLocation))
 		{
 			findStorePO.testWorkaround(arg1);
 		}
@@ -68,7 +68,12 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 			setInputText(r2CartPo.inputFindaStoreHomePage, webPropHelper.getTestDataProperty(arg1));
 			assertTrue(clickOnButton(r2CartPo.btnZipcodesearch));
 			
-            assertTrue(clickOnButton(findStorePO.expandStore));
+			if(isDisplayed(findStorePO.GrandParkexpandStore)) {
+            assertTrue(clickOnButton(findStorePO.GrandParkexpandStore));
+			}
+			else {
+				assertTrue(clickOnButton(findStorePO.expandStore));
+			}
             assertTrue(clickOnButton(r2CartPo.btnstore));
             assertTrue(clickOnButton(findStorePO.ovly_btnCloseCross));
 		}
