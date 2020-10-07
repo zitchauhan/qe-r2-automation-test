@@ -111,7 +111,6 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 	@Then("^clicks on the Change Pickup Location link$")
 	public void clicks_on_the_Change_Pickup_Location_link() throws Throwable {
 		isDisplayed(r2R1FunPO.ChooseLocation_Lnk);
-		Thread.sleep(Constants.thread_medium);
 		assertTrue(clickOnButton(r2R1FunPO.ChooseLocation_Lnk));   
 	}
 

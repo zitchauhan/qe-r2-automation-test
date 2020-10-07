@@ -13,7 +13,8 @@ Scenario: Verify whether the user is able to change the store location successfu
 	Then User searches a product "BOPIS_SOF_Product" and navigates to PDP 
 	Then User is navigated to pdp page 
 	Then user Verify Store Locator in PDP	
-	And user click on Find a Store in PDP page
+	And clicks on the Change Pickup Location link
+	#And user click on Find a Store in PDP page
 	When User select store with "BOPIS_Store1"
 	Then user verify store on PDP is changed to a new store	
 	
@@ -118,11 +119,11 @@ Scenario: Verify that user is able to see the Change Location link on PDP
 @ZYP_CART_K2872-10620 @CR-DPK @C-BOPIS @RegressionP2
 Scenario: Verify that user is able to open the Find Store modal from PDP for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	#	When user clicks on one of the category and navigates to LOne SOF
-	#    Then user clicks on one of the subcategory and navigates to LTwo SOF
-	#    Then user clicks on one of the product category and navigates to LThree SOF
-	Then User searches a product "SOFSKUNumber" and navigates to PDP 
-	Then User is navigated to pdp page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 	 
+	Then User searches a product "BOPIS_SOF_Product" and navigates to PDP 
+	Then User is navigated to pdp page
 	And clicks on the Change Pickup Location link 
 	And user verify Find a Store popup 
 	

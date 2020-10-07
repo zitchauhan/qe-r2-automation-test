@@ -348,9 +348,9 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 			}*/
 
 		}
-		if (!(searchText.toLowerCase().contains("sku")))
-			clickOnButton(r2SanityPo.AS_productPLP1);
-		Thread.sleep(Constants.thread_medium);
+//		if (!(searchText.toLowerCase().contains("sku")))
+//			clickOnButton(r2SanityPo.AS_productPLP1);
+//		Thread.sleep(Constants.thread_medium);
 
 	}
 	
