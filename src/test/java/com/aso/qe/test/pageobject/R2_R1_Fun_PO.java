@@ -206,7 +206,7 @@ public WebElement AddToCart_btn;
 @FindBy(xpath ="//*[@data-auid='filtersTitle_m']")//CR-DPK 26-sept
 public WebElement DdFilter_M;
 
-@FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_Shipping & Pickup'] | //*[@data-auid='facetdrawer_drawer_Shipping & Pickup_m']")//CR-DPK 26-sept
+@FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_DELIVERY & PICK UP']")
 public WebElement txtShippingPickupFilterDrawer; 
 
 @FindBy(xpath ="//*[@data-auid='facetdrawer_drawer_DELIVERY & PICK UP']")
@@ -264,7 +264,7 @@ public WebElement bopisNoInventoryMesssagePLP;   //SID 10-Jan
 
 
 
-@FindBy(xpath ="//*[text()='Change Pickup Location']")//CR-DPK 26-sept
+@FindBy(xpath ="//*[text()='Change Pick Up Location']")
 public WebElement lnkPLPChangePickupLocation;
 //End KER-2872 CR-DPK
 

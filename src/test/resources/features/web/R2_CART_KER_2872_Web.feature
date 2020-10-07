@@ -1,7 +1,7 @@
 Feature: Verify BOPIS PDP Store Selection 
 
-#****************Venkat**************
-@RegressionP2 @ppp
+
+@RegressionP2
 Scenario: Verify whether the user is able to change the store location successfully from store locatoor modal invoked in PDP 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
@@ -14,7 +14,6 @@ Scenario: Verify whether the user is able to change the store location successfu
 	Then User is navigated to pdp page 
 	Then user Verify Store Locator in PDP	
 	
-# *************** End Venkat **************** 
 	
 
 @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8706 @CR-DPK @C-BOPIS @P1 @RegressionP1
@@ -88,16 +87,16 @@ Scenario: Verify that user is able to see the Change Location link on PLP BOPIS 
 	And user is able to see Change Pickup Location link in PLP 
 	
 	
-@R2_Web @R2_All @P-High_B @C-PLP @KER-2872 @ZYP_CART_K2872-10618 @C-BOPIS @RegressionP2
+@R2_Web @R2_All @P-High_B @C-PLP @KER-2872 @ZYP_CART_K2872-10618 @C-BOPIS @RegressionP2 @abcd
 Scenario: Verify that user is able to open the Find Store modal from PLP for BOPIS filter 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
-	When User select store with "Postal_Code" 
+	When User select store with "BOPIS_Store2" 	 
 	And User Navigates L2 form Homepage Header 
 	When user lands on the PLP page with Filter Drawer 
 	And clicks on the Change Pickup Location link in PLP 
-	And user verify Find a Store popup 
+	And user verify Find a Store popup
 	
 	
 @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872
