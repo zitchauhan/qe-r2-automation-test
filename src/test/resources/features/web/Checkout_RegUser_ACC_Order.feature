@@ -1,12 +1,12 @@
 Feature: CHECKOUT Registered user Academy Credit Card Tender
 
-@AutomationSmoke   
+@AutomationSmoke  
 Scenario: Checkout -  Registered user Place Order with ACC as tender 
 	Given user launches the browser and navigates to "ASO_HOME" page plcc 
 	When user click on My Account link 
 	And user expect element Email Address to be present 
-	And user enter Email address in sign-in page "Login_username" 
-	And user enter password in sign-in page "Login_pwd" 
+	And user enter Email address in sign-in page "Email_SavedCard" 
+	And user enter password in sign-in page "Password" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
 	And user clears everything in cart
