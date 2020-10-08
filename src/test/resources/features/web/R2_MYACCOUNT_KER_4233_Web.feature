@@ -47,7 +47,14 @@ Scenario: Verify that Authenticated User is able to rename a Wish List
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user click on MyAccount 
-	Then user click on WishList 
+	Then user click on WishList
+	Then deletes all the existing wishlists 
+	Then Verify below Sub/Main Module of My Account 
+		|#Verify following elements in wishlist|
+		|WishlistPage_CreateANewWishlist_btn|
+	And user clicks on create first wishlist button 
+	Then user enters Wishlist name "WishlistName" 
+	And user clicks on Create List 
 	Then Verify below Sub/Main Module of My Account 
 		|#Verify following element in wishlist section|
 		|Wishlist_createlist_lnk|
@@ -57,7 +64,7 @@ Scenario: Verify that Authenticated User is able to rename a Wish List
 		|#Verify following element in wishlist section|
 		|Rename_list_lnk|
 	Then user clicks on Rename List 
-	Then user enters Wishlist name "WishlistName" 
+	Then user enters Wishlist name "WishListRename" 
 	And user clicks on create 
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4233 

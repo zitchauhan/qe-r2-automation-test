@@ -68,6 +68,8 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 		// }
 
 		myAccountPo.deleteAllNonDefaultSavedAddressFromProfile();
+		
+		
 	}
 
 	@Then("^user enter First name \"(.*?)\" in address book$")

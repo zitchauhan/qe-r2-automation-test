@@ -28,6 +28,7 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(r2MyAccountPo.Wishlist_Mobile_lnk));
 		} else {
+			waitForElement(r2MyAccountPo.wishList);
 			assertTrue(clickOnButton(r2MyAccountPo.wishList));
 		}
 	}

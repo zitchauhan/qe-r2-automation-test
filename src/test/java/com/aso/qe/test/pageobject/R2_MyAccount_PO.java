@@ -1208,14 +1208,18 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 		}
 	}
 
-	// CR-GK 15-Oct
 	public void deleteAllNonDefaultSavedAddressFromProfile() throws InterruptedException {
+		if(!isDisplayed(btnRemove)) {
+			System.out.print("User just have default address. Cannot delete");
+		}
+		else {
 		Thread.sleep(Constants.thread_low);
 		int nonDefaultaddressCountInProfile = addresRemove_Btn.size();
 		while (nonDefaultaddressCountInProfile > 0) {
 			assertTrue(clickOnButton(btnRemove));
 			Thread.sleep(Constants.thread_high);
 			nonDefaultaddressCountInProfile--;
+		}
 		}
 	}
 

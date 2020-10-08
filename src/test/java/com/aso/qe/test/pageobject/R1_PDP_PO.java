@@ -1259,6 +1259,7 @@ public class R1_PDP_PO extends CommonActionHelper
 				{
 					boolean flag= false;
 					if(QandALink.isDisplayed())
+						System.out.println("QnA is Displayed");
 						flag =true;
 					return flag;
 						
