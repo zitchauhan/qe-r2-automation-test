@@ -3,8 +3,8 @@ Feature: PDP Scenarios based on searching the products
 
    @RegressionP2
   Scenario: Search for a regular product and verify URL,Image,Reviews,Rating,Attributes and Details&Specs on the PDP page
-    Given user launches the browser and navigates to "ASO_HOME" page
- 	When user enters "SearchPDP" in the search box
+  Given user launches the browser and navigates to "ASO_HOME" page
+ 		When user enters "SearchPDP" in the search box
     Then user should be able to see PDP mention in the current url
     And user should be able to see Image of the product
     And user should be able to see the search term in the product title
@@ -71,7 +71,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the search term in the White Glove product title
    
    
-   @RegressionP2
+   @P2 @SearchRemoved
    Scenario: Search for a product and verify addcart button,breadcrumb and product details on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
    When user enters "SearchPDP" in the search box
@@ -79,7 +79,7 @@ Feature: PDP Scenarios based on searching the products
    And user should see details and specs
    
    
-   @RegressionP2
+   @P2 @SearchRemoved
    Scenario: Search for a product and verify ratings and reviews on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
    When user enters "SearchPDP" in the search box
@@ -87,7 +87,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the reviews
    
    
-  @RegressionP2
+   @P2 @SearchRemoved
    Scenario: Navigate to a product pdp page and verify the Home Delivery Option on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
    When user navigates to PLP of any product
@@ -96,7 +96,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the HomeDelivery Option
    
    
-  @RegressionP2 
+  @P2 @SearchRemoved 
    Scenario: Navigate to a product pdp page and verify the Select Store Option on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
    When user navigates to PLP of any product
