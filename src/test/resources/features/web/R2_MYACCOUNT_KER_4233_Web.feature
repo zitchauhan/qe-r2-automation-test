@@ -1,7 +1,7 @@
 Feature: E02-100 - My Account, Wish List 
 
 @R2_Web @R2_Regression @R2_All @1HR_R2 @C-MyAccount @KER-4233 
-@ZYP_MYACCOUNT_K4233-11099 @ZYP_MYACCOUNT_K4233-10484 @CR-MS @RegressionP3 @abcd
+@ZYP_MYACCOUNT_K4233-11099 @ZYP_MYACCOUNT_K4233-10484 @CR-MS @RegressionP3
 Scenario: Verify that Authenticated User is able to view the Wish List page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

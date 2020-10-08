@@ -403,7 +403,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//*[@data-auid='pageBanner']//*[contains(text(),'FREE STORE PICKUP')]") public WebElement promotionBannerBopisMessage;
 	@FindBy(xpath="//*[@data-auid='bannerFindAStore']") public WebElement bannerFindaStore;
 	
-	// RegressionP2	- Dilpreet
+
 	//	@FindBy(xpath="//*[@data-auid='level1Category-Deals']/a") public WebElement btnDeals;
 	@FindBy(xpath="(//a[@data-auid='level2Category-Hot Deals'])[2]") public WebElement btnHotDeals;
 	@FindBy(xpath="//a[@data-auid='level2Category-Outdoors']") public WebElement btnOutdoors;

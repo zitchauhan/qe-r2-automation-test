@@ -105,7 +105,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the Store Option
    
    
-   @RegressionP3
+   @RegressionP2
    Scenario: Navigate to a product pdp page and verify the Question and Answer section on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
    When user navigates to PLP of any product
@@ -195,7 +195,7 @@ Feature: PDP Scenarios based on searching the products
     Then Verify the clothing in Breadcrumb
    
    
-  @RegressionP2 @PDP
+  @RegressionP3 @PDP
   Scenario: Validate that Brands category will navigate the user to the list of all brands and selecting any brand will navigate to the corresponding PLP page
     Given user launches the browser and navigates to "ASO_HOME" page 
     When user navigates till PLP of Brands
