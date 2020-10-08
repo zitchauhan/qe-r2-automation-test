@@ -152,7 +152,7 @@ Feature: PDP Scenarios based on searching the products
   |hotdeals|
   
   
-  @RegressionP2
+  @P2 @SearchRemoved
   Scenario: User clicks on Category type and navigates to PLP page showing all selected category products, able to navigate selecting category only, without selecting any sub-category regarding that category)
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP page of Hot Deals
@@ -188,7 +188,7 @@ Feature: PDP Scenarios based on searching the products
     And Verify that the title for soft baits is displayed
     
     
-  @RegressionP2
+  @P2 @SearchRemoved
   Scenario: Validate that User will navigate to clothing category PLP after clicking on See All option below category levels
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP page of clothing
