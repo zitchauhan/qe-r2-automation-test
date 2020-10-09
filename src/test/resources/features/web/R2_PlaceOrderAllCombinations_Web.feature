@@ -234,11 +234,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bulk gi
 Scenario Outline: Verify if unauthenticated user is able to place an for bait products
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUForBaitProduct" and navigates to PDP 
-	And user click on Add to Cart Button for "Bait Product" 
-	#	And user click on Add to Cart Button 
-#	And user is navigated to Add to cart Notification popup 
-#	And user click on checkout button 
-	And user click on ship it button
+	And user click on Add to Cart Button for "Bait Product"
 	And user click on viewcart button
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
@@ -247,13 +243,9 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bait pr
 	And user add "<Payment Type>" details in payment method for "guest" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-#	And Verify the message on the page 
-#		|# Message for successful order is displayed|
-#		|THANKS FOR SUBMITTING YOUR ORDER			|
 	Examples: 
 		|Payment Type	|
-#		|Gift Card		|
-		|Credit Card	|
+		|Credit Card - Master	|
 		|PayPal			|
 
 

@@ -73,14 +73,18 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 
 		setInputText(r2CheckOutPo.PaypalEmail_Input, webPropHelper.getTestDataProperty(arg1));
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalNext_Btn));
-		Thread.sleep(Constants.thread_medium); 
+		waitForElement(r2CheckOutPo.PaypalPassWord_Input); 
 		setInputText(r2CheckOutPo.PaypalPassWord_Input, webPropHelper.getTestDataProperty(arg2));
 		assertTrue(clickOnButton(r2CheckOutPo.PaypalLogin_Btn));
-		Thread.sleep(Constants.thread_high);
+		//Thread.sleep(Constants.thread_high);
+		waitForElement(r2CheckOutPo.PayPalPayWithSection);
 		driver.manage().window().maximize();
-		//driver.getTitle();
 		
-		Thread.sleep(Constants.thread_highest);
+		//driver.getTitle();
+		if(isDisplayed(r2CheckOutPo.PayPalAcceptCookie))
+		{
+			assertTrue(clickOnButton(r2CheckOutPo.PayPalAcceptCookie));
+		}
 		waitForElement(r2CheckOutPo.PayPalContinue_Btn);
 		
 		r2CheckOutPo.PayPalContinue_Btn.click();
@@ -90,7 +94,6 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		Thread.sleep(Constants.thread_high);
 		jsb.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		Thread.sleep(Constants.thread_high);
-		
 		System.err.println(driver.getTitle());
 		
         
@@ -106,7 +109,12 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 	
 	@And("^user clicks on ok button of order not complete modal$")
 	public void user_clicks_on_ok_button_of_order_not_complete_modal() throws Throwable {
+		if(isDisplayed(r2CheckOutPo.OkButtonReturnFromPaypal))
+		{
 		assertTrue(clickOnButton(r2CheckOutPo.OkButtonReturnFromPaypal));
+		}
+		else
+			System.out.println("You order is not complete modal not visible, so moving forward");
 	}
 	
 }

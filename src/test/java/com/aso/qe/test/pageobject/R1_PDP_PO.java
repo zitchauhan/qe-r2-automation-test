@@ -293,10 +293,10 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//*[text()='Shoe Width']/../following-sibling::*//*[@data-auid='swatchButton-image-3782' and not(*[local-name()='svg'])]")
 	public WebElement availableWidthForBundleProduct;
 	
-	@FindBy(xpath = "//*[@data-auid='undefined_INC']")
+	@FindBy(xpath = "//*[@data-auid='PDP_QC_INC']")
 	public WebElement increaseQuantityForBaitProduct;
 	
-	@FindBy(xpath = "//*[@data-auid='btnundefined']")
+	@FindBy(xpath = "//*[@data-auid='PDP_OnlineMessage']")
 	public WebElement addSelectionsToCart;
 	
 	

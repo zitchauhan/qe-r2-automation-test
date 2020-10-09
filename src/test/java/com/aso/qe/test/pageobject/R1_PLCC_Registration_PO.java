@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.framework.common.FrameWorkHelper;
 import com.aso.qe.test.common.Common_Web_PLCC;
 //import com.aso.qe.test.stepdefinition.web.plcc.Common_Web_SD_PLCC;
@@ -265,6 +266,7 @@ public class R1_PLCC_Registration_PO extends Common_Web_PLCC {
 	public void verifyPresenceOfEmailTxtField() throws Exception {
 
 		if ("web".equalsIgnoreCase(testtype)) {
+			Thread.sleep(Constants.thread_low);
 			assertTrue(isDisplayed(plccLandingPageObjects.emailTxtField));
 			logger.debug("Email Text Field is displayed");
 		} else {

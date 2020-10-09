@@ -42,8 +42,9 @@ public class R2_PlaceOrderAllCombinations_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(pdpPageObj.availableBallSizeForBundleProduct));
 			assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 		} else if (arg1.equalsIgnoreCase("Bait Product")) {
-			if (!(isEnabled(pdpPageObj.addSelectionsToCart)))
+			if (isDisplayed(pdpPageObj.increaseQuantityForBaitProduct))
 				assertTrue(clickOnButton(pdpPageObj.increaseQuantityForBaitProduct));
+				Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(pdpPageObj.addSelectionsToCart));
 		} else {
 			throw new NullPointerException("Please verify the parameter");
