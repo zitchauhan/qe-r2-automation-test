@@ -219,6 +219,7 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[@data-auid='checkout_order_summary_section']//div[1]/div[2]")
 	public WebElement subtotalValue;
 	
+	
 	public void verifyPresenceOfSubTotalValue() throws Exception {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(subtotalValue));

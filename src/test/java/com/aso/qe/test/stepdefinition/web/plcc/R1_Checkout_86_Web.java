@@ -1,9 +1,11 @@
 package com.aso.qe.test.stepdefinition.web.plcc;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -15,9 +17,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.common.Common_Web_PLCC;
+import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_CreditCardApplicationModal_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_Generic_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_LandingPage_PO;
+import com.aso.qe.test.pageobject.R2_CheckOut_PO;
+import com.aso.qe.test.stepdefinition.api.plcc.plccCardForGuestUser;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
@@ -25,8 +30,10 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class R1_Checkout_86_Web extends Common_Web_PLCC {
+	private static final Logger logger = Logger.getLogger(R1_GlobalElementHeader_Home_PO.class);
 	R1_PLCC_Generic_PO genericPO = PageFactory.initElements(driver, R1_PLCC_Generic_PO.class);
 	R1_PLCC_LandingPage_PO plccLandingPageObjects = PageFactory.initElements(driver, R1_PLCC_LandingPage_PO.class);
+	R2_CheckOut_PO r2CheckoutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	R1_PLCC_CreditCardApplicationModal_PO plccCCApplicationModalObjects = PageFactory.initElements(driver,
 			R1_PLCC_CreditCardApplicationModal_PO.class);
 
@@ -314,7 +321,36 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 		}
 	}
 
+	@Then("^user clicks on Continue to Checkout CTA on PLCC approval modal$")
+	public void user_clicks_on_Continue_to_Checkout_CTA() {
+		if(isDisplayed(plccCCApplicationModalObjects.errorTextErrorModal))
+		{
+			System.err.println("Error PLCC Modal Visible");
+		}
+		else if(isDisplayed(plccCCApplicationModalObjects.welcomeTxtSuccessModal))
+			try {
+				plccCCApplicationModalObjects.continueToCheckout.click();
+			} catch (Exception e) {
+				logger.debug("Exception Message: "+e.getMessage());
+			}
+	}
 	
+	@Then("^user should get first time promotion PLCC discount$")
+	public void user_should_get_first_time_promotion_PLCC_discount() {
+		String Subtotal = (r2CheckoutPo.SubTotalPrice_Txt).getText();
+		System.out.println("Subtotal is "+Subtotal);
+		String NSubtotal = Subtotal.substring(1);
+		String Discount = (r2CheckoutPo.CheckoutDiscountValue).getText();
+		String NDiscount = Discount.substring(2);
+		if(Integer.parseInt(NSubtotal) > 15)
+		{
+			
+			assertEquals(Integer.parseInt(NDiscount), "15");
+		}
+		else {
+			assertTrue(isDisplayed(r2CheckoutPo.CheckoutDiscountValue));
+		}
+	}
 	
 
 

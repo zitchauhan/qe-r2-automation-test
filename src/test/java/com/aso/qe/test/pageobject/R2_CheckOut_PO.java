@@ -1217,4 +1217,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='btnbuttonOneSixFour'][2]") public WebElement ContinueReviewCTA;
 		@FindBy(xpath="//*[contains(text(),'You have already ordered the daily quantity limit for the below item(s)')]") public WebElement DailyQtyErrorMsg;
 		@FindBy(xpath="//*[@data-testid='paywith-title']") public WebElement PayPalPayWithSection;
+		@FindBy(xpath ="//*[@data-auid='discountValue']") public WebElement CheckoutDiscountValue;
+		
 }
