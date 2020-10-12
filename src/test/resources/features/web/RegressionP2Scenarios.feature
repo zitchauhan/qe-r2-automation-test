@@ -90,3 +90,19 @@ Feature: Regression P2 scenarios
 	And user expect element free shipping should not be available 
 	When user click on edit my cart link 
 	Then user click on remove from cart 
+	
+	 	
+ 	@PDP @RegressionP2 @SR-1313
+ 	Scenario: Estimate date is visible for STS item on PDP page
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	And User searches a product "STS_Regular_Product" and navigates to PDP 
+	And user validates estimated date is visible on "PDP"
+	And user click on ship it button 
+	And user click on view cart
+	Then user select in store pickup option
+	And user validates estimated date is visible on "Cart"
+	
+	

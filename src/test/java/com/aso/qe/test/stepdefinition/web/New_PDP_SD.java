@@ -35,9 +35,9 @@ public class New_PDP_SD extends CommonActionHelper {
 	New_PDP_PO newPDP = PageFactory.initElements(getDriver(), New_PDP_PO.class);
 	R1_PDP_PO pdp_po = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
 	
-	WebDriverWait wait=new WebDriverWait(driver, 30);
-	 
-	
+	WebDriverWait wait=new WebDriverWait(driver, 30); 
+	String pdpDate;
+	String date;
 	
 	
 	@And("^user sets up cookie$")
@@ -803,23 +803,20 @@ public class New_PDP_SD extends CommonActionHelper {
 	@Then("^user validates estimated date is visible on \"(.*?)\"$")
 	public void user_validates_estimated_date_is_visible_on(String arg1) throws Throwable
 	{
-		String PDPdate = newPDP.EstimatePickUpPDP.getText();;
+		
 		if(arg1.equalsIgnoreCase("PDP"))
 		{
+			pdpDate = newPDP.EstimatePickUpPDP.getText();
 			assertTrue(isDisplayed(newPDP.EstimatePickUpPDP));
-			System.out.println("Estimated date on PDP is" + PDPdate);
+			System.out.println("Estimated date on PDP is" + pdpDate);
 		}
 		else if(arg1.equalsIgnoreCase("Cart"))
 		{
 			Thread.sleep(Constants.thread_medium);
 			assertTrue(isDisplayed(newPDP.EstimatePickUpCart));
-//			String date = newPDP.EstimatePickUpCart.getText();
-//			if(date.contains(PDPdate))
-//			{
-//			System.out.println("Estimated is same on both PDP and Cart Page" + date);
-//			}
+			date = newPDP.EstimatePickUpCart.getText();
+			assertTrue(pdpDate.contains(date));
 		}
-		
 	}
 
 }

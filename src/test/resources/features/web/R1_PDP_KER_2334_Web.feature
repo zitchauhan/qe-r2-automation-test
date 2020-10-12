@@ -26,3 +26,5 @@ Feature: Back in Stock Notifications on the PDP - Email
 	And user validates estimated date is visible on "PDP"
 	And user should be able to see In-Store Pick up enabled
 	
+	
+	
