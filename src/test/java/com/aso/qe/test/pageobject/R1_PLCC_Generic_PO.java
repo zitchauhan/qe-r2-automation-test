@@ -214,7 +214,7 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	
 	
 	// Order Summary:
-		@FindBy(xpath = "//*[@data-auid='checkout_order_summary_section']//div[4]/div[2]")
+		@FindBy(xpath = "//*[@data-auid='discountValue']")
 		public WebElement discountValue;
 		
 	//Checkout - Save card

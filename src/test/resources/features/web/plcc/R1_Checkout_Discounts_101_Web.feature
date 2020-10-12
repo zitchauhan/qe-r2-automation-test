@@ -44,7 +44,7 @@ Background: Common Pre-requisite steps
 	And user clears everything in cart 
 	  
 
-@C-PLCC @Regression @All @PLCC-101 @CR-VS @Tempdisabled 
+@C-PLCC @Regression @All @PLCC-101 @CR-VS @Tempdisabled
 Scenario: First Time Promotion Available for item less than or equal to <15$
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 

@@ -32,7 +32,7 @@ Feature: Regression P2 scenarios
 #   And user should be able to see Image of the product
 #   And user should be able to see the search term in the GiftCard title
 
-	@RegressionP2 @SR-1311 @def
+	@RegressionP2 @SR-1311
 	Scenario: Verify user is able to get acquisition/first time promotion for the new PLCC approved card[5% up to $15 and Flat $15 for cart 
 	total >$15]
 	Given user launches the browser and navigates to "ASO_HOME" page
@@ -69,7 +69,24 @@ Feature: Regression P2 scenarios
 	And user selects shipment method on check out page for "guest" user
 	Then user fill the email address and click on review order btn
 	Then user should get first time promotion PLCC discount
-	And user clicks on place order on checkout page 
-	Then verify user is able to successfully place the order 
 	
-	
+  @RegressionP2 @SR-1312
+	Scenario: Verify user is able to get 5% offer for every purchase
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header
+	And user enter the valid emailaddress "Email_SavedCard" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	And user navigate and deletes existing items in cart 
+ 	And User searches a product "BOPIS_Regular_Product" and navigates to PDP 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user click on REVIEW ORDER button
+	And user expect element Order Summary to be present
+	And user expect discount text to be present 
+	Then user expect five percent discount 
+	And user expect element free shipping should not be available 
+	When user click on edit my cart link 
+	Then user click on remove from cart 

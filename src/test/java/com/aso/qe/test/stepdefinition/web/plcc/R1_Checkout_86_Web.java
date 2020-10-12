@@ -338,20 +338,24 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 	@Then("^user should get first time promotion PLCC discount$")
 	public void user_should_get_first_time_promotion_PLCC_discount() {
 		String Subtotal = (r2CheckoutPo.SubTotalPrice_Txt).getText();
-		System.out.println("Subtotal is "+Subtotal);
 		String NSubtotal = Subtotal.substring(1);
+		float NewSubtotal=Float.parseFloat(NSubtotal); 
+		//Integer NewSubtotal = new Integer(NSubtotal);
+		System.out.println("New Subtotal is "+NewSubtotal);
 		String Discount = (r2CheckoutPo.CheckoutDiscountValue).getText();
 		String NDiscount = Discount.substring(2);
-		if(Integer.parseInt(NSubtotal) > 15)
+		float NewDiscount = Float.parseFloat(NDiscount);
+		if(NewSubtotal > 15.00)
 		{
 			
-			assertEquals(Integer.parseInt(NDiscount), "15");
+			assertEquals(NewDiscount, "15.00");
 		}
-		else {
+	else {
 			assertTrue(isDisplayed(r2CheckoutPo.CheckoutDiscountValue));
+			System.out.println("Discount is less than $15, discount value is "+NewDiscount);
+			
 		}
 	}
 	
-
-
 }
+
