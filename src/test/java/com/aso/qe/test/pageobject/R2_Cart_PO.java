@@ -1017,7 +1017,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 		@FindBy(xpath = "//*[@data-component='cart']//*[contains(text(),'removed')]/*[2] | //*[@data-component='cart']//*[contains(text(),'added')]/*[2]")
 		public WebElement removedproductUndo;  //SID 27-Jan
 		
-		@FindBy(xpath="//span[text()='Discount']")
+		@FindBy(xpath="//span[text()='Discount'] | //*[@data-auid='discount']")
 		public WebElement orderCnfDiscount_Txt;
 		
 		@FindBy(xpath="//*[@data-auid='PDP_StoreInfo_Address']/div[1]") public WebElement StoreNameVisibleOnPDP;
