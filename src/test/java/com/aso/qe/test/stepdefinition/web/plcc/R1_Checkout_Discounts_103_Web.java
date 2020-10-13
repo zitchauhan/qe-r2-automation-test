@@ -19,6 +19,7 @@ import com.aso.qe.test.pageobject.R1_SearchProduct_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 

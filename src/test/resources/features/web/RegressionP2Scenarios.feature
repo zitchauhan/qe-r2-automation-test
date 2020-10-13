@@ -155,8 +155,6 @@ Feature: Regression P2 scenarios
 		|EstimatedTaxes_txt|
 		|Discount_Txt|	 
 	And user clicks on checkout button on cart page	
-	#Then user click on Go To Shipping Method button in Checkout page
-	#And user click on go to payment present in shipping method
 	Then user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "Valid16DigitGiftCardNumber"
 	And user enter Pin Number "Valid8DigitGiftCardPIN" 
@@ -166,3 +164,25 @@ Feature: Regression P2 scenarios
 	And user clicks on place order on checkout page 
 	And verify user is able to successfully place the order  
 	Then verify discount is displayed
+	
+	@Checkout @RegressionP2 @SR-1317
+	Scenario: Verify discount should not be applied for PLCC+GC as payment type
+	Given user launches the browser and navigates to "ASO_HOME" page
+	When user clicks on SignIn link from global header
+	And user enter the valid emailaddress "Email_SavedCard" 
+	And user enter the valid password "Password" 
+	And user click on signin button
+	And user navigate and deletes existing items in cart 
+	And User searches a product "High_Price_SKU" and navigates to PDP 
+	And user click on ship it button
+	And user will click on View Cart button 
+	And user clicks on checkout button on cart page	
+	Then user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "Valid16DigitGiftCardNumber"
+	And user enter Pin Number "Valid8DigitGiftCardPIN" 
+	And user click on Apply button
+	#And user enter the email address for order confirmation
+	Then user click on review order button
+	Then user expect element Discount not to be present
+	
+	
