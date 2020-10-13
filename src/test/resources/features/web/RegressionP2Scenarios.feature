@@ -105,4 +105,33 @@ Feature: Regression P2 scenarios
 	Then user select in store pickup option
 	And user validates estimated date is visible on "Cart"
 	
+	@PDP @RegressionP2 @SR-1314
+ 	Scenario: Validate Pickup Date for BOPIS elgiible items are correctly visible on PDP page
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	And User searches a product "BOPIS_Regular_Product" and navigates to PDP 
+	And user validates Pick Up Today is visible on "PDP"
+	And user click on ship it button 
+	And user click on view cart
+	Then user select in store pickup option
+	And user validates Pick Up Today is visible on "Cart"
+	
+	@PDP @RegressionP2 @SR-1315
+	Scenario: Validate Pickup Date for BOPIS elgiible items and Estimate date for STS eligible items should be 
+	visible on Add to Cart modal when these items are added as STH, also PICKUP CTA should be there
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	And User searches a product "BOPIS_Regular_Product" and navigates to PDP 
+	And user validates Pick Up Today is visible on "PDP"
+	And user click on ship it button
+	Then user validates same bopis date is visible on cart modal as on PDP for "BOPIS"
+	Then user click on continue shopping
+	And User searches a product "STS_Regular_Product" and navigates to PDP 
+	And user validates estimated date is visible on "PDP"
+	And user click on ship it button 
+	Then user validates same bopis date is visible on cart modal as on PDP for "STS"
 	

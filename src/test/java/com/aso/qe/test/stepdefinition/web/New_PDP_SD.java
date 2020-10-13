@@ -38,6 +38,8 @@ public class New_PDP_SD extends CommonActionHelper {
 	WebDriverWait wait=new WebDriverWait(driver, 30); 
 	String pdpDate;
 	String date;
+	String EstCartdate;
+	String EstpdpDate;
 	
 	
 	@And("^user sets up cookie$")
@@ -806,17 +808,61 @@ public class New_PDP_SD extends CommonActionHelper {
 		
 		if(arg1.equalsIgnoreCase("PDP"))
 		{
-			pdpDate = newPDP.EstimatePickUpPDP.getText();
+			Thread.sleep(Constants.thread_low);
+			waitForElement(newPDP.EstimatePickUpPDP);
+			EstpdpDate = newPDP.EstimatePickUpPDP.getText();
 			assertTrue(isDisplayed(newPDP.EstimatePickUpPDP));
-			System.out.println("Estimated date on PDP is" + pdpDate);
+			System.out.println("Estimated date on PDP is" + EstpdpDate);
 		}
 		else if(arg1.equalsIgnoreCase("Cart"))
 		{
-			Thread.sleep(Constants.thread_medium);
+			waitForElement(newPDP.EstimatePickUpCart);
 			assertTrue(isDisplayed(newPDP.EstimatePickUpCart));
-			date = newPDP.EstimatePickUpCart.getText();
-			assertTrue(pdpDate.contains(date));
+			EstCartdate = newPDP.EstimatePickUpCart.getText();
+			assertTrue(EstpdpDate.contains(EstCartdate));
 		}
 	}
 
+	
+	@And("^user validates Pick Up Today is visible on \"(.*?)\"$")
+	public void user_validates_pick_up_today_is_visible(String arg1) throws Throwable
+	{
+		if(arg1.equalsIgnoreCase("PDP"))
+		{
+			Thread.sleep(Constants.thread_low);
+			waitForElement(newPDP.PickUpTodayPDP);
+			pdpDate = newPDP.PickUpTodayPDP.getText();
+			assertTrue(isDisplayed(newPDP.PickUpTodayPDP));
+			System.out.println("Text on PDP is" + pdpDate);
+		}
+		else if(arg1.equalsIgnoreCase("Cart"))
+		{
+			waitForElement(newPDP.PickUpTodayCart);
+			assertTrue(isDisplayed(newPDP.PickUpTodayCart));
+			date = newPDP.PickUpTodayCart.getText();
+			assertTrue(date.contains("Pick Up today"));
+		}
+		
+	}
+	
+	@Then("^user validates same bopis date is visible on cart modal as on PDP for \"(.*?)\"$")
+	public void user_validates_same_bopis_date_is_visible_on_cart_modal(String arg1) throws Throwable
+	{
+		if(arg1.equalsIgnoreCase("BOPIS"))
+		{
+		waitForElement(newPDP.PickUpTodayCartModal);
+		assertTrue(isDisplayed(newPDP.PickUpTodayCartModal));
+		date = newPDP.PickUpTodayCartModal.getText();
+		assertTrue(date.contains(pdpDate));
+		}
+		else if(arg1.equalsIgnoreCase("STS"))
+		{
+		waitForElement(newPDP.EstimatePickUpDateCartModal);
+		assertTrue(isDisplayed(newPDP.EstimatePickUpDateCartModal));
+		date = newPDP.EstimatePickUpDateCartModal.getText();
+		System.out.println("Estimate date on cart modal is " +date);
+		assertTrue(EstpdpDate.contains(date));
+		}
+	}
+	
 }

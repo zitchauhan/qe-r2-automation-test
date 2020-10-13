@@ -25,7 +25,8 @@ public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 	public void user_click_on_ship_it_button() throws Throwable {
 		waitForPageLoad(driver);
 
-		Thread.sleep(Constants.thread_high);
+		//Thread.sleep(Constants.thread_high);
+		waitForElement(genericPO.shipItButton);
 		assertTrue(isDisplayed(genericPO.shipItButton));
 		//assertTrue(clickOnButton(genericPO.shipItButton));  //Sachin
 		clickOnButton(genericPO.shipItButton);
