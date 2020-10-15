@@ -116,6 +116,7 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	public String testWorkaround(String value) throws Throwable
 	{
 	System.out.println("zip code to enter is" +webPropHelper.getTestDataProperty(value));	
+	String zipcode = webPropHelper.getTestDataProperty(value);
 	Thread.sleep(Constants.thread_low);
 	String selectedStoreTitle = (ovly_secStore).getText();
 	System.out.println("Default selected store is "+ selectedStoreTitle );
@@ -126,7 +127,7 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	else
 	{
 		waitForElement(ovly_searchTextBox);
-		setInputText(ovly_searchTextBox, value);
+		setInputText(ovly_searchTextBox, zipcode);
 		clickOnButton(ovly_btnGO);
 		String selectedStoreTitle1 = getText(ovly_secStore);
 		System.err.println(selectedStoreTitle1);
