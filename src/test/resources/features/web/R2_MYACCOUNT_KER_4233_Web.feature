@@ -5,7 +5,7 @@ Feature: E02-100 - My Account, Wish List
 Scenario: Verify that Authenticated User is able to view the Wish List page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "emailWithOutPhonenumber" 
+	And user enter the valid emailaddress "EmailAddressForChangePassword" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user click on MyAccount 

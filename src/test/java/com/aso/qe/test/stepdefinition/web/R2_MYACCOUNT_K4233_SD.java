@@ -27,11 +27,12 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 	public void user_click_on_WishList() throws Throwable {
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(r2MyAccountPo.Wishlist_Mobile_lnk));
-		} else {
+		} 
+		else {
 			waitForElement(r2MyAccountPo.wishList);
 			assertTrue(clickOnButton(r2MyAccountPo.wishList));
 		}
-	}
+		}
 
 	@Then("^user clicks on Create List$")
 	public void user_clicks_on_Create_List() throws Throwable {
@@ -226,7 +227,11 @@ public class R2_MYACCOUNT_K4233_SD extends CommonActionHelper {
 
 	@Then("^deletes all the existing wishlists$")
 	public void deletes_all_the_existing_wishlists() throws Throwable {
-		if (isDisplayed(r2MyAccountPo.WishlistItems_lnk)) {
+		if(!isDisplayed(r2MyAccountPo.WishlistItems_lnk))
+		{
+			System.out.println("Wishlist not present for the user, so cannot delete");
+		}
+		else if (isDisplayed(r2MyAccountPo.WishlistItems_lnk)) {
 			r2MyAccountPo.deleteAllWishList();
 		}
 	}

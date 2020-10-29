@@ -248,13 +248,7 @@ Scenario: Verify that user can see the error message if user enters the email id
 @R2_Web @R2_Regression @R2_All @P1 @P1Temp @1HR @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10576 @CR-RK @RegressionP1
 Scenario: Verify that user can change the password in Profile section. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And user clicks on SignIn link from global header 
-	Then Verify below Sub/Main Module of My Account 
-		|# Verify following elements in Sign in/login page	|
-		|SignInPage_SignUp_btn								|
-		|SignInPage_EmailAddress_txt			   			| 
-		|SignInPage_Password_txt				   			|
-	And user logs in as "EmailAddressForChangePassword" 
+	When user creates an account
 	And user navigates to profile in my account 
 	When user click on change password icon 
 	And user enters current password 

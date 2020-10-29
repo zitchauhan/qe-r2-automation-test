@@ -1,6 +1,6 @@
 Feature: CHECKOUT Registered user Academy Credit Card Tender
 
-@AutomationSmoke  
+@AutomationSmoke
 Scenario: Checkout -  Registered user Place Order with ACC as tender 
 	Given user launches the browser and navigates to "ASO_HOME" page plcc 
 	When user click on My Account link 
@@ -9,8 +9,8 @@ Scenario: Checkout -  Registered user Place Order with ACC as tender
 	And user enter password in sign-in page "Password" 
 	And user click on Signin-button 
 	Then user navigates to ASO-Home page 
-	And user clears everything in cart
-	When user enters "SKUIdOfProduct1" in the search box plcc 
+	And user navigate and deletes existing items in cart
+	When user enters "productName" in the search box plcc 
 	And user click on search icon 
 	And user click on ship it button
 	And user click on viewcart button
