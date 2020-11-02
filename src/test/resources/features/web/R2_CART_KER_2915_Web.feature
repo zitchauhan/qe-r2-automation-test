@@ -47,8 +47,8 @@ Scenario Outline: verify if user should be able to submit the order on the check
  Scenario: Verify mixed items in the cart and their messages under each line item
     Given user launches the browser and navigates to "ASO_HOME" page
     And User should be able to click on Find Store 
-	And Find Store Modal should pop-up 
-	When User select store with "BOPIS_Store2"
+		And Find Store Modal should pop-up 
+		When User select store with "BOPIS_Store2"
     When User searches a product "Productnamenew" and navigates to PDP
     And user click on Add to Cart Button
     And close the pop up
@@ -59,9 +59,9 @@ Scenario Outline: verify if user should be able to submit the order on the check
     And user click on Add to Cart Button
     And user click on view cart
     Then verify the message for whiteGlove item and DSV item on the cart page
-	And user clicks on checkout button on cart page
-  	And user adds shipment address on checkout page for "guest" user
-	And user selects shipment method on check out page for "guest" user
+		And user clicks on checkout button on cart page
+  	#And user adds shipment address on checkout page for "guest" user
+		#And user selects shipment method on check out page for "guest" user
 	#And user add "<Payment Type>" details in payment method for "guest" user
 	#And user clicks on place order on checkout page 
 	#Then verify user is able to successfully place the order

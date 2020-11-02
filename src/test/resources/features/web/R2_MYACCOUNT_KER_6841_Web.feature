@@ -1,6 +1,6 @@
 Feature: E02-250 - Edit Credit/Debit Card in Account
 
-  @R2_Web @R2_Regression @R2_All @P1 @C-MyAccount @KER-6841 @ZYP_MYACCOUNT_K6841-10630 @CR-RKA @RegressionP1
+  @R2_Web @ZYP_MYACCOUNT_K6841-10630 @RegressionP1 @MyAccount @OMNI-13373
   Scenario:  Verify that authenticated user is able to view the saved credit/debit cards.
 
     Given user launches the browser and navigates to "ASO_HOME" page

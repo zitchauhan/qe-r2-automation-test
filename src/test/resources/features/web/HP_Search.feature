@@ -12,5 +12,5 @@ Scenario Outline: From Home Page perform Keyword and SKU Search
     Examples:
     |data|
     |109273651|
-    |nike mens compression|
+    #|nike mens compression|
     

@@ -15,7 +15,7 @@ Scenario: Verify that authenticated user is able to navigate to "Payments" Page.
 	And user validates the "Credit Card"
 	
 	
-@Web @Regression @CR-SK @P1 @RegressionP1
+@Web @CR-SK @P1 @RegressionP1 @MyAccount @OMNI-13374
 Scenario: Verify that acc card can be added from My accounts
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header

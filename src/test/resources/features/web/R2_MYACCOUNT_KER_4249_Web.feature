@@ -64,7 +64,7 @@ Scenario: Verify the available fields on the Sign Up page
 
 #===========================================Sanity===============================================#
 
-@R2_Web @R2_WAST-02 @P1 @P1Temp @C-MyAccount @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @AutomationSmokeORIG @C1-Message @RegressionP1
+@R2_Web @KER-4249 @ZYP_MYACCOUNT_K4249-10149 @RegressionP1 @MyAccount @OMNI-13344
 Scenario: TC_3- Verify User is able to create an account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

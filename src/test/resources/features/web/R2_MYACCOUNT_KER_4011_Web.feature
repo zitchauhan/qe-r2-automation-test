@@ -19,7 +19,7 @@ Scenario: Verify available elements on the Sign in page
 		|SignInPage_SignUp_btn								|
 
 	
-@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK @RegressionP1
+@R2_Web @KER-4011 @ZYP_MYACCOUNT_K4011-10040 @CR-SK @RegressionP1 @MyAccount @OMNI-13358
 Scenario: Verify the user is able to sign in successfully with valid credentials
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

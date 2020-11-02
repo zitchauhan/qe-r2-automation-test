@@ -1,4 +1,4 @@
-Feature: [Desktop]Verify product in grid are sorted 
+Feature: Desktop Verify product in grid are sorted 
 
 @Web @Regression @KER-710 @ZYP_HP_K710-3656 @C-HP @CR-SG @DevORIG
 Scenario: [Web]Verify the product in grid are sorted by Price "Low-High" 

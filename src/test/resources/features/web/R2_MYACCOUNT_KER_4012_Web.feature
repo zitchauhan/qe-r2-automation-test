@@ -74,7 +74,7 @@ Scenario: Verify Cancel Order link is not displayed after order is cancelled
 	And user click on view Details	
     Then verify the cancel order link is not displayed
     
-@C-BOPIS @R2_Web  @R2_All @MYAccount   @KER-4012 @ZYP_MYACCOUNT_K4012-11157 @CR-RK 
+@C-BOPIS @R2_Web  @R2_All @KER-4012 @ZYP_MYACCOUNT_K4012-11157 @CR-RK 
 Scenario: To verify all items in the Order - Authenticated user
    Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 

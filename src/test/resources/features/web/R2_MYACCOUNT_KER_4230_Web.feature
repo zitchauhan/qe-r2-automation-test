@@ -39,8 +39,7 @@ Scenario: Verify that user can continue the shopping without re-authentication a
 	And user click on MyAccount 
 	And user is not logged out 
 	
-@R2_Web @R2_Regression @R2_All @1HR_R2 @C-MyAccount @KER-4230 
-@ZYP_MYACCOUNT_K4230-10565 @CR-RK @RegressionP1
+@R2_Web @ZYP_MYACCOUNT_K4230-10565 @CR-RK @RegressionP1 @MyAccount @OMNI-13364
 Scenario: Verify that user able to update the profile 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -245,7 +244,7 @@ Scenario: Verify that user can see the error message if user enters the email id
 		|# Following Error Message should show on the page|
 		|Please enter the Email Address in a valid format (ex. abc@xyz.com)|
 		
-@R2_Web @R2_Regression @R2_All @P1 @P1Temp @1HR @C-MyAccount @KER-4230 @ZYP_MYACCOUNT_K4230-10576 @CR-RK @RegressionP1
+@R2_Web @ZYP_MYACCOUNT_K4230-10576 @CR-RK @RegressionP1 @MyAccount @OMNI-13365
 Scenario: Verify that user can change the password in Profile section. 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account

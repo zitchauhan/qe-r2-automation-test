@@ -39,8 +39,7 @@ Scenario: Verify that Order search field is displayed if Authenticated user does
 		|OrderPage_Find_btn					  |
 		
 		
-@R2_Web @C-Order @CC-MyAccount_Order @R2_All @P-High_Order  @KER-4237 
-@ZYP_MYACCOUNT_K4237-10513 @CR-GK @P1 @RegressionP1
+@R2_Web @C-Order @CC-MyAccount_Order @ZYP_MYACCOUNT_K4237-10513 @RegressionP1 @MyAccount @OMNI-13362
 Scenario: Verify that Authenticated user is able to view shipping and Billing Details of an order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

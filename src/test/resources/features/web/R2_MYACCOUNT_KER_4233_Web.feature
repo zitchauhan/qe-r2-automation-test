@@ -1,7 +1,6 @@
 Feature: E02-100 - My Account, Wish List 
 
-@R2_Web @R2_Regression @R2_All @1HR_R2 @C-MyAccount @KER-4233 
-@ZYP_MYACCOUNT_K4233-11099 @ZYP_MYACCOUNT_K4233-10484 @CR-MS @RegressionP3
+@R2_Web @ZYP_MYACCOUNT_K4233-10484 @CR-MS @RegressionP3 @MyAccount @OMNI-13366
 Scenario: Verify that Authenticated User is able to view the Wish List page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -38,8 +37,7 @@ Scenario: Verify that Authenticated user can create first wish list
 		|WishlistItems_lnk|
 	And verify the created list 
 	
-@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4233 
-@ZYP_MYACCOUNT_K4233-10488 @ZYP_MYACCOUNT_K4233-11103 @CR-MS @RegressionP3
+@R2_Web @ZYP_MYACCOUNT_K4233-11103 @CR-MS @RegressionP3 @MyAccount @OMNI-13371
 Scenario: Verify that Authenticated User is able to rename a Wish List 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -67,8 +65,7 @@ Scenario: Verify that Authenticated User is able to rename a Wish List
 	Then user enters Wishlist name "WishListRename" 
 	And user clicks on create 
 	
-@R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-4233 
-@ZYP_MYACCOUNT_K4233-10490 @ZYP_MYACCOUNT_K4233-11104 @CR-MS @RegressionP3
+@R2_Web @ZYP_MYACCOUNT_K4233-11104 @CR-MS @RegressionP3 @MyAccount @OMNI-13370
 Scenario: Verify that Authenticated User is able to cancel deleting a Wish List 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -94,8 +91,7 @@ Scenario: Verify that Authenticated User is able to cancel deleting a Wish List
 	Then Verify that Wish List is displayed 
 	
 	
-@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4233 
-@ZYP_MYACCOUNT_K4233-10492 @ZYP_MYACCOUNT_K4233-11105 @CR-MS 
+@R2_Web @ZYP_MYACCOUNT_K4233-10492 @ZYP_MYACCOUNT_K4233-11105 @MyAccount @OMNI-13370
 Scenario: Verify that Authenticated User is able to delete a Wish List 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -283,8 +279,7 @@ Scenario: Verify that Authenticated User is able to restore Removed item in Wish
 		|WishList_Product_Price|
 		
 		
-@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4233 
-@ZYP_MYACCOUNT_K4233-11100 @ZYP_MYACCOUNT_K4233-10485 @CR-MS @RegressionP2
+@R2_Web @ZYP_MYACCOUNT_K4233-10485 @CR-MS @RegressionP2 @MyAccount @OMNI-13368
 Scenario: Verify that Authenticated User is able to view the Wish List Details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -315,8 +310,7 @@ Scenario: Verify that Authenticated User is able to view the Wish List Details
 		|WishList_Product_Review|
 		|WishList_Product_Price|	
 		
-@R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4233 
-@ZYP_MYACCOUNT_K4233-11109 @ZYP_MYACCOUNT_K4233-10498 @CR-MS @RegressionP2
+@R2_Web @ZYP_MYACCOUNT_K4233-10498 @RegressionP2 @MyAccount @OMNI-13372
 Scenario: Verify the User is able to move item from wish list to cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
