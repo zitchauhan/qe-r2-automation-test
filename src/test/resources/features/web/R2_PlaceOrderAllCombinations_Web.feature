@@ -1,7 +1,7 @@
 Feature: Place order
 
 #  *********************Venkat***************
-@RegressionP2
+@RegressionP2 @MyAccount @OMNI-13383
 Scenario Outline: Verify whether the new address entered in Checkout page gets saved in My account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account

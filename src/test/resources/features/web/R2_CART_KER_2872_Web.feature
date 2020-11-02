@@ -1,7 +1,7 @@
 Feature: Verify BOPIS PDP Store Selection 
 
 
-@RegressionP2
+@RegressionP2 @MyAccount @OMNI-13400
 Scenario: Verify whether the user is able to change the store location successfully from store locatoor modal invoked in PDP 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
@@ -20,7 +20,7 @@ Scenario: Verify whether the user is able to change the store location successfu
 	
 	
 
-@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872 @ZYP_CHECKOUT_K2872-8706 @CR-DPK @C-BOPIS @P1 @RegressionP1
+@R2_Web @ZYP_CHECKOUT_K2872-8706 @RegressionP1 @MyAccount @OMNI-13395
 Scenario: Verify that user is able to open the Find Store modal from the header 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
@@ -91,7 +91,7 @@ Scenario: Verify that user is able to see the Change Location link on PLP BOPIS 
 	And user is able to see Change Pickup Location link in PLP 
 	
 	
-@R2_Web @R2_All @P-High_B @C-PLP @KER-2872 @ZYP_CART_K2872-10618 @C-BOPIS @RegressionP2
+@R2_Web @ZYP_CART_K2872-10618 @C-BOPIS @RegressionP2 @MyAccount @OMNI-13397
 Scenario: Verify that user is able to open the Find Store modal from PLP for BOPIS filter 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -115,8 +115,7 @@ Scenario: Verify that user is able to see the Change Location link on PDP
 	And user is able to see Change Pickup Location link 
 	
 	
-@R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872
-@ZYP_CART_K2872-10620 @CR-DPK @C-BOPIS @RegressionP2
+@R2_Web @ZYP_CART_K2872-10620 @CR-DPK @C-BOPIS @RegressionP2 @MyAccount @OMNI-13399
 Scenario: Verify that user is able to open the Find Store modal from PDP for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 

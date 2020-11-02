@@ -1,7 +1,7 @@
 Feature: Verify  Customer Registration/ Sign Up 
 
 # ************* Venkat *****************
-@RegressionP2
+@RegressionP2 @MyAccount @OMNI-13390
 Scenario: verify whether the address information provided in Signup page is saved in My Account - Address book page
   	Given user launches the browser and navigates to "ASO_HOME" page
 	When user click on My Account link 
@@ -336,7 +336,7 @@ Scenario: Verify the user gets the error message when last name filled with more
 	And Verify "Last Name" text field does not accept more than 50 characters	    	
 	
 
-@Web @Regression @P1 @CR-MT	@RegressionP1
+@Web @Regression @P1 @CR-MT	@RegressionP1 @MyAccount @OMNI-13389
 Scenario: Register new user with address information for faster checkout
   	Given user launches the browser and navigates to "ASO_HOME" page
 	When user click on My Account link 

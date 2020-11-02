@@ -1,7 +1,6 @@
 Feature: Verfiy  View/Delete/Set Default Credit/Debit Card in Account 
 
-@R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-MyAccount @KER-2920 
-@ZYP_MYACCOUNT_K2920-10549 @CR-RK @RegressionP1
+@R2_Web @ZYP_MYACCOUNT_K2920-10549 @CR-RK @RegressionP1 @MyAccount @OMNI-13378
 Scenario: Verify user is able to remove the saved credit card from My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -160,7 +159,7 @@ Scenario: Verify user is able to remove the saved academy gift card from My Acco
 	Then user clicks on Add new Gift Card CTA
 	Then user add gift card "Valid16DigitGiftCardNumber" and pin "Valid8DigitGiftCardPIN"
 
-@RegressionP1 @Web @Regression @P1 @CR-M	
+@RegressionP1 @Web @Regression @P1 @CR-M @MyAccount @OMNI-13377
 Scenario: Verify user is able to remove the saved academy credit card from My Account	
 Given user launches the browser and navigates to "ASO_HOME" page 
  When user clicks on SignIn link from global header 
