@@ -17,7 +17,7 @@ Background:  Common Pre-requisite steps
 	Then user navigates to Generic Credit Card Application Modal
 
 
-@RegressionP2
+@RegressionP2 @OMNI-13409
 Scenario: Verify approved PLCC card saved in My account
 	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
@@ -28,7 +28,7 @@ Scenario: Verify approved PLCC card saved in My account
 	And user enter Suite or Apartment "SuiteOrApartment" 
 	And user enter City "City" 
 	And user select State "State" 
-	And user enter Zip Code on credit card Application Modal "ZipCode" 
+	And user enter Zip Code on credit card Application Modal "zipcode" 
 	And user enter Email Address on credit card Application Modal "EmailId" 
 	And user enter Confirm Email Address "ConfirmEmailId" 
 	And user enter Mobile Phone "MobilePhone" 
@@ -46,7 +46,7 @@ Scenario: Verify approved PLCC card saved in My account
 	Then user verify PLCC Credit card details in Payments	
 
 
-@RegressionP2
+@RegressionP2 @OMNI-13410
 Scenario: verify Latest added card saved as default card in My account
 	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
@@ -57,7 +57,7 @@ Scenario: verify Latest added card saved as default card in My account
 	And user enter Suite or Apartment "SuiteOrApartment" 
 	And user enter City "City" 
 	And user select State "State" 
-	And user enter Zip Code on credit card Application Modal "ZipCode" 
+	And user enter Zip Code on credit card Application Modal "zipcode" 
 	And user enter Email Address on credit card Application Modal "EmailId" 
 	And user enter Confirm Email Address "ConfirmEmailId" 
 	And user enter Mobile Phone "MobilePhone" 

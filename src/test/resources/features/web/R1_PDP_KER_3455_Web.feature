@@ -105,7 +105,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
    Then verfiy the product details and features 
 	
 	
-	@RegressionP2
+	@RegressionP2 @OMNI-13427
    Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a White Glove product PDP
    Given user launches the browser and navigates to "ASO_HOME" page
    And User searches a product "SKUForWhiteGlove" and navigates to PDP
@@ -167,7 +167,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
    
    
    
-   @RegressionP2
+   @RegressionP2 @OMNI-13429
    Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a Special Order Firearm PDP
    Given user launches the browser and navigates to "ASO_HOME" page 
    When User searches a product "BOPIS_SOF_Product" and navigates to PDP
@@ -178,7 +178,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
    Then verfiy the Ask a question button
    
    
-   @RegressionP2 
+   @RegressionP2 @OMNI-13433
    Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a clearance product PDP
    Given user launches the browser and navigates to "ASO_HOME" page 
    When User searches a product "ClearenceItemSKU" and navigates to PDP
@@ -190,7 +190,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
    Then verfiy the Ask a question button
    
    
-   @RegressionP2
+   @RegressionP2 @OMNI-13434
    Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a hot deal product PDP
    Given user launches the browser and navigates to "ASO_HOME" page 
    When User searches a product "HotDealItemSKU" and navigates to PDP

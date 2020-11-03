@@ -573,7 +573,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 	}
 	
 	public void verifystoreLocatorinPDP() throws InterruptedException {
-		String LocationTextHeader = LocationText.getText();
+		String LocationTextHeader = lnkFindaStoreHomePage.getText();
 		StoreNameOnPDP = StoreNameVisibleOnPDP.getText();
 		System.out.println(LocationTextHeader);
 		System.out.println(StorelocatorNamePopup);

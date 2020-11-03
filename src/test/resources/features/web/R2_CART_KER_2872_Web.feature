@@ -2,7 +2,7 @@ Feature: Verify BOPIS PDP Store Selection
 
 
 @RegressionP2 @MyAccount @OMNI-13400
-Scenario: Verify whether the user is able to change the store location successfully from store locatoor modal invoked in PDP 
+Scenario: Verify whether the user is able to change the store location successfully from store locator modal invoked in PDP 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
 	Then user enter "zipCode" in Find a Store Model 
@@ -10,8 +10,7 @@ Scenario: Verify whether the user is able to change the store location successfu
 	Then user verify the results based on entering zipcode 
 	Then verify the components in Find a Store Model
 	Then user Select Store Location In PLP
-	Then User searches a product "BOPIS_SOF_Product" and navigates to PDP 
-	Then User is navigated to pdp page 
+	Then User searches a product "BOPIS_SOF_Product" and navigates to PDP  
 	Then user Verify Store Locator in PDP	
 	And clicks on the Change Pickup Location link
 	#And user click on Find a Store in PDP page
@@ -120,11 +119,10 @@ Scenario: Verify that user is able to open the Find Store modal from PDP for BOP
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
-	When User select store with "BOPIS_Store2" 	 
-	Then User searches a product "BOPIS_SOF_Product" and navigates to PDP 
-	Then User is navigated to pdp page
+	When User select store with "zipCode" 	 
+	Then User searches a product "BOPIS_SOF_Product" and navigates to PDP
 	And clicks on the Change Pickup Location link 
-	And user verify Find a Store popup 
+	And user verify Find a Store popup
 	
 	
 @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2872

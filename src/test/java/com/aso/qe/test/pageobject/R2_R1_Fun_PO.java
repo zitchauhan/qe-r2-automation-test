@@ -283,4 +283,6 @@ public WebElement notAvailableMessageFindAStore;  //SID 12-Jan
 
 @FindBy(xpath ="//*[@data-auid='btnundefined']")
 public WebElement BuyNow_btn;
+
+@FindBy(xpath="//*[text()='Change Store']") public WebElement ChangeStorePDP;
 }
