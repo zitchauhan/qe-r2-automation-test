@@ -53,14 +53,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			setInputText(r2CheckOutPo.inputCheckoutLasttName, webPropHelper.getTestDataProperty("LastName"));
 			setInputText(r2CheckOutPo.inputCheckoutPhoneNumber, r2MyAccountPO.generateRandomMobileNumber());
 			setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty("Address"));
-			driver.findElement(By.xpath("//*[@name='zipCode']/")).click();
 			setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("Zipcode"));
-			//driver.findElement(By.xpath("//*[@name='zipCode']/")).sendKeys(Keys.BACK_SPACE);
-//			driver.findElement(By.xpath("//*[@name='zipCode']/")).sendKeys(Keys.NUMPAD7);
-//			driver.findElement(By.xpath("//*[@name='zipCode']/")).sendKeys(Keys.NUMPAD7);
-//			driver.findElement(By.xpath("//*[@name='zipCode']/")).sendKeys(Keys.NUMPAD4);
-//			driver.findElement(By.xpath("//*[@name='zipCode']/")).sendKeys(Keys.NUMPAD5);
-//			driver.findElement(By.xpath("//*[@name='zipCode']/")).sendKeys(Keys.NUMPAD0);
 			assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
 		}
 	}
