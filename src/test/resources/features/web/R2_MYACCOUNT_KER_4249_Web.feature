@@ -8,7 +8,7 @@ Scenario: verify whether the address information provided in Signup page is save
 	And  user click on Sign Up link
 	And user enter First Name "First_Name"
 	And user enter Last Name "Last_Name"
-	And user enter Email Address "Email_Address" 
+	And user enter random email Address 
 	And user enter Password "NewPassword"
 	When user select Add Address for Faster Checkout checkbox 
 	And user enter Address plcc "Address" 

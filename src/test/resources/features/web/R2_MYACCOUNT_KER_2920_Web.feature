@@ -171,4 +171,4 @@ Given user launches the browser and navigates to "ASO_HOME" page
   |#Verify following elements in Payments > Add new credit card section |
   |PaymentPage_PaymentsHeader_label    |
  Then user clicks Remove acc button in payment page
- And user should see the proper message	
+ #And user should see the proper message	

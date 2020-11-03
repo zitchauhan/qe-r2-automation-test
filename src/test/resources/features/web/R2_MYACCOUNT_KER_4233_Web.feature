@@ -65,7 +65,7 @@ Scenario: Verify that Authenticated User is able to rename a Wish List
 	Then user enters Wishlist name "WishListRename" 
 	And user clicks on create 
 	
-@R2_Web @ZYP_MYACCOUNT_K4233-11104 @CR-MS @RegressionP3 @MyAccount @OMNI-13370
+@R2_Web @ZYP_MYACCOUNT_K4233-11104 @CR-MS @RegressionP3
 Scenario: Verify that Authenticated User is able to cancel deleting a Wish List 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -314,7 +314,7 @@ Scenario: Verify that Authenticated User is able to view the Wish List Details
 Scenario: Verify the User is able to move item from wish list to cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "EmailWithoutShipDetails" 
+	And user enter the valid emailaddress "UserForWishlist" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user click on MyAccount 
@@ -323,7 +323,10 @@ Scenario: Verify the User is able to move item from wish list to cart
 	And user clicks on create first wishlist button 
 	Then user enters Wishlist name "WishlistName" 
 	And user clicks on Create List 
-	And User searches a product "productName" and navigates to PDP 
+	And User searches a product "productName" and navigates to PDP
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page 
 	And user add an item to wishlist "WishlistName" and navigates to wishlist 
 	And clicks on Move to Cart button 
 	Then verify the item is moved to cart 

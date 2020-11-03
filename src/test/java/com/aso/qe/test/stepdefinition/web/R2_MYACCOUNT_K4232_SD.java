@@ -202,4 +202,10 @@ public class R2_MYACCOUNT_K4232_SD extends CommonActionHelper {
 	public void user_verify_PLCC_Credit_card_details_in_Payments() throws Throwable {
 		r2MyAccountPo.verifyPLCCCardDetailOnMyAccount();
 	}
+	
+	@Then("^the new address gets saved and user is able to see it$")
+	public void the_new_address_gets_saved() throws Throwable {
+		Thread.sleep(Constants.thread_low);
+		assertTrue(isDisplayed(r2MyAccountPo.btnEdit));
+	}
 }

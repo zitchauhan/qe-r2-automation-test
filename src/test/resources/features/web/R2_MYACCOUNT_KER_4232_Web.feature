@@ -2,7 +2,7 @@ Feature: E02-100 - My Account, Address Book
 
 # ******* Venkat *************
 
-@temp111  @RegressionP2 @MyAccount @OMNI-13385
+@temp111 @RegressionP2 @MyAccount @OMNI-13385
 Scenario Outline:  Edit Non Default Shipping Address and Verify
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -41,21 +41,16 @@ Scenario Outline:  Edit Non Default Shipping Address and Verify
 
 
 
-@R2_Web @ZYP_MYACCOUNT_K4232-9194 @CR-RK @RegressionP2 @MyAccount @OMNI-13380
-Scenario: Verify Authenticated user can Manage Address Book - View existing Address details 
+@R2_Web @ZYP_MYACCOUNT_K4232-9194 @CR-RK @RegressionP2 @MyAccount @OMNI-13382
+Scenario: Verify whether the user is able to add a new non-default address in Address Book page
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And clicks on SignIn button in home page 
-	Then Verify below Sub/Main Module of My Account 
-		|# Verify following elements in Sign in/login page	|
-		|SignInPage_EmailAddress_txt			   			| 
-		|SignInPage_Password_txt				   			|
-		|SignInPage_SignIn_btn								|
-	And user enter the valid emailaddress "RawUser" 
+	And clicks on SignIn button in home page
+	And user enter the valid emailaddress "UserWithDefaultAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user click on MyAccount 
-	And user lands on My Account page and click on adress 
-	When user Clicks on Add New Address link 
+	Then user lands on My Account page and click on adress 
+	Then user Clicks on Add New Address link 
 	Then Verify below Sub/Main Module of My Account 
 		|# Verify following elements in address page|
 		|AddressPage_FirstName_txt				   	|
@@ -65,6 +60,13 @@ Scenario: Verify Authenticated user can Manage Address Book - View existing Addr
 		|AddressPage_ZipCode_txt			   		|
 		|AddressPage_City_txt						|
 		|AddressPage_State_txt						|
+	When user enter First name "FirstName" in address book 
+	And user enter Last name "LastName" in address book 
+	And user enter Phone number "PhoneNumber" in address book 
+	And user enter Address "Address" in address book 
+	And user enter Zipcode "zipcode" in address book 
+	And clicks on Add New Address button 
+	Then the new address gets saved and user is able to see it
 		
 		
 		
@@ -99,8 +101,8 @@ Scenario: Verify Authenticated user has Address given through SOF
 	And clicks on Add New Address button 
 	And user verifies the First address provided is set as default 
 	
-@R2_Web @ZYP_MYACCOUNT_K4232-9191 @CR-MS @RegressionP2 @MyAccount @OMNI-13382
-Scenario: Verify Authenticated user can Manage Address Book - View existing Address details 
+@R2_Web @ZYP_MYACCOUNT_K4232-9191 @CR-MS @RegressionP2 @MyAccount @OMNI-13380
+Scenario: Verify whether the user is able to see the list of saved address details in address page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
 	Then Verify below Sub/Main Module of My Account 
@@ -108,28 +110,12 @@ Scenario: Verify Authenticated user can Manage Address Book - View existing Addr
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
 		|SignInPage_SignIn_btn								|
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithDefaultAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user click on MyAccount 
-	Then user lands on My Account page and click on adress 
-	Then user Clicks on Add New Address link 
-	Then Verify below Sub/Main Module of My Account 
-		|# Verify following elements in address page|
-		|AddressPage_FirstName_txt				   	|
-		|AddressPage_LastName_txt					|
-		|AddressPage_PhoneNumber_txt				|
-		|AddressPage_Address_txt 					|
-		|AddressPage_ZipCode_txt			   		|
-		|AddressPage_City_txt						|
-		|AddressPage_State_txt						|
-	When user enter First name "FirstName" in address book 
-	And user enter Last name "LastName" in address book 
-	And user enter Phone number "PhoneNumber" in address book 
-	And user enter Address "Address" in address book 
-	And user enter Zipcode "zipcode" in address book 
-	And clicks on Add New Address button 
-	#	 Then the new address gets saved
+	Then user lands on My Account page and click on adress
+	Then the new address gets saved and user is able to see it
 	
 	
 @R2_Web @R2_Regression @R2_All @P2 @C-MyAccount @KER-4232 
@@ -228,13 +214,8 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 @R2_Web @ZYP_MYACCOUNT_K4232-9195 @CR-RK @RegressionP2 @MyAccount @OMNI-13386
 Scenario: Verify Authenticated user can -Set Default Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And clicks on SignIn button in home page 
-	Then Verify below Sub/Main Module of My Account 
-		|# Verify following elements in Sign in/login page	|
-		|SignInPage_EmailAddress_txt			   			| 
-		|SignInPage_Password_txt				   			|
-		|SignInPage_SignIn_btn								|
-	And user enter the valid emailaddress "EmailAddress" 
+	And clicks on SignIn button in home page
+	And user enter the valid emailaddress "UserWithDefaultAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user click on MyAccount 
@@ -254,7 +235,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 		|SignInPage_EmailAddress_txt			   			| 
 		|SignInPage_Password_txt				   			|
 		|SignInPage_SignIn_btn								|
-	And user enter the valid emailaddress "EmailAddress" 
+	And user enter the valid emailaddress "UserWithDefaultAddress" 
 	And user enter the valid password "Password" 
 	And user click on signin button 
 	And user click on MyAccount 
