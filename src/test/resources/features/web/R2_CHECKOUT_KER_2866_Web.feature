@@ -73,7 +73,7 @@ Scenario: Verify the guest user is able to select the PayPal payment method in o
 	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
 	And user able to see the button place order
 	
-@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @C-BOPIS @P1 @RegressionP1
+@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @C-BOPIS @P1 @RegressionP1 @abc
 Scenario: Verify the guest user is able to select the Gift Card payment method in order to place the order for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
@@ -276,7 +276,7 @@ Scenario: Verify if the user is able to review and place order from One Page Che
 	And user is navigated to order confirmation page and captures order number 
 	
 	
-@Web @Regression @P1 @CR-MT @RegressionP1
+@Web @Regression @P1 @CR-MT @RegressionP1 @abc
 Scenario: Verfiy bopis place order for guest user with ACC as tender 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -302,8 +302,8 @@ Scenario: Verfiy bopis place order for guest user with ACC as tender
 	
 	
 	
-@Web @Regression @P1 @CR-MT @RegressionP1
-Scenario: Verfiy bopis place order for guest user with CC as tender 
+@Web @Regression @P1 @CR-MT @RegressionP1 @abc @fail
+Scenario Outline: Verfiy bopis place order for guest user with CC as tender 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
@@ -314,15 +314,14 @@ Scenario: Verfiy bopis place order for guest user with CC as tender
 	And user click on view cart
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
-	When user clicks on Go to payment CTA
-	And user fill the credit card detail in payment  
-	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "FindAsStoreZIPCode" , "EmailAddress"
-	And user click on REVIEW ORDER button
-  And user clicks on place order on checkout page 
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	And user add "<Payment Type>" details in payment method for "guest" user
+	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-	Then Verify the message on the page 
-		| # Message for successful order is displayed |
-		| Order Number                                |			
+	Examples: 
+		|Payment Type	|
+		|Credit Card - Master	| 	
 	
 @RegressionP2 @WhiteGlove @AutomationSmoke 
 Scenario Outline: Verify the guest user is able to place White Glove order using Credit Card

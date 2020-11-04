@@ -1028,4 +1028,5 @@ public class R2_Cart_PO extends CommonActionHelper {
 			assertTrue(!NewStoreNameOnPDP.equals(StoreNameOnPDP));			
 		}
 	
+		@FindBy(xpath="(//*[@class='d-flex justify-content-between o-copy__14reg'])[2]/span[2]") public WebElement ShippingFeeOrderConfirmationPage;
 }

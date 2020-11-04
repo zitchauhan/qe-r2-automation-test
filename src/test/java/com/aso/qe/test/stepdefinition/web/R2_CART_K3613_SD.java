@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.web;
 
 
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.support.PageFactory;
 
@@ -26,6 +27,7 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 	R1_PDP_PO pdpPo=PageFactory.initElements(driver,R1_PDP_PO.class);
 	
 	String limitedStockMessage="";
+	String ShippingFee="";
 	int addedQuantityInCart=0;
 	
 	
@@ -150,11 +152,11 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 	@And("^user verify shipping fee for the ship to home product$")
 	public void user_verify_shipping_fee_for_the_ship_to_home_product()  {
 		waitForElement(r2CartPO.shiptohomeshippingfee);
-		limitedStockMessage=r2CartPO.shiptohomeshippingfee.getText();
-		System.err.println(limitedStockMessage);
+		ShippingFee=r2CartPO.shiptohomeshippingfee.getText();
+		System.err.println(ShippingFee);
 		//String arr[] = limitedStockMessage.split("$");
 		//String arr1[]=arr[1].split(" ");
-		assertTrue((limitedStockMessage.contains("$")));
+		assertTrue((ShippingFee.contains("$")));
 	    
 	}
 	
@@ -187,5 +189,10 @@ public class R2_CART_K3613_SD extends CommonActionHelper {
 		assertTrue(clickOnButton(r2R1FunPO.lnkPickupLocationPDP));
 	}
 	
+	@And("^user validates same shipping fee on order confirmation page$")
+	public void user_validates_same_shipping_fee_on_order_confirmation_page() {
+		String shippingFeeOrderConfirmationpage = (r2CartPO.ShippingFeeOrderConfirmationPage).getText();
+		assertEquals(shippingFeeOrderConfirmationpage,ShippingFee);
+	}
 
 }

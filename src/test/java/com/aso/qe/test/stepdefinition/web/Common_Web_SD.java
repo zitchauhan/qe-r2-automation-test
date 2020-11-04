@@ -34,30 +34,7 @@ public static R1_SearchProduct_PO searchProductPO;
 @Given("^user launches the browser and navigates to \"(.*?)\" page$")
 public void user_launches_the_browser_and_navigates_to_page(String url) throws Throwable {
 	initializeDriver();
-	/*if("mobile".equalsIgnoreCase(testtype)) {
-// logger.debug("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Mobile Launched ");
-		initializeDriver();
-	}
-// {
- else {
-	 initializeDriver();
- }
-// getDriver().manage().window().setSize(new Dimension(1500,1700));
-// }
- * 
- * 
-*/
 	openBaseURL(url);
-	
-	//try {
-		 
-		//driver.get("https://uat6www.academy.com/?debug=aso");
-		//driver.switchTo().alert().accept();
-
-	//}catch(Exception e){
-
-	//}
-
 
 //driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 	findStorePO= PageFactory.initElements(driver, R1_FindStore_PO.class);

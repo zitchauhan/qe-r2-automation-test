@@ -85,9 +85,9 @@ public class R2_CHECKOUT_K4039_SD extends CommonActionHelper {
 		{
 			assertTrue(clickOnButton(r2CheckOutPo.PayPalAcceptCookie));
 		}
-		waitForElement(r2CheckOutPo.PayPalContinue_Btn);
+		//waitForElement(r2CheckOutPo.PayPalContinue_Btn);
 		
-		r2CheckOutPo.PayPalContinue_Btn.click();
+		assertTrue(clickOnButton(r2CheckOutPo.PayPalContinue_Btn));
 		
 		driver.switchTo().window(winHandleBefore);
 		JavascriptExecutor jsb = (JavascriptExecutor) driver;

@@ -26,8 +26,7 @@ public class ES194 extends CommonActionHelper{
 		isDisplayed(r2CartPo.btnCartPaypal);
 		Thread.sleep(2000);
 		assertTrue(clickOnButton(r2CartPo.btnCartPaypal));
-		
-	    
+		Thread.sleep(Constants.thread_medium);
 	}
 
 	

@@ -181,6 +181,9 @@ public class R1_SearchProduct_PO extends CommonActionHelper {
 	
 	@FindBy(xpath = "(//section[@id='productCardListing']/div/a)[2]")
 	public WebElement whitegloveproduct;
+	
+	@FindBy(xpath="//*[text()='404 ERROR']") 
+	public static WebElement SearchError;
 
 	public boolean checkLoadedProductsPrices(int min, int max) {
 		boolean flag = false;

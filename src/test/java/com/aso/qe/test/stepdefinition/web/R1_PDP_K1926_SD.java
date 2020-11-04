@@ -328,24 +328,16 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 			}
 //			clearText(searchTextBox);
 			//setInputTextWithEnterKey(searchTextBox, searchWord);
-			setInputText(searchTextBox, searchWord);
-			assertTrue(clickOnButton(searchButton));
-			/*boolean checkStock=false;
-			checkStock=isDisplayed(globalElementHeader_HomePO.outOfStockMessage);//out of stock validation which returns boolean result
-			System.out.println("priting the DOM value of Out of Stock"+globalElementHeader_HomePO.outOfStockMessage.getText());
-			System.out.println("Printing boolean value"+ checkStock);
-			if (r1_SearchPO.verifyTextDisplayedOnPage("We couldn't find anything for")) //if product is not available--invalid search
-			{
-				System.out.println("product is not available in the application");
+			else{
+				setInputText(searchTextBox, searchWord);
+				assertTrue(clickOnButton(searchButton));
+				if(isDisplayed(R1_SearchProduct_PO.SearchError))
+				{
+					Thread.sleep(Constants.thread_low);
+					setInputText(searchTextBox, searchWord);
+					assertTrue(clickOnButton(searchButton));
+				}
 			}
-			else if(checkStock) 
-			{
-				System.out.println("out of stock scenario is verified successfully");
-			} 
-			else 
-			{
-				break;
-			}*/
 
 		}
 //		if (!(searchText.toLowerCase().contains("sku")))

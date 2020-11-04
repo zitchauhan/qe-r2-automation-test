@@ -11,6 +11,7 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R1_ShoppingCartView_PO;
+import com.aso.qe.test.pageobject.R2_Cart_PO;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
@@ -22,6 +23,7 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 
 	public R1_ShoppingCartView_PO shoppingCartViewPO =  PageFactory.initElements(getDriver(), R1_ShoppingCartView_PO.class);
     public R1_PDP_PO pdp=PageFactory.initElements(getDriver(), R1_PDP_PO.class);
+    public R2_Cart_PO cart=PageFactory.initElements(getDriver(), R2_Cart_PO.class);
     R2_CheckOut_PO r2CheckoutPo=PageFactory.initElements(driver, R2_CheckOut_PO.class);
     public R2_Sanity_PO sanity=PageFactory.initElements(getDriver(), R2_Sanity_PO.class);
 	@Then("^User should be able to click on MiniCart icon and navigate to My cart page and Validate Shopping Cart$")
@@ -65,6 +67,12 @@ public class R1_HP_K725_SD extends CommonActionHelper{
 		System.out.println(sanity.AS_txtYourCart.getText());
 		Thread.sleep(Constants.thread_highest);
 		assertTrue(isDisplayed(sanity.AS_txtYourCart));
+		Thread.sleep(Constants.thread_medium);
+		if(isDisplayed(pdp.ItemOOSCart))
+		{
+			assertTrue(clickOnButton(cart.editInCart_btn));
+			Thread.sleep(Constants.thread_medium);
+		}
 		
 		}
 		

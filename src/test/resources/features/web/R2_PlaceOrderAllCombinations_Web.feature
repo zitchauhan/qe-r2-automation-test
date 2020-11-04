@@ -1,7 +1,7 @@
 Feature: Place order
 
 #  *********************Venkat***************
-@RegressionP2 @MyAccount @OMNI-13383
+@RegressionP2 @MyAccount @TC-OMNI-13383
 Scenario Outline: Verify whether the new address entered in Checkout page gets saved in My account 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account
@@ -99,7 +99,7 @@ Scenario Outline: Verify guest user order placement for with Different Card Type
 		
 		
 
-@Regression @P1 @CR-SK @Checkout @RegressionP1
+@Regression @P1 @CR-SK @Checkout @RegressionP1 @TC-OMNI-13460 @abc 
 Scenario: Place order as a registered user using Paypal express as tender
   Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productNameSTH" and navigates to PDP
@@ -162,7 +162,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for standar
 		|THANKS FOR SUBMITTING YOUR ORDER			|
 	Examples: 
 		|Payment Type	|
-#		|Gift Card		|
+		|Gift Card		|
 		|Credit Card	|
 		|PayPal			|
 		
@@ -207,3 +207,22 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bait pr
 		|Payment Type	|
 		|Credit Card - Master	|
 #		|PayPal			|
+
+	@RegressionP3 @OMNI-13444
+	Scenario Outline: Verify guest user - succesfully placed with Standard Delivery and correct shipping charges
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user adds shipment address on checkout page for "guest" user
+	And user selects shipment method on check out page for "guest" user
+	And user verify shipping fee for the ship to home product
+	And user add "<Payment Type>" details in payment method for "guest" user
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order
+	And user validates same shipping fee on order confirmation page 
+	Examples: 
+		|Payment Type	|
+		|Credit Card - visa	|

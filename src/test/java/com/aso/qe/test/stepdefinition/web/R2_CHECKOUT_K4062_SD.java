@@ -56,6 +56,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("Zipcode"));
 			assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
 		}
+		Thread.sleep(Constants.thread_medium);
 	}
 	
 	@And("^user selects shipment method on check out page for \"(.*?)\" user$")
@@ -164,9 +165,9 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			}
 
 			if (chooseCreditCard | userWithoutExistingPaymentDetails) {
-				setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty(creditCardNumber));
-				setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
-				setInputText(r2CheckOutPo.Cvv_Input, webPropHelper.getTestDataProperty(cvv));
+//				setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty(creditCardNumber));
+//				setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
+//				setInputText(r2CheckOutPo.Cvv_Input, webPropHelper.getTestDataProperty(cvv));
 				Thread.sleep(5000);
 				String name = webPropHelper.getTestDataProperty("CardholderName");
 				driver.switchTo().frame("first-data-payment-field-name");

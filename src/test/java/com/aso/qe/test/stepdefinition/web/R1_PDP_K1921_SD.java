@@ -214,6 +214,7 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 		}
 		else if(page.equalsIgnoreCase("Cart"))
 		{
+			waitForElement(pdpPageObj.LimitedQtyMsgCart);
 			assertTrue(isDisplayed(pdpPageObj.LimitedQtyMsgCart));
 		}
 	}

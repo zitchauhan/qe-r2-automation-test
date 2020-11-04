@@ -352,7 +352,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
     public WebElement PaypalPassWord_Input;
     @FindBy(xpath ="//*[@id='btnLogin']")
     public WebElement PaypalLogin_Btn;
-    @FindBy(xpath ="//*[@id='payment-submit-btn'] | //*[@data-testid='submit-button-initial']") //Updated by Sachin on 06-15-20
+    @FindBy(xpath ="//*[@id='payment-submit-btn']") //Updated by Sachin on 06-15-20
     public WebElement PayPalContinue_Btn;
     @FindBy(xpath ="//*[text()='Tax']//following::span[2]") 
     public WebElement PayPaltaxprice;
@@ -573,7 +573,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 
 		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1] | //*[@id='card']")public WebElement CreditCardNumber_Input;
 		@FindBy(xpath="//*[@id='card']")public WebElement CreditCardDetails_Input;
-		@FindBy(xpath="//*[text()='Cardholder Name']/following::*[1] | //*[@id='name']")public WebElement CardholderName_Input;
+		@FindBy(xpath="//*[@id='first-data-payment-field-name']") public WebElement CardholderName_Input;
 		@FindBy(xpath="//*[text()='Exp Date']/following::*[1] | //*[@id='exp']")public WebElement ExpirationDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[@id='exp']")public WebElement ExpDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[text()='CVV']/following::*[3] | //*[@id='cvv']")public WebElement Cvv_Input;
