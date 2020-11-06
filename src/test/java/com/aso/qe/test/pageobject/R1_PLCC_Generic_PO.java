@@ -882,10 +882,12 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(isDisplayed(checkout_po.ReviewOrder_Btn));
-			logger.debug("Edit link of payment section on checkout page is displayed");
+			logger.debug("Review order CTA is displayed");
+			clickOnButton(checkout_po.ReviewOrder_Btn);
 		} else {
 			assertTrue(isDisplayed(checkout_po.ReviewOrder_Btn));
-			logger.debug("Edit link of payment section on checkout page is displayed");
+			logger.debug("Review order CTA is displayed");
+			clickOnButton(checkout_po.ReviewOrder_Btn);
 		}
 	}
 

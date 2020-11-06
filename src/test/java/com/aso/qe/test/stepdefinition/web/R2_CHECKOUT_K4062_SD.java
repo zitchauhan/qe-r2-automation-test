@@ -9,6 +9,7 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,16 +45,18 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		if (arg1.equalsIgnoreCase("newly registered") | arg1.equalsIgnoreCase("guest")
 				| arg1.equalsIgnoreCase("unauthenticated"))
 			userWithoutExistingShippingAddress = true;
-		if (!(userWithoutExistingShippingAddress)) {
-			if (!(isDisplayed(r2CheckOutPo.btnEditShippingAddress)))
-				userWithoutExistingShippingAddress = true;
-		}
+//		if (!(userWithoutExistingShippingAddress)) {
+//			if (!(isDisplayed(r2CheckOutPo.btnEditShippingAddress)))
+//				userWithoutExistingShippingAddress = true;
+//		}
 		if (userWithoutExistingShippingAddress) {
 			setInputText(r2CheckOutPo.inputCheckoutFirstName, webPropHelper.getTestDataProperty("FirstName"));
 			setInputText(r2CheckOutPo.inputCheckoutLasttName, webPropHelper.getTestDataProperty("LastName"));
 			setInputText(r2CheckOutPo.inputCheckoutPhoneNumber, r2MyAccountPO.generateRandomMobileNumber());
 			setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty("Address"));
+			Thread.sleep(Constants.thread_low);
 			setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("Zipcode"));
+			Thread.sleep(Constants.thread_low);
 			assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
 		}
 		Thread.sleep(Constants.thread_medium);
@@ -165,18 +168,14 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			}
 
 			if (chooseCreditCard | userWithoutExistingPaymentDetails) {
-//				setInputText(r2CheckOutPo.CreditCardNumber_Input, webPropHelper.getTestDataProperty(creditCardNumber));
-//				setInputText(r2CheckOutPo.txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
-//				setInputText(r2CheckOutPo.Cvv_Input, webPropHelper.getTestDataProperty(cvv));
-				Thread.sleep(5000);
-				String name = webPropHelper.getTestDataProperty("CardholderName");
+				Thread.sleep(Constants.thread_low);
 				driver.switchTo().frame("first-data-payment-field-name");
-				setInputText(r2CheckOutPo.CardholderName_Input, name);
-				System.out.println("CardHoldername="+webPropHelper.getTestDataProperty("CardholderName"));
+			   	setInputText(r2CheckOutPo.CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
+				//System.out.println("CardHoldername="+webPropHelper.getTestDataProperty("CardholderName"));
 				driver.switchTo().defaultContent();
 				driver.switchTo().frame("first-data-payment-field-card");
 				setInputText(r2CheckOutPo.CreditCardDetails_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
-				System.out.println("CardNumber="+webPropHelper.getTestDataProperty("CreditCardNumber"));
+				//System.out.println("CardNumber="+webPropHelper.getTestDataProperty("CreditCardNumber"));
 				driver.switchTo().defaultContent();
 				driver.switchTo().frame("first-data-payment-field-exp");	
 				setInputText(r2CheckOutPo.ExpDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
@@ -471,5 +470,13 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CheckOutPo.DailyQtyErrorMsg));
 	}
 	
-// ********Venkat ***************	
+	public static void JavaExecutorForClick(WebElement Element)
+    {
+   	 
+
+   	 //Option 1 remove the disabled attribute
+		JavascriptExecutor js = (JavascriptExecutor) driver;  
+		js.executeScript("arguments[0].click",Element);
+   	 Element.click();
+    }
 }

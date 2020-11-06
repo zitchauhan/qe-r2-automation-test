@@ -8,7 +8,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
 	And user click on ship it button 
 	And user click on checkout button
 	And user adds shipment address on checkout page for "guest" user
-	And user selects shipment method on check out page for "guest" user
+	Then user click on go to payment present in shipping method
 	And user add "<Payment Type>" details in payment method for "guest" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
@@ -59,46 +59,34 @@ Scenario Outline: verify if user should be able to submit the order on the check
     And user click on Add to Cart Button
     And user click on view cart
     Then verify the message for whiteGlove item and DSV item on the cart page
-		And user clicks on checkout button on cart page
-  	#And user adds shipment address on checkout page for "guest" user
-		#And user selects shipment method on check out page for "guest" user
-	#And user add "<Payment Type>" details in payment method for "guest" user
-	#And user clicks on place order on checkout page 
-	#Then verify user is able to successfully place the order
-		#Examples: 
-		#|Payment Type	|
-		#|Credit Card - VISA	| 		
-		
-	
+		And user clicks on checkout button on cart page		
 	
 	@RegressionP2
- Scenario Outline: Verify the category level promotions created in CMC are getting applied
-	Given user launches the browser and navigates to "ASO_HOME" page
-	When User searches a product "Productnamenew" and navigates to PDP
+  Scenario Outline: Verify the category level promotions created in CMC are getting applied
+		Given user launches the browser and navigates to "ASO_HOME" page
+		When User searches a product "Productnamenew" and navigates to PDP
     And user click on Add to Cart Button
     And user click on view cart
     And Verify that the Category level promotion is applied and displayed on cart page
     And user clicks on checkout button on cart page
   	And user adds shipment address on checkout page for "guest" user
-	And user selects shipment method on check out page for "guest" user
-	And user add "<Payment Type>" details in payment method for "guest" user
-	And Verify the Category level promotion is applied and displayed on Order Summary section
-	And user clicks on place order on checkout page 
-	Then verify user is able to successfully place the order
+		Then user click on go to payment present in shipping method
+		And user add "<Payment Type>" details in payment method for "guest" user
+		And Verify the Category level promotion is applied and displayed on Order Summary section
+		And user clicks on place order on checkout page 
+		Then verify user is able to successfully place the order
 		Examples: 
 		#|Payment Type	|
 		|Credit Card - VISA	|
 		
-		
-	
 	@RegressionP2
- Scenario: Validate user is able to change ship modes of an STS added item to Store Pickup or Home Delivery on cart page
+  Scenario: Validate user is able to change ship modes of an STS added item to Store Pickup or Home Delivery on cart page
     Given user launches the browser and navigates to "ASO_HOME" page
     And User should be able to click on Find Store 
-	And Find Store Modal should pop-up 
-	When User select store with "BOPIS_Store2"
-	When User searches a product "STSItemSKU" and navigates to PDP
-	And user click on Add to Cart Button
+		And Find Store Modal should pop-up 
+		When User select store with "BOPIS_Store2"
+		When User searches a product "STSItemSKU" and navigates to PDP
+		And user click on Add to Cart Button
     And user click on view cart
     And user select the option for Store pick up
     Then Verify that the Store pick up is selected and Home delivery option is unselected

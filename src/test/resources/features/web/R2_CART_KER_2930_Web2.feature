@@ -94,5 +94,5 @@ Scenario: Verify Shipping Fee is applicable only for Ship to Home
 	Then user select in store pickup option 
 	When user will click on Checkout button and navigates to Checkout page 
 	And user adds shipment address on checkout page for "guest" user 
-	And user selects shipment method on check out page for "guest" user 
+	Then user click on go to payment present in shipping method 
 	And user verify shipping fee for the ship to home product

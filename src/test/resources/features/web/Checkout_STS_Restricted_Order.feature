@@ -29,7 +29,7 @@ order for more than the limit in a single day with the same billing address
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
-	And user selects shipment method on check out page for "guest" user
+	Then user click on go to payment present in shipping method
 	#And user add "<Card Type>" details for a guest user
 	And user add "<Payment Type>" details in payment method for "guest" user 
 	And user clicks on place order on checkout page 
@@ -41,7 +41,7 @@ order for more than the limit in a single day with the same billing address
 	And user click on viewcart button
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
-	And user selects shipment method on check out page for "guest" user
+	Then user click on go to payment present in shipping method
 	And user add "<Card Type>" details for a guest user
 	And user clicks on place order on checkout page 
 	Then user sees the restriction error message on checkout page

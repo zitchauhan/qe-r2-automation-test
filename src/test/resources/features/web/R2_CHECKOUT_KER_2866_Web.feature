@@ -60,13 +60,10 @@ Scenario: Verify the guest user is able to select the PayPal payment method in o
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	#When user click on Add to cart button 
 	And user click on ship it button 
 	And user click on view cart
 	Then user select in store pickup option
-	And user will click on Checkout button and navigates to Checkout page
-	#And user adds shipment address on checkout page for "guest" user  
-	#And user selects shipment method on check out page for "guest" user  
+	And user will click on Checkout button and navigates to Checkout page  
 	When user clicks on Go to payment CTA
 	Then user click on paypal radiobtn
 	And user click on paypal checkout button
@@ -301,29 +298,30 @@ Scenario: Verfiy bopis place order for guest user with ACC as tender
 		| Order Number                                |			
 	
 	
+
 	
-@Web @Regression @P1 @CR-MT @RegressionP1 @abc @fail
+@Web @Regression @P1 @CR-MT @RegressionP1 @abc
 Scenario Outline: Verfiy bopis place order for guest user with CC as tender 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox
-	#And user click on Add to Cart Button 
 	Then user click on pickup button
 	And user click on view cart
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
-	And user adds shipment address on checkout page for "guest" user
-	And user selects shipment method on check out page for "guest" user
+	When user clicks on Go to payment CTA
 	And user add "<Payment Type>" details in payment method for "guest" user
+	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" 
+	And user click on REVIEW ORDER button
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
 	Examples: 
 		|Payment Type	|
 		|Credit Card - Master	| 	
 	
-@RegressionP2 @WhiteGlove @AutomationSmoke 
+@RegressionP2 @WhiteGlove @AutomationSmoke
 Scenario Outline: Verify the guest user is able to place White Glove order using Credit Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForWhiteGlovenew" and navigates to PDP
@@ -333,8 +331,8 @@ Scenario Outline: Verify the guest user is able to place White Glove order using
 	And user validate the WG bulk message is visible on cart page
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
-	And user selects shipment method on check out page for "guest" user
-	And user add "<Card Type>" details for a guest user
+	Then user click on go to payment present in shipping method
+	And user add "<Payment Type>" details in payment method for "guest" user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
 	Examples: 

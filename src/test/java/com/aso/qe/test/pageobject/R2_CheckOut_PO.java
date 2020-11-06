@@ -573,7 +573,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 
 		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1] | //*[@id='card']")public WebElement CreditCardNumber_Input;
 		@FindBy(xpath="//*[@id='card']")public WebElement CreditCardDetails_Input;
-		@FindBy(xpath="//*[@id='first-data-payment-field-name']") public WebElement CardholderName_Input;
+		@FindBy(xpath="//*[@id='name']") public WebElement CardholderName_Input;
 		@FindBy(xpath="//*[text()='Exp Date']/following::*[1] | //*[@id='exp']")public WebElement ExpirationDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[@id='exp']")public WebElement ExpDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[text()='CVV']/following::*[3] | //*[@id='cvv']")public WebElement Cvv_Input;
@@ -643,7 +643,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   
 	   @FindBy(xpath="//*[contains(text(),'Sign up to get Hot Deals')]/preceding::*[1]")public WebElement SignuptogetHotDeals_checkBox;
 	   
-	   @FindBy(xpath="//*[@data-auid='btnundefined'] | //*[@data-auid='btncheckout_goto_order_review_submit_button'] | //*[contains(text(),'Review Order')]")public WebElement ReviewOrder_Btn;
+	   @FindBy(xpath="//*[@data-auid='btncheckout_goto_order_review_submit_button'] | //*[contains(text(),'Review Order')]")public WebElement ReviewOrder_Btn;
 	   @FindBy(xpath="//*[@data-auid='checkout_edit_payment']")public WebElement EditPayment_Link;
 	   @FindBy(xpath="//*[text()='Change Billing Information']")public WebElement ChangeBillingInformation_Txt;
 	   

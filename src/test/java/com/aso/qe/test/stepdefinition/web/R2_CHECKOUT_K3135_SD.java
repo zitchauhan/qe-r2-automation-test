@@ -13,9 +13,9 @@ public class R2_CHECKOUT_K3135_SD extends CommonActionHelper {
 	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	R1_SearchProduct_PO r1_SearchPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
 
-	@And("^user enters new billing address information \"(.*?)\" , \"(.*?)\" , \"(.*?)\" , \"(.*?)\" , \"(.*?)\" , \"(.*?)\"$")
+	@And("^user enters new billing address information \"(.*?)\" , \"(.*?)\" , \"(.*?)\" , \"(.*?)\" , \"(.*?)\"$")
 	public void user_enters_new_billing_address_information(String arg1, String arg2, String arg3, String arg4,
-			String arg5, String arg6) throws Throwable {
+			String arg5) throws Throwable {
 		clearText(r2CheckOutPo.FirstName_Input);
 		clearText(r2CheckOutPo.LastName_Input);
 		clearText(r2CheckOutPo.PhoneNumber_Input);
@@ -27,9 +27,10 @@ public class R2_CHECKOUT_K3135_SD extends CommonActionHelper {
 		setInputText(r2CheckOutPo.PhoneNumber_Input, webPropHelper.getTestDataProperty(arg3));
 		setInputText(r2CheckOutPo.Adderss_Input, webPropHelper.getTestDataProperty(arg4));
 		setInputText(r2CheckOutPo.ZipCode_Input, webPropHelper.getTestDataProperty(arg5));
-		if (r1_SearchPO.verifyTextDisplayedOnPage("Email Address for Order Confirmation")) {
-			setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty(arg6));
-		}
+//		if (r1_SearchPO.verifyTextDisplayedOnPage("Email Address for Order Confirmation")) {
+//			(r2CheckOutPo.EmailAddressforOrderConfirmation_Input).clear();
+//			setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty(arg6));
+//		}
 	}
 
 	@And("^user click on confirm billing address button$")

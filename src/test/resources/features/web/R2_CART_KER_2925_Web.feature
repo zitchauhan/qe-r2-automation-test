@@ -1,8 +1,6 @@
 Feature: Place Order 
 
-@R2_Web @C1-Message @P-High_Order @C-Order @CC-Cart_Order @KER-2925
-@ZYP_CART_K2925-8190 @ZYP_CART_K2925-8191 @ZYP_CART_K2925-8192
-@ZYP_CART_K2925-8194 @ZYP_CART_K2925-11126 @CR-AG @1HR_R2 @P1 @RegressionP1
+@R2_Web @ZYP_CART_K2925-11126 @CR-AG @1HR_R2 @P1 @RegressionP1
 Scenario Outline: verify if user should be able to submit the order on the checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
@@ -11,7 +9,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
 	And user click on view cart 
 	And user click on checkout button 
 	And user adds shipment address on checkout page for "guest" user 
-	And user selects shipment method on check out page for "guest" user 
+	Then user click on go to payment present in shipping method 
 	And user add "<Payment Type>" details in payment method for "guest" user 
 	Then Verify the message on the page 
 		| # Following Message should show on the page |
@@ -46,14 +44,8 @@ Scenario Outline: Verify if user can click the legal disclaimer Terms and Condit
 			And user click on view cart 
 			And user click on checkout button 
 			And user adds shipment address on checkout page for "guest" user 
-			And user selects shipment method on check out page for "guest" user 
-			And user add "<Payment Type>" details in payment method for "guest" user 
-			#	And user fill the PO box in shipping address
-			#	And user click on Go To Shipping Method button in Checkout page
-			#	Then user click on go to payment present in shipping method
-			#	And user verifies master card entery in the card fields
-			#	Then user fill email address in payment
-			#	Then user clicks on the Review order button
+			Then user click on go to payment present in shipping method
+			And user add "<Payment Type>" details in payment method for "guest" user
 			Then Verify the message on the page 
 				| # Following Error Message should show on the page |
 				| By placing this order, I accept Academy's         |
@@ -67,7 +59,7 @@ Scenario Outline: Verify if user can click the legal disclaimer Terms and Condit
 				
 				@R2_Web @P-Low @C-Order @CC-Cart_Order @KER-2925 @ZYP_CART_K2925-8196 @CR-AG
 				@C1-Message 
-Scenario Outline: Verify if user can click the legal disclaimer Privacy policy is clickable 
+				Scenario Outline: Verify if user can click the legal disclaimer Privacy policy is clickable 
 					Given user launches the browser and navigates to "ASO_HOME" page 
 					When User searches a product "productName" and navigates to PDP 
 					#    And user click on Add to Cart Button
@@ -75,14 +67,8 @@ Scenario Outline: Verify if user can click the legal disclaimer Privacy policy i
 					And user click on view cart 
 					And user click on checkout button 
 					And user adds shipment address on checkout page for "guest" user 
-					And user selects shipment method on check out page for "guest" user 
+					Then user click on go to payment present in shipping method 
 					And user add "<Payment Type>" details in payment method for "guest" user 
-					#	And user fill the PO box in shipping address
-					#	And user click on Go To Shipping Method button in Checkout page
-					#	Then user click on go to payment present in shipping method
-					#	And user verifies master card entery in the card fields
-					#	Then user fill email address in payment
-					#	Then user clicks on the Review order button
 					Then Verify the message on the page 
 						| # Following Error Message should show on the page |
 						| By placing this order, I accept Academy's         |

@@ -64,7 +64,6 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 	public void user_click_on_REVIEW_ORDER_button() throws Throwable {
 		try {
 			genericPO.verifyPresenceOfReviewOrderButton();
-			clickOnButton(checkout_po.ReviewOrder_Btn);
 		} catch (Exception e) {
 			System.out.println("Exception Message:" + e.getMessage());
 		}
