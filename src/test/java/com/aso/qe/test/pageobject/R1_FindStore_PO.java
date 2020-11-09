@@ -19,7 +19,7 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	String storeName="";
 	
 	//@FindBy(xpath = "//*[contains(text(), 'Find a Store')]")public WebElement ovly_FindStore;/RKA 17 aug
-	@FindBy(xpath="//*[@data-auid='find-a-store-modal']/div//h2")public WebElement ovly_FindStore; //SID 14-Nov
+	@FindBy(xpath="(//*[@data-auid='find-a-store-modal'])[2]")public WebElement ovly_FindStore; //SID 14-Nov
 	@FindBy(xpath = "//input[@name='zipcode'] | //*[@data-auid='find-a-store']/input")public WebElement ovly_searchTextBox; //Sid 19-Nov
 	@FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']/span")public WebElement ovly_btnCloseCross;
 	@FindBy(xpath = "//*[@data-auid='submit-zip-code']//span[1]")public WebElement ovly_btnGO;

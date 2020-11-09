@@ -41,7 +41,7 @@ Scenario Outline:  Edit Non Default Shipping Address and Verify
 
 
 
-@R2_Web @ZYP_MYACCOUNT_K4232-9194 @CR-RK @RegressionP2 @MyAccount @OMNI-13382
+@R2_Web @ZYP_MYACCOUNT_K4232-9194 @CR-RK @RegressionP2 @MyAccount @TC-OMNI-13382
 Scenario: Verify whether the user is able to add a new non-default address in Address Book page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page
@@ -101,7 +101,7 @@ Scenario: Verify Authenticated user has Address given through SOF
 	And clicks on Add New Address button 
 	And user verifies the First address provided is set as default 
 	
-@R2_Web @ZYP_MYACCOUNT_K4232-9191 @CR-MS @RegressionP2 @MyAccount @OMNI-13380
+@R2_Web @ZYP_MYACCOUNT_K4232-9191 @CR-MS @RegressionP2 @MyAccount @TC-OMNI-13380
 Scenario: Verify whether the user is able to see the list of saved address details in address page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -211,7 +211,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Delete Address det
 		
 		
 		
-@R2_Web @ZYP_MYACCOUNT_K4232-9195 @CR-RK @RegressionP2 @MyAccount @OMNI-13386
+@R2_Web @ZYP_MYACCOUNT_K4232-9195 @CR-RK @RegressionP2 @MyAccount @TC-OMNI-13386
 Scenario: Verify Authenticated user can -Set Default Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page

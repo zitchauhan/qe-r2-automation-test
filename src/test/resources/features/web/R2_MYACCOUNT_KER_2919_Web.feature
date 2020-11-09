@@ -217,13 +217,13 @@ Scenario: Verify if  Payment Details are saved if User clicks on Add CTA when AV
  	And Verify that Credit Card details as entered are saved in User Profile.
  	
  	 	
- @R2_Web @ZYP_CART_K2919-10693 @CR-DPK @RegressionP1 @MyAccount @OMNI-13375
+ @R2_Web @ZYP_CART_K2919-10693 @CR-DPK @RegressionP1 @MyAccount @TC-OMNI-13375
 Scenario: Verify if entered address is validated by AVS
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
 	And user enter the valid emailaddress "Login_username" 
 	And user enter the valid password "Login_pwd" 
-    And user click on signin button
+  And user click on signin button
 	Then user click on My Account and navigate payment
 	And user deletes all existing credit card
 	And user clicks on Add New Credit Card button	
@@ -233,11 +233,11 @@ Scenario: Verify if entered address is validated by AVS
  	And User enters expiration date "ExpDate"
  	And User enters CVV number "CVV"
  	When user enter First name "FirstName"
-    And user enter Last name "LastName"
-    And user enter PhoneNumber field "PhoneNumber"
-    And user enter Address field "AVSAddress"
-    And user enter ZipCode field "zipcode"
-    Then click on Add button on credit card page
+  And user enter Last name "LastName"
+  And user enter PhoneNumber field "PhoneNumber"
+  And user enter Address field "AVSAddress"
+  And user enter ZipCode field "zipcode"
+  Then click on Add button on credit card page
 	And error is found in the shipping address
 	And user selects the suggested address instead of entered address
 	And clicks on Use Selected Address button

@@ -1,6 +1,6 @@
 Feature: Verfiy  View/Delete/Set Default Credit/Debit Card in Account 
 
-@R2_Web @ZYP_MYACCOUNT_K2920-10549 @CR-RK @RegressionP1 @MyAccount @OMNI-13378
+@R2_Web @ZYP_MYACCOUNT_K2920-10549 @CR-RK @RegressionP1 @MyAccount @TC-OMNI-13378
 Scenario: Verify user is able to remove the saved credit card from My Account 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -12,12 +12,10 @@ Scenario: Verify user is able to remove the saved credit card from My Account
 		|#Verify following elements in Payments > Add new credit card section	|
 		|PaymentPage_PaymentsHeader_label				|
 	And user clicks on Add New Credit Card button
-  And user validates the "Credit Card"
-  And user adds the "Credit Card"
-  #And  user enter Address "AVSAddress"
-  #And validate the acc card added
+  And user now adds the "Credit Card"
 	Then user clicks Remove button in payment page 
-	And user should see "credit card" removed message 
+	And user clicks on Add New Credit Card button
+  And user now adds the "Credit Card"
 	
 @R2_Web @R2_Regression @R2_All @P-Low @C-MyAccount @KER-2920 
 @ZYP_MYACCOUNT_K2920-10553 @CR-RK 
@@ -159,16 +157,20 @@ Scenario: Verify user is able to remove the saved academy gift card from My Acco
 	Then user clicks on Add new Gift Card CTA
 	Then user add gift card "Valid16DigitGiftCardNumber" and pin "Valid8DigitGiftCardPIN"
 
-@RegressionP1 @Web @Regression @P1 @CR-M @MyAccount @OMNI-13377 @abc
+@RegressionP1 @Web @Regression @P1 @CR-M @MyAccount @TC-OMNI-13377
 Scenario: Verify user is able to remove the saved academy credit card from My Account	
 Given user launches the browser and navigates to "ASO_HOME" page 
- When user clicks on SignIn link from global header 
- And user enter the valid emailaddress "EmailAddress" 
- And user enter the valid password "Password" 
- And user click on signin button 
- Then user click on My Account and navigate to payment 
- Then Verify below Sub/Main Module of My Account 
+ 	When user clicks on SignIn link from global header 
+ 	And user enter the valid emailaddress "EmailAddress" 
+ 	And user enter the valid password "Password" 
+ 	And user click on signin button 
+ 	Then user click on My Account and navigate to payment 
+ 	And user deletes all existing credit card
+	And user clicks on Add New Credit Card button
+  Then user now adds the "Academy Credit Card"
+  #And  user enter Address "AVSAddress"
+  And validate the acc card added
+ 	Then Verify below Sub/Main Module of My Account 
   |#Verify following elements in Payments > Add new credit card section |
   |PaymentPage_PaymentsHeader_label    |
- Then user clicks Remove acc button in payment page
- #And user should see the proper message	
+ 	Then user clicks Remove acc button in payment page

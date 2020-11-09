@@ -86,13 +86,11 @@ public class Checkout_OMNI_2731_SD  extends CommonActionHelper {
 			}
 			}
 		 
-	 }
-	 
-
-	 
+	 }	 
 		 else if (arg1.equalsIgnoreCase("Credit Card")) {
 			 	
-			 	waitForElement(r2_myaccount_PO.cc_Radio_Button);	 	
+			 	waitForElement(r2_myaccount_PO.cc_Radio_Button);
+			 	clickOnRadioButton(r2_myaccount_PO.cc_Radio_Button);
 			 	getDriver().switchTo().frame(r2_myaccount_PO.CardHolderNameFrame);
 			 	//waitForElement(r2_myaccount_PO.ccCardHolderName);
 			 	setInputText(r2_myaccount_PO.ccCardHolderName, webPropHelper.getTestDataProperty("CardholderName"));
