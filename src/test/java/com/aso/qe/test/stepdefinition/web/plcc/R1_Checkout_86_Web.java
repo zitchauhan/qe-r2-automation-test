@@ -341,7 +341,6 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 		String NSubtotal = Subtotal.substring(1);
 		float NewSubtotal=Float.parseFloat(NSubtotal); 
 		//Integer NewSubtotal = new Integer(NSubtotal);
-		System.out.println("New Subtotal is "+NewSubtotal);
 		String Discount = (r2CheckoutPo.CheckoutDiscountValue).getText();
 		String NDiscount = Discount.substring(2);
 		float NewDiscount = Float.parseFloat(NDiscount);
@@ -352,7 +351,6 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 		}
 	else {
 			assertTrue(isDisplayed(r2CheckoutPo.CheckoutDiscountValue));
-			System.out.println("Discount is less than $15, discount value is "+NewDiscount);
 			
 		}
 	}

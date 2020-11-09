@@ -833,7 +833,6 @@ public class New_PDP_SD extends CommonActionHelper {
 			waitForElement(newPDP.PickUpTodayPDP);
 			pdpDate = newPDP.PickUpTodayPDP.getText();
 			assertTrue(isDisplayed(newPDP.PickUpTodayPDP));
-			System.out.println("Text on PDP is" + pdpDate);
 		}
 		else if(arg1.equalsIgnoreCase("Cart"))
 		{

@@ -32,7 +32,7 @@ Feature: Regression P2 scenarios
 #   And user should be able to see Image of the product
 #   And user should be able to see the search term in the GiftCard title
 
-	@RegressionP2 @SR-1311
+	@RegressionP2 @SR-1311 @TC-OMNI-13412 @PLCC
 	Scenario: Verify user is able to get acquisition/first time promotion for the new PLCC approved card[5% up to $15 and Flat $15 for cart 
 	total >$15]
 	Given user launches the browser and navigates to "ASO_HOME" page
@@ -105,7 +105,7 @@ Feature: Regression P2 scenarios
 	Then user select in store pickup option
 	And user validates estimated date is visible on "Cart"
 	
-	@PDP @RegressionP2 @SR-1314
+	@PDP @RegressionP2 @SR-1314 @TC-OMNI-13440 @PDP
  	Scenario: Validate Pickup Date for BOPIS elgiible items are correctly visible on PDP page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
