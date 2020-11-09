@@ -1254,5 +1254,7 @@ public class R2_MyAccount_PO extends CommonActionHelper {
 	@FindBy(xpath = "//*[contains(text(),'There are no orders associated with this')]") public WebElement NoOrdersMyAccount;
 
 	@FindBy(xpath="//div[1]//div[3]//div[2]//div[2]//button[1]") public WebElement EditButtonNonDefaultAddress;	
+	@FindBy(xpath = "//*[@data-auid='btncheckout_use_selected_address_btn'] | //*[@data-auid='btnsuggest_btn']")//CR-DPK 14-sept
+	public WebElement MyAccountSuggestedAddress;
 
 }

@@ -310,7 +310,7 @@ Scenario: Verify that Authenticated User is able to view the Wish List Details
 		|WishList_Product_Review|
 		|WishList_Product_Price|	
 		
-@R2_Web @ZYP_MYACCOUNT_K4233-10498 @RegressionP2 @MyAccount @OMNI-13372
+@R2_Web @ZYP_MYACCOUNT_K4233-10498 @RegressionP2 @MyAccount @TC-OMNI-13372
 Scenario: Verify the User is able to move item from wish list to cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

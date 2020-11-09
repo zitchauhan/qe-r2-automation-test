@@ -6,16 +6,16 @@ Scenario: Verify that authenticated user is able to navigate to "Payments" Page.
 	And user clicks on SignIn link from global header
 	And user enter the valid emailaddress "EmailAddress" 
 	And user enter the valid password "Password" 
-    And user click on signin button
-    Then user click on My Account and navigate to payment
-    And user deletes all existing credit card
+  And user click on signin button
+  Then user click on My Account and navigate to payment
+  And user deletes all existing credit card
 	And user clicks on Add New Credit Card button
 	And validate the radio button Academy Credit Card and Credit Card
 	And user validates the "Academy Credit Card"
 	And user validates the "Credit Card"
 	
 	
-@Web @CR-SK @P1 @RegressionP1 @MyAccount @OMNI-13374
+@Web @CR-SK @P1 @RegressionP1 @MyAccount @TC-OMNI-13374
 Scenario: Verify that acc card can be added from My accounts
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user clicks on SignIn link from global header
@@ -25,8 +25,6 @@ Scenario: Verify that acc card can be added from My accounts
   Then user click on My Account and navigate payment
   And user deletes all existing credit card
 	And user clicks on Add New Credit Card button
-	#And validate the radio button Academy Credit Card and Credit Card
-	#And user validates the "Academy Credit Card"
-  And user adds the "Academy Credit Card"
-  And  user enter Address "AVSAddress"
+  Then user now adds the "Academy Credit Card"
+  #And  user enter Address "AVSAddress"
   And validate the acc card added

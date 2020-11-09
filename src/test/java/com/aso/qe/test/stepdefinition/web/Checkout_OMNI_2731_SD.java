@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
+import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 
 import cucumber.api.java.en.Then;
@@ -21,15 +22,15 @@ public class Checkout_OMNI_2731_SD  extends CommonActionHelper {
 
 	R2_MyAccount_PO r2_myaccount_PO = PageFactory.initElements(driver, R2_MyAccount_PO.class);
 
-@Then("^validate the radio button Academy Credit Card and Credit Card$")
-public void validate_the_radio_button_Academy_Credit_Card_and_Credit_Card() throws Throwable {
+	@Then("^validate the radio button Academy Credit Card and Credit Card$")
+	public void validate_the_radio_button_Academy_Credit_Card_and_Credit_Card() throws Throwable {
    
 	assertTrue(isDisplayed(r2_myaccount_PO.plcc_Radio_Button));
 	assertTrue(isDisplayed(r2_myaccount_PO.cc_Radio_Button));
-}
+	}
 
-@Then("^user now adds the \"([^\"]*)\"$")
-public void user_now_adds_the(String arg1) throws Throwable {
+	@Then("^user now adds the \"([^\"]*)\"$")
+	public void user_now_adds_the(String arg1) throws Throwable {
 	 if (arg1.equalsIgnoreCase("Academy Credit Card"))
 	 {
 		 if (isDisplayed(r2_myaccount_PO.plcc_Radio_Button))
@@ -76,7 +77,15 @@ public void user_now_adds_the(String arg1) throws Throwable {
 			waitForElement(r2_myaccount_PO.addAccButton);
 			assertTrue(isDisplayed(r2_myaccount_PO.addAccButton));		
 			clickOnButton(r2_myaccount_PO.addAccButton);
+			
+			if(isDisplayed(r2_myaccount_PO.AVS_Modal))
+			{
+				assertTrue(isDisplayed(r2_myaccount_PO.MyAccountSuggestedAddress));
+				clickOnButton(r2_myaccount_PO.MyAccountSuggestedAddress);
+				
 			}
+			}
+		 
 	 }
 	 
 
@@ -123,45 +132,46 @@ public void user_now_adds_the(String arg1) throws Throwable {
 				clickOnButton(r2_myaccount_PO.PaymentPage_AddCreditCard_Add_btn);
 				Thread.sleep(Constants.thread_medium);
 				
+				if(isDisplayed(r2_myaccount_PO.AVS_Modal))
+				{
+					assertTrue(isDisplayed(r2_myaccount_PO.MyAccountSuggestedAddress));
+					clickOnButton(r2_myaccount_PO.MyAccountSuggestedAddress);
+					
+				}
+				
 				
 		 }
 	 }
 
 
-@Then("^validate the acc card added$")
-public void validate_the_acc_card_added() throws Throwable {
+	@Then("^validate the acc card added$")
+	public void validate_the_acc_card_added() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
 	waitForElement(r2_myaccount_PO.plccValidateName);
 	assertTrue(isDisplayed(r2_myaccount_PO.plccValidateName));
-		
-	waitForElement(r2_myaccount_PO.plccValidateAddress);
-	assertTrue(isDisplayed(r2_myaccount_PO.plccValidateAddress));		
-		
-	waitForElement(r2_myaccount_PO.plccValidateZip);
-	assertTrue(isDisplayed(r2_myaccount_PO.plccValidateZip));		
 	
-}
+	}
 
-@Then("^user validates the \"([^\"]*)\"$")
-public void user_validates_the(String arg1) throws Throwable {
- if (arg1.equalsIgnoreCase("Academy Credit Card"))
- {
-	 if (isDisplayed(r2_myaccount_PO.plcc_Radio_Button))
-		{ 
-		waitForElement(r2_myaccount_PO.plcc_Radio_Button);
-		clickOnRadioButton(r2_myaccount_PO.plcc_Radio_Button);
+	@Then("^user validates the \"([^\"]*)\"$")
+	public void user_validates_the(String arg1) throws Throwable {
+		if (arg1.equalsIgnoreCase("Academy Credit Card"))
+		{
+			waitForElement(r2_myaccount_PO.plcc_Radio_Button);
+			if (isDisplayed(r2_myaccount_PO.plcc_Radio_Button))
+			{ 
+				clickOnRadioButton(r2_myaccount_PO.plcc_Radio_Button);
 					
-		waitForElement(r2_myaccount_PO.plccCreditCardTextBox);
-		assertTrue(isDisplayed(r2_myaccount_PO.plccCreditCardTextBox));
-		setInputText(r2_myaccount_PO.plccCreditCardTextBox,webPropHelper.getTestDataProperty("CardVISA"));
-		tabInputBox(r2_myaccount_PO.plccCreditCardTextBox);
-		
-		waitForElement(r2_myaccount_PO.plccErrorUnrecognizedCardNo);
-		assertTrue(isDisplayed(r2_myaccount_PO.plccErrorUnrecognizedCardNo));
+//		waitForElement(r2_myaccount_PO.plccCreditCardTextBox);
+//		assertTrue(isDisplayed(r2_myaccount_PO.plccCreditCardTextBox));
+//		setInputText(r2_myaccount_PO.plccCreditCardTextBox,webPropHelper.getTestDataProperty("CardVISA"));
+//		tabInputBox(r2_myaccount_PO.plccCreditCardTextBox);
+//		
+//		waitForElement(r2_myaccount_PO.plccErrorUnrecognizedCardNo);
+//		assertTrue(isDisplayed(r2_myaccount_PO.plccErrorUnrecognizedCardNo));
 
 		waitForElement(r2_myaccount_PO.plccCreditCardTextBox);
 		clearInputBox(r2_myaccount_PO.plccCreditCardTextBox);
-		setInputText(r2_myaccount_PO.plccCreditCardTextBox,webPropHelper.getTestDataProperty("CardPlcc"));
+		setInputText(r2_myaccount_PO.plccCreditCardTextBox,webPropHelper.getTestDataProperty("ValidPLCCCard"));
 		
 		waitForElement(r2_myaccount_PO.plccLogoImg);
 		assertTrue(isDisplayed(r2_myaccount_PO.plccLogoImg));
@@ -185,11 +195,11 @@ public void user_validates_the(String arg1) throws Throwable {
 		waitForElement(r2_myaccount_PO.billingPhoneNumber);
 		assertTrue(isDisplayed(r2_myaccount_PO.billingPhoneNumber));			
 		}
- }
- else if (arg1.equalsIgnoreCase("Credit Card"))
- {
-	 waitForElement(r2_myaccount_PO.cc_Radio_Button);
-	 if (isDisplayed(r2_myaccount_PO.cc_Radio_Button))
+		}
+		else if (arg1.equalsIgnoreCase("Credit Card"))
+		{
+			waitForElement(r2_myaccount_PO.cc_Radio_Button);
+	 	if (isDisplayed(r2_myaccount_PO.cc_Radio_Button))
 		{ 
 			
 			clickOnRadioButton(r2_myaccount_PO.cc_Radio_Button);
