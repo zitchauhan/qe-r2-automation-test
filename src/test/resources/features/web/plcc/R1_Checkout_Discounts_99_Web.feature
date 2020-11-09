@@ -3,7 +3,7 @@ Feature: PLCC: Checkout - Free Shipping
 Background: Common Pre-requisite steps 
 	Given user launches the browser and navigates to "ASO_HOME" page plcc
 	And user clicks on SignIn link from global header 
-	And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 
+	And user enter the valid emailaddress "Email_SavedCard" 
 	And user enter the valid password "Password" 
 	And user click on signin button
 	Then user navigates to ASO-Home page 
@@ -11,7 +11,7 @@ Background: Common Pre-requisite steps
 #	And user click on Payments link 
 #	Then delete all credit cards from My Account 
 	
-@C-PLCC @All @PLCC-99 @CR-Manju @AutomationSmokeORIG @RegressionP2 @PLCC @SR-1318 
+@C-PLCC @All @PLCC-99 @CR-Manju @AutomationSmokeORIG @RegressionP2 @PLCC @SR-1318 @TC-OMNI-13413
 Scenario: Verify user is able to get Free shipping offer with Item value >15$ 
 	When user enters "SKUIdOfProductGr15" in the search box plcc 
 	And user click on search icon 
