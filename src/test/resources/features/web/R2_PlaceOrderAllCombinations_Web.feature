@@ -99,7 +99,7 @@ Scenario Outline: Verify guest user order placement for with Different Card Type
 		
 		
 
-@Regression @P1 @CR-SK @Checkout @RegressionP1 @TC-OMNI-13460 @abc 
+@Regression @P1 @CR-SK @Checkout @RegressionP1 @TC-OMNI-13460
 Scenario: Place order as a registered user using Paypal express as tender
   Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productNameSTH" and navigates to PDP
@@ -110,6 +110,7 @@ Scenario: Place order as a registered user using Paypal express as tender
   Then Verify paypal button on Cart Page 
 	Then User click on paypal button on cart page
 	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword"
+	And user clicks on ok button of order not complete modal
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
 	And Verify the message on the page 
@@ -119,7 +120,7 @@ Scenario: Place order as a registered user using Paypal express as tender
 
 		
 @R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order @C1-Message
- @CR-SK @RegressionP3
+ @CR-SK @RegressionP3 @TC-OMNI-13445
 Scenario Outline: Verify if unauthenticated user is able to place an for bundle products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
@@ -138,8 +139,8 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bundle 
 	Examples: 
 		|Payment Type	|
 #		|Gift Card		|
-#		|Credit Card 	|
-		|PayPal			|
+		|Credit Card 	|
+#		|PayPal			|
 						
 						
 						

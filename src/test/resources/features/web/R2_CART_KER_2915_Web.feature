@@ -31,14 +31,16 @@ Scenario Outline: verify if user should be able to submit the order on the check
 	
 		
    
-  @RegressionP2
+  @RegressionP2 @TC-OMNI-13443
  Scenario: Verify SKU is displayed for all the line items in cart page
     Given user launches the browser and navigates to "ASO_HOME" page 
     When User searches a product "Productnamenew" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button
+    And user click on ship it button
     And close the pop up
     And User searches a product "dsv_sku" and navigates to PDP
-    And user click on Add to Cart Button
+    #And user click on Add to Cart Button
+    And user click on ship it button
     And user click on view cart
     Then verify child SKU of the product is displayed on the Cart page
 
