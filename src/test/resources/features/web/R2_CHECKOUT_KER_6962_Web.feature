@@ -301,7 +301,7 @@ Scenario: Verify If a gift card does not cover the full transaction, the amount 
 	Then applied gift card "LowBalanceGiftCard" should be displayed
 	And Applied amount should be displayed in order summary
 	
-@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8897 @CR-SK @P1 @RegressionP1
+@R2_Web   @R2_All @P-High_Order @C-Order @CC-Checkout_Order @KER-6962 @ZYP_CART_K6962-8897 @CR-SK @P1 @RegressionP1 @TC-OMNI-13458
 Scenario: Verify If a gift card covers the full transaction, the amount applied and the remaining gift card balance should be displayed and also applied amount should displayed in order summary subtotals to the Sign in user
 	Given user launches the browser and navigates to "ASO_HOME" page
 	And user creates an account
@@ -312,7 +312,8 @@ Scenario: Verify If a gift card covers the full transaction, the amount applied 
 	And user click on view cart and checkout button
 	And user click on checkout button
 	And user adds shipment address on checkout page for "guest" user 
-	And user selects shipment method on check out page for "guest" user
+	And user modifies shipping method
+	And user selects shipment method on check out page for "guest" user	
 	When user click on GiftCard Plus icon in Checkout page
 	And user enter Gift card Number "Valid16DigitGiftCardNumber"
 	And user enter Pin Number "Valid8DigitGiftCardPIN" 

@@ -35,9 +35,7 @@ public class Checkout_OMNI_1550_SD extends CommonActionHelper{
 	public void user_should_be_able_to_validate_the_cart_merge() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Thread.sleep(3000);
-		System.out.println("%%%%%%%%%%%%"+getDriver().getPageSource().contains(productName));
 		String productNameOnCart = (r1_pdp_PO.productNameCartPage).getText();
-		System.out.println("Product name on cart page is " +productNameOnCart);
 		assertTrue(productNameOnCart.contains(productName));
 	}
 
