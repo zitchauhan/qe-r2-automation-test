@@ -210,7 +210,7 @@ Feature: PDP Scenarios based on searching the products
     And Verify that Price Drop Filter is applied
     
     
-    @RegressionP2
+    @RegressionP2 @TC-OMNI-13462
    Scenario Outline: Verify guest user can place Gift card order using CC as tender type
      Given user launches the browser and navigates to "ASO_HOME" page 
      When User searches a product "SKUForGiftCard" and navigates to PDP
@@ -220,7 +220,7 @@ Feature: PDP Scenarios based on searching the products
   	 And user adds shipment address on checkout page for "guest" user
 	 And user selects shipment method on check out page for "guest" user
 	 And user add "<Payment Type>" details in payment method for "guest" user
-	 And Verify the Category level promotion is applied and displayed on Order Summary section
+#	 And Verify the Category level promotion is applied and displayed on Order Summary section  
 	 And user clicks on place order on checkout page 
 	 Then verify user is able to successfully place the order
 	   Examples: 
