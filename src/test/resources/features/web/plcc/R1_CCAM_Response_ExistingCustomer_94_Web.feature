@@ -17,7 +17,7 @@ Background:  Common Pre-requisite steps
 	Then user navigates to Generic Credit Card Application Modal
 
 
-@RegressionP2 @OMNI-13409
+@RegressionP2 @TC-OMNI-13409
 Scenario: Verify approved PLCC card saved in My account
 	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNamePlcc"
@@ -66,16 +66,11 @@ Scenario: verify Latest added card saved as default card in My account
 	And user verify presence of STEP2: CONSENT
 	And user select credit application modal agree message 
 	When user click on SUBMIT button
-	#Then user navigates to existing account modal
 	Then user navigates to credit card approval modal
 	When user click on close icon of success modal
 	Then user expect Landing page to be present 
 	And user click on MyAccount
 	And user clicks on payment tab
-	#Then user clicks On AddNew CreditCard in Payment Page
- 	#And user click on academy creditcard radiobtn
- 	#And user Enters Accademy Credit Card Details
- 	#Then User Clicks on Add New Card Button
  	Then user verify ACC Default Card
 		
 

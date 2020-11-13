@@ -65,7 +65,7 @@ Scenario: Verify the system behavior when user enter 34 as two digit BIN number
 	And user click on Payments link 
 	Then delete all credit cards from My Account 
 	
-@C-PLCC @All @PLCC-80 @CR-VS @AutomationSmokeORIG
+@C-PLCC @All @PLCC-80 @CR-VS
 Scenario: Verify the system behavior when user enter 65 as two digit BIN number 
 	And user handles adding new card "starting2digitsdiscoverCard" if already card is saved
 	Then user expect selected credit card image on credit card text field 

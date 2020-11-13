@@ -134,7 +134,7 @@ Scenario: Verify the user gets the error message when both email id and Password
 		|Please enter the password								|
 		
 #=========================Sanity=====================================#
-@R2_Web @ZYP_MYACCOUNT_K4011-10040 @AutomationSmokeORIG @RegressionP1 @MyAccount @OMNI-13394
+@R2_Web @ZYP_MYACCOUNT_K4011-10040 @RegressionP1 @MyAccount @OMNI-13394
 Scenario: TC_1- Verify Login Logout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
