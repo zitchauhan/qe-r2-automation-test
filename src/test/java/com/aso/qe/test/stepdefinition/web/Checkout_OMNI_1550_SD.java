@@ -28,7 +28,6 @@ public class Checkout_OMNI_1550_SD extends CommonActionHelper{
 	    // Write code here that turns the phrase above into concrete actions
 		//productName= r2_cart_PO.lnkProducttext.getText();;
 		productName = r1_pdp_PO.productname.getText();
-		System.out.println("Product name on PDP is "+productName);
 	}
 
 	@Then("^user should be able to validate the cart merge$")

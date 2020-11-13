@@ -1,6 +1,6 @@
 Feature: Regression P2 scenarios
 
-	@P2 @RegressionP2
+	@P2 @RegressionP2 @TC-OMNI-13417
 	Scenario: Validate navigation to Hot Deals page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header
