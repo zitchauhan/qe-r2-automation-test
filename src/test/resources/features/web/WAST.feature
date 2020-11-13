@@ -1,6 +1,6 @@
 Feature: WAST
 
-@R2_Web @R2_WAST-05 @P2 @AutomationSmokeORIG
+@R2_Web @R2_WAST-05 @P2
 Scenario: TC_6-Verify and Search an item and  navigate to  View Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
@@ -12,7 +12,7 @@ Scenario: TC_6-Verify and Search an item and  navigate to  View Cart
 	Then user navigate to Cart page 
 	
 	#===========unit testing pending as search is not working
-@R2_Web @R2_WAST-06 @P2 @AutomationSmokeORIG
+@R2_Web @R2_WAST-06 @P2
 Scenario: TC_7-Verify and Search - Checkout from ATC Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User should be able to see Search Box on Homepage 
@@ -27,7 +27,7 @@ Scenario: TC_7-Verify and Search - Checkout from ATC Modal
 	Then user is navigated to checkout page 
 	
 	
-@R2_Web @R2_WAST-07 @AutomationSmokeORIG
+@R2_Web @R2_WAST-07
 Scenario: TC_8-Verify Cat Nav - View Cart 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 
@@ -38,7 +38,7 @@ Scenario: TC_8-Verify Cat Nav - View Cart
 	Then user navigate to Cart page 
 	
 	
-@R2_Web @R2_WAST-08 @AutomationSmokeORIG
+@R2_Web @R2_WAST-08
 Scenario: TC_9-Verify Cat Nav - Checkout from ATC Modal 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User Navigates L2 form Homepage Header 

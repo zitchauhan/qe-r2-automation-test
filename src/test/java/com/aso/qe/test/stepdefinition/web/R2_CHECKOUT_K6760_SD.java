@@ -6,7 +6,6 @@ import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_R1_Fun_PO;
-import com.sun.media.jfxmedia.logging.Logger;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;

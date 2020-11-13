@@ -82,7 +82,7 @@ Scenario: To Edit cart items from Order summary
 #
 
 #=====================================================Sanity==========================================#
-@R2_Web @R2_WAST-19 @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @C1-Message @C1-Message @AutomationSmokeORIG  
+@R2_Web @R2_WAST-19 @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8100 @C1-Message @C1-Message  
 Scenario: TC_20- Verify Edit cart items from Order summary 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 
@@ -97,7 +97,7 @@ Scenario: TC_20- Verify Edit cart items from Order summary
 #		|# Following Message should show on the page|
 #		|CartPage|
 
-@R2_Web @R2_WAST-20 @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098 @AutomationSmokeORIG
+@R2_Web @R2_WAST-20 @P-Low @C-Checkout @KER-2926 @ZYP_CHECKOUT_K2926-8098
 Scenario: TC_21-Verify Order Summary 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 

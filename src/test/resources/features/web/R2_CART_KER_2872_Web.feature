@@ -1,7 +1,7 @@
 Feature: Verify BOPIS PDP Store Selection 
 
 
-@RegressionP2 @MyAccount @OMNI-13400
+@RegressionP2 @MyAccount @TC-OMNI-13400
 Scenario: Verify whether the user is able to change the store location successfully from store locator modal invoked in PDP 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
@@ -114,7 +114,7 @@ Scenario: Verify that user is able to see the Change Location link on PDP
 	And user is able to see Change Pickup Location link 
 	
 	
-@R2_Web @ZYP_CART_K2872-10620 @CR-DPK @C-BOPIS @RegressionP2 @MyAccount @OMNI-13399
+@R2_Web @ZYP_CART_K2872-10620 @CR-DPK @C-BOPIS @RegressionP2 @MyAccount @TC-OMNI-13399
 Scenario: Verify that user is able to open the Find Store modal from PDP for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -316,7 +316,7 @@ Scenario: Verify find a store Modal closes On Select "Close X" and If a user sel
 	
 	
 #=====================Sanity=================================================#
-@R2_Web @R2_WAST-21 @P1 @C-Cart @KER-2872 @ZYP_CART_K2872-8710 @AutomationSmokeORIG
+@R2_Web @R2_WAST-21 @P1 @C-Cart @KER-2872 @ZYP_CART_K2872-8710
 Scenario: TC_22-Verify Find a store 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
@@ -324,7 +324,7 @@ Scenario: TC_22-Verify Find a store
 	And user click on submit button 
 	Then user verify the results based on entering zipcode
 
-	@R2_Web @R2_WAST-24 @P1 @C-Checkout @KER-2926 @AutomationSmokeORIG @CR-HP @HP @HPTest
+	@R2_Web @R2_WAST-24 @P1 @C-Checkout @KER-2926 @CR-HP @HP @HPTest
 	Scenario:  TC_24-Verify if unauthenticated user is able to place PAYPAL order
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	#Then User should be able to click on Find Store 
