@@ -44,7 +44,7 @@ Feature: PDP Scenarios based on searching the products
    And user should see different attribute and size of the product
     
    
-   @RegressionP2
+   @RegressionP2 @TC-OMNI-13523
    Scenario: Search a Gift card and verify URL,Image,Attributes on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page 
    When User searches a product "SKUForGiftCard" and navigates to PDP
@@ -62,7 +62,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the item value
    
    
-   @RegressionP2
+   @RegressionP2 @TC-OMNI-13524
    Scenario: Search for a White Glove Product and verify URL,Image and Title on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
    And User searches a product "SKUForWhiteGlove" and navigates to PDP
@@ -160,7 +160,7 @@ Feature: PDP Scenarios based on searching the products
     Then Verify the Hot Deal in Breadcrumb
     
   
-   @RegressionP3
+   @RegressionP3 @TC-OMNI-13514
   Scenario: User should be able to select a category or sub-category and navigates from PLP page as well
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates till PLP of Baits SKU
@@ -177,7 +177,7 @@ Feature: PDP Scenarios based on searching the products
     Then Verify the Hot Deal in Breadcrumb
      
     
-    @RegressionP3
+    @RegressionP3 @TC-OMNI-13515
   Scenario: Validate the Title listed on PLP page post selecting a category or sub-category(below Bread-crumbs)
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates till PLP of Baits SKU
