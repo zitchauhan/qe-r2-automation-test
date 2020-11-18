@@ -2,7 +2,7 @@ Feature: CHECKOUT - Guest user, add STS Order
 
 
 @AutomationSmoke @RegressionP1
-Scenario:  Checkout - Guest User order placement for Regular STS item
+Scenario Outline:  Checkout - Guest User order placement for Regular STS item
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
@@ -14,9 +14,13 @@ Scenario:  Checkout - Guest User order placement for Regular STS item
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
 	When user clicks on Go to payment CTA
-	And user fill the payment details for sof guest user
+	#And user fill the payment details for sof guest user
+	And user add "<Payment Type>" details in payment method for "guest" user 
 	And user able to see the button place order
 	Then verify user is able to successfully place the order
+	Examples: 
+		|Payment Type	|
+		|Credit Card - visa	|
 	
 @RegressionP1 @abcd
 Scenario Outline: Guest User - Validate Limited Qty msg is visible to the user on PDP and cart page and user should not be able to place 
@@ -49,10 +53,10 @@ order for more than the limit in a single day with the same billing address
 		|Payment Type	|
 		|Credit Card - visa	|
 		
-@RegressionP1 @abc
+@RegressionP1 
 Scenario Outline: Ship alone items should appear in separate package and not combined with other items and order should be placed successfully
 	Given user launches the browser and navigates to "ASO_HOME" page plcc 
-  When user creates an account
+  	When user creates an account
 	When User searches a product "ShipAloneItem" and navigates to PDP
 	And user click on ship it button 
 	And then user close the add to cart popup
