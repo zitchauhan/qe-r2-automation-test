@@ -21,6 +21,7 @@ Scenario Outline: Verify whether the new address entered in Checkout page gets s
 		|THANKS FOR SUBMITTING YOUR ORDER					|
 	Examples: 
 		|Payment Type	|
+		|Credit Card - VISA	|
 
 #********************Venkat End******************
 
