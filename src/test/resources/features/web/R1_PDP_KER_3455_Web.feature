@@ -89,11 +89,11 @@ Feature: [Desktop]Bundles - Add to Cart Notification
  
 	
 	
-	@RegressionP2
-  Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a Bait product PDP
+   @RegressionP2
+   Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a Bait product PDP
    Given user launches the browser and navigates to "ASO_HOME" page
    When user navigates till PLP of Baits SKU
-   And user click on soft Baits
+   #And user click on soft Baits
    And user click on first Baits product
    #When User searches a product "SKUForBaitProduct" and navigates to PDP
    Then user should be able to see PDP mention in the current url

@@ -176,7 +176,7 @@ public class R1_SearchProduct_PO extends CommonActionHelper {
 	@FindBy(xpath = "//p[contains(text(),'Gas Grills')]")
 	public WebElement GasGrillsoption;
 	
-	@FindBy(xpath = "(//section[@id='productCardListing']/div)[1]")
+	@FindBy(xpath = "(//section[@id='productCardListing']/div/a)[1]//p")
 	public WebElement firstBaitsproduct;
 	
 	@FindBy(xpath = "(//section[@id='productCardListing']/div/a)[2]")
