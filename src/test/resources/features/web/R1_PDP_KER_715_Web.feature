@@ -9,7 +9,7 @@ Scenario: To verify user is able to navigate to product details page when produc
 	#And user should be able to see Add to cart button and quantity section 
 	And user should be able to see ship it button and quantity section 
 	
-@Web @Regression @CR-SB @P1 @PDP @RegressionP1
+@Web @Regression @CR-SB @P1 @PDP @RegressionP1 @TC-OMNI-13424
   Scenario: To verify All of the elements are present on the PDP page
   	Given user launches the browser and navigates to "ASO_HOME" page 
 		And User searches a product "productName" and navigates to PDP 

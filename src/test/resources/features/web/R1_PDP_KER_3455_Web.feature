@@ -72,9 +72,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
 	And User click on the product image of sku package 
 	Then verfiy the product details and features 
 	
-	
-	
-	@RegressionP2 
+	@RegressionP2  @TC-OMNI-13425
 	Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a Bundle product PDP
   #Given user launches the browser and navigates to "ASO_HOME" page
   Given user launches the browser and navigates to "ASO_HOME" page 
@@ -86,10 +84,8 @@ Feature: [Desktop]Bundles - Add to Cart Notification
   And user should be able to see the search term in the product title for Bundle Product
   And user should see different attribute and size of the Bundle Product
   And user should see details and specs for Bundle Product
- 
 	
-	
-   @RegressionP2
+   @RegressionP2 @TC-OMNI-13426
    Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a Bait product PDP
    Given user launches the browser and navigates to "ASO_HOME" page
    When user navigates till PLP of Baits SKU
@@ -122,7 +118,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
    
    
    
-   @RegressionP2
+    @RegressionP2 @TC-OMNI-13428
    Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a dropship product PDP
    Given user launches the browser and navigates to "ASO_HOME" page 
    When User searches a product "dsv_sku" and navigates to PDP
@@ -138,7 +134,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
    Then verfiy the Ask a question button
    
    
-   @RegressionP2
+   @RegressionP2 @TC-OMNI-13432
    Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a gift card product PDP
    Given user launches the browser and navigates to "ASO_HOME" page 
    #When User searches a product "SKUForGiftCard" and navigates to PDP
@@ -153,7 +149,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
    
    
    
-   @RegressionP2
+  @RegressionP2 @TC-OMNI-13431
    Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a bulk gift card product PDP
    Given user launches the browser and navigates to "ASO_HOME" page 
    #When User searches a product "SKUForGiftCard" and navigates to PDP
@@ -167,7 +163,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
    
    
    
-   @RegressionP2 @TC-OMNI-13429 @PDP
+   @RegressionP2 @TC-OMNI-13429 @PDP 
    Scenario: Verify whether the PDP along with all elements is displayed properly when navigated to a Special Order Firearm PDP
    Given user launches the browser and navigates to "ASO_HOME" page 
    When User searches a product "BOPIS_SOF_Product" and navigates to PDP

@@ -2,7 +2,7 @@ Feature: E02-100 - My Account, Address Book
 
 # ******* Venkat *************
 
-@temp111 @RegressionP2 @MyAccount @OMNI-13385
+@temp111 @RegressionP2 @MyAccount @TC-OMNI-13385
 Scenario Outline:  Edit Non Default Shipping Address and Verify
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -151,7 +151,7 @@ Scenario: Verify Authenticated user can Manage Address Book - Add new Address de
 	Then user views validation message on all fields 
 	
 	
-@R2_Web @ZYP_MYACCOUNT_K4232-9333 @CR-RK @RegressionP2 @MyAccount @OMNI-13381
+@R2_Web @ZYP_MYACCOUNT_K4232-9333 @CR-RK @RegressionP2 @MyAccount @TC-OMNI-13381
 Scenario: Verify Authenticated user can Manage Address Book -Set Default Address 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -187,7 +187,7 @@ Scenario: Verify Authenticated user can Manage Address Book -Set Default Address
 	And clicks on Add New Address button 
 	And user verifies the First address provided is set as default 
 	
-@R2_Web @ZYP_MYACCOUNT_K4232-9332 @RegressionP3 @MyAccount @OMNI-13388
+@R2_Web @ZYP_MYACCOUNT_K4232-9332 @RegressionP3 @MyAccount @TC-OMNI-13388
 Scenario: Verify Authenticated user can Manage Address Book - Delete Address details - Undo 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -226,7 +226,7 @@ Scenario: Verify Authenticated user can -Set Default Address
 	And user click on set as default button 
 	
 	
-@R2_Web @ZYP_MYACCOUNT_K4232-9193 @CR-RK @RegressionP2 @MyAccount @OMNI-13387
+@R2_Web @ZYP_MYACCOUNT_K4232-9193 @CR-RK @RegressionP2 @MyAccount @TC-OMNI-13387
 Scenario: Verify Authenticated user can Manage Address Book - Delete Address details 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 
@@ -301,7 +301,7 @@ Scenario: Verify My Account Address Book - Delete only saved address that is Def
 		|AddressPage_Default_txt					|	
 	And user verifies that remove button is not available 
 	
-@Web @Regression @P1 @CR-MT @RegressionP1 @MyAccount @OMNI-13384
+@Web @Regression @P1 @CR-MT @RegressionP1 @MyAccount @TC-OMNI-13384
 Scenario: Verify My Account Address Book - Changes in the Default Address should be saved 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

@@ -1,6 +1,6 @@
 Feature: To Quick View - Product Information
 
-    @C-PLP @Web @Regression @KER-731  @ZYP_PLP_K731-3462 @CR-AKK @RegressionP2
+    @C-PLP @Web @Regression @KER-731  @ZYP_PLP_K731-3462 @CR-AKK @RegressionP2  @TC-OMNI-13435
     Scenario: To verify All of the products defining attributes in Quick View
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L3 from home page
