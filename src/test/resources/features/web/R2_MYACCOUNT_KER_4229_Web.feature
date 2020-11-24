@@ -42,7 +42,7 @@ Scenario: Verify that Authenticated User is able to navigate to My Account page
 		|PaymentPage_Payment_lnk_web                |
 		
 		
-@R2_Web @P2 @C-MyAccount @ZYP_MYACCOUNT_K4229-10474 @CR-GK @RegressionP2 @MyAccount @OMNI-13361
+@R2_Web @P2 @C-MyAccount @ZYP_MYACCOUNT_K4229-10474 @CR-GK @RegressionP2 @MyAccount @OMNI-13361  @TC-OMNI-13361
 Scenario: Verify that Authenticated User is able to view order list 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
@@ -60,7 +60,7 @@ Scenario: Verify that Authenticated User is able to view order list
 	And Oldest sorting option is available 
 	
 	
-@R2_Web @ZYP_MYACCOUNT_K4229-10475 @CR-GK @RegressionP2 @MyAccount @OMNI-13363
+@R2_Web @ZYP_MYACCOUNT_K4229-10475 @CR-GK @RegressionP2 @MyAccount @TC-OMNI-13363
 Scenario: Verify that Authenticated User is able to navigate to Profile page 
 	Given  user launches the browser and navigates to "ASO_HOME" page 
 	And  clicks on SignIn button in home page 

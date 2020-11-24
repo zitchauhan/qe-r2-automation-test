@@ -81,7 +81,7 @@ Scenario: Verify the available customer details
 	Then user verifies the fields loaded Full name, email address, choose password, submit button and check box for email News letters	    
 
 
-@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Low   @KER-4062 @ZYP_CART_K4062-8107 @CR-SK @C1-Message @RegressionP1
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Low   @KER-4062 @ZYP_CART_K4062-8107 @CR-SK @C1-Message @RegressionP1 @TC-OMNI-13454
 Scenario: verify the account register with out Email News letter 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 

@@ -1,6 +1,6 @@
 Feature: To verify all sorting options are available
 
-  @1HR @Web @All @KER-615 @ZYP_PLP_K615-2605 @Regression @C-PLP @1HR @CR-RKA
+  @1HR @Web @All @KER-615 @ZYP_PLP_K615-2605 @Regression @C-PLP @1HR @CR-RKA  @TC-OMNI-13517
   Scenario: Verify user is able to see all sorting option PLP
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP

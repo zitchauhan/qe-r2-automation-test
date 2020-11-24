@@ -21,7 +21,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     Then User should be able to see the deselected PRICE filter Options in deselected state
     Then User closes the web application
 
-  @Regression @Web @All @KER-552 @ZYP_PLP_K552-2900 @C-PLP @RegressionP2
+  @Regression @Web @All @KER-552 @ZYP_PLP_K552-2900 @C-PLP @RegressionP2 @TC-OMNI-13419
   Scenario: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -31,7 +31,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user deselect the "PriceFilter" filter
     Then User closes the web application
 
-  @Regression @Web @All @KER-552 @ZYP_PLP_K552-2902 @C-PLP
+  @Regression @Web @All @KER-552 @ZYP_PLP_K552-2902 @C-PLP @TC-OMNI-13419
   Scenario: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -41,7 +41,7 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And user deselect the "PriceFilter" filter
     Then User closes the web application
 
-  @Regression @Web @All @KER-552 @ZYP_PLP_K552-2897 @C-PLP
+  @Regression @Web @All @KER-552 @ZYP_PLP_K552-2897 @C-PLP @TC-OMNI-13419
   Scenario: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates till PLP
@@ -70,13 +70,13 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
     And User expands PRICE Filter Option
     Then User closes the web application
 
-  @Regression @Web @All @KER-552 @ZYP_PLP_K552-6132 @1HR @C-PLP
+  @Regression @Web @All @KER-552 @ZYP_PLP_K552-6132 @1HR @C-PLP @TC-OMNI-13419
   Scenario: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2
     Then User closes the web application
 
-  @RegressionP2 @Web @All @KER-552 @ZYP_PLP_K552-6134 @C-PLP
+  @RegressionP2 @Web @All @KER-552 @ZYP_PLP_K552-6134 @C-PLP  @TC-OMNI-13419
   Scenario: Verify user is able to filter by price for search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User navigates to L2
@@ -106,14 +106,14 @@ Feature: To Verify user is be able to filter the products based on Price Ranges
 	And user click on search icon 
 	Then User closes the web application
 
-  @Regression @Web @All @KER-552 @ZYP_PLP_K552-6133 @C-PLP @RBeta
+  @Regression @Web @All @KER-552 @ZYP_PLP_K552-6133 @C-PLP @RBeta @TC-OMNI-13419
   Scenario: Verify user is able to filter by price for search in Search Page
     Given user launches the browser and navigates to "ASO_HOME" page
     When user enters "SKUIdOfProductLs15" in the search box plcc
 	And user click on search icon 
 	Then User closes the web application
 
-  @Regression @Web @All @KER-552 @ZYP_PLP_K552-6135 @C-PLP
+  @Regression @Web @All @KER-552 @ZYP_PLP_K552-6135 @C-PLP @TC-OMNI-13419
   Scenario: Verify user is able to filter by price for search in Search Page
     Given user launches the browser and navigates to "ASO_HOME" page
    	When user enters "SKUIdOfProductLs15" in the search box plcc

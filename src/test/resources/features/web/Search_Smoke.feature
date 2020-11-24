@@ -1,6 +1,6 @@
 Feature: Perform Search smoke test
 
-  @RegressionP2 
+  @RegressionP2  @TC-OMNI-12567
   Scenario Outline: Verify Search for cloth search items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to view Search Box on Homepage 
@@ -14,7 +14,7 @@ Feature: Perform Search smoke test
 	|data|
   |men cloths|
     
-  @RegressionP2  
+  @RegressionP2   @TC-OMNI-12568
   Scenario Outline: Verify Search for bundle search items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to view Search Box on Homepage 
