@@ -70,7 +70,7 @@ Feature: Regression P2 scenarios
 	Then user fill the email address and click on review order btn
 	Then user should get first time promotion PLCC discount
 	
-  @RegressionP2 @SR-1312
+  @RegressionP2 @SR-1312  @TC-OMNI-13414
 	Scenario: Verify user is able to get 5% offer for every purchase
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header
@@ -92,7 +92,7 @@ Feature: Regression P2 scenarios
 	Then user click on remove from cart 
 	
 	 	
- 	@PDP @RegressionP2 @SR-1313
+ 	@PDP @RegressionP2 @SR-1313  @TC-OMNI-13439 @TC-OMNI-13442
  	Scenario: Estimate date is visible for STS item on PDP page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -118,7 +118,7 @@ Feature: Regression P2 scenarios
 	Then user select in store pickup option
 	And user validates Pick Up Today is visible on "Cart"
 	
-	@PDP @RegressionP2 @SR-1315
+	@PDP @RegressionP2 @SR-1315 @TC-OMNI-13441
 	Scenario: Validate Pickup Date for BOPIS elgiible items and Estimate date for STS eligible items should be 
 	visible on Add to Cart modal when these items are added as STH, also PICKUP CTA should be there
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -135,7 +135,7 @@ Feature: Regression P2 scenarios
 	And user click on ship it button 
 	Then user validates same bopis date is visible on cart modal as on PDP for "STS"
 	
-	@Checkout @RegressionP2 @SR-1316
+	@Checkout @RegressionP2 @SR-1316 @TC-OMNI-13455
 	Scenario: Verify user is able to apply promo code in cart page and place order using GC as tender type
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header
@@ -165,7 +165,7 @@ Feature: Regression P2 scenarios
 	And verify user is able to successfully place the order  
 	Then verify discount is displayed
 	
-	@Checkout @RegressionP2 @SR-1317
+	@Checkout @RegressionP2 @SR-1317 @TC-OMNI-13474
 	Scenario: Verify discount should not be applied for PLCC+GC as payment type
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header

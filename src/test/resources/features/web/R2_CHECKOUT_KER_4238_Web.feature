@@ -26,7 +26,7 @@ Scenario: To verify that an existing ASO employee is able to see the employee di
 		
 		
 @R2_Web @R2_Regression @R2_All @P2 @C-Checkout @KER-4238 
-@ZYP_CHECKOUT_K4238-10743 @CR-SG @1HR_R2 
+@ZYP_CHECKOUT_K4238-10743 @CR-SG @1HR_R2 @TC-OMNI-13473
 Scenario: To verify that an existing ASO employee is able to see the employee discount on cart page when only few of the items are applied with employee discount 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And clicks on SignIn button in home page 

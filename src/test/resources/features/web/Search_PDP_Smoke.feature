@@ -1,7 +1,7 @@
 Feature: PDP Scenarios based on searching the products
   
 
-   @RegressionP2
+   @RegressionP2 @TC-OMNI-12569
   Scenario: Search for a regular product and verify URL,Image,Reviews,Rating,Attributes and Details&Specs on the PDP page
   Given user launches the browser and navigates to "ASO_HOME" page
  		When user enters "SearchPDP" in the search box
@@ -14,7 +14,7 @@ Feature: PDP Scenarios based on searching the products
     And user should be able to see the reviews
     
     
-   @RegressionP2
+   @RegressionP2 @TC-OMNI-13520
   Scenario: Search a Bundle product and verify URL,Title of the searched item and attributes on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page 
    When User searches a product "SKUForBundleProductsSmoke" and navigates to PDP
@@ -23,7 +23,7 @@ Feature: PDP Scenarios based on searching the products
    And user should see different attribute and size of the Bundle Product
 
 
-   @RegressionP2
+  @RegressionP2 @TC-OMNI-13521
   Scenario: Search a Baits product and verify URL,Ratings,Review,Color and Title of the searched item on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
    When User searches a product "SKUForBaitProduct" and navigates to PDP
@@ -34,7 +34,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the reviews
    
    
-   @RegressionP2
+   @RegressionP2 @TC-OMNI-13522
    Scenario: Search a DSV product and verify URL,Image,Attributes on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page 
    When User searches a product "dsv_sku" and navigates to PDP
@@ -44,7 +44,7 @@ Feature: PDP Scenarios based on searching the products
    And user should see different attribute and size of the product
     
    
-   @RegressionP2 @TC-OMNI-13523
+    @RegressionP2 @TC-OMNI-13523
    Scenario: Search a Gift card and verify URL,Image,Attributes on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page 
    When User searches a product "SKUForGiftCard" and navigates to PDP
@@ -53,7 +53,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the search term in the GiftCard title
    
    
-  @RegressionP2
+  @RegressionP2 @TC-OMNI-12570
    Scenario: Search for a ammo product by SKU and verify the SKU,ammo disclaimer and item value on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page 
    When User searches a product "ammoSKU" and navigates to PDP
@@ -62,7 +62,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the item value
    
    
-   @RegressionP2 @TC-OMNI-13524
+  @RegressionP2 @TC-OMNI-13524
    Scenario: Search for a White Glove Product and verify URL,Image and Title on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
    And User searches a product "SKUForWhiteGlove" and navigates to PDP
@@ -105,7 +105,7 @@ Feature: PDP Scenarios based on searching the products
    And user should be able to see the Store Option
    
    
-   @RegressionP2
+   @RegressionP2 @TC-OMNI-13519
    Scenario: Navigate to a product pdp page and verify the Question and Answer section on the PDP page
    Given user launches the browser and navigates to "ASO_HOME" page
    When user navigates to PLP of any product
@@ -113,7 +113,7 @@ Feature: PDP Scenarios based on searching the products
    And user should see the Question and Answer section
    
    
-   @RegressionP2
+   @RegressionP2 @TC-OMNI-12560
   Scenario Outline: Verify whether the grid with relevant items displayed when the user search a Brand
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to view Search Box on Homepage 
@@ -126,7 +126,7 @@ Feature: PDP Scenarios based on searching the products
   |Nike|
  
  
- @RegressionP2
+ @RegressionP2 @TC-OMNI-12561
  Scenario Outline: Verify whether the grid with relevant items displayed when the user search a category
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to view Search Box on Homepage 
@@ -139,7 +139,7 @@ Feature: PDP Scenarios based on searching the products
   |Sports|
   
   
-  @RegressionP2
+  @RegressionP2 @TC-OMNI-12564
  Scenario Outline: Verify whether the grid with hot deal items displayed when the user search for Hot Deals
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to view Search Box on Homepage 
@@ -170,14 +170,14 @@ Feature: PDP Scenarios based on searching the products
     
     
     
-    @RegressionP3
+    @RegressionP3 @TC-OMNI-13513
   Scenario: User clicks on Category type and navigates to PLP page and validate the Bread-crumbs i.e. Academy/(Selected Category)
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP page of Hot Deals
     Then Verify the Hot Deal in Breadcrumb
      
     
-    @RegressionP3 @TC-OMNI-13515
+  @RegressionP3 @TC-OMNI-13515
   Scenario: Validate the Title listed on PLP page post selecting a category or sub-category(below Bread-crumbs)
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates till PLP of Baits SKU
@@ -195,14 +195,14 @@ Feature: PDP Scenarios based on searching the products
     Then Verify the clothing in Breadcrumb
    
    
-  @RegressionP3 @PDP
+  @RegressionP3 @PDP @TC-OMNI-13518
   Scenario: Validate that Brands category will navigate the user to the list of all brands and selecting any brand will navigate to the corresponding PLP page
     Given user launches the browser and navigates to "ASO_HOME" page 
     When user navigates till PLP of Brands
     Then Verify that selected PLP of Brand should be displayed
     
     
-  @RegressionP2
+  @RegressionP2 @TC-OMNI-13420
   Scenario: Verify whether the grid with only selected Deals is displayed when the user filters using deals in left hand panel
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP page of clothing
@@ -228,7 +228,7 @@ Feature: PDP Scenarios based on searching the products
 		    |Credit Card - VISA	|
 			
 		
-	@RegressionP2
+	@RegressionP2 @TC-OMNI-13466
    Scenario Outline: Verify guest user can place DSV order using CC as tender type
    Given user launches the browser and navigates to "ASO_HOME" page 
    When User searches a product "dsv_sku" and navigates to PDP
@@ -247,7 +247,7 @@ Feature: PDP Scenarios based on searching the products
 		|Credit Card - VISA	|
 		
 		
-	@RegressionP2 
+	@RegressionP2  @TC-OMNI-13516
 	Scenario: User hovers a mouse on one Category on the page and validate that category text should fly-out
 	Given user launches the browser and navigates to "ASO_HOME" page
     When user mouse on one category on the page

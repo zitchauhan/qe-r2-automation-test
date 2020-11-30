@@ -46,7 +46,7 @@ Scenario: Verify approved PLCC card saved in My account
 	Then user verify PLCC Credit card details in Payments	
 
 
-@RegressionP2 @OMNI-13410
+@RegressionP2 @TC-OMNI-13410
 Scenario: verify Latest added card saved as default card in My account
 	When user enter First Name on credit card Application Modal "FirstNamePlcc" 
 	Then user enter Last Name on credit card Application Modal "LastNamePlcc"

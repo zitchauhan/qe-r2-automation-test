@@ -1,6 +1,6 @@
 Feature:  BOPIS Payment
 
-@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10480 @C-BOPIS
+@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10480 @C-BOPIS  @TC-OMNI-13477
 Scenario: Verify guest user is able to see the See In-Store Pickup Instructions section 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
@@ -32,7 +32,7 @@ Scenario: Verify that user view Find a Store modal from Change Location in Check
     Then user click on change location button
     Then User is able to see Find a Store Modal
     
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10482 @RegressionP1 @AutomationSmoke @KG_Fixed
+@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10482 @RegressionP1 @AutomationSmoke  @TC-OMNI-13468 
 Scenario: Verify the guest user is able to select the Credit Card payment method in order to place the order for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -70,7 +70,7 @@ Scenario: Verify the guest user is able to select the PayPal payment method in o
 	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword" 
 	And user able to see the button place order
 	
-@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @C-BOPIS @P1 @RegressionP1 @abc
+@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @C-BOPIS @P1 @RegressionP1 @abc  @TC-OMNI-13483
 Scenario: Verify the guest user is able to select the Gift Card payment method in order to place the order for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
@@ -116,7 +116,7 @@ Scenario: Verify the guest user is able to add new Credit Card as payment method
 	When user clicks on Go to payment CTA
 	And user fill the payment details for sof guest user	
 	
-@R2_Web  @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10508 @C-BOPIS @RegressionP2
+@R2_Web  @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10508 @C-BOPIS @RegressionP2  @TC-OMNI-13483
 Scenario: Verify the guest user is able to select the Gift Card payment method in order to place the order for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
@@ -273,7 +273,7 @@ Scenario: Verify if the user is able to review and place order from One Page Che
 	And user is navigated to order confirmation page and captures order number 
 	
 	
-@Web @Regression @P1 @CR-MT @RegressionP1 @abc
+@Web @Regression @P1 @CR-MT @RegressionP1 @abc @TC-OMNI-13481
 Scenario: Verfiy bopis place order for guest user with ACC as tender 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -300,7 +300,7 @@ Scenario: Verfiy bopis place order for guest user with ACC as tender
 	
 
 	
-@Web @Regression @P1 @CR-MT @RegressionP1 @abc
+@Web @Regression @P1 @CR-MT @RegressionP1 @abc @TC-OMNI-13480
 Scenario Outline: Verfiy bopis place order for guest user with CC as tender 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
@@ -321,7 +321,8 @@ Scenario Outline: Verfiy bopis place order for guest user with CC as tender
 		|Payment Type	|
 		|Credit Card - Master	| 	
 	
-@RegressionP2 @WhiteGlove @AutomationSmoke @KG_Fixed
+
+@RegressionP2 @WhiteGlove @AutomationSmoke @TC-OMNI-13463
 Scenario Outline: Verify the guest user is able to place White Glove order using Credit Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForWhiteGlovenew" and navigates to PDP

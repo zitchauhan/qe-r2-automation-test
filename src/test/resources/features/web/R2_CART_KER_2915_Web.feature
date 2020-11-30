@@ -1,6 +1,6 @@
 Feature: Place Order
 
-@R2_Web @C-Order @CC-Cart_Order @P-High_Order   @KER-2915 @ZYP_CART_K2915-8190 @CR-AG @1HR_R2 @C1-Message
+@R2_Web @C-Order @CC-Cart_Order @P-High_Order   @KER-2915 @ZYP_CART_K2915-8190 @CR-AG @1HR_R2 @C1-Message @TC-OMNI-13453
 Scenario Outline: verify if user should be able to submit the order on the checkout page
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP
@@ -45,7 +45,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
     Then verify child SKU of the product is displayed on the Cart page
 
 	
-	@RegressionP2  
+	@RegressionP2     @TC-OMNI-13469
  Scenario: Verify mixed items in the cart and their messages under each line item
     Given user launches the browser and navigates to "ASO_HOME" page
     And User should be able to click on Find Store 
@@ -63,7 +63,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
     Then verify the message for whiteGlove item and DSV item on the cart page
 		And user clicks on checkout button on cart page		
 	
-	@RegressionP2
+	@RegressionP2 @TC-OMNI-13497
   Scenario Outline: Verify the category level promotions created in CMC are getting applied
 		Given user launches the browser and navigates to "ASO_HOME" page
 		When User searches a product "Productnamenew" and navigates to PDP
@@ -81,7 +81,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
 		#|Payment Type	|
 		|Credit Card - VISA	|
 		
-	@RegressionP2
+	@RegressionP2 @TC-OMNI-13502
   Scenario: Validate user is able to change ship modes of an STS added item to Store Pickup or Home Delivery on cart page
     Given user launches the browser and navigates to "ASO_HOME" page
     And User should be able to click on Find Store 
@@ -96,7 +96,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
     
     
     
- @RegressionP2
+ @RegressionP2 @TC-OMNI-13503
  Scenario: Validate whether BOPIS WG item is getting successfully added to cart and is not showing OOS
   Given user launches the browser and navigates to "ASO_HOME" page
   And User should be able to click on Find Store 

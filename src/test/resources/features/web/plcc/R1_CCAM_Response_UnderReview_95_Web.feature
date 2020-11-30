@@ -22,7 +22,7 @@ Background:  Common Pre-requisite steps
 	When user click on APPLY NOW button 
 	Then user navigates to Generic Credit Card Application Modal
 	 	
-@C-PLCC @Regression @All @PLCC-95 @CR-VS @PLCC @P1 @RegressionP1
+@C-PLCC @Regression @All @PLCC-95 @CR-VS @PLCC @P1 @RegressionP1  @TC-OMNI-13405
 Scenario: Verify is able to navigate to Application Under Review model
 	When user enter First Name on credit card Application Modal "FirstNameUR" 
 	Then user enter Last Name on credit card Application Modal "LastNameUR"
