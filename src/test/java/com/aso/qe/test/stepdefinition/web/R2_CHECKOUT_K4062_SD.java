@@ -131,11 +131,9 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 	////// Implemented only for guest, and newly registered user
 	@And("^user add \"(.*?)\" details in payment method for \"(.*?)\" user$")
 	public void user_add_details_in_payment_method_for_user(String arg1, String arg2) throws Throwable {
-		boolean userWithoutExistingPaymentDetails = false;
-		if (arg2.equalsIgnoreCase("newly registered") | arg2.equalsIgnoreCase("guest")
-				| arg2.equalsIgnoreCase("unauthenticated"))
-			userWithoutExistingPaymentDetails = true;
-
+		//System.out.println("In - And user add Payment Type details in payment method for guest user");
+		boolean userWithoutExistingPaymentDetails = userWithoutStoredPaymentDetails(arg2);
+		
 		if (!(userWithoutExistingPaymentDetails)) {
 			if (isDisplayed(r2CheckOutPo.EditPayment_Link)) {
 				clickOnButton(r2CheckOutPo.EditPayment_Link);
@@ -144,59 +142,11 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 				clickOnButton(r2CheckOutPo.btnRemoveGiftCard);
 			}
 		}
-
 		if (arg1.toLowerCase().contains(("credit card"))) {
-			String creditCardNumber;
-			String cvv = "CVV";
-			//// Credit card to be picked
-			if (arg1.toLowerCase().contains(("visa")))
-				creditCardNumber = "CardVISA";
-			else if (arg1.toLowerCase().contains(("master")))
-				creditCardNumber = "CardMaster";
-			else if (arg1.toLowerCase().contains(("amex"))) {
-				creditCardNumber = "CardAmex";
-				cvv = "FourDigitCVV";
-			} else if (arg1.toLowerCase().contains(("discover")))
-				creditCardNumber = "CardDiscover";
-			else
-				creditCardNumber = "CreditCardNumber";
-
-			boolean chooseCreditCard = false;
-			if (!(userWithoutExistingPaymentDetails)) {
-				if (!(isDisplayed(r2CheckOutPo.chooseCreditcard_Dd)))
-					chooseCreditCard = true;
-			}
-
-			if (chooseCreditCard | userWithoutExistingPaymentDetails) {
-				Thread.sleep(Constants.thread_low);
-				driver.switchTo().frame("first-data-payment-field-name");
-			   	setInputText(r2CheckOutPo.CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
-				//System.out.println("CardHoldername="+webPropHelper.getTestDataProperty("CardholderName"));
-				driver.switchTo().defaultContent();
-				driver.switchTo().frame("first-data-payment-field-card");
-				setInputText(r2CheckOutPo.CreditCardDetails_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
-				//System.out.println("CardNumber="+webPropHelper.getTestDataProperty("CreditCardNumber"));
-				driver.switchTo().defaultContent();
-				driver.switchTo().frame("first-data-payment-field-exp");	
-				setInputText(r2CheckOutPo.ExpDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
-				driver.switchTo().defaultContent();
-				driver.switchTo().frame("first-data-payment-field-cvv");
-				setInputText(r2CheckOutPo.PassCvv_Input, webPropHelper.getTestDataProperty("cvv"));
-				driver.switchTo().defaultContent();
-				if (arg2.equalsIgnoreCase("guest") | arg2.equalsIgnoreCase("unauthenticated")) {
-					setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
-							r2MyAccountPO.generateRandomEmailId());
-				}
-
-				assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
-			}
-			if (!(userWithoutExistingPaymentDetails)) {
-				if (isDisplayed(r2CheckOutPo.ReviewOrder_Btn))
-					assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
-			}
-			Thread.sleep(Constants.thread_medium);
-
-		} 
+			//CreditCardModule(userWithoutExistingPaymentDetails,arg1, arg2);
+			r2CheckOutPo.paymentViaCreditCard(userWithoutExistingPaymentDetails,arg1, arg2);
+		}
+		
 		else if (arg1.equalsIgnoreCase("gift card")) {
 			boolean chooseGiftCard = true;
 			if (!(userWithoutExistingPaymentDetails)) {
@@ -244,7 +194,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			PayPalMethodObject.user_switch_to_iframe_and_enter_the_paypal_login("PayPalEmail", "PayPalPassword");
 			PayPalMethodObject.user_clicks_on_ok_button_of_order_not_complete_modal();
 		}
-		}
+	}
 
 	@Given("^user adds shipment address on checkout page$")
 	public void user_adds_shipment_address_on_checkout_page() throws Throwable {
@@ -470,13 +420,111 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CheckOutPo.DailyQtyErrorMsg));
 	}
 	
-	public static void JavaExecutorForClick(WebElement Element)
-    {
-   	 
+	public boolean userWithoutStoredPaymentDetails(String userType)
+	{
+		if (userType.equalsIgnoreCase("newly registered") | userType.equalsIgnoreCase("guest")
+				| userType.equalsIgnoreCase("unauthenticated"))
+			return true;
+		else
+			return false;		
+	}
+	
+	public boolean CreditCardModule(boolean userWithoutExistingPaymentDetails, String CCtype, String userType) throws InterruptedException
+	{
+		//if (arg1.toLowerCase().contains(("credit card"))) {
+//			String creditCardNumber;
+//			String cvv = "CVV";
+//			//// Credit card to be picked
+//			if (CCtype.toLowerCase().contains(("visa")))
+//				creditCardNumber = "CardVISA";
+//			else if (CCtype.toLowerCase().contains(("master")))
+//				creditCardNumber = "CardMaster";
+//			else if (CCtype.toLowerCase().contains(("amex"))) {
+//				creditCardNumber = "CardAmex";
+//				cvv = "FourDigitCVV";
+//			} else if (CCtype.toLowerCase().contains(("discover")))
+//				creditCardNumber = "CardDiscover";
+//			else
+//				creditCardNumber = "CreditCardNumber";
 
-   	 //Option 1 remove the disabled attribute
-		JavascriptExecutor js = (JavascriptExecutor) driver;  
-		js.executeScript("arguments[0].click",Element);
-   	 Element.click();
-    }
+			boolean chooseCreditCard = false;
+			if (!(userWithoutExistingPaymentDetails)) {
+				if (isNotDisplayed(r2CheckOutPo.chooseCreditcard_Dd))
+					chooseCreditCard = true;
+			}
+
+			if (chooseCreditCard | userWithoutExistingPaymentDetails) {
+//				waitForInnerFormElement(r2CheckOutPo.CardholderName_Input,"first-data-payment-field-name"); 
+//				SwitchToDefaultFrame();
+//				waitForElement(r2CheckOutPo.ZipCode_Input);
+//				r2CheckOutPo.ZipCode_Input.clear();
+//				Thread.sleep(5000);
+//				driver.switchTo().frame("first-data-payment-field-name");
+//				waitForElement(r2CheckOutPo.CardholderName_Input);
+//				setInputText(r2CheckOutPo.CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
+//				driver.switchTo().defaultContent();
+//				driver.switchTo().frame("first-data-payment-field-card");
+//				setInputText(r2CheckOutPo.CreditCardDetails_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
+//				driver.switchTo().defaultContent();
+//				driver.switchTo().frame("first-data-payment-field-exp");
+//				setInputText(r2CheckOutPo.ExpDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
+//				driver.switchTo().defaultContent();
+//				driver.switchTo().frame("first-data-payment-field-cvv");
+//				setInputText(r2CheckOutPo.PassCvv_Input, webPropHelper.getTestDataProperty("CVV"));
+//				driver.switchTo().defaultContent();
+//				
+//				setInputText(r2CheckOutPo.FirstName_Input, webPropHelper.getTestDataProperty("FirstName"));
+//				setInputText(r2CheckOutPo.LastName_Input, webPropHelper.getTestDataProperty("LastName"));
+//				setInputText(r2CheckOutPo.PhoneNumber_Input, webPropHelper.getTestDataProperty("PhoneNumber"));
+//				setInputText(r2CheckOutPo.Adderss_Input, webPropHelper.getTestDataProperty("Address"));
+//				setInputText(r2CheckOutPo.ZipCode_Input, webPropHelper.getTestDataProperty("zipcode"));
+//				Thread.sleep(Constants.thread_medium);
+//				setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,webPropHelper.getTestDataProperty("EmailAddress"));
+//				Thread.sleep(Constants.thread_medium);
+//				waitForElement(r2CheckOutPo.ReviewOrder_Btn);
+//				assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
+//				Thread.sleep(Constants.thread_highest);
+//				
+//				//for popup modal after review for SOF orders
+//				if(isDisplayed(r2CheckOutPo.ContinueReviewCTA))
+//				{
+//					assertTrue(clickOnButton(r2CheckOutPo.ContinueReviewCTA));
+//					Thread.sleep(Constants.thread_high);
+//				}
+				/////////////////
+				Thread.sleep(Constants.thread_low);
+				waitForInnerFormElement(r2CheckOutPo.CardholderName_Input,"first-data-payment-field-name"); 
+				//driver.switchTo().frame("first-data-payment-field-name");
+			   	setInputText(r2CheckOutPo.CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
+				//System.out.println("CardHoldername="+webPropHelper.getTestDataProperty("CardholderName"));
+				driver.switchTo().defaultContent();
+				waitForInnerFormElement(r2CheckOutPo.CreditCardDetails_Input,"first-data-payment-field-card"); 
+				//driver.switchTo().frame("first-data-payment-field-card");
+				setInputText(r2CheckOutPo.CreditCardDetails_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
+				//System.out.println("CardNumber="+webPropHelper.getTestDataProperty("CreditCardNumber"));
+				driver.switchTo().defaultContent();
+				waitForInnerFormElement(r2CheckOutPo.ExpDate_Input,"first-data-payment-field-exp"); 				
+				//driver.switchTo().frame("first-data-payment-field-exp");	
+				setInputText(r2CheckOutPo.ExpDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
+				driver.switchTo().defaultContent();
+				waitForInnerFormElement(r2CheckOutPo.PassCvv_Input,"first-data-payment-field-cvv"); 				
+				//driver.switchTo().frame("first-data-payment-field-cvv");
+				setInputText(r2CheckOutPo.PassCvv_Input, webPropHelper.getTestDataProperty("cvv"));
+				driver.switchTo().defaultContent();
+				if (userType.equalsIgnoreCase("guest") | userType.equalsIgnoreCase("unauthenticated")) {
+					setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
+							r2MyAccountPO.generateRandomEmailId());
+				}
+
+				assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
+			}
+			if (!(userWithoutExistingPaymentDetails)) {
+				if (isDisplayed(r2CheckOutPo.ReviewOrder_Btn))
+					assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
+			}
+			Thread.sleep(Constants.thread_medium);
+			return true;
+
+	}
+	
 }
