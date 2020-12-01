@@ -12,7 +12,7 @@ Feature: Regression P2 scenarios
 	And Shop By Category section is displayed
 	And user should be able to see the listed products
 	
-	@RegressionP2
+	@RegressionP2 @TC-OMNI-13517
 	Scenario: Verify the functionality of 'See All >' button
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When user clicks on SignIn link from global header
