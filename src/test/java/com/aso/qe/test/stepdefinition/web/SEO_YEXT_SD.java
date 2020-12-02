@@ -18,7 +18,12 @@ public class SEO_YEXT_SD  extends CommonActionHelper {
     
     @And("^User selects the entity$")
     public void user_selects_entity() throws Throwable{
-    	seoYextPage.selectExistingEntity("Bhavna_Test", "ASO_Bhavna_test2");
+    	seoYextPage.selectExistingEntity("Bhavna_Test", "ASO_bhavna_Test19");
+    }
+    
+    @And("^Modify store hour details$")
+    public void modify_store_hour_details() throws Throwable{
+    	seoYextPage.modifyHours("Mon", "Open","08:00 AM","09:00 PM","","");
     }
     
 }
