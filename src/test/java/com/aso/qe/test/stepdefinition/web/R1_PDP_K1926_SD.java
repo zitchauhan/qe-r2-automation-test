@@ -338,7 +338,6 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 					assertTrue(clickOnButton(searchButton));
 				}
 			}
-
 		}
 //		if (!(searchText.toLowerCase().contains("sku")))
 //			clickOnButton(r2SanityPo.AS_productPLP1);

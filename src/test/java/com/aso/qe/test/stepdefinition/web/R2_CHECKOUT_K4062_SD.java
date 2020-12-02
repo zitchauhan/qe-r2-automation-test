@@ -57,7 +57,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			Thread.sleep(Constants.thread_low);
 			setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("Zipcode"));
 			Thread.sleep(Constants.thread_low);
-			assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
+			//assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
 		}
 		Thread.sleep(Constants.thread_medium);
 	}
@@ -128,7 +128,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 
 
 	
-	////// Implemented only for guest, and newly registered user
+	////// Implemented only for guest unauthentic, and newly registered user
 	@And("^user add \"(.*?)\" details in payment method for \"(.*?)\" user$")
 	public void user_add_details_in_payment_method_for_user(String arg1, String arg2) throws Throwable {
 		//System.out.println("In - And user add Payment Type details in payment method for guest user");

@@ -1233,8 +1233,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//input[@id='billingZipCode']") public WebElement Billing_ZipCode;
 		
 		/***
-		 * 
-		 * @return
+		 * This Function clicks on Go To Shipping button at Pickup Store page
+		 * @author kumgaura7
+		 * @return Boolean 
 		 */
 		public boolean userClicksOnGotoPaymentCTA() throws InterruptedException 
 		{
@@ -1246,6 +1247,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			Thread.sleep(Constants.thread_medium);
 			return true;
 		}
+				
 		
 		/**
 		 * @author kumgaura7
@@ -1255,45 +1257,80 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		 */
 		public boolean paymentViaCreditCard(boolean userWithoutExistingPaymentDetails, String CCtype, String userType) throws InterruptedException
 		{
+			String creditCardProperty [] = new String [2];
+			creditCardProperty = credeitCardPropertyName(CCtype);
+			String creditCardNumber = creditCardProperty[0];
+			String cvv = creditCardProperty[1];
+			boolean chooseCreditCard = false;
+			if (!(userWithoutExistingPaymentDetails)) {
+				if (isNotDisplayed(chooseCreditcard_Dd))
+					chooseCreditCard = true;
+			}
 
-				boolean chooseCreditCard = false;
-				if (!(userWithoutExistingPaymentDetails)) {
-					if (isNotDisplayed(chooseCreditcard_Dd))
-						chooseCreditCard = true;
+			if (chooseCreditCard | userWithoutExistingPaymentDetails) {
+				
+				fillCreditCardDetailCheckoutPage(creditCardNumber,cvv);
+				
+				if (!(isDisplayed(btnEditShippingAddress))) {
+					
+					fillBillingSectionDetailCheckout();
+					
 				}
 
-				if (chooseCreditCard | userWithoutExistingPaymentDetails) {
-					fillCreditCardDetailCheckoutPage();
-					if (!(isDisplayed(btnEditShippingAddress))) {
-						Fill_Billing_SectionDetail_Checkout();
-					}
+				if (userType.equalsIgnoreCase("guest") | userType.equalsIgnoreCase("unauthenticated")) {
+					setInputText(EmailAddressforOrderConfirmation_Input,
+							commonUtils.generateRandomEmailId());
+				}
 
-					if (userType.equalsIgnoreCase("guest") | userType.equalsIgnoreCase("unauthenticated")) {
-						setInputText(EmailAddressforOrderConfirmation_Input,
-								commonUtils.generateRandomEmailId());
-					}
-
+				assertTrue(clickOnButton(ReviewOrder_Btn));
+				if(isDisplayed(ContinueReviewCTA))
+				{
+					assertTrue(clickOnButton(ContinueReviewCTA));
+					Thread.sleep(Constants.thread_high);
+				}
+			}
+			if (!(userWithoutExistingPaymentDetails)) {
+				if (isDisplayed(ReviewOrder_Btn))
 					assertTrue(clickOnButton(ReviewOrder_Btn));
-					if(isDisplayed(ContinueReviewCTA))
-					{
-						assertTrue(clickOnButton(ContinueReviewCTA));
-						Thread.sleep(Constants.thread_high);
-					}
-				}
-				if (!(userWithoutExistingPaymentDetails)) {
-					if (isDisplayed(ReviewOrder_Btn))
-						assertTrue(clickOnButton(ReviewOrder_Btn));
-				}
-				Thread.sleep(Constants.thread_medium);
-				return true;
+			}
+			Thread.sleep(Constants.thread_medium);
+			return true;
 
+		}
+		
+		/**
+		 * This function return the Property Name info stored in Property file for selected credit card type
+		 * @author kumgaura7
+		 * @param sCCtype
+		 * @return String[]
+		 */
+		public String[] credeitCardPropertyName(String sCCtype)
+		{		
+			String creditCardProperties[] = new String [2];
+			creditCardProperties[0] = "CreditCardNumber";
+			creditCardProperties[1] = "CVV";
+			//String creditCardNumber = "";
+			
+			if (sCCtype.toLowerCase().contains(("visa")))
+				creditCardProperties[0] = "CardVISA";
+			else if (sCCtype.toLowerCase().contains(("master")))
+				creditCardProperties[0] = "CardMaster";
+			else if (sCCtype.toLowerCase().contains(("amex"))) {
+				creditCardProperties[0] = "CardAmex";
+				creditCardProperties[1] = "FourDigitCVV";
+			} else if (sCCtype.toLowerCase().contains(("discover")))
+				creditCardProperties[0] = "CardDiscover";
+			else
+				creditCardProperties[0] = "CreditCardNumber";
+				creditCardProperties[1] = "CVV";
+			return creditCardProperties;
 		}
 		
 		/**
 		 * @author kumgaura7
 		 * @return
 		 */
-		public boolean fillCreditCardDetailCheckoutPage()
+		public boolean fillCreditCardDetailCheckoutPage(String creditCardNumber, String cvv)
 		{
 			boolean flag = false;
 			try {
@@ -1302,13 +1339,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 				setInputText(CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
 				driver.switchTo().defaultContent();
 				waitForInnerFormElement(CreditCardDetails_Input,"first-data-payment-field-card"); 
-				setInputText(CreditCardDetails_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
+				setInputText(CreditCardDetails_Input, webPropHelper.getTestDataProperty(creditCardNumber));
 				driver.switchTo().defaultContent();
 				waitForInnerFormElement(ExpDate_Input,"first-data-payment-field-exp"); 				
 				setInputText(ExpDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
 				driver.switchTo().defaultContent();
 				waitForInnerFormElement(PassCvv_Input,"first-data-payment-field-cvv"); 				
-				setInputText(PassCvv_Input, webPropHelper.getTestDataProperty("cvv"));
+				setInputText(PassCvv_Input, webPropHelper.getTestDataProperty(cvv));
 				driver.switchTo().defaultContent();
 				flag = true;
 			}catch(Exception e) {
@@ -1347,7 +1384,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		 * @author kumgaura7
 		 * @return
 		 */
-		public boolean Fill_Billing_SectionDetail_Checkout(){
+		public boolean fillBillingSectionDetailCheckout(){
 			boolean flag = false;
 			try {
 				setInputText(Billing_FirstName, webPropHelper.getTestDataProperty("FirstName"));
