@@ -48,7 +48,7 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		logger.debug("Selecting the entity");
 		String entityFolderText = "//span[text()='"+entityFolder+"']";
 		clickOnButton(getfindElementByXPath(entityFolderText));
-		waitUntilLoadingFinishes(loader);
+		waitForPageLoad(driver);
 		Thread.sleep(5000);  //Mandatory wait time
 		String entityText = "//strong[text()='"+entity+"']";
 		clickOnButton(getfindElementByXPath(entityText));
