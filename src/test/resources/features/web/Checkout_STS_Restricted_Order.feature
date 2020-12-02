@@ -1,6 +1,5 @@
 Feature: CHECKOUT - Guest user, add STS Order
 
-
 @AutomationSmoke @RegressionP1 @TC-OMNI-13505
 Scenario Outline:  Checkout - Guest User order placement for Regular STS item
 	Given user launches the browser and navigates to "ASO_HOME" page

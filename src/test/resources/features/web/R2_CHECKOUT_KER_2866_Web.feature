@@ -321,6 +321,7 @@ Scenario Outline: Verfiy bopis place order for guest user with CC as tender
 		|Payment Type	|
 		|Credit Card - Master	| 	
 	
+
 @RegressionP2 @WhiteGlove @AutomationSmoke @TC-OMNI-13463
 Scenario Outline: Verify the guest user is able to place White Glove order using Credit Card
 	Given user launches the browser and navigates to "ASO_HOME" page 
@@ -336,9 +337,9 @@ Scenario Outline: Verify the guest user is able to place White Glove order using
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
 	Examples: 
-		|Card Type	|
-		|Visa      	|
-
+		|Payment Type	|
+		|Credit Card - Visa|
+#Data changed
 	
 	
 

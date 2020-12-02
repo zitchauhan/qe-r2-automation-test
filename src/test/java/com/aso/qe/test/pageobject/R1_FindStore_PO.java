@@ -34,7 +34,9 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	//@FindBy(xpath = "//input[@placeholder='Enter Zip Code or City, State']/../../../../following-sibling::div[1]/div/div/h6")	public WebElement ovly_secStore;/RKA 22 aug
 	//@FindBy(xpath="//input[@placeholder='Enter Zip Code or City, State']/preceding::*[1]/../following::*[1]//h6")
     @FindBy(xpath="//div[contains(@class,' o-copy__14bold mr-auto')]")public WebElement ovly_secStore; //Updated by MJR 23/7/19
-	@FindBy(xpath = "(//div[@data-auid='find-a-store-modal'])[2]/div[3]/div/div[text()='0 Stores were found within 250 miles of your search'] | (//div[@data-auid='find-a-store-modal'])[2]//*[text()='Sorry! There are no stores within 250 miles. Please order online or try new ZIP code.']")public WebElement txtNoStoreText; //SID Modified 14-Nov
+    @FindBy(xpath="//div[contains(@class,' o-copy__14bold mr-auto')][contains(text(),'Grand Parkway')]")public WebElement ovly_secStore_GrnadParkway; //Updated by MJR 23/7/19
+	
+    @FindBy(xpath = "(//div[@data-auid='find-a-store-modal'])[2]/div[3]/div/div[text()='0 Stores were found within 250 miles of your search'] | (//div[@data-auid='find-a-store-modal'])[2]//*[text()='Sorry! There are no stores within 250 miles. Please order online or try new ZIP code.']")public WebElement txtNoStoreText; //SID Modified 14-Nov
     @FindBy(xpath = "//*[@data-auid='find-a-store-modal-close']")public WebElement ovly_btnCloseContainer;
 	@FindBy(xpath = "//*[@data-auid='findAStore']/span[2]")public WebElement txtStroeText;
 	//@FindBy(xpath = "//*[@data-auid='findAStore_m']/span[2]")public WebElement txtStroeText_m;/RKA 17 aug
@@ -118,7 +120,7 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	System.out.println("zip code to enter is" +webPropHelper.getTestDataProperty(value));	
 	String zipcode = webPropHelper.getTestDataProperty(value);
 	Thread.sleep(Constants.thread_low);
-	String selectedStoreTitle = (ovly_secStore).getText();
+	String selectedStoreTitle = (ovly_secStore_GrnadParkway).getText();
 	System.out.println("Default selected store is "+ selectedStoreTitle );
 	if (selectedStoreTitle.equalsIgnoreCase("Grand Parkway")) 
 	{

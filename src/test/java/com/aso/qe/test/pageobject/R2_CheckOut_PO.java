@@ -2,7 +2,7 @@ package com.aso.qe.test.pageobject;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
+import static org.junit.Assert.assertTrue;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -10,18 +10,22 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.CommonGenericUtils;
 import com.aso.qe.framework.common.Constants;
 
-public class R2_CheckOut_PO extends CommonActionHelper 
+public class R2_CheckOut_PO extends CommonActionHelper
 {
 		private static final Logger logger = Logger.getLogger(R2_CheckOut_PO.class);
+		CommonGenericUtils commonUtils = new CommonGenericUtils();
 
 	/**************** START LOCAL OBJETCS AND DECLARATIONS***********************/
 	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);	
@@ -483,6 +487,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[contains(text(),'See In-Store Pickup Instructions')]/parent::*/following-sibling::*/ol")
 	   public WebElement SeeInStorePickupInstructions_Msg;   //SID Modified 29-Jan
 	   
+	   @FindBy(xpath="//input[@id='in-store-pickup-check']")
+	   public WebElement Pickup_Term_Checkbox;
 	   //*****Start Modify Pickup Location*********//
 //
 	   
@@ -573,7 +579,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 
 		@FindBy(xpath="//*[text()='Credit Card Number']/following::*[1] | //*[@id='card']")public WebElement CreditCardNumber_Input;
 		@FindBy(xpath="//*[@id='card']")public WebElement CreditCardDetails_Input;
-		@FindBy(xpath="//*[@id='name']") public WebElement CardholderName_Input;
+		//@FindBy(xpath="//*[@id='name']") public WebElement CardholderName_Input;
+		@FindBy(xpath="//input[@id='name']") public WebElement CardholderName_Input; //KG
 		@FindBy(xpath="//*[text()='Exp Date']/following::*[1] | //*[@id='exp']")public WebElement ExpirationDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[@id='exp']")public WebElement ExpDate_Input;//CR-Rk Sep28
 		@FindBy(xpath="//*[text()='CVV']/following::*[3] | //*[@id='cvv']")public WebElement Cvv_Input;
@@ -1219,4 +1226,143 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-testid='paywith-title']") public WebElement PayPalPayWithSection;
 		@FindBy(xpath ="//*[@data-auid='discountValue']") public WebElement CheckoutDiscountValue;
 		
+		@FindBy(xpath="//input[@id='billingFirstName']") public WebElement Billing_FirstName;
+		@FindBy(xpath="//input[@id='billingLastName']") public WebElement Billing_LastName;
+		@FindBy(xpath="//input[@id='billingPhoneNumber']") public WebElement Billing_PhoneNumber;
+		@FindBy(xpath="//input[@id='billingAddress1']") public WebElement Billing_Address1;
+		@FindBy(xpath="//input[@id='billingZipCode']") public WebElement Billing_ZipCode;
+		
+		/***
+		 * 
+		 * @return
+		 */
+		public boolean userClicksOnGotoPaymentCTA() throws InterruptedException 
+		{
+			isDisplayed(checkout_CheckoutHeader_txt);
+			boolean flag = false;
+			flag = isDisplayed(ShippingConfirm_btn);
+			if(flag)
+				assertTrue(clickOnButton(ShippingConfirm_btn));
+			Thread.sleep(Constants.thread_medium);
+			return true;
+		}
+		
+		/**
+		 * @author kumgaura7
+		 * @param userWithoutExistingPaymentDetails, CCtype, userType
+		 * @return String
+		 * @throws InterruptedException		 * 
+		 */
+		public boolean paymentViaCreditCard(boolean userWithoutExistingPaymentDetails, String CCtype, String userType) throws InterruptedException
+		{
+
+				boolean chooseCreditCard = false;
+				if (!(userWithoutExistingPaymentDetails)) {
+					if (isNotDisplayed(chooseCreditcard_Dd))
+						chooseCreditCard = true;
+				}
+
+				if (chooseCreditCard | userWithoutExistingPaymentDetails) {
+					fillCreditCardDetailCheckoutPage();
+					if (!(isDisplayed(btnEditShippingAddress))) {
+						Fill_Billing_SectionDetail_Checkout();
+					}
+
+					if (userType.equalsIgnoreCase("guest") | userType.equalsIgnoreCase("unauthenticated")) {
+						setInputText(EmailAddressforOrderConfirmation_Input,
+								commonUtils.generateRandomEmailId());
+					}
+
+					assertTrue(clickOnButton(ReviewOrder_Btn));
+					if(isDisplayed(ContinueReviewCTA))
+					{
+						assertTrue(clickOnButton(ContinueReviewCTA));
+						Thread.sleep(Constants.thread_high);
+					}
+				}
+				if (!(userWithoutExistingPaymentDetails)) {
+					if (isDisplayed(ReviewOrder_Btn))
+						assertTrue(clickOnButton(ReviewOrder_Btn));
+				}
+				Thread.sleep(Constants.thread_medium);
+				return true;
+
+		}
+		
+		/**
+		 * @author kumgaura7
+		 * @return
+		 */
+		public boolean fillCreditCardDetailCheckoutPage()
+		{
+			boolean flag = false;
+			try {
+				Thread.sleep(Constants.thread_low);
+				waitForInnerFormElement(CardholderName_Input,"first-data-payment-field-name"); 
+				setInputText(CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
+				driver.switchTo().defaultContent();
+				waitForInnerFormElement(CreditCardDetails_Input,"first-data-payment-field-card"); 
+				setInputText(CreditCardDetails_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
+				driver.switchTo().defaultContent();
+				waitForInnerFormElement(ExpDate_Input,"first-data-payment-field-exp"); 				
+				setInputText(ExpDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
+				driver.switchTo().defaultContent();
+				waitForInnerFormElement(PassCvv_Input,"first-data-payment-field-cvv"); 				
+				setInputText(PassCvv_Input, webPropHelper.getTestDataProperty("cvv"));
+				driver.switchTo().defaultContent();
+				flag = true;
+			}catch(Exception e) {
+				e.printStackTrace();
+				logger.error("Exception in  ClickonRadioBtn msg::"+e.getMessage());
+			}
+			return flag;
+		}
+		
+		/**
+		 * @author kumgaura7
+		 * @param element
+		 * @return
+		 */
+		public boolean JS_Click(WebElement element) {
+			boolean flag = false;
+			try {
+				
+				JavascriptExecutor executor = (JavascriptExecutor)driver;
+				executor.executeScript("arguments[0].click();", element);
+				Thread.sleep(3000);
+				flag = true;
+				logger.debug(element.toString()+" has been clicked using JS Executor.");
+								
+			} catch (Exception e) {
+				//e.printStackTrace();
+				logger.error("Exception in  ClickonRadioBtn msg::"+e.getMessage());
+				flag = false;
+				//wait.until(ExpectedConditions.visibilityOf(element));
+				//clickOnButton(element);				
+			}
+			return flag;
+		}
+		
+		/**
+		 * @author kumgaura7
+		 * @return
+		 */
+		public boolean Fill_Billing_SectionDetail_Checkout(){
+			boolean flag = false;
+			try {
+				setInputText(Billing_FirstName, webPropHelper.getTestDataProperty("FirstName"));
+				setInputText(Billing_LastName, webPropHelper.getTestDataProperty("LastName"));
+				setInputText(Billing_PhoneNumber, webPropHelper.getTestDataProperty("PhoneNumber"));
+				setInputText(Billing_Address1, webPropHelper.getTestDataProperty("Address"));
+				setInputText(Billing_ZipCode, webPropHelper.getTestDataProperty("zipcode"));
+
+				flag = true;
+
+				logger.debug("Billing Section Detail has been filled successfully.");
+			} catch (Exception e) {
+				e.printStackTrace();
+				logger.error("Exception in  ClickonRadioBtn msg::"+e.getMessage());
+			}	
+			return flag;		
+		}
 }
