@@ -6,8 +6,10 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+
 
 public class SEO_YEXT_PO extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(SEO_YEXT_PO.class);
@@ -35,6 +37,9 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 
 	@FindBy(xpath="//button[text()='Save']")
 	public WebElement save;
+	
+	@FindBy(xpath="//a[text()='Find A Store']")
+	public WebElement storeLocator;
 	
 
 	/**
@@ -69,6 +74,16 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		captureScreenShot("Pass");
 		logger.debug("Selected the entity "+entity);
 	}
+	
+	public void clickSaveButton() {
+		if (save.isEnabled()) {
+			clickOnButton(save);
+			waitForPageLoad(driver);
+		}
+		else {
+			fail("Save button is disabled");
+		}
+	}
 
 	/**
 	 * Modifies hours for the Store
@@ -86,30 +101,62 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		
 		logger.info("Modifying hours and store open status for a Store");
 		clickOnButton(hoursSection);
-		clickOnButton(dayStatusSelection);
 		
 		switch(dayStatus) {
 		
 		case "Open":
+			clickOnButton(getfindElementByXPath("//div[text()='"+day+"']/..//button"));
+			
+			//Below line is to ensure the From and To will get successfully updated. If status is changed from Closed, From and To textboxes will be cleared.
+			clickOnButton(getfindElementByXPath("//ul[(@class='selectbox-action-menu-dropdown' and not(contains(@style,'none')))]//button[text()='Closed']")); 
+			
+			clickSaveButton();
+			clickOnButton(hoursSection);
+			clickOnButton(getfindElementByXPath("//div[text()='"+day+"']/..//button"));
 			clickOnButton(getfindElementByXPath("//ul[(@class='selectbox-action-menu-dropdown' and not(contains(@style,'none')))]//button[text()='"+dayStatus+"']"));
 			driver.findElement(By.xpath("(//div[text()='"+day+"']/../..//input)[1]")).sendKeys(from);
 			driver.findElement(By.xpath("(//div[text()='"+day+"']/../..//input)[2]")).sendKeys(to);
-			clickOnButton(save);
+			clickSaveButton();
 			break;
 		case "Split":
+			clickOnButton(getfindElementByXPath("//div[text()='"+day+"']/..//button"));
+			
+			//Below line is to ensure the From and To will get successfully updated. If status is changed from Closed, From and To textboxes will be cleared.
+			clickOnButton(getfindElementByXPath("//ul[(@class='selectbox-action-menu-dropdown' and not(contains(@style,'none')))]//button[text()='Closed']")); 
+			
+			clickSaveButton();
+			clickOnButton(hoursSection);
+			clickOnButton(getfindElementByXPath("//div[text()='"+day+"']/..//button"));
 			clickOnButton(getfindElementByXPath("//ul[(@class='selectbox-action-menu-dropdown' and not(contains(@style,'none')))]//button[text()='"+dayStatus+"']"));
 			driver.findElement(By.xpath("(//div[text()='"+day+"']/../..//input)[1]")).sendKeys(from);
 			driver.findElement(By.xpath("(//div[text()='"+day+"']/../..//input)[2]")).sendKeys(to);
 			driver.findElement(By.xpath("(//div[text()='"+day+"']/../..//input)[3]")).sendKeys(splitFrom);
 			driver.findElement(By.xpath("(//div[text()='"+day+"']/../..//input)[4]")).sendKeys(splitTo);
-			clickOnButton(save);
+			clickSaveButton();
 			break;
 		case "Closed":
-		case "24 Hours":
-			clickOnButton(getfindElementByXPath("(//button[text()='"+dayStatus+"'])[1]"));
-			clickOnButton(save);
-			break;
+			clickOnButton(getfindElementByXPath("//div[text()='"+day+"']/..//button"));
 			
+			//Below line is to ensure the From and To will get successfully updated. If status is changed from Closed, From and To textboxes will be cleared.
+			clickOnButton(getfindElementByXPath("//ul[(@class='selectbox-action-menu-dropdown' and not(contains(@style,'none')))]//button[text()='24 Hours']")); 
+			
+			clickSaveButton();
+			clickOnButton(hoursSection);
+			clickOnButton(getfindElementByXPath("//div[text()='"+day+"']/..//button"));
+			clickOnButton(getfindElementByXPath("//ul[(@class='selectbox-action-menu-dropdown' and not(contains(@style,'none')))]//button[text()='"+dayStatus+"']"));
+			clickSaveButton();
+			break;
+		case "24 Hours":
+			clickOnButton(getfindElementByXPath("//div[text()='"+day+"']/..//button"));
+			
+			//Below line is to ensure the From and To will get successfully updated. If status is changed from Closed, From and To textboxes will be cleared.
+			clickOnButton(getfindElementByXPath("//ul[(@class='selectbox-action-menu-dropdown' and not(contains(@style,'none')))]//button[text()='Closed']")); 
+			
+			clickSaveButton();
+			clickOnButton(hoursSection);
+			clickOnButton(getfindElementByXPath("//ul[(@class='selectbox-action-menu-dropdown' and not(contains(@style,'none')))]//button[text()='"+dayStatus+"']"));
+			clickSaveButton();
+			break;
 		}
 		waitForPageLoad(driver);
 		if(driver.findElements(By.xpath("//div[text()='Provided hours are invalid']")).size()>0) {
@@ -118,6 +165,98 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		else {
 			logger.info("Modifed hours and store open status for a Store");
 		}
-		
 	}
+	
+	public void navigateStoreLocator() {
+		logger.info("Navigating to Store Locator page");
+		waitForPageLoad(driver);
+		//scrollPageToWebElement(storeLocator);
+		clickOnButton(storeLocator);
+		waitForPageLoad(driver);
+		logger.info("Navigated to Store Locator page");
+	}
+	
+	public void selectCityFromStorePage(String cityName) {
+		cityName=cityName.toLowerCase();
+		logger.info("Selecting City");
+		clickOnButton(getfindElementByXPath("//a[text()='"+cityName+"']"));
+		waitForPageLoad(driver);
+		logger.info("Selected City");
+	}
+	
+	public void selectLocation(String locationName) {
+		locationName=locationName.toLowerCase();
+		logger.info("Selecting location");
+		clickOnButton(getfindElementByXPath("//strong[text()='"+locationName+"']"));
+		waitForPageLoad(driver);
+		logger.info("Selected location");
+	}
+	
+	public void selectStore(String storeName) {
+		logger.info("Selecting Store");
+		clickOnButton(getfindElementByXPath("//strong[text()='"+storeName+"']"));
+		waitForPageLoad(driver);
+		logger.info("Selected Store");
+	}
+
+	public void verifyStoreHoursInAcademy(String day,String status) {
+		logger.info("Verifying store hours");
+		switch(day) {
+		case "Mon":
+			day="Monday";
+			break;
+		case "Tue":
+			day="Tuesday";
+			break;
+		case "Wed":
+			day="Wednesday";
+			break;
+		case "Thu":
+			day="Thursday";
+			break;
+		case "Fri":
+			day="Friday";
+			break;
+		case "Sat":
+			day="Saturday";
+			break;
+		case "Sun":
+			day="Sunday";
+			break;
+		}
+		WebElement ele = driver.findElement(By.xpath("//p[text()='"+day+"']/following-sibling::p"));
+		scrollPageToWebElement(ele);
+		String storeHour = ele.getText();
+		Assert.assertEquals(status, storeHour);
+		logger.info("Verifyied store hours");
+	}
+	
+	
+	public void closeStoreHoursAllDays() {
+		logger.info("Deleting the store");
+		clickOnButton(hoursSection);
+		String existingStatus=driver.findElement(By.xpath("//div[text()='Mon']/..//button")).getText();
+		if(existingStatus.equalsIgnoreCase("Closed")) {
+			clickOnButton(getfindElementByXPath("//div[text()='Mon']/..//button"));
+			clickOnButton(getfindElementByXPath("//ul[(@class='selectbox-action-menu-dropdown' and not(contains(@style,'none')))]//button[text()='24 Hours']"));
+			clickOnButton(getfindElementByXPath("//div[text()='Apply to all']"));
+			clickSaveButton();
+			waitForPageLoad(driver);
+			clickOnButton(hoursSection);
+		}
+		clickOnButton(getfindElementByXPath("//div[text()='Mon']/..//button"));
+		clickOnButton(getfindElementByXPath("//ul[(@class='selectbox-action-menu-dropdown' and not(contains(@style,'none')))]//button[text()='Closed']"));
+		clickOnButton(getfindElementByXPath("//div[text()='Apply to all']"));
+		clickSaveButton();
+		clickOnButton(getfindElementByXPath("//button[@type='button']/span[text()='Continue']"));
+		waitForPageLoad(driver);
+		logger.info("Deleted the store");
+	}
+	
+	public void verifyStoreCloseInPDP() {
+		logger.info("Verifying store hours in PDP page");
+		Assert.assertEquals("Closed Today", driver.findElement(By.xpath("//div[@data-auid='PDP_StoreInfo_Hours']/div")).getText());
+		logger.info("Verified store hours in PDP page");
+	}
+	
 }
