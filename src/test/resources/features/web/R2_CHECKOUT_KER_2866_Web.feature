@@ -1,6 +1,6 @@
 Feature:  BOPIS Payment
 
-@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10480 @C-BOPIS  @TC-OMNI-13477
+@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10480 @C-BOPIS
 Scenario: Verify guest user is able to see the See In-Store Pickup Instructions section 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
@@ -32,7 +32,7 @@ Scenario: Verify that user view Find a Store modal from Change Location in Check
     Then user click on change location button
     Then User is able to see Find a Store Modal
     
-@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10482 @RegressionP1 @AutomationSmoke  @TC-OMNI-13468 
+@C-BOPIS @R2_Web @R2_All @P1 @CB-Cart @KER-2866 @ZYP_CART_K2866-10482 @RegressionP1 @AutomationSmoke  @TC-OMNI-13468
 Scenario: Verify the guest user is able to select the Credit Card payment method in order to place the order for BOPIS
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
