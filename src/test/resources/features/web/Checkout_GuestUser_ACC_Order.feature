@@ -9,6 +9,7 @@ Scenario: Verfiy discount is applied for guest user place order with ACC as tend
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
+	Then user click on Go To Shipping Method button in Checkout page
 	Then user click on go to payment present in shipping method
 	And user click on academy creditcard radiobtn 
 	And user fills the academy credit card details in payment 
