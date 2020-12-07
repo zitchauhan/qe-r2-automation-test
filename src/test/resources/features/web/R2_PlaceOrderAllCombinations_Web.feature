@@ -73,7 +73,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 		|Credit Card	|
 		|PayPal			|
 				
-@Regression @P1 @CR-SK @Checkout @RegressionP1
+@Regression @P1 @CR-SK @Checkout @RegressionP1 @TC-OMNI-13476
 Scenario Outline: Verify guest user order placement for with Different Card Types
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
