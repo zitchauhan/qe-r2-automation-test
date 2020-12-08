@@ -108,7 +108,7 @@ public class Hooks {
 		boolean flag = false;
 		logger.debug(scenario.getStatus() + " :Scenario isFailed::" + scenario.isFailed());
 		logger.debug("Test Type::" + testType);
-		if (/*scenario.isFailed() && */!testType.contains("api")) {
+		if (scenario.isFailed() && !testType.contains("api")) {
 			flag = new CommonActionHelper().embedScreenshot(scenario);
 		}
 		return flag;
