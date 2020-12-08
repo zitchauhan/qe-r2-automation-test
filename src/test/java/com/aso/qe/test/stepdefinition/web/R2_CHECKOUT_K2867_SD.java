@@ -129,12 +129,15 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 //		assertTrue(clickOnRadioButton(r2CheckoutPo.Pickup_Term_Checkbox));
 		Thread.sleep(Constants.thread_high);
 		//if(isDisplayed(r2CheckoutPo.Pickup_Term_Checkbox))
-		if(isNotDisplayed(r2CheckoutPo.Pickup_Term_Checkbox))
-			r2CheckoutPo.userClicksOnGotoPaymentCTA();
+		if(isDisplayed(r2CheckoutPo.Pickup_Term_Checkbox))
+		{
+			assertTrue(clickOnButton(r2CheckoutPo.Pickup_Term_Checkbox));
+			//r2CheckoutPo.JS_Click(r2CheckoutPo.Pickup_Term_Checkbox);
+			r2CheckoutPo.userClicksOnGotoPaymentCTA();		
+		}
 		else
 		{
-			r2CheckoutPo.JS_Click(r2CheckoutPo.Pickup_Term_Checkbox);
-			r2CheckoutPo.userClicksOnGotoPaymentCTA();		
+				r2CheckoutPo.userClicksOnGotoPaymentCTA();
 		}
 	}
 	

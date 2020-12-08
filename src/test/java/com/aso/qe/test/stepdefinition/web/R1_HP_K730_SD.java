@@ -63,7 +63,9 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 			findStorePO.testWorkaround(arg1);
 		}
 		
-		else if(isDisplayed(findStorePO.californiaaddress)) {
+		//else if(isDisplayed(findStorePO.californiaaddress)) -- commented out to solve issue on FireFox
+		else
+		{
 			
 			setInputText(r2CartPo.inputFindaStoreHomePage, webPropHelper.getTestDataProperty(arg1));
 			assertTrue(clickOnButton(r2CartPo.btnZipcodesearch));
