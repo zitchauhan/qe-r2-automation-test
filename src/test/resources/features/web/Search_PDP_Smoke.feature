@@ -170,7 +170,7 @@ Feature: PDP Scenarios based on searching the products
     
     
     
-    @RegressionP3 @TC-OMNI-13513
+    @RegressionP3 @TC-OMNI-13513 @TC-OMNI-13512
   Scenario: User clicks on Category type and navigates to PLP page and validate the Bread-crumbs i.e. Academy/(Selected Category)
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP page of Hot Deals
@@ -195,7 +195,7 @@ Feature: PDP Scenarios based on searching the products
     Then Verify the clothing in Breadcrumb
    
    
-  @RegressionP3 @PDP @TC-OMNI-13518
+  @RegressionP3 @PDP @TC-OMNI-13518 @TC-OMNI-13436
   Scenario: Validate that Brands category will navigate the user to the list of all brands and selecting any brand will navigate to the corresponding PLP page
     Given user launches the browser and navigates to "ASO_HOME" page 
     When user navigates till PLP of Brands
