@@ -1,6 +1,6 @@
 Feature: Place Order
 
-@R2_Web @C-Order @CC-Cart_Order @P-High_Order   @KER-2915 @ZYP_CART_K2915-8190 @CR-AG @1HR_R2 @C1-Message @TC-OMNI-13453
+@R2_Web @C-Order @CC-Cart_Order @P-High_Order   @KER-2915 @ZYP_CART_K2915-8190 @CR-AG @1HR_R2 @C1-Message
 Scenario Outline: verify if user should be able to submit the order on the checkout page
     Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP
@@ -64,9 +64,9 @@ Scenario Outline: verify if user should be able to submit the order on the check
 		And user clicks on checkout button on cart page		
 	
 	@RegressionP2 @TC-OMNI-13497
- 	Scenario Outline: Verify the category level promotions created in CMC are getting applied
-	Given user launches the browser and navigates to "ASO_HOME" page
-	When User searches a product "Productnamenew" and navigates to PDP
+ 	Scenario Outline:  Verify the category level promotions created in CMC are getting applied 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User searches a product "Productnamenew" and navigates to PDP
     And user click on Add to Cart Button
     And user click on view cart
     And Verify that the Category level promotion is applied and displayed on cart page
@@ -78,7 +78,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order
 	Examples: 
-	#|Payment Type	|
+	|Payment Type	|
 	|Credit Card - VISA	|
 		
 	@RegressionP2 @TC-OMNI-13502

@@ -170,7 +170,7 @@ Feature: PDP Scenarios based on searching the products
     
     
     
-    @RegressionP3 @TC-OMNI-13513 @TC-OMNI-13512
+    @RegressionP3 @TC-OMNI-13513 @TC-OMNI-13512 
   Scenario: User clicks on Category type and navigates to PLP page and validate the Bread-crumbs i.e. Academy/(Selected Category)
     Given user launches the browser and navigates to "ASO_HOME" page
     When user navigates to PLP page of Hot Deals
