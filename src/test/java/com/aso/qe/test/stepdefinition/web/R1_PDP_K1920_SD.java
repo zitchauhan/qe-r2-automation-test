@@ -6,6 +6,7 @@ import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 import com.aso.qe.test.pageobject.R2_Cart_PO;
+import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_Sanity_PO;
 
 import cucumber.api.java.en.And;
@@ -14,6 +15,7 @@ import cucumber.api.java.en.Then;
 public class R1_PDP_K1920_SD extends CommonActionHelper{
 	//private static final Logger logger = Logger.getLogger(R1SP1_KER_1920_Web_SD.class);
 	R1_PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), R1_PDP_PO.class);
+	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	public R1_GlobalElementHeader_Home_PO globalElementHeader= PageFactory.initElements(driver, R1_GlobalElementHeader_Home_PO.class);
 R2_Cart_PO cartPO = PageFactory.initElements(driver, R2_Cart_PO.class);
 public R2_Sanity_PO sanity=PageFactory.initElements(getDriver(), R2_Sanity_PO.class);
@@ -182,7 +184,8 @@ public R2_Sanity_PO sanity=PageFactory.initElements(getDriver(), R2_Sanity_PO.cl
 			waitForPageLoad(driver);
 			Thread.sleep(Constants.thread_low);
 			waitForElement(pdpPageObj.pickupBtn_m);
-			assertTrue(clickOnButton(pdpPageObj.pickupBtn_m));
+			r2CheckOutPo.JS_Click(pdpPageObj.pickupBtn_m);  //sachin
+			//assertTrue(clickOnButton(pdpPageObj.pickupBtn_m));
 			}
 }
 

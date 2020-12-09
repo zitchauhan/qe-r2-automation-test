@@ -335,7 +335,8 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 	@Given("^user clicks on place order on checkout page$")
 	public void user_able_to_see_the_button_place_order() throws Throwable {
 		waitForElement(r2CheckOutPo.btnPlaceOrderPaymentPage);
-		assertTrue(clickOnButton(r2CheckOutPo.btnPlaceOrderPaymentPage));
+		r2CheckOutPo.JS_Click(r2CheckOutPo.btnPlaceOrderPaymentPage);
+		//assertTrue(clickOnButton(r2CheckOutPo.btnPlaceOrderPaymentPage));
 	}
 
 	@Then("^verify user is able to successfully place the order$")
