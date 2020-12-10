@@ -85,11 +85,12 @@ Scenario Outline: Verify guest user order placement for with Different Card Type
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
 	Then user click on Go To Shipping Method button in Checkout page
-	And user selects shipment method on check out page for "guest" user
+	Then user click on go to payment present in shipping method
+	#And user selects shipment method on check out page for "guest" user
 	And user add "<Card Type>" details for a guest user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-	And Verify the message on the page 
+	#And Verify the message on the page 
 		|# Message for successful order is displayed		|
 		|THANKS FOR SUBMITTING YOUR ORDER					||
 	Examples: 
