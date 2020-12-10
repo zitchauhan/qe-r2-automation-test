@@ -311,7 +311,8 @@ Scenario: Verify If a gift card covers the full transaction, the amount applied 
 	And user is navigated to Add to cart Notification popup 
 	And user click on view cart and checkout button
 	And user click on checkout button
-	And user adds shipment address on checkout page for "guest" user 
+	And user adds shipment address on checkout page for "guest" user
+	Then user click on Go To Shipping Method button in Checkout page 
 	And user modifies shipping method
 	And user selects shipment method on check out page for "guest" user	
 	When user click on GiftCard Plus icon in Checkout page

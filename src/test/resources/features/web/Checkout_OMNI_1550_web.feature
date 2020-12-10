@@ -30,7 +30,7 @@ Then user should able to click on Signin button
 And user enter the valid emailaddress "UserForCartMerge" 
 And user enter the valid password "Password" 
 And user click on signin button
-And User clicks on the minicart icon and navigated to minicart
+#And User clicks on the minicart icon and navigated to minicart
 And user should be able to validate the cart merge
 Then User should be able to click on Find Store 
 And Find Store Modal should pop-up 

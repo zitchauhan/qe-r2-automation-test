@@ -69,6 +69,7 @@ Scenario Outline: Ship alone items should appear in separate package and not com
 	And verify Promo code discount is applied 
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "Newly Registered" user
+	Then user click on Go To Shipping Method button in Checkout page
 	And user selects shipment method on check out page for "Newly Registered" user
 	And user add "<Payment Type>" details in payment method for "Newly Registered" user
 	And user clicks on place order on checkout page 

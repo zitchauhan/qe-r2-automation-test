@@ -90,7 +90,8 @@ Scenario: verify the account register with out Email News letter
 	And user is navigated to Add to cart Notification popup 
 	And user click on viewcart button 
 	When user click on checkout button
-	And user adds shipment address on checkout page for "guest" user 
+	And user adds shipment address on checkout page for "guest" user
+	Then user click on Go To Shipping Method button in Checkout page 
 	And user selects shipment method on check out page for "guest" user 
 	And user add "Credit Card" details in payment method for "guest" user 
 	And user clicks on place order on checkout page 
