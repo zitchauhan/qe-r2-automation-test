@@ -76,7 +76,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 @Regression @P1 @CR-SK @Checkout @RegressionP1 @TC-OMNI-13476
 Scenario Outline: Verify guest user order placement for with Different Card Types
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And User searches a product "productNameSTH" and navigates to PDP 
 	#And user click on Add to Cart Button for "MultiSKUProduct" 
 	And user click on ship it button 
 	And user click on view cart button 
@@ -84,6 +84,7 @@ Scenario Outline: Verify guest user order placement for with Different Card Type
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
+	Then user click on Go To Shipping Method button in Checkout page
 	And user selects shipment method on check out page for "guest" user
 	And user add "<Card Type>" details for a guest user
 	And user clicks on place order on checkout page 
