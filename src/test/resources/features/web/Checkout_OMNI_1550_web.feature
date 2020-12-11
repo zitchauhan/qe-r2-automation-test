@@ -2,17 +2,17 @@ Feature: PayPal on Cart: Display Accurate Shipping and Tax on Order Review After
  
 @ES197 @CR-SK1 @P1 @P1Temp @Regression @RegressionP1 @TC-OMNI-13450
 Scenario: Verify Cart merge 
-  Given user launches the browser and navigates to "ASO_HOME" page 
+    Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productNameSTH" and navigates to PDP
 	And User gets a product name for "productNameSTH"
 	And user click on ship it button
 	And user click on viewcart button
-  Then user navigates to Cart Page 
-	Then user should able to click on Signin button
-  And user should be able to enter the signin details "UserForCartMerge" "Password"
-  And User clicks on the minicart icon and navigated to minicart 
-  And user should be able to validate the cart merge
-  Then user will empty the cart if product is in cart
+    Then user navigates to Cart Page 
+	Then user should able to click on Signin button 	
+    And user should be able to enter the signin details "UserForCartMerge" "Password"
+    #And User clicks on the minicart icon and navigated to minicart 
+    And user should be able to validate the cart merge
+    Then user will empty the cart if product is in cart
   
   
   

@@ -163,7 +163,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath = "//input[@name='lastName']") public WebElement txtLastName;
 	@FindBy(xpath = "//input[@name='firstName']") public WebElement txtFirstName;
 	@FindBy(xpath="//*[@id='signup-link-from-login']") public WebElement lnkSignUp;
-	@FindBy(xpath = "//*[@id='logonSubmit'] |//*[@data-auid='btnemail-signin-button']") public WebElement btnSubmit;
+	@FindBy(xpath = "//*[@data-auid='btnemail-signin-button']") public WebElement btnSubmit;
 	@FindBy(xpath = "//input[@type='password']") public WebElement txtPassword;
 	@FindBy(xpath = "//input[@type='email']") public WebElement txtEmailAddress;
 	@FindBy(xpath = "//*[@data-auid='signInCta']") public WebElement btnSignIn;

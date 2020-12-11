@@ -157,8 +157,8 @@ public class R1_SIT_PO extends CommonActionHelper{
 	
 	public void verifySigninpage() throws Exception
 	{
-		assertTrue(isDisplayed(txtwelcomeback));
-		assertTrue(isDisplayed(lnkforgotpwd));
+		//assertTrue(isDisplayed(txtwelcomeback));
+		//assertTrue(isDisplayed(lnkforgotpwd));
 		assertTrue(isDisplayed(txtdonthaveanaccount));
 	}
 	
