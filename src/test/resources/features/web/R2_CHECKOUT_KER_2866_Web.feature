@@ -77,18 +77,18 @@ Scenario: Verify the guest user is able to select the Gift Card payment method i
 	And Find Store Modal should pop-up 
 	When User select store with "BOPIS_Store2" 
 	When user enters "BOPIS_Regular_Product" in the searchbox 
-#When user click on Add to cart button 
+    #When user click on Add to cart button 
 	And user click on ship it button 
 	Then user is navigated to Add to cart Notification popup 
 	And user will click on View Cart button 
 	Then user select in store pickup option
 	And user click on checkout button in Cart page 
-	When user clicks on Go to payment CTA
+	When user clicks on Go to payment CTA present on store pickup
 	And user expand gift card option
 	And user enter Gift card Number "Valid16DigitGiftCardNumber" 
 	And user enter Pin Number "Valid8DigitGiftCardPIN" 
 	And user click on Apply button 
-	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
+	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ZipCode" , "EmailAddress" 
 	And user clicks on Review order button on checkout page
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
@@ -116,7 +116,7 @@ Scenario: Verify the guest user is able to add new Credit Card as payment method
 	When user clicks on Go to payment CTA
 	And user fill the payment details for sof guest user	
 	
-@R2_Web  @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10508 @C-BOPIS @RegressionP2  @TC-OMNI-13483
+@R2_Web  @R2_All @P-Low @CB-Checkout @KER-2866 @ZYP_CART_K2866-10508 @C-BOPIS @RegressionP2
 Scenario: Verify the guest user is able to select the Gift Card payment method in order to place the order for BOPIS 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
@@ -242,7 +242,7 @@ Scenario: Verify if User is able to enter new billing information in Payment for
 	|#Verify the billing information is already displayed|
 	|ChangeBillingInformation_Txt|
 	And user clicks on change billing info cta 
-	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
+	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ZipCode" , "EmailAddress" 
 	And user fill the payment details for sof registered user
 	Then user click on review order button
 	
@@ -313,7 +313,7 @@ Scenario Outline: Verfiy bopis place order for guest user with CC as tender
 	And user clicks on checkout button on cart page
 	When user clicks on Go to payment CTA
 	And user add "<Payment Type>" details in payment method for "guest" user
-	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" 
+	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ZipCode" , "EmailAddress" 
 	And user click on REVIEW ORDER button
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 

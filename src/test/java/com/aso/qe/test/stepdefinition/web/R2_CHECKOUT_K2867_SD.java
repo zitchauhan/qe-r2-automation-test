@@ -121,25 +121,11 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 		assertTrue(isDisplayed(r2CheckoutPo.SeeInStorePickupInstructions_Msg));
 	}
 
-	@When("^user clicks on Go to payment CTA$")
+	@When("^user clicks on Go to payment CTA present on store pickup$")
 	public void user_clicks_on_Go_to_payment_CTA() throws Throwable {
-//		isDisplayed(r2CheckoutPo.Pickup_Term_Checkbox);
-//		moveHover(r2CheckoutPo.Pickup_Term_Checkbox);
-//		assertTrue(clickOnButton(r2CheckoutPo.Pickup_Term_Checkbox));
-//		assertTrue(clickOnRadioButton(r2CheckoutPo.Pickup_Term_Checkbox));
-		Thread.sleep(Constants.thread_high);
-		//if(isDisplayed(r2CheckoutPo.Pickup_Term_Checkbox))
-		if(isDisplayed(r2CheckoutPo.Pickup_Term_Checkbox))
-		{
-			assertTrue(clickOnButton(r2CheckoutPo.Pickup_Term_Checkbox));
-			//r2CheckoutPo.JS_Click(r2CheckoutPo.Pickup_Term_Checkbox);
-			r2CheckoutPo.userClicksOnGotoPaymentCTA();		
+		//r2CheckoutPo.userClicksOnGotoPaymentCTA();
+		r2CheckoutPo.JS_Click(r2CheckoutPo.ShippingConfirm_btn);		
 		}
-		else
-		{
-				r2CheckoutPo.userClicksOnGotoPaymentCTA();
-		}
-	}
 	
 	@Then("^Verify that user navigate to payment drawer$")
 	public void verify_that_user_navigate_to_payment_drawer() throws Throwable {
