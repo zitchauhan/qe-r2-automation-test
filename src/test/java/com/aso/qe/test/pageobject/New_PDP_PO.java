@@ -179,5 +179,16 @@ public class New_PDP_PO extends CommonActionHelper
 		@FindBy(xpath="//*[contains(text(),'Pick Up today')]") public WebElement PickUpTodayCart;
 		@FindBy(xpath="//*[contains(text(),'Pick Up Today Instead')]") public WebElement PickUpTodayCartModal;
 		@FindBy(xpath="//*[contains(text(),'Estimated Pick Up: ')]/span") public WebElement EstimatePickUpDateCartModal;
+	    @FindBy(xpath="//*[contains(text(),'Pick Up today if ordered by')]") public WebElement PickUpTodayOrderby2PM;
+		@FindBy(xpath="//*[contains(text(),'Store Hours')]") public WebElement ClickStoreHours;
+		@FindBy(xpath="//p[@class='o-copy__14reg mb-0']']") public WebElement VerifyStoreHours;
+		@FindBy(xpath="//*[contains(text(),'View Order History')]") public WebElement OrderHistoryLink;
+		@FindBy(xpath="//p[@class='o-copy__14reg mb-0']") public WebElement VerifyStoreHoursOnOrderConfirmation;
+		@FindBy(xpath="//*[@data-auid='btncheckout_goto_order_review_submit_button']") public WebElement ReviewbtnOnCheckOutpg;
+		
+		
+
+		@FindBy(xpath="//a[contains(text(),'Pick Up Today') or contains(text(),'Estimated Pick Up:')]")
+		public WebElement EstimatePickUpPDP;																									   
 
 }

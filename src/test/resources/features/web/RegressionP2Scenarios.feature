@@ -185,4 +185,27 @@ Feature: Regression P2 scenarios
 	Then user click on review order button
 	Then user expect element Discount not to be present
 	
+	@RegressionP3
+	Scenario: Validate Pickup Date for BOPIS elgiible items and Estimate date for STS eligible items should be 
+	visible on Add to Cart modal when these items are added as STH, also PICKUP CTA should be there
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	And User searches a product "BOPIS_Regular_Product" and navigates to PDP 
+	And user validates Pick Up Today is visible on "PDP"
+	And user click on ship it button
+	Then user validates same bopis date is visible on cart modal as on PDP for "BOPIS"
+	Then user click on View Cart and Checkout
+	Then user validates same bopis date is visible on cart page
+	And user clicks on checkout button on cart page
+	When user clicks on Go to payment CTA
+	And user add "Credit Card - Master" details in payment method for "guest" user
+	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" 
+	Then user enters Email Address for Order Confirmation "Bopis_Email"
+	Then User Clicks Review button on checkout page
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order
+	Then user validates Store hours and click on order history link
+	Then user validates Store hours on order confirmation		   
 	
