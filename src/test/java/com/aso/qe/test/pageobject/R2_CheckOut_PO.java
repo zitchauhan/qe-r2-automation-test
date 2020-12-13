@@ -964,7 +964,11 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		setInputText(txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
 		setInputText(txtCVVInput,webPropHelper.getTestDataProperty("ThreeDigitCVV"));
 	}
-	
+	@FindBy(xpath="//div[contains(text(),'Estimated Shipping')]/following-sibling::div[contains(text(),'FREE')]") public WebElement FreeShippingCart;
+		
+		@FindBy(xpath="(//div[@data-auid='freeShip'])[1]") public WebElement FreeShippingordersummary;
+		@FindBy(xpath="(//button[@data-auid='btncontinueShopping']") public WebElement continueshpopping;
+		@FindBy(xpath="//span[contains(text(),'Shipping')]/following-sibling::span[contains(text(),'FREE')]") public WebElement FreeShippingorderconfirmation;
 	 // To be updated by Anuj
 	   /**AG KER-3130 Starts**************************************/
     

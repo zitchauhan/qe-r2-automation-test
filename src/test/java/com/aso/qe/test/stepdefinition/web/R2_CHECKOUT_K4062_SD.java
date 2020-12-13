@@ -479,4 +479,31 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		js.executeScript("arguments[0].click",Element);
    	 Element.click();
     }
+@Then("^user validates that free shipping is applied$")
+	public void user_validates_that_free_shipping_is_applied() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		assertTrue(isDisplayed(r2CheckOutPo.FreeShippingCart));
+
+	}
+	
+
+@Then("^validates that shipping is free on order summary$")
+public void validates_that_shipping_is_free_on_order_summary() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.FreeShippingordersummary));
+}
+
+@When("^user click on continue button$")
+public void user_click_on_continue_button() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	Thread.sleep(6000);
+	clickOnButton(r2CheckOutPo.continueshpopping);
+}
+
+@Then("^Validate that shipping is free on order confirmation page$")
+public void validate_that_shipping_is_free_on_order_confirmation_page() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.FreeShippingorderconfirmation));
+}
+	
 }
