@@ -29,18 +29,30 @@ public class R2_CART_K4231_SD extends CommonActionHelper {
 		cartR2PageObj.selectStoreWithZipAndStoreName(webPropHelper.getTestDataProperty(zipCode),
 				webPropHelper.getTestDataProperty(storeName));
 	}
-	
+
 	@And("^user selects store with \"(.*?)\" and \"(.*?)\" yext$")
 	public void user_selects_store_with_and_yext(String zipCode, String storeNameText) throws Throwable {
-		
+
 		String storeNameSelect=null;
-		
-		if(webPropHelper.getTestDataProperty(storeNameText).equals("")) {
+		String zip = null;
+		if(!SEO_YEXT_SD.storeName.equals("")) {
 			storeNameSelect=SEO_YEXT_SD.storeName;
 		}
-		else {
-			storeNameSelect=webPropHelper.getTestDataProperty(storeNameText);
+		else if(!SEO_YEXT_SD.yestStoreExistingAddress[6].equals("")){
+			storeNameSelect=SEO_YEXT_SD.yestStoreExistingAddress[6];
 		}
-		cartR2PageObj.selectStoreWithZipAndStoreName(webPropHelper.getTestDataProperty(zipCode),storeNameSelect);
+		
+		if(!SEO_YEXT_SD.yestStoreExistingAddress[4].equals("")) {
+			zip=SEO_YEXT_SD.yestStoreExistingAddress[4];
+		}
+		else if(!webPropHelper.getTestDataProperty("YextNewLocAddressPin").equals(""))
+			zip=webPropHelper.getTestDataProperty("YextNewLocAddressPin");
+		
+		/*if(!webPropHelper.getTestDataProperty("YextNewLocAddressPin").equals(""))
+			zip=webPropHelper.getTestDataProperty("YextNewLocAddressPin");
+		else if(!SEO_YEXT_SD.yestStoreExistingAddress[4].equals("")) {
+			zip=SEO_YEXT_SD.yestStoreExistingAddress[4];
+		}*/
+		cartR2PageObj.selectStoreWithZipCodeAndStoreName(zip,storeNameSelect);
 	}
 }

@@ -12,7 +12,7 @@ Scenario: YEXT - Close/Delete Functionality
 	And User searches a product "YextSOFSKUNumber" and navigates to PDP
 	Then Verify store close in PDP page
 	
-@Web @yext @SEO @Regression
+@Web @yext @SEO @Regression  @dummy
 Scenario: YEXT - Update Functionality
 	Given user launches the browser and navigates to "YEXT" page
 	And User signs into YEXT
@@ -20,15 +20,15 @@ Scenario: YEXT - Update Functionality
 	And Update store details
 	And Quit Browser
 	When user launches the browser and navigates to "ASO_HOME" page
-	And user selects store with "YextZipcode" and "YextStoreName" yext
+	And user selects store with "YextNewLocAddressPin" and "YextStoreName" yext
 	And User searches a product "YextSOFSKUNumber" and navigates to PDP
 	Then Verify store details in PDP page
 
-@Web @yext @SEO @Regression	 @dummy
+@Web @yext @SEO @Regression	
 Scenario: YEXT - Create Functionality
 	Given user launches the browser and navigates to "YEXT" page
 	And User signs into YEXT
-	And User creates new store with "YextNewLocCountry","YextNewLocCategory","YextNewLocAddressLine1","YextNewLocAddressLine2","YextNewLocAddressFloor","YextNewLocAddressCity","YextNewLocStateRegion","YextNewLocAddressStateCode","YextNewLocAddressPin","YextNewLocMainPhoneCode","YextNewLocMainPhoneNumber"
+	And User creates new store location with "YextNewLocCountry","YextNewLocCategory","YextNewLocAddressLine1","YextNewLocAddressLine2","YextNewLocAddressFloor","YextNewLocAddressCity","YextNewLocStateRegion","YextNewLocAddressStateCode","YextNewLocAddressPin","YextNewLocMainPhoneCode","YextNewLocMainPhoneNumber"
 	And Quit Browser
 	When user launches the browser and navigates to "ASO_HOME" page
 	And Navigate to store locator page

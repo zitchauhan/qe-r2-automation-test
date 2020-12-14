@@ -2,7 +2,9 @@ package com.aso.qe.test.pageobject;
 
 import static org.junit.Assert.fail;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.log4j.Logger;
@@ -41,6 +43,9 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 	@FindBy(xpath="//button[text()='Save']")
 	public WebElement save;
 
+	@FindBy(xpath="//button[text()='Cancel']")
+	public WebElement cancelBtn;
+	
 	@FindBy(xpath="//a[text()='Find A Store']")
 	public WebElement storeLocator;
 
@@ -241,7 +246,7 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 	 * @author mans5
 	 * @throws Exception
 	 */
-	public void selectExistingEntity(String entityFolder, String entity) throws InterruptedException {
+	public String[] selectExistingEntity(String entityFolder, String entity) throws InterruptedException {
 
 		logger.debug("Selecting the entity");
 		String entityFolderText = "//span[text()='"+entityFolder+"']";
@@ -251,8 +256,26 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		String entityText = "//strong[text()='"+entity+"']";
 		clickOnButton(getfindElementByXPath(entityText));
 		waitForPageLoad(driver);
-		captureScreenShot("Pass");
 		logger.debug("Selected the entity "+entity);
+		
+		clickOnButton(addressSection); //To retrieve the existing zipcode and search in ASO page
+		String zipCode = driver.findElement(By.xpath("//input[@tid='address-postalCode-input']")).getAttribute("value");
+		logger.info("Zipcode retrieved is: "+zipCode);
+		clickOnButton(cancelBtn);
+		waitForPageLoad(driver);
+		
+		String addressLine1 = driver.findElement(By.xpath("//div[@class='entity-address-display']/div[1]")).getText();
+		String addressLine2 = driver.findElement(By.xpath("//div[@class='entity-address-display']/div[2]")).getText();
+		String cityStateCode = driver.findElement(By.xpath("//div[@class='entity-address-display']/div[3]")).getText();
+		String country = driver.findElement(By.xpath("//div[@class='entity-address-display']/div[4]")).getText();
+		String storeName = driver.findElement(By.xpath("//div[text()='Neighborhood']/../../..//div[@tid='entity-edit-field-display']//span")).getText();
+		
+		String mainPhone = driver.findElement(By.xpath("//div[@class='entity-phone-field']")).getText();
+		mainPhone = mainPhone.substring(8);
+		
+		String[] data = {addressLine1,addressLine2,cityStateCode,country,zipCode,mainPhone,storeName};
+		
+		return data;
 	}
 
 	public void clickSaveButton() {
@@ -265,6 +288,13 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		}
 	}
 
+	public String todayDay() {
+		String formatter = new SimpleDateFormat("EEE").format(new Date()); //Returns in "Mon" format
+		logger.info("Today's day is: "+formatter);
+		return formatter;
+	}
+	
+	
 	/**
 	 * Modifies hours for the Store
 	 * @author mans5
@@ -281,6 +311,11 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 
 		logger.info("Modifying hours and store open status for a Store");
 		clickOnButton(hoursSection);
+		
+		if(day.equals("")) {
+			day=todayDay();
+		}
+		
 		String txt = driver.findElement(By.xpath("//div[text()='"+day+"']/..//button")).getText();
 		switch(dayStatus) {
 
@@ -465,7 +500,7 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 
 	public void printStoreHoursInPDP() {
 		logger.info("Checking the store hours in PDP page");
-		String storeOpenUI = storeOpenHoursUI.getText();
+		String storeOpenUI = driver.findElement(By.xpath("//div[@data-auid='PDP_StoreInfo_Hours']/div")).getText();
 		logger.info("Store hours in PDP page is: "+storeOpenUI);
 	}
 
@@ -491,7 +526,6 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		clickSaveButton();
 		Assert.assertFalse(driver.findElements(By.xpath("//div[text()='This field is required for entities of this type.']")).size()>0); //verify error message when saved
 		logger.info("Updated store name(Neighborhood) to: " +name);
-
 		return name;
 	}
 
@@ -576,19 +610,21 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 
 		printStoreHoursInPDP();
 
-		Assert.assertEquals(storeName, storeNameUI.getText());
+		Assert.assertEquals(storeName, driver.findElement(By.xpath("//div[@data-auid='PDP_StoreInfo_Address']/div[1]")).getText());
 
-		String addressLines = storeAddressLinesUI.getText();
+		String addressLines = driver.findElement(By.xpath("//div[@data-auid='PDP_StoreInfo_Address']/div[2]")).getText();
 		Assert.assertTrue(addressLines.contains(address.get(0)));
-		Assert.assertTrue(addressLines.contains(address.get(1)));
+		if(!address.get(1).equals(""))
+			Assert.assertTrue(addressLines.contains(address.get(1)));
 
-		String cityState = storeCityStateUI.getText();
+		String cityState = driver.findElement(By.xpath("//div[@data-auid='PDP_StoreInfo_Address']/div[3]")).getText();
 		Assert.assertTrue(cityState.contains(address.get(2)));
 		Assert.assertTrue(cityState.contains(address.get(3)));
 		Assert.assertTrue(cityState.contains(address.get(4)));
 
-		String mainPhone = storeMainPhoneUI.getText();
+		String mainPhone = driver.findElement(By.xpath("//div[@data-auid='PDP_StoreInfo_Address']/div[4]")).getText();
 		mainPhone=mainPhone.replaceAll("[^a-zA-Z0-9]", "");
+		yextMainPhoneValidation=yextMainPhoneValidation.replaceAll("[^a-zA-Z0-9]", "");
 		Assert.assertTrue(mainPhone.contains(yextMainPhoneValidation));
 		logger.info("Verified store details in PDP page");
 	}
@@ -599,7 +635,7 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		logger.info("Verified store hours in PDP page");
 	}
 
-	public void selectSingleEntity() {
+	public void selectAddSingleEntity() {
 		logger.info("Selecting Single Entity option");
 		clickOnButton(addLocation);
 		clickOnButton(singleEntity);
@@ -607,9 +643,7 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		logger.info("Selected Single Entity option");
 	}
 
-
-
-	public void createEntity(String country,String category,String addressLine1,String addressLine2,String floorTxt,
+	public String[] createEntity(String country,String category,String addressLine1,String addressLine2,String floorTxt,
 			String cityTxt,String stateTxt,String stateCodeTxt,String pinTxt, String mainPhoneCode,String mainPhoneNumber) {
 
 		//Select Country
@@ -623,8 +657,8 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		clickOnButton(folderName);
 		clickOnButton(selectButton);
 
-		String storeName = "ASO_Test_"+RandomStringUtils.randomAlphabetic(5);
-		nameInput.sendKeys(storeName);
+		String storeLocationName = "ASO_Test_"+RandomStringUtils.randomAlphabetic(5);
+		nameInput.sendKeys(storeLocationName);
 
 		//Primary Category
 		clickOnButton(primaryCategory);
@@ -693,8 +727,12 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		Assert.assertFalse(driver.findElements(By.xpath("//div[text()='Please provide valid field values']")).size()>0); //verify all fields error message when saved
 		Assert.assertFalse(driver.findElements(By.xpath("//div[text()='Value must be a valid phone number']")).size()>0); //verify phone number error message when saved
 		Assert.assertFalse(driver.findElements(By.xpath("//div[text()='Invalid Address']")).size()>0); //verify address error message when saved
-		Assert.assertTrue(driver.findElements(By.xpath("//div[@class='breadcrumb-element']/..//div[text()='"+storeName+"']")).size()>0); //Ensure user is navigated to next page after saving
-		logger.info("Created a new store: " +storeName);
+		Assert.assertTrue(driver.findElements(By.xpath("//div[@class='breadcrumb-element']/..//div[text()='"+storeLocationName+"']")).size()>0); //Ensure user is navigated to next page after saving
+		logger.info("Created a new store: " +storeLocationName);
+		
+		String[] data = {storeLocationName}; //Add in this array anything of per the need to return back the data 
+		return data;
+		
 	}
 
 	public void validateEntityErrorMessage(String entityID) {
