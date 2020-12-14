@@ -29,4 +29,18 @@ public class R2_CART_K4231_SD extends CommonActionHelper {
 		cartR2PageObj.selectStoreWithZipAndStoreName(webPropHelper.getTestDataProperty(zipCode),
 				webPropHelper.getTestDataProperty(storeName));
 	}
+	
+	@And("^user selects store with \"(.*?)\" and \"(.*?)\" yext$")
+	public void user_selects_store_with_and_yext(String zipCode, String storeNameText) throws Throwable {
+		
+		String storeNameSelect=null;
+		
+		if(webPropHelper.getTestDataProperty(storeNameText).equals("")) {
+			storeNameSelect=SEO_YEXT_SD.storeName;
+		}
+		else {
+			storeNameSelect=webPropHelper.getTestDataProperty(storeNameText);
+		}
+		cartR2PageObj.selectStoreWithZipAndStoreName(webPropHelper.getTestDataProperty(zipCode),storeNameSelect);
+	}
 }
