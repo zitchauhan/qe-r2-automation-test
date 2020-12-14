@@ -41,18 +41,16 @@ public class R2_CART_K4231_SD extends CommonActionHelper {
 		else if(!SEO_YEXT_SD.yestStoreExistingAddress[6].equals("")){
 			storeNameSelect=SEO_YEXT_SD.yestStoreExistingAddress[6];
 		}
+		else
+			storeNameSelect=storeNameText;
 		
 		if(!SEO_YEXT_SD.yestStoreExistingAddress[4].equals("")) {
 			zip=SEO_YEXT_SD.yestStoreExistingAddress[4];
 		}
 		else if(!webPropHelper.getTestDataProperty("YextNewLocAddressPin").equals(""))
 			zip=webPropHelper.getTestDataProperty("YextNewLocAddressPin");
-		
-		/*if(!webPropHelper.getTestDataProperty("YextNewLocAddressPin").equals(""))
-			zip=webPropHelper.getTestDataProperty("YextNewLocAddressPin");
-		else if(!SEO_YEXT_SD.yestStoreExistingAddress[4].equals("")) {
-			zip=SEO_YEXT_SD.yestStoreExistingAddress[4];
-		}*/
+		else
+			zip=zipCode;
 		cartR2PageObj.selectStoreWithZipCodeAndStoreName(zip,storeNameSelect);
 	}
 }
