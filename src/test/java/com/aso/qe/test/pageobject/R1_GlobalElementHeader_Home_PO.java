@@ -10,6 +10,7 @@ import java.util.UUID;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -2041,5 +2042,25 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		assertTrue(isDisplayed(ContainerL3));
 		logger.debug("L3 Page is not displayed");
 	}		
+	
+	public void enterSearchText(String str) throws Exception{
+        str = webPropHelper.getTestDataProperty(str);
+        if("mobile".equalsIgnoreCase(testtype)){
+               Actions actions = new Actions(driver);
+               actions.moveToElement(txtSearchBox_mobile);
+               Thread.sleep(Constants.thread_medium);  
+               actions.click();
+               actions.sendKeys(str);
+               actions.build().perform();
+        }else {
+               Actions actions = new Actions(driver);
+               actions.moveToElement(txtSearchBox);
+               Thread.sleep(Constants.thread_medium);  
+               actions.click();
+               actions.sendKeys(str);
+               actions.build().perform();
+        }
+ }	
+	
 
 }

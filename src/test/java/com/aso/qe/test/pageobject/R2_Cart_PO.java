@@ -809,7 +809,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 			assertTrue(clickOnButton(selectStoreMiniBalloon));
 		}
 		
-		String zipCodeTxt=null;
+;		String zipCodeTxt=null;
 		if(!SEO_YEXT_SD.yestStoreExistingAddress[4].equals(""))
 			zipCodeTxt=SEO_YEXT_SD.yestStoreExistingAddress[4];
 		else
@@ -824,6 +824,24 @@ public class R2_Cart_PO extends CommonActionHelper {
 				clickOnButton(getfindElementByXPath("//button[text()='View The Next 5 Stores']"));
 			}
 		}
+		
+		//Selecting some random store and selecting back the expected store for the cache to be cleared, as per the story OMNI-14110
+		int size = driver.findElements(By.xpath("//div[@data-auid='facetdrawerundefined']/button")).size();
+		clickOnButton(getfindElementByXPath("(//div[@data-auid='facetdrawerundefined']/button)["+size+"]"));
+		assertTrue(clickOnButton(makeMyStore_btn));
+		assertTrue(clickOnButton(btnFindStoreClose));
+		driver.navigate().refresh();
+		waitForPageLoad(driver);
+		if ("mobile".equalsIgnoreCase(testtype)) {
+			assertTrue(clickOnButton(lnkFindAStore_M));
+		} else {
+			assertTrue(clickOnButton(selectStoreMiniBalloon));
+		}
+		
+		setInputText(txtZipCode, zipCodeTxt);
+		assertTrue(clickOnButton(btnZipCode));
+		Thread.sleep(3000);
+		
 		assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
 		if (isDisplayed(makeMyStore_btn)) {
 			assertTrue(clickOnButton(makeMyStore_btn));

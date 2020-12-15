@@ -511,6 +511,11 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="//span[contains(text(),'Ship To Me')]") 	public WebElement ShipToMe;
 	@FindBy(xpath="//h1[contains(text(),'CART')] | //h1[contains(text(),'cart')]") 	public WebElement CartTitle;
 	@FindBy(xpath="//a[contains(text(),'Outdoor Gourmet 6-Burner Gas Grill')]") 	public WebElement WGItemOnCart;
+	@FindBy(xpath="//div[text()='Showing results for \"shirt\"']") 	public WebElement specialCharacterShirtDisplay;
+	@FindBy(xpath="//div[text()='Showing results for \"pants\"']") 	public WebElement specialCharacterPantDisplay;
+	@FindBy(xpath="//span[text()='Results for ']/b") 	public WebElement activitySearchTextUI;
+	
+	
 	
 	//SID 28-August
 	public void navigateToMultipleSKU() throws Exception {
@@ -1332,4 +1337,34 @@ public class R1_PDP_PO extends CommonActionHelper
 			@FindBy(xpath="//*[contains(text(),'Limit 1 per customer')]") public WebElement LimitedQtyMsgCart;
 			@FindBy(xpath="//*[contains(@data-auid,'crt_lnkProd')]") public WebElement productNameCartPage;
 			@FindBy(xpath="//*[contains(text(), \"WE'RE SORRY\")]") public WebElement ItemOOSCart;
+			
+			public void verifySpecialCharacterProduct(String searchText) throws Exception {
+				logger.info("Verify relevant search product is displayed");
+				waitForPageLoad(driver);
+				switch(searchText){
+				case "sh*rt":
+				case "Sh*rt":
+					assertTrue(isDisplayed(specialCharacterShirtDisplay));
+					break;
+				case "P@nt":
+				case "p@nt":
+					assertTrue(isDisplayed(specialCharacterPantDisplay));
+					break;
+				case "BODYGLIDE® For Her™":
+					assertTrue(isDisplayed(driver.findElement(By.xpath("//span[text()='Results for ']/b[text()='\""+searchText+"\"']"))));
+					break;
+				}
+				logger.info("Verified relevant search product is displayed");
+				
+			}
+			
+			public void verifySearchProduct(String searchText) throws Exception {
+				logger.info("Verify relevant search product is displayed");
+				waitForPageLoad(driver);
+				String uiText = activitySearchTextUI.getText();
+				uiText = uiText.replaceAll("[^a-zA-Z0-9]", "");
+				Assert.assertEquals(uiText,searchText);
+				logger.info("Verified relevant search product is displayed");
+			}
+			
 }
