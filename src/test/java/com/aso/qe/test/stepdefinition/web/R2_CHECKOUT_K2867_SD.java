@@ -124,8 +124,15 @@ public class R2_CHECKOUT_K2867_SD extends CommonActionHelper {
 	@When("^user clicks on Go to payment CTA present on store pickup$")
 	public void user_clicks_on_Go_to_payment_CTA() throws Throwable {
 		//r2CheckoutPo.userClicksOnGotoPaymentCTA();
-		r2CheckoutPo.JS_Click(r2CheckoutPo.ShippingConfirm_btn);		
+		if(r2CheckoutPo.Pickup_Term_Checkbox.isDisplayed())
+		{	
+		r2CheckoutPo.JS_Click(r2CheckoutPo.Pickup_Term_Checkbox);	
+		r2CheckoutPo.JS_Click(r2CheckoutPo.ShippingConfirm_btn);
 		}
+		else
+			r2CheckoutPo.JS_Click(r2CheckoutPo.ShippingConfirm_btn);
+			
+	}
 	
 	@Then("^Verify that user navigate to payment drawer$")
 	public void verify_that_user_navigate_to_payment_drawer() throws Throwable {
