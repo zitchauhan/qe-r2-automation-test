@@ -38,5 +38,10 @@ public class Search_Smoke_SD extends CommonActionHelper  {
 		//assertTrue(globalElementHeader.expandCategoryFilterAndSelect());	
 		globalElementHeader.expandCategoryFilterAndSelect();
 	}
-
+	
+	@Then("^User enters a text for search \"([^\"]*)\"$")
+	public void enterSpecialCharacterSearchText(String searchText) throws Exception{
+		globalElementHeader.enterSearchText(searchText);
+	
+	}
 }

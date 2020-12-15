@@ -261,19 +261,20 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		clickOnButton(addressSection); //To retrieve the existing zipcode and search in ASO page
 		String zipCode = driver.findElement(By.xpath("//input[@tid='address-postalCode-input']")).getAttribute("value");
 		logger.info("Zipcode retrieved is: "+zipCode);
+		
+		String addressLine1 = driver.findElement(By.xpath("(//input[@class='address-property-input'])[1]")).getAttribute("value");
+		String addressLine2 = driver.findElement(By.xpath("(//input[@class='address-property-input'])[2]")).getAttribute("value");
+		String cityStateCode = driver.findElement(By.xpath("(//input[@class='address-property-input'])[3]")).getAttribute("value");
+		String zip = driver.findElement(By.xpath("(//input[@class='address-property-input'])[4]")).getAttribute("value");
 		clickOnButton(cancelBtn);
 		waitForPageLoad(driver);
 		
-		String addressLine1 = driver.findElement(By.xpath("//div[@class='entity-address-display']/div[1]")).getText();
-		String addressLine2 = driver.findElement(By.xpath("//div[@class='entity-address-display']/div[2]")).getText();
-		String cityStateCode = driver.findElement(By.xpath("//div[@class='entity-address-display']/div[3]")).getText();
-		String country = driver.findElement(By.xpath("//div[@class='entity-address-display']/div[4]")).getText();
 		String storeName = driver.findElement(By.xpath("//div[text()='Neighborhood']/../../..//div[@tid='entity-edit-field-display']//span")).getText();
 		
 		String mainPhone = driver.findElement(By.xpath("//div[@class='entity-phone-field']")).getText();
 		mainPhone = mainPhone.substring(8);
 		
-		String[] data = {addressLine1,addressLine2,cityStateCode,country,zipCode,mainPhone,storeName};
+		String[] data = {addressLine1,addressLine2,cityStateCode,zip,zipCode,mainPhone,storeName};
 		
 		return data;
 	}
@@ -386,7 +387,7 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 			break;
 		case "24 Hours":
 			clickOnButton(getfindElementByXPath("//div[text()='"+day+"']/..//button"));
-			if(txt.equalsIgnoreCase("Closed")) {
+			if(txt.equalsIgnoreCase("24 Hours")) {
 				//Below line is to ensure the From and To will get successfully updated. If status is changed from Closed, From and To textboxes will be cleared.
 				clickOnButton(storeClosed); 
 

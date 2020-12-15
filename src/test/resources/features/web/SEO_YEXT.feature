@@ -12,7 +12,7 @@ Scenario: YEXT - Close/Delete Functionality
 	And User searches a product "YextSOFSKUNumber" and navigates to PDP
 	Then Verify store close in PDP page
 	
-@Web @yext @SEO @Regression  @dummy
+@Web @yext @SEO @Regression
 Scenario: YEXT - Update Functionality
 	Given user launches the browser and navigates to "YEXT" page
 	And User signs into YEXT

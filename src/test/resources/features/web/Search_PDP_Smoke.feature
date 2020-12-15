@@ -246,10 +246,33 @@ Feature: PDP Scenarios based on searching the products
 		|Payment Type	|
 		|Credit Card - VISA	|
 		
-		
 	@RegressionP2  @TC-OMNI-13516
 	Scenario: User hovers a mouse on one Category on the page and validate that category text should fly-out
 	Given user launches the browser and navigates to "ASO_HOME" page
     When user mouse on one category on the page
     Then Verify the category text in the fly out
     
+    @Search @P3 @RegressionP3 @TC-OMNI-12559 @SR-1319
+    Scenario: Verify whether the grid with relevant items displayed even when the user search a text with special characters
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to view Search Box on Homepage 
+	Then User enters a text for search "Special_Character"
+	And User click on the search icon
+	Then Verify related product in search page "Special_Character"
+ 
+    @Search @P3 @RegressionP3 @TC-OMNI-12562 @SR-1320
+    Scenario: Verify whether the grid with relevant items displayed when the user search an activity name like cycling or running
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to view Search Box on Homepage 
+	Then User enters a text for search "Search_Activity"
+	And User click on the search icon
+	Then Verify related product in search page "Search_Activity"
+	
+	@Search @P3 @RegressionP3 @TC-OMNI-12565 @SR-1321
+    Scenario: Verify whether the grid with relevant items displayed even when the user search a text with TM symbol
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to view Search Box on Homepage 
+	Then User enters a text for search "TM_Symbol"
+	And User click on the search icon
+	Then Verify related product in search page "TM_Symbol"
+	
