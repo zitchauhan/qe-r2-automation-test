@@ -44,7 +44,7 @@ Scenario: Verify the guest user is able to select the Credit Card payment method
 	And user will click on Checkout button and navigates to Checkout page
   And user should see unselected checkbox acknowledgement with appropriate age restriction disclaimers 
 	And user click on checkbox in special order ship to store section 
-	When user clicks on Go to payment CTA
+	When user clicks on Go to payment CTA present on store pickup
 	And user fill the payment details for sof guest user	
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
