@@ -1403,4 +1403,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			}	
 			return flag;		
 		}
+		
+		@FindBy (xpath="//*[@id='in-store-pickup-check']") public WebElement SOF_CheckBox_CheckoutPage;
 }

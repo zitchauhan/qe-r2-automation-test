@@ -85,8 +85,7 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
 
 	@Then("^user click on checkbox in special order ship to store section$")
 	public void user_click_on_checkbox_in_special_order_ship_to_store_section() throws Throwable {
-		Actions hover = new Actions(driver);
-		hover.moveToElement(r2CheckoutPo.selectCheckbox).click().build().perform();
+		r2CheckoutPo.JS_Click(r2CheckoutPo.Pickup_Term_Checkbox);
 	}
 
 	@Then("^user click on go to payment section$")
