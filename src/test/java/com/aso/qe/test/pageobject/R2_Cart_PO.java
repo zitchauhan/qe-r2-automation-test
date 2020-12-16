@@ -897,15 +897,13 @@ public class R2_Cart_PO extends CommonActionHelper {
 	//KER-3143 auid is changed @CR-MS
 	@FindBy(xpath = "//*[@data-auid='crt_lnkCntShopping'] | //*[@data-auid='btncontinueShopping']")
 	public WebElement ATC_ContinueShopping;
-<<<<<<< HEAD
+
 	
-								@FindBy(xpath = "//*[@data-auid='crt_lnkCntShopping'] | //*[@data-auid='btnviewCart']")
+	@FindBy(xpath = "//*[@data-auid='crt_lnkCntShopping'] | //*[@data-auid='btnviewCart']")
 	public WebElement ATC_ViewCartCheckout;
 	
 	@FindBy(xpath = " //*[@class='pl-2 mt-quarter css-13o7eu2']") public WebElement CheckPickupDate;														
-=======
 
->>>>>>> 5da80cc7b203fbe5bd5e77a548907014f19306f4
 	@FindBy(xpath="//*[.='YOUR CART']")public WebElement txt_YourCart;
 	@FindBy(xpath="//*[@data-auid='crt_btnCheckoutTop']/preceding::*[2]")public WebElement txt_items;
 	@FindBy(xpath="//*[@data-auid='crt_btnCheckoutTop']/preceding::*[1]")public WebElement txt_totalYourCart;

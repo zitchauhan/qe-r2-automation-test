@@ -185,7 +185,7 @@ Feature: Regression P2 scenarios
 	Then user click on review order button
 	Then user expect element Discount not to be present
 	
-	@RegressionP3
+	@RegressionP3 @TC-OMNI-13437
 	Scenario: Validate Pickup Date for BOPIS elgiible items and Estimate date for STS eligible items should be 
 	visible on Add to Cart modal when these items are added as STH, also PICKUP CTA should be there
 	Given user launches the browser and navigates to "ASO_HOME" page 

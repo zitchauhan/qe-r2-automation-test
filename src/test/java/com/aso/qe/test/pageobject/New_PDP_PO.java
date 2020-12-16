@@ -191,6 +191,4 @@ public class New_PDP_PO extends CommonActionHelper
 		@FindBy(xpath="//a[contains(text(),'Pick Up Today') or contains(text(),'Estimated Pick Up:')]")
 		public WebElement EstimatePickUpPDP;																									   
 
-		@FindBy(xpath="//a[contains(text(),'Pick Up Today') or contains(text(),'Estimated Pick Up:')]")
-		public WebElement EstimatePickUpPDP;
 }

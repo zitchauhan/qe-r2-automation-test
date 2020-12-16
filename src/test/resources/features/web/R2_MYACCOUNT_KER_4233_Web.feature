@@ -330,7 +330,8 @@ Scenario: Verify the User is able to move item from wish list to cart
 	And user add an item to wishlist "WishlistName" and navigates to wishlist 
 	And clicks on Move to Cart button 
 	Then verify the item is moved to cart 
-@RegressionP3
+
+@RegressionP3 @TC-OMNI-13372
 Scenario: Verify whether user is able to add an item to wish list from cart page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
