@@ -22,7 +22,7 @@ Scenario: Verfiy discount is applied for guest user place order with ACC as tend
 	
 	
 	
-   @RegressionP2   
+   @RegressionP2   @191
 Scenario: Validate for guest user when the order total is equal to and above $34.99, then shipping should be free. Verify the charges on checkout and order confirmation screen and order details page also
    Given user launches the browser and navigates to "ASO_HOME" page 
    And User should be able to click on Find Store 
@@ -51,7 +51,7 @@ Scenario: Validate for guest user when the order total is equal to and above $34
 	
 	
 	
-	 @RegressionP2   
+	 @RegressionP2    @192
 Scenario: Validate for registered user if the order total equal to and above 24.99, then user should have free shipping. Verify the charges on checkout and order confirmation screen and order details page also	
    Given user launches the browser and navigates to "ASO_HOME" page 
    When user clicks on SignIn link from global header
@@ -83,7 +83,7 @@ Scenario: Validate for registered user if the order total equal to and above 24.
 	
 	
 
-	 @RegressionP2   
+	 @RegressionP2   @193
 Scenario: Validate for registered user, when STH + BOPIS items are added and the combined order total is equal to and above 24.99, then shipping will be free for both the ship modes. Verify the charges on checkout and order confirmation screen and order details page also
    Given user launches the browser and navigates to "ASO_HOME" page 
    When user clicks on SignIn link from global header
@@ -117,7 +117,7 @@ Scenario: Validate for registered user, when STH + BOPIS items are added and the
   And Validate that shipping is free on order confirmation page 
 		
 	
-	@RegressionP2  
+	@RegressionP2   @194
 Scenario: Validate for guest user, when STH + BOPIS items are added and the combined order total is equal to and above 34.99, then shipping will be free for both the ship modes. Verify the charges on checkout and order confirmation screen and order details page also
    Given user launches the browser and navigates to "ASO_HOME" page 
    And User should be able to click on Find Store 
