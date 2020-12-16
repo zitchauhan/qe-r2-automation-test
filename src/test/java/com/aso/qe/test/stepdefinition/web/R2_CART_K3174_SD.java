@@ -98,24 +98,19 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
 	public void user_fill_the_payment_details_for_sof_guest_user() throws InterruptedException {
 		//waitForElement(r2CheckoutPo.CardholderName_Input);
 		//KG changed on 19 Nov for handling inner form
-		waitForInnerFormElement(r2CheckoutPo.CardholderName_Input,"first-data-payment-field-name"); 
-		SwitchToDefaultFrame();
-		waitForElement(r2CheckoutPo.ZipCode_Input);
-		r2CheckoutPo.ZipCode_Input.clear();
-		Thread.sleep(5000);
-		driver.switchTo().frame("first-data-payment-field-name");
-		waitForElement(r2CheckoutPo.CardholderName_Input);
-		setInputText(r2CheckoutPo.CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
-		driver.switchTo().defaultContent();
-		driver.switchTo().frame("first-data-payment-field-card");
-		setInputText(r2CheckoutPo.CreditCardDetails_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
-		driver.switchTo().defaultContent();
-		driver.switchTo().frame("first-data-payment-field-exp");
-		setInputText(r2CheckoutPo.ExpDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
-		driver.switchTo().defaultContent();
-		driver.switchTo().frame("first-data-payment-field-cvv");
-		setInputText(r2CheckoutPo.PassCvv_Input, webPropHelper.getTestDataProperty("CVV"));
-		driver.switchTo().defaultContent();
+			Thread.sleep(Constants.thread_low);
+			waitForInnerFormElement(r2CheckoutPo.CardholderName_Input,"first-data-payment-field-name"); 
+			setInputText(r2CheckoutPo.CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
+			driver.switchTo().defaultContent();
+			waitForInnerFormElement(r2CheckoutPo.CreditCardDetails_Input,"first-data-payment-field-card"); 
+			setInputText(r2CheckoutPo.CreditCardDetails_Input, webPropHelper.getTestDataProperty("CardVISA"));
+			driver.switchTo().defaultContent();
+			waitForInnerFormElement(r2CheckoutPo.ExpDate_Input,"first-data-payment-field-exp"); 				
+			setInputText(r2CheckoutPo.ExpDate_Input, webPropHelper.getTestDataProperty("ExpiryDate")); 
+			driver.switchTo().defaultContent();
+			waitForInnerFormElement(r2CheckoutPo.PassCvv_Input,"first-data-payment-field-cvv"); 				
+			setInputText(r2CheckoutPo.PassCvv_Input, webPropHelper.getTestDataProperty("ThreeDigitCVV"));
+			driver.switchTo().defaultContent();
 		
 		setInputText(r2CheckoutPo.FirstName_Input, webPropHelper.getTestDataProperty("FirstName"));
 		setInputText(r2CheckoutPo.LastName_Input, webPropHelper.getTestDataProperty("LastName"));
