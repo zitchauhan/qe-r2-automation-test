@@ -38,14 +38,14 @@ public class R2_CART_K4231_SD extends CommonActionHelper {
 		if(!SEO_YEXT_SD.storeName.equals("")) {
 			storeNameSelect=SEO_YEXT_SD.storeName;
 		}
-		else if(!SEO_YEXT_SD.yestStoreExistingAddress[6].equals("")){
-			storeNameSelect=SEO_YEXT_SD.yestStoreExistingAddress[6];
+		else if(!SEO_YEXT_SD.yextStoreExistingAddress[6].equals("")){
+			storeNameSelect=SEO_YEXT_SD.yextStoreExistingAddress[6];
 		}
 		else
 			storeNameSelect=storeNameText;
 		
-		if(!SEO_YEXT_SD.yestStoreExistingAddress[4].equals("")) {
-			zip=SEO_YEXT_SD.yestStoreExistingAddress[4];
+		if(!SEO_YEXT_SD.yextStoreExistingAddress[4].equals("")) {
+			zip=SEO_YEXT_SD.yextStoreExistingAddress[4];
 		}
 		else if(!webPropHelper.getTestDataProperty("YextNewLocAddressPin").equals(""))
 			zip=webPropHelper.getTestDataProperty("YextNewLocAddressPin");

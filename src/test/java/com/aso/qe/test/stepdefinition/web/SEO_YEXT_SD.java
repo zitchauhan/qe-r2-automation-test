@@ -17,7 +17,7 @@ public class SEO_YEXT_SD  extends CommonActionHelper {
 	public static String storeName = "";
 	public static String mainPhone = "";
 	public static String[] storeData = {};
-	public static String[] yestStoreExistingAddress = {};
+	public static String[] yextStoreExistingAddress = {};
 	
 	
 	@And("^User signs into YEXT$")
@@ -29,7 +29,7 @@ public class SEO_YEXT_SD  extends CommonActionHelper {
 	public void user_selects_entity() throws Throwable{
 
 		if(!webPropHelper.getTestDataProperty("YextEntity").equals("")) {
-			yestStoreExistingAddress=seoYextPage.selectExistingEntity(webPropHelper.getTestDataProperty("YextEntityFolder"), webPropHelper.getTestDataProperty("YextEntity"));
+			yextStoreExistingAddress=seoYextPage.selectExistingEntity(webPropHelper.getTestDataProperty("YextEntityFolder"), webPropHelper.getTestDataProperty("YextEntity"));
 		}
 		else {
 			//Create a new store location
@@ -54,19 +54,6 @@ public class SEO_YEXT_SD  extends CommonActionHelper {
 	@And("^Navigate to store locator page$")
 	public void launch_store_locator_page() throws Throwable{
 		seoYextPage.navigateStoreLocator();
-	}
-
-	@And("^Navigate to the store page with city \"(.*?)\", location \"(.*?)\" and store \"(.*?)\"$")
-	public void navigate_to_store_page(String city,String location,String storeNameTxt) throws Throwable{
-		seoYextPage.selectCityFromStorePage(webPropHelper.getTestDataProperty(city));
-		seoYextPage.selectLocation(webPropHelper.getTestDataProperty(location));
-
-		if(!storeName.equals("")) {
-			seoYextPage.selectStore(storeName);
-		}
-		else {
-			seoYextPage.selectStore(webPropHelper.getTestDataProperty(storeNameTxt));
-		}
 	}
 
 	@And("^Verify Store hours in Store Locator page$")
@@ -107,17 +94,11 @@ public class SEO_YEXT_SD  extends CommonActionHelper {
 			arr.add(webPropHelper.getTestDataProperty("YextNewLocAddressPin"));
 		}
 		else {
-			arr.add(yestStoreExistingAddress[0]);
-			arr.add(yestStoreExistingAddress[1]);
-			arr.add(yestStoreExistingAddress[2]);
-			arr.add(yestStoreExistingAddress[2]);
-			arr.add(yestStoreExistingAddress[2]);
-			
-			/*arr.add(webPropHelper.getTestDataProperty("YextLine1"));
-			arr.add(webPropHelper.getTestDataProperty("YextLine2"));
-			arr.add(webPropHelper.getTestDataProperty("YextCity"));
-			arr.add(webPropHelper.getTestDataProperty("YextState"));
-			arr.add(webPropHelper.getTestDataProperty("YextZipcode"));*/
+			arr.add(yextStoreExistingAddress[0]);
+			arr.add(yextStoreExistingAddress[1]);
+			arr.add(yextStoreExistingAddress[2]);
+			arr.add(yextStoreExistingAddress[2]);
+			arr.add(yextStoreExistingAddress[2]);
 		}
 		
 		String storeNameVerify=null;
@@ -127,20 +108,61 @@ public class SEO_YEXT_SD  extends CommonActionHelper {
 		if(!storeName.equals("")) 
 			storeNameVerify=storeName;
 		
-		else if(!yestStoreExistingAddress[6].equals(""))
-			storeNameVerify=yestStoreExistingAddress[6];
+		else if(!yextStoreExistingAddress[6].equals(""))
+			storeNameVerify=yextStoreExistingAddress[6];
 		else
 			storeNameVerify=webPropHelper.getTestDataProperty("YextStoreName");
 		
 		//Main Phone Validation
 		if(!mainPhone.equals(""))
 			mainPhoneVerify=mainPhone;
-		else if(!yestStoreExistingAddress[5].equals(""))
-			mainPhoneVerify=yestStoreExistingAddress[5];
+		else if(!yextStoreExistingAddress[5].equals(""))
+			mainPhoneVerify=yextStoreExistingAddress[5];
 
 		seoYextPage.verifyStoreDetails(storeNameVerify,arr,mainPhoneVerify);
 	}
 
+	@And("^Verify store details in Store Locator page$")
+	public void verify_store_details_Store_Locator_page() {
+		ArrayList<String> arr = new ArrayList<>();
+		
+		if(webPropHelper.getTestDataProperty("YextEntity").equals("")) {
+			arr.add(webPropHelper.getTestDataProperty("YextNewLocAddressLine1"));
+			arr.add(webPropHelper.getTestDataProperty("YextNewLocAddressLine2"));
+			arr.add(webPropHelper.getTestDataProperty("YextNewLocAddressCity"));
+			arr.add(webPropHelper.getTestDataProperty("YextNewLocAddressStateCode"));
+			arr.add(webPropHelper.getTestDataProperty("YextNewLocAddressPin"));
+		}
+		else {
+			arr.add(yextStoreExistingAddress[0]);
+			arr.add(yextStoreExistingAddress[1]);
+			arr.add(yextStoreExistingAddress[2]);
+			arr.add(yextStoreExistingAddress[2]);
+			arr.add(yextStoreExistingAddress[2]);
+		}
+		
+		String storeNameVerify=null;
+		String mainPhoneVerify=null;
+
+		//Store Name validation
+		if(!storeName.equals("")) 
+			storeNameVerify=storeName;
+		
+		else if(!yextStoreExistingAddress[6].equals(""))
+			storeNameVerify=yextStoreExistingAddress[6];
+		else
+			storeNameVerify=webPropHelper.getTestDataProperty("YextStoreName");
+		
+		//Main Phone Validation
+		if(!mainPhone.equals(""))
+			mainPhoneVerify=mainPhone;
+		else if(!yextStoreExistingAddress[5].equals(""))
+			mainPhoneVerify=yextStoreExistingAddress[5];
+
+		seoYextPage.verifyStoreDetailsInStoreLocator(storeNameVerify,arr,mainPhoneVerify);
+	}
+	
+	
 	@And("^user selects store with \"(.*?)\" and \"(.*?)\" details$")
 	public void user_selects_store_with_and(String zipCode, String storeNameText) throws Throwable {
 
@@ -170,11 +192,48 @@ public class SEO_YEXT_SD  extends CommonActionHelper {
 		return storeName;
 	}
 
+	@And("^Navigate to the store page with state \"(.*?)\", city \"(.*?)\" and store \"(.*?)\"$")
+	public void navigate_to_store_page(String state,String city,String storeNameTxt) throws Throwable{
+		
+		if(!(yextStoreExistingAddress.length==0) && !yextStoreExistingAddress[7].equals(""))
+			state = yextStoreExistingAddress[7];
+		else {
+			state = seoYextPage.stateCodes(webPropHelper.getTestDataProperty(state));
+		}
+		if(!storeName.equals(""))
+			storeNameTxt=storeName;
+		
+		else if(!(yextStoreExistingAddress.length==0) && !yextStoreExistingAddress[6].equals(""))
+			storeNameTxt = yextStoreExistingAddress[6];
+		else 
+			storeNameTxt=webPropHelper.getTestDataProperty(storeNameTxt);
+		
+		seoYextPage.selectStateFromStorePage(state);
+		
+		if(!(yextStoreExistingAddress.length==0) && !yextStoreExistingAddress[2].equals(""))
+			city = yextStoreExistingAddress[2];
+		else
+			city=webPropHelper.getTestDataProperty(city);
+		
+		seoYextPage.selectCity(city);
+
+		seoYextPage.selectStore(storeNameTxt);
+	}
+	
 	@And("^Verify Store created on ASO Page$")
 	public void validate_store() {
-		seoYextPage.validateStoreInASO(storeName);
+		String storeNameTxt="";
+		if(!storeName.equals(""))
+			storeNameTxt=storeName;
+		else if(!(yextStoreExistingAddress.length==0) && !yextStoreExistingAddress[6].equals(""))
+			storeNameTxt = yextStoreExistingAddress[6];
+		else 
+			storeNameTxt=webPropHelper.getTestDataProperty(storeNameTxt);
+		
+		seoYextPage.validateStoreInASO(storeNameTxt);
 	}
 
+	public static String descriptionText = "";
 	@And("^Update store details$")
 	public void update_store_details() throws Throwable {
 
@@ -205,7 +264,7 @@ public class SEO_YEXT_SD  extends CommonActionHelper {
 
 		//Store Description
 		if(webPropHelper.getTestDataProperty("YextDescriptionUpdateYesNo").equalsIgnoreCase("Yes"))
-			seoYextPage.updateStoreDescription(webPropHelper.getTestDataProperty("YextStoreDescription"));
-
+			descriptionText=seoYextPage.updateStoreDescription(webPropHelper.getTestDataProperty("YextStoreDescription"));
 	}
+	
 }
