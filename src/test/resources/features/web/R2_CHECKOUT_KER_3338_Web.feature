@@ -1,7 +1,7 @@
 Feature: PayPal on Checkout page 
 
 @R2_Web @R2_Regression @R2_All @P1 @1HR_R2 @C-Checkout @KER-3338 
-@ZYP_CHECKOUT_3338-11739 @CR-AKK 
+@ZYP_CHECKOUT_3338-11739 @CR-AKK
 Scenario: Verify user is able to checkout using PayPal with Order level Promotion applied 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
@@ -114,7 +114,7 @@ Scenario: Verify guest user is able to select Paypal as Payment method on checko
 		
 		
 @R2_Web @R2_Regression @R2_All @P2 @1HR_R2 @C-Checkout @KER-3338 
-@ZYP_CHECKOUT_3338-8258 @CR-AKK @P1 @RegressionP1 @AutomationSmoke
+@ZYP_CHECKOUT_3338-8258 @CR-AKK @P1 @RegressionP1 @AutomationSmoke @TC-OMNI-13459
 Scenario: Verify guest user is able to proceed with Paypal as checkout for non-SOF items 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User navigates to L2 Mens clothing 

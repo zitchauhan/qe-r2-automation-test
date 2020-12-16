@@ -173,11 +173,13 @@ public class New_PDP_PO extends CommonActionHelper
 			
 		}
 		
-		@FindBy(xpath="//*[contains(text(),'Estimated Pick Up:')]") public WebElement EstimatePickUpPDP;
+		//@FindBy(xpath="//*[contains(text(),'Estimated Pick Up:')]") public WebElement EstimatePickUpPDP;
 		@FindBy(xpath="//*[contains(text(),'Estimated Pick Up :')]/span") public WebElement EstimatePickUpCart;
 		@FindBy(xpath="//*[@data-auid=\"PDP_PickupInfo_BOPIS\"]/div/div[3] | (//*[contains(text(),'Pick Up Today')])[1]") public WebElement PickUpTodayPDP;
 		@FindBy(xpath="//*[contains(text(),'Pick Up today')]") public WebElement PickUpTodayCart;
 		@FindBy(xpath="//*[contains(text(),'Pick Up Today Instead')]") public WebElement PickUpTodayCartModal;
 		@FindBy(xpath="//*[contains(text(),'Estimated Pick Up: ')]/span") public WebElement EstimatePickUpDateCartModal;
 
+		@FindBy(xpath="//a[contains(text(),'Pick Up Today') or contains(text(),'Estimated Pick Up:')]")
+		public WebElement EstimatePickUpPDP;
 }

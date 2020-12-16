@@ -1,8 +1,7 @@
 Feature: E02-250 - Edit Credit/Debit Card in Account
 
-  @R2_Web @ZYP_MYACCOUNT_K6841-10630 @RegressionP1 @MyAccount @OMNI-13373
+  @R2_Web @ZYP_MYACCOUNT_K6841-10630 @RegressionP1 @MyAccount @TC-OMNI-13373
   Scenario:  Verify that authenticated user is able to view the saved credit/debit cards.
-
     Given user launches the browser and navigates to "ASO_HOME" page
     When user clicks on SignIn link from global header
     And user enter the valid emailaddress "UserWithSavedAddressAndPayment" 

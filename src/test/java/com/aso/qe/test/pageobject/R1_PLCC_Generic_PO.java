@@ -387,6 +387,15 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 		}
 
 	}
+	public void clickOnCheckoutButtonOnCartPage() throws Exception {
+		try {
+			verifyPresenceOfCheckoutLinkOnCartPage();
+			clickOnButton(checkoutBtnATCCartPage);
+			Thread.sleep(8000);
+			} catch (Exception e) {
+			logger.debug("Exception Message: "+e.getMessage());
+		}
+	}
 	public void verifyPresenceOfQuantityInput() throws Exception {
 
 		if ("mobile".equalsIgnoreCase(testtype)) {

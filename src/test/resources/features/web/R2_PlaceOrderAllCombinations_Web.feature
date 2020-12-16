@@ -21,6 +21,7 @@ Scenario Outline: Verify whether the new address entered in Checkout page gets s
 		|THANKS FOR SUBMITTING YOUR ORDER					|
 	Examples: 
 		|Payment Type	|
+		|Credit Card - VISA	|
 
 #********************Venkat End******************
 
@@ -72,10 +73,10 @@ Scenario Outline: Verify if unauthenticated user is able to place an for multi S
 		|Credit Card	|
 		|PayPal			|
 				
-@Regression @P1 @CR-SK @Checkout @RegressionP1
+@Regression @P1 @CR-SK @Checkout @RegressionP1 @TC-OMNI-13476
 Scenario Outline: Verify guest user order placement for with Different Card Types
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	And User searches a product "SKUForMultiSKUProduct" and navigates to PDP 
+	And User searches a product "productNameSTH" and navigates to PDP 
 	#And user click on Add to Cart Button for "MultiSKUProduct" 
 	And user click on ship it button 
 	And user click on view cart button 
@@ -83,11 +84,13 @@ Scenario Outline: Verify guest user order placement for with Different Card Type
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
-	And user selects shipment method on check out page for "guest" user
+	Then user click on Go To Shipping Method button in Checkout page
+	Then user click on go to payment present in shipping method
+	#And user selects shipment method on check out page for "guest" user
 	And user add "<Card Type>" details for a guest user
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
-	And Verify the message on the page 
+	#And Verify the message on the page 
 		|# Message for successful order is displayed		|
 		|THANKS FOR SUBMITTING YOUR ORDER					||
 	Examples: 
@@ -99,7 +102,7 @@ Scenario Outline: Verify guest user order placement for with Different Card Type
 		
 		
 
-@Regression @P1 @CR-SK @Checkout @RegressionP1 @TC-OMNI-13460 @abc 
+@Regression @P1 @CR-SK @Checkout @RegressionP1 @TC-OMNI-13460
 Scenario: Place order as a registered user using Paypal express as tender
   Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productNameSTH" and navigates to PDP
@@ -110,6 +113,7 @@ Scenario: Place order as a registered user using Paypal express as tender
   Then Verify paypal button on Cart Page 
 	Then User click on paypal button on cart page
 	Then user switch to iframe and enter the paypal login "PayPalEmail" "PayPalPassword"
+	And user clicks on ok button of order not complete modal
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
 	And Verify the message on the page 
@@ -119,7 +123,7 @@ Scenario: Place order as a registered user using Paypal express as tender
 
 		
 @R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order @C1-Message
- @CR-SK @RegressionP3
+ @CR-SK @RegressionP3  @TC-OMNI-13445
 Scenario Outline: Verify if unauthenticated user is able to place an for bundle products 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUForBundleProducts" and navigates to PDP 
@@ -138,8 +142,8 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bundle 
 	Examples: 
 		|Payment Type	|
 #		|Gift Card		|
-#		|Credit Card 	|
-		|PayPal			|
+		|Credit Card 	|
+#		|PayPal			|
 						
 						
 						
@@ -190,7 +194,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bulk gi
 		|PayPal			|
 		
 @R2_Web @R2_All @R2_PlaceOrderUnauthenticated @R2_PlaceOrderAllCombinations @R2_Order 
- @CR-SK @C1-Message @RegressionP3
+ @CR-SK @C1-Message @RegressionP3  @TC-OMNI-13446
 Scenario Outline: Verify if unauthenticated user is able to place an for bait products
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "SKUForBaitProduct" and navigates to PDP 
@@ -208,7 +212,7 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bait pr
 		|Credit Card - Master	|
 #		|PayPal			|
 
-	@RegressionP3 @OMNI-13444
+	@RegressionP3 @TC-OMNI-13444
 	Scenario Outline: Verify guest user - succesfully placed with Standard Delivery and correct shipping charges
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 

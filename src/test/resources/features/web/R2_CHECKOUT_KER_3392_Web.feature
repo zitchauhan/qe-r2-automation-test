@@ -207,7 +207,7 @@ Scenario: Verify the  User must view Sign-In/Interstitial Modal
 
 #=============================================Sanity============================================#
 	
-@R2_Web @R2_MAST-18 @P2 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147 @AutomationSmokeORIG
+@R2_Web @R2_MAST-18 @P2 @C-Checkout @KER-3392 @ZYP_CHECKOUT_K3392-8147
 Scenario: TC_19-Verify Sign In During Checkout 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User searches a product "productName" and navigates to PDP 

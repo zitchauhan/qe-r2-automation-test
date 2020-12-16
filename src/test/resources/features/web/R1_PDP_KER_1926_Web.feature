@@ -1,6 +1,6 @@
 Feature: To verify basic functionalities of PDP
 
-@Regression @1HR @C-PDP  @Web @ZYP_PDP_K1926-4341 @KER-1926 @All  @Rerun  @CR-AG @1HR @RegressionP2  @eee
+@Regression @1HR @C-PDP  @Web @ZYP_PDP_K1926-4341 @KER-1926 @All  @Rerun  @CR-AG @1HR @RegressionP2  @eee @TC-OMNI-13423
   Scenario: Verify whether the PDP page with proper elements  are displayed properly for a product
     Given user launches the browser and navigates to "ASO_HOME" page
     When user enters "SearchPDP" in the search box
@@ -15,9 +15,6 @@ Feature: To verify basic functionalities of PDP
     And user should see details and specs
     Then user clicks should be able to see QandA section
     Then verfiy the Ask a question button
-    
-    
-    
 
 @Regression  @C-PDP  @Web @KER-1926 @ZYP_PDP_K1926-5544 @All @Rerun @1HR  @CR-AG
   Scenario: To verify URL, Image, Attributes, Add to cart button section by search

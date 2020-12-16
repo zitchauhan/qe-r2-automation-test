@@ -10,7 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PLCC_LandingPage_PO;
-import com.sun.glass.ui.Clipboard;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;

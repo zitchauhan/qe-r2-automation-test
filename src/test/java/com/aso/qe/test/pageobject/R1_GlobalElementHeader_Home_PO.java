@@ -10,6 +10,7 @@ import java.util.UUID;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -163,7 +164,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath = "//input[@name='lastName']") public WebElement txtLastName;
 	@FindBy(xpath = "//input[@name='firstName']") public WebElement txtFirstName;
 	@FindBy(xpath="//*[@id='signup-link-from-login']") public WebElement lnkSignUp;
-	@FindBy(xpath = "//*[@id='logonSubmit'] |//*[@data-auid='btnemail-signin-button']") public WebElement btnSubmit;
+	@FindBy(xpath = "//*[@data-auid='btnemail-signin-button']") public WebElement btnSubmit;
 	@FindBy(xpath = "//input[@type='password']") public WebElement txtPassword;
 	@FindBy(xpath = "//input[@type='email']") public WebElement txtEmailAddress;
 	@FindBy(xpath = "//*[@data-auid='signInCta']") public WebElement btnSignIn;
@@ -2041,5 +2042,25 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 		assertTrue(isDisplayed(ContainerL3));
 		logger.debug("L3 Page is not displayed");
 	}		
+	
+	public void enterSearchText(String str) throws Exception{
+        str = webPropHelper.getTestDataProperty(str);
+        if("mobile".equalsIgnoreCase(testtype)){
+               Actions actions = new Actions(driver);
+               actions.moveToElement(txtSearchBox_mobile);
+               Thread.sleep(Constants.thread_medium);  
+               actions.click();
+               actions.sendKeys(str);
+               actions.build().perform();
+        }else {
+               Actions actions = new Actions(driver);
+               actions.moveToElement(txtSearchBox);
+               Thread.sleep(Constants.thread_medium);  
+               actions.click();
+               actions.sendKeys(str);
+               actions.build().perform();
+        }
+ }	
+	
 
 }

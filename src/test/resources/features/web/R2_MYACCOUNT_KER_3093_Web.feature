@@ -237,7 +237,7 @@ Scenario: Verify that user is able to add a new gift card having 16 digit with 4
 	And user should see the proper message after GC delete 
 		
 #===================================================Sanity=====================================#
-@R2_Web @R2_WAST-03 @P2 @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418 @AutomationSmokeORIG 
+@R2_Web @R2_WAST-03 @P2 @C-MyAccount @KER-3093 @ZYP_CART_K3093-10418
 Scenario: TC_4- Verify User is able to Add Gift Card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

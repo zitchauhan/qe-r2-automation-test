@@ -97,7 +97,10 @@ public class R2_CART_K3174_SD extends CommonActionHelper {
 
 	@And("^user fill the payment details for sof guest user$")
 	public void user_fill_the_payment_details_for_sof_guest_user() throws InterruptedException {
-		waitForElement(r2CheckoutPo.CardholderName_Input);
+		//waitForElement(r2CheckoutPo.CardholderName_Input);
+		//KG changed on 19 Nov for handling inner form
+		waitForInnerFormElement(r2CheckoutPo.CardholderName_Input,"first-data-payment-field-name"); 
+		SwitchToDefaultFrame();
 		waitForElement(r2CheckoutPo.ZipCode_Input);
 		r2CheckoutPo.ZipCode_Input.clear();
 		Thread.sleep(5000);

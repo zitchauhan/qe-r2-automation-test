@@ -170,13 +170,13 @@ public class R1_SearchProduct_PO extends CommonActionHelper {
 	@FindBy(xpath = "(//div[@class='row mt-1 justify-content-center']/div)")
 	public WebElement countProductCardSuggestion; // ProductCount
 	
-	@FindBy(xpath = "//a[@data-auid='shopByCategory_2']")
+	@FindBy(xpath = "//a[@data-auid='shopByCategory_1']")
 	public WebElement softBaitsoption;
 	
 	@FindBy(xpath = "//p[contains(text(),'Gas Grills')]")
 	public WebElement GasGrillsoption;
 	
-	@FindBy(xpath = "(//section[@id='productCardListing']/div)[1]")
+	@FindBy(xpath = "(//section[@id='productCardListing']/div/a)[1]//p")
 	public WebElement firstBaitsproduct;
 	
 	@FindBy(xpath = "(//section[@id='productCardListing']/div/a)[2]")

@@ -81,7 +81,7 @@ Scenario: Verify the available customer details
 	Then user verifies the fields loaded Full name, email address, choose password, submit button and check box for email News letters	    
 
 
-@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Low   @KER-4062 @ZYP_CART_K4062-8107 @CR-SK @C1-Message @RegressionP1
+@R2_Web @C-Order @CC-Checkout_Order @R2_All @P-Low   @KER-4062 @ZYP_CART_K4062-8107 @CR-SK @C1-Message @RegressionP1 @TC-OMNI-13454
 Scenario: verify the account register with out Email News letter 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "productName" and navigates to PDP 
@@ -90,7 +90,8 @@ Scenario: verify the account register with out Email News letter
 	And user is navigated to Add to cart Notification popup 
 	And user click on viewcart button 
 	When user click on checkout button
-	And user adds shipment address on checkout page for "guest" user 
+	And user adds shipment address on checkout page for "guest" user
+	Then user click on Go To Shipping Method button in Checkout page 
 	And user selects shipment method on check out page for "guest" user 
 	And user add "Credit Card" details in payment method for "guest" user 
 	And user clicks on place order on checkout page 

@@ -165,7 +165,7 @@ Scenario: Verify the user can enter valid new Gift card with 13 or 16 digit in C
 		| btnToRemoveGiftCardOnCheckoutPage                       |
 
 #================================================Sanity===================================#
-@R2_Web @R2_WAST-17 @P2 @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954 @AutomationSmokeORIG
+@R2_Web @R2_WAST-17 @P2 @C-Checkout @KER-6822 @ZYP_CHECKOUT_K6822-7954
 Scenario: TC_18-Verify Payment - Add Gift Card - Authenticated 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 
