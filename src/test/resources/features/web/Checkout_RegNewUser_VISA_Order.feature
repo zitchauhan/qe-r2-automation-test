@@ -1,6 +1,6 @@
 Feature: CHECKOUT - Regsiter New User and Credit Card Order
 
-@AutomationSmoke 
+@AutomationSmoke
 Scenario Outline: Checkout - Regsiter New User & Place VISA Order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account
@@ -13,6 +13,7 @@ Scenario Outline: Checkout - Regsiter New User & Place VISA Order
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "Newly Registered" user
+	Then user click on Go To Shipping Method button in Checkout page
 	And user selects shipment method on check out page for "Newly Registered" user
 	And user add "<Payment Type>" details in payment method for "Newly Registered" user
 	And user clicks on place order on checkout page 

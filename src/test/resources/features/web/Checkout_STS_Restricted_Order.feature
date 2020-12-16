@@ -12,7 +12,8 @@ Scenario Outline:  Checkout - Guest User order placement for Regular STS item
 	And user click on viewcart button
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
-	When user clicks on Go to payment CTA
+	#When user clicks on Go to payment CTA
+	When user clicks on Go to payment CTA present on store pickup
 	#And user fill the payment details for sof guest user
 	And user add "<Payment Type>" details in payment method for "guest" user 
 	And user able to see the button place order

@@ -65,7 +65,7 @@ Scenario: Verify that Authenticated User is able to rename a Wish List
 	Then user enters Wishlist name "WishListRename" 
 	And user clicks on create 
 	
-@R2_Web @ZYP_MYACCOUNT_K4233-11104 @CR-MS @RegressionP3 @TC-KER-11104 @TC-OMNI-13370
+@R2_Web @ZYP_MYACCOUNT_K4233-11104 @CR-MS @TC-KER-11104 
 Scenario: Verify that Authenticated User is able to cancel deleting a Wish List 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
@@ -330,4 +330,28 @@ Scenario: Verify the User is able to move item from wish list to cart
 	And user add an item to wishlist "WishlistName" and navigates to wishlist 
 	And clicks on Move to Cart button 
 	Then verify the item is moved to cart 
+
+@RegressionP3 @TC-OMNI-13372
+Scenario: Verify whether user is able to add an item to wish list from cart page 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "EmailWithoutPaymentDetails" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	And user click on MyAccount 
+	Then user click on WishList 
+	And deletes all the existing wishlists 
+	And user clicks on create first wishlist button 
+	Then user enters Wishlist name "WishlistName" 
+	And user clicks on Create List 
+	Then Verify below Sub/Main Module of My Account 
+		|#Verify following element in wishlist section|
+		|Wishlist_createlist_lnk|
+		|WishlistItems_lnk|
+	And User searches a product "productName" and navigates to PDP 
+	And user click on ship it button 
+	Then user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page
+	And user add an item to wishlist "WishlistName" and navigates to wishlist 			 
   
