@@ -810,8 +810,8 @@ public class R2_Cart_PO extends CommonActionHelper {
 		}
 		
 ;		String zipCodeTxt=null;
-		if(!SEO_YEXT_SD.yestStoreExistingAddress[4].equals(""))
-			zipCodeTxt=SEO_YEXT_SD.yestStoreExistingAddress[4];
+		if(!SEO_YEXT_SD.yextStoreExistingAddress[4].equals(""))
+			zipCodeTxt=SEO_YEXT_SD.yextStoreExistingAddress[4];
 		else
 			zipCodeTxt=zipCode;
 			
