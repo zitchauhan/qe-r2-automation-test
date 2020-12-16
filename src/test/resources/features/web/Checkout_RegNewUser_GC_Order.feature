@@ -1,7 +1,7 @@
 Feature: CHECKOUT - Regsiter New User & Place Order GC as Tender
 
 
-@AutomationSmoke
+@AutomationSmoke @RegressionP1 @TC-OMNI-13458
 Scenario Outline: Checkout - Regsiter New User & Place Gift Card Order 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user creates an account
