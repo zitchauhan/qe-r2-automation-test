@@ -1,8 +1,7 @@
 Feature: CHECKOUT - Guest user, add STS Order
 
-
-@AutomationSmoke @RegressionP1
-Scenario:  Checkout - Guest User order placement for Regular STS item
+@AutomationSmoke @RegressionP1 @TC-OMNI-13505 @TC-OMNI-13501
+Scenario Outline:  Checkout - Guest User order placement for Regular STS item
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
 	And Find Store Modal should pop-up 
@@ -14,11 +13,15 @@ Scenario:  Checkout - Guest User order placement for Regular STS item
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
 	When user clicks on Go to payment CTA
-	And user fill the payment details for sof guest user
+	#And user fill the payment details for sof guest user
+	And user add "<Payment Type>" details in payment method for "guest" user 
 	And user able to see the button place order
 	Then verify user is able to successfully place the order
+	Examples: 
+		|Payment Type	|
+		|Credit Card - visa	|
 	
-@RegressionP1 @abcd
+@RegressionP1 @TC-OMNI-13498
 Scenario Outline: Guest User - Validate Limited Qty msg is visible to the user on PDP and cart page and user should not be able to place 
 order for more than the limit in a single day with the same billing address
 	Given user launches the browser and navigates to "ASO_HOME" page
@@ -29,6 +32,7 @@ order for more than the limit in a single day with the same billing address
 	Then user navigates to Cart Page
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
+	Then user click on Go To Shipping Method button in Checkout page
 	Then user click on go to payment present in shipping method
 	#And user add "<Card Type>" details for a guest user
 	And user add "<Payment Type>" details in payment method for "guest" user 
@@ -49,10 +53,10 @@ order for more than the limit in a single day with the same billing address
 		|Payment Type	|
 		|Credit Card - visa	|
 		
-@RegressionP1 @abc
+@RegressionP1 @TC-OMNI-13526
 Scenario Outline: Ship alone items should appear in separate package and not combined with other items and order should be placed successfully
 	Given user launches the browser and navigates to "ASO_HOME" page plcc 
-  When user creates an account
+  	When user creates an account
 	When User searches a product "ShipAloneItem" and navigates to PDP
 	And user click on ship it button 
 	And then user close the add to cart popup
@@ -65,6 +69,7 @@ Scenario Outline: Ship alone items should appear in separate package and not com
 	And verify Promo code discount is applied 
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "Newly Registered" user
+	Then user click on Go To Shipping Method button in Checkout page
 	And user selects shipment method on check out page for "Newly Registered" user
 	And user add "<Payment Type>" details in payment method for "Newly Registered" user
 	And user clicks on place order on checkout page 

@@ -308,19 +308,19 @@ public class R1_SD_SIT extends CommonActionHelper {
 		sit_po.verifySigninpage();
 		globalElementHeader.enterEmailAddressandPassword(arg1, arg2);
 		globalElementHeader.clickSubmitButton();
-		if("mobile".equalsIgnoreCase(testtype)) 
-		{
-			waitForPageLoad(driver);
-		}
-		else 
-		{
-			//if(!isDisplayed(hp_p.msgVerifyIncorrect)) //Commented out by HP June 18. This was making scripts wait for 30 secs after successful login
-			                                            //Need better way to verify if Login is successful.
-			{
-			waitForElement(globalElementHeader.btnMyAccount);//Remove these 2 lines onece better way to verify if Login is successful is implemented.
-		assertTrue(isDisplayed(globalElementHeader.btnMyAccount));
-			}
-		}
+//		if("mobile".equalsIgnoreCase(testtype)) 
+//		{
+//			waitForPageLoad(driver);
+//		}
+//		else 
+//		{
+//			//if(!isDisplayed(hp_p.msgVerifyIncorrect)) //Commented out by HP June 18. This was making scripts wait for 30 secs after successful login
+//			                                            //Need better way to verify if Login is successful.
+//			{
+//			waitForElement(globalElementHeader.btnMyAccount);//Remove these 2 lines onece better way to verify if Login is successful is implemented.
+//		assertTrue(isDisplayed(globalElementHeader.btnMyAccount));
+//			}
+//		}
 	} 
 
 	/*@Then("^user should be able to enter the signin details$")

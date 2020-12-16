@@ -1,7 +1,7 @@
 Feature: Prevent customers with a California shipping or billing state from purchasing online
 
  
-	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web @RegressionP1
+	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web @RegressionP1 @TC-OMNI-13464
 	Scenario: Verify Global State Restriction message is displayed if guest user tries to proceed from shipping address 
 	with state from restriction lists
 	
@@ -19,10 +19,9 @@ Feature: Prevent customers with a California shipping or billing state from purc
   	Then global restriction error message is displayed for "CA" on "shipping" section
 
 	
-	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web @RegressionP1
+	@OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web @RegressionP1 @TC-OMNI-13465
   Scenario: Verify Global State Restriction message is displayed if guest user tries to proceed from billing address 
   with state from restriction lists
-
     Given user launches the browser and navigates to "ASO_HOME" page
     #When user creates an account
     And User searches a product "productName" and navigates to PDP
@@ -31,6 +30,7 @@ Feature: Prevent customers with a California shipping or billing state from purc
     Then user navigates to Cart Page
     And user clicks on checkout button on cart page
     And user adds shipment address on checkout page for "guest" user
+    Then user click on Go To Shipping Method button in Checkout page
     Then user click on go to payment present in shipping method
     And user uncheck the checkbox for Billing address different from shipping address
     And user adds restricted billing address on checkout page
@@ -80,7 +80,6 @@ Feature: Prevent customers with a California shipping or billing state from purc
 		And user enter restricted ZipCode field in my account 
 		Then global restriction error message is displayed for "CA" on "myaccountaddress" section
 
- 
   @OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web 
   Scenario: Verify Global State Restriction message is displayed if regsitered user try to add payment in my account 
   with state from restriction lists in billing address
@@ -144,7 +143,7 @@ Feature: Prevent customers with a California shipping or billing state from purc
   Then global restriction error message is displayed for "CA" on "payment" section
   
   
-  @OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web 	
+  @OMNI-165 @C-Order @Regression @CR-SB @C-Checkout @Web 		
   Scenario: Verify Global State Restriction message is displayed if user tries to add restricted zip code on faster checkout 
   while registering user
   

@@ -73,7 +73,7 @@ public class R2_CHECKOUT_K6760_SD extends CommonActionHelper {
 		System.err.println(flag);
 		if (flag)
 			assertTrue(clickOnButton(r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn));
-		     Thread.sleep(Constants.thread_low);
+		     Thread.sleep(Constants.thread_medium);
 	}
 
 	@Then("^user verify the Schedule service available for WG items$")

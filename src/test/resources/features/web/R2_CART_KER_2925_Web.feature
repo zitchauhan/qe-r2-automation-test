@@ -1,6 +1,6 @@
 Feature: Place Order 
 
-@R2_Web @ZYP_CART_K2925-11126 @CR-AG @1HR_R2 @P1 @RegressionP1
+@R2_Web @ZYP_CART_K2925-11126 @CR-AG @1HR_R2 @P1 @RegressionP1 @TC-OMNI-13453
 Scenario Outline: verify if user should be able to submit the order on the checkout page 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When User searches a product "productName" and navigates to PDP 
@@ -8,7 +8,8 @@ Scenario Outline: verify if user should be able to submit the order on the check
 	And user click on ship it button
 	And user click on view cart 
 	And user click on checkout button 
-	And user adds shipment address on checkout page for "guest" user 
+	And user adds shipment address on checkout page for "guest" user
+	Then user click on Go To Shipping Method button in Checkout page 
 	Then user click on go to payment present in shipping method 
 	And user add "<Payment Type>" details in payment method for "guest" user 
 	Then Verify the message on the page 

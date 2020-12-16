@@ -15,7 +15,7 @@ Scenario: Verify The user must be able to input a valid email Id in checkout pag
 		|PaymentPage_AddedGiftCards_txtList				|
 		
 		
-@R2_Web @ZYP_MYACCOUNT_K3092-10462 @RegressionP2 @MyAccount @OMNI-13379
+@R2_Web @ZYP_MYACCOUNT_K3092-10462 @RegressionP2 @MyAccount @TC-OMNI-13379
 Scenario: verify whether the user is able to delete a gift card from payment page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user clicks on SignIn link from global header 

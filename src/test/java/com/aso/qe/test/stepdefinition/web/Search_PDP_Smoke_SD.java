@@ -3,6 +3,8 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
@@ -274,6 +276,18 @@ public class Search_PDP_Smoke_SD extends CommonActionHelper {
        // throw new PendingException();
     	waitForElement(r1pdppo.SoftBaitsTitle);
     	assertTrue(isDisplayed(r1pdppo.SoftBaitsTitle));
+    }
+    
+    @Then("^Verify related product in search page \"([^\"]*)\"$")
+    public void verify_related_product(String searchText) throws Throwable {
+    	searchText = webPropHelper.getTestDataProperty(searchText); 
+    	Pattern p = Pattern.compile("[^a-z0-9 ]", Pattern.CASE_INSENSITIVE);
+    	Matcher m = p.matcher(searchText);
+    	boolean b = m.find();
+    	if (b)
+    		r1pdppo.verifySpecialCharacterProduct(searchText);
+    	else
+    		r1pdppo.verifySearchProduct(searchText);
     }
     
 }

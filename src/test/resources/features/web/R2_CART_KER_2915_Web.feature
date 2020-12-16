@@ -45,7 +45,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
     Then verify child SKU of the product is displayed on the Cart page
 
 	
-	@RegressionP2  
+	@RegressionP2     @TC-OMNI-13469
  Scenario: Verify mixed items in the cart and their messages under each line item
     Given user launches the browser and navigates to "ASO_HOME" page
     And User should be able to click on Find Store 
@@ -63,25 +63,25 @@ Scenario Outline: verify if user should be able to submit the order on the check
     Then verify the message for whiteGlove item and DSV item on the cart page
 		And user clicks on checkout button on cart page		
 	
-	@RegressionP2
-  Scenario Outline: Verify the category level promotions created in CMC are getting applied
-		Given user launches the browser and navigates to "ASO_HOME" page
-		When User searches a product "Productnamenew" and navigates to PDP
+	@RegressionP2 @TC-OMNI-13497
+ 	Scenario Outline:  Verify the category level promotions created in CMC are getting applied 
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And User searches a product "Productnamenew" and navigates to PDP
     And user click on Add to Cart Button
     And user click on view cart
     And Verify that the Category level promotion is applied and displayed on cart page
     And user clicks on checkout button on cart page
   	And user adds shipment address on checkout page for "guest" user
-		Then user click on go to payment present in shipping method
-		And user add "<Payment Type>" details in payment method for "guest" user
-		And Verify the Category level promotion is applied and displayed on Order Summary section
-		And user clicks on place order on checkout page 
-		Then verify user is able to successfully place the order
-		Examples: 
-		#|Payment Type	|
-		|Credit Card - VISA	|
+	Then user click on go to payment present in shipping method
+	And user add "<Payment Type>" details in payment method for "guest" user
+	And Verify the Category level promotion is applied and displayed on Order Summary section
+	And user clicks on place order on checkout page 
+	Then verify user is able to successfully place the order
+	Examples: 
+	|Payment Type	|
+	|Credit Card - VISA	|
 		
-	@RegressionP2
+	@RegressionP2 @TC-OMNI-13502
   Scenario: Validate user is able to change ship modes of an STS added item to Store Pickup or Home Delivery on cart page
     Given user launches the browser and navigates to "ASO_HOME" page
     And User should be able to click on Find Store 
@@ -96,7 +96,7 @@ Scenario Outline: verify if user should be able to submit the order on the check
     
     
     
- @RegressionP2
+ @RegressionP2 @TC-OMNI-13503
  Scenario: Validate whether BOPIS WG item is getting successfully added to cart and is not showing OOS
   Given user launches the browser and navigates to "ASO_HOME" page
   And User should be able to click on Find Store 

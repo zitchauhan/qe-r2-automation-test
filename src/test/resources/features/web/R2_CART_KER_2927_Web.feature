@@ -1,7 +1,7 @@
 Feature: Display Estimated Tax and Total in Cart 
 
 @R2_Web @R2_NonRegression @R2_All @P-High_B @CB-Cart @KER-2927
-@ZYP_CART_K2927-8126 @CR-SK @1HR_R2 @C-BOPIS 
+@ZYP_CART_K2927-8126 @CR-SK @1HR_R2 @C-BOPIS    @TC-OMNI-13472
 Scenario: To verify Tax recalculation when items are edited 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And User searches a product "SKUForBopisProduct" and navigates to PDP 
@@ -17,7 +17,7 @@ Scenario: To verify Tax recalculation when items are edited
 	When user navigates to checkout page 
 	Then checkout page displays updated tax 
 	
-@R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-2927 @ZYP_CART_K2927-8127
+@R2_Web @R2_NonRegression @R2_All @P-Low @CB-Cart @KER-2927 @ZYP_CART_K2927-8127  @TC-OMNI-13472
 @CR-SK @C-BOPIS @RegressionP2
 Scenario: To verify Tax recalculation when items are edited 
 	Given user launches the browser and navigates to "ASO_HOME" page 

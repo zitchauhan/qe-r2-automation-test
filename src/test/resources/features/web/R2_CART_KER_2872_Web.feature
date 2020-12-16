@@ -19,7 +19,7 @@ Scenario: Verify whether the user is able to change the store location successfu
 	
 	
 
-@R2_Web @ZYP_CHECKOUT_K2872-8706 @RegressionP1 @MyAccount @OMNI-13395
+@R2_Web @ZYP_CHECKOUT_K2872-8706 @RegressionP1 @MyAccount @TC-OMNI-13395
 Scenario: Verify that user is able to open the Find Store modal from the header 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
@@ -90,7 +90,7 @@ Scenario: Verify that user is able to see the Change Location link on PLP BOPIS 
 	And user is able to see Change Pickup Location link in PLP 
 	
 	
-@R2_Web @ZYP_CART_K2872-10618 @C-BOPIS @RegressionP2 @MyAccount @OMNI-13397
+@R2_Web @ZYP_CART_K2872-10618 @C-BOPIS @RegressionP2 @MyAccount @TC-OMNI-13397
 Scenario: Verify that user is able to open the Find Store modal from PLP for BOPIS filter 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
