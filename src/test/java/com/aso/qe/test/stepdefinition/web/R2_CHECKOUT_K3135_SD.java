@@ -32,6 +32,11 @@ public class R2_CHECKOUT_K3135_SD extends CommonActionHelper {
 			setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty(arg6));
 		}
 	}
+		@And("^user enters Email Address for Order Confirmation \"(.*?)\"$")
+	public void user_enters_Email_Address_for_Order_Confirmation(String arg1) throws Throwable {
+		// clearText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input);
+		setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty(arg1));
+	}																 
 
 	@And("^user click on confirm billing address button$")
 	public void user_click_on_confirm_billing_address_button() throws Throwable {
