@@ -76,6 +76,7 @@ public class R1_HP_K730_SD extends CommonActionHelper {
 			else {
 				assertTrue(clickOnButton(findStorePO.expandStore));
 			}
+			
             assertTrue(clickOnButton(r2CartPo.btnstore));
             assertTrue(clickOnButton(findStorePO.ovly_btnCloseCross));
 		}

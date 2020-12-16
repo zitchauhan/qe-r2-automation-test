@@ -2,12 +2,12 @@
 @ignoreUAT
 Feature: Back in Stock Notifications on the PDP - Email
 
-  @Web @C-PDP @Regression @KER-2334 @ZYP_PDP_K2334-3422 @CR-RKA @RBeta 
+  @Web @C-PDP @RegressionP2 @KER-2334 @ZYP_PDP_K2334-3422 @CR-RKA @RBeta @TC-OMNI-13504
   Scenario: To verify BIS Notifications on the PDP - Single email notification
 	Given user launches the browser and navigates to "ASO_HOME" page 
-	When user enters "OutOfStockProduct" in the search box 
+	When user enters "OutOfStockProductSKUForBIS" in the search box 
 #	Then User select out of stock PDP 
-	Then User verify and click on get notified 
+	Then User verify the get notified
 	Then Verify customer is able to enter email after clicking on get notified
          
                

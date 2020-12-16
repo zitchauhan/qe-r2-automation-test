@@ -1340,13 +1340,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 				setInputText(CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
 				driver.switchTo().defaultContent();
 				waitForInnerFormElement(CreditCardDetails_Input,"first-data-payment-field-card"); 
-				setInputText(CreditCardDetails_Input, webPropHelper.getTestDataProperty(creditCardNumber));
+				setInputText(CreditCardDetails_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
 				driver.switchTo().defaultContent();
 				waitForInnerFormElement(ExpDate_Input,"first-data-payment-field-exp"); 				
-				setInputText(ExpDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
+				setInputText(ExpDate_Input, webPropHelper.getTestDataProperty("ThreeDigitCVV"));
 				driver.switchTo().defaultContent();
 				waitForInnerFormElement(PassCvv_Input,"first-data-payment-field-cvv"); 				
-				setInputText(PassCvv_Input, webPropHelper.getTestDataProperty(cvv));
+				setInputText(PassCvv_Input, webPropHelper.getTestDataProperty("ThreeDigitCVV"));
 				driver.switchTo().defaultContent();
 				flag = true;
 			}catch(Exception e) {
