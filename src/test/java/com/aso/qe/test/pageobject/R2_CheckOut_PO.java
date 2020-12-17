@@ -372,10 +372,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   //Start KER-4271 AKK
 	   @FindBy(xpath="//a[@data-auid='checkout_edit_in_store_pickup']")
 	   public WebElement EditStorPickUp_Btn;
-	   @FindBy(xpath="//*[@data-auid='ul_dropdownList']//*[contains(text(),'Me+Alternate')]")
+	   @FindBy(xpath="//*[contains(text(),'Me or Alternate Person')]")
 	   public WebElement mePlusAlternatePickUp_Drpdwn;  //SID Modified 29-Jan
 	   
-	   @FindBy(xpath=" (//button[@type='button'])[1]/div/div[1]")
+	   @FindBy(xpath="//button[@type='button'][1]/div/div[1]")
 	   public WebElement clickOnDropDown;  //SID Modified 29-Jan
 	  
 	   
@@ -443,7 +443,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='li_listOption_1']/a")
 	   public WebElement selectAnotherCard;  //SID 24-Jan
 	 
-	   @FindBy(xpath="//*[contains(text(),'PICKUP PERSON')]/following-sibling::*/*")
+	   @FindBy(xpath="//*[contains(text(),'PICK UP PERSON')]/following-sibling::*/*")
 	   public List<WebElement> alternatePersonDetails;  //SID 26-Jan
 	   
 	   
