@@ -91,8 +91,8 @@ Scenario Outline: Verify guest user order placement for with Different Card Type
 	And user clicks on place order on checkout page 
 	Then verify user is able to successfully place the order 
 	#And Verify the message on the page 
-		|# Message for successful order is displayed		|
-		|THANKS FOR SUBMITTING YOUR ORDER					||
+		#| Message for successful order is displayed		|
+		#|THANKS FOR SUBMITTING YOUR ORDER					||
 	Examples: 
 		|Card Type	|
 		|Visa      	|

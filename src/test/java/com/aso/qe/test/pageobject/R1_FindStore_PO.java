@@ -51,7 +51,16 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	@FindBy(xpath="//*[contains(text(),'There are no stores within 250 miles')]") public WebElement californiaaddress;
 	
 	@FindBy(xpath="(//*[@data-auid='facetdrawerundefined'])[2]")public WebElement selectChangedStore;  //SID 7-Jan
+	@FindBy(xpath = "//*[@data-auid='find-a-store']/input")public WebElement inputFindaStoreHomePage;
+
+	@FindBy(xpath = "//*[@data-auid='submit-zip-code']")public WebElement btnZipcodeSubmit;
+
 	
+	@FindBy(xpath = "//*[@data-auid='submit-zip-code']//span[1]")
+	public WebElement btnZipcodesearch;
+	
+	@FindBy(xpath = "//*[@aria-label='Make My Store']")
+	public WebElement btnstore;
 	
 	
 	
@@ -120,7 +129,28 @@ public class R1_FindStore_PO extends CommonActionHelper {
 	System.out.println("zip code to enter is" +webPropHelper.getTestDataProperty(value));	
 	String zipcode = webPropHelper.getTestDataProperty(value);
 	Thread.sleep(Constants.thread_low);
-	String selectedStoreTitle = (ovly_secStore_GrnadParkway).getText();
+	String selectedStoreTitle = null;
+
+	if(isDisplayed(ovly_secStore_GrnadParkway))
+	{
+		 selectedStoreTitle = (ovly_secStore_GrnadParkway).getText();
+	}else {
+		setInputText(inputFindaStoreHomePage, webPropHelper.getTestDataProperty(value));
+		assertTrue(clickOnButton(btnZipcodesearch));	
+		 selectedStoreTitle = (ovly_secStore_GrnadParkway).getText();
+		 
+		 
+			if(isDisplayed(GrandParkexpandStore)) {
+	            assertTrue(clickOnButton(GrandParkexpandStore));
+				}
+				else {
+					assertTrue(clickOnButton(expandStore));
+				}
+	            assertTrue(clickOnButton(btnstore));
+	            assertTrue(clickOnButton(ovly_btnCloseCross));
+
+	}
+	
 	System.out.println("Default selected store is "+ selectedStoreTitle );
 	if (selectedStoreTitle.equalsIgnoreCase("Grand Parkway")) 
 	{
