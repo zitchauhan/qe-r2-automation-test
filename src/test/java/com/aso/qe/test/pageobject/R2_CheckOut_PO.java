@@ -1343,7 +1343,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 				setInputText(CreditCardDetails_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
 				driver.switchTo().defaultContent();
 				waitForInnerFormElement(ExpDate_Input,"first-data-payment-field-exp"); 				
-				setInputText(ExpDate_Input, webPropHelper.getTestDataProperty("ThreeDigitCVV"));
+				setInputText(ExpDate_Input, webPropHelper.getTestDataProperty("ExpiryDate"));
 				driver.switchTo().defaultContent();
 				waitForInnerFormElement(PassCvv_Input,"first-data-payment-field-cvv"); 				
 				setInputText(PassCvv_Input, webPropHelper.getTestDataProperty("ThreeDigitCVV"));
