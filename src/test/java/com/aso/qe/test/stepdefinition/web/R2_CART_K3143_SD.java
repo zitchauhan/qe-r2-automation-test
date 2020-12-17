@@ -60,6 +60,13 @@ public class R2_CART_K3143_SD extends CommonActionHelper {
 	  
 	   
 	}
+	
+	@Then("^user click on View Cart and Checkout")
+	public void user_click_on_View_Cart_and_Checkout() throws Throwable {
+	   assertTrue(clickOnButton(r2CartPo.ATC_ViewCartCheckout));
+	  
+	   
+	}										   
 
 	@Then("^user verify title of the home page$")
 	public void user_verify_title_of_the_home_page() throws Throwable {

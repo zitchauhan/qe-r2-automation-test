@@ -968,7 +968,11 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		setInputText(txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
 		setInputText(txtCVVInput,webPropHelper.getTestDataProperty("ThreeDigitCVV"));
 	}
-	
+	@FindBy(xpath="//div[contains(text(),'Estimated Shipping')]/following-sibling::div[contains(text(),'FREE')]") public WebElement FreeShippingCart;
+		
+		@FindBy(xpath="(//div[@data-auid='freeShip'])[1]") public WebElement FreeShippingordersummary;
+		@FindBy(xpath="(//button[@data-auid='btncontinueShopping']") public WebElement continueshpopping;
+		@FindBy(xpath="//span[contains(text(),'Shipping')]/following-sibling::span[contains(text(),'FREE')]") public WebElement FreeShippingorderconfirmation;
 	 // To be updated by Anuj
 	   /**AG KER-3130 Starts**************************************/
     
@@ -1336,13 +1340,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 				setInputText(CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
 				driver.switchTo().defaultContent();
 				waitForInnerFormElement(CreditCardDetails_Input,"first-data-payment-field-card"); 
-				setInputText(CreditCardDetails_Input, webPropHelper.getTestDataProperty(creditCardNumber));
+				setInputText(CreditCardDetails_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
 				driver.switchTo().defaultContent();
 				waitForInnerFormElement(ExpDate_Input,"first-data-payment-field-exp"); 				
-				setInputText(ExpDate_Input, webPropHelper.getTestDataProperty("ExpDate"));
+				setInputText(ExpDate_Input, webPropHelper.getTestDataProperty("ThreeDigitCVV"));
 				driver.switchTo().defaultContent();
 				waitForInnerFormElement(PassCvv_Input,"first-data-payment-field-cvv"); 				
-				setInputText(PassCvv_Input, webPropHelper.getTestDataProperty(cvv));
+				setInputText(PassCvv_Input, webPropHelper.getTestDataProperty("ThreeDigitCVV"));
 				driver.switchTo().defaultContent();
 				flag = true;
 			}catch(Exception e) {
@@ -1399,4 +1403,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			}	
 			return flag;		
 		}
+		
+		@FindBy (xpath="//*[@id='in-store-pickup-check']") public WebElement SOF_CheckBox_CheckoutPage;
 }
