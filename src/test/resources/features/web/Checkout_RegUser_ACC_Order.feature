@@ -1,6 +1,6 @@
 Feature: CHECKOUT Registered user Academy Credit Card Tender
 
-@AutomationSmoke
+@AutomationSmoke @RegressionP1 @TC-OMNI-13475
 Scenario: Checkout -  Registered user Place Order with ACC as tender 
 	Given user launches the browser and navigates to "ASO_HOME" page plcc 
 	When user click on My Account link 
@@ -22,7 +22,8 @@ Scenario: Checkout -  Registered user Place Order with ACC as tender
 	And user enters a corresponding billing address
 	#And user check same as shipping address 
 	#And user uncheck Save Payment Info for Later Checkbox 
-	And user click on REVIEW ORDER button 
+	And user click on REVIEW ORDER button
+	And user expect discount text to be present 
 	And user click on PLACE ORDER button 
 	Then user navigates to order confirmation page
 	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present

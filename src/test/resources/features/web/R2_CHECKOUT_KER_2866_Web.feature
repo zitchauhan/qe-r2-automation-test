@@ -335,8 +335,10 @@ Scenario Outline: Verify the guest user is able to place White Glove order using
 	Then user click on Go To Shipping Method button in Checkout page
 	Then user click on go to payment present in shipping method
 	And user add "<Payment Type>" details in payment method for "guest" user
-	And user clicks on place order on checkout page 
-	Then verify user is able to successfully place the order 
+	And user click on PLACE ORDER button 
+	Then user navigates to order confirmation page
+	And user expect element THANKS FOR SUBMITTING YOUR ORDER! to be present
+	Then user able to see order number
 	Examples: 
 		|Payment Type	|
 		|Credit Card - Visa|

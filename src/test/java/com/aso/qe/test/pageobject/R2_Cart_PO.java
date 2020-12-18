@@ -803,20 +803,23 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	public void selectStoreWithZipCodeAndStoreName(String zipCode, String storeName) throws InterruptedException {
 
+		driver.manage().deleteAllCookies();
+		driver.navigate().refresh();
+		waitForPageLoad(driver);
 		if ("mobile".equalsIgnoreCase(testtype)) {
 			assertTrue(clickOnButton(lnkFindAStore_M));
 		} else {
 			assertTrue(clickOnButton(selectStoreMiniBalloon));
 		}
 		
-;		String zipCodeTxt=null;
+		/*String zipCodeTxt=null;
 		if(!SEO_YEXT_SD.yextStoreExistingAddress[4].equals(""))
 			zipCodeTxt=SEO_YEXT_SD.yextStoreExistingAddress[4];
 		else
-			zipCodeTxt=zipCode;
+			zipCodeTxt=zipCode;*/
 			
-		setInputText(txtZipCode, zipCodeTxt);
-		assertTrue(clickOnButton(btnZipCode));
+		setInputText(txtZipCode, zipCode);
+		assertTrue(clickOnButton(btnZipCode)); waitForPageLoad(driver);
 		Thread.sleep(3000);
 		
 		if(driver.findElements(By.xpath("//button[text()='View The Next 5 Stores']")).size()>0) {
@@ -838,9 +841,9 @@ public class R2_Cart_PO extends CommonActionHelper {
 			assertTrue(clickOnButton(selectStoreMiniBalloon));
 		}
 		
-		setInputText(txtZipCode, zipCodeTxt);
+		setInputText(txtZipCode, zipCode);
 		assertTrue(clickOnButton(btnZipCode));
-		Thread.sleep(3000);
+		Thread.sleep(3000);  waitForPageLoad(driver);
 		
 		assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
 		if (isDisplayed(makeMyStore_btn)) {
