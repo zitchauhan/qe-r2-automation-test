@@ -25,10 +25,10 @@ public class SEO_YEXT_SD  extends CommonActionHelper {
 		seoYextPage.signIn();
 	}
 
-	@And("^User selects the entity$")
-	public void user_selects_entity() throws Throwable{
+	@And("^User selects the entity \"(.*?)\"$")
+	public void user_selects_entity(String entity) throws Throwable{
 
-		if(!webPropHelper.getTestDataProperty("YextEntity").equals("")) {
+		if(!webPropHelper.getTestDataProperty(entity).equals("")) {
 			yextStoreExistingAddress=seoYextPage.selectExistingEntity(webPropHelper.getTestDataProperty("YextEntityFolder"), webPropHelper.getTestDataProperty("YextEntity"));
 		}
 		else {
