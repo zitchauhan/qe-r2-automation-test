@@ -27,7 +27,7 @@ Scenario: To verfiy Create new wish list for signed in customer
     And User click on the product image
    Then user click on Add WishList link
 
-@Web @All @ZYP_HP_K1915-3445 @CR-AKK @RegressionP3 @MyAccount @TC-OMNI-13370
+@Web @All @ZYP_HP_K1915-3445 @CR-AKK @RegressionP3 @MyAccount @TC-OMNI-13370 @SR-1331
 Scenario: To verfiy Create new wish list and delete it for signed in customer 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user to click on sing in and navigate to sign in page 
