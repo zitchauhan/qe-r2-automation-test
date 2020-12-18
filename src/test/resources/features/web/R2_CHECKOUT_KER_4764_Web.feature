@@ -116,8 +116,38 @@ Scenario: Verify No alternate pickup person may be entered for restricted produc
 	And user is navigated to order summary page 
 	And user should not be able to see me plus alternate	
 	
-	
-	
+
+@RegressionP3 @TC-OMNI-13510	
+Scenario: Verify customer can place order for BOPIS with correct Alternate Pick-Up Person information in checkout
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 
+	And User searches a product "BOPIS_Regular_Product" and navigates to PDP 
+	Then user click on pickup button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user will click on Checkout button and navigates to Checkout page
+	And user is navigated to order summary page 
+	And user select me + alternate pickup person 
+	Then Verify below Sub/Main Module of Checkout Page 
+		|#Verify following elements in checkout page bopis pickup|
+		|StorePickupAlternatesFirstName_input|
+		|StorePickupAlternatesLastName_input|
+		|StorePickupAlternatesEmail_input|
+		|StorePickupAlternatesPhoneNumber_input|
+	And user enter the Store Pickup Alternates FirstName "PickupFirstName"
+	And user enter the Store Pickup Alternates LastName "PickupLastName"
+	And user enter the Store Pickup Alternates Email "PickupEmail"
+	And user enter the Store Pickup Alternates PhoneNumber "PickupPhoneNumnber"
+	When user clicks on Go to payment CTA present on store pickup
+	And user verify the alternate address details
+	And user click on academy creditcard radiobtn
+	And user fills the academy credit card details in payment
+	And user enters a corresponding billing address
+	And user enters order confirmation email
+	And user click on REVIEW ORDER button
+	And user clicks on place order on checkout page	
 	
 	
 		
