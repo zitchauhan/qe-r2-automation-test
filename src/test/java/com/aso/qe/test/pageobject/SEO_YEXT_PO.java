@@ -730,7 +730,7 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 
 	public void verifyStoreCloseInPDP() {
 		logger.info("Verifying store hours in PDP page");
-		Assert.assertEquals("Closed Today", storeHoursPDP.getText());
+		Assert.assertEquals("Closed Today", driver.findElement(By.xpath("//div[@data-auid='PDP_StoreInfo']/div[2]/div")).getText());
 		logger.info("Verified store hours in PDP page");
 	}
 
