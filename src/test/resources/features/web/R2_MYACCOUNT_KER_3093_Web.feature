@@ -221,7 +221,7 @@ Scenario: Verify that user returns to the empty Wallet on Cancel with existing c
 		|#verify the following|
 		|PaymentPage_RemoveGiftCards_btnList			|
 		
-@R2_Web @ZYP_MYACCOUNT_K3093-10419 @CR-RKA @TC-OMNI-13376 @RegressionP2
+@R2_Web @ZYP_MYACCOUNT_K3093-10419 @CR-RKA
 Scenario: Verify that user is able to add a new gift card having 16 digit with 4 or 8 digit PIN in My Account with existing card 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 
