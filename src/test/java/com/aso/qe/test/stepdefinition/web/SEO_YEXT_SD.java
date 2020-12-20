@@ -221,7 +221,7 @@ public class SEO_YEXT_SD  extends CommonActionHelper {
 	}
 	
 	@And("^Verify Store created on ASO Page$")
-	public void validate_store() {
+	public void validate_store() throws InterruptedException {
 		String storeNameTxt="";
 		if(!storeName.equals(""))
 			storeNameTxt=storeName;

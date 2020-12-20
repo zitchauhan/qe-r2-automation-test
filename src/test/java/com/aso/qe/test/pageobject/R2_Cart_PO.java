@@ -817,12 +817,13 @@ public class R2_Cart_PO extends CommonActionHelper {
 			zipCodeTxt=SEO_YEXT_SD.yextStoreExistingAddress[4];
 		else
 			zipCodeTxt=zipCode;*/
-			
+		waitForPageLoad(driver);
 		setInputText(txtZipCode, zipCode);
 		assertTrue(clickOnButton(btnZipCode)); waitForPageLoad(driver);
 		Thread.sleep(3000);
-		
-		if(driver.findElements(By.xpath("//button[text()='View The Next 5 Stores']")).size()>0) {
+		//Commented the whole of below logic as flipping the store is not needed because we are marking this store as default for frist time. If the below 
+		//behaviour is shown, then raise a defect.
+		/*if(driver.findElements(By.xpath("//button[text()='View The Next 5 Stores']")).size()>0) {
 			for(int i=0;i<3;i++) {
 				clickOnButton(getfindElementByXPath("//button[text()='View The Next 5 Stores']"));
 			}
@@ -844,7 +845,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 		setInputText(txtZipCode, zipCode);
 		assertTrue(clickOnButton(btnZipCode));
 		Thread.sleep(3000);  waitForPageLoad(driver);
-		
+		*/
 		assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
 		if (isDisplayed(makeMyStore_btn)) {
 			assertTrue(clickOnButton(makeMyStore_btn));
