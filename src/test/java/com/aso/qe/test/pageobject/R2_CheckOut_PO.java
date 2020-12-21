@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -713,6 +714,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath="//*[text()='Same As Shipping Address']/ancestor::div[1]/following::*[4]")public WebElement billingCityCountryName;
    //KER-CR-4058 RKA
 	@FindBy(xpath="//*[text()='ADDRESS VERIFICATION']")public WebElement AddressVerification_MSG;//For restricted item after clicking on go to shipMethod
+	
+	
+	@FindBy(xpath="//button[@aria-label='Me']")public WebElement me_button;//For restricted item after clicking on go to shipMethod
+	@FindBy(xpath="//input[@id='ship-to-store-check']/..//label")public WebElement storePickUpInstructionsChkBox;//For restricted item after clicking on go to shipMethod
 	
 	
 	//Sep7 CR-RK KER-3151

@@ -3,6 +3,8 @@ package com.aso.qe.test.stepdefinition.web;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -41,7 +43,19 @@ public class R2_CHECKOUT_K4764_SD extends CommonActionHelper {
 		hover.click(r2CheckoutPo.mePlusAlternatePickUp_Drpdwn).build().perform();
 		Thread.sleep(Constants.thread_highest);
 	}
-
+	
+	@Then("^Validate Pick Up dropdown is disabled for SOF STS$")
+	public void user_select_me_pickup_person() throws Throwable {
+		boolean flag=false;
+		flag=isEnabled(r2CheckoutPo.me_button);
+		if(flag) {
+			Assert.fail("Pick Up Person dropdown is disabled");
+		}
+		assertTrue(clickOnButton(r2CheckoutPo.storePickUpInstructionsChkBox));
+	}
+	
+	
+	
 	@Then("^user enter the Store Pickup Alternates FirstName \"(.*?)\"$")
 	public void user_enter_the_Store_Pickup_Alternates_FirstName(String arg1) throws Throwable {
 		setInputText(r2CheckoutPo.PickupAltrFirstname_input, webPropHelper.getTestDataProperty(arg1));

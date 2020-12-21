@@ -241,6 +241,28 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		logger.debug("Signed into Yext");
 	}
 
+	
+	public void selectNextArrow(String entity) {
+		if(driver.findElements(By.xpath("(//a[@role='button' and @class='page-next page-next-disabled'])[1]")).size()==0) {
+			clickOnButton(getfindElementByXPath("(//a[@role='button' and @class='page-next'])[1]")); 
+			waitForPageLoad(driver);
+			if(driver.findElements(By.xpath("//strong[text()='"+entity+"']")).size()>0) {
+				clickOnButton(getfindElementByXPath("//strong[text()='"+entity+"']"));
+				waitForPageLoad(driver);
+				logger.info("Selected the entity "+entity);
+			}
+			else {
+				selectNextArrow(entity);
+			}
+		}
+		else if(driver.findElements(By.xpath("//strong[text()='"+entity+"']")).size()==0 & 
+				driver.findElements(By.xpath("(//a[@role='button' and @class='page-next page-next-disabled'])[1]")).size()>0){
+			Assert.fail("No Entity with name "+entity+" is present");
+		}
+		
+	}
+	
+	
 	/**
 	 * Selects an entity
 	 * @author mans5
@@ -253,10 +275,33 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		clickOnButton(getfindElementByXPath(entityFolderText));
 		waitForPageLoad(driver);
 		Thread.sleep(5000);  //Mandatory wait time
-		String entityText = "//strong[text()='"+entity+"']";
-		clickOnButton(getfindElementByXPath(entityText));
-		waitForPageLoad(driver);
-		logger.debug("Selected the entity "+entity);
+		
+		if(driver.findElements(By.xpath("//strong[text()='"+entity+"']")).size()>0){
+			clickOnButton(getfindElementByXPath("//strong[text()='"+entity+"']"));
+			waitForPageLoad(driver);
+			logger.info("Selected the entity "+entity);
+		}
+		else {
+			selectNextArrow(entity);
+		}
+		
+		
+		/*if(driver.findElements(By.xpath("//strong[text()='"+entity+"']")).size()>0) {
+			clickOnButton(getfindElementByXPath("//strong[text()='"+entity+"']"));
+			waitForPageLoad(driver);
+			logger.debug("Selected the entity "+entity);
+		}
+		else if(driver.findElement(By.xpath("(//a[@role='button' and @class='page-next'])[1]")).isEnabled()) {
+			clickOnButton(getfindElementByXPath("(//a[@role='button' and @class='page-next'])[1]"));
+			if(driver.findElements(By.xpath("//strong[text()='"+entity+"']")).size()>0) {
+				clickOnButton(getfindElementByXPath("//strong[text()='"+entity+"']"));
+				waitForPageLoad(driver);
+				logger.debug("Selected the entity "+entity);
+			}
+		}
+		else {
+			Assert.fail("No Entity is displayed");
+		}*/
 		
 		clickOnButton(addressSection); //To retrieve the existing zipcode and search in ASO page
 		String zipCode = driver.findElement(By.xpath("//input[@tid='address-postalCode-input']")).getAttribute("value");
@@ -422,6 +467,11 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 				clickOnButton(storeClosed); 
 				clickSaveButton();
 
+				if(continuePopUp.isDisplayed()) {
+					clickOnButton(continuePopUp);
+					waitForPageLoad(driver);
+				}
+
 				clickOnButton(hoursSection);
 				clickOnButton(getfindElementByXPath("//div[text()='"+day+"']/..//button"));
 				clickOnButton(getfindElementByXPath("//ul[(@class='selectbox-action-menu-dropdown' and not(contains(@style,'none')))]//button[text()='"+dayStatus+"']"));
@@ -441,8 +491,12 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 			if(txt.equalsIgnoreCase("Split")) {
 				//Below line is to ensure the From and To will get successfully updated. If status is changed from Closed, From and To textboxes will be cleared.
 				clickOnButton(storeClosed); 
-
 				clickSaveButton();
+				if(continuePopUp.isDisplayed()) {
+					clickOnButton(continuePopUp);
+					waitForPageLoad(driver);
+				}
+
 				clickOnButton(hoursSection);
 				clickOnButton(getfindElementByXPath("//div[text()='"+day+"']/..//button"));
 				clickOnButton(getfindElementByXPath("//ul[(@class='selectbox-action-menu-dropdown' and not(contains(@style,'none')))]//button[text()='"+dayStatus+"']"));
@@ -484,9 +538,15 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 			if(txt.equalsIgnoreCase("24 Hours")) {
 				//Below line is to ensure the From and To will get successfully updated. If status is changed from Closed, From and To textboxes will be cleared.
 				clickOnButton(storeClosed); 
-
-				clickSaveButton();
+				clickSaveButton(); 
+				waitForPageLoad(driver);
+				if(continuePopUp.isDisplayed()) {
+				clickOnButton(continuePopUp);
+				waitForPageLoad(driver);
+				}
+				
 				clickOnButton(hoursSection);
+				clickOnButton(getfindElementByXPath("//div[text()='"+day+"']/..//button"));
 				clickOnButton(getfindElementByXPath("//ul[(@class='selectbox-action-menu-dropdown' and not(contains(@style,'none')))]//button[text()='"+dayStatus+"']"));
 				clickSaveButton();
 			}
@@ -532,8 +592,9 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		logger.info("Selected City");
 	}
 
-	public void selectStore(String storeName) {
+	public void selectStore(String storeName) throws InterruptedException {
 		logger.info("Selecting Store");
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//strong[text()='"+storeName+"']")).click();
 		//clickOnButton(getfindElementByXPath("//strong[text()='"+storeName+"']"));
 		waitForPageLoad(driver);
@@ -802,50 +863,73 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		}
 
 		featuredMessageTxt.sendKeys("This is a new feature");
-
-		ArrayList<String> arr = new ArrayList<>();
-		String num = null;
+		entityIDTxt.sendKeys(RandomStringUtils.randomNumeric(4));
+		clickOnButton(continueBtn); 
+		waitForPageLoad(driver);
+		
+		/*ArrayList<String> arr = new ArrayList<>();
+		arr.add("505");
+		arr.add("639");
+		arr.add("126");
+		arr.add("924");*/
+		/*String num = null;
 		for(int i=0;i<10;i++) {
 			num = RandomStringUtils.randomNumeric(3);
 			arr.add(num);
 		}
-
-		for(int i=0;i<arr.size();i++) {
+*/
+		/*for(int i=0;i<arr.size();i++) {
 			entityIDTxt.sendKeys(arr.get(i));
-			clickOnButton(continueBtn); waitForPageLoad(driver);
-			validateEntityErrorMessage(arr.get(i));
+			clickOnButton(continueBtn); 
+			waitForPageLoad(driver);
 			if(driver.findElements(By.xpath("//div[text()='Please provide a unique value for the Entity ID']")).size()>0) {
-				i++;
-				validateEntityErrorMessage(arr.get(i));
+				i=i+1;
+				recursion(arr.get(i));
 			}
 			else {
 				break;
 			}
-		}
+		}*/
 
 		/*Assert.assertFalse(driver.findElements(By.xpath("//div[text()='Please provide valid field values']")).size()>0); //verify all fields error message when saved
 		Assert.assertFalse(driver.findElements(By.xpath("//div[text()='Value must be a valid phone number']")).size()>0); //verify phone number error message when saved
-		Assert.assertFalse(driver.findElements(By.xpath("//div[text()='Invalid Address']")).size()>0); //verify address error message when saved
-*/		Assert.assertTrue(driver.findElements(By.xpath("//div[@class='breadcrumb-element']/..//div[text()='"+storeEntityName+"']")).size()>0); //Ensure user is navigated to next page after saving
+		Assert.assertFalse(driver.findElements(By.xpath("//div[text()='Invalid Address']")).size()>0);*/ //verify address error message when saved
+		Assert.assertFalse(driver.findElements(By.xpath("//div[text()='Please provide a unique value for the Entity ID']")).size()>0);
+		Assert.assertTrue(driver.findElements(By.xpath("//div[@class='breadcrumb-element']/..//div[text()='"+storeEntityName+"']")).size()>0); //Ensure user is navigated to next page after saving
 		logger.info("Created a new store: " +storeEntityName);
-		
 		String[] data = {storeEntityName}; //Add in this array anything as per the need to return back the data 
 		return data;
 		
 	}
 
-	public void validateEntityErrorMessage(String entityID) {
+	public int validateEntityErrorMessage(ArrayList<String> entityIDs) {
+		int i=0;
+		for(i=0;i<entityIDs.size();++i) {  //505,639,126,924
+			//i+=1;
+			if(driver.findElements(By.xpath("//div[text()='Please provide a unique value for the Entity ID']")).size()>0) {
+				entityIDTxt.clear();
+				entityIDTxt.sendKeys(entityIDs.get(i)); //639
+				clickOnButton(continueBtn);   waitForPageLoad(driver);
+ 				validateEntityErrorMessage(entityIDs);
+			}
+		}
+		return i;
+	}
+	
+	
+	public void recursion(int i,String entityID) {
 		if(driver.findElements(By.xpath("//div[text()='Please provide a unique value for the Entity ID']")).size()>0) {
 			entityIDTxt.clear();
 			entityIDTxt.sendKeys(entityID);
-			clickOnButton(continueBtn);
-			validateEntityErrorMessage(entityID);
+			clickOnButton(continueBtn);   
+			waitForPageLoad(driver);
+			recursion(i,entityID);
 		}
 	}
-	
+
 	public String fillMandatoryFields(String from,String to) {
 		logger.info("Filling mandatory fields");
-		
+
 		//Description section
 		clickOnButton(descriptionSection);
 		descriptionInput.sendKeys("New Store In Town "+RandomStringUtils.randomAlphabetic(5));
@@ -892,11 +976,12 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		return neighbourhoodName;
 	}
 
-	public void validateStoreInASO(String storeName) {
+	public void validateStoreInASO(String storeName) throws InterruptedException {
 		logger.info("Validating Store in ASO Store Locator page");
 		//Assert.assertEquals(storeName,driver.findElement(By.xpath("//h1[@id='neighborhoodLabel']")).getText()); 
 		Assert.assertEquals(storeName.toUpperCase(), driver.findElement(By.xpath("//h1[@id='neighborhoodLabel']")).getText());  //verify Store Name in Store Locator page
 		logger.info("Validted Store in ASO Store Locator page");
+		Thread.sleep(5000);
 	}
 	
 	public void verifyStoreDetailsInStoreLocator(String storeName,ArrayList<String> address,String yextMainPhoneValidation) {
