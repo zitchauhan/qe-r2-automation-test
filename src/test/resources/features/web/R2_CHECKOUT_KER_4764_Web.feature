@@ -117,7 +117,7 @@ Scenario: Verify No alternate pickup person may be entered for restricted produc
 	And user should not be able to see me plus alternate	
 	
 
-@RegressionP3 @TC-OMNI-13510	
+@RegressionP3 @TC-OMNI-13510 @SR-1333
 Scenario: Verify customer can place order for BOPIS with correct Alternate Pick-Up Person information in checkout
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 

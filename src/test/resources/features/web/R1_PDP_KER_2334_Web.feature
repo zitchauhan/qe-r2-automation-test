@@ -2,7 +2,7 @@
 @ignoreUAT
 Feature: Back in Stock Notifications on the PDP - Email
 
-  @Web @C-PDP @RegressionP2 @KER-2334 @ZYP_PDP_K2334-3422 @CR-RKA @RBeta @TC-OMNI-13504
+  @Web @C-PDP @RegressionP2 @KER-2334 @ZYP_PDP_K2334-3422 @CR-RKA @RBeta @TC-OMNI-13504 @SR-1332
   Scenario: To verify BIS Notifications on the PDP - Single email notification
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user enters "OutOfStockProductSKUForBIS" in the search box 
