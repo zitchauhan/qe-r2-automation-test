@@ -343,8 +343,6 @@ Scenario Outline: Verify the guest user is able to place White Glove order using
 		|Payment Type	|
 		|Credit Card - Visa|
 #Data changed
-
-
 	
 	
 

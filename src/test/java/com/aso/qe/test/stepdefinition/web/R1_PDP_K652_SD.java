@@ -23,9 +23,6 @@ public class R1_PDP_K652_SD extends CommonActionHelper {
 	@Then("^user click on Review and Rating on top of the page$")
 	public void user_click_on_Review_and_Rating_on_top_of_the_page() throws Throwable {
 	   assertTrue(clickOnButton(pd_p.starRatingOnPDPtop));
-	}
-	
-	
-	
+	}	
 
 }
