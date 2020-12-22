@@ -24,5 +24,8 @@ public class R1_PDP_K652_SD extends CommonActionHelper {
 	public void user_click_on_Review_and_Rating_on_top_of_the_page() throws Throwable {
 	   assertTrue(clickOnButton(pd_p.starRatingOnPDPtop));
 	}
+	
+	
+	
 
 }

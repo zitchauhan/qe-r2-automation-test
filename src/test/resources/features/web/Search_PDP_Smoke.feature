@@ -1,7 +1,7 @@
 Feature: PDP Scenarios based on searching the products
   
 
-   @RegressionP2 @TC-OMNI-12569
+  @RegressionP2 @TC-OMNI-12569
   Scenario: Search for a regular product and verify URL,Image,Reviews,Rating,Attributes and Details&Specs on the PDP page
   Given user launches the browser and navigates to "ASO_HOME" page
  		When user enters "SearchPDP" in the search box

@@ -25,7 +25,7 @@ Scenario: Verify Billing address on check out page - pre-populated billing addre
 |AddressVerificationSystemModelPopUp|
 
 
-@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8115 @CR-RKA
+@R2_Web @Regression @R2_All @P-Low @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-8115 @CR-RKA 
 Scenario: Verify Billing address on check out Page - Same as Shipping Address
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then user should able to click on Signin button 
@@ -210,7 +210,7 @@ Scenario: Verify if 'Same as Shipping Address' checkbox is disabled for STS orde
 		|SignuptogetHotDeals_checkBox|
 		|ReviewOrder_Btn|
 		
-@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-3132 @ZYP_CART_K3132-10442 @C-BOPIS
+@R2_Web @Regression @R2_All @P-Low @CB-Checkout @KER-3132 @ZYP_CART_K3132-10442 @C-BOPIS 
 Scenario: Verify guest user is able to see the See In-Store Pickup Instructions section 
 	Given user launches the browser and navigates to "ASO_HOME" page
 	Then User should be able to click on Find Store 
@@ -231,5 +231,12 @@ Scenario: Verify guest user is able to see the See In-Store Pickup Instructions 
 #	And user click on Apply button 
 #	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
 #	And user clicks on Review order button on checkout page
+
+
+
+	
+	
+	
+	
 	
 

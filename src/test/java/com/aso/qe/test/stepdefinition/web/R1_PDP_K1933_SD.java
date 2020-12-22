@@ -16,6 +16,8 @@ public class R1_PDP_K1933_SD extends CommonActionHelper{
     assertTrue(isDisplayed(pdp_po.txtShippingRelatedMsg));
     
 	}
+	
+	
 
 }
 
