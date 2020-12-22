@@ -9,12 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.CommonGenericUtils;
@@ -1410,4 +1410,23 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		}
 		
 		@FindBy (xpath="//*[@id='in-store-pickup-check']") public WebElement SOF_CheckBox_CheckoutPage;
+		@FindBy (xpath="//a[text()='Edit']") public WebElement editBtn;
+		@FindBy (xpath="//a[text()='Change Location']") public WebElement changeLocationBtn;
+		@FindBy (xpath="//p[contains(text(),'Ship and pickup not allowed on selected store, please update cart or change store')]") public WebElement orderErrorMsg;
+		
+		
+		
+		public void editStorePickup() {
+			logger.info("Clicking on Edit Store button");
+			clickOnButton(editBtn);
+			clickOnButton(changeLocationBtn);
+			logger.info("Clicked on Edit Store button");
+		}
+		
+		public void verifyOrderErrorMessage() {
+			logger.info("Verify the error message displayed");
+			Assert.assertEquals(true, orderErrorMsg.isDisplayed());
+			logger.info("Error message displayed is: " +orderErrorMsg.getText());
+		}
+		
 }

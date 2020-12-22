@@ -795,9 +795,10 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		logger.info("Verified store hours in PDP page");
 	}
 
-	public void selectAddSingleEntity() {
+	public void selectAddSingleEntity() throws InterruptedException {
 		logger.info("Selecting Single Entity option");
 		clickOnButton(addLocation);
+		Thread.sleep(2000);
 		clickOnButton(singleEntity);
 		waitForPageLoad(driver);
 		logger.info("Selected Single Entity option");

@@ -395,6 +395,12 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	@FindBy(xpath ="//*[contains(@data-auid, 'wishListPopover_add_to_wishList_')]")
 	public WebElement lnkTextExistingList;	
+	
+	@FindBy(xpath ="//button[text()='Confirm']")
+	public WebElement confirmBtn;	
+	
+	
+	
 	// End KER-2939 CR-AKK
 
 	// Start KER-3127 CR-AKK
@@ -801,6 +807,23 @@ public class R2_Cart_PO extends CommonActionHelper {
 		assertTrue(clickOnButton(btnFindStoreClose));
 	}
 
+	//Below method is to only input zipcode and storename without clicking on mini balloon button. This is useful to change the
+	//store from Checkout page
+	public void selectStore(String zipCode, String storeName) throws InterruptedException {
+		logger.info("Selecting Store");
+		setInputText(txtZipCode, zipCode);
+		assertTrue(clickOnButton(btnZipCode));
+		Thread.sleep(3000);
+		assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
+		if (isDisplayed(makeMyStore_btn)) {
+			assertTrue(clickOnButton(makeMyStore_btn));
+		}
+		assertTrue(clickOnButton(btnFindStoreClose));
+		logger.info("Selected Store");
+		clickOnButton(confirmBtn);
+	}
+	
+	
 	public void selectStoreWithZipCodeAndStoreName(String zipCode, String storeName) throws InterruptedException {
 
 		driver.manage().deleteAllCookies();
