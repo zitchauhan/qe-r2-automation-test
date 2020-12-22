@@ -451,6 +451,31 @@ public void user_click_on_continue_button() throws Throwable {
 	Thread.sleep(6000);
 	clickOnButton(r2CheckOutPo.continueshpopping);
 }
+@Then("^verify the not available for shipping Message on cart page$")
+public void verify_the_not_available_for_shipping_Message_on_cart_page() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.notshippingcart));
+}
+
+@Then("^Verify Items for Store PickUp message on checkout page$")
+public void verify_Items_for_Store_PickUp_message_on_checkout_page() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.ItemForStorePickup));
+}
+
+@When("^user click on store pick up button$")
+public void user_click_on_store_pick_up_button() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.Storepickupbutton));
+	clickOnButton(r2CheckOutPo.Storepickupbutton);
+}
+
+@Then("^click the Go to Payment button$")
+public void click_the_Go_to_Payment_button() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.GotoPaymentbutton));
+	clickOnButton(r2CheckOutPo.GotoPaymentbutton);
+}
 
 @Then("^Validate that shipping is free on order confirmation page$")
 public void validate_that_shipping_is_free_on_order_confirmation_page() throws Throwable {

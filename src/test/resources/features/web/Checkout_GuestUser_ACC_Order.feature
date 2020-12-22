@@ -146,9 +146,31 @@ Scenario: Validate for guest user, when STH + BOPIS items are added and the comb
   Then verify user is able to successfully place the order
   And Validate that shipping is free on order confirmation page 
 	
-	
-	
-	
+	@RegressionP3     
+Scenario: Verify Display only items (Ex. Oxygen cylinder, sprays) can only be Buy in-store and BOPIS/STS
+  Given user launches the browser and navigates to "ASO_HOME" page 
+   And User should be able to click on Find Store 
+   And Find Store Modal should pop-up 
+   When User select store with "BOPIS_OrderID_Zipcode"
+   And User searches a product "Display_Only_item" and navigates to PDP 
+   And user click on store pick up button
+   And user click on viewcart button
+   Then user navigates to Cart Page
+   And verify the not available for shipping Message on cart page
+   And user clicks on checkout button on cart page
+   And Verify Items for Store PickUp message on checkout page
+   And click the Go to Payment button	
+   And user adds shipment address on checkout page for "guest" user
+	Then user click on Go To Shipping Method button in Checkout page
+	Then user click on go to payment present in shipping method
+	And user click on academy creditcard radiobtn 
+	And user fills the academy credit card details in payment 
+	And user enters a corresponding billing address
+	And user enters order confirmation email
+	And user click on REVIEW ORDER button
+	And user expect discount text to be present 
+	And user clicks on place order on checkout page
+  Then verify user is able to successfully place the order
 	
 	
 	
