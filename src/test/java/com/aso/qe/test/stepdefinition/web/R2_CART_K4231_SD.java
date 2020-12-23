@@ -11,6 +11,7 @@ import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class R2_CART_K4231_SD extends CommonActionHelper {
 	R2_Cart_PO cartR2PageObj = PageFactory.initElements(driver, R2_Cart_PO.class);
@@ -33,6 +34,7 @@ public class R2_CART_K4231_SD extends CommonActionHelper {
 				webPropHelper.getTestDataProperty(storeName));
 	}
 	
+
 	@And("^user changes store pickup with zipcode \"(.*?)\" and storename \"(.*?)\"$")
 	public void user_selects_store(String zipCode, String storeName) throws Throwable {
 		checkoutPO.editStorePickup();
@@ -69,4 +71,19 @@ public class R2_CART_K4231_SD extends CommonActionHelper {
 			zip=zipCode;
 		cartR2PageObj.selectStoreWithZipCodeAndStoreName(zip,storeNameSelect);
 	}
+
+	@When("^user enter qty more then the limit qty by \"(.*?)\"$")
+	public void user_enter_qty_more_then_the_limit(int qty)  throws Throwable {
+		
+		cartR2PageObj.increaseQuantityOnCartPage(qty);
+		
+     }
+	
+	@Then("^user should get message item is limited to qty per order$")
+	public void user_should_get_message_item_is_limited_to_qty_per_order()  throws Throwable {
+		
+		cartR2PageObj.verifyLimitedQtyMsgPopup();
+		
+    }
+
 }

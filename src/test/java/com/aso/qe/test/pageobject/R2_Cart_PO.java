@@ -624,6 +624,13 @@ public class R2_Cart_PO extends CommonActionHelper {
 		assertTrue(isDisplayed(txtEstimatedTaxesCart));
 		assertTrue(isDisplayed(txtTotal));//txtTotalCart
 	}
+	
+	public void verifyLimitedQtyMsgPopup() 
+	{
+		assertTrue(isDisplayed(ErrorMsgLimitedqty));
+		System.out.println("-------------------------------------"+getText(ErrorMsgLimitedqty)+"---------------------------------------------------");
+	
+	}
 	// End KER-2911 CR-DPK
 
 	// Start KER-2940 CR-DPK
@@ -715,7 +722,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 		int increasedQuantity = Integer.parseInt(quantityDisplayed) + differencValue;
 		setInputText(input_Quantity, Integer.toString(increasedQuantity));
 		tabInputBox(input_Quantity);
-		getDriver().navigate().refresh();
+		//getDriver().navigate().refresh();
 		waitForElement(input_Quantity);
 	}
 
@@ -965,8 +972,12 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath ="//*[@data-auid='miniCart']//button")public WebElement clickCartIconFromGlobalHeader;  // SID 12-Jan
 	@FindBy(xpath ="//*[text()='Not available for In-Store pickup']") public WebElement Bopis_Rbn;
 
+
 	//	@FindBy(xpath = "//*[text()='$']/following::div")//duplicate Done
 	//	public WebElement txtActualPrice;
+
+	@FindBy(xpath ="//*[contains(text(), \"Sorry, the selected item is limited\")]")public WebElement ErrorMsgLimitedqty;
+		
 	//Your Cart item details Finish
 	//****************************************************************************************************************
 	// Order Summary (Start)
