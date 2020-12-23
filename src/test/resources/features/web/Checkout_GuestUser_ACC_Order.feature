@@ -51,7 +51,7 @@ Scenario: Validate for guest user when the order total is equal to and above $34
 	
 	
 	
-	 @RegressionP2 @TC-OMNI-13529
+   @RegressionP2 @TC-OMNI-13529
    Scenario: Validate for registered user if the order total equal to and above 24.99, then user should have free shipping. Verify the charges on checkout and order confirmation screen and order details page also	
    Given user launches the browser and navigates to "ASO_HOME" page 
    When user clicks on SignIn link from global header
@@ -68,8 +68,8 @@ Scenario: Validate for guest user when the order total is equal to and above $34
    And user validates that free shipping is applied
    And user clicks on checkout button on cart page
    And validates that shipping is free on order summary
-	And user adds shipment address on checkout page for "guest" user
-	Then user click on Go To Shipping Method button in Checkout page
+	#And user adds shipment address on checkout page for "guest" user
+	#Then user click on Go To Shipping Method button in Checkout page
 	Then user click on go to payment present in shipping method
 	And user click on academy creditcard radiobtn 
 	And user fills the academy credit card details in payment 
