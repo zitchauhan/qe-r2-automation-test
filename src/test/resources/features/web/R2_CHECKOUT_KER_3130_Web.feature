@@ -80,7 +80,7 @@ Feature: [Web] Billing Address Verification
     Then user clicks on the Review order button
     And user able to see error msgs for Phone Email Zip Address fields
     
-  @RegressionP2
+  @RegressionP2 @TC-OMNI-13499
   Scenario: Verify user should not be able to place order for more than the limit in a single day for MULTIPLE RESTRICTED ITEMS items with the same billing address
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	And user selects store with "FindStoreZipcode" and "BOPIS_Store_Selection"

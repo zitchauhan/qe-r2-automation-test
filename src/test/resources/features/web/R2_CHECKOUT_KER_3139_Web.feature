@@ -84,7 +84,7 @@ Scenario: Verify if CVV invalid due to non-number input
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	
-	@RegressionP2 
+	@RegressionP2  @TC-OMNI-13506
 	Scenario: Validate user is able to place order successfully with STS + BOPIS + SOF item with CC + GC as payment method
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then User should be able to click on Find Store 
