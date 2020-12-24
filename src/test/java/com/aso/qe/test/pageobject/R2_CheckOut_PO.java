@@ -979,6 +979,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="(//div[@data-auid='freeShip'])[1]") public WebElement FreeShippingordersummary;
 		@FindBy(xpath="(//button[@data-auid='btncontinueShopping']") public WebElement continueshpopping;
 		@FindBy(xpath="//span[contains(text(),'Shipping')]/following-sibling::span[contains(text(),'FREE')]") public WebElement FreeShippingorderconfirmation;
+		@FindBy(xpath="//span[contains(text(),'Not available for shipping')]") public WebElement notshippingcart;
+		@FindBy(xpath="//div[contains(text(),'Items for Store Pick Up')]") public WebElement ItemForStorePickup;
+		@FindBy(xpath="//div[contains(text(),'Store pick up')]") public WebElement Storepickupbutton;
+		@FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']") public WebElement GotoPaymentbutton;
 	 // To be updated by Anuj
 	   /**AG KER-3130 Starts**************************************/
     
