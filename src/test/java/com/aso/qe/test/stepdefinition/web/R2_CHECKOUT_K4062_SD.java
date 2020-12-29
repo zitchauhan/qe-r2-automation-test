@@ -8,15 +8,13 @@ import java.util.Set;
 //
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
+import com.aso.qe.framework.common.FrameWorkHelper;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_OrderConfirmation_Po;
@@ -26,7 +24,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.restassured.internal.assertion.PathFragmentEscaper;
 
 public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R2_CheckOut_PO.class);
@@ -58,6 +55,14 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("Zipcode"));
 			Thread.sleep(Constants.thread_low);
 			//assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
+		} else {
+			setInputText(r2CheckOutPo.inputCheckoutFirstName, webPropHelper.getTestDataProperty("FirstName"));
+			setInputText(r2CheckOutPo.inputCheckoutLasttName, webPropHelper.getTestDataProperty("LastName"));
+			setInputText(r2CheckOutPo.inputCheckoutPhoneNumber, r2MyAccountPO.generateRandomMobileNumber());
+			setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty("Address").concat(FrameWorkHelper.getRandomAlphabetic(3)));
+			Thread.sleep(Constants.thread_low);
+			setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("Zipcode"));
+			Thread.sleep(Constants.thread_low);
 		}
 		Thread.sleep(Constants.thread_medium);
 	}
