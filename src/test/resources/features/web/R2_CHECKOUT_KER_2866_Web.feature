@@ -331,7 +331,7 @@ Scenario Outline: Verify the guest user is able to place White Glove order using
 	Then user navigates to Cart Page
 	And user validate the WG bulk message is visible on cart page
 	And user clicks on checkout button on cart page
-	And user adds shipment address on checkout page for "guest" user
+	And user adds shipment address on checkout page for "guest_with_random_address" user
 	Then user click on Go To Shipping Method button in Checkout page
 	Then user click on go to payment present in shipping method
 	And user add "<Payment Type>" details in payment method for "guest" user

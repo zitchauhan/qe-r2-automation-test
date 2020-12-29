@@ -10,15 +10,13 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
+import com.aso.qe.framework.common.FrameWorkHelper;
 import com.aso.qe.test.pageobject.R2_CheckOut_PO;
 import com.aso.qe.test.pageobject.R2_MyAccount_PO;
 import com.aso.qe.test.pageobject.R2_OrderConfirmation_Po;
@@ -28,7 +26,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.restassured.internal.assertion.PathFragmentEscaper;
 
 public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 	private static final Logger logger = Logger.getLogger(R2_CheckOut_PO.class);
@@ -60,6 +57,14 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 			setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("Zipcode"));
 			Thread.sleep(Constants.thread_low);
 			//assertTrue(clickOnButton(r2CheckOutPo.btnGoToShippingMethod));
+		} else {
+			setInputText(r2CheckOutPo.inputCheckoutFirstName, webPropHelper.getTestDataProperty("FirstName"));
+			setInputText(r2CheckOutPo.inputCheckoutLasttName, webPropHelper.getTestDataProperty("LastName"));
+			setInputText(r2CheckOutPo.inputCheckoutPhoneNumber, r2MyAccountPO.generateRandomMobileNumber());
+			setInputText(r2CheckOutPo.inputCheckoutAddress, webPropHelper.getTestDataProperty("Address").concat(FrameWorkHelper.getRandomAlphabetic(3)));
+			Thread.sleep(Constants.thread_low);
+			setInputText(r2CheckOutPo.inputCheckoutZipCode, webPropHelper.getTestDataProperty("Zipcode"));
+			Thread.sleep(Constants.thread_low);
 		}
 		Thread.sleep(Constants.thread_medium);
 	}
@@ -472,6 +477,31 @@ public void user_click_on_continue_button() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
 	Thread.sleep(6000);
 	clickOnButton(r2CheckOutPo.continueshpopping);
+}
+@Then("^verify the not available for shipping Message on cart page$")
+public void verify_the_not_available_for_shipping_Message_on_cart_page() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.notshippingcart));
+}
+
+@Then("^Verify Items for Store PickUp message on checkout page$")
+public void verify_Items_for_Store_PickUp_message_on_checkout_page() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.ItemForStorePickup));
+}
+
+@When("^user click on store pick up button$")
+public void user_click_on_store_pick_up_button() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.Storepickupbutton));
+	clickOnButton(r2CheckOutPo.Storepickupbutton);
+}
+
+@Then("^click the Go to Payment button$")
+public void click_the_Go_to_Payment_button() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.GotoPaymentbutton));
+	clickOnButton(r2CheckOutPo.GotoPaymentbutton);
 }
 
 @Then("^Validate that shipping is free on order confirmation page$")

@@ -900,6 +900,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		logger.debug("Credit card number entered in the Field "+cvv);
 	}
 
+	
 
 	public void enterExpirationValue(String expirationValue) {
 		setInputText(txtExpirationDateInput, expirationValue);
@@ -978,6 +979,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="(//div[@data-auid='freeShip'])[1]") public WebElement FreeShippingordersummary;
 		@FindBy(xpath="(//button[@data-auid='btncontinueShopping']") public WebElement continueshpopping;
 		@FindBy(xpath="//span[contains(text(),'Shipping')]/following-sibling::span[contains(text(),'FREE')]") public WebElement FreeShippingorderconfirmation;
+		@FindBy(xpath="//span[contains(text(),'Not available for shipping')]") public WebElement notshippingcart;
+		@FindBy(xpath="//div[contains(text(),'Items for Store Pick Up')]") public WebElement ItemForStorePickup;
+		@FindBy(xpath="//div[contains(text(),'Store pick up')]") public WebElement Storepickupbutton;
+		@FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']") public WebElement GotoPaymentbutton;
 	 // To be updated by Anuj
 	   /**AG KER-3130 Starts**************************************/
     
@@ -1005,7 +1010,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
     //Only for SOF Item--Start KER-KER-7033 & KER-7031
     @FindBy(xpath="//*[contains(text(),'SPECIAL ORDER SHIP TO STORE')]")public WebElement ShipToStoreforSOF_Txt;
     @FindBy(xpath="//*[contains(text(),'You must be at least 18 years')]")public WebElement ShipToStoreforSOF_compliance_Txt;
-    @FindBy(xpath="//*[@data-auid='btncheckout_ship_to_store_submit_button']")public WebElement ShipToStoreforSOF_Payment_Btn;
+    @FindBy(xpath="//*[@data-auid='btncheckout_goto_shipping_payment_btn']")public WebElement ShipToStoreforSOF_Payment_Btn;
     @FindBy(xpath="//*[@type='checkbox']")public WebElement selectCheckbox;  //Sid 22-Jan
     
     @FindBy (xpath="//*[contains(@data-auid,'shipping_method_shipment_item_')]//p[contains(text(),'$') or contains(text(),'FREE')] | //*[contains(@data-auid,'checkout_shipping_method_shipment_item') and not (contains(@data-auid,'image'))]/p")
