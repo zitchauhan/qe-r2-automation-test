@@ -84,6 +84,33 @@ Scenario: Verify if CVV invalid due to non-number input
 	And user adds shipment address on checkout page for "guest" user 
 	And user selects shipment method on check out page for "guest" user 
 	
+	@RegressionP2  @TC-OMNI-13506
+	Scenario: Validate user is able to place order successfully with STS + BOPIS + SOF item with CC + GC as payment method
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then User should be able to click on Find Store 
+	And Find Store Modal should pop-up 
+	When User select store with "BOPIS_Store2" 	
+	Then user enters "BOPIS_SOF_Product" in the searchbox
+	Then user validates estimated date is visible on "PDP"
+	Then user click on pickup button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user click on checkout button in Cart page 
+	And user does accepts the firearm specific compliance
+	And user clicks on Continue button
+  And user click on academy creditcard radiobtn
+  And user fills the academy credit card details in payment
+  Then user click on GiftCard Plus icon in Checkout page
+	And user enter Gift card Number "Valid16DigitGiftCardNumber"
+	And user enter Pin Number "Valid8DigitGiftCardPIN" 
+	And user click on Apply button
+  And user enters a corresponding billing address
+  And user enters order confirmation email
+  And user click on REVIEW ORDER button
+  And user clicks on place order on checkout page
+  Then verify user is able to successfully place the order
+   
+	
 	
 	
     

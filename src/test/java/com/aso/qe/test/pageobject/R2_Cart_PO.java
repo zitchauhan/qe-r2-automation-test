@@ -395,6 +395,12 @@ public class R2_Cart_PO extends CommonActionHelper {
 
 	@FindBy(xpath ="//*[contains(@data-auid, 'wishListPopover_add_to_wishList_')]")
 	public WebElement lnkTextExistingList;	
+	
+	@FindBy(xpath ="//button[text()='Confirm']")
+	public WebElement confirmBtn;	
+	
+	
+	
 	// End KER-2939 CR-AKK
 
 	// Start KER-3127 CR-AKK
@@ -618,6 +624,13 @@ public class R2_Cart_PO extends CommonActionHelper {
 		assertTrue(isDisplayed(txtEstimatedTaxesCart));
 		assertTrue(isDisplayed(txtTotal));//txtTotalCart
 	}
+	
+	public void verifyLimitedQtyMsgPopup() 
+	{
+		assertTrue(isDisplayed(ErrorMsgLimitedqty));
+		System.out.println("-------------------------------------"+getText(ErrorMsgLimitedqty)+"---------------------------------------------------");
+	
+	}
 	// End KER-2911 CR-DPK
 
 	// Start KER-2940 CR-DPK
@@ -709,7 +722,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 		int increasedQuantity = Integer.parseInt(quantityDisplayed) + differencValue;
 		setInputText(input_Quantity, Integer.toString(increasedQuantity));
 		tabInputBox(input_Quantity);
-		getDriver().navigate().refresh();
+		//getDriver().navigate().refresh();
 		waitForElement(input_Quantity);
 	}
 
@@ -801,6 +814,23 @@ public class R2_Cart_PO extends CommonActionHelper {
 		assertTrue(clickOnButton(btnFindStoreClose));
 	}
 
+	//Below method is to only input zipcode and storename without clicking on mini balloon button. This is useful to change the
+	//store from Checkout page
+	public void selectStore(String zipCode, String storeName) throws InterruptedException {
+		logger.info("Selecting Store");
+		setInputText(txtZipCode, zipCode);
+		assertTrue(clickOnButton(btnZipCode));
+		Thread.sleep(3000);
+		assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
+		if (isDisplayed(makeMyStore_btn)) {
+			assertTrue(clickOnButton(makeMyStore_btn));
+		}
+		assertTrue(clickOnButton(btnFindStoreClose));
+		logger.info("Selected Store");
+		clickOnButton(confirmBtn);
+	}
+	
+	
 	public void selectStoreWithZipCodeAndStoreName(String zipCode, String storeName) throws InterruptedException {
 
 		driver.manage().deleteAllCookies();
@@ -817,12 +847,13 @@ public class R2_Cart_PO extends CommonActionHelper {
 			zipCodeTxt=SEO_YEXT_SD.yextStoreExistingAddress[4];
 		else
 			zipCodeTxt=zipCode;*/
-			
+		waitForPageLoad(driver);
 		setInputText(txtZipCode, zipCode);
 		assertTrue(clickOnButton(btnZipCode)); waitForPageLoad(driver);
 		Thread.sleep(3000);
-		
-		if(driver.findElements(By.xpath("//button[text()='View The Next 5 Stores']")).size()>0) {
+		//Commented the whole of below logic as flipping the store is not needed because we are marking this store as default for frist time. If the below 
+		//behaviour is shown, then raise a defect.
+		/*if(driver.findElements(By.xpath("//button[text()='View The Next 5 Stores']")).size()>0) {
 			for(int i=0;i<3;i++) {
 				clickOnButton(getfindElementByXPath("//button[text()='View The Next 5 Stores']"));
 			}
@@ -844,7 +875,7 @@ public class R2_Cart_PO extends CommonActionHelper {
 		setInputText(txtZipCode, zipCode);
 		assertTrue(clickOnButton(btnZipCode));
 		Thread.sleep(3000);  waitForPageLoad(driver);
-		
+		*/
 		assertTrue(clickOnButton(driver.findElement(By.xpath("//*[text()='" + storeName + "']"))));
 		if (isDisplayed(makeMyStore_btn)) {
 			assertTrue(clickOnButton(makeMyStore_btn));
@@ -941,8 +972,12 @@ public class R2_Cart_PO extends CommonActionHelper {
 	@FindBy(xpath ="//*[@data-auid='miniCart']//button")public WebElement clickCartIconFromGlobalHeader;  // SID 12-Jan
 	@FindBy(xpath ="//*[text()='Not available for In-Store pickup']") public WebElement Bopis_Rbn;
 
+
 	//	@FindBy(xpath = "//*[text()='$']/following::div")//duplicate Done
 	//	public WebElement txtActualPrice;
+
+	@FindBy(xpath ="//*[contains(text(), \"Sorry, the selected item is limited\")]")public WebElement ErrorMsgLimitedqty;
+		
 	//Your Cart item details Finish
 	//****************************************************************************************************************
 	// Order Summary (Start)

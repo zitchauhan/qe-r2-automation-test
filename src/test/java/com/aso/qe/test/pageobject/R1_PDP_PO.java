@@ -1334,8 +1334,11 @@ public class R1_PDP_PO extends CommonActionHelper
 				
 			@FindBy(xpath="//*[text()='Out of Stock Online']") public WebElement GCOutOfStock;
 			@FindBy(xpath="//*[@data-auid='qtyResMsg']") public WebElement LimitedQtyMsgPDP;
-			@FindBy(xpath="//*[contains(text(),'Limit 1 per customer')]") public WebElement LimitedQtyMsgCart;
-			@FindBy(xpath="//*[contains(@data-auid,'crt_lnkProd')]") public WebElement productNameCartPage;
+
+
+			@FindBy(xpath="//*[contains(text(),'Limit 3 per customer per day')]") public WebElement LimitedQtyMsgCart;
+			@FindBy(xpath="//*[contains(@data-auid,'crt_lnkProdName')]") public WebElement productNameCartPage;
+
 			@FindBy(xpath="//*[contains(text(), \"WE'RE SORRY\")]") public WebElement ItemOOSCart;
 			
 			public void verifySpecialCharacterProduct(String searchText) throws Exception {

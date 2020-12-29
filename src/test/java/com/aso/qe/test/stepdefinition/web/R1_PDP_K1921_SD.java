@@ -205,17 +205,23 @@ public class R1_PDP_K1921_SD extends CommonActionHelper{
 		isDisplayed(pdpPageObj.MsgquantityLimitation);
 	}
 
-	@And("^user verifies the restricted message is visible on \"(.*?)\"$")
+	@Then("^user verifies the restricted message is visible on \"(.*?)\"$")
 	public void user_verifies_the_restricted_message_is_visible_on_PDP(String page) throws Throwable
 	{
-		if(page.equalsIgnoreCase("PDP"))
+		
+		if(page.equals("PDP"))
 		{
+		
 		assertTrue(isDisplayed(pdpPageObj.LimitedQtyMsgPDP));
+		System.out.println("****************************************************************************"+getText(pdpPageObj.LimitedQtyMsgPDP)+"************************************************");
 		}
-		else if(page.equalsIgnoreCase("Cart"))
+		else if(page.equals("Cart"))
 		{
+			
 			waitForElement(pdpPageObj.LimitedQtyMsgCart);
 			assertTrue(isDisplayed(pdpPageObj.LimitedQtyMsgCart));
+			System.out.println("****************************************************************************"+getText(pdpPageObj.LimitedQtyMsgCart)+"************************************************");
+			
 		}
 	}
 }

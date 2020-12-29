@@ -14,6 +14,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.CommonGenericUtils;
@@ -715,6 +716,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath="//*[text()='ADDRESS VERIFICATION']")public WebElement AddressVerification_MSG;//For restricted item after clicking on go to shipMethod
 	
 	
+	@FindBy(xpath="//button[@aria-label='Me']")public WebElement me_button;//For restricted item after clicking on go to shipMethod
+	@FindBy(xpath="//input[@id='ship-to-store-check']/..//label")public WebElement storePickUpInstructionsChkBox;//For restricted item after clicking on go to shipMethod
+	
+	
 	//Sep7 CR-RK KER-3151
 	
 	
@@ -895,6 +900,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		logger.debug("Credit card number entered in the Field "+cvv);
 	}
 
+	
 
 	public void enterExpirationValue(String expirationValue) {
 		setInputText(txtExpirationDateInput, expirationValue);
@@ -973,6 +979,10 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="(//div[@data-auid='freeShip'])[1]") public WebElement FreeShippingordersummary;
 		@FindBy(xpath="(//button[@data-auid='btncontinueShopping']") public WebElement continueshpopping;
 		@FindBy(xpath="//span[contains(text(),'Shipping')]/following-sibling::span[contains(text(),'FREE')]") public WebElement FreeShippingorderconfirmation;
+		@FindBy(xpath="//span[contains(text(),'Not available for shipping')]") public WebElement notshippingcart;
+		@FindBy(xpath="//div[contains(text(),'Items for Store Pick Up')]") public WebElement ItemForStorePickup;
+		@FindBy(xpath="//div[contains(text(),'Store pick up')]") public WebElement Storepickupbutton;
+		@FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']") public WebElement GotoPaymentbutton;
 	 // To be updated by Anuj
 	   /**AG KER-3130 Starts**************************************/
     
@@ -1000,7 +1010,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
     //Only for SOF Item--Start KER-KER-7033 & KER-7031
     @FindBy(xpath="//*[contains(text(),'SPECIAL ORDER SHIP TO STORE')]")public WebElement ShipToStoreforSOF_Txt;
     @FindBy(xpath="//*[contains(text(),'You must be at least 18 years')]")public WebElement ShipToStoreforSOF_compliance_Txt;
-    @FindBy(xpath="//*[@data-auid='btncheckout_ship_to_store_submit_button']")public WebElement ShipToStoreforSOF_Payment_Btn;
+    @FindBy(xpath="//*[@data-auid='btncheckout_goto_shipping_payment_btn']")public WebElement ShipToStoreforSOF_Payment_Btn;
     @FindBy(xpath="//*[@type='checkbox']")public WebElement selectCheckbox;  //Sid 22-Jan
     
     @FindBy (xpath="//*[contains(@data-auid,'shipping_method_shipment_item_')]//p[contains(text(),'$') or contains(text(),'FREE')] | //*[contains(@data-auid,'checkout_shipping_method_shipment_item') and not (contains(@data-auid,'image'))]/p")
@@ -1405,4 +1415,23 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		}
 		
 		@FindBy (xpath="//*[@id='in-store-pickup-check']") public WebElement SOF_CheckBox_CheckoutPage;
+		@FindBy (xpath="//a[text()='Edit']") public WebElement editBtn;
+		@FindBy (xpath="//a[text()='Change Location']") public WebElement changeLocationBtn;
+		@FindBy (xpath="//p[contains(text(),'Ship and pickup not allowed on selected store, please update cart or change store')]") public WebElement orderErrorMsg;
+		
+		
+		
+		public void editStorePickup() {
+			logger.info("Clicking on Edit Store button");
+			clickOnButton(editBtn);
+			clickOnButton(changeLocationBtn);
+			logger.info("Clicked on Edit Store button");
+		}
+		
+		public void verifyOrderErrorMessage() {
+			logger.info("Verify the error message displayed");
+			Assert.assertEquals(true, orderErrorMsg.isDisplayed());
+			logger.info("Error message displayed is: " +orderErrorMsg.getText());
+		}
+		
 }

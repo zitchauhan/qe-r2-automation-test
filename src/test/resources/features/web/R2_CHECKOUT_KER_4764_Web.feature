@@ -149,9 +149,41 @@ Scenario: Verify customer can place order for BOPIS with correct Alternate Pick-
 	And user click on REVIEW ORDER button
 	And user clicks on place order on checkout page	
 	
-	
 		
+@RegressionP2 @P2 @TC-OMNI-13511 @SR-1330
+Scenario: Verify customer can place order for BOPIS with correct Alternate Pick-Up Person information in checkout
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When user selects store with "BOPIS_Store2" and "BOPIS_Store_Selection" 
+	And User searches a product "SOFSTSProduct" and navigates to PDP 
+	And user click on ship it button 
+	And user will click on View Cart button 
+	And user will click on Checkout button and navigates to Checkout page
+	And Validate Pick Up dropdown is disabled for SOF STS
+	When user clicks on Go to payment CTA present on store pickup
+	And user click on academy creditcard radiobtn
+	And user fills the academy credit card details in payment
+	And user enters a corresponding billing address
+	And user enters order confirmation email
+	And user click on REVIEW ORDER button
+	And user clicks on place order on checkout page	
 	
+@RegressionP2 @P2 @TC-OMNI-13507 @SR-1334
+Scenario: Validate user should see an error message when user changes store from STS eligible to non STS eligible store on checkout page and clicks on PLACE ORDER
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user selects store with "BOPIS_Store2" and "BOPIS_Store_Selection" 
+	And User searches a product "STSProduct" and navigates to PDP 
+	And user click on pickup button
+	And user click on viewcart button
+	And user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user clicks on Go to payment CTA present on store pickup
+	When user changes store pickup with zipcode "YextNewLocAddressPin" and storename "YextNewLocAddressCity" 
+	And user click on academy creditcard radiobtn
+	And user fills the academy credit card details in payment
+	And user enters a corresponding billing address
+	And user enters order confirmation email
+	And user click on REVIEW ORDER button
+	And User clicks on Place order and verifies error message
 	
 	
 	

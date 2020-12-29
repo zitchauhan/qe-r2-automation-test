@@ -173,9 +173,9 @@ When user clicks on Find a Store
 		And Verify below Sub/Main Module of Checkout Page 
 		|# Verify following section SPECIAL ORDER SHIP TO STORE in checkout page|
 		|ShipToStoreforSOF_Txt|
-	
-	
-@C-BOPIS @R2_Web @Regression @R2_All @P2 @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10440 @CR-RKA 
+
+
+@C-BOPIS @R2_Web @Regression @R2_All @P2 @C-Checkout @KER-3132 @ZYP_CHECKOUT_K3132-10440 @CR-RKA
 Scenario: Verify if 'Same as Shipping Address' checkbox is disabled for STS order
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on Find a Store 
@@ -231,5 +231,4 @@ Scenario: Verify guest user is able to see the See In-Store Pickup Instructions 
 #	And user click on Apply button 
 #	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
 #	And user clicks on Review order button on checkout page
-	
 

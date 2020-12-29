@@ -10,7 +10,9 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.framework.common.Constants;
@@ -337,11 +339,31 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 		setInputText(r2OrderConfPO.orderConfirmation_SignUp_CreatePassword_txt, passwordToEnter);
 	}
 
-	@Given("^user clicks on place order on checkout page$")
+	@And("^user clicks on place order on checkout page$")
 	public void user_able_to_see_the_button_place_order() throws Throwable {
 		waitForElement(r2CheckOutPo.btnPlaceOrderPaymentPage);
 		r2CheckOutPo.JS_Click(r2CheckOutPo.btnPlaceOrderPaymentPage);
 		//assertTrue(clickOnButton(r2CheckOutPo.btnPlaceOrderPaymentPage));
+	}
+	
+	@And("^User clicks on Place order and verifies error message$")
+	public void user_able_to_place_order() throws Throwable {
+		try {
+			assertTrue(clickOnButton(r2CheckOutPo.btnPlaceOrderPaymentPage));
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		//Added the code and locator here as there was a webdriver session issue if called from other class
+		logger.info("Verify the error message displayed");
+		if(driver.findElements(By.xpath("//p[contains(text(),'Ship and pickup not allowed on selected store, please update cart or change store')]")).size()>0) {
+			
+			logger.info("Error message displayed is: " +driver.findElement(By.xpath("//p[contains(text(),'Ship and pickup not allowed on selected store, please update cart or change store')]")).getText());
+		}
+		else {
+			Assert.fail("Error mesasge is not displayed");
+		}
+		
 	}
 
 	@Then("^verify user is able to successfully place the order$")
@@ -455,6 +477,31 @@ public void user_click_on_continue_button() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
 	Thread.sleep(6000);
 	clickOnButton(r2CheckOutPo.continueshpopping);
+}
+@Then("^verify the not available for shipping Message on cart page$")
+public void verify_the_not_available_for_shipping_Message_on_cart_page() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.notshippingcart));
+}
+
+@Then("^Verify Items for Store PickUp message on checkout page$")
+public void verify_Items_for_Store_PickUp_message_on_checkout_page() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.ItemForStorePickup));
+}
+
+@When("^user click on store pick up button$")
+public void user_click_on_store_pick_up_button() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.Storepickupbutton));
+	clickOnButton(r2CheckOutPo.Storepickupbutton);
+}
+
+@Then("^click the Go to Payment button$")
+public void click_the_Go_to_Payment_button() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+	assertTrue(isDisplayed(r2CheckOutPo.GotoPaymentbutton));
+	clickOnButton(r2CheckOutPo.GotoPaymentbutton);
 }
 
 @Then("^Validate that shipping is free on order confirmation page$")
