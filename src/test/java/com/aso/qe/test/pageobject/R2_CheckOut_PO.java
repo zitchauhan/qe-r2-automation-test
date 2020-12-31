@@ -485,7 +485,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[contains(text(),'See In-Store Pickup Instructions')]/parent::*/following-sibling::*/ol")
 	   public WebElement SeeInStorePickupInstructions_Msg;   //SID Modified 29-Jan
 	   
-	   @FindBy(xpath="//*[@for='in-store-pickup-check']")
+	   @FindBy(xpath="//*[@for='in-store-pickup-check'] | //*[@for='ship-to-store-check']")
 	   public WebElement Pickup_Term_Checkbox;
 	   //*****Start Modify Pickup Location*********//
 //
