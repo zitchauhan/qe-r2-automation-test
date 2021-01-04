@@ -1418,7 +1418,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy (xpath="//a[text()='Edit']") public WebElement editBtn;
 		@FindBy (xpath="//a[text()='Change Location']") public WebElement changeLocationBtn;
 		@FindBy (xpath="//p[contains(text(),'Ship and pickup not allowed on selected store, please update cart or change store')]") public WebElement orderErrorMsg;
-		
+		@FindBy (xpath="//p[text()='You Entered']") public WebElement youEnteredAddress;
+		@FindBy (xpath="//button[text()='Use Selected Address']") public WebElement useSelectedAddress;
+		@FindBy (xpath="//p[contains(text(),'We are unable to ship to PO, APO and FPO')]") public WebElement shippingError;
 		
 		
 		public void editStorePickup() {
@@ -1432,6 +1434,22 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			logger.info("Verify the error message displayed");
 			Assert.assertEquals(true, orderErrorMsg.isDisplayed());
 			logger.info("Error message displayed is: " +orderErrorMsg.getText());
+		}
+		
+		public void validateShippingError() {
+			if(driver.findElements(By.xpath("//h4[text()='ADDRESS VERIFICATION']")).size()>0) {
+				logger.info("Selecting Entered Address option from the Address verification pop up");
+				clickOnButton(youEnteredAddress);
+				clickOnButton(useSelectedAddress);
+				waitForPageLoad(driver);
+				Assert.assertEquals(true, shippingError.isDisplayed());
+				logger.info("Validated Shipping error");
+			}
+			else {
+				logger.info("Validating Shipping error");
+				Assert.assertEquals(true, shippingError.isDisplayed());
+				logger.info("Validated Shipping error");
+			}
 		}
 		
 }
