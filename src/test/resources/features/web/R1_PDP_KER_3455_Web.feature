@@ -125,7 +125,7 @@ Feature: [Desktop]Bundles - Add to Cart Notification
    Then user should be able to see PDP mention in the current url
    And user should be able to see Image of the product
    And user should be able to see the search term in the DSV product title
-   And user should see different attribute and size of the product
+   #And user should see different attribute and size of the product
    And user should be able to see the rating
    And user should be able to see the reviews
    And user should be able to see the sku and item numbers for the given image
