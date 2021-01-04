@@ -215,7 +215,7 @@ Scenario: Validate STH item can be checkout with APO/FPO BOX address
 	And user clicks on place order on checkout page
     Then verify user is able to successfully place the order
     
-@RegressionP3  @TC-OMNI-13488 @SR-1344 @manjula1
+@RegressionP3  @TC-OMNI-13488 @SR-1344
 Scenario: Ammo, SOF items cannot be shipped to PO box addresses
     Given user launches the browser and navigates to "ASO_HOME" page 
     And User searches a product "AmmunitionSKU" and navigates to PDP

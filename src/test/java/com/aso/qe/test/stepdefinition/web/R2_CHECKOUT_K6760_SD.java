@@ -87,7 +87,7 @@ public class R2_CHECKOUT_K6760_SD extends CommonActionHelper {
 	}
 
 	@Then("^User verifies Shipping error$")
-	public void selectEnteredAddress() {
+	public void verifyShippingError() {
 		r2CheckOutPo.validateShippingError();
 	}
 	
