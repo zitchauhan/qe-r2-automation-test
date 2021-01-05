@@ -86,4 +86,11 @@ public class R2_CHECKOUT_K6760_SD extends CommonActionHelper {
 		r2CheckOutPo.checkWGRoomOFChoice();
 	}
 
+	@Then("^User verifies Shipping error$")
+	public void verifyShippingError() {
+		r2CheckOutPo.validateShippingError();
+	}
+	
+	
+	
 }

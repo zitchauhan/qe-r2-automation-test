@@ -169,6 +169,68 @@ Scenario: Verify Display only items (Ex. Oxygen cylinder, sprays) can only be Bu
    And user clicks on place order on checkout page
    Then verify user is able to successfully place the order
 	
+@RegressionP3  @TC-OMNI-18905 @SR-1342
+Scenario: Validate STH item can be checkout with PO BOX address
+    Given user launches the browser and navigates to "ASO_HOME" page 
+    And User searches a product "STH_item" and navigates to PDP
+    And user click on ship it button
+    And user click on viewcart button
+    And user navigates to Cart Page
+    And user clicks on checkout button on cart page
+	And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address_STH" 
+	And user enter Zipcode "zipcode_STH" 
+	When user click on Go To Shipping Method button in Checkout page
+	And user click on go to payment present in shipping method
+	And user click on academy creditcard radiobtn 
+	And user fills the academy credit card details in payment 
+	And user enters a corresponding billing address
+	And user enters order confirmation email
+	And user click on REVIEW ORDER button
+	And user clicks on place order on checkout page
+    Then verify user is able to successfully place the order
+		
+@RegressionP3  @TC-OMNI-18917 @SR-1343
+Scenario: Validate STH item can be checkout with APO/FPO BOX address
+    Given user launches the browser and navigates to "ASO_HOME" page 
+    And User searches a product "STH_item" and navigates to PDP
+    And user click on ship it button
+    And user click on viewcart button
+    And user navigates to Cart Page
+    And user clicks on checkout button on cart page
+	And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "AddressAPO_STH" 
+	And user enter Zipcode "zipcodeAPO_STH" 
+	When user click on Go To Shipping Method button in Checkout page
+	And user click on go to payment present in shipping method
+	And user click on academy creditcard radiobtn 
+	And user fills the academy credit card details in payment 
+	And user enters a corresponding billing address
+	And user enters order confirmation email
+	And user click on REVIEW ORDER button
+	And user clicks on place order on checkout page
+    Then verify user is able to successfully place the order
+    
+@RegressionP3  @TC-OMNI-13488 @SR-1344
+Scenario: Ammo, SOF items cannot be shipped to PO box addresses
+    Given user launches the browser and navigates to "ASO_HOME" page 
+    And User searches a product "AmmunitionSKU" and navigates to PDP
+    And user click on ship it button
+    And user click on viewcart button
+    And user navigates to Cart Page
+    And user clicks on checkout button on cart page
+	And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address_STH" 
+	And user enter Zipcode "zipcode_STH" 
+	When user click on Go To Shipping Method button in Checkout page
+	Then User verifies Shipping error
 	
 	
+		
 	
