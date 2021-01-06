@@ -75,6 +75,12 @@ public class R2_CHECKOUT_K6760_SD extends CommonActionHelper {
 			assertTrue(clickOnButton(r2CheckOutPo.checkout_ShippingMethod_GoToPayment_btn));
 		     Thread.sleep(Constants.thread_medium);
 	}
+	
+	@And("^Verify standard shipping is displayed$")
+	public void verifyStandardShipping() throws InterruptedException {
+		r2CheckOutPo.verifyStandardShipping();
+	}
+	
 
 	@Then("^user verify the Schedule service available for WG items$")
 	public void user_verify_the_Schedule_service_available_for_WG_items() {

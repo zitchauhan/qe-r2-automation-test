@@ -1421,6 +1421,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy (xpath="//p[text()='You Entered']") public WebElement youEnteredAddress;
 		@FindBy (xpath="//button[text()='Use Selected Address']") public WebElement useSelectedAddress;
 		@FindBy (xpath="//p[contains(text(),'We are unable to ship to PO, APO and FPO')]") public WebElement shippingError;
+		@FindBy (xpath="//p[contains(text(),'Standard ')]") public WebElement standardShipping;
+		
 		
 		
 		public void editStorePickup() {
@@ -1450,6 +1452,12 @@ public class R2_CheckOut_PO extends CommonActionHelper
 				Assert.assertEquals(true, shippingError.isDisplayed());
 				logger.info("Validated Shipping error");
 			}
+		}
+		
+		public void verifyStandardShipping() {
+			logger.info("Verify Standard Shipping is displayed");
+			Assert.assertEquals(true, standardShipping.isDisplayed());
+			logger.info("Verified Standard Shipping is displayed");
 		}
 		
 }
