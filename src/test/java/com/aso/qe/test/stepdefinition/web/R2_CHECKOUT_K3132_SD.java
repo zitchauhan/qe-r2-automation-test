@@ -166,5 +166,10 @@ public class R2_CHECKOUT_K3132_SD extends CommonActionHelper {
 			e.printStackTrace();
 		}
 	}
+	
+	@Then("^user verifies AVS verification popup is visible on Checkout page$")
+	public void user_verifies_AVS_verification_popup_is_visible_on_Checkout_page() throws Throwable {
+		r2CheckOutPo.verifyAVSverificationPopup();
+	}
 
 }

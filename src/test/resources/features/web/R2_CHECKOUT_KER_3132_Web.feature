@@ -232,3 +232,22 @@ Scenario: Verify guest user is able to see the See In-Store Pickup Instructions 
 #	And user enters new billing address information "FirstName" , "LastName" , "PhoneNumber" , "Address" , "ShippingRestrictedZipCode" , "EmailAddress" 
 #	And user clicks on Review order button on checkout page
 
+
+@RegressionP3 @TC-OMNI-13470
+  Scenario: AVS verification during checkout
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user selects store with "FindStoreZipcode" and "BOPIS_Store_Selection"
+	When User searches a product "productName" and navigates to PDP 
+	And user click on ship it button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user click on checkout button in Cart page
+	When user enter First name "FirstName"
+    And user enter Last name "LastName"
+    And user enter Phone number "PhoneNumber"
+    And user enter Address "AVSAddress"
+    And user enter Zipcode "BOPIS_OrderID_Zipcode"
+    Then user click on Go To Shipping Method button in Checkout page
+    Then user verifies AVS verification popup is visible on Checkout page
+

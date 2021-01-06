@@ -105,6 +105,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	@FindBy(xpath = "//*[@data-auid='checkout_payment_add_another_gift_card_icon']")
 	public WebElement plusAnotherIconGiftCard;//27Aug danush
+	
+	@FindBy(xpath = "//*[contains(text(),'ADDRESS VERIFICATION')]") //CR-DPK 14-sept
+	public WebElement addressAVS;
 
 //	@FindBy(xpath = "//*[text()='Gift Card Number']")
 //	public WebElement txtGiftcardNumber;
@@ -1430,4 +1433,36 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			logger.info("Error message displayed is: " +orderErrorMsg.getText());
 		}
 		
+
+		public void validateShippingError() {
+			if(driver.findElements(By.xpath("//h4[text()='ADDRESS VERIFICATION']")).size()>0) {
+				logger.info("Selecting Entered Address option from the Address verification pop up");
+				clickOnButton(youEnteredAddress);
+				clickOnButton(useSelectedAddress);
+				waitForPageLoad(driver);
+				Assert.assertEquals(true, shippingError.isDisplayed());
+				logger.info("Validated Shipping error");
+			}
+			else {
+				logger.info("Validating Shipping error");
+				Assert.assertEquals(true, shippingError.isDisplayed());
+				logger.info("Validated Shipping error");
+			}
+		}
+		
+		public void verifyStandardShipping() {
+			logger.info("Verify Standard Shipping is displayed");
+			Assert.assertEquals(true, standardShipping.isDisplayed());
+			logger.info("Verified Standard Shipping is displayed");
+		}
+		
+		public void verifyAVSverificationPopup() throws InterruptedException
+		{
+			
+			Assert.assertEquals(true,isDisplayed(addressAVS));
+				
+			
+		}
+		
+
 }
