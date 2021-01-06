@@ -11,7 +11,6 @@ Feature: To verify gallery components
     Then user verifies product Image
     And user should be able to see Alternate images
   
-    
 @Web @PDPFaceLift @CR-Anirudh 
    Scenario: To verify video is present at the last
     Given user launches the browser and navigates to "ASO_HOME" page 
