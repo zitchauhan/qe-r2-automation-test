@@ -628,7 +628,20 @@ public class R1_PDP_PO extends CommonActionHelper
 		super();
 	}
 
-
+	public void clickViewCart() {
+		logger.info("Clicking on View Cart button");
+		clickOnButton(btnViewCart);
+		waitForPageLoad(driver);
+		logger.info("Clicked on View Cart button");
+	}
+	
+	public void clickAddToCart() {
+		logger.info("Clicking on Add to Cart button");
+		clickOnButton(btnAddToCart);
+		waitForPageLoad(driver);
+		logger.info("Clicked on Add to Cart button");
+	}
+	
 	public boolean addToCartAvailability() throws InterruptedException
 	{
 		boolean isAddtoCart= false;

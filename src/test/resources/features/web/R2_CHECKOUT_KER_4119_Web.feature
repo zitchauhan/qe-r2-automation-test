@@ -55,5 +55,26 @@ Scenario: Verify that User is able to view the cart after adding item to cart fr
 		|YourCart_Header|	
 		
 		
-		
+@RegressionP3 @TC-OMNI-13448
+Scenario: Verify on click of Add to cart CTA in quick view, item should be added to cart and Add to cart modal should popup and user should be able to place order with Standard Delivery
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user clicks on SignIn link from global header 
+	And user enter the valid emailaddress "emailWithOutPhonenumber" 
+	And user enter the valid password "Password" 
+	And user click on signin button 
+	Then User Navigates L2 form Homepage Header 
+	Then User click on Quick view button 
+	Then Verify that Add to Cart CTA is displayed
+	And User click on Add to Cart Button via Quick View modal
+	And Click on View Cart Button in Quick View modal
+	And user clicks on checkout button on cart page
+	And user click on academy creditcard radiobtn 
+	And user fills the academy credit card details in payment 
+	And user enters a corresponding billing address
+	And user click on REVIEW ORDER button
+	And user clicks on place order on checkout page
+    Then verify user is able to successfully place the order
+	
+	
+	
 	

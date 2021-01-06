@@ -274,6 +274,22 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
 		//Thread.sleep(2000);
 	}
+	
+	@Then("^User click on Add to Cart Button via Quick View modal$")
+	public void clickAddToCartButton() throws Throwable 
+	{
+		waitForPageLoad(getDriver());
+		pdpPageObj.clickAddToCart();
+	}
+	
+	@Then("^Click on View Cart Button in Quick View modal$")
+	public void addToCart() throws Throwable 
+	{
+		waitForPageLoad(getDriver());
+		pdpPageObj.clickViewCart();
+	}
+	
+	
 	@Then("^user click on checkout button in continue shopping$")
 	public void user_click_on_checkout_button_in_continue_shopping() throws Throwable {
 		waitForPageLoad(getDriver());
