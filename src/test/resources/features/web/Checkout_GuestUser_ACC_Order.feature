@@ -230,7 +230,31 @@ Scenario: Ammo, SOF items cannot be shipped to PO box addresses
 	And user enter Zipcode "zipcode_STH" 
 	When user click on Go To Shipping Method button in Checkout page
 	Then User verifies Shipping error
-	
+
+@RegressionP3  @TC-OMNI-13444 @SR-1346
+Scenario: Verify on click of Home delivery CTA in regular item PDP, item should be added to cart and Add to cart modal should popup and should be successfully placed with Standard Delivery as shipping method and validate correct shipping charges are visible
+    Given user launches the browser and navigates to "ASO_HOME" page 
+    And User searches a product "STH_item" and navigates to PDP
+    And user click on ship it button
+    And user click on viewcart button
+    And user navigates to Cart Page
+    And user clicks on checkout button on cart page
+	And user enter First name "FirstName" 
+	And user enter Last name "LastName" 
+	And user enter Phone number "PhoneNumber" 
+	And user enter Address "Address" 
+	And user enter Zipcode "zip" 
+	When user click on Go To Shipping Method button in Checkout page
+	And Verify standard shipping is displayed
+	And user click on go to payment present in shipping method
+	And user click on academy creditcard radiobtn 
+	And user fills the academy credit card details in payment 
+	And user enters a corresponding billing address
+	And user enters order confirmation email
+	And user click on REVIEW ORDER button
+	And user clicks on place order on checkout page
+    Then verify user is able to successfully place the order
+			
 	
 		
 	

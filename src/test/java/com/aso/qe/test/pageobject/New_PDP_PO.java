@@ -96,6 +96,9 @@ public class New_PDP_PO extends CommonActionHelper
 		@ FindBy(xpath="//div[@aria-label='Product_Detail_Content']/div[2]") public WebElement prodSummary;
 		
 		@FindBy(xpath="//div[@data-auid='PDP_MediaClick']|//img[@class='h-100 w-100 swiper-lazy css-19iuff6']") public WebElement prodImage;
+		
+		@FindBy(xpath="//div[@class='swiper-container swiper-container-initialized swiper-container-horizontal']//img[contains(@src,'https')]") public WebElement pdpImage;
+		
 		@FindBy(xpath="(//div[@data-auid='PDP_ProductImage_m'])[2]") public WebElement prod_Image_m;
 		
 		@FindBy(xpath="//div[@data-auid='PDP_Color_Attribute']") public WebElement color;
@@ -189,6 +192,37 @@ public class New_PDP_PO extends CommonActionHelper
 		
 
 		@FindBy(xpath="//a[contains(text(),'Pick Up Today') or contains(text(),'Estimated Pick Up:')]")
-		public WebElement EstimatePickUpPDP;																									   
+		public WebElement EstimatePickUpPDP;	
+		
+		
+		public void verifyProductImage() throws InterruptedException {
+			
+			logger.info("Verify Product Image is displayed");
+			if("mobile".equalsIgnoreCase(testtype)) {
+				assertTrue(isDisplayed(prod_Image_m));
+				logger.info("Verified Product Image is displayed");
+			}else {
+				assertTrue(isDisplayed(pdpImage));
+				logger.info("Verified Product Image is displayed");
+			}
+		}
+		
+		public void verifyImgChanges() throws InterruptedException {		
+			String imgsrc= imageLink.getAttribute("src");
+			logger.info("IMG SRC = "+imgsrc);
+			int size = driver.findElements(By.xpath("//button[contains(@class,'swiper-slide btn')]/img")).size();
+			logger.info("Number of thumbnail Images: "+size);
+			for(int i=1;i<=size;i++) {
+				logger.info("Clicking on thumbail: "+i);
+				clickOnButton(getfindElementByXPath("(//button[contains(@class,'swiper-slide btn')]/img)["+i+"]"));
+				String thumbnail=driver.findElement(By.xpath("(//button[contains(@class,'swiper-slide btn')]/img)["+i+"]")).getAttribute("src");
+				thumbnail=thumbnail.replace("thumbnails", "gallery");
+				logger.info(thumbnail);
+				String loc = "//img[@src=\""+thumbnail+"\"]";
+				logger.info(loc);
+				assertTrue(isDisplayed(driver.findElement(By.xpath(loc))));
+				logger.info("Verified thumbnail and image are working as expected");
+			}
+		}
 
 }
