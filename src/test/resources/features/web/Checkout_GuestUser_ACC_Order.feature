@@ -255,6 +255,15 @@ Scenario: Verify on click of Home delivery CTA in regular item PDP, item should 
 	And user clicks on place order on checkout page
     Then verify user is able to successfully place the order
 			
+@RegressionP4  @TC-OMNI-13447 @SR-1349
+Scenario: Verify on click of Add to cart CTA in bulk GC PDP, item should be added to cart and Add to cart modal should popup
+    Given user launches the browser and navigates to "ASO_HOME" page 
+    And User searches a product "STH_item" and navigates to PDP
+    And user click on ship it button
+    And user click on continue shopping
+	And User searches a product "AcademyBulkGCSKU" and navigates to PDP
+	When User click on Add to Cart Button via Quick View modal
+	Then Verify Cart Modal is displayed
 	
-		
+			
 	

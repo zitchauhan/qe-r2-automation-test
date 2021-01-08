@@ -282,6 +282,14 @@ public class R2_AutomationSanitySuite_SD extends CommonActionHelper
 		pdpPageObj.clickAddToCart();
 	}
 	
+	@Then("^Verify Cart Modal is displayed$")
+	public void verifyCartModalDisplayed() throws Throwable 
+	{
+		waitForPageLoad(getDriver());
+		pdpPageObj.verifyCartModalDisplayed();
+	}
+	
+	
 	@Then("^Click on View Cart Button in Quick View modal$")
 	public void addToCart() throws Throwable 
 	{

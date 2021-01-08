@@ -85,6 +85,7 @@ public class R1_Checkout_87_Web extends CommonActionHelper {
 			logger.debug("Exception Message: "+e.getMessage());
 		}
 	}
+	
 
 	@Then("^user navigates to order confirmation page$")
 	public void user_navigates_to_order_confirmation_page() throws Throwable {
