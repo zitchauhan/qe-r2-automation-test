@@ -265,5 +265,4 @@ Scenario: Verify on click of Add to cart CTA in bulk GC PDP, item should be adde
 	When User click on Add to Cart Button via Quick View modal
 	Then Verify Cart Modal is displayed
 	
-			
 	
