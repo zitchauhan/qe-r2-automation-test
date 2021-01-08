@@ -680,6 +680,70 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	//CR-GK 10-Oct
 	@FindBy(xpath ="//*[contains(text(),'New Credit Card')]")public WebElement checkOut_SelectAddNewCreditCard;
 	
+	@FindBy (xpath="//*[@id='in-store-pickup-check']") public WebElement SOF_CheckBox_CheckoutPage;
+	@FindBy (xpath="//a[text()='Edit']") public WebElement editBtn;
+	@FindBy (xpath="//a[text()='Change Location']") public WebElement changeLocationBtn;
+	@FindBy (xpath="//p[contains(text(),'Ship and pickup not allowed on selected store, please update cart or change store')]") public WebElement orderErrorMsg;
+	@FindBy (xpath="//p[text()='You Entered']") public WebElement youEnteredAddress;
+	@FindBy (xpath="//button[text()='Use Selected Address']") public WebElement useSelectedAddress;
+	@FindBy (xpath="//p[contains(text(),'We are unable to ship to PO, APO and FPO')]") public WebElement shippingError;
+	@FindBy (xpath="//p[contains(text(),'Standard ')]") public WebElement standardShipping;
+	@FindBy (xpath="//p[contains(text(),'Your expiration date or CVV does not match the card provided')]") public WebElement wrongCVVError;
+	
+	//Start KER-3132 CR-RKA
+		@FindBy(xpath="//*[text()='SHIPPING ADDRESS']/following::*[1]")public WebElement shippingAddressFirst_LastName;
+		@FindBy(xpath="//*[text()='Same As Shipping Address']/ancestor::div[1]/following::*[3]")public WebElement billingAddressFirst_LastName;
+		
+		@FindBy(xpath="//*[text()='SHIPPING ADDRESS']/following::*[3]")public WebElement shippingAddressphoneNumber;
+		@FindBy(xpath="//*[text()='Same As Shipping Address']/ancestor::div[1]/following::*[5]")public WebElement billingZip_Phone;
+		
+		@FindBy(xpath="//*[text()='SHIPPING ADDRESS']/following::*[2]")public WebElement shippingCityCountryName;
+		@FindBy(xpath="//*[text()='Same As Shipping Address']/ancestor::div[1]/following::*[4]")public WebElement billingCityCountryName;
+	   //KER-CR-4058 RKA
+		@FindBy(xpath="//*[text()='ADDRESS VERIFICATION']")public WebElement AddressVerification_MSG;//For restricted item after clicking on go to shipMethod
+		
+		
+		@FindBy(xpath="//button[@aria-label='Me']")public WebElement me_button;//For restricted item after clicking on go to shipMethod
+		@FindBy(xpath="//input[@id='ship-to-store-check']/..//label")public WebElement storePickUpInstructionsChkBox;//For restricted item after clicking on go to shipMethod
+		
+		
+		//Sep7 CR-RK KER-3151
+		
+		
+		//Start CR-DPK KER-2911
+		@FindBy(xpath="//*[text()='Special Order Ship To Store']/../div[2]")public WebElement SpecialOrderShipToStore_txt;
+		
+		//End CR-DPK KER-2911
+		
+		
+		
+		@FindBy(xpath="//*[@data-auid='checkout_edit_shipping_address']")public WebElement Checkout_ShippingAddress_Edit;
+		@FindBy(xpath="//*[@data-auid='checkout_edit_shipping_address']/../../div[2]")public WebElement Checkout_ShippingAddress_Default;
+		@FindBy(xpath="//*[@name='Dropdown']/button")public WebElement Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd;
+		@FindBy(xpath="//*[@id='customDropdownList']")public WebElement Checkout_ShippingAddressAfterEditdropdownelement;
+		@FindBy(xpath="//*[text()='Add a New Shipping Address']")public WebElement Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress;
+		//Sep7 CR-RK KER-3151
+
+		//Start Sep10 KER-6576 CR-RK
+		@FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_Privacy Policy']")	public WebElement checkoutFooterLegalLinkPrivacyPolicy; // 10-September
+		@FindBy(xpath = "//*[@data-auid='checkout_footer_chat_now_link']")	public WebElement checkoutFooterChatNowLink; // 10-September
+		@FindBy(xpath = "//*[@data-auid='checkout_footer_contact_number_link_m']")	public WebElement checkoutFooterContactNumberLink_mobile; // 10-September
+		@FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_Terms & Conditions']")	public WebElement checkoutFooterLegalLinkTermsConditions; // 10-September
+		@FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_California Proposition 65 California Transparency in Supply Chains Act (SB 657)'] | //*[@data-auid='checkout_footer_legal_link_California Disclosures']")	public WebElement checkoutFooterLegalLinkCaliforniaProposition65; // 10-September
+		@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Visa_icon']") public WebElement iconVisa;
+		@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Master Card_icon']") public WebElement iconMasterCard;
+		@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Paypal_icon']") public WebElement iconPaypal;
+		@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_GooglePay_icon']") public WebElement iconGooglePay;
+		@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_ApplePay_icon']") public WebElement iconApplePay;
+		@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Amex Card_icon']") public WebElement iconAmericanExpress;
+		@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Discover_icon']") public WebElement iconDiscover;
+		@FindBy(xpath = "//*[text()='Privacy']")	public WebElement checkoutFooterLegalLinkPrivacyPolicy_txt; // 10-September
+		@FindBy(xpath = "//*[text()='Terms and ']")	public WebElement checkoutFooterLegalLinkTermsConditions_txt; // 10-September
+		@FindBy(xpath = "//*[text()='California Transparency in Supply Chains Act (SB 657)']")	public WebElement checkoutFooterLegalLinkCaliforniaProposition65_txt; // 10-September
+		//End Sep10 KER-6576 CR-RK	
+
+
+	
 	//************************  MOBILE***********************
 	   @FindBy(xpath="(//*[@data-auid='checkout_order_summary_edit_cart_link'])[1]/*")public WebElement EditMyCart_Link_M;
 	
@@ -692,77 +756,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   /***************************** END XPAHTS********************************/
 	
 	/***************************** START METHODS********************************/
-	// Start KER-2927 CR-SK
-	
-    public float getEstimatedTaxOnCheckoutPage() {
-        waitForElement(txtEstimatedTax);
-        String taxDisplayed = getText(txtEstimatedTax);
-        taxDisplayed = taxDisplayed.replace("$", "");
-        return Float.parseFloat(taxDisplayed);
-}
-
-	// End KER-2927 CR-SK
-	
-	//Start KER-3132 CR-RKA
-	@FindBy(xpath="//*[text()='SHIPPING ADDRESS']/following::*[1]")public WebElement shippingAddressFirst_LastName;
-	@FindBy(xpath="//*[text()='Same As Shipping Address']/ancestor::div[1]/following::*[3]")public WebElement billingAddressFirst_LastName;
-	
-	@FindBy(xpath="//*[text()='SHIPPING ADDRESS']/following::*[3]")public WebElement shippingAddressphoneNumber;
-	@FindBy(xpath="//*[text()='Same As Shipping Address']/ancestor::div[1]/following::*[5]")public WebElement billingZip_Phone;
-	
-	@FindBy(xpath="//*[text()='SHIPPING ADDRESS']/following::*[2]")public WebElement shippingCityCountryName;
-	@FindBy(xpath="//*[text()='Same As Shipping Address']/ancestor::div[1]/following::*[4]")public WebElement billingCityCountryName;
-   //KER-CR-4058 RKA
-	@FindBy(xpath="//*[text()='ADDRESS VERIFICATION']")public WebElement AddressVerification_MSG;//For restricted item after clicking on go to shipMethod
-	
-	
-	@FindBy(xpath="//button[@aria-label='Me']")public WebElement me_button;//For restricted item after clicking on go to shipMethod
-	@FindBy(xpath="//input[@id='ship-to-store-check']/..//label")public WebElement storePickUpInstructionsChkBox;//For restricted item after clicking on go to shipMethod
-	
-	
-	//Sep7 CR-RK KER-3151
-	
-	
-	//Start CR-DPK KER-2911
-	@FindBy(xpath="//*[text()='Special Order Ship To Store']/../div[2]")public WebElement SpecialOrderShipToStore_txt;
-	
-	//End CR-DPK KER-2911
-	
-	
-	
-	@FindBy(xpath="//*[@data-auid='checkout_edit_shipping_address']")public WebElement Checkout_ShippingAddress_Edit;
-	@FindBy(xpath="//*[@data-auid='checkout_edit_shipping_address']/../../div[2]")public WebElement Checkout_ShippingAddress_Default;
-	@FindBy(xpath="//*[@name='Dropdown']/button")public WebElement Checkout_ShippingAddressAfterEdit_ShippingAddress_Dd;
-	@FindBy(xpath="//*[@id='customDropdownList']")public WebElement Checkout_ShippingAddressAfterEditdropdownelement;
-	@FindBy(xpath="//*[text()='Add a New Shipping Address']")public WebElement Checkout_ShippingAddressAfterEdit_AddaNewShippingAddress;
-//Sep7 CR-RK KER-3151
-	
-	//Start Sep10 KER-6576 CR-RK
-		  @FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_Privacy Policy']")	public WebElement checkoutFooterLegalLinkPrivacyPolicy; // 10-September
-		  @FindBy(xpath = "//*[@data-auid='checkout_footer_chat_now_link']")	public WebElement checkoutFooterChatNowLink; // 10-September
-		   @FindBy(xpath = "//*[@data-auid='checkout_footer_contact_number_link_m']")	public WebElement checkoutFooterContactNumberLink_mobile; // 10-September
-		   @FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_Terms & Conditions']")	public WebElement checkoutFooterLegalLinkTermsConditions; // 10-September
-		   @FindBy(xpath = "//*[@data-auid='checkout_footer_legal_link_California Proposition 65 California Transparency in Supply Chains Act (SB 657)'] | //*[@data-auid='checkout_footer_legal_link_California Disclosures']")	public WebElement checkoutFooterLegalLinkCaliforniaProposition65; // 10-September
-		   @FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Visa_icon']") public WebElement iconVisa;
-			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Master Card_icon']") public WebElement iconMasterCard;
-			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Paypal_icon']") public WebElement iconPaypal;
-			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_GooglePay_icon']") public WebElement iconGooglePay;
-			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_ApplePay_icon']") public WebElement iconApplePay;
-			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Amex Card_icon']") public WebElement iconAmericanExpress;
-			@FindBy(xpath="//*[@data-auid='checkout_footer_accepted_card_Discover_icon']") public WebElement iconDiscover;
-		   	 @FindBy(xpath = "//*[text()='Privacy']")	public WebElement checkoutFooterLegalLinkPrivacyPolicy_txt; // 10-September
-			 @FindBy(xpath = "//*[text()='Terms and ']")	public WebElement checkoutFooterLegalLinkTermsConditions_txt; // 10-September
-			 @FindBy(xpath = "//*[text()='California Transparency in Supply Chains Act (SB 657)']")	public WebElement checkoutFooterLegalLinkCaliforniaProposition65_txt; // 10-September
-			//End Sep10 KER-6576 CR-RK	
-	
-	public void verifyShippingAndBillingAddressAreSame() throws InterruptedException {
-		
-		Thread.sleep(10000);
-		waitForElement(shippingAddressFirst_LastName);
-		assertEquals(getText(shippingAddressFirst_LastName), getText(billingAddressFirst_LastName));
-		assertEquals(getText(shippingAddressphoneNumber).substring(0, 8), getText(billingZip_Phone).substring(7, 15));
-		assertEquals(getText(shippingCityCountryName).subSequence(0, 15), getText(billingCityCountryName).substring(0, 15));
-	}
 	
 	
 	
@@ -783,7 +776,111 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="(//*[@data-component='cart']//*[text()='Employee Discount Applied'])[2] | (//div[contains(text(),' Academy Employee Discount Applied')])[2]") public WebElement employeeDiscountItemLevel_CartPage; //SID 13-September
 	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Employee Discount')]")public WebElement employeeDiscountOrderSummerPage; //SID 13-September
 	   @FindBy(xpath="//*[contains(@data-auid,'level2Category-Hot Deals')]")public WebElement dealTabProduct; //SID 5-September//MJR-20/08
-	   
+	// To be updated by Anuj
+	   /**AG KER-3138 Starts**************************************/
+       
+       @FindBy(xpath = "//*[@data-auid='checkout_payment']") public WebElement secPayment;
+       @FindBy(xpath = "//*[text()='PAYMENT METHOD']") public WebElement secPaymentHeading;
+       @FindBy(xpath = "//*[@id='creditCard'] | //*[@data-auid='checkout_payment_options_radio_button_Credit Card']") public WebElement rdbtnCreditCard;
+       @FindBy(xpath = "//*[text()='Credit Card']") public WebElement txtCreditCard;
+       @FindBy(xpath = "//*[@id='PayPal'] | //*[@data-auid='checkout_payment_options_radio_button_PayPal']") public WebElement rdbtnPayPal;
+       @FindBy(xpath = "//*[text()='PayPal']") public WebElement txtPaypal;
+       @FindBy(xpath = "//*[@id='gpay'] | //*[@id='GooglePay']") public WebElement rdbtnGooglePay;
+       @FindBy(xpath = "//*[text()='Google Pay']") public WebElement txtGooglePay;
+       @FindBy(xpath = "//*[text()='Credit Card Number']") public WebElement txtCreditCardHeading;
+       @FindBy(xpath = "//*[@id='creditcardField'] | //*[text()='Credit Card Number']/following::*[1]") public WebElement txtCreditCardInput; //CR-RKA 10-Oct
+       @FindBy(xpath = "//*[@id='name']") public WebElement creditCardHolderInput;
+       @FindBy(xpath = "//*[@id='card']") public WebElement creditCardNumInput;
+       @FindBy(xpath = "//*[@id='creditcardField']//following-sibling::span/img[contains(@src,'visa')]") public WebElement imgVisaCreditCardInput;
+       @FindBy(xpath = "//*[text()='Expiration Date'] | //*[text()='Exp Date']") public WebElement txtExpirationDate;
+       @FindBy(xpath = "//*[@id='expirationDate'] | //*[@id='expiryField']") public WebElement txtExpirationDateInput;
+       @FindBy(xpath = "//*[@id='exp']") public WebElement creditCardExpInput;
+       @FindBy(xpath = "//*[@placeholder='MM/YY']") public WebElement txtExpirationPlaceholders;
+       @FindBy(xpath = "//*[@id='expirationDate']//parent::label//following-sibling::div/span[contains(text(),'Past expiration date')]") public WebElement txtErrorMsgForPastDates;
+       @FindBy(xpath = "//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']/following::*[1]") public WebElement txtCVVInput;
+       @FindBy(xpath = "//*[@id='cvv']") public WebElement creditCardCVVInput;
+       @FindBy(xpath="//*[@data-auid='creditCardCVV']")public WebElement Cvv_BuyNow_Modal;
+       @FindBy(xpath = "//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']") public WebElement btnCVVToolTip;
+       @FindBy(xpath = "//*[text()='The 3 digit code found on far right of signature box']") public WebElement txtCVVToolTipMsg;
+       @FindBy(xpath ="//*[@data-auid=\"btnundefined\"][@class=contains(text(),'BUY NOW')]")public WebElement BuyNow_Modal;//Added by HP for @KER-4332
+       
+       @FindBy(xpath="//div[contains(text(),'Estimated Shipping')]/following-sibling::div[contains(text(),'FREE')]") public WebElement FreeShippingCart;
+		
+		@FindBy(xpath="(//div[@data-auid='freeShip'])[1]") public WebElement FreeShippingordersummary;
+		@FindBy(xpath="(//button[@data-auid='btncontinueShopping']") public WebElement continueshpopping;
+		@FindBy(xpath="//span[contains(text(),'Shipping')]/following-sibling::span[contains(text(),'FREE')]") public WebElement FreeShippingorderconfirmation;
+		@FindBy(xpath="//span[contains(text(),'Not available for shipping')]") public WebElement notshippingcart;
+		@FindBy(xpath="//div[contains(text(),'Items for Store Pick Up')]") public WebElement ItemForStorePickup;
+		@FindBy(xpath="//div[contains(text(),'Store pick up')]") public WebElement Storepickupbutton;
+		@FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']") public WebElement GotoPaymentbutton;
+	 // To be updated by Anuj
+	   /**AG KER-3130 Starts**************************************/
+   
+	@FindBy(xpath="//*[text()='Unrecognized expiration date']")public WebElement unrecognizedExpirationDate_Txt; 
+   
+   
+   /**AG KER-3130 Ends**************************************/
+		 // To be updated by Anuj
+	   /**AG KER-3130 Starts**************************************/
+   
+   @FindBy(xpath = "//*[@id='billingFirstName']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingFirstNameErrorMsg;
+   @FindBy(xpath = "//*[@id='billingLastName']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingLastNameErrorMsg;
+   @FindBy(xpath = "//*[@id='billingPhoneNumber']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingPhoneNumberErrorMsg;
+   @FindBy(xpath = "//*[@id='billingZipCode']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingZipCodeErrorMsg;
+   @FindBy(xpath = "//*[@id='billingZipCode']") public WebElement billingZzipCode;  //SID 4-December
+ 
+   @FindBy(xpath = "//*[@id='billingCity']//following-sibling::div//span[contains(text(),'Required')]") public WebElement txtBillingCityErrorMsg;
+   @FindBy(xpath = "//*[@id='email']//parent::div//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingEmailAddressForOrderConfirmationErrorMsg;
+   @FindBy(xpath = "//*[@id='billingAddress1']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingAddressErrorMsg;
+   @FindBy(xpath = "//*[@id='billingState']//following-sibling::div//span[contains(text(),'Required')]") public WebElement txtBillingStateErrorMsg;
+   @FindBy(xpath="//*[@id='billingAddress1']")public WebElement txtEmailAddressforOrderConfirmationInput;
+   @FindBy(xpath="//*[@data-auid='btnPlace_Order'] | //*[text()='Place Order']")public WebElement btnPlaceOrderPaymentPage;
+   @FindBy(xpath = "//*[@id='billingZipCode']//following-sibling::*[contains(text(),'Invalid')]") public WebElement txtBillingZipCodeInvalidErrorMsg;
+   @FindBy(xpath = "//*[@id='email']//parent::div//following-sibling::*[contains(text(),'Enter a valid email')]") public WebElement txtBillingEmailAddressForOrderConfirmationInvalidErrorMsg;
+   //Only for SOF Item--Start KER-KER-7033 & KER-7031
+   @FindBy(xpath="//*[contains(text(),'SPECIAL ORDER SHIP TO STORE')]")public WebElement ShipToStoreforSOF_Txt;
+   @FindBy(xpath="//*[contains(text(),'You must be at least 18 years')]")public WebElement ShipToStoreforSOF_compliance_Txt;
+   @FindBy(xpath="//*[@data-auid='btncheckout_goto_shipping_payment_btn']")public WebElement ShipToStoreforSOF_Payment_Btn;
+   @FindBy(xpath="//*[@type='checkbox']")public WebElement selectCheckbox;  //Sid 22-Jan
+   
+   @FindBy (xpath="//*[contains(@data-auid,'shipping_method_shipment_item_')]//p[contains(text(),'$') or contains(text(),'FREE')] | //*[contains(@data-auid,'checkout_shipping_method_shipment_item') and not (contains(@data-auid,'image'))]/p")
+   public List<WebElement> shippingMethodText;
+ 
+ //Only for SOF Item--Start KER-KER-7033 & KER-7031
+
+	 //Start KER-3174 CR-RK 19-Sep
+	 @FindBy(xpath = "//*[@data-auid='checkout_edit_ship_to_store']")	public WebElement checkoutEditShipToStore_btn;
+	 //End KER-3174 CR-RK 19-Sep
+	 
+	 //Start KER-2925 CR-AG 21-Sep
+	  @FindBy(xpath="//*[contains(text(),'Terms and Conditions')]")public WebElement lnkTermsConditons;
+	  @FindBy(xpath="//*[contains(text(),'Privacy Policy')]")public WebElement lnkPrivacyPolicy;
+	  @FindBy(xpath="//*[@id='1' and @name='Dropdown']")public WebElement drpdownShippingAddress;
+	  @FindBy(xpath= "//*[contains(text(),'Gift Card Ending In')]//ancestor::button")
+		public WebElement drpdownGiftCard;
+		
+		@FindBy(xpath= "//*[contains(text(),'Gift Card Ending In')]//ancestor::div//following-sibling::div/p[contains(text(),'Remaining Balance')]")
+		public WebElement txtEmptyGiftCard;
+	  
+	  
+	  //End KER-2925 CR-AG 21-Sep
+	 
+		
+		@FindBy(xpath="//*[@data-auid='checkout_review_order']//input") public WebElement ageRestrictionCheckBox;  //SID 7-Jan 
+		
+		
+		
+	 
+   /**AG KER-3130 Ends**************************************/
+
+//
+	 //K4237-HSP- 24-Sep Start---------------- 
+	  @FindBy(xpath = "//*[contains(text(),'Order Number')]/following-sibling::p")public WebElement orderSubmitted_OrderNumber; 
+	  @FindBy(xpath ="//*[contains(text(),'Order Number')]/following-sibling::input | //*[contains(text(),'Order Number')]/../../input")//CR-DPK 11-oct
+	  public WebElement checkOutCheckOrderStatus_OrderNumberInput; 
+	 
+	//K4237-HSP- 24-Sep End---------------- 
+	  
 	  
 		//*************KER-2915*********************//
 		@FindBy(xpath = "//*[@data-component='orderConfirmation']//*[text()='THANKS FOR SUBMITTING YOUR ORDER!']")
@@ -791,6 +888,31 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 		@FindBy(xpath = "(//*[@data-component='orderConfirmation']//*)[6]")
 		public WebElement txtOrderID;
+		
+		
+		// Start KER-2927 CR-SK
+
+		public float getEstimatedTaxOnCheckoutPage() {
+			waitForElement(txtEstimatedTax);
+			String taxDisplayed = getText(txtEstimatedTax);
+			taxDisplayed = taxDisplayed.replace("$", "");
+			return Float.parseFloat(taxDisplayed);
+		}
+
+		// End KER-2927 CR-SK
+
+
+		public void verifyShippingAndBillingAddressAreSame() throws InterruptedException {
+
+			Thread.sleep(10000);
+			waitForElement(shippingAddressFirst_LastName);
+			assertEquals(getText(shippingAddressFirst_LastName), getText(billingAddressFirst_LastName));
+			assertEquals(getText(shippingAddressphoneNumber).substring(0, 8), getText(billingZip_Phone).substring(7, 15));
+			assertEquals(getText(shippingCityCountryName).subSequence(0, 15), getText(billingCityCountryName).substring(0, 15));
+		}
+
+		
+		
 	   //SID 5-September
 	   public void checkWGDefault() {
 		   waitForElement(checkout_ShippingMethod_ShippingMethodHeader_txt);
@@ -837,35 +959,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	   /**SID ENDS**************************************/
 	
-	   // To be updated by Anuj
-	   /**AG KER-3138 Starts**************************************/
-       
-       @FindBy(xpath = "//*[@data-auid='checkout_payment']") public WebElement secPayment;
-       @FindBy(xpath = "//*[text()='PAYMENT METHOD']") public WebElement secPaymentHeading;
-       @FindBy(xpath = "//*[@id='creditCard'] | //*[@data-auid='checkout_payment_options_radio_button_Credit Card']") public WebElement rdbtnCreditCard;
-       @FindBy(xpath = "//*[text()='Credit Card']") public WebElement txtCreditCard;
-       @FindBy(xpath = "//*[@id='PayPal'] | //*[@data-auid='checkout_payment_options_radio_button_PayPal']") public WebElement rdbtnPayPal;
-       @FindBy(xpath = "//*[text()='PayPal']") public WebElement txtPaypal;
-       @FindBy(xpath = "//*[@id='gpay'] | //*[@id='GooglePay']") public WebElement rdbtnGooglePay;
-       @FindBy(xpath = "//*[text()='Google Pay']") public WebElement txtGooglePay;
-       @FindBy(xpath = "//*[text()='Credit Card Number']") public WebElement txtCreditCardHeading;
-       @FindBy(xpath = "//*[@id='creditcardField'] | //*[text()='Credit Card Number']/following::*[1]") public WebElement txtCreditCardInput; //CR-RKA 10-Oct
-       @FindBy(xpath = "//*[@id='name']") public WebElement creditCardHolderInput;
-       @FindBy(xpath = "//*[@id='card']") public WebElement creditCardNumInput;
-       @FindBy(xpath = "//*[@id='creditcardField']//following-sibling::span/img[contains(@src,'visa')]") public WebElement imgVisaCreditCardInput;
-       @FindBy(xpath = "//*[text()='Expiration Date'] | //*[text()='Exp Date']") public WebElement txtExpirationDate;
-       @FindBy(xpath = "//*[@id='expirationDate'] | //*[@id='expiryField']") public WebElement txtExpirationDateInput;
-       @FindBy(xpath = "//*[@id='exp']") public WebElement creditCardExpInput;
-       @FindBy(xpath = "//*[@placeholder='MM/YY']") public WebElement txtExpirationPlaceholders;
-       @FindBy(xpath = "//*[@id='expirationDate']//parent::label//following-sibling::div/span[contains(text(),'Past expiration date')]") public WebElement txtErrorMsgForPastDates;
-       @FindBy(xpath = "//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']/following::*[1]") public WebElement txtCVVInput;
-       @FindBy(xpath = "//*[@id='cvv']") public WebElement creditCardCVVInput;
-       @FindBy(xpath="//*[@data-auid='creditCardCVV']")public WebElement Cvv_BuyNow_Modal;
-       @FindBy(xpath = "//*[@data-auid='tooltipcheckout_payment_creditCard_cvv_tooltip']") public WebElement btnCVVToolTip;
-       @FindBy(xpath = "//*[text()='The 3 digit code found on far right of signature box']") public WebElement txtCVVToolTipMsg;
-       @FindBy(xpath ="//*[@data-auid=\"btnundefined\"][@class=contains(text(),'BUY NOW')]")public WebElement BuyNow_Modal;//Added by HP for @KER-4332
-       
-      
+	   
        /**AG KER-3138 Ends**************************************/
 
 
@@ -974,83 +1068,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		setInputText(txtExpirationDateInput, webPropHelper.getTestDataProperty("ExpDate"));
 		setInputText(txtCVVInput,webPropHelper.getTestDataProperty("ThreeDigitCVV"));
 	}
-	@FindBy(xpath="//div[contains(text(),'Estimated Shipping')]/following-sibling::div[contains(text(),'FREE')]") public WebElement FreeShippingCart;
-		
-		@FindBy(xpath="(//div[@data-auid='freeShip'])[1]") public WebElement FreeShippingordersummary;
-		@FindBy(xpath="(//button[@data-auid='btncontinueShopping']") public WebElement continueshpopping;
-		@FindBy(xpath="//span[contains(text(),'Shipping')]/following-sibling::span[contains(text(),'FREE')]") public WebElement FreeShippingorderconfirmation;
-		@FindBy(xpath="//span[contains(text(),'Not available for shipping')]") public WebElement notshippingcart;
-		@FindBy(xpath="//div[contains(text(),'Items for Store Pick Up')]") public WebElement ItemForStorePickup;
-		@FindBy(xpath="//div[contains(text(),'Store pick up')]") public WebElement Storepickupbutton;
-		@FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']") public WebElement GotoPaymentbutton;
-	 // To be updated by Anuj
-	   /**AG KER-3130 Starts**************************************/
-    
-	@FindBy(xpath="//*[text()='Unrecognized expiration date']")public WebElement unrecognizedExpirationDate_Txt; 
-    
-    
-    /**AG KER-3130 Ends**************************************/
-		 // To be updated by Anuj
-	   /**AG KER-3130 Starts**************************************/
-    
-    @FindBy(xpath = "//*[@id='billingFirstName']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingFirstNameErrorMsg;
-    @FindBy(xpath = "//*[@id='billingLastName']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingLastNameErrorMsg;
-    @FindBy(xpath = "//*[@id='billingPhoneNumber']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingPhoneNumberErrorMsg;
-    @FindBy(xpath = "//*[@id='billingZipCode']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingZipCodeErrorMsg;
-    @FindBy(xpath = "//*[@id='billingZipCode']") public WebElement billingZzipCode;  //SID 4-December
-  
-    @FindBy(xpath = "//*[@id='billingCity']//following-sibling::div//span[contains(text(),'Required')]") public WebElement txtBillingCityErrorMsg;
-    @FindBy(xpath = "//*[@id='email']//parent::div//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingEmailAddressForOrderConfirmationErrorMsg;
-    @FindBy(xpath = "//*[@id='billingAddress1']//following-sibling::div//span[contains(text(),'Please')]") public WebElement txtBillingAddressErrorMsg;
-    @FindBy(xpath = "//*[@id='billingState']//following-sibling::div//span[contains(text(),'Required')]") public WebElement txtBillingStateErrorMsg;
-    @FindBy(xpath="//*[@id='billingAddress1']")public WebElement txtEmailAddressforOrderConfirmationInput;
-    @FindBy(xpath="//*[@data-auid='btnPlace_Order'] | //*[text()='Place Order']")public WebElement btnPlaceOrderPaymentPage;
-    @FindBy(xpath = "//*[@id='billingZipCode']//following-sibling::*[contains(text(),'Invalid')]") public WebElement txtBillingZipCodeInvalidErrorMsg;
-    @FindBy(xpath = "//*[@id='email']//parent::div//following-sibling::*[contains(text(),'Enter a valid email')]") public WebElement txtBillingEmailAddressForOrderConfirmationInvalidErrorMsg;
-    //Only for SOF Item--Start KER-KER-7033 & KER-7031
-    @FindBy(xpath="//*[contains(text(),'SPECIAL ORDER SHIP TO STORE')]")public WebElement ShipToStoreforSOF_Txt;
-    @FindBy(xpath="//*[contains(text(),'You must be at least 18 years')]")public WebElement ShipToStoreforSOF_compliance_Txt;
-    @FindBy(xpath="//*[@data-auid='btncheckout_goto_shipping_payment_btn']")public WebElement ShipToStoreforSOF_Payment_Btn;
-    @FindBy(xpath="//*[@type='checkbox']")public WebElement selectCheckbox;  //Sid 22-Jan
-    
-    @FindBy (xpath="//*[contains(@data-auid,'shipping_method_shipment_item_')]//p[contains(text(),'$') or contains(text(),'FREE')] | //*[contains(@data-auid,'checkout_shipping_method_shipment_item') and not (contains(@data-auid,'image'))]/p")
-    public List<WebElement> shippingMethodText;
-  
-  //Only for SOF Item--Start KER-KER-7033 & KER-7031
-
-	 //Start KER-3174 CR-RK 19-Sep
-	 @FindBy(xpath = "//*[@data-auid='checkout_edit_ship_to_store']")	public WebElement checkoutEditShipToStore_btn;
-	 //End KER-3174 CR-RK 19-Sep
-	 
-	 //Start KER-2925 CR-AG 21-Sep
-	  @FindBy(xpath="//*[contains(text(),'Terms and Conditions')]")public WebElement lnkTermsConditons;
-	  @FindBy(xpath="//*[contains(text(),'Privacy Policy')]")public WebElement lnkPrivacyPolicy;
-	  @FindBy(xpath="//*[@id='1' and @name='Dropdown']")public WebElement drpdownShippingAddress;
-	  @FindBy(xpath= "//*[contains(text(),'Gift Card Ending In')]//ancestor::button")
-		public WebElement drpdownGiftCard;
-		
-		@FindBy(xpath= "//*[contains(text(),'Gift Card Ending In')]//ancestor::div//following-sibling::div/p[contains(text(),'Remaining Balance')]")
-		public WebElement txtEmptyGiftCard;
-	  
-	  
-	  //End KER-2925 CR-AG 21-Sep
-	 
-		
-		@FindBy(xpath="//*[@data-auid='checkout_review_order']//input") public WebElement ageRestrictionCheckBox;  //SID 7-Jan 
-		
-		
-		
-	 
-    /**AG KER-3130 Ends**************************************/
-
- //
-	 //K4237-HSP- 24-Sep Start---------------- 
-	  @FindBy(xpath = "//*[contains(text(),'Order Number')]/following-sibling::p")public WebElement orderSubmitted_OrderNumber; 
-	  @FindBy(xpath ="//*[contains(text(),'Order Number')]/following-sibling::input | //*[contains(text(),'Order Number')]/../../input")//CR-DPK 11-oct
-	  public WebElement checkOutCheckOrderStatus_OrderNumberInput; 
-	 
-	//K4237-HSP- 24-Sep End---------------- 
-	  
+	
     public void billingAddressErrorMsgValidation() {
     	
     	assertTrue(isDisplayed(txtBillingFirstNameErrorMsg));
@@ -1414,16 +1432,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			return flag;		
 		}
 		
-		@FindBy (xpath="//*[@id='in-store-pickup-check']") public WebElement SOF_CheckBox_CheckoutPage;
-		@FindBy (xpath="//a[text()='Edit']") public WebElement editBtn;
-		@FindBy (xpath="//a[text()='Change Location']") public WebElement changeLocationBtn;
-		@FindBy (xpath="//p[contains(text(),'Ship and pickup not allowed on selected store, please update cart or change store')]") public WebElement orderErrorMsg;
-		@FindBy (xpath="//p[text()='You Entered']") public WebElement youEnteredAddress;
-		@FindBy (xpath="//button[text()='Use Selected Address']") public WebElement useSelectedAddress;
-		@FindBy (xpath="//p[contains(text(),'We are unable to ship to PO, APO and FPO')]") public WebElement shippingError;
-		@FindBy (xpath="//p[contains(text(),'Standard ')]") public WebElement standardShipping;
-		
-		
 		
 		public void editStorePickup() {
 			logger.info("Clicking on Edit Store button");
@@ -1459,5 +1467,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			Assert.assertEquals(true, standardShipping.isDisplayed());
 			logger.info("Verified Standard Shipping is displayed");
 		}
+		
 		
 }
