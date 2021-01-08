@@ -164,6 +164,20 @@ public class R1_Checkout_86_Web extends Common_Web_PLCC {
 		plccCCApplicationModalObjects.verifyPresenceOfSuccessModalCCModal();
 		//plccCCApplicationModalObjects.successModal.click();
 	}
+	@Then("^user click on cart icon$")
+	public void user_click_on_cart_icon() throws Throwable {
+		plccCCApplicationModalObjects.btnheaderCarticon.click();
+	}
+	
+	@Then("^user click on apply button$")
+	public void user_click_on_apply_button() throws Throwable {
+		plccCCApplicationModalObjects.btnCartPgApplyButton.click();
+	}
+	
+	@Then("^user click on agree button$")
+	public void user_click_on_agree_button() throws Throwable {
+		plccCCApplicationModalObjects.t$CCheckBoxInactiveConsentModel.click();
+	}								   
 
 	@When("^user click on continue to checkout$")
 	public void user_click_on_continue_to_checkout() throws Throwable {

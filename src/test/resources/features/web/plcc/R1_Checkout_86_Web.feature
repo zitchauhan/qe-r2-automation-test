@@ -57,6 +57,33 @@ Feature: PLCC: Checkout_Payment Using PLCC
 	And user click on Payments link
 	Then delete all credit cards from My Account
 	
+@OMNI-13452 @RegressionP3															
+Scenario: Verify user is able to apply PLCC card through cart banner in the cart page
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	Then user click on cart icon
+	When user click on apply button 
+	When user enter First Name on credit card Application Modal "FirstName" 
+	Then user enter Last Name on credit card Application Modal "LastName" 
+	And user enter Last four SSN "Last4DigitsOfSSN" 
+	And user enetr Date of Birth "DOB" 
+	And user enter Annual Income "AnnualIncome" 
+	And user enter Street Address "StreetAddress" 
+	And user enter Suite or Apartment "SuiteOrApartment" 
+	And user enter City "City" 
+	And user select State "State" 
+	And user enter Zip Code on credit card Application Modal "ZipCode" 
+	And user enter Email Address on credit card Application Modal "EmailId" 
+	And user enter Confirm Email Address "ConfirmEmailId" 
+	And user enter Mobile Phone "MobilePhone" 
+	And user enter Alternate Phone "AlternatePhone" 
+	When user click on CONTINUE button 
+	And user verify presence of STEP2: CONSENT  
+	When user click on SUBMIT button 
+	And user select credit application modal agree message 
+    When user click on SUBMIT button 
+#    Then user expect element WELCOME ALWAYS APPROVE!
+    Then user expect element Application Under Review Text to be present
+						  
 	@C-PLCC @Regression @All @PLCC-86 @CR-VS 
 	Scenario: Verify user is able to change default PLCC credit card to other credit on payment section of checkout page
 	When user handles adding new card "ValidPLCCCard" if already card is saved
