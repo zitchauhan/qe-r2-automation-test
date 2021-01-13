@@ -28,6 +28,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	/**************** START LOCAL OBJETCS AND DECLARATIONS***********************/
 	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);	
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
+	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	public String nullvalue = "";
 	/*************** END LOCAL OBJETCS AND DECLARATIONS ************************/
 
@@ -651,6 +652,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='btncheckout_goto_order_review_submit_button'] | //*[contains(text(),'Review Order')]")public WebElement ReviewOrder_Btn;
 	   @FindBy(xpath="//*[@data-auid='checkout_edit_payment']")public WebElement EditPayment_Link;
 	   @FindBy(xpath="//*[text()='Change Billing Information']")public WebElement ChangeBillingInformation_Txt;
+	   @FindBy(xpath="//div[contains(text(),'Estimated Shipping')]/following-sibling::div")public WebElement ShippingChargeOnCartPage;
+	   @FindBy(xpath="(//div[@data-auid='freeShipValue'])[1]")public WebElement ShippingChargeOnOrderSummaryPage;
+	   @FindBy(xpath="//input[@id='in-store-pickup-check']")public WebElement InStorePickupCheck;
+	   @FindBy(xpath="//input[@id='ship-to-store-check']")public WebElement InStoreShiptoStoreCheck;
+	   @FindBy(xpath="//button[@data-auid='btncheckout_goto_shipping_payment_btn']")public WebElement GotoShippingPayment;
+	   @FindBy(xpath="//button[@data-auid='btncheckout_ship_to_store_submit_button']")public WebElement ShiptoStoreGotoShippingPayment;
+	   @FindBy(xpath="//div[@class='ReactModal__Content ReactModal__Content--after-open css-emsbz0 css-13btyyq']")public WebElement ResidencyPopUpModal;
 	   
 	   @FindBy(xpath="//input[@id='paypal']/..")public WebElement rdPaypal;// PayPal_radioBtm;
 	   @FindBy(xpath="//*[text()=' Checkout']/.. | //*[contains(@class,'paypal-button')]")public WebElement PayPalCheckOut_Btn;
@@ -1326,6 +1334,55 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			return true;
 
 		}
+		
+		public boolean paymentViaCreditCardandvalidateResidencyPopup(boolean userWithoutExistingPaymentDetails, String CCtype, String userType) throws InterruptedException
+		{
+			String creditCardProperty [] = new String [2];
+			creditCardProperty = credeitCardPropertyName(CCtype);
+			String creditCardNumber = creditCardProperty[0];
+			String cvv = creditCardProperty[1];
+			boolean chooseCreditCard = false;
+			if (!(userWithoutExistingPaymentDetails)) {
+				if (isNotDisplayed(chooseCreditcard_Dd))
+					chooseCreditCard = true;
+			}
+
+			if (chooseCreditCard | userWithoutExistingPaymentDetails) {
+				
+				fillCreditCardDetailCheckoutPage(creditCardNumber,cvv);
+				
+				if (!(isDisplayed(btnEditShippingAddress))) {
+					
+					fillBillingSectionDetailCheckout();
+					
+				}
+
+				if (userType.equalsIgnoreCase("guest") | userType.equalsIgnoreCase("unauthenticated")) {
+					setInputText(EmailAddressforOrderConfirmation_Input,
+							commonUtils.generateRandomEmailId());
+				}
+
+				assertTrue(clickOnButton(ReviewOrder_Btn));
+				waitForElement(r2CheckOutPo.ResidencyPopUpModal);
+				isDisplayed(r2CheckOutPo.ResidencyPopUpModal);
+
+				
+				if(isDisplayed(ContinueReviewCTA))
+				{
+					assertTrue(clickOnButton(ContinueReviewCTA));
+					Thread.sleep(Constants.thread_high);
+				}
+			}
+			if (!(userWithoutExistingPaymentDetails)) {
+				if (isDisplayed(ReviewOrder_Btn))
+					assertTrue(clickOnButton(ReviewOrder_Btn));
+			}
+			//Thread.sleep(Constants.thread_medium);
+						
+			return true;
+
+		}
+		
 		
 		/**
 		 * This function return the Property Name info stored in Property file for selected credit card type

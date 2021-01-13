@@ -51,6 +51,10 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement continueToCheckoutBtnErrorModal;
 	@FindBy(xpath = "//*[@data-auid='continuetocheckout_declined']")
 	public WebElement continueToCheckoutBtnURModal;
+		@FindBy(xpath = "//*[@class='position-relative ']")
+	public WebElement btnheaderCarticon;	
+	@FindBy(xpath = "//*[@class='css-db90mx']")
+	public WebElement btnCartPgApplyButton;												
 		
 	@FindBy(xpath = "//*[@name='state']")
 	public WebElement stateDropDownCCModal;
@@ -180,8 +184,9 @@ public class R1_PLCC_CreditCardApplicationModal_PO extends CommonActionHelper {
 	public WebElement errorModalCCAM;
 	@FindBy(xpath = "//*[@data-auid='errorModalImage']")
 	public WebElement errorModalImageCCAM;
-	@FindBy(xpath = "//*[text()='APPLICATION UNDER REVIEW (FPO)']")
+		@FindBy(xpath = "//*[text()='APPLICATION UNDER REVIEW']")
 	public WebElement applicationUnderReviewText;
+ //   @FindBy(xpath = "//*[text()='APPLICATION UNDER REVIEW (FPO)']")	public WebElement applicationUnderReviewText;
 	@FindBy(xpath = "//*[text()='Your credit application is under review. You will be notified by mail within 10 business days.']")
 	public WebElement disclosureMsgErrorModalCCAM;
 	@FindBy(xpath = "//*[@data-auid='error_modal_close']")

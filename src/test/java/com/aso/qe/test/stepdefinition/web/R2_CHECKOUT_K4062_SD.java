@@ -37,6 +37,7 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 	R2_CheckOut_PO r2CheckoutPoN = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	Hooks hooks = new Hooks();
 	String orderID = " ";
+	String str =" ";
 
 	@And("^user adds shipment address on checkout page for \"(.*?)\" user$")
 	public void user_adds_shipment_address_on_checkout_page_for_user(String arg1) throws Throwable {
@@ -615,6 +616,118 @@ public void validate_that_shipping_is_free_on_order_confirmation_page() throws T
 			Thread.sleep(Constants.thread_medium);
 			return true;
 
+	}
+	@Then("^user validates the shipping charge on cart page$")
+	public void user_validates_the_shipping_charge_on_cart_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   str=r2CheckOutPo.ShippingChargeOnCartPage.getText();
+	   assertTrue(isDisplayed(r2CheckOutPo.ShippingChargeOnCartPage));
+	   System.out.println(str);
+	}
+	
+	@Then("^validates the shipping charge on order summary$")
+	public void validates_the_shipping_charge_on_order_summary() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new PendingException();
+		String shippingchargeordersummary=r2CheckOutPo.ShippingChargeOnOrderSummaryPage.getText();
+		   assertTrue(isDisplayed(r2CheckOutPo.ShippingChargeOnOrderSummaryPage));
+		   System.out.println(shippingchargeordersummary);
+		   assertTrue(shippingchargeordersummary.equalsIgnoreCase(str));
+	}
+	
+	
+	@When("^User check the checkbox and Go to Payment page$")
+	public void user_check_the_checkbox_and_Go_to_Payment_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		waitForElement(r2CheckOutPo.InStorePickupCheck);
+		//clickOnRadioButton(r2CheckOutPo.InStorePickupCheck);
+		r2CheckOutPo.JS_Click(r2CheckOutPo.InStorePickupCheck);
+		waitForElement(r2CheckOutPo.GotoShippingPayment);
+		clickOnButton(r2CheckOutPo.GotoShippingPayment);
+	}
+	@When("^User check the checkbox and Go to Payment page for shiptoStore$")
+	public void user_check_the_checkbox_and_Go_to_Payment_page_for_shiptoStore() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		waitForElement(r2CheckOutPo.InStoreShiptoStoreCheck);
+		//clickOnRadioButton(r2CheckOutPo.InStorePickupCheck);
+		r2CheckOutPo.JS_Click(r2CheckOutPo.InStoreShiptoStoreCheck);
+		waitForElement(r2CheckOutPo.ShiptoStoreGotoShippingPayment);
+		clickOnButton(r2CheckOutPo.ShiptoStoreGotoShippingPayment);
+	}
+	
+	@Then("^Validate the Residency modal popup$")
+	public void Validate_the_Residency_modal_popup() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		waitForElement(r2CheckOutPo.ResidencyPopUpModal);
+		assertTrue(isDisplayed(r2CheckOutPo.ResidencyPopUpModal));
+	}
+	
+	@And("^user add \"(.*?)\" details in payment method for \"(.*?)\" user and Validate Residency Modal Popup$")
+	public void user_add_details_in_payment_method_for_user_and_Validate_Residency_Modal_Popup(String arg1, String arg2) throws Throwable {
+		//System.out.println("In - And user add Payment Type details in payment method for guest user");
+		boolean userWithoutExistingPaymentDetails = userWithoutStoredPaymentDetails(arg2);
+		
+		if (!(userWithoutExistingPaymentDetails)) {
+			if (isDisplayed(r2CheckOutPo.EditPayment_Link)) {
+				clickOnButton(r2CheckOutPo.EditPayment_Link);
+			}
+			if (isDisplayed(r2CheckOutPo.btnRemoveGiftCard)) {
+				clickOnButton(r2CheckOutPo.btnRemoveGiftCard);
+			}
+		}
+		if (arg1.toLowerCase().contains(("credit card"))) {
+			//CreditCardModule(userWithoutExistingPaymentDetails,arg1, arg2);
+			r2CheckOutPo.paymentViaCreditCardandvalidateResidencyPopup(userWithoutExistingPaymentDetails,arg1, arg2);
+		}
+		
+		else if (arg1.equalsIgnoreCase("gift card")) {
+			boolean chooseGiftCard = true;
+			if (!(userWithoutExistingPaymentDetails)) {
+				if (isDisplayed(r2CheckOutPo.plusIconGiftCard)) {
+					assertTrue(clickOnButton(r2CheckOutPo.plusIconGiftCard));
+					if (isDisplayed((r2CheckOutPo.inputGiftcardNumber))) {
+						setInputText(r2CheckOutPo.inputGiftcardNumber,
+								webPropHelper.getTestDataProperty("GiftCardNumberForOrderPlacement"));
+
+					} else if (isDisplayed(r2CheckOutPo.btnCheckoutApply)) {
+						chooseGiftCard = false;
+						clickOnButton(r2CheckOutPo.btnCheckoutApply);
+
+					}
+				}
+			} else {
+				assertTrue(clickOnButton(r2CheckOutPo.plusIconGiftCard));
+				setInputText(r2CheckOutPo.inputGiftcardNumber,
+						webPropHelper.getTestDataProperty("GiftCardNumberForOrderPlacement"));
+			}
+
+			if (chooseGiftCard) {
+				setInputText(r2CheckOutPo.inputPinNumber,
+						webPropHelper.getTestDataProperty("GiftCardPinForOrderPlacement"));
+				waitForElement(r2CheckOutPo.btnCheckoutApply);
+				assertTrue(clickOnButton(r2CheckOutPo.btnCheckoutApply));
+				waitForElement(r2CheckOutPo.txtGiftCardAppliedSuccessMessage);
+				if (arg2.equalsIgnoreCase("guest") | arg2.equalsIgnoreCase("unauthenticated")) {
+					setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input,
+							r2MyAccountPO.generateRandomEmailId());
+				}
+			}
+
+			Thread.sleep(Constants.thread_medium);
+			if (isDisplayed(r2CheckOutPo.ReviewOrder_Btn)) {
+				assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
+			}
+
+		} else if (arg1.equalsIgnoreCase("PayPal")) {
+			R2_CHECKOUT_K4039_SD PayPalMethodObject = new R2_CHECKOUT_K4039_SD();
+			Thread.sleep(Constants.thread_medium);
+			assertTrue(clickOnButton(r2CheckOutPo.PayPal_radioBtn));
+		    waitForElement(r2CheckoutPoN.paypalButton);
+			assertTrue(clickOnButton(r2CheckoutPoN.paypalButton));
+			PayPalMethodObject.user_switch_to_iframe_and_enter_the_paypal_login("PayPalEmail", "PayPalPassword");
+			PayPalMethodObject.user_clicks_on_ok_button_of_order_not_complete_modal();
+		}
+		
 	}
 }
 

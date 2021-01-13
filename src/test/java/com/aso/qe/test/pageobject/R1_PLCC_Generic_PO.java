@@ -111,6 +111,9 @@ public class R1_PLCC_Generic_PO extends Common_Web_PLCC {
 	public WebElement addNewGiftCardOption;
 	
 	
+@FindBy(xpath = "(//div[@class='css-hboir5'])[1]")
+public WebElement PickupButtonPDP; 
+	
 	@FindBy(xpath = "//*[text()='Remove from Cart'] | //*[@data-auid='crt_btnRmvFromCart_710320043']")
 	public WebElement RemoveFromCartBtn;
 	
