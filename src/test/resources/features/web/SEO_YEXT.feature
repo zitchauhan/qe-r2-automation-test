@@ -1,6 +1,6 @@
 Feature: YEXT Functionalities
 
-@Web @yext @SEO @RegressionP2 @TC-OMNI-12812 @SR-1340
+@Web @yext @SEO @TC-OMNI-12812 @SR-1340 @YextRegression
 Scenario: YEXT - Close/Delete Functionality
 	Given user launches the browser and navigates to "YEXT" page 
 	And User signs into YEXT
@@ -12,7 +12,7 @@ Scenario: YEXT - Close/Delete Functionality
 	And User searches a product "YextSOFSKUNumber" and navigates to PDP
 	Then Verify store close in PDP page
 	
-@Web @yext @SEO @RegressionP2 @TC-OMNI-13876  @SR-1341
+@Web @yext @SEO @TC-OMNI-13876  @SR-1341 @YextRegression
 Scenario: YEXT - Update Functionality
 	Given user launches the browser and navigates to "YEXT" page
 	And User signs into YEXT
