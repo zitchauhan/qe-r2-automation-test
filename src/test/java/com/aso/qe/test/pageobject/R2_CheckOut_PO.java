@@ -28,7 +28,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	/**************** START LOCAL OBJETCS AND DECLARATIONS***********************/
 	R2_MyAccount_PO myAccountPo= PageFactory.initElements(driver, R2_MyAccount_PO.class);	
 	R2_Sanity_PO r2SanityPo = PageFactory.initElements(driver, R2_Sanity_PO.class);
-	R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
+	//R2_CheckOut_PO r2CheckOutPo = PageFactory.initElements(driver, R2_CheckOut_PO.class);
 	public String nullvalue = "";
 	/*************** END LOCAL OBJETCS AND DECLARATIONS ************************/
 
@@ -1363,8 +1363,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 				}
 
 				assertTrue(clickOnButton(ReviewOrder_Btn));
-				waitForElement(r2CheckOutPo.ResidencyPopUpModal);
-				isDisplayed(r2CheckOutPo.ResidencyPopUpModal);
+				waitForElement(ResidencyPopUpModal);
+				isDisplayed(ResidencyPopUpModal);
 
 				
 				if(isDisplayed(ContinueReviewCTA))
