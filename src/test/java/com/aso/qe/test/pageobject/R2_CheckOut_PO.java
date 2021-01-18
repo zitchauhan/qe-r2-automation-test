@@ -1547,8 +1547,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			
 		}
 		
-		
-		
 		public void Verifyshippingpricesofshippingmethoddropdown() throws InterruptedException
 		{
 			 String OderSummary_price= EstimatedShippingPrice_txt.getText();
