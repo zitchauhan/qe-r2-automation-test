@@ -1540,9 +1540,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 
 
 
-
-
-
 		public void verifyAVSverificationPopup() throws InterruptedException
 		{
 			
