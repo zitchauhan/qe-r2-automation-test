@@ -24,7 +24,7 @@ Scenario: YEXT - Update Functionality
 	And User searches a product "YextSOFSKUNumber" and navigates to PDP
 	Then Verify store details in PDP page
 
-@Web @yext @SEO
+@Web @yext @SEO @YextRegression
 Scenario: YEXT - Create Functionality
 	Given user launches the browser and navigates to "YEXT" page
 	And User signs into YEXT
@@ -35,7 +35,7 @@ Scenario: YEXT - Create Functionality
 	And Navigate to the store page with state "YextNewLocAddressStateCode", city "YextNewLocAddressCity" and store "YextStoreName1"
 	Then Verify Store created on ASO Page
 	
-@Web @yext @SEO1
+@Web @yext @SEO1 @YextRegression
 Scenario: YEXT - Update Functionality in Store Locator page
 	Given user launches the browser and navigates to "YEXT" page
 	And User signs into YEXT

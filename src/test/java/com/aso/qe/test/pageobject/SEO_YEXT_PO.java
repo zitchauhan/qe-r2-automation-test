@@ -864,6 +864,7 @@ public class SEO_YEXT_PO extends CommonActionHelper {
 		}
 
 		featuredMessageTxt.sendKeys("This is a new feature");
+		//entityIDTxt.sendKeys(RandomStringUtils.randomNumeric(3));
 		entityIDTxt.sendKeys(RandomStringUtils.randomNumeric(4));
 		clickOnButton(continueBtn); 
 		waitForPageLoad(driver);
