@@ -1516,8 +1516,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			logger.info("Error message displayed is: " +orderErrorMsg.getText());
 		}
 		
-		
-		
 		public void validateShippingError() {
 			if(driver.findElements(By.xpath("//h4[text()='ADDRESS VERIFICATION']")).size()>0) {
 				logger.info("Selecting Entered Address option from the Address verification pop up");
@@ -1541,7 +1539,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		}
 		
 		
-
+		
+		
 		
 		
 		public void verifyAVSverificationPopup() throws InterruptedException
