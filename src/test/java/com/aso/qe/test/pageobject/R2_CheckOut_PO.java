@@ -1435,6 +1435,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy (xpath="//p[contains(text(),'Ship and pickup not allowed on selected store, please update cart or change store')]") public WebElement orderErrorMsg;
 		
 		
+		
 		public void editStorePickup() {
 			logger.info("Clicking on Edit Store button");
 			clickOnButton(editBtn);
@@ -1469,7 +1470,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			Assert.assertEquals(true, standardShipping.isDisplayed());
 			logger.info("Verified Standard Shipping is displayed");
 		}
-		
 		public void verifyAVSverificationPopup() throws InterruptedException
 		{
 			
