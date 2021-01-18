@@ -1470,6 +1470,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			Assert.assertEquals(true, standardShipping.isDisplayed());
 			logger.info("Verified Standard Shipping is displayed");
 		}
+		
+		
+		
 		public void verifyAVSverificationPopup() throws InterruptedException
 		{
 			
