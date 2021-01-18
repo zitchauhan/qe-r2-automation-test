@@ -7,8 +7,6 @@ import static org.junit.Assert.assertTrue;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -108,9 +106,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	@FindBy(xpath = "//*[@data-auid='checkout_payment_add_another_gift_card_icon']")
 	public WebElement plusAnotherIconGiftCard;//27Aug danush
-	
-	@FindBy(xpath = "//*[contains(text(),'ADDRESS VERIFICATION')]") //CR-DPK 14-sept
-	public WebElement addressAVS;
 
 //	@FindBy(xpath = "//*[text()='Gift Card Number']")
 //	public WebElement txtGiftcardNumber;
@@ -279,9 +274,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath="//*[@name='companyName']")
 	public WebElement checkout_ShippingAddress_AddCompanyName_txt;
 	
-	@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']/*[2]/*[2]")
-	   public WebElement Shippingprice;
-	
 	@FindBy(xpath="//*[@name ='state']/button")
 	public WebElement checkout_ShippingAddress_State_btn;
 //	
@@ -312,11 +304,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	
 	@FindBy(xpath = "//*[@data-auid='checkout_edit_shipping_method']")
 	public WebElement checkout_ShippingMethod_Edit_lnk;
-	
-	@FindBy(xpath = "//*[@data-auid='ul_dropdownList']")
-	public WebElement checkout_ShippingMethods;
-	
-	
 	
 	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']|//*[@data-auid='undefined_dropdownList']") //Updated by VSN on 07-12-19
 	public WebElement checkout_ShippingMethod_List_dd;
@@ -1537,47 +1524,6 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			Assert.assertEquals(true, standardShipping.isDisplayed());
 			logger.info("Verified Standard Shipping is displayed");
 		}
-
-		public void verifyAVSverificationPopup()throws InterruptedException
-		{
-			
-			Assert.assertEquals(true,isDisplayed(addressAVS));
-				
-			
-		}
 		
-		public void Verifyshippingpricesofshippingmethoddropdown() throws InterruptedException
-		{
-			 String OderSummary_price= EstimatedShippingPrice_txt.getText();
-			 
-			 String  ShippingMethodPrice=""; 
-			 checkout_ShippingMethod_ShippingMethodType_btn.click();
-			 String CURRENCY_SYMBOLS= "\\p{Sc}\u0024\u060B";
-			
-			Pattern p = Pattern.compile("[" +CURRENCY_SYMBOLS + "][\\d{1,3}[,\\.]?(\\d{1,2})?]+");
-			List<WebElement> dropdownoption =checkout_ShippingMethods.findElements(By.tagName("li"));
-		     for (WebElement element : dropdownoption){
-		    	 ShippingMethodPrice=element.getText();
-		    	if(ShippingMethodPrice.contains("Standard"))
-			    continue;
-			    System.out.println(element.getText());
-			    element.click();
-			    driver.navigate().refresh();
-			    waitForPageLoad(driver);
-			    Matcher m1 = p.matcher(ShippingMethodPrice);
-		        OderSummary_price=Shippingprice.getText();
-	    	    Matcher m2 = p.matcher(OderSummary_price);
-	    	    while (m1.find()&&m2.find()) {
-	    	    	
-	    	    	Assert.assertEquals(m2.group(),m1.group());
-	    	        System.out.println(m1.group()+"------------------------"+m2.group());
-	    	    }
-	    	  
-			    
-			    break;
-			    
-		      }
-		}
-			  
 		
 }
