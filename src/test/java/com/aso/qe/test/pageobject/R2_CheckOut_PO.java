@@ -1538,11 +1538,11 @@ public class R2_CheckOut_PO extends CommonActionHelper
 			logger.info("Verified Standard Shipping is displayed");
 		}
 		
-		
-		
-		
-		
-		
+
+
+
+
+
 		public void verifyAVSverificationPopup() throws InterruptedException
 		{
 			
