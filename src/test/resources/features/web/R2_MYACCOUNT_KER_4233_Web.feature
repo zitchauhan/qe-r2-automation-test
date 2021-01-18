@@ -65,7 +65,7 @@ Scenario: Verify that Authenticated User is able to rename a Wish List
 	Then user enters Wishlist name "WishListRename" 
 	And user clicks on create 
 	
-@R2_Web @ZYP_MYACCOUNT_K4233-11104 @CR-MS @TC-KER-11104 
+@R2_Web @ZYP_MYACCOUNT_K4233-11104 @CR-MS @TC-KER-11104 @RegressionP3 @SR-1125 @TC-OMNI-19225
 Scenario: Verify that Authenticated User is able to cancel deleting a Wish List 
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	When user clicks on SignIn link from global header 

@@ -114,7 +114,11 @@ public class R1_PDP_PO extends CommonActionHelper
 	@FindBy(xpath="(//section[@id='productCardListing']/div/a)[2]")public WebElement GiftCardAvailable;
 	@FindBy(xpath="(//section[@id='productCardListing']/div/a)[1]")public WebElement BulkGiftCardAvailable;
 	@FindBy(xpath="(//a[@aria-label='Shoes + Boots'])[2]") public   WebElement Shoeboatsflyout;
+	@FindBy(xpath="//h5[contains(text(),'Items Added Successfully')]") public   WebElement cartModal;
 
+	
+	
+	
 	public void clickProdcutCardimage() throws Exception {
 		assertTrue(clickOnButton(btnProdctimage));
 	}
@@ -628,7 +632,29 @@ public class R1_PDP_PO extends CommonActionHelper
 		super();
 	}
 
-
+	public void clickViewCart() {
+		logger.info("Clicking on View Cart button");
+		clickOnButton(btnViewCart);
+		waitForPageLoad(driver);
+		logger.info("Clicked on View Cart button");
+	}
+	
+	public void clickAddToCart() {
+		logger.info("Clicking on Add to Cart button");
+		clickOnButton(btnAddToCart);
+		waitForPageLoad(driver);
+		logger.info("Clicked on Add to Cart button");
+	}
+	
+	public void verifyCartModalDisplayed() {
+		logger.info("Verify Cart Modal is displayed");
+		Assert.assertTrue(cartModal.isDisplayed());
+		waitForPageLoad(driver);
+		logger.info("Verified Cart Modal is displayed");
+	}
+	
+	
+	
 	public boolean addToCartAvailability() throws InterruptedException
 	{
 		boolean isAddtoCart= false;

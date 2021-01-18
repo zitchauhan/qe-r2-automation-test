@@ -14,8 +14,7 @@ public class R2_CHECKOUT_K3135_SD extends CommonActionHelper {
 	R1_SearchProduct_PO r1_SearchPO = PageFactory.initElements(getDriver(), R1_SearchProduct_PO.class);
 
 	@And("^user enters new billing address information \"(.*?)\" , \"(.*?)\" , \"(.*?)\" , \"(.*?)\" , \"(.*?)\" , \"(.*?)\"$")
-	public void user_enters_new_billing_address_information(String arg1, String arg2, String arg3, String arg4,
-			String arg5, String arg6) throws Throwable {
+	public void user_enters_new_billing_address_information(String arg1, String arg2, String arg3, String arg4, String arg5, String arg6) throws Throwable {
 		clearText(r2CheckOutPo.FirstName_Input);
 		clearText(r2CheckOutPo.LastName_Input);
 		clearText(r2CheckOutPo.PhoneNumber_Input);

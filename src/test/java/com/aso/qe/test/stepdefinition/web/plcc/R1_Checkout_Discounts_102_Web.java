@@ -37,5 +37,19 @@ public class R1_Checkout_Discounts_102_Web extends CommonActionHelper {
 
 
 	}
+	@When("^user click on store pickup button$")
+	public void user_click_on_store_pickup_button() throws Throwable {
+		waitForPageLoad(driver);
+
+		//Thread.sleep(Constants.thread_high);
+		waitForElement(genericPO.PickupButtonPDP);
+		assertTrue(isDisplayed(genericPO.PickupButtonPDP));
+		//assertTrue(clickOnButton(genericPO.shipItButton));  
+		//clickOnButton(genericPO.shipItButton);
+		r2CheckOutPo.JS_Click(genericPO.PickupButtonPDP);
+
+
+	}
+	
 	
 		}

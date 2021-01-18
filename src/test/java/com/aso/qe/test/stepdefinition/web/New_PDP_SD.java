@@ -516,6 +516,13 @@ public class New_PDP_SD extends CommonActionHelper {
 			
 		}
 		
+		@And("^user verifies product Image is displayed in PDP$")
+		public void verify_Produc_Image() throws InterruptedException {
+			newPDP.verifyProductImage();
+		}
+		
+		
+		
 		@And("^verify user is able to verify color attribute present$")
 		public void ver_verifiy_color() {
 			if("mobile".equalsIgnoreCase(testtype)) {
@@ -675,12 +682,6 @@ public class New_PDP_SD extends CommonActionHelper {
 			assertTrue(isDisplayed(newPDP.thumbNailImg));
 		}
 	}
-	
-	//@When("^user clicks on alternate image thumbnail$")
-	public void user_clicks_atlernateImg() {
-		
-	}
-	
 	
 	
 	@Then("^user should see image is updated on selecting alternate image$")
@@ -862,6 +863,11 @@ public class New_PDP_SD extends CommonActionHelper {
 		System.out.println("Estimate date on cart modal is " +date);
 		assertTrue(EstpdpDate.contains(date));
 		}
+	}
+	
+	@Then("^User should see image is updated on selecting thumbnail images$")
+	public void verifyImgChanges() throws InterruptedException {		
+		newPDP.verifyImgChanges();
 	}
 	
 }

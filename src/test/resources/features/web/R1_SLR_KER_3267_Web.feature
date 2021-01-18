@@ -1,6 +1,6 @@
 Feature: Verify the user search for Customer Keyword/SKU Search
 
-  @C-SLR @Web @All  @Regression @KER-3267  @ZYP_SLR_K3267-6329 @DevORIG @1HR 
+  @C-SLR @Web @All  @RegressionP3 @KER-3267  @ZYP_SLR_K3267-6329 @DevORIG @1HR @TC-OMNI-12553
   Scenario Outline: Verify the user search for Customer Keyword/SKU Search
     Given user launches the browser and navigates to "ASO_HOME" page
     Then User should be able to see Search Box on Homepage
