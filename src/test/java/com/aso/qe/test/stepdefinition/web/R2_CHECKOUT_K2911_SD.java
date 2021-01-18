@@ -65,4 +65,13 @@ public class R2_CHECKOUT_K2911_SD extends CommonActionHelper {
 		String WhiteGlove_price= WhiteGlove_Shippingmethod.replaceAll("[^0-9]", "");
 		assertEquals(WhiteGlove_OrderSummary_price,WhiteGlove_price);
 	}
+	
+	
+	
+	@Then("^Verify shipping prices are updated on changing/selecting the shipping method drop down$")
+	public void Verify_shipping_prices_are_updated_on_selecting_the_shipping_method_drop_down() throws Throwable {
+		r2CheckoutPo.Verifyshippingpricesofshippingmethoddropdown();
+	}
+	
+	
 }

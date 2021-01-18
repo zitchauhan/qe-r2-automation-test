@@ -22,7 +22,7 @@ import cucumber.api.junit.Cucumber;
 		features="src/test/resources/features/web/", 
 		glue="com.aso.qe.test.stepdefinition.web",
 		tags= {"@SEO1"},
-		monochrome=true,
+				monochrome=true,
 				plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html",
 		format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
 		) 

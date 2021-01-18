@@ -7,6 +7,8 @@ import static org.junit.Assert.assertTrue;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -14,6 +16,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -310,6 +313,13 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath = "//*[@data-auid='shipping_method_shipment_item_1_container']|//*[@data-auid='undefined_dropdownList']") //Updated by VSN on 07-12-19
 	public WebElement checkout_ShippingMethod_List_dd;
 	
+	@FindBy(xpath = "//div[@data-auid='shipping_method_shipment_item_1_container']//div//div[1]//div//button//span") 
+	public WebElement checkout_ShippingMethods_button;
+	
+	@FindBy(xpath = "//*[@data-auid='ul_dropdownList']") 
+	public WebElement checkout_ShippingMethods;
+	
+	
 	@FindBy(xpath = "//*[@data-auid='checkout_payment'] | //*[@data-auid='undefined_dropdownList']") //Updated by VSN on 07-12-19
 	public WebElement checkout_PaymentMethod_List_dd;
 	
@@ -457,6 +467,9 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']/*[3]/*[2]")
 	   public WebElement totalAmountCheckout;  //SID 26-Jan
 	   
+	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']/*[2]/*[2]")
+	   public WebElement Shippingprice;
+	   
 	   @FindBy(xpath="//*[@data-auid='checkout_order_summary_section']/*[2]/*[3]/*[2]")
 	   public WebElement taxAmountCheckout;  //SID 26-Jan
 	 
@@ -513,6 +526,8 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']//*[contains(text(),'Shipping')]/following-sibling::*[1]")public WebElement ShippingPrice_Txt;
 		@FindBy(xpath = "//*[text()='Estimated Shipping']/..")public WebElement txtEsitmatedShipping;//estimatedshippint_txt
 		@FindBy(xpath="//*[text()='Estimated Shipping']/../*[2]")public WebElement EstimatedShippingPrice_txt;//estimatedshipping_price
+		@FindBy(xpath="//*[data-auid='checkout_order_summary_section']//div[2]//div[2]//div[2]") public WebElement EstimatedShippingPrice;
+		
 		
 		@FindBy(xpath="//*[contains(text(),'Day shipping')]")public WebElement shippingPriceInShippingMethod_txt; //CR-DPK sept-25
 		
@@ -1442,6 +1457,51 @@ public class R2_CheckOut_PO extends CommonActionHelper
 				
 			
 		}
+		
+		
+		public void Verifyshippingpricesofshippingmethoddropdown() throws InterruptedException
+		{
+			 String OderSummary_price= EstimatedShippingPrice_txt.getText();
+			 
+			 String  ShippingMethodPrice=""; 
+			 checkout_ShippingMethod_ShippingMethodType_btn.click();
+			 String CURRENCY_SYMBOLS= "\\p{Sc}\u0024\u060B";
+			
+			Pattern p = Pattern.compile("[" +CURRENCY_SYMBOLS + "][\\d{1,3}[,\\.]?(\\d{1,2})?]+");
+			List<WebElement> dropdownoption =checkout_ShippingMethods.findElements(By.tagName("li"));
+		     for (WebElement element : dropdownoption){
+		    	 ShippingMethodPrice=element.getText();
+		    	if(ShippingMethodPrice.contains("Standard"))
+			    continue;
+			    System.out.println(element.getText());
+			    element.click();
+			    driver.navigate().refresh();
+			    waitForPageLoad(driver);
+			    Matcher m1 = p.matcher(ShippingMethodPrice);
+		        OderSummary_price=Shippingprice.getText();
+	    	    Matcher m2 = p.matcher(OderSummary_price);
+	    	    while (m1.find()&&m2.find()) {
+	    	    	
+	    	    	Assert.assertEquals(m2.group(),m1.group());
+	    	        System.out.println(m1.group()+"------------------------"+m2.group());
+	    	    }
+	    	  
+			    
+			    break;
+			    
+		      }
+		        
+		       
+		     
+			
+			
+		}
+		
+		
+		
+		
+		
+		
 		
 
 }
