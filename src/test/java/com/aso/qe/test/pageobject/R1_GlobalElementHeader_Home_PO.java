@@ -2001,7 +2001,7 @@ public class R1_GlobalElementHeader_Home_PO extends Common_Web_PLCC
 	@FindBy(xpath="//span[contains(text(),'New Arrivals')]") public WebElement eleSelectSortByValue;
 	@FindBy(xpath="//div[contains(@class,'css-1ttjkoh')]") public WebElement eleSortBySelectedtext;
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Category']") public WebElement eleLeftFilterCategorttext;
-	@FindBy(xpath="//li[(@data-auid='drawer_Brands')]") public WebElement eleLeftFilterCategortItem1;
+	@FindBy(xpath="//*[(@data-auid='drawer_Top Brands')]") public WebElement eleLeftFilterCategortItem1;
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']") public WebElement priceFacet;
 	@FindBy(xpath="//*[@data-auid='facetdrawer_drawer_Price']") public WebElement priceFacet_M;
 			

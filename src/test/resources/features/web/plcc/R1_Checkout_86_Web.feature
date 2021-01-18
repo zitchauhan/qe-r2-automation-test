@@ -57,7 +57,7 @@ Feature: PLCC: Checkout_Payment Using PLCC
 	And user click on Payments link
 	Then delete all credit cards from My Account
 	
-@OMNI-13452 @RegressionP3															
+@TC-OMNI-13452 @RegressionP3															
 Scenario: Verify user is able to apply PLCC card through cart banner in the cart page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then user click on cart icon
