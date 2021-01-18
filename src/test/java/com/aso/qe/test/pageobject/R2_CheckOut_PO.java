@@ -695,6 +695,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	@FindBy(xpath ="//*[@data-auid='checkout_footer_component']")public WebElement checkOut_CheckOutFooter; 
 	//Footer End
 	
+	
 	//CR-GK 10-Oct
 	@FindBy(xpath ="//*[contains(text(),'New Credit Card')]")public WebElement checkOut_SelectAddNewCreditCard;
 	
@@ -1450,12 +1451,25 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 		public void validateShippingError() {
 			if(driver.findElements(By.xpath("//h4[text()='ADDRESS VERIFICATION']")).size()>0) {
- 				logger.info("Selecting Entered Address option from the Address verification pop up");
- 				clickOnButton(youEnteredAddress);
- 		}
- 		
+				logger.info("Selecting Entered Address option from the Address verification pop up");
+				clickOnButton(youEnteredAddress);
+				clickOnButton(useSelectedAddress);
+				waitForPageLoad(driver);
+				Assert.assertEquals(true, shippingError.isDisplayed());
+				logger.info("Validated Shipping error");
+			}
+			else {
+				logger.info("Validating Shipping error");
+				Assert.assertEquals(true, shippingError.isDisplayed());
+				logger.info("Validated Shipping error");
+			}
 		}
 		
+		public void verifyStandardShipping() {
+			logger.info("Verify Standard Shipping is displayed");
+			Assert.assertEquals(true, standardShipping.isDisplayed());
+			logger.info("Verified Standard Shipping is displayed");
+		}
 
 		
 		public void verifyAVSverificationPopup() throws InterruptedException
