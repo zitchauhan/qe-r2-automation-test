@@ -128,6 +128,28 @@ Scenario: Verify the shipping price for each shipping method for White glove ite
 		|TaxesPrice_Txt|
 		|Total_price|
 		|Total_txt|	
-		
+	
+@RegressionP3 @TC-OMNI-13471
+Scenario: Verify shipping prices are updated on changing/selecting the shipping method drop down button in shipping method of checkout page
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	And user selects store with "FindStoreZipcode" and "BOPIS_Store_Selection"
+	When User searches a product "itemwithDiffshippingMethods" and navigates to PDP 
+	And user click on ship it button 
+	And user is navigated to Add to cart Notification popup 
+	And user will click on View Cart button 
+	And user navigate to Cart page 
+	And user click on checkout button in Cart page
+	When user enter First name "FirstName"
+    And user enter Last name "LastName"
+    And user enter Phone number "PhoneNumber"
+    And user enter Address "AVSAddress"
+    And user enter Zipcode "BOPIS_OrderID_Zipcode"
+    Then user click on Go To Shipping Method button in Checkout page
+    Then user verifies AVS verification popup is visible on Checkout page
+    And user Click on Suggested Adress in Checkout page
+    Then Verify shipping prices are updated on changing/selecting the shipping method drop down
+	
+	
+   
 		
 		
