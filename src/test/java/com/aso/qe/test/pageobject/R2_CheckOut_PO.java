@@ -654,6 +654,7 @@ public class R2_CheckOut_PO extends CommonActionHelper
 	   @FindBy(xpath="//*[@data-auid='btncheckout_goto_order_review_submit_button'] | //*[contains(text(),'Review Order')]")public WebElement ReviewOrder_Btn;
 	   @FindBy(xpath="//*[@data-auid='checkout_edit_payment']")public WebElement EditPayment_Link;
 	   @FindBy(xpath="//*[text()='Change Billing Information']")public WebElement ChangeBillingInformation_Txt;
+	   @FindBy(xpath="//*[text()='Please enter a valid security code']")public WebElement CVVErrorMessage_Txt;
 	   @FindBy(xpath="//div[contains(text(),'Estimated Shipping')]/following-sibling::div")public WebElement ShippingChargeOnCartPage;
 	   @FindBy(xpath="(//div[@data-auid='freeShipValue'])[1]")public WebElement ShippingChargeOnOrderSummaryPage;
 	   @FindBy(xpath="//input[@id='in-store-pickup-check']")public WebElement InStorePickupCheck;
