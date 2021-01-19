@@ -66,6 +66,7 @@ Feature: Regression P2 scenarios
 	Then user clicks on Continue to Checkout CTA on PLCC approval modal
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest" user
+	Then user click on Go To Shipping Method button in Checkout page
 	And user selects shipment method on check out page for "guest" user
 	Then user fill the email address and click on review order btn
 	Then user should get first time promotion PLCC discount
@@ -113,9 +114,9 @@ Feature: Regression P2 scenarios
 	When User select store with "BOPIS_Store2" 
 	And User searches a product "BOPIS_Regular_Product" and navigates to PDP 
 	And user validates Pick Up Today is visible on "PDP"
-	And user click on ship it button 
+	Then user click on pickup button
 	And user click on view cart
-	Then user select in store pickup option
+	#Then user select in store pickup option
 	And user validates Pick Up Today is visible on "Cart"
 	
 	@PDP @RegressionP2 @SR-1315 @TC-OMNI-13441

@@ -7,11 +7,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
+import org.aspectj.apache.bcel.classfile.Constant;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.pageobject.R1_GlobalElementHeader_Home_PO;
 import com.aso.qe.test.pageobject.R1_PDP_PO;
 
@@ -182,6 +184,7 @@ public class Search_PDP_Smoke_SD extends CommonActionHelper {
     @Then("^Verify the Hot Deal in Breadcrumb$")
     public void Verify_the_Hot_Deal_in_Breadcrumb() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
+    	Thread.sleep(Constants.thread_low);
     	assertTrue(isDisplayed(r1pdppo.HotdealsBreadCrumb));
     
     }

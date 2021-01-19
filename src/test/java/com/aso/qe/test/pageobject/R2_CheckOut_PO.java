@@ -1573,5 +1573,5 @@ public class R2_CheckOut_PO extends CommonActionHelper
 		
 		@FindBy(xpath="//*[@data-auid='checkout_order_summary_section']/*[2]/*[2]")
 		   public WebElement Shippingprice;
-		@FindBy(xpath="//*[contains(text(),'Address Verification')]") public WebElement addressAVS;
+		@FindBy(xpath="//*[contains(text(),'ADDRESS VERIFICATION')]") public WebElement addressAVS;
 }

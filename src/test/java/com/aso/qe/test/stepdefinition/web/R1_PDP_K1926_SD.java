@@ -339,81 +339,8 @@ public class R1_PDP_K1926_SD extends CommonActionHelper {
 				}
 			}
 		}
-//		if (!(searchText.toLowerCase().contains("sku")))
-//			clickOnButton(r2SanityPo.AS_productPLP1);
-//		Thread.sleep(Constants.thread_medium);
-
 	}
 	
-	
-//	@When("^user adds \"(.*?)\" product to the cart$")
-//	public void user_adds_product_to_the_cart(String arg1) throws Throwable {
-//		boolean isAddtoCart= false;
-//		try
-//		{
-//			waitForElement(selectedSwatchRepresentative);
-//			isDisplayed(selectedSwatchRepresentative);
-//
-//			if (btnAddToCart.isDisplayed()) 
-//			{
-//				isAddtoCart=true;
-//				
-//			}
-//			else
-//			{
-//				
-//				for(WebElement colorElement: colorsAvailable)
-//				{
-//					clickOnButton(colorElement);
-//					for(WebElement sizeElement:sizeAvailable)
-//					{
-//						logger.debug("Product Size Txt::"+sizeElement.getText());
-//						clickOnButton(sizeElement);
-//						if(isDisplayed(btnAddToCart))
-//						{
-//							isAddtoCart=true;
-//							break;
-//						}
-//					}
-//					if(isAddtoCart)
-//					{
-//						break;
-//					}
-//				}
-//				
-//			}
-//		}
-//		catch (NoSuchElementException e) 
-//		{
-//			for(WebElement colorElement: colorsAvailable)
-//			{
-//				clickOnButton(colorElement);
-//				for(WebElement sizeElement:sizeAvailable)
-//				{
-//					logger.debug("Product Size Txt::"+sizeElement.getText());
-//					clickOnButton(sizeElement);
-//					if(isDisplayed(btnAddToCart))
-//					{
-//						isAddtoCart=true;
-//						break;
-//					}
-//				}
-//				if(isAddtoCart)
-//				{
-//					break;
-//				}
-//			}
-//			//logger.error("addToCartAvailability exception msg::"+e.getMessage());
-//		}
-//		catch (Exception e) 
-//		{
-//			logger.error("addToCartAvailability exception msg::"+e.getMessage());
-//		}
-//		logger.debug("Add to Cart buttion is visable::"+isAddtoCart);
-//		return isAddtoCart;
-//	}
-//	}
-
 	@When("^user enters \"(.*?)\" in the search box and navigates to PLP$") // not navigating to PDP
 	public void user_enters_in_the_search_box_and_navigate_tp_PLP(String searchText) throws Throwable {
 		searchKey = webPropHelper.getTestDataProperty(searchText);
