@@ -266,7 +266,7 @@ Scenario: Verify on click of Add to cart CTA in bulk GC PDP, item should be adde
 	Then Verify Cart Modal is displayed
 	
 			
-		@RegressionP3  @TC-@OMNI-13485  @SR-1350
+		@RegressionP3  @TC-OMNI-13485  @SR-1350
 Scenario: Verify shipping charges are properly displaying on cart page, checkout page, order confirmation page and order history page
  Given user launches the browser and navigates to "ASO_HOME" page 
    And User should be able to click on Find Store 
@@ -293,7 +293,7 @@ Scenario: Verify shipping charges are properly displaying on cart page, checkout
 
   
   
-  	@RegressionP3         @TC-@OMNI-13486  @SR-1351
+  	@RegressionP3  @TC-OMNI-13486  @SR-1351
 Scenario Outline: Validate Residency modal popup for Firearm-Bopis
 Given user launches the browser and navigates to "ASO_HOME" page 
    And User should be able to click on Find Store 
@@ -311,7 +311,7 @@ Given user launches the browser and navigates to "ASO_HOME" page
 		|Credit Card - VISA	|
 	
 	
-	@RegressionP3    @TC-@OMNI-13487   @SR-1352
+	@RegressionP3 @TC-OMNI-13487   @SR-1352
 Scenario Outline: Validate Residency modal popup for Firearm- Ship to store
 Given user launches the browser and navigates to "ASO_HOME" page 
    And User should be able to click on Find Store 
