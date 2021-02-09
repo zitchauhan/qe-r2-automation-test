@@ -230,3 +230,16 @@ Scenario Outline: Verify if unauthenticated user is able to place an for bait pr
 	Examples: 
 		|Payment Type	|
 		|Credit Card - visa	|
+		
+	@RegressionP3 @TC-OMNI-13491
+	Scenario: Error for wrong CVV should be displayed
+	Given user launches the browser and navigates to "ASO_HOME" page 
+	When User searches a product "productName" and navigates to PDP 
+	And user click on ship it button
+	And user click on viewcart button
+	Then user navigates to Cart Page
+	And user clicks on checkout button on cart page
+	And user adds restricted shipment address on checkout page for "guest" user	
+	Then user click on go to payment present in shipping method
+    Then user add credit card details in payment method with invalid PIN
+    And user verify CVV error message			 

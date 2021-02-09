@@ -329,7 +329,7 @@ Scenario Outline: Verify the guest user is able to place White Glove order using
 	When user click on ship it button 
 	And user click on view cart
 	Then user navigates to Cart Page
-	And user validate the WG bulk message is visible on cart page
+	#And user validate the WG bulk message is visible on cart page
 	And user clicks on checkout button on cart page
 	And user adds shipment address on checkout page for "guest_with_random_address" user
 	Then user click on Go To Shipping Method button in Checkout page

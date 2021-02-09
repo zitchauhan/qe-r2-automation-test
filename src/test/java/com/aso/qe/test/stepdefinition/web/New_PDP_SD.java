@@ -850,14 +850,14 @@ public class New_PDP_SD extends CommonActionHelper {
 	{
 		if(arg1.equalsIgnoreCase("BOPIS"))
 		{
-		waitForElement(newPDP.PickUpTodayCartModal);
+		Thread.sleep(Constants.thread_medium);
 		assertTrue(isDisplayed(newPDP.PickUpTodayCartModal));
 		date = newPDP.PickUpTodayCartModal.getText();
 		assertTrue(date.contains(pdpDate));
 		}
 		else if(arg1.equalsIgnoreCase("STS"))
 		{
-		waitForElement(newPDP.EstimatePickUpDateCartModal);
+		Thread.sleep(Constants.thread_medium);
 		assertTrue(isDisplayed(newPDP.EstimatePickUpDateCartModal));
 		date = newPDP.EstimatePickUpDateCartModal.getText();
 		System.out.println("Estimate date on cart modal is " +date);

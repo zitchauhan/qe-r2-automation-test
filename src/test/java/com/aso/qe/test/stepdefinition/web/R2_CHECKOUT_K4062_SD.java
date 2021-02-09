@@ -135,6 +135,36 @@ public class R2_CHECKOUT_K4062_SD extends CommonActionHelper {
 	}
 
 
+
+	@Then("^user add credit card details in payment method with invalid PIN$")
+public void user_add_credit_card_details_in_payment_method_with_invalid_PIN ()
+    {	
+		
+		waitForInnerFormElement(r2CheckOutPo.CardholderName_Input,"first-data-payment-field-name"); 
+		setInputText(r2CheckOutPo.CardholderName_Input, webPropHelper.getTestDataProperty("CardholderName"));
+		driver.switchTo().defaultContent();
+		waitForInnerFormElement(r2CheckOutPo.CreditCardDetails_Input,"first-data-payment-field-card"); 
+		setInputText(r2CheckOutPo.CreditCardDetails_Input, webPropHelper.getTestDataProperty("CreditCardNumber"));
+		driver.switchTo().defaultContent();
+		waitForInnerFormElement(r2CheckOutPo.ExpDate_Input,"first-data-payment-field-exp"); 				
+		setInputText(r2CheckOutPo.ExpDate_Input, webPropHelper.getTestDataProperty("ExpiryDate"));
+		driver.switchTo().defaultContent();
+		waitForInnerFormElement(r2CheckOutPo.PassCvv_Input,"first-data-payment-field-cvv"); 				
+		setInputText(r2CheckOutPo.PassCvv_Input, webPropHelper.getTestDataProperty("InvalidCVV"));
+		driver.switchTo().defaultContent();
+		setInputText(r2CheckOutPo.EmailAddressforOrderConfirmation_Input, webPropHelper.getTestDataProperty("EmailAddress"));
+	   assertTrue(clickOnButton(r2CheckOutPo.ReviewOrder_Btn));
+	//   Thread.sleep(Constants.thread_highest);
+   }
+	
+	@Then("^user verify CVV error message$")
+	 public void user_verify_CVV_error_message()
+	 {		 
+			boolean CVVError = false;
+				if (isDisplayed(r2CheckOutPo.CVVErrorMessage_Txt)) {
+					CVVError = true;
+				} 
+	 }																		   
 	
 	////// Implemented only for guest unauthentic, and newly registered user
 	@And("^user add \"(.*?)\" details in payment method for \"(.*?)\" user$")

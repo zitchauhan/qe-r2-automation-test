@@ -41,7 +41,7 @@ Feature: PDP Scenarios based on searching the products
    Then user should be able to see PDP mention in the current url
    And user should be able to see Image of the product
    And user should be able to see the search term in the DSV product title
-   And user should see different attribute and size of the product
+   #And user should see different attribute and size of the product
     
    
     @RegressionP2 @TC-OMNI-13523
@@ -218,6 +218,7 @@ Feature: PDP Scenarios based on searching the products
      And user click on view cart
      And user clicks on checkout button on cart page
   	 And user adds shipment address on checkout page for "guest" user
+  	 Then user click on Go To Shipping Method button in Checkout page
 	 And user selects shipment method on check out page for "guest" user
 	 And user add "<Payment Type>" details in payment method for "guest" user
 #	 And Verify the Category level promotion is applied and displayed on Order Summary section  
@@ -237,6 +238,7 @@ Feature: PDP Scenarios based on searching the products
    Then user navigates to Cart Page
    And user clicks on checkout button on cart page
    And user adds shipment address on checkout page for "guest" user
+   Then user click on Go To Shipping Method button in Checkout page
    And user selects shipment method on check out page for "guest" user
    And user add "<Payment Type>" details in payment method for "guest" user
    #And Verify the Category level promotion is applied and displayed on Order Summary section

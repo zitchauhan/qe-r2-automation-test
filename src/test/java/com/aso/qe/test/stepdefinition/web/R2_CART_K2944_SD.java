@@ -87,7 +87,10 @@ public class R2_CART_K2944_SD extends CommonActionHelper {
 		Thread.sleep(Constants.thread_high);
 	}
 
-	@Then("^verify that item is added to wishlist$")
+
+	
+	/* @Commented
+	 * @Then("^verify that item is added to wishlist$")
 	public void verify_that_item_is_added_to_wishlist() throws Throwable {
 //<<<<<<< Updated upstream
 
@@ -103,5 +106,7 @@ public class R2_CART_K2944_SD extends CommonActionHelper {
 	}
 
 //>>>>>>> Stashed changes
+ 
+ */
 
 }

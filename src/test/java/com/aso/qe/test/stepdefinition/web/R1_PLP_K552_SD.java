@@ -68,10 +68,12 @@ public class R1_PLP_K552_SD extends CommonActionHelper{
 		searchProductPO.checkLoadedProductsPrices(min, max);
 	}
 
+	/* @Commented
 	@When("^user navigates to L(\\d+) page$")
 	public void user_navigates_to_L_page(int arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 	}
+	*/
 
 	@Then("^user deselect the \"(.*?)\" filter$")
 	public void user_deselect_the_filter(String arg1) throws Throwable {

@@ -3,11 +3,6 @@ Feature: PLCC: Checkout_Payment Using PLCC
 	Background: Common Pre-requisite steps 
 	Given user launches the browser and navigates to "ASO_HOME" page plcc
 #	When user click on My Account link 
-#	And user expect element Email Address to be present 
-#	And user enter Email address in sign-in page "Email_OrderPlacement" 
-#	And user enter password in sign-in page "passwordPlcc" 
-#	And user click on Signin-button 
-	
 	And user clicks on SignIn link from global header 
 	And user enter the valid emailaddress "Email_OrderPlacement" 
 	And user enter the valid password "passwordPlcc" 
@@ -57,7 +52,7 @@ Feature: PLCC: Checkout_Payment Using PLCC
 	And user click on Payments link
 	Then delete all credit cards from My Account
 	
-@OMNI-13452 @RegressionP3															
+@TC-OMNI-13452 @RegressionP3															
 Scenario: Verify user is able to apply PLCC card through cart banner in the cart page
 	Given user launches the browser and navigates to "ASO_HOME" page 
 	Then user click on cart icon
