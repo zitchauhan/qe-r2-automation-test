@@ -47,7 +47,7 @@ Scenario: YEXT - Update Functionality in Store Locator page
 	And Navigate to the store page with state "YextNewLocAddressStateCode", city "YextLocation1" and store "YextStoreName1"
 	Then Verify store details in Store Locator page
 	
-@yext @AutomationSmoke @TC-OMNI-23938
+@yext @AutomationSmoke @TC-OMNI-23938 @RegresisonP3
 Scenario: SEO-Store Locator
 	Given user launches the browser and navigates to "ASO_HOME" page
 	When Navigate to store locator page
