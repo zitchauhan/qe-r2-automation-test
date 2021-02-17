@@ -143,4 +143,12 @@ public class CartPage {
 	public void tapOnAddToWishlistButton() {
 		addToWishListButton.click();
 	}
+	
+	//OMNI-22009
+	@iOSXCUITFindBy(id="lbl_free_store_pickup")
+	public MobileElement bopisDeliveryOption;
+	
+	public boolean bopisDeliveryOptionDisplayed() {
+		return bopisDeliveryOption.isDisplayed();
+	}
 }
