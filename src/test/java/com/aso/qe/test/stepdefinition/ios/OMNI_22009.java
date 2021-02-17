@@ -37,5 +37,40 @@ public class OMNI_22009 extends GlobalMobileHelper{
 		
 	}
 	
+	@And("^User sees delivery message for \"(.*?)\" item on the cart$")
+	public void deliveryMessageOnCart(String arg1) throws Throwable{
+		if(arg1.equalsIgnoreCase("BOPIS"))
+		{
+			assertTrue(cart.bopisDeliveryMessageCartDisplayed());			
+		}
+	}
 	
+	@And("^User sees arrow button for more delivery options$")
+	public void arrorButtonForDeliveryOptions() throws Throwable{
+		assertTrue(cart.arrowIconDeliveryOptionCartDisplayed());
+	}
+	
+	@Then("^User clicks on chevron button$")
+	public void userClicksChevronButton() throws Throwable{
+		cart.clickChevronButtonCart();
+	}
+	
+	@Then("^User sees both fulfillment options$")
+	public void fulfillmentOptionCartPage() throws Throwable{
+		assertTrue(cart.bopisOptionsFulfillmentPage());
+		assertTrue(cart.sthFulfillmentPage());
+	}
+	
+	@And("^User is able to click on \"(.*?)\" fulfillment option$")
+	public void userClickOnFulfillmentOption(String arg1) throws Throwable{
+		if(arg1.equalsIgnoreCase("BOPIS"))
+		{
+			cart.clickFreeStorePickUp();
+		}
+		
+		else if(arg1.equalsIgnoreCase("STH"))
+		{
+			cart.clickHomeDelivery();
+		}
+	}
 }
