@@ -1,4 +1,3 @@
-
 Feature: Verify Details of PDP for product without any variants
 
   @Sprint1 @TC_OMNI_24466
