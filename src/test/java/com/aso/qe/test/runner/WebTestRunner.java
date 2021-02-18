@@ -19,8 +19,8 @@ import cucumber.api.junit.Cucumber;
         retryCount = 0)
 
 @CucumberOptions(
-		features="src/test/resources/features/web/", 
-		glue="com.aso.qe.test.stepdefinition.web",
+		features="src/test/resources/features/ios/", 
+		glue="com.aso.qe.test.stepdefinition.ios",
 		tags= {"@SEO1"},
 		monochrome=true,
 				plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html",

@@ -12,12 +12,12 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class OMNI_22009 extends GlobalMobileHelper{
+public class cart_page_stepdef extends GlobalMobileHelper{
 	private CartPage cart;
 //	private int previousQuantity = -1;
 	
-	@Given("^User has selected a delivery option and adds \"(.*?)\" item to the cart$")
-	public void selectDeliveryAndAddItem() throws Throwable {
+	@Given("^User adds \"().*?)\" qty of \"(.*?)\" item to the cart$")
+	public void selectDeliveryAndAddItem(String arg1, String arg2) throws Throwable {
 		initializeDriver();
 		//TODO Integrate the code that will add item and move to cart page
 		cart = new CartPage(driver);
@@ -57,8 +57,8 @@ public class OMNI_22009 extends GlobalMobileHelper{
 	
 	@Then("^User sees both fulfillment options$")
 	public void fulfillmentOptionCartPage() throws Throwable{
-		assertTrue(cart.bopisOptionsFulfillmentPage());
-		assertTrue(cart.sthFulfillmentPage());
+		assertTrue(cart.isBopisOptionsFulfillmentDisplayed());
+		assertTrue(cart.isSthFulfillmentDisplayed());
 	}
 	
 	@And("^User is able to click on \"(.*?)\" fulfillment option$")
@@ -72,5 +72,15 @@ public class OMNI_22009 extends GlobalMobileHelper{
 		{
 			cart.clickHomeDelivery();
 		}
+	}
+	
+	@Given("^User goes to a cart page and deletes all the items$")
+	public void userEmptyCart() throws Throwable {
+		//TODO Integrate the code that will delete all the items available in the cart
+	}
+	
+	@Then("^User sees no counter badge on the cart icon on bottom navigation$")
+	public void noCounterBadgeOnCartIcon() throws Throwable {
+		assertTrue(cart.noCounterBadgeCartIconDisplayed());
 	}
 }

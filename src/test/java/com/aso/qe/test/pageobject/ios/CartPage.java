@@ -179,35 +179,40 @@ public class CartPage {
 	}
 	
 	
-	//OMNI-22009
 	@iOSXCUITFindBy(id="lbl_free_store_pickup")
 	public MobileElement storePickUpDeliveryOptionFulfillmentPage;
 				
-	public boolean bopisOptionsFulfillmentPage() {
+	public boolean isBopisOptionsFulfillmentDisplayed() {
 	return storePickUpDeliveryOptionFulfillmentPage.isDisplayed();
 	}
 	
-	//OMNI-22009
 	@iOSXCUITFindBy(id="lbl_home_delivery")
 	public MobileElement homeDeliveryOptionFulfillmentPage;
 					
-	public boolean sthFulfillmentPage() {
+	public boolean isSthFulfillmentDisplayed() {
 	return homeDeliveryOptionFulfillmentPage.isDisplayed();
 	}
 	
-	//OMNI-22009
 	@iOSXCUITFindBy(id="rd_free_store_pickup")
 	public MobileElement freeStorePickUpRadioButton;
 					
 	public void clickFreeStorePickUp() throws Throwable {
-	assertTrue(freeStorePickUpRadioButton.isDisplayed());
+	freeStorePickUpRadioButton.click();
 	}
 	
-	//OMNI-22009
 	@iOSXCUITFindBy(id="rd_home_delivery")
 	public MobileElement homeDeliveryRadioButton;
 	
 	public void clickHomeDelivery() throws Throwable{
-	assertTrue(homeDeliveryRadioButton.isDisplayed());
+	homeDeliveryRadioButton.click();
 	}
+	
+	//OMNI-20661 locator needs to be updated
+	@iOSXCUITFindBy(id="locator needs to be updated")
+	public MobileElement noCounterBadgeOnCartIcon;
+	
+	public boolean noCounterBadgeCartIconDisplayed(){
+	return noCounterBadgeOnCartIcon.isDisplayed();
+	}
+	
 }
