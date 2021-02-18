@@ -83,4 +83,9 @@ public class cart_page_stepdef extends GlobalMobileHelper{
 	public void noCounterBadgeOnCartIcon() throws Throwable {
 		assertTrue(cart.noCounterBadgeCartIconDisplayed());
 	}
+	
+	@Then("User sees the correct item count on the cart badge counter bottom navigation$")
+	public void itemCountOnCartBadge() throws Throwable{
+		cart.matchItemsCountOnCartBadge();
+	}
 }

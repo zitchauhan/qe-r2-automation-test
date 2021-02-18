@@ -6,7 +6,20 @@ Feature: Verify user is able to quickly access cart in any point using bottom na
   	Then User sees no counter badge on the cart icon on bottom navigation
   	
   @Sprint1 @TC_OMNI-20661
-  Scenario: Verify when cart is empty then no badge counter should be visible on the cart icon	
+  Scenario: Verify when qty/items added to cart is less than 100 then display item count on the cart badge
   	Given User adds "1" qty of "STH" item to the cart  	
   	Then User goes to the cart page
-  	Then User sees the item count on the cart badge counter on cart icon on bottom navigation
+  	Then User sees the correct item count on the cart badge counter on bottom navigation
+  	
+  @Sprint1 @TC_OMNI-20661
+  Scenario: Verify when qty/items added to cart is more than 100 then display item 99+ on the cart badge
+  	Given User adds "100" qty of "STH" item to the cart  	
+  	Then User goes to the cart page
+  	Then User sees the correct item count on the cart badge counter on bottom navigation
+  	
+   @Sprint1 @TC_OMNI-20661
+  Scenario: Verify when user taps on cart icon from bottom nav should redirect to cart page
+  	Given User is able to see cart icon on bottom navigation
+  	Then User taps on the cart icon on bottom navigation
+  	Then Guest User is on empty cart page
+    And User sees Cart Empty label	

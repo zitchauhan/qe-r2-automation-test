@@ -215,4 +215,25 @@ public class CartPage {
 	return noCounterBadgeOnCartIcon.isDisplayed();
 	}
 	
+	//OMNI-20661 locator needs to be updated
+	@iOSXCUITFindBy(id="locator needs to be updated")
+	public MobileElement CounterBadgeOnCartIcon;
+	
+	public void matchItemsCountOnCartBadge() throws Throwable {
+		//getting the total number of items/qty in the cart via the total label in the cart page
+		String qtyCartPage = labelItemCount.getText();
+		int qtyCartPageCount = Integer.parseInt(qtyCartPage);
+		String countOnCartBadge = CounterBadgeOnCartIcon.getText();
+		if(qtyCartPageCount < 100)
+		{
+			//validating the counter badge should be equal to the total qty/items in the cart
+			assertTrue(qtyCartPage.equalsIgnoreCase(countOnCartBadge));
+			
+		}
+		else
+		{
+			assertTrue(countOnCartBadge.equalsIgnoreCase("99+"));
+		}
+	
+	}
 }
