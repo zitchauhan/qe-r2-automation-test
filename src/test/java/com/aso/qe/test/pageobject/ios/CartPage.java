@@ -1,5 +1,7 @@
 package com.aso.qe.test.pageobject.ios;
 
+import static org.junit.Assert.assertTrue;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
@@ -142,5 +144,70 @@ public class CartPage {
 	
 	public void tapOnAddToWishlistButton() {
 		addToWishListButton.click();
+	}
+	
+	//OMNI-22009
+	@iOSXCUITFindBy(id="lbl_free_store_pickup")
+	public MobileElement bopisDeliveryOption;
+	
+	public boolean bopisDeliveryOptionDisplayed() {
+		return bopisDeliveryOption.isDisplayed();
+	}
+	
+	//OMNI-22009  locator needs to updated
+	@iOSXCUITFindBy(id="locator needs to be updated")
+	public MobileElement bopisDeliveryMessageCart;
+	
+	public boolean bopisDeliveryMessageCartDisplayed() {
+		return bopisDeliveryMessageCart.isDisplayed();
+	}
+	
+	//OMNI-22009  locator needs to updated
+	@iOSXCUITFindBy(id="locator needs to be updated")
+	public MobileElement arrowIconDeliveryOptionCart;
+		
+	public boolean arrowIconDeliveryOptionCartDisplayed() {
+	return arrowIconDeliveryOptionCart.isDisplayed();
+	}
+	
+	//OMNI-22009  locator needs to updated
+	@iOSXCUITFindBy(id="locator needs to be updated")
+	public MobileElement clickChevronButtonCartPage;
+			
+	public void clickChevronButtonCart() throws Throwable {
+	clickChevronButtonCartPage.click();
+	}
+	
+	
+	//OMNI-22009
+	@iOSXCUITFindBy(id="lbl_free_store_pickup")
+	public MobileElement storePickUpDeliveryOptionFulfillmentPage;
+				
+	public boolean bopisOptionsFulfillmentPage() {
+	return storePickUpDeliveryOptionFulfillmentPage.isDisplayed();
+	}
+	
+	//OMNI-22009
+	@iOSXCUITFindBy(id="lbl_home_delivery")
+	public MobileElement homeDeliveryOptionFulfillmentPage;
+					
+	public boolean sthFulfillmentPage() {
+	return homeDeliveryOptionFulfillmentPage.isDisplayed();
+	}
+	
+	//OMNI-22009
+	@iOSXCUITFindBy(id="rd_free_store_pickup")
+	public MobileElement freeStorePickUpRadioButton;
+					
+	public void clickFreeStorePickUp() throws Throwable {
+	assertTrue(freeStorePickUpRadioButton.isDisplayed());
+	}
+	
+	//OMNI-22009
+	@iOSXCUITFindBy(id="rd_home_delivery")
+	public MobileElement homeDeliveryRadioButton;
+	
+	public void clickHomeDelivery() throws Throwable{
+	assertTrue(homeDeliveryRadioButton.isDisplayed());
 	}
 }
