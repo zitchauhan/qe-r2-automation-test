@@ -236,4 +236,31 @@ public class CartPage {
 		}
 	
 	}
+	
+	//OMNI-20661
+	public void tapPlusActionCartPage() throws Throwable {
+		quantitySelectorIncrement.click();
+	}
+	
+	//OMNI-20661
+	public void tapMinusActionCartPage() throws Throwable {
+		quantitySelectorDecrement.click();
+	}
+	
+	public void editQtyCartPage(String newqty) throws Throwable{
+		assertTrue(quantityEditBox.isDisplayed());
+		quantityEditBox.click();
+		quantityEditBox.sendKeys(newqty);
+	}
+	
+	//OMNI-20661
+	@iOSXCUITFindBy(id="btn_cart_icon_bottomnav")
+	public MobileElement cartIconBottomNav;
+	
+	public boolean iscartIconBottomNavDisplayed() {
+		return cartIconBottomNav.isDisplayed();	}
+	
+	public void clickCartIconBottomNav() {
+		cartIconBottomNav.click();
+	}
 }

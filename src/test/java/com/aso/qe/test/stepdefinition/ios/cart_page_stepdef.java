@@ -16,7 +16,7 @@ public class cart_page_stepdef extends GlobalMobileHelper{
 	private CartPage cart;
 //	private int previousQuantity = -1;
 	
-	@Given("^User adds \"().*?)\" qty of \"(.*?)\" item to the cart$")
+	@Given("^User adds \"(.*?)\" qty of \"(.*?)\" item to the cart$")
 	public void selectDeliveryAndAddItem(String arg1, String arg2) throws Throwable {
 		initializeDriver();
 		//TODO Integrate the code that will add item and move to cart page
@@ -84,8 +84,33 @@ public class cart_page_stepdef extends GlobalMobileHelper{
 		assertTrue(cart.noCounterBadgeCartIconDisplayed());
 	}
 	
-	@Then("User sees the correct item count on the cart badge counter bottom navigation$")
+	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
 	public void itemCountOnCartBadge() throws Throwable{
 		cart.matchItemsCountOnCartBadge();
+	}
+	
+	@Then("^User tap on \"(.*?)\" action for quantity$")
+	public void userTapPlusActionForQty(String arg1) throws Throwable{
+		if(arg1.equalsIgnoreCase("+")) {
+		cart.tapPlusActionCartPage();
+		}
+		else{
+			cart.tapMinusActionCartPage();
+		}
+	}
+	
+	@Then("^User edits the quantity to \"(.*?)\" on cart page$")
+	public void editQuantityOnCartPage(String arg1) throws Throwable{
+		cart.editQtyCartPage(arg1);
+	}
+	
+	@Given("^User is able to see cart icon on bottom navigation$")
+	public void cartIconVisibleBottomNav() throws Throwable{
+		cart.iscartIconBottomNavDisplayed();
+	}
+	
+	@Then("^User taps on the cart icon on bottom navigation$")
+	public void tapCartIconBottomNav() throws Throwable{
+		cart.clickCartIconBottomNav();
 	}
 }
