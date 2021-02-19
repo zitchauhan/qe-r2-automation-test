@@ -2,18 +2,19 @@ package com.aso.qe.test.pageobject.ios;
 
 import org.openqa.selenium.support.PageFactory;
 
+import com.aso.qe.test.common.Locators;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class PDPPage {
-private AppiumDriver<MobileElement> driver;
-    
+	
+	private AppiumDriver<MobileElement> driver;
 	public PDPPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
-	  PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-	 }
+	}
 	
 	@iOSXCUITFindBy(id="lbl_your_cart")
 	public MobileElement imageHero;
@@ -34,11 +35,13 @@ private AppiumDriver<MobileElement> driver;
 	public MobileElement quantityEditBox;
 	
 	public boolean isHeroImageDisplayed() {
-		return imageHero.isDisplayed();
+		MobileElement heroImage = driver.findElement(Locators.PDPPage.imageHero);
+		return heroImage.isDisplayed();
 	}
 	
 	public boolean isProductTitleDisplayed() {
-		return labelProductTitle.isDisplayed();
+		MobileElement productTitle = driver.findElement(Locators.PDPPage.labelProductTitle);
+		return productTitle.isDisplayed();
 	}
 	
 	public String getProductTitle() {
@@ -49,7 +52,8 @@ private AppiumDriver<MobileElement> driver;
 	}
 	
 	public boolean isProductPriceDisplayed() {
-		return labelProductPrice.isDisplayed();
+		MobileElement productPrice = driver.findElement(Locators.PDPPage.labelProductPrice);
+		return productPrice.isDisplayed();
 	}
 	
 	public String getProductPriceText() {

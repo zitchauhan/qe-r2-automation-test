@@ -2,15 +2,17 @@ package com.aso.qe.test.runner;
 
 import org.junit.runner.RunWith;
 
+
 //import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
-
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features="src/test/resources/features/ios/",
-		glue="com.aso.qe.test.stepdefinition.iso",
+		//glue="com.aso.qe.test.stepdefinition.iso",
+		glue="com.aso.qe.test.stepdefination.ios",
+		tags= {"@TC_OMNI_24466"},
 		monochrome=true, 
 				
 //		plugin = {"pretty",
@@ -22,5 +24,5 @@ import cucumber.api.junit.Cucumber;
 		)
 
 public class IOSTestRunner {
-
+	
 }
