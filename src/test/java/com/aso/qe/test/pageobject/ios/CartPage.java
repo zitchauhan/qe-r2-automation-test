@@ -179,35 +179,88 @@ public class CartPage {
 	}
 	
 	
-	//OMNI-22009
 	@iOSXCUITFindBy(id="lbl_free_store_pickup")
 	public MobileElement storePickUpDeliveryOptionFulfillmentPage;
 				
-	public boolean bopisOptionsFulfillmentPage() {
+	public boolean isBopisOptionsFulfillmentDisplayed() {
 	return storePickUpDeliveryOptionFulfillmentPage.isDisplayed();
 	}
 	
-	//OMNI-22009
 	@iOSXCUITFindBy(id="lbl_home_delivery")
 	public MobileElement homeDeliveryOptionFulfillmentPage;
 					
-	public boolean sthFulfillmentPage() {
+	public boolean isSthFulfillmentDisplayed() {
 	return homeDeliveryOptionFulfillmentPage.isDisplayed();
 	}
 	
-	//OMNI-22009
 	@iOSXCUITFindBy(id="rd_free_store_pickup")
 	public MobileElement freeStorePickUpRadioButton;
 					
 	public void clickFreeStorePickUp() throws Throwable {
-	assertTrue(freeStorePickUpRadioButton.isDisplayed());
+	freeStorePickUpRadioButton.click();
 	}
 	
-	//OMNI-22009
 	@iOSXCUITFindBy(id="rd_home_delivery")
 	public MobileElement homeDeliveryRadioButton;
 	
 	public void clickHomeDelivery() throws Throwable{
-	assertTrue(homeDeliveryRadioButton.isDisplayed());
+	homeDeliveryRadioButton.click();
+	}
+	
+	//OMNI-20661 locator needs to be updated
+	@iOSXCUITFindBy(id="locator needs to be updated")
+	public MobileElement noCounterBadgeOnCartIcon;
+	
+	public boolean noCounterBadgeCartIconDisplayed(){
+	return noCounterBadgeOnCartIcon.isDisplayed();
+	}
+	
+	//OMNI-20661 locator needs to be updated
+	@iOSXCUITFindBy(id="locator needs to be updated")
+	public MobileElement CounterBadgeOnCartIcon;
+	
+	public void matchItemsCountOnCartBadge() throws Throwable {
+		//getting the total number of items/qty in the cart via the total label in the cart page
+		String qtyCartPage = labelItemCount.getText();
+		int qtyCartPageCount = Integer.parseInt(qtyCartPage);
+		String countOnCartBadge = CounterBadgeOnCartIcon.getText();
+		if(qtyCartPageCount < 100)
+		{
+			//validating the counter badge should be equal to the total qty/items in the cart
+			assertTrue(qtyCartPage.equalsIgnoreCase(countOnCartBadge));
+			
+		}
+		else
+		{
+			assertTrue(countOnCartBadge.equalsIgnoreCase("99+"));
+		}
+	
+	}
+	
+	//OMNI-20661
+	public void tapPlusActionCartPage() throws Throwable {
+		quantitySelectorIncrement.click();
+	}
+	
+	//OMNI-20661
+	public void tapMinusActionCartPage() throws Throwable {
+		quantitySelectorDecrement.click();
+	}
+	
+	public void editQtyCartPage(String newqty) throws Throwable{
+		assertTrue(quantityEditBox.isDisplayed());
+		quantityEditBox.click();
+		quantityEditBox.sendKeys(newqty);
+	}
+	
+	//OMNI-20661
+	@iOSXCUITFindBy(id="btn_cart_icon_bottomnav")
+	public MobileElement cartIconBottomNav;
+	
+	public boolean iscartIconBottomNavDisplayed() {
+		return cartIconBottomNav.isDisplayed();	}
+	
+	public void clickCartIconBottomNav() {
+		cartIconBottomNav.click();
 	}
 }
