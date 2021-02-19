@@ -10,8 +10,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features="src/test/resources/features/ios/",
-		//glue="com.aso.qe.test.stepdefinition.iso",
-		glue="com.aso.qe.test.stepdefination.ios",
+		glue="com.aso.qe.test.stepdefinition.ios",
 		tags= {"@TC_OMNI_24466"},
 		monochrome=true, 
 				
