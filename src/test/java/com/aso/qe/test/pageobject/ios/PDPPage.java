@@ -56,6 +56,16 @@ public class PDPPage {
 		return productPrice.isDisplayed();
 	}
 	
+	public void tapOnAddToCart() {
+		MobileElement addToCartButton = driver.findElement(Locators.PDPPage.buttonAddToCart);
+		addToCartButton.click();
+	}
+	
+	public void tapOnViewCart() {
+		MobileElement viewCartButton = driver.findElement(Locators.PDPPage.buttonViewCart);
+		viewCartButton.click();
+	}
+	
 	public String getProductPriceText() {
 		if(isProductPriceDisplayed())
 			return labelProductPrice.getText();

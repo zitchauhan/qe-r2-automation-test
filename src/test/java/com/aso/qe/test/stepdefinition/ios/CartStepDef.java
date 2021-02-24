@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.By;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.CartPage;
 
 import cucumber.api.java.en.And;
@@ -114,5 +115,17 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void user_click_on_Go_Button() throws Throwable {
 		int decreasedQty = Integer.parseInt(cartPage.getProductQuantity());
 		assertEquals(decreasedQty,previousQuantity-1);
+	}
+	
+	@And("^User sees taxes label$")
+	public boolean isTaxesLabelDisplayed() throws Throwable {
+		MobileElement taxLabel = driver.findElement(Locators.CartPage.taxesLabel);
+		return taxLabel.isDisplayed();
+	}
+	
+	@And("^User sees the order summary label$")
+	public boolean isOrderSummaryLabelDisplayed() throws Throwable {
+		MobileElement taxLabel = driver.findElement(Locators.CartPage.orderSummaryLabel);
+		return taxLabel.isDisplayed();
 	}
 }

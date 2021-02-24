@@ -3,6 +3,7 @@ Feature: Verify Functionality of bottom navigation
 @Sprint1 @TC_OMNI_24716
 Scenario: User can navigate to destination screen using bottom navigation
   	Given User launches the application
+  	And User Logs into the application
     When User taps on home in bottom nav
     Then User sees the homepage
     When User taps on shop in bottom nav

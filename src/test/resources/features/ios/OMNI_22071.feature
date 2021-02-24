@@ -1,11 +1,11 @@
 
 Feature: Verify Details of Empty cart for Guest user
 
-  @Sprint1 @TC-OMNI-24518 @ST
+  @Sprint1 @TC-OMNI-24518
   Scenario: Guest User is on cart without any products
   	Given User launches the application
   	When User taps on cart in bottom nav
-    Then User sees Your Cart label
+    Then User is navigated To Cart Screen
     And User sees Cart icon
     And User sees Cart Empty label
     And User sees Sigin text

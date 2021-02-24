@@ -29,18 +29,20 @@ public class Locators {
 		public static By imageHero = By.id("img_hero");
 		public static By labelProductTitle = By.id("lbl_product_title");
 		public static By labelProductPrice = By.id("lbl_product_price");
+		public static By buttonAddToCart = By.id("btn_add_to_cart");
+		public static By buttonViewCart = By.id("btn_view_cart");
 	}
 	
 	public static class ShopPage{
-		public static By shopPageTitle = By.id("");
+		public static By shopPageTitle = By.id("lbl_shop");
 	}
 	
 	public static class WishlistPage{
-		public static By wishlistTitle = By.id("");
+		public static By wishlistTitle = By.id("lbl_wish_list");
 	}
 	
 	public static class AccountPage{
-		public static By accountTitle = By.id("");
+		public static By accountTitle = By.id("lbl_account");
 	}
 	
 	public static class CartPage{
