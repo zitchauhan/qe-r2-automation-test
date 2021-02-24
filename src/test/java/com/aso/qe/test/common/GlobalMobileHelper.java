@@ -32,7 +32,7 @@ public class GlobalMobileHelper {
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,platformVersion);
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
 //		caps.setCapability(MobileCapabilityType.APP, app);
-		caps.setCapability(MobileCapabilityType.APP, "org.name.asomobile");
+		caps.setCapability(MobileCapabilityType.APP, app);
 		
 	    if(platform.equalsIgnoreCase("iOS")) {
 	    	driver = new IOSDriver<MobileElement>(new URL(url),caps);
