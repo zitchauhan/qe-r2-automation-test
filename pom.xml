@@ -207,6 +207,13 @@
 		</dependency>
 		<!-- Date Time support -->
 		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>7.4.1</version>
+			<!-- <exclusions> <exclusion> <groupId>org.seleniumhq.selenium</groupId> 
+				<artifactId>selenium-java</artifactId> </exclusion> </exclusions> -->
+		</dependency>
+		<dependency>
 			<groupId>ASO</groupId>
 			<artifactId>qe-automation-framework</artifactId>
 			<version>1.0.1</version>

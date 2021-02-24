@@ -31,6 +31,7 @@ public class GlobalMobileHelper {
 //		caps.setCapability(MobileCapabilityType.UDID,udid);
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,platformVersion);
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
+		caps.setCapability(MobileCapabilityType.APP, app);
 		
 	    if(platform.equalsIgnoreCase("iOS")) {
 	    	driver = new IOSDriver<MobileElement>(new URL(url),caps);
@@ -38,5 +39,17 @@ public class GlobalMobileHelper {
 	    else if(platform.equalsIgnoreCase("android")) {
 	    	driver = new AndroidDriver<MobileElement>(new URL(url),caps);
 	    }
+	}
+	
+	public static void tapOnElement(MobileElement element) {
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		else {
+			if(!element.isDisplayed()) {
+				throw new IllegalStateException("Element is not displayed");
+			}
+			element.click();
+		}
 	}
 }

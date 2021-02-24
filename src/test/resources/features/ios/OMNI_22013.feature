@@ -2,11 +2,11 @@ Feature: Verify Details of Cart with a product without variants
 
   @Sprint1 @TC_OMNI_24353
   Scenario: User taps on View Cart Button to Navigate to Cart page
-    Given User has launched the app and is on PDP
-    And User has tapped on add product to cart
-    When User taps on view cart button
-    Then User navigates to cart detail page
-    And User sees "Your Cart" label
+    Given User launches the application
+    When User taps on go to pdp button
+    And User sees Product title
+    And User taps on add to cart button
+    Then User is navigated To Cart Screen
     And User sees items label
     And User sees subtotal header
     And User sees product title
@@ -19,4 +19,3 @@ Feature: Verify Details of Cart with a product without variants
     Then Quantity is increased by one
     When User taps on decrement button
     Then Quantity is decreased by one
-    
