@@ -31,7 +31,6 @@ public class GlobalMobileHelper {
 //		caps.setCapability(MobileCapabilityType.UDID,udid);
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,platformVersion);
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
-//		caps.setCapability(MobileCapabilityType.APP, app);
 		caps.setCapability(MobileCapabilityType.APP, app);
 		
 	    if(platform.equalsIgnoreCase("iOS")) {
