@@ -11,9 +11,8 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src/test/resources/features/ios/",
 		glue="com.aso.qe.test.stepdefinition.ios",
-		tags= {"@test"},
-		monochrome=true,
-		//dryRun=true,
+		tags= {"@TC-OMNI-24466"},
+		monochrome=true, 
 				
 //		plugin = {"pretty",
 //			   	"html:target/cucumber-report/runapiat",
