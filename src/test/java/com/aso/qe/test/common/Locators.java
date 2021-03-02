@@ -20,6 +20,13 @@ public class Locators {
 		public static By passwordEditBox = By.xpath("//*[contains(@value,'Password')]");
 		public static By loginButton = By.xpath("//XCUIElementTypeButton[contains(@label,'LOG IN')]");
 		public static By continueAsGuestButton = By.id("guest_label_test_id");
+		
+		// TODO : Update after getting the locators
+		public static By passwordShowButton = By.id("lbl_password_show");
+		public static By passwordHideButton = By.id("lbl_password_hide");
+		public static By createAccountButton = By.id("lbl_create_acccount");
+		public static By forgotPasswordLink = By.id("lbl_forgot_password");
+		public static By screenErrorMessage = By.id("lbl_page_error");
 	}
 	
 	public static class HomePage{
