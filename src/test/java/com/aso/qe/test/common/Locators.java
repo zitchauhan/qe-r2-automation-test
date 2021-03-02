@@ -94,6 +94,7 @@ public class Locators {
 		public static By labelShopWithConfidence = By.id("lbl_shop_with_confidence");
 		public static By labelWeAccept = By.id("lbl_we_accept");
 		public static By securityReassuranceMessage = By.id("lbl_security_reassurance_message");
+<<<<<<< HEAD
 		public static By paymentModeImages = By.id("img_payment_modes");
 		
 	}
@@ -102,5 +103,9 @@ public class Locators {
 		public static By PLPHeader = By.id("lbl_product_listing_header_title");
 		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
 		public static By subCategoryButton = By.id("btn_category");
+=======
+		public static By paymentModeImages = By.id("lbl_payment_modes");
+		
+>>>>>>> d9b2548a... complete scripting of OMNI 22070
 	}
 }
