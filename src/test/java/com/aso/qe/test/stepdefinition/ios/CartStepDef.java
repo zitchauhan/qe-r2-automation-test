@@ -126,22 +126,18 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	@And("^User sees taxes label$")
 	public boolean isTaxesLabelDisplayed() throws Throwable {
-		MobileElement taxLabel = driver.findElement(Locators.CartPage.taxesLabel);
-		assertTrue(taxLabel.isDisplayed());
 		logger.debug("Tax label is displayed on the Cart page");
-		return taxLabel.isDisplayed();
+		return isElementDisplayed(Locators.CartPage.taxesLabel);
 	}
 	
 	@And("^User sees the order summary label$")
 	public boolean isOrderSummaryLabelDisplayed() throws Throwable {
-		MobileElement taxLabel = driver.findElement(Locators.CartPage.orderSummaryLabel);
-		return taxLabel.isDisplayed();
+		return isElementDisplayed(Locators.CartPage.orderSummaryLabel);
 	}
 	
 	@And("^User sees the order total label$")
 	public boolean isOrderTotalLabelDisplayed() throws Throwable {
-		MobileElement orderTotal = driver.findElement(Locators.CartPage.orderTotalLabel);
-		return orderTotal.isDisplayed();
+		return isElementDisplayed(Locators.CartPage.orderTotalLabel);
 	}
 	
 	@And("^User sees \"(.*?)\" items in item label$")

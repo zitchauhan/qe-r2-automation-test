@@ -20,9 +20,12 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 public class CartPage {
 	
 	private static final Logger logger = Logger.getLogger(CartPage.class.getName());
+<<<<<<< HEAD
 	protected float currentSubTotalValue;
 	protected float currentTaxValue;
 	protected float currentTotalValue;
+=======
+>>>>>>> d9b2548a... complete scripting of OMNI 22070
 	
 	private AppiumDriver<MobileElement> driver;
 	public CartPage(AppiumDriver<MobileElement> driver) {
@@ -347,7 +350,6 @@ public class CartPage {
 	public void isPaymentModeImagesDisplayed() {
 		assertTrue(driver.findElement(Locators.CartPage.paymentModeImages).isDisplayed());
 		logger.debug("Payment code images component is displayed on View Cart page");
-		// TODO : explore additional verifications that can be covered under automation
 		logger.warn("Only images component is verified with automation. Need to verify individualy images with manual testing.");
 	}
 	//OMNI-22070 - end
@@ -404,7 +406,6 @@ public class CartPage {
 			MobileElement taxValueElement = driver.findElement(Locators.CartPage.taxesValue);
 			String taxesValue = taxValueElement.getText().replace("$", "");
 			assertNotEquals(currentTaxValue, Float.parseFloat(taxesValue),0.00);
-			// TODO need to check
 			logger.debug("Taxes value has been updated : " + taxesValue);
 		}catch(Exception e) {
 			logger.error(e.getLocalizedMessage());
