@@ -1,6 +1,5 @@
 Feature: Verify guest user sign in funcationalies on cart page
 
-<<<<<<< HEAD
   @Sprint2 @ST-25206 @TC-OMNI-30503
   Scenario: verify sign-in section is no more displayed once guest user sign-in from cart page
    Given User launches the application
@@ -39,16 +38,3 @@ Feature: Verify guest user sign in funcationalies on cart page
     Then User taps on cancel button
  	Then User is navigated To Cart Screen
  	Then User verifies guest user sign in section "is present" on cart page
-=======
-  @Sprint1 @ST-25206
-  Scenario: verify guest user is able to log in from cart page
-    Given User launches the application
-    And User Logs into the application
-    When User navigates to pdp
-    Then User sees product image
-    And User sees Product title
-    And User taps on add to cart button
-    And User taps on View Cart button
-    Then User is navigated To Cart Screen
-    
->>>>>>> e01b100d... commit for 24745
