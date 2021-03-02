@@ -91,6 +91,12 @@ public class Locators {
 		public static By labelEmptyCartInfo = By.id("lbl_user_specific_message");
 		public static By buttonLogIn = By.id("btn_login");
 		public static By buttonCreateAnAccount = By.id("btn_create_an_account");
+		
+		public static By labelShopWithConfidence = By.id("lbl_shop_with_confidence");
+		public static By labelWeAccept = By.id("lbl_we_accept");
+		public static By securityReassuranceMessage = By.id("lbl_security_reassurance_message");
+		public static By paymentModeImages = By.id("lbl_payment_modes");
+		
 	}
 	
 	public static class PLPPage{

@@ -140,4 +140,29 @@ public class CartStepDef extends GlobalMobileHelper{
 		String itemLabelText = cartPage.getItemContLabelText();
 		assertTrue(itemLabelText.contains(arg1));
 	}
+	@Then("^User sees shop with confidence label$")
+	public void user_sees_shop_with_confidence_label() throws Throwable {
+	    // Write code here for shop with confidence label
+	    cartPage.isLabelShopWithConfidenceDisplayed();
+	}
+
+	@Then("^User sees security reassurance message$")
+	public void user_sees_security_reassurance_message() throws Throwable {
+	    // Write code here for security reassurance message
+	    cartPage.isSecurityReassuranceMessageDisplayed();
+	}
+
+	@Then("^User sees we accept label$")
+	public void user_sees_we_accept_label() throws Throwable {
+	    // Write code here for we accept label
+	    cartPage.isLabelWeAcceptDisplayed();
+	}
+
+	@Then("^User sees images of payment options$")
+	public void user_sees_images_of_payment_options() throws Throwable {
+	    // Write code here images of payment options / modes
+	    cartPage.isPaymentModeImagesDisplayed();
+	}
+
+
 }
