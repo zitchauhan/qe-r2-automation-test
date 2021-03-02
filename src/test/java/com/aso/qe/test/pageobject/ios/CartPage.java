@@ -333,6 +333,7 @@ public class CartPage {
 	public void clickCartIconBottomNav() {
 		cartIconBottomNav.click();
 	}
+<<<<<<< HEAD
 	public void validateGuestSignInSection(String isPresent) {
 		GlobalMobileHelper.setImplicitWaitTo(driver, 3);
 		if(isPresent.equalsIgnoreCase("is present")) {
@@ -362,6 +363,8 @@ public class CartPage {
 	/*public boolean validateCartVariantGolfBall() {
 		MobileElement cartVariantValueOfGolfBall = driver.findElement(Locators.CartPage.)
 	}*/
+=======
+>>>>>>> 1a4787c7... complete scripting of OMNI 22070
 	
 	//OMNI-22070 - start
 	public void isLabelShopWithConfidenceDisplayed() {
@@ -375,13 +378,18 @@ public class CartPage {
 	}
 	
 	public void isSecurityReassuranceMessageDisplayed() {
+<<<<<<< HEAD
 		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.securityReassuranceMessage));
+=======
+		assertTrue(driver.findElement(Locators.CartPage.securityReassuranceMessage).isDisplayed());
+>>>>>>> 1a4787c7... complete scripting of OMNI 22070
 		logger.debug("Security Reassurance Message is displayed on View Cart page");
 	}
 	
 	public void isPaymentModeImagesDisplayed() {
 		assertTrue(driver.findElement(Locators.CartPage.paymentModeImages).isDisplayed());
 		logger.debug("Payment code images component is displayed on View Cart page");
+<<<<<<< HEAD
 		logger.warn("Only images component is verified with automation. Need to verify individualy images with manual testing.");
 	}
 	//OMNI-22070 - end
@@ -618,3 +626,10 @@ public class CartPage {
 	
 }
 
+=======
+		// TODO : explore additional verifications that can be covered under automation
+		logger.warn("Only images component is verified with automation. Need to verify individualy images with manual testing.");
+	}
+	//OMNI-22070 - end
+}
+>>>>>>> 1a4787c7... complete scripting of OMNI 22070
