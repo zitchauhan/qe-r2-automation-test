@@ -21,9 +21,12 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 public class CartPage {
 	
 	private static final Logger logger = Logger.getLogger(CartPage.class.getName());
+<<<<<<< HEAD
 	protected float currentSubTotalValue;
 	protected float currentTaxValue;
 	protected float currentTotalValue;
+=======
+>>>>>>> d9b2548a... complete scripting of OMNI 22070
 	
 	protected float shippingChargesToZipCode;
 	
