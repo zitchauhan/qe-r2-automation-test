@@ -2,6 +2,7 @@ package com.aso.qe.test.pageobject.ios;
 
 import static org.junit.Assert.assertTrue;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
@@ -14,6 +15,8 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class CartPage {
+	
+	private static final Logger logger = Logger.getLogger(CartPage.class.getName());
 	
 	private AppiumDriver<MobileElement> driver;
 	public CartPage(AppiumDriver<MobileElement> driver) {
@@ -300,4 +303,28 @@ public class CartPage {
 	public void clickCartIconBottomNav() {
 		cartIconBottomNav.click();
 	}
+	
+	//OMNI-22070 - start
+	public void isLabelShopWithConfidenceDisplayed() {
+		assertTrue(driver.findElement(Locators.CartPage.labelShopWithConfidence).isDisplayed());
+		logger.debug("Label Shop with Confidence is displayed on View Cart page");
+	}
+	
+	public void isLabelWeAcceptDisplayed() {
+		assertTrue(driver.findElement(Locators.CartPage.labelWeAccept).isDisplayed());
+		logger.debug("Label We Accept is displayed on View Cart page");
+	}
+	
+	public void isSecurityReassuranceMessageDisplayed() {
+		assertTrue(driver.findElement(Locators.CartPage.securityReassuranceMessage).isDisplayed());
+		logger.debug("Security Reassurance Message is displayed on View Cart page");
+	}
+	
+	public void isPaymentModeImagesDisplayed() {
+		assertTrue(driver.findElement(Locators.CartPage.paymentModeImages).isDisplayed());
+		logger.debug("Payment code images component is displayed on View Cart page");
+		// TODO : explore additional verifications that can be covered under automation
+		logger.warn("Only images component is verified with automation. Need to verify individualy images with manual testing.");
+	}
+	//OMNI-22070 - end
 }
