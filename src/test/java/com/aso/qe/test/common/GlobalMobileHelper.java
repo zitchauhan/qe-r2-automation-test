@@ -3,7 +3,10 @@ package com.aso.qe.test.common;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aso.qe.framework.common.PropertiesHelper;
 
@@ -11,6 +14,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.remote.HideKeyboardStrategy;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class GlobalMobileHelper {
@@ -46,10 +50,44 @@ public class GlobalMobileHelper {
 			throw new IllegalStateException("Driver is not initialized");
 		}
 		else {
+			WebDriverWait wait = new WebDriverWait(driver,10);
+			
 			if(!element.isDisplayed()) {
 				throw new IllegalStateException("Element is not displayed");
 			}
 			element.click();
 		}
+	}
+	
+	public static void tapOnElement(By locator) {
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		else {
+			WebDriverWait wait = new WebDriverWait(driver,10);
+			wait.until(ExpectedConditions.presenceOfElementLocated(locator)).click();
+		}
+	}
+	
+	public static boolean isElementDisplayed(By locator) {
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		return wait.until(ExpectedConditions.presenceOfElementLocated(locator)).isDisplayed();
+	}
+	
+	public static void setText(By locator,String text) {
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator)).sendKeys(text);
+		driver.hideKeyboard();
+	}
+	
+	public static void setText(By locator,String text,By tapLocatorToHideKeyboard) {
+		setText(locator,text);
+		tapOnElement(tapLocatorToHideKeyboard);
 	}
 }

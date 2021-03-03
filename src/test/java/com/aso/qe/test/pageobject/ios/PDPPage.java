@@ -2,6 +2,7 @@ package com.aso.qe.test.pageobject.ios;
 
 import org.openqa.selenium.support.PageFactory;
 
+import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 
 import io.appium.java_client.AppiumDriver;
@@ -35,8 +36,7 @@ public class PDPPage {
 	public MobileElement quantityEditBox;
 	
 	public boolean isHeroImageDisplayed() {
-		MobileElement heroImage = driver.findElement(Locators.PDPPage.imageHero);
-		return heroImage.isDisplayed();
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.imageHero);
 	}
 	
 	public boolean isProductTitleDisplayed() {
@@ -66,6 +66,31 @@ public class PDPPage {
 		viewCartButton.click();
 	}
 	
+	public void tapOnIncrementQtyStepper() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.qtyIncrementStepper);
+	}
+	
+	public void tapOnDecrementQtyStepper() {
+		MobileElement qtyDecrementStepper = driver.findElement(Locators.PDPPage.qtyDecrementStepper);
+		qtyDecrementStepper.click();
+		
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.qtyDecrementStepper);
+	}
+	
+	public void enterQty(String qty) {
+		MobileElement qtyEditBox = driver.findElement(Locators.PDPPage.qtyEditBox);
+		qtyEditBox.sendKeys(qty);
+	}
+	
+	public boolean validateQty(String qty) {
+		MobileElement qtyEditBox = driver.findElement(Locators.PDPPage.qtyEditBox);
+		return qtyEditBox.getText().equals(qty);
+	}
+	
+	public void setQty(String qty) {
+		GlobalMobileHelper.setText(Locators.PDPPage.qtyEditBox, qty,Locators.PDPPage.labelProductTitle);
+	}
+	
 	public String getProductPriceText() {
 		if(isProductPriceDisplayed())
 			return labelProductPrice.getText();
@@ -74,9 +99,12 @@ public class PDPPage {
 	}
 	
 	public boolean isQuantityStepperDisplayed() {
-		return quantitySelectorDecrement.isDisplayed() &&
-				quantitySelectorIncrement.isDisplayed() &&
-				quantityEditBox.isDisplayed();
-				
+		boolean isQtyIncrementStepperDisplayed = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.qtyIncrementStepper);
+		boolean isQtyDecrementStepperDisplayed = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.qtyDecrementStepper);
+		boolean isQtEditBoxDisplayed = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.qtyEditBox);
+
+		return isQtyIncrementStepperDisplayed &&
+				isQtyDecrementStepperDisplayed &&
+				isQtEditBoxDisplayed;
 	}
 }

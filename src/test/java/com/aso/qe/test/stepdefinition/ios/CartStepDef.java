@@ -128,4 +128,16 @@ public class CartStepDef extends GlobalMobileHelper{
 		MobileElement taxLabel = driver.findElement(Locators.CartPage.orderSummaryLabel);
 		return taxLabel.isDisplayed();
 	}
+	
+	@And("^User sees the order total label$")
+	public boolean isOrderTotalLabelDisplayed() throws Throwable {
+		MobileElement orderTotal = driver.findElement(Locators.CartPage.orderTotalLabel);
+		return orderTotal.isDisplayed();
+	}
+	
+	@And("^User sees \"(.*?)\" items in item label$")
+	public void deliveryMessageOnCart(String arg1) throws Throwable{
+		String itemLabelText = cartPage.getItemContLabelText();
+		assertTrue(itemLabelText.contains(arg1));
+	}
 }

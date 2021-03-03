@@ -102,6 +102,10 @@ public class CartPage {
 		return labelItemCount.isDisplayed();
 	}
 	
+	public String getItemContLabelText() {
+		return labelItemCount.getText();
+	}
+	
 	public boolean isSubtotalHeaderDisplayed() {
 		return labelSubtotalHeader.isDisplayed();
 	}

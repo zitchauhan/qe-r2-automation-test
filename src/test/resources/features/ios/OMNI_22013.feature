@@ -1,6 +1,6 @@
 Feature: Verify Details of Cart with a product without variants
 
-  @Sprint1 @TC_OMNI_24353
+  @Sprint1 @TC-OMNI-24353 @ST-22013
   Scenario: User taps on View Cart Button to Navigate to Cart page
     Given User launches the application
     When User taps on go to pdp button

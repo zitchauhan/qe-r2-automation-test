@@ -1,6 +1,6 @@
 Feature: Verify Order Summary in Cart
 
-  @Sprint1 
+  @Sprint1 @TC-OMNI-24800
   Scenario: User sees the necessary Order Summary elements with label
     Given User launches the application
     And User Logs into the application
