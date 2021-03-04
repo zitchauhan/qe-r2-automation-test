@@ -21,10 +21,10 @@ public class Locators {
 		public static By loginButton = By.xpath("//XCUIElementTypeButton[contains(@label,'LOG IN')]");
 		public static By continueAsGuestButton = By.id("guest_label_test_id");
 		
-		public static By passwordShowButton = By.id("lbl_password_show");
-		public static By passwordHideButton = By.id("lbl_password_hide");
-		public static By createAccountButton = By.id("lbl_create_acccount");
-		public static By forgotPasswordLink = By.id("lbl_forgot_password");
+		public static By passwordShowButton = By.id("btn_password_show");
+		public static By passwordHideButton = By.id("btn_password_hide");
+		public static By createAccountButton = By.id("btn_create_acccount");
+		public static By forgotPasswordLink = By.id("btn_forgot_password");
 		public static By screenErrorMessage = By.id("lbl_page_error");
 	}
 	
@@ -95,6 +95,7 @@ public class Locators {
 		public static By labelWeAccept = By.id("lbl_we_accept");
 		public static By securityReassuranceMessage = By.id("lbl_security_reassurance_message");
 <<<<<<< HEAD
+<<<<<<< HEAD
 		public static By paymentModeImages = By.id("img_payment_modes");
 		
 	}
@@ -105,6 +106,9 @@ public class Locators {
 		public static By subCategoryButton = By.id("btn_category");
 =======
 		public static By paymentModeImages = By.id("lbl_payment_modes");
+=======
+		public static By paymentModeImages = By.id("img_payment_modes");
+>>>>>>> 170ee1e7... fix locators as per naming convention after peer review
 		
 >>>>>>> d9b2548a... complete scripting of OMNI 22070
 	}
