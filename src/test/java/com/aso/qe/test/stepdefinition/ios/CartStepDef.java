@@ -6,7 +6,10 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
+<<<<<<< HEAD
 import java.util.List;
+=======
+>>>>>>> 3afcc61d... complete scripting for OMNI-20609
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
@@ -15,7 +18,10 @@ import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.CartPage;
 import com.aso.qe.test.pageobject.ios.LoginPage;
+<<<<<<< HEAD
 import com.aso.qe.test.pageobject.ios.PDPPage;
+=======
+>>>>>>> 3afcc61d... complete scripting for OMNI-20609
 
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
@@ -135,8 +141,15 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	@And("^User sees taxes label$")
 	public boolean isTaxesLabelDisplayed() throws Throwable {
+<<<<<<< HEAD
 		logger.debug("Tax label is displayed on the Cart page");
 		return isElementDisplayed(Locators.CartPage.taxesLabel);
+=======
+		MobileElement taxLabel = driver.findElement(Locators.CartPage.taxesLabel);
+		assertTrue(taxLabel.isDisplayed());
+		logger.debug("Tax label is displayed on the Cart page");
+		return taxLabel.isDisplayed();
+>>>>>>> 3afcc61d... complete scripting for OMNI-20609
 	}
 	
 	@And("^User sees the order summary label$")
@@ -458,5 +471,15 @@ public class CartStepDef extends GlobalMobileHelper{
 	swipeScreen(Direction.UP);
 	swipeScreen(Direction.UP);
 		
+
+	@Then("^User sees updated order total value after adding quantity$")
+	public void user_sees_updated_order_total_value_after_adding_quantity() throws Throwable {
+	    // Write code here to verify that the total value has been updated 
+	    cartPage.isOrderTotalValueUpdated();
+	}
+
+	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
+	public void itemCountOnCartBadge() throws Throwable{
+		cartPage.matchItemsCountOnCartBadge();
 	}
 }
