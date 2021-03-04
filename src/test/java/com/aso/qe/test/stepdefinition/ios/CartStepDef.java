@@ -460,12 +460,6 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here to verify that the total value has been updated 
 	    cartPage.isOrderTotalValueUpdated();
 	}
-
-	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
-	public void itemCountOnCartBadge() throws Throwable{
-		cartPage.matchItemsCountOnCartBadge();
-	}
-
 	
 	@Then("^User does not see item total$")
 	public void user_does_not_see_item_total() throws Throwable {
@@ -479,4 +473,9 @@ public class CartStepDef extends GlobalMobileHelper{
 	    assertFalse(isElementDisplayed(Locators.CartPage.orderSubtotalLabel));
 	}
 
+
+	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
+	public void itemCountOnCartBadge() throws Throwable{
+		cartPage.matchItemsCountOnCartBadge();
+	}
 }

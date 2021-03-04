@@ -21,12 +21,10 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 public class CartPage {
 	
 	private static final Logger logger = Logger.getLogger(CartPage.class.getName());
-<<<<<<< HEAD
+
 	protected float currentSubTotalValue;
 	protected float currentTaxValue;
 	protected float currentTotalValue;
-=======
->>>>>>> d9b2548a... complete scripting of OMNI 22070
 	
 	protected float shippingChargesToZipCode;
 	
@@ -407,9 +405,7 @@ public class CartPage {
 			logger.error(e.getLocalizedMessage());
 		}
 	}
-	//OMNI-20609 - end
 
-	//OMNI-20656 - start
 	public void isPromoCodeFieldDisplayed() {
 		
 		assertTrue(promoCodeInputField.isDisplayed());
@@ -464,15 +460,13 @@ public class CartPage {
 		assertEquals(expectedMessage, promoCodeErrorMessage.getText().trim());
 		logger.debug("Promo code error message " + expectedMessage +" is verified");
 	}	
-	//OMNI-20656 - end
+
 
 	public void verifyPromoErroMessage(String expectedErrorMessage) {
 		assertEquals(promoCodeErrorMessage.getText().trim(), expectedErrorMessage);
 		logger.debug("Error message for promo code is verified : " + expectedErrorMessage);
 	}
-	//OMNI-20656 - end
-	
-	//OMNI-20846 - start
+
 	public void verifyProductDisclaimer(String productDisclaimer) {
 		assertEquals(productDisclaimer, driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().trim());
 		logger.debug("Product disclaimer is displayed on the Cart screen");
@@ -490,9 +484,7 @@ public class CartPage {
 		GlobalMobileHelper.isElementDisplayed(Locators.CartPage.productDisclaimerReadMore);
 		logger.debug("Product disclaimer Read more and ellipsees are displayed on the Cart screen");
 	}
-	//OMNI-20846 - end
-	
-	//OMNI-20627
+
 	public void noteDownCurrentShippingCharges() {
 		MobileElement estimatedShipping = driver.findElement(Locators.CartPage.labelEstimatedShipping);
 		try {
@@ -549,7 +541,7 @@ public class CartPage {
 	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.pageTitleReturnPolicy));
 	}
 	
-	//OMNI-20609 - start
+
 	public void noteDownCurrentSubtotal() {
 		try {
 			MobileElement orderSubTotalValueElement = driver.findElement(Locators.CartPage.orderSubtotalValue);
@@ -618,22 +610,6 @@ public class CartPage {
 			logger.error(e.getLocalizedMessage());
 		}
 	}
-	//OMNI-20609 - end
-<<<<<<< HEAD
-}
-=======
-	
-	//OMNI-20656 - start
-	public void isPromoCodeFieldDisplayed() {
-		
-		assertTrue(promoCodeInputField.isDisplayed());
-		logger.debug("Promocode field is displayed on the cart screen");
-	}
-	
-	public void applyPromoCode(String promoCode) {
-		promoCodeInputField.sendKeys(promoCode);
-		logger.debug("Applied the promoCode on the cart screen");
-	}
 	
 	public void isPromoCodeDisplayed() {
 		assertTrue(promoCodeName.isDisplayed());
@@ -677,6 +653,4 @@ public class CartPage {
 		logger.debug("Promo code error message " + expectedMessage +" is verified");
 	}
 	
-	//OMNI-20656 - end
 }
->>>>>>> 6466c968... update script for new locators and steps for error messages
