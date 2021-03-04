@@ -20,12 +20,9 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 public class CartPage {
 	
 	private static final Logger logger = Logger.getLogger(CartPage.class.getName());
-<<<<<<< HEAD
 	protected float currentSubTotalValue;
 	protected float currentTaxValue;
 	protected float currentTotalValue;
-=======
->>>>>>> d9b2548a... complete scripting of OMNI 22070
 	
 	private AppiumDriver<MobileElement> driver;
 	public CartPage(AppiumDriver<MobileElement> driver) {
@@ -343,7 +340,7 @@ public class CartPage {
 	}
 	
 	public void isSecurityReassuranceMessageDisplayed() {
-		assertTrue(driver.findElement(Locators.CartPage.securityReassuranceMessage).isDisplayed());
+		assertTrue(GlobalMobileHelper.(Locators.CartPage.securityReassuranceMessage).isDisplayed());
 		logger.debug("Security Reassurance Message is displayed on View Cart page");
 	}
 	
