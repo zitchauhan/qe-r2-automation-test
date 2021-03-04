@@ -17,6 +17,7 @@ public class Locators {
 		public static By passwordEditBox = By.id("tf_password");
 		public static By loginButton = By.id("btn_login");
 		public static By continueAsGuestButton = By.id("guest_label_test_id");
+<<<<<<< HEAD
 		public static By passwordShowButton = By.id("btn_show_hide");
 		public static By passwordHideButton = By.id("btn_show_hide");
 		public static By createAccountButton = By.id("btn_create_account");
@@ -24,6 +25,15 @@ public class Locators {
 		public static By screenEmailError = By.id("lbl_email_error");
 		public static By screenPasswordError = By.id("lbl_password_error");
 		public static By cancelButton = By.id("btn_header_cancel");
+=======
+		
+		// TODO : Update after getting the locators
+		public static By passwordShowButton = By.id("btn_password_show");
+		public static By passwordHideButton = By.id("btn_password_hide");
+		public static By createAccountButton = By.id("btn_create_acccount");
+		public static By forgotPasswordLink = By.id("btn_forgot_password");
+		public static By screenErrorMessage = By.id("lbl_page_error");
+>>>>>>> eeea148a... fix locators as per naming convention after peer review
 	}
 	
 	public static class HomePage{
