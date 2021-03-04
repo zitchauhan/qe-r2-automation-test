@@ -1,5 +1,7 @@
 package com.aso.qe.test.pageobject.ios;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
@@ -17,16 +19,20 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 public class CartPage {
 	
 	private static final Logger logger = Logger.getLogger(CartPage.class.getName());
+	protected float currentSubTotalValue;
+	protected float currentTaxValue;
+	protected float currentTotalValue;
 	
 	private AppiumDriver<MobileElement> driver;
 	public CartPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
+	  PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	 }
 	
 	@iOSXCUITFindBy(id="lbl_your_cart")
 	public MobileElement labelYourCart;
 	
-	@iOSXCUITFindBy(id="lbl_item_count")
+	@iOSXCUITFindBy(id="lbl_cart")
 	public MobileElement labelItemCount;
 	
 	@iOSXCUITFindBy(id="lbl_subtotal_header")
@@ -44,13 +50,13 @@ public class CartPage {
 	@iOSXCUITFindBy(id="lbl_sku_value")
 	public MobileElement labelSkuValue;
 	
-	@iOSXCUITFindBy(id="btn_quantity_decrement")
+	@iOSXCUITFindBy(id="btn_minus_id")
 	public MobileElement quantitySelectorDecrement;
 	
-	@iOSXCUITFindBy(id="btn_quantity_increment")
+	@iOSXCUITFindBy(id="btn_plus_id")
 	public MobileElement quantitySelectorIncrement;
 	
-	@iOSXCUITFindBy(id="txt_quantity_box")
+	@iOSXCUITFindBy(id="input_field_id")
 	public MobileElement quantityEditBox;
 	
 	@iOSXCUITFindBy(id="btn_remove_from_cart")
@@ -327,4 +333,76 @@ public class CartPage {
 		logger.warn("Only images component is verified with automation. Need to verify individualy images with manual testing.");
 	}
 	//OMNI-22070 - end
+	
+	//OMNI-20609 - start
+	public void noteDownCurrentSubtotal() {
+		try {
+			MobileElement orderSubTotalValueElement = driver.findElement(Locators.CartPage.orderSubtotalValue);
+			String orderSubTotalValue = orderSubTotalValueElement.getText().replace("$", "");
+			currentSubTotalValue = Float.parseFloat(orderSubTotalValue);
+			logger.debug("Current Sub total value has been saved : " + orderSubTotalValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+		
+	}
+	
+	public void noteDownCurrentTaxValue() {
+		try {
+			MobileElement taxValueElement = driver.findElement(Locators.CartPage.taxesValue);
+			String taxesValue = taxValueElement.getText().replace("$", "");
+			currentTaxValue = Float.parseFloat(taxesValue);
+			logger.debug("Current taxes value has been saved : " + taxesValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+		
+	}
+	
+	public void noteDownCurrentTotalValue() {
+		try {
+			MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
+			String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
+			currentTotalValue = Float.parseFloat(orderTotalValue);
+			logger.debug("Current order total value has been saved : "+ orderTotalValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+	}
+	
+	public void isOrderSubtotalValueUpdated() {
+		try {
+			MobileElement orderSubTotalValueElement = driver.findElement(Locators.CartPage.orderSubtotalValue);
+			String orderSubTotalValue = orderSubTotalValueElement.getText().replace("$", "");
+			assertNotEquals(currentSubTotalValue, Float.parseFloat(orderSubTotalValue),0.00);
+			logger.debug("The order value is updated : " + orderSubTotalValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+	}
+	
+	public void isOrderTaxValueUpdated() {
+		try {
+			MobileElement taxValueElement = driver.findElement(Locators.CartPage.taxesValue);
+			String taxesValue = taxValueElement.getText().replace("$", "");
+			assertNotEquals(currentTaxValue, Float.parseFloat(taxesValue),0.00);
+			// TODO need to check
+			logger.debug("Taxes value has been updated : " + taxesValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+		
+	}
+	
+	public void isOrderTotalValueUpdated() {
+		try {
+			MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
+			String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
+			assertNotEquals(currentTotalValue, Float.parseFloat(orderTotalValue),0.00);
+			logger.debug("Order total value has been updated : "+ orderTotalValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+	}
+	//OMNI-20609 - end
 }
