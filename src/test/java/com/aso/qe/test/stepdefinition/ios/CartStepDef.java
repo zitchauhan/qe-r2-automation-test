@@ -3,11 +3,13 @@ package com.aso.qe.test.stepdefinition.ios;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.CartPage;
+import com.aso.qe.test.pageobject.ios.LoginPage;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -17,6 +19,7 @@ import io.appium.java_client.MobileElement;
 
 public class CartStepDef extends GlobalMobileHelper{
 	
+	private static final Logger logger = Logger.getLogger(CartStepDef.class.getName());
 	
 	CartPage cartPage = new CartPage(driver);
 	private int previousQuantity = 1;
@@ -77,6 +80,7 @@ public class CartStepDef extends GlobalMobileHelper{
 		assertTrue(cartPage.isProductPriceDisplayed());
 	}
 	
+	@Then("^User sees the quantity stepper$")
 	@And("^User sees Quantity Selector$")
 	public void isQuantitySelectorDisplayed() throws Throwable {
 		assertTrue(cartPage.isProductQuantitySelectorDisplayed());
@@ -120,6 +124,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	@And("^User sees taxes label$")
 	public boolean isTaxesLabelDisplayed() throws Throwable {
 		MobileElement taxLabel = driver.findElement(Locators.CartPage.taxesLabel);
+		assertTrue(taxLabel.isDisplayed());
+		logger.debug("Tax label is displayed on the Cart page");
 		return taxLabel.isDisplayed();
 	}
 	
@@ -164,5 +170,44 @@ public class CartStepDef extends GlobalMobileHelper{
 	    cartPage.isPaymentModeImagesDisplayed();
 	}
 
+	@Then("^User notes down tax before adding quantity$")
+	public void user_notes_down_tax_before_adding_quantity() throws Throwable {
+	    // Write code here to note down the tax before adding any quantity
+	    cartPage.noteDownCurrentTaxValue();
+	}
 
+	@Then("^User notes down subtotal before adding quantity$")
+	public void user_notes_down_subtotal_before_adding_quantity() throws Throwable {
+	    // Write code here to note down the sub-total before adding any quantity
+	    cartPage.noteDownCurrentSubtotal();
+	}
+
+	@Then("^User notes down order total before adding quantity$")
+	public void user_notes_down_order_total_before_adding_quantity() throws Throwable {
+	    // Write code here to note down the order total before adding any quantity
+	    cartPage.noteDownCurrentTotalValue();
+	}
+
+	@Then("^User sees updated tax value because of call to vertex after adding quantity$")
+	public void user_sees_updated_tax_value_because_of_call_to_vertex_after_adding_quantity() throws Throwable {
+	    // Write code here to verify that the tax value has been updated 
+	    cartPage.isOrderTaxValueUpdated();
+	}
+
+	@Then("^User sees updated subtotal value after adding quantity$")
+	public void user_sees_updated_subtotal_value_after_adding_quantity() throws Throwable {
+	    // Write code here to verify that the sub total value has been updated 
+	    cartPage.isOrderSubtotalValueUpdated();
+	}
+
+	@Then("^User sees updated order total value after adding quantity$")
+	public void user_sees_updated_order_total_value_after_adding_quantity() throws Throwable {
+	    // Write code here to verify that the total value has been updated 
+	    cartPage.isOrderTotalValueUpdated();
+	}
+
+	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
+	public void itemCountOnCartBadge() throws Throwable{
+		cartPage.matchItemsCountOnCartBadge();
+	}
 }

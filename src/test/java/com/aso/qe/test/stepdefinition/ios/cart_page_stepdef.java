@@ -84,10 +84,10 @@ public class cart_page_stepdef extends GlobalMobileHelper{
 		assertTrue(cart.noCounterBadgeCartIconDisplayed());
 	}
 	
-	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
-	public void itemCountOnCartBadge() throws Throwable{
-		cart.matchItemsCountOnCartBadge();
-	}
+//	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
+//	public void itemCountOnCartBadge() throws Throwable{
+//		cart.matchItemsCountOnCartBadge();
+//	}
 	
 	@Then("^User tap on \"(.*?)\" action for quantity$")
 	public void userTapPlusActionForQty(String arg1) throws Throwable{
