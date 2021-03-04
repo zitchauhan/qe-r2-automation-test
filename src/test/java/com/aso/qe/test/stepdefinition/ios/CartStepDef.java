@@ -4,7 +4,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
+<<<<<<< HEAD
 import java.util.List;
+=======
+
+>>>>>>> 8b138089... complete scripting for OMNI-20609
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
@@ -198,6 +202,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here to verify that the sub total value has been updated 
 	    cartPage.isOrderSubtotalValueUpdated();
 	}
+<<<<<<< HEAD
 
 	@Then("^User sees updated order total value after adding quantity$")
 	public void user_sees_updated_order_total_value_after_adding_quantity() throws Throwable {
@@ -403,5 +408,17 @@ public class CartStepDef extends GlobalMobileHelper{
 	    assertFalse(isElementDisplayed(Locators.CartPage.orderSubtotalLabel));
 	}
 
+=======
+>>>>>>> 8b138089... complete scripting for OMNI-20609
 
+	@Then("^User sees updated order total value after adding quantity$")
+	public void user_sees_updated_order_total_value_after_adding_quantity() throws Throwable {
+	    // Write code here to verify that the total value has been updated 
+	    cartPage.isOrderTotalValueUpdated();
+	}
+
+	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
+	public void itemCountOnCartBadge() throws Throwable{
+		cartPage.matchItemsCountOnCartBadge();
+	}
 }
