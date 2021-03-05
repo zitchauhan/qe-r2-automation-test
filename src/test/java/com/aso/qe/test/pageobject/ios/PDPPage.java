@@ -1,5 +1,7 @@
 package com.aso.qe.test.pageobject.ios;
 
+import static org.junit.Assert.assertTrue;
+
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.test.common.Locators;
@@ -34,22 +36,6 @@ public class PDPPage {
 	@iOSXCUITFindBy(id="txt_quantity_box")
 	public MobileElement quantityEditBox;
 	
-	public boolean isHeroImageDisplayed() {
-		MobileElement heroImage = driver.findElement(Locators.PDPPage.imageHero);
-		return heroImage.isDisplayed();
-	}
-	
-	public boolean isProductTitleDisplayed() {
-		MobileElement productTitle = driver.findElement(Locators.PDPPage.labelProductTitle);
-		return productTitle.isDisplayed();
-	}
-	
-	public String getProductTitle() {
-		if(isProductTitleDisplayed())
-			return labelProductTitle.getText();
-		else
-			return null;
-	}
 	
 	public boolean isProductPriceDisplayed() {
 		MobileElement productPrice = driver.findElement(Locators.PDPPage.labelProductPrice);
@@ -78,5 +64,18 @@ public class PDPPage {
 				quantitySelectorIncrement.isDisplayed() &&
 				quantityEditBox.isDisplayed();
 				
+	}
+	
+	public void verifyProductAttribute(String productAttributeName) {
+		
+		switch(productAttributeName.toLowerCase())
+		{
+		case "image":
+			assertTrue(driver.findElement(Locators.PDPPage.imageHero).isDisplayed());
+		case "title":
+			assertTrue(driver.findElement(Locators.PDPPage.labelProductTitle).isDisplayed());
+		case "price":
+			assertTrue(driver.findElement(Locators.PDPPage.labelProductPrice).isDisplayed());
+		}
 	}
 }
