@@ -26,7 +26,7 @@ public String getCategoryTitleOnPLP() {
 }
 
 public void setCategoryTitleOnPLP(String categoryTitleOnPLP) {
-	this.categoryTitleOnPLP = categoryTitleOnPLP;
+	Context.categoryTitleOnPLP = categoryTitleOnPLP;
 }
 
 public static List<String> getShopBySubCategoryList() {
