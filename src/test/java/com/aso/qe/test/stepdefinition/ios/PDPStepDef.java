@@ -14,22 +14,6 @@ public class PDPStepDef extends GlobalMobileHelper{
 	
 	PDPPage pdp = new PDPPage(driver);
 	
-	@Then("^User sees product image$")
-	public void isProductImageDisplayed() throws Throwable {
-		Thread.sleep(5000);
-	    assertTrue(pdp.isHeroImageDisplayed());
-	}
-	
-	@And("^User sees Product title$")
-	public void isProductTitleDisplayed() throws Throwable {
-		assertTrue(pdp.isProductTitleDisplayed());
-	}
-	
-	@And("^User sees Product Price$")
-	public void isProductPriceDisplayed() throws Throwable {
-		assertTrue(pdp.isProductPriceDisplayed());
-	}
-	
 	@And("^User taps on add to cart button$")
 	public void tapOnAddToCart() throws Throwable {
 		pdp.tapOnAddToCart();
@@ -63,5 +47,10 @@ public class PDPStepDef extends GlobalMobileHelper{
 	@Then("^Quantity is changed to \"(.*?)\"$")
 	public void validateQuantity(String qty) {
 		assertTrue(pdp.validateQty(qty));
+	}
+
+	@Then("^User sees product \"([^\"]*)\" on PDP $")
+	public void isProductAttributeDisplayed(String productAttributeName) throws Throwable {
+	pdp.verifyProductAttribute(productAttributeName);
 	}
 }

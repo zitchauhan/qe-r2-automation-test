@@ -2,6 +2,9 @@ package com.aso.qe.test.pageobject.ios;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
+import static org.junit.Assert.assertTrue;
+
+import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
@@ -133,5 +136,18 @@ public class PDPPage {
 	public void verifyDefaultDeliveryOption() {
 		Assert.assertEquals(true, freeStorePickupRadio.isSelected());
 		Assert.assertEquals(false, homeDeliveryRadio.isSelected());
+	}
+	
+	public void verifyProductAttribute(String productAttributeName) {
+		
+		switch(productAttributeName.toLowerCase())
+		{
+		case "image":
+			assertTrue(driver.findElement(Locators.PDPPage.imageHero).isDisplayed());
+		case "title":
+			assertTrue(driver.findElement(Locators.PDPPage.labelProductTitle).isDisplayed());
+		case "price":
+			assertTrue(driver.findElement(Locators.PDPPage.labelProductPrice).isDisplayed());
+		}
 	}
 }
