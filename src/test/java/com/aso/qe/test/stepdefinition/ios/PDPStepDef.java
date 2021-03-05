@@ -53,4 +53,5 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void isProductAttributeDisplayed(String productAttributeName) throws Throwable {
 	pdp.verifyProductAttribute(productAttributeName);
 	}
+	
 }
