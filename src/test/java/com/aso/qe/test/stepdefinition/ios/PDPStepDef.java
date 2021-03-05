@@ -22,8 +22,9 @@ public class PDPStepDef extends GlobalMobileHelper{
 		
 	}	
 	
-	@Then("^User sees product \"([^\"]*)\" on PDP $")
+	@Then("^User sees product \"([^\"]*)\" on PDP$")
 	public void isProductAttributeDisplayed(String productAttributeName) throws Throwable {
 	pdp.verifyProductAttribute(productAttributeName);
 	}
+	
 }
