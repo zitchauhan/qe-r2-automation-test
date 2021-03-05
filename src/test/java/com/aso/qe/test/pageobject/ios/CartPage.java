@@ -5,17 +5,18 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
+import com.aso.qe.test.common.Locators;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class CartPage {
+	
 	private AppiumDriver<MobileElement> driver;
-    
 	public CartPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
-	  PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	 }
 	
 	@iOSXCUITFindBy(id="lbl_your_cart")
@@ -55,17 +56,46 @@ public class CartPage {
 	public MobileElement addToWishListButton;
 	
 	public static By orderSummaryLabel = By.id("lbl_order_summary");
-	public static By orderSubtotalLabel = By.id("");
-	public static By zipCodeButton = By.id("");
+	public static By orderSubtotalLabel = By.id("lbl_subtotal_summary");
+	public static By orderSubtotalValue = By.id("lbl_subtotal_value");
+	public static By zipCodeButton = By.id("btn_change_zipcode");
 	public static By storePickUpLabel = By.id("");
 	public static By changeStoreLabel = By.id("");
-	public static By taxesLabel = By.id("");
-	public static By discountLabel = By.id("");
+	public static By taxesLabel = By.id("lbl_taxes");
+	public static By taxesValue = By.id("lbl_taxes_value");
+	public static By discountLabel = By.id("lbl_discount");
 	public static By promoCodeLabel = By.id("");
-	public static By orderTotalLabel = By.id("");
+	public static By orderTotalLabel = By.id("lbl_order_total");
+	public static By orderTotalValue = By.id("lbl_order_total_value");
 	
 	public boolean isYourCartLabelDisplayed() {
-		return labelYourCart.isDisplayed();
+		MobileElement yourCartLabel = driver.findElement(Locators.CartPage.labelYourCart);
+		return yourCartLabel.isDisplayed();
+	}
+	
+	public boolean isEmptyCartIconDisplayed() {
+		MobileElement emptyCartIcon = driver.findElement(Locators.CartPage.imageEmptyCartIcon);
+		return emptyCartIcon.isDisplayed();
+	}
+	
+	public boolean isYourCartIsEmptyLabelDisplayed() {
+		MobileElement yourCartIsEmptyLabel = driver.findElement(Locators.CartPage.labelYourCartIsEmpty);
+		return yourCartIsEmptyLabel.isDisplayed();
+	}
+	
+	public boolean isUserSpecificMessageDisplayed() {
+		MobileElement emptyCartInfoLabel = driver.findElement(Locators.CartPage.labelEmptyCartInfo);
+		return emptyCartInfoLabel.isDisplayed();
+	}
+	
+	public boolean isLogInButtonDisplayed() {
+		MobileElement loginButton = driver.findElement(Locators.CartPage.buttonLogIn);
+		return loginButton.isDisplayed();
+	}
+	
+	public boolean isCreateAnAccountButtonDisplayed() {
+		MobileElement createAnAccount = driver.findElement(Locators.CartPage.buttonCreateAnAccount);
+		return createAnAccount.isDisplayed();
 	}
 	
 	public boolean isItemCountLabelDisplayed() {
