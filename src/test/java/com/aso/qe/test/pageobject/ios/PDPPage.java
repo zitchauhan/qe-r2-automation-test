@@ -20,6 +20,7 @@ public class PDPPage {
 	public PDPPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
 	}
+	Context context = new Context();
 	
 	@iOSXCUITFindBy(id="lbl_your_cart")
 	public MobileElement imageHero;
@@ -148,6 +149,7 @@ public class PDPPage {
 			assertTrue(driver.findElement(Locators.PDPPage.labelProductTitle).isDisplayed());
 		case "price":
 			assertTrue(driver.findElement(Locators.PDPPage.labelProductPrice).isDisplayed());
+			context.setProductPriceOnPDP(driver.findElement(Locators.PDPPage.labelProductPrice).getText());
 		}
 	}
 }
