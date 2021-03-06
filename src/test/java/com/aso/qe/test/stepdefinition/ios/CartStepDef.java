@@ -3,6 +3,8 @@ package com.aso.qe.test.stepdefinition.ios;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
@@ -11,6 +13,7 @@ import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.CartPage;
 import com.aso.qe.test.pageobject.ios.LoginPage;
 
+import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -209,5 +212,79 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
 	public void itemCountOnCartBadge() throws Throwable{
 		cartPage.matchItemsCountOnCartBadge();
+	}
+	
+	@Then("^User sees the promo code field$")
+	public void user_sees_the_promo_code_field() throws Throwable {
+	    // Write code here for presence of promo code field
+	    cartPage.isPromoCodeFieldDisplayed();
+	}
+
+	@When("^User applies the given \"([^\"]*)\"$")
+	public void user_applies_the_given(String promoCode) throws Throwable {
+	    // Write code here for storing the current order value and applying the promo code
+	    // note down the order total value
+		cartPage.noteDownCurrentTotalValue();
+		// apply the promo code
+		cartPage.applyPromoCode(promoCode);
+	}
+
+	@Then("^User sees the promo code \"([^\"]*)\"$")
+	public void user_sees_the_promo_code(String promoCode) throws Throwable {
+	    // Write code here to see the promo code 
+	    cartPage.isPromoCodeDisplayed();
+	}
+
+
+	@Then("^User sees that Promo code field is disabled$")
+	public void user_sees_that_Promo_code_field_is_disabled() throws Throwable {
+	    // Write code here to see if promo code is disabled
+	    cartPage.isPromoCodeFieldDisabled();
+	}
+
+
+	@Then("^User sees the applied discount on the order summary field$")
+	public void user_sees_the_applied_discount_on_the_order_summary_field() throws Throwable {
+	    // Write code here to see whether applied promo code and corresponding amount is visible
+	    cartPage.ispromoCodeAmountDisplayed();
+	}
+
+	@Then("^User sees the remove promo code button$")
+	public void user_sees_the_remove_promo_code_button() throws Throwable {
+	    // Write code here to see whether the remove promo code button is displayed
+	    cartPage.isRemovePromoCodeButtonDisplayed();
+	}
+
+	@When("^User taps of remove promo code button$")
+	public void user_taps_of_remove_promo_code_button() throws Throwable {
+	    // Write code here to tap on the remove promo code button
+	    cartPage.tapOnRemoveFromCart();
+	    // note down the current order total now
+	    cartPage.noteDownCurrentTotalValue();
+	}
+
+	@Then("^User sees that promotion discount is removed$")
+	public void user_sees_that_promotion_discount_is_removed() throws Throwable {
+	    // Write code here to see whether the order value is updated and promotion amount is removed
+	    cartPage.ispromoCodeAmountNotDisplayed();
+	}
+
+	@Then("^User sees the updated order total$")
+	public void user_sees_the_updated_order_total() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    cartPage.isOrderTotalValueUpdated();
+	}
+
+	@Then("^User sees that Promo code field is enabled$")
+	public void user_sees_that_Promo_code_field_is_enabled() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    cartPage.isPromoCodeFieldEnabled();
+	}
+	
+	@Then("^User sees the applied promocode below promo code field$")
+	public void user_sees_the_applied_promocode_below_promo_code_field() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    cartPage.isPromoCodeDisplayed(); // doesn't assert the position
+	    logger.warn("promo code position on screen is not validated");
 	}
 }
