@@ -20,18 +20,12 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 public class CartPage {
 	
 	private static final Logger logger = Logger.getLogger(CartPage.class.getName());
-<<<<<<< HEAD
-<<<<<<< HEAD
 	protected float currentSubTotalValue;
 	protected float currentTaxValue;
 	protected float currentTotalValue;
-=======
->>>>>>> d9b2548a... complete scripting of OMNI 22070
-=======
 	protected float currentSubTotalValue;
 	protected float currentTaxValue;
 	protected float currentTotalValue;
->>>>>>> 8b138089... complete scripting for OMNI-20609
 	
 	private AppiumDriver<MobileElement> driver;
 	public CartPage(AppiumDriver<MobileElement> driver) {
@@ -415,10 +409,6 @@ public class CartPage {
 			MobileElement taxValueElement = driver.findElement(Locators.CartPage.taxesValue);
 			String taxesValue = taxValueElement.getText().replace("$", "");
 			assertNotEquals(currentTaxValue, Float.parseFloat(taxesValue),0.00);
-<<<<<<< HEAD
-=======
-			// TODO need to check
->>>>>>> 8b138089... complete scripting for OMNI-20609
 			logger.debug("Taxes value has been updated : " + taxesValue);
 		}catch(Exception e) {
 			logger.error(e.getLocalizedMessage());
@@ -438,6 +428,9 @@ public class CartPage {
 	}
 	//OMNI-20609 - end
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50b5549d... complete scripting of OMNI-20656
 	
 	//OMNI-20656 - start
 	public void isPromoCodeFieldDisplayed() {
@@ -487,6 +480,7 @@ public class CartPage {
 		assertFalse(promoCodeDiscountAmount.isDisplayed());
 		logger.debug("Promo code amount is not displayed on the cart screen");
 	}
+<<<<<<< HEAD
 	
 	public void verifyPromoCodeErrorMessage(String expectedMessage) {
 		assertEquals(expectedMessage, promoCodeErrorMessage.getText().trim());
@@ -496,4 +490,7 @@ public class CartPage {
 	//OMNI-20656 - end
 =======
 >>>>>>> 8b138089... complete scripting for OMNI-20609
+=======
+	//OMNI-20656 - end
+>>>>>>> 50b5549d... complete scripting of OMNI-20656
 }
