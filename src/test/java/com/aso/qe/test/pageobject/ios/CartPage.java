@@ -1,5 +1,6 @@
 package com.aso.qe.test.pageobject.ios;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
@@ -65,6 +66,21 @@ public class CartPage {
 	@iOSXCUITFindBy(id="btn_add_to_wishlist")
 	public MobileElement addToWishListButton;
 	
+	@iOSXCUITFindBy(id="lbl_promocode_header")
+	public MobileElement promoCodeHeader;
+	
+	@iOSXCUITFindBy(id="input_field_promocode")
+	public MobileElement promoCodeInputField;
+	
+	@iOSXCUITFindBy(id="lbl_promocode")
+	public MobileElement promoCodeName;
+	
+	@iOSXCUITFindBy(id="btn_remove_promocode")
+	public MobileElement promoCodeRemoveBbutton;
+	 
+	@iOSXCUITFindBy(id="lbl_discount_amount")
+	public MobileElement promoCodeDiscountAmount;
+	
 	public static By orderSummaryLabel = By.id("lbl_order_summary");
 	public static By orderSubtotalLabel = By.id("lbl_subtotal_summary");
 	public static By orderSubtotalValue = By.id("lbl_subtotal_value");
@@ -75,6 +91,8 @@ public class CartPage {
 	public static By taxesValue = By.id("lbl_taxes_value");
 	public static By discountLabel = By.id("lbl_discount");
 	public static By promoCodeLabel = By.id("");
+	
+	
 	public static By orderTotalLabel = By.id("lbl_order_total");
 	public static By orderTotalValue = By.id("lbl_order_total_value");
 	
@@ -405,4 +423,54 @@ public class CartPage {
 		}
 	}
 	//OMNI-20609 - end
+	
+	//OMNI-20656 - start
+	public void isPromoCodeFieldDisplayed() {
+		
+		assertTrue(promoCodeInputField.isDisplayed());
+		logger.debug("Promocode field is displayed on the cart screen");
+	}
+	
+	public void applyPromoCode(String promoCode) {
+		promoCodeInputField.sendKeys(promoCode);
+		logger.debug("Applied the promoCode on the cart screen");
+	}
+	
+	public void isPromoCodeDisplayed() {
+		assertTrue(promoCodeName.isDisplayed());
+		logger.debug("Promo Code is displayed on the cart screen");
+	}
+	
+	public void isRemovePromoCodeButtonDisplayed() {
+		assertTrue(promoCodeRemoveBbutton.isDisplayed());
+		logger.debug("Promo code remove button is displayed on the cart screen");
+	}
+		
+	public void tapOnRemovePromoButton() {
+		promoCodeRemoveBbutton.click();
+		logger.debug("Tapped on promo code remove button on the cart screen");
+	}
+	
+	public void isPromoCodeFieldEnabled() {
+		String enabledAttribute = promoCodeInputField.getAttribute("Enabled");
+		assertEquals(enabledAttribute, "True");
+		logger.debug("Promo code field is enabled on the cart screen");
+	}
+	
+	public void isPromoCodeFieldDisabled() {
+		String enabledAttribute = promoCodeInputField.getAttribute("Enabled");
+		assertEquals(enabledAttribute, "False");
+		logger.debug("Promo code field is disabled on the cart screen");
+	}
+	
+	public void ispromoCodeAmountDisplayed() {
+		assertTrue(promoCodeDiscountAmount.isDisplayed());
+		logger.debug("Promo code amount is displayed on the cart screen");
+	}
+	
+	public void ispromoCodeAmountNotDisplayed() {
+		assertFalse(promoCodeDiscountAmount.isDisplayed());
+		logger.debug("Promo code amount is not displayed on the cart screen");
+	}
+	//OMNI-20656 - end
 }
