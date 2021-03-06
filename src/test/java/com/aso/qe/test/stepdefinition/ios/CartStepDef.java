@@ -265,7 +265,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here to see the promo code error
 	    cartPage.verifyPromoErroMessage(promoCodeError);
 	}
-	
+
 	@Then("^User sees that Promo code field is disabled$")
 	public void user_sees_that_Promo_code_field_is_disabled() throws Throwable {
 	    // Write code here to see if promo code is disabled
@@ -276,6 +276,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees the applied discount on the order summary field$")
 	public void user_sees_the_applied_discount_on_the_order_summary_field() throws Throwable {
 	    // Write code here to see whether applied promo code and corresponding amount is visible
+		swipeScreen(Direction.UP);
 	    cartPage.ispromoCodeAmountDisplayed();
 	}
 
@@ -298,6 +299,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees that promotion discount is removed$")
 	public void user_sees_that_promotion_discount_is_removed() throws Throwable {
 	    // Write code here to see whether the order value is updated and promotion amount is removed
+		swipeScreen(Direction.UP);
 	    cartPage.ispromoCodeAmountNotDisplayed();
 	}
 
@@ -473,9 +475,9 @@ public class CartStepDef extends GlobalMobileHelper{
 	    assertFalse(isElementDisplayed(Locators.CartPage.orderSubtotalLabel));
 	}
 
-
 	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
 	public void itemCountOnCartBadge() throws Throwable{
 		cartPage.matchItemsCountOnCartBadge();
 	}
+
 }
