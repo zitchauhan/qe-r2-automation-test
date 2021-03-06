@@ -7,9 +7,14 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.List;
 =======
 >>>>>>> 3afcc61d... complete scripting for OMNI-20609
+=======
+import java.util.List;
+
+>>>>>>> 5ac9289f... complete scripting of OMNI-20656
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
@@ -24,7 +29,10 @@ import com.aso.qe.test.pageobject.ios.PDPPage;
 >>>>>>> 3afcc61d... complete scripting for OMNI-20609
 
 import cucumber.api.DataTable;
+<<<<<<< HEAD
 import cucumber.api.PendingException;
+=======
+>>>>>>> 5ac9289f... complete scripting of OMNI-20656
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -256,7 +264,10 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees the promo code field$")
 	public void user_sees_the_promo_code_field() throws Throwable {
 	    // Write code here for presence of promo code field
+<<<<<<< HEAD
 		swipeScreen(Direction.UP);
+=======
+>>>>>>> 5ac9289f... complete scripting of OMNI-20656
 	    cartPage.isPromoCodeFieldDisplayed();
 	}
 
@@ -266,14 +277,19 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // note down the order total value
 		cartPage.noteDownCurrentTotalValue();
 		// apply the promo code
+<<<<<<< HEAD
 		swipeScreen(Direction.UP);
 		cartPage.applyPromoCode(promoCode);
 		swipeScreen(Direction.UP);
+=======
+		cartPage.applyPromoCode(promoCode);
+>>>>>>> 5ac9289f... complete scripting of OMNI-20656
 	}
 
 	@Then("^User sees the promo code \"([^\"]*)\"$")
 	public void user_sees_the_promo_code(String promoCode) throws Throwable {
 	    // Write code here to see the promo code 
+<<<<<<< HEAD
 		swipeScreen(Direction.UP);
 	    cartPage.isPromoCodeDisplayed();
 	}
@@ -284,6 +300,12 @@ public class CartStepDef extends GlobalMobileHelper{
 	    cartPage.verifyPromoErroMessage(promoCodeError);
 	}
 	
+=======
+	    cartPage.isPromoCodeDisplayed();
+	}
+
+
+>>>>>>> 5ac9289f... complete scripting of OMNI-20656
 	@Then("^User sees that Promo code field is disabled$")
 	public void user_sees_that_Promo_code_field_is_disabled() throws Throwable {
 	    // Write code here to see if promo code is disabled
@@ -303,12 +325,19 @@ public class CartStepDef extends GlobalMobileHelper{
 	    cartPage.isRemovePromoCodeButtonDisplayed();
 	}
 
+<<<<<<< HEAD
 	@When("^User taps the remove promo code button$")
 	public void user_taps_of_remove_promo_code_button() throws Throwable {
 	    // Write code here to tap on the remove promo code button
 		swipeScreen(Direction.UP);
 	    cartPage.tapOnRemovePromoButton();
 	    swipeScreen(Direction.UP);
+=======
+	@When("^User taps of remove promo code button$")
+	public void user_taps_of_remove_promo_code_button() throws Throwable {
+	    // Write code here to tap on the remove promo code button
+	    cartPage.tapOnRemoveFromCart();
+>>>>>>> 5ac9289f... complete scripting of OMNI-20656
 	    // note down the current order total now
 	    cartPage.noteDownCurrentTotalValue();
 	}
@@ -328,8 +357,12 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees that Promo code field is enabled$")
 	public void user_sees_that_Promo_code_field_is_enabled() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+<<<<<<< HEAD
 		swipeScreen(Direction.UP);
 	    cartPage.isPromoCodeFieldDisplayed();
+=======
+	    cartPage.isPromoCodeFieldEnabled();
+>>>>>>> 5ac9289f... complete scripting of OMNI-20656
 	}
 	
 	@Then("^User sees the applied promocode below promo code field$")
@@ -338,6 +371,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	    cartPage.isPromoCodeDisplayed(); // doesn't assert the position
 	    logger.warn("promo code position on screen is not validated");
 	}
+<<<<<<< HEAD
 	
 	@When("^User taps on view cart button$")
 	public void user_taps_on_view_cart_button() throws Throwable {
@@ -482,4 +516,6 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void itemCountOnCartBadge() throws Throwable{
 		cartPage.matchItemsCountOnCartBadge();
 	}
+=======
+>>>>>>> 5ac9289f... complete scripting of OMNI-20656
 }

@@ -1,11 +1,8 @@
 package com.aso.qe.test.pageobject.ios;
 
 import static org.junit.Assert.assertFalse;
-<<<<<<< HEAD
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-=======
->>>>>>> 3afcc61d... complete scripting for OMNI-20609
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -27,11 +24,8 @@ public class CartPage {
 	protected float currentSubTotalValue;
 	protected float currentTaxValue;
 	protected float currentTotalValue;
-<<<<<<< HEAD
 	
 	protected float shippingChargesToZipCode;
-=======
->>>>>>> 3afcc61d... complete scripting for OMNI-20609
 	
 	private AppiumDriver<MobileElement> driver;
 	public CartPage(AppiumDriver<MobileElement> driver) {
@@ -339,7 +333,6 @@ public class CartPage {
 	public void clickCartIconBottomNav() {
 		cartIconBottomNav.click();
 	}
-<<<<<<< HEAD
 	public void validateGuestSignInSection(String isPresent) {
 		GlobalMobileHelper.setImplicitWaitTo(driver, 3);
 		if(isPresent.equalsIgnoreCase("is present")) {
@@ -369,8 +362,6 @@ public class CartPage {
 	/*public boolean validateCartVariantGolfBall() {
 		MobileElement cartVariantValueOfGolfBall = driver.findElement(Locators.CartPage.)
 	}*/
-=======
->>>>>>> 1a4787c7... complete scripting of OMNI 22070
 	
 	//OMNI-22070 - start
 	public void isLabelShopWithConfidenceDisplayed() {
@@ -384,93 +375,18 @@ public class CartPage {
 	}
 	
 	public void isSecurityReassuranceMessageDisplayed() {
-<<<<<<< HEAD
 		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.securityReassuranceMessage));
-=======
-		assertTrue(driver.findElement(Locators.CartPage.securityReassuranceMessage).isDisplayed());
->>>>>>> 1a4787c7... complete scripting of OMNI 22070
 		logger.debug("Security Reassurance Message is displayed on View Cart page");
 	}
 	
 	public void isPaymentModeImagesDisplayed() {
 		assertTrue(driver.findElement(Locators.CartPage.paymentModeImages).isDisplayed());
 		logger.debug("Payment code images component is displayed on View Cart page");
-<<<<<<< HEAD
 		logger.warn("Only images component is verified with automation. Need to verify individualy images with manual testing.");
 	}
 	//OMNI-22070 - end
 	
-	//OMNI-20609 - start
-	public void noteDownCurrentSubtotal() {
-		try {
-			MobileElement orderSubTotalValueElement = driver.findElement(Locators.CartPage.orderSubtotalValue);
-			String orderSubTotalValue = orderSubTotalValueElement.getText().replace("$", "");
-			currentSubTotalValue = Float.parseFloat(orderSubTotalValue);
-			logger.debug("Current Sub total value has been saved : " + orderSubTotalValue);
-		}catch(Exception e) {
-			logger.error(e.getLocalizedMessage());
-		}
-		
-	}
-	
-	public void noteDownCurrentTaxValue() {
-		try {
-			MobileElement taxValueElement = driver.findElement(Locators.CartPage.taxesValue);
-			String taxesValue = taxValueElement.getText().replace("$", "");
-			currentTaxValue = Float.parseFloat(taxesValue);
-			logger.debug("Current taxes value has been saved : " + taxesValue);
-		}catch(Exception e) {
-			logger.error(e.getLocalizedMessage());
-		}
-		
-	}
-	
-	public void noteDownCurrentTotalValue() {
-		try {
-			MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
-			String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
-			currentTotalValue = Float.parseFloat(orderTotalValue);
-			logger.debug("Current order total value has been saved : "+ orderTotalValue);
-		}catch(Exception e) {
-			logger.error(e.getLocalizedMessage());
-		}
-	}
-	
-	public void isOrderSubtotalValueUpdated() {
-		try {
-			MobileElement orderSubTotalValueElement = driver.findElement(Locators.CartPage.orderSubtotalValue);
-			String orderSubTotalValue = orderSubTotalValueElement.getText().replace("$", "");
-			assertNotEquals(currentSubTotalValue, Float.parseFloat(orderSubTotalValue),0.00);
-			logger.debug("The order value is updated : " + orderSubTotalValue);
-		}catch(Exception e) {
-			logger.error(e.getLocalizedMessage());
-		}
-	}
-	
-	
-	public void isOrderTaxValueUpdated() {
-		try {
-			MobileElement taxValueElement = driver.findElement(Locators.CartPage.taxesValue);
-			String taxesValue = taxValueElement.getText().replace("$", "");
-			assertNotEquals(currentTaxValue, Float.parseFloat(taxesValue),0.00);
-			logger.debug("Taxes value has been updated : " + taxesValue);
-		}catch(Exception e) {
-			logger.error(e.getLocalizedMessage());
-		}
-		
-	}
-	
-	public void isOrderTotalValueUpdated() {
-		MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
-		try {
-			String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
-			assertNotEquals(currentTotalValue, Float.parseFloat(orderTotalValue),0.00);
-			logger.debug("Order total value has been updated : "+ orderTotalValue);
-		}catch(Exception e) {
-			logger.error(e.getLocalizedMessage());
-		}
-	}
-	
+
 	public void isOrderTotalValueUpdated(String reason) {
 		MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
 		String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
@@ -630,18 +546,6 @@ public class CartPage {
 	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.pageTitleReturnPolicy));
 	}
 	
-}
-
-=======
-		// TODO : explore additional verifications that can be covered under automation
-		logger.warn("Only images component is verified with automation. Need to verify individualy images with manual testing.");
-	}
-	//OMNI-22070 - end
-<<<<<<< HEAD
-}
->>>>>>> 1a4787c7... complete scripting of OMNI 22070
-=======
-	
 	//OMNI-20609 - start
 	public void noteDownCurrentSubtotal() {
 		try {
@@ -714,4 +618,3 @@ public class CartPage {
 	}
 	//OMNI-20609 - end
 }
->>>>>>> 3afcc61d... complete scripting for OMNI-20609
