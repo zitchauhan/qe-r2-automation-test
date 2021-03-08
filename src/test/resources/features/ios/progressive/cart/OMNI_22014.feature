@@ -4,7 +4,7 @@ Feature: Verify Order Summary in Cart
   Scenario: User sees the necessary Order Summary elements with label
     Given User launches the application
     And User Logs into the application
-    When User taps on go to pdp button
+    When User navigates to pdp
     And User taps on add to cart button
     And User taps on View Cart button
     And User sees the order summary label

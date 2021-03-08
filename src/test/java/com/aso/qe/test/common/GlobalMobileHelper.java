@@ -19,8 +19,9 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class GlobalMobileHelper {
 	
-	private PropertiesHelper propHelper = PropertiesHelper.getInstance();
+	private static PropertiesHelper propHelper = PropertiesHelper.getInstance();
 	public static AppiumDriver<MobileElement> driver;
+	private static final int DEFAULT_EXPLICIT_WAIT = Integer.parseInt(propHelper.getConfigPropProperty("default_explicit_wait"));
 	
 	public void initializeDriver() throws MalformedURLException {
 		String platform = propHelper.getConfigPropProperty("i.platform");
@@ -50,7 +51,7 @@ public class GlobalMobileHelper {
 			throw new IllegalStateException("Driver is not initialized");
 		}
 		else {
-			WebDriverWait wait = new WebDriverWait(driver,10);
+			WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
 			
 			if(!element.isDisplayed()) {
 				throw new IllegalStateException("Element is not displayed");
@@ -64,7 +65,17 @@ public class GlobalMobileHelper {
 			throw new IllegalStateException("Driver is not initialized");
 		}
 		else {
-			WebDriverWait wait = new WebDriverWait(driver,10);
+			WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+			wait.until(ExpectedConditions.presenceOfElementLocated(locator)).click();
+		}
+	}
+	
+	public static void tapOnElement(By locator,int timeout) {
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		else {
+			WebDriverWait wait = new WebDriverWait(driver,timeout);
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator)).click();
 		}
 	}
@@ -73,7 +84,7 @@ public class GlobalMobileHelper {
 		if(driver == null) {
 			throw new IllegalStateException("Driver is not initialized");
 		}
-		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator)).isDisplayed();
 	}
 	
@@ -81,7 +92,7 @@ public class GlobalMobileHelper {
 		if(driver == null) {
 			throw new IllegalStateException("Driver is not initialized");
 		}
-		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator)).sendKeys(text);
 		driver.hideKeyboard();
 	}

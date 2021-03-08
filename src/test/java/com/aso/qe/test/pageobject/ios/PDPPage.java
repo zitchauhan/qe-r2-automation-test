@@ -62,8 +62,7 @@ public class PDPPage {
 	}
 	
 	public void tapOnViewCart() {
-		MobileElement viewCartButton = driver.findElement(Locators.PDPPage.buttonViewCart);
-		viewCartButton.click();
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonViewCart);
 	}
 	
 	public void tapOnIncrementQtyStepper() {
@@ -71,9 +70,6 @@ public class PDPPage {
 	}
 	
 	public void tapOnDecrementQtyStepper() {
-		MobileElement qtyDecrementStepper = driver.findElement(Locators.PDPPage.qtyDecrementStepper);
-		qtyDecrementStepper.click();
-		
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.qtyDecrementStepper);
 	}
 	

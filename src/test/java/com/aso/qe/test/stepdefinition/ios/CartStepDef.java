@@ -74,7 +74,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	@And("^User sees Price label$")
 	public void isPriceLabelDisplayed() throws Throwable {
-		assertTrue(cartPage.isProductSkuDisplayed());
+		assertTrue(cartPage.isProductPriceDisplayed());
 	}
 	
 	@And("^User sees Quantity Selector$")
