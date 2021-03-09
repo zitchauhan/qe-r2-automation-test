@@ -17,7 +17,6 @@ public class Locators {
 		public static By passwordEditBox = By.id("tf_password");
 		public static By loginButton = By.id("btn_login");
 		public static By continueAsGuestButton = By.id("guest_label_test_id");
-<<<<<<< HEAD
 		public static By passwordShowButton = By.id("btn_show_hide");
 		public static By passwordHideButton = By.id("btn_show_hide");
 		public static By createAccountButton = By.id("btn_create_account");
@@ -25,15 +24,6 @@ public class Locators {
 		public static By screenEmailError = By.id("lbl_email_error");
 		public static By screenPasswordError = By.id("lbl_password_error");
 		public static By cancelButton = By.id("btn_header_cancel");
-=======
-		
-		// TODO : Update after getting the locators
-		public static By passwordShowButton = By.id("btn_password_show");
-		public static By passwordHideButton = By.id("btn_password_hide");
-		public static By createAccountButton = By.id("btn_create_acccount");
-		public static By forgotPasswordLink = By.id("btn_forgot_password");
-		public static By screenErrorMessage = By.id("lbl_page_error");
->>>>>>> eeea148a... fix locators as per naming convention after peer review
 	}
 	
 	public static class HomePage{
@@ -53,6 +43,7 @@ public class Locators {
 		public static By subCategoryButton = By.id("btn_category");
 		public static By cartSizeVariant = By.xpath("//*[contains(@label,\"Medium\")]");
 	}
+
 	public static class SearchPage{
 		public static By searchBar = By.id("search_bar");
 		public static By cancelBtn = By.id("btn_cancel");
@@ -88,13 +79,10 @@ public class Locators {
 		//public static By btnCancelSizeChart = By.id("btn_cancel");
 		public static By btnCancelSizeChart = By.id("btn_back");
 		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");
-		
-		
-		
-		
-		
+
+
 	}
-	
+
 	public static class ShopPage{
 		public static By shopPageTitle = By.id("lbl_shop");
 		public static By categoryTitle = By.id("lbl_category_title");
@@ -164,10 +152,5 @@ public class Locators {
 		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 	}
-	
-	public static class PLPPage{
-		public static By PLPHeader = By.id("lbl_product_listing_header_title");
-		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
-		public static By subCategoryButton = By.id("btn_category");
-	}
+
 }
