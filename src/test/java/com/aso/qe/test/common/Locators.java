@@ -19,7 +19,7 @@ public class Locators {
 		public static By emailEditBox = By.xpath("//*[contains(@value,'Email')]");
 		public static By passwordEditBox = By.xpath("//*[contains(@value,'Password')]");
 		public static By loginButton = By.xpath("//XCUIElementTypeButton[contains(@label,'LOG IN')]");
-		public static By continueAsGuestButton = By.id("guest_label_test_id");
+		public static By continueAsGuestButton = By.xpath("//*[contains(@label,'Continue as Guest')]");
 		
 		// TODO : Update after getting the locators
 		public static By passwordShowButton = By.id("btn_password_show");
