@@ -51,6 +51,8 @@ public class LoginStepDef extends GlobalMobileHelper{
 	@And("^User continues as guest user$")
 	public void continueAsGuest() {
 		GlobalMobileHelper.tapOnElement(Locators.LoginPage.continueAsGuestButton);
+	}
+	
 	@Given("^User is on Log In screen$")
 	public void user_is_on_Log_In_screen() throws Throwable {
 		loginPage.isOnLoginScreen();
