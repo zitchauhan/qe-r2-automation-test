@@ -1,17 +1,18 @@
 package com.aso.qe.test.pageobject.ios;
 
-import org.openqa.selenium.support.PageFactory;
+import org.apache.log4j.Logger;
+import org.testng.Assert;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
+import com.aso.qe.test.stepdefinition.ios.Hooks;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class PDPPage {
-	
+	private static final Logger logger = Logger.getLogger(Hooks.class);
 	private AppiumDriver<MobileElement> driver;
 	public PDPPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
@@ -34,6 +35,24 @@ public class PDPPage {
 	
 	@iOSXCUITFindBy(id="txt_quantity_box")
 	public MobileElement quantityEditBox;
+	
+	@iOSXCUITFindBy(id="lbl_free_store_pickup")
+	public MobileElement freeStorePickupText;
+	
+	@iOSXCUITFindBy(id="lbl_pickup_availability")
+	public MobileElement pickupAvailableText;
+	
+	@iOSXCUITFindBy(id="lbl_home_delivery")
+	public MobileElement homeDeliveryText;
+	
+	@iOSXCUITFindBy(id="lbl_shipping_availability")
+	public MobileElement shippingAvailbaleText;
+	
+	@iOSXCUITFindBy(id="rd_free_store_pickup")
+	public MobileElement freeStorePickupRadio;
+	
+	@iOSXCUITFindBy(id="rd_home_delivery")
+	public MobileElement homeDeliveryRadio;
 	
 	public boolean isHeroImageDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.imageHero);
@@ -102,5 +121,17 @@ public class PDPPage {
 		return isQtyIncrementStepperDisplayed &&
 				isQtyDecrementStepperDisplayed &&
 				isQtEditBoxDisplayed;
+	}
+	
+	public void verifyDeliveryOptionsInPDP() {
+		Assert.assertEquals(true, freeStorePickupText.isDisplayed());
+		Assert.assertEquals(true, homeDeliveryText.isDisplayed());
+		Assert.assertEquals(true, pickupAvailableText.isDisplayed());
+		Assert.assertEquals(true, shippingAvailbaleText.isDisplayed());
+	}
+	
+	public void verifyDefaultDeliveryOption() {
+		Assert.assertEquals(true, freeStorePickupRadio.isSelected());
+		Assert.assertEquals(false, homeDeliveryRadio.isSelected());
 	}
 }
