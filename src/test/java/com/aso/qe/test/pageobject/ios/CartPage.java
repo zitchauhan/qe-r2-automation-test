@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
+import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 
 import io.appium.java_client.AppiumDriver;
@@ -99,15 +100,19 @@ public class CartPage {
 	}
 	
 	public boolean isItemCountLabelDisplayed() {
-		return labelItemCount.isDisplayed();
+		return GlobalMobileHelper.isElementDisplayed(Locators.CartPage.labelItems);
+	}
+	
+	public String getItemContLabelText() {
+		return labelItemCount.getText();
 	}
 	
 	public boolean isSubtotalHeaderDisplayed() {
-		return labelSubtotalHeader.isDisplayed();
+		return GlobalMobileHelper.isElementDisplayed(Locators.CartPage.labelSubtotalHeader);
 	}
 	
 	public boolean isProductTitleDisplayed() {
-		return labelProductTitle.isDisplayed();
+		return GlobalMobileHelper.isElementDisplayed(Locators.CartPage.labelProductTitle);
 	}
 	
 	public String getProductTitle() {
@@ -118,7 +123,7 @@ public class CartPage {
 	}
 	
 	public boolean isProductPriceDisplayed() {
-		return labelProductPrice.isDisplayed();
+		return GlobalMobileHelper.isElementDisplayed(Locators.CartPage.labelProductPrice);
 	}
 	
 	public String getProductPriceText() {
@@ -129,7 +134,9 @@ public class CartPage {
 	}
 	
 	public boolean isProductSkuDisplayed() {
-		return labelSku.isDisplayed();
+		boolean skuLabel = GlobalMobileHelper.isElementDisplayed(Locators.CartPage.labelSku);
+		boolean skuValue = GlobalMobileHelper.isElementDisplayed(Locators.CartPage.labelSkuValue);
+		return skuLabel && skuValue;
 	}
 	
 	public String getSKUValue() {
@@ -161,7 +168,7 @@ public class CartPage {
 	}
 	
 	public boolean isRemoveFromCartButtonDisplayed() {
-		return removeFromCartButton.isDisplayed();
+		return GlobalMobileHelper.isElementDisplayed(Locators.CartPage.buttonRemoveFromCart);
 	}
 	
 	public void tapOnRemoveFromCart() {
@@ -169,7 +176,7 @@ public class CartPage {
 	}
 	
 	public boolean isAddToWishlistButtonDisplayed() {
-		return addToWishListButton.isDisplayed();
+		return GlobalMobileHelper.isElementDisplayed(Locators.CartPage.buttonAddToWishList);
 	}
 	
 	public void tapOnAddToWishlistButton() {

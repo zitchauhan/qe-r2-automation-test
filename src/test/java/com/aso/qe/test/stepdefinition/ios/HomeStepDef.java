@@ -19,7 +19,7 @@ public class HomeStepDef extends GlobalMobileHelper{
 		assertTrue(homePage.isOnHomePage());
 	}
 	
-	@When("^User taps on go to pdp button$")
+	@When("^User navigates to pdp$")
 	public void tapOnGoToPDPButton() {
 		homePage.tapOnProduct();
 	}

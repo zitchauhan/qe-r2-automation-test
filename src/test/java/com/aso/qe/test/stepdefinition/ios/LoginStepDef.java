@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.ios;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.HomePage;
 import com.aso.qe.test.pageobject.ios.LoginPage;
 
@@ -37,10 +38,15 @@ public class LoginStepDef extends GlobalMobileHelper{
 			enterPassword();
 			tapOnLogin();
 			try {
-				Thread.sleep(5000);
+				Thread.sleep(3000);
 			} catch (InterruptedException e1) {
 				e1.printStackTrace();
 			}
 		}
+	}
+	
+	@And("^User continues as guest user$")
+	public void continueAsGuest() {
+		GlobalMobileHelper.tapOnElement(Locators.LoginPage.continueAsGuestButton);
 	}
 }

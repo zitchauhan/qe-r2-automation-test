@@ -74,7 +74,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	@And("^User sees Price label$")
 	public void isPriceLabelDisplayed() throws Throwable {
-		assertTrue(cartPage.isProductSkuDisplayed());
+		assertTrue(cartPage.isProductPriceDisplayed());
 	}
 	
 	@And("^User sees Quantity Selector$")
@@ -127,5 +127,17 @@ public class CartStepDef extends GlobalMobileHelper{
 	public boolean isOrderSummaryLabelDisplayed() throws Throwable {
 		MobileElement taxLabel = driver.findElement(Locators.CartPage.orderSummaryLabel);
 		return taxLabel.isDisplayed();
+	}
+	
+	@And("^User sees the order total label$")
+	public boolean isOrderTotalLabelDisplayed() throws Throwable {
+		MobileElement orderTotal = driver.findElement(Locators.CartPage.orderTotalLabel);
+		return orderTotal.isDisplayed();
+	}
+	
+	@And("^User sees \"(.*?)\" items in item label$")
+	public void deliveryMessageOnCart(String arg1) throws Throwable{
+		String itemLabelText = cartPage.getItemContLabelText();
+		assertTrue(itemLabelText.contains(arg1));
 	}
 }
