@@ -40,4 +40,20 @@ public class HomePage {
 		MobileElement btnGoToPDP = driver.findElement(Locators.HomePage.buttonGoToPDP);
 		GlobalMobileHelper.tapOnElement(btnGoToPDP);
 	}
+	
+	public void tapOnShopButton() {
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		MobileElement shopHomePage = driver.findElement(Locators.HomePage.shopHomePage);
+		GlobalMobileHelper.tapOnElement(shopHomePage);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

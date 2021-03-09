@@ -23,4 +23,8 @@ public class HomeStepDef extends GlobalMobileHelper{
 	public void tapOnGoToPDPButton() {
 		homePage.tapOnProduct();
 	}
+	@When("^User taps on go to shop button$")
+	public void tapOnHomeShopButton() {
+		homePage.tapOnShopButton();
+	}
 }

@@ -24,6 +24,7 @@ public class Locators {
 	
 	public static class HomePage{
 		public static By buttonGoToPDP = By.xpath("//*[contains(@label,\"Adidas Men's Designed2Move Polo Shirt\")]");
+		public static By shopHomePage = By.id("lbl_shop");
 	}
 	
 	public static class PDPPage{
@@ -80,4 +81,27 @@ public class Locators {
 		public static By buttonLogIn = By.id("btn_login");
 		public static By buttonCreateAnAccount = By.id("btn_create_an_account");
 	}
+	public static class Category{
+		public static By l1_catgoryElelnt = By.id("lbl_category_list_item");
+		public static By l2_catgoryElelnt = By.id("lbl_category_list_item");
+		public static By l3_catgoryElelnt = By.id("lbl_category_list_item");
+		public static By shopAll_ShopBycategory = By.id("shopAll_ShopBycategory");
+		public static By shopAll_ShopByBrand = By.id("shopAll_ShopBycategory");
+		public static By shopAll_ShopBycategoryTxt = By.id("lbl_shop_by_category_title");
+		public static By shopAll_ShopByBrandTxt = By.id("TxtshopAll_ShopBycategory");
+		
+		public static By Pick_Up_in_Store_Banner = By.id("Pick_Up_in_Store_Banner");
+		public static By Free_Shipping_with_Sign_in_Banner = By.id("Free_Shipping_with_Sign_in_Banner");
+		public static By Hero_Banner = By.id("Hero_Banner");
+		public static By Shop_by_Category_Component = By.id("Shop_by_Category_Component");
+		public static By Sort_By_Option = By.id("Sort_By_Option");
+		public static By Filter_Option = By.id("Filter_Option");
+		public static By Product_Grid = By.id("Product_Grid");
+		public static By Promo_ad_Card = By.id("Promo_ad_Card");
+		public static By ShopByBrandyTxt = By.id("ShopByBrandyTxt");
+		public static By clp_catgoryElelnt = By.id("clp_catgoryElelnt");
+		
+		
+	}
+	
 }
