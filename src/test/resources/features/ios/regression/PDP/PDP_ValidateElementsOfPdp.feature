@@ -1,5 +1,6 @@
 Feature: Validate functionality of PDP page
 
+	@Regression
   Scenario: User Selects a product without any variants
   	Given User launches the application
   	And User Logs into the application
@@ -7,3 +8,4 @@ Feature: Validate functionality of PDP page
     Then User sees product image
     And User sees Product title
     And User sees Product Price
+    Then User sees quantity stepper

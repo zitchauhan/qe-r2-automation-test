@@ -23,7 +23,7 @@ public class HomePage {
 	
 	public boolean isOnHomePage() {
 		try {
-			Thread.sleep(7000);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -33,7 +33,7 @@ public class HomePage {
 	
 	public void tapOnProduct() {
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

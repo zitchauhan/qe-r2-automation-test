@@ -19,6 +19,7 @@ public class Locators {
 		public static By emailEditBox = By.xpath("//*[contains(@value,'Email')]");
 		public static By passwordEditBox = By.xpath("//*[contains(@value,'Password')]");
 		public static By loginButton = By.xpath("//XCUIElementTypeButton[contains(@label,'LOG IN')]");
+		public static By continueAsGuestButton = By.id("guest_label_test_id");
 	}
 	
 	public static class HomePage{
@@ -31,6 +32,12 @@ public class Locators {
 		public static By labelProductPrice = By.id("lbl_product_price");
 		public static By buttonAddToCart = By.id("btn_add_to_cart");
 		public static By buttonViewCart = By.id("btn_view_cart");
+//		public static By qtyIncrementStepper = By.id("btn_quantity_increment");
+		public static By qtyIncrementStepper = By.id("plus_btn_id");
+//		public static By qtyDecrementStepper = By.id("btn_quantity_decrement");
+		public static By qtyDecrementStepper = By.id("minus_btn_id");
+//		public static By qtyEditBox = By.id("txt_quantity_box");
+		public static By qtyEditBox = By.id("input_field_id");
 	}
 	
 	public static class ShopPage{
@@ -47,7 +54,15 @@ public class Locators {
 	
 	public static class CartPage{
 		public static By labelYourCart = By.id("lbl_your_cart");
+		public static By labelItems = By.id("lbl_item_count");
+		public static By labelSubtotalHeader = By.id("lbl_subtotal_header");
+		public static By labelProductTitle = By.id("lbl_product_title");
 		public static By orderSummaryLabel = By.id("lbl_order_summary");
+		public static By labelSku = By.id("lbl_sku");
+		public static By labelSkuValue = By.id("lbl_sku_value");
+		public static By labelProductPrice = By.id("lbl_product_price");
+		public static By buttonRemoveFromCart = By.id("btn_remove_from_cart");
+		public static By buttonAddToWishList = By.id("btn_add_to_wishlist");
 		public static By orderSubtotalLabel = By.id("lbl_subtotal_summary");
 		public static By orderSubtotalValue = By.id("lbl_subtotal_value");
 		public static By zipCodeButton = By.id("btn_change_zipcode");

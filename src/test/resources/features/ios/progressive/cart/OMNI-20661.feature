@@ -35,12 +35,12 @@ Feature: Verify user is able to quickly access cart in any point using bottom na
   	Then User tap on "-" action for quantity
   	Then User sees the correct item count on the cart badge counter on bottom navigation
   
-  @Sprint1 @ST-OMNI-20661A
+  @Sprint1 @ST-OMNI-20661
   Scenario: Verify when user edits qty of the item count is also changed on the cart badge counter
   	Given User adds "100" qty of "STH" item to the cart  	
   	And User goes to the cart page
   	Then User sees the correct item count on the cart badge counter on bottom navigation
-	Then User edits the quantity to "12" on cart page	
+		Then User edits the quantity to "12" on cart page	
   	Then User sees the correct item count on the cart badge counter on bottom navigation
   	
   	

@@ -23,7 +23,7 @@ public class CommonMobileStepDef extends GlobalMobileHelper{
 			logger.debug("Going to launch mobile application");
 			initializeDriver();
 			logger.debug("Application successfully launched");
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			bNav = new BottomNav(driver);
 		} catch (MalformedURLException e) {
 			logger.debug("Error Launching mobile application");
