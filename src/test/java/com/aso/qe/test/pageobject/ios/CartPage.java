@@ -81,6 +81,9 @@ public class CartPage {
 	@iOSXCUITFindBy(id="lbl_discount_amount")
 	public MobileElement promoCodeDiscountAmount;
 	
+	@iOSXCUITFindBy(id="lbl_promocode_error_message")
+	public MobileElement promoCodeErrorMessage;
+	
 	public static By orderSummaryLabel = By.id("lbl_order_summary");
 	public static By orderSubtotalLabel = By.id("lbl_subtotal_summary");
 	public static By orderSubtotalValue = By.id("lbl_subtotal_value");
@@ -470,5 +473,11 @@ public class CartPage {
 		assertFalse(promoCodeDiscountAmount.isDisplayed());
 		logger.debug("Promo code amount is not displayed on the cart screen");
 	}
+	
+	public void verifyPromoCodeErrorMessage(String expectedMessage) {
+		assertEquals(expectedMessage, promoCodeErrorMessage.getText().trim());
+		logger.debug("Promo code error message " + expectedMessage +" is verified");
+	}
+	
 	//OMNI-20656 - end
 }
