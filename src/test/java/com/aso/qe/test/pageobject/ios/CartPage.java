@@ -404,6 +404,7 @@ public class CartPage {
 		}
 	}
 	
+	
 	public void isOrderTaxValueUpdated() {
 		try {
 			MobileElement taxValueElement = driver.findElement(Locators.CartPage.taxesValue);
@@ -417,8 +418,8 @@ public class CartPage {
 	}
 	
 	public void isOrderTotalValueUpdated() {
+		MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
 		try {
-			MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
 			String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
 			assertNotEquals(currentTotalValue, Float.parseFloat(orderTotalValue),0.00);
 			logger.debug("Order total value has been updated : "+ orderTotalValue);
@@ -436,8 +437,11 @@ public class CartPage {
 	}
 	
 	public void applyPromoCode(String promoCode) {
+		
 		promoCodeInputField.sendKeys(promoCode);
+		promoCodeHeader.click();
 		logger.debug("Applied the promoCode on the cart screen");
+		
 	}
 	
 	public void isPromoCodeDisplayed() {
@@ -456,23 +460,23 @@ public class CartPage {
 	}
 	
 	public void isPromoCodeFieldEnabled() {
-		String enabledAttribute = promoCodeInputField.getAttribute("Enabled");
+		String enabledAttribute = promoCodeInputField.getAttribute("enabled");
 		assertEquals(enabledAttribute, "True");
 		logger.debug("Promo code field is enabled on the cart screen");
 	}
 	
 	public void isPromoCodeFieldDisabled() {
-		assertFalse(promoCodeInputField.isDisplayed());
+		assertFalse(GlobalMobileHelper.isElementDisplayed(promoCodeInputField));
 		logger.debug("Promo code field is disabled on the cart screen");
 	}
 	
 	public void ispromoCodeAmountDisplayed() {
-		assertTrue(promoCodeDiscountAmount.isDisplayed());
+		assertTrue(GlobalMobileHelper.isElementDisplayed(promoCodeDiscountAmount));
 		logger.debug("Promo code amount is displayed on the cart screen");
 	}
 	
 	public void ispromoCodeAmountNotDisplayed() {
-		assertFalse(promoCodeDiscountAmount.isDisplayed());
+		assertFalse(GlobalMobileHelper.isElementDisplayed(promoCodeDiscountAmount));
 		logger.debug("Promo code amount is not displayed on the cart screen");
 	}
 

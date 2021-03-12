@@ -22,6 +22,7 @@ import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.CartPage;
 import com.aso.qe.test.pageobject.ios.LoginPage;
+import com.aso.qe.test.pageobject.ios.PDPPage;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
@@ -35,6 +36,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	private static final Logger logger = Logger.getLogger(CartStepDef.class.getName());
 	
 	CartPage cartPage = new CartPage(driver);
+	PDPPage pdpPage = new PDPPage(driver);
+	
 	private int previousQuantity = 1;
 	
 	@Then("^User is navigated To Cart Screen$")
@@ -431,6 +434,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees the promo code field$")
 	public void user_sees_the_promo_code_field() throws Throwable {
 	    // Write code here for presence of promo code field
+		swipeScreen(Direction.UP);
 	    cartPage.isPromoCodeFieldDisplayed();
 	}
 
@@ -447,13 +451,14 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees the promo code \"([^\"]*)\"$")
 	public void user_sees_the_promo_code(String promoCode) throws Throwable {
 	    // Write code here to see the promo code 
+		swipeScreen(Direction.UP);
 	    cartPage.isPromoCodeDisplayed();
 	}
 
 	@Then("^User sees the promo code error \"([^\"]*)\"$")
-	public void user_sees_the_promo_code_error(String promoCode) throws Throwable {
+	public void user_sees_the_promo_code_error(String promoCodeError) throws Throwable {
 	    // Write code here to see the promo code error
-	    cartPage.isPromoCodeDisplayed();
+	    cartPage.verifyPromoErroMessage(promoCodeError);
 	}
 	
 	@Then("^User sees that Promo code field is disabled$")
@@ -475,10 +480,11 @@ public class CartStepDef extends GlobalMobileHelper{
 	    cartPage.isRemovePromoCodeButtonDisplayed();
 	}
 
-	@When("^User taps of remove promo code button$")
+	@When("^User taps the remove promo code button$")
 	public void user_taps_of_remove_promo_code_button() throws Throwable {
 	    // Write code here to tap on the remove promo code button
-	    cartPage.tapOnRemoveFromCart();
+	    cartPage.tapOnRemovePromoButton();
+	    swipeScreen(Direction.UP);
 	    // note down the current order total now
 	    cartPage.noteDownCurrentTotalValue();
 	}
@@ -498,7 +504,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees that Promo code field is enabled$")
 	public void user_sees_that_Promo_code_field_is_enabled() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    cartPage.isPromoCodeFieldEnabled();
+		swipeScreen(Direction.UP);
+	    cartPage.isPromoCodeFieldDisplayed();
 	}
 	
 	@Then("^User sees the applied promocode below promo code field$")
@@ -506,5 +513,12 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here that turns the phrase above into concrete actions
 	    cartPage.isPromoCodeDisplayed(); // doesn't assert the position
 	    logger.warn("promo code position on screen is not validated");
+	}
+	
+	@When("^User taps on view cart button$")
+	public void user_taps_on_view_cart_button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   tapOnElement(Locators.PDPPage.buttonViewCart);
+	   logger.debug("Tapped on View Cart button");
 	}
 }
