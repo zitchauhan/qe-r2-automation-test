@@ -5,13 +5,17 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import java.time.Duration;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aso.qe.framework.common.PropertiesHelper;
+import com.aso.qe.test.pageobject.ios.CartPage;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -24,7 +28,7 @@ import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class GlobalMobileHelper {
-	
+	private static final Logger logger = Logger.getLogger(GlobalMobileHelper.class.getName());
 	private static PropertiesHelper propHelper = PropertiesHelper.getInstance();
 	public static AppiumDriver<MobileElement> driver;
 	private static final int DEFAULT_EXPLICIT_WAIT = Integer.parseInt(propHelper.getConfigPropProperty("default_explicit_wait"));
@@ -87,17 +91,37 @@ public class GlobalMobileHelper {
 	}
 	
 	public static boolean isElementDisplayed(By locator) {
+		boolean result=false;
+		
 		if(driver == null) {
 			throw new IllegalStateException("Driver is not initialized");
 		}
 		try {
-		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
-		wait.until(ExpectedConditions.presenceOfElementLocated(locator)).isDisplayed();
-		return true;
-		} catch (Exception e) {
+			WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+			result = wait.until(ExpectedConditions.presenceOfElementLocated(locator)).isDisplayed();
+		}catch(TimeoutException e) {
+			logger.warn("Appium driver timed out waiting for element " + locator.toString());
+		}catch (Exception e) {
 		    System.err.println(e.getMessage());
-		    return false;
 		}
+		
+		return result;
+	}
+	
+	public static boolean isElementDisplayed(MobileElement element) {
+		boolean result=false;
+		
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		try {
+			Thread.sleep(DEFAULT_EXPLICIT_WAIT * 1000);
+			result = element.isDisplayed();
+		}catch(Exception e) {
+			logger.warn("Appium driver explicit wait for mobile element " + element.toString());
+		}
+		
+		return result;
 	}
 	
 	public static void setText(By locator,String text) {
@@ -183,4 +207,5 @@ public class GlobalMobileHelper {
          LEFT,
          RIGHT;
      }
+	 
 }
