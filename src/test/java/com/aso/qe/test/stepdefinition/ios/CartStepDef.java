@@ -18,6 +18,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.CartPage;
 import com.aso.qe.test.pageobject.ios.LoginPage;
@@ -439,6 +440,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // note down the order total value
 		cartPage.noteDownCurrentTotalValue();
 		// apply the promo code
+		swipeScreen(Direction.UP);
 		cartPage.applyPromoCode(promoCode);
 	}
 
