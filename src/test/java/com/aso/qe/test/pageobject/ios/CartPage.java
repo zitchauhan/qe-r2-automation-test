@@ -550,7 +550,6 @@ public class CartPage {
 			logger.error(e.getLocalizedMessage());
 		}
 	}
-
 	public void isOrderTaxValueUpdated() {
 		try {
 			MobileElement taxValueElement = driver.findElement(Locators.CartPage.taxesValue);
@@ -564,8 +563,8 @@ public class CartPage {
 	}
 
 	public void isOrderTotalValueUpdated() {
+		MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
 		try {
-			MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
 			String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
 			assertNotEquals(currentTotalValue, Float.parseFloat(orderTotalValue), 0.00);
 			logger.debug("Order total value has been updated : " + orderTotalValue);
@@ -579,8 +578,7 @@ public class CartPage {
 		assertTrue(promoCodeInputField.isDisplayed());
 		logger.debug("Promocode field is displayed on the cart screen");
 	}
-	
-	
+		
 	public void isPromoCodeDisplayed() {
 		assertTrue(promoCodeName.isDisplayed());
 		logger.debug("Promo Code is displayed on the cart screen");
@@ -597,18 +595,38 @@ public class CartPage {
 	}
 	
 	public void isPromoCodeFieldEnabled() {
-		String enabledAttribute = promoCodeInputField.getAttribute("Enabled");
+		String enabledAttribute = promoCodeInputField.getAttribute("enabled");
 		assertEquals(enabledAttribute, "True");
 		logger.debug("Promo code field is enabled on the cart screen");
 	}
 	
 	public void isPromoCodeFieldDisabled() {
-		assertFalse(promoCodeInputField.isDisplayed());
+		assertFalse(GlobalMobileHelper.isElementDisplayed(promoCodeInputField));
 		logger.debug("Promo code field is disabled on the cart screen");
 	}
 	
 	public void ispromoCodeAmountDisplayed() {
-		assertTrue(promoCodeDiscountAmount.isDisplayed());
+		assertTrue(GlobalMobileHelper.isElementDisplayed(promoCodeDiscountAmount));
 		logger.debug("Promo code amount is displayed on the cart screen");
 	}
+<<<<<<< HEAD
 }
+=======
+	
+	public void ispromoCodeAmountNotDisplayed() {
+		assertFalse(GlobalMobileHelper.isElementDisplayed(promoCodeDiscountAmount));
+		logger.debug("Promo code amount is not displayed on the cart screen");
+	}
+
+	public void verifyPromoCodeErrorMessage(String expectedMessage) {
+		assertEquals(expectedMessage, promoCodeErrorMessage.getText().trim());
+		logger.debug("Promo code error message " + expectedMessage +" is verified");
+	}	
+	//OMNI-20656 - end
+
+	public void verifyPromoErroMessage(String expectedErrorMessage) {
+		assertEquals(promoCodeErrorMessage.getText().trim(), expectedErrorMessage);
+		logger.debug("Error message for promo code is verified : " + expectedErrorMessage);
+	}
+}
+>>>>>>> 40f229aa... complete OMNI-20656 execution script
