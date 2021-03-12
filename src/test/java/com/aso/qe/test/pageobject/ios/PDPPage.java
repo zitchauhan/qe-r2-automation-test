@@ -19,6 +19,7 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 public class PDPPage {
 	private static final Logger logger = Logger.getLogger(Hooks.class);
 	private AppiumDriver<MobileElement> driver;
+	
 	public PDPPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
 	}
