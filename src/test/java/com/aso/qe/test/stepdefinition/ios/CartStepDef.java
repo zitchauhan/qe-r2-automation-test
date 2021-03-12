@@ -230,6 +230,11 @@ public class CartStepDef extends GlobalMobileHelper{
 	}
 
 
+	@Then("^User sees the promo code error \"([^\"]*)\"$")
+	public void user_sees_the_promo_code_error(String promoCode) throws Throwable {
+	    // Write code here to see the promo code 
+	    cartPage.verifyPromoCodeErrorMessage(promoCode);
+	}
 	@Then("^User sees that Promo code field is disabled$")
 	public void user_sees_that_Promo_code_field_is_disabled() throws Throwable {
 	    // Write code here to see if promo code is disabled
@@ -249,8 +254,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	    cartPage.isRemovePromoCodeButtonDisplayed();
 	}
 
-	@When("^User taps of remove promo code button$")
-	public void user_taps_of_remove_promo_code_button() throws Throwable {
+	@When("^User taps the remove promo code button$")
+	public void user_taps_the_remove_promo_code_button() throws Throwable {
 	    // Write code here to tap on the remove promo code button
 	    cartPage.tapOnRemoveFromCart();
 	    // note down the current order total now
