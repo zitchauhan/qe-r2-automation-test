@@ -616,4 +616,64 @@ public class CartPage {
 		}
 	}
 	//OMNI-20609 - end
+<<<<<<< HEAD
 }
+=======
+	
+	//OMNI-20656 - start
+	public void isPromoCodeFieldDisplayed() {
+		
+		assertTrue(promoCodeInputField.isDisplayed());
+		logger.debug("Promocode field is displayed on the cart screen");
+	}
+	
+	public void applyPromoCode(String promoCode) {
+		promoCodeInputField.sendKeys(promoCode);
+		logger.debug("Applied the promoCode on the cart screen");
+	}
+	
+	public void isPromoCodeDisplayed() {
+		assertTrue(promoCodeName.isDisplayed());
+		logger.debug("Promo Code is displayed on the cart screen");
+	}
+	
+	public void isRemovePromoCodeButtonDisplayed() {
+		assertTrue(promoCodeRemoveBbutton.isDisplayed());
+		logger.debug("Promo code remove button is displayed on the cart screen");
+	}
+		
+	public void tapOnRemovePromoButton() {
+		promoCodeRemoveBbutton.click();
+		logger.debug("Tapped on promo code remove button on the cart screen");
+	}
+	
+	public void isPromoCodeFieldEnabled() {
+		String enabledAttribute = promoCodeInputField.getAttribute("Enabled");
+		assertEquals(enabledAttribute, "True");
+		logger.debug("Promo code field is enabled on the cart screen");
+	}
+	
+	public void isPromoCodeFieldDisabled() {
+		String enabledAttribute = promoCodeInputField.getAttribute("Enabled");
+		assertEquals(enabledAttribute, "False");
+		logger.debug("Promo code field is disabled on the cart screen");
+	}
+	
+	public void ispromoCodeAmountDisplayed() {
+		assertTrue(promoCodeDiscountAmount.isDisplayed());
+		logger.debug("Promo code amount is displayed on the cart screen");
+	}
+	
+	public void ispromoCodeAmountNotDisplayed() {
+		assertFalse(promoCodeDiscountAmount.isDisplayed());
+		logger.debug("Promo code amount is not displayed on the cart screen");
+	}
+	
+	public void verifyPromoCodeErrorMessage(String expectedMessage) {
+		assertEquals(expectedMessage, promoCodeErrorMessage.getText().trim());
+		logger.debug("Promo code error message " + expectedMessage +" is verified");
+	}
+	
+	//OMNI-20656 - end
+}
+>>>>>>> 6466c968... update script for new locators and steps for error messages
