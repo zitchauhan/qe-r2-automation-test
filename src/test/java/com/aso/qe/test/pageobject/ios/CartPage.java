@@ -405,11 +405,6 @@ public class CartPage {
 		}
 	}
 
-	public void isPromoCodeFieldDisplayed() {
-
-		assertTrue(promoCodeInputField.isDisplayed());
-		logger.debug("Promocode field is displayed on the cart screen");
-	}
 
 	public void applyPromoCode(String promoCode) {
 
@@ -417,37 +412,6 @@ public class CartPage {
 		promoCodeHeader.click();
 		logger.debug("Applied the promoCode on the cart screen");
 
-	}
-
-	public void isPromoCodeDisplayed() {
-		assertTrue(promoCodeName.isDisplayed());
-		logger.debug("Promo Code is displayed on the cart screen");
-	}
-
-	public void isRemovePromoCodeButtonDisplayed() {
-		assertTrue(promoCodeRemoveBbutton.isDisplayed());
-		logger.debug("Promo code remove button is displayed on the cart screen");
-	}
-
-	public void tapOnRemovePromoButton() {
-		promoCodeRemoveBbutton.click();
-		logger.debug("Tapped on promo code remove button on the cart screen");
-	}
-
-	public void isPromoCodeFieldEnabled() {
-		String enabledAttribute = promoCodeInputField.getAttribute("enabled");
-		assertEquals(enabledAttribute, "True");
-		logger.debug("Promo code field is enabled on the cart screen");
-	}
-
-	public void isPromoCodeFieldDisabled() {
-		assertFalse(GlobalMobileHelper.isElementDisplayed(promoCodeInputField));
-		logger.debug("Promo code field is disabled on the cart screen");
-	}
-
-	public void ispromoCodeAmountDisplayed() {
-		assertTrue(GlobalMobileHelper.isElementDisplayed(promoCodeDiscountAmount));
-		logger.debug("Promo code amount is displayed on the cart screen");
 	}
 
 	public void ispromoCodeAmountNotDisplayed() {
@@ -608,5 +572,43 @@ public class CartPage {
 		} catch (Exception e) {
 			logger.error(e.getLocalizedMessage());
 		}
+	}
+
+	public void isPromoCodeFieldDisplayed() {
+		
+		assertTrue(promoCodeInputField.isDisplayed());
+		logger.debug("Promocode field is displayed on the cart screen");
+	}
+	
+	
+	public void isPromoCodeDisplayed() {
+		assertTrue(promoCodeName.isDisplayed());
+		logger.debug("Promo Code is displayed on the cart screen");
+	}
+	
+	public void isRemovePromoCodeButtonDisplayed() {
+		assertTrue(promoCodeRemoveBbutton.isDisplayed());
+		logger.debug("Promo code remove button is displayed on the cart screen");
+	}
+		
+	public void tapOnRemovePromoButton() {
+		promoCodeRemoveBbutton.click();
+		logger.debug("Tapped on promo code remove button on the cart screen");
+	}
+	
+	public void isPromoCodeFieldEnabled() {
+		String enabledAttribute = promoCodeInputField.getAttribute("Enabled");
+		assertEquals(enabledAttribute, "True");
+		logger.debug("Promo code field is enabled on the cart screen");
+	}
+	
+	public void isPromoCodeFieldDisabled() {
+		assertFalse(promoCodeInputField.isDisplayed());
+		logger.debug("Promo code field is disabled on the cart screen");
+	}
+	
+	public void ispromoCodeAmountDisplayed() {
+		assertTrue(promoCodeDiscountAmount.isDisplayed());
+		logger.debug("Promo code amount is displayed on the cart screen");
 	}
 }
