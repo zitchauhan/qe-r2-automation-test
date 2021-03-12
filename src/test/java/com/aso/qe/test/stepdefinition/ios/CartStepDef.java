@@ -448,7 +448,12 @@ public class CartStepDef extends GlobalMobileHelper{
 	    cartPage.isPromoCodeDisplayed();
 	}
 
-
+	@Then("^User sees the promo code error \"([^\"]*)\"$")
+	public void user_sees_the_promo_code_error(String promoCode) throws Throwable {
+	    // Write code here to see the promo code error
+	    cartPage.isPromoCodeDisplayed();
+	}
+	
 	@Then("^User sees that Promo code field is disabled$")
 	public void user_sees_that_Promo_code_field_is_disabled() throws Throwable {
 	    // Write code here to see if promo code is disabled

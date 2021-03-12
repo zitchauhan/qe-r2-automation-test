@@ -427,11 +427,7 @@ public class CartPage {
 		}
 	}
 	//OMNI-20609 - end
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 50b5549d... complete scripting of OMNI-20656
-	
+
 	//OMNI-20656 - start
 	public void isPromoCodeFieldDisplayed() {
 		
@@ -466,8 +462,7 @@ public class CartPage {
 	}
 	
 	public void isPromoCodeFieldDisabled() {
-		String enabledAttribute = promoCodeInputField.getAttribute("Enabled");
-		assertEquals(enabledAttribute, "False");
+		assertFalse(promoCodeInputField.isDisplayed());
 		logger.debug("Promo code field is disabled on the cart screen");
 	}
 	
@@ -480,17 +475,15 @@ public class CartPage {
 		assertFalse(promoCodeDiscountAmount.isDisplayed());
 		logger.debug("Promo code amount is not displayed on the cart screen");
 	}
-<<<<<<< HEAD
-	
+
 	public void verifyPromoCodeErrorMessage(String expectedMessage) {
 		assertEquals(expectedMessage, promoCodeErrorMessage.getText().trim());
 		logger.debug("Promo code error message " + expectedMessage +" is verified");
+	}	
+	//OMNI-20656 - end
+
+	public void verifyPromoErroMessage(String expectedErrorMessage) {
+		assertEquals(promoCodeErrorMessage.getText().trim(), expectedErrorMessage);
+		logger.debug("Error message for promo code is verified : " + expectedErrorMessage);
 	}
-	
-	//OMNI-20656 - end
-=======
->>>>>>> 8b138089... complete scripting for OMNI-20609
-=======
-	//OMNI-20656 - end
->>>>>>> 50b5549d... complete scripting of OMNI-20656
 }
