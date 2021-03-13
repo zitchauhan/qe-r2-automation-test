@@ -134,6 +134,12 @@ public class LoginStepDef extends GlobalMobileHelper{
 	    loginPage.isErrorMessageDisplayed(errorMessage);
 	}
 
+	@Then("^User sees the password error message \"([^\"]*)\"$")
+	public void user_sees_the_password_error_message(String errorMessage) throws Throwable {
+	    
+	    loginPage.isPasswordErrorMessageDisplayed(errorMessage);
+	}
+	
 	@Given("^User is on Log In sreen$")
 	public void user_is_on_Log_In_sreen() throws Throwable {
 	    

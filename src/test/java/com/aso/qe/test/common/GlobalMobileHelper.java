@@ -129,7 +129,10 @@ public class GlobalMobileHelper {
 			throw new IllegalStateException("Driver is not initialized");
 		}
 		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
-		wait.until(ExpectedConditions.presenceOfElementLocated(locator)).sendKeys(text);
+		MobileElement editBox = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		editBox.clear();
+		editBox.sendKeys(text);
+		//wait.until(ExpectedConditions.presenceOfElementLocated(locator)).sendKeys(text);
 		driver.hideKeyboard();
 	}
 	

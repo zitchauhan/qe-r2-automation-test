@@ -16,16 +16,16 @@ public class Locators {
 	}
 	
 	public static class LoginPage{
-		public static By emailEditBox = By.xpath("//*[contains(@value,'Email')]");
-		public static By passwordEditBox = By.xpath("//*[contains(@value,'Password')]");
-		public static By loginButton = By.xpath("//XCUIElementTypeButton[contains(@label,'LOG IN')]");
+		public static By emailEditBox = By.id("tf_email");
+		public static By passwordEditBox = By.id("tf_password");
+		public static By loginButton = By.id("btn_login");
 		public static By continueAsGuestButton = By.id("guest_label_test_id");
-		
-		public static By passwordShowButton = By.id("btn_password_show");
-		public static By passwordHideButton = By.id("btn_password_hide");
-		public static By createAccountButton = By.id("btn_create_acccount");
-		public static By forgotPasswordLink = By.id("btn_forgot_password");
-		public static By screenErrorMessage = By.id("lbl_page_error");
+		public static By passwordShowButton = By.id("btn_show_hide");
+		public static By passwordHideButton = By.id("btn_show_hide");
+		public static By createAccountButton = By.id("btn_create_account");
+		public static By forgotPasswordLink = By.id("btn_forgot");
+		public static By screenEmailError = By.id("lbl_email_error");
+		public static By screenPasswordError = By.id("lbl_password_error");
 	}
 	
 	public static class HomePage{
@@ -61,6 +61,7 @@ public class Locators {
 	
 	public static class AccountPage{
 		public static By accountTitle = By.id("lbl_account");
+		public static By loginLink = By.xpath("//*[contains(@label, 'LOGIN')]");
 	}
 	
 	public static class CartPage{
