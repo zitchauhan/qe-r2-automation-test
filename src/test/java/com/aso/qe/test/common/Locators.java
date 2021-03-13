@@ -92,11 +92,9 @@ public class Locators {
 		public static By buttonLogIn = By.id("btn_login");
 		public static By buttonCreateAnAccount = By.id("btn_create_an_account");
 		
-		public static By labelShopWithConfidence = By.id("lbl_shop_with_confidence");
+		public static By labelShopWithConfidence = By.id("lbl_shop_with_confidence_label");
 		public static By labelWeAccept = By.id("lbl_we_accept");
 		public static By securityReassuranceMessage = By.id("lbl_security_reassurance_message");
-<<<<<<< HEAD
-<<<<<<< HEAD
 		public static By paymentModeImages = By.id("img_payment_modes");
 		
 	}
@@ -105,12 +103,7 @@ public class Locators {
 		public static By PLPHeader = By.id("lbl_product_listing_header_title");
 		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
 		public static By subCategoryButton = By.id("btn_category");
-=======
-		public static By paymentModeImages = By.id("lbl_payment_modes");
-=======
+		public static By securityReassuranceMessage = By.id("lbl_shop_with_confidence_subheading");
 		public static By paymentModeImages = By.id("img_payment_modes");
->>>>>>> 170ee1e7... fix locators as per naming convention after peer review
-		
->>>>>>> d9b2548a... complete scripting of OMNI 22070
 	}
 }
