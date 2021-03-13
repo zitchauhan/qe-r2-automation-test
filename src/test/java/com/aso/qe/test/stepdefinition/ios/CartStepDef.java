@@ -161,6 +161,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees shop with confidence label$")
 	public void user_sees_shop_with_confidence_label() throws Throwable {
 	    // Write code here for shop with confidence label
+		swipeScreen(Direction.UP);
+		swipeScreen(Direction.UP);
 	    cartPage.isLabelShopWithConfidenceDisplayed();
 	}
 
