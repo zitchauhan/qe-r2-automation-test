@@ -147,8 +147,6 @@ public class Locators {
 		public static By PLPHeader = By.id("lbl_product_listing_header_title");
 		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
 		public static By subCategoryButton = By.id("btn_category");
-		public static By paymentModeImages = By.id("img_payment_modes");
-		
 		public static By textChangeZipCode = By.id("lbl_change_zipcode_input");
 		public static By buttonSubmit = By.xpath("//*[contains(@label, 'SUBMIT')]");
 		public static By labelEstimatedShipping = By.xpath("//*[contains(@label, 'Estimated Shipping to')]");
@@ -159,6 +157,8 @@ public class Locators {
 		public static By labelFreeSStoreReturn = By.id("lbl_header");
 		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
+		public static By securityReassuranceMessage = By.id("lbl_shop_with_confidence_subheading");
+	
 	}
 
 }
