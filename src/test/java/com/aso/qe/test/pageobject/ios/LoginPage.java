@@ -1,6 +1,7 @@
 package com.aso.qe.test.pageobject.ios;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -12,6 +13,8 @@ import com.aso.qe.test.common.Locators;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.TapOptions;
 
 public class LoginPage {
 	private AppiumDriver<MobileElement> driver;
@@ -25,9 +28,10 @@ public class LoginPage {
 	}
 	
 	public void enterEmail(String email) {
-		MobileElement emailField = driver.findElement(Locators.LoginPage.emailEditBox);
-		emailField.sendKeys(email);
-		logger.debug(emailField.getAttribute("type"));
+//		MobileElement emailField = driver.findElement(Locators.LoginPage.emailEditBox);
+//		emailField.sendKeys(email);
+		GlobalMobileHelper.setText(Locators.LoginPage.emailEditBox, email, Locators.LoginPage.passwordEditBox);
+		logger.debug("Entered the email on Login screen");
 	}
 	
 		
@@ -50,7 +54,12 @@ public class LoginPage {
 	}
 	
 	public void isOnLoginScreen() {
-		assertTrue(driver.findElement(Locators.LoginPage.emailEditBox).isDisplayed());
+		// to be removed later
+		GlobalMobileHelper.tapOnElement(Locators.AccountPage.accountTitle);
+		GlobalMobileHelper.tapOnElement(Locators.AccountPage.loginLink);
+		// driver.findElement(logInLink).click();
+		
+		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.LoginPage.emailEditBox));
 		logger.debug("Log In Screen is Displayed");
 	}
 	
@@ -135,7 +144,11 @@ public class LoginPage {
 	}
 	
 	public void isErrorMessageDisplayed(String errorMessage) {
-		assertEquals(driver.findElement(Locators.LoginPage.screenErrorMessage).getText().trim(), errorMessage);
+		assertEquals(driver.findElement(Locators.LoginPage.screenEmailError).getText().trim(), errorMessage);
+	}
+	
+	public void isPasswordErrorMessageDisplayed(String errorMessage) {
+		assertEquals(driver.findElement(Locators.LoginPage.screenPasswordError).getText().trim(), errorMessage);
 	}
 	
 	public void isKeyboardDisplayed() {
