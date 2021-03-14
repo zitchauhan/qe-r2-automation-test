@@ -25,6 +25,7 @@ import com.aso.qe.test.pageobject.ios.LoginPage;
 import com.aso.qe.test.pageobject.ios.PDPPage;
 
 import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -39,6 +40,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	PDPPage pdpPage = new PDPPage(driver);
 	
 	private int previousQuantity = 1;
+	private String productDisclaimer;
 	
 	@Then("^User is navigated To Cart Screen$")
 	public void userIsOnCart() throws InterruptedException {
@@ -525,4 +527,24 @@ public class CartStepDef extends GlobalMobileHelper{
 	   tapOnElement(Locators.PDPPage.buttonViewCart);
 	   logger.debug("Tapped on View Cart button");
 	}
+	
+	@Then("^User sees the product disclaimer \"([^\"]*)\"$")
+	public void user_sees_the_product_disclaimer(String disclaimer) throws Throwable {
+	    // Write code here for verifying the product disclaimer
+		productDisclaimer = disclaimer;
+	    cartPage.verifyProductDisclaimer(disclaimer);
+	}
+
+	@When("^User changes the zip code to \"([^\"]*)\"$")
+	public void user_changes_the_zip_code_to(String zipCode) throws Throwable {
+	    // Write code here to change the zip code
+	    throw new PendingException();
+	}
+
+	@Then("^User sees longer product disclaimer with elipses$")
+	public void user_sees_longer_product_disclaimer_with_elipses() throws Throwable {
+	    // Write code here to verify longer product disclaimer
+	    cartPage.verifyLongerProductDisclaimer(productDisclaimer);
+	}
+
 }
