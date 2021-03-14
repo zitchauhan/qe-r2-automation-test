@@ -97,6 +97,9 @@ public class Locators {
 		public static By securityReassuranceMessage = By.id("lbl_security_reassurance_message");
 		public static By paymentModeImages = By.id("img_payment_modes");
 		
+		public static By productDisclaimerLabel = By.id("disclaimer_messages_label"); // Can be _0 for one product
+		public static By productDisclaimerReadMore = By.xpath("//*[contains(@label, 'Read More')]");
+		
 	}
 	
 	public static class PLPPage{

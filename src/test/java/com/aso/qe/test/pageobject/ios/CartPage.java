@@ -490,4 +490,25 @@ public class CartPage {
 		assertEquals(promoCodeErrorMessage.getText().trim(), expectedErrorMessage);
 		logger.debug("Error message for promo code is verified : " + expectedErrorMessage);
 	}
+	//OMNI-20656 - end
+	
+	//OMNI-20846 - start
+	public void verifyProductDisclaimer(String productDisclaimer) {
+		assertEquals(productDisclaimer, driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().trim());
+		logger.debug("Product disclaimer is displayed on the Cart screen");
+	}
+	
+	public void verifyProductDisclaimer(String productUniqueId, String productDisclaimer) {
+		// Search for a product based on Unique id and check the product disclaimer when multiple products are in the cart
+		logger.debug("Product disclaimer for product id" 
+		+ productUniqueId + ": " + productDisclaimer + " is displayed");
+		throw new UnsupportedOperationException();
+	}
+	
+	public void verifyLongerProductDisclaimer(String productDisclaimer) {
+		assertTrue(driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().contains("..."));
+		GlobalMobileHelper.isElementDisplayed(Locators.CartPage.productDisclaimerReadMore);
+		logger.debug("Product disclaimer Read more and ellipsees are displayed on the Cart screen");
+	}
+	//OMNI-20846 - end
 }
