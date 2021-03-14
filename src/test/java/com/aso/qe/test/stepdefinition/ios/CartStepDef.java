@@ -37,7 +37,10 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	private int previousQuantity = 1;
 	private String productDisclaimer;
+<<<<<<< HEAD
 	private int shippingChargesToZipCode;
+=======
+>>>>>>> 31d53537... complete initial design of OMNI-20846
 	
 	@Then("^User is navigated To Cart Screen$")
 	public void userIsOnCart() throws InterruptedException {
@@ -231,14 +234,6 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void user_sees_updated_subtotal_value_after_adding_quantity() throws Throwable {
 	    // Write code here to verify that the sub total value has been updated 
 	    cartPage.isOrderSubtotalValueUpdated();
-	}
-
-	
-	@Then("^User sees the promo code field$")
-	public void user_sees_the_promo_code_field() throws Throwable {
-	    // Write code here for presence of promo code field
-		swipeScreen(Direction.UP);
-	    cartPage.isPromoCodeFieldDisplayed();
 	}
 
 	@When("^User applies the given \"([^\"]*)\"$")
@@ -479,9 +474,6 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void itemCountOnCartBadge() throws Throwable{
 		cartPage.matchItemsCountOnCartBadge();
 	}
-<<<<<<< HEAD
-
-=======
 	
 	@Then("^User sees the promo code field$")
 	public void user_sees_the_promo_code_field() throws Throwable {
@@ -489,91 +481,4 @@ public class CartStepDef extends GlobalMobileHelper{
 		swipeScreen(Direction.UP);
 	    cartPage.isPromoCodeFieldDisplayed();
 	}
-
-	@When("^User applies the given \"([^\"]*)\"$")
-	public void user_applies_the_given(String promoCode) throws Throwable {
-	    // Write code here for storing the current order value and applying the promo code
-	    // note down the order total value
-		cartPage.noteDownCurrentTotalValue();
-		// apply the promo code
-		swipeScreen(Direction.UP);
-		cartPage.applyPromoCode(promoCode);
-		swipeScreen(Direction.UP);
-	}
-
-	@Then("^User sees the promo code \"([^\"]*)\"$")
-	public void user_sees_the_promo_code(String promoCode) throws Throwable {
-	    // Write code here to see the promo code 
-		swipeScreen(Direction.UP);
-	    cartPage.isPromoCodeDisplayed();
-	}
-
-	@Then("^User sees the promo code error \"([^\"]*)\"$")
-	public void user_sees_the_promo_code_error(String promoCodeError) throws Throwable {
-	    // Write code here to see the promo code error
-	    cartPage.verifyPromoErroMessage(promoCodeError);
-	}
-	
-	@Then("^User sees that Promo code field is disabled$")
-	public void user_sees_that_Promo_code_field_is_disabled() throws Throwable {
-	    // Write code here to see if promo code is disabled
-	    cartPage.isPromoCodeFieldDisabled();
-	}
-
-
-	@Then("^User sees the applied discount on the order summary field$")
-	public void user_sees_the_applied_discount_on_the_order_summary_field() throws Throwable {
-	    // Write code here to see whether applied promo code and corresponding amount is visible
-	    cartPage.ispromoCodeAmountDisplayed();
-	}
-
-	@Then("^User sees the remove promo code button$")
-	public void user_sees_the_remove_promo_code_button() throws Throwable {
-	    // Write code here to see whether the remove promo code button is displayed
-	    cartPage.isRemovePromoCodeButtonDisplayed();
-	}
-
-	@When("^User taps the remove promo code button$")
-	public void user_taps_of_remove_promo_code_button() throws Throwable {
-	    // Write code here to tap on the remove promo code button
-		swipeScreen(Direction.UP);
-	    cartPage.tapOnRemovePromoButton();
-	    swipeScreen(Direction.UP);
-	    // note down the current order total now
-	    cartPage.noteDownCurrentTotalValue();
-	}
-
-	@Then("^User sees that promotion discount is removed$")
-	public void user_sees_that_promotion_discount_is_removed() throws Throwable {
-	    // Write code here to see whether the order value is updated and promotion amount is removed
-	    cartPage.ispromoCodeAmountNotDisplayed();
-	}
-
-	@Then("^User sees the updated order total$")
-	public void user_sees_the_updated_order_total() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    cartPage.isOrderTotalValueUpdated();
-	}
-
-	@Then("^User sees that Promo code field is enabled$")
-	public void user_sees_that_Promo_code_field_is_enabled() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-		swipeScreen(Direction.UP);
-	    cartPage.isPromoCodeFieldDisplayed();
-	}
-	
-	@Then("^User sees the applied promocode below promo code field$")
-	public void user_sees_the_applied_promocode_below_promo_code_field() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    cartPage.isPromoCodeDisplayed(); // doesn't assert the position
-	    logger.warn("promo code position on screen is not validated");
-	}
-	
-	@When("^User taps on view cart button$")
-	public void user_taps_on_view_cart_button() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	   tapOnElement(Locators.PDPPage.buttonViewCart);
-	   logger.debug("Tapped on View Cart button");
-	}
->>>>>>> 40f229aa... complete OMNI-20656 execution script
 }

@@ -414,16 +414,6 @@ public class CartPage {
 
 	}
 
-	public void ispromoCodeAmountNotDisplayed() {
-		assertFalse(GlobalMobileHelper.isElementDisplayed(promoCodeDiscountAmount));
-		logger.debug("Promo code amount is not displayed on the cart screen");
-	}
-
-	public void verifyPromoCodeErrorMessage(String expectedMessage) {
-		assertEquals(expectedMessage, promoCodeErrorMessage.getText().trim());
-		logger.debug("Promo code error message " + expectedMessage + " is verified");
-	}
-
 
 	public void verifyPromoErroMessage(String expectedErrorMessage) {
 		assertEquals(promoCodeErrorMessage.getText().trim(), expectedErrorMessage);
@@ -609,9 +599,7 @@ public class CartPage {
 		assertTrue(GlobalMobileHelper.isElementDisplayed(promoCodeDiscountAmount));
 		logger.debug("Promo code amount is displayed on the cart screen");
 	}
-<<<<<<< HEAD
-}
-=======
+
 	
 	public void ispromoCodeAmountNotDisplayed() {
 		assertFalse(GlobalMobileHelper.isElementDisplayed(promoCodeDiscountAmount));
@@ -622,11 +610,4 @@ public class CartPage {
 		assertEquals(expectedMessage, promoCodeErrorMessage.getText().trim());
 		logger.debug("Promo code error message " + expectedMessage +" is verified");
 	}	
-	//OMNI-20656 - end
-
-	public void verifyPromoErroMessage(String expectedErrorMessage) {
-		assertEquals(promoCodeErrorMessage.getText().trim(), expectedErrorMessage);
-		logger.debug("Error message for promo code is verified : " + expectedErrorMessage);
-	}
 }
->>>>>>> 40f229aa... complete OMNI-20656 execution script
