@@ -19,7 +19,7 @@ public class Locators {
 		public static By emailEditBox = By.xpath("//*[contains(@value,'Email')]");
 		public static By passwordEditBox = By.xpath("//*[contains(@value,'Password')]");
 		public static By loginButton = By.xpath("//XCUIElementTypeButton[contains(@label,'LOG IN')]");
-		public static By continueAsGuestButton = By.id("guest_label_test_id");
+		public static By continueAsGuestButton = By.xpath("//*[contains(@label,'Continue as Guest')]");
 	}
 	
 	public static class HomePage{
@@ -53,6 +53,8 @@ public class Locators {
 	}
 	
 	public static class CartPage{
+		public static By qtyIncrementStepper = By.id("plus_btn_id");
+		public static By qtyDecrementStepper = By.id("minus_btn_id");
 		public static By labelYourCart = By.id("lbl_your_cart");
 		public static By labelItems = By.id("lbl_item_count");
 		public static By labelSubtotalHeader = By.id("lbl_subtotal_header");

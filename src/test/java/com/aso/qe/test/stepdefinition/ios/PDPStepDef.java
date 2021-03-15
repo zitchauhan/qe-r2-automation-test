@@ -42,6 +42,7 @@ public class PDPStepDef extends GlobalMobileHelper{
 	
 	@Then("^User sees quantity stepper$")
 	public void isQuantityStepperDisplayed() throws Throwable {
+		swipeScreen(Direction.UP);
 		assertTrue(pdp.isQuantityStepperDisplayed());
 	}
 	

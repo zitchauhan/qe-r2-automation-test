@@ -300,4 +300,9 @@ public class CartPage {
 	public void clickCartIconBottomNav() {
 		cartIconBottomNav.click();
 	}
+
+	public void tapOnProductTitle() {
+		GlobalMobileHelper.tapOnElement(Locators.CartPage.labelProductTitle);
+		
+	}
 }

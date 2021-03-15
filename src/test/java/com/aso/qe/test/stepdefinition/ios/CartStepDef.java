@@ -140,4 +140,9 @@ public class CartStepDef extends GlobalMobileHelper{
 		String itemLabelText = cartPage.getItemContLabelText();
 		assertTrue(itemLabelText.contains(arg1));
 	}
+	
+	@And("^User taps on product title") 
+	public void tapOnnProductTitile() throws Throwable{
+		cartPage.tapOnProductTitle();
+	}
 }
