@@ -41,13 +41,10 @@ public class ShopPage {
 	public void navigateToNthLinkInList(String category) throws InterruptedException{
 		Thread.sleep(5000);
 		List<MobileElement> categoriesList = (List<MobileElement>) driver.findElements(Locators.ShopPage.categoriesList);			
-		logger.info("Navigating to "+category);
-		String categoryName;
-		category=category.toLowerCase().trim();
+		System.out.println("Navigating to "+category);
 		for(int i=0;i<categoriesList.size();i++)
-		{ 	
-		    categoryName = trimCategoryName(categoriesList.get(i).getText()).trim().toLowerCase();
-		    if(categoryName.contains(category)){
+		{
+			if(categoriesList.get(i).getText().toLowerCase().contains(category.toLowerCase())){
 				GlobalMobileHelper.tapOnElement(categoriesList.get(i));
 				break;}
 				}
@@ -73,7 +70,7 @@ public class ShopPage {
 			GlobalMobileHelper.tapOnElement(driver.findElement(Locators.ShopPage.categoryBackBtn)); 
 			Thread.sleep(3000);
 		} } 	catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 			logger.error(e);
 		}	
@@ -102,7 +99,7 @@ public class ShopPage {
 			GlobalMobileHelper.tapOnElement(driver.findElement(Locators.ShopPage.categoryBackBtn)); 
 			GlobalMobileHelper.setImplicitWaitTo(driver,5);
 		} } 	catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 			logger.error(e);
 		}	
@@ -130,7 +127,7 @@ public class ShopPage {
 			GlobalMobileHelper.tapOnElement(driver.findElement(Locators.ShopPage.categoryBackBtn)); 
 		}	GlobalMobileHelper.setImplicitWaitTo(driver,3);
 		} 	catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 			logger.error(e);
 		}	
@@ -242,7 +239,7 @@ public class ShopPage {
 
 
 	public void navigateToShopAllLink() {
-		// TODO Auto-generated method stub
+		
 		assertTrue("shop all link is not present",GlobalMobileHelper.isElementDisplayed(Locators.ShopPage.shopAllLink));
 		GlobalMobileHelper.tapOnElement(Locators.ShopPage.shopAllLink);
 	}

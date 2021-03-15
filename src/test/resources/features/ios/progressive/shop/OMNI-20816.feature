@@ -1,6 +1,10 @@
 Feature: Validate User is able to shop by category
 
+<<<<<<< HEAD
   @ST-OMNI-20816 @TC-OMNI-29797 @Sprint1 
+=======
+  @TC-OMNI-20816 @Sprint1
+>>>>>>> 99cb27dd... commit for OMNI-20816
   Scenario: validate user is able to navigate to different categories
   	Given User launches the application
   	And User continues as guest user
@@ -9,12 +13,21 @@ Feature: Validate User is able to shop by category
   	Then User sees the shop page
   	And User sees the categories list is not empty
   	And User verifies the level One category list
+<<<<<<< HEAD
   	Then User navigates to "clothing" category in the list
   	Then User verifies the level two category list
   	Then User navigates to "Men's Clothing" category in the list
   	Then User verifies the level three category list
   	 	
   @ST-OMNI-20816 @TC-OMNI-29799 @Sprint1 
+=======
+  	Then User navigates to link 1 in the list
+  	Then User verifies the level two category list
+  	Then User navigates to "Boys' Clothing" category in the list
+  	Then User verifies the level three category list
+  	 	
+  @TC-OMNI-20816 @Sprint1 
+>>>>>>> 99cb27dd... commit for OMNI-20816
   Scenario: validate when user clicks on shop icon, he lands on the page where he was
    Given User launches the application
   	And User continues as guest user
@@ -22,6 +35,7 @@ Feature: Validate User is able to shop by category
   	When User taps on shop in bottom nav
   	Then User sees the shop page
   	And User sees the categories list is not empty
+<<<<<<< HEAD
   	Then User navigates to "Clothing" category in the list
   	Then verify user is on "Clothing" page
   	Then User navigates to "Men's Clothing" category in the list
@@ -29,10 +43,17 @@ Feature: Validate User is able to shop by category
   	And User taps on home in bottom nav
   	Then User taps on shop in bottom nav
   	Then verify user is on "Men's Clothing" page	
+=======
+  	Then User navigates to "clothing" category in the list
+  	Then User navigates to "Boy's Clothing" category in the list
+  	And User taps on home in bottom nav
+  	Then verify user is on "Boy's Clothing" page	
+>>>>>>> 99cb27dd... commit for OMNI-20816
   	And User taps on home in bottom nav
   	When User taps on shop in bottom nav
   	Then User sees the shop page
   	
+<<<<<<< HEAD
   	@ST-OMNI-20816 @TC-OMNI-29800 @Sprint1 
   	Scenario: validate user is able to navigate to PLP by tapping on shop all link
   	Given User launches the application
@@ -44,3 +65,5 @@ Feature: Validate User is able to shop by category
   	And User taps on shop all link
   	Then User sees "clothing" PLP page
   	
+=======
+>>>>>>> 99cb27dd... commit for OMNI-20816

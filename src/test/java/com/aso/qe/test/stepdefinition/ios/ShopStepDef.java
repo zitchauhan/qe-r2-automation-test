@@ -1,8 +1,5 @@
 package com.aso.qe.test.stepdefinition.ios;
 import static org.junit.Assert.assertTrue;
-
-import org.codehaus.plexus.logging.Logger;
-
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.Context;
