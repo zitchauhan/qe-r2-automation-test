@@ -546,5 +546,71 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here to verify longer product disclaimer
 	    cartPage.verifyLongerProductDisclaimer(productDisclaimer);
 	}
+	
+	@When("^User select home delivery option$")
+	public void user_select_home_delivery_option() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("^User taps on Change zip code$")
+	public void user_taps_on_Change_zip_code() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^User sees change zip code field$")
+	public void user_sees_change_zip_code_field() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^User sees change zip code submit button$")
+	public void user_sees_change_zip_code_submit_button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("^User notes down estimated shipping charges$")
+	public void user_notes_down_estimated_shipping_charges() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("^User notes down order total before changing zip code$")
+	public void user_notes_down_order_total_before_changing_zip_code() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("^User enters zip code \"([^\"]*)\"$")
+	public void user_enters_zip_code(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^User sees zip code in the order summary$")
+	public void user_sees_zip_code_in_the_order_summary() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^User sees estimated shipping charges for zip code$")
+	public void user_sees_estimated_shipping_charges_for_zip_code() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^User sees updated order total after changing the zip code$")
+	public void user_sees_updated_order_total_after_changing_the_zip_code() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^User sees zip code buying restriction message \"([^\"]*)\"$")
+	public void user_sees_zip_code_buying_restriction_message(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
 
 }
