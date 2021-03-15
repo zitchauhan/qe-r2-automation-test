@@ -139,8 +139,8 @@ public class PDPPage {
 		Assert.assertEquals(false, homeDeliveryRadio.isSelected());
 	}
 	
-	public void verifyProductAttribute(String productAttributeName) {
-		
+	public void verifyProductAttribute(String productAttributeName) throws InterruptedException {
+		Thread.sleep(7000);
 		switch(productAttributeName.toLowerCase())
 		{
 		case "image":

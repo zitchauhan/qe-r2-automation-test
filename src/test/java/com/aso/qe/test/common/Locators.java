@@ -42,6 +42,11 @@ public class Locators {
 	
 	public static class ShopPage{
 		public static By shopPageTitle = By.id("lbl_shop");
+		public static By categoryTitle = By.id("lbl_category_title");
+		public static By categoriesList = By.id("lbl_category_list_item");
+		public static By categoryBackBtn = By.id("header-back");
+		public static By categorytitle = By.id("lbl_category_title");
+		public static By shopAllLink = By.id("btn_shop_all");
 	}
 	
 	public static class WishlistPage{
