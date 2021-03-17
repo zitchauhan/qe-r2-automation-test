@@ -154,5 +154,8 @@ public class Locators {
 		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 	}
-
+	
+	public static class PLPPage{
+		public static By PLPHeader = By.id("lbl_product_listing_header_title");
+	}
 }

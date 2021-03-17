@@ -32,7 +32,7 @@ public class ShopPage {
 	
 	public void isCategoriesDisplayed() throws InterruptedException {
 		//driver.findElementsByAccessibilityId("lbl_category_list_item");
-		GlobalMobileHelper.setImplicitWaitTo(driver,5);
+		Thread.sleep(5000);
 		List<MobileElement> categoriesList = (List<MobileElement>) driver.findElements(Locators.ShopPage.categoriesList);
 		assertTrue("categories are not present !", categoriesList.size()>0);
 		}
@@ -41,7 +41,7 @@ public class ShopPage {
 	public void navigateToNthLinkInList(String category) throws InterruptedException{
 		Thread.sleep(5000);
 		List<MobileElement> categoriesList = (List<MobileElement>) driver.findElements(Locators.ShopPage.categoriesList);			
-		System.out.println("Navigating to "+category);
+		logger.info("Navigating to "+category);
 		for(int i=0;i<categoriesList.size();i++)
 		{
 			if(categoriesList.get(i).getText().toLowerCase().contains(category.toLowerCase())){
@@ -59,6 +59,7 @@ public class ShopPage {
 		for (int i=0;i<categoriesList.size();i++) {			
 			MobileElement element = categoriesList.get(i);
 			String elementName = element.getText();
+			logger.info("Level 1 categories list");
 			logger.info(" category--> "+elementName);
 			Thread.sleep(8000);
 			GlobalMobileHelper.tapOnElement(element);
@@ -76,10 +77,9 @@ public class ShopPage {
 		}	
 		
 	}
-	
 	public void verifyL2CategoryLevel(){
 		try{ 
-			GlobalMobileHelper.setImplicitWaitTo(driver,5);
+			Thread.sleep(5000);
 		List<MobileElement> categoriesList = (List<MobileElement>) driver.findElements(Locators.ShopPage.categoriesList);
 		assertTrue("L2 categories are not present !", categoriesList.size()>0);
 		String categorytitle= driver.findElement(Locators.ShopPage.categorytitle).getText();
@@ -88,8 +88,9 @@ public class ShopPage {
 		for (int i=0;i<categoriesList.size();i++) {		
 			MobileElement element = categoriesList.get(i);
 			String elementName = element.getText();
+			logger.info("Level 2 categories list");
 			logger.info(" category--> "+elementName);
-			GlobalMobileHelper.setImplicitWaitTo(driver,8);
+			Thread.sleep(8000);
 			GlobalMobileHelper.tapOnElement(element);
 			GlobalMobileHelper.setImplicitWaitTo(driver,5);
 			isCategoriesDisplayed();
@@ -97,9 +98,9 @@ public class ShopPage {
 			assertTrue("User is not landed on correct category page",elementName.contains(categorytitle));
 			logger.info("going back");
 			GlobalMobileHelper.tapOnElement(driver.findElement(Locators.ShopPage.categoryBackBtn)); 
-			GlobalMobileHelper.setImplicitWaitTo(driver,5);
+			Thread.sleep(3000);
 		} } 	catch (InterruptedException e) {
-			
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 			logger.error(e);
 		}	
@@ -108,7 +109,7 @@ public class ShopPage {
 	
 	public void verifyL3CategoryLevel(){
 		try {
-			GlobalMobileHelper.setImplicitWaitTo(driver,5);
+			Thread.sleep(5000);
 		List<MobileElement> categoriesList = (List<MobileElement>) driver.findElements(Locators.ShopPage.categoriesList);
 		assertTrue("L3 categories are not present !", categoriesList.size()>0);
 		String categorytitle= driver.findElement(Locators.ShopPage.categorytitle).getText();
@@ -117,17 +118,17 @@ public class ShopPage {
 		for (int i=0;i<categoriesList.size();i++) {		
 			MobileElement element = categoriesList.get(i);
 			String elementName = element.getText();
+			logger.info("Level 3 categories list");
 			logger.info(" category--> "+elementName);
-			GlobalMobileHelper.setImplicitWaitTo(driver,8);
+			Thread.sleep(8000);
 			GlobalMobileHelper.tapOnElement(element);
-			GlobalMobileHelper.setImplicitWaitTo(driver,5);
-			plpPage.verifyPLPPageName(driver,trimCategoryName(elementName));
-		//	plpPage.verifyShopCategoryDisplayedonPLP("not displaying");
+			Thread.sleep(5000);
+			//verify PLP page is displayed, need to write the code as currently plp page is not available
 			logger.info("going back");
 			GlobalMobileHelper.tapOnElement(driver.findElement(Locators.ShopPage.categoryBackBtn)); 
-		}	GlobalMobileHelper.setImplicitWaitTo(driver,3);
-		} 	catch (Exception e) {
-			
+		}	Thread.sleep(3000);
+		} 	catch (InterruptedException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 			logger.error(e);
 		}	
@@ -140,7 +141,7 @@ public class ShopPage {
 		for(int i=0;i<categoriesList.size();i++)
 		{
 			String categoryPageTitle  = driver.findElement(Locators.ShopPage.categorytitle).getText();
-			assertTrue("user should be on "+category +" page but user is on '"+ categoryPageTitle+"' category page",categoryPageTitle.toLowerCase().contains(category.toLowerCase()));
+			assertTrue("user should be on "+category +"page but user is on '"+ categoryPageTitle+"' category page",categoryPageTitle.toLowerCase().contains(category.toLowerCase()));
 				}
 		}
 	public void navigateToNthLinkInList(int n) throws InterruptedException{

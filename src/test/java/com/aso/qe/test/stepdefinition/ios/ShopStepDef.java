@@ -31,11 +31,13 @@ public class ShopStepDef extends GlobalMobileHelper{
 	    // Write code here that turns the phrase above into concrete actions
 		shopPage.verifyL1CategoryLevel();
 	}
+	
 	@Then("^User verifies the level two category list$")
 	public void user_navigates_to_the_level_two_category_list() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		shopPage.verifyL2CategoryLevel();
 	}
+
 	@Then("^User verifies the level three category list$")
 	public void user_navigates_to_the_level_three_category_list() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -59,16 +61,19 @@ public class ShopStepDef extends GlobalMobileHelper{
 		Thread.sleep(4000);
 		shopPage.navigateToShopAllLink();
 	}
+
 	@Then("^User fetch the sub category name list$")
 	public void user_fetch_the_category_name_list() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    Context.setShopBySubCategoryList(shopPage.getCategoryList());
 	}
+
 	@Then("^User verifies all categories and navigates to each PLP from Shop By Category$")
 	public void user_verifies_all_categories_and_navigates_to_each_PLP_from_Shop_By_Category() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    shopPage.verifyAllCategoriesAndPLP();
 	}
+	
 	@Then("^User fetch the \"([^\"]*)\" list$")
 	public void user_fetch_the_list(String categoryLevel) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -80,6 +85,7 @@ public class ShopStepDef extends GlobalMobileHelper{
 	    	shopPage.L3CategoryList();
 	    } 
 	}
+
 	@Then("^User taps on back button$")
 	public void user_taps_on_back_button() throws InterruptedException {
 		shopPage.tapOnBackbtn(driver);
