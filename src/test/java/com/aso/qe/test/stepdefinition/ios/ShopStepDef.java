@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.ios;
 import static org.junit.Assert.assertTrue;
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.ShopPage;
 import cucumber.api.java.en.Then;
 
@@ -50,5 +51,17 @@ public class ShopStepDef extends GlobalMobileHelper{
 	public void user_navigates_to_link_in_the_list(int linkNumber) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    shopPage.navigateToNthLinkInList(linkNumber);
+	}
+	
+	@Then("^User taps on shop all link$")
+	public void user_taps_on_shop_all_link() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		assertTrue("shop all link is not present",GlobalMobileHelper.isElementDisplayed(Locators.ShopPage.shopAllLink));
+		GlobalMobileHelper.tapOnElement(Locators.ShopPage.shopAllLink);
+	}
+	@Then("^User fetch the sub category name list$")
+	public void user_fetch_the_category_name_list() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    shopPage.getCategoryList();
 	}
 }

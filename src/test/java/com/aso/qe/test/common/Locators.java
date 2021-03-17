@@ -44,7 +44,7 @@ public class Locators {
 		public static By shopPageTitle = By.id("lbl_shop");
 		public static By categoryTitle = By.id("lbl_category_title");
 		public static By categoriesList = By.id("lbl_category_list_item");
-		public static By categoryBackBtn = By.id("header-back");
+		public static By categoryBackBtn = By.id("btn_back");
 		public static By categorytitle = By.id("lbl_category_title");
 		public static By shopAllLink = By.id("btn_shop_all");
 	}
@@ -84,5 +84,9 @@ public class Locators {
 		public static By labelEmptyCartInfo = By.id("lbl_user_specific_message");
 		public static By buttonLogIn = By.id("btn_login");
 		public static By buttonCreateAnAccount = By.id("btn_create_an_account");
+	}
+	
+	public static class PLPPage{
+		public static By PLPHeader = By.id("lbl_product_listing_header_title");
 	}
 }
