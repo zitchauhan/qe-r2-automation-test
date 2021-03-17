@@ -1,3 +1,4 @@
+@TC-OMNI-20627
 Feature: Verify that user can change zip code from order summary screen
 
   Scenario: Verify that the user can see required fiels for changing the zip code
