@@ -1,7 +1,10 @@
 package com.aso.qe.test.stepdefinition.ios;
 
 import static org.junit.Assert.assertEquals;
+<<<<<<< HEAD
 import static org.junit.Assert.assertFalse;
+=======
+>>>>>>> 3748f468... complete OMNI-20627 - pending for locators for restricted zip codes
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 <<<<<<< HEAD
@@ -41,6 +44,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	private int previousQuantity = 1;
 	private String productDisclaimer;
+	private int shippingChargesToZipCode;
 	
 	@Then("^User is navigated To Cart Screen$")
 	public void userIsOnCart() throws InterruptedException {
@@ -547,68 +551,76 @@ public class CartStepDef extends GlobalMobileHelper{
 	    cartPage.verifyLongerProductDisclaimer(productDisclaimer);
 	}
 	
-	@When("^User select home delivery option$")
+	@When("^User selects home delivery option$")
 	public void user_select_home_delivery_option() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    pdpPage.selectDeliveryOption("home");
 	}
 
 	@When("^User taps on Change zip code$")
 	public void user_taps_on_Change_zip_code() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+		swipeScreen(Direction.UP);
+		tapOnElement(Locators.CartPage.zipCodeButton);
+		logger.debug("opened changed zip code modal");
 	}
 
 	@Then("^User sees change zip code field$")
 	public void user_sees_change_zip_code_field() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+		assertTrue(isElementDisplayed(Locators.CartPage.textChangeZipCode));
+	    logger.debug("change zip code field is displayed");
 	}
 
 	@Then("^User sees change zip code submit button$")
 	public void user_sees_change_zip_code_submit_button() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    assertTrue(isElementDisplayed(Locators.CartPage.buttonSubmit));
+	    logger.debug("submit button on change zip code is displayed");
 	}
 
 	@When("^User notes down estimated shipping charges$")
 	public void user_notes_down_estimated_shipping_charges() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    cartPage.noteDownCurrentShippingCharges();
 	}
 
 	@When("^User notes down order total before changing zip code$")
 	public void user_notes_down_order_total_before_changing_zip_code() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    cartPage.noteDownCurrentTotalValue();
 	}
 
 	@When("^User enters zip code \"([^\"]*)\"$")
-	public void user_enters_zip_code(String arg1) throws Throwable {
+	public void user_enters_zip_code(String zipCode) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    setText(Locators.CartPage.textChangeZipCode, zipCode);
+	    GlobalMobileHelper.tapOnElement(Locators.CartPage.lableChangeZipCodeModal);
+	    GlobalMobileHelper.tapOnElement(Locators.CartPage.buttonSubmit);
+	    logger.debug("entered the zip code " + zipCode);
 	}
 
 	@Then("^User sees zip code in the order summary$")
 	public void user_sees_zip_code_in_the_order_summary() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    isElementDisplayed(Locators.CartPage.labelEstimatedShipping);
+	    logger.debug("Label for estimated shipping to zip code is displayed");
 	}
 
 	@Then("^User sees estimated shipping charges for zip code$")
 	public void user_sees_estimated_shipping_charges_for_zip_code() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    assertNotEquals(productDisclaimer, shippingChargesToZipCode, previousQuantity);
 	}
 
 	@Then("^User sees updated order total after changing the zip code$")
 	public void user_sees_updated_order_total_after_changing_the_zip_code() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    cartPage.isOrderTotalValueUpdated("shipping");
 	}
 
 	@Then("^User sees zip code buying restriction message \"([^\"]*)\"$")
-	public void user_sees_zip_code_buying_restriction_message(String arg1) throws Throwable {
+	public void user_sees_zip_code_buying_restriction_message(String restriction_message) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}

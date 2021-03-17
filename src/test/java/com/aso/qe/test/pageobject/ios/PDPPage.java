@@ -5,8 +5,10 @@ import org.testng.Assert;
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
+import java.lang.UnsupportedOperationException;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
@@ -14,6 +16,7 @@ import com.aso.qe.test.stepdefinition.ios.Hooks;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class PDPPage {
@@ -22,6 +25,7 @@ public class PDPPage {
 	
 	public PDPPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
+	  PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	Context context = new Context();
 	

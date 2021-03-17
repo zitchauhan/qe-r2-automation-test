@@ -1,4 +1,3 @@
-@TC-OMNI-20627
 Feature: Verify that user can change zip code from order summary screen
 
   Scenario: Verify that the user can see required fiels for changing the zip code
@@ -6,7 +5,7 @@ Feature: Verify that user can change zip code from order summary screen
     And User continues as guest user
     When User navigates to pdp
     And User sees Product title
-    And User select home delivery option
+    And User selects home delivery option
     And User taps on add to cart button
     And User taps on view cart button
     Then User is navigated To Cart Screen
@@ -14,12 +13,13 @@ Feature: Verify that user can change zip code from order summary screen
     Then User sees change zip code field
     And User sees change zip code submit button
   
+  @TC-OMNI-20627
   Scenario: Verify that the user can see required fiels for changing the zip code
     Given User launches the application
     And User continues as guest user
     When User navigates to pdp
     And User sees Product title
-    And User select home delivery option
+    And User selects home delivery option
     And User taps on add to cart button
     And User taps on view cart button
     Then User is navigated To Cart Screen
@@ -37,7 +37,7 @@ Feature: Verify that user can change zip code from order summary screen
     And User continues as guest user
     When User navigates to pdp
     And User sees Product title
-    And User select home delivery option
+    And User selects home delivery option
     And User taps on add to cart button
     And User taps on view cart button
     Then User is navigated To Cart Screen
