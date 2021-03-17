@@ -1,3 +1,4 @@
+@TC-OMNI-20627
 Feature: Verify that user can change zip code from order summary screen
 
   Scenario: Verify that the user can see required fiels for changing the zip code
@@ -13,7 +14,7 @@ Feature: Verify that user can change zip code from order summary screen
     Then User sees change zip code field
     And User sees change zip code submit button
   
-  @TC-OMNI-20627
+  
   Scenario: Verify that the user can see required fiels for changing the zip code
     Given User launches the application
     And User continues as guest user
@@ -50,4 +51,4 @@ Feature: Verify that user can change zip code from order summary screen
     
     Examples:
     | zip_code | zip_restriction_message |
-    | 12345	   | Zip restriction message |
+    | 96501	   |  change of zipcode is unsuccessful|

@@ -622,6 +622,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees zip code buying restriction message \"([^\"]*)\"$")
 	public void user_sees_zip_code_buying_restriction_message(String restriction_message) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		// pending for locator for label of error messages
 	    throw new PendingException();
 	}
 
