@@ -1,6 +1,6 @@
 Feature: Validate User is able view product list by category
 
-  @TC-OMNI-24745 @Sprint2
+  @ST-OMNI-24745 @Sprint2
   Scenario: validate user is able to navigate to different categories
   	Given User launches the application
   	And User continues as guest user
