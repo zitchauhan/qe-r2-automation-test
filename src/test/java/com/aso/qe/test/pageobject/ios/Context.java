@@ -5,7 +5,7 @@ import java.util.List;
 public class Context {
 private String ProductPriceOnPDP;
 private List<String> subCategoryNameList;
-private String categoryTitle;
+private String categoryTitleOnPLP;
 
 public String getProductPriceOnPDP() {
 	return ProductPriceOnPDP;
@@ -23,12 +23,12 @@ public void setSubCategoryNameList(List<String> subCategoryNameList) {
 	this.subCategoryNameList = subCategoryNameList;
 }
 
-public String getCategoryTitle() {
-	return categoryTitle;
+public String getCategoryTitleOnPLP() {
+	return categoryTitleOnPLP;
 }
 
-public void setCategoryTitle(String categoryTitle) {
-	this.categoryTitle = categoryTitle;
+public void setCategoryTitleOnPLP(String categoryTitleOnPLP) {
+	this.categoryTitleOnPLP = categoryTitleOnPLP;
 }
 
 
