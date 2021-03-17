@@ -2,6 +2,7 @@ package com.aso.qe.test.common;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -25,7 +26,7 @@ public class GlobalMobileHelper {
 	
 	public void initializeDriver() throws MalformedURLException {
 		String platform = propHelper.getConfigPropProperty("i.platform");
-//		String udid = propHelper.getConfigPropProperty("i.udid");
+		//String udid = propHelper.getConfigPropProperty("i.udid");
 		String platformVersion = propHelper.getConfigPropProperty("i.platformVersion");
 		String deviceName = propHelper.getConfigPropProperty("i.deviceName");
 		String url = propHelper.getConfigPropProperty("appiumServerURL");
@@ -33,7 +34,7 @@ public class GlobalMobileHelper {
 		
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME,platform);
-//		caps.setCapability(MobileCapabilityType.UDID,udid);
+		//caps.setCapability(MobileCapabilityType.UDID,udid);
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,platformVersion);
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
 		caps.setCapability(MobileCapabilityType.APP, app);
@@ -84,8 +85,14 @@ public class GlobalMobileHelper {
 		if(driver == null) {
 			throw new IllegalStateException("Driver is not initialized");
 		}
+		try {
 		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
-		return wait.until(ExpectedConditions.presenceOfElementLocated(locator)).isDisplayed();
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator)).isDisplayed();
+		return true;
+		} catch (Exception e) {
+		    System.err.println(e.getMessage());
+		    return false;
+		}
 	}
 	
 	public static void setText(By locator,String text) {
@@ -101,4 +108,9 @@ public class GlobalMobileHelper {
 		setText(locator,text);
 		tapOnElement(tapLocatorToHideKeyboard);
 	}
+	
+	 public static void setImplicitWaitTo(AppiumDriver<MobileElement> driver, int seconds) {
+			driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
+		    }
+	 
 }
