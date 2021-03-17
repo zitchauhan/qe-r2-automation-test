@@ -14,4 +14,17 @@ public class PLPStefDef extends GlobalMobileHelper{
 	    // Write code here that turns the phrase above into concrete actions
 		plpPage.verifyPLPPageName(categoryName);
 	}
+	
+@Then("^User sees Shop By Category title on PLP$")
+public void user_sees_Shop_By_Category_title_on_PLP() throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    plpPage.verifyShopByCategorylabel();
+}
+
+@Then("^User verifies the Shop page categories are \"([^\"]*)\" on PLP page$")
+public void user_verifies_the_Shop_page_categories_are_displaying_on_PLP_page(String displayStatus) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    plpPage.compareCategoriesOnShopAndPLP(displayStatus);
+}
+
 }

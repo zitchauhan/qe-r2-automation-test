@@ -1,6 +1,6 @@
 Feature: Validate User is able view product list by category
 
-  @TC-OMNI-24745 @Sprint1 
+  @TC-OMNI-24745 @Sprint2
   Scenario: validate user is able to navigate to different categories
   	Given User launches the application
   	And User continues as guest user
@@ -12,3 +12,5 @@ Feature: Validate User is able view product list by category
   	Then User fetch the sub category name list
   	And User taps on shop all link
   	Then User sees "clothing" PLP page
+  	Then User sees Shop By Category title on PLP
+  	Then User verifies the Shop page categories are "displaying" on PLP page
