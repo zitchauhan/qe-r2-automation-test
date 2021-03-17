@@ -446,6 +446,7 @@ public class CartStepDef extends GlobalMobileHelper{
 		// apply the promo code
 		swipeScreen(Direction.UP);
 		cartPage.applyPromoCode(promoCode);
+		swipeScreen(Direction.UP);
 	}
 
 	@Then("^User sees the promo code \"([^\"]*)\"$")
@@ -483,6 +484,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	@When("^User taps the remove promo code button$")
 	public void user_taps_of_remove_promo_code_button() throws Throwable {
 	    // Write code here to tap on the remove promo code button
+		swipeScreen(Direction.UP);
 	    cartPage.tapOnRemovePromoButton();
 	    swipeScreen(Direction.UP);
 	    // note down the current order total now
