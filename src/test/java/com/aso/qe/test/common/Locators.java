@@ -157,5 +157,7 @@ public class Locators {
 	
 	public static class PLPPage{
 		public static By PLPHeader = By.id("lbl_product_listing_header_title");
+		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
+		public static By subCategoryButton = By.id("btn_category");
 	}
 }
