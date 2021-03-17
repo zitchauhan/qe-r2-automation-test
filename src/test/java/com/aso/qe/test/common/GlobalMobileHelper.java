@@ -34,7 +34,7 @@ public class GlobalMobileHelper {
 	
 	public void initializeDriver() throws MalformedURLException {
 		String platform = propHelper.getConfigPropProperty("i.platform");
-		String udid = propHelper.getConfigPropProperty("i.udid");
+		//String udid = propHelper.getConfigPropProperty("i.udid");
 		String platformVersion = propHelper.getConfigPropProperty("i.platformVersion");
 		String deviceName = propHelper.getConfigPropProperty("i.deviceName");
 		String url = propHelper.getConfigPropProperty("appiumServerURL");
@@ -42,7 +42,7 @@ public class GlobalMobileHelper {
 		
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME,platform);
-		caps.setCapability(MobileCapabilityType.UDID,udid);
+		//caps.setCapability(MobileCapabilityType.UDID,udid);
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,platformVersion);
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
 		caps.setCapability(MobileCapabilityType.APP, app);
@@ -143,6 +143,7 @@ public class GlobalMobileHelper {
 	public static void setImplicitWaitTo(AppiumDriver<MobileElement> driver, int seconds) {
 			driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
 		    }
+			
 	public static void searchByKeyword(String keyword) {
 	 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
 		 		MobileElement searchBar= driver.findElement(By.id("search_bar"));
