@@ -27,6 +27,8 @@ public class CartPage {
 	protected float currentTaxValue;
 	protected float currentTotalValue;
 	
+	protected float shippingChargesToZipCode;
+	
 	private AppiumDriver<MobileElement> driver;
 	public CartPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
@@ -427,6 +429,24 @@ public class CartPage {
 			logger.error(e.getLocalizedMessage());
 		}
 	}
+	
+	public void isOrderTotalValueUpdated(String reason) {
+		MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
+		String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
+		try {
+			if (reason.toLowerCase().equals("shipping")) { // can be updated for other reasons later
+				if (shippingChargesToZipCode > 0) {
+					assertNotEquals(currentTotalValue, Float.parseFloat(orderTotalValue),0.00);
+				}else {
+					assertEquals(currentTotalValue, Float.parseFloat(orderTotalValue),0.00);
+				}
+			}
+			
+			logger.debug("Order total value has been updated : "+ orderTotalValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+	}
 	//OMNI-20609 - end
 
 	//OMNI-20656 - start
@@ -511,4 +531,60 @@ public class CartPage {
 		logger.debug("Product disclaimer Read more and ellipsees are displayed on the Cart screen");
 	}
 	//OMNI-20846 - end
+	
+	//OMNI-20627
+	public void noteDownCurrentShippingCharges() {
+		MobileElement estimatedShipping = driver.findElement(Locators.CartPage.labelEstimatedShipping);
+		try {
+				String estimatedShippingCharges = estimatedShipping.getText()
+						.split("-")[1].trim()
+						.split(" ")[0];
+				if (estimatedShippingCharges.trim().equals("Free")) {
+					shippingChargesToZipCode=0.00F;
+				} else {
+					shippingChargesToZipCode = Float.parseFloat(estimatedShippingCharges);
+				}
+			}catch(Exception e) {
+			
+				e.getLocalizedMessage();
+		}
+		
+	}
+	
+	
+	public void isShippingChargeUpdated(boolean NotFree) {
+		// NotFree to be passed as False if shipping charges for a zip code is NIL
+		MobileElement estimatedShipping = driver.findElement(Locators.CartPage.labelEstimatedShipping);
+		try {
+				String estimatedShippingCharges = estimatedShipping.getText()
+						.split("-")[1].trim().split(" ")[0].replace("$", "");
+				if(NotFree) {
+					assertNotEquals(
+							shippingChargesToZipCode, 
+							Float.parseFloat(estimatedShippingCharges), 
+							0.00);
+				}else {
+					assertEquals("Free",estimatedShippingCharges );
+				}
+				
+			}catch(Exception e) {
+			
+				e.getLocalizedMessage();
+		}
+	}
+	
+	
+	//OMNI-20627
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
