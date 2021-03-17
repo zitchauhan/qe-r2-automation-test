@@ -491,4 +491,5 @@ public class CartStepDef extends GlobalMobileHelper{
 		swipeScreen(Direction.UP);
 	    cartPage.isPromoCodeFieldDisplayed();
 	}
+
 }
