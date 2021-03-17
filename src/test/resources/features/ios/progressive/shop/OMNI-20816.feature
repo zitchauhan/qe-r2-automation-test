@@ -1,6 +1,6 @@
 Feature: Validate User is able to shop by category
 
-  @TC-OMNI-20816 @Sprint1
+  @TC-OMNI-20816 @Sprint1 
   Scenario: validate user is able to navigate to different categories
   	Given User launches the application
   	And User continues as guest user
@@ -25,6 +25,7 @@ Feature: Validate User is able to shop by category
   	Then User navigates to "clothing" category in the list
   	Then User navigates to "Boy's Clothing" category in the list
   	And User taps on home in bottom nav
+  	Then User taps on shop in bottom nav
   	Then verify user is on "Boy's Clothing" page	
   	And User taps on home in bottom nav
   	When User taps on shop in bottom nav
