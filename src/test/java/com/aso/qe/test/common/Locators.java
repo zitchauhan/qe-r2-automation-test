@@ -140,6 +140,11 @@ public class Locators {
 		public static By productDisclaimerLabel = By.id("disclaimer_messages_label"); // Can be _0 for one product
 		public static By productDisclaimerReadMore = By.xpath("//*[contains(@label, 'Read More')]");
 		
+		public static By textChangeZipCode = By.id("lbl_change_zipcode_input");
+		public static By buttonSubmit = By.xpath("//*[contains(@label, 'SUBMIT')]");
+		public static By labelEstimatedShipping = By.xpath("//*[contains(@label, 'Estimated Shipping to')]");
+		public static By lableChangeZipCodeModal = By.id("lbl_change_zipcode_text");
+		
 		
 	}
 	

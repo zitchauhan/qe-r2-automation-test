@@ -1,12 +1,18 @@
 package com.aso.qe.test.stepdefinition.ios;
 
 import static org.junit.Assert.assertEquals;
+<<<<<<< HEAD
 import static org.junit.Assert.assertFalse;
+<<<<<<< HEAD
 
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertFalse;
+=======
+=======
+>>>>>>> 3748f468... complete OMNI-20627 - pending for locators for restricted zip codes
+>>>>>>> 0643872c... complete OMNI-20627 - pending for locators for restricted zip codes
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 import java.util.List;
@@ -38,9 +44,13 @@ public class CartStepDef extends GlobalMobileHelper{
 	private int previousQuantity = 1;
 	private String productDisclaimer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	private int shippingChargesToZipCode;
 =======
 >>>>>>> 31d53537... complete initial design of OMNI-20846
+=======
+	private int shippingChargesToZipCode;
+>>>>>>> 0643872c... complete OMNI-20627 - pending for locators for restricted zip codes
 	
 	@Then("^User is navigated To Cart Screen$")
 	public void userIsOnCart() throws InterruptedException {
