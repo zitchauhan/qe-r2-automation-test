@@ -5,4 +5,4 @@ Feature: Verify image and video container is displayed in pdp
   Given User launches the application
   And User Logs into the application
   When User navigates to pdp
-  Then User sees product "image" on PDP
+  Then User sees product image

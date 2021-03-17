@@ -3,9 +3,9 @@ package com.aso.qe.test.pageobject.ios;
 import java.util.List;
 
 public class Context {
-private String ProductPriceOnPDP;
-private List<String> subCategoryNameList;
-private String categoryTitleOnPLP;
+private static  String ProductPriceOnPDP;
+private static List<String> subCategoryNameList;
+private static String categoryTitleOnPLP;
 
 public String getProductPriceOnPDP() {
 	return ProductPriceOnPDP;
@@ -30,6 +30,5 @@ public String getCategoryTitleOnPLP() {
 public void setCategoryTitleOnPLP(String categoryTitleOnPLP) {
 	this.categoryTitleOnPLP = categoryTitleOnPLP;
 }
-
 
 }

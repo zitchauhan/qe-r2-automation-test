@@ -23,15 +23,16 @@ public class PLPPage {
 	  this.driver = driver;
 	}
 	
-		public void verifyPLPPageName(String categoryName) throws InterruptedException{
+	public void verifyPLPPageName(String categoryName) throws InterruptedException{
 		GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.PLPHeader);
 		String plpTitle = driver.findElement(Locators.PLPPage.PLPHeader).getText();
 		context.setCategoryTitleOnPLP(plpTitle);
 		assertTrue("User should be on "+categoryName+"PLP page but user is on "+plpTitle+ "page",categoryName.equalsIgnoreCase(plpTitle));
 	}
+		
 	public void verifyShopByCategorylabel() {
-		assertTrue("Shop by category title is not present",GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.shopByCategoryLabel));
-	}
+		assertTrue("Shop by category title is not present",GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.shopByCategoryLabel));	
+		}
 	
 	public void compareCategoriesOnShopAndPLP(String displayStatus) {
 		GlobalMobileHelper.setImplicitWaitTo(driver,5);
@@ -44,7 +45,7 @@ public class PLPPage {
 			assertTrue("Categories are not present on "+context.getCategoryTitleOnPLP()+" PLP Page", shopByCategoriesList.size()>0);
 		for (int i=0;i<shopByCategoriesList.size();i++) {
 			assertTrue("Category on shop page: "+context.getSubCategoryNameList().get(i)+ " and Category on  PLP page: "+shopByCategoriesList.get(i).getText(),
-					shopByCategoriesList.get(i).getText().equalsIgnoreCase(context.getSubCategoryNameList().get(i)));	
+					shopByCategoriesList.get(i).getText().equalsIgnoreCase(context.getSubCategoryNameList().get(i)));			
 		}
 		}}
 }

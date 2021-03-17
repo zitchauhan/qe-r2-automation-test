@@ -6,7 +6,7 @@ Feature: Verify Details of PDP for product without any variants
   	#And User Logs into the application
   	And User continues as guest user
   	When User navigates to pdp
-    Then User sees product "image" on PDP
-    Then User sees product "title" on PDP
-    Then User sees product "price" on PDP
+    Then User sees product image
+    And User sees Product title
+    And User sees Product Price
 
