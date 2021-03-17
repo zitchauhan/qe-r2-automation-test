@@ -596,13 +596,15 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here that turns the phrase above into concrete actions
 	    setText(Locators.CartPage.textChangeZipCode, zipCode);
 	    GlobalMobileHelper.tapOnElement(Locators.CartPage.lableChangeZipCodeModal);
-	    GlobalMobileHelper.tapOnElement(Locators.CartPage.buttonSubmit);
+	    GlobalMobileHelper.tapOnElement(Locators.CartPage.buttonSubmit, 20);
 	    logger.debug("entered the zip code " + zipCode);
+	    GlobalMobileHelper.tapOnElement(Locators.CartPage.buttonSubmit);
 	}
 
 	@Then("^User sees zip code in the order summary$")
 	public void user_sees_zip_code_in_the_order_summary() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		tapOnElement(Locators.CartPage.labelEstimatedShipping, 10);
 	    isElementDisplayed(Locators.CartPage.labelEstimatedShipping);
 	    logger.debug("Label for estimated shipping to zip code is displayed");
 	}
