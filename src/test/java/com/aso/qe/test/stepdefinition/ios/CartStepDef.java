@@ -1,17 +1,13 @@
 package com.aso.qe.test.stepdefinition.ios;
 
 import static org.junit.Assert.assertEquals;
-<<<<<<< HEAD
 import static org.junit.Assert.assertFalse;
 
 import static org.junit.Assert.assertNotEquals;
-=======
-<<<<<<< HEAD
-=======
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
->>>>>>> 8ae18034... complete script creation and execution of OMNI-26631
->>>>>>> fdc7ed85... complete script creation and execution of OMNI-26631
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 import java.util.List;
 import org.apache.log4j.Logger;
@@ -335,7 +331,6 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees the product disclaimer \"([^\"]*)\"$")
 	public void user_sees_the_product_disclaimer(String disclaimer) throws Throwable {
 	    // Write code here for verifying the product disclaimer
-		productDisclaimer = disclaimer;
 	    cartPage.verifyProductDisclaimer(disclaimer);
 	}
 

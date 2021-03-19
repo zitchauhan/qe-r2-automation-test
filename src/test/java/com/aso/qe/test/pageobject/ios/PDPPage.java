@@ -12,6 +12,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
 
+import org.apache.log4j.Logger;
+import org.testng.Assert;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.stepdefinition.ios.Hooks;
@@ -223,8 +225,12 @@ public class PDPPage {
 	public void selectDeliveryOption(String optionName) throws UnsupportedOperationException {
 =======
 	
+<<<<<<< HEAD
 	public void selectDeliveryOption(String optionName) throws OperationNotSupportedException {
 >>>>>>> fdc7ed85... complete script creation and execution of OMNI-26631
+=======
+	public void selectDeliveryOption(String optionName) throws UnsupportedOperationException {
+>>>>>>> b4bf789b... merging all stories
 		// optionName can be home/store
 		if (optionName.toLowerCase().equals("home")) {
 			homeDeliveryRadio.click();
@@ -234,10 +240,14 @@ public class PDPPage {
 			logger.debug("Selected delivery option as " + freeStorePickupRadio.toString());
 		}else {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			throw new UnsupportedOperationException();
 =======
 			throw new OperationNotSupportedException();
 >>>>>>> fdc7ed85... complete script creation and execution of OMNI-26631
+=======
+			throw new UnsupportedOperationException();
+>>>>>>> b4bf789b... merging all stories
 		}
 		
 	}
