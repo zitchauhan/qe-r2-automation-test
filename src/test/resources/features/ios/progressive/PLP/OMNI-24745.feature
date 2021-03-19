@@ -46,4 +46,8 @@ Feature: Validate User is able view product list by category
   	Then User sees Shop By Category title on PLP
   	Then User verifies "L3 categories" are displaying on PLP
   	Then User navigates to "Boys' shirts" category on PLP Page
+<<<<<<< HEAD
   	Then User verifies "No categories" are displaying on PLP
+=======
+  	Then User verifies "No categories" are displaying on PLP
+>>>>>>> e01b100d... commit for 24745

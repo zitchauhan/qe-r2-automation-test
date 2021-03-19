@@ -1,5 +1,8 @@
 package com.aso.qe.test.stepdefinition.ios;
 import static org.junit.Assert.assertTrue;
+
+import org.codehaus.plexus.logging.Logger;
+
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.Context;
@@ -67,7 +70,6 @@ public class ShopStepDef extends GlobalMobileHelper{
 	    // Write code here that turns the phrase above into concrete actions
 	    Context.setShopBySubCategoryList(shopPage.getCategoryList());
 	}
-
 	@Then("^User verifies all categories and navigates to each PLP from Shop By Category$")
 	public void user_verifies_all_categories_and_navigates_to_each_PLP_from_Shop_By_Category() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -85,7 +87,6 @@ public class ShopStepDef extends GlobalMobileHelper{
 	    	shopPage.L3CategoryList();
 	    } 
 	}
-
 	@Then("^User taps on back button$")
 	public void user_taps_on_back_button() throws InterruptedException {
 		shopPage.tapOnBackbtn(driver);

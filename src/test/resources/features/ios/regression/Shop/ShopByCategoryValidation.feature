@@ -1,14 +1,9 @@
 Feature: Validate User is able to navigate to all categories
 
-<<<<<<< HEAD
 @Regression 
   Scenario: validate when user navigates to any given L1 and L2 category then user lands on correct sub category page and when user navigates to any l3 category then user lands on correct PLP L2 page.
-  
   verify L1 categories are
-=======
-@Regression
-  Scenario: validate user is able to navigate to different categories
->>>>>>> 4df6ef42... changes for OMNI-24745
+
   	Given User launches the application
   	And User continues as guest user
   	Then User sees the homepage
@@ -18,7 +13,6 @@ Feature: Validate User is able to navigate to all categories
   	And User verifies the level One category list
   	Then User navigates to "clothing" category in the list
   	Then User verifies the level two category list
-<<<<<<< HEAD
   	Then User navigates to "Men's Clothing" category in the list
   	Then User verifies the level three category list
   	And User taps on home in bottom nav
@@ -39,7 +33,3 @@ Feature: Validate User is able to navigate to all categories
   	Then User sees the homepage
   	When User taps on shop in bottom nav
   	Then User verifies all categories and navigates to each PLP from Shop By Category	
-=======
-  	Then User navigates to "Boys' Clothing" category in the list
-  	Then User verifies the level three category list
->>>>>>> 4df6ef42... changes for OMNI-24745
