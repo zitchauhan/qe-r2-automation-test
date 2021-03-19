@@ -11,7 +11,7 @@ Feature: Validate User is able to shop by category
   	And User verifies the level One category list
   	Then User navigates to "clothing" category in the list
   	Then User verifies the level two category list
-  	Then User navigates to "Boys' Clothing" category in the list
+  	Then User navigates to "Men's Clothing" category in the list
   	Then User verifies the level three category list
   	 	
   @ST-OMNI-20816 @TC-OMNI-29799 @Sprint1 
@@ -22,11 +22,13 @@ Feature: Validate User is able to shop by category
   	When User taps on shop in bottom nav
   	Then User sees the shop page
   	And User sees the categories list is not empty
-  	Then User navigates to "clothing" category in the list
-  	Then User navigates to "Boy's Clothing" category in the list
+  	Then User navigates to "Clothing" category in the list
+  	Then verify user is on "Clothing" page
+  	Then User navigates to "Men's Clothing" category in the list
+  	Then verify user is on "Men's Clothing" page
   	And User taps on home in bottom nav
   	Then User taps on shop in bottom nav
-  	Then verify user is on "Boy's Clothing" page	
+  	Then verify user is on "Men's Clothing" page	
   	And User taps on home in bottom nav
   	When User taps on shop in bottom nav
   	Then User sees the shop page
