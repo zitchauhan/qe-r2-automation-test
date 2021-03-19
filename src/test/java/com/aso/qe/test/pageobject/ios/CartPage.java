@@ -1,5 +1,6 @@
 package com.aso.qe.test.pageobject.ios;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.By;
@@ -299,5 +300,27 @@ public class CartPage {
 	
 	public void clickCartIconBottomNav() {
 		cartIconBottomNav.click();
+	}
+	public void validateGuestSignInSection(String isPresent) {
+		GlobalMobileHelper.setImplicitWaitTo(driver, 3);
+		if(isPresent.equalsIgnoreCase("is present")) {
+		assertTrue("User icon is not present",GlobalMobileHelper.isElementDisplayed(Locators.CartPage.userIcon));
+		assertTrue("Guest checkout label is not present",GlobalMobileHelper.isElementDisplayed(Locators.CartPage.guestCheckoutLabel));
+		assertTrue("Sign in label is not present",GlobalMobileHelper.isElementDisplayed(Locators.CartPage.signInLabel));
+		assertTrue("Sign in button is not displayed",GlobalMobileHelper.isElementDisplayed(Locators.CartPage.signInButton));
+		}
+		else if(isPresent.equalsIgnoreCase("is not present")) {
+		assertFalse("User icon is present",GlobalMobileHelper.isElementDisplayed(Locators.CartPage.userIcon));
+		assertFalse("Guest checkout label is present",GlobalMobileHelper.isElementDisplayed(Locators.CartPage.guestCheckoutLabel));
+		assertFalse("Sign in label is present",GlobalMobileHelper.isElementDisplayed(Locators.CartPage.signInLabel));
+		assertFalse("Sign in button is displayed",GlobalMobileHelper.isElementDisplayed(Locators.CartPage.signInButton));
+		} 
+		
+	}
+	public void tapOnSignInButton() {
+		// TODO Auto-generated method stub
+		GlobalMobileHelper.setImplicitWaitTo(driver, 3);
+		assertTrue("Sign in button is not displayed",GlobalMobileHelper.isElementDisplayed(Locators.CartPage.signInButton));
+		GlobalMobileHelper.tapOnElement(Locators.CartPage.signInButton);
 	}
 }

@@ -18,7 +18,7 @@ public class Locators {
 	public static class LoginPage{
 		public static By emailEditBox = By.xpath("//*[contains(@value,'Email')]");
 		public static By passwordEditBox = By.xpath("//*[contains(@value,'Password')]");
-		public static By loginButton = By.xpath("//XCUIElementTypeButton[contains(@label,'LOG IN')]");
+		public static By loginButton = By.id("btn_login");
 		public static By continueAsGuestButton = By.id("guest_label_test_id");
 	}
 	
@@ -84,6 +84,10 @@ public class Locators {
 		public static By labelEmptyCartInfo = By.id("lbl_user_specific_message");
 		public static By buttonLogIn = By.id("btn_login");
 		public static By buttonCreateAnAccount = By.id("btn_create_an_account");
+		public static By userIcon = By.id("icon_user");
+		public static By guestCheckoutLabel = By.id("lbl_guest_checkout");
+		public static By signInLabel = By.id("lbl_sign_in_guest_checkout");
+		public static By signInButton = By.id("btn_sign_in");
 	}
 	
 	public static class PLPPage{

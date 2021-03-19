@@ -140,4 +140,14 @@ public class CartStepDef extends GlobalMobileHelper{
 		String itemLabelText = cartPage.getItemContLabelText();
 		assertTrue(itemLabelText.contains(arg1));
 	}
+	@Then("^User verifies guest user sign in section \"([^\"]*)\" on cart page$")
+	public void user_sees_guest_user_sign_in_section(String displayStatus) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    cartPage.validateGuestSignInSection(displayStatus);
+	}
+	@Then("^User taps on Sign in button on cart page$")
+	public void user_taps_on_Sign_in_button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   cartPage.tapOnSignInButton();
+	}
 }

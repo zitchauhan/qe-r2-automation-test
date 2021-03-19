@@ -49,4 +49,15 @@ public class LoginStepDef extends GlobalMobileHelper{
 	public void continueAsGuest() {
 		GlobalMobileHelper.tapOnElement(Locators.LoginPage.continueAsGuestButton);
 	}
+	@When("^User enters valid email \"([^\"]*)\"$")
+	public void user_enters_valid_email(String email) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		loginPage.enterEmail(email);
+	}
+
+	@When("^User enters valid password \"([^\"]*)\"$")
+	public void user_enters_valid_password(String password) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		loginPage.enterPassword(password);
+	}
 }
