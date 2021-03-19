@@ -2,10 +2,11 @@ package com.aso.qe.test.pageobject.ios;
 
 import static org.junit.Assert.assertTrue;
 
+import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
@@ -13,7 +14,12 @@ import com.aso.qe.test.common.Locators;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.PerformsTouchActions;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 
+import org.openqa.selenium.*;
 
 public class CategoryPage {
 	
@@ -199,7 +205,219 @@ public boolean navigateLToCLP() {
 		
 	}   
    
+   public boolean isBadgeDisplayedInPLP(String args) {
+		Boolean flag=false;
+	
+
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		MobileElement btnGoToPDP=null;
+		if(args.equalsIgnoreCase("Online Only")) 
+		{
+			
+			
+			 List<MobileElement> elementtexts  = driver.findElements(Locators.PDPPage.lbl_badge_text);
+			for (Iterator iterator = elementtexts.iterator(); iterator.hasNext();) {
+				MobileElement mobileElement = (MobileElement) iterator.next();
+				if(mobileElement.getText().equalsIgnoreCase("Online Only")) {
+					return true;
+					
+				}else {
+					scrollDown();
+					
+				}
+				
+				
+			} 
+			/*
+		      if(elementtext.equalsIgnoreCase("Ships to Store")) {
+		    	  
+		    	  
+	           return true; 
+		      
+			}*/
+		}
+		
+		if(args.equalsIgnoreCase("Clearance")) 
+		{
+			
+			 String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
+		      if(elementtext.equalsIgnoreCase("Clearance")) {
+	           return true; 
+		      
+			}
+		}
+		
+		if(args.equalsIgnoreCase("Hot Deal")) 
+		{
+			
+			 String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
+		      if(elementtext.equalsIgnoreCase("Hot Deal")) {
+	           return true; 
+		      
+			}
+		}
+		
+		if(args.equalsIgnoreCase("Price Drop")) 
+		{
+			
+	      String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
+	      if(elementtext.equalsIgnoreCase("Price Drop")) {
+          return true; 
+	      
+		}
+		}
+		if(args.equalsIgnoreCase("New")) 
+		{
+			
+			  String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
+		      if(elementtext.equalsIgnoreCase("New")) {
+	           return true; 
+		      
+			}
+		}
+		
+		if(args.equalsIgnoreCase("Exclusive")) 
+		{
+			
+			  String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
+		      if(elementtext.equalsIgnoreCase("Exclusive")) {
+	           return true; 
+		      
+			}
+		}
+		
+		if(args.equalsIgnoreCase("Online Only11")) 
+		{
+			
+			  String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
+		      if(elementtext.equalsIgnoreCase("Price Drop")) {
+	           return true; 
+		      
+			}
+		}
+
+		GlobalMobileHelper.tapOnElement(btnGoToPDP);
+		
+	
+		
+		return false;
+	}   
+   
+   public void scrollDown() {
+	   
+    Dimension dimension  = driver.manage().window().getSize();
+    
+    Double scrollHeightStart = dimension.getHeight() * 0.5;
+    int scrollStart = scrollHeightStart.intValue();
+    
+    Double scrollHeightEnd = dimension.getHeight() * 0.2;
+    int scrollEnd = scrollHeightEnd.intValue(); 
+    
+    new TouchAction((PerformsTouchActions)driver).press(PointOption.point(0,scrollStart)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).moveTo(PointOption.point(0,scrollEnd)).release().perform();                       
+    
+    
+   } 
+   
+   public List<MobileElement> getItemWebView(){
+	   
+	   
+	   return driver.findElements(By.xpath("//*[contains(@label,\"Bcg Men's Coaches Polo Shirt\")]"));
+   }
+   
+   public void scrollTillWebView() {
+	   while(getItemWebView().size()==0) {
+		   scrollDown();
+		   
+	   }
+	   if(getItemWebView().size()>=0) {}
+	   
+	  
+	  // getItemWebView().get(0).click();
+	   System.out.println( getItemWebView().get(0).getText());
+   }
+
+
+
+public boolean verifyColourVarientprod() throws Exception {
+	boolean flag=true;
+	 List<Object> list = new ArrayList<Object>();
+	 if(!isPLP_ProductPriceDisplayed()) {
+			list.add ( new Exception("Product Price not present"));	
+		 }
+	 if(!isPLP_ProductTitleDisplayed()) {
+			list.add ( new Exception("ProductTitle not present"));	
+		 }
+	 if(!isPLP_ratingsReviewsDisplayed()) {
+			list.add ( new Exception("ratingsReviews not present"));	
+		 }
+	 if(!isPLP_ImageDisplayed()) {
+			list.add ( new Exception("Image  not present"));	
+		 }
+	 
+	 	 
+	
+	 if(!list.isEmpty()) {
+		 flag=false;
+			String s=null;
+			for (Object object : list) {
+			 s =s+object.toString();
+			}
+			throw new Exception(s);
+		
+	    }
+	return flag;
+}
+   
+public boolean isPLP_ProductPriceDisplayed() {
+	MobileElement labelProductPrice = driver.findElement(Locators.Category.labelProductPrice);
+	return labelProductPrice.isDisplayed();
+}   
+public boolean isPLP_ProductTitleDisplayed() {
+	MobileElement labelProductTitle = driver.findElement(Locators.Category.labelProductTitle);
+	return labelProductTitle.isDisplayed();
+}
+public boolean isPLP_ratingsReviewsDisplayed() {
+	MobileElement labelratingsReviews = driver.findElement(Locators.Category.labelratingsReviews);
+	return labelratingsReviews.isDisplayed();
+}
+public boolean isPLP_ImageDisplayed() {
+	MobileElement labelImage = driver.findElement(Locators.Category.labelImage);
+	return labelImage.isDisplayed();
+}
+public boolean isPLP_ProductColourDisplayed() {
+	MobileElement labelProductColourPrice = driver.findElement(Locators.Category.labelProductColourPrice);
+	return labelProductColourPrice.isDisplayed();
+}
+
 	
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	

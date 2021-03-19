@@ -47,6 +47,16 @@ public class LoginStepDef extends GlobalMobileHelper{
 	
 	@And("^User continues as guest user$")
 	public void continueAsGuest() {
-		GlobalMobileHelper.tapOnElement(Locators.LoginPage.continueAsGuestButton);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}
+		GlobalMobileHelper.tapOnElement(Locators.LoginPage.HomeLogin);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}
 	}
 }

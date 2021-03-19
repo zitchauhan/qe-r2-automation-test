@@ -134,4 +134,90 @@ public class PDPPage {
 		Assert.assertEquals(true, freeStorePickupRadio.isSelected());
 		Assert.assertEquals(false, homeDeliveryRadio.isSelected());
 	}
+
+	public boolean isBadgeDisplayed(String args) {
+		Boolean flag=false;
+	
+
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		MobileElement btnGoToPDP=null;
+		if(args.equalsIgnoreCase("Ships to Store")) 
+		{
+			
+			 String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
+		      if(elementtext.equalsIgnoreCase("Ships_to_Store")) {
+	           return true; 
+		      
+			}
+		}
+		
+		if(args.equalsIgnoreCase("Clearance")) 
+		{
+			
+			 String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
+		      if(elementtext.equalsIgnoreCase("Clearance")) {
+	           return true; 
+		      
+			}
+		}
+		
+		if(args.equalsIgnoreCase("Hot Deal")) 
+		{
+			
+			 String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
+		      if(elementtext.equalsIgnoreCase("Hot Deal")) {
+	           return true; 
+		      
+			}
+		}
+		
+		if(args.equalsIgnoreCase("Price Drop")) 
+		{
+			
+	      String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
+	      if(elementtext.equalsIgnoreCase("Price Drop")) {
+           return true; 
+	      
+		}
+		}
+		if(args.equalsIgnoreCase("New")) 
+		{
+			
+			  String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
+		      if(elementtext.equalsIgnoreCase("New")) {
+	           return true; 
+		      
+			}
+		}
+		
+		if(args.equalsIgnoreCase("Exclusive")) 
+		{
+			
+			  String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
+		      if(elementtext.equalsIgnoreCase("Exclusive")) {
+	           return true; 
+		      
+			}
+		}
+		
+		if(args.equalsIgnoreCase("Online Only")) 
+		{
+			
+			  String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
+		      if(elementtext.equalsIgnoreCase("Price Drop")) {
+	           return true; 
+		      
+			}
+		}
+
+		GlobalMobileHelper.tapOnElement(btnGoToPDP);
+		
+	
+		
+		return false;
+	}
 }

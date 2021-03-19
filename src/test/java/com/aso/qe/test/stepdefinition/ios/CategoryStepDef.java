@@ -94,5 +94,20 @@ public class CategoryStepDef extends GlobalMobileHelper{
 	    }
 	    
 	}
+	@And("^verify the \"(.*?)\" of product in PLP page$")
+	public void isBadgeDisplayed(String args) throws Throwable {
+		
+		assertTrue(categoryPage.isBadgeDisplayedInPLP(args));
+	}
 
+	@And("^verify the \"(.*?)\" of product in PLP page attributes$")
+	public void verifyPLPAttribute(String args) throws Throwable {
+		if(args.equalsIgnoreCase("colour_varient_prod")) {
+			assertTrue(categoryPage.verifyColourVarientprod());
+		}
+		
+	}	
+	
+	
+	
 }

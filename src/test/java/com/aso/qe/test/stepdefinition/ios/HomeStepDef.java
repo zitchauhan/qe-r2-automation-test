@@ -27,4 +27,12 @@ public class HomeStepDef extends GlobalMobileHelper{
 	public void tapOnHomeShopButton() {
 		homePage.tapOnShopButton();
 	}
+	
+	@When("^User navigated to  pdp with \"([^\"]*)\"$")
+	public void tapOnGoToPDPButton(String args) {
+		
+		homePage.tapOnProductWithID(args);
+	}
+	
+	
 }

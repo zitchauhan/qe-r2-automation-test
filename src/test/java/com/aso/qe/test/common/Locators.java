@@ -19,7 +19,8 @@ public class Locators {
 		public static By emailEditBox = By.xpath("//*[contains(@value,'Email')]");
 		public static By passwordEditBox = By.xpath("//*[contains(@value,'Password')]");
 		public static By loginButton = By.xpath("//XCUIElementTypeButton[contains(@label,'LOG IN')]");
-		public static By continueAsGuestButton = By.id("guest_label_test_id");
+		public static By continueAsGuestButton = By.xpath("//*[contains(@label,'Continue as Guest')]");
+		public static By HomeLogin = By.id("guest_label_test_id");
 	}
 	
 	public static class HomePage{
@@ -39,6 +40,7 @@ public class Locators {
 		public static By qtyDecrementStepper = By.id("minus_btn_id");
 //		public static By qtyEditBox = By.id("txt_quantity_box");
 		public static By qtyEditBox = By.id("input_field_id");
+		public static By lbl_badge_text = By.id("lbl_badge_text");
 	}
 	
 	public static class ShopPage{
@@ -100,6 +102,18 @@ public class Locators {
 		public static By Promo_ad_Card = By.id("Promo_ad_Card");
 		public static By ShopByBrandyTxt = By.id("ShopByBrandyTxt");
 		public static By clp_catgoryElelnt = By.id("clp_catgoryElelnt");
+		
+ // locators for PLP		
+		public static By labelLProductPrice = By.id("lbl_list_price");
+		public static By labelProductTitle = By.id("lbl_product_title");
+	//	 public static By labelratingsReviews = By.id("lbl_category_list_item");
+		public static By labelImage = By.id("RNE__Image");
+		 public static By labelProductColourPrice = By.id("lbl_category_list_item");
+		public static By label_PLPbadge = By.id("lbl_badge_text");
+//		public static By l1_catgoryElelnt = By.id("lbl_category_list_item");
+//		public static By l1_catgoryElelnt = By.id("lbl_category_list_item");
+//		public static By l1_catgoryElelnt = By.id("lbl_category_list_item");
+//		public static By l1_catgoryElelnt = By.id("lbl_category_list_item");
 		
 		
 	}

@@ -64,4 +64,10 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void validateQuantity(String qty) {
 		assertTrue(pdp.validateQty(qty));
 	}
+	@And("^verify the \"(.*?)\" of product$")
+	public void isBadgeDisplayed(String args) throws Throwable {
+		
+		assertTrue(pdp.isBadgeDisplayed(args));
+	}
+	
 }
