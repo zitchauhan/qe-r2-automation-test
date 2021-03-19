@@ -1,9 +1,17 @@
 package com.aso.qe.test.stepdefinition.ios;
 
 import static org.junit.Assert.assertEquals;
+<<<<<<< HEAD
 import static org.junit.Assert.assertFalse;
 
 import static org.junit.Assert.assertNotEquals;
+=======
+<<<<<<< HEAD
+=======
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
+>>>>>>> 8ae18034... complete script creation and execution of OMNI-26631
+>>>>>>> fdc7ed85... complete script creation and execution of OMNI-26631
 import static org.junit.Assert.assertTrue;
 import java.util.List;
 import org.apache.log4j.Logger;
@@ -255,21 +263,13 @@ public class CartStepDef extends GlobalMobileHelper{
 	    cartPage.isPromoCodeDisplayed();
 	}
 
-<<<<<<< HEAD
+
 	@Then("^User sees the promo code error \"([^\"]*)\"$")
 	public void user_sees_the_promo_code_error(String promoCodeError) throws Throwable {
 	    // Write code here to see the promo code error
 	    cartPage.verifyPromoErroMessage(promoCodeError);
 	}
 	
-=======
-
-	@Then("^User sees the promo code error \"([^\"]*)\"$")
-	public void user_sees_the_promo_code_error(String promoCode) throws Throwable {
-	    // Write code here to see the promo code 
-	    cartPage.verifyPromoCodeErrorMessage(promoCode);
-	}
->>>>>>> 6466c968... update script for new locators and steps for error messages
 	@Then("^User sees that Promo code field is disabled$")
 	public void user_sees_that_Promo_code_field_is_disabled() throws Throwable {
 	    // Write code here to see if promo code is disabled
@@ -290,11 +290,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	}
 
 	@When("^User taps the remove promo code button$")
-<<<<<<< HEAD
 	public void user_taps_of_remove_promo_code_button() throws Throwable {
-=======
-	public void user_taps_the_remove_promo_code_button() throws Throwable {
->>>>>>> 6466c968... update script for new locators and steps for error messages
 	    // Write code here to tap on the remove promo code button
 		swipeScreen(Direction.UP);
 	    cartPage.tapOnRemovePromoButton();
@@ -431,6 +427,7 @@ public class CartStepDef extends GlobalMobileHelper{
 		// pending for locator for label of error messages
 	    throw new PendingException();
 	}
+
 	@Then("^User sees \"([^\"]*)\" on cart page$")
 	public void user_sees_on_cart_page(String arg) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -472,6 +469,19 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
 	public void itemCountOnCartBadge() throws Throwable{
 		cartPage.matchItemsCountOnCartBadge();
+	}
+
+	
+	@Then("^User does not see item total$")
+	public void user_does_not_see_item_total() throws Throwable {
+	    // Write code here for verifying that item total is not shown on the screen
+	    assertFalse(isElementDisplayed(Locators.CartPage.labelItems));
+	}
+
+	@Then("^User does not see order subtotal summary$")
+	public void user_does_not_see_order_subtotal_summary() throws Throwable {
+	    // Write code here for verifying that order sub total is not displayed as the first element
+	    assertFalse(isElementDisplayed(Locators.CartPage.orderSubtotalLabel));
 	}
 
 }
