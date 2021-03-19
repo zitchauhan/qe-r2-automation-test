@@ -24,17 +24,7 @@ public class CartPage {
 	protected float currentSubTotalValue;
 	protected float currentTaxValue;
 	protected float currentTotalValue;
-<<<<<<< HEAD
 	protected float shippingChargesToZipCode;
-
-=======
-	protected float currentSubTotalValue;
-	protected float currentTaxValue;
-	protected float currentTotalValue;
-	
-	protected float shippingChargesToZipCode;
-	
->>>>>>> 0643872c... complete OMNI-20627 - pending for locators for restricted zip codes
 	private AppiumDriver<MobileElement> driver;
 
 	public CartPage(AppiumDriver<MobileElement> driver) {

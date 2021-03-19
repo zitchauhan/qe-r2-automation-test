@@ -1,8 +1,8 @@
 package com.aso.qe.test.stepdefinition.ios;
 
 import static org.junit.Assert.assertEquals;
-<<<<<<< HEAD
 import static org.junit.Assert.assertFalse;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import static org.junit.Assert.assertNotEquals;
@@ -15,6 +15,12 @@ import static org.junit.Assert.assertFalse;
 >>>>>>> 0643872c... complete OMNI-20627 - pending for locators for restricted zip codes
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
+=======
+
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
+
+>>>>>>> 5c228f44... fix syntax errors in CartStepDef
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -246,6 +252,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	    cartPage.isOrderSubtotalValueUpdated();
 	}
 
+<<<<<<< HEAD
 	@When("^User applies the given \"([^\"]*)\"$")
 	public void user_applies_the_given(String promoCode) throws Throwable {
 	    // Write code here for storing the current order value and applying the promo code
@@ -462,11 +469,14 @@ public class CartStepDef extends GlobalMobileHelper{
 	swipeScreen(Direction.UP);
 	}
 	
+=======
+>>>>>>> 5c228f44... fix syntax errors in CartStepDef
 	@Then("^User sees updated order total value after adding quantity$")
 	public void user_sees_updated_order_total_value_after_adding_quantity() throws Throwable {
 	    // Write code here to verify that the total value has been updated 
 	    cartPage.isOrderTotalValueUpdated();
 	}
+<<<<<<< HEAD
 	
 	@Then("^User does not see item total$")
 	public void user_does_not_see_item_total() throws Throwable {
@@ -479,6 +489,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here for verifying that order sub total is not displayed as the first element
 	    assertFalse(isElementDisplayed(Locators.CartPage.orderSubtotalLabel));
 	}
+=======
+>>>>>>> 5c228f44... fix syntax errors in CartStepDef
 
 	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
 	public void itemCountOnCartBadge() throws Throwable{
