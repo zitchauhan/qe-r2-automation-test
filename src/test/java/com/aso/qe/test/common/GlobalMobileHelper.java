@@ -9,14 +9,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aso.qe.framework.common.PropertiesHelper;
-import com.itextpdf.text.pdf.parser.clipper.Clipper.Direction;
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.remote.HideKeyboardStrategy;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class GlobalMobileHelper {
