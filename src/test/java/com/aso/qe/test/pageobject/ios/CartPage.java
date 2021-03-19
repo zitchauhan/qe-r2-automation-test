@@ -23,9 +23,6 @@ public class CartPage {
 	protected float currentSubTotalValue;
 	protected float currentTaxValue;
 	protected float currentTotalValue;
-	protected float currentSubTotalValue;
-	protected float currentTaxValue;
-	protected float currentTotalValue;
 	
 	protected float shippingChargesToZipCode;
 	
