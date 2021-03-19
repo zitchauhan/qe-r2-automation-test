@@ -343,7 +343,7 @@ public class CartPage {
 	}
 	
 	public void isSecurityReassuranceMessageDisplayed() {
-		assertTrue(GlobalMobileHelper.(Locators.CartPage.securityReassuranceMessage).isDisplayed());
+		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.securityReassuranceMessage));
 		logger.debug("Security Reassurance Message is displayed on View Cart page");
 	}
 	

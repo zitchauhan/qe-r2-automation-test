@@ -3,10 +3,8 @@ package com.aso.qe.test.pageobject.ios;
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
-
 import org.apache.log4j.Logger;
 import org.testng.Assert;
-
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.stepdefinition.ios.Hooks;
@@ -154,7 +152,7 @@ public class PDPPage {
 		}
 	}
 	
-	public void selectDeliveryOption(String optionName) throws OperationNotSupportedException {
+	public void selectDeliveryOption(String optionName) throws UnsupportedOperationException {
 		// optionName can be home/store
 		if (optionName.toLowerCase().equals("home")) {
 			homeDeliveryRadio.click();
@@ -163,7 +161,7 @@ public class PDPPage {
 			freeStorePickupRadio.click();
 			logger.debug("Selected delivery option as " + freeStorePickupRadio.toString());
 		}else {
-			throw new OperationNotSupportedException();
+			throw new UnsupportedOperationException();
 		}
 		
 	}
