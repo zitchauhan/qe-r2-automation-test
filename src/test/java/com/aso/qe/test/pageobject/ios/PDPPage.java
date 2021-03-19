@@ -63,8 +63,7 @@ public class PDPPage {
 	}
 	
 	public boolean isProductTitleDisplayed() {
-		MobileElement productTitle = driver.findElement(Locators.PDPPage.labelProductTitle);
-		return productTitle.isDisplayed();
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.labelProductTitle);
 	}
 	
 	public String getProductTitle() {
@@ -152,4 +151,19 @@ public class PDPPage {
 			context.setProductPriceOnPDP(driver.findElement(Locators.PDPPage.labelProductPrice).getText());
 		}
 	}
+	
+	public void selectDeliveryOption(String optionName) throws OperationNotSupportedException {
+		// optionName can be home/store
+		if (optionName.toLowerCase().equals("home")) {
+			homeDeliveryRadio.click();
+			logger.debug("Selected delivery option as " + homeDeliveryRadio.toString());
+		}else if (optionName.toLowerCase().equals("store")) {
+			freeStorePickupRadio.click();
+			logger.debug("Selected delivery option as " + freeStorePickupRadio.toString());
+		}else {
+			throw new OperationNotSupportedException();
+		}
+		
+	}
 }
+
