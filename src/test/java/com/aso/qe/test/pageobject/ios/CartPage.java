@@ -300,4 +300,11 @@ public class CartPage {
 	public void clickCartIconBottomNav() {
 		cartIconBottomNav.click();
 	}
+	public boolean validateCartVariant() {
+		MobileElement cartVariantValue = driver.findElement(Locators.CartPage.cartSizeVariant);
+		return cartVariantValue.getText().contains(driver.findElement(Locators.PDPPage.sizeValue).getText());
+	}
+	/*public boolean validateCartVariantGolfBall() {
+		MobileElement cartVariantValueOfGolfBall = driver.findElement(Locators.CartPage.)
+	}*/
 }
