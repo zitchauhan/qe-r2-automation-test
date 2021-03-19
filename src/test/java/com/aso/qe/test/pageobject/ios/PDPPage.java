@@ -77,11 +77,17 @@ public class PDPPage {
 	
 	public void tapOnAddToCart() {
 		MobileElement addToCartButton = driver.findElement(Locators.PDPPage.buttonAddToCart);
-		addToCartButton.click();
+		if(addToCartButton.isEnabled()) {
+			addToCartButton.click();
+		}else {
+			System.out.println("This Varient of the Product is out of stock");
+		}
+		
 	}
 	
 	public void tapOnViewCart() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonViewCart);
+	
 	}
 	
 	public void tapOnIncrementQtyStepper() {
@@ -220,4 +226,56 @@ public class PDPPage {
 		
 		return false;
 	}
+	public boolean isSizeVarientDisplayed() {
+		boolean isSizeVarientDisplayed = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
+		return isSizeVarientDisplayed;
+	}
+	public boolean isColorVariantDisplayed() {
+		boolean isColorVariantDisplayed = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+		return isColorVariantDisplayed;
+	}
+	public boolean isSizeChartBtnDisplayed() {
+		boolean isSizeChartbtnDisplayed = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.btnSizeChart);
+		return isSizeChartbtnDisplayed;
+	}
+	public void tapOnSmallSize() {
+		
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.smallSize);
+		
+	}
+	public void tapOnLargeSize() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.largeSize);
+	}
+	public boolean validateVarientSize(String size) {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		MobileElement varientSizeValue = driver.findElement(Locators.PDPPage.sizeValue);
+		return varientSizeValue.getText().contains(size);
+	}
+	
+	public void tapOnMediumSize() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.mediumSize);
+	}
+	public void tapOnHomeDelivery() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.homeDeliveryRadioBtn);
+	}
+	public void tapOnSizeChart() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.btnSizeChart);
+		
+	}
+	public boolean isSizeChartDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeChartTitle);
+	}
+	public void tapOnCancelBtn() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.btnCancelSizeChart);
+	}
+	public boolean isVariantValueDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorValue);
+	}
+	
+	
 }

@@ -52,6 +52,9 @@ public class HomePage {
 		GlobalMobileHelper.tapOnElement(shopHomePage);
 		try {
 			Thread.sleep(5000);
+	public void tapOnAdidasTshirt() {
+		try {
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -113,4 +116,24 @@ public class HomePage {
 		GlobalMobileHelper.tapOnElement(btnGoToPDP);
 		
 	}
+		MobileElement btnToclickOnAdidasTshirt = driver.findElement(Locators.HomePage.buttonPdp);
+		btnToclickOnAdidasTshirt.click();
+		//GlobalMobileHelper.tapOnElement(btnToclickOnAdidasTshirt);
+	}
+	public void tapOnHomeBtn() {
+		GlobalMobileHelper.tapOnElement(Locators.HomePage.homeBtn);
+	}
+	public void taponGolfBallProduct() {
+		GlobalMobileHelper.tapOnElement(Locators.HomePage.golfBall);
+	}
+
+
+	public boolean isSearchBoxDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.searchBox);
+		
+	}
+	public void tapOnSearchBox() {
+		GlobalMobileHelper.tapOnElement(Locators.HomePage.searchBox);
+	}
+	
 }
