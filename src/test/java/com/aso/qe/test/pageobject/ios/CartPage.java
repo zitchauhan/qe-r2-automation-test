@@ -323,4 +323,11 @@ public class CartPage {
 		assertTrue("Sign in button is not displayed",GlobalMobileHelper.isElementDisplayed(Locators.CartPage.signInButton));
 		GlobalMobileHelper.tapOnElement(Locators.CartPage.signInButton);
 	}
+	public boolean validateCartVariant() {
+		MobileElement cartVariantValue = driver.findElement(Locators.CartPage.cartSizeVariant);
+		return cartVariantValue.getText().contains(driver.findElement(Locators.PDPPage.sizeValue).getText());
+	}
+	/*public boolean validateCartVariantGolfBall() {
+		MobileElement cartVariantValueOfGolfBall = driver.findElement(Locators.CartPage.)
+	}*/
 }
