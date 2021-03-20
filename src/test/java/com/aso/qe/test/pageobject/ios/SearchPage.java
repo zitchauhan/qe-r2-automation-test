@@ -18,27 +18,27 @@ public class SearchPage {
 	public SearchPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
 	 }
-//	public void tapOnSearchKeyword(String keyword) 
-//	{   try {
-//		Thread.sleep(2000);
-//	} catch (InterruptedException e) {
-//		// TODO Auto-generated catch block
-//		e.printStackTrace();
-//	}
-//		GlobalMobileHelper.searchByKeyword(keyword);
-//		driver.findElement(Locators.SearchPage.goBtn).click();
-//	}
+	public void tapOnSearchKeyword(String keyword) 
+	{   try {
+		Thread.sleep(2000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+		GlobalMobileHelper.searchByKeyword(keyword);
+		driver.findElement(Locators.SearchPage.goBtn).click();
+	}
 	
-//	public boolean validateSearchResults(String keyword) {
-//		try {
-//			Thread.sleep(2000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		MobileElement pname = driver.findElement(By.id("lbl_product_title"));
-//		return pname.getText().contains(PropertiesHelper.getInstance().getMobileTestDataProperty(keyword));
-//		}
+	public boolean validateSearchResults(String keyword) {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		MobileElement pname = driver.findElement(By.id("lbl_product_title"));
+		return pname.getText().contains(PropertiesHelper.getInstance().getMobileTestDataProperty(keyword));
+		}
 	public boolean isSearchErrorDisplayed(String msg) {
 		try {
 			Thread.sleep(2000);

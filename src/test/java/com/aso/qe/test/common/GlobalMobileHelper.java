@@ -143,11 +143,11 @@ public class GlobalMobileHelper {
 	public static void setImplicitWaitTo(AppiumDriver<MobileElement> driver, int seconds) {
 			driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
 		    }
-	// public static void searchByKeyword(String keyword) {
-	//	 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
-	//	 		MobileElement searchBar= driver.findElement(By.id("search_bar"));
-	//	 		searchBar.sendKeys(keywordValue);	 		
-//		 	}
+	public static void searchByKeyword(String keyword) {
+	 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
+		 		MobileElement searchBar= driver.findElement(By.id("search_bar"));
+		 		searchBar.sendKeys(keywordValue);	 		
+		 	}
 	 
 	public void swipeScreen(Direction dir) {
         System.out.println("swipeScreenSmall(): dir: '" + dir + "'"); // always log your actions

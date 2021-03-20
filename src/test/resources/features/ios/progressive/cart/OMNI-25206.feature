@@ -1,14 +1,14 @@
 Feature: Verify guest user sign in funcationalies on cart page
 
-  @Sprint2 @ST-25206
-  Scenario: verify when guest user sign-in from cart page, user lands back on cart page and sign-in section is not displayed
-    And User continues as guest user
-   # Then User sees the homepage
-#	 When User Sees the Search Box
-#    Then User clicks on the Search Box
-#    And User search for the "SearchKeyword"
-#    And user click on Product
- #   When User taps on add to cart button
+  @Sprint2 @ST-25206 @TC-OMNI-30503
+  Scenario: verify sign-in section is no more displayed once guest user sign-in from cart page
+    When User continues as guest user
+    Then User sees the homepage
+	 When User Sees the Search Box
+    Then User clicks on the Search Box
+    And User search for the "SearchKeyword"
+    And user click on Product
+    When User taps on add to cart button
     And User taps on View Cart button
     Then User is navigated To Cart Screen
     Then User verifies guest user sign in section "is present" on cart page
@@ -19,16 +19,16 @@ Feature: Verify guest user sign in funcationalies on cart page
  	Then User is navigated To Cart Screen
  	Then User verifies guest user sign in section "is not present" on cart page
  	
- 	@Sprint2 @test
+ 	@Sprint2 @ST-25206 @TC-OMNI-30504
   Scenario: verify when guest user declines to login then user lands back on cart page with sign-in section displayed
     Given User launches the application
     And User continues as guest user
-   # Then User sees the homepage
-#	 When User Sees the Search Box
-#    Then User clicks on the Search Box
-#    And User search for the "SearchKeyword"
-#    And user click on Product
-   # When User taps on add to cart button
+    Then User sees the homepage
+   	When User Sees the Search Box
+    Then User clicks on the Search Box
+    And User search for the "SearchKeyword"
+    And user click on Product
+    When User taps on add to cart button
     And User taps on View Cart button
     Then User is navigated To Cart Screen
     Then User verifies guest user sign in section "is present" on cart page
