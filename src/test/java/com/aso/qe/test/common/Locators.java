@@ -41,8 +41,6 @@ public class Locators {
 		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
 		public static By subCategoryButton = By.id("btn_category");
 		public static By cartSizeVariant = By.xpath("//*[contains(@label,\"Medium\")]");
-		
-		
 	}
 	public static class SearchPage{
 		public static By searchBar = By.id("search_bar");
@@ -135,9 +133,6 @@ public class Locators {
 		public static By guestCheckoutLabel = By.id("lbl_guest_checkout");
 		public static By signInLabel = By.id("lbl_sign_in_guest_checkout");
 		public static By signInButton = By.id("btn_sign_in");
-	}
-	
-		
 		public static By labelShopWithConfidence = By.id("lbl_shop_with_confidence_label");
 		public static By labelWeAccept = By.id("lbl_we_accept");
 		public static By securityReassuranceMessage = By.id("lbl_security_reassurance_message");
@@ -154,12 +149,5 @@ public class Locators {
 		
 		
 	}
-	
-	public static class PLPPage{
-		public static By PLPHeader = By.id("lbl_product_listing_header_title");
-		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
-		public static By subCategoryButton = By.id("btn_category");
-		public static By securityReassuranceMessage = By.id("lbl_shop_with_confidence_subheading");
-		public static By paymentModeImages = By.id("img_payment_modes");
-	}
+
 }

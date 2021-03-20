@@ -215,8 +215,6 @@ public class PDPPage {
 	}
 	
 	
-}
-	
 	public void selectDeliveryOption(String optionName) throws UnsupportedOperationException {
 		// optionName can be home/store
 		if (optionName.toLowerCase().equals("home")) {

@@ -148,7 +148,6 @@ public class GlobalMobileHelper {
 	//	 		MobileElement searchBar= driver.findElement(By.id("search_bar"));
 	//	 		searchBar.sendKeys(keywordValue);	 		
 //		 	}
-	}
 	 
 	public void swipeScreen(Direction dir) {
         System.out.println("swipeScreenSmall(): dir: '" + dir + "'"); // always log your actions

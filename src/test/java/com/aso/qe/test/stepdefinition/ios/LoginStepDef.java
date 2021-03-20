@@ -62,6 +62,7 @@ public class LoginStepDef extends GlobalMobileHelper{
 	public void user_enters_valid_password(String password) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		loginPage.enterPassword(password);
+	}
 	
 	@Given("^User is on Log In screen$")
 	public void user_is_on_Log_In_screen() throws Throwable {
