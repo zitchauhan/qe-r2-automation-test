@@ -173,4 +173,12 @@ public class Locators {
 		public static By productPrice = By.id("lbl_product_price");
 		public static By buttonCheckout = By.name("Checkout");
 	}
+	
+	public static class CheckoutPage{
+		public static By productThumbNail = By.xpath("(//XCUIElementTypeOther[@name=\"Product Image\"])[2]/XCUIElementTypeOther");
+		public static By productTitle = By.id("lbl_product_title");
+		public static By productSKU= By.xpath("//*[contains(@name,'S K U')]");
+		public static By productPrice = By.id("lbl_product_price");
+		public static By buttonCheckout = By.name("Checkout");
+	}
 }
