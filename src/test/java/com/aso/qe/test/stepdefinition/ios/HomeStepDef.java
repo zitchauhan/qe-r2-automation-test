@@ -14,6 +14,7 @@ public class HomeStepDef extends GlobalMobileHelper{
 	
 	@Then("^User sees the homepage$")
 	public void userIsOnHomePage() {
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
 		assertTrue(homePage.isOnHomePage());
 	}
 	

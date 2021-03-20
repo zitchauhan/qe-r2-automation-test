@@ -31,6 +31,12 @@ public class Locators {
 	}
 	public static class PLPPage{
 		public static By productTitle = By.id("lbl_product_title");
+		public static By PLPHeader = By.id("lbl_product_listing_header_title");
+		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
+		public static By subCategoryButton = By.id("btn_category");
+		public static By cartSizeVariant = By.xpath("//*[contains(@label,\"Medium\")]");
+		
+		
 	}
 	public static class SearchPage{
 		public static By searchBar = By.id("search_bar");
@@ -124,14 +130,4 @@ public class Locators {
 		public static By signInButton = By.id("btn_sign_in");
 	}
 	
-	public static class PLPPage{
-		public static By PLPHeader = By.id("lbl_product_listing_header_title");
-		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
-		public static By subCategoryButton = By.id("btn_category");
-		public static By cartSizeVariant = By.xpath("//*[contains(@label,\"Medium\")]");
-		
-		
-		
-		
-	}
 }

@@ -5,15 +5,16 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.aso.qe.framework.common.PropertiesHelper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSTouchAction;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class GlobalMobileHelper {
@@ -110,13 +111,9 @@ public class GlobalMobileHelper {
 	 public static void setImplicitWaitTo(AppiumDriver<MobileElement> driver, int seconds) {
 			driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
 		    }
-	 
-	public static void searchByKeyword(String keyword) {
-		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
-		MobileElement searchBar= driver.findElement(By.id("search_bar"));
-		searchBar.sendKeys(keywordValue);
-	
-		
-	}
-	
+	// public static void searchByKeyword(String keyword) {
+	//	 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
+	//	 		MobileElement searchBar= driver.findElement(By.id("search_bar"));
+	//	 		searchBar.sendKeys(keywordValue);	 		
+//		 	}
 }

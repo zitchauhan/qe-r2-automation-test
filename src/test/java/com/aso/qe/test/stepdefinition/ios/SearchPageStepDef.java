@@ -19,17 +19,17 @@ public class SearchPageStepDef extends GlobalMobileHelper{
 	
 	SearchPage searchPage = new SearchPage(driver);
 	
-	@And("^User search for the \"(.*?)\"$")
-	public void searchEdit(String searchKeyword) {
-	searchPage.tapOnSearchKeyword(searchKeyword);
+//	@And("^User search for the \"(.*?)\"$")
+//	public void searchEdit(String searchKeyword) {
+//	searchPage.tapOnSearchKeyword(searchKeyword);
+//	
+//	}
 	
-	}
 	
-	
-	@And("^User sees all products related to search keyword$")
-	public void validateSearchResult() {
-	assertTrue(searchPage.validateSearchResults("SearchKeyword"));
-	}
+//	@And("^User sees all products related to search keyword$")
+//	public void validateSearchResult() {
+//	assertTrue(searchPage.validateSearchResults("SearchKeyword"));
+//	}
 	@And("^User observe message \"(.*?)\"$")
 	public void validatewrongSearch(String msg) {
 	

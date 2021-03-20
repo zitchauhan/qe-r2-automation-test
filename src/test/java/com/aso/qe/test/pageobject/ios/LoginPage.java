@@ -26,13 +26,16 @@ public class LoginPage {
 	}
 	
 	public void tapOnLogin() {
-		driver.hideKeyboard();
+		//driver.hideKeyboard();
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		MobileElement loginButton = driver.findElement(Locators.LoginPage.loginButton);
+		//first clicking on login button to hide the keypad
+		GlobalMobileHelper.tapOnElement(loginButton);
+		//clicking on login button again to tap on login 
 		GlobalMobileHelper.tapOnElement(loginButton);
 	}
 }

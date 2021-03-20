@@ -149,6 +149,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void user_taps_on_Sign_in_button() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	   cartPage.tapOnSignInButton();
+	}
+	
 	@And("^User sees the Variant of selected Product$")
 	public void validateVariantOnCart() {
 		assertTrue(cartPage.validateCartVariant());
