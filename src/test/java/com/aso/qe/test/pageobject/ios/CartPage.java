@@ -300,9 +300,19 @@ public class CartPage {
 	public void clickCartIconBottomNav() {
 		cartIconBottomNav.click();
 	}
-	public boolean validateCartVariant() {
+	public boolean validateCartVariant(String item) {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}if(item.contains("AdidasTshirt")) {
 		MobileElement cartVariantValue = driver.findElement(Locators.CartPage.cartSizeVariant);
-		return cartVariantValue.getText().contains(driver.findElement(Locators.PDPPage.sizeValue).getText());
+		return cartVariantValue.getText().contains("Medium");
+		}else {
+			MobileElement cartVariantValue = driver.findElement(Locators.CartPage.cartColorVariant);
+			return cartVariantValue.getText().contains("White");
+		}
 	}
 	/*public boolean validateCartVariantGolfBall() {
 		MobileElement cartVariantValueOfGolfBall = driver.findElement(Locators.CartPage.)

@@ -1,16 +1,10 @@
 package com.aso.qe.test.pageobject.ios;
 
-import org.openqa.selenium.support.PageFactory;
-
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 
-import cucumber.api.java.en.Then;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-
-import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 
 public class HomePage {

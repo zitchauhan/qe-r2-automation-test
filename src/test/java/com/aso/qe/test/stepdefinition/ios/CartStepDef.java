@@ -140,12 +140,12 @@ public class CartStepDef extends GlobalMobileHelper{
 		String itemLabelText = cartPage.getItemContLabelText();
 		assertTrue(itemLabelText.contains(arg1));
 	}
-	@And("^User sees the Variant of selected Product$")
-	public void validateVariantOnCart() {
-		assertTrue(cartPage.validateCartVariant());
+	@And("^User sees the Variant of selected Product \"(.*?)\"$")
+	public void validateVariantOnCart(String product) {
+		assertTrue(cartPage.validateCartVariant(product));
 	}
-	@And("^User sees the Variant of selected golf Ball$")
+	/*@And("^User sees the Variant of selected golf Ball$")
 	public void validateGolfBallVariatOnCart() {
 		assertTrue(cartPage.validateCartVariant());
-	}
+	}*/
 }

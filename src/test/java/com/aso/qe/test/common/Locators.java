@@ -113,7 +113,8 @@ public class Locators {
 		public static By labelEmptyCartInfo = By.id("lbl_user_specific_message");
 		public static By buttonLogIn = By.id("btn_login");
 		public static By buttonCreateAnAccount = By.id("btn_create_an_account");
-		public static By cartSizeVariant = By.xpath("//*[contains(@label,\"Medium\")]");
+		public static By cartSizeVariant = By.id("lbl_product_attribute_value_Size");
+		public static By cartColorVariant = By.id("lbl_product_attribute_value_Color");
 		
 		
 		
