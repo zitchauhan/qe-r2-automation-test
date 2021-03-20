@@ -171,4 +171,9 @@ public class LoginStepDef extends GlobalMobileHelper{
 	public void user_sees_Create_Account_button() throws Throwable {
 	    loginPage.isCreateAcccountDisplayed();
 	}
+	@Then("^User taps on cancel button$")
+	public void user_taps_on_cancel_button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    loginPage.tapOnCancelBtn();
+	}
 }

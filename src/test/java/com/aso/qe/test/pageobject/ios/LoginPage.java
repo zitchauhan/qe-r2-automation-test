@@ -166,4 +166,10 @@ public class LoginPage {
 		assertTrue(driver.findElement(Locators.LoginPage.createAccountButton).isDisplayed());
 		logger.debug("Create Account button is displayed on the Log In screen");
 	}
+
+	public void tapOnCancelBtn() {
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+		GlobalMobileHelper.tapOnElement(Locators.LoginPage.cancelButton);
+		
+	}
 }

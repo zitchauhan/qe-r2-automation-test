@@ -23,6 +23,7 @@ public class Locators {
 		public static By forgotPasswordLink = By.id("btn_forgot");
 		public static By screenEmailError = By.id("lbl_email_error");
 		public static By screenPasswordError = By.id("lbl_password_error");
+		public static By cancelButton = By.id("btn_header_cancel");
 	}
 	
 	public static class HomePage{
