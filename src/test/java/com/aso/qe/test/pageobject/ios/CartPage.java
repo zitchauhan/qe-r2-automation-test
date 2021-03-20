@@ -1,8 +1,12 @@
 package com.aso.qe.test.pageobject.ios;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
@@ -16,15 +20,23 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class CartPage {
 	
+	private static final Logger logger = Logger.getLogger(CartPage.class.getName());
+	protected float currentSubTotalValue;
+	protected float currentTaxValue;
+	protected float currentTotalValue;
+	
+	protected float shippingChargesToZipCode;
+	
 	private AppiumDriver<MobileElement> driver;
 	public CartPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
+	  PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	 }
 	
 	@iOSXCUITFindBy(id="lbl_your_cart")
 	public MobileElement labelYourCart;
 	
-	@iOSXCUITFindBy(id="lbl_item_count")
+	@iOSXCUITFindBy(id="lbl_cart")
 	public MobileElement labelItemCount;
 	
 	@iOSXCUITFindBy(id="lbl_subtotal_header")
@@ -42,13 +54,13 @@ public class CartPage {
 	@iOSXCUITFindBy(id="lbl_sku_value")
 	public MobileElement labelSkuValue;
 	
-	@iOSXCUITFindBy(id="btn_quantity_decrement")
+	@iOSXCUITFindBy(id="btn_minus_id")
 	public MobileElement quantitySelectorDecrement;
 	
-	@iOSXCUITFindBy(id="btn_quantity_increment")
+	@iOSXCUITFindBy(id="btn_plus_id")
 	public MobileElement quantitySelectorIncrement;
 	
-	@iOSXCUITFindBy(id="txt_quantity_box")
+	@iOSXCUITFindBy(id="input_field_id")
 	public MobileElement quantityEditBox;
 	
 	@iOSXCUITFindBy(id="btn_remove_from_cart")
@@ -56,6 +68,24 @@ public class CartPage {
 	
 	@iOSXCUITFindBy(id="btn_add_to_wishlist")
 	public MobileElement addToWishListButton;
+	
+	@iOSXCUITFindBy(id="lbl_promocode_header")
+	public MobileElement promoCodeHeader;
+	
+	@iOSXCUITFindBy(id="input_field_promocode")
+	public MobileElement promoCodeInputField;
+	
+	@iOSXCUITFindBy(id="lbl_promocode")
+	public MobileElement promoCodeName;
+	
+	@iOSXCUITFindBy(id="btn_remove_promocode")
+	public MobileElement promoCodeRemoveBbutton;
+	 
+	@iOSXCUITFindBy(id="lbl_discount_amount")
+	public MobileElement promoCodeDiscountAmount;
+	
+	@iOSXCUITFindBy(id="lbl_promocode_error_message")
+	public MobileElement promoCodeErrorMessage;
 	
 	public static By orderSummaryLabel = By.id("lbl_order_summary");
 	public static By orderSubtotalLabel = By.id("lbl_subtotal_summary");
@@ -67,6 +97,8 @@ public class CartPage {
 	public static By taxesValue = By.id("lbl_taxes_value");
 	public static By discountLabel = By.id("lbl_discount");
 	public static By promoCodeLabel = By.id("");
+	
+	
 	public static By orderTotalLabel = By.id("lbl_order_total");
 	public static By orderTotalValue = By.id("lbl_order_total_value");
 	
@@ -330,4 +362,256 @@ public class CartPage {
 	/*public boolean validateCartVariantGolfBall() {
 		MobileElement cartVariantValueOfGolfBall = driver.findElement(Locators.CartPage.)
 	}*/
+	
+	//OMNI-22070 - start
+	public void isLabelShopWithConfidenceDisplayed() {
+		assertTrue(driver.findElement(Locators.CartPage.labelShopWithConfidence).isDisplayed());
+		logger.debug("Label Shop with Confidence is displayed on View Cart page");
+	}
+	
+	public void isLabelWeAcceptDisplayed() {
+		assertTrue(driver.findElement(Locators.CartPage.labelWeAccept).isDisplayed());
+		logger.debug("Label We Accept is displayed on View Cart page");
+	}
+	
+	public void isSecurityReassuranceMessageDisplayed() {
+		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.securityReassuranceMessage));
+		logger.debug("Security Reassurance Message is displayed on View Cart page");
+	}
+	
+	public void isPaymentModeImagesDisplayed() {
+		assertTrue(driver.findElement(Locators.CartPage.paymentModeImages).isDisplayed());
+		logger.debug("Payment code images component is displayed on View Cart page");
+		logger.warn("Only images component is verified with automation. Need to verify individualy images with manual testing.");
+	}
+	//OMNI-22070 - end
+	
+	//OMNI-20609 - start
+	public void noteDownCurrentSubtotal() {
+		try {
+			MobileElement orderSubTotalValueElement = driver.findElement(Locators.CartPage.orderSubtotalValue);
+			String orderSubTotalValue = orderSubTotalValueElement.getText().replace("$", "");
+			currentSubTotalValue = Float.parseFloat(orderSubTotalValue);
+			logger.debug("Current Sub total value has been saved : " + orderSubTotalValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+		
+	}
+	
+	public void noteDownCurrentTaxValue() {
+		try {
+			MobileElement taxValueElement = driver.findElement(Locators.CartPage.taxesValue);
+			String taxesValue = taxValueElement.getText().replace("$", "");
+			currentTaxValue = Float.parseFloat(taxesValue);
+			logger.debug("Current taxes value has been saved : " + taxesValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+		
+	}
+	
+	public void noteDownCurrentTotalValue() {
+		try {
+			MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
+			String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
+			currentTotalValue = Float.parseFloat(orderTotalValue);
+			logger.debug("Current order total value has been saved : "+ orderTotalValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+	}
+	
+	public void isOrderSubtotalValueUpdated() {
+		try {
+			MobileElement orderSubTotalValueElement = driver.findElement(Locators.CartPage.orderSubtotalValue);
+			String orderSubTotalValue = orderSubTotalValueElement.getText().replace("$", "");
+			assertNotEquals(currentSubTotalValue, Float.parseFloat(orderSubTotalValue),0.00);
+			logger.debug("The order value is updated : " + orderSubTotalValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+	}
+	
+	
+	public void isOrderTaxValueUpdated() {
+		try {
+			MobileElement taxValueElement = driver.findElement(Locators.CartPage.taxesValue);
+			String taxesValue = taxValueElement.getText().replace("$", "");
+			assertNotEquals(currentTaxValue, Float.parseFloat(taxesValue),0.00);
+			logger.debug("Taxes value has been updated : " + taxesValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+		
+	}
+	
+	public void isOrderTotalValueUpdated() {
+		MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
+		try {
+			String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
+			assertNotEquals(currentTotalValue, Float.parseFloat(orderTotalValue),0.00);
+			logger.debug("Order total value has been updated : "+ orderTotalValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+	}
+	
+	public void isOrderTotalValueUpdated(String reason) {
+		MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
+		String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
+		try {
+			if (reason.toLowerCase().equals("shipping")) { // can be updated for other reasons later
+				if (shippingChargesToZipCode > 0) {
+					assertNotEquals(currentTotalValue, Float.parseFloat(orderTotalValue),0.00);
+				}else {
+					assertEquals(currentTotalValue, Float.parseFloat(orderTotalValue),0.00);
+				}
+			}
+			
+			logger.debug("Order total value has been updated : "+ orderTotalValue);
+		}catch(Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+	}
+	//OMNI-20609 - end
+
+	//OMNI-20656 - start
+	public void isPromoCodeFieldDisplayed() {
+		
+		assertTrue(promoCodeInputField.isDisplayed());
+		logger.debug("Promocode field is displayed on the cart screen");
+	}
+	
+	public void applyPromoCode(String promoCode) {
+		
+		promoCodeInputField.sendKeys(promoCode);
+		promoCodeHeader.click();
+		logger.debug("Applied the promoCode on the cart screen");
+		
+	}
+	
+	public void isPromoCodeDisplayed() {
+		assertTrue(promoCodeName.isDisplayed());
+		logger.debug("Promo Code is displayed on the cart screen");
+	}
+	
+	public void isRemovePromoCodeButtonDisplayed() {
+		assertTrue(promoCodeRemoveBbutton.isDisplayed());
+		logger.debug("Promo code remove button is displayed on the cart screen");
+	}
+		
+	public void tapOnRemovePromoButton() {
+		promoCodeRemoveBbutton.click();
+		logger.debug("Tapped on promo code remove button on the cart screen");
+	}
+	
+	public void isPromoCodeFieldEnabled() {
+		String enabledAttribute = promoCodeInputField.getAttribute("enabled");
+		assertEquals(enabledAttribute, "True");
+		logger.debug("Promo code field is enabled on the cart screen");
+	}
+	
+	public void isPromoCodeFieldDisabled() {
+		assertFalse(GlobalMobileHelper.isElementDisplayed(promoCodeInputField));
+		logger.debug("Promo code field is disabled on the cart screen");
+	}
+	
+	public void ispromoCodeAmountDisplayed() {
+		assertTrue(GlobalMobileHelper.isElementDisplayed(promoCodeDiscountAmount));
+		logger.debug("Promo code amount is displayed on the cart screen");
+	}
+	
+	public void ispromoCodeAmountNotDisplayed() {
+		assertFalse(GlobalMobileHelper.isElementDisplayed(promoCodeDiscountAmount));
+		logger.debug("Promo code amount is not displayed on the cart screen");
+	}
+
+	public void verifyPromoCodeErrorMessage(String expectedMessage) {
+		assertEquals(expectedMessage, promoCodeErrorMessage.getText().trim());
+		logger.debug("Promo code error message " + expectedMessage +" is verified");
+	}	
+	//OMNI-20656 - end
+
+	public void verifyPromoErroMessage(String expectedErrorMessage) {
+		assertEquals(promoCodeErrorMessage.getText().trim(), expectedErrorMessage);
+		logger.debug("Error message for promo code is verified : " + expectedErrorMessage);
+	}
+	//OMNI-20656 - end
+	
+	//OMNI-20846 - start
+	public void verifyProductDisclaimer(String productDisclaimer) {
+		assertEquals(productDisclaimer, driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().trim());
+		logger.debug("Product disclaimer is displayed on the Cart screen");
+	}
+	
+	public void verifyProductDisclaimer(String productUniqueId, String productDisclaimer) {
+		// Search for a product based on Unique id and check the product disclaimer when multiple products are in the cart
+		logger.debug("Product disclaimer for product id" 
+		+ productUniqueId + ": " + productDisclaimer + " is displayed");
+		throw new UnsupportedOperationException();
+	}
+	
+	public void verifyLongerProductDisclaimer(String productDisclaimer) {
+		assertTrue(driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().contains("..."));
+		GlobalMobileHelper.isElementDisplayed(Locators.CartPage.productDisclaimerReadMore);
+		logger.debug("Product disclaimer Read more and ellipsees are displayed on the Cart screen");
+	}
+	//OMNI-20846 - end
+	
+	//OMNI-20627
+	public void noteDownCurrentShippingCharges() {
+		MobileElement estimatedShipping = driver.findElement(Locators.CartPage.labelEstimatedShipping);
+		try {
+				String estimatedShippingCharges = estimatedShipping.getText()
+						.split("-")[1].trim()
+						.split(" ")[0];
+				if (estimatedShippingCharges.trim().equals("Free")) {
+					shippingChargesToZipCode=0.00F;
+				} else {
+					shippingChargesToZipCode = Float.parseFloat(estimatedShippingCharges);
+				}
+			}catch(Exception e) {
+			
+				e.getLocalizedMessage();
+		}
+		
+	}
+	
+	
+	public void isShippingChargeUpdated(boolean NotFree) {
+		// NotFree to be passed as False if shipping charges for a zip code is NIL
+		MobileElement estimatedShipping = driver.findElement(Locators.CartPage.labelEstimatedShipping);
+		try {
+				String estimatedShippingCharges = estimatedShipping.getText()
+						.split("-")[1].trim().split(" ")[0].replace("$", "");
+				if(NotFree) {
+					assertNotEquals(
+							shippingChargesToZipCode, 
+							Float.parseFloat(estimatedShippingCharges), 
+							0.00);
+				}else {
+					assertEquals("Free",estimatedShippingCharges );
+				}
+				
+			}catch(Exception e) {
+			
+				e.getLocalizedMessage();
+		}
+	}
+	
+	
+	//OMNI-20627
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

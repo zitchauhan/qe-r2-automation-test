@@ -13,10 +13,16 @@ public class Locators {
 	}
 	
 	public static class LoginPage{
-		public static By emailEditBox = By.xpath("//*[contains(@value,'Email')]");
-		public static By passwordEditBox = By.xpath("//*[contains(@value,'Password')]");
+		public static By emailEditBox = By.id("tf_email");
+		public static By passwordEditBox = By.id("tf_password");
 		public static By loginButton = By.id("btn_login");
 		public static By continueAsGuestButton = By.id("guest_label_test_id");
+		public static By passwordShowButton = By.id("btn_show_hide");
+		public static By passwordHideButton = By.id("btn_show_hide");
+		public static By createAccountButton = By.id("btn_create_account");
+		public static By forgotPasswordLink = By.id("btn_forgot");
+		public static By screenEmailError = By.id("lbl_email_error");
+		public static By screenPasswordError = By.id("lbl_password_error");
 	}
 	
 	public static class HomePage{
@@ -95,6 +101,7 @@ public class Locators {
 	
 	public static class AccountPage{
 		public static By accountTitle = By.id("lbl_account");
+		public static By loginLink = By.xpath("//*[contains(@label, 'LOGIN')]");
 	}
 	
 	public static class CartPage{
@@ -130,4 +137,29 @@ public class Locators {
 		public static By signInButton = By.id("btn_sign_in");
 	}
 	
+		
+		public static By labelShopWithConfidence = By.id("lbl_shop_with_confidence_label");
+		public static By labelWeAccept = By.id("lbl_we_accept");
+		public static By securityReassuranceMessage = By.id("lbl_security_reassurance_message");
+		public static By paymentModeImages = By.id("img_payment_modes");
+		
+		public static By productDisclaimerLabel = By.id("disclaimer_messages_label"); // Can be _0 for one product
+		public static By productDisclaimerReadMore = By.xpath("//*[contains(@label, 'Read More')]");
+		
+		
+		public static By textChangeZipCode = By.id("lbl_change_zipcode_input");
+		public static By buttonSubmit = By.xpath("//*[contains(@label, 'SUBMIT')]");
+		public static By labelEstimatedShipping = By.xpath("//*[contains(@label, 'Estimated Shipping to')]");
+		public static By lableChangeZipCodeModal = By.id("lbl_change_zipcode_text");
+		
+		
+	}
+	
+	public static class PLPPage{
+		public static By PLPHeader = By.id("lbl_product_listing_header_title");
+		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
+		public static By subCategoryButton = By.id("btn_category");
+		public static By securityReassuranceMessage = By.id("lbl_shop_with_confidence_subheading");
+		public static By paymentModeImages = By.id("img_payment_modes");
+	}
 }
