@@ -2,6 +2,7 @@ Feature: Verify guest user sign in funcationalies on cart page
 
   @Sprint2 @ST-25206 @TC-OMNI-30503
   Scenario: verify sign-in section is no more displayed once guest user sign-in from cart page
+   Given User launches the application
     When User continues as guest user
     Then User sees the homepage
 	 When User Sees the Search Box
