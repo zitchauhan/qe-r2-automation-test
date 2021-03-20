@@ -150,6 +150,14 @@ public class GlobalMobileHelper {
 		 		searchBar.sendKeys(keywordValue);	 		
 		 	}
 	 
+	public void swipeScreen(Direction dir, int numOftimes) {
+		int start=0;
+		while (start < numOftimes) {
+			swipeScreen(dir);
+			start+=1;
+		}
+	}
+	
 	public void swipeScreen(Direction dir) {
         System.out.println("swipeScreenSmall(): dir: '" + dir + "'"); // always log your actions
 
