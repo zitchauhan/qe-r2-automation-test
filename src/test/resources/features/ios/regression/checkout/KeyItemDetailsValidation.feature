@@ -1,6 +1,6 @@
 Feature: Checkout
 
-  @Sprint2 @ST-OMNI-20817 @TC-OMNI-30523
+  @Regression
   Scenario: Verify that the user can see key item details on Checkout screen
     Given User launches the application
     And User continues as guest user
