@@ -12,7 +12,7 @@ Feature: Validate the functionality of shipping policy and return policy
     When User taps on add to cart button
     And User taps on View Cart button
     Then User is navigated To Cart Screen
-    Then User swipe "UP"
+    Then User scrolls down to the bottom
     Then User sees "Shipping policy" on cart page
     And User sees "Return policy" on cart page
     Then User taps on "Shipping policy"
@@ -20,8 +20,9 @@ Feature: Validate the functionality of shipping policy and return policy
     Then User taps on back button
     Then User is navigated To Cart Screen
     Then User taps on "Return policy"
-    Then User swipe "UP"
+    Then User scrolls down to the bottom
     Then User lands on "Return policy" page
     Then User taps on back button
     Then User is navigated To Cart Screen
+ 
  	

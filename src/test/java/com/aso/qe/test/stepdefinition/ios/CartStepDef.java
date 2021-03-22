@@ -452,12 +452,11 @@ public class CartStepDef extends GlobalMobileHelper{
 		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
 	    cartPage.isPolicyPageDisplayed(arg);
 	}
-	@Then("^User swipe \"([^\"]*)\"$")
-	public void user_swipe(String arg) throws Throwable {
-		if(arg.equalsIgnoreCase("UP")) {
+	@Then("^User scrolls down to the bottom$")
+	public void user_scrolls_down_to_the_bottom() throws Throwable {		
 	swipeScreen(Direction.UP);
 	swipeScreen(Direction.UP);
 	swipeScreen(Direction.UP);
-		}
+		
 	}
 }
