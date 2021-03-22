@@ -37,7 +37,14 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void tapOnViewCart() throws Throwable {
 		pdp.tapOnViewCart();
 	}
+		
 	
+	@Then("^User sees product \"([^\"]*)\" on PDP$")
+	public void isProductAttributeDisplayed(String productAttributeName) throws Throwable {
+	pdp.verifyProductAttribute(productAttributeName);
+	}
+
+
 	@Then("^User sees quantity stepper$")
 	public void isQuantityStepperDisplayed() throws Throwable {
 		assertTrue(pdp.isQuantityStepperDisplayed());
@@ -62,10 +69,4 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void validateQuantity(String qty) {
 		assertTrue(pdp.validateQty(qty));
 	}
-
-	@Then("^User sees product \"([^\"]*)\" on PDP $")
-	public void isProductAttributeDisplayed(String productAttributeName) throws Throwable {
-	pdp.verifyProductAttribute(productAttributeName);
-	}
-	
 }

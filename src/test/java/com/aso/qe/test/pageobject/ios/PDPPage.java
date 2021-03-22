@@ -1,6 +1,12 @@
 package com.aso.qe.test.pageobject.ios;
 
+import static org.junit.Assert.assertTrue;
+
+import org.openqa.selenium.support.PageFactory;
+import java.lang.UnsupportedOperationException;
+
 import org.apache.log4j.Logger;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import static org.junit.Assert.assertTrue;
 
@@ -79,6 +85,7 @@ public class PDPPage {
 		else
 			return null;
 	}
+
 	
 	public boolean isProductPriceDisplayed() {
 		MobileElement productPrice = driver.findElement(Locators.PDPPage.labelProductPrice);
