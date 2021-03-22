@@ -49,14 +49,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	private int previousQuantity = 1;
 	private String productDisclaimer;
-<<<<<<< HEAD
-<<<<<<< HEAD
 	private int shippingChargesToZipCode;
-=======
->>>>>>> 31d53537... complete initial design of OMNI-20846
-=======
-	private int shippingChargesToZipCode;
->>>>>>> 0643872c... complete OMNI-20627 - pending for locators for restricted zip codes
 	
 	@Then("^User is navigated To Cart Screen$")
 	public void userIsOnCart() throws InterruptedException {
@@ -254,9 +247,6 @@ public class CartStepDef extends GlobalMobileHelper{
 	    cartPage.isOrderSubtotalValueUpdated();
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 	@Then("^User sees updated order total value after adding quantity$")
 	public void user_sees_updated_order_total_value_after_adding_quantity() throws Throwable {
 	    // Write code here to verify that the total value has been updated
@@ -276,7 +266,6 @@ public class CartStepDef extends GlobalMobileHelper{
 	    cartPage.isPromoCodeFieldDisplayed();
 	}
 
->>>>>>> b9d10927... fix tags and StepDefs for OMNI-20609
 	@When("^User applies the given \"([^\"]*)\"$")
 	public void user_applies_the_given(String promoCode) throws Throwable {
 	    // Write code here for storing the current order value and applying the promo code
@@ -461,7 +450,6 @@ public class CartStepDef extends GlobalMobileHelper{
 	    throw new PendingException();
 	}
 
-<<<<<<< HEAD
 	@Then("^User sees \"([^\"]*)\" on cart page$")
 	public void user_sees_on_cart_page(String arg) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -516,5 +504,4 @@ public class CartStepDef extends GlobalMobileHelper{
 			cartPage.tapMinusActionCartPage();
 		}
 	}
-
 }
