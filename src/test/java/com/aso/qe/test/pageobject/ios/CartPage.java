@@ -600,18 +600,21 @@ public class CartPage {
 		}
 	}
 	
-	
-	//OMNI-20627
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public void tapOnPolicyLink(String arg) {
+		if(arg.equalsIgnoreCase("Shipping policy")) {
+	    	GlobalMobileHelper.tapOnElement(Locators.CartPage.buttonShippingPolicy);
+	    } else if(arg.equalsIgnoreCase("Return policy")) {
+	    	GlobalMobileHelper.tapOnElement(Locators.CartPage.buttonReturnPolicy);
+	    }
+	}
+
+	public void isPolicyPageDisplayed(String arg) {
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+		if(arg.equalsIgnoreCase("Shipping policy")) 
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.pageTitleShippingPolicy));
+	    else if(arg.equalsIgnoreCase("Return policy")) 
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.pageTitleReturnPolicy));
+	}
 	
 }
+

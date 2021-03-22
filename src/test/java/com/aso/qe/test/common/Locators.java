@@ -147,8 +147,12 @@ public class Locators {
 		public static By buttonSubmit = By.xpath("//*[contains(@label, 'SUBMIT')]");
 		public static By labelEstimatedShipping = By.xpath("//*[contains(@label, 'Estimated Shipping to')]");
 		public static By lableChangeZipCodeModal = By.id("lbl_change_zipcode_text");
-		
-		
+		public static By cartSizeVariant = By.id("lbl_product_attribute_value_Size");
+		public static By buttonShippingPolicy = By.id("btn_shipping_policy");
+		public static By buttonReturnPolicy = By.id("btn_return_policy");
+		public static By labelFreeSStoreReturn = By.id("lbl_header");
+		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
+		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 	}
 
 }

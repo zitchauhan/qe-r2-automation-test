@@ -428,5 +428,36 @@ public class CartStepDef extends GlobalMobileHelper{
 		// pending for locator for label of error messages
 	    throw new PendingException();
 	}
+	@Then("^User sees \"([^\"]*)\" on cart page$")
+	public void user_sees_on_cart_page(String arg) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+	    if(arg.equalsIgnoreCase("Shipping policy")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.buttonShippingPolicy));
+	    } else if(arg.equalsIgnoreCase("Return policy")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.buttonReturnPolicy));
+	    }
+	}
 
+	@Then("^User taps on \"([^\"]*)\"$")
+	public void user_taps_on(String arg) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+		cartPage.tapOnPolicyLink(arg);
+	}
+
+	@Then("^User lands on \"([^\"]*)\" page$")
+	public void user_lands_on_page(String arg) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+	    cartPage.isPolicyPageDisplayed(arg);
+	}
+	@Then("^User swipe \"([^\"]*)\"$")
+	public void user_swipe(String arg) throws Throwable {
+		if(arg.equalsIgnoreCase("UP")) {
+	swipeScreen(Direction.UP);
+	swipeScreen(Direction.UP);
+	swipeScreen(Direction.UP);
+		}
+	}
 }
