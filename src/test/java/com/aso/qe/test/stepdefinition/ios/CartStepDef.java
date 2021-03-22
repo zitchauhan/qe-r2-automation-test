@@ -242,17 +242,41 @@ public class CartStepDef extends GlobalMobileHelper{
 
 	@Then("^User sees updated tax value because of call to vertex after adding quantity$")
 	public void user_sees_updated_tax_value_because_of_call_to_vertex_after_adding_quantity() throws Throwable {
-	    // Write code here to verify that the tax value has been updated 
+	    // Write code here to verify that the tax value has been updated
+		swipeScreen(Direction.UP,3);
 	    cartPage.isOrderTaxValueUpdated();
 	}
 
 	@Then("^User sees updated subtotal value after adding quantity$")
 	public void user_sees_updated_subtotal_value_after_adding_quantity() throws Throwable {
-	    // Write code here to verify that the sub total value has been updated 
+	    // Write code here to verify that the sub total value has been updated
+		swipeScreen(Direction.UP,3);
 	    cartPage.isOrderSubtotalValueUpdated();
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	@Then("^User sees updated order total value after adding quantity$")
+	public void user_sees_updated_order_total_value_after_adding_quantity() throws Throwable {
+	    // Write code here to verify that the total value has been updated
+		swipeScreen(Direction.UP,3);
+	    cartPage.isOrderTotalValueUpdated();
+	}
+
+	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
+	public void itemCountOnCartBadge() throws Throwable{
+		cartPage.matchItemsCountOnCartBadge();
+	}
+	
+	@Then("^User sees the promo code field$")
+	public void user_sees_the_promo_code_field() throws Throwable {
+	    // Write code here for presence of promo code field
+		swipeScreen(Direction.UP);
+	    cartPage.isPromoCodeFieldDisplayed();
+	}
+
+>>>>>>> b9d10927... fix tags and StepDefs for OMNI-20609
 	@When("^User applies the given \"([^\"]*)\"$")
 	public void user_applies_the_given(String promoCode) throws Throwable {
 	    // Write code here for storing the current order value and applying the promo code
@@ -437,6 +461,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	    throw new PendingException();
 	}
 
+<<<<<<< HEAD
 	@Then("^User sees \"([^\"]*)\" on cart page$")
 	public void user_sees_on_cart_page(String arg) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -469,14 +494,6 @@ public class CartStepDef extends GlobalMobileHelper{
 	swipeScreen(Direction.UP);
 	}
 	
-=======
->>>>>>> 5c228f44... fix syntax errors in CartStepDef
-	@Then("^User sees updated order total value after adding quantity$")
-	public void user_sees_updated_order_total_value_after_adding_quantity() throws Throwable {
-	    // Write code here to verify that the total value has been updated 
-	    cartPage.isOrderTotalValueUpdated();
-	}
-<<<<<<< HEAD
 	
 	@Then("^User does not see item total$")
 	public void user_does_not_see_item_total() throws Throwable {
@@ -489,19 +506,15 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here for verifying that order sub total is not displayed as the first element
 	    assertFalse(isElementDisplayed(Locators.CartPage.orderSubtotalLabel));
 	}
-=======
->>>>>>> 5c228f44... fix syntax errors in CartStepDef
 
-	@Then("User sees the correct item count on the cart badge counter on bottom navigation$")
-	public void itemCountOnCartBadge() throws Throwable{
-		cartPage.matchItemsCountOnCartBadge();
-	}
-	
-	@Then("^User sees the promo code field$")
-	public void user_sees_the_promo_code_field() throws Throwable {
-	    // Write code here for presence of promo code field
-		swipeScreen(Direction.UP);
-	    cartPage.isPromoCodeFieldDisplayed();
+	@Then("^User tap on \"(.*?)\" action for quantity$")
+	public void userTapPlusActionForQty(String arg1) throws Throwable{
+		if(arg1.equalsIgnoreCase("+")) {
+			cartPage.tapPlusActionCartPage();
+		}
+		else{
+			cartPage.tapMinusActionCartPage();
+		}
 	}
 
 }

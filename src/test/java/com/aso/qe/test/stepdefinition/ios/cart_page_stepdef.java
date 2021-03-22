@@ -89,15 +89,7 @@ public class cart_page_stepdef extends GlobalMobileHelper{
 //		cart.matchItemsCountOnCartBadge();
 //	}
 	
-	@Then("^User tap on \"(.*?)\" action for quantity$")
-	public void userTapPlusActionForQty(String arg1) throws Throwable{
-		if(arg1.equalsIgnoreCase("+")) {
-		cart.tapPlusActionCartPage();
-		}
-		else{
-			cart.tapMinusActionCartPage();
-		}
-	}
+
 	
 	@Then("^User edits the quantity to \"(.*?)\" on cart page$")
 	public void editQuantityOnCartPage(String arg1) throws Throwable{

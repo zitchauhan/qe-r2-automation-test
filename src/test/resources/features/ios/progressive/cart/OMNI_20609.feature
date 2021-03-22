@@ -1,10 +1,10 @@
-@TC-OMNI-20609
 Feature: Verify that product quantity can be changed on View cart page for an order
 
+  @Sprint1 @ST-OMNI-20609 @TC-OMNI-30556
   Scenario: User sees fields for logging in the application
     Given User launches the application
-    And User Logs into the application
-    When User taps on go to pdp button
+    And User continues as guest user
+    When User navigates to pdp
     And User sees Product title
     And User taps on add to cart button
     Then User is navigated To Cart Screen
