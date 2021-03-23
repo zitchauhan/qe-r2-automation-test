@@ -102,7 +102,6 @@ public class ShopPage {
 			GlobalMobileHelper.tapOnElement(driver.findElement(Locators.ShopPage.categoryBackBtn)); 
 			GlobalMobileHelper.setImplicitWaitTo(driver,5);
 		} } 	catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			logger.error(e);
 		}	
@@ -130,7 +129,6 @@ public class ShopPage {
 			GlobalMobileHelper.tapOnElement(driver.findElement(Locators.ShopPage.categoryBackBtn)); 
 		}	GlobalMobileHelper.setImplicitWaitTo(driver,3);
 		} 	catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			logger.error(e);
 		}	
@@ -242,7 +240,6 @@ public class ShopPage {
 
 
 	public void navigateToShopAllLink() {
-		// TODO Auto-generated method stub
 		assertTrue("shop all link is not present",GlobalMobileHelper.isElementDisplayed(Locators.ShopPage.shopAllLink));
 		GlobalMobileHelper.tapOnElement(Locators.ShopPage.shopAllLink);
 	}
