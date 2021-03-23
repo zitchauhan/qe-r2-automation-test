@@ -219,19 +219,22 @@ public class CartStepDef extends GlobalMobileHelper{
 
 	@Then("^User sees updated tax value because of call to vertex after adding quantity$")
 	public void user_sees_updated_tax_value_because_of_call_to_vertex_after_adding_quantity() throws Throwable {
-	    // Write code here to verify that the tax value has been updated 
+	    // Write code here to verify that the tax value has been updated
+		swipeScreen(Direction.UP,3);
 	    cartPage.isOrderTaxValueUpdated();
 	}
 
 	@Then("^User sees updated subtotal value after adding quantity$")
 	public void user_sees_updated_subtotal_value_after_adding_quantity() throws Throwable {
-	    // Write code here to verify that the sub total value has been updated 
+	    // Write code here to verify that the sub total value has been updated
+		swipeScreen(Direction.UP,3);
 	    cartPage.isOrderSubtotalValueUpdated();
 	}
 
 	@Then("^User sees updated order total value after adding quantity$")
 	public void user_sees_updated_order_total_value_after_adding_quantity() throws Throwable {
-	    // Write code here to verify that the total value has been updated 
+	    // Write code here to verify that the total value has been updated
+		swipeScreen(Direction.UP,3);
 	    cartPage.isOrderTotalValueUpdated();
 	}
 
@@ -458,5 +461,13 @@ public class CartStepDef extends GlobalMobileHelper{
 	swipeScreen(Direction.UP);
 	swipeScreen(Direction.UP);
 		
+	@Then("^User tap on \"(.*?)\" action for quantity$")
+	public void userTapPlusActionForQty(String arg1) throws Throwable{
+		if(arg1.equalsIgnoreCase("+")) {
+			cartPage.tapPlusActionCartPage();
+		}
+		else{
+			cartPage.tapMinusActionCartPage();
+		}
 	}
 }
