@@ -31,6 +31,7 @@ public class Locators {
 	}
 	public static class PLPPage{
 		public static By productTitle = By.id("lbl_product_title");
+		public static By rating= By.xpath("//XCUIElementTypeOther[contains(@label,'4')]");
 	}
 	public static class SearchPage{
 		public static By searchBar = By.id("search_bar");
@@ -66,16 +67,13 @@ public class Locators {
 		public static By sizeChartTitle =By.id("lbl_page_title");
 		//public static By btnCancelSizeChart = By.id("btn_cancel");
 		public static By btnCancelSizeChart = By.id("btn_back");
-		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");
-		
-		
-		
-		
-		
+		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");	
 	}
 	
 	public static class ShopPage{
 		public static By shopPageTitle = By.id("lbl_shop");
+		public static By subcat = By.id("lbl_category_list_item");
+		public static By shopAll = By.id("btn_shop_all");
 	}
 	
 	public static class WishlistPage{
@@ -115,9 +113,5 @@ public class Locators {
 		public static By buttonCreateAnAccount = By.id("btn_create_an_account");
 		public static By cartSizeVariant = By.id("lbl_product_attribute_value_Size");
 		public static By cartColorVariant = By.id("lbl_product_attribute_value_Color");
-		
-		
-		
-		
 	}
 }

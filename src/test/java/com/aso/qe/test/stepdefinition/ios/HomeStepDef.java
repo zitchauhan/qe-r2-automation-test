@@ -34,7 +34,7 @@ public class HomeStepDef extends GlobalMobileHelper{
 	public void tapOnProductGolfBall() {
 		homePage.taponGolfBallProduct();
 	}
-	@When("^User Sees the Search Box$")
+	@And("^User Sees the Search Box$")
 	public void isSearchBoxDisplayed() {
 		assertTrue(homePage.isSearchBoxDisplayed());
 	}

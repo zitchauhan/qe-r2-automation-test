@@ -14,7 +14,6 @@ public class HomePage {
 		this.driver = driver;
 	}
 	
-	
 	public boolean isOnHomePage() {
 		try {
 			Thread.sleep(3000);
@@ -53,11 +52,16 @@ public class HomePage {
 		GlobalMobileHelper.tapOnElement(Locators.HomePage.golfBall);
 	}
 
-
 	public boolean isSearchBoxDisplayed() {
-		return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.searchBox);
-		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.searchBox);	
 	}
+	
 	public void tapOnSearchBox() {
 		GlobalMobileHelper.tapOnElement(Locators.HomePage.searchBox);
 	}

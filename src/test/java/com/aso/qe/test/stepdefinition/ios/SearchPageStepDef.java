@@ -39,6 +39,10 @@ public class SearchPageStepDef extends GlobalMobileHelper{
 	public void tapOnProduct() {
 		searchPage.tapOnProduct();
 	}
+	@Then("^user clicks on cancel button$")
+	public void tapOnCancelBtn() {
+		searchPage.tapOnCancelBtn();
+	}
 	
 	
 
