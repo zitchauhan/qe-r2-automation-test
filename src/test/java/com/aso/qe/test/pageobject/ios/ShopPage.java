@@ -73,7 +73,7 @@ public class ShopPage {
 			GlobalMobileHelper.tapOnElement(driver.findElement(Locators.ShopPage.categoryBackBtn)); 
 			Thread.sleep(3000);
 		} } 	catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 			logger.error(e);
 		}	

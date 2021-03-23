@@ -171,6 +171,7 @@ public class PDPPage {
 			context.setProductPriceOnPDP(driver.findElement(Locators.PDPPage.labelProductPrice).getText());
 		}
 	}
+
 	public boolean isSizeVarientDisplayed() {
 		boolean isSizeVarientDisplayed = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
 		return isSizeVarientDisplayed;
@@ -195,7 +196,6 @@ public class PDPPage {
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		MobileElement varientSizeValue = driver.findElement(Locators.PDPPage.sizeValue);

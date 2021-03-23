@@ -2,8 +2,8 @@ Feature: Validate User is able to navigate to all categories
 
 @Regression 
   Scenario: validate when user navigates to any given L1 and L2 category then user lands on correct sub category page and when user navigates to any l3 category then user lands on correct PLP L2 page.
-  
   verify L1 categories are
+
   	Given User launches the application
   	And User continues as guest user
   	Then User sees the homepage

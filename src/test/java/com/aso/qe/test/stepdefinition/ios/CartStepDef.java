@@ -2,7 +2,8 @@ package com.aso.qe.test.stepdefinition.ios;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -135,6 +136,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	@And("^User sees taxes label$")
 	public boolean isTaxesLabelDisplayed() throws Throwable {
+
 		logger.debug("Tax label is displayed on the Cart page");
 		return isElementDisplayed(Locators.CartPage.taxesLabel);
 	}
@@ -268,12 +270,13 @@ public class CartStepDef extends GlobalMobileHelper{
 	    cartPage.isPromoCodeDisplayed();
 	}
 
+
 	@Then("^User sees the promo code error \"([^\"]*)\"$")
 	public void user_sees_the_promo_code_error(String promoCodeError) throws Throwable {
 	    // Write code here to see the promo code error
 	    cartPage.verifyPromoErroMessage(promoCodeError);
 	}
-	
+
 	@Then("^User sees that Promo code field is disabled$")
 	public void user_sees_that_Promo_code_field_is_disabled() throws Throwable {
 	    // Write code here to see if promo code is disabled
@@ -284,6 +287,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees the applied discount on the order summary field$")
 	public void user_sees_the_applied_discount_on_the_order_summary_field() throws Throwable {
 	    // Write code here to see whether applied promo code and corresponding amount is visible
+		swipeScreen(Direction.UP);
 	    cartPage.ispromoCodeAmountDisplayed();
 	}
 
@@ -306,6 +310,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees that promotion discount is removed$")
 	public void user_sees_that_promotion_discount_is_removed() throws Throwable {
 	    // Write code here to see whether the order value is updated and promotion amount is removed
+		swipeScreen(Direction.UP);
 	    cartPage.ispromoCodeAmountNotDisplayed();
 	}
 
@@ -339,7 +344,6 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees the product disclaimer \"([^\"]*)\"$")
 	public void user_sees_the_product_disclaimer(String disclaimer) throws Throwable {
 	    // Write code here for verifying the product disclaimer
-		productDisclaimer = disclaimer;
 	    cartPage.verifyProductDisclaimer(disclaimer);
 	}
 
@@ -431,6 +435,7 @@ public class CartStepDef extends GlobalMobileHelper{
 		// pending for locator for label of error messages
 	    throw new PendingException();
 	}
+
 	@Then("^User sees \"([^\"]*)\" on cart page$")
 	public void user_sees_on_cart_page(String arg) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -455,11 +460,25 @@ public class CartStepDef extends GlobalMobileHelper{
 		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
 	    cartPage.isPolicyPageDisplayed(arg);
 	}
+
 	@Then("^User scrolls down to the bottom$")
 	public void user_scrolls_down_to_the_bottom() throws Throwable {		
-		swipeScreen(Direction.UP,3);
+	swipeScreen(Direction.UP,3);
 	}
-		
+	
+	
+	@Then("^User does not see item total$")
+	public void user_does_not_see_item_total() throws Throwable {
+	    // Write code here for verifying that item total is not shown on the screen
+	    assertFalse(isElementDisplayed(Locators.CartPage.labelItems));
+	}
+
+	@Then("^User does not see order subtotal summary$")
+	public void user_does_not_see_order_subtotal_summary() throws Throwable {
+	    // Write code here for verifying that order sub total is not displayed as the first element
+	    assertFalse(isElementDisplayed(Locators.CartPage.orderSubtotalLabel));
+	}
+
 	@Then("^User tap on \"(.*?)\" action for quantity$")
 	public void userTapPlusActionForQty(String arg1) throws Throwable{
 		if(arg1.equalsIgnoreCase("+")) {
