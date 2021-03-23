@@ -457,9 +457,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	}
 	@Then("^User scrolls down to the bottom$")
 	public void user_scrolls_down_to_the_bottom() throws Throwable {		
-	swipeScreen(Direction.UP);
-	swipeScreen(Direction.UP);
-	swipeScreen(Direction.UP);
+		swipeScreen(Direction.UP,3);
+	}
 		
 	@Then("^User tap on \"(.*?)\" action for quantity$")
 	public void userTapPlusActionForQty(String arg1) throws Throwable{

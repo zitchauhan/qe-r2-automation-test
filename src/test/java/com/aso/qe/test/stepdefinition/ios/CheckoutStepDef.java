@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
+import com.aso.qe.test.pageobject.ios.CheckoutPage;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
@@ -15,7 +16,7 @@ import cucumber.api.java.en.When;
 public class CheckoutStepDef extends GlobalMobileHelper {
 	
 	private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getName());
-	
+	CheckoutPage checkoutPage = new CheckoutPage(driver);
 	
 	@Then("^User sees the checkout button$")
 	public void user_sees_the_checkout_button() throws Throwable {
@@ -69,4 +70,25 @@ public class CheckoutStepDef extends GlobalMobileHelper {
 	public void user_swipes_right_on_cart_page(){
 		swipeScreen(Direction.RIGHT);
 	}
+	
+	@Then("^User verifies existing address are \"([^\"]*)\" on shipping information screen$")
+	public void user_verifies_existing_address_are_on_shipping_information_screen(String arg1) throws Throwable {
+		checkoutPage.isAddressDisplayed();
+	}
+	
+	@Then("^User sees \"([^\"]*)\" on shipping information screen$")
+	public void user_sees_on_shipping_information_screen(String arg1) throws Throwable {
+		assertTrue("Add new address button is not displayed",isElementDisplayed(Locators.CheckoutPage.addNewAddress));
+	}
+	
+	@Then("^User sees first address as default address$")
+	public void user_sees_first_address_as_default_address() throws Throwable {
+		checkoutPage.verifyDefaultAddress();
+	}
+	
+	@Then("^User sees address not verified message on shipping information screen$")
+	public void user_sees_address_not_verified_message_on_shipping_information_screen() throws Throwable {
+		checkoutPage.verifyMessage();
+	}
+
 }
