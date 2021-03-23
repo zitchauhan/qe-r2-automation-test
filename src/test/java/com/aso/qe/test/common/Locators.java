@@ -2,9 +2,6 @@ package com.aso.qe.test.common;
 
 import org.openqa.selenium.By;
 
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-
 public class Locators {
 	
 	public static class BottomNav{
@@ -26,10 +23,33 @@ public class Locators {
 		public static By forgotPasswordLink = By.id("btn_forgot");
 		public static By screenEmailError = By.id("lbl_email_error");
 		public static By screenPasswordError = By.id("lbl_password_error");
+		public static By cancelButton = By.id("btn_header_cancel");
 	}
 	
 	public static class HomePage{
 		public static By buttonGoToPDP = By.xpath("//*[contains(@label,\"Adidas Men's Designed2Move Polo Shirt\")]");
+		public static By buttonPdp = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[11]");
+		public static By homeBtn = By.id("lbl_home");
+		//public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
+		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
+		public static By searchBox = By.id("btn_Search");
+		
+		
+	}
+	public static class PLPPage{
+		public static By productTitle = By.id("lbl_product_title");
+		public static By PLPHeader = By.id("lbl_product_listing_header_title");
+		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
+		public static By subCategoryButton = By.id("btn_category");
+		public static By cartSizeVariant = By.xpath("//*[contains(@label,\"Medium\")]");
+	}
+
+	public static class SearchPage{
+		public static By searchBar = By.id("search_bar");
+		public static By cancelBtn = By.id("btn_cancel");
+		public static By scanBarCode = By.id("btn_scan_barcode");
+		public static By goBtn = By.id("Go");
+		public static By searchErrormsg =  By.id("txt_empty_result_body");
 	}
 	
 	public static class PDPPage{
@@ -44,8 +64,25 @@ public class Locators {
 		public static By qtyDecrementStepper = By.id("minus_btn_id");
 //		public static By qtyEditBox = By.id("txt_quantity_box");
 		public static By qtyEditBox = By.id("input_field_id");
+		public static By colorVariant = By.id("lbl_color_title");
+		public static By colorValue = By.id("lbl_color_value");
+		public static By sizeVariant =By.id("lbl_size_title");
+		public static By sizeValue = By.id("lbl_size_value");
+		public static By smallSize = By.id("size_list_item_0");
+		public static By mediumSize = By.id("size_list_item_1");
+		public static By largeSize = By.id("size_list_item_2");
+		public static By xLargeSize = By.id("size_list_item_3");
+		public static By xxLargeSize= By.id("size_list_item_4");
+		public static By btnSizeChart = By.id("btn_size_chart");
+		//public static By sizeChartTitle =By.id("lbl_size_chart");
+		public static By sizeChartTitle =By.id("lbl_page_title");
+		//public static By btnCancelSizeChart = By.id("btn_cancel");
+		public static By btnCancelSizeChart = By.id("btn_back");
+		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");
+
+
 	}
-	
+
 	public static class ShopPage{
 		public static By shopPageTitle = By.id("lbl_shop");
 		public static By categoryTitle = By.id("lbl_category_title");
@@ -91,7 +128,10 @@ public class Locators {
 		public static By labelEmptyCartInfo = By.id("lbl_user_specific_message");
 		public static By buttonLogIn = By.id("btn_login");
 		public static By buttonCreateAnAccount = By.id("btn_create_an_account");
-		
+		public static By userIcon = By.id("icon_user");
+		public static By guestCheckoutLabel = By.id("lbl_guest_checkout");
+		public static By signInLabel = By.id("lbl_sign_in_guest_checkout");
+		public static By signInButton = By.id("btn_sign_in");
 		public static By labelShopWithConfidence = By.id("lbl_shop_with_confidence_label");
 		public static By labelWeAccept = By.id("lbl_we_accept");
 		public static By securityReassuranceMessage = By.id("lbl_security_reassurance_message");
@@ -99,7 +139,6 @@ public class Locators {
 		
 		public static By productDisclaimerLabel = By.id("disclaimer_messages_label"); // Can be _0 for one product
 		public static By productDisclaimerReadMore = By.xpath("//*[contains(@label, 'Read More')]");
-		
 		
 		public static By textChangeZipCode = By.id("lbl_change_zipcode_input");
 		public static By buttonSubmit = By.xpath("//*[contains(@label, 'SUBMIT')]");
@@ -113,8 +152,34 @@ public class Locators {
 		public static By PLPHeader = By.id("lbl_product_listing_header_title");
 		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
 		public static By subCategoryButton = By.id("btn_category");
+		public static By textChangeZipCode = By.id("lbl_change_zipcode_input");
+		public static By buttonSubmit = By.xpath("//*[contains(@label, 'SUBMIT')]");
+		public static By labelEstimatedShipping = By.xpath("//*[contains(@label, 'Estimated Shipping to')]");
+		public static By lableChangeZipCodeModal = By.id("lbl_change_zipcode_text");
+		public static By cartSizeVariant = By.id("lbl_product_attribute_value_Size");
+		public static By buttonShippingPolicy = By.id("btn_shipping_policy");
+		public static By buttonReturnPolicy = By.id("btn_return_policy");
+		public static By labelFreeSStoreReturn = By.id("lbl_header");
+		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
+		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 		public static By securityReassuranceMessage = By.id("lbl_shop_with_confidence_subheading");
-		public static By paymentModeImages = By.id("img_payment_modes");
+	
+	}
+	
+	public static class CheckoutPage{
+		public static By productThumbNail = By.xpath("(//XCUIElementTypeOther[@name=\"Product Image\"])[2]/XCUIElementTypeOther");
+		public static By productTitle = By.id("lbl_product_title");
+		public static By productSKU= By.xpath("//*[contains(@name,'S K U')]");
+		public static By productPrice = By.id("lbl_product_price");
+		public static By buttonCheckout = By.name("Checkout");
+	}
+	
+	public static class CheckoutPage{
+		public static By productThumbNail = By.xpath("(//XCUIElementTypeOther[@name=\"Product Image\"])[2]/XCUIElementTypeOther");
+		public static By productTitle = By.id("lbl_product_title");
+		public static By productSKU= By.xpath("//*[contains(@name,'S K U')]");
+		public static By productPrice = By.id("lbl_product_price");
+		public static By buttonCheckout = By.name("Checkout");
 	}
 	
 	public static class CheckoutPage{

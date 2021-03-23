@@ -73,7 +73,7 @@ public class ShopPage {
 			GlobalMobileHelper.tapOnElement(driver.findElement(Locators.ShopPage.categoryBackBtn)); 
 			Thread.sleep(3000);
 		} } 	catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 			logger.error(e);
 		}	
@@ -242,7 +242,7 @@ public class ShopPage {
 
 
 	public void navigateToShopAllLink() {
-		// TODO Auto-generated method stub
+		
 		assertTrue("shop all link is not present",GlobalMobileHelper.isElementDisplayed(Locators.ShopPage.shopAllLink));
 		GlobalMobileHelper.tapOnElement(Locators.ShopPage.shopAllLink);
 	}

@@ -34,11 +34,13 @@ public class ShopStepDef extends GlobalMobileHelper{
 	    // Write code here that turns the phrase above into concrete actions
 		shopPage.verifyL1CategoryLevel();
 	}
+	
 	@Then("^User verifies the level two category list$")
 	public void user_navigates_to_the_level_two_category_list() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		shopPage.verifyL2CategoryLevel();
 	}
+
 	@Then("^User verifies the level three category list$")
 	public void user_navigates_to_the_level_three_category_list() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -62,6 +64,7 @@ public class ShopStepDef extends GlobalMobileHelper{
 		Thread.sleep(4000);
 		shopPage.navigateToShopAllLink();
 	}
+
 	@Then("^User fetch the sub category name list$")
 	public void user_fetch_the_category_name_list() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -72,6 +75,7 @@ public class ShopStepDef extends GlobalMobileHelper{
 	    // Write code here that turns the phrase above into concrete actions
 	    shopPage.verifyAllCategoriesAndPLP();
 	}
+	
 	@Then("^User fetch the \"([^\"]*)\" list$")
 	public void user_fetch_the_list(String categoryLevel) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions

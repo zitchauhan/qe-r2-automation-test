@@ -8,6 +8,11 @@ import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import org.apache.log4j.Logger;
+
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 
@@ -43,13 +48,16 @@ public class LoginPage {
 	}
 	
 	public void tapOnLogin() {
-		driver.hideKeyboard();
+		//driver.hideKeyboard();
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		MobileElement loginButton = driver.findElement(Locators.LoginPage.loginButton);
+		//first clicking on login button to hide the keypad
+		GlobalMobileHelper.tapOnElement(loginButton);
+		//clicking on login button again to tap on login 
 		GlobalMobileHelper.tapOnElement(loginButton);
 	}
 	
@@ -163,4 +171,11 @@ public class LoginPage {
 		assertTrue(driver.findElement(Locators.LoginPage.createAccountButton).isDisplayed());
 		logger.debug("Create Account button is displayed on the Log In screen");
 	}
+
+	public void tapOnCancelBtn() {
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+		GlobalMobileHelper.tapOnElement(Locators.LoginPage.cancelButton);
+		
+	}
+	
 }
