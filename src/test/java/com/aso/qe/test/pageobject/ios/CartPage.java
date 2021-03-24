@@ -330,6 +330,7 @@ public class CartPage {
 	public void clickCartIconBottomNav() {
 		cartIconBottomNav.click();
 	}
+
 	public void validateGuestSignInSection(String isPresent) {
 		GlobalMobileHelper.setImplicitWaitTo(driver, 3);
 		if (isPresent.equalsIgnoreCase("is present")) {
@@ -353,7 +354,13 @@ public class CartPage {
 		GlobalMobileHelper.tapOnElement(Locators.CartPage.signInButton);
 	}
 
-	
+	public boolean validateCartVariant() {
+		MobileElement cartVariantValue = driver.findElement(Locators.CartPage.cartSizeVariant);
+		return cartVariantValue.getText().contains(driver.findElement(Locators.PDPPage.sizeValue).getText());
+	}
+	/*public boolean validateCartVariantGolfBall() {
+		MobileElement cartVariantValueOfGolfBall = driver.findElement(Locators.CartPage.)
+	}*/
 
 	//OMNI-22070 - start
 	public void isLabelShopWithConfidenceDisplayed() {
@@ -387,6 +394,7 @@ public class CartPage {
 
 	}
 
+
 	public void tapOnPolicyLink(String arg) {
 		if (arg.equalsIgnoreCase("Shipping policy")) {
 			GlobalMobileHelper.tapOnElement(Locators.CartPage.buttonShippingPolicy);
@@ -394,6 +402,7 @@ public class CartPage {
 			GlobalMobileHelper.tapOnElement(Locators.CartPage.buttonReturnPolicy);
 		}
 	}
+
 	public void isPolicyPageDisplayed(String arg) {
 		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
 		if (arg.equalsIgnoreCase("Shipping policy"))
@@ -523,7 +532,7 @@ public class CartPage {
 
 	public void tapOnProductTitle() {
 		GlobalMobileHelper.tapOnElement(Locators.CartPage.labelProductTitle);
-		
+
 	}
 
 	public boolean isCheckoutPageDisplayed() {
@@ -581,7 +590,7 @@ public class CartPage {
 					assertEquals(currentTotalValue, Float.parseFloat(orderTotalValue),0.00);
 				}
 			}
-			
+
 			logger.debug("Order total value has been updated : "+ orderTotalValue);
 		}catch(Exception e) {
 			logger.error(e.getLocalizedMessage());
