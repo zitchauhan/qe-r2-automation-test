@@ -1,5 +1,7 @@
 package com.aso.qe.test.pageobject.ios;
 
+import java.util.List;
+
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 
@@ -20,7 +22,7 @@ public class HomePage {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		MobileElement btnGoToPDP = driver.findElement(Locators.HomePage.buttonGoToPDP);
+		MobileElement btnGoToPDP = driver.findElement(Locators.HomePage.searchBox);
 		return btnGoToPDP.isDisplayed();
 	}
 	
@@ -65,5 +67,21 @@ public class HomePage {
 	public void tapOnSearchBox() {
 		GlobalMobileHelper.tapOnElement(Locators.HomePage.searchBox);
 	}
+	public boolean isShopNewSectionDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.shopNewImage);
+	}
+	
+	public void tapOnShopNewSection() {
+		
+		GlobalMobileHelper.tapOnElement(Locators.HomePage.shopNewBar);	
+	}
+	public boolean isAcademyExclusiveDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.academyExclusiveBanner);
+	}
+	public void tapOnAcademyExcusiveBanner() {
+		GlobalMobileHelper.tapOnElement(Locators.HomePage.academyExclusiveBanner);
+	}
+	
+	
 	
 }

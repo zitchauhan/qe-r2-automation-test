@@ -26,8 +26,18 @@ public class Locators {
 		//public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
 		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
 		public static By searchBox = By.id("btn_Search");
-		
-		
+		public static By shopNewTitle = By.id("lbl_shopNew_title");
+		public static By shopNewImage = By.id("img_shopNew");
+		public static By shopNewBar = By.xpath("//*[contains(@label,'Shop New Banner')]");
+		public static By shopNewBanner2 = By.xpath("//*[@label='Shop New Banner 2']");
+		public static By academyExclusiveText = By.id("lbl_image_banner_title");
+		public static By academyExclusiveBanner = By.id("img_image_banner");	
+	}
+	public static class ShopNewPage{
+		public static By shopNewTitle = By.id("lbl_page_title");
+		public static By oKBtnLocation = By.xpath("//*[contains(@label,'OK')]");
+		public static By allowOnceBtn = By.xpath("//*[contains(@label,'Allow Once')]");
+		public static By backBtn = By.id("btn_back");
 	}
 	public static class PLPPage{
 		public static By productTitle = By.id("lbl_product_title");
@@ -113,5 +123,8 @@ public class Locators {
 		public static By buttonCreateAnAccount = By.id("btn_create_an_account");
 		public static By cartSizeVariant = By.id("lbl_product_attribute_value_Size");
 		public static By cartColorVariant = By.id("lbl_product_attribute_value_Color");
+	}
+	public static class AcademyExclusivePage{
+		public static By academyExclusiveTitle = By.id("lbl_page_title");
 	}
 }
