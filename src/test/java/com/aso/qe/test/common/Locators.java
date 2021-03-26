@@ -71,8 +71,12 @@ public class Locators {
 		public static By btnCancelSizeChart = By.id("btn_back");
 		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");
 		
-		
-		
+		public static By AppStoreGuidelines = By.id("lbl_fire_arm");
+		public static By ProductSafetyInformation = By.id("lbl_detail_spec_important_product_and_safety_information");
+		public static By ProductSafetyInformationPara1 = By.id("");
+		public static By ProductSafetyInformationPara2 = By.id("");
+		public static By ProductSafetyInformationPara3 = By.id("");
+		public static By ProductSafetyInformationPara4 = By.id("");
 		
 		
 	}
@@ -144,15 +148,20 @@ public class Locators {
 		
  // locators for PLP		
 		public static By labelLProductPrice = By.id("lbl_list_price");
+		public static By lbl_clearance_price_range = By.id("lbl_clearance_price_range");
 		public static By labelProductTitle = By.id("lbl_product_title");
 	//	 public static By labelratingsReviews = By.id("lbl_category_list_item");
 		public static By labelImage = By.id("RNE__Image");
-		 public static By labelProductColourPrice = By.id("lbl_category_list_item");
+		public static By labelProductCoLourVariantSwatch = By.id("labelProductCoLourVariantSwatch");
 		public static By label_PLPbadge = By.id("lbl_badge_text");
-//		public static By l1_catgoryElelnt = By.id("lbl_category_list_item");
-//		public static By l1_catgoryElelnt = By.id("lbl_category_list_item");
-//		public static By l1_catgoryElelnt = By.id("lbl_category_list_item");
-//		public static By l1_catgoryElelnt = By.id("lbl_category_list_item");
+		public static By lbl_cart_msg = By.id("lbl_cart_msg");
+		public static By lbl_cart_msg_toolTipIcon = By.id("");
+		public static By lbl_cart_msg_toolTipIconMsg = By.id("");
+		public static By isPLP_PPU_MSG = By.id("lbl_ppu_msg");
+		public static By SpecialPricingMessage = By.id("lbl_special_price_msg");
+		public static By PLP_PromotionMessage = By.id("lbl_promotional_msg");
+		public static By Clearance_Styles_AvailableDisplayed = By.id("");
+		public static By PLP_Some_Styles_Available = By.id("");
 		
 		
 	}

@@ -9,6 +9,7 @@ import com.aso.qe.test.pageobject.ios.HomePage;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 
 
 public class CategoryStepDef extends GlobalMobileHelper{
@@ -105,9 +106,38 @@ public class CategoryStepDef extends GlobalMobileHelper{
 		if(args.equalsIgnoreCase("colour_varient_prod")) {
 			assertTrue(categoryPage.verifyColourVarientprod());
 		}
+		if(args.equalsIgnoreCase("Singleprice_Prod")) {
+			assertTrue(categoryPage.verifySingleprice_Prod());
+		}
+		if(args.equalsIgnoreCase("clearence_Prod")) {
+			assertTrue(categoryPage.clearence_Prod());
+		}
+		if(args.equalsIgnoreCase("OurPriceIncart")) {
+			assertTrue(categoryPage.OurPriceIncart());
+		}
+		if(args.equalsIgnoreCase("ammunitionProd")) {
+			assertTrue(categoryPage.verifyUnitPrice());
+		}
+		if(args.equalsIgnoreCase("specialprice")) {
+			assertTrue(categoryPage.verifySpecialPrice());
+		}
+		if(args.equalsIgnoreCase("Promotion_data")) {
+			assertTrue(categoryPage.verifyPLPPromotion());
+		}
+		if(args.equalsIgnoreCase("Clearance_Styles_Available")) {
+			assertTrue(categoryPage.verifyClearanceStylesAvailable());
+		}
+		if(args.equalsIgnoreCase("Some_styles_only_available_online_prod")) {
+			assertTrue(categoryPage.verifySomeStyleAvailable());
+		}
+		
 		
 	}	
 	
-	
+	@When("^I choose to navigate to PDP$")
+	public void tapOnGoToPDPButton() {
+		
+		categoryPage.tapOnSearchedProduct();
+	}
 	
 }

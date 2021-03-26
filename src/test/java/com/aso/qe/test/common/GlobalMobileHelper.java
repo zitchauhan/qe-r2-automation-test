@@ -108,4 +108,12 @@ public class GlobalMobileHelper {
 		
 	}
 	
+	public static String findData(String keyword) {
+		String keywordValue=null;
+		 keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
+		 return keywordValue;
+		
+	
+		
+	}	
 }

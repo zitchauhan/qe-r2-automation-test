@@ -215,11 +215,12 @@ public boolean navigateLToCLP() {
 			e.printStackTrace();
 		}
 		MobileElement btnGoToPDP=null;
+		/*
 		if(args.equalsIgnoreCase("Online Only")) 
 		{
 			
 			
-			 List<MobileElement> elementtexts  = driver.findElements(Locators.PDPPage.lbl_badge_text);
+			 List<MobileElement> elementtexts  = driver.findElements(Locators.Category.label_PLPbadge);
 			for (Iterator iterator = elementtexts.iterator(); iterator.hasNext();) {
 				MobileElement mobileElement = (MobileElement) iterator.next();
 				if(mobileElement.getText().equalsIgnoreCase("Online Only")) {
@@ -232,13 +233,17 @@ public boolean navigateLToCLP() {
 				
 				
 			} 
-			/*
+			
+		}
+	*/	
+		if(args.equalsIgnoreCase("Ships_to_Store")) 
+		{
+			
+			 String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
 		      if(elementtext.equalsIgnoreCase("Ships to Store")) {
-		    	  
-		    	  
 	           return true; 
 		      
-			}*/
+			}
 		}
 		
 		if(args.equalsIgnoreCase("Clearance")) 
@@ -290,17 +295,17 @@ public boolean navigateLToCLP() {
 			}
 		}
 		
-		if(args.equalsIgnoreCase("Online Only11")) 
+		if(args.equalsIgnoreCase("Online_Only")) 
 		{
 			
 			  String elementtext  = driver.findElement(Locators.PDPPage.lbl_badge_text).getText();
-		      if(elementtext.equalsIgnoreCase("Price Drop")) {
+		      if(elementtext.equalsIgnoreCase("Online Only")) {
 	           return true; 
 		      
 			}
 		}
 
-		GlobalMobileHelper.tapOnElement(btnGoToPDP);
+	//	GlobalMobileHelper.tapOnElement(btnGoToPDP);
 		
 	
 		
@@ -345,21 +350,28 @@ public boolean navigateLToCLP() {
 public boolean verifyColourVarientprod() throws Exception {
 	boolean flag=true;
 	 List<Object> list = new ArrayList<Object>();
-	 if(!isPLP_ProductPriceDisplayed()) {
+	 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	 if(!ProductPrice()) {
 			list.add ( new Exception("Product Price not present"));	
 		 }
 	 if(!isPLP_ProductTitleDisplayed()) {
 			list.add ( new Exception("ProductTitle not present"));	
 		 }
-	 if(!isPLP_ratingsReviewsDisplayed()) {
-			list.add ( new Exception("ratingsReviews not present"));	
-		 }
+/*
 	 if(!isPLP_ImageDisplayed()) {
 			list.add ( new Exception("Image  not present"));	
 		 }
 	 
-	 	 
-	
+*/	 	 
+	 if(!isPLP_ProductColourVariantDisplayed()) {
+			list.add ( new Exception("colour swatch  not present"));	
+		 }
 	 if(!list.isEmpty()) {
 		 flag=false;
 			String s=null;
@@ -372,28 +384,493 @@ public boolean verifyColourVarientprod() throws Exception {
 	return flag;
 }
    
-public boolean isPLP_ProductPriceDisplayed() {
-	MobileElement labelProductPrice = driver.findElement(Locators.Category.labelProductPrice);
+public boolean ProductPrice() {
+	MobileElement labelProductPrice = driver.findElement(Locators.Category.labelLProductPrice);
 	return labelProductPrice.isDisplayed();
 }   
 public boolean isPLP_ProductTitleDisplayed() {
 	MobileElement labelProductTitle = driver.findElement(Locators.Category.labelProductTitle);
 	return labelProductTitle.isDisplayed();
-}
+}/*
 public boolean isPLP_ratingsReviewsDisplayed() {
 	MobileElement labelratingsReviews = driver.findElement(Locators.Category.labelratingsReviews);
 	return labelratingsReviews.isDisplayed();
-}
+}*/
 public boolean isPLP_ImageDisplayed() {
 	MobileElement labelImage = driver.findElement(Locators.Category.labelImage);
 	return labelImage.isDisplayed();
 }
-public boolean isPLP_ProductColourDisplayed() {
-	MobileElement labelProductColourPrice = driver.findElement(Locators.Category.labelProductColourPrice);
-	return labelProductColourPrice.isDisplayed();
+public boolean isPLP_ProductColourVariantDisplayed() {
+	MobileElement labelProductCoLourVariantSwatch = driver.findElement(Locators.Category.labelProductCoLourVariantSwatch);
+	return labelProductCoLourVariantSwatch.isDisplayed();
 }
 
+public boolean isPLP_BadgeDisplayed() {
+	MobileElement labelImage = driver.findElement(Locators.Category.label_PLPbadge);
+	return labelImage.isDisplayed();
+	}
+
+public boolean is_PriceRangeDisplayed() {
+	MobileElement lbl_price_range = driver.findElement(Locators.Category.lbl_clearance_price_range);
+	return lbl_price_range.isDisplayed();
+} 
+
+public boolean isPLP_OurPriceInCartDisplayed() {
+	MobileElement lbl_cart_msg = driver.findElement(Locators.Category.lbl_cart_msg);
+	return lbl_cart_msg.isDisplayed();
+} 
+
+public boolean isPLP__PPU_MSGDisplayed() {
+	MobileElement isPLP_PPU_MSG = driver.findElement(Locators.Category.isPLP_PPU_MSG);
+	return isPLP_PPU_MSG.isDisplayed();
+} 
+public boolean isPLP_SpecialPricingMessageDisplayed() {
+	MobileElement SpecialPricingMessage = driver.findElement(Locators.Category.SpecialPricingMessage);
+	if(SpecialPricingMessage.isDisplayed()&& SpecialPricingMessage.getText()!= null) {
+		return true;	
+	}
+	else {
+		return false;
+	}
 	
+	
+}
+public boolean isPLP_PromotionMessageDisplayed() {
+	MobileElement SpecialPricingMessage = driver.findElement(Locators.Category.PLP_PromotionMessage);
+	if(SpecialPricingMessage.isDisplayed()&& SpecialPricingMessage.getText()!= null) {
+		return true;	
+	}
+	else {
+		return false;
+	}
+	
+	
+}
+public boolean isPLP_Clearance_Styles_AvailableDisplayed() {
+	MobileElement Clearance_Styles_AvailableDisplayed = driver.findElement(Locators.Category.Clearance_Styles_AvailableDisplayed);
+	if(Clearance_Styles_AvailableDisplayed.isDisplayed()&& Clearance_Styles_AvailableDisplayed.getText()!= null) {
+		return true;	
+	}
+	else {
+		return false;
+	}
+	
+	
+}
+
+public boolean isPLP_Some_Styles_AvailableDisplayed() {
+	MobileElement PLP_Some_Styles_Available = driver.findElement(Locators.Category.PLP_Some_Styles_Available);
+	if(PLP_Some_Styles_Available.isDisplayed()&& PLP_Some_Styles_Available.getText()!= null) {
+		return true;	
+	}
+	else {
+		return false;
+	}
+	
+	
+}
+
+
+public boolean isPLP_OurPriceInCartToolTipDisplayed() {
+	boolean flag=true;
+	
+		if(driver.findElement(Locators.Category.lbl_cart_msg_toolTipIcon) != null) {
+			driver.findElement(Locators.Category.lbl_cart_msg_toolTipIconMsg).click();
+			  if(driver.findElement(Locators.Category.lbl_cart_msg_toolTipIconMsg).getText() != null) {
+				  flag=true;
+			  }else{
+				flag=false;
+			     }
+			
+		}
+	else {
+		flag=false;
+	     }
+		
+	return flag;
+} 
+
+
+public boolean verifySingleprice_Prod() throws Exception {
+
+	boolean flag=true;
+	 List<Object> list = new ArrayList<Object>();
+	 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	 if(!ProductPrice()) {
+			list.add ( new Exception("Product Price not present"));	
+		 }
+	 if(!isPLP_ProductTitleDisplayed()) {
+			list.add ( new Exception("ProductTitle not present"));	
+		 }
+/*
+	 if(!isPLP_ImageDisplayed()) {
+			list.add ( new Exception("Image  not present"));	
+		 }
+	 
+*/	 	 
+	 if(!list.isEmpty()) {
+		 flag=false;
+			String s=null;
+			for (Object object : list) {
+			 s =s+object.toString();
+			}
+			throw new Exception(s);
+		
+	    }
+	return flag;
+
+	
+}
+
+
+
+public boolean clearence_Prod() throws Exception {
+
+
+	boolean flag=true;
+	 List<Object> list = new ArrayList<Object>();
+	 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	 if(!is_PriceRangeDisplayed()) {
+			list.add ( new Exception("Product Price not present"));	
+		 }
+	 if(!isPLP_ProductTitleDisplayed()) {
+			list.add ( new Exception("ProductTitle not present"));	
+		 }
+/*
+	 if(!isPLP_ImageDisplayed()) {
+			list.add ( new Exception("Image  not present"));	
+		 }		 
+	 
+*/	 	 
+	 if(!isPLP_BadgeDisplayed()) {
+			list.add ( new Exception("Badge not present in PLP"));	
+		 }
+	 
+	 if(!list.isEmpty()) {
+		 flag=false;
+			String s=null;
+			for (Object object : list) {
+			 s =s+object.toString();
+			}
+			throw new Exception(s);
+		
+	    }
+	return flag;
+
+	
+
+	
+}
+
+
+
+public boolean OurPriceIncart() throws Exception {
+
+
+
+
+	boolean flag=true;
+	 List<Object> list = new ArrayList<Object>();
+	 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	 if(!isPLP_ProductTitleDisplayed()) {
+			list.add ( new Exception("ProductTitle not present"));	
+		 }
+/*
+	 if(!isPLP_ImageDisplayed()) {
+			list.add ( new Exception("Image  not present"));	
+		 }		 
+	 
+*/	 	 
+	 if(!isPLP_BadgeDisplayed()) {
+			list.add ( new Exception("Badge not present in PLP"));	
+		 }
+	 
+	 if(!isPLP_OurPriceInCartDisplayed()) {
+			list.add ( new Exception("Our price in cart Text  not present in PLP"));	
+		 }	 
+	 if(!isPLP_OurPriceInCartToolTipDisplayed()) {
+			list.add ( new Exception("PLP our price in cart tool tip msg  not present in PLP"));	
+		 }
+	 
+	 if(!list.isEmpty()) {
+		 flag=false;
+			String s=null;
+			for (Object object : list) {
+			 s =s+object.toString();
+			}
+			throw new Exception(s);
+		
+	    }
+	return flag;
+
+	
+
+	
+
+	
+	
+	
+	
+	
+}
+
+
+
+public boolean verifyUnitPrice() throws Exception {
+
+	boolean flag=true;
+	 List<Object> list = new ArrayList<Object>();
+	 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	 if(!isPLP_ProductTitleDisplayed()) {
+			list.add ( new Exception("ProductTitle not present"));	
+		 }
+/*
+	 if(!isPLP_ImageDisplayed()) {
+			list.add ( new Exception("Image  not present"));	
+		 }		 
+	 
+	 */
+	 if(!ProductPrice()) {
+			list.add ( new Exception("ProductPrice  not present"));	
+		 }		 
+	 if(!isPLP__PPU_MSGDisplayed()) {
+			list.add ( new Exception("PPU MSg  not present"));	
+			
+		 }
+	 
+	 if(!list.isEmpty()) {
+		 flag=false;
+			String s=null;
+			for (Object object : list) {
+			 s =s+object.toString();
+			}
+			throw new Exception(s);
+		
+	    }
+	return flag;
+
+	
+}
+
+
+
+public boolean verifySpecialPrice() throws Exception {
+	boolean flag=true;
+	 List<Object> list = new ArrayList<Object>();
+	 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	 if(!isPLP_ProductTitleDisplayed()) {
+			list.add ( new Exception("ProductTitle not present"));	
+		 }
+/*
+	 if(!isPLP_ImageDisplayed()) {
+			list.add ( new Exception("Image  not present"));	
+		 }		 
+	 
+	 */
+	 if(!isPLP_SpecialPricingMessageDisplayed()) {
+			list.add ( new Exception("Special pricing message not present"));	
+		 }		 
+	
+	 
+	 if(!list.isEmpty()) {
+		 flag=false;
+			String s=null;
+			for (Object object : list) {
+			 s =s+object.toString();
+			}
+			throw new Exception(s);
+		
+	    }
+	return flag;
+
+	
+}
+
+public boolean verifyPLPPromotion() throws Exception {
+	
+
+	boolean flag=true;
+	 List<Object> list = new ArrayList<Object>();
+	 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	 if(!isPLP_ProductTitleDisplayed()) {
+			list.add ( new Exception("ProductTitle not present"));	
+		 }
+	 if(!ProductPrice()) {
+			list.add ( new Exception("Product Price not present"));	
+		 }
+/*
+	 if(!isPLP_ImageDisplayed()) {
+			list.add ( new Exception("Image  not present"));	
+		 }		 
+	 
+	 */
+	 if(!isPLP_PromotionMessageDisplayed()) {
+			list.add ( new Exception("promotion message not present"));	
+		 }		 
+	
+	 
+	 if(!list.isEmpty()) {
+		 flag=false;
+			String s=null;
+			for (Object object : list) {
+			 s =s+object.toString();
+			}
+			throw new Exception(s);
+		
+	    }
+	return flag;
+	
+}
+
+
+
+public boolean verifyClearanceStylesAvailable() throws Exception {
+
+boolean flag=true;
+	 List<Object> list = new ArrayList<Object>();
+	 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	 if(!isPLP_ProductTitleDisplayed()) {
+			list.add ( new Exception("ProductTitle not present"));	
+		 }
+	 if(!ProductPrice()) {
+			list.add ( new Exception("Product Price not present"));	
+		 }
+/*
+	 if(!isPLP_ImageDisplayed()) {
+			list.add ( new Exception("Image  not present"));	
+		 }		 
+	 
+	 */
+	 if(!isPLP_PromotionMessageDisplayed()) {
+			list.add ( new Exception("promotion message not present"));	
+		 }		 
+	
+	 
+	 if(!list.isEmpty()) {
+		 flag=false;
+			String s=null;
+			for (Object object : list) {
+			 s =s+object.toString();
+			}
+			throw new Exception(s);
+		
+	    }
+	return flag;
+
+
+}
+
+
+
+public boolean verifySomeStyleAvailable() throws Exception {
+	
+	boolean flag=true;
+	 List<Object> list = new ArrayList<Object>();
+	 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	 if(!isPLP_ProductTitleDisplayed()) {
+			list.add ( new Exception("ProductTitle not present"));	
+		 }
+	 if(!ProductPrice()) {
+			list.add ( new Exception("Product Price not present"));	
+		 }
+/*
+	 if(!isPLP_ImageDisplayed()) {
+			list.add ( new Exception("Image  not present"));	
+		 }		 
+	 
+	 */
+	 if(!isPLP_Some_Styles_AvailableDisplayed()) {
+			list.add ( new Exception("Some StyleAvailable not present"));	
+		 }		 
+	
+	 
+	 if(!list.isEmpty()) {
+		 flag=false;
+			String s=null;
+			for (Object object : list) {
+			 s =s+object.toString();
+			}
+			throw new Exception(s);
+		
+	    }
+	return flag;
+	
+}
+
+
+
+public void tapOnSearchedProduct() {
+
+	try {
+		Thread.sleep(2000);
+	} catch (InterruptedException e) {
+		e.printStackTrace();
+	}
+	MobileElement btnGoToPDP =null;
+		
+		
+    btnGoToPDP=	  driver.findElement(Locators.PDPPage.labelProductTitle);
+
+	GlobalMobileHelper.tapOnElement(btnGoToPDP);
+	
+	
+}
+
+
 	}
 
 

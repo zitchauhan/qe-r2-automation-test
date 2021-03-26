@@ -128,7 +128,27 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void isVariantValueDisplayed() {
 		assertTrue(pdp.isVariantValueDisplayed());
 	}
-	
+	@Then("^I choose to verify \"([^\"]*)\" in PDP Page$")
+	public void verify_PDP_Page(String args) throws Throwable {
+	   
+		assertTrue(pdp.isMessageDisplayed(args));
+	}
+
+	@Then("^I choose click on \"([^\"]*)\" in PDP page$")
+	public void click_on_in_PDP_page(String arg1) throws Throwable {
+	    
+		assertTrue(pdp.isVariantValueDisplayed());
+	}
+
+	@Then("^I choose to verify user navigated to PDP on Web$")
+	public void verify_user_navigated_to_PDP_on_Web() throws Throwable {
+	   
+		assertTrue(pdp.isNavigatedToPDPOnWeb());
+	}
+
 
 	
 }
+	
+	
+	

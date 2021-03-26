@@ -31,20 +31,20 @@ Feature: Verify Details of PLP for product
     Then User sees the homepage
     When User Sees the Search Box
     Then User clicks on the Search Box
-    And User search for the "SearchKeyword"
-   Then User sees all products related to search Keyword    
+    And User search for the "<SearchKeyword>"
+#   Then User sees all products related to search Keyword    
   Then verify the "<SearchKeyword>" of product in PLP page attributes
  Examples: 
 |	 SearchKeyword                          | 
 #|   colour_varient_prod                    |
-#|   price_Prod                             |
-|   Price_Range_Prod                        |
+#|   Unitprice_Prod                         |
+#|   Price_Range_Prod                       |
 #|	clearence_Prod                          |	
 #|	OurPriceIncart                          |
-#|	Ammunication_prod                       |
-|	specialprice                            |
-|	Promotion-data                          | 
-#|	Clearance_Styles_Available              |
+#|	ammunitionProd                          |
+#   |	specialprice                        |
+# |	Promotion_data                          | 
+#	Clearance_Styles_Available              |
 #|	Some_styles_only_available_online_prod  |
 
  

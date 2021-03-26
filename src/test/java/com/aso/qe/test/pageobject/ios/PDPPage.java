@@ -1,5 +1,8 @@
 package com.aso.qe.test.pageobject.ios;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 
@@ -275,6 +278,71 @@ public class PDPPage {
 	}
 	public boolean isVariantValueDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorValue);
+	}
+
+	public boolean isMessageDisplayed(String args) throws Exception {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 List<Object> list = new ArrayList<Object>();
+		boolean flag=true;
+		if(args.equalsIgnoreCase("App_store_guidelines")) {
+			// 
+			String textguidelines=GlobalMobileHelper.findData(args);
+			 String elementtext  = driver.findElement(Locators.PDPPage.AppStoreGuidelines).getText();
+			if(textguidelines.equalsIgnoreCase(elementtext)) {
+				
+				flag=true;
+			}else {
+				list.add ( new Exception("AppStoreGuidelines  not present "));	
+			}
+
+			
+		}
+		
+		if(args.equalsIgnoreCase("important_Product_and_Safety_Information")) {
+			// 
+			String textguidelines=GlobalMobileHelper.findData("important_Product_and_Safety_Information");
+			String InformationPoint1=GlobalMobileHelper.findData("important_Product_and_Safety_InformationPoint1");
+			String InformationPoint2=GlobalMobileHelper.findData("important_Product_and_Safety_InformationPoint2");
+			String InformationPoint3=GlobalMobileHelper.findData("important_Product_and_Safety_InformationPoint3");
+			String InformationPoint4=GlobalMobileHelper.findData("important_Product_and_Safety_InformationPoint4");
+			 
+			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformation).getText().equalsIgnoreCase(textguidelines)) {
+				list.add ( new Exception("ProductPrice  not present"));	
+			}
+			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformationPara1).getText().equalsIgnoreCase(InformationPoint1)) {
+				list.add ( new Exception("important_Product_and_Safety_InformationPoint  not present"));	
+			}
+			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformationPara2).getText().equalsIgnoreCase(InformationPoint2)) {
+				list.add ( new Exception("important_Product_and_Safety_InformationPoint2  not present"));	
+			}
+			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformationPara3).getText().equalsIgnoreCase(InformationPoint3)) {
+				list.add ( new Exception("important_Product_and_Safety_InformationPoint3  not present"));	
+			}
+			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformationPara4).getText().equalsIgnoreCase(InformationPoint4)) {
+				list.add ( new Exception("important_Product_and_Safety_InformationPoint4  not present "));	
+			}
+			
+		}
+		 if(!list.isEmpty()) {
+			 flag=false;
+				String s=null;
+				for (Object object : list) {
+				 s =s+object.toString();
+				}
+				throw new Exception(s);			    
+		 }
+		return flag;
+		
+	}
+
+	public boolean isNavigatedToPDPOnWeb() {
+		
+		return false;
 	}
 	
 	
