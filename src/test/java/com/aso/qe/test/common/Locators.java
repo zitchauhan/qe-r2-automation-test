@@ -13,11 +13,19 @@ public class Locators {
 	}
 	
 	public static class LoginPage{
-		public static By emailEditBox = By.xpath("//*[contains(@value,'Email')]");
-		public static By passwordEditBox = By.xpath("//*[contains(@value,'Password')]");
-		public static By loginButton = By.xpath("//XCUIElementTypeButton[contains(@label,'LOG IN')]");
-		public static By continueAsGuestButton = By.xpath("//*[contains(@label,'Continue as Guest')]");
+
 		public static By HomeLogin = By.id("guest_label_test_id");
+		public static By emailEditBox = By.id("tf_email");
+		public static By passwordEditBox = By.id("tf_password");
+		public static By loginButton = By.id("btn_login");
+		public static By continueAsGuestButton = By.id("guest_label_test_id");
+		public static By passwordShowButton = By.id("btn_show_hide");
+		public static By passwordHideButton = By.id("btn_show_hide");
+		public static By createAccountButton = By.id("btn_create_account");
+		public static By forgotPasswordLink = By.id("btn_forgot");
+		public static By screenEmailError = By.id("lbl_email_error");
+		public static By screenPasswordError = By.id("lbl_password_error");
+		public static By cancelButton = By.id("btn_header_cancel");
 	}
 	
 	public static class HomePage{
@@ -31,9 +39,7 @@ public class Locators {
 		
 		
 	}
-	public static class PLPPage{
-		public static By productTitle = By.id("lbl_product_title");
-	}
+
 	public static class SearchPage{
 		public static By searchBar = By.id("search_bar");
 		public static By cancelBtn = By.id("btn_cancel");
@@ -80,9 +86,14 @@ public class Locators {
 		
 		
 	}
-	
+
 	public static class ShopPage{
 		public static By shopPageTitle = By.id("lbl_shop");
+		public static By categoryTitle = By.id("lbl_category_title");
+		public static By categoriesList = By.id("lbl_category_list_item");
+		public static By categoryBackBtn = By.id("btn_back");
+		public static By categorytitle = By.id("lbl_category_title");
+		public static By shopAllLink = By.id("btn_shop_all");
 	}
 	
 	public static class WishlistPage{
@@ -91,6 +102,7 @@ public class Locators {
 	
 	public static class AccountPage{
 		public static By accountTitle = By.id("lbl_account");
+		public static By loginLink = By.xpath("//*[contains(@label, 'LOGIN')]");
 	}
 	
 	public static class CartPage{
@@ -120,11 +132,55 @@ public class Locators {
 		public static By labelEmptyCartInfo = By.id("lbl_user_specific_message");
 		public static By buttonLogIn = By.id("btn_login");
 		public static By buttonCreateAnAccount = By.id("btn_create_an_account");
-		public static By cartSizeVariant = By.xpath("//*[contains(@label,\"Medium\")]");
+		public static By userIcon = By.id("icon_user");
+		public static By guestCheckoutLabel = By.id("lbl_guest_checkout");
+		public static By signInLabel = By.id("lbl_sign_in_guest_checkout");
+		public static By signInButton = By.id("btn_sign_in");
+		public static By labelShopWithConfidence = By.id("lbl_shop_with_confidence_label");
+		public static By labelWeAccept = By.id("lbl_we_accept");
+		public static By securityReassuranceMessage = By.id("lbl_security_reassurance_message");
+		public static By paymentModeImages = By.id("img_payment_modes");
 		
+		public static By productDisclaimerLabel = By.id("disclaimer_messages_label"); // Can be _0 for one product
+		public static By productDisclaimerReadMore = By.xpath("//*[contains(@label, 'Read More')]");
 		
-		
-		
+		public static By textChangeZipCode = By.id("lbl_change_zipcode_input");
+		public static By buttonSubmit = By.xpath("//*[contains(@label, 'SUBMIT')]");
+		public static By labelEstimatedShipping = By.xpath("//*[contains(@label, 'Estimated Shipping to')]");
+		public static By lableChangeZipCodeModal = By.id("lbl_change_zipcode_text");
+		public static By buttonShippingPolicy = By.id("btn_shipping_policy");
+		public static By buttonReturnPolicy = By.id("btn_return_policy");
+		public static By labelFreeStoreReturn = By.id("lbl_header");
+		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
+		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
+		public static By cartSizeVariant = By.id("lbl_product_attribute_value_Size");
+	}
+	
+	public static class PLPPage{
+		public static By PLPHeader = By.id("lbl_product_listing_header_title");
+		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
+		public static By subCategoryButton = By.id("btn_category");
+		public static By textChangeZipCode = By.id("lbl_change_zipcode_input");
+		public static By buttonSubmit = By.xpath("//*[contains(@label, 'SUBMIT')]");
+		public static By labelEstimatedShipping = By.xpath("//*[contains(@label, 'Estimated Shipping to')]");
+		public static By lableChangeZipCodeModal = By.id("lbl_change_zipcode_text");
+		public static By cartSizeVariant = By.id("lbl_product_attribute_value_Size");
+		public static By buttonShippingPolicy = By.id("btn_shipping_policy");
+		public static By buttonReturnPolicy = By.id("btn_return_policy");
+		public static By labelFreeSStoreReturn = By.id("lbl_header");
+		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
+		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
+		public static By securityReassuranceMessage = By.id("lbl_shop_with_confidence_subheading");
+		public static By productTitle = By.id("lbl_product_title");
+	
+	}
+	
+	public static class CheckoutPage{
+		public static By productThumbNail = By.xpath("(//XCUIElementTypeOther[@name=\"Product Image\"])[2]/XCUIElementTypeOther");
+		public static By productTitle = By.id("lbl_product_title");
+		public static By productSKU= By.xpath("//*[contains(@name,'S K U')]");
+		public static By productPrice = By.id("lbl_product_price");
+		public static By buttonCheckout = By.name("Checkout");
 	}
 	public static class Category{
 		public static By l1_catgoryElelnt = By.id("lbl_category_list_item");

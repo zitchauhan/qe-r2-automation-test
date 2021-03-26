@@ -22,7 +22,6 @@ public class SearchPageStepDef extends GlobalMobileHelper{
 	@And("^User search for the \"(.*?)\"$")
 	public void searchEdit(String searchKeyword) {
 	searchPage.tapOnSearchKeyword(searchKeyword);
-	
 	}
 	
 	

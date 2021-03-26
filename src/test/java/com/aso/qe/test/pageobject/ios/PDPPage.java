@@ -2,24 +2,40 @@ package com.aso.qe.test.pageobject.ios;
 
 import java.util.ArrayList;
 import java.util.List;
+import static org.junit.Assert.assertTrue;
+
+import org.openqa.selenium.support.PageFactory;
+import java.lang.UnsupportedOperationException;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import static org.junit.Assert.assertTrue;
 
+import org.openqa.selenium.support.PageFactory;
+import java.lang.UnsupportedOperationException;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.stepdefinition.ios.Hooks;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class PDPPage {
 	private static final Logger logger = Logger.getLogger(Hooks.class);
 	private AppiumDriver<MobileElement> driver;
+	
 	public PDPPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
+	  PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
+	Context context = new Context();
 	
 	@iOSXCUITFindBy(id="lbl_your_cart")
 	public MobileElement imageHero;
@@ -62,8 +78,7 @@ public class PDPPage {
 	}
 	
 	public boolean isProductTitleDisplayed() {
-		MobileElement productTitle = driver.findElement(Locators.PDPPage.labelProductTitle);
-		return productTitle.isDisplayed();
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.labelProductTitle);
 	}
 	
 	public String getProductTitle() {
@@ -72,6 +87,7 @@ public class PDPPage {
 		else
 			return null;
 	}
+
 	
 	public boolean isProductPriceDisplayed() {
 		MobileElement productPrice = driver.findElement(Locators.PDPPage.labelProductPrice);
@@ -229,6 +245,21 @@ public class PDPPage {
 		
 		return false;
 	}
+	
+	public void verifyProductAttribute(String productAttributeName) throws InterruptedException {
+		Thread.sleep(7000);
+		switch(productAttributeName.toLowerCase())
+		{
+		case "image":
+			assertTrue(driver.findElement(Locators.PDPPage.imageHero).isDisplayed());
+		case "title":
+			assertTrue(driver.findElement(Locators.PDPPage.labelProductTitle).isDisplayed());
+		case "price":
+			assertTrue(driver.findElement(Locators.PDPPage.labelProductPrice).isDisplayed());
+			context.setProductPriceOnPDP(driver.findElement(Locators.PDPPage.labelProductPrice).getText());
+		}
+	}
+
 	public boolean isSizeVarientDisplayed() {
 		boolean isSizeVarientDisplayed = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
 		return isSizeVarientDisplayed;
@@ -253,7 +284,6 @@ public class PDPPage {
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		MobileElement varientSizeValue = driver.findElement(Locators.PDPPage.sizeValue);
@@ -346,4 +376,18 @@ public class PDPPage {
 	}
 	
 	
+	public void selectDeliveryOption(String optionName) throws UnsupportedOperationException {
+		// optionName can be home/store
+		if (optionName.toLowerCase().equals("home")) {
+			homeDeliveryRadio.click();
+			logger.debug("Selected delivery option as " + homeDeliveryRadio.toString());
+		}else if (optionName.toLowerCase().equals("store")) {
+			freeStorePickupRadio.click();
+			logger.debug("Selected delivery option as " + freeStorePickupRadio.toString());
+		}else {
+			throw new UnsupportedOperationException();
+		}
+		
+	}
 }
+
