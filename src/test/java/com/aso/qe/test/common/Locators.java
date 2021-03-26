@@ -42,6 +42,7 @@ public class Locators {
 	public static class PLPPage{
 		public static By productTitle = By.id("lbl_product_title");
 		public static By rating= By.xpath("//XCUIElementTypeOther[contains(@label,'4')]");
+		public static By toggleOOS = By.id("");
 	}
 	public static class SearchPage{
 		public static By searchBar = By.id("search_bar");
@@ -65,19 +66,24 @@ public class Locators {
 		public static By qtyEditBox = By.id("input_field_id");
 		public static By colorVariant = By.id("lbl_color_title");
 		public static By colorValue = By.id("lbl_color_value");
+		public static By firstColor= By.id("color_list_item_0");
 		public static By sizeVariant =By.id("lbl_size_title");
 		public static By sizeValue = By.id("lbl_size_value");
-		public static By smallSize = By.id("size_list_item_0");
-		public static By mediumSize = By.id("size_list_item_1");
-		public static By largeSize = By.id("size_list_item_2");
-		public static By xLargeSize = By.id("size_list_item_3");
-		public static By xxLargeSize= By.id("size_list_item_4");
+		public static By xSmallSize = By.id("size_list_item_0");
+		public static By smallSize = By.id("size_list_item_1");
+		public static By mediumSize = By.id("size_list_item_2");
+		public static By largeSize = By.id("size_list_item_3");
+		public static By xLargeSize= By.id("size_list_item_4");
 		public static By btnSizeChart = By.id("btn_size_chart");
 		//public static By sizeChartTitle =By.id("lbl_size_chart");
 		public static By sizeChartTitle =By.id("lbl_page_title");
 		//public static By btnCancelSizeChart = By.id("btn_cancel");
 		public static By btnCancelSizeChart = By.id("btn_back");
-		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");	
+		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");
+		public static By pickUpAndDeliveryTitle = By.id("lbl_p_and_d_options");
+		public static By freeStorePickUp = By.id("lbl_free_store_pickup");
+		public static By freeStorePickUpRadioBtn = By.id("rd_free_store_pickup");
+		public static By homeDeliveryTitle = By.id("lbl_home_delivery");
 	}
 	
 	public static class ShopPage{

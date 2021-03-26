@@ -123,6 +123,14 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void isVariantValueDisplayed() {
 		assertTrue(pdp.isVariantValueDisplayed());
 	}
+	@Then("^User sees the Pickup And Delivery Option$")
+	public void isPickUpandDeliveryOptionDisplayed() {
+		
+	}
+	@Then("^User click on the Color Variant$")
+	public void tapOnColor() {
+		pdp.tapOnColor();
+	}
 	
 
 	

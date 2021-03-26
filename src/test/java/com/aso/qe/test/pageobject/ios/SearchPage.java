@@ -68,6 +68,22 @@ public class SearchPage {
 		}
 		GlobalMobileHelper.tapOnElement(Locators.SearchPage.cancelBtn);
 	}
+	public boolean isOutOfStockToggleDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.toggleOOS);
+	}
+	public boolean isOosTogleDisabled() {
+		MobileElement oOSToggle = driver.findElement(Locators.PLPPage.toggleOOS);
+		boolean stat = oOSToggle.isEnabled();
+		if(stat==true) {
+			return false;
+		}else {
+		return true;
+		}
+	}
+	public void oosToggleEnable() {
+		GlobalMobileHelper.tapOnElement(Locators.PLPPage.toggleOOS);
+		
+	}
 	
 		
 	}

@@ -49,6 +49,7 @@ Scenario: Verify user able to see Product variant of golf ball
     And User search for the "FixVariantProduct"
     And user click on Product
      Then user sees the Variant on PDP
+     Then User click on the Color Variant
      And user sees the value of variant
      And user click on Home Delivery
 	When User taps on add to cart button

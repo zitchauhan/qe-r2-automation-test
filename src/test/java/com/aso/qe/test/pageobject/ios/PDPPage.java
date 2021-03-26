@@ -59,8 +59,9 @@ public class PDPPage {
 	}
 	
 	public boolean isProductTitleDisplayed() {
-		MobileElement productTitle = driver.findElement(Locators.PDPPage.labelProductTitle);
-		return productTitle.isDisplayed();
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.labelProductTitle);
+		
+		
 	}
 	
 	public String getProductTitle() {
@@ -189,6 +190,14 @@ public class PDPPage {
 	}
 	public boolean isVariantValueDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorValue);
+	}
+	public boolean isPickUpAndDeliveryOptionDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.pickUpAndDeliveryTitle);
+	}
+
+	public void tapOnColor() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.firstColor);
+		
 	}
 	
 	
