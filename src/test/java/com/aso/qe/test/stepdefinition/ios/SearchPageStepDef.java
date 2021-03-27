@@ -33,7 +33,7 @@ public class SearchPageStepDef extends GlobalMobileHelper{
 	}
 	@And("^User observe message \"(.*?)\"$")
 	public void validatewrongSearch(String msg) {
-	
+
 	assertTrue(searchPage.isSearchErrorDisplayed(msg));
 	}
 	@And("^user click on Product$")
@@ -55,6 +55,10 @@ public class SearchPageStepDef extends GlobalMobileHelper{
 	@When("^User Enabled the OOS toggle$")
 	public void enableOosTogle() {
 		searchPage.oosToggleEnable();
+	}
+	@Then("^User Sees the Product which are in stock$")
+	public void isOosProductsHide() {
+		searchPage.isOosProductHide();
 	}
 	
 	

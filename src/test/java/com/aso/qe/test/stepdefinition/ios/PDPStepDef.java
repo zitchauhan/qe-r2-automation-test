@@ -131,6 +131,12 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void tapOnColor() {
 		pdp.tapOnColor();
 	}
+	@And("^Add to cart button is disabled$")
+	public void isEnabledAddToCart() {
+		pdp.isDisabledAddtoCart();
+			
+		
+	}
 	
 
 	

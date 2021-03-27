@@ -199,6 +199,17 @@ public class PDPPage {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.firstColor);
 		
 	}
+
+	public boolean isDisabledAddtoCart() {
+		MobileElement addToCart = driver.findElement(Locators.PDPPage.buttonAddToCart);
+		boolean stat = addToCart.isEnabled();
+		if(stat==true) {
+			return false;
+		}else {
+		return true;
+		}
+		
+	}
 	
 	
 }
