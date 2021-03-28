@@ -1,9 +1,10 @@
 Feature: White Glove Service Options on Checkout screen for Bulky and white glove products
 
-  @Sprint2 @ST-OMNI-24580 @TC-OMNI-
+  @Sprint2 @ST-OMNI-24580 @TC-OMNI-12345
   Scenario: Verify disclaimer message and shipping method label
     Given User launches the application
     And User Logs into the application
+    And User taps on home in bottom nav
     And User Sees the Search Box
     And User clicks on the Search Box
     And User search for the "WhiteGlove"

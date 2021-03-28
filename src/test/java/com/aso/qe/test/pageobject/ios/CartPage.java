@@ -683,7 +683,7 @@ public class CartPage {
     public boolean hasWhiteGloveBulkyItem() {
 		boolean result = false;
 		// Get product title from the properties file
-		String WhiteGloveBulky = PropertiesHelper.getInstance().getMobileTestDataProperty("WhileGloveBulky");
+		String WhiteGloveBulky = PropertiesHelper.getInstance().getMobileTestDataProperty("WhiteGloveBulky");
 		return productOnCartExistsByTitle(WhiteGloveBulky);
 	}
 
@@ -692,6 +692,7 @@ public class CartPage {
 	 * @param productTitle
 	 * @return true or false based on search result
 	 */
+
 	private boolean productOnCartExistsByTitle(String productTitle) {
     	boolean result = false;
     	List<MobileElement> productTiles = driver.findElements(Locators.CartPage.labelProductTitle);

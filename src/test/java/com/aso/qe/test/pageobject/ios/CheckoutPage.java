@@ -153,12 +153,24 @@ public class CheckoutPage {
 	}
 
 	/**
-	 * A Method to verify that the required Delivery options for WhiteGloveBulky items are present
+	 * A Method to verify that the required shipping methods for WhiteGloveBulky items are present
 	 * on the checkout page
 	 */
     public void verifyDeliveryOptionsForWhiteProductBulkyItem() {
 		/* Created By jitsingh7 on 11/04/21 */
-		// TODO: To be completed by 12th
+		List<String> WhiteGloveBulkyShippingMethods = PropertiesHelper
+				.getInstance().getMobileTestDataPropertyList("WhiteGloveBulkyShippingMethods");
+		List<MobileElement> shippingMethodsElements = driver
+				.findElements(Locators.CheckoutPage.labelShippingMethods);
+
+		List<String> shippingMethodElementsText = new ArrayList<String>();
+		for (MobileElement shippingMethodElement: shippingMethodsElements){
+			shippingMethodElementsText.add(shippingMethodElement.getText().trim());
+		}
+
+		for(String shippingMethod: WhiteGloveBulkyShippingMethods){
+			assertTrue("Shipping method exists ", shippingMethodElementsText.contains(shippingMethod));
+		}
     }
 }
 
