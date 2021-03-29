@@ -27,7 +27,7 @@ public class HomePage {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		MobileElement btnGoToPDP = driver.findElement(Locators.HomePage.buttonGoToPDP);
+		MobileElement btnGoToPDP = driver.findElement(Locators.HomePage.shopNewLabel);
 		return btnGoToPDP.isDisplayed();
 	}
 	

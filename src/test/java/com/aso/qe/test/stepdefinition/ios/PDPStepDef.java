@@ -144,6 +144,9 @@ public class PDPStepDef extends GlobalMobileHelper{
 		assertTrue(pdp.isVariantValueDisplayed());
 	}
 	
-
+	@Then("^User taps on change store link$")
+	public void user_taps_on_change_store_link() throws Throwable {
+	   pdp.tapOnChangeStoreLink();
+	}
 	
 }

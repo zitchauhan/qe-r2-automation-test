@@ -33,6 +33,7 @@ public class Locators {
 		//public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
 		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
 		public static By searchBox = By.id("btn_Search");
+		public static By shopNewLabel = By.xpath("//*[contains(@label,'Shop New')]");
 		
 		
 	}
@@ -91,7 +92,7 @@ public class Locators {
 		//public static By btnCancelSizeChart = By.id("btn_cancel");
 		public static By btnCancelSizeChart = By.id("btn_back");
 		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");
-
+		public static By changeStoreLink = By.xpath("/*[contains(@label,'Change Store')]");
 
 	}
 
@@ -174,9 +175,10 @@ public class Locators {
 		public static By productPrice = By.id("lbl_product_price");
 		public static By buttonCheckout = By.name("CHECKOUT");
 		public static By addNewAddress =By.id("");
-		public static By addYourShippingInformation =By.id("");
+		public static By addYourShippingInformation =By.xpath("//*[contains(@label, 'Location Icon')]");
 		public static By shippingMessage = By.id("");
-		public static By savedAddress = By.id("");
+		public static By savedAddress = By.xpath("//*[contains(@name='lbl_list_address')]");
+		public static By saveAddressBtn= By.xpath("//*[contains(@label, 'Save address']");
 	}
 	
 	public static class AddAddress{
@@ -191,4 +193,13 @@ public class Locators {
 		 public static By inputPhone = By.id("tf_phone_no");
 
 		}
+	public static class storePickup{
+		public static By findYourStoreMessage = By.xpath("//*[contains(@label, 'Find Your nearest stores')]");
+		public static By allowLocationService = By.xpath("//*[contains(@label, 'ALLOW LOCATION SERVICES')]");
+		public static By enterCityOrZipcode = By.xpath("//*[contains(@label, 'ENTER CITY OR ZIPCODE')]");
+		public static By maybeLater = By.xpath("//*[contains(@label, 'Maybe Later')]");
+		public static By allowAllTheTime = By.xpath("//*[contains(@label, 'Allow all the time')]");
+		public static By allowWhileUsingApp = By.xpath("//*[contains(@label, 'Allow while using the app')]");
+		public static By doNotAllow = By.xpath("//*[contains(@label, 'Don't allow')]");
+	}
 }

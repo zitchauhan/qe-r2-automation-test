@@ -11,6 +11,7 @@ Feature: Checkout
     Then User clicks on the Search Box
     And User search for the "SearchKeyword"
     And user click on Product
+    And user click on Home Delivery
     When User taps on add to cart button
     And User taps on View Cart button
     Then User is navigated To Cart Screen
@@ -39,6 +40,7 @@ Feature: Checkout
     Then User clicks on the Search Box
     And User search for the "SearchKeyword"
     And user click on Product
+    And user click on Home Delivery
     When User taps on add to cart button
     And User taps on View Cart button
     Then User is navigated To Cart Screen
@@ -65,6 +67,7 @@ Feature: Checkout
     Then User clicks on the Search Box
     And User search for the "SearchKeyword"
     And user click on Product
+    And user click on Home Delivery
     When User taps on add to cart button
     And User taps on View Cart button
     Then User is navigated To Cart Screen
@@ -88,6 +91,7 @@ Feature: Checkout
     Then User clicks on the Search Box
     And User search for the "SearchKeyword"
     And user click on Product
+    And user click on Home Delivery
     When User taps on add to cart button
     And User taps on View Cart button
     Then User is navigated To Cart Screen
