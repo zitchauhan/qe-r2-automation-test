@@ -2,6 +2,8 @@ package com.aso.qe.test.stepdefinition.ios;
 
 import static org.junit.Assert.assertTrue;
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.Locators;
+import com.aso.qe.test.pageobject.ios.Context;
 import com.aso.qe.test.pageobject.ios.PDPPage;
 
 import cucumber.api.java.en.And;
@@ -157,47 +159,27 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void isVariantValueDisplayed() {
 		assertTrue(pdp.isVariantValueDisplayed());
 	}
-	@Then("^User sees the Pickup And Delivery Option$")
-	public void isPickUpandDeliveryOptionDisplayed() {
-		
-	}
-	@Then("^User click on the Color Variant$")
-	public void tapOnColor() {
-		pdp.tapOnColor();
-	}
-	@And("^Add to cart button is disabled$")
-	public void isEnabledAddToCart() {
-		pdp.isDisabledAddtoCart();
-				
-	}
-	@Then("^user enabled the radio button$")
-	public void tapOnRadioBtn() {
-		pdp.tapOnRadioBtn();
-	}
-	@And("^User sees the label \"([^\"]*)\"$")
-	public void isLabelDisplayed(String label) {
-		assertTrue(pdp.isLabelDisplayed(label));
-	}
-	@And("^User sees the Sub label \"([^\"]*)\"$")
-	public void isSubLabelDisplayed(String sublabel) {
-		assertTrue(pdp.isSubLabelDisplayed(sublabel));
-	}
-	@And("^user Select the Store \"([^\"]*)\"$")
-	public void changeStore(String storeName) {
-		pdp.changeStore(storeName);
-	}
-	@And("^User sees the \"([^\"]*)\"$")
-	public void isMessageDisplayed(String expactedMsg) {
-		
-	}
-
-	
 	
 	@Then("^User taps on change store link$")
 	public void user_taps_on_change_store_link() throws Throwable {
 		swipeScreen(Direction.UP,2);
 	   pdp.tapOnChangeStoreLink();
 	}
+    @And("^User selects delivery option as \"(.*?)\"$")
+    public void userSelectsDeliveryOptionAs(String deliveryOption) {
+
+		switch (deliveryOption.toLowerCase()) {
+			case "store pickup":
+				pdp.selectDeliveryOption("store");
+				break;
+			case "home delivery":
+				pdp.selectDeliveryOption("home");
+				break;
+			default:
+				throw new UnsupportedOperationException("No other delivery option is supported");
+		}
+
+    }
 	@Then("^I choose to verify \"([^\"]*)\" in PDP Page$")
 	public void verify_PDP_Page(String args) throws Throwable {
 	   

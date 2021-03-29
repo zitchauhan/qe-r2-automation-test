@@ -416,7 +416,9 @@ public class PDPPage {
 		}else {
 			throw new UnsupportedOperationException();
 		}
-		
+
+		MobileElement productListed = driver.findElement(Locators.PDPPage.labelProductTitle);
+		Context.setCurrentProductTitle(productListed.getText().trim()); // storing product title for later use
 	}
 
 	public void tapOnRadioBtn() {
