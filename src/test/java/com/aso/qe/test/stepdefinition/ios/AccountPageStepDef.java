@@ -16,4 +16,9 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	public void userIsOnHomePage() {
 		assertTrue(accountPage.isAccountPageDisplayed());
 	}
+	
+	@Then("^User enters \"(.*?)\" in \"(.*?)\" field on add address screen$")
+	 public void enterFieldValuesOnAddAddress(String value,String field) {
+	 accountPage.enterFieldValuesOnAddAddress(value,field);
+	}
 }

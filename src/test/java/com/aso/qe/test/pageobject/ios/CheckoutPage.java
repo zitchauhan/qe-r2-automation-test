@@ -1,7 +1,17 @@
 package com.aso.qe.test.pageobject.ios;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import java.util.List;
+import java.util.Random;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
+
+import com.aso.qe.framework.common.PropertiesHelper;
+import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.Locators;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -15,5 +25,91 @@ public class CheckoutPage {
 	  this.driver = driver;
 	  PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	 }
+	AccountPage accountPage = new AccountPage(driver);
+public void isAddressDisplayed() {
+		
+	}
+	public void verifyDefaultAddress() {
 	
+		
+	}
+	public void verifyMessage() {
+		assertTrue("Shipping message is not displayed",GlobalMobileHelper.isElementDisplayed(Locators.CheckoutPage.shippingMessage));	
+	}
+	
+	public void editFieldValue(String fieldName) {
+		 		String key;
+		 		switch (fieldName){
+				case "First Name":
+					key="FirstName";
+					break;
+				case "Last Name":
+		 			key="LastName";
+				    break;
+				case "Address":
+					key="Address";
+					break;
+				case "Apt Number":
+					key="AptNumber";
+					break;
+				case "ZIP Code":
+					key="ZipCode";
+					break;
+				case "City":
+					key="city";
+					break;
+				case "Phone":
+					key="Phone";
+					break;
+				default:
+					throw new IllegalStateException("Wrong field");
+					}
+		 		List<String> list = PropertiesHelper.getInstance().getMobileTestDataPropertyList(key);
+		 		assertTrue("could not find the "+key+ " in property file", list.size()>=0);
+		 		
+		 		Random random = new Random();
+		 		int max=4, min=0;
+		 		int randomNum = random.nextInt(4);
+		 		String updatedField = list.get(randomNum);
+		 		accountPage.enterFieldValuesOnAddAddress(updatedField,fieldName);	
+		 		Context.setUpdatedAddressField(updatedField);
+			 	}
+	
+	public void tapOnEditAddressLink(String arg) {
+		List<MobileElement> addressLocatorsList = driver.findElements(Locators.CheckoutPage.savedAddress);
+		assertTrue("Saved address are not displaying", addressLocatorsList.size()>=0);
+		if(arg.equalsIgnoreCase("First"))
+		GlobalMobileHelper.tapOnElement(addressLocatorsList.get(0));
+		
+	}
+	
+	public void verifyEditShippingAddressPage() {
+		assertTrue("User is not on edit screen",GlobalMobileHelper.isElementDisplayed(Locators.AddAddress.inputFirstName));
+		
+	}
+	
+	public void isAddressDisplayed(String visibility) {
+		List<MobileElement> addressLocatorsList = driver.findElements(Locators.CheckoutPage.savedAddress);
+		if(visibility.equalsIgnoreCase("not displayed")) {
+			assertFalse("Saved address are displaying", addressLocatorsList.size()<=0);
+		} 
+		else if (visibility.equalsIgnoreCase("displayed")) {
+			assertTrue("Saved address are not displaying", addressLocatorsList.size()>=0);
+			List<String> addressList = null;
+			for(int i=0;i<addressLocatorsList.size();i++) {
+				addressList.add(i, addressLocatorsList.get(i).getText());
+			}
+			Context.setSavedAddressesList(addressList);
+		}
+		
+	}
+	public void verifyUpdatedinformation(String addressindex) {
+		List<MobileElement> addressLocatorsList = driver.findElements(Locators.CheckoutPage.savedAddress);
+			assertFalse("Saved address are displaying", addressLocatorsList.size()<=0);
+		
+		if(addressindex.equalsIgnoreCase("first")) {
+			assertTrue("Updated field is not reflecting in saved address",addressLocatorsList.get(0).getText().contains(Context.getUpdatedAddressField()));			
+		}
+	}
 }
+

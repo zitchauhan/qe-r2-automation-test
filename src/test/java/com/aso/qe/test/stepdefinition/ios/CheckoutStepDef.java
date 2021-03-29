@@ -72,8 +72,8 @@ public class CheckoutStepDef extends GlobalMobileHelper {
 	}
 	
 	@Then("^User verifies existing address are \"([^\"]*)\" on shipping information screen$")
-	public void user_verifies_existing_address_are_on_shipping_information_screen(String arg1) throws Throwable {
-		checkoutPage.isAddressDisplayed();
+	public void user_verifies_existing_address_are_on_shipping_information_screen(String visibility) throws Throwable {
+		checkoutPage.isAddressDisplayed(visibility);
 	}
 	
 	@Then("^User sees \"([^\"]*)\" on shipping information screen$")
@@ -90,5 +90,28 @@ public class CheckoutStepDef extends GlobalMobileHelper {
 	public void user_sees_address_not_verified_message_on_shipping_information_screen() throws Throwable {
 		checkoutPage.verifyMessage();
 	}
+	@Then("^User taps on chevron icon in shipping section$")
+	public void user_taps_on_chevron_icon_in_shipping_section() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   assertTrue("Add you shipping information link is not available",GlobalMobileHelper.isElementDisplayed(Locators.CheckoutPage.addYourShippingInformation));
+	GlobalMobileHelper.tapOnElement(Locators.CheckoutPage.addYourShippingInformation);
+	}
+	
+	@Then("^User edit the \"([^\"]*)\"$")
+	public void user_edit_the_field(String fieldName) throws Throwable {
+		checkoutPage.editFieldValue(fieldName);
+	}
+	@Then("^User taps on edit link of \"([^\"]*)\" address$")
+	public void user_taps_on_edit_link_of_address(String arg) throws Throwable {
+	   checkoutPage.tapOnEditAddressLink(arg);
+	}
 
+	@Then("^User navigated to edit shipping address screen$")
+	public void user_navigated_to_edit_shipping_address_screen() throws Throwable {
+	    checkoutPage.verifyEditShippingAddressPage();
+	}
+	@Then("^User verifies information is updated in \"([^\"]*)\" address$")
+	public void user_verifies_information_is_updated_in_address(String addressindex) throws Throwable {
+	    checkoutPage.verifyUpdatedinformation(addressindex);
+	}
 }
