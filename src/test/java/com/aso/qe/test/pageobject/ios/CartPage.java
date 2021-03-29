@@ -1,12 +1,7 @@
 package com.aso.qe.test.pageobject.ios;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
-
 import org.apache.log4j.Logger;
+import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
@@ -17,6 +12,12 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+
+import java.util.List;
+import java.util.Locale;
+
+import static org.hamcrest.Matchers.containsString;
+import static org.junit.Assert.*;
 
 public class CartPage {
 
@@ -386,6 +387,25 @@ public class CartPage {
 	//OMNI-22070 - end
 
 
+	public void isOrderTotalValueUpdated(String reason) {
+		MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
+		String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
+		try {
+			if (reason.toLowerCase().equals("shipping")) { // can be updated for other reasons later
+				if (shippingChargesToZipCode > 0) {
+					assertNotEquals(currentTotalValue, Float.parseFloat(orderTotalValue), 0.00);
+				} else {
+					assertEquals(currentTotalValue, Float.parseFloat(orderTotalValue), 0.00);
+				}
+			}
+
+			logger.debug("Order total value has been updated : " + orderTotalValue);
+		} catch (Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+	}
+
+
 	public void applyPromoCode(String promoCode) {
 
 		promoCodeInputField.sendKeys(promoCode);
@@ -527,6 +547,98 @@ public class CartPage {
 	public void verifyPromoCodeErrorMessage(String expectedMessage) {
 		assertEquals(expectedMessage, promoCodeErrorMessage.getText().trim());
 		logger.debug("Promo code error message " + expectedMessage +" is verified");
+	}	
+
+	public void verifyPromoErroMessage(String expectedErrorMessage) {
+		assertEquals(promoCodeErrorMessage.getText().trim(), expectedErrorMessage);
+		logger.debug("Error message for promo code is verified : " + expectedErrorMessage);
+	}
+
+	/**
+	 * Verify the disclaimer for the current product in context
+	 *
+	 * @param productDisclaimer
+	 */
+	public void verifyProductDisclaimer(String productDisclaimer) {
+		/*
+		 * get all product tiles and and look for the product tile
+		 * once the product tile is found , look for the disclaimer message of that product
+		 * and assert if the the match found by regexp is > than 0
+		 * */
+		MobileElement productParent;
+		String currentProductTitle = Context.getCurrentProductTitle();
+		boolean found=false;
+		if (currentProductTitle.isBlank() || currentProductTitle.isEmpty()){
+			// assert the first disclaimer on screen
+			assertEquals(productDisclaimer, driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().trim());
+		}else {
+			String disclaimerXpathTemplate = "(//XCUIElementTypeStaticText[@name='disclaimer_messages_label'])[%d]";
+			int ix=1;
+			List<MobileElement> productTitles = driver.findElementsByXPath("//XCUIElementTypeStaticText[@name='lbl_product_title']");
+			for (MobileElement productTitle: productTitles){
+				if (productTitle.getText().trim().toLowerCase().contains(currentProductTitle.toLowerCase())){
+					MobileElement prodDisclaimerElement = driver.findElementByXPath(String.format(disclaimerXpathTemplate,ix));
+					found=true;
+					//assertEquals(productDisclaimer, prodDisclaimerElement.getText().trim());
+					assertThat(prodDisclaimerElement.getText().trim(), containsString(productDisclaimer));
+					break;
+				}
+				ix+=1;
+			}
+			if (!found){
+				assertEquals(productDisclaimer,"Disclaimer Not found");
+			}
+		}
+
+		// Search for a product based on Unique id and check the product disclaimer when multiple products are in the cart
+		logger.debug("Product disclaimer for product " + currentProductTitle + " is displayed");
+
+	}
+
+	public void verifyLongerProductDisclaimer(String productDisclaimer) {
+		assertTrue(driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().contains("..."));
+		GlobalMobileHelper.isElementDisplayed(Locators.CartPage.productDisclaimerReadMore);
+		logger.debug("Product disclaimer Read more and ellipses are displayed on the Cart screen");
+	}
+	
+	public void noteDownCurrentShippingCharges() {
+		MobileElement estimatedShipping = driver.findElement(Locators.CartPage.labelEstimatedShipping);
+		try {
+				String estimatedShippingCharges = estimatedShipping.getText()
+						.split("-")[1].trim()
+						.split(" ")[0];
+				if (estimatedShippingCharges.trim().equals("Free")) {
+					shippingChargesToZipCode=0.00F;
+				} else {
+					shippingChargesToZipCode = Float.parseFloat(estimatedShippingCharges);
+				}
+			}catch(Exception e) {
+			
+				e.getLocalizedMessage();
+		}
+		
+	}
+	
+	
+	public void isShippingChargeUpdated(boolean NotFree) {
+		// NotFree to be passed as False if shipping charges for a zip code is NIL
+		MobileElement estimatedShipping = driver.findElement(Locators.CartPage.labelEstimatedShipping);
+		try {
+				String estimatedShippingCharges = estimatedShipping.getText()
+						.split("-")[1].trim().split(" ")[0].replace("$", "");
+				if(NotFree) {
+					assertNotEquals(
+							shippingChargesToZipCode, 
+							Float.parseFloat(estimatedShippingCharges), 
+							0.00);
+				}else {
+					assertEquals("Free",estimatedShippingCharges );
+				}
+				
+			}catch(Exception e) {
+			
+				e.getLocalizedMessage();
+		}
 	}
 	
 
