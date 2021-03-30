@@ -29,7 +29,8 @@ public class BottomNav{
 		GlobalMobileHelper.tapOnElement(wishList);
 	}
 	
-	public void tapOnCart() {
+	public void tapOnCart() throws InterruptedException {
+		Thread.sleep(5000);
 		MobileElement cart = driver.findElement(Locators.BottomNav.cart);
 		GlobalMobileHelper.tapOnElement(cart);
 	}

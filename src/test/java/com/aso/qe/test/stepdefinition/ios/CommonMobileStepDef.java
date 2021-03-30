@@ -50,7 +50,7 @@ public class CommonMobileStepDef extends GlobalMobileHelper{
 	}
 	
 	@When("^User taps on cart in bottom nav$")
-	public void tapOnCart() {
+	public void tapOnCart() throws InterruptedException {
 		bNav.tapOnCart();
 	}
 	

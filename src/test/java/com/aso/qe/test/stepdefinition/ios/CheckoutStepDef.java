@@ -92,7 +92,6 @@ public class CheckoutStepDef extends GlobalMobileHelper {
 	}
 	@Then("^User taps on chevron icon in shipping section$")
 	public void user_taps_on_chevron_icon_in_shipping_section() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
 	   assertTrue("Add you shipping information link is not available",GlobalMobileHelper.isElementDisplayed(Locators.CheckoutPage.addYourShippingInformation));
 	GlobalMobileHelper.tapOnElement(Locators.CheckoutPage.addYourShippingInformation);
 	}

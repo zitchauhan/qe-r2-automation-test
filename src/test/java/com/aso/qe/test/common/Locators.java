@@ -111,7 +111,7 @@ public class Locators {
 	
 	public static class AccountPage{
 		public static By accountTitle = By.id("lbl_account");
-		public static By loginLink = By.xpath("//*[contains(@label, 'LOGIN')]");
+		public static By loginLink = By.xpath("//XCUIElementTypeButton[@name=\"LOGIN\"]");
 	}
 	
 	public static class CartPage{
@@ -175,10 +175,10 @@ public class Locators {
 		public static By productPrice = By.id("lbl_product_price");
 		public static By buttonCheckout = By.name("CHECKOUT");
 		public static By addNewAddress =By.id("");
-		public static By addYourShippingInformation =By.xpath("//*[contains(@label, 'Location Icon')]");
+		public static By addYourShippingInformation =By.xpath("//XCUIElementTypeOther[contains(@label,'Location Icon')]");
 		public static By shippingMessage = By.id("");
-		public static By savedAddress = By.xpath("//*[contains(@name='lbl_list_address')]");
-		public static By saveAddressBtn= By.xpath("//*[contains(@label, 'Save address']");
+		public static By savedAddress = By.xpath("//*[contains(@id,'lbl_list_address')]");
+		public static By saveAddressBtn= By.xpath("//*[contains(@label,'Save address']");
 	}
 	
 	public static class AddAddress{
@@ -198,8 +198,8 @@ public class Locators {
 		public static By allowLocationService = By.xpath("//*[contains(@label, 'ALLOW LOCATION SERVICES')]");
 		public static By enterCityOrZipcode = By.xpath("//*[contains(@label, 'ENTER CITY OR ZIPCODE')]");
 		public static By maybeLater = By.xpath("//*[contains(@label, 'Maybe Later')]");
-		public static By allowAllTheTime = By.xpath("//*[contains(@label, 'Allow all the time')]");
-		public static By allowWhileUsingApp = By.xpath("//*[contains(@label, 'Allow while using the app')]");
-		public static By doNotAllow = By.xpath("//*[contains(@label, 'Don't allow')]");
+		public static By allowAllTheTime = By.xpath("//XCUIElementTypeButton[@name='Allow Once']");
+		public static By allowWhileUsingApp = By.xpath("//XCUIElementTypeButton[@name='Allow While Using App']");
+		public static By doNotAllow = By.xpath("//XCUIElementTypeButton[@name='Don’t Allow']");
 	}
 }

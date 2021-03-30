@@ -1,6 +1,6 @@
 Feature: Checkout
 
-  @Sprint2 @ST-OMNI-28794 @TC-OMNI-1
+  @Sprint2 @ST-OMNI-28794 @TC-OMNI-31926
  Scenario: Verify the following scenarios when user is a registered user with no address in their address book
    1. User is able to see “Add New Address” button
    2. There are no existing addresses displayed on Shipping Information screen 
@@ -27,7 +27,7 @@ Feature: Checkout
     Then User verifies existing address are "not displayed" on shipping information screen
     Then User sees "Add New Address" on shipping information screen
     
-    @Sprint2 @ST-OMNI-28794 
+    @Sprint2 @ST-OMNI-28794 @TC-OMNI-31927
  Scenario: Verify the following scenarios when user is a registered user with existing addresses in their address book
    1. Existing shipping addresses are displaying on Shipping Information screen
    2. First address is the default address
@@ -57,7 +57,7 @@ Feature: Checkout
     Then User verifies existing address are "displayed" on shipping information screen
     Then User sees first address as default address 
     
-    @Sprint2 @ST-OMNI-28794 
+    @Sprint2 @ST-OMNI-28794 @TC-OMNI-31928
  Scenario: Verify when a registered user is having an address which is not an AVS validated then a message 
      is displayed below the address on shipping information screen   
     Given User launches the application
@@ -82,7 +82,7 @@ Feature: Checkout
     Then User taps on chevron icon in shipping section
     Then User sees address not verified message on shipping information screen
      
-     @Sprint2 @ST-OMNI-28794 
+     @Sprint2 @ST-OMNI-28794 @TC-OMNI-31929
   Scenario: Verify guest user is able to see “Add New Address” button on checkout page 
     Given User launches the application
     And User continues as guest user
