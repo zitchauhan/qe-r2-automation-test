@@ -133,6 +133,8 @@ public class Locators {
 		public static By OverLayCartQty = By.id("");
 		public static By OverLayCartSize = By.id("");
 		public static By WebViewBannerPDP = By.id("");
+
+		public static By freeStrorePickupRadioButton = By.id("rd_free_store_pickup");
 	}
 
 	public static class ShopPage{
@@ -154,7 +156,8 @@ public class Locators {
 		public static By accountTitle = By.id("lbl_account");
 		public static By loginLink = By.xpath("//XCUIElementTypeButton[@name=\"LOGIN\"]");
 		public static By findStoreLink = By.xpath("//XCUIElementTypeButton[@name=\"FIND STORE\"]");
-		public static By buttonAddressBook = By.xpath("//*[contains(@label, 'ADDRESS BOOK')]");
+		public static By buttonAddressBook = By.xpath("//XCUIElementTypeButton[@name='ADDRESS BOOK']");
+		public static By buttonCreateAccount = By.xpath("//XCUIElementTypeButton[@name='CREATE AN ACCOUNT']");
 	}
 	
 	public static class CartPage{
@@ -209,7 +212,9 @@ public class Locators {
 		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 	}
+	
 
+	
 	public static class CheckoutPage{
 		public static By productThumbNail = By.xpath("(//XCUIElementTypeOther[@name=\"Product Image\"])[2]/XCUIElementTypeOther");
 		public static By productTitle = By.id("lbl_product_title");
@@ -359,4 +364,19 @@ public class Locators {
 		public static By buttonUseSelectedAddress = By.id("btn_use_selected_address");
 		public static By labelEditAddress = By.id("lbl_edit");
 	}
+}
+
+	public static class CreateAccount {
+		public static By buttonCancel = By.id("btn_header_cancel");
+		public static By labelCreateAccount = By.id("lbl_header_title");
+		public static By textFirstName = By.id("input_first_name");
+		public static By textLastName = By.id("input_last_name");
+		public static By textEmailAddress = By.id("input_email");
+		public static By textPassword = By.id("input_password");
+		public static By checkboxPromotion = By.id("check_box_promotions_in_email");
+		public static By buttonCreateAccount = By.id("btn_create_an_account");
+		public static By passwordMeterHeader = By.id("PASSWORD MUST CONTAIN AT LEAST:");
+
+	}
+
 }
