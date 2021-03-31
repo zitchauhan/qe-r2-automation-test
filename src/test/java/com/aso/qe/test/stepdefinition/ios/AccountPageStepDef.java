@@ -68,68 +68,12 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	 accountPage.enterFieldValuesOnAddAddress(value,field);
 	}
 
-	@Then("^User sees error for \"(.*?)\" field$")
-	public void validateError(String field) {
-		accountPage.validateError(field);
+
+	@Then("User sees Create Account modal")
+	public void userSeesCreateAccountModal() {
+		isElementDisplayed(Locators.CreateAccount.buttonCancel);
 	}
 
-	@Then("^User taps on Add New address button$")
-	public void tapOnAddNewAddress() {
-		accountPage.tapOnAddNewAddress();
-	}
-
-	@Then("^User sees \"(.*?)\" in state field on add address screen$")
-	public void validateState(String state) {
-		assertTrue(accountPage.validateState(state));
-	}
-
-	@When("^User sees \"(.*?)\" field$")
-	public void isSignUpField(String field) {
-		assertTrue(signUpPage.isFieldDisplayed(field));
-	}
-
-	@When("^User taps on Create an account button on Signup screen$")
-	public void tapOnCreateAnAccfountOnSignUp() {
-		accountPage.tapOnCreateAnAccountOnSignUpPage();
-	}
-
-	@Then("^User sees account already registered error$")
-	public void accountAlreadyRegisteredErrorDisplayed(String value,String field) {
-		assertTrue(signUpPage.isAccountAlreadyRegisteredErrorDisplayed());
-	}
-
-	@When("^User sess the empty fields error on SignUp Screen$")
-	public void isEmptyErrorFieldsDisplayed() {
-		assertTrue(signUpPage.isEmptyFirstNameErrorDisplayed());
-		assertTrue(signUpPage.isEmptyLastNameErrorDisplayed());
-		assertTrue(signUpPage.isEmptyEmailErrorDisplayed());
-		assertTrue(signUpPage.isEmptyPasswordErrorDisplayed());
-	}
-
-	@When("^User sees error for invalid email$")
-	public void invalidEmailsErrorDisplayed() {
-		accountPage.tapOnCreateAnAccountOnSignUpPage();
-	}
-
-	@Then("^User sees the address book place holder$")
-	public void addressBookButtonDisplayed() {
-		assertTrue(accountPage.isAddressBookButtonDisplayed());
-	}
-
-	@When("^User taps on the address book placeholder$")
-	public void tapOnAddressBookButton() {
-		accountPage.tapOnAddressBookButton();
-	}
-	@Then("^User is taken to add address screen$")
-	public void addAddressScreenIsDisplayed() {
-		assertTrue(accountPage.isAddAddressScreenDisplayed());
-	}
-
-	@Then("^User sees the error pop up$")
-	public void user_sees_the_error_pop_up() throws Throwable {
-
-		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.AddAddress.errorPopUp));
-	}
 	@Then("^User taps on Find Store link$")
 	public void user_taps_on_Find_Store_link() throws Throwable {
 		accountPage.tapOnFindStoreLink();

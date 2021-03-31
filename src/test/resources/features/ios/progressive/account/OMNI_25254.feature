@@ -25,12 +25,11 @@ Feature: Create Account
     And User sees passwordd field
     When User enters password "<password>"
     Then User sees password strength meter list
-    And User sees password rule "<password_rule_name>" as "<rule_result>"
     And User sees Create Account button as "<create_account_button_state>"
 
     Examples:
-    | password | password_rule_name | rule_result | create_account_button_state |
-    | qwerty1234 | 10chars          | fail        | inactive                    |
+    | password | create_account_button_state |
+    | qwerty1234 | inactive                  |
 
   Scenario: User successfully logs into the application
     Given User launches the application
