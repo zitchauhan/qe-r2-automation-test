@@ -11,16 +11,12 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src/test/resources/features/ios/",
 		glue="com.aso.qe.test.stepdefinition.ios",
-		tags= {"@ST-OMNI-20843"},
-		monochrome=true, 
-				
-//		plugin = {"pretty",
-//			   	"html:target/cucumber-report/runapiat",
-//		        "json:target/cucumber-report/runapiat/ios.json",
-//                "rerun:target/cucumber-report/runapiat/rerun.txt"}
-		
-				format =	{"pretty","html:target/Destination", "json:target/cucumber.json"}
-		)
+		tags= {"@TC-OMNI-29800"},
+		monochrome=true,
+		//dryRun=true,
+		plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html",
+		format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
+)
 
 public class IOSTestRunner {
 	
