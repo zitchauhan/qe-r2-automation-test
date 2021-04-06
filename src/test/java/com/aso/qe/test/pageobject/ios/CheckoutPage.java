@@ -3,10 +3,12 @@ package com.aso.qe.test.pageobject.ios;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.PropertiesHelper;
@@ -26,13 +28,13 @@ public class CheckoutPage {
 	  PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	 }
 	AccountPage accountPage = new AccountPage(driver);
-public void isAddressDisplayed() {
-		
-	}
-	public void verifyDefaultAddress() {
 	
-		
+	
+	public void verifyDefaultAddress() {
+	MobileElement defaultAddress = driver.findElement(Locators.CheckoutPage.defaultAddressLabel);
+		assertTrue("First address is not default address",defaultAddress.getText().equalsIgnoreCase("Default Address"));
 	}
+	
 	public void verifyMessage() {
 		assertTrue("Shipping message is not displayed",GlobalMobileHelper.isElementDisplayed(Locators.CheckoutPage.shippingMessage));	
 	}
@@ -76,10 +78,10 @@ public void isAddressDisplayed() {
 			 	}
 	
 	public void tapOnEditAddressLink(String arg) {
-		List<MobileElement> addressLocatorsList = driver.findElements(Locators.CheckoutPage.savedAddress);
-		assertTrue("Saved address are not displaying", addressLocatorsList.size()>=0);
+		List<MobileElement> editAddressLinkList = driver.findElements(Locators.CheckoutPage.editAddressLink);
+		assertTrue("Saved address are not displaying", editAddressLinkList.size()>0);
 		if(arg.equalsIgnoreCase("First"))
-		GlobalMobileHelper.tapOnElement(addressLocatorsList.get(0));
+		GlobalMobileHelper.tapOnElement(editAddressLinkList.get(2));
 		
 	}
 	
@@ -89,27 +91,36 @@ public void isAddressDisplayed() {
 	}
 	
 	public void isAddressDisplayed(String visibility) {
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
 		List<MobileElement> addressLocatorsList = driver.findElements(Locators.CheckoutPage.savedAddress);
 		if(visibility.equalsIgnoreCase("not displayed")) {
-			assertFalse("Saved address are displaying", addressLocatorsList.size()<=0);
+			assertTrue("Saved address are displaying", addressLocatorsList.size()==0);
 		} 
 		else if (visibility.equalsIgnoreCase("displayed")) {
-			assertTrue("Saved address are not displaying", addressLocatorsList.size()>=0);
-			List<String> addressList = null;
+			assertTrue("Saved address are not displaying", addressLocatorsList.size()>0);
+			List<String> addressList = new ArrayList<String>();
 			for(int i=0;i<addressLocatorsList.size();i++) {
-				addressList.add(i, addressLocatorsList.get(i).getText());
+				addressList.add(addressLocatorsList.get(i).getText());
 			}
 			Context.setSavedAddressesList(addressList);
 		}
 		
 	}
-	public void verifyUpdatedinformation(String addressindex) {
+	public void verifyUpdatedinformation(String field, String addressindex) {
 		List<MobileElement> addressLocatorsList = driver.findElements(Locators.CheckoutPage.savedAddress);
-			assertFalse("Saved address are displaying", addressLocatorsList.size()<=0);
+			assertTrue("Saved address list is not displaying", addressLocatorsList.size()>0);
 		
 		if(addressindex.equalsIgnoreCase("first")) {
+			if(field.contains("name"))
+			{
+				assertTrue("Updated field is not reflecting in saved address",GlobalMobileHelper.isElementDisplayed(By.xpath("//*[contains(@label,'"+ Context.getUpdatedAddressField()+"')]")));				
+			}
+			else
 			assertTrue("Updated field is not reflecting in saved address",addressLocatorsList.get(0).getText().contains(Context.getUpdatedAddressField()));			
 		}
+	}
+	public void verifyShippingAddressTitle() {
+		
 	}
 }
 

@@ -21,4 +21,8 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	 public void enterFieldValuesOnAddAddress(String value,String field) {
 	 accountPage.enterFieldValuesOnAddAddress(value,field);
 	}
+	@Then("^User taps on Find Store link$")
+	public void user_taps_on_Find_Store_link() throws Throwable {
+		accountPage.tapOnFindStoreLink();
+	}
 }

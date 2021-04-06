@@ -112,6 +112,7 @@ public class Locators {
 	public static class AccountPage{
 		public static By accountTitle = By.id("lbl_account");
 		public static By loginLink = By.xpath("//XCUIElementTypeButton[@name=\"LOGIN\"]");
+		public static By findStoreLink = By.xpath("//XCUIElementTypeButton[@name=\"FIND STORE\"]");
 	}
 	
 	public static class CartPage{
@@ -174,11 +175,13 @@ public class Locators {
 		public static By productSKU= By.xpath("//*[contains(@name,'S K U')]");
 		public static By productPrice = By.id("lbl_product_price");
 		public static By buttonCheckout = By.name("CHECKOUT");
-		public static By addNewAddress =By.id("");
-		public static By addYourShippingInformation =By.xpath("//XCUIElementTypeOther[contains(@label,'Location Icon')]");
-		public static By shippingMessage = By.id("");
-		public static By savedAddress = By.xpath("//*[contains(@id,'lbl_list_address')]");
+		public static By addNewAddress =By.xpath("//XCUIElementTypeButton[@name=\"Add New Address\"]");
+		public static By addYourShippingInformation =By.xpath("//XCUIElementTypeOther[contains(@name,'Location Icon')]");
+		public static By shippingMessage = By.id("lbl_list_zip_code0");
+		public static By savedAddress = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_address')]");
 		public static By saveAddressBtn= By.xpath("//*[contains(@label,'Save address']");
+		public static By defaultAddressLabel = By.id("lbl_list_default0");
+		public static By editAddressLink=By.xpath("//XCUIElementTypeOther[@name='Edit']");
 	}
 	
 	public static class AddAddress{
@@ -195,11 +198,24 @@ public class Locators {
 		}
 	public static class storePickup{
 		public static By findYourStoreMessage = By.xpath("//*[contains(@label, 'Find Your nearest stores')]");
-		public static By allowLocationService = By.xpath("//*[contains(@label, 'ALLOW LOCATION SERVICES')]");
-		public static By enterCityOrZipcode = By.xpath("//*[contains(@label, 'ENTER CITY OR ZIPCODE')]");
-		public static By maybeLater = By.xpath("//*[contains(@label, 'Maybe Later')]");
-		public static By allowAllTheTime = By.xpath("//XCUIElementTypeButton[@name='Allow Once']");
-		public static By allowWhileUsingApp = By.xpath("//XCUIElementTypeButton[@name='Allow While Using App']");
-		public static By doNotAllow = By.xpath("//XCUIElementTypeButton[@name='Don’t Allow']");
+		public static By allowLocationService = By.id("btn_allow_location");
+		public static By enterCityOrZipcode = By.id("btn_enter_city");
+		public static By maybeLater = By.id("btn_maybe_later");
+		public static By allowOnce = By.id("Allow Once");
+		public static By allowWhileUsingApp = By.id("Allow While Using App");
+		public static By doNotAllow = By.id("Don’t Allow");
+		public static By storeNameFindStore = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_check_box_find_store')]");
+		public static By storeRadioBtn = By.xpath("//XCUIElementTypeOther[contains(@name,'check_box_find_store')]");
+		public static By storeDetailsLink = By.xpath("//XCUIElementTypeOther[contains(@name,'lbl_details_find_store')]");
+		public static By availibilityMessage;
+		public static By errorMessage = By.xpath("//XCUIElementTypeStaticText[contains(@name,'no stores')]");
+		public static By addressOnDetailsPage=By.id("lbl_store_detail_address");
+		public static By phoneNumOnDetailsPage=By.id("lbl_store_detail_phone");
+		public static By storeHoursOnDetailsPage=By.id("lbl_store_detail_timing");
+		public static By makeMyStoreOnDetailsPage=By.id("lbl_store_detail_make_my_store");
+		public static By copyAddressLink=By.xpath("//XCUIElementTypeButton[@name='Copy address']");
+		public static By openInGoogleMap=By.xpath("//XCUIElementTypeButton[@name='Open in google Maps']");;
+		public static By openInMaps=By.xpath("//XCUIElementTypeButton[@name='Open in Maps']");
+		public static By cancelBtn=By.id("cancel_btn_find_store");
 	}
 }

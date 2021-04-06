@@ -35,7 +35,8 @@ public class BottomNav{
 		GlobalMobileHelper.tapOnElement(cart);
 	}
 	
-	public void tapOnAccount() {
+	public void tapOnAccount() throws InterruptedException {
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
 		MobileElement account = driver.findElement(Locators.BottomNav.account);
 		GlobalMobileHelper.tapOnElement(account);
 	}

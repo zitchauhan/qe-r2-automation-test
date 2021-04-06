@@ -12,6 +12,7 @@ private static List<String> L2CategoryList;
 private static List<String> L3CategoryList;
 private static List<String> savedAddressesList;
 private static String updatedAddressField;
+private static String storeName;
 
 public String getProductPriceOnPDP() {
 	return ProductPriceOnPDP;
@@ -85,6 +86,14 @@ public static String getUpdatedAddressField() {
 
 public static void setUpdatedAddressField(String updatedAddressField) {
 	Context.updatedAddressField = updatedAddressField;
+}
+
+public static String getStoreName() {
+	return storeName;
+}
+
+public static void setStoreName(String storeName) {
+	Context.storeName = storeName;
 }
 
 }

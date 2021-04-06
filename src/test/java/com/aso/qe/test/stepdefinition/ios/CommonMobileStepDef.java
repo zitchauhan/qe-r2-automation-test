@@ -55,7 +55,7 @@ public class CommonMobileStepDef extends GlobalMobileHelper{
 	}
 	
 	@When("^User taps on account in bottom nav$")
-	public void tapOnAccount() {
+	public void tapOnAccount() throws InterruptedException {
 		bNav.tapOnAccount();
 	}
 }

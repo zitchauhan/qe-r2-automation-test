@@ -20,7 +20,7 @@ public class CheckoutStepDef extends GlobalMobileHelper {
 	
 	@Then("^User sees the checkout button$")
 	public void user_sees_the_checkout_button() throws Throwable {
-	    swipeScreen(Direction.UP, 4);
+	    swipeScreen(Direction.UP, 5);
 	    assertTrue(isElementDisplayed(Locators.CheckoutPage.buttonCheckout));
 	    logger.debug("Checkout button is displayed on the cart screen");
 	}
@@ -109,8 +109,17 @@ public class CheckoutStepDef extends GlobalMobileHelper {
 	public void user_navigated_to_edit_shipping_address_screen() throws Throwable {
 	    checkoutPage.verifyEditShippingAddressPage();
 	}
-	@Then("^User verifies information is updated in \"([^\"]*)\" address$")
-	public void user_verifies_information_is_updated_in_address(String addressindex) throws Throwable {
-	    checkoutPage.verifyUpdatedinformation(addressindex);
+	@Then("^User verifies \"([^\"]*)\" is updated in \"([^\"]*)\" address$")
+	public void user_verifies_information_is_updated_in_address(String field,String addressindex) throws Throwable {
+	    checkoutPage.verifyUpdatedinformation(field,addressindex);
+	}
+	@Then("^User sees shipping Address title$")
+	public void user_sees_shipping_Address_title() throws Throwable {
+		checkoutPage.verifyShippingAddressTitle();
+	}
+
+	@Then("^User sees shipping message in shipping address section$")
+	public void user_sees_shipping_message_in_shipping_address_section() throws Throwable {
+		checkoutPage.verifyMessage();
 	}
 }

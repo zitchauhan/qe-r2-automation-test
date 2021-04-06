@@ -46,4 +46,8 @@ public class AccountPage {
 			}
 	}
 
+	public void tapOnFindStoreLink() {
+		GlobalMobileHelper.tapOnElement(Locators.AccountPage.findStoreLink);
+	}
+	
 }
