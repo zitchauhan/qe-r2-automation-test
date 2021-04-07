@@ -30,13 +30,13 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 		throw new PendingException("userSeesPasswordStrengthMeterList Not implemented");
     }
 
-    @And("User sees password rule {string} as {string}")
+    @And("^User sees password rule \"(.*?)\" as \"(.*?)\"")
     public void userSeesPasswordRuleAs(String arg0, String arg1) {
         /* Created By @{USER} on @{DATE} */
 		throw new PendingException("userSeesPasswordRuleAs Not implemented");
     }
 
-    @And("User sees Create Account button as {string}")
+    @And("^User sees Create Account button as \"(.*?)\"$")
     public void userSeesCreateAccountButtonAs(String arg0) {
         /* Created By @{USER} on @{DATE} */
 		throw new PendingException("userSeesCreateAccountButtonAs not implemented");
