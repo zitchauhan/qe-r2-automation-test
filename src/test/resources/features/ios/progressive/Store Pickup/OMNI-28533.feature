@@ -44,7 +44,7 @@ Feature: Location Services Setup - Partially automated
     And User continues as guest user
     Then User sees the homepage
     
-     @Sprint2 @ST-OMNI-28533
+     @Sprint2 @ST-OMNI-28533 @TC-OMNI-33098
     Scenario: Verify user is navigated to home page after selecting "Don't allow" option on location service page.
     Given User launches the application
     Then User verifies "ALLOW LOCATION SERVICES" option is displayed on the screen
@@ -54,7 +54,7 @@ Feature: Location Services Setup - Partially automated
     And User continues as guest user
     Then User sees the homepage
     
-     @Sprint2 @ST-OMNI-28533
+     @Sprint2 @ST-OMNI-28533 @TC-OMNI-33099
     Scenario: Verify user is navigated to home page after selecting "Don't allow" option on location service page.
     Given User launches the application
     Then User verifies "ALLOW LOCATION SERVICES" option is displayed on the screen

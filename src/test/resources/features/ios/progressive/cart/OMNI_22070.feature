@@ -1,6 +1,6 @@
-@TC-OMNI-22070
 Feature: Verify presence of payment safety and available payment choices on View Cart screen
 
+  @Sprint2 @TC-OMNI-22070 @TC-OMNI-33073
   Scenario: User can see payment safety message and payment choices
     Given User launches the application
     And User continues as guest user

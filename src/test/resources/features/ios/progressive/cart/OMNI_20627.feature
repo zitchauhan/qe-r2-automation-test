@@ -1,6 +1,6 @@
-@TC-OMNI-20627
 Feature: Verify that user can change zip code from order summary screen
 
+  @Sprint3 @ST-OMNI-20627 @TC-OMNI-33084
   Scenario: Verify that the user can see required fiels for changing the zip code
     Given User launches the application
     And User continues as guest user
@@ -13,8 +13,8 @@ Feature: Verify that user can change zip code from order summary screen
     When User taps on Change zip code
     Then User sees change zip code field
     And User sees change zip code submit button
-  
-  
+
+  @Sprint3 @ST-OMNI-20627 @TC-OMNI-33085
   Scenario: Verify that the user can see required fiels for changing the zip code
     Given User launches the application
     And User continues as guest user
@@ -30,9 +30,9 @@ Feature: Verify that user can change zip code from order summary screen
     And User enters zip code "12345"
     Then User sees zip code in the order summary
     And User sees estimated shipping charges for zip code
-    And User sees updated order total after changing the zip code 
-  
-  
+    And User sees updated order total after changing the zip code
+
+  @Sprint3 @ST-OMNI-20627 @TC-OMNI-33086
   Scenario Outline: Verify buying restriction message is shown for a zip code
   	Given User launches the application
     And User continues as guest user
