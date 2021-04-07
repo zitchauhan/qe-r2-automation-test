@@ -1,18 +1,12 @@
 package com.aso.qe.test.stepdefinition.ios;
 import static org.junit.Assert.assertTrue;
 
-import org.codehaus.plexus.logging.Logger;
-
 import com.aso.qe.test.common.GlobalMobileHelper;
-import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.Context;
 import com.aso.qe.test.pageobject.ios.ShopPage;
-<<<<<<< HEAD
-import com.aso.qe.test.pageobject.ios.WishlistPage;
 
 import cucumber.api.java.en.And;
-=======
->>>>>>> origin/Feature_Mamta_MobileApp
+
 import cucumber.api.java.en.Then;
 
 public class ShopStepDef extends GlobalMobileHelper{
@@ -22,7 +16,7 @@ public class ShopStepDef extends GlobalMobileHelper{
 	public void userIsOnShopPage() {
 		assertTrue(shopPage.isShopPageDisplayed());
 	}
-<<<<<<< HEAD
+
 	@And("^User click on Shop sub categories$")
 	public void tapOnSubCat() {
 		shopPage.tapOnShopSubCat();
@@ -30,8 +24,7 @@ public class ShopStepDef extends GlobalMobileHelper{
 	@And("^User click on Shop All$")
 	public void tapOnShopAll() {
 		shopPage.tapOnShopAll();
-=======
-	
+	}
 	@Then("^User sees the categories list is not empty$")
 	public void userSeesCategories() throws InterruptedException {
 		shopPage.isCategoriesDisplayed();
@@ -105,6 +98,5 @@ public class ShopStepDef extends GlobalMobileHelper{
 	@Then("^User taps on back button$")
 	public void user_taps_on_back_button() throws InterruptedException {
 		shopPage.tapOnBackbtn(driver);
->>>>>>> origin/Feature_Mamta_MobileApp
 	}
 }

@@ -12,4 +12,14 @@ ProductlistingPage plPage = new ProductlistingPage();
 public void isRatingsDisplayed() {
 	assertTrue(plPage.verifyRatingsAndReview());
 }
+
+@Then("^User Sees the Products list which included OOS product$")
+public void verifyOos() {
+	assertTrue(plPage.verifyOos());
+}
+@Then("^User sees the Product which are in stock$")
+public void verifyInStock() {
+	assertTrue(plPage.verifyInstock());
+	
+}
 }

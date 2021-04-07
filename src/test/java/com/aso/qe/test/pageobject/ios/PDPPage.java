@@ -6,15 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.lang.UnsupportedOperationException;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import static org.junit.Assert.assertTrue;
-
-import org.openqa.selenium.support.PageFactory;
-import java.lang.UnsupportedOperationException;
-
-import org.apache.log4j.Logger;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
@@ -77,11 +68,7 @@ public class PDPPage {
 	
 	public boolean isProductTitleDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.labelProductTitle);
-<<<<<<< HEAD
-		
-		
-=======
->>>>>>> origin/Feature_Mamta_MobileApp
+
 	}
 	
 	public String getProductTitle() {
@@ -259,6 +246,49 @@ public class PDPPage {
 			throw new UnsupportedOperationException();
 		}
 		
+	}
+
+	public void tapOnRadioBtn() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.btnRadioDeliveryOption);
+		
+	}
+
+	public boolean isLabelDisplayed(String label) {
+		String labelActual = driver.findElement(Locators.PDPPage.label).getText();
+		if(labelActual.equalsIgnoreCase(label)) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	public boolean isSubLabelDisplayed(String label) {
+		String labelActual = driver.findElement(Locators.PDPPage.subLabel).getText();
+		if(labelActual.equalsIgnoreCase(label)) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+
+	public void changeStore(String storeName) {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.changeStore);
+		
+		
+		
+		
+	}
+
+	public boolean isVarientDisplayed(String varianType) {
+		if (varianType.contains("color and size")) {
+			assertTrue( GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant));
+			assertTrue( GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant));
+			
+		}else if(varianType.contains("color")) {
+			assertTrue( GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant));
+		}
+		return false;
 	}
 }
 

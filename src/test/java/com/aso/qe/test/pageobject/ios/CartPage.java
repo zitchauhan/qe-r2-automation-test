@@ -330,16 +330,6 @@ public class CartPage {
 	public void clickCartIconBottomNav() {
 		cartIconBottomNav.click();
 	}
-<<<<<<< HEAD
-	public boolean validateCartVariant(String item) {
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}if(item.contains("AdidasTshirt")) {
-=======
-
 	public void validateGuestSignInSection(String isPresent) {
 		GlobalMobileHelper.setImplicitWaitTo(driver, 3);
 		if (isPresent.equalsIgnoreCase("is present")) {
@@ -364,7 +354,7 @@ public class CartPage {
 	}
 
 	public boolean validateCartVariant() {
->>>>>>> origin/Feature_Mamta_MobileApp
+
 		MobileElement cartVariantValue = driver.findElement(Locators.CartPage.cartSizeVariant);
 		return cartVariantValue.getText().contains("Medium");
 		}else {

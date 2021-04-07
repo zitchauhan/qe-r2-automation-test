@@ -1,16 +1,33 @@
 Feature: Verify Verients of the PDP product
 @Sprint1 @TC-OMNI-29808 @ST-22047
-Scenario:  Verify User able to see Product varient Size and color on PDP Page
+Scenario Outline:  Verify User able to see Product varient Size and color on PDP Page
 
     Given User launches the application
     And User continues as guest user
     Then User sees the homepage
     When User Sees the Search Box
     Then User clicks on the Search Box
-    And User search for the "SizeVariantProduct"
+    And User search for the "<Variant Type>"
     And user click on Product
+    And User Sees the Variant of "<Variant Type>" Product
+    Then User Change the variants of "<Variant Type>" to "<variant>"
 	And user sees the size varient
 	And user sees the color variant
+	When user click on small size
+	Then size is changed to "Small"
+	When user click on medium size
+	Then Size is changed to "Medium"
+	And user click on Home Delivery
+	When User taps on add to cart button
+	And User sees the Variant of selected Product "AdidasTshirt"
+	
+	
+	  Examples:
+    | Variant Type | 
+    
+    | SizeAndColor |
+    | color | 
+    | width | 
 	
 	@Sprint1 @TC-OMNI-29808 @ST-22047
 Scenario: Verify User able to See Size Chart & selected variants are showing up on cart

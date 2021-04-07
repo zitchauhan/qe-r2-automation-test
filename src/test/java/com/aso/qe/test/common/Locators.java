@@ -2,6 +2,8 @@ package com.aso.qe.test.common;
 
 import org.openqa.selenium.By;
 
+import io.appium.java_client.MobileElement;
+
 public class Locators {
 	
 	public static class BottomNav{
@@ -46,18 +48,7 @@ public class Locators {
 		public static By allowOnceBtn = By.xpath("//*[contains(@label,'Allow Once')]");
 		public static By backBtn = By.id("btn_back");
 	}
-	public static class PLPPage{
-		public static By productTitle = By.id("lbl_product_title");
-<<<<<<< HEAD
-		public static By rating= By.xpath("//XCUIElementTypeOther[contains(@label,'4')]");
-		public static By toggleOOS = By.id("");
-=======
-		public static By PLPHeader = By.id("lbl_product_listing_header_title");
-		public static By shopByCategoryLabel = By.id("lbl_shop_by_category_title");
-		public static By subCategoryButton = By.id("btn_category");
-		public static By cartSizeVariant = By.xpath("//*[contains(@label,\"Medium\")]");
->>>>>>> origin/Feature_Mamta_MobileApp
-	}
+
 
 	public static class SearchPage{
 		public static By searchBar = By.id("search_bar");
@@ -95,29 +86,33 @@ public class Locators {
 		//public static By btnCancelSizeChart = By.id("btn_cancel");
 		public static By btnCancelSizeChart = By.id("btn_back");
 		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");
-<<<<<<< HEAD
+
 		public static By pickUpAndDeliveryTitle = By.id("lbl_p_and_d_options");
 		public static By freeStorePickUp = By.id("lbl_free_store_pickup");
 		public static By freeStorePickUpRadioBtn = By.id("rd_free_store_pickup");
 		public static By homeDeliveryTitle = By.id("lbl_home_delivery");
-=======
+		public static By btnRadioDeliveryOption = By.id("");
+		public static By label = By.id("");
+		public static By subLabel =By.id("");
+		public static By changeStore = By.id("");
+		
 
 
->>>>>>> origin/Feature_Mamta_MobileApp
+
 	}
 
 	public static class ShopPage{
 		public static By shopPageTitle = By.id("lbl_shop");
-<<<<<<< HEAD
+
 		public static By subcat = By.id("lbl_category_list_item");
 		public static By shopAll = By.id("btn_shop_all");
-=======
+
 		public static By categoryTitle = By.id("lbl_category_title");
 		public static By categoriesList = By.id("lbl_category_list_item");
 		public static By categoryBackBtn = By.id("btn_back");
 		public static By categorytitle = By.id("lbl_category_title");
 		public static By shopAllLink = By.id("btn_shop_all");
->>>>>>> origin/Feature_Mamta_MobileApp
+
 	}
 	
 	public static class WishlistPage{
@@ -156,13 +151,12 @@ public class Locators {
 		public static By labelEmptyCartInfo = By.id("lbl_user_specific_message");
 		public static By buttonLogIn = By.id("btn_login");
 		public static By buttonCreateAnAccount = By.id("btn_create_an_account");
-<<<<<<< HEAD
-		public static By cartSizeVariant = By.id("lbl_product_attribute_value_Size");
+        public static By cartSizeVariant = By.id("lbl_product_attribute_value_Size");
 		public static By cartColorVariant = By.id("lbl_product_attribute_value_Color");
 	}
 	public static class AcademyExclusivePage{
 		public static By academyExclusiveTitle = By.id("lbl_page_title");
-=======
+
 		public static By userIcon = By.id("icon_user");
 		public static By guestCheckoutLabel = By.id("lbl_guest_checkout");
 		public static By signInLabel = By.id("lbl_sign_in_guest_checkout");
@@ -179,9 +173,7 @@ public class Locators {
 		public static By buttonSubmit = By.xpath("//*[contains(@label, 'SUBMIT')]");
 		public static By labelEstimatedShipping = By.xpath("//*[contains(@label, 'Estimated Shipping to')]");
 		public static By lableChangeZipCodeModal = By.id("lbl_change_zipcode_text");
-		
-		
->>>>>>> origin/Feature_Mamta_MobileApp
+
 	}
 	
 	public static class PLPPage{
@@ -199,7 +191,11 @@ public class Locators {
 		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 		public static By securityReassuranceMessage = By.id("lbl_shop_with_confidence_subheading");
-	
+		public static By productTitle = By.id("lbl_product_title");
+        public static By rating= By.xpath("//XCUIElementTypeOther[contains(@label,'4')]");
+		public static By toggleOOS = By.id("switch_out_of_stock");
+		public static By sortAndFilterOutOfStockTitle = By.id("lbl_out_of_stock");
+		public static By sortAndFilterFilterIcon = By.id("icon_filter");
 	}
 	
 	public static class CheckoutPage{
@@ -208,21 +204,22 @@ public class Locators {
 		public static By productSKU= By.xpath("//*[contains(@name,'S K U')]");
 		public static By productPrice = By.id("lbl_product_price");
 		public static By buttonCheckout = By.name("Checkout");
+		
 	}
 	
-	public static class CheckoutPage{
+	/*public static class CheckoutPage{
 		public static By productThumbNail = By.xpath("(//XCUIElementTypeOther[@name=\"Product Image\"])[2]/XCUIElementTypeOther");
 		public static By productTitle = By.id("lbl_product_title");
 		public static By productSKU= By.xpath("//*[contains(@name,'S K U')]");
 		public static By productPrice = By.id("lbl_product_price");
 		public static By buttonCheckout = By.name("Checkout");
-	}
+	}*/
 	
-	public static class CheckoutPage{
+	/*public static class CheckoutPage{
 		public static By productThumbNail = By.xpath("(//XCUIElementTypeOther[@name=\"Product Image\"])[2]/XCUIElementTypeOther");
 		public static By productTitle = By.id("lbl_product_title");
 		public static By productSKU= By.xpath("//*[contains(@name,'S K U')]");
 		public static By productPrice = By.id("lbl_product_price");
 		public static By buttonCheckout = By.name("Checkout");
-	}
+	}*/
 }

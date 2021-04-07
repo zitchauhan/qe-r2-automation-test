@@ -497,5 +497,5 @@ public class CartStepDef extends GlobalMobileHelper{
 			cartPage.tapMinusActionCartPage();
 		}
 	}
->>>>>>> origin/Feature_Mamta_MobileApp
+
 }

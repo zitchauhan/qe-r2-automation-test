@@ -84,15 +84,7 @@ public class SearchPage {
 		GlobalMobileHelper.tapOnElement(Locators.PLPPage.toggleOOS);
 		
 	}
-	public void isOosProductHide() {
-		List<MobileElement> elementName = driver.findElements(By.xpath("//XCUIElementTypeScrollView"));
-		for(int i=1; i<=elementName.size(); i++) {
-			elementName.get(i).click();
-			
-			
-		}
-		
-	}
+	
 	
 		
 	}

@@ -11,14 +11,10 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src/test/resources/features/ios/",
 		glue="com.aso.qe.test.stepdefinition.ios",
-<<<<<<< HEAD
+
 		tags= {"@ST-22047"},
 		monochrome=true, 
-=======
-		tags= {"@TC-OMNI-20627"},
-		monochrome=true,
-		//dryRun=true,
->>>>>>> origin/Feature_Mamta_MobileApp
+
 				
 //		plugin = {"pretty",
 //			   	"html:target/cucumber-report/runapiat",

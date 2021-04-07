@@ -55,10 +55,7 @@ public class SearchPageStepDef extends GlobalMobileHelper{
 	public void enableOosTogle() {
 		searchPage.oosToggleEnable();
 	}
-	@Then("^User Sees the Product which are in stock$")
-	public void isOosProductsHide() {
-		searchPage.isOosProductHide();
-	}
+	
 	
 	
 	

@@ -68,6 +68,11 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void validateQuantity(String qty) {
 		assertTrue(pdp.validateQty(qty));
 	}
+	@And("^User Sees the Variant of \"(.*?)\" Product$")
+	public void isVarientDisplayed(String variantProduct) {
+		assertTrue(pdp.isVarientDisplayed(variantProduct));
+	}
+	@Then("^Then User Change the variants of \"(.*?)\" to \"(.*?)\"$")
 
 	@And("^user sees the size varient$")
 	public void isSizeVarientDisplayed() {
@@ -154,7 +159,26 @@ public class PDPStepDef extends GlobalMobileHelper{
 	@And("^Add to cart button is disabled$")
 	public void isEnabledAddToCart() {
 		pdp.isDisabledAddtoCart();
-			
+				
+	}
+	@Then("^user enabled the radio button$")
+	public void tapOnRadioBtn() {
+		pdp.tapOnRadioBtn();
+	}
+	@And("^User sees the label \"([^\"]*)\"$")
+	public void isLabelDisplayed(String label) {
+		assertTrue(pdp.isLabelDisplayed(label));
+	}
+	@And("^User sees the Sub label \"([^\"]*)\"$")
+	public void isSubLabelDisplayed(String sublabel) {
+		assertTrue(pdp.isSubLabelDisplayed(sublabel));
+	}
+	@And("^user Select the Store \"([^\"]*)\"$")
+	public void changeStore(String storeName) {
+		pdp.changeStore(storeName);
+	}
+	@And("^User sees the \"([^\"]*)\"$")
+	public void isMessageDisplayed(String expactedMsg) {
 		
 	}
 	
