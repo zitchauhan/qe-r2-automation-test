@@ -65,4 +65,34 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void validateQuantity(String qty) {
 		assertTrue(pdp.validateQty(qty));
 	}
+	
+	@When("^User selects Home Delivery checkbox$")
+	public void selectHomeDelivery() throws Throwable {
+		pdp.tapOnHomeDelivery();
+	}
+	
+	@When("^User taps on chage store button$")
+	public void tapOnChangeStore() throws Throwable {
+		pdp.tapOnChangeStore();
+	}
+	
+	@Then("^User is shown find store screen$")
+	public void isFindStoreScreenDisplayed() {
+		assertTrue(pdp.isFindStoreScreenDisplayed());
+	}
+	
+	@When("^User enters \"(.*?)\" in store search field$")
+	public void enterTextInStoreSearchField(String text) throws Throwable {
+		pdp.enterTextInStoreSearchField(text);
+	}
+	
+	@Then("^User is shown no store available message$")
+	public void noStoreAvailableMessageDisplayed() {
+		assertTrue(pdp.noStoreAvailableMessageDisplayed());
+	}
+	
+	@When("^User taps on cancel button$")
+	public void tapOnCancelButton() throws Throwable {
+		pdp.tapOnCancelButton();
+	}
 }

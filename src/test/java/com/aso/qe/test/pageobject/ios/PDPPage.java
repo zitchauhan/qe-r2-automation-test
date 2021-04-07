@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.testng.Assert;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.stepdefinition.ios.Hooks;
 
@@ -133,5 +134,31 @@ public class PDPPage {
 	public void verifyDefaultDeliveryOption() {
 		Assert.assertEquals(true, freeStorePickupRadio.isSelected());
 		Assert.assertEquals(false, homeDeliveryRadio.isSelected());
+	}
+
+	public void tapOnHomeDelivery() {
+		GlobalMobileHelper.swipeScreen(Direction.UP);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.homeDeliveryRadioButton);
+	}
+
+	public void tapOnChangeStore() {
+		GlobalMobileHelper.swipeScreen(Direction.UP);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonChangeStore);
+	}
+
+	public boolean isFindStoreScreenDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.FindStore.findStoreHeader);
+	}
+
+	public void enterTextInStoreSearchField(String text) {
+		GlobalMobileHelper.setText(Locators.FindStore.searchBox, text, Locators.FindStore.findStoreHeader);
+	}
+
+	public boolean noStoreAvailableMessageDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.FindStore.noStoreAvailableMessage);
+	}
+
+	public void tapOnCancelButton() {
+		GlobalMobileHelper.tapOnElement(Locators.FindStore.cancelButton);
 	}
 }

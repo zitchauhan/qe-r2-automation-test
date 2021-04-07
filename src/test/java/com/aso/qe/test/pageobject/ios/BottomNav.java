@@ -35,7 +35,6 @@ public class BottomNav{
 	}
 	
 	public void tapOnAccount() {
-		MobileElement account = driver.findElement(Locators.BottomNav.account);
-		GlobalMobileHelper.tapOnElement(account);
+		GlobalMobileHelper.tapOnElement(Locators.BottomNav.account);
 	}
 }

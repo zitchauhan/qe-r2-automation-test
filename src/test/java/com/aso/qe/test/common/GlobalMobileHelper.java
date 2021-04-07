@@ -30,7 +30,7 @@ public class GlobalMobileHelper {
 	
 	public void initializeDriver() throws MalformedURLException {
 		String platform = propHelper.getConfigPropProperty("i.platform");
-		String udid = propHelper.getConfigPropProperty("i.udid");
+//		String udid = propHelper.getConfigPropProperty("i.udid");
 		String platformVersion = propHelper.getConfigPropProperty("i.platformVersion");
 		String deviceName = propHelper.getConfigPropProperty("i.deviceName");
 		String url = propHelper.getConfigPropProperty("appiumServerURL");
@@ -38,7 +38,7 @@ public class GlobalMobileHelper {
 		
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME,platform);
-		caps.setCapability(MobileCapabilityType.UDID,udid);
+//		caps.setCapability(MobileCapabilityType.UDID,udid);
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,platformVersion);
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
 		caps.setCapability(MobileCapabilityType.APP, app);
@@ -108,7 +108,15 @@ public class GlobalMobileHelper {
 		tapOnElement(tapLocatorToHideKeyboard);
 	}
 	
-	public void swipeScreen(Direction dir) {
+	public static String getElementText(By locator) {
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+		return wait.until(ExpectedConditions.presenceOfElementLocated(locator)).getText();
+	}
+	
+	public static void swipeScreen(Direction dir) {
 		System.out.println("swipeScreenSmall(): dir: '" + dir + "'"); // always log your actions
 
 	    // Animation default time:

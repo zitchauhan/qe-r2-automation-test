@@ -17,4 +17,9 @@ public class WishListStepDef extends GlobalMobileHelper{
 	public void userIsOnHomePage() {
 		assertTrue(wishlistPage.isWishListPageDisplayed());
 	}
+	
+	@Then("^User should not see the wishlist page$")
+	public void wishListPageNotBeDisplayed() {
+		assertTrue(!wishlistPage.isWishListPageDisplayed());
+	}
 }
