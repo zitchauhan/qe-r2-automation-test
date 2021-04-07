@@ -73,4 +73,98 @@ public class PLPPage {
 			}
 		}
 	}
+
+
+	public boolean verifyPLP_Banners(String args) {
+		
+		if(args.equalsIgnoreCase("free_Shipping_Banner")) {
+		 return	isIn_Store_curbside_Banner(args);
+			
+			
+		}if(args.equalsIgnoreCase("In_Store_curbside_Banner")) {
+			 return	isIn_Store_curbside_Banner(args);
+		}
+		return false;
+		
+	}
+	
+	
+	
+	
+	
+	public boolean isIn_Store_curbside_Banner(String args) {
+		String textguidelines=GlobalMobileHelper.findData(args);
+		MobileElement BannerElement = driver.findElement(Locators.PLPPage.PLP_Page__Instore_CurbSideBaner);
+		 String elementtext  = BannerElement.getText();
+		 if(elementtext.equalsIgnoreCase(textguidelines)) {
+			 return true; 
+		 }else {
+			 return false;
+		 }
+		
+	}	
+	public boolean IsDisplayed_Free_Shipping_Banner(String args) {
+		String textguidelines=GlobalMobileHelper.findData(args);
+		MobileElement BannerElement = driver.findElement(Locators.PLPPage.PLP_Page_FreeShippingBaner);
+		 String elementtext  = BannerElement.getText();
+		 if(elementtext.equalsIgnoreCase(textguidelines)) {
+			 return true; 
+		 }else {
+			 return false;
+		 }
+		
+	}
+	public void click_ON_PLP_Link(String args) {
+
+		
+		if(args.equalsIgnoreCase("SeeDetail_FreeShipping")) {
+			 driver.findElement(Locators.PLPPage.PLP_Page_FreeShippingBaner).click();
+			
+		}if(args.equalsIgnoreCase("SeeDetail_Store_curbside")) {
+			 driver.findElement(Locators.PLPPage.PLP_Page_FreeShippingBaner).click();
+		}
+			
+	}
+
+	public boolean VerifyBannerInWeb(String args) {
+
+		
+		if(args.equalsIgnoreCase("Mobile_Web_FreeShipping")) {
+		 return	verifyWebFreeShippingBanner(args);
+			
+			
+		}if(args.equalsIgnoreCase("Mobile_Web_Store_curbside")) {
+			 return	verifyWebInStoreCurbsideBanne(args);
+		}
+		return false;
+		
+	
+		
+	}	
+	
+	
+	public boolean verifyWebInStoreCurbsideBanne(String args) {
+		String textguidelines=GlobalMobileHelper.findData(args);
+		MobileElement BannerElement = driver.findElement(Locators.PLPPage.WebViewBannerTitle_Instore_CurbSideBaner);
+		 String elementtext  = BannerElement.getText();
+		 if(elementtext.equalsIgnoreCase(textguidelines)) {
+			 return true; 
+		 }else {
+			 return false;
+		 }
+		
+	}	
+	public boolean verifyWebFreeShippingBanner(String args) {
+		String textguidelines=GlobalMobileHelper.findData(args);
+		MobileElement BannerElement = driver.findElement(Locators.PLPPage.WebViewBannerTitleFreeShipping);
+		 String elementtext  = BannerElement.getText();
+		 if(elementtext.equalsIgnoreCase(textguidelines)) {
+			 return true; 
+		 }else {
+			 return false;
+		 }
+		
+	}
+	
+	
 }

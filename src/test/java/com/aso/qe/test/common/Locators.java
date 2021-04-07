@@ -36,6 +36,10 @@ public class Locators {
 		//public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
 		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
 		public static By searchBox = By.id("btn_Search");
+		public static By HomePage_Instore_CurbSideBaner = By.id("lbl_banner_title");
+		public static By HomePage_FreeShippingBaner = By.id("lbl_banner_title");
+		public static By HomePage_Instore_CurbSideBaner_SeeDeatil = By.id("btn_banner_button");
+		public static By HomePage_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
 		
 		
 	}
@@ -172,6 +176,13 @@ public class Locators {
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 		public static By securityReassuranceMessage = By.id("lbl_shop_with_confidence_subheading");
 		public static By productTitle = By.id("lbl_product_title");
+		
+		public static By PLP_Page__Instore_CurbSideBaner = By.id("lbl_banner_title");
+		public static By PLP_Page_FreeShippingBaner = By.id("lbl_banner_title");
+		public static By PLP_Page_Instore_CurbSideBaner_SeeDeatil = By.id("btn_banner_button");
+		public static By PLP_Page_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
+		public static By WebViewBannerTitleFreeShipping = By.id("lbl_page_title");
+		public static By WebViewBannerTitle_Instore_CurbSideBaner = By.id("lbl_page_title");
 	
 	}
 	
@@ -218,6 +229,14 @@ public class Locators {
 		public static By PLP_PromotionMessage = By.id("lbl_promotional_msg");
 		public static By Clearance_Styles_AvailableDisplayed = By.id("");
 		public static By PLP_Some_Styles_Available = By.id("");
+		
+		
+		public static By CLP_Page__Instore_CurbSideBaner = By.id("lbl_banner_title");
+		public static By CLP_Page_FreeShippingBaner = By.id("lbl_banner_title");
+		public static By CLP_Page_Instore_CurbSideBaner_SeeDeatil = By.id("btn_banner_button");
+		public static By CLP_Page_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
+		
+		
 		
 		
 	}

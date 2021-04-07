@@ -1,5 +1,7 @@
 package com.aso.qe.test.stepdefinition.ios;
 
+import static org.junit.Assert.assertTrue;
+
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.pageobject.ios.Context;
 import com.aso.qe.test.pageobject.ios.PLPPage;
@@ -38,4 +40,26 @@ public void user_navigates_to_each_category_on_PLP_Page(String categoryName) thr
     // Write code here that turns the phrase above into concrete actions
    plpPage.navigateToPLPCategories(categoryName);
 }
+
+@Then("^I chose to verify \"([^\"]*)\" in PLP Page$")
+public void i_chose_to_verify_in_PLP_Page(String args) throws Throwable {
+	plpPage.verifyPLP_Banners(args);
+    
+}
+
+@Then("^I Choose to click on \"([^\"]*)\" Link$")
+public void i_Choose_to_click_on_Link(String args) throws Throwable {
+   
+	plpPage.click_ON_PLP_Link(args);
+}
+
+@Then("^I choose to verify navigated to \"([^\"]*)\"$")
+public void i_choose_to_verify_navigated_to(String args) throws Throwable {
+	
+	assertTrue(plpPage.VerifyBannerInWeb(args));	
+}
+
+
+
+
 }
