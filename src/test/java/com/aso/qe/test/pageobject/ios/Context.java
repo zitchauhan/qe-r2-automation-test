@@ -13,6 +13,7 @@ private static List<String> L3CategoryList;
 private static List<String> savedAddressesList;
 private static String updatedAddressField;
 private static String storeName;
+private static String defaultStore;
 
 public String getProductPriceOnPDP() {
 	return ProductPriceOnPDP;
@@ -94,6 +95,14 @@ public static String getStoreName() {
 
 public static void setStoreName(String storeName) {
 	Context.storeName = storeName;
+}
+
+public static String getDefaultStore() {
+	return defaultStore;
+}
+
+public static void setDefaultStore(String defaultStore) {
+	Context.defaultStore = defaultStore;
 }
 
 }

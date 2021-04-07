@@ -22,7 +22,7 @@ Feature: Validate User is able to navigate to all categories
   	Then verify user is on "Shop By Category" page
   	Then User verifies all categories and navigates to each PLP from Shop By Category	
   	
-  	@shopByCategory
+  	@Regression
   	Scenario: Validate user is navigating to each category level and verifies the following scenarios
   	1. get each category level list and verify the sub categories are displaying for L1 and L2 categories
   	2. Navigate to each PLP L1 page by shop all link and verify the corresponding sub categories are displaying

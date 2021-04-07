@@ -179,6 +179,8 @@ public class StorePickup extends GlobalMobileHelper{
 			GlobalMobileHelper.tapOnElement(Locators.storePickup.addressOnDetailsPage);
 			break;
 		case "make my store":
+			String storeName=driver.findElement(Locators.storePickup.defaultStoreName).getText();
+			Context.setDefaultStore(storeName.split("(?=\\d)(?<!\\d)")[0].trim());
 			GlobalMobileHelper.tapOnElement(Locators.storePickup.makeMyStoreOnDetailsPage);
 			break;
 		case "cancel":
@@ -186,5 +188,9 @@ public class StorePickup extends GlobalMobileHelper{
 			break;
 		default: logger.error("Couldn't click on "+str);
 		}
+	}
+	public void verifyDefaultStore() {
+		List<MobileElement> storeNameList = driver.findElements(Locators.storePickup.storeNameFindStore);
+			assertTrue("My Store is not set as default store",storeNameList.get(0).getText().contains(Context.getDefaultStore()));
 	}
 }

@@ -11,8 +11,8 @@ Feature: Find Store - Display Store List - No product added to cart
     #Then User verifies "allow location services" option is displayed on the screen
     #Then User taps on "allow location services" option
     Then User sees list of stores
-    
-     @Sprint2 @ST-OMNI-28535 @TC-OMNI-32916
+    	
+     @Sprint2 @ST-OMNI-28535 @TC-OMNI-32916 @ST-OMNI-29009
    Scenario: Verify user is able to see the availibility message with store when user navigated from PDP page
     Given User launches the application
     And User continues as guest user

@@ -1,7 +1,7 @@
  Feature: Select/Edit Saved Shipping Address 
  
     
-     @Sprint2 @ST-OMNI-28571
+     @Sprint2 @ST-OMNI-28571 @TC-31612
     Scenario: Verify registered user is able to edit the shipping information and the edited address is getting updated
     Given User launches the application
    Then User taps on "ALLOW LOCATION SERVICES" option

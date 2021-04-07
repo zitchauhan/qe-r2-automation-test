@@ -217,5 +217,6 @@ public class Locators {
 		public static By openInGoogleMap=By.xpath("//XCUIElementTypeButton[@name='Open in google Maps']");;
 		public static By openInMaps=By.xpath("//XCUIElementTypeButton[@name='Open in Maps']");
 		public static By cancelBtn=By.id("cancel_btn_find_store");
+		public static By defaultStoreName=By.id("lbl_details_find_store");
 	}
 }

@@ -55,5 +55,6 @@
     And User sees the store hours on details page
     Then User verifies Make my store button is "enabled"
     Then User taps on "make my store" on store details page	 
-    And User taps on details link of store 3	
+    And User verifies the default address
+    And User taps on details link of store 1
     Then User verifies Make my store button is "disabled"

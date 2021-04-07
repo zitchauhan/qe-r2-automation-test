@@ -96,5 +96,9 @@ public class StorePickupStepDef extends GlobalMobileHelper {
 	public void user_taps_on_on_store_details_page(String str) throws Throwable {
 		storePickup.navigateTo(str);
 	}
-
+	
+	@Then("^User verifies the default address$")
+	public void user_verifies_the_default_address() throws Throwable {
+		storePickup.verifyDefaultStore();
+	}
 }
