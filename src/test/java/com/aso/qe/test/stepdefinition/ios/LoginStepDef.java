@@ -171,5 +171,8 @@ public class LoginStepDef extends GlobalMobileHelper{
 	    // Write code here that turns the phrase above into concrete actions
 		loginPage.enterPassword(password);
 	}
-	
+	@Then("^User taps on cancel button$")
+	public void user_taps_on_cancel_button() throws Throwable {
+		loginPage.tapOnCancelBtn();
+	}
 }
