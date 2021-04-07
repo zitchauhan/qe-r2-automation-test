@@ -3,6 +3,7 @@ package com.aso.qe.test.stepdefinition.ios;
 import static org.junit.Assert.assertTrue;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.AccountPage;
 import com.aso.qe.test.pageobject.ios.SignUpPage;
 import com.aso.qe.test.pageobject.ios.WishlistPage;
@@ -95,5 +96,11 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	@Then("^User is taken to add address screen$")
 	public void addAddressScreenIsDisplayed() {
 		assertTrue(accountPage.isAddAddressScreenDisplayed());
+	}
+	
+	@Then("^User sees the error pop up$")
+	public void user_sees_the_error_pop_up() throws Throwable {
+	    
+		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.AddAddress.errorPopUp));
 	}
 }
