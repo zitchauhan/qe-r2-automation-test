@@ -611,4 +611,17 @@ public class CartPage {
 		}
 	}
 	
+
+	public void tapOnProductTitle() {
+		GlobalMobileHelper.tapOnElement(Locators.CartPage.labelProductTitle);
+		
+	}
+
+	public boolean isCheckoutPageDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.CartPage.buttonCheckout);
+	}
+
+	public void tapOnCheckoutButton() {
+		GlobalMobileHelper.tapOnElement(Locators.CartPage.buttonCheckout);
+	}
 }

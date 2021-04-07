@@ -7,8 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.framework.common.Constants;
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.BottomNav;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 
@@ -23,7 +25,7 @@ public class CommonMobileStepDef extends GlobalMobileHelper{
 			logger.debug("Going to launch mobile application");
 			initializeDriver();
 			logger.debug("Application successfully launched");
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			bNav = new BottomNav(driver);
 		} catch (MalformedURLException e) {
 			logger.debug("Error Launching mobile application");
@@ -57,5 +59,10 @@ public class CommonMobileStepDef extends GlobalMobileHelper{
 	@When("^User taps on account in bottom nav$")
 	public void tapOnAccount() {
 		bNav.tapOnAccount();
+	}
+	
+	@And("^User taps on Maybe later in Onboarding Screen$")
+	public void tapOnMaybeLater() {
+		GlobalMobileHelper.tapOnElement(Locators.OnBoardingScreen.maybeLaterButton);
 	}
 }

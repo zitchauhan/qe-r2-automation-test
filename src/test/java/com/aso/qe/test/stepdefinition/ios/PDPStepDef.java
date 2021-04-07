@@ -46,6 +46,7 @@ public class PDPStepDef extends GlobalMobileHelper{
 
 	@Then("^User sees quantity stepper$")
 	public void isQuantityStepperDisplayed() throws Throwable {
+		swipeScreen(Direction.UP);
 		assertTrue(pdp.isQuantityStepperDisplayed());
 	}
 	
@@ -164,10 +165,36 @@ public class PDPStepDef extends GlobalMobileHelper{
 	   
 		assertTrue(pdp.isNavigatedToPDPOnWeb());
 	}
-
-
+	
+	@When("^User selects Home Delivery checkbox$")
+	public void selectHomeDelivery() throws Throwable {
+		pdp.tapOnHomeDelivery();
+	}
+	
+	@When("^User taps on chage store button$")
+	public void tapOnChangeStore() throws Throwable {
+		pdp.tapOnChangeStore();
+	}
+	
+	@Then("^User is shown find store screen$")
+	public void isFindStoreScreenDisplayed() {
+		assertTrue(pdp.isFindStoreScreenDisplayed());
+	}
+	
+	@When("^User enters \"(.*?)\" in store search field$")
+	public void enterTextInStoreSearchField(String text) throws Throwable {
+		pdp.enterTextInStoreSearchField(text);
+	}
+	
+	@Then("^User is shown no store available message$")
+	public void noStoreAvailableMessageDisplayed() {
+		assertTrue(pdp.noStoreAvailableMessageDisplayed());
+	}
+	
+	@Then("^I choose to verify Error Message \"([^\"]*)\"$")
+	public void i_choose_to_verify_Error_Message(String arg1) throws Throwable {
+	    // to do 
+	    
+	}
 	
 }
-	
-	
-	

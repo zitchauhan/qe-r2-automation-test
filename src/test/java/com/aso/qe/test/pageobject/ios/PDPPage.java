@@ -19,6 +19,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.stepdefinition.ios.Hooks;
 
@@ -293,9 +294,7 @@ public class PDPPage {
 	public void tapOnMediumSize() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.mediumSize);
 	}
-	public void tapOnHomeDelivery() {
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.homeDeliveryRadioBtn);
-	}
+	
 	public void tapOnSizeChart() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.btnSizeChart);
 		
@@ -389,5 +388,31 @@ public class PDPPage {
 		}
 		
 	}
-}
 
+
+	public void tapOnHomeDelivery() {
+		GlobalMobileHelper.swipeScreen(Direction.UP);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.homeDeliveryRadioButton);
+	}
+
+	public void tapOnChangeStore() {
+		GlobalMobileHelper.swipeScreen(Direction.UP);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonChangeStore);
+	}
+
+	public boolean isFindStoreScreenDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.FindStore.findStoreHeader);
+	}
+
+	public void enterTextInStoreSearchField(String text) {
+		GlobalMobileHelper.setText(Locators.FindStore.searchBox, text, Locators.FindStore.findStoreHeader);
+	}
+
+	public boolean noStoreAvailableMessageDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.FindStore.noStoreAvailableMessage);
+	}
+
+	public void tapOnCancelButton() {
+		GlobalMobileHelper.tapOnElement(Locators.FindStore.cancelButton);
+	}
+}

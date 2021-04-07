@@ -11,19 +11,20 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.pageobject.ios.CheckoutPage;
+
+import cucumber.api.java.en.And;
 
 public class CheckoutStepDef extends GlobalMobileHelper {
+CheckoutPage checkout = new CheckoutPage(driver);
 	
+	@And("^User sees the checkout screen$")
+	public void isCheckoutPageDisplayed() throws Throwable {
+	    assertTrue(checkout.isCheckoutPageDisplayed());
+	}
 	private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getName());
 	
-	
-	@Then("^User sees the checkout button$")
-	public void user_sees_the_checkout_button() throws Throwable {
-	    swipeScreen(Direction.UP, 4);
-	    assertTrue(isElementDisplayed(Locators.CheckoutPage.buttonCheckout));
-	    logger.debug("Checkout button is displayed on the cart screen");
-	}
-
 	@When("^User taps on checkout button$")
 	public void user_taps_on_checkout_button() throws Throwable {
 	    
@@ -68,5 +69,5 @@ public class CheckoutStepDef extends GlobalMobileHelper {
 	@And("^User swipes right on cart page$")
 	public void user_swipes_right_on_cart_page(){
 		swipeScreen(Direction.RIGHT);
-	}
-}
+	}}
+
