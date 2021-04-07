@@ -8,6 +8,7 @@ import com.aso.qe.test.pageobject.ios.AccountPage;
 import com.aso.qe.test.pageobject.ios.SignUpPage;
 import com.aso.qe.test.pageobject.ios.WishlistPage;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -22,29 +23,23 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 		assertTrue(accountPage.isAccountPageDisplayed());
 	}
 
-    @When("User taps create account on {string} screen")
-    public void userTapsCreateAccountOnScreen(String arg0) {
-        /* Created By @{USER} on @{DATE} */
-    }
-
-    @Then("User sees Create Account modal")
-    public void userSeesCreateAccountModal() {
-        /* Created By @{USER} on @{DATE} */
-    }
 
     @Then("User sees password strength meter list")
     public void userSeesPasswordStrengthMeterList() {
         /* Created By @{USER} on @{DATE} */
+		throw new PendingException("userSeesPasswordStrengthMeterList Not implemented");
     }
 
     @And("User sees password rule {string} as {string}")
     public void userSeesPasswordRuleAs(String arg0, String arg1) {
         /* Created By @{USER} on @{DATE} */
+		throw new PendingException("userSeesPasswordRuleAs Not implemented");
     }
 
     @And("User sees Create Account button as {string}")
     public void userSeesCreateAccountButtonAs(String arg0) {
         /* Created By @{USER} on @{DATE} */
+		throw new PendingException("userSeesCreateAccountButtonAs not implemented");
     }
 
 
