@@ -285,7 +285,7 @@ public class Locators {
 		public static By inputPhone = By.id("tf_phone_no");
 		public static By inputState = By.id("tf_state");
 		public static By buttonAddNewAddress = By.id("btn_add_new_address");
-		
+		public static By errorPopUp= By.xpath("//*[contains(@label,'OK')]");
 		//Errors
 		public static By lblFirstNameError = By.id("lbl_first_name_error");
 		public static By lblLastNameError = By.id("lbl_last_name_error");

@@ -1,9 +1,14 @@
 Feature: Validate Cart shows necessary information for a prdouct
 
 	@Regression
-  Scenario: User Selects a product without any variants
+  Scenario Outline: User Selects a product without any variants
   	Given User launches the application
-    When User taps on go to pdp button
+    And User continues as guest user
+ #   Then User sees the homepage
+    When User Sees the Search Box
+    Then User clicks on the Search Box
+    And User search for the "<product>" 
+    And I choose to navigate to PDP
     And User sees Product title
     And User taps on add to cart button
     Then User is navigated To Cart Screen
@@ -15,3 +20,7 @@ Feature: Validate Cart shows necessary information for a prdouct
     And User sees Quantity Selector
     And User sees Remove from cart button
     And User sees Add to wish list button
+     Examples: 
+     |    product            |	
+     |    SearchKeyword           | 
+    

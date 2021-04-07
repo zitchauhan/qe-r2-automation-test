@@ -50,7 +50,7 @@ Feature: Verify User is able to Add the address
     Then User enters "User" in "Last Name" field on add address screen
     Then User enters "1501 Gaylord Trail" in "Address" field on add address screen
     Then User enters "2507" in "Apt Number" field on add address screen
-    Then User enters "76501" in "ZIP Code" field on add address screen
+    Then User enters "93453" in "ZIP Code" field on add address screen
     Then User sees "TX" in state field on add address screen
     Then User enters "Grapevine" in "City" field on add address screen
     Then User enters "7646564657" in "Phone" field on add address screen
