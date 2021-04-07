@@ -66,11 +66,7 @@ public void i_choose_to_click_on(String arg1) throws Throwable {
     
 }
 
-@Then("^I choose to verify \"([^\"]*)\"$")
-public void i_choose_to_verify(String arg1) throws Throwable {
-    // To do
-    
-}
+
 
 
 }

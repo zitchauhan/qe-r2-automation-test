@@ -14,10 +14,10 @@ Feature: Verify Details of PDP for product badging
  Examples: 
      |    badge        |	
 #    |    Hot Deal     | 
-#    |   Clearance     | 
+     |   Clearance     | 
 #    |   Price Drop    |
- #   |    New          |
+     |    New          |
      |   Exclusive     |
-  #  |   Online Only   |
+     |   Online Only   |
   #  |   Customize     |
  

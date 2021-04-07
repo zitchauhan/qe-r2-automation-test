@@ -1,7 +1,7 @@
 Feature: Verify product detail for FireArms/Ammunitions and be redirected to the appropriate .com page
 
   	@Sprint01 @TC-OMNI-20666_1
-    Scenario Outline:: validate PDP for Ammunitions
+    Scenario Outline:: validate PDP for FireArms/Ammunitions
   	Given User launches the application
     And User continues as guest user
  #   Then User sees the homepage
@@ -17,5 +17,5 @@ Feature: Verify product detail for FireArms/Ammunitions and be redirected to the
  Examples: 
      |    product            |	
      |    FireArms           | 
-   #  |    ammunitionProd    | 
+     |    ammunitionProd     | 
  

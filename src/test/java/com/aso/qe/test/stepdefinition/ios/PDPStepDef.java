@@ -193,7 +193,13 @@ public class PDPStepDef extends GlobalMobileHelper{
 	
 	@Then("^I choose to verify Error Message \"([^\"]*)\"$")
 	public void i_choose_to_verify_Error_Message(String arg1) throws Throwable {
-	    // to do 
+		assertTrue(pdp.isErrorMessageDisplayed(arg1));
+	    
+	}
+	@Then("^I choose to verify \"([^\"]*)\"$")
+	public void i_choose_to_verify(String arg1) throws Throwable {
+		assertTrue(pdp.VerifyOverlayAttribute(arg1));
+	   
 	    
 	}
 	

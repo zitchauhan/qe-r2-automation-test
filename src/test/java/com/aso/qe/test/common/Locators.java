@@ -95,6 +95,14 @@ public class Locators {
 		
 		public static By homeDeliveryRadioButton = By.id("rd_home_delivery");
 		public static By buttonChangeStore = By.id("btn_change_store");
+		
+		public static By OverLayCartSKU = By.id("");
+		public static By OverLayCartPrice = By.id("");
+		public static By OverLayCartQty = By.id("");
+		public static By OverLayCartSize = By.id("");
+		public static By WebViewBannerPDP = By.id("");
+		
+		
 	}
 
 	public static class ShopPage{

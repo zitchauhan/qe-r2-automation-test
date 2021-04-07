@@ -4,6 +4,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+
 import org.apache.log4j.Logger;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
@@ -145,17 +147,37 @@ public class PLPPage {
 	
 	public boolean verifyWebInStoreCurbsideBanne(String args) {
 		String textguidelines=GlobalMobileHelper.findData(args);
-		MobileElement BannerElement = driver.findElement(Locators.PLPPage.WebViewBannerTitle_Instore_CurbSideBaner);
-		 String elementtext  = BannerElement.getText();
-		 if(elementtext.equalsIgnoreCase(textguidelines)) {
-			 return true; 
-		 }else {
-			 return false;
-		 }
-		
-	}	
+	       Set<String> availableContexts = driver.getContextHandles();
+			
+			for(String context : availableContexts) {
+				if(context.contains("WEBVIEW")){
+					System.out.println("Context Name is " + context);
+					driver.context(context);
+					break;
+				}
+			}
+			
+			MobileElement BannerElement = driver.findElement(Locators.PLPPage.WebViewBannerTitle_Instore_CurbSideBaner);
+			 String elementtext  = BannerElement.getText();
+			 if(elementtext.equalsIgnoreCase(textguidelines)) {
+				 return true; 
+			 }else {
+				 return false;
+			 }
+			
+		}	
 	public boolean verifyWebFreeShippingBanner(String args) {
 		String textguidelines=GlobalMobileHelper.findData(args);
+       Set<String> availableContexts = driver.getContextHandles();
+		
+		for(String context : availableContexts) {
+			if(context.contains("WEBVIEW")){
+				System.out.println("Context Name is " + context);
+				driver.context(context);
+				break;
+			}
+		}
+		
 		MobileElement BannerElement = driver.findElement(Locators.PLPPage.WebViewBannerTitleFreeShipping);
 		 String elementtext  = BannerElement.getText();
 		 if(elementtext.equalsIgnoreCase(textguidelines)) {
