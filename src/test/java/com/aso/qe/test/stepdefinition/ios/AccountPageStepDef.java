@@ -36,13 +36,6 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 		throw new PendingException("userSeesPasswordRuleAs Not implemented");
     }
 
-    @And("^User sees Create Account button as \"(.*?)\"$")
-    public void userSeesCreateAccountButtonAs(String arg0) {
-        /* Created By @{USER} on @{DATE} */
-		throw new PendingException("userSeesCreateAccountButtonAs not implemented");
-    }
-
-
 	@When("^User taps on Create An Account button$")
 	public void tapOnCreateAnAccount() {
 		accountPage.tapOnCreateAnAccount();
