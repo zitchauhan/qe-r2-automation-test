@@ -3,6 +3,8 @@ package com.aso.qe.test.pageobject.ios;
 import java.util.List;
 
 public class Context {
+
+	public static String CurrentProductTitle;
 private static  String ProductPriceOnPDP;
 private static List<String> shopBySubCategoryList;
 private static List<String> plpSubCategoryList;
@@ -103,4 +105,11 @@ public static List<String> getL3CategoryList() {
 public static void setL3CategoryList(List<String> l3CategoryList) {
 	L3CategoryList = l3CategoryList;
 }
+	public static String getCurrentProductTitle() {
+		return CurrentProductTitle;
+	}
+
+	public static void setCurrentProductTitle(String currentProductTitle) {
+		CurrentProductTitle = currentProductTitle;
+	}
 }
