@@ -1,9 +1,11 @@
 package com.aso.qe.test.pageobject.ios;
 
+
 import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
+
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.stepdefinition.ios.Hooks;
@@ -29,7 +31,14 @@ public class ShopPage {
 		MobileElement shopPageHeader = driver.findElement(Locators.ShopPage.shopPageTitle);
 		return shopPageHeader.isDisplayed();
 	}
-	
+
+	public void tapOnShopSubCat() {
+		GlobalMobileHelper.tapOnElement(Locators.ShopPage.subcat);
+	}
+	public void tapOnShopAll() {
+		GlobalMobileHelper.tapOnElement(Locators.ShopPage.shopAll);
+
+	}
 	public void isCategoriesDisplayed() throws InterruptedException {
 		//driver.findElementsByAccessibilityId("lbl_category_list_item");
 		GlobalMobileHelper.setImplicitWaitTo(driver,5);
@@ -251,6 +260,6 @@ public class ShopPage {
 	
 	public void tapOnBackbtn(AppiumDriver<MobileElement> driver) throws InterruptedException {
 		GlobalMobileHelper.tapOnElement(Locators.ShopPage.categoryBackBtn);
-		Thread.sleep(5000);
+		
 	}
 }

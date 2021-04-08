@@ -63,6 +63,7 @@ public static String getDefaultStore() {
 public static void setDefaultStore(String defaultStore) {
 	Context.defaultStore = defaultStore;
 }
+
 public static List<String> getShopBySubCategoryList() {
 	return shopBySubCategoryList;
 }

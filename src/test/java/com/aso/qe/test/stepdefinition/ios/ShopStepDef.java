@@ -1,12 +1,12 @@
 package com.aso.qe.test.stepdefinition.ios;
 import static org.junit.Assert.assertTrue;
 
-import org.codehaus.plexus.logging.Logger;
-
 import com.aso.qe.test.common.GlobalMobileHelper;
-import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.Context;
 import com.aso.qe.test.pageobject.ios.ShopPage;
+
+import cucumber.api.java.en.And;
+
 import cucumber.api.java.en.Then;
 
 public class ShopStepDef extends GlobalMobileHelper{
@@ -16,7 +16,15 @@ public class ShopStepDef extends GlobalMobileHelper{
 	public void userIsOnShopPage() {
 		assertTrue(shopPage.isShopPageDisplayed());
 	}
-	
+
+	@And("^User click on Shop sub categories$")
+	public void tapOnSubCat() {
+		shopPage.tapOnShopSubCat();
+	}
+	@And("^User click on Shop All$")
+	public void tapOnShopAll() {
+		shopPage.tapOnShopAll();
+	}
 	@Then("^User sees the categories list is not empty$")
 	public void userSeesCategories() throws InterruptedException {
 		shopPage.isCategoriesDisplayed();

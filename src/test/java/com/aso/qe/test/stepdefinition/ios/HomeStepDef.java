@@ -42,12 +42,32 @@ public class HomeStepDef extends GlobalMobileHelper{
 	public void tapOnProductGolfBall() {
 		homePage.taponGolfBallProduct();
 	}
-	@When("^User Sees the Search Box$")
+	@And("^User Sees the Search Box$")
 	public void isSearchBoxDisplayed() {
 		assertTrue(homePage.isSearchBoxDisplayed());
 	}
 	@Then("^User clicks on the Search Box$")
 	public void tapOnSearchBox() {
 		homePage.tapOnSearchBox();
+	}
+	@Then("^User Sees the Shop New section$")
+	public void isShopNewSectionAvailable() {
+		homePage.isShopNewSectionDisplayed();
+	}
+	@And("^user click on shop new Section$")
+	public void tapOnShopNewSection() {
+		homePage.tapOnShopNewSection();
+	}
+	@And("^user sees the academy Exclusive component$")
+	public void isAcademyExclusiveDisplayed() {
+		homePage.isAcademyExclusiveDisplayed();
+	}
+	@Then("^user click on the academy Exclusive Banner$")
+	public void tapOnAcademyExclusiveBanner() {
+		homePage.tapOnAcademyExcusiveBanner();
+	}
+	@And("^User Clicks On MaY Be Later$")
+	public void tapOnMaybelater() {
+		homePage.tapOnMayBelater();
 	}
 }

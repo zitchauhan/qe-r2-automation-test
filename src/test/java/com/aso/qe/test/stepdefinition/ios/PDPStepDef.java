@@ -66,9 +66,18 @@ public class PDPStepDef extends GlobalMobileHelper{
 	}
 	
 	@Then("^Quantity is changed to \"(.*?)\"$")
-	public void validateQuantity(String qty) {
+	public void validateQuantity(String qty) {	
 		assertTrue(pdp.validateQty(qty));
 	}
+	@And("^User Sees the Variant of \"(.*?)\" Product$")
+	public void isVarientDisplayed(String variantProduct) {
+		assertTrue( pdp.isVarientDisplayed(variantProduct));
+	}
+	@Then("^User Change the variants of \"(.*?)\" to \"(.*?)\" , \"(.*?)\"$")
+	public void changeVariant(String variantType, String variantSize, String variantColor) {
+		pdp.changeVariant(variantType,variantSize,variantColor);
+	}
+
 	@And("^verify the \"(.*?)\" of product$")
 	public void isBadgeDisplayed(String args) throws Throwable {
 		
@@ -148,6 +157,41 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void isVariantValueDisplayed() {
 		assertTrue(pdp.isVariantValueDisplayed());
 	}
+	@Then("^User sees the Pickup And Delivery Option$")
+	public void isPickUpandDeliveryOptionDisplayed() {
+		
+	}
+	@Then("^User click on the Color Variant$")
+	public void tapOnColor() {
+		pdp.tapOnColor();
+	}
+	@And("^Add to cart button is disabled$")
+	public void isEnabledAddToCart() {
+		pdp.isDisabledAddtoCart();
+				
+	}
+	@Then("^user enabled the radio button$")
+	public void tapOnRadioBtn() {
+		pdp.tapOnRadioBtn();
+	}
+	@And("^User sees the label \"([^\"]*)\"$")
+	public void isLabelDisplayed(String label) {
+		assertTrue(pdp.isLabelDisplayed(label));
+	}
+	@And("^User sees the Sub label \"([^\"]*)\"$")
+	public void isSubLabelDisplayed(String sublabel) {
+		assertTrue(pdp.isSubLabelDisplayed(sublabel));
+	}
+	@And("^user Select the Store \"([^\"]*)\"$")
+	public void changeStore(String storeName) {
+		pdp.changeStore(storeName);
+	}
+	@And("^User sees the \"([^\"]*)\"$")
+	public void isMessageDisplayed(String expactedMsg) {
+		
+	}
+
+	
 	
 	@Then("^User taps on change store link$")
 	public void user_taps_on_change_store_link() throws Throwable {

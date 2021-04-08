@@ -1,4 +1,12 @@
 package com.aso.qe.test.pageobject.ios;
+
+import java.util.List;
+
+import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.Locators;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.test.common.GlobalMobileHelper;
@@ -18,12 +26,7 @@ public class HomePage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public void tapOnShopButton() {
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+    public void tapOnShopButton() {		
 		MobileElement shopHomePage = driver.findElement(Locators.HomePage.shopHomePage);
 		GlobalMobileHelper.tapOnElement(shopHomePage);
 		try {
@@ -46,24 +49,14 @@ public class HomePage {
     
 
     public void tapOnProduct() {
-
-        try {
-
+       try {
             Thread.sleep(2000);
-
         } catch (InterruptedException e) {
-
             e.printStackTrace();
-
         }
-
         MobileElement btnGoToPDP = driver.findElement(Locators.HomePage.buttonGoToPDP);
-
         GlobalMobileHelper.tapOnElement(btnGoToPDP);
-
     }
-
-    
 
     public void tapOnAdidasTshirt() {
 
@@ -100,24 +93,40 @@ public class HomePage {
     }
 
 
+	public boolean isSearchBoxDisplayed() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.searchBox);	
+	}
+	
+	public void tapOnSearchBox() {
+		GlobalMobileHelper.tapOnElement(Locators.HomePage.searchBox);
+	}
+	
+	public boolean isShopNewSectionDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.shopNewImage);
+	}
+	
+	public void tapOnShopNewSection() {
+		
+		GlobalMobileHelper.tapOnElement(Locators.HomePage.shopNewBar);	
+	}
+	public boolean isAcademyExclusiveDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.academyExclusiveBanner);
+	}
+	public void tapOnAcademyExcusiveBanner() {
+		GlobalMobileHelper.tapOnElement(Locators.HomePage.academyExclusiveBanner);
+	}
 
-
-
-    public boolean isSearchBoxDisplayed() {
-
-        return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.searchBox);
-
-        
-
-    }
-
-    public void tapOnSearchBox() {
-
-        GlobalMobileHelper.tapOnElement(Locators.HomePage.searchBox);
-
-    }
-
-
-
-
+	public void tapOnMayBelater() {
+		GlobalMobileHelper.tapOnElement(Locators.HomePage.maybeLaterBtn);
+		
+	}
+	
+	
+	
 }
