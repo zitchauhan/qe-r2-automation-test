@@ -72,7 +72,7 @@ public class Locators {
 		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 		public static By securityReassuranceMessage = By.id("lbl_shop_with_confidence_subheading");
-		public static By labelFreeSStoreReturn = By.id("lbl_header");		
+		public static By labelFreeSStoreReturn = By.id("lbl_header");
 		public static By PLP_Page__Instore_CurbSideBaner = By.id("lbl_banner_title");
 		public static By PLP_Page_FreeShippingBaner = By.id("lbl_banner_title");
 		public static By PLP_Page_Instore_CurbSideBaner_SeeDeatil = By.id("btn_banner_button");
@@ -96,7 +96,7 @@ public class Locators {
 	public static class OnBoardingScreen{
 		public static By maybeLaterButton = By.id("btn_maybe_later");
 	}
-	
+
 	public static class PDPPage{
 		public static By imageHero = By.id("img_hero");
 		public static By labelProductTitle = By.id("lbl_product_title");
@@ -166,13 +166,12 @@ public class Locators {
 		public static By categoryBackBtn = By.id("btn_back");
 		public static By categorytitle = By.id("lbl_category_title");
 		public static By shopAllLink = By.id("btn_shop_all");
-
 	}
 	
 	public static class WishlistPage{
 		public static By wishlistTitle = By.id("lbl_wish_list");
 	}
-
+	
 	public static class AccountPage{
 		public static By accountTitle = By.id("lbl_account");
 		public static By loginLink = By.xpath("//XCUIElementTypeButton[@name=\"LOGIN\"]");
@@ -223,23 +222,20 @@ public class Locators {
 		public static By labelWeAccept = By.id("lbl_we_accept");
 		public static By securityReassuranceMessage = By.id("lbl_security_reassurance_message");
 		public static By paymentModeImages = By.id("img_payment_modes");
-		public static By buttonCheckout = By.id("btn_checkout");		
+		public static By buttonCheckout = By.id("btn_checkout");
 		public static By productDisclaimerLabel = By.id("disclaimer_messages_label"); // Can be _0 for one product
-		public static By productDisclaimerReadMore = By.xpath("//*[contains(@label, 'Read More')]");		
+		public static By productDisclaimerReadMore = By.xpath("//*[contains(@label, 'Read More')]");
 		public static By textChangeZipCode = By.id("lbl_change_zipcode_input");
 		public static By buttonSubmit = By.xpath("//*[contains(@label, 'SUBMIT')]");
 		public static By labelEstimatedShipping = By.xpath("//*[contains(@label, 'Estimated Shipping to')]");
 		public static By lableChangeZipCodeModal = By.id("lbl_change_zipcode_text");
 		public static By buttonShippingPolicy = By.id("btn_shipping_policy");
 		public static By buttonReturnPolicy = By.id("btn_return_policy");
-		public static By labelFreeSStoreReturn = By.id("lbl_header");
+		public static By labelFreeStoreReturn = By.id("lbl_header");
 		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 	}
-	public static class AcademyExclusivePage{
-		public static By academyExclusiveTitle = By.id("lbl_page_title");
 
-	}
 	public static class CheckoutPage{
 		public static By productThumbNail = By.xpath("(//XCUIElementTypeOther[@name=\"Product Image\"])[2]/XCUIElementTypeOther");
 		public static By productTitle = By.id("lbl_product_title");
