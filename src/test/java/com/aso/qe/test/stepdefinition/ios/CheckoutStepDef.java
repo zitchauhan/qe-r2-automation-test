@@ -79,6 +79,58 @@ private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getN
 		swipeScreen(Direction.RIGHT);
 	}
 	
+	@Then("^User sees contact information section$")
+	public void user_sees_contact_information_section() throws Throwable {
+	    assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CheckoutPage.contactInformation));
+	}
+	
+	@When("^User taps on contact information section$")
+	public void user_taps_on_contact_information_section() throws Throwable {
+	    GlobalMobileHelper.tapOnElement(Locators.CheckoutPage.contactInformation);
+	}
+	
+	@Then("^User is shown email field$")
+	public void user_is_shown_email_field() throws Throwable {
+		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CheckoutPage.emailField));
+	}
+	
+	@Then("^User enters \"([^\"]*)\" in email field$")
+	public void user_enters_in_email_field(String arg1) throws Throwable {
+	    GlobalMobileHelper.setText(Locators.CheckoutPage.emailField, arg1);
+	}
+	
+	@Then("^User is shown Create an Account button in contact information screen$")
+	public void user_is_shown_Create_an_Account_button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+	
+	@When("^User taps on Save Email button$")
+	public void tapOnSaveEmail() throws Throwable {
+	    GlobalMobileHelper.tapOnElement(Locators.CheckoutPage.saveEmailButton);
+	}
+	
+	@Then("^User is shown Create an Account button$")
+	public void createAnAccountButtonIsDisplayed() throws Throwable {
+		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CheckoutPage.createAnAccountButton));
+	}
+	
+	@Then("^User is shown Sign In button$")
+	public void user_is_shown_Sign_In_button() throws Throwable {
+		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CheckoutPage.signInButton));
+	}
+	
+	@When("^User taps on Continue as Guest button$")
+	public void user_taps_on_Continue_as_Guest_button() throws Throwable {
+		GlobalMobileHelper.tapOnElement(Locators.CheckoutPage.continueAsGuestButton);
+	}
+	
+	@Then("^User sees \"([^\"]*)\" in contact information screen$")
+	public void user_sees_in_contact_information_screen(String arg1) throws Throwable {
+	    String actual = GlobalMobileHelper.getElementText(Locators.CheckoutPage.emailFieldLabel);
+	    assertTrue(actual.equals(arg1));
+	}
+	
 	@Then("^User verifies existing address are \"([^\"]*)\" on shipping information screen$")
 	public void user_verifies_existing_address_are_on_shipping_information_screen(String visibility) throws Throwable {
 		checkoutPage.isAddressDisplayed(visibility);

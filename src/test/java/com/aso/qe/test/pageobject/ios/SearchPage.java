@@ -58,6 +58,33 @@ public class SearchPage {
 		MobileElement productListed = driver.findElement(Locators.PLPPage.productTitle);
 		GlobalMobileHelper.tapOnElement(productListed);
 	}
+	public void tapOnCancelBtn() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		GlobalMobileHelper.tapOnElement(Locators.SearchPage.cancelBtn);
+	}
+	public boolean isOutOfStockToggleDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.toggleOOS);
+	}
+	public boolean isOosTogleDisabled() {
+		MobileElement oOSToggle = driver.findElement(Locators.PLPPage.toggleOOS);
+		boolean stat = oOSToggle.isEnabled();
+		if(stat==true) {
+			return false;
+		}else {
+		return true;
+		}
+	}
+	public void oosToggleEnable() {
+		GlobalMobileHelper.tapOnElement(Locators.PLPPage.toggleOOS);
+		
+	}
+	
+	
 		
 	}
 

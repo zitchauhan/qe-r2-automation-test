@@ -48,4 +48,3 @@ Feature: Validate User is able view product list by category
   	Then User verifies "L3 categories" are displaying on PLP
   	Then User navigates to "Boys' shirts" category on PLP Page
   	Then User verifies "No categories" are displaying on PLP
-

@@ -156,6 +156,7 @@ public class CartStepDef extends GlobalMobileHelper{
 		String itemLabelText = cartPage.getItemContLabelText();
 		assertTrue(itemLabelText.contains(arg1));
 	}
+	
 	@Then("^User verifies guest user sign in section \"([^\"]*)\" on cart page$")
 	public void user_sees_guest_user_sign_in_section(String displayStatus) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -166,15 +167,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here that turns the phrase above into concrete actions
 	   cartPage.tapOnSignInButton();
 	}
-	
-	@And("^User sees the Variant of selected Product$")
-	public void validateVariantOnCart() {
-		assertTrue(cartPage.validateCartVariant());
-	}
-	@And("^User sees the Variant of selected golf Ball$")
-	public void validateGolfBallVariatOnCart() {
-		assertTrue(cartPage.validateCartVariant());
-	}
+
 	@Then("^User sees shop with confidence label$")
 	public void user_sees_shop_with_confidence_label() throws Throwable {
 	    // Write code here for shop with confidence label
@@ -488,6 +481,12 @@ public class CartStepDef extends GlobalMobileHelper{
 			cartPage.tapMinusActionCartPage();
 		}
 	}
+	@And("^User sees the \"(.*?)\" and \"(.*?)\" of selected Product \"(.*?)\"$")
+	public void isvariantDisplayedonCart(String variantSize , String variantColor, String variantType) {
+		assertTrue(cartPage.isvariantDisplayedOnCart(variantSize,variantColor,variantType));
+	}
+	
+
 	
 	@And("^User taps on product title$") 
 	public void tapOnnProductTitle() throws Throwable{

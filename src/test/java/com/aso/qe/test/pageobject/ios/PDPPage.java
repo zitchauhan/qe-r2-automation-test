@@ -10,15 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.lang.UnsupportedOperationException;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import static org.junit.Assert.assertTrue;
-
-import org.openqa.selenium.support.PageFactory;
-import java.lang.UnsupportedOperationException;
-
-import org.apache.log4j.Logger;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.GlobalMobileHelper.Direction;
@@ -82,6 +73,7 @@ public class PDPPage {
 	
 	public boolean isProductTitleDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.labelProductTitle);
+
 	}
 	
 	public String getProductTitle() {
@@ -100,7 +92,14 @@ public class PDPPage {
 	public void tapOnAddToCart() {
 		MobileElement addToCartButton = driver.findElement(Locators.PDPPage.buttonAddToCart);
 		if(addToCartButton.isEnabled()) {
+		
 			addToCartButton.click();
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}else {
 			System.out.println("This Varient of the Product is out of stock");
 		}
@@ -310,6 +309,24 @@ public class PDPPage {
 	public boolean isVariantValueDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorValue);
 	}
+	public boolean isPickUpAndDeliveryOptionDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.pickUpAndDeliveryTitle);
+	}
+
+	public void tapOnColor() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.firstColor);
+		
+	}
+
+	public boolean isDisabledAddtoCart() {
+		MobileElement addToCart = driver.findElement(Locators.PDPPage.buttonAddToCart);
+		boolean stat = addToCart.isEnabled();
+		if(stat==true) {
+			return false;
+		}else {
+		return true;
+		}
+	}
 
 	public boolean isMessageDisplayed(String args) throws Exception {
 		try {
@@ -398,6 +415,102 @@ public class PDPPage {
 		}else {
 			throw new UnsupportedOperationException();
 		}
+		
+	}
+
+	public void tapOnRadioBtn() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.btnRadioDeliveryOption);
+		
+	}
+
+	public boolean isLabelDisplayed(String label) {
+		String labelActual = driver.findElement(Locators.PDPPage.label).getText();
+		if(labelActual.equalsIgnoreCase(label)) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	public boolean isSubLabelDisplayed(String label) {
+		String labelActual = driver.findElement(Locators.PDPPage.subLabel).getText();
+		if(labelActual.equalsIgnoreCase(label)) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+
+	public void changeStore(String storeName) {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.changeStore);
+		
+		
+		
+		
+	}
+
+	public boolean isVarientDisplayed(String varianType) {
+		if (varianType.contains("color and size")) 
+		{
+		boolean stat1=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
+		boolean stat2=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+		     if(stat1 && stat2 == true) {
+		    	 return true;
+		     }else {
+		    	 return false;
+		     }
+			
+		}
+		else  {
+			boolean stat = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+			return stat;
+		}
+		
+		
+		
+	}
+
+	public void changeVariant(String variantType,String variantSize, String variantColor) {
+		if(variantType.contains("SizeAndColor")) {
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.whiteColor);
+			
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			MobileElement varientColorValue = driver.findElement(Locators.PDPPage.colorValue);
+			assertTrue(varientColorValue.getText().contains(variantColor));
+			
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.mediumSize);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			MobileElement varientSizeValue1 = driver.findElement(Locators.PDPPage.sizeValue);
+			assertTrue(varientSizeValue1.getText().contains(variantSize));
+			
+		}else {
+			System.out.println("fixed variants");
+		}
+		
+			/*else if(variantType.contains("color")) {
+		
+			if(driver.findElement(Locators.PDPPage.firstColor).isDisplayed()==true) {
+				GlobalMobileHelper.tapOnElement(Locators.PDPPage.whiteColor);
+				
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				MobileElement varientColorValue = driver.findElement(Locators.PDPPage.colorValue);
+				assertTrue(varientColorValue.getText().contains(variantColor));*/
+			
+		
+			
 		
 	}
 

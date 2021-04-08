@@ -12,6 +12,7 @@ import com.aso.qe.test.pageobject.ios.SearchPage;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import io.appium.java_client.MobileElement;
 import junit.framework.Assert;
 
@@ -31,13 +32,31 @@ public class SearchPageStepDef extends GlobalMobileHelper{
 	}
 	@And("^User observe message \"(.*?)\"$")
 	public void validatewrongSearch(String msg) {
-	
+
 	assertTrue(searchPage.isSearchErrorDisplayed(msg));
 	}
 	@And("^user click on Product$")
 	public void tapOnProduct() {
 		searchPage.tapOnProduct();
 	}
+	@Then("^user clicks on cancel button$")
+	public void tapOnCancelBtn() {
+		searchPage.tapOnCancelBtn();
+	}
+	@And("^User sees the Hide Out Of Stock Section$")
+	public void isHideOutOfStockToggleDisplayed() {
+		assertTrue(searchPage.isOutOfStockToggleDisplayed());
+	}
+	@Then("^User sees the OOS toggle is deactivated$")
+	public void isOosToggleDeactivated() {
+		assertTrue(searchPage.isOosTogleDisabled());
+	}
+	@When("^User Enabled the OOS toggle$")
+	public void enableOosTogle() {
+		searchPage.oosToggleEnable();
+	}
+	
+	
 	
 	
 

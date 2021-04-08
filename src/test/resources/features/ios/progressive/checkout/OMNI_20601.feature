@@ -1,7 +1,7 @@
-Feature: Validate user can navigate to PDP from cart
-
-@ST-OMNI-24742 @TC-OMNI-29786
-Scenario: User taps on product title in cart and moves to the pdp page
+Feature: User is able to navigate to checkout screen
+  
+  @ST-OMNI-20601 @TC-OMNI-33071
+  Scenario: Title of your scenario
     Given User launches the application
     And User continues as guest user
     When User Sees the Search Box
@@ -13,6 +13,6 @@ Scenario: User taps on product title in cart and moves to the pdp page
     And User taps on add to cart button
     And User taps on View Cart button
     Then User is navigated To Cart Screen
-    And User taps on product title
-    Then User sees product image
-    And User sees Product title
+    And User sees the checkout button
+    When User taps on checkout button
+    Then User sees product thumbnail on checkout

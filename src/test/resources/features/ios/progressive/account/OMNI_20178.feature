@@ -3,7 +3,7 @@ Feature: Verify User is able to see all the fields of the create and account scr
   @ST-OMNI-20178 @TC-OMNI-33069
   Scenario: User sees all necessary fields in create account page
   	Given User launches the application
-  	And User taps on Maybe later in Onboarding Screen
+  #	And User taps on Maybe later in Onboarding Screen
     And User continues as guest user
     When User taps on account in bottom nav
     Then User sees the account page
