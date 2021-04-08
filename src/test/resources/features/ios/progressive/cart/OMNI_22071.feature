@@ -1,7 +1,7 @@
 
 Feature: Verify Details of Empty cart for Guest user
 
-  @Sprint1 @TC-OMNI-24518
+  @Sprint1 @TC-OMNI-24518 @ST-OMNI-22071
   Scenario: Guest User is on cart without any products
   	Given User launches the application
   	When User taps on cart in bottom nav

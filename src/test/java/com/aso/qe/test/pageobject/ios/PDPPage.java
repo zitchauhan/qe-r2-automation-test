@@ -401,6 +401,10 @@ public class PDPPage {
 		
 	}
 
+	public void tapOnChangeStoreLink() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.changeStoreLink);
+	}
+
 
 	public void tapOnHomeDelivery() {
 		GlobalMobileHelper.swipeScreen(Direction.UP);

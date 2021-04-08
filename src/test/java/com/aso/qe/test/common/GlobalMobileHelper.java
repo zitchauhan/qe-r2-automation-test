@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -229,6 +230,69 @@ public class GlobalMobileHelper {
          LEFT,
          RIGHT;
      }
+	 public void swipeScreenFromElement(Direction dir, MobileElement fromElement) {
+		   System.out.println("swipeScreenSmall(): dir: '" + dir + "'"); // always log your actions
+
+			// Animation default time:
+			//  - Android: 300 ms
+			//  - iOS: 200 ms
+			// final value depends on your app and could be greater
+			final int ANIMATION_TIME = 1500; // ms
+			
+			final int PRESS_TIME = 200; // ms
+			Point location = fromElement.getLocation();
+			  int x = location.getX();
+			  int y = location.getY();
+			PointOption pointOptionStart, pointOptionEnd;
+
+			Dimension dims = driver.manage().window().getSize();
+			
+			pointOptionStart = PointOption.point(x,y);
+			int mult = 3; // multiplier
+			switch (dir) {
+			case DOWN: 
+			    pointOptionEnd = PointOption.point(x, y + y / mult);
+			    break;
+			case UP: 
+			    pointOptionEnd = PointOption.point(x, y - y/ mult);
+			    break;
+			case LEFT: 
+			    pointOptionEnd = PointOption.point(x - x / mult, y);
+			    break;
+			case RIGHT: 
+			    pointOptionEnd = PointOption.point(x + x / mult, y);
+			    break;
+			default:
+			    throw new IllegalArgumentException("swipeScreenSmall(): dir: '" + dir.toString() + "' NOT supported");
+			}
+
+			// execute swipe using TouchAction
+			try {
+			new TouchAction(driver)
+			        .press(pointOptionStart)
+			        // a bit more reliable when we add small wait
+			        .waitAction(WaitOptions.waitOptions(Duration.ofMillis(PRESS_TIME)))
+			        .moveTo(pointOptionEnd)
+			        .release().perform();
+			} catch (Exception e) {
+			System.err.println("swipeScreenSmall(): TouchAction FAILED\n" + e.getMessage());
+			return;
+			}
+
+			// always allow swipe action to complete
+			try {
+			Thread.sleep(ANIMATION_TIME);
+			} catch (InterruptedException e) {
+			// ignore
+			}
+			 }
+		  public void swipeScreenFromElement(Direction dir, MobileElement fromElement,int numOftimes) {
+				int start=0;
+				while (start < numOftimes) {
+					swipeScreenFromElement(dir,fromElement);
+					start+=1;
+				}
+			}
 	 
 	public static String getElementText(By locator) {
 		if(driver == null) {

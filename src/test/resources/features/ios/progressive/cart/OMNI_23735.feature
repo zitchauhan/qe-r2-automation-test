@@ -13,8 +13,8 @@ Feature: Verify Subtotal and items label in cart
     Then User is navigated To Cart Screen
     And User sees items label
     And User sees subtotal header
-    
-   
+
+  @Sprint1 @ST-OMNI-23735 @TC-OMNI-
    Scenario: Items label is udpated when more products are added to cart
     Given User launches the application
     And User continues as guest user

@@ -1,4 +1,4 @@
-package com.aso.qe.test.stepdefinition.ios;
+	package com.aso.qe.test.stepdefinition.ios;
 
 import static org.junit.Assert.assertTrue;
 
@@ -102,5 +102,9 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	public void user_sees_the_error_pop_up() throws Throwable {
 	    
 		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.AddAddress.errorPopUp));
+	}
+	@Then("^User taps on Find Store link$")
+	public void user_taps_on_Find_Store_link() throws Throwable {
+		accountPage.tapOnFindStoreLink();
 	}
 }

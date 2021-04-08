@@ -1,5 +1,6 @@
 Feature: Guest user sign in on cart page, navigates to checkout page and the place order
 
+@Regression
 Scenario: verify when guest user sign-in from cart page
     And User continues as guest user
     Then User sees the homepage

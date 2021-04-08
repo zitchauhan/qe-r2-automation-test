@@ -1,6 +1,6 @@
 Feature: Verify Functionality of bottom navigation
 
-@Sprint1 @TC_OMNI_24716
+@Sprint1 @TC_OMNI_24716 @ST-OMNI-22019
 Scenario: User can navigate to destination screen using bottom navigation
   	Given User launches the application
   	And User Logs into the application

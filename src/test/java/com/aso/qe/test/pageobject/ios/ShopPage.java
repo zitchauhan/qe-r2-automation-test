@@ -82,7 +82,7 @@ public class ShopPage {
 	
 	public void verifyL2CategoryLevel(){
 		try{ 
-			GlobalMobileHelper.setImplicitWaitTo(driver,5);
+		Thread.sleep(5000);
 		List<MobileElement> categoriesList = (List<MobileElement>) driver.findElements(Locators.ShopPage.categoriesList);
 		assertTrue("L2 categories are not present !", categoriesList.size()>0);
 		String categorytitle= driver.findElement(Locators.ShopPage.categorytitle).getText();
@@ -92,9 +92,9 @@ public class ShopPage {
 			MobileElement element = categoriesList.get(i);
 			String elementName = element.getText();
 			logger.info(" category--> "+elementName);
-			GlobalMobileHelper.setImplicitWaitTo(driver,8);
+			Thread.sleep(5000);
 			GlobalMobileHelper.tapOnElement(element);
-			GlobalMobileHelper.setImplicitWaitTo(driver,5);
+			Thread.sleep(5000);
 			isCategoriesDisplayed();
 			categorytitle= driver.findElement(Locators.ShopPage.categorytitle).getText();
 			assertTrue("User is not landed on correct category page",elementName.contains(categorytitle));
@@ -102,7 +102,6 @@ public class ShopPage {
 			GlobalMobileHelper.tapOnElement(driver.findElement(Locators.ShopPage.categoryBackBtn)); 
 			GlobalMobileHelper.setImplicitWaitTo(driver,5);
 		} } 	catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			logger.error(e);
 		}	
@@ -111,7 +110,7 @@ public class ShopPage {
 	
 	public void verifyL3CategoryLevel(){
 		try {
-			GlobalMobileHelper.setImplicitWaitTo(driver,5);
+			Thread.sleep(5000);
 		List<MobileElement> categoriesList = (List<MobileElement>) driver.findElements(Locators.ShopPage.categoriesList);
 		assertTrue("L3 categories are not present !", categoriesList.size()>0);
 		String categorytitle= driver.findElement(Locators.ShopPage.categorytitle).getText();
@@ -121,16 +120,15 @@ public class ShopPage {
 			MobileElement element = categoriesList.get(i);
 			String elementName = element.getText();
 			logger.info(" category--> "+elementName);
-			GlobalMobileHelper.setImplicitWaitTo(driver,8);
+			Thread.sleep(5000);
 			GlobalMobileHelper.tapOnElement(element);
-			GlobalMobileHelper.setImplicitWaitTo(driver,5);
+			Thread.sleep(5000);
 			plpPage.verifyPLPPageName(driver,trimCategoryName(elementName));
 		//	plpPage.verifyShopCategoryDisplayedonPLP("not displaying");
 			logger.info("going back");
 			GlobalMobileHelper.tapOnElement(driver.findElement(Locators.ShopPage.categoryBackBtn)); 
 		}	GlobalMobileHelper.setImplicitWaitTo(driver,3);
 		} 	catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			logger.error(e);
 		}	
@@ -147,7 +145,7 @@ public class ShopPage {
 				}
 		}
 	public void navigateToNthLinkInList(int n) throws InterruptedException{
-		GlobalMobileHelper.setImplicitWaitTo(driver,5);
+		Thread.sleep(3000);
 		List<MobileElement> categoriesList = (List<MobileElement>) driver.findElements(Locators.ShopPage.categoriesList);			
 		logger.info("Navigating to "+categoriesList.get(n-1).getText());
 		GlobalMobileHelper.tapOnElement(categoriesList.get(n-1));		
@@ -242,7 +240,6 @@ public class ShopPage {
 
 
 	public void navigateToShopAllLink() {
-		
 		assertTrue("shop all link is not present",GlobalMobileHelper.isElementDisplayed(Locators.ShopPage.shopAllLink));
 		GlobalMobileHelper.tapOnElement(Locators.ShopPage.shopAllLink);
 	}

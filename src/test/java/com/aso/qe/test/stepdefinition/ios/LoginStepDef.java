@@ -138,7 +138,6 @@ public class LoginStepDef extends GlobalMobileHelper{
 		loginPage.enterPassword(password);
 	}
 
-
 	@Then("^User sees the Show button$")
 	public void user_sees_the_Show_button() throws Throwable {
 	    loginPage.isPasswordShowButtonDisplayed();
@@ -185,7 +184,6 @@ public class LoginStepDef extends GlobalMobileHelper{
 	}
 	@Then("^User taps on cancel button$")
 	public void user_taps_on_cancel_button() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    loginPage.tapOnCancelBtn();
+		loginPage.tapOnCancelBtn();
 	}
 }

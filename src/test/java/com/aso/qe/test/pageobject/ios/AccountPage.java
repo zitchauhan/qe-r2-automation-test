@@ -17,6 +17,12 @@ public class AccountPage {
 		MobileElement accountPageTitle = driver.findElement(Locators.AccountPage.accountTitle);
 		return accountPageTitle.isDisplayed();
 	}
+	
+
+	public void tapOnFindStoreLink() {
+		GlobalMobileHelper.tapOnElement(Locators.AccountPage.findStoreLink);
+	}
+	
 
 	public void tapOnCreateAnAccount() {
 		GlobalMobileHelper.tapOnElement(Locators.AccountPage.createAnAccountButton);
