@@ -59,4 +59,8 @@ public class HomeStepDef extends GlobalMobileHelper{
 	public void tapOnAcademyExclusiveBanner() {
 		homePage.tapOnAcademyExcusiveBanner();
 	}
+	@And("^User Clicks On MaY Be Later$")
+	public void tapOnMaybelater() {
+		homePage.tapOnMayBelater();
+	}
 }

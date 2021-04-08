@@ -40,7 +40,8 @@ public class Locators {
 		public static By shopNewBar = By.xpath("//*[contains(@label,'Shop New Banner')]");
 		public static By shopNewBanner2 = By.xpath("//*[@label='Shop New Banner 2']");
 		public static By academyExclusiveText = By.id("lbl_image_banner_title");
-		public static By academyExclusiveBanner = By.id("img_image_banner");	
+		public static By academyExclusiveBanner = By.id("img_image_banner");
+		public static By maybeLaterBtn = By.id("btn_maybe_later");
 	}
 	public static class ShopNewPage{
 		public static By shopNewTitle = By.id("lbl_page_title");

@@ -2,6 +2,7 @@ Feature: Validate the Ratings and review
 @Sprint2 @ST-OMNI-23433 @TC-OMNI-30788
 Scenario: Varify ratings and review
 Given User launches the application
+And User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
     When User Sees the Search Box

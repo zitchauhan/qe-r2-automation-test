@@ -2,6 +2,7 @@ Feature: Validate the Shop New Compnent
 @Sprint2 @TC-OMNI-31528 @ST-20800
 Scenario: validate the shop new component
 Given User launches the application
+And User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
     Then User Sees the Shop New section

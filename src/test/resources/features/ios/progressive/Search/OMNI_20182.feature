@@ -2,6 +2,7 @@ Feature: verify Search box Active/Inactive
 @Sprint2 @ST-OMNI-20182 @TC-OMNI-30558
 Scenario: validate the Search box at home page 
 Given User launches the application
+And User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
     And User Sees the Search Box
@@ -11,6 +12,7 @@ Given User launches the application
  @Sprint2 @ST-OMNI-20182 @TC-OMNI-30558   
  Scenario: validate the search box at shop page
  Given User launches the application
+ And User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
     When User taps on shop in bottom nav
@@ -22,6 +24,7 @@ Given User launches the application
  @Sprint2 @ST-OMNI-20182 @TC-OMNI-30558  
  Scenario: validate the search box at sub categories
  Given User launches the application
+ And User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
     When User taps on shop in bottom nav
@@ -35,6 +38,7 @@ Given User launches the application
 Scenario: validate the search box at PLP Page
 
      Given User launches the application
+     And User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
     When User taps on shop in bottom nav

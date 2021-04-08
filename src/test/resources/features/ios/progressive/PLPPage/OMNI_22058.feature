@@ -2,6 +2,7 @@ Feature: Validate the OOS Functionality
 @Sprint3 @TC-OMNI-33177 @ST-22058
 Scenario: Validate the OOS for Search Listing Page
 Given User launches the application
+And User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
     When User Sees the Search Box
@@ -15,6 +16,7 @@ Given User launches the application
 @Sprint3 @TC-OMNI-33177 @ST-22058
 Scenario: Validate the OOS for CLP Page
 Given User launches the application
+And User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
     When User taps on shop in bottom nav
@@ -33,6 +35,7 @@ Given User launches the application
     @Sprint3 @TC-OMNI-33177 @ST-22058
   Scenario: Vlidate the OOS for PLP
     Given User launches the application
+    And User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
     When User taps on shop in bottom nav

@@ -81,6 +81,11 @@ public class HomePage {
 	public void tapOnAcademyExcusiveBanner() {
 		GlobalMobileHelper.tapOnElement(Locators.HomePage.academyExclusiveBanner);
 	}
+
+	public void tapOnMayBelater() {
+		GlobalMobileHelper.tapOnElement(Locators.HomePage.maybeLaterBtn);
+		
+	}
 	
 	
 	

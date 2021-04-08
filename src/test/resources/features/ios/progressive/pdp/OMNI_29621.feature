@@ -2,6 +2,7 @@ Feature: Validate the  available Pick Up & Delivery options
 @Sprint3 @TC-OMNI-33167 @ST-29621
 Scenario Outline: validate the Pick Up & delivery for BOPIS(In Stock) or BOPIS/STS(In Stock)
  Given User launches the application
+ And User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
     When User Sees the Search Box

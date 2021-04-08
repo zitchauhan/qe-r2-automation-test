@@ -3,6 +3,7 @@ Feature: Verify Verients of the PDP product
 Scenario Outline:  Verify User able to see  and change Product varient Size and color on PDP Page
 
     Given User launches the application
+    And User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
     When User Sees the Search Box
@@ -27,6 +28,7 @@ Scenario Outline:  Verify User able to see  and change Product varient Size and 
 Scenario: Verify User able to See Size Chart
 
     Given User launches the application
+    And User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
 	 When User Sees the Search Box
