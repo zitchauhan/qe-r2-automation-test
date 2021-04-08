@@ -130,7 +130,7 @@ private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getN
 	    String actual = GlobalMobileHelper.getElementText(Locators.CheckoutPage.emailFieldLabel);
 	    assertTrue(actual.equals(arg1));
 	}
-}
+	
 	@Then("^User verifies existing address are \"([^\"]*)\" on shipping information screen$")
 	public void user_verifies_existing_address_are_on_shipping_information_screen(String visibility) throws Throwable {
 		checkoutPage.isAddressDisplayed(visibility);
