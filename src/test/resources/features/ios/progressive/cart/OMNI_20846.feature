@@ -1,6 +1,6 @@
-@TC-OMNI-20846
 Feature: Verify that product restrictions and disclaimers are visible to the user
-  
+
+  @Sprint3 @ST-OMNI-20846 @TC-OMNI-33076
   Scenario Outline: Verify that the user sees product disclaimer based on age restriction
   	Given User launches the application
     And User continues as guest user
@@ -14,10 +14,10 @@ Feature: Verify that product restrictions and disclaimers are visible to the use
     Examples:
     | product_code | error_message |
     | A_UNIQUE_CODE	   | This item may ship from a different location therefore only eligible for ground shipping. Standard delivery of 10-14 days. Additionally, this item is not eligble for APO/FPO delivery. |
-    
-    
-    
-    Scenario Outline: Verify that the user sees product disclaimer for Hazmat or Prop 65 product
+
+
+  @Sprint3 @ST-OMNI-20846 @TC-OMNI-33077
+  Scenario Outline: Verify that the user sees product disclaimer for Hazmat or Prop 65 product
   	Given User launches the application
     And User continues as guest user
     When User navigates to pdp
@@ -31,9 +31,9 @@ Feature: Verify that product restrictions and disclaimers are visible to the use
     | product_code | error_message |
     | A_UNIQUE_CODE_Prop_65	   | The product disclaimer for Hazmat product |
     | A_UNIQUE_CODE_Hazmat	   | The product disclaimer for Prop 65 product |
-    
-    
-    
+
+
+  @Sprint3 @ST-OMNI-20846 @TC-OMNI-33078
  Scenario Outline: Verify that the user sees product disclaimer for restricted state Zip Code
   	Given User launches the application
     And User continues as guest user
@@ -49,7 +49,8 @@ Feature: Verify that product restrictions and disclaimers are visible to the use
     Examples:
     | product_code | zip_code | error_message |
     | A_UNIQUE_CODE_Prop_65	   | 12345 | The product disclaimer for the restricted state zip code |
-    
+
+  @Sprint3 @ST-OMNI-20846 @TC-OMNI-33079
  Scenario Outline: Verify that the user sees wrapped product disclaimer for restricted state Zip Code
   	Given User launches the application
     And User continues as guest user
@@ -65,9 +66,10 @@ Feature: Verify that product restrictions and disclaimers are visible to the use
     Examples:
     | product_code | zip_code | error_message |
     | A_UNIQUE_CODE_Prop_65	   | 12345 | This item may ship from a different location therefore only eligible for ground shipping. Standard delivery of 10-14 days. Additionally, this item is not eligble for APO/FPO delivery. |
-    
+
+  @Sprint3 @ST-OMNI-20846 @TC-OMNI-33080
  Scenario Outline: Verify that the user sees the product disclaimer for qty restriction
- 		Given User launches the application
+    Given User launches the application
     And User continues as guest user
     When User navigates to pdp
     And User sees Product title

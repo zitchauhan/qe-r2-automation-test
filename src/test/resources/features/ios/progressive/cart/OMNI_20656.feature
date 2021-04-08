@@ -1,18 +1,17 @@
-@TC-OMNI-20656
 Feature: Verify that promo codes can be applied and applied savings can be seen on the Cart
 
-  Scenario: User sees the promo code field
+  @Sprint1 @ST-OMNI-20656 @TC-OMNI-31250
+  Scenario: Verify that the User sees the promo code field
     Given User launches the application
+    And User continues as guest user
+    When User navigates to pdp
+    And User sees Product title
+    And User taps on add to cart button
+    And User taps on view cart button
+    Then User is navigated To Cart Screen
+    And User sees the promo code field
 
-    And User continues as guest user
-    When User navigates to pdp
-    And User sees Product title
-    And User taps on add to cart button
-    And User taps on view cart button
-    Then User is navigated To Cart Screen
-    And User sees the promo code field
-  
-  
+  @Sprint1 @ST-OMNI-20656 @TC-OMNI-31251
   Scenario Outline: Verify promocode error messages based on nature of promo code on the Cart 
   	Given User launches the application
     And User continues as guest user
@@ -20,60 +19,24 @@ Feature: Verify that promo codes can be applied and applied savings can be seen 
     And User sees Product title
     And User taps on add to cart button
     And User taps on view cart button
-And User Logs into the application
-And User continues as guest user
-When User navigates to pdp
-    And User sees Product title
-    And User taps on add to cart button
-    And User taps on view cart button
     Then User is navigated To Cart Screen
-    And User sees the promo code field
-  
-  
-  Scenario Outline: Verify promocode error messages based on nature of promo code on the Cart 
-  	Given User launches the application
-    And User continues as guest user
-    When User navigates to pdp
-    And User sees Product title
-    And User taps on add to cart button
-    And User taps on view cart button
-     Then User is navigated To Cart Screen
     And User sees the promo code field
     When User applies the given "<promo_code>"
     Then User sees the promo code error "<error_message>"
     
     Examples:
     | promo_code | error_message |
-
     | INVLALID	   | Please enter a valid Promo code |
 
-    | GET100OFF	   | Please enter a valid Promo code |
 
-    | INVLALID	   | Please enter a valid Promo code |
-
-    
-    
-  
+  @Sprint1 @ST-OMNI-20656 @TC-OMNI-31267
   Scenario Outline: Verify valid promo code effects to the related fields and on the Cart
   	Given User launches the application
-
     And User continues as guest user
     When User navigates to pdp
     And User sees Product title
     And User taps on add to cart button
     And User taps on view cart button
-
-    And User Logs into the application
-    When User navigates to pdp
-    And User sees Product title
-    And User taps on add to cart button
-
-    And User continues as guest user
-    When User navigates to pdp
-    And User sees Product title
-    And User taps on add to cart button
-    And User taps on view cart button
-
     Then User is navigated To Cart Screen
     When User applies the given "<promo_code>"
     Then User sees that Promo code field is disabled
@@ -91,4 +54,3 @@ When User navigates to pdp
   	| promo_code |
   	| GET10OFF |
   	| get10off |
-

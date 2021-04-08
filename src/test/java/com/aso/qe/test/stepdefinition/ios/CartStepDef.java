@@ -269,7 +269,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here to see the promo code error
 	    cartPage.verifyPromoErroMessage(promoCodeError);
 	}
-
+	
 	@Then("^User sees that Promo code field is disabled$")
 	public void user_sees_that_Promo_code_field_is_disabled() throws Throwable {
 	    // Write code here to see if promo code is disabled
@@ -487,4 +487,27 @@ public class CartStepDef extends GlobalMobileHelper{
 	}
 	
 
+	
+	@And("^User taps on product title$") 
+	public void tapOnnProductTitle() throws Throwable{
+		cartPage.tapOnProductTitle();
+	}
+	
+//	@And("^User sees the checkout button$") 
+//	public void checkoutButtonIsDisplayed() throws Throwable{
+//		GlobalMobileHelper.swipeScreen(Direction.UP);
+//		GlobalMobileHelper.swipeScreen(Direction.UP);
+//		assertTrue(cartPage.isCheckoutPageDisplayed());
+//	}
+	
+	@When("^User taps on the checkout button$") 
+	public void tapOnCheckoutButton() throws Throwable{
+		cartPage.tapOnCheckoutButton();
+	}
+	@Then("^Guest User is on empty cart page$")
+	public void guest_User_is_on_empty_cart_page() throws Throwable {
+		assertFalse(isElementDisplayed(Locators.CartPage.orderSubtotalLabel));
+	}
+	
+	
 }

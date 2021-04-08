@@ -7,8 +7,6 @@ import org.openqa.selenium.By;
 import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
-import com.sun.tools.sjavac.Log;
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
@@ -49,6 +47,7 @@ public class SearchPage {
 		MobileElement searchError = driver.findElement(Locators.SearchPage.searchErrormsg);
 		return searchError.getText().contains(msg);
 		}
+
 	public void tapOnProduct() {
 		try {
 			Thread.sleep(2000);

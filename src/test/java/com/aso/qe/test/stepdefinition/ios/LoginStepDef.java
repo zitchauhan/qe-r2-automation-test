@@ -50,7 +50,17 @@ public class LoginStepDef extends GlobalMobileHelper{
 	
 	@And("^User continues as guest user$")
 	public void continueAsGuest() {
-		GlobalMobileHelper.tapOnElement(Locators.LoginPage.continueAsGuestButton);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}
+		GlobalMobileHelper.tapOnElement(Locators.LoginPage.HomeLogin);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}
 	}
 	
 	@Given("^User is on Log In screen$")
@@ -116,6 +126,18 @@ public class LoginStepDef extends GlobalMobileHelper{
 		loginPage.isPasswordFieldMasked();
 	}
 
+	@When("^User enters valid email \"([^\"]*)\"$")
+	public void user_enters_valid_email(String email) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		loginPage.enterEmail(email);
+	}
+
+	@When("^User enters valid password \"([^\"]*)\"$")
+	public void user_enters_valid_password(String password) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		loginPage.enterPassword(password);
+	}
+
 	@Then("^User sees the Show button$")
 	public void user_sees_the_Show_button() throws Throwable {
 	    loginPage.isPasswordShowButtonDisplayed();
@@ -160,21 +182,8 @@ public class LoginStepDef extends GlobalMobileHelper{
 	public void user_sees_Create_Account_button() throws Throwable {
 	    loginPage.isCreateAcccountDisplayed();
 	}
-	@When("^User enters valid email \"([^\"]*)\"$")
-	public void user_enters_valid_email(String email) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-		loginPage.enterEmail(email);
-	}
-
-	@When("^User enters valid password \"([^\"]*)\"$")
-	public void user_enters_valid_password(String password) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-		loginPage.enterPassword(password);
-	}
-	
 	@Then("^User taps on cancel button$")
 	public void user_taps_on_cancel_button() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    loginPage.tapOnCancelBtn();
+		loginPage.tapOnCancelBtn();
 	}
 }
