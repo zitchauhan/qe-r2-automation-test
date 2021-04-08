@@ -2,6 +2,8 @@ package com.aso.qe.test.pageobject.ios;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
@@ -371,7 +373,17 @@ public class PDPPage {
 
 	public boolean isNavigatedToPDPOnWeb() {
 		
-		return false;
+		Set<String> availableContexts = driver.getContextHandles();
+		
+		for(String context : availableContexts) {
+			if(context.contains("WEBVIEW")){
+				System.out.println("Context Name is " + context);
+				driver.context(context);
+				break;
+			}
+		}
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.WebViewBannerPDP);
+		
 	}
 	
 	
@@ -415,4 +427,78 @@ public class PDPPage {
 	public void tapOnCancelButton() {
 		GlobalMobileHelper.tapOnElement(Locators.FindStore.cancelButton);
 	}
+
+	public boolean isErrorMessageDisplayed(String args) throws Exception {
+		 List<Object> list = new ArrayList<Object>();
+			boolean flag=true;
+			if(args.equalsIgnoreCase("LocatorErrorMsgOverLay")) {
+				// 
+				String textguidelines=GlobalMobileHelper.findData(args);
+				 String elementtext  = driver.findElement(Locators.PDPPage.AppStoreGuidelines).getText();
+				if(textguidelines.equalsIgnoreCase(elementtext)) {
+					
+					flag=true;
+				}else {
+					list.add ( new Exception(" not matching "));	
+				}
+
+				
+			}
+			 if(!list.isEmpty()) {
+				 flag=false;
+					String s=null;
+					for (Object object : list) {
+					 s =s+object.toString();
+					}
+					throw new Exception(s);			    
+			 }
+			return flag;
+			
+	}
+
+	public boolean VerifyOverlayAttribute(String args) throws Exception {
+
+
+		 List<Object> list = new ArrayList<Object>();
+			boolean flag=true;
+			if(args.equalsIgnoreCase("SKU")) {
+				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSKU);
+				
+			}else {
+				list.add ( new Exception(" SKU not displaying "));	
+			}
+			
+			if(args.equalsIgnoreCase("Size")) {
+				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartPrice);
+			}else {
+				list.add ( new Exception(" Size not displaying "));	
+			}
+			
+			if(args.equalsIgnoreCase("Qty")) {
+				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartQty);
+				
+			}else {
+				list.add ( new Exception(" Qty not displaying "));	
+			}
+			
+			if(args.equalsIgnoreCase("Price")) {
+				
+				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSize);
+			}else {
+				list.add ( new Exception(" Qty not displaying "));	
+			}
+			 if(!list.isEmpty()) {
+				 flag=false;
+					String s=null;
+					for (Object object : list) {
+					 s =s+object.toString();
+					}
+					throw new Exception(s);			    
+			 }
+			return flag;
+			
+	
+	}
+	
+	
 }

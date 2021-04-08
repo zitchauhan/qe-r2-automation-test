@@ -1,28 +1,5 @@
 Feature: Verify Details of PLP for product
   
-  	@Sprint01 @TC-OMNI-20338_1
-    Scenario Outline:: validate PLP 
-  	Given User launches the application
-  	And User continues as guest user
-  	Then User sees the homepage
-    When User taps on go to shop button
-  	When I choose to navigate "L3Category" on page
-    And  I choose to navigate at "ShopBycategory" landing page 
-   # Then I choose to verify "PLP" landing page   
-  Then verify the "<badge>" of product in PLP page
- Examples: 
-     |    badge                      |	
-#    |    Product Image              | 
-#    |    Product Name               | 
-#    |    Product Price              |
- #   |    Color Swatches             |
- #   |   Promotion Messaging         |
- #   |   Product Price-range         |      
- #   |single-colour                  |
-  #  |item-level promotion           |
- #   |product-with-clearince Message |
- 
- 
    
  @Regression 	@Sprint01 @TC-OMNI-20338_2
     Scenario Outline:: validate PLP badges
@@ -40,12 +17,12 @@ Feature: Verify Details of PLP for product
 #|   Unitprice_Prod                         |
 #|   Price_Range_Prod                       |
 #|	clearence_Prod                          |	
-#|	OurPriceIncart                          |
-#|	ammunitionProd                          |
+|	OurPriceIncart                          |
+|	ammunitionProd                          |
 #   |	specialprice                        |
 # |	Promotion_data                          | 
-#	Clearance_Styles_Available              |
-#|	Some_styles_only_available_online_prod  |
+	|Clearance_Styles_Available             |
+|	Some_styles_only_available_online_prod  |
 
  
  
