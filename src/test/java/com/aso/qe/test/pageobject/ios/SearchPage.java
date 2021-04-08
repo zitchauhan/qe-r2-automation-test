@@ -49,6 +49,7 @@ public class SearchPage {
 		MobileElement searchError = driver.findElement(Locators.SearchPage.searchErrormsg);
 		return searchError.getText().contains(msg);
 		}
+
 	public void tapOnProduct() {
 		try {
 			Thread.sleep(2000);

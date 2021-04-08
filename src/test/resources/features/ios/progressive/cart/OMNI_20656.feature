@@ -1,7 +1,7 @@
 Feature: Verify that promo codes can be applied and applied savings can be seen on the Cart
 
-  @Sprint3 @ST-OMNI-20656 @TC-OMNI-33081
-  Scenario: User sees the promo code field
+  @Sprint1 @ST-OMNI-20656 @TC-OMNI-31250
+  Scenario: Verify that the User sees the promo code field
     Given User launches the application
     And User continues as guest user
     When User navigates to pdp
@@ -11,7 +11,7 @@ Feature: Verify that promo codes can be applied and applied savings can be seen 
     Then User is navigated To Cart Screen
     And User sees the promo code field
 
-  @Sprint3 @ST-OMNI-20656 @TC-OMNI-33082
+  @Sprint1 @ST-OMNI-20656 @TC-OMNI-31251
   Scenario Outline: Verify promocode error messages based on nature of promo code on the Cart 
   	Given User launches the application
     And User continues as guest user
@@ -29,7 +29,7 @@ Feature: Verify that promo codes can be applied and applied savings can be seen 
     | INVLALID	   | Please enter a valid Promo code |
 
 
-  @Sprint3 @ST-OMNI-20656 @TC-OMNI-33083
+  @Sprint1 @ST-OMNI-20656 @TC-OMNI-31267
   Scenario Outline: Verify valid promo code effects to the related fields and on the Cart
   	Given User launches the application
     And User continues as guest user

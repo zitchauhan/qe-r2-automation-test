@@ -23,8 +23,6 @@ public void setProductPriceOnPDP(String productPriceOnPDP) {
 	ProductPriceOnPDP = productPriceOnPDP;
 }
 
-
-
 public String getCategoryTitleOnPLP() {
 	return categoryTitleOnPLP;
 }
@@ -33,6 +31,38 @@ public void setCategoryTitleOnPLP(String categoryTitleOnPLP) {
 	Context.categoryTitleOnPLP = categoryTitleOnPLP;
 }
 
+
+public static List<String> getSavedAddressesList() {
+	return savedAddressesList;
+}
+
+public static void setSavedAddressesList(List<String> savedAddressesList) {
+	Context.savedAddressesList = savedAddressesList;
+}
+
+public static String getUpdatedAddressField() {
+	return updatedAddressField;
+}
+
+public static void setUpdatedAddressField(String updatedAddressField) {
+	Context.updatedAddressField = updatedAddressField;
+}
+
+public static String getStoreName() {
+	return storeName;
+}
+
+public static void setStoreName(String storeName) {
+	Context.storeName = storeName;
+}
+
+public static String getDefaultStore() {
+	return defaultStore;
+}
+
+public static void setDefaultStore(String defaultStore) {
+	Context.defaultStore = defaultStore;
+}
 public static List<String> getShopBySubCategoryList() {
 	return shopBySubCategoryList;
 }
@@ -72,37 +102,4 @@ public static List<String> getL3CategoryList() {
 public static void setL3CategoryList(List<String> l3CategoryList) {
 	L3CategoryList = l3CategoryList;
 }
-
-public static List<String> getSavedAddressesList() {
-	return savedAddressesList;
-}
-
-public static void setSavedAddressesList(List<String> savedAddressesList) {
-	Context.savedAddressesList = savedAddressesList;
-}
-
-public static String getUpdatedAddressField() {
-	return updatedAddressField;
-}
-
-public static void setUpdatedAddressField(String updatedAddressField) {
-	Context.updatedAddressField = updatedAddressField;
-}
-
-public static String getStoreName() {
-	return storeName;
-}
-
-public static void setStoreName(String storeName) {
-	Context.storeName = storeName;
-}
-
-public static String getDefaultStore() {
-	return defaultStore;
-}
-
-public static void setDefaultStore(String defaultStore) {
-	Context.defaultStore = defaultStore;
-}
-
 }

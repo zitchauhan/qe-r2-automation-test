@@ -1,6 +1,6 @@
 Feature: Validate User is able view product list by category
 
-  @ST-OMNI-24745 @TC-OMNI-30218 @Sprint2
+  @ST-OMNI-24745  @Sprint2
   Scenario: validate followings when user taps on shop all link from L2 category
   1. shop by L2 categories are displaying on PLP L1 
   2. shop by L3 categories are displaying on PLP L2
@@ -26,7 +26,7 @@ Feature: Validate User is able view product list by category
   	Then User navigates to "Boys' shirts" category on PLP Page
   	Then User verifies "No categories" are displaying on PLP
   	
-    @ST-OMNI-24745 @TC-OMNI-30199 @Sprint2 
+    @ST-OMNI-24745  @Sprint2 
    Scenario: validate followings when user taps on shop all link from L3 category
   1. shop by L3 categories are displaying on PLP L1
   2. There is no further categories displayed on PLP L2

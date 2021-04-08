@@ -46,6 +46,7 @@ public class PDPStepDef extends GlobalMobileHelper{
 
 	@Then("^User sees quantity stepper$")
 	public void isQuantityStepperDisplayed() throws Throwable {
+		swipeScreen(Direction.UP);
 		assertTrue(pdp.isQuantityStepperDisplayed());
 	}
 	
@@ -68,7 +69,11 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void validateQuantity(String qty) {
 		assertTrue(pdp.validateQty(qty));
 	}
-
+	@And("^verify the \"(.*?)\" of product$")
+	public void isBadgeDisplayed(String args) throws Throwable {
+		
+		assertTrue(pdp.isBadgeDisplayed(args));
+	}
 	@And("^user sees the size varient$")
 	public void isSizeVarientDisplayed() {
 		assertTrue(pdp.isSizeVarientDisplayed());
@@ -148,6 +153,59 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void user_taps_on_change_store_link() throws Throwable {
 		swipeScreen(Direction.UP,2);
 	   pdp.tapOnChangeStoreLink();
+	@Then("^I choose to verify \"([^\"]*)\" in PDP Page$")
+	public void verify_PDP_Page(String args) throws Throwable {
+	   
+		assertTrue(pdp.isMessageDisplayed(args));
+	}
+
+	@Then("^I choose click on \"([^\"]*)\" in PDP page$")
+	public void click_on_in_PDP_page(String arg1) throws Throwable {
+	    
+		assertTrue(pdp.isVariantValueDisplayed());
+	}
+
+	@Then("^I choose to verify user navigated to PDP on Web$")
+	public void verify_user_navigated_to_PDP_on_Web() throws Throwable {
+	   
+		assertTrue(pdp.isNavigatedToPDPOnWeb());
+	}
+	
+	@When("^User selects Home Delivery checkbox$")
+	public void selectHomeDelivery() throws Throwable {
+		pdp.tapOnHomeDelivery();
+	}
+	
+	@When("^User taps on chage store button$")
+	public void tapOnChangeStore() throws Throwable {
+		pdp.tapOnChangeStore();
+	}
+	
+	@Then("^User is shown find store screen$")
+	public void isFindStoreScreenDisplayed() {
+		assertTrue(pdp.isFindStoreScreenDisplayed());
+	}
+	
+	@When("^User enters \"(.*?)\" in store search field$")
+	public void enterTextInStoreSearchField(String text) throws Throwable {
+		pdp.enterTextInStoreSearchField(text);
+	}
+	
+	@Then("^User is shown no store available message$")
+	public void noStoreAvailableMessageDisplayed() {
+		assertTrue(pdp.noStoreAvailableMessageDisplayed());
+	}
+	
+	@Then("^I choose to verify Error Message \"([^\"]*)\"$")
+	public void i_choose_to_verify_Error_Message(String arg1) throws Throwable {
+		assertTrue(pdp.isErrorMessageDisplayed(arg1));
+	    
+	}
+	@Then("^I choose to verify \"([^\"]*)\"$")
+	public void i_choose_to_verify(String arg1) throws Throwable {
+		assertTrue(pdp.VerifyOverlayAttribute(arg1));
+	   
+	    
 	}
 	
 }

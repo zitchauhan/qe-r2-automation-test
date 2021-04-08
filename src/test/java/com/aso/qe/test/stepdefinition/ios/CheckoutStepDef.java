@@ -12,11 +12,19 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.pageobject.ios.CheckoutPage;
+
+import cucumber.api.java.en.And;
 
 public class CheckoutStepDef extends GlobalMobileHelper {
-	
-	private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getName());
+private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getName());
 	CheckoutPage checkoutPage = new CheckoutPage(driver);
+	
+	@And("^User sees the checkout screen$")
+	public void isCheckoutPageDisplayed() throws Throwable {
+	    assertTrue(checkoutPage.isCheckoutPageDisplayed());
+	}
 	
 	@Then("^User sees the checkout button$")
 	public void user_sees_the_checkout_button() throws Throwable {

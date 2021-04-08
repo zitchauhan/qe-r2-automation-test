@@ -488,4 +488,27 @@ public class CartStepDef extends GlobalMobileHelper{
 			cartPage.tapMinusActionCartPage();
 		}
 	}
+	
+	@And("^User taps on product title$") 
+	public void tapOnnProductTitle() throws Throwable{
+		cartPage.tapOnProductTitle();
+	}
+	
+	@And("^User sees the checkout button$") 
+	public void checkoutButtonIsDisplayed() throws Throwable{
+		GlobalMobileHelper.swipeScreen(Direction.UP);
+		GlobalMobileHelper.swipeScreen(Direction.UP);
+		assertTrue(cartPage.isCheckoutPageDisplayed());
+	}
+	
+	@When("^User taps on the checkout button$") 
+	public void tapOnCheckoutButton() throws Throwable{
+		cartPage.tapOnCheckoutButton();
+	}
+	@Then("^Guest User is on empty cart page$")
+	public void guest_User_is_on_empty_cart_page() throws Throwable {
+		assertFalse(isElementDisplayed(Locators.CartPage.orderSubtotalLabel));
+	}
+	
+	
 }

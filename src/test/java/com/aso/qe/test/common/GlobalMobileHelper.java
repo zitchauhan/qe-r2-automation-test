@@ -129,10 +129,8 @@ public class GlobalMobileHelper {
 			throw new IllegalStateException("Driver is not initialized");
 		}
 		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
-		MobileElement editBox = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-		editBox.clear();
-		editBox.sendKeys(text);
-		//wait.until(ExpectedConditions.presenceOfElementLocated(locator)).sendKeys(text);
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator)).clear();
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator)).sendKeys(text);
 		driver.hideKeyboard();
 	}
 	
@@ -159,7 +157,15 @@ public class GlobalMobileHelper {
 		}
 	}
 	
-	public void swipeScreen(Direction dir) {
+	public static String findData(String keyword) {
+		String keywordValue=null;
+		 keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
+		 return keywordValue;
+		
+	
+		
+	}	
+	public static void swipeScreen(Direction dir) {
         System.out.println("swipeScreenSmall(): dir: '" + dir + "'"); // always log your actions
 
 	// Animation default time:
@@ -287,5 +293,14 @@ public class GlobalMobileHelper {
 					start+=1;
 				}
 			}
+	 
+	public static String getElementText(By locator) {
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+		return wait.until(ExpectedConditions.presenceOfElementLocated(locator)).getText();
+	}
+	
 
 }
