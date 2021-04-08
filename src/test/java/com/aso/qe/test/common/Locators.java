@@ -14,7 +14,6 @@ public class Locators {
 	}
 	
 	public static class LoginPage{
-
 		public static By HomeLogin = By.id("guest_label_test_id");
 		public static By emailEditBox = By.id("tf_email");
 		public static By passwordEditBox = By.id("tf_password");
@@ -37,7 +36,8 @@ public class Locators {
 		//public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
 		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
 		public static By searchBox = By.id("btn_Search");
-		public static By shopNewTitle = By.id("lbl_shopNew_title");
+		public static By shopNew
+			Title = By.id("lbl_shopNew_title");
 		public static By shopNewImage = By.id("img_shopNew");
 		public static By shopNewBar = By.xpath("//*[contains(@label,'Shop New Banner')]");
 		public static By shopNewBanner2 = By.xpath("//*[@label='Shop New Banner 2']");
@@ -49,6 +49,7 @@ public class Locators {
 		public static By HomePage_FreeShippingBaner = By.id("lbl_banner_title");
 		public static By HomePage_Instore_CurbSideBaner_SeeDeatil = By.id("btn_banner_button");
 		public static By HomePage_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
+
 	}
 	public static class ShopNewPage{
 		public static By shopNewTitle = By.id("lbl_page_title");
@@ -239,7 +240,9 @@ public class Locators {
 		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 	}
+	
 
+	
 	public static class CheckoutPage{
 		public static By productThumbNail = By.xpath("(//XCUIElementTypeOther[@name=\"Product Image\"])[2]/XCUIElementTypeOther");
 		public static By productTitle = By.id("lbl_product_title");
@@ -400,6 +403,8 @@ public class Locators {
 	public static class AddressBook{
 		public static By buttonAddNewAddress = By.name("Add New Address");
 		public static By labelSavedAddresses = By.id("lbl_saved_address");
+		public static By addressBookButton = By.id("btn_address_book");
+		public static By addressBookHeader = By.xpath("//*[@label='Address Book']");
 	}
 
 	public static class AddressVerification {
@@ -410,6 +415,7 @@ public class Locators {
 		public static By buttonUseSelectedAddress = By.id("btn_use_selected_address");
 		public static By labelEditAddress = By.id("lbl_edit");
 	}
+}
 
 	public static class CreateAccount {
 		public static By buttonCancel = By.id("btn_header_cancel");
