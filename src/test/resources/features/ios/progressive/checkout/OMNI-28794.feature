@@ -1,4 +1,3 @@
-@MamtaScript
 Feature: Checkout
 
   @Sprint2 @ST-OMNI-28794 @TC-OMNI-31926

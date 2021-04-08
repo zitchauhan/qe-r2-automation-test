@@ -1,4 +1,3 @@
-@MamtaScript
 Feature: Find Store - Display Store List - No product added to cart
     
    @Sprint2 @ST-OMNI-28535 @TC-OMNI-32913

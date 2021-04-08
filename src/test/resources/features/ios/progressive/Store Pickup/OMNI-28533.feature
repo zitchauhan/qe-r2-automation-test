@@ -1,4 +1,3 @@
-@MamtaScript
 Feature: Location Services Setup - Partially automated
  
     

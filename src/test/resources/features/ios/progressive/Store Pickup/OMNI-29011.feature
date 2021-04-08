@@ -1,4 +1,3 @@
-@MamtaScript
  Feature: Change Store - Store Details - No product added to cart
  
  @Sprint2 @ST-OMNI-29011 @TC-32948

@@ -1,4 +1,3 @@
-@MamtaScript
 Feature: Validate User is able to shop by category
 
   @ST-OMNI-20816 @TC-OMNI-29797 @Sprint1 

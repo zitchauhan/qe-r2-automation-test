@@ -1,4 +1,3 @@
-@MamtaScript
 Feature: Velidate the Search Functionality
 
 @Sprint2 @ST-OMNI-20256 @TC-OMNI-30460
