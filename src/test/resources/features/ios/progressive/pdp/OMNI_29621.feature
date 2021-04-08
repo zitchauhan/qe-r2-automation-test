@@ -18,12 +18,12 @@ Scenario Outline: validate the Pick Up & delivery for BOPIS(In Stock) or BOPIS/S
     
     Examples:
     
- | Store  | PRODUCT | label | Sub Label | Message |
- | west Oakes | InStock(pickupToday)  | Free Store Pick Up   | Pick Up Available | Pick Up Today |
- | | Instock(pickupTomorrow) | Free Store Pick Up   | Pick Up Available | Pick Up Tomorrow |
- |Grand Parkway | LimitedStock(pickupToday)  | 	Free Store Pick Up   | Limited Stock | Pick Up Today |
-| Rosenberg  | LimiteStock(pickupTomorrow) | 	Free Store Pick Up   | Limited Stock | Pick Up Tomorrow |
-| Grand Parkway | OutOfStock | Free Store Pick Up   | Out of Stock | Find availability by changing store |
-|cinco rancha | AssemblyRequired | Free Store Pick Up   | Pick Up Available | Some items require up to 72 hrs for assembly at: |
-| NoStoreSelected | Free Store Pick Up   | Find availability by selecting a store |  |
-| | Clearence | In Store Only   | Store inventory lookup not available |  |
+ | Store 		 | PRODUCT 				  	 | label 				| Sub_Label					 | Message |
+ | west Oakes    | InStock(pickupToday)   	 | Free Store Pick Up   | Pick Up Available | Pick Up Today |
+ | 				 | Instock(pickupTomorrow)	 | Free Store Pick Up   | Pick Up Available | Pick Up Tomorrow |
+ |Grand Parkway  | LimitedStock(pickupToday) | 	Free Store Pick Up  | Limited Stock     | Pick Up Today |
+| Rosenberg      | LimiteStock(pickupTomorrow)|Free Store Pick Up   | Limited Stock     | Pick Up Tomorrow |
+| Grand Parkway  | OutOfStock 				 | Free Store Pick Up   | Out of Stock     					 | Find availability by changing store |
+|cinco rancha    | AssemblyRequired          | Free Store Pick Up   | Pick Up Available 					| Some items require up to 72 hrs for assembly at: |
+| NoStoreSelected| Free Store Pick Up        | Find availability by selecting a store  					   	|  						|  |
+| 				 | Clearence 				 | In Store Only 		| Store inventory lookup not available   |  |
