@@ -2,6 +2,8 @@ package com.aso.qe.test.common;
 
 import org.openqa.selenium.By;
 
+import io.appium.java_client.MobileElement;
+
 public class Locators {
 	
 	public static class BottomNav{
@@ -205,6 +207,13 @@ public class Locators {
 		public static By productPrice = By.id("lbl_product_price");
 		public static By buttonCheckout = By.name("Checkout");
 		public static By labelTitle = By.id("lbl_checkout");
+		public static By contactInformation = By.id("lbl_checkout_information_header");
+		public static By emailField = By.id("tf_email");
+		public static By saveEmailButton = By.id("btn_save_email");
+		public static By createAnAccountButton = By.id("btn_create_account");
+		public static By signInButton = By.id("btn_sign_in");
+		public static By continueAsGuestButton = By.id("btn_guest_checkout");
+		public static By emailFieldLabel = By.id("lbl_email_field");
 	}
 	public static class Category{
 		public static By l1_catgoryElelnt = By.id("lbl_category_list_item");
@@ -285,7 +294,7 @@ public class Locators {
 		public static By inputPhone = By.id("tf_phone_no");
 		public static By inputState = By.id("tf_state");
 		public static By buttonAddNewAddress = By.id("btn_add_new_address");
-		public static By errorPopUp= By.xpath("//*[contains(@label,'OK')]");
+		
 		//Errors
 		public static By lblFirstNameError = By.id("lbl_first_name_error");
 		public static By lblLastNameError = By.id("lbl_last_name_error");
@@ -295,6 +304,7 @@ public class Locators {
 		public static By lblStateError = By.id("lbl_state_error");
 		public static By lblCityError = By.id("lbl_city_error");
 		public static By lblPhoneNoError = By.id("lbl_phone_no_error");
+		public static By errorPopUp= By.xpath("//*[contains(@label,'OK')]");
 	}
 
 	public static class FindStore{

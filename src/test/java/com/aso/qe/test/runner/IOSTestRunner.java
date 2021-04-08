@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src/test/resources/features/ios/",
 		glue="com.aso.qe.test.stepdefinition.ios",
-		tags= {"@ST-OMNI-20178"},
+		tags= {"@ST-OMNI-20843"},
 		monochrome=true, 
 				
 //		plugin = {"pretty",

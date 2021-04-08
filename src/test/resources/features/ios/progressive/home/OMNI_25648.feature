@@ -3,7 +3,6 @@ Feature: Verify Bottom Nav
 	@ST-OMNI-25648 @TC-OMNI-30702
   Scenario: Verify User is shown the bottom nav
   	Given User launches the application
-  	And User Logs into the application
     When User taps on home in bottom nav
     Then User sees the homepage
     When User taps on shop in bottom nav
