@@ -216,6 +216,7 @@ public class Locators {
 		public static By saveAddressBtn= By.xpath("//*[contains(@label,'Save address']");
 		public static By defaultAddressLabel = By.id("lbl_list_default0");
 		public static By editAddressLink=By.xpath("//XCUIElementTypeOther[@name='Edit']");
+		public static By labelTitle = By.id("lbl_checkout");
 	}
 
 	
@@ -273,4 +274,66 @@ public class Locators {
 		public static By noStoreAvailableMessage = By.id("lbl_no_store_available");
 		public static By cancelButton = By.id("cancel_btn_find_store");
 	}
+	public static class Category{
+		public static By l1_catgoryElelnt = By.id("lbl_category_list_item");
+		public static By l2_catgoryElelnt = By.id("lbl_category_list_item");
+		public static By l3_catgoryElelnt = By.id("lbl_category_list_item");
+		public static By shopAll_ShopBycategory = By.id("shopAll_ShopBycategory");
+		public static By shopAll_ShopByBrand = By.id("shopAll_ShopBycategory");
+		public static By shopAll_ShopBycategoryTxt = By.id("lbl_shop_by_category_title");
+		public static By shopAll_ShopByBrandTxt = By.id("TxtshopAll_ShopBycategory");		
+		public static By Pick_Up_in_Store_Banner = By.id("Pick_Up_in_Store_Banner");
+		public static By Free_Shipping_with_Sign_in_Banner = By.id("Free_Shipping_with_Sign_in_Banner");
+		public static By Hero_Banner = By.id("Hero_Banner");
+		public static By Shop_by_Category_Component = By.id("Shop_by_Category_Component");
+		public static By Sort_By_Option = By.id("Sort_By_Option");
+		public static By Filter_Option = By.id("Filter_Option");
+		public static By Product_Grid = By.id("Product_Grid");
+		public static By Promo_ad_Card = By.id("Promo_ad_Card");
+		public static By ShopByBrandyTxt = By.id("ShopByBrandyTxt");
+		public static By clp_catgoryElelnt = By.id("clp_catgoryElelnt");
+		
+ // locators for PLP		
+		public static By labelLProductPrice = By.id("lbl_list_price");
+		public static By lbl_clearance_price_range = By.id("lbl_clearance_price_range");
+		public static By labelProductTitle = By.id("lbl_product_title");
+	//	 public static By labelratingsReviews = By.id("lbl_category_list_item");
+		public static By labelImage = By.id("RNE__Image");
+		public static By labelProductCoLourVariantSwatch = By.id("labelProductCoLourVariantSwatch");
+		public static By label_PLPbadge = By.id("lbl_badge_text");
+		public static By lbl_cart_msg = By.id("lbl_cart_msg");
+		public static By lbl_cart_msg_toolTipIcon = By.id("");
+		public static By lbl_cart_msg_toolTipIconMsg = By.id("");
+		public static By isPLP_PPU_MSG = By.id("lbl_ppu_msg");
+		public static By SpecialPricingMessage = By.id("lbl_special_price_msg");
+		public static By PLP_PromotionMessage = By.id("lbl_promotional_msg");
+		public static By Clearance_Styles_AvailableDisplayed = By.id("");
+		public static By PLP_Some_Styles_Available = By.id("");
+		public static By CLP_Page__Instore_CurbSideBaner = By.id("lbl_banner_title");
+		public static By CLP_Page_FreeShippingBaner = By.id("lbl_banner_title");
+		public static By CLP_Page_Instore_CurbSideBaner_SeeDeatil = By.id("btn_banner_button");
+		public static By CLP_Page_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");		
+	}
+	
+	public static class SignUp{
+		public static By signUpHeader = By.id("lbl_header_title");
+		public static By firstName = By.id("input_first_name");
+		public static By lastName = By.id("input_last_name");
+		public static By email = By.id("input_email");
+		public static By password = By.id("input_password");
+		public static By promotion = By.id("check_box_promotions_in_email");
+		public static By termsAndConditions = By.id("txt_by_continuing_agree");
+		public static By createAnAccountButton = By.id("btn_create_an_account");
+		public static By labelErrorEmptyFirstName = By.id("lbl_error_first_name");
+		public static By labelErrorEmptyLastName = By.id("lbl_error_last_name");
+		public static By labelErrorEmptyEmail = By.id("lbl_error_email");
+		public static By labelErrorEmptyPassword = By.id("lbl_error_password");
+		public static By inputFirstName = By.id("input_first_name");
+		public static By inputLastName = By.id("input_last_name");
+		public static By inputEmail = By.id("input_email");
+		public static By inputPassword = By.id("input_passowrd");
+		public static By labelAccountAlreadyRegistered = By.id("");
+	}
+
+
 }

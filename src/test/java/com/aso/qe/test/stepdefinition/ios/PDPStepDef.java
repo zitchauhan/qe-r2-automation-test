@@ -153,6 +153,7 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void user_taps_on_change_store_link() throws Throwable {
 		swipeScreen(Direction.UP,2);
 	   pdp.tapOnChangeStoreLink();
+	}
 	@Then("^I choose to verify \"([^\"]*)\" in PDP Page$")
 	public void verify_PDP_Page(String args) throws Throwable {
 	   
