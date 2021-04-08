@@ -91,11 +91,13 @@ public class Locators {
 		public static By freeStorePickUp = By.id("lbl_free_store_pickup");
 		public static By freeStorePickUpRadioBtn = By.id("rd_free_store_pickup");
 		public static By homeDeliveryTitle = By.id("lbl_home_delivery");
-		public static By btnRadioDeliveryOption = By.id("");
-		public static By label = By.id("");
+		public static By btnRadioDeliveryOption = By.id("rd_free_store_pickup");
+		public static By label = By.id("lbl_free_store_pickup");
 		public static By subLabel =By.id("");
 		public static By changeStore = By.id("");
-		
+		public static By whiteColor = By.id("color_list_item_1");
+		public static By shoeSize = By.id("size_list_item_0");
+	
 
 
 

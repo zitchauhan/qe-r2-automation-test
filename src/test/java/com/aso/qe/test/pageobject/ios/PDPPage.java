@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
 import java.lang.UnsupportedOperationException;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
@@ -87,7 +88,14 @@ public class PDPPage {
 	public void tapOnAddToCart() {
 		MobileElement addToCartButton = driver.findElement(Locators.PDPPage.buttonAddToCart);
 		if(addToCartButton.isEnabled()) {
+		
 			addToCartButton.click();
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}else {
 			System.out.println("This Varient of the Product is out of stock");
 		}
@@ -281,14 +289,69 @@ public class PDPPage {
 	}
 
 	public boolean isVarientDisplayed(String varianType) {
-		if (varianType.contains("color and size")) {
-			assertTrue( GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant));
-			assertTrue( GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant));
+		if (varianType.contains("color and size")) 
+		{
+		boolean stat1=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
+		boolean stat2=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+		     if(stat1 && stat2 == true) {
+		    	 return true;
+		     }else {
+		    	 return false;
+		     }
 			
-		}else if(varianType.contains("color")) {
-			assertTrue( GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant));
 		}
-		return false;
+		else  {
+			boolean stat = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+			return stat;
+		}
+		
+		
+		
 	}
+
+	public void changeVariant(String variantType,String variantSize, String variantColor) {
+		if(variantType.contains("SizeAndColor")) {
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.whiteColor);
+			
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			MobileElement varientColorValue = driver.findElement(Locators.PDPPage.colorValue);
+			assertTrue(varientColorValue.getText().contains(variantColor));
+			
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.mediumSize);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			MobileElement varientSizeValue1 = driver.findElement(Locators.PDPPage.sizeValue);
+			assertTrue(varientSizeValue1.getText().contains(variantSize));
+			
+		}else {
+			System.out.println("fixed variants");
+		}
+		
+			/*else if(variantType.contains("color")) {
+		
+			if(driver.findElement(Locators.PDPPage.firstColor).isDisplayed()==true) {
+				GlobalMobileHelper.tapOnElement(Locators.PDPPage.whiteColor);
+				
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				MobileElement varientColorValue = driver.findElement(Locators.PDPPage.colorValue);
+				assertTrue(varientColorValue.getText().contains(variantColor));*/
+			
+		
+			
+		
+	}
+
+
 }
 

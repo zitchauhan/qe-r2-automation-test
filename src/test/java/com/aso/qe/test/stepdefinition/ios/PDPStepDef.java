@@ -70,9 +70,12 @@ public class PDPStepDef extends GlobalMobileHelper{
 	}
 	@And("^User Sees the Variant of \"(.*?)\" Product$")
 	public void isVarientDisplayed(String variantProduct) {
-		assertTrue(pdp.isVarientDisplayed(variantProduct));
+		assertTrue( pdp.isVarientDisplayed(variantProduct));
 	}
-	@Then("^Then User Change the variants of \"(.*?)\" to \"(.*?)\"$")
+	@Then("^User Change the variants of \"(.*?)\" to \"(.*?)\" , \"(.*?)\"$")
+	public void changeVariant(String variantType, String variantSize, String variantColor) {
+		pdp.changeVariant(variantType,variantSize,variantColor);
+	}
 
 	@And("^user sees the size varient$")
 	public void isSizeVarientDisplayed() {
@@ -181,6 +184,8 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void isMessageDisplayed(String expactedMsg) {
 		
 	}
+
+	
 	
 
 	

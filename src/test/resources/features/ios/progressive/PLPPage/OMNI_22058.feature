@@ -1,5 +1,5 @@
 Feature: Validate the OOS Functionality
-
+@Sprint3 @TC-OMNI-33177 @ST-22058
 Scenario: Validate the OOS for Search Listing Page
 Given User launches the application
     And User continues as guest user
@@ -12,7 +12,7 @@ Given User launches the application
     Then User Sees the Products list which included OOS product
     When User Enabled the OOS toggle
      Then User sees the Product which are in stock
-
+@Sprint3 @TC-OMNI-33177 @ST-22058
 Scenario: Validate the OOS for CLP Page
 Given User launches the application
     And User continues as guest user
@@ -30,7 +30,7 @@ Given User launches the application
     Then User Sees the Products list which included OOS product
     When User Enabled the OOS toggle
     Then User sees the Product which are in stock
-    @OMNI22
+    @Sprint3 @TC-OMNI-33177 @ST-22058
   Scenario: Vlidate the OOS for PLP
     Given User launches the application
     And User continues as guest user
@@ -51,7 +51,7 @@ Given User launches the application
     Then User Sees the Products list which included OOS product
     When User Enabled the OOS toggle
     Then User sees the Product which are in stock
-    
+    @Sprint3 @TC-OMNI-33177 @ST-22058
    Scenario Outline: Validate the oos For delivery Option Filter
    Given User launches the application
     And User continues as guest user
