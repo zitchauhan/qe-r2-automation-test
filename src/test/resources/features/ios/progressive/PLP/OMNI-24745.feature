@@ -1,3 +1,4 @@
+@MamtaScript
 Feature: Validate User is able view product list by category
 
   @ST-OMNI-24745  @Sprint2

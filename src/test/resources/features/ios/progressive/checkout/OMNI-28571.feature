@@ -1,12 +1,13 @@
+@MamtaScript
  Feature: Select/Edit Saved Shipping Address 
  
     
      @Sprint2 @ST-OMNI-28571 @TC-31612
     Scenario: Verify registered user is able to edit the shipping information and the edited address is getting updated
     Given User launches the application
-   Then User taps on "ALLOW LOCATION SERVICES" option
-    And User verifies location service popup is displayed
-    And User taps on "Allow while using app" option
+#   Then User taps on "ALLOW LOCATION SERVICES" option
+#    And User verifies location service popup is displayed
+#    And User taps on "Allow while using app" option
     And User continues as guest user
 	And User is on Log In screen
 	Then User sees email address field
