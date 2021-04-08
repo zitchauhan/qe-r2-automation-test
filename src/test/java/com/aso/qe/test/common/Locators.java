@@ -14,7 +14,6 @@ public class Locators {
 	}
 	
 	public static class LoginPage{
-
 		public static By HomeLogin = By.id("guest_label_test_id");
 		public static By emailEditBox = By.id("tf_email");
 		public static By passwordEditBox = By.id("tf_password");
@@ -181,6 +180,9 @@ public class Locators {
 		public static By findStoreLink = By.xpath("//XCUIElementTypeButton[@name=\"FIND STORE\"]");
 		public static By buttonAddressBook = By.xpath("//XCUIElementTypeButton[@name='ADDRESS BOOK']");
 		public static By buttonCreateAccount = By.xpath("//XCUIElementTypeButton[@name='CREATE AN ACCOUNT']");
+		public static By createAnAccountButton = By.id("btn_create_an_account");
+		public static By addressBookButton = By.id("btn_address_book");
+		public static By addressBookHeader = By.xpath("//*[@label='Address Book']");
 	}
 	
 	public static class CartPage{
@@ -235,7 +237,9 @@ public class Locators {
 		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 	}
+	
 
+	
 	public static class CheckoutPage{
 		public static By productThumbNail = By.xpath("(//XCUIElementTypeOther[@name=\"Product Image\"])[2]/XCUIElementTypeOther");
 		public static By productTitle = By.id("lbl_product_title");
@@ -393,6 +397,8 @@ public class Locators {
 	public static class AddressBook{
 		public static By buttonAddNewAddress = By.name("Add New Address");
 		public static By labelSavedAddresses = By.id("lbl_saved_address");
+		public static By addressBookButton = By.id("btn_address_book");
+		public static By addressBookHeader = By.xpath("//*[@label='Address Book']");
 	}
 
 	public static class AddressVerification {
