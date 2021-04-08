@@ -2,6 +2,8 @@ package com.aso.qe.test.common;
 
 import org.openqa.selenium.By;
 
+import io.appium.java_client.MobileElement;
+
 public class Locators {
 	
 	public static class BottomNav{
@@ -217,6 +219,13 @@ public class Locators {
 		public static By defaultAddressLabel = By.id("lbl_list_default0");
 		public static By editAddressLink=By.xpath("//XCUIElementTypeOther[@name='Edit']");
 		public static By labelTitle = By.id("lbl_checkout");
+		public static By contactInformation = By.id("lbl_checkout_information_header");
+		public static By emailField = By.id("tf_email");
+		public static By saveEmailButton = By.id("btn_save_email");
+		public static By createAnAccountButton = By.id("btn_create_account");
+		public static By signInButton = By.id("btn_sign_in");
+		public static By continueAsGuestButton = By.id("btn_guest_checkout");
+		public static By emailFieldLabel = By.id("lbl_email_field");
 	}
 
 	
@@ -335,5 +344,27 @@ public class Locators {
 		public static By labelAccountAlreadyRegistered = By.id("");
 	}
 
-
+	public static class AddAddress{
+		public static By addAddressHeader = By.id("header_add_address");
+		public static By inputFirstName = By.id("tf_first_name");
+		public static By inputLastName = By.id("tf_last_name");
+		public static By inputAddress = By.id("tf_address");
+		public static By inputAptNumber = By.id("tf_additional_address");
+		public static By inputZipCode = By.id("tf_zip_code");
+		public static By inputCity = By.id("tf_city");
+		public static By inputPhone = By.id("tf_phone_no");
+		public static By inputState = By.id("tf_state");
+		public static By buttonAddNewAddress = By.id("btn_add_new_address");
+		
+		//Errors
+		public static By lblFirstNameError = By.id("lbl_first_name_error");
+		public static By lblLastNameError = By.id("lbl_last_name_error");
+		public static By lblAddressError = By.id("lbl_address_error");
+		public static By lblAdditionalAddressError = By.id("lbl_additional_address_error");
+		public static By lblZipCodeError = By.id("lbl_zip_code_error");
+		public static By lblStateError = By.id("lbl_state_error");
+		public static By lblCityError = By.id("lbl_city_error");
+		public static By lblPhoneNoError = By.id("lbl_phone_no_error");
+		public static By errorPopUp= By.xpath("//*[contains(@label,'OK')]");
+	}
 }
