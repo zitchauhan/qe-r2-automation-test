@@ -616,6 +616,19 @@ public class PDPPage {
 			
 	
 	}
+
+	public boolean isStoreDetailsDisplayed() {
+		boolean stat = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storeAddress);
+		boolean stat2 = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storetime);
+		boolean stat3 = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storePhone);
+		
+		if(stat&& stat2&& stat3==true) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
 	
 	
 }

@@ -149,7 +149,10 @@ public class Locators {
 		public static By OverLayCartPrice = By.id("");
 		public static By OverLayCartQty = By.id("");
 		public static By OverLayCartSize = By.id("");
-		public static By WebViewBannerPDP = By.id("");		
+		public static By WebViewBannerPDP = By.id("");	
+		public static By storeAddress = By.id("lbl_store_address");
+		public static By storetime = By.id("lbl_time");
+		public static By storePhone = By.id("lbl_phone");
 	}
 
 	public static class ShopPage{
