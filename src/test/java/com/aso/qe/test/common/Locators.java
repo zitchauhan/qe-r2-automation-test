@@ -145,6 +145,9 @@ public class Locators {
 		public static By ProductSafetyInformationPara4 = By.id("");
 		public static By homeDeliveryRadioButton = By.id("rd_home_delivery");
 		public static By buttonChangeStore = By.id("btn_change_store");		
+	    public static By storeAddress = By.id("lbl_store_address");
+		public static By storetime = By.id("lbl_time");
+		public static By storePhone = By.id("lbl_phone");
 		public static By OverLayCartSKU = By.id("lbl_product_sku_value");
 		public static By OverLayCartPrice = By.id("lbl_product_price");
 		public static By OverLayCartQty = By.id("lbl_product_qty_value");
