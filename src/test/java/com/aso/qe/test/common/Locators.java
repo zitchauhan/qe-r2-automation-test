@@ -139,20 +139,21 @@ public class Locators {
 		public static By changeStoreLink = By.xpath("/*[contains(@label,'Change Store')]");
 		public static By AppStoreGuidelines = By.id("lbl_fire_arm");
 		public static By ProductSafetyInformation = By.id("lbl_detail_spec_important_product_and_safety_information");
-		public static By ProductSafetyInformationPara1 = By.id("");
+		public static By ProductSafetyInformationPara1 = By.id("lbl_detail_spec_important_product_and_safety_information_value");
 		public static By ProductSafetyInformationPara2 = By.id("");
 		public static By ProductSafetyInformationPara3 = By.id("");
 		public static By ProductSafetyInformationPara4 = By.id("");
 		public static By homeDeliveryRadioButton = By.id("rd_home_delivery");
 		public static By buttonChangeStore = By.id("btn_change_store");		
-		public static By OverLayCartSKU = By.id("");
-		public static By OverLayCartPrice = By.id("");
-		public static By OverLayCartQty = By.id("");
-		public static By OverLayCartSize = By.id("");
-		public static By WebViewBannerPDP = By.id("");	
-		public static By storeAddress = By.id("lbl_store_address");
+	    public static By storeAddress = By.id("lbl_store_address");
 		public static By storetime = By.id("lbl_time");
 		public static By storePhone = By.id("lbl_phone");
+		public static By OverLayCartSKU = By.id("lbl_product_sku_value");
+		public static By OverLayCartPrice = By.id("lbl_product_price");
+		public static By OverLayCartQty = By.id("lbl_product_qty_value");
+		public static By OverLayCartSize = By.id("lbl_product_attribute_value_Size");
+		public static By WebViewBannerPDP = By.id("");
+		public static By OverLayCartcolour = By.id("lbl_product_attribute_value_Color");
 	}
 
 	public static class ShopPage{

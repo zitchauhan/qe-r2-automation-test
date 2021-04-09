@@ -8,6 +8,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
 import java.lang.UnsupportedOperationException;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
@@ -514,6 +515,9 @@ public class PDPPage {
 		
 	}
 
+
+
+
 	public void tapOnChangeStoreLink() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.changeStoreLink);
 	}
@@ -616,7 +620,7 @@ public class PDPPage {
 			
 	
 	}
-
+	
 	public boolean isStoreDetailsDisplayed() {
 		boolean stat = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storeAddress);
 		boolean stat2 = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storetime);
@@ -630,5 +634,19 @@ public class PDPPage {
 		
 	}
 	
-	
+	public boolean isOverLayCartSKUValueDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSKU);
+	}	
+	public boolean isOverLayCartPriceDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartPrice);
+	}
+	public boolean isOverLayCartQtyDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartQty);
+	}
+	public boolean isOverLayCartSizeDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSize);
+	}
+	public boolean isOverLayCartcolourDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartcolour);
+	}
 }

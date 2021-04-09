@@ -14,10 +14,10 @@ Feature: Verify Details of PLP for product badging
 Examples: 
      |    badge          |	
  #    |   Ships_to_Store |
-#    |    HotDeal        | 
-#    |   clearence_Prod  | 
+    |    HotDeal        | 
+    |   clearence_Prod  | 
 #    |   Price_Drop      |
- #   |    New            |
- #   |   Exclusive       |
+    |    New            |
+    |   Exclusive       |
     |   Online_Only     |
   #  |   Customize      |
