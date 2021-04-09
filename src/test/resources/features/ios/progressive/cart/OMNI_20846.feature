@@ -30,7 +30,6 @@ Feature: Verify that product restrictions and disclaimers are visible to the use
     Examples:
     | product_code | error_message |
     | A_UNIQUE_CODE_Prop_65	   | The product disclaimer for Hazmat product |
-    | A_UNIQUE_CODE_Hazmat	   | The product disclaimer for Prop 65 product |
 
 
   @Sprint3 @ST-OMNI-20846 @TC-OMNI-33078

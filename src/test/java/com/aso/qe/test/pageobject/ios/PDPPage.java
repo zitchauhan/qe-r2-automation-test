@@ -575,35 +575,59 @@ public class PDPPage {
 
 	public boolean VerifyOverlayAttribute(String args) throws Exception {
 
-
 		 List<Object> list = new ArrayList<Object>();
 			boolean flag=true;
-			if(args.equalsIgnoreCase("SKU")) {
-				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSKU);
+			
+			if(args.equalsIgnoreCase("SizeVariantProduct")) {
+				if(!isOverLayCartSKUValueDisplayed()) {
+					
+					flag= false;
+					list.add ( new Exception(" SKU value not displaying "));
+				}
 				
-			}else {
-				list.add ( new Exception(" SKU not displaying "));	
+				if(!isOverLayCartPriceDisplayed()) {
+					
+					flag= false;
+					list.add ( new Exception(" Price not displaying "));
+				}
+				
+				if(!isOverLayCartQtyDisplayed()) {
+					
+					flag= false;
+				
+					list.add ( new Exception(" Qty not displaying "));
+				}
+				if(!isOverLayCartSizeDisplayed()) {
+					
+					flag= false;
+					list.add ( new Exception(" Size not displaying "));
+				}
+				
+			}	
+			if(args.equalsIgnoreCase("FixVariantProduct")) {
+				if(!isOverLayCartSKUValueDisplayed()) {
+					
+					flag= false;
+					list.add ( new Exception(" SKU value not displaying "));
+				}
+				
+				if(!isOverLayCartPriceDisplayed()) {
+					
+					flag= false;
+					list.add ( new Exception(" Price not displaying "));
+				}
+				
+				if(!isOverLayCartQtyDisplayed()) {
+					
+					flag= false;
+				
+					list.add ( new Exception(" Qty not displaying "));
+				}
+				
+				
 			}
 			
-			if(args.equalsIgnoreCase("Size")) {
-				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartPrice);
-			}else {
-				list.add ( new Exception(" Size not displaying "));	
-			}
 			
-			if(args.equalsIgnoreCase("Qty")) {
-				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartQty);
-				
-			}else {
-				list.add ( new Exception(" Qty not displaying "));	
-			}
-			
-			if(args.equalsIgnoreCase("Price")) {
-				
-				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSize);
-			}else {
-				list.add ( new Exception(" Qty not displaying "));	
-			}
 			 if(!list.isEmpty()) {
 				 flag=false;
 					String s=null;
@@ -613,9 +637,22 @@ public class PDPPage {
 					throw new Exception(s);			    
 			 }
 			return flag;
-			
-	
+
 	}
-	
+	public boolean isOverLayCartSKUValueDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSKU);
+	}	
+	public boolean isOverLayCartPriceDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartPrice);
+	}
+	public boolean isOverLayCartQtyDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartQty);
+	}
+	public boolean isOverLayCartSizeDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSize);
+	}
+	public boolean isOverLayCartcolourDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartcolour);
+	}
 	
 }

@@ -13,11 +13,11 @@ Feature: Verify Details of PDP for product badging
     Then verify the "<badge>" of product
  Examples: 
      |    badge        |	
-#    |    Hot Deal     | 
-     |   Clearance     | 
-#    |   Price Drop    |
+    |    HotDeal       | 
+     |   Clearence     | 
+ #   |   Price_Drop    |
      |    New          |
      |   Exclusive     |
-     |   Online Only   |
+     |   Online_Only   |
   #  |   Customize     |
  
