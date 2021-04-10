@@ -107,4 +107,8 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	public void user_taps_on_Find_Store_link() throws Throwable {
 		accountPage.tapOnFindStoreLink();
 	}
+	@Then("^User verifies set as default address checkbox is \"([^\"]*)\"$")
+	public void user_verifies_set_as_default_address_checkbox_is(String arg1) throws Throwable {
+	   
+	}
 }

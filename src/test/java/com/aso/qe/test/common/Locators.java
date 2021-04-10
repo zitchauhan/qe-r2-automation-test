@@ -176,6 +176,8 @@ public class Locators {
 		public static By createAnAccountButton = By.xpath("//*[@label='CREATE AN ACCOUNT']");
 		public static By addressBookButton = By.id("btn_address_book");
 		public static By addressBookHeader = By.xpath("//*[@label='Address Book']");
+		public static By defaultAddressCheckbox=By.id("check_box_message");
+		public static By addNewAddressBtn=By.xpath("//XCUIElementTypeButton[@name=\"Add New Address\"]");
 	}
 	
 	public static class CartPage{
