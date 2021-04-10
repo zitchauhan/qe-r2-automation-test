@@ -150,11 +150,15 @@ public class Locators {
 		public static By ProductSafetyInformationPara4 = By.id("");
 		public static By homeDeliveryRadioButton = By.id("rd_home_delivery");
 		public static By buttonChangeStore = By.id("btn_change_store");		
-		public static By OverLayCartSKU = By.id("");
-		public static By OverLayCartPrice = By.id("");
-		public static By OverLayCartQty = By.id("");
-		public static By OverLayCartSize = By.id("");
+	    public static By storeAddress = By.id("lbl_store_address");
+		public static By storetime = By.id("lbl_time");
+		public static By storePhone = By.id("lbl_phone");
+		public static By OverLayCartSKU = By.id("lbl_product_sku_value");
+		public static By OverLayCartPrice = By.id("lbl_product_price");
+		public static By OverLayCartQty = By.id("lbl_product_qty_value");
+		public static By OverLayCartSize = By.id("lbl_product_attribute_value_Size");
 		public static By WebViewBannerPDP = By.id("");		
+		public static By OverLayCartcolour = By.id("lbl_product_attribute_value_Color");
 	}
 
 	public static class ShopPage{
@@ -238,10 +242,7 @@ public class Locators {
 		public static By academyExclusiveTitle = By.id("lbl_page_title");
 
 	}
-	
-	
-	
-	
+
 	public static class CheckoutPage{
 		public static By productThumbNail = By.xpath("(//XCUIElementTypeOther[@name=\"Product Image\"])[2]/XCUIElementTypeOther");
 		public static By productTitle = By.id("lbl_product_title");
