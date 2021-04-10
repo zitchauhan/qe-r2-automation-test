@@ -176,11 +176,11 @@ public class Locators {
 		public static By accountTitle = By.id("lbl_account");
 		public static By loginLink = By.xpath("//XCUIElementTypeButton[@name=\"LOGIN\"]");
 		public static By findStoreLink = By.xpath("//XCUIElementTypeButton[@name=\"FIND STORE\"]");
-		public static By createAnAccountButton = By.xpath("//*[@label='CREATE AN ACCOUNT']");
-		public static By addressBookButton = By.id("btn_address_book");
-		public static By addressBookHeader = By.xpath("//*[@label='Address Book']");
 		public static By buttonAddressBook = By.xpath("//XCUIElementTypeButton[@name='ADDRESS BOOK']");
 		public static By buttonCreateAccount = By.xpath("//XCUIElementTypeButton[@name='CREATE AN ACCOUNT']");
+		public static By createAnAccountButton = By.id("btn_create_an_account");
+		public static By addressBookButton = By.id("btn_address_book");
+		public static By addressBookHeader = By.xpath("//*[@label='Address Book']");
 	}
 	
 	public static class CartPage{
@@ -234,6 +234,10 @@ public class Locators {
 		public static By labelFreeStoreReturn = By.id("lbl_header");
 		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
+	}
+	public static class AcademyExclusivePage{
+		public static By academyExclusiveTitle = By.id("lbl_page_title");
+
 	}
 
 	public static class CheckoutPage{
