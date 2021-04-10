@@ -234,5 +234,9 @@ public class PDPStepDef extends GlobalMobileHelper{
 	   
 	    
 	}
+	@And("^User sees the Store details$")
+	public void isStoreDetailsDisplayed() {
+		assertTrue( pdp.isStoreDetailsDisplayed());
+	}
 	
 }
