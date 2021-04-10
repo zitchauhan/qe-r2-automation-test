@@ -17,7 +17,7 @@ public class AddressStepDefs extends GlobalMobileHelper{
 
     @And("^User taps on Address Book button$")
     public void user_taps_on_address_book_button() {
-        tapOnElement(Locators.AccountPage.buttonAddressBook, 10);
+        tapOnElement(Locators.AccountPage.addressBookButton, 10);
         logger.debug("tapped on address book button on account page");
     }
 
