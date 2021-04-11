@@ -34,7 +34,7 @@ public class Locators {
 		public static By buttonGoToPDP = By.xpath("//*[contains(@label,\"Adidas Men's Designed2Move Polo Shirt\")]");
 		public static By shopHomePage = By.id("lbl_shop");
 		public static By buttonPdp = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[11]");
-		public static By homeBtn = By.id("lbl_home");
+		//public static By homeBtn = By.id("lbl_home");
 		//public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
 		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
 		public static By searchBox = By.id("btn_Search");
@@ -50,6 +50,8 @@ public class Locators {
 		public static By HomePage_FreeShippingBaner = By.id("lbl_banner_title");
 		public static By HomePage_Instore_CurbSideBaner_SeeDeatil = By.id("btn_banner_button");
 		public static By HomePage_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
+		public static By heroBanner = By.xpath("//*[contains(@label,'Hero Image')]");
+		public static By homeBtn = By.xpath("//*[contains(@label,'Home')]");
 	}
 	public static class ShopNewPage{
 		public static By shopNewTitle = By.id("lbl_page_title");

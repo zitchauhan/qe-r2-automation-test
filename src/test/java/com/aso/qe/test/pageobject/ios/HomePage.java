@@ -1,8 +1,11 @@
 package com.aso.qe.test.pageobject.ios;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.List;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.test.common.Locators;
 
 import io.appium.java_client.AppiumDriver;
@@ -126,7 +129,22 @@ public class HomePage {
 		GlobalMobileHelper.tapOnElement(Locators.HomePage.maybeLaterBtn);
 		
 	}
-	
-	
-	
+
+	public boolean isHeroBannerDisplayed() {
+		
+		MobileElement me=driver.findElement(Locators.HomePage.heroBanner);
+		boolean flag = false;
+		if (me.isDisplayed() && me.isEnabled()) {
+		    
+		    flag= true;
+		}
+		return flag; 
+	}
+
+	public void moveToHomePage() {
+		MobileElement homeBtn = driver.findElement(Locators.HomePage.homeBtn);
+		if(homeBtn.isDisplayed()) {
+			GlobalMobileHelper.tapOnElement(homeBtn);
+		}	
+	}	
 }
