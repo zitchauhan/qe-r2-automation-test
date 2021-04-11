@@ -1,7 +1,7 @@
 package com.aso.qe.test.pageobject.ios;
 
+import com.aso.qe.framework.common.PropertiesHelper;
 import org.apache.log4j.Logger;
-import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
@@ -14,7 +14,6 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 import java.util.List;
-import java.util.Locale;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.Assert.*;
@@ -672,5 +671,34 @@ public class CartPage {
 				return false;
 			}
 	}
+	}
+
+
+	/**
+	 * method to verify that the cart of the registered user has a WhiteGlove bulky product in the cart
+	 * @return true or false based matching criteria
+	 */
+    public boolean hasWhiteGloveBulkyItem() {
+		boolean result = false;
+		// Get product title from the properties file
+		String WhiteGloveBulky = PropertiesHelper.getInstance().getMobileTestDataProperty("WhileGloveBulky");
+		return productOnCartExistsByTitle(WhiteGloveBulky);
+	}
+
+	/**
+	 * A method to check the existence of any product on the cart page by ProductTitle
+	 * @param productTitle
+	 * @return true or false based on search result
+	 */
+	private boolean productOnCartExistsByTitle(String productTitle) {
+    	boolean result = false;
+    	List<MobileElement> productTiles = driver.findElements(Locators.CartPage.labelProductTitle);
+    	for (MobileElement product: productTiles){
+    		if (product.getText().contains(productTitle)){
+    			result=true;
+    			break;
+			}
+		}
+    	return result;
 	}
 }

@@ -198,4 +198,10 @@ private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getN
 	public void user_sees_shipping_message_in_shipping_address_section() throws Throwable {
 		checkoutPage.verifyMessage();
 	}
+
+    @Then("User sees service delivery options for white glove product")
+    public void userSeesServiceDeliveryOptionsForWhiteGloveProduct() {
+        /* Created By jitsingh7 on 11/04/21 */
+		checkoutPage.verifyDeliveryOptionsForWhiteProductBulkyItem();
+    }
 }

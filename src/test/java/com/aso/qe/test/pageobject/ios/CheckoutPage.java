@@ -127,5 +127,14 @@ public class CheckoutPage {
 	public boolean isCheckoutPageDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.CheckoutPage.labelTitle);
 	}
+
+	/**
+	 * A Method to verify that the required Delivery options for WhiteGloveBulky items are present
+	 * on the checkout page
+	 */
+    public void verifyDeliveryOptionsForWhiteProductBulkyItem() {
+		/* Created By jitsingh7 on 11/04/21 */
+		// TODO: To be completed by 12th
+    }
 }
 
