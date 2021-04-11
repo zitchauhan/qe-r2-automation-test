@@ -16,7 +16,7 @@ public class Locators {
 	
 	public static class LoginPage{
 
-		public static By HomeLogin = By.id("guest_label_test_id");
+		public static By HomeLogin = By.xpath("//XCUIElementTypeButton[@name='Home']");
 		public static By emailEditBox = By.id("tf_email");
 		public static By passwordEditBox = By.id("tf_password");
 		public static By loginButton = By.id("btn_login");
