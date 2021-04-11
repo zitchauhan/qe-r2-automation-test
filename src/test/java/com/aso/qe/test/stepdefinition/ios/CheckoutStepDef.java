@@ -199,15 +199,21 @@ private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getN
 		checkoutPage.verifyMessage();
 	}
 
+    @Then("User sees service delivery options for white glove product")
+    public void userSeesServiceDeliveryOptionsForWhiteGloveProduct() {
+        /* Created By jitsingh7 on 11/04/21 */
+		checkoutPage.verifyDeliveryOptionsForWhiteProductBulkyItem();
+    }
+
 	@Then("^User sees order processing message$")
 	public void user_sees_order_processing_message() throws Throwable {
 		checkoutPage.verifyOrderProcessingMessage();
 	}
-	
+
 	@Then("^User sees \"([^\"]*)\" shipping service$")
 	public void user_sees_shipping_service(String shippingService) throws Throwable {
 		assertTrue(shippingService+ " shipping method is not displayed",checkoutPage.verifyShippingMethod(shippingService));
-			
+
 	}
 
 }

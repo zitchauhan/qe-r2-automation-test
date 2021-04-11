@@ -1,5 +1,6 @@
 package com.aso.qe.test.pageobject.ios;
 
+import com.aso.qe.framework.common.PropertiesHelper;
 import org.apache.log4j.Logger;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
@@ -674,6 +675,35 @@ public class CartPage {
 	}
 	}
 
+
+	/**
+	 * method to verify that the cart of the registered user has a WhiteGlove bulky product in the cart
+	 * @return true or false based matching criteria
+	 */
+    public boolean hasWhiteGloveBulkyItem() {
+		boolean result = false;
+		// Get product title from the properties file
+		String WhiteGloveBulky = PropertiesHelper.getInstance().getMobileTestDataProperty("WhileGloveBulky");
+		return productOnCartExistsByTitle(WhiteGloveBulky);
+	}
+
+	/**
+	 * A method to check the existence of any product on the cart page by ProductTitle
+	 * @param productTitle
+	 * @return true or false based on search result
+	 */
+	private boolean productOnCartExistsByTitle(String productTitle) {
+    	boolean result = false;
+    	List<MobileElement> productTiles = driver.findElements(Locators.CartPage.labelProductTitle);
+    	for (MobileElement product: productTiles){
+    		if (product.getText().contains(productTitle)){
+    			result=true;
+    			break;
+			}
+		}
+    	return result;
+	}
+
 	public void noteDownTotalQty() {
 	// storing the total quantity on cart page to a variable, which we can utilize further for the validation.
 		try {
@@ -685,5 +715,5 @@ public class CartPage {
 			logger.error(e.getLocalizedMessage());
 		}
 
-	}	
 	}
+}

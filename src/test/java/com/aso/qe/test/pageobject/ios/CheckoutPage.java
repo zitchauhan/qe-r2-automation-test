@@ -135,7 +135,7 @@ public class CheckoutPage {
 		String shippingMethodName;
 		for(int i=0;i<shippingMethod.size();i++) {
 		//verifying whether the expected shipping method mathes to any of the shipping method in the list. If YES then return TRUE else return FAlSE.
-			 shippingMethodName=shippingMethod.get(i).getText();	
+			 shippingMethodName=shippingMethod.get(i).getText();
 				if(shippingMethodName.equalsIgnoreCase(shippingService)) {
 					logger.info(shippingMethodName+" shipping method is displayed");
 					return true;
@@ -151,5 +151,14 @@ public class CheckoutPage {
 			logger.error(e.getLocalizedMessage());
 		}
 	}
+
+	/**
+	 * A Method to verify that the required Delivery options for WhiteGloveBulky items are present
+	 * on the checkout page
+	 */
+    public void verifyDeliveryOptionsForWhiteProductBulkyItem() {
+		/* Created By jitsingh7 on 11/04/21 */
+		// TODO: To be completed by 12th
+    }
 }
 
