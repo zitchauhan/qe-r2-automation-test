@@ -2,10 +2,8 @@ Feature: Save Address as Default
 
   @ST-OMNI-26059 @test
   Scenario:	Verify set as default checkbox is not present when registered user doesn't has any existing address and user adds a new address
- 		Given User launches the application
-#    Then User taps on "ALLOW LOCATION SERVICES" option
-#    And User verifies location service popup is displayed
-#    And User taps on "Allow while using app" option
+ 	Given User launches the application
+    Then User Clicks On MaY Be Later
     And User continues as guest user
 	And User is on Log In screen
 	Then User sees email address field
@@ -23,9 +21,7 @@ Feature: Save Address as Default
     @ST-OMNI-26059
   Scenario:	Verify set as default checkbox is not selected when registered user has an existing addresses and user adds a new address
  	Given User launches the application
-#    Then User taps on "ALLOW LOCATION SERVICES" option
-#    And User verifies location service popup is displayed
-#    And User taps on "Allow while using app" option
+	Then User Clicks On MaY Be Later
     And User continues as guest user
 	And User is on Log In screen
 	Then User sees email address field
@@ -40,9 +36,7 @@ Feature: Save Address as Default
      @ST-OMNI-26059
   Scenario:	Verify set as default checkbox is not present when registered user has only one existing address and user edits that address
  	Given User launches the application
-#    Then User taps on "ALLOW LOCATION SERVICES" option
-#    And User verifies location service popup is displayed
-#    And User taps on "Allow while using app" option
+	Then User Clicks On MaY Be Later
     And User continues as guest user
 	And User is on Log In screen
 	Then User sees email address field
@@ -57,9 +51,7 @@ Feature: Save Address as Default
     
     Scenario: Verify set as default checkbox is disabled when registered user has some existing addresses and user edits the default address
  	Given User launches the application
-#    Then User taps on "ALLOW LOCATION SERVICES" option
-#    And User verifies location service popup is displayed
-#    And User taps on "Allow while using app" option
+    Then User Clicks On MaY Be Later
     And User continues as guest user
 	And User is on Log In screen
 	Then User sees email address field
@@ -74,9 +66,7 @@ Feature: Save Address as Default
     
      Scenario: Verify set as default checkbox is not selected when registered user has some existing addresses and user edits a non default address
  	Given User launches the application
-#    Then User taps on "ALLOW LOCATION SERVICES" option
-#    And User verifies location service popup is displayed
-#    And User taps on "Allow while using app" option
+	Then User Clicks On MaY Be Later
     And User continues as guest user
 	And User is on Log In screen
 	Then User sees email address field
