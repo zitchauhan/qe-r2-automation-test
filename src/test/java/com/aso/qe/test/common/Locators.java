@@ -14,6 +14,7 @@ public class Locators {
 	}
 	
 	public static class LoginPage{
+		public static By HomeLogin = By.xpath("//XCUIElementTypeButton[@name=\"Home\"]");
 		public static By emailEditBox = By.id("tf_email");
 		public static By passwordEditBox = By.id("tf_password");
 		public static By loginButton = By.id("btn_login");
@@ -276,7 +277,7 @@ public class Locators {
 		public static By maybeLater = By.id("btn_maybe_later");
 		public static By allowOnce = By.id("Allow Once");
 		public static By allowWhileUsingApp = By.id("Allow While Using App");
-		public static By doNotAllow = By.id("Donâ€™t Allow");
+		public static By doNotAllow = By.id("Don’t Allow");
 		public static By storeNameFindStore = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_check_box_find_store')]");
 		public static By storeRadioBtn = By.xpath("//XCUIElementTypeOther[contains(@name,'check_box_find_store')]");
 		public static By storeDetailsLink = By.xpath("//XCUIElementTypeOther[contains(@name,'lbl_details_find_store')]");
