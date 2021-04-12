@@ -156,7 +156,7 @@ public class CartStepDef extends GlobalMobileHelper{
 		String itemLabelText = cartPage.getItemContLabelText();
 		assertTrue(itemLabelText.contains(arg1));
 	}
-	
+
 	@Then("^User verifies guest user sign in section \"([^\"]*)\" on cart page$")
 	public void user_sees_guest_user_sign_in_section(String displayStatus) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -167,7 +167,15 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here that turns the phrase above into concrete actions
 	   cartPage.tapOnSignInButton();
 	}
-
+	
+	@And("^User sees the Variant of selected Product$")
+	public void validateVariantOnCart() {
+		assertTrue(cartPage.validateCartVariant());
+	}
+	@And("^User sees the Variant of selected golf Ball$")
+	public void validateGolfBallVariatOnCart() {
+		assertTrue(cartPage.validateCartVariant());
+	}
 	@Then("^User sees shop with confidence label$")
 	public void user_sees_shop_with_confidence_label() throws Throwable {
 	    // Write code here for shop with confidence label
@@ -269,7 +277,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here to see the promo code error
 	    cartPage.verifyPromoErroMessage(promoCodeError);
 	}
-	
+
 	@Then("^User sees that Promo code field is disabled$")
 	public void user_sees_that_Promo_code_field_is_disabled() throws Throwable {
 	    // Write code here to see if promo code is disabled
@@ -481,26 +489,99 @@ public class CartStepDef extends GlobalMobileHelper{
 			cartPage.tapMinusActionCartPage();
 		}
 	}
+
+
+    @And("^User has Gift Card \"(.*?)\" in the cart$")
+    public void userHasGiftCardInTheCart(String arg0) throws Throwable{
+        /* Created By jitsingh7 on 2-Apr-2021 */
+		throw new PendingException();
+    }
+
+    @When("^User is on the cart screen$")
+    public void userIsOnTheCartScreen() throws InterruptedException {
+        /* Created By jitsingh7 on 2-Apr-2021 */
+		userIsOnCart();
+    }
+
+    @And("^User does not see arrow button for more delivery options$")
+    public void userDoesNotSeeArrowButtonForMoreDeliveryOptions() throws Throwable{
+        /* Created By jitsingh7 on 2-Apr-2021 */
+		throw new PendingException();
+    }
+
+    @And("^User sees default delivery option \"(.*?)\"$")
+    public void userSeesDefaultDeliveryOption(String arg0) throws Throwable{
+        /* Created By jitsingh7 on 2-Apr-2021 */
+		throw new PendingException();
+    }
+
+    @And("^User sees estimated arrival date")
+    public void userSeesEstimatedArrivalDate() throws Throwable{
+        /* Created By jitsingh7 on 2-Apr-2021 */
+		throw new PendingException();
+    }
+
+    @And("^User updates quantity to \"(.*?)\"$")
+    public void userUpdatesQuantityTo(String arg0) throws Throwable{
+        /* Created By jitsingh7 on 2-Apr-2021 */
+		throw new PendingException();
+    }
+
+    @Then("^User sees quantity as \"(.*?)\"$")
+    public void userSeesQuantityAs(String arg0) throws Throwable{
+        /* Created By jitsingh7 on 2-Apr-2021 */
+		throw new PendingException();
+    }
+
+    @And("^User sees the quantity stepper error message \"(.*?)\"$")
+    public void userSeesTheQuantityStepperErrorMessage(String arg0) throws Throwable{
+        /* Created By jitsingh7 on 2-Apr-2021 */
+		throw new PendingException();
+    }
+
+    @Then("^User sees the cart screen alert with text \"(.*?)\"$")
+    public void userSeesTheCartScreenAlertWithText(String arg0) throws Throwable{
+        /* Created By jitsingh7 on 2-Apr-2021 */
+		throw new PendingException();
+    }
+
+    @And("^User removes the card from the cart$")
+    public void userRemovesTheCardFromTheCart() throws Throwable{
+        /* Created By jitsingh7 on 2-Apr-2021 */
+		throw new PendingException();
+    }
+
+    @Then("^User does not see the product title$")
+    public void userDoesNotSeeTheProductTitle() throws Throwable{
+        /* Created By jitsingh7 on 2-Apr-2021 */
+		throw new PendingException();
+    }
+
+	@Given("^A registered user is logged in$")
+	public void aRegisteredUserIsLoggedIn() throws Throwable{
+		/* Created By jitsingh7 on 2-Apr-2021 */
+
+	}
 	@And("^User sees the \"(.*?)\" and \"(.*?)\" of selected Product \"(.*?)\"$")
 	public void isvariantDisplayedonCart(String variantSize , String variantColor, String variantType) {
 		assertTrue(cartPage.isvariantDisplayedOnCart(variantSize,variantColor,variantType));
 	}
-	
 
-	
-	@And("^User taps on product title$") 
+
+
+	@And("^User taps on product title$")
 	public void tapOnnProductTitle() throws Throwable{
 		cartPage.tapOnProductTitle();
 	}
-	
-//	@And("^User sees the checkout button$") 
+
+//	@And("^User sees the checkout button$")
 //	public void checkoutButtonIsDisplayed() throws Throwable{
 //		GlobalMobileHelper.swipeScreen(Direction.UP);
 //		GlobalMobileHelper.swipeScreen(Direction.UP);
 //		assertTrue(cartPage.isCheckoutPageDisplayed());
 //	}
-	
-	@When("^User taps on the checkout button$") 
+
+	@When("^User taps on the checkout button$")
 	public void tapOnCheckoutButton() throws Throwable{
 		cartPage.tapOnCheckoutButton();
 	}

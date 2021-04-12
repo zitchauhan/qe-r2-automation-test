@@ -123,9 +123,9 @@ public class HomePage {
 	}
 
 	public void tapOnMayBelater() {
-		if (GlobalMobileHelper.isElementDisplayed(Locators.HomePage.maybeLaterBtn)) {
-		      GlobalMobileHelper.tapOnElement(Locators.HomePage.maybeLaterBtn);
-		   }
+    	if (GlobalMobileHelper.isElementDisplayed(Locators.HomePage.maybeLaterBtn)) {
+			GlobalMobileHelper.tapOnElement(Locators.HomePage.maybeLaterBtn);
+		}
 	}
 	
 	
