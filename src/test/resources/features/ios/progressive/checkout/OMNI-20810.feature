@@ -1,6 +1,6 @@
 Feature: Ship To Home Order Details - Guest User
 
-@ST-OMNI-20810
+@ST-OMNI-20810 @TC-OMNI-33628
 Scenario: verify the followings when user has opted Ship to home (STH) as fulfillment option
 1. shipping label is displayed
 2. order processing message is displayed
