@@ -8,6 +8,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
 import java.lang.UnsupportedOperationException;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
@@ -514,6 +515,9 @@ public class PDPPage {
 		
 	}
 
+
+
+
 	public void tapOnChangeStoreLink() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.changeStoreLink);
 	}
@@ -575,59 +579,35 @@ public class PDPPage {
 
 	public boolean VerifyOverlayAttribute(String args) throws Exception {
 
+
 		 List<Object> list = new ArrayList<Object>();
 			boolean flag=true;
-			
-			if(args.equalsIgnoreCase("SizeVariantProduct")) {
-				if(!isOverLayCartSKUValueDisplayed()) {
-					
-					flag= false;
-					list.add ( new Exception(" SKU value not displaying "));
-				}
+			if(args.equalsIgnoreCase("SKU")) {
+				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSKU);
 				
-				if(!isOverLayCartPriceDisplayed()) {
-					
-					flag= false;
-					list.add ( new Exception(" Price not displaying "));
-				}
-				
-				if(!isOverLayCartQtyDisplayed()) {
-					
-					flag= false;
-				
-					list.add ( new Exception(" Qty not displaying "));
-				}
-				if(!isOverLayCartSizeDisplayed()) {
-					
-					flag= false;
-					list.add ( new Exception(" Size not displaying "));
-				}
-				
-			}	
-			if(args.equalsIgnoreCase("FixVariantProduct")) {
-				if(!isOverLayCartSKUValueDisplayed()) {
-					
-					flag= false;
-					list.add ( new Exception(" SKU value not displaying "));
-				}
-				
-				if(!isOverLayCartPriceDisplayed()) {
-					
-					flag= false;
-					list.add ( new Exception(" Price not displaying "));
-				}
-				
-				if(!isOverLayCartQtyDisplayed()) {
-					
-					flag= false;
-				
-					list.add ( new Exception(" Qty not displaying "));
-				}
-				
-				
+			}else {
+				list.add ( new Exception(" SKU not displaying "));	
 			}
 			
+			if(args.equalsIgnoreCase("Size")) {
+				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartPrice);
+			}else {
+				list.add ( new Exception(" Size not displaying "));	
+			}
 			
+			if(args.equalsIgnoreCase("Qty")) {
+				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartQty);
+				
+			}else {
+				list.add ( new Exception(" Qty not displaying "));	
+			}
+			
+			if(args.equalsIgnoreCase("Price")) {
+				
+				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSize);
+			}else {
+				list.add ( new Exception(" Qty not displaying "));	
+			}
 			 if(!list.isEmpty()) {
 				 flag=false;
 					String s=null;
@@ -637,8 +617,23 @@ public class PDPPage {
 					throw new Exception(s);			    
 			 }
 			return flag;
-
+			
+	
 	}
+	
+	public boolean isStoreDetailsDisplayed() {
+		boolean stat = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storeAddress);
+		boolean stat2 = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storetime);
+		boolean stat3 = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storePhone);
+		
+		if(stat&& stat2&& stat3==true) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	
 	public boolean isOverLayCartSKUValueDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSKU);
 	}	
@@ -654,5 +649,4 @@ public class PDPPage {
 	public boolean isOverLayCartcolourDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartcolour);
 	}
-	
 }
