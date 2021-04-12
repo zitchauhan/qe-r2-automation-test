@@ -1,4 +1,4 @@
-	package com.aso.qe.test.stepdefinition.ios;
+package com.aso.qe.test.stepdefinition.ios;
 
 import static org.junit.Assert.assertTrue;
 
@@ -108,7 +108,17 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 		accountPage.tapOnFindStoreLink();
 	}
 	@Then("^User verifies set as default address checkbox is \"([^\"]*)\"$")
-	public void user_verifies_set_as_default_address_checkbox_is(String arg1) throws Throwable {
-	   
+	public void user_verifies_set_as_default_address_checkbox_is(String status) throws Throwable {
+		accountPage.verifydefaultAddress(status);
+	}
+	
+	@Then("^User taps on add new address button$")
+	public void user_taps_on_add_new_address_button() throws Throwable {
+		accountPage.tapOnAddNewAddress();
+	}
+	
+	@When("^User selects \"([^\"]*)\" address to edit$")
+	public void user_selects_address_to_edit(String addressNum) throws Throwable {
+		accountPage.selectAddress(addressNum);
 	}
 }

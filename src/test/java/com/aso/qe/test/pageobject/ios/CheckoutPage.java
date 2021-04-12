@@ -68,11 +68,8 @@ public class CheckoutPage {
 					throw new IllegalStateException("Wrong field");
 					}
 		 		List<String> list = PropertiesHelper.getInstance().getMobileTestDataPropertyList(key);
-		 		assertTrue("could not find the "+key+ " in property file", list.size()>=0);
-		 		
-		 		Random random = new Random();
-		 		int max=4, min=0;
-		 		int randomNum = random.nextInt(4);
+		 		assertTrue("could not find the "+key+ " in property file", list.size()>=0);		 		
+		 		int randomNum  = GlobalMobileHelper.randomInteger(0,list.size()-1);
 		 		String updatedField = list.get(randomNum);
 		 		accountPage.enterFieldValuesOnAddAddress(updatedField,fieldName);	
 		 		Context.setUpdatedAddressField(updatedField);

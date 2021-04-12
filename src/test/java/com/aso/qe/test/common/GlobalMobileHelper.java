@@ -302,5 +302,7 @@ public class GlobalMobileHelper {
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator)).getText();
 	}
 	
-
+	public static int randomInteger(int min, int max) {
+		  return (int) (Math.floor(Math.random() * (max - min + 1)) + min);
+		}
 }

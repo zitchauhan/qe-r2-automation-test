@@ -14,6 +14,7 @@ public class Locators {
 	}
 	
 	public static class LoginPage{
+		public static By HomeLogin = By.xpath("//XCUIElementTypeButton[@name=\"Home\"]");
 		public static By emailEditBox = By.id("tf_email");
 		public static By passwordEditBox = By.id("tf_password");
 		public static By loginButton = By.id("btn_login");
@@ -182,7 +183,7 @@ public class Locators {
 		public static By addressBookHeader = By.xpath("//*[@label='Address Book']");
 		public static By defaultAddressCheckbox=By.id("check_box_message");
 		public static By addNewAddressBtn=By.xpath("//XCUIElementTypeButton[@name=\"Add New Address\"]");
-	}
+}
 	
 	public static class CartPage{
 		public static By qtyIncrementStepper = By.id("plus_btn_id");
@@ -398,6 +399,7 @@ public class Locators {
 	public static class AddressBook{
 		public static By buttonAddNewAddress = By.name("Add New Address");
 		public static By labelSavedAddresses = By.id("lbl_saved_address");
+		public static By savedAddresses= By.id("");
 	}
 
 	public static class AddressVerification {
