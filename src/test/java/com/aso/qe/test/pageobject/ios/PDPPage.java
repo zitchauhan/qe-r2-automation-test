@@ -649,4 +649,9 @@ public class PDPPage {
 	public boolean isOverLayCartcolourDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartcolour);
 	}
+
+	public void tapOnContiniueShoppingBtn() {
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.continueShopping);
+	}
 }
