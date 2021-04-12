@@ -22,7 +22,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class CheckoutPage {
-	private static final Logger logger = Logger.getLogger(CartPage.class.getName());
+	private static final Logger logger = Logger.getLogger(CheckoutPage.class.getName());
 	AppiumDriver<MobileElement> driver;
 	public CheckoutPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
