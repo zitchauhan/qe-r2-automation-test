@@ -129,10 +129,12 @@ public class CheckoutPage {
 	}
 
 	public boolean verifyShippingMethod(String shippingService) {
+	//storing all the shipping methods in a list
 		List<MobileElement> shippingMethod = driver.findElements(Locators.CheckoutPage.shippingMethod);
 		assertTrue("Shipping methods are not displayed",shippingMethod.size()>=0);
 		String shippingMethodName;
 		for(int i=0;i<shippingMethod.size();i++) {
+		//verifying whether the expected shipping method mathes to any of the shipping method in the list. If YES then return TRUE else return FAlSE.
 			 shippingMethodName=shippingMethod.get(i).getText();	
 				if(shippingMethodName.equalsIgnoreCase(shippingService)) {
 					logger.info(shippingMethodName+" shipping method is displayed");
