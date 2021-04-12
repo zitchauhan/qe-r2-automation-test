@@ -508,6 +508,10 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void guest_User_is_on_empty_cart_page() throws Throwable {
 		assertFalse(isElementDisplayed(Locators.CartPage.orderSubtotalLabel));
 	}
-	
-	
+
+	@Then("^User note down the total quantity on cart page$")
+	public void user_note_down_the_cart_quantity_on_cart_page() throws Throwable {
+		cartPage.noteDownTotalQty();
+	}
+
 }

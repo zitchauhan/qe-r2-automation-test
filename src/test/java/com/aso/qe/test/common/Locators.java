@@ -16,7 +16,7 @@ public class Locators {
 	
 	public static class LoginPage{
 
-		public static By HomeLogin = By.id("guest_label_test_id");
+		public static By HomeLogin = By.xpath("//XCUIElementTypeButton[@name=\"Home\"]");
 		public static By emailEditBox = By.id("tf_email");
 		public static By passwordEditBox = By.id("tf_password");
 		public static By loginButton = By.id("btn_login");
@@ -154,6 +154,7 @@ public class Locators {
 		public static By OverLayCartSize = By.id("lbl_product_attribute_value_Size");
 		public static By WebViewBannerPDP = By.id("");
 		public static By OverLayCartcolour = By.id("lbl_product_attribute_value_Color");
+		public static By continueShopping = By.xpath("//XCUIElementTypeOther[@name='btn_continue_shopping']");
 	}
 
 	public static class ShopPage{
@@ -261,6 +262,9 @@ public class Locators {
 		public static By signInButton = By.id("btn_sign_in");
 		public static By continueAsGuestButton = By.id("btn_guest_checkout");
 		public static By emailFieldLabel = By.id("lbl_email_field");
+		public static By productQuantity=By.xpath("//XCUIElementTypeOther[contains(@name,'Q t y')]");
+		public static By orderProcesssingMessage=By.id("shipping_method_desc_id");
+		public static By shippingMethod=By.xpath("//XCUIElementTypeStaticText[contains(@name,'shipping_method_title_id')]");
 	}
 	
 	public static class storePickup{

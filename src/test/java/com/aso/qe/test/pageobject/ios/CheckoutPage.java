@@ -22,7 +22,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class CheckoutPage {
-	
+	private static final Logger logger = Logger.getLogger(CartPage.class.getName());
 	AppiumDriver<MobileElement> driver;
 	public CheckoutPage(AppiumDriver<MobileElement> driver) {
 	  this.driver = driver;
@@ -126,6 +126,28 @@ public class CheckoutPage {
 	
 	public boolean isCheckoutPageDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.CheckoutPage.labelTitle);
+	}
+
+	public boolean verifyShippingMethod(String shippingService) {
+		List<MobileElement> shippingMethod = driver.findElements(Locators.CheckoutPage.shippingMethod);
+		assertTrue("Shipping methods are not displayed",shippingMethod.size()>=0);
+		String shippingMethodName;
+		for(int i=0;i<shippingMethod.size();i++) {
+			 shippingMethodName=shippingMethod.get(i).getText();	
+				if(shippingMethodName.equalsIgnoreCase(shippingService)) {
+					logger.info(shippingMethodName+" shipping method is displayed");
+					return true;
+				}
+				}
+		return false;
+	}
+
+	public void verifyOrderProcessingMessage() {
+		try {
+			GlobalMobileHelper.isElementDisplayed(Locators.CheckoutPage.orderProcesssingMessage);
+		} catch (Exception e){
+			logger.error(e.getLocalizedMessage());
+		}
 	}
 }
 

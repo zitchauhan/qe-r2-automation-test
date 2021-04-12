@@ -606,4 +606,16 @@ public class CartPage {
 			}
 	}
 	}
-}
+
+	public void noteDownTotalQty() {
+		try {
+			MobileElement totalQtyOnCartIcon = driver.findElement(Locators.BottomNav.cart);
+			String totalQty = totalQtyOnCartIcon.getText().split("Q T Y")[1];
+			Context.setTotalQtyOnCart(totalQty);
+			logger.debug("Total quantity has been saved : " + totalQty);
+		} catch (Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+
+	}	
+	}
