@@ -608,6 +608,7 @@ public class CartPage {
 	}
 
 	public void noteDownTotalQty() {
+	// storing the total quantity on cart page to a variable, which we can utilize further for the validation.
 		try {
 			MobileElement totalQtyOnCartIcon = driver.findElement(Locators.BottomNav.cart);
 			String totalQty = totalQtyOnCartIcon.getText().split("Q T Y")[1];
