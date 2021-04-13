@@ -606,4 +606,28 @@ public class CartPage {
 			}
 	}
 	}
+
+	public boolean VerifyDileveryAttribute(String args) {
+		boolean flag=true;
+		               if(args.equalsIgnoreCase("Shipping")) {
+		            	   String elmntShippingTxt=   GlobalMobileHelper.getElementText(Locators.PDPPage.OverLayCartShipping);
+		            	   if(args.contains(elmntShippingTxt)) {
+		            		   flag=true;
+		       			}else {
+		       				flag=false;
+		       			}}
+		            	   if(args.equalsIgnoreCase("Store Pick Up")) {
+			            	   String elmntStorPickTxt=   GlobalMobileHelper.getElementText(Locators.PDPPage.OverLayCartShipping);
+			            	   if(args.contains(elmntStorPickTxt)) {
+			            		   flag=true;
+			       			}else {
+			       			 flag=false;
+			       			}   
+		       
+	
+		            	   }
+						return flag;
+		            	   
+	}
+	
 }

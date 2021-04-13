@@ -17,7 +17,7 @@ Scenario Outline:  Verify User able to see  and change Product varient Size and 
 	And User sees the "<variantSize>" and "<variantColor>" of selected Product "<VariantType>"
 	
 	  Examples:
-	  | VariantType | variantSize | variantColor|
+	  | VariantType | variantSize  | variantColor|
    	  | SizeAndColor | Large       | White |
       | color 		 |  		   |  White |
     

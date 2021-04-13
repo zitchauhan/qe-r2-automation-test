@@ -3,6 +3,7 @@ Feature: Verify product detail for FireArms/Ammunitions and be redirected to the
   	@Sprint01 @TC-OMNI-20666_1
     Scenario Outline:: validate PDP for FireArms/Ammunitions
   	Given User launches the application
+  	When User Clicks On MaY Be Later
     And User continues as guest user
  #   Then User sees the homepage
     When User Sees the Search Box

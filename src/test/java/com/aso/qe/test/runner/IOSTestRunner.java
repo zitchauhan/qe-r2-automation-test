@@ -11,9 +11,9 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src/test/resources/features/ios/",
 		glue="com.aso.qe.test.stepdefinition.ios",
-		tags= {"@TC-OMNI-29800,@TC-OMNI-30525,@TC-OMNI-30524,@ST-OMNI-26472"},
+		tags= {"@TC_OMNI_26900_4"},
 		monochrome=true,
-		//dryRun=true,
+	//	dryRun=true,
 		plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html",
 		format={"pretty","html:target/cucumber-reports/cucumber-html-reports", "json:target/cucumber-reports/cucumber-html-reports/common.json"}
 		)

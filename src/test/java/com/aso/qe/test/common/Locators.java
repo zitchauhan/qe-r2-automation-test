@@ -68,7 +68,7 @@ public class Locators {
 		public static By securityReassuranceMessage = By.id("lbl_shop_with_confidence_subheading");
 		public static By labelFreeSStoreReturn = By.id("lbl_header");
 		public static By PLP_Page__Instore_CurbSideBaner = By.id("lbl_banner_title");
-		public static By PLP_Page_FreeShippingBaner = By.id("lbl_banner_title");
+		public static By PLP_Page_FreeShippingBaner = By.id("btn_banner_button");
 		public static By PLP_Page_Instore_CurbSideBaner_SeeDeatil = By.id("btn_banner_button");
 		public static By PLP_Page_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
 		public static By WebViewBannerTitleFreeShipping = By.id("lbl_page_title");
@@ -148,6 +148,8 @@ public class Locators {
 		public static By OverLayCartSize = By.id("lbl_product_attribute_value_Size");
 		public static By WebViewBannerPDP = By.id("");
 		public static By OverLayCartcolour = By.id("lbl_product_attribute_value_Color");
+		public static By OverLayCartShipping = By.id("lbl_shipping_infomation");
+		public static By OverLayCartStorePickUp = By.id("lbl_shipping_infomation");
 	}
 
 	public static class ShopPage{

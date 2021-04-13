@@ -1,9 +1,10 @@
 Feature: PDP- ATC Confirmation - With Variant + Haptic
 
- @TC_OMNI_26900_1 
+ @TC_OMNI_26900_X1 
  Scenario:  Verify User able to see Product varient Size and color on PDP Page
 
     Given User launches the application
+    When User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
     When User Sees the Search Box
@@ -16,6 +17,7 @@ Feature: PDP- ATC Confirmation - With Variant + Haptic
 
     And User taps on add to cart button
     Then I choose to verify "SizeVariantProduct"
+    Then I choose to verify "Shipping" label in Overlay
  #  Examples: 
  #    |    Attributes    |	
  #    |    SKU           | 
@@ -40,6 +42,7 @@ Feature: PDP- ATC Confirmation - With Variant + Haptic
     When User selects home delivery option
     And User taps on add to cart button
    Then I choose to verify "Attributes"
+   Then I choose to verify "Shipping" label in Overlay
  #  Examples: 
   #   |    Attributes    |	
    #  |    SKU           | 
@@ -47,5 +50,25 @@ Feature: PDP- ATC Confirmation - With Variant + Haptic
    #  |    Price         |
    
    
+ @TC_OMNI_26900_4
+ Scenario Outline:  Verify User able to see Product varient Size and color on PDP Page
    
-   
+      Given User launches the application
+    And User Clicks On MaY Be Later
+    And User continues as guest user
+    Then User sees the homepage
+    When User Sees the Search Box
+    Then User clicks on the Search Box
+    And User search for the "<VariantType>"
+    And user click on Product
+    And User Sees the Variant of "<VariantType>" Product
+    Then User Change the variants of "<VariantType>" to "<variantSize>" , "<variantColor>"
+     And user click on Home Delivery
+	When User taps on add to cart button
+	And User sees the "<variantSize>" and "<variantColor>" of selected Product "<VariantType>"
+	Then I choose to verify "SizeVariantProduct"
+    Then I choose to verify "Shipping" label in Overlay
+	  Examples:
+	  | VariantType | variantSize | variantColor|
+   	  | SizeAndColor | Large       | White |
+     # | color 		 |  		   |  White |
