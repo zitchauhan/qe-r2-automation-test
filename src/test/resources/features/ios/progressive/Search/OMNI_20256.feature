@@ -20,4 +20,4 @@ Given User launches the application
     Then User clicks on the Search Box
     And User search for the "wrongSearchKeyword" 
     And User observe message "try again"
-    
+   

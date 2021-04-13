@@ -481,9 +481,9 @@ public class CartStepDef extends GlobalMobileHelper{
 			cartPage.tapMinusActionCartPage();
 		}
 	}
-	@And("^User sees the \"(.*?)\" and \"(.*?)\" of selected Product \"(.*?)\"$")
-	public void isvariantDisplayedonCart(String variantSize , String variantColor, String variantType) {
-		assertTrue(cartPage.isvariantDisplayedOnCart(variantSize,variantColor,variantType));
+	@And("^User sees the \"(.*?)\" and \"(.*?)\" and \"(.*?)\" of selected Product \"(.*?)\"$")
+	public void isvariantDisplayedonCart(String variantSize , String variantColor,String variantWidth, String variantType) {
+		assertTrue(cartPage.isvariantDisplayedOnCart(variantSize,variantColor,variantWidth,variantType));
 	}
 	
 
