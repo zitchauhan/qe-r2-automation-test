@@ -189,7 +189,7 @@ public class Locators {
 		public static By labelYourCart = By.id("lbl_your_cart");
 		public static By labelItems = By.id("lbl_item_count");
 		public static By labelSubtotalHeader = By.id("lbl_subtotal_header");
-		public static By labelProductTitle = By.id("lbl_product_title");
+		public static By labelProductTitle = By.name("lbl_product_title");
 		public static By orderSummaryLabel = By.id("lbl_order_summary");
 		public static By labelSku = By.id("lbl_sku");
 		public static By labelSkuValue = By.id("lbl_sku_value");
@@ -267,6 +267,8 @@ public class Locators {
 		public static By labelShippingHeader = By.id("shipping_header");
 		public static By labelShippingMethod = By.id("lbl_shipping_method");
 		public static By labelShippingMethodDisclaimer = By.id("lbl_service_desciption");
+		public static By labelShippingMethods = By.xpath("//XCUIElementTypeStaticText[contains(@name,'shipping_method_title_id')]");
+		public static By radioButtonShippingMethods = By.xpath("//XCUIElementTypeOther[contains(@value,'checkbox') and contains(@id,'shipping_method_check_box_id')]");
 	}
 
 	public static class storePickup{
@@ -426,4 +428,7 @@ public class Locators {
 
 	}
 
+	public static class WelcomeScreen {
+		public static By HomeButton = By.xpath("//XCUIElementTypeButton[@name=\"Home\"]");
+	}
 }
