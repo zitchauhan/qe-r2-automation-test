@@ -433,7 +433,10 @@ public class PDPPage {
 		
 		
 	}
-
+	/**
+	This Method is use for validate the variant on PDP
+	
+	*/
 	public boolean isVarientDisplayed(String varianType) {
 		if (varianType.contains("color and size")) 
 		{
@@ -463,7 +466,10 @@ public class PDPPage {
 		
 		
 	}
-
+	/**
+	This Method is use for the Change Variant on PDP Page
+	
+	*/
 	public void changeVariant(String variantType,String variantSize, String variantColor, String variantwidth) {
 		if(variantType.contains("SizeAndColor")) {
 			GlobalMobileHelper.tapOnElement(Locators.PDPPage.whiteColor);
