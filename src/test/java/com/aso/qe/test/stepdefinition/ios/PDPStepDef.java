@@ -230,5 +230,9 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void isStoreDetailsDisplayed() {
 		assertTrue( pdp.isStoreDetailsDisplayed());
 	}
+	@Then("^User taps on Continue shopping button$")
+	public void user_taps_on_Continue_shopping_button() throws Throwable {
+		pdp.tapOnContiniueShoppingBtn();
+	}
 	
 }
