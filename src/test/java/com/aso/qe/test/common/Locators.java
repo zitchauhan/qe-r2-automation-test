@@ -155,6 +155,7 @@ public class Locators {
 		public static By WebViewBannerPDP = By.id("");		
 		public static By OverLayCartcolour = By.id("lbl_product_attribute_value_Color");
 		public static By freeStrorePickupRadioButton = By.id("rd_free_store_pickup");
+		public static By continueShopping = By.xpath("//XCUIElementTypeOther[@name='btn_continue_shopping']");
 	}
 
 	public static class ShopPage{
