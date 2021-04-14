@@ -126,6 +126,13 @@ public class HomePage {
 		GlobalMobileHelper.tapOnElement(Locators.HomePage.maybeLaterBtn);
 		
 	}
+	public void moveToHomePage() {
+	MobileElement homeBtn = driver.findElement(Locators.HomePage.homeButton);
+	if(homeBtn.isDisplayed()) {
+	GlobalMobileHelper.tapOnElement(homeBtn);
+		}
+
+		}
 	
 	
 	
