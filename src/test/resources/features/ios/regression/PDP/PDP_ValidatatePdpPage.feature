@@ -1,5 +1,5 @@
 Feature: Validate functionality of PDP page 
-@OMni666
+@Regression
 Scenario: Validate the Pdp Page
 Given User launches the application
 And User Clicks On MaY Be Later
@@ -34,10 +34,11 @@ And User Clicks On MaY Be Later
 	When User taps on add to cart button
 	
 	
-	 @TC_OMNI_26900_1 
+	 @Regression
  Scenario:  Verify User able to see Product varient Size and color on PDP Page
 
     Given User launches the application
+    And User Clicks On MaY Be Later
     And User continues as guest user
     Then User sees the homepage
     When User Sees the Search Box

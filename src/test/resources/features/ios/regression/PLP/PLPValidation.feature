@@ -1,5 +1,5 @@
 Feature: PLP regression scenario
-
+@Regression
 Scenario: Validate  the user able to click on search Box At Home page
 Given User launches the application
     And User Clicks On MaY Be Later
@@ -14,7 +14,7 @@ Given User launches the application
     And User search for the "wrongSearchKeyword" 
     And User observe message "No Product found"
     
-   @Sprint2 @ST-OMNI-23433 @TC-OMNI-30788
+   @Regression
 Scenario: Varify ratings and review
 Given User launches the application
 And User Clicks On MaY Be Later
