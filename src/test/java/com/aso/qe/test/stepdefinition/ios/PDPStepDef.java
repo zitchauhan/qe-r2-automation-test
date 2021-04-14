@@ -73,9 +73,9 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void isVarientDisplayed(String variantProduct) {
 		assertTrue( pdp.isVarientDisplayed(variantProduct));
 	}
-	@Then("^User Change the variants of \"(.*?)\" to \"(.*?)\" , \"(.*?)\"$")
-	public void changeVariant(String variantType, String variantSize, String variantColor) {
-		pdp.changeVariant(variantType,variantSize,variantColor);
+	@Then("^User Change the variants of \"(.*?)\" to \"(.*?)\" , \"(.*?)\" , \"(.*?)\"$")
+	public void changeVariant(String variantType, String variantSize, String variantColor, String width) {
+		pdp.changeVariant(variantType,variantSize,variantColor, width);
 	}
 
 	@And("^verify the \"(.*?)\" of product$")
@@ -118,45 +118,19 @@ public class PDPStepDef extends GlobalMobileHelper{
 		
 	}
 
-	@When("^user click on Large size$")
-	public void tapOnLargeSize() {
-		pdp.tapOnLargeSize();
-	}
+
 	
-	@When("^user click on small size$")
-	public void tapOnSmallSizeVarient() {
-		pdp.tapOnSmallSize();
-	}
-
-	@Then("^size is changed to \"(.*?)\"$")
-	public void ValidateSize(String size) {
-	     assertTrue(pdp.validateVarientSize(size));
-	}
-
-	@When("^user click on medium size$")
-	public void tapOnMediumSizeVarient() {
-		pdp.tapOnMediumSize();
-	}
-
 	@And("^user click on Home Delivery$")
 	public void tapOnHomeDelivery() {
 		pdp.tapOnHomeDelivery();
 	}
 
-	@Then("^Size is changed to \"(.*?)\"$")
-	public void ValidateSize1(String size1) {
-		assertTrue(pdp.validateVarientSize(size1));
-	}
-
+	
 	@Then("^user sees the Variant on PDP$")
 	public void isVariantDisplayed() {
 		assertTrue(pdp.isColorVariantDisplayed());
 	}
 	
-	@And("^user sees the value of variant$")
-	public void isVariantValueDisplayed() {
-		assertTrue(pdp.isVariantValueDisplayed());
-	}
 	@Then("^User sees the Pickup And Delivery Option$")
 	public void isPickUpandDeliveryOptionDisplayed() {
 		

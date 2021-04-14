@@ -588,7 +588,7 @@ public class CartPage {
 		}
 	}
 
-	public boolean isvariantDisplayedOnCart(String expactedSizeVariant, String expactedColorVariant , String variantType) {
+	public boolean isvariantDisplayedOnCart(String expactedSizeVariant, String expactedColorVariant ,String expectedWidthVariant, String variantType) {
 		if(variantType.contains("SizeAndColor")) {
 		boolean stat = driver.findElement(Locators.CartPage.cartColorVariant).getText().contains(expactedColorVariant);
 		boolean stat1 = driver.findElement(Locators.CartPage.cartSizeVariant).getText().contains(expactedSizeVariant);
@@ -597,13 +597,21 @@ public class CartPage {
 		}else {
 			return false;
 		}
-		}else {
+		}else if(variantType.contains("color")){
 			String s =driver.findElement(Locators.CartPage.cartColorVariant).getText();
 			if(s.contains(expactedColorVariant)) {
 				return true;
 			}else {
 				return false;
 			}
+	}else {
+		boolean stat = driver.findElement(Locators.CartPage.widthVariant).getText().contains(expectedWidthVariant);
+		if(stat==true) {
+			return true;
+		}else {
+				return false;
+			}
+		
 	}
 	}
 
