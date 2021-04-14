@@ -105,4 +105,90 @@ public class AccountPage {
 	public boolean isAddAddressScreenDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.addressBookHeader);
 	}
+	
+	public void tabOnPaymentButton() throws InterruptedException {
+		GlobalMobileHelper.tapOnElement(Locators.MyAccountwelcomePage.buttonPayment);
+		
+			Thread.sleep(1000);
+		
+		
+	}
+	public boolean isPaymentScreenIsDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.Paymenttitle);
+	}
+	
+	public void tabOnAddccButton() {
+		GlobalMobileHelper.tapOnElement(Locators.MyAccountPayment.buttonaddcreditcard);
+	}
+
+	public boolean isaddnewcreditcardpagedisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.AddnewcrerditCardlabel);
+		}
+
+	public void tabOnAddAsoCardtile() {
+		GlobalMobileHelper.tapOnElement(Locators.MyAccountPayment.buttonaddacacemycard);
+		
+	}
+
+	public boolean isaddAsocardpagedisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.Addnewasocreditcard.AddnewAsocrerditCardlabel);
+	
+	}
+
+	public boolean isSavedCardDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.savedCards);
+	}
+
+	public boolean isSavedDefaultCardDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.savedCardsDefault);
+	}
+
+	public void enterAsocardnumber(String asocardnumber) {
+		GlobalMobileHelper.setText(Locators.Addnewasocreditcard.Asocardtextbox, asocardnumber,Locators.Addnewasocreditcard.Setasdefaultcheckbox);
+		
+	}
+
+	public void enterBillingFirstname(String billingfirstname) {
+		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingFirstName, billingfirstname,Locators.MyAccountBillingAddress.BilingLastName);
+		
+	}
+
+	public void enterBillinglastname(String billinglastname) {
+		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingLastName, billinglastname,Locators.MyAccountBillingAddress.BilingAddressText);
+		
+	}
+
+	public void enterBillingaddressname(String billingaddressname) {
+		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingAddressText, billingaddressname,Locators.MyAccountBillingAddress.BilingAptName);
+		
+	}
+
+	public void enterBillingaptname(String billingaptname) {
+		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingAptName, billingaptname,Locators.MyAccountBillingAddress.BilingZipCode);
+		
+	}
+
+	public void enterBillingZipCode(String billingzipcode) {
+		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingZipCode, billingzipcode,Locators.MyAccountBillingAddress.BilingCity);
+		
+	}
+
+	public void enterBillingCity(String billingcity) {
+		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingCity, billingcity,Locators.MyAccountBillingAddress.BilingPhoneNumber);
+	
+	}
+
+	public void enterBillingPhoneNumber(String billingphonenumber) {
+		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingPhoneNumber, billingphonenumber);
+		GlobalMobileHelper.tapOnElement(Locators.MyAccountBillingAddress.LabelBillingAddress);
+	}
+
+	public void tabOnSaveCardButton() {
+		GlobalMobileHelper.tapOnElement(Locators.MyAccountBillingAddress.SaveCreditcardbutton);
+		
+	}
+
+	
+	
+	  
 }

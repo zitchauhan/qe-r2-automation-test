@@ -277,7 +277,7 @@ public class Locators {
 		public static By maybeLater = By.id("btn_maybe_later");
 		public static By allowOnce = By.id("Allow Once");
 		public static By allowWhileUsingApp = By.id("Allow While Using App");
-		public static By doNotAllow = By.id("Don’t Allow");
+		public static By doNotAllow = By.id("Donï¿½t Allow");
 		public static By storeNameFindStore = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_check_box_find_store')]");
 		public static By storeRadioBtn = By.xpath("//XCUIElementTypeOther[contains(@name,'check_box_find_store')]");
 		public static By storeDetailsLink = By.xpath("//XCUIElementTypeOther[contains(@name,'lbl_details_find_store')]");
@@ -424,5 +424,65 @@ public class Locators {
 		public static By passwordMeterHeader = By.id("PASSWORD MUST CONTAIN AT LEAST:");
 
 	}
+	
+	//Use this for my account welcome page after login 
+	public static class MyAccountwelcomePage{
+		public static By MyAcademy = By.id("lbl_myacademy_title");
+		public static By buttonOrders = By.id("btn_Myaccount_orders");
+		public static By buttonProfile = By.id("btn_Myaccount_profile");
+		public static By buttonAddressbook = By.id("btn_Myaccount_addressbook");
+		public static By buttonWishlist = By.id("btn_Myaccount_wishlist");
+		public static By buttonPayment = By.id("btn_Myaccount_Payment");
+		 
+		
+	}
 
+	//Use this for my account Payment section 
+		public static class MyAccountPayment{
+			public static By buttonback = By.id("btn_payment_back");
+			public static By Paymenttitle = By.id("lbl_payment_title");
+			public static By SavedCardslabel = By.id("lbl_SavedCard");
+			public static By savedCards = By.id("btn_saved_card");
+			public static By savedCardsDefault = By.id("btn_saved_card_default");
+			public static By buttonaddacacemycard = By.id("btn_addaso_card");
+			public static By buttonaddcreditcard = By.id("btn_adddredit_card");
+			
+		
+			
+		}
+		
+		//Use this for my account add new cc section 
+				public static class Addnewcreditcard{
+					public static By buttonback = By.id("btn_payment_back");
+					public static By AddnewcrerditCardlabel = By.id("lbl_addnewcreditcard");
+				}
+
+
+				//Use this for my account add new ASO cc section 
+				public static class Addnewasocreditcard{
+					public static By buttonback = By.id("btn_payment_back");
+					public static By AddnewAsocrerditCardlabel = By.id("lbl_addnewasocreditcard");
+					public static By Asocardtextbox = By.id("textbox_asocreditcard");
+					public static By Setasdefaultcheckbox = By.id("Checkbox_Setasdefault");
+					public static By AreYousurewanttoleavelabel = By.id("lbl_SureWantToLeave");
+					public static By AreYousurewanttoleaveMsglabel = By.id("lbl_SureWantToLeaveMsg");
+					public static By Cancelalertbutton = By.id("btn_cancelaleartbutton");
+					public static By Continuealertbutton = By.id("btn_continuealeartbutton");
+					
+				}
+				
+				//Use this for my account Billing address 
+				public static class MyAccountBillingAddress{
+					public static By BilingFirstName = By.id("textbox_BillingFirstname");
+					public static By BilingLastName = By.id("textbox_BillingLastname");
+					public static By BilingAddressText = By.id("textbox_BillingAddress");
+					public static By BilingAptName = By.id("textbox_BillingAptname");
+					public static By BilingZipCode = By.id("textbox_BillingZipCode");
+					public static By BilingCity = By.id("textbox_BillingCity");
+					public static By BilingPhoneNumber = By.id("textbox_BillingPhoneNumber");
+					public static By SaveCreditcardbutton = By.id("btn_savecreditcard");
+					public static By LabelBillingAddress = By.id("lbl_billingaddress");
+					
+					
+               }
 }

@@ -16,6 +16,7 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	AccountPage accountPage = new AccountPage(driver);
 	SignUpPage signUpPage = new SignUpPage(driver);
 	
+	
 	@Then("^User sees the account page$")
 	public void userIsOnHomePage() {
 		assertTrue(accountPage.isAccountPageDisplayed());
@@ -107,4 +108,98 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	public void user_taps_on_Find_Store_link() throws Throwable {
 		accountPage.tapOnFindStoreLink();
 	}
+	@When("^user see myaccount welcomesection$")
+	public void user_see_myaccount_welcomesection() throws Throwable {
+
+		
+		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.MyAccountwelcomePage.MyAcademy));
+		
+	    
+	}
+	
+	@Then("^user taps on payment button$")
+	public void user_taps_on_payment_button() throws Throwable {
+	    accountPage.tabOnPaymentButton();
+	    
+	}
+	@Then("^user is on payment screen$")
+	public void paymentScreenIsDisplayed() {
+		assertTrue(accountPage.isPaymentScreenIsDisplayed());
+	}
+	
+	
+	@When("^user clicks onAdd new credit card tile$")
+	public void user_clicks_onAdd_new_credit_card_tile() throws Throwable {
+		accountPage.tabOnAddccButton();
+	    
+	}
+	@Then("^user is taken to add new credit card page$")
+	public void addNewCreditCardPageDisplayed() {
+		
+	assertTrue(accountPage.isaddnewcreditcardpagedisplayed());
+	}
+	
+	@When("^user clicks onAdd new Academy card tile$")
+	public void tabOnAddAsoCardtile() {
+		accountPage.tabOnAddAsoCardtile();
+	}
+	@Then("^user is taken to add new Aso card page$")
+	public void asoAddCCpagedisplayed() {
+		
+		assertTrue(accountPage.isaddAsocardpagedisplayed());
+		}
+	@Then("^existing cards are shown to user$")
+	public void savedCardsDisplayed() {
+		assertTrue(accountPage.isSavedCardDisplayed());
+	    
+	}
+	
+	@Then("^top most card is default card$")
+	public void savedDefaulltCardsDisplayed() {
+		assertTrue(accountPage.isSavedDefaultCardDisplayed());
+	}
+	
+	@Then("^i choose to enter Aso card \"([^\"]*)\"$")
+	public void i_choose_to_enter_Aso_card(String asocardnumber) throws Throwable {
+		 accountPage.enterAsocardnumber(asocardnumber);
+	}
+	@Then("^i choose to enter first name \"([^\"]*)\"$")
+	public void i_choose_to_enter_first_name(String billingfirstname) throws Throwable {
+		accountPage.enterBillingFirstname(billingfirstname);
+	}
+
+	@Then("^i choose to enter Last name \"([^\"]*)\"$")
+	public void i_choose_to_enter_Last_name(String billinglastname) throws Throwable {
+		accountPage.enterBillinglastname(billinglastname);
+	}
+
+	@Then("^i choose to enter Address \"([^\"]*)\"$")
+	public void i_choose_to_enter_Address(String billingaddressname) throws Throwable {
+		accountPage.enterBillingaddressname(billingaddressname);
+	}
+
+	@Then("^i choose to enter aprt name \"([^\"]*)\"$")
+	public void i_choose_to_enter_aprt_name(String billingaptname) throws Throwable {
+		accountPage.enterBillingaptname(billingaptname);
+	}
+
+	@Then("^i choose to enter zip code \"([^\"]*)\"$")
+	public void i_choose_to_enter_zip_code(String billingzipcode) throws Throwable {
+		accountPage.enterBillingZipCode(billingzipcode);
+	}
+
+	@Then("^i choose to enter choose to enter city \"([^\"]*)\"$")
+	public void i_choose_to_enter_choose_to_enter_city(String billingcity) throws Throwable {
+		accountPage.enterBillingCity(billingcity);
+	}
+
+	@Then("^i choose to enter mobile number \"([^\"]*)\"$")
+	public void i_choose_to_enter_mobile_number(String billingphonenumber) throws Throwable {
+		accountPage.enterBillingPhoneNumber(billingphonenumber);
+	}
+
+	@Then("^i choose to click onsave card button$")
+	public void tabOnSaveCardButton() {
+		accountPage.tabOnSaveCardButton();
+     }
 }
