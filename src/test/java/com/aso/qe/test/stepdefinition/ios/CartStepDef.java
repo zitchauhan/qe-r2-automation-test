@@ -156,7 +156,7 @@ public class CartStepDef extends GlobalMobileHelper{
 		String itemLabelText = cartPage.getItemContLabelText();
 		assertTrue(itemLabelText.contains(arg1));
 	}
-	
+
 	@Then("^User verifies guest user sign in section \"([^\"]*)\" on cart page$")
 	public void user_sees_guest_user_sign_in_section(String displayStatus) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -167,7 +167,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here that turns the phrase above into concrete actions
 	   cartPage.tapOnSignInButton();
 	}
-
+	
 	@And("^User sees the Variant of selected Product$")
 	public void validateVariantOnCart() {
 		assertTrue(cartPage.validateCartVariant());
@@ -277,7 +277,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	    // Write code here to see the promo code error
 	    cartPage.verifyPromoErroMessage(promoCodeError);
 	}
-	
+
 	@Then("^User sees that Promo code field is disabled$")
 	public void user_sees_that_Promo_code_field_is_disabled() throws Throwable {
 	    // Write code here to see if promo code is disabled
@@ -568,22 +568,22 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void isvariantDisplayedonCart(String variantSize , String variantColor, String variantType) {
 		assertTrue(cartPage.isvariantDisplayedOnCart(variantSize,variantColor,variantType));
 	}
-	
 
-	
-	@And("^User taps on product title$") 
+
+
+	@And("^User taps on product title$")
 	public void tapOnnProductTitle() throws Throwable{
 		cartPage.tapOnProductTitle();
 	}
-	
-//	@And("^User sees the checkout button$") 
+
+//	@And("^User sees the checkout button$")
 //	public void checkoutButtonIsDisplayed() throws Throwable{
 //		GlobalMobileHelper.swipeScreen(Direction.UP);
 //		GlobalMobileHelper.swipeScreen(Direction.UP);
 //		assertTrue(cartPage.isCheckoutPageDisplayed());
 //	}
-	
-	@When("^User taps on the checkout button$") 
+
+	@When("^User taps on the checkout button$")
 	public void tapOnCheckoutButton() throws Throwable{
 		cartPage.tapOnCheckoutButton();
 	}
