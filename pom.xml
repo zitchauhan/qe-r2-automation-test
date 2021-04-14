@@ -216,8 +216,6 @@
 			<groupId>ASO</groupId>
 			<artifactId>qe-automation-framework</artifactId>
 			<version>1.0.1</version>
-			<scope>system</scope>
-			<systemPath>/Users/jitsingh7/repos/ideaproject/qe-automation-framework/target/qe-automation-framework-1.0.1.jar</systemPath>
 		</dependency>
 		
 
