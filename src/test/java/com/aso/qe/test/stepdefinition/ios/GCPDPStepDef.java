@@ -355,7 +355,7 @@ public void isEnterAmountDisplay() throws Throwable {
     
 }
 
-@Then("^User see default amount value as preselected  card amount$")
+@Then("^User see default amount value as preselected card amount$")
 public void verify_Default_CardAmount_EnterAmount() throws Throwable {
 	String expectedDefaultCardAmount = gcpdp.getDefaultCardAmount();	
 	String actualDefaultCardAmount=gcpdp.getEnterAmountDefaultValue();

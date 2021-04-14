@@ -51,7 +51,7 @@ Given User launches the application
 	When User tap on the card amount option as "Other"
 	Then User see the instruction message
 	Then User see the Enter Amount field
-	Then User see default amount value as preselected  card amount 
+	Then User see default amount value as preselected card amount 
 	
 	Examples:
 	|product|
