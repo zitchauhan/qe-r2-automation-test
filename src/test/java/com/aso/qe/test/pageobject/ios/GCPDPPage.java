@@ -241,7 +241,7 @@ public class GCPDPPage {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.btnCancelSizeChart);
 	}
 	public boolean isVariantValueDisplayed() {
-		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorValue);
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
 	}
 	public boolean isPickUpAndDeliveryOptionDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.pickUpAndDeliveryTitle);
@@ -409,7 +409,7 @@ public class GCPDPPage {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			MobileElement varientColorValue = driver.findElement(Locators.PDPPage.colorValue);
+			MobileElement varientColorValue = driver.findElement(Locators.PDPPage.colorVariant);
 			assertTrue(varientColorValue.getText().contains(variantColor));
 			
 			GlobalMobileHelper.tapOnElement(Locators.PDPPage.mediumSize);
@@ -418,7 +418,7 @@ public class GCPDPPage {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			MobileElement varientSizeValue1 = driver.findElement(Locators.PDPPage.sizeValue);
+			MobileElement varientSizeValue1 = driver.findElement(Locators.PDPPage.sizeVariant);
 			assertTrue(varientSizeValue1.getText().contains(variantSize));
 			
 		}else {

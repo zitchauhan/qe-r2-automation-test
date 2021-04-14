@@ -1,9 +1,10 @@
 Feature: Validate the OOS Functionality
+
 @Sprint3 @TC-OMNI-33177 @ST-22058
 Scenario: Validate the OOS for Search Listing Page
 Given User launches the application
 And User Clicks On MaY Be Later
-    And User continues as guest user
+    And User Goes to home page
     Then User sees the homepage
     When User Sees the Search Box
     Then User clicks on the Search Box
@@ -13,11 +14,12 @@ And User Clicks On MaY Be Later
     Then User Sees the Products list which included OOS product
     When User Enabled the OOS toggle
      Then User sees the Product which are in stock
+     
 @Sprint3 @TC-OMNI-33177 @ST-22058
 Scenario: Validate the OOS for CLP Page
 Given User launches the application
 And User Clicks On MaY Be Later
-    And User continues as guest user
+    And User Goes to home page
     Then User sees the homepage
     When User taps on shop in bottom nav
   	Then User sees the shop page
@@ -32,11 +34,12 @@ And User Clicks On MaY Be Later
     Then User Sees the Products list which included OOS product
     When User Enabled the OOS toggle
     Then User sees the Product which are in stock
+    
     @Sprint3 @TC-OMNI-33177 @ST-22058
   Scenario: Vlidate the OOS for PLP
     Given User launches the application
     And User Clicks On MaY Be Later
-    And User continues as guest user
+   And User Goes to home page
     Then User sees the homepage
     When User taps on shop in bottom nav
   	Then User sees the shop page
@@ -54,24 +57,8 @@ And User Clicks On MaY Be Later
     Then User Sees the Products list which included OOS product
     When User Enabled the OOS toggle
     Then User sees the Product which are in stock
-    @Sprint3 @TC-OMNI-33177 @ST-22058
-   Scenario Outline: Validate the oos For delivery Option Filter
-   Given User launches the application
-    And User continues as guest user
-    Then User sees the homepage
-    When User Sees the Search Box
-    Then User clicks on the Search Box
-    And User search for the "SearchKeyword"
-    And User Sees the Filter option
-    Then user choose the filter "<Type_filter>"
-    And USer sees the only inStock Product on Plp page
     
-     Examples:
-    | Type_filter | 
-    
-    | BOPIS |
-    | STH | 
-    | STS | 
+  
     
     
     

@@ -8,6 +8,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.support.PageFactory;
 import java.lang.UnsupportedOperationException;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
@@ -274,28 +275,7 @@ public class PDPPage {
 		boolean isSizeChartbtnDisplayed = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.btnSizeChart);
 		return isSizeChartbtnDisplayed;
 	}
-	public void tapOnSmallSize() {
-		
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.smallSize);
-		
-	}
-	public void tapOnLargeSize() {
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.largeSize);
-	}
-	public boolean validateVarientSize(String size) {
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		MobileElement varientSizeValue = driver.findElement(Locators.PDPPage.sizeValue);
-		return varientSizeValue.getText().contains(size);
-	}
-	
-	public void tapOnMediumSize() {
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.mediumSize);
-	}
-	
+
 	public void tapOnSizeChart() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.btnSizeChart);
 		
@@ -306,9 +286,7 @@ public class PDPPage {
 	public void tapOnCancelBtn() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.btnCancelSizeChart);
 	}
-	public boolean isVariantValueDisplayed() {
-		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorValue);
-	}
+
 	public boolean isPickUpAndDeliveryOptionDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.pickUpAndDeliveryTitle);
 	}
@@ -387,6 +365,9 @@ public class PDPPage {
 		return flag;
 		
 	}
+	public boolean isVariantValueDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorValueWhite);
+	}
 
 	public boolean isNavigatedToPDPOnWeb() {
 		
@@ -444,23 +425,38 @@ public class PDPPage {
 
 	public void changeStore(String storeName) {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.changeStore);
+		driver.findElement(Locators.PDPPage.searchStoreBox).sendKeys(storeName);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.searchBtn);
+		
 		
 		
 		
 		
 	}
-
+	/**
+	This Method is use for validate the variant on PDP
+	
+	*/
 	public boolean isVarientDisplayed(String varianType) {
 		if (varianType.contains("color and size")) 
 		{
-		boolean stat1=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
-		boolean stat2=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+		boolean stat1=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+		boolean stat2=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
 		     if(stat1 && stat2 == true) {
 		    	 return true;
 		     }else {
 		    	 return false;
 		     }
 			
+		}else if(varianType.contains("width")) {
+			//boolean stat4=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+			//boolean stat5=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
+			boolean stat6=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.widthVariant);
+			 if(stat6 == true) {
+		    	 return true;
+		     }else {
+		    	 return false;
+		     }
 		}
 		else  {
 			boolean stat = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
@@ -470,30 +466,26 @@ public class PDPPage {
 		
 		
 	}
-
-	public void changeVariant(String variantType,String variantSize, String variantColor) {
+	/**
+	This Method is use for the Change Variant on PDP Page
+	
+	*/
+	public void changeVariant(String variantType,String variantSize, String variantColor, String variantwidth) {
 		if(variantType.contains("SizeAndColor")) {
 			GlobalMobileHelper.tapOnElement(Locators.PDPPage.whiteColor);
-			
-			try {
+            try {
 				Thread.sleep(2000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+			} catch (InterruptedException e1) {
+				e1.printStackTrace();
 			}
-			MobileElement varientColorValue = driver.findElement(Locators.PDPPage.colorValue);
-			assertTrue(varientColorValue.getText().contains(variantColor));
-			
 			GlobalMobileHelper.tapOnElement(Locators.PDPPage.mediumSize);
-			try {
-				Thread.sleep(2000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			MobileElement varientSizeValue1 = driver.findElement(Locators.PDPPage.sizeValue);
-			assertTrue(varientSizeValue1.getText().contains(variantSize));
 			
+			
+		}else if(variantType.contains("width")) {
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.shoeSize);
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.widthSizeD);
 		}else {
-			System.out.println("fixed variants");
+			System.out.println("Fixed variant");
 		}
 		
 			/*else if(variantType.contains("color")) {
@@ -513,6 +505,9 @@ public class PDPPage {
 			
 		
 	}
+
+
+
 
 	public void tapOnChangeStoreLink() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.changeStoreLink);
@@ -575,59 +570,35 @@ public class PDPPage {
 
 	public boolean VerifyOverlayAttribute(String args) throws Exception {
 
+
 		 List<Object> list = new ArrayList<Object>();
 			boolean flag=true;
-			
-			if(args.equalsIgnoreCase("SizeVariantProduct")) {
-				if(!isOverLayCartSKUValueDisplayed()) {
-					
-					flag= false;
-					list.add ( new Exception(" SKU value not displaying "));
-				}
+			if(args.equalsIgnoreCase("SKU")) {
+				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSKU);
 				
-				if(!isOverLayCartPriceDisplayed()) {
-					
-					flag= false;
-					list.add ( new Exception(" Price not displaying "));
-				}
-				
-				if(!isOverLayCartQtyDisplayed()) {
-					
-					flag= false;
-				
-					list.add ( new Exception(" Qty not displaying "));
-				}
-				if(!isOverLayCartSizeDisplayed()) {
-					
-					flag= false;
-					list.add ( new Exception(" Size not displaying "));
-				}
-				
-			}	
-			if(args.equalsIgnoreCase("FixVariantProduct")) {
-				if(!isOverLayCartSKUValueDisplayed()) {
-					
-					flag= false;
-					list.add ( new Exception(" SKU value not displaying "));
-				}
-				
-				if(!isOverLayCartPriceDisplayed()) {
-					
-					flag= false;
-					list.add ( new Exception(" Price not displaying "));
-				}
-				
-				if(!isOverLayCartQtyDisplayed()) {
-					
-					flag= false;
-				
-					list.add ( new Exception(" Qty not displaying "));
-				}
-				
-				
+			}else {
+				list.add ( new Exception(" SKU not displaying "));	
 			}
 			
+			if(args.equalsIgnoreCase("Size")) {
+				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartPrice);
+			}else {
+				list.add ( new Exception(" Size not displaying "));	
+			}
 			
+			if(args.equalsIgnoreCase("Qty")) {
+				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartQty);
+				
+			}else {
+				list.add ( new Exception(" Qty not displaying "));	
+			}
+			
+			if(args.equalsIgnoreCase("Price")) {
+				
+				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSize);
+			}else {
+				list.add ( new Exception(" Qty not displaying "));	
+			}
 			 if(!list.isEmpty()) {
 				 flag=false;
 					String s=null;
@@ -637,8 +608,23 @@ public class PDPPage {
 					throw new Exception(s);			    
 			 }
 			return flag;
-
+			
+	
 	}
+	
+	public boolean isStoreDetailsDisplayed() {
+		boolean stat = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storeAddress);
+		boolean stat2 = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storetime);
+		boolean stat3 = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storePhone);
+		
+		if(stat&& stat2&& stat3==true) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	
 	public boolean isOverLayCartSKUValueDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSKU);
 	}	
@@ -654,5 +640,9 @@ public class PDPPage {
 	public boolean isOverLayCartcolourDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartcolour);
 	}
-	
+
+	public void tapOnContiniueShoppingBtn() {
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.continueShopping);
+	}
 }
