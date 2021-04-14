@@ -59,7 +59,7 @@ Given User launches the application
 	|Academy_Bulk_Gift_Card|
 	
 	
-@Sprint04 @OMNI-29377  @TC-OMNI-29377_04 	
+@Sprint04 @OMNI-29377  @TC-OMNI-29377_04  @TestRun	
 Scenario Outline: Validate an error message when enter amount is more than $1500
 Given User launches the application 
 	And User Goes to home page 
@@ -75,6 +75,7 @@ Given User launches the application
 	Then User see the Enter Amount field
 	Then User Enter an amount as "$2000"
 	Then User see an error message as "Gift Card Amount should be between 1 and 1500"
+	Then User see Add to cart button is disable
 	
 	Examples:
 

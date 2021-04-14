@@ -1,6 +1,7 @@
 package com.aso.qe.test.stepdefinition.ios;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
@@ -384,6 +385,14 @@ public void user_see_shipping_as_label_as(String expectedShippingType) throws Th
 	assertEquals(gcpdp.getShippingType(), expectedShippingType);
     
 }
+
+@Then("^User see Add to cart button is disable$")
+public void user_see_Add_to_cart_button_is_disable() throws Throwable {
+    assertTrue(pdp.isDisabledAddtoCart());
+}
+
+
+
 
 
 
