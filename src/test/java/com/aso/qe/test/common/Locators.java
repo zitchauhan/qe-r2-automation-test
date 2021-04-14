@@ -124,6 +124,7 @@ public class Locators {
 		public static By sizeChartTitle =By.id("lbl_page_title");
 		//public static By btnCancelSizeChart = By.id("btn_cancel");
 		public static By btnCancelSizeChart = By.id("btn_back");
+		public static By cancelBtn = By.id("cancel_btn_find_store");
 		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");
 		public static By pickUpAndDeliveryTitle = By.id("lbl_p_and_d_options");
 		public static By freeStorePickUp = By.id("lbl_free_store_pickup");
@@ -131,7 +132,8 @@ public class Locators {
 		public static By homeDeliveryTitle = By.id("lbl_home_delivery");
 		public static By btnRadioDeliveryOption = By.id("rd_free_store_pickup");
 		public static By label = By.id("lbl_free_store_pickup");
-		public static By subLabel =By.id("");
+		public static By subLabel =By.id("lbl_order_by");
+		public static By selectStore = By.id("btn_select_store");
 		public static By changeStore = By.id("btn_change_store");
 		public static By whiteColor = By.id("color_list_item_Color_1");
 		public static By shoeSize = By.id("size_list_item_Shoe_Size_2");
@@ -158,6 +160,12 @@ public class Locators {
 		public static By widthSizeD= By.id("size_list_item_Shoe_Width_0");
 		public static By widthVariant = By.id("lbl_size_title_Shoe_Width");
 		public static By continueShopping = By.xpath("//XCUIElementTypeOther[@name='btn_continue_shopping']");
+		public static By freeStorePickUpTitle = By.id("lbl_free_store_pickup");
+		public static By deailsSpecTitle = By.id("lbl_detail_spec_title");
+		public static By skuDetailTitle = By.xpath("//*[contains(@label,'SKU')]");
+		public static By itemTitle = By.xpath("//*[contains(@label,'ITEM')]");
+		public static By productDetails = By.id("lbl_detail_spec_description");
+		
 	}
 
 	public static class ShopPage{

@@ -4,7 +4,7 @@ Scenario Outline:  Verify User able to see  and change Product varient Size and 
 
     Given User launches the application
    And User Clicks On MaY Be Later
-    And User Goes to home page
+    And User continues as guest user
     Then User sees the homepage
     When User Sees the Search Box
     Then User clicks on the Search Box

@@ -234,5 +234,35 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void user_taps_on_Continue_shopping_button() throws Throwable {
 		pdp.tapOnContiniueShoppingBtn();
 	}
+	@And("^User Sees The PickUp & Delivery Option$")
+	public void isPickUpDeliveryOptionDisplayed() {
+		assertTrue( pdp.isPickUpDeliveryOptionsDisplayed());
+		
+	}
+	@And("User Sees the Free Store PickUp Option")
+	public void isFreeStorePickUpDisplayed() {
+	assertTrue(pdp.isFreeStorePickUpDisplayed());
+	}
+	@And("user read the Sub Label")
+	public void isSubLabelDisplayed() {
+		pdp.isSubLabelDisplayed(null);
+	}
+	@And("User Sees the Select Store button")
+	public void isStorebtnDisplayed() {
+		
+	}
+	@And("User Click on Select a Store Button")
+	public void tapOnSelectStore() {
+		
+	}
+	@And("User Give Store Name as \"(.*?)\"")
+	public void enterStoreName() {
+		
+	}
+	@And("User sees the Details & Specs")
+	public void isDetailsAndSpecsDisplayed() {
+		pdp.isDetailsDisplayedOfProduct();
+	}
+	
 	
 }

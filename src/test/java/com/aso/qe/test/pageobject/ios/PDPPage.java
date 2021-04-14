@@ -424,9 +424,9 @@ public class PDPPage {
 	}
 
 	public void changeStore(String storeName) {
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.changeStore);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.selectStore);
 		driver.findElement(Locators.PDPPage.searchStoreBox).sendKeys(storeName);
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.searchBtn);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.cancelBtn);
 		
 		
 		
@@ -644,5 +644,23 @@ public class PDPPage {
 	public void tapOnContiniueShoppingBtn() {
 		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.continueShopping);
+	}
+
+	public boolean isPickUpDeliveryOptionsDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.pickUpAndDeliveryTitle);
+		
+	}
+
+	public boolean isFreeStorePickUpDisplayed() {
+		
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.freeStorePickUpTitle);
+	}
+
+	public void isDetailsDisplayedOfProduct() {
+		// TODO Auto-generated method stub
+		GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.deailsSpecTitle);
+		GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.itemTitle);
+		GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.skuDetailTitle);
+		GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.productDetails);
 	}
 }
