@@ -118,36 +118,6 @@ public class PDPStepDef extends GlobalMobileHelper{
 		
 	}
 
-	@When("^user click on Large size$")
-	public void tapOnLargeSize() {
-		pdp.tapOnLargeSize();
-	}
-	
-	@When("^user click on small size$")
-	public void tapOnSmallSizeVarient() {
-		pdp.tapOnSmallSize();
-	}
-
-	@Then("^size is changed to \"(.*?)\"$")
-	public void ValidateSize(String size) {
-	     assertTrue(pdp.validateVarientSize(size));
-	}
-
-	@When("^user click on medium size$")
-	public void tapOnMediumSizeVarient() {
-		pdp.tapOnMediumSize();
-	}
-
-	@And("^user click on Home Delivery$")
-	public void tapOnHomeDelivery() {
-		pdp.tapOnHomeDelivery();
-	}
-
-	@Then("^Size is changed to \"(.*?)\"$")
-	public void ValidateSize1(String size1) {
-		assertTrue(pdp.validateVarientSize(size1));
-	}
-
 	@Then("^user sees the Variant on PDP$")
 	public void isVariantDisplayed() {
 		assertTrue(pdp.isColorVariantDisplayed());
