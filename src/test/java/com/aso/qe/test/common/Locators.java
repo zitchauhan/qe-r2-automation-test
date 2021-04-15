@@ -455,6 +455,7 @@ public class Locators {
 			public static By SavedCardslabel = By.id("lbl_SavedCard");
 			public static By savedCards = By.id("btn_saved_card");
 			public static By savedCardsDefault = By.id("btn_saved_card_default");
+			public static By existingasocard = By.id("btn_existingaso_card");
 			public static By buttonaddacacemycard = By.id("btn_addaso_card");
 			public static By buttonaddcreditcard = By.id("btn_adddredit_card");
 			
@@ -475,6 +476,7 @@ public class Locators {
 					public static By AddnewAsocrerditCardlabel = By.id("lbl_addnewasocreditcard");
 					public static By Asocardtextbox = By.id("textbox_asocreditcard");
 					public static By Setasdefaultcheckbox = By.id("Checkbox_Setasdefault");
+					public static By ErrorModal = By.id("popup_errormodal");
 					public static By AreYousurewanttoleavelabel = By.id("lbl_SureWantToLeave");
 					public static By AreYousurewanttoleaveMsglabel = By.id("lbl_SureWantToLeaveMsg");
 					public static By Cancelalertbutton = By.id("btn_cancelaleartbutton");

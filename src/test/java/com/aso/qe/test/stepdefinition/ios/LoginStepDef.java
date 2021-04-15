@@ -186,4 +186,22 @@ public class LoginStepDef extends GlobalMobileHelper{
 	public void user_taps_on_cancel_button() throws Throwable {
 		loginPage.tapOnCancelBtn();
 	}
+	
+	 // Login new code by Prafull to read user name and password from data file 
+	@Given("^User is on \"([^\"]*)\" screen$")
+	public void user_is_on_screen(String pagename) throws Throwable {
+		 verifyUserIsOnPage(pagename);
+	}
+
+	@When("^User enters \"([^\"]*)\" on login screen$")
+	public void user_enters_on_login_screen(String logindetails) throws Throwable {
+		 loginPage.enterLoginDetails(logindetails);
+	}
+
+	@When("^User taps on \"([^\"]*)\" button on login screen$")
+	public void user_taps_on_button_on_login_screen(String btnName) throws Throwable {
+		 loginPage.tapOnButtonOnLoginPage(btnName);
+	}
+
+	
 }

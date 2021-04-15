@@ -1,5 +1,8 @@
 package com.aso.qe.test.pageobject.ios;
 
+import org.openqa.selenium.By;
+
+import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 
@@ -106,89 +109,203 @@ public class AccountPage {
 		return GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.addressBookHeader);
 	}
 	
-	public void tabOnPaymentButton() throws InterruptedException {
-		GlobalMobileHelper.tapOnElement(Locators.MyAccountwelcomePage.buttonPayment);
-		
-			Thread.sleep(1000);
-		
-		
-	}
-	public boolean isPaymentScreenIsDisplayed() {
-		return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.Paymenttitle);
-	}
-	
-	public void tabOnAddccButton() {
-		GlobalMobileHelper.tapOnElement(Locators.MyAccountPayment.buttonaddcreditcard);
-	}
 
-	public boolean isaddnewcreditcardpagedisplayed() {
-		return GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.AddnewcrerditCardlabel);
+	// Methode to Click on My account card page 
+	 public void tabOnButtonOnAccountCardsPage(String btnName) {
+		if(btnName.equalsIgnoreCase("Add new Academy card tile")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.MyAccountPayment.buttonaddacacemycard);
+
+			
+		}else if(btnName.equalsIgnoreCase("Add new credit card tile")){
+			
+			GlobalMobileHelper.tapOnElement(Locators.MyAccountPayment.buttonaddcreditcard);
+		}else if(btnName.equalsIgnoreCase("existing aso card button")){
+			
+			GlobalMobileHelper.tapOnElement(Locators.MyAccountPayment.existingasocard);
+
+		}else {
+			
+			throw new UnsupportedOperationException("Given button type not defined");
+
 		}
+		
+		
+	}
+	 
+	 // To Verify element on my account  welcome page 
+	 public boolean VarifyElementPresenseOnAccountPage(String elementName) {
+		if(elementName.equalsIgnoreCase("welcome section")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountwelcomePage.MyAcademy);
 
-	public void tabOnAddAsoCardtile() {
-		GlobalMobileHelper.tapOnElement(Locators.MyAccountPayment.buttonaddacacemycard);
+			
+		}else if(elementName.equalsIgnoreCase("buttonOrders")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountwelcomePage.buttonOrders);
+			
+        }else if(elementName.equalsIgnoreCase("buttonProfile")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountwelcomePage.buttonProfile);
+			
+        }else if(elementName.equalsIgnoreCase("buttonAddressbook")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountwelcomePage.buttonAddressbook);
+			
+        }else if(elementName.equalsIgnoreCase("buttonWishlist")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountwelcomePage.buttonWishlist);
+			
+        }else if(elementName.equalsIgnoreCase("buttonPayment")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountwelcomePage.buttonPayment);
+			
+			
+
+		}else {
+			
+			throw new UnsupportedOperationException("Given Element type not defined");
+
+		}
+		
 		
 	}
 
-	public boolean isaddAsocardpagedisplayed() {
-		return GlobalMobileHelper.isElementDisplayed(Locators.Addnewasocreditcard.AddnewAsocrerditCardlabel);
+
+
+	// To enter cards details on aso card page 
+	public void enterCardDetails(String fieldName) {
+ 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(fieldName);
+ 		String element = null;
+ 		if(fieldName.equalsIgnoreCase("ASOCard")){
+ 			GlobalMobileHelper.setText(Locators.Addnewasocreditcard.Asocardtextbox, keywordValue,Locators.Addnewasocreditcard.Setasdefaultcheckbox);
+
+ 			
+ 		}else if(fieldName.equalsIgnoreCase("firstname")){
+
+ 			GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingFirstName, keywordValue,Locators.MyAccountBillingAddress.BilingLastName);
 	
-	}
+	 	}else if(fieldName.equalsIgnoreCase("lastname")){
+	 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingLastName, keywordValue,Locators.MyAccountBillingAddress.BilingAddressText);
+	 	
+	 	}else if(fieldName.equalsIgnoreCase("Address")){
 
-	public boolean isSavedCardDisplayed() {
-		return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.savedCards);
-	}
-
-	public boolean isSavedDefaultCardDisplayed() {
-		return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.savedCardsDefault);
-	}
-
-	public void enterAsocardnumber(String asocardnumber) {
-		GlobalMobileHelper.setText(Locators.Addnewasocreditcard.Asocardtextbox, asocardnumber,Locators.Addnewasocreditcard.Setasdefaultcheckbox);
+	 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingAddressText, keywordValue,Locators.MyAccountBillingAddress.BilingAptName);
+	 		
+	 	}else if(fieldName.equalsIgnoreCase("aprtname")){
+	 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingAptName, keywordValue,Locators.MyAccountBillingAddress.BilingZipCode);
+	 		
+	 		
+	 	}else if(fieldName.equalsIgnoreCase("asozipcode")){
+	 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingZipCode, keywordValue,Locators.MyAccountBillingAddress.BilingCity);
+	 	
+	 	}else if(fieldName.equalsIgnoreCase("entercity")){
+		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingCity, keywordValue,Locators.MyAccountBillingAddress.BilingPhoneNumber);	
 		
-	}
-
-	public void enterBillingFirstname(String billingfirstname) {
-		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingFirstName, billingfirstname,Locators.MyAccountBillingAddress.BilingLastName);
-		
-	}
-
-	public void enterBillinglastname(String billinglastname) {
-		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingLastName, billinglastname,Locators.MyAccountBillingAddress.BilingAddressText);
-		
-	}
-
-	public void enterBillingaddressname(String billingaddressname) {
-		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingAddressText, billingaddressname,Locators.MyAccountBillingAddress.BilingAptName);
-		
-	}
-
-	public void enterBillingaptname(String billingaptname) {
-		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingAptName, billingaptname,Locators.MyAccountBillingAddress.BilingZipCode);
-		
-	}
-
-	public void enterBillingZipCode(String billingzipcode) {
-		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingZipCode, billingzipcode,Locators.MyAccountBillingAddress.BilingCity);
-		
-	}
-
-	public void enterBillingCity(String billingcity) {
-		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingCity, billingcity,Locators.MyAccountBillingAddress.BilingPhoneNumber);
-	
-	}
-
-	public void enterBillingPhoneNumber(String billingphonenumber) {
-		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingPhoneNumber, billingphonenumber);
+	 	}else if(fieldName.equalsIgnoreCase("asomobilenumber")){
+		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingPhoneNumber, keywordValue);
 		GlobalMobileHelper.tapOnElement(Locators.MyAccountBillingAddress.LabelBillingAddress);
+	}else {
+		
+		throw new UnsupportedOperationException("Given Element type not defined");
 	}
+	}
+	  
 
-	public void tabOnSaveCardButton() {
-		GlobalMobileHelper.tapOnElement(Locators.MyAccountBillingAddress.SaveCreditcardbutton);
+	public void tabOnButtonOnAccountPage(String btnName) {
+			if(btnName.equalsIgnoreCase("payment button")) {
+				
+				GlobalMobileHelper.tapOnElement(Locators.MyAccountwelcomePage.buttonPayment);
+
+				
+			}else if(btnName.equalsIgnoreCase("wishlist button")){
+				
+				GlobalMobileHelper.tapOnElement(Locators.MyAccountwelcomePage.buttonWishlist);
+			}else if(btnName.equalsIgnoreCase("address book")){
+				
+				GlobalMobileHelper.tapOnElement(Locators.MyAccountwelcomePage.buttonAddressbook);
+
+			}else {
+				
+				throw new UnsupportedOperationException("Given button type not defined");
+
+			}
 		
 	}
 
+	// to vefiry element on my account cards page 
+	public boolean VarifyElementPresenseOnAccountCardsPage(String elementName) {
+		if(elementName.equalsIgnoreCase("payment header")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.Paymenttitle);
+
+			
+		}else if(elementName.equalsIgnoreCase("Saved Cards")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.SavedCardslabel);
+		}else if(elementName.equalsIgnoreCase("Aso card button")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.buttonaddacacemycard);
+		}else if(elementName.equalsIgnoreCase("add credit card button")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.buttonaddcreditcard);
+}else if(elementName.equalsIgnoreCase("existing aso card")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.existingasocard);
+			
+		}else {
+			
+			throw new UnsupportedOperationException("Given Element type not defined");
+
+		}
+		
+	}
+
+	// to check element presence on my account card page
+	public boolean VarifyElementPresenseOnAsoCardsPage(String elementName) {
+		if(elementName.equalsIgnoreCase("add new Aso card")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.Addnewasocreditcard.AddnewAsocrerditCardlabel);
+
+			
+		//}else if(elementName.equalsIgnoreCase("Add new credit car")){
+			
+			//return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.SavedCardslabel);
+			
+		}else {
+			
+			throw new UnsupportedOperationException("Given Element type not defined");
+
+		}
+		
+	}
+// Click on Aso card page 
+	public void tabOnButtonOnAsoCardsPage(String btnName) {
+		if(btnName.equalsIgnoreCase("save card button")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.MyAccountBillingAddress.SaveCreditcardbutton);
+
+			// add that element here on you want to click on add new aso card 
+		}else if(btnName.equalsIgnoreCase("backbutton")){
+			
+			GlobalMobileHelper.tapOnElement(Locators.Addnewasocreditcard.buttonback);
+		}else if(btnName.equalsIgnoreCase("alertmodal")){
+			
+			GlobalMobileHelper.tapOnElement(Locators.Addnewasocreditcard.ErrorModal);
+}else if(btnName.equalsIgnoreCase("cancell")){
+			
+			GlobalMobileHelper.tapOnElement(Locators.Addnewasocreditcard.Cancelalertbutton);
+}else if(btnName.equalsIgnoreCase("continue")){
 	
-	
-	  
-}
+	GlobalMobileHelper.tapOnElement(Locators.Addnewasocreditcard.Continuealertbutton);
+
+		}else {
+			
+			throw new UnsupportedOperationException("Given button type not defined");
+
+		}
+		
+		
+	}
+		
+	}

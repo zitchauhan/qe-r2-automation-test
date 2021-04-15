@@ -1,5 +1,7 @@
 package com.aso.qe.test.common;
 
+import static org.junit.Assert.assertTrue;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -302,5 +304,22 @@ public class GlobalMobileHelper {
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator)).getText();
 	}
 	
+	public void verifyUserIsOnPage(String pagename) {
+		
+		if(pagename.equalsIgnoreCase("LogIn")) {
+			
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.LoginPage.emailEditBox));
 
+			
+		//}else if(pagename.equalsIgnoreCase("save")){
+			
+			//assertTrue (GlobalMobileHelper.isElementDisplayed(Locators.Addnewasocreditcard.AddnewAsocrerditCardlabel));
+
+		}else {
+			
+			throw new UnsupportedOperationException("Given page type not defined");
+
+		}
+	
+}
 }

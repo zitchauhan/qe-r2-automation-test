@@ -1,61 +1,30 @@
 
-  Feature: User is able to see add new cc tile on payment screen 
+  Feature: User is able to see Payment screen under my account section 
      
   @Sprint4 @ST-OMNI-30116 @TC-OMNI-3011611
 	Scenario: User see Add new Credit cart tile
 		Given User launches the application
 		And User continues as guest user
-		And User is on Log In screen
-		When User enters email address
-		And User enters password
-		And User taps on LogIn button
-		Then User Logs into the application
-		Then User taps on account in bottom nav
-		#Then user taken to my account welcome screen 
-		When user see myaccount welcomesection 
-		Then user taps on payment button
-		And user is on payment screen
-		When user clicks onAdd new credit card tile
-		Then user is taken to add new credit card page 
+		And User is on "LogIn" screen
+		When User enters "email" on login screen 
+		And User enters "password" on login screen 
+		And User taps on "LogIn" button on login screen 
+		#Then User Logs into the application
+		Then User taps on "account" button on login screen 
+		When user see "welcome section" on my account page  
+		Then user taps on "payment button" on my account page 
+		And user see "payment header" on my account payment page
+		And user see "add credit card button" on my account payment page
+		#And user see "Saved Cards" on my account payment page
+		And user see "Aso card button" on my account payment page
+		 # reviewd by jS
 		
 		
 		
 		
-		@Sprint4 @ST-OMNI-30116 @TC-OMNI-3011613
-	Scenario: when user click on add ASO card 
-		Given User launches the application
-		And User continues as guest user
-		And User is on Log In screen
-		When User enters email address
-		And User enters password
-		And User taps on LogIn button
-		Then User Logs into the application
-		Then User taps on account in bottom nav
-		#Then user taken to my account welcome screen 
-		When user see myaccount welcomesection 
-		Then user taps on payment button
-		And user is on payment screen
-		When user clicks onAdd new Academy card tile
-		Then user is taken to add new Aso card page 
 		
 		
 		
-		@Sprint4 @ST-OMNI-30116 @TC-OMNI-301161333
-	Scenario: Verify existing cards are displayed and top most card is default card 
-		Given User launches the application
-		And User continues as guest user
-		And User is on Log In screen
-		When User enters email address
-		And User enters password
-		And User taps on LogIn button
-		Then User Logs into the application
-		Then User taps on account in bottom nav
-		#Then user taken to my account welcome screen 
-		When user see myaccount welcomesection 
-		Then user taps on payment button
-		And user is on payment screen
-		Then existing cards are shown to user 
-		And top most card is default card 
 		
 		
 		
