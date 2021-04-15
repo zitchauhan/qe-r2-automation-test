@@ -79,6 +79,23 @@ public class Locators {
 		public static By toggleOOS = By.id("switch_out_of_stock");
 		public static By sortAndFilterOutOfStockTitle = By.id("lbl_out_of_stock");
 		public static By sortAndFilterFilterIcon = By.id("icon_filter");
+		
+
+		// OMNI-20323 15.04.2021 
+		public static By FilterButton=By.id("");
+		public static By FilterScreenText=By.id("");
+		public static By FilterApplyButton=By.id("");
+		public static By FilterCancel=By.id("");
+		public static By pickupDeliveryFilter=By.id("");
+		public static By categoryFilter=By.id("");
+		public static By brandFilter=By.id("");
+		public static By sizeFilter=By.id("");
+		public static By styleFilter=By.id("");
+		public static By colorFilter=By.id("");
+		public static By priceFilter=By.id("");
+		public static By ratingFilter=By.id("");
+		public static By dealsFilter=By.id("");
+		
 	}
 
 	public static class SearchPage{
@@ -158,6 +175,7 @@ public class Locators {
 		public static By widthSizeD= By.id("size_list_item_Shoe_Width_0");
 		public static By widthVariant = By.id("lbl_size_title_Shoe_Width");
 		public static By continueShopping = By.xpath("//XCUIElementTypeOther[@name='btn_continue_shopping']");
+						
 	}
 
 	public static class ShopPage{
