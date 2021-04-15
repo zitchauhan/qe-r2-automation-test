@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
@@ -81,11 +82,11 @@ public class SearchPage {
 	}
 	public void oosToggleEnable() {
 		GlobalMobileHelper.tapOnElement(Locators.PLPPage.toggleOOS);
-		
+
 	}
-	
-	
-		
+
+
+
 	}
 
 

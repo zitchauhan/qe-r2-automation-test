@@ -118,19 +118,15 @@ public class PDPStepDef extends GlobalMobileHelper{
 		
 	}
 
-
-	
-	@And("^user click on Home Delivery$")
-	public void tapOnHomeDelivery() {
-		pdp.tapOnHomeDelivery();
-	}
-
-	
 	@Then("^user sees the Variant on PDP$")
 	public void isVariantDisplayed() {
 		assertTrue(pdp.isColorVariantDisplayed());
 	}
 	
+	@And("^user sees the value of variant$")
+	public void isVariantValueDisplayed() {
+		assertTrue(pdp.isVariantValueDisplayed());
+	}
 	@Then("^User sees the Pickup And Delivery Option$")
 	public void isPickUpandDeliveryOptionDisplayed() {
 		
@@ -172,6 +168,21 @@ public class PDPStepDef extends GlobalMobileHelper{
 		swipeScreen(Direction.UP,2);
 	   pdp.tapOnChangeStoreLink();
 	}
+    @And("^User selects delivery option as \"(.*?)\"$")
+    public void userSelectsDeliveryOptionAs(String deliveryOption) {
+
+		switch (deliveryOption.toLowerCase()) {
+			case "store pickup":
+				pdp.selectDeliveryOption("store");
+				break;
+			case "home delivery":
+				pdp.selectDeliveryOption("home");
+				break;
+			default:
+				throw new UnsupportedOperationException("No other delivery option is supported");
+		}
+
+    }
 	@Then("^I choose to verify \"([^\"]*)\" in PDP Page$")
 	public void verify_PDP_Page(String args) throws Throwable {
 	   
