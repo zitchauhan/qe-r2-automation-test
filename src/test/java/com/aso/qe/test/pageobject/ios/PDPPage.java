@@ -451,10 +451,10 @@ public class PDPPage {
 		     }
 			
 		}else if(varianType.contains("width")) {
-			//boolean stat4=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
-			//boolean stat5=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
+			boolean stat4=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+			boolean stat5=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
 			boolean stat6=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.widthVariant);
-			 if(stat6 == true) {
+			 if(stat4stat6 == true) {
 		    	 return true;
 		     }else {
 		    	 return false;

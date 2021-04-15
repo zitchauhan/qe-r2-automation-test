@@ -1,5 +1,5 @@
 Feature: Validate functionality of PDP page 
-@Regression
+@Regression @1999
 Scenario: Validate the Pdp Page
 Given User launches the application
 And User Clicks On MaY Be Later
@@ -7,19 +7,18 @@ And User Clicks On MaY Be Later
     Then User sees the homepage
     When User Sees the Search Box
     Then User clicks on the Search Box
-    And User search for the "SizeVariantProduct"
+    And User search for the "SizeAndColor"
     And user click on Product
     And User sees Product title
     And User sees Product Price
-    And user sees the color variant
-	And user sees the size varient
+     And User Sees the Variant of "SizeAndColor" Product
 	And user sees the size chart button
 	When user click on size chart button
 	Then user sees the size chart 
 	When user click on cancel button
 	Then user navigate to PDP Page
 	Then User Change the variants of "SizeAndColor" to "Large" , "White" , "N/a"
-	And user click on Home Delivery
+	When User selects Home Delivery checkbox
     And User Sees The PickUp & Delivery Option
     And User Sees the Free Store PickUp Option
     And user Select the Store "west Oakes"
