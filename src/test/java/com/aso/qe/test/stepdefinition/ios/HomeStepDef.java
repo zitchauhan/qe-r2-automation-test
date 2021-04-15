@@ -70,4 +70,13 @@ public class HomeStepDef extends GlobalMobileHelper{
 	public void tapOnMaybelater() {
 		homePage.tapOnMayBelater();
 	}
+	@And("^User Sees the Hero Banner$")
+	public void isHeroBannerDisplayed() {
+	assertTrue(homePage.isHeroBannerDisplayed());
+	
+	}
+	@And("^User Goes to home page$")
+	public void moveToHomePage() {
+		homePage.moveToHomePage();
+	}
 }

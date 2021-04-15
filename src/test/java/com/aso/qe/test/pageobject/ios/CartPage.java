@@ -588,7 +588,7 @@ public class CartPage {
 		}
 	}
 
-	public boolean isvariantDisplayedOnCart(String expactedSizeVariant, String expactedColorVariant , String variantType) {
+	public boolean isvariantDisplayedOnCart(String expactedSizeVariant, String expactedColorVariant ,String expectedWidthVariant, String variantType) {
 		if(variantType.contains("SizeAndColor")) {
 		boolean stat = driver.findElement(Locators.CartPage.cartColorVariant).getText().contains(expactedColorVariant);
 		boolean stat1 = driver.findElement(Locators.CartPage.cartSizeVariant).getText().contains(expactedSizeVariant);
@@ -597,27 +597,49 @@ public class CartPage {
 		}else {
 			return false;
 		}
-		}else {
+		}else if(variantType.contains("color")){
 			String s =driver.findElement(Locators.CartPage.cartColorVariant).getText();
 			if(s.contains(expactedColorVariant)) {
 				return true;
 			}else {
 				return false;
 			}
+	}else {
+		boolean stat = driver.findElement(Locators.CartPage.widthVariant).getText().contains(expectedWidthVariant);
+		if(stat==true) {
+			return true;
+		}else {
+				return false;
+			}
+		
 	}
 	}
+
+	public void noteDownTotalQty() {
+	// storing the total quantity on cart page to a variable, which we can utilize further for the validation.
+		try {
+			MobileElement totalQtyOnCartIcon = driver.findElement(Locators.BottomNav.cart);
+			String totalQty = totalQtyOnCartIcon.getText().split("Q T Y")[1];
+			Context.setTotalQtyOnCart(totalQty);
+			logger.debug("Total quantity has been saved : " + totalQty);
+		} catch (Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+
+	}	
+	
 
 	public boolean VerifyDileveryAttribute(String args) {
 		boolean flag=true;
 		               if(args.equalsIgnoreCase("Shipping")) {
-		            	   String elmntShippingTxt=   GlobalMobileHelper.getElementText(Locators.PDPPage.OverLayCartShipping);
+		            	   String elmntShippingTxt=   GlobalMobileHelper.getElementText(Locators.PDPPage.OverLayCartDileveryMethoD);
 		            	   if(args.contains(elmntShippingTxt)) {
 		            		   flag=true;
 		       			}else {
 		       				flag=false;
 		       			}}
 		            	   if(args.equalsIgnoreCase("Store Pick Up")) {
-			            	   String elmntStorPickTxt=   GlobalMobileHelper.getElementText(Locators.PDPPage.OverLayCartShipping);
+			            	   String elmntStorPickTxt=   GlobalMobileHelper.getElementText(Locators.PDPPage.OverLayCartDileveryMethoD);
 			            	   if(args.contains(elmntStorPickTxt)) {
 			            		   flag=true;
 			       			}else {

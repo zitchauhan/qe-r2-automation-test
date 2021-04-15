@@ -275,28 +275,7 @@ public class PDPPage {
 		boolean isSizeChartbtnDisplayed = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.btnSizeChart);
 		return isSizeChartbtnDisplayed;
 	}
-	public void tapOnSmallSize() {
-		
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.smallSize);
-		
-	}
-	public void tapOnLargeSize() {
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.largeSize);
-	}
-	public boolean validateVarientSize(String size) {
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		MobileElement varientSizeValue = driver.findElement(Locators.PDPPage.sizeValue);
-		return varientSizeValue.getText().contains(size);
-	}
-	
-	public void tapOnMediumSize() {
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.mediumSize);
-	}
-	
+
 	public void tapOnSizeChart() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.btnSizeChart);
 		
@@ -307,9 +286,7 @@ public class PDPPage {
 	public void tapOnCancelBtn() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.btnCancelSizeChart);
 	}
-	public boolean isVariantValueDisplayed() {
-		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorValue);
-	}
+
 	public boolean isPickUpAndDeliveryOptionDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.pickUpAndDeliveryTitle);
 	}
@@ -360,20 +337,30 @@ public class PDPPage {
 			String InformationPoint3=GlobalMobileHelper.findData("important_Product_and_Safety_InformationPoint3");
 			String InformationPoint4=GlobalMobileHelper.findData("important_Product_and_Safety_InformationPoint4");
 			 
-			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformation).getText().equalsIgnoreCase(textguidelines)) {
-				list.add ( new Exception("ProductPrice  not present"));	
+			if(!(driver.findElement(Locators.PDPPage.ProductSafetyInformation).getText().equalsIgnoreCase(textguidelines))) {
+				System.out.println(0+driver.findElement(Locators.PDPPage.ProductSafetyInformation).getText());
+				System.out.println(0+textguidelines);
+				list.add ( new Exception("ProductSafetyInformation  not matching"));	
 			}
-			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformationPara1).getText().equalsIgnoreCase(InformationPoint1)) {
-				list.add ( new Exception("important_Product_and_Safety_InformationPoint  not present"));	
+			if(!(driver.findElement(Locators.PDPPage.ProductSafetyInformationPara1).getText().equalsIgnoreCase(InformationPoint1))) {
+				System.out.println(1+driver.findElement(Locators.PDPPage.ProductSafetyInformationPara1).getText());
+				System.out.println(1+InformationPoint1);
+				list.add ( new Exception("important_Product_and_Safety_InformationPoint para1  not matching or present"));	
 			}
-			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformationPara2).getText().equalsIgnoreCase(InformationPoint2)) {
-				list.add ( new Exception("important_Product_and_Safety_InformationPoint2  not present"));	
+			if(!(driver.findElement(Locators.PDPPage.ProductSafetyInformationPara2).getText().equalsIgnoreCase(InformationPoint2))) {
+				System.out.println(2+driver.findElement(Locators.PDPPage.ProductSafetyInformationPara2).getText());
+				System.out.println(2+InformationPoint2);
+				list.add ( new Exception("important_Product_and_Safety_InformationPoint2  not matching or present"));	
 			}
-			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformationPara3).getText().equalsIgnoreCase(InformationPoint3)) {
-				list.add ( new Exception("important_Product_and_Safety_InformationPoint3  not present"));	
+			if(!(driver.findElement(Locators.PDPPage.ProductSafetyInformationPara3).getText().equalsIgnoreCase(InformationPoint3))) {
+				System.out.println(3+driver.findElement(Locators.PDPPage.ProductSafetyInformationPara3).getText());
+				System.out.println(3+InformationPoint3);
+				list.add ( new Exception("important_Product_and_Safety_InformationPoint3  not matching or present"));	
 			}
-			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformationPara4).getText().equalsIgnoreCase(InformationPoint4)) {
-				list.add ( new Exception("important_Product_and_Safety_InformationPoint4  not present "));	
+			if(!(driver.findElement(Locators.PDPPage.ProductSafetyInformationPara4).getText().equalsIgnoreCase(InformationPoint4))) {
+				System.out.println(4+driver.findElement(Locators.PDPPage.ProductSafetyInformationPara4).getText());
+				System.out.println(4+InformationPoint4);
+				list.add ( new Exception("important_Product_and_Safety_InformationPoint4  not matching or present "));	
 			}
 			
 		}
@@ -387,6 +374,9 @@ public class PDPPage {
 		 }
 		return flag;
 		
+	}
+	public boolean isVariantValueDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorValueWhite);
 	}
 
 	public boolean isNavigatedToPDPOnWeb() {
@@ -445,23 +435,38 @@ public class PDPPage {
 
 	public void changeStore(String storeName) {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.changeStore);
+		driver.findElement(Locators.PDPPage.searchStoreBox).sendKeys(storeName);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.searchBtn);
+		
 		
 		
 		
 		
 	}
-
+	/**
+	This Method is use for validate the variant on PDP
+	
+	*/
 	public boolean isVarientDisplayed(String varianType) {
 		if (varianType.contains("color and size")) 
 		{
-		boolean stat1=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
-		boolean stat2=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+		boolean stat1=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+		boolean stat2=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
 		     if(stat1 && stat2 == true) {
 		    	 return true;
 		     }else {
 		    	 return false;
 		     }
 			
+		}else if(varianType.contains("width")) {
+			//boolean stat4=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+			//boolean stat5=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
+			boolean stat6=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.widthVariant);
+			 if(stat6 == true) {
+		    	 return true;
+		     }else {
+		    	 return false;
+		     }
 		}
 		else  {
 			boolean stat = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
@@ -471,30 +476,26 @@ public class PDPPage {
 		
 		
 	}
-
-	public void changeVariant(String variantType,String variantSize, String variantColor) {
+	/**
+	This Method is use for the Change Variant on PDP Page
+	
+	*/
+	public void changeVariant(String variantType,String variantSize, String variantColor, String variantwidth) {
 		if(variantType.contains("SizeAndColor")) {
 			GlobalMobileHelper.tapOnElement(Locators.PDPPage.whiteColor);
-			
-			try {
+            try {
 				Thread.sleep(2000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+			} catch (InterruptedException e1) {
+				e1.printStackTrace();
 			}
-			MobileElement varientColorValue = driver.findElement(Locators.PDPPage.colorValue);
-			assertTrue(varientColorValue.getText().contains(variantColor));
-			
 			GlobalMobileHelper.tapOnElement(Locators.PDPPage.mediumSize);
-			try {
-				Thread.sleep(2000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			MobileElement varientSizeValue1 = driver.findElement(Locators.PDPPage.sizeValue);
-			assertTrue(varientSizeValue1.getText().contains(variantSize));
 			
+			
+		}else if(variantType.contains("width")) {
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.shoeSize);
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.widthSizeD);
 		}else {
-			System.out.println("fixed variants");
+			System.out.println("Fixed variant");
 		}
 		
 			/*else if(variantType.contains("color")) {
@@ -582,32 +583,86 @@ public class PDPPage {
 
 		 List<Object> list = new ArrayList<Object>();
 			boolean flag=true;
-			if(args.equalsIgnoreCase("SKU")) {
-				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSKU);
+			if(args.equalsIgnoreCase("SizeVariantProduct")) {
+				if(!isOverLayCartSKUValueDisplayed()) {
+					list.add ( new Exception(" SKU not displaying "));			
+				}
+				if(!isOverLayCartQtyDisplayed()) {
+					list.add ( new Exception(" Qty not displaying "));	
+					
+				}
+				if(!isOverLayCartPriceDisplayed()) {
+					list.add ( new Exception(" Price not displaying "));	
+					
+				}
+				if(!isOverLayCartSizeDisplayed()) {
+					list.add ( new Exception(" Size not displaying "));	
+					
+				}
+				if(!isOverLayCartTitle()) {
+					list.add ( new Exception(" title not displaying "));	
+					
+				}
+				if(!isOverLayCartImage()) {
+					list.add ( new Exception(" Image not displaying "));	
+					
+				}
+				if(!isOverLayCartview_cart()) {
+					list.add ( new Exception(" view cart not displaying "));	
+					
+				}
+				if(!isOverLayCartcontinue_shopping()) {
+					list.add ( new Exception(" Continue Shopping missing"));	
+					
+				}
+				if(!isOverLayCartdded_to_cart()) {
+					list.add ( new Exception(" Added To Cart text missing "));	
+					
+				}
+				if(!isOverLayCartcolourDisplayed()) {
+					list.add ( new Exception(" color value is missing "));	
+					
+				}
 				
-			}else {
-				list.add ( new Exception(" SKU not displaying "));	
-			}
-			
-			if(args.equalsIgnoreCase("Size")) {
-				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartPrice);
-			}else {
-				list.add ( new Exception(" Size not displaying "));	
-			}
-			
-			if(args.equalsIgnoreCase("Qty")) {
-				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartQty);
+			}else if(args.equalsIgnoreCase("FixVariantProduct")) {
 				
-			}else {
-				list.add ( new Exception(" Qty not displaying "));	
-			}
-			
-			if(args.equalsIgnoreCase("Price")) {
+				if(!isOverLayCartdded_to_cart()) {
+					list.add ( new Exception(" Added To Cart text missing "));	
+					
+				}
+				if(!isOverLayCartTitle()) {
+					list.add ( new Exception(" title not displaying "));	
+					
+				}
+				if(!isOverLayCartImage()) {
+					list.add ( new Exception(" Image not displaying "));	
+					
+				}
+				if(!isOverLayCartcolourDisplayed()) {
+					list.add ( new Exception(" color value is missing "));	
+					
+				}
+				if(!isOverLayCartSKUValueDisplayed()) {
+					list.add ( new Exception(" SKU not displaying "));			
+				}
+				if(!isOverLayCartQtyDisplayed()) {
+					list.add ( new Exception(" Qty not displaying "));	
+					
+				}
+				if(!isOverLayCartPriceDisplayed()) {
+					list.add ( new Exception(" Price not displaying "));	
+					
+				}
+				if(!isOverLayCartview_cart()) {
+					list.add ( new Exception(" view cart not displaying "));	
+				}
+				if(!isOverLayCartcontinue_shopping()) {
+					list.add ( new Exception(" Continue Shopping missing"));	
+					
+				}
 				
-				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSize);
-			}else {
-				list.add ( new Exception(" Qty not displaying "));	
 			}
+	
 			 if(!list.isEmpty()) {
 				 flag=false;
 					String s=null;
@@ -648,5 +703,29 @@ public class PDPPage {
 	}
 	public boolean isOverLayCartcolourDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartcolour);
+	}
+
+	public boolean isOverLayCartTitle() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartTitle);
+	}
+	public boolean isOverLayCartImage() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartImage);
+	}
+	public boolean isOverLayCartview_cart() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartview_cart);
+	}
+	public boolean isOverLayCartcontinue_shopping() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartcontinue_shopping);
+	}
+	public boolean isOverLayCartdded_to_cart() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartdded_to_cart);
+	}
+	public void tapOnContiniueShoppingBtn() {
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.continueShopping);
+	}
+	public void tapOnStorePickUp() {
+		GlobalMobileHelper.swipeScreen(Direction.UP);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.freeStorePickUpRadioBtn);
 	}
 }

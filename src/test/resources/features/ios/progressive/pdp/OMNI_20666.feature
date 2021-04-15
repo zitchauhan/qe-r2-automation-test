@@ -12,11 +12,13 @@ Feature: Verify product detail for FireArms/Ammunitions and be redirected to the
 #   Then User sees all products related to search Keyword  
     And I choose to navigate to PDP 
     Then I choose to verify "App_store_guidelines" in PDP Page
+   # Then User scrolls down to the bottom
+    Then User scrolls down to the bottom in "6" swipe
     Then I choose to verify "important_Product_and_Safety_Information" in PDP Page
     And I choose click on "Purchase on Button" in PDP page
     Then I choose to verify user navigated to PDP on Web
  Examples: 
      |    product            |	
      |    FireArms           | 
-     |    ammunitionProd     | 
+   # |    ammunitionProd     | 
  

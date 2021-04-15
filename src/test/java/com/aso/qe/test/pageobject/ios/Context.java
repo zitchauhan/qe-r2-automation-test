@@ -14,6 +14,7 @@ private static List<String> savedAddressesList;
 private static String updatedAddressField;
 private static String storeName;
 private static String defaultStore;
+private static String totalQtyOnCart;
 
 public String getProductPriceOnPDP() {
 	return ProductPriceOnPDP;
@@ -102,5 +103,13 @@ public static List<String> getL3CategoryList() {
 
 public static void setL3CategoryList(List<String> l3CategoryList) {
 	L3CategoryList = l3CategoryList;
+}
+
+public static String getTotalQtyOnCart() {
+	return totalQtyOnCart;
+}
+
+public static void setTotalQtyOnCart(String totalQtyOnCart) {
+	Context.totalQtyOnCart = totalQtyOnCart;
 }
 }

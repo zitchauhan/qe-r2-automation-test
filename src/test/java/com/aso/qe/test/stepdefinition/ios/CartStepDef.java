@@ -168,14 +168,6 @@ public class CartStepDef extends GlobalMobileHelper{
 	   cartPage.tapOnSignInButton();
 	}
 	
-	@And("^User sees the Variant of selected Product$")
-	public void validateVariantOnCart() {
-		//assertTrue(cartPage.validateCartVariant());
-	}
-	@And("^User sees the Variant of selected golf Ball$")
-	public void validateGolfBallVariatOnCart() {
-		//assertTrue(cartPage.validateCartVariant());
-	}
 	@Then("^User sees shop with confidence label$")
 	public void user_sees_shop_with_confidence_label() throws Throwable {
 	    // Write code here for shop with confidence label
@@ -490,6 +482,11 @@ public class CartStepDef extends GlobalMobileHelper{
 		}
 	}
 
+	@And("^User sees the \"(.*?)\" and \"(.*?)\" and \"(.*?)\" of selected Product \"(.*?)\"$")
+	public void isvariantDisplayedonCart(String variantSize , String variantColor,String variantWidth, String variantType) {
+		assertTrue(cartPage.isvariantDisplayedOnCart(variantSize,variantColor,variantWidth,variantType));
+
+	}
 
     @And("^User has Gift Card \"(.*?)\" in the cart$")
     public void userHasGiftCardInTheCart(String arg0) throws Throwable{
@@ -562,12 +559,6 @@ public class CartStepDef extends GlobalMobileHelper{
 		/* Created By jitsingh7 on 2-Apr-2021 */
 
 	}
-	@And("^User sees the \"(.*?)\" and \"(.*?)\" of selected Product \"(.*?)\"$")
-	public void isvariantDisplayedonCart(String variantSize , String variantColor, String variantType) {
-		assertTrue(cartPage.isvariantDisplayedOnCart(variantSize,variantColor,variantType));
-	}
-
-
 
 	@And("^User taps on product title$")
 	public void tapOnnProductTitle() throws Throwable{
@@ -593,5 +584,15 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void i_choose_to_verify_label_in_Overlay(String arg1) throws Throwable {
 		assertTrue(cartPage.VerifyDileveryAttribute(arg1));
 	}
+	@Then("^User note down the total quantity on cart page$")
+	public void user_note_down_the_cart_quantity_on_cart_page() throws Throwable {
+		cartPage.noteDownTotalQty();
+	}
+	
+	@Then("^User scrolls down to the bottom in \"([^\"]*)\" swipe$")
+	public void user_scrolls_down_to_the_bottom_in_swipe(String args) throws Throwable {
+		swipeScreen(Direction.UP,Integer.parseInt(args));
+	 
 
 }
+	}
