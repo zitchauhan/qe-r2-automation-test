@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.ios;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
+import com.aso.qe.test.pageobject.ios.BottomNav;
 import com.aso.qe.test.pageobject.ios.HomePage;
 import com.aso.qe.test.pageobject.ios.LoginPage;
 
@@ -9,21 +10,23 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.apache.log4j.Logger;
 
 public class LoginStepDef extends GlobalMobileHelper{
-	
+	private static final Logger logger = Logger.getLogger(LoginStepDef.class.getName());
 	LoginPage loginPage = new LoginPage(driver);
 	HomePage homePage = new HomePage(driver);
+	BottomNav bottomNav = new BottomNav(driver);
 	
 	@When("^User enters email address")
 	public void enterEmail() {
-		String email = "testuser1@yopmail.com";
+		String email = "jitsingh7@yopmail.com";
 		loginPage.enterEmail(email);
 	}
 	
 	@And("^User enters password")
 	public void enterPassword() {
-		String password = "Testing123#";
+		String password = "Welcome1@@";
 		loginPage.enterPassword(password);
 	}
 	
@@ -35,16 +38,16 @@ public class LoginStepDef extends GlobalMobileHelper{
 	@And("^User Logs into the application$")
 	public void login() {
 		try {
-			homePage.isOnHomePage();
-		}catch(Exception e) {
-			enterEmail();
-			enterPassword();
-			tapOnLogin();
-			try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e1) {
-				e1.printStackTrace();
+			if(!homePage.isOnHomePage()){
+				tapOnElement(Locators.WelcomeScreen.HomeButton);
+				bottomNav.tapOnAccount();
+				tapOnElement(Locators.AccountPage.loginLink);
+				enterEmail();
+				enterPassword();
+				tapOnLogin();
 			}
+		}catch(Exception e) {
+			logger.error(e);
 		}
 	}
 	
