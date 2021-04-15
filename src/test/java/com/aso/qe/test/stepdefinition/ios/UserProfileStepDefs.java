@@ -54,6 +54,6 @@ public class UserProfileStepDefs extends GlobalMobileHelper {
     @Then("User sees signup for emails text")
     public void userSeesSignupForEmailsText() {
         /* Created By jitsingh7 on 15/04/2021 */
-        assertTrue(isElementDisplayed(Locators.UserProfile.labelSubscribeToEmailsFromAcademy));
+        assertTrue(isElementDisplayed(Locators.UserProfile.labelSubscribeMessage));
     }
 }

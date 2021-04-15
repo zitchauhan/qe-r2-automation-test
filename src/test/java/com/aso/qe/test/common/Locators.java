@@ -446,7 +446,8 @@ public class Locators {
 	}
 
 	public static class UserProfile {
-		public static By switchSubscribeToEmailsFromAcademy = By.id("");
-		public static By labelSubscribeToEmailsFromAcademy = By.id("");
+		public static By switchSubscribeToEmailsFromAcademy = By.id("switch_subscribe_email");
+		public static By labelSubscribeToEmailsFromAcademy = By.id("lbl_subscribe_email_title");
+		public static By labelSubscribeMessage = By.id("lbl_subscribe_email_subtitle");
 	}
 }
