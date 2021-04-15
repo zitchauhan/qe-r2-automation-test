@@ -656,6 +656,26 @@ public class CartPage {
 		GlobalMobileHelper.tapOnElement(Locators.CartPage.buttonCheckout);
 	}
 
+	@Deprecated
+	public boolean isvariantDisplayedOnCart(String expactedSizeVariant, String expactedColorVariant , String variantType) {
+		if(variantType.contains("SizeAndColor")) {
+			boolean stat = driver.findElement(Locators.CartPage.cartColorVariant).getText().contains(expactedColorVariant);
+			boolean stat1 = driver.findElement(Locators.CartPage.cartSizeVariant).getText().contains(expactedSizeVariant);
+			if(stat&&stat1==true) {
+				return true;
+			}else {
+				return false;
+			}
+		}else {
+			String s =driver.findElement(Locators.CartPage.cartColorVariant).getText();
+			if(s.contains(expactedColorVariant)) {
+				return true;
+			}else {
+				return false;
+			}
+		}
+	}
+
 	public boolean isvariantDisplayedOnCart(String expactedSizeVariant, String expactedColorVariant ,String expectedWidthVariant, String variantType) {
 		if(variantType.contains("SizeAndColor")) {
 		boolean stat = driver.findElement(Locators.CartPage.cartColorVariant).getText().contains(expactedColorVariant);

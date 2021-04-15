@@ -112,6 +112,7 @@ public class Locators {
 		public static By colorValueGrey = By.id("lbl_color_value_Gray_Six");
 		public static By firstColor= By.id("color_list_item_0");
 		public static By sizeVariant =By.id("lbl_size_title_Size");
+		public static By sizeValue = By.id("lbl_size_value");
 		public static By sizeValueLarge = By.id("lbl_size_value_Large");
 		public static By xSmallSize = By.id("size_list_item_0");
 		public static By smallSize = By.id("size_list_item_1");
@@ -245,6 +246,7 @@ public class Locators {
 		public static By labelFreeStoreReturn = By.id("lbl_header");
 		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
+		public static By widthVariant = By.id("lbl_size_title_Shoe_Width");
 	}
 	public static class AcademyExclusivePage{
 		public static By academyExclusiveTitle = By.id("lbl_page_title");
@@ -441,5 +443,10 @@ public class Locators {
 
 	public static class WelcomeScreen {
 		public static By HomeButton = By.xpath("//XCUIElementTypeButton[@name=\"Home\"]");
+	}
+
+	public static class UserProfile {
+		public static By switchSubscribeToEmailsFromAcademy = By.id("");
+		public static By labelSubscribeToEmailsFromAcademy = By.id("");
 	}
 }
