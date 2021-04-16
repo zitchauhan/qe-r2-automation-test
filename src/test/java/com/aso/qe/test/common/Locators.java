@@ -199,7 +199,8 @@ public class Locators {
 		public static By createAnAccountButton = By.id("btn_create_an_account");
 		public static By addressBookButton = By.id("btn_address_book");
 		public static By addressBookHeader = By.xpath("//*[@label='Address Book']");
-	}
+		public static By buttonProfile = By.xpath("//XCUIElementTypeButton[@name=\"PROFILE\"]");
+    }
 	
 	public static class CartPage{
 		public static By qtyIncrementStepper = By.id("plus_btn_id");

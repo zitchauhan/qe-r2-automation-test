@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.ios;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
+import com.aso.qe.test.pageobject.ios.BottomNav;
 import com.aso.qe.test.pageobject.ios.UserProfilePage;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
@@ -17,12 +18,14 @@ public class UserProfileStepDefs extends GlobalMobileHelper {
     */
     private static final Logger logger = Logger.getLogger(UserProfileStepDefs.class.getName());
     private UserProfilePage userProfilePage = new UserProfilePage(driver);
+    private BottomNav bottomNav = new BottomNav(driver);
 
     @When("User navigates to Profile Page")
-    public void userNavigatesToProfilePage() {
+    public void userNavigatesToProfilePage() throws InterruptedException {
         /* Created By jitsingh7 on 15/04/2021 */
-        // TODO : To be implemented after discussing with dev or on implementation of elements on the app
-        throw new PendingException();
+        bottomNav.tapOnAccount();
+        tapOnElement(Locators.AccountPage.buttonProfile);
+        logger.debug("tapped on Profile button on Account screen");
     }
 
     @When("User subscribes for Academy Emails")
@@ -54,6 +57,6 @@ public class UserProfileStepDefs extends GlobalMobileHelper {
     @Then("User sees signup for emails text")
     public void userSeesSignupForEmailsText() {
         /* Created By jitsingh7 on 15/04/2021 */
-        assertTrue(isElementDisplayed(Locators.UserProfile.labelSubscribeMessage));
+        assertTrue("User doesn't see the Signup text", isElementDisplayed(Locators.UserProfile.labelSubscribeMessage));
     }
 }
