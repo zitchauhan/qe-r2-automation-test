@@ -12,7 +12,7 @@ Scenario Outline:  Verify User able to see  and change Product varient Size and 
     And user click on Product
     And User Sees the Variant of "<VariantType>" Product
     Then User Change the variants of "<VariantType>" to "<variantSize>" , "<variantColor>" , "<variantWidth>"
-     And user click on Home Delivery
+    When User selects Home Delivery checkbox
 	When User taps on add to cart button
 	And User sees the "<variantSize>" and "<variantColor>" and "<variantWidth>" of selected Product "<VariantType>"
 	

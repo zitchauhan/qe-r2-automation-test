@@ -454,7 +454,7 @@ public class PDPPage {
 			boolean stat4=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
 			boolean stat5=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
 			boolean stat6=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.widthVariant);
-			 if(stat4stat6 == true) {
+			 if(stat4&&stat5&&stat6 == true) {
 		    	 return true;
 		     }else {
 		    	 return false;

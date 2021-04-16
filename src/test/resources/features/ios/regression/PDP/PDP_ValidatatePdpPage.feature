@@ -1,4 +1,5 @@
 Feature: Validate functionality of PDP page 
+
 @Regression @1999
 Scenario: Validate the Pdp Page
 Given User launches the application
