@@ -605,10 +605,10 @@ public class PDPPage {
 					list.add ( new Exception(" title not displaying "));	
 					
 				}
-			//	if(!isOverLayCartImage()) {
-			//		list.add ( new Exception(" Image not displaying "));	
-			//		
-			//	}
+				if(!isOverLayCartImage()) {
+					list.add ( new Exception(" Image not displaying "));	
+					
+				}
 				if(!isOverLayCartview_cart()) {
 					list.add ( new Exception(" view cart not displaying "));	
 					
@@ -636,10 +636,10 @@ public class PDPPage {
 					list.add ( new Exception(" title not displaying "));	
 					
 				}
-			//	if(!isOverLayCartImage()) {
-			//		list.add ( new Exception(" Image not displaying "));	
-			//		
-			//	}
+				if(!isOverLayCartImage()) {
+					list.add ( new Exception(" Image not displaying "));	
+					
+				}
 				if(!isOverLayCartcolourDisplayed()) {
 					list.add ( new Exception(" color value is missing "));	
 					

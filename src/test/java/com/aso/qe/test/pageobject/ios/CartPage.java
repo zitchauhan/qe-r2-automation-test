@@ -358,7 +358,7 @@ public class CartPage {
 
 	public boolean validateCartVariant() {
 		MobileElement cartVariantValue = driver.findElement(Locators.CartPage.cartSizeVariant);
-		return cartVariantValue.getText().contains(driver.findElement(Locators.PDPPage.OverLayCartSize).getText());
+		return cartVariantValue.getText().contains(driver.findElement(Locators.PDPPage.sizeValue).getText());
 	}
 	/*public boolean validateCartVariantGolfBall() {
 		MobileElement cartVariantValueOfGolfBall = driver.findElement(Locators.CartPage.)
