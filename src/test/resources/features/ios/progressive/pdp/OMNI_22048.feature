@@ -1,11 +1,11 @@
 Feature: Verify product detail page for Gift card and Bulk Gift card. 
 
-@Sprint04 @OMNI-22048  @TC-OMNI-22048_01    	
+@Sprint04 @OMNI-22048  @TC-OMNI-22048_01  @TestRun  	
 Scenario Outline:  validate PDP for standard gift card  When user search with Sku ID 
-	Given User launches the application
+	 Given User launches the application
     And User Clicks On MaY Be Later
-    And User continues as guest user
-#    And User Goes to home page 
+    And User Goes to home page
+    Then User sees the homepage
 	When User Sees the Search Box 
 	Then User clicks on the Search Box 
 	And User search for the "<product>" 
@@ -26,8 +26,8 @@ Scenario Outline:  validate PDP for standard gift card  When user search with Sk
 Scenario Outline: Validate PDP for bulk gift card When user search with Sku ID 
 	Given User launches the application
     And User Clicks On MaY Be Later
-    And User continues as guest user
-#	And User Goes to home page 
+    And User Goes to home page
+    Then User sees the homepage
 	When User Sees the Search Box 
 	Then User clicks on the Search Box 
 	And User search for the "<product>" 
@@ -46,8 +46,8 @@ Scenario Outline: Validate PDP for bulk gift card When user search with Sku ID
 Scenario Outline:  validate PDP for e-gift card  When user search with Sku ID 
 	Given User launches the application
     And User Clicks On MaY Be Later
-    And User continues as guest user 
-#	And User Goes to home page 
+    And User Goes to home page
+    Then User sees the homepage
 	When User Sees the Search Box 
 	Then User clicks on the Search Box 
 	And User search for the "<product>" 
@@ -65,11 +65,12 @@ Scenario Outline:  validate PDP for e-gift card  When user search with Sku ID
 				
 				
 #				
-#@Sprint04 @TC-OMNI-22048_03 	
+#@Sprint04 @TC-OMNI-22048_04 	
 #Scenario Outline:  Validate PDP for GC When user navigate to GC via menu option 
-#	Given User launches the application 
-#	And User continues as guest user 
-#	Then User sees the homepage 
+#	Given User launches the application
+#    And User Clicks On MaY Be Later
+#    And User Goes to home page
+#    Then User sees the homepage
 #	When User taps on Giftcard in bottom nav 
 #	And User click on the standard gift card 
 #	And I choose to navigate to PDP 
@@ -82,11 +83,12 @@ Scenario Outline:  validate PDP for e-gift card  When user search with Sku ID
 #		|    FishingAcademyGiftCard| 114064889|please select our bulk quantity Academy Gift Card|
 #		
 #						
-#@Sprint04 @TC-OMNI-22048_04 
-#Scenario Outline:  Validate PDP for  Bulk-GC When user navigate via menu option 
-#	Given User launches the application 
-#	And User continues as guest user 
-#	Then User sees the homepage 
+#@Sprint04 @TC-OMNI-22048_05 
+#Scenario Outline:  Validate PDP for  e-giftcard When user navigate via menu option 
+#		Given User launches the application
+#    And User Clicks On MaY Be Later
+#    And User Goes to home page
+#    Then User sees the homepage
 #	When User taps on Giftcard in bottom nav 
 #	And User click on the bulk gift card 
 #	And I choose to navigate to PDP 

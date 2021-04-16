@@ -37,7 +37,7 @@ Examples:
 	|Academy_Bulk_Gift_Card|
 	
 
-@Sprint04 @OMNI-29377  @TC-OMNI-29377_03  @TestRun		
+@Sprint04 @OMNI-29377  @TC-OMNI-29377_03  		
 Scenario Outline: Validate user is able to enter the card amount in amount field when user tap on Other option
 Given User launches the application 
 	And User Goes to home page 
@@ -59,7 +59,7 @@ Given User launches the application
 	|Academy_Bulk_Gift_Card|
 	
 	
-@Sprint04 @OMNI-29377  @TC-OMNI-29377_04  @TestRun	
+@Sprint04 @OMNI-29377  @TC-OMNI-29377_04  
 Scenario Outline: Validate an error message when enter amount is more than $1500
 Given User launches the application 
 	And User Goes to home page 
