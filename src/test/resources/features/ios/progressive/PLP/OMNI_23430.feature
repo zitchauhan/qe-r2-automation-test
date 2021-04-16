@@ -1,9 +1,10 @@
 Feature: Product Listing and Homescreen - Free Shipping with Sign-in Banner
 
 
- @TC-OMNI-23430_1 @Sprint3Nitin 
+ @TC-OMNI-23430_1
   Scenario: validate user is able to navigate to different categories
       Given User launches the application
+      When User Clicks On MaY Be Later
       And User continues as guest user
       Then User sees the homepage
       When User taps on shop in bottom nav
@@ -28,6 +29,7 @@ Feature: Product Listing and Homescreen - Free Shipping with Sign-in Banner
   2. shop by L3 categories are displaying on PLP L2
   3. There is no further categories displayed on PLP L3
   	Given User launches the application
+  	 When User Clicks On MaY Be Later
   	And User continues as guest user
   	Then User sees the homepage
   	When User taps on shop in bottom nav
@@ -53,9 +55,10 @@ Feature: Product Listing and Homescreen - Free Shipping with Sign-in Banner
      And User taps on back button
      Then I chose to verify "In_Store_curbside_Banner" in PLP Page
      
-      @ST-OMNI-20816 @TC-OMNI-23430_1 @Sprint3 
+      @ST-OMNI-20816 @TC-OMNI-23430_3 @Sprint3 
       Scenario: validate user is able to navigate to different categories
       Given User launches the application
+       When User Clicks On MaY Be Later
       And User continues as guest user
       Then User sees the homepage
       Then I chose to verify "In_Store_curbside_Banner" in PLP Page

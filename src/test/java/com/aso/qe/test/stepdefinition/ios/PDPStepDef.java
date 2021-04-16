@@ -261,4 +261,16 @@ public class PDPStepDef extends GlobalMobileHelper{
 	}
 	
 	
+	@When("^User selects \"([^\"]*)\" delivery option$")
+	public void isStoreDetailsDisplayed(String args) {
+		 pdp.selectDeliveryOption(args);
+	}
+	@When("^User selects Store Pick up Delivery option$")
+	public void selectStorePickU() throws Throwable {
+		pdp.tapOnStorePickUp();
+	}
+	@When("^verify Store rado button selected$")
+	public void StoreRadioButtonSelected() throws Throwable {
+		pdp.verifyStoreRadioButtonSelected();
+	}
 }

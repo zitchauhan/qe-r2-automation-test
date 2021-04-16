@@ -70,7 +70,7 @@ public class Locators {
 		public static By securityReassuranceMessage = By.id("lbl_shop_with_confidence_subheading");
 		public static By labelFreeSStoreReturn = By.id("lbl_header");
 		public static By PLP_Page__Instore_CurbSideBaner = By.id("lbl_banner_title");
-		public static By PLP_Page_FreeShippingBaner = By.id("lbl_banner_title");
+		public static By PLP_Page_FreeShippingBaner = By.id("btn_banner_button");
 		public static By PLP_Page_Instore_CurbSideBaner_SeeDeatil = By.id("btn_banner_button");
 		public static By PLP_Page_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
 		public static By WebViewBannerTitleFreeShipping = By.id("lbl_page_title");
@@ -139,10 +139,10 @@ public class Locators {
 		public static By changeStoreLink = By.xpath("/*[contains(@label,'Change Store')]");
 		public static By AppStoreGuidelines = By.id("lbl_fire_arm");
 		public static By ProductSafetyInformation = By.id("lbl_detail_spec_important_product_and_safety_information");
-		public static By ProductSafetyInformationPara1 = By.id("");
-		public static By ProductSafetyInformationPara2 = By.id("");
-		public static By ProductSafetyInformationPara3 = By.id("");
-		public static By ProductSafetyInformationPara4 = By.id("");
+		public static By ProductSafetyInformationPara1 = By.id("lbl_detail_spec_important_product_and_safety_information_value 0");
+		public static By ProductSafetyInformationPara2 = By.id("lbl_detail_spec_important_product_and_safety_information_value 1");
+		public static By ProductSafetyInformationPara3 = By.id("lbl_detail_spec_important_product_and_safety_information_value 2");
+		public static By ProductSafetyInformationPara4 = By.id("lbl_detail_spec_important_product_and_safety_information_value 3");
 		public static By homeDeliveryRadioButton = By.id("rd_home_delivery");
 		public static By buttonChangeStore = By.id("btn_change_store");
 	    public static By storeAddress = By.id("lbl_store_address");
@@ -152,7 +152,7 @@ public class Locators {
 		public static By OverLayCartPrice = By.id("lbl_product_price");
 		public static By OverLayCartQty = By.id("lbl_product_qty_value");
 		public static By OverLayCartSize = By.id("lbl_product_attribute_value_Size");
-		public static By WebViewBannerPDP = By.id("");
+		public static By WebViewBannerPDP = By.xpath("//XCUIElementTypeStaticText[@name=\"Glock G27 Gen3 40 S&W Sub-Compact 9-Round Pistol\"]");
 		public static By OverLayCartcolour = By.id("lbl_product_attribute_value_Color");
 		public static By freeStrorePickupRadioButton = By.id("rd_free_store_pickup");
 		public static By searchStoreBox = By.id("search_btn_find_store");
@@ -166,6 +166,12 @@ public class Locators {
 		public static By itemTitle = By.xpath("//*[contains(@label,'ITEM')]");
 		public static By productDetails = By.id("lbl_detail_spec_description");
 		
+		public static By OverLayCartDileveryMethoD = By.id("lbl_shipping_infomation");
+		public static By OverLayCartTitle = By.id("lbl_product_title");
+		public static By OverLayCartImage = By.id("img_product_thumbnail _OverLayCart");
+		public static By OverLayCartview_cart = By.id("btn_view_cart");
+		public static By OverLayCartcontinue_shopping = By.id("btn_continue_shopping");
+		public static By OverLayCartdded_to_cart = By.id("lbl_added_to_cart");
 	}
 
 	public static class ShopPage{
@@ -253,8 +259,7 @@ public class Locators {
 		public static By labelFreeStoreReturn = By.id("lbl_header");
 		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
-		public static By widthVariant= By.id("lbl_product_attribute_value_Shoe");
-		
+		public static By widthVariant = By.id("lbl_product_attribute_value_Shoe");
 	}
 	public static class AcademyExclusivePage{
 		public static By academyExclusiveTitle = By.id("lbl_page_title");
