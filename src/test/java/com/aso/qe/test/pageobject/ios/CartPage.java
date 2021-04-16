@@ -724,5 +724,31 @@ public class CartPage {
 			logger.error(e.getLocalizedMessage());
 		}
 
+	}	
+	
+
+	public boolean VerifyDileveryAttribute(String args) {
+		boolean flag=true;
+		               if(args.equalsIgnoreCase("Shipping")) {
+		            	   String elmntShippingTxt=   GlobalMobileHelper.getElementText(Locators.PDPPage.OverLayCartDileveryMethoD);
+		            	   if(args.trim().equalsIgnoreCase(elmntShippingTxt.trim())) {
+		            		   flag=true;
+		       			}else {
+		       				flag=false;
+		       			}}
+		            	   if(args.equalsIgnoreCase("Store Pick Up")) {
+			            	   String elmntStorPickTxt=   GlobalMobileHelper.getElementText(Locators.PDPPage.OverLayCartDileveryMethoD);
+			            	   if(args.trim().equalsIgnoreCase(elmntStorPickTxt.trim())) {
+			            		   flag=true;
+			       			}else {
+			       			 flag=false;
+			       			}   
+		       
+	
+		            	   }
+						return flag;
+		            	   
 	}
-}
+	
+	}
+
