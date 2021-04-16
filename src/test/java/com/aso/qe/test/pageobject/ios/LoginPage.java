@@ -190,7 +190,7 @@ public class LoginPage {
  		}else if(fieldName.equalsIgnoreCase("password")){
 
  			GlobalMobileHelper.setText(Locators.LoginPage.passwordEditBox, keywordValue,Locators.LoginPage.loginButton);
- 		}else if(fieldName.equalsIgnoreCase("email which has aso card")){
+ 		}else if(fieldName.equalsIgnoreCase("emailwhichhascreditcard")){
 
  			GlobalMobileHelper.setText(Locators.LoginPage.emailEditBox, keywordValue,Locators.LoginPage.loginButton);
 	

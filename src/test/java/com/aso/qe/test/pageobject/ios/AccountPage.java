@@ -181,28 +181,31 @@ public class AccountPage {
  			GlobalMobileHelper.setText(Locators.Addnewasocreditcard.Asocardtextbox, keywordValue,Locators.Addnewasocreditcard.Setasdefaultcheckbox);
 
  			
- 		}else if(fieldName.equalsIgnoreCase("firstname")){
+ 		}else if(fieldName.equalsIgnoreCase("ccfirstname")){
+
+ 			GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingFirstName, keywordValue,Locators.MyAccountBillingAddress.BilingLastName);
+ 		}else if(fieldName.equalsIgnoreCase("ccnewfirstname")){
 
  			GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingFirstName, keywordValue,Locators.MyAccountBillingAddress.BilingLastName);
 	
-	 	}else if(fieldName.equalsIgnoreCase("lastname")){
+	 	}else if(fieldName.equalsIgnoreCase("ccLastname")){
 	 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingLastName, keywordValue,Locators.MyAccountBillingAddress.BilingAddressText);
 	 	
-	 	}else if(fieldName.equalsIgnoreCase("Address")){
+	 	}else if(fieldName.equalsIgnoreCase("ccAddress")){
 
 	 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingAddressText, keywordValue,Locators.MyAccountBillingAddress.BilingAptName);
 	 		
-	 	}else if(fieldName.equalsIgnoreCase("aprtname")){
+	 	}else if(fieldName.equalsIgnoreCase("ccaprtname")){
 	 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingAptName, keywordValue,Locators.MyAccountBillingAddress.BilingZipCode);
 	 		
 	 		
-	 	}else if(fieldName.equalsIgnoreCase("asozipcode")){
+	 	}else if(fieldName.equalsIgnoreCase("cczipcode")){
 	 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingZipCode, keywordValue,Locators.MyAccountBillingAddress.BilingCity);
 	 	
-	 	}else if(fieldName.equalsIgnoreCase("entercity")){
+	 	}else if(fieldName.equalsIgnoreCase("entercccity")){
 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingCity, keywordValue,Locators.MyAccountBillingAddress.BilingPhoneNumber);	
 		
-	 	}else if(fieldName.equalsIgnoreCase("asomobilenumber")){
+	 	}else if(fieldName.equalsIgnoreCase("ccmobilenumber")){
 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingPhoneNumber, keywordValue);
 		GlobalMobileHelper.tapOnElement(Locators.MyAccountBillingAddress.LabelBillingAddress);
 	}else {
@@ -240,7 +243,7 @@ public class AccountPage {
 			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.Paymenttitle);
 
 			
-		}else if(elementName.equalsIgnoreCase("Saved Cards")){
+		}else if(elementName.equalsIgnoreCase("Saved Cards label")){
 			
 			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.SavedCardslabel);
 		}else if(elementName.equalsIgnoreCase("Aso card button")){
@@ -252,6 +255,9 @@ public class AccountPage {
 }else if(elementName.equalsIgnoreCase("existing aso card")){
 			
 			return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.existingasocard);
+}else if(elementName.equalsIgnoreCase("savedCardsDefault")){
+	
+	return GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.SavedCardsDefault);
 			
 		}else {
 			
@@ -298,6 +304,9 @@ public class AccountPage {
 }else if(btnName.equalsIgnoreCase("continue")){
 	
 	GlobalMobileHelper.tapOnElement(Locators.Addnewasocreditcard.Continuealertbutton);
+}else if(btnName.equalsIgnoreCase("deletecardbutton")){
+	
+	GlobalMobileHelper.tapOnElement(Locators.Addnewasocreditcard.DeleteCardbutton);
 
 		}else {
 			

@@ -457,7 +457,7 @@ public class Locators {
 			public static By Paymenttitle = By.id("lbl_payment_title");
 			public static By SavedCardslabel = By.id("lbl_SavedCard");
 			public static By savedCards = By.id("btn_saved_card");
-			public static By savedCardsDefault = By.id("btn_saved_card_default");
+			public static By SavedCardsDefault = By.id("btn_saved_card_default");
 			public static By existingasocard = By.id("btn_existingaso_card");
 			public static By buttonaddacacemycard = By.id("btn_addaso_card");
 			public static By buttonaddcreditcard = By.id("btn_adddredit_card");
@@ -484,20 +484,21 @@ public class Locators {
 					public static By AreYousurewanttoleaveMsglabel = By.id("lbl_SureWantToLeaveMsg");
 					public static By Cancelalertbutton = By.id("btn_cancelaleartbutton");
 					public static By Continuealertbutton = By.id("btn_continuealeartbutton");
+					public static By DeleteCardbutton = By.id("btn_deletecardbutton");
 					
 				}
 				
 				//Use this for my account Billing address 
 				public static class MyAccountBillingAddress{
-					public static By BilingFirstName = By.id("textbox_BillingFirstname");
-					public static By BilingLastName = By.id("textbox_BillingLastname");
-					public static By BilingAddressText = By.id("textbox_BillingAddress");
-					public static By BilingAptName = By.id("textbox_BillingAptname");
-					public static By BilingZipCode = By.id("textbox_BillingZipCode");
-					public static By BilingCity = By.id("textbox_BillingCity");
-					public static By BilingPhoneNumber = By.id("textbox_BillingPhoneNumber");
+					public static By BilingFirstName = By.id("tf_first_name");
+					public static By BilingLastName = By.id("tf_last_name");
+					public static By BilingAddressText = By.id("tf_address");
+					public static By BilingAptName = By.id("tf_additional_address");
+					public static By BilingZipCode = By.id("tf_zip_code");
+					public static By BilingCity = By.id("tf_city");
+					public static By BilingPhoneNumber = By.id("tf_phone_no");
 					public static By SaveCreditcardbutton = By.id("btn_savecreditcard");
-					public static By LabelBillingAddress = By.id("lbl_billingaddress");
+					public static By LabelBillingAddress = By.id("lbl_billing_address");
 					
 					
                }

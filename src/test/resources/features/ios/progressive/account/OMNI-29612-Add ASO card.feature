@@ -1,7 +1,7 @@
 
  Feature: User is able to add ASo card in account section 
      
-  @Sprint4 @ST-OMNI-29612 @TC-OMNI-3011611
+  @Sprint4 @ST-OMNI-29612 @TC-OMNI-34183
 	Scenario: User is able to add aso card in my account 
     Given User launches the application
 		And User continues as guest user
@@ -18,20 +18,20 @@
 		#When user clicks on "Add new credit card tile" on my account payment page
 		Then user is taken to "add new Aso card" on aso card page 
 		Then i choose to enter "AsoCard" on aso card page 
-		Then i choose to enter "firstname" on aso card page 
-		Then i choose to enter "Lastname" on aso card page 
-		Then i choose to enter "Address" on aso card page
-		Then i choose to enter "aprtname" on aso card page
-		And i choose to enter "asozipcode" on aso card page
-		Then i choose to enter "entercity" on aso card page
-		And i choose to enter "asomobilenumber" on aso card page
+		Then i choose to enter "ccfirstname" on aso card page 
+		Then i choose to enter "ccLastname" on aso card page 
+		Then i choose to enter "ccAddress" on aso card page
+		Then i choose to enter "ccaprtname" on aso card page
+		And i choose to enter "cczipcode" on aso card page
+		Then i choose to enter "entercccity" on aso card page
+		And i choose to enter "ccmobilenumber" on aso card page
 		When user clicks on "save card button" on aso card page
 		And user see "payment header" on my account payment page
 		And user see "existing aso card" on my account payment page
 		
 		
 		
-		@Sprint4 @ST-OMNI-29612 @TC-OMNI-3011611
+		@Sprint4 @ST-OMNI-29612 @TC-OMNI-34259
 	Scenario: User Tries to cancell and save aso card 
     Given User launches the application
 		And User continues as guest user
@@ -48,17 +48,17 @@
 		#When user clicks on "Add new credit card tile" on my account payment page
 		Then user is taken to "add new Aso card" on aso card page 
 		Then i choose to enter "AsoCard" on aso card page 
-		Then i choose to enter "firstname" on aso card page 
-		Then i choose to enter "Lastname" on aso card page 
-		Then i choose to enter "Address" on aso card page
-		Then i choose to enter "aprtname" on aso card page
-		And i choose to enter "asozipcode" on aso card page
-		Then i choose to enter "entercity" on aso card page
-		And i choose to enter "asomobilenumber" on aso card page
+		Then i choose to enter "ccfirstname" on aso card page 
+		Then i choose to enter "ccLastname" on aso card page 
+		Then i choose to enter "ccAddress" on aso card page
+		Then i choose to enter "ccaprtname" on aso card page
+		And i choose to enter "cczipcode" on aso card page
+		Then i choose to enter "entercccity" on aso card page
+		And i choose to enter "ccmobilenumber" on aso card page
 		When user clicks on "backbutton" on aso card page
 		Then user is taken to "alertmodal" on aso card page 
 		When user clicks on "cancell" on aso card page
-		When user clicks on "continue" on aso card page
+		#When user clicks on "continue" on aso card page
 		Then user is taken to "add new Aso card" on aso card page 
 		When user clicks on "save card button" on aso card page
 		And user see "payment header" on my account payment page
