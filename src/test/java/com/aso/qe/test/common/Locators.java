@@ -112,6 +112,7 @@ public class Locators {
 		public static By colorValueGrey = By.id("lbl_color_value_Gray_Six");
 		public static By firstColor= By.id("color_list_item_0");
 		public static By sizeVariant =By.id("lbl_size_title_Size");
+		public static By sizeValue = By.id("lbl_size_value");
 		public static By sizeValueLarge = By.id("lbl_size_value_Large");
 		public static By xSmallSize = By.id("size_list_item_0");
 		public static By smallSize = By.id("size_list_item_1");
