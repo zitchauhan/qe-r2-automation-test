@@ -50,6 +50,10 @@ public class Locators {
 		public static By HomePage_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
 		public static By heroBanner = By.xpath("//*[contains(@label,'Hero Image')]");
 		public static By homeBtn = By.xpath("//*[contains(@label,'Home')]");
+		public static By bannerTitle = By.id("lbl_info_banner_title");
+		public static By bannerSubtitle = By.id("lbl_info_banner_sub_title");
+		public static By bannerCta = By.id("btn_info_banner_cta");
+
 	}
 
 	public static class PLPPage{
