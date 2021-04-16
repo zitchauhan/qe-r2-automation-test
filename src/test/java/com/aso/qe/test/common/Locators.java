@@ -108,6 +108,7 @@ public class Locators {
 		public static By qtyEditBox = By.id("input_field_id");
 		public static By lbl_badge_text = By.id("lbl_badge_text");
 		public static By colorVariant = By.id("lbl_color_title_Color");
+		public static By shoeSizeVariant = By.id("lbl_size_title_Shoe_Size");
 		public static By colorValueWhite = By.id("lbl_color_value_White");
 		public static By colorValueGrey = By.id("lbl_color_value_Gray_Six");
 		public static By firstColor= By.id("color_list_item_0");
@@ -123,6 +124,7 @@ public class Locators {
 		public static By sizeChartTitle =By.id("lbl_page_title");
 		//public static By btnCancelSizeChart = By.id("btn_cancel");
 		public static By btnCancelSizeChart = By.id("btn_back");
+		public static By cancelBtn = By.id("cancel_btn_find_store");
 		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");
 		public static By pickUpAndDeliveryTitle = By.id("lbl_p_and_d_options");
 		public static By freeStorePickUp = By.id("lbl_free_store_pickup");
@@ -130,7 +132,8 @@ public class Locators {
 		public static By homeDeliveryTitle = By.id("lbl_home_delivery");
 		public static By btnRadioDeliveryOption = By.id("rd_free_store_pickup");
 		public static By label = By.id("lbl_free_store_pickup");
-		public static By subLabel =By.id("");
+		public static By subLabel =By.id("lbl_order_by");
+		public static By selectStore = By.id("btn_select_store");
 		public static By changeStore = By.id("btn_change_store");
 		public static By whiteColor = By.id("color_list_item_Color_1");
 		public static By shoeSize = By.id("size_list_item_Shoe_Size_2");
@@ -158,12 +161,19 @@ public class Locators {
 		public static By widthSizeD= By.id("size_list_item_Shoe_Width_0");
 		public static By widthVariant = By.id("lbl_size_title_Shoe_Width");
 		public static By continueShopping = By.xpath("//XCUIElementTypeOther[@name='btn_continue_shopping']");
+		public static By freeStorePickUpTitle = By.id("lbl_free_store_pickup");
+		public static By deailsSpecTitle = By.id("lbl_detail_spec_title");
+		public static By skuDetailTitle = By.xpath("//*[contains(@label,'SKU')]");
+		public static By itemTitle = By.xpath("//*[contains(@label,'ITEM')]");
+		public static By productDetails = By.id("lbl_detail_spec_description");
+		
 		public static By OverLayCartDileveryMethoD = By.id("lbl_shipping_infomation");
 		public static By OverLayCartTitle = By.id("lbl_product_title");
 		public static By OverLayCartImage = By.id("img_product_thumbnail _OverLayCart");
 		public static By OverLayCartview_cart = By.id("btn_view_cart");
 		public static By OverLayCartcontinue_shopping = By.id("btn_continue_shopping");
 		public static By OverLayCartdded_to_cart = By.id("lbl_added_to_cart");
+		public static By sizeValue =By.id("lbl_size_value_Large");
 	}
 
 	public static class ShopPage{

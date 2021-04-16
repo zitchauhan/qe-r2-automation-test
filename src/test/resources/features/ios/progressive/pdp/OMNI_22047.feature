@@ -4,7 +4,7 @@ Scenario Outline:  Verify User able to see  and change Product varient Size and 
 
     Given User launches the application
    And User Clicks On MaY Be Later
-    And User Goes to home page
+    And User continues as guest user
     Then User sees the homepage
     When User Sees the Search Box
     Then User clicks on the Search Box
@@ -12,9 +12,10 @@ Scenario Outline:  Verify User able to see  and change Product varient Size and 
     And user click on Product
     And User Sees the Variant of "<VariantType>" Product
     Then User Change the variants of "<VariantType>" to "<variantSize>" , "<variantColor>" , "<variantWidth>"
-     And user click on Home Delivery
+    When User selects Home Delivery checkbox
 	When User taps on add to cart button
-	And User sees the "<variantSize>" and "<variantColor>" and "<variantWidth>" of selected Product "<VariantType>"
+	#And User sees the "<variantSize>" and "<variantColor>" and "<variantWidth>" of selected Product "<VariantType>"
+	
 	
 	  Examples:
 	  | VariantType | variantSize | variantColor| variantWidth |
@@ -22,7 +23,7 @@ Scenario Outline:  Verify User able to see  and change Product varient Size and 
       | color 		 |  		   |  White     |           |
       | width        |   8         |  Brown     |      D    |
 	
-	@Sprint1 @TC-OMNI-29808 @ST-22047
+	@Sprint1 @TC-OMNI-34267 @ST-22047
 Scenario: Verify User able to See Size Chart
 
     Given User launches the application
