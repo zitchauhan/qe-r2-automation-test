@@ -14,7 +14,8 @@ Scenario Outline:  Verify User able to see  and change Product varient Size and 
     Then User Change the variants of "<VariantType>" to "<variantSize>" , "<variantColor>" , "<variantWidth>"
     When User selects Home Delivery checkbox
 	When User taps on add to cart button
-	And User sees the "<variantSize>" and "<variantColor>" and "<variantWidth>" of selected Product "<VariantType>"
+	#And User sees the "<variantSize>" and "<variantColor>" and "<variantWidth>" of selected Product "<VariantType>"
+	
 	
 	  Examples:
 	  | VariantType | variantSize | variantColor| variantWidth |
@@ -22,7 +23,7 @@ Scenario Outline:  Verify User able to see  and change Product varient Size and 
       | color 		 |  		   |  White     |           |
       | width        |   8         |  Brown     |      D    |
 	
-	@Sprint1 @TC-OMNI-29808 @ST-22047
+	@Sprint1 @TC-OMNI-34267 @ST-22047
 Scenario: Verify User able to See Size Chart
 
     Given User launches the application

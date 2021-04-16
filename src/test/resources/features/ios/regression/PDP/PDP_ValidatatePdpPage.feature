@@ -1,6 +1,6 @@
 Feature: Validate functionality of PDP page 
 
-@Regression @1999
+@PDP_Scenario @Regression
 Scenario: Validate the Pdp Page
 Given User launches the application
 And User Clicks On MaY Be Later
@@ -34,22 +34,46 @@ And User Clicks On MaY Be Later
 	When User taps on add to cart button
 	
 	
-	 @Regression
+	 @TC-OMNI-34267 @ST-22047 @Regression
  Scenario:  Verify User able to see Product varient Size and color on PDP Page
 
+   Given User launches the application
+   And User Clicks On MaY Be Later
+    And User Goes to home page
+    Then User sees the homepage
+	 When User Sees the Search Box
+    Then User clicks on the Search Box
+    And User search for the "SizeAndColor"
+    And user click on Product
+	And user sees the size chart button
+	When user click on size chart button
+	Then user sees the size chart 
+	When user click on cancel button
+	Then user navigate to PDP Page
+    
+    @TC-OMNI-34176 @TC-OMNI-34177 @ST-OMNI-26900  @Regression
+    Scenario Outline:  Verify ATC confirmation with Home  Delivery option
     Given User launches the application
     And User Clicks On MaY Be Later
-    And User continues as guest user
+    And User Goes to home page
     Then User sees the homepage
     When User Sees the Search Box
     Then User clicks on the Search Box
-    And User search for the "SizeVariantProduct"
+    And User search for the "<VariantType>"
     And user click on Product
-	And user sees the size varient
-	And user sees the color variant
-	When User selects home delivery option
-	And User taps on add to cart button
-    Then I choose to verify "SizeVariantProduct"
+    And User Sees the Variant of "<VariantType>" Product
+    Then User Change the variants of "<VariantType>" to "<variantSize>" , "<variantColor>" , "<variantWidth>"
+    When User selects Home Delivery checkbox
+	When User taps on add to cart button
+	Then I choose to verify "<VariantType>"
+    Then I choose to verify "Shipping" label in Overlay
+	
+	  Examples:
+	  | VariantType  | variantSize | variantColor| variantWidth|
+   	 | color 		 |  		   |  White     |              |
+   	     
+    
+    
 	
 	
 	
