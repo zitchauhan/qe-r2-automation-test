@@ -3,7 +3,7 @@ Feature: Validate the  available Pick Up & Delivery options
 Scenario Outline: validate the Pick Up & delivery for BOPIS(In Stock) or BOPIS/STS(In Stock)
  Given User launches the application
  And User Clicks On MaY Be Later
-    And User continues as guest user
+     And User Goes to home page
     Then User sees the homepage
     When User Sees the Search Box
     Then User clicks on the Search Box

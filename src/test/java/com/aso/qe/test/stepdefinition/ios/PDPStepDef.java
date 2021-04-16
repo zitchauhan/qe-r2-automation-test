@@ -73,9 +73,9 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void isVarientDisplayed(String variantProduct) {
 		assertTrue( pdp.isVarientDisplayed(variantProduct));
 	}
-	@Then("^User Change the variants of \"(.*?)\" to \"(.*?)\" , \"(.*?)\"$")
-	public void changeVariant(String variantType, String variantSize, String variantColor) {
-		pdp.changeVariant(variantType,variantSize,variantColor);
+	@Then("^User Change the variants of \"(.*?)\" to \"(.*?)\" , \"(.*?)\" , \"(.*?)\"$")
+	public void changeVariant(String variantType, String variantSize, String variantColor, String width) {
+		pdp.changeVariant(variantType,variantSize,variantColor, width);
 	}
 
 	@And("^verify the \"(.*?)\" of product$")
@@ -116,36 +116,6 @@ public class PDPStepDef extends GlobalMobileHelper{
 	@Then("^user navigate to PDP Page$")
 	public void isPdpPageDisplayed() {
 		
-	}
-
-	@When("^user click on Large size$")
-	public void tapOnLargeSize() {
-		pdp.tapOnLargeSize();
-	}
-	
-	@When("^user click on small size$")
-	public void tapOnSmallSizeVarient() {
-		pdp.tapOnSmallSize();
-	}
-
-	@Then("^size is changed to \"(.*?)\"$")
-	public void ValidateSize(String size) {
-	     assertTrue(pdp.validateVarientSize(size));
-	}
-
-	@When("^user click on medium size$")
-	public void tapOnMediumSizeVarient() {
-		pdp.tapOnMediumSize();
-	}
-
-	@And("^user click on Home Delivery$")
-	public void tapOnHomeDelivery() {
-		pdp.tapOnHomeDelivery();
-	}
-
-	@Then("^Size is changed to \"(.*?)\"$")
-	public void ValidateSize1(String size1) {
-		assertTrue(pdp.validateVarientSize(size1));
 	}
 
 	@Then("^user sees the Variant on PDP$")
@@ -198,6 +168,21 @@ public class PDPStepDef extends GlobalMobileHelper{
 		swipeScreen(Direction.UP,2);
 	   pdp.tapOnChangeStoreLink();
 	}
+    @And("^User selects delivery option as \"(.*?)\"$")
+    public void userSelectsDeliveryOptionAs(String deliveryOption) {
+
+		switch (deliveryOption.toLowerCase()) {
+			case "store pickup":
+				pdp.selectDeliveryOption("store");
+				break;
+			case "home delivery":
+				pdp.selectDeliveryOption("home");
+				break;
+			default:
+				throw new UnsupportedOperationException("No other delivery option is supported");
+		}
+
+    }
 	@Then("^I choose to verify \"([^\"]*)\" in PDP Page$")
 	public void verify_PDP_Page(String args) throws Throwable {
 	   
@@ -260,5 +245,16 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void user_taps_on_Continue_shopping_button() throws Throwable {
 		pdp.tapOnContiniueShoppingBtn();
 	}
-	
+	@When("^User selects \"([^\"]*)\" delivery option$")
+	public void isStoreDetailsDisplayed(String args) {
+		 pdp.selectDeliveryOption(args);
+	}
+	@When("^User selects Store Pick up Delivery option$")
+	public void selectStorePickU() throws Throwable {
+		pdp.tapOnStorePickUp();
+	}
+	@When("^verify Store rado button selected$")
+	public void StoreRadioButtonSelected() throws Throwable {
+		pdp.verifyStoreRadioButtonSelected();
+	}
 }

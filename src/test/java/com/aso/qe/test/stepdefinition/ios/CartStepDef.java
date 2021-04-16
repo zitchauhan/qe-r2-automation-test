@@ -560,7 +560,9 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Given("^A registered user is logged in$")
 	public void aRegisteredUserIsLoggedIn() throws Throwable{
 		/* Created By jitsingh7 on 2-Apr-2021 */
-
+		// TODO: The user will not be able to see the Guest User login tile on the cart page
+		// There can be multiple ways to verify a logged in user
+		logger.warn("to be implemented later");
 	}
 	@And("^User sees the \"(.*?)\" and \"(.*?)\" of selected Product \"(.*?)\"$")
 	public void isvariantDisplayedonCart(String variantSize , String variantColor, String variantType) {
@@ -589,10 +591,27 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void guest_User_is_on_empty_cart_page() throws Throwable {
 		assertFalse(isElementDisplayed(Locators.CartPage.orderSubtotalLabel));
 	}
-
+	@Then("^I choose to verify \"([^\"]*)\" label in Overlay$")
+	public void i_choose_to_verify_label_in_Overlay(String arg1) throws Throwable {
+		assertTrue(cartPage.VerifyDileveryAttribute(arg1));
+	}
 	@Then("^User note down the total quantity on cart page$")
 	public void user_note_down_the_cart_quantity_on_cart_page() throws Throwable {
 		cartPage.noteDownTotalQty();
+	}
+	
+	@Then("^User scrolls down to the bottom in \"([^\"]*)\" swipe$")
+	public void user_scrolls_down_to_the_bottom_in_swipe(String args) throws Throwable {
+		swipeScreen(Direction.UP,Integer.parseInt(args));
+	 
+
+}
+	
+	@And("User has a whiteGloveBulky product in the cart")
+	public void userHasAWhiteGloveBulkyProductInTheCart() {
+		/* Created By jitsingh7 on 11/04/21 */
+		assertTrue(cartPage.hasWhiteGloveBulkyItem());
+		logger.info("User has a white glove and bulky product in the cart");
 	}
 
 }

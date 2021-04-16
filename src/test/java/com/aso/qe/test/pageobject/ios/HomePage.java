@@ -1,8 +1,11 @@
 package com.aso.qe.test.pageobject.ios;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.List;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.test.common.Locators;
 
 import io.appium.java_client.AppiumDriver;
@@ -43,8 +46,7 @@ public class HomePage {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		MobileElement btnGoToPDP = driver.findElement(Locators.HomePage.shopNewLabel);
-		return btnGoToPDP.isDisplayed();
+		return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.shopNewLabel);
 	}
     
 
@@ -81,8 +83,8 @@ public class HomePage {
     }
 
     public void tapOnHomeBtn() {
-
-        GlobalMobileHelper.tapOnElement(Locators.HomePage.homeBtn);
+		if(GlobalMobileHelper.isElementDisplayed(Locators.HomePage.homeBtn))
+        	GlobalMobileHelper.tapOnElement(Locators.HomePage.homeBtn);
 
     }
 
@@ -127,7 +129,22 @@ public class HomePage {
 			GlobalMobileHelper.tapOnElement(Locators.HomePage.maybeLaterBtn);
 		}
 	}
-	
-	
-	
+
+	public boolean isHeroBannerDisplayed() {
+		
+		MobileElement me=driver.findElement(Locators.HomePage.heroBanner);
+		boolean flag = false;
+		if (me.isDisplayed() && me.isEnabled()) {
+		    
+		    flag= true;
+		}
+		return flag; 
+	}
+
+	public void moveToHomePage() {
+		MobileElement homeBtn = driver.findElement(Locators.HomePage.homeBtn);
+		if(homeBtn.isDisplayed()) {
+			GlobalMobileHelper.tapOnElement(homeBtn);
+		}	
+	}	
 }
