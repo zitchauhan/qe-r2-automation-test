@@ -1,12 +1,8 @@
 package com.aso.qe.test.pageobject.ios;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
-
+import com.aso.qe.framework.common.PropertiesHelper;
 import org.apache.log4j.Logger;
+import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
@@ -17,6 +13,12 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+
+import java.util.List;
+import java.util.Locale;
+
+import static org.hamcrest.Matchers.containsString;
+import static org.junit.Assert.*;
 
 public class CartPage {
 
@@ -330,6 +332,7 @@ public class CartPage {
 	public void clickCartIconBottomNav() {
 		cartIconBottomNav.click();
 	}
+
 	public void validateGuestSignInSection(String isPresent) {
 		GlobalMobileHelper.setImplicitWaitTo(driver, 3);
 		if (isPresent.equalsIgnoreCase("is present")) {
@@ -353,7 +356,13 @@ public class CartPage {
 		GlobalMobileHelper.tapOnElement(Locators.CartPage.signInButton);
 	}
 
-	
+	public boolean validateCartVariant() {
+		MobileElement cartVariantValue = driver.findElement(Locators.CartPage.cartSizeVariant);
+		return cartVariantValue.getText().contains(driver.findElement(Locators.PDPPage.OverLayCartSize).getText());
+	}
+	/*public boolean validateCartVariantGolfBall() {
+		MobileElement cartVariantValueOfGolfBall = driver.findElement(Locators.CartPage.)
+	}*/
 
 	//OMNI-22070 - start
 	public void isLabelShopWithConfidenceDisplayed() {
@@ -379,6 +388,25 @@ public class CartPage {
 	//OMNI-22070 - end
 
 
+	public void isOrderTotalValueUpdated(String reason) {
+		MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
+		String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
+		try {
+			if (reason.toLowerCase().equals("shipping")) { // can be updated for other reasons later
+				if (shippingChargesToZipCode > 0) {
+					assertNotEquals(currentTotalValue, Float.parseFloat(orderTotalValue), 0.00);
+				} else {
+					assertEquals(currentTotalValue, Float.parseFloat(orderTotalValue), 0.00);
+				}
+			}
+
+			logger.debug("Order total value has been updated : " + orderTotalValue);
+		} catch (Exception e) {
+			logger.error(e.getLocalizedMessage());
+		}
+	}
+
+
 	public void applyPromoCode(String promoCode) {
 
 		promoCodeInputField.sendKeys(promoCode);
@@ -387,6 +415,7 @@ public class CartPage {
 
 	}
 
+
 	public void tapOnPolicyLink(String arg) {
 		if (arg.equalsIgnoreCase("Shipping policy")) {
 			GlobalMobileHelper.tapOnElement(Locators.CartPage.buttonShippingPolicy);
@@ -394,6 +423,7 @@ public class CartPage {
 			GlobalMobileHelper.tapOnElement(Locators.CartPage.buttonReturnPolicy);
 		}
 	}
+
 	public void isPolicyPageDisplayed(String arg) {
 		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
 		if (arg.equalsIgnoreCase("Shipping policy"))
@@ -518,12 +548,104 @@ public class CartPage {
 	public void verifyPromoCodeErrorMessage(String expectedMessage) {
 		assertEquals(expectedMessage, promoCodeErrorMessage.getText().trim());
 		logger.debug("Promo code error message " + expectedMessage +" is verified");
+	}	
+
+	public void verifyPromoErroMessage(String expectedErrorMessage) {
+		assertEquals(promoCodeErrorMessage.getText().trim(), expectedErrorMessage);
+		logger.debug("Error message for promo code is verified : " + expectedErrorMessage);
+	}
+
+	/**
+	 * Verify the disclaimer for the current product in context
+	 *
+	 * @param productDisclaimer
+	 */
+	public void verifyProductDisclaimer(String productDisclaimer) {
+		/*
+		 * get all product tiles and and look for the product tile
+		 * once the product tile is found , look for the disclaimer message of that product
+		 * and assert if the the match found by regexp is > than 0
+		 * */
+		MobileElement productParent;
+		String currentProductTitle = Context.getCurrentProductTitle();
+		boolean found=false;
+		if (currentProductTitle.isBlank() || currentProductTitle.isEmpty()){
+			// assert the first disclaimer on screen
+			assertEquals(productDisclaimer, driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().trim());
+		}else {
+			String disclaimerXpathTemplate = "(//XCUIElementTypeStaticText[@name='disclaimer_messages_label'])[%d]";
+			int ix=1;
+			List<MobileElement> productTitles = driver.findElementsByXPath("//XCUIElementTypeStaticText[@name='lbl_product_title']");
+			for (MobileElement productTitle: productTitles){
+				if (productTitle.getText().trim().toLowerCase().contains(currentProductTitle.toLowerCase())){
+					MobileElement prodDisclaimerElement = driver.findElementByXPath(String.format(disclaimerXpathTemplate,ix));
+					found=true;
+					//assertEquals(productDisclaimer, prodDisclaimerElement.getText().trim());
+					assertThat(prodDisclaimerElement.getText().trim(), containsString(productDisclaimer));
+					break;
+				}
+				ix+=1;
+			}
+			if (!found){
+				assertEquals(productDisclaimer,"Disclaimer Not found");
+			}
+		}
+
+		// Search for a product based on Unique id and check the product disclaimer when multiple products are in the cart
+		logger.debug("Product disclaimer for product " + currentProductTitle + " is displayed");
+
+	}
+
+	public void verifyLongerProductDisclaimer(String productDisclaimer) {
+		assertTrue(driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().contains("..."));
+		GlobalMobileHelper.isElementDisplayed(Locators.CartPage.productDisclaimerReadMore);
+		logger.debug("Product disclaimer Read more and ellipses are displayed on the Cart screen");
+	}
+	
+	public void noteDownCurrentShippingCharges() {
+		MobileElement estimatedShipping = driver.findElement(Locators.CartPage.labelEstimatedShipping);
+		try {
+				String estimatedShippingCharges = estimatedShipping.getText()
+						.split("-")[1].trim()
+						.split(" ")[0];
+				if (estimatedShippingCharges.trim().equals("Free")) {
+					shippingChargesToZipCode=0.00F;
+				} else {
+					shippingChargesToZipCode = Float.parseFloat(estimatedShippingCharges);
+				}
+			}catch(Exception e) {
+			
+				e.getLocalizedMessage();
+		}
+		
+	}
+	
+	
+	public void isShippingChargeUpdated(boolean NotFree) {
+		// NotFree to be passed as False if shipping charges for a zip code is NIL
+		MobileElement estimatedShipping = driver.findElement(Locators.CartPage.labelEstimatedShipping);
+		try {
+				String estimatedShippingCharges = estimatedShipping.getText()
+						.split("-")[1].trim().split(" ")[0].replace("$", "");
+				if(NotFree) {
+					assertNotEquals(
+							shippingChargesToZipCode, 
+							Float.parseFloat(estimatedShippingCharges), 
+							0.00);
+				}else {
+					assertEquals("Free",estimatedShippingCharges );
+				}
+				
+			}catch(Exception e) {
+			
+				e.getLocalizedMessage();
+		}
 	}
 	
 
 	public void tapOnProductTitle() {
 		GlobalMobileHelper.tapOnElement(Locators.CartPage.labelProductTitle);
-		
+
 	}
 
 	public boolean isCheckoutPageDisplayed() {
@@ -532,60 +654,6 @@ public class CartPage {
 
 	public void tapOnCheckoutButton() {
 		GlobalMobileHelper.tapOnElement(Locators.CartPage.buttonCheckout);
-	}
-	public void verifyProductDisclaimer(String productDisclaimer) {
-		assertEquals(productDisclaimer, driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().trim());
-		logger.debug("Product disclaimer is displayed on the Cart screen");
-	}
-
-	public void verifyProductDisclaimer(String productUniqueId, String productDisclaimer) {
-		// Search for a product based on Unique id and check the product disclaimer when multiple products are in the cart
-		logger.debug("Product disclaimer for product id"
-				+ productUniqueId + ": " + productDisclaimer + " is displayed");
-		throw new UnsupportedOperationException();
-	}
-	public void verifyLongerProductDisclaimer(String productDisclaimer) {
-		assertTrue(driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().contains("..."));
-		GlobalMobileHelper.isElementDisplayed(Locators.CartPage.productDisclaimerReadMore);
-		logger.debug("Product disclaimer Read more and ellipsees are displayed on the Cart screen");
-	}
-	public void verifyPromoErroMessage(String expectedErrorMessage) {
-		assertEquals(promoCodeErrorMessage.getText().trim(), expectedErrorMessage);
-		logger.debug("Error message for promo code is verified : " + expectedErrorMessage);
-	}
-	public void noteDownCurrentShippingCharges() {
-		MobileElement estimatedShipping = driver.findElement(Locators.CartPage.labelEstimatedShipping);
-		try {
-			String estimatedShippingCharges = estimatedShipping.getText()
-					.split("-")[1].trim()
-					.split(" ")[0];
-			if (estimatedShippingCharges.trim().equals("Free")) {
-				shippingChargesToZipCode = 0.00F;
-			} else {
-				shippingChargesToZipCode = Float.parseFloat(estimatedShippingCharges);
-			}
-		} catch (Exception e) {
-
-			e.getLocalizedMessage();
-		}
-
-	}
-	public void isOrderTotalValueUpdated(String reason) {
-		MobileElement orderTotalValueElement = driver.findElement(Locators.CartPage.orderTotalValue);
-		String orderTotalValue = orderTotalValueElement.getText().replace("$", "");
-		try {
-			if (reason.toLowerCase().equals("shipping")) { // can be updated for other reasons later
-				if (shippingChargesToZipCode > 0) {
-					assertNotEquals(currentTotalValue, Float.parseFloat(orderTotalValue),0.00);
-				}else {
-					assertEquals(currentTotalValue, Float.parseFloat(orderTotalValue),0.00);
-				}
-			}
-			
-			logger.debug("Order total value has been updated : "+ orderTotalValue);
-		}catch(Exception e) {
-			logger.error(e.getLocalizedMessage());
-		}
 	}
 
 	public boolean isvariantDisplayedOnCart(String expactedSizeVariant, String expactedColorVariant ,String expectedWidthVariant, String variantType) {
@@ -615,6 +683,36 @@ public class CartPage {
 	}
 	}
 
+
+	/**
+	 * method to verify that the cart of the registered user has a WhiteGlove bulky product in the cart
+	 * @return true or false based matching criteria
+	 */
+    public boolean hasWhiteGloveBulkyItem() {
+		boolean result = false;
+		// Get product title from the properties file
+		String WhiteGloveBulky = PropertiesHelper.getInstance().getMobileTestDataProperty("WhiteGloveBulky");
+		return productOnCartExistsByTitle(WhiteGloveBulky);
+	}
+
+	/**
+	 * A method to check the existence of any product on the cart page by ProductTitle
+	 * @param productTitle
+	 * @return true or false based on search result
+	 */
+
+	private boolean productOnCartExistsByTitle(String productTitle) {
+    	boolean result = false;
+    	List<MobileElement> productTiles = driver.findElements(Locators.CartPage.labelProductTitle);
+    	for (MobileElement product: productTiles){
+    		if (product.getText().contains(productTitle)){
+    			result=true;
+    			break;
+			}
+		}
+    	return result;
+	}
+
 	public void noteDownTotalQty() {
 	// storing the total quantity on cart page to a variable, which we can utilize further for the validation.
 		try {
@@ -633,14 +731,14 @@ public class CartPage {
 		boolean flag=true;
 		               if(args.equalsIgnoreCase("Shipping")) {
 		            	   String elmntShippingTxt=   GlobalMobileHelper.getElementText(Locators.PDPPage.OverLayCartDileveryMethoD);
-		            	   if(args.contains(elmntShippingTxt)) {
+		            	   if(args.trim().equalsIgnoreCase(elmntShippingTxt.trim())) {
 		            		   flag=true;
 		       			}else {
 		       				flag=false;
 		       			}}
 		            	   if(args.equalsIgnoreCase("Store Pick Up")) {
 			            	   String elmntStorPickTxt=   GlobalMobileHelper.getElementText(Locators.PDPPage.OverLayCartDileveryMethoD);
-			            	   if(args.contains(elmntStorPickTxt)) {
+			            	   if(args.trim().equalsIgnoreCase(elmntStorPickTxt.trim())) {
 			            		   flag=true;
 			       			}else {
 			       			 flag=false;
@@ -652,4 +750,5 @@ public class CartPage {
 		            	   
 	}
 	
-}
+	}
+

@@ -35,7 +35,7 @@ public class GlobalMobileHelper {
 	
 	public void initializeDriver() throws MalformedURLException {
 		String platform = propHelper.getConfigPropProperty("i.platform");
-	//	String udid = propHelper.getConfigPropProperty("i.udid");
+		String udid = propHelper.getConfigPropProperty("i.udid");
 		String platformVersion = propHelper.getConfigPropProperty("i.platformVersion");
 		String deviceName = propHelper.getConfigPropProperty("i.deviceName");
 		String url = propHelper.getConfigPropProperty("appiumServerURL");
@@ -43,7 +43,7 @@ public class GlobalMobileHelper {
 		
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME,platform);
-	//	caps.setCapability(MobileCapabilityType.UDID,udid);
+		caps.setCapability(MobileCapabilityType.UDID,udid);
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,platformVersion);
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
 		caps.setCapability(MobileCapabilityType.APP, app);
@@ -301,6 +301,22 @@ public class GlobalMobileHelper {
 		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator)).getText();
 	}
-	
+	public static boolean isElementEnabled(By locator) {
+		boolean result=false;
+		
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		try {
+			WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+			result = wait.until(ExpectedConditions.presenceOfElementLocated(locator)).isEnabled();
+		}catch(TimeoutException e) {
+			logger.warn("Appium driver timed out waiting for element " + locator.toString());
+		}catch (Exception e) {
+		    System.err.println(e.getMessage());
+		}
+		
+		return result;
+	}
 
 }

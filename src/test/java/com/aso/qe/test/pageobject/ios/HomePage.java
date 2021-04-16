@@ -46,8 +46,7 @@ public class HomePage {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		MobileElement btnGoToPDP = driver.findElement(Locators.HomePage.shopNewLabel);
-		return btnGoToPDP.isDisplayed();
+		return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.shopNewLabel);
 	}
     
 
@@ -84,8 +83,8 @@ public class HomePage {
     }
 
     public void tapOnHomeBtn() {
-
-        GlobalMobileHelper.tapOnElement(Locators.HomePage.homeBtn);
+		if(GlobalMobileHelper.isElementDisplayed(Locators.HomePage.homeBtn))
+        	GlobalMobileHelper.tapOnElement(Locators.HomePage.homeBtn);
 
     }
 

@@ -406,7 +406,9 @@ public class PDPPage {
 		}else {
 			throw new UnsupportedOperationException();
 		}
-		
+
+		MobileElement productListed = driver.findElement(Locators.PDPPage.labelProductTitle);
+		Context.setCurrentProductTitle(productListed.getText().trim()); // storing product title for later use
 	}
 
 	public void tapOnRadioBtn() {
@@ -583,7 +585,7 @@ public class PDPPage {
 
 		 List<Object> list = new ArrayList<Object>();
 			boolean flag=true;
-			if(args.equalsIgnoreCase("SizeVariantProduct")) {
+			if(args.equalsIgnoreCase("SizeAndColor")) {
 				if(!isOverLayCartSKUValueDisplayed()) {
 					list.add ( new Exception(" SKU not displaying "));			
 				}
@@ -603,10 +605,10 @@ public class PDPPage {
 					list.add ( new Exception(" title not displaying "));	
 					
 				}
-				if(!isOverLayCartImage()) {
-					list.add ( new Exception(" Image not displaying "));	
-					
-				}
+			//	if(!isOverLayCartImage()) {
+			//		list.add ( new Exception(" Image not displaying "));	
+			//		
+			//	}
 				if(!isOverLayCartview_cart()) {
 					list.add ( new Exception(" view cart not displaying "));	
 					
@@ -624,7 +626,7 @@ public class PDPPage {
 					
 				}
 				
-			}else if(args.equalsIgnoreCase("FixVariantProduct")) {
+			}else if(args.equalsIgnoreCase("color")) {
 				
 				if(!isOverLayCartdded_to_cart()) {
 					list.add ( new Exception(" Added To Cart text missing "));	
@@ -634,10 +636,10 @@ public class PDPPage {
 					list.add ( new Exception(" title not displaying "));	
 					
 				}
-				if(!isOverLayCartImage()) {
-					list.add ( new Exception(" Image not displaying "));	
-					
-				}
+			//	if(!isOverLayCartImage()) {
+			//		list.add ( new Exception(" Image not displaying "));	
+			//		
+			//	}
 				if(!isOverLayCartcolourDisplayed()) {
 					list.add ( new Exception(" color value is missing "));	
 					
@@ -727,5 +729,12 @@ public class PDPPage {
 	public void tapOnStorePickUp() {
 		GlobalMobileHelper.swipeScreen(Direction.UP);
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.freeStorePickUpRadioBtn);
+	}
+
+	public  void verifyStoreRadioButtonSelected() throws Exception {
+		
+		if(!GlobalMobileHelper.isElementEnabled(Locators.PDPPage.freeStorePickUpRadioBtn)) {
+			throw new Exception("Button not enabled after tap");
+		}
 	}
 }
