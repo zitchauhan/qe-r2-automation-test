@@ -149,6 +149,7 @@ public class Locators {
 		public static By OverLayCartSize = By.id("lbl_product_attribute_value_Size");
 		public static By WebViewBannerPDP = By.id("");
 		public static By OverLayCartcolour = By.id("lbl_product_attribute_value_Color");
+		public static By continueShopping = By.xpath("//XCUIElementTypeOther[@name='btn_continue_shopping']");
 	}
 
 	public static class ShopPage{
@@ -263,6 +264,9 @@ public class Locators {
 		public static By signInButton = By.id("btn_sign_in");
 		public static By continueAsGuestButton = By.id("btn_guest_checkout");
 		public static By emailFieldLabel = By.id("lbl_email_field");
+		public static By productQuantity=By.xpath("//XCUIElementTypeOther[contains(@name,'Q t y')]");
+		public static By orderProcesssingMessage=By.id("shipping_method_desc_id");
+		public static By shippingMethod=By.xpath("//XCUIElementTypeStaticText[contains(@name,'shipping_method_title_id')]");
 		public static By labelShippingHeader = By.id("shipping_header");
 		public static By labelShippingMethod = By.id("lbl_shipping_method");
 		public static By labelShippingMethodDisclaimer = By.id("lbl_service_desciption");
@@ -275,7 +279,7 @@ public class Locators {
 		public static By maybeLater = By.id("btn_maybe_later");
 		public static By allowOnce = By.id("Allow Once");
 		public static By allowWhileUsingApp = By.id("Allow While Using App");
-		public static By doNotAllow = By.id("Donâ€™t Allow");
+		public static By doNotAllow = By.id("Don’t Allow");
 		public static By storeNameFindStore = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_check_box_find_store')]");
 		public static By storeRadioBtn = By.xpath("//XCUIElementTypeOther[contains(@name,'check_box_find_store')]");
 		public static By storeDetailsLink = By.xpath("//XCUIElementTypeOther[contains(@name,'lbl_details_find_store')]");

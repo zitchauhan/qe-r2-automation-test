@@ -182,4 +182,16 @@ private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getN
 	public void user_sees_shipping_message_in_shipping_address_section() throws Throwable {
 		checkoutPage.verifyMessage();
 	}
+
+	@Then("^User sees order processing message$")
+	public void user_sees_order_processing_message() throws Throwable {
+		checkoutPage.verifyOrderProcessingMessage();
+	}
+	
+	@Then("^User sees \"([^\"]*)\" shipping service$")
+	public void user_sees_shipping_service(String shippingService) throws Throwable {
+		assertTrue(shippingService+ " shipping method is not displayed",checkoutPage.verifyShippingMethod(shippingService));
+			
+	}
+
 }
