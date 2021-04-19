@@ -1,6 +1,6 @@
 Feature: Verify Functionality of Instruction Banner Component
 
-@Sprint4 @TC_OMNI_29348 @ST-OMNI-29348
+@Sprint4 @TC_OMNI_ @ST-OMNI-29348
 Scenario: Verify user can navigate to Instruction Banner Component enabled for Home screen
   	Given User launches the application
   	And User Clicks On MaY Be Later
