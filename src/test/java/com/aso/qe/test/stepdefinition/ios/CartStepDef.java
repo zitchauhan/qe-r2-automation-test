@@ -8,6 +8,8 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
+
+import com.aso.qe.test.pageobject.ios.Context;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
@@ -39,7 +41,6 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	@Then("^User is navigated To Cart Screen$")
 	public void userIsOnCart() throws InterruptedException {
-		Thread.sleep(7000);
 		assertTrue(cartPage.isYourCartLabelDisplayed());
 	}
 	
@@ -339,12 +340,14 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void user_taps_on_view_cart_button() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	   tapOnElement(Locators.PDPPage.buttonViewCart);
+	   Thread.sleep(GlobalMobileHelper.DEFAULT_EXPLICIT_WAIT * 1000L);
 	   logger.debug("Tapped on View Cart button");
 	}
 	
 	@Then("^User sees the product disclaimer \"([^\"]*)\"$")
 	public void user_sees_the_product_disclaimer(String disclaimer) throws Throwable {
 	    // Write code here for verifying the product disclaimer
+		Context.setCurrentProductDisclaimer(disclaimer);
 	    cartPage.verifyProductDisclaimer(disclaimer);
 	}
 
@@ -357,7 +360,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees longer product disclaimer with elipses$")
 	public void user_sees_longer_product_disclaimer_with_elipses() throws Throwable {
 	    // Write code here to verify longer product disclaimer
-	    cartPage.verifyLongerProductDisclaimer(productDisclaimer);
+	    cartPage.verifyLongerProductDisclaimer();
 	}
 	
 	@When("^User selects home delivery option$")

@@ -27,7 +27,7 @@ public class UpdateAddressStepDefs extends GlobalMobileHelper {
     public void userSeesListOfSavedAddresses() {
         /* Created By jitsingh7 on 10/04/21 */
         List<MobileElement> listOfAddresses = driver.findElements(Locators.SavedAddresses.radioButtonAddress);
-        assertTrue("Saved address list is not visible", listOfAddresses.get(0).isDisplayed());
+        assertTrue("Saved address list is not visible", listOfAddresses.size()>0);
     }
 
     @When("^User selects an address \"(.*?)\" to edit$")
