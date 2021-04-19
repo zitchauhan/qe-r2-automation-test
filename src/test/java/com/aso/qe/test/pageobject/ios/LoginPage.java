@@ -187,4 +187,5 @@ public class LoginPage {
 		enterPassword(userAndPassword[1]);
 		tapOnLogin();
     }
+
 }
