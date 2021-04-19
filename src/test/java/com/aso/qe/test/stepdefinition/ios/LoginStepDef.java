@@ -189,4 +189,10 @@ public class LoginStepDef extends GlobalMobileHelper{
 	public void user_taps_on_cancel_button() throws Throwable {
 		loginPage.tapOnCancelBtn();
 	}
+
+    @And("^User logs into the application as \"([^\"]*)\"$")
+    public void userLogsIntoTheApplicationAs(String username) {
+        /* Created By jitsingh7 on @{DATE} */
+		loginPage.loginAsUser(username);
+    }
 }
