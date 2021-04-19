@@ -560,9 +560,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Given("^A registered user is logged in$")
 	public void aRegisteredUserIsLoggedIn() throws Throwable{
 		/* Created By jitsingh7 on 2-Apr-2021 */
-		// TODO: The user will not be able to see the Guest User login tile on the cart page
-		// There can be multiple ways to verify a logged in user
-		logger.warn("to be implemented later");
+		assertFalse("User is not logged in", cartPage.isLogInButtonDisplayed());
+
 	}
 	@And("^User sees the \"(.*?)\" and \"(.*?)\" and \"(.*?)\" of selected Product \"(.*?)\"$")
 	public void isvariantDisplayedonCart(String variantSize , String variantColor,String variantWidth, String variantType) {
