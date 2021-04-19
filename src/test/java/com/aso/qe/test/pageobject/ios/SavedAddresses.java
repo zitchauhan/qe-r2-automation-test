@@ -26,14 +26,15 @@ public class SavedAddresses {
         int ix=0;
         try {
             List<MobileElement> mobileElementList = driver.findElements(Locators.SavedAddresses.labelAddressUsername);
-            // TODO: TO be self reviewed
+            List<MobileElement> addressRadioButtons = driver.findElements(Locators.SavedAddresses.radioButtonAddress);
+
             for(MobileElement mobileElement: mobileElementList) {
                 if (mobileElement.getText().trim().contains(address)) {
-                    if(ix==3){
+                    if(ix==2){
                         GlobalMobileHelper.swipeScreen(GlobalMobileHelper.Direction.UP);
                         ix=0; // reset the count to 0
                     }
-                    mobileElement.click();
+                    addressRadioButtons.get(selectedAddressCount).click();
                     break;
                 }
                 ix+=1; // track when swipe required

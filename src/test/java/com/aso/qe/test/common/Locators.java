@@ -174,7 +174,7 @@ public class Locators {
 		public static By OverLayCartview_cart = By.id("btn_view_cart");
 		public static By OverLayCartcontinue_shopping = By.id("btn_continue_shopping");
 		public static By OverLayCartdded_to_cart = By.id("lbl_added_to_cart");
-		public static By sizeValue =By.id("lbl_size_value_Large");
+//		public static By sizeValue =By.id("lbl_size_value_Large");
 	}
 
 	public static class ShopPage{
@@ -281,7 +281,7 @@ public class Locators {
 		public static By shippingMessage = By.id("lbl_list_zip_code0");
 		public static By savedAddress = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_address')]");
 		public static By saveAddressBtn= By.xpath("//*[contains(@label,'Save address']");
-		public static By defaultAddressLabel = By.id("lbl_list_default0");
+		public static By defaultAddressLabel = By.id("shipping_container");
 		public static By editAddressLink=By.xpath("//XCUIElementTypeOther[@name='Edit']");
 		public static By labelTitle = By.id("lbl_checkout");
 		public static By contactInformation = By.id("lbl_checkout_information_header");
@@ -294,7 +294,7 @@ public class Locators {
 		public static By productQuantity=By.xpath("//XCUIElementTypeOther[contains(@name,'Q t y')]");
 		public static By orderProcesssingMessage=By.id("shipping_method_desc_id");
 		public static By shippingMethod=By.xpath("//XCUIElementTypeStaticText[contains(@name,'shipping_method_title_id')]");
-		public static By labelShippingHeader = By.id("shipping_header");
+		public static By labelShippingHeader = By.id("lbl_delivery_option_name0");
 		public static By labelShippingMethod = By.id("lbl_shipping_method");
 		public static By labelShippingMethodDisclaimer = By.id("lbl_service_desciption");
 		public static By labelShippingMethods = By.xpath("//XCUIElementTypeStaticText[contains(@name,'shipping_method_title_id')]");
@@ -471,9 +471,9 @@ public class Locators {
 	}
 
 	public static class SavedAddresses {
-		public static By addressesTile = By.xpath("//XCUIElementTypeOther");
-		public static By radioButtonAddress = By.xpath("//*[contains(@id,'btn_list_radio')]");
-		public static By labelAddressUsername = By.xpath("//*[contains(@id,'lbl_list_address')]");
-		public static By editAddressLink = By.xpath("//*[contains(@label,'Edit')]");
+		public static By addressesTile = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_title')]");
+		public static By radioButtonAddress = By.xpath("//XCUIElementTypeOther[contains(@name,'btn_list_radio')]");
+		public static By labelAddressUsername = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_address')]");
+		public static By editAddressLink = By.xpath("//XCUIElementTypeOther[@name='Edit']");
 	}
 }

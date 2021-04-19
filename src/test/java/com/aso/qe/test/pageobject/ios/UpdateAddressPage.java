@@ -8,6 +8,8 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
+import static org.junit.Assert.assertTrue;
+
 public class UpdateAddressPage {
     /*
     Created by jitsingh7 on 10/04/21
@@ -28,5 +30,9 @@ public class UpdateAddressPage {
 
     public void updateAptNumber() {
         GlobalMobileHelper.setText(Locators.AddAddress.inputAptNumber, "1");
+    }
+
+    public void isEditAddresscreenVisible() {
+        assertTrue("Edit address screen is not visible", GlobalMobileHelper.isElementDisplayed(Locators.AddAddress.addAddressHeader));
     }
 }
