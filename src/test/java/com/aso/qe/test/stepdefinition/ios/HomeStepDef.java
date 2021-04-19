@@ -82,29 +82,23 @@ public class HomeStepDef extends GlobalMobileHelper{
 		homePage.moveToHomePage();
 	}
 	
-	
 	@When("^user see \"([^\"]*)\" on home page$")
-	public void user_see_on_home_page(String pagename){
-
-		assertTrue(homePage.VarifyElementPresenseOnHomePage(pagename));	  
+	public void user_see_on_home_page(String pagename) {
+		assertTrue(homePage.VarifyElementPresenseOnHomePage(pagename));
 	}
-	
-	
-	  @When("^User sees \"([^\"]*)\" on home page$") 
-	  public void user_sees_on_home_page(String arg1) { 
-		  assertTrue(homePage.VarifyElementPresenseOnHomePage(arg1));
-	  }
-	 
 
-	  @When("^User click on the \"([^\"]*)\" on home page$")
-	  public void user_click_on_Banner_Cta(String arg2) {
-		  homePage.tapOnInstructionBanner(arg2);
+	@When("^User sees \"([^\"]*)\" on home page$")
+	public void user_sees_on_home_page(String arg1) {
+		assertTrue(homePage.VarifyElementPresenseOnHomePage(arg1));
+	}
 
-	  }
+	@When("^User click on the \"([^\"]*)\" on home page$")
+	public void user_click_on_Banner_Cta(String arg2) {
+		homePage.tapOnInstructionBanner(arg2);
+	}
 
-	  @When("^User is on Instruction banner page$")
+	@When("^User is on Instruction banner page$")
 	  public void user_is_on_Instruction_banner_page() {
-
+		//no action
 	  }
-	
 }

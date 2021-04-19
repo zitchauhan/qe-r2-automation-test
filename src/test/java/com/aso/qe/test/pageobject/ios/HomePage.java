@@ -152,20 +152,6 @@ public class HomePage {
 		}
 	}
 
-	/*
-	 * public void scrollPageToWebElement(WebElement element) {
-	 * 
-	 * JavascriptExecutor js=((JavascriptExecutor)driver); MobileElement
-	 * GlobalMobileHelper = driver.findElement(Locators.HomePage.bannerTitle); Point
-	 * loc=GlobalMobileHelper.getLocation(); int x=loc.getX(); int y=loc.getY();
-	 * 
-	 * js.executeScript("window.scrollBy(0, -200)");
-	 * 
-	 * 
-	 * 
-	 * }
-	 */
-
 	public boolean isInstructionBannerTitleDisplayed() {
 		MobileElement GlobalMobileHelper = driver.findElement(Locators.HomePage.bannerTitle);
 		return GlobalMobileHelper.isDisplayed();
@@ -180,7 +166,6 @@ public class HomePage {
 		if (GlobalMobileHelper.isElementDisplayed(Locators.HomePage.bannerCta)) {
 			GlobalMobileHelper.tapOnElement(Locators.HomePage.bannerCta);
 		}
-
 	}
 
 	public boolean VarifyElementPresenseOnHomePage(String elementName) {
@@ -192,14 +177,7 @@ public class HomePage {
 
 			return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.bannerSubtitle);
 
-		} /*
-			 * else if(elementName.equalsIgnoreCase("Instruction Banner subtitle")){
-			 * 
-			 * 
-			 * 
-			 * return
-			 * GlobalMobileHelper.isElementDisplayed(Locators.HomePage.bannerSubtitle); }
-			 */else {
+		} else {
 
 			throw new UnsupportedOperationException("Given Element type not defined");
 		}
