@@ -82,7 +82,7 @@ public class Locators {
 	}
 
 	public static class SearchPage{
-		public static By searchBar = By.id("search_bar");
+		public static By searchBar = By.id("btn_Search");
 		public static By cancelBtn = By.id("btn_cancel");
 		public static By scanBarCode = By.id("btn_scan_barcode");
 		public static By goBtn = By.id("Go");
@@ -210,6 +210,7 @@ public class Locators {
 		public static By addressBookButton = By.id("btn_address_book");
 		public static By addressBookHeader = By.xpath("//*[@label='Address Book']");
 		public static By buttonProfile = By.xpath("//XCUIElementTypeButton[@name=\"PROFILE\"]");
+		public static By buttonLogOut = By.xpath("//XCUIElementTypeButton[@label=\"Log Out\"]");
     }
 	
 	public static class CartPage{
