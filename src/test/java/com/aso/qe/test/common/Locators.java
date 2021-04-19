@@ -364,7 +364,9 @@ public class Locators {
 		public static By lblCityError = By.id("lbl_city_error");
 		public static By lblPhoneNoError = By.id("lbl_phone_no_error");
 
-		}
+		public static By buttonUpdateAddress = By.id("btn_add_new_address");
+		public static By buttonAlertOK = By.name("OK");
+	}
 
 	public static class FindStore{
 		public static By findStoreHeader = By.id("title_find_store");
@@ -469,5 +471,12 @@ public class Locators {
 		public static By switchSubscribeToEmailsFromAcademy = By.id("switch_subscribe_email");
 		public static By labelSubscribeToEmailsFromAcademy = By.id("lbl_subscribe_email_title");
 		public static By labelSubscribeMessage = By.id("lbl_subscribe_email_subtitle");
+	}
+
+	public static class SavedAddresses {
+		public static By addressesTile = By.xpath("//XCUIElementTypeOther");
+		public static By radioButtonAddress = By.xpath("//*[contains(@id,'btn_list_radio')]");
+		public static By labelAddressUsername = By.xpath("//*[contains(@id,'lbl_list_address')]");
+		public static By editAddressLink = By.xpath("//*[contains(@label,'Edit')]");
 	}
 }
