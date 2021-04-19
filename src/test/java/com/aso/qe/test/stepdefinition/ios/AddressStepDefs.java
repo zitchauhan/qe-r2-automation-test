@@ -86,7 +86,9 @@ public class AddressStepDefs extends GlobalMobileHelper{
     @When("User taps on use selected address button")
     public void userTapsOnUseSelectedAddressButton() {
         /* Created By jitsingh7 on 3-Apr-2021 */
-        throw new PendingException();
+        if(isElementDisplayed(Locators.AddressVerification.buttonUseSelectedAddress)) {
+            tapOnElement(Locators.AddressVerification.buttonUseSelectedAddress);
+        }
     }
 
     @Then("User sees the list of already added addresses")

@@ -1,5 +1,7 @@
 package com.aso.qe.test.pageobject.ios;
 
+import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.Locators;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -19,4 +21,12 @@ public class UpdateAddressPage {
     }
 
 
+    public void updatePhoneNumber() {
+        // TODO: To be implemented
+        logger.warn("to be implemented");
+    }
+
+    public void updateAptNumber() {
+        GlobalMobileHelper.setText(Locators.AddAddress.inputAptNumber, "1");
+    }
 }
