@@ -274,10 +274,7 @@ public class Locators {
 		public static By freeGiftToolTipIcon = By.id("img_free_Gift_Tool_Tip");
 		public static By freeGiftToolTipIconmodal = By.id("lbl_free_Gift_Tool_Tip_modal");
 		public static By freeGiftProductImage = By.id("img_free_Product");
-		
-		
-		
-		//public static By widthVariant = By.id("lbl_size_title_Shoe_Width");
+			
 	}
 	public static class AcademyExclusivePage{
 		public static By academyExclusiveTitle = By.id("lbl_page_title");
@@ -566,13 +563,7 @@ public class Locators {
 		public static By storepickupatstorename = By.id("lbl_Storepickupatstorename");
 		public static By storepickupPrice = By.id("lbl_StorepickupPrice");
 		
-	}	
-		
-		
-		
-		
-		
-		
+	}		
 
 	public static class UserProfile {
 		public static By switchSubscribeToEmailsFromAcademy = By.id("switch_subscribe_email");
@@ -580,4 +571,3 @@ public class Locators {
 		public static By labelSubscribeMessage = By.id("lbl_subscribe_email_subtitle");
 	}
 }
-
