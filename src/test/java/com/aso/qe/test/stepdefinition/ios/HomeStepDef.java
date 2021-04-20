@@ -2,6 +2,8 @@ package com.aso.qe.test.stepdefinition.ios;
 
 import static org.junit.Assert.assertTrue;
 
+import org.openqa.selenium.By;
+
 import com.aso.qe.framework.common.CommonActionHelper;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.GlobalMobileHelper.Direction;
@@ -84,12 +86,12 @@ public class HomeStepDef extends GlobalMobileHelper{
 	
 	@When("^user see \"([^\"]*)\" on home page$")
 	public void user_see_on_home_page(String pagename) {
-		assertTrue(homePage.VarifyElementPresenseOnHomePage(pagename));
+		assertTrue(homePage.varifyElementPresenseOnHomePage(pagename));
 	}
 
 	@When("^User sees \"([^\"]*)\" on home page$")
 	public void user_sees_on_home_page(String arg1) {
-		assertTrue(homePage.VarifyElementPresenseOnHomePage(arg1));
+		assertTrue(homePage.varifyElementPresenseOnHomePage(arg1));
 	}
 
 	@When("^User click on the \"([^\"]*)\" on home page$")
@@ -97,8 +99,9 @@ public class HomeStepDef extends GlobalMobileHelper{
 		homePage.tapOnInstructionBanner(arg2);
 	}
 
-	@When("^User is on Instruction banner page$")
-	  public void user_is_on_Instruction_banner_page() {
-		//no action
-	  }
+	@Then("^User is on Instruction banner page$")
+	public void user_is_on_Instruction_banner_page() {
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+		assertTrue(homePage.isOnInstructionBanner());
+	}
 }

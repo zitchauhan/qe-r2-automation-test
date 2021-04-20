@@ -168,7 +168,7 @@ public class HomePage {
 		}
 	}
 
-	public boolean VarifyElementPresenseOnHomePage(String elementName) {
+	public boolean varifyElementPresenseOnHomePage(String elementName) {
 		if (elementName.equalsIgnoreCase("Instruction banner")) {
 
 			return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.bannerTitle);
@@ -181,5 +181,14 @@ public class HomePage {
 
 			throw new UnsupportedOperationException("Given Element type not defined");
 		}
+	}
+	
+	public boolean isOnInstructionBanner() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.instructionBanner);
 	}
 }

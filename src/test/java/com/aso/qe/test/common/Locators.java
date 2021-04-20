@@ -53,7 +53,7 @@ public class Locators {
 		public static By bannerTitle = By.id("lbl_info_banner_title");
 		public static By bannerSubtitle = By.id("lbl_info_banner_sub_title");
 		public static By bannerCta = By.id("btn_info_banner_cta");
-
+		public static By instructionBanner = By.id("lbl_page_title");
 	}
 
 	public static class PLPPage{
