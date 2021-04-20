@@ -174,7 +174,7 @@ public class Locators {
 		public static By OverLayCartview_cart = By.id("btn_view_cart");
 		public static By OverLayCartcontinue_shopping = By.id("btn_continue_shopping");
 		public static By OverLayCartdded_to_cart = By.id("lbl_added_to_cart");
-		public static By sizeValue =By.id("lbl_size_value_Large");
+		//public static By sizeValue =By.id("lbl_size_value_Large");
 	}
 
 	public static class ShopPage{
@@ -277,7 +277,7 @@ public class Locators {
 		
 		
 		
-		public static By widthVariant = By.id("lbl_size_title_Shoe_Width");
+		//public static By widthVariant = By.id("lbl_size_title_Shoe_Width");
 	}
 	public static class AcademyExclusivePage{
 		public static By academyExclusiveTitle = By.id("lbl_page_title");
@@ -566,7 +566,7 @@ public class Locators {
 		public static By storepickupatstorename = By.id("lbl_Storepickupatstorename");
 		public static By storepickupPrice = By.id("lbl_StorepickupPrice");
 		
-		
+	}	
 		
 		
 		
@@ -580,3 +580,4 @@ public class Locators {
 		public static By labelSubscribeMessage = By.id("lbl_subscribe_email_subtitle");
 	}
 }
+
