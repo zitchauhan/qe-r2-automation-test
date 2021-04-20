@@ -252,6 +252,19 @@ public class Locators {
 		public static By pageTitleShippingPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Shipping Policy')]");
 		public static By pageTitleReturnPolicy = By.xpath("//*[contains(@name,'lbl_page_title') and contains(@label,'Return Policy')]");
 		public static By widthVariant = By.id("lbl_product_attribute_value_Shoe");
+		public static By FreeWithPurchageHeading = By.id("lbl_freeWithPurchageHeading");
+		public static By ToolTipFreeWithPurchageInfo = By.id("tooltip_toolTipFreeWithPurchageInfo");
+		// Free gift promotion locators 
+		public static By freeItemTitleId = By.id("lbl_free_item_title");
+		public static By freeGiftProductTitleId = By.id("lbl_free_Product_title");
+		public static By orderItemPriceId = By.id("lbl_free_Product_price");
+		public static By orderItemDiscountPriceId = By.id("lbl_free_Product_discount_price");
+		public static By freeGiftToolTipIcon = By.id("img_free_Gift_Tool_Tip");
+		public static By freeGiftToolTipIconmodal = By.id("lbl_free_Gift_Tool_Tip_modal");
+		public static By freeGiftProductImage = By.id("img_free_Product");
+		
+		
+		
 	}
 	public static class AcademyExclusivePage{
 		public static By academyExclusiveTitle = By.id("lbl_page_title");
@@ -511,5 +524,41 @@ public class Locators {
                }
 	public static class WelcomeScreen {
 		public static By HomeButton = By.xpath("//XCUIElementTypeButton[@name=\"Home\"]");
+	}
+	
+	public static class OrderSummary {
+		public static By orderSummaryHeading = By.id("lbl_orderSummaryHeading");
+		public static By subTotalLabel = By.id("lbl_SubTotal");
+		public static By orderTotalLabel = By.id("lbl_OrderTotal");
+		public static By shippingLabel = By.id("lbl_Shipping");
+		public static By shippingToLabel = By.id("lbl_ShippingTo");
+		public static By shippingToZip = By.id("lbl_ShippingToZip");
+		public static By storepickup = By.id("lbl_Storepickup");
+		public static By changezipcodecta = By.id("cta_Changezipcodecta");
+		public static By changestorecta = By.id("cta_Changestorecta");
+		public static By eDeliveryLabel = By.id("lbl_eDelivery");
+		public static By taxesLabel = By.id("lbl_Taxes");
+		public static By discountsLabel = By.id("lbl_Discounts");
+		public static By promocodeLabel = By.id("lbl_Promocode");
+		public static By restrictionmessage = By.id("lbl_Restrictionmessage");
+		// Value of each label of order summary y
+		
+		public static By subTotalPrice = By.id("lbl_SubTotalValue");
+		public static By orderTotalPrice = By.id("lbl_OrderTotalValueValue");
+		public static By shippingPrice = By.id("lbl_ShippingValue");
+		public static By eDeliveryPrice = By.id("lbl_eDeliveryValue");
+		public static By taxesPrice = By.id("lbl_TaxesValue");
+		public static By discountsPrice = By.id("lbl_DiscountsValue");
+		public static By promocodePrice = By.id("lbl_PromocodeValue");
+		public static By storepickupatstorename = By.id("lbl_Storepickupatstorename");
+		public static By storepickupPrice = By.id("lbl_StorepickupPrice");
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 }
