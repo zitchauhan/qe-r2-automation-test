@@ -20,7 +20,7 @@ public class LoginStepDef extends GlobalMobileHelper{
 	
 	@When("^User enters email address")
 	public void enterEmail() {
-		String email = "jitsingh7@yopmail.com";
+		String email = "Newtest1@yopmail.com";
 		loginPage.enterEmail(email);
 	}
 	
