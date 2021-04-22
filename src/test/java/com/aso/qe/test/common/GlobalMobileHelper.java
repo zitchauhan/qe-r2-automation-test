@@ -1,5 +1,7 @@
 package com.aso.qe.test.common;
 
+import static org.junit.Assert.assertTrue;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -317,6 +319,18 @@ public class GlobalMobileHelper {
 		}
 		
 		return result;
+	}
+	
+	public void verifyUserIsOnPage(String pageName) {
+		if(pageName.equalsIgnoreCase("Add Wishlist")) {
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistAddButton));
+		}else if(pageName.equalsIgnoreCase("wishlist listing")) {
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistTileTitle));
+		}else if(pageName.equalsIgnoreCase("Previous page")) {
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.BottomNav.wishlist));
+		}else {
+			throw new UnsupportedOperationException("type not defined");
+		}
 	}
 
 }
