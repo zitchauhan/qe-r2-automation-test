@@ -33,7 +33,7 @@ public class GlobalMobileHelper {
 	private static final Logger logger = Logger.getLogger(GlobalMobileHelper.class.getName());
 	private static PropertiesHelper propHelper = PropertiesHelper.getInstance();
 	public static AppiumDriver<MobileElement> driver;
-	private static final int DEFAULT_EXPLICIT_WAIT = Integer.parseInt(propHelper.getConfigPropProperty("default_explicit_wait"));
+	public static final int DEFAULT_EXPLICIT_WAIT = Integer.parseInt(propHelper.getConfigPropProperty("default_explicit_wait"));
 	
 	public void initializeDriver() throws MalformedURLException {
 		String platform = propHelper.getConfigPropProperty("i.platform");
@@ -117,7 +117,7 @@ public class GlobalMobileHelper {
 			throw new IllegalStateException("Driver is not initialized");
 		}
 		try {
-			Thread.sleep(DEFAULT_EXPLICIT_WAIT * 1000);
+			Thread.sleep(DEFAULT_EXPLICIT_WAIT * 1000L);
 			result = element.isDisplayed();
 		}catch(Exception e) {
 			logger.warn("Appium driver explicit wait for mobile element " + element.toString());
@@ -147,11 +147,11 @@ public class GlobalMobileHelper {
 			
 	public static void searchByKeyword(String keyword) {
 	 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
-		 		MobileElement searchBar= driver.findElement(By.id("search_bar"));
+		 		MobileElement searchBar= driver.findElement(Locators.SearchPage.searchBar);
 		 		searchBar.sendKeys(keywordValue);	 		
 		 	}
 	 
-	public void swipeScreen(Direction dir, int numOftimes) {
+	public static void swipeScreen(Direction dir, int numOftimes) {
 		int start=0;
 		while (start < numOftimes) {
 			swipeScreen(dir);
