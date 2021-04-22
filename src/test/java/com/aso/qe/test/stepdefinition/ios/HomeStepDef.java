@@ -85,10 +85,6 @@ public class HomeStepDef extends GlobalMobileHelper{
 	assertTrue(homePage.isHeroBannerDisplayed());
 	
 	}
-	@And("^User Goes to home page$")
-	public void moveToHomePage() {
-		homePage.moveToHomePage();
-	}
 	
 	@When("^user see \"([^\"]*)\" on home page$")
 	public void user_see_on_home_page(String pagename) {

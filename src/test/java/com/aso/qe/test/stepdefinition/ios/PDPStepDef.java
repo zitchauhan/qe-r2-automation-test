@@ -273,4 +273,32 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void StoreRadioButtonSelected() throws Throwable {
 		pdp.verifyStoreRadioButtonSelected();
 	}
+	@Then("^User sees the Alert Pop Up$")
+	public void user_sees_the_Alert_Pop_Up()  {
+	   
+	  assertTrue( pdp.isAlertPopUpDisplayed());
+	    
+	}
+
+	@Then("^user click on Open Live Chat$")
+	public void user_click_on_Open_Live_Chat()  {
+	    
+	  pdp.tapOnLiveChat();
+	}
+
+	@Then("^User sees the Open live chat URL$")
+	public void user_sees_the_Open_live_chat_URL()  {
+	   assertTrue(pdp.isNavigateToLiveChatUrl());
+	}
+	@When("^User click on continue shopping$")
+	public void user_click_on_continue_shopping() throws Throwable {
+	    pdp.tapOnContiniueShoppingBtn();
+	}
+	@Then("^user sees the Bulk gift card button$")
+	public void user_sees_the_Bulk_gift_card_button() throws Throwable {
+	   assertTrue(pdp.isBulkGiftCardBtnDisplayed());
+	}
+
+
+
 }
