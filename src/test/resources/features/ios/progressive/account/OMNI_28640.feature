@@ -1,6 +1,6 @@
 Feature: Manage Wishlist - Rename, Edit, Remove
 
-@Sprint5 @TC_OMNI_35036 @ST-OMNI-28640
+@Sprint5 @TC-OMNI-35036 @ST-OMNI-28640
 Scenario: Verify user successfully Manage Wishlist - Rename, Edit, Remove 
 	Given User launches the application 
 	And User continues as guest user 
