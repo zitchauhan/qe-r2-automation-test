@@ -569,7 +569,7 @@ public class CartPage {
 		MobileElement productParent;
 		String currentProductTitle = Context.getCurrentProductTitle();
 		boolean found=false;
-		if (currentProductTitle.isBlank() || currentProductTitle.isEmpty()){
+		if (currentProductTitle.isBlank() || currentProductTitle.isEmpty() || currentProductTitle == null){
 			// assert the first disclaimer on screen
 			assertEquals(productDisclaimer, driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().trim());
 		}else {
@@ -578,10 +578,18 @@ public class CartPage {
 			List<MobileElement> productTitles = driver.findElementsByXPath("//XCUIElementTypeStaticText[@name='lbl_product_title']");
 			for (MobileElement productTitle: productTitles){
 				if (productTitle.getText().trim().toLowerCase().contains(currentProductTitle.toLowerCase())){
-					MobileElement prodDisclaimerElement = driver.findElementByXPath(String.format(disclaimerXpathTemplate,ix));
+					MobileElement parentElement = driver.findElementByXPath(
+							"//XCUIElementTypeStaticText[@name='lbl_product_title']" +
+									"/parent::" +
+									"*[contains(@name,'Ships via Academy's Bulk Carrier Service')]");
+					System.out.println(parentElement.getText().trim());
+					List<MobileElement> prodDisclaimerElement = parentElement.findElementsByXPath("//XCUIElementTypeStaticText");
 					found=true;
+					for (MobileElement ele: prodDisclaimerElement){
+						System.out.println(ele.getText().trim());
+					}
 					//assertEquals(productDisclaimer, prodDisclaimerElement.getText().trim());
-					assertThat(prodDisclaimerElement.getText().trim(), containsString(productDisclaimer));
+					//assertThat(prodDisclaimerElement.getText().trim(), containsString(productDisclaimer));
 					break;
 				}
 				ix+=1;
@@ -596,9 +604,25 @@ public class CartPage {
 
 	}
 
-	public void verifyLongerProductDisclaimer(String productDisclaimer) {
-		assertTrue(driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().contains("..."));
-		GlobalMobileHelper.isElementDisplayed(Locators.CartPage.productDisclaimerReadMore);
+	private String getProductDisclaimerForProduct(String productTitle){
+		String disclaimerXpathTemplate = "(//XCUIElementTypeStaticText[@name='disclaimer_messages_label'])[%d]";
+		int ix=1;
+		List<MobileElement> productTiles = driver.findElements(Locators.CartPage.labelProductTitle);
+		for (MobileElement productTile: productTiles){
+			if (productTile.getText().trim().toLowerCase().contains(productTitle.toLowerCase())){
+				MobileElement prodDisclaimerElement = driver.findElementByXPath(String.format(disclaimerXpathTemplate,ix));
+				return prodDisclaimerElement.getText().trim();
+			}
+			ix+=1;
+		}
+		return null;
+	}
+
+	public void verifyLongerProductDisclaimer() {
+		String productDisclaimer = getProductDisclaimerForProduct(Context.getCurrentProductTitle());
+		assertThat(productDisclaimer, containsString("..."));
+		//assertTrue(driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().contains("..."));
+		assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.productDisclaimerReadMore));
 		logger.debug("Product disclaimer Read more and ellipses are displayed on the Cart screen");
 	}
 	

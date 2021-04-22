@@ -17,7 +17,18 @@ private static String storeName;
 private static String defaultStore;
 private static String totalQtyOnCart;
 
-public String getProductPriceOnPDP() {
+	public static String getCurrentProductDisclaimer() {
+		return currentProductDisclaimer;
+	}
+
+	public static void setCurrentProductDisclaimer(String currentProductDisclaimer) {
+		Context.currentProductDisclaimer = currentProductDisclaimer;
+	}
+
+	private static String currentProductDisclaimer;
+
+
+    public String getProductPriceOnPDP() {
 	return ProductPriceOnPDP;
 }
 
