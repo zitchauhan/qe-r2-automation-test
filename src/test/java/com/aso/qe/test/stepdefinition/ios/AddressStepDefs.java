@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.ios;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
+import com.aso.qe.test.pageobject.ios.UpdateAddressPage;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -14,6 +15,7 @@ import static org.junit.Assert.assertTrue;
 public class AddressStepDefs extends GlobalMobileHelper{
 
     private Logger logger = Logger.getLogger(AddressStepDefs.class.getName());
+    UpdateAddressPage updateAddressPage = new UpdateAddressPage(driver);
 
     @And("^User taps on Address Book button$")
     public void user_taps_on_address_book_button() {
@@ -86,7 +88,9 @@ public class AddressStepDefs extends GlobalMobileHelper{
     @When("User taps on use selected address button")
     public void userTapsOnUseSelectedAddressButton() {
         /* Created By jitsingh7 on 3-Apr-2021 */
-        throw new PendingException();
+        if(isElementDisplayed(Locators.AddressVerification.buttonUseSelectedAddress)) {
+            tapOnElement(Locators.AddressVerification.buttonUseSelectedAddress);
+        }
     }
 
     @Then("User sees the list of already added addresses")
@@ -116,6 +120,6 @@ public class AddressStepDefs extends GlobalMobileHelper{
     @Then("User sees the edit address screen")
     public void userSeesTheEditAddressScreen() {
         /* Created By jitsingh7 on 3-Apr-2021 */
-        throw new PendingException();
+        updateAddressPage.isEditAddresscreenVisible();
     }
 }
