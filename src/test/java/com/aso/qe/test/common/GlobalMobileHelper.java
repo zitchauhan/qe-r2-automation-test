@@ -1,5 +1,7 @@
 package com.aso.qe.test.common;
 
+import static org.junit.Assert.assertTrue;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -31,7 +33,7 @@ public class GlobalMobileHelper {
 	private static final Logger logger = Logger.getLogger(GlobalMobileHelper.class.getName());
 	private static PropertiesHelper propHelper = PropertiesHelper.getInstance();
 	public static AppiumDriver<MobileElement> driver;
-	private static final int DEFAULT_EXPLICIT_WAIT = Integer.parseInt(propHelper.getConfigPropProperty("default_explicit_wait"));
+	public static final int DEFAULT_EXPLICIT_WAIT = Integer.parseInt(propHelper.getConfigPropProperty("default_explicit_wait"));
 	
 	public void initializeDriver() throws MalformedURLException {
 		String platform = propHelper.getConfigPropProperty("i.platform");
@@ -115,7 +117,7 @@ public class GlobalMobileHelper {
 			throw new IllegalStateException("Driver is not initialized");
 		}
 		try {
-			Thread.sleep(DEFAULT_EXPLICIT_WAIT * 1000);
+			Thread.sleep(DEFAULT_EXPLICIT_WAIT * 1000L);
 			result = element.isDisplayed();
 		}catch(Exception e) {
 			logger.warn("Appium driver explicit wait for mobile element " + element.toString());
@@ -145,11 +147,11 @@ public class GlobalMobileHelper {
 			
 	public static void searchByKeyword(String keyword) {
 	 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
-		 		MobileElement searchBar= driver.findElement(By.id("search_bar"));
+		 		MobileElement searchBar= driver.findElement(Locators.SearchPage.searchBar);
 		 		searchBar.sendKeys(keywordValue);	 		
 		 	}
 	 
-	public void swipeScreen(Direction dir, int numOftimes) {
+	public static void swipeScreen(Direction dir, int numOftimes) {
 		int start=0;
 		while (start < numOftimes) {
 			swipeScreen(dir);
@@ -317,6 +319,18 @@ public class GlobalMobileHelper {
 		}
 		
 		return result;
+	}
+	
+	public void verifyUserIsOnPage(String pageName) {
+		if(pageName.equalsIgnoreCase("Add Wishlist")) {
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistAddButton));
+		}else if(pageName.equalsIgnoreCase("wishlist listing")) {
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistTileTitle));
+		}else if(pageName.equalsIgnoreCase("Previous page")) {
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.BottomNav.wishlist));
+		}else {
+			throw new UnsupportedOperationException("type not defined");
+		}
 	}
 
 }

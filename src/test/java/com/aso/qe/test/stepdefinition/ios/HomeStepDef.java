@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.ios;
 
 import static org.junit.Assert.assertTrue;
 
+import com.aso.qe.test.common.Locators;
 import org.openqa.selenium.By;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -11,6 +12,8 @@ import com.aso.qe.test.pageobject.ios.HomePage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import java.util.Locale;
 
 public class HomeStepDef extends GlobalMobileHelper{
 	
@@ -98,12 +101,41 @@ public class HomeStepDef extends GlobalMobileHelper{
 
 	@When("^User click on the \"([^\"]*)\" on home page$")
 	public void user_click_on_Banner_Cta(String arg2) {
-		homePage.tapOnInstructionBanner(arg2);
+		if (arg2.contains("information")){
+			tapOnElement(Locators.HomePage.buttonInfoMessageCTA);
+		}else {
+			homePage.tapOnInstructionBanner(arg2);
+		}
 	}
 
 	@Then("^User is on Instruction banner page$")
 	public void user_is_on_Instruction_banner_page() {
 		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
 		assertTrue(homePage.isOnInstructionBanner());
+	}
+
+	@When("User swipes to information section of the home page")
+	public void userSwipesToInformationSectionOfTheHomePage() {
+		/* Created By jitsingh7 on 21/04/21 */
+		swipeScreen(Direction.UP); // as of now only one swipe is required.
+	}
+
+	@Then("User is on Information message page")
+	public void userIsOnInformationMessagePage() {
+		/* Created By jitsingh7 on 21/04/21 */
+		assertTrue(homePage.isOnInformationMessagePage());
+	}
+
+	@And("^User sees information message title \"([^\"]*)\" on home page$")
+	public void userSeesInformationMessageTitleOnHomePage(String titleText) {
+		/* Created By jitsingh7 on 21/04/21 */
+		String infoMessageTitle = getElementText(Locators.HomePage.labelInfoMessagetitle);
+		assertTrue(infoMessageTitle.toLowerCase().contains(titleText.toLowerCase()));
+	}
+
+	@And("User sees information message subtitle \"([^\"]*)\" on home page")
+	public void userSeesInformationMessageSubtitleOnHomePage(String subTitleText) {
+		/* Created By jitsingh7 on 21/04/21 */
+		assertTrue(getElementText(Locators.HomePage.labelInfoMessageSubtitle).toLowerCase().contains(subTitleText.toLowerCase()));
 	}
 }
