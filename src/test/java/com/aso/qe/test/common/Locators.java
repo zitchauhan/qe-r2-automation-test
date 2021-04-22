@@ -193,6 +193,14 @@ public class Locators {
 	
 	public static class WishlistPage{
 		public static By wishlistTitle = By.id("lbl_wish_list");
+		public static By editBtn = By.id("btn_edit");
+		public static By renameWishlistTitle = By.id("text_rename_wishlist");
+		public static By updateButton = By.id("update_button");
+		public static By deleteWishlistButton = By.id("text_delete_wishlist");
+		public static By deleteBtn = By.id("");
+		public static By cancelbtn = By.id("");
+		public static By textInputWishlist = By.id("textinput_wishlist");
+
 	}
 
 	public static class ShopNewPage{

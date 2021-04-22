@@ -22,4 +22,37 @@ public class WishListStepDef extends GlobalMobileHelper{
 	public void wishListPageNotBeDisplayed() {
 		assertTrue(!wishlistPage.isWishListPageDisplayed());
 	}
+	
+	//OMNI-28640
+	@When("^User taps on \"([^\"]*)\" button$")
+	public void user_taps_on_edit_button(String arg1){
+			wishlistPage.tapOnButton(arg1);
+	}
+
+	@Then("^User sees \"([^\"]*)\" screen$")
+	public void user_sees_screen(String arg1) {
+		verifyUserIsOnPage(arg1);
+	}
+
+	@Then("^User renames wishlist$")
+	public void user_renames_wishlist(){
+		String rename = "Favourite List";
+		wishlistPage.renameWishlist(rename);
+	}
+	
+	@Then("^User sees \"([^\"]*)\"$")
+	public void user_sees_Updated_name(String arg1){
+		assertTrue(wishlistPage.verifyUpdatedName(arg1));
+	}
+	
+	@Then("^User sees \"([^\"]*)\" pop up$")
+	public void user_sees_Confirmation_popup(String arg1){
+		wishlistPage.verifyConfirmationPopup(arg1);
+	}
+	
+	@Then("^User sees that wishlist is deleted$")
+	public void user_sees_that_wishlist_is_deleted(){
+		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
+		assertTrue(wishlistPage.isOnEditWishlistPage());
+	}
 }
