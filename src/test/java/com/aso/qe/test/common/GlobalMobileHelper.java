@@ -321,12 +321,12 @@ public class GlobalMobileHelper {
 		return result;
 	}
 	
-	public void verifyUserIsOnPage(String pagename) {
-		if(pagename.equalsIgnoreCase("Add Wishlist")) {
+	public void verifyUserIsOnPage(String pageName) {
+		if(pageName.equalsIgnoreCase("Add Wishlist")) {
 			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistAddButton));
-		}else if(pagename.equalsIgnoreCase("wishlist listing")) {
+		}else if(pageName.equalsIgnoreCase("wishlist listing")) {
 			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistTileTitle));
-		}else if(pagename.equalsIgnoreCase("Previous page")) {
+		}else if(pageName.equalsIgnoreCase("Previous page")) {
 			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.BottomNav.wishlist));
 		}else {
 			throw new UnsupportedOperationException("type not defined");
