@@ -203,7 +203,13 @@ public class Locators {
 		public static By deleteBtn = By.id("");
 		public static By cancelbtn = By.id("");
 		public static By textInputWishlist = By.id("textinput_wishlist");
-
+		public static By wishlist = By.id("lbl_wishlist");
+		public static By wishlistIcon = By.id("btn_add_to_wishlist");
+	  //public static By addWishlist = By.id("");
+		public static By wishlistTextInput = By.id("textinput_wishlist");
+		public static By wishlistAddButton = By.id("btn_add_wishlist");
+		public static By wishlistTileTitle = By.id("txt_wishlist_name");
+		public static By backBtn = By.id("btn_back");
 	}
 
 	public static class ShopNewPage{
