@@ -117,7 +117,7 @@ public class GlobalMobileHelper {
 			throw new IllegalStateException("Driver is not initialized");
 		}
 		try {
-			Thread.sleep(DEFAULT_EXPLICIT_WAIT * 1000);
+			Thread.sleep(DEFAULT_EXPLICIT_WAIT * 1000L);
 			result = element.isDisplayed();
 		}catch(Exception e) {
 			logger.warn("Appium driver explicit wait for mobile element " + element.toString());
@@ -151,7 +151,7 @@ public class GlobalMobileHelper {
 		 		searchBar.sendKeys(keywordValue);	 		
 		 	}
 	 
-	public void swipeScreen(Direction dir, int numOftimes) {
+	public static void swipeScreen(Direction dir, int numOftimes) {
 		int start=0;
 		while (start < numOftimes) {
 			swipeScreen(dir);
