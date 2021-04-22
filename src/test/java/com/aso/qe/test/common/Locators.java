@@ -54,6 +54,9 @@ public class Locators {
 		public static By bannerSubtitle = By.id("lbl_info_banner_sub_title");
 		public static By bannerCta = By.id("btn_info_banner_cta");
 		public static By instructionBanner = By.id("lbl_page_title");
+		public static By labelInfoMessagetitle = By.id("lbl_info_message_title");
+		public static By labelInfoMessageSubtitle = By.id("lbl_info_message_sub_title");
+		public static By buttonInfoMessageCTA = By.id("btn_info_message_cta");
 	}
 
 	public static class PLPPage{
@@ -127,8 +130,8 @@ public class Locators {
 		public static By btnSizeChart = By.id("btn_size_chart");
 		//public static By sizeChartTitle =By.id("lbl_size_chart");
 		public static By sizeChartTitle =By.id("lbl_page_title");
-		//public static By btnCancelSizeChart = By.id("btn_cancel");
 		public static By btnCancelSizeChart = By.id("btn_back");
+		//public static By btnCancelSizeChart = By.id("btn_cancel");
 		public static By cancelBtn = By.id("cancel_btn_find_store");
 		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");
 		public static By pickUpAndDeliveryTitle = By.id("lbl_p_and_d_options");
