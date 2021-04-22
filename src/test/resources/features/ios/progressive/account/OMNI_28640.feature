@@ -1,14 +1,15 @@
 Feature: Manage Wishlist - Rename, Edit, Remove
 
-@Sprint5 @TC_OMNI_ @ST-OMNI-28640
+@Sprint5 @TC_OMNI_35036 @ST-OMNI-28640
 Scenario: Verify user successfully Manage Wishlist - Rename, Edit, Remove 
 	Given User launches the application 
 	And User continues as guest user 
     And User is on Log In screen
-    When User enters email address
-    And User enters password
-    And User taps on LogIn button
-	Then User Logs into the application
+	Then User sees email address field
+    And User sees passwordd field
+    Then User enters valid email "verifiedAddressList@yopmail.com"
+    And User enters valid password "Password@123"
+    And User taps on Login
 	Then User sees the account page 
 	When User taps on Wishlist
 	Then User taps on "Add Wishlist" icon
