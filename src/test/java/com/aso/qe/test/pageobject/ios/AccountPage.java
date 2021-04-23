@@ -105,4 +105,36 @@ public class AccountPage {
 	public boolean isAddAddressScreenDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.addressBookHeader);
 	}
+
+	public void tapOnOrderButton() {
+		GlobalMobileHelper.tapOnElement(Locators.AccountPage.ordersLabel);
+	}
+
+	public void enterOrderID(String args) {
+		GlobalMobileHelper.setText(Locators.AccountPage.orderIdInput, args);
+	}
+
+	public void enterOrderZipCode(String args) {
+		GlobalMobileHelper.setText(Locators.AccountPage.billingZipCode, args);
+	}
+
+	public void tapOnOrderCheckButton() {
+		GlobalMobileHelper.tapOnElement(Locators.AccountPage.buttonCheck);
+	}
+
+	public void tapOnOrderButtonInOrderScreen() {
+		GlobalMobileHelper.tapOnElement(Locators.OrdersPage.orderTotalbutton);
+	}
+
+	public boolean isPaymentDetailsScreenDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.paymentDetailsScreenHeader);
+	}
+
+	public boolean isOrderSummaryLabelDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.orderSummarylabel);
+	}
+
+	public boolean isPaymentMethodLabelDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.paymentMethodLabel);
+	}
 }

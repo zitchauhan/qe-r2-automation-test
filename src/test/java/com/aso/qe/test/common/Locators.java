@@ -196,6 +196,13 @@ public class Locators {
 	
 	public static class WishlistPage{
 		public static By wishlistTitle = By.id("lbl_wish_list");
+		public static By editBtn = By.id("btn_edit");
+		public static By renameWishlistTitle = By.id("text_rename_wishlist");
+		public static By updateButton = By.id("update_button");
+		public static By deleteWishlistButton = By.id("text_delete_wishlist");
+		public static By deleteBtn = By.id("");
+		public static By cancelbtn = By.id("");
+		public static By textInputWishlist = By.id("textinput_wishlist");
 		public static By wishlist = By.id("lbl_wishlist");
 		public static By wishlistIcon = By.id("btn_add_to_wishlist");
 	  //public static By addWishlist = By.id("");
@@ -223,6 +230,10 @@ public class Locators {
 		public static By addressBookButton = By.id("btn_address_book");
 		public static By addressBookHeader = By.xpath("//*[@label='Address Book']");
 		public static By buttonProfile = By.xpath("//XCUIElementTypeButton[@name=\"PROFILE\"]");
+		public static By ordersLabel = By.id("btn_orders");
+		public static By orderIdInput = By.id("input_order_number");
+		public static By billingZipCode = By.id("input_blling_zip_code");
+		public static By buttonCheck = By.id("btn_check");
 		public static By buttonLogOut = By.xpath("//XCUIElementTypeButton[@label=\"Log Out\"]");
     }
 	
@@ -484,6 +495,21 @@ public class Locators {
 		public static By labelSubscribeMessage = By.id("lbl_subscribe_email_subtitle");
 	}
 
+	public static class OrdersPage {
+		public static By orderSummarylabel = By.id("lbl_order_summary");
+		public static By paymentDetailsScreenHeader = By.xpath("//*[contains(@label,'Payment Details')]");
+		public static By orderTotalbutton = By.id("btn_order_total");
+		public static By labelSubtotal = By.id("lbl_subtotal");
+		public static By labelStorePickup = By.id("lbl_store_pickup");
+		public static By labeledelivery = By.id("lbl_edelivery");
+		public static By labelTaxes = By.id("lbl_taxes");
+		public static By labelDiscount = By.id("lbl_discount");
+		public static By paymentMethodLabel = By.id("lbl_payment_header");
+		public static By labelCard = By.id("lbl_last_four_digit_id");
+		public static By labelGiftCard = By.id("lbl_gift_card_text");
+		public static By labelGiftCardDigits = By.id("lbl_gift_card");
+		public static By labelGiftCardAmount = By.id("lbl_gift_card_amount");
+	}
 	public static class SavedAddresses {
 		public static By addressesTile = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_title')]");
 		public static By radioButtonAddress = By.xpath("//XCUIElementTypeOther[contains(@name,'btn_list_radio')]");
