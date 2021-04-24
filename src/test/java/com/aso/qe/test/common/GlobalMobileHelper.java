@@ -304,7 +304,7 @@ public class GlobalMobileHelper {
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator)).getText();
 	}
 	
-	public void verifyUserIsOnPage(String pagename) {
+	public void verifyUserIsOnPageone(String pagename) {
 		
 		if(pagename.equalsIgnoreCase("LogIn")) {
 			
