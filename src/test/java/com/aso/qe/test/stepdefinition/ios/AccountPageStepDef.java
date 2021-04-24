@@ -69,6 +69,38 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 		accountPage.tapOnFindStoreLink();
 	}
 	
+
+	@When("^user see \"([^\"]*)\" on my account page$")
+	public void user_see_on_my_account_page(String pagename) throws Throwable {
+		assertTrue(accountPage.VarifyElementPresenseOnAccountPage(pagename)); 
+	}
+	// to verify user is on my accounts cards page 
+	@Then("^user see \"([^\"]*)\" on my account payment page$")
+	public void user_is_on_my_account_cards_page(String pagename) throws Throwable {
+		assertTrue(accountPage.VarifyElementPresenseOnAccountCardsPage(pagename)); 
+	}
+	@Then("^user taps on \"([^\"]*)\" on my account page$")
+public void tabOnButtonOnAccountPage(String btnName) {
+		
+		accountPage.tabOnButtonOnAccountPage(btnName);
+	}
+	@When("^user clicks on \"([^\"]*)\" on my account payment page$")
+	public void tabOnButtonOnAccountCardsPage(String btnName) {
+		
+		accountPage.tabOnButtonOnAccountCardsPage(btnName);
+	}
+	
+	@Then("^i choose to enter \"([^\"]*)\" on aso card page$")
+	public void i_choose_to_enter_Aso_card(String carddetails) throws Throwable {
+		 accountPage.enterCardDetails(carddetails);
+	}
+
+
+// To verify that user is on aso card page 
+@Then("^user is taken to \"([^\"]*)\" on aso card page$")
+public void user_is_taken_to_on_aso_card_page(String pagename) throws Throwable {
+	assertTrue(accountPage.VarifyElementPresenseOnAsoCardsPage(pagename)); 
+}
 	@Then("^User taps on the orders button$")
 	public void tapOnOrderButton() {
 		accountPage.tapOnOrderButton();
@@ -113,4 +145,12 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	public void isPaymentMethodLabelDisplayed() {
 		assertTrue(accountPage.isPaymentMethodLabelDisplayed());
 	}
+
+// To Click on add new Aso card page 
+@When("^user clicks on \"([^\"]*)\" on aso card page$")
+public void user_clicks_on_on_aso_card_page(String btnName) {
+	
+	accountPage.tabOnButtonOnAsoCardsPage(btnName);
+}
+
 }
