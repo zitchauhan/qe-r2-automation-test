@@ -20,7 +20,7 @@ public class LoginStepDef extends GlobalMobileHelper{
 	
 	@When("^User enters email address")
 	public void enterEmail() {
-		String email = "jitsingh7@yopmail.com";
+		String email = "Newtest1@yopmail.com";
 		loginPage.enterEmail(email);
 	}
 	
@@ -188,5 +188,43 @@ public class LoginStepDef extends GlobalMobileHelper{
 	@Then("^User taps on cancel button$")
 	public void user_taps_on_cancel_button() throws Throwable {
 		loginPage.tapOnCancelBtn();
+	}
+	
+	 // Login new code by Prafull to read user name and password from data file 
+	@Given("^User is on \"([^\"]*)\" screen$")
+	public void user_is_on_screen(String pagename) throws Throwable {
+		 verifyUserIsOnPage(pagename);
+	}
+
+	@When("^User enters \"([^\"]*)\" on login screen$")
+	public void user_enters_on_login_screen(String logindetails) throws Throwable {
+		 loginPage.enterLoginDetails(logindetails);
+	}
+
+	@When("^User taps on \"([^\"]*)\" button on login screen$")
+	public void user_taps_on_button_on_login_screen(String btnName) throws Throwable {
+		 loginPage.tapOnButtonOnLoginPage(btnName);
+	}
+
+	
+
+    @And("^User logs into the application as \"([^\"]*)\"$")
+    public void userLogsIntoTheApplicationAs(String username) {
+        /* Created By jitsingh7 on @{DATE} */
+		logOut();
+		homePage.tapOnHomeBtn();
+		loginPage.loginAsUser(username);
+
+		try {
+			Thread.sleep(GlobalMobileHelper.DEFAULT_EXPLICIT_WAIT * 1000L);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+    private void logOut() {
+		homePage.tapOnHomeBtn();
+		tapOnElement(Locators.AccountPage.accountTitle);
+		tapOnElement(Locators.AccountPage.buttonLogOut);
 	}
 }
