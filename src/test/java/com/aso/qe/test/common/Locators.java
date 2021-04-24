@@ -609,11 +609,12 @@ public class Locators {
 		public static By alertMessageOrderScreen=By.id("");
 		public static By alertMessageText=By.id("");
 		public static By buttonYesAlertMessage=By.id("");
-		public static By labelOrderCancellationMesage=By.id("");
+		public static By labelSucessOrderCancellationMesage=By.id("");
 		public static By buttonNoAlertMessage=By.id("");
 		public static By OrderCancelConfirmationScreen=By.id("");
 		public static By buttonBackOrderCancel=By.id("");
 		public static By ErrorMesageOrderCancel=By.id("");
+		public static By labelOrderPage=By.id("");
 		
 		
 	}
