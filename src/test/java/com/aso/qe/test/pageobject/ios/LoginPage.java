@@ -1,5 +1,6 @@
 package com.aso.qe.test.pageobject.ios;
 
+import com.aso.qe.framework.common.PropertiesHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 
@@ -222,4 +223,13 @@ public class LoginPage {
 		
 	}
 	
+    public void loginAsUser(String username) {
+		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(username);
+		String[] userAndPassword = keywordValue.split(",");
+		isOnLoginScreen();
+		enterEmail(userAndPassword[0]);
+		enterPassword(userAndPassword[1]);
+		tapOnLogin();
+    }
+
 }

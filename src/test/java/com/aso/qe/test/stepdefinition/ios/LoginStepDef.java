@@ -20,7 +20,7 @@ public class LoginStepDef extends GlobalMobileHelper{
 	
 	@When("^User enters email address")
 	public void enterEmail() {
-		String email = "jitsingh7@yopmail.com";
+		String email = "Newtest1@yopmail.com";
 		loginPage.enterEmail(email);
 	}
 	
@@ -207,4 +207,24 @@ public class LoginStepDef extends GlobalMobileHelper{
 	}
 
 	
+
+    @And("^User logs into the application as \"([^\"]*)\"$")
+    public void userLogsIntoTheApplicationAs(String username) {
+        /* Created By jitsingh7 on @{DATE} */
+		logOut();
+		homePage.tapOnHomeBtn();
+		loginPage.loginAsUser(username);
+
+		try {
+			Thread.sleep(GlobalMobileHelper.DEFAULT_EXPLICIT_WAIT * 1000L);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+    private void logOut() {
+		homePage.tapOnHomeBtn();
+		tapOnElement(Locators.AccountPage.accountTitle);
+		tapOnElement(Locators.AccountPage.buttonLogOut);
+	}
 }
