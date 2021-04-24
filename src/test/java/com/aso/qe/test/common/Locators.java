@@ -470,4 +470,25 @@ public class Locators {
 		public static By labelSubscribeToEmailsFromAcademy = By.id("lbl_subscribe_email_title");
 		public static By labelSubscribeMessage = By.id("lbl_subscribe_email_subtitle");
 	}
+	public static class OrderDetail{
+		public static By buttonOrder = By.id("");
+		public static By listOrder=By.id("");
+		public static By buttonOrderId=By.id("");
+		public static By lookupOrder= By.id("");
+		public static By labelOrderDetailPage= By.id("");
+		public static By buttonCancelOrder=By.id("");
+		public static By buttonChevronCancelOrder=By.id("");
+		public static By alertMessageOrderScreen=By.id("");
+		public static By alertMessageText=By.id("");
+		public static By buttonYesAlertMessage=By.id("");
+		public static By labelOrderCancellationMesage=By.id("");
+		public static By buttonNoAlertMessage=By.id("");
+		public static By OrderCancelConfirmationScreen=By.id("");
+		public static By buttonBackOrderCancel=By.id("");
+		public static By ErrorMesageOrderCancel=By.id("");
+		
+		
+	}
+	
+	
 }
