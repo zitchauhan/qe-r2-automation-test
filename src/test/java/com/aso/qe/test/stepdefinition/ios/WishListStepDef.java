@@ -29,11 +29,6 @@ public class WishListStepDef extends GlobalMobileHelper{
 			wishlistPage.tapOnButton(arg1);
 	}
 
-	@Then("^User sees \"([^\"]*)\" screen$")
-	public void user_sees_Page(String arg) {
-		verifyUserIsOnPage(arg);
-	}
-
 	@Then("^User renames wishlist$")
 	public void user_renames_wishlist(){
 		String rename = "Favourite List";
