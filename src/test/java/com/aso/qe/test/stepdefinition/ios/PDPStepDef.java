@@ -273,4 +273,10 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void StoreRadioButtonSelected() throws Throwable {
 		pdp.verifyStoreRadioButtonSelected();
 	}
+	
+	//OMNO-26981
+	@Then("^I choose to click on \"([^\"]*)\" in PDP page$")
+	public void click_on_PDP_page(String arg1) throws Throwable {
+	    pdp.tapOnPurchaseButton();
+	}
 }
