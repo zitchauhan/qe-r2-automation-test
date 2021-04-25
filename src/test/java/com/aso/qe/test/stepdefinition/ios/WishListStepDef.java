@@ -44,11 +44,6 @@ public class WishListStepDef extends GlobalMobileHelper{
 	public void user_sees_button_enabled(String btn) {
 		wishlistPage.buttonEnabled(btn);
 	}
-
-	@Then("^User taps on \"([^\"]*)\" button$")
-	public void user_taps_on_Add_Wishlist_button(String button) {
-		wishlistPage.tapOnAddWishListButton(button);
-	}
 	
 	@Then("^User sees \"([^\"]*)\" screen$")
 	public void user_sees_screen(String arg) {
