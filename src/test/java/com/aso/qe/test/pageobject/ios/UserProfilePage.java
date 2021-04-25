@@ -31,7 +31,7 @@ public class UserProfilePage {
         MobileElement switchEmailSubscription = driver.findElement(Locators.UserProfile.switchSubscribeToEmailsFromAcademy);
         if (switchEmailSubscription.getAttribute("value").trim().equals("1")){
             logger.debug("user is not in the subscriptions list");
-            GlobalMobileHelper.tapOnElement(Locators.UserProfile.switchSubscribeToEmailsFromAcademy);
+            GlobalMobileHelper.tapOnElement(Locators.UserProfile.labelSubscribeToEmailsFromAcademy);
         }else{
             logger.debug("user is already not in the subscriptions list");
         }
