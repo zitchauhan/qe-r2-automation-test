@@ -93,12 +93,6 @@ public class WishlistPage {
 		GlobalMobileHelper.isElementEnabled(Locators.WishlistPage.wishlistAddButton);	
 	}
 
-	public void tapOnAddWishListButton(String button) {
-		if (GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistAddButton)) {
-			GlobalMobileHelper.tapOnElement(Locators.WishlistPage.wishlistAddButton);
-		}	
-	}
-
 	public void tapOnBackButton(String back) {
 		GlobalMobileHelper.tapOnElement(Locators.WishlistPage.backBtn);		
 	}
