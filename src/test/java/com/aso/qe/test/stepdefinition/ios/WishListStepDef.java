@@ -77,11 +77,6 @@ public class WishListStepDef extends GlobalMobileHelper{
 	public void user_sees_button_enabled(String btn) {
 		wishlistPage.buttonEnabled(btn);
 	}
-	
-	@Then("^User sees \"([^\"]*)\" screen$")
-	public void user_sees_screen(String arg) {
-		verifyUserIsOnPage(arg);
-	}
 
 	@When("^User taps on \"([^\"]*)\" back button$")
 	public void user_taps_on_back_button(String back) {
