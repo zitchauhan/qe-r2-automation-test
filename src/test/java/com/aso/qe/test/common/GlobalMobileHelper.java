@@ -303,6 +303,27 @@ public class GlobalMobileHelper {
 		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator)).getText();
 	}
+	
+	public void verifyUserIsOnPageone(String pagename) {
+		
+		if(pagename.equalsIgnoreCase("LogIn")) {
+			
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.LoginPage.emailEditBox));
+		}else if(pagename.equalsIgnoreCase("Cart")){
+			
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.labelYourCart));
+
+		}else {
+			
+			throw new UnsupportedOperationException("Given button type not defined");
+
+		}
+	}
+
+			
+		//}else if(pagename.equalsIgnoreCase("save")){
+			
+			//assertTrue (GlobalMobileHelper.isElementDisplayed(Locators.Addnewasocreditcard.AddnewAsocrerditCardlabel));
 	public static boolean isElementEnabled(By locator) {
 		boolean result=false;
 		
@@ -321,6 +342,7 @@ public class GlobalMobileHelper {
 		return result;
 	}
 
+	
 	public void verifyUserIsOnPage(String pageName) {
 		if(pageName.equalsIgnoreCase("Add Wishlist")) {
 			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistAddButton));
@@ -335,3 +357,8 @@ public class GlobalMobileHelper {
 		}
 	}
 }
+
+
+
+
+
