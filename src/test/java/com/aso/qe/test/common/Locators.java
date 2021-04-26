@@ -181,6 +181,16 @@ public class Locators {
 		public static By OverLayCartview_cart = By.id("btn_view_cart");
 		public static By OverLayCartcontinue_shopping = By.id("btn_continue_shopping");
 		public static By OverLayCartdded_to_cart = By.id("lbl_added_to_cart");
+		// alert modal on pdp 
+		public static By STDGIFTCARDModal = By.id("popup_StdGiftCard");
+		public static By STDGIFTCARDModalGenericContent = By.id("lbl_StdGiftCardgenericlabel");
+		public static By OpenSTDGiftcardbutton = By.id("btn_OpenSTDGiftcard");
+		public static By CloseAlertmodal = By.id("btn_CloseAlertmodal");
+		// bulk GC alert modal
+		public static By BulkGIFTCARDModal = By.id("popup_bulkGiftCard");
+		public static By bulkGIFTCARDModalGenericContent = By.id("lbl_bulkGiftCardgenericlabel");
+		public static By OpenbulkGiftcardbutton = By.id("btn_OpenbulkGiftcard");
+		
 	}
 
 	public static class ShopPage{
@@ -210,6 +220,16 @@ public class Locators {
 		public static By wishlistAddButton = By.id("btn_add_wishlist");
 		public static By wishlistTileTitle = By.id("txt_wishlist_name");
 		public static By backBtn = By.id("btn_back");
+		public static By productTitle = By.id("lbl_product_title");
+		public static By productImage = By.id("img_product_image");
+		public static By productPrice = By.id("lbl_product_price");
+		public static By removeButton = By.id("btn_remove");
+		public static By moveToCartButton = By.id("btn_move_to_cart");
+		public static By itemCount = By.id("lbl_item_count");
+		public static By wishListName = By.xpath("//*[contains(@label,'{0}')]");
+		public static By wishListHeader = By.xpath("//*[contains(@label,'{0}')]");
+		public static By emptyWishListLabel = By.id("lbl_wishlist_empty");
+		public static By confirmationPopup = By.xpath("//*[contains(@label,'Remove')]");
 	}
 
 	public static class ShopNewPage{

@@ -357,6 +357,7 @@ public class GlobalMobileHelper {
 		}
 	}
 	
+
 	
 	public static boolean isElementSelected(By locator) {
 		boolean result=false;
@@ -376,6 +377,12 @@ public class GlobalMobileHelper {
 		return result;
 	}
 	
+
+	public static By getLocator(By locator,String replacement) {
+		String loc = locator.toString();
+		return By.xpath(loc.replace("{0}", replacement));
+	}
+
 }
 
 
