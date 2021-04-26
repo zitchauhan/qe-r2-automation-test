@@ -792,4 +792,8 @@ public class PDPPage {
 	public boolean isBackButtonDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.backBtn);
 	}
+
+	public void tapOnCartBadge() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.cartBadge);
+	}
 }

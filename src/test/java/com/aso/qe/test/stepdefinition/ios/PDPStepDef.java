@@ -2,6 +2,7 @@ package com.aso.qe.test.stepdefinition.ios;
 
 import static org.junit.Assert.assertTrue;
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.test.pageobject.ios.PDPPage;
 
 import cucumber.api.java.en.And;
@@ -288,7 +289,6 @@ public class PDPStepDef extends GlobalMobileHelper{
 	@Then("^User sees Product title on header$")
 	public void user_sees_Product_title_on_header() {
 		assertTrue(pdp.isProductTitleOnHeaderDisplayed());
-
 	}
 
 	@Then("^User sees back button$")
@@ -298,16 +298,16 @@ public class PDPStepDef extends GlobalMobileHelper{
 
 	@When("^User scrolls up to the top$")
 	public void user_scrolls_up_to_the_top() {
-		
+		swipeScreen(Direction.DOWN,3);
 	}
 
 	@Then("^User sees header will not be displayed$")
 	public void user_sees_header_will_not_be_displayed() {
-		
+		assertTrue(pdp.isProductTitleOnHeaderDisplayed());
 	}
 
 	@When("^User taps on cart badge$")
 	public void user_taps_on_cart_badge() {
-		
+		pdp.tapOnCartBadge();
 	}
 }

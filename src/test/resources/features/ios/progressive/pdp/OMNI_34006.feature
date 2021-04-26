@@ -1,7 +1,7 @@
 Feature: Verify PDP CR - PDP Header and Cart Badge
 
 @Sprint5 @TC-OMNI- @ST-OMNI-34006
-  Scenario: Verify user sees PDP CR - PDP Header and Cart Badge
+Scenario: Verify user sees PDP CR - PDP Header and Cart Badge
   Given User launches the application
   And User continues as guest user
   When User Sees the Search Box
