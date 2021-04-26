@@ -20,6 +20,7 @@ import com.aso.qe.test.common.Locators;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import net.bytebuddy.description.annotation.AnnotationDescription.Loadable;
 
 public class CheckOutAddCreditCardPage {
 	private static final Logger logger = Logger.getLogger(CheckOutAddCreditCardPage.class.getName());
@@ -147,8 +148,12 @@ assertTrue("Option Add new Billing address not displayed",GlobalMobileHelper.isE
 			GlobalMobileHelper.tapOnElement(Locators.Addnewcreditcard.buttonNoWarning);
 			break;
 		default:
-			throw new IllegalStateException("Invalid field found");
+			throw new IllegalStateException("Invalid button found");
 	}
+	}
+	
+	public void tapOnBackButton() {
+		GlobalMobileHelper.tapOnElement(Locators.Addnewcreditcard.buttonback);
 	}
 	
 	
