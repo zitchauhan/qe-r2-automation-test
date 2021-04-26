@@ -32,7 +32,7 @@ public class WishListStepDef extends GlobalMobileHelper{
 	@Then("^User sees \"([^\"]*)\" screen$")
 	public void user_sees_page(String arg) {
 		verifyUserIsOnPage(arg);
-	}*/
+	}
 
 	@Then("^User renames wishlist$")
 	public void user_renames_wishlist(){
