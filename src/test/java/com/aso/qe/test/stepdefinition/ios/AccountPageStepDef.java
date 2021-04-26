@@ -113,4 +113,9 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	public void isPaymentMethodLabelDisplayed() {
 		assertTrue(accountPage.isPaymentMethodLabelDisplayed());
 	}
+	
+	@Then("^User sees \"(.*?)\" in order Cancellation screen$")
+	public void isCancellationScreenElementDisplayed(String element) {
+		assertTrue(orderPage.isCancellationScreenElementDisplayed(element));
+	}
 }
