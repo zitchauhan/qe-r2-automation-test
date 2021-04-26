@@ -210,6 +210,16 @@ public class Locators {
 		public static By wishlistAddButton = By.id("btn_add_wishlist");
 		public static By wishlistTileTitle = By.id("txt_wishlist_name");
 		public static By backBtn = By.id("btn_back");
+		public static By productTitle = By.id("lbl_product_title");
+		public static By productImage = By.id("img_product_image");
+		public static By productPrice = By.id("lbl_product_price");
+		public static By removeButton = By.id("btn_remove");
+		public static By moveToCartButton = By.id("btn_move_to_cart");
+		public static By itemCount = By.id("lbl_item_count");
+		public static By wishListName = By.xpath("//*[contains(@label,'{0}')]");
+		public static By wishListHeader = By.xpath("//*[contains(@label,'{0}')]");
+		public static By emptyWishListLabel = By.id("lbl_wishlist_empty");
+		public static By confirmationPopup = By.xpath("//*[contains(@label,'Remove')]");
 	}
 
 	public static class ShopNewPage{
