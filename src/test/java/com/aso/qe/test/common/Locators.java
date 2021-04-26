@@ -538,6 +538,7 @@ public class Locators {
 			public static By existingasocard = By.id("btn_existingaso_card");
 			public static By buttonaddacacemycard = By.id("btn_addaso_card");
 			public static By buttonaddcreditcard = By.id("btn_adddredit_card");
+			public static By setAsDefaultCheckbox = By.id("chk_set_as_default");
 			
 		
 			

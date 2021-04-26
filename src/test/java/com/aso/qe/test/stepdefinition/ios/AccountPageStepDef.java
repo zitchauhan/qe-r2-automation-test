@@ -1,5 +1,6 @@
 package com.aso.qe.test.stepdefinition.ios;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
@@ -146,11 +147,30 @@ public void user_is_taken_to_on_aso_card_page(String pagename) throws Throwable 
 		assertTrue(accountPage.isPaymentMethodLabelDisplayed());
 	}
 
-// To Click on add new Aso card page 
-@When("^user clicks on \"([^\"]*)\" on aso card page$")
-public void user_clicks_on_on_aso_card_page(String btnName) {
+	// To Click on add new Aso card page 
+	@When("^user clicks on \"([^\"]*)\" on aso card page$")
+	public void user_clicks_on_on_aso_card_page(String btnName) {
+		
+		accountPage.tabOnButtonOnAsoCardsPage(btnName);
+	}
 	
-	accountPage.tabOnButtonOnAsoCardsPage(btnName);
-}
-
+	@Then("^Set as default checkbox is not visible to the user$")
+	public void isSetAsDefaultNotDisplayed() {
+		assertTrue(accountPage.isSetAsDefaultNotDisplayed());
+	}
+	
+	@Then("^Set as default checkbox is visible to the user$")
+	public void isSetAsDefaultDisplayed() {
+		assertFalse(accountPage.isSetAsDefaultNotDisplayed());
+	}
+	
+	@Then("^Default checkbox is unchecked$")
+	public void isDefaultCheckBoxChecked() {
+		assertFalse(accountPage.isDefaultCheckBoxChecked());
+	}
+	
+	@Then("^Set as default checkbox is disabled for the user$")
+	public void isDefaultCheckBoxDisabled() {
+		assertTrue(accountPage.isDefaultCheckBoxDisabled());
+	}
 }
