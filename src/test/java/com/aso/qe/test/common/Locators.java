@@ -357,7 +357,7 @@ public class Locators {
 		public static By copyAddressLink=By.xpath("//XCUIElementTypeButton[@name='Copy address']");
 		public static By openInGoogleMap=By.xpath("//XCUIElementTypeButton[@name='Open in google Maps']");;
 		public static By openInMaps=By.xpath("//XCUIElementTypeButton[@name='Open in Maps']");
-		public static By cancelBtn=By.id("cancel_btn_find_store");
+		public static By cancelBtn=By.xpath("//XCUIElementTypeButton[@name='Cancel']");
 		public static By defaultStoreName=By.id("lbl_details_find_store");
 	}
 
@@ -618,5 +618,17 @@ public class Locators {
 		public static By radioButtonAddress = By.xpath("//XCUIElementTypeOther[contains(@name,'btn_list_radio')]");
 		public static By labelAddressUsername = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_address')]");
 		public static By editAddressLink = By.xpath("//XCUIElementTypeOther[@name='Edit']");
+	}
+	
+	public static class OrderConfPage{
+		public static By paymentMethodLabel=By.id("");
+		public static By creditCardimage=By.id("");
+		public static By giftCardImage=By.id("");
+		public static By paypalImage=By.id("");
+		public static By applePayImage=By.id("");
+		public static By giftCardAmount=By.id("");
+		public static By giftCardLabel=By.id("");
+		public static By paypalLabel=By.id("");
+		public static By applePayLabel=By.id("");
 	}
 }

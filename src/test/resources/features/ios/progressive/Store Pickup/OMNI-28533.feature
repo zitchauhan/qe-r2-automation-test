@@ -7,13 +7,6 @@ Feature: Location Services Setup - Partially automated
     Then User verifies "ALLOW LOCATION SERVICES" option is displayed on the screen
     And User verifies "ENTER CITY OR ZIPCODE" option is displayed on the screen
     And User verifies "Maybe later" option is displayed on the screen
-#    And User continues as guest user
-#	When User Sees the Search Box
-#    Then User clicks on the Search Box
-#    And User search for the "SearchKeyword"
-#    And user click on Product
-#    Then User taps on change store link
-#    Then User navigated to find your nearest store page
     Then User taps on "ALLOW LOCATION SERVICES" option
     And User verifies location service popup is displayed
     And User taps on "Allow Once" option
