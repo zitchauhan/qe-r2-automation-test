@@ -28,6 +28,14 @@ public class WishListStepDef extends GlobalMobileHelper{
 	public void user_taps_on_button(String arg1){
 			wishlistPage.tapOnButton(arg1);
 	}
+<<<<<<< HEAD
+=======
+	
+	@Then("^User sees \"([^\"]*)\" screen$")
+	public void user_sees_page(String arg) {
+		verifyUserIsOnPage(arg);
+	}
+>>>>>>> 792db89ff92d1208b15c31dd0686f8e6a52fa664
 
 	@Then("^User renames wishlist$")
 	public void user_renames_wishlist(){
@@ -72,11 +80,14 @@ public class WishListStepDef extends GlobalMobileHelper{
 	public void user_sees_button_enabled(String btn) {
 		wishlistPage.buttonEnabled(btn);
 	}
+<<<<<<< HEAD
 	
 	@Then("^User sees \"([^\"]*)\" screen$")
 	public void user_sees_screen(String arg) {
 		verifyUserIsOnPage(arg);
 	}
+=======
+>>>>>>> 792db89ff92d1208b15c31dd0686f8e6a52fa664
 
 	@When("^User taps on \"([^\"]*)\" back button$")
 	public void user_taps_on_back_button(String back) {
