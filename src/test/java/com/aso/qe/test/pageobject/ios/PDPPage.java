@@ -770,7 +770,7 @@ public class PDPPage {
 
 		}else {
 			
-			//throw new IllegalStateException("Given button type not defined");
+			
 			throw new UnsupportedOperationException("Given element not found on PDP");
  
 		
