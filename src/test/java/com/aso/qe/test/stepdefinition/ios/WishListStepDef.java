@@ -29,7 +29,7 @@ public class WishListStepDef extends GlobalMobileHelper{
 	public void user_taps_on_button(String arg1){
 			wishlistPage.tapOnButton(arg1);
 	}
-	
+
 	@Then("^User sees \"([^\"]*)\" screen$")
 	public void user_sees_page(String arg) {
 		verifyUserIsOnPage(arg);
@@ -83,43 +83,43 @@ public class WishListStepDef extends GlobalMobileHelper{
 	public void user_taps_on_back_button(String back) {
 		wishlistPage.tapOnBackButton(back);
 	}
-	
+
 	@Then("^User sees item count in wishlist items screen$")
 	public void isItemCountDisplayed() {
 		assertTrue(wishlistPage.isItemCountDisplayed());
 	}
-	
+
 	@Then("^User sees \"([^\"]*)\" of the wishlist item$")
 	public void isWishListItemDisplayed(String arg) {
 		assertTrue(wishlistPage.isWishListItemDisplayed(arg));
 	}
-	
+
 	@Then("^User taps on wishlist \"([^\"]*)\"$")
 	public void tapOnWishList(String wishlist) {
 		wishlistPage.tapOnWishList(wishlist);
 	}
-	
+
 	@Then("^User is taken to \"([^\"]*)\" wishlist$")
 	public void isWishListDisplayed(String wishlist) {
 		wishlistPage.isWishListDisplayed(wishlist);
 	}
-	
+
 	@When("^User taps on Remove button$")
 	public void tapOnRemoveButton() {
 		wishlistPage.tapOnRemoveButton();
 	}
-	
+
 	@Then("^User is shown the confirmation popup$")
 	public void isConfirmationPopUpDisplayed() {
 		assertTrue(wishlistPage.isConfirmationPopUpDisplayed());
 	}
-	
+
 	//OMNI-28622
 	@When("^User taps on \"([^\"]*)\" wishlist$")
 	public void user_taps_on_wishlist(String arg1){
 		wishlistPage.tapOnCreatedWishList(arg1);
 	}
-	
+
 	@Then("^User sees \"([^\"]*)\" on wishlist page$")
 	public void user_sees_on_wishlist_page(String arg1) {
 		assertTrue(wishlistPage.varifyElementPresenseOnPage(arg1));
@@ -133,7 +133,7 @@ public class WishListStepDef extends GlobalMobileHelper{
 	public void user_sees_information_message_subtitle_on_wishlist_page(String subTitleText){
 		assertTrue(getElementText(Locators.HomePage.labelInfoMessageSubtitle).toLowerCase().contains(subTitleText.toLowerCase()));
 	}
-	
+
 	@Then("^User click on the \"([^\"]*)\" on wishlist page$")
 	public void user_click_on_cta(String arg1){
 		if (arg1.contains("Visit Academy.com")){
@@ -142,7 +142,7 @@ public class WishListStepDef extends GlobalMobileHelper{
 			wishlistPage.tapOnBannerCta(arg1);
 		}
 	}
-	
+
 	@Then("^I choose to verify user navigated to Web$")
 	public void i_choose_to_verify_user_navigated_to_Web() {
 		assertTrue(wishlistPage.isNavigatedToWeb());
