@@ -543,6 +543,10 @@ public class Locators {
 					public static By radioAddBillingAddress=By.id("");
 					public static By buttonSaveCreditCard=By.id("");
 					
+					
+					public static By popupWarning= By.id("");
+					public static By buttonYesWarning = By.id("");
+					public static By buttonNoWarning= By.id("");
 				}
 
 

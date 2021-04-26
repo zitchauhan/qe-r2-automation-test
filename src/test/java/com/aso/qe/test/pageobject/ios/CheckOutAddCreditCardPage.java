@@ -30,6 +30,172 @@ public class CheckOutAddCreditCardPage {
 	 }
 	AccountPage accountPage = new AccountPage(driver);
 	
+	public void isCreditCardInformationDisplayed() {
+		assertTrue("Credit card information label not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.AddnewcrerditCardlabel));
+	}
+	
+	public void isCardImageDisplayed() {
+		assertTrue("Visa card image not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.imgVisa));
+	}
+	
+	public void isCardHolderNameDisplayed() {
+		assertTrue("Card holder input field not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.inputCardHolderName));
+	}
+	
+	public void isCardNumberDisplayed() {
+		assertTrue("Card number input field not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.inputCardNumberField));
+	}
+
+	public void isCardExpiryDisplayed() {
+		assertTrue("Card Expiry input field not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.inputExpiryDate));
+	}
+	
+	public void isCardCVVDisplayed() {
+		assertTrue("Card CVV field not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.inputCVV));
+	}
+	public void isCheckboxSaveForFutureDisplayed() {
+		assertTrue("Save for future checkbox not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.checkboxSaveForFutureAddress));
+	}
+	
+	public void isSaveFutureCheckBoxSelected() {
+		assertTrue(GlobalMobileHelper.isElementSelected(Locators.Addnewcreditcard.checkboxSaveForFutureAddress));
+		
+		
+	}
+	public void isBillingAddressLabel() {
+		assertTrue("Billing address label not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.labelBillingAddress));
+		
+	}
+	
+	public void isAddnewBillingAddressDisplayed() {
+assertTrue("Option Add new Billing address not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.radioAddBillingAddress));
+		
+	}
+	
+	public void isSameAsShippingAddressDisplayed() {
+		assertTrue("Option Same as shippng address not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.radioSameAsShippingAddress));
+				
+			}
+	
+	public void isSaveCreditCardButtonDisplayed() {
+		assertTrue("Save credit card button not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.buttonSaveCreditCard));
+				
+			}
+	
+	public void isSaveCreditCardButtonDisabled() {
+		isSaveCreditCardButtonDisplayed();
+		assertFalse("Save credit card button is enabled",GlobalMobileHelper.isElementEnabled(Locators.Addnewcreditcard.buttonSaveCreditCard));
+		
+	}
+	
+	public void isSaveCreditCardButtonEnabled() {
+		isSaveCreditCardButtonDisplayed();
+		assertTrue("Save credit card button is disabled",GlobalMobileHelper.isElementEnabled(Locators.Addnewcreditcard.buttonSaveCreditCard));
+		
+	}
+	
+	public void tapOnSaveCreditCart() {
+		isSaveCreditCardButtonDisplayed();
+		isSaveCreditCardButtonEnabled();
+		GlobalMobileHelper.tapOnElement(Locators.Addnewcreditcard.buttonSaveCreditCard);
+		
+	}
+	
+	public void enterCreditCardData(String fieldName,String value) {
+		switch(fieldName) {
+		case "CardHolderName":
+			GlobalMobileHelper.setText(Locators.Addnewcreditcard.inputCardHolderName, value);
+			break;
+		case "CardNumber":
+			GlobalMobileHelper.setText(Locators.Addnewcreditcard.inputCardNumberField, value);
+			break;
+		case "CardExpiry":
+			GlobalMobileHelper.setText(Locators.Addnewcreditcard.inputExpiryDate, value);
+			break;
+		case "CVV":
+			GlobalMobileHelper.setText(Locators.Addnewcreditcard.inputCVV, value);
+			break;
+		default:
+			throw new IllegalStateException("Invalid field found");
+	}
+		
+		
+	}
+	
+
+	
+	public void isWarningPopUpDisplayed() {
+		assertTrue("Warning pop up not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.popupWarning));
+				
+			}
+	
+	public void isWarningYesButtonDisplayed() {
+		assertTrue("Yes Button  not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.buttonYesWarning));
+				
+			}
+	public void isWarningNoButtonDisplayed() {
+		assertTrue("No button not displayed",GlobalMobileHelper.isElementDisplayed(Locators.Addnewcreditcard.buttonNoWarning));
+				
+			}
+	
+	public void tapOnWarningButtons(String buttonName) {
+		switch(buttonName) {
+		case "Yes":
+			GlobalMobileHelper.tapOnElement(Locators.Addnewcreditcard.buttonYesWarning);
+			break;
+		case "No":
+			GlobalMobileHelper.tapOnElement(Locators.Addnewcreditcard.buttonNoWarning);
+			break;
+		default:
+			throw new IllegalStateException("Invalid field found");
+	}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public void verifyDefaultAddress() {
 	MobileElement defaultAddress = driver.findElement(Locators.CheckoutPage.defaultAddressLabel);
