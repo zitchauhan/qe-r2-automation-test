@@ -29,10 +29,10 @@ public class WishListStepDef extends GlobalMobileHelper{
 			wishlistPage.tapOnButton(arg1);
 	}
 
-	@Then("^User sees \"([^\"]*)\" screen$")
+	/*@Then("^User sees \"([^\"]*)\" screen$")
 	public void user_sees_Page(String arg) {
 		verifyUserIsOnPage(arg);
-	}
+	}*/
 
 	@Then("^User renames wishlist$")
 	public void user_renames_wishlist(){
@@ -78,10 +78,10 @@ public class WishListStepDef extends GlobalMobileHelper{
 		wishlistPage.buttonEnabled(btn);
 	}
 
-	@Then("^User taps on \"([^\"]*)\" button$")
+	/*@Then("^User taps on \"([^\"]*)\" button$")
 	public void user_taps_on_Add_Wishlist_button(String button) {
 		wishlistPage.tapOnAddWishListButton(button);
-	}
+	}*/
 	
 	@Then("^User sees \"([^\"]*)\" screen$")
 	public void user_sees_screen(String arg) {
