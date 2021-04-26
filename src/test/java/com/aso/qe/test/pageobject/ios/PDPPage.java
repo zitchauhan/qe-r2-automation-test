@@ -436,9 +436,9 @@ public class PDPPage {
 	}
 
 	public void changeStore(String storeName) {
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.changeStore);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.selectStore);
 		driver.findElement(Locators.PDPPage.searchStoreBox).sendKeys(storeName);
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.searchBtn);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.cancelBtn);
 		
 		
 		
@@ -461,10 +461,10 @@ public class PDPPage {
 		     }
 			
 		}else if(varianType.contains("width")) {
-			//boolean stat4=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
-			//boolean stat5=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
+			boolean stat4=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+			boolean stat5=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.shoeSizeVariant);
 			boolean stat6=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.widthVariant);
-			 if(stat6 == true) {
+			 if(stat4&&stat5&&stat6 == true) {
 		    	 return true;
 		     }else {
 		    	 return false;
@@ -725,6 +725,31 @@ public class PDPPage {
 	public void tapOnContiniueShoppingBtn() {
 		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.continueShopping);
+	}
+
+	public boolean isPickUpDeliveryOptionsDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.pickUpAndDeliveryTitle);
+		
+	}
+
+	public boolean isFreeStorePickUpDisplayed() {
+		
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.freeStorePickUpTitle);
+	}
+
+	public boolean isDetailsDisplayedOfProduct() {
+		boolean stat1 =  GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.deailsSpecTitle);
+		boolean stat2 = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.itemTitle);
+		boolean stat3 =GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.skuDetailTitle);
+		boolean stat4 = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.productDetails);
+		if(stat1&&stat2&&stat3&&stat4==true) 
+		{
+			return true;
+			
+		}else {
+			return false;
+		}
+			
 	}
 	public void tapOnStorePickUp() {
 		GlobalMobileHelper.swipeScreen(Direction.UP);

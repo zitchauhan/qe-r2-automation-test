@@ -8,6 +8,8 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
+
+import com.aso.qe.test.pageobject.ios.Context;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
@@ -39,7 +41,6 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	@Then("^User is navigated To Cart Screen$")
 	public void userIsOnCart() throws InterruptedException {
-		Thread.sleep(7000);
 		assertTrue(cartPage.isYourCartLabelDisplayed());
 	}
 	
@@ -339,12 +340,14 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void user_taps_on_view_cart_button() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	   tapOnElement(Locators.PDPPage.buttonViewCart);
+	   Thread.sleep(GlobalMobileHelper.DEFAULT_EXPLICIT_WAIT * 1000L);
 	   logger.debug("Tapped on View Cart button");
 	}
 	
 	@Then("^User sees the product disclaimer \"([^\"]*)\"$")
 	public void user_sees_the_product_disclaimer(String disclaimer) throws Throwable {
 	    // Write code here for verifying the product disclaimer
+		Context.setCurrentProductDisclaimer(disclaimer);
 	    cartPage.verifyProductDisclaimer(disclaimer);
 	}
 
@@ -357,7 +360,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees longer product disclaimer with elipses$")
 	public void user_sees_longer_product_disclaimer_with_elipses() throws Throwable {
 	    // Write code here to verify longer product disclaimer
-	    cartPage.verifyLongerProductDisclaimer(productDisclaimer);
+	    cartPage.verifyLongerProductDisclaimer();
 	}
 	
 	@When("^User selects home delivery option$")
@@ -445,6 +448,22 @@ public class CartStepDef extends GlobalMobileHelper{
 	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.buttonShippingPolicy));
 	    } else if(arg.equalsIgnoreCase("Return policy")) {
 	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.buttonReturnPolicy));
+	    } else if(arg.equalsIgnoreCase("order summary")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.OrderSummary.orderSummaryHeading));
+	    } else if(arg.equalsIgnoreCase("Free with purchase label")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeItemTitleId));
+	    } else if(arg.equalsIgnoreCase("Free with purchase item title")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftProductTitleId));
+	    } else if(arg.equalsIgnoreCase("Free with purchase item image")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftProductImage));
+	    } else if(arg.equalsIgnoreCase("Free with purchase item price")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.orderItemPriceId));
+	    } else if(arg.equalsIgnoreCase("Free with purchase item discounted price")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.orderItemDiscountPriceId));
+	    } else if(arg.equalsIgnoreCase("Free with purchase tool tip")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftToolTipIcon));
+	    } else if(arg.equalsIgnoreCase("Free with purchase tool tip modal")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftToolTipIconmodal));
 	    }
 	}
 
@@ -560,13 +579,12 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Given("^A registered user is logged in$")
 	public void aRegisteredUserIsLoggedIn() throws Throwable{
 		/* Created By jitsingh7 on 2-Apr-2021 */
-		// TODO: The user will not be able to see the Guest User login tile on the cart page
-		// There can be multiple ways to verify a logged in user
-		logger.warn("to be implemented later");
+		assertFalse("User is not logged in", cartPage.isLogInButtonDisplayed());
+
 	}
-	@And("^User sees the \"(.*?)\" and \"(.*?)\" of selected Product \"(.*?)\"$")
-	public void isvariantDisplayedonCart(String variantSize , String variantColor, String variantType) {
-		assertTrue(cartPage.isvariantDisplayedOnCart(variantSize,variantColor,variantType));
+	@And("^User sees the \"(.*?)\" and \"(.*?)\" and \"(.*?)\" of selected Product \"(.*?)\"$")
+	public void isvariantDisplayedonCart(String variantSize , String variantColor,String variantWidth, String variantType) {
+		assertTrue(cartPage.isvariantDisplayedOnCart(variantSize,variantColor,variantWidth,variantType));
 	}
 
 
@@ -612,6 +630,12 @@ public class CartStepDef extends GlobalMobileHelper{
 		/* Created By jitsingh7 on 11/04/21 */
 		assertTrue(cartPage.hasWhiteGloveBulkyItem());
 		logger.info("User has a white glove and bulky product in the cart");
+	}
+	
+	// Order Summary Code , need to make it global as order summary is global component from cart to order history 
+	@Then("^User sees \"([^\"]*)\" on OrderSummary$")
+	public void user_sees_on_OrderSummary(String ElementName) throws Throwable {
+		assertTrue(cartPage.IsShowingOnOrderSummary(ElementName));
 	}
 
 }

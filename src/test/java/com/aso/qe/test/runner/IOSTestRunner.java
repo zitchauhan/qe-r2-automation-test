@@ -1,3 +1,4 @@
+
 package com.aso.qe.test.runner;
 
 import org.junit.runner.RunWith;
@@ -11,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src/test/resources/features/ios/",
 		glue="com.aso.qe.test.stepdefinition.ios",
-		tags= {"@TC-OMNI-34176"},
+		tags= {"@ST-OMNI-33179"},
 		monochrome=true,
 		//dryRun=true,
 		plugin = "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/cucumber-html-reports/Report/report1.html",
@@ -20,4 +21,5 @@ import cucumber.api.junit.Cucumber;
 
 public class IOSTestRunner {
 	
+
 }
