@@ -181,6 +181,10 @@ public class Locators {
 		public static By OverLayCartview_cart = By.id("btn_view_cart");
 		public static By OverLayCartcontinue_shopping = By.id("btn_continue_shopping");
 		public static By OverLayCartdded_to_cart = By.id("lbl_added_to_cart");
+		
+		public static By cartBadge = By.id("lbl_cart_badge");
+		public static By productTite = By.id("lbl_product_title");
+		public static By backBtn = By.id("btn_back");
 	}
 
 	public static class ShopPage{

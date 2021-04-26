@@ -273,4 +273,41 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void StoreRadioButtonSelected() throws Throwable {
 		pdp.verifyStoreRadioButtonSelected();
 	}
+	
+	//OMNI-34006
+	@Then("^User sees cart badge on top$")
+	public void user_sees_cart_badge_on_top() {
+		assertTrue(pdp.isCartBadgeDisplayed());
+	}
+	
+	@Then("^User sees the correct item count on the cart badge as \"([^\"]*)\"$")
+	public void user_sees_cart_badge_count_as(String arg1) {
+		pdp.ItemsCountOnCartBadge();
+	}
+
+	@Then("^User sees Product title on header$")
+	public void user_sees_Product_title_on_header() {
+		assertTrue(pdp.isProductTitleOnHeaderDisplayed());
+
+	}
+
+	@Then("^User sees back button$")
+	public void user_sees_back_button() {
+		assertTrue(pdp.isBackButtonDisplayed());
+	}
+
+	@When("^User scrolls up to the top$")
+	public void user_scrolls_up_to_the_top() {
+		
+	}
+
+	@Then("^User sees header will not be displayed$")
+	public void user_sees_header_will_not_be_displayed() {
+		
+	}
+
+	@When("^User taps on cart badge$")
+	public void user_taps_on_cart_badge() {
+		
+	}
 }
