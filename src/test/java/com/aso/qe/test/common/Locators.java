@@ -621,14 +621,14 @@ public class Locators {
 	}
 	
 	public static class OrderConfPage{
-		public static By paymentMethodLabel=By.id("");
-		public static By creditCardimage=By.id("");
-		public static By giftCardImage=By.id("");
-		public static By paypalImage=By.id("");
-		public static By applePayImage=By.id("");
-		public static By giftCardAmount=By.id("");
-		public static By giftCardLabel=By.id("");
-		public static By paypalLabel=By.id("");
-		public static By applePayLabel=By.id("");
+		public static By paymentMethodLabel=By.id("lbl_payment_method");
+		public static By creditCardimage=By.id("img_creditCard");
+		public static By giftCardImage=By.id("img_giftCard");
+		public static By paypalImage=By.id("img_paypal");
+		public static By applePayImage=By.id("img_applePay");
+		public static By giftCardAmount=By.id("text_giftCard_amount");
+		public static By giftCardLabel=By.id("lbl_giftCard");
+		public static By paypalLabel=By.id("lbl_paypal");
+		public static By applePayLabel=By.id("lbl_applePay");
 	}
 }
