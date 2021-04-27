@@ -110,6 +110,24 @@ public class GlobalMobileHelper {
 		return result;
 	}
 	
+	public static boolean isCheckBoxElementSelected(By locator) {
+		boolean result=false;
+		
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		try {
+			WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+			result = wait.until(ExpectedConditions.presenceOfElementLocated(locator)).isSelected();
+		}catch(TimeoutException e) {
+			logger.warn("Appium driver timed out waiting for element " + locator.toString());
+		}catch (Exception e) {
+		    System.err.println(e.getMessage());
+		}
+		
+		return result;
+	}
+	
 	public static boolean isElementDisplayed(MobileElement element) {
 		boolean result=false;
 		
@@ -384,6 +402,25 @@ public class GlobalMobileHelper {
 	public static By getLocator(By locator,String replacement) {
 		String loc = locator.toString();
 		return By.xpath(loc.replace("{0}", replacement));
+	}
+
+
+
+	
+	public static boolean swipeTillElementDisplayed(Direction dir, By element) {
+		final int NO_OF_TIMES = 4;
+		return swipeTillElementDisplayed(dir,element,NO_OF_TIMES);
+	}
+	
+	//Returns true if element is displayed false otherwise
+	public static boolean swipeTillElementDisplayed(Direction dir, By element, int noOfTimes) {
+		while(noOfTimes-- > 0) {
+			if(GlobalMobileHelper.isElementDisplayed(element)) {
+				return true;
+			}
+			swipeScreen(dir);
+		}
+		return false;
 	}
 
 }

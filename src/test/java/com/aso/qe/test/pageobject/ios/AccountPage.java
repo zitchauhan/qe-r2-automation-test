@@ -389,4 +389,16 @@ public class AccountPage extends GlobalMobileHelper{
 	public boolean isPaymentMethodLabelDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.paymentMethodLabel);
 	}
+
+	public boolean isSetAsDefaultNotDisplayed() {
+		return !GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.setAsDefaultCheckbox);
+	}
+
+	public boolean isDefaultCheckBoxChecked() {
+		return GlobalMobileHelper.isElementSelected(Locators.MyAccountPayment.setAsDefaultCheckbox);
+	}
+
+	public boolean isDefaultCheckBoxDisabled() {
+		return !GlobalMobileHelper.isElementEnabled(Locators.MyAccountPayment.setAsDefaultCheckbox);
+	}
 }
