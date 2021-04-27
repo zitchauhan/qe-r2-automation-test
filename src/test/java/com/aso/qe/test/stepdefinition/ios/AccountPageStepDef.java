@@ -208,6 +208,19 @@ public void tapOnLoginBtn() {
 public void user_sees_the_Billing_Address_Section() throws Throwable {
     accountPage.isBillingAddressSectionDisplayed();
 }
+@And("^User Sees the Listed Credit card$")
+public void isCreditCardDisplayedOnPaymentPage() {
+	accountPage.isCreditCardsDisplayed();
+}
+@Then("^User set credit card as default$")
+public void user_set_credit_card_as_default() throws Throwable {
+accountPage.tapOnSetDefaultCheckbox();
+}
+
+@When("^User Sees the Default credit card on top$")
+public void user_Sees_the_Default_credit_card_on_top() throws Throwable {
+    accountPage.verifyDefaultcreditCard();
+}
 
 	@Then("^User sees \"(.*?)\" in order Cancellation screen$")
 	public void isCancellationScreenElementDisplayed(String element) {
