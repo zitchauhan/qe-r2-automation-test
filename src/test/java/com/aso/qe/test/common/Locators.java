@@ -89,7 +89,7 @@ public class Locators {
 	}
 
 	public static class SearchPage{
-		public static By searchBar = By.id("btn_Search");
+		public static By searchBar = By.id("search_bar");
 		public static By cancelBtn = By.id("btn_cancel");
 		public static By scanBarCode = By.id("btn_scan_barcode");
 		public static By goBtn = By.id("Go");
