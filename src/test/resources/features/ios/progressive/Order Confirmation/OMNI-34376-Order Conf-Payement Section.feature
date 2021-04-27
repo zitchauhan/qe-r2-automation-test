@@ -49,10 +49,9 @@ Feature: Order Confirmation Screen - Payment Section
     Then User enters "1501 Gaylord Trail" in "Address" field on add address screen
     Then User enters "2507" in "Apt Number" field on add address screen
     Then User enters "76501" in "ZIP Code" field on add address screen
-   # Then User sees "TX" in state field on add address screen
     Then User enters "Grapevine" in "City" field on add address screen
     Then User enters "7646564657" in "Phone" field on add address screen
-  #  Then User taps on Add New address button
+    Then User taps on Add New address button
     #need to update the steps for order placement
     When User taps on checkout button
     Then User sees payment method label
