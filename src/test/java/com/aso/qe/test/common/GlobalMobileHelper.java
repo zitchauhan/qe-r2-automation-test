@@ -382,8 +382,7 @@ public class GlobalMobileHelper {
 		String loc = locator.toString();
 		return By.xpath(loc.replace("{0}", replacement));
 	}
-<<<<<<< HEAD
-=======
+
 	
 	public static boolean swipeTillElementDisplayed(Direction dir, By element) {
 		final int NO_OF_TIMES = 4;
@@ -400,7 +399,7 @@ public class GlobalMobileHelper {
 		}
 		return false;
 	}
->>>>>>> 32393c8bbd39c383abfcdcd08b5671886e59aa72
+
 }
 
 
