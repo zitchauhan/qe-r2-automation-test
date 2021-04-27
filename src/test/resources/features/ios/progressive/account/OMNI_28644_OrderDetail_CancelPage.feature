@@ -3,7 +3,7 @@ Feature: Validate Cancel Order from Cancel order detail page
 
 
 
-  @ST-OMNI-28644 @TC-OMNI-35371-01
+  @ST-OMNI-28644 @TC-OMNI-35371
  Scenario: As an ASO Mobile App user,
   I want to see the Cancel order button on order detail page
     Given User launches the application
@@ -24,7 +24,7 @@ Feature: Validate Cancel Order from Cancel order detail page
     
     
     
-    @ST-OMNI-28644 @TC-OMNI-35372-02 
+    @ST-OMNI-28644 @TC-OMNI-35372
  Scenario: As an ASO Mobile App user,
   I want to see cancel order alert confirmation screen with message is  displayed when I tap on the cancel Order button
     Given User launches the application
@@ -46,7 +46,7 @@ Feature: Validate Cancel Order from Cancel order detail page
     Then User sees No button on alert confirmation screen
     
     
-      @ST-OMNI-28644 @TC-OMNI-35373-03 
+      @ST-OMNI-28644 @TC-OMNI-35373 
  Scenario: As an ASO Mobile App user,
   I want to confirm that order has been cancelled when i tap on  Yes button from alert confirmation screen
     Given User launches the application
@@ -68,7 +68,7 @@ Feature: Validate Cancel Order from Cancel order detail page
     Then User sees order detail page 
     
     
-     @ST-OMNI-28644 @TC-OMNI-35374-04
+     @ST-OMNI-28644 @TC-OMNI-35374
  Scenario: As an ASO Mobile App user,
   I want to see order cancellation screen when i tap on No button from alert confirmation screen
     Given User launches the application
@@ -89,7 +89,7 @@ Feature: Validate Cancel Order from Cancel order detail page
     Then User sees Order cancellation confirmation screen
     Then User sees the back button
     
-     @ST-OMNI-28644 @TC-OMNI-35375-05 
+     @ST-OMNI-28644 @TC-OMNI-35375
     Scenario: As an ASO Mobile App user,
   I want to navigate to  previous screen when i tap on back button
     Given User launches the application
