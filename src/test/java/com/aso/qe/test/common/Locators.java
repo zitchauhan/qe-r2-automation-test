@@ -86,10 +86,13 @@ public class Locators {
 		public static By toggleOOS = By.id("switch_out_of_stock");
 		public static By sortAndFilterOutOfStockTitle = By.id("lbl_out_of_stock");
 		public static By sortAndFilterFilterIcon = By.id("icon_filter");
-	}
+		
+		public static By editSearch = By.id("edit_search");
+		}
 
 	public static class SearchPage{
-		public static By searchBar = By.id("btn_Search");
+	    //public static By searchBar = By.id("btn_Search");
+		public static By searchBar = By.id("search_bar");
 		public static By cancelBtn = By.id("btn_cancel");
 		public static By scanBarCode = By.id("btn_scan_barcode");
 		public static By goBtn = By.id("Go");

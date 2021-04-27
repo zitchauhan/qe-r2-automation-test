@@ -66,7 +66,15 @@ public void i_choose_to_click_on(String arg1) throws Throwable {
     
 }
 
+//OMNI-20264
+@Then("^User can edit the search$")
+public void user_can_edit_search() {
+	String edit = "Adidas";
+	plpPage.editSearch(edit);
+}
 
-
-
+//@Then("^User verifies breadcrumb is present for the product$")
+//public void user_verifies_breadcrumb() {
+//	
+//	}
 }
