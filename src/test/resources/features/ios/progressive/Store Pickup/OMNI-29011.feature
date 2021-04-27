@@ -18,7 +18,6 @@
     And User sees "Open in maps" option on store details page
     And User sees "cancel" option on store details page
     Then User taps on "cancel" on store details page
-    Then User taps on "make my store" on store details page
     
      @Sprint2 @ST-OMNI-29011 @TC-32949
    Scenario: Verify when user taps Details link corresponding to a new store 
