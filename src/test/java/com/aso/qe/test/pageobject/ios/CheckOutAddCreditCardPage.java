@@ -79,7 +79,7 @@ public class CheckOutAddCreditCardPage {
 	}
 	
 	public boolean isSaveFutureCheckBoxSelected() {
-		return GlobalMobileHelper.isElementSelected(Locators.Addnewcreditcard.checkboxSaveForFutureAddress);
+		return GlobalMobileHelper.isCheckBoxElementSelected(Locators.Addnewcreditcard.checkboxSaveForFutureAddress);
 		
 		
 	}
