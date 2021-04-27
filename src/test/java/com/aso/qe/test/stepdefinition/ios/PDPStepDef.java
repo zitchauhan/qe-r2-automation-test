@@ -284,4 +284,9 @@ public void user_click_on_on_PDP(String elementname) throws Throwable {
 public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
 	assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname)); 
 }
+
+@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP under Store Section$")
+public void i_Choose_to_validate_that_Shown_on_PDP_under_Store_Section(String elementname) throws Throwable {
+	assertTrue(PDPPage.VarifyElementPresenseOnPDPUnderStoreSEction(elementname)); 
+}
 }

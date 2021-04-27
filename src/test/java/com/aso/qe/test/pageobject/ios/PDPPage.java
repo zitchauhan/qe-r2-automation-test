@@ -811,4 +811,53 @@ if(elementname.equalsIgnoreCase("Standered Gift card modal")) {
 
 		}
 	}
+// To check Store Delivery and Store Pick for SOF Item 
+	public static boolean VarifyElementPresenseOnPDPUnderStoreSEction(String elementname) {
+if(elementname.equalsIgnoreCase("Store Delivery Heading")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.StoreDeliveryHeading);
+
+			
+		}else if(elementname.equalsIgnoreCase("Avalability Geeen")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.AvalabilityGeeenlabel);
+			
+		}else if(elementname.equalsIgnoreCase("OOS red label")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OOSredlabel);
+		}else if(elementname.equalsIgnoreCase("Not Available")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.NotAvailable);
+				}else if(elementname.equalsIgnoreCase("Free Store pickup Heading")){
+	
+					return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.FreeStorepickupHeading);
+				}else if(elementname.equalsIgnoreCase("Find Availability on other Store CTA")){
+	
+					return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.FindAvailabilityonotherStoreCTA);
+					}else if(elementname.equalsIgnoreCase("Store address")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storeAddress);
+					}else if(elementname.equalsIgnoreCase("Store phone")){
+						
+						return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storePhone);
+						}else if(elementname.equalsIgnoreCase("Store timing")){
+						
+						return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storetime);
+						}else if(elementname.equalsIgnoreCase("Notify me when available label")){
+	
+							return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.Notifymewhenavailablelabel);
+						}else if(elementname.equalsIgnoreCase("Select A Store button")){
+	
+							return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.selectStore);
+						}else if(elementname.equalsIgnoreCase("Change Store button")){
+	
+							return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.changeStore);
+
+			
+		}else {
+			
+			throw new UnsupportedOperationException("Given Button not founded on PDP");
+
+		}
+	}
 }

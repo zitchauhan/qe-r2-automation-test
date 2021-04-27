@@ -135,28 +135,40 @@ public class Locators {
 		public static By cancelBtn = By.id("cancel_btn_find_store");
 		public static By homeDeliveryRadioBtn = By.id("rd_home_delivery");
 		public static By pickUpAndDeliveryTitle = By.id("lbl_p_and_d_options");
-		public static By freeStorePickUp = By.id("lbl_free_store_pickup");
-		public static By freeStorePickUpRadioBtn = By.id("rd_free_store_pickup");
 		public static By homeDeliveryTitle = By.id("lbl_home_delivery");
-		public static By btnRadioDeliveryOption = By.id("rd_free_store_pickup");
-		public static By label = By.id("lbl_free_store_pickup");
 		public static By subLabel =By.id("lbl_order_by");
-		public static By selectStore = By.id("btn_select_store");
-		public static By changeStore = By.id("btn_change_store");
 		public static By whiteColor = By.id("color_list_item_Color_1");
 		public static By shoeSize = By.id("size_list_item_Shoe_Size_2");
-		public static By changeStoreLink = By.xpath("/*[contains(@label,'Change Store')]");
 		public static By AppStoreGuidelines = By.id("lbl_fire_arm");
 		public static By ProductSafetyInformation = By.id("lbl_detail_spec_important_product_and_safety_information");
 		public static By ProductSafetyInformationPara1 = By.id("lbl_detail_spec_important_product_and_safety_information_value 0");
 		public static By ProductSafetyInformationPara2 = By.id("lbl_detail_spec_important_product_and_safety_information_value 1");
 		public static By ProductSafetyInformationPara3 = By.id("lbl_detail_spec_important_product_and_safety_information_value 2");
 		public static By ProductSafetyInformationPara4 = By.id("lbl_detail_spec_important_product_and_safety_information_value 3");
+		// labls of store section 
 		public static By homeDeliveryRadioButton = By.id("rd_home_delivery");
 		public static By buttonChangeStore = By.id("btn_change_store");
 	    public static By storeAddress = By.id("lbl_store_address");
 		public static By storetime = By.id("lbl_time");
 		public static By storePhone = By.id("lbl_phone");
+		public static By freeStorePickUp = By.id("lbl_free_store_pickup");
+		public static By freeStorePickUpRadioBtn = By.id("rd_free_store_pickup");
+		public static By btnRadioDeliveryOption = By.id("rd_free_store_pickup");
+		public static By label = By.id("lbl_free_store_pickup");
+		public static By selectStore = By.id("btn_select_store");
+		public static By changeStore = By.id("btn_change_store");
+		public static By changeStoreLink = By.xpath("/*[contains(@label,'Change Store')]");
+		public static By StoreDeliveryHeading = By.id("lbl_StoreDeliveryHeading");
+		public static By AvalabilityGeeenlabel = By.id("lbl_AvalabilityGeeenlabel");
+		public static By OOSredlabel = By.id("lbl_OOSlabel");
+		public static By NotAvailable = By.id("lbl_NotAvailable");
+		public static By FreeStorepickupHeading = By.id("lbl_FreeStorepickupHeading");
+		public static By FindAvailabilityonotherStoreCTA = By.id("btn_FindAvailabilityonotherStoreCTA");
+		public static By Notifymewhenavailablelabel = By.id("lbl_Notifymewhenavailablelabel");
+		public static By limitedstocklabel = By.id("lbl_limitedstocklabel");
+		
+		
+		// store label section
 		public static By OverLayCartSKU = By.id("lbl_product_sku_value");
 		public static By OverLayCartPrice = By.id("lbl_product_price");
 		public static By OverLayCartQty = By.id("lbl_product_qty_value");
