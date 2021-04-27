@@ -279,4 +279,15 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void click_on_PDP_page(String arg1) throws Throwable {
 	    pdp.tapOnPurchaseButton();
 	}
+
+
+@Then("^user click on \"([^\"]*)\" on PDP$")
+public void user_click_on_on_PDP(String elementname) throws Throwable {
+	PDPPage.clickonPDP(elementname);
+}
+
+@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
+public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
+	assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname)); 
+}
 }
