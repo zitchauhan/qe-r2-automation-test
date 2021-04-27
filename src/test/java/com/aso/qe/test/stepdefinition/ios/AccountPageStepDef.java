@@ -87,34 +87,34 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 
 	@When("^user see \"([^\"]*)\" on my account page$")
 	public void user_see_on_my_account_page(String pagename) throws Throwable {
-		assertTrue(accountPage.VarifyElementPresenseOnAccountPage(pagename));
+		assertTrue(accountPage.VarifyElementPresenseOnAccountPage(pagename)); 
 	}
-	// to verify user is on my accounts cards page
+	// to verify user is on my accounts cards page 
 	@Then("^user see \"([^\"]*)\" on my account payment page$")
 	public void user_is_on_my_account_cards_page(String pagename) throws Throwable {
-		assertTrue(accountPage.VarifyElementPresenseOnAccountCardsPage(pagename));
+		assertTrue(accountPage.VarifyElementPresenseOnAccountCardsPage(pagename)); 
 	}
 	@Then("^user taps on \"([^\"]*)\" on my account page$")
 public void tabOnButtonOnAccountPage(String btnName) {
-
+		
 		accountPage.tabOnButtonOnAccountPage(btnName);
 	}
 	@When("^user clicks on \"([^\"]*)\" on my account payment page$")
 	public void tabOnButtonOnAccountCardsPage(String btnName) {
-
+		
 		accountPage.tabOnButtonOnAccountCardsPage(btnName);
 	}
-
+	
 	@Then("^i choose to enter \"([^\"]*)\" on aso card page$")
 	public void i_choose_to_enter_Aso_card(String carddetails) throws Throwable {
 		 accountPage.enterCardDetails(carddetails);
 	}
 
 
-// To verify that user is on aso card page
+// To verify that user is on aso card page 
 @Then("^user is taken to \"([^\"]*)\" on aso card page$")
 public void user_is_taken_to_on_aso_card_page(String pagename) throws Throwable {
-	assertTrue(accountPage.VarifyElementPresenseOnAsoCardsPage(pagename));
+	assertTrue(accountPage.VarifyElementPresenseOnAsoCardsPage(pagename)); 
 }
 	@Then("^User taps on the orders button$")
 	public void tapOnOrderButton() {
@@ -161,16 +161,57 @@ public void user_is_taken_to_on_aso_card_page(String pagename) throws Throwable 
 		assertTrue(accountPage.isPaymentMethodLabelDisplayed());
 	}
 
+// To Click on add new Aso card page 
+@When("^user clicks on \"([^\"]*)\" on aso card page$")
+public void user_clicks_on_on_aso_card_page(String btnName) {
+	
+	accountPage.tabOnButtonOnAsoCardsPage(btnName);
+}
+@When("^User Add the Credit card cardholder Name \"([^\"]*)\"$")
+public void user_Add_the_Credit_card_cardholder_Name(String cardHolderName)  {
+    accountPage.addCreditCardHolderName(cardHolderName);
+}
+@Then("^User add the credit Card Number \"([^\"]*)\"$")
+public void user_add_the_credit_Card_Number(String cardNumber)  {
+   accountPage.addCreditCardNumber(cardNumber);
+}
+@Then("^User add the credit card Expiry Date \"([^\"]*)\"$")
+public void user_add_the_credit_card_Expiry_Date(String expiryDate)  {
+    accountPage.addCreditCardExpiryDate(expiryDate);
+}
+@Then("^User add the credit card cvv \"([^\"]*)\"$")
+public void user_add_the_credit_card_cvv(String cvvNumber)  {
+    accountPage.addCreditCardCvv(cvvNumber);
+}
+@Then("^i choose to enter \"([^\"]*)\" on credit card page$")
+public void i_choose_to_enter_on_credit_card_page(String carddetails)  {
+	accountPage.enterCardDetails(carddetails);
+}
+@When("^user clicks on \"([^\"]*)\" on credit card page$")
+public void user_clicks_on_on_credit_card_page(String btnName)  {
+	accountPage.tabOnButtonOnAsoCardsPage(btnName);
+}
+@Then("^user is navigate to credit card details page$")
+public void user_is_navigate_to_credit_card_details_page()  {
+   assertTrue( accountPage.isCreditCardDetailspageDisplayed());
+}
+@Then("^user sees the Alert PopUp message$")
+public void user_sees_the_Alert_PopUp_message()  {
+   assertTrue( accountPage.isAlertPopUpDisplayed());
+}
+@When("^User taps on LogIn button at Account Page$")
+public void tapOnLoginBtn() {
+	accountPage.tapOnLoginBtn();
+}
+
+@Then("^user sees the Billing Address Section$")
+public void user_sees_the_Billing_Address_Section() throws Throwable {
+    accountPage.isBillingAddressSectionDisplayed();
+}
+
 	@Then("^User sees \"(.*?)\" in order Cancellation screen$")
 	public void isCancellationScreenElementDisplayed(String element) {
 		assertTrue(orderPage.isCancellationScreenElementDisplayed(element));
-	}
-
-	// To Click on add new Aso card page
-	@When("^user clicks on \"([^\"]*)\" on aso card page$")
-	public void user_clicks_on_on_aso_card_page(String btnName) {
-
-		accountPage.tabOnButtonOnAsoCardsPage(btnName);
 	}
 
 	@Then("^Set as default checkbox is not visible to the user$")
