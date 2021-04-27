@@ -11,6 +11,7 @@ public class Locators {
 		public static By wishlist = By.id("lbl_wishlist");
 		public static By cart = By.id("lbl_cart");
 		public static By account = By.id("lbl_account");
+		public static By Login = By.xpath("//XCUIElementTypeButton[@name=\"LOGIN\"]");
 	}
 	
 	public static class LoginPage{
@@ -57,6 +58,8 @@ public class Locators {
 		public static By labelInfoMessagetitle = By.id("lbl_info_message_title");
 		public static By labelInfoMessageSubtitle = By.id("lbl_info_message_sub_title");
 		public static By buttonInfoMessageCTA = By.id("btn_info_message_cta");
+		public static By searchsuggestionkeyword = By.id("lbl_searchsuggestionkeyword");
+		public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
 	}
 
 	public static class PLPPage{
