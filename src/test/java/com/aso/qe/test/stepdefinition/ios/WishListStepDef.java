@@ -25,8 +25,13 @@ public class WishListStepDef extends GlobalMobileHelper{
 
 	//OMNI-28640
 	@When("^User taps on \"([^\"]*)\" button$")
-	public void user_taps_on_edit_button(String arg1){
+	public void user_taps_on_button(String arg1){
 			wishlistPage.tapOnButton(arg1);
+	}
+	
+	@Then("^User sees \"([^\"]*)\" screen$")
+	public void user_sees_page(String arg) {
+		verifyUserIsOnPage(arg);
 	}
 
 	@Then("^User renames wishlist$")
@@ -72,14 +77,39 @@ public class WishListStepDef extends GlobalMobileHelper{
 	public void user_sees_button_enabled(String btn) {
 		wishlistPage.buttonEnabled(btn);
 	}
-	
-	@Then("^User sees \"([^\"]*)\" screen$")
-	public void user_sees_screen(String arg) {
-		verifyUserIsOnPage(arg);
-	}
 
 	@When("^User taps on \"([^\"]*)\" back button$")
 	public void user_taps_on_back_button(String back) {
 		wishlistPage.tapOnBackButton(back);
-	}	 
+	}
+	
+	@Then("^User sees item count in wishlist items screen$")
+	public void isItemCountDisplayed() {
+		assertTrue(wishlistPage.isItemCountDisplayed());
+	}
+	
+	@Then("^User sees \"([^\"]*)\" of the wishlist item$")
+	public void isWishListItemDisplayed(String arg) {
+		assertTrue(wishlistPage.isWishListItemDisplayed(arg));
+	}
+	
+	@Then("^User taps on wishlist \"([^\"]*)\"$")
+	public void tapOnWishList(String wishlist) {
+		wishlistPage.tapOnWishList(wishlist);
+	}
+	
+	@Then("^User is taken to \"([^\"]*)\" wishlist$")
+	public void isWishListDisplayed(String wishlist) {
+		wishlistPage.isWishListDisplayed(wishlist);
+	}
+	
+	@When("^User taps on Remove button$")
+	public void tapOnRemoveButton() {
+		wishlistPage.tapOnRemoveButton();
+	}
+	
+	@Then("^User is shown the confirmation popup$")
+	public void isConfirmationPopUpDisplayed() {
+		assertTrue(wishlistPage.isConfirmationPopUpDisplayed());
+	}
 }
