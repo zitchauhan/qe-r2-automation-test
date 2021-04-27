@@ -546,30 +546,30 @@ public class Locators {
 			
 		}
 		
-		//Use this for my account add new cc section 
+		//Use this for my account add new cc section 27.04.2021 - Add credit card screen
 				public static class Addnewcreditcard{
 					public static By buttonback = By.id("btn_payment_back");
 					public static By AddnewcrerditCardlabel = By.id("lbl_addnewcreditcard");
-					public static By imgVisa=By.id("");
-					public static By imgDisover=By.id("");
-					public static By imgAmex=By.id("");
-					public static By imgMasterCard=By.id("");
-					public static By inputCardHolderName=By.id("");
-					public static By inputCardNumberField=By.id("");
-					public static By inputCVV=By.id("");
-					public static By inputExpiryDate=By.id("");
-					public static By checkboxSaveForFutureAddress=By.id("");
+					public static By imgVisa=By.id("img_visa");
+					public static By imgDisover=By.id("img_Discover");
+					public static By imgAmex=By.id("img_Amex");
+					public static By imgMasterCard=By.id("img_MasterCard");
+					public static By inputCardHolderName=By.id("input_cardholder_name");
+					public static By inputCardNumberField=By.id("input_card_number");
+					public static By inputCVV=By.id("input_cvv");
+					public static By inputExpiryDate=By.id("input_expiry_date");
+					public static By checkboxSaveForFutureAddress=By.id("checkbox_save_future_address");
 					
 
-					public static By labelBillingAddress=By.id("");
-					public static By radioSameAsShippingAddress=By.id("");
-					public static By radioAddBillingAddress=By.id("");
-					public static By buttonSaveCreditCard=By.id("");
+					public static By labelBillingAddress=By.id("label_billing_address");
+					public static By radioSameAsShippingAddress=By.id("radio_same_as_shipping_address");
+					public static By radioAddBillingAddress=By.id("radio_add_billing_address");
+					public static By buttonSaveCreditCard=By.id("button_save_credit_card");
 					
 					
-					public static By popupWarning= By.id("");
-					public static By buttonYesWarning = By.id("");
-					public static By buttonNoWarning= By.id("");
+					public static By popupWarning= By.id("popup_warning");
+					public static By buttonYesWarning = By.id("button_yes_warning");
+					public static By buttonNoWarning= By.id("button_no_warning");
 				}
 
 
