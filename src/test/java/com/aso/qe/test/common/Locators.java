@@ -235,6 +235,13 @@ public class Locators {
 		public static By billingZipCode = By.id("input_blling_zip_code");
 		public static By buttonCheck = By.id("btn_check");
 		public static By buttonLogOut = By.xpath("//XCUIElementTypeButton[@label=\"Log Out\"]");
+		public static By creditCardHOlderName;
+		public static By creditCardNumber;
+		public static By creditCardExpiry;
+		public static By creditCardCvvNumber;
+		public static By creditCardPageTitle;
+		public static By alertPopUPCreditCard;
+		public static By billingAddressTitle = By.id("lbl_billing_address");
     }
 	
 	public static class CartPage{
@@ -619,4 +626,5 @@ public class Locators {
 		public static By labelAddressUsername = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_address')]");
 		public static By editAddressLink = By.xpath("//XCUIElementTypeOther[@name='Edit']");
 	}
+	
 }

@@ -350,4 +350,86 @@ public class AccountPage {
 	public boolean isPaymentMethodLabelDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.paymentMethodLabel);
 	}
+
+	public void addCreditCardHolderName(String cardHolderName) {
+		driver.findElement(Locators.AccountPage.creditCardHOlderName).sendKeys(cardHolderName);
+		
+	}
+
+	public void addCreditCardNumber(String cardNumber) {
+		driver.findElement(Locators.AccountPage.creditCardNumber).sendKeys(cardNumber);
+		
+	}
+
+	public void addCreditCardExpiryDate(String expiryDate) {
+		driver.findElement(Locators.AccountPage.creditCardExpiry).sendKeys(expiryDate);
+		
+	}
+
+	public void addCreditCardCvv(String cvvNumber) {
+		driver.findElement(Locators.AccountPage.creditCardCvvNumber).sendKeys(cvvNumber);
+		
+	}
+
+	public boolean isCreditCardDetailspageDisplayed() {
+	
+		return GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.creditCardPageTitle);
+		
+	}
+
+	public boolean isAlertPopUpDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.alertPopUPCreditCard);
+		
+	}
+
+	public void enterCreditCardDetails(String fieldName) {
+		
+		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(fieldName);
+ 		String element = null;
+ 		if(fieldName.equalsIgnoreCase("ASOCard")){
+ 			GlobalMobileHelper.setText(Locators.Addnewasocreditcard.Asocardtextbox, keywordValue,Locators.Addnewasocreditcard.Setasdefaultcheckbox);
+
+ 			
+ 		}else if(fieldName.equalsIgnoreCase("ccfirstname")){
+
+ 			GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingFirstName, keywordValue,Locators.MyAccountBillingAddress.BilingLastName);
+ 		}else if(fieldName.equalsIgnoreCase("ccnewfirstname")){
+
+ 			GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingFirstName, keywordValue,Locators.MyAccountBillingAddress.BilingLastName);
+	
+	 	}else if(fieldName.equalsIgnoreCase("ccLastname")){
+	 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingLastName, keywordValue,Locators.MyAccountBillingAddress.BilingAddressText);
+	 	
+	 	}else if(fieldName.equalsIgnoreCase("ccAddress")){
+
+	 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingAddressText, keywordValue,Locators.MyAccountBillingAddress.BilingAptName);
+	 		
+	 	}else if(fieldName.equalsIgnoreCase("ccaprtname")){
+	 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingAptName, keywordValue,Locators.MyAccountBillingAddress.BilingZipCode);
+	 		
+	 		
+	 	}else if(fieldName.equalsIgnoreCase("cczipcode")){
+	 		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingZipCode, keywordValue,Locators.MyAccountBillingAddress.BilingCity);
+	 	
+	 	}else if(fieldName.equalsIgnoreCase("entercccity")){
+		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingCity, keywordValue,Locators.MyAccountBillingAddress.BilingPhoneNumber);	
+		
+	 	}else if(fieldName.equalsIgnoreCase("ccmobilenumber")){
+		GlobalMobileHelper.setText(Locators.MyAccountBillingAddress.BilingPhoneNumber, keywordValue);
+		GlobalMobileHelper.tapOnElement(Locators.MyAccountBillingAddress.LabelBillingAddress);
+	}else {
+		
+		throw new UnsupportedOperationException("Given Element type not defined");
+	}
+	}
+
+	public void tapOnLoginBtn() {
+		GlobalMobileHelper.tapOnElement(Locators.AccountPage.loginLink);
+		
+	}
+
+	public void isBillingAddressSectionDisplayed() {
+		GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.billingAddressTitle);
+		
+	}
 }

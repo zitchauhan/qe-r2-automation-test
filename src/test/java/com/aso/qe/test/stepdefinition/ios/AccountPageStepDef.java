@@ -152,5 +152,52 @@ public void user_clicks_on_on_aso_card_page(String btnName) {
 	
 	accountPage.tabOnButtonOnAsoCardsPage(btnName);
 }
+@When("^User Add the Credit card cardholder Name \"([^\"]*)\"$")
+public void user_Add_the_Credit_card_cardholder_Name(String cardHolderName)  {
+    accountPage.addCreditCardHolderName(cardHolderName);
+}
+@Then("^User add the credit Card Number \"([^\"]*)\"$")
+public void user_add_the_credit_Card_Number(String cardNumber)  {
+   accountPage.addCreditCardNumber(cardNumber);
+}
+@Then("^User add the credit card Expiry Date \"([^\"]*)\"$")
+public void user_add_the_credit_card_Expiry_Date(String expiryDate)  {
+    accountPage.addCreditCardExpiryDate(expiryDate);
+}
+@Then("^User add the credit card cvv \"([^\"]*)\"$")
+public void user_add_the_credit_card_cvv(String cvvNumber)  {
+    accountPage.addCreditCardCvv(cvvNumber);
+}
+@Then("^i choose to enter \"([^\"]*)\" on credit card page$")
+public void i_choose_to_enter_on_credit_card_page(String carddetails)  {
+	accountPage.enterCardDetails(carddetails);
+}
+@When("^user clicks on \"([^\"]*)\" on credit card page$")
+public void user_clicks_on_on_credit_card_page(String btnName)  {
+	accountPage.tabOnButtonOnAsoCardsPage(btnName);
+}
+@Then("^user is navigate to credit card details page$")
+public void user_is_navigate_to_credit_card_details_page()  {
+   assertTrue( accountPage.isCreditCardDetailspageDisplayed());
+}
+@Then("^user sees the Alert PopUp message$")
+public void user_sees_the_Alert_PopUp_message()  {
+   assertTrue( accountPage.isAlertPopUpDisplayed());
+}
+@When("^User taps on LogIn button at Account Page$")
+public void tapOnLoginBtn() {
+	accountPage.tapOnLoginBtn();
+}
+
+@Then("^user sees the Billing Address Section$")
+public void user_sees_the_Billing_Address_Section() throws Throwable {
+    accountPage.isBillingAddressSectionDisplayed();
+}
+
+
+
+
+
+
 
 }
