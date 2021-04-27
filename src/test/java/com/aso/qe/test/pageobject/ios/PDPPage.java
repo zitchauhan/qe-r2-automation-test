@@ -763,6 +763,7 @@ public class PDPPage {
 
 	public void tapOnPurchaseButton() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.purchaseBtn);
+	}
 
 	public static void clickonPDP(String elementname) {
 		if(elementname.equalsIgnoreCase("addtocart")) {
