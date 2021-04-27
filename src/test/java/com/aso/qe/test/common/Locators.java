@@ -242,6 +242,7 @@ public class Locators {
 		public static By creditCardPageTitle;
 		public static By alertPopUPCreditCard;
 		public static By billingAddressTitle = By.id("lbl_billing_address");
+		public static By setAsDefaultCheckBox;
     }
 	
 	public static class CartPage{

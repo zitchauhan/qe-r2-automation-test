@@ -1,5 +1,7 @@
 package com.aso.qe.test.pageobject.ios;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 
 import com.aso.qe.framework.common.PropertiesHelper;
@@ -430,6 +432,34 @@ public class AccountPage {
 
 	public void isBillingAddressSectionDisplayed() {
 		GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.billingAddressTitle);
+		
+	}
+
+	public boolean isCreditCardsDisplayed() {
+		List<MobileElement> ls = driver.findElements(By.xpath(""));
+		if(ls.size()!=0) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+
+	public void tapOnSetDefaultCheckbox() {
+		GlobalMobileHelper.tapOnElement(Locators.AccountPage.setAsDefaultCheckBox);
+		
+	}
+
+	public boolean verifyDefaultcreditCard() {
+		List<MobileElement> ls = driver.findElements(By.xpath(""));
+		boolean stat =false;
+		for(int i = 1; i<=ls.size(); i++) {
+			if(i==1) {
+				 stat = ls.get(i).isDisplayed();
+				
+			}
+		}
+		return stat;
 		
 	}
 }
