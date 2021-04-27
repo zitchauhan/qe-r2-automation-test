@@ -1,6 +1,6 @@
 Feature: Verify PDP CR - PDP Header and Cart Badge
 
-@Sprint5 @TC-OMNI- @ST-OMNI-34006
+@Sprint5 @TC-OMNI-35872 @ST-OMNI-34006
 Scenario: Verify user sees PDP CR - PDP Header and Cart Badge
   Given User launches the application
   And User continues as guest user
@@ -18,8 +18,9 @@ Scenario: Verify user sees PDP CR - PDP Header and Cart Badge
   And User taps on add to cart button 
   And User taps on Continue shopping button
   Then User sees the correct item count on the cart badge as "99+"
-  
-  Scenario: Verify user sees PDP CR - PDP Header and Cart Badge
+ 
+ @Sprint5 @TC-OMNI-35876 @ST-OMNI-34006 
+  Scenario: Verify user sees no Header on scrolling up in PDP
   Given User launches the application
   And User continues as guest user
   When User Sees the Search Box
@@ -34,8 +35,9 @@ Scenario: Verify user sees PDP CR - PDP Header and Cart Badge
   Then User sees longer product disclaimer with elipses
   When User scrolls up to the top
   Then User sees header will not be displayed 
-  
-  Scenario: Verify user sees PDP CR - PDP Header and Cart Badge
+ 
+ @Sprint5 @TC-OMNI-35878 @ST-OMNI-34006 
+  Scenario: Verify user sees Cart Badge and navigates to Cart Screen
   Given User launches the application
   And User continues as guest user
   When User Sees the Search Box
@@ -46,8 +48,4 @@ Scenario: Verify user sees PDP CR - PDP Header and Cart Badge
   And User sees cart badge on top 
   When User taps on cart badge
   Then User is navigated To Cart Screen
-  
-  
-  
-	
   
