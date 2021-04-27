@@ -143,8 +143,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	}
 	
 	@And("^User sees the order summary label$")
-	public boolean isOrderSummaryLabelDisplayed() throws Throwable {
-		return isElementDisplayed(Locators.CartPage.orderSummaryLabel);
+	public void isOrderSummaryLabelDisplayed() throws Throwable {
+		assertTrue(cartPage.isOrderSummaryLabelDisplayed());
 	}
 	
 	@And("^User sees the order total label$")
