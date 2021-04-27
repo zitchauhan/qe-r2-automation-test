@@ -69,6 +69,20 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	public void user_taps_on_Find_Store_link() throws Throwable {
 		accountPage.tapOnFindStoreLink();
 	}
+	@Then("^User verifies set as default address checkbox is \"([^\"]*)\"$")
+	public void user_verifies_set_as_default_address_checkbox_is(String status) throws Throwable {
+		accountPage.verifydefaultAddress(status);
+	}
+	
+	@Then("^User taps on add new address button$")
+	public void user_taps_on_add_new_address_button() throws Throwable {
+		accountPage.tapOnAddNewAddress();
+	}
+	
+	@When("^User selects \"([^\"]*)\" address to edit$")
+	public void user_selects_address_to_edit(String addressNum) throws Throwable {
+		accountPage.selectAddress(addressNum);
+	}
 	
 
 	@When("^user see \"([^\"]*)\" on my account page$")
