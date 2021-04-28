@@ -140,5 +140,25 @@ public class WishlistPage {
 	public boolean isConfirmationPopUpDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.confirmationPopup);
 	}
+
+	public void tapOnCreatedWishList(String arg1) {
+		GlobalMobileHelper.tapOnElement(Locators.WishlistPage.createdWishlist);
+	}
+
+	public boolean varifyElementPresenseOnPage(String element) {
+			if (element.equalsIgnoreCase("Instruction banner")) {
+				return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.bannerTitle);
+			} else if (element.equalsIgnoreCase("Instruction Banner subtitle")) {
+				return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.bannerSubTitle);
+			}else {
+				throw new UnsupportedOperationException("Given Element type not defined");
+			}
+		}
+
+	public void tapOnBannerCta(String arg1) {
+			if (GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.bannerCTA)) {
+				GlobalMobileHelper.tapOnElement(Locators.WishlistPage.bannerCTA);
+			}
+		}		
 }
 
