@@ -230,6 +230,10 @@ public class Locators {
 		public static By wishListHeader = By.xpath("//*[contains(@label,'{0}')]");
 		public static By emptyWishListLabel = By.id("lbl_wishlist_empty");
 		public static By confirmationPopup = By.xpath("//*[contains(@label,'Remove')]");
+		public static By createdWishlist = By.id("lbl_created_wishlist");
+		public static By bannerTitle = By.id("lbl_banner_title");
+		public static By bannerSubTitle = By.id("lbl_banner_sub_title");
+		public static By bannerCTA = By.id("lbl_banner_cta");
 	}
 
 	public static class ShopNewPage{

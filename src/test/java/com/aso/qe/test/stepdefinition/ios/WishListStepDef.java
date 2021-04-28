@@ -3,6 +3,7 @@ package com.aso.qe.test.stepdefinition.ios;
 import static org.junit.Assert.assertTrue;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.HomePage;
 import com.aso.qe.test.pageobject.ios.WishlistPage;
 
@@ -111,5 +112,34 @@ public class WishListStepDef extends GlobalMobileHelper{
 	@Then("^User is shown the confirmation popup$")
 	public void isConfirmationPopUpDisplayed() {
 		assertTrue(wishlistPage.isConfirmationPopUpDisplayed());
+	}
+	
+	//OMNI-28622
+	@When("^User taps on \"([^\"]*)\" wishlist$")
+	public void user_taps_on_wishlist(String arg1){
+		wishlistPage.tapOnCreatedWishList(arg1);
+	}
+	
+	@Then("^User sees \"([^\"]*)\" on wishlist page$")
+	public void user_sees_on_wishlist_page(String arg1) {
+		assertTrue(wishlistPage.varifyElementPresenseOnPage(arg1));
+	}
+	@Then("^User sees information message title \"([^\"]*)\" on wishlist page$")
+	public void user_sees_title_on_wishlist_page(String titleText) {
+		String infoMessageTitle = getElementText(Locators.HomePage.labelInfoMessagetitle);
+		assertTrue(infoMessageTitle.toLowerCase().contains(titleText.toLowerCase()));	}
+
+	@Then("^User sees information message subtitle \"([^\"]*)\" on wishlist page$")
+	public void user_sees_information_message_subtitle_on_wishlist_page(String subTitleText){
+		assertTrue(getElementText(Locators.HomePage.labelInfoMessageSubtitle).toLowerCase().contains(subTitleText.toLowerCase()));
+	}
+	
+	@Then("^User click on the \"([^\"]*)\" on wishlist page$")
+	public void user_click_on_cta(String arg1){
+		if (arg1.contains("Visit Academy.com")){
+			tapOnElement(Locators.WishlistPage.bannerCTA);
+		}else {
+			wishlistPage.tapOnBannerCta(arg1);
+		}
 	}
 }
