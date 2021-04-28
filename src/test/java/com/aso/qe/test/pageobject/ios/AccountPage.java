@@ -1,5 +1,6 @@
 package com.aso.qe.test.pageobject.ios;
 
+import java.util.List;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -122,7 +123,7 @@ public class AccountPage extends GlobalMobileHelper{
 	public void selectAddress(String addressNum) {
 		List<MobileElement>savedAddressesList = driver.findElements(Locators.AddressBook.savedAddresses);
 		if(addressNum.equalsIgnoreCase("Default")||addressNum.equalsIgnoreCase("First"))
-			GlobalMobileHelper.tapOnElement(savedAddressesList.get(0));
+			GlobalMobileHelper.tapOnElement(savedAddressesList.get(0));	
 		else if(addressNum.equalsIgnoreCase("second"))
 			GlobalMobileHelper.tapOnElement(savedAddressesList.get(1));
 		else if(addressNum.equalsIgnoreCase("any")) {
@@ -149,7 +150,7 @@ public class AccountPage extends GlobalMobileHelper{
 	}
 	}
 
-	// Methode to Click on My account card page
+	// Methode to Click on My account card page 
 	 public void tabOnButtonOnAccountCardsPage(String btnName) {
 		if(btnName.equalsIgnoreCase("Add new Academy card tile")) {
 			
@@ -469,7 +470,7 @@ public class AccountPage extends GlobalMobileHelper{
 
 	public void isBillingAddressSectionDisplayed() {
 		GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.billingAddressTitle);
-
+		
 	}
 
 	public boolean isCreditCardsDisplayed() {
@@ -479,12 +480,12 @@ public class AccountPage extends GlobalMobileHelper{
 		}else {
 			return false;
 		}
-
+		
 	}
 
 	public void tapOnSetDefaultCheckbox() {
 		GlobalMobileHelper.tapOnElement(Locators.AccountPage.setAsDefaultCheckBox);
-
+		
 	}
 
 	public boolean verifyDefaultcreditCard() {
@@ -493,12 +494,19 @@ public class AccountPage extends GlobalMobileHelper{
 		for(int i = 1; i<=ls.size(); i++) {
 			if(i==1) {
 				 stat = ls.get(i).isDisplayed();
-
+				
 			}
 		}
 		return stat;
+		
+	}
 
-
+	public void tapOnCreditCard(int creditCardPosition) {
+		List<MobileElement> creditCards = driver.findElements(By.xpath(""));
+		for(int i=1; i<=creditCards.size();i++) {
+			if(i==creditCardPosition)
+			creditCards.get(i).click();
+		}
 	}
 
 	public boolean isSetAsDefaultNotDisplayed() {
@@ -517,12 +525,4 @@ public class AccountPage extends GlobalMobileHelper{
 		 return GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.greetingMessage);
 	}
 
-	public void tapOnCreditCard(int creditCardPosition) {
-		List<MobileElement> creditCards = driver.findElements(By.xpath(""));
-		for(int i=1; i<=creditCards.size();i++) {
-			if(i==creditCardPosition)
-			creditCards.get(i).click();
-		}
-		
-	}
 }

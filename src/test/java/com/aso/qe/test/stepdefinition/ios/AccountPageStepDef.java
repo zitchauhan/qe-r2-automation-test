@@ -73,17 +73,17 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	public void user_verifies_set_as_default_address_checkbox_is(String status) throws Throwable {
 		accountPage.verifydefaultAddress(status);
 	}
-
+	
 	@Then("^User taps on add new address button$")
 	public void user_taps_on_add_new_address_button() throws Throwable {
 		accountPage.tapOnAddNewAddress();
 	}
-
+	
 	@When("^User selects \"([^\"]*)\" address to edit$")
 	public void user_selects_address_to_edit(String addressNum) throws Throwable {
 		accountPage.selectAddress(addressNum);
 	}
-
+	
 
 	@When("^user see \"([^\"]*)\" on my account page$")
 	public void user_see_on_my_account_page(String pagename) throws Throwable {
@@ -161,12 +161,13 @@ public void user_is_taken_to_on_aso_card_page(String pagename) throws Throwable 
 		assertTrue(accountPage.isPaymentMethodLabelDisplayed());
 	}
 
-// To Click on add new Aso card page 
+// To Click on add new Aso card page
 @When("^user clicks on \"([^\"]*)\" on aso card page$")
 public void user_clicks_on_on_aso_card_page(String btnName) {
-	
+
 	accountPage.tabOnButtonOnAsoCardsPage(btnName);
 }
+
 @When("^User Add the Credit card cardholder Name \"([^\"]*)\"$")
 public void user_Add_the_Credit_card_cardholder_Name(String cardHolderName)  {
     accountPage.addCreditCardHolderName(cardHolderName);
@@ -235,17 +236,17 @@ public void user_Click_on_the_Listed_Credit_card_no(int creditCardPosition)  {
 	public void isSetAsDefaultNotDisplayed() {
 		assertTrue(accountPage.isSetAsDefaultNotDisplayed());
 	}
-
+	
 	@Then("^Set as default checkbox is visible to the user$")
 	public void isSetAsDefaultDisplayed() {
 		assertFalse(accountPage.isSetAsDefaultNotDisplayed());
 	}
-
+	
 	@Then("^Default checkbox is unchecked$")
 	public void isDefaultCheckBoxChecked() {
 		assertFalse(accountPage.isDefaultCheckBoxChecked());
 	}
-
+	
 	@Then("^Set as default checkbox is disabled for the user$")
 	public void isDefaultCheckBoxDisabled() {
 		assertTrue(accountPage.isDefaultCheckBoxDisabled());
