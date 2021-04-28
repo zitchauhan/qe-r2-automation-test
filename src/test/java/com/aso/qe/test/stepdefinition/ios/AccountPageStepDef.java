@@ -1,5 +1,6 @@
 package com.aso.qe.test.stepdefinition.ios;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
@@ -67,6 +68,20 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	@Then("^User taps on Find Store link$")
 	public void user_taps_on_Find_Store_link() throws Throwable {
 		accountPage.tapOnFindStoreLink();
+	}
+	@Then("^User verifies set as default address checkbox is \"([^\"]*)\"$")
+	public void user_verifies_set_as_default_address_checkbox_is(String status) throws Throwable {
+		accountPage.verifydefaultAddress(status);
+	}
+	
+	@Then("^User taps on add new address button$")
+	public void user_taps_on_add_new_address_button() throws Throwable {
+		accountPage.tapOnAddNewAddress();
+	}
+	
+	@When("^User selects \"([^\"]*)\" address to edit$")
+	public void user_selects_address_to_edit(String addressNum) throws Throwable {
+		accountPage.selectAddress(addressNum);
 	}
 	
 
@@ -146,9 +161,12 @@ public void user_is_taken_to_on_aso_card_page(String pagename) throws Throwable 
 		assertTrue(accountPage.isPaymentMethodLabelDisplayed());
 	}
 
-// To Click on add new Aso card page 
-@When("^user clicks on \"([^\"]*)\" on aso card page$")
-public void user_clicks_on_on_aso_card_page(String btnName) {
+	// To Click on add new Aso card page 
+	@When("^user clicks on \"([^\"]*)\" on aso card page$")
+	public void user_clicks_on_on_aso_card_page(String btnName) {
+		
+		accountPage.tabOnButtonOnAsoCardsPage(btnName);
+	}
 	
 	accountPage.tabOnButtonOnAsoCardsPage(btnName);
 }
@@ -217,4 +235,23 @@ public void user_Click_on_the_Listed_Credit_card_no(int creditCardPosition)  {
 
 
 
+	@Then("^Set as default checkbox is not visible to the user$")
+	public void isSetAsDefaultNotDisplayed() {
+		assertTrue(accountPage.isSetAsDefaultNotDisplayed());
+	}
+	
+	@Then("^Set as default checkbox is visible to the user$")
+	public void isSetAsDefaultDisplayed() {
+		assertFalse(accountPage.isSetAsDefaultNotDisplayed());
+	}
+	
+	@Then("^Default checkbox is unchecked$")
+	public void isDefaultCheckBoxChecked() {
+		assertFalse(accountPage.isDefaultCheckBoxChecked());
+	}
+	
+	@Then("^Set as default checkbox is disabled for the user$")
+	public void isDefaultCheckBoxDisabled() {
+		assertTrue(accountPage.isDefaultCheckBoxDisabled());
+	}
 }
