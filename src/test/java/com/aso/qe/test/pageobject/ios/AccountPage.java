@@ -516,4 +516,13 @@ public class AccountPage extends GlobalMobileHelper{
 	public boolean isGreetingMessageDisplayed() {
 		 return GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.greetingMessage);
 	}
+
+	public void tapOnCreditCard(int creditCardPosition) {
+		List<MobileElement> creditCards = driver.findElements(By.xpath(""));
+		for(int i=1; i<=creditCards.size();i++) {
+			if(i==creditCardPosition)
+			creditCards.get(i).click();
+		}
+		
+	}
 }

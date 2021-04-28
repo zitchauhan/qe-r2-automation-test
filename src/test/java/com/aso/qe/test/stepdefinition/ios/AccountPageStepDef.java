@@ -218,8 +218,12 @@ accountPage.tapOnSetDefaultCheckbox();
 }
 
 @When("^User Sees the Default credit card on top$")
-public void user_Sees_the_Default_credit_card_on_top() throws Throwable {
+public void user_Sees_the_Default_credit_card_on_top()  {
     accountPage.verifyDefaultcreditCard();
+}
+@Then("^User Click on the Listed Credit card no (\\d+)$")
+public void user_Click_on_the_Listed_Credit_card_no(int creditCardPosition)  {
+   accountPage.tapOnCreditCard(creditCardPosition);
 }
 
 	@Then("^User sees \"(.*?)\" in order Cancellation screen$")
