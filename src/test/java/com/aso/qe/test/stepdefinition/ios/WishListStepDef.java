@@ -142,4 +142,9 @@ public class WishListStepDef extends GlobalMobileHelper{
 			wishlistPage.tapOnBannerCta(arg1);
 		}
 	}
+	
+	@Then("^I choose to verify user navigated to Web$")
+	public void i_choose_to_verify_user_navigated_to_Web() {
+		assertTrue(wishlistPage.isNavigatedToWeb());
+	}
 }

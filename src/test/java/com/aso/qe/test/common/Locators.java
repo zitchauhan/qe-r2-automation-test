@@ -234,6 +234,7 @@ public class Locators {
 		public static By bannerTitle = By.id("lbl_banner_title");
 		public static By bannerSubTitle = By.id("lbl_banner_sub_title");
 		public static By bannerCTA = By.id("lbl_banner_cta");
+		public static By webViewBanner = By.id("lbl_web_view_banner");
 	}
 
 	public static class ShopNewPage{

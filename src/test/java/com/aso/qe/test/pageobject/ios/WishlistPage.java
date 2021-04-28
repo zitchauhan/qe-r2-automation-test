@@ -2,6 +2,9 @@ package com.aso.qe.test.pageobject.ios;
 
 
 import org.openqa.selenium.Alert;
+
+import java.util.Set;
+
 import org.apache.log4j.Logger;
 import org.apache.tools.ant.launch.Locator;
 
@@ -159,6 +162,19 @@ public class WishlistPage {
 			if (GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.bannerCTA)) {
 				GlobalMobileHelper.tapOnElement(Locators.WishlistPage.bannerCTA);
 			}
-		}		
+		}
+
+	public boolean isNavigatedToWeb() {
+		Set<String> availableContexts = driver.getContextHandles();
+		
+		for(String context : availableContexts) {
+			if(context.contains("WEBVIEW")){
+				System.out.println("Context Name is " + context);
+				driver.context(context);
+				break;
+			}
+		}
+		return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.webViewBanner);	
+	}		
 }
 
