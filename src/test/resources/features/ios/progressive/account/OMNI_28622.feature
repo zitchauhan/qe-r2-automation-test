@@ -21,7 +21,7 @@ Scenario Outline: Verify user is restricted display of SOF on app Wishlist
     And User sees information message title "<title>" on wishlist page
     And User sees information message subtitle "<subTitleMessage>" on wishlist page
     And User click on the "Visit Academy.com Cta" on wishlist page
-    Then User is navigated to web
+    Then I choose to verify user navigated to Web
 
     Examples:
     | title                                    | subTitleMessage   |
