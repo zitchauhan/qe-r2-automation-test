@@ -167,9 +167,7 @@ public void user_is_taken_to_on_aso_card_page(String pagename) throws Throwable 
 		
 		accountPage.tabOnButtonOnAsoCardsPage(btnName);
 	}
-	
-	accountPage.tabOnButtonOnAsoCardsPage(btnName);
-}
+
 @When("^User Add the Credit card cardholder Name \"([^\"]*)\"$")
 public void user_Add_the_Credit_card_cardholder_Name(String cardHolderName)  {
     accountPage.addCreditCardHolderName(cardHolderName);

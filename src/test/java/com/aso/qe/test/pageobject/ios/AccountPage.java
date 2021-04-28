@@ -507,6 +507,7 @@ public class AccountPage extends GlobalMobileHelper{
 			if(i==creditCardPosition)
 			creditCards.get(i).click();
 		}
+	}
 		
 	public boolean isSetAsDefaultNotDisplayed() {
 		return !GlobalMobileHelper.isElementDisplayed(Locators.MyAccountPayment.setAsDefaultCheckbox);
