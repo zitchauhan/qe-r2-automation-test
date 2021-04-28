@@ -1,5 +1,5 @@
 Feature: Validate the User can Edit and Delete The Existing Credit Card
-@Sprint4 @ST-OMNI-29613 @TC-OMNI-34260 @0089
+@Sprint5 @TC-OMNI-36008 @ST-27858
 	Scenario: User is able to remove existing Credit card from Account
     Given User launches the application
    And User Clicks On MaY Be Later
@@ -25,7 +25,7 @@ Feature: Validate the User can Edit and Delete The Existing Credit Card
 		When user clicks on "deletecardbutton" on credit card page
 		When user clicks on "continue" on credit card page
 		And user see "payment header" on my account payment page
-@0089
+@Sprint5 @TC-OMNI-36009 @ST-27858
 Scenario: Validate the Edit credit card feature
 Given User launches the application
    And User Clicks On MaY Be Later
@@ -48,7 +48,7 @@ Given User launches the application
 		Then i choose to enter "ccLastname" on credit card page 
 		When user clicks on "save card button" on credit card page
 		And user see "payment header" on my account payment page
-		And User Sees the Listed Credit card 
+		 And User Sees the Listed Credit card 
 		
 
 		

@@ -107,5 +107,42 @@ Scenario: Validate User sees the Default credit card on first position
 		When user clicks on "save card button" on credit card page
 		And user see "payment header" on my account payment page
 		And User Sees the Default credit card on top
+		@Sprint5 @TC-OMNI-35959 @ST-26063
+	Scenario: Validate the Address related error when Saving the credit card
+	Given User launches the application
+   And User Clicks On MaY Be Later
+   And User Goes to home page
+   Then User taps on "account" button on login screen
+        When User taps on LogIn button at Account Page
+		And User is on "LogIn" screen
+		When User enters "email" on login screen 
+		And User enters "password" on login screen 
+		And User taps on "LogIn" button on login screen 
+		#Then User Logs into the application
+		Then User taps on "account" button on login screen 
+		When user see "welcome section" on my account page  
+		Then user taps on "payment button" on my account page 
+		And user see "payment header" on my account payment page
+		#When user clicks on "Add new Academy card tile" on my account payment page
+		When user clicks on "Add new credit card tile" on my account payment page
+		Then user is navigate to credit card details page
+		And User Add the Credit card cardholder Name ""
+		Then User add the credit Card Number "" 
+		Then User add the credit card Expiry Date ""
+		Then User add the credit card cvv ""
+		And user sees the Billing Address Section
+		And User Add the Credit card cardholder Name ""
+		Then User add the credit Card Number "" 
+		Then User add the credit card Expiry Date ""
+		Then User add the credit card cvv ""
+		When user clicks on "save card button" on credit card page
+		Then User see an error message for "First Name"
+        Then User see an error message for "Last Name"
+        Then User see an error message for "ZIP Code"
+        Then User see an error message for "State"
+         Then User see an error message for "Phone"
+
+      
+		
 	
 		
