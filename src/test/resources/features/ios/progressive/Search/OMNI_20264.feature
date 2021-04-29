@@ -1,6 +1,6 @@
 Feature: Velidate Search Redirects
 
-@Sprint5 @ST-OMNI-20264 @TC-OMNI-
+@Sprint5 @ST-OMNI-20264 @TC-OMNI-35839
 Scenario: Validate the user able to redirect to a PLP
 Given User launches the application
     And User Clicks On MaY Be Later
@@ -16,7 +16,7 @@ Given User launches the application
     And User can edit "Adidas" the search
     And User sees all products related to search keyword
      
-  @Sprint5 @ST-OMNI-20264 @TC-OMNI-
+  @Sprint5 @ST-OMNI-20264 @TC-OMNI-35841
  Scenario: Validate App Showing Error message if no Exact matches found
    Given User launches the application
    And User Clicks On MaY Be Later
