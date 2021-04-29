@@ -337,20 +337,30 @@ public class PDPPage {
 			String InformationPoint3=GlobalMobileHelper.findData("important_Product_and_Safety_InformationPoint3");
 			String InformationPoint4=GlobalMobileHelper.findData("important_Product_and_Safety_InformationPoint4");
 			 
-			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformation).getText().equalsIgnoreCase(textguidelines)) {
-				list.add ( new Exception("ProductPrice  not present"));	
+			if(!(driver.findElement(Locators.PDPPage.ProductSafetyInformation).getText().equalsIgnoreCase(textguidelines))) {
+				System.out.println(0+driver.findElement(Locators.PDPPage.ProductSafetyInformation).getText());
+				System.out.println(0+textguidelines);
+				list.add ( new Exception("ProductSafetyInformation  not matching"));	
 			}
-			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformationPara1).getText().equalsIgnoreCase(InformationPoint1)) {
-				list.add ( new Exception("important_Product_and_Safety_InformationPoint  not present"));	
+			if(!(driver.findElement(Locators.PDPPage.ProductSafetyInformationPara1).getText().equalsIgnoreCase(InformationPoint1))) {
+				System.out.println(1+driver.findElement(Locators.PDPPage.ProductSafetyInformationPara1).getText());
+				System.out.println(1+InformationPoint1);
+				list.add ( new Exception("important_Product_and_Safety_InformationPoint para1  not matching or present"));	
 			}
-			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformationPara2).getText().equalsIgnoreCase(InformationPoint2)) {
-				list.add ( new Exception("important_Product_and_Safety_InformationPoint2  not present"));	
+			if(!(driver.findElement(Locators.PDPPage.ProductSafetyInformationPara2).getText().equalsIgnoreCase(InformationPoint2))) {
+				System.out.println(2+driver.findElement(Locators.PDPPage.ProductSafetyInformationPara2).getText());
+				System.out.println(2+InformationPoint2);
+				list.add ( new Exception("important_Product_and_Safety_InformationPoint2  not matching or present"));	
 			}
-			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformationPara3).getText().equalsIgnoreCase(InformationPoint3)) {
-				list.add ( new Exception("important_Product_and_Safety_InformationPoint3  not present"));	
+			if(!(driver.findElement(Locators.PDPPage.ProductSafetyInformationPara3).getText().equalsIgnoreCase(InformationPoint3))) {
+				System.out.println(3+driver.findElement(Locators.PDPPage.ProductSafetyInformationPara3).getText());
+				System.out.println(3+InformationPoint3);
+				list.add ( new Exception("important_Product_and_Safety_InformationPoint3  not matching or present"));	
 			}
-			if(!driver.findElement(Locators.PDPPage.ProductSafetyInformationPara4).getText().equalsIgnoreCase(InformationPoint4)) {
-				list.add ( new Exception("important_Product_and_Safety_InformationPoint4  not present "));	
+			if(!(driver.findElement(Locators.PDPPage.ProductSafetyInformationPara4).getText().equalsIgnoreCase(InformationPoint4))) {
+				System.out.println(4+driver.findElement(Locators.PDPPage.ProductSafetyInformationPara4).getText());
+				System.out.println(4+InformationPoint4);
+				list.add ( new Exception("important_Product_and_Safety_InformationPoint4  not matching or present "));	
 			}
 			
 		}
@@ -426,9 +436,9 @@ public class PDPPage {
 	}
 
 	public void changeStore(String storeName) {
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.changeStore);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.selectStore);
 		driver.findElement(Locators.PDPPage.searchStoreBox).sendKeys(storeName);
-		GlobalMobileHelper.tapOnElement(Locators.PDPPage.searchBtn);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.cancelBtn);
 		
 		
 		
@@ -451,10 +461,10 @@ public class PDPPage {
 		     }
 			
 		}else if(varianType.contains("width")) {
-			//boolean stat4=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
-			//boolean stat5=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.sizeVariant);
+			boolean stat4=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorVariant);
+			boolean stat5=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.shoeSizeVariant);
 			boolean stat6=	 GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.widthVariant);
-			 if(stat6 == true) {
+			 if(stat4&&stat5&&stat6 == true) {
 		    	 return true;
 		     }else {
 		    	 return false;
@@ -575,32 +585,86 @@ public class PDPPage {
 
 		 List<Object> list = new ArrayList<Object>();
 			boolean flag=true;
-			if(args.equalsIgnoreCase("SKU")) {
-				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSKU);
+			if(args.equalsIgnoreCase("SizeAndColor")) {
+				if(!isOverLayCartSKUValueDisplayed()) {
+					list.add ( new Exception(" SKU not displaying "));			
+				}
+				if(!isOverLayCartQtyDisplayed()) {
+					list.add ( new Exception(" Qty not displaying "));	
+					
+				}
+				if(!isOverLayCartPriceDisplayed()) {
+					list.add ( new Exception(" Price not displaying "));	
+					
+				}
+				if(!isOverLayCartSizeDisplayed()) {
+					list.add ( new Exception(" Size not displaying "));	
+					
+				}
+				if(!isOverLayCartTitle()) {
+					list.add ( new Exception(" title not displaying "));	
+					
+				}
+				if(!isOverLayCartImage()) {
+					list.add ( new Exception(" Image not displaying "));	
+					
+				}
+				if(!isOverLayCartview_cart()) {
+					list.add ( new Exception(" view cart not displaying "));	
+					
+				}
+				if(!isOverLayCartcontinue_shopping()) {
+					list.add ( new Exception(" Continue Shopping missing"));	
+					
+				}
+				if(!isOverLayCartdded_to_cart()) {
+					list.add ( new Exception(" Added To Cart text missing "));	
+					
+				}
+				if(!isOverLayCartcolourDisplayed()) {
+					list.add ( new Exception(" color value is missing "));	
+					
+				}
 				
-			}else {
-				list.add ( new Exception(" SKU not displaying "));	
-			}
-			
-			if(args.equalsIgnoreCase("Size")) {
-				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartPrice);
-			}else {
-				list.add ( new Exception(" Size not displaying "));	
-			}
-			
-			if(args.equalsIgnoreCase("Qty")) {
-				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartQty);
+			}else if(args.equalsIgnoreCase("color")) {
 				
-			}else {
-				list.add ( new Exception(" Qty not displaying "));	
-			}
-			
-			if(args.equalsIgnoreCase("Price")) {
+				if(!isOverLayCartdded_to_cart()) {
+					list.add ( new Exception(" Added To Cart text missing "));	
+					
+				}
+				if(!isOverLayCartTitle()) {
+					list.add ( new Exception(" title not displaying "));	
+					
+				}
+				if(!isOverLayCartImage()) {
+					list.add ( new Exception(" Image not displaying "));	
+					
+				}
+				if(!isOverLayCartcolourDisplayed()) {
+					list.add ( new Exception(" color value is missing "));	
+					
+				}
+				if(!isOverLayCartSKUValueDisplayed()) {
+					list.add ( new Exception(" SKU not displaying "));			
+				}
+				if(!isOverLayCartQtyDisplayed()) {
+					list.add ( new Exception(" Qty not displaying "));	
+					
+				}
+				if(!isOverLayCartPriceDisplayed()) {
+					list.add ( new Exception(" Price not displaying "));	
+					
+				}
+				if(!isOverLayCartview_cart()) {
+					list.add ( new Exception(" view cart not displaying "));	
+				}
+				if(!isOverLayCartcontinue_shopping()) {
+					list.add ( new Exception(" Continue Shopping missing"));	
+					
+				}
 				
-				return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartSize);
-			}else {
-				list.add ( new Exception(" Qty not displaying "));	
 			}
+	
 			 if(!list.isEmpty()) {
 				 flag=false;
 					String s=null;
@@ -643,8 +707,108 @@ public class PDPPage {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartcolour);
 	}
 
+	public boolean isOverLayCartTitle() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartTitle);
+	}
+	public boolean isOverLayCartImage() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartImage);
+	}
+	public boolean isOverLayCartview_cart() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartview_cart);
+	}
+	public boolean isOverLayCartcontinue_shopping() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartcontinue_shopping);
+	}
+	public boolean isOverLayCartdded_to_cart() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OverLayCartdded_to_cart);
+	}
 	public void tapOnContiniueShoppingBtn() {
 		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.continueShopping);
+	}
+
+	public boolean isPickUpDeliveryOptionsDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.pickUpAndDeliveryTitle);
+		
+	}
+
+	public boolean isFreeStorePickUpDisplayed() {
+		
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.freeStorePickUpTitle);
+	}
+
+	public boolean isDetailsDisplayedOfProduct() {
+		boolean stat1 =  GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.deailsSpecTitle);
+		boolean stat2 = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.itemTitle);
+		boolean stat3 =GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.skuDetailTitle);
+		boolean stat4 = GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.productDetails);
+		if(stat1&&stat2&&stat3&&stat4==true) 
+		{
+			return true;
+			
+		}else {
+			return false;
+		}
+			
+	}
+	public void tapOnStorePickUp() {
+		GlobalMobileHelper.swipeScreen(Direction.UP);
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.freeStorePickUpRadioBtn);
+	}
+
+	public  void verifyStoreRadioButtonSelected() throws Exception {
+		
+		if(!GlobalMobileHelper.isElementEnabled(Locators.PDPPage.freeStorePickUpRadioBtn)) {
+			throw new Exception("Button not enabled after tap");
+		}
+	}
+
+	public static void clickonPDP(String elementname) {
+		if(elementname.equalsIgnoreCase("addtocart")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonAddToCart);
+
+		}else {
+			
+			
+			throw new UnsupportedOperationException("Given element not found on PDP");
+ 
+		
+
+		}
+	}
+
+	public static boolean VarifyElementPresenseOnPDPPage(String elementname) {
+if(elementname.equalsIgnoreCase("Standered Gift card modal")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.STDGIFTCARDModal);
+
+			
+		}else if(elementname.equalsIgnoreCase("Standered Gift card modal generic message")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.STDGIFTCARDModalGenericContent);
+			
+		}else if(elementname.equalsIgnoreCase("Open STD Gift card button")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OpenSTDGiftcardbutton);
+		}else if(elementname.equalsIgnoreCase("Bulk Gift card modal")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.BulkGIFTCARDModal);
+				}else if(elementname.equalsIgnoreCase("Bulk Gift card modal generic message")){
+	
+					return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.bulkGIFTCARDModalGenericContent);
+				}else if(elementname.equalsIgnoreCase("Open Bulk Gift card button")){
+	
+					return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OpenbulkGiftcardbutton);
+					}else if(elementname.equalsIgnoreCase("Cancelbutton")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.CloseAlertmodal);
+
+			
+		}else {
+			
+			throw new UnsupportedOperationException("Given Button not founded on PDP");
+
+		}
 	}
 }

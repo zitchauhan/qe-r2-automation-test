@@ -3,6 +3,7 @@ package com.aso.qe.test.pageobject.ios;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -120,10 +121,33 @@ public class PLPPage {
 
 		
 		if(args.equalsIgnoreCase("SeeDetail_FreeShipping")) {
-			 driver.findElement(Locators.PLPPage.PLP_Page_FreeShippingBaner).click();
+			// driver.findElement(Locators.PLPPage.PLP_Page_FreeShippingBaner).click();
+
+				// driver.findElement(Locators.PLPPage.PLP_Page_Instore_CurbSideBaner_SeeDeatil).click();
+				int count=0;
+				List<MobileElement> PLPCategoriesList = (List<MobileElement>) driver.findElements(Locators.PLPPage.PLP_Page_Instore_CurbSideBaner_SeeDeatil);
+				for (MobileElement mobileElement : PLPCategoriesList) {
+					count++;
+					if(count==1) {
+						GlobalMobileHelper.tapOnElement(PLPCategoriesList.get(0));
+					}
+				} 
+				
+				
+			
 			
 		}if(args.equalsIgnoreCase("SeeDetail_Store_curbside")) {
-			 driver.findElement(Locators.PLPPage.PLP_Page_FreeShippingBaner).click();
+			// driver.findElement(Locators.PLPPage.PLP_Page_Instore_CurbSideBaner_SeeDeatil).click();
+			int count=0;
+			List<MobileElement> PLPCategoriesList = (List<MobileElement>) driver.findElements(Locators.PLPPage.PLP_Page_Instore_CurbSideBaner_SeeDeatil);
+			for (MobileElement mobileElement : PLPCategoriesList) {
+				count++;
+				if(count==1) {
+					GlobalMobileHelper.tapOnElement(PLPCategoriesList.get(1));
+				}
+			} 
+			
+			
 		}
 			
 	}

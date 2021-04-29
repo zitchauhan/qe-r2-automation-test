@@ -245,5 +245,43 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void user_taps_on_Continue_shopping_button() throws Throwable {
 		pdp.tapOnContiniueShoppingBtn();
 	}
+	@And("^User Sees The PickUp & Delivery Option$")
+	public void isPickUpDeliveryOptionDisplayed() {
+		assertTrue( pdp.isPickUpDeliveryOptionsDisplayed());
+		
+	}
+	@And("User Sees the Free Store PickUp Option")
+	public void isFreeStorePickUpDisplayed() {
+	assertTrue(pdp.isFreeStorePickUpDisplayed());
+	}
 	
+	@And("User sees the Details & Specs")
+	public void isDetailsAndSpecsDisplayed() {
+		assertTrue(pdp.isDetailsDisplayedOfProduct());
+	}
+	
+	
+	@When("^User selects \"([^\"]*)\" delivery option$")
+	public void isStoreDetailsDisplayed(String args) {
+		 pdp.selectDeliveryOption(args);
+	}
+	@When("^User selects Store Pick up Delivery option$")
+	public void selectStorePickU() throws Throwable {
+		pdp.tapOnStorePickUp();
+	}
+	@When("^verify Store rado button selected$")
+	public void StoreRadioButtonSelected() throws Throwable {
+		pdp.verifyStoreRadioButtonSelected();
+	}
+
+
+@Then("^user click on \"([^\"]*)\" on PDP$")
+public void user_click_on_on_PDP(String elementname) throws Throwable {
+	PDPPage.clickonPDP(elementname);
+}
+
+@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
+public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
+	assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname)); 
+}
 }
