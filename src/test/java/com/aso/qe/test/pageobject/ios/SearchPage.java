@@ -11,6 +11,7 @@ import com.aso.qe.test.common.Locators;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import net.bytebuddy.implementation.bytecode.ByteCodeAppender.Size;
 
 public class SearchPage {
 	
@@ -85,10 +86,139 @@ public class SearchPage {
 		GlobalMobileHelper.tapOnElement(Locators.PLPPage.toggleOOS);
 
 	}
+
 	
 	public boolean isFilterOptionDisplayed() {
-	   return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.filterOption);	
+	   return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.filterOption);	}
+
+	public void navigateBackToSearchPage() {
+		GlobalMobileHelper.tapOnElement(Locators.SearchPage.navigateBack);
+		
 	}
+	public boolean isRecentSearchesTitleDisplayed(String searchSuggestionTitle) {
+		if(searchSuggestionTitle.contains("Recent Searches")) {
+		return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.recentSearchesTitle);
+		}else {
+			return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.popularSearchesTitle);
+		}
+	}
+	public boolean isAllRecentSearchesDisplayed(String searchItem1, String searchItem2, String searchItem3, String searchItem4, String searchItem5) {
+		String [] searchItem = {searchItem1,searchItem2,searchItem3,searchItem4,searchItem5};
+		boolean flag=false;
+		List<MobileElement> lsRecentSearches = driver.findElements(By.id("btn_category"));
+		for(int i =0; i<=lsRecentSearches.size(); i++) {
+			if(lsRecentSearches.get(i).getText().contains(searchItem[i])) {
+				flag = true;
+			}else {
+				flag = false;
+			}
+			
+		
+		}
+		return flag;
+	}
+	public boolean isTotalRecentSeacrhesDisplayed(int recentSearchItemCount) {
+		List<MobileElement> lsRecentSearches = driver.findElements(By.id("btn_category"));
+		int count = lsRecentSearches.size();
+		if(count==recentSearchItemCount) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	public boolean isVisibleRecentSearchesDisplayed(int recentSearchElipseCount, int characterCount) {
+		List<MobileElement> lsRecentSearches = driver.findElements(By.id("btn_category"));
+		int count =0;
+		for(int i=1; i<=recentSearchElipseCount;i++) {
+			String s =lsRecentSearches.get(i).getText();
+			count = count + s.length();
+		}
+		if(count==characterCount) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	public void tapOnLastRescentSearchItem() {
+		List<MobileElement> lsRecentSearches = driver.findElements(By.id("btn_category"));
+		for(int i =1;i<=lsRecentSearches.size();i++) {
+			
+				try {
+					lsRecentSearches.get(lsRecentSearches.size()).click();
+				} catch (Exception e) {
+					GlobalMobileHelper.swipeScreen(Direction.LEFT);
+				}
+			
+		}
+	}
+	public void tapOnClearAll() {
+		GlobalMobileHelper.tapOnElement(Locators.SearchPage.clearAll);
+		
+	}
+	public boolean isRecentSearchesDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.recentSearches);
+		
+	}
+	public boolean isAllPopularSearchesDisplayed(String searchItem1, String searchItem2, String searchItem3,
+			String searchItem4, String searchItem5) {
+		String [] searchItem = {searchItem1,searchItem2,searchItem3,searchItem4,searchItem5};
+		boolean flag=false;
+		List<MobileElement> lsPopularSearches = driver.findElements(Locators.SearchPage.popularsearchesItem);
+		for(int i =0; i<=lsPopularSearches.size(); i++) {
+			if(lsPopularSearches.get(i).getText().contains(searchItem[i])) {
+				flag = true;
+			}else {
+				flag = false;
+			}
+			
+		
+		}
+		return flag;
+	}
+	public boolean isTotalPopularSeacrhesDisplayed(int popularSearchItemCount) {
+		List<MobileElement> lsPopularSearches = driver.findElements(By.id("btn_category"));
+		int count = lsPopularSearches.size();
+		if(count==popularSearchItemCount) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	public boolean isVisiblePopularSearchesDisplayed(int popularSearchElipseCount, int characterCount) {
+		
+		List<MobileElement> lsPopularSearches = driver.findElements(By.id("btn_category"));
+		int count =0;
+		for(int i=1; i<=popularSearchElipseCount;i++) {
+			String s =lsPopularSearches.get(i).getText();
+			count = count + s.length();
+		}
+		if(count==characterCount) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	public void tapOnLastPopularSearchItem() {
+		List<MobileElement> lsPopularSearches = driver.findElements(By.id("btn_category"));
+		for(int i =1;i<=lsPopularSearches.size();i++) {
+			
+				try {
+					lsPopularSearches.get(lsPopularSearches.size()).click();
+				} catch (Exception e) {
+					GlobalMobileHelper.swipeScreen(Direction.LEFT);
+				}
+			
+		}
+	}
+	public boolean isPopularSearchesDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.popularsearchesItem);
+	}
+		
+
+	
 
 	public boolean isSortOptionDisplayed() {
 		   return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.sortOption);	
@@ -114,10 +244,15 @@ public class SearchPage {
 		return searchError.getText().contains(msg);
 		}
 
+
 	
 	  public void swipeDown() {
 		  GlobalMobileHelper.swipeScreen(Direction.DOWN, 5);
 	  }
 	}
+
+
+	
+
 
 

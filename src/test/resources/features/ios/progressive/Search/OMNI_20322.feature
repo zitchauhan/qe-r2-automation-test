@@ -28,7 +28,7 @@ Given User launches the application
     When I choose to navigate to PDP
    Then User sees product image
    
-   @Sprint5 @ST-OMNI-20322  @TestRun
+   @Sprint5 @ST-OMNI-20322  
    Scenario: Verify user is able to see Product Search Results Listing
 Given User launches the application
     And User Clicks On MaY Be Later
