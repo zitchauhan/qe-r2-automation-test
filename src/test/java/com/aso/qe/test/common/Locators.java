@@ -92,19 +92,19 @@ public class Locators {
 		
 
 		// OMNI-20323 15.04.2021 
-		public static By FilterButton=By.id("");
-		public static By FilterScreenText=By.id("");
-		public static By FilterApplyButton=By.id("");
-		public static By FilterCancel=By.id("");
-		public static By pickupDeliveryFilter=By.id("");
-		public static By categoryFilter=By.id("");
-		public static By brandFilter=By.id("");
-		public static By sizeFilter=By.id("");
-		public static By styleFilter=By.id("");
-		public static By colorFilter=By.id("");
-		public static By priceFilter=By.id("");
-		public static By ratingFilter=By.id("");
-		public static By dealsFilter=By.id("");
+		public static By FilterButton=By.id("filter_button");
+		public static By FilterScreenText=By.id("filter_Screen_text");
+		public static By FilterApplyButton=By.id("filter_apply_button");
+		public static By FilterCancel=By.id("filter_cancel");
+		public static By pickupDeliveryFilter=By.id("fitler_delivery_pickup");
+		public static By categoryFilter=By.id("filter_Category");
+		public static By brandFilter=By.id("filter_brand");
+		public static By sizeFilter=By.id("filter_size");
+		public static By styleFilter=By.id("fitler_style");
+		public static By colorFilter=By.id("filter_color");
+		public static By priceFilter=By.id("filter_price");
+		public static By ratingFilter=By.id("filter_rating");
+		public static By dealsFilter=By.id("filter_deals");
 		
 	}
 
