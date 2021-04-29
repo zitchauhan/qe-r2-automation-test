@@ -212,10 +212,9 @@ public class Locators {
 		public static By OverLayCartcontinue_shopping = By.id("btn_continue_shopping");
 		public static By OverLayCartdded_to_cart = By.id("lbl_added_to_cart");
 		
-<<<<<<< HEAD
+
 		public static By purchaseBtn = By.id("lbl_purchase_btn");
-=======
->>>>>>> 4e0ed69d09a6eaed8507cf7b75ce8bc7f3022fe3
+
 		// alert modal on pdp 
 		public static By STDGIFTCARDModal = By.id("popup_StdGiftCard");
 		public static By STDGIFTCARDModalGenericContent = By.id("lbl_StdGiftCardgenericlabel");
