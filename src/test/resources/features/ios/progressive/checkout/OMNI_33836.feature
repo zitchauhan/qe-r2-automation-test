@@ -10,7 +10,16 @@ Feature: Cancel Order - Confirmation Page
     Then User enters valid email "nosavedaddress@yopmail.com"
  		And User enters valid password "Password@123"
  		And User taps on Login
- 		#Add Nirmal's code for cancelling order
+ 		And User taps on account in bottom nav
+    When User taps on Order button
+    Then User sees Order page with order list 
+    When User taps on OrderId
+    Then User sees order detail page
+    When User taps on cancel Order button 
+    Then User sees No button on alert confirmation screen
+    When User taps on No Order button
+    Then User sees Order cancellation confirmation screen
+    Then User sees the back button
  		
  	@Sprint5 @ST-OMNI-33836 @TC-OMNI-35268
   Scenario: Validate User sees the necessary details of the order
@@ -22,7 +31,15 @@ Feature: Cancel Order - Confirmation Page
     Then User enters valid email "nosavedaddress@yopmail.com"
  		And User enters valid password "Password@123"
  		And User taps on Login
- 		#Add Nirmal's code for cancelling order
+ 		And User taps on account in bottom nav
+    When User taps on Order button
+    Then User sees Order page with order list 
+    When User taps on OrderId
+    Then User sees order detail page
+    When User taps on cancel Order button 
+    Then User sees Yes button on alert confrimation screen
+    When User taps on Yes Order button
+    Then User sees order detail page 
  		Then User sees "Cancellation message" in order Cancellation screen
  		Then User sees "Confirmation email message" in order Cancellation screen
  		Then User sees "Cancellation Date" in order Cancellation screen
@@ -44,7 +61,15 @@ Feature: Cancel Order - Confirmation Page
     Then User enters valid email "nosavedaddress@yopmail.com"
  		And User enters valid password "Password@123"
  		And User taps on Login
- 		#Add Nirmal's code for cancelling order
+ 		And User taps on account in bottom nav
+    When User taps on Order button
+    Then User sees Order page with order list 
+    When User taps on OrderId
+    Then User sees order detail page
+    When User taps on cancel Order button 
+    Then User sees Yes button on alert confrimation screen
+    When User taps on Yes Order button
+    Then User sees order detail page 
  		Then User sees "Subtotal" in order Cancellation screen
  		Then User sees "Taxes" in order Cancellation screen
  		Then User sees "Shipping charges" in order Cancellation screen
@@ -61,7 +86,15 @@ Feature: Cancel Order - Confirmation Page
     Then User enters valid email "nosavedaddress@yopmail.com"
  		And User enters valid password "Password@123"
  		And User taps on Login
- 		#Add Nirmal's code for cancelling order
+ 		And User taps on account in bottom nav
+    When User taps on Order button
+    Then User sees Order page with order list 
+    When User taps on OrderId
+    Then User sees order detail page
+    When User taps on cancel Order button 
+    Then User sees Yes button on alert confrimation screen
+    When User taps on Yes Order button
+    Then User sees order detail page 
  		When User taps on back button
- 		Then User is taken to order details screen
+ 		Then User sees order detail page
  		
