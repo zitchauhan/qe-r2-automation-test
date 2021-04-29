@@ -275,6 +275,12 @@ public class PDPStepDef extends GlobalMobileHelper{
 		pdp.verifyStoreRadioButtonSelected();
 	}
 	
+<<<<<<< HEAD
+	//OMNO-26981
+	@Then("^I choose to click on \"([^\"]*)\" in PDP page$")
+	public void click_on_PDP_page(String arg1) throws Throwable {
+	    pdp.tapOnPurchaseButton();
+=======
 	//OMNI-34006
 	@Then("^User sees cart badge on top$")
 	public void user_sees_cart_badge_on_top() {
@@ -309,6 +315,7 @@ public class PDPStepDef extends GlobalMobileHelper{
 	@When("^User taps on cart badge$")
 	public void user_taps_on_cart_badge() {
 		pdp.tapOnCartBadge();
+>>>>>>> 4e0ed69d09a6eaed8507cf7b75ce8bc7f3022fe3
 	}
 
 
