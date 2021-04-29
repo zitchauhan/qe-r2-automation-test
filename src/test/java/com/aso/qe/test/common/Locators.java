@@ -34,7 +34,7 @@ public class Locators {
 		//public static By homeBtn = By.id("lbl_home");
 		//public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
 		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
-		public static By searchBox = By.id("btn_Search");
+		public static By searchBox = By.id("search_bar");
 		public static By shopNewLabel = By.xpath("//*[contains(@label,'Shop New')]");
 		public static By shopHomePage = By.id("lbl_shop");
 		public static By shopNewTitle = By.id("lbl_shopNew_title");
@@ -94,6 +94,13 @@ public class Locators {
 		public static By scanBarCode = By.id("btn_scan_barcode");
 		public static By goBtn = By.id("Go");
 		public static By searchErrormsg =  By.id("txt_empty_result_body");
+		// labels for did u mean 
+		public static By showingresultforlabel =  By.id("lbl_show_result_for");
+		public static By showingresultforlabelvalue =  By.id("lbl_show_result_forvalue");
+		public static By searchinsteedof =  By.id("lbl_search_instead_for");
+		public static By searchinsteedofvalue =  By.id("btn_search_instead_forvalue");
+		
+		
 	}
 	
 	public static class OnBoardingScreen{

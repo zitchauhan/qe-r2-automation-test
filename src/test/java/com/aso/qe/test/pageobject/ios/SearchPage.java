@@ -84,6 +84,42 @@ public class SearchPage {
 		GlobalMobileHelper.tapOnElement(Locators.PLPPage.toggleOOS);
 
 	}
+	public boolean VarifyElementPresenseOnSearchPage(String elementname) {
+if(elementname.equalsIgnoreCase("showing result for label")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.showingresultforlabel);
+
+			
+		}else if(elementname.equalsIgnoreCase("related keywords")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.showingresultforlabelvalue);
+			
+		}else if(elementname.equalsIgnoreCase("search insteed of label")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.searchinsteedof);
+		}else if(elementname.equalsIgnoreCase("searched keyword button")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.searchinsteedofvalue);
+				
+		}else {
+			
+			throw new UnsupportedOperationException("Given Elelent not founded on search page");
+
+		}
+	}
+	public void tapOnElementOnSearchPage(String elementname) {
+     if(elementname.equalsIgnoreCase("searched keyword button")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.SearchPage.searchinsteedofvalue);
+
+
+		}else {
+			
+			throw new UnsupportedOperationException("Given button type not found on search page");
+ 
+		}
+		
+	}
 
 
 
