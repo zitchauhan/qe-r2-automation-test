@@ -1,6 +1,6 @@
 Feature: Velidate the Product Search Results Listing
 
-@Sprint5 @ST-OMNI-20322  
+@Sprint5 @ST-OMNI-20322  @TC-OMNI-32643
 Scenario: Verify user is able to see Product Search Results Listing
 Given User launches the application
     And User Clicks On MaY Be Later
@@ -15,7 +15,7 @@ Given User launches the application
     And User sees sort option  in Search result page 
     And User sees fiter option in Search result page
     
-  @Sprint5 @ST-OMNI-20322  
+  @Sprint5 @ST-OMNI-20322  @TC-OMNI-32644
  Scenario: Verify user can navigate to PDP page when user tap on any prodcut 
 Given User launches the application
     And User Clicks On MaY Be Later
@@ -28,8 +28,8 @@ Given User launches the application
     When I choose to navigate to PDP
    Then User sees product image
    
-   @Sprint5 @ST-OMNI-20322  
-   Scenario: Verify user is able to see Product Search Results Listing
+   @Sprint5 @ST-OMNI-20322  @TC-OMNI-32645
+   Scenario: Verify user is swipe down on the screen
 Given User launches the application
     And User Clicks On MaY Be Later
     And User continues as guest user
@@ -42,7 +42,7 @@ Given User launches the application
     Then User swipe down on the screen
     
 
- 	@Sprint5 @ST-OMNI-20322 
+ 	@Sprint5 @ST-OMNI-20322 @TC-OMNI-32646
    Scenario: Verify user see null search result page for invalid search
 Given User launches the application
     And User Clicks On MaY Be Later
