@@ -838,63 +838,31 @@ public boolean verifySomeStyleAvailable() throws Exception {
 		 }		 
 	
 	 
-	 if(!list.isEmpty()) {
-		 flag=false;
-			String s=null;
-			for (Object object : list) {
-			 s =s+object.toString();
+			if (!list.isEmpty()) {
+				flag = false;
+				String s = null;
+				for (Object object : list) {
+					s = s + object.toString();
+				}
+				throw new Exception(s);
+
 			}
-			throw new Exception(s);
-		
-	    }
-	return flag;
-	
-}
+			return flag;
 
+		}
 
+		public void tapOnSearchedProduct() {
 
-public void tapOnSearchedProduct() {
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			MobileElement btnGoToPDP = null;
 
-	try {
-		Thread.sleep(2000);
-	} catch (InterruptedException e) {
-		e.printStackTrace();
-	}
-	MobileElement btnGoToPDP =null;
-		
-		
-    btnGoToPDP=	  driver.findElement(Locators.PDPPage.labelProductTitle);
+			btnGoToPDP = driver.findElement(Locators.PDPPage.labelProductTitle);
 
-	GlobalMobileHelper.tapOnElement(btnGoToPDP);
-	
-	
-}
-
+			GlobalMobileHelper.tapOnElement(btnGoToPDP);
+		}
 
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	
