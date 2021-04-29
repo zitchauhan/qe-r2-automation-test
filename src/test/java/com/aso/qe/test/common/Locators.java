@@ -212,9 +212,22 @@ public class Locators {
 		public static By OverLayCartcontinue_shopping = By.id("btn_continue_shopping");
 		public static By OverLayCartdded_to_cart = By.id("lbl_added_to_cart");
 		
+		// alert modal on pdp 
+		public static By STDGIFTCARDModal = By.id("popup_StdGiftCard");
+		public static By STDGIFTCARDModalGenericContent = By.id("lbl_StdGiftCardgenericlabel");
+		public static By OpenSTDGiftcardbutton = By.id("btn_OpenSTDGiftcard");
+		public static By CloseAlertmodal = By.id("btn_CloseAlertmodal");
+		// bulk GC alert modal
+		public static By BulkGIFTCARDModal = By.id("popup_bulkGiftCard");
+		public static By bulkGIFTCARDModalGenericContent = By.id("lbl_bulkGiftCardgenericlabel");
+		public static By OpenbulkGiftcardbutton = By.id("btn_OpenbulkGiftcard");
+				
 		public static By cartBadge = By.id("lbl_cart_badge");
 		public static By productTite = By.id("lbl_product_title");
 		public static By backBtn = By.id("btn_back");
+		
+		public static By labelItemCount  = By.id("lbl_cart");
+		public static By CounterBadgeOnCartIcon  = By.id("");
 
 	}
 
@@ -269,7 +282,8 @@ public class Locators {
 		public static By oKBtnLocation = By.xpath("//*[contains(@label,'OK')]");
 		public static By allowOnceBtn = By.xpath("//*[contains(@label,'Allow Once')]");
 		public static By backBtn = By.id("btn_back");
-
+		public static By defaultAddressCheckbox=By.id("check_box_message");
+		public static By addNewAddressBtn=By.xpath("//XCUIElementTypeButton[@name=\"Add New Address\"]");
 
 	}
 	public static class AccountPage{
@@ -459,6 +473,8 @@ public class Locators {
 
 		public static By buttonUpdateAddress = By.id("btn_add_new_address");
 		public static By buttonAlertOK = By.name("OK");
+		
+		public static By savedAddresses= By.id("");
 	}
 
 	public static class FindStore{
@@ -578,8 +594,7 @@ public class Locators {
 			public static By existingasocard = By.id("btn_existingaso_card");
 			public static By buttonaddacacemycard = By.id("btn_addaso_card");
 			public static By buttonaddcreditcard = By.id("btn_adddredit_card");
-			
-		
+			public static By setAsDefaultCheckbox = By.id("chk_set_as_default");	
 			
 		}
 		

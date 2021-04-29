@@ -67,14 +67,7 @@ public class PDPPage {
 	
 	@iOSXCUITFindBy(id="rd_home_delivery")
 	public MobileElement homeDeliveryRadio;
-	
-	//OMNI-34006
-	@iOSXCUITFindBy(id = "lbl_cart")
-	public MobileElement labelItemCount;
-	
-	@iOSXCUITFindBy(id = "")
-	public MobileElement CounterBadgeOnCartIcon;
-	
+		
 	public boolean isHeroImageDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.imageHero);
 	}
