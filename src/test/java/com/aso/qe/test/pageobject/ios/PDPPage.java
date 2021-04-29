@@ -761,12 +761,10 @@ public class PDPPage {
 		}
 	}
 
-<<<<<<< HEAD
 	public void tapOnPurchaseButton() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.purchaseBtn);
 	}
 
-=======
 	public boolean isCartBadgeDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.cartBadge);
 	}
@@ -792,7 +790,7 @@ public class PDPPage {
 
 	public void tapOnCartBadge() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.cartBadge);
->>>>>>> 4e0ed69d09a6eaed8507cf7b75ce8bc7f3022fe3
+	}
 	public static void clickonPDP(String elementname) {
 		if(elementname.equalsIgnoreCase("addtocart")) {
 			
