@@ -520,4 +520,8 @@ public class AccountPage extends GlobalMobileHelper{
 	public boolean isDefaultCheckBoxDisabled() {
 		return !GlobalMobileHelper.isElementEnabled(Locators.MyAccountPayment.setAsDefaultCheckbox);
 	}
+
+	public boolean isGreetingMessageDisplayed() {
+		 return GlobalMobileHelper.isElementDisplayed(Locators.AccountPage.greetingMessage);
+	}
 }

@@ -68,6 +68,11 @@ public void i_choose_to_click_on(String arg1) throws Throwable {
     
 }
 
+//OMNI-20264
+@Then("^User can edit \"([^\"]*)\" the search$")
+public void user_can_edit_search(String arg1) {
+		plpPage.editSearch(arg1);
+}
 // OMNI-20323 15.04.2021 
 @Then("^User see filter Button$")
 public void user_see_filter_Button() throws Throwable {
@@ -103,6 +108,8 @@ public void user_tap_on_Cancel_link() throws Throwable {
 
 
 
-
-
+//@Then("^User verifies breadcrumb is present for the product$")
+//public void user_verifies_breadcrumb() {
+//	
+//	}
 }
