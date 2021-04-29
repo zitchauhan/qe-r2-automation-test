@@ -252,4 +252,9 @@ public void user_Click_on_the_Listed_Credit_card_no(int creditCardPosition)  {
 	public void isDefaultCheckBoxDisabled() {
 		assertTrue(accountPage.isDefaultCheckBoxDisabled());
 	}
+	
+	@Then("^User sees the greeting message$")
+	public void isGreetingMessageDisplayed() {
+		assertTrue(accountPage.isGreetingMessageDisplayed());
+	}
 }

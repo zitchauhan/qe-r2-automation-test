@@ -307,6 +307,7 @@ public class Locators {
 		public static By billingZipCode = By.id("input_blling_zip_code");
 		public static By buttonCheck = By.id("btn_check");
 		public static By buttonLogOut = By.xpath("//XCUIElementTypeButton[@label=\"Log Out\"]");
+		public static By greetingMessage = By.id("lbl_greeting_message");
 		public static By creditCardHOlderName;
 		public static By creditCardNumber;
 		public static By creditCardExpiry;
