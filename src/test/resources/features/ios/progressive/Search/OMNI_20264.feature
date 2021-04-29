@@ -13,7 +13,7 @@ Given User launches the application
 #    Then User verifies breadcrumb is present for the product
     And User Sees the Search Box
     Then User clicks on the Search Box
-    And User can "edit" the search
+    And User can edit "Adidas" the search
     And User sees all products related to search keyword
      
   @Sprint5 @ST-OMNI-20264 @TC-OMNI-
