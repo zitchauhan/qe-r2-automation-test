@@ -11,6 +11,7 @@ public class Locators {
 		public static By wishlist = By.id("lbl_wishlist");
 		public static By cart = By.id("lbl_cart");
 		public static By account = By.id("lbl_account");
+		public static By Login = By.xpath("//XCUIElementTypeButton[@name=\"LOGIN\"]");
 	}
 	
 	public static class LoginPage{
@@ -57,6 +58,8 @@ public class Locators {
 		public static By labelInfoMessagetitle = By.id("lbl_info_message_title");
 		public static By labelInfoMessageSubtitle = By.id("lbl_info_message_sub_title");
 		public static By buttonInfoMessageCTA = By.id("btn_info_message_cta");
+		public static By searchsuggestionkeyword = By.id("lbl_searchsuggestionkeyword");
+		public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
 	}
 
 	public static class PLPPage{
@@ -553,6 +556,7 @@ public class Locators {
 			public static By existingasocard = By.id("btn_existingaso_card");
 			public static By buttonaddacacemycard = By.id("btn_addaso_card");
 			public static By buttonaddcreditcard = By.id("btn_adddredit_card");
+			public static By setAsDefaultCheckbox = By.id("chk_set_as_default");
 			
 		
 			
@@ -633,6 +637,30 @@ public class Locators {
 		public static By labelSubscribeMessage = By.id("lbl_subscribe_email_subtitle");
 	}
 
+	public static class OrderDetail{
+		public static By buttonOrder = By.id("button_Order");
+		public static By listOrder=By.id("list_Order");
+		public static By buttonOrderId=By.id("order_id");
+		//public static By lookupOrder= By.id("");
+		public static By labelOrderDetailPage= By.id("label_order_detail_page");
+		public static By buttonCancelOrder=By.id("button_cancel_order");
+		public static By buttonChevronCancelOrder=By.id("button_chevron_cancel_order");
+		public static By alertMessageOrderScreen=By.id("alert_order_screen");
+		public static By alertMessageText=By.id("alert_message_txt");
+		public static By buttonYesAlertMessage=By.id("button_Yes_alert");
+		public static By labelSucessOrderCancellationMesage=By.id("label_sucess_cancel_message");
+		public static By buttonNoAlertMessage=By.id("button_No_alert");
+		public static By OrderCancelConfirmationScreen=By.id("cancel_confirmation_screen");
+		public static By buttonBackOrderCancel=By.id("back_orderCancel");
+		public static By ErrorMesageOrderCancel=By.id("error_msg_order_cancel");
+		public static By labelOrderPage=By.id("label_order_page");
+		
+		
+	}
+	
+	
+
+
 	public static class OrdersPage {
 		public static By orderSummarylabel = By.id("lbl_order_summary");
 		public static By paymentDetailsScreenHeader = By.xpath("//*[contains(@label,'Payment Details')]");
@@ -654,4 +682,5 @@ public class Locators {
 		public static By labelAddressUsername = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_address')]");
 		public static By editAddressLink = By.xpath("//XCUIElementTypeOther[@name='Edit']");
 	}
+
 }
