@@ -57,6 +57,10 @@ public class Locators {
 		public static By labelInfoMessagetitle = By.id("lbl_info_message_title");
 		public static By labelInfoMessageSubtitle = By.id("lbl_info_message_sub_title");
 		public static By buttonInfoMessageCTA = By.id("btn_info_message_cta");
+		public static By titleOferDetails;
+		public static MobileElement offerDetailsBanner;
+		public static By searchsuggestionkeyword = By.id("lbl_searchsuggestionkeyword");
+		public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
 	}
 
 	public static class PLPPage{
@@ -94,6 +98,12 @@ public class Locators {
 		public static By scanBarCode = By.id("btn_scan_barcode");
 		public static By goBtn = By.id("Go");
 		public static By searchErrormsg =  By.id("txt_empty_result_body");
+		public static By navigateBack = By.id("btn_back");
+		public static By recentSearchesTitle;
+		public static By clearAll;
+		public static By recentSearches;
+		public static By popularSearchesTitle;
+		public static By popularsearchesItem;
 	}
 	
 	public static class OnBoardingScreen{
@@ -214,6 +224,23 @@ public class Locators {
 		public static By wishlistAddButton = By.id("btn_add_wishlist");
 		public static By wishlistTileTitle = By.id("txt_wishlist_name");
 		public static By backBtn = By.id("btn_back");
+
+		public static By productTitle = By.id("lbl_product_title");
+		public static By productImage = By.id("img_product_image");
+		public static By productPrice = By.id("lbl_product_price");
+		public static By removeButton = By.id("btn_remove");
+		public static By moveToCartButton = By.id("btn_move_to_cart");
+		public static By itemCount = By.id("lbl_item_count");
+		public static By wishListName = By.xpath("//*[contains(@label,'{0}')]");
+		public static By wishListHeader = By.xpath("//*[contains(@label,'{0}')]");
+		public static By emptyWishListLabel = By.id("lbl_wishlist_empty");
+		public static By confirmationPopup = By.xpath("//*[contains(@label,'Remove')]");
+		public static By createdWishlist = By.id("lbl_created_wishlist");
+		public static By bannerTitle = By.id("lbl_banner_title");
+		public static By bannerSubTitle = By.id("lbl_banner_sub_title");
+		public static By bannerCTA = By.id("lbl_banner_cta");
+		public static By webViewBanner = By.id("lbl_web_view_banner");
+
 	}
 
 	public static class ShopNewPage{
@@ -239,6 +266,14 @@ public class Locators {
 		public static By billingZipCode = By.id("input_blling_zip_code");
 		public static By buttonCheck = By.id("btn_check");
 		public static By buttonLogOut = By.xpath("//XCUIElementTypeButton[@label=\"Log Out\"]");
+		public static By creditCardHOlderName;
+		public static By creditCardNumber;
+		public static By creditCardExpiry;
+		public static By creditCardCvvNumber;
+		public static By creditCardPageTitle;
+		public static By alertPopUPCreditCard;
+		public static By billingAddressTitle = By.id("lbl_billing_address");
+		public static By setAsDefaultCheckBox;
     }
 	
 	public static class CartPage{
@@ -623,4 +658,5 @@ public class Locators {
 		public static By labelAddressUsername = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_address')]");
 		public static By editAddressLink = By.xpath("//XCUIElementTypeOther[@name='Edit']");
 	}
+	
 }
