@@ -11,6 +11,7 @@ public class Locators {
 		public static By wishlist = By.id("lbl_wishlist");
 		public static By cart = By.id("lbl_cart");
 		public static By account = By.id("lbl_account");
+		public static By Login = By.xpath("//XCUIElementTypeButton[@name=\"LOGIN\"]");
 	}
 	
 	public static class LoginPage{
@@ -57,6 +58,8 @@ public class Locators {
 		public static By labelInfoMessagetitle = By.id("lbl_info_message_title");
 		public static By labelInfoMessageSubtitle = By.id("lbl_info_message_sub_title");
 		public static By buttonInfoMessageCTA = By.id("btn_info_message_cta");
+		public static By searchsuggestionkeyword = By.id("lbl_searchsuggestionkeyword");
+		public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
 	}
 
 	public static class PLPPage{
@@ -547,10 +550,38 @@ public class Locators {
 			
 		}
 		
-		//Use this for my account add new cc section 
+		//Use this for my account add new cc section 27.04.2021 - Add credit card screen
 				public static class Addnewcreditcard{
+					
+					public static By buttonAddNewCreditCard= By.id("button_add_new_credit_card");
 					public static By buttonback = By.id("btn_payment_back");
 					public static By AddnewcrerditCardlabel = By.id("lbl_addnewcreditcard");
+					public static By imgVisa=By.id("img_visa");
+					public static By imgDisover=By.id("img_Discover");
+					public static By imgAmex=By.id("img_Amex");
+					public static By imgMasterCard=By.id("img_MasterCard");
+					public static By inputCardHolderName=By.id("input_cardholder_name");
+					public static By inputCardNumberField=By.id("input_card_number");
+					public static By inputCVV=By.id("input_cvv");
+					public static By inputExpiryDate=By.id("input_expiry_date");
+					public static By checkboxSaveForFutureAddress=By.id("checkbox_save_future_address");
+					
+
+					public static By labelBillingAddress=By.id("label_billing_address");
+					public static By radioSameAsShippingAddress=By.id("radio_same_as_shipping_address");
+					public static By radioAddBillingAddress=By.id("radio_add_billing_address");
+					public static By buttonSaveCreditCard=By.id("button_save_credit_card");
+					public static By listSavedAddress=By.id("list_saved_address");
+					public static By listSavedAddressFirst=By.id("list_saved_address_first");
+					
+					
+					public static By popupWarning= By.id("popup_warning");
+					public static By buttonContinueWarning = By.id("button_continue_warning");
+					public static By buttonCancelWarning= By.id("button_cancel_warning");
+					public static By msgAlertPopupHeading=By.id("msg_alert_popup_heading");
+					public static By msgAlertPopupSubHeading=By.id("msg_alert_popup_subheading");
+					
+					public static By errorMsgInvalidCard=By.id("invalid_card_error");
 				}
 
 
@@ -623,6 +654,7 @@ public class Locators {
 	}
 
 	public static class OrderDetail{
+
 		public static By buttonOrder = By.id("button_Order");
 		public static By listOrder=By.id("list_Order");
 		public static By buttonOrderId=By.id("order_id");
@@ -639,6 +671,7 @@ public class Locators {
 		public static By buttonBackOrderCancel=By.id("back_orderCancel");
 		public static By ErrorMesageOrderCancel=By.id("error_msg_order_cancel");
 		public static By labelOrderPage=By.id("label_order_page");
+
 		
 		
 	}
