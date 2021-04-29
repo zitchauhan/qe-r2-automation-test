@@ -1,6 +1,6 @@
 Feature: Search Validation
 
-@Sprint5 @ST-OMNI-20264 @TC-OMNI-
+@Sprint5 @Regression
 Scenario: Validate the user able to redirect to a PLP
 Given User launches the application
     And User Clicks On MaY Be Later
