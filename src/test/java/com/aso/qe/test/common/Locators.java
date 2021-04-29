@@ -91,6 +91,8 @@ public class Locators {
 		public static By sortAndFilterOutOfStockTitle = By.id("lbl_out_of_stock");
 		public static By sortAndFilterFilterIcon = By.id("icon_filter");
 		
+		public static By editSearch = By.id("edit_search");
+		}
 
 		// OMNI-20323 15.04.2021 
 		public static By FilterButton=By.id("filter_button");
@@ -110,7 +112,8 @@ public class Locators {
 	}
 
 	public static class SearchPage{
-		public static By searchBar = By.id("btn_Search");
+	    //public static By searchBar = By.id("btn_Search");
+		public static By searchBar = By.id("search_bar");
 		public static By cancelBtn = By.id("btn_cancel");
 		public static By scanBarCode = By.id("btn_scan_barcode");
 		public static By goBtn = By.id("Go");
