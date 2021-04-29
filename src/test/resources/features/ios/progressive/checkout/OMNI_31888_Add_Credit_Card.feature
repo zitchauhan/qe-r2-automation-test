@@ -35,7 +35,7 @@ T
     
     @Sprint5 @ST-OMNI-31888  @TC-OMNI-35916
   Scenario: As an ASO mobile app signed-in user
-  I want to see the valid credit card image when i enter first two digit of card number 
+  I want to see the valid credit card image when i enter first two  digit of card number 
     Given User launches the application
     And User Logs into the application
     And User taps on home in bottom nav
@@ -54,7 +54,7 @@ T
     Then User sees credit card information on credit card screen
     Then User sees accepcted card image on credit card screen
     Then User sees card holder name field on credit card screen
-    When User enter "41" in "CardNumber" field
+    When User enter "4111" in "CardNumber" field
     Then User sees card image in card number input field
    
    
