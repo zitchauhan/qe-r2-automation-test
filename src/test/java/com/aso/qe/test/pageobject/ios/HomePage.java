@@ -230,4 +230,9 @@ public class HomePage {
 		return true;
 	}
 
+	public void tapOnOfferDetails() {
+		GlobalMobileHelper.tapOnElement(Locators.HomePage.offerDetailsBanner);
+		
+	}
+
 }
