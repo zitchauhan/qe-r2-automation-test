@@ -4,10 +4,12 @@ Feature: Verify user is able to navigate to Checkout screen
 Scenario: Verify User is able to navigate to Checkout screen
   	Given User launches the application
     And User continues as guest user
-    When User navigates to pdp
-    Then User sees product image
-    And User sees Product title
-    And User taps on add to cart button
+    Then User sees the homepage
+	 When User Sees the Search Box
+    Then User clicks on the Search Box
+    And User search for the "SearchKeyword"
+    And user click on Product
+    When User taps on add to cart button
     And User taps on View Cart button
     Then User is navigated To Cart Screen
     Then User sees the checkout button
