@@ -50,7 +50,7 @@ Given User launches the application
     Then User sees the homepage
     When User Sees the Search Box
     Then User clicks on the Search Box
-    And User search for the "Invalid_SearchKeyword"
+    And User search for the "wrongSearchKeyword"
     Then User sees null search result  as "No products found"
    
    
