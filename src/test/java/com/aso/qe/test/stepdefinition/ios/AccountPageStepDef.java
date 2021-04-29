@@ -160,7 +160,12 @@ public void user_is_taken_to_on_aso_card_page(String pagename) throws Throwable 
 	public void isPaymentMethodLabelDisplayed() {
 		assertTrue(accountPage.isPaymentMethodLabelDisplayed());
 	}
-
+	
+	@Then("^User sees \"(.*?)\" in order Cancellation screen$")
+	public void isCancellationScreenElementDisplayed(String element) {
+		assertTrue(orderPage.isCancellationScreenElementDisplayed(element));
+	}
+	
 	// To Click on add new Aso card page 
 	@When("^user clicks on \"([^\"]*)\" on aso card page$")
 	public void user_clicks_on_on_aso_card_page(String btnName) {

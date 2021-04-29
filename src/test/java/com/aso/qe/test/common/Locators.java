@@ -701,6 +701,22 @@ public class Locators {
 		public static By labelGiftCard = By.id("lbl_gift_card_text");
 		public static By labelGiftCardDigits = By.id("lbl_gift_card");
 		public static By labelGiftCardAmount = By.id("lbl_gift_card_amount");
+		
+		public static By cancellationMessage = By.id("lbl_cancellation_message");
+		public static By confirmationEmail = By.id("labl_confirmation_email");
+		public static By cancellationDate = By.id("lbl_cancellation_date");
+		public static By productImage = By.id("lbl_product_image");
+		public static By productName = By.id("lbl_product_name");
+		public static By skuID = By.id("lbl_sku_id");
+		public static By quantity = By.id("lbl_quantity");
+		public static By price = By.id("lbl_price");
+		public static By refundMessage = By.id("lbl_refund_message");
+		public static By refundDisclaimer = By.id("lbl_refund_disclaimer");
+		public static By subtotal = By.id("lbl_subtotal");
+		public static By taxes = By.id("lbl_taxes");
+		public static By shippingCharges = By.id("lbl_shipping_charges");
+		public static By refundAmount = By.id("lbl_refund_amount");
+		public static By refundedTo = By.id("lbl_refunded_to");
 	}
 	public static class SavedAddresses {
 		public static By addressesTile = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_title')]");
