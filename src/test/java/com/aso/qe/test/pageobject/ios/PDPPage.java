@@ -762,4 +762,53 @@ public class PDPPage {
 			throw new Exception("Button not enabled after tap");
 		}
 	}
+
+	public static void clickonPDP(String elementname) {
+		if(elementname.equalsIgnoreCase("addtocart")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonAddToCart);
+
+		}else {
+			
+			
+			throw new UnsupportedOperationException("Given element not found on PDP");
+ 
+		
+
+		}
+	}
+
+	public static boolean VarifyElementPresenseOnPDPPage(String elementname) {
+if(elementname.equalsIgnoreCase("Standered Gift card modal")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.STDGIFTCARDModal);
+
+			
+		}else if(elementname.equalsIgnoreCase("Standered Gift card modal generic message")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.STDGIFTCARDModalGenericContent);
+			
+		}else if(elementname.equalsIgnoreCase("Open STD Gift card button")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OpenSTDGiftcardbutton);
+		}else if(elementname.equalsIgnoreCase("Bulk Gift card modal")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.BulkGIFTCARDModal);
+				}else if(elementname.equalsIgnoreCase("Bulk Gift card modal generic message")){
+	
+					return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.bulkGIFTCARDModalGenericContent);
+				}else if(elementname.equalsIgnoreCase("Open Bulk Gift card button")){
+	
+					return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OpenbulkGiftcardbutton);
+					}else if(elementname.equalsIgnoreCase("Cancelbutton")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.CloseAlertmodal);
+
+			
+		}else {
+			
+			throw new UnsupportedOperationException("Given Button not founded on PDP");
+
+		}
+	}
 }

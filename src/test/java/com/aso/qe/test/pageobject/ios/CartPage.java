@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
+import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -873,7 +874,11 @@ public class CartPage {
 	}
 
 }
+
+	public boolean isOrderSummaryLabelDisplayed() {
+		return GlobalMobileHelper.swipeTillElementDisplayed(Direction.UP, Locators.CartPage.orderSummaryLabel);
 	}
+}
 	
 
 

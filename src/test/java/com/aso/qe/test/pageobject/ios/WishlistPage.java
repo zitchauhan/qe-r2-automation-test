@@ -3,6 +3,8 @@ package com.aso.qe.test.pageobject.ios;
 
 import org.openqa.selenium.Alert;
 import org.apache.log4j.Logger;
+import org.apache.tools.ant.launch.Locator;
+
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 
@@ -98,6 +100,45 @@ public class WishlistPage {
 	public void tapOnBackButton(String back) {
 		GlobalMobileHelper.tapOnElement(Locators.WishlistPage.backBtn);		
 	}
-	
+
+	public boolean isWishListItemDisplayed(String arg) {
+		switch(arg) {
+		case "Product Title":
+			return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.productTitle);
+		case "Product Image":
+			return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.productImage);
+		case "Product Price":
+			return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.productPrice);
+		case "Remove Button":
+			return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.removeButton);
+		case "Move To Cart":
+			return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.moveToCartButton);
+		case "Empty":
+			return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.emptyWishListLabel);
+		default:
+			throw new IllegalStateException("Wrong argument");
+			
+		}
+	}
+
+	public boolean isItemCountDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.itemCount);
+	}
+
+	public void tapOnWishList(String wishlist) {
+		GlobalMobileHelper.tapOnElement(GlobalMobileHelper.getLocator(Locators.WishlistPage.wishListName, wishlist));
+	}
+
+	public boolean isWishListDisplayed(String wishlist) {
+		return GlobalMobileHelper.isElementDisplayed(GlobalMobileHelper.getLocator(Locators.WishlistPage.wishListHeader, wishlist));
+	}
+
+	public void tapOnRemoveButton() {
+		GlobalMobileHelper.tapOnElement(Locators.WishlistPage.removeButton);
+	}
+
+	public boolean isConfirmationPopUpDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.confirmationPopup);
+	}
 }
 
