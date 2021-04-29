@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 
 import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.test.common.Locators;
 
 import io.appium.java_client.AppiumDriver;
@@ -84,9 +85,39 @@ public class SearchPage {
 		GlobalMobileHelper.tapOnElement(Locators.PLPPage.toggleOOS);
 
 	}
+	
+	public boolean isFilterOptionDisplayed() {
+	   return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.filterOption);	
+	}
 
+	public boolean isSortOptionDisplayed() {
+		   return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.sortOption);	
+		}
+	
+	public boolean isSearchCountDisplayed() {
+		   return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.searchCount);	
+		}
+	
+	public String getSearchCount() {
+		isSearchCountDisplayed();
+		return GlobalMobileHelper.getElementText(Locators.SearchPage.searchCount);
+	}
+	
+	public boolean isNullSearchPaageDisplayed(String msg) {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		MobileElement searchError = driver.findElement(Locators.SearchPage.nullSearchPage);
+		return searchError.getText().contains(msg);
+		}
 
-
+	
+	  public void swipeDown() {
+		  GlobalMobileHelper.swipeScreen(Direction.DOWN, 5);
+	  }
 	}
 
 

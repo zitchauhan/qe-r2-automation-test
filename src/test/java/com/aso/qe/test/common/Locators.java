@@ -94,6 +94,11 @@ public class Locators {
 		public static By scanBarCode = By.id("btn_scan_barcode");
 		public static By goBtn = By.id("Go");
 		public static By searchErrormsg =  By.id("txt_empty_result_body");
+		
+		public static By searchCount =By.id("search_count");
+		public static By sortOption =By.id("sort_option");
+		public static By filterOption =By.id("filter_option");
+		public static By nullSearchPage= By.id("null_search_page");
 	}
 	
 	public static class OnBoardingScreen{

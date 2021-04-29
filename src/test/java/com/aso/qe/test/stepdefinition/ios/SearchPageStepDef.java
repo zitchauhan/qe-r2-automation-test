@@ -55,10 +55,44 @@ public class SearchPageStepDef extends GlobalMobileHelper{
 	public void enableOosTogle() {
 		searchPage.oosToggleEnable();
 	}
+	@Then("^User sees null search result  as \"([^\"]*)\"$")
+	public void user_sees_null_search_result_as(String arg1) throws Throwable {
+	    assertTrue(searchPage.isNullSearchPaageDisplayed(arg1));
+	}
 	
-	
-	
+	@Then("^User swipe down on the screen$")
+	public void user_swipe_down_on_the_screen() throws Throwable {
+		searchPage.swipeDown();
+	}
+
+
+
+
+    
+
+@Then("^User sees search result count in Search result page$")
+public void user_sees_search_result_count_in_Search_result_page() throws Throwable {
+	 assertTrue(searchPage.isSearchCountDisplayed());
+     
+}
+
+@Then("^User sees sort option  in Search result page$")
+public void user_sees_sort_option_in_Search_result_page() throws Throwable {
+	assertTrue(searchPage.isSortOptionDisplayed());
+    
+}
+
+@Then("^User sees fiter option in Search result page$")
+public void user_sees_fiter_option_in_Search_result_page() throws Throwable {
+   assertTrue(searchPage.isFilterOptionDisplayed());
+}
+
+
+
+
+
 	
 
 
 }
+
