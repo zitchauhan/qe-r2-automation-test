@@ -1,7 +1,7 @@
 Feature: Feature for adding new credit card for Signed-In and Guest user
 T
   @Sprint5 @ST-OMNI-31888 @TC-OMNI-35915
-  Scenario: As an ASO mobile app signed-in user
+  Scenario: As an ASO mobile app signed-in   user
   I want to see add credit card screen should display with all the required input field on tapping on add credit card button 
     Given User launches the application
     And User Logs into the application
