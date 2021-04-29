@@ -371,8 +371,10 @@ public class GlobalMobileHelper {
 			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistTileTitle));
 		}else if(pageName.equalsIgnoreCase("Previous page")) {
 			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.BottomNav.wishlist));
-		}if(pageName.equalsIgnoreCase("Edit Wish List")) {
+		}else if(pageName.equalsIgnoreCase("Edit Wish List")) {
 			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.editBtn));
+		}else if(pageName.equalsIgnoreCase("created wishlist")) {
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.createdWishlist));
 		}else {
 			throw new UnsupportedOperationException("type not defined");
 		}
