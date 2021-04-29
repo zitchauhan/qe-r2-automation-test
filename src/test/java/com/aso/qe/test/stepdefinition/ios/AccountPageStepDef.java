@@ -1,5 +1,6 @@
 package com.aso.qe.test.stepdefinition.ios;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
@@ -68,7 +69,53 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	public void user_taps_on_Find_Store_link() throws Throwable {
 		accountPage.tapOnFindStoreLink();
 	}
+	@Then("^User verifies set as default address checkbox is \"([^\"]*)\"$")
+	public void user_verifies_set_as_default_address_checkbox_is(String status) throws Throwable {
+		accountPage.verifydefaultAddress(status);
+	}
 	
+	@Then("^User taps on add new address button$")
+	public void user_taps_on_add_new_address_button() throws Throwable {
+		accountPage.tapOnAddNewAddress();
+	}
+	
+	@When("^User selects \"([^\"]*)\" address to edit$")
+	public void user_selects_address_to_edit(String addressNum) throws Throwable {
+		accountPage.selectAddress(addressNum);
+	}
+	
+
+	@When("^user see \"([^\"]*)\" on my account page$")
+	public void user_see_on_my_account_page(String pagename) throws Throwable {
+		assertTrue(accountPage.VarifyElementPresenseOnAccountPage(pagename)); 
+	}
+	// to verify user is on my accounts cards page 
+	@Then("^user see \"([^\"]*)\" on my account payment page$")
+	public void user_is_on_my_account_cards_page(String pagename) throws Throwable {
+		assertTrue(accountPage.VarifyElementPresenseOnAccountCardsPage(pagename)); 
+	}
+	@Then("^user taps on \"([^\"]*)\" on my account page$")
+public void tabOnButtonOnAccountPage(String btnName) {
+		
+		accountPage.tabOnButtonOnAccountPage(btnName);
+	}
+	@When("^user clicks on \"([^\"]*)\" on my account payment page$")
+	public void tabOnButtonOnAccountCardsPage(String btnName) {
+		
+		accountPage.tabOnButtonOnAccountCardsPage(btnName);
+	}
+	
+	@Then("^i choose to enter \"([^\"]*)\" on aso card page$")
+	public void i_choose_to_enter_Aso_card(String carddetails) throws Throwable {
+		 accountPage.enterCardDetails(carddetails);
+	}
+
+
+// To verify that user is on aso card page 
+@Then("^user is taken to \"([^\"]*)\" on aso card page$")
+public void user_is_taken_to_on_aso_card_page(String pagename) throws Throwable {
+	assertTrue(accountPage.VarifyElementPresenseOnAsoCardsPage(pagename)); 
+}
 	@Then("^User taps on the orders button$")
 	public void tapOnOrderButton() {
 		accountPage.tapOnOrderButton();
@@ -117,5 +164,32 @@ public class AccountPageStepDef extends GlobalMobileHelper{
 	@Then("^User sees \"(.*?)\" in order Cancellation screen$")
 	public void isCancellationScreenElementDisplayed(String element) {
 		assertTrue(orderPage.isCancellationScreenElementDisplayed(element));
+	}
+	
+	// To Click on add new Aso card page 
+	@When("^user clicks on \"([^\"]*)\" on aso card page$")
+	public void user_clicks_on_on_aso_card_page(String btnName) {
+		
+		accountPage.tabOnButtonOnAsoCardsPage(btnName);
+	}
+	
+	@Then("^Set as default checkbox is not visible to the user$")
+	public void isSetAsDefaultNotDisplayed() {
+		assertTrue(accountPage.isSetAsDefaultNotDisplayed());
+	}
+	
+	@Then("^Set as default checkbox is visible to the user$")
+	public void isSetAsDefaultDisplayed() {
+		assertFalse(accountPage.isSetAsDefaultNotDisplayed());
+	}
+	
+	@Then("^Default checkbox is unchecked$")
+	public void isDefaultCheckBoxChecked() {
+		assertFalse(accountPage.isDefaultCheckBoxChecked());
+	}
+	
+	@Then("^Set as default checkbox is disabled for the user$")
+	public void isDefaultCheckBoxDisabled() {
+		assertTrue(accountPage.isDefaultCheckBoxDisabled());
 	}
 }

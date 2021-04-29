@@ -110,6 +110,24 @@ public class GlobalMobileHelper {
 		return result;
 	}
 	
+	public static boolean isElementSelected(By locator) {
+		boolean result=false;
+		
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		try {
+			WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+			result = wait.until(ExpectedConditions.presenceOfElementLocated(locator)).isSelected();
+		}catch(TimeoutException e) {
+			logger.warn("Appium driver timed out waiting for element " + locator.toString());
+		}catch (Exception e) {
+		    System.err.println(e.getMessage());
+		}
+		
+		return result;
+	}
+	
 	public static boolean isElementDisplayed(MobileElement element) {
 		boolean result=false;
 		
@@ -303,6 +321,30 @@ public class GlobalMobileHelper {
 		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator)).getText();
 	}
+	
+	public static int randomInteger(int min, int max) {
+		  return (int) (Math.floor(Math.random() * (max - min + 1)) + min);
+		}
+	public void verifyUserIsOnPageone(String pagename) {
+		
+		if(pagename.equalsIgnoreCase("LogIn")) {
+			
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.LoginPage.emailEditBox));
+		}else if(pagename.equalsIgnoreCase("Cart")){
+			
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.labelYourCart));
+
+		}else {
+			
+			throw new UnsupportedOperationException("Given button type not defined");
+
+		}
+	}
+
+			
+		//}else if(pagename.equalsIgnoreCase("save")){
+			
+			//assertTrue (GlobalMobileHelper.isElementDisplayed(Locators.Addnewasocreditcard.AddnewAsocrerditCardlabel));
 	public static boolean isElementEnabled(By locator) {
 		boolean result=false;
 		
@@ -321,6 +363,7 @@ public class GlobalMobileHelper {
 		return result;
 	}
 
+	
 	public void verifyUserIsOnPage(String pageName) {
 		if(pageName.equalsIgnoreCase("Add Wishlist")) {
 			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistAddButton));
@@ -334,4 +377,30 @@ public class GlobalMobileHelper {
 			throw new UnsupportedOperationException("type not defined");
 		}
 	}
+	
+	public static By getLocator(By locator,String replacement) {
+		String loc = locator.toString();
+		return By.xpath(loc.replace("{0}", replacement));
+	}
+	
+	public static boolean swipeTillElementDisplayed(Direction dir, By element) {
+		final int NO_OF_TIMES = 4;
+		return swipeTillElementDisplayed(dir,element,NO_OF_TIMES);
+	}
+	
+	//Returns true if element is displayed false otherwise
+	public static boolean swipeTillElementDisplayed(Direction dir, By element, int noOfTimes) {
+		while(noOfTimes-- > 0) {
+			if(GlobalMobileHelper.isElementDisplayed(element)) {
+				return true;
+			}
+			swipeScreen(dir);
+		}
+		return false;
+	}
 }
+
+
+
+
+
