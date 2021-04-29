@@ -58,6 +58,8 @@ public class Locators {
 		public static By labelInfoMessagetitle = By.id("lbl_info_message_title");
 		public static By labelInfoMessageSubtitle = By.id("lbl_info_message_sub_title");
 		public static By buttonInfoMessageCTA = By.id("btn_info_message_cta");
+		public static By titleOferDetails;
+		public static MobileElement offerDetailsBanner;
 		public static By searchsuggestionkeyword = By.id("lbl_searchsuggestionkeyword");
 		public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
 	}
@@ -97,6 +99,12 @@ public class Locators {
 		public static By scanBarCode = By.id("btn_scan_barcode");
 		public static By goBtn = By.id("Go");
 		public static By searchErrormsg =  By.id("txt_empty_result_body");
+		public static By navigateBack = By.id("btn_back");
+		public static By recentSearchesTitle;
+		public static By clearAll;
+		public static By recentSearches;
+		public static By popularSearchesTitle;
+		public static By popularsearchesItem;
 	}
 	
 	public static class OnBoardingScreen{
