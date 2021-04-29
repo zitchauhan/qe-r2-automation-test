@@ -283,7 +283,7 @@ public class PDPStepDef extends GlobalMobileHelper{
 	
 	@Then("^User sees the correct item count on the cart badge as \"([^\"]*)\"$")
 	public void user_sees_cart_badge_count_as(String arg1) {
-		pdp.ItemsCountOnCartBadge();
+		assertTrue(pdp.ItemsCountOnCartBadge(arg1));
 	}
 
 	@Then("^User sees Product title on header$")

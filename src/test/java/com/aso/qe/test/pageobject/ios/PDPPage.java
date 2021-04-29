@@ -775,7 +775,7 @@ public class PDPPage {
 	}
 
 	
-	public void ItemsCountOnCartBadge() { 
+	public boolean ItemsCountOnCartBadge(String arg1) { 
 	  String qtyCartPage = labelItemCount.getText(); 
 	  int qtyCartPageCount = Integer.parseInt(qtyCartPage); 
 	  String countOnCartBadge = CounterBadgeOnCartIcon.getText(); 
