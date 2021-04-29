@@ -67,7 +67,7 @@ public class PDPPage {
 	
 	@iOSXCUITFindBy(id="rd_home_delivery")
 	public MobileElement homeDeliveryRadio;
-	
+		
 	public boolean isHeroImageDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.imageHero);
 	}
@@ -763,6 +763,31 @@ public class PDPPage {
 		}
 	}
 
+	public boolean isCartBadgeDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.cartBadge);
+	}
+
+	
+	public boolean ItemsCountOnCartBadge(String arg1) { 
+	  String qtyCartPage = labelItemCount.getText(); 
+	  int qtyCartPageCount = Integer.parseInt(qtyCartPage); 
+	  String countOnCartBadge = CounterBadgeOnCartIcon.getText(); 
+	  if (qtyCartPageCount < 100) { 
+		  assertTrue(qtyCartPage.equalsIgnoreCase(countOnCartBadge));	  
+	  } else { 
+		  assertTrue(countOnCartBadge.equalsIgnoreCase("99+")); } 
+	  }
+
+	public boolean isProductTitleOnHeaderDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.productTite);
+	}
+
+	public boolean isBackButtonDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.backBtn);
+	}
+
+	public void tapOnCartBadge() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.cartBadge);
 	public static void clickonPDP(String elementname) {
 		if(elementname.equalsIgnoreCase("addtocart")) {
 			
