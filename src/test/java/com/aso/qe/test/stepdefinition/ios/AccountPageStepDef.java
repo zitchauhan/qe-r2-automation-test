@@ -187,4 +187,9 @@ public void user_is_taken_to_on_aso_card_page(String pagename) throws Throwable 
 	public void isDefaultCheckBoxDisabled() {
 		assertTrue(accountPage.isDefaultCheckBoxDisabled());
 	}
+	
+	@Then("^User sees the greeting message$")
+	public void isGreetingMessageDisplayed() {
+		assertTrue(accountPage.isGreetingMessageDisplayed());
+	}
 }
