@@ -40,41 +40,4 @@ private AppiumDriver<MobileElement> driver;
 			throw new IllegalStateException("Invalid Element");
 		}
 	}
-
-	public boolean isCancellationScreenElementDisplayed(String element) {
-		switch(element) {
-		case "Cancellation message":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.cancellationMessage);
-		case "Confirmation email message":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.confirmationEmail);
-		case "Cancellation Date":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.cancellationDate);
-		case "Product Image":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.productImage);
-		case "Product name":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.productName);
-		case "Sku id":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.skuID);
-		case "Quantity":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.quantity);
-		case "Price":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.price);
-		case "Refund message":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.refundMessage);
-		case "Refund disclaimer":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.refundDisclaimer);
-		case "Subtotal":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.subtotal);
-		case "Taxes":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.taxes);
-		case "Shipping charges":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.shippingCharges);
-		case "Refund amount":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.refundAmount);
-		case "Refunded to":
-			return GlobalMobileHelper.isElementDisplayed(Locators.OrdersPage.refundedTo);
-		default:
-			throw new IllegalStateException("Invalid Element");
-		}
-	}
 }
