@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 import com.aso.qe.framework.common.Constants;
+import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.test.common.Locators;
@@ -200,22 +201,32 @@ public class HomePage {
 		return GlobalMobileHelper.isElementDisplayed(informationElement);
 	}
 
+	@Deprecated
 	private boolean isInformationMessageElementsDisplayed(String informationMessageElementKeyword){
+		return isInformationMessageElementsDisplayed();
+	}
+
+	private boolean isInformationMessageElementsDisplayed(){
 		boolean result = false;
 		List<MobileElement> informationElements=null;
 
 		try {
 			String subTitleText = GlobalMobileHelper.getElementText(Locators.HomePage.labelInfoMessageSubtitle);
+			String titleText = GlobalMobileHelper.getElementText(Locators.HomePage.labelInfoMessagetitle);
 			// make the element visible
 			int iteration=1;
-			while (!(subTitleText.toLowerCase().contains("conditions, exclusions, and restrictions") ||
-					subTitleText.toLowerCase().contains("exclusions") ||
-					subTitleText.toLowerCase().contains("restrictions") ||
-					subTitleText.toLowerCase().contains("conditions")
-					)) {
-					if (iteration >= 5) {
-						break; // exit after trying 5 times
-					}
+			String termsAndConditionsSubTitle = PropertiesHelper.getInstance().getMobileTestDataProperty("TermsAndConditionsSubTitle");
+			String termsAndConditionsTitle = PropertiesHelper.getInstance().getMobileTestDataProperty("TermsAndConditionsTitle");
+
+			while
+			(
+					!subTitleText.toLowerCase().contains(termsAndConditionsSubTitle.toLowerCase()) &&
+					!titleText.toLowerCase().contains(termsAndConditionsTitle)
+			)
+			{
+				if (iteration >= 5) {
+					break; // exit after trying 5 times
+				}
 				iteration += 1;
 				GlobalMobileHelper.swipeScreen(Direction.LEFT, 10);
 			}
