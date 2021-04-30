@@ -146,13 +146,13 @@ public class GlobalMobileHelper {
 	
 	public static void setImplicitWaitTo(AppiumDriver<MobileElement> driver, int seconds) {
 			driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
-		    }
+	}
 			
 	public static void searchByKeyword(String keyword) {
-	 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
-		 		MobileElement searchBar= driver.findElement(Locators.SearchPage.searchBar);
-		 		searchBar.sendKeys(keywordValue);	 		
-		 	}
+		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
+		MobileElement searchBar= driver.findElement(Locators.SearchPage.searchBar);
+		searchBar.sendKeys(keywordValue);
+	}
 	 
 	public static void swipeScreen(Direction dir, int numOftimes) {
 		int start=0;
@@ -164,12 +164,10 @@ public class GlobalMobileHelper {
 	
 	public static String findData(String keyword) {
 		String keywordValue=null;
-		 keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
-		 return keywordValue;
-		
-	
-		
-	}	
+		keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
+		return keywordValue;
+	}
+
 	public static void swipeScreen(Direction dir) {
         System.out.println("swipeScreenSmall(): dir: '" + dir + "'"); // always log your actions
 
@@ -291,13 +289,14 @@ public class GlobalMobileHelper {
 			// ignore
 			}
 			 }
-		  public void swipeScreenFromElement(Direction dir, MobileElement fromElement,int numOftimes) {
-				int start=0;
-				while (start < numOftimes) {
-					swipeScreenFromElement(dir,fromElement);
-					start+=1;
-				}
-			}
+
+	public void swipeScreenFromElement(Direction dir, MobileElement fromElement,int numOftimes) {
+		int start=0;
+		while (start < numOftimes) {
+			swipeScreenFromElement(dir,fromElement);
+			start+=1;
+		}
+	}
 	 
 	public static String getElementText(By locator) {
 		if(driver == null) {
@@ -350,6 +349,17 @@ public class GlobalMobileHelper {
 				logger.debug("timeout expired while waiting for the alert");
 				break;
 			}
+		}
+	}
+
+	/**
+	 * Method to wait for the amount to time mentioned as Explicit wait
+	 */
+	public static void waitForDefaultTime(){
+		try {
+			Thread.sleep(DEFAULT_EXPLICIT_WAIT * 1000L);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 	}
 }
