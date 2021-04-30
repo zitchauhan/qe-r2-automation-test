@@ -25,11 +25,11 @@ public class WishListStepDef extends GlobalMobileHelper{
 
 	//OMNI-28640
 	@When("^User taps on \"([^\"]*)\" button$")
-	public void user_taps_on_edit_button(String arg1){
+	public void user_taps_on_button_onWishlistPage(String arg1){
 			wishlistPage.tapOnButton(arg1);
 	}
 
-	@Then("^User sees \"([^\"]*)\" screen$")
+	@Then("^User sees \"([^\"]*)\" page$")
 	public void user_sees_Page(String arg) {
 		verifyUserIsOnPage(arg);
 	}
@@ -78,7 +78,7 @@ public class WishListStepDef extends GlobalMobileHelper{
 		wishlistPage.buttonEnabled(btn);
 	}
 
-	@Then("^User taps on \"([^\"]*)\" button$")
+	@Then("^User taps on Add Wishlist button$")
 	public void user_taps_on_Add_Wishlist_button(String button) {
 		wishlistPage.tapOnAddWishListButton(button);
 	}
