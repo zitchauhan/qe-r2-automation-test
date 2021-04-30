@@ -79,6 +79,16 @@ public class WishListStepDef extends GlobalMobileHelper{
 		wishlistPage.buttonEnabled(btn);
 	}
 
+	/*@Then("^User taps on \"([^\"]*)\" button$")
+	public void user_taps_on_Add_Wishlist_button(String button) {
+		wishlistPage.tapOnAddWishListButton(button);
+	}*/
+	
+	@Then("^User sees \"([^\"]*)\" screen$")
+	public void user_sees_screen(String arg) {
+		verifyUserIsOnPage(arg);
+	}
+
 	@When("^User taps on \"([^\"]*)\" back button$")
 	public void user_taps_on_back_button(String back) {
 		wishlistPage.tapOnBackButton(back);
@@ -113,13 +123,13 @@ public class WishListStepDef extends GlobalMobileHelper{
 	public void isConfirmationPopUpDisplayed() {
 		assertTrue(wishlistPage.isConfirmationPopUpDisplayed());
 	}
-
+	
 	//OMNI-28622
 	@When("^User taps on \"([^\"]*)\" wishlist$")
 	public void user_taps_on_wishlist(String arg1){
 		wishlistPage.tapOnCreatedWishList(arg1);
 	}
-
+	
 	@Then("^User sees \"([^\"]*)\" on wishlist page$")
 	public void user_sees_on_wishlist_page(String arg1) {
 		assertTrue(wishlistPage.varifyElementPresenseOnPage(arg1));
@@ -133,7 +143,7 @@ public class WishListStepDef extends GlobalMobileHelper{
 	public void user_sees_information_message_subtitle_on_wishlist_page(String subTitleText){
 		assertTrue(getElementText(Locators.HomePage.labelInfoMessageSubtitle).toLowerCase().contains(subTitleText.toLowerCase()));
 	}
-
+	
 	@Then("^User click on the \"([^\"]*)\" on wishlist page$")
 	public void user_click_on_cta(String arg1){
 		if (arg1.contains("Visit Academy.com")){
@@ -142,7 +152,7 @@ public class WishListStepDef extends GlobalMobileHelper{
 			wishlistPage.tapOnBannerCta(arg1);
 		}
 	}
-
+	
 	@Then("^I choose to verify user navigated to Web$")
 	public void i_choose_to_verify_user_navigated_to_Web() {
 		assertTrue(wishlistPage.isNavigatedToWeb());

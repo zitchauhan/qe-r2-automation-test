@@ -43,7 +43,7 @@ public class WishlistPage {
 			GlobalMobileHelper.getElementText(Locators.WishlistPage.cancelbtn);
 		} else if (GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistAddButton)) {
 			GlobalMobileHelper.tapOnElement(Locators.WishlistPage.wishlistAddButton);
-		}	
+		}
 	}
 
 	public void renameWishlist(String rename) {

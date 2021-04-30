@@ -67,7 +67,7 @@ public class PDPPage {
 	
 	@iOSXCUITFindBy(id="rd_home_delivery")
 	public MobileElement homeDeliveryRadio;
-	
+		
 	public boolean isHeroImageDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.imageHero);
 	}
@@ -310,20 +310,19 @@ public class PDPPage {
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		 List<Object> list = new ArrayList<Object>();
 		boolean flag=true;
 		if(args.equalsIgnoreCase("App_store_guidelines")) {
-			// 
+			 
 			String textguidelines=GlobalMobileHelper.findData(args);
 			 String elementtext  = driver.findElement(Locators.PDPPage.AppStoreGuidelines).getText();
 			if(textguidelines.equalsIgnoreCase(elementtext)) {
 				
 				flag=true;
 			}else {
-				list.add ( new Exception("AppStoreGuidelines  not present "));	
+				list.add ( new Exception("AppStoreGuidelines not present "));	
 			}
 
 			
@@ -375,25 +374,24 @@ public class PDPPage {
 		return flag;
 		
 	}
+
 	public boolean isVariantValueDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorValueWhite);
 	}
 
 	public boolean isNavigatedToPDPOnWeb() {
-		
+
 		Set<String> availableContexts = driver.getContextHandles();
-		
-		for(String context : availableContexts) {
-			if(context.contains("WEBVIEW")){
+
+		for (String context : availableContexts) {
+			if (context.contains("WEBVIEW")) {
 				System.out.println("Context Name is " + context);
 				driver.context(context);
 				break;
 			}
 		}
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.WebViewBannerPDP);
-		
 	}
-	
 	
 	public void selectDeliveryOption(String optionName) throws UnsupportedOperationException {
 		// optionName can be home/store
@@ -763,23 +761,58 @@ public class PDPPage {
 		}
 	}
 
+	public void tapOnPurchaseButton() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.purchaseBtn);
+	}
+
+	public boolean isCartBadgeDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.cartBadge);
+	}
+
+	@iOSXCUITFindBy(id="rd_home_delivery")
+	public MobileElement CounterBadgeOnCartIcon;
+
+	@iOSXCUITFindBy(id="lbl_cart")
+	public MobileElement labelItemCount;
+
+	public boolean ItemsCountOnCartBadge(String arg1) {
+		String qtyCartPage = labelItemCount.getText();
+		int qtyCartPageCount = Integer.parseInt(qtyCartPage);
+		String countOnCartBadge = CounterBadgeOnCartIcon.getText();
+		if (qtyCartPageCount < 100) {
+			assertTrue(qtyCartPage.equalsIgnoreCase(countOnCartBadge));
+		} else {
+			assertTrue(countOnCartBadge.equalsIgnoreCase("99+"));
+		}
+		return true;
+	}
+
+	public boolean isProductTitleOnHeaderDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.productTite);
+	}
+
+	public boolean isBackButtonDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.backBtn);
+	}
+
+	public void tapOnCartBadge() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.cartBadge);
+	}
+
 	public static void clickonPDP(String elementname) {
 		if(elementname.equalsIgnoreCase("addtocart")) {
 			
 			GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonAddToCart);
 
 		}else {
-			
-			
+
 			throw new UnsupportedOperationException("Given element not found on PDP");
- 
-		
 
 		}
 	}
 
 	public static boolean VarifyElementPresenseOnPDPPage(String elementname) {
-if(elementname.equalsIgnoreCase("Standered Gift card modal")) {
+	if(elementname.equalsIgnoreCase("Standered Gift card modal")) {
 			
 			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.STDGIFTCARDModal);
 

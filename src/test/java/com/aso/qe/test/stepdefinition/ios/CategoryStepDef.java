@@ -136,8 +136,6 @@ public class CategoryStepDef extends GlobalMobileHelper{
 	
 	@When("^I choose to navigate to PDP$")
 	public void tapOnGoToPDPButton() {
-		
 		categoryPage.tapOnSearchedProduct();
 	}
-	
 }
