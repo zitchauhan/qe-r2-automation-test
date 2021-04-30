@@ -161,11 +161,75 @@ public void user_is_taken_to_on_aso_card_page(String pagename) throws Throwable 
 		assertTrue(accountPage.isPaymentMethodLabelDisplayed());
 	}
 
-	// To Click on add new Aso card page 
-	@When("^user clicks on \"([^\"]*)\" on aso card page$")
-	public void user_clicks_on_on_aso_card_page(String btnName) {
-		
-		accountPage.tabOnButtonOnAsoCardsPage(btnName);
+// To Click on add new Aso card page
+@When("^user clicks on \"([^\"]*)\" on aso card page$")
+public void user_clicks_on_on_aso_card_page(String btnName) {
+
+	accountPage.tabOnButtonOnAsoCardsPage(btnName);
+}
+
+@When("^User Add the Credit card cardholder Name \"([^\"]*)\"$")
+public void user_Add_the_Credit_card_cardholder_Name(String cardHolderName)  {
+    accountPage.addCreditCardHolderName(cardHolderName);
+}
+@Then("^User add the credit Card Number \"([^\"]*)\"$")
+public void user_add_the_credit_Card_Number(String cardNumber)  {
+   accountPage.addCreditCardNumber(cardNumber);
+}
+@Then("^User add the credit card Expiry Date \"([^\"]*)\"$")
+public void user_add_the_credit_card_Expiry_Date(String expiryDate)  {
+    accountPage.addCreditCardExpiryDate(expiryDate);
+}
+@Then("^User add the credit card cvv \"([^\"]*)\"$")
+public void user_add_the_credit_card_cvv(String cvvNumber)  {
+    accountPage.addCreditCardCvv(cvvNumber);
+}
+@Then("^i choose to enter \"([^\"]*)\" on credit card page$")
+public void i_choose_to_enter_on_credit_card_page(String carddetails)  {
+	accountPage.enterCardDetails(carddetails);
+}
+@When("^user clicks on \"([^\"]*)\" on credit card page$")
+public void user_clicks_on_on_credit_card_page(String btnName)  {
+	accountPage.tabOnButtonOnAsoCardsPage(btnName);
+}
+@Then("^user is navigate to credit card details page$")
+public void user_is_navigate_to_credit_card_details_page()  {
+   assertTrue( accountPage.isCreditCardDetailspageDisplayed());
+}
+@Then("^user sees the Alert PopUp message$")
+public void user_sees_the_Alert_PopUp_message()  {
+   assertTrue( accountPage.isAlertPopUpDisplayed());
+}
+@When("^User taps on LogIn button at Account Page$")
+public void tapOnLoginBtn() {
+	accountPage.tapOnLoginBtn();
+}
+
+@Then("^user sees the Billing Address Section$")
+public void user_sees_the_Billing_Address_Section() throws Throwable {
+    accountPage.isBillingAddressSectionDisplayed();
+}
+@And("^User Sees the Listed Credit card$")
+public void isCreditCardDisplayedOnPaymentPage() {
+	accountPage.isCreditCardsDisplayed();
+}
+@Then("^User set credit card as default$")
+public void user_set_credit_card_as_default() throws Throwable {
+accountPage.tapOnSetDefaultCheckbox();
+}
+
+@When("^User Sees the Default credit card on top$")
+public void user_Sees_the_Default_credit_card_on_top()  {
+    accountPage.verifyDefaultcreditCard();
+}
+@Then("^User Click on the Listed Credit card no (\\d+)$")
+public void user_Click_on_the_Listed_Credit_card_no(int creditCardPosition)  {
+   accountPage.tapOnCreditCard(creditCardPosition);
+}
+
+	@Then("^User sees \"(.*?)\" in order Cancellation screen$")
+	public void isCancellationScreenElementDisplayed(String element) {
+		assertTrue(orderPage.isCancellationScreenElementDisplayed(element));
 	}
 
 @When("^User Add the Credit card cardholder Name \"([^\"]*)\"$")
@@ -227,12 +291,6 @@ public void user_Click_on_the_Listed_Credit_card_no(int creditCardPosition)  {
    accountPage.tapOnCreditCard(creditCardPosition);
 }
 
-
-
-
-
-
-
 	@Then("^Set as default checkbox is not visible to the user$")
 	public void isSetAsDefaultNotDisplayed() {
 		assertTrue(accountPage.isSetAsDefaultNotDisplayed());
@@ -251,5 +309,10 @@ public void user_Click_on_the_Listed_Credit_card_no(int creditCardPosition)  {
 	@Then("^Set as default checkbox is disabled for the user$")
 	public void isDefaultCheckBoxDisabled() {
 		assertTrue(accountPage.isDefaultCheckBoxDisabled());
+	}
+
+	@Then("^User sees the greeting message$")
+	public void isGreetingMessageDisplayed() {
+		assertTrue(accountPage.isGreetingMessageDisplayed());
 	}
 }
