@@ -290,7 +290,7 @@ public class PDPStepDef extends GlobalMobileHelper{
 	
 	@Then("^User sees the correct item count on the cart badge as \"([^\"]*)\"$")
 	public void user_sees_cart_badge_count_as(String arg1) {
-		assertTrue(pdp.ItemsCountOnCartBadge(arg1));
+		pdp.ItemsCountOnCartBadge(arg1);
 	}
 
 	@Then("^User sees Product title on header$")
@@ -316,17 +316,16 @@ public class PDPStepDef extends GlobalMobileHelper{
 	@When("^User taps on cart badge$")
 	public void user_taps_on_cart_badge() {
 		pdp.tapOnCartBadge();
-
 	}
 
 
-@Then("^user click on \"([^\"]*)\" on PDP$")
-public void user_click_on_on_PDP(String elementname) throws Throwable {
-	PDPPage.clickonPDP(elementname);
-}
+	@Then("^user click on \"([^\"]*)\" on PDP$")
+	public void user_click_on_on_PDP(String elementname) throws Throwable {
+		PDPPage.clickonPDP(elementname);
+	}
 
-@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
-public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
-	assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname)); 
-}
+	@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
+	public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
+		assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname));
+	}
 }

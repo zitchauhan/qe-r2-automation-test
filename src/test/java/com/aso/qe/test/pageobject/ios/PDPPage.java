@@ -769,16 +769,23 @@ public class PDPPage {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.cartBadge);
 	}
 
-	
-	public boolean ItemsCountOnCartBadge(String arg1) { 
-	  String qtyCartPage = labelItemCount.getText(); 
-	  int qtyCartPageCount = Integer.parseInt(qtyCartPage); 
-	  String countOnCartBadge = CounterBadgeOnCartIcon.getText(); 
-	  if (qtyCartPageCount < 100) { 
-		  assertTrue(qtyCartPage.equalsIgnoreCase(countOnCartBadge));	  
-	  } else { 
-		  assertTrue(countOnCartBadge.equalsIgnoreCase("99+")); } 
-	  }
+	@iOSXCUITFindBy(id="rd_home_delivery")
+	public MobileElement CounterBadgeOnCartIcon;
+
+	@iOSXCUITFindBy(id="lbl_cart")
+	public MobileElement labelItemCount;
+
+	public boolean ItemsCountOnCartBadge(String arg1) {
+		String qtyCartPage = labelItemCount.getText();
+		int qtyCartPageCount = Integer.parseInt(qtyCartPage);
+		String countOnCartBadge = CounterBadgeOnCartIcon.getText();
+		if (qtyCartPageCount < 100) {
+			assertTrue(qtyCartPage.equalsIgnoreCase(countOnCartBadge));
+		} else {
+			assertTrue(countOnCartBadge.equalsIgnoreCase("99+"));
+		}
+		return true;
+	}
 
 	public boolean isProductTitleOnHeaderDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.productTite);
@@ -797,17 +804,14 @@ public class PDPPage {
 			GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonAddToCart);
 
 		}else {
-			
-			
+
 			throw new UnsupportedOperationException("Given element not found on PDP");
- 
-		
 
 		}
 	}
 
 	public static boolean VarifyElementPresenseOnPDPPage(String elementname) {
-if(elementname.equalsIgnoreCase("Standered Gift card modal")) {
+	if(elementname.equalsIgnoreCase("Standered Gift card modal")) {
 			
 			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.STDGIFTCARDModal);
 
