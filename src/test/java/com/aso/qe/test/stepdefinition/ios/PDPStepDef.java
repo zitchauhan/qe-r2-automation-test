@@ -274,14 +274,13 @@ public class PDPStepDef extends GlobalMobileHelper{
 	public void StoreRadioButtonSelected() throws Throwable {
 		pdp.verifyStoreRadioButtonSelected();
 	}
-	
-<<<<<<< HEAD
-	//OMNO-26981
+
+
 	@Then("^I choose to click on \"([^\"]*)\" in PDP page$")
 	public void click_on_PDP_page(String arg1) throws Throwable {
-	    pdp.tapOnPurchaseButton();
-=======
-	//OMNI-34006
+		pdp.tapOnPurchaseButton();
+	}
+
 	@Then("^User sees cart badge on top$")
 	public void user_sees_cart_badge_on_top() {
 		assertTrue(pdp.isCartBadgeDisplayed());
@@ -289,7 +288,7 @@ public class PDPStepDef extends GlobalMobileHelper{
 	
 	@Then("^User sees the correct item count on the cart badge as \"([^\"]*)\"$")
 	public void user_sees_cart_badge_count_as(String arg1) {
-		assertTrue(pdp.ItemsCountOnCartBadge(arg1));
+		pdp.ItemsCountOnCartBadge(arg1);
 	}
 
 	@Then("^User sees Product title on header$")
@@ -315,17 +314,16 @@ public class PDPStepDef extends GlobalMobileHelper{
 	@When("^User taps on cart badge$")
 	public void user_taps_on_cart_badge() {
 		pdp.tapOnCartBadge();
->>>>>>> 4e0ed69d09a6eaed8507cf7b75ce8bc7f3022fe3
 	}
 
 
-@Then("^user click on \"([^\"]*)\" on PDP$")
-public void user_click_on_on_PDP(String elementname) throws Throwable {
-	PDPPage.clickonPDP(elementname);
-}
+	@Then("^user click on \"([^\"]*)\" on PDP$")
+	public void user_click_on_on_PDP(String elementname) throws Throwable {
+		PDPPage.clickonPDP(elementname);
+	}
 
-@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
-public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
-	assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname)); 
-}
+	@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
+	public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
+		assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname));
+	}
 }

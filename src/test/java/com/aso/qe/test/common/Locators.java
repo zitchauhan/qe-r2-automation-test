@@ -57,8 +57,6 @@ public class Locators {
 		public static By labelInfoMessagetitle = By.id("lbl_info_message_title");
 		public static By labelInfoMessageSubtitle = By.id("lbl_info_message_sub_title");
 		public static By buttonInfoMessageCTA = By.id("btn_info_message_cta");
-		public static By titleOferDetails;
-		public static MobileElement offerDetailsBanner;
 		public static By searchsuggestionkeyword = By.id("lbl_searchsuggestionkeyword");
 		public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
 		public static By titleOferDetails = By.id("TODO by dev");
@@ -92,10 +90,7 @@ public class Locators {
 		public static By toggleOOS = By.id("switch_out_of_stock");
 		public static By sortAndFilterOutOfStockTitle = By.id("lbl_out_of_stock");
 		public static By sortAndFilterFilterIcon = By.id("icon_filter");
-		
 		public static By editSearch = By.id("edit_search");
-		}
-
 		// OMNI-20323 15.04.2021 
 		public static By FilterButton=By.id("filter_button");
 		public static By FilterScreenText=By.id("filter_Screen_text");
@@ -110,7 +105,6 @@ public class Locators {
 		public static By priceFilter=By.id("filter_price");
 		public static By ratingFilter=By.id("filter_rating");
 		public static By dealsFilter=By.id("filter_deals");
-		
 	}
 
 	public static class SearchPage{
@@ -233,7 +227,7 @@ public class Locators {
 		public static By backBtn = By.id("btn_back");
 		
 		public static By labelItemCount  = By.id("lbl_cart");
-		public static By CounterBadgeOnCartIcon  = By.id("");
+		public static By CounterBadgeOnCartIcon  = By.id("TODO dev");
 
 	}
 
@@ -315,6 +309,7 @@ public class Locators {
 		public static By billingAddressTitle = By.id("lbl_billing_address");
 		public static By greetingMessage = By.id("lbl_greeting_message");
 		public static By setAsDefaultCheckBox = By.id("Checkbox_Setasdefault");
+		public static By defaultAddressCheckbox = By.id("TODO by dev");
 	}
 	
 	public static class CartPage{
@@ -554,6 +549,7 @@ public class Locators {
 		public static By labelSavedAddresses = By.id("lbl_saved_address");
 		public static By addressBookButton = By.id("btn_address_book");
 		public static By addressBookHeader = By.xpath("//*[@label='Address Book']");
+		public static By savedAddresses = By.id("lbl_saved_address");;
 	}
 
 	public static class AddressVerification {
@@ -759,6 +755,7 @@ public class Locators {
 		public static By refundAmount = By.id("lbl_refund_amount");
 		public static By refundedTo = By.id("lbl_refunded_to");
 	}
+
 	public static class SavedAddresses {
 		public static By addressesTile = By.xpath("//XCUIElementTypeStaticText[contains(@name,'lbl_list_title')]");
 		public static By radioButtonAddress = By.xpath("//XCUIElementTypeOther[contains(@name,'btn_list_radio')]");
