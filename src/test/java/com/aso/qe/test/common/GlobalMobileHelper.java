@@ -49,9 +49,12 @@ public class GlobalMobileHelper {
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,platformVersion);
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
 		caps.setCapability(MobileCapabilityType.APP, app);
-		
+		caps.setCapability("autoDismissAlerts", true);
+
+
 	    if(platform.equalsIgnoreCase("iOS")) {
 	    	driver = new IOSDriver<MobileElement>(new URL(url),caps);
+	    	//handleUnwantedAlerts();
 	    }
 	    else if(platform.equalsIgnoreCase("android")) {
 	    	driver = new AndroidDriver<MobileElement>(new URL(url),caps);
@@ -332,6 +335,21 @@ public class GlobalMobileHelper {
 			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.editBtn));
 		}else {
 			throw new UnsupportedOperationException("type not defined");
+		}
+	}
+
+	public void handleUnwantedAlerts(){
+		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+		int exitOn = 1;
+		while (exitOn <= 10 ){// handle the alert 10 times
+			try {
+				wait.until(ExpectedConditions.alertIsPresent());
+				driver.switchTo().alert().accept();
+				exitOn++;
+			}catch (TimeoutException e){
+				logger.debug("timeout expired while waiting for the alert");
+				break;
+			}
 		}
 	}
 }
