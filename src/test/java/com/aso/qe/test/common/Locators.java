@@ -281,7 +281,8 @@ public class Locators {
 		public static By alertPopUPCreditCard=By.id("TODO by dev");
 		public static By billingAddressTitle = By.id("lbl_billing_address");
 		public static By greetingMessage = By.id("lbl_greeting_message");
-    }
+		public static By setAsDefaultCheckBox = By.id("TODO by dev");
+	}
 	
 	public static class CartPage{
 		public static By qtyIncrementStepper = By.id("plus_btn_id");
