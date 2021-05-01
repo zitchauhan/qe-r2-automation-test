@@ -758,6 +758,20 @@ public class Locators {
 		public static By shippingCharges = By.id("lbl_shipping_charges");
 		public static By refundAmount = By.id("lbl_refund_amount");
 		public static By refundedTo = By.id("lbl_refunded_to");
+		public static By senderInformationLabel = By.id("TODO by dev");
+		public static By senderFirstName = By.id("TODO by dev");
+		public static By senderLastName = By.id("TODO by dev");
+		public static By senderEmailId = By.id("TODO by dev");
+		public static By recipientInformationLabel = By.id("TODO by dev");
+		public static By recipientFistName = By.id("TODO by dev");
+		public static By recipientLastName = By.id("TODO by dev");
+		public static By recipientEmailId = By.id("TODO by dev");
+		public static By prefilledUserMessage = By.id("TODO by dev");
+		public static By eGiftCardDeliveryMessage2hrs = By.id("TODO by dev");
+		public static By eGiftCardName = By.id("TODO by dev");
+		public static By labelColorAttribute = By.id("TODO by dev");
+		public static By eGiftQty = By.id("TODO by dev");
+		public static By eGiftCardMoreRecipientMessage = By.id("TODO by dev");
 	}
 
 	public static class SavedAddresses {

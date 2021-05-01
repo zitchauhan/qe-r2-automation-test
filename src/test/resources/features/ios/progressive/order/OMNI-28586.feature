@@ -27,3 +27,33 @@ Feature: Order Confirmation Screen - Notification, eDelivery & Order Summary Til
 #    | jitsingh      | Order Summary Tile        |
 #    | jitsingh      | E Delivery Tile           |
 #    | jitsingh      | Order Number Notification | Your order <<order number>> is all set |
+
+  @Sprint5 @ST-OMNI-28586
+  Scenario: Verify elements of e-Delivery title with the various recipient conditions
+    Given User launches the application
+    And User logs into the application as "jitsingh"
+    And User has an empty cart
+
+    When User adds product "Academy Classic Gift card" using search
+    And User is on the cart screen
+    And User taps on checkout button
+    Then User sees the checkout screen
+
+    When User has placed an Order
+    Then User sees Order confirmation screen with "E Delivery Tile" tile
+    And User sees elements of e-delivery title
+    | Sender Information Label    |
+    | Sender First and Last Name  |
+    | Sender Email id             |
+    | Recipient Information Label |
+    | Recipient First Name        |
+    | Recipient Last Name         |
+    | Recipient Email id          |
+    | Prefilled User message                                                                     |
+    | Message stating that eGift Card will be delivered within 2 hours                           |
+    | e-Gift Card Name                                                                           |
+    | SKU ID                                                                                     |
+    | Color Attribute                                                                            |
+    | Quantity                                                                                   |
+    | Denomination                                                                               |
+    | Message stating that You have selected to send all <<x>> gift cards to the same recipient  |
