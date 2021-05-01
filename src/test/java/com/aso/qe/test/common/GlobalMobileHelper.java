@@ -430,6 +430,17 @@ public class GlobalMobileHelper {
 		}
 		return false;
 	}
+
+	public static void searchProductByName(String productName){
+		// enable search before searching
+		MobileElement searchBox= driver.findElement(Locators.HomePage.searchBox);
+		searchBox.click();
+		// search for the word
+		MobileElement searchBar=driver.findElement(Locators.SearchPage.searchBar);
+		searchBar.sendKeys(productName);
+		tapOnElement(Locators.SearchPage.goBtn);
+		waitForDefaultTime();
+	}
 }
 
 
