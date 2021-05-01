@@ -136,4 +136,13 @@ public class HomeStepDef extends GlobalMobileHelper{
 		/* Created By jitsingh7 on 21/04/21 */
 		assertTrue(getElementText(Locators.HomePage.labelInfoMessageSubtitle).toLowerCase().contains(subTitleText.toLowerCase()));
 	}
+	@When("^User sees the Offer Details and terms and conditions \"([^\"]*)\"$")
+	public void user_sees_the_Offer_Details_and_terms_and_conditions(String offerDetailsTitle) throws Throwable {
+		assertTrue(getElementText(Locators.HomePage.titleOferDetails).toLowerCase().contains(offerDetailsTitle.toLowerCase()));
+	}
+	@When("^User click on Offer Details and terms and conditions$")
+	public void user_click_on_Offer_Details_and_terms_and_conditions() throws Throwable {
+	   homePage.tapOnOfferDetails();
+	}
+
 }

@@ -143,8 +143,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	}
 	
 	@And("^User sees the order summary label$")
-	public boolean isOrderSummaryLabelDisplayed() throws Throwable {
-		return isElementDisplayed(Locators.CartPage.orderSummaryLabel);
+	public void isOrderSummaryLabelDisplayed() throws Throwable {
+		assertTrue(cartPage.isOrderSummaryLabelDisplayed());
 	}
 	
 	@And("^User sees the order total label$")
@@ -448,6 +448,22 @@ public class CartStepDef extends GlobalMobileHelper{
 	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.buttonShippingPolicy));
 	    } else if(arg.equalsIgnoreCase("Return policy")) {
 	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.buttonReturnPolicy));
+	    } else if(arg.equalsIgnoreCase("order summary")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.OrderSummary.orderSummaryHeading));
+	    } else if(arg.equalsIgnoreCase("Free with purchase label")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeItemTitleId));
+	    } else if(arg.equalsIgnoreCase("Free with purchase item title")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftProductTitleId));
+	    } else if(arg.equalsIgnoreCase("Free with purchase item image")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftProductImage));
+	    } else if(arg.equalsIgnoreCase("Free with purchase item price")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.orderItemPriceId));
+	    } else if(arg.equalsIgnoreCase("Free with purchase item discounted price")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.orderItemDiscountPriceId));
+	    } else if(arg.equalsIgnoreCase("Free with purchase tool tip")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftToolTipIcon));
+	    } else if(arg.equalsIgnoreCase("Free with purchase tool tip modal")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftToolTipIconmodal));
 	    }
 	}
 
@@ -605,15 +621,19 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User scrolls down to the bottom in \"([^\"]*)\" swipe$")
 	public void user_scrolls_down_to_the_bottom_in_swipe(String args) throws Throwable {
 		swipeScreen(Direction.UP,Integer.parseInt(args));
-	 
-
-}
+	 }
 	
 	@And("User has a whiteGloveBulky product in the cart")
 	public void userHasAWhiteGloveBulkyProductInTheCart() {
 		/* Created By jitsingh7 on 11/04/21 */
 		assertTrue(cartPage.hasWhiteGloveBulkyItem());
 		logger.info("User has a white glove and bulky product in the cart");
+	}
+	
+	// Order Summary Code , need to make it global as order summary is global component from cart to order history 
+	@Then("^User sees \"([^\"]*)\" on OrderSummary$")
+	public void user_sees_on_OrderSummary(String ElementName) throws Throwable {
+		assertTrue(cartPage.IsShowingOnOrderSummary(ElementName));
 	}
 
 }

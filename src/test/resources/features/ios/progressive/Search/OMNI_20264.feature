@@ -1,7 +1,7 @@
-Feature: Velidate the Search Functionality
+Feature: Velidate Search Redirects
 
-@Sprint2 @ST-OMNI-20256 @TC-OMNI-30460
-Scenario: Validate  the user able to click on search Box At Home page
+@Sprint5 @ST-OMNI-20264 @TC-OMNI-35839
+Scenario: Validate the user able to redirect to a PLP
 Given User launches the application
     And User Clicks On MaY Be Later
     And User continues as guest user
@@ -9,9 +9,14 @@ Given User launches the application
     When User Sees the Search Box
     Then User clicks on the Search Box
     And User search for the "SearchKeyword"
+	Then I chose to verify "Yeti" in PLP Page
+#    Then User verifies breadcrumb is present for the product
+    And User Sees the Search Box
+    Then User clicks on the Search Box
+    And User can edit "Adidas" the search
     And User sees all products related to search keyword
-    
-  @Sprint2 @ST-OMNI-20256 @TC-OMNI-30460 
+     
+  @Sprint5 @ST-OMNI-20264 @TC-OMNI-35841
  Scenario: Validate App Showing Error message if no Exact matches found
    Given User launches the application
    And User Clicks On MaY Be Later
@@ -20,5 +25,12 @@ Given User launches the application
     When User Sees the Search Box
     Then User clicks on the Search Box
     And User search for the "wrongSearchKeyword" 
-    And User observe message "try again"
-   
+    And User observe message "we couldn’t find anything for their search."
+
+    
+    
+    
+    
+    
+    
+    
