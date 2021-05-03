@@ -11,10 +11,8 @@ import com.aso.qe.test.common.Locators;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.WebElement;
+import org.apache.log4j.Logger;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
@@ -27,6 +25,7 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 public class HomePage {
 
 	private AppiumDriver<MobileElement> driver;
+	private static final Logger logger = Logger.getLogger(HomePage.class.getName());
 
 	public HomePage(AppiumDriver<MobileElement> driver) {
 		this.driver = driver;
@@ -99,9 +98,8 @@ public class HomePage {
 
 	public boolean isSearchBoxDisplayed() {
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.searchBox);
@@ -177,6 +175,10 @@ public class HomePage {
 
 			return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.bannerSubtitle);
 
+		}else if (elementName.toLowerCase().contains("information message")) {
+
+			return isInformationMessageElementsDisplayed(elementName);
+
 		} else {
 
 			throw new UnsupportedOperationException("Given Element type not defined");
@@ -191,4 +193,46 @@ public class HomePage {
 		}
 		return GlobalMobileHelper.isElementDisplayed(Locators.HomePage.instructionBanner);
 	}
+
+	public boolean isOnInformationMessagePage(){
+		MobileElement informationElement = driver.findElement(Locators.HomePage.labelInfoMessagetitle);
+		return GlobalMobileHelper.isElementDisplayed(informationElement);
+	}
+
+	private boolean isInformationMessageElementsDisplayed(String informationMessageElementKeyword){
+		boolean result = false;
+		List<MobileElement> informationElements=null;
+
+		try {
+			String subTitleText = GlobalMobileHelper.getElementText(Locators.HomePage.labelInfoMessageSubtitle);
+			// make the element visible
+			int iteration=1;
+			while (!(subTitleText.toLowerCase().contains("conditions, exclusions, and restrictions") ||
+					subTitleText.toLowerCase().contains("exclusions") ||
+					subTitleText.toLowerCase().contains("restrictions") ||
+					subTitleText.toLowerCase().contains("conditions")
+					)) {
+					if (iteration >= 5) {
+						break; // exit after trying 5 times
+					}
+				iteration += 1;
+				GlobalMobileHelper.swipeScreen(Direction.LEFT, 10);
+			}
+
+		}catch (ElementNotVisibleException e){
+			logger.warn("Information message component is not visible on the screen: Failure to be analyzed based on what is configured in CMS");
+			return false;
+		}catch (Exception e){
+			logger.warn(e.getLocalizedMessage() + "\n cause : " + e.getCause());
+			return false;
+		}
+
+		return true;
+	}
+
+	public void tapOnOfferDetails() {
+		GlobalMobileHelper.tapOnElement(Locators.HomePage.offerDetailsBanner);
+		
+	}
+
 }
