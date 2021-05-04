@@ -3,6 +3,7 @@ package com.aso.qe.test.stepdefinition.ios;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.BottomNav;
+import com.aso.qe.test.pageobject.ios.Context;
 import com.aso.qe.test.pageobject.ios.HomePage;
 import com.aso.qe.test.pageobject.ios.LoginPage;
 
@@ -36,7 +37,7 @@ public class LoginStepDef extends GlobalMobileHelper{
 	}
 	
 	@And("^User Logs into the application$")
-	public void login() {
+	public void login() throws Throwable {
 		try {
 			if(!homePage.isOnHomePage()){
 				tapOnElement(Locators.WelcomeScreen.HomeButton);
@@ -212,22 +213,27 @@ public class LoginStepDef extends GlobalMobileHelper{
 	
 
     @And("^User logs into the application as \"([^\"]*)\"$")
-    public void userLogsIntoTheApplicationAs(String username) {
+    public void userLogsIntoTheApplicationAs(String username) throws Throwable{
         /* Created By jitsingh7 on @{DATE} */
 		logOut();
-		homePage.tapOnHomeBtn();
-		loginPage.loginAsUser(username);
+		bottomNav.tapOnHome();
 
-		try {
-			Thread.sleep(GlobalMobileHelper.DEFAULT_EXPLICIT_WAIT * 1000L);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+		if (!username.equalsIgnoreCase("guest")) loginPage.loginAsUser(username);
+
+		waitForDefaultTime();
+
+		// set the current user type
+		if (!username.equalsIgnoreCase("guest")) Context.setCurrentUserType("registered");
+		else {
+			Context.setCurrentUserType("guest");
+			logger.info("Current User type is a guest");
 		}
 	}
 
-    private void logOut() {
-		homePage.tapOnHomeBtn();
-		tapOnElement(Locators.AccountPage.accountTitle);
+    private void logOut() throws Throwable {
+		swipeScreen(Direction.UP, 2);
+		bottomNav.tapOnHome();
+		bottomNav.tapOnAccount();
 		tapOnElement(Locators.AccountPage.buttonLogOut);
 	}
 }

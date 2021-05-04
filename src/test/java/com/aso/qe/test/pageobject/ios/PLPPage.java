@@ -298,4 +298,7 @@ public class PLPPage {
 		 GlobalMobileHelper.tapOnElement(cancelLink);
 	}
 
+    public void tapOnFirstProduct() {
+		GlobalMobileHelper.tapOnElement(Locators.PLPPage.productTitle);
+    }
 }
