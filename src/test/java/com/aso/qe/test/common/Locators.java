@@ -114,9 +114,9 @@ public class Locators {
 		public static By scanBarCode = By.id("btn_scan_barcode");
 		public static By goBtn = By.id("Go");
 		public static By searchErrormsg =  By.id("txt_empty_result_body");
-		public static By navigateBack = By.id("btn_back");
-		public static By recentSearchesTitle=By.id("TODO by dev");;
-		public static By clearAll=By.id("TODO by dev");;
+		public static By navigateBack = By.id("btn_Back");
+		public static By recentSearchesTitle=By.id("lbl_shop_by_category_title");;
+		public static By clearAll=By.xpath("//*[contains(@label,'Clear All')]");
 		public static By recentSearches=By.id("TODO by dev");;
 		public static By popularSearchesTitle=By.id("TODO by dev");;
 		public static By popularsearchesItem=By.id("TODO by dev");;

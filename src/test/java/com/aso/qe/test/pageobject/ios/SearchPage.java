@@ -100,13 +100,15 @@ public class SearchPage {
 		String [] searchItem = {searchItem1,searchItem2,searchItem3,searchItem4,searchItem5};
 		boolean flag=false;
 		List<MobileElement> lsRecentSearches = driver.findElements(By.id("btn_category"));
-		for(int i =0; i<=lsRecentSearches.size(); i++) {
+		System.out.println(lsRecentSearches.size());
+		for(int i =0; i<=lsRecentSearches.size()-1; i++) {
+			if(i<=4) {
 			if(lsRecentSearches.get(i).getText().contains(searchItem[i])) {
 				flag = true;
 			}else {
 				flag = false;
 			}
-			
+			}
 		
 		}
 		return flag;
@@ -138,11 +140,9 @@ public class SearchPage {
 		List<MobileElement> lsRecentSearches = driver.findElements(By.id("btn_category"));
 		for(int i =1;i<=lsRecentSearches.size();i++) {
 			
-				try {
-					lsRecentSearches.get(lsRecentSearches.size()).click();
-				} catch (Exception e) {
-					GlobalMobileHelper.swipeScreen(Direction.LEFT);
-				}
+				
+					GlobalMobileHelper.swipeTillElementDisplayed(Direction.LEFT, By.id("btn_category"));
+				
 			
 		}
 	}
@@ -158,8 +158,8 @@ public class SearchPage {
 			String searchItem4, String searchItem5) {
 		String [] searchItem = {searchItem1,searchItem2,searchItem3,searchItem4,searchItem5};
 		boolean flag=false;
-		List<MobileElement> lsPopularSearches = driver.findElements(Locators.SearchPage.popularsearchesItem);
-		for(int i =0; i<=lsPopularSearches.size(); i++) {
+		List<MobileElement> lsPopularSearches = driver.findElements(By.id("btn_category"));
+		for(int i =0; i<=lsPopularSearches.size()-1; i++) {
 			if(lsPopularSearches.get(i).getText().contains(searchItem[i])) {
 				flag = true;
 			}else {
