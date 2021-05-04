@@ -1,5 +1,5 @@
 Feature: Validate the Search Suggestions
- @TC-OMNI-35333 @ST-32432
+ @TC-OMNI-35333 
 Scenario: Validate the recent searches on Search Landing Page
    Given User launches the application
     And User Clicks On MaY Be Later
@@ -44,9 +44,10 @@ Scenario: Validate the recent searches on Search Landing Page
      @TC-OMNI-35334 @ST-32432
     Scenario: Validate the Popular searches on Search Landing Page
    Given User launches the application
+   And User continues as guest user
     And User Clicks On MaY Be Later
-    And User continues as guest user
-    #Then User sees the homepage
+     And User Clicks On MaY Be Later
+   # Then User sees the homepage
     When User Sees the Search Box
     Then User clicks on the Search Box
     And User Sees the "Popular Searches" title
@@ -55,8 +56,7 @@ Scenario: Validate the recent searches on Search Landing Page
     And User validate the number of visible Popular Searches is 3 and total no of characters are 15 
    # Then User scroll to last Popular search and click on it
    #And User navigate Back to Search Page
-     And User CLick on clear all
-    And User sees all Popular Searches got clear
+   
     
   
     

@@ -188,7 +188,7 @@ public class SearchPage {
 			String s =lsPopularSearches.get(i).getText();
 			count = count + s.length();
 		}
-		if(count==characterCount) {
+		if(count<=characterCount) {
 			return true;
 		}else {
 			return false;
