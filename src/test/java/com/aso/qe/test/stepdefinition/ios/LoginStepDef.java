@@ -58,7 +58,10 @@ public class LoginStepDef extends GlobalMobileHelper{
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();
 		}
-		GlobalMobileHelper.tapOnElement(Locators.LoginPage.HomeLogin);
+
+		if (GlobalMobileHelper.isElementDisplayed(Locators.LoginPage.HomeLogin))
+			GlobalMobileHelper.tapOnElement(Locators.LoginPage.HomeLogin);
+
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e1) {

@@ -621,9 +621,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User scrolls down to the bottom in \"([^\"]*)\" swipe$")
 	public void user_scrolls_down_to_the_bottom_in_swipe(String args) throws Throwable {
 		swipeScreen(Direction.UP,Integer.parseInt(args));
-	 
-
-}
+	 }
 	
 	@And("User has a whiteGloveBulky product in the cart")
 	public void userHasAWhiteGloveBulkyProductInTheCart() {
