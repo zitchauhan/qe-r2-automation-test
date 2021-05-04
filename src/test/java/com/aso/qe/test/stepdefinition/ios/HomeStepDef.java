@@ -3,6 +3,9 @@ package com.aso.qe.test.stepdefinition.ios;
 import static org.junit.Assert.assertTrue;
 
 import com.aso.qe.test.common.Locators;
+import com.aso.qe.test.pageobject.ios.BottomNav;
+import com.aso.qe.test.pageobject.ios.PDPPage;
+import com.aso.qe.test.pageobject.ios.PLPPage;
 import org.openqa.selenium.By;
 
 import com.aso.qe.framework.common.CommonActionHelper;
@@ -18,6 +21,9 @@ import java.util.Locale;
 public class HomeStepDef extends GlobalMobileHelper{
 	
 	HomePage homePage = new HomePage(driver);
+	BottomNav bottomNav = new BottomNav(driver);
+	PLPPage plpPage = new PLPPage(driver);
+	PDPPage pdpPage = new PDPPage(driver);
 	
 	@Then("^User sees the homepage$")
 	public void userIsOnHomePage() {
@@ -145,4 +151,15 @@ public class HomeStepDef extends GlobalMobileHelper{
 	   homePage.tapOnOfferDetails();
 	}
 
+    @When("User adds product \"([^\"]*)\" using search")
+    public void userAddsProductUsingSearch(String productName) throws Throwable {
+        /* Created By jitsingh7 on 01/05/2021 */
+		bottomNav.tapOnHome();
+		searchProductByName(productName);
+		plpPage.tapOnFirstProduct();
+		waitForDefaultTime();
+		pdpPage.tapOnAddToCart();
+		tapOnElement(Locators.PDPPage.buttonViewCart);
+		waitForDefaultTime();
+    }
 }

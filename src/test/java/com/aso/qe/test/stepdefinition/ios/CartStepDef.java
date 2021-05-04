@@ -9,16 +9,13 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import com.aso.qe.test.pageobject.ios.Context;
+import com.aso.qe.test.pageobject.ios.*;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.test.common.Locators;
-import com.aso.qe.test.pageobject.ios.CartPage;
-import com.aso.qe.test.pageobject.ios.LoginPage;
-import com.aso.qe.test.pageobject.ios.PDPPage;
 
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
@@ -34,7 +31,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	CartPage cartPage = new CartPage(driver);
 	PDPPage pdpPage = new PDPPage(driver);
-	
+	BottomNav bottomNav = new BottomNav(driver);
+
 	private int previousQuantity = 1;
 	private String productDisclaimer;
 	private int shippingChargesToZipCode;
@@ -340,7 +338,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void user_taps_on_view_cart_button() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	   tapOnElement(Locators.PDPPage.buttonViewCart);
-	   Thread.sleep(GlobalMobileHelper.DEFAULT_EXPLICIT_WAIT * 1000L);
+	   waitForDefaultTime();
 	   logger.debug("Tapped on View Cart button");
 	}
 	
@@ -621,9 +619,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User scrolls down to the bottom in \"([^\"]*)\" swipe$")
 	public void user_scrolls_down_to_the_bottom_in_swipe(String args) throws Throwable {
 		swipeScreen(Direction.UP,Integer.parseInt(args));
-	 
-
-}
+	 }
 	
 	@And("User has a whiteGloveBulky product in the cart")
 	public void userHasAWhiteGloveBulkyProductInTheCart() {
@@ -637,5 +633,16 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void user_sees_on_OrderSummary(String ElementName) throws Throwable {
 		assertTrue(cartPage.IsShowingOnOrderSummary(ElementName));
 	}
+
+    @And("User has an empty cart")
+    public void userHasAnEmptyCart() throws Throwable {
+        /* Created By jitsingh7 on 29/04/21 */
+		swipeScreen(Direction.UP, 2);
+		bottomNav.tapOnCart();
+		// remove all the items from the cart in case user did not log out of the application
+		for(MobileElement buttonRemoveFromCart: driver.findElements(Locators.CartPage.buttonRemoveFromCart)) {
+			buttonRemoveFromCart.click();
+		}
+    }
 
 }

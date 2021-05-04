@@ -16,6 +16,7 @@ private static String updatedAddressField;
 private static String storeName;
 private static String defaultStore;
 private static String totalQtyOnCart;
+private static String currentUserType;
 
 	public static String getCurrentProductDisclaimer() {
 		return currentProductDisclaimer;
@@ -27,8 +28,16 @@ private static String totalQtyOnCart;
 
 	private static String currentProductDisclaimer;
 
+	public static String getCurrentUserType() {
+		return currentUserType;
+	}
 
-    public String getProductPriceOnPDP() {
+	public static void setCurrentUserType(String currentUserType) {
+		Context.currentUserType = currentUserType;
+	}
+
+
+	public String getProductPriceOnPDP() {
 	return ProductPriceOnPDP;
 }
 

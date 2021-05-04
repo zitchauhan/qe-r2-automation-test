@@ -82,19 +82,26 @@ public class PLPPage {
 		
 		if(args.equalsIgnoreCase("free_Shipping_Banner")) {
 		 return	isIn_Store_curbside_Banner(args);
-			
-			
 		}if(args.equalsIgnoreCase("In_Store_curbside_Banner")) {
 			 return	isIn_Store_curbside_Banner(args);
+		}if(args.equalsIgnoreCase("Yeti")) {
+			 return	isIn_PLP(args);
 		}
 		return false;
 		
 	}
-	
-	
-	
-	
-	
+	private boolean isIn_PLP(String args) {
+		String textguidelines=GlobalMobileHelper.findData(args);
+		MobileElement BannerElement = driver.findElement(Locators.PLPPage.productTitle);
+		 String elementtext  = BannerElement.getText();
+		 if(elementtext.equalsIgnoreCase(textguidelines)) {
+			 return true; 
+		 }else {
+			 return false;
+		 }
+	}
+
+
 	public boolean isIn_Store_curbside_Banner(String args) {
 		String textguidelines=GlobalMobileHelper.findData(args);
 		MobileElement BannerElement = driver.findElement(Locators.PLPPage.PLP_Page__Instore_CurbSideBaner);
@@ -212,8 +219,12 @@ public class PLPPage {
 		
 	}
 	
-	//OMNI-20323  15.04.20201
-	
+	public void editSearch(String edit) {
+		MobileElement editSearch = driver.findElement(Locators.PLPPage.editSearch);
+		editSearch.clear();
+		editSearch.sendKeys(edit);
+	}
+
 	public boolean isFilterButtonDisplayed() {
 		MobileElement filterButton = driver.findElement(Locators.PLPPage.FilterButton);
 		return filterButton.isDisplayed();
@@ -286,6 +297,8 @@ public class PLPPage {
 		 MobileElement cancelLink = driver.findElement(Locators.PLPPage.FilterCancel);
 		 GlobalMobileHelper.tapOnElement(cancelLink);
 	}
-	
-	
+
+    public void tapOnFirstProduct() {
+		GlobalMobileHelper.tapOnElement(Locators.PLPPage.productTitle);
+    }
 }
