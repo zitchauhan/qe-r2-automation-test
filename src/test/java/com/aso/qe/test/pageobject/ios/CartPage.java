@@ -570,7 +570,7 @@ public class CartPage {
 		MobileElement productParent;
 		String currentProductTitle = Context.getCurrentProductTitle();
 		boolean found=false;
-		if (currentProductTitle.isBlank() || currentProductTitle.isEmpty() || currentProductTitle == null){
+		if (currentProductTitle.isEmpty() || currentProductTitle == null){
 			// assert the first disclaimer on screen
 			assertEquals(productDisclaimer, driver.findElement(Locators.CartPage.productDisclaimerLabel).getText().trim());
 		}else {

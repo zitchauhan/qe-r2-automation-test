@@ -7,7 +7,7 @@ import cucumber.api.java.en.Then;
 
 public class PDPPageSD extends GlobalMobileHelper{
 
-	private PDPPage pdp;
+	private PDPPage pdp = new PDPPage(driver);
 	
 	@Then("^User verifies delivery options in PDP$")
 	public void verifyDeliveryOptions() throws Throwable {

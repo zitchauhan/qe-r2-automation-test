@@ -1,5 +1,6 @@
 package com.aso.qe.test.stepdefinition.ios;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
@@ -7,6 +8,7 @@ import com.aso.qe.test.pageobject.ios.Context;
 import com.aso.qe.test.pageobject.ios.PLPPage;
 
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class PLPStefDef extends GlobalMobileHelper{
 
@@ -66,7 +68,48 @@ public void i_choose_to_click_on(String arg1) throws Throwable {
     
 }
 
+//OMNI-20264
+@Then("^User can edit \"([^\"]*)\" the search$")
+public void user_can_edit_search(String arg1) {
+		plpPage.editSearch(arg1);
+}
+// OMNI-20323 15.04.2021 
+@Then("^User see filter Button$")
+public void user_see_filter_Button() throws Throwable {
+	assertTrue(plpPage.isFilterButtonDisplayed());  
+}
+
+@When("^User tap on filter Button$")
+public void user_tap_on_filter_Button() throws Throwable {
+      plpPage.taponFilterButton();  
+}
+
+@Then("^User sees filter screen$")
+public void use_sees_filter_screen() throws Throwable {
+	assertTrue(plpPage.isFilterTextDisplayed());   
+}
+
+@Then("^User see the Apply Button as disabled$")
+public void use_see_the_Apply_Button_as_disabled() throws Throwable {
+   assertFalse(plpPage.isFilterApplyButtonEnabled());
+}
+
+
+@Then("^User sees \"([^\"]*)\" as filter type$")
+public void user_sees_as_filter_type(String filterType) throws Throwable {
+	plpPage.isFilterTypesDisplayed(filterType);
+    
+}
+
+@When("^User tap on Cancel link$")
+public void user_tap_on_Cancel_link() throws Throwable {
+    plpPage.tapOnCancelLink();
+}
 
 
 
+//@Then("^User verifies breadcrumb is present for the product$")
+//public void user_verifies_breadcrumb() {
+//	
+//	}
 }

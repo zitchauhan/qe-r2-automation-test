@@ -214,7 +214,9 @@ public class LoginPage {
 			
 			GlobalMobileHelper.tapOnElement(Locators.BottomNav.account);
 }	else if(btnName.equalsIgnoreCase("gotologin")){
+
 			
+
 			GlobalMobileHelper.tapOnElement(Locators.BottomNav.Login);
 
 		}else {
@@ -234,7 +236,5 @@ public class LoginPage {
 		enterPassword(userAndPassword[1]);
 		tapOnLogin();
     }
-    
-}
 
-    
+}
