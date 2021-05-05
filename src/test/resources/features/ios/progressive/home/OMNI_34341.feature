@@ -18,4 +18,4 @@ Feature: Content Stack: Home screen - Offer Details and T&Cs (CMS) Component
 
     Examples:
     | title              | subTitleMessage   |
-    | Free shipping over | Lorem ipsum dolor |
+    | Offer Details and T&C | promotions, and availability may vary |
