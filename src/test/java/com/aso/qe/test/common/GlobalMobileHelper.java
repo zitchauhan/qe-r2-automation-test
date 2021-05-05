@@ -153,7 +153,14 @@ public class GlobalMobileHelper {
 		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator)).clear();
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator)).sendKeys(text);
-		driver.hideKeyboard();
+
+		try {
+			driver.hideKeyboard();
+		}catch (Exception e){
+			// passing with the warning
+			logger.warn(e.getLocalizedMessage());
+		}
+
 	}
 	
 	public static void setText(By locator,String text,By tapLocatorToHideKeyboard) {
