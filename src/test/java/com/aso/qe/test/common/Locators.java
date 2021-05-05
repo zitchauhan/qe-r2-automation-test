@@ -127,6 +127,7 @@ public class Locators {
 		public static By recentSearches=By.id("TODO by dev");;
 		public static By popularSearchesTitle=By.id("TODO by dev");;
 		public static By popularsearchesItem=By.id("TODO by dev");;
+		public static By noresultlabel=By.id("txt_empty_result_title");;
 	}
 	
 	public static class OnBoardingScreen{

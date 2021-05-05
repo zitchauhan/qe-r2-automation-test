@@ -1,6 +1,6 @@
 Feature: Did you Mean - Single & Multiple Results
 
-@Sprint5 @ST-OMNI-20263 
+@Sprint5 @ST-OMNI-20263 @TC-OMNI-36391
 Scenario: Validate  the user see single configured did u mean search suggestion on search result page when searched for configurable keyword
 Given User launches the application
     And User Clicks On MaY Be Later
@@ -13,7 +13,8 @@ Given User launches the application
     Then user see "related keywords" on search result page 
     Then user see "search insteed of label" on search result page 
     Then user see "searched keyword button" on search result page 
-    #Then i choose to validate that value of "search keyword" and "search suggestion button" is same on search result page
+     And User sees all products related to search keyword
     Then i choose to click on "searched keyword button" on search result page 
-    #Then user "see No product found" page 
-    #And User sees all products related to search keyword
+    Then user "see No product found" page 
+
+  

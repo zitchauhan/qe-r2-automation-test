@@ -99,6 +99,8 @@ public class SearchPageStepDef extends GlobalMobileHelper{
 	@Then("^user see \"([^\"]*)\" on search result page$")
 	public void user_see_on_search_result_page(String elementname) throws Throwable {
 		assertTrue(searchPage.VarifyElementPresenseOnSearchPage(elementname)); 
+	}
+	
 	@Then("^User count the total Popular Searches is (\\d+)$")
 	public void user_count_the_total_Popular_Searches_is(int popularSearchItemCount)  {
 	assertTrue(	searchPage.isTotalPopularSeacrhesDisplayed(popularSearchItemCount));
@@ -121,6 +123,11 @@ public class SearchPageStepDef extends GlobalMobileHelper{
 	@Then("^i choose to click on \"([^\"]*)\" on search result page$")
 	public void i_choose_to_click_on_on_search_result_page(String elementname) throws Throwable {
 		searchPage.tapOnElementOnSearchPage(elementname);
+	}
+	
+	@Then("^user \"([^\"]*)\" page$")
+	public void user_page (String pagename) throws Throwable {
+		assertTrue(searchPage.Varifyuserisonnoresultpage(pagename)); 
 	}
 
 }

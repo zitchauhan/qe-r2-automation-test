@@ -119,6 +119,7 @@ if(elementname.equalsIgnoreCase("showing result for label")) {
 			throw new UnsupportedOperationException("Given button type not found on search page");
  
 		}
+	}
 	public void navigateBackToSearchPage() {
 		GlobalMobileHelper.tapOnElement(Locators.SearchPage.navigateBack);
 		
@@ -241,12 +242,24 @@ if(elementname.equalsIgnoreCase("showing result for label")) {
 			
 		}
 	}
+	
 	public boolean isPopularSearchesDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.popularsearchesItem);
 	}
+	
+	
+	public boolean Varifyuserisonnoresultpage (String pagename) {
+if(pagename.equalsIgnoreCase("see No product found")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.noresultlabel);
+	}else {
+		
+		throw new UnsupportedOperationException("User is not on result page ");
 		
 	}
-
+	
+	}	
+	}
 
 
 	
