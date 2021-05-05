@@ -4,7 +4,9 @@ Feature: User is able to login into my account
 	Scenario: User is able to add login into account
 		Given User launches the application
 		When User Clicks On MaY Be Later
-		And User continues as guest user
+		When User Clicks On MaY Be Later
+		And User continues as "guest user" on onboarding page
+		#And User continues as guest user
 		Then User taps on "account" button on login screen 
 		Then User taps on "gotologin" button on login screen 
 		And User is on "LogIn" screen
