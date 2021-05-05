@@ -754,6 +754,22 @@ public class Locators {
 		public static By switchSubscribeToEmailsFromAcademy = By.id("switch_subscribe_email");
 		public static By labelSubscribeToEmailsFromAcademy = By.id("lbl_subscribe_email_title");
 		public static By labelSubscribeMessage = By.id("lbl_subscribe_email_subtitle");
+		public static By labelPeronalInformation= By.id("perfonal_informaiton_label");
+		public static By labelEditName=By.id("edit_name_label");
+		public static By labelChangeEmail=By.id("edit_change_email");
+		public static By msgChangeEmail=By.id("msg_change_email");
+		public static By inputEmail=By.id("input_email");
+		public static By inputConfirmEmail=By.id("input_confirmEmail");
+		public static By inputFirstName=By.id("input_firstName");
+		public static By inputLastName=By.id("input_lastName");
+		public static By buttonUpdate=By.id("button_update");
+		public static By buttonBack=By.id("button_back");
+		public static By buttonName=By.id("profile_name_button");
+		public static By buttonEmail=By.id("profile_email_button");
+		public static By buttonPassword=By.id("profile_password_button");
+		public static By txtCurrentName= By.id("profile_current_name");
+		public static By txtCurrentEmail= By.id("profile_current_email");
+		
 	}
 
 	public static class OrderDetail{

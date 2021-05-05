@@ -36,4 +36,19 @@ public class UserProfilePage {
             logger.debug("user is already not in the subscriptions list");
         }
     }
+    
+    public void tapOnProfileButton(String buttonName) {
+    	switch(buttonName) {
+    	
+    	}
+    }
+    
+    public String getCurrentName() {
+    	return GlobalMobileHelper.getElementText(Locators.UserProfile.txtCurrentName);
+    }
+    public String getCurrentEmail() {
+    	return GlobalMobileHelper.getElementText(Locators.UserProfile.txtCurrentEmail);
+    }
+    
+   
 }
