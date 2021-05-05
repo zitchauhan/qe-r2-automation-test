@@ -49,8 +49,6 @@ public class GlobalMobileHelper {
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,platformVersion);
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
 		caps.setCapability(MobileCapabilityType.APP, app);
-		caps.setCapability("autoDismissAlerts", true);
-
 
 	    if(platform.equalsIgnoreCase("iOS")) {
 	    	driver = new IOSDriver<MobileElement>(new URL(url),caps);
@@ -448,6 +446,7 @@ public class GlobalMobileHelper {
 		tapOnElement(Locators.SearchPage.goBtn);
 		waitForDefaultTime();
 	}
+
 }
 
 
