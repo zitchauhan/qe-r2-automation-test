@@ -4,8 +4,10 @@ Feature: Order Shipping Restrictions and Warnings
   Scenario Outline: Verify that restricted state warning is shown to user on checkout
     Given User launches the application
     And User logs into the application as "<user_name>"
+    And User has an empty cart
     And User taps on home in bottom nav
 
+    And User clicks on the Search Box
     And User search for the "<product_type>"
     And I choose to navigate to PDP
 
