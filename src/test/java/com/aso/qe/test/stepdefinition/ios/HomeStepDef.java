@@ -83,15 +83,19 @@ public class HomeStepDef extends GlobalMobileHelper{
 	public void tapOnMaybelater() {
 		homePage.tapOnMayBelater();
 	}
+
+	
+	@And("^User Goes to home page$")
+	public void moveToHomePage() {
+	homePage.moveToHomePage();}
+
 	@And("^User Sees the Hero Banner$")
 	public void isHeroBannerDisplayed() {
 	assertTrue(homePage.isHeroBannerDisplayed());
 	
 	}
-	@And("^User Goes to home page$")
-	public void moveToHomePage() {
-		homePage.moveToHomePage();
-	}
+
+
 	
 	@When("^user see \"([^\"]*)\" on home page$")
 	public void user_see_on_home_page(String pagename) {
@@ -162,4 +166,5 @@ public class HomeStepDef extends GlobalMobileHelper{
 		tapOnElement(Locators.PDPPage.buttonViewCart);
 		waitForDefaultTime();
     }
+
 }

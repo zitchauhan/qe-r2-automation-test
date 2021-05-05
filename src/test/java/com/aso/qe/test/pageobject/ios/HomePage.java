@@ -145,11 +145,29 @@ public class HomePage {
 	}
 
 	public void moveToHomePage() {
-		MobileElement homeBtn = driver.findElement(Locators.HomePage.homeBtn);
-		if (homeBtn.isDisplayed()) {
-			GlobalMobileHelper.tapOnElement(homeBtn);
+	MobileElement homeBtn = driver.findElement(Locators.HomePage.homeButton);
+	if(homeBtn.isDisplayed()) {
+	GlobalMobileHelper.tapOnElement(homeBtn);
 		}
-	}
+
+		}
+	
+	
+	
+
+
+//	public void moveToHomePage() {
+//		MobileElement homeBtn = driver.findElement(Locators.HomePage.homeBtn);
+//		if(homeBtn.isDisplayed()) {
+//			GlobalMobileHelper.tapOnElement(homeBtn);
+//		}	
+//	}	
+//=======
+//		MobileElement homeBtn = driver.findElement(Locators.HomePage.homeBtn);
+//		if (homeBtn.isDisplayed()) {
+//			GlobalMobileHelper.tapOnElement(homeBtn);
+//		}
+//	}
 
 	public boolean isInstructionBannerTitleDisplayed() {
 		MobileElement GlobalMobileHelper = driver.findElement(Locators.HomePage.bannerTitle);
@@ -245,5 +263,6 @@ public class HomePage {
 		GlobalMobileHelper.tapOnElement(Locators.HomePage.offerDetailsBanner);
 		
 	}
+
 
 }
