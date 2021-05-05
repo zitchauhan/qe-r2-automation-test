@@ -56,8 +56,12 @@ public class Locators {
 		public static By HomePage_FreeShippingBaner = By.id("lbl_banner_title");
 		public static By HomePage_Instore_CurbSideBaner_SeeDeatil = By.id("btn_banner_button");
 		public static By HomePage_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
-		public static By heroBanner = By.xpath("//*[contains(@label,'Hero Image')]");
+		public static By homeButton = By.xpath("//*[contains(@label,'Home')]");
 		public static By homeBtn = By.xpath("//*[contains(@label,'Home')]");
+
+		public static By heroBanner = By.xpath("//*[contains(@label,'Hero Image')]");
+
+
 		public static By bannerTitle = By.id("lbl_info_banner_title");
 		public static By bannerSubtitle = By.id("lbl_info_banner_sub_title");
 		public static By bannerCta = By.id("btn_info_banner_cta");
@@ -69,6 +73,7 @@ public class Locators {
 		public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
 		public static By titleOferDetails = By.id("TODO by dev");
 		public static By offerDetailsBanner = By.id("TODO by dev");
+
 	}
 
 	public static class PLPPage{
@@ -113,7 +118,8 @@ public class Locators {
 		public static By priceFilter=By.id("filter_price");
 		public static By ratingFilter=By.id("filter_rating");
 		public static By dealsFilter=By.id("filter_deals");
-	}
+		public static By promoAdImage=By.id("img_promo_ad_0");
+    }
 
 	public static class SearchPage{
 	    //public static By searchBar = By.id("btn_Search");
@@ -208,7 +214,43 @@ public class Locators {
 		public static By OverLayCartSize = By.id("lbl_product_attribute_value_Size");
 		public static By WebViewBannerPDP = By.xpath("//XCUIElementTypeStaticText[@name=\"Glock G27 Gen3 40 S&W Sub-Compact 9-Round Pistol\"]");
 		public static By OverLayCartcolour = By.id("lbl_product_attribute_value_Color");
+
+
+		// OMNI-22048 - Gift card locators  -11.04.2021- Nirmal 	
+		public static By GiftCardDesc = By.id("lbl_product_description");
+		public static By GiftCardTitle =By.id("lbl_gc_title");
+		public static By GiftCardDetails=By.id("lbl_detail_spec_title");
+		public static By GiftCardHeroImage=By.id("lbl_gc_heroImage");
+		
+		// OMNI-29409 - GC ATC & OOS -12.04.2021-Nirmal
+	    
+	    public static By overLayAddedToCartText= By.id("lbl_added_to_cart");
+	    public static By overLayShippingInformation= By.id("lbl_shipping_infomation");
+	    public static By overLayProductImage=By.id("img_product_thumbnail _OverLayCart");
+	    public static By buttonContinueShopping = By.id("btn_continue_shopping");
+	    public static By OutofStock=By.id("");
+	    
+	    
+		
+		//OMNI-29377 - GC Cart Component -13.04.2021 -Nirmal
+		public static By labelcardAmount=By.id(""); 
+		public static By listCardAmount=By.id("");
+		public static By labelDefaultCardAmount=By.id("");
+		public static By btncardOptionAsAmount=By.id("");
+		public static By btncartOptionOther=By.id("");
+		public static By labelInstructionMsg=By.id("");
+		public static By inputEnterAmount=By.id("");
+		public static By inputEnterAmountDefaultValue=By.id("");
+		public static By labelErrorMessage=By.id("");
+	   
+	    
+	    
+	    
+	    
+
+
 		public static By freeStrorePickupRadioButton = By.id("rd_free_store_pickup");
+
 		public static By searchStoreBox = By.id("search_btn_find_store");
 		public static By searchBtn = By.id("Search");
 		public static By widthSizeD= By.id("size_list_item_Shoe_Width_0");
@@ -247,6 +289,7 @@ public class Locators {
 
 		public static By labelItemCount  = By.id("lbl_cart");
 		public static By CounterBadgeOnCartIcon  = By.id("TODO dev");
+
 
 	}
 
@@ -332,7 +375,6 @@ public class Locators {
 	}
 	
 	public static class CartPage{
-		public static By qtyIncrementStepper = By.id("plus_btn_id");
 		public static By qtyDecrementStepper = By.id("minus_btn_id");
 		public static By labelYourCart = By.id("lbl_your_cart");
 		public static By labelItems = By.id("lbl_item_count");
