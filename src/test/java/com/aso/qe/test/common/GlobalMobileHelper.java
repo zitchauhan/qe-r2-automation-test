@@ -1,5 +1,7 @@
 package com.aso.qe.test.common;
 
+import static org.junit.Assert.assertTrue;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -31,7 +33,7 @@ public class GlobalMobileHelper {
 	private static final Logger logger = Logger.getLogger(GlobalMobileHelper.class.getName());
 	private static PropertiesHelper propHelper = PropertiesHelper.getInstance();
 	public static AppiumDriver<MobileElement> driver;
-	private static final int DEFAULT_EXPLICIT_WAIT = Integer.parseInt(propHelper.getConfigPropProperty("default_explicit_wait"));
+	public static final int DEFAULT_EXPLICIT_WAIT = Integer.parseInt(propHelper.getConfigPropProperty("default_explicit_wait"));
 	
 	public void initializeDriver() throws MalformedURLException {
 		String platform = propHelper.getConfigPropProperty("i.platform");
@@ -47,7 +49,9 @@ public class GlobalMobileHelper {
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,platformVersion);
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
 		caps.setCapability(MobileCapabilityType.APP, app);
-		
+		caps.setCapability("autoDismissAlerts", true);
+
+
 	    if(platform.equalsIgnoreCase("iOS")) {
 	    	driver = new IOSDriver<MobileElement>(new URL(url),caps);
 	    }
@@ -108,6 +112,24 @@ public class GlobalMobileHelper {
 		return result;
 	}
 	
+	public static boolean isElementSelected(By locator) {
+		boolean result=false;
+
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		try {
+			WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+			result = wait.until(ExpectedConditions.presenceOfElementLocated(locator)).isSelected();
+		}catch(TimeoutException e) {
+			logger.warn("Appium driver timed out waiting for element " + locator.toString());
+		}catch (Exception e) {
+		    System.err.println(e.getMessage());
+		}
+
+		return result;
+	}
+
 	public static boolean isElementDisplayed(MobileElement element) {
 		boolean result=false;
 		
@@ -115,7 +137,7 @@ public class GlobalMobileHelper {
 			throw new IllegalStateException("Driver is not initialized");
 		}
 		try {
-			Thread.sleep(DEFAULT_EXPLICIT_WAIT * 1000);
+			Thread.sleep(DEFAULT_EXPLICIT_WAIT * 1000L);
 			result = element.isDisplayed();
 		}catch(Exception e) {
 			logger.warn("Appium driver explicit wait for mobile element " + element.toString());
@@ -141,15 +163,15 @@ public class GlobalMobileHelper {
 	
 	public static void setImplicitWaitTo(AppiumDriver<MobileElement> driver, int seconds) {
 			driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
-		    }
+	}
 			
 	public static void searchByKeyword(String keyword) {
-	 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
-		 		MobileElement searchBar= driver.findElement(By.id("search_bar"));
-		 		searchBar.sendKeys(keywordValue);	 		
-		 	}
+		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
+		MobileElement searchBar= driver.findElement(Locators.SearchPage.searchBar);
+		searchBar.sendKeys(keywordValue);
+	}
 	 
-	public void swipeScreen(Direction dir, int numOftimes) {
+	public static void swipeScreen(Direction dir, int numOftimes) {
 		int start=0;
 		while (start < numOftimes) {
 			swipeScreen(dir);
@@ -159,12 +181,10 @@ public class GlobalMobileHelper {
 	
 	public static String findData(String keyword) {
 		String keywordValue=null;
-		 keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
-		 return keywordValue;
-		
-	
-		
-	}	
+		keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(keyword);
+		return keywordValue;
+	}
+
 	public static void swipeScreen(Direction dir) {
         System.out.println("swipeScreenSmall(): dir: '" + dir + "'"); // always log your actions
 
@@ -286,13 +306,14 @@ public class GlobalMobileHelper {
 			// ignore
 			}
 			 }
-		  public void swipeScreenFromElement(Direction dir, MobileElement fromElement,int numOftimes) {
-				int start=0;
-				while (start < numOftimes) {
-					swipeScreenFromElement(dir,fromElement);
-					start+=1;
-				}
-			}
+
+	public void swipeScreenFromElement(Direction dir, MobileElement fromElement,int numOftimes) {
+		int start=0;
+		while (start < numOftimes) {
+			swipeScreenFromElement(dir,fromElement);
+			start+=1;
+		}
+	}
 	 
 	public static String getElementText(By locator) {
 		if(driver == null) {
@@ -301,6 +322,128 @@ public class GlobalMobileHelper {
 		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator)).getText();
 	}
-	
 
+	public static int randomInteger(int min, int max) {
+		  return (int) (Math.floor(Math.random() * (max - min + 1)) + min);
+	}
+
+	public void verifyUserIsOnPageone(String pagename) {
+
+		if(pagename.equalsIgnoreCase("LogIn")) {
+
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.LoginPage.emailEditBox));
+		}else if(pagename.equalsIgnoreCase("Cart")){
+
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.labelYourCart));
+
+		}else {
+
+			throw new UnsupportedOperationException("Given button type not defined");
+
+		}
+	}
+
+
+		//}else if(pagename.equalsIgnoreCase("save")){
+
+			//assertTrue (GlobalMobileHelper.isElementDisplayed(Locators.Addnewasocreditcard.AddnewAsocrerditCardlabel));
+	public static boolean isElementEnabled(By locator) {
+		boolean result=false;
+		
+		if(driver == null) {
+			throw new IllegalStateException("Driver is not initialized");
+		}
+		try {
+			WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+			result = wait.until(ExpectedConditions.presenceOfElementLocated(locator)).isEnabled();
+		}catch(TimeoutException e) {
+			logger.warn("Appium driver timed out waiting for element " + locator.toString());
+		}catch (Exception e) {
+		    System.err.println(e.getMessage());
+		}
+		
+		return result;
+	}
+
+
+	public void verifyUserIsOnPage(String pageName) {
+		if(pageName.equalsIgnoreCase("Add Wishlist")) {
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistAddButton));
+		}else if(pageName.equalsIgnoreCase("wishlist listing")) {
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.wishlistTileTitle));
+		}else if(pageName.equalsIgnoreCase("Previous page")) {
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.BottomNav.wishlist));
+		}else if(pageName.equalsIgnoreCase("Edit Wish List")) {
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.editBtn));
+		}else if(pageName.equalsIgnoreCase("created wishlist")) {
+			assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.WishlistPage.createdWishlist));
+		}else {
+			throw new UnsupportedOperationException("type not defined");
+		}
+	}
+
+
+	public static By getLocator(By locator,String replacement) {
+		String loc = locator.toString();
+		return By.xpath(loc.replace("{0}", replacement));
+	}
+
+	public static boolean swipeTillElementDisplayed(Direction dir, By element) {
+		final int NO_OF_TIMES = 4;
+		return swipeTillElementDisplayed(dir,element,NO_OF_TIMES);
+	}
+
+	public void handleUnwantedAlerts(){
+		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
+		int exitOn = 1;
+		while (exitOn <= 10 ){// handle the alert 10 times
+			try {
+				wait.until(ExpectedConditions.alertIsPresent());
+				driver.switchTo().alert().accept();
+				exitOn++;
+			}catch (TimeoutException e){
+				logger.debug("timeout expired while waiting for the alert");
+				break;
+			}
+		}
+	}
+
+	/**
+	 * Method to wait for the amount to time mentioned as Explicit wait
+	 */
+	public static void waitForDefaultTime(){
+		try {
+			Thread.sleep(DEFAULT_EXPLICIT_WAIT * 1000L);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+
+	//Returns true if element is displayed false otherwise
+	public static boolean swipeTillElementDisplayed(Direction dir, By element, int noOfTimes) {
+		while(noOfTimes-- > 0) {
+			if(GlobalMobileHelper.isElementDisplayed(element)) {
+				return true;
+			}
+			swipeScreen(dir);
+		}
+		return false;
+	}
+
+	public static void searchProductByName(String productName){
+		// enable search before searching
+		MobileElement searchBox= driver.findElement(Locators.HomePage.searchBox);
+		searchBox.click();
+		// search for the word
+		MobileElement searchBar=driver.findElement(Locators.SearchPage.searchBar);
+		searchBar.sendKeys(productName);
+		tapOnElement(Locators.SearchPage.goBtn);
+		waitForDefaultTime();
+	}
 }
+
+
+
+
+

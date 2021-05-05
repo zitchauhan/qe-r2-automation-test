@@ -3,6 +3,7 @@ package com.aso.qe.test.pageobject.ios;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -81,19 +82,26 @@ public class PLPPage {
 		
 		if(args.equalsIgnoreCase("free_Shipping_Banner")) {
 		 return	isIn_Store_curbside_Banner(args);
-			
-			
 		}if(args.equalsIgnoreCase("In_Store_curbside_Banner")) {
 			 return	isIn_Store_curbside_Banner(args);
+		}if(args.equalsIgnoreCase("Yeti")) {
+			 return	isIn_PLP(args);
 		}
 		return false;
 		
 	}
-	
-	
-	
-	
-	
+	private boolean isIn_PLP(String args) {
+		String textguidelines=GlobalMobileHelper.findData(args);
+		MobileElement BannerElement = driver.findElement(Locators.PLPPage.productTitle);
+		 String elementtext  = BannerElement.getText();
+		 if(elementtext.equalsIgnoreCase(textguidelines)) {
+			 return true; 
+		 }else {
+			 return false;
+		 }
+	}
+
+
 	public boolean isIn_Store_curbside_Banner(String args) {
 		String textguidelines=GlobalMobileHelper.findData(args);
 		MobileElement BannerElement = driver.findElement(Locators.PLPPage.PLP_Page__Instore_CurbSideBaner);
@@ -120,10 +128,33 @@ public class PLPPage {
 
 		
 		if(args.equalsIgnoreCase("SeeDetail_FreeShipping")) {
-			 driver.findElement(Locators.PLPPage.PLP_Page_FreeShippingBaner).click();
+			// driver.findElement(Locators.PLPPage.PLP_Page_FreeShippingBaner).click();
+
+				// driver.findElement(Locators.PLPPage.PLP_Page_Instore_CurbSideBaner_SeeDeatil).click();
+				int count=0;
+				List<MobileElement> PLPCategoriesList = (List<MobileElement>) driver.findElements(Locators.PLPPage.PLP_Page_Instore_CurbSideBaner_SeeDeatil);
+				for (MobileElement mobileElement : PLPCategoriesList) {
+					count++;
+					if(count==1) {
+						GlobalMobileHelper.tapOnElement(PLPCategoriesList.get(0));
+					}
+				} 
+				
+				
+			
 			
 		}if(args.equalsIgnoreCase("SeeDetail_Store_curbside")) {
-			 driver.findElement(Locators.PLPPage.PLP_Page_FreeShippingBaner).click();
+			// driver.findElement(Locators.PLPPage.PLP_Page_Instore_CurbSideBaner_SeeDeatil).click();
+			int count=0;
+			List<MobileElement> PLPCategoriesList = (List<MobileElement>) driver.findElements(Locators.PLPPage.PLP_Page_Instore_CurbSideBaner_SeeDeatil);
+			for (MobileElement mobileElement : PLPCategoriesList) {
+				count++;
+				if(count==1) {
+					GlobalMobileHelper.tapOnElement(PLPCategoriesList.get(1));
+				}
+			} 
+			
+			
 		}
 			
 	}
@@ -188,5 +219,86 @@ public class PLPPage {
 		
 	}
 	
+	public void editSearch(String edit) {
+		MobileElement editSearch = driver.findElement(Locators.PLPPage.editSearch);
+		editSearch.clear();
+		editSearch.sendKeys(edit);
+	}
+
+	public boolean isFilterButtonDisplayed() {
+		MobileElement filterButton = driver.findElement(Locators.PLPPage.FilterButton);
+		return filterButton.isDisplayed();
+	}
+	public boolean isCancelButtonDisplayed() {
+		MobileElement cancelButton = driver.findElement(Locators.PLPPage.FilterCancel);
+		return cancelButton.isDisplayed();
+	}
+	public boolean isFilterTextDisplayed() {
+		MobileElement filterText = driver.findElement(Locators.PLPPage.FilterScreenText);
+		return filterText.isDisplayed();
+	}
+	public boolean isFilterApplyButtonDisplayed() {
+		MobileElement applyButton = driver.findElement(Locators.PLPPage.FilterApplyButton);
+		return applyButton.isDisplayed();
+	}
+	public boolean isFilterApplyButtonEnabled() {
+		MobileElement applyButton = driver.findElement(Locators.PLPPage.FilterApplyButton);
+		return applyButton.isEnabled();
+	}
 	
+	public void taponFilterButton() {
+		MobileElement filterButton = driver.findElement(Locators.PLPPage.FilterButton);
+		GlobalMobileHelper.tapOnElement(filterButton);
+	}
+
+
+	public boolean isFilterTypesDisplayed(String filterType) {
+		boolean flag= true;
+		switch(filterType.toLowerCase()) {
+		
+		 case "Pick up & Delivery option":
+			flag = GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.pickupDeliveryFilter);
+			return flag;
+		 case "Category":
+				flag = GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.categoryFilter);
+				return flag;
+		 case "Brand":
+				flag = GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.brandFilter);
+				return flag;
+		 case "Size":
+				flag = GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.sizeFilter);
+				return flag;
+		 case "Style":
+				flag = GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.styleFilter);
+				return flag;
+		 case "Color":
+				flag = GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.colorFilter);
+				return flag;
+		 case "Price":
+				flag = GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.priceFilter);
+				return flag;
+		 case "Rating":
+				flag = GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.ratingFilter);
+				return flag;
+		 case "Deal":
+				flag = GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.dealsFilter);
+				return flag;
+				
+		default:
+
+			 throw new UnsupportedOperationException("No other delivery option is supported");
+		}
+		
+		
+	}
+
+
+	public void tapOnCancelLink() {
+		 MobileElement cancelLink = driver.findElement(Locators.PLPPage.FilterCancel);
+		 GlobalMobileHelper.tapOnElement(cancelLink);
+	}
+
+    public void tapOnFirstProduct() {
+		GlobalMobileHelper.tapOnElement(Locators.PLPPage.productTitle);
+    }
 }

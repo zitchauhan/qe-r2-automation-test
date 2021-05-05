@@ -16,8 +16,28 @@ private static String updatedAddressField;
 private static String storeName;
 private static String defaultStore;
 private static String totalQtyOnCart;
+private static String currentUserType;
 
-public String getProductPriceOnPDP() {
+	public static String getCurrentProductDisclaimer() {
+		return currentProductDisclaimer;
+	}
+
+	public static void setCurrentProductDisclaimer(String currentProductDisclaimer) {
+		Context.currentProductDisclaimer = currentProductDisclaimer;
+	}
+
+	private static String currentProductDisclaimer;
+
+	public static String getCurrentUserType() {
+		return currentUserType;
+	}
+
+	public static void setCurrentUserType(String currentUserType) {
+		Context.currentUserType = currentUserType;
+	}
+
+
+	public String getProductPriceOnPDP() {
 	return ProductPriceOnPDP;
 }
 

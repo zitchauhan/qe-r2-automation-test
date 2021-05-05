@@ -1,10 +1,14 @@
 package com.aso.qe.test.pageobject.ios;
 
+import com.aso.qe.test.common.GlobalMobileHelper;
+import com.aso.qe.test.common.Locators;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
+
+import static org.junit.Assert.assertTrue;
 
 public class UpdateAddressPage {
     /*
@@ -19,4 +23,16 @@ public class UpdateAddressPage {
     }
 
 
+    public void updatePhoneNumber() {
+        // TODO: To be implemented
+        logger.warn("to be implemented");
+    }
+
+    public void updateAptNumber() {
+        GlobalMobileHelper.setText(Locators.AddAddress.inputAptNumber, "1");
+    }
+
+    public void isEditAddresscreenVisible() {
+        assertTrue("Edit address screen is not visible", GlobalMobileHelper.isElementDisplayed(Locators.AddAddress.addAddressHeader));
+    }
 }

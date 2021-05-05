@@ -6,9 +6,9 @@ Feature: Checkout
    2. There are no existing addresses displayed on Shipping Information screen 
     
     Given User launches the application
-    Then User taps on "ALLOW LOCATION SERVICES" option
-    And User verifies location service popup is displayed
-    And User taps on "Allow while using app" option
+#    Then User taps on "ALLOW LOCATION SERVICES" option
+#    And User verifies location service popup is displayed
+#    And User taps on "Allow while using app" option
     And User continues as guest user
 	And User is on Log In screen
 	Then User sees email address field
@@ -30,9 +30,9 @@ Feature: Checkout
    3. “Add New Address” button is displaying
    
     Given User launches the application
-    Then User taps on "ALLOW LOCATION SERVICES" option
-    And User verifies location service popup is displayed
-    And User taps on "Allow while using app" option
+#    Then User taps on "ALLOW LOCATION SERVICES" option
+#    And User verifies location service popup is displayed
+#    And User taps on "Allow while using app" option
     And User continues as guest user
 	And User is on Log In screen
 	Then User sees email address field
@@ -52,9 +52,9 @@ Feature: Checkout
  Scenario: Verify when a registered user is having an address which is not an AVS validated then a message 
      is displayed below the address on shipping information screen   
     Given User launches the application
-    Then User taps on "ALLOW LOCATION SERVICES" option
-    And User verifies location service popup is displayed
-    And User taps on "Allow while using app" option
+#    Then User taps on "ALLOW LOCATION SERVICES" option
+#    And User verifies location service popup is displayed
+#    And User taps on "Allow while using app" option
     And User continues as guest user
 	And User is on Log In screen
 	Then User sees email address field
@@ -71,9 +71,9 @@ Feature: Checkout
      @Sprint2 @ST-OMNI-28794 @TC-OMNI-31929
   Scenario: Verify guest user is able to see “Add New Address” button on checkout page 
     Given User launches the application
-    Then User taps on "ALLOW LOCATION SERVICES" option
-    And User verifies location service popup is displayed
-    And User taps on "Allow while using app" option
+#    Then User taps on "ALLOW LOCATION SERVICES" option
+#    And User verifies location service popup is displayed
+#    And User taps on "Allow while using app" option
     And User continues as guest user
    Then User sees the homepage
 	 When User Sees the Search Box

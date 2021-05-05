@@ -3,6 +3,7 @@ package com.aso.qe.test.stepdefinition.ios;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 import com.aso.qe.test.pageobject.ios.BottomNav;
+import com.aso.qe.test.pageobject.ios.Context;
 import com.aso.qe.test.pageobject.ios.HomePage;
 import com.aso.qe.test.pageobject.ios.LoginPage;
 
@@ -20,7 +21,7 @@ public class LoginStepDef extends GlobalMobileHelper{
 	
 	@When("^User enters email address")
 	public void enterEmail() {
-		String email = "jitsingh7@yopmail.com";
+		String email = "Newtest1@yopmail.com";
 		loginPage.enterEmail(email);
 	}
 	
@@ -36,7 +37,7 @@ public class LoginStepDef extends GlobalMobileHelper{
 	}
 	
 	@And("^User Logs into the application$")
-	public void login() {
+	public void login() throws Throwable {
 		try {
 			if(!homePage.isOnHomePage()){
 				tapOnElement(Locators.WelcomeScreen.HomeButton);
@@ -58,7 +59,10 @@ public class LoginStepDef extends GlobalMobileHelper{
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();
 		}
-		GlobalMobileHelper.tapOnElement(Locators.LoginPage.HomeLogin);
+
+		if (GlobalMobileHelper.isElementDisplayed(Locators.LoginPage.HomeLogin))
+			GlobalMobileHelper.tapOnElement(Locators.LoginPage.HomeLogin);
+
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e1) {
@@ -188,5 +192,48 @@ public class LoginStepDef extends GlobalMobileHelper{
 	@Then("^User taps on cancel button$")
 	public void user_taps_on_cancel_button() throws Throwable {
 		loginPage.tapOnCancelBtn();
+	}
+	
+	 // Login new code by Prafull to read user name and password from data file 
+	@Given("^User is on \"([^\"]*)\" screen$")
+	public void user_is_on_screen(String pagename) throws Throwable {
+		 verifyUserIsOnPage(pagename);
+	}
+
+	@When("^User enters \"([^\"]*)\" on login screen$")
+	public void user_enters_on_login_screen(String logindetails) throws Throwable {
+		 loginPage.enterLoginDetails(logindetails);
+	}
+
+	@When("^User taps on \"([^\"]*)\" button on login screen$")
+	public void user_taps_on_button_on_login_screen(String btnName) throws Throwable {
+		 loginPage.tapOnButtonOnLoginPage(btnName);
+	}
+
+	
+
+    @And("^User logs into the application as \"([^\"]*)\"$")
+    public void userLogsIntoTheApplicationAs(String username) throws Throwable{
+        /* Created By jitsingh7 on @{DATE} */
+		logOut();
+		bottomNav.tapOnHome();
+
+		if (!username.equalsIgnoreCase("guest")) loginPage.loginAsUser(username);
+
+		waitForDefaultTime();
+
+		// set the current user type
+		if (!username.equalsIgnoreCase("guest")) Context.setCurrentUserType("registered");
+		else {
+			Context.setCurrentUserType("guest");
+			logger.info("Current User type is a guest");
+		}
+	}
+
+    private void logOut() throws Throwable {
+		swipeScreen(Direction.UP, 2);
+		bottomNav.tapOnHome();
+		bottomNav.tapOnAccount();
+		tapOnElement(Locators.AccountPage.buttonLogOut);
 	}
 }

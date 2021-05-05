@@ -8,15 +8,14 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
+
+import com.aso.qe.test.pageobject.ios.*;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.GlobalMobileHelper.Direction;
 import com.aso.qe.test.common.Locators;
-import com.aso.qe.test.pageobject.ios.CartPage;
-import com.aso.qe.test.pageobject.ios.LoginPage;
-import com.aso.qe.test.pageobject.ios.PDPPage;
 
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
@@ -32,14 +31,14 @@ public class CartStepDef extends GlobalMobileHelper{
 	
 	CartPage cartPage = new CartPage(driver);
 	PDPPage pdpPage = new PDPPage(driver);
-	
+	BottomNav bottomNav = new BottomNav(driver);
+
 	private int previousQuantity = 1;
 	private String productDisclaimer;
 	private int shippingChargesToZipCode;
 	
 	@Then("^User is navigated To Cart Screen$")
 	public void userIsOnCart() throws InterruptedException {
-		Thread.sleep(7000);
 		assertTrue(cartPage.isYourCartLabelDisplayed());
 	}
 	
@@ -142,8 +141,8 @@ public class CartStepDef extends GlobalMobileHelper{
 	}
 	
 	@And("^User sees the order summary label$")
-	public boolean isOrderSummaryLabelDisplayed() throws Throwable {
-		return isElementDisplayed(Locators.CartPage.orderSummaryLabel);
+	public void isOrderSummaryLabelDisplayed() throws Throwable {
+		assertTrue(cartPage.isOrderSummaryLabelDisplayed());
 	}
 	
 	@And("^User sees the order total label$")
@@ -339,12 +338,14 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void user_taps_on_view_cart_button() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	   tapOnElement(Locators.PDPPage.buttonViewCart);
+	   waitForDefaultTime();
 	   logger.debug("Tapped on View Cart button");
 	}
 	
 	@Then("^User sees the product disclaimer \"([^\"]*)\"$")
 	public void user_sees_the_product_disclaimer(String disclaimer) throws Throwable {
 	    // Write code here for verifying the product disclaimer
+		Context.setCurrentProductDisclaimer(disclaimer);
 	    cartPage.verifyProductDisclaimer(disclaimer);
 	}
 
@@ -357,7 +358,7 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Then("^User sees longer product disclaimer with elipses$")
 	public void user_sees_longer_product_disclaimer_with_elipses() throws Throwable {
 	    // Write code here to verify longer product disclaimer
-	    cartPage.verifyLongerProductDisclaimer(productDisclaimer);
+	    cartPage.verifyLongerProductDisclaimer();
 	}
 	
 	@When("^User selects home delivery option$")
@@ -445,6 +446,22 @@ public class CartStepDef extends GlobalMobileHelper{
 	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.buttonShippingPolicy));
 	    } else if(arg.equalsIgnoreCase("Return policy")) {
 	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.buttonReturnPolicy));
+	    } else if(arg.equalsIgnoreCase("order summary")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.OrderSummary.orderSummaryHeading));
+	    } else if(arg.equalsIgnoreCase("Free with purchase label")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeItemTitleId));
+	    } else if(arg.equalsIgnoreCase("Free with purchase item title")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftProductTitleId));
+	    } else if(arg.equalsIgnoreCase("Free with purchase item image")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftProductImage));
+	    } else if(arg.equalsIgnoreCase("Free with purchase item price")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.orderItemPriceId));
+	    } else if(arg.equalsIgnoreCase("Free with purchase item discounted price")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.orderItemDiscountPriceId));
+	    } else if(arg.equalsIgnoreCase("Free with purchase tool tip")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftToolTipIcon));
+	    } else if(arg.equalsIgnoreCase("Free with purchase tool tip modal")) {
+	    	assertTrue(GlobalMobileHelper.isElementDisplayed(Locators.CartPage.freeGiftToolTipIconmodal));
 	    }
 	}
 
@@ -560,13 +577,12 @@ public class CartStepDef extends GlobalMobileHelper{
 	@Given("^A registered user is logged in$")
 	public void aRegisteredUserIsLoggedIn() throws Throwable{
 		/* Created By jitsingh7 on 2-Apr-2021 */
-		// TODO: The user will not be able to see the Guest User login tile on the cart page
-		// There can be multiple ways to verify a logged in user
-		logger.warn("to be implemented later");
+		assertFalse("User is not logged in", cartPage.isLogInButtonDisplayed());
+
 	}
-	@And("^User sees the \"(.*?)\" and \"(.*?)\" of selected Product \"(.*?)\"$")
-	public void isvariantDisplayedonCart(String variantSize , String variantColor, String variantType) {
-		assertTrue(cartPage.isvariantDisplayedOnCart(variantSize,variantColor,variantType));
+	@And("^User sees the \"(.*?)\" and \"(.*?)\" and \"(.*?)\" of selected Product \"(.*?)\"$")
+	public void isvariantDisplayedonCart(String variantSize , String variantColor,String variantWidth, String variantType) {
+		assertTrue(cartPage.isvariantDisplayedOnCart(variantSize,variantColor,variantWidth,variantType));
 	}
 
 
@@ -591,17 +607,42 @@ public class CartStepDef extends GlobalMobileHelper{
 	public void guest_User_is_on_empty_cart_page() throws Throwable {
 		assertFalse(isElementDisplayed(Locators.CartPage.orderSubtotalLabel));
 	}
-
+	@Then("^I choose to verify \"([^\"]*)\" label in Overlay$")
+	public void i_choose_to_verify_label_in_Overlay(String arg1) throws Throwable {
+		assertTrue(cartPage.VerifyDileveryAttribute(arg1));
+	}
 	@Then("^User note down the total quantity on cart page$")
 	public void user_note_down_the_cart_quantity_on_cart_page() throws Throwable {
 		cartPage.noteDownTotalQty();
 	}
-
+	
+	@Then("^User scrolls down to the bottom in \"([^\"]*)\" swipe$")
+	public void user_scrolls_down_to_the_bottom_in_swipe(String args) throws Throwable {
+		swipeScreen(Direction.UP,Integer.parseInt(args));
+	 }
+	
 	@And("User has a whiteGloveBulky product in the cart")
 	public void userHasAWhiteGloveBulkyProductInTheCart() {
 		/* Created By jitsingh7 on 11/04/21 */
 		assertTrue(cartPage.hasWhiteGloveBulkyItem());
 		logger.info("User has a white glove and bulky product in the cart");
 	}
+	
+	// Order Summary Code , need to make it global as order summary is global component from cart to order history 
+	@Then("^User sees \"([^\"]*)\" on OrderSummary$")
+	public void user_sees_on_OrderSummary(String ElementName) throws Throwable {
+		assertTrue(cartPage.IsShowingOnOrderSummary(ElementName));
+	}
+
+    @And("User has an empty cart")
+    public void userHasAnEmptyCart() throws Throwable {
+        /* Created By jitsingh7 on 29/04/21 */
+		swipeScreen(Direction.UP, 2);
+		bottomNav.tapOnCart();
+		// remove all the items from the cart in case user did not log out of the application
+		for(MobileElement buttonRemoveFromCart: driver.findElements(Locators.CartPage.buttonRemoveFromCart)) {
+			buttonRemoveFromCart.click();
+		}
+    }
 
 }

@@ -17,6 +17,7 @@ import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.pageobject.ios.CheckoutPage;
 
 import cucumber.api.java.en.And;
+import org.openqa.selenium.By;
 
 public class CheckoutStepDef extends GlobalMobileHelper {
 private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getName());
@@ -138,6 +139,7 @@ private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getN
 	@And("User sees Shipping Method label")
 	public void userSeesShippingMethodLabel() {
 		assertTrue(isElementDisplayed(Locators.CheckoutPage.labelShippingHeader));
+		waitForDefaultTime();
 	}
 
 	@When("^User sees the shipping disclaimer \"([^\"]*)\"$")
@@ -216,4 +218,22 @@ private static final Logger logger = Logger.getLogger(CheckoutStepDef.class.getN
 
 	}
 
+    @When("User taps on default shipping address")
+    public void userTapsOnDefaultShippingAddress() {
+        /* Created By jitsingh7 on 18-Apr-2021*/
+		checkoutPage.tapOnDefeaultShippingAddress();
+    }
+
+	@Then("^User sees the checkout screen alert with text \"([^\"]*)\"$")
+	public void userSeesTheCheckoutScreenAlertWithText(String message) {
+		/* Created By jitsingh7 on 18/04/21 */
+		String AlertMessageXpath= String.format("//XCUIElementTypeStaticText[@name=%s]",message);
+		assertTrue("Alert is not displayed",isElementDisplayed(By.xpath(AlertMessageXpath)));
+	}
+
+    @When("User has placed an Order")
+    public void userHasPlacedAnOrder() {
+        /* Created By jitsingh7 on 29/04/21 */
+		tapOnElement(Locators.CheckoutPage.buttonPlaceOrder);
+    }
 }
