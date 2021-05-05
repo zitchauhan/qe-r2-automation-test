@@ -14,6 +14,13 @@ public class Locators {
 		public static By Login = By.xpath("//XCUIElementTypeButton[@name=\"LOGIN\"]");
 	}
 	
+	
+	public static class Onboarding{
+		public static By Continueasguest = By.id("btn_continue_as_guest");
+		
+		
+	}
+	
 	public static class LoginPage{
 		public static By HomeLogin = By.xpath("//XCUIElementTypeButton[@name=\"Home\"]");
 		public static By emailEditBox = By.id("tf_email");
@@ -595,6 +602,9 @@ public class Locators {
 		public static By buttonAddressbook = By.id("btn_Myaccount_addressbook");
 		public static By buttonWishlist = By.id("btn_Myaccount_wishlist");
 		public static By buttonPayment = By.id("btn_Myaccount_Payment");
+		public static By buttoncontactus = By.id("btn_contact_us");
+		public static By CSMobilenumber = By.xpath("//XCUIElementTypeButton[@name=\"1888-922-2336\"]");
+		public static By CallCancelbutton = By.xpath("//XCUIElementTypeButton[@name=\"Cancel\"]");
 
 
 	}

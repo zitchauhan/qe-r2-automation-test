@@ -162,4 +162,10 @@ public class HomeStepDef extends GlobalMobileHelper{
 		tapOnElement(Locators.PDPPage.buttonViewCart);
 		waitForDefaultTime();
     }
+    
+    
+    @When("^User continues as \"([^\"]*)\" on onboarding page$")
+    public void user_continues_as_on_onboarding_page (String btnName) throws Throwable {
+   	 homePage.tapOnButtonOnOnboarding(btnName);
+    }
 }
