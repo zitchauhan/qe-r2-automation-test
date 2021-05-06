@@ -137,13 +137,7 @@ public class Locators {
 		public static By searchinsteedof =  By.id("lbl_search_instead_for");
 		public static By searchinsteedofvalue =  By.id("btn_search_instead_forvalue");
 		public static By searchsuggestionkeyword = By.id("lbl_searchsuggestionkeyword");
-
-		public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
-		
-		
-		public static By navigateBack = By.id("btn_back");
-		public static By recentSearchesTitle=By.id("TODO by dev");;
-		public static By clearAll=By.id("TODO by dev");;
+        public static By searchsuggestionkeywordbutton = By.id("btn_searchsuggestionkeywordbutton");
 		public static By recentSearches=By.id("TODO by dev");;
 		public static By popularSearchesTitle=By.id("TODO by dev");;
 		public static By popularsearchesItem=By.id("TODO by dev");;
