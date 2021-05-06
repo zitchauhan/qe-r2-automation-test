@@ -22,4 +22,10 @@ public void verifyInStock() {
 	assertTrue(plPage.verifyInstock());
 	
 }
+
+    @Then("User sees the Promo ad image on PLP")
+    public void userSeesThePromoAdImageOnPLP() {
+        /* Created By jitsing7 on 04/05/2021 */
+        assertTrue(plPage.verifyUserCanSeePromoAdImage());
+    }
 }

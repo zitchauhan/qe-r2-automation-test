@@ -171,11 +171,7 @@ public class CheckoutPage {
 
     public void tapOnDefeaultShippingAddress() {
     	GlobalMobileHelper.tapOnElement(Locators.CheckoutPage.defaultAddressLabel);
-		try {
-			Thread.sleep(GlobalMobileHelper.DEFAULT_EXPLICIT_WAIT * 1000L);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		GlobalMobileHelper.waitForDefaultTime();
 	}
 }
 
