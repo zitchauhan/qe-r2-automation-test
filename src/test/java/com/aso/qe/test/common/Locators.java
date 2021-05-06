@@ -447,6 +447,14 @@ public class Locators {
 		public static By freeGiftToolTipIcon = By.id("img_free_Gift_Tool_Tip");
 		public static By freeGiftToolTipIconmodal = By.id("lbl_free_Gift_Tool_Tip_modal");
 		public static By freeGiftProductImage = By.id("img_free_Product");
+		public static By Addtowishlist = By.id("btn_add_to_wishlist");
+		public static By wishlisticon = By.id("icon_wishlist");
+		public static By loginoncartwishlist = By.id("btn_login");
+		public static By existingwishlist = By.id("btn_list_Item");
+		public static By sucessmessageitemaddedtowishlist = By.xpath("//*[contains(@label, 'item added to')]");
+		
+		
+		
 
 	}
 	public static class AcademyExclusivePage{
