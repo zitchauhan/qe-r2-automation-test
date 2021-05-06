@@ -199,6 +199,9 @@ public class AccountPage {
         }else if(elementName.equalsIgnoreCase("buttonPayment")){
 			
 			return isElementDisplayed(Locators.MyAccountwelcomePage.buttonPayment);
+}else if(elementName.equalsIgnoreCase("Mobilenumber")){
+			
+			return isElementDisplayed(Locators.MyAccountwelcomePage.CSMobilenumber);
 
 		}else {
 			
@@ -262,6 +265,15 @@ public class AccountPage {
 			}else if(btnName.equalsIgnoreCase("address book")){
 
 				tapOnElement(Locators.MyAccountwelcomePage.buttonAddressbook);
+			}else if(btnName.equalsIgnoreCase("contact us button")){
+
+				tapOnElement(Locators.MyAccountwelcomePage.buttoncontactus);
+			}else if(btnName.equalsIgnoreCase("Mobilenumber")){
+
+				tapOnElement(Locators.MyAccountwelcomePage.CSMobilenumber);
+			}else if(btnName.equalsIgnoreCase("cancel")){
+
+				tapOnElement(Locators.MyAccountwelcomePage.CallCancelbutton);
 
 			}else {
 				throw new UnsupportedOperationException("Given button type not defined");

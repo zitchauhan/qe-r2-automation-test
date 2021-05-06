@@ -264,5 +264,19 @@ public class HomePage {
 		
 	}
 
+	public void tapOnButtonOnOnboarding(String btnName) {
+     if(btnName.equalsIgnoreCase("guest user")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.Onboarding.Continueasguest);
+
+			
+		}else {
+			
+			
+			throw new UnsupportedOperationException("Given button type found on Onbording screen");
+ 
+		}
+		
+	}
 
 }
