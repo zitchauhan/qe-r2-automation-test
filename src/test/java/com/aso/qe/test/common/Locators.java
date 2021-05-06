@@ -42,7 +42,8 @@ public class Locators {
 		//public static By homeBtn = By.id("lbl_home");
 		//public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
 		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
-		public static By searchBox = By.id("search_bar");
+		//public static By searchBox = By.id("search_bar");this is frquent change b/dev
+		public static By searchBox = By.id("btn_Search");
 		public static By shopNewLabel = By.xpath("//*[contains(@label,'Shop New')]");
 		public static By shopHomePage = By.id("lbl_shop");
 		public static By shopNewTitle = By.id("lbl_shopNew_title");
