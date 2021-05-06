@@ -210,6 +210,39 @@ public class SearchPage {
 	public boolean isPopularSearchesDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.popularsearchesItem);
 	}
+	public boolean isElipsesDisplayed(int characterCount) {
+		List<MobileElement> lsSearches = driver.findElements(By.id("btn_category"));
+		boolean flag = false;
+        for(MobileElement searchTerms: lsSearches ) 
+        {
+        	int count=0;
+        	String searchTermValue =searchTerms.getText();
+        	for(int i =0; i<=searchTermValue.length()-1;i++) 
+        	{
+        		 if(searchTermValue.charAt(i) != ' ') 
+        		 {
+        			 count++;
+        		 }
+        	} 
+        	System.out.println(searchTermValue);
+        	System.out.println(count);
+        	if(count>characterCount) {
+        		String s= "";
+        		for(int i=searchTermValue.length()-2; i>=searchTermValue.length(); i++) {
+        			 s = s + searchTermValue.charAt(i); 
+        	    }
+        		if(s.contains("***")) {
+        			flag = true;
+        		}else {
+        			flag= false;
+        		}
+        	}else {
+        		flag= true;
+        	}
+        }
+		return flag;
+		
+	}
 		
 	}
 
