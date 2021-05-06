@@ -223,8 +223,8 @@ public class PLPPage {
 		MobileElement editSearch = driver.findElement(Locators.PLPPage.editSearch);
 		editSearch.clear();
 		editSearch.sendKeys(edit);
-	//OMNI-20323  15.04.20201
-	
+	}
+
 	public boolean isFilterButtonDisplayed() {
 		MobileElement filterButton = driver.findElement(Locators.PLPPage.FilterButton);
 		return filterButton.isDisplayed();
@@ -297,6 +297,8 @@ public class PLPPage {
 		 MobileElement cancelLink = driver.findElement(Locators.PLPPage.FilterCancel);
 		 GlobalMobileHelper.tapOnElement(cancelLink);
 	}
-	
-	
+
+    public void tapOnFirstProduct() {
+		GlobalMobileHelper.tapOnElement(Locators.PLPPage.productTitle);
+    }
 }

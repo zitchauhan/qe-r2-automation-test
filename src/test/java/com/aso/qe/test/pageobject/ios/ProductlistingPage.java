@@ -61,6 +61,9 @@ public boolean verifyInstock() {
 			return false;
 		}
 	}
-	
 
+
+    public boolean verifyUserCanSeePromoAdImage() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PLPPage.promoAdImage);
+    }
 }

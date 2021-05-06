@@ -86,9 +86,47 @@ public class SearchPage {
 
 	}
 
+
 	
 	public boolean isFilterOptionDisplayed() {
 	   return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.filterOption);	}
+
+
+	public boolean VarifyElementPresenseOnSearchPage(String elementname) {
+if(elementname.equalsIgnoreCase("showing result for label")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.showingresultforlabel);
+
+			
+		}else if(elementname.equalsIgnoreCase("related keywords")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.showingresultforlabelvalue);
+			
+		}else if(elementname.equalsIgnoreCase("search insteed of label")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.searchinsteedof);
+		}else if(elementname.equalsIgnoreCase("searched keyword button")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.searchinsteedofvalue);
+				
+		}else {
+			
+			throw new UnsupportedOperationException("Given Elelent not founded on search page");
+
+		}
+	}
+	public void tapOnElementOnSearchPage(String elementname) {
+     if(elementname.equalsIgnoreCase("searched keyword button")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.SearchPage.searchinsteedofvalue);
+
+
+		}else {
+			
+			throw new UnsupportedOperationException("Given button type not found on search page");
+ 
+		}
+	}
 
 	public void navigateBackToSearchPage() {
 		GlobalMobileHelper.tapOnElement(Locators.SearchPage.navigateBack);
@@ -212,8 +250,19 @@ public class SearchPage {
 			
 		}
 	}
+	
 	public boolean isPopularSearchesDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.popularsearchesItem);
+	}
+	
+	
+	public boolean Varifyuserisonnoresultpage (String pagename) {
+if(pagename.equalsIgnoreCase("see No product found")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.noresultlabel);
+	}else {
+		
+		throw new UnsupportedOperationException("User is not on result page ");}
 	}
 		
 
@@ -232,6 +281,7 @@ public class SearchPage {
 		return GlobalMobileHelper.getElementText(Locators.SearchPage.searchCount);
 	}
 	
+
 	public boolean isNullSearchPaageDisplayed(String msg) {
 		try {
 			Thread.sleep(2000);
@@ -243,6 +293,9 @@ public class SearchPage {
 		return searchError.getText().contains(msg);
 		}
 
+
+
+	
 
 	
 	  public void swipeDown() {

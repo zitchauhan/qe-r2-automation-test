@@ -14,28 +14,28 @@ public class BottomNav{
 	  this.driver = driver;
 	}
 	
-	public void tapOnHome() {
+	public void tapOnHome() throws Throwable{
 		MobileElement home = driver.findElement(Locators.BottomNav.home);
 		GlobalMobileHelper.tapOnElement(home);
 	}
 	
-	public void tapOnShop() {
+	public void tapOnShop() throws Throwable{
 		MobileElement shop = driver.findElement(Locators.BottomNav.shop);
 		GlobalMobileHelper.tapOnElement(shop);
 	}
 	
-	public void tapOnWishList() {
+	public void tapOnWishList() throws Throwable {
 		MobileElement wishList = driver.findElement(Locators.BottomNav.wishlist);
 		GlobalMobileHelper.tapOnElement(wishList);
 	}
 	
-	public void tapOnCart() throws InterruptedException {
+	public void tapOnCart() throws Throwable {
 		Thread.sleep(5000);
 		MobileElement cart = driver.findElement(Locators.BottomNav.cart);
 		GlobalMobileHelper.tapOnElement(cart);
 	}
 	
-	public void tapOnAccount() throws InterruptedException {
+	public void tapOnAccount() throws Throwable {
 		GlobalMobileHelper.setImplicitWaitTo(driver, 5);
 		MobileElement account = driver.findElement(Locators.BottomNav.account);
 		GlobalMobileHelper.tapOnElement(account);
