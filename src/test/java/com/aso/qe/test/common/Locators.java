@@ -42,7 +42,7 @@ public class Locators {
 		//public static By homeBtn = By.id("lbl_home");
 		//public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
 		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
-		//public static By searchBox = By.id("search_bar");
+		//public static By searchBox = By.id("search_bar");this is frquent change b/dev
 		public static By searchBox = By.id("btn_Search");
 		public static By shopNewLabel = By.xpath("//*[contains(@label,'Shop New')]");
 		public static By shopHomePage = By.id("lbl_shop");
@@ -445,6 +445,14 @@ public class Locators {
 		public static By freeGiftToolTipIcon = By.id("img_free_Gift_Tool_Tip");
 		public static By freeGiftToolTipIconmodal = By.id("lbl_free_Gift_Tool_Tip_modal");
 		public static By freeGiftProductImage = By.id("img_free_Product");
+		public static By Addtowishlist = By.id("btn_add_to_wishlist");
+		public static By wishlisticon = By.id("icon_wishlist");
+		public static By loginoncartwishlist = By.id("btn_login");
+		public static By existingwishlist = By.id("btn_list_Item");
+		public static By sucessmessageitemaddedtowishlist = By.xpath("//*[contains(@label, 'item added to')]");
+		
+		
+		
 
 	}
 	public static class AcademyExclusivePage{
