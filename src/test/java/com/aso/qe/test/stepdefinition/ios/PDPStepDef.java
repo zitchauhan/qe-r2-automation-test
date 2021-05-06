@@ -293,14 +293,17 @@ public class PDPStepDef extends GlobalMobileHelper{
 		pdp.ItemsCountOnCartBadge(arg1);
 	}
 
-@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
-public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
-	assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname)); 
-}
+	@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
+	public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
+		assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname));
+	}
 
-@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP under Store Section$")
-public void i_Choose_to_validate_that_Shown_on_PDP_under_Store_Section(String elementname) throws Throwable {
-	assertTrue(PDPPage.VarifyElementPresenseOnPDPUnderStoreSEction(elementname)); 
+	@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP under Store Section$")
+	public void i_Choose_to_validate_that_Shown_on_PDP_under_Store_Section(String elementname) throws Throwable {
+		assertTrue(PDPPage.VarifyElementPresenseOnPDPUnderStoreSEction(elementname));
+
+	}
+
 	@Then("^User sees Product title on header$")
 	public void user_sees_Product_title_on_header() {
 		assertTrue(pdp.isProductTitleOnHeaderDisplayed());
@@ -332,9 +335,9 @@ public void i_Choose_to_validate_that_Shown_on_PDP_under_Store_Section(String el
 		PDPPage.clickonPDP(elementname);
 	}
 
-	@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
-	public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
-		assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname));
-	}
-}
+//	@Then("^i Choose to validate that \"([^\"]*)\" Shown on PDP$")
+//	public void i_Choose_to_validate_that_Shown_on_PDP(String elementname) throws Throwable {
+//		assertTrue(PDPPage.VarifyElementPresenseOnPDPPage(elementname));
+//	}
+
 }
