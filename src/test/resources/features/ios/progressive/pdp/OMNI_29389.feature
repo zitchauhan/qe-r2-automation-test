@@ -1,5 +1,5 @@
 Feature: Validate the Error messages when adding Gift card to cart
-@Sprint1 @TC-OMNI-35037 @ST-29389
+ @TC-OMNI-35037 @ST-29389
 Scenario Outline: validate the gift card error message when enter the amount more than 10,000$
 Given User launches the application 
 	And User Goes to home page 
@@ -61,7 +61,7 @@ Given User launches the application
 	|Happy_Birthday_Academy_Gift_Card|
 	|Academy_Bulk_Gift_Card|
 	
-@Sprint1 @TC-OMNI-35040 @ST-29389	
+ @TC-OMNI-35040 @ST-29389	
 Scenario Outline: Validate the error message when the cart have some amount and user adding more amount on it
 Given User launches the application 
 	And User Goes to home page 
