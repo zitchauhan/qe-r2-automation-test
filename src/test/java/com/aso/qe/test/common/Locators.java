@@ -848,6 +848,16 @@ public class Locators {
 		public static By labelColorAttribute = By.id("TODO by dev");
 		public static By eGiftQty = By.id("TODO by dev");
 		public static By eGiftCardMoreRecipientMessage = By.id("TODO by dev");
+		public static By shippingAddressTile = By.id("lbl_shippingAddressTile");
+		public static By homeDeliveryTile = By.id("lbl_homeDeliveryTile");
+		public static By storePickUpTile = By.id("lbl_storePickUpTile");
+		public static By firstName = By.id("TODO by dev");
+		public static By lastName = By.id("TODO by dev");
+		public static By shippingAddress = By.id("TODO by dev");
+		public static By slaMessage = By.id("TODO by dev");
+		public static By packageLabel = By.id("TODO by dev");
+		public static By itemsCount = By.id("TODO by dev");
+		
 	}
 
 	public static class SavedAddresses {
