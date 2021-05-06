@@ -2,8 +2,9 @@ Feature: Validate the Error messages when adding Gift card to cart
  @TC-OMNI-35037 @ST-29389
 Scenario Outline: validate the gift card error message when enter the amount more than 10,000$
 Given User launches the application 
-    And User Clicks On MaY Be Later
-    And User continues as guest user
+    And User continues as "guest user" on onboarding page
+When User Clicks On MaY Be Later
+When User Clicks On MaY Be Later
     Then User sees the homepage
 	#When User Sees the Search Box 
 	Then User clicks on the Search Box 

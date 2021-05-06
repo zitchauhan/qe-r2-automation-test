@@ -42,7 +42,8 @@ public class Locators {
 		//public static By homeBtn = By.id("lbl_home");
 		//public static By golfBall =By.xpath("//*[contains(@label,\"Golf Balls\")]");
 		public static By golfBall = By.xpath("(//XCUIElementTypeOther[@name=\"product_list_item\"])[15]");
-		public static By searchBox = By.id("search_bar");
+		//public static By searchBox = By.id("search_bar");
+		public static By searchBox = By.id("btn_Search");
 		public static By shopNewLabel = By.xpath("//*[contains(@label,'Shop New')]");
 		public static By shopHomePage = By.id("lbl_shop");
 		public static By shopNewTitle = By.id("lbl_shopNew_title");
@@ -243,8 +244,8 @@ public class Locators {
 	    
 		
 		//OMNI-29377 - GC Cart Component -13.04.2021 -Nirmal
-		public static By labelcardAmount=By.id(""); 
-		public static By listCardAmount=By.id("");
+		public static By labelcardAmount=By.id("lbl_card_price"); 
+		public static By listCardAmount=By.id("price_list_item_Card_Amount_0");
 		public static By labelDefaultCardAmount=By.id("");
 		public static By btncardOptionAsAmount=By.id("");
 		public static By btncartOptionOther=By.id("");
