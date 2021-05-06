@@ -778,7 +778,7 @@ public class PDPPage {
 
 	public boolean isBulkGiftCardBtnDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.bulkGiftCardBtnAlert);
-		
+	}
 	public void tapOnPurchaseButton() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.purchaseBtn);
 	}

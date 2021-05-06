@@ -17,7 +17,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src/test/resources/features/ios/",
 		glue="com.aso.qe.test.stepdefinition.ios",
-		tags= {"@Regression"},
+		tags= {"@ST-29389"},
 		monochrome=true,
 		//dryRun=true,
 		plugin = "com.cucumber.listener.ExtentCucumberFormatter:"
