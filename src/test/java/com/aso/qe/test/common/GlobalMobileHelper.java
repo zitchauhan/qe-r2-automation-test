@@ -49,8 +49,6 @@ public class GlobalMobileHelper {
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION,platformVersion);
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME,deviceName);
 		caps.setCapability(MobileCapabilityType.APP, app);
-		caps.setCapability("autoDismissAlerts", true);
-
 
 	    if(platform.equalsIgnoreCase("iOS")) {
 	    	driver = new IOSDriver<MobileElement>(new URL(url),caps);
@@ -153,7 +151,14 @@ public class GlobalMobileHelper {
 		WebDriverWait wait = new WebDriverWait(driver,DEFAULT_EXPLICIT_WAIT);
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator)).clear();
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator)).sendKeys(text);
-		driver.hideKeyboard();
+
+		try {
+			driver.hideKeyboard();
+		}catch (Exception e){
+			// passing with the warning
+			logger.warn(e.getLocalizedMessage());
+		}
+
 	}
 	
 	public static void setText(By locator,String text,By tapLocatorToHideKeyboard) {
@@ -441,6 +446,7 @@ public class GlobalMobileHelper {
 		tapOnElement(Locators.SearchPage.goBtn);
 		waitForDefaultTime();
 	}
+
 }
 
 
