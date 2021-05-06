@@ -14,6 +14,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.apache.log4j.Logger;
 
+import com.aso.qe.framework.common.PropertiesHelper;
 import com.aso.qe.test.common.GlobalMobileHelper;
 import com.aso.qe.test.common.Locators;
 
@@ -179,6 +180,54 @@ public class LoginPage {
 		
 	}
 
+
+	public static void  enterLoginDetails(String fieldName) {
+		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(fieldName);
+ 		String element = null;
+ 		if(fieldName.equalsIgnoreCase("email")){
+ 			GlobalMobileHelper.setText(Locators.LoginPage.emailEditBox, keywordValue,Locators.LoginPage.passwordEditBox);
+
+ 			
+ 		}else if(fieldName.equalsIgnoreCase("password")){
+
+ 			GlobalMobileHelper.setText(Locators.LoginPage.passwordEditBox, keywordValue,Locators.LoginPage.loginButton);
+ 		}else if(fieldName.equalsIgnoreCase("emailwhichhascreditcard")){
+
+ 			GlobalMobileHelper.setText(Locators.LoginPage.emailEditBox, keywordValue,Locators.LoginPage.loginButton);
+	
+	 	}else {
+			
+			//throw new IllegalStateException("Given button type not defined");
+			throw new UnsupportedOperationException("Given button type not defined");
+ 
+		}
+		
+	}
+
+	public void tapOnButtonOnLoginPage(String btnName) {
+     if(btnName.equalsIgnoreCase("LogIn")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.LoginPage.loginButton);
+
+			
+		}else if(btnName.equalsIgnoreCase("account")){
+			
+			GlobalMobileHelper.tapOnElement(Locators.BottomNav.account);
+}	else if(btnName.equalsIgnoreCase("gotologin")){
+
+			
+
+			GlobalMobileHelper.tapOnElement(Locators.BottomNav.Login);
+
+		}else {
+			
+			//throw new IllegalStateException("Given button type not defined");
+			throw new UnsupportedOperationException("Given button type not defined");
+ 
+		}
+		
+	}
+	
     public void loginAsUser(String username) {
 		String keywordValue = PropertiesHelper.getInstance().getMobileTestDataProperty(username);
 		String[] userAndPassword = keywordValue.split(",");

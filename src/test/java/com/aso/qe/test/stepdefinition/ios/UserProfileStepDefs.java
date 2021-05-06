@@ -21,7 +21,7 @@ public class UserProfileStepDefs extends GlobalMobileHelper {
     private BottomNav bottomNav = new BottomNav(driver);
 
     @When("User navigates to Profile Page")
-    public void userNavigatesToProfilePage() throws InterruptedException {
+    public void userNavigatesToProfilePage() throws Throwable {
         /* Created By jitsingh7 on 15/04/2021 */
         bottomNav.tapOnAccount();
         tapOnElement(Locators.AccountPage.buttonProfile);

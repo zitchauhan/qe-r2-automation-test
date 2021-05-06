@@ -67,7 +67,7 @@ public class PDPPage {
 	
 	@iOSXCUITFindBy(id="rd_home_delivery")
 	public MobileElement homeDeliveryRadio;
-	
+		
 	public boolean isHeroImageDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.imageHero);
 	}
@@ -310,20 +310,19 @@ public class PDPPage {
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		 List<Object> list = new ArrayList<Object>();
 		boolean flag=true;
 		if(args.equalsIgnoreCase("App_store_guidelines")) {
-			// 
+			 
 			String textguidelines=GlobalMobileHelper.findData(args);
 			 String elementtext  = driver.findElement(Locators.PDPPage.AppStoreGuidelines).getText();
 			if(textguidelines.equalsIgnoreCase(elementtext)) {
 				
 				flag=true;
 			}else {
-				list.add ( new Exception("AppStoreGuidelines  not present "));	
+				list.add ( new Exception("AppStoreGuidelines not present "));	
 			}
 
 			
@@ -375,25 +374,24 @@ public class PDPPage {
 		return flag;
 		
 	}
+
 	public boolean isVariantValueDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.colorValueWhite);
 	}
 
 	public boolean isNavigatedToPDPOnWeb() {
-		
+
 		Set<String> availableContexts = driver.getContextHandles();
-		
-		for(String context : availableContexts) {
-			if(context.contains("WEBVIEW")){
+
+		for (String context : availableContexts) {
+			if (context.contains("WEBVIEW")) {
 				System.out.println("Context Name is " + context);
 				driver.context(context);
 				break;
 			}
 		}
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.WebViewBannerPDP);
-		
 	}
-	
 	
 	public void selectDeliveryOption(String optionName) throws UnsupportedOperationException {
 		// optionName can be home/store
@@ -781,5 +779,135 @@ public class PDPPage {
 	public boolean isBulkGiftCardBtnDisplayed() {
 		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.bulkGiftCardBtnAlert);
 		
+	public void tapOnPurchaseButton() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.purchaseBtn);
+	}
+
+	public boolean isCartBadgeDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.cartBadge);
+	}
+
+	@iOSXCUITFindBy(id="rd_home_delivery")
+	public MobileElement CounterBadgeOnCartIcon;
+
+	@iOSXCUITFindBy(id="lbl_cart")
+	public MobileElement labelItemCount;
+
+	public boolean ItemsCountOnCartBadge(String arg1) {
+		String qtyCartPage = labelItemCount.getText();
+		int qtyCartPageCount = Integer.parseInt(qtyCartPage);
+		String countOnCartBadge = CounterBadgeOnCartIcon.getText();
+		if (qtyCartPageCount < 100) {
+			assertTrue(qtyCartPage.equalsIgnoreCase(countOnCartBadge));
+		} else {
+			assertTrue(countOnCartBadge.equalsIgnoreCase("99+"));
+		}
+		return true;
+	}
+
+	public boolean isProductTitleOnHeaderDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.productTite);
+	}
+
+	public boolean isBackButtonDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.backBtn);
+	}
+
+	public void tapOnCartBadge() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.cartBadge);
+	}
+	public static void clickonPDP(String elementname) {
+		if(elementname.equalsIgnoreCase("addtocart")) {
+			
+			GlobalMobileHelper.tapOnElement(Locators.PDPPage.buttonAddToCart);
+
+		}else {
+
+			throw new UnsupportedOperationException("Given element not found on PDP");
+
+		}
+	}
+
+	public static boolean VarifyElementPresenseOnPDPPage(String elementname) {
+	if(elementname.equalsIgnoreCase("Standered Gift card modal")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.STDGIFTCARDModal);
+
+			
+		}else if(elementname.equalsIgnoreCase("Standered Gift card modal generic message")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.STDGIFTCARDModalGenericContent);
+			
+		}else if(elementname.equalsIgnoreCase("Open STD Gift card button")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OpenSTDGiftcardbutton);
+		}else if(elementname.equalsIgnoreCase("Bulk Gift card modal")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.BulkGIFTCARDModal);
+				}else if(elementname.equalsIgnoreCase("Bulk Gift card modal generic message")){
+	
+					return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.bulkGIFTCARDModalGenericContent);
+				}else if(elementname.equalsIgnoreCase("Open Bulk Gift card button")){
+	
+					return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OpenbulkGiftcardbutton);
+					}else if(elementname.equalsIgnoreCase("Cancelbutton")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.CloseAlertmodal);
+
+			
+		}else {
+			
+			throw new UnsupportedOperationException("Given Button not founded on PDP");
+
+		}
+	}
+// To check Store Delivery and Store Pick for SOF Item 
+	public static boolean VarifyElementPresenseOnPDPUnderStoreSEction(String elementname) {
+if(elementname.equalsIgnoreCase("Store Delivery Heading")) {
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.StoreDeliveryHeading);
+
+			
+		}else if(elementname.equalsIgnoreCase("Avalability Geeen")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.AvalabilityGeeenlabel);
+			
+		}else if(elementname.equalsIgnoreCase("OOS red label")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.OOSredlabel);
+		}else if(elementname.equalsIgnoreCase("Not Available")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.NotAvailable);
+				}else if(elementname.equalsIgnoreCase("Free Store pickup Heading")){
+	
+					return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.FreeStorepickupHeading);
+				}else if(elementname.equalsIgnoreCase("Find Availability on other Store CTA")){
+	
+					return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.FindAvailabilityonotherStoreCTA);
+					}else if(elementname.equalsIgnoreCase("Store address")){
+			
+			return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storeAddress);
+					}else if(elementname.equalsIgnoreCase("Store phone")){
+						
+						return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storePhone);
+						}else if(elementname.equalsIgnoreCase("Store timing")){
+						
+						return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.storetime);
+						}else if(elementname.equalsIgnoreCase("Notify me when available label")){
+	
+							return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.Notifymewhenavailablelabel);
+						}else if(elementname.equalsIgnoreCase("Select A Store button")){
+	
+							return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.selectStore);
+						}else if(elementname.equalsIgnoreCase("Change Store button")){
+	
+							return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.changeStore);
+
+			
+		}else {
+			
+			throw new UnsupportedOperationException("Given Button not founded on PDP");
+
+		}
 	}
 }

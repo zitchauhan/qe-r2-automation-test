@@ -1,4 +1,5 @@
 Feature: Velidate the Search Functionality
+
 @Sprint2 @ST-OMNI-20256 @TC-OMNI-30460
 Scenario: Validate  the user able to click on search Box At Home page
 Given User launches the application
