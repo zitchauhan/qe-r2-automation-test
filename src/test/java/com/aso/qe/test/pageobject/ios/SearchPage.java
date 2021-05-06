@@ -186,7 +186,13 @@ if(elementname.equalsIgnoreCase("showing result for label")) {
 		
 	}
 	public boolean isRecentSearchesDisplayed() {
-		return GlobalMobileHelper.isElementDisplayed(Locators.SearchPage.recentSearches);
+	String s =	driver.findElement(Locators.SearchPage.recentSearches).getText();
+	if(s.contains("Recent Searches")) {
+		return true;
+	}else {
+		return false;
+	}
+		
 		
 	}
 	public boolean isAllPopularSearchesDisplayed(String searchItem1, String searchItem2, String searchItem3,
