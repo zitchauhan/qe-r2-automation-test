@@ -159,5 +159,46 @@ public void isOrderDetailPageDisplay() {
 		MobileElement  orderCancelDateDisplay = driver.findElement(Locators.OrderDetail.labelcancelOrderDate);
 		return GlobalMobileHelper.isElementDisplayed(orderCancelDateDisplay);
 	}
-
+	
+	/* created by - Nirmal Jain OMNI-33184 07/05/2021 */
+	
+	public boolean isTrackButtonDisplay() {
+		MobileElement  buttonTrackDelivery = driver.findElement(Locators.OrderDetail.buttonTrackDelivery);
+		return GlobalMobileHelper.isElementDisplayed(buttonTrackDelivery);
 	}
+	
+	public void tapOnTrackDeliveryButton() {
+		isTrackButtonDisplay();
+		GlobalMobileHelper.tapOnElement(Locators.OrderDetail.narvarScreen);
+	}
+	
+	public boolean isNarvarScreenDisplay() {
+		MobileElement  narvarScreen = driver.findElement(Locators.OrderDetail.narvarScreen);
+		return GlobalMobileHelper.isElementDisplayed(narvarScreen);
+	}
+	
+	public void enterOrderId(String OrderId) {
+		GlobalMobileHelper.setText(Locators.OrderDetail.inputOrderId, OrderId);
+	}
+	
+	public void enterZipCode(String zipCode) {
+		GlobalMobileHelper.setText(Locators.OrderDetail.inputZipCode, zipCode);
+	}
+
+	public void tapOnCheckButton() {
+		GlobalMobileHelper.tapOnElement(Locators.OrderDetail.buttonCheck);
+	}
+
+
+	public boolean isLookupOrderDisplay() {
+		MobileElement  lookupOrderDisplay = driver.findElement(Locators.OrderDetail.labelOrderLookupOrder);
+		return GlobalMobileHelper.isElementDisplayed(lookupOrderDisplay);
+	}
+	
+
+}
+	
+	
+	
+
+	

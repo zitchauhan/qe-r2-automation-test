@@ -807,10 +807,13 @@ public class Locators {
 		public static By msgConfirmationEmail=By.id("TODO by dev");
 		public static By labelcancelOrderDate=By.id("TODO by dev");
 		
-		
-
-
-
+		/*created by Nirmal - OMNI-33184 07/06/2021 */
+		public static By buttonTrackDelivery=By.id("TODO by dev");
+		public static By narvarScreen=By.id("TODO by dev");
+		public static By inputOrderId=By.id("TODO by dev");
+		public static By inputZipCode=By.id("TODO by dev");
+		public static By buttonCheck=By.id("TODO by dev");
+		public static By labelOrderLookupOrder=By.id("TODO by dev");
 	}
 
 	public static class OrdersPage {
