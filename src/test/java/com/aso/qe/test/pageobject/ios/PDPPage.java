@@ -761,6 +761,24 @@ public class PDPPage {
 		}
 	}
 
+	public boolean isAlertPopUpDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.alertGiftCardError);
+		
+	}
+
+	public void tapOnLiveChat() {
+		GlobalMobileHelper.tapOnElement(Locators.PDPPage.liveChatBtn);
+		
+	}
+
+	public boolean isNavigateToLiveChatUrl() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.liveChatUrlTitle);
+		
+	}
+
+	public boolean isBulkGiftCardBtnDisplayed() {
+		return GlobalMobileHelper.isElementDisplayed(Locators.PDPPage.bulkGiftCardBtnAlert);
+	}
 	public void tapOnPurchaseButton() {
 		GlobalMobileHelper.tapOnElement(Locators.PDPPage.purchaseBtn);
 	}

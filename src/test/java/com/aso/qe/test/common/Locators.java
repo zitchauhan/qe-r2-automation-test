@@ -59,9 +59,7 @@ public class Locators {
 		public static By HomePage_FreeShippingBanerSeeDeatil = By.id("btn_banner_button");
 		public static By homeButton = By.xpath("//*[contains(@label,'Home')]");
 		public static By homeBtn = By.xpath("//*[contains(@label,'Home')]");
-
 		public static By heroBanner = By.xpath("//*[contains(@label,'Hero Image')]");
-
 
 		public static By bannerTitle = By.id("lbl_info_banner_title");
 		public static By bannerSubtitle = By.id("lbl_info_banner_sub_title");
@@ -260,8 +258,8 @@ public class Locators {
 	    
 		
 		//OMNI-29377 - GC Cart Component -13.04.2021 -Nirmal
-		public static By labelcardAmount=By.id(""); 
-		public static By listCardAmount=By.id("");
+		public static By labelcardAmount=By.id("lbl_card_price"); 
+		public static By listCardAmount=By.id("price_list_item_Card_Amount_0");
 		public static By labelDefaultCardAmount=By.id("");
 		public static By btncardOptionAsAmount=By.id("");
 		public static By btncartOptionOther=By.id("");
@@ -298,6 +296,10 @@ public class Locators {
 		public static By OverLayCartview_cart = By.id("btn_view_cart");
 		public static By OverLayCartcontinue_shopping = By.id("btn_continue_shopping");
 		public static By OverLayCartdded_to_cart = By.id("lbl_added_to_cart");
+		public static By alertGiftCardError;
+		public static By liveChatBtn;
+		public static By liveChatUrlTitle;
+		public static By bulkGiftCardBtnAlert;
 		public static By purchaseBtn = By.id("lbl_purchase_btn");
 
 		// alert modal on pdp
@@ -673,8 +675,8 @@ public class Locators {
 
 	//Use this for my account welcome page after login
 	public static class MyAccountwelcomePage{
-		public static By MyAcademy = By.id("lbl_myacademy_title");
-		public static By buttonOrders = By.id("btn_Myaccount_orders");
+		public static By MyAcademy = By.id("lbl_my_academy");
+		public static By buttonOrders = By.id("btn_orders");
 		public static By buttonProfile = By.id("btn_Myaccount_profile");
 		public static By buttonAddressbook = By.id("btn_Myaccount_addressbook");
 		public static By buttonWishlist = By.id("btn_Myaccount_wishlist");
@@ -841,6 +843,21 @@ public class Locators {
 		public static By buttonBackOrderCancel=By.id("back_orderCancel");
 		public static By ErrorMesageOrderCancel=By.id("error_msg_order_cancel");
 		public static By labelOrderPage=By.id("label_order_page");
+		public static By Orderdetailheading=By.xpath("//*[contains(@label,'Order Detail')]");
+		public static By Ordernumber=By.id("lbl_order_number");
+		public static By orderdate=By.id("lbl_order_date");
+		public static By ordertotal=By.id("Orderdetail_label_order_total");
+		public static By cancelorderbutton=By.id("Orderdetail_btncancelorder");
+		public static By homedelivery=By.id("Orderdetail_label_homedelivery");
+		public static By customername=By.id("Orderdetail_label_customername");
+		public static By shippingaddress=By.id("Orderdetail_label_shipping_address");
+		public static By orderstatus=By.id("Orderdetail_label_shipping_status");
+		public static By inprocessing=By.id("Orderdetail_label_shippinginprocessing");
+		public static By shippingmethode=By.id("Orderdetail_label_shippingmethode");
+		public static By producttitle=By.id("lbl_product_title");
+		public static By productqty=By.id("lbl_productqty");
+		public static By productprice=By.id("lbl_product_price");
+		public static By skunumber=By.id("lbl_product_sku");
 		
 		public static By msgOrderCancel=By.id("TODO by dev");
 		public static By msgConfirmationEmail=By.id("TODO by dev");
@@ -862,10 +879,49 @@ public class Locators {
 		public static By labelOrderTotal=By.id("label_order_total");
 		public static By OrderList=By.id("list_Order");
     
+
 		public static By labelAddstoreReceiptScreen=By.id("label_add_store_receipt_Screen");
 		public static By NoExistingOrderMsg=By.id("no_order_message");
 
+	
+
+		
 	}
+		//   Order history page for logged in user where all order will list 
+		
+		public static class OrderHistoryloggedInuser{
+			public static By orderheading=By.id("lbl_ordersheading");
+			public static By orderlabel=By.id("lbl_order");
+			public static By lookupyourorderbutton=By.id("btn_lookup_your_order");
+			public static By addastorereciptbutton=By.id("btn_addastorereciptbutton");
+			public static By orderpurchagetype=By.id("lbl_orderpurchagetype");
+			public static By orderstatusprocessing=By.id("lbl_orderstatusprocessing");
+			public static By orderstatusdelivered=By.id("lbl_orderstatusdelivered");
+			public static By ordernumberlabel=By.id("lbl_ordernumberlabel");
+			public static By ordernumber=By.id("lbl_ordernumber");
+			public static By orderdate=By.id("lbl_orderdate");
+			public static By orderdatelabel=By.id("lbl_orderdatelabel");
+			public static By ordertotallabel=By.id("lbl_ordertotallabel");
+			public static By ordertotal=By.id("lbl_ordertotal");
+			
+			
+		
+		
+		}
+		
+		
+		
+
+
+   
+
+		
+
+
+
+
+	
+
 
 	public static class OrdersPage {
 		public static By orderSummarylabel = By.id("lbl_order_summary");
